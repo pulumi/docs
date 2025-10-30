@@ -1,24 +1,77 @@
 ---
-description: Review `pulumi/docs` changes for style, accuracy, and best practices
+description: Review changes for style, accuracy, and Pulumi best practices. Context-sensitive in IDEs, or provide a PR number to review a PR from this repo.
 ---
 
-# Usage
-# Local: /docs-review [pr-number]
-# CI: Automatically runs on PRs
+# Documentation Review Command
 
 You will review documentation changes and provide feedback on style, accuracy, and best practices.
 
-## For Local Usage: Determine Review Scope
+## Instructions for Docs Review
+
+### Continuous Integration (CI) Context
+
+When running in CI (e.g., GitHub Actions), follow these efficiency guidelines to minimize token usage:
+
+1. Start by running `gh pr view <PR_NUMBER> --json title,body,files,additions,deletions` to get PR metadata
+2. Get the full diff with `gh pr diff <PR_NUMBER>`
+3. Work primarily from the diff output - this is much more efficient than reading full files
+4. Only use the Read tool on specific files when the diff doesn't provide enough context
+5. Do NOT attempt to run `make serve`, `make lint`, or `make build` - these commands are not available in CI and will fail
+6. Focus your review on the changed lines shown in the diff, not entire files
+7. Use Grep sparingly - only when absolutely necessary to understand context
+
+After completing your review, post it to the PR by running:
+
+```
+gh pr comment <PR_NUMBER> --body "YOUR_REVIEW_CONTENT_HERE"
+```
+
+Your review should include:
+- Issues found with specific line numbers from the affected files. Do not use line numbers from the diff.
+- Constructive suggestions using suggestion code fence formatting blocks
+- An instruction to mention you (@claude) if the author wants additional reviews or fixes
+
+Use the **Review Criteria** section below for your review.
+
+### Interactive Context (IDE or Chat)
+
+When running outside of CI, before beginning your review, you must determine the scope of changes to review:
 
 **If a PR number is provided** ({{arg}}):
 - Use `gh pr view {{arg}}` to retrieve the PR title, description, and metadata
 - Use `gh pr diff {{arg}}` to get the full diff of changes
-- Review the PR changes according to the criteria below
+- Review the PR changes according to the criteria below.
+- After completing your review, provide it in the conversation formatted appropriately for display in the terminal.
 
-**If no PR number is provided**:
-- Use `git status` to check for uncommitted changes
-- Use `git diff master...HEAD` to compare current branch against master
-- Review the changes according to the criteria below
+**If no PR number is provided**, follow these steps IN ORDER:
+
+#### Step 1: Check for open files in IDE
+
+DO NOT RUN ANY COMMANDS YET. First check the conversation context:
+- Look for system reminders about files open in the IDE
+- If you find an open file mentioned, read that file and review it
+- Stop and offer to review additional files if desired
+- Skip to Step 4 if this applies
+
+#### Step 2: Check for uncommitted changes
+
+If Step 1 didn't apply, check the gitStatus at the start of the conversation:
+- Look for modified (M) or untracked (??) files in the git status
+- If there are uncommitted changes, use `git diff` and `git status` to see what changed
+- Review those specific files
+- Skip to Step 4 if this applies
+
+#### Step 3: Compare against branch point
+
+ONLY if Steps 1 and 2 didn't apply:
+- Use `git merge-base --fork-point master HEAD` to find the ancestor branch point
+- Use `git diff $(git merge-base --fork-point master HEAD)...HEAD` to compare current branch against its immediate ancestor
+- If `--fork-point` fails (no reflog), fall back to `git diff $(git merge-base master HEAD)...HEAD`
+- Review all changed files in the branch
+
+#### Step 4: Perform the review
+
+Once scope is determined, review the changes according to the criteria below. Provide the review in the conversation formatted appropriately for display in the terminal. Include the scope of files reviewed in your summary and offer to review additional files if desired.
 
 ## Review Criteria
 
@@ -58,22 +111,34 @@ Always provide relevant line numbers for any issues you identify.
 - **SEO**:
   - Check that page titles and descriptions are SEO-friendly.
   - Verify URL structure follows conventions.
-- When reviewing **Documentation**, serve the role of a professional technical writer. Review for:
-  - Clarity and conciseness.
-  - Logical flow and structure.
-  - No jargon unless defined.
-  - Avoid passive voice.
-  - Avoid overly complex sentences. Shorter is usually better.
-  - Avoid superlatives and vague qualifiers.
-  - Avoid unnecessary filler words or sentences.
-  - Be specific and provide examples.
-  - Use consistent terminology.
-- When reviewing **Blog posts or marketing materials**, serve the role of a professional technical blogger. Review for:
-  - Clear, engaging titles.
-  - Strong opening that hooks the reader.
-  - Clear structure with headings and subheadings.
-  - Concise paragraphs (3-4 sentences max).
-  - Use of lists and bullet points for readability.
-  - Reject filler, vague generalities, or AI-generated slop.
-  - Avoid clickbait phrasing.
-  - Clear call-to-action at the end.
+- **Role-Specific Review Guidelines**
+  - Documentation and blog/marketing materials have additional role-specific criteria below.
+
+### Role-Specific Review Guidelines
+
+#### Documentation
+
+When reviewing **Documentation**, serve the role of a professional technical writer. Review for:
+
+- Clarity and conciseness.
+- Logical flow and structure.
+- No jargon unless defined.
+- Avoid passive voice.
+- Avoid overly complex sentences. Shorter is usually better.
+- Avoid superlatives and vague qualifiers.
+- Avoid unnecessary filler words or sentences.
+- Be specific and provide examples.
+- Use consistent terminology.
+
+#### Blogs or Marketing Materials
+
+When reviewing **Blog posts or marketing materials**, serve the role of a professional technical blogger. Review for:
+
+- Clear, engaging titles.
+- Strong opening that hooks the reader.
+- Clear structure with headings and subheadings.
+- Concise paragraphs (3-4 sentences max).
+- Use of lists and bullet points for readability.
+- Reject filler, vague generalities, or AI-generated slop.
+- Avoid clickbait phrasing.
+- Clear call-to-action at the end.
