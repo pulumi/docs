@@ -4,10 +4,10 @@ title_tag: terraform-state Pulumi ESC Provider
 meta_desc: The terraform-state provider enables you to read outputs from Terraform state files stored in S3 or Terraform Cloud.
 h1: terraform-state
 menu:
-    esc:
-        identifier: terraform-state
-        parent: esc-terraform-integrations
-        weight: 1
+  esc:
+    identifier: terraform-state
+    parent: esc-terraform-integrations
+    weight: 1
 aliases:
   - /docs/pulumi-cloud/esc/providers/terraform-state/
   - /docs/esc/providers/terraform-state/
@@ -58,9 +58,9 @@ values:
 
 ## Inputs
 
-| Property  | Type                            | Description                                                   |
-|-----------|---------------------------------|---------------------------------------------------------------|
-| `backend` | [Backend](#backend)             | Configuration for the Terraform state backend (S3 or remote). |
+| Property  | Type                | Description                                                   |
+|-----------|---------------------|---------------------------------------------------------------|
+| `backend` | [Backend](#backend) | Configuration for the Terraform state backend (S3 or remote). |
 
 ### Backend
 
@@ -68,28 +68,26 @@ The `backend` property must contain exactly one of the following:
 
 #### S3
 
-| Property | Type                                                                          | Description                                        |
-|----------|-------------------------------------------------------------------------------|----------------------------------------------------|
-| `login`  | [aws-login](/docs/esc/integrations/dynamic-login-credentials/aws-login/)     | The credentials to use to access the state file.  |
-| `bucket` | string                                                                        | The S3 bucket name containing the state file.     |
-| `key`    | string                                                                        | The S3 object key for the state file.             |
-| `region` | string                                                                        | The AWS region where the bucket is located.       |
+| Property | Type                                                                     | Description                                      |
+|----------|--------------------------------------------------------------------------|--------------------------------------------------|
+| `login`  | [aws-login](/docs/esc/integrations/dynamic-login-credentials/aws-login/) | The credentials to use to access the state file. |
+| `bucket` | string                                                                   | The S3 bucket name containing the state file.    |
+| `key`    | string                                                                   | The S3 object key for the state file.            |
+| `region` | string                                                                   | The AWS region where the bucket is located.      |
 
 #### Remote
 
-| Property       | Type   | Description                                                 |
-|----------------|--------|-------------------------------------------------------------|
-| `hostname`     | string | The hostname of Terraform Cloud/Enterprise.                |
-| `organization` | string | The Terraform Cloud organization name.                     |
-| `workspace`    | string | The workspace name.                                         |
-| `token`        | string | The Terraform Cloud API token.                             |
-
-The `hostname` property defaults to `app.terraform.io` if not specified.
+| Property       | Type   | Description                                                                             |
+|----------------|--------|-----------------------------------------------------------------------------------------|
+| `hostname`     | string | [Optional] - The remote backend hostname to connect to. Defaults to `app.terraform.io`. |
+| `organization` | string | The name of the organization containing the targeted workspace.                         |
+| `workspace`    | string | The name of the remote workspace.                                                       |
+| `token`        | string | The token used to authenticate with the remote backend.                                 |
 
 ## Outputs
 
-| Property  | Type   | Description                                      |
-|-----------|--------|--------------------------------------------------|
-| `outputs` | object | A map of all outputs from the Terraform state.  |
+| Property  | Type   | Description                                    |
+|-----------|--------|------------------------------------------------|
+| `outputs` | object | A map of all outputs from the Terraform state. |
 
 The provider preserves the sensitive flag for any outputs marked as sensitive in the Terraform state.
