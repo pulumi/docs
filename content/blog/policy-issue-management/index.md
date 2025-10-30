@@ -1,5 +1,5 @@
 ---
-title: "Announcing the New Policy Findings Hub"
+title: "Introducing the New Policy Findings Hub"
 date: 2025-11-05T00:03:00
 authors:
   - alejandro-cotroneo
@@ -53,9 +53,9 @@ This is space where insight is turned into action. The Issues tab is a collabora
 
 And for the most critical part of the workflow—the fix itself—we've integrated our AI agent, **Pulumi Neo**, directly into this view.
 
-**Placeholder for a video**
-
 After selecting one or more issues, your team can assign the task to Neo. It will analyze the violations and automatically generate a pull request with the necessary code changes. For unmanaged resources, Neo will even generate the code to import them into Pulumi and apply the fix. This turns a complex manual task into a simple review-and-merge process, allowing your team to finally burn down the backlog.
+
+**Placeholder for a video**
 
 ## Conclusion
 

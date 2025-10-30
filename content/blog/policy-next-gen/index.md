@@ -1,5 +1,5 @@
 ---
-title: "Announcing Neo Powered Compliance Remediation and the Next Generation of Pulumi Policies"
+title: "Announcing the Next Generation of Pulumi Policies: AI-Accelerated Governance for the Cloud"
 authors: 
 - craig-symonds  
 - tyler-dunkel  
@@ -28,9 +28,9 @@ We are thrilled to announce the next generation of Pulumi Policies, a comprehens
 
 Watch our Launch Video:
 
-**Add a link to the Youtube video**
+{{< youtube "mwcrOTEf1EQ?rel=0" >}}
 
-## Part 1: Get Clean - From Thousands of Issues to a Compliance State
+## Part 1: Get Clean - From Thousands of Issues to a Compliant State
 
 The first step to a secure cloud is tackling the mountain of existing misconfigurations spread across your environments.
 
@@ -89,4 +89,4 @@ This "Get Clean, Stay Clean" lifecycle transforms how teams work together:
 
 The age of AI-driven development demands AI-powered governance. With this new generation of Pulumi Policies, we are providing the essential infrastructure for platform engineering teams to not just survive, but thrive. You can finally build preventative guardrails that developers love, secure your cloud at scale, and transform governance from a blocker into a business accelerator.
 
-This powerful new experience is available today. Navigate to the **Policies** tab in the Pulumi Cloud to explore your new governance capabilities and meet the future of platform engineering.
+This powerful new experience is available today. Navigate to the **Policies** and **Policy Findings** tab in Pulumi Cloud to explore your new governance capabilities and meet the future of platform engineering.
