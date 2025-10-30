@@ -1,0 +1,6 @@
+docs/insights/policy/policy-as-code/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
+docs/iac/crossguard/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
+docs/guides/crossguard/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
+docs/using-pulumi/crossguard/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
+docs/iac/packages-and-automation/crossguard/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
+docs/iac/using-pulumi/crossguard/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
