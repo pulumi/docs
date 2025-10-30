@@ -77,7 +77,7 @@ After adding the configuration:
 Add the Pulumi MCP server to Claude Code by running:
 
 ```bash
-claude mcp add pulumi https://mcp.ai.pulumi.com/mcp
+claude mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp
 ```
 
 Launch Claude Code, enter the `/mcp` slash-command, select "pulumi" and connect it. Authenticate via the browser popup.
