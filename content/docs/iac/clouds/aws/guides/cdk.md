@@ -427,7 +427,7 @@ validation tools (a couple are discussed below), but it is recommended to use
 Pulumi specific tools, especially if you are creating Pulumi resources outside
 of CDK.
 
-Below is an example output using Pulumi's [Compliance Ready Policies](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/compliance-ready-policies/)
+Below is an example output using Pulumi's [Compliance Ready Policies](https://github.com/pulumi/compliance-policies) (deprecated)
 
 ```ts
 import * as pulumicdk from '@pulumi/cdk';

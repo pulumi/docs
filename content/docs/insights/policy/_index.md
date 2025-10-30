@@ -96,7 +96,7 @@ Learn more about [Policy Findings](/docs/insights/policy/policy-findings/) or ac
 
 ## Compliance ready policy packs
 
-Pulumi provides comprehensive predefined policies for AWS, Azure, Google Cloud, and Kubernetes through [Compliance Ready Policies](/docs/insights/policy/deprecated/compliance-ready-policies/). These policies help you enforce security frameworks like CIS, PCI DSS, and SOC 2 with minimal configuration.
+Pulumi provides comprehensive predefined policies for AWS, Azure, Google Cloud, and Kubernetes through [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/). These policies help you enforce security frameworks like CIS, PCI DSS, and SOC 2 with minimal configuration.
 
 ## AWSGuard
 
