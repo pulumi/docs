@@ -65,6 +65,10 @@ values:
 
 The `backend` property must contain exactly one of the following:
 
+- An [S3 backend configuration](#s3), or
+- a [remote](#remote) backend configuration.
+
+
 #### S3
 
 | Property | Type                                                                     | Description                                      |
