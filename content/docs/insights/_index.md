@@ -70,7 +70,7 @@ sections:
     description: Understand policy modes, enforcement levels, and how to write and manage policy packs.
   - emoji: 🔄
     heading: Preventative vs Audit
-    link: /docs/insights/policy/preventative-vs-audit-policies/
+    link: /docs/insights/policy/policy-groups/
     description: Block violations before deployment or scan existing resources in audit mode.
   - emoji: ⚠️
     heading: Policy Findings

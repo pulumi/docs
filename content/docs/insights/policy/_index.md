@@ -78,7 +78,7 @@ Before configuring policies, ensure:
 
 {{< video title="Policy Management Configuration Demo" src="/docs/insights/assets/doc-video-2.mp4" autoplay="false" loop="true" controls="true" >}}
 
-For more details about policy configuration and enforcement modes, see [Preventative vs. Audit Policies](/docs/insights/policy/preventative-vs-audit-policies/).
+For more details about policy configuration and enforcement modes, see [Policy Groups](/docs/insights/policy/policy-groups/).
 
 ## Policy findings
 

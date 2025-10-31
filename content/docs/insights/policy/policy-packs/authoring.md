@@ -427,5 +427,5 @@ Now that you've authored and published your first policy pack, you can:
 
 - [Apply policies to stacks and accounts using policy groups](/docs/insights/policy/get-started/)
 - [View and manage policy findings](/docs/insights/policy/policy-findings/)
-- [Learn about preventative vs. audit policy enforcement](/docs/insights/policy/preventative-vs-audit-policies/)
+- [Learn about policy groups and enforcement modes](/docs/insights/policy/policy-groups/)
 - [Explore policy pack configuration options](/docs/insights/policy/deprecated/configuration/)
