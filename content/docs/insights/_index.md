@@ -63,19 +63,23 @@ sections:
   - emoji: 🚀
     heading: Get Started
     link: /docs/insights/policy/get-started/
-    description: Enforce compliance policies across your infrastructure.
+    description: Configure your first policy group and enforce compliance across Pulumi stacks and discovered cloud resources.
   - emoji: 💡
     heading: Policy Concepts
     link: /docs/insights/policy/
-    description: Understand policy modes, enforcement levels, and how to write and manage policy packs.
+    description: Learn how policies, policy packs, and policy groups work together to enforce compliance.
+  - emoji: 📦
+    heading: Pre-built Policy Packs
+    link: /docs/insights/policy/policy-packs/pre-built-packs/
+    description: Use ready-made compliance rules for CIS, PCI DSS, SOC 2, and other frameworks with no code required.
   - emoji: 🔄
-    heading: Preventative vs Audit
+    heading: Policy Groups
     link: /docs/insights/policy/policy-groups/
-    description: Block violations before deployment or scan existing resources in audit mode.
+    description: Apply policy packs with preventative enforcement to block non-compliant deployments or audit mode to scan all discovered resources.
   - emoji: ⚠️
     heading: Policy Findings
     link: /docs/insights/policy/policy-findings/
-    description: View, manage, and remediate policy findings across your infrastructure.
+    description: View violations, track remediation progress, and monitor compliance trends across all infrastructure.
 
 - type: flat
   heading: Have questions?

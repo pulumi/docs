@@ -15,7 +15,7 @@ aliases:
   - /docs/insights/policy/best-practices/
 ---
 
-If Pulumi's pre-built policy packs don't meet your organization's specific requirements, you can write custom policy packs tailored to your needs. Custom policies allow you to enforce any compliance, security, or operational rule that matters to your organization.
+If Pulumi's pre-built policy packs don't meet your requirements, you can write custom policy packs. Custom policies let you enforce any compliance, security, or operational rule.
 
 Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/insights/policy/).
 
@@ -31,29 +31,35 @@ Before authoring your first policy pack, ensure you have:
 
 ## Creating a policy pack
 
-Let's start by creating your first policy pack.
+Create your first policy pack:
 
 {{< chooser language "typescript,python" >}}
 
 {{% choosable language typescript %}}
 
-1. Create a directory for your new policy pack and set it as the working directory.
+1. Create a directory for your policy pack and navigate to it.
 
     ```sh
     $ mkdir policypack && cd policypack
     ```
 
-1. Create a new typescript project with `pulumi policy new`.
+1. Create a new TypeScript project:
 
     ```sh
     $ pulumi policy new aws-typescript
     ```
 
-1. Replace the generated policy in the `index.ts` file with the following example. The template generates a policy that prohibits public ACLs, but we'll use a naming prefix validation example instead, which demonstrates a clearer pattern for organizational policy enforcement.
+1. Replace the generated policy in `index.ts` with this example, which demonstrates a clearer pattern for organizational policy enforcement:
 
-    Each policy must have a unique name, description, and validation function. Here we use the `validateResourceOfType` helper so that our validation function is only called for AWS S3 bucket resources. An enforcement level can be set on the policy pack (applies to all policies) and/or on each individual policy (overriding any policy pack value).
+    Each policy must have:
+    - A unique name, description, and validation function
+    - A validation function (this example uses `validateResourceOfType` to run only for AWS S3 bucket resources)
+    - An enforcement level set at the policy pack level (applies to all policies) or per policy (overrides the pack level)
 
     ```typescript
+    import * as aws from "@pulumi/aws";
+    import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
+
     // Create a new policy pack.
     new PolicyPack("policy-pack-typescript", {
         // Specify the policies in the policy pack.
@@ -86,35 +92,42 @@ Let's start by creating your first policy pack.
 {{% /choosable %}}
 {{% choosable language python %}}
 
-1. Create a directory for your new policy pack, and change into it.
+1. Create a directory for your policy pack and navigate to it.
 
     ```sh
     $ mkdir policypack && cd policypack
     ```
 
-1. Run the `pulumi policy new` command.
+2. Create a new Python project:
 
     ```sh
     $ pulumi policy new aws-python
     ```
 
-    {{% notes type="info" %}}
-**Virtual environment configuration**: Python policy packs use a virtual environment specified in `PulumiPolicy.yaml`. The default name is `venv`. If you use a different name (like `.venv`), update `PulumiPolicy.yaml`:
+    > **Virtual environment configuration**: Python policy packs use a virtual environment specified in `PulumiPolicy.yaml`. The default name is `venv`. If you use a different name (like `.venv`), update `PulumiPolicy.yaml`:
+    >
+    > ```yaml
+    > runtime:
+    > name: python
+    > options:
+    >     virtualenv: .venv
+    > ```
 
-```yaml
-runtime:
-  name: python
-  options:
-    virtualenv: .venv
-```
+3. Replace the generated policy in `__main__.py` with this example, which demonstrates a clearer pattern for organizational policy enforcement:
 
-    {{% /notes %}}
-
-1. Replace the generated policy in the `__main__.py` file with the following example. The template generates a policy that prohibits public ACLs, but we'll use a naming prefix validation example instead, which demonstrates a clearer pattern for organizational policy enforcement.
-
-    Each policy must have a unique name, description, and validation function. An enforcement level can be set on the policy pack (applies to all policies) and/or on each individual policy (overriding any policy pack value).
+    Each policy must have:
+    - A unique name, description, and validation function
+    - An enforcement level set at the policy pack level (applies to all policies) or per policy (overrides the pack level)
 
     ```python
+    from pulumi_policy import (
+        EnforcementLevel,
+        PolicyPack,
+        ReportViolation,
+        ResourceValidationArgs,
+        ResourceValidationPolicy,
+    )
+
     # The validation function is called before each resource is created or updated.
     # In this case, the rule only applies to S3 buckets and reports a violation if the
     # bucket prefix doesn't match the required prefix.
@@ -161,21 +174,21 @@ You can find more example policy packs in the [Pulumi examples repository](https
 
 ## Testing your policies
 
-You can write unit tests for your policies to validate they behave correctly before publishing to your organization. Here's a simple test example:
+Write unit tests to verify your policies work correctly before publishing. Here's a simple test example:
 
 ```typescript
 {{< example-program-snippet path="unit-test-policy" language="typescript" file="test/index.spec.ts" from="6" to="14" >}}
 ```
 
-For a complete working example including test helpers and setup, see the [unit test policy example on GitHub](https://github.com/pulumi/docs/tree/master/static/programs/unit-test-policy-typescript).
+For an example including test helpers and setup, see the [unit test policy example on GitHub](https://github.com/pulumi/docs/tree/master/static/programs/unit-test-policy-typescript).
 
 ## Resource validation vs stack validation
 
-Pulumi policies can validate two different scopes:
+Pulumi policies validate at two scopes:
 
 ### Resource validation policies
 
-Resource validation policies run against individual resources during `pulumi preview` or `pulumi up`. These policies examine each resource before it's created or updated and can block non-compliant resources from being deployed.
+Resource validation policies run during `pulumi preview` or `pulumi up`, examining each resource before creation or update. These policies can block non-compliant resources.
 
 Use resource validation policies when you need to:
 
@@ -185,7 +198,7 @@ Use resource validation policies when you need to:
 
 ### Stack validation policies
 
-Stack validation policies run against the entire stack after all resources have been registered. These policies can examine relationships between resources and enforce rules about the stack as a whole.
+Stack validation policies run after resource registration completes. These policies examine relationships between resources and enforce stack-wide rules.
 
 Use stack validation policies when you need to:
 
@@ -197,32 +210,30 @@ Most policies are resource validation policies. Stack validation policies are us
 
 ## Running policies locally
 
-Before publishing your policy pack, test it locally against your Pulumi programs.
+Test your policy pack locally before publishing.
 
 {{< chooser language "typescript,python" >}}
 
 {{% choosable language typescript %}}
 
-1. Use the `--policy-pack` flag with `pulumi preview` or `pulumi up` to specify the path to the directory containing your policy pack when previewing/updating a Pulumi program.
+1. Use the `--policy-pack` flag to specify your policy pack directory:
 
-    If you don't have a Pulumi program readily available, you can create a new program for testing by running `pulumi new aws-typescript` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our policy.
+    If you need a test program, create one with `pulumi new aws-typescript`. This creates an S3 bucket to test the policy.
 
     ```sh
     $ mkdir test-program && cd test-program
     $ pulumi new aws-typescript
     ```
 
-    {{% notes type="info" %}}
-For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
-    {{% /notes %}}
+    > For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
 
-1. In the Pulumi program's directory run:
+1. In the Pulumi program's directory, run:
 
     ```sh
     $ pulumi preview --policy-pack <path-to-policy-pack-directory>
     ```
 
-    If the Pulumi stack is in compliance, we expect the output to tell us which policy packs were run.
+    If the stack is compliant, the output shows which policy packs ran.
 
     ```output
     Previewing update (dev):
@@ -238,7 +249,7 @@ For AWS examples, ensure you have [AWS credentials configured](/registry/package
         aws-typescript (/Users/user/path/to/policy-pack)     (local)
     ```
 
-1. We can then edit the stack code to specify a bucket prefix that doesn't match the required prefix.
+1. Edit the stack code to specify a non-matching prefix:
 
     ```typescript
     const bucket = new aws.s3.Bucket("my-bucket", {
@@ -246,7 +257,7 @@ For AWS examples, ensure you have [AWS credentials configured](/registry/package
     });
     ```
 
-1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
+1. Run `pulumi preview` again. This time, the policy violation blocks the preview:
 
     ```output
     Previewing update (dev):
@@ -267,18 +278,16 @@ For AWS examples, ensure you have [AWS credentials configured](/registry/package
 {{% /choosable %}}
 {{% choosable language python %}}
 
-1. Use the `--policy-pack` flag with `pulumi preview` or `pulumi up` to specify the path to the directory containing your policy pack when previewing/updating a Pulumi program.
+1. Use the `--policy-pack` flag to specify your policy pack directory:
 
-    If you don't have a Pulumi program readily available, you can create a new program for testing by running `pulumi new aws-python` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our policy.
+    If you need a test program, create one with `pulumi new aws-python`. This creates an S3 bucket to test the policy.
 
     ```sh
     $ mkdir test-program && cd test-program
     $ pulumi new aws-python
     ```
 
-    {{% notes type="info" %}}
-For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
-    {{% /notes %}}
+    > For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
 
 1. In the Pulumi program's directory, run:
 
@@ -286,7 +295,7 @@ For AWS examples, ensure you have [AWS credentials configured](/registry/package
     $ pulumi preview --policy-pack <path-to-policy-pack-directory>
     ```
 
-    If the Pulumi stack is in compliance, we expect the output to tell us which policy packs were run.
+    If the stack is compliant, the output shows which policy packs ran.
 
     ```output
     Previewing update (dev):
@@ -302,13 +311,13 @@ For AWS examples, ensure you have [AWS credentials configured](/registry/package
             aws-python (/Users/user/path/to/policy-pack)     (local)
     ```
 
-1. We can then edit the stack code to specify a bucket prefix that doesn't match the required prefix.
+1. Edit the stack code to specify a non-matching prefix:
 
     ```python
     bucket = s3.Bucket('my-bucket', bucket_prefix="wrongprefix-")
     ```
 
-1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
+1. Run `pulumi preview` again. This time, the policy violation blocks the preview:
 
         Previewing update (dev):
              Type                 Name          Plan       Info
@@ -330,11 +339,11 @@ For AWS examples, ensure you have [AWS credentials configured](/registry/package
 
 ## Configuring policy packs
 
-Configuration makes policy packs flexible and reusable across your organization. You can adjust enforcement levels, set allowed values, or customize behavior without modifying policy code.
+Configuration makes policy packs flexible and reusable. Adjust enforcement levels, allowed values, and other settings without modifying code.
 
 ### Enforcement levels
 
-All policies automatically support configurable enforcement levels. You can set enforcement for all policies in a pack or override individual policies:
+All policies support configurable enforcement levels. Set enforcement for all policies in a pack or override individual policies:
 
 ```json
 {
@@ -347,7 +356,7 @@ All policies automatically support configurable enforcement levels. You can set 
 }
 ```
 
-As a shorthand, you can specify enforcement levels directly:
+As shorthand, specify enforcement levels directly:
 
 ```json
 {
@@ -364,7 +373,7 @@ As a shorthand, you can specify enforcement levels directly:
 
 ### Custom configuration
 
-Policy authors define configuration schemas using JSON Schema. This allows organization administrators to customize policy behavior—like setting allowed instance types or cost thresholds—without changing policy code.
+Policy authors define configuration schemas using JSON Schema, enabling administrators to customize policy behavior without code changes.
 
 **Example: Optional configuration with defaults**
 
@@ -467,7 +476,7 @@ config_schema=PolicyConfigSchema(
 
 #### Local execution
 
-Store configuration in a JSON file and pass it to the Pulumi CLI:
+Pass configuration via JSON file:
 
 **config.json:**
 
@@ -488,7 +497,7 @@ pulumi preview --policy-pack <path-to-policy-pack> --policy-pack-config config.j
 
 #### Pulumi Cloud configuration
 
-Once a policy pack is published, organization administrators can configure it through the Pulumi Cloud console or CLI.
+After publishing, administrators configure policy packs through the Pulumi Cloud console or CLI.
 
 **Using the console:**
 
@@ -520,17 +529,17 @@ pulumi policy enable <org>/<pack-name> <version> --config config.json --policy-g
 
 ## Publishing to your organization
 
-Once you've validated the behavior of your policies locally, publish them to Pulumi Cloud to enforce them across your organization. Any Pulumi client (a developer's workstation, CI/CD tool, etc.) that interacts with a stack via Pulumi Cloud will have policy enforcement during the execution of `preview` and `update`.
+After local validation, publish your policy pack to Pulumi Cloud. Policy enforcement runs automatically during `preview` and `update` for any stack using Pulumi Cloud.
 
-Policy packs are versioned by Pulumi Cloud so that updated policies can be published and applied as ready and also reverted to previous versions as needed.
+Pulumi Cloud versions policy packs, enabling updates, rollbacks, and gradual rollouts.
 
-1. From within the policy pack directory, run the following command to publish your pack:
+1. From the policy pack directory, publish:
 
     ```sh
     $ pulumi policy publish <org-name>
     ```
 
-    The output will tell you what version of the policy pack you just published. Pulumi Cloud provides a monotonic version number for policy packs.
+    Pulumi Cloud assigns a monotonic version number:
 
     ```
     Obtaining policy metadata from policy plugin
@@ -547,7 +556,7 @@ Policy pack versions are managed differently by language:
 - **TypeScript/JavaScript**: Set the `version` field in `package.json`
 - **Python**: Set the `version` field in `PulumiPolicy.yaml`
 
-Each version can only be published once. After publishing, that version can never be reused for that policy pack.
+Each version can only be published once.
 
 **Publishing a new version:**
 
@@ -574,11 +583,11 @@ We recommend [semantic versioning](https://semver.org/):
 - **Minor** (1.0.0 → 1.1.0): New policies added
 - **Patch** (1.0.0 → 1.0.1): Bug fixes
 
-After publishing, your custom policy pack will appear in your organization's policy packs list in Pulumi Cloud. From there, you can apply it to stacks or cloud accounts using policy groups. See [Get Started with Pulumi Policy](/docs/insights/policy/get-started/) for details on applying policies via policy groups.
+After publishing, your policy pack appears in Pulumi Cloud's policy pack list. Apply it to stacks or cloud accounts using policy groups. See [Get Started with Pulumi Policy](/docs/insights/policy/get-started/) for details.
 
 ## Considerations for authoring policies
 
-When authoring policy packs, keep the following best practices in mind:
+Best practices for authoring policy packs:
 
 ### Naming policies
 
@@ -586,7 +595,7 @@ Each policy within a policy pack must have a unique name. The name must be betwe
 
 ### Policy assertions
 
-Policy assertions should be complete sentences, specify the resource that has violated the policy, and be written using an imperative tone.
+Write policy assertions as complete sentences in imperative tone, specifying which resource violated the policy.
 
 | ✅ Good | ❌ Poor |
 | ------- | ------- |
@@ -594,7 +603,7 @@ Policy assertions should be complete sentences, specify the resource that has vi
 | "The RDS cluster must have audit logging enabled." | "Enable audit logging." |
 | "S3 bucket must use 'mycompany-' prefix." | "Use correct prefix." |
 
-This format provides clear messages to end users, allowing them to understand what and why a policy is failing.
+This format helps users understand which resource failed and why.
 
 ## Examples and resources
 
@@ -602,8 +611,6 @@ This format provides clear messages to end users, allowing them to understand wh
 - [Policy as Code overview](/docs/insights/policy/)
 
 ## Next steps
-
-Now that you've authored and published your first policy pack, you can:
 
 - [Apply policies to stacks and accounts using policy groups](/docs/insights/policy/get-started/)
 - [View and manage policy findings](/docs/insights/policy/policy-findings/)

@@ -1,8 +1,8 @@
 ---
 title: Policy
-title_tag: "Pulumi Policy as Code | Insights & Governance"
+title_tag: "Pulumi Policy | Insights & Governance"
 meta_desc: Enforce compliance and security policies across all cloud infrastructure with Pulumi Policy as Code—for both IaC stacks and discovered resources.
-h1: Policy as code
+h1: Policy as Code
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
@@ -25,7 +25,7 @@ aliases:
   - /docs/insights/policy/core-concepts/
 ---
 
-Pulumi Policy empowers you to set guardrails to enforce compliance across your entire cloud infrastructure—whether resources are managed by Pulumi IaC, provisioned by other tools like Terraform or CloudFormation, or created manually. Using Policy as Code, you can write flexible business and security policies that protect your organization.
+Pulumi Policy empowers you to set guardrails to enforce compliance across your entire cloud infrastructure—whether resources are managed by Pulumi IaC, provisioned by other tools like Terraform or CloudFormation, or created manually. Using Pulumi Policy, you can write flexible business and security policies that protect your organization.
 
 {{% notes type="info" %}}
 Policy as Code is implemented via [analyzer plugins](/docs/iac/concepts/plugins/#analyzer-plugins), which are installed automatically with the Pulumi CLI.
