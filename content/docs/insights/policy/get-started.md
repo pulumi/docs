@@ -136,5 +136,5 @@ To deepen your understanding of Pulumi Policy:
 - **Explore pre-built policy packs**: [Pre-built Policy Packs](/docs/insights/policy/policy-packs/pre-built-packs/)
 - **View and manage policy findings**: [Policy Findings](/docs/insights/policy/policy-findings/)
 - **Learn about enforcement modes**: [Policy Groups](/docs/insights/policy/policy-groups/)
-- **Configure policy pack settings**: [Policy Configuration](/docs/insights/policy/deprecated/configuration/)
+- **Configure policy pack settings**: [Policy Packs](/docs/insights/policy/policy-packs/)
 - **Understand core concepts in depth**: [Policy Concepts](/docs/using-pulumi/crossguard/core-concepts/)

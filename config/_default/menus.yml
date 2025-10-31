@@ -345,10 +345,6 @@ reference:
 # Insights Policy Menu Section Headers
 # -------------------------------------
 insights:
-  - name: Policy Packs
-    parent: insights-policy
-    identifier: policy-packs
-    weight: 20
   - name: Integrations
     parent: insights-policy
     identifier: integrations

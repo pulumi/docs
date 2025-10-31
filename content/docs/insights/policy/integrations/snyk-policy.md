@@ -260,7 +260,7 @@ To set the configuration, you can do one of the following:
     ```
 
     (Relative paths in the above command will also work.)
-1. If using Pulumi Cloud's server-side enforcement, policy pack configuration can be set centrally managed in the Pulumi Cloud UI. For details, see [Configuring policy packs](/docs/using-pulumi/crossguard/configuration/#using-the-pulumi-cloud).
+1. If using Pulumi Cloud's server-side enforcement, policy pack configuration can be centrally managed in the Pulumi Cloud UI. For details, see [Configuring policy packs](/docs/insights/policy/policy-packs/#pulumi-cloud-configuration).
 
 ## Next steps
 

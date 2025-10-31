@@ -104,7 +104,7 @@ Pulumi provides comprehensive predefined policies for AWS, Azure, Google Cloud, 
 
 ## Configuring policy packs
 
-Policy packs support configuration to make them reusable across your organization. By default, fields like enforcement level are configurable, and you can specify custom variables alongside each policy. Learn more about [configurable policy packs](/docs/insights/policy/deprecated/configuration/).
+Policy packs support configuration to make them reusable across your organization. By default, fields like enforcement level are configurable, and you can specify custom variables alongside each policy. Learn more about [configurable policy packs](/docs/insights/policy/policy-packs/).
 
 ## Examples
 
