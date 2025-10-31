@@ -65,11 +65,11 @@ Optionally, to delete the stack itself, you can also run [`pulumi stack rm`](/do
 
 Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
 
-    - Created a Pulumi new project.
-    - Provisioned a new storage bucket.
-    - Added an `index.html` file to your bucket.
-    - Served the file as a static website.
-    - Destroyed the resources you've provisioned.
+- Created a Pulumi new project.
+- Provisioned a new storage bucket.
+- Added an `index.html` file to your bucket.
+- Served the file as a static website.
+- Destroyed the resources you've provisioned.
 
 On the next page, we have a collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
 

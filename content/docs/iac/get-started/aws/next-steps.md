@@ -19,11 +19,11 @@ aliases:
 
 Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
 
-    - Created a Pulumi new project.
-    - Provisioned a new S3 bucket.
-    - Turned it into a static website.
-    - Created a website component for easy reuse.
-    - Destroyed all of the resources you've provisioned.
+- Created a Pulumi new project.
+- Provisioned a new S3 bucket.
+- Turned it into a static website.
+- Created a website component for easy reuse.
+- Destroyed all of the resources you've provisioned.
 
 Below are some recommended next steps, including examples and tutorials that you can explore or use them as a foundation for your own applications and infrastructure projects. Also be sure to [join the Community Slack](https://slack.pulumi.com/) to meet fellow IaC practitioners.
 
