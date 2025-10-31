@@ -163,7 +163,9 @@ You can find more example policy packs in the [Pulumi examples repository](https
 
 You can write unit tests for your policies to validate they behave correctly before publishing to your organization. Here's a simple test example:
 
+```typescript
 {{< example-program-snippet path="unit-test-policy" language="typescript" file="test/index.spec.ts" from="6" to="14" >}}
+```
 
 For a complete working example including test helpers and setup, see the [unit test policy example on GitHub](https://github.com/pulumi/docs/tree/master/static/programs/unit-test-policy-typescript).
 
@@ -390,7 +392,7 @@ When authoring policy packs, keep the following best practices in mind:
 
 ### Naming policies
 
-Each policy within a policy pack must have a unique name. The name must be between 1 and 100 characters and may contain letters, numbers, dashes (-), underscores (_), or periods (.).
+Each policy within a policy pack must have a unique name. The name must be between 1 and 100 characters and may contain letters, numbers, dashes (`-`), underscores (`_`), or periods (`.`).
 
 ### Policy assertions
 
