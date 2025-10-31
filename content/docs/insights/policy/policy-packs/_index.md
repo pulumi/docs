@@ -6,6 +6,7 @@ meta_desc: Learn how to use Policy Packs to enforce organizational standards and
 menu:
   insights:
     parent: insights-policy
+    identifier: policy-packs
     weight: 20
 aliases:
   - /docs/insights/policy/configuration/
