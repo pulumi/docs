@@ -5,6 +5,17 @@ For topics not addressed here, refer to the [Google Developer Documentation Styl
 
 ---
 
+## Scope
+
+This style guide applies to all Hugo content files in this repository.
+
+The following exceptions are specifically excluded from this style guide:
+
+- Non-content files (scripts, configuration, etc.) should follow general best practices for that file type.
+- Meta Markdown files (e.g., `README.md`, `AGENTS.md`) may use different conventions as appropriate.
+
+---
+
 ## Inclusive Language
 
 Pulumi strives to use language that is clear, inclusive, and respectful.  
