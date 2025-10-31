@@ -68,7 +68,6 @@ The `backend` property must contain exactly one of the following:
 - An [S3 backend configuration](#s3), or
 - a [remote](#remote) backend configuration.
 
-
 #### S3
 
 | Property | Type                                                                     | Description                                      |
@@ -89,9 +88,6 @@ The `backend` property must contain exactly one of the following:
 
 ## Outputs
 
-| Property  | Type   | Description                                    |
-|-----------|--------|------------------------------------------------|
-| `outputs` | object | A map of all outputs from the Terraform state. |
-
-The provider preserves the sensitive flag for any outputs marked as sensitive in the Terraform state.
-
+| Property  | Type   | Description                                                                                                          |
+|-----------|--------|----------------------------------------------------------------------------------------------------------------------|
+| `outputs` | object | A map of all outputs from the Terraform state. Any output marked as sensitive in the terraform state will be secret. |
