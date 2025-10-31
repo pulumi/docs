@@ -57,7 +57,7 @@ You can enable audit scans for your IaC stacks by adding them to an **Audit Poli
 4. **Add Policy Packs** to the group.
 5. **Save the policy group**. That's it!
 
-**Placeholder for Video**
+{{< video title="Setting up Stack Audit Policy" src="stack-audit-policy.mp4" autoplay="true" loop="true" >}}
 
 The next time any of the selected stacks completes a `pulumi up`, a post-deployment evaluation will be automatically triggered, and the results will populate in the Policy Findings hub.
 
