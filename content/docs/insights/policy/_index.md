@@ -18,6 +18,10 @@ aliases:
   - /docs/iac/using-pulumi/crossguard/
   - /docs/iac/crossguard/
   - /docs/insights/policy-as-code/
+  - /docs/iac/guides/testing/property-testing/
+  - /docs/guides/testing/property-testing/
+  - /docs/using-pulumi/testing/property-testing/
+  - /docs/iac/concepts/testing/property-testing/
 ---
 
 Pulumi Policy empowers you to set guardrails to enforce compliance across your entire cloud infrastructure—whether resources are managed by Pulumi IaC, provisioned by other tools like Terraform or CloudFormation, or created manually. Using Policy as Code, you can write flexible business and security policies that protect your organization.

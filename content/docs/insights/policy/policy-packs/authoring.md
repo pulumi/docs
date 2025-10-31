@@ -216,7 +216,7 @@ Before publishing your policy pack, test it locally against your Pulumi programs
 For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
     {{% /notes %}}
 
-    In the Pulumi program's directory run:
+1. In the Pulumi program's directory run:
 
     ```sh
     $ pulumi preview --policy-pack <path-to-policy-pack-directory>
@@ -224,17 +224,19 @@ For AWS examples, ensure you have [AWS credentials configured](/registry/package
 
     If the Pulumi stack is in compliance, we expect the output to tell us which policy packs were run.
 
-        Previewing update (dev):
-             Type                 Name          Plan
-         +   pulumi:pulumi:Stack  test-dev      create
-         +   └─ aws:s3:Bucket     my-bucket     create
+    ```output
+    Previewing update (dev):
+            Type                 Name          Plan
+        +   pulumi:pulumi:Stack  test-dev      create
+        +   └─ aws:s3:Bucket     my-bucket     create
 
-        Resources:
-            + 2 to create
+    Resources:
+        + 2 to create
 
-        Policy Packs run:
-            Name                                                 Version
-            aws-typescript (/Users/user/path/to/policy-pack)     (local)
+    Policy Packs run:
+        Name                                                 Version
+        aws-typescript (/Users/user/path/to/policy-pack)     (local)
+    ```
 
 1. We can then edit the stack code to specify a bucket prefix that doesn't match the required prefix.
 
@@ -246,19 +248,21 @@ For AWS examples, ensure you have [AWS credentials configured](/registry/package
 
 1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
 
-        Previewing update (dev):
-             Type                 Name          Plan       Info
-         +   pulumi:pulumi:Stack  test-dev      create     1 error
-         +   └─ aws:s3:Bucket     my-bucket     create
+    ```output
+    Previewing update (dev):
+            Type                 Name          Plan       Info
+        +   pulumi:pulumi:Stack  test-dev      create     1 error
+        +   └─ aws:s3:Bucket     my-bucket     create
 
-        Diagnostics:
-          pulumi:pulumi:Stack (test-dev):
-            error: preview failed
+    Diagnostics:
+        pulumi:pulumi:Stack (test-dev):
+        error: preview failed
 
-        Policy Violations:
-            [mandatory]  aws-typescript v0.0.1  s3-bucket-prefix (my-bucket: aws:s3/bucket:Bucket)
-            Ensures S3 buckets use the required naming prefix.
-            S3 bucket must use 'mycompany-' prefix. Current prefix: 'wrongprefix-'
+    Policy Violations:
+        [mandatory]  aws-typescript v0.0.1  s3-bucket-prefix (my-bucket: aws:s3/bucket:Bucket)
+        Ensures S3 buckets use the required naming prefix.
+        S3 bucket must use 'mycompany-' prefix. Current prefix: 'wrongprefix-'
+    ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
@@ -276,7 +280,7 @@ For AWS examples, ensure you have [AWS credentials configured](/registry/package
 For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
     {{% /notes %}}
 
-    In the Pulumi program's directory, run:
+1. In the Pulumi program's directory, run:
 
     ```sh
     $ pulumi preview --policy-pack <path-to-policy-pack-directory>
@@ -284,10 +288,11 @@ For AWS examples, ensure you have [AWS credentials configured](/registry/package
 
     If the Pulumi stack is in compliance, we expect the output to tell us which policy packs were run.
 
-        Previewing update (dev):
-             Type                 Name          Plan
-         +   pulumi:pulumi:Stack  test-dev      create
-         +   └─ aws:s3:Bucket     my-bucket     create
+    ```output
+    Previewing update (dev):
+            Type                 Name          Plan
+        +   pulumi:pulumi:Stack  test-dev      create
+        +   └─ aws:s3:Bucket     my-bucket     create
 
         Resources:
             + 2 to create
@@ -295,6 +300,7 @@ For AWS examples, ensure you have [AWS credentials configured](/registry/package
         Policy Packs run:
             Name                                             Version
             aws-python (/Users/user/path/to/policy-pack)     (local)
+    ```
 
 1. We can then edit the stack code to specify a bucket prefix that doesn't match the required prefix.
 
@@ -514,10 +520,6 @@ pulumi policy enable <org>/<pack-name> <version> --config config.json --policy-g
 
 ## Publishing to your organization
 
-{{% notes type="info" %}}
-Server-side enforcement of policy packs across an organization is only available in **Pulumi Business Critical**. See [pricing](/pricing/) for more details.
-{{% /notes %}}
-
 Once you've validated the behavior of your policies locally, publish them to Pulumi Cloud to enforce them across your organization. Any Pulumi client (a developer's workstation, CI/CD tool, etc.) that interacts with a stack via Pulumi Cloud will have policy enforcement during the execution of `preview` and `update`.
 
 Policy packs are versioned by Pulumi Cloud so that updated policies can be published and applied as ready and also reverted to previous versions as needed.
@@ -596,17 +598,7 @@ This format provides clear messages to end users, allowing them to understand wh
 
 ## Examples and resources
 
-### Compliance-ready policies
-
-{{% notes type="warning" %}}
-The compliance-ready policies repository is deprecated. We recommend using Pulumi's [pre-built policy packs](/docs/insights/policy/pre-built-packs/) instead, which offer more comprehensive coverage and are actively maintained.
-{{% /notes %}}
-
-For reference examples of policy pack implementations, you can review the [compliance-ready policies repository](https://github.com/pulumi/compliance-policies). While this repository is deprecated, it contains useful examples of policy pack structure and implementation patterns.
-
-### Additional resources
-
-- [Policy examples repository](https://github.com/pulumi/examples/tree/master/policy-packs)
+- [Policy examples repository](https://github.com/pulumi/examples/tree/master/policy-packs) - Example policy packs demonstrating various implementation patterns
 - [Policy as Code overview](/docs/insights/policy/)
 
 ## Next steps
