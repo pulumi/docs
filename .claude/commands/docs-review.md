@@ -90,6 +90,7 @@ Always provide relevant line numbers for any issues you identify.
 - Confirm that **all links resolve** and point to the correct targets (no 404s, no mislinked paths).
 - Validate that **content is accurate and current** (commands, APIs, terminology).
 - Ensure **all new files end with a newline**.
+- Double-check indented lines to ensure they are not incorrectly indented as code blocks.
 - **Code examples** must run correctly and follow best practices:
   - Do not suggest untested code.
   - Examples should show realistic use cases, not contrived demos.
