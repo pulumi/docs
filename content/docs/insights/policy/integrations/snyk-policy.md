@@ -221,7 +221,7 @@ pulumi preview --policy-pack ../infra
 ```
 
 {{< notes type="info" >}}
-Note that the Snyk container policy is a [stack policy](/docs/using-pulumi/crossguard/core-concepts/#stack-policies). This means that in order to have containers correctly scanned during a `pulumi preview`, your `docker.Image` resources must have the `buildOnPreview` set to `true`. If you run the policy pack during a `pulumi update`, the policy will execute _after_ your containers have been built, _and after they have been pushed_ if you have not explicitly specified the `skipPush` input to be `true`.
+Note that the Snyk container policy is a stack policy (validates all resources in the stack after processing). This means that in order to have containers correctly scanned during a `pulumi preview`, your `docker.Image` resources must have the `buildOnPreview` set to `true`. If you run the policy pack during a `pulumi update`, the policy will execute _after_ your containers have been built, _and after they have been pushed_ if you have not explicitly specified the `skipPush` input to be `true`.
 {{< /notes >}}
 
 ## Configuration options
