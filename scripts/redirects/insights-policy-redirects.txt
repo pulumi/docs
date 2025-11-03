@@ -10,4 +10,10 @@ docs/using-pulumi/crossguard/api-policy-manager/index.html|https://github.com/pu
 docs/iac/packages-and-automation/crossguard/api-policy-manager/index.html|https://github.com/pulumi/compliance-policies
 docs/iac/using-pulumi/crossguard/api-policy-manager/index.html|https://github.com/pulumi/compliance-policies
 docs/insights/policy/api-policy-manager/index.html|https://github.com/pulumi/compliance-policies
-docs/insights/policy/awsguard/index.html|https://github.com/pulumi/pulumi-awsguard
+docs/insights/policy/policy-as-code/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
+docs/iac/crossguard/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
+docs/guides/crossguard/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
+docs/using-pulumi/crossguard/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
+docs/iac/packages-and-automation/crossguard/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
+docs/iac/using-pulumi/crossguard/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
+docs/insights/policy/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
