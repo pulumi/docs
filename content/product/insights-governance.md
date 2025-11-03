@@ -11,6 +11,7 @@ meta_image: /images/product/insights-neo-launch-meta.png
 
 aliases:
 - /insights
+- /pulumi-policies
 - /product/pulumi-insights
 - /product/crossguard
 - /crossguard
