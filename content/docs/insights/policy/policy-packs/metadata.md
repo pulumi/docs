@@ -4,6 +4,11 @@ meta_desc: Policies include metadata that describes their purpose, behavior, and
 title: Policy Metadata
 h1: Policy Metadata
 meta_image: /images/docs/meta-images/docs-meta.png
+menu:
+  insights:
+    name: Policy Metadata
+    parent: policy-packs
+    weight: 30
 aliases:
   - /docs/insights/policy/policy-as-code/policy-metadata/
 ---

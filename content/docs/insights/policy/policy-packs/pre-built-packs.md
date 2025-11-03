@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     parent: policy-packs
-    weight: 1
+    weight: 10
 aliases:
   - /docs/insights/policy/policy-as-code/pre-built-packs/
   - /docs/pulumi-cloud/insights/pre-built-packs/

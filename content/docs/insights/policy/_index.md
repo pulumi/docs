@@ -1,8 +1,8 @@
 ---
 title: Policy
 title_tag: "Pulumi Policy | Insights & Governance"
-meta_desc: Enforce compliance and security policies across all cloud infrastructure with Pulumi Policy as Code—for both IaC stacks and discovered resources.
-h1: Policy as Code
+meta_desc: Enforce compliance and security policies across all cloud infrastructure with Pulumi Policy—for both IaC stacks and discovered resources.
+h1: Policy
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
@@ -18,10 +18,6 @@ aliases:
   - /docs/iac/using-pulumi/crossguard/
   - /docs/iac/crossguard/
   - /docs/insights/policy-as-code/
-  - /docs/iac/guides/testing/property-testing/
-  - /docs/guides/testing/property-testing/
-  - /docs/using-pulumi/testing/property-testing/
-  - /docs/iac/concepts/testing/property-testing/
   - /docs/insights/policy/core-concepts/
 ---
 

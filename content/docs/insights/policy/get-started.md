@@ -50,7 +50,7 @@ The page displays two tabs: **Policy Packs** and **Policy Groups**.
 
 ### Policy Packs
 
-![The Policies page with the Policy Packs tab selected](../media/policy-packs.png)
+![The Policies page with the Policy Packs tab selected](../assets/policy-packs.png)
 
 The Policy Packs tab has two switchable views:
 
@@ -71,7 +71,7 @@ You may not see any packs in the Organization view until you add some from the A
 
 ### Policy Groups
 
-![The Policies page with the Policy Groups tab selected](../media/policy-groups.png)
+![The Policies page with the Policy Groups tab selected](../assets/policy-groups.png)
 
 Policy groups enforce policy packs across stacks or accounts within your organization. The Policy Groups tab displays two types:
 

@@ -8,11 +8,15 @@ menu:
   insights:
     name: Write your own
     parent: policy-packs
-    weight: 2
+    weight: 20
 aliases:
   - /docs/insights/policy/authoring/
   - /docs/insights/policy/policy-packs/authoring/
   - /docs/insights/policy/best-practices/
+  - /docs/iac/guides/testing/property-testing/
+  - /docs/guides/testing/property-testing/
+  - /docs/using-pulumi/testing/property-testing/
+  - /docs/iac/concepts/testing/property-testing/
 ---
 
 If Pulumi's pre-built policy packs don't meet your requirements, you can write custom policy packs. Custom policies let you enforce any compliance, security, or operational rule.
@@ -68,7 +72,8 @@ Create your first policy pack:
     - A validation function (this example uses `validateResourceOfType` to run only for AWS S3 bucket resources)
     - An enforcement level set at the policy pack level (applies to all policies) or per policy (overrides the pack level)
 
-For more information on all available fields, see [policy metadata](/docs/insights/policy/policy-as-code/policy-metadata/).
+    > For more information on all available fields, see [policy metadata](/docs/insights/policy/policy-as-code/policy-metadata/).
+
     ```typescript
     import * as aws from "@pulumi/aws";
     import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
