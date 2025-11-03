@@ -349,7 +349,3 @@ insights:
     parent: insights-policy
     identifier: integrations
     weight: 50
-  - name: Deprecated
-    parent: insights-policy
-    identifier: deprecated
-    weight: 100
