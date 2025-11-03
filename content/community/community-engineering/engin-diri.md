@@ -9,11 +9,11 @@ aliases:
   - /engin
 talks:
 - event: "Cloud Native Tel Aviv"
-  title: "Kagent, Knative and AI-Driven Platforms: Scaling the Next Cloud-Native Frontier"
+  title: "What is AI Platform Engineering and Why Should You Care"
   url: "https://community.cncf.io/events/details/cncf-cloud-native-tel-aviv-presents-kagent-knative-and-ai-driven-platforms-scaling-the-next-cloud-native-frontier/"
   date: 2025-10-30T17:30:00.000+02:00
 - event: "Tel Aviv Pulumi User Group Meetup Nº 2"
-  title: "Platform Engineering and DevOps in the Age of AI"
+  title: "Agentic AI in Action: How Pulumi Neo Transforms Infrastructure Management"
   url: "https://www.meetup.com/tel-aviv-pulumi-user-group/events/310498800/"
   date: 2025-10-29T18:00:00.000+02:00
 - event: "Cloud Native Denmark 2025"
