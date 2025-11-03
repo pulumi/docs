@@ -55,7 +55,7 @@ And for the most critical part of the workflow—the fix itself—we've integrat
 
 After selecting one or more issues, your team can assign the task to Neo. It will analyze the violations and automatically generate a pull request with the necessary code changes. For unmanaged resources, Neo will even generate the code to import them into Pulumi and apply the fix. This turns a complex manual task into a simple review-and-merge process, allowing your team to finally burn down the backlog.
 
-**Placeholder for a video**
+{{< video title="Managing policy findings in Pulumi Cloud" src="findingsclipblog.mp4" autoplay="false" controls="true" loop="true" >}}
 
 ## Conclusion
 
