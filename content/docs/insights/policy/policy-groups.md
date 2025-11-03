@@ -61,7 +61,6 @@ Policies within policy groups can have different enforcement levels:
 
 - **Advisory:** Issues warnings but allows deployments to proceed. Useful for testing new policies or providing informational guidance.
 - **Mandatory:** Blocks deployments when violations are detected. Use for critical security, compliance, or cost policies.
-- **Remediate:** Automatically fixes violations when detected. See [Remediation Policies](https://www.pulumi.com/blog/remediation-policies/) for details.
 
 ## When to use each type
 

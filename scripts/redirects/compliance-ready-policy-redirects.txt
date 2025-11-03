@@ -1,11 +1,3 @@
-docs/insights/policy/deprecated/compliance-ready-policies/index.html|https://github.com/pulumi/compliance-policies
-docs/insights/policy/deprecated/compliance-ready-policies/aws/index.html|https://github.com/pulumi/compliance-policies
-docs/insights/policy/deprecated/compliance-ready-policies/awsnative/index.html|https://github.com/pulumi/compliance-policies
-docs/insights/policy/deprecated/compliance-ready-policies/azure/index.html|https://github.com/pulumi/compliance-policies
-docs/insights/policy/deprecated/compliance-ready-policies/azurenative/index.html|https://github.com/pulumi/compliance-policies
-docs/insights/policy/deprecated/compliance-ready-policies/gcp/index.html|https://github.com/pulumi/compliance-policies
-docs/insights/policy/deprecated/compliance-ready-policies/googlenative/index.html|https://github.com/pulumi/compliance-policies
-docs/insights/policy/deprecated/compliance-ready-policies/kubernetes/index.html|https://github.com/pulumi/compliance-policies
 docs/insights/policy/policy-as-code/compliance-ready-policies/index.html|https://github.com/pulumi/compliance-policies
 docs/insights/policy/policy-as-code/compliance-ready-policies/aws/index.html|https://github.com/pulumi/compliance-policies
 docs/insights/policy/policy-as-code/compliance-ready-policies/awsnative/index.html|https://github.com/pulumi/compliance-policies

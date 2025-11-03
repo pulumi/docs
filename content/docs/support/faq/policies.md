@@ -12,6 +12,7 @@ menu:
         identifier: support-faq-policies
 aliases:
   - /docs/insights/policy/policy-as-code/faq/
+  - /docs/insights/policy/faq/
   - /docs/iac/crossguard/faq/
   - /docs/guides/crossguard/faq/
   - /docs/using-pulumi/crossguard/faq/

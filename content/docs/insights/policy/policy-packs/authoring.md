@@ -17,7 +17,7 @@ aliases:
 
 If Pulumi's pre-built policy packs don't meet your requirements, you can write custom policy packs. Custom policies let you enforce any compliance, security, or operational rule.
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/insights/policy/).
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/insights/policy/#languages).
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ Before authoring your first policy pack, ensure you have:
 - [Pulumi CLI installed](/docs/install/).
 - For TypeScript/JavaScript policies: [Node.js installed](https://nodejs.org/en/download/).
 - For Python policies: [Python installed](https://python.org/downloads/).
-- Access to Pulumi Cloud.
+- (Optional) Access to Pulumi Cloud if you want to publish and centrally manage policy packs. Not required for local policy pack usage with open source Pulumi.
 - An understanding of [Policy as Code core concepts](/docs/insights/policy/).
 
 ## Creating a policy pack
@@ -174,13 +174,35 @@ You can find more example policy packs in the [Pulumi examples repository](https
 
 ## Testing your policies
 
-Write unit tests to verify your policies work correctly before publishing. Here's a simple test example:
+Write unit tests to verify your policies work correctly before publishing.
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
+Here's a simple test example using Mocha and assert:
 
 ```typescript
 {{< example-program-snippet path="unit-test-policy" language="typescript" file="test/index.spec.ts" from="6" to="14" >}}
 ```
 
-For an example including test helpers and setup, see the [unit test policy example on GitHub](https://github.com/pulumi/docs/tree/master/static/programs/unit-test-policy-typescript).
+For a complete example including test helpers and setup, see the [unit test policy example on GitHub](https://github.com/pulumi/docs/tree/master/static/programs/unit-test-policy-typescript).
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+Here's a simple test example using pytest:
+
+```python
+{{< example-program-snippet path="unit-test-policy" language="python" file="test_policy.py" from="16" to="33" >}}
+```
+
+For a complete example including additional test cases, see the [unit test policy example on GitHub](https://github.com/pulumi/docs/tree/master/static/programs/unit-test-policy-python).
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Resource validation vs stack validation
 
@@ -188,7 +210,7 @@ Pulumi policies validate at two scopes:
 
 ### Resource validation policies
 
-Resource validation policies run during `pulumi preview` or `pulumi up`, examining each resource before creation or update. These policies can block non-compliant resources.
+Resource validation policies run during `pulumi preview` or `pulumi up`, examining each resource before creation or update. These policies execute **before** the desired state is sent to the engine, which means they can block non-compliant resources during both preview and update operations.
 
 Use resource validation policies when you need to:
 
@@ -198,7 +220,7 @@ Use resource validation policies when you need to:
 
 ### Stack validation policies
 
-Stack validation policies run after resource registration completes. These policies examine relationships between resources and enforce stack-wide rules.
+Stack validation policies run after resource registration completes. These policies execute **after** resources have been created or updated, and only run during `pulumi up` (not during `pulumi preview`). They examine relationships between resources and enforce stack-wide rules.
 
 Use stack validation policies when you need to:
 
@@ -614,5 +636,5 @@ This format helps users understand which resource failed and why.
 
 - [Apply policies to stacks and accounts using policy groups](/docs/insights/policy/get-started/)
 - [View and manage policy findings](/docs/insights/policy/policy-findings/)
-- [Learn about policy groups and enforcement modes](/docs/insights/policy/policy-groups/)
+- [Learn about policy groups and enforcement modes](/docs/insights/policy/policy-groups/#types-of-policy-groups)
 - [Learn about policy pack configuration](/docs/insights/policy/policy-packs/)
