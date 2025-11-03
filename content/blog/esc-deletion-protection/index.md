@@ -1,6 +1,6 @@
 ---
 title: "Deletion Protection for Pulumi ESC Environments"
-date: 2025-10-21T14:00:00-07:00
+date: 2025-11-03T14:00:00-07:00
 draft: false
 meta_desc: "Prevent accidental deletion of critical environments with the new deletion protection feature for Pulumi ESC."
 meta_image: meta.png
