@@ -1,5 +1,5 @@
 ---
-title: Cloud Asset and Compliance Management – Pulumi Insights
+title: Insights & Governance - Continuous Compliance, By Construction
 layout: insights-governance
 
 heading: Insights & Governance
@@ -7,7 +7,7 @@ subheading: |
     Complete visibility and control for your cloud
 
 meta_desc: Join us on November 5 to see how Neo helps you get clean and stay clean - automatically. Watch it in action. Live demo + Q&A.
-meta_image: /images/product/insights-neo-launch-meta.png
+meta_image: /images/product/insights_governance_meta-image.png
 
 aliases:
 - /insights
@@ -18,7 +18,7 @@ aliases:
 
 preview:
   header:  Pulumi Neo just got smarter about infrastructure policy automation
-  description: "Join us on November 5 at 10:00 AM PT / 18:00 UTC for Pulumi Policies: Get Clean and Stay Clean Automatically. Watch the live demo and join the Q&A."
+  description: "Automated compliance made simple — continuously audit, remediate, and enforce policies to keep your cloud secure and reliable."
   hubspotID: 4031229e-1370-4118-9379-ee2be1fd64fd
   videoID: mwcrOTEf1EQ?si=Fx77RxM-uCjJLN-6
 
