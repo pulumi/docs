@@ -36,19 +36,65 @@
 {{ if .IsHome }}
   {{/* Add Organization entity - only on homepage per Google best practices */}}
   {{ $org := dict
-    "@type" "Organization"
+    "@type" "Corporation"
     "@id" "https://www.pulumi.com/#organization"
-    "name" "Pulumi"
+    "name" "Pulumi Corporation"
+    "legalName" "Pulumi Corporation"
+    "alternateName" "Pulumi"
     "url" "https://www.pulumi.com"
     "logo" (dict
       "@type" "ImageObject"
       "url" "https://www.pulumi.com/logos/brand/logo.png"
+      "width" 600
+      "height" 60
+    )
+    "description" "Pulumi enables cloud infrastructure teams to define, deploy, and manage cloud resources using familiar programming languages."
+    "foundingDate" "2017"
+    "founders" (slice
+      (dict "@type" "Person" "name" "Joe Duffy")
+      (dict "@type" "Person" "name" "Eric Rudder")
+    )
+    "address" (dict
+      "@type" "PostalAddress"
+      "streetAddress" "601 Union St Suite 1415"
+      "addressLocality" "Seattle"
+      "addressRegion" "WA"
+      "postalCode" "98101"
+      "addressCountry" "US"
+    )
+    "email" "team@pulumi.com"
+    "contactPoint" (dict
+      "@type" "ContactPoint"
+      "contactType" "sales"
+      "email" "sales@pulumi.com"
+      "url" "https://www.pulumi.com/contact"
     )
     "sameAs" (slice
-      "https://twitter.com/PulumiCorp"
       "https://github.com/pulumi"
+      "https://twitter.com/PulumiCorp"
       "https://www.linkedin.com/company/pulumi"
-      "https://www.youtube.com/c/PulumiTV"
+      "https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw"
+      "https://www.wikidata.org/wiki/Q122864080"
+      "https://en.wikipedia.org/wiki/Pulumi"
+      "https://www.crunchbase.com/organization/pulumi-corporation"
+    )
+    "knowsAbout" (slice
+      "Infrastructure as Code"
+      "Cloud Computing"
+      "DevOps"
+      "Platform Engineering"
+      "Cloud Security"
+      "Kubernetes"
+      "Serverless Computing"
+      "Multi-Cloud Architecture"
+    )
+    "award" (slice
+      (dict
+        "@type" "AwardOrHonor"
+        "name" "SOC 2 Type II Certified"
+        "description" "Successful completion of SOC 2 Type II audit for security, availability, and confidentiality"
+        "url" "https://www.pulumi.com/security/"
+      )
     )
   }}
   {{ $graph = $graph | append $org }}
@@ -58,31 +104,80 @@
     "@id" "https://www.pulumi.com/#website"
     "url" "https://www.pulumi.com"
     "name" "Pulumi"
-    "description" "Infrastructure as Code in any programming language. Build, deploy, and manage modern cloud applications and infrastructure using familiar languages."
+    "alternateName" "Pulumi IaC Platform"
+    "description" "Infrastructure as Code platform with AI. Deploy to any cloud using TypeScript, Python, Go, C#, Java, or YAML."
+    "inLanguage" "en-US"
     "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+    "about" (dict
+      "@type" "Thing"
+      "name" "Infrastructure as Code"
+      "sameAs" "https://www.wikidata.org/wiki/Q24964334"
+      "description" "Managing cloud infrastructure through code instead of manual processes"
+    )
+    "mentions" (slice
+      (dict "@type" "Thing" "name" "Amazon Web Services" "sameAs" "https://aws.amazon.com")
+      (dict "@type" "Thing" "name" "Microsoft Azure" "sameAs" "https://azure.microsoft.com")
+      (dict "@type" "Thing" "name" "Google Cloud Platform" "sameAs" "https://cloud.google.com")
+      (dict "@type" "Thing" "name" "Kubernetes" "sameAs" "https://kubernetes.io")
+      (dict "@type" "Thing" "name" "DevOps" "sameAs" "https://en.wikipedia.org/wiki/DevOps")
+    )
   }}
   {{ $graph = $graph | append $website }}
 
-  {{/* SoftwareApplication schema for Pulumi CLI */}}
+  {{/* SoftwareApplication schema for Pulumi Platform */}}
   {{ $software := dict
     "@type" "SoftwareApplication"
-    "@id" "https://www.pulumi.com/#pulumi-cli"
-    "name" "Pulumi"
+    "@id" "https://www.pulumi.com/#pulumi-platform"
+    "name" "Pulumi Infrastructure as Code Platform"
+    "alternateName" "Pulumi"
+    "description" "Open source infrastructure as code SDK with enterprise cloud platform. Deploy cloud resources using TypeScript, Python, Go, C#, Java, or YAML. Manage AWS, Azure, Google Cloud, Kubernetes, and 150+ providers."
     "applicationCategory" "DeveloperApplication"
-    "operatingSystem" "Windows, macOS, Linux"
-    "offers" (dict
-      "@type" "Offer"
-      "price" "0"
-      "priceCurrency" "USD"
+    "applicationSubCategory" "Infrastructure as Code"
+    "operatingSystem" (slice "Windows" "macOS" "Linux")
+    "softwareVersion" (readFile "static/latest-version" | default "3.198.0")
+    "downloadUrl" "https://get.pulumi.com/"
+    "installUrl" "https://www.pulumi.com/docs/iac/download-install/"
+    "releaseNotes" "https://www.pulumi.com/docs/reference/changelog/"
+    "license" "Apache-2.0"
+    "offers" (slice
+      (dict
+        "@type" "Offer"
+        "name" "Individual"
+        "price" "0"
+        "priceCurrency" "USD"
+        "description" "Free forever for individuals"
+      )
+      (dict
+        "@type" "Offer"
+        "name" "Team"
+        "price" "40"
+        "priceCurrency" "USD"
+        "description" "Everything you need to get started. 500 resources included, additional resources $0.1825/mo"
+        "url" "https://www.pulumi.com/pricing/"
+      )
+      (dict
+        "@type" "Offer"
+        "name" "Enterprise"
+        "price" "400"
+        "priceCurrency" "USD"
+        "description" "Security and collaboration for large teams. 2,000 resources included, additional resources start at $0.365/mo"
+        "url" "https://www.pulumi.com/pricing/"
+      )
     )
     "creator" (dict "@id" "https://www.pulumi.com/#organization")
     "maintainer" (dict "@id" "https://www.pulumi.com/#organization")
+    "keywords" "infrastructure as code, IaC, cloud, DevOps, automation, platform engineering"
   }}
   {{ $graph = $graph | append $software }}
 {{ end }}
 
-{{/* Note: Additional special schemas (video, code, QA, etc.) can be added here in future */}}
-{{/* Currently focusing on main content schemas which cover 90% of use cases */}}
+{{/* Add video schema if page contains YouTube videos */}}
+{{ if not .IsHome }}
+  {{ $videoEntity := partial "schema/collectors/video-entity.html" . }}
+  {{ if and $videoEntity (ne $videoEntity (dict)) }}
+    {{ $graph = $graph | append $videoEntity }}
+  {{ end }}
+{{ end }}
 
 {{/* Output single JSON-LD block with @graph */}}
 <script type="application/ld+json">

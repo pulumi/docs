@@ -1,0 +1,80 @@
+{{/* Returns VideoObject entity for pages with YouTube videos in @graph */}}
+
+{{/* Detect YouTube embeds in content */}}
+{{ $videos := slice }}
+
+{{/* Check for YouTube shortcode usage */}}
+{{ if in .RawContent "{{< youtube" }}
+  {{/* Extract video ID from shortcode */}}
+  {{ $shortcodes := findRE `\{\{< youtube\s+"?([^"\s>]+)"?\s*>\}\}` .RawContent }}
+  {{ range $shortcodes }}
+    {{ $id := replaceRE `\{\{< youtube\s+"?([^"\s>]+)"?\s*>\}\}` "$1" . }}
+    {{ if $id }}
+      {{ $videos = $videos | append $id }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Check for YouTube iframe embeds */}}
+{{ if in .Content "youtube.com/embed" }}
+  {{/* Extract video IDs from iframe embeds */}}
+  {{ $iframes := findRE `youtube\.com/embed/([^"?\s]+)` .Content }}
+  {{ range $iframes }}
+    {{ $id := replaceRE `youtube\.com/embed/([^"?\s]+)` "$1" . }}
+    {{ if $id }}
+      {{ $videos = $videos | append $id }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Generate VideoObject schema for first video only (primary video) */}}
+{{ $schema := dict }}
+{{ if gt (len $videos) 0 }}
+  {{ $primaryVideoId := index $videos 0 }}
+  {{ $videoTitle := .Title }}
+  {{ $videoDescription := or .Params.meta_desc .Summary (printf "Video content for: %s" .Title) }}
+
+  {{/* Get publish date with fallback */}}
+  {{ $publishDate := .Date }}
+  {{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
+    {{ if and .GitInfo .GitInfo.AuthorDate }}
+      {{ $publishDate = .GitInfo.AuthorDate }}
+    {{ else }}
+      {{ $publishDate = now }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Build video schema */}}
+  {{ $schema = dict
+    "@type" "VideoObject"
+    "@id" (printf "%s#video" .Permalink)
+    "name" $videoTitle
+    "description" $videoDescription
+    "uploadDate" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
+    "thumbnailUrl" (printf "https://img.youtube.com/vi/%s/maxresdefault.jpg" $primaryVideoId)
+    "embedUrl" (printf "https://www.youtube.com/embed/%s" $primaryVideoId)
+    "contentUrl" (printf "https://www.youtube.com/watch?v=%s" $primaryVideoId)
+    "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+  }}
+
+  {{/* Add duration if specified in frontmatter */}}
+  {{ with .Params.video_duration }}
+    {{ $schema = merge $schema (dict "duration" .) }}
+  {{ end }}
+
+  {{/* Add transcript if available */}}
+  {{ with .Params.video_transcript }}
+    {{ $schema = merge $schema (dict "transcript" .) }}
+  {{ end }}
+
+  {{/* Add view count if known */}}
+  {{ with .Params.video_views }}
+    {{ $schema = merge $schema (dict "interactionStatistic" (dict
+      "@type" "InteractionCounter"
+      "interactionType" "https://schema.org/WatchAction"
+      "userInteractionCount" .
+    )) }}
+  {{ end }}
+{{ end }}
+
+{{ return $schema }}

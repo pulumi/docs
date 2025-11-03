@@ -10,20 +10,13 @@ menu:
     identifier: kubernetes-get-started.begin
     parent: kubernetes-get-started
     weight: 2
-  clouds:
-    parent: kubernetes-get-started
-    identifier: kubernetes-begin
 
 aliases:
-- /docs/quickstart/kubernetes/begin/
-- /docs/quickstart/kubernetes/install-pulumi/
-- /docs/quickstart/kubernetes/install-language-runtime/
-- /docs/quickstart/kubernetes/configure/
-- /docs/get-started/kubernetes/install-pulumi/
-- /docs/get-started/kubernetes/install-language-runtime/
-- /docs/get-started/kubernetes/configure/
-- /get-started/kubernetes/begin/
-- /docs/iac/get-started/kubernetes/begin/
+    - /docs/quickstart/kubernetes/begin/
+    - /docs/quickstart/kubernetes/install-pulumi/
+    - /docs/quickstart/kubernetes/install-language-runtime/
+    - /docs/quickstart/kubernetes/configure/
+    - /get-started/kubernetes/begin/
 ---
 
 Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.

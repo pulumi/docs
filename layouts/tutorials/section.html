@@ -1,9 +1,20 @@
 {{ define "main" }}
-    <div class="flex mb-16">
-        <div class="sticky top-12 max-h-75">
-            {{ partial "tutorials/nav.html" . }}
+    <div class="docs-list-main">
+        <div class="docs-main-nav-toggle-wrapper">
+            <div class="docs-main-nav-wrapper">
+                <div id="docs-main-nav" class="docs-main-nav">
+                    <nav class="main-nav">
+                        {{ partial "tutorials/nav.html" . }}
+                    </nav>
+                </div>
+            </div>
+            <div class="docs-nav-toggle">
+                <div class="docs-nav-toggle-icon icon icon-24-24"></div>
+            </div>
         </div>
-        <div class="mt-8 mr-6 ml-4 flex justify-center w-full">
+
+        <div class="docs-main-content-wrapper">
+            <div class="docs-main-content">
             <div class="max-w-5xl">
                 <header class="mb-6">
                     {{ partial "tutorials/breadcrumb.html" . }}
@@ -127,6 +138,7 @@
                         {{ end }}
                     </ul>
                 </div>
+            </div>
             </div>
         </div>
     </div>

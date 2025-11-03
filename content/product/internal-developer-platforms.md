@@ -7,7 +7,7 @@ meta_image: /images/product/idp-meta.png
 
 heading: Internal Developer Platform
 subheading: |
-    Build your IDP with Pulumi. Give engineers self-service infrastructure through templates, components, and developer portals while maintaining control through policies and governance.
+    Everything platform engineers need to build an IDP
 
 aliases:
     - /solutions/platforms/

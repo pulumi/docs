@@ -24,7 +24,7 @@ aliases:
 
 ## Authentication
 
-Pulumi [Access Tokens](/docs/pulumi-cloud/access-management/access-tokens/) are recommended to access Pulumi ESC.
+Pulumi [Access Tokens](/docs/administration/access-identity/access-tokens/) are recommended to access Pulumi ESC.
 
 ## Installation
 

@@ -7,14 +7,13 @@ weight: 4
 menu:
     iac:
         name: Create project
-        parent: aws-b-get-started
+        parent: aws-get-started
         weight: 4
 
 aliases:
-- /docs/iac/get-started/aws/b/create-project/
-- /docs/quickstart/aws/create-project/
-- /docs/get-started/aws/create-project/
-- /docs/clouds/aws/get-started/create-project/
+    - /docs/iac/get-started/aws/b/create-project/
+    - /docs/quickstart/aws/create-project/
+    - /docs/clouds/aws/get-started/create-project/
 ---
 
 ## Create a new project
@@ -242,8 +241,7 @@ If you list the contents of your directory, you'll see some key files:
 {{% /choosable %}}
 {{% choosable language "yaml" %}}
 
-- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project, like its name,
-  as well as declaring your project's resources
+- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project, like its name, as well as declaring your project's resources
 
 {{% /choosable %}}
 

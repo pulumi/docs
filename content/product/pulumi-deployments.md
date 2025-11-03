@@ -46,7 +46,7 @@ options:
         - icon: git-merged
           icon_color: purple
           title: Git Push to Deploy
-          description: Deploy infrastructure with each [push to a GitHub branch](/docs/pulumi-cloud/deployments/reference/#github-push-to-deploy), using pull requests to review changes in ephemeral [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks/) before deploying them.
+          description: Deploy infrastructure with each [push to a GitHub branch](/docs/platform/deployments/reference/#github-push-to-deploy), using pull requests to review changes in ephemeral [Review Stacks](/docs/platform/deployments/review-stacks/) before deploying them.
         - icon: upload-to-cloud
           icon_color: salmon
           title: Click to Deploy
@@ -54,7 +54,7 @@ options:
         - icon: code-window
           icon_color: blue
           title: REST API
-          description: Deploy infrastructure by calling the Pulumi Service REST API. You can also use the API to run [Remote Automation API](/docs/pulumi-cloud/deployments/reference/#rest-api) code.
+          description: Deploy infrastructure by calling the Pulumi Service REST API. You can also use the API to run [Remote Automation API](/docs/platform/deployments/reference/#rest-api) code.
         - icon: eye
           icon_color: fuchsia
           title: Review Stacks

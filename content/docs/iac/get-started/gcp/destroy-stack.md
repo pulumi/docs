@@ -10,14 +10,10 @@ menu:
     identifier: gcp-get-started.destroy-stack
     parent: gcp-get-started
     weight: 8
-  clouds:
-    parent: google-cloud-get-started
-    identifier: gcp-destroy-stack
 
 aliases:
-- /docs/quickstart/gcp/destroy-stack/
-- /docs/get-started/gcp/destroy-stack/
-- /docs/clouds/gcp/get-started/destroy-stack/
+    - /docs/quickstart/gcp/destroy-stack/
+    - /docs/clouds/gcp/get-started/destroy-stack/
 ---
 
 Now that you've seen how to deploy and manage cloud resources with Pulumi, let's clean up by tearing down all of the resources that belong to this stack.

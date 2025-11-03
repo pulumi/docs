@@ -6,7 +6,7 @@ type: page
 layout: kubecon
 
 kubernetes_overview:
-    title: Scale Kubernetes Operations with AI Intelligence, Not AI Features
+    title: Scale Kubernetes Operations with Agentic AI, Not AI Features
     description: |
       Neo for Kubernetes: The first purpose-built infrastructure AI agent that understands your K8s environment, cloud dependencies, and container policies—delivering expert-level automation for modern container workloads.
     emphasis: "Visit Pulumi booth #1045 at KubeCon Atlanta to see live demos."
@@ -43,7 +43,7 @@ detail_sections:
             icon: security
             icon_color: violet
             description: |
-              Join Pulumi, Buildkite, Oso, and Honeycomb for premium cocktails and stunning Atlanta skyline views at Glenn's Skylounge. Tuesday, November 11, 7-9 PM – the perfect KubeCon wind-down! 21+ only, first-come, first served.
+              Join Pulumi, Buildkite, Oso, and Honeycomb for premium cocktails and stunning Atlanta skyline views at Glenn's Skylounge. Tuesday, November 11, 8-10 PM – the perfect KubeCon wind-down! 21+ only, first-come, first served.
             link: https://buildkite.com/resources/events/25/kubecon-happy-hour/
             cta: RSVP to Happy Hour
 

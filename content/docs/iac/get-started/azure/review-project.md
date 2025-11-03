@@ -10,14 +10,10 @@ menu:
         identifier: azure-get-started.review-project
         parent: azure-get-started
         weight: 4
-    clouds:
-        parent: azure-get-started
-        identifier: azure-review-project
 
 aliases:
-- /docs/quickstart/azure/review-project/
-- /docs/get-started/azure/review-project/
-- /docs/clouds/azure/get-started/review-project/
+    - /docs/quickstart/azure/review-project/
+    - /docs/clouds/azure/get-started/review-project/
 ---
 
 Let's review some of the generated project files:
@@ -50,7 +46,6 @@ Let's review some of the generated project files:
 
 {{% choosable language "javascript,typescript,go,csharp,java" %}}
 
-<!-- The wrapping spans are infortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
 - <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
 
 {{% /choosable %}}

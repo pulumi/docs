@@ -11,7 +11,6 @@ menu:
         weight: 6
 
 aliases:
-- /docs/iac/get-started/terraform/terraform-providers/
 ---
 
 ## Access the provider ecosystem

@@ -11,7 +11,6 @@ menu:
         weight: 8
 
 aliases:
-- /docs/iac/get-started/terraform/orchestrate/
 ---
 
 ## Deployment orchestration

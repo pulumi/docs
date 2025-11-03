@@ -26,7 +26,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/
+url_slug: https://www.pulumi.com/kubecon/
 
 # Content for the left hand side section of the page.
 main:

@@ -17,6 +17,10 @@ social:
     linkedin: "Discover how integrating AI coding assistants (like Cursor, Copilot, etc.) with Pulumi's Model Context Protocol (MCP) server transforms Infrastructure as Code development. This post walks through a real-world example of provisioning an AKS cluster, showcasing reduced context switching, faster discovery, and tighter feedback loops—all within the editor. Boost your team's productivity and improve the developer experience with AI-assisted IaC."
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 Infrastructure as Code (IaC) has revolutionized how we manage cloud resources, but navigating complex cloud provider APIs, writing boilerplate code, and iterating through deployment cycles can still be time-consuming. Pulumi offers a fantastic developer experience using familiar programming languages. But what if we could make it even *faster* and more intuitive by integrating powerful AI assistants directly into the development loop?
 
 <!--more-->
@@ -27,25 +31,13 @@ Several AI coding assistants like GitHub Copilot, Anthropic's Claude Code, Winds
 
 ## Setting up the Pulumi MCP Integration in Cursor
 
-Before diving in, you typically need to configure your AI assistant to communicate with the Pulumi MCP server. In Cursor, you create a configuration file named `mcp.json` within the `.cursor` directory in your project's root.
+Before diving in, you typically need to configure your AI assistant to communicate with the Pulumi MCP server. For Cursor, you can do so by clicking the following button:
 
-```json
-{
-    "mcpServers": {
-        "pulumi": {
-            "type": "stdio",
-            "command": "npx",
-            "args": ["@pulumi/mcp-server"]
-        }
-    }
-}
-```
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=pulumi&config=eyJ0cmFuc3BvcnQiOiJodHRwIiwidXJsIjoiaHR0cHM6Ly9tY3AuYWkucHVsdW1pLmNvbS9tY3AifQ%3D%3D)
 
-Validate the connection within the assistant's settings (e.g., Cursor has a dedicated section to check the MCP connection status).
+The assistant can now leverage Pulumi tools seamlessly. These tools are specific actions enabled by the MCP server—like searching the Pulumi Registry or running a `pulumi` command—allowing the assistant to gather information or interact with your Pulumi project.
 
-![Cursor MCP Settings](cursor-mcp-settings.png)
-
-Once configured, the AI assistant can leverage Pulumi tools seamlessly. These tools are specific actions enabled by the MCP server—like searching the Pulumi Registry or running a `pulumi` command—allowing the assistant to gather information or interact with your Pulumi project.
+For detailed setup instructions for Cursor, Claude Code, Windsurf, Claude Desktop, and other AI assistants, see the [Pulumi MCP Server documentation](/docs/iac/using-pulumi/mcp-server/).
 
 ## The Goal: Provisioning an AKS Cluster
 

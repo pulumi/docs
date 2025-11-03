@@ -1,0 +1,107 @@
+{{/* Returns Event entity for @graph */}}
+
+{{/* Initialize Event schema */}}
+{{ $schema := dict
+  "@type" "Event"
+  "@id" "#main-content"
+  "name" (or .Params.main.title .Title)
+  "url" .Permalink
+  "inLanguage" "en-US"
+}}
+
+{{/* Add description */}}
+{{ with (or .Params.main.description .Params.meta_desc .Summary) }}
+  {{ $schema = merge $schema (dict "description" .) }}
+{{ end }}
+
+{{/* Add event dates if available */}}
+{{ with .Params.main.sortable_date }}
+  {{ $schema = merge $schema (dict "startDate" .) }}
+{{ end }}
+
+{{/* Add duration if available */}}
+{{ with .Params.main.duration }}
+  {{ $schema = merge $schema (dict "duration" .) }}
+{{ end }}
+
+{{/* Add location */}}
+{{ $location := .Params.main.location }}
+{{ if $location }}
+  {{ if eq $location "virtual" }}
+    {{/* Virtual event */}}
+    {{ $schema = merge $schema (dict
+      "eventAttendanceMode" "https://schema.org/OnlineEventAttendanceMode"
+      "location" (dict
+        "@type" "VirtualLocation"
+        "url" .Permalink
+      )
+    ) }}
+  {{ else }}
+    {{/* Physical location */}}
+    {{ $schema = merge $schema (dict
+      "eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode"
+      "location" (dict
+        "@type" "Place"
+        "name" $location
+      )
+    ) }}
+  {{ end }}
+{{ end }}
+
+{{/* Add event status - if external and block_external_search_index is true, might be past */}}
+{{ $eventStatus := "https://schema.org/EventScheduled" }}
+{{ if and .Params.external .Params.block_external_search_index }}
+  {{/* External blocked events might be past */}}
+  {{ $eventStatus = "https://schema.org/EventScheduled" }}
+{{ end }}
+{{ $schema = merge $schema (dict "eventStatus" $eventStatus) }}
+
+{{/* Add organizer */}}
+{{ $schema = merge $schema (dict
+  "organizer" (dict
+    "@type" "Organization"
+    "name" "Pulumi"
+    "url" "https://www.pulumi.com"
+  )
+) }}
+
+{{/* Add image if available */}}
+{{ with .Params.meta_image }}
+  {{ $imageURL := . }}
+  {{ if not (hasPrefix . "http") }}
+    {{ $imageURL = printf "%s%s" $.Permalink . }}
+  {{ end }}
+  {{ $schema = merge $schema (dict
+    "image" $imageURL
+  ) }}
+{{ end }}
+
+{{/* Add presenter/performer if available */}}
+{{ with .Params.main.presenters }}
+  {{ $performers := slice }}
+  {{ range . }}
+    {{ $presenter := . }}
+    {{ with $presenter.name }}
+      {{ $performer := dict "@type" "Person" "name" . }}
+      {{ with $presenter.role }}
+        {{ $performer = merge $performer (dict "jobTitle" .) }}
+      {{ end }}
+      {{ $performers = $performers | append $performer }}
+    {{ end }}
+  {{ end }}
+  {{ if $performers }}
+    {{ $schema = merge $schema (dict "performer" $performers) }}
+  {{ end }}
+{{ end }}
+
+{{/* Add publisher reference */}}
+{{ $schema = merge $schema (dict
+  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+) }}
+
+{{/* Add breadcrumb reference if it exists */}}
+{{ $schema = merge $schema (dict
+  "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink))
+) }}
+
+{{ return $schema }}

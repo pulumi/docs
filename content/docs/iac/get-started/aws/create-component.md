@@ -7,11 +7,11 @@ weight: 7
 menu:
     iac:
         name: Create a component
-        parent: aws-b-get-started
+        parent: aws-get-started
         weight: 7
 
 aliases:
-- /docs/iac/get-started/aws/b/create-component/
+    - /docs/iac/get-started/aws/b/create-component/
 ---
 
 ## Create a component

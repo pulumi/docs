@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     esc:
         Name: Doppler
-        identifier: Doppler
+        identifier: esc-vs-doppler
         parent: esc-vs
         weight: 3
 aliases:

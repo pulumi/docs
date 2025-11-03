@@ -24,6 +24,7 @@ import "./redirects";
 import "./algolia/autocomplete";
 import "./terraform-compare";
 import "./external-links";
+import "./neo-mode";
 
 // Register all Stencil components.
 defineCustomElements();

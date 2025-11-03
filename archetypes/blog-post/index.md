@@ -34,6 +34,10 @@ authors:
 tags:
     - change-me
 
+# Schema type for structured data (SEO). Options: auto, faq, article, blog, howto, product, event, none
+# Leave as 'auto' (or omit) for intelligent detection based on content type.
+# Specify explicitly to override auto-detection. See SCHEMA.md for details.
+schema_type: auto
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the

@@ -8,7 +8,7 @@ menu:
         name: AWS
         parent: iac-get-started
         weight: 2
-        identifier: aws-b-get-started
+        identifier: aws-get-started
 
 aliases:
     - /docs/iac/get-started/aws/b/
