@@ -19,6 +19,18 @@ If Pulumi's pre-built policy packs don't meet your requirements, you can write c
 
 Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/insights/policy/#languages).
 
+### Creating a Policy Pack with Neo
+
+This guide walks you through creating a policy pack manually, but [Neo](/product/neo/) can help streamline the process.  
+
+Neo can generate policy pack content tailored to your preferred programming language and cloud providers, allowing you to quickly build policies that meet your specific requirements while reducing errors. When paired with the [GitHub App](/docs/iac/guides/continuous-delivery/github-app/), Neo can even open pull requests directly in your repository.  
+
+Here are some example prompts to inspire your workflow:
+
+> "Create a boilerplate TypeScript policy pack at `<GitHub Repository>`"  
+> "Create a policy to enforce encryption of S3 buckets"  
+> "Create a policy that requires environment tagging on all Google Cloud resources"
+
 ## Prerequisites
 
 Before authoring your first policy pack, ensure you have:
@@ -56,6 +68,7 @@ Create your first policy pack:
     - A validation function (this example uses `validateResourceOfType` to run only for AWS S3 bucket resources)
     - An enforcement level set at the policy pack level (applies to all policies) or per policy (overrides the pack level)
 
+For more information on all available fields, see [policy metadata](/docs/insights/policy/policy-as-code/policy-metadata/).
     ```typescript
     import * as aws from "@pulumi/aws";
     import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
@@ -631,6 +644,7 @@ This format helps users understand which resource failed and why.
 
 - [Policy examples repository](https://github.com/pulumi/examples/tree/master/policy-packs) - Example policy packs demonstrating various implementation patterns
 - [Policy as Code overview](/docs/insights/policy/)
+- [Policy Metadata fields](/docs/insights/policy/metadata.md)
 
 ## Next steps
 
