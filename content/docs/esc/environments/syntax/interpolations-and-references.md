@@ -8,7 +8,7 @@ aliases:
   - /docs/esc/reference/interpolations-and-references/
 menu:
   esc:
-    parent: reference-esc-syntax
+    parent: esc-syntax
     identifier: esc-syntax-interpolations-and-references
     weight: 2
 ---

@@ -8,7 +8,7 @@ aliases:
   - /docs/esc/reference/top-level-keys/
 menu:
   esc:
-    parent: reference-esc-syntax
+    parent: esc-syntax
     identifier: esc-syntax-top-level-keys
     weight: 1
 ---
