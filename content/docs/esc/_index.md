@@ -53,7 +53,7 @@ sections:
     link: /docs/esc/development/languages-sdks/go/
   - label: YAML
     icon: icon-32-32 yaml-color-32-32
-    link: /docs/reference/esc-syntax/
+    link: /docs/esc/environments/syntax/
 - type: button-cards
   heading: Capabilities
   cards:

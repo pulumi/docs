@@ -85,7 +85,7 @@ sections:
   - emoji: ⚙️
     heading: ESC Environment Syntax
     description: Reference for ESC environment definitions, interpolations, functions, and providers.
-    link: /docs/reference/esc-syntax/
+    link: /docs/esc/environments/syntax/
 
 - type: button-cards
   heading: Packages & Providers

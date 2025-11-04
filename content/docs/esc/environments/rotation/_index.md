@@ -8,7 +8,7 @@ menu:
     name: Rotating Secrets
     identifier: esc-rotating-secrets
     parent: esc-environments
-    weight: 4
+    weight: 5
 ---
 
 Secret Rotation is a feature in Pulumi ESC that enables the automated periodic updating of sensitive credentials. By defining a schedule, you can specify when and how often a secret should be rotated, ensuring that any long-lived credentials do not remain static over time. This feature is useful for maintaining best practices in security by reducing the risk of credential exposure or misuse.
