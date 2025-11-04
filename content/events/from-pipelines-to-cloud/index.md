@@ -69,8 +69,8 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["CI/CD & Pipeline Optimization", "Infrastructure as Code"]
-        languages: ["Any"]
+        topics:  ["CI/CD & Pipeline Optimization", "Infrastructure as Code", "Azure DevOps"]
+        languages: ["C#"]
         clouds: ["Azure"]
 
 # The right hand side form section.
