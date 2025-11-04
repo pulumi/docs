@@ -51,5 +51,6 @@ customer_logos:
     - name: portx
     - name: tivityhealth
     - name: linktree
+    - name: spearAI
 
 ---
