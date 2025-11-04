@@ -98,6 +98,6 @@ Sign up using your email address and password, or connect with your GitHub, GitL
 
 ### Explore the console
 
-Access the Pulumi Cloud console through the "Sign In" link at [pulumi.com](http://pulumi.com) or go directly to [app.pulumi.com](http://app.pulumi.com). The dashboard provides useful content and links, while the left navigation gives you access to stacks, resources, and settings. Use the search function to find specific resources, and click the sparkle icon to access Pulumi Copilot, your AI assistant.
+Access the Pulumi Cloud console through the "Sign In" link at [pulumi.com](http://pulumi.com) or go directly to [app.pulumi.com](http://app.pulumi.com). The dashboard provides useful content and links, while the left navigation gives you access to stacks, resources, and settings. Use the search function to find specific resources, and click the sparkle icon to access Pulumi Neo, your AI agent.
 
 {{< get-started-stepper >}}
