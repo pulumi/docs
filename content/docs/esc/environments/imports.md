@@ -8,7 +8,7 @@ menu:
     name: Importing environments
     identifier: esc-importing-environments
     parent: esc-environments
-    weight: 2
+    weight: 3
 ---
 
 Environments can be composed from other environments.
