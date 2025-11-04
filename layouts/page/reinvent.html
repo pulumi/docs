@@ -1,156 +1,345 @@
 {{ define "hero" }}
-    <header class="page-hero">
-        <img class="mx-auto w-full" src="/images/reinvent/reinvent-hero-24.png" />
+    <header class="page-hero flex justify-center items-center" >
+        <div class="relative" style="max-width: 2400px; ">
+        <img class="hidden xxl:block mx-auto w-full" style="max-height: 600px; max-width: 1500px; object-fit: cover;" src="/images/reinvent/reinvent-header-25.png" />
+        <div class="hidden xxl:flex relative xxl:absolute py-16 xxl:py-0 xxl:pl-8 bg-violet-100 xxl:bg-transparent xxl:inset-0 flex-col items-center xxl:items-start justify-center text-center px-4 gap-y-8 xxl:text-left">
+            <div class="font-semibold text-violet-600">AWS + PULUMI - BETTER TOGETHER</div>
+            <h1 class="text-4xl m-0">Meet with Pulumi at
+            AWS re:Invent</h1>
+            <p class="text-gray-600 text-2xl m-0">Infrastructure as Code, Now with Agentic AI at <b>Booth 1127</b></p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <a href="#experts" class="btn-primary">Meet the Pulumi Experts</a>
+                <a href="https://app.pulumi.com/signup" target="_blank"  class="btn-secondary">Try Pulumi Cloud</a>
+            </div>
+        </div>
+
+        <div class="flex xxl:hidden relative py-16 flex-col items-center justify-center text-center px-4 gap-y-8"
+            style="background: linear-gradient(90deg, white 0%, #ddd6fe 50%, white 100%);">
+            <div class="font-semibold text-violet-600">AWS + PULUMI - BETTER TOGETHER</div>
+            <h1 class="text-4xl m-0">Meet with Pulumi at
+                AWS re:Invent</h1>
+            <p class="text-gray-600 text-2xl m-0">Infrastructure as Code, Now with Agentic AI at <b>Booth 1127</b></p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <a href="#experts" class="btn-primary">Meet the Pulumi Experts</a>
+                <a href="https://app.pulumi.com/signup" target="_blank" class="btn-secondary">Try Pulumi Cloud</a>
+            </div>
+        </div>
+    </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <section class="w-full text-center mb-16">
-        <h2>Automate, Secure, and Manage Everything You Run in AWS with Pulumi</h2>
-        <h4 class="w-10/12 mx-auto mt-0">Experience the Future of Cloud Infrastructure Management</h4>
-        <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
-            <b>Welcome to the Pulumi booth #370 at AWS re:Invent!</b> Discover how Pulumi and AWS are revolutionizing cloud infrastructure automation, security, and management for businesses like yours.
-        </p>
+
+    <section class="container mx-auto my-16 text-center">
+        <h2 class="mb-16">Plan your re:Invent with Pulumi</h2>
+        <div class="lg:flex lg:flex-wrap justify-center items-stretch">
+            <div class="lg:w-1/2 px-3 py-6 mb-32">
+                <div class="card text-left p-6 relative h-full" style="padding-top: 80px;">
+                    <div class="absolute flex items-center justify-center rounded-full bg-white border-3 border-orange-500" style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #E69148;">
+                        <img src="/images/reinvent/code.png" alt="Code" style="width: 40px; height: 40px;" />
+                    </div>
+                    <div>
+                        <h5>Book Your Tailored AWS Demo</h5>
+                    </div>
+                    <div class="description">
+                        <p>Skip the line at booth 1127 for a one-on-one Pulumi demo tailored to your AWS use case. Get your questions answered,
+                        explore best practices, and see how Pulumi can accelerate your cloud journey with a solution tailored to you.</p>
+                    </div>
+                    <div class="card-cta-btn text-center">
+                        <a href="https://calendly.com/pulumi-meetings/demo-pulumi-at-aws-re-invent" target="_blank" class="btn-primary">Book my Demo at re:Invent</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 px-3 py-6 mb-32">
+                <div class="card text-left p-6 relative h-full" style="padding-top: 80px;">
+                    <div class="absolute flex items-center justify-center rounded-full bg-white border-3 border-orange-500" style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #3545D7;">
+                        <img src="/images/reinvent/drink.png" alt="Drink" style="width: 40px; height: 40px;" />
+                    </div>
+                    <div>
+                        <h5>1923 Happy Hour</h5>
+                    </div>
+                    <div class="description">
+                        <p>Don't miss one of the most anticipated nights of re:Invent. Join Pulumi, Buildkite, Honeycomb, and Oso at 1923
+                        Prohibition Bar for craft cocktails, community, and conversations that go late into the night.
+                        </p>
+                        <p>Date: December 3, at 7:00 - 10:00 pm PT</p>
+                        <p>Location: 1923 Bar - The Venetian</p>
+                    </div>
+                    <div class="card-cta-btn text-center">
+                        <a class="btn-primary">RSVP coming soon</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 px-3 py-6 mb-32 lg:mb-0">
+                <div class="card text-left p-6 relative h-full" style="padding-top: 80px;">
+                    <div class="absolute flex items-center justify-center rounded-full bg-white border-3 border-orange-500" style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #A25BA8;">
+                        <img src="/images/reinvent/restaurant.png" alt="Restaurant" style="width: 40px; height: 40px;" />
+                    </div>
+                    <div>
+                        <h5>Restaurant Reception with Datadog</h5>
+                    </div>
+                    <div class="description">
+                        <p>Join Pulumi and Datadog for an exclusive re:Invent evening at one of Las Vegas's top restaurants. Enjoy exceptional
+                        food, drinks, and conversations in a private setting.
+                        </p>
+                        <p>Date: December 1, 6:00 - 8:00 pm PT</p>
+                        <p>Location: Gjelina - The Venetian</p>
+
+                    </div>
+                    <div class="card-cta-btn text-center">
+                        <a href="https://events.datadoghq.com/events/sip-social?_gl=1*751l3w*_gcl_au*MTcxNjkyMDQwNC4xNzU1MDE1Mjkx*_ga*MTM4ODg0MzI0NC4xNzU5MzQwOTcx*_ga_KN80RDFSQK*czE3NTkzNDQ1NzkkbzIkZzEkdDE3NTkzNDkwNjYkajU3JGwwJGgxNDgwMjY0MzIx*_fplc*Y0NpOHdFbCUyRlg3YUV6QVN5QnF0V2M4UkNBTnk0QzRGaERhJTJCdWI2Z1RGaXB0cGxpMXRGSHF3STk2NExwenN2WFBGelRGSUVnT280bEkzSlZOWXVvbjhzTXJRdlRUU2Ficzk2ZzVMZjhwbGltOHJPdGRjNk0zRFQlMkZnZVJDTWlBJTNEJTNE" target="_blank" class="btn-primary">RSVP for the reception</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 px-3 py-6">
+                <div class="card text-left p-6 relative h-full" style="padding-top: 80px;">
+                    <div class="absolute flex items-center justify-center rounded-full bg-white border-3 border-orange-500" style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #A25BA8;">
+                        <img src="/images/reinvent/school.png" alt="Workshop" style="width: 40px; height: 40px;" />
+                    </div>
+                    <div>
+                        <p class="m-0 text-violet-600">ONLINE WORKSHOP</p>
+                        <h5 class="m-0 my-3">Day 2 Autonomous Infrastructure Management</h5>
+                    </div>
+                    <div class="description">
+                        <p>Learn how to simplify and automate maintenance of growing infrastructure inventory with monitoring, remediation, and
+                        optimization workflows.
+                        </p>
+                        <p>Date: December 10, 9:00 - 10:00 pm PT</p>
+                    </div>
+                    <div class="card-cta-btn text-center">
+                        <a href="/events/day-2-autonomous-infrastructure-management/" class="btn-primary">Register for the workshop</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full my-16 py-16 px-8" style="background: linear-gradient(90deg, #A25BA8 0%, #673EAC 100%);">
+        <div class="flex flex-col lg:flex-row justify-center items-center">
+            <div class="container flex flex-col m-0 lg:mr-32" style="width: auto;">
+                <h3 class="text-white my-2 text-4xl">Deploy AWS Infrastructure at the Speed of AI</h3>
+                <p class="text-white my-1 text-display text-3xl">Discover why AWS + Pulumi are better together</p>
+                <p class="text-white my-2 text-base">Deploy faster, secure better, and manage everything with confidence using real programming languages.</p>
+            </div>
+            <a href="/aws" class="btn-secondary mt-6" style="min-width: 290px;">The AWS Official Partnership</a>
+        </div>
     </section>
 
     <section class="container mx-auto my-16 text-center">
-        <h2>Engage with Pulumi at re:Invent</h2>
-        <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
-            Don't miss these exciting opportunities to learn more and connect with our team.  Visit <b>booth #370</b> to see Pulumi in action, grab some swag, and discover how Pulumi and AWS together can turn your cloud into a powerful competitive advantage!
-        </p>
-        <div class="lg:flex lg:flex-wrap justify-center items-stretch">
-            <div class="lg:w-1/2 px-3 py-6">
-                <div class="card text-center p-6 relative h-full">
-                    <div class="icon-section">
-                        {{ partial "color-icon.html" (dict "icon" "pen" "icon_color" "yellow") }}
+        <h2>Pulumi + AWS at booth 1127</h2>
+        <p>Discover how Pulumi empowers teams to build, secure, and scale modern cloud applications on AWS.</p>
+        <div class="flex flex-wrap justify-center items-stretch text-left mt-8">
+            <div class="w-full lg:w-1/3 p-3">
+                <div class="card text-center p-6 relative h-full mx-auto" style="max-width: 400px;">
+                    <div class="icon-section flex justify-left mb-8">
+                        <div class="flex items-center justify-center rounded-full bg-orange-100" style="width: 80px; height: 80px;">
+                            {{ partial "color-icon.html" (dict "icon" "coding" "icon_color" "orange") }}
+                        </div>
                     </div>
                     <div>
-                        <h5>Schedule a 1:1 with Pulumi Leadership </h5>
+                        <h5 class="text-display">Product Demos</h5>
                     </div>
                     <div class="description">
-                        <p>Secure a private meeting with our Founder and top executives to gain exclusive insights on cloud strategy and innovation.</p>
-                    </div>
-                    <div class="card-cta-btn">
-                        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30H0-8lfGn2iXl5prHgp0LUovoK6OHt_2PPkBKnRTnhPNUTEFswqg85haAxAeAwSevDscjR6y0" target="_blank" class="btn-primary">Request a Meeting</a>
+                       <p>Drop in for live sessions every hour: 15-minute demos. Learn how to turn AWS best practices into reusable components,
+                    automate governance, and accelerate delivery. Learn how teams ship AWS services 5x faster while reducing infrastructure
+                    costs by up to 70%</p>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 px-3 py-6">
-                <div class="card text-center p-6 relative h-full">
-                    <div class="icon-section">
-                        {{ partial "color-icon.html" (dict "icon" "team" "icon_color" "violet") }}
+            <div class="w-full lg:w-1/3 p-3">
+                <div class="card text-center p-6 relative h-full mx-auto" style="max-width: 400px;">
+                    <div class="icon-section flex justify-left mb-8">
+                        <div class="flex items-center justify-center rounded-full bg-blue-100" style="width: 80px; height: 80px;">
+                            {{ partial "color-icon.html" (dict "icon" "neo" "icon_color" "blue") }}
+                        </div>
                     </div>
                     <div>
-                        <h5>Schedule a 1:1 Pulumi Deep Dive </h5>
+                        <h5>Meet Neo</h5>
                     </div>
                     <div class="description">
-                        <p>Get a personalized walkthrough on how to take your AWS infrastructure management to the next level with Pulumi.</p>
-                    </div>
-                    <div class="card-cta-btn">
-                        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ30H0-8lfGn2iXl5prHgp0LUovoK6OHt_2PPkBKnRTnhPNUTEFswqg85haAxAeAwSevDscjR6y0" target="_blank" class="btn-primary">Request a demo</a>
+                        <p>Pulumi Neo is the first AI agent engineered to orchestrate, secure, and optimize complex cloud automation at enterprise
+                        scale. It maps dependencies, applies guardrails, and streamlines infrastructure delivery across large, regulated
+                        environments.</p>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 px-3 py-6">
-                <div class="card text-center p-6 relative h-full">
-                    <div class="icon-section">
-                        {{ partial "color-icon.html" (dict "icon" "pen" "icon_color" "yellow") }}
+            <div class="w-full lg:w-1/3 p-3">
+                <div class="card text-center p-6 relative h-full mx-auto" style="max-width: 400px;">
+                    <div class="icon-section flex justify-left mb-8">
+                        <div class="flex items-center justify-center rounded-full bg-purple-100" style="width: 80px; height: 80px;">
+                            {{ partial "color-icon.html" (dict "icon" "interests" "icon_color" "purple") }}
+                        </div>
                     </div>
                     <div>
-                        <h5>Attend our AWS  Workshop</h5>
+                        <h5>Limited-edition Swag</h5>
                     </div>
                     <div class="description">
-                        <p><b>Mastering AWS Infrastructure with Pulumi</b><br/> Learn hands-on techniques to supercharge your AWS deployments using Pulumi.</p>
-                    </div>
-                    <div class="card-cta-btn">
-                        <a href="/events/aws-immersion-day-platform-engineering/" target="_blank" class="btn-primary">REGISTER</a>
-                    </div>
-                </div>
-            </div>
-            <div class="lg:w-1/2 px-3 py-6">
-                <div class="card text-center p-6 relative h-full">
-                    <div class="icon-section">
-                        {{ partial "color-icon.html" (dict "icon" "nodes" "icon_color" "salmon") }}
-                    </div>
-                    <div>
-                        <h5>RSVP to 1923 at re:Invent</h5>
-                    </div>
-                    <div class="description">
-                        <p>Join Pulumi Partners Honeycomb, BuildKite, Oso and observeIQ <br/>Wednesday, December 4 <br/>8:00 - 11:00 pm
-                        </p>
-                    </div>
-                    <!-- <div class="card-cta-btn">
-                        <a target="_blank" href="https://events.bizzabo.com/666452?promo=Roaring20sPulumi" class="btn-primary">RSVP Here</a>
-                    </div> -->
-                </div>
-            </div>
-            <div class="lg:w-1/2 px-3 py-6">
-                <div class="card text-center p-6 relative h-full">
-                    <div class="icon-section">
-                        {{ partial "color-icon.html" (dict "icon" "team" "icon_color" "purple") }}
-                    </div>
-                    <div>
-                        <h5>Top Golf Experience</h5>
-                    </div>
-                    <div class="description">
-                        <p>Unwind with your favorite re:Invent attendees at Top Golf <br/>Wednesday, December 4 <br/>5:00 - 8:00 pm
-                        </p>
-                    </div>
-                    <div class="card-cta-btn">
-                        <a target="_blank" href="https://tailscale.com/topgolf?utm_campaign=pulumi" class="btn-primary">Reserve your Bay</a>
+                        <p>Pick up exclusive Pulumi merch as you explore how Pulumi and Neo use AI to streamline infrastructure and security
+                        lifecycle management across the cloud.</p>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
-    <section class="container flex flex-col justify-center lg:flex-row mx-auto my-16 px-8 lg:px-0">
-        <div class="flex flex-col lg:flex-row"></div>
-            <div class="w-full order-last mt-8 lg:mt-0 lg:order-first lg:w-1/2">
-                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                    <pulumi-choosable type="language" class="highlight" value="typescript">
-                        {{ partial "code" (dict "code" .Params.awsx.ts "lang" "ts") }}
-                    </pulumi-choosable>
+    <!-- <section class="container flex justify-center mx-auto my-16 px-8 lg:px-0">
+        <div class="flex flex-col"></div>
+        <h3>AI-Driven Infrastructure Automation on AWS</h3>
+        <p>Discover how agentic AI automates AWS operations within your governance guardrails. Real examples of config
+            remediation,
+            Lambda updates, and security response.</p>
+        </div>
+        <a href="/request-a-demo/" class="btn-secondary">Request a Demo</a>
+    </section> -->
 
-                    <pulumi-choosable type="language" class="highlight" value="python">
-                        {{ partial "code" (dict "code" .Params.awsx.py "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="go">
-                        {{ partial "code" (dict "code" .Params.awsx.go "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="csharp">
-                        {{ partial "code" (dict "code" .Params.awsx.csharp "lang" "csharp") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="java">
-                        {{ partial "code" (dict "code" .Params.awsx.java "lang" "java") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="yaml">
-                        {{ partial "code" (dict "code" .Params.awsx.yaml "lang" "yaml") }}
-                    </pulumi-choosable>
-                </pulumi-chooser>
+    <section class="w-full my-16 py-16 px-8 bg-violet-600">
+        <div class="flex flex-col lg:flex-row justify-center items-center">
+            <div class="container flex flex-col mr-32" style="width: auto; max-width: 1000px;">
+                <h3 class="text-white my-2 text-4xl">AI-Driven Infrastructure Automation on AWS</h3>
+                <p class="text-white my-2 text-base">Discover how agentic AI automates AWS operations within your governance guardrails. Real examples of config
+                remediation, Lambda updates, and security response.</p>
             </div>
-            <div class="w-full lg:w-1/2 px-8">
-                <h3>Pulumi + AWS: Better Together</h3>
-                <p>{{"Ship faster, secure your secrets, and enforce cloud compliance and security with [Pulumi IaC](/product/infrastructure-as-code/) (infrastructure as code), [ESC](/product/secrets-management/) (secrets management and orchestration), and [Insights](/product/pulumi-insights/) (cloud asset and compliance management). Our partnership with AWS offers a robust solution for complex cloud deployments, enabling you to:" | markdownify}}</p>
-                <h5>Automate your AWS infrastructure with Pulumi IaC.</h5>
-                <p class="mt-0">
-                    Build and ship infrastructure faster using languages you know and love, like TypeScript, Python, Go, C#, and Java.
-                </p>
-                <h5>Secure your cloud secrets with Pulumi ESC.</h5>
-                <p>
-                    Centrally manage all your secrets and configurations. Pull and sync secrets with any secrets store. Consume in any application, tool, or CI/CD platform.
-                </p>
-                <h5>Manage your AWS resources with Pulumi Insights.</h5>
-                <p>
-                    Search, compliance remediation, resource visualizations, cost optimization, and AI insights over all your AWS infrastructure.
-                </p>
-            </div>
+            <a href="/request-a-demo/" class="btn-secondary mt-6" style="min-width: 193px;">Request a Demo</a>
         </div>
     </section>
 
-    {{ partial "virtual-communities" . }}
+<section class="container mx-auto my-16 px-4 lg:px-32 text-center" id="experts">
+    <h2>Meet the Pulumi Experts</h2>
+    <p>At booth 1127, meet the team shaping Pulumi's future. Product leaders, engineers, and enterprise experts will be there
+    to answer your questions and share insights tailored to your cloud and platform engineering journey.</p>
+    
+    <div class="flex flex-col gap-16">
+        <div class="flex flex-col xl:flex-row gap-16">
+            <!-- Meagan Cojocar -->
+            <div class="bg-white rounded-lg shadow-lg pt-6 pr-6 relative overflow-hidden w-full xl:w-1/2 flex flex-col" style="border-top: 4px solid; border-image: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #673EAC 74.48%, #3545D7 100%) 1;">
+                <div class="flex items-start justify-between mb-4 pl-6">
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">ENGINEERING</span>
+                </div>
+                <h3 class="text-xl font-bold mb-0 text-left pl-6">Meagan Cojocar</h3>
+                <p class="text-gray-600 mb-4 text-left m-0 pl-6">Vice President and GM, IaC</p>
+                <div class="flex items-end m-0" style="flex-grow: 1;">
+                    <img src="/images/reinvent/meagan.png" alt="Meagan Cojocar" class="h-64 w-auto object-cover pr-6 hidden md:block" />
+
+                    <div class="flex-1 p-6 md:p-0 m-0 md:pb-6 flex flex-col">
+                        <p class="text-base/8 text-gray-700 text-left">Meet the leader guiding Pulumi engineering and roadmap, ensuring customer success shapes how Infrastructure as Code and
+                        Pulumi evolves.</p>
+                        <div class="flex gap-4">
+                            <a target="_blank" data-track="linkedin" href="https://www.linkedin.com/in/meagancojocar"><i class="fab fa-linkedin"></i></a>
+                            <a target="_blank" href="/blog/author/meagan-cojocar/"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Komal Ali -->
+             <div class="bg-white rounded-lg shadow-lg pt-6 pr-6 relative overflow-hidden w-full xl:w-1/2 flex flex-col" style="border-top: 4px solid; border-image: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #673EAC 74.48%, #3545D7 100%) 1;">
+                 <div class="flex items-start justify-between mb-4 pl-6">
+                     <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">ENGINEERING</span>
+                 </div>
+                 <h3 class="text-xl font-bold mb-0 text-left pl-6">Komal Ali</h3>
+                 <p class="text-gray-600 mb-4 text-left m-0 pl-6">Director of Engineering, IaC and AI</p>
+                 <div class="flex items-end m-0" style="flex-grow: 1;">
+                     <img src="/images/reinvent/komal.png" alt="Komal Ali" class="h-64 w-auto object-cover pr-6 hidden md:block" />
+
+                     <div class="flex-1 p-6 md:p-0 m-0 md:pb-6 flex flex-col">
+                         <p class="text-base/8 text-gray-700 text-left">Meet the engineering leader guiding IaC Cloud, Deployments, IDP, and ESC, shaping how Pulumi brings platform engineering
+                        together in one unified experience.</p>
+                         <div class="flex gap-4">
+                             <a target="_blank" data-track="linkedin" href="https://www.linkedin.com/in/komal-ali/"><i class="fab fa-linkedin"></i></a>
+                             <a target="_blank" href="/blog/author/komal-ali/"><i class="fas fa-globe"></i></a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </div>
+
+        <!-- Craig Dillon -->
+        <div class="bg-white rounded-lg shadow-lg pt-6 pr-6 relative overflow-visible w-full flex flex-col" style="border-top: 4px solid; border-image: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #673EAC 74.48%, #3545D7 100%) 1;">
+            <div class="flex items-start justify-between mb-4 pl-6">
+                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">ENTERPRISE SERVICES</span>
+            </div>
+            <h3 class="text-xl font-bold mb-0 text-left pl-6">Craig Dillon</h3>
+            <p class="text-gray-600 mb-4 text-left m-0 pl-6">Head of Professional Services</p>
+            <div class="flex items-end m-0" style="flex-grow: 1;">
+                <img src="/images/reinvent/craig.png" alt="Craig Dillon" class="h-64 w-auto object-cover pr-6 hidden md:block" />
+
+                <div class="flex-1 p-6 md:p-0 m-0 md:pb-6 flex flex-col">
+                    <p class="text-base/8 text-gray-700 text-left">Meet Craig to learn how Pulumi’s Professional Services team accelerates enterprise transformation.
+                    His team helps organizations migrate from legacy tools, bootstrap internal developer platforms, and set the right
+                    foundation for long-term success.</p>
+                    
+                    <p class="text-base/8 text-gray-700 text-left hidden md:block">By partnering with Professional Services, enterprises reduce time-to-value, strengthen security and compliance, and gain
+                    proven frameworks to streamline operations. Craig and his team ensure adoption is done right the first time, so you can
+                    scale Pulumi with confidence and focus on innovation.</p>
+                    <div class="flex gap-4">
+                        <a target="_blank" data-track="linkedin" href="https://www.linkedin.com/in/craigcdillon/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute left-1/2" style="bottom: -20px; transform: translateX(-50%); min-width: 275px;">
+                <a href="/proserv/" class="btn-primary text-sm whitespace-nowrap">Explore Professional Services</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col xl:flex-row gap-16">
+            <!-- Mitch Gerdisch -->
+            <div class="bg-white rounded-lg shadow-lg pt-6 pr-6 relative overflow-hidden w-full xl:w-1/2 flex flex-col" style="border-top: 4px solid; border-image: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #673EAC 74.48%, #3545D7 100%) 1;">
+                <div class="flex items-start justify-between mb-4 pl-6">
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">SOLUTIONS</span>
+                </div>
+                <h3 class="text-xl font-bold mb-0 text-left pl-6">Mitch Gerdisch</h3>
+                <p class="text-gray-600 mb-4 text-left m-0 pl-6">Principal Solutions Architect</p>
+                <div class="flex items-end m-0" style="flex-grow: 1;">
+                    <img src="/images/reinvent/mitch.png" alt="Mitch Gerdisch" class="h-64 w-auto object-cover pr-6 hidden md:block" />
+
+                    <div class="flex-1 p-6 md:p-0 m-0 md:pb-6 flex flex-col">
+                        <p class="text-base/8 text-gray-700 text-left">Meet the expert who has guided enterprise customers to success, with deep skills in security, cloud computing,
+                        orchestration, and API integrations.</p>
+                        <div class="flex gap-4">
+                            <a target="_blank" data-track="linkedin" href="https://www.linkedin.com/in/mitchgerdisch/"><i class="fab fa-linkedin"></i></a>
+                            <a target="_blank" href="/blog/author/mitch-gerdisch/"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- James Connell -->
+            <div class="bg-white rounded-lg shadow-lg pt-6 pr-6 relative overflow-hidden w-full xl:w-1/2 flex flex-col" style="border-top: 4px solid; border-image: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #673EAC 74.48%, #3545D7 100%) 1;">
+                <div class="flex items-start justify-between mb-4 pl-6">
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">SOLUTIONS</span>
+                </div>
+                <h3 class="text-xl font-bold mb-0 text-left pl-6 ">James Connell</h3>
+                <p class="text-gray-600 mb-4 text-left m-0 pl-6">Senior Solutions Architect</p>
+                <div class="flex items-end m-0" style="flex-grow: 1;">
+                    <img src="/images/reinvent/james.png" alt="James Connell" class="h-64 w-auto object-cover pr-6 hidden md:block" />
+
+                    <div class="flex-1 p-6 md:p-0 m-0 md:pb-6 flex flex-col">
+                        <p class="text-base/8 text-gray-700 text-left">Meet the architect specializing in application modernization and cloud migration, guiding enterprises to streamline
+                        DevOps and scale with modern practices.</p>
+                        <div class="flex gap-4">
+                            <a target="_blank" data-track="linkedin" href="https://www.linkedin.com/in/connelljames/"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="w-full bg-violet-600 relative h-96">
+    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 ">
+        <div class="flex flex-col text-white w-full xl:w-1/2 py-4 px-4 md:py-16 md:px-8">
+            <h3 class="text-white my-2 text-2xl md:text-4xl">Interested in learning more about Neo + Amazon Bedrock AgentCore?</h3>
+            <p class="text-white my-4 text-lg">Watch it in action guided by our expert engineering team</p>
+            <a href="/request-a-demo/" class="btn-secondary mt-2 md:mt-6 self-start">Request a Demo</a>
+        </div>
+    </div>
+    <div class="hidden xl:flex absolute right-0 top-1/2 transform -translate-y-1/2 flex gap-4 items-center">
+        <img src="/images/reinvent/amazon-bedrock.png" alt="Amazon Bedrock" class="h-36 xxl:h-48 w-auto object-cover mb-6" />
+        <img src="/images/reinvent/pulumipus-neo.png" alt="Neo" class="h-96 w-auto object-cover" />
+    </div>
+</section>
+
+
 {{ end }}

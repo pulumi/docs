@@ -73,7 +73,7 @@ With all the above points, the benefits of controllers are clear - Let me list s
 - **Automation** - Controllers automate the routine operational tasks and enforce policies.
 - **Availability** - Controllers ensure that the resources are always available, addressing failures and taking actions to maintain the desired state.
 - **Efficiency** - Controllers provide an efficient way to manage the resources and workloads in the cluster with quota management and auto-scaling.
-- **Reliablity** - Controllers help to make workload management more reliable with features like replica management, [pod](/registry/packages/kubernetes/api-docs/core/v1/pod/) creation and deletion, and scheduling.
+- **Reliability** - Controllers help to make workload management more reliable with features like replica management, [pod](/registry/packages/kubernetes/api-docs/core/v1/pod/) creation and deletion, and scheduling.
 - **Flexibility** - Controllers provide a flexible way to handle a variety of workloads and resources in the cluster, such as [DaemonSet](/registry/packages/kubernetes/api-docs/apps/v1/daemonset/), [StatefulSet](/registry/packages/kubernetes/api-docs/apps/v1/statefulset/), [jobs](/registry/packages/kubernetes/api-docs/batch/v1/job/), [cron jobs](/registry/packages/kubernetes/api-docs/batch/v1/cronjob/), [deployments](/registry/packages/kubernetes/api-docs/apps/v1/deployment/), and [services](/registry/packages/kubernetes/api-docs/core/v1/service/).
 - **Observability** - Controllers provide a view into the cluster resources and the state of the resources via the [Kubernetes API](/blog/yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes/#kubernetes-components-and-the-kubernetes-api).
 

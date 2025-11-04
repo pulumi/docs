@@ -166,7 +166,7 @@ and [reusing existing Lambda functions](#register-an-event-handler-by-reusing-an
 
 Nearly any code can go inside the body of that function. The JavaScript arrow function may capture references to other
 variables in the surrounding code, including other resources and even imported modules. The Pulumi compiler figures
-out [how to serialize the resulting closure](/docs/iac/concepts/miscellaneous/function-serialization/) as it uploads and configures the AWS Lambda. This works even if you
+out [how to serialize the resulting closure](/docs/iac/concepts/functions/function-serialization/) as it uploads and configures the AWS Lambda. This works even if you
 are composing multiple functions together. Just write code like usual --- that's why these are called _magic functions_.
 
 ### Using Lambda function resources

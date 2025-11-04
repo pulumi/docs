@@ -1,6 +1,6 @@
 ---
-title: "Infrastructure as Code in Any Language - Pulumi"
-meta_desc: Write infrastructure code in TypeScript, Python, Go, .NET, Java, or YAML. Deploy to any cloud with the #1 open source IaC platform. Start free, scale with enterprise features.
+title: "Infrastructure as Code in Any Language – Pulumi IaC"
+meta_desc: Write infrastructure code using TypeScript, Python, Go, .NET, Java, or YAML. Deploy to any cloud with built-in previews and testing.
 layout: infrastructure-as-code
 aliases:
     - /product/iac
@@ -162,7 +162,7 @@ key_features:
                     Every infrastructure change is a pull request. Review, comment, approve. Full audit trail built in.
               - title: Catch bugs before production
                 description: |
-                    Run [unit tests](/docs/iac/concepts/testing/unit/) in milliseconds. Spin up ephemeral environments for [integration tests](/docs/iac/concepts/testing/integration/). Fail fast, fix fast.
+                    Run [unit tests](/docs/iac/guides/testing/unit/) in milliseconds. Spin up ephemeral environments for [integration tests](/docs/iac/guides/testing/integration/). Fail fast, fix fast.
               - title: Works with your CI/CD
                 description: |
                     Integrates with [any CI/CD system](/docs/iac/packages-and-automation/continuous-delivery/). GitHub Actions, GitLab, Jenkins, CircleCI - your choice. Or use the [Kubernetes operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/) for GitOps.
@@ -204,7 +204,7 @@ key_features_below:
                     Never lose state again. Automatic versioning and encryption at rest. Pulumi Cloud handles it all, or self-host with S3/Azure Blob.
               - title: Secrets that actually work
                 description: |
-                    No more secrets in plaintext. Automatic encryption for sensitive values. Integrate with AWS Secrets Manager, Azure Key Vault, or use [Pulumi ESC](/product/secrets-configuration/) for centralized secrets.
+                    No more secrets in plaintext. Automatic encryption for sensitive values. Integrate with AWS Secrets Manager, Azure Key Vault, or use [Pulumi ESC](/product/secrets-management/) for centralized secrets.
               - title: Ship with confidence
                 description: |
                     Review every change before it ships. Full history and audit logs. Roll back to any previous state when needed.

@@ -9,6 +9,10 @@ tags:
     - infrastructure-as-code
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/) has revolutionized how cloud resources are managed, allowing for more efficient, scalable, and repeatable deployments. We designed [Pulumi IaC](/product/infrastructure-as-code/) to let you program cloud infrastructure using familiar programming languages like TypeScript, JavaScript, Python, Go, .NET, Java, and YAML. This approach not only simplifies the process but also integrates seamlessly with existing development tools and ecosystems (e.g., IDEs, standard unit test frameworks, integration test). You can define infrastructure with code, often in just one line, for serverless, Kubernetes, AI/ML, databases, and more. You can also preview changes before deploying unlike many other IaC solutions. Pulumi IaC is fully open source with a [public roadmap](https://github.com/orgs/pulumi/projects/44/). We value working with the community to shape the product through feedback and contributions.
 
 ## What is Pulumi Cloud?
@@ -22,11 +26,11 @@ Infrastructure as Code tools like Pulumi require systems for coordinating deploy
 Building and maintaining your own Infrastructure as Code backend involves a significant engineering and operational commitment. On the engineering front, you face security and compliance challenges, as well as the need to develop features that ensure enterprise readiness. Operationally, the backend must be highly available and reliable, and it should facilitate easy onboarding for the rest of the organization when the time comes. Beyond these immediate concerns, there are also hidden personnel costs associated with running your own backend. Let's break down some of those hidden costs.
 
 {{% notes type="tip" %}}
-**Materialize** reduced costs and accelerated time to market by making developer onboarding 75% faster.  
+**Materialize** reduced costs and accelerated time to market by making developer onboarding 75% faster.
 
-*"Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all in one stack. It has hugely benefited productivity and our service's reliability. Without Pulumi, we know that scaling and maintaining Materialize would be much harder for the team."*  
+*"Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all in one stack. It has hugely benefited productivity and our service's reliability. Without Pulumi, we know that scaling and maintaining Materialize would be much harder for the team."*
 
-–— Paul Hemberger, Engineering Manager for Materialize’s cloud team  
+–— Paul Hemberger, Engineering Manager for Materialize’s cloud team
 
 [Learn more](/case-studies/materialize/)
 {{% /notes %}}
@@ -49,7 +53,7 @@ When you build and operate your own IaC backend, you'll need to dedicate one ful
 {{% notes type="tip" %}}
 **Unity** reduced deployment times by 80%, from weeks to hours, significantly improving their time to market.
 
-*"Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance. An equivalent deployment would take more lines of code while yielding IaC that is less reusable."*  
+*"Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance. An equivalent deployment would take more lines of code while yielding IaC that is less reusable."*
 
 [Learn more](/case-studies/unity/)
 {{% /notes %}}
@@ -76,9 +80,9 @@ Pulumi Cloud further enhances security with [Pulumi ESC](/product/secrets-manage
 {{% notes type="tip" %}}
 **Tetrate** uses Pulumi ESC to stop secrets sprawl and attain compliance more efficiently.
 
-*“With Pulumi ESC, our developers get dynamic AWS and Azure credentials on-demand. Onboarding new developers is quick and secure, with no more manually filling in .env templates.”*  
+*“With Pulumi ESC, our developers get dynamic AWS and Azure credentials on-demand. Onboarding new developers is quick and secure, with no more manually filling in .env templates.”*
 
-–— Liam White, Platform Lead  
+–— Liam White, Platform Lead
 
 [Learn more](/product/secrets-management/)
 {{% /notes %}}
@@ -98,7 +102,7 @@ In contrast, Pulumi Cloud offers standardized, well-documented capabilities and 
 {{% notes type="tip" %}}
 **BMW Group** used Pulumi to build a scalable and resilient hybrid cloud implementation that could handle more than eleven thousand developers.
 
-*“When we started to use Terraform to deploy our first cloud services with AWS, it didn’t scale quickly enough for our needs. With Pulumi we’re really speeding up development. We can use any language instead of some special language like HCL and by automating policies, we have compliant and secure systems from the beginning.”*  
+*“When we started to use Terraform to deploy our first cloud services with AWS, it didn’t scale quickly enough for our needs. With Pulumi we’re really speeding up development. We can use any language instead of some special language like HCL and by automating policies, we have compliant and secure systems from the beginning.”*
 
 –— Jan-Peter Alten, DevOps Engineer
 
@@ -123,7 +127,7 @@ Each unique variable in your environment –— cloud providers, languages, team
 
 Our newly launched program called Immersion Days, is a customizable, half-day event designed to expand Pulumi’s impact across your organization.
 
-The program has 3 key components:  
+The program has 3 key components:
 
 1. **Strategic Leadership Engagement:** Address key business challenges like security posture, cost optimization, and developer productivity.
 2. **Architectural Review:** Evaluate and refine platform engineering projects to enhance efficiency and scalability.

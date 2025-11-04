@@ -1,0 +1,30 @@
+{{/* SoftwareApplication Schema for Pulumi CLI - Required for software rich results */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://www.pulumi.com/#pulumi-cli",
+  "name": "Pulumi CLI",
+  "alternateName": "Pulumi",
+  "description": "Open source infrastructure as code SDK. Deploy cloud resources using TypeScript, Python, Go, C#, Java, or YAML. Build on AWS, Azure, Google Cloud, Kubernetes, and 150+ providers.",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "Infrastructure as Code",
+  "operatingSystem": ["Windows", "macOS", "Linux"],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "softwareVersion": "{{ .Site.Params.schema.pulumi_version | default "3.198.0" }}",
+  "downloadUrl": "https://get.pulumi.com/",
+  "installUrl": "https://www.pulumi.com/docs/iac/download-install/",
+  "releaseNotes": "https://www.pulumi.com/docs/reference/changelog/",
+  "softwareRequirements": "Node.js 18+ or Python 3.8+ or Go 1.21+ or .NET 6+ or Java 11+",
+  "license": "Apache-2.0",
+  "url": "https://github.com/pulumi/pulumi",
+  "creator": {"@id": "https://www.pulumi.com/#organization"},
+  "maintainer": {"@id": "https://www.pulumi.com/#organization"},
+  "keywords": "infrastructure as code, IaC, cloud, DevOps, automation"
+}
+</script>

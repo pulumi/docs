@@ -38,10 +38,10 @@ main:
     youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-12-20T12:00:00-05:00
+    sortable_date: 2025-12-09T12:00:00-05:00
 
     # Duration of the webinar.
-    duration: 90 minutes
+    duration: 60 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
@@ -72,8 +72,8 @@ form:
 
 event_data:
   name: "Day 2 Autonomous Infrastructure Management"
-  start_date: 2025-12-20T12:00:00-05:00
-  end_date: 2025-12-20T13:30:00-05:00
+  start_date: 2025-12-09T12:00:00-05:00
+  end_date: 2025-12-09T13:00:00-05:00
   url: "https://www.pulumi.com/resources/day-2-autonomous-infrastructure-management/"
   description: |
     Getting infrastructure deployed is just one piece of the automation puzzle. The next question is: how do teams maintain a growing inventory of infrastructure in the long term? Infrastructure can drift from the latest standards due to manual intervention or the adoption of new, more stringent requirements. In this session, we'll dive into day 2 operations to show you how to simplify and automate maintenance - even as the number of resources you manage is expanding.

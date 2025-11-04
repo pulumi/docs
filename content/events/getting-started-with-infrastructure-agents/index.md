@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: "Getting Started with Infrastructure Agents"
 meta_desc: Learn to add intelligent automation to infrastructure workflows with proper controls and human oversight.
-meta_image:
+meta_image: /images/resources/get-started-ai-agent.png
 
 # A featured webinar will display first in the list.
 featured: false
@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -35,13 +35,13 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url: https://www.youtube.com/embed/_6abaK-dCz0?si=3assXiKb1H-jKMF7
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-10-09T12:00:00-04:00
+    sortable_date: 2025-10-14T12:00:00-04:00
 
     # Duration of the webinar.
-    duration: 90 minutes
+    duration: 60 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
@@ -50,7 +50,7 @@ main:
     description: |
         Platform Engineering teams looking to add intelligent automation to their infrastructure workflows must first plan controls and human oversight into their process. In this session, we'll introduce considerations for setting up agentic workflows with a basic 'human in the loop' approval process and walk through a basic cloud deployment.
     learn:
-        - Introduction to Pulumi MCP Server and agentic workflow concepts and considerations
+        - Introduction to Pulumi Neo and MCP Server concepts and considerations
         - Configuring agents within your environment
         - Understanding Pulumi's core platform engineering capabilities and architecture
         - "Your first autonomous infrastructure workflow: provisioning cloud resources with a basic pull request approval workflow"
@@ -64,7 +64,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["Pulumi MCP Server"]
+        topics:  ["AI", "Infrastructure as Code", "Platform Engineering", "Pulumi Neo"]
         languages: ["Any"]
         clouds: ["AWS"]
 
@@ -76,8 +76,8 @@ form:
 
 event_data:
   name: "Getting Started with Infrastructure Agents"
-  start_date: 2025-10-09T12:00:00-04:00
-  end_date: 2025-10-09T13:30:00-04:00
+  start_date: 2025-10-14T12:00:00-04:00
+  end_date: 2025-10-14T13:30:00-04:00
   url: "https://www.pulumi.com/resources/getting-started-with-infrastructure-agents/"
   description: |
     Platform Engineering teams looking to add intelligent automation to their infrastructure workflows must first plan controls and human oversight into their process. In this session, we'll introduce considerations for setting up agentic workflows with a basic 'human in the loop' approval process and walk through a basic cloud deployment.

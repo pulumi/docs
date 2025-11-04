@@ -223,6 +223,7 @@
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.ResourceOptions.delete_before_replace"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.delete_before_replace</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.ResourceOptions.deleted_with"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.deleted_with</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.ResourceOptions.depends_on"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.depends_on</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.ResourceOptions.hide_diffs"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.hide_diffs</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.ResourceOptions.hooks"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.hooks</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.ResourceOptions.id"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.id</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.ResourceOptions.ignore_changes"><code class="docutils literal notranslate"><span class="pre">ResourceOptions.ignore_changes</span></code></a></li>
@@ -345,6 +346,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.LocalWorkspace.select_stack"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.select_stack()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.LocalWorkspace.serialize_args_for_op"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.serialize_args_for_op()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.LocalWorkspace.set_all_config"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.set_all_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.LocalWorkspace.set_all_config_json"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.set_all_config_json()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.LocalWorkspace.set_config"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.set_config()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.LocalWorkspace.set_tag"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.set_tag()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.LocalWorkspace.stack"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.stack()</span></code></a></li>
@@ -444,6 +446,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Stack.rename"><code class="docutils literal notranslate"><span class="pre">Stack.rename()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Stack.select"><code class="docutils literal notranslate"><span class="pre">Stack.select()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Stack.set_all_config"><code class="docutils literal notranslate"><span class="pre">Stack.set_all_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Stack.set_all_config_json"><code class="docutils literal notranslate"><span class="pre">Stack.set_all_config_json()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Stack.set_config"><code class="docutils literal notranslate"><span class="pre">Stack.set_config()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Stack.set_tag"><code class="docutils literal notranslate"><span class="pre">Stack.set_tag()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Stack.up"><code class="docutils literal notranslate"><span class="pre">Stack.up()</span></code></a></li>
@@ -493,6 +496,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Workspace.select_stack"><code class="docutils literal notranslate"><span class="pre">Workspace.select_stack()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Workspace.serialize_args_for_op"><code class="docutils literal notranslate"><span class="pre">Workspace.serialize_args_for_op()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Workspace.set_all_config"><code class="docutils literal notranslate"><span class="pre">Workspace.set_all_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Workspace.set_all_config_json"><code class="docutils literal notranslate"><span class="pre">Workspace.set_all_config_json()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Workspace.set_config"><code class="docutils literal notranslate"><span class="pre">Workspace.set_config()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Workspace.set_tag"><code class="docutils literal notranslate"><span class="pre">Workspace.set_tag()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="pulumi/#pulumi.automation.Workspace.stack"><code class="docutils literal notranslate"><span class="pre">Workspace.stack()</span></code></a></li>
@@ -638,8 +642,21 @@
 <li class="toctree-l2"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Policy"><code class="docutils literal notranslate"><span class="pre">Policy</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Policy.config_schema"><code class="docutils literal notranslate"><span class="pre">Policy.config_schema</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Policy.description"><code class="docutils literal notranslate"><span class="pre">Policy.description</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Policy.display_name"><code class="docutils literal notranslate"><span class="pre">Policy.display_name</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Policy.enforcement_level"><code class="docutils literal notranslate"><span class="pre">Policy.enforcement_level</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Policy.framework"><code class="docutils literal notranslate"><span class="pre">Policy.framework</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Policy.name"><code class="docutils literal notranslate"><span class="pre">Policy.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Policy.remediation_steps"><code class="docutils literal notranslate"><span class="pre">Policy.remediation_steps</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Policy.severity"><code class="docutils literal notranslate"><span class="pre">Policy.severity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Policy.tags"><code class="docutils literal notranslate"><span class="pre">Policy.tags</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Policy.url"><code class="docutils literal notranslate"><span class="pre">Policy.url</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_policy/#pulumi_policy.PolicyComplianceFramework"><code class="docutils literal notranslate"><span class="pre">PolicyComplianceFramework</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.PolicyComplianceFramework.name"><code class="docutils literal notranslate"><span class="pre">PolicyComplianceFramework.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.PolicyComplianceFramework.reference"><code class="docutils literal notranslate"><span class="pre">PolicyComplianceFramework.reference</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.PolicyComplianceFramework.specification"><code class="docutils literal notranslate"><span class="pre">PolicyComplianceFramework.specification</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.PolicyComplianceFramework.version"><code class="docutils literal notranslate"><span class="pre">PolicyComplianceFramework.version</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi_policy/#pulumi_policy.PolicyConfigSchema"><code class="docutils literal notranslate"><span class="pre">PolicyConfigSchema</span></code></a><ul>
@@ -686,18 +703,23 @@
 <li class="toctree-l2"><a class="reference internal" href="pulumi_policy/#pulumi_policy.ResourceValidationArgs"><code class="docutils literal notranslate"><span class="pre">ResourceValidationArgs</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.ResourceValidationArgs.get_config"><code class="docutils literal notranslate"><span class="pre">ResourceValidationArgs.get_config()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.ResourceValidationArgs.name"><code class="docutils literal notranslate"><span class="pre">ResourceValidationArgs.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.ResourceValidationArgs.not_applicable"><code class="docutils literal notranslate"><span class="pre">ResourceValidationArgs.not_applicable()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.ResourceValidationArgs.opts"><code class="docutils literal notranslate"><span class="pre">ResourceValidationArgs.opts</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.ResourceValidationArgs.props"><code class="docutils literal notranslate"><span class="pre">ResourceValidationArgs.props</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.ResourceValidationArgs.provider"><code class="docutils literal notranslate"><span class="pre">ResourceValidationArgs.provider</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.ResourceValidationArgs.resource_type"><code class="docutils literal notranslate"><span class="pre">ResourceValidationArgs.resource_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.ResourceValidationArgs.stack_tags"><code class="docutils literal notranslate"><span class="pre">ResourceValidationArgs.stack_tags</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.ResourceValidationArgs.urn"><code class="docutils literal notranslate"><span class="pre">ResourceValidationArgs.urn</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi_policy/#pulumi_policy.ResourceValidationPolicy"><code class="docutils literal notranslate"><span class="pre">ResourceValidationPolicy</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Secret"><code class="docutils literal notranslate"><span class="pre">Secret</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_policy/#pulumi_policy.Severity"><code class="docutils literal notranslate"><span class="pre">Severity</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi_policy/#pulumi_policy.StackValidationArgs"><code class="docutils literal notranslate"><span class="pre">StackValidationArgs</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.StackValidationArgs.get_config"><code class="docutils literal notranslate"><span class="pre">StackValidationArgs.get_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.StackValidationArgs.not_applicable"><code class="docutils literal notranslate"><span class="pre">StackValidationArgs.not_applicable()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.StackValidationArgs.resources"><code class="docutils literal notranslate"><span class="pre">StackValidationArgs.resources</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.StackValidationArgs.stack_tags"><code class="docutils literal notranslate"><span class="pre">StackValidationArgs.stack_tags</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi_policy/#pulumi_policy.StackValidationPolicy"><code class="docutils literal notranslate"><span class="pre">StackValidationPolicy</span></code></a></li>

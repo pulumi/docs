@@ -97,22 +97,29 @@
             @apply hidden;
 
             @screen lg {
-                @apply flex items-center justify-center rounded-lg;
+                @apply flex items-center justify-center;
                 margin-left: 30px;
                 width: 136px;
                 height: 33px;
                 padding: 8px 16px;
 
-                border: 1px solid theme("colors.violet.600");
-                box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+                border: 1px solid #805ac3;
+                border-radius: 20px;
+                background: linear-gradient(90deg,#be5188,#805ac3) border-box;
+                color: #fff;
 
                 &:hover,
                 &:active {
-                    background: linear-gradient(90deg, #be5188 0%, #805ac3 100%) border-box;
-                    border-color: transparent;
+                    color: #131314;
+                    background: transparent;
                 }
             }
         }
+    }
+
+    // Add border only for docs pages
+    &.actually-docs {
+        border-bottom: 1px solid #e5e5e9;
     }
 }
 
@@ -199,7 +206,7 @@
                     @apply relative;
 
                     .header-nav-drop-down-menu {
-                        @apply w-full absolute hidden mt-5 pt-3 top-0 z-20;
+                        @apply w-full absolute hidden mt-5 pt-3 top-0 z-50;
                         min-width: fit-content;
                         ul {
                             @apply bg-white text-left rounded shadow-3xl p-5 whitespace-nowrap;

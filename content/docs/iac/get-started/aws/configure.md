@@ -7,11 +7,11 @@ weight: 3
 menu:
     iac:
         name: Configure access
-        parent: aws-b-get-started
+        parent: aws-get-started
         weight: 3
 
 aliases:
-- /docs/iac/get-started/aws/b/configure/
+    - /docs/iac/get-started/aws/b/configure/
 ---
 
 ## Configure access to AWS

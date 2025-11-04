@@ -9,13 +9,12 @@ weight: 9
 menu:
     iac:
         name: Next steps
-        parent: aws-b-get-started
+        parent: aws-get-started
         weight: 9
 
 aliases:
-- /docs/iac/get-started/aws/b/next-steps/
-- /docs/get-started/aws/next-steps/
-- /docs/clouds/aws/get-started/next-steps/
+    - /docs/iac/get-started/aws/b/next-steps/
+    - /docs/clouds/aws/get-started/next-steps/
 ---
 
 Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:

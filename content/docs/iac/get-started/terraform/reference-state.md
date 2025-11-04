@@ -11,7 +11,6 @@ menu:
         weight: 4
 
 aliases:
-- /docs/iac/get-started/terraform/reference-state/
 ---
 
 ## Why reference state?
@@ -205,7 +204,7 @@ outputs:
 
 ### Reference remote state
 
-For production environments, many prefer to store thier state in Terraform Cloud. To reference remote state, use the [`getRemoteReference`](/registry/packages/terraform/api-docs/state/getremotereference/) function:
+For production environments, many prefer to store their state in Terraform Cloud. To reference remote state, use the [`getRemoteReference`](/registry/packages/terraform/api-docs/state/getremotereference/) function:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 

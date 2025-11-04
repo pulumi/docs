@@ -39,40 +39,44 @@ prereqs:
 #### Install from Helm Chart Repository
 
 ```bash
+# add ESO Operator Chart repo into helm
 helm repo add external-secrets https://charts.external-secrets.io
 helm repo update
 
+# installs latest ESO Operator Chart, creates also namespace
 helm upgrade --install external-secrets external-secrets/external-secrets \
-    --namespace external-secrets \
-    --create-namespace \
-    --wait
+  --namespace external-secrets \
+  --create-namespace \
+  --wait
 ```
 
 #### Create secret containing Pulumi access token
 
 ```bash
-kubectl create secret generic pulumi-access-token -from-literal=PULUMI_ACCESS_TOKEN=${PULUMI_ACCESS_TOKEN} \
+# create a local k8s secret to store(PAT), to allow accessing Pulumi Cloud Resources
+kubectl create secret generic pulumi-access-token --from-literal=PULUMI_ACCESS_TOKEN=${PULUMI_ACCESS_TOKEN} \
     --namespace external-secrets
 ```
 
 #### Create ClusterSecretStore
 
-Now you can create a [ClusterSecretStore](https://external-secrets.io/main/api/clustersecretstore/) resource that will tell External Secrets Operator to use Pulumi ESC as a secret provider.
+You can create a [SecretStore](https://external-secrets.io/main/api/secretstore/) resource to notify the External Secrets Operator to use Pulumi ESC as a secret provider for a specific namespace.
 
-If you want to limit the access by namespace, you can create a [SecretStore](https://external-secrets.io/main/api/secretstore/) resource instead, which is scoped to a single namespace.
+However, if you want to expand the scope to an entire cluster you can use a [ClusterSecretStore](https://external-secrets.io/main/api/clustersecretstore/) resource instead.
 
 ```yaml
 cat <<EOF | kubectl apply -f -
-apiVersion: external-secrets.io/v1beta1
-kind: ClusterSecretStore
+apiVersion: external-secrets.io/v1
+kind: SecretStore
 metadata:
   name: secret-store
+  namespace: external-secrets
 spec:
   provider:
     pulumi:
-      organization: ${PULUMI_ORG}
-      project: ${ESC_PROJECT}
-      environment: ${ESC_ENV}
+      organization: {PULUMI_ORG_NAME}
+      project: {ESC_PROJECT_NAME}
+      environment: {ESC_ENV_NAME}
       accessToken:
         secretRef:
           name: pulumi-access-token
@@ -81,9 +85,9 @@ spec:
 EOF
 ```
 
-Please replace `${PULUMI_ORG}`, `${ESC_PROJECT}`, `${ESC_ENV}` with your Pulumi organization, project, and environment names.
+Please replace `${PULUMI_ORG_NAME}`, `${ESC_PROJECT_NAME}`, `${ESC_ENV_NAME}` with your Pulumi organization, project, and environment names.
 
-For demo purposes, we assume that we already have an [ESC environment](/docs/esc/get-started/create-environment/) `my-org/my-project/my-env` with a secret `my-secret` that we want to manage using External Secrets Operator.
+For demo purposes, we assume that we already have an [ESC environment](/docs/esc/get-started/create-environment/) `my-org/my-project/my-env` with a secret `my-secret` that we want to manage using the External Secrets Operator.
 
 ```yaml
 values:
@@ -96,10 +100,11 @@ Now you can create an [ExternalSecret](https://external-secrets.io/main/api/exte
 
 ```yaml
 cat <<EOF | kubectl apply -f -
-apiVersion: external-secrets.io/v1beta1
+apiVersion: external-secrets.io/v1
 kind: ExternalSecret
 metadata:
   name: secret
+  namespace: external-secrets
 spec:
   data:
   - secretKey: esc-secret
@@ -107,7 +112,7 @@ spec:
       key: hello
   refreshInterval: 20s
   secretStoreRef:
-    kind: ClusterSecretStore
+    kind: SecretStore
     name: secret-store
 EOF
 ```
@@ -119,7 +124,7 @@ There a many other options available for [ExternalSecret](https://external-secre
 With the following command, you can verify that the secret has been created in the cluster:
 
 ```bash
-kubectl get secret secret -o jsonpath='{.data.esc-secret}'  | base64 -d
+kubectl get secret secret --namespace external-secrets -o jsonpath='{.data.esc-secret}'  | base64 -d
 # Output:
 world
 ```

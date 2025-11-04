@@ -50,8 +50,8 @@ main:
     # Description of the webinar.
     description: |
         In the ever-evolving landscape of DevOps and platform engineering, platform engineers are always seeking efficient and flexible tools to manage their cloud resources, especially when it comes to continuous integration/continuous delivery (CI/CD) pipelines.
-        
-        In this workshop, you'll learn how to use Pulumi's deep integration with GitLab to create and manage CI/CD pipelines for your infrastructure in a declarative function to empower your application and infrastructure teams to deliver safely, reproducably, and quickly.
+
+        In this workshop, you'll learn how to use Pulumi's deep integration with GitLab to create and manage CI/CD pipelines for your infrastructure in a declarative function to empower your application and infrastructure teams to deliver safely, reproducibly, and quickly.
 
     learn:
 

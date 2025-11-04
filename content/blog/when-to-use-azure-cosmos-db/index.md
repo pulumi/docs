@@ -22,7 +22,7 @@ Azure Cosmos DB tries to do it all - which makes it both powerful and, honestly,
 I'm going to break all that down. Here's a roadmap:
 
 <!--more-->
-![Roadmap depicting stages when to use Azure Cosmos DB in comnparison to relational, Mongo, Cassandra, and Dynamo databases, in addition to recommedations](roadmap.png)
+![Roadmap depicting stages when to use Azure Cosmos DB in comnparison to relational, Mongo, Cassandra, and Dynamo databases, in addition to recommendations](roadmap.png)
 
 ## TL;DR
 

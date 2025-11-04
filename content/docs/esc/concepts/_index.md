@@ -48,7 +48,7 @@ Imagine a hypothetical development organization comprised of a few teams:
 * The *communications* team, that manages secrets/config for the mailing service and texting service.
 * The *central platform* team, that owns most common config, including OIDC config and the keys/config for the feature flag system.
 
-Permissions to these environments can be defined separately to minimize security exposure. They can be reused indepedently or composed into more complex application scenarios.
+Permissions to these environments can be defined separately to minimize security exposure. They can be reused independently or composed into more complex application scenarios.
 
 ### Dynamic vs static configurations
 

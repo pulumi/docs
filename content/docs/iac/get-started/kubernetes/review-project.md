@@ -10,14 +10,9 @@ menu:
         identifier: kubernetes-get-started.review-project
         parent: kubernetes-get-started
         weight: 4
-    clouds:
-        parent: kubernetes-get-started
-        identifier: kubernetes-review-project-get-started
 
 aliases:
-- /docs/quickstart/kubernetes/review-project/
-- /docs/get-started/kubernetes/review-project/
-- /docs/iac/get-started/kubernetes/review-project/
+    - /docs/quickstart/kubernetes/review-project/
 ---
 
 Let's review some of the generated project files:
@@ -50,7 +45,6 @@ Let's review some of the generated project files:
 
 {{% choosable language "javascript,typescript,go,csharp,java" %}}
 
-<!-- The wrapping spans are infortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
 - <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
 
 {{% /choosable %}}

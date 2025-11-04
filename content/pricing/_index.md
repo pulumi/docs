@@ -149,28 +149,28 @@ comparison_table:
                     - content: Customized for you
                     - content: Customized for you
                 - title: CI/CD Assistant
-                  link: /docs/pulumi-cloud/deployments/ci-cd-integration-assistant/
+                  link: /docs/platform/deployments/ci-cd-integration-assistant/
                   items:
                     - content: _blank
                     - content: _check
                     - content: _check
                     - content: _check
                 - title: Drift detection
-                  link: /docs/pulumi-cloud/deployments/drift/
+                  link: /docs/platform/deployments/drift/
                   items:
                     - content: _blank
                     - content: _blank
                     - content: _check
                     - content: _check
                 - title: Time-to-live stacks
-                  link: /docs/pulumi-cloud/deployments/ttl/
+                  link: /docs/platform/deployments/ttl/
                   items:
                     - content: _blank
                     - content: _blank
                     - content: _check
                     - content: _check
                 - title: Scheduled deployments
-                  link: /docs/pulumi-cloud/deployments/schedules/
+                  link: /docs/platform/deployments/schedules/
                   items:
                     - content: _blank
                     - content: _blank
@@ -183,7 +183,7 @@ comparison_table:
                     - content: _blank
                     - content: _check
                 - title: Webhooks
-                  link: /docs/pulumi-cloud/webhooks/
+                  link: /docs/platform/webhooks/
                   items:
                     - content: _blank
                     - content: _check
@@ -496,7 +496,7 @@ comparison_table:
                   - content: Pulumi Best Practices
                   - content: Pulumi Best Practices, CIS, NIST, HITRUST, PCI DSS
               - title: Custom Policy Packs
-                link: /docs/iac/crossguard/get-started/#creating-a-policy-pack
+                link: /docs/insights/policy/policy-as-code/get-started/#creating-a-policy-pack
                 items:
                   - content: _blank
                   - content: Up to 25 policies (1 pack limit)
@@ -514,7 +514,7 @@ comparison_table:
             subheader: Intelligent assistance across all platform capabilities
             rows:
               - title: Pulumi Neo
-                link: /docs/iac/neo/
+                link: /docs/ai/neo/
                 items:
                   - content: _blank
                   - content: _check

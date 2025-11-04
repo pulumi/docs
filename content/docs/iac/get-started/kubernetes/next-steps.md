@@ -11,14 +11,9 @@ menu:
     identifier: kubernetes-get-started.next-steps
     parent: kubernetes-get-started
     weight: 9
-  clouds:
-    parent: kubernetes-get-started
-    identifier: kubernetes-next-steps
 
 aliases:
-- /docs/quickstart/kubernetes/next-steps/
-- /docs/get-started/kubernetes/next-steps/
-- /docs/iac/get-started/kubernetes/next-steps/
+    - /docs/quickstart/kubernetes/next-steps/
 ---
 
 Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are some next steps, depending on your learning style.

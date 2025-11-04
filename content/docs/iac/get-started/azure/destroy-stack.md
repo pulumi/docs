@@ -11,9 +11,8 @@ menu:
         parent: azure-get-started
         weight: 8
 aliases:
-- /docs/quickstart/azure/destroy-stack/
-- /docs/get-started/azure/destroy-stack/
-- /docs/clouds/azure/get-started/destroy-stack/
+    - /docs/quickstart/azure/destroy-stack/
+    - /docs/clouds/azure/get-started/destroy-stack/
 ---
 
 Now that you've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of your stack.

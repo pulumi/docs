@@ -17,6 +17,7 @@ aliases:
 - /docs/reference/concepts/
 - /docs/intro/concepts/
 - /docs/concepts/
+- /docs/iac/concepts/miscellaneous/
 ---
 
 Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform. It leverages existing programming languages---TypeScript, JavaScript, Python, Go, .NET, Java, and markup languages like YAML---and their native ecosystems to interact with cloud resources. A [downloadable CLI](/docs/install/), runtime, libraries, and a hosted service work together to deliver a robust platform for provisioning, updating, and managing cloud infrastructure.
@@ -138,10 +139,6 @@ The following topics provide more details on the core concepts of Pulumi and how
 
 <!-- logging & update plans -->
 <div class="md:flex flex-row mt-6 mb-6">
-    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/concepts/logging"><i class="fas fa-clipboard-list pr-2"></i>Logging</a></h3>
-        <p>Learn about how to access log information for diagnostics and debugging.</p>
-    </div>
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="/docs/concepts/update-plans"><i class="fas fa-upload pr-2"></i>Update plans</a></h3>
         <p>Learn about how to constrain your deployments with update plans.</p>
@@ -155,7 +152,7 @@ The following topics provide more details on the core concepts of Pulumi and how
         <p>Look up definitions to commonly used terms.</p>
     </div>
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/concepts/vs"><i class="fas fa-table pr-2"></i>Compare</a></h3>
-        <p>Learn about how Pulumi compares to other solutions.</p>
+        <h3 class="no-anchor pt-4"><a href="/docs/iac/comparisons/"><i class="fas fa-table pr-2"></i>Comparisons</a></h3>
+        <p>Learn about how Pulumi compares to other infrastructure tools.</p>
     </div>
 </div>

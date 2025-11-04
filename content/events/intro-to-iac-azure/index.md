@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "Start Building Azure Infrastructure with C#"
+title: "Learn Azure Infrastructure with C#"
 meta_desc: Learn how to build and manage Azure infrastructure using C# and Pulumi. A better alternative to ARM templates with full .NET support.
 meta_image:
 
@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -31,11 +31,11 @@ url_slug: intro-to-iac-azure
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Start Building Azure Infrastructure with C#"
+    title: "Learn Azure Infrastructure with C#"
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url: https://www.youtube.com/embed/FbrxKzhOsjs?si=ShpYzJbqgTiDYxra
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-09-24T09:00:00-07:00
@@ -48,19 +48,19 @@ main:
 
     # Description of the webinar.
     description: |
-        You know C# and you're working with Azure or planning to. But managing infrastructure with JSON-based ARM templates can be tedious, hard to scale, and disconnected from how you write application code.
+        Want to learn Azure using C#? If you know .NET, you can do more than build apps, you can also build and manage your Azure infrastructure with the same language and tools.
 
-        This hands-on workshop shows you how to build real-world Azure infrastructure using Pulumi and your existing .NET skills. You'll learn how to define, deploy, and manage Azure resources in C# using familiar programming tools and patterns.
+        This hands-on workshop shows you how to define, deploy, and manage Azure resources in C#. Instead of writing JSON-based ARM templates, you’ll use real C# code to provision Azure services, automate deployments, and scale your cloud environments.
 
-        Pulumi brings the full power of C# to Infrastructure as Code. You'll move faster, reduce duplication, and build scalable, reliable infrastructure with less friction.
+        With Pulumi, you bring the full power of C# to Azure Infrastructure as Code. That means fewer manual steps, less duplication, and a smoother path from application code to cloud infrastructure.
 
-        If you're currently using ARM templates or just starting to explore Azure, this workshop will introduce a more flexible and developer-friendly way to manage your cloud infrastructure.
+        Whether you’re just getting started with Azure or looking for a better alternative to ARM templates, you’ll discover a modern, developer-friendly way to build on the Microsoft cloud.
     learn:
-        - How to get started with Pulumi and C# for Azure infrastructure
-        - Key concepts of the Pulumi programming model for Infrastructure as Code
+        - How to get started with Azure infrastructure in C#
+        - Key concepts of Azure Infrastructure as Code with Pulumi
         - How to define, provision, and manage Azure resources using .NET
         - Why C# with Pulumi is a powerful alternative to JSON-based ARM templates
-        - Examples of reusable and scalable infrastructure written entirely in C#
+        - Examples of reusable, scalable Azure infrastructure written entirely in C#
 
     # The webinar presenters
     presenters:

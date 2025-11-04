@@ -58,7 +58,7 @@ Once you have created your workload identity pool and provider, you will be dire
 4. In the **Attribute name** dropdown, select **Subject**.
 5. In the **Attribute value** field, provide a valid subject claim (see examples at the end of this section). Then click **Save**.
 
-Make a note of the project ID, workload identity pool ID, provider ID, and service account email address from the previous steps. These will be necessary to enable OIDC for your service.
+Make a note of the project number, workload identity pool ID, provider ID, and service account email address from the previous steps. These will be necessary to enable OIDC for your service.
 
 ## Configure ESC for OIDC
 
@@ -76,7 +76,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
       gcp:
         login:
           fn::open::gcp-login:
-            project: <your-project-id>
+            project: <your-project-number>
             oidc:
               workloadPoolId: <your-pool-id>
               providerId: <your-provider-id>
@@ -87,7 +87,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
         CLOUDSDK_AUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
     ```
 
-6. Replace `<your-project-id>`, `<your-pool-id>`, `<your-provider-id>`, and `<your-service-account>` with the values from the previous steps.
+6. Replace `<your-project-number>`, `<your-pool-id>`, `<your-provider-id>`, and `<your-service-account>` with the values from the previous steps.
 7. Click **Save**.
 
 You can validate that your configuration is working by running either of the following:

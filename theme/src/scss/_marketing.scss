@@ -92,11 +92,11 @@ body {
         }
 
         &:hover {
-            @apply bg-violet-100 text-violet-600;
+            @apply bg-violet-600 text-white;
         }
 
         &:focus {
-            @apply bg-violet-200 text-violet-600;
+            @apply bg-violet-700 text-white;
         }
     }
 
@@ -187,5 +187,14 @@ body {
 .section-partner {
     .btn-primary:hover {
         background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
+    }
+}
+
+// This hides Copilot on the home page, where we have a "Neo takeover" experience.
+// The section classes are generated based on the folder the page is located in, and our home page exists outside
+// a folder, hence "section-".
+.section- {
+    pulumi-copilot {
+        display: none;
     }
 }

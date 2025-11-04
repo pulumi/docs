@@ -37,7 +37,7 @@
     "body": [
       "{{% notes type=\"info\" %}}",
       "TODO",
-      "{{% /notes % }}",
+      "{{% /notes %}}",
     ],
     "description": "Notes callout field. Type can be any of the following: info, warning, tip"
   }

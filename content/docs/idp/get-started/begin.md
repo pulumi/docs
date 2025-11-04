@@ -4,6 +4,8 @@ title: Before you begin
 h1: "Before you begin"
 meta_desc: This page provides an overview on how to get started with Pulumi IDP.
 weight: 2
+aliases:
+  - /docs/idp/get-started/begin/
 menu:
   idp:
     parent: idp-get-started
@@ -18,6 +20,6 @@ Pulumi IDP is in public preview and is free for Pulumi customers and community m
 
 ### Create a Pulumi account
 
-Pulumi IDP is a service of Pulumi Cloud, meaning you will need to create a Pulumi account to be able to use it. To do so, navigate to the [Pulumi Cloud console](https://app.pulumi.com) and create a new account. Once created, you can [optionally create an access token](/docs/pulumi-cloud/access-management/access-tokens/). Doing so will provide you an alternative way to sign into the Pulumi Cloud via the CLI. The token can also be used to automate your usage of the Pulumi Cloud using the REST API.
+Pulumi IDP is a service of Pulumi Cloud, meaning you will need to create a Pulumi account to be able to use it. To do so, navigate to the [Pulumi Cloud console](https://app.pulumi.com) and create a new account. Once created, you can [optionally create an access token](/docs/administration/access-identity/access-tokens/). Doing so will provide you an alternative way to sign into the Pulumi Cloud via the CLI. The token can also be used to automate your usage of the Pulumi Cloud using the REST API.
 
 {{< get-started-stepper >}}

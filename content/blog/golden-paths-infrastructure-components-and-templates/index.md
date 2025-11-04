@@ -35,13 +35,13 @@ This post is part of our IDP Best Practices series:
 
 - [How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control/)
 - **Build Golden Paths: Guide to Reusable Infrastructure with Pulumi Components and Templates** (you are here)
-- Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails
-- Day 2 Platform Operations: Automating Drift Detection and Remediation
+- [Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails](/blog/deployment-guardrails-with-policy-as-code)
+- [Day 2 Operations: Drift Detection and Remediation](/blog/day-2-operations-drift-detection-and-remediation)
 - Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
 - Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
 
 {{% notes type="tip" %}}
-**Want hands-on experience?** Enroll in the free [IDP Builder Workshop Series](https://info.pulumi.com/idp/internal-developer-platform-workshops-course) to access recordings, demo code, slides, and hands-on guidance. The complete code examples from this post are available on [GitHub](https://github.com/pulumi/workshops/tree/main/golden-paths-infrastructure-components-and-templates).
+The complete code examples from this post are available on [GitHub](https://github.com/pulumi/workshops/tree/main/golden-paths-infrastructure-components-and-templates).
 {{% /notes %}}
 
 ## The Platform Engineering Layer Cake: A Model for IDPs

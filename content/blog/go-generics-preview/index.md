@@ -284,7 +284,7 @@ func main() {
 }
 ```
 
-Notice how we are importing `pulumix` alongside `pulumi`. Being a subpackage means you can start using the generics-based types and functions alongside the current APIs as necessary without having to switch your code fully from using the old types to the new generic ones. Instead, you can migrate your code gradually to these new APIs where it makes sense. When needed, there are APIs to covert between generics-based APIs and the old ones using functions such as `pulumix.Cast` and `pulumix.ConvertTyped`.
+Notice how we are importing `pulumix` alongside `pulumi`. Being a subpackage means you can start using the generics-based types and functions alongside the current APIs as necessary without having to switch your code fully from using the old types to the new generic ones. Instead, you can migrate your code gradually to these new APIs where it makes sense. When needed, there are APIs to convert between generics-based APIs and the old ones using functions such as `pulumix.Cast` and `pulumix.ConvertTyped`.
 
 ## Generics-Based Cloud Provider SDKs
 

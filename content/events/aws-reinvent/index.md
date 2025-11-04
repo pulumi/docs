@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: AWS re:Invent 2025
-meta_desc: Visit with Pulumi in Las Vegas at AWS re:Invent.
+meta_desc: "Visit Pulumi booth #1127 at AWS re:Invent"
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,7 +26,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://reinvent.awsevents.com/
+url_slug: https://pulumi.com/reinvent/
 
 # Content for the left hand side section of the page.
 main:
@@ -47,7 +47,7 @@ main:
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: Las Vegas, NV
     # Description of the webinar.
-    description: Visit with Pulumi in Las Vegas at AWS re:Invent, where pioneers gather from across the globe to hear the latest AWS innovations, peer-to-peer learning and invaluable networking opportunities.
+    description: "Visit Pulumi booth #1127 at AWS re:Invent, where pioneers gather from across the globe to hear the latest AWS innovations, peer-to-peer learning and invaluable networking opportunities."
 
     # The webinar presenters
     presenters:

@@ -11,9 +11,8 @@ menu:
         parent: gcp-get-started
         weight: 3
 aliases:
-- /docs/quickstart/gcp/create-project/
-- /docs/get-started/gcp/create-project/
-- /docs/clouds/gcp/get-started/create-project/
+    - /docs/quickstart/gcp/create-project/
+    - /docs/clouds/gcp/get-started/create-project/
 ---
 
 Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,

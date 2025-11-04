@@ -28,7 +28,7 @@ There are a number of configuration management tools on the market, but here are
 * [Puppet](https://www.puppet.com/)
 * [Salt](https://saltproject.io/)
 
-Although the specific implementation details vary from tool to tool---some of thse tools use YAML while others use a domain-specific language (DSL)---there are a few common attributes that most configuration management tools share:
+Although the specific implementation details vary from tool to tool---some of these tools use YAML while others use a domain-specific language (DSL)---there are a few common attributes that most configuration management tools share:
 
 * **Declarative configuration**: Most configuration management tools follow a declarative approach where the user specifies the desired state, and the tool takes care of reaching that state.
 * **Idempotence**: Configuration management tools ensure idempotence, meaning that applying the same configuration multiple times yields the same result, promoting reliability.
