@@ -1,21 +1,21 @@
 ---
-title: "Pulumi Neo - Your AI Platform Engineer"
+title: "Pulumi Neo - Your AI Infrastructure Agent"
 layout: neo
 aliases: ["/neo", "/copilot", "/product/copilot", "/product/pulumi-copilot", "/docs/ai/copilot/", "/docs/pulumi-cloud/copilot/", "/docs/intro/copilot/", "/docs/intro/pulumi-cloud/copilot/"]
 
 heading: Pulumi Neo
 subheading: |
-    Your AI platform engineer. Ship infrastructure faster, safely.
+    Your AI Infrastructure Agent. Ship infrastructure faster, safely.
 
 meta_title: "Pulumi Neo - Your AI Platform Engineer"
 meta_desc: "Meet Neo, your AI platform engineer. Automate infrastructure provisioning, governance, and optimization with enterprise controls."
 meta_image: /images/product/neo-meta.png
 
 overview:
-  title: Your AI platform engineer. Ship infrastructure faster, safely.
+  title: Your AI Infrastructure Agent. Ship infrastructure faster, safely.
 
 why_neo:
-  title: Why Platform Teams Choose Neo
+  title: Why Infrastructure and Platform Teams Choose Neo
   description: Neo is the industry's first AI agent built from the ground up to execute, govern, and optimize complex cloud automation at enterprise scale. Unlike generic AI tools, Neo understands infrastructure dependencies, respects your policies, and works within your existing Pulumi governance.
   benefits:
     - title: 18x Faster Provisioning

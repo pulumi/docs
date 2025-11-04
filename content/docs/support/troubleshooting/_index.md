@@ -51,3 +51,11 @@ sections:
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>
 ---
+
+<script>
+// Redirect to the new update conflict page
+// https://github.com/pulumi/pulumi/issues/20846
+if (window.location.hash === "#conflict") {
+  window.location = "/docs/support/troubleshooting/common-issues/update-conflicts/"
+}
+</script>
