@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-properties/context/
   - /docs/esc/reference/builtin-properties/context/
 menu:
-  reference:
-    parent: esc-ref-builtin-properties
-    identifier: esc-ref-builtin-context
+  esc:
+    parent: esc-syntax-builtin-properties
+    identifier: esc-syntax-builtin-context
     weight: 1
 ---
 

@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-from-base64/
   - /docs/esc/reference/builtin-functions/fn-from-base64/
 menu:
-  reference:
-    parent: esc-ref-builtin-functions
-    identifier: esc-ref-fn-from-base64
+  esc:
+    parent: esc-syntax-builtin-functions
+    identifier: esc-syntax-fn-from-base64
     weight: 2
 ---
 

@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-secret/
   - /docs/esc/reference/builtin-functions/fn-secret/
 menu:
-  reference:
-    parent: esc-ref-builtin-functions
-    identifier: esc-ref-fn-secret
+  esc:
+    parent: esc-syntax-builtin-functions
+    identifier: esc-syntax-fn-secret
     weight: 7
 ---
 

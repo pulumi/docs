@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-from-json/
   - /docs/esc/reference/builtin-functions/fn-from-json/
 menu:
-  reference:
-    parent: esc-ref-builtin-functions
-    identifier: esc-ref-fn-from-json
+  esc:
+    parent: esc-syntax-builtin-functions
+    identifier: esc-syntax-fn-from-json
     weight: 3
 ---
 

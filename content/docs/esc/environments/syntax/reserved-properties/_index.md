@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/reserved-properties/
   - /docs/esc/reference/reserved-properties/
 menu:
-  reference:
+  esc:
     parent: reference-esc-syntax
-    identifier: esc-ref-reserved-properties
+    identifier: esc-syntax-reserved-properties
     weight: 7
 ---
 

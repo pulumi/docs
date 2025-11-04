@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-to-string/
   - /docs/esc/reference/builtin-functions/fn-to-string/
 menu:
-  reference:
-    parent: esc-ref-builtin-functions
-    identifier: esc-ref-fn-toString
+  esc:
+    parent: esc-syntax-builtin-functions
+    identifier: esc-syntax-fn-toString
     weight: 10
 ---
 

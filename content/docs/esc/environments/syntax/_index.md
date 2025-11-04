@@ -4,9 +4,9 @@ title_tag: Environment Definition Reference
 h1: Environment Definition Reference
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
-  reference:
+  esc:
     parent: esc-environments
-    identifier: reference-esc-syntax
+    identifier: esc-syntax
     weight: 2
 aliases:
   - /docs/reference/esc-syntax/

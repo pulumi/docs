@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-concat/
   - /docs/esc/reference/builtin-functions/fn-concat/
 menu:
-  reference:
-    parent: esc-ref-builtin-functions
-    identifier: esc-ref-fn-concat
+  esc:
+    parent: esc-syntax-builtin-functions
+    identifier: esc-syntax-fn-concat
     weight: 1
 ---
 

@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-rotate/
   - /docs/esc/reference/builtin-functions/fn-rotate/
 menu:
-  reference:
-    parent: esc-ref-builtin-functions
-    identifier: esc-ref-fn-rotate
+  esc:
+    parent: esc-syntax-builtin-functions
+    identifier: esc-syntax-fn-rotate
     weight: 6
 ---
 

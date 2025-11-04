@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-join/
   - /docs/esc/reference/builtin-functions/fn-join/
 menu:
-  reference:
-    parent: esc-ref-builtin-functions
-    identifier: esc-ref-fn-join
+  esc:
+    parent: esc-syntax-builtin-functions
+    identifier: esc-syntax-fn-join
     weight: 4
 ---
 

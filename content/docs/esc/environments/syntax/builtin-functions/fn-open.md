@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-open/
   - /docs/esc/reference/builtin-functions/fn-open/
 menu:
-  reference:
-    parent: esc-ref-builtin-functions
-    identifier: esc-ref-fn-open
+  esc:
+    parent: esc-syntax-builtin-functions
+    identifier: esc-syntax-fn-open
     weight: 5
 ---
 

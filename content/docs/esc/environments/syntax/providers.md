@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/providers/
   - /docs/esc/reference/providers/
 menu:
-  reference:
+  esc:
     parent: reference-esc-syntax
-    identifier: esc-ref-providers
+    identifier: esc-syntax-providers
     weight: 5
 ---
 

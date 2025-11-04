@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-functions/fn-to-json/
   - /docs/esc/reference/builtin-functions/fn-to-json/
 menu:
-  reference:
-    parent: esc-ref-builtin-functions
-    identifier: esc-ref-fn-toJSON
+  esc:
+    parent: esc-syntax-builtin-functions
+    identifier: esc-syntax-fn-toJSON
     weight: 9
 ---
 

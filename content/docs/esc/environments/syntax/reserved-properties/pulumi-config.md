@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/reserved-properties/pulumi-config/
   - /docs/esc/reference/reserved-properties/pulumi-config/
 menu:
-  reference:
-    parent: esc-ref-reserved-properties
-    identifier: esc-ref-reserved-pulumi-config
+  esc:
+    parent: esc-syntax-reserved-properties
+    identifier: esc-syntax-reserved-pulumi-config
     weight: 3
 ---
 

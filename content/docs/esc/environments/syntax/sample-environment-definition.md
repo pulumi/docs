@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/sample-environment-definition/
   - /docs/esc/reference/sample-environment-definition/
 menu:
-  reference:
+  esc:
     parent: reference-esc-syntax
-    identifier: esc-ref-sample-environment-definition
+    identifier: esc-syntax-sample-environment-definition
     weight: 8
 ---
 

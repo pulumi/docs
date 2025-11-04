@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-functions/
   - /docs/esc/reference/builtin-functions/
 menu:
-  reference:
+  esc:
     parent: reference-esc-syntax
-    identifier: esc-ref-builtin-functions
+    identifier: esc-syntax-builtin-functions
     weight: 3
 ---
 

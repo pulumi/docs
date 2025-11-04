@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/rotators/
   - /docs/esc/reference/rotators/
 menu:
-  reference:
+  esc:
     parent: reference-esc-syntax
-    identifier: esc-ref-rotators
+    identifier: esc-syntax-rotators
     weight: 6
 ---
 

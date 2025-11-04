@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/builtin-properties/imports/
   - /docs/esc/reference/builtin-properties/imports/
 menu:
-  reference:
-    parent: esc-ref-builtin-properties
-    identifier: esc-ref-builtin-imports
+  esc:
+    parent: esc-syntax-builtin-properties
+    identifier: esc-syntax-builtin-imports
     weight: 3
 ---
 

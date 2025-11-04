@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/top-level-keys/values/
   - /docs/esc/reference/top-level-keys/values/
 menu:
-  reference:
-    parent: esc-ref-top-level-keys
-    identifier: esc-ref-values
+  esc:
+    parent: esc-syntax-top-level-keys
+    identifier: esc-syntax-values
     weight: 2
 ---
 

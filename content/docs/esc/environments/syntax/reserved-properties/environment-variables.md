@@ -7,9 +7,9 @@ aliases:
   - /docs/reference/esc-syntax/reserved-properties/environment-variables/
   - /docs/esc/reference/reserved-properties/environment-variables/
 menu:
-  reference:
-    parent: esc-ref-reserved-properties
-    identifier: esc-ref-reserved-environment-variables
+  esc:
+    parent: esc-syntax-reserved-properties
+    identifier: esc-syntax-reserved-environment-variables
     weight: 1
 ---
 
