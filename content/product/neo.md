@@ -1,18 +1,18 @@
 ---
-title: "Pulumi Neo - Your AI Engineer Teammate"
+title: "Pulumi Neo - Your AI Infrastructure Agent"
 layout: neo
 aliases: ["/neo", "/copilot", "/product/copilot", "/product/pulumi-copilot", "/docs/ai/copilot/", "/docs/pulumi-cloud/copilot/", "/docs/intro/copilot/", "/docs/intro/pulumi-cloud/copilot/"]
 
 heading: Pulumi Neo
 subheading: |
-    Your AI engineer teammate. Ship infrastructure faster, safely.
+    Your AI Infrastructure Agent. Ship infrastructure faster, safely.
 
 meta_title: "Pulumi Neo - Your AI Platform Engineer"
 meta_desc: "Meet Neo, your AI platform engineer. Automate infrastructure provisioning, governance, and optimization with enterprise controls."
 meta_image: /images/product/neo-meta.png
 
 overview:
-  title: Your AI engineer teammate. Ship infrastructure faster, safely.
+  title: Your AI Infrastructure Agent. Ship infrastructure faster, safely.
 
 why_neo:
   title: Why Infrastructure and Platform Teams Choose Neo
