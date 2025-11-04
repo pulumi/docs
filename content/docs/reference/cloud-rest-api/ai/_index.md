@@ -1,7 +1,7 @@
 ---
-title: Copilot
-title_tag: "Pulumi Cloud REST API: Copilot"
-meta_desc: Learn about the Pulumi Copilot REST API endpoints for integrating AI-powered infrastructure assistance with your applications.
+title: AI
+title_tag: "Pulumi Cloud REST API: AI"
+meta_desc: Learn about the Pulumi AI REST API endpoints for integrating AI-powered infrastructure assistance with your applications.
 menu:
     reference:
         parent: cloud-rest-api
@@ -12,15 +12,15 @@ aliases:
   - /docs/pulumi-cloud/reference/copilot/
 ---
 
-The Pulumi Copilot API provides endpoints for integrating Pulumi's AI-powered infrastructure assistance capabilities with your applications and platforms. It allows you to programmatically access Pulumi Copilot's natural language understanding to analyze infrastructure, answer questions about Pulumi, and even generate infrastructure as code.
+The Pulumi AI API provides endpoints for integrating Pulumi's AI-powered infrastructure assistance capabilities with your applications and platforms. This API is used by Pulumi's AI features, including [Pulumi Neo](/docs/ai/), to provide natural language understanding for analyzing infrastructure, answering questions about Pulumi, and generating infrastructure as code.
 
 {{% notes "info" %}}
-Pulumi Copilot's API is currently in preview and subject to change.
+The Pulumi AI API is currently in preview and subject to change.
 {{% /notes %}}
 
 ## Start Conversation
 
-Starts a new conversation with Pulumi Copilot with a query.
+Starts a new conversation with the AI assistant using a query.
 
 ```plain
 POST /api/ai/chat/preview
@@ -212,7 +212,7 @@ POST /api/ai/chat/preview
 |-------------------- |------- |------|--------------------------------------------------------------------------------------------------------------------|
 | `query`             | string | body | The natural language query to process (e.g., "Who are the users in my org?").                                       |
 | `state.client.cloudContext.orgId` | string | body | The identifier for your Pulumi organization (e.g., "acme").                                            |
-| `state.client.cloudContext.url`   | string | body | The URL of the resource in the Pulumi Cloud that provides context to the Pulumi Copilot. |
+| `state.client.cloudContext.url`   | string | body | The URL of the resource in Pulumi Cloud that provides context to the AI assistant. |
 | `conversationId`    | string | body | The conversation ID to post the message to. |
 
 ### Request Body Schema
