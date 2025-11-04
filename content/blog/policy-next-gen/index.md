@@ -4,7 +4,7 @@ authors:
 - craig-symonds  
 - tyler-dunkel  
 - arun-loganathan
-date: 2025-11-05T00:05:00
+date: 2025-11-05
 meta_desc: "Launching the governance lifecycle: AI-powered remediation, pre-built compliance packs, continuous auditing, and a new Policy Findings hub."
 allow_long_title: true
 meta_image: "meta.png"

@@ -1,6 +1,6 @@
 ---
 title: "Introducing the New Policy Findings Hub"
-date: 2025-11-05T00:03:00
+date: 2025-11-05
 authors:
   - alejandro-cotroneo
   - arun-loganathan

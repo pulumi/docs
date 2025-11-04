@@ -1,6 +1,6 @@
 ---
 title: "Announcing New Compliance Packs for CIS, NIST, and PCI DSS"
-date: 2025-11-05T00:02:00
+date: 2025-11-05
 authors:
   - luke-ward
   - dan-biwer
