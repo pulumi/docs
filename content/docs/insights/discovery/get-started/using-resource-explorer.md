@@ -64,7 +64,7 @@ Let's say you are working with your security team as part of an audit, you could
 
 ![Insights Explorer Ai assist public s3](/docs/insights/assets/insights-explorer-pulumi-ai-assist-public-s3.png)
 
-With Pulumi Copilot and Resource Search, you are able to gain insights and ask questions about your infrastructure that would otherwise be challenging to answer, saving time and providing the critical information needed
+With Pulumi Neo and Resource Search, you are able to gain insights and ask questions about your infrastructure that would otherwise be challenging to answer, saving time and providing the critical information needed
 
 {{% notes "info" %}}
 Insights Account Discovery is free while in public preview, with per-resource pricing for Team, Enterprise and Business Critical tiers coming in Q1 2025.

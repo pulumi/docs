@@ -1,7 +1,7 @@
 ---
 title: "Pulumi Neo - Your AI Platform Engineer"
 layout: neo
-aliases: ["/neo", "/copilot", "/product/copilot", "/product/pulumi-copilot"]
+aliases: ["/neo", "/copilot", "/product/copilot", "/product/pulumi-copilot", "/docs/ai/copilot/", "/docs/pulumi-cloud/copilot/", "/docs/intro/copilot/", "/docs/intro/pulumi-cloud/copilot/"]
 
 heading: Pulumi Neo
 subheading: |

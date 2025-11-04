@@ -14,10 +14,6 @@ aliases:
 - /docs/iac/neo/
 - /docs/neo/
 - /docs/ai/neo/
-- /docs/ai/copilot/
-- /docs/pulumi-cloud/copilot/
-- /docs/intro/copilot/
-- /docs/intro/pulumi-cloud/copilot/
 menu:
     ai:
         identifier: ai-home

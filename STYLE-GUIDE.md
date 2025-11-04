@@ -5,6 +5,17 @@ For topics not addressed here, refer to the [Google Developer Documentation Styl
 
 ---
 
+## Scope
+
+This style guide applies to all Hugo content files in this repository.
+
+The following exceptions are specifically excluded from this style guide:
+
+- Non-content files (scripts, configuration, etc.) should follow general best practices for that file type.
+- Meta Markdown files (e.g., `README.md`, `AGENTS.md`) may use different conventions as appropriate.
+
+---
+
 ## Inclusive Language
 
 Pulumi strives to use language that is clear, inclusive, and respectful.  
@@ -94,8 +105,8 @@ This is a useful suggestion.
 
 ## Lists
 
-- Use ordered lists for steps.  
-- All items should begin with `1.` (Markdown will auto-number).  
+- Use ordered lists for steps.
+- All items should begin with `1.` (Markdown will auto-number).
 
 Example:
 
@@ -104,6 +115,57 @@ Example:
 1. Second step
 1. Third step
 ```
+
+---
+
+## Code Blocks and Console Output
+
+### Code Fences
+
+Use fenced code blocks (triple backticks) for all code and console output.
+
+**Supported languages for syntax highlighting:**
+- Language-specific: `typescript`, `python`, `go`, `java`, `csharp`, `yaml`, etc.
+- Shell commands: `bash`, `sh`
+- Console output: `output`
+
+### Console Output
+
+**Do not use indentation** (4 spaces) to denote console output. While technically valid Markdown, indented blocks are difficult for both humans and AI assistants to parse and maintain.
+
+**Wrong:**
+
+```markdown
+    output line 1
+    output line 2
+```
+
+**Correct:**
+
+````markdown
+```output
+output line 1
+output line 2
+```
+````
+
+### Shell Commands vs Output
+
+- Use `bash` or `sh` for commands the user should type
+- Use `output` for the resulting console output
+
+**Example:**
+
+```bash
+pulumi up
+```
+
+```output
+Updating (dev)
+...
+```
+
+**Rationale:** Fenced code blocks are explicit, easy to identify, and support syntax highlighting. Indented blocks can be confused with nested lists or quotes, especially when editing.
 
 ---
 

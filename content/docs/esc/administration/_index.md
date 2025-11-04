@@ -19,6 +19,7 @@ Learn how to configure organizations, monitor audit logs, bring your own encrypt
 - [Access tokens](/docs/administration/access-identity/access-tokens/): Securely authenticate and automate ESC operations.
 - [Audit logs](/docs/esc/administration/audit-logs/): Access and configure audit logs to track activities and ensure compliance.
 - [Approvals](/docs/esc/administration/approvals/): Require explicit review and sign-off before applying changes to ESC-managed environments.
+- [Deletion protection](/docs/esc/administration/deletion-protection/): Prevent accidental deletion of critical environments.
 - [Customer Managed Keys](/docs/esc/administration/customer-managed-keys/): Bring your own encryption keys for enhanced security and compliance.
 - [Access control](/docs/esc/administration/access-control/): Manage environment permissions with role-based access controls at the organization and team levels.
 - [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc/): Integrate with trusted third-party identity providers to authenticate users.
