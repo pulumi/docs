@@ -47,39 +47,39 @@ Policy enforcement works in two modes:
 
 Organization administrators configure which enforcement mode applies to each policy group. Policy violations can gate deployments (preventative) or appear in the [Policy Findings](/docs/insights/policy/policy-findings/) dashboard (audit).
 
-## Core capabilities and Pulumi Cloud
+## Local execution and Pulumi Cloud
 
-Pulumi Policy provides core capabilities that work anywhere, with additional features available when using Pulumi Cloud.
+### Local policy execution
 
-### Preventative policies (core capabilities)
+The open source Pulumi CLI enables local policy execution:
 
-Pulumi Policy's core capabilities enable you to:
-
-- Run open source policy packs or author your own custom policy packs
 - Apply policies locally using the `--policy-pack path/to/policy-pack` flag with `pulumi preview` or `pulumi up`
-- Use policies with any backend (including the self-managed backend)
+- Run open source policy packs or author your own custom policy packs
+- Use with any backend (including the self-managed backend)
 
 **Limitation:** Policy packs must be present on disk locally where you run Pulumi commands.
 
-### Preventative policies (Pulumi Cloud)
+### Pulumi Cloud integration
 
-Pulumi Cloud adds centralized policy management with:
+Pulumi Cloud extends policy capabilities with centralized management and additional enforcement modes:
 
-- Access to Pulumi-authored pre-built policy packs for common compliance frameworks
+**Preventative policies:**
+
 - Centralized management via [Policy Groups](/docs/insights/policy/policy-groups/)
+- Access to Pulumi-authored pre-built policy packs for common compliance frameworks
+- Support for open source policy packs by publishing them to your organization's private registry
 - Automatic policy pack download to local cache
 - No need to specify `--policy-pack` flag for each command
 - Version control and rollback for policy packs
+- Policy violation results visible in the Pulumi Cloud console
 
-### Audit policies (Pulumi Cloud)
+**Audit policies:**
 
-[Audit policies](/docs/insights/discovery/) continuously scan resources discovered through Insights Discovery:
-
+- Continuously scan resources discovered through [Insights Discovery](/docs/insights/discovery/)
 - Identify violations across all infrastructure—including resources created with Terraform, CloudFormation, or manually
 - View violations in the [Policy Findings](/docs/insights/policy/policy-findings/) dashboard
 - Monitor compliance trends across your organization
-
-**Availability:** Audit policies are only available with Pulumi Cloud and cannot be used with the self-managed backend.
+- Only available with Pulumi Cloud (cannot be used with the self-managed backend)
 
 For more information about Pulumi plans and pricing, see the [Pricing page](/pricing/).
 
