@@ -64,7 +64,7 @@ main:
           photo: /images/team/adam-gordon-bell.jpg
         - name: Zachary Cook
           role: Engineering Manager, Azure Expert, Pulumi
-          photo: /images/team/zachary-cook.jpg
+          photo: /images/team/zachary-cook.jpeg
 
     # case-sensitive
     tags:
