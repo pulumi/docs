@@ -32,9 +32,7 @@ Policy as Code is implemented via [analyzer plugins](/docs/iac/concepts/plugins/
 Pulumi Policy uses a hierarchy of components to enforce compliance rules:
 
 1. **Policies** are individual rules that validate infrastructure configuration (e.g., "S3 buckets must be private" or "VMs must use approved instance types").
-
 1. **Policy packs** are versioned collections of related policies that you publish and manage together. You can use [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, PCI DSS, SOC 2) or [write custom packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, or Python.
-
 1. **Policy groups** apply policy packs to specific stacks or cloud accounts. This lets you enforce stricter policies in production and more permissive policies in development environments. Learn more about [policy groups](/docs/insights/policy/policy-groups/).
 
 ### Enforcement modes
@@ -42,7 +40,6 @@ Pulumi Policy uses a hierarchy of components to enforce compliance rules:
 Policy enforcement works in two modes:
 
 - **Preventative**: Validates Pulumi stack resources during `pulumi preview` and `pulumi up`, blocking deployments when violations are detected. Prevents non-compliant resources from being created.
-
 - **Audit**: Continuously scans resources discovered through [Insights Discovery](/docs/insights/discovery/) to identify violations across all infrastructure—including resources created with Terraform, CloudFormation, or manually. Provides visibility without blocking operations.
 
 Organization administrators configure which enforcement mode applies to each policy group. Policy violations can gate deployments (preventative) or appear in the [Policy Findings](/docs/insights/policy/policy-findings/) dashboard (audit).
@@ -98,13 +95,9 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 Choose your path based on your needs:
 
 - **New to Pulumi Policy?** Start with the [Get Started guide](/docs/insights/policy/get-started/) to configure your first policy group and apply policies to stacks or cloud accounts.
-
 - **Want ready-made compliance rules?** Browse [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for CIS, PCI DSS, HITRUST, NIST, and other frameworks. Enable them directly from Pulumi Cloud with no code required.
-
 - **Need custom policies?** Learn to [write custom policy packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, or Python. Create organization-specific rules tailored to your requirements.
-
 - **Managing compliance?** View violations and track remediation progress in [Policy Findings](/docs/insights/policy/policy-findings/). Triage issues, assign owners, and monitor compliance trends across your organization.
-
 - **Configuring discovered resources?** Visit the [Insights Get Started tutorial](/docs/insights/discovery/get-started/) for a detailed guide on audit policies for cloud resources discovered outside Pulumi.
 
 For common questions and troubleshooting, see the [FAQ](/docs/insights/policy/faq/).
