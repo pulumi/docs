@@ -1,7 +1,7 @@
 ---
-title: Environment Definition Reference
-title_tag: Environment Definition Reference
-h1: Environment Definition Reference
+title: Environment Definition Syntax
+title_tag: Environment Definition Syntax
+h1: Environment Definition Syntax
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
   esc:
@@ -14,11 +14,11 @@ aliases:
   - /docs/esc/reference/
 ---
 
-This is a reference for the various constructs defined by ESC.
+This is a reference for the syntactical constructs defined by ESC.
 
 ## Reference summary
 
-The ESC Environment reference is divided into the following sections:
+The syntax reference is divided into the following sections:
 
 - __Top-level keys__: These are the different top-level document keys defined by the ESC language. Each key has its own well-defined semantics. For more information, see the [top-level key reference](/docs/esc/environments/syntax/top-level-keys).
 - __Interpolations and references__: Interpolations and references are additional syntactical constructs ESC layers on top of YAML to enable users to reuse property values. For more information, see the [interpolation and references syntax reference](/docs/esc/environments/syntax/interpolations-and-references).
