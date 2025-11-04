@@ -20,7 +20,7 @@ Pulumi Visual Import allows platform and development teams to leverage [Pulumi I
 1. Discover and select existing cloud resources across accounts
 2. Identify and review resources with a reference/dependent relationship to the previously selected resources
 3. Generate and export IaC code in your preferred language
-4. Enhance your IaC code using Pulumi Copilot
+4. Enhance your IaC code using Pulumi Neo
 5. Refine and integrate that code into your own Pulumi projects
 
 This feature is available to users on Team, Enterprise, and Business Critical SKUs with Pulumi Insights enabled.
@@ -77,9 +77,9 @@ This step lets you create, review, and refine the generated Pulumi IaC code.
 
 ![Pulumi Import](/docs/insights/assets/import-review-code.png)
 
-### Step 4: Copilot enhance
+### Step 4: Enhance
 
-The Copilot Enhance button enables Pulumi Copilot to take an additional pass over the generated code to improve formatting, provide more meaningful variable names and comments, and add references between selected components if available.
+The Enhance button enables Pulumi Neo to take an additional pass over the generated code to improve formatting, provide more meaningful variable names and comments, and add references between selected components if available.
 
 ![Pulumi Import](/docs/insights/assets/import-review-enhance.png)
 
@@ -106,7 +106,7 @@ After a successful stack update, these resources become Pulumi-managed. Changes 
 
 * **Start Small**: Select a small, logical grouping of resources (e.g., a single service or stack)
 * **Validate**: Use `pulumi preview` after importing the generated code to confirm correctness
-* **Enhance**: Let Copilot help improve readability and conformance with your coding standards
+* **Enhance**: Let Neo help improve readability and conformance with your coding standards
 * **Integrate Carefully**: Consider how the generated code fits into your existing IaC structure
 
 ## Feedback and support

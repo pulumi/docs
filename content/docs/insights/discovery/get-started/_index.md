@@ -42,6 +42,6 @@ This guide will take you through the following steps to easily get started with 
 1. Setting up and configuring Pulumi to access your cloud accounts.
 2. Create a new Insights Account
 3. Use Insights Resource Explorer to understand your infrastructure.
-4. Ask natural language questions about your resources using Pulumi Copilot.
+4. Ask natural language questions about your resources using Pulumi Neo.
 
 {{< get-started-stepper >}}

@@ -26,7 +26,7 @@ Discovery integrates with [Pulumi ESC](/docs/esc/) to securely manage credential
 
 2. **Resource scanning**: Discovery authenticates to your cloud provider using read-only credentials from ESC, then identifies resources, collects metadata, records relationships, and updates the Insights supergraph with the latest state.
 
-3. **Exploration**: Once scanning completes, explore your infrastructure through [Resource Search](/docs/insights/discovery/search/), which provides powerful filtering, grouping, and natural language queries via [Pulumi Copilot](/docs/ai/copilot/).
+3. **Exploration**: Once scanning completes, explore your infrastructure through [Resource Search](/docs/insights/discovery/search/), which provides powerful filtering, grouping, and natural language queries via [Pulumi Neo](/docs/ai/).
 
 4. **Import**: Use [Visual Import](/docs/insights/discovery/visual-import/) to convert discovered resources into Pulumi IaC code, bringing unmanaged infrastructure under automated management.
 

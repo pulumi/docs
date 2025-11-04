@@ -34,7 +34,11 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `audit_logs:export` | Export audit log data for compliance and analysis purposes. This enables downloading audit records in various formats.<br><br>**Granted by default roles**: `Admin` |
 | `audit_logs:read` | Access and view audit logs of organization activities. This provides visibility into system events and user actions.<br><br>**Granted by default roles**: `Admin` |
 
-## Copilot
+## AI
+
+{{% notes "info" %}}
+These scopes control access to Pulumi's AI features, including [Pulumi Neo](/docs/ai/).
+{{% /notes %}}
 
 | Value | Description |
 |-------|-------------|
