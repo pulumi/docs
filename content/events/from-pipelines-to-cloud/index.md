@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url: https://www.youtube.com/embed/ttUVmRPAzCo?si=PZGBEQeDbB3qd5PR
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-11-04T11:00:00-06:00
@@ -56,7 +56,6 @@ main:
         - How to spin up Azure resources automatically - no portal clicking or ARM templates required
         - How to see every infrastructure change before it happens with Pulumi’s preview system
         - How to commit, push, and watch your cloud update itself from your repo
-        - How to reuse and extend your pipeline for bigger Azure projects or multiple environments
 
     # The webinar presenters
     presenters:
