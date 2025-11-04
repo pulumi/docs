@@ -6,7 +6,7 @@ heading: Insights & Governance
 subheading: |
     Complete visibility and control for your cloud
 
-meta_desc: Join us on November 5 to see how Neo helps you get clean and stay clean - automatically. Watch it in action. Live demo + Q&A.
+meta_desc: Automated compliance made simple — continuously audit, remediate, and enforce policies to keep your cloud secure and reliable.
 meta_image: /images/product/insights_governance_meta-image.png
 
 aliases:

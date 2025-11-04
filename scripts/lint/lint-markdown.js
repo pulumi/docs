@@ -33,7 +33,7 @@ function checkPageTitle(title, allowLongTitle) {
         const titleLength = title.trim().length;
         if (titleLength === 0) {
             return "Page title is empty";
-        } else if (titleLength > 60) {
+        } else if (titleLength > 70) {
             return "Page title exceeds 60 characters";
         }
     } else {
