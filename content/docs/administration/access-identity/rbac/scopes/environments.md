@@ -25,7 +25,6 @@ Note that creating, listing, or restoring environments are organization-level op
 | Value | Description |
 |-------|-------------|
 | `environment:clone` | Create a copy of an existing environment with all its configurations. This is useful for creating staging or testing environments.<br><br>**Granted by default permission**: `Environment Open` |
-| `environment:read_decrypt` | Access and decrypt sensitive environment data. This allows viewing encrypted configuration values and secrets.<br><br>**Granted by default permission**: `Environment Open` |
 | `environment:delete` | Remove an environment and its associated resources. This permanently deletes the environment and its configurations.<br><br>**Granted by default permission**: `Environment Admin` |
 | `environment:open` | Access and interact with an environment's resources. This includes the ability to view and modify environment configurations.<br><br>**Granted by default permission**: `Environment Open` |
 | `environment:read` | View environment configurations and settings. This provides read-only access to environment details and parameters.<br><br>**Granted by default permission**: `Environment Read` |
@@ -63,7 +62,6 @@ Note that creating, listing, or restoring environments are organization-level op
 | Value | Description |
 |-------|-------------|
 | `environment_version:create` | Create a new version of an environment. This allows tracking changes and maintaining environment history.<br><br>**Granted by default permission**: `Environment Write` |
-| `environment_version:read_decrypt` | Access and decrypt sensitive data in an environment version. This allows viewing encrypted configuration values.<br><br>**Granted by default permission**: `Environment Open` |
 | `environment_version:delete` | Remove a specific version of an environment. This permanently deletes the version and its configurations.<br><br>**Granted by default permission**: `Environment Write` |
 | `environment_version:open` | Access and interact with a specific environment version. This includes viewing and using version-specific configurations.<br><br>**Granted by default permission**: `Environment Open` |
 | `environment_version:read` | View details of a specific environment version. This provides access to version-specific configurations and metadata.<br><br>**Granted by default permission**: `Environment Open` |
