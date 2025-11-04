@@ -9,7 +9,7 @@ menu:
     name: Configuring OIDC
     identifier: esc-configuring-oidc
     parent: esc-environments
-    weight: 6
+    weight: 7
 ---
 
 Pulumi ESC can be configured to act as an OpenID Connect (OIDC) provider, issuing signed, short-lived tokens. These tokens can then be exchanged by external systems for temporary cloud provider credentials, eliminating the need for hard-coded credentials.
