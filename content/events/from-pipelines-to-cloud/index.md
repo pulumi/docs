@@ -62,6 +62,9 @@ main:
         - name: Adam Bell
           role: Community Engineer, Pulumi
           photo: /images/team/adam-gordon-bell.jpg
+        - name: Zac Cook
+          role: Engineering Manager, Azure Expert, Pulumi
+          photo: /images/team/zachary-cook.jpg
 
     # case-sensitive
     tags:
