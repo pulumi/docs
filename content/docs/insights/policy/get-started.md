@@ -1,9 +1,9 @@
 ---
-title_tag: Get Started with Policy as Code | Pulumi Policy
-meta_desc: Pulumi Policy is a product that provides gated deployments via Policy as Code. Enforce best practices
+title_tag: Get Started with Policy as Code | Pulumi Policies
+meta_desc: Pulumi Policies is a product that provides gated deployments via Policy as Code. Enforce best practices
            and security compliance when creating cloud resources.
 title: Get Started
-h1: Get Started with Pulumi Policy as Code
+h1: Get Started with Pulumi Policies
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
@@ -24,14 +24,14 @@ aliases:
   - /docs/iac/packages-and-automation/crossguard/get-started/
 ---
 
-Pulumi Policy enforces compliance, security, and best practices across your cloud infrastructure, whether managed by Pulumi, provisioned by other tools, or created manually.
+Pulumi Policies enforces compliance, security, and best practices across your cloud infrastructure, whether managed by Pulumi, provisioned by other tools, or created manually.
 
 Policy enforcement is applied in two ways:
 
 - **Preventative**: Blocking non-compliant resources before deployment during Pulumi stack updates
 - **Audit**: Continuously scan existing resources discovered through [Insights Discovery](/docs/insights/discovery/) to identify violations
 
-This guide walks you through getting started with Pulumi Policy using both preventative and audit policies.
+This guide walks you through getting started with Pulumi Policies using both preventative and audit policies.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ To follow this guide, ensure you have:
 
 ## Understanding the Policies page
 
-The Policies page is the central hub for managing Pulumi Policy. To get there, navigate to **Management** > **Policies** in the left navigation.
+The Policies page is the central hub for managing Pulumi Policies. To get there, navigate to **Management** > **Policies** in the left navigation.
 
 The page displays two tabs: **Policy Packs** and **Policy Groups**.
 
@@ -124,13 +124,13 @@ Each policy violation creates an issue that you can act on:
 - **Fix violations yourself**: Update the non-compliant resources directly
 - **Assign to Pulumi Neo**: Let Pulumi's AI agent analyze and fix the violation automatically
 
-This workflow—setting up policies, monitoring findings, and taking action—forms the core compliance management cycle in Pulumi Policy.
+This workflow—setting up policies, monitoring findings, and taking action—forms the core compliance management cycle in Pulumi Policies.
 
 For detailed information on managing findings, see [Policy Findings](/docs/insights/policy/policy-findings/).
 
 ## Learn more
 
-To deepen your understanding of Pulumi Policy:
+To deepen your understanding of Pulumi Policies:
 
 - **Write custom policies**: [Authoring Guide](/docs/insights/policy/policy-packs/authoring/)
 - **Explore pre-built policy packs**: [Pre-built Policy Packs](/docs/insights/policy/policy-packs/pre-built-packs/)

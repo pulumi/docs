@@ -1,6 +1,6 @@
 ---
-title_tag: "Policy Findings | Pulumi Policy"
-meta_desc: Learn about Policy Findings in Pulumi Policy and how to manage compliance in your cloud infrastructure.
+title_tag: "Policy Findings | Pulumi Policies"
+meta_desc: Learn about Policy Findings in Pulumi Policies and how to manage compliance in your cloud infrastructure.
 title: Policy Findings
 h1: Policy Findings
 weight: 2
