@@ -21,7 +21,7 @@ tiers:
               items: |
                 You get:
                 - IaC state management
-                - Unlimited projects, stacks, and environments
+                - Unlimited projects  and stacks
                 - Unlimited updates and history
                 - 500 free deployments minutes
             - title: Team
