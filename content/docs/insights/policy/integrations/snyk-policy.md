@@ -8,8 +8,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: Snyk Container Scanning
-        parent: insights-policy
-        weight: 10
+        parent: integrations
+        weight: 1
 aliases:
   - /docs/insights/policy/policy-as-code/snyk-policy/
   - /docs/iac/crossguard/snyk-policy/
@@ -18,10 +18,15 @@ aliases:
   - /docs/using-pulumi/crossguard/snyk-policy/
   - /docs/iac/packages-and-automation/crossguard/snyk-policy/
   - /docs/iac/using-pulumi/crossguard/snyk-policy/
+  - /docs/insights/policy/snyk-policy/
 ---
 <!-- markdownlint-disable ul code -->
 
 ## Overview
+
+{{% notes type="warning" %}}
+**Experimental**: This integration is experimental. It shells out to the Snyk CLI tool and may not provide a seamless user experience.
+{{% /notes %}}
 
 [Snyk container scanning](https://github.com/pulumi/templates-policy/tree/master/snyk-typescript) is a Pulumi policy as code template that allows you to uses the [Snyk CLI](https://docs.snyk.io/cli-ide-and-ci-cd-integrations/snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-container) to scan [`docker.Image`](/registry/packages/docker/api-docs/image/) resources for vulnerabilities.
 
@@ -220,7 +225,7 @@ pulumi preview --policy-pack ../infra
 ```
 
 {{< notes type="info" >}}
-Note that the Snyk container policy is a [stack policy](/docs/using-pulumi/crossguard/core-concepts/#stack-policies). This means that in order to have containers correctly scanned during a `pulumi preview`, your `docker.Image` resources must have the `buildOnPreview` set to `true`. If you run the policy pack during a `pulumi update`, the policy will execute _after_ your containers have been built, _and after they have been pushed_ if you have not explicitly specified the `skipPush` input to be `true`.
+Note that the Snyk container policy is a stack policy (validates all resources in the stack after processing). This means that in order to have containers correctly scanned during a `pulumi preview`, your `docker.Image` resources must have the `buildOnPreview` set to `true`. If you run the policy pack during a `pulumi update`, the policy will execute _after_ your containers have been built, _and after they have been pushed_ if you have not explicitly specified the `skipPush` input to be `true`.
 {{< /notes >}}
 
 ## Configuration options
@@ -259,7 +264,7 @@ To set the configuration, you can do one of the following:
     ```
 
     (Relative paths in the above command will also work.)
-1. If using Pulumi Cloud's server-side enforcement, policy pack configuration can be set centrally managed in the Pulumi Cloud UI. For details, see [Configuring policy packs](/docs/using-pulumi/crossguard/configuration/#using-the-pulumi-cloud).
+1. If using Pulumi Cloud's server-side enforcement, policy pack configuration can be centrally managed in the Pulumi Cloud UI. For details, see [Configuring policy packs](/docs/insights/policy/policy-packs/#pulumi-cloud-configuration).
 
 ## Next steps
 
