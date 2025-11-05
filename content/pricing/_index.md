@@ -341,19 +341,6 @@ comparison_table:
                   - content: Unlimited
                   - content: Unlimited
                   - content: Unlimited
-              - title: "Max # of projects"
-                items:
-                  - content: 10
-                  - content: Unlimited
-                  - content: Unlimited
-                  - content: Unlimited
-              - title: "Max # of environments"
-                link: /docs/esc/environments/
-                items:
-                  - content: 10
-                  - content: Unlimited
-                  - content: Unlimited
-                  - content: Unlimited
               - title: "Max # of API calls"
                 items:
                   - content: 10K / month
