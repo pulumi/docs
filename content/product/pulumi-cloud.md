@@ -188,7 +188,7 @@ products:
                 Automatically block deployments that violate your organization's policies.
             - title:  Enterprise compliance enforcement
               description: |
-                Business Critical customers can enforce [compliance](/compliance/) and remediate non-compliance using Pulumi provided policies across your organization.
+                Business Critical customers can enforce [compliance](/docs/insights/policy/policy-packs/) and remediate non-compliance using Pulumi provided policies across your organization.
 
               more_info: |
                 Choose from hundreds of policies for AWS, Azure, Google Cloud, and Kubernetes. Support for PCI DSS, ISO 27001, SOC 2, and CIS Benchmarks.
