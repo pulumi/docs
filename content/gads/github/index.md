@@ -1,9 +1,9 @@
 ---
-title: "GitHub Alternative | Pulumi"
+title: "Infrastructure Automation for GitHub | Pulumi"
 meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
 layout: gads-template
 block_external_search_index: true
-heading: "GitHub Alternative"
+heading: "Infrastructure Automation for GitHub"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
@@ -11,7 +11,7 @@ subheading: |
 overview:
     title: Infrastructure as Code<br/>in any Programming Language
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a GitHub alternative</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">infrastructure automation for GitHub</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
 
 key_features_above:
     items:
