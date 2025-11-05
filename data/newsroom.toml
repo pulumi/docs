@@ -1,4 +1,10 @@
 [[releases]]
+date = "5th November 2025"
+title = "Pulumi Introduces AI-Powered Automatic Remediation for Infrastructure Policy Violations"
+summary = "Pulumi Introduces AI-Powered Automatic Remediation for Infrastructure Policy Violations."
+url = "https://info.pulumi.com/press-release/ai-powered-automatic-remediation-for-infrastructure-policy-violations"
+
+[[releases]]
 date = "16th September 2025"
 title = "Introducing Pulumi Neo, the Industry's First AI-Powered Platform Engineer"
 summary = "Introducing Pulumi Neo, the Industry's First AI-Powered Platform Engineer."
