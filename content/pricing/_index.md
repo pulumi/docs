@@ -485,8 +485,8 @@ comparison_table:
                 link: /docs/insights/preventative-vs-audit-policies/
                 items: 
                   - content: _blank
-                  - content: _blank
-                  - content: _blank
+                  - content: _check
+                  - content: _check
                   - content: _check
               - title: Pre-built Policy Packs
                 link: /docs/insights/pre-built-packs
@@ -494,13 +494,13 @@ comparison_table:
                   - content: _blank
                   - content: Pulumi Best Practices
                   - content: Pulumi Best Practices
-                  - content: Pulumi Best Practices, HITRUST CSF
+                  - content: Pulumi Best Practices, CIS, NIST, HITRUST, PCI DSS
               - title: Custom Policy Packs
                 link: /docs/insights/policy/policy-as-code/get-started/#creating-a-policy-pack
                 items:
                   - content: _blank
-                  - content: 1 pack<br>up to 25 policies
-                  - content: 3 packs<br>up to 100 policies
+                  - content: Up to 25 policies (1 pack limit)
+                  - content: Up to 100 policies (3 pack limit)
                   - content: Unlimited
               - title: Enforcement Modes
                 link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
