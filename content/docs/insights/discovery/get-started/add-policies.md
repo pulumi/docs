@@ -105,27 +105,34 @@ With policies configured, you can now evaluate your discovered resources against
 3. Click **Actions** then select **Scan**
 4. Confirm by clicking **Scan**
 
-## Reviewing policy violations
+## Reviewing policy issues
 
-As the scan progresses, you can monitor policy compliance in real-time through the **Policy Violations** page in the Pulumi Cloud Console. This view provides several ways to analyze your compliance status:
+As the scan progresses, you can monitor policy compliance in real-time through the **Policy Findings** page in the Pulumi Cloud Console. This view provides several ways to analyze your compliance status:
 
-![Insights Policies - Policy Violations](/docs/insights/assets/policy-violations.png)
+![Insights Policies - Policy Findings](/docs/insights/assets/policy-findings.png)
 
-Filter policy violations by:
+The Policy Findings page includes three tabs:
 
-- Policy Pack
+- **Overview:** View high-level compliance metrics and a heatmap showing compliance across accounts and policy packs
+- **Compliance:** Review policy-centric view showing failing resources per policy, organized by policy group
+- **Issues:** Manage individual policy violations as work items with status tracking, priority assignment, and remediation workflows
+
+Filter policy issues by:
+
+- Policy pack
 - Policy
-- Project
-- Enforcement levels (advisory vs mandatory)
-- Account
-- Resource
-- Type
-- Violation date
+- Severity
+- Priority
+- Status
+- Assigned team member
+- Resource type
+- Cloud account
 
-Each violation entry provides detailed information about:
+Each issue provides detailed information about:
 
 - The specific resource that triggered the violation
 - Which policy rule was violated
+- Policy pack, policy group, and enforcement level
 - Contextual information to help understand why the resource is non-compliant
 
 {{< get-started-stepper >}}

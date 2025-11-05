@@ -340,3 +340,12 @@ reference:
     url: https://www.pulumi.com/docs/reference/pkg/python/pulumi_policy/
     weight: 7
     identifier: reference-sdks-python-policy
+
+# -------------------------------------
+# Insights Policy Menu Section Headers
+# -------------------------------------
+insights:
+  - name: Integrations
+    parent: insights-policy
+    identifier: integrations
+    weight: 50

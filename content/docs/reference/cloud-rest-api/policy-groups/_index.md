@@ -53,19 +53,23 @@ curl \
 Status: 200 OK
 ```
 
-```plain
+```json
 {
   "policyGroups": [
     {
       "name": "continuous-policy",
       "isOrgDefault": false,
       "numStacks": 1,
+      "numAccounts": 0,
+      "entityType": "stacks",
       "numEnabledPolicyPacks": 1
     },
     {
       "name": "default-policy-group",
       "isOrgDefault": true,
       "numStacks": 2569,
+      "numAccounts": 0,
+      "entityType": "stacks",
       "numEnabledPolicyPacks": 1
     }
   ]
@@ -103,10 +107,12 @@ curl \
 Status: 200 OK
 ```
 
-```plain
+```json
 {
   "name": "continuous-policy",
   "isOrgDefault": false,
+  "entityType": "stacks",
+  "mode": "audit",
   "stacks": [
     {
       "name": "global",
@@ -139,7 +145,8 @@ Status: 200 OK
         }
       }
     }
-  ]
+  ],
+  "accounts": []
 }
 ```
 
@@ -153,10 +160,12 @@ POST /api/orgs/{organization}/policygroups
 
 ### Parameters
 
-| Parameter           | Type   | In    | Description        |
-|---------------------|--------|-------|--------------------|
-| `organization`      | string | path  | organization name  |
-| `name`              | string | body  | policy group name  |
+| Parameter           | Type   | In    | Description                                                      |
+|---------------------|--------|-------|------------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                                |
+| `name`              | string | body  | policy group name (required)                                     |
+| `entityType`        | string | body  | type of entities the policy group applies to: `stacks` or `accounts` (required) |
+| `mode`              | string | body  | enforcement mode: `audit` or `preventative` (required)           |
 
 ### Example
 
@@ -166,7 +175,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
-  --data '{"name":"myPolicyGroup"}' \
+  --data '{"name":"myPolicyGroup","entityType":"stacks","mode":"audit"}' \
   https://api.pulumi.com/api/orgs/{organization}/policygroups
 ```
 
@@ -184,27 +193,31 @@ Update policy group, rename, add/remove stacks, add/remove policy packs.
 PATCH /api/orgs/{organization}/policygroups/{policyGroup}
 ```
 
-| Parameter                     | Type       | In     | Description                                       |
-|-------------------------------|------------|--------|---------------------------------------------------|
-| `organization`                | string     | path   | organization name                                 |
-| `policyGroup`                 | string     | path   | policy group name                                 |
-| `newName`                     | string     | body   | new policy group name                             |
-| `addStack`                    | object     | body   | add stack reference - see following parameters    |
-| `addStack.name`               | string     | object | stack name                                        |
-| `addStack.routingProject`     | string     | object | stack project                                     |
-| `removeStack`                 | object     | body   | remove stack reference - see following parameters |
-| `removeStack.name`            | string     | object | stack name                                        |
-| `removeStack.routingProject`  | string     | object | stack project                                     |
-| `addPolicyPack`               | object     | body   | add policy pack - see following parameters        |
-| `addPolicyPack.name`          | string     | object | policy pack name                                  |
-| `addPolicyPack.displayName`   | string     | object | policy pack display name                          |
-| `addPolicyPack.version`       | number     | object | policy pack version                               |
-| `addPolicyPack.versionTag`    | string     | object | policy pack version tag                           |
-| `addPolicyPack.config`        | key/value  | object | policy pack config                                |
-| `removePolicyPack`            | object     | body   | remove policy pack - see following parameters     |
-| `removePolicyPack.name`       | string     | object | policy pack name                                  |
-| `removePolicyPack.version`    | int        | object | policy pack version                               |
-| `removePolicyPack.versionTag` | string     | object | policy pack version tag                           |
+| Parameter                          | Type       | In     | Description                                       |
+|------------------------------------|------------|--------|---------------------------------------------------|
+| `organization`                     | string     | path   | organization name                                 |
+| `policyGroup`                      | string     | path   | policy group name                                 |
+| `newName`                          | string     | body   | new policy group name                             |
+| `addStack`                         | object     | body   | add stack reference - see following parameters    |
+| `addStack.name`                    | string     | object | stack name                                        |
+| `addStack.routingProject`          | string     | object | stack project                                     |
+| `removeStack`                      | object     | body   | remove stack reference - see following parameters |
+| `removeStack.name`                 | string     | object | stack name                                        |
+| `removeStack.routingProject`       | string     | object | stack project                                     |
+| `addPolicyPack`                    | object     | body   | add policy pack - see following parameters        |
+| `addPolicyPack.name`               | string     | object | policy pack name                                  |
+| `addPolicyPack.displayName`        | string     | object | policy pack display name                          |
+| `addPolicyPack.version`            | number     | object | policy pack version                               |
+| `addPolicyPack.versionTag`         | string     | object | policy pack version tag                           |
+| `addPolicyPack.config`             | key/value  | object | policy pack config                                |
+| `removePolicyPack`                 | object     | body   | remove policy pack - see following parameters     |
+| `removePolicyPack.name`            | string     | object | policy pack name                                  |
+| `removePolicyPack.version`         | int        | object | policy pack version                               |
+| `removePolicyPack.versionTag`      | string     | object | policy pack version tag                           |
+| `addInsightsAccount`               | object     | body   | add insights account - see following parameters   |
+| `addInsightsAccount.name`          | string     | object | insights account name                             |
+| `removeInsightsAccount`            | object     | body   | remove insights account - see following parameters |
+| `removeInsightsAccount.name`       | string     | object | insights account name                             |
 
 ### Example
 

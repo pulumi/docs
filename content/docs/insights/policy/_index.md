@@ -1,8 +1,8 @@
 ---
 title: Policy
-title_tag: "Pulumi Policy as Code | Insights & Governance"
-meta_desc: Enforce compliance and security policies across all cloud infrastructure with Pulumi Policy as Code—for both IaC stacks and discovered resources.
-h1: Policy as code
+title_tag: "Pulumi Policy | Insights & Governance"
+meta_desc: Enforce compliance and security policies across all cloud infrastructure with Pulumi Policy—for both IaC stacks and discovered resources.
+h1: Policy
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
@@ -18,113 +18,86 @@ aliases:
   - /docs/iac/using-pulumi/crossguard/
   - /docs/iac/crossguard/
   - /docs/insights/policy-as-code/
+  - /docs/insights/policy/core-concepts/
 ---
 
-Pulumi Policy empowers you to set guardrails to enforce compliance across your entire cloud infrastructure—whether resources are managed by Pulumi IaC, provisioned by other tools like Terraform or CloudFormation, or created manually. Using Policy as Code, you can write flexible business and security policies that protect your organization.
+Pulumi Policy empowers you to set guardrails to enforce compliance across your entire cloud infrastructure—whether resources are managed by Pulumi IaC, provisioned by other tools like Terraform or CloudFormation, or created manually. Using Pulumi Policy, you can write flexible business and security policies that protect your organization.
 
 {{% notes type="info" %}}
 Policy as Code is implemented via [analyzer plugins](/docs/iac/concepts/plugins/#analyzer-plugins), which are installed automatically with the Pulumi CLI.
 {{% /notes %}}
 
+## How it works
+
+Pulumi Policy uses a hierarchy of components to enforce compliance rules:
+
+1. **Policies** are individual rules that validate infrastructure configuration (e.g., "S3 buckets must be private" or "VMs must use approved instance types").
+1. **Policy packs** are versioned collections of related policies that you publish and manage together. You can use [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, PCI DSS, SOC 2) or [write custom packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, or Python.
+1. **Policy groups** apply policy packs to specific stacks or cloud accounts. This lets you enforce stricter policies in production and more permissive policies in development environments. Learn more about [policy groups](/docs/insights/policy/policy-groups/).
+
+### Enforcement modes
+
 Policy enforcement works in two modes:
 
-- **Preventative policies**: Block non-compliant resources before deployment, enforcing compliance on Pulumi stack updates
-- **Audit policies**: Scan existing resources discovered through [Insights Discovery](/docs/insights/discovery/) to identify violations across all infrastructure
+- **Preventative**: Validates Pulumi stack resources during `pulumi preview` and `pulumi up`, blocking deployments when violations are detected. Prevents non-compliant resources from being created.
+- **Audit**: Continuously scans resources discovered through [Insights Discovery](/docs/insights/discovery/) to identify violations across all infrastructure—including resources created with Terraform, CloudFormation, or manually. Provides visibility without blocking operations.
 
-Organization administrators can apply policies to specific stacks and cloud accounts. When policies execute during deployments, violations can gate or block updates from proceeding. Policy remediations also allow you to automatically fix violations.
+Organization administrators configure which enforcement mode applies to each policy group. Policy violations can gate deployments (preventative) or appear in the [Policy Findings](/docs/insights/policy/policy-findings/) dashboard (audit).
 
-Learn more about [Policy as Code core concepts](/docs/insights/policy/core-concepts/).
+## Local execution and Pulumi Cloud
+
+### Local policy execution
+
+The open source Pulumi CLI enables local policy execution:
+
+- Apply policies locally using the `--policy-pack path/to/policy-pack` flag with `pulumi preview` or `pulumi up`
+- Run open source policy packs or author your own custom policy packs
+- Use with any backend (including the self-managed backend)
+
+**Limitation:** Policy packs must be present on disk locally where you run Pulumi commands.
+
+### Pulumi Cloud integration
+
+Pulumi Cloud extends policy capabilities with centralized management and additional enforcement modes:
+
+**Preventative policies:**
+
+- Centralized management via [Policy Groups](/docs/insights/policy/policy-groups/)
+- Access to Pulumi-authored pre-built policy packs for common compliance frameworks
+- Support for open source policy packs by publishing them to your organization's private registry
+- Automatic policy pack download to local cache
+- No need to specify `--policy-pack` flag for each command
+- Version control and rollback for policy packs
+- Policy violation results visible in the Pulumi Cloud console
+
+**Audit policies:**
+
+- Continuously scan resources discovered through [Insights Discovery](/docs/insights/discovery/)
+- Identify violations across all infrastructure—including resources created with Terraform, CloudFormation, or manually
+- View violations in the [Policy Findings](/docs/insights/policy/policy-findings/) dashboard
+- Monitor compliance trends across your organization
+- Only available with Pulumi Cloud (cannot be used with the self-managed backend)
+
+For more information about Pulumi plans and pricing, see the [Pricing page](/pricing/).
 
 ## Languages
 
 Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language.
 
-|                                                        | Language                                                                     | Status                                                                                                                                        |
-|--------------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript](/docs/reference/pkg/nodejs/pulumi/policy/)      | Stable                                                                                                                                        |
-| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript](/docs/reference/pkg/nodejs/pulumi/policy/)      | Stable                                                                                                                                        |
-| <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python](/docs/reference/pkg/python/pulumi_policy/)          | Stable                                                                                                                                        |
-| <img src="/logos/tech/logo-opa.png" class="h-10" />    | [Open Policy Agent (OPA)](/blog/opa-support-for-crossguard) | Preview                                                                                                                                       |
-| <img src="/logos/tech/dotnet.png" class="h-10" />      | .NET                                                                         | [Future](https://github.com/pulumi/pulumi-policy/issues/229) |
-| <img src="/logos/tech/logo-golang.png" class="h-10" /> | Go                                                                           | [Future](https://github.com/pulumi/pulumi-policy/issues/230) |
+- **[TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/policy/)** - Stable
+- **[Python](/docs/reference/pkg/python/pulumi_policy/)** - Stable
+- **[Open Policy Agent (OPA)](/blog/opa-support-for-crossguard)** - Experimental
+- **.NET** - [Future](https://github.com/pulumi/pulumi-policy/issues/229)
+- **Go** - [Future](https://github.com/pulumi/pulumi-policy/issues/230)
 
-## Getting started
+## Next steps
 
-To get started with Pulumi Policy, [download and install Pulumi](/docs/install/), then try the [Policy Get Started guide](/docs/insights/policy/get-started/).
+Choose your path based on your needs:
 
-For a detailed guide on configuring policies for discovered resources, visit the [Insights Get Started tutorial](/docs/insights/discovery/get-started/).
+- **New to Pulumi Policy?** Start with the [Get Started guide](/docs/insights/policy/get-started/) to configure your first policy group and apply policies to stacks or cloud accounts.
+- **Want ready-made compliance rules?** Browse [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for CIS, PCI DSS, HITRUST, NIST, and other frameworks. Enable them directly from Pulumi Cloud with no code required.
+- **Need custom policies?** Learn to [write custom policy packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, or Python. Create organization-specific rules tailored to your requirements.
+- **Managing compliance?** View violations and track remediation progress in [Policy Findings](/docs/insights/policy/policy-findings/). Triage issues, assign owners, and monitor compliance trends across your organization.
+- **Configuring discovered resources?** Visit the [Insights Get Started tutorial](/docs/insights/discovery/get-started/) for a detailed guide on audit policies for cloud resources discovered outside Pulumi.
 
-## How to configure policies
-
-### Prerequisites
-
-Before configuring policies, ensure:
-
-- Appropriate permissions to configure policies
-- One or more policy packs ([pre-built](/docs/insights/policy/pre-built-packs/) or custom) added to the organization
-- One cloud account or Pulumi Stack:
-  - For audit policies: Cloud accounts connected to Pulumi Cloud
-  - For preventative policies: One or more Pulumi stacks
-
-### Configuration steps
-
-1. Navigate to the policies tab in the left navigation bar
-2. Select policy packs to add to the organization (e.g., `pulumi-best-practices`)
-3. Create a new policy group or use the default group
-4. Add stacks or accounts to the policy group
-5. Add policy packs to the policy group
-6. Adjust policy pack configuration settings as needed
-7. Save the configuration
-
-{{< video title="Policy Management Configuration Demo" src="/docs/insights/assets/doc-video-2.mp4" autoplay="false" loop="true" controls="true" >}}
-
-For more details about policy configuration and enforcement modes, see [Preventative vs. Audit Policies](/docs/insights/policy/preventative-vs-audit-policies/).
-
-## Policy violations
-
-When policies are enforced, violations appear on the **Policy Violations** page in Pulumi Cloud, providing a centralized view across your organization. You can filter and group violations by policy pack, project, stack/account, and enforcement level.
-
-![Insights Policy Violations](/docs/insights/assets/insights-policy-violations.png)
-
-Policy violations can also be accessed programmatically via the [Pulumi API](/docs/pulumi-cloud/cloud-rest-api/#list-policy-violations) for custom workflows and integrations.
-
-## Compliance ready policy packs
-
-Pulumi provides comprehensive predefined policies for AWS, Azure, Google Cloud, and Kubernetes through [Compliance Ready Policies](/docs/insights/policy/compliance-ready-policies/). These policies help you enforce security frameworks like CIS, PCI DSS, and SOC 2 with minimal configuration.
-
-## AWSGuard
-
-[AWSGuard](/docs/insights/policy/awsguard/) is a configurable policy library that codifies best practices for AWS resources. You can adopt and customize AWSGuard policies in your own policy packs to enforce AWS-specific compliance requirements.
-
-## Configuring policy packs
-
-Policy packs support configuration to make them reusable across your organization. By default, fields like enforcement level are configurable, and you can specify custom variables alongside each policy. Learn more about [configurable policy packs](/docs/insights/policy/configuration/).
-
-## Examples
-
-Example policy packs for different cloud providers:
-
-{{< chooser language "typescript,python" >}}
-
-{{% choosable language typescript %}}
-
-- [AWS](https://github.com/pulumi/examples/tree/master/policy-packs/aws-ts)
-- [Azure](https://github.com/pulumi/examples/tree/master/policy-packs/azure-ts)
-- [Google Cloud](https://github.com/pulumi/examples/tree/master/policy-packs/gcp-ts)
-- [Kubernetes](https://github.com/pulumi/examples/tree/master/policy-packs/kubernetes-ts)
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-- [AWS](https://github.com/pulumi/examples/tree/master/policy-packs/aws-python)
-- [Azure](https://github.com/pulumi/examples/tree/master/policy-packs/azure-python)
-- [Google Cloud](https://github.com/pulumi/examples/tree/master/policy-packs/gcp-python)
-- [Kubernetes](https://github.com/pulumi/examples/tree/master/policy-packs/kubernetes-python)
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-## FAQ
-
-Get answers to [Frequently Asked Questions](/docs/insights/policy/faq/) about Pulumi Policy.
+For common questions and troubleshooting, see the [FAQ](/docs/insights/policy/faq/).
