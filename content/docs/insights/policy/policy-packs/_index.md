@@ -1,6 +1,6 @@
 ---
 title: Policy Packs
-title_tag: Policy Packs | Pulumi Policy
+title_tag: Policy Packs | Pulumi Policies
 h1: Policy Packs
 meta_desc: Learn how to use Policy Packs to enforce organizational standards and best practices across your Pulumi infrastructure as code.
 menu:

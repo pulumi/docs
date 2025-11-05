@@ -1,6 +1,6 @@
 ---
-title_tag: "Frequently Asked Questions (FAQs) | Pulumi Policy"
-meta_desc: This page contains Frequently Asked Questions about Pulumi Policy and Policy Packs.
+title_tag: "Frequently Asked Questions (FAQs) | Pulumi Policies"
+meta_desc: This page contains Frequently Asked Questions about Pulumi Policies and Policy Packs.
 title: Policies FAQ
 h1: Policies FAQ
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -21,7 +21,7 @@ aliases:
   - /docs/iac/using-pulumi/crossguard/faq/
 ---
 
-## Is Pulumi Policy open source?
+## Is Pulumi Policies open source?
 
 The [Pulumi Policy SDK](https://github.com/pulumi/pulumi-policy) and Pulumi-authored policy packs like [Compliance Ready Policies](https://github.com/pulumi/compliance-policies) (now deprecated) are open-source under the Apache 2.0 license. The Pulumi CLI (also under the Apache 2.0 license) allows you to run policies during `pulumi preview` or `pulumi up` by specifying the `--policy-pack` flag free of charge, with the caveat that the policy must be present on disk.
 

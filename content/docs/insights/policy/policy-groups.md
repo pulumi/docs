@@ -1,6 +1,6 @@
 ---
 title: Policy Groups
-title_tag: "Policy Groups | Pulumi Policy"
+title_tag: "Policy Groups | Pulumi Policies"
 h1: Policy Groups
 meta_desc: Learn how to organize and apply policy packs using policy groups to enforce compliance across stacks and cloud accounts.
 menu:
@@ -17,7 +17,7 @@ Policy groups organize one or more policy packs and apply them to specific stack
 
 ## Types of policy groups
 
-Pulumi Policy provides two types of policy groups, each designed for different enforcement patterns:
+Pulumi Policies provides two types of policy groups, each designed for different enforcement patterns:
 
 ### Preventative policy groups
 
@@ -42,7 +42,7 @@ Audit policy groups provide continuous compliance monitoring for both Pulumi sta
 - Provide compliance visibility and reporting
 
 {{% notes "info" %}}
-When you enable Pulumi Policy for your organization, default policy groups are created automatically: `default-preventative-policy-group` for stacks and `default-audit-policy-group` for stacks and cloud accounts.
+When you enable Pulumi Policies for your organization, default policy groups are created automatically: `default-preventative-policy-group` for stacks and `default-audit-policy-group` for stacks and cloud accounts.
 {{% /notes %}}
 
 ## Comparison

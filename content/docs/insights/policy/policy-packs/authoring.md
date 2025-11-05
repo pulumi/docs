@@ -623,7 +623,7 @@ We recommend [semantic versioning](https://semver.org/):
 - **Minor** (1.0.0 → 1.1.0): New policies added
 - **Patch** (1.0.0 → 1.0.1): Bug fixes
 
-After publishing, your policy pack appears in Pulumi Cloud's policy pack list. Apply it to stacks or cloud accounts using policy groups. See [Get Started with Pulumi Policy](/docs/insights/policy/get-started/) for details.
+After publishing, your policy pack appears in Pulumi Cloud's policy pack list. Apply it to stacks or cloud accounts using policy groups. See [Get Started with Pulumi Policies](/docs/insights/policy/get-started/) for details.
 
 ## Considerations for authoring policies
 

@@ -58,14 +58,14 @@ sections:
     description: Export resource data to CSV or integrate via REST API.
 
 - type: button-cards
-  heading: Policy
+  heading: Policies
   cards:
   - emoji: 🚀
     heading: Get Started
     link: /docs/insights/policy/get-started/
     description: Configure your first policy group and enforce compliance across Pulumi stacks and discovered cloud resources.
   - emoji: 💡
-    heading: Policy Concepts
+    heading: Policies Concepts
     link: /docs/insights/policy/
     description: Learn how policies, policy packs, and policy groups work together to enforce compliance.
   - emoji: 📦
