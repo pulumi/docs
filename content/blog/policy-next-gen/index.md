@@ -91,4 +91,4 @@ The age of AI-driven development demands AI-powered governance. With this new ge
 
 This powerful new experience is available today. Navigate to the **Policies** and **Policy Findings** tab in Pulumi Cloud to explore your new governance capabilities and meet the future of platform engineering.
 
-For complete documentation, visit our [Policy documentation](https://www.pulumi.com/docs/pulumi-cloud/insights/governance/).
+For complete documentation, visit our [Policy documentation](https://www.pulumi.com/docs/insights/policy/).
