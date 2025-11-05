@@ -36,13 +36,13 @@ The first step to a secure cloud is tackling the mountain of existing misconfigu
 
 ### First, Gain Complete Visibility with the New Policy Findings Hub
 
-To fix your issues, you first need to see them clearly. We have introduced a powerful **Policy Findings Hub** designed to give every stakeholder the exact view they need.
+To fix your issues, you first need to see them clearly. We have introduced a powerful **[Policy Findings Hub](https://www.pulumi.com/blog/policy-issue-management/)** designed to give every stakeholder the exact view they need.
 
 * **The Overview Tab:** A high-level dashboard with compliance scores for leadership to track trends and measure your organization's posture.
 * **The Compliance Tab:** A control-centric view for auditors and infosec teams, grouping findings by policy (e.g., CIS, NIST) to simplify evidence gathering and prove compliance.
 * **The Issues Tab:** A collaborative workspace for platform and development teams to triage, assign, prioritize, and track the remediation of every policy issue.
 
-This hub is powered by our flexible audit capabilities. With **Audit Scans for IaC Stacks**, you can get an instant compliance baseline on all your existing Pulumi-managed infrastructure without blocking developers or re-deploying thousands of stacks. This is combined with discovery scans of your cloud accounts to give you a single, unified view of every resource, whether managed by Pulumi or not.
+This hub is powered by our flexible audit capabilities. With **[Audit Scans for IaC Stacks](https://www.pulumi.com/blog/policy-audit-scans-for-stacks/)**, you can get an instant compliance baseline on all your existing Pulumi-managed infrastructure without blocking developers or re-deploying thousands of stacks. This is combined with discovery scans of your cloud accounts to give you a single, unified view of every resource, whether managed by Pulumi or not.
 
 ### The Solution to Remediation at Scale: AI-Powered Fixes with Pulumi Neo
 
@@ -74,7 +74,7 @@ The answer is **Policy as *Real* Code.** Pulumi Policies uses general-purpose la
 | **HITRUST CSF v11.5**      | ✅  |   ✅  |      ✅      |
 | **Pulumi Best Practices**  | ✅  |   ✅  |      ✅      |
 
-These policies act as a universal guardrail for your entire organization by blocking non-compliant changes during `pulumi up`, before they are ever created.
+These policies act as a universal guardrail for your entire organization by blocking non-compliant changes during `pulumi up`, before they are ever created. Learn more about our [compliance packs](https://www.pulumi.com/blog/policy-packs-cis-nist-pci/).
 
 And now, you can even use **Neo to author new policies**. You can ask Neo in plain English to "create a policy that prevents overly permissive IAM roles," and it will generate the code for you. This creates a powerful, dynamic governance system where AI can help you build the very rules that then govern its own actions. If you then ask Neo to create an admin role, the deployment will be blocked by the policy it just helped write. This is how we make AI safe to go fast.
 
@@ -87,6 +87,8 @@ This "Get Clean, Stay Clean" lifecycle transforms how teams work together:
 
 ## Governance That Accelerates You
 
-The age of AI-driven development demands AI-powered governance. With this new generation of Pulumi Policies, we are providing the essential infrastructure for platform engineering teams to not just survive, but thrive. You can finally build preventative guardrails that developers love, secure your cloud at scale, and transform governance from a blocker into a business accelerator.
+The age of AI-driven development demands AI-powered governance. With this new generation of Pulumi Policies, we are providing the essential infrastructure for platform engineering teams to not just survive, but thrive. You can finally build preventative guardrails that developers love, secure your cloud at scale, and transform governance from a blocker into a business accelerator. Learn more about [Pulumi Insights & Governance capabilities](https://www.pulumi.com/product/insights-governance/).
 
 This powerful new experience is available today. Navigate to the **Policies** and **Policy Findings** tab in Pulumi Cloud to explore your new governance capabilities and meet the future of platform engineering.
+
+For complete documentation, visit our [Policy documentation](https://www.pulumi.com/docs/insights/policy/).
