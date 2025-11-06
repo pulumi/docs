@@ -25,6 +25,7 @@ Resource constructors accept the following resource options:
 - [deleteBeforeReplace](/docs/concepts/options/deletebeforereplace/): override the default create-before-delete behavior when replacing a resource.
 - [deletedWith](/docs/concepts/options/deletedwith/): If set, the provider's Delete method will not be called for this resource if the specified resource is being deleted as well.
 - [dependsOn](/docs/concepts/options/dependson/): specify additional explicit dependencies in addition to the ones in the dependency graph.
+- [hideDiffs](/docs/concepts/options/hidediffs/): compact the display of diffs for specified properties in CLI output without affecting update behavior.
 - [hooks](/docs/concepts/options/hooks/): specify a set of resource hooks that will be executed at specific points in the resource lifecycle.
 - [ignoreChanges](/docs/concepts/options/ignorechanges/): declare that changes to certain properties should be ignored during a diff.
 - [import](/docs/concepts/options/import/): bring an existing cloud resource into Pulumi.
