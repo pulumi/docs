@@ -1,7 +1,12 @@
 ---
-title: "HITRUST CSF 11.5 - Google Cloud"
+title: "Google Cloud"
 meta_desc: Complete list of HITRUST CSF 11.5 compliance policies for Google Cloud.
-h1: "HITRUST CSF 11.5 policies for Google Cloud"
+h1: "HITRUST CSF 11.5 - Google Cloud"
+menu:
+  reference:
+    identifier: reference-pre-built-policy-packs-hitrust-google-cloud
+    parent: reference-pre-built-policy-packs-hitrust
+    weight: 3
 ---
 
 This page lists all 72 policies in the **HITRUST CSF 11.5** pack for **Google Cloud**.

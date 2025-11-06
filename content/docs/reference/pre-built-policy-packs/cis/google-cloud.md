@@ -1,7 +1,12 @@
 ---
-title: "CIS 8.1 - Google Cloud"
+title: "Google Cloud"
 meta_desc: Complete list of CIS 8.1 compliance policies for Google Cloud.
-h1: "CIS 8.1 policies for Google Cloud"
+h1: "CIS 8.1 - Google Cloud"
+menu:
+  reference:
+    identifier: reference-pre-built-policy-packs-cis-google-cloud
+    parent: reference-pre-built-policy-packs-cis
+    weight: 3
 ---
 
 This page lists all 102 policies in the **CIS 8.1** pack for **Google Cloud**.

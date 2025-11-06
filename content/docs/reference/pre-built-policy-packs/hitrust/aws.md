@@ -1,7 +1,12 @@
 ---
-title: "HITRUST CSF 11.5 - AWS"
+title: "AWS"
 meta_desc: Complete list of HITRUST CSF 11.5 compliance policies for AWS.
-h1: "HITRUST CSF 11.5 policies for AWS"
+h1: "HITRUST CSF 11.5 - AWS"
+menu:
+  reference:
+    identifier: reference-pre-built-policy-packs-hitrust-aws
+    parent: reference-pre-built-policy-packs-hitrust
+    weight: 1
 ---
 
 This page lists all 130 policies in the **HITRUST CSF 11.5** pack for **AWS**.

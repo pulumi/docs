@@ -1,7 +1,12 @@
 ---
-title: "Pulumi Best Practices - Google Cloud"
+title: "Google Cloud"
 meta_desc: Complete list of Pulumi Best Practices compliance policies for Google Cloud.
-h1: "Pulumi Best Practices policies for Google Cloud"
+h1: "Pulumi Best Practices - Google Cloud"
+menu:
+  reference:
+    identifier: reference-pre-built-policy-packs-pulumi-best-practices-google-cloud
+    parent: reference-pre-built-policy-packs-pulumi-best-practices
+    weight: 3
 ---
 
 This page lists all 35 policies in the **Pulumi Best Practices** pack for **Google Cloud**.

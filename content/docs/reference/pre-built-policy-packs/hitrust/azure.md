@@ -1,7 +1,12 @@
 ---
-title: "HITRUST CSF 11.5 - Azure"
+title: "Azure"
 meta_desc: Complete list of HITRUST CSF 11.5 compliance policies for Azure.
-h1: "HITRUST CSF 11.5 policies for Azure"
+h1: "HITRUST CSF 11.5 - Azure"
+menu:
+  reference:
+    identifier: reference-pre-built-policy-packs-hitrust-azure
+    parent: reference-pre-built-policy-packs-hitrust
+    weight: 2
 ---
 
 This page lists all 87 policies in the **HITRUST CSF 11.5** pack for **Azure**.

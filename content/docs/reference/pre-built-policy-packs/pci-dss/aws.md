@@ -1,7 +1,12 @@
 ---
-title: "PCI DSS v4.0.1 - AWS"
+title: "AWS"
 meta_desc: Complete list of PCI DSS v4.0.1 compliance policies for AWS.
-h1: "PCI DSS v4.0.1 policies for AWS"
+h1: "PCI DSS v4.0.1 - AWS"
+menu:
+  reference:
+    identifier: reference-pre-built-policy-packs-pci-dss-aws
+    parent: reference-pre-built-policy-packs-pci-dss
+    weight: 1
 ---
 
 This page lists all 160 policies in the **PCI DSS v4.0.1** pack for **AWS**.

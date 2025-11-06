@@ -1,13 +1,19 @@
 ---
-title: "Pulumi Best Practices - Azure"
+title: "Azure"
 meta_desc: Complete list of Pulumi Best Practices compliance policies for Azure.
-h1: "Pulumi Best Practices policies for Azure"
+h1: "Pulumi Best Practices - Azure"
+menu:
+  reference:
+    identifier: reference-pre-built-policy-packs-pulumi-best-practices-azure
+    parent: reference-pre-built-policy-packs-pulumi-best-practices
+    weight: 2
 ---
 
-This page lists all 29 policies in the **Pulumi Best Practices** pack for **Azure**.
+This page lists all 30 policies in the **Pulumi Best Practices** pack for **Azure**.
 
 | Policy Name | Description | Framework Reference | Framework Specification |
 | ----- | ----- | ----- | ----- |
+| rbac-least-privilege | Ensures Azure RBAC role assignments follow least privilege principles | 1. Least Privilege | Ensure all identities and services have only the minimum permissions required to perform their tasks. |
 | sql-database-customer-managed-keys | Require Azure SQL databases to use customer-managed keys for transparent data encryption | 2. Resource Encryption at Rest | Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access. |
 | storage-account-uses-customer-managed-keys | Require Storage Accounts to use customer-managed keys for encryption | 2. Resource Encryption at Rest | Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access. |
 | vm-requires-managed-disks | Require VMs to use managed disks only | 2. Resource Encryption at Rest | Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access. |

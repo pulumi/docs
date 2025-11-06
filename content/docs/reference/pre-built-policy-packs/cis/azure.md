@@ -1,7 +1,12 @@
 ---
-title: "CIS 8.1 - Azure"
+title: "Azure"
 meta_desc: Complete list of CIS 8.1 compliance policies for Azure.
-h1: "CIS 8.1 policies for Azure"
+h1: "CIS 8.1 - Azure"
+menu:
+  reference:
+    identifier: reference-pre-built-policy-packs-cis-azure
+    parent: reference-pre-built-policy-packs-cis
+    weight: 2
 ---
 
 This page lists all 104 policies in the **CIS 8.1** pack for **Azure**.

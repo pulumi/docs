@@ -1,7 +1,12 @@
 ---
-title: "CIS 8.1 - AWS"
+title: "AWS"
 meta_desc: Complete list of CIS 8.1 compliance policies for AWS.
-h1: "CIS 8.1 policies for AWS"
+h1: "CIS 8.1 - AWS"
+menu:
+  reference:
+    identifier: reference-pre-built-policy-packs-cis-aws
+    parent: reference-pre-built-policy-packs-cis
+    weight: 1
 ---
 
 This page lists all 115 policies in the **CIS 8.1** pack for **AWS**.

@@ -1,7 +1,12 @@
 ---
-title: "NIST SP 800-53 - AWS"
+title: "AWS"
 meta_desc: Complete list of NIST SP 800-53 compliance policies for AWS.
-h1: "NIST SP 800-53 policies for AWS"
+h1: "NIST SP 800-53 - AWS"
+menu:
+  reference:
+    identifier: reference-pre-built-policy-packs-nist-aws
+    parent: reference-pre-built-policy-packs-nist
+    weight: 1
 ---
 
 This page lists all 139 policies in the **NIST SP 800-53** pack for **AWS**.

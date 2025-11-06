@@ -1,7 +1,12 @@
 ---
-title: "Pulumi Best Practices - AWS"
+title: "AWS"
 meta_desc: Complete list of Pulumi Best Practices compliance policies for AWS.
-h1: "Pulumi Best Practices policies for AWS"
+h1: "Pulumi Best Practices - AWS"
+menu:
+  reference:
+    identifier: reference-pre-built-policy-packs-pulumi-best-practices-aws
+    parent: reference-pre-built-policy-packs-pulumi-best-practices
+    weight: 1
 ---
 
 This page lists all 54 policies in the **Pulumi Best Practices** pack for **AWS**.
@@ -20,6 +25,10 @@ This page lists all 54 policies in the **Pulumi Best Practices** pack for **AWS*
 | s3-bucket-encryption | S3 buckets must have server-side encryption configured using BucketServerSideEncryptionConfiguration resource | 2. Resource Encryption at Rest | Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access. |
 | rds-encryption-enabled | Checks that RDS instance storage is encrypted. | 2. Resource Encryption at Rest | Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access. |
 | dynamodb-kms-encryption-enabled | Ensures DynamoDB tables have encryption enabled using KMS keys. | 2. Resource Encryption at Rest | Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access. |
+| ec2-instance-disallow-unencrypted-root-block-device | Checks that EC2 instances does not have unencrypted root volumes. | 2. Resource Encryption at Rest | Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access. |
+| ec2-instance-disallow-unencrypted-block-device | Checks that EC2 instances do not have unencrypted block devices. | 2. Resource Encryption at Rest | Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access. |
+| ec2-launch-template-disallow-unencrypted-block-device | Checks that EC2 Launch Templates do not have unencrypted block device. | 2. Resource Encryption at Rest | Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access. |
+| ec2-launch-configuration-disallow-unencrypted-block-device | Checks that EC2 Launch Configurations do not have unencrypted block devices. | 2. Resource Encryption at Rest | Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access. |
 | rds-instance-ssl-encryption | Ensures RDS instances have SSL/TLS encryption enabled through parameter group configuration | 3. Transport Layer Encryption | Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering. |
 | rds-clusterinstance-ssl-encryption | Ensures RDS cluster instances have SSL/TLS encryption enabled through parameter group configuration | 3. Transport Layer Encryption | Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering. |
 | rds-ssl-encryption | Ensures RDS instances have SSL/TLS encryption enabled | 3. Transport Layer Encryption | Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering. |
@@ -58,7 +67,3 @@ This page lists all 54 policies in the **Pulumi Best Practices** pack for **AWS*
 | kms-key-creation | Validates KMS key creation with appropriate specifications and origins | 14. Key Management & Rotation | Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise. |
 | kms-key-deletion-lifecycle | Validates KMS key deletion windows and lifecycle management | 14. Key Management & Rotation | Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise. |
 | kms-key-rotation-enabled | Checks that KMS Keys have key rotation enabled. | 14. Key Management & Rotation | Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise. |
-| ec2-instance-disallow-unencrypted-root-block-device | Checks that EC2 instances does not have unencrypted root volumes. |  |  |
-| ec2-instance-disallow-unencrypted-block-device | Checks that EC2 instances do not have unencrypted block devices. |  |  |
-| ec2-launch-template-disallow-unencrypted-block-device | Checks that EC2 Launch Templates do not have unencrypted block device. |  |  |
-| ec2-launch-configuration-disallow-unencrypted-block-device | Checks that EC2 Launch Configurations do not have unencrypted block devices. |  |  |
