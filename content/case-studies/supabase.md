@@ -43,9 +43,10 @@ sections:
 
 ## About Supabase {#about-supabase}
 
-<img src="/images/case-studies/paul-cioanca-supabase.jpg" alt="Paul Cioanca" class="float-right ml-4 mb-4 w-48 rounded-lg">
-
-**Paul Cioanca, Platform Engineer at Supabase**
+<div class="float-left mr-4 mb-4">
+<img src="/images/case-studies/paul-cioanca-supabase.jpg" alt="Paul Cioanca" class="w-48 rounded-lg">
+<p class="text-sm text-center mt-2">Paul Cioanca, Platform Engineer at Supabase</p>
+</div>
 
 [Supabase](https://supabase.com/) is the open-source Postgres development platform that's built to scale to millions. It is an all-in-one suite with Database, Auth, Storage, Edge Functions, Real-Time, and Vector search. With a generous free tier and thriving open-source community, Supabase has experienced explosive growth, now serving customers across 16 AWS regions and managing approximately 80,000 Pulumi resources, up from 30,000 just one year ago.
 
