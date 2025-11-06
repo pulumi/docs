@@ -8,6 +8,7 @@ config:
   www.pulumi.com:makeFallbackBucket: "false"
   www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
   www.pulumi.com:registryStack: "pulumi/registry/testing"
+  www.pulumi.com:guidesStack: "pulumi/guides/testing"
   www.pulumi.com:answersStack: "pulumi/answers/testing"
   www.pulumi.com:setRootRecord: "true"
   www.pulumi.com:websiteDomain: www.pulumi-test.io
