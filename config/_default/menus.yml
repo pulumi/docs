@@ -305,6 +305,10 @@ reference:
     parent: reference-home
     identifier: reference-sdks
     weight: 2
+  - name: Pre-built Policy Packs
+    parent: reference-home
+    identifier: reference-pre-built-policy-packs
+    weight: 3
   - name: TypeScript (Node.js) ↗
     parent: reference-sdks
     url: https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/
@@ -340,6 +344,26 @@ reference:
     url: https://www.pulumi.com/docs/reference/pkg/python/pulumi_policy/
     weight: 7
     identifier: reference-sdks-python-policy
+  - name: CIS
+    parent: reference-pre-built-policy-packs
+    identifier: reference-pre-built-policy-packs-cis
+    weight: 1
+  - name: HITRUST
+    parent: reference-pre-built-policy-packs
+    identifier: reference-pre-built-policy-packs-hitrust
+    weight: 2
+  - name: NIST
+    parent: reference-pre-built-policy-packs
+    identifier: reference-pre-built-policy-packs-nist
+    weight: 3
+  - name: PCI DSS
+    parent: reference-pre-built-policy-packs
+    identifier: reference-pre-built-policy-packs-pci-dss
+    weight: 4
+  - name: Pulumi Best Practices
+    parent: reference-pre-built-policy-packs
+    identifier: reference-pre-built-policy-packs-pulumi-best-practices
+    weight: 5
 
 # -------------------------------------
 # Insights Policy Menu Section Headers
