@@ -43,6 +43,10 @@ sections:
 
 ## About Supabase {#about-supabase}
 
+<img src="/images/case-studies/paul-cioanca-supabase.jpg" alt="Paul Cioanca" class="float-right ml-4 mb-4 w-48 rounded-lg">
+
+**Paul Cioanca, Platform Engineer at Supabase**
+
 [Supabase](https://supabase.com/) is the open-source Postgres development platform that's built to scale to millions. It is an all-in-one suite with Database, Auth, Storage, Edge Functions, Real-Time, and Vector search. With a generous free tier and thriving open-source community, Supabase has experienced explosive growth, now serving customers across 16 AWS regions and managing approximately 80,000 Pulumi resources, up from 30,000 just one year ago.
 
 The infrastructure team at Supabase faced a critical scaling challenge: how to support rapid business growth and regional expansion while enabling every engineering team to ship, run, and monitor their own infrastructure. Traditional infrastructure-as-code tools created mental context switching between application code (TypeScript) and infrastructure definitions (proprietary DSLs). At the same time, manual deployment processes couldn't keep pace with customer demand for new regions and features.
@@ -86,7 +90,7 @@ Supabase takes a pragmatic approach to cloud vendors, using the best tool for ea
 With Pulumi, Supabase's application teams compose multi-cloud stacks atomically within a single deployment. A typical stack might include AWS services for compute, Cloudflare routing, and DNS configuration, and additional providers, all without having to jump between three different cloud consoles.
 
 <img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/supabase-architecture-diagram.png" alt="Supabase multi-region architecture diagram">
+src="/images/case-studies/supabase-architecture-diagram.png" alt="supabase-architecture-diagram">
 
 ## Results: From Single Region to Global Infrastructure {#results}
 
