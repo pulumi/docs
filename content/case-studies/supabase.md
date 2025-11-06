@@ -43,7 +43,7 @@ sections:
 
 ## About Supabase {#about-supabase}
 
-<div class="float-left mr-4 mb-4 w-48">
+<div class="float-left mr-4 mb-2 w-48">
 <img src="/images/case-studies/paul-cioanca-supabase.jpg" alt="Paul Cioanca" class="w-full rounded-lg">
 <p class="text-sm text-center mt-2">Paul Cioanca, Platform Engineer at Supabase</p>
 </div>
