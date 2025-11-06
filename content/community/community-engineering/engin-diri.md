@@ -8,6 +8,14 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Cloud Native Tel Aviv"
+  title: "What is AI Platform Engineering and Why Should You Care"
+  url: "https://community.cncf.io/events/details/cncf-cloud-native-tel-aviv-presents-kagent-knative-and-ai-driven-platforms-scaling-the-next-cloud-native-frontier/"
+  date: 2025-10-30T17:30:00.000+02:00
+- event: "Tel Aviv Pulumi User Group Meetup Nº 2"
+  title: "Agentic AI in Action: How Pulumi Neo Transforms Infrastructure Management"
+  url: "https://www.meetup.com/tel-aviv-pulumi-user-group/events/310498800/"
+  date: 2025-10-29T18:00:00.000+02:00
 - event: "Cloud Native Denmark 2025"
   title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
   url: "https://cloudnativedenmark.dk/schedule/#913410"
