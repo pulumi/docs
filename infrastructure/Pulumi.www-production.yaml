@@ -11,6 +11,7 @@ config:
   www.pulumi.com:originBucketNameOverride: ""
   www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
   www.pulumi.com:registryStack: "pulumi/registry/production"
+  www.pulumi.com:guidesStack: "pulumi/guides/production"
   www.pulumi.com:setRootRecord: "true"
   www.pulumi.com:websiteDomain: www.pulumi.com
   www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-website-logs
