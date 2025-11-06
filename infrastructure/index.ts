@@ -54,6 +54,9 @@ const config = {
     // the registry stack to reference to route traffic to for `/registry` routes.
     registryStack: stackConfig.get("registryStack"),
 
+    // the guides stack to reference to route traffic to for `/guides` routes.
+    guidesStack: stackConfig.get("guidesStack"),
+
     answersStack: stackConfig.get("answersStack"),
 
 
@@ -465,6 +468,9 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
 const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const registryBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
+const guidesOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const guidesBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+
 const answersOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const answersBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
@@ -489,6 +495,37 @@ if (config.registryStack) {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
             pathPattern: "/registry/*",
+            defaultTtl: 0,
+            minTtl: 0,
+            maxTtl: 0,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            cachePolicyId: cachingDisabledId,
+            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+        },
+    )
+}
+
+if (config.guidesStack) {
+    const guidesStack = new pulumi.StackReference(config.guidesStack);
+    const guidesCDN = guidesStack.getOutput("cloudFrontDomain");
+
+    guidesOrigins.push(
+        {
+            originId: guidesCDN,
+            domainName: guidesCDN,
+            customOriginConfig: {
+                originProtocolPolicy: "https-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            }
+        }
+    );
+    guidesBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: guidesCDN,
+            pathPattern: "/guides/*",
             defaultTtl: 0,
             minTtl: 0,
             maxTtl: 0,
@@ -570,6 +607,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             },
         },
         ...registryOrigins,
+        ...guidesOrigins,
         ...answersOrigins,
     ],
 
@@ -583,6 +621,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     orderedCacheBehaviors: [
         ...registryBehaviors,
+        ...guidesBehaviors,
         ...answersBehaviors,
         {
             ...baseCacheBehavior,
