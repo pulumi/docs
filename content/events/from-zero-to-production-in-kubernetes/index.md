@@ -48,7 +48,7 @@ main:
 
     # Description of the webinar.
     description: |
-        According to the **[CNCF Annual Survey, 93% of organizations](https://www.cncf.io/reports/cncf-annual-survey-2024/)** are using, piloting, or evaluating Kubernetes as their core platform for modern cloud infrastructure. Engineering teams adopt Kubernetes for its consistency, scalability, and cloud-agnostic flexibility, making it the standard for building and operating developer platforms.
+        According to the **CNCF Annual Survey, 93% of organizations** are using, piloting, or evaluating Kubernetes as their core platform for modern cloud infrastructure. Engineering teams adopt Kubernetes for its consistency, scalability, and cloud-agnostic flexibility, making it the standard for building and operating developer platforms.
         
         In this hands-on Kubernetes workshop, you will learn how to take clusters and workloads from zero to production. Explore multi-cloud management, GitOps automation with Argo CD, and strategies for observability and reliability across environments using modern DevOps practices and agentic workflows.
     learn:
@@ -63,7 +63,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["Kubernetes", "GitOps", "DevOps", "Argo CD", "Pulumi Neo"]
+        topics:  ["Kubernetes", "GitOps", "Observability", "DevOps", "Argo CD", "Pulumi Neo"]
         languages: ["Any"]
         clouds: ["AWS"]
 
