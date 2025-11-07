@@ -19,7 +19,7 @@ tags:
 
 Achieving compliance with industry standards such as **CIS, NIST**, or **PCI DSS** is a foundational step for every organization. Yet for many teams, it's often a manual, months-long process that involves interpreting controls, authoring custom policies, and validating configurations across multiple clouds. These challenges often slow progress toward a known and secure cloud state.
 
-We're changing that. To simplify this journey, Pulumi launched a new suite of **pre-built compliance policy packs** for [CIS Controls v8.1, NIST SP 800-53 Rev. 5, and PCI DSS v4.0](https://www.pulumi.com/docs/insights/policy/policy-packs/pre-built-packs/#available-policy-packs). 
+We're changing that. To simplify this journey, Pulumi launched a new suite of **pre-built compliance policy packs** for [CIS Controls v8.1, NIST SP 800-53 Rev. 5, and PCI DSS v4.0](https://www.pulumi.com/docs/insights/policy/policy-packs/pre-built-packs/#available-policy-packs).
 
 These packs are your accelerator for the "**Get Clean**" journey, allowing you to enforce critical security and compliance baselines across your cloud infrastructure **in minutes, not months**.
 
