@@ -2,7 +2,7 @@
 title_tag: "TypeScript and Node.js | Languages & SDKs"
 meta_desc: Learn to use Node.js languages like JavaScript and TypeScript with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: TypeScript (Node.js)
-h1: Pulumi & TypeScript & JavaScript (Node.js)
+h1: Pulumi & TypeScript (Node.js)
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -25,28 +25,70 @@ aliases:
 
 <img src="/logos/tech/logo-nodejs.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports writing your infrastructure as code in any JavaScript language running on Node.js using any of the [Current, Active and Maintenance LTS versions](https://nodejs.org/en/about/previous-releases).
+Pulumi supports writing your infrastructure as code using TypeScript and JavaScript on the Node.js runtime. Using a general-purpose language for infrastructure as code provides several key advantages:
 
-Because programs are just JavaScript, you may elect to write them in any manner you'd normally write Node.js programs.
-That includes TypeScript, CoffeeScript, or Babel, in addition to your favorite tools such as build systems, linters, or
-test frameworks.
+- **Familiar syntax**: Write infrastructure code using the same languages and patterns you already know
+- **Rich ecosystem**: Leverage the vast npm package ecosystem in your infrastructure code
+- **Native tooling**: Use your existing IDE, linters, test frameworks, and other development tools without requiring plugins or extensions
+- **Type safety**: When using TypeScript, catch errors at development time with strong typing and IntelliSense
 
-<a class="btn btn-secondary" href="https://nodejs.org/en/download/" target="_blank" title="Install Node.js">Install Node.js</a>
+## Installation requirements
 
-## Pulumi Programming Model
+### Runtime
 
-The Pulumi programming model defines the core concepts you will use when creating infrastructure as code programs using
-Pulumi. [Concepts](/docs/intro/concepts) describes these concepts
-with examples available in JavaScript and TypeScript. These concepts are made available to you in the Pulumi SDK.
+Pulumi supports Node.js [Current, Active, and Maintenance LTS versions](https://nodejs.org/en/about/previous-releases). We recommend using the latest LTS version for the best experience.
 
-The Pulumi SDK is available to Node.js developers as a NPM package. To learn more, [refer to the Pulumi SDK Reference
-Guide](/docs/reference/pkg/nodejs/pulumi/pulumi).
+### Package managers
 
-The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with JavaScript and Pulumi, and the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
+Pulumi supports the following package managers:
 
-## Entrypoint
+- **npm**: Fully supported (default)
+- **Yarn 1 (Classic)**: Fully supported
+- **pnpm**: Fully supported
+- **Bun**: Supported as a package manager only (not as a runtime)
 
-Pulumi executes your program by loading the entrypoint file as a Node module: `require("index.ts")`. By default, Pulumi will load `index.ts` or `index.js`. Alternatively, if you specify `main` within your `package.json`, Pulumi will load that module instead:
+{{< notes type="info" >}}
+Dynamic providers may not work correctly with all package managers. If you encounter issues with dynamic providers, try using npm or Yarn 1.
+{{< /notes >}}
+
+Pulumi defaults to using npm. However, if Pulumi detects a `yarn.lock` file in the project root, or the environment variable `PULUMI_PREFER_YARN=true`, Pulumi will use Yarn instead if available. For pnpm, ensure `pnpm-lock.yaml` is present, and for Bun, ensure `bun.lockb` is present.
+
+Pulumi does not support Yarn Plug'n'Play.
+
+### Languages
+
+Pulumi fully supports both TypeScript and JavaScript. You can use either language to write your Pulumi programs:
+
+- **TypeScript**: Get additional type safety and IDE support with TypeScript (recommended)
+- **JavaScript**: Write programs using standard JavaScript syntax
+
+{{< notes type="info" >}}
+While Pulumi supports JavaScript and any other language that compiles to JavaScript and runs on Node.js, our documentation examples and templates are primarily maintained in TypeScript. For the most consistent experience and up-to-date examples, we recommend using TypeScript.
+{{< /notes >}}
+
+Pulumi ships with a bundled version of TypeScript 3.8.3 for backwards compatibility. However, Pulumi templates typically include a more recent TypeScript version in their `package.json`, which will take precedence over the bundled version. You can use any TypeScript version from 3.8 onwards, including the latest TypeScript 5 releases.
+
+The Pulumi SDK is available to Node.js developers as an npm package. To learn more, refer to the [Pulumi SDK reference guide](/docs/reference/pkg/nodejs/pulumi/pulumi).
+
+## Getting started
+
+The fastest way to get started with Pulumi and Node.js is to use a TypeScript template:
+
+```bash
+$ pulumi new typescript
+```
+
+You can discover additional templates by running `pulumi new` with no arguments, or you can initialize a Pulumi program by supplying a specific URL to the `pulumi new` command. For example:
+
+```bash
+$ pulumi new https://github.com/pulumi/templates/tree/master/aws-typescript
+```
+
+See the [`pulumi new` documentation](/docs/iac/cli/commands/pulumi_new/) for full details.
+
+### Program entrypoint
+
+Pulumi executes your program by internally loading the entrypoint file as a Node module: `require("index.ts")`. By default, Pulumi will load `index.ts` or `index.js`. Alternatively, if you specify `main` within your `package.json`, Pulumi will load that module instead:
 
 ```json
 {
@@ -57,7 +99,7 @@ Pulumi executes your program by loading the entrypoint file as a Node module: `r
 }
 ```
 
-{{< chooser language "javascript,typescript" >}}
+{{< chooser language "typescript,javascript" >}}
 
 Your entrypoint can either return a module object with properties for each stack output:
 
@@ -81,8 +123,13 @@ export const out = myResource.output;
 
 {{% /choosable %}}
 
-Or alternatively, your entrypoint can export a top level `async` function that returns an object with members for each stack output.
-Pulumi will automatically call this function and await the result:
+{{< /chooser >}}
+
+### Enabling async support
+
+If you want to enable use of the `async` keyword, your entrypoint can export a top level `async` function that returns an object with members for each stack output. Pulumi will automatically call this function and await the result:
+
+{{< chooser language "typescript,javascript" >}}
 
 {{% choosable language "javascript" %}}
 
@@ -108,82 +155,45 @@ export = async () => {
 
 {{< /chooser >}}
 
-Most Pulumi programs use the first option, but programs that need to do async work at the top level (such as calling [`getOutputValue`](/docs/reference/pkg/nodejs/pulumi/pulumi#StackReference-getOutputValue)) may find they want to use the second.
+## Defining resources
+
+Writing a Pulumi program in Node.js involves declaring infrastructure resources using resource constructors. Here are the key concepts:
+
+- **Declare resources**: Create infrastructure resources by instantiating resource classes from provider packages. For example, `new aws.s3.Bucket("my-bucket")` creates an S3 bucket.
+- **Inputs and outputs**: The Pulumi programming model uses `Input` and `Output` types to track dependencies between resources. Understanding how to work with inputs and outputs is essential for building infrastructure. See the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation for details.
+- **Immutable infrastructure**: Once declared, resource properties are immutable within your program. Changes to resource definitions result in updates during the next deployment.
+- **Stack outputs**: Export values from your program to make them accessible from the CLI or to other Pulumi programs. These are defined using module exports as shown in the entrypoint examples above.
+
+The Pulumi SDK provides constructs for working with key Pulumi concepts. For more information, see:
+
+- [Pulumi Concepts](/docs/iac/concepts/)
+- [How Pulumi Works](/docs/iac/concepts/how-pulumi-works/)
+
+## Program execution
+
+Pulumi programs are most commonly executed using the Pulumi CLI commands such as `pulumi up`, `pulumi preview`, and `pulumi destroy`. The CLI handles authentication, state management, and orchestrating resource operations.
+
+Alternatively, you can use the [Automation API](/docs/using-pulumi/automation-api/) to programmatically control the Pulumi engine from within your Node.js code. The Automation API allows you to:
+
+- Embed Pulumi operations in regular Node.js applications
+- Build custom deployment tools and workflows
+- Create self-service infrastructure platforms
+
+With Automation API, your Node.js code controls Pulumi, rather than Pulumi controlling your code.
 
 ## TypeScript
 
-You can elect to write Pulumi programs in TypeScript to get additional verification and tooling benefits. Pulumi supports TypeScript natively so you don't need to explicitly run `tsc` on your program before running `pulumi`.
+Pulumi supports TypeScript natively, so you don't need to explicitly run `tsc` on your program before running `pulumi`. When using Pulumi's built-in TypeScript support, a `tsconfig.json` file is optional, but defining one allows you to set additional TypeScript compiler options and enables better IDE integration. Any options set in your `tsconfig.json` file will be picked up by Pulumi.
 
-If you would like full control of the TypeScript build process, you can compile ahead of time, and point your package.json main entry point at the compiled JavaScript instead. If you do this, you can disable the [automatic compilation of TypeScript files](#disabling-built-in-typescript-support).
+If you would like full control of the TypeScript build process, you can compile ahead of time and point your `package.json` main entry point at the compiled JavaScript instead. If you do this, you can disable the [automatic compilation of TypeScript files](#disabling-built-in-typescript-support).
 
-The fastest way to get started with Pulumi in TypeScript, is to use a template:
+For information on configuring TypeScript, see the [TypeScript documentation for `tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
 
-```bash
-$ mkdir myproject && cd myproject
-$ pulumi new typescript
-```
+### TypeScript versions
 
-This will auto-generate all the basic artifacts required to use TypeScript. If you prefer, you can instead run the following manual steps.
+Pulumi ships with a bundled version of TypeScript 3.8.3 for backwards compatibility. However, when Pulumi runs a TypeScript program, it will first attempt to load the compiler from the local `node_modules` directory, and then fall back to the bundled version. This means that if your `package.json` includes a TypeScript dependency (as Pulumi templates typically do), that version will be used instead.
 
-### 1. Update package.json
-
-Update your `package.json` to look like the following (with your own values for `name`, `version`, etc.).  This
-is what tells Node.js and NPM what packages you depend on, where to find your code's entry points, and so on:
-
-```json
-{
-    "name": "my-package",
-    "version": "1.0.0",
-    "devDependencies": {
-        "@types/node": "^12.0.0"
-    },
-    "dependencies": {
-        ... as before ...
-    }
-}
-```
-
-You can customize this however you'd like, such as adding test scripts, npm package dependencies, etc.  For more information on `package.json`, refer to [the NPM documentation](https://docs.npmjs.com/files/package.json).
-
-### 2. Install dependencies
-
-Run `npm install` or `yarn install` to install the new development-time dependencies to your `node_modules` directory.
-
-### 3. Create tsconfig.json
-
-When using Pulumi's built in TypeScript support, a `tsconfig.json` file is optional. However, defining one allows your to set additional TypeScript compiler options, for example not allowing implicit returns from a function. In addition, other tools like VS Code will use these settings to give you additional warnings at development time. Any options set in your `tsconfig.json` file will be picked up by Pulumi. We recommend creating a `tsconfig.json` file with the following settings:
-
-```json
-{
-    "compilerOptions": {
-        "strict": true,
-        "outDir": "bin",
-        "target": "es2016",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "experimentalDecorators": true,
-        "pretty": true,
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitReturns": true,
-        "forceConsistentCasingInFileNames": true
-    },
-    "files": [
-        "index.ts"
-    ]
-}
-```
-
-You may customize this however you'd like, including the TypeScript settings that work for you.  For
-information on additional settings, see the [TypeScript documentation for `tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
-
-Tools like VS Code will give you completion lists, live error reporting and inline documentation help.
-
-<img src="/images/docs/reference/vscode.png" alt="Pulumi TypeScript in VS Code" width="700">
-
-## TypeScript Versions
-
-Pulumi ships with a bundled version of TypeScript 3.8.3 and uses this compiler by default. You can use a different version by adding the desired version of TypeScript to your package.json file. When Pulumi runs a TypeScript program, it will first attempt to load the compiler from the local node_modules directory, and then fallback to the bundled version. Pulumi supports all TypeScript versions from 3.8 and up, including the latest TypeScript 5 release.
+Pulumi supports all TypeScript versions from 3.8 onwards, including the latest TypeScript 5 releases.
 
 ```json
 {
@@ -197,7 +207,7 @@ Pulumi ships with a bundled version of TypeScript 3.8.3 and uses this compiler b
 }
 ```
 
-## Disabling built in TypeScript support
+### Disabling built-in TypeScript support
 
 You can disable the built in TypeScript support by changing the `runtime` setting in `Pulumi.yaml` to look like the following:
 
@@ -266,109 +276,35 @@ Older versions of Node.js do not support loading ESM modules using the `require`
 
 To resolve this issue, you can either follow the instructions above to convert your project to ESM, or upgrade to a recent version of Node.js that supports `require`ing ESM modules. At time of writing this is at least [v20.19.0](https://github.com/nodejs/node/releases/tag/v20.19.0) (2025-03) or [v22.12.0](https://github.com/nodejs/node/releases/tag/v22.12.0) (2024-12).
 
-## Package Management
+## Documentation and resources
 
-Pulumi has official support for NPM and Yarn Classic. Pulumi does
-not support Yarn Plug'n'Play.
+### Pulumi SDK
 
-Pulumi defaults to using NPM. However, if Pulumi detects a `yarn.lock` file
-in the project root, or the environment variable `PULUMI_PREFER_YARN=true`,
-then Pulumi will use Yarn instead of NPM if the executable is available in the
-path.
+The [Pulumi SDK (`@pulumi/pulumi`)](/docs/reference/pkg/nodejs/pulumi/pulumi) contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. You will need to reference it in most Pulumi programs.
 
-## Dependencies on Provider Packages within Component Packages
+Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch. If you would like to install them, you can use the `dev` tag. For example:
 
-Some package management systems allow for different versions of a package to be installed concurrently.
-You can include a package as a direct dependency in your project and another dependency could depend on the
-same package too, but with a different version.
-
-Suppose we are building a component package where you use `@pulumi/random`, major version 3.
-In our `package.json` file for the component package, you have this:
-
-```json
-{
-  "name": "components",
-  "version": "1.0.0",
-  ...
-  "dependencies": {
-    ...
-    "@pulumi/random": "^3",
-    ...
-  },
-  ...
-}
+```bash
+npm add @pulumi/pulumi@dev
 ```
 
-In a project where you consume this component library, you can add more `random` resources, but now using
-major v4:
+Or with yarn:
 
-```json
-{
-  "name": "components-consume",
-  ...
-  "dependencies": {
-    ...
-    "@pulumi/random": "^4",
-    "components": "^1",
-    ...
-  },
-  ...
-}
+```bash
+yarn add @pulumi/pulumi@dev
 ```
 
-In the situation where you mix major versions, the specification `^3` excludes major version `4`.
-If we check on our dependency graph, we see two versions included
+### Policy SDK
 
-```sh
-$ npm why @pulumi/random
-@pulumi/random@v4.14.0
-node_modules/@pulumi/random
-  @pulumi/random@"^4.14.0" from the root project
+The [Pulumi Policy SDK (`@pulumi/policy`)](/docs/reference/pkg/nodejs/pulumi/policy) allows you to author Pulumi Policy as Code policies for validating resource configurations.
 
-@pulumi/random@v3.2.0 extraneous
-  @pulumi/random@"^3" from components@1.0.0
-    components@1.0.0
-```
+### Provider packages
 
-When you use a Pulumi NodeJS SDK for a provider, Pulumi will always use the plugin binary of the same version.
-By having multiple versions of an SDK in our dependency graph, you will see multiple versions of the
-default provider in your Pulumi state file as a result. The child `random` resources of components from your library
-will be provisioned with plugin binary v3, while the top level `random` resources will use v4.
+For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/).
 
-A similar situation would happen if you would pin the component library and the consuming project to explicit
-but different versions. For instance, using `"4.11.0"` in the component library and `"4.14.0"` in the consuming
-project would result in 2 default providers with exactly these versions.
+When building component packages, see [Provider package version management](./provider-package-versions/) for guidance on handling provider package versions across component boundaries.
 
-If you only want to have a single version of the package and default provider, we suggest to use the caret
-style notation in your component package. Use `^`, followed by the minimum version of the dependency, and
-use a compatible version in your consuming project for your components to work correctly.
-For instance, if `@pulumi/random` v4.8.2 contained a fix you rely on, use this in your library `package.json`:
+### Testing
 
-```json
-{
-  "name": "components",
-  "version": "1.0.0",
-  ...
-  "dependencies": {
-    ...
-    "@pulumi/random": "^4.8.2",
-    ...
-  },
-  ...
-}
-```
-
-When you use a version of `@pulumi/random` in your consuming project which is too old, NPM will warn you that you
-need to upgrade.
-
-## Dev Versions
-
-Pulumi SDKs also publish pre-release versions, that include all the latest changes from the main development branch.  If you would like to install them, you can use the `dev` tag to do so.  For example using `npm` you can use `npm add @pulumi/pulumi@dev`, and similarly for `yarn` `yarn add @pulumi/pulumi@dev`.
-
-## Package Documentation
-
-The following reference documentation resources are available:
-
-* The [Pulumi SDK `@pulumi/pulumi`](/docs/reference/pkg/nodejs/pulumi/pulumi) allows you to work with with basic Pulumi constructs. You will need to reference it in most Pulumi IaC programs.
-* The [Pulumi Policy SDK `@pulumi/policy`](/docs/reference/pkg/nodejs/pulumi/policy) allows you to author Pulumi Policy as Code policies. You will need to reference it when authoring Pulumi Policy as code.
-* For managing resources in a Pulumi IaC program, you can find the relevant SDK reference docs for a given provider in [the Pulumi Registry](/registry/).
+- [Unit testing](/docs/iac/concepts/testing/unit/): Test your infrastructure code in isolation
+- [Integration testing](/docs/iac/concepts/testing/integration/): Test your infrastructure deployments end-to-end
