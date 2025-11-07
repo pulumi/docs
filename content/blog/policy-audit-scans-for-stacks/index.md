@@ -11,7 +11,7 @@ tags:
   - pulumi-service
   - policy-as-code
   - crossguard
-  - features
+  - audit-policies
   - compliance
   - governance
 ---
@@ -30,7 +30,7 @@ Pulumi's audit philosophy is to provide complete visibility across your entire c
 
 2. **Audit Scans for Pulumi Stacks (New):** The feature we're launching today extends this audit power to the source of truth for your managed infrastructure: your Pulumi stacks. It evaluates the *last successfully deployed state* of your IaC. This allows you to get an instant compliance baseline of all your managed infrastructure without having to redeploy anything, making it perfect for frictionless policy rollouts at scale.
 
-Together, these two audit modes give you a comprehensive picture of your entire cloud estate, all feeding into one unified **Policy Findings hub**.
+Together, these two audit modes give you a comprehensive picture of your entire cloud estate, all feeding into one unified **[Policy Findings hub](https://www.pulumi.com/blog/policy-issue-management/)**.
 
 ## Key Scenarios for Audit Scans for Stacks
 
@@ -49,7 +49,7 @@ This new mechanism runs against the last known successfully deployed state of yo
 
 ## How to Get Started
 
-You can enable audit scans for your IaC stacks by adding them to an **Audit Policy Group**.
+You can enable audit scans for your IaC stacks by adding them to an **[Audit Policy Group](https://www.pulumi.com/docs/insights/policy/policy-groups/#audit-policy-groups)**.
 
 1. Navigate to the **Policies** tab in the left navigation bar of the Pulumi Cloud console.
 2. Create a new **Audit Policy Group** or select an existing one.
@@ -69,4 +69,12 @@ Audit policy scans consume workflow minutes from your Pulumi Cloud plan. Each sc
 
 With the addition of post-deployment evaluation for IaC stacks, you now have a complete, 360-degree view of your cloud environment. You can use audit scans for cloud accounts to get a handle on your entire live footprint, and use audit scans for stacks to easily assess your IaC-managed footprint without adding friction to your development process.
 
-Try it out in the Pulumi Cloud today and check out the documentation to learn more!
+## Try Pulumi Policies
+
+**Ready to try these features?**
+
+* [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) and start a Neo task  
+* [Read the Get Started guide](/docs/insights/policy/get-started/) to continuously scan resources and identify violations.
+* [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features
+
+For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/insights/policy/).
