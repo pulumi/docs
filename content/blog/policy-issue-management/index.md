@@ -1,10 +1,10 @@
 ---
-title: "Introducing the New Policy Findings Hub"
+title: "Policy Findings Hub: Move From Alert Fatigue to Action"
 date: 2025-11-05T00:03:00
 authors:
   - alejandro-cotroneo
   - arun-loganathan
-meta_desc: "Move from alert fatigue to action. Announcing Pulumi's new Policy Findings hub, a collaborative workspace for triaging, managing, and fixing compliance issues."
+meta_desc: "Pulumi’s Policy Findings hub helps teams move from alert fatigue to action with a collaborative workspace for triaging, managing, and fixing compliance issues."
 allow_long_title: true
 meta_image: "meta.png"
 tags:
@@ -19,7 +19,7 @@ tags:
 
 For platform and security teams, enabling robust cloud scanning often creates a new problem: an unmanageable firehose of policy alerts. Identifying a violation is only the first step. Without a system to manage the lifecycle of these findings, teams are quickly overwhelmed, leading to prioritization paralysis and a perpetually growing backlog.
 
-Today, we're introducing the solution to this alert fatigue. The new **[Policy Findings](https://www.pulumi.com/docs/insights/policy/policy-findings/)** hub is a purpose-built, collaborative workspace that transforms a noisy list of violations into an organized and actionable set of tasks. It guides your team from initial discovery all the way to a verified fix.
+The **[Policy Findings](https://www.pulumi.com/docs/insights/policy/policy-findings/)** hub in Pulumi Cloud is the solution to this alert fatigue. It's a purpose-built, collaborative workspace that turns a noisy list of violations into organized, actionable tasks. The hub brings clarity and structure to the compliance process, guiding teams from initial discovery to a verified fix.
 
 <!--more-->
 
@@ -63,7 +63,7 @@ Effective governance goes beyond identifying violations. It requires a structure
 
 By organizing policy data into meaningful views and integrating Pulumi Neo directly into the issue management process, teams can move past alert fatigue and focus on what matters most: fixing problems quickly and maintaining continuous compliance.
 
-This new experience is available today. Navigate to the **Policies > Findings** tab in the Pulumi Cloud to explore your new compliance dashboard and start turning alerts into action.
+This new experience is now available. Navigate to the **Policies > Findings** tab in the Pulumi Cloud to explore your new compliance dashboard and start turning alerts into action.
 
 ## Try Pulumi Policies
 
