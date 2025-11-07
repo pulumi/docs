@@ -99,4 +99,4 @@ This powerful new experience is available today. Navigate to the **Policies** an
 * [Read the Get Started guide](/docs/insights/policy/get-started/) to set up and apply a policy group to stacks and clouds.
 * [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features
 
-For complete documentation, visit our [Policy documentation](https://www.pulumi.com/docs/insights/policy/).
+For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/insights/policy/).
