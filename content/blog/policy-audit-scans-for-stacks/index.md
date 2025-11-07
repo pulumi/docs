@@ -74,7 +74,7 @@ With the addition of post-deployment evaluation for IaC stacks, you now have a c
 **Ready to try these features?**
 
 * [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) and start a Neo task  
-* [Read the Get Started guide](/docs/insights/policy/get-started/) to continuously scan resources and identify violations.
+* [Read the Get Started guide](/docs/insights/policy/get-started/) to continuously scan resources and identify violations
 * [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features
 
 For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/insights/policy/).

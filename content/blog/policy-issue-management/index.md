@@ -74,4 +74,3 @@ This new experience is available today. Navigate to the **Policies > Findings** 
 * [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features
 
 For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/insights/policy/).
-```
