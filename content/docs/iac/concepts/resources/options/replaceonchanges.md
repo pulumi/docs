@@ -19,21 +19,8 @@ The `replaceOnChanges` resource option can be used to indicate that changes to c
 
 For example, with Kubernetes `CustomResource` resources, the Kubernetes resource model doesn't know whether or not a specific input property on a specific kind of `CustomResource` requires a replacement, and so assumes that *any* change can be made without replacement.  However, in practice, many specific kinds of `CustomResource` in the Kubernetes ecosystem *do* require replacement when certain input properties are changed.  The Kubernetes provider itself can't know this, but users can use `replaceOnChanges` to ensure that these changes can be made correctly via Pulumi.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let widget = new k8s.apiextensions.CustomResource("widget", {
-    apiVersion: 'acmecorp.com/v1alpha1',
-    kind: 'Widget',
-    spec: {
-        input: "something",
-    },
-}, { replaceOnChanges: ["spec.input"] });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

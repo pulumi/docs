@@ -33,16 +33,8 @@ When you skip `pulumi refresh` (or `pulumi up --refresh`) after `ignoreChanges` 
 
 For instance, in this example, the resource’s prop property "new-value" will be set when Pulumi initially creates the resource, but from then on, any updates will ignore it:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let res = new MyResource("res",
-    { prop: "new-value" }, { ignoreChanges: ["prop"] });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

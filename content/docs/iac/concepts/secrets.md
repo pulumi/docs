@@ -29,14 +29,8 @@ The Pulumi CLI **never** transmits your cloud credentials to Pulumi Cloud.
 
 There are two ways to programmatically create secret values:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-- Using [`getSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret) or [`requireSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret) when reading a value from config.
-- Calling [`pulumi.secret(value)`](/docs/reference/pkg/nodejs/pulumi/pulumi#secret) to construct a secret from an existing value.
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 - Using [`getSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret) or [`requireSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret) when reading a value from config.
@@ -78,19 +72,8 @@ There are two ways to programmatically create secret values:
 
 As an example, let’s create an AWS Parameter Store secure value. Parameter Store is an AWS service that stores strings. Those strings can either be secret or not. To create an encrypted value, we need to pass an argument to initialize the store’s `value` property. Unfortunately, the obvious thing to do —passing a raw, unencrypted value— means that the value is also stored in the Pulumi state, unencrypted so we need to ensure that the value is a secret:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const cfg = new pulumi.Config()
-const param = new aws.ssm.Parameter("a-secret-param", {
-    type: "SecureString",
-    value: cfg.requireSecret("my-secret-value"),
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -238,17 +221,8 @@ dbPassword                 [secret]
 
 Similarly, if our program attempts to print the value of `dbPassword` to the console-either intentionally or accidentally-Pulumi will mask it out:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-var pulumi = require("@pulumi/pulumi");
-var config = new pulumi.Config();
-console.log("Password: " + config.require("dbPassword"));
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -338,20 +312,8 @@ To begin, allocate an instance of the `pulumi.Config` object as shown in the cod
 
 The remainder of the code example demonstrates how to access these configuration values in your Pulumi program:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-var pulumi = require("@pulumi/pulumi");
-
-var config = new pulumi.Config();
-
-var name = config.require("name");
-var dbPassword = config.requireSecret("dbPassword");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

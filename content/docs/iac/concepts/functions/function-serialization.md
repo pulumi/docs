@@ -37,19 +37,8 @@ Pulumi makes this easy by enabling you to create libraries and components that a
 
 The following example shows how you can create an AWS Lambda function or an Azure function by providing a JavaScript callback that serves as its implementation.
 
-{{< chooser language "javascript,typescript" >}}
+{{< chooser language "typescript" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let bucket = new aws.s3.Bucket("mybucket");
-bucket.onObjectCreated("onObject", async (ev) => {
-    // This is the code that will be run when the Lambda is invoked (any time an object is added to the bucket).
-    console.log(JSON.stringify(ev));
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

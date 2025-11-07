@@ -108,18 +108,8 @@ For potentially-secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi
 
 Configuration methods operate on a particular namespace, which by default is the name of the current project. Passing an empty constructor to {{< pulumi-config >}}, as in the following example, sets it up to read values set without an explicit namespace (e.g., `pulumi config set name Joe`):
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let config = new pulumi.Config();
-let name = config.require("name");
-let lucky = config.getNumber("lucky") || 42;
-let secret = config.requireSecret("secret");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -205,16 +195,8 @@ config:
 
 To access a namespaced configuration value, such as one set for a provider library like `aws`, you must pass the library's name to the constructor. For example, to retrieve the configured value of `aws:region`:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let awsConfig = new pulumi.Config("aws");
-let awsRegion = awsConfig.require("region");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -268,29 +250,13 @@ variables:
 
 Similarly, if you are writing code that will be imported into a broader project, such as your own library of [Pulumi components](/docs/concepts/resources/components/), you should instead pass your library's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your library:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
 class MyComponent extends pulumi.ComponentResource {
     constructor(name: string, args = {}, opts: pulumi.ComponentResourceOptions = {}) {
-        super("mylib:index:MyComponent", name, args, opts);
-
-        // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
-        const config = new pulumi.Config("mylib");
-        const name = config.require("name");
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language javascript %}}
-
-```javascript
-class MyComponent extends pulumi.ComponentResource {
-    constructor(name, args, opts) {
         super("mylib:index:MyComponent", name, args, opts);
 
         // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
@@ -415,17 +381,8 @@ For structured config, `true` and `false` values are persisted as boolean values
 
 The `data` config can be accessed in your Pulumi program using:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let config = new pulumi.Config();
-let data = config.requireObject("data");
-console.log(`Active: ${data.active}`);
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

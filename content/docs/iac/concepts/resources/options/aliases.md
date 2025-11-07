@@ -22,16 +22,8 @@ Aliases are frequently used when refactoring Pulumi programs.
 
 For example, imagine we change a database resource’s name from `old-name-for-db` to `new-name-for-db`. By default, when we run `pulumi up`, we see that the old resource is deleted and the new one created. If we annotate that resource with the aliases option, however, the resource is updated in-place:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let db = new Database("new-name-for-db", {/*...*/},
-    { aliases: [{ name: "old-name-for-db" }] });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -94,16 +86,8 @@ The aliases option accepts a list of old identifiers. If a resource has been ren
 
 The above example used objects of type `Alias` with the old resource names. These values may specify any combination of the old name, type, parent, stack, and/or project values. Alternatively, you can just specify the URN directly:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let db = new Database("new-name-for-db", {/*...*/},
-    { aliases: [ "urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db" ] });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

@@ -21,26 +21,8 @@ To import a resource, first specify the `import` option with the resource’s ID
 
 This example imports an existing EC2 security group with ID `sg-04aeda9a214730248` and an EC2 instance with ID `i-06a1073de86f4adef`:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let aws = require("@pulumi/aws");
-
-let group = new aws.ec2.SecurityGroup("web-sg", {
-    name: "web-sg-62a569b",
-    ingress: [{ protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] }],
-}, { import: "sg-04aeda9a214730248" });
-
-let server = new aws.ec2.Instance("web-server", {
-    ami: "ami-6869aa05",
-    instanceType: "t2.micro",
-    securityGroups: [ group.name ],
-}, { import: "i-06a1073de86f4adef" });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

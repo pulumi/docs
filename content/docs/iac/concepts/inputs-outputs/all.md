@@ -54,18 +54,7 @@ Server=tcp:<YourServerName>.database.windows.net,initial catalog=<YourDatabaseNa
 
 In the following example, you provide the name of the server and the name of the database as arguments to `all()`. Those arguments are made available to the {{< pulumi-apply >}} function and subsequently used to create the database connection string:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-var pulumi = require("@pulumi/pulumi");
-// ...
-let connectionString = pulumi.all([sqlServer.name, database.name])
-    .apply(([server, db]) => `Server=tcp:${server}.database.windows.net;initial catalog=${db};`);
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -190,28 +179,7 @@ In addition to strings, the `all` function can also be used to create new data s
 
 Using the same example server and database resources and their corresponding output values, you can see this demonstrated in the example below:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-const pulumi = require("@pulumi/pulumi");
-// ...
-
-// An example of creating a new Output of type Object
-const connectionDetails = pulumi.all([sqlServer.ipAddress, database.port])
-    .apply(([serverIp, databasePort]) => ({
-        server_ip: serverIp,
-        database_port: databasePort,
-    })
-);
-
-// An example of creating a new Output of type Array
-const connectionDetails = pulumi.all([server.ipAddress, database.port])
-    .apply(([ip, port]) => [ip, port]);
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 

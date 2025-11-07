@@ -17,16 +17,8 @@ aliases:
 
 The `provider` resource option sets a provider for the resource. For more information, see [Providers](../providers). The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let provider = new aws.Provider("provider", { region: "us-west-2" });
-let vpc = new aws.ec2.Vpc("vpc", {}, { provider: provider });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
