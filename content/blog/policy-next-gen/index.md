@@ -91,4 +91,12 @@ The age of AI-driven development demands AI-powered governance. With this new ge
 
 This powerful new experience is available today. Navigate to the **Policies** and **Policy Findings** tab in Pulumi Cloud to explore your new governance capabilities and meet the future of platform engineering.
 
+## Try Pulumi Policies
+
+**Ready to try these features?**
+
+* [Sign in to Pulumi Cloud](https://app.pulumi.com/signup) and start a Neo task  
+* [Read the Get Started guide](/docs/insights/policy/get-started/) to learn how to configure your first policy group and apply policies to stacks.
+* [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features
+
 For complete documentation, visit our [Policy documentation](https://www.pulumi.com/docs/insights/policy/).
