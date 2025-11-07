@@ -4,7 +4,7 @@ date: 2025-11-05T00:02:00
 authors:
   - luke-ward
   - dan-biwer
-meta_desc: "Launching new, pre-built compliance policy packs for CIS, NIST, and PCI DSS to help organizations accelerate their journey to a secure and compliant cloud."
+meta_desc: "Pulumi pre-built policy packs for CIS v8.1, NIST 800-53 Rev. 5, and PCI DSS v4.0 help teams achieve and maintain cloud compliance in minutes, not months."
 allow_long_title: true
 meta_image: "meta.png"
 tags:
