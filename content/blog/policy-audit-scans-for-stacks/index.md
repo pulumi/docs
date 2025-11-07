@@ -1,10 +1,10 @@
 ---
-title: "Introducing Audit Policy Scans for Pulumi Stacks"
+title: "New Audit Policy Scans for Pulumi Stacks"
 date: 2025-11-05T00:04:00
 authors:
   - levi-blackstone
   - arun-loganathan
-meta_desc: "Continuous policy evaluation for IaC stacks based on their last successful deployment state, enabling frictionless adoption and faster CI/CD."
+meta_desc: "Continuous policy evaluation for IaC stacks using their last successful deployment state, providing frictionless compliance checks and faster CI/CD workflows."
 allow_long_title: true
 meta_image: "meta.png"
 tags:
@@ -16,7 +16,7 @@ tags:
   - governance
 ---
 
-Today, as part of the next generation of Pulumi Policies, we're introducing **Audit Policy Scans for Pulumi Stacks**. This capability uses policies to run compliance checks against the last successful deployment state of your stacks, providing continuous compliance monitoring without impacting your existing CI/CD workflows.
+**Audit Policy Scans for Pulumi Stacks** is part of the next generation of Pulumi Policies. This capability uses policies to run compliance checks against the last successful deployment state of your stacks, providing continuous compliance monitoring without impacting your existing CI/CD workflows.
 
 Until now, Pulumi’s preventative policies have served as a critical "shift-left" gate, blocking non-compliant changes during `pulumi up`. While essential, this created challenges for organizations wanting to roll out new governance across thousands of existing stacks. This new evaluation mode solves that problem, giving you a complete and continuous view of your IaC compliance posture without the friction.
 
@@ -28,7 +28,7 @@ Pulumi's audit philosophy is to provide complete visibility across your entire c
 
 1. **Audit Scans for Cloud Accounts (Existing):** This capability scans your live cloud environments (like an AWS account or Azure subscription). Its primary purpose is to give you a holistic view of your security posture by discovering *all* resources, including those not managed by Pulumi, and detecting configuration drift. This is how you find unmanaged, legacy, or manually-created resources that violate your policies.
 
-2. **Audit Scans for Pulumi Stacks (New):** The feature we're launching today extends this audit power to the source of truth for your managed infrastructure: your Pulumi stacks. It evaluates the *last successfully deployed state* of your IaC. This allows you to get an instant compliance baseline of all your managed infrastructure without having to redeploy anything, making it perfect for frictionless policy rollouts at scale.
+2. **Audit Scans for Pulumi Stacks (New):** The feature extends this audit power to the source of truth for your managed infrastructure: your Pulumi stacks. It evaluates the *last successfully deployed state* of your IaC. This allows you to get an instant compliance baseline of all your managed infrastructure without having to redeploy anything, making it perfect for frictionless policy rollouts at scale.
 
 Together, these two audit modes give you a comprehensive picture of your entire cloud estate, all feeding into one unified **[Policy Findings hub](https://www.pulumi.com/blog/policy-issue-management/)**.
 
