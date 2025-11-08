@@ -13,7 +13,7 @@ aliases:
   - /docs/iac/concepts/options/hidediffs/
 ---
 
-The `hideDiffs` resource option specifies a list of property paths that Pulumi will never expand when showing diffs in the CLI. Setting `hideDiffs` will not affect what resources are updated, only how those updates are displayed.
+The `hideDiffs` resource option specifies a list of property paths whose diff details Pulumi will compact in CLI output. Setting `hideDiffs` does not affect what resources are updated, only how those updates are displayed.
 
 ## How hideDiffs works
 
@@ -24,8 +24,7 @@ When you set `hideDiffs` on a resource property, Pulumi will:
 1. Show that the property changed without expanding the full before/after values.
 1. Continue to update the resource normally based on those changes.
 
-This is useful when working with properties that generate large but unimportant diffs,
-while still allowing Pulumi to manage those properties normally.
+This is useful when working with properties that generate large or verbose diffs that clutter CLI output, while still allowing Pulumi to manage those properties normally.
 
 ## Example usage
 
