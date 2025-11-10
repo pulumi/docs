@@ -631,14 +631,14 @@ stack.set_config("pulumi:disable-default-providers[0]", auto.ConfigValue(value="
 {{% choosable language go %}}
 
 ```go
-stack..SetConfig(ctx, "pulumi:disable-default-providers[0]", auto.ConfigValue{Value: "*"}, true)
+stack.SetConfig(ctx, "pulumi:disable-default-providers[0]", auto.ConfigValue{Value: "*"}, true)
 ```
 
 {{% /choosable %}}
 {{% choosable language java %}}
 
 ```java
-tack.setConfig("pulumi:disable-default-providers[0]", new ConfigValue("*"), true);
+stack.setConfig("pulumi:disable-default-providers[0]", new ConfigValue("*"), true);
 ```
 
 {{% /choosable %}}
