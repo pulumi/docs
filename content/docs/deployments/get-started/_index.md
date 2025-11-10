@@ -16,7 +16,7 @@ Pulumi Cloud is a managed service that provides state management, secrets handli
 
 ## Is Pulumi Cloud right for you?
 
-New to Pulumi or evaluating your options? Read [Pulumi Cloud and Open Source Pulumi](./what-is-it/) to understand:
+New to Pulumi or evaluating your options? Read [Pulumi Cloud and Open Source Pulumi](/docs/iac/concepts/pulumi-cloud/) to understand:
 
 - How Pulumi Cloud relates to the open source Pulumi IaC tool
 - The tradeoffs between using Pulumi Cloud versus self-managed backends
