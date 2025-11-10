@@ -6,7 +6,41 @@ description: Review changes for style, accuracy, and Pulumi best practices. Cont
 
 You will review documentation changes and provide feedback on style, accuracy, and best practices.
 
+---
+
+## Usage
+
+`/docs-review [PR_NUMBER]`
+
+Reviews documentation changes for style, accuracy, and Pulumi best practices.
+
+The `PR_NUMBER` argument is optional. If not provided in interactive mode, the command will auto-detect scope from IDE context (open files), uncommitted changes, or branch changes.
+
+---
+
+## Context Detection
+
+This command operates in two modes based on execution context:
+
+**CI Mode** - Detected when the prompt includes "You are running in a CI environment"
+- Minimizes token usage by working primarily from diffs
+- Posts review as a PR comment using `gh pr comment`
+- Tool access is restricted (no `make` commands, limited to Read, Glob, Grep, and gh commands)
+- Applies special handling for efficiency (e.g., trailing newline checks)
+
+**Interactive Mode** - When running in IDE or terminal (outside CI)
+- Provides review directly in the conversation (never uses `gh pr comment`)
+- Full tool access available
+- Auto-detects scope from:
+  1. Open files in IDE (from system reminders)
+  2. Uncommitted changes (git status)
+  3. Branch changes (git merge-base)
+
+---
+
 ## Instructions for Docs Review
+
+Follow the appropriate section below based on your execution context:
 
 ### Continuous Integration (CI) Context
 
@@ -31,11 +65,15 @@ Your review should include:
 - Constructive suggestions using suggestion code fence formatting blocks
 - An instruction to mention you (@claude) if the author wants additional reviews or fixes
 
-Use the **Review Criteria** section below for your review.
+Use the **Review Criteria** section below for your review, except for the following adjustments:
+
+- Diffs do not display the trailing newline status of files. Do not flag missing trailing newlines unless you have confirmed the absence while reading the full file for another reason. Suspected missing newlines are not sufficient reason to read the full file.
 
 ### Interactive Context (IDE or Chat)
 
-When running outside of CI, before beginning your review, you must determine the scope of changes to review:
+When running outside of CI, always provide your review directly in the conversation. Do NOT use `gh pr comment` to post to PRs.
+
+Before beginning your review, you must determine the scope of changes to review:
 
 **If a PR number is provided** ({{arg}}):
 - Use `gh pr view {{arg}}` to retrieve the PR title, description, and metadata
