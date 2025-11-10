@@ -25,3 +25,5 @@ These fundamentals apply across all cloud providers and help you build maintaina
 **[Least privilege security](/docs/iac/guides/basics/iac-least-privileges/)** - Implement security best practices by granting only the minimum permissions needed for infrastructure operations. Learn how to configure cloud provider credentials with appropriate access controls.
 
 **[Update plans](/docs/iac/guides/basics/update-plans/)** - Preview and review infrastructure changes before applying them. Update plans help you catch unintended modifications and coordinate changes across teams.
+
+**[Refactoring with aliases](/docs/iac/guides/basics/refactoring-with-aliases/)** - Reorganize and refactor infrastructure code without recreating cloud resources. Learn how to use the aliases property to rename resources, establish parent-child relationships, and extract reusable components while preserving your existing infrastructure.
