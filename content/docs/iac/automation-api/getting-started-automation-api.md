@@ -33,9 +33,9 @@ Install the required language runtime, if you have not already.
 
 #### Choose your language
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 {{< install-node >}}
 {{% /choosable %}}
 
@@ -62,11 +62,11 @@ You'll need a [Pulumi access token](/docs/pulumi-cloud/accounts#access-tokens) s
 
 ## Define your Pulumi program
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 First, define the Pulumi program you want to run as a function within your overall program. Note how it looks like a standard Pulumi program.
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 
 {{% notes type="info" %}}
 This tutorial is based on the [`inlineProgram-ts` example](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/inlineProgram-ts), which is a complete example of how to construct a simple Automation API program.
@@ -401,9 +401,9 @@ As with executing Pulumi programs through the CLI, you need to associate your Pu
 
 Here's a convenient method to select an existing `Stack` or create one if none exists:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 
 ```typescript
 const args: InlineProgramArgs = {
@@ -469,8 +469,8 @@ A `Stack` object operates within the context of a `Workspace`. A `Workspace` is 
 
 The AWS plugin also needs configuration. You can provide that configuration just as you would with other Pulumi programs: either through [stack configuration](/docs/concepts/config/) or environment variables. In this tutorial, you'll use the `Stack` object to set the AWS region for the AWS provider plugin.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
-{{% choosable language "javascript,typescript" %}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
+{{% choosable language "typescript" %}}
 
 ```typescript
 await stack.workspace.installPlugin("aws", "v4.0.0");
@@ -527,8 +527,8 @@ stack.setConfig("aws:region", new ConfigValue("us-west-2"));
 You're now ready to execute commands against the `Stack`, including update, preview, refresh, destroy, import, and export.
 If you want to update the stack, invoke the update method (`up`) against the `Stack` object:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
-{{% choosable language "javascript,typescript" %}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
+{{% choosable language "typescript" %}}
 
 ```typescript
 const upRes = await stack.up({ onOutput: console.info });

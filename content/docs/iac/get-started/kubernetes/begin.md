@@ -35,9 +35,9 @@ Next, we'll install the required language runtime.
 
 #### Choose Your Language
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 {{< install-node >}}
 {{% /choosable %}}
 

@@ -35,7 +35,7 @@ To learn how to use Automation API, see [Getting Started with Automation API](/d
 
 The following examples demonstrate how to use Automation API in various use cases.
 
-{{< chooser language "typescript,javascript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -48,11 +48,7 @@ The following examples demonstrate how to use Automation API in various use case
 * [Remote Deployment - ts-node](https://github.com/pulumi/automation-api-examples/blob/main/nodejs/remoteDeployment-tsnode)
 
 {{% /choosable %}}
-{{% choosable language javascript %}}
 
-* [Inline Program](https://github.com/pulumi/automation-api-examples/blob/main/nodejs/inlineProgram-js)
-
-{{% /choosable %}}
 {{% choosable language python %}}
 
 * [Inline Program](https://github.com/pulumi/automation-api-examples/blob/main/python/inline_program)
