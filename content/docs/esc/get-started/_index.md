@@ -29,4 +29,18 @@ Before you begin, you can watch the following video which provides a high level 
     </iframe>
 </div>
 
+## Choose your path
+
+{{% notes "info" %}}
+
+**Already using Pulumi IaC?**
+
+If you have existing Pulumi infrastructure as code projects and want to centralize your configuration and secrets, jump directly to [Integrate with Pulumi IaC](/docs/esc/get-started/integrate-with-pulumi-iac/) to add ESC to your projects in three steps.
+
+**New to Pulumi ESC?**
+
+Continue with the tutorial below to learn ESC fundamentals, starting with account setup and creating your first environment.
+
+{{% /notes %}}
+
 {{< get-started-stepper >}}

@@ -3,7 +3,7 @@ title_tag: Integrate with Pulumi IaC | Pulumi ESC
 title: Integrate with Pulumi IaC
 h1: "Pulumi ESC: Integrate with Pulumi IaC"
 meta_desc: This page provides an overview on how to use Pulumi ESC with Pulumi IaC.
-weight: 8
+weight: 4
 menu:
   esc:
     parent: esc-get-started
@@ -13,160 +13,127 @@ aliases:
 
 ## Overview
 
-Pulumi ESC works independently of [Pulumi Infrastructure as Code (IaC)](/docs/get-started/), providing developers the flexibility to centrally manage their environment configuration regardless of how or where those environments are created.
+Add Pulumi ESC to your existing Pulumi IaC projects in three steps to centrally manage configuration and secrets across all your stacks. This integration works seamlessly everywhere Pulumi runs, including locally, in CI/CD, Pulumi Deployments, and GitHub Actions.
 
-Pulumi ESC also integrates seamlessly with Pulumi IaC, and this tutorial will demonstrate how to leverage Pulumi ESC in your own Pulumi programs. This works everywhere, including Pulumi Deployments and GitHub Actions, without any additional work or changes.
+## Add ESC to your Pulumi project
 
-## Prerequisites
+### Step 1: Reference your ESC environment
 
-To complete the steps in this tutorial, you will need to install the following prerequisites:
-
-- the [Pulumi IaC CLI](/docs/cli/)
-- one of [Pulumi's supported language runtimes](/docs/languages-sdks/)
-
-### Create and Configure a New Project
-
-Once the prerequisites are installed, run the `pulumi new <language>` command in an empty folder to [create a new Pulumi project](/docs/cli/commands/pulumi_new/), making sure to replace `<language>` with the supported language of your choice:
-
-```bash
-# example using python
-$ pulumi new python
-This command will walk you through creating a new Pulumi project.
-
-Enter a value or leave blank to accept the (default), and press <ENTER>.
-Press ^C at any time to quit.
-
-project name (pulumi-esc-iac):
-project description (A minimal Python Pulumi program):
-Created project 'pulumi-esc-iac'
-
-Please enter your desired stack name.
-To create a stack in an organization, use the format <org-name>/<stack-name> (e.g. `acmecorp/dev`).
-stack name (dev): pulumi/dev
-Created stack 'dev'
-
-Installing dependencies...
-
-Creating virtual environment...
-Finished creating virtual environment
-Updating pip, setuptools, and wheel in virtual environment...
-...
-...
-Finished installing dependencies
-
-Your new project is ready to go!
-
-To perform an initial deployment, run `pulumi up`
-```
-
-## Access configuration locally
-
-In a Pulumi project, you can locally [store and retrieve configuration values](/docs/concepts/config/) using the `pulumi config set <key> [value]` command. Run the following command to create a config value with a key of `myEnvironment` and a value of `development`:
-
-```bash
-$ pulumi config set myEnvironment development
-```
-
-Now run the following command to create a secret config value with a key of `myPassword` and a value of `demo-password-123`:
-
-```bash
-$ pulumi config set myPassword demo-password-123 --secret
-```
-
-These values will be stored in your project's stack settings file `Pulumi.<your-stack-name>.yaml` as shown below:
+In your stack configuration file (`Pulumi.<stack-name>.yaml`), add an `environment` block that references your ESC environment:
 
 ```yaml
-# Contents of Pulumi.<your-stack-name>.yaml file
-config:
-  pulumi-esc-iac:myEnvironment: development
-  pulumi-esc-iac:myPassword:
-    secure: AAABADd5YzRaVuzxM08i5z2CJ3LGkQau5e5Lhk+1Gtj37qv6zKkFr8KxmN6X+w/XMg==
+environment:
+  - <your-org>/<your-environment-name>
 ```
 
-You can retrieve the value of this configuration via the CLI by running the `pulumi config get <key>` command as shown below:
+For example, if your ESC environment is `my-org/aws-prod`:
 
-```bash
-# example output
-$ pulumi config get myEnvironment
-development
+```yaml
+environment:
+  - my-org/aws-prod
 ```
 
-You can also import and access this configuration value from directly within your Pulumi program as shown below:
+You can also reference multiple environments, which will be merged in order:
 
-{{< example-program path="aws-import-export-pulumi-config" >}}
-
-Run the `pulumi preview` command as shown below to validate the retrieval of the configuration:
-
-```bash
-$ pulumi preview
-Previewing update (dev)
-
-Loading policy packs...
-
-     Type                 Name                Plan
- +   pulumi:pulumi:Stack  pulumi-esc-iac-dev  create
-
-Policies:
-    ✅ pulumi-internal-policies@v0.0.6
-
-Outputs: # the outputted config values
-    Environment: "development"
-    Password   : [secret]
-
-Resources:
-    + 1 to create
+```yaml
+environment:
+  - my-org/common
+  - my-org/aws-prod
 ```
 
-Defining the configuration via the project stack settings file may be fine when dealing with a singular project, but it can become very challenging to maintain securely and consistently across multiple projects. Centralizing these configuration values using Pulumi ESC provides more scalability without increasing administrative overhead along the way.
+### Step 2: Define configuration in your ESC environment
 
-## Access configuration from ESC
-
-To centralize this configuration and make it accessible to your Pulumi program, you will need to add a second-level key named `pulumiConfig` in your environment file that will expose the values nested underneath it to Pulumi IaC. Add the following configuration to your environment file:
+In your ESC environment file, use the `pulumiConfig` block to expose values to Pulumi IaC:
 
 ```yaml
 values:
   pulumiConfig:
-    myEnvironment: development
+    aws:region: us-west-2
+    myApp:apiKey:
+      fn::secret: demo-api-key-123
 ```
 
-From here, you will need to import your environment file into your Pulumi project. To do this, return to your `Pulumi.<your-stack-name>.yaml` file and update it to import your environment as shown below, making sure to replace the value of `<your-project-name>/<your-environment-name>` with the identifier of your own environment:
+The `pulumiConfig` block maps ESC values to Pulumi configuration keys. Values defined here become available to your Pulumi program through the standard Configuration API.
+
+### Step 3: Access configuration in your code
+
+Use Pulumi's standard Configuration API to access these values in your infrastructure code:
+
+{{< example-program path="aws-import-export-pulumi-config" >}}
+
+That's it! Your Pulumi program now retrieves configuration and secrets from ESC. Run `pulumi preview` or `pulumi up` to see it in action.
+
+## Practical examples
+
+### Centralizing cloud credentials
+
+Share AWS OIDC credentials across multiple stacks:
 
 ```yaml
-environment:
-  - <your-project-name>/<your-environment-name>
+values:
+  aws:
+    login:
+      fn::open::aws-login:
+        oidc:
+          roleArn: arn:aws:iam::123456789012:role/pulumi-deployment-role
+          sessionName: pulumi-session
+  pulumiConfig:
+    aws:region: ${aws.login.region}
+  environmentVariables:
+    AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
+    AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
+    AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-This will import any configuration values that you have defined under the `pulumiConfig` key in your environment file and make them accessible to your Pulumi project.
+Learn more about [dynamic cloud credentials](/docs/esc/get-started/use-short-term-credentials/).
 
-Save the file and then run the `pulumi config get <key>` command as shown below to quickly test that the import is working:
+### Managing API keys and secrets
 
-```bash
-# example output
-$ pulumi config get myEnvironment
-development
+Store third-party API keys centrally and reference them across projects:
+
+```yaml
+values:
+  pulumiConfig:
+    myApp:datadogApiKey:
+      fn::secret:
+        fn::open::azure-secrets:
+          login: ${azure.login}
+          get:
+            secretId: https://my-keyvault.vault.azure.net/secrets/datadog-api-key
 ```
 
-Now run the `pulumi preview` command again to test that the imported configuration value is accessible from within your Pulumi program:
+Learn more about [retrieving secrets from external sources](/docs/esc/get-started/retrieve-external-secrets/).
 
-```bash
-$ pulumi preview
-Previewing update (dev)
+### Environment-specific configuration
 
-Loading policy packs...
+Compose environments to share common configuration while overriding values per environment:
 
-     Type                 Name                Plan
- +   pulumi:pulumi:Stack  pulumi-esc-iac-dev  create
+```yaml
+# common environment
+values:
+  pulumiConfig:
+    myApp:instanceType: t3.micro
+    myApp:replicas: 1
 
-Policies:
-    ✅ pulumi-internal-policies@v0.0.6
-
-Outputs:
-    Value: "development"
-
-Resources:
-    + 1 to create
+# production environment (imports common)
+imports:
+  - common
+values:
+  pulumiConfig:
+    myApp:instanceType: t3.large  # override for production
+    myApp:replicas: 3              # override for production
 ```
 
-See the Pulumi documentation on [Accessing Configuration from Code](/docs/concepts/config/#code) for more details.
+Learn more about [importing and composing environments](/docs/esc/get-started/import-environments/).
+
+## Next steps
+
+Now that you've integrated ESC with your Pulumi IaC project, explore more ESC features:
+
+- [Store and retrieve secrets](/docs/esc/get-started/store-and-retrieve-secrets/) - Learn how to manage secrets in ESC
+- [Import environments](/docs/esc/get-started/import-environments/) - Compose environments for team boundaries
+- [Dynamic cloud credentials](/docs/esc/get-started/use-short-term-credentials/) - Generate short-lived OIDC credentials
+- [External secret providers](/docs/esc/get-started/retrieve-external-secrets/) - Pull secrets from AWS, Azure, GCP, and more
+- [ESC + Pulumi IaC reference](/docs/esc/integrations/infrastructure/pulumi-iac/) - Complete integration documentation
 
 {{< get-started-stepper >}}
