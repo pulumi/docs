@@ -73,4 +73,3 @@ That said, DIY backends are fully supported, and this article aims to help you m
 A complete list of Pulumi Cloud's features and capabilities is available [on the pricing page](/pricing#compare). For more details about adopting Pulumi Cloud in your team, [see the onboarding guide](/docs/deployments/get-started/onboarding-guide/). This guide also includes best practices to help you completely adopt the full platform.
 
 To get started today, [sign up for a free Pulumi Cloud account](https://app.pulumi.com/signup). Pulumi Cloud is free for individuals and small teams, and has advanced capabilities for larger teams and enterprises.
-
