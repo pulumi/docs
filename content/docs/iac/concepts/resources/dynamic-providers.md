@@ -34,19 +34,8 @@ For example, if creating a dynamic resource provider for WordPress, you would pr
 
 Dynamic providers are defined by first implementing the `pulumi.dynamic.ResourceProvider` interface. This interface supports all CRUD operations, but only the create function is required. A minimal implementation might look like this:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const myProvider = {
-    async create(inputs) {
-        return { id: "foo", outs: {}};
-    }
-}
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -102,19 +91,8 @@ class MyProvider(ResourceProvider):
 
 This dynamic resource provider is then used to create a new kind of custom resource by inheriting from the `pulumi.dynamic.Resource` base class, which is a subclass of `pulumi.CustomResource`:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-class MyResource extends pulumi.dynamic.Resource {
-    constructor(name, props, opts) {
-        super(myProvider, name, props, opts);
-    }
-}
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -362,19 +340,8 @@ The inputs to your `pulumi.dynamic.ResourceProvider`’s functions come from sub
 
 For example, `props`, in the `MyResource` class shown below, defines the inputs to the resource provider functions:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-class MyResource extends pulumi.dynamic.Resource {
-    constructor(name, props, opts) {
-        super(myprovider, name, props, opts);
-    }
-}
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -455,15 +422,8 @@ If you need to access the outputs of your custom resource outside it with strong
 
 The name of the class member must match the names of the output properties as returned by the `create` function.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-JavaScript does not support types.
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -555,30 +515,8 @@ This example generates a random number using a dynamic provider. It highlights u
 
 Implementing this example requires that we have a provider and resource type:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let pulumi = require("@pulumi/pulumi");
-let crypto = require("crypto");
-
-let randomprovider = {
-    async create(inputs) {
-        return { id: crypto.randomBytes(16).toString('hex'), outs: {}};
-    },
-}
-
-class Random extends pulumi.dynamic.Resource {
-    constructor(name, opts) {
-        super(randomprovider, name, {}, opts);
-    }
-}
-
-exports.Random = Random;
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -660,45 +598,8 @@ A fundamental requirement for a dynamic provider that calls an API is managing t
 
 Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and to make calls to it, local to each function.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let pulumi = require("@pulumi/pulumi");
-let Octokit = require("@octokit/rest");
-
-class githubLabelProvider {
-    // Set a stack config variable named githubToken (e.g. pulumi config set githubToken <VALUE> --secret)
-    async configure(req) {
-        this.auth = req.config.require("githubToken")
-    }
-    async create(inputs) {
-        const octokit = new Octokit({this.auth});
-        const label = await octokit.issues.createLabel(inputs);
-        return { id: label.data.id.toString(), outs: label.data };
-    }
-    async update(id, olds, news) {
-        const octokit = new Octokit({this.auth});
-        const label = await octokit.issues.updateLabel({ ...news, current_name: olds.name });
-        return { outs: label.data };
-    }
-    async delete(id, props) {
-        const octokit = new Octokit({this.auth});
-        await octokit.issues.deleteLabel(props);
-    }
-}
-
-class Label extends pulumi.dynamic.Resource {
-    constructor(name, args, opts) {
-        super(new githubLabelProvider, name, args, opts);
-    }
-}
-
-exports.Label = Label;
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -867,84 +768,8 @@ A fundamental requirement for a dynamic provider that calls an API is managing t
 
 Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and to make calls to it, local to each function.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const pulumi = require("@pulumi/pulumi");
-const axios = require('axios');
-
-// Use user-specified API URL if provided. Otherwise, use default Pulumi cloud URL.
-const basePulumiApiUrl= process.env.PULUMI_CLOUD_API_URL || "https://api.pulumi.com"
-
-// NOTE: When Pulumi Environments is GAed, the API path will no longer include "preview".
-const basePulumiEnvApiUrl= `${basePulumiApiUrl}/api/preview/environments`
-
-const PulumiEnvironmentProvider = {
-
-  //*** CREATE ***//
-  async create(inputs) {
-  
-    // It is important to set up the headers in the action as opposed to outside of the provider so that the environment variable reference is
-    // stored in state instead of the actual credential value.
-    const headers = {
-      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
-      'Content-Type': 'application/json'
-    }
-
-    const createEnvUrl = `${basePulumiEnvApiUrl}/${inputs.orgName}/${inputs.environmentName}`
-
-    let envId = "unassigned"
-    await axios.post(createEnvUrl, {},
-      {
-          headers: headers
-      }).then((response) => {
-        // Pulumi Cloud does not return a unique ID for an environment. So create one using the org and environment name.
-        envId = `${inputs.orgName}/${inputs.environmentName}`
-      }).catch((reason) => {
-        console.log("ERROR: ", `${reason.status} - ${reason.response?.statusText}`)
-        process.exit(10)
-      })
-
-      const envOuts = {id: envId, envName: inputs.environmentName, orgName: inputs.orgName}
-      return { id: envId, outs: envOuts }
-  },
-
-  //*** DELETE ***//
-  async delete(id, props) {
-
-    // It is important to set up the headers in the action as opposed to outside of the provider so that the environment variable reference is
-    // stored in state instead of the actual credential value.
-    const headers = {
-      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
-      'Content-Type': 'application/json'
-    }
-
-    const deleteEnvUrl = `${basePulumiEnvApiUrl}/${id}`
-    await axios.delete(deleteEnvUrl, {
-          headers: headers
-    })
-    .then((response) => {
-    })
-    .catch((reason) => {
-      console.log("ERROR: ", `${reason.response?.status} - ${reason.response?.statusText}`)
-      process.exit(20)
-    })
-  }
-}
-
-class PulumiEnvironment extends pulumi.dynamic.Resource {
-
-  constructor(name, args, opts) {
-    super(PulumiEnvironmentProvider, name, args, opts);
-  }
-}
-
-exports.PulumiEnvironment = PulumiEnvironment;
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

@@ -19,16 +19,8 @@ The `additionalSecretOutputs` resource option specifies a list of named output p
 
 This example ensures that the password generated for a database resource is an encrypted secret:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let db = new Database("new-name-for-db", { /*...*/ },
-    { additionalSecretOutputs: ["password"] });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

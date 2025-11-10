@@ -17,15 +17,8 @@ aliases:
 
 The `version` resource option specifies a provider version to use when operating on a resource. This version overrides the version information inferred from the current package. This option was built to be used directly by the Pulumi SDK. `version` should not be used directly during normal operations.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let vpc = new aws.ec2.Vpc("vpc", {}, { version: "2.10.0" });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

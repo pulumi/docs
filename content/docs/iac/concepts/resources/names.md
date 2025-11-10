@@ -33,15 +33,8 @@ Be careful when you change a resource’s name because changing the name of a re
 
 Every resource managed by Pulumi has a logical name that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let role = new aws.iam.Role("my-role");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -122,17 +115,8 @@ This random suffix serves two purposes:
 
 For cases that require specific names, you can override auto-naming by specifying a physical name. Most resources have a `name` property that you can use to name the resource yourself. Specify your name in the argument object to the constructor. Here’s an example.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let role = new aws.iam.Role("my-role", {
-    name: "my-role-001",
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -198,17 +182,8 @@ Overriding auto-naming makes your project susceptible to naming collisions. As a
 
 Because physical and logical names do not need to match, you can construct the physical name by using your project and stack names. Similarly to auto-naming, this approach protects you from naming collisions while still having meaningful names. Note that `deleteBeforeReplace` is still necessary:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let role = new aws.iam.Role("my-role", {
-    name: "my-role-" + pulumi.getProject() + "-" + pulumi.getStack(),
-}, { deleteBeforeReplace: true });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

@@ -21,16 +21,8 @@ Setting the `deleteBeforeReplace` option to true means that Pulumi will delete t
 
 This example deletes a database entirely before its replacement is created:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let db = new Database("db", {/*...*/},
-    { deleteBeforeReplace: true});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

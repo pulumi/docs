@@ -58,19 +58,8 @@ Like the language runtime itself, the SDKs are available as regular packages. Fo
 
 Let's walk through a simple example. Suppose we have the following Pulumi program, which creates two S3 buckets:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-"use strict";
-const aws = require("@pulumi/aws");
-
-const mediaBucket = new aws.s3.Bucket("media-bucket");
-const contentBucket = new aws.s3.Bucket("content-bucket");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -188,21 +177,8 @@ Note the extra suffixes on the end of these bucket names. This is due to a proce
 
 Now, let's make a change to one of resources and run `pulumi up` again.  Since Pulumi operates on a desired state model, it will use the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, imagine that we wanted to add tags to the S3 `media-bucket`.  We change our program to express this new desired state:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-"use strict";
-const aws = require("@pulumi/aws");
-
-const mediaBucket = new aws.s3.Bucket("media-bucket", {
-    tags: {"owner": "media-team"},
-});
-const contentBucket = new aws.s3.Bucket("content-bucket");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -325,20 +301,8 @@ The engine also receives a resource registration request for "content-bucket".  
 
 Now, suppose we rename `content-bucket` to `app-bucket`.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-"use strict";
-const aws = require("@pulumi/aws");
-const mediaBucket = new aws.s3.Bucket("media-bucket", {
-    tags: {"owner": "media-team"},
-});
-const appBucket = new aws.s3.Bucket("app-bucket");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

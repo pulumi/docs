@@ -61,17 +61,8 @@ Pulumi's input and output system enables this declarative approach by automatica
 
 All resources in Pulumi accept values that describe the way the resource behaves. These values are called inputs.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const myId = new random.RandomId("mine", {
-    byteLength: 8, // byteLength is an input
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -141,18 +132,8 @@ resources:
 
 Inputs are generally representations of the parameters to the underlying API call of any resource that Pulumi is managing. The simplest way to create a resource with its required inputs is to use a plain value, like a string:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const key = new tls.PrivateKey("my-private-key", {
-    algorithm: "ECDSA", // ECDSA is a plain value
-});
-
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -258,26 +239,8 @@ Check your language's Pulumi SDK documentation for a complete listing:
 
 In Pulumi programs, you will often use one resource's output as another resource's input. Pulumi will keep track of this dependency behind the scenes to ensure that your resources are changed in the necessary order:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let password = new random.RandomPassword("password", {
-    length: 16,
-    special: true,
-    overrideSpecial: "!#$%&*()-_=+[]{}<>:?",
-});
-let example = new aws.rds.Instance("example", {
-    instanceClass: "db.t3.micro",
-    allocatedStorage: 64,
-    engine: "mysql",
-    username: "someone",
-    password: password.result, // We pass the output from password as an input
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

@@ -44,19 +44,7 @@ You cannot create [stack outputs](/docs/iac/concepts/stacks/#outputs) (using `ex
 
 Suppose you want to print the ID of a resource you've created. These kinds of values are outputs - values that cannot be known until after a resource is provisioned. You might try logging the value like you would any other string:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-{{< example-program-snippet path="awsx-vpc" language="javascript" from="1" to="3" >}}
-
-{{< example-program-snippet path="awsx-vpc" language="javascript" from="6" to="6" >}}
-
-console.log(vpc.vpcId);
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -124,26 +112,6 @@ print(vpc.vpc_id)
 {{% /choosable %}}
 
 However, if you run the program as shown with `pulumi up`, you will receive something like the following CLI output:
-
-{{% choosable language javascript %}}
-
-```bash
-# Example CLI output (truncated)
-Diagnostics:
-  pulumi:pulumi:Stack (aws-js-dev):
-    OutputImpl {
-      __pulumiOutput: true,
-      resources: [Function (anonymous)],
-      allResources: [Function (anonymous)],
-      isKnown: Promise { <pending> },
-      isSecret: Promise { <pending> },
-      promise: [Function (anonymous)],
-      toString: [Function (anonymous)],
-      toJSON: [Function (anonymous)]
-    }
-```
-
-{{% /choosable %}}
 
 {{% choosable language typescript %}}
 
@@ -240,19 +208,7 @@ This is where {{< pulumi-apply >}} comes into play: When a Pulumi program is exe
 
 To print out the value of the VPC ID, use the `apply` function:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-{{< example-program-snippet path="awsx-vpc" language="javascript" from="1" to="3" >}}
-
-{{< example-program-snippet path="awsx-vpc" language="javascript" from="6" to="6" >}}
-
-vpc.vpcId.apply(id => console.log(`VPC ID: ${id}`));
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -385,22 +341,7 @@ cert: {
 
 Suppose you want to validate your certificate by creating an [Amazon Route 53 record](/registry/packages/aws/api-docs/route53/record/). To do so, you will need to retrieve the value of the resource record from the ACM certificate. This value is nested in the domain validation options property of the certificate resource, which is an array. Because that value is an output, you would normally need to use {{< pulumi-apply >}} to retrieve it:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-let certValidation = new aws.route53.Record("cert_validation", {
-    records: [
-        // Need to pass along a deep subproperty of this Output
-        certCertificate.domainValidationOptions.apply(
-            domainValidationOptions => domainValidationOptions[0].resourceRecordValue),
-    ],
-    ...
-});
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -502,22 +443,7 @@ Lifting works in most scenarios for accessing nested properties and array elemen
 
 Returning to the certificate validation example from the previous section, you can use lifting to simplify the code as shown below:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-let certValidation = new aws.route53.Record("cert_validation", {
-    records: [
-        // Lifting: Access nested property directly, without apply
-        // Type: certCertificate.domainValidationOptions is Output<Array>
-        // Result: certCertificate.domainValidationOptions[0].resourceRecordValue is Output<string>
-        certCertificate.domainValidationOptions[0].resourceRecordValue
-    ],
-...
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -634,21 +560,7 @@ Outputs that return to the engine as strings cannot be used directly in operatio
 
 For example, the following code creates an HTTPS URL from the DNS name (the plain value) of a virtual machine (in this case an EC2 instance):
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml,yaml" / >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-{{< example-program-snippet path="aws-ec2-instance-with-sg" language="javascript" from="1" to="4" >}}
-{{< example-program-snippet path="aws-ec2-instance-with-sg" language="javascript" from="17" to="19" >}}
-{{< example-program-snippet path="aws-ec2-instance-with-sg" language="javascript" from="21" to="21" >}}
-
-const url = server.publicDns.apply(dnsName => `https://${dnsName}`);
-
-exports.InstanceUrl = url;
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -777,12 +689,6 @@ If you have an output in the form of a JSON string and you need to interact with
 The following example shows how to use a helper method to parse an IAM policy defined as a `pulumi.Output<string>` into a native object and then manipulate that object to remove all of the policy statements:
 
 {{< example-program path="aws-iampolicy-jsonparse" >}}
-
-{{% choosable language javascript %}}
-
-For more details [view the Node.js documentation](/docs/reference/pkg/nodejs/pulumi/pulumi/).
-
-{{% /choosable %}}
 
 {{% choosable language typescript %}}
 

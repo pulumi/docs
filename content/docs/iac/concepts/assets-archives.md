@@ -35,17 +35,8 @@ There are three types of `Asset` objects:
 - `StringAsset`: The contents of the asset are read from a string in memory.
 - `RemoteAsset`: The contents of the asset are read from an `http`, `https` or `file` URI.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let fileAsset = new pulumi.asset.FileAsset("./file.txt");
-let stringAsset = new pulumi.asset.StringAsset("Hello, world!");
-let remoteAsset = new pulumi.asset.RemoteAsset("http://worldclockapi.com/api/json/est/now");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -111,19 +102,8 @@ variables:
 
 Any of these assets can be passed to a resource accepting an `Asset` as input.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let object = new aws.s3.BucketObject(`obj`, {
-    bucket: bucket.id,
-    key: key,
-    source: fileAsset,
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -204,20 +184,8 @@ There are three types of `Archive` objects:
 - `RemoteArchive`: The contents of the asset are read from an `http`, `https` or `file` URI, which must produce an archive of one of the same supported types as `FileArchive`.
 - `AssetArchive`:  The contents of the archive are read from a map of either [`Asset`](#asset) or [`Archive`](#archive) objects, one file or folder respectively per entry in the map.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let fileArchive = new pulumi.asset.FileArchive("./file.zip");
-let remoteArchive = new pulumi.asset.RemoteArchive("http://contoso.com/file.zip");
-let assetArchive = new pulumi.asset.AssetArchive({
-    "file": new pulumi.asset.StringAsset("Hello, world!"),
-    "folder": new pulumi.asset.FileArchive("./folder"),
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -305,20 +273,8 @@ Note that a folder may be passed to `FileArchive` to construct an archive from t
 
 Any of these archives can be passed to a resource accepting an `Archive` as input.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let fn = new aws.lambda.Function(`fn`, {
-    role: role.arn,
-    runtime: "python3.7",
-    handler: "hello.handler",
-    code: fileArchive,
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

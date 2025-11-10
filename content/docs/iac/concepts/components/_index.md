@@ -32,19 +32,8 @@ To author a new component, either in a program or for a reusable library, create
 
 Here's a simple component example:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-class MyComponent extends pulumi.ComponentResource {
-    constructor(name, myComponentArgs, opts) {
-        super("pkg:index:MyComponent", name, {}, opts);
-    }
-}
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -307,23 +296,8 @@ Component resources often contain child resources. The names of child resources 
 
 This example demonstrates both the naming convention and how to designate the component resource as the parent:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-class MyComponent extends pulumi.ComponentResource {
-    constructor(name, myComponentArgs, opts) {
-        super("pkg:index:MyComponent", name, {}, opts);
-
-        // Create Child Resource
-        this.bucket = new aws.s3.Bucket(`${name}-bucket`,
-            {}, { parent: this });
-    }
-}
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -443,27 +417,8 @@ Component resources can define their own output properties. Outputs in a compone
 
 For example, this code registers an S3 bucket's computed domain name, which won't be known until the bucket is created:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-class MyComponent extends pulumi.ComponentResource {
-    constructor(name, myComponentArgs, opts) {
-        super("pkg:index:MyComponent", name, {}, opts);
-
-        this.bucket = new aws.s3.Bucket(`${name}-bucket`,
-            {}, { parent: this });
-
-        // Registering Component Outputs
-        this.registerOutputs({
-            bucketDnsName: this.bucket.bucketDomainName
-        });
-    }
-}
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -623,20 +578,8 @@ One option all resources have is the ability to pass an [explicit resource provi
 
 To allow this, component resources accept a `providers` option that custom resources don't have. This value contains a map from the provider name to the explicit provider instance to use for the component resource. The map is used by a component resource to fetch the proper `provider` object to use for any child resources. This example overrides the globally configured AWS region and sets it to us-east-1. Note that `myk8s` is the name of the Kubernetes provider.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let component = new MyComponent("...", {
-    providers: {
-        aws: useast1,
-        kubernetes: myk8s,
-    },
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

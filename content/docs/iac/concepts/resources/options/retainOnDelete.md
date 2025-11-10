@@ -27,15 +27,8 @@ Once the resource is no longer marked retained, it can be fully deleted as part 
 
 The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let db = new Database("db", {}, { retainOnDelete: true });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
