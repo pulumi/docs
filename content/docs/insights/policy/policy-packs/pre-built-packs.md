@@ -36,6 +36,10 @@ The following pre-built policy packs are available today out of the box in Pulum
 | **PCI DSS v4.0.1** | [AWS](/docs/reference/pre-built-policy-packs/pci-dss/aws/) | Enforces PCI DSS v4.0.1 compliance controls for AWS resources, ensuring payment card data security and helping organizations meet payment card industry standards. |
 | **Pulumi Best Practices** | [AWS](/docs/reference/pre-built-policy-packs/pulumi-best-practices/aws/), [Azure](/docs/reference/pre-built-policy-packs/pulumi-best-practices/azure/), [Google Cloud](/docs/reference/pre-built-policy-packs/pulumi-best-practices/google-cloud/) | Offers a foundational set of recommended governance and security controls, serving as a strong starting point for organizations seeking comprehensive security coverage. |
 
+<% notes type="info" %>
+Availability of specific pre-built policy packs may vary based on your Pulumi Cloud plan. For more details on plan features, visit the [Pulumi Pricing page](/pricing/).
+<% /notes %>
+
 ### Enabling Pulumi policy packs for your organization
 
 Pulumi policy packs can be enabled at the **organization level**, allowing you to enforce compliance and governance standards across all projects and stacks within your organization.
