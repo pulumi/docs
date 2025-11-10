@@ -26,7 +26,7 @@ Pulumi Cloud comes with pre-built policy packs that codify best practices for co
 
 ### Available policy packs
 
-The following pre-built policy packs are available today out of the box in Pulumi Cloud.
+The following pre-built policy packs are available today out of the box in Pulumi Cloud. For details on which packs are included with each Pulumi Cloud plan, see [Pricing](/pricing/).
 
 | Framework | Supported Cloud Providers | Description |
 | ----- | ----- | ----- |
@@ -35,10 +35,6 @@ The following pre-built policy packs are available today out of the box in Pulum
 | **NIST SP 800-53** | [AWS](/docs/reference/pre-built-policy-packs/nist/aws/) | Enforces NIST SP 800-53 rev. 5 security and privacy controls for AWS resources, helping federal agencies and organizations meet rigorous compliance requirements. |
 | **PCI DSS v4.0.1** | [AWS](/docs/reference/pre-built-policy-packs/pci-dss/aws/) | Enforces PCI DSS v4.0.1 compliance controls for AWS resources, ensuring payment card data security and helping organizations meet payment card industry standards. |
 | **Pulumi Best Practices** | [AWS](/docs/reference/pre-built-policy-packs/pulumi-best-practices/aws/), [Azure](/docs/reference/pre-built-policy-packs/pulumi-best-practices/azure/), [Google Cloud](/docs/reference/pre-built-policy-packs/pulumi-best-practices/google-cloud/) | Offers a foundational set of recommended governance and security controls, serving as a strong starting point for organizations seeking comprehensive security coverage. |
-
-<% notes type="info" %>
-Availability of specific pre-built policy packs may vary based on your Pulumi Cloud plan. For more details on plan features, visit the [Pulumi Pricing page](/pricing/).
-<% /notes %>
 
 ### Enabling Pulumi policy packs for your organization
 
