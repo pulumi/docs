@@ -101,9 +101,13 @@ For each image or diagram referenced in the document:
 - Whether the image adds value or is decorative
 - Maintenance overhead concerns (per AGENTS.md: "Be wary of images due to maintenance overhead")
 
-### 3. Load reference images
+### 3. Load reference images (if needed)
 
-Before analyzing screenshots in the document, load the reference images to compare against:
+**Only load reference images if the document contains screenshots or images.**
+
+After reading the target file in step 2, check if it contains any image references (e.g., `![alt text](image-path)`). If no images are present, skip this step to avoid wasting tokens.
+
+If the document contains screenshots, load the reference images to compare against:
 
 1. Read `.claude/reference-images/pulumi-logo-current.png` to see the current Pulumi logo
 2. Read `.claude/reference-images/pulumi-cloud-console-current.png` to see the current Cloud Console UI
@@ -251,7 +255,7 @@ Report verification results to the user, including any flagged images that need 
 - Focus on helping users accomplish their goals
 
 **Image analysis guidelines:**
-- Always load reference images first (`.claude/reference-images/pulumi-logo-current.png` and `.claude/reference-images/pulumi-cloud-console-current.png`)
+- Only load reference images (`.claude/reference-images/pulumi-logo-current.png` and `.claude/reference-images/pulumi-cloud-console-current.png`) if the document contains screenshots or images
 - Compare screenshots against reference images rather than relying on memory
 - Always use the Read tool to view images before commenting on them
 - Be specific about what appears outdated (UI elements, logos, branding)
