@@ -24,11 +24,11 @@ Pulumi Cloud is a managed service that helps teams adopt collaborative, secure, 
 
 Pulumi IaC can also be used with a self-managed backend if you prefer, which comes with some tradeoffs outlined below.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 An analogy to other software you may be familiar with is that, just like Git is fully open source and you can host, secure, and manage repositories yourself, so too can you with hosting your Pulumi infrastructure as code projects and stacks. However, especially in a team setting, using Git in conjunction with GitHub provides built-in security, reliability, and collaboration features like Pull Requests. A similar dynamic exists with Pulumi and Pulumi Cloud.
 {{% /notes %}}
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 For technical details on how Pulumi manages state and how to configure different backends, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{% /notes %}}
 
@@ -70,6 +70,7 @@ Pulumi Cloud is the easiest way to adopt Pulumi's open source IaC tool at scale,
 
 That said, DIY backends are fully supported, and this article aims to help you make an informed decision about which option best suits your use case. The [state and backends topic](/docs/iac/concepts/state-and-backends/) describes in-depth how Pulumi IaC uses Pulumi Cloud and DIY backends and other architectural considerations.
 
-A complete list of Pulumi Cloud's features and capabilities is available [on the pricing page](/pricing#compare). For more details about adopting Pulumi Cloud in your team, [see the onboarding guide](/docs/deployments/get-started/onboarding-guide). This guide also includes best practices to help you completely adopt the full platform.
+A complete list of Pulumi Cloud's features and capabilities is available [on the pricing page](/pricing#compare). For more details about adopting Pulumi Cloud in your team, [see the onboarding guide](/docs/deployments/get-started/onboarding-guide/). This guide also includes best practices to help you completely adopt the full platform.
 
 To get started today, [sign up for a free Pulumi Cloud account](https://app.pulumi.com/signup). Pulumi Cloud is free for individuals and small teams, and has advanced capabilities for larger teams and enterprises.
+
