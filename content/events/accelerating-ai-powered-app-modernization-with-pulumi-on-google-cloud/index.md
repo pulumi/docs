@@ -21,12 +21,12 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: false
+external: true
 block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: accelerating-ai-powered-app-modernization-with-pulumi-on-google-cloud
+url_slug: https://rsvp.withgoogle.com/events/accelerating-ai-powered-app-modernization-with-pulumi-on-google-cloud
 
 # Content for the left hand side section of the page.
 main:
@@ -38,7 +38,7 @@ main:
     youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-11-18T10:00:00-08:00
+    sortable_date: 2025-12-17T10:00:00-08:00
 
     # Duration of the webinar.
     duration: 60 minutes
@@ -65,7 +65,9 @@ main:
         - name: Jay Smith
           role: Sr. Cloud Customer Engineer, GCP
           photo: /images/team/jason-smith.jpg
-        - name: Pulumi Staff
+        - name: Mitch Gerdisch
+          role: Principal Solutions Architect, Pulumi
+          photo: /images/team/mitch-gerdisch.jpg
 
     # case-sensitive
     tags:
