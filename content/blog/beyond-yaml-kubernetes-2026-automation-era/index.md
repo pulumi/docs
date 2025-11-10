@@ -67,7 +67,7 @@ social:
 
 Kubernetes continues to evolve, powering not only applications but entire AI and ML systems across clouds, edges, and enterprises. By 2026, DevOps engineers, SREs, cloud engineers, and platform teams face growing pressure to deliver faster, smarter, and more secure infrastructure at scale.
 
-Automation, policy, and intelligent infrastructure as code are now converging. Pulumi’s 2025 Kubernetes advancements, including [Pulumi Kubernetes Operator 2.0 GA](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-0-ga/), [Crosswalk for Kubernetes](https://www.pulumi.com/docs/guides/crosswalk/kubernetes/), and [Policy as Code](https://www.pulumi.com/product/policy-as-code/), set the foundation for a new era of Kubernetes automation that extends across every role involved in managing modern infrastructure.
+Automation, policy, and intelligent infrastructure as code are now converging. Pulumi’s 2025 Kubernetes advancements, including [Pulumi Kubernetes Operator 2.0 GA](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-0-ga/), [Kubernetes beast-practices playbooks](https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/playbooks/), and [Policy Automation](https://www.pulumi.com/docs/insights/policy/), set the foundation for a new era of Kubernetes automation that extends across every role involved in managing modern infrastructure.
 
 <!--more-->
 
@@ -84,11 +84,13 @@ Teams across disciplines face similar challenges:
 
 Pulumi addresses these challenges by introducing **general-purpose programming languages** such as TypeScript, Python, Go, C#, and Java into Kubernetes management. This approach enables teams to define, test, and share reusable infrastructure code, bridging the gap between declarative manifests and modern software engineering practices.
 
-Learn more: [Pulumi Kubernetes documentation](https://www.pulumi.com/docs/clouds/kubernetes/)
+{{< youtube "Q8WKLq-v_6k?rel=0" >}}
+
+Learn more: [Pulumi Kubernetes documentation](https://www.pulumi.com/docs/iac/clouds/kubernetes/)
 
 ## The 2026 Shift: AI-Assisted Kubernetes Operations
 
-The next phase of Kubernetes management will be AI-driven, context-aware, and self-healing. Infrastructure will not only follow instructions but understand intent. This is the vision behind [**Pulumi Neo**](https://www.pulumi.com/product/neo/), an AI Platform Engineer designed to help teams automate complex systems.
+The next phase of Kubernetes management will be AI-driven, context-aware, and self-healing. Infrastructure will not only follow instructions but also understand intent. This is the vision behind [**Pulumi Neo**](https://www.pulumi.com/product/neo/), an AI Infrastructure Agent designed to help teams automate complex systems.
 
 Pulumi Neo can interpret natural-language requests such as “deploy a GPU-backed EKS cluster with three node groups,” generate infrastructure code that adheres to organizational policies, and continuously refine that code as environments change.
 
@@ -113,7 +115,7 @@ This enables:
 - Integration with GitOps systems such as Argo CD and Flux
 - Continuous reconciliation and drift detection through Pulumi’s state and policy engine
 
-Documentation: [Using the Pulumi Kubernetes Operator](https://www.pulumi.com/docs/guides/continuous-delivery/pulumi-kubernetes-operator/)
+Documentation: [Using the Pulumi Kubernetes Operator](https://www.pulumi.com/docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/)
 
 ## Kubernetes for AI, Cloud, and Platform Teams
 
@@ -124,7 +126,7 @@ Pulumi enables:
 - GPU-backed infrastructure as code across EKS, AKS, and GKE
 - Dynamic policies for secure experimentation and compliance
 - Reusable components for consistent platform and MLOps pipelines
-- Centralized secrets and configurations with [Pulumi ESC](https://www.pulumi.com/product/pulumi-esc/)
+- Centralized secrets and configurations with [Pulumi ESC](https://www.pulumi.com/product/secrets-management/)
 
 Paired with Pulumi Insights for observability and Pulumi Neo for AI-driven assistance, engineering teams can automate operations that previously required hours of manual work, directly from their IDE or Kubernetes console.
 
@@ -138,7 +140,7 @@ This hybrid approach enables modernization without disrupting existing CI/CD pip
 
 For teams preparing for the next phase of Kubernetes management in 2026:
 
-1. [Get Started with Kubernetes](https://www.pulumi.com/docs/get-started/kubernetes/) to create your first Pulumi program.
+1. [Get Started with Kubernetes](https://www.pulumi.com/docs/iac/get-started/kubernetes/) to create your first Pulumi program.
 2. Add the [Pulumi Kubernetes Operator](https://www.pulumi.com/docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/) to enable infrastructure deployments from within your clusters.
 3. Integrate GitOps workflows with Argo CD, Flux, or Jenkins X.
 4. [Apply policy guardrails](https://www.pulumi.com/docs/insights/policy/) to enforce security and compliance automatically.
@@ -153,7 +155,7 @@ Join the hands-on workshop [*From Zero to Production in Kubernetes*](https://www
 - Automate workloads with agentic workflows and modern GitOps practices
 - Reduce YAML complexity while maintaining reliability and speed
 
-[Register now](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) to reserve your seat.
+[Register now](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/).
 
 ## Visit Pulumi at KubeCon 2025 Booth #1045
 
@@ -166,7 +168,11 @@ If you plan to attend [KubeCon + CloudNativeCon North America 2025](https://www.
 
 [Schedule your expert session](https://calendly.com/pulumi-meetings/demo-pulumi-at-kubecon-atlanta) and explore how Pulumi simplifies Kubernetes at scale.
 
-## Final Thought
+## Final Thoughts
 
 Kubernetes in 2026 and beyond is not just for platform engineers. It is for DevOps professionals, SREs, and cloud teams, big and small, responsible for maintaining infrastructure security, reliability, and performance.
 Pulumi unifies infrastructure as code, secrets management, policy governance, and AI automation into a single platform, enabling every team to adopt an intelligent, code-driven approach to Kubernetes that scales across workloads, clouds, and the AI-driven future.
+
+{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+
+
