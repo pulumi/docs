@@ -23,6 +23,10 @@ The dynamic resource provider construct can be used to build a local provider fo
 **Note:** The Pulumi registry includes the [Command Provider](https://www.pulumi.com/registry/packages/command/) as an even lighter weight solution and can be used in place of a dynamic resource provider in some cases.
 {{% /notes %}}
 
+{{% notes type="info" %}}
+**Note:** [Pulumi Policy Packs](/docs/insights/policy/) can be used to validate dynamic provider resources. However, since all dynamic resources share the same resource type (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python), policies must identify specific dynamic providers by checking for unique properties. See [Writing policies for dynamic providers](/docs/insights/policy/policy-packs/authoring/#writing-policies-for-dynamic-providers) for examples and best practices.
+{{% /notes %}}
+
 There are several reasons why you might want to write a dynamic resource provider. Here are some of them:
 
 - You want to create some new custom resource types.
