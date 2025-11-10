@@ -58,7 +58,7 @@ State files are encrypted at rest and in transit. Pulumi's [secrets model](/docs
 
 ### Governance and extensibility
 
-Pulumi Cloud enables organization-wide policies using [Pulumi CrossGuard](/crossguard/) for security, compliance, and cost enforcement. Policies can block violations at deployment time or find and remediate existing violations through Pulumi Insights, with support for auto-remediation.
+Pulumi Cloud enables organization-wide policies using [Pulumi Policies](/docs/insights/policy/) for security, compliance, and cost enforcement. Policies can block violations at deployment time or find and remediate existing violations using [Pulumi Insights Discovery](/docs/insights/discovery/) with support for auto-remediation.
 
 [Private templates](/docs/idp/developer-portals/templates/) and [an Internal Developer Platform experience](/docs/idp/developer-portals/new-project-wizard/) allow you to define approved infrastructure patterns for your organization. [Drift detection](/docs/deployments/deployments/drift/) identifies manual changes made outside of infrastructure as code, with automatic remediation capabilities.
 
