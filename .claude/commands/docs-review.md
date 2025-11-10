@@ -6,7 +6,41 @@ description: Review changes for style, accuracy, and Pulumi best practices. Cont
 
 You will review documentation changes and provide feedback on style, accuracy, and best practices.
 
+---
+
+## Usage
+
+`/docs-review [PR_NUMBER]`
+
+Reviews documentation changes for style, accuracy, and Pulumi best practices.
+
+The `PR_NUMBER` argument is optional. If not provided in interactive mode, the command will auto-detect scope from IDE context (open files), uncommitted changes, or branch changes.
+
+---
+
+## Context Detection
+
+This command operates in two modes based on execution context:
+
+**CI Mode** - Detected when the prompt includes "You are running in a CI environment"
+- Minimizes token usage by working primarily from diffs
+- Posts review as a PR comment using `gh pr comment`
+- Tool access is restricted (no `make` commands, limited to Read, Glob, Grep, and gh commands)
+- Applies special handling for efficiency (e.g., trailing newline checks)
+
+**Interactive Mode** - When running in IDE or terminal (outside CI)
+- Provides review directly in the conversation (never uses `gh pr comment`)
+- Full tool access available
+- Auto-detects scope from:
+  1. Open files in IDE (from system reminders)
+  2. Uncommitted changes (git status)
+  3. Branch changes (git merge-base)
+
+---
+
 ## Instructions for Docs Review
+
+Follow the appropriate section below based on your execution context:
 
 ### Continuous Integration (CI) Context
 
