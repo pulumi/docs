@@ -26,15 +26,8 @@ Once the resource is unprotected, it can be deleted as part of a following updat
 
 The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let db = new Database("db", {}, { protect: true});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

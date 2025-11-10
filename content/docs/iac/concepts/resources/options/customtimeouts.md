@@ -21,16 +21,8 @@ For the most part, Pulumi automatically waits for operations to complete and tim
 
 This example specifies that the create operation should wait up to 30 minutes to complete before timing out:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let db = new Database("db", {/*...*/},
-    { customTimeouts: { create: "30m" } });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

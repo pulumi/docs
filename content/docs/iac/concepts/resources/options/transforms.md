@@ -23,25 +23,8 @@ Each transform is a callback that gets invoked by the Pulumi engine. It receives
 
 This example looks for all VPC and Subnet resources inside of a component’s child hierarchy and adds an option to ignore any changes for tags properties (perhaps because we manage all VPC and Subnet tags outside of Pulumi):
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const vpc = new MyVpcComponent("vpc", {}, {
-    transforms: [args => {
-        if (args.type === "aws:ec2/vpc:Vpc" || args.type === "aws:ec2/subnet:Subnet") {
-            return {
-                props: args.props,
-                opts: pulumi.mergeOptions(args.opts, { ignoreChanges: ["tags"] })
-            }
-        }
-        return undefined;
-    }],
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -138,20 +121,7 @@ var vpc = new MyVpcComponent("vpc", new ComponentResourceOptions
 
 Transforms can also be applied in bulk to many or all resources in a stack by using Stack transforms, which are applied to the root stack resource and as a result inherited by all other resources in the stack.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-pulumi.runtime.registerResourceTransform(args => {
-    if (isTaggable(args.type)) {
-        args.props["tags"] = Object.assign(args.props["tags"], autoTags);
-        return { props: args.props, opts: args.opts };
-    }
-};
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
