@@ -26,7 +26,7 @@ Pulumi Cloud comes with pre-built policy packs that codify best practices for co
 
 ### Available policy packs
 
-The following pre-built policy packs are available today out of the box in Pulumi Cloud.
+The following pre-built policy packs are available out of the box in Pulumi Cloud. Availability varies by plan—see [Pricing](/pricing/) for details.
 
 | Framework | Supported Cloud Providers | Description |
 | ----- | ----- | ----- |
