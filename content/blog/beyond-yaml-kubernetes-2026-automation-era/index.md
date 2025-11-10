@@ -67,13 +67,13 @@ social:
 
 Kubernetes continues to evolve, powering not only applications but entire AI and ML systems across clouds, edges, and enterprises. By 2026, DevOps engineers, SREs, cloud engineers, and platform teams face growing pressure to deliver faster, smarter, and more secure infrastructure at scale.
 
-Automation, policy, and intelligent infrastructure as code are now converging. Pulumi’s 2025 Kubernetes advancements, including [Pulumi Kubernetes Operator 2.0 GA](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-0-ga/), [Kubernetes beast-practices playbooks](https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/playbooks/), and [Policy Automation](https://www.pulumi.com/docs/insights/policy/), set the foundation for a new era of Kubernetes automation that extends across every role involved in managing modern infrastructure.
+Automation, policy, and intelligent infrastructure as code are now converging. Pulumi’s 2025 Kubernetes advancements, including [Pulumi Kubernetes Operator 2.0 GA](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-0-ga/), [Kubernetes best-practices playbooks](https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/playbooks/), and [Policy Automation](https://www.pulumi.com/docs/insights/policy/), set the foundation for a new era of Kubernetes automation that extends across every role involved in managing modern infrastructure.
 
 <!--more-->
 
 ## Why Kubernetes Needs to Go Beyond YAML
 
-The article [*Kubernetes Best Practices I Wish I Had Known Before*](https://www.pulumi.com/blog/kubernetes-best-practices-i-wish-i-had-known-before/) highlights a key challenge: relying solely on YAML as the source of truth for Kubernetes is no longer sustainable. Clusters are dynamic, environments multiply, and static YAML files cannot keep up with modern infrastructure complexity.
+The article [*Kubernetes Best Practices I Wish I Had Known Before*](https://www.pulumi.com/blog/kubernetes-best-practices-i-wish-i-had-known-before/) highlights a key challenge: relying solely on YAML as the source of truth for Kubernetes is no longer sustainable. Clusters are dynamic, environments multiply, and static YAML files cannot keep up with the complexity of modern infrastructure.
 
 Teams across disciplines face similar challenges:
 
@@ -146,7 +146,7 @@ For teams preparing for the next phase of Kubernetes management in 2026:
 4. [Apply policy guardrails](https://www.pulumi.com/docs/insights/policy/) to enforce security and compliance automatically.
 5. Refactor infrastructure into [reusable components](https://www.pulumi.com/docs/iac/concepts/components/) for consistent, scalable operations.
 
-## Register for the Workshop: From Zero to Production in Kubernetes
+## Workshop: From Zero to Production in Kubernetes
 
 Experience Kubernetes automation in practice.
 Join the hands-on workshop [*From Zero to Production in Kubernetes*](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) to learn how to:
@@ -174,5 +174,3 @@ Kubernetes in 2026 and beyond is not just for platform engineers. It is for DevO
 Pulumi unifies infrastructure as code, secrets management, policy governance, and AI automation into a single platform, enabling every team to adopt an intelligent, code-driven approach to Kubernetes that scales across workloads, clouds, and the AI-driven future.
 
 {{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
-
-
