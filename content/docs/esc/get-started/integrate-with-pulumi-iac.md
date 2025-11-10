@@ -67,7 +67,7 @@ That's it! Your Pulumi program now retrieves configuration and secrets from ESC.
 
 ### Centralizing cloud credentials
 
-Share AWS OIDC credentials across multiple stacks:
+To share AWS OIDC credentials across multiple stacks, configure your ESC environment like this:
 
 ```yaml
 values:
