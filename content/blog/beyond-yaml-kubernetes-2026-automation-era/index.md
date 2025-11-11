@@ -88,6 +88,23 @@ Pulumi addresses these challenges by introducing **general-purpose programming l
 
 Learn more: [Pulumi Kubernetes documentation](https://www.pulumi.com/docs/iac/clouds/kubernetes/)
 
+## The 2026 Convergence of AI, Platforms, and Policy in Kubernetes
+
+The [CNCF State of Cloud Native Development Q3 2025](https://www.cncf.io/wp-content/uploads/2025/11/cncf_report_stateofcloud_111025a.pdf) report shows that more than half of DevOps professionals and nearly a third of all developers now identify as cloud native. Adoption of hybrid and multi-cloud architectures continues to grow, while AI and ML workloads are becoming first-class citizens in Kubernetes environments. The report notes that over 40% of ML and AI developers are building or deploying on cloud-native infrastructure, confirming that Kubernetes has become the foundation for intelligent, scalable systems.
+
+This trend highlights how the next generation of Kubernetes operations is evolving. Teams need unified platforms that simplify AI-driven workloads, automatically enforce governance, and reduce operational complexity across environments. Pulumi already delivers this through an integrated platform that brings automation, security, and developer productivity together in one place.
+
+Pulumi’s platform provides a complete foundation for intelligent infrastructure management that extends from development to production.
+
+- [**Pulumi Neo**](https://www.pulumi.com/product/neo/) adds AI-assisted infrastructure management that turns natural language into production-ready Kubernetes and cloud code.
+- [**Pulumi IDP**](https://www.pulumi.com/product/internal-developer-platforms/) enables engineering and platform teams to build self service environments that abstract complexity for developers while maintaining consistency and control.
+- [**Pulumi Policies**](https://www.pulumi.com/product/insights-governance/) brings continuous compliance and policy enforcement directly into the delivery workflow.
+- [**Pulumi ESC**](https://www.pulumi.com/product/secrets-management/) secures credentials, API keys, and sensitive configurations across Kubernetes and cloud environments.
+
+Together, these capabilities form a unified automation and governance layer for Kubernetes and cloud native systems.
+
+The result is a model where infrastructure, policy, and developer experience work together to power secure, scalable, and AI-ready platforms that meet the needs of engineering teams of every size and discipline, from application development to security and cloud operations.
+
 ## The 2026 Shift: AI-Assisted Kubernetes Operations
 
 The next phase of Kubernetes management will be AI-driven, context-aware, and self-healing. Infrastructure will not only follow instructions but also understand intent. This is the vision behind [**Pulumi Neo**](https://www.pulumi.com/product/neo/), an AI Infrastructure Agent designed to help teams automate complex systems.
