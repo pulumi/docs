@@ -1,14 +1,16 @@
 ---
-title_tag: Retrieve External Secrets | Pulumi ESC
-title: Retrieve secrets from external sources
-h1: "Pulumi ESC: Retrieve Secrets from External Sources"
-meta_desc: This page provides an overview on how to retrieve secrets from external sources.
-weight: 8
+title_tag: Integrating External Secrets | Pulumi ESC
+title: Integrating External Secrets
+h1: Integrating External Secrets with Pulumi ESC
+meta_desc: Learn how to integrate Pulumi ESC with external secret providers like AWS Secrets Manager, Azure Key Vault, and Google Cloud Secret Manager.
 menu:
   esc:
-    parent: esc-get-started
-    identifier: esc-get-started-retrieve-external-secrets
+    parent: esc-guides
+    identifier: esc-guides-external-secrets
+    weight: 6
 aliases:
+  - /docs/esc/get-started/retrieve-external-secrets/
+  - /docs/pulumi-cloud/esc/get-started/retrieve-external-secrets/
 ---
 
 ## Overview
@@ -23,7 +25,7 @@ This enables you to centralize both new and existing secrets and configurations 
 
 ## Import external secrets
 
-If you have not done so already, make sure you have [configured OIDC connectivity](/docs/esc/get-started/begin/#configure-openid-connect-oidc) between Pulumi and a supported provider listed below. During the configuration, you will need to make sure that you add the permissions necessary to interact with secrets in your chosen provider.
+If you have not done so already, make sure you have [configured OIDC connectivity](/docs/esc/guides/setting-up-oidc/) between Pulumi and a supported provider listed below. During the configuration, you will need to make sure that you add the permissions necessary to interact with secrets in your chosen provider.
 
 {{% chooser cloud "aws,azure,gcp" / %}}
 
@@ -76,14 +78,14 @@ values:
             secretId: my-app-secret
 ```
 
-You can validate this configuration by [opening the environment via the ESC console](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-console), clicking the **Open** button and then clicking the **Show secrets** slider.
+You can validate this configuration by [opening the environment via the ESC console](/docs/esc/guides/managing-secrets/#retrieve-via-the-pulumi-cloud-console), clicking the **Open** button and then clicking the **Show secrets** slider.
 
 <video autoplay loop muted playsinline>
     <source src="https://www.pulumi.com/uploads/esc-show-aws-secret.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
-Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project-name>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
+Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/guides/managing-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project-name>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
 
 ```bash
 $ esc env open pulumi/demos/aws-secrets-example
@@ -173,14 +175,14 @@ values:
             name: my-app-secret
 ```
 
-You can validate this configuration by [opening the environment via the ESC console](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-console), clicking the **Open** button and then clicking the **Show secrets** slider.
+You can validate this configuration by [opening the environment via the ESC console](/docs/esc/guides/managing-secrets/#retrieve-via-the-pulumi-cloud-console), clicking the **Open** button and then clicking the **Show secrets** slider.
 
 <video autoplay loop muted playsinline>
     <source src="https://www.pulumi.com/uploads/esc-show-azure-secret.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
-Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
+Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/guides/managing-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
 
 ```bash
 $ esc env open pulumi/demos/azure-secrets-example
@@ -269,14 +271,14 @@ values:
             name: my-app-secret
 ```
 
-You can validate this configuration by [opening the environment via the ESC console](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-console), clicking the **Open** button and then clicking the **Show secrets** slider.
+You can validate this configuration by [opening the environment via the ESC console](/docs/esc/guides/managing-secrets/#retrieve-via-the-pulumi-cloud-console), clicking the **Open** button and then clicking the **Show secrets** slider.
 
 <video autoplay loop muted playsinline>
     <source src="https://www.pulumi.com/uploads/esc-show-gcp-secret.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
-Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project-name>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
+Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/guides/managing-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project-name>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
 
 ```bash
 $ esc env open pulumi/demos/gcp-secrets-example
@@ -315,4 +317,16 @@ values:
 
 {{% /choosable %}}
 
-{{< get-started-stepper >}}
+## Next steps
+
+- [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) - Use external secrets in your infrastructure code
+- [Setting up OIDC](/docs/esc/guides/setting-up-oidc/) - Learn more about configuring OIDC for dynamic credentials
+- [Managing secrets](/docs/esc/guides/managing-secrets/) - Understand how to organize and retrieve secrets
+
+### Provider-specific documentation
+
+For complete documentation on each secrets provider:
+
+- [AWS Secrets Manager integration](/docs/esc/integrations/dynamic-secrets/aws-secrets/)
+- [Azure Key Vault integration](/docs/esc/integrations/dynamic-secrets/azure-secrets/)
+- [Google Cloud Secret Manager integration](/docs/esc/integrations/dynamic-secrets/gcp-secrets/)

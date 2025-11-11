@@ -1,21 +1,28 @@
 ---
-title_tag: Integrate with Pulumi IaC | Pulumi ESC
+title_tag: Integrate ESC with Pulumi IaC
 title: Integrate with Pulumi IaC
-h1: "Pulumi ESC: Integrate with Pulumi IaC"
-meta_desc: This page provides an overview on how to use Pulumi ESC with Pulumi IaC.
-weight: 4
+h1: Integrate ESC with Pulumi IaC
+meta_desc: Learn how to use Pulumi ESC environments in your Pulumi infrastructure as code projects to centralize secrets and configuration.
 menu:
   esc:
-    parent: esc-get-started
-    identifier: esc-get-started-integrate-with-pulumi-iac
+    parent: esc-guides
+    identifier: esc-guides-integrate-pulumi-iac
+    weight: 1
 aliases:
+  - /docs/esc/get-started/integrate-with-pulumi-iac/
+  - /docs/pulumi-cloud/esc/get-started/integrate-with-pulumi-iac/
 ---
 
-## Overview
+This guide shows you how to integrate Pulumi ESC with your Pulumi IaC projects to centralize configuration and secrets across all your stacks.
 
-Add Pulumi ESC to your existing Pulumi IaC projects in three steps to centrally manage configuration and secrets across all your stacks. This integration works seamlessly everywhere Pulumi runs, including locally, in CI/CD, Pulumi Deployments, and GitHub Actions.
+## Prerequisites
 
-## Add ESC to your Pulumi project
+- [Pulumi CLI](/docs/install/) installed
+- [Pulumi account](https://app.pulumi.com/signup) created
+- An existing Pulumi project (or create one with `pulumi new`)
+- An ESC environment with configuration values (see [Managing secrets](/docs/esc/guides/managing-secrets/) to create one)
+
+## Add ESC to your Pulumi stack
 
 ### Step 1: Reference your ESC environment
 
@@ -33,7 +40,7 @@ environment:
   - my-org/aws-prod
 ```
 
-You can also reference multiple environments, which will be merged in order:
+You can also reference multiple environments, which will be merged in order (later values override earlier ones):
 
 ```yaml
 environment:
@@ -43,7 +50,22 @@ environment:
 
 ### Step 2: Define configuration in your ESC environment
 
-In your ESC environment file, use the `pulumiConfig` block to expose values to Pulumi IaC:
+ESC environments are YAML documents typically managed in Pulumi Cloud. To edit your environment:
+
+**Via the Pulumi Cloud console:**
+
+1. Navigate to [Pulumi Cloud](https://app.pulumi.com)
+1. Select **Environments** in the left navigation
+1. Select your environment to open the editor
+1. Add configuration in the YAML editor
+
+**Via the CLI:**
+
+```bash
+esc env edit <your-org>/<your-environment-name>
+```
+
+In your ESC environment, use the `pulumiConfig` block to expose values to Pulumi IaC:
 
 ```yaml
 values:
@@ -63,11 +85,11 @@ Use Pulumi's standard Configuration API to access these values in your infrastru
 
 That's it! Your Pulumi program now retrieves configuration and secrets from ESC. Run `pulumi preview` or `pulumi up` to see it in action.
 
-## Practical examples
+## Common patterns
 
-### Centralizing cloud credentials
+### Using dynamic cloud credentials
 
-To share AWS OIDC credentials across multiple stacks, configure your ESC environment like this:
+To share AWS OIDC credentials across multiple stacks, configure your ESC environment to generate short-lived credentials:
 
 ```yaml
 values:
@@ -85,11 +107,13 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-Learn more about [dynamic cloud credentials](/docs/esc/get-started/use-short-term-credentials/).
+This pattern works everywhere Pulumi runs: locally, in CI/CD, Pulumi Deployments, and GitHub Actions.
+
+Learn more in [Setting up OIDC](/docs/esc/guides/setting-up-oidc/).
 
 ### Managing API keys and secrets
 
-Store third-party API keys centrally and reference them across projects:
+Pull third-party API keys from external secret stores:
 
 ```yaml
 values:
@@ -102,7 +126,7 @@ values:
             secretId: https://my-keyvault.vault.azure.net/secrets/datadog-api-key
 ```
 
-Learn more about [retrieving secrets from external sources](/docs/esc/get-started/retrieve-external-secrets/).
+Learn more in [Integrating external secrets](/docs/esc/guides/external-secrets/).
 
 ### Environment-specific configuration
 
@@ -124,16 +148,11 @@ values:
     myApp:replicas: 3              # override for production
 ```
 
-Learn more about [importing and composing environments](/docs/esc/get-started/import-environments/).
+Learn more in [Importing environments](/docs/esc/guides/importing-environments/).
 
 ## Next steps
 
-Now that you've integrated ESC with your Pulumi IaC project, explore more ESC features:
-
-- [Store and retrieve secrets](/docs/esc/get-started/store-and-retrieve-secrets/) - Learn how to manage secrets in ESC
-- [Import environments](/docs/esc/get-started/import-environments/) - Compose environments for team boundaries
-- [Dynamic cloud credentials](/docs/esc/get-started/use-short-term-credentials/) - Generate short-lived OIDC credentials
-- [External secret providers](/docs/esc/get-started/retrieve-external-secrets/) - Pull secrets from AWS, Azure, GCP, and more
+- [Setting up OIDC](/docs/esc/guides/setting-up-oidc/) - Generate dynamic cloud credentials
+- [Integrating external secrets](/docs/esc/guides/external-secrets/) - Pull from AWS, Azure, GCP vaults
+- [Importing environments](/docs/esc/guides/importing-environments/) - Compose configuration hierarchies
 - [ESC + Pulumi IaC reference](/docs/esc/integrations/infrastructure/pulumi-iac/) - Complete integration documentation
-
-{{< get-started-stepper >}}

@@ -1,14 +1,16 @@
 ---
 title_tag: Import Environments | Pulumi ESC
-title: Import environments
-h1: "Pulumi ESC: Import Environments"
-meta_desc: This page provides an overview on how to import environments in Pulumi ESC.
-weight: 6
+title: Importing Environments
+h1: Importing Environments
+meta_desc: Learn how to import and compose Pulumi ESC environments to share configuration across teams and projects.
 menu:
   esc:
-    parent: esc-get-started
-    identifier: esc-get-started-import-environments
+    parent: esc-guides
+    identifier: esc-guides-importing-environments
+    weight: 5
 aliases:
+  - /docs/esc/get-started/import-environments/
+  - /docs/pulumi-cloud/esc/get-started/import-environments/
 ---
 
 ## Overview
@@ -21,7 +23,7 @@ There may be scenarios where the value you need to retrieve is stored in a diffe
 
 In the development environment, you might be integrating with the sandbox or development endpoint of the third-party service, while in the testing environment, you might be integrating with the production endpoint. Both endpoints may share the same base URL.
 
-![Image showing same base URL and different endpoints](/docs/esc/get-started/esc-base-url.png)
+![Image showing same base URL and different endpoints](/docs/esc/assets/esc-base-url.png)
 
 Since this base URL would be the same across environments, it would be more efficient to define it once in one place rather than multiple times across multiple environment files.
 
@@ -72,7 +74,7 @@ You should now see `"ENDPOINT_URL": "https://wordsapiv1.p.rapidapi.com/"` in the
 ![Importing the global config environment in the Pulumi Console](/docs/esc/assets/esc-import-environments2.png)
 
 {{% notes type="info" %}}
-You can test this out by retrieving the imported value via the console or the CLI. Refer to the [Store and Retrieve Secrets guide](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-environment-values) for the steps on how to do this.
+You can test this out by retrieving the imported value via the console or the CLI. See [Managing secrets](/docs/esc/guides/managing-secrets/#retrieving-secrets) for details on retrieving values.
 {{% /notes %}}
 
 ### Import via the Table view
@@ -81,12 +83,14 @@ Alternatively, you can import environments using the Table view of the Pulumi co
 
 ![Importing the global config environment in the Pulumi Console](/docs/esc/assets/esc-import-pulumi-console.png)
 
-To view the imported values, you will need to [open your environment](/docs/esc/get-started/store-and-retrieve-secrets/#retrieve-environment-values).
+To view the imported values, you will need to [open your environment](/docs/esc/guides/managing-secrets/#retrieving-secrets).
 
 {{% notes type="info" %}}
 You can import multiple environments and reorder them. The order of the imported environments is important because if you have two environments that have the same name for a key/path, then the last imported environment will override the value of that key/paths for any environments that are imported before it. This behavior can be useful for scenarios where you need to intentionally override the value of a particular key/path.
 {{% /notes %}}
 
-In the next section, you will learn how to run local commands without manually configuring local secrets.
+## Next steps
 
-{{< get-started-stepper >}}
+- [Managing secrets](/docs/esc/guides/managing-secrets/) - Learn more about storing and retrieving values
+- [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) - Use composed environments in your infrastructure code
+- [Composition and imports reference](/docs/esc/environments/imports/) - Complete documentation on import behavior and JSON Merge Patch semantics

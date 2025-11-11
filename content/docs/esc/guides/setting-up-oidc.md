@@ -1,14 +1,16 @@
 ---
-title_tag: Use Short Term Cloud Credentials | Pulumi ESC
-title: Use short term cloud credentials
-h1: "Use Short Term Cloud Credentials to Run Commands Without Local Secrets"
-meta_desc: This page provides an overview on how to get short term cloud credentials and run commands without using local secrets using the "esc run" command.
-weight: 7
+title_tag: Setting Up OIDC | Pulumi ESC
+title: Setting Up OIDC
+h1: Setting Up OIDC with Pulumi ESC
+meta_desc: Learn how to configure OpenID Connect (OIDC) with Pulumi ESC to generate short-lived cloud credentials dynamically.
 menu:
   esc:
-    parent: esc-get-started
-    identifier: esc-get-started-use-short-term-credentials
+    parent: esc-guides
+    identifier: esc-guides-setting-up-oidc
+    weight: 4
 aliases:
+  - /docs/esc/get-started/use-short-term-credentials/
+  - /docs/pulumi-cloud/esc/get-started/use-short-term-credentials/
 ---
 
 Managing cloud credentials presents significant challenges for organizations of all sizes. Static, long-lived credentials, especially those stored in local environments introduce security risks and operational issues. Pulumi ESC’s built-in support for [dynamic login providers](/docs/esc/integrations/dynamic-login-credentials/), allows you to generate short-term, scoped credentials via OIDC. These credentials can then be used in your CLI workflows, CI/CD, Pulumi IaC, and more!
@@ -139,15 +141,17 @@ ESC dynamic credentials and the `esc run` command can be used for various scenar
 - **Secure script execution**: Execute scripts that interact with AWS without embedding credentials
 - **Team collaboration**: Provide team members with secure, scoped access to resources
 
-## Additional OIDC authentication configurations
+## Next steps
 
-See the following guides to set up OIDC between Pulumi ESC and your specific cloud provider:
+- [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) - Use dynamic credentials in your infrastructure code
+- [Running commands with esc run](/docs/esc/guides/running-commands-with-esc/) - Learn more about injecting secrets into commands
+- [Integrating external secrets](/docs/esc/guides/external-secrets/) - Pull secrets from cloud vaults
+
+### Provider-specific OIDC configuration
+
+For detailed OIDC setup instructions for other cloud providers:
 
 - [Configuring OIDC for AWS](/docs/esc/environments/configuring-oidc/aws/)
 - [Configuring OIDC for Azure](/docs/esc/environments/configuring-oidc/azure/)
 - [Configuring OIDC for Google Cloud](/docs/esc/environments/configuring-oidc/gcp/)
 - [Configuring OIDC for Vault](/docs/esc/environments/configuring-oidc/vault/)
-
-In the next section, you will learn how to retrieve secret values from external sources.
-
-{{< get-started-stepper >}}
