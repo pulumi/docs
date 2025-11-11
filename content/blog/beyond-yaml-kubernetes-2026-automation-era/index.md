@@ -67,7 +67,9 @@ social:
 
 Kubernetes continues to evolve, powering not only applications but entire AI and ML systems across clouds, edges, and enterprises. By 2026, DevOps engineers, SREs, cloud engineers, and platform teams face growing pressure to deliver faster, smarter, and more secure infrastructure at scale.
 
-Kubernetes automation is entering a new era where infrastructure as code, policy enforcement, and AI-driven orchestration work together to manage cloud environments intelligently. Pulumi’s 2025 advancements, including [Pulumi Kubernetes Operator 2.0 GA](https://www.pulumi.com/blog/pko-2-0-ga/), [new Kubernetes best practices playbooks](https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/playbooks/), [Pulumi Neo](https://www.pulumi.com/product/neo/) for AI assisted infrastructure management, and [Policy Automation](https://www.pulumi.com/docs/insights/policy/), set the foundation for a new era of Kubernetes automation that extends across every role involved in managing modern infrastructure.
+Kubernetes automation is entering a new era where infrastructure as code, policy enforcement, and AI-driven orchestration work together to manage cloud environments intelligently. 
+
+Pulumi’s 2025 advancements, including [Pulumi Kubernetes Operator 2.0 GA](https://www.pulumi.com/blog/pko-2-0-ga/), [new Kubernetes best practices playbooks](https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/playbooks/), [Pulumi Neo](https://www.pulumi.com/product/neo/) for AI assisted infrastructure management, and [Policy Automation](https://www.pulumi.com/docs/insights/policy/), set the foundation for a new era of Kubernetes automation that extends across every role involved in managing modern infrastructure.
 
 <!--more-->
 
