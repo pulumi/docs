@@ -471,7 +471,7 @@ Represents a source code repository that the agent can analyze and work with.
 {
   "type": "repository",
   "name": "my-repo",
-  "owner": "my-org",
+  "org": "my-org",
   "forge": "github"
 }
 ```
@@ -482,7 +482,7 @@ Represents a source code repository that the agent can analyze and work with.
 |-------|------|----------|-------------|
 | `type` | string | Yes | Must be "repository" |
 | `name` | string | Yes | The name of the repository |
-| `owner` | string | Yes | The owner of the repository |
+| `org` | string | Yes | The organization owning the repository |
 | `forge` | string | Yes | The forge/provider where the repository is hosted (e.g., "github") |
 
 ### Pull Request Entity
@@ -495,9 +495,10 @@ Represents a pull request that the agent can analyze and work with.
   "number": 123,
   "repository": {
     "name": "my-repo",
-    "owner": "my-org",
+    "org": "my-org",
     "forge": "github"
-  }
+  },
+  "merged": true
 }
 ```
 
@@ -507,9 +508,10 @@ Represents a pull request that the agent can analyze and work with.
 |-------|------|----------|-------------|
 | `type` | string | Yes | Must be "pull_request" |
 | `number` | integer | Yes | The pull request number |
+| `merged` | boolean | Yes | If the PR has been merged already |
 | `repository` | object | Yes | The repository information |
 | `repository.name` | string | Yes | The name of the repository |
-| `repository.owner` | string | Yes | The owner of the repository |
+| `repository.org` | string | Yes | The organization owning the repository |
 | `repository.forge` | string | Yes | The forge/provider where the repository is hosted |
 
 ### Policy Issue Entity
