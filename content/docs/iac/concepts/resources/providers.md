@@ -517,6 +517,8 @@ While default providers are enabled by default, they [can be disabled](/docs/con
 Disabling explicit providers will help ensure that the [`provider` resource option](/docs/iac/concepts/options/provider) _must_ be set on all resources. If the `provider` resource option is not set (a common mistake) the resource will use the default provider, which can result in resources being deployed to the wrong environment.
 {{% /notes %}}
 
+### Using the Pulumi CLI
+
 For example, to disable the `aws` provider, you can run:
 
 ```sh
@@ -534,3 +536,52 @@ This adds a new entry to the list `pulumi:disable-default-providers`. To disable
 ```sh
 pulumi config set --path 'pulumi:disable-default-providers[0]' '*'
 ```
+
+### Using the Automation API SDK
+
+To set the value correctly using Automation API, you must use the `path` parameter:
+
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{% choosable language javascript %}}
+
+```typescript
+await stack.setConfig("pulumi:disable-default-providers[0]", { value: "*" }, true);
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+await stack.setConfig("pulumi:disable-default-providers[0]", { value: "*" }, path: true);
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+await stack.SetConfigAsync("pulumi:disable-default-providers[0]", new ConfigValue("*"), path: true);
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+stack.set_config("pulumi:disable-default-providers[0]", auto.ConfigValue(value="*"), True)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+stack.SetConfig(ctx, "pulumi:disable-default-providers[0]", auto.ConfigValue{Value: "*"}, true)
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+stack.setConfig("pulumi:disable-default-providers[0]", new ConfigValue("*"), true);
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
