@@ -14,9 +14,11 @@ aliases:
 
 In a typical application or infrastructure development workflow, there's often a need to maintain multiple environments such as development, staging, and production. Each of these environments might have its own set of configuration values: API endpoints, database connection strings, third-party secrets, and more.
 
-Hardcoding these values or keeping them inside source code is a security risk and makes managing configurations complex. [Pulumi ESC (Environments, Secrets and Configuration)](/docs/esc/) offers a centralized store to manage configuration data, plain-text data, and secrets.
+Hardcoding these values or keeping them inside source code is a security risk and makes managing configurations complex.
 
-In this tutorial, we’ll demonstrate how to use Pulumi ESC as well as the power of this service in managing configuration and secrets.
+[Pulumi ESC (Environments, Secrets and Configuration)](/docs/esc/) offers a centralized store to manage configuration data, plain-text data, and secrets.
+
+In this tutorial, you will learn how to use Pulumi ESC to manage configuration and secrets.
 
 Before you begin, you can watch the following video which provides a high level overview of how Pulumi ESC works:
 

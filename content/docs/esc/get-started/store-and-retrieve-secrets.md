@@ -30,11 +30,11 @@ You can store and retrieve values in an environment via one of the following met
 - the Pulumi Cloud console Table view
 - the ESC CLI
 
-## Store Environment values
+## Store environment values
 
 ### Store via the document view
 
-To store values in your environment using the Document view, first click on the name of the environment to open it. You will be presented with a split pane view. The left side is the YAML-based code document view, and this is where you will write the definition of your environment configuration. The right side will show a preview of your configuration in JSON format.
+To store values in your environment using the Document view, first select the name of the environment to open it. You will be presented with a split pane view. The left side is the YAML-based code document view, and this is where you will write the definition of your environment configuration. The right side will show a preview of your configuration in JSON format.
 
 ![Open environment in Pulumi ESC console](/docs/esc/assets/esc-open-env.png)
 
@@ -47,23 +47,23 @@ values:
     fn::secret: "demo-password-123"
 ```
 
-As shown above, you can specify that a value should be stored as a secret by using the `fn::secret` function. Once you have added the configuration, click the **Save** button located at the bottom of the editor.
+As shown above, you can specify that a value should be stored as a secret by using the `fn::secret` function. Once you have added the configuration, select the **Save** button located at the bottom of the editor.
 
-{{< video title="Adding values to the environment in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-add-env-values.mp4" autoplay="true" loop="true" >}}
+{{< video title="Adding values to an environment using Document view in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-add-env-values.mp4" autoplay="true" loop="true" >}}
 
 The **Environment preview** pane on the right-hand side will then update to show your added configuration in JSON format. You will notice that the value of "myPassword" has been hidden from view in both the definition and preview panes.
 
-### Store via the Table view
+### Store via the table view
 
-To store values in your environment using the Document view, first click on the name of the environment to open it. From the **Editor** menu, click the **Table view** button to switch the editor from the document YAML view to the table view.
+To store values in your environment using the Table view, first select the name of the environment to open it. From the **Editor** menu, select the **Table view** button to switch the editor from the document YAML view to the table view.
 
-{{< video title="Adding values to the environment in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-open-env-table-view.mp4" autoplay="true" loop="true" >}}
+{{< video title="Switching to Table view in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-open-env-table-view.mp4" autoplay="true" loop="true" >}}
 
-Next, under the **Configuration** section, you will see fields labeled **Path** and **Value**. You will define your configuration values using these fields. In the **Path** field, type in `myEnvironment`, and in the **Value** field, type in `development`. Then click **Done** and **Save**.
+Next, under the **Configuration** section, you will see fields labeled **Path** and **Value**. You will define your configuration values using these fields. In the **Path** field, type in `myEnvironment`, and in the **Value** field, type in `development`. Then select **Done** and **Save**.
 
 ![Adding values to the environment in the Pulumi ESC console](/docs/esc/assets/esc-add-env-values.png)
 
-Next, click the **+Secret/config** button to create a new configuration. This time, you will create a configuration that will be stored as a secret. To do so, enter `myPassword` for the value of **Path** and `demo-password-123` for the value of **Value**. Select the **secret** option from the drop-down to indicate that this configuration will be stored as a secret, then click **Done** and **Save**.
+Next, select the **+Secret/config** button to create a new configuration. This time, you will create a configuration that will be stored as a secret. To do so, enter `myPassword` for the value of **Path** and `demo-password-123` for the value of **Value**. Select the **secret** option from the drop-down to indicate that this configuration will be stored as a secret, then select **Done** and **Save**.
 
 ![Adding values to the environment in the Pulumi ESC console](/docs/esc/assets/esc-add-secret-value.png)
 
@@ -92,25 +92,25 @@ Alternatively, you can directly [edit your environment file with a code editor](
 esc env edit <project-name>/<environment-name>
 ```
 
-Using this method enables you to add your configuration values in the same way that you would [via the console](/docs/esc/get-started/store-and-retrieve-secrets/#store-via-the-console).
+Using this method enables you to add your configuration values in the same way that you would [via the document view](/docs/esc/get-started/store-and-retrieve-secrets/#store-via-the-document-view).
 
-## Retrieve Environment values
+## Retrieve environment values
 
 ### Retrieve via the Document view
 
-To retrieve values using the Document view, click the **Open** button. This will return any statically defined plain-text values and definitions.
+To retrieve values using the Document view, select the **Open** button. This will return any statically defined plain-text values and definitions.
 
 ![Clicking the open button in the Pulumi ESC console](/docs/esc/assets/esc-open-environment.png)
 
-As shown above, it does not return the value of secrets defined, nor does it resolve values that are dynamically generated from a provider. To view these values, you will need to click the **Show secrets** slider.
+As shown above, it does not return the value of secrets defined, nor does it resolve values that are dynamically generated from a provider. To view these values, you will need to select the **Show secrets** slider.
 
-![Clicking the show secrets slider the Pulumi ESC console](/docs/esc/assets/esc-show-secret-document-view.png)
+![Clicking the show secrets slider in the Pulumi ESC console](/docs/esc/assets/esc-show-secret-document-view.png)
 
-### Retrieve via the Table view
+### Retrieve via the table view
 
-Non-secret configuration values remain visible in the Table view after their creation, but secret values are automatically hidden. To reveal the value of a secret using the Table view, click the small eye icon.
+Non-secret configuration values remain visible in the Table view after their creation, but secret values are automatically hidden. To reveal the value of a secret using the Table view, select the small eye icon.
 
-{{< video title="Clicking the show secrets slider the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-show-secret-table-view.mp4" autoplay="true" loop="true" >}}
+{{< video title="Revealing secrets using the show secrets toggle in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-show-secret-table-view.mp4" autoplay="true" loop="true" >}}
 
 ### Retrieve via the CLI
 

@@ -11,11 +11,13 @@ menu:
 aliases:
 ---
 
-Before you get started using Pulumi ESC, let's run through a few quick steps to ensure your environment is set up correctly.
+Before you get started using Pulumi ESC, complete the following prerequisites to set up your environment.
 
 ### Create a Pulumi account
 
-Pulumi ESC is a service of Pulumi Cloud, meaning you will need to create a Pulumi account to be able to use it. To do so, navigate to the [Pulumi Cloud console](https://app.pulumi.com) and create a new account. Once created, you can [optionally create an access token](/docs/administration/access-identity/access-tokens/). Doing so will provide you an alternative way to sign into the Pulumi Cloud via the CLI. The token can also be used to automate your usage of the Pulumi Cloud using the REST API.
+Pulumi ESC is a service of Pulumi Cloud, meaning you will need to create a Pulumi account to be able to use it. To do so, navigate to the [Pulumi Cloud console](https://app.pulumi.com) and create a new account.
+
+Once created, you can [optionally create an access token](/docs/administration/access-identity/access-tokens/). Doing so will provide you an alternative way to sign into the Pulumi Cloud via the CLI. The token can also be used to automate your usage of the Pulumi Cloud using the REST API.
 
 ### Install the Pulumi ESC CLI
 
@@ -47,7 +49,7 @@ $ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 
 <div class="mb-6 border-solid border-b-2 border-gray-200">
 <div class="w-full">
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Windows Binary Download</h3>
+<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Windows binary download</h3>
 <p>
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-windows-x64.zip">amd64</a>
 </p>
@@ -81,7 +83,7 @@ Logged in to https://api.pulumi.com/ as your-pulumi-org (https://app.pulumi.com/
 
 ### [Optional] Configure OpenID Connect (OIDC)
 
-Pulumi supports [OpenID Connect (OIDC) integration](/docs/esc/environments/configuring-oidc) across various services including Pulumi ESC. OIDC enables secure interactions between Pulumi and cloud providers by leveraging signed, short-lived tokens issued by the Pulumi Cloud. Use one of the following guides below to configure OIDC between Pulumi ESC and your chosen cloud provider:
+Pulumi supports [OpenID Connect (OIDC) integration](/docs/esc/environments/configuring-oidc) across various services including Pulumi ESC. OIDC enables secure interactions between Pulumi and cloud providers by leveraging signed, short-lived tokens issued by the Pulumi Cloud. Use one of the following guides to configure OIDC between Pulumi ESC and your chosen cloud provider:
 
 - [OIDC Configuration for AWS](/docs/esc/environments/configuring-oidc/aws/)
 - [OIDC Configuration for Azure](/docs/esc/environments/configuring-oidc/azure/)
