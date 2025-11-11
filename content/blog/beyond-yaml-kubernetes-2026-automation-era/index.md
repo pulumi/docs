@@ -92,7 +92,7 @@ Learn more: [Pulumi Kubernetes documentation](https://www.pulumi.com/docs/iac/cl
 
 ## The 2026 Convergence of AI, Platforms, and Policy in Kubernetes
 
-The [CNCF State of Cloud Native Development Q3 2025](https://www.cncf.io/wp-content/uploads/2025/11/cncf_report_stateofcloud_111025a.pdf) report shows that more than half of DevOps professionals and nearly a third of all developers now identify as cloud native. Adoption of hybrid and multi-cloud architectures continues to grow, while AI and ML workloads are becoming first-class citizens in Kubernetes environments. The report notes that over 40% of ML and AI developers are building or deploying on cloud-native infrastructure, confirming that Kubernetes has become the foundation for intelligent, scalable systems.
+The [CNCF State of Cloud Native Development Q3 2025](https://www.cncf.io/wp-content/uploads/2025/11/cncf_report_stateofcloud_111025a.pdf) report shows that more than half of DevOps professionals and nearly a third of all developers now identify as cloud native. Adoption of hybrid and multi-cloud architectures continues to grow, while AI and ML workloads are becoming first-class citizens in Kubernetes environments. The report notes that 41% of professional ML and AI developers are cloud native, confirming that Kubernetes has become a foundational technology for building intelligent, scalable systems.
 
 This trend highlights how the next generation of Kubernetes operations is evolving. Teams need unified platforms that simplify AI-driven workloads, automatically enforce governance, and reduce operational complexity across environments. Pulumi already delivers this through an integrated platform that brings automation, security, and developer productivity together in one place.
 
