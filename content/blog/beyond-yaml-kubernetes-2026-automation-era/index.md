@@ -134,18 +134,15 @@ This enables:
 
 Documentation: [Using the Pulumi Kubernetes Operator](https://www.pulumi.com/docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/)
 
-## Kubernetes for AI, Cloud, and Platform Teams
+## Intelligent Infrastructure Across Every Cloud and Workload
 
-By 2026, Kubernetes will be the standard foundation for running everything from enterprise applications to AI and ML pipelines. Reliability, security, and scale now depend on automation across compute, storage, networking, GPUs, and secrets.
+Kubernetes has become the control plane for everything from application deployments to AI and ML workloads across clouds and environments. Engineering teams are running clusters on Amazon EKS, Microsoft AKS, and Google GKE while also managing edge, hybrid, and on-premises environments. Pulumi extends Kubernetes automation across all of them, unifying clusters, workloads, and cloud resources under a consistent model of infrastructure as code.
 
-Pulumi enables:
+With Pulumi, teams can use familiar programming languages to define Kubernetes resources, cloud infrastructure, and policies together. This approach provides a single workflow for managing compute, networking, storage, and identity across multiple clouds without relying on brittle YAML templates. It enables consistent provisioning, policy enforcement, and automation across every cluster and environment.
 
-- GPU-backed infrastructure as code across EKS, AKS, and GKE
-- Dynamic policies for secure experimentation and compliance
-- Reusable components for consistent platform and MLOps pipelines
-- Centralized secrets and configurations with [Pulumi ESC](https://www.pulumi.com/product/secrets-management/)
+{{< youtube "2P8JLgAc5QI?rel=0" >}}
 
-Paired with Pulumi Insights for observability and Pulumi Neo for AI-driven assistance, engineering teams can automate operations that previously required hours of manual work, directly from their IDE or Kubernetes console.
+By treating Kubernetes as the universal control plane for cloud infrastructure, Pulumi gives teams a scalable foundation that adapts to any workload and environment. The result is an intelligent, multi-cloud Kubernetes infrastructure that combines the flexibility of cloud providers with the reliability of modern automation.
 
 ## Bring Your YAML and Helm, Then Evolve
 
