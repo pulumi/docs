@@ -78,14 +78,14 @@ values:
             secretId: my-app-secret
 ```
 
-You can validate this configuration by [opening the environment via the ESC console](/docs/esc/guides/managing-secrets/#retrieve-via-the-pulumi-cloud-console), clicking the **Open** button and then clicking the **Show secrets** slider.
+You can validate this configuration by [opening the environment via the ESC console](/docs/esc/guides/managing-secrets/#via-the-pulumi-cloud-console), clicking the **Open** button and then clicking the **Show secrets** slider.
 
 <video autoplay loop muted playsinline>
     <source src="https://www.pulumi.com/uploads/esc-show-aws-secret.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
-Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/guides/managing-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project-name>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
+Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/guides/managing-secrets/#via-the-cli). Run the `esc env open <your-org>/<your-project-name>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
 
 ```bash
 $ esc env open pulumi/demos/aws-secrets-example
@@ -175,14 +175,14 @@ values:
             name: my-app-secret
 ```
 
-You can validate this configuration by [opening the environment via the ESC console](/docs/esc/guides/managing-secrets/#retrieve-via-the-pulumi-cloud-console), clicking the **Open** button and then clicking the **Show secrets** slider.
+You can validate this configuration by [opening the environment via the ESC console](/docs/esc/guides/managing-secrets/#via-the-pulumi-cloud-console), clicking the **Open** button and then clicking the **Show secrets** slider.
 
 <video autoplay loop muted playsinline>
     <source src="https://www.pulumi.com/uploads/esc-show-azure-secret.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
-Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/guides/managing-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
+Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/guides/managing-secrets/#via-the-cli). Run the `esc env open <your-org>/<your-project>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
 
 ```bash
 $ esc env open pulumi/demos/azure-secrets-example
@@ -271,14 +271,14 @@ values:
             name: my-app-secret
 ```
 
-You can validate this configuration by [opening the environment via the ESC console](/docs/esc/guides/managing-secrets/#retrieve-via-the-pulumi-cloud-console), clicking the **Open** button and then clicking the **Show secrets** slider.
+You can validate this configuration by [opening the environment via the ESC console](/docs/esc/guides/managing-secrets/#via-the-pulumi-cloud-console), clicking the **Open** button and then clicking the **Show secrets** slider.
 
 <video autoplay loop muted playsinline>
     <source src="https://www.pulumi.com/uploads/esc-show-gcp-secret.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
-Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/guides/managing-secrets/#retrieve-via-the-cli). Run the `esc env open <your-org>/<your-project-name>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
+Alternatively, you can validate the configuration by [opening the environment via the ESC CLI](/docs/esc/guides/managing-secrets/#via-the-cli). Run the `esc env open <your-org>/<your-project-name>/<your-environment-name>` command, making sure to replace the values of `<your-org>`, `<your-project-name>`, and `<your-environment-name>` with the names of your Pulumi organization, ESC project, and environment respectively.
 
 ```bash
 $ esc env open pulumi/demos/gcp-secrets-example

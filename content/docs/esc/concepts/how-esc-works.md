@@ -21,49 +21,6 @@ Using configuration-as-code, these secrets and configuration values are composed
 
 {{< figure src="/docs/esc/assets/esc-octopus-diagram.png" caption="Figure: A diagram showing the architecture of Pulumi ESC.">}}
 
-### Deployment models
-
-**Pulumi Cloud (managed):**
-
-- Secrets encrypted at rest using AES-256-GCM
-- Secrets encrypted in transit using TLS 1.2+
-- Optional customer-managed encryption keys
-- Global availability with automatic scaling
-- Built-in audit logs and compliance features
-
-**Self-hosted:**
-
-- Deploy ESC service on your own infrastructure
-- Full control over data residency and network isolation
-- Requires separate license and setup
-- You manage encryption keys, backups, and scaling
-- See [self-hosting documentation](/docs/support/faq/secrets-config/#can-i-self-host-pulumi-esc) for details
-
-### Evaluation engine
-
-When you open an environment (via `esc env open`, Pulumi IaC, or the API), ESC's evaluation engine:
-
-1. **Loads the environment definition** - Retrieves the YAML document and its version
-1. **Resolves imports** - Recursively loads all imported environments
-1. **Merges values** - Combines environments using JSON Merge Patch semantics (later values override earlier ones)
-1. **Executes providers** - Runs dynamic provider plugins (OIDC, secret retrieval)
-1. **Evaluates interpolations** - Resolves all `${variable}` references
-1. **Applies functions** - Processes `fn::` function calls (e.g., `fn::secret`, `fn::toJSON`)
-1. **Returns evaluated environment** - Outputs the final merged and evaluated configuration
-
-This evaluation happens **every time** an environment is opened, ensuring dynamic credentials are fresh and secrets are current. Provider credentials and secret values are never stored permanently—they exist only in memory during evaluation.
-
-### Composition mechanics
-
-Environments are merged using JSON Merge Patch ([RFC 7386](https://tools.ietf.org/html/rfc7386)) semantics:
-
-- **Objects** are merged recursively (keys from later environments override earlier ones)
-- **Arrays** are replaced entirely (not merged element-by-element)
-- **Primitives** are replaced by later values
-- **Null** values delete keys from earlier environments
-
-This predictable merge behavior allows complex composition hierarchies while maintaining clarity about which values win.
-
 ## Secrets and configuration sources
 
 By default, Pulumi ESC stores your configuration and secrets in Pulumi Cloud. However, ESC also integrates with a variety of third-party sources through an extensible *provider* plugin model. This allows teams to use their preferred providers without needing to manually copy or paste secrets across environments. The secrets will be dynamically fetched from the third-party API and integrated into your ESC environments.
@@ -74,11 +31,11 @@ By aggregating secrets from these providers, Pulumi ESC provides a unified inter
 
 Pulumi ESC integrates with many popular cloud login providers and secrets managers, including:
 
-- [AWS OIDC](/docs/esc/integrations/dynamic-login-credentials/aws-login/) and [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets/)
-- [Azure OIDC](/docs/esc/integrations/dynamic-login-credentials/azure-login) and [Azure KeyVault](/docs/esc/integrations/dynamic-secrets/azure-secrets/)
-- [GCP OIDC](/docs/esc/integrations/dynamic-login-credentials/gcp-login/) and [GCP Secrets Manager](/docs/esc/integrations/dynamic-secrets/gcp-secrets/)
-- [HashiCorp Vault OIDC](/docs/esc/integrations/dynamic-login-credentials/vault-login/) and [Vault Secrets](/docs/esc/integrations/dynamic-secrets/vault-secrets/)
-- [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/), [Kubernetes](/docs/esc/integrations/kubernetes/), among others.
+* [AWS OIDC](/docs/esc/integrations/dynamic-login-credentials/aws-login/) and [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets/)
+* [Azure OIDC](/docs/esc/integrations/dynamic-login-credentials/azure-login) and [Azure KeyVault](/docs/esc/integrations/dynamic-secrets/azure-secrets/)
+* [GCP OIDC](/docs/esc/integrations/dynamic-login-credentials/gcp-login/) and [GCP Secrets Manager](/docs/esc/integrations/dynamic-secrets/gcp-secrets/)
+* [HashiCorp Vault OIDC](/docs/esc/integrations/dynamic-login-credentials/vault-login/) and [Vault Secrets](/docs/esc/integrations/dynamic-secrets/vault-secrets/)
+* [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/), [Kubernetes](/docs/esc/integrations/kubernetes/), among others.
 
 Teams can setup [OpenID Connect integration](/docs/esc/environments/configuring-oidc/) in their cloud providers to allow ESC environments to pull short-lived credentials via **OIDC** for secure, time-limited access to secrets. These credentials can then be used in both [Pulumi IaC](/docs/pulumi-cloud/esc/environments/#using-with-pulumi-iac) workflows and [external CLIs](/docs/pulumi-cloud/esc/environments/#running-third-party-commands-using-pulumi-esc-secrets-and-config) like `aws`, `kubectl`, etc.
 
@@ -140,9 +97,9 @@ Every change to an ESC environment definition is recorded as a unique numeric ve
 
 ESC environments can be composed from other environments allowing for modularity and inheritance -- concepts usually only found in code:
 
-- **Inheritance**: One environment can inherit values from another environment.
-- **Overrides**: Values in child environments can override inherited values.
-- **Nesting**: Environments can be arbitrarily nested for maximum flexibility, allowing complex hierarchies to be built out.
+* **Inheritance**: One environment can inherit values from another environment.
+* **Overrides**: Values in child environments can override inherited values.
+* **Nesting**: Environments can be arbitrarily nested for maximum flexibility, allowing complex hierarchies to be built out.
 
 ## Managing access: RBAC and auditing
 
