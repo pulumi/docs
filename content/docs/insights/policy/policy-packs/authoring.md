@@ -248,6 +248,98 @@ Use stack validation policies when you need to:
 
 Most policies are resource validation policies. Stack validation policies are useful for more complex scenarios that require understanding the full context of your infrastructure.
 
+## Writing policies for dynamic providers
+
+[Dynamic providers](/docs/iac/concepts/resources/dynamic-providers/) allow you to create custom resource types directly in your Pulumi programs. When writing policies for dynamic providers, you need to account for a key constraint: **all dynamic resources share the same resource type** (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python).
+
+Since you cannot rely on the resource type alone to identify which dynamic provider a resource uses, you must inspect the resource's properties to differentiate between different dynamic provider implementations.
+
+### Example: Validating a specific dynamic provider
+
+This example shows how to write a policy that validates resources from a specific dynamic provider by checking for a unique property:
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import { PolicyPack, ResourceValidationPolicy } from "@pulumi/policy";
+
+new PolicyPack("dynamic-provider-policies", {
+    policies: [{
+        name: "environment-name-validation",
+        description: "Validates that environment dynamic resources use the correct name.",
+        enforcementLevel: "mandatory",
+        validateResource: (args, reportViolation) => {
+            // All dynamic resources in TypeScript/JavaScript have the type "pulumi-nodejs:dynamic:Resource".
+            // To identify a specific dynamic provider, check for unique properties.
+            if (args.type === "pulumi-nodejs:dynamic:Resource" && args.props.environmentName !== undefined) {
+                const envName = args.props.environmentName;
+                if (envName !== "myTestEnv") {
+                    reportViolation(
+                        `Environment name must be 'myTestEnv'. Current value: '${envName}'`);
+                }
+            }
+        },
+    }],
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+from pulumi_policy import (
+    EnforcementLevel,
+    PolicyPack,
+    ReportViolation,
+    ResourceValidationArgs,
+    ResourceValidationPolicy,
+)
+
+def env_dynprov_check(args: ResourceValidationArgs, report_violation: ReportViolation):
+    # All dynamic resources in Python have the type "pulumi-python:dynamic:Resource"
+    # To identify a specific dynamic provider, check for unique properties
+    # In this case, we look for resources with an "environment_name" property
+    if args.resource_type == "pulumi-python:dynamic:Resource" and "environment_name" in args.props:
+        environment_name = args.props["environment_name"]
+        if environment_name != "myTestEnv":
+            report_violation(
+                f"Environment name must be 'myTestEnv'. Current value: '{environment_name}'")
+
+dyn_prov_policy = ResourceValidationPolicy(
+    name="environment-name-validation",
+    description="Validates that environment dynamic resources use the correct name.",
+    enforcement_level=EnforcementLevel.MANDATORY,
+    validate=env_dynprov_check,
+)
+
+PolicyPack(
+    name="dynamic-provider-policies",
+    policies=[
+        dyn_prov_policy,
+    ],
+)
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### Best practices for dynamic provider policies
+
+When writing policies for dynamic providers:
+
+1. **Identify unique properties**: Determine which properties uniquely identify the dynamic provider you want to validate. In the example above, the `environment_name` (or `environmentName`) property indicates this is an environment resource.
+
+1. **Be specific with property checks**: Since all dynamic resources share the same type, check for specific property names or combinations that distinguish your dynamic provider from others.
+
+1. **Handle missing properties gracefully**: Use property existence checks (like `"environment_name" in args.props`) before accessing property values to avoid errors when the policy runs against other dynamic providers.
+
+1. **Document your assumptions**: Clearly document which properties your policy uses to identify dynamic providers so that changes to the dynamic provider implementation don't inadvertently break policy enforcement.
+
 ## Running policies locally
 
 Test your policy pack locally before publishing.
