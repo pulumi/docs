@@ -112,7 +112,7 @@ This trend highlights how the next generation of Kubernetes operations is evolvi
 Pulumi’s platform provides a complete foundation for intelligent infrastructure management that extends from development to production.
 
 - [**Pulumi Neo**](https://www.pulumi.com/product/neo/) adds AI-assisted infrastructure management that turns natural language into production-ready Kubernetes and cloud code.
-- [**Pulumi IDP**](https://www.pulumi.com/product/internal-developer-platforms/) enables engineering and platform teams to build self service environments that abstract complexity for developers while maintaining consistency and control.
+- [**Pulumi IDP**](https://www.pulumi.com/product/internal-developer-platforms/) enables engineering and platform teams to build self-service environments that abstract complexity for developers while maintaining consistency and control.
 - [**Pulumi Policies**](https://www.pulumi.com/product/insights-governance/) brings continuous compliance and policy enforcement directly into the delivery workflow.
 - [**Pulumi ESC**](https://www.pulumi.com/product/secrets-management/) secures credentials, API keys, and sensitive configurations across Kubernetes and cloud environments.
 
