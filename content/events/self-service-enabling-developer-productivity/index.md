@@ -53,10 +53,10 @@ main:
         In this session, you’ll use Pulumi agents and templates to create a self-service developer platform—building reusable infrastructure patterns and deploying real workloads with automation. Each exercise demonstrates how intelligent agents simplify provisioning, configuration, and GitOps operations while maintaining governance and consistency.
         
     learn:
-        - How to **build and publish Pulumi templates** that power self-service infrastructure provisioning
-        - How to **deploy a monitored DigitalOcean** cluster through an **AI-assisted, wizard-style workflow**
-        - How to **create reusable Kubernetes components**, like **Argo CD**, with Pulumi TypeScript and ESC environments
-        - How **intelligent agents enforce best practices** and scale developer autonomy safely
+        - How to build and publish Pulumi templates that power self-service infrastructure provisioning
+        - How to deploy a monitored DigitalOcean cluster through an AI-assisted, wizard-style workflow
+        - How to create reusable Kubernetes components, like Argo CD, with Pulumi TypeScript and ESC environments
+        - How intelligent agents enforce best practices and scale developer autonomy safely
 
     # The webinar presenters
     presenters:
