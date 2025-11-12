@@ -77,7 +77,7 @@ Pulumi’s 2025 advancements, including [Pulumi Kubernetes Operator 2.0 GA](http
 
 - [Why Kubernetes Needs to Go Beyond YAML](/blog/beyond-yaml-kubernetes-2026-automation-era/#why-kubernetes-needs-to-go-beyond-yaml)
 - [The 2026 Convergence of AI, Platforms, and Policy in Kubernetes](/blog/beyond-yaml-kubernetes-2026-automation-era/#the-2026-convergence-of-ai-platforms-and-policy-in-kubernetes)
-- [The 2026 Shift: AI Assisted Kubernetes Operations](/blog/beyond-yaml-kubernetes-2026-automation-era/#the-2026-shift-ai-assisted-kubernetes-operations)
+- [The 2026 Shift: AI-Assisted Kubernetes Operations](/blog/beyond-yaml-kubernetes-2026-automation-era/#the-2026-shift-ai-assisted-kubernetes-operations)
 - [Operator-First: Kubernetes Deploys Your Cloud](/blog/beyond-yaml-kubernetes-2026-automation-era/#operator-first-kubernetes-deploys-your-cloud)
 - [Intelligent Kubernetes Infrastructure Across Every Cloud](/blog/beyond-yaml-kubernetes-2026-automation-era/#intelligent-kubernetes-infrastructure-across-every-cloud)
 - [Bring Your YAML and Helm, Then Evolve](/blog/beyond-yaml-kubernetes-2026-automation-era/#bring-your-yaml-and-helm-then-evolve)
