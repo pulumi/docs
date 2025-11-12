@@ -69,7 +69,7 @@ POST /api/preview/agents/{orgName}/tasks
 | `message.type` | string | Yes | Type of event (must be "user_message") |
 | `message.content` | string | Yes | The exact natural language instruction from the user |
 | `message.timestamp` | string (ISO 8601) | Yes | When the event occurred |
-| `message.entity_diff` | object | No | Entities to add or remove from the agent. See [Entity Types](#entity-types) for details |
+| `message.entity_diff` | object | No | Entities to add or remove from the agent. See [Entity Types](#entity-types) for details. Note: Pull request entities cannot be added via this API. |
 
 ### Example
 
@@ -393,7 +393,7 @@ Send a user message event to provide additional instructions or responses to the
 | `type` | string | Yes | Must be "user_message" |
 | `content` | string | Yes | The user's response or additional instructions |
 | `timestamp` | string (ISO 8601) | Yes | When the event occurred |
-| `entity_diff` | object | No | Entities to add or remove from the agent context |
+| `entity_diff` | object | No | Entities to add or remove from the agent context. See [Entity Types](#entity-types) for details. Note: Pull request entities cannot be added via this API. |
 
 ### User Confirmation Event
 
@@ -488,6 +488,8 @@ Represents a source code repository that the agent can analyze and work with.
 ### Pull Request Entity
 
 Represents a pull request that the agent can analyze and work with.
+
+**Note**: Pull request entities cannot be added using the create task or respond to task APIs. They are managed by the system and associated with tasks through other mechanisms.
 
 ```json
 {
