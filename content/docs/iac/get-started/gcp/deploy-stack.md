@@ -63,15 +63,7 @@ Duration: 4s
 
 Remember the output you defined in the previous step? That [stack output](/docs/concepts/stack#outputs) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the name of your bucket with the following command:
 
-{{< chooser language "typescript,javascript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language javascript %}}
-
-```bash
-$ pulumi stack output bucketName
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 

@@ -22,16 +22,6 @@ complexity and enable sharing and reuse. Instead of copy-pasting common patterns
 You will now create your first component that packages up your S3 website so you can easily stamp out
 entire websites in just a few lines of code:
 
-{{% choosable language javascript %}}
-
-```javascript
-const website = new AwsS3Website("my-website", {
-    files: [ "index.html" ],
-});
-```
-
-{{% /choosable %}}
-
 {{% choosable language typescript %}}
 
 ```typescript
@@ -103,32 +93,6 @@ constructor to start with but you will add the AWS S3 resources to it in the nex
 component -- the `files` to add to the website -- and outputs -- a single property with the website `url`.
 
 To get going, create a new file {{< compfile >}} alongside {{< langfile >}} and add the following:
-
-{{% choosable language javascript %}}
-
-```javascript
-"use strict";
-const aws = require("@pulumi/aws");
-const pulumi = require("@pulumi/pulumi");
-
-// A component that encapsulates creating an AWS S3 hosted static website.
-export class AwsS3Website extends pulumi.ComponentResource {
-    constructor(name, args, opts) {
-        super("quickstart:index:AwsS3Website", name, args, opts);
-
-        // Component initialization will go here next...
-
-        this.registerOutputs({}); // Signal component completion.
-    }
-}
-
-module.exports = {
-    AWSS3Website,
-    AWSS3WebsiteArgs,
-};
-```
-
-{{% /choosable %}}
 
 {{% choosable language typescript %}}
 
@@ -295,73 +259,6 @@ Next, make four changes:
 
 The resulting {{< compfile >}} file will look like this; feel free to make each edit one at a time if you'd like
 to get a feel for things, or simply paste the contents of this into {{< compfile >}}:
-
-{{% choosable language javascript %}}
-
-```javascript
-"use strict";
-const pulumi = require("@pulumi/pulumi");
-const aws = require("@pulumi/aws");
-
-// A component that encapsulates creating an AWS S3 hosted static website.
-class AwsS3Website extends pulumi.ComponentResource {
-    constructor(name, args, opts) {
-        super("quickstart:index:AwsS3Website", name, args, opts);
-
-        // Create an AWS resource (S3 Bucket)
-        const bucket = new aws.s3.Bucket("my-bucket", {}, {
-            // Set the parent to the component (step #2) above.
-            // Also, do the same for all other resources below.
-            parent: this,
-        });
-
-        // Turn the bucket into a website:
-        const website = new aws.s3.BucketWebsiteConfiguration("website", {
-            bucket: bucket.id,
-            indexDocument: {
-                suffix: "index.html",
-            },
-        }, { parent: this });
-
-        // Permit access control configuration:
-        const ownershipControls = new aws.s3.BucketOwnershipControls("ownership-controls", {
-            bucket: bucket.id,
-            rule: {
-                objectOwnership: "ObjectWriter"
-            }
-        }, { parent: this });
-
-        // Enable public access to the website:
-        const publicAccessBlock = new aws.s3.BucketPublicAccessBlock("public-access-block", {
-            bucket: bucket.id,
-            blockPublicAcls: false,
-        }, { parent: this });
-
-        // Create an S3 Bucket object for each file; note the changes to name/source:
-        for (const file of args.files) {
-            new aws.s3.BucketObject(file, {
-                bucket: bucket.id,
-                source: new pulumi.asset.FileAsset(file),
-                contentType: "text/html",
-                acl: "public-read",
-            }, {
-                dependsOn: [ownershipControls, publicAccessBlock],
-                parent: this,
-            });
-        }
-
-        // Capture the URL and make it available as a component property and output:
-        this.url = pulumi.interpolate`http://${website.websiteEndpoint}`;
-        this.registerOutputs({ url: this.url }) // Signal component completion.
-    }
-}
-
-module.exports = {
-    AWSS3Website,
-};
-```
-
-{{% /choosable %}}
 
 {{% choosable language typescript %}}
 
@@ -785,23 +682,6 @@ Now go back to your original file {{< langfile >}}. Now that you have moved all 
 Ensure the file is empty and we will build it back up by simply importing and instantiating our new component.
 
 Add this to your now-empty {{< langfile >}}:
-
-{{% choosable language javascript %}}
-
-```javascript
-"use strict";
-// Import from our new component module:
-const web = require("./website");
-
-// Create an instance of our component with the same files as before:
-const website = new web.AwsS3Website("my-website", {
-    files: [ "index.html" ],
-});
-
-exports.url = website.url;
-```
-
-{{% /choosable %}}
 
 {{% choosable language typescript %}}
 

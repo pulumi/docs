@@ -18,7 +18,7 @@ aliases:
 
 Let's review some of the generated project files:
 
-{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+{{% choosable language "typescript,python,go,csharp,java" %}}
 
 - `Pulumi.yaml` defines the [project](/docs/concepts/projects/).
 
@@ -44,7 +44,7 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-{{% choosable language "javascript,typescript,go,csharp,java" %}}
+{{% choosable language "typescript,go,csharp,java" %}}
 
 - <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
 
@@ -52,25 +52,7 @@ Let's review some of the generated project files:
 
 Let's examine {{< langfile >}}.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-"use strict";
-const pulumi = require("@pulumi/pulumi");
-const gcp = require("@pulumi/gcp");
-
-// Create a Google Cloud resource (Storage Bucket)
-const bucket = new gcp.storage.Bucket("my-bucket", {
-    location: "US"
-});
-
-// Export the DNS name of the bucket
-exports.bucketName = bucket.url;
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -207,14 +189,6 @@ outputs:
 {{% /choosable %}}
 
 This Pulumi program creates a new storage bucket and exports the DNS name of the bucket.
-
-{{% choosable language javascript %}}
-
-```javascript
-exports.bucketName = bucket.url;
-```
-
-{{% /choosable %}}
 
 {{% choosable language typescript %}}
 

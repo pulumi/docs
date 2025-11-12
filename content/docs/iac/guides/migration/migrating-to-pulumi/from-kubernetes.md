@@ -45,26 +45,8 @@ $ curl -L --remote-name \
 
 This Pulumi program uses `ConfigFile` to read that YAML file, provision the resources inside it, and export the resulting IP addresses:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let k8s = require("@pulumi/kubernetes");
-
-// Create resources from standard Kubernetes guestbook YAML example.
-let guestbook = new k8s.yaml.ConfigFile("guestbook", {
-    file: "guestbook-all-in-one.yaml",
-});
-
-// Export the private cluster IP address of the frontend.
-let frontend = guestbook.getResource("v1/Service", "frontend");
-module.exports = {
-    privateIp = frontend.spec.clusterIP,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -205,27 +187,8 @@ $ popd
 
 This Pulumi program uses `ConfigGroup` to read these YAML files, provision the resources inside of them, and export the resulting IP addresses:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let k8s = require("@pulumi/kubernetes");
-let path = require("path");
-
-// Create resources from standard Kubernetes guestbook YAML example.
-let guestbook = new k8s.yaml.ConfigGroup("guestbook", {
-    files: [ path.join("yaml", "*.yaml") ],
-});
-
-// Export the private cluster IP address of the frontend.
-let frontend = guestbook.getResource("v1/Service", "frontend");
-module.exports = {
-    privateIp = frontend.spec.clusterIP,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -392,29 +355,8 @@ In addition to those core options, you can specify `transformations` (similar to
 
 To illustrate provisioning a Helm Chart using Pulumi, we will deploy the `wordpress` chart from `https://charts.bitnami.com/bitnami`. This will stand up a fully functional WordPress instance that uses MariaDB:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let k8s = require("@pulumi/kubernetes");
-
-// Deploy the latest version of the bitnami/wordpress chart.
-let wordpress = new k8s.helm.v3.Chart("wpdev", {
-    fetchOpts: {
-        repo: "https://charts.bitnami.com/bitnami"
-    },
-    chart: "wordpress",
-});
-
-// Export the public IP for WordPress.
-let frontend = wordpress.getResource("v1/Service", "default/wpdev-wordpress");
-module.exports = {
-    frontendIp: frontend.status.loadBalancer.ingress[0].ip,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -772,40 +714,8 @@ To render YAML during a `pulumi up` rather than have Pulumi perform the deployme
 
 This example provisions a simple load-balanced NGINX service using a general purpose language but renders the output to YAML:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let k8s = require("@pulumi/kubernetes");
-
-// Instantiate a Kubernetes Provider and specify the render directory.
-let renderProvider = new k8s.Provider("k8s-yaml-renderer", {
-    renderYamlToDirectory: "yaml",
-});
-
-// Create an NGINX Deployment and load-balanced Service that use it.
-let labels = { "app": "nginx" };
-let dep = new k8s.apps.v1.Deployment("nginx-dep", {
-    spec: {
-        selector: { matchLabels: labels },
-        replicas: 1,
-        template: {
-            metadata: { labels: labels },
-            spec: { containers: [{ name: "nginx", image: "nginx" }] },
-        },
-    },
-}, { provider: renderProvider });
-let svc = new k8s.core.v1.Service("nginx-svc", {
-    spec: {
-        type: "LoadBalancer",
-        selector: labels,
-        ports: [{ port: 80 }],
-    },
-}, { provider: renderProvider });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -1059,28 +969,8 @@ Let's see how to assign our service a public IP address, starting with [the sing
 
 The Kubernetes Guestbook by default does not assign a load balancer for the frontend service. To fix this, we could edit the YAML file, of course, but let's see `transformations` in action. By supplying the `transformations` callback that rewrites the object configuration on the fly, we can cause a load balancer to get created:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-...
-let guestbook = new k8s.yaml.ConfigFile("guestbook", {
-    file: "guestbook-all-in-one.yaml",
-    transformations: [(obj: any) => {
-        if (obj.kind === "Service" && obj.metadata.name === "frontend") {
-            obj.spec.type = "LoadBalancer";
-        }
-    }],
-});
-...
-module.exports = {
-    privateIp = frontend.spec.clusterIP,
-    publicIp = frontend.status.loadBalancer.ingress[0].ip,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

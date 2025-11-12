@@ -37,7 +37,7 @@ To turn your bucket into a static website, start by adding three new AWS S3 reso
 
 Open up {{< langfile >}} in your editor and add them right after your S3 bucket:
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 
 ```typescript
 // Bucket...
@@ -271,7 +271,7 @@ Next, add a new file called `index.html` to your current directory with these co
 
 Then open {{< langfile >}} and create a [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) after the three other new resources:
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 
 ```typescript
 // Other resources ...
@@ -405,15 +405,6 @@ automatically but these ones are invisible to Pulumi because those specific reso
 ### Export the website URL
 
 Now to export the website's URL for easy access add this to the end of your program:
-
-{{% choosable language javascript %}}
-
-```javascript
-// Export the bucket's autoassigned URL:
-exports.url = pulumi.interpolate`http://${website.websiteEndpoint}`;
-```
-
-{{% /choosable %}}
 
 {{% choosable language typescript %}}
 

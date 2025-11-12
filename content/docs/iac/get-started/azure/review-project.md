@@ -18,7 +18,7 @@ aliases:
 
 Let's review some of the generated project files:
 
-{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+{{% choosable language "typescript,python,go,csharp,java" %}}
 
 - `Pulumi.yaml` defines the [project](/docs/concepts/projects/).
 
@@ -44,7 +44,7 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-{{% choosable language "javascript,typescript,go,csharp,java" %}}
+{{% choosable language "typescript,go,csharp,java" %}}
 
 - <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
 

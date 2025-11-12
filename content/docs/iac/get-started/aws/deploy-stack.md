@@ -89,7 +89,7 @@ the contents of your new bucket -- which of course will be empty:
 
 {{% choosable os "linux,macos" %}}
 
-{{% choosable language "javascript,typescript,go,csharp,java,yaml" %}}
+{{% choosable language "typescript,go,csharp,java,yaml" %}}
 
 ```bash
 $ aws s3 ls s3://$(pulumi stack output bucketName)
@@ -109,7 +109,7 @@ $ aws s3 ls s3://$(pulumi stack output bucket_name)
 
 {{% choosable os "windows" %}}
 
-{{% choosable language "javascript,typescript,go,csharp,java,yaml" %}}
+{{% choosable language "typescript,go,csharp,java,yaml" %}}
 
 ```powershell
 $ aws s3 ls ("s3://" + (pulumi stack output bucketName))

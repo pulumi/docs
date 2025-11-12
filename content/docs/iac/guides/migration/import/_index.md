@@ -504,27 +504,8 @@ Code-based import also differs from the CLI-based approach in that it doesn't im
 
 The following example imports an existing AWS EC2 security group with an assigned cloud provider ID of `sg-04aeda9a214730248`:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const aws = require("@pulumi/aws");
-
-const group = new aws.ec2.SecurityGroup("my-sg", {
-    name: "my-sg-62a569b",
-    ingress: [{
-        protocol: "tcp",
-        fromPort: 80,
-        toPort: 80,
-        cidrBlocks: ["0.0.0.0/0"]
-    }],
-}, {
-    import: "sg-04aeda9a214730248"
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
