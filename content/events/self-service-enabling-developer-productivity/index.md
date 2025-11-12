@@ -50,7 +50,7 @@ main:
     description: |
         This hands-on workshop with Pulumi Cloud shows how AI agents and self-service platforms help teams automate infrastructure creation and standardize deployments. Sign up for free to follow along.
 
-        In this session, you’ll use Pulumi agents and templates to create a self-service developer platform—building reusable infrastructure patterns and deploying real workloads with automation. Each exercise demonstrates how intelligent agents simplify provisioning, configuration, and GitOps operations while maintaining governance and consistency.
+        In this session, you’ll use Pulumi agents and templates to create a self-service developer platform — building reusable infrastructure patterns and deploying real workloads with automation. Each exercise demonstrates how intelligent agents simplify provisioning, configuration, and GitOps operations while maintaining governance and consistency.
         
     learn:
         - How to build and publish Pulumi templates that power self-service infrastructure provisioning
