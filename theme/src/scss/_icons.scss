@@ -5,55 +5,56 @@ $fa-font-path: "/fonts/fontawesome";
 @import "fontawesome/fa-regular.scss";
 @import "fontawesome/fa-brands.scss";
 
-@each $icon
-    in "team"
-    "abstract-shapes"
-    "accordion-closed"
-    "accordion-open"
-    "alert"
-    "architecture"
-    "buildings"
-    "clipboard"
-    "clock"
-    "clode-with-nodes"
-    "cloud-with-nodes"
-    "cloud"
-    "clouds"
-    "code-window"
-    "code"
-    "collab"
-    "cycle"
-    "delivery"
-    "download-from-cloud"
-    "exchange"
-    "eye"
-    "gavel"
-    "gear"
-    "git-merged"
-    "global"
-    "guage"
-    "hamburger-closed"
-    "hamburger-open"
-    "lightning"
-    "lock"
-    "monitor"
-    "nodes-and-rays"
-    "nodes"
-    "pen"
-    "program"
-    "puzzle"
-    "security"
-    "shield"
-    "ship"
-    "testing"
-    "type-cursor"
-    "upload-to-cloud"
-{
+@each $icon in "team"
+"abstract-shapes"
+"accordion-closed"
+"accordion-open"
+"alert"
+"architecture"
+"buildings"
+"clipboard"
+"clock"
+"clode-with-nodes"
+"cloud-with-nodes"
+"cloud"
+"clouds"
+"code-window"
+"code"
+"collab"
+"cycle"
+"delivery"
+"download-from-cloud"
+"exchange"
+"eye"
+"gavel"
+"gear"
+"git-merged"
+"global"
+"guage"
+"hamburger-closed"
+"hamburger-open"
+"lightning"
+"lock"
+"monitor"
+"nodes-and-rays"
+"nodes"
+"pen"
+"program"
+"puzzle"
+"security"
+"shield"
+"ship"
+"testing"
+"type-cursor"
+"upload-to-cloud"
+
+    {
     .icon-#{ $icon } {
         @apply rounded-full inline-block p-4 w-20 h-20;
 
         &-small {
             @apply p-2 w-10 h-10;
+
             svg {
                 max-width: 24px;
                 max-height: 24px;
@@ -88,7 +89,7 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-fuchsia-100;
 
             svg * {
-                stroke: theme("colors.fuchsia.600");
+                stroke: theme("colors.fuchsia.700");
             }
         }
 
@@ -96,7 +97,7 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-purple-100;
 
             svg * {
-                stroke: theme("colors.purple.600");
+                stroke: theme("colors.purple.700");
             }
         }
 
@@ -104,7 +105,7 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-violet-100;
 
             svg * {
-                stroke: theme("colors.violet.600");
+                stroke: theme("colors.violet.700");
             }
         }
 
@@ -112,7 +113,7 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-blue-100;
 
             svg * {
-                stroke: theme("colors.blue.600");
+                stroke: theme("colors.blue.700");
             }
         }
     }
@@ -124,6 +125,7 @@ $fa-font-path: "/fonts/fontawesome";
 
         &-small {
             @apply p-2 w-10 h-10;
+
             svg {
                 max-width: 24px;
                 max-height: 24px;
@@ -161,8 +163,8 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-fuchsia-100;
 
             svg * {
-                stroke: theme("colors.fuchsia.600");
-                fill: theme("colors.fuchsia.600") !important;
+                stroke: theme("colors.fuchsia.700");
+                fill: theme("colors.fuchsia.700") !important;
             }
         }
 
@@ -170,12 +172,12 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-purple-100;
 
             svg * {
-                stroke: theme("colors.purple.600");
-                fill: theme("colors.purple.600");
+                stroke: theme("colors.purple.700");
+                fill: theme("colors.purple.700");
             }
 
             svg rect {
-                fill: theme("colors.purple.600");
+                fill: theme("colors.purple.700");
             }
         }
 
@@ -183,8 +185,8 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-violet-100;
 
             svg * {
-                stroke: theme("colors.violet.600");
-                fill: theme("colors.violet.600") !important;
+                stroke: theme("colors.violet.700");
+                fill: theme("colors.violet.700") !important;
             }
         }
 
@@ -192,8 +194,8 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-blue-100;
 
             svg * {
-                stroke: theme("colors.blue.600");
-                fill: theme("colors.blue.600") !important;
+                stroke: theme("colors.blue.700");
+                fill: theme("colors.blue.700") !important;
             }
         }
     }
@@ -205,6 +207,7 @@ $fa-font-path: "/fonts/fontawesome";
 
         &-small {
             @apply p-2 w-10 h-10;
+
             svg {
                 max-width: 24px;
                 max-height: 24px;
@@ -251,11 +254,11 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-fuchsia-100;
 
             svg * {
-                stroke: theme("colors.fuchsia.600");
+                stroke: theme("colors.fuchsia.700");
             }
 
             svg rect {
-                fill: theme("colors.fuchsia.600");
+                fill: theme("colors.fuchsia.700");
             }
         }
 
@@ -263,11 +266,11 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-purple-100;
 
             svg * {
-                stroke: theme("colors.purple.600");
+                stroke: theme("colors.purple.700");
             }
 
             svg rect {
-                fill: theme("colors.purple.600");
+                fill: theme("colors.purple.700");
             }
         }
 
@@ -275,11 +278,11 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-violet-100;
 
             svg * {
-                stroke: theme("colors.violet.600");
+                stroke: theme("colors.violet.700");
             }
 
             svg rect {
-                fill: theme("colors.violet.600");
+                fill: theme("colors.violet.700");
             }
         }
 
@@ -287,11 +290,11 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-blue-100;
 
             svg * {
-                stroke: theme("colors.blue.600");
+                stroke: theme("colors.blue.700");
             }
 
             svg rect {
-                fill: theme("colors.blue.600");
+                fill: theme("colors.blue.700");
             }
         }
     }

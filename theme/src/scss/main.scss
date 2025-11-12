@@ -97,6 +97,7 @@ h6 {
     @apply font-display text-gray-800 mb-2;
 
     &:not(:first-child) {
+
         // Don't apply top margin when one's being specified.
         &:not([class*="mt-"]):not([class*="m-"]) {
             @apply mt-8;
@@ -160,7 +161,7 @@ main {
     blockquote,
     table {
         a {
-            @apply text-blue-600 break-words;
+            @apply text-blue-700 break-words;
 
             &:hover {
                 @apply text-blue-700;
@@ -215,20 +216,22 @@ main {
     @apply text-blue-700;
 }
 
-.section-blog, .section-tags, .section-authors {
+.section-blog,
+.section-tags,
+.section-authors {
     .tags {
         .tag {
             @apply lowercase border border-blue-200 rounded py-1 px-2 mr-1;
 
             &.tag-blog {
-                @apply bg-gray-100 text-blue-600;
+                @apply bg-gray-100 text-blue-700;
 
                 &:hover {
                     @apply border-blue-300 text-blue-700 no-underline;
                 }
 
                 &.active {
-                    @apply border-blue-600 bg-blue-600 text-white;
+                    @apply border-blue-700 bg-blue-700 text-white;
 
                     &:hover {
                         @apply text-white;
@@ -253,7 +256,7 @@ main {
 }
 
 .github-widget {
-    > span {
+    >span {
         @apply flex;
     }
 }
@@ -323,12 +326,14 @@ $sitenav-offset: calc($sitenav-height + 16px);
 }
 
 .section-docs {
+
     // Hide the language-specific SDK-docs tables until we've removed them from the provider builds.
-    main .container dl.package-details + p + dl.tabular {
+    main .container dl.package-details+p+dl.tabular {
         @apply hidden;
     }
+
     // Hide input and output type notes as well.
-    #supporting-types ~ h4 ~ div pulumi-choosable .active blockquote {
+    #supporting-types~h4~div pulumi-choosable .active blockquote {
         @apply hidden;
     }
 }
@@ -387,6 +392,7 @@ pulumi-tree-item {
     &::part(expand-collapse-button) {
         @apply text-xs;
     }
+
     &.expanded {
         .glyph {
             transform: rotateZ(90deg);
@@ -401,9 +407,10 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
 #segment-consent-manager:empty {
     @apply hidden;
 }
+
 #segment-consent-manager {
 
-    @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
+    @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-700 rounded-lg shadow-lg;
     z-index: 99999;
 
     @screen lg {
@@ -411,9 +418,9 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
     }
 
     div {
-       @apply bg-white;
+        @apply bg-white;
     }
-    
+
     p {
         @apply text-black text-left text-sm pr-2;
 
@@ -432,7 +439,7 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
     }
 
     .manage-cookies-btn {
-        @apply mt-2 bg-violet-600 text-white font-bold border-2 border-violet-600 no-underline p-3 rounded-md;
+        @apply mt-2 bg-violet-700 text-white font-bold border-2 border-violet-700 no-underline p-3 rounded-md;
         @include transition;
 
         &.disabled {

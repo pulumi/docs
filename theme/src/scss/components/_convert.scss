@@ -6,7 +6,7 @@ pulumi-convert {
             @apply flex-row;
 
             .CodeMirror {
-                ~ .CodeMirror {
+                ~.CodeMirror {
                     @apply ml-4;
                 }
             }
@@ -33,7 +33,7 @@ pulumi-convert {
                 @apply cursor-default bg-blue-800 border-blue-800 text-gray-400;
             }
 
-           @screen xl {
+            @screen xl {
                 @apply w-auto justify-start;
             }
         }
@@ -66,7 +66,7 @@ pulumi-convert {
 
                 p {
                     a {
-                        @apply text-blue-600;
+                        @apply text-blue-700;
 
                         &:hover {
                             @apply underline;

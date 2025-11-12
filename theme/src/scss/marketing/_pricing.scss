@@ -74,7 +74,7 @@
             }
 
             .compare-table-link {
-                @apply underline text-blue-600;
+                @apply underline text-blue-700;
             }
         }
     }
@@ -83,7 +83,7 @@
 .pricing-faq {
     @each $filter-type in "product" "billing" "pricing" {
         #faq-#{$filter-type}:target {
-            ~ #faq-headers {
+            ~#faq-headers {
                 li {
                     @apply border-none;
 
@@ -93,14 +93,14 @@
                 }
 
                 li[data-faq-label="#{$filter-type}"] {
-                    @apply border-b-4 border-solid border-blue-600;
+                    @apply border-b-4 border-solid border-blue-700;
 
                     a {
                         @apply text-black;
                     }
                 }
 
-                @if $filter-type != "pricing" {
+                @if $filter-type !="pricing" {
                     li[data-faq-label="pricing"] {
                         @apply border-none;
 
@@ -111,13 +111,13 @@
                 }
             }
 
-            @if $filter-type != "pricing" {
-                ~ ul[data-faq-type="faq-pricing"] {
+            @if $filter-type !="pricing" {
+                ~ul[data-faq-type="faq-pricing"] {
                     @apply hidden;
                 }
             }
 
-            ~ ul[data-faq-type="faq-#{$filter-type}"] {
+            ~ul[data-faq-type="faq-#{$filter-type}"] {
                 @apply block;
             }
         }
@@ -139,6 +139,7 @@
             }
 
             &:hover {
+
                 p,
                 i {
                     @apply text-gray-700;
@@ -147,11 +148,11 @@
         }
 
         input[type="checkbox"]:checked {
-            ~ .faq-item-label i {
+            ~.faq-item-label i {
                 transform: rotate(180deg);
             }
 
-            ~ .faq-item-text {
+            ~.faq-item-text {
                 @apply block;
             }
         }
@@ -163,7 +164,7 @@
 }
 
 .trialed-editions {
-    .edition > div {
+    .edition>div {
         @apply rounded-xl;
         box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.1);
     }
@@ -178,7 +179,7 @@
         @apply rounded-xl;
         box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.1);
 
-        .edition > div {
+        .edition>div {
             border-radius: none;
             box-shadow: none;
         }
@@ -188,10 +189,12 @@
 .edition,
 .trialed-editions,
 .ready-cta {
+
     p,
     span {
         color: map-get($gray, 800) !important;
     }
+
     span.tooltip-content span {
         color: white !important;
     }

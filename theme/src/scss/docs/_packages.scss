@@ -1,10 +1,10 @@
 .all-packages {
     .package {
-        ~ .no-results {
+        ~.no-results {
             @apply block;
         }
 
-        &:not([class*="hidden"]) ~ .no-results {
+        &:not([class*="hidden"])~.no-results {
             @apply hidden;
         }
     }
@@ -131,11 +131,12 @@
 }
 
 .packages {
+
     .featured-packages .featured-package,
     .all-packages .package {
         a:hover {
             .title {
-                @apply text-blue-600 underline;
+                @apply text-blue-700 underline;
             }
         }
     }
@@ -146,6 +147,7 @@
 }
 
 div.packages {
+
     section.featured-packages,
     section.all-packages {
         h2 {
@@ -177,7 +179,8 @@ div.packages section.featured-packages {
             border-radius: 12px;
             display: flex;
             flex-direction: column;
-            flex-basis: 100%;;
+            flex-basis: 100%;
+            ;
             align-items: center;
             justify-content: stretch;
             padding: 18px;
@@ -189,14 +192,14 @@ div.packages section.featured-packages {
                 text-align: center;
                 flex: 1;
             }
-        
+
             .package-logo {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 height: 32px;
             }
-        
+
             .package-title {
                 flex-grow: 1;
                 font-family: 'Gilroy';
@@ -207,7 +210,7 @@ div.packages section.featured-packages {
                 align-items: center;
                 justify-content: center;
             }
-        
+
             .package-version {
                 font-family: 'Gilroy';
                 font-weight: 500;
@@ -227,6 +230,7 @@ div.packages section.featured-packages {
             div.featured-package {
                 flex-basis: 25%;
             }
+
             flex-wrap: nowrap;
         }
     }

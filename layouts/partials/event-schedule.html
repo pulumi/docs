@@ -20,28 +20,30 @@ schedule tile color adjustable through "tile-color"
         <p class="text-center mb-8">{{ .schedule.subheading }}</p>
         <div class="schedule mx-auto w-full lg:w-2/3">
             {{ range $index, $item := .schedule.items }}
-                <div class="flex flex-row mt-4">
-                    <div class="bg-white rounded-md flex justify-center items-center py-4 px-1 sm:px-4 mr-4 w-44 text-sm md:text-base" style="max-height:72px;">{{ $item.time }}</div>
-                    {{ if $item.time2 }}
-                        <div class="bg-white rounded-md flex justify-center items-center py-4 px-1 sm:px-4 mr-4 w-44 text-sm md:text-base" style="max-height:72px;">{{ $item.time2 }}</div>
-                    {{ end }}
-                    {{ if $item.description }}
-                        <div class="schedule-item rounded-md h-min">
-                            <input type="checkbox" id="chck{{ $index }}" />
-                            <label class="schedule-item-label w-full" for="chck{{ $index }}">
-                                <div class="w-5/6 pr-2">{{ $item.title }}</div>
-                                <span class="text-violet-600 mr-2 accordion-details hidden md:block">Details</span>
-                            </label>
-                            <div class="schedule-item-content">
-                                {{ $item.description | markdownify }}
-                            </div>
-                        </div>
-                    {{ else if $item.title  }}
-                        <div class="rounded-md h-min bg-white w-full p-4">{{ $item.title }}</div>
-                    {{ else }}
-                        <div class="w-full"></div>
-                    {{ end }}
+            <div class="flex flex-row mt-4">
+                <div class="bg-white rounded-md flex justify-center items-center py-4 px-1 sm:px-4 mr-4 w-44 text-sm md:text-base"
+                    style="max-height:72px;">{{ $item.time }}</div>
+                {{ if $item.time2 }}
+                <div class="bg-white rounded-md flex justify-center items-center py-4 px-1 sm:px-4 mr-4 w-44 text-sm md:text-base"
+                    style="max-height:72px;">{{ $item.time2 }}</div>
+                {{ end }}
+                {{ if $item.description }}
+                <div class="schedule-item rounded-md h-min">
+                    <input type="checkbox" id="chck{{ $index }}" />
+                    <label class="schedule-item-label w-full" for="chck{{ $index }}">
+                        <div class="w-5/6 pr-2">{{ $item.title }}</div>
+                        <span class="text-violet-700 mr-2 accordion-details hidden md:block">Details</span>
+                    </label>
+                    <div class="schedule-item-content">
+                        {{ $item.description | markdownify }}
+                    </div>
                 </div>
+                {{ else if $item.title }}
+                <div class="rounded-md h-min bg-white w-full p-4">{{ $item.title }}</div>
+                {{ else }}
+                <div class="w-full"></div>
+                {{ end }}
+            </div>
             {{ end }}
         </div>
     </div>

@@ -18,7 +18,8 @@
 }
 
 // Use our standard rounding for the button and the modal.
-.aa-Form, .aa-DetachedSearchButton {
+.aa-Form,
+.aa-DetachedSearchButton {
     @apply rounded;
 }
 
@@ -54,7 +55,7 @@
     @apply bg-white z-40 m-0 absolute top-0 right-0 left-0;
 
     // We need a bit more specificity here to override the defaults set by the control.
-    .aa-DetachedContainer &  {
+    .aa-DetachedContainer & {
         @apply my-0;
     }
 
@@ -96,8 +97,9 @@
             }
 
             // When active, show a strong underline.
-            &.active, &.active:hover:not(.disabled) {
-                @apply text-gray-900 border-violet-600;
+            &.active,
+            &.active:hover:not(.disabled) {
+                @apply text-gray-900 border-violet-700;
 
                 button {
                     img {
@@ -161,7 +163,7 @@
 
     // The highlight indicator (i.e., the portion of item, if any, that matches the search query).
     mark {
-        @apply bg-transparent border-b border-blue-600 border-opacity-50;
+        @apply bg-transparent border-b border-blue-700 border-opacity-50;
     }
 }
 
@@ -169,10 +171,10 @@
 .aa-SourceFooter {
     @apply bg-white z-40 py-2 mt-2 px-2 absolute right-0 bottom-0 left-0 text-xs text-gray-600;
 
-    > div {
+    >div {
         @apply pt-2 border-t border-gray-300 flex items-center justify-start;
 
-        > span {
+        >span {
             @apply mr-4;
         }
     }

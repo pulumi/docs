@@ -1,278 +1,292 @@
 {{ define "main" }}
-    <h1 class="text-5xl text-center mt-4 text-gray-800">Plans for teams of all sizes</h1>
-    <section class="container mx-auto text-center mb-16 mt-4">
-        <p class="max-w-4xl mx-auto mt-6 price">
-            Start for free. Stay free forever for open source and individuals, or scale with advanced editions for your team.
-        </p>
-    </section>
+<h1 class="text-5xl text-center mt-4 text-gray-800">Plans for teams of all sizes</h1>
+<section class="container mx-auto text-center mb-16 mt-4">
+    <p class="max-w-4xl mx-auto mt-6 price">
+        Start for free. Stay free forever for open source and individuals, or scale with advanced editions for your
+        team.
+    </p>
+</section>
 
-    <section id="plans" class="relative mb-16">
-        <div class="shape-background pricing-small-dots">
-            <div class="relative w-full h-full">
-                <div class="dot-background-container">
-                    <div class="dot-background-overlay"></div>
-                    <div class="dot-background no-animate"></div>
-                </div>
-                <div class="circle-left"></div>
+<section id="plans" class="relative mb-16">
+    <div class="shape-background pricing-small-dots">
+        <div class="relative w-full h-full">
+            <div class="dot-background-container">
+                <div class="dot-background-overlay"></div>
+                <div class="dot-background no-animate"></div>
             </div>
+            <div class="circle-left"></div>
         </div>
+    </div>
 
-        <div class="container mx-auto lg:flex">
-            <div class="w-full p-8 lg:p-0">
-                <div class="hidden lg:block w-full h-10">
-                    <div class="h-full flex">
-                        <div class="w-1/4 flex"></div>
-                        <div class="w-1/4 flex"></div>
-                        <div class="w-1/4 flex justify-center items-center rounded-t-full bg-purple-200">Popular</div>
-                        <div class="w-1/4 flex"></div>
-                    </div>
+    <div class="container mx-auto lg:flex">
+        <div class="w-full p-8 lg:p-0">
+            <div class="hidden lg:block w-full h-10">
+                <div class="h-full flex">
+                    <div class="w-1/4 flex"></div>
+                    <div class="w-1/4 flex"></div>
+                    <div class="w-1/4 flex justify-center items-center rounded-t-full bg-purple-200">Popular</div>
+                    <div class="w-1/4 flex"></div>
                 </div>
-                <div class="card bg-white py-8 lg:pt-8 lg:rounded-tr-none">
-                    <div class="lg:flex">
-                        {{ range $index, $tier := .Params.tiers.trialed.items }}
-                            {{ $mobileBookmarkClass := "" }}
-                            {{ if eq $index 2 }}
-                                <div class="lg:hidden absolute w-28 mx-auto left-0 right-0 text-center bg-white">
-                                    <p class="my-0 -mt-3">Popular</p>
-                                </div>
-                                {{ $mobileBookmarkClass = "border-t-2 border-purple-300 rounded-2xl lg:rounded-none lg:border-0"}}
-                            {{ end }}
-                            {{ $rightBorderClass := "" }}
-                            {{ if not (eq $index 3) }}
-                                {{ $rightBorderClass = "lg:border-r lg:border-gray-300"}}
-                            {{ end }}
-                            <div class="w-full pb-16 pt-6 lg:py-0 lg:w-1/4 px-8 {{ $mobileBookmarkClass }} {{ $rightBorderClass }}">
-                                <div class="lg:h-24 xl:h-11">
-                                    <h4 class="text-center font-bold">{{ $tier.title }}</h4>
-                                </div>
-                                <div class="lg:h-16 mb-4 text-center">
-                                    <p class="text-sm">{{ $tier.subtitle }}</p>
-                                </div>
-                                <div class="price lg:h-20">
-                                    <div class="text-center text-3xl font-semibold">
-                                        {{ $tier.price }}<span class="text-gray-700 text-lg font-semibold">{{ $tier.price_label }}</span>
-                                    </div>
-                                    <div class="text-center text-sm">{{ $tier.unit | markdownify }}</div>
-                                    <div class="text-center text-xs text-gray-700">{{ $tier.note | markdownify }}</div>
-                                </div>
-                                {{ if eq $index 0 }}
-                                    <div class="flex flex-wrap flex-col justify-center align-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="https://app.pulumi.com/signup">Sign up</a>
-                                    </div>
-                                {{ else if eq $index 1 }}
-                                    <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="https://app.pulumi.com/?create-organization=1">Start a free trial</a>
-                                    </div>
-                                {{ else if eq $index 2 }}
-                                    <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="https://app.pulumi.com/?create-organization=1">Start a free trial</a>
-                                        <a href="/contact/?form=sales" class="text-violet-600 text-s border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-100">Contact sales</a>
-                                    </div>
-                                {{ else }}
-                                    <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="/contact/?form=sales">Contact sales</a>
-                                    </div>
-                                {{ end }}
-                                <div class="border-dotted border-2 border-gray-200 rounded-lg px-4">
-                                    <div class="text-sm">{{ $tier.items | markdownify }}</div>
-                                </div>
+            </div>
+            <div class="card bg-white py-8 lg:pt-8 lg:rounded-tr-none">
+                <div class="lg:flex">
+                    {{ range $index, $tier := .Params.tiers.trialed.items }}
+                    {{ $mobileBookmarkClass := "" }}
+                    {{ if eq $index 2 }}
+                    <div class="lg:hidden absolute w-28 mx-auto left-0 right-0 text-center bg-white">
+                        <p class="my-0 -mt-3">Popular</p>
+                    </div>
+                    {{ $mobileBookmarkClass = "border-t-2 border-purple-300 rounded-2xl lg:rounded-none lg:border-0"}}
+                    {{ end }}
+                    {{ $rightBorderClass := "" }}
+                    {{ if not (eq $index 3) }}
+                    {{ $rightBorderClass = "lg:border-r lg:border-gray-300"}}
+                    {{ end }}
+                    <div
+                        class="w-full pb-16 pt-6 lg:py-0 lg:w-1/4 px-8 {{ $mobileBookmarkClass }} {{ $rightBorderClass }}">
+                        <div class="lg:h-24 xl:h-11">
+                            <h4 class="text-center font-bold">{{ $tier.title }}</h4>
+                        </div>
+                        <div class="lg:h-16 mb-4 text-center">
+                            <p class="text-sm">{{ $tier.subtitle }}</p>
+                        </div>
+                        <div class="price lg:h-20">
+                            <div class="text-center text-3xl font-semibold">
+                                {{ $tier.price }}<span class="text-gray-700 text-lg font-semibold">{{ $tier.price_label
+                                    }}</span>
                             </div>
+                            <div class="text-center text-sm">{{ $tier.unit | markdownify }}</div>
+                            <div class="text-center text-xs text-gray-700">{{ $tier.note | markdownify }}</div>
+                        </div>
+                        {{ if eq $index 0 }}
+                        <div
+                            class="flex flex-wrap flex-col justify-center align-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
+                            <a class="text-white text-s bg-violet-700 border-2 border-violet-700 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap"
+                                href="https://app.pulumi.com/signup">Sign up</a>
+                        </div>
+                        {{ else if eq $index 1 }}
+                        <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
+                            <a class="text-white text-s bg-violet-700 border-2 border-violet-700 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap"
+                                href="https://app.pulumi.com/?create-organization=1">Start a free trial</a>
+                        </div>
+                        {{ else if eq $index 2 }}
+                        <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
+                            <a class="text-white text-s bg-violet-700 border-2 border-violet-700 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0"
+                                href="https://app.pulumi.com/?create-organization=1">Start a free trial</a>
+                            <a href="/contact/?form=sales"
+                                class="text-violet-700 text-s border-2 border-violet-700 rounded-lg py-2 px-2 hover:bg-violet-100">Contact
+                                sales</a>
+                        </div>
+                        {{ else }}
+                        <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
+                            <a class="text-white text-s bg-violet-700 border-2 border-violet-700 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0"
+                                href="/contact/?form=sales">Contact sales</a>
+                        </div>
                         {{ end }}
+                        <div class="border-dotted border-2 border-gray-200 rounded-lg px-4">
+                            <div class="text-sm">{{ $tier.items | markdownify }}</div>
+                        </div>
                     </div>
+                    {{ end }}
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="customers" class="container mx-auto">
-        <div class="flex flex-wrap justify-center mx-auto">
-            {{ range $customer := .Params.customers }}
-                <div class="w-1/2 lg:w-1/4 p-2">
-                    <a href="{{ .link }}">
-                        <div class="card p-8 text-center h-full flex flex-col justify-between">
-                            <h6>{{ $customer.stat | markdownify }}</h6>
-                            {{ if eq $customer.logo "snowflake"}}
-                                <div class="h-12 mt-4 -mb-2">
-                                    {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
-                                </div>
-                            {{ else if eq $customer.logo "unity" }}
-                                <div class="h-10 mt-6">
-                                    {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
-                                </div>
+<section id="customers" class="container mx-auto">
+    <div class="flex flex-wrap justify-center mx-auto">
+        {{ range $customer := .Params.customers }}
+        <div class="w-1/2 lg:w-1/4 p-2">
+            <a href="{{ .link }}">
+                <div class="card p-8 text-center h-full flex flex-col justify-between">
+                    <h6>{{ $customer.stat | markdownify }}</h6>
+                    {{ if eq $customer.logo "snowflake"}}
+                    <div class="h-12 mt-4 -mb-2">
+                        {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
+                    </div>
+                    {{ else if eq $customer.logo "unity" }}
+                    <div class="h-10 mt-6">
+                        {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
+                    </div>
+                    {{ else }}
+                    <div class="h-10 mt-8">
+                        {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
+                    </div>
+                    {{ end }}
+                </div>
+            </a>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+<section id="startups" class="container mx-auto">
+    <div class="justify-center mx-auto mt-16">
+        <div class="card p-8 text-center h-full flex flex-wrap justify-between">
+            <div class="flex flex-col w-1/2 justify-center">
+                <h3>Pulumi for startups</h3>
+            </div>
+            <div class="flex flex-col w-1/2 justify-center">
+                <p class="max-w-4xl mx-auto mt-6">
+                    Are you a scaling startup?
+                    <a href="/pulumi-for-startups">Apply now</a> to receive <b>$10,000</b>
+                    in free credits.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="compare" class="container mx-auto my-32">
+    <h2 class="text-center">Compare Editions</h2>
+    {{ range .Params.comparison_table.sections }}
+    <h3>{{ .header }}</h3>
+    <ul class="list-none pl-0 space-y-4">
+        {{ range .tables }}
+        <li class="accordion-item card md:px-8 text-2xl py-3">
+            {{ partial "accordian-header" (dict "text" .header "subheader" .subheader "large_header" true "arrow_open"
+            true) }}
+            {{ if .subheader }}
+            <span class="text-base text-gray-600">{{ .subheader }}</span>
+            {{ end }}
+            <div class="accordion-item-body-no-animation text-base">
+                <div id="fundamentals" class="pricing-compare-plans-table">
+                    <div class="compare-plans-table-header-container">
+                        <div class="compare-plans-table-header-item">
+                            <span></span>
+                        </div>
+                        <div class="compare-plans-table-header-item">
+                            <span>Individual</span>
+                        </div>
+                        <div class="compare-plans-table-header-item">
+                            <span>Team</span>
+                        </div>
+                        <div class="compare-plans-table-header-item">
+                            <span>Enterprise</span>
+                        </div>
+                        <div class="compare-plans-table-header-item">
+                            <span>Business Critical</span>
+                        </div>
+                    </div>
+                    {{ range $row := .rows }}
+                    <div class="compare-plans-table-row-container">
+                        <div class="compare-plans-table-row-item">
+                            {{ if $row.link }}
+                            <span><a class="compare-table-link" href="{{ $row.link }}">{{ $row.title }}</a></span>
                             {{ else }}
-                                <div class="h-10 mt-8">
-                                    {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
-                                </div>
+                            <span>{{ $row.title }}</span>
+                            {{ end }}
+                            {{ if $row.tooltip }}
+                            <span>
+                                <pulumi-tooltip>
+                                    <i class="w-8 ml-2 fas fa-info-circle text-blue-700"></i>
+                                    <span slot="content">{{ $row.tooltip }}</span>
+                                </pulumi-tooltip>
+                            </span>
                             {{ end }}
                         </div>
-                    </a>
-                </div>
-            {{ end }}
-        </div>
-    </section>
-
-    <section id="startups" class="container mx-auto">
-        <div class="justify-center mx-auto mt-16">
-            <div class="card p-8 text-center h-full flex flex-wrap justify-between">
-                <div class="flex flex-col w-1/2 justify-center">
-                    <h3>Pulumi for startups</h3>
-                </div>
-                <div class="flex flex-col w-1/2 justify-center">
-                    <p class="max-w-4xl mx-auto mt-6">
-                        Are you a scaling startup?
-                        <a href="/pulumi-for-startups">Apply now</a> to receive <b>$10,000</b>
-                        in free credits.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="compare" class="container mx-auto my-32">
-        <h2 class="text-center">Compare Editions</h2>
-        {{ range .Params.comparison_table.sections }}
-            <h3>{{ .header }}</h3>
-            <ul class="list-none pl-0 space-y-4">
-                {{ range .tables }}
-                    <li class="accordion-item card md:px-8 text-2xl py-3">
-                        {{ partial "accordian-header" (dict "text" .header "subheader" .subheader "large_header" true "arrow_open" true) }}
-                        {{ if .subheader }}
-                            <span class="text-base text-gray-600">{{ .subheader }}</span>
+                        {{ range $item := $row.items }}
+                        <div class="compare-plans-table-row-item">
+                            {{ if eq $item.content "_check" }}
+                            <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                            {{ else if eq $item.content "_blank" }}
+                            <span></span>
+                            {{ else }}
+                            <span class="px-2">{{ $item.content | markdownify }}</span>
+                            {{ end }}
+                            {{ if $item.tooltip }}
+                            <span>
+                                <pulumi-tooltip>
+                                    <i class="w-8 ml-2 fas fa-info-circle text-blue-700"></i>
+                                    <span slot="content">{{ $item.tooltip }}</span>
+                                </pulumi-tooltip>
+                            </span>
+                            {{ end }}
+                        </div>
                         {{ end }}
-                        <div class="accordion-item-body-no-animation text-base">
-                            <div id="fundamentals" class="pricing-compare-plans-table">
-                                <div class="compare-plans-table-header-container">
-                                    <div class="compare-plans-table-header-item">
-                                        <span></span>
-                                    </div>
-                                    <div class="compare-plans-table-header-item">
-                                        <span>Individual</span>
-                                    </div>
-                                    <div class="compare-plans-table-header-item">
-                                        <span>Team</span>
-                                    </div>
-                                    <div class="compare-plans-table-header-item">
-                                        <span>Enterprise</span>
-                                    </div>
-                                    <div class="compare-plans-table-header-item">
-                                        <span>Business Critical</span>
-                                    </div>
-                                </div>
-                                {{ range $row :=  .rows }}
-                                    <div class="compare-plans-table-row-container">
-                                        <div class="compare-plans-table-row-item">
-                                            {{ if $row.link }}
-                                                <span><a class="compare-table-link" href="{{ $row.link }}">{{ $row.title }}</a></span>
-                                            {{ else  }}
-                                                <span>{{ $row.title }}</span>
-                                            {{ end }}
-                                            {{ if $row.tooltip }}
-                                                <span>
-                                                    <pulumi-tooltip>
-                                                        <i class="w-8 ml-2 fas fa-info-circle text-blue-600"></i>
-                                                        <span slot="content">{{ $row.tooltip }}</span>
-                                                    </pulumi-tooltip>
-                                                </span>
-                                            {{ end }}
-                                        </div>
-                                        {{ range $item := $row.items }}
-                                            <div class="compare-plans-table-row-item">
-                                                {{ if eq $item.content "_check" }}
-                                                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                                                {{ else if eq $item.content "_blank" }}
-                                                    <span></span>
-                                                {{ else }}
-                                                    <span class="px-2">{{ $item.content | markdownify }}</span>
-                                                {{ end }}
-                                                {{ if $item.tooltip }}
-                                                    <span>
-                                                        <pulumi-tooltip>
-                                                            <i class="w-8 ml-2 fas fa-info-circle text-blue-600"></i>
-                                                            <span slot="content">{{ $item.tooltip }}</span>
-                                                        </pulumi-tooltip>
-                                                    </span>
-                                                {{ end }}
-                                            </div>
-                                        {{ end }}
-                                    </div>
-                                {{ end }}
-                        </div>
-                    </li>
-                {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+        </li>
         {{ end }}
-    </section>
-
-    <section id="faq" class="pricing-faq container mx-auto mt-16 mb-32">
-        <h2 class="text-center">Frequently asked questions</h2>
-
-        <span id="faq-product"></span>
-        <span id="faq-pricing"></span>
-        <span id="faq-billing"></span>
-
-        <ul id="faq-headers" class="hidden lg:flex list-none mt-10">
-            <li class="px-10 py-3 mr-3 border-b-4 border-solid border-blue-600" data-faq-label="pricing">
-                <h4><a href="#faq-pricing" class="text-black">Pricing</a></h4>
-            </li>
-            <li class="px-10 py-3 mr-3" data-faq-label="product">
-                <h4><a href="#faq-product" class="text-gray-500">Product</a></h4>
-            </li>
-            <li class="px-10 py-3" data-faq-label="billing">
-                <h4><a href="#faq-billing" class="text-gray-500">Billing and Support</a></h4>
-            </li>
-        </ul>
-
-        {{ range $index, $category := .Params.faq }}
-            <p class="text-2xl font-bold lg:hidden mt-12 pl-5">{{ $category.category }}</p>
-            {{ $listClass := "list-none p-0 mx-5 xl:ml-12" }}
-            {{ if not (eq $index 0)  }}
-                {{ $listClass = "list-none p-0 mx-5 xl:ml-12 lg:hidden" }}
-            {{ end }}
-            <ul class="{{ $listClass }}" data-faq-type="faq-{{ .id }}">
-                {{ range $question := $category.items }}
-                    <li class="accordion-item text-2xl py-3">
-                        {{ partial "accordian-header" (dict "text" $question.question "large_header" true) }}
-
-                        <div class="accordion-item-body-no-animation text-base">
-                            <p>{{ $question.answer | markdownify }}</p>
-                        </div>
-                    </li>
-                {{ end }}
-            </ul>
         {{ end }}
-    </section>
+</section>
 
-    <section id="calculator" class="relative mt-16 mb-24">
-        <div class="shape-background pricing-compare-updated">
-            <div class="relative w-full h-full">
-                <div class="circle-left"></div>
-                <div class="circle-center"></div>
-                <div class="circle-right"></div>
+<section id="faq" class="pricing-faq container mx-auto mt-16 mb-32">
+    <h2 class="text-center">Frequently asked questions</h2>
+
+    <span id="faq-product"></span>
+    <span id="faq-pricing"></span>
+    <span id="faq-billing"></span>
+
+    <ul id="faq-headers" class="hidden lg:flex list-none mt-10">
+        <li class="px-10 py-3 mr-3 border-b-4 border-solid border-blue-700" data-faq-label="pricing">
+            <h4><a href="#faq-pricing" class="text-black">Pricing</a></h4>
+        </li>
+        <li class="px-10 py-3 mr-3" data-faq-label="product">
+            <h4><a href="#faq-product" class="text-gray-500">Product</a></h4>
+        </li>
+        <li class="px-10 py-3" data-faq-label="billing">
+            <h4><a href="#faq-billing" class="text-gray-500">Billing and Support</a></h4>
+        </li>
+    </ul>
+
+    {{ range $index, $category := .Params.faq }}
+    <p class="text-2xl font-bold lg:hidden mt-12 pl-5">{{ $category.category }}</p>
+    {{ $listClass := "list-none p-0 mx-5 xl:ml-12" }}
+    {{ if not (eq $index 0) }}
+    {{ $listClass = "list-none p-0 mx-5 xl:ml-12 lg:hidden" }}
+    {{ end }}
+    <ul class="{{ $listClass }}" data-faq-type="faq-{{ .id }}">
+        {{ range $question := $category.items }}
+        <li class="accordion-item text-2xl py-3">
+            {{ partial "accordian-header" (dict "text" $question.question "large_header" true) }}
+
+            <div class="accordion-item-body-no-animation text-base">
+                <p>{{ $question.answer | markdownify }}</p>
             </div>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</section>
+
+<section id="calculator" class="relative mt-16 mb-24">
+    <div class="shape-background pricing-compare-updated">
+        <div class="relative w-full h-full">
+            <div class="circle-left"></div>
+            <div class="circle-center"></div>
+            <div class="circle-right"></div>
         </div>
-        <div class="container mx-auto bg-white">
-            <div id="calculator" class="mt-16 mb-24">
-                <pulumi-pricing-calculator></pulumi-pricing-calculator>
-            </div>
+    </div>
+    <div class="container mx-auto bg-white">
+        <div id="calculator" class="mt-16 mb-24">
+            <pulumi-pricing-calculator></pulumi-pricing-calculator>
+        </div>
 
-            <div class="flex justify-center mt-24">
-                <div class="card ready-cta w-full rounded-xl p-0.5 gradient">
-                    <div class="flex justify-center rounded-xl bg-purple-100">
-                        <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
-                            <h2 class="mb-12 text-center">Ready to try Pulumi Cloud?</h2>
-                            <div class="flex flex-col lg:flex-row self-stretch items-center lg:justify-between">
-                                <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-4 mb-14 lg:mb-0 z-0">
-                                    <a href="https://app.pulumi.com/?create-organization=1" id="pricingStartTrialBottomCTA" class="btn-primary py-3">Start trial</a>
-                                    <p class="text-xs pt-1 my-0">14-day trial. No credit card needed.</p>
-                                </div>
-                                <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:mr-14 lg:ml-4">
-                                    <a href="/contact/?form=sales" class="btn-secondary py-3 px-6">Talk to a human</a>
-                                    <p class="text-xs pt-1 my-0">Contact us for a demo & quote.</p>
-                                </div>
+        <div class="flex justify-center mt-24">
+            <div class="card ready-cta w-full rounded-xl p-0.5 gradient">
+                <div class="flex justify-center rounded-xl bg-purple-100">
+                    <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
+                        <h2 class="mb-12 text-center">Ready to try Pulumi Cloud?</h2>
+                        <div class="flex flex-col lg:flex-row self-stretch items-center lg:justify-between">
+                            <div
+                                class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-4 mb-14 lg:mb-0 z-0">
+                                <a href="https://app.pulumi.com/?create-organization=1" id="pricingStartTrialBottomCTA"
+                                    class="btn-primary py-3">Start trial</a>
+                                <p class="text-xs pt-1 my-0">14-day trial. No credit card needed.</p>
+                            </div>
+                            <div
+                                class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:mr-14 lg:ml-4">
+                                <a href="/contact/?form=sales" class="btn-secondary py-3 px-6">Talk to a human</a>
+                                <p class="text-xs pt-1 my-0">Contact us for a demo & quote.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 {{ end }}

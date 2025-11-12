@@ -10,18 +10,23 @@ body {
     h1 {
         @apply text-5xl;
     }
+
     h2 {
         @apply text-4xl;
     }
+
     h3 {
         @apply text-3xl;
     }
+
     h4 {
         @apply text-2xl;
     }
+
     h5 {
         @apply text-xl;
     }
+
     h6 {
         @apply text-base;
     }
@@ -84,7 +89,7 @@ body {
     }
 
     .btn-secondary {
-        @apply bg-white text-violet-600 border-2 border-violet-600;
+        @apply bg-white text-violet-700 border-2 border-violet-700;
         @include transition;
 
         &.disabled {
@@ -92,7 +97,7 @@ body {
         }
 
         &:hover {
-            @apply bg-violet-600 text-white;
+            @apply bg-violet-700 text-white;
         }
 
         &:focus {
@@ -101,13 +106,13 @@ body {
     }
 
     // Make the borders transparent when the button is over a background of the same color.
-    .bg-violet-600 .btn-secondary {
+    .bg-violet-700 .btn-secondary {
         @apply border-transparent;
     }
 
-    // white secondary button for violet-600 background
+    // white secondary button for violet-700 background
     .btn-secondary-home-action {
-        @apply bg-violet-600 text-white border-2 border-white whitespace-normal;
+        @apply bg-violet-700 text-white border-2 border-white whitespace-normal;
         @include transition;
 
         &.disabled {
@@ -131,18 +136,23 @@ body {
                 @apply text-5xl;
             }
         }
+
         h2 {
             @apply text-5xl;
         }
+
         h3 {
             @apply text-4xl;
         }
+
         h4 {
             @apply text-3xl;
         }
+
         h5 {
             @apply text-2xl;
         }
+
         h6 {
             @apply text-lg;
         }
@@ -151,6 +161,7 @@ body {
 
 .home-page-build-section-background {
     @apply w-full h-full overflow-hidden absolute top-0 left-0 border-gray-300;
+
     .home-page-build-section-image {
         @apply w-full h-full;
         opacity: 0.5;
@@ -186,7 +197,7 @@ body {
 
 .section-partner {
     .btn-primary:hover {
-        background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
+        background: linear-gradient(90deg, #be5188 0%, #805ac3 100%)
     }
 }
 
