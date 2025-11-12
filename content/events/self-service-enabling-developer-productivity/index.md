@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: "Self-Service - Enabling Developer Productivity"
-meta_desc: Learn how agents can help teams launch Internal Developer Platforms faster by creating reusable abstractions and templates for self-service deployments.
+title: "Self-Service & AI Agents for Developer Productivity"
+meta_desc: Learn how Pulumi AI agents and self-service platforms enable developer productivity with templates, DigitalOcean deployments, and Kubernetes automation.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -48,12 +48,14 @@ main:
 
     # Description of the webinar.
     description: |
-        Teams building Internal Developer Platforms are betting that standardization and self-service will bring improved productivity to their engineering organization. In this session, we'll explore how agents can help teams launch platforms faster by simplifying the process of creating reusable abstractions and templates that standardize self-service deployments.
+        This hands-on workshop with Pulumi Cloud shows how AI agents and self-service platforms help teams automate infrastructure creation and standardize deployments. Sign up for free to follow along.
+
+In this session, you’ll use Pulumi agents and templates to create a self-service developer platform—building reusable infrastructure patterns and deploying real workloads with automation. Each exercise demonstrates how intelligent agents simplify provisioning, configuration, and GitOps operations while maintaining governance and consistency.
     learn:
-        - Building developer self-service platforms faster with agents
-        - Creating reusable infrastructure patterns and templates
-        - Considerations for balancing developer autonomy with platform governance
-        - Handling a surge in infrastructure demand through intelligent automation
+        - How to **build and publish Pulumi templates** that power self-service infrastructure provisioning
+        - How to **deploy a monitored DigitalOcean** cluster through an **AI-assisted, wizard-style workflow**
+        - How to **create reusable Kubernetes components** — like **Argo CD** — with Pulumi TypeScript and ESC environments
+        - How **intelligent agents enforce best practices** and scale developer autonomy safely
 
     # The webinar presenters
     presenters:
@@ -67,7 +69,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["Platform Engineering"]
+        topics:  ["Platform Engineering", "Argo CD", "Kubernetes", "Pulumi Neo", "AI"]
         languages: ["Any"]
         clouds: ["AWS"]
 
