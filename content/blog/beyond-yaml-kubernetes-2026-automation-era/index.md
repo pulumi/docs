@@ -73,6 +73,18 @@ Pulumi’s 2025 advancements, including [Pulumi Kubernetes Operator 2.0 GA](http
 
 <!--more-->
 
+## In this Kubernetes article:
+
+- [Why Kubernetes Needs to Go Beyond YAML](/blog/beyond-yaml-kubernetes-2026-automation-era/#why-kubernetes-needs-to-go-beyond-yaml)
+- [The 2026 Convergence of AI, Platforms, and Policy in Kubernetes](/blog/beyond-yaml-kubernetes-2026-automation-era/#the-2026-convergence-of-ai-platforms-and-policy-in-kubernetes)
+- [The 2026 Shift: AI Assisted Kubernetes Operations](/blog/beyond-yaml-kubernetes-2026-automation-era/#the-2026-shift-ai-assisted-kubernetes-operations)
+- [Operator First: Kubernetes Deploys Your Cloud](/blog/beyond-yaml-kubernetes-2026-automation-era/#operator-first-kubernetes-deploys-your-cloud)
+- [Intelligent Kubernetes Infrastructure Across Every Cloud](/blog/beyond-yaml-kubernetes-2026-automation-era/#intelligent-kubernetes-infrastructure-across-every-cloud)
+- [Where to Start](/blog/beyond-yaml-kubernetes-2026-automation-era/#where-to-start)
+- [Register for the Workshop: From Zero to Production in Kubernetes](/blog/beyond-yaml-kubernetes-2026-automation-era/#register-for-the-workshop-from-zero-to-production-in-kubernetes)
+- [Visit Pulumi at KubeCon 2025 Booth 1045](/blog/beyond-yaml-kubernetes-2026-automation-era/#visit-pulumi-at-kubecon-2025-booth-1045)
+- [Final Thoughts](/blog/beyond-yaml-kubernetes-2026-automation-era/#final-thoughts)
+
 ## Why Kubernetes Needs to Go Beyond YAML
 
 The article [*Kubernetes Best Practices I Wish I Had Known Before*](https://www.pulumi.com/blog/kubernetes-best-practices-i-wish-i-had-known-before/) highlights a key challenge: relying solely on YAML as the source of truth for Kubernetes is no longer sustainable. Clusters are dynamic, environments multiply, and static YAML files cannot keep up with the complexity of modern infrastructure.
