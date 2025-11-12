@@ -69,7 +69,7 @@ POST /api/preview/agents/{orgName}/tasks
 | `message.type` | string | Yes | Type of event (must be "user_message") |
 | `message.content` | string | Yes | The exact natural language instruction from the user |
 | `message.timestamp` | string (ISO 8601) | Yes | When the event occurred |
-| `message.entity_diff` | object | No | Entities to add or remove from the agent. See [Entity Types](#entity-types) for details |
+| `message.entity_diff` | object | No | Entities to add or remove from the agent. See [Entity Types](#entity-types) for details. Note: Pull request entities cannot be added via this API. |
 
 ### Example
 
@@ -393,7 +393,7 @@ Send a user message event to provide additional instructions or responses to the
 | `type` | string | Yes | Must be "user_message" |
 | `content` | string | Yes | The user's response or additional instructions |
 | `timestamp` | string (ISO 8601) | Yes | When the event occurred |
-| `entity_diff` | object | No | Entities to add or remove from the agent context |
+| `entity_diff` | object | No | Entities to add or remove from the agent context. See [Entity Types](#entity-types) for details. Note: Pull request entities cannot be added via this API. |
 
 ### User Confirmation Event
 
@@ -471,7 +471,7 @@ Represents a source code repository that the agent can analyze and work with.
 {
   "type": "repository",
   "name": "my-repo",
-  "owner": "my-org",
+  "org": "my-org",
   "forge": "github"
 }
 ```
@@ -482,12 +482,14 @@ Represents a source code repository that the agent can analyze and work with.
 |-------|------|----------|-------------|
 | `type` | string | Yes | Must be "repository" |
 | `name` | string | Yes | The name of the repository |
-| `owner` | string | Yes | The owner of the repository |
+| `org` | string | Yes | The organization owning the repository |
 | `forge` | string | Yes | The forge/provider where the repository is hosted (e.g., "github") |
 
 ### Pull Request Entity
 
 Represents a pull request that the agent can analyze and work with.
+
+**Note**: Pull request entities cannot be added using the create task or respond to task APIs. They are managed by the system and associated with tasks through other mechanisms.
 
 ```json
 {
@@ -495,9 +497,10 @@ Represents a pull request that the agent can analyze and work with.
   "number": 123,
   "repository": {
     "name": "my-repo",
-    "owner": "my-org",
+    "org": "my-org",
     "forge": "github"
-  }
+  },
+  "merged": true
 }
 ```
 
@@ -507,9 +510,10 @@ Represents a pull request that the agent can analyze and work with.
 |-------|------|----------|-------------|
 | `type` | string | Yes | Must be "pull_request" |
 | `number` | integer | Yes | The pull request number |
+| `merged` | boolean | Yes | If the PR has been merged already |
 | `repository` | object | Yes | The repository information |
 | `repository.name` | string | Yes | The name of the repository |
-| `repository.owner` | string | Yes | The owner of the repository |
+| `repository.org` | string | Yes | The organization owning the repository |
 | `repository.forge` | string | Yes | The forge/provider where the repository is hosted |
 
 ### Policy Issue Entity
