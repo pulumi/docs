@@ -165,7 +165,7 @@ Teams do not need to start from scratch. Pulumi supports [importing existing YAM
 
 This hybrid approach enables modernization without disrupting existing CI/CD pipelines or team workflows.
 
-## Where to Start
+## Begin Your Kubernetes Automation Journey
 
 For teams preparing for the next phase of Kubernetes management in 2026:
 
