@@ -59,24 +59,6 @@ $ cd pulumi-start-aws
 
 Now initialize a new Pulumi project for AWS using the `pulumi new` command:
 
-{{% choosable language javascript %}}
-
-{{% choosable os "linux,macos" %}}
-
-```bash
-$ pulumi new aws-javascript
-```
-
-{{% /choosable %}}
-{{% choosable os "windows" %}}
-
-```powershell
-> pulumi new aws-javascript
-```
-
-{{% /choosable %}}
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 {{% choosable os "linux,macos" %}}
@@ -199,7 +181,7 @@ The AWS region to deploy into (aws:region) (us-east-1): us-west-2
 
 {{< cli-note >}}
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 
 After some dependency installations from `npm`, the project and stack will be ready.
 
@@ -233,7 +215,7 @@ If you list the contents of your directory, you'll see some key files:
 
 {{% /choosable %}}
 
-{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+{{% choosable language "typescript,python,go,csharp,java" %}}
 
 - <span>{{< langfile >}}</span> contains your project's main code that declares a new S3 bucket
 - `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project like its name
@@ -248,23 +230,6 @@ If you list the contents of your directory, you'll see some key files:
 - `Pulumi.dev.yaml` contains configuration values for the stack you just initialized
 
 Now examine the code in {{< langfile >}}:
-
-{{% choosable language javascript %}}
-
-```javascript
-"use strict";
-const pulumi = require("@pulumi/pulumi");
-const aws = require("@pulumi/aws");
-const awsx = require("@pulumi/awsx");
-
-// Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.Bucket("my-bucket");
-
-// Export the name of the bucket
-exports.bucketName = bucket.id;
-```
-
-{{% /choosable %}}
 
 {{% choosable language typescript %}}
 

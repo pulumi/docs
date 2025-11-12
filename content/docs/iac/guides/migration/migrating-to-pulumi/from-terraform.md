@@ -356,28 +356,8 @@ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
 
 This will generate a local SDK in your programming language that you can import into your Pulumi program. You can then use this module like any other Pulumi package:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const vpc = require("@pulumi/vpc");
-
-// Create a VPC using the terraform-aws-modules/vpc module
-const myVpc = new vpc.Module("my-vpc", {
-    name: "pulumi-vpc",
-    cidr: "10.0.0.0/16",
-    azs: ["us-west-2a", "us-west-2b", "us-west-2c"],
-    private_subnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
-    public_subnets: ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"],
-    enable_nat_gateway: true
-});
-
-// Access outputs from the module
-exports.vpcId = myVpc.vpc_id;
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

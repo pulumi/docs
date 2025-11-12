@@ -66,20 +66,7 @@ Now that you have an `index.html` file with some content, open {{< langfile >}} 
 
 For this, you'll use Pulumi's `FileAsset` class to assign the content of the file to a new `BucketObject`.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language javascript %}}
-
-In `index.js`, create the `BucketObject` right after creating the bucket itself:
-
-```javascript
-const bucketObject = new gcp.storage.BucketObject("index.html", {
-    bucket: bucket.name,
-    source: new pulumi.asset.FileAsset("index.html")
-});
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -192,18 +179,6 @@ Below the `BucketObject`, add an IAM binding allowing the contents of the bucket
 {{% choosable language typescript %}}
 
 ```typescript
-const bucketBinding = new gcp.storage.BucketIAMBinding("my-bucket-binding", {
-    bucket: bucket.name,
-    role: "roles/storage.objectViewer",
-    members: ["allUsers"]
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language javascript %}}
-
-```javascript
 const bucketBinding = new gcp.storage.BucketIAMBinding("my-bucket-binding", {
     bucket: bucket.name,
     role: "roles/storage.objectViewer",

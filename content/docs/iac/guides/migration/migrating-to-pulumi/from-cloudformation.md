@@ -32,27 +32,8 @@ For instance, let's say your infrastructure team has provisioned your network in
 
 Instead, you can look up that stack by name and use one of its output values. The following example reads an AWS CloudFormation stack named `my-network-stack` and then uses the exported `SubnetId` value to provision a brand new EC2 instance that runs in that subnet:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let aws = require("@pulumi/aws");
-
-let network = aws.cloudformation.getStackOutput({
-    name: "my-network-stack",
-});
-
-let subnetId = network.outputs["SubnetId"];
-
-let web = new aws.ec2.Instance("web", {
-    ami: "ami-0adc0e3ef2558cb1f", // us-west-2 AMI
-    instanceType: "t3.micro",
-    subnetId: subnetId,
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -185,53 +166,8 @@ The Pulumi AWS package [provides a CloudFormation Stack](/registry/packages/aws/
 
 For instance, this code deploys a simple CloudFormation template using the given parameters, and exports the resulting VPC ID:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let aws = require("@pulumi/aws");
-
-let template = `{
-    "Parameters" : {
-        "VPCCidr" : {
-            "Type" : "String",
-            "Default" : "10.0.0.0/16",
-            "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
-        }
-    },
-    "Resources": {
-        "myVpc": {
-            "Type" : "AWS::EC2::VPC",
-            "Properties" : {
-                "CidrBlock" : { "Ref" : "VPCCidr" },
-                "Tags" : [
-                    {"Key": "Name", "Value": "Primary_CF_VPC"}
-                ]
-            }
-        }
-    },
-    "Outputs": {
-        "VpcId": {
-            "Value": { "Ref": "myVpc" }
-        }
-    }
-}
-`;
-
-let network = new aws.cloudformation.Stack("network", {
-    templateBody: template,
-    parameters: {
-        VPCCidr: "10.0.0.0/16",
-    },
-});
-
-module.exports = {
-    vpcId: network.outputs["VpcId"],
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -503,24 +439,8 @@ Remember to run `pulumi up` so that your changes are applied before moving on.
 
 Next, we can adopt the resources under Pulumi's control, by using `import` IDs. For this example, recall that our VPC ID from above was `"vpc-0e1a74859af1da17f"`, which is what we will use for illustration purposes. Also, in this example, there is just one resource, so we can simply delete the CloudFormation stack in its entirety and replace it with a Pulumi definition of the VPC. In cases where multiple resources exist, you can delete them one by one, until the stack is eventually empty.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let aws = require("@pulumi/aws");
-
-let vpc = new aws.ec2.Vpc("myVpc", {
-    cidrBlock: "10.0.0.0/16",
-    tags: { Name: "Primary_CF_VPC" },
-}, { import: "vpc-0e1a74859af1da17f" });
-
-module.exports = {
-    vpcId: vpc.id,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

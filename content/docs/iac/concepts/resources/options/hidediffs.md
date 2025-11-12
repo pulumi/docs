@@ -28,16 +28,8 @@ This is useful when working with properties that generate large or verbose diffs
 
 ## Example usage
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let res = new MyResource("res",
-    { prop: "new-value" }, { hideDiffs: ["prop"] });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

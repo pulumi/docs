@@ -64,15 +64,7 @@ Duration: 8s
 
 Once the update has completed, you can verify the object was created by checking the Google Cloud Console or running the following `gsutil` command:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
-
-```bash
-$ gsutil ls $(pulumi stack output bucketName)
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -129,30 +121,6 @@ Notice that your `index.html` file has been added to the bucket:
 ```bash
 gs://my-bucket-daa12be/index.html-a52debd
 ```
-
-{{% choosable language javascript %}}
-
-Now that `index.html` exists in the bucket, modify the program to have the bucket serve the file as a static website.
-
-To do that, update the bucket definition to configure its `website` property. Then, to align with Google Cloud Storage recommendations, set its uniform bucket-level access property to `true`:
-
-```javascript
-const bucket = new gcp.storage.Bucket("my-bucket", {
-    location: "US",
-    website: {
-        mainPageSuffix: "index.html"
-    },
-    uniformBucketLevelAccess: true
-});
-```
-
-Finally, at the end of the file, export the website's public URL to make it easy to access:
-
-```javascript
-exports.bucketEndpoint = pulumi.concat("http://storage.googleapis.com/", bucket.name, "/", bucketObject.name);
-```
-
-{{% /choosable %}}
 
 {{% choosable language typescript %}}
 
@@ -387,14 +355,6 @@ Duration: 4s
 ```
 
 When the deployment completes, you can check out your new static website at the URL under `Outputs`, or make a `curl` request and see the contents of `index.html` printed to the terminal:
-
-{{% choosable language javascript %}}
-
-```bash
-$ curl $(pulumi stack output bucketEndpoint)
-```
-
-{{% /choosable %}}
 
 {{% choosable language typescript %}}
 
