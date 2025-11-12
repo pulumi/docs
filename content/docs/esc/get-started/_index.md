@@ -125,9 +125,11 @@ That's it! You've created an environment, stored a secret, and retrieved it prog
 
 ### Use ESC in your infrastructure code
 
-Most Pulumi users integrate ESC with their IaC workflows to centralize secrets and configuration across all stacks. Learn how to reference ESC environments in your Pulumi programs:
+Most Pulumi users integrate ESC with their IaC workflows to centralize secrets and configuration across all stacks. If you already use Pulumi IaC, learn how to reference ESC environments in your Pulumi programs:
 
 **→ [Integrate ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)**
+
+New to Pulumi IaC? Start with the [Pulumi IaC Get Started guide](/docs/get-started/) first.
 
 ### Explore other use cases
 

@@ -79,7 +79,7 @@ You can test this out by retrieving the imported value via the console or the CL
 
 ### Import via the Table view
 
-Alternatively, you can import environments using the Table view of the Pulumi console. Navigate to the **Table view** of your environment and click the **Import** button under the **Imports** section. You will be presented with a dropdown list of environments that you can import. Search for the name of the environment you want to import and select it. Then click **Import**.
+Alternatively, you can import environments using the Table view of the Pulumi console. Navigate to the **Table view** of your environment and select the **Import** button under the **Imports** section. You will be presented with a dropdown list of environments that you can import. Search for the name of the environment you want to import and select it. Then select **Import**.
 
 ![Importing the global config environment in the Pulumi Console](/docs/esc/assets/esc-import-pulumi-console.png)
 

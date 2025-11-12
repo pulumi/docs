@@ -15,12 +15,18 @@ aliases:
 
 This guide shows you how to integrate Pulumi ESC with your Pulumi IaC projects to centralize configuration and secrets across all your stacks.
 
+{{< notes type="info" >}}
+**This guide is for existing Pulumi IaC users.** If you're new to Pulumi IaC, start with the [Pulumi IaC Get Started guide](/docs/get-started/) first.
+{{< /notes >}}
+
+If you just completed the [ESC Get Started guide](/docs/esc/get-started/), you already have an environment. This guide shows you how to reference it from your Pulumi stack configuration.
+
 ## Prerequisites
 
 - [Pulumi CLI](/docs/install/) installed
 - [Pulumi account](https://app.pulumi.com/signup) created
 - An existing Pulumi project (or create one with `pulumi new`)
-- An ESC environment with configuration values (see [Managing secrets](/docs/esc/guides/managing-secrets/) to create one)
+- An ESC environment with configuration values (see [Get Started](/docs/esc/get-started/) to create one)
 
 ## Add ESC to your Pulumi stack
 
@@ -70,12 +76,12 @@ In your ESC environment, use the `pulumiConfig` block to expose values to Pulumi
 ```yaml
 values:
   pulumiConfig:
-    aws:region: us-west-2
-    myApp:apiKey:
+    myEnvironment: production
+    myPassword:
       fn::secret: demo-api-key-123
 ```
 
-The `pulumiConfig` block maps ESC values to Pulumi configuration keys. Values defined here become available to your Pulumi program through the standard Configuration API.
+The `pulumiConfig` block is the bridge between ESC and Pulumi IaC. Any values you define under `pulumiConfig` become available in your Pulumi program through the standard Configuration API. This allows you to centralize all your configuration and secrets in ESC while accessing them through familiar Pulumi config patterns like `config.get()` or `config.require()`.
 
 ### Step 3: Access configuration in your code
 

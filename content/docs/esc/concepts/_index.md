@@ -134,9 +134,5 @@ Environments support:
 ## Learn more
 
 - [How Pulumi ESC works](/docs/esc/concepts/how-esc-works) - Architecture and evaluation model
-- [Environment data model](/docs/esc/concepts/environment-data-model) - Structure and hierarchy
-- [Composition and imports](/docs/esc/concepts/composition-and-imports) - How environments merge
-- [Provider architecture](/docs/esc/concepts/provider-architecture) - Dynamic providers and OIDC
-- [Security model](/docs/esc/concepts/security-model) - Encryption and threat model
 - [ESC providers](/docs/esc/integrations/) - Full list of integrations
 - [Environments reference](/docs/esc/environments/) - Complete syntax documentation

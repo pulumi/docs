@@ -180,7 +180,7 @@ ESC versions every change, allowing you to roll back if needed.
 
 ### Control access with RBAC
 
-Use [Role-Based Access Control](/docs/esc/environments/access-control/) to limit who can read or write secrets:
+Use [Role-Based Access Control](/docs/esc/administration/access-control/) to limit who can read or write secrets:
 
 - Grant teams read-only access to production secrets
 - Allow developers full access to development secrets

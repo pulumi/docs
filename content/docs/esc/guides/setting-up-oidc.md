@@ -13,9 +13,16 @@ aliases:
   - /docs/pulumi-cloud/esc/get-started/use-short-term-credentials/
 ---
 
-Managing cloud credentials presents significant challenges for organizations of all sizes. Static, long-lived credentials, especially those stored in local environments introduce security risks and operational issues. Pulumi ESC’s built-in support for [dynamic login providers](/docs/esc/integrations/dynamic-login-credentials/), allows you to generate short-term, scoped credentials via OIDC. These credentials can then be used in your CLI workflows, CI/CD, Pulumi IaC, and more!
+This guide shows you how to configure OpenID Connect (OIDC) between Pulumi ESC and AWS to generate short-lived credentials dynamically. Using [dynamic login providers](/docs/esc/integrations/dynamic-login-credentials/), you can eliminate static credentials and generate temporary, scoped credentials on demand. These credentials work with CLI workflows, CI/CD pipelines, Pulumi IaC, and any tool that uses AWS credentials.
 
-In this example, you will use the `esc run` command to execute AWS CLI operations without having to manually configure AWS credentials in your local environment.
+This guide demonstrates using `esc run` to execute AWS CLI commands with dynamically generated credentials, without configuring static AWS credentials locally.
+
+## Prerequisites
+
+- [Pulumi account](https://app.pulumi.com/signup) created
+- [ESC CLI](/docs/esc-cli/) installed
+- AWS account with administrative access to create IAM roles and OIDC providers
+- [AWS CLI](https://aws.amazon.com/cli/) installed (for testing the integration)
 
 ## Create the AWS OIDC configuration
 
@@ -31,29 +38,27 @@ To use dynamic credentials, you need to configure OpenID Connect (OIDC) between 
 3. Select **OpenID Connect** as the provider type
 4. For the Provider URL, enter: `https://api.pulumi.com/oidc`
 5. For the Audience, enter the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`)
-6. Click **Add provider**
-{{< notes type="info" >}}
-For legacy ESC Environments in the `default` project, the audience will use just the Pulumi organization name.
-{{< /notes >}}
+   - **Note:** For legacy ESC environments in the `default` project, use just the Pulumi organization name without the `aws:` prefix
+6. Select **Add provider**
 
 ### Create the IAM role
 
-1. After creating the provider, click **Assign role** in the notification prompt
+1. After creating the provider, select **Assign role** in the notification prompt
 2. Select **Create a new role**
 3. Ensure **Web identity** is selected, and verify that
    - `api.pulumi.com/oidc` provider is selected
    - Your Pulumi organization (prefixed with `aws:`) is selected as the audience
-4. Click **Next**
+4. Select **Next**
 5. Select the permissions your role needs (e.g. **AmazonS3FullAccess** for S3 operations)
-6. Click **Next**
+6. Select **Next**
 7. Name your role (e.g., `pulumi-esc-s3-role`) and add an optional description
-8. Click **Edit** on the Select trusted entities' section
-9. Ensure the "Condition" subject claim includes `aws:` before your organization name (i.e.`"api.pulumi.com/oidc:aud": "aws:myorg"` )
-10. Review and click **Create role**
+8. Select **Edit** on the Select trusted entities' section
+9. Ensure the Condition checks the audience claim with `aws:` before your organization name (i.e. `"api.pulumi.com/oidc:aud": "aws:myorg"`, or just `myorg` for legacy default project environments)
+10. Review and select **Create role**
 
 Example trust policy:
 
-```yaml
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -82,9 +87,9 @@ If you want to set environment level or even granular permissions in your trust 
 ## Create a Pulumi ESC environment
 
 1. Navigate to the [Pulumi Cloud Console](https://app.pulumi.com/)  
-2. Click **Environments** and then **Create environment**
+2. Select **Environments** and then **Create environment**
 3. Enter a name for your environment (e.g., `aws-s3-access`)
-4. Click **Create environment**
+4. Select **Create environment**
 
 ## Configure the AWS Provider integration
 
@@ -109,7 +114,7 @@ Be sure to replace `<your-oidc-iam-role-arn>` with the ARN of the IAM role you c
 
 ![An image of the ESC environment editor role trust policy](/docs/esc/assets/esc-environment-editor.png)
 
-Click **Save** to store your environment configuration.
+Select **Save** to store your environment configuration.
 
 ## Use esc run to execute AWS commands
 
