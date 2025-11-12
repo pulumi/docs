@@ -73,6 +73,19 @@ Pulumi’s 2025 advancements, including [Pulumi Kubernetes Operator 2.0 GA](http
 
 <!--more-->
 
+## In this Kubernetes article:
+
+- [Why Kubernetes Needs to Go Beyond YAML](/blog/beyond-yaml-kubernetes-2026-automation-era/#why-kubernetes-needs-to-go-beyond-yaml)
+- [The 2026 Convergence of AI, Platforms, and Policy in Kubernetes](/blog/beyond-yaml-kubernetes-2026-automation-era/#the-2026-convergence-of-ai-platforms-and-policy-in-kubernetes)
+- [The 2026 Shift: AI-Assisted Kubernetes Operations](/blog/beyond-yaml-kubernetes-2026-automation-era/#the-2026-shift-ai-assisted-kubernetes-operations)
+- [Operator-First: Kubernetes Deploys Your Cloud](/blog/beyond-yaml-kubernetes-2026-automation-era/#operator-first-kubernetes-deploys-your-cloud)
+- [Intelligent Kubernetes Infrastructure Across Every Cloud](/blog/beyond-yaml-kubernetes-2026-automation-era/#intelligent-infrastructure-across-every-cloud)
+- [Bring Your YAML and Helm, Then Evolve](/blog/beyond-yaml-kubernetes-2026-automation-era/#bring-your-yaml-and-helm-then-evolve)
+- [Begin Your Kubernetes Automation Journey](/blog/beyond-yaml-kubernetes-2026-automation-era/#begin-your-kubernetes-automation-journey)
+- [Workshop: From Zero to Production in Kubernetes](/blog/beyond-yaml-kubernetes-2026-automation-era/#workshop-from-zero-to-production-in-kubernetes)
+- [Visit Pulumi at KubeCon 2025 Booth 1045](/blog/beyond-yaml-kubernetes-2026-automation-era/#visit-pulumi-at-kubecon-2025-booth-1045)
+- [Final Thoughts](/blog/beyond-yaml-kubernetes-2026-automation-era/#final-thoughts)
+
 ## Why Kubernetes Needs to Go Beyond YAML
 
 The article [*Kubernetes Best Practices I Wish I Had Known Before*](https://www.pulumi.com/blog/kubernetes-best-practices-i-wish-i-had-known-before/) highlights a key challenge: relying solely on YAML as the source of truth for Kubernetes is no longer sustainable. Clusters are dynamic, environments multiply, and static YAML files cannot keep up with the complexity of modern infrastructure.
@@ -99,7 +112,7 @@ This trend highlights how the next generation of Kubernetes operations is evolvi
 Pulumi’s platform provides a complete foundation for intelligent infrastructure management that extends from development to production.
 
 - [**Pulumi Neo**](https://www.pulumi.com/product/neo/) adds AI-assisted infrastructure management that turns natural language into production-ready Kubernetes and cloud code.
-- [**Pulumi IDP**](https://www.pulumi.com/product/internal-developer-platforms/) enables engineering and platform teams to build self service environments that abstract complexity for developers while maintaining consistency and control.
+- [**Pulumi IDP**](https://www.pulumi.com/product/internal-developer-platforms/) enables engineering and platform teams to build self-service environments that abstract complexity for developers while maintaining consistency and control.
 - [**Pulumi Policies**](https://www.pulumi.com/product/insights-governance/) brings continuous compliance and policy enforcement directly into the delivery workflow.
 - [**Pulumi ESC**](https://www.pulumi.com/product/secrets-management/) secures credentials, API keys, and sensitive configurations across Kubernetes and cloud environments.
 
@@ -152,7 +165,7 @@ Teams do not need to start from scratch. Pulumi supports [importing existing YAM
 
 This hybrid approach enables modernization without disrupting existing CI/CD pipelines or team workflows.
 
-## Where to Start
+## Begin Your Kubernetes Automation Journey
 
 For teams preparing for the next phase of Kubernetes management in 2026:
 
