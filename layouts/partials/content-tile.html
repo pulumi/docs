@@ -1,16 +1,15 @@
-<li data-display-date="{{ .displayDate }}" class="w-full m-0 p-2 md:w-1/2 xl:w-1/3 event-list-item"
-    data-filters="{{ delimit .filters " " }}">
+<li data-display-date="{{ .displayDate }}" class="w-full m-0 p-2 md:w-1/2 xl:w-1/3 event-list-item" data-filters="{{ delimit .filters " " }}">
     {{ $href := .link }}
     {{ $relref := "noopener noreferrer" }}
     {{ $target := "_blank" }}
 
     {{ if eq .external false }}
-    {{ if not (isset . "multiple") }}
-    {{ $href = (relref .pageContext .link) }}
-    {{ end }}
+        {{ if not (isset . "multiple") }}
+            {{ $href = (relref .pageContext .link) }}
+        {{ end }}
 
-    {{ $relref = "" }}
-    {{ $target = "" }}
+        {{ $relref = "" }}
+        {{ $target = "" }}
     {{ end }}
 
     <article class="card bg-white mb-10 flex flex-col mx-2 md:mx-0 content-tile group">
@@ -18,7 +17,7 @@
             <span class="block w-full h-full p-4 flex flex-col">
                 <span class="block pb-2 mb-4">
                     <div class="bg-violet-100 rounded-full inline-block p-4 w-16 h-16 flex items-center justify-center">
-                        <i class="fas fa-{{ .icon }} text-violet-700 text-3xl"></i>
+                        <i class="fas fa-{{ .icon }} text-violet-600 text-3xl"></i>
                     </div>
                 </span>
                 <span class="block">

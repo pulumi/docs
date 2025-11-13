@@ -3,7 +3,7 @@
         @apply text-gray-700 underline;
 
         &:hover {
-            @apply text-blue-700;
+            @apply text-blue-600;
         }
     }
 }
@@ -25,19 +25,18 @@
 
     @each $filter-type in "build" "deploy" "manage" {
         ##{$filter-type}:target {
-            ~.product-carousel-headers li[data-product-carousel-type="#{$filter-type}"] {
+            ~ .product-carousel-headers li[data-product-carousel-type="#{$filter-type}"] {
                 @include gradient-border;
 
                 a {
                     @apply text-gray-800;
                 }
             }
-
-            ~.product-carousel-items-list li[data-product-carousel-type="#{$filter-type}"] {
+            ~ .product-carousel-items-list li[data-product-carousel-type="#{$filter-type}"] {
                 @apply block;
             }
 
-            ~.product-carousel-headers li:not([data-product-carousel-type="#{$filter-type}"]) {
+            ~ .product-carousel-headers li:not([data-product-carousel-type="#{$filter-type}"]) {
                 @apply font-display p-0 m-0 border-b-2 transition border-gray-300;
                 border-image-source: none;
 
@@ -45,8 +44,7 @@
                     @apply text-gray-700;
                 }
             }
-
-            ~.product-carousel-items-list li:not([data-product-carousel-type="#{$filter-type}"]) {
+            ~ .product-carousel-items-list li:not([data-product-carousel-type="#{$filter-type}"]) {
                 @apply hidden;
             }
         }

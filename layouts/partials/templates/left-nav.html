@@ -2,16 +2,16 @@
 
 
 <div class="font-display text-xl">
-    <a href="{{ relref . " /templates" }} ">Pulumi Templates</a>
+    <a href="{{ relref . "/templates" }} ">Pulumi Templates</a>
 </div>
-<ul class=" text-sm p-0 list-none">
-        {{ range $template := sort $templates ".Params.weight" "asc" }}
+<ul class="text-sm p-0 list-none">
+    {{ range $template := sort $templates ".Params.weight" "asc" }}
         <li class="">
             {{ with $template }}
-            <div class="text-base">
-                <a class="text-blue-700" href="{{ relref . $template.RelPermalink }}">{{ .Title }}</a>
-            </div>
+                <div class="text-base">
+                    <a class="text-blue-600" href="{{ relref . $template.RelPermalink }}">{{ .Title }}</a>
+                </div>
             {{ end }}
         </li>
-        {{ end }}
-        </ul>
+    {{ end }}
+</ul>

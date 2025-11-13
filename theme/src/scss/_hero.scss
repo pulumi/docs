@@ -11,10 +11,10 @@
 
     $bc1: theme("colors.yellow.600");
     $bc2: theme("colors.salmon.600");
-    $bc3: theme("colors.fuchsia.700");
-    $bc4: theme("colors.purple.700");
-    $bc5: theme("colors.violet.700");
-    $bc6: theme("colors.blue.700");
+    $bc3: theme("colors.fuchsia.600");
+    $bc4: theme("colors.purple.600");
+    $bc5: theme("colors.violet.600");
+    $bc6: theme("colors.blue.600");
 
     background-image: linear-gradient(to right, $bc1 0%, $bc2 10%, $bc3 20%, $bc4 30%, $bc5 40%, $bc6 50%, $bc5 60%, $bc4 70%, $bc3 80%, $bc2 90%, $bc1 100%);
     background-size: 200%;
@@ -41,12 +41,10 @@
 }
 
 @keyframes wave {
-
     0%,
     100% {
         background-position: 0vw center;
     }
-
     50% {
         background-position: -100vw center;
     }
@@ -110,13 +108,11 @@
         p {
             @apply text-lg rounded px-2 mx-auto;
             background-color: rgba(255, 255, 255, 0.7);
-            max-width: 48rem;
-            /* Limit width to match header better */
+            max-width: 48rem; /* Limit width to match header better */
 
             @screen lg {
                 @apply mx-0;
-                max-width: 42rem;
-                /* Slightly narrower on desktop */
+                max-width: 42rem; /* Slightly narrower on desktop */
             }
         }
 
@@ -146,7 +142,6 @@
         h1 {
             @apply text-center max-w-4xl;
             font-weight: 700;
-
             @screen lg {
                 font-size: 3.75rem;
                 line-height: 1.3;
@@ -155,7 +150,6 @@
 
         h2 {
             @apply text-center max-w-4xl;
-
             @screen lg {
                 font-size: 3rem;
                 line-height: 1.3;
@@ -164,7 +158,6 @@
 
         h3 {
             @apply text-center max-w-4xl;
-
             @screen lg {
                 font-size: 2.5rem;
                 line-height: 1.3;

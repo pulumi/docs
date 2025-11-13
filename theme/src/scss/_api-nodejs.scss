@@ -3,20 +3,20 @@ h3.pdoc-module-header {
 }
 
 // Indent all elements preceded by this header.
-h3.pdoc-module-header~* {
+h3.pdoc-module-header ~ * {
     @apply ml-4;
 }
 
 // ...except equal or larger headers.
-h3.pdoc-module-header~h3,
-h3.pdoc-module-header~h2 {
+h3.pdoc-module-header ~ h3,
+h3.pdoc-module-header ~ h2 {
     @apply ml-0;
 }
 
 // We want visually recognizable links here.
 .highlight {
     a {
-        @apply text-blue-700;
+        @apply text-blue-600;
 
         &:hover {
             @apply text-blue-700;
@@ -79,8 +79,7 @@ ul.api {
                 }
             }
 
-            &.datasource,
-            // TODO: Remove `datasource` when it's no longer referenced anywhere.
+            &.datasource, // TODO: Remove `datasource` when it's no longer referenced anywhere.
             &.function {
                 &:before {
                     content: "F";
