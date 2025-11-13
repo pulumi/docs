@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Cloud Native Rejekts - NA Atlanta 2025"
+  title: "Beyond YAML: Building Platform APIs with kro"
+  url: "https://cfp.cloud-native.rejekts.io/cloud-native-rejekts-atlanta-na-atlanta-2025/talk/M3TVS3/"
+  date: 2025-11-08T17:10:00.000-05:00
 - event: "Cloud Native Tel Aviv"
   title: "What is AI Platform Engineering and Why Should You Care"
   url: "https://community.cncf.io/events/details/cncf-cloud-native-tel-aviv-presents-kagent-knative-and-ai-driven-platforms-scaling-the-next-cloud-native-frontier/"
