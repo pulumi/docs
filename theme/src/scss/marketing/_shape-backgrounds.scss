@@ -33,7 +33,7 @@
         }
 
          .circle-bottom-left {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 12rem;
             height: 12rem;
             left: 0rem;
@@ -51,7 +51,7 @@
 
     &.about-what-we-believe {
          .circle-top-left {
-            @apply rounded-full absolute bg-fuchsia-600;
+            @apply rounded-full absolute bg-fuchsia-700;
             width: 22rem;
             height: 22rem;
             left: .75rem;
@@ -75,7 +75,7 @@
         }
 
          .circle-bottom-left {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 5.5rem;
             height: 5.5rem;
             left: 0rem;
@@ -165,7 +165,7 @@
         }
 
         .circle-left {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 10.5rem;
             height: 10.5rem;
             left: -5.25rem;
@@ -173,7 +173,7 @@
         }
 
         .circle-right {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 20.25rem;
             height: 20.25rem;
             right: -1.5rem;
@@ -201,7 +201,7 @@
 
     &.home-video-section {
         .circle-left {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 13.75rem;
             height: 13.75rem;
             left: 2rem;
@@ -300,7 +300,7 @@
 
         .circle-left,
         .circle-right {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
         }
 
         .circle-left {
@@ -333,7 +333,7 @@
         }
 
         .circle-left {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 20.25rem;
             height: 20.25rem;
             left: -1.5rem;
@@ -341,7 +341,7 @@
         }
 
         .circle-right {
-            @apply rounded-full absolute bg-purple-600 top-0;
+            @apply rounded-full absolute bg-purple-700 top-0;
             width: 10.5rem;
             height: 10.5rem;
             right: -5.25rem;
@@ -486,7 +486,7 @@
 
     &.cloud-engineering-manage-section {
         .circle-left {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 20.25rem;
             height: 20.25rem;
             left: -10rem;
@@ -494,7 +494,7 @@
         }
 
         .circle-right {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 8.313rem;
             height: 8.313rem;
             right: 6rem;
@@ -522,7 +522,7 @@
 
     &.cloud-engineering-use-cases-section {
         .circle-right {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 13.25rem;
             height: 13.25rem;
             right: -6.125rem;
@@ -570,7 +570,7 @@
         }
 
         .circle-left {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 12.75rem;
             height: 12.75rem;
             left: -6.375rem;
@@ -701,7 +701,7 @@
         }
 
         .circle-left {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 12.5rem;
             height: 12.5rem;
             left: -6.25rem;
@@ -719,7 +719,7 @@
         }
 
         .circle-right {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 12.5rem;
             height: 12.5rem;
             right: -6.25rem;
@@ -744,7 +744,7 @@
         }
 
         .circle-left {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 12.5rem;
             height: 12.5rem;
             left: -6.25rem;
@@ -807,7 +807,7 @@
         }
 
         .circle-bottom {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 20.25rem;
             height: 20.25rem;
             bottom: -2rem;
@@ -819,7 +819,7 @@
         height: 48rem;
 
         .circle-right {
-            @apply rounded-full absolute bg-blue-600;
+            @apply rounded-full absolute bg-blue-700;
             width: 19rem;
             height: 19rem;
             right: -8.5rem;
@@ -827,7 +827,7 @@
         }
 
         .circle-left {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 12.75rem;
             height: 12.75rem;
             left: -6.375rem;
@@ -855,7 +855,7 @@
 
     &.automation-video {
         .circle-left {
-            @apply rounded-full absolute bg-violet-600;
+            @apply rounded-full absolute bg-violet-700;
             width: 5rem;
             height: 5rem;
             left: -2.5rem;
@@ -863,7 +863,7 @@
         }
 
         .circle-right {
-            @apply rounded-full absolute bg-fuchsia-600;
+            @apply rounded-full absolute bg-fuchsia-700;
             width: 8rem;
             height: 8rem;
             right: -4rem;
@@ -901,7 +901,7 @@
 
     &.pulumi-service-capabilities {
         .circle-top {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 19rem;
             height: 19rem;
             right: -9.5rem;
@@ -927,7 +927,7 @@
 
     &.pulumi-service-security {
         .circle-right {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 20rem;
             height: 20rem;
             left: -10rem;
@@ -937,7 +937,7 @@
 
     &.self-hosted-overview {
         .circle-right {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 12rem;
             height: 12rem;
             right: -7rem;
@@ -973,7 +973,7 @@
         }
 
         .circle-left {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 12.75rem;
             height: 12.75rem;
             left: -6rem;
@@ -1001,7 +1001,7 @@
 
     &.developer-advocates-giveaway-section {
         .circle-top {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-purple-700;
             width: 10rem;
             height: 10rem;
             right: -4.5rem;

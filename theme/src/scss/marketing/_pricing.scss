@@ -74,7 +74,7 @@
             }
 
             .compare-table-link {
-                @apply underline text-blue-600;
+                @apply underline text-blue-700;
             }
         }
     }
@@ -93,7 +93,7 @@
                 }
 
                 li[data-faq-label="#{$filter-type}"] {
-                    @apply border-b-4 border-solid border-blue-600;
+                    @apply border-b-4 border-solid border-blue-700;
 
                     a {
                         @apply text-black;

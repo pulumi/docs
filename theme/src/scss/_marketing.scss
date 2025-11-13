@@ -84,7 +84,7 @@ body {
     }
 
     .btn-secondary {
-        @apply bg-white text-violet-600 border-2 border-violet-600;
+        @apply bg-white text-violet-700 border-2 border-violet-700;
         @include transition;
 
         &.disabled {
@@ -92,7 +92,7 @@ body {
         }
 
         &:hover {
-            @apply bg-violet-600 text-white;
+            @apply bg-violet-700 text-white;
         }
 
         &:focus {
@@ -101,13 +101,13 @@ body {
     }
 
     // Make the borders transparent when the button is over a background of the same color.
-    .bg-violet-600 .btn-secondary {
+    .bg-violet-700 .btn-secondary {
         @apply border-transparent;
     }
 
-    // white secondary button for violet-600 background
+    // white secondary button for violet-700 background
     .btn-secondary-home-action {
-        @apply bg-violet-600 text-white border-2 border-white whitespace-normal;
+        @apply bg-violet-700 text-white border-2 border-white whitespace-normal;
         @include transition;
 
         &.disabled {

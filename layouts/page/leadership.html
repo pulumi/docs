@@ -4,7 +4,7 @@
 
 {{ define "main" }}
     <div class="container mx-auto mt-12  max-w-7xl">
-        <a class="text-blue-600 text-xl font-body ml-9 hidden sm:block" href="{{ relref . "/about" }}">
+        <a class="text-blue-700 text-xl font-body ml-9 hidden sm:block" href="{{ relref . "/about" }}">
             <i class="fas fa-arrow-left mr-4"></i>
             About
         </a>
@@ -21,7 +21,7 @@
                                     <div class="font-display font-medium text-gray-900 text-3xl mb-3">{{ .name }}</div>
                                     <div class="text-sm text-gray-700">{{ .title }}</div>
                                 </div>
-                                <div class="opacity-0 hover:opacity-95 bg-blue-600 h-full w-full absolute flex justify-center social-overlay">
+                                <div class="opacity-0 hover:opacity-95 bg-blue-700 h-full w-full absolute flex justify-center social-overlay">
                                     {{ partial "widgets/social-icons.html" (dict "social" .social) }}
                                 </div>
                             </div>
@@ -44,7 +44,7 @@
                                     <div class="text-sm text-gray-700">{{ .title }}</div>
                                     <div class="text-sm text-gray-700">{{ .investor }}</div>
                                 </div>
-                                <div class="opacity-0 hover:opacity-95 bg-blue-600 h-full w-full absolute flex justify-center social-overlay">
+                                <div class="opacity-0 hover:opacity-95 bg-blue-700 h-full w-full absolute flex justify-center social-overlay">
                                     {{ partial "widgets/social-icons.html" (dict "social" .social) }}
                                 </div>
                             </div>
