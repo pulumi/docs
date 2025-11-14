@@ -130,6 +130,10 @@ Next, we need to define our dependencies in `package.json`.
 
 The `@pulumi/pulumi` SDK contains everything we need for making a component. The `@pulumi/aws` package is the AWS provider that we are building on top of.
 
+{{< notes type="info" >}}
+When building components that will be consumed by other projects, be aware of how package managers handle provider package versions. See [Provider package version management](/docs/iac/languages-sdks/javascript/provider-package-versions/) for guidance on managing provider dependencies across component boundaries.
+{{< /notes >}}
+
 #### TypeScript project file
 
 We'll also need a TypeScript project file called `tsconfig.json`.
