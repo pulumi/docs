@@ -63,7 +63,7 @@ Pulumi fully supports both TypeScript and JavaScript. You can use either languag
 - **JavaScript**: Write programs using standard JavaScript syntax
 
 {{< notes type="info" >}}
-While Pulumi supports JavaScript and any other language that compiles to JavaScript and runs on Node.js, our documentation examples and templates are primarily maintained in TypeScript. For the most consistent experience and up-to-date examples, we recommend using TypeScript.
+While Pulumi supports JavaScript and any other language that compiles to JavaScript and runs on Node.js, our documentation examples are maintained exclusively in TypeScript. For the most consistent experience and up-to-date examples, we recommend using TypeScript.
 {{< /notes >}}
 
 Pulumi ships with a bundled version of TypeScript 3.8.3 for backward compatibility. However, Pulumi templates typically include a more recent TypeScript version in their `package.json`, which will take precedence over the bundled version. You can use any TypeScript version from 3.8 onwards, including the latest TypeScript 5 releases.
