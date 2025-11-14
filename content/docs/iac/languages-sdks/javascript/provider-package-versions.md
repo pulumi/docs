@@ -10,7 +10,7 @@ menu:
         weight: 10
 ---
 
-When building component packages in TypeScript or JavaScript, it's important to understand how package managers handle provider package versions. Some package management systems allow for different versions of a package to be installed concurrently. You can include a package as a direct dependency in your project, and another dependency could depend on the same package but with a different version.
+When building component packages in TypeScript or JavaScript, it's important to understand how package managers handle provider package versions. Some package management systems allow for different versions of a package to be installed concurrently. You can include a package as a direct dependency in your project, while another dependency could depend on the same package but with a different version.
 
 ## Version conflicts with provider packages
 
