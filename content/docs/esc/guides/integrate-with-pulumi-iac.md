@@ -19,7 +19,7 @@ This guide shows you how to integrate Pulumi ESC with your Pulumi IaC projects t
 **This guide is for existing Pulumi IaC users.** If you're new to Pulumi IaC, start with the [Pulumi IaC Get Started guide](/docs/get-started/) first.
 {{< /notes >}}
 
-If you just completed the [ESC Get Started guide](/docs/esc/get-started/), you already have an environment. This guide shows you how to reference it from your Pulumi stack configuration.
+If you completed the [ESC Get Started guide](/docs/esc/get-started/), you already have an environment with values like `region` and `apiKey`. This guide shows you how to reference that same environment from your Pulumi stack configuration.
 
 ## Prerequisites
 
@@ -39,49 +39,53 @@ environment:
   - <your-org>/<your-environment-name>
 ```
 
-For example, if your ESC environment is `my-org/aws-prod`:
+For example, if your ESC environment is `my-project/dev`:
 
 ```yaml
 environment:
-  - my-org/aws-prod
+  - my-project/dev
 ```
 
 You can also reference multiple environments, which will be merged in order (later values override earlier ones):
 
 ```yaml
 environment:
-  - my-org/common
-  - my-org/aws-prod
+  - my-project/common
+  - my-project/dev
 ```
 
 ### Step 2: Define configuration in your ESC environment
 
 ESC environments are YAML documents typically managed in Pulumi Cloud. To edit your environment:
 
-**Via the Pulumi Cloud console:**
+#### Via the Pulumi Cloud console
 
 1. Navigate to [Pulumi Cloud](https://app.pulumi.com)
 1. Select **Environments** in the left navigation
 1. Select your environment to open the editor
 1. Add configuration in the YAML editor
 
-**Via the CLI:**
+#### Via the CLI
 
 ```bash
 esc env edit <your-org>/<your-environment-name>
 ```
 
-In your ESC environment, use the `pulumiConfig` block to expose values to Pulumi IaC:
+In your ESC environment, use the `pulumiConfig` block to expose values to Pulumi IaC. If you're using the environment from the Get Started guide, wrap your existing values in a `pulumiConfig` block:
 
 ```yaml
 values:
   pulumiConfig:
-    myEnvironment: production
-    myPassword:
-      fn::secret: demo-api-key-123
+    region: us-west-2
+    apiKey:
+      fn::secret: demo-secret-123
 ```
 
-The `pulumiConfig` block is the bridge between ESC and Pulumi IaC. Any values you define under `pulumiConfig` become available in your Pulumi program through the standard Configuration API. This allows you to centralize all your configuration and secrets in ESC while accessing them through familiar Pulumi config patterns like `config.get()` or `config.require()`.
+Values in `pulumiConfig` can be strings, numbers, booleans, or secrets (using `fn::secret`).
+
+The `pulumiConfig` block is the bridge between ESC and Pulumi IaC. Any values you define under `pulumiConfig` become available in your Pulumi program through the standard Configuration API.
+
+This allows you to centralize all your configuration and secrets in ESC while accessing them through familiar Pulumi config patterns like `config.get()` or `config.require()`.
 
 ### Step 3: Access configuration in your code
 
@@ -89,7 +93,7 @@ Use Pulumi's standard Configuration API to access these values in your infrastru
 
 {{< example-program path="aws-import-export-pulumi-config" >}}
 
-That's it! Your Pulumi program now retrieves configuration and secrets from ESC. Run `pulumi preview` or `pulumi up` to see it in action.
+Your Pulumi program now retrieves configuration and secrets from ESC. Run `pulumi preview` or `pulumi up` to see it in action.
 
 ## Common patterns
 
@@ -113,7 +117,7 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-This pattern works everywhere Pulumi runs: locally, in CI/CD, Pulumi Deployments, and GitHub Actions.
+This pattern works everywhere Pulumi runs: locally, in CI/CD, Pulumi Deployments, and GitHub Actions. Similar patterns are available for Azure (`fn::open::azure-login`) and GCP (`fn::open::gcp-login`).
 
 Learn more in [Setting up OIDC](/docs/esc/guides/setting-up-oidc/).
 
@@ -161,4 +165,4 @@ Learn more in [Importing environments](/docs/esc/guides/importing-environments/)
 - [Setting up OIDC](/docs/esc/guides/setting-up-oidc/) - Generate dynamic cloud credentials
 - [Integrating external secrets](/docs/esc/guides/external-secrets/) - Pull from AWS, Azure, GCP vaults
 - [Importing environments](/docs/esc/guides/importing-environments/) - Compose configuration hierarchies
-- [ESC + Pulumi IaC reference](/docs/esc/integrations/infrastructure/pulumi-iac/) - Complete integration documentation
+- [Pulumi IaC integration reference](/docs/esc/integrations/infrastructure/pulumi-iac/) - Complete integration documentation

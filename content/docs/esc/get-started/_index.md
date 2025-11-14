@@ -66,13 +66,13 @@ See the [ESC installation docs](/docs/install/esc/) for more options.
 esc login
 ```
 
-You'll be prompted to log in via your browser (which opens automatically) or with an access token.
+You'll be prompted to log in via your browser or with an access token. Follow the instructions to authenticate.
 
 1. **Create an environment** in the Pulumi Cloud console:
   
     1. Open [Pulumi Cloud](https://app.pulumi.com) and log in
     1. Select **Environments** in the left navigation
-    1. Select **Create environment**
+    1. Select **+ Create Environment**
     1. Choose **New Environment**
     1. For **Project name**, enter: `my-project`
     1. For **Environment name**, enter: `dev`
@@ -90,9 +90,9 @@ Add both plaintext configuration and encrypted secrets to your environment:
 
     ```yaml
     values:
-    region: us-west-2
-    apiKey:
-    fn::secret: demo-secret-123
+      region: us-west-2
+      apiKey:
+        fn::secret: demo-secret-123
     ```
 
     This defines two values: `region` (a plaintext value) and `apiKey` (a secret value, denoted with `fn::secret`).
@@ -101,7 +101,7 @@ Add both plaintext configuration and encrypted secrets to your environment:
 
 1. Select **Save**
 
-    Watch what happens: ESC automatically encrypts the secret value. The plaintext `demo-secret-123` is replaced with an encrypted value, and the preview shows `[secret]` to indicate that this is a secret value.
+    Watch what happens: ESC automatically encrypts the secret value. The plaintext `demo-secret-123` is replaced with an encrypted value.
 
     ![ESC environment editor showing encrypted secret value and preview displayed as [secret] after saving](./images/esc-env-edit-post-save.png)
 
@@ -117,8 +117,8 @@ You should see output like:
 
 ```json
 {
-  "region": "us-west-2",
-  "apiKey": "demo-secret-123"
+  "apiKey": "demo-secret-123",
+  "region": "us-west-2"
 }
 ```
 
@@ -130,7 +130,7 @@ That's it! You've created an environment, stored configuration and secrets, and 
 
 Pulumi users typically integrate ESC with their IaC workflows to centralize secrets and configuration across all stacks. If you already use Pulumi IaC, learn how to reference ESC environments in your Pulumi programs:
 
-**[Integrate ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)**
+- **[Integrate ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)**
 
 New to Pulumi IaC? Start with the [Pulumi IaC Get Started guide](/docs/get-started/) first.
 
