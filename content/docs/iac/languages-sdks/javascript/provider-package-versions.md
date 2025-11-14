@@ -65,7 +65,7 @@ A similar situation would happen if you would pin the component library and the 
 
 ## Recommended approach
 
-If you only want single version of the package and default provider, we suggest to use the caret style notation in your component package. Use `^`, followed by the minimum version of the dependency, and use a compatible version in your consuming project for your components to work correctly.
+If you only want a single version of the package and default provider, we suggest to use the caret style notation in your component package. Use `^`, followed by the minimum version of the dependency, and use a compatible version in your consuming project for your components to work correctly.
 
 For instance, if `@pulumi/random` v4.8.2 contained a fix you rely on, use this in your library `package.json`:
 
