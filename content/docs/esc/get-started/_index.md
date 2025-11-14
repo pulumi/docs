@@ -69,18 +69,18 @@ esc login
 You'll be prompted to log in via your browser (which opens automatically) or with an access token.
 
 1. **Create an environment** in the Pulumi Cloud console:
+  
+    1. Open [Pulumi Cloud](https://app.pulumi.com) and log in
+    1. Select **Environments** in the left navigation
+    1. Select **Create environment**
+    1. Choose **New Environment**
+    1. For **Project name**, enter: `my-project`
+    1. For **Environment name**, enter: `dev`
+    1. Select **Create Environment**
 
-   1. Open [Pulumi Cloud](https://app.pulumi.com) and log in
-   1. Select **Environments** in the left navigation
-   1. Select **Create environment**
-   1. Choose **New Environment**
-   1. For **Project name**, enter: `my-project`
-   1. For **Environment name**, enter: `dev`
-   1. Select **Create Environment**
+    ![Create Environment dialog in Pulumi Cloud showing fields for project name (my-project) and environment name (dev)](./images/esc-create-environment.png)
 
-![Create Environment dialog in Pulumi Cloud showing fields for project name (my-project) and environment name (dev)](./images/esc-create-environment.png)
-
-Your environment is now created and ready to store configuration and secrets.
+    Your environment is now created and ready to store configuration and secrets.
 
 ## Store configuration and secrets
 
@@ -88,22 +88,22 @@ Add both plaintext configuration and encrypted secrets to your environment:
 
 1. In the **Environment definition** editor, erase the contents and replace them with the following YAML:
 
-   ```yaml
-   values:
-     region: us-west-2
-     apiKey:
-       fn::secret: demo-secret-123
-   ```
+    ```yaml
+    values:
+    region: us-west-2
+    apiKey:
+    fn::secret: demo-secret-123
+    ```
 
-   This defines two values: `region` (a plaintext value) and `apiKey` (a secret value, marked with `fn::secret`).
+    This defines two values: `region` (a plaintext value) and `apiKey` (a secret value, denoted with `fn::secret`).
 
-![ESC environment editor showing YAML definition with region and apiKey values before saving](./images/esc-env-edit-pre-save.png)
+    ![ESC environment editor showing YAML definition with region and apiKey values before saving](./images/esc-env-edit-pre-save.png)
 
 1. Select **Save**
 
-Watch what happens: ESC automatically encrypts the secret value. The plaintext `demo-secret-123` is replaced with `[secret]` in the editor, showing that your secret is now encrypted and stored securely.
+    Watch what happens: ESC automatically encrypts the secret value. The plaintext `demo-secret-123` is replaced with an encrypted value, and the preview shows `[secret]` to indicate that this is a secret value.
 
-![ESC environment editor showing encrypted secret value displayed as [secret] after saving](./images/esc-env-edit-post-save.png)
+    ![ESC environment editor showing encrypted secret value and preview displayed as [secret] after saving](./images/esc-env-edit-post-save.png)
 
 ## Retrieve your configuration and secrets
 
@@ -122,7 +122,7 @@ You should see output like:
 }
 ```
 
-That's it! You've created an environment, stored configuration and secrets, and retrieved them programmatically. Notice that the secret is automatically decrypted when you open the environment via the CLI.
+That's it! You've created an environment, stored configuration and secrets, and retrieved them interactively with the CLI. Notice that the secret is automatically decrypted when you open the environment.
 
 ## What's next?
 
