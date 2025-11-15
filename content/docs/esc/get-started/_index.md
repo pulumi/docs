@@ -122,7 +122,7 @@ You should see output like:
 }
 ```
 
-That's it! You've created an environment, stored configuration and secrets, and retrieved them interactively with the CLI. Notice that the secret is automatically decrypted when you open the environment.
+You've created an environment, stored configuration and secrets, and retrieved them interactively with the CLI. Notice that the secret is automatically decrypted when you open the environment.
 
 ## What's next?
 

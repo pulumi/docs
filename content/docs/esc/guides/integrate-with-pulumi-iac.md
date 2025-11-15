@@ -56,20 +56,13 @@ environment:
 
 ### Step 2: Define configuration in your ESC environment
 
-ESC environments are YAML documents typically managed in Pulumi Cloud. To edit your environment:
-
-#### Via the Pulumi Cloud console
-
-1. Navigate to [Pulumi Cloud](https://app.pulumi.com)
-1. Select **Environments** in the left navigation
-1. Select your environment to open the editor
-1. Add configuration in the YAML editor
-
-#### Via the CLI
+ESC environments are YAML documents that you can edit using the CLI or Pulumi Cloud console. Use the CLI to edit your environment:
 
 ```bash
 esc env edit <your-org>/<your-environment-name>
 ```
+
+You can also edit environments in the [Pulumi Cloud console](https://app.pulumi.com) if you prefer a visual editor.
 
 In your ESC environment, use the `pulumiConfig` block to expose values to Pulumi IaC. If you're using the environment from the Get Started guide, wrap your existing values in a `pulumiConfig` block:
 
