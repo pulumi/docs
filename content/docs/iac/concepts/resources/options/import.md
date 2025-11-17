@@ -196,9 +196,9 @@ resources:
 
 For this to work, your Pulumi stack must be configured correctly. In this example, it’s important that the AWS region is correct.
 
-If the resource’s arguments differ from the imported state, the import will succeed and then the resource will be modified to reflect the inputs in your Pulumi program.
+If the resource's arguments differ from the imported state, the import will succeed, and the resource will then be modified to reflect the inputs in your Pulumi program.
 
-```console
+```bash
 $ pulumi preview
 Previewing update (dev)
 
@@ -216,6 +216,6 @@ Resources:
     2 changes. 2 unchanged
 ```
 
-Because of auto-naming, it is common to run into this import-update when you import a resource’s name property. Unless you explicitly specify a name, Pulumi will auto-generate one, which is guaranteed not to match, because it will have a random hex suffix. To fix this problem, explicitly specify the resource’s name or disable auto-naming [as described here](/docs/iac/concepts/resources/names/#autonaming-configuration). Note that, in the example for the EC2 security group, the name was specified by passing `web-sg-62a569b` as the resource’s name property.
+Because of auto-naming, it is common to see this update during import when you import a resource's name property. Unless you explicitly specify a name, Pulumi will auto-generate one, which is guaranteed not to match, because it will have a random hex suffix. To fix this problem, explicitly specify the resource's name or disable auto-naming [as described here](/docs/iac/concepts/resources/names/#autonaming-configuration). Note that, in the example for the EC2 security group, the name was specified by passing `web-sg-62a569b` as the resource's name property.
 
 Once a resource is successfully imported, remove the `import` option because Pulumi is now managing the resource.
