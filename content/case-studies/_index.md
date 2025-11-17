@@ -10,14 +10,12 @@ aliases:
     - /case-studies/lykke/
 
 featured_customer:
-  name: unity
-  headline_stat: 80%
+  name: supabase
+  headline_stat: 1 week
   headline: |
-    Reduction in deployment times, from weeks to
-    hours, significantly improving Unity's time to market.
+    Infrastructure readiness for new region deployment, enabling rapid global expansion.
   quote: |
-    "Terraform relies on HCL and lacks support for concepts like classes, objects and inheritance.
-    An equivalent deployment would take more lines of code while yielding IaC that is less reusable."
+    "The infrastructure team acts as groundkeepers of our Pulumi practices, not gatekeepers, but promoters for the entire org."
 
 customer_logos:
   logos:
@@ -27,6 +25,7 @@ customer_logos:
     - name: moderna
     - name: docker
     - name: unity
+    - name: supabase
     - name: ae-networks
     - name: deloitte
     - name: stokespace
