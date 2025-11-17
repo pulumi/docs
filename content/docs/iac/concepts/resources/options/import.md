@@ -43,9 +43,11 @@ let server = new aws.ec2.Instance("web-server", {
 {{% /choosable %}}
 {{% choosable language python %}}
 
-```python
-# IMPORTANT: Python appends an underscore (`import_`) to avoid conflicting with the keyword.
+{{% notes type="info" %}}
+Python appends an underscore (`import_`) to avoid conflicting with the keyword.
+{{% /notes %}}
 
+```python
 import pulumi_aws as aws
 
 group = aws.ec2.SecurityGroup('web-sg',
@@ -194,8 +196,26 @@ resources:
 
 For this to work, your Pulumi stack must be configured correctly. In this example, it’s important that the AWS region is correct.
 
-If the resource’s arguments differ from the imported state, the import will fail. You will receive this message: `warning: inputs to import do not match the existing resource; importing this resource will fail`. Select “details” in the `pulumi up` preview to learn what the differences are. If you try to proceed without correcting the inconsistencies, you will see this message: `error: inputs to import do not match the existing resource`. To fix these errors, make sure that your program computes a state that completely matches the resource to be imported.
+If the resource’s arguments differ from the imported state, the import will succeed and then the resource will be modified to reflect the inputs in your Pulumi program.
 
-Because of auto-naming, it is common to run into this error when you import a resource’s name property. Unless you explicitly specify a name, Pulumi will auto-generate one, which is guaranteed not to match, because it will have a random hex suffix. To fix this problem, explicitly specify the resource’s name or disable auto-naming [as described here](/docs/iac/concepts/resources/names/#autonaming-configuration). Note that, in the example for the EC2 security group, the name was specified by passing `web-sg-62a569b` as the resource’s name property.
+```console
+$ pulumi preview
+Previewing update (dev)
+
+View in Browser (Ctrl+O): https://app.pulumi.com/pulumi/dev-yaml/dev/previews/40504f08-05da-43f7-86dd-9baa812bb9ff
+
+Loading policy packs...
+
+     Type                 Name          Plan       Info
+     pulumi:pulumi:Stack  dev-yaml-dev
+ ~   └─ aws:s3:Bucket     bImport       update     [diff: ~tags,tagsAll]
+
+Resources:
+    ~ 1 to update
+    = 1 to import
+    2 changes. 2 unchanged
+```
+
+Because of auto-naming, it is common to run into this import-update when you import a resource’s name property. Unless you explicitly specify a name, Pulumi will auto-generate one, which is guaranteed not to match, because it will have a random hex suffix. To fix this problem, explicitly specify the resource’s name or disable auto-naming [as described here](/docs/iac/concepts/resources/names/#autonaming-configuration). Note that, in the example for the EC2 security group, the name was specified by passing `web-sg-62a569b` as the resource’s name property.
 
 Once a resource is successfully imported, remove the `import` option because Pulumi is now managing the resource.
