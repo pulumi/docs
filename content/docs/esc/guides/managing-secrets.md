@@ -189,6 +189,6 @@ Use [Role-Based Access Control](/docs/esc/administration/access-control/) to lim
 ## Next steps
 
 - [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) - Use secrets in your infrastructure code
-- [Integrating external secrets](/docs/esc/guides/external-secrets/) - Pull secrets from AWS, Azure, GCP vaults
+- [Dynamic secrets](/docs/esc/integrations/dynamic-secrets/) - Pull secrets from AWS, Azure, GCP secret stores
 - [Running commands with esc run](/docs/esc/guides/running-commands-with-esc/) - Inject secrets into any command
 - [Access control reference](/docs/esc/environments/access-control/) - Complete RBAC documentation

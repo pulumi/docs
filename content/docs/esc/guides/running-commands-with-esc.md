@@ -221,5 +221,5 @@ Configure RBAC to control who can run commands with production secrets.
 
 - [Managing secrets](/docs/esc/guides/managing-secrets/) - Store and organize secrets
 - [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) - Use ESC in infrastructure code
-- [Setting up OIDC](/docs/esc/guides/setting-up-oidc/) - Generate dynamic cloud credentials
+- [Dynamic login credentials](/docs/esc/integrations/dynamic-login-credentials/) - Generate dynamic cloud credentials with OIDC
 - [CLI reference](/docs/esc/cli/commands/esc_run/) - Complete `esc run` documentation

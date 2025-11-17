@@ -126,17 +126,25 @@ You've created an environment, stored configuration and secrets, and retrieved t
 
 ## What's next?
 
-### Use ESC in your infrastructure code
+### Core workflows
 
-Pulumi users typically integrate ESC with their IaC workflows to centralize secrets and configuration across all stacks. If you already use Pulumi IaC, learn how to reference ESC environments in your Pulumi programs:
+Now that you've created your first environment, explore these essential guides:
 
-- **[Integrate ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)**
+- **[Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)** - Use ESC environments in your infrastructure code to centralize secrets across all stacks
+- **[Managing secrets](/docs/esc/guides/managing-secrets/)** - Store, organize, and retrieve secrets using the CLI and console
+- **[Running commands with esc run](/docs/esc/guides/running-commands-with-esc/)** - Inject secrets into any command or script as environment variables
+- **[Importing environments](/docs/esc/guides/importing-environments/)** - Compose environments to share configuration across teams and projects
 
 New to Pulumi IaC? Start with the [Pulumi IaC Get Started guide](/docs/get-started/) first.
 
-### Explore other use cases
+### Advanced capabilities
 
-- **[Understand the concepts](/docs/esc/concepts/)** - Learn how ESC works under the hood
-- **[Set up OIDC](/docs/esc/guides/setting-up-oidc/)** - Generate short-lived cloud credentials dynamically
-- **[Pull secrets from external sources](/docs/esc/guides/external-secrets/)** - Integrate with AWS Secrets Manager, Azure Key Vault, and more
-- **[Compose environments](/docs/esc/guides/importing-environments/)** - Share configuration across teams and projects
+Extend ESC with dynamic credentials and external secret providers:
+
+- **[Dynamic login credentials](/docs/esc/integrations/dynamic-login-credentials/)** - Generate short-lived cloud credentials using OIDC with AWS, Azure, GCP, and more
+- **[Dynamic secrets](/docs/esc/integrations/dynamic-secrets/)** - Pull secrets from external providers like AWS Secrets Manager, Azure Key Vault, and 1Password
+- **[Configuring OIDC](/docs/esc/environments/configuring-oidc/)** - Deep dive into OpenID Connect configuration and trust relationships
+
+### Learn the fundamentals
+
+- **[Concepts](/docs/esc/concepts/)** - Understand how ESC works under the hood

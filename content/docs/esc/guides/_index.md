@@ -21,8 +21,6 @@ These guides walk you through common Pulumi ESC tasks. Each guide is self-contai
 ## Advanced configuration
 
 - **[Importing environments](/docs/esc/guides/importing-environments/)** - Compose environments and share configuration across teams
-- **[Setting up OIDC](/docs/esc/guides/setting-up-oidc/)** - Generate short-lived cloud credentials dynamically
-- **[Integrating external secrets](/docs/esc/guides/external-secrets/)** - Pull secrets from AWS Secrets Manager, Azure Key Vault, and more
 
 ## Reference documentation
 

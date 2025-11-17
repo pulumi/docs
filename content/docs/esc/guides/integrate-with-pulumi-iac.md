@@ -112,7 +112,7 @@ values:
 
 This pattern works everywhere Pulumi runs: locally, in CI/CD, Pulumi Deployments, and GitHub Actions. Similar patterns are available for Azure (`fn::open::azure-login`) and GCP (`fn::open::gcp-login`).
 
-Learn more in [Setting up OIDC](/docs/esc/guides/setting-up-oidc/).
+Learn more in [Dynamic login credentials](/docs/esc/integrations/dynamic-login-credentials/) and [Configuring OIDC](/docs/esc/environments/configuring-oidc/).
 
 ### Managing API keys and secrets
 
@@ -129,7 +129,7 @@ values:
             secretId: https://my-keyvault.vault.azure.net/secrets/datadog-api-key
 ```
 
-Learn more in [Integrating external secrets](/docs/esc/guides/external-secrets/).
+Learn more in [Dynamic secrets](/docs/esc/integrations/dynamic-secrets/).
 
 ### Environment-specific configuration
 
@@ -155,7 +155,7 @@ Learn more in [Importing environments](/docs/esc/guides/importing-environments/)
 
 ## Next steps
 
-- [Setting up OIDC](/docs/esc/guides/setting-up-oidc/) - Generate dynamic cloud credentials
-- [Integrating external secrets](/docs/esc/guides/external-secrets/) - Pull from AWS, Azure, GCP vaults
+- [Dynamic login credentials](/docs/esc/integrations/dynamic-login-credentials/) - Generate dynamic cloud credentials with OIDC
+- [Dynamic secrets](/docs/esc/integrations/dynamic-secrets/) - Pull from AWS, Azure, GCP secret stores
 - [Importing environments](/docs/esc/guides/importing-environments/) - Compose configuration hierarchies
 - [Pulumi IaC integration reference](/docs/esc/integrations/infrastructure/pulumi-iac/) - Complete integration documentation

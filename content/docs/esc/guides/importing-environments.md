@@ -13,6 +13,10 @@ aliases:
   - /docs/pulumi-cloud/esc/get-started/import-environments/
 ---
 
+{{% notes type="info" %}}
+This guide provides a step-by-step tutorial for getting started with environment imports. For complete technical reference including JSON Merge Patch semantics, implicit imports, and advanced composition patterns, see [Importing environments](/docs/esc/environments/imports/).
+{{% /notes %}}
+
 ## Overview
 
 There may be scenarios where the value you need to retrieve is stored in a different environment file. For example, imagine you are building a system that integrates with a third-party service such as:
@@ -37,6 +41,22 @@ values:
     ...
     ...
 ```
+
+## Prerequisites
+
+Before you begin, you should have:
+
+1. [Created at least one environment](/docs/esc/get-started/) in Pulumi ESC
+1. Basic familiarity with [defining values in environments](/docs/esc/environments/structure/)
+
+## What you'll learn
+
+In this guide, you will:
+
+1. Create a shared environment with common configuration
+1. Import that environment into another environment
+1. Verify that imported values are accessible
+1. Learn how to use both the code editor and table view to manage imports
 
 ## Import an environment
 
@@ -69,12 +89,14 @@ values:
       ciphertext: ZXNjeAA....
 ```
 
-You should now see `"ENDPOINT_URL": "https://wordsapiv1.p.rapidapi.com/"` in the environment preview pane. This indicates that this value was successfully imported from the `my-project/app-global-config` environment, and you can now retrieve this value in the same way as the other values that are manually defined in this environment.
+You should now see `"ENDPOINT_URL": "https://wordsapiv1.p.rapidapi.com/"` in the environment preview pane. This confirms that the value was successfully imported from the `my-project/app-global-config` environment.
 
 ![Importing the global config environment in the Pulumi Console](/docs/esc/assets/esc-import-environments2.png)
 
+**Success!** You've now imported an environment. The imported `ENDPOINT_URL` value is accessible in the same way as values defined directly in this environment. You can retrieve it via the console or CLI just like any other value.
+
 {{% notes type="info" %}}
-You can test this out by retrieving the imported value via the console or the CLI. See [Managing secrets](/docs/esc/guides/managing-secrets/#retrieving-secrets) for details on retrieving values.
+To test this, try retrieving the imported value via the console or CLI. See [Managing secrets](/docs/esc/guides/managing-secrets/#retrieving-secrets) for details on retrieving values.
 {{% /notes %}}
 
 ### Import via the Table view
@@ -86,7 +108,7 @@ Alternatively, you can import environments using the Table view of the Pulumi co
 To view the imported values, you will need to [open your environment](/docs/esc/guides/managing-secrets/#retrieving-secrets).
 
 {{% notes type="info" %}}
-You can import multiple environments and reorder them. The order of the imported environments is important because if you have two environments that have the same name for a key/path, then the last imported environment will override the value of that key/paths for any environments that are imported before it. This behavior can be useful for scenarios where you need to intentionally override the value of a particular key/path.
+You can import multiple environments and reorder them. Import order matters when the same keys appear in multiple imported environments. For details on merge behavior and override semantics, see the [imports reference](/docs/esc/environments/imports/).
 {{% /notes %}}
 
 ## Next steps
