@@ -136,6 +136,11 @@
         </div>
     </section>
 
+    <!-- Supabase quote - IaC validation -->
+    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
+        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.supabase) }}
+    </section>
+
     <!-- Neo (Image Left, Text Right) -->
     <section
         class="py-12 my-12 px-6 xl:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
