@@ -9,7 +9,7 @@ menu:
     parent: esc-rotated-secrets
 ---
 
-The `external` rotator enables you to rotate secrets with custom logic using Pulumi ESC by making authenticated HTTP requests to user-controlled adapter services.
+The `external` rotator enables you to rotate secrets with custom logic using Pulumi ESC by making authenticated HTTPS requests to user-controlled adapter services.
 
 ## Overview
 

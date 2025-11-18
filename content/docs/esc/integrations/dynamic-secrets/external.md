@@ -9,7 +9,7 @@ menu:
     parent: esc-dynamic-secrets
 ---
 
-The `external` provider enables you to integrate custom secret sources with Pulumi ESC by making authenticated HTTP requests to user-controlled adapter services.
+The `external` provider enables you to integrate custom secret sources with Pulumi ESC by making authenticated HTTPS requests to user-controlled adapter services.
 
 ## Overview
 
@@ -117,7 +117,7 @@ The JWT token includes the following claims, which you can use to make authoriza
 Your adapter should:
 
 1. **Extract the JWT** from the `Authorization: Bearer <token>` header
-2. **Verify the signature** using the public key from JWKS
+2. **Verify the signature** using the public key from [JWKS](https://api.pulumi.com/oidc/.well-known/jwks)
 3. **Validate standard claims**:
    - `aud` matches your adapter URL
    - `exp` has not passed (token not expired)
