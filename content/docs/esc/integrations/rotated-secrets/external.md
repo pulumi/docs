@@ -9,8 +9,6 @@ menu:
     parent: esc-rotated-secrets
 ---
 
-# External Rotator
-
 The `external` rotator enables you to rotate secrets with custom logic using Pulumi ESC by making authenticated HTTP requests to user-controlled adapter services.
 
 ## Overview
@@ -85,7 +83,7 @@ Your adapter returns a JSON object that becomes the new state:
 }
 ```
 
-In ESC, this is stored as the current state and automatically marked as secret. 
+In ESC, this is stored as the current state and automatically marked as secret.
 On the next rotation, this entire object is passed as the `state` field in the request.
 
 When opening the environment after rotation, you should see output like this:
@@ -123,11 +121,13 @@ The key difference from the provider is state management:
 **Why dual-secret rotation?**
 
 Without dual secrets, rotation creates a race condition:
+
 1. Your adapter rotates the credential (e.g., regenerates an API key)
 2. Applications using the old credential start failing immediately
 3. Applications must fetch new configuration before they can reconnect
 
 With dual secrets, you eliminate this window of failure:
+
 1. Applications always use the `current` secret
 2. During rotation, the adapter rotates the inactive secret
 3. Applications continue using the current secret (unaffected by rotation)
@@ -136,6 +136,7 @@ With dual secrets, you eliminate this window of failure:
 **How to implement:**
 
 The exact implementation depends on your credential system:
+
 - **API keys with multiple active keys**: Create two keys, rotate the inactive one
 - **Database passwords without multi-password support**: Create two user accounts (see [mysql rotator](/docs/esc/integrations/rotated-secrets/mysql/) for an example)
 - **Service tokens with versioning**: Maintain two versions, rotate the older one

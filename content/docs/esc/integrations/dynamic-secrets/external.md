@@ -9,8 +9,6 @@ menu:
     parent: esc-dynamic-secrets
 ---
 
-# External Provider
-
 The `external` provider enables you to integrate custom secret sources with Pulumi ESC by making authenticated HTTP requests to user-controlled adapter services.
 
 ## Overview
