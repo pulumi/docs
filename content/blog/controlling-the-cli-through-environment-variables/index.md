@@ -4,6 +4,9 @@ meta_desc: "You can now configure all Pulumi CLI flags via environment variables
 authors:
     - tom-harding
 tags:
+    - features
+    - iac
+    - release
     - cli
 ---
 
