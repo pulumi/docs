@@ -9,6 +9,10 @@ menu:
     identifier: esc-dynamic-secrets
     parent: esc-integrations
     weight: 2
+aliases:
+  - /docs/esc/guides/external-secrets/
+  - /docs/esc/get-started/retrieve-external-secrets/
+  - /docs/pulumi-cloud/esc/get-started/retrieve-external-secrets/
 ---
 
 Pulumi ESC providers enable you to dynamically import secrets and configuration from the provider into your environment.

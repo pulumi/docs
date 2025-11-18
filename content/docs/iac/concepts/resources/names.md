@@ -276,7 +276,7 @@ config:
     pattern: ${name}-${project}-${stack}
 ```
 
-And when configuring it in an [ESC environment](/docs/esc/get-started/integrate-with-pulumi-iac/), you can specify the configuration as such:
+And when configuring it in an [ESC environment](/docs/esc/guides/integrate-with-pulumi-iac/), you can specify the configuration as such:
 
 ```yaml
 pulumiConfig:

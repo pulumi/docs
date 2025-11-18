@@ -76,8 +76,13 @@ Read the entire target file and perform comprehensive analysis:
 
 For each image or diagram referenced in the document:
 
-1. Use the Read tool to view the image
-2. Analyze the image for the following issues:
+1. **Check for missing borders on PNG images**: Run the border detection script with dry-run mode to deterministically identify which PNG images need borders:
+   ```bash
+   cd /workspaces/src/pulumi/docs/scripts/image-borders && pipenv run python add_borders.py <file-path> --dry-run
+   ```
+   The script will report which images would be modified vs skipped.
+
+2. Regardless of existing borders, use the Read tool to view the image and analyze the image for the following issues:
 
 **Screenshots:**
 - Missing or inadequate alt text (accessibility requirement)
@@ -163,6 +168,7 @@ Develop a detailed plan organized by issue category:
    - Images to convert to Mermaid/GoAT
    - Unnecessary images to remove
    - File format or size optimizations
+   - PNG images that need 1px grey borders for visual clarity
 
 **7. Content enhancements** — List specific recommendations:
    - Unclear sections that need rewriting
@@ -204,7 +210,8 @@ Once approved, implement the changes in logical order:
 4. **Style improvements** (remove filler, simplify sentences, active voice)
 5. **Link improvements** (improve link text, add cross-references)
 6. **Image improvements** (add alt text, remove unnecessary images, flag outdated screenshots)
-7. **Content enhancements** (rewrite unclear sections, add context)
+7. **Add borders to PNG images** (run `/add-borders <file-path>` if PNG images need borders)
+8. **Content enhancements** (rewrite unclear sections, add context)
 
 Use the TodoWrite tool to track progress through the improvements.
 

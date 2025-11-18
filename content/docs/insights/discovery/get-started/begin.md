@@ -26,7 +26,7 @@ If you're new to Pulumi you can click here to [start a free trial](https://app.p
 
 ## Create an ESC environment
 
-Pulumi Insights Account Discovery requires read-only access to your cloud accounts. This access is granted by [creating an ESC environment](/docs/esc/get-started/create-environment/) that generates valid credentials for the corresponding Pulumi provider when accessed.
+Pulumi Insights Account Discovery requires read-only access to your cloud accounts. This access is granted by [creating an ESC environment](/docs/esc/get-started/) that generates valid credentials for the corresponding Pulumi provider when accessed.
 
 {{% notes "info" %}}
 Account Discovery leverages Pulumi ESC to securely manage the credentials required to discover and read infrastructure resources, aligning with enterprise best practices for managing application secrets.

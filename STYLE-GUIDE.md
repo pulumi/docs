@@ -77,6 +77,14 @@ The symbol is not needed in regular in-text links within documentation pages.
 
 ---
 
+## Images and Media
+
+- Use relative paths for images stored in the same directory or a subdirectory.  
+- Provide descriptive alt text for all images.
+- For partial screenshots where the image may be hard to distinguish from the page background, add a 1px gray #999999 border.
+
+---
+
 ## Notes / Callouts
 
 Use the `{{ notes }}` shortcode sparingly. Supported levels:
