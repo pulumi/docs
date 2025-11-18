@@ -1,5 +1,11 @@
-
-# Controlling the CLI through environment variables
+---
+title: Controlling the CLI through environment variables
+meta_desc: "You can now configure all Pulumi CLI flags via environment variables, and use tools like direnv to define project-wide settings"
+authors:
+    - tom-harding
+tags:
+    - cli
+---
 
 With the release of Pulumi v3.208.0, we have released a small but surprisingly powerful change to the CLI: all CLI flags can now be configured as environment variables\!
 
