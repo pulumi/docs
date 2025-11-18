@@ -1,4 +1,13 @@
-# New in Pulumi IaC: Dependent resource replacements
+---
+title: New in Pulumi IaC: Dependent resource replacements
+meta_desc: "You can now use the `replaceWith` property on resources to inform Pulumi of extra dependencies"
+authors:
+    - tom-harding
+tags:
+    - features
+    - iac
+    - releases
+---
 
 The magic of Pulumi is that we rarely have to worry about the fine details of *how* our deployment and infrastructure management works, allowing us to focus instead on *what* we want. If our program declares an S3 bucket as part of our infrastructure, Pulumi knows what to do: we don’t have to issue a specific command to create it, and nor do we have to issue a different command to alter some property of it or remove it.
 
