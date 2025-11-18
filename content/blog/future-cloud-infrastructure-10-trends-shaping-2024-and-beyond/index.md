@@ -63,9 +63,9 @@ According to McKinsey & Company's "[In search of cloud value](https://www.mckins
 - Asian companies have the most to gain from the cloud, with $1.2 trillion in EBITDA. American institutions stand to capture about $1.1 trillion in cloud value, while European institutions are at $773 billion due to regulatory constraints.
 - Companies that have captured the most ROI consistently do 3 things well: 1/ work closely with business leaders to focus on high-value business cases, 2/ build a robust cloud foundation, and 3/ adopt a product-oriented operating model.
 
-## 2. AI-Driven Expansion and Investment from Hyperscalers
+## 2. AI-Optimized Clouds Redefine the Infrastructure Landscape
 
-The rise of large-scale AI workloads, especially large language models (LLMs), is fueling a massive wave of investment in next-generation cloud infrastructure. The demand isn't just for virtual compute in the cloud, but for highly specialized AI infrastructure.
+The cloud is entering its biggest architectural shift since its inception. Hyperscalers are rapidly rebuilding their platforms around AI-native workloads—introducing new compute architectures, specialized chips, high-bandwidth networking, and integrated agent frameworks. This transformation is reshaping the cloud services enterprises can consume and accelerating the availability of AI-optimized infrastructure across all major providers. Key hyperscaler milestones include:
 
 - **AWS** has integrated [Anthropic’s Claude 3 and Claude 4 models into Amazon Bedrock](https://www.aboutamazon.com/news/aws/anthropic-claude-4-opus-sonnet-amazon-bedrock) for enterprise LLM workflows. “Claude Opus 4 and Claude Sonnet 4 are available today in Amazon Bedrock, enabling customers to build agents with stronger reasoning, memory, and tool use.” — AWS, May 2025
 - **Microsoft Azure** revenue rose 33% year-over-year in Q3 (ended March 31), outperforming estimates of ~29.7%. [AI contributed 16 percentage points to this growth](https://www.reuters.com/business/microsoft-beats-quarterly-revenue-estimates-ai-shift-bolsters-cloud-demand-2025-04-30/), up from 13 points in the prior quarter. "Microsoft is on track to invest approximately $80 billion to build out AI-enabled datacenters to train AI models and deploy AI and cloud-based applications around the world," said Brad Smith, the Microsoft Vice Chair and President.
@@ -82,21 +82,22 @@ Recent market analysis from [ResearchAndMarkets](https://www.businesswire.com/ne
 
 Gartner predicts that by 2028, more than 40% of leading enterprises will have adopted hybrid computing paradigm architectures into critical business workflows, up from the current 8%.
 
-## 4. Enterprises Accelerate AI Infrastructure Spending
+## 4. Enterprises Rebuild Their Cloud Foundations to Operationalize AI
 
-Enterprises are significantly increasing their investment in AI infrastructure as AI adoption moves from experimentation to production. Organizations are building out the cloud, data, and compute foundations required to support LLMs, AI agents, automation, and real-time inference workloads.
+While hyperscalers are transforming the global cloud platform, enterprises face a different challenge: adapting their own cloud foundations to support AI at scale. Organizations are moving beyond prototypes and integrating AI into core products, internal workflows, and customer-facing systems, requiring new levels of automation, governance, and architectural rigor.
 
-According to Gartner, global AI infrastructure spending is expected to surpass $2 trillion in 2026, primarily driven by enterprise demand for GPU-enabled compute, data platforms, and AI-optimized cloud environments.
+According to Gartner, global AI infrastructure spending is expected to surpass **$2 trillion in 2026**. [IDC predicts that by 2027](https://blogs.idc.com/2025/10/22/futurescape-2026-moving-into-the-agentic-future/), more than 50% of enterprises will use AI agents to drive core workflows, which requires scalable, secure, and automated cloud architectures to support model execution and orchestration.
 
-This acceleration in enterprise AI adoption aligns with broader operational changes. [IDC predicts that by 2027](https://blogs.idc.com/2025/10/22/futurescape-2026-moving-into-the-agentic-future/), more than half of enterprises will use AI agents to drive core workflows, which requires scalable, secure, and automated cloud architectures to support model execution and orchestration.
+To enable this transition, enterprises are investing in:
 
-These forecasts confirm a rapid shift: enterprises are no longer relying solely on hyperscalers for AI capability, they are investing directly in the infrastructure needed to run AI at scale. As a result:
+- **GPU provisioning and orchestration** across cloud and on-prem environments  
+- **Data pipelines, vector databases, and feature stores** needed for real-time AI workloads  
+- **Model-serving infrastructure**, including gateways, inference routers, and autoscaling layers  
+- **Strong identity, secrets, and access controls** as AI systems increase security exposure  
+- **Automation through Infrastructure as Code** to ensure reproducibility and reduce drift  
+- **Policy-driven governance** to secure cost, compliance, and architectural consistency  
 
-- Infrastructure as Code is becoming essential for provisioning and governing complex AI environments.
-- Platform engineering and internal developer platforms are critical for enabling teams to build and deploy AI workloads safely.
-- Security and policy automation are required as AI systems increase risk exposure and compliance requirements.
-
-AI is now a primary driver of enterprise infrastructure strategy — and companies that modernize their cloud foundations will be better positioned to support AI-first applications in the years ahead.
+As AI becomes deeply embedded across engineering organizations, teams are increasingly using software engineering approaches such as Infrastructure as Code, reusable components, platform engineering, and policy automation to standardize how AI infrastructure is deployed, scaled, and secured across clouds.
 
 ## 5. IaC Drives Scalable Cloud, Multi-Cloud, and AI Operations
 
@@ -114,17 +115,17 @@ Modern [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastru
 
 As organizations scale both traditional cloud workloads and AI-driven systems, IaC has become critical for achieving secure, repeatable, and high-velocity operations across every environment.
 
-## 6. DevSecOps and AI Security
+## 6. DevSecOps Evolves Into AI-Integrated Security
 
-Security is now embedded directly into cloud-native workflows. DevSecOps practices, backed by AI-powered threat detection and automated remediation, are becoming mainstream. Gartner predicts that by 2028, over 50% of enterprises will use AI security platforms to protect their AI investments. Below are the 3 key predictions for the future of DevSecOps:
+As AI becomes embedded across cloud-native systems, DevSecOps is entering a new era. Gartner predicts that by **2028, over 50% of enterprises will use AI security platforms** to protect their AI investments. Below are the 3 key predictions for the future of DevSecOps:
 
-1. **AI-Driven Security**: AI/ML will be instrumental in automating security, moving [beyond detection to deliver AI-powered remediation at scale](https://www.pulumi.com/product/insights-governance/#video), and help enforce [Get Clean, Stay Clean processes](https://www.pulumi.com/blog/policy-next-gen/).
-2. **More Focus on Secrets Management**: Organizations will prioritize [robust secrets management](https://www.pulumi.com/product/secrets-management/) within their DevSecOps processes as data privacy concerns escalate. It will be essential to secure sensitive data, such as API keys, credentials, and other secrets, to ensure compliance and prevent unauthorized access.
-3. **Collaboration as a Key Factor**: Collaboration between development, security, and operations teams will be crucial for the success of DevSecOps efforts.
+1. **AI-Driven Security Automation**: Organizations are adopting AI/ML systems that automate threat detection and deliver remediation at scale. Tools that surface real-time risk signals — such as the infrastructure visibility and analysis features in [Pulumi Insights](https://www.pulumi.com/docs/insights/) and [integrated policy automation](https://www.pulumi.com/docs/insights/policy/) — help teams close the gap between detection and response.
+2. **Secrets Management as a Security Baseline**: Organizations will prioritize [robust secrets management](https://www.pulumi.com/product/secrets-management/) within their DevSecOps processes as data privacy concerns escalate. It will be essential to secure sensitive data, such as API keys, credentials, and other secrets, to ensure compliance and prevent unauthorized access.
+5. **Stronger Collaboration Across Dev, Security, and Platform Teams**: Collaboration between development, security, and operations teams will be crucial for the success of DevSecOps efforts.
 
 As organizations increase their use of AI across cloud-native systems, the need for tightly aligned security, governance, and data practices becomes even more urgent. At the Gartner Data & Analytics Summit in Sydney, Carlie Idoine, VP Analyst at Gartner, emphasized this growing dependency:
 
-*"[AI]... it doesn’t deliver value on its own – AI needs to be tightly aligned with data, analytics and governance to enable intelligent, adaptive decisions and actions across the organization."*
+*"[AI]... it doesn’t deliver value on its own – AI needs to be tightly aligned with data, analytics, and governance to enable intelligent, adaptive decisions and actions across the organization."*
 
 This perspective mirrors what we’re seeing across modern DevSecOps practices: AI can amplify security, but only when paired with strong foundations in secrets management, governance, and cross-team collaboration.
 
@@ -168,13 +169,18 @@ Developers worldwide have explored or are currently using AI-powered coding assi
 
 According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028), **by 2028, 75% of enterprise software engineers will use dedicated AI code assistants**, and 63% of organizations are currently piloting, deploying or beginning to [use AI code assistants, just like Pulumi AI](https://www.pulumi.com/ai).
 
-## Future Cloud Trends: AI-Native, Sustainable, and Composable
+## The Future of Cloud: Reinvented for an AI-First Decade
 
-Cloud infrastructure is entering a new era. By 2030, the dominant cloud model will be:
+Cloud infrastructure is entering its most transformative era since the rise of Kubernetes. The trends shaping 2026 reveal a clear pattern: AI is no longer a workload — it’s becoming the organizing principle of cloud strategy.
 
-- **AI-native**, integrating LLMs and inference at the infrastructure level
-- **Sustainable by design**, driven by power, water, and climate constraints
-- **Composable and sovereign**, blending public, private, edge, and national clouds
-- **Governed by code**, through DevSecOps, AIOps, and FinOps automation
+- **AI-native cloud architectures** that require elastic compute, GPU orchestration, fast data access, and governance built into every layer
+- **Infrastructure as Code as the operational backbone**, standardizing deployments across AI, cloud, and hybrid environments
+- **Platform engineering and IDPs** to enable self-service, gold-standard patterns, and automated guardrails
+- **Security integrated into every pipeline**, with AI-assisted threat detection, strong secrets management, and policy-driven compliance
+- **AIOps and intelligent automation** becoming standard for scaling modern cloud systems
+- **Kubernetes evolving for AI**, driving new orchestration patterns across edge, core, and inference clusters
+- **Multi-cloud and hybrid ecosystems** accelerating to support interoperability, resilience, and global workload placement
 
-Organizations that embrace these shifts—backed by modern infrastructure as code and platform engineering practices—will lead the next wave of cloud innovation.
+Taken together, these shifts point to a new model of cloud operations that is intelligent, automated, policy-aware, and built on software engineering principles rather than manual configuration.
+
+Organizations that invest now in strong cloud foundations, unified governance, and scalable automation (through approaches like Infrastructure as Code, reusable components, and policy frameworks) will be positioned to lead in an AI-first world. The gap between teams that modernize and teams that don’t will widen dramatically in 2026 and beyond.
