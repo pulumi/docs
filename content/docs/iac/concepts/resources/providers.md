@@ -21,6 +21,10 @@ A resource provider handles communications with a cloud or SaaS service to creat
 
 Providers are composed of two parts: an executable, which makes the actual call to the cloud provider's API, and an SDK, which allows you to consume the provider in the language of your Pulumi program. When you run your Pulumi program, Pulumi passes your code to a language host such as Node.js, waits to be notified of resource registrations, assembles a model of your desired state, and calls on the provider executable to produce that state. The resource provider translates those requests into API calls to the cloud service.
 
+{{% notes type="info" %}}
+Providers are a specific type of [plugin](/docs/iac/concepts/plugins/) called a resource plugin. For more information about plugins and how they work in Pulumi, see the [plugins concept page](/docs/iac/concepts/plugins/).
+{{% /notes %}}
+
 ## Installing Providers
 
 There are two methods for installing a provider and using it in your Pulumi program:
@@ -38,7 +42,7 @@ The most common method of installing a provider is to use your language's packag
 - .NET: `Pulumi.Aws`
 - Java: `com.pulumi.aws`
 
-After installing the provider using your package manager, you reference the provider in your Pulumi program to define the desired state of the resources for that provider. When you install the SDK for a provider (e.g., via `npm install <package_name>` in Node.js), the package manager (npm in this example) automatically downloads and installs the provider executable along with the SDK if the executable is not already cached on your system.
+After installing the provider using your package manager, you reference the provider in your Pulumi program to define the desired state of the resources for that provider. When you first run `pulumi preview` or `pulumi up`, the Pulumi CLI will install any required providers that are not already in your plugin cache.
 
 ### Installing a Parameterized Provider via `pulumi package add`
 
@@ -149,20 +153,8 @@ pulumi config set aws:region us-west-2
 
 Then, you deploy the following Pulumi program:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let aws = require("@pulumi/aws");
-
-let instance = new aws.ec2.Instance("myInstance", {
-    instanceType: "t2.micro",
-    ami: "myAMI",
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -231,38 +223,8 @@ While the default provider configuration may be appropriate for the majority of 
 **Note:** This example for AWS does not apply to Azure which provides access to all regions regardless of the default region defined in your Pulumi program. That means you don't need to explicitly create and configure providers for each region when working with Azure. You can simply specify the region in the resource definition itself.
 {{% /notes %}}
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let pulumi = require("@pulumi/pulumi");
-let aws = require("@pulumi/aws");
-
-// Create an AWS provider for the us-east-1 region.
-let useast1 = new aws.Provider("useast1", { region: "us-east-1" });
-
-// Create an ACM certificate in us-east-1.
-let cert = new aws.acm.Certificate("cert", {
-    domainName: "foo.com",
-    validationMethod: "EMAIL",
-}, { provider: useast1 });
-
-// Create an ALB listener in the default region that references the ACM certificate created above.
-let listener = new aws.lb.Listener("listener", {
-    loadBalancerArn: loadBalancerArn,
-    port: 443,
-    protocol: "HTTPS",
-    sslPolicy: "ELBSecurityPolicy-2016-08",
-    certificateArn: cert.arn,
-    defaultAction: {
-        targetGroupArn: targetGroupArn,
-        type: "forward",
-    },
-})
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -434,24 +396,8 @@ pulumi config set aws:region us-west-2
 
 Component resources also accept a set of providers to use with their child resources. For example, the EC2 instance parented to `myResource` in the program below is created in `us-east-1`, and the Kubernetes pod parented to myResource is created in the cluster targeted by the `test-ci` context.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-class MyResource extends pulumi.ComponentResource {
-    constructor(name, opts) {
-        let instance = new aws.ec2.Instance("instance", { ... }, { parent: this });
-        let pod = new kubernetes.core.v1.Pod("pod", { ... }, { parent: this });
-    }
-}
-
-let useast1 = new aws.Provider("useast1", { region: "us-east-1" });
-let myk8s = new kubernetes.Provider("myk8s", { context: "test-ci" });
-let myResource = new MyResource("myResource", { providers: { aws: useast1, kubernetes: myk8s } });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -571,6 +517,8 @@ While default providers are enabled by default, they [can be disabled](/docs/con
 Disabling explicit providers will help ensure that the [`provider` resource option](/docs/iac/concepts/options/provider) _must_ be set on all resources. If the `provider` resource option is not set (a common mistake) the resource will use the default provider, which can result in resources being deployed to the wrong environment.
 {{% /notes %}}
 
+### Using the Pulumi CLI
+
 For example, to disable the `aws` provider, you can run:
 
 ```sh
@@ -588,3 +536,52 @@ This adds a new entry to the list `pulumi:disable-default-providers`. To disable
 ```sh
 pulumi config set --path 'pulumi:disable-default-providers[0]' '*'
 ```
+
+### Using the Automation API SDK
+
+To set the value correctly using Automation API, you must use the `path` parameter:
+
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{% choosable language javascript %}}
+
+```typescript
+await stack.setConfig("pulumi:disable-default-providers[0]", { value: "*" }, true);
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+await stack.setConfig("pulumi:disable-default-providers[0]", { value: "*" }, path: true);
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+await stack.SetConfigAsync("pulumi:disable-default-providers[0]", new ConfigValue("*"), path: true);
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+stack.set_config("pulumi:disable-default-providers[0]", auto.ConfigValue(value="*"), True)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+stack.SetConfig(ctx, "pulumi:disable-default-providers[0]", auto.ConfigValue{Value: "*"}, true)
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+stack.setConfig("pulumi:disable-default-providers[0]", new ConfigValue("*"), true);
+```
+
+{{% /choosable %}}
+{{< /chooser >}}

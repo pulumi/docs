@@ -5,14 +5,15 @@ title: Modify program
 h1: "Pulumi & Google Cloud: Modify program"
 weight: 6
 menu:
-  clouds:
-    parent: google-cloud-get-started
-    identifier: gcp-modify-program
+    iac:
+        name: Modify program
+        identifier: gcp-get-started.modify-program
+        parent: gcp-get-started
+        weight: 6
 
 aliases:
-- /docs/quickstart/gcp/modify-program/
-- /docs/get-started/gcp/modify-program/
-- /docs/clouds/gcp/get-started/modify-program/
+    - /docs/quickstart/gcp/modify-program/
+    - /docs/clouds/gcp/get-started/modify-program/
 ---
 
 Now that your storage bucket is provisioned, let's add an object to it. First, from within your project directory, create a new `index.html` file with some content in it.
@@ -65,20 +66,7 @@ Now that you have an `index.html` file with some content, open {{< langfile >}} 
 
 For this, you'll use Pulumi's `FileAsset` class to assign the content of the file to a new `BucketObject`.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language javascript %}}
-
-In `index.js`, create the `BucketObject` right after creating the bucket itself:
-
-```javascript
-const bucketObject = new gcp.storage.BucketObject("index.html", {
-    bucket: bucket.name,
-    source: new pulumi.asset.FileAsset("index.html")
-});
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -191,18 +179,6 @@ Below the `BucketObject`, add an IAM binding allowing the contents of the bucket
 {{% choosable language typescript %}}
 
 ```typescript
-const bucketBinding = new gcp.storage.BucketIAMBinding("my-bucket-binding", {
-    bucket: bucket.name,
-    role: "roles/storage.objectViewer",
-    members: ["allUsers"]
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language javascript %}}
-
-```javascript
 const bucketBinding = new gcp.storage.BucketIAMBinding("my-bucket-binding", {
     bucket: bucket.name,
     role: "roles/storage.objectViewer",

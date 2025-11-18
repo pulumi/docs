@@ -49,13 +49,13 @@ var storageAccount = new StorageAccount("storageAccount", new StorageAccountArgs
 });
 ```
 
-There is a bigger problem in the API of the resource creation. The compiler should tell you at compile-time that you missed a required property. The underlying cause is because we are using property initializers for `StorageAccountArgs` with a _parameterless_ contructor. This is the case when creating _any_ resource across the cloud providers available in the Pulumi ecosystem.
+There is a bigger problem in the API of the resource creation. The compiler should tell you at compile-time that you missed a required property. The underlying cause is because we are using property initializers for `StorageAccountArgs` with a _parameterless_ constructor. This is the case when creating _any_ resource across the cloud providers available in the Pulumi ecosystem.
 
 > See [Pulumi #3808](https://github.com/pulumi/pulumi/issues/3808) for more details and discussion on this issue.
 
 What can we do to fix the problem?
 
-First solution that comes to mind is to fix the generated .NET API for each cloud provider available with Pulumi: adding the required parameters as part of the contructor of arguments type and removing the _parameterless_ contructor.
+First solution that comes to mind is to fix the generated .NET API for each cloud provider available with Pulumi: adding the required parameters as part of the constructor of arguments type and removing the _parameterless_ constructor.
 
 This however means introducing a breaking change for each and every existing C# program running with Pulumi using the empty constructor. Here at Pulumi, we want to ensure that changes to our APIs are backward-compatible, so this is a no-go.
 

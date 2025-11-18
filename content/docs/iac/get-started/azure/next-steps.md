@@ -5,10 +5,15 @@ meta_desc: This page provides a list of tutorials that take a deeper dive into
 title: Next steps
 h1: "Pulumi & Azure: Next steps"
 weight: 9
+menu:
+    iac:
+        name: Next steps
+        identifier: azure-get-started.next-steps
+        parent: azure-get-started
+        weight: 9
 aliases:
-- /docs/quickstart/azure/next-steps/
-- /docs/get-started/azure/next-steps/
-- /docs/clouds/azure/get-started/next-steps/
+    - /docs/quickstart/azure/next-steps/
+    - /docs/clouds/azure/get-started/next-steps/
 ---
 
 Congrats! You've deployed your first project on Microsoft Azure with Pulumi. Here are some next steps, depending on your learning style.

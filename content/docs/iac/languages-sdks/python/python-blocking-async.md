@@ -48,7 +48,7 @@ import os
 from pulumi import export, FileAsset
 from pulumi_aws import s3
 
-bucket = s3.BucketV2('s3-bucket')
+bucket = s3.Bucket('s3-bucket')
 
 content_dir = "www"
 for file in os.listdir(content_dir):
@@ -117,7 +117,7 @@ def blocking_operation(foo: str) -> str:
   """
   res = subprocess.run(['my-cli', foo], encoding='utf-8', capture_output=True)
   if res.returncode is not 0:
-    raise Error(f'my-cli returned {res.returncode}: {res.stderr}')
+    raise Exception(f'my-cli returned {res.returncode}: {res.stderr}')
   return res.stdout
 
 # Use asyncio to call the blocking_operation function on another thread
@@ -154,7 +154,7 @@ async def async_operation(foo: str) -> str:
   stdout, stderr = await proc.communicate()
 
   if proc.returncode is not 0:
-    raise Error(f'my-cli returned {proc.returncode}: {stderr.decode()}')
+    raise Exception(f'my-cli returned {proc.returncode}: {stderr.decode()}')
   return stdout.decode
 
 # Calling an async function directly (without the await keyword) returns a

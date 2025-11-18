@@ -4,25 +4,22 @@ meta_desc: This page provides an overview of how to create a new Google Cloud + 
 title: Create project
 h1: "Pulumi & Google Cloud: Create project"
 weight: 3
+menu:
+    iac:
+        name: Create project
+        identifier: gcp-get-started.create-project
+        parent: gcp-get-started
+        weight: 3
 aliases:
-- /docs/quickstart/gcp/create-project/
-- /docs/get-started/gcp/create-project/
-- /docs/clouds/gcp/get-started/create-project/
+    - /docs/quickstart/gcp/create-project/
+    - /docs/clouds/gcp/get-started/create-project/
 ---
 
 Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,
 and configuring your Google Cloud credentials, let's create your first Pulumi program.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language javascript %}}
-
-```bash
-$ mkdir quickstart && cd quickstart
-$ pulumi new gcp-javascript
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```bash
@@ -111,7 +108,7 @@ Saved config
 
 > What are [projects](/docs/concepts/projects/) and [stacks](/docs/concepts/stack/)? Pulumi projects and stacks let you organize Pulumi code. Consider a Pulumi _project_ to be analogous to a GitHub repo---a single place for code---and a _stack_ to be an instance of that code with a separate configuration. For instance, _Project Foo_ may have multiple stacks for different development environments (Dev, Test, or Prod), or perhaps for different cloud configurations (geographic region for example). See [Organizing Projects and Stacks](/docs/using-pulumi/organizing-projects-stacks/) for some best practices on organizing your Pulumi projects and stacks.
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 
 After some dependency installations from `npm`, the project and stack will be ready.
 

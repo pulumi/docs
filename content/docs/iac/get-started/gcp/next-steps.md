@@ -6,14 +6,15 @@ title: Next steps
 h1: "Pulumi & Google Cloud: Next steps"
 weight: 9
 menu:
-  clouds:
-    parent: google-cloud-get-started
-    identifier: gcp-next-steps
+  iac:
+    name: Next steps
+    identifier: gcp-get-started.next-steps
+    parent: gcp-get-started
+    weight: 9
 
 aliases:
-- /docs/quickstart/gcp/next-steps/
-- /docs/get-started/gcp/next-steps/
-- /docs/clouds/gcp/get-started/next-steps/
+    - /docs/quickstart/gcp/next-steps/
+    - /docs/clouds/gcp/get-started/next-steps/
 ---
 
 Congrats! You've deployed your first project on Google Cloud with Pulumi. Here are some next steps, depending on your learning style.

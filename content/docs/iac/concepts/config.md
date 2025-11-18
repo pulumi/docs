@@ -8,7 +8,7 @@ menu:
     iac:
         name: Configuration
         parent: iac-concepts
-        weight: 65
+        weight: 40
     concepts:
         weight: 6
 aliases:
@@ -23,7 +23,7 @@ In many cases, different stacks for a single project will need differing values.
 
 Pulumi offers a configuration system for managing such differences. Instead of hard-coding the differences, you can store and retrieve configuration values using a combination of the [CLI](/docs/cli/) and the programming model.
 
-The key-value pairs for any given stack are stored in [your project's stack settings file](/docs/concepts/projects#stack-settings-file), which is automatically named `Pulumi.<stack-name>.yaml`. You can typically ignore this file, although you may want to check it in and version it with your project source code.
+The key-value pairs for any given stack are stored in [your project's stack settings file](/docs/concepts/projects#stack-settings-file), which is automatically named `Pulumi.<stack-name>.yaml`. Stack configuration files should be committed to version control because their values drive the behavior of your Pulumi program.
 
 ## Configuration Options {#config-stack}
 
@@ -100,22 +100,16 @@ $ pulumi new aws-typescript --config="aws:region=us-west-2"
 
 Configuration values can be retrieved for a given stack using either {{< pulumi-config-get >}} or {{< pulumi-config-require >}}. Using {{< pulumi-config-get >}} will return {{< language-null >}} if the configuration value was not provided, and {{< pulumi-config-require >}} will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI.
 
+{{% notes type="info" %}}
+Configuration values can only be **read** during program execution, not set. To programmatically manage stack configurations (like setting config values or creating stacks dynamically), use [Automation API](/docs/iac/automation-api/). Automation API provides full programmatic control over Pulumi operations, including writing configuration values to stack files and managing stack lifecycle.
+{{% /notes %}}
+
 For potentially-secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}, which will return the config value as an `Output` which carries both the value and the secret-ness of the config value so that it will be encrypted whenever serialized (see [secrets](/docs/concepts/secrets/) for more on managing secret values).
 
 Configuration methods operate on a particular namespace, which by default is the name of the current project. Passing an empty constructor to {{< pulumi-config >}}, as in the following example, sets it up to read values set without an explicit namespace (e.g., `pulumi config set name Joe`):
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let config = new pulumi.Config();
-let name = config.require("name");
-let lucky = config.getNumber("lucky") || 42;
-let secret = config.requireSecret("secret");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -201,16 +195,8 @@ config:
 
 To access a namespaced configuration value, such as one set for a provider library like `aws`, you must pass the library's name to the constructor. For example, to retrieve the configured value of `aws:region`:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let awsConfig = new pulumi.Config("aws");
-let awsRegion = awsConfig.require("region");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -264,29 +250,13 @@ variables:
 
 Similarly, if you are writing code that will be imported into a broader project, such as your own library of [Pulumi components](/docs/concepts/resources/components/), you should instead pass your library's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your library:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
 class MyComponent extends pulumi.ComponentResource {
     constructor(name: string, args = {}, opts: pulumi.ComponentResourceOptions = {}) {
-        super("mylib:index:MyComponent", name, args, opts);
-
-        // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
-        const config = new pulumi.Config("mylib");
-        const name = config.require("name");
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language javascript %}}
-
-```javascript
-class MyComponent extends pulumi.ComponentResource {
-    constructor(name, args, opts) {
         super("mylib:index:MyComponent", name, args, opts);
 
         // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
@@ -411,17 +381,8 @@ For structured config, `true` and `false` values are persisted as boolean values
 
 The `data` config can be accessed in your Pulumi program using:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let config = new pulumi.Config();
-let data = config.requireObject("data");
-console.log(`Active: ${data.active}`);
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

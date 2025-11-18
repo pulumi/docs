@@ -1,0 +1,90 @@
+{{/* Course List Schema - Generates ItemList for tutorial index and collection pages */}}
+
+{{ if eq .Type "tutorials" }}
+  {{/* Get all tutorial pages that should be listed */}}
+  {{ $courses := where .Pages ".Params.listed" "ne" false }}
+  
+  {{/* Only generate course list if we have at least 3 courses (Google requirement) */}}
+  {{ if ge (len $courses) 3 }}
+    {{ $courseItems := slice }}
+    
+    {{/* Build course list items */}}
+    {{ range $index, $course := $courses }}
+      {{ $courseItem := dict
+        "@type" "ListItem"
+        "position" (add $index 1)
+        "item" (dict
+          "@type" "Course"
+          "name" $course.Title
+          "description" (or $course.Params.meta_desc $course.Summary (printf "Learn %s with this hands-on Pulumi tutorial" $course.Title))
+          "url" $course.Permalink
+          "provider" (dict
+            "@type" "Organization"
+            "@id" "https://www.pulumi.com/#organization"
+            "name" "Pulumi"
+            "url" "https://www.pulumi.com"
+          )
+          "inLanguage" "en-US"
+          "isAccessibleForFree" true
+        )
+      }}
+      
+      {{/* Add image if available */}}
+      {{ with or $course.Params.meta_image "/images/docs/meta-images/docs-meta.png" }}
+        {{ $image := . }}
+        {{ if not (hasPrefix $image "http") }}
+          {{ $image = printf "https://www.pulumi.com%s" $image }}
+        {{ end }}
+        {{ $courseItem = merge $courseItem (dict "item" (merge (index $courseItem "item") (dict "image" $image))) }}
+      {{ end }}
+      
+      {{/* Add educational level if detected */}}
+      {{ $level := "Intermediate" }}
+      {{ $titleLower := lower $course.Title }}
+      {{ if or (in $titleLower "getting started") (in $titleLower "creating resources") }}
+        {{ $level = "Beginner" }}
+      {{ else if or (in $titleLower "advanced") (in $titleLower "drift") (in $titleLower "compliance") }}
+        {{ $level = "Advanced" }}
+      {{ end }}
+      {{ with $course.Params.skill_level }}
+        {{ $level = . }}
+      {{ else }}
+        {{ with $course.Params.educational_level }}
+          {{ $level = . }}
+        {{ end }}
+      {{ end }}
+      {{ $courseItem = merge $courseItem (dict "item" (merge (index $courseItem "item") (dict "educationalLevel" $level))) }}
+      
+      {{/* Add estimated duration */}}
+      {{ $duration := "PT1H" }}
+      {{ if $course.Params.duration }}
+        {{ $duration = $course.Params.duration }}
+      {{ else if $course.WordCount }}
+        {{/* Estimate based on word count */}}
+        {{ $readTime := div $course.WordCount 150 }}
+        {{ if lt $readTime 30 }}{{ $readTime = 30 }}{{ end }}
+        {{ if gt $readTime 120 }}{{ $readTime = 120 }}{{ end }}
+        {{ $duration = printf "PT%dM" $readTime }}
+      {{ end }}
+      {{ $courseItem = merge $courseItem (dict "item" (merge (index $courseItem "item") (dict "timeRequired" $duration))) }}
+      
+      {{ $courseItems = $courseItems | append $courseItem }}
+    {{ end }}
+    
+    {{/* Generate the ItemList schema */}}
+    {{ $schema := dict
+      "@context" "https://schema.org"
+      "@type" "ItemList"
+      "@id" (printf "%s#courselist" .Permalink)
+      "name" (printf "%s - Pulumi Tutorials" .Title)
+      "description" (or .Params.meta_desc .Summary "Hands-on guides to help you get the most out of Pulumi Infrastructure as Code")
+      "url" .Permalink
+      "numberOfItems" (len $courseItems)
+      "itemListElement" $courseItems
+    }}
+    
+    <script type="application/ld+json">
+    {{ $schema | jsonify | safeJS }}
+    </script>
+  {{ end }}
+{{ end }}

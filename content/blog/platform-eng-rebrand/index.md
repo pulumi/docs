@@ -11,11 +11,11 @@ authors:
 tags:
     - platform-engineering
 social:
-    twitter: >  
+    twitter: >
         Is platform engineering just DevOps rebranded, or a genuine evolution? Exploring title drift, hype cycles, and why platform teams might actually represent progress in how we build and operate software.
     linkedin: >
         Is Platform Engineering just DevOps with a new name, or does it represent real progress?
-        
+
         In this article, we explore:
         • Why some see platform engineering as mere title inflation
         • How the industry's hype cycle fuels skepticism
@@ -82,7 +82,7 @@ Totally cross-functional teams work well at small organizations but struggle whe
 - Few individuals want to perform both development and operations roles
 - Staying current on everything in your Ops and Dev stack is often unrealistic
 
-But most importantly, as organizations grow, specializations natuarally emerge. Goverance and corporate policies often force the issue. A platform team is one such specialization and a powerful one if done right.
+But most importantly, as organizations grow, specializations natuarally emerge. Governance and corporate policies often force the issue. A platform team is one such specialization and a powerful one if done right.
 
 Instead of focusing on eliminating silos, it focuses on creating productive abstractions and interfaces between application teams and operating services. The platform functions as an abstraction layer (similar to how a database abstracts data storage), with dedicated teams treating it as a product with clear boundaries.
 
@@ -92,7 +92,7 @@ This approach contradicts the original DevOps vision but represents a necessary 
 
 <img src="bingo.png" alt="buzzword bingo" style="width:100%;" />
 
-So yeah, title drift is a thing. And the hype cycle is real. But the idea of a dedicated team removing frictions by building tools and resuable abstractions is an idea that's here to stay.
+So yeah, title drift is a thing. And the hype cycle is real. But the idea of a dedicated team removing frictions by building tools and reusable abstractions is an idea that's here to stay.
 
 In fact, it's just a way to scale the principles inherent in the original ideas of DevOps. It may technically diverge from the literal principles of DevOps, but it is most definitely true to the spirit.
 

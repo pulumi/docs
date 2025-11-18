@@ -87,7 +87,7 @@ Refer to the [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/depl
 
 ### Setting it up in the Pulumi Service Provider
 
-# Pulumi Service Provider for Creating a Raw Schedule
+### Pulumi Service Provider for Creating a Raw Schedule
 
 The Pulumi Service provider allows you to set up a raw schedule for operations like updates or deployments based on a specific time or a recurring schedule inside of source control.
 

@@ -32,7 +32,7 @@ Most of this cloud orchestration today is done manually or with complex scripts.
 
 This blog post is the first installment of a series on *AI Infrastructure as Python*. We will start this journey with building an AI backend service for a chatbot. In this post, we will deploy a LLM model behind an API backend running on compute infrastructure in the cloud. This entire infrastructure pipeline will be deployed using IaC written in Python. The series will follow this AI backend service through its evolution into a robust and resilient cloud native service.
 
-> # *The most difficult challenge that we face with AI today is a problem of cloud orchestration*
+> ## *The most difficult challenge that we face with AI today is a problem of cloud orchestration*
 
 Before we get into the details of using Pulumi to deploy a private LlaMa 2 API chatbot service---in 30 minutes or less, of course---let's start with some quick terminology/context:
 
@@ -51,23 +51,23 @@ If you are ready to try the *#MLOpsChallenge* along with us, then let's double c
 
 ### Requirements
 
-* [Pulumi CLI](https://www.pulumi.com/docs/install/)
-* [Pulumi account and access token](https://app.pulumi.com/signup)
-* [Python3 (3.11+)](https://www.python.org/downloads/)
-* [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [Huggingface Token](https://huggingface.co/docs/transformers.js/guides/private)
-* [Huggingface access to LLaMa2](https://huggingface.co/meta-llama)
-  * [Meta LLaMa2 Access](https://ai.meta.com/resources/models-and-libraries/llama-downloads/)
+- [Pulumi CLI](https://www.pulumi.com/docs/install/)
+- [Pulumi account and access token](https://app.pulumi.com/signup)
+- [Python3 (3.11+)](https://www.python.org/downloads/)
+- [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Huggingface Token](https://huggingface.co/docs/transformers.js/guides/private)
+- [Huggingface access to LLaMa2](https://huggingface.co/meta-llama)
+  - [Meta LLaMa2 Access](https://ai.meta.com/resources/models-and-libraries/llama-downloads/)
 
 Choose one of the following deployment platforms. (You can actually choose more than one, if you'd like!)
 
-* [Docker](https://docs.docker.com/engine/install/)
-  * [Nvidia CUDA Enabled GPU](https://developer.nvidia.com/cuda-gpus)
-  * [Nvidia Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
-* [Azure](https://azure.microsoft.com/en-us)
-  * [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-* [Runpod.io](https://runpod.io)
-  * [Runpod api key](https://docs.runpod.io/docs/graphql-api)
+- [Docker](https://docs.docker.com/engine/install/)
+  - [Nvidia CUDA Enabled GPU](https://developer.nvidia.com/cuda-gpus)
+  - [Nvidia Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+- [Azure](https://azure.microsoft.com/en-us)
+  - [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+- [Runpod.io](https://runpod.io)
+  - [Runpod api key](https://docs.runpod.io/docs/graphql-api)
 
 Now, for the real fun, let's start the timer and deploy our own chatbot! Note that the instructions below are for Runpod; instructions for the other two deployment platforms are found in [the GitHub repository](https://github.com/pulumiverse/katwalk).
 

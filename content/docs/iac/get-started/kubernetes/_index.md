@@ -1,11 +1,12 @@
 ---
 title_tag: Get Started with Kubernetes
 meta_desc: This page provides an overview and guide on how to get started with Kubernetes.
-title: Get started
+title: Kubernetes
 h1: Get Started with Kubernetes
 menu:
     iac:
         name: Kubernetes
+        identifier: kubernetes-get-started
         parent: iac-get-started
         weight: 4
     clouds:
@@ -13,10 +14,9 @@ menu:
         parent: kube
         weight: 4
 aliases:
-    - /docs/quickstart/kubernetes/
     - /docs/get-started/kubernetes/
+    - /docs/quickstart/kubernetes/
     - /docs/clouds/kubernetes/get-started/
-    - /docs/iac/get-started/kubernetes/
 ---
 
 Pulumi's Cloud Native SDK makes it easy to target any Kubernetes environment to

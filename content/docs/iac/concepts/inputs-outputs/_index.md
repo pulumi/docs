@@ -6,7 +6,7 @@ h1: "Inputs & outputs"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Inputs & outputs
+        name: Inputs & Outputs
         parent: iac-concepts
         weight: 60
         identifier: iac-concepts-inputs-outputs
@@ -24,21 +24,45 @@ search:
         - input
 ---
 
-## Inputs
+Pulumi [resources](/docs/iac/concepts/resources) use special types to define their properties, called Inputs and Outputs. These special Pulumi types wrap "plain" values like strings or integers, and are what allow Pulumi to declaratively manage your infrastructure resources.
 
-All resources in Pulumi accept values that describe the way the resource behaves. We call these values *inputs*.
+## What are inputs and outputs?
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+Pulumi IaC programs use special types called inputs and outputs to keep track of the dependencies between resources. Inputs and outputs, combined with your Pulumi stack's state file, are what allow Pulumi IaC programs to be _declarative_. In other words, you only need to tell Pulumi the desired state of your resources, and Pulumi will figure out what needs to be changed, and in what order those operations need to happen, to turn your declared desired state into the actual state of your resources.
 
-{{% choosable language javascript %}}
+Inputs are values that you _can_ supply to a resource. Inputs may be required or optional: For example, the `vpcId` input is required on the `aws.ec2.Subnet` resource because a subnet must belong to a particular VPC. On the other hand, the `forceDestroy` attribute on an `aws.s3.Bucket` resource (which allows you to delete a bucket that has objects in it) is optional and defaults to `false`.
 
-```javascript
-const myId = new random.RandomId("mine", {
-    byteLength: 8, // byteLength is an input
-});
-```
+When specifying inputs to a Pulumi resource, you can always use the plain version of the type. For example, any input that is defined as `pulumi.Input<string>` will accept a plain `string` value.
 
-{{% /choosable %}}
+Outputs are values that are only known after a resource is created. For example, if you are creating an `aws.ec2.Vpc` resource, the VPC ID is an output - you cannot choose this value, and it is only known after the VPC is created in AWS.
+
+When authoring Pulumi IaC programs, you will frequently use one resource's output as another resource's input. For example, you might create an `aws.ec2.Vpc` resource and pass its `vpcId` property (an output) to create several `aws.ec2.Subnet` resources (where `vpcId` is a required input). Pulumi uses inputs and outputs to automatically keep track of the dependencies between your resources. Using our example using Pulumi IaC to manage a VPC and its subnets, Pulumi will manage your resources in the following ways:
+
+- When running `pulumi up`, Pulumi will ensure that no subnets are created until the VPC has been created and its VPC ID is known. If you are running your Pulumi program for the first time, this means Pulumi will wait until the VPC is created. If you ran your program before and are now adding an additional subnet, that subnet will be created immediately because the VPC ID is already known. (The value is stored in your Pulumi state file.)
+- If you were running a `pulumi destroy` command to delete all the resources in your program, Pulumi would ensure that the VPC is not deleted until _all_ subnets in your Pulumi program have been deleted.
+
+{{% notes type="info" %}}
+Most dependencies between resources are automatically tracked by virtue of one resource's output being another resource's input. However, there may be other dependencies between resources that are not defined by this output-to-input relationship. For these cases, you can use the [`dependsOn`](/docs/iac/concepts/resources/options/dependson) resource option to explicitly define a dependency between resources.
+{{% /notes %}}
+
+Input and Output types are defined for each supported Pulumi language in the corresponding Pulumi SDK for that language. For example, in TypeScript, the Pulumi Node SDK has definitions for the types `pulumi.Input<T>` and `pulumi.Output<T>`. The Pulumi SDK is typically imported by default whenever you create a new Pulumi program, e.g. with `pulumi new typescript`, `pulumi new python`, etc.
+
+## Why are inputs and outputs necessary?
+
+Pulumi inputs and outputs are what allow Pulumi IaC programs to manage your resources declaratively despite being written in imperative general purpose programming languages.
+
+In imperative programming, you write step-by-step instructions telling the computer exactly how to perform a task, in the exact order those steps must occur. For example, in a traditional imperative program, you might write code that says "first create a VPC, wait for it to be created, get its ID, then create a subnet using that ID."
+
+In declarative programming, you describe the desired end state you want to achieve, and the system figures out how to reach that state. For example, in a declarative infrastructure program, you would describe "I want a VPC and a subnet in that VPC," and the system automatically determines that the VPC must be created first, waits for it to be ready, and then creates the subnet.
+
+Pulumi's input and output system enables this declarative approach by automatically tracking dependencies between resources. When you pass an output from one resource as an input to another, Pulumi records that dependency and ensures the resources are created, updated, or destroyed in the correct order—without you needing to write explicit sequencing logic.
+
+## Working with inputs
+
+All resources in Pulumi accept values that describe the way the resource behaves. These values are called inputs.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
 {{% choosable language typescript %}}
 
 ```typescript
@@ -106,20 +130,10 @@ resources:
 {{% /choosable %}}
 {{< /chooser >}}
 
-_Inputs_ are generally representations of the parameters to the underlying API call of any resource that Pulumi is managing. The simplest way to create a resource with its required _inputs_ is to use a _plain value_.
+Inputs are generally representations of the parameters to the underlying API call of any resource that Pulumi is managing. The simplest way to create a resource with its required inputs is to use a plain value, like a string:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const key = new tls.PrivateKey("my-private-key", {
-    algorithm: "ECDSA", // ECDSA is a plain value
-});
-
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -188,32 +202,45 @@ resources:
 {{% /choosable %}}
 {{< /chooser >}}
 
-{{% notes %}}
-_Plain value_ in this document is used to describe a standard string, boolean, integer or other typed value or data structure in your language of choice. _Plain value_ is a way of differentiating these language specific values from Pulumi's asynchronous values.
+## Working with outputs
+
+All resources created by Pulumi will have properties which are returned from the cloud provider API. These values are called outputs.
+
+{{% notes type="info" %}}
+This section is about resource outputs, which are related to, but not the same as [stack outputs](/docs/iac/concepts/stacks/#outputs). A stack output is a value that is exported at the end of a successful update, usually intended for use outside of the Pulumi program context: either from the command line via the `pulumi stack output` command or in another Pulumi program by using a [stack reference](/docs/iac/concepts/stacks/#stackreferences).
 {{% /notes %}}
 
-However, in most Pulumi programs, the inputs to a resource will reference values from another resource:
+Outputs are similar to [promises or futures](https://en.wikipedia.org/wiki/Futures_and_promises): They represent values that are not initially known but will become known once an infrastructure resource has completed provisioning. In other words, outputs represent asynchronous values. Outputs are necessary in Pulumi because provisioning resources is an asynchronous operation: It takes time for a cloud provider to finish provisioning a resource (several minutes in some cases).
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+Because outputs represent asynchronous values, they must be handled differently than plain types like `string`. For example, you cannot directly print the value of an output using your language's string printing function (e.g. `console.log()` in TypeScript, `print` in Python, etc.). Instead, you must use methods supplied in the Pulumi SDK to access the value once it is known.
 
-{{% choosable language javascript %}}
+The Pulumi SDK provides several basic methods for accessing the plain values of outputs once they are known:
 
-```javascript
-let password = new random.RandomPassword("password", {
-    length: 16,
-    special: true,
-    overrideSpecial: "!#$%&*()-_=+[]{}<>:?",
-});
-let example = new aws.rds.Instance("example", {
-    instanceClass: "db.t3.micro",
-    allocatedStorage: 64,
-    engine: "mysql",
-    username: "someone",
-    password: password.result, // We pass the output from password as an input
-});
-```
+- [Apply](/docs/concepts/inputs-outputs/apply/) allows you to access a single output's plain value
+- [All](/docs/concepts/inputs-outputs/all/) allows you to access multiple outputs' plain values
 
-{{% /choosable %}}
+Both `apply` and `all` allow you to return a value, which itself is also a Pulumi output. Transforming output values into other outputs is often useful. For example, you may want to take a DNS name that is the output of a load balancer and transform it into a full URL by appending `https://`. You can do this using `apply`.
+
+In addition to the basic methods `apply` and `all`, each Pulumi language's SDK may also provide helper methods that allow you to work with Outputs similarly to plain types. For example:
+
+- The Pulumi Node SDK contains a method [`pulumi.jsonStringify()`](/docs/reference/pkg/nodejs/pulumi/pulumi/functions/jsonStringify.html) which mirrors Node's `JSON.stringify()` function.
+- The Pulumi Python SDK contains a method [`pulumi.Output.json_dumps()`](/docs/reference/pkg/python/pulumi/#pulumi.Output.json_dumps) which mirrors the function `dumps()` in the standard Python `json` library.
+
+Check your language's Pulumi SDK documentation for a complete listing:
+
+- [TypeScript (Node.js)](/docs/reference/pkg/nodejs/pulumi/pulumi/)
+- [Python](/docs/reference/pkg/python/pulumi/)
+- [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi)
+- [.NET](/docs/reference/pkg/dotnet/Pulumi/Pulumi.html)
+- [Java](/docs/reference/pkg/java/)
+- [YAML](/docs/iac/languages-sdks/yaml/yaml-language-reference/#expressions)
+
+## Using inputs and outputs together
+
+In Pulumi programs, you will often use one resource's output as another resource's input. Pulumi will keep track of this dependency behind the scenes to ensure that your resources are changed in the necessary order:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
 {{% choosable language typescript %}}
 
 ```typescript
@@ -317,26 +344,3 @@ var example = new Instance("example", InstanceArgs.builder()
 
 {{% /choosable %}}
 {{< /chooser >}}
-
-In this case, Pulumi is taking the _output_ from one resource and using it as the _input_ to another resource.
-
-## Outputs
-
-All resources created by Pulumi will have properties which are returned from the cloud provider API. These values are called *outputs*.
-
-One important distinction is the difference between a [stack output](/docs/iac/concepts/stacks/#outputs) and a resource output. A stack output is a value that is exported at the end of a successful update, usually intended for use outside of the Pulumi program context, or within another Pulumi program via a [stack reference](/docs/iac/concepts/stacks/#stackreferences). A resource output is something you might use within your Pulumi program to pass a value from one resource to another and compose complex resource topologies. A stack output might be a simple string, but a resource output is a rich object within your program. They are implemented in our [supported language SDKs](https://www.pulumi.com/docs/iac/languages-sdks/) as a generic type Output<T>.
-
-Outputs are a unique and complex type in Pulumi which behave very much like [promises](https://en.wikipedia.org/wiki/Futures_and_promises). Simply put, outputs are a way of representing values that are not initially known but will become available once the infrastructure resource has completed provisioning, and this happens *asynchronously*. This is because the provisioning of resources is an asynchronous operation. It takes time for a cloud provider to complete the provisioning process, and Pulumi optimizes the process by [executing operations in parallel rather than sequentially](/docs/concepts/how-pulumi-works/#creation-and-deletion-order).
-
-Because outputs are asynchronous, their actual plain values are not immediately available. Note that _outputs themselves are not plain/primitive types_, and they cannot be converted into plain types. For example, you cannot turn a variable of type Output<T> into a regular String or an Integer. An output can only be transformed into another output.
-
-If you need to access and interact with an output’s plain value, you can do so using one of the following options:
-
-- [Apply](/docs/concepts/inputs-outputs/apply/): used for accessing single output values
-- [All](/docs/concepts/inputs-outputs/all/): used for accessing multiple output values
-
-## Tracking dependencies
-
-Outputs are also how Pulumi tracks dependencies between resources. When an output from one resource has been returned from the cloud provider API, Pulumi can link the two resources together and pass it as the input to another resource.
-
-Pulumi automatically captures dependencies when you pass an output from one resource as an input to another resource. Capturing these dependencies ensures that the physical infrastructure resources are not created or updated until all their dependencies are available and up-to-date.

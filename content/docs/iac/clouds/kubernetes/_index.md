@@ -93,8 +93,6 @@ guides:
     url: guides/apps/
   - display_name: Kubernetes infrastructure services
     url: guides/managed-infra/
-  - display_name: Kubernetes FAQ
-    url: guides/faq/
 kubernetes_cluster_management:
   heading: Cluster management
   description: The following SDKs are available to work with IaaS resources, and managed or self-managed Kubernetes clusters. The packages are available in Node.js (Javascript and Typescript), Python, Go, .NET and Java.

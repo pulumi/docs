@@ -5,19 +5,20 @@ title: Review project
 h1: "Pulumi & Azure: Review project"
 weight: 4
 menu:
-  clouds:
-    parent: azure-get-started
-    identifier: azure-review-project
+    iac:
+        name: Review project
+        identifier: azure-get-started.review-project
+        parent: azure-get-started
+        weight: 4
 
 aliases:
-- /docs/quickstart/azure/review-project/
-- /docs/get-started/azure/review-project/
-- /docs/clouds/azure/get-started/review-project/
+    - /docs/quickstart/azure/review-project/
+    - /docs/clouds/azure/get-started/review-project/
 ---
 
 Let's review some of the generated project files:
 
-{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+{{% choosable language "typescript,python,go,csharp,java" %}}
 
 - `Pulumi.yaml` defines the [project](/docs/concepts/projects/).
 
@@ -43,9 +44,8 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-{{% choosable language "javascript,typescript,go,csharp,java" %}}
+{{% choosable language "typescript,go,csharp,java" %}}
 
-<!-- The wrapping spans are infortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
 - <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
 
 {{% /choosable %}}

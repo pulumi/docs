@@ -249,7 +249,7 @@ def delete_handler(id: str):
 
 Check out the full `Pulumi over HTTP` example in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/pulumiOverHttp-ts), [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/pulumi_over_http) and [Python](https://github.com/pulumi/automation-api-examples/tree/main/python/pulumi_over_http).
 
-Here at Pulumi, we used Automation API as the foundation of our [Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator/pull/86) that exposes Pulumi stacks as Custom Resources. See how your own platform's operators can [take advantage of the Automation API](https://github.com/pulumi/pulumi-kubernetes-operator/blob/v2.0.0-beta.1/agent/pkg/server/server.go).
+Here at Pulumi, we used Automation API as the foundation of our [Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator/pull/624) that exposes Pulumi stacks as Custom Resources. See how your own platform's operators can [take advantage of the Automation API](https://github.com/pulumi/pulumi-kubernetes-operator/blob/v2.2.0/agent/pkg/server/server.go).
 
 We’re seeing customers reach for Automation API to build internal cloud platforms to empower their application teams, as well as independent software vendors using it to build and sell public cloud offerings like SaaS database products.
 

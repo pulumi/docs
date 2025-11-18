@@ -1,23 +1,24 @@
 ---
 title_tag: Review the New Project | Google Cloud
-meta_desc: This page provides an overview on how to a review a new Google Cloud project.
+meta_desc: This page provides an overview on how to review a new Google Cloud project.
 title: Review project
 h1: "Pulumi & Google Cloud: Review project"
 weight: 4
 menu:
-  clouds:
-    parent: google-cloud-get-started
-    identifier: gcp-review-project
+    iac:
+        name: Review project
+        identifier: gcp-get-started.review-project
+        parent: gcp-get-started
+        weight: 4
 
 aliases:
-- /docs/quickstart/gcp/review-project/
-- /docs/get-started/gcp/review-project/
-- /docs/clouds/gcp/get-started/review-project/
+    - /docs/quickstart/gcp/review-project/
+    - /docs/clouds/gcp/get-started/review-project/
 ---
 
 Let's review some of the generated project files:
 
-{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+{{% choosable language "typescript,python,go,csharp,java" %}}
 
 - `Pulumi.yaml` defines the [project](/docs/concepts/projects/).
 
@@ -43,34 +44,15 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-{{% choosable language "javascript,typescript,go,csharp,java" %}}
+{{% choosable language "typescript,go,csharp,java" %}}
 
-<!-- The wrapping spans are infortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
 - <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
 
 {{% /choosable %}}
 
 Let's examine {{< langfile >}}.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-"use strict";
-const pulumi = require("@pulumi/pulumi");
-const gcp = require("@pulumi/gcp");
-
-// Create a Google Cloud resource (Storage Bucket)
-const bucket = new gcp.storage.Bucket("my-bucket", {
-    location: "US"
-});
-
-// Export the DNS name of the bucket
-exports.bucketName = bucket.url;
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -207,14 +189,6 @@ outputs:
 {{% /choosable %}}
 
 This Pulumi program creates a new storage bucket and exports the DNS name of the bucket.
-
-{{% choosable language javascript %}}
-
-```javascript
-exports.bucketName = bucket.url;
-```
-
-{{% /choosable %}}
 
 {{% choosable language typescript %}}
 

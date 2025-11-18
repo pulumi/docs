@@ -149,7 +149,7 @@ Thank you to community member @aohoy for adding support for token authentication
 
 ### Bump TypeScript version from v3.7.3 to v3.8.3
 
-We updated the vendored version of TypeScript in the NodeJS SDK and runtime from v.3.7.3 to v3.8.3. Updating TypeScript versions enables you to use newer TypeScript features, such as the `import type` and` export type` syntax, which is required to use OpenTelemetry.
+We updated the vendored version of TypeScript in the NodeJS SDK and runtime from v.3.7.3 to v3.8.3. Updating TypeScript versions enables you to use newer TypeScript features, such as the `import type` and `export type` syntax, which is required to use OpenTelemetry.
 
 👉 Learn more by reviewing the [Bump TSC version to 3.8.3 pull request](https://github.com/pulumi/pulumi/pull/10618).
 

@@ -3,11 +3,14 @@ User-agent: *
 Disallow: *
 {{ end }}
 
-# Disallow certain pages that are preceived as soft-404s.
+# Disallow certain pages that are perceived as soft-404s.
 Disallow: /docs/search/$
 
 # Disallow azure-native-v2. See https://github.com/pulumi/pulumi-azure-native/issues/3420 for details.
 Disallow: /registry/packages/azure-native-v2
+
+# Disallow guides section from search indexing
+Disallow: /guides/
 
 Sitemap: https://www.pulumi.com/sitemap-index.xml
 Sitemap: https://www.pulumi.com/ai/sitemap-index.xml

@@ -1,119 +1,185 @@
 ---
-title: "Pulumi ESC: Centralized Secrets Management & Orchestration"
+title: "Centralized Configuration & Secrets Management – Pulumi ESC"
 layout: secrets-management
 
-meta_title: "Pulumi ESC: Centralized Secrets Management & Orchestration"
-meta_desc: Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
+meta_desc: Centralize secrets and configurations with Pulumi ESC. Connect any vault, eliminate secrets sprawl, secure every environment.
 meta_image: "/images/product/esc-octopus-diagram.png"
 aliases:
     - /esc
     - /product/esc
+    - /product/pulumi-esc
 
-subtitle: Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
+heading: Secrets & Configuration
+subheading: |
+    Manage all your secrets and configuration at scale
 
 overview:
-    header: A central hub to securely manage all of your environments, secrets, and configurations
+    header: One interface for all your secrets
     body: |
-      - **Stop secret sprawl.** Pull and sync secrets and configuration with any secrets store – HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.  
-      - **Trust (and prove) your secrets are secure.** Adopt dynamic, short-lived secrets on demand as a best practice. Lock down every environment with RBAC, versioning, and a full audit log of all changes.  
-      - **Ditch `.env` files.** No more copying-and-pasting secrets or storing them in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and SDKs.
-      - **Use with or without Pulumi IaC.** Use Pulumi ESC independently, or use with Pulumi IaC to support storing secrets in config in a more secure way than using plaintext.
+      Pulumi ESC (Environments, Secrets, Configuration) centralizes secrets from every vault and cloud provider. No more juggling AWS Secrets Manager, HashiCorp Vault, and Azure Key Vault separately. Connect them all, manage them centrally, access them anywhere.
 
-screenshot:
+      - **Eliminate secrets sprawl.** Connect to any secrets store—HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, 1Password, and more. One interface for all your secrets.
+      - **Secure by default.** Dynamic, short-lived credentials with OIDC. Full RBAC, versioning, and audit logging. No more plaintext secrets anywhere.
+      - **Engineer-friendly access.** CLI, API, SDKs, and Kubernetes operators. Access secrets from anywhere without compromising security.
+      - **Integrated with Pulumi IaC.** Native integration with Pulumi infrastructure code, or use standalone with any application or workflow.
+
+key_benefits:
+    title: Why teams choose Pulumi for secrets management
     items:
-        - title: Composable
-          description: Secrets and configurations are organized into logical groupings called environments. Environments support importing one into another, allowing for easy composability and inheritance of shared secrets and configuration.
-        - title: Traceable
-          description: Never lose track of where configurations are being used. Trace the downstream impact of any secrets or configuration changes to see if they match expectations. 
-        - title: Versionable
-          description: Create different versions of environments, so you can gracefully migrate between breaking configuration changes.
-
-integrate:
-    header: Natively integrated with your tools
-    cards:
-        - title: Use any secrets store
-          body: Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more. 
-          icon: lock
-          color: salmon
-        - title: Access from anywhere
-          body: Consume configuration and secrets in any environment from any application, tool, or CI/CD platform via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
-          icon: security
-          color: purple
-
-security:
-    header: Security you can trust (and prove)
-    items:
-        - icon: lock
+        - icon: shield
           icon_color: purple
-          title: Robust Access Controls
-          description: Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used for Pulumi IaC to ensure [secrets management](https://www.pulumi.com/what-is/what-is-secrets-management/) complies with enterprise security policies.
-        - icon: clipboard
-          icon_color: yellow
-          title: Fully Auditable
-          description: Every time secrets or configuration values are accessed or changed with Pulumi ESC, the action is fully logged for auditing. Logs include who accessed what, the action they took, and even a full record of showing which originating environments accessed values are inherited from.
-        - icon: clock
+          title: Enterprise-Grade Security
+          description: |
+            Dynamic credentials via OIDC replace long-lived keys. RBAC for fine-grained access control, complete audit trails. SOC 2 Type II compliant.
+        - icon: layers
+          icon_color: blue
+          title: Composable Environments
+          description: |
+            Organize secrets into logical environments that inherit from each other. Share common configurations while maintaining isolation where needed.
+        - icon: refresh-cw
           icon_color: salmon
-          title: Dynamic Secrets
-          description: Pulumi ESC connects to cloud providers and supporting secrets stores via OpenId Connect (OIDC), allowing it to generate dynamic, short-lived secrets on demand. This ensures secure, just-in-time access and reduces the risk of long-lived credentials being compromised.
+          title: Version Everything
+          description: |
+            Every change is versioned and auditable. Roll back instantly when needed. Know exactly who changed what and when.
 
-features:
-  - header: Centralized secrets management
-    body: Access, share, and manage confidential information such as secrets, passwords, and API keys as well as configuration information such as network settings and deployment options.
-  - header: Secrets orchestration
-    body: Pull and sync configuration and secrets from any secrets store and consume in any application, tool, or CI/CD platform.
-  - header: Composable environments
-    body: Environments support importing one into another, allowing for easy composability and inheritance of shared secrets and configuration.
-  - header: Versionable
-    body: Every change to an environment as well as any of its secrets and configuration is versioned, so rolling back or accessing an old version is easy.
-  - header: RBAC
-    body: Role-based access controls (RBAC) makes it easy to secure your secrets and configurations by assigning permissions to users based on their role within your organization.
-  - header: Dynamic secrets
-    body: Connects to cloud providers and supporting secrets stores via OIDC to support generating just-in-time, short-lived credentials that revoke access when the lease expires.
-  - header: Audit logging
-    body: All actions taken on environments, secrets, or configuration values are fully logged for auditing.
-  - header: Developer-friendly
-    body: Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+integrations:
+    header: Connect to your entire secrets ecosystem
+    description: ESC acts as a universal adapter for all your secrets stores and platforms.
+    categories:
+        - title: Secret Stores
+          items:
+            - HashiCorp Vault
+            - AWS Secrets Manager
+            - Azure Key Vault
+            - Google Secret Manager
+            - 1Password
+            - Doppler
+        - title: Cloud Providers
+          items:
+            - AWS (via OIDC)
+            - Microsoft Azure
+            - Google Cloud
+            - Kubernetes
+        - title: Developer Tools
+          items:
+            - GitHub Actions
+            - GitLab CI
+            - CircleCI
+            - Jenkins
+            - Terraform
+            - Docker
 
-diagram:
-    items:
+how_it_works:
+    title: Centralized secrets, distributed access
+    steps:
         - number: 1
-          description: Pulumi ESC organizes secrets and configurations into logical groupings called environments. Each environment can be composed of multiple environments allowing easy inheritance of shared secrets and configuration.
+          title: Define Environments
+          description: Organize secrets and configurations into logical environments. Use composition to share common settings while maintaining separation where needed.
         - number: 2
-          description: Pulumi ESC supports a variety of secrets stores as sources – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and it has an extensible plugin model that allows third-party secret stores.
+          title: Connect Sources
+          description: Pull secrets from any store—Vault, AWS Secrets Manager, Azure Key Vault, and more. ESC syncs and manages them centrally.
         - number: 3
-          description: Pulumi ESC makes it easy to integrate shared secrets and configurations into any application, tool, or CI/CD platform with a CLI, API, Kubernetes operator, and Typescript/Javascript, Python, and Go SDKs. Every value in an environment can be accessed from any execution environment.
+          title: Access Anywhere
+          description: Consume secrets via CLI, API, SDKs, or Kubernetes operators. Every platform, every language, every workflow supported.
         - number: 4
-          description: Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM, and scoped access tokens used for Pulumi IaC. Every environment is versioned with all changes fully logged for auditing.
+          title: Stay Secure
+          description: RBAC controls who can access what. Audit logs track every action. Dynamic credentials expire automatically.
+
+use_cases:
+    title: Trusted by platform engineering teams
+    items:
+        - title: Multi-Cloud Secrets Management
+          description: Manage secrets across AWS, Azure, and GCP from a single interface. Perfect for Pulumi IaC or any multi-cloud application.
+          icon: cloud
+        - title: Secure CI/CD Pipelines
+          description: Inject secrets into any CI/CD platform without storing them in pipeline configuration. Dynamic credentials that expire after use.
+          icon: git-branch
+        - title: Engineering Environment Setup
+          description: Engineers get the exact secrets they need, when they need them. No manual configuration or insecure credential sharing.
+          icon: code
+        - title: Kubernetes Configuration
+          description: Manage ConfigMaps and Secrets across clusters. Use the ESC Kubernetes operator for seamless integration.
+          icon: kubernetes
 
 customer_quotes:
   tetrate:
     text: |
-      “With Pulumi ESC, our developers get dynamic AWS and Azure credentials on-demand. Onboarding new developers is quick and secure, with no more manually filling in .env templates.”
+      "With Pulumi ESC, our developers get dynamic AWS and Azure credentials on-demand. Onboarding new developers is quick and secure, with no more manually filling in .env templates."
     author: Liam White, Platform Lead
     logo: tetrate
   mysten:
     text: |
-      “Pulumi ESC has been a lifesaver for us. It’s nice to throw everything behind an ESC environment and eliminate one-off granting IAM permissions and other issues related to static credentials.”
+      "Pulumi ESC has been a lifesaver for us. It's nice to throw everything behind an ESC environment and eliminate one-off granting IAM permissions and other issues related to static credentials."
     author: JK Jensen, Software Engineering Team Lead
     logo: mysten-labs
+  werner:
+    text: |
+      "We reduced our secrets management overhead by 80% while improving security. ESC's dynamic credentials mean we never have long-lived secrets sitting around."
+    author: Jason Harris, Cloud Architecture Lead
+    logo: werner-enterprises
+
+features:
+  - header: Dynamic Credentials
+    body: Generate just-in-time, short-lived credentials via OIDC. Automatically revoke access when leases expire.
+  - header: Environment Composition
+    body: Build complex configurations from simple, reusable components. Inherit common settings while overriding specific values.
+  - header: Full Audit Trail
+    body: Track every access, every change, every user. Complete visibility into who's using what secrets and when.
+  - header: Version Control
+    body: Every environment change is versioned. Roll back instantly or access previous configurations when needed.
+  - header: RBAC & Teams
+    body: Fine-grained access controls integrated with your identity provider. SAML/SCIM support for enterprise SSO.
+  - header: Extensible Plugin Model
+    body: Support for custom secret stores through our plugin architecture. Integrate with any system.
+
+pricing:
+    title: Simple, transparent pricing
+    description: ESC is included with Pulumi Cloud subscriptions. Pay only for what you use.
+    tiers:
+        - name: Individual
+          price: Free
+          description: For individual developers
+          features:
+            - Unlimited environments
+            - 1,000 environment reads/month
+            - Community support
+        - name: Team
+          price: Scales with usage
+          description: For growing teams
+          features:
+            - Everything in Individual
+            - Unlimited environment reads
+            - RBAC and audit logging
+            - Standard support
+        - name: Enterprise
+          price: Custom
+          description: For organizations at scale
+          features:
+            - Everything in Team
+            - SAML/SCIM SSO
+            - Advanced compliance features
+            - Premium support
 
 learn:
-    title: Get Started
+    title: Get started with Pulumi secrets management
     items:
-        - title: Try Pulumi ESC today
-          description: Centralize and manage secrets securely on any cloud by creating a free Pulumi account.
+        - title: Start managing secrets today
+          description: Experience enterprise-grade secrets management with Pulumi Cloud's free tier.
           buttons:
-            - link: https://app.pulumi.com/
+            - link: https://app.pulumi.com/signup
               type: primary
-              action: Try Pulumi ESC
-        - title: Documentation
-          description: Review our documentation to learn more about Pulumi ESC.
+              action: Start Free
+            - link: /contact/?form=request-a-demo
+              type: secondary
+              action: Book a Demo
+        - title: Learn more
+          description: Explore the documentation and Get Started guides to implement ESC in your infrastructure.
           buttons:
             - link: /docs/esc/
+              type: primary
+              action: Read the Docs
+            - link: /docs/esc/get-started/
               type: secondary
-              action: Pulumi ESC Docs
-            - link: /docs/pulumi-cloud/esc/get-started/
-              type: secondary
-              action: Get Started with Pulumi ESC
+              action: Get Started
 
 ---

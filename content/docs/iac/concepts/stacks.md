@@ -161,15 +161,8 @@ A stack can export values as stack outputs. These outputs are shown during an up
 
 To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-exports.url = resource.url;
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -242,16 +235,8 @@ Stack exports are effectively JSON serialized, though quotes are removed when ex
 
 For example, the following statements:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-exports.x = "hello"
-exports.o = {num: 42}
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -353,15 +338,8 @@ Stack outputs respect secret annotations and are encrypted appropriately. If a s
 
 The {{< pulumi-getstack >}} function gives you the currently deploying stack, which can be useful in naming, tagging, or accessing resources.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let stack = pulumi.getStack();
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -414,17 +392,8 @@ Stack references allow you to access the outputs of one stack from another stack
 
 To reference values from another stack, create an instance of the `StackReference` type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const pulumi = require("@pulumi/pulumi");
-const other = new pulumi.StackReference("acmecorp/infra/other");
-const otherOutput = other.getOutput("x");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -502,15 +471,8 @@ and testing. In that case, you will have six distinct stacks that pair up in the
 The way Pulumi programs communicate information for external consumption is by using stack exports. For example,
 your infrastructure stack might export the Kubernetes configuration information needed to deploy into a cluster:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-exports.kubeConfig = ... a cluster's output property ...;
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -572,20 +534,8 @@ connect to the Kubernetes cluster provisioned in its respective environment.
 
 The Pulumi programming model offers a way to do this with its `StackReference` resource type. For example:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const k8s = require("@pulumi/kubernetes");
-const pulumi = require("@pulumi/pulumi");
-const env = pulumi.getStack();
-const infra = new pulumi.StackReference(`mycompany/infra/${env}`);
-const provider = new k8s.Provider("k8s", { kubeconfig: infra.getOutput("kubeConfig") });
-const service = new k8s.core.v1.Service(..., { provider: provider });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -739,21 +689,8 @@ suppose that your referenced stack exports a `privateIp` output.
 You want to incorporate the IP address into the name of an S3 bucket object
 containing logs from that machine.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const infra = new pulumi.StackReference(...);
-const ip = infra.getOutput("privateIp");
-const logKey = ip.apply(ip => `logs/${ip}.log`);
-const logFile = new aws.s3.BucketObject("log", {
-    // ...
-    key: logKey
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -833,37 +770,8 @@ and exports a list of public subnets as a JSON-serialized string,
 and you want to add a bastion host to each subnet.
 With `getOutputDetails`, this would look something like this:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const infra = new pulumi.StackReference(...);
-const subnetsJSON = await infra.getOutputDetails("subnets");
-const subnets = JSON.parse(subnetsJSON.value);
-for (let i = 0; i < subnets.length; i++) {
-    const subnet = subnets[i];
-    const host = new aws.ec2.Instance(`bastion-${i}`, {
-        // ...
-        subnetId: subnet.id,
-    });
-    // ...
-}
-```
-
-Note that your Pulumi program must export a top-level `async` function
-to be able to use the `await` operator.
-
-```javascript
-export = async () => {
-    // ...
-}
-```
-
-See [Javascript Entrypoint](/docs/languages-sdks/javascript/#entrypoint)
-for more information.
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript

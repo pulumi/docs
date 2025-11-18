@@ -4,13 +4,15 @@ title: Private Registry
 h1: "Private Registry"
 meta_desc: This page provides an overview on how to get started with Pulumi IDP Private Registry.
 weight: 3
+aliases:
+  - /docs/idp/get-started/private-registry/
 menu:
   idp:
     parent: idp-get-started
     identifier: idp-get-started-private-registry
 ---
 
-Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/pulumi-cloud/developer-portals/templates/) that power golden path workflows in Pulumi. Platform engineers can codify organizational standards in their building blocks using features like [Pulumi ESC](/docs/esc/) and [Pulumi IaC Policies](/docs/insights/get-started/add-policies/), ensuring that all infrastructure users provision is compliant from the beginning.
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. Platform engineers can codify organizational standards in their building blocks using features like [Pulumi ESC](/docs/esc/) and [Pulumi IaC Policies](/docs/insights/get-started/add-policies/), ensuring that all infrastructure users provision is compliant from the beginning.
 
 Developers leverage templates and components in their preferred workflows, whether it be incorporating components into Pulumi programs, scaffolding a low-code program with components and YAML, or using the Pulumi console for no-code deployments. The private registry is also a resource for developers to discover components and templates, browse their APIs, and use READMEs to understand how to use them.
 
@@ -56,6 +58,98 @@ A README is required when publishing a component. Pulumi renders markdown README
 pulumi package publish github.com/acme/k8s-cluster --readme README_LOCATION
 ```
 
+#### Component API Docs
+
+In addition to the component README, when a new component or component version is published, API documentation is automatically generated listing the component's inputs and outputs.
+
+Additionally, input and output descriptions are generated based on annotations in the code as follows:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+// Use JSDocs-like comments to annotate inputs and outputs.
+export interface PetAbstractedArgs {
+    /**
+     * This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name.
+     **/
+    size: string;
+}
+
+export class PetAbstracted extends pulumi.ComponentResource {
+    /**
+     * This output provides the generated pet name.
+     **/
+    public readonly petName: pulumi.Output<string>;
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+# Use Python docstrings to annotate inputs and outputs.
+class PetAbstractedArgs(TypedDict):
+    size: pulumi.Input[str]
+    """This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name."""
+
+class AppImage(pulumi.ComponentResource):
+    pet_name: pulumi.Output[str]
+    """This output provides the generated pet name."""
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+// Use Annotate() to create annotations for go component inputs and outputs.
+type PetAbstractedArgs struct {
+	Size pulumi.StringInput 	`pulumi:"size"`
+}
+
+func (f *PetAbstractedArgs) Annotate(a infer.Annotator) {
+	a.Describe(&f.Size, "This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name.")
+}
+
+type PetAbstractedOutputs struct {
+  PetName pulumi.StringOutput `pulumi:"petName"`
+}
+func (f *PetAbstractedOutputs) Annotate(a infer.Annotator) {
+	a.Describe(&f.PetName, "This output provides the generated pet name.")
+}
+
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+// Component API Docs annotations are not currently supported in .NET.
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+// Component API Docs annotations are not currently supported in Java.
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+#### Component usage tracking
+
+Each component in the private registry includes a usage tab that shows which stacks are using that component. This helps platform teams understand component adoption and assess the impact of changes before updating versions.
+
+The usage tab displays:
+
+- Stack name and project
+- Component version in use
+- Last update timestamp
+
+This information helps you identify stacks that may need updating when releasing new component versions and provides visibility into which teams are adopting standardized components.
+
 #### Specifying an Organization
 
 If you're part of multiple organizations and do not have a [default organization](/docs/iac/cli/commands/pulumi_org_set-default/) set, you must specify the org by using the `--publisher` flag.
@@ -77,15 +171,45 @@ pulumi package publish COMPONENT_LOCATION
 
 ## Pulumi Templates
 
-[Pulumi Templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/#defining-an-organization-template) are an efficient way to scaffold new Pulumi Programs. Organization Templates are sourced from GitHub repositories and are available to users in the private registry and [New Project Wizard](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/new-project-wizard/).
-
-### Template Publishing
+[Pulumi Templates](/docs/idp/developer-portals/templates/) are an efficient way to scaffold new Pulumi programs. Templates are available to users in the private registry and [New Project Wizard](/docs/idp/developer-portals/new-project-wizard/).
 
 {{% notes type="info" %}}
 Organization templates require the Enterprise or Business Critical plan
 {{% /notes %}}
 
-To publish templates in the private registry, follow [this integration guide](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/#prerequisites). Once the integration is complete, discovered templates will appear in the private registry.
+### Template publishing
+
+Pulumi supports two approaches for template management:
+
+#### Registry-backed templates
+
+Registry-backed templates are published directly to the Private Registry using the `pulumi template publish` command.
+
+**Publishing a template:**
+
+```bash
+pulumi template publish <directory> --name <template-name> --version <version>
+```
+
+**Example:**
+
+```bash
+pulumi template publish ./my-template --name my-template --version 1.0.0
+```
+
+This approach provides:
+
+- Full semantic versioning support
+- Immutable version storage
+- Simple single-command publishing
+
+For detailed information, see [Publishing Registry-backed Templates](/docs/idp/developer-portals/templates/#publishing-registry-backed-templates).
+
+#### VCS-backed templates
+
+VCS-backed templates are sourced from configured GitHub or GitLab repositories.
+
+To configure VCS-backed templates, follow [this integration guide](/docs/idp/developer-portals/templates/#configuring-vcs-backed-templates).
 
 ### Components in Templates
 

@@ -1,31 +1,33 @@
 import * as assert from "assert";
 import * as policy from "@pulumi/policy";
-import { s3NoPublicReadPolicy } from "../index";
+import { s3BucketPrefixPolicy } from "../index";
 import { runResourcePolicy, getEmptyArgs } from "./test-helpers";
 
-describe("s3-no-public-read-policy", () => {
-    it("should fail when public-read is set", () => {
+describe("s3-bucket-prefix-policy", () => {
+    it("should pass when bucket has correct prefix", () => {
         const args = getEmptyArgs();
         args.type = "aws.s3.Bucket";
-        args.props.acl = "public-read";
-        assert.throws(() => {
-            runResourcePolicy(s3NoPublicReadPolicy, args);
+        args.props.bucketPrefix = "mycompany-data";
+        assert.doesNotThrow(() => {
+            runResourcePolicy(s3BucketPrefixPolicy, args);
         });
     });
 
-    it("should fail when public-read-write is set", () => {
+    it("should fail when bucket has wrong prefix", () => {
         const args = getEmptyArgs();
         args.type = "aws.s3.Bucket";
-        args.props.acl = "public-read-write";
+        args.props.bucketPrefix = "wrongprefix-data";
         assert.throws(() => {
-            runResourcePolicy(s3NoPublicReadPolicy, args);
+            runResourcePolicy(s3BucketPrefixPolicy, args);
         });
     });
-    it("should pass if neither public-read or public-read-write are set", () => {
+
+    it("should fail when bucket has no prefix", () => {
         const args = getEmptyArgs();
         args.type = "aws.s3.Bucket";
-        assert.doesNotThrow(() => {
-            runResourcePolicy(s3NoPublicReadPolicy, args);
+        args.props.bucketPrefix = "";
+        assert.throws(() => {
+            runResourcePolicy(s3BucketPrefixPolicy, args);
         });
     });
 });

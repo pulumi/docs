@@ -6,14 +6,14 @@ title: Next steps
 h1: "Pulumi & Kubernetes: Next steps"
 weight: 9
 menu:
-  clouds:
+  iac:
+    name: Next steps
+    identifier: kubernetes-get-started.next-steps
     parent: kubernetes-get-started
-    identifier: kubernetes-next-steps
+    weight: 9
 
 aliases:
-- /docs/quickstart/kubernetes/next-steps/
-- /docs/get-started/kubernetes/next-steps/
-- /docs/iac/get-started/kubernetes/next-steps/
+    - /docs/quickstart/kubernetes/next-steps/
 ---
 
 Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are some next steps, depending on your learning style.

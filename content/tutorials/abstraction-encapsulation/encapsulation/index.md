@@ -27,7 +27,7 @@ Let's take a fairly uncomplicated piece of Pulumi code: the definition of an S3 
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bucket = new aws.s3.BucketV2("my-bucket");
+const bucket = new aws.s3.Bucket("my-bucket");
 
 export const bucketName = bucket.id;
 ```
@@ -40,7 +40,7 @@ export const bucketName = bucket.id;
 import pulumi
 import pulumi_aws_native as aws_native
 
-bucket = aws_native.s3.BucketV2("my-bucket")
+bucket = aws_native.s3.Bucket("my-bucket")
 
 pulumi.export("bucket", bucket.bucket_name)
 ```
@@ -57,7 +57,7 @@ Here, we're creating one resource and exporting the output from that resource. I
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bucket = new aws.s3.BucketV2("my-bucket");
+const bucket = new aws.s3.Bucket("my-bucket");
 const bucketPolicy = new aws.s3.BucketPolicy("my-bucket-policy", {
     bucket: bucket.id,
     policy: {
@@ -131,11 +131,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 class OurBucketClass {
-    private bucket: aws.s3.BucketV2;
+    private bucket: aws.s3.Bucket;
     private bucketPolicy: aws.s3.BucketPolicy;
 
     constructor(name: string, policyName: string) {
-        this.bucket = new aws.s3.BucketV2(name);
+    this.bucket = new aws.s3.Bucket(name);
 
         this.bucketPolicy = new aws.s3.BucketPolicy(policyName, {
             bucket: this.bucket.id,
@@ -211,7 +211,7 @@ import * as aws from "@pulumi/aws";
 type PolicyType = "default" | "locked" | "permissive";
 
 class OurBucketClass {
-    private bucket: aws.s3.BucketV2;
+    private bucket: aws.s3.Bucket;
     private bucketPolicy: aws.s3.BucketPolicy;
 
     private policies: { [K in PolicyType]: aws.iam.PolicyStatement } = {
@@ -245,7 +245,7 @@ class OurBucketClass {
     };
 
     constructor(name: string, policy: PolicyType) {
-        this.bucket = new aws.s3.BucketV2(name);
+    this.bucket = new aws.s3.Bucket(name);
         this.bucketPolicy = new aws.s3.BucketPolicy(`${name}-policy`, {
             bucket: this.bucket.id,
             policy: this.getBucketPolicy(policy),

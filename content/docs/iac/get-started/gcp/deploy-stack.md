@@ -5,14 +5,15 @@ title: Deploy stack
 h1: "Pulumi & Google Cloud: Deploy stack"
 weight: 5
 menu:
-  clouds:
-    parent: google-cloud-get-started
-    identifier: gcp-deploy-stack
+    iac:
+        name: Deploy stack
+        identifier: gcp-get-started.deploy-stack
+        parent: gcp-get-started
+        weight: 5
 
 aliases:
-- /docs/quickstart/gcp/deploy-stack/
-- /docs/get-started/gcp/deploy-stack/
-- /docs/clouds/gcp/get-started/deploy-stack/
+    - /docs/quickstart/gcp/deploy-stack/
+    - /docs/clouds/gcp/get-started/deploy-stack/
 ---
 
 Let's go ahead and deploy your stack:
@@ -62,15 +63,7 @@ Duration: 4s
 
 Remember the output you defined in the previous step? That [stack output](/docs/concepts/stack#outputs) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the name of your bucket with the following command:
 
-{{< chooser language "typescript,javascript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language javascript %}}
-
-```bash
-$ pulumi stack output bucketName
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 

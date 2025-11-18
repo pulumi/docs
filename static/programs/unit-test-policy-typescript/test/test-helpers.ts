@@ -24,6 +24,10 @@ export function getEmptyArgs(): policy.ResourceValidationArgs {
         isType: () => true,
         asType: () => undefined,
         getConfig: <T>() => <T>{},
+        stackTags: new Map<string, string>(),
+        notApplicable: (reason?: string): never => {
+            throw new Error(reason || "Not applicable");
+        },
     };
 }
 

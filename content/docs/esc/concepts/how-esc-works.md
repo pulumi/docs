@@ -15,7 +15,7 @@ This article details how Pulumi ESC works, including its architecture, supported
 
 ## Architecture
 
-Pulumi ESC is available as a hosted service provided as part of [Pulumi Cloud](/docs/pulumi-cloud/) or can be [self-hosted](/docs/esc/faq/#can-i-self-host-pulumi-esc) on your own infrastructure. ESC stores your secrets and configuration and proxies access to other secret stores through provider plugins.
+Pulumi ESC is available as a hosted service provided as part of [Pulumi Cloud](/docs/pulumi-cloud/) or can be [self-hosted](/docs/support/faq/secrets-config/#can-i-self-host-pulumi-esc) on your own infrastructure. ESC stores your secrets and configuration and proxies access to other secret stores through provider plugins.
 
 Using configuration-as-code, these secrets and configuration values are composed into *environments* which are defined in YAML. ESC then makes these environments available to targets via common mechanisms like environment variables, configuration files, and directly via the ESC API and multi-language SDKs.
 

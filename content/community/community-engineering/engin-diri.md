@@ -8,6 +8,34 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Cloud Native Rejekts - NA Atlanta 2025"
+  title: "Beyond YAML: Building Platform APIs with kro"
+  url: "https://cfp.cloud-native.rejekts.io/cloud-native-rejekts-atlanta-na-atlanta-2025/talk/M3TVS3/"
+  date: 2025-11-08T17:10:00.000-05:00
+- event: "Cloud Native Tel Aviv"
+  title: "What is AI Platform Engineering and Why Should You Care"
+  url: "https://community.cncf.io/events/details/cncf-cloud-native-tel-aviv-presents-kagent-knative-and-ai-driven-platforms-scaling-the-next-cloud-native-frontier/"
+  date: 2025-10-30T17:30:00.000+02:00
+- event: "Tel Aviv Pulumi User Group Meetup Nº 2"
+  title: "Agentic AI in Action: How Pulumi Neo Transforms Infrastructure Management"
+  url: "https://www.meetup.com/tel-aviv-pulumi-user-group/events/310498800/"
+  date: 2025-10-29T18:00:00.000+02:00
+- event: "Cloud Native Denmark 2025"
+  title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
+  url: "https://cloudnativedenmark.dk/schedule/#913410"
+  date: 2025-10-08T15:30:00.000+02:00
+- event: "KCD Sofia 2025"
+  title: "AI in a DevOps World"
+  url: "https://community.cncf.io/kcd-sofia/"
+  date: 2025-09-19T15:00:00.000-07:00
+- event: "KCD Sofia 2025"
+  title: "Lightning Talk: Abstract It: The Higher, The Faster!"
+  url: "https://community.cncf.io/kcd-sofia/"
+  date: 2025-09-19T15:00:00.000-07:00 
+- event: "ContainerDays Conference 2025"
+  title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
+  url: "https://www.containerdays.io/containerdays-conference-2025/agenda/"
+  date: 2025-09-10T15:00:00.000-07:00 
 - event: "Cloud Native Summit Munich 2025"
   title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
   url: "https://www.kcdmunich.de/"
@@ -106,7 +134,7 @@ talks:
   slides: null
 - event: "Equinix Demo Day"
   title: "Deploy Bare Metal Kubernetes with Pulumi on Equinix Metal"
-  url: "https://deploy.equinix.com/events/demo-day-the-infrastructure-as-code-edition/"
+  url: "https://www.youtube.com/watch?v=ftjOsrDE5uA"
   date: 2024-09-10T18:00:00.000-07:00
   slides: null
 - event: "The Platformers"
@@ -131,7 +159,7 @@ talks:
   slides: null
 - event: "KCD Istanbul 2024"
   title: "Gain Platform Superpowers with the KEBAP Stack!"
-  url: https://kcd.istanbul/KCD_Istanbul_2024_Schedule.pdf
+  url: https://www.youtube.com/watch?v=wN-DvPUIm4E
   date: 2024-05-16T12:00:00.000-07:00
   slides: null
 - event: "LA DevOps"

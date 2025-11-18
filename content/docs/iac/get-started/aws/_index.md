@@ -8,7 +8,7 @@ menu:
         name: AWS
         parent: iac-get-started
         weight: 2
-        identifier: aws-b-get-started
+        identifier: aws-get-started
 
 aliases:
     - /docs/iac/get-started/aws/b/
@@ -27,9 +27,9 @@ Complete this step-by-step tutorial to deploy an AWS S3 bucket-based website usi
 
 First, choose your language and ensure you've performed any prerequisites:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language "typescript,javascript" %}}
+{{% choosable language "typescript" %}}
 
 * An <a href="https://aws.amazon.com/free" target=_blank>AWS account</a>
 * <a href="https://nodejs.org/en/download" target=_blank>Node.js</a> and <a href="https://www.npmjs.com/package/npm" target=_blank>npm</a> installed locally

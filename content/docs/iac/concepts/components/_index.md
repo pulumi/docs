@@ -8,7 +8,7 @@ menu:
     iac:
         name: Components
         parent: iac-concepts
-        weight: 70
+        weight: 100
         identifier: iac-concepts-components
 aliases:
 - /docs/intro/concepts/resources/components/
@@ -32,19 +32,8 @@ To author a new component, either in a program or for a reusable library, create
 
 Here's a simple component example:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-class MyComponent extends pulumi.ComponentResource {
-    constructor(name, myComponentArgs, opts) {
-        super("pkg:index:MyComponent", name, {}, opts);
-    }
-}
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -86,7 +75,10 @@ func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponen
 {{% choosable language csharp %}}
 
 ```csharp
-class MyComponent : Pulumi.ComponentResource
+using System.Collections.Generic;
+using Pulumi;
+
+class MyComponent : ComponentResource
 {
     public MyComponent(string name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts)
         : base("pkg:index:MyComponent", name, opts)
@@ -119,7 +111,184 @@ If you wish to have full control over one of the custom resource's lifecycle in 
 
 A component resource must register a unique type name with the base constructor. In the example, the registration is `pkg:index:MyComponent`. To reduce the potential of other type name conflicts, this name contains the package and module name, in addition to the type: `<package>:<module>:<type>`. These names are namespaced alongside non-component resources, such as aws:lambda:Function.
 
-For more information about component resources, see the [Pulumi Components tutorial](/registry/packages/aws/how-to-guides/s3-folder-component/). For a detailed look at supporting component consumption in multiple languages, see the [Building a Component](/docs/iac/using-pulumi/extending-pulumi/build-a-component) guide
+{{< notes type="info" >}}
+For a complete end-to-end walkthrough of building a component from scratch, including setup, implementation, and publishing, see the [Build a Component](/docs/iac/using-pulumi/build-a-component/) guide.
+{{< /notes >}}
+
+## Component arguments and type requirements
+
+When authoring components that will be consumed across different languages (multi-language components), the arguments class has specific requirements and limitations due to the need for serialization. These constraints ensure that component arguments can be transmitted to the Pulumi engine and reconstructed across language boundaries.
+
+### Serialization requirements
+
+Component arguments must be serializable, meaning you must convert them to a format that the engine can transmit and reconstruct. This is necessary because:
+
+1. The Pulumi engine needs to understand and validate the inputs
+1. Multi-language components need to translate arguments between languages
+1. The state needs to be stored and retrieved across deployments
+
+### Supported types
+
+The following types are supported in component arguments:
+
+- **Primitive types**: `string`, `number`/`int`, `boolean`.
+- **Arrays/lists**: Arrays of any supported type.
+- **Objects/maps**: Objects with properties of supported types.
+- **Input wrappers**: Language-specific input types that wrap values:
+  - TypeScript/JavaScript: `pulumi.Input<T>`
+  - Python: `pulumi.Input[T]`
+  - Go: `pulumi.StringInput`, `pulumi.IntInput`, etc.
+  - .NET: `Input<T>`
+  - Java: `Output<T>`
+
+### Unsupported types
+
+The following types are not supported in component arguments:
+
+- **Union types**: TypeScript union types like `string | number` are not supported due to limitations in schema inference.
+- **Functions/callbacks**: Functions cannot be used in component arguments as they cannot be represented in the schema.
+- **Platform-specific types**: Types that exist only in one language and cannot be translated.
+
+### Design recommendations
+
+For better usability and maintainability:
+
+- **Avoid deeply nested types**: While complex generic types can be serialized, deeply nested structures make components harder to use and understand. Keep argument structures simple and flat when possible.
+
+**Example of unsupported TypeScript types:**
+
+```typescript
+// ❌ This will NOT work - union types are not supported
+export interface MyComponentArgs {
+    value: string | number;  // Union type - unsupported
+    callback: () => void;    // Function - unsupported
+}
+
+// ✅ This WILL work - use primitives or Input types
+export interface MyComponentArgs {
+    value: pulumi.Input<string>;
+    count: pulumi.Input<number>;
+}
+```
+
+### Constructor requirements by language
+
+Each language has specific requirements for component constructors to ensure proper schema generation:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+**Requirements:**
+
+- The constructor must have an argument named exactly `args`
+- The `args` parameter must have a type declaration (e.g., `args: MyComponentArgs`)
+
+```typescript
+class MyComponent extends pulumi.ComponentResource {
+    constructor(name: string, args: MyComponentArgs, opts?: pulumi.ComponentResourceOptions) {
+        super("pkg:index:MyComponent", name, {}, opts);
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+**Requirements:**
+
+- The `__init__` method must have an argument named exactly `args`
+- The `args` parameter must have a type annotation (e.g., `args: MyComponentArgs`)
+
+```python
+class MyComponent(pulumi.ComponentResource):
+    def __init__(self, name: str, args: MyComponentArgs, opts: Optional[pulumi.ResourceOptions] = None):
+        super().__init__('pkg:index:MyComponent', name, None, opts)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+**Requirements:**
+
+- The constructor function should accept a context, name, args struct, and variadic resource options
+- The args should be a struct type
+
+```go
+func NewMyComponent(ctx *pulumi.Context, name string, args *MyComponentArgs, opts ...pulumi.ResourceOption) (*MyComponent, error) {
+    myComponent := &MyComponent{}
+    err := ctx.RegisterComponentResource("pkg:index:MyComponent", name, myComponent, opts...)
+    if err != nil {
+        return nil, err
+    }
+    return myComponent, nil
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+**Requirements:**
+
+- The constructor must have exactly 3 arguments:
+  1. A `string` for the name (or any unspecified first argument)
+  1. An argument that is assignable from `ResourceArgs` (must extend `ResourceArgs`)
+  1. An argument that is assignable from `ComponentResourceOptions`
+
+```csharp
+public class MyComponent : ComponentResource
+{
+    public MyComponent(string name, MyComponentArgs args, ComponentResourceOptions? opts = null)
+        : base("pkg:index:MyComponent", name, opts)
+    {
+    }
+}
+
+public sealed class MyComponentArgs : ResourceArgs
+{
+    [Input("value")]
+    public Input<string>? Value { get; set; }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+**Requirements:**
+
+- The constructor must have exactly one argument that extends `ResourceArgs`
+- Other arguments (name, options) are not restricted but typically follow the standard pattern
+
+```java
+public class MyComponent extends ComponentResource {
+    public MyComponent(String name, MyComponentArgs args, ComponentResourceOptions opts) {
+        super("pkg:index:MyComponent", name, null, opts);
+    }
+}
+
+class MyComponentArgs extends ResourceArgs {
+    @Import(name = "value")
+    private Output<String> value;
+
+    public Output<String> getValue() {
+        return this.value;
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### Best practices
+
+When designing component arguments:
+
+1. **Wrap all scalar members in Input types**: Every scalar argument should be wrapped in the language's input type (e.g., `pulumi.Input<string>`). This allows users to pass both plain values and outputs from other resources, avoiding the need to use `apply` for resource composition.
+1. **Use basic types**: Stick to primitive types, arrays, and basic objects.
+1. **Avoid union types**: Instead of a single value with multiple types, consider multiple, mutually exclusive argument members and validate that only one of them has a value in your component constructor.
+1. **Document required vs. optional**: Clearly document which arguments are required and which have defaults.
+1. **Follow language conventions**: Use camelCase for schema properties but follow language-specific naming in implementation (snake_case in Python, PascalCase in .NET).
 
 ## Creating Child Resources
 
@@ -127,34 +296,19 @@ Component resources often contain child resources. The names of child resources 
 
 This example demonstrates both the naming convention and how to designate the component resource as the parent:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-class MyComponent extends pulumi.ComponentResource {
-    constructor(name, myComponentArgs, opts) {
-        super("pkg:index:MyComponent", name, {}, opts);
-
-        // Create Child Resource
-        this.bucket = new aws.s3.BucketV2(`${name}-bucket`,
-            {}, { parent: this });
-    }
-}
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
 class MyComponent extends pulumi.ComponentResource {
-    bucket: aws.s3.BucketV2;
+    bucket: aws.s3.Bucket;
 
     constructor(name: string, myComponentArgs: MyComponentArgs, opts: pulumi.ComponentResourceOptions) {
         super("pkg:index:MyComponent", name, {}, opts);
 
         // Create Child Resource
-        this.bucket = new aws.s3.BucketV2(`${name}-bucket`,
+        this.bucket = new aws.s3.Bucket(`${name}-bucket`,
             {}, { parent: this });
     }
 }
@@ -169,7 +323,7 @@ class MyComponent(pulumi.ComponentResource):
         super().__init__('pkg:index:MyComponent', name, None, opts)
 
         # Create Child Resource
-        self.bucket = s3.BucketV2(f"{name}-bucket",
+        self.bucket = s3.Bucket(f"{name}-bucket",
             opts=pulumi.ResourceOptions(parent=self))
 ```
 
@@ -179,7 +333,7 @@ class MyComponent(pulumi.ComponentResource):
 ```go
 type MyComponent struct {
     pulumi.ResourceState
-    Bucket *s3.BucketV2
+    Bucket *s3.Bucket
 }
 
 func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponentArgs, opts ...pulumi.ResourceOption) (*MyComponent, error) {
@@ -190,8 +344,8 @@ func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponen
     }
 
     // Create Child Resource
-    bucket, err := s3.NewBucketV2(ctx, fmt.Sprintf("%s-bucket", name),
-        &s3.BucketV2Args{}, pulumi.Parent(myComponent))
+    bucket, err := s3.NewBucket(ctx, fmt.Sprintf("%s-bucket", name),
+        &s3.BucketArgs{}, pulumi.Parent(myComponent))
     if err != nil {
         return nil, err
     }
@@ -205,16 +359,20 @@ func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponen
 {{% choosable language csharp %}}
 
 ```csharp
-class MyComponent : Pulumi.ComponentResource
+using System.Collections.Generic;
+using Pulumi;
+using Pulumi.Aws.S3;
+
+class MyComponent : ComponentResource
 {
-    public Aws.S3.BucketV2 Bucket { get; private set; }
+    public Bucket Bucket { get; private set; }
 
     public MyComponent(string name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts)
         : base("pkg:index:MyComponent", name, opts)
     {
         // Create Child Resource
-        this.Bucket = new Aws.S3.BucketV2($"{name}-bucket",
-            new Aws.S3.BucketV2Args(), new CustomResourceOptions { Parent = this });
+        this.Bucket = new Bucket($"{name}-bucket",
+            new BucketArgs(), new CustomResourceOptions { Parent = this });
     }
 }
 ```
@@ -225,25 +383,25 @@ class MyComponent : Pulumi.ComponentResource
 ```java
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
-import com.pulumi.aws.s3.BucketV2;
-import com.pulumi.aws.s3.BucketV2Args;
+import com.pulumi.aws.s3.Bucket;
+import com.pulumi.aws.s3.BucketArgs;
 import com.pulumi.resources.CustomResourceOptions;
 
 class MyComponent extends ComponentResource {
-    private final BucketV2 bucket;
+    private final Bucket bucket;
 
     public MyComponent(String name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts) {
         super("pkg:index:MyComponent", name, null, opts);
 
         // Create Child Resource
-        this.bucket = new BucketV2(String.format("%s-bucket", name),
-            BucketV2Args.builder().build(),
+        this.bucket = new Bucket(String.format("%s-bucket", name),
+            BucketArgs.builder().build(),
             CustomResourceOptions.builder()
                 .parent(this)
                 .build());
     }
 
-    public BucketV2 bucket() {
+    public Bucket bucket() {
         return this.bucket;
     }
 }
@@ -259,37 +417,18 @@ Component resources can define their own output properties. Outputs in a compone
 
 For example, this code registers an S3 bucket's computed domain name, which won't be known until the bucket is created:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-class MyComponent extends pulumi.ComponentResource {
-    constructor(name, myComponentArgs, opts) {
-        super("pkg:index:MyComponent", name, {}, opts);
-
-        this.bucket = new aws.s3.BucketV2(`${name}-bucket`,
-            {}, { parent: this });
-
-        // Registering Component Outputs
-        this.registerOutputs({
-            bucketDnsName: this.bucket.bucketDomainName
-        });
-    }
-}
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
 class MyComponent extends pulumi.ComponentResource {
-    bucket: aws.s3.BucketV2;
+    bucket: aws.s3.Bucket;
 
     constructor(name: string, myComponentArgs: MyComponentArgs, opts: pulumi.ComponentResourceOptions) {
         super("pkg:index:MyComponent", name, {}, opts);
 
-        this.bucket = new aws.s3.BucketV2(`${name}-bucket`,
+        this.bucket = new aws.s3.Bucket(`${name}-bucket`,
             {}, { parent: this });
 
         // Registering Component Outputs
@@ -308,12 +447,12 @@ class MyComponent(pulumi.ComponentResource):
     def __init__(self, name, my_component_args, opts = None):
         super().__init__('pkg:index:MyComponent', name, None, opts)
 
-        self.bucket = s3.BucketV2(f"{name}-bucket",
+        self.bucket = s3.Bucket(f"{name}-bucket",
             opts=pulumi.ResourceOptions(parent=self))
 
         # Registering Component Outputs
         self.register_outputs({
-            "bucketDnsName": self.bucket.bucketDomainName
+            "bucket_dns_name": self.bucket.bucket_domain_name
         })
 ```
 
@@ -323,7 +462,7 @@ class MyComponent(pulumi.ComponentResource):
 ```go
 type MyComponent struct {
     pulumi.ResourceState
-    Bucket *s3.BucketV2
+    Bucket *s3.Bucket
 }
 
 func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponentArgs, opts ...pulumi.ResourceOption) (*MyComponent, error) {
@@ -333,8 +472,8 @@ func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponen
         return nil, err
     }
 
-    bucket, err := s3.NewBucketV2(ctx, fmt.Sprintf("%s-bucket", name),
-        &s3.BucketV2Args{}, pulumi.Parent(myComponent))
+    bucket, err := s3.NewBucket(ctx, fmt.Sprintf("%s-bucket", name),
+        &s3.BucketArgs{}, pulumi.Parent(myComponent))
     if err != nil {
         return nil, err
     }
@@ -354,19 +493,23 @@ func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponen
 {{% choosable language csharp %}}
 
 ```csharp
-class MyComponent : Pulumi.ComponentResource
+using System.Collections.Generic;
+using Pulumi;
+using Pulumi.Aws.S3;
+
+class MyComponent : ComponentResource
 {
-    public Aws.S3.BucketV2 Bucket { get; private set; }
+    public Bucket Bucket { get; private set; }
 
     public MyComponent(string name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts)
         : base("pkg:index:MyComponent", name, opts)
     {
 
-        this.Bucket = new Aws.S3.BucketV2($"{name}-bucket",
-            new Aws.S3.BucketV2Args(), new CustomResourceOptions { Parent = this });
+        this.Bucket = new Bucket($"{name}-bucket",
+            new BucketArgs(), new CustomResourceOptions { Parent = this });
 
         // Registering Component Outputs
-        this.RegisterOutputs(new Dictionary<string, object>
+        this.RegisterOutputs(new Dictionary<string, object?>
         {
             { "bucketDnsName", Bucket.BucketDomainName }
         });
@@ -380,18 +523,18 @@ class MyComponent : Pulumi.ComponentResource
 ```java
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
-import com.pulumi.aws.s3.BucketV2;
-import com.pulumi.aws.s3.BucketV2Args;
+import com.pulumi.aws.s3.Bucket;
+import com.pulumi.aws.s3.BucketArgs;
 import com.pulumi.resources.CustomResourceOptions;
 
 class MyComponent extends ComponentResource {
-    private final BucketV2 bucket;
+    private final Bucket bucket;
 
     public MyComponent(String name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts) {
         super("pkg:index:MyComponent", name, null, opts);
 
-        this.bucket = new BucketV2(String.format("%s-bucket", name),
-            BucketV2Args.builder().build(),
+        this.bucket = new Bucket(String.format("%s-bucket", name),
+            BucketArgs.builder().build(),
             CustomResourceOptions.builder()
                 .parent(this)
                 .build());
@@ -402,7 +545,7 @@ class MyComponent extends ComponentResource {
         ));
     }
 
-    public BucketV2 bucket() {
+    public Bucket bucket() {
         return this.bucket;
     }
 }
@@ -435,20 +578,8 @@ One option all resources have is the ability to pass an [explicit resource provi
 
 To allow this, component resources accept a `providers` option that custom resources don't have. This value contains a map from the provider name to the explicit provider instance to use for the component resource. The map is used by a component resource to fetch the proper `provider` object to use for any child resources. This example overrides the globally configured AWS region and sets it to us-east-1. Note that `myk8s` is the name of the Kubernetes provider.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let component = new MyComponent("...", {
-    providers: {
-        aws: useast1,
-        kubernetes: myk8s,
-    },
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -663,7 +794,7 @@ Once a component is authored, it can be published to the [IDP Private Registry](
 
 #### Private Registry Publishing
 
-Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/pulumi-cloud/developer-portals/templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/docs/idp/get-started/private-registry/).
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/docs/idp/get-started/private-registry/).
 
 #### Consumption
 
@@ -684,6 +815,10 @@ Under the hood, Pulumi:
 - Fetches your code from GitHub
 - Generates a local SDK from the component's schema
 - Makes the generated SDK available to your Pulumi program in your chosen language
+
+{{< notes type="info" >}}
+For detailed information about working with local packages, including SDK generation and dependency management, see the [Local Packages](/docs/iac/guides/building-extending/packages/local-packages/) guide.
+{{< /notes >}}
 
 #### Referencing Components Locally
 

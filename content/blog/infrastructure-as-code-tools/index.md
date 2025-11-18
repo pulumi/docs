@@ -407,7 +407,7 @@ Organizations like Unity, Snowflake, and Starburst have reported significant pro
 License: Business Source License (BSL) 1.1 (Not Open Source)  
 Best For: Teams with existing Terraform expertise and established workflows
 
-[Terraform](/docs/iac/concepts/vs/terraform/) uses HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. However, its 2023 licensing change to BSL (no longer open source) and inherent limitations with domain-specific languages create challenges for teams requiring advanced software engineering practices.
+[Terraform](/docs/iac/comparisons/terraform/) uses HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. However, its 2023 licensing change to BSL (no longer open source) and inherent limitations with domain-specific languages create challenges for teams requiring advanced software engineering practices.
 
 Key Features:
 
@@ -1386,6 +1386,6 @@ The most successful organizations focus on key decision criteria:
 
 The Future of Infrastructure:
 
-The industry continues evolving toward treating infrastructure as software, but this transformation takes many forms. Organizations exploring [serverless architectures](/topics/serverless/) and [container strategies](/topics/containers/) particularly benefit from programmable infrastructure approaches. Whether through enhanced DSLs, visual design tools, programming languages, or hybrid approaches, the goal remains consistent: enabling teams to manage infrastructure with the same reliability, collaboration, and velocity they expect from modern software development.
+The industry continues evolving toward treating infrastructure as software, but this transformation takes many forms. Organizations exploring [serverless architectures](/serverless/) and container strategies particularly benefit from programmable infrastructure approaches. Whether through enhanced DSLs, visual design tools, programming languages, or hybrid approaches, the goal remains consistent: enabling teams to manage infrastructure with the same reliability, collaboration, and velocity they expect from modern software development.
 
 For teams ready to embrace programming language-based infrastructure as code, [Get started with Pulumi](/docs/get-started/) to experience how familiar languages and software engineering practices can transform infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.

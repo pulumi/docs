@@ -5,7 +5,7 @@ import { runResourcePolicy, getEmptyArgs } from "./test-helpers";
 describe("s3-product-prefix-policy", () => {
     it("should fail when it has no prefix", () => {
         const args = getEmptyArgs();
-        args.type = "aws.s3.BucketV2";
+        args.type = "aws.s3.Bucket";
         args.props.bucketPrefix = "";
         assert.throws(() => {
             runResourcePolicy(s3ProductPrefixPolicy, args);
@@ -13,7 +13,7 @@ describe("s3-product-prefix-policy", () => {
     });
     it("should fail when it has the incorrect prefix", () => {
         const args = getEmptyArgs();
-        args.type = "aws.s3.BucketV2";
+        args.type = "aws.s3.Bucket";
         args.props.bucketPrefix = "somethingiswrong-";
         assert.throws(() => {
             runResourcePolicy(s3ProductPrefixPolicy, args);
@@ -21,7 +21,7 @@ describe("s3-product-prefix-policy", () => {
     });
     it("should pass if it has the correct prefix", () => {
         const args = getEmptyArgs();
-        args.type = "aws.s3.BucketV2";
+        args.type = "aws.s3.Bucket";
         args.props.bucketPrefix = REQUIRED_S3_PREFIX;
         assert.doesNotThrow(() => {
             runResourcePolicy(s3ProductPrefixPolicy, args);

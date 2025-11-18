@@ -5,14 +5,14 @@ title: Deploy changes
 h1: "Pulumi & Kubernetes: Deploy changes"
 weight: 7
 menu:
-  clouds:
+  iac:
+    name: Deploy changes
+    identifier: kubernetes-get-started.deploy-changes
     parent: kubernetes-get-started
-    identifier: kubernetes-deploy-changes
+    weight: 7
 
 aliases:
-- /docs/quickstart/kubernetes/deploy-changes/
-- /docs/get-started/kubernetes/deploy-changes/
-- /docs/iac/get-started/kubernetes/deploy-changes/
+    - /docs/quickstart/kubernetes/deploy-changes/
 ---
 
 Deploy the stack changes.

@@ -7,14 +7,13 @@ weight: 6
 menu:
     iac:
         name: Make an update
-        parent: aws-b-get-started
+        parent: aws-get-started
         weight: 6
 
 aliases:
-- /docs/iac/get-started/aws/b/modify-program/
-- /docs/quickstart/aws/modify-program/
-- /docs/get-started/aws/modify-program/
-- /docs/clouds/aws/get-started/modify-program/
+    - /docs/iac/get-started/aws/b/modify-program/
+    - /docs/quickstart/aws/modify-program/
+    - /docs/clouds/aws/get-started/modify-program/
 ---
 
 ## Make an update
@@ -29,7 +28,7 @@ the first deployment as well as subsequent updates.
 
 To turn your bucket into a static website, start by adding three new AWS S3 resources:
 
-1. [`BucketWebsiteConfigurationV2`](/registry/packages/aws/api-docs/s3/bucketwebsiteconfigurationv2/):
+1. [`BucketWebsiteConfiguration`](/registry/packages/aws/api-docs/s3/bucketwebsiteconfiguration/):
     configures your bucket as a website
 2. [`BucketOwnershipControls`](/registry/packages/aws/api-docs/s3/bucketownershipcontrols/):
     allows bucket access controls to be configured
@@ -38,13 +37,13 @@ To turn your bucket into a static website, start by adding three new AWS S3 reso
 
 Open up {{< langfile >}} in your editor and add them right after your S3 bucket:
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 
 ```typescript
 // Bucket...
 
 // Turn the bucket into a website:
-const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
+const website = new aws.s3.BucketWebsiteConfiguration("website", {
     bucket: bucket.id,
     indexDocument: {
         suffix: "index.html",
@@ -74,7 +73,7 @@ const publicAccessBlock = new aws.s3.BucketPublicAccessBlock("public-access-bloc
 # Bucket ...
 
 # Turn the bucket into a website:
-website = s3.BucketWebsiteConfigurationV2("website",
+website = s3.BucketWebsiteConfiguration("website",
     bucket=bucket.id,
     index_document={
         "suffix": "index.html",
@@ -103,9 +102,9 @@ public_access_block = s3.BucketPublicAccessBlock(
 // Bucket ...
 
 // Turn the bucket into a website:
-website, err := s3.NewBucketWebsiteConfigurationV2(ctx, "website", &s3.BucketWebsiteConfigurationV2Args{
+website, err := s3.NewBucketWebsiteConfiguration(ctx, "website", &s3.BucketWebsiteConfigurationArgs{
     Bucket: bucket.ID(),
-    IndexDocument: &s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
+    IndexDocument: &s3.BucketWebsiteConfigurationIndexDocumentArgs{
         Suffix: pulumi.String("index.html"),
     },
 })
@@ -143,10 +142,10 @@ if err != nil {
 // Bucket ...
 
 // Turn the bucket into a website:
-var website = new BucketWebsiteConfigurationV2("website", new()
+var website = new BucketWebsiteConfiguration("website", new()
 {
     Bucket = bucket.Id,
-    IndexDocument = new BucketWebsiteConfigurationV2IndexDocumentArgs
+    IndexDocument = new BucketWebsiteConfigurationIndexDocumentArgs
     {
         Suffix = "index.html",
     },
@@ -184,9 +183,9 @@ using Pulumi.Aws.S3.Inputs;
 // Bucket ...
 
 // Turn the bucket into a website:
-var website = new BucketWebsiteConfigurationV2("website", BucketWebsiteConfigurationV2Args.builder()
+var website = new BucketWebsiteConfiguration("website", BucketWebsiteConfigurationArgs.builder()
     .bucket(bucket.id())
-    .indexDocument(BucketWebsiteConfigurationV2IndexDocumentArgs.builder()
+    .indexDocument(BucketWebsiteConfigurationIndexDocumentArgs.builder()
         .suffix("index.html")
         .build())
     .build());
@@ -231,7 +230,7 @@ resources:
 
   # Turn the bucket into a website:
   website:
-    type: aws:s3:BucketWebsiteConfigurationV2
+    type: aws:s3:BucketWebsiteConfiguration
     properties:
       bucket: ${my-bucket.id}
       indexDocument:
@@ -272,7 +271,7 @@ Next, add a new file called `index.html` to your current directory with these co
 
 Then open {{< langfile >}} and create a [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) after the three other new resources:
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 
 ```typescript
 // Other resources ...
@@ -407,15 +406,6 @@ automatically but these ones are invisible to Pulumi because those specific reso
 
 Now to export the website's URL for easy access add this to the end of your program:
 
-{{% choosable language javascript %}}
-
-```javascript
-// Export the bucket's autoassigned URL:
-exports.url = pulumi.interpolate`http://${website.websiteEndpoint}`;
-```
-
-{{% /choosable %}}
-
 {{% choosable language typescript %}}
 
 ```typescript
@@ -508,7 +498,7 @@ Previewing update (dev):
 
      Type                                    Name                 Plan       Info
      pulumi:pulumi:Stack                     quickstart-dev
- +   ├─ aws:s3:BucketWebsiteConfigurationV2  website              create
+ +   ├─ aws:s3:BucketWebsiteConfiguration    website              create
  +   ├─ aws:s3:BucketOwnershipControls       ownership-controls   create
  +   ├─ aws:s3:BucketPublicAccessBlock       public-access-block  create
  +   └─ aws:s3:BucketObject                  index.html           create
@@ -534,7 +524,7 @@ Updating (dev):
 
      Type                                    Name                 Status              Info
      pulumi:pulumi:Stack.                    quickstart-dev
- +   ├─ aws:s3:BucketWebsiteConfigurationV2  website              created (0.51s)
+ +   ├─ aws:s3:BucketWebsiteConfiguration    website              created (0.51s)
  +   ├─ aws:s3:BucketOwnershipControls.      ownership-controls   created (0.84s)
  +   ├─ aws:s3:BucketPublicAccessBlock       public-access-block  created (1s)
  +   └─ aws:s3:BucketObject                  index.html           created (0.53s)

@@ -53,7 +53,7 @@ repository.
 
 The AWS architecture you will get out of the box will look like this:
 
-![Flowchart depicting LangServe AWS Architecture interactions among user's AWS account, ECR, LangServe Container, Fargate, ALB, Sercrets Manager, Internet gateway, and internet](./architecture.png)
+![Flowchart depicting LangServe AWS Architecture interactions among user's AWS account, ECR, LangServe Container, Fargate, ALB, Secrets Manager, Internet gateway, and internet](./architecture.png)
 
 The Pulumi LangServe AWS architecture consists of the following components:
 

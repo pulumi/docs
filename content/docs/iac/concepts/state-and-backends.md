@@ -12,7 +12,7 @@ menu:
     iac:
         name: State & backends
         parent: iac-concepts
-        weight: 100
+        weight: 70
     concepts:
         weight: 9
 
@@ -29,6 +29,10 @@ Pulumi stores state in a _backend_ of your choosing. A backend is an API and sto
 The default experience is to use the hosted Pulumi Cloud, which takes care of the state and backend details for you. Conversely, when using cloud storage or a local filesystem as your backend, you gain control over where your state is located at the expense of having to handle security, state management, auditing, and other concerns Pulumi Cloud would otherwise handle for you.
 
 > Pulumi state does not include your cloud credentials. Credentials are kept local to your client &mdash; wherever the CLI runs &mdash; even when using the managed Pulumi Cloud backend. Pulumi _does_ store configuration and secrets, but encrypts those secrets using your chosen encryption provider. To learn more, see [Configuration and Secrets](/docs/concepts/secrets/).
+
+{{% notes "info" %}}
+This page covers the technical details of state management and backend configuration. To understand the benefits and features of Pulumi Cloud versus DIY backends, see [Pulumi Cloud and Open Source Pulumi](/docs/iac/concepts/pulumi-cloud/).
+{{% /notes %}}
 
 ## Deciding On a State Backend
 

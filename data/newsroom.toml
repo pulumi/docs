@@ -1,4 +1,16 @@
 [[releases]]
+date = "5th November 2025"
+title = "Pulumi Introduces AI-Powered Automatic Remediation for Infrastructure Policy Violations"
+summary = "Pulumi Introduces AI-Powered Automatic Remediation for Infrastructure Policy Violations."
+url = "https://info.pulumi.com/press-release/ai-powered-automatic-remediation-for-infrastructure-policy-violations"
+
+[[releases]]
+date = "16th September 2025"
+title = "Introducing Pulumi Neo, the Industry's First AI-Powered Platform Engineer"
+summary = "Introducing Pulumi Neo, the Industry's First AI-Powered Platform Engineer."
+url = "https://info.pulumi.com/press-release/pulumi-neo"
+
+[[releases]]
 date = "6th May 2025"
 title = "Introducing Pulumi IDP: The Fastest, Most Secure Way to Deliver Cloud Infrastructure at Scale"
 summary = "Introducing Pulumi IDP: The Fastest, Most Secure Way to Deliver Cloud Infrastructure at Scale."
@@ -456,7 +468,7 @@ url = "https://thenewstack.io/pulumi-ceo-on-the-challenges-with-kubernetes/"
 
 [[coverage]]
 date = "11th June 2019"
-title = "Firm Open Sources Framework for AWS Infrastructue-as-Code"
+title = "Firm Open Sources Framework for AWS Infrastructure-as-Code"
 img = "/logos/press/awsinsider.png"
 url = "https://awsinsider.net/articles/2019/06/12/pulumi.aspx"
 

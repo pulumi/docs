@@ -307,13 +307,17 @@ function getDefaultExcludedKeywords() {
         "https://old.reddit.com/r/devops/comments/1izpca1/platform_engineering_fad/",
         "https://www.deepseek.com/",
         "https://marketplace.visualstudio.com/",
-        "/authors/",
-        "/tags/",
-        "/collections/",
+        "https://pulumi.com/authors/",
+        "https://pulumi.com/tags/",
+        "https://pulumi.com/collections/",
         "https://securityboulevard.com/2024/09/pulumi-adds-cloud-security-intelligence-tool-to-portfolio/",
         "https://awsinsider.net/articles/2019/06/12/pulumi.aspx",
         "https://www.tivityhealth.com/",
-        "https://blog.ekik.org*"
+        "https://blog.ekik.org*",
+        "https://www.crn.com*",
+        "https://www.downelink.com/a-deep-dive-into-openais-text-embedding-ada-002-unlocking-the-power-of-semantic-understanding/",
+        "https://github.com/serverless/components",
+        "https://docs.spot.io/spot-connect/integrations/pulumi",
     ];
 }
 
@@ -322,7 +326,7 @@ function excludeAcceptable(links) {
     return (links
         // Ignore GitHub and npm 429s (rate-limited). We should really be handling these more
         // intelligently, but we can come back to that in a follow up.
-        .filter(b => !(b.reason === "HTTP_429" && b.destination.match(/github.com|npmjs.com/)))
+        .filter(b => !(b.reason === "HTTP_429" && b.destination.match(/github.com|npmjs.com|medium.com/)))
 
         // Ignore remote disconnects.
         .filter(b => b.reason !== "ERRNO_ECONNRESET")
@@ -401,6 +405,10 @@ async function getURLsToCheck(base) {
                 .filter(page => !page.match(/\/registry\/packages\/.+\/api-docs\//))
                 .filter(page => !page.match(/\/docs\/reference\/pkg\/nodejs|python\//))
                 .filter(page => !page.match(/\/docs\/install\/versions\//))
+                .filter(page => !page.match(/\/authors\//))
+                .filter(page => !page.match(/\/collections\//))
+                .filter(page => !page.match(/\/tags\//))
+                .filter(page => !page.match(/\/crosswalk\//))
 
                 // Always check using the supplied baseURL.
                 .map(url => {

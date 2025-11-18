@@ -1,14 +1,14 @@
 ---
-title_tag: "Secrets | Pulumi Concepts"
+title_tag: "Secrets Handling | Pulumi Concepts"
 meta_desc: This page provides an overview of how Pulumi manages sensitive configuration data using secrets.
-title: Secrets
-h1: Secrets
+title: Secrets Handling
+h1: Secrets Handling
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Secrets
+        name: Secrets Handling
         parent: iac-concepts
-        weight: 90
+        weight: 80
     concepts:
         weight: 7
 aliases:
@@ -29,14 +29,8 @@ The Pulumi CLI **never** transmits your cloud credentials to Pulumi Cloud.
 
 There are two ways to programmatically create secret values:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-- Using [`getSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret) or [`requireSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret) when reading a value from config.
-- Calling [`pulumi.secret(value)`](/docs/reference/pkg/nodejs/pulumi/pulumi#secret) to construct a secret from an existing value.
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 - Using [`getSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret) or [`requireSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret) when reading a value from config.
@@ -78,19 +72,8 @@ There are two ways to programmatically create secret values:
 
 As an example, let’s create an AWS Parameter Store secure value. Parameter Store is an AWS service that stores strings. Those strings can either be secret or not. To create an encrypted value, we need to pass an argument to initialize the store’s `value` property. Unfortunately, the obvious thing to do —passing a raw, unencrypted value— means that the value is also stored in the Pulumi state, unencrypted so we need to ensure that the value is a secret:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const cfg = new pulumi.Config()
-const param = new aws.ssm.Parameter("a-secret-param", {
-    type: "SecureString",
-    value: cfg.requireSecret("my-secret-value"),
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -223,6 +206,10 @@ For example, this command sets a configuration variable named `dbPassword` to th
 $ pulumi config set --secret dbPassword S3cr37
 ```
 
+{{% notes "warning" %}}
+When storing secret values containing special characters (such as `$`, `!`, `@`, `#`, etc.), be aware that shell interpretation may modify the value before it reaches Pulumi. Consider using quotes around the value or escaping special characters according to your shell's requirements. For complex values, you may want to use input redirection or pipe the value from a file to avoid shell interpretation entirely.
+{{% /notes %}}
+
 If we list the configuration for our stack, the plain-text value for `dbPassword` will not be printed:
 
 ```bash
@@ -234,17 +221,8 @@ dbPassword                 [secret]
 
 Similarly, if our program attempts to print the value of `dbPassword` to the console-either intentionally or accidentally-Pulumi will mask it out:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-var pulumi = require("@pulumi/pulumi");
-var config = new pulumi.Config();
-console.log("Password: " + config.require("dbPassword"));
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -334,20 +312,8 @@ To begin, allocate an instance of the `pulumi.Config` object as shown in the cod
 
 The remainder of the code example demonstrates how to access these configuration values in your Pulumi program:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-var pulumi = require("@pulumi/pulumi");
-
-var config = new pulumi.Config();
-
-var name = config.require("name");
-var dbPassword = config.requireSecret("dbPassword");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -619,7 +585,7 @@ config:
     secure: AAABAIIlW0ewSuZ1FJxw/+Rpw6BNqTUvGJ30O8WkpL2hB4aPyS7UU68=
 ```
 
-Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/pulumi-cloud/projects-and-stacks/#stack-permissions) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
+Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/deployments/projects-and-stacks/#stack-permissions) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
 
 It's therefore considered safe and good practice to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can easily rebuild them, using the most recently deployed configuration, with [`pulumi config refresh`](/docs/cli/commands/pulumi_config_refresh/).
 

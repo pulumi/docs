@@ -8,7 +8,7 @@ return await Deployment.RunAsync(() =>
     var accountID = Pulumi.Aws.GetCallerIdentity.Invoke().Apply(identity => identity.AccountId);
 
     // Create an S3 bucket.
-    var bucket = new BucketV2("my-bucket");
+    var bucket = new Bucket("my-bucket");
 
     // Create an S3 bucket policy allowing anyone in the account to list the contents of the bucket.
     var policy = new BucketPolicy("my-bucket-policy", new BucketPolicyArgs

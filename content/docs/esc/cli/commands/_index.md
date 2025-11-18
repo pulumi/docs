@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: esc-cli-commands
     parent: esc-cli-overview
-    weight: 1
+    weight: 2
 aliases:
     - /docs/esc/cli/commands/
     - /docs/esc-cli/commands/

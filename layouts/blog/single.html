@@ -19,7 +19,11 @@
                         {{ end }}
 
 
-                        <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time></p>
+                        {{ if .Params.updated }}
+                            <p>Updated on <time>{{ (time .Params.updated).Format "Monday, January 2, 2006" }}</time></p>
+                        {{ else }}
+                            <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time></p>
+                        {{ end }}
 
                         <div class="flex items-center">
                             <span class="text-sm text-gray-700">

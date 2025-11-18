@@ -33,9 +33,9 @@ Install the required language runtime, if you have not already.
 
 #### Choose your language
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 {{< install-node >}}
 {{% /choosable %}}
 
@@ -62,11 +62,11 @@ You'll need a [Pulumi access token](/docs/pulumi-cloud/accounts#access-tokens) s
 
 ## Define your Pulumi program
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 First, define the Pulumi program you want to run as a function within your overall program. Note how it looks like a standard Pulumi program.
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 
 {{% notes type="info" %}}
 This tutorial is based on the [`inlineProgram-ts` example](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/inlineProgram-ts), which is a complete example of how to construct a simple Automation API program.
@@ -75,7 +75,7 @@ This tutorial is based on the [`inlineProgram-ts` example](https://github.com/pu
 ```typescript
 const pulumiProgram = async () => {
     // Create a bucket and expose a website index document.
-    const siteBucket = new s3.BucketV2("s3-website-bucket", {});
+    const siteBucket = new s3.Bucket("s3-website-bucket", {});
 
     const indexContent = `<html><head>
 <title>Hello S3</title><meta charset="UTF-8">
@@ -135,7 +135,7 @@ This tutorial is based on the [`inline_program` example](https://github.com/pulu
 ```python
 def pulumi_program():
     # Create a bucket and expose a website index document.
-    site_bucket = s3.BucketV2("s3-website-bucket")
+    site_bucket = s3.Bucket("s3-website-bucket")
 
     index_content = """
     <html>
@@ -192,7 +192,7 @@ This tutorial is based on the [`inline_program` example](https://github.com/pulu
 deployFunc := func(ctx *pulumi.Context) error {
     // Similar go git_repo_program, our program defines a s3 website.
     // Here we create the bucket.
-    siteBucket, err := s3.NewBucketV2(ctx, "s3-website-bucket", nil)
+    siteBucket, err := s3.NewBucket(ctx, "s3-website-bucket", nil)
     if err != nil {
         return err
     }
@@ -338,7 +338,7 @@ This tutorial is based on the [`InlineProgram` example](https://github.com/pulum
 private static void pulumiProgram(Context ctx) {
 
     // Create an AWS resource (S3 Bucket)
-    var siteBucket = new BucketV2("s3-website-bucket");
+    var siteBucket = new Bucket("s3-website-bucket");
 
     var website = new BucketWebsiteConfigurationV2("website", BucketWebsiteConfigurationV2Args.builder()
             .bucket(siteBucket.id())
@@ -391,15 +391,19 @@ private static void pulumiProgram(Context ctx) {
 {{% /choosable %}}
 {{< /chooser >}}
 
+{{% notes type="warning" %}}
+The program's lifecycle must be fully contained within the function, callback, or closure passed as the inline program. It's unsafe to perform actions outside the scope of the inline program function. Doing so can lead to unpredictable behavior.
+{{% /notes %}}
+
 ## Associate with a stack
 
 As with executing Pulumi programs through the CLI, you need to associate your Pulumi program with a `Stack`. Automation API provides methods to create or select stacks.
 
 Here's a convenient method to select an existing `Stack` or create one if none exists:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 
 ```typescript
 const args: InlineProgramArgs = {
@@ -465,8 +469,8 @@ A `Stack` object operates within the context of a `Workspace`. A `Workspace` is 
 
 The AWS plugin also needs configuration. You can provide that configuration just as you would with other Pulumi programs: either through [stack configuration](/docs/concepts/config/) or environment variables. In this tutorial, you'll use the `Stack` object to set the AWS region for the AWS provider plugin.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
-{{% choosable language "javascript,typescript" %}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
+{{% choosable language "typescript" %}}
 
 ```typescript
 await stack.workspace.installPlugin("aws", "v4.0.0");
@@ -523,8 +527,8 @@ stack.setConfig("aws:region", new ConfigValue("us-west-2"));
 You're now ready to execute commands against the `Stack`, including update, preview, refresh, destroy, import, and export.
 If you want to update the stack, invoke the update method (`up`) against the `Stack` object:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
-{{% choosable language "javascript,typescript" %}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
+{{% choosable language "typescript" %}}
 
 ```typescript
 const upRes = await stack.up({ onOutput: console.info });

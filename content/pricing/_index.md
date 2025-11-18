@@ -12,92 +12,66 @@ aliases:
 tiers:
     trialed:
         items:
-            - title: Free
-              subtitle: The basics for individuals and organizations with cloud projects.
-              iac_price: $0
-              iac_unit:
-              iac_note:
-              esc_price: $0
-              esc_unit:
-              esc_note:
-              insights_price: $0
-              insights_unit:
-              insights_note:
-              primary_cta: Create a free organization
-              primary_cta_link: /docs/quickstart
+            - title: Individual
+              subtitle: Free forever for individuals.
+              price: Free
+              price_label:
+              unit:
+              note: No credit card required
               items: |
                 You get:
-                - 200 free IaC resources
-                - Unlimited IaC projects/stacks
-                - 25 free secrets
+                - IaC state management
+                - Unlimited projects, stacks, and environments
+                - Unlimited updates and history
                 - 500 free deployments minutes
             - title: Team
-              subtitle: Collaboration for growing teams and cloud projects.
-              iac_price: $0.37
-              iac_unit: per resource/month
-              iac_note:
-              esc_price: $0.50
-              esc_unit: per secret/month
-              esc_note:
-              insights_price: $0.37
-              insights_unit: per resource/month
-              insights_note:
-              primary_cta: Start free trial
-              primary_cta_link: https://app.pulumi.com/signup
+              subtitle: Everything you need to get started.
+              price: $40
+              price_label: /mo
+              unit: "**500** resources included"
+              note: Additional resources **$0.1825**/mo
               items: |
-                Everything in **Free**, plus:
-                - Secure team collaboration
-                - Up to 10 team members
-                - Automatic CI/CD
-                - Unlimited ESC configuration
-                - Full deployment history
+                Everything in **Individual**, plus:
+                - Up to 10 users
+                - Secure collaboration and CI/CD
+                - AI assistance with Pulumi Neo
+                - Resource search
+                - OIDC and Org Access Tokens
+                - Webhooks
+                - Automatic secrets rotation
                 - Community support
             - title: Enterprise
-              subtitle: Advanced cloud engineering capabilities for large teams in production.
-              iac_price: $1.10
-              iac_unit: per resource/month
-              iac_note: (Volume pricing available)
-              esc_price: $0.75
-              esc_unit: per secret/month
-              esc_note: (Volume pricing available)
-              insights_price: $1.10
-              insights_unit: per resource/month
-              insights_note: (Volume pricing available)
-              primary_cta: Start free trial
-              primary_cta_link: https://app.pulumi.com/signup
-              secondary_cta: Contact Sales
-              secondary_cta_link: /contact/?form=sales
+              subtitle: Security and collaboration for large teams.
+              price: $400
+              price_label: /mo
+              unit: "**2,000** resources included"
+              note: Additional resources start at **$0.365**/mo
               items: |
                   Everything in **Team**, plus:
-                  - Unlimited members & teams
-                  - Role-based access control (RBAC)
-                  - Organization access tokens
-                  - SAML/SSO
-                  - Secrets versioning
+                  - Unlimited users
+                  - SAML/SSO and RBAC
+                  - Internal developer platform (IDP)
                   - Audit logs
-                  - 12x5 Enterprise Support available
+                  - Drift detection and remediation
+                  - Time-to-live stacks
                   - Priority feature requests
+                  - 12x5 Enterprise Support available
             - title: Business Critical
-              subtitle: Advanced security, compliance, and hosting for mission-critical needs.
-              iac_price: Custom
-              iac_unit:
-              iac_note:
-              esc_price: Custom
-              esc_unit:
-              esc_note:
-              insights_price: Custom
-              insights_unit:
-              insights_note:
-              primary_cta: Contact Sales
-              primary_cta_link: /contact/?form=sales
+              subtitle: Advanced governance, policies, and controls.
+              price: Custom
+              price_label:
+              unit:
+              note: Volume discounts and invoicing
               items: |
                   Everything in **Enterprise**, plus:
-                  - Volume pricing and invoicing
-                  - Policies and compliance
+                  - [Self-hosting available](/product/self-hosted)
+                  - Compliance policies
+                  - Org-wide policy enforcement
                   - Automatic group & user sync (SCIM)
                   - Audit logs export
-                  - 24x7 Enterprise Support available
+                  - Volume pricing and invoicing
                   - Private Slack and Professional Services
+                  - 24x7 Enterprise Support available
 
 customers:
     - stat: "**5x faster** time to market"
@@ -115,18 +89,17 @@ comparison_table:
         ####
         # Products
         ####
-        - header: Products
+        - header: Product
           tables:
-
             # Pulumi IaC table
-            - header: Pulumi IaC
-              subheader: Fully-managed IaC Platform
+            - header: Infrastructure as Code
+              subheader: Foundational capability is included in all editions
               rows:
-                - title: Price per resource/month
+                - title: On-demand resource price
                   items:
-                    - content: 200 free
-                    - content: $0.37, after 200 free
-                    - content: $1.10 / Custom
+                    - content: Free
+                    - content: $0.00025/hour<br>($0.185/month)
+                    - content: Starting at $0.0005/hour<br>($0.365/month)
                     - content: Custom
                 - title: Commitment pricing
                   items:
@@ -153,13 +126,6 @@ comparison_table:
                     - content: 5
                     - content: Unlimited
                     - content: Unlimited
-                - title: Developer portal
-                  items:
-                    - content: Host public templates
-                    - content: Host public templates
-                    - content: Host private templates
-                    - content: Host private templates
-
                 - title: Restore Deleted Stacks
                   link: /blog/restore-stacks
                   items:
@@ -183,10 +149,31 @@ comparison_table:
                     - content: Customized for you
                     - content: Customized for you
                 - title: CI/CD Assistant
-                  link: /docs/pulumi-cloud/deployments/ci-cd-integration-assistant/
+                  link: /docs/platform/deployments/ci-cd-integration-assistant/
                   items:
                     - content: _blank
                     - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Drift detection
+                  link: /docs/platform/deployments/drift/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Time-to-live stacks
+                  link: /docs/platform/deployments/ttl/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Scheduled deployments
+                  link: /docs/platform/deployments/schedules/
+                  items:
+                    - content: _blank
+                    - content: _blank
                     - content: _check
                     - content: _check
                 - title: GitHub Enterprise Server support
@@ -195,292 +182,8 @@ comparison_table:
                     - content: _blank
                     - content: _blank
                     - content: _check
-
-            ## Pulumi ESC table
-            - header: Pulumi ESC
-              rows:
-                - title: Price per secret/month
-                  items:
-                    - content: 25 free
-                    - content: $0.50
-                    - content: $0.75 / Custom
-                    - content: Custom
-                - title: Price per plaintext config
-                  items:
-                    - content: Free
-                    - content: Free
-                    - content: Free
-                    - content: Free
-                - title: Price per 10K API calls
-                  items:
-                    - content: 10K free
-                    - content: $0.10
-                    - content: $0.10
-                    - content: $0.10
-                - title: Commitment pricing
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Self-hosting
-                  link: /product/self-hosted/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                - title: "Max # of secrets"
-                  items:
-                    - content: 25
-                    - content: Unlimited
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: "Max # of projects"
-                  items:
-                    - content: 10
-                    - content: Unlimited
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: "Max # of environments"
-                  link: /docs/esc/environments/
-                  items:
-                    - content: 10
-                    - content: Unlimited
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: "Max # of API calls"
-                  items:
-                    - content: 10K / month
-                    - content: Unlimited
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: Version history
-                  link: /docs/esc/environments/#versioning-environments
-                  items:
-                    - content: _blank
-                    - content: Up to 5
-                    - content: _check
-                    - content: _check
-                - title: Version tags and import by tags
-                  link:  /docs/esc/environments/#tagging-versions
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Dynamic credentials
-                  link: /docs/esc/integrations/dynamic-login-credentials/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Dynamic secrets
-                  link: /docs/esc/integrations/dynamic-secrets/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Rotated secrets
-                  link: /docs/esc/integrations/rotated-secrets/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Database Secrets Rotation
-                  link: /blog/esc-db-secrets-rotation-launch/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Database Secrets Rotation in private networks
-                  link: /blog/esc-db-secrets-rotation-launch/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Integrations - Sync
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Multi-language SDKs
-                  link: /docs/esc/sdk/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-
-            ## Pulumi Insights Table
-            - header: Pulumi Insights
-              rows:
-                - title: Price per resource/month
-                  items:
-                    - content: 200 free
-                    - content: $0.37, after 200 free
-                    - content: $1.10 / Custom
-                    - content: Custom
-                - title: Workflow cost per minute/ included per month
-                  link: /pricing#faq
-                  items:
-                    - content: 500 free
-                    - content: $0.01, <br>3,000 included
-                    - content: $.01 / Custom, <br>3,000 included
-                    - content: $.01 / Custom, <br>3,000 included                  
-                - title: Resource search
-                  link: /docs/insights/search/
-                  items:
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Primary Accounts
-                  items:
-                    - content: 1
-                    - content: 1
-                    - content: 10
-                    - content: 20
-                - title: Data export
-                  link: /docs/insights/#data-export
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Property search
-                  link: /docs/insights/search/#property-queries
-                  items:
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Policy enforcement
-                  link: /docs/insights/policy-as-code/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: _check
-        ####
-        # Key Capabilities
-        ####
-        - header: Key Capabilities
-          tables:
-            ## Pulumi Deployments table
-            - header: Pulumi Deployments
-              rows:
-                - title: Workflow cost per minute
-                  items:
-                    - content: _blank
-                    - content: $0.01
-                    - content: $0.01 / Custom
-                    - content: $0.01 / Custom
-                - title: Minutes included/month
-                  items:
-                    - content: 500
-                    - content: 3,000
-                    - content: 3,000
-                    - content: 3,000
-                - title: Drift detection
-                  link: /docs/pulumi-cloud/deployments/drift/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Time-to-live stacks
-                  link: /docs/pulumi-cloud/deployments/ttl/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Scheduled deployments
-                  link: /docs/pulumi-cloud/deployments/schedules/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Concurrent deployments limit
-                  items:
-                    - content: 1
-                    - content: 5
-                    - content: 25
-                    - content: 150
-                - title: Self-hosted deployment runners
-                  link: /docs/pulumi-cloud/deployments/customer-managed-agents/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: _check
-
-            ## CrossGuard table
-            - header: Pulumi CrossGuard
-              rows:
-                - title: Gated deployments
-                  items:
-                    - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
-                    - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
-                    - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
-                    - content: "[Server-side enforcement](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
-                - title: Organization policies
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: _check
-                - title: Compliance-ready policies
-                  link: /docs/using-pulumi/crossguard/compliance-ready-policies/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: _check
-                - title: Remediation policies
-                  link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: _check
-                - title: Dashboard for policy violations
-                  link: /docs/using-pulumi/crossguard/policy-violations/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: _check
-            ## Copilot Table
-            - header: Pulumi Copilot
-              rows:
-                - title: Pulumi Copilot
-                  link: /docs/pulumi-cloud/copilot/
-                  items:
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                    - content: _check
-
-
-        ####
-        # Pulumi Cloud Fundamentals
-        ####
-        - header: Pulumi Cloud Fundamentals
-          tables:
-            ## Core table
-            - header: Core
-              rows:
                 - title: Webhooks
-                  link: /docs/pulumi-cloud/webhooks/
+                  link: /docs/platform/webhooks/
                   items:
                     - content: _blank
                     - content: _check
@@ -526,11 +229,6 @@ comparison_table:
                     - content: 1
                     - content: Multiple supported
                     - content: Multiple supported
-
-            ## Security table
-            - header: Security
-              subheader: Fully-managed IaC Platform
-              rows:
                 - title: Identity providers
                   link: /docs/pulumi-cloud/accounts
                   items:
@@ -580,7 +278,8 @@ comparison_table:
                   tooltip: These are machine access tokens that are scoped to the organization or team level
                   items:
                     - content: _blank
-                    - content: _blank
+                    - content: _check
+                      tooltip: Organization Access Token only
                     - content: _check
                     - content: _check
                 - title: Audit Logs
@@ -598,96 +297,311 @@ comparison_table:
                     - content: _blank
                     - content: _check
 
-            ## Support table
-            - header: Support
-              subheader: Secrets management
-              rows:
-                - title: Community Slack
-                  link: https://slack.pulumi.com/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Support
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available, 12x5 / 24x7 support
-                    - content: Available, 12x5 / 24x7 support
-                - title: Normal ticket SLA
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available, 1 or 5 business days
-                    - content: Available, 1 or 5 business days
-                - title: Urgent ticket SLA
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available, 4 hours to 2 business days
-                    - content: Available, 4 hours to 2 business days
-                - title: Private Slack channel
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
-                - title: Professional services
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
-                - title: Onboarding and training
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
-                - title: Terraform Migration
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
-                - title: SLA
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
+        ## Key Capabilities section
+        - header: Key Capabilities
+          tables:
+            ## Pulumi ESC table
+          - header: Secrets & Configuration
+            subheader: Secure configuration management across all environments
+            rows:
+              - title: On-demand secret price
+                items:
+                  - content: 25 free
+                  - content: $0.000685/hour<br>($0.50/mo)
+                  - content: $0.001/hour<br>($0.75/mo)
+                  - content: Custom
+              - title: Price per plaintext config
+                items:
+                  - content: Free
+                  - content: Free
+                  - content: Free
+                  - content: Free
+              - title: Price per 10K API calls
+                items:
+                  - content: 10K free
+                  - content: $0.10
+                  - content: $0.10
+                  - content: $0.10
+              - title: Commitment pricing
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Self-hosting
+                link: /product/self-hosted/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _blank
+                  - content: Available
+              - title: "Max # of secrets"
+                items:
+                  - content: 25
+                  - content: Unlimited
+                  - content: Unlimited
+                  - content: Unlimited
+              - title: "Max # of API calls"
+                items:
+                  - content: 10K / month
+                  - content: Unlimited
+                  - content: Unlimited
+                  - content: Unlimited
+              - title: Version history
+                link: /docs/esc/environments/versioning/
+                items:
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Version tags and import by tags
+                link:  /docs/esc/environments/versioning/#tagging-versions
+                items:
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Dynamic credentials
+                link: /docs/esc/integrations/dynamic-login-credentials/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Dynamic secrets
+                link: /docs/esc/integrations/dynamic-secrets/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Rotated secrets
+                link: /docs/esc/integrations/rotated-secrets/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Database Secrets Rotation
+                link: /blog/esc-db-secrets-rotation-launch/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Database Secrets Rotation in private networks
+                link: /blog/esc-db-secrets-rotation-launch/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Integrations - Sync
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Multi-language SDKs
+                link: /docs/esc/sdk/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              
+          ## Pulumi Insights Table
+          - header: Insights & Governance
+            subheader: Visibility and governance across your entire cloud estate
+            rows:
+              - title: On-demand resource price
+                items:
+                  - content: Free
+                  - content: $0.00025/hour<br>($0.185/month)
+                  - content: Starting at $0.0005/hour<br>($0.365/month)
+                  - content: Custom
+              - title: Workflow cost per minute/ included per month
+                link: /pricing#faq
+                items:
+                  - content: 500 free
+                  - content: $0.01<br>3,000 included
+                  - content: $0.01 / Custom<br>3,000 included
+                  - content: $0.01 / Custom<br>3,000 included                  
+              - title: Resource search
+                link: /docs/insights/search/
+                items:
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Primary Accounts
+                items:
+                  - content: 1
+                  - content: 1
+                  - content: 10
+                  - content: 20
+              - title: Data export
+                link: /docs/insights/export/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Property search
+                link: /docs/insights/search/#property-queries
+                items:
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Policy Enforcement
+                link: /docs/insights/policy-as-code
+                items: 
+                  - content: "Manual"
+                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
+                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
+                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
+              - title: Preventative Policies
+                link: /docs/insights/preventative-vs-audit-policies/
+                items: 
+                  - content: Manual
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Audit Policies
+                link: /docs/insights/preventative-vs-audit-policies/
+                items: 
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Pre-built Policy Packs
+                link: /docs/insights/pre-built-packs
+                items: 
+                  - content: _blank
+                  - content: Pulumi Best Practices
+                  - content: Pulumi Best Practices
+                  - content: Pulumi Best Practices, CIS, NIST, HITRUST, PCI DSS
+              - title: Custom Policy Packs
+                link: /docs/insights/policy/policy-as-code/get-started/#creating-a-policy-pack
+                items:
+                  - content: _blank
+                  - content: Up to 25 policies (1 pack limit)
+                  - content: Up to 100 policies (3 pack limit)
+                  - content: Unlimited
+              - title: Enforcement Modes
+                link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
+                items:
+                  - content: _blank
+                  - content: Advisory & Mandatory
+                  - content: Advisory & Mandatory
+                  - content: Advisory, Mandatory & Remediation 
+          ## Pulumi Neo Table
+          - header: Infrastructure AI
+            subheader: Intelligent assistance across all platform capabilities
+            rows:
+              - title: Pulumi Neo
+                link: /docs/ai/neo/
+                items:
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+                  - content: _check
+          ## Pulumi Workflow table
+          - header: Internal Developer Platform
+            subheader: Self-service capabilities with guardrails
+            rows:
+              - title: Developer portal
+                items:
+                  - content: Host public templates
+                  - content: Host public templates
+                  - content: Host private templates
+                  - content: Host private templates
+          - header: Support
+            subheader: 
+            rows:
+              - title: Support
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available, 12x5 / 24x7 support
+                  - content: Available, 12x5 / 24x7 support
+              - title: Normal ticket SLA
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available, 1 or 5 business days
+                  - content: Available, 1 or 5 business days
+              - title: Urgent ticket SLA
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available, 4 hours to 2 business days
+                  - content: Available, 4 hours to 2 business days
+              - title: Private Slack channel
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available
+                  - content: Available
+              - title: Community Slack
+                link: https://slack.pulumi.com/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Professional services
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available
+                  - content: Available
+              - title: Onboarding and training
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available
+                  - content: Available
+              - title: Terraform Migration
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available
+                  - content: Available
+              - title: SLA
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available
+                  - content: Available
+
+
 
 faq:
     - category: Pricing
       id: pricing
       items:
-        - question: How are resources billed?
+        - question: Do I pay as I go, or prepaid up-front?
           answer: |
-            Resources are billed hourly as Pulumi Credits. 1 Pulumi Credit is the price for managing one resource for one hour. The Price per credit for Team and Enterprise is $0.0005 and $0.0015 respectively.
-
-            For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/concepts/resources#custom-resources) (e.g., an Amazon S3 bucket), [component resources](/docs/concepts/resources#components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/concepts/stack) which contain resources (e.g., dev, test, prod stacks).
-
-            You consume one Pulumi Credit to manage each resource for an hour. For example, one stack containing one S3 bucket and one EC2 instance is three resources that are counted in your bill.
-        - question: How are secrets billed?
+            Both options are available. If you self-serve by entering a credit card, you will be billed in-arrears every month for your usage. If you prefer to pay up-front, you can [contact sales](/contact?form=sales) and receive a discount for a committed amount of usage paid up-front. If you subsequently consume all up-front purchased usage, you will be billed in-arrears as you go beyond that amount of usage. The details are specified in your contract.
+        - question: How are IaC resources billed?
           answer: |
-            Secrets are billed hourly. The price per secret of $0.5 and $0.75 for Team and Enterprise is for 730 hours (~ 1 month). If you have your secrets stored for 4 days on Pulumi Cloud Team Edition, the price you pay would be 4 x 24 x 0.5 / 730 = $.0657
+            Should you exceed the 500 and 2,000 included resources in Team and Enterprise, respectively, you will be charged at the end of the month for the number of resource hours consumed in excess of what is included.
 
-            Secrets include both static secrets and dynamic secrets/credentials. When using the Pulumi ESC Document Editor, each definition of fn::secret:* and fn::open::* (except Pulumi-stacks provider) is counted as a secret. The number of secrets only from the latest environment revision is counted towards your billing.
-        - question: How are secrets API calls metered?
-          answer: |
-            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/cloud-rest-api/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will billed $0.05.
+            IaC resources are billed hourly at the rate of $0.00025 for Team ($0.1825 per resource per month) and starting at $0.0005 for Enterprise ($0.365 per resource per month). This is the cost of managing an IaC resource for a full hour.
 
-            API usage include any calls from the [CLI](/docs/esc-cli/), [SDK](/docs/esc/sdk/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/cloud-rest-api/) call that hits the ReadOpen API endpoint
-        - question: What are workflow minutes?
-          answer: |
-            Workflow Minutes represent the total time used across both Pulumi Insights and Deployments. All usage draws from a single, shared pool of minutes. For Insights, workflow minutes measure the time spent on discovery and policy execution. Deployments also consume workflow minutes by measuring the duration of each deployment process.
-        - question: What can I do with 200 free resources per month?
-          answer: |
-            You could manage 200 S3 buckets or 200 EC2 instances for a month using this amount. Note that free resources translate to 150K monthly Pulumi credits.
+            Enterprise editions receive volume discounts, so that the more resources you consume, the lower the incremental rate. This is true of self-serve pay-as-you-go plans, although prepaid plans offer more considerable discounts.
 
-            As another example, you could manage something more complex like a production Amazon EKS cluster with associated IAM roles, VPC, subnets, gateway route tables, and a small microservice deployed into the cluster.
-        - question: How do I find out how many resources I have?
+            For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/concepts/resources) (e.g., an Amazon S3 bucket), [component resources](/docs/iac/concepts/components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/iac/concepts/stacks) which contain resources (e.g., dev, test, prod stacks).
+        - question: What can I do with 500 IaC resources per month?
+          answer: |
+            The Team edition includes 500 IaC resources to get started with.
+
+            You could manage 500 EKS clusters or EC2 instances for a month using this amount. As another example, you could manage something more complex like a production Amazon EKS cluster with associated IAM roles, VPC, subnets, gateway route tables, and a small microservice deployed into the cluster.
+
+            This is more than enough to get started with production workloads. The Enterprise edition comes with 2,000 resources.
+        - question: How do I find out how many IaC resources I have?
           answer: |
             There are several ways you can estimate the number of resources you have managed with Pulumi.
 
@@ -696,7 +610,7 @@ faq:
             - <u>If using Pulumi with a DIY backend</u>: Export your stack state and count the number of lines with a universal resource name (URN). You can pipe the state through a grep command for "urn" to estimate the number of resources.
 
             - <u>If you haven't deployed anything with Pulumi</u>: See the previous FAQ for a few examples of applications and their number of resources.
-        - question: What are some examples of how many resources are needed for my use case?
+        - question: What are some examples of how many IaC resources are needed for my use case?
           answer: |
             [**Serverless API with Amazon API Gateway and AWS Lambda**](https://github.com/pulumi/examples/tree/master/aws-ts-apigatewayv2-http-api)
             Estimated resources: <b>9</b><br>
@@ -709,6 +623,21 @@ faq:
             [**Amazon ECS cluster and RDS backend running in a VPC**](https://github.com/pulumi/examples/tree/master/aws-py-wordpress-fargate-rds)
             Estimated resources: <b>24</b><br>
             This scenario is a stack with an Amazon VPC (including subnets, security groups, and route table associations), Amazon ECS (including cluster and service, load balancer resources, and IAM resources), and Amazon RDS (including RDS instance and subnet group). Each group of resources (VPC, ECS, RDS) is represented by a component resource.
+        - question: How are ESC secrets billed?
+          answer: |
+            ESC secrets are billed hourly at the rate of $0.000685 for Team ($0.50 per secret per month) and $0.001 for Enterprise ($0.75 per secret per month). This is the cost of managing an ESC secret for a full hour.
+            
+            For example, if you have your secrets stored for 4 days on Pulumi Cloud Team Edition, the price you pay would be 4 x 24 x 0.5 / 730 = $0.0657
+
+            Secrets include both static secrets and dynamic secrets/credentials. When using the Pulumi ESC Document Editor, each definition of fn::secret:* and fn::open::* (except Pulumi-stacks provider) is counted as a secret. The number of secrets only from the latest environment revision is counted towards your billing.
+        - question: How are ESC secrets API calls metered?
+          answer: |
+            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/reference/environments/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will billed $0.05.
+
+            API usage include any calls from the [CLI](/docs/esc/cli/), [SDK](/docs/esc/development/languages-sdks/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/reference/environments/) call that hits the ReadOpen API endpoint
+        - question: What are workflow minutes?
+          answer: |
+            Workflow Minutes represent the total time used across both Pulumi Insights and Deployments. All usage draws from a single, shared pool of minutes. For Insights, workflow minutes measure the time spent on discovery and policy execution. Deployments also consume workflow minutes by measuring the duration of each deployment process.
         - question: Can I prepay for resources, secrets, and secrets API calls?
           answer: Yes, you can! Please contact us to discuss the Enterprise and Business Critical Editions, which include volume pricing for paying in advance.
 

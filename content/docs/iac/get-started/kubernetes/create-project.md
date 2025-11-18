@@ -5,27 +5,19 @@ title: Create project
 h1: "Pulumi & Kubernetes: Create project"
 weight: 3
 menu:
-  clouds:
+  iac:
+    name: Create project
+    identifier: kubernetes-get-started.create-project
     parent: kubernetes-get-started
-    identifier: kubernetes-get-started-create-project
+    weight: 3
 
 aliases:
-- /docs/quickstart/kubernetes/create-project/
-- /docs/get-started/kubernetes/create-project/
-- /docs/iac/get-started/kubernetes/create-project/
+    - /docs/quickstart/kubernetes/create-project/
 ---
 Now that you have set up your environment let's create your first Pulumi program.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language javascript %}}
-
-```bash
-$ mkdir quickstart && cd quickstart
-$ pulumi new kubernetes-javascript
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```bash
@@ -105,7 +97,7 @@ Created stack 'dev'
 
 > What are [projects](/docs/concepts/projects/) and [stacks](/docs/concepts/stack/)? Pulumi projects and stacks let you organize Pulumi code. Consider a Pulumi _project_ to be analogous to a GitHub repo---a single place for code---and a _stack_ to be an instance of that code with a separate configuration. For instance, _Project Foo_ may have multiple stacks for different development environments (Dev, Test, or Prod), or perhaps for different cloud configurations (geographic region for example). See [Organizing Projects and Stacks](/docs/using-pulumi/organizing-projects-stacks/) for some best practices on organizing your Pulumi projects and stacks.
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 
 After some dependency installations from `npm`, the project and stack will be ready.
 

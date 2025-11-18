@@ -36,7 +36,7 @@ $ pulumi config set aws:region us-east-2
 ## Example
 
 After following the [getting started](#getting-started) steps, the next step is
-to setup your application. For this example we are using the [AWS AppRunner serivce](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-apprunner-alpha-readme.html).
+to setup your application. For this example we are using the [AWS AppRunner service](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-apprunner-alpha-readme.html).
 We will create an AppRunner `Service` from within our Pulumi program, and export the resulting service's URL as a
 Pulumi Stack Output.
 
@@ -421,34 +421,13 @@ Pulumi commands without errors.
 
 ## Using Pulumi Policy Packs
 
-You can use [Policy Packs](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/get-started/#get-started-with-pulumi-policy-as-code)
+You can use [Policy Packs](/docs/insights/policy/policy-packs/)
 with your Pulumi CDK Application. It is also possible to use CDK specific policy
 validation tools (a couple are discussed below), but it is recommended to use
 Pulumi specific tools, especially if you are creating Pulumi resources outside
 of CDK.
 
-Below is an example output using Pulumi's [Compliance Ready Policies](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/compliance-ready-policies/)
-
-```ts
-import * as pulumicdk from '@pulumi/cdk';
-import * as s3 from 'aws-cdk-lib/aws-s3';
-
-const app = new pulumicdk.App('app', (scope: pulumicdk.App): pulumicdk.AppOutputs => {
-    const stack = new pulumicdk.Stack('example-stack');
-
-    new s3.Bucket(stack, 'bucket');
-});
-```
-
-**Example output**
-
-```console
-Policies:
-    ❌ aws-compliance-ready-policies-typescript@v0.0.1 (local: ../policypack)
-        - [mandatory]  awsnative-s3-bucket-enable-server-side-encryption  (aws-native:s3:Bucket: bucket)
-          Check that S3 Bucket Server-Side Encryption (SSE) is enabled.
-          S3 Buckets Server-Side Encryption (SSE) should be enabled.
-```
+For more information, see [Policy Packs](/docs/insights/policy/policy-packs/).
 
 ## CDK Aspects
 
@@ -772,13 +751,13 @@ automatically and dynamically create the bootstrap resources as needed.
 When any file assets are added to your application, CDK will automatically
 create the following staging resources.
 
-1. [aws.s3.BucketV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketv2/)
+1. [aws.s3.Bucket](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/)
   1a. `forceDestroy`: true
 2. [aws.s3.BucketServerSideEncryptionConfigurationV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketserversideencryptionconfigurationv2/)
   2a. `AES256`
 3. [aws.s3.BucketVersioningV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketversioningv2/)
   3a. `Enabled`
-4. [aws.s3.BucketLifecycleConfigurationV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketlifecycleconfigurationv2/)
+4. [aws.s3.BucketLifecycleConfiguration](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketlifecycleconfiguration/)
   4a. Expire old versions > 365 days
   5b. Expire deploy-time assets > 30 days
 5. [aws.s3.BucketPolicy](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketpolicy/)

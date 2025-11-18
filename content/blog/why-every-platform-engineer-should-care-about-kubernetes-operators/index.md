@@ -20,8 +20,8 @@ social:
   twitter: |
     Building a successful Kubernetes powered platform? Learn why you should care about Kubernetes Operators! #Kubernetes #Operators #DevOps #PlatformEngineering
   linkedin: |
-    If you are building a Kubernetes powered platform, you should care about Kubernetes Operators. They simplify the deployment, management, and scaling of applications and services on Kubernetes. 
-    This helps platform engineers to focus on strategic tasks and let the operators handle the routine operational tasks. 
+    If you are building a Kubernetes powered platform, you should care about Kubernetes Operators. They simplify the deployment, management, and scaling of applications and services on Kubernetes.
+    This helps platform engineers to focus on strategic tasks and let the operators handle the routine operational tasks.
 
     Do not miss this blog post to learn more about Kubernetes Operators and some of the advanced operators you should use in your Kubernetes powered platform.
 ---
@@ -73,7 +73,7 @@ With all the above points, the benefits of controllers are clear - Let me list s
 - **Automation** - Controllers automate the routine operational tasks and enforce policies.
 - **Availability** - Controllers ensure that the resources are always available, addressing failures and taking actions to maintain the desired state.
 - **Efficiency** - Controllers provide an efficient way to manage the resources and workloads in the cluster with quota management and auto-scaling.
-- **Reliablity** - Controllers help to make workload management more reliable with features like replica management, [pod](/registry/packages/kubernetes/api-docs/core/v1/pod/) creation and deletion, and scheduling.
+- **Reliability** - Controllers help to make workload management more reliable with features like replica management, [pod](/registry/packages/kubernetes/api-docs/core/v1/pod/) creation and deletion, and scheduling.
 - **Flexibility** - Controllers provide a flexible way to handle a variety of workloads and resources in the cluster, such as [DaemonSet](/registry/packages/kubernetes/api-docs/apps/v1/daemonset/), [StatefulSet](/registry/packages/kubernetes/api-docs/apps/v1/statefulset/), [jobs](/registry/packages/kubernetes/api-docs/batch/v1/job/), [cron jobs](/registry/packages/kubernetes/api-docs/batch/v1/cronjob/), [deployments](/registry/packages/kubernetes/api-docs/apps/v1/deployment/), and [services](/registry/packages/kubernetes/api-docs/core/v1/service/).
 - **Observability** - Controllers provide a view into the cluster resources and the state of the resources via the [Kubernetes API](/blog/yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes/#kubernetes-components-and-the-kubernetes-api).
 
@@ -230,8 +230,6 @@ Or use Pulumi to deploy the CloudNativePG Operator:
 ```
 
 {{% /choosable %}}
-
-
 
 #### Usage
 
@@ -693,14 +691,13 @@ Or use Pulumi:
 
 {{% /choosable %}}
 
-
 #### Summary
 
 The Strimzi Operator demonstrates the power of Kubernetes Operators by providing full lifecycle management for Apache Kafka on Kubernetes. It takes care of the heavy lifting of deploying and managing Kafka clusters, making the Strimzi Operator a valuable tool that should be part of every Kubernetes-powered platform, as it covers a wide range of use cases.
 
 ## Conclusion
 
-In this blog post, I highlighted the importance of Kubernetes Operators for platform engineers and how they can harness the advanced automation capabilities of operators to simplify deploying, managing, and scaling applications and services on Kubernetes. 
+In this blog post, I highlighted the importance of Kubernetes Operators for platform engineers and how they can harness the advanced automation capabilities of operators to simplify deploying, managing, and scaling applications and services on Kubernetes.
 
 I provided some examples of advanced Kubernetes operators that I recommend, but if you want to try using Kubernetes Operators in your Kubernetes-powered platform, here are some great guides to get you started with Pulumi and Kubernetes:
 

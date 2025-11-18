@@ -110,7 +110,7 @@ name: simple-yaml
 runtime: yaml
 resources:
   my-bucket:
-    type: aws:s3:BucketV2
+    type: aws:s3:Bucket
   my-bucket-ownership-controls:
     type: aws:s3:BucketOwnershipControls
     properties:
@@ -160,7 +160,7 @@ To begin with, we're naming our program `simple-yaml`, and defining the runtime 
 ```yaml
 resources:
   my-bucket:
-    type: aws:s3:BucketV2
+    type: aws:s3:Bucket
   my-bucket-website:
     type: aws:s3:BucketWebsiteConfigurationV2
     properties:

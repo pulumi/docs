@@ -159,7 +159,7 @@ body {
 }
 ```
 
-Your `normalize.css` can be copied from [this respository](https://github.com/necolas/normalize.css), and the expected `background.jpg` can be downloaded from [this repository](https://github.com/katcosgrove/cloud-systems-101/blob/main/part-one/website/background.jpg).
+Your `normalize.css` can be copied from [this repository](https://github.com/necolas/normalize.css), and the expected `background.jpg` can be downloaded from [this repository](https://github.com/katcosgrove/cloud-systems-101/blob/main/part-one/website/background.jpg).
 
 To see what this looks like before we deploy it, we're going to use a tool called `live-server`. This isn't a real, functional webserver, but it's a useful tool during development for static websites. It will reload automatically when a change is detected, so you don't have to wait for deploys.
 
@@ -295,6 +295,6 @@ Duration: 6s
 
 ```
 
-Notice the `Outputs` section there. Those are the two things we exprted at the very end of our `__main__.py`: the ID of the bucket, and the website URL. Click on the website URL, and you'll see your personal site, deployed to AWS S3 and publicly accessible by anyone! If you don't want to keep this up, run `pulumi destroy` to tear down all of these resources, and you're done!
+Notice the `Outputs` section there. Those are the two things we exported at the very end of our `__main__.py`: the ID of the bucket, and the website URL. Click on the website URL, and you'll see your personal site, deployed to AWS S3 and publicly accessible by anyone! If you don't want to keep this up, run `pulumi destroy` to tear down all of these resources, and you're done!
 
 We're not quite done yet, though&mdash;this site is a little slow, and it's not very interactive. Maybe we want some kind of database associated with it, or the convenience of containers, or the scalability of Kubernetes. Stay tuned for the next tutorial in this series, where we'll keep building on this website to introduce more modern cloud engineering tools until it looks like something you'd happily call production!

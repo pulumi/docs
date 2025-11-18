@@ -7,7 +7,7 @@ meta_desc: "Explore Pulumi's latest features including AI-assisted development w
 meta_image: meta.png
 authors:
     - arun-loganathan
-    - meagan-cojocar 
+    - meagan-cojocar
 tags:
     - features
     - release-notes
@@ -15,6 +15,10 @@ social:
     twitter: "Pulumi Releases Notes: AI-assisted IaC with our MCP Server, new cross-language components, registry expansion, ESC Rotated Secrets, and more! Check out all the new features we've shipped in the last two months!."
     linkedin: "Pulumi Release Notes are out! Take a look at the improvements we have shipped in the last two months across the Pulumi ecosystem! From AI-assisted IaC with our MCP Server to new cross-language components to powerful new capabilities in Pulumi ESC and Insights, these updates deliver on our commitment to making cloud management more powerful, accessible, and secure. Check out our latest release notes to see what's new!"
 ---
+
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
 
 We've been busy over the past two months, shipping significant enhancements across the Pulumi ecosystem. From major improvements to our core IaC platform with Azure Native V3 and cross-language Components to powerful new capabilities in Pulumi ESC and Insights, these updates deliver on our commitment to making cloud management more powerful, accessible, and secure. We're particularly excited about our AI integration through the MCP Server, enabling developers to work with infrastructure in a more intuitive, contextual way. Let's dive into the details of what's new.
 
@@ -100,12 +104,11 @@ Address the persistent challenge of static, long-lived credentials with the new 
 
 Securely inject secrets and configuration directly into your GitHub Actions workflows with the new [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action). This action lets you dynamically inject values from your Pulumi ESC environments as needed during CI/CD runs, eliminating the need to store static, long-lived credentials within GitHub and reducing secret sprawl. Leverage Pulumi ESC's automatic secret rotation capabilities and run ESC commands directly within your workflows for streamlined environment management. Combine this action with [pulumi/auth-actions](https://github.com/marketplace/actions/pulumi-auth-action) for seamless, tokenless authentication to Pulumi Cloud using OIDC, further enhancing security. [Read the blog post](/blog/announcing-pulumi-esc-github-action/).
 
-
 ## Pulumi Insights
 
 ### Enforce Policy as Code on Discovered Resources
 
-Extend the governance reach of Pulumi [Policy as Code](/docs/iac/using-pulumi/crossguard/) beyond IaC-managed resources to encompass your entire cloud environment with a powerful new capability in [Pulumi Insights](/docs/insights/). You can now automatically apply your existing policies to resources discovered by Pulumi Insights, regardless of how they were created. Simply link your [Insights Accounts](/docs/insights/accounts/) (representing cloud provider integrations) to your Policy Groups alongside your stacks. Pulumi will then evaluate all resources within those accounts against your defined policies, surfacing violations centrally. This allows you to write policies once and apply them universally across both IaC and discovered resources, dramatically simplifying how you maintain consistent security and compliance standards at scale across AWS, Azure, OCI, and Kubernetes. [Read the blog post](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/). 
+Extend the governance reach of Pulumi [Policy as Code](/docs/iac/using-pulumi/crossguard/) beyond IaC-managed resources to encompass your entire cloud environment with a powerful new capability in [Pulumi Insights](/docs/insights/). You can now automatically apply your existing policies to resources discovered by Pulumi Insights, regardless of how they were created. Simply link your [Insights Accounts](/docs/insights/accounts/) (representing cloud provider integrations) to your Policy Groups alongside your stacks. Pulumi will then evaluate all resources within those accounts against your defined policies, surfacing violations centrally. This allows you to write policies once and apply them universally across both IaC and discovered resources, dramatically simplifying how you maintain consistent security and compliance standards at scale across AWS, Azure, OCI, and Kubernetes. [Read the blog post](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/).
 
 ## Wrap up
 

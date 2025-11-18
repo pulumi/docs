@@ -1,0 +1,34 @@
+{{/* WebSite Schema with SearchAction - For AI and search engines to understand site structure */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.pulumi.com/#website",
+  "name": "Pulumi",
+  "alternateName": "Pulumi IaC Platform",
+  "url": "https://www.pulumi.com",
+  "description": "Infrastructure as Code platform with AI. Deploy to any cloud using TypeScript, Python, Go, C#, Java, or YAML.",
+  "inLanguage": "en-US",
+  "publisher": {"@id": "https://www.pulumi.com/#organization"},
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.pulumi.com/search/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Infrastructure as Code",
+    "description": "Managing cloud infrastructure through code instead of manual processes"
+  },
+  "mentions": [
+    {"@type": "Thing", "name": "Amazon Web Services", "sameAs": "https://aws.amazon.com"},
+    {"@type": "Thing", "name": "Microsoft Azure", "sameAs": "https://azure.microsoft.com"},
+    {"@type": "Thing", "name": "Google Cloud Platform", "sameAs": "https://cloud.google.com"},
+    {"@type": "Thing", "name": "Kubernetes", "sameAs": "https://kubernetes.io"},
+    {"@type": "Thing", "name": "Docker", "sameAs": "https://docker.com"}
+  ]
+}
+</script>

@@ -233,7 +233,7 @@ Some of the properties inside of your `gcp.compute.Instance` resource include:
 
 ## Deploy your resources
 
-Now run the `pulumi up` command to preview and deploy the resouces you've just defined in your project.
+Now run the `pulumi up` command to preview and deploy the resources you've just defined in your project.
 
 ```bash
 $ pulumi up -y

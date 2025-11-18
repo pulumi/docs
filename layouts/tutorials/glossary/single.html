@@ -1,21 +1,31 @@
 {{ define "main" }}
-    <div class="container mx-auto flex items-start px-4 md:px-0">
-        <div class="md:w-3/12 my-8 sticky-sidebar md:pr-8">
-            <nav></nav>
-        </div>
-        <div class="md:w-7/12 my-8">
-            <header class="container mx-auto">
-                {{ partial "docs/breadcrumb.html" . }}
-                <h1>{{ .Title }}</h1>
-            </header>
-            <section class="container mx-auto my-8">
-                {{ .Content }}
-            </section>
-            <p>
-                <a href="/tutorials/glossary">&larr; Go back to the Glossary</a>
-            </p>
+    <div class="docs-list-main">
+        <div class="docs-main-nav-toggle-wrapper">
+            <div class="docs-main-nav-wrapper">
+                <div id="docs-main-nav" class="docs-main-nav">
+                    <nav class="main-nav">
+                        {{ partial "tutorials/nav.html" . }}
+                    </nav>
+                </div>
+            </div>
+            <div class="docs-nav-toggle">
+                <div class="docs-nav-toggle-icon icon icon-24-24"></div>
+            </div>
         </div>
 
-        <div class="md:w-2/12 md:ml-8 m8-8 "></div>
+        <div class="docs-main-content-wrapper">
+            <div class="docs-main-content">
+                <header>
+                    {{ partial "docs/breadcrumb.html" . }}
+                    <h1>{{ .Title }}</h1>
+                </header>
+                <section class="my-8">
+                    {{ .Content }}
+                </section>
+                <p>
+                    <a href="/tutorials/glossary">&larr; Go back to the Glossary</a>
+                </p>
+            </div>
+        </div>
     </div>
 {{ end }}

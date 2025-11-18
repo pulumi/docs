@@ -36,7 +36,6 @@ tags:
     - community
     - features
 
-
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
 # generated blog page. They are here strictly for reference.
@@ -56,6 +55,10 @@ social:
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 ---
+
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
 
 It's the end of 2024, and like everyone, we're counting down until 2025 while looking back at our year. We've had a very exciting year, from unveiling a bold new vision for Pulumi to delivering cutting-edge updates across our Pulumi Cloud.
 
@@ -83,7 +86,7 @@ Three core capabilities unite these products:
 
 Over 3,000 customers, including Nvidia, BMW, Unity Games, and Tivity Health, leveraged these solutions to enhance velocity, save costs, and secure their infrastructure.
 
-## Highlights of Releases and Enhancements 
+## Highlights of Releases and Enhancements
 
 ![Placeholder Image](any-language-any-cloud.png)
 

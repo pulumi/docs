@@ -5,7 +5,7 @@ h1: Rotate credentials for external services
 meta_desc: Pulumi ESC enables credential rotation for various external services.
 menu:
   esc:
-    name: Rotated secrets
+    name: Rotated Secrets
     identifier: esc-rotated-secrets
     parent: esc-integrations
     weight: 2
@@ -19,5 +19,7 @@ To learn how to set up and use each rotator, follow the links below. All rotator
 |--------------------------------------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------|
 | [aws-iam](/docs/esc/integrations/rotated-secrets/aws-iam/)               | None                                   | The `aws-iam` rotator enables you to rotate access credentials for an AWS IAM User.                                |
 | [mysql](/docs/esc/integrations/rotated-secrets/mysql/)                   | `aws-lambda`(in private networks only) | The `mysql` rotator enables you to rotate user credentials for a MySQL database in your Environment.               |
+| [password](/docs/esc/integrations/rotated-secrets/password/) | None                                   | The `password` rotator enables you to rotate any user defined key by providing password generation rules. |
+| [passphrase](/docs/esc/integrations/rotated-secrets/passphrase/) | None                                   | The `passphrase` rotator enables you to rotate any user defined key by providing memorable passphrase generation rules. |
 | [postgres](/docs/esc/integrations/rotated-secrets/postgres/)             | `aws-lambda`(in private networks only) | The `postgres` rotator enables you to rotate user credentials for a PostgreSQL database in your Environment.       |
 | [snowflake-user](/docs/esc/integrations/rotated-secrets/snowflake-user/) | None                                   | The `snowflake-user` rotator enables you to rotate RSA keypairs for a Snowflake database user in your Environment. |

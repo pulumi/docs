@@ -30,7 +30,7 @@ Today, we are excited to announce the most significant collection of Pulumi ESC 
 
 * [__Environments as Code with IaC__](/blog/esc-automation-api-pulumi-service-provider-launch): New support for defining and managing Pulumi ESC environments, secrets, and configuration from within Pulumi IaC programs allows source-controlled environment specification and managing secrets and configuration lifecycles via code.
 
-All three of these new features double down on Pulumi ESC’s unique approach to secrets and configuration management, which combines a hierarchical and composable approach to defining environments, integration with a wide variety of existing secrets stores and a wide variety of secrets consumers, and a rich configuration-as-code approach. 
+All three of these new features double down on Pulumi ESC’s unique approach to secrets and configuration management, which combines a hierarchical and composable approach to defining environments, integration with a wide variety of existing secrets stores and a wide variety of secrets consumers, and a rich configuration-as-code approach.
 
 Together, these provide the richest experience in the market today for developers to apply software engineering best practices to their secrets and configuration management, enabling the management of secrets and configuration complexity at scale across complex collections of environments and applications.
 
@@ -51,7 +51,7 @@ There are two core features to Pulumi ESC versioning:
 * Visibility into the history of every change made to an environment.
 * The ability to pin any environment reference to a specific revision, or specific tagged version.
 
-These offer the same sort of rich versioning typically seen in other software engineering ecosystems, like Git,  Docker, or NPM - but now applied to your secrets and configuration management as well.  
+These offer the same sort of rich versioning typically seen in other software engineering ecosystems, like Git,  Docker, or NPM - but now applied to your secrets and configuration management as well.
 
 You can see the history of changes to an environment:
 
@@ -96,7 +96,7 @@ Read more about Pulumi ESC versioning in the [launch blog post](/blog/esc-versio
 
 ## ESC SDKs for Python, TypeScript/JavaScript and Go
 
-Pulumi ESC was designed from the beginning to support consuming secrets and configuration from any application or infrastructure project.  While we have seen lots of early usage combining ESC with Pulumi IaC, the two are not fundamentally tied together at all, and ESC is designed to serve the needs of any complex configuration and secrets management workload.  
+Pulumi ESC was designed from the beginning to support consuming secrets and configuration from any application or infrastructure project.  While we have seen lots of early usage combining ESC with Pulumi IaC, the two are not fundamentally tied together at all, and ESC is designed to serve the needs of any complex configuration and secrets management workload.
 
 One of the most important places where secrets and configuration are consumed is in application and service code at runtime.  This can take many forms - a few illustrative examples include:
 
@@ -123,15 +123,15 @@ print(vals['aws']['secrets']['stripeApiKey'])
 Running this gets the Stripe API Key for this environment:
 
 ```bash
-$ python3 __main__.py 
+$ python3 __main__.py
 rk_test_3c88Pc8ZfdBredactedrEhDU11b42wI5KZ
 ```
 
 Lots more details on the features and capabilities of the new Pulumi ESC SDKs in their [launch blog post](/blog/esc-sdk-launch).
 
-# Environments as Code with IaC
+## Environments as Code with IaC
 
-Pulumi ESC helps to manage configuration and secrets complexity at scale via composition and reuse.  But many users still want to go further and version control the definitions of their environments, secrets and configuration.  
+Pulumi ESC helps to manage configuration and secrets complexity at scale via composition and reuse.  But many users still want to go further and version control the definitions of their environments, secrets and configuration.
 
 To enable this, along with many other powerful code-based environment management scenarios, we’ve added support for defining and managing Pulumi ESC Environments via Pulumi IaC itself.  New [`Environment`](/registry/packages/pulumiservice/api-docs/environment/) and [`EnvironmentVersionTag`](/registry/packages/pulumiservice/api-docs/environmentversiontag/) resources are available now in the Pulumi Cloud Provider in the Pulumi registry.
 
@@ -162,7 +162,7 @@ For more on managing Pulumi ESC Environments using Pulumi IaC, check out the [la
 
 [Pulumi ESC](/product/esc/) is a secrets and configuration management offering that provides best-in-class software engineering features for managing secrets and configuration complexity at scale. Today, we are extending this even further with:
 
-* Rich [versioning](/blog/esc-versioning-launch) support for auditability and controlled configuration change rollout.  
+* Rich [versioning](/blog/esc-versioning-launch) support for auditability and controlled configuration change rollout.
 * [SDKs](/blog/esc-sdk-launch) to easily embed ESC at runtime within applications, tools and services.
 * Support for source controlling environment specifications using [`Environment` resources in Pulumi IaC](/blog/esc-automation-api-pulumi-service-provider-launch) programs.
 

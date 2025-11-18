@@ -12,6 +12,10 @@ tags:
     - llm
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 {{% notes type="info" %}}
 There are new intelligent cloud management capabilities available in [**Pulumi Copilot**](/blog/pulumi-copilot).
 {{% /notes %}}

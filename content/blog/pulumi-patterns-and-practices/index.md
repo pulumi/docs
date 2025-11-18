@@ -4,7 +4,7 @@ allow_long_title: true
 date: 2024-08-05
 draft: false
 social_media: "TBD"
-meta_desc: "Pulumi Patterns and Practices Platform (P3) is a reference architecture of a Pulumi-based internal platform for infrastructure management and secure deployments in a large-scale environment."
+meta_desc: "Pulumi Patterns and Practices Platform (P3): A reference architecture for building Pulumi-based internal platforms at enterprise scale."
 meta_image: meta.png
 authors:
     - troy-howard
@@ -17,6 +17,10 @@ tags:
     - enterprise
     - devops
 ---
+
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
 
 Infrastructure management is all fun and games until you find yourself scrolling through 1000+ resources in your AWS console. Worse, when one rogue product team wants to use Azure and your data team wants to be on GCP, you're ARM wrestling in Azure and watching your economies of scale tip the wrong direction as you're copy-pasting CloudFormation templates into yet another git repo. This. Needs. To. Be. A. Platform!
 
