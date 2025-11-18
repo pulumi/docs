@@ -17,7 +17,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: "The year of Cloud Optimization is here! Explore the top 10 trends, including IaC, AI/ML, Kubernetes, platform engineering, security, FinOps, data, and more."
+meta_desc: Explore the top 10 cloud trends for 2026, from AI-driven infrastructure and Kubernetes evolution to IaC, DevSecOps, platform engineering, and modern governance
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -36,14 +36,11 @@ tags:
     - infrastructure-as-code
     - cloud-computing
     - multi-cloud
-    - finops
     - platform-engineering
     - devops
     - devsecops
     - security
 
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
-# for details, and please remove these comments before submitting for review.
 ---
 
 In 2026, several trends will dominate cloud computing, driving innovation, efficiency, and scalability. From Infrastructure as Code (IaC) to AI/ML, platform engineering to multi-cloud and hybrid strategies, and security practices, let's explore the 10 biggest emerging trends.
@@ -58,29 +55,44 @@ According to [Gartner](https://www.gartner.com/en/infrastructure-and-it-operatio
 
 According to McKinsey & Company's "[In search of cloud value](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/in-search-of-cloud-value-can-generative-ai-transform-cloud-roi)" report:
 
-- Cloud enables businesses to innovate, which is worth more than x5 what is possible by simply reducing costs.
-- The anticipated increase in EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization) attributable to cloud adoption is projected to range between 20% and 30% by the year 2030 - but it's expected to vary across different sectors.
-- Asian companies have the most to gain from the cloud, with $1.2 trillion in EBITDA. American institutions stand to capture about $1.1 trillion in cloud value, while European institutions are at $773 billion due to regulatory constraints.
-- Companies that have captured the most ROI consistently do 3 things well: 1/ work closely with business leaders to focus on high-value business cases, 2/ build a robust cloud foundation, and 3/ adopt a product-oriented operating model.
+- **Cloud value is driven by innovation**, worth 5x more than cost savings.
+- **EBITDA uplift of 20–30% by 2030** for high-performing organizations.
+- **Asia leads in projected cloud value**, followed by the US and Europe.
+- High-ROI organizations excel by aligning cloud strategy with business priorities, building strong cloud foundations, and using modern operating models.
 
-## 2. AI-Optimized Clouds Redefine the Infrastructure Landscape
+Teams succeeding in this transition increasingly use Infrastructure as Code, automation, and unified governance frameworks like [Pulumi Insights + Policies](https://www.pulumi.com/product/insights-governance/) to operationalize this value.
 
-The cloud is entering its biggest architectural shift since its inception. Hyperscalers are rapidly rebuilding their platforms around AI-native workloads—introducing new compute architectures, specialized chips, high-bandwidth networking, and integrated agent frameworks. This transformation is reshaping the cloud services enterprises can consume and accelerating the availability of AI-optimized infrastructure across all major providers. Key hyperscaler milestones include:
+## 2. Hyperscalers Accelerate AI-Driven Cloud Expansion
+
+Hyperscalers are making the largest infrastructure investments in cloud history — nearly all centered on AI workloads, inference, and high-performance compute.
 
 - **AWS** has integrated [Anthropic’s Claude 3 and Claude 4 models into Amazon Bedrock](https://www.aboutamazon.com/news/aws/anthropic-claude-4-opus-sonnet-amazon-bedrock) for enterprise LLM workflows. “Claude Opus 4 and Claude Sonnet 4 are available today in Amazon Bedrock, enabling customers to build agents with stronger reasoning, memory, and tool use.” — AWS, May 2025
 - **Microsoft Azure** revenue rose 33% year-over-year in Q3 (ended March 31), outperforming estimates of ~29.7%. [AI contributed 16 percentage points to this growth](https://www.reuters.com/business/microsoft-beats-quarterly-revenue-estimates-ai-shift-bolsters-cloud-demand-2025-04-30/), up from 13 points in the prior quarter. "Microsoft is on track to invest approximately $80 billion to build out AI-enabled datacenters to train AI models and deploy AI and cloud-based applications around the world," said Brad Smith, the Microsoft Vice Chair and President.
 - **Google Cloud** is committing [$25 billion over two years for data center and AI infrastructure expansion](https://www.utilitydive.com/news/google-cloud-blackstone-aws-us-ai-data-center-buildouts/753202) across the PJM grid, with total capital expenditure for 2025 ranging from $75–85 billion. "As our CEO has said, in these early days of a very transformative technology, the risks of under investing are dramatically higher than the risks of over-investing," said Eunice Huang, Head of AI and Emerging Tech Policy.
 - **Oracle** anticipates 15–20% cloud revenue growth in FY 2026–2027 attributable to AI infrastructure demand, tied to its partnership in the [Stargate initiative](https://www.pcgamer.com/software/ai/openais-skyrocketing-spending-could-see-billions-of-dollars-in-silicon-headed-down-the-ai-mines-in-the-next-few-years-including-2-million-nvidia-chips-headed-to-texas-stargate-facility/).
 
-Learn how to [deploy AWS infrastructure at the speed of AI with Pulumi](https://www.pulumi.com/aws/#video).
+As hyperscalers integrate AI deeper into their service layers, engineering teams must adapt with IaC-driven automation, reusable patterns, and policy controls to deploy cloud and AI infrastructure consistently.  
+See how organizations [deploy AWS infrastructure at the speed of AI with Pulumi](https://www.pulumi.com/aws/#video) and [Pulumi Policies](https://www.pulumi.com/docs/insights/policy/).
 
 ## 3. Hybrid and Multi-Cloud to Drive Innovation
 
-Recent market analysis from [ResearchAndMarkets](https://www.businesswire.com/news/home/20250513124988/en/Hybrid-Cloud-Market-Analysis-Growth-Trends-and-Forecasts-Report-2024-2025-2030-Surging-Demand-for-Seamless-Interoperability-Between-Cloud-Services-and-Existing-Systems---ResearchAndMarkets.com) forecasts that the **hybrid cloud market** will double in size from **~$130B in 2024 to $310–330B by 2030**, a shift driven by AI workloads, platform engineering, microservices, and edge computing. [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/hybrid-cloud-market) also reports that **~87% of enterprises run workloads across multiple providers**, confirming that multi-cloud is practically universal among large organizations as of 2025.
+Hybrid and multi-cloud strategies are now mainstream:
+
+- Hybrid cloud will grow from **$130B to $310–330B** by 2030 ([ResearchAndMarkets](https://www.businesswire.com/news/home/20250513124988/en/Hybrid-Cloud-Market-Analysis-Growth-Trends-and-Forecasts-Report-2024-2025-2030-Surging-Demand-for-Seamless-Interoperability-Between-Cloud-Services-and-Existing-Systems---ResearchAndMarkets.com)).
+- **87% of enterprises** run workloads across multiple clouds ([Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/hybrid-cloud-market)).
+- Gartner predicts that **40% of enterprises** will adopt hybrid compute architectures in mission-critical workflows by 2028 (up from 8%).
 
 {{< figure alt="Most popular cloud computing infrastructure by industry. Credit: Cloud Worldwide Service, Forbes" src="/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/most-popular-cloud-computing-infrastructure-by-industry.png" caption="Credit: Cloud Worldwide Service, Forbes" width=100% >}}
 
-Gartner predicts that by 2028, more than 40% of leading enterprises will have adopted hybrid computing paradigm architectures into critical business workflows, up from the current 8%.
+As AI and regulatory requirements grow, organizations must deploy workloads across AWS, Azure, Google Cloud, on-prem, and edge — while maintaining consistent security, compliance, and configuration.
+
+Modern cloud teams use:
+
+- **Infrastructure as Code** for consistent multi-cloud provisioning  
+- **Reusable components and platforms** to standardize architecture  
+- **Policy-driven guardrails** to maintain cost, security, and compliance across clouds  
+
+Pulumi enables all three through its [multi-cloud IaC model](https://www.pulumi.com/docs/iac/), [Pulumi Policies](https://www.pulumi.com/product/insights-governance#video), and [internal developer platform capabilities](https://www.pulumi.com/product/internal-developer-platforms/#video).
 
 ## 4. Enterprises Rebuild Their Cloud Foundations to Operationalize AI
 
@@ -99,6 +111,13 @@ To enable this transition, enterprises are investing in:
 
 As AI becomes deeply embedded across engineering organizations, teams are increasingly using software engineering approaches such as Infrastructure as Code, reusable components, platform engineering, and policy automation to standardize how AI infrastructure is deployed, scaled, and secured across clouds.
 
+### Pulumi users increasingly rely on:
+
+- [Pulumi IaC](https://www.pulumi.com/docs/iac/) for standardized AI infra  
+- [Pulumi ESC](https://www.pulumi.com/product/secrets-management/) for secure secrets  
+- [Pulumi Insights](https://www.pulumi.com/product/insights-governance/) for visibility, cost detection, and misconfiguration analysis  
+- [Pulumi Policies](https://www.pulumi.com/docs/insights/policy/) for AI-specific guardrails  
+
 ## 5. IaC Drives Scalable Cloud, Multi-Cloud, and AI Operations
 
 As cloud environments expand and AI workloads demand highly dynamic infrastructure, Infrastructure as Code (IaC) is becoming the foundation for scaling reliably across all environments. Organizations are increasingly adopting IaC in general-purpose languages to unify development and infrastructure workflows, reduce configuration drift, and deliver cloud resources at speed.
@@ -108,10 +127,10 @@ Modern [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastru
 - **Standardizing multi-cloud and hybrid patterns** so teams can deploy consistently across AWS, Azure, Google Cloud, on-prem, and edge environments.
 - **Integrating seamlessly with cloud providers and third-party services**, including data platforms and messaging systems like CockroachDB, Confluent Cloud, and Kafka.
 - **Providing deeper validation and type-safety**, ensuring parameters, dependencies, and security controls are correct before deployment.
-- **Improving cloud resource efficiency and visibility** with tools like Pulumi Insights.
-- **Embedding security and compliance through Policy as Code**, enforcing guardrails, cost controls, and regulatory requirements automatically.
+- **Improving cloud resource efficiency and visibility** with tools like [Pulumi Insights Discovery](https://www.pulumi.com/docs/insights/discovery/).
+- **Embedding security and compliance through [Policy as Code*](https://www.pulumi.com/docs/insights/policy/)*, enforcing guardrails, cost controls, and regulatory requirements automatically.
 - **Enabling intelligent automation**, from unit and integration tests to auto-remediation policies and policy-driven approvals.
-- **Incorporating AI-driven optimization and insights**, helping teams detect misconfigurations, analyze usage patterns, and generate infrastructure updates with tools like Pulumi Neo and Pulumi Policies.
+- **Incorporating AI-driven optimization and insights**, helping teams detect misconfigurations, analyze usage patterns, and generate infrastructure updates with tools like [Pulumi Neo](https://www.pulumi.com/product/neo/) and [Pulumi Policies](https://www.pulumi.com/blog/policy-next-gen/).
 
 As organizations scale both traditional cloud workloads and AI-driven systems, IaC has become critical for achieving secure, repeatable, and high-velocity operations across every environment.
 
@@ -119,9 +138,11 @@ As organizations scale both traditional cloud workloads and AI-driven systems, I
 
 As AI becomes embedded across cloud-native systems, DevSecOps is entering a new era. Gartner predicts that by **2028, over 50% of enterprises will use AI security platforms** to protect their AI investments. Below are the 3 key predictions for the future of DevSecOps:
 
-1. **AI-Driven Security Automation**: Organizations are adopting AI/ML systems that automate threat detection and deliver remediation at scale. Tools that surface real-time risk signals — such as the infrastructure visibility and analysis features in [Pulumi Insights](https://www.pulumi.com/docs/insights/) and [integrated policy automation](https://www.pulumi.com/docs/insights/policy/) — help teams close the gap between detection and response.
-2. **Secrets Management as a Security Baseline**: Organizations will prioritize [robust secrets management](https://www.pulumi.com/product/secrets-management/) within their DevSecOps processes as data privacy concerns escalate. It will be essential to secure sensitive data, such as API keys, credentials, and other secrets, to ensure compliance and prevent unauthorized access.
-5. **Stronger Collaboration Across Dev, Security, and Platform Teams**: Collaboration between development, security, and operations teams will be crucial for the success of DevSecOps efforts.
+1. **AI-driven security automation**: Teams will increasingly rely on AI to detect threats, enforce policies, and generate secure infrastructure patches. See Pulumi’s capabilities in [AI-powered remediation](https://www.pulumi.com/product/insights-governance/#video).
+
+2. **More focus on secrets management**: With AI systems accessing more sensitive data, secure secret storage will be essential. [Pulumi ESC](https://www.pulumi.com/product/secrets-management/) helps teams centralize and govern credentials, keys, and tokens safely.
+
+3. **Greater cross-team collaboration**: Dev, Sec, and Ops workflows will converge under shared frameworks: IaC, policy automation, runtime scanning, and GitOps.
 
 As organizations increase their use of AI across cloud-native systems, the need for tightly aligned security, governance, and data practices becomes even more urgent. At the Gartner Data & Analytics Summit in Sydney, Carlie Idoine, VP Analyst at Gartner, emphasized this growing dependency:
 
@@ -152,12 +173,19 @@ AIOps features include observability, automation, and real-time analytics to bri
 
 ## 9. Kubernetes Dominance and Increased Complexity
 
-Kubernetes, the open-source container orchestration platform, will continue its ascent in 2026. According to [Markets N Research](https://marketsnresearch.com/report/1649/global-kubernetes-market), the global Kubernetes market size was valued at USD 1.8 billion in 2022 and is projected to be **USD 7.8 billion by 2030, exhibiting a CAGR of 23.40%** during the forecast period.
+Kubernetes will continue its ascent in 2026. According to [Markets N Research](https://marketsnresearch.com/report/1649/global-kubernetes-market), the global Kubernetes market size was valued at USD 1.8 billion in 2022 and is projected to be **USD 7.8 billion by 2030, exhibiting a CAGR of 23.40%** during the forecast period.
 
-The "growing pains" will also increase with rising concerns in security, networking, deployment, scalability, cost, and impact on developer productivity. Read the previous LinkedIn Newsletter article [From Complexity to Simplicity: Streamlining Kubernetes with Infrastructure as Code](https://www.linkedin.com/pulse/from-complexity-simplicity-streamlining-kubernetes-infrastructure?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BHF6x7jyoRWSmk9POeHy0TA%3D%3D).
+The CNCF Annual Survey shows AI/ML workloads rapidly moving onto Kubernetes — including batch pipelines, model experimentation, real-time inference, and data preprocessing — even as only 41% of ML/AI developers are cloud-native today. This shift is accelerating as teams need flexible GPU scheduling, distributed pipelines, and portable execution environments.
 
-Kubernetes is also evolving in response to AI demands. Inference workloads, powered by LLMs and GPUs, now require low-latency execution closer to the user. This shift is pushing organizations to build intelligent orchestration layers that schedule AI pipelines across edge and core clusters—often leveraging Kubernetes as the common control plane.
-Additionally, FinOps and security are becoming deeply integrated into Kubernetes workflows. Policy-as-code extensions are gaining traction to ensure cost transparency, policy enforcement, and secure defaults.
+[Kubernetes is also evolving in response to AI demands](https://www.pulumi.com/blog/beyond-yaml-kubernetes-2026-automation-era/#the-2026-convergence-of-ai-platforms-and-policy-in-kubernetes). Inference workloads, powered by LLMs and GPUs, now require low-latency execution closer to the user. This shift is pushing organizations to build intelligent orchestration layers that schedule AI pipelines across edge and core clusters—often leveraging Kubernetes as the common control plane.
+
+As we move into 2026, three patterns are becoming clear:
+
+- **Kubernetes is evolving to support AI** through GPU-aware scheduling and more advanced workload orchestration.
+- **Governance and consistency matter more than ever**, as teams struggle to secure and manage multi-cluster, multi-cloud environments.
+- **Platform engineering is essential**, providing curated patterns and automation rather than raw YAML to reduce cognitive load.
+
+Kubernetes will remain a strategic foundation — but operating it effectively now depends on robust automation, strong security controls, and standardized delivery models that scale across clouds, clusters, and AI pipelines.
 
 ## 10. AI Code Assistants in the Enterprise
 
@@ -177,10 +205,12 @@ Cloud infrastructure is entering its most transformative era since the rise of K
 - **Infrastructure as Code as the operational backbone**, standardizing deployments across AI, cloud, and hybrid environments
 - **Platform engineering and IDPs** to enable self-service, gold-standard patterns, and automated guardrails
 - **Security integrated into every pipeline**, with AI-assisted threat detection, strong secrets management, and policy-driven compliance
-- **AIOps and intelligent automation** becoming standard for scaling modern cloud systems
+- **AIOps and intelligent automation** are becoming standard for scaling modern cloud systems
 - **Kubernetes evolving for AI**, driving new orchestration patterns across edge, core, and inference clusters
 - **Multi-cloud and hybrid ecosystems** accelerating to support interoperability, resilience, and global workload placement
 
 Taken together, these shifts point to a new model of cloud operations that is intelligent, automated, policy-aware, and built on software engineering principles rather than manual configuration.
 
-Organizations that invest now in strong cloud foundations, unified governance, and scalable automation (through approaches like Infrastructure as Code, reusable components, and policy frameworks) will be positioned to lead in an AI-first world. The gap between teams that modernize and teams that don’t will widen dramatically in 2026 and beyond.
+Organizations that invest now in **modern IaC**, **unified governance**, **reusable components**, and **policy frameworks** — all core capabilities of the Pulumi Cloud platform — will be positioned to lead in an AI-first world. The gap between teams that modernize and those that do not will widen rapidly in 2026 and beyond.
+
+{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
