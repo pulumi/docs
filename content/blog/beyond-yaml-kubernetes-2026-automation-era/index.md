@@ -83,7 +83,6 @@ Pulumi’s 2025 advancements, including [Pulumi Kubernetes Operator 2.0 GA](http
 - [Bring Your YAML and Helm, Then Evolve](/blog/beyond-yaml-kubernetes-2026-automation-era/#bring-your-yaml-and-helm-then-evolve)
 - [Begin Your Kubernetes Automation Journey](/blog/beyond-yaml-kubernetes-2026-automation-era/#begin-your-kubernetes-automation-journey)
 - [Workshop: From Zero to Production in Kubernetes](/blog/beyond-yaml-kubernetes-2026-automation-era/#workshop-from-zero-to-production-in-kubernetes)
-- [Visit Pulumi at KubeCon 2025 Booth 1045](/blog/beyond-yaml-kubernetes-2026-automation-era/#visit-pulumi-at-kubecon-2025-booth-1045)
 - [Final Thoughts](/blog/beyond-yaml-kubernetes-2026-automation-era/#final-thoughts)
 
 ## Why Kubernetes Needs to Go Beyond YAML
@@ -185,17 +184,6 @@ Join the hands-on workshop [*From Zero to Production in Kubernetes*](https://www
 - Reduce YAML complexity while maintaining reliability and speed
 
 [Register now](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/).
-
-## Visit Pulumi at KubeCon 2025 Booth #1045
-
-If you plan to attend [KubeCon + CloudNativeCon North America 2025](https://www.pulumi.com/kubecon/), visit **Booth #1045** to see Kubernetes automation in action.
-
-- Live infrastructure automation across multiple clusters
-- Pulumi Neo generating production-ready infrastructure code from natural language
-- Policy as Code for Kubernetes security and compliance
-- Expert sessions with Pulumi engineers for real-world use cases
-
-[Schedule your expert session](https://calendly.com/pulumi-meetings/demo-pulumi-at-kubecon-atlanta) and explore how Pulumi simplifies Kubernetes at scale.
 
 ## Final Thoughts
 
