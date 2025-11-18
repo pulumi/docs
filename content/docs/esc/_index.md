@@ -55,6 +55,26 @@ sections:
     icon: icon-32-32 yaml-color-32-32
     link: /docs/esc/environments/syntax/
 - type: button-cards
+  heading: Guides
+  description: Step-by-step tutorials for common ESC workflows.
+  cards:
+  - emoji: 🔗
+    heading: Integrate with Pulumi IaC
+    description: Use ESC environments in your Pulumi infrastructure code.
+    link: /docs/esc/guides/integrate-with-pulumi-iac/
+  - emoji: 🔐
+    heading: Managing secrets
+    description: Store, retrieve, and organize secrets in ESC environments.
+    link: /docs/esc/guides/managing-secrets/
+  - emoji: ▶️
+    heading: Running commands with esc run
+    description: Inject secrets into any command or script.
+    link: /docs/esc/guides/running-commands-with-esc/
+  - emoji: 📦
+    heading: Importing environments
+    description: Compose environments and share configuration across teams.
+    link: /docs/esc/guides/importing-environments/
+- type: button-cards
   heading: Capabilities
   cards:
   - emoji: 💻

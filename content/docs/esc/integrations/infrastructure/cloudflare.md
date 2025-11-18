@@ -42,7 +42,7 @@ Ensure you have:
 
 ### 1. Create an ESC Environment
 
-Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, to use the Pulumi Cloud console follow the [console instructions](https://www.pulumi.com/docs/esc/get-started/create-environment/#create-via-the-console).
+Use the Pulumi ESC CLI to create and configure an Environment.
 
 ```bash
 esc login # if needed
@@ -195,7 +195,7 @@ In addition to the [prerequisites above](#prerequisites), ensure you have:
 
 ### 1. Create (or Modify) an ESC Environment
 
-Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, to use the Pulumi Cloud console follow the [console instructions](https://www.pulumi.com/docs/esc/get-started/create-environment/#create-via-the-console).
+Use the Pulumi ESC CLI to create and configure an Environment.
 
 ```bash
 esc login # if needed
