@@ -6,7 +6,7 @@ h1: "Pulumi & Azure: Destroy stack"
 weight: 8
 menu:
     iac:
-        name: Destroy stack
+        name: Cleanup & destroy
         identifier: azure-get-started.destroy-stack
         parent: azure-get-started
         weight: 8
@@ -15,15 +15,27 @@ aliases:
     - /docs/clouds/azure/get-started/destroy-stack/
 ---
 
-Now that you've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of your stack.
+## Cleanup & destroy the stack
 
-To destroy resources, run the following:
+Our final step is to clean up all of the resources we've provisioned. This is as simple as running `pulumi destroy`:
+
+{{% choosable os "linux,macos" %}}
 
 ```bash
-pulumi destroy
+$ pulumi destroy
 ```
 
-You'll be prompted to make sure you really want to delete these resources. This can take a minute or two; Pulumi waits until all resources are shut down and deleted before it considers the destroy operation to be complete.
+{{% /choosable %}}
+
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi destroy
+```
+
+{{% /choosable %}}
+
+Just like `pulumi up`, `pulumi destroy` shows you a preview before performing any changes:
 
 ```
 Previewing destroy (dev):
@@ -42,7 +54,15 @@ Outputs:
 Resources:
     - 5 to delete
 
-Do you want to perform this destroy? yes
+Do you want to perform this destroy?
+> yes
+  no
+  details
+```
+
+As with an update, we can choose `no` or `details`; select `yes` to proceed:
+
+```
 Destroying (dev):
 
      Type                                                   Name                Status
@@ -62,17 +82,29 @@ Resources:
 Duration: 53s
 ```
 
-To delete the stack itself, run [`pulumi stack rm`](/docs/cli/commands/pulumi_stack_rm). Note that this removes the stack
-entirely from Pulumi Cloud, along with all of its update history.
+At this stage, your stack still exists, but all cloud resources have been deleted from it.
 
-Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
+## Remove the stack
 
-- Created a Pulumi new project.
-- Provisioned a new Azure storage account and container.
-- Added an `index.html` file to your container.
-- Served the `index.html` as a static website.
-- Destroyed the resources you've provisioned.
+The final step is to remove the stack itself. Destroy keeps the stack around so that you still have the full
+history of what happened to the stack. Running [`pulumi stack rm`](/docs/cli/commands/pulumi_stack_rm) will
+delete it entirely, including all history and state snapshots. Be careful, this step cannot be undone!
 
-On the next page, we have a collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
+{{% choosable "os" "macos,linux" %}}
+
+```bash
+$ pulumi stack rm
+```
+
+{{% /choosable %}}
+{{% choosable "os" "windows" %}}
+
+```powershell
+> pulumi stack rm
+```
+
+{{% /choosable %}}
+
+You'll be prompted to confirm the removal. Confirm it to successfully complete this tutorial.
 
 {{< get-started-stepper >}}
