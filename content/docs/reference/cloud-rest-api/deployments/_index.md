@@ -12,6 +12,7 @@ aliases:
   - /docs/intro/deployments/api
   - /docs/intro/deployments/api/
   - /docs/pulumi-cloud/deployments/api/
+  - /docs/platform/deployments/api/
   - /docs/pulumi-cloud/reference/deployments/
   - /docs/reference/cloud-rest-api/deployments/
   - /docs/reference/deployments-rest-api
