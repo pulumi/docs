@@ -61,14 +61,10 @@ curl \
 ### Default response
 
 ```
-Status: 200 OK
+Status: 204 No Content
 ```
 
-```
-{
-  "message": "Account FizzBuzz AWS Staging created successfully."
-}
-```
+The operation returns an empty response body. Success is indicated by the `204` status code.
 
 ## Update Account
 
@@ -108,14 +104,10 @@ curl \
 ### Default response
 
 ```
-Status: 200 OK
+Status: 204 No Content
 ```
 
-```
-{
-  "message": "Account FizzBuzz AWS Staging updated successfully."
-}
-```
+The operation returns an empty response body. Success is indicated by the `204` status code.
 
 ## List Accounts
 
