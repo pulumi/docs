@@ -20,6 +20,7 @@ The API provides endpoints for the following operations:
 - Creating new Insights accounts
 - Listing available Insights accounts
 - Getting details for specific accounts
+- Updating existing Insights accounts
 
 ## Create Account
 
@@ -35,7 +36,7 @@ POST /api/preview/insights/pulumi/accounts/{accountName}
 |------------------|--------|-------|-------------------------------------------------------------------------------------------------------|
 | `provider`       | string | body  | The cloud provider for the account (e.g., `aws`, `azure`, `oci`)                               |
 | `environment`    | string | body  | The environment reference for the account, such as `insights/pulumi-staging@2`                         |
-| `cron`           | string | body  | The cron expression defining when the account scan is scheduled (e.g., `0 0 * * *`)                    |
+| `scanSchedule`   | string | body  | The schedule for automated scans. Valid values: `none`, `daily`                    |
 | `providerConfig` | object | body  | The configuration specific to the provider, such as regions for `aws` (e.g., `["us-east-1", "us-east-2"]`) |
 
 ### Example
@@ -49,7 +50,7 @@ curl \
   -d '{
     "provider": "aws",
     "environment": "insights/pulumi-staging@2",
-    "cron": "0 0 * * *",
+    "scanSchedule": "daily",
     "providerConfig": {
       "regions": ["us-east-1", "us-east-2", "us-west-2"]
     }
@@ -66,6 +67,53 @@ Status: 200 OK
 ```
 {
   "message": "Account FizzBuzz AWS Staging created successfully."
+}
+```
+
+## Update Account
+
+Updates an existing Insights account.
+
+```
+PATCH /api/preview/insights/pulumi/accounts/{accountName}
+```
+
+### Parameters
+
+| Parameter        | Type   | In    | Description                                                                                           |
+|------------------|--------|-------|-------------------------------------------------------------------------------------------------------|
+| `accountName`    | string | path  | The name of the account to update.                                                                    |
+| `environment`    | string | body  | The environment reference for the account, such as `insights/pulumi-staging@2`                         |
+| `scanSchedule`   | string | body  | The schedule for automated scans. Valid values: `none`, `daily`                    |
+| `providerConfig` | object | body  | The configuration specific to the provider, such as regions for `aws` (e.g., `["us-east-1", "us-east-2"]`) |
+
+### Example
+
+```bash
+curl \
+  -X PATCH \
+  -H "Accept: application/vnd.pulumi+6" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  -d '{
+    "environment": "insights/pulumi-staging@3",
+    "scanSchedule": "daily",
+    "providerConfig": {
+      "regions": ["us-east-1", "us-west-2"]
+    }
+  }' \
+  https://api.pulumi.com/api/preview/insights/pulumi/accounts/FizzBuzz%20AWS%20Staging
+```
+
+### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "message": "Account FizzBuzz AWS Staging updated successfully."
 }
 ```
 
