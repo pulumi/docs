@@ -264,13 +264,8 @@ const storageAccount = new storage.StorageAccount("sa", {
     kind: storage.Kind.StorageV2,
 });
 
-// Export the primary key of the Storage Account
-const storageAccountKeys = storage.listStorageAccountKeysOutput({
-    resourceGroupName: resourceGroup.name,
-    accountName: storageAccount.name
-});
-
-export const primaryStorageKey = storageAccountKeys.keys[0].value;
+// Export the name of the storage account
+export const storageAccountName = storageAccount.name;
 ```
 
 {{% /choosable %}}
@@ -296,18 +291,8 @@ account = storage.StorageAccount(
     kind=storage.Kind.STORAGE_V2,
 )
 
-# Export the primary key of the Storage Account
-primary_key = (
-    pulumi.Output.all(resource_group.name, account.name)
-    .apply(
-        lambda args: storage.list_storage_account_keys(
-            resource_group_name=args[0], account_name=args[1]
-        )
-    )
-    .apply(lambda accountKeys: accountKeys.keys[0].value)
-)
-
-pulumi.export("primary_storage_key", primary_key)
+# Export the name of the storage account
+pulumi.export("storage_account_name", account.name)
 ```
 
 {{% /choosable %}}
@@ -343,23 +328,8 @@ func main() {
             return err
         }
 
-        // Export the primary key of the Storage Account
-		ctx.Export("primaryStorageKey", pulumi.All(resourceGroup.Name, account.Name).ApplyT(
-			func(args []interface{}) (string, error) {
-				resourceGroupName := args[0].(string)
-				accountName := args[1].(string)
-				accountKeys, err := storage.ListStorageAccountKeys(ctx, &storage.ListStorageAccountKeysArgs{
-					ResourceGroupName: resourceGroupName,
-					AccountName:       accountName,
-				})
-				if err != nil {
-					return "", err
-				}
-
-				return accountKeys.Keys[0].Value, nil
-			},
-		))
-
+        // Export the name of the storage account
+        ctx.Export("storageAccountName", account.Name)
         return nil
     })
 }
@@ -391,22 +361,10 @@ return await Pulumi.Deployment.RunAsync(() =>
         Kind = Kind.StorageV2
     });
 
-    var storageAccountKeys = ListStorageAccountKeys.Invoke(new ListStorageAccountKeysInvokeArgs
-    {
-        ResourceGroupName = resourceGroup.Name,
-        AccountName = storageAccount.Name
-    });
-
-    var primaryStorageKey = storageAccountKeys.Apply(accountKeys =>
-    {
-        var firstKey = accountKeys.Keys[0].Value;
-        return Output.CreateSecret(firstKey);
-    });
-
-    // Export the primary key of the Storage Account
+    // Export the name of the storage account
     return new Dictionary<string, object?>
     {
-        ["primaryStorageKey"] = primaryStorageKey
+        ["storageAccountName"] = storageAccount.Name
     };
 });
 ```
@@ -443,26 +401,7 @@ public class App {
                     .kind(Kind.StorageV2)
                     .build());
 
-            var primaryStorageKey = getStorageAccountPrimaryKey(
-                    resourceGroup.name(),
-                    storageAccount.name());
-
-            ctx.export("primaryStorageKey", primaryStorageKey);
-        });
-    }
-
-    private static Output<String> getStorageAccountPrimaryKey(Output<String> resourceGroupName,
-                                                              Output<String> accountName) {
-        return Output.tuple(resourceGroupName, accountName).apply(tuple -> {
-            var actualResourceGroupName = tuple.t1;
-            var actualAccountName = tuple.t2;
-            var invokeResult = StorageFunctions.listStorageAccountKeys(ListStorageAccountKeysArgs.builder()
-                    .resourceGroupName(actualResourceGroupName)
-                    .accountName(actualAccountName)
-                    .build(), InvokeOptions.Empty);
-            return Output.of(invokeResult)
-                    .applyValue(r -> r.keys().get(0).value())
-                    .asSecret();
+            ctx.export("storageAccountName", storageAccount.name());
         });
     }
 }
@@ -486,21 +425,16 @@ resources:
       sku:
         name: Standard_LRS
       kind: StorageV2
-variables:
-  storageAccountKeys:
-    fn::azure-native:storage:listStorageAccountKeys:
-      resourceGroupName: ${resourceGroup.name}
-      accountName: ${sa.name}
 outputs:
-  primaryStorageKey: ${storageAccountKeys.keys[0].value}
+  storageAccountName: ${sa.name}
 ```
 
 {{% /choosable %}}
 
 The program declares an Azure Resource Group and Storage Account
-[resources](/docs/iac/concepts/resources) and exports the storage account's primary key as a [stack output](/docs/iac/concepts/stacks/#outputs).
+[resources](/docs/iac/concepts/resources) and exports the storage account's name as a [stack output](/docs/iac/concepts/stacks/#outputs).
 Resources are just objects in our language of choice with [properties](/docs/iac/concepts/inputs-outputs) capturing
-their inputs and outputs. Exporting the primary key makes it convenient to use afterwards.
+their inputs and outputs. Exporting the storage account name makes it convenient to reference afterwards.
 
 Now you're ready for your first deployment!
 

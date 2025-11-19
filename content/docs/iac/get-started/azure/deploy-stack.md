@@ -59,7 +59,7 @@ Updating (dev):
  +   └─ azure-native:storage:StorageAccount           sa               created
 
 Outputs:
-    primaryStorageKey: "<key_value>"
+    storageAccountName: "sa4d2a2b9c"
 
 Resources:
     + 3 created
@@ -74,14 +74,14 @@ may take a bit longer, so the update could finish in 20-30 seconds.
 
 ### Using stack outputs
 
-The storage account's primary key can be accessed with the `pulumi stack output` command:
+The storage account's name can be accessed with the `pulumi stack output` command:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
 ```bash
-$ pulumi stack output primaryStorageKey
+$ pulumi stack output storageAccountName
 ```
 
 {{% /choosable %}}
@@ -89,7 +89,7 @@ $ pulumi stack output primaryStorageKey
 {{% choosable language python %}}
 
 ```bash
-$ pulumi stack output primary_storage_key
+$ pulumi stack output storage_account_name
 ```
 
 {{% /choosable %}}
@@ -97,7 +97,7 @@ $ pulumi stack output primary_storage_key
 {{% choosable language go %}}
 
 ```bash
-$ pulumi stack output primaryStorageKey
+$ pulumi stack output storageAccountName
 ```
 
 {{% /choosable %}}
@@ -105,7 +105,7 @@ $ pulumi stack output primaryStorageKey
 {{% choosable language csharp %}}
 
 ```bash
-$ pulumi stack output primaryStorageKey
+$ pulumi stack output storageAccountName
 ```
 
 {{% /choosable %}}
@@ -113,7 +113,7 @@ $ pulumi stack output primaryStorageKey
 {{% choosable language java %}}
 
 ```bash
-$ pulumi stack output primaryStorageKey
+$ pulumi stack output storageAccountName
 ```
 
 {{% /choosable %}}
@@ -121,12 +121,12 @@ $ pulumi stack output primaryStorageKey
 {{% choosable language yaml %}}
 
 ```bash
-$ pulumi stack output primaryStorageKey
+$ pulumi stack output storageAccountName
 ```
 
 {{% /choosable %}}
 
-Running that command will print out the storage account's primary key.
+Running that command will print out the storage account's name.
 
 ### View your update on Pulumi Cloud
 
