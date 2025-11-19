@@ -27,7 +27,7 @@ Self-hosting is only available with **Pulumi Business Critical**. If you would l
 * [Bring your own keys (BYOK) with Pulumi ESC](https://www.pulumi.com/blog/bring-your-own-keys-with-pulumi-esc/) and improved crypto operation capabilities
 
 {{< notes type="warning" >}}
-Breaking Change: Ensure your [AWS KMS](/docs/administration/self-hosting/components/api/#aws-kms) or [Azure Key Vault](/docs/administration/self-hosting/components/api/#azure-key-vault) encryption service permissions are up-to-date.
+Breaking Change: Ensure your [AWS KMS](/docs/administration/self-hosting/components/api/#aws-kms) or [Azure KeyVault](/docs/administration/self-hosting/components/api/#azure-keyvault) encryption service permissions are up-to-date.
 {{< /notes >}}
 
 ### March
