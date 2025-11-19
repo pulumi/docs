@@ -131,8 +131,8 @@ You only need to configure one of the support services.
 
 #### Mandatory key actions
 
-The key's key policy in AWS KMS must define the following actions. Otherwise, the service will fail to start or will not be able to
-run crypto operations:
+Define the following actions in the key's key policy in AWS KMS. Otherwise, the service will fail to start or will not
+be able to run crypto operations:
 
 * `kms:Encrypt`
 * `kms:Decrypt`
@@ -151,10 +151,10 @@ active. The API service never has access to the private key material of the key 
 uses the public key for encryption. The API will request KeyVault to decrypt a cipher text.
 {{% /notes %}}
 
-#### Mandatory key operations / permissions
+#### Mandatory key operations or permissions
 
-The key in Azure KeyVault must support and allow the following operations. Otherwise, the service will fail to start or
-will not be able to run crypto operations:
+Configure the key in Azure KeyVault to support and allow the following operations. Otherwise, the service will fail to
+start or will not be able to run crypto operations:
 
 * `Encrypt`
 * `Decrypt`
