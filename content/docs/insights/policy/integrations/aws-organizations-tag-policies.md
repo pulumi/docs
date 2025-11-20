@@ -14,7 +14,7 @@ menu:
 
 ## Overview
 
-AWS Organizations Tag Policies is a pre-built policy pack that integrates Pulumi with AWS Organizations. This integration validates your infrastructure as code against Tag Policies configured in AWS Organizations, blocking deployments when required tags are missing. For more information, see the [AWS Organizations Tag Policies documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html).
+The [AWS Organizations Tag Policies policy pack](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) is a pre-built policy pack that integrates Pulumi with AWS Organizations. This integration validates your infrastructure as code against Tag Policies configured in AWS Organizations, blocking deployments when required tags are missing. For more information about AWS tag policies, see the [AWS Organizations Tag Policies documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html).
 
 ## How it works
 
@@ -522,6 +522,5 @@ The AWS Provider (`pulumi/aws`) uses different resource type naming conventions 
 
 ## Related documentation
 
-- [AWS Organizations tag Policies documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html)
 - [Policy as Code get started guide](/docs/insights/policy/get-started/)
 - [Pre-Built Policy Packs](/docs/insights/policy/policy-packs/pre-built-packs/)

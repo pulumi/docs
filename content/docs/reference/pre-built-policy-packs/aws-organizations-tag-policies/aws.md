@@ -1,7 +1,7 @@
 ---
 title: "AWS"
 meta_desc: AWS Organizations Tag Policies pack enforces tag policies configured in AWS Organizations.
-h1: "AWS Organizations Tag Policies - AWS"
+h1: "AWS Organizations Tag Policies"
 menu:
   reference:
     name: AWS Organizations Tag Policies
@@ -10,9 +10,7 @@ menu:
     weight: 6
 ---
 
-The **AWS Organizations Tag Policies** pack validates that your infrastructure as code resources comply with tag policies configured in AWS Organizations. Built in partnership with AWS, this pack proactively blocks non-compliant deployments when resources are missing required tags.
-
-For complete documentation including prerequisites, setup instructions, and troubleshooting, see [AWS Organizations Tag Policies](/docs/insights/policy/integrations/aws-organizations-tag-policies/).
+The **AWS Organizations Tag Policies** pack validates that your infrastructure as code resources comply with tag policies configured in AWS Organizations. Built in partnership with AWS, this pack proactively blocks non-compliant deployments when resources are missing required tags. For complete documentation including prerequisites, setup instructions, and supported resources, see the [AWS Organizations Tag Policies integration guide](/docs/insights/policy/integrations/aws-organizations-tag-policies/).
 
 ## Policy
 
