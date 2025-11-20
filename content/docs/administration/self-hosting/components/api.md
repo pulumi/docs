@@ -129,6 +129,16 @@ You only need to configure one of the support services.
 
 ### AWS KMS
 
+#### Mandatory key actions
+
+Define the following actions in the key's key policy in AWS KMS. Otherwise, the service will fail to start or will not
+be able to run crypto operations:
+
+* `kms:Encrypt`
+* `kms:Decrypt`
+* `kms:GenerateDataKey`
+* `kms:GenerateDataKeyWithoutPlaintext`
+
 | Variable Name  | Description                                       |
 |----------------|---------------------------------------------------|
 | PULUMI_KMS_KEY | ARN for the AWS KMS customer master key resource. |
@@ -141,11 +151,20 @@ active. The API service never has access to the private key material of the key 
 uses the public key for encryption. The API will request KeyVault to decrypt a cipher text.
 {{% /notes %}}
 
-| Variable Name               | Description                                                                                                                                                                                                           |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PULUMI_AZURE_KV_URI         | Azure KeyVault URI. For example, `https://<vault-name>.vault.azure.net`.                                                                                                                                              |
-| PULUMI_AZURE_KV_KEY_NAME    | The name of the key in KeyVault. The key must be an RSA key type. We recommend a key size of 2048 for most cases. The key operations must support `Encrypt` and `Decrypt`. Otherwise, the service will fail to start. |
-| PULUMI_AZURE_KV_KEY_VERSION | The version of the key that the service should use. Note: All previous versions of the key must remain enabled.                                                                                                       |
+#### Mandatory key operations or permissions
+
+Configure the key in Azure KeyVault to support and allow the following operations. Otherwise, the service will fail to
+start or will not be able to run crypto operations:
+
+* `Encrypt`
+* `Decrypt`
+* `Sign`
+* `Verify`
+
+| Variable Name            | Description                                                                                                       |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------|
+| PULUMI_AZURE_KV_URI      | Azure KeyVault URI. For example, `https://<vault-name>.vault.azure.net`.                                          |
+| PULUMI_AZURE_KV_KEY_NAME | The name of the key in KeyVault. The key must be an RSA key type. We recommend a key size of 2048 for most cases. |
 
 ## Cloud Provider Authentication
 
