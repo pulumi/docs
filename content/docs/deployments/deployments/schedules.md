@@ -6,6 +6,7 @@ meta_desc: Schedule any Pulumi operation to occur at any time.
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/deployments/schedules/
+- /docs/platform/deployments/schedules/
 menu:
   deployments:
     name: Schedules

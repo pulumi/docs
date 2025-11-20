@@ -12,6 +12,7 @@ menu:
     identifier: deployments-webhooks
 aliases:
 - /docs/pulumi-cloud/webhooks/
+- /docs/platform/webhooks/
 - /docs/reference/service/webhooks/
 - /docs/console/extensions/webhooks/
 - /docs/intro/console/extensions/webhooks/

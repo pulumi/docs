@@ -12,6 +12,7 @@ menu:
     weight: 20
 aliases:
 - /docs/pulumi-cloud/deployments/
+- /docs/platform/deployments/
 - /docs/intro/pulumi-service/deployments/
 - /docs/intro/deployments/
 - /docs/intro/deployments/platform/

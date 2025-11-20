@@ -12,6 +12,7 @@ menu:
     identifier: deployments-deployments-ci-cd-integration-assistant
 aliases:
 - /docs/pulumi-cloud/deployments/ci-cd-integration-assistant/
+- /docs/platform/deployments/ci-cd-integration-assistant/
 - /docs/intro/console/extensions/
 - /docs/intro/console/extensions/ci-cd-integration-assistant/
 - /docs/intro/console/ci-cd-integration-assistant/
