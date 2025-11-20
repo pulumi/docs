@@ -18,7 +18,7 @@ tags:
 
 Tags are the foundation of cloud governance, enabling cost allocation, ownership tracking, compliance reporting, and automation across your AWS infrastructure. Yet missing or inconsistent tags remain one of the most common governance challenges. Manual tag enforcement is error-prone, and discovering missing tags after deployment means your cost reports and compliance audits are already operating with incomplete data.
 
-Today, we're excited to announce a new pre-built policy pack created in partnership with AWS: **AWS Organizations Tag Policies**. This pack validates your infrastructure as code against tag policies configured in AWS Organizations, blocking deployments when required tags are missing; shifting tag governance left into your development workflow. Define your tag requirements once in AWS Organizations and enforce them consistently across all your Pulumi deployments.
+Today, we're excited to announce a new pre-built policy pack created in partnership with AWS: **AWS Organizations Tag Policies**. This pack validates your infrastructure as code against tag policies configured in AWS Organizations, blocking deployments when required tags are missing and shifting tag governance left into your development workflow. Define your tag requirements once in AWS Organizations and enforce them consistently across all your Pulumi deployments.
 
 <!--more-->
 
