@@ -43,7 +43,7 @@ will be notified of events specific to the stack. Organization
 webhooks will be notified for events happening within each of the organization's
 stacks.
 
-The Webhooks page is under the Settings tab in Integrations.
+The Webhooks page is located at **Settings** > **Integrations** > **Webhooks**.
 
 If you are looking for Environment Webhook documentation, it's [here](/docs/esc/webhooks/).
 
