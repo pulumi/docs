@@ -25,7 +25,7 @@ Pulumi Packages are the core technology that enables Pulumi [resources](/docs/ia
 
 Pulumi packages consist of two parts that allow them to be consumed in any Pulumi language:
 
-1. **The provider plugin** which contains Pulumi code and can be written in any language Pulumi supports. The provider plugin contains custom resources, functions, and components. Custom resources define CRUD operations for infrastructure resources. Functions query cloud providers for resource data. Components encapsulate custom resources or other components into reusable abstractions.
+1. **The [provider plugin](/docs/iac/concepts/plugins/#resource-plugins)** which contains Pulumi code and can be written in any language Pulumi supports. The provider plugin contains custom resources, functions, and components. Custom resources define CRUD operations for infrastructure resources. Functions query cloud providers for resource data. Components encapsulate custom resources or other components into reusable abstractions.
 1. **An SDK** in the language of the consuming program, which is generated from the provider's schema file. SDKs may be published and hosted on package feeds (npm, PyPI, etc.) or they may be generated locally by the Pulumi CLI (in combination with the package schema) when the package is added to your Pulumi program.
 
 ## Consuming packages
