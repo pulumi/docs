@@ -88,7 +88,7 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-fuchsia-100;
 
             svg * {
-                stroke: theme("colors.fuchsia.600");
+                stroke: theme("colors.fuchsia.700");
             }
         }
 
@@ -96,7 +96,7 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-purple-100;
 
             svg * {
-                stroke: theme("colors.purple.600");
+                stroke: theme("colors.purple.700");
             }
         }
 
@@ -104,7 +104,7 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-violet-100;
 
             svg * {
-                stroke: theme("colors.violet.600");
+                stroke: theme("colors.violet.700");
             }
         }
 
@@ -112,7 +112,7 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-blue-100;
 
             svg * {
-                stroke: theme("colors.blue.600");
+                stroke: theme("colors.blue.700");
             }
         }
     }
@@ -161,8 +161,8 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-fuchsia-100;
 
             svg * {
-                stroke: theme("colors.fuchsia.600");
-                fill: theme("colors.fuchsia.600") !important;
+                stroke: theme("colors.fuchsia.700");
+                fill: theme("colors.fuchsia.700") !important;
             }
         }
 
@@ -170,12 +170,12 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-purple-100;
 
             svg * {
-                stroke: theme("colors.purple.600");
-                fill: theme("colors.purple.600");
+                stroke: theme("colors.purple.700");
+                fill: theme("colors.purple.700");
             }
 
             svg rect {
-                fill: theme("colors.purple.600");
+                fill: theme("colors.purple.700");
             }
         }
 
@@ -183,8 +183,8 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-violet-100;
 
             svg * {
-                stroke: theme("colors.violet.600");
-                fill: theme("colors.violet.600") !important;
+                stroke: theme("colors.violet.700");
+                fill: theme("colors.violet.700") !important;
             }
         }
 
@@ -192,8 +192,8 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-blue-100;
 
             svg * {
-                stroke: theme("colors.blue.600");
-                fill: theme("colors.blue.600") !important;
+                stroke: theme("colors.blue.700");
+                fill: theme("colors.blue.700") !important;
             }
         }
     }
@@ -251,11 +251,11 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-fuchsia-100;
 
             svg * {
-                stroke: theme("colors.fuchsia.600");
+                stroke: theme("colors.fuchsia.700");
             }
 
             svg rect {
-                fill: theme("colors.fuchsia.600");
+                fill: theme("colors.fuchsia.700");
             }
         }
 
@@ -263,11 +263,11 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-purple-100;
 
             svg * {
-                stroke: theme("colors.purple.600");
+                stroke: theme("colors.purple.700");
             }
 
             svg rect {
-                fill: theme("colors.purple.600");
+                fill: theme("colors.purple.700");
             }
         }
 
@@ -275,11 +275,11 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-violet-100;
 
             svg * {
-                stroke: theme("colors.violet.600");
+                stroke: theme("colors.violet.700");
             }
 
             svg rect {
-                fill: theme("colors.violet.600");
+                fill: theme("colors.violet.700");
             }
         }
 
@@ -287,11 +287,11 @@ $fa-font-path: "/fonts/fontawesome";
             @apply bg-blue-100;
 
             svg * {
-                stroke: theme("colors.blue.600");
+                stroke: theme("colors.blue.700");
             }
 
             svg rect {
-                fill: theme("colors.blue.600");
+                fill: theme("colors.blue.700");
             }
         }
     }

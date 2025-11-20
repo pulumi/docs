@@ -45,12 +45,12 @@
                                 <div class="bg-blue-100 border-l-4 border-blue-500 pl-3 py-2 rounded-r">
                                     <div class="text-sm font-semibold text-blue-900">{{ .title }}</div>
                                     <div class="text-xs text-blue-700 mt-1">{{ substr .description 0 50 }}{{ if gt (len .description) 50 }}...{{ end }}</div>
-                                    <div class="text-xs text-blue-600 mt-1">Current series</div>
+                                    <div class="text-xs text-blue-700 mt-1">Current series</div>
                                 </div>
                             {{ else }}
                                 <!-- Other series -->
                                 <div class="pl-3 py-1">
-                                    <a data-track="series-list" class="text-sm hover:text-blue-600" href="/blog/tag/{{ .slug }}/">
+                                    <a data-track="series-list" class="text-sm hover:text-blue-700" href="/blog/tag/{{ .slug }}/">
                                         <div class="font-medium">{{ .title }}</div>
                                         <div class="text-xs text-gray-600 mt-1">{{ substr .description 0 50 }}{{ if gt (len .description) 50 }}...{{ end }}</div>
                                     </a>
@@ -63,7 +63,7 @@
             
             <!-- Link to view all series -->
             <div class="mt-4 pt-3">
-                <a class="text-blue-600 text-sm" href="/blog/series/">View all series &rarr;</a>
+                <a class="text-blue-700 text-sm" href="/blog/series/">View all series &rarr;</a>
             </div>
         </div>
 
