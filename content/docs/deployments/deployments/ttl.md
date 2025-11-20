@@ -6,6 +6,7 @@ h1: "Time-to-live stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/deployments/ttl/
+- /docs/platform/deployments/ttl/
 menu:
   deployments:
     name: Time-to-live stacks

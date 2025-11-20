@@ -93,6 +93,8 @@ customer_logos:
       link: /case-studies/
     - name: unity
       link: /case-studies/
+    - name: supabase
+      link: /case-studies/
     - name: ae-networks
       link: /case-studies/
     - name: deloitte
@@ -152,6 +154,12 @@ customer_quotes:
       "Pulumi Neo addresses our biggest challenge of <b>eliminating the infrastructure bottleneck</b> that slows down our entire engineering organization. To get to market faster, we require infrastructure intelligence that understands our environment, respects our guardrails, and keeps humans in the loop so we can <b>move faster, safely</b>."
     author: Richard Genthner, Chief Information Security Officer
     logo: boost-insurance
+  supabase:
+    text: |
+      "Since it's just another programming language with control structures and external packages, it makes for a good transition from application code to infrastructure as code. <b>Infrastructure contributors grew from 1-2 people to over 40 active engineers</b> across the organization."
+    author: Paul Cioanca, Platform Engineer
+    logo: supabase
+    link: /case-studies/supabase/
   clear:
     text: |
       “We’ve spent a lot of time building our internal developer platform. We moved from a lower-level Terraform and HCL-based interface to Pulumi, letting us use a custom, higher-level, and much simpler-to-use YAML schema we’ve defined. <b>We've made cloud infrastructure really easy to use for our developers.</b>”

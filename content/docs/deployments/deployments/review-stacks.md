@@ -6,6 +6,7 @@ h1: "Review stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/deployments/review-stacks/
+- /docs/platform/deployments/review-stacks/
 menu:
   deployments:
     name: Review stacks

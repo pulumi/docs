@@ -11,11 +11,21 @@ menu:
     weight: 3
 ---
 
-Environments can be composed from other environments.
+{{% notes type="info" %}}
+New to environment imports? Start with the [step-by-step guide](/docs/esc/guides/importing-environments/) for a hands-on tutorial.
+{{% /notes %}}
 
-Different applications are often configured in similar ways and with common values --- for example, an e-commerce site and order-management system both configured to use the same cloud account, database-connection string, and third-party API key. Managing the duplication of these values across multiple configuration files, however, can be difficult, especially when one of those values changes --- e.g., when an API key is regenerated.
+Pulumi ESC allows you to compose environments by importing configuration and secrets from other environments. This reduces duplication, ensures consistency, and enables you to organize configuration hierarchically. You can import both static and dynamic values, including secrets, from any number of other environments.
 
-To address these challenges, Pulumi ESC allows you to identify common or closely related configuration settings and define them only once, as individual environments, and then _import_ those environments into other, more specialized environments as needed. Imports also allow you to expose certain environments without having to distribute any concrete values and to delegate responsibility for particular environments to other teams in your organization. Environments can import both static and dynamic values, including secrets, from any number of other environments.
+Imports support two modes: **explicit imports** that merge entire environments, and **implicit imports** that reference specific values without exposing the full environment structure.
+
+| Feature | Explicit imports | Implicit imports |
+|---------|-----------------|------------------|
+| **Syntax** | `imports: [project/env]` | `${environments.project.env.path}` |
+| **Scope** | Imports entire environment | Imports specific value only |
+| **Merge behavior** | Full JSON Merge Patch | No merging |
+| **Resolved output** | All imported values visible | Only referenced values visible |
+| **Use case** | Share common configuration across environments | Selectively reference values without exposing full structure |
 
 ## Explicit imports
 

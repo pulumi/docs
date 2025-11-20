@@ -27,7 +27,9 @@ Pulumi supports five categories of plugins:
 
 ### Resource plugins
 
-Resource plugins (also known as [providers](/docs/iac/concepts/resources/providers/)) expose standardized interfaces for managing cloud resources. A listing of providers is available in the [Pulumi Registry](/registry/).
+Resource plugins (also known as [providers](/docs/iac/concepts/resources/providers/)) expose standardized interfaces for managing cloud resources. Resource plugins are distributed as [Pulumi packages](/docs/iac/concepts/packages/). A listing of providers is available in the [Pulumi Registry](/registry/).
+
+In addition to the packages in the Pulumi Registry, you can write your own [components](/docs/iac/concepts/resources/components/) and distribute them as resource plugins, enabling consumption in any Pulumi language. Components can be published to [Pulumi IDP](/docs/idp/) for discoverability within your organization or shared directly via Git references.
 
 When you first run `pulumi preview` or `pulumi up`, the Pulumi CLI will install any required providers that are not already in your plugin cache.
 

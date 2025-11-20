@@ -48,7 +48,7 @@ for instructions on how to generate a private key (in PEM format) and download t
 
 Private keys do not expire and need to be manually revoked. You must keep private keys for GitHub Apps secure.
 Store the private key as a secret by using the `fn::secret` function.
-See "[Pulumi ESC: Store and Retrieve Secrets](/docs/esc/get-started/store-and-retrieve-secrets/#store-environment-values)".
+See "[Managing Secrets](/docs/esc/guides/managing-secrets/#storing-secrets)".
 
 ```yaml
 appId: 123456

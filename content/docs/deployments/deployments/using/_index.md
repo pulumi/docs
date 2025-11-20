@@ -12,10 +12,12 @@ menu:
     identifier: deployments-deployments-using
 aliases:
 - /docs/pulumi-cloud/deployments/using/
-  - /docs/intro/deployments/reference/
-  - /docs/pulumi-cloud/deployments/reference/
-  - /docs/pulumi-cloud/deployments/using-deployments/
-  - /docs/deployments/deployments/reference/
+- /docs/intro/deployments/reference/
+- /docs/pulumi-cloud/deployments/reference/
+- /docs/pulumi-cloud/deployments/using-deployments/
+- /docs/deployments/deployments/reference/
+- /docs/platform/deployments/reference/
+
 ---
 
 This page provides an overview of how to use Pulumi Deployments to automate your infrastructure deployments.

@@ -17,7 +17,7 @@ menu:
 In order for a Pulumi IaC operation like `update` or `preview` work, the Pulumi CLI must be able to access credentials that will allow it to perform the necessary CRUD operations on the resources in your stack. In order for Pulumi Deployments to access the necessary cloud credentials to run your Pulumi operation there are two common approaches you can take:
 
 1. **Use [Pulumi Deployments' OIDC integration](/docs/deployments/deployments/oidc/)** where possible (we support [AWS](/docs/deployments/deployments/oidc/aws/), [Azure](/docs/deployments/deployments/oidc/azure/), and [Google Cloud](/docs/deployments/deployments/oidc/gcp/)), and store any remaining required secrets or configuration in [Pulumi Deployments Environment Variables](/docs/deployments/deployments/reference/#deployment-settings).
-2. **Use [Pulumi ESC](/docs/esc/)** to define an Environment (or Environments), and [import the environment(s) into your stack](/docs/esc/get-started/integrate-with-pulumi-iac/).
+2. **Use [Pulumi ESC](/docs/esc/)** to define an Environment (or Environments), and [import the environment(s) into your stack](/docs/esc/guides/integrate-with-pulumi-iac/).
 
 ## Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC
 

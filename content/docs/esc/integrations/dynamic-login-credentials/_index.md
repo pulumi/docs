@@ -9,6 +9,10 @@ menu:
     identifier: esc-dynamic-login-credentials
     parent: esc-integrations
     weight: 1
+aliases:
+  - /docs/esc/guides/setting-up-oidc/
+  - /docs/esc/get-started/use-short-term-credentials/
+  - /docs/pulumi-cloud/esc/get-started/use-short-term-credentials/
 ---
 
 Pulumi ESC integrates with the following dynamic login providers to enables you to log in to your account using OpenID Connect (OIDC) or by providing static credentials. The provider will return a set of credentials that can be used to access resources or fetch secrets.
