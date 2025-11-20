@@ -260,6 +260,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.StackReferenceOutputDetails.value"><code class="docutils literal notranslate"><span class="pre">StackReferenceOutputDetails.value</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#pulumi.Stash"><code class="docutils literal notranslate"><span class="pre">Stash</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.Stash.input"><code class="docutils literal notranslate"><span class="pre">Stash.input</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.Stash.output"><code class="docutils literal notranslate"><span class="pre">Stash.output</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.StringAsset"><code class="docutils literal notranslate"><span class="pre">StringAsset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.create_urn"><code class="docutils literal notranslate"><span class="pre">create_urn()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.debug"><code class="docutils literal notranslate"><span class="pre">debug()</span></code></a></li>
@@ -2548,6 +2553,39 @@ None if the value is not a secret or if it does not exist.</p>
 <span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi.StackReferenceOutputDetails.value" title="Permalink to this definition"></a></dt>
 <dd><p>Output value returned by the StackReference.
 None if the value is a secret or if it does not exist.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pulumi.Stash">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">Stash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><span class="pre">ResourceOptions</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Input</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">__props__</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Stash" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">Stash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">StashArgs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><span class="pre">ResourceOptions</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Stash stores an arbitrary value in the state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>str</em>) – The type of this resource.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of this resource.</p></li>
+<li><p><strong>props</strong> (<em>Optional</em><em>[</em><em>dict</em><em>]</em>) – An optional list of input properties to use as inputs for the resource.</p></li>
+<li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>ResourceOptions</em></a><em>]</em>) – Optional set of <a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">pulumi.ResourceOptions</span></code></a> to use for this
+resource.</p></li>
+<li><p><strong>dependency</strong> (<em>bool</em>) – True if this is a synthetic resource used internally for dependency tracking.</p></li>
+<li><p><strong>package_ref</strong> (<em>Optional</em><em>[</em><em>Awaitable</em><em>[</em><em>Optional</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The package reference for this resource.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.Stash.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#pulumi.Output" title="pulumi.output.Output"><span class="pre">Output</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pulumi.Stash.input" title="Permalink to this definition"></a></dt>
+<dd><p>The most recent value passed to the stash resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.Stash.output">
+<span class="sig-name descname"><span class="pre">output</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#pulumi.Output" title="pulumi.output.Output"><span class="pre">Output</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pulumi.Stash.output" title="Permalink to this definition"></a></dt>
+<dd><p>The value saved in the state for the stash.</p>
 </dd></dl>
 
 </dd></dl>
