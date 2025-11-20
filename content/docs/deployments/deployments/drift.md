@@ -6,6 +6,7 @@ meta_desc: Track changes in your cloud infrastructure compared to your Pulumi st
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/deployments/drift/
+- /docs/platform/deployments/drift/
 menu:
   deployments:
     name: Drift detection

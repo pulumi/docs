@@ -12,6 +12,7 @@ menu:
     identifier: deployments-projects-and-stacks
 aliases:
 - /docs/pulumi-cloud/projects-and-stacks/
+- /docs/platform/projects-and-stacks/
 - /docs/intro/console/project-and-stack-management/
 - /docs/reference/service/roles-and-access-controls/
 - /docs/console/collaboration/stack-permissions/
