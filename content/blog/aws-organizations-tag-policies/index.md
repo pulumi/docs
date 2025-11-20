@@ -1,6 +1,6 @@
 ---
 title: "Enforce AWS Organizations Tag Policies with Pulumi"
-date: 2025-11-21T00:00:03-08:00
+date: 2025-11-20T10:00:00-08:00
 authors:
   - alejandro-cotroneo
 meta_desc: "Pulumi partners with AWS to bring AWS Organizations Tag Policies validation to infrastructure as code, enforcing mandatory tagging requirements."
