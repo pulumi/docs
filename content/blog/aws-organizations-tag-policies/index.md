@@ -32,7 +32,7 @@ Start by enabling the pack in advisory mode to surface tagging violations in Pul
 
 The pack works with both AWS Classic and AWS Native Pulumi providers, covering the full range of taggable AWS resources. To get started:
 
-1. **Configure tag policies** in AWS Organizations following the [AWS Tag Policies documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html).
+1. **Configure tag policies** in AWS Organizations following the [AWS documentation](https://docs.aws.amazon.com/organizations/latest/userguide/enforce-required-tag-keys-iac.html).
 1. **Grant required permissions** by adding the `resourcegroupstaggingapi:ListRequiredTags` permission to the IAM role or user that runs your Pulumi deployments.
 1. **Enable the pack in Pulumi Cloud**:
    1. From within your organization, navigate to the **Policies** tab
@@ -48,7 +48,7 @@ Within minutes, every Pulumi deployment in your organization will validate tag c
 The AWS Organizations Tag Policies policy pack is now available to all Pulumi Team and Enterprise customers.
 
 - [Get started with the integration](/docs/insights/policy/integrations/aws-organizations-tag-policies/)
-- [Learn about tag policies in AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html)
+- [Learn about enforcing tag policies with AWS Organizations Tag Policies](https://docs.aws.amazon.com/organizations/latest/userguide/enforce-required-tag-keys-iac.html)
 - [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) if you're new to Pulumi
 - [Join the Community Slack](https://slack.pulumi.com/) to share feedback
 

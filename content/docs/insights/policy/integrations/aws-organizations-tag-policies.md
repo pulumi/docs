@@ -14,7 +14,7 @@ menu:
 
 ## Overview
 
-The [AWS Organizations Tag Policies policy pack](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) is a pre-built policy pack that integrates Pulumi with AWS Organizations. This integration validates your infrastructure as code against Tag Policies configured in AWS Organizations, blocking deployments when required tags are missing. For more information about AWS tag policies, see the [AWS Organizations Tag Policies documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html).
+The [AWS Organizations Tag Policies policy pack](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) is a pre-built policy pack that integrates Pulumi with AWS Organizations. This integration validates your infrastructure as code against Tag Policies configured in AWS Organizations, blocking deployments when required tags are missing. For more information about enforcing tag policies with AWS Organizations Tag Policies, see the [AWS documentation](https://docs.aws.amazon.com/organizations/latest/userguide/enforce-required-tag-keys-iac.html).
 
 ## How it works
 
@@ -31,7 +31,7 @@ Before using this policy pack, complete the following setup in AWS:
 
 ### Configure tag policies in AWS Organizations
 
-Tag policies must be configured in your AWS Organization to define which tags are required for your resources. For detailed instructions, see the [AWS Organizations Tag Policies documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html).
+Tag policies must be configured in your AWS Organization to define which tags are required for your resources. For detailed instructions, see the [AWS Organizations Tag Policies documentation](https://docs.aws.amazon.com/organizations/latest/userguide/enforce-required-tag-keys-iac.html).
 
 ### Grant required permissions
 
