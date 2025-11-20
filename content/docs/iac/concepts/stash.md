@@ -15,7 +15,7 @@ menu:
 
 The `Stash` resource is a built-in Pulumi resource that allows you to save values to your stack's state for later retrieval. A stash takes a single input value and stores it in state, making it available as an output property. Stashes are commonly used to persist computed values, pass data between program executions, or save intermediate results that need to be accessed later.
 
-Every `Stash` resource accepts any value as its `input` property and makes that value available through its `output` property. This value is stateful and won't change on later deployments if `input` is changed. The current `input` value is exposed as an output called `input` on the `Stash` resource if that is needed to be looked at.
+Every `Stash` resource accepts any value as its `input` property and makes that value available through its `output` property. The `output` value is stateful and persists the original `input` value even when the `input` property is updated in subsequent deployments. The current `input` value is always available as an output property if you need to reference the updated value.
 
 ## Create a stash {#create-stash}
 
@@ -133,7 +133,7 @@ outputs:
 
 {{< /chooser >}}
 
-Stash is like any other resource in that it's name must be unique across the whole program.
+Stash is like any other resource in that its name must be unique across the whole program.
 
 ## Stashing complex values
 
@@ -335,15 +335,15 @@ When viewing stashed secret values, their plaintext content will not be shown by
 
 ## Updating stashed values
 
-To update the value stored in a `Stash`, simply modify the `input` property and run `pulumi up`. The new value
-will be stored in state, and the `input` property will reflect the updated value. The `output` value will
-continue to return the original value the `Stash` was constructed with.
+To update the value stored in a `Stash` you need to replace the resource. There are a few ways to do this.
 
-To update the `output` value the `Stash` resource needs to be replaced. There are a few ways to do this.
+1. Using the `--target-replace` argument to `up` to tell the engine to replace it.
+1. Using `pulumi state taint` to mark the resource to be replaced on the next deployment.
+1. Using the `TriggerReplacement` resource option to trigger the resource to replace on a change of value.
 
-1) Using the `--target-replace` argument to `up` to tell the engine to replace it.
-2) Using `pulumi state taint` to mark the resource to be replaced on the next deployment.
-3) Using the `TriggerReplacement` resource option to trigger the resource to replace on a change of value.
+Without a replacement any changes to the input `input` will be reflected in the output property `input`, but
+the output property `output` will not change. It will continue to return the original value the `Stash` was
+constructed with.
 
 ## Deleting a stash
 
@@ -398,13 +398,8 @@ import (
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        username, err := os.UserHomeDir()
-        if err != nil {
-            return err
-        }
-
         firstDeployer, err := pulumi.NewStash(ctx, "firstDeployer", &pulumi.StashArgs{
-            Input: pulumi.String(username),
+            Input: pulumi.String(os.Getenv("USER")),
         })
         if err != nil {
             return err
