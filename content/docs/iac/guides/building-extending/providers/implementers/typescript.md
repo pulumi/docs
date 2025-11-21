@@ -45,9 +45,13 @@ npm init -y
 Install dependencies:
 
 ```bash
-npm install @pulumi/pulumi @grpc/grpc-js google-protobuf
+npm install @pulumi/pulumi @grpc/grpc-js google-protobuf@3.21.4
 npm install -D typescript @types/node @types/google-protobuf
 ```
+
+{{% notes type="info" %}}
+Use google-protobuf version 3.21.4 to match the version bundled with the Pulumi SDK. Version 4.x has incompatible API changes.
+{{% /notes %}}
 
 Create `tsconfig.json`:
 
