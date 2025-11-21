@@ -468,31 +468,21 @@ You should see the file created at `test.txt`.
 
 ## Dispatching to multiple resources
 
-The example above shows a single resource type. Real providers typically have many resources and need to dispatch to the correct implementation based on the type token extracted from the URN.
+The example above shows a single resource type. Real providers typically have many resources and need to dispatch to the correct implementation based on the type token.
 
-The URN format is `urn:pulumi:<stack>::<project>::<type>::<name>`, where `<type>` is the resource type token like `myfiles:index:File`.
+Since Pulumi SDK v3.132.0, the type token is available directly in the request via `request.type`:
 
 ```python
-def _get_type_from_urn(self, urn: str) -> str:
-    """Extract the type token from a URN."""
-    # URN format: urn:pulumi:<stack>::<project>::<type>::<name>
-    parts = urn.split("::")
-    if len(parts) >= 3:
-        return parts[2]
-    return ""
-
 def Create(self, request, context):
     """Create a new resource, dispatching based on type."""
-    resource_type = self._get_type_from_urn(request.urn)
-
-    if resource_type == "myfiles:index:File":
+    if request.type == "myfiles:index:File":
         return self._create_file(request, context)
-    elif resource_type == "myfiles:index:Directory":
+    elif request.type == "myfiles:index:Directory":
         return self._create_directory(request, context)
     else:
         context.abort(
             grpc.StatusCode.UNIMPLEMENTED,
-            f"Unknown resource type: {resource_type}"
+            f"Unknown resource type: {request.type}"
         )
 ```
 

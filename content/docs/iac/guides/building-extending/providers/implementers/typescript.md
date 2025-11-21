@@ -489,25 +489,16 @@ You should see the file created at `test.txt`.
 
 ## Dispatching to multiple resources
 
-The example above shows a single resource type. Real providers typically have many resources and need to dispatch to the correct implementation based on the type token extracted from the URN.
+The example above shows a single resource type. Real providers typically have many resources and need to dispatch to the correct implementation based on the type token.
 
-The URN format is `urn:pulumi:<stack>::<project>::<type>::<name>`, where `<type>` is the resource type token like `myfiles:index:File`.
+Since Pulumi SDK v3.132.0, the type token is available directly in the request via `getType()`:
 
 ```typescript
-function getTypeFromURN(urn: string): string {
-    // URN format: urn:pulumi:<stack>::<project>::<type>::<name>
-    const parts = urn.split("::");
-    if (parts.length >= 3) {
-        return parts[2];
-    }
-    return "";
-}
-
 create(
     call: grpc.ServerUnaryCall<any, any>,
     callback: grpc.sendUnaryData<any>
 ) {
-    const resourceType = getTypeFromURN(call.request.getUrn());
+    const resourceType = call.request.getType();
 
     switch (resourceType) {
         case "myfiles:index:File":

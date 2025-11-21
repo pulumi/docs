@@ -13,7 +13,7 @@ menu:
 
 This document describes the gRPC protocol that all Pulumi providers implement. Understanding this protocol is essential for [implementing providers directly](/docs/iac/guides/building-extending/providers/provider-architecture/#layer-2-generated-language-bindings) without a higher-level SDK.
 
-The complete protocol definition is in [`provider.proto`](https://github.com/pulumi/pulumi/blob/master/proto/pulumi/provider.proto).
+The complete protocol definition is in [`provider.proto`](https://github.com/pulumi/pulumi/blob/master/proto/pulumi/provider.proto). You can also find auto-generated documentation at [pulumi.io/docs/proto](https://pulumi.io/docs/proto/).
 
 ## Overview
 
@@ -144,6 +144,8 @@ rpc Create(CreateRequest) returns (CreateResponse)
 **Request fields:**
 
 - `urn` (string): The resource's URN
+- `type` (string): The resource type token (e.g., `myfiles:index:File`)
+- `name` (string): The resource's logical name
 - `properties` (Struct): Input properties (from Check)
 - `timeout` (double): Operation timeout in seconds
 - `preview` (bool): Whether this is a preview operation
@@ -167,6 +169,8 @@ rpc Read(ReadRequest) returns (ReadResponse)
 
 - `id` (string): The resource's ID
 - `urn` (string): The resource's URN
+- `type` (string): The resource type token
+- `name` (string): The resource's logical name
 - `properties` (Struct): Last known state
 - `inputs` (Struct): Last known inputs
 
@@ -190,6 +194,8 @@ rpc Update(UpdateRequest) returns (UpdateResponse)
 
 - `id` (string): The resource's ID
 - `urn` (string): The resource's URN
+- `type` (string): The resource type token
+- `name` (string): The resource's logical name
 - `olds` (Struct): Current state
 - `news` (Struct): New desired inputs
 - `timeout` (double): Operation timeout in seconds
@@ -215,6 +221,8 @@ rpc Delete(DeleteRequest) returns (google.protobuf.Empty)
 
 - `id` (string): The resource's ID
 - `urn` (string): The resource's URN
+- `type` (string): The resource type token
+- `name` (string): The resource's logical name
 - `properties` (Struct): Current state
 - `timeout` (double): Operation timeout in seconds
 

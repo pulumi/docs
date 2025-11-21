@@ -76,7 +76,7 @@ Choose this layer when you're writing a provider in Go and want the fastest path
 
 Many teams prefer to write providers in their standard language, giving them access to familiar tools and libraries. However, Go has a significant advantage: providers written in Go compile to standalone binaries with no runtime dependencies. Users of your provider can consume it from any Pulumi language without installing Go.
 
-Providers written in Python or TypeScript require their respective runtimes to be installed, which adds friction for users. That said, if your team is more productive in Python or TypeScript, the familiar ecosystem and libraries may outweigh the runtime dependency—especially for internal providers where you control the deployment environment.
+Providers written in Python or TypeScript require their respective runtimes to be installed, which adds friction for users. You can bundle Python providers with [PyInstaller](https://pyinstaller.org/) or TypeScript providers with [pkg](https://github.com/vercel/pkg) to create standalone executables, though this adds build complexity. That said, if your team is more productive in Python or TypeScript, the familiar ecosystem and libraries may outweigh the runtime dependency—especially for internal providers where you control the deployment environment.
 
 ### When to use Layer 2 (direct implementation)
 

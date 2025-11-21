@@ -19,7 +19,7 @@ For most Go providers, the [Pulumi Go Provider SDK](/docs/iac/guides/building-ex
 
 ## Prerequisites
 
-You'll need Go 1.21 or later, and a basic understanding of the [provider protocol](/docs/iac/guides/building-extending/providers/implementers/protocol-reference/).
+You'll need Go 1.24 or later, and a basic understanding of the [provider protocol](/docs/iac/guides/building-extending/providers/implementers/protocol-reference/).
 
 ## Project structure
 
@@ -280,7 +280,7 @@ func (p *myFilesProvider) Read(ctx context.Context, req *rpc.ReadRequest) (*rpc.
 	oldInputs := req.Inputs.AsMap()
 	force, _ := oldInputs["force"].(bool)
 
-	state := map[string]interface{}{
+	state := map[string]any{
 		"path":    path,
 		"content": string(data),
 		"force":   force,
@@ -422,30 +422,19 @@ You should see the file created at `test.txt`.
 
 ## Dispatching to multiple resources
 
-The example above shows a single resource type. Real providers typically have many resources and need to dispatch to the correct implementation based on the type token extracted from the URN.
+The example above shows a single resource type. Real providers typically have many resources and need to dispatch to the correct implementation based on the type token.
 
-The URN format is `urn:pulumi:<stack>::<project>::<type>::<name>`, where `<type>` is the resource type token like `myfiles:index:File`.
+Since Pulumi SDK v3.132.0, the type token is available directly in the request via `req.Type`:
 
 ```go
-func getTypeFromURN(urn string) string {
-	// URN format: urn:pulumi:<stack>::<project>::<type>::<name>
-	parts := strings.Split(urn, "::")
-	if len(parts) >= 3 {
-		return parts[2]
-	}
-	return ""
-}
-
 func (p *myFilesProvider) Create(ctx context.Context, req *rpc.CreateRequest) (*rpc.CreateResponse, error) {
-	resourceType := getTypeFromURN(req.Urn)
-
-	switch resourceType {
+	switch req.Type {
 	case "myfiles:index:File":
 		return p.createFile(ctx, req)
 	case "myfiles:index:Directory":
 		return p.createDirectory(ctx, req)
 	default:
-		return nil, status.Errorf(codes.Unimplemented, "unknown resource type: %s", resourceType)
+		return nil, status.Errorf(codes.Unimplemented, "unknown resource type: %s", req.Type)
 	}
 }
 ```
@@ -454,7 +443,7 @@ Apply the same pattern to Check, Diff, Read, Update, and Delete.
 
 ## Working with property bags
 
-Resource inputs and outputs are untyped property bags (`map[string]interface{}`). In production providers, you'll often want to deserialize these into typed structs for safer code, and serialize typed structs back to property bags for responses.
+Resource inputs and outputs are untyped property bags (`map[string]any`). In production providers, you'll often want to deserialize these into typed structs for safer code, and serialize typed structs back to property bags for responses.
 
 ```go
 type FileInputs struct {
@@ -463,7 +452,7 @@ type FileInputs struct {
 	Force   bool   `json:"force"`
 }
 
-func fileInputsFromMap(m map[string]interface{}) FileInputs {
+func fileInputsFromMap(m map[string]any) FileInputs {
 	inputs := FileInputs{}
 	if v, ok := m["path"].(string); ok {
 		inputs.Path = v
@@ -477,8 +466,8 @@ func fileInputsFromMap(m map[string]interface{}) FileInputs {
 	return inputs
 }
 
-func (f FileInputs) toMap() map[string]interface{} {
-	return map[string]interface{}{
+func (f FileInputs) toMap() map[string]any {
+	return map[string]any{
 		"path":    f.Path,
 		"content": f.Content,
 		"force":   f.Force,
