@@ -24,6 +24,7 @@ The API provides endpoints for the following operations:
 - Getting webhook details
 - Updating webhook configuration
 - Testing webhooks with ping functionality
+- Viewing webhook delivery history
 - Deleting webhooks
 
 ## Create Webhook
@@ -264,4 +265,66 @@ curl \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/hooks/{webhookname}/ping
+```
+
+## List Webhook Deliveries
+
+List the delivery history for a webhook, showing details about each webhook invocation including payload, response, and timing information.
+
+```plain
+// List organization webhook deliveries
+GET /api/orgs/{organization}/hooks/{webhookname}/deliveries
+
+// List stack webhook deliveries
+GET /api/stacks/{organization}/{project}/{stack}/hooks/{webhookname}/deliveries
+```
+
+### Parameters
+
+| Parameter      | Type   | In   | Description                                            |
+|----------------|--------|------|--------------------------------------------------------|
+| `organization` | string | path | organization name                                      |
+| `project`      | string | path | project name (only for stack webhooks)                 |
+| `stack`        | string | path | stack name (only for stack webhooks)                   |
+| `webhookname`  | string | path | webhook name                                           |
+
+### Example
+
+```bash
+# List organization webhook deliveries
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/hooks/{webhookname}/deliveries
+
+# List stack webhook deliveries
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/hooks/{webhookname}/deliveries
+```
+
+### Default response
+
+```plain
+Status: 200 OK
+```
+
+```plain
+[
+  {
+    "id": "ea01abd2-90b4-4670-acce-15cc019ed6e4",
+    "kind": "ping",
+    "payload": "{\"timestamp\":1632735487,\"message\":\"🍹 Just a friendly ping from Pulumi 🍹\"}",
+    "timestamp": 1632735487,
+    "duration": 196,
+    "requestUrl": "{webhookurl}",
+    "requestHeaders": "Content-Type: application/json\r\nPulumi-Webhook-Id: ea01abd2-90b4-4670-acce-15cc019ed6e4\r\nPulumi-Webhook-Kind: ping\r\n",
+    "responseCode": 200,
+    "responseHeaders": "{headersfromwebhook}",
+    "responseBody": "OK"
+  }
+]
 ```
