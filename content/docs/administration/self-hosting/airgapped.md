@@ -65,7 +65,7 @@ The complete infrastructure required typically includes:
 * *An Isolated Compute Environment*: A virtual machine (VM) or Kubernetes cluster within the air-gapped network.
 * *Pulumi Self-Hosted Installation Artifacts*: These can be retrieved from a network-accessible environment and transferred to the air-gapped system.
 * *A Private Container Registry*: Required to store Pulumi service images for deployment.
-* *Database and Storage Backend*: PostgreSQL and object storage (such as MinIO or an on-premises S3-compatible storage system) for state management.
+* *Database and Storage Backend*: MySQL and object storage (such as MinIO or an on-premises S3-compatible storage system) for state management.
 * *Internal Package Management*: To host Pulumi SDKs and required language runtimes, as external package managers (npm, PyPI, etc.) won't be accessible.
 * *Automation and CI/CD Setup*: Configured to run within the air-gapped network for secure infrastructure deployments.
 
