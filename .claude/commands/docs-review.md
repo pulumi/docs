@@ -189,6 +189,6 @@ When blog posts introduce or announce new Pulumi features, providers, or signifi
 1. Check if corresponding documentation exists in `content/docs/` for the feature being announced
 2. Verify that API documentation, tutorials, or guides adequately cover the new functionality
 3. If documentation is missing or incomplete, note this in your review with:
-  - Specific gaps identified (e.g., "No ESC integration guide found")
-  - Suggested documentation locations (e.g., "Should add to `content/docs/esc/guides/`")
-  - Recommended documentation type (tutorial, concept guide, API reference, etc.)
+    - Specific gaps identified (e.g., "No ESC integration guide found")
+    - Suggested documentation locations (e.g., "Should add to `content/docs/esc/guides/`")
+    - Recommended documentation type (tutorial, concept guide, API reference, etc.)
