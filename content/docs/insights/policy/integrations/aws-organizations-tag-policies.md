@@ -90,7 +90,9 @@ The AWS Provider (`pulumi/aws`) uses different resource type naming conventions 
 | acm:certificate | aws:acm/certificate:Certificate |
 | airflow:environment | aws:mwaa/environment:Environment |
 | amplify:apps | aws:amplify/app:App |
+| aoss:collection | aws:opensearch/serverlessCollection:ServerlessCollection |
 | app-integrations:data-integration | aws:appintegrations/dataIntegration:DataIntegration |
+| app-integrations:event-integration | aws:appconfig/eventIntegration:EventIntegration |
 | appconfig:application | aws:appconfig/application:Application |
 | appconfig:application/configurationprofile | aws:appconfig/configurationProfile:ConfigurationProfile |
 | appconfig:application/environment | aws:appconfig/environment:Environment |
@@ -201,6 +203,7 @@ The AWS Provider (`pulumi/aws`) uses different resource type naming conventions 
 | dynamodb:table | aws:dynamodb/table:Table |
 | ec2:capacity-reservation | aws:ec2/capacityReservation:CapacityReservation |
 | ec2:carrier-gateway | aws:ec2/carrierGateway:CarrierGateway |
+| ec2:client-vpn-endpoint | aws:ec2clientvpn/endpoint:Endpoint |
 | ec2:customer-gateway | aws:ec2/customerGateway:CustomerGateway |
 | ec2:dedicated-host | aws:ec2/dedicatedHost:DedicatedHost |
 | ec2:dhcp-options | aws:ec2/vpcDhcpOptions:VpcDhcpOptions |
@@ -208,6 +211,7 @@ The AWS Provider (`pulumi/aws`) uses different resource type naming conventions 
 | ec2:elastic-ip | aws:ec2/eip:Eip |
 | ec2:fleet | aws:ec2/fleet:Fleet |
 | ec2:instance | aws:ec2/instance:Instance |
+| ec2:instance-connect-endpoint | aws:ec2transitgateway/instanceConnectEndpoint:InstanceConnectEndpoint |
 | ec2:internet-gateway | aws:ec2/internetGateway:InternetGateway |
 | ec2:ipam | aws:ec2/vpcIpam:VpcIpam |
 | ec2:ipam-pool | aws:ec2/vpcIpamPool:VpcIpamPool |
@@ -235,6 +239,10 @@ The AWS Provider (`pulumi/aws`) uses different resource type naming conventions 
 | ec2:transit-gateway-connect-peer | aws:ec2transitgateway/connectPeer:ConnectPeer |
 | ec2:transit-gateway-multicast-domain | aws:ec2transitgateway/multicastDomain:MulticastDomain |
 | ec2:transit-gateway-route-table | aws:ec2transitgateway/routeTable:RouteTable |
+| ec2:verified-access-endpoint | aws:verifiedaccess/endpoint:Endpoint |
+| ec2:verified-access-group | aws:verifiedaccess/group:Group |
+| ec2:verified-access-instance | aws:verifiedaccess/instance:Instance |
+| ec2:verified-access-trust-provider | aws:verifiedaccess/trustProvider:TrustProvider |
 | ec2:volume | aws:ebs/volume:Volume |
 | ec2:vpc | aws:ec2/vpc:Vpc |
 | ec2:vpc-block-public-access-exclusion | aws:ec2/vpcBlockPublicAccessExclusion:VpcBlockPublicAccessExclusion |
@@ -244,6 +252,7 @@ The AWS Provider (`pulumi/aws`) uses different resource type naming conventions 
 | ec2:vpc-peering-connection | aws:ec2/vpcPeeringConnection:VpcPeeringConnection |
 | ec2:vpn-connection | aws:ec2/vpnConnection:VpnConnection |
 | ec2:vpn-gateway | aws:ec2/vpnGateway:VpnGateway |
+| ecr-public:repository | aws:ecrpublic/repository:Repository |
 | ecr:repository | aws:ecr/repository:Repository |
 | ecs:capacity-provider | aws:ecs/capacityProvider:CapacityProvider |
 | ecs:cluster | aws:ecs/cluster:Cluster |
@@ -362,6 +371,7 @@ The AWS Provider (`pulumi/aws`) uses different resource type naming conventions 
 | lightsail:Disk | aws:lightsail/disk:Disk |
 | lightsail:Distribution | aws:lightsail/distribution:Distribution |
 | lightsail:Instance | aws:lightsail/instance:Instance |
+| lightsail:LoadBalancer | aws:lightsail/lb:Lb |
 | logs:anomaly-detector | aws:cloudwatch/logAnomalyDetector:LogAnomalyDetector |
 | logs:delivery | aws:cloudwatch/logDelivery:LogDelivery |
 | logs:delivery-destination | aws:cloudwatch/logDeliveryDestination:LogDeliveryDestination |
@@ -391,6 +401,7 @@ The AWS Provider (`pulumi/aws`) uses different resource type naming conventions 
 | networkmanager:global-network | aws:networkmanager/globalNetwork:GlobalNetwork |
 | networkmanager:link | aws:networkmanager/link:Link |
 | networkmanager:site | aws:networkmanager/site:Site |
+| notifications-contacts:emailcontact | aws:notifications/contactsEmailContact:ContactsEmailContact |
 | oam:sink | aws:oam/sink:Sink |
 | organizations:account | aws:organizations/account:Account |
 | organizations:ou | aws:organizations/organizationalUnit:OrganizationalUnit |
