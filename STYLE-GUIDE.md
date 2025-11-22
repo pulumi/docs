@@ -205,11 +205,15 @@ See [Hugo diagrams docs](https://gohugo.io/content-management/diagrams/) and [Me
   - Pulumi ESC (Environments, Secrets, and Configuration)  
   - Pulumi IDP (Internal Developer Platform)  
   - Pulumi Insights  
-  - Pulumi Cloud  
+  - Pulumi Cloud
+  - Pulumi Policies  
 - Expand product acronyms at first mention. Use just the product name after.  
 - For non-Pulumi acronyms: spell out on first use, then use the acronym.  
   - Example: Virtual Private Cloud (VPC), then VPC.  
 - Widely known acronyms (API, HTTP, REST) don’t need expansion.
+- *Pulumi Policies* is the product name, so it's a singular proper noun (like "United States" or "Brooks Brothers").
+  - Always refer to it in the singular form (e.g., "Pulumi Policies enforces compliance").
+  - Never refer to it in the plural (e.g., avoid "Pulumi Policies enforce compliance").
 
 ---
 
