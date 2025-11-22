@@ -3,122 +3,185 @@ title_tag: Create a New Project | Azure
 meta_desc: This page provides an overview of how to create a new Azure + Pulumi project.
 title: Create project
 h1: "Pulumi & Azure: Create project"
-weight: 3
+weight: 4
 menu:
     iac:
         name: Create project
         identifier: azure-get-started.create-project
         parent: azure-get-started
-        weight: 3
+        weight: 4
 aliases:
     - /docs/quickstart/azure/create-project/
     - /docs/clouds/azure/get-started/create-project/
+    - /docs/quickstart/azure/review-project/
+    - /docs/clouds/azure/get-started/review-project/
 ---
 
-Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,
-and configuring your Azure credentials, let's create your first Pulumi program.
+## Create a new project
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+A [**project**](/docs/iac/concepts/projects) is a program in your chosen language that defines a collection of related cloud resources. In this step, you will create a new project.
+
+### Initializing your project
+
+Each project lives in its own directory. Create a new one:
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ mkdir quickstart
+```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> mkdir quickstart
+```
+
+{{% /choosable %}}
+
+Change into the new directory:
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ cd quickstart
+```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> cd quickstart
+```
+
+{{% /choosable %}}
+
+Now initialize a new Pulumi project for Azure using the `pulumi new` command:
 
 {{% choosable language typescript %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new azure-typescript
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new azure-typescript
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 {{% choosable language python %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new azure-python
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new azure-python
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 {{% choosable language csharp %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new azure-csharp
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new azure-csharp
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 {{% choosable language go %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new azure-go
 ```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new azure-go
+```
+
+{{% /choosable %}}
 
 {{% /choosable %}}
 
 {{% choosable language java %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new azure-java
 ```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new azure-java
+```
+
+{{% /choosable %}}
 
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new azure-yaml
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
 
-The [`pulumi new`](/docs/cli/commands/pulumi_new) command creates a new Pulumi project with some basic scaffolding based on the cloud and language specified.
+```powershell
+> pulumi new azure-yaml
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
+
+The `pulumi new` command interactively walks through initializing a new project, as well as creating a
+[**stack**](/docs/iac/concepts/stacks) and [**configuring**](/docs/iac/concepts/config) it. A stack is an instance of your
+project and you may have many of them -- like `dev`, `staging`, and `prod` -- each with different configuration settings.
+
+You will be prompted for configuration values such as an Azure location. You can hit ENTER to accept the default of `WestUS2`,
+or can type in another value such as `eastus`:
+
+```
+azure-native:location: The Azure location to use: (WestUS2) eastus
+```
 
 {{< cli-note >}}
-
-After logging in, the CLI will proceed with walking you through creating a new project.
-
-First, you will be asked for a **project name** and **project description**. Hit `ENTER` to accept the default values or specify new values.
-
-```
-This command will walk you through creating a new Pulumi project.
-
-Enter a value or leave blank to accept the (default), and press <ENTER>.
-Press ^C at any time to quit.
-
-project name: (quickstart)
-project description: (A minimal Azure Native Pulumi program)
-Created project 'quickstart'
-```
-
-Next, you will be asked for a **stack name**. Hit `ENTER` to accept the default value of `dev`.
-
-```
-Please enter your desired stack name.
-To create a stack in an organization, use the format <org-name>/<stack-name> (e.g. `acmecorp/dev`).
-stack name: (dev)
-Created stack 'dev'
-```
-
-For Azure projects, you will be prompted for the Azure location. You can accept the default value of `WestUS` or choose another location.
-
-```
-azure-native:location: The Azure location to use: (WestUS2)
-Saved config
-```
-
-To list all available locations, use the `az account list-locations` command.
-
-```bash
-$ az account list-locations --output table
-```
-
-You can then change the region for your stack by using the `pulumi config set` command as shown below:
-
-```bash
-pulumi config set azure-native:location eastus
-```
-
-> What are [projects](/docs/concepts/projects/) and [stacks](/docs/concepts/stack/)? Pulumi projects and stacks let you organize Pulumi code. Consider a Pulumi _project_ to be analogous to a GitHub repo---a single place for code---and a _stack_ to be an instance of that code with a separate configuration. For instance, _Project Foo_ may have multiple stacks for different development environments (Dev, Test, or Prod), or perhaps for different cloud configurations (geographic region for example). See [Organizing Projects and Stacks](/docs/using-pulumi/organizing-projects-stacks/) for some best practices on organizing your Pulumi projects and stacks.
 
 {{% choosable language "typescript" %}}
 
@@ -156,6 +219,289 @@ After the command completes, the project and stack will be ready.
 
 {{% /choosable %}}
 
-Next, we'll review the generated project files.
+### Review your new project's contents
+
+If you list the contents of your directory, you'll see some key files:
+
+{{% choosable language java %}}
+
+- `src/main/java/myproject` is the project's Java package root
+
+{{% /choosable %}}
+
+{{% choosable language "typescript,python,go,csharp,java" %}}
+
+- <span>{{< langfile >}}</span> contains your project's main code that declares an Azure resource group and storage account
+- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project like its name
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project, like its name, as well as declaring your project's resources
+
+{{% /choosable %}}
+
+- `Pulumi.dev.yaml` contains configuration values for the stack you just initialized
+
+Now examine the code in {{< langfile >}}:
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as resources from "@pulumi/azure-native/resources";
+import * as storage from "@pulumi/azure-native/storage";
+
+// Create an Azure Resource Group
+const resourceGroup = new resources.ResourceGroup("resourceGroup");
+
+// Create an Azure resource (Storage Account)
+const storageAccount = new storage.StorageAccount("sa", {
+    resourceGroupName: resourceGroup.name,
+    sku: {
+        name: storage.SkuName.Standard_LRS,
+    },
+    kind: storage.Kind.StorageV2,
+});
+
+// Export the primary key of the Storage Account
+const storageAccountKeys = storage.listStorageAccountKeysOutput({
+    resourceGroupName: resourceGroup.name,
+    accountName: storageAccount.name
+});
+
+export const primaryStorageKey = storageAccountKeys.keys[0].value;
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+"""An Azure RM Python Pulumi program"""
+
+import pulumi
+from pulumi_azure_native import storage
+from pulumi_azure_native import resources
+
+# Create an Azure Resource Group
+resource_group = resources.ResourceGroup("resource_group")
+
+# Create an Azure resource (Storage Account)
+account = storage.StorageAccount(
+    "sa",
+    resource_group_name=resource_group.name,
+    sku={
+        "name": storage.SkuName.STANDARD_LRS,
+    },
+    kind=storage.Kind.STORAGE_V2,
+)
+
+# Export the primary key of the Storage Account
+primary_key = (
+    pulumi.Output.all(resource_group.name, account.name)
+    .apply(
+        lambda args: storage.list_storage_account_keys(
+            resource_group_name=args[0], account_name=args[1]
+        )
+    )
+    .apply(lambda accountKeys: accountKeys.keys[0].value)
+)
+
+pulumi.export("primary_storage_key", primary_key)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi-azure-native-sdk/resources/v2"
+	"github.com/pulumi/pulumi-azure-native-sdk/storage/v2"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Create an Azure Resource Group
+        resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup", nil)
+        if err != nil {
+            return err
+        }
+
+        // Create an Azure resource (Storage Account)
+        account, err := storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
+			ResourceGroupName: resourceGroup.Name,
+			AccessTier:        storage.AccessTierHot,
+			Sku: &storage.SkuArgs{
+				Name: storage.SkuName_Standard_LRS,
+			},
+			Kind: storage.KindStorageV2,
+        })
+        if err != nil {
+            return err
+        }
+
+        // Export the primary key of the Storage Account
+		ctx.Export("primaryStorageKey", pulumi.All(resourceGroup.Name, account.Name).ApplyT(
+			func(args []interface{}) (string, error) {
+				resourceGroupName := args[0].(string)
+				accountName := args[1].(string)
+				accountKeys, err := storage.ListStorageAccountKeys(ctx, &storage.ListStorageAccountKeysArgs{
+					ResourceGroupName: resourceGroupName,
+					AccountName:       accountName,
+				})
+				if err != nil {
+					return "", err
+				}
+
+				return accountKeys.Keys[0].Value, nil
+			},
+		))
+
+        return nil
+    })
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Pulumi.AzureNative.Resources;
+using Pulumi.AzureNative.Storage;
+using Pulumi.AzureNative.Storage.Inputs;
+using System.Collections.Generic;
+
+return await Pulumi.Deployment.RunAsync(() =>
+{
+    // Create an Azure Resource Group
+    var resourceGroup = new ResourceGroup("resourceGroup");
+
+    // Create an Azure resource (Storage Account)
+    var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+    {
+        ResourceGroupName = resourceGroup.Name,
+        Sku = new SkuArgs
+        {
+            Name = SkuName.Standard_LRS
+        },
+        Kind = Kind.StorageV2
+    });
+
+    var storageAccountKeys = ListStorageAccountKeys.Invoke(new ListStorageAccountKeysInvokeArgs
+    {
+        ResourceGroupName = resourceGroup.Name,
+        AccountName = storageAccount.Name
+    });
+
+    var primaryStorageKey = storageAccountKeys.Apply(accountKeys =>
+    {
+        var firstKey = accountKeys.Keys[0].Value;
+        return Output.CreateSecret(firstKey);
+    });
+
+    // Export the primary key of the Storage Account
+    return new Dictionary<string, object?>
+    {
+        ["primaryStorageKey"] = primaryStorageKey
+    };
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.azurenative.resources.ResourceGroup;
+import com.pulumi.azurenative.storage.StorageAccount;
+import com.pulumi.azurenative.storage.StorageAccountArgs;
+import com.pulumi.azurenative.storage.StorageFunctions;
+import com.pulumi.azurenative.storage.enums.Kind;
+import com.pulumi.azurenative.storage.enums.SkuName;
+import com.pulumi.azurenative.storage.inputs.ListStorageAccountKeysArgs;
+import com.pulumi.azurenative.storage.inputs.SkuArgs;
+import com.pulumi.core.Either;
+import com.pulumi.core.Output;
+import com.pulumi.deployment.InvokeOptions;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var resourceGroup = new ResourceGroup("resourceGroup");
+            var storageAccount = new StorageAccount("sa", StorageAccountArgs.builder()
+                    .resourceGroupName(resourceGroup.name())
+                    .sku(SkuArgs.builder()
+                            .name(SkuName.Standard_LRS)
+                            .build())
+                    .kind(Kind.StorageV2)
+                    .build());
+
+            var primaryStorageKey = getStorageAccountPrimaryKey(
+                    resourceGroup.name(),
+                    storageAccount.name());
+
+            ctx.export("primaryStorageKey", primaryStorageKey);
+        });
+    }
+
+    private static Output<String> getStorageAccountPrimaryKey(Output<String> resourceGroupName,
+                                                              Output<String> accountName) {
+        return Output.tuple(resourceGroupName, accountName).apply(tuple -> {
+            var actualResourceGroupName = tuple.t1;
+            var actualAccountName = tuple.t2;
+            var invokeResult = StorageFunctions.listStorageAccountKeys(ListStorageAccountKeysArgs.builder()
+                    .resourceGroupName(actualResourceGroupName)
+                    .accountName(actualAccountName)
+                    .build(), InvokeOptions.Empty);
+            return Output.of(invokeResult)
+                    .applyValue(r -> r.keys().get(0).value())
+                    .asSecret();
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: quickstart
+runtime: yaml
+description: A minimal Azure Native Pulumi YAML program
+resources:
+  resourceGroup:
+    type: azure-native:resources:ResourceGroup
+  sa:
+    type: azure-native:storage:StorageAccount
+    properties:
+      resourceGroupName: ${resourceGroup.name}
+      sku:
+        name: Standard_LRS
+      kind: StorageV2
+variables:
+  storageAccountKeys:
+    fn::azure-native:storage:listStorageAccountKeys:
+      resourceGroupName: ${resourceGroup.name}
+      accountName: ${sa.name}
+outputs:
+  primaryStorageKey: ${storageAccountKeys.keys[0].value}
+```
+
+{{% /choosable %}}
+
+The program declares an Azure Resource Group and Storage Account
+[resources](/docs/iac/concepts/resources) and exports the storage account's primary key as a [stack output](/docs/iac/concepts/stacks/#outputs).
+Resources are just objects in our language of choice with [properties](/docs/iac/concepts/inputs-outputs) capturing
+their inputs and outputs. Exporting the primary key makes it convenient to use afterwards.
+
+Now you're ready for your first deployment!
 
 {{< get-started-stepper >}}

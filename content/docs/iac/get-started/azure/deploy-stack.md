@@ -15,13 +15,15 @@ aliases:
     - /docs/clouds/azure/get-started/deploy-stack/
 ---
 
-Let's go ahead and deploy your stack:
+## Deploy to Azure
+
+Now run `pulumi up` to start deploying your new storage account:
 
 ```bash
 $ pulumi up
 ```
 
-This command evaluates your program and determines the resource updates to make. First, a preview is shown that outlines the changes that will be made when you run the update:
+This command first shows you a **preview** of the changes that will be made:
 
 ```
 Previewing update (dev):
@@ -40,7 +42,12 @@ Do you want to perform this update?
   details
 ```
 
-Once the preview has finished, you are given three options to choose from. Choosing `details` will show you a rich diff of the changes to be made. Choosing `yes` will create your new storage account in Azure. Choosing `no` will return you to the user prompt without performing the update operation.
+No changes have been made yet. You may decline to proceed by selecting `no` or choose `details` to
+see more information about the proposed update like your storage account's properties.
+
+### Performing the update
+
+To proceed and deploy your new storage account, select `yes`. This begins an **update**:
 
 ```
 Do you want to perform this update? yes
@@ -60,7 +67,14 @@ Resources:
 Duration: 26s
 ```
 
-Remember the output you defined in the previous step? That [stack output](/docs/concepts/stack#outputs) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the primary key of your bucket with the following command:
+Updates can take some time since they wait for the cloud resources to finish being created. Storage accounts
+may take a bit longer, so the update could finish in 20-30 seconds.
+
+{{< auto-naming-note resource="storage account" suffix="a1b2c3d" >}}
+
+### Using stack outputs
+
+The storage account's primary key can be accessed with the `pulumi stack output` command:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
@@ -114,8 +128,18 @@ $ pulumi stack output primaryStorageKey
 
 Running that command will print out the storage account's primary key.
 
+### View your update on Pulumi Cloud
+
+If you are logged into [Pulumi Cloud](/docs/pulumi-cloud), you'll see "View Live" hyperlinks in the CLI output during your
+update. These go to [a page](https://app.pulumi.com) with detailed information about your stack including resources,
+configuration, a full history of updates, and more. Click on it to check it out:
+
+<a href="/images/getting-started/console-update.png" target="_blank">
+    <img src="/images/getting-started/console-update.png" alt="A stack update with console output, as shown in the Pulumi Service" />
+</a>
+
 {{< console-note >}}
 
-Now that your storage account has been provisioned, let's modify it to host a static website.
+Now that the storage account has been provisioned, you'll update it to host a static website.
 
 {{< get-started-stepper >}}
