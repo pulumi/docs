@@ -25,19 +25,19 @@ Pulumi Policies empowers you to set guardrails to enforce compliance across your
 
 ## What is policy as code?
 
-Policy as code applies software engineering practices to infrastructure policies. Instead of manually configuring compliance rules through cloud provider consoles or maintaining policy documentation in wikis, you write policies in programming languages and manage them alongside your infrastructure code.
+Policy as code applies software engineering practices to infrastructure policies. You write policies in programming languages and manage them alongside your infrastructure code, instead of manually configuring compliance rules through cloud provider consoles or maintaining policy documentation in wikis.
 
 This approach provides several key benefits:
 
-**Cost control**: Define policies based on resource pricing to prevent expensive deployments before they happen. Set spending limits, identify unused resources, and enforce tagging for cost tracking and allocation across teams.
+- **Cost control**: Define policies based on resource pricing to prevent expensive deployments before they happen. Set spending limits, identify unused resources, and enforce tagging for cost tracking and allocation across teams.
 
-**Compliance and security**: Enforce guardrails that prevent common misconfigurations like public S3 buckets, exposed databases, or overly permissive security groups. Apply consistent security standards across development, staging, and production environments.
+- **Compliance and security**: Enforce guardrails that prevent common misconfigurations like public S3 buckets, exposed databases, or overly permissive security groups. Apply consistent security standards across development, staging, and production environments.
 
-**Early validation**: Catch policy violations during `pulumi preview` before resources are created, not after deployment. This prevents non-compliant infrastructure from reaching production and reduces the time and cost of remediation.
+- **Early validation**: Catch policy violations during `pulumi preview` before resources are created, not after deployment. This prevents non-compliant infrastructure from reaching production and reduces the time and cost of remediation.
 
-**Best practices as code**: Encode organizational standards and cloud provider best practices as versioned, testable policies. Share policy packs across teams to ensure consistent infrastructure patterns throughout your organization.
+- **Best practices as code**: Encode organizational standards and cloud provider best practices as versioned, testable policies. Share policy packs across teams to ensure consistent infrastructure patterns throughout your organization.
 
-**Integration with cloud-native tools**: Work alongside cloud provider features like AWS IAM Access Analyzer or AWS Organizations tag policies, combining Pulumi's policy enforcement with native cloud governance capabilities.
+- **Integration with cloud-native tools**: Work alongside cloud provider features like AWS IAM Access Analyzer or AWS Organizations tag policies, combining Pulumi's policy enforcement with native cloud governance capabilities.
 
 Pulumi Policies brings these policy as code benefits to both Pulumi-managed infrastructure and resources discovered from other tools or created manually.
 
