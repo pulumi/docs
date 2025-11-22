@@ -1,7 +1,7 @@
 ---
 title: Policies
 title_tag: "Pulumi Policies | Insights & Governance"
-meta_desc: Enforce compliance and security policies across all cloud infrastructure with Pulumi Policies—for both IaC stacks and discovered resources.
+meta_desc: Enforce compliance and security across all cloud infrastructure using policy as code with Pulumi Policies—for both IaC stacks and discovered resources.
 h1: Policies
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
