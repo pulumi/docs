@@ -181,3 +181,14 @@ When reviewing **Blog posts or marketing materials**, serve the role of a profes
 - Reject filler, vague generalities, or AI-generated slop.
 - Avoid clickbait phrasing.
 - Clear call-to-action at the end.
+
+### Additional Instructions
+
+When blog posts introduce or announce new Pulumi features, providers, or significant functionality changes:
+
+1. Check if corresponding documentation exists in `content/docs/` for the feature being announced
+2. Verify that documentation, tutorials, or guides adequately cover the new functionality
+3. If documentation is missing or incomplete, note this in your review with:
+    - Specific gaps identified (e.g., "No ESC integration guide found")
+    - Suggested documentation locations (e.g., "Should add to `content/docs/esc/guides/`")
+    - Recommended documentation type (tutorial, concept guide, reference, etc.)
