@@ -11,68 +11,9 @@ menu:
         weight: 1
 ---
 
-Pulumi's migration tools ([converters](/docs/iac/guides/migration/converters/), [`pulumi import`](/docs/iac/cli/commands/pulumi_import/), and the [`import` resource option](/docs/iac/concepts/resources/options/import/)) provide powerful building blocks for bringing existing infrastructure under Pulumi's management. However, real-world migrations involve challenges that go beyond running a single command.
+Pulumi's migration tools ([converters](/docs/iac/guides/migration/converters/), [`pulumi import`](/docs/iac/cli/commands/pulumi_import/), the [`import` resource option](/docs/iac/concepts/resources/options/import/), and [visual import](/docs/insights/discovery/visual-import/)) provide powerful building blocks for bringing existing infrastructure under Pulumi's management. However, real-world migrations involve challenges that go beyond running a single command.
 
 This guide provides an opinionated path through real-world migrations. The goal is **zero downtime and zero resource recreation**. Your infrastructure should continue running exactly as-is while ownership transfers to Pulumi.
-
-## Why migrate to Pulumi
-
-Before diving into the how, it's worth understanding what you gain from migrating to Pulumi.
-
-### One codebase, many environments
-
-Most organizations manage separate dev, staging, and production environments. With traditional IaC tools, this often means:
-
-- Duplicate configuration files with subtle differences
-- Copy-paste errors when promoting changes
-- Drift between environments that's hard to detect
-- No clear way to see what differs between environments
-
-Pulumi lets you consolidate all environments into a **single, shared codebase** with multiple stacks. Environment-specific values come from configuration, not duplicated files:
-
-```typescript
-const config = new pulumi.Config();
-const instanceType = config.require("instanceType");  // t3.micro in dev, t3.xlarge in prod
-const replicas = config.requireNumber("replicas");    // 1 in dev, 3 in prod
-
-// Same code, different configurations
-const service = new aws.ecs.Service("api", {
-    desiredCount: replicas,
-    // ...
-});
-```
-
-This means:
-
-- **One PR promotes to all environments**: Change the code once, deploy to each stack
-- **Differences are explicit**: Configuration files clearly show what varies
-- **Refactoring is safe**: IDE support, type checking, and tests catch errors before deployment
-
-### Real programming languages
-
-Pulumi uses general-purpose languages (TypeScript, Python, Go, C#, Java), which unlocks capabilities impossible in domain-specific languages:
-
-- **Loops and conditionals** that work naturally, with no `count` hacks or `for_each` limitations
-- **Functions and classes** for real abstraction and code reuse
-- **Package managers** to share and version infrastructure components
-- **Testing frameworks** to validate infrastructure before deployment
-- **IDE support** with autocomplete, refactoring, and inline documentation
-
-### Component reuse
-
-Pulumi [components](/docs/iac/concepts/resources/components/) let you build reusable infrastructure building blocks that encapsulate best practices:
-
-```typescript
-// Your team's standard VPC component
-const network = new StandardVpc("main", {
-    environment: "prod",
-    cidrBlock: "10.0.0.0/16",
-});
-
-// Encapsulates: VPC, subnets, route tables, NAT gateways, security groups, flow logs...
-```
-
-During migration, you can start with the generated code and progressively refactor into components, improving maintainability without changing the underlying infrastructure.
 
 ## The golden path: incremental migration
 
@@ -114,11 +55,60 @@ This catches code errors, missing dependencies, and conversion issues before you
 - You're importing directly without conversion (no generated code to test)
 - Resources involve data that can't be duplicated (databases, storage with data)
 
+### One-at-a-time vs bulk import
+
+You can import resources individually or in bulk using an import file. Each approach has tradeoffs:
+
+**One-at-a-time** (recommended for learning):
+
+```bash
+pulumi import aws:s3/bucket:Bucket my-bucket my-bucket-name
+```
+
+- Know exactly which resource caused a failure
+- Easier to debug ID format issues
+- Clear recovery point if something goes wrong
+- Best for your first migration or unfamiliar resource types
+
+**Bulk import** (recommended once comfortable):
+
+```bash
+pulumi import --file import.json
+```
+
+Where `import.json` contains:
+
+```json
+{
+    "resources": [
+        {
+            "type": "aws:s3/bucket:Bucket",
+            "name": "my-bucket",
+            "id": "my-bucket-name"
+        },
+        {
+            "type": "aws:s3/bucketPolicy:BucketPolicy",
+            "name": "my-bucket-policy",
+            "id": "my-bucket-name"
+        }
+    ]
+}
+```
+
+- Faster for large migrations
+- Harder to pinpoint failures
+- Partial state is harder to recover from
+- Best when you're confident in the ID formats and resource types
+
+**When bulk importing, group resources by dependency layer**: import VPCs before subnets, subnets before instances. If a bulk import fails partway through, check which resources made it into state with `pulumi stack export` and remove already-imported resources from your import file before retrying.
+
 ### What to avoid
 
 - **Big bang migrations**: Converting everything at once leaves you with too many variables when something goes wrong.
 - **Skipping verification**: Never assume an import worked. Always run preview and confirm no changes.
 - **Deleting source state early**: Keep your Terraform state or CloudFormation stacks intact until Pulumi fully owns the resources.
+- **Refactoring while migrating**: Get the migration working first, then optimize. Trying to improve code structure, switch providers, or clean up resources during the initial import creates compound problems. Decouple these concerns.
+- **Quitting early**: Iterate until your preview is completely clean—no diffs, no updates, no replacements. "Close enough" isn't good enough when the goal is zero disruption.
 
 ## Planning your target structure
 
@@ -126,7 +116,9 @@ Before importing resources, design how your Pulumi project should be organized. 
 
 ### Consolidating multiple source states
 
-If you have separate Terraform workspaces, CloudFormation stacks, or ARM deployments for each environment, plan to consolidate them into a single Pulumi project:
+If you have separate Terraform workspaces, CloudFormation stacks, or ARM deployments for each environment, you're probably maintaining near-duplicate configurations with subtle differences. This leads to copy-paste errors when promoting changes, drift between environments that's hard to detect, and no clear way to see what actually differs.
+
+Migration is an opportunity to consolidate into a single Pulumi project with multiple stacks:
 
 ```
 my-infrastructure/
@@ -138,7 +130,7 @@ my-infrastructure/
 └── ...
 ```
 
-This consolidation is one of the most valuable outcomes of migration. You'll go from maintaining N copies of similar infrastructure to maintaining one codebase.
+You'll go from maintaining N copies of similar infrastructure to maintaining one codebase where environment-specific values come from configuration files, not duplicated code.
 
 **Identify what varies between environments**:
 
@@ -166,6 +158,8 @@ const bucket = new aws.s3.Bucket("data", {
 });
 ```
 
+With this structure, a single PR promotes changes to all environments, configuration files make differences explicit, and IDE support catches errors before deployment.
+
 ### Code organization
 
 Converters typically output a single file. For maintainability, split resources into logical groups:
@@ -179,7 +173,11 @@ my-infrastructure/
 └── dns.ts             # Route53, certificates
 ```
 
-You can do this refactoring after migration. The first priority is getting resources imported cleanly.
+**Preserve structure from your source**: If your original Terraform modules, CloudFormation nested stacks, or CDK constructs had a logical organization, preserve it in Pulumi. The original authors were probably thoughtful about this structure. Map Terraform modules and CDK constructs to [Pulumi components](/docs/iac/concepts/resources/components/)—these are reusable abstractions that encapsulate related resources and can be shared across projects.
+
+Because Pulumi uses general-purpose languages, you can use functions and classes for abstraction, loops and conditionals that work naturally, and components to encapsulate patterns your team uses repeatedly.
+
+You can do this refactoring after migration. The first priority is getting resources imported cleanly—start with the generated code, then progressively improve the structure without changing the underlying infrastructure.
 
 ## Finding resource IDs
 
@@ -368,6 +366,40 @@ const bucket = new aws.s3.Bucket("my-bucket", {
 storageClass: "standard",  // Change to "STANDARD"
 ```
 
+### Example: resolving a diff
+
+Here's what the iteration workflow looks like in practice. Running `pulumi preview --diff` shows:
+
+```
+~ aws:ec2/instance:Instance (update)
+    [id=i-0abc123def456789]
+    [urn=urn:pulumi:prod::infra::aws:ec2/instance:Instance::web-server]
+  ~ tags: {
+      ~ Environment: "production" => "Production"
+    }
+```
+
+This diff tells you:
+
+- The `~` means update (not create or delete)
+- The `tags.Environment` value differs: cloud has `"Production"`, your code has `"production"`
+
+**Fix**: Update your code to match the cloud's casing:
+
+```typescript
+// Before
+tags: {
+    Environment: "production",
+},
+
+// After
+tags: {
+    Environment: "Production",
+},
+```
+
+Run `pulumi preview --diff` again. If clean, you're done with this resource. If more diffs appear, repeat until the preview shows no changes.
+
 ### Iteration workflow
 
 1. **Run preview with diff**: `pulumi preview --diff` shows property-level differences.
@@ -381,11 +413,15 @@ storageClass: "standard",  // Change to "STANDARD"
 
 1. **Run `pulumi up`** only after achieving a clean preview.
 
+**Using import output as validation**: When you run `pulumi import`, it generates code for the imported resources. If you converted code separately (from Terraform, CloudFormation, or CDK), prefer your converted code over the import-generated code—it preserves structure, abstractions, and logical groupings that import can't infer. However, compare the import output against your code to catch mistakes. Import-generated code is often over-specified with default values, but it can reveal properties you missed or got wrong.
+
 If you suspect the cloud state changed since import, run `pulumi refresh` to update Pulumi's state from the cloud before iterating on your code.
 
 ### Critical: avoiding replacements
 
+{{% notes type="warning" %}}
 If preview shows a resource will be **replaced** (deleted and recreated), **stop immediately**. Replacements cause downtime and data loss.
+{{% /notes %}}
 
 Common causes of replacements:
 

@@ -15,6 +15,10 @@ aliases:
 
 If your team has already provisioned infrastructure using AWS CDK, and you'd like to adopt Pulumi, you have two primary strategies you can take:
 
+{{% notes type="info" %}}
+Before starting your migration, read the [Best Practices](/docs/iac/guides/migration/best-practices/) guide for guidance on planning your migration, finding resource IDs, achieving clean previews, and avoiding common pitfalls.
+{{% /notes %}}
+
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by CDK by referencing stack outputs.
 * [**Convert**](#converting-cdk-applications) your CDK application to use [Pulumi CDK](https://github.com/pulumi/pulumi-cdk)
 

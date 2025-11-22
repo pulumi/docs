@@ -20,6 +20,10 @@ aliases:
 
 If your team has already provisioned infrastructure using AWS CloudFormation, and you'd like to adopt Pulumi, you have three primary strategies you can take:
 
+{{% notes type="info" %}}
+Before starting your migration, read the [Best Practices](/docs/iac/guides/migration/best-practices/) guide for guidance on planning your migration, finding resource IDs, achieving clean previews, and avoiding common pitfalls.
+{{% /notes %}}
+
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by CloudFormation by referencing stack outputs.
 * [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing resources into Pulumi in the usual way.
 * [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
