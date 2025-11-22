@@ -15,6 +15,10 @@ Pulumi's migration tools ([converters](/docs/iac/guides/migration/converters/), 
 
 This guide provides an opinionated path through real-world migrations. The goal is **zero downtime and zero resource recreation**. Your infrastructure should continue running exactly as-is while ownership transfers to Pulumi.
 
+{{% notes type="info" %}}
+[Pulumi Neo](/docs/ai/) can handle this entire workflow automatically. It understands these best practices, reacts to problems, and iterates until your preview is clean. This is faster and requires far less toil than doing it manually. See [AI-assisted migration](#ai-assisted-migration) for details.
+{{% /notes %}}
+
 ## The golden path: incremental migration
 
 The safest migration approach is **incremental**: migrate one logical group of resources at a time, verify each group before proceeding, and maintain the ability to roll back.
@@ -485,15 +489,24 @@ Pulumi's AI tools understand migration challenges and can automate much of the c
 
 ### Pulumi Neo
 
-[Pulumi Neo](/docs/ai/) is an infrastructure automation agent that excels at migrations. Point it at your repository and cloud account, and it will:
+[Pulumi Neo](/docs/ai/) is an infrastructure automation agent that excels at migrations. Neo understands all of the best practices in this guide and follows them automatically. It reacts to problems (failed imports, unexpected diffs, partial failures) without manual intervention and iterates relentlessly until your preview is clean.
+
+Point it at your repository and cloud account, and it will:
 
 - Discover resources to migrate
 - Map source types to Pulumi types
 - Find correct resource IDs
-- Generate and iterate code until previews are clean
+- Generate code that preserves structure from your source
+- Import resources in dependency order
+- React to diffs and fix them automatically
+- Iterate until previews are completely clean
 - Parameterize for multiple environments
 
-To use Neo, navigate to [Pulumi Cloud](https://app.pulumi.com), start a task, and describe your migration goal. Neo handles the iteration loop that would otherwise require significant manual effort.
+Neo handles the tedious parts of migration: looking up ID formats, debugging type mismatches, removing over-specified defaults, and retrying failed imports. It does this faster than a human and without the toil.
+
+Neo works with human-in-the-loop approvals by default: before executing import commands or other state-changing operations, it asks for permission. You can set it to auto-approve if you prefer, but either way you stay in control of what happens to your infrastructure.
+
+To use Neo, navigate to [Pulumi Cloud](https://app.pulumi.com), start a task, and describe your migration goal.
 
 ### MCP Server
 
