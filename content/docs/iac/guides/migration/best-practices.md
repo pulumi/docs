@@ -35,6 +35,64 @@ The safest migration approach is **incremental**: migrate one logical group of r
 
 1. **Retire the old tool last**: Only delete resources from Terraform state or CloudFormation stacks after Pulumi successfully manages them with clean previews.
 
+### Choosing your import approach
+
+Pulumi offers multiple ways to import resources. The best approach depends on whether you have source templates to convert.
+
+**Convert + Import (recommended when you have source templates)**
+
+If you're migrating from Terraform, ARM, Bicep, CloudFormation, or Kubernetes YAML, convert the templates first. Converted code preserves structure better than import-generated code.
+
+For Terraform:
+
+```bash
+# 1. Convert HCL to Pulumi code
+pulumi convert --from terraform --language typescript
+
+# 2. Import state without generating conflicting code
+pulumi import --from terraform ./terraform.tfstate --generate-code=false
+
+# 3. Preview and iterate until clean
+pulumi preview --diff
+```
+
+For ARM, CloudFormation, or Kubernetes:
+
+```bash
+# 1. Convert templates to Pulumi code
+pulumi convert --from arm --language typescript  # or cloudformation, kubernetes
+
+# 2. Create import file with resource IDs from your cloud
+# 3. Import state
+pulumi import --file import.json --generate-code=false
+
+# 4. Preview and iterate until clean
+pulumi preview --diff
+```
+
+The `--generate-code=false` flag is important: it imports state without generating code that conflicts with your converted code.
+
+**Import only (when you don't have source templates)**
+
+For CDK migrations or ad-hoc resources without source IaC, let `pulumi import` generate code for you:
+
+```bash
+# Import generates both code and state
+pulumi import aws:s3/bucket:Bucket my-bucket bucket-name
+```
+
+For CDK, list resources from the CloudFormation stack that CDK deployed:
+
+```bash
+aws cloudformation list-stack-resources --stack-name my-cdk-stack
+```
+
+Then import each resource. The generated code won't have the same structure as your CDK constructs, but you can refactor it into components afterward.
+
+**Preserving construct/module structure**
+
+If you want to preserve Terraform modules or CDK constructs as Pulumi components, see [Importing into components](#importing-into-components) below. This is an advanced optimization you can do after the basic import works.
+
 ### Testing converted code before importing
 
 When using `pulumi convert` to migrate from Terraform, CloudFormation, or ARM, consider testing the generated code on a fresh stack before importing existing resources:
@@ -182,6 +240,148 @@ my-infrastructure/
 Because Pulumi uses general-purpose languages, you can use functions and classes for abstraction, loops and conditionals that work naturally, and components to encapsulate patterns your team uses repeatedly.
 
 You can do this refactoring after migration. The first priority is getting resources imported cleanly—start with the generated code, then progressively improve the structure without changing the underlying infrastructure.
+
+### Importing into components
+
+CDK constructs and Terraform modules encapsulate multiple leaf resources. When you list resources from CloudFormation or Terraform state, you see the physical resources (like `MyVpc/PublicSubnet1/Subnet`), not the abstractions. To preserve these abstractions as Pulumi components, you have two options.
+
+**Option 1: Import first, then refactor into components**
+
+This is the simpler approach. Import resources flat, then reorganize:
+
+1. Import resources using the approaches above
+2. Create a component class and move resources inside it
+3. Add aliases to indicate the resources used to be at the root level:
+
+{{< chooser language "typescript,python,go,csharp" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+class MyVpc extends pulumi.ComponentResource {
+    public vpc: aws.ec2.Vpc;
+
+    constructor(name: string, opts?: pulumi.ComponentResourceOptions) {
+        super("myinfra:network:MyVpc", name, {}, opts);
+
+        // Resource was imported at root, now under this component
+        this.vpc = new aws.ec2.Vpc(`${name}-vpc`, {
+            cidrBlock: "10.0.0.0/16",
+        }, {
+            parent: this,
+            aliases: [{ parent: pulumi.rootStackResource }],
+        });
+
+        this.registerOutputs();
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+class MyVpc(pulumi.ComponentResource):
+    def __init__(self, name: str, opts: Optional[pulumi.ResourceOptions] = None):
+        super().__init__("myinfra:network:MyVpc", name, {}, opts)
+
+        # Resource was imported at root, now under this component
+        self.vpc = aws.ec2.Vpc(
+            f"{name}-vpc",
+            cidr_block="10.0.0.0/16",
+            opts=pulumi.ResourceOptions(
+                parent=self,
+                aliases=[pulumi.Alias(parent=None)],
+            ),
+        )
+
+        self.register_outputs({})
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+type MyVpc struct {
+    pulumi.ResourceState
+    Vpc *ec2.Vpc
+}
+
+func NewMyVpc(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOption) (*MyVpc, error) {
+    component := &MyVpc{}
+    err := ctx.RegisterComponentResource("myinfra:network:MyVpc", name, component, opts...)
+    if err != nil {
+        return nil, err
+    }
+
+    // Resource was imported at root, now under this component
+    component.Vpc, err = ec2.NewVpc(ctx, name+"-vpc", &ec2.VpcArgs{
+        CidrBlock: pulumi.String("10.0.0.0/16"),
+    }, pulumi.Parent(component), pulumi.Aliases([]pulumi.Alias{{Parent: pulumi.RootStackResource}}))
+    if err != nil {
+        return nil, err
+    }
+
+    return component, nil
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+class MyVpc : ComponentResource
+{
+    public Vpc Vpc { get; private set; }
+
+    public MyVpc(string name, ComponentResourceOptions? opts = null)
+        : base("myinfra:network:MyVpc", name, opts)
+    {
+        // Resource was imported at root, now under this component
+        Vpc = new Vpc($"{name}-vpc", new VpcArgs
+        {
+            CidrBlock = "10.0.0.0/16",
+        }, new CustomResourceOptions
+        {
+            Parent = this,
+            Aliases = { new Alias { Parent = Pulumi.Deployment.Instance.Stack } },
+        });
+
+        RegisterOutputs();
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+**Option 2: Import directly into component hierarchy**
+
+If you write your component code first, you can import directly into the hierarchy using an import file with parent references:
+
+```json
+{
+    "nameTable": {
+        "network": "urn:pulumi:prod::myproject::myinfra:network:MyVpc::network"
+    },
+    "resources": [
+        {
+            "type": "aws:ec2/vpc:Vpc",
+            "name": "network-vpc",
+            "id": "vpc-0abc123",
+            "parent": "network"
+        }
+    ]
+}
+```
+
+This requires the parent component to already exist in state or be defined in your code.
+
+**Identifying construct/module boundaries**: The logical resource IDs often encode the hierarchy. CloudFormation shows paths like `MyVpc/PublicSubnet1/Subnet`, and Terraform state shows `module.vpc.aws_subnet.public[0]`. Use these to determine which physical resources belong together.
 
 ## Finding resource IDs
 
