@@ -25,15 +25,15 @@ The safest migration approach is **incremental**: migrate one logical group of r
 
 ### Recommended workflow
 
-1. **Start with low-risk resources**: Begin with stateless or easily-recreatable resources (DNS records, IAM policies, security groups) before tackling databases or production compute.
+Start with low-risk resources like DNS records, IAM policies, and security groups before tackling databases or production compute. These resources are stateless or easily recreatable, so mistakes are recoverable. Save the critical, stateful resources for after you've built confidence with the process.
 
-1. **Migrate one environment first**: Import into dev, iterate until the preview is clean, then repeat for staging and prod. This reveals parameterization needs early.
+Migrate one environment first. Import into dev, iterate until the preview is clean, then repeat for staging and prod. This reveals parameterization needs early and lets you refine your approach before touching production.
 
-1. **Coexist during transition**: Use [stack references](/docs/iac/concepts/stack/#stackreferences) and [external state references](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#referencing-terraform-state) to connect Pulumi-managed resources with resources still in the original tool.
+During the transition, your infrastructure will span both systems. Use [stack references](/docs/iac/concepts/stack/#stackreferences) and [external state references](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#referencing-terraform-state) to connect Pulumi-managed resources with resources still in the original tool. This coexistence is temporary but necessary for safe migration.
 
-1. **Verify at each step**: After every import, run `pulumi preview` and confirm zero changes before proceeding. Any diff is a signal to stop and investigate.
+Verify at each step. After every import, run `pulumi preview` and confirm zero changes before proceeding. Any diff is a signal to stop and investigate. Never assume an import worked correctly.
 
-1. **Retire the old tool last**: Only delete resources from Terraform state or CloudFormation stacks after Pulumi successfully manages them with clean previews.
+Retire the old tool last. Only delete resources from Terraform state or CloudFormation stacks after Pulumi successfully manages them with clean previews. Keeping the old state intact gives you a fallback if something goes wrong.
 
 ### Choosing your import approach
 
@@ -95,44 +95,25 @@ If you want to preserve Terraform modules or CDK constructs as Pulumi components
 
 ### Testing converted code before importing
 
-When using `pulumi convert` to migrate from Terraform, CloudFormation, or ARM, consider testing the generated code on a fresh stack before importing existing resources:
+When using `pulumi convert` to migrate from Terraform, CloudFormation, or ARM, consider testing the generated code on a fresh stack before importing existing resources. Convert your source code, create a temporary test stack with `pulumi stack init test`, run `pulumi up` to deploy fresh infrastructure, verify everything works, then destroy the test stack with `pulumi destroy && pulumi stack rm test`. Now you can import your real resources with confidence.
 
-1. Convert your source code to Pulumi
-1. Create a temporary test stack: `pulumi stack init test`
-1. Run `pulumi up` to deploy fresh infrastructure
-1. Verify everything works as expected
-1. Destroy the test stack: `pulumi destroy && pulumi stack rm test`
-1. Now import your real resources with confidence
+This approach catches code errors, missing dependencies, and conversion issues before you touch production infrastructure. It's particularly valuable when you're converting complex modules or nested stacks, when the source code uses features that may not convert perfectly, or when you simply want to verify the code compiles and runs before importing.
 
-This catches code errors, missing dependencies, and conversion issues before you touch production infrastructure. It's particularly valuable when:
-
-- You're converting complex modules or nested stacks
-- The source code uses features that may not convert perfectly
-- You want to verify the code compiles and runs before importing
-
-**Skip this step when**:
-
-- Resources have globally unique names that would conflict
-- Creating duplicate infrastructure is costly or time-consuming
-- You're importing directly without conversion (no generated code to test)
-- Resources involve data that can't be duplicated (databases, storage with data)
+Skip this step when resources have globally unique names that would conflict with the test deployment, when creating duplicate infrastructure is costly or time-consuming, when you're importing directly without conversion (so there's no generated code to test), or when resources involve data that can't be duplicated like databases or storage with existing data.
 
 ### One-at-a-time vs bulk import
 
-You can import resources individually or in bulk using an import file. Each approach has tradeoffs:
+You can import resources individually or in bulk using an import file.
 
-**One-at-a-time** (recommended for learning):
+**One-at-a-time** works well when you're learning the process:
 
 ```bash
 pulumi import aws:s3/bucket:Bucket my-bucket my-bucket-name
 ```
 
-- Know exactly which resource caused a failure
-- Easier to debug ID format issues
-- Clear recovery point if something goes wrong
-- Best for your first migration or unfamiliar resource types
+With individual imports, you know exactly which resource caused a failure, debugging ID format issues is straightforward, and you have a clear recovery point if something goes wrong. This approach is best for your first migration or when working with unfamiliar resource types.
 
-**Bulk import** (recommended once comfortable):
+**Bulk import** is faster once you're comfortable with the process:
 
 ```bash
 pulumi import --file import.json
@@ -157,20 +138,21 @@ Where `import.json` contains:
 }
 ```
 
-- Faster for large migrations
-- Harder to pinpoint failures
-- Partial state is harder to recover from
-- Best when you're confident in the ID formats and resource types
+Bulk import is faster for large migrations but makes failures harder to pinpoint and partial state harder to recover from. Use it when you're confident in the ID formats and resource types.
 
-**When bulk importing, group resources by dependency layer**: import VPCs before subnets, subnets before instances. If a bulk import fails partway through, check which resources made it into state with `pulumi stack export` and remove already-imported resources from your import file before retrying.
+When bulk importing, group resources by dependency layer: import VPCs before subnets, subnets before instances. If a bulk import fails partway through, check which resources made it into state with `pulumi stack export` and remove already-imported resources from your import file before retrying.
 
 ### What to avoid
 
-- **Big bang migrations**: Converting everything at once leaves you with too many variables when something goes wrong.
-- **Skipping verification**: Never assume an import worked. Always run preview and confirm no changes.
-- **Deleting source state early**: Keep your Terraform state or CloudFormation stacks intact until Pulumi fully owns the resources.
-- **Refactoring while migrating**: Get the migration working first, then optimize. Trying to improve code structure, switch providers, or clean up resources during the initial import creates compound problems. Decouple these concerns.
-- **Quitting early**: Iterate until your preview is completely clean—no diffs, no updates, no replacements. "Close enough" isn't good enough when the goal is zero disruption.
+Avoid big bang migrations. Converting everything at once leaves you with too many variables when something goes wrong. If an import fails or a preview shows unexpected diffs, you won't know which of fifty resources caused the problem.
+
+Never skip verification. Always run `pulumi preview` after every import and confirm zero changes. Never assume an import worked correctly just because the command succeeded.
+
+Don't delete source state early. Keep your Terraform state or CloudFormation stacks intact until Pulumi fully owns the resources with clean previews. This gives you a fallback.
+
+Don't refactor while migrating. Get the migration working first, then optimize. Trying to improve code structure, switch providers, or clean up resources during the initial import creates compound problems. Decouple these concerns: first make it work, then make it better.
+
+Don't quit early. Iterate until your preview is completely clean with no diffs, no updates, and no replacements. "Close enough" isn't good enough when the goal is zero disruption.
 
 ## Planning your target structure
 
@@ -178,7 +160,7 @@ Before importing resources, design how your Pulumi project should be organized. 
 
 ### Consolidating multiple source states
 
-If you have separate Terraform workspaces, CloudFormation stacks, or ARM deployments for each environment, you're probably maintaining near-duplicate configurations with subtle differences. This leads to copy-paste errors when promoting changes, drift between environments that's hard to detect, and no clear way to see what actually differs.
+If you have separate Terraform workspaces, CloudFormation stacks, or ARM deployments for each environment, you're probably maintaining near-duplicate configurations with subtle differences. This leads to copy-paste errors when promoting changes and drift between environments that's hard to detect. There's no clear way to see what actually differs between dev, staging, and prod.
 
 Migration is an opportunity to consolidate into a single Pulumi project with multiple stacks:
 
@@ -194,14 +176,9 @@ my-infrastructure/
 
 You'll go from maintaining N copies of similar infrastructure to maintaining one codebase where environment-specific values come from configuration files, not duplicated code.
 
-**Identify what varies between environments**:
+Identify what varies between environments: resource names and tags, instance sizes and counts, network ranges, and feature flags like debug logging in dev.
 
-- Resource names and tags
-- Instance sizes and counts
-- Network ranges
-- Feature flags (e.g., debug logging in dev)
-
-**Extract these to configuration**:
+Extract these differences to configuration:
 
 ```typescript
 const config = new pulumi.Config();
@@ -220,7 +197,7 @@ const bucket = new aws.s3.Bucket("data", {
 });
 ```
 
-With this structure, a single PR promotes changes to all environments, configuration files make differences explicit, and IDE support catches errors before deployment.
+With this structure, a single PR promotes changes to all environments. Configuration files make the differences between environments explicit rather than buried in duplicated code. And IDE support catches errors before deployment.
 
 ### Code organization
 
@@ -237,7 +214,7 @@ my-infrastructure/
 
 **Preserve structure from your source**: If your original Terraform modules, CloudFormation nested stacks, or CDK constructs had a logical organization, preserve it in Pulumi. The original authors were probably thoughtful about this structure. Map Terraform modules and CDK constructs to [Pulumi components](/docs/iac/concepts/resources/components/)—these are reusable abstractions that encapsulate related resources and can be shared across projects.
 
-Because Pulumi uses general-purpose languages, you can use functions and classes for abstraction, loops and conditionals that work naturally, and components to encapsulate patterns your team uses repeatedly.
+Because Pulumi uses general-purpose languages, you can use functions and classes for abstraction. Loops and conditionals work naturally. Components encapsulate patterns your team uses repeatedly and can be shared across projects.
 
 You can do this refactoring after migration. The first priority is getting resources imported cleanly—start with the generated code, then progressively improve the structure without changing the underlying infrastructure.
 
@@ -247,11 +224,7 @@ CDK constructs and Terraform modules encapsulate multiple leaf resources. When y
 
 **Option 1: Import first, then refactor into components**
 
-This is the simpler approach. Import resources flat, then reorganize:
-
-1. Import resources using the approaches above
-2. Create a component class and move resources inside it
-3. Add aliases to indicate the resources used to be at the root level:
+This is the simpler approach. Import resources flat, then reorganize. After importing resources using the approaches above, create a component class and move resources inside it. Add aliases to indicate the resources used to be at the root level:
 
 {{< chooser language "typescript,python,go,csharp" >}}
 
@@ -493,9 +466,15 @@ For AWS, Azure, and Google Cloud, Pulumi offers classic providers (Terraform-bas
 | Azure | `azure` | `azure-native` |
 | Google Cloud | `gcp` | `google-native` |
 
-**Recommendation**: Use **classic providers** for migrations. They have broader resource coverage and closer type mappings to Terraform.
+The best provider choice depends on your migration source:
 
-Use native providers when you need same-day support for new cloud features or direct API parity.
+**From Terraform**: Use classic providers (`aws`, `azure`, `gcp`). These are built on Terraform provider schemas, so resource types and property names map directly. A Terraform `aws_s3_bucket` becomes a Pulumi `aws:s3/bucket:Bucket` with the same properties.
+
+**From CloudFormation or CDK**: Use native providers (`aws-native`) when possible. CloudFormation resource types map directly to AWS Native types (`AWS::S3::Bucket` becomes `aws-native:s3:Bucket`), and physical resource IDs from CloudFormation stacks work as-is. However, AWS Native doesn't cover every resource type yet. When a resource isn't available in AWS Native, fall back to the classic `aws` provider.
+
+**From ARM or Bicep**: Use `azure-native`. ARM resource types map directly to Azure Native types, and Azure resource IDs work without transformation.
+
+**From Kubernetes YAML**: Use the `kubernetes` provider. Kubernetes API group/version/kind maps to Pulumi types (for example, `apps/v1/Deployment` becomes `kubernetes:apps/v1:Deployment`).
 
 ### Mapping from source types
 
@@ -606,16 +585,9 @@ Run `pulumi preview --diff` again. If clean, you're done with this resource. If 
 
 ### Iteration workflow
 
-1. **Run preview with diff**: `pulumi preview --diff` shows property-level differences.
+Run `pulumi preview --diff` to see property-level differences. For each diff, determine the appropriate fix: remove the property if it's a computed value or default, adjust the value if it's a format mismatch, or accept the change in the rare case where you actually want to modify the resource.
 
-1. **For each diff**, determine if you should:
-   - **Remove the property** (it's a computed value or default)
-   - **Adjust the value** (format mismatch)
-   - **Accept the change** (rare, meaning you actually want to modify the resource)
-
-1. **Update code and repeat** until preview shows no changes.
-
-1. **Run `pulumi up`** only after achieving a clean preview.
+Update your code and run the preview again. Repeat until the preview shows no changes. Only run `pulumi up` after achieving a clean preview.
 
 **Using import output as validation**: When you run `pulumi import`, it generates code for the imported resources. If you converted code separately (from Terraform, CloudFormation, or CDK), prefer your converted code over the import-generated code—it preserves structure, abstractions, and logical groupings that import can't infer. However, compare the import output against your code to catch mistakes. Import-generated code is often over-specified with default values, but it can reveal properties you missed or got wrong.
 
@@ -627,17 +599,9 @@ If you suspect the cloud state changed since import, run `pulumi refresh` to upd
 If preview shows a resource will be **replaced** (deleted and recreated), **stop immediately**. Replacements cause downtime and data loss.
 {{% /notes %}}
 
-Common causes of replacements:
+Common causes of replacements include name changes (most cloud resources can't be renamed in-place, so ensure the Pulumi resource name generates the same physical name), immutable properties (some properties like EC2 AMI, RDS engine, or Lambda runtime require replacement to change, so keep the original values), and wrong import IDs (you may have imported a different resource than intended).
 
-- **Name changes**: Most cloud resources can't be renamed in-place. Ensure the Pulumi resource name generates the same physical name.
-- **Immutable properties**: Some properties (like EC2 AMI, RDS engine, Lambda runtime) require replacement to change. Keep the original values.
-- **Wrong import ID**: You may have imported a different resource than intended.
-
-**Before proceeding with any replacement**:
-
-1. Verify you're importing the correct resource
-1. Check if the property is actually immutable
-1. Consider if you need the change at all
+Before proceeding with any replacement, verify you're importing the correct resource, check whether the property is actually immutable, and consider whether you need the change at all.
 
 For critical resources during migration, use [`protect`](/docs/iac/concepts/resources/options/protect/) to prevent accidental deletion:
 
@@ -653,35 +617,23 @@ Remove `protect` only after you've confirmed everything works correctly.
 
 ### "Resource not found" during import
 
-**Causes**:
-
-- Wrong ID format (ARN vs name vs full path)
-- Resource is in a different region than configured
-- Resource was deleted
-
-**Fix**: Check the Registry's Import section for correct ID format. Verify the resource exists and your provider configuration (region, subscription, project) is correct.
+This error typically means the ID format is wrong (ARN vs name vs full path), the resource is in a different region than your provider configuration, or the resource was deleted. Check the Registry's Import section for the correct ID format. Verify the resource exists and that your provider configuration (region, subscription, project) matches where the resource lives.
 
 ### "Resource already exists in state"
 
-**Cause**: The resource is already managed by this Pulumi stack.
-
-**Fix**: Check your state with `pulumi stack export`. If you need to re-import, first remove it: `pulumi state delete <urn>`.
+This means the resource is already managed by this Pulumi stack. Check your state with `pulumi stack export`. If you need to re-import, first remove it with `pulumi state delete <urn>`.
 
 ### Converter produces `notImplemented` TODOs
 
-**Cause**: The converter doesn't support a specific feature.
-
-**Fix**: Manually implement the TODO. For Terraform modules you can't convert, use them directly via [Terraform module support](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
+The converter doesn't support a specific feature you're using. Manually implement the TODO based on what the original code was doing. For Terraform modules you can't convert, consider using them directly via [Terraform module support](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
 
 ### Preview shows resources will be deleted
 
-**Cause**: Resources in state but not in code.
-
-**Fix**: Add the missing code, or use `pulumi state delete` to remove resources you intentionally want to stop managing (they'll remain in the cloud).
+Resources exist in state but not in code. Either add the missing resource definitions to your code, or use `pulumi state delete` to remove resources you intentionally want to stop managing. Resources removed from state remain in the cloud; Pulumi just stops tracking them.
 
 ### Large state files timeout
 
-**Fix**: Import in batches. Edit the generated import JSON to include subsets of resources, then run `pulumi import --file` multiple times.
+Import in batches. Edit the generated import JSON to include subsets of resources, then run `pulumi import --file` multiple times. This is more reliable than trying to import hundreds of resources at once.
 
 ## AI-assisted migration
 
@@ -689,18 +641,9 @@ Pulumi's AI tools understand migration challenges and can automate much of the c
 
 ### Pulumi Neo
 
-[Pulumi Neo](/docs/ai/) is an infrastructure automation agent that excels at migrations. Neo understands all of the best practices in this guide and follows them automatically. It reacts to problems (failed imports, unexpected diffs, partial failures) without manual intervention and iterates relentlessly until your preview is clean.
+[Pulumi Neo](/docs/ai/) is an infrastructure automation agent that excels at migrations. Neo understands all of the best practices in this guide and follows them automatically. It reacts to problems like failed imports, unexpected diffs, and partial failures without manual intervention and iterates relentlessly until your preview is clean.
 
-Point it at your repository and cloud account, and it will:
-
-- Discover resources to migrate
-- Map source types to Pulumi types
-- Find correct resource IDs
-- Generate code that preserves structure from your source
-- Import resources in dependency order
-- React to diffs and fix them automatically
-- Iterate until previews are completely clean
-- Parameterize for multiple environments
+Point it at your repository and cloud account, and it discovers resources to migrate, maps source types to Pulumi types, finds correct resource IDs, and generates code that preserves structure from your source. It imports resources in dependency order, reacts to diffs and fixes them automatically, iterates until previews are completely clean, and parameterizes your code for multiple environments.
 
 Neo handles the tedious parts of migration: looking up ID formats, debugging type mismatches, removing over-specified defaults, and retrying failed imports. It does this faster than a human and without the toil.
 
@@ -710,15 +653,7 @@ To use Neo, navigate to [Pulumi Cloud](https://app.pulumi.com), start a task, an
 
 ### MCP Server
 
-The [Pulumi MCP Server](/docs/iac/guides/ai-integration/mcp-server/) brings migration capabilities to AI assistants like Claude Code, Cursor, Windsurf, and GitHub Copilot.
-
-The MCP Server provides:
-
-- **Resource discovery** across your cloud accounts
-- **Registry lookups** for type tokens and ID formats
-- **Neo delegation** for complex tasks
-
-This lets you stay in your preferred development environment while accessing Pulumi's migration intelligence.
+The [Pulumi MCP Server](/docs/iac/guides/ai-integration/mcp-server/) brings migration capabilities to AI assistants like Claude Code, Cursor, Windsurf, and GitHub Copilot. It provides resource discovery across your cloud accounts, registry lookups for type tokens and ID formats, and the ability to delegate complex tasks to Neo. This lets you stay in your preferred development environment while accessing Pulumi's migration intelligence.
 
 ### When to use each approach
 
