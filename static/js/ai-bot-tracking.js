@@ -7,8 +7,10 @@
     'use strict';
 
     /**
-     * Detects if the current user agent is an AI/LLM bot
-     * Based on actual bot traffic data from pulumi.com analytics
+     * Detects if the current user agent is an AI/LLM bot (CLIENT-SIDE ONLY)
+     * Note: Most LLM bots fetch llms.txt server-side without executing JavaScript.
+     * This detection is supplemental to server-side bot tracking in access logs.
+     * Based on actual bot traffic data from pulumi.com analytics.
      * @returns {boolean} true if AI bot detected
      */
     function detectAIBot() {

@@ -74,8 +74,6 @@
 - [Templates](https://www.pulumi.com/templates/) - Starter templates for common architectures
 
 ## Optional
-
-{{- /* Include select high-value blog posts */ -}}
 {{- $blogPosts := where .Site.RegularPages "Section" "blog" }}
 {{- $recentPosts := first 20 (where $blogPosts ".Date" ">" (now.AddDate -1 0 0)) }}
 {{- range $recentPosts }}

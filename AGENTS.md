@@ -23,7 +23,7 @@ This repository implements the llms.txt standard for improved AI/LLM consumption
   - `/docs/pulumi-cloud/` - Platform capabilities
   - `/registry/` - Provider and package documentation
   - `/docs/reference/` - API references for all languages
-- **Markdown versions**: When available, append `.md` to URLs for cleaner content
+- **Markdown versions**: Future enhancement - URLs may support `.md` extension for markdown-only output
 - **Excluding content from llms.txt**: Add `llms_exclude: true` to front matter
 
 When working with Pulumi documentation, consult the llms.txt file first for structured navigation and understanding of the documentation hierarchy.
