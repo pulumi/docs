@@ -18,7 +18,6 @@
 - [Cloud Providers](https://www.pulumi.com/docs/iac/clouds/) - AWS, Azure, GCP, Kubernetes guides
 - [CLI Commands](https://www.pulumi.com/docs/iac/cli/commands/) - Complete command reference
 - [Automation API](https://www.pulumi.com/docs/iac/automation-api/) - Embed Pulumi in your applications
-- [CrossGuard Policies](https://www.pulumi.com/docs/iac/crossguard/) - Policy as code enforcement
 - [Terraform Migration](https://www.pulumi.com/docs/iac/adopting-pulumi/migrate-terraform/) - Migrate from Terraform
 - [CloudFormation Migration](https://www.pulumi.com/docs/iac/adopting-pulumi/migrate-cloudformation/) - Migrate from CloudFormation
 
@@ -55,18 +54,10 @@
 - [.NET/C#](https://www.pulumi.com/docs/reference/pkg/dotnet/) - Complete .NET API
 - [Java](https://www.pulumi.com/docs/reference/pkg/java/) - Complete Java API
 
-## Tutorials & Examples
+## Resources
 
 - [Tutorials](https://www.pulumi.com/tutorials/) - Hands-on learning paths
 - [Examples](https://github.com/pulumi/examples) - Production-ready templates
 - [Templates](https://www.pulumi.com/templates/) - Starter templates for common architectures
-
-## Blog & Resources
-
 - [Blog](https://www.pulumi.com/blog/) - Latest features, best practices, and announcements
 - [Case Studies](https://www.pulumi.com/case-studies/) - How BMW, Mercedes-Benz, Snowflake use Pulumi
-
-## Optional
-
-- [What Is Pulumi?](https://www.pulumi.com/what-is/what-is-pulumi/) - Detailed explanation
-- [Community](https://www.pulumi.com/community/) - Slack, discussions, events

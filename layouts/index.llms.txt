@@ -18,7 +18,7 @@
 - [Why Pulumi?](https://www.pulumi.com/docs/iac/) - Real code vs YAML configuration
 {{- range where .Site.RegularPages "Section" "docs" }}
   {{- if and (in .RelPermalink "/iac/") (not (in .RelPermalink "/get-started/")) (not (isset .Params "llms_exclude")) }}
-    {{- if or (in .RelPermalink "/languages-sdks/") (in .RelPermalink "/clouds/") (in .RelPermalink "/cli/") (in .RelPermalink "/automation-api/") (in .RelPermalink "/crossguard/") (in .RelPermalink "/adopting-pulumi/") }}
+    {{- if or (in .RelPermalink "/languages-sdks/") (in .RelPermalink "/clouds/") (in .RelPermalink "/cli/") (in .RelPermalink "/automation-api/") (in .RelPermalink "/adopting-pulumi/") }}
 - [{{ .Title }}]({{ .Permalink }}){{ if .Params.meta_desc }} - {{ .Params.meta_desc | truncate 100 }}{{ end }}
     {{- end }}
   {{- end }}
@@ -61,24 +61,10 @@
 - [.NET/C#](https://www.pulumi.com/docs/reference/pkg/dotnet/) - Complete .NET API
 - [Java](https://www.pulumi.com/docs/reference/pkg/java/) - Complete Java API
 
-## Tutorials & Examples
+## Resources
 
-{{- $tutorials := where .Site.RegularPages "Section" "tutorials" }}
-{{- range first 10 $tutorials }}
-  {{- if not (isset .Params "llms_exclude") }}
-- [{{ .Title }}]({{ .Permalink }}){{ if .Params.meta_desc }} - {{ .Params.meta_desc | truncate 100 }}{{ end }}
-  {{- end }}
-{{- end }}
-- [More Tutorials](https://www.pulumi.com/tutorials/) - Complete list of hands-on learning paths
+- [Tutorials](https://www.pulumi.com/tutorials/) - Hands-on learning paths
 - [Examples](https://github.com/pulumi/examples) - Production-ready templates
 - [Templates](https://www.pulumi.com/templates/) - Starter templates for common architectures
-
-## Blog & Resources
-
 - [Blog](https://www.pulumi.com/blog/) - Latest features, best practices, and announcements
 - [Case Studies](https://www.pulumi.com/case-studies/) - How BMW, Mercedes-Benz, Snowflake use Pulumi
-
-## Optional
-
-- [What Is Pulumi?](https://www.pulumi.com/what-is/what-is-pulumi/) - Detailed explanation
-- [Community](https://www.pulumi.com/community/) - Slack, discussions, events

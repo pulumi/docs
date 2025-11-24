@@ -33,7 +33,7 @@ timeout: 300000
 outputFormats:
   rss:
     baseName: rss
-  LLMSTXT:
+  llms:
     mediaType: "text/plain"
     baseName: "llms"
     isPlainText: true
