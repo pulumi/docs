@@ -19,7 +19,7 @@ This is an advanced guide for power users. You'll be working directly with the p
 
 ## Prerequisites
 
-You'll need Python 3.8 or later, the `grpcio` and `grpcio-tools` packages, and a basic understanding of the [provider protocol](/docs/iac/guides/building-extending/providers/implementers/protocol-reference/).
+You'll need Python 3.10 or later, the `grpcio` and `grpcio-tools` packages, and a basic understanding of the [provider protocol](/docs/iac/guides/building-extending/providers/implementers/protocol-reference/).
 
 ## Project structure
 
@@ -410,20 +410,20 @@ def serve(schema_path: str):
     server.wait_for_termination()
 ```
 
-Create `provider/__main__.py`:
+Create `__main__.py`:
 
 ```python
 import sys
 import os
 
 # Add the parent directory to the path so we can import the provider
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from provider.server import serve
 
 if __name__ == '__main__':
     # Find the schema.json file
-    provider_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    provider_dir = os.path.dirname(os.path.abspath(__file__))
     schema_path = os.path.join(provider_dir, 'schema.json')
 
     serve(schema_path)
@@ -526,7 +526,7 @@ Properties may be wrapped in a secret marker:
 ```python
 def _unwrap_secret(self, value):
     """Unwrap secret values while preserving the marker for outputs."""
-    if isinstance(value, dict) and value.get('4dabf18193072939515e22adb298388d') == 'secret':
+    if isinstance(value, dict) and value.get('4dabf18193072939515e22adb298388d') == '1b47061264138c4ac30d75fd1eb44270':
         return value.get('value'), True
     return value, False
 ```
@@ -539,7 +539,7 @@ During preview, some values are unknown:
 def _is_unknown(self, value):
     """Check if a value is unknown (not yet computed)."""
     if isinstance(value, dict):
-        return value.get('4dabf18193072939515e22adb298388d') == 'unknown'
+        return value.get('4dabf18193072939515e22adb298388d') == '04da6b54-80e4-46f7-96ec-b56ff0331ba9'
     return False
 ```
 
@@ -547,17 +547,17 @@ Handle unknowns in your Diff implementation by skipping comparison for unknown v
 
 ## Packaging for distribution
 
-To distribute your provider, you need to create a wrapper script that Pulumi can execute. Create a shell script named `pulumi-resource-myfiles`:
+Package the provider in a .tar.gz file:
 
 ```bash
-#!/bin/bash
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$DIR"
-source venv/bin/activate
-exec python -m provider "$@"
+tar -zcf myfiles.tar.gz __main__.py provider/__init__.py provider/server.py PulumiPlugin.yaml requirements.txt schema.json
 ```
 
-Make it executable with `chmod +x pulumi-resource-myfiles`. This script activates the virtual environment and runs the provider module. Package everything including the `venv` directory into a distributable archive, or install dependencies system-wide and adjust the script accordingly.
+This plugin can then be installed as a regular pulumi resource plugin:
+
+```bash
+pulumi plugin install resource myfiles --file ./myfiles.tar.gz 0.0.1
+```
 
 See [Publishing packages](/docs/iac/guides/building-extending/packages/publishing-packages/) for full details.
 
