@@ -25,11 +25,10 @@ You'll need Python 3.10 or later, the `grpcio` and `grpcio-tools` packages, and 
 
 ```
 my-provider/
+├── __main__.py               # Entry point
 ├── provider/
 │   ├── __init__.py
-│   ├── __main__.py          # Entry point
-│   └── server.py            # gRPC server implementation
-├── pulumi-resource-myfiles   # Wrapper script (executable)
+│   └── server.py             # gRPC server implementation
 ├── schema.json               # Provider schema
 ├── PulumiPlugin.yaml         # Plugin metadata
 └── requirements.txt
