@@ -64,8 +64,6 @@
 ## Blog & Resources
 
 - [Blog](https://www.pulumi.com/blog/) - Latest features, best practices, and announcements
-- [Infrastructure as Code Best Practices](https://www.pulumi.com/blog/iac-best-practices/) - Key patterns for production IaC
-- [Migrating from Terraform to Pulumi](https://www.pulumi.com/blog/migrating-from-terraform/) - Step-by-step migration guide
 - [Case Studies](https://www.pulumi.com/case-studies/) - How BMW, Mercedes-Benz, Snowflake use Pulumi
 
 ## Optional
