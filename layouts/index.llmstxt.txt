@@ -2,7 +2,7 @@
 {{- /* Static version for now - dynamic generation can be enabled later */ -}}
 # Pulumi
 
-> Infrastructure as code using real programming languages. Write, test, and deploy cloud infrastructure with TypeScript, Python, Go, C#, or Java instead of YAML. Get IDE support, type safety, and automated testing for AWS, Azure, GCP, Kubernetes, and 150+ providers. Deploy 3x faster with 90% fewer configuration errors.
+> Infrastructure as code using real programming languages. Write, test, and deploy cloud infrastructure with TypeScript, Python, Go, C#, or Java instead of YAML. Get IDE support, type safety, and automated testing for AWS, Azure, GCP, Kubernetes, and 150+ providers.
 
 ## Getting Started
 
