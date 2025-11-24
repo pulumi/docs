@@ -547,19 +547,11 @@ Handle unknowns in your Diff implementation by skipping comparison for unknown v
 
 ## Packaging for distribution
 
-Package the provider in a .tar.gz file:
+So far we have only used our provider from YAML, and on our local machine. To make the provider usable from other languages and distribute it, you have two options:
 
-```bash
-tar -zcf myfiles.tar.gz __main__.py provider/__init__.py provider/server.py PulumiPlugin.yaml requirements.txt schema.json
-```
+**Full provider distribution**: Generate language-specific SDKs and publish them to language package registries (npm, PyPI, NuGet, etc.). This is the approach taken by the providers you can find in the [Pulumi Registry](https://www.pulumi.com/registry/). See [Publishing packages](/docs/iac/guides/building-extending/packages/publishing-packages/) for complete details.
 
-This plugin can then be installed as a regular pulumi resource plugin:
-
-```bash
-pulumi plugin install resource myfiles --file ./myfiles.tar.gz 0.0.1
-```
-
-See [Publishing packages](/docs/iac/guides/building-extending/packages/publishing-packages/) for full details.
+**Local packages**: This approach requires less setup and tooling. The language-specific SDKs are generated locally, on the machine where the provider is used. In this case only the provider source needs to be published, for example on GitHub or GitLab instance. See [Local packages](/docs/iac/guides/building-extending/packages/local-packages/) for this approach.
 
 ## Debugging
 
