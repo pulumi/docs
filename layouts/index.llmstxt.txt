@@ -73,9 +73,12 @@
 - [Examples](https://github.com/pulumi/examples) - Production-ready templates
 - [Templates](https://www.pulumi.com/templates/) - Starter templates for common architectures
 
-## Optional
+## Blog & Resources
+{{- /* The following code dynamically generates recent blog posts when Hugo builds the site */ -}}
 {{- $blogPosts := where .Site.RegularPages "Section" "blog" }}
 {{- $recentPosts := first 20 (where $blogPosts ".Date" ">" (now.AddDate -1 0 0)) }}
+
+- [Blog](https://www.pulumi.com/blog/) - Latest features, best practices, and announcements
 {{- range $recentPosts }}
   {{- if not (isset .Params "llms_exclude") }}
     {{- if or (in .Title "Infrastructure as Code") (in .Title "Terraform") (in .Title "CloudFormation") (in .Title "AWS CDK") (in .Title "Kubernetes") (in .Title "Getting Started") }}
@@ -83,7 +86,9 @@
     {{- end }}
   {{- end }}
 {{- end }}
-- [Blog](https://www.pulumi.com/blog/) - Latest features, best practices, and announcements
 - [Case Studies](https://www.pulumi.com/case-studies/) - How BMW, Mercedes-Benz, Snowflake use Pulumi
+
+## Optional
+
 - [What Is Pulumi?](https://www.pulumi.com/what-is/what-is-pulumi/) - Detailed explanation
 - [Community](https://www.pulumi.com/community/) - Slack, discussions, events

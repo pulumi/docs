@@ -12,7 +12,11 @@
 {{ $js := resources.Get "js/bundle.js" | fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>
 
-<!-- AI Bot Tracking for llms.txt experiment -->
+<!--
+  AI Bot Tracking for llms.txt experiment
+  This JavaScript runs on HTML pages to track AI bot visits for analytics.
+  It does NOT affect the llms.txt file which is served as plain text at /llms.txt
+-->
 <script src="{{ "/js/ai-bot-tracking.js" | relURL }}" defer></script>
 
 <!--

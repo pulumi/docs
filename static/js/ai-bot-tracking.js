@@ -1,6 +1,13 @@
 /**
  * AI Bot Detection and Tracking for llms.txt experiment
- * Tracks AI/LLM bot access to pulumi.com to measure llms.txt effectiveness
+ *
+ * IMPORTANT: This JavaScript file is for the main Pulumi website HTML pages ONLY.
+ * It does NOT interact with or affect the llms.txt file itself.
+ *
+ * Purpose: Track AI bot visits to pulumi.com HTML pages to measure the llms.txt
+ * experiment's impact on organic traffic from AI-driven discovery channels.
+ *
+ * The llms.txt file is a separate plain text file served at /llms.txt
  */
 
 (function() {
