@@ -12,6 +12,9 @@
 {{ $js := resources.Get "js/bundle.js" | fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>
 
+<!-- AI Bot Tracking for llms.txt experiment -->
+<script src="{{ "/js/ai-bot-tracking.js" | relURL }}" defer></script>
+
 <!--
   Our marketing styles diverge a bit from the other parts of the website so we load
   in a different bundle on our marketing pages.

@@ -10,6 +10,26 @@ This repository contains the source for the Pulumi website, built with [Hugo](ht
 
 ---
 
+## AI Assistant Information (llms.txt)
+
+This repository implements the llms.txt standard for improved AI/LLM consumption:
+
+- **Primary content index**: https://www.pulumi.com/llms.txt
+- **Standard**: Following [llms.txt specification](https://llmstxt.org/)
+- **Content structure**: Hierarchical documentation index optimized for LLM context windows
+- **Focus areas for AI consumption**:
+  - `/docs/iac/` - Infrastructure as Code documentation
+  - `/docs/esc/` - Secrets and configuration management
+  - `/docs/pulumi-cloud/` - Platform capabilities
+  - `/registry/` - Provider and package documentation
+  - `/docs/reference/` - API references for all languages
+- **Markdown versions**: When available, append `.md` to URLs for cleaner content
+- **Excluding content from llms.txt**: Add `llms_exclude: true` to front matter
+
+When working with Pulumi documentation, consult the llms.txt file first for structured navigation and understanding of the documentation hierarchy.
+
+---
+
 ## Build / Test / Lint Workflow
 
 Agents must use these exact commands:

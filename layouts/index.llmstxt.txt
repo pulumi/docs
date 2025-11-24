@@ -1,0 +1,91 @@
+{{- /* Generate llms.txt file for AI/LLM consumption */ -}}
+{{- /* Static version for now - dynamic generation can be enabled later */ -}}
+# Pulumi
+
+> Infrastructure as code using real programming languages. Write, test, and deploy cloud infrastructure with TypeScript, Python, Go, C#, or Java instead of YAML. Get IDE support, type safety, and automated testing for AWS, Azure, GCP, Kubernetes, and 150+ providers. Deploy 3x faster with 90% fewer configuration errors.
+
+## Getting Started
+
+{{- range where .Site.RegularPages "Section" "docs" }}
+  {{- if and (in .RelPermalink "/get-started/") (not (isset .Params "llms_exclude")) }}
+- [{{ .Title }}]({{ .Permalink }}){{ if .Params.meta_desc }} - {{ .Params.meta_desc }}{{ end }}
+  {{- end }}
+{{- end }}
+- [Core Concepts](https://www.pulumi.com/docs/iac/concepts/) - Projects, stacks, resources, and state
+
+## Infrastructure as Code (IaC)
+
+- [Why Pulumi?](https://www.pulumi.com/docs/iac/) - Real code vs YAML configuration
+{{- range where .Site.RegularPages "Section" "docs" }}
+  {{- if and (in .RelPermalink "/iac/") (not (in .RelPermalink "/get-started/")) (not (isset .Params "llms_exclude")) }}
+    {{- if or (in .RelPermalink "/languages-sdks/") (in .RelPermalink "/clouds/") (in .RelPermalink "/cli/") (in .RelPermalink "/automation-api/") (in .RelPermalink "/crossguard/") (in .RelPermalink "/adopting-pulumi/") }}
+- [{{ .Title }}]({{ .Permalink }}){{ if .Params.meta_desc }} - {{ .Params.meta_desc | truncate 100 }}{{ end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+## Pulumi ESC (Environments, Secrets, Configuration)
+
+{{- range where .Site.RegularPages "Section" "docs" }}
+  {{- if and (in .RelPermalink "/esc/") (not (isset .Params "llms_exclude")) }}
+    {{- if or (eq .RelPermalink "/docs/esc/") (in .RelPermalink "/get-started/") (in .RelPermalink "/environments/") (in .RelPermalink "/integrations/") (in .RelPermalink "/cli/") }}
+- [{{ .Title }}]({{ .Permalink }}){{ if .Params.meta_desc }} - {{ .Params.meta_desc | truncate 100 }}{{ end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+## Pulumi Cloud Platform
+
+{{- range where .Site.RegularPages "Section" "docs" }}
+  {{- if and (in .RelPermalink "/pulumi-cloud/") (not (isset .Params "llms_exclude")) }}
+    {{- if or (eq .RelPermalink "/docs/pulumi-cloud/") (in .RelPermalink "/deployments/") (in .RelPermalink "/copilot/") (in .RelPermalink "/access-management/") (in .RelPermalink "/admin/") }}
+- [{{ .Title }}]({{ .Permalink }}){{ if .Params.meta_desc }} - {{ .Params.meta_desc | truncate 100 }}{{ end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+- [Pulumi Insights](https://www.pulumi.com/docs/insights/) - Infrastructure intelligence and search
+
+## Registry (Providers & Packages)
+
+- [AWS Provider](https://www.pulumi.com/registry/packages/aws/) - Complete AWS resource coverage
+- [Azure Native Provider](https://www.pulumi.com/registry/packages/azure-native/) - Full Azure ARM API
+- [Google Cloud Provider](https://www.pulumi.com/registry/packages/gcp/) - Complete GCP coverage
+- [Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes/) - Native Kubernetes support
+- [All Providers](https://www.pulumi.com/registry/) - 150+ cloud and SaaS providers
+
+## API Reference
+
+- [Node.js/TypeScript](https://www.pulumi.com/docs/reference/pkg/nodejs/) - Complete TypeScript/JavaScript API
+- [Python](https://www.pulumi.com/docs/reference/pkg/python/) - Complete Python API
+- [Go](https://www.pulumi.com/docs/reference/pkg/go/) - Complete Go API
+- [.NET/C#](https://www.pulumi.com/docs/reference/pkg/dotnet/) - Complete .NET API
+- [Java](https://www.pulumi.com/docs/reference/pkg/java/) - Complete Java API
+
+## Tutorials & Examples
+
+{{- $tutorials := where .Site.RegularPages "Section" "tutorials" }}
+{{- range first 10 $tutorials }}
+  {{- if not (isset .Params "llms_exclude") }}
+- [{{ .Title }}]({{ .Permalink }}){{ if .Params.meta_desc }} - {{ .Params.meta_desc | truncate 100 }}{{ end }}
+  {{- end }}
+{{- end }}
+- [More Tutorials](https://www.pulumi.com/tutorials/) - Complete list of hands-on learning paths
+- [Examples](https://github.com/pulumi/examples) - Production-ready templates
+- [Templates](https://www.pulumi.com/templates/) - Starter templates for common architectures
+
+## Optional
+
+{{- /* Include select high-value blog posts */ -}}
+{{- $blogPosts := where .Site.RegularPages "Section" "blog" }}
+{{- $recentPosts := first 20 (where $blogPosts ".Date" ">" (now.AddDate -1 0 0)) }}
+{{- range $recentPosts }}
+  {{- if not (isset .Params "llms_exclude") }}
+    {{- if or (in .Title "Infrastructure as Code") (in .Title "Terraform") (in .Title "CloudFormation") (in .Title "AWS CDK") (in .Title "Kubernetes") (in .Title "Getting Started") }}
+- [{{ .Title }}]({{ .Permalink }}){{ if .Params.meta_desc }} - {{ .Params.meta_desc | truncate 100 }}{{ end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+- [Blog](https://www.pulumi.com/blog/) - Latest features, best practices, and announcements
+- [Case Studies](https://www.pulumi.com/case-studies/) - How BMW, Mercedes-Benz, Snowflake use Pulumi
+- [What Is Pulumi?](https://www.pulumi.com/what-is/what-is-pulumi/) - Detailed explanation
+- [Community](https://www.pulumi.com/community/) - Slack, discussions, events
