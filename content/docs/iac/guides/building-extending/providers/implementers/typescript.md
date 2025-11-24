@@ -19,7 +19,7 @@ This is an advanced guide for power users. You'll be working directly with the p
 
 ## Prerequisites
 
-You'll need Node.js 18 or later, and a basic understanding of the [provider protocol](/docs/iac/guides/building-extending/providers/implementers/protocol-reference/).
+You'll need Node.js 20 or later, and a basic understanding of the [provider protocol](/docs/iac/guides/building-extending/providers/implementers/protocol-reference/).
 
 ## Project structure
 
