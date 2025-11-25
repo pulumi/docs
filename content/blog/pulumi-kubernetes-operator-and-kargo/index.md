@@ -32,19 +32,21 @@ Kargo is a [continuous promotion platform](https://docs.kargo.io/user-guide/core
 
 The key concepts you'll work with:
 
-**Freight**: A packaged set of artifacts that move together through your pipeline. For PKO, this typically includes a Git commit reference to your Pulumi infrastructure code and any associated configuration.
+**Freight**: A packaged set of artifacts that move together through your pipeline. When integrating with PKO, this will typically be the pulumi program that defines your infrastructure and the git commit with the latest version.
 
 **Stages**: Promotion targets that represent different lifecycle phases (like dev, staging, production). Each stage corresponds to a different PKO Stack resource managing that environment's infrastructure.
 
 **Promotions**: The process of moving freight from one stage to the next. Kargo updates the Stack resources to point to the promoted freight.
 
-**Warehouses**: Monitors that watch your Git repository for infrastructure code changes and package new commits as freight.
+**Warehouses**: Monitors that watch your Git repository for infrastructure code changes and package new commits or releases as freight.
 
 **Projects**: Organizational units that group related stages and warehouses, mapping to Kubernetes namespaces for access control.
 
 When Kargo promotes freight to a stage, it updates the corresponding PKO Stack resource with the new Git reference. PKO then reconciles the stack, and your infrastructure changes are applied.
 
 ## Example architecture
+
+### Workflow
 
 To demonstrate how these tools work together, let's look at an example setup that manages infrastructure code through a controlled promotion pipeline:
 
@@ -60,6 +62,8 @@ This architecture includes six main components working together:
 1. **Pulumi**: Performs the actual infrastructure deployments and previews based on PKO's instructions.
 
 The workflow follows this pattern: Kargo detects new infrastructure code, updates the manifests repository with the new Git reference, Argo CD syncs the Stack objects to Kubernetes, PKO triggers Pulumi to deploy the changes, and Kargo verifies the successful deployment. This creates a closed loop where infrastructure changes are systematically promoted and verified at each stage.
+
+### Dashboard and Management
 
 ![Kargo Dashboard](kargo_dash.png)
 
@@ -107,7 +111,7 @@ stringData:
 
 ### Setting up approver roles
 
-To control who can approve promotions at approval gates, you need to [create custom roles](https://docs.kargo.io/user-guide/security/access-controls/) with the `promote` permission. This requires three resources: a ServiceAccount with OIDC claim mapping, a Role with promotion permissions, and a RoleBinding to connect them.
+To control who can approve promotions at approval gates, you can [create custom roles](https://docs.kargo.io/user-guide/security/access-controls/) with the `promote` permission. This requires three resources: a ServiceAccount with OIDC claim mapping, a Role with promotion permissions, and a RoleBinding to connect them. The easiest way to set up these resources is through the Kargo UI.
 
 ![Kargo Approver Role Setup](kargo_approver_role_setup.png)
 
