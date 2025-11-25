@@ -1,0 +1,63 @@
+# Pulumi
+
+> Infrastructure as code using real programming languages. Write, test, and deploy cloud infrastructure with TypeScript, Python, Go, C#, or Java instead of YAML. Get IDE support, type safety, and automated testing for AWS, Azure, GCP, Kubernetes, and 150+ providers.
+
+## Getting Started
+
+- [Installation](https://www.pulumi.com/docs/iac/get-started/install/) - Install Pulumi CLI and tools
+- [AWS Quick Start](https://www.pulumi.com/docs/iac/get-started/aws/) - Deploy first AWS infrastructure
+- [Azure Quick Start](https://www.pulumi.com/docs/iac/get-started/azure/) - Deploy first Azure infrastructure
+- [GCP Quick Start](https://www.pulumi.com/docs/iac/get-started/gcp/) - Deploy first GCP infrastructure
+- [Kubernetes Quick Start](https://www.pulumi.com/docs/iac/get-started/kubernetes/) - Deploy to Kubernetes
+- [Core Concepts](https://www.pulumi.com/docs/iac/concepts/) - Projects, stacks, resources, and state
+
+## Infrastructure as Code (IaC)
+
+- [Why Pulumi?](https://www.pulumi.com/docs/iac/) - Real code vs YAML configuration
+- [Languages & SDKs](https://www.pulumi.com/docs/iac/languages-sdks/) - TypeScript, Python, Go, C#, Java, YAML
+- [Cloud Providers](https://www.pulumi.com/docs/iac/clouds/) - AWS, Azure, GCP, Kubernetes guides
+- [CLI Commands](https://www.pulumi.com/docs/iac/cli/commands/) - Complete command reference
+- [Automation API](https://www.pulumi.com/docs/iac/automation-api/) - Embed Pulumi in your applications
+- [Terraform Migration](https://www.pulumi.com/docs/iac/adopting-pulumi/migrate-terraform/) - Migrate from Terraform
+- [CloudFormation Migration](https://www.pulumi.com/docs/iac/adopting-pulumi/migrate-cloudformation/) - Migrate from CloudFormation
+
+## Pulumi ESC (Environments, Secrets, Configuration)
+
+- [Overview](https://www.pulumi.com/docs/esc/) - Centralized secrets and configuration management
+- [Get Started](https://www.pulumi.com/docs/esc/get-started/) - Quick start guide
+- [Environments](https://www.pulumi.com/docs/esc/environments/) - Define and manage environments
+- [Integrations](https://www.pulumi.com/docs/esc/integrations/) - Integrate with external secret stores
+- [CLI Reference](https://www.pulumi.com/docs/esc/cli/) - ESC command reference
+
+## Pulumi Cloud Platform
+
+- [Overview](https://www.pulumi.com/docs/pulumi-cloud/) - Managed platform capabilities
+- [Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/) - Automated deployments
+- [Pulumi Copilot](https://www.pulumi.com/docs/pulumi-cloud/copilot/) - AI-powered infrastructure
+- [Access Management](https://www.pulumi.com/docs/pulumi-cloud/access-management/) - Teams, roles, RBAC
+- [Audit Logs](https://www.pulumi.com/docs/pulumi-cloud/admin/audit-logs/) - Compliance and security
+- [Pulumi Insights](https://www.pulumi.com/docs/insights/) - Infrastructure intelligence and search
+
+## Registry (Providers & Packages)
+
+- [AWS Provider](https://www.pulumi.com/registry/packages/aws/) - Complete AWS resource coverage
+- [Azure Native Provider](https://www.pulumi.com/registry/packages/azure-native/) - Full Azure ARM API
+- [Google Cloud Provider](https://www.pulumi.com/registry/packages/gcp/) - Complete GCP coverage
+- [Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes/) - Native Kubernetes support
+- [All Providers](https://www.pulumi.com/registry/) - 150+ cloud and SaaS providers
+
+## API Reference
+
+- [Node.js/TypeScript](https://www.pulumi.com/docs/reference/pkg/nodejs/) - Complete TypeScript/JavaScript API
+- [Python](https://www.pulumi.com/docs/reference/pkg/python/) - Complete Python API
+- [Go](https://www.pulumi.com/docs/reference/pkg/go/) - Complete Go API
+- [.NET/C#](https://www.pulumi.com/docs/reference/pkg/dotnet/) - Complete .NET API
+- [Java](https://www.pulumi.com/docs/reference/pkg/java/) - Complete Java API
+
+## Resources
+
+- [Tutorials](https://www.pulumi.com/tutorials/) - Hands-on learning paths
+- [Examples](https://github.com/pulumi/examples) - Production-ready templates
+- [Templates](https://www.pulumi.com/templates/) - Starter templates for common architectures
+- [Blog](https://www.pulumi.com/blog/) - Latest features, best practices, and announcements
+- [Case Studies](https://www.pulumi.com/case-studies/) - How BMW, Mercedes-Benz, Snowflake use Pulumi
