@@ -7,12 +7,12 @@ tags: ["kargo", "kubernetes", "pko", "change management", "gitops", "argocd", "v
 meta_desc: "Use Kargo with the Pulumi Kubernetes Operator to control how infrastructure changes are promoted across environments."
 date: "2025-11-25"
 meta_image: "kargo-change-mgmt.png"
-
+allow_long_title: true
 summary: |
-    The Pulumi Kubernetes Operator manages Pulumi stacks as Kubernetes resources, while Kargo provides controlled promotion of changes across environments. Used together, they let you manage infrastructure as code with Pulumi while systematically testing and promoting changes through dev, staging, and production environments.
+    The Pulumi Kubernetes Operator (PKO) manages Pulumi stacks as Kubernetes resources, while Kargo provides controlled promotion of changes across environments. Used together, they let you manage infrastructure as code with Pulumi while systematically testing and promoting changes through dev, staging, and production environments.
 ---
 
-The [Pulumi Kubernetes Operator](https://www.pulumi.com/docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/) enables you to manage Pulumi stacks as Kubernetes resources, but it doesn't provide much guidance on change management. [Kargo](https://kargo.io/) fills this gap by providing controlled, staged promotions with verification steps. Together, they let you keep your infrastructure defined in Pulumi while managing multi-environment rollouts in a systematic way.
+The [Pulumi Kubernetes Operator (PKO)](https://www.pulumi.com/docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/) enables you to manage Pulumi stacks as Kubernetes resources, but it doesn't provide much guidance on change management. [Kargo](https://kargo.io/) fills this gap by providing controlled, staged promotions with verification steps. Together, they let you keep your infrastructure defined in Pulumi while managing multi-environment rollouts in a systematic way.
 
 <!--more-->
 
@@ -26,7 +26,7 @@ When you combine these tools, you gain several change management capabilities:
 - **Approval gates**: Set up discrete approval requirements before promotion, ensuring human review when needed.
 - **Change tracking**: Maintain a clear audit trail of what changed, when, and how it moved through your environments.
 
-## What is Kargo
+## About Kargo
 
 Kargo is a [continuous promotion platform](https://docs.kargo.io/user-guide/core-concepts/) that manages how changes move through application lifecycle stages. While it's commonly used for application deployments, it also works for infrastructure code managed by PKO.
 
@@ -67,7 +67,11 @@ The workflow follows this pattern: Kargo detects new infrastructure code, update
 
 ![Kargo Dashboard](kargo_dash.png)
 
-The Kargo dashboard brings operational visibility to this entire workflow. The timeline view at the top shows every freight version moving through your pipeline, making it immediately clear which infrastructure code version is running in each environment and how long it has been there. The flow diagram below maps out your complete promotion path with color-coded stages, so you can see at a glance where changes are flowing smoothly and where they are waiting at approval gates or blocked by failed verifications. Status indicators on each stage show real-time health information, eliminating the need to manually check multiple systems or run status commands to understand your deployment state. This single-pane view reduces context switching, speeds up troubleshooting when issues arise, and gives both operators and stakeholders a shared understanding of exactly what infrastructure is deployed where.
+The Kargo dashboard brings operational visibility to this entire workflow. The timeline view at the top shows every freight version moving through your pipeline, making it immediately clear which infrastructure code version is running in each environment and how long it has been there.
+
+The flow diagram above maps out your complete promotion path with color-coded stages. You can see at a glance where changes are flowing smoothly and where they are waiting at approval gates or blocked by failed verifications.
+
+Status indicators on each stage show real-time health information, eliminating the need to manually check multiple systems or run status commands. This single-pane view reduces context switching, speeds up troubleshooting when issues arise, and gives an understanding of exactly what infrastructure is deployed where.
 
 {{% notes type="info" %}}
 You can see the complete setup for this example, including configuration files and manifests, in the [pulumi-operator-with-kargo-change-management](https://github.com/lichtie/pulumi-operator-with-kargo-change-management) repository.
@@ -77,11 +81,9 @@ You can see the complete setup for this example, including configuration files a
 
 The example repository contains three Pulumi projects that deploy in sequence:
 
-**cluster**: Creates a basic Amazon EKS cluster where everything will run.
-
-**cluster-setup**: Installs the required dependencies including PKO, cert-manager, Argo CD, Argo Rollouts, and AWS Cognito for authentication.
-
-**kargo**: Deploys Kargo via Helm and provides examples to set up the project with stages, approval gates, and analysis templates for the promotion pipeline.
+1. **cluster**: Creates a basic Amazon EKS cluster where everything will run.
+1. **cluster-setup**: Installs the required dependencies including PKO, cert-manager, Argo CD, Argo Rollouts, and AWS Cognito for authentication.
+1. **kargo**: Deploys Kargo via Helm and provides examples to set up the project with stages, approval gates, and analysis templates for the promotion pipeline.
 
 ## Configuring Kargo
 
@@ -156,8 +158,8 @@ This configuration automatically promotes freight through preview stages and dev
 Kargo needs access to the Pulumi API to verify that infrastructure deployments completed successfully. Create a secret in your project through the Kargo UI:
 
 1. Navigate to your project in the Kargo UI
-1. Go to Settings > Credentials
-1. Create a new credential with:
+1. Navigate to **Settings** → **Credentials**
+1. Select **Create a new credential** with:
    - Name: `pulumi-api-token`
    - Type: `Opaque`
    - Key: `PULUMI_ACCESS_TOKEN`
