@@ -61,6 +61,10 @@ This architecture includes six main components working together:
 
 The workflow follows this pattern: Kargo detects new infrastructure code, updates the manifests repository with the new Git reference, Argo CD syncs the Stack objects to Kubernetes, PKO triggers Pulumi to deploy the changes, and Kargo verifies the successful deployment. This creates a closed loop where infrastructure changes are systematically promoted and verified at each stage.
 
+![Kargo Dashboard](kargo_dash.png)
+
+The Kargo dashboard brings operational visibility to this entire workflow. The timeline view at the top shows every freight version moving through your pipeline, making it immediately clear which infrastructure code version is running in each environment and how long it has been there. The flow diagram below maps out your complete promotion path with color-coded stages, so you can see at a glance where changes are flowing smoothly and where they are waiting at approval gates or blocked by failed verifications. Status indicators on each stage show real-time health information, eliminating the need to manually check multiple systems or run status commands to understand your deployment state. This single-pane view reduces context switching, speeds up troubleshooting when issues arise, and gives both operators and stakeholders a shared understanding of exactly what infrastructure is deployed where.
+
 {{% notes type="info" %}}
 You can see the complete setup for this example, including configuration files and manifests, in the [pulumi-operator-with-kargo-change-management](https://github.com/lichtie/pulumi-operator-with-kargo-change-management) repository.
 {{% /notes %}}
