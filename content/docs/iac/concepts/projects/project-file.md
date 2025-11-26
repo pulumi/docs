@@ -22,7 +22,7 @@ aliases:
 Every Pulumi program has a project file, `Pulumi.yaml`, which specifies metadata about your project, such as the project name and language runtime. The project file must begin with a capital `P` and have an extension of either `.yml` or `.yaml`. For more information about Pulumi projects, see the following [Pulumi projects overview](/docs/intro/concepts/project/).
 
 {{< notes >}}
-For Pulumi programs specifically written in Pulumi YAML, the project file not only serves as a configuration and metadata repository but also contains the program's infrastructure definition itself. For instance, the `resources`, `variables`, and `outputs` are [top-level attributes related to infrastructure](/docs/iac/languages-sdks/yaml/yaml-language-reference/). To learn more, see [Pulumi YAML](/docs/intro/languages/yaml/).
+For Pulumi programs specifically written in Pulumi YAML, the project file not only serves as a configuration and metadata repository but also contains the program's infrastructure definition itself. For instance, `resources`, `variables`, and `outputs` are [top-level properties that define your infrastructure](/docs/iac/languages-sdks/yaml/yaml-language-reference/). To learn more, see [Pulumi YAML](/docs/intro/languages/yaml/).
 {{< /notes >}}
 
 ## Attributes
