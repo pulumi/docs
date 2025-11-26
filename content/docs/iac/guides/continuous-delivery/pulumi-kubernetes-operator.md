@@ -43,18 +43,21 @@ To work with the operator, we'll need to follow these steps.
   - [Dev Install](#dev-install)
 - [Create a Service Account](#create-a-service-account)
 - [Configure Pulumi Cloud Access](#configure-pulumi-cloud-access)
+- [Use Pulumi ESC for centralized configuration](#use-pulumi-esc-for-centralized-configuration)
 - [Create a Stack Resource](#create-a-stack-resource)
   - [Using a Git repository](#using-a-git-repository)
   - [Using a Flux source](#using-a-flux-source)
   - [Using a Program object](#using-a-program-object)
 - [Explore other Features](#explore-other-features)
   - [Stack Configuration Values](#stack-configuration-values)
+  - [Structured configuration](#structured-configuration)
   - [Environment Variables](#environment-variables)
   - [Drift Detection](#drift-detection)
   - [State Refresh](#state-refresh)
   - [Stack Cleanup](#stack-cleanup)
   - [Stack Prerequisites](#stack-prerequisites)
   - [External Triggers](#external-triggers)
+  - [Preview mode](#preview-mode)
 - [Use With Argo CD](#use-with-argo-cd)
 - [More Information](#more-information)
   - [Examples](#examples)
@@ -72,7 +75,7 @@ Use [Helm 3.x][helm] to install the Pulumi Kubernetes Operator into your cluster
 
 ```bash
 helm install --create-namespace -n pulumi-kubernetes-operator pulumi-kubernetes-operator \
-    oci://ghcr.io/pulumi/helm-charts/pulumi-kubernetes-operator --version 2.0.0
+    oci://ghcr.io/pulumi/helm-charts/pulumi-kubernetes-operator --version 2.3.0
 ```
 
 [helm]: https://helm.sh/
@@ -157,6 +160,37 @@ See ["States & Backends"][states-backends] for more information.
 
 [tokens]: https://www.pulumi.com/docs/administration/access-identity/access-tokens/
 [states-backends]: https://www.pulumi.com/docs/iac/concepts/state-and-backends/
+
+## Use Pulumi ESC for centralized configuration
+
+[Pulumi ESC (Environments, Secrets, and Configuration)][pulumi-esc] provides centralized management of secrets and configuration. You can attach ESC environments to Stack objects to access shared configuration and secrets across multiple stacks.
+
+Use the `spec.envs` field to specify one or more ESC environment names:
+
+```yaml
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: my-app
+spec:
+  serviceAccountName: pulumi
+  stack: my-org/my-app/prod
+  projectRepo: https://github.com/example/app
+  branch: main
+  envs:
+    - prod-shared-config
+    - aws-credentials
+  envRefs:
+    PULUMI_ACCESS_TOKEN:
+      type: Secret
+      secret:
+        name: pulumi-api-secret
+        key: accessToken
+```
+
+ESC environments are accessed using your Pulumi access token. The configuration and secrets from these environments become available to your Pulumi program automatically.
+
+[pulumi-esc]: https://www.pulumi.com/docs/esc/
 
 ## Create a Stack Resource
 
@@ -572,9 +606,90 @@ The value may be a literal value or may be a reference to a Kubernetes `Secret`.
 Use the `spec.secretsProvider` field to use an alternative encryption provider.
 See ["Initializing a stack with alternative encryption"][iac-secrets-provider] for more information.
 
+Use the `spec.retryMaxBackoffDurationSeconds` field to control the maximum backoff duration for failed updates. This defaults to one update attempt per day (86400 seconds) but can be adjusted for faster retry cycles during development.
+
+To customize the retention of Update objects created by the Stack controller, use the `spec.updateTemplate` field to set labels, annotations, and TTL (time-to-live) policies. See the [Update CR documentation][pko-updates] for details.
+
 [iac-config]: https://www.pulumi.com/docs/iac/concepts/config/
 
 [iac-secrets-provider]: https://www.pulumi.com/docs/intro/concepts/secrets/#initializing-a-stack-with-alternative-encryption
+
+[pko-updates]: https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/updates.md
+
+### Structured configuration
+
+In addition to string values, Stack configuration supports complex data types including objects, arrays, numbers, and booleans. This enhancement allows you to express sophisticated configuration structures inline in your Stack manifests or load them from ConfigMaps with automatic JSON parsing.
+
+This feature requires Pulumi CLI v3.202.0 or later in your workspace pods. The operator provides automatic version detection with clear upgrade guidance when needed.
+
+Here's an example with inline structured configuration:
+
+```yaml
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: my-app
+spec:
+  serviceAccountName: pulumi
+  stack: my-org/my-app/prod
+  projectRepo: https://github.com/example/app
+  branch: main
+  config:
+    # String values (existing behavior)
+    environment: "production"
+
+    # Objects (NEW)
+    database:
+      host: "db.example.com"
+      port: 5432
+      ssl: true
+
+    # Arrays (NEW)
+    regions: ["us-west-2", "us-east-1", "eu-west-1"]
+
+    # Numbers and booleans (NEW)
+    maxConnections: 100
+    enableCaching: true
+  envRefs:
+    PULUMI_ACCESS_TOKEN:
+      type: Secret
+      secret:
+        name: pulumi-api-secret
+        key: accessToken
+```
+
+You can also reference ConfigMaps for complex configurations using the `json: true` flag:
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-settings
+data:
+  database.json: |
+    {
+      "host": "db.example.com",
+      "port": 5432,
+      "maxConnections": 100
+    }
+---
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: my-app
+spec:
+  serviceAccountName: pulumi
+  stack: my-org/my-app/prod
+  projectRepo: https://github.com/example/app
+  branch: main
+  configRefs:
+    database:
+      name: app-settings
+      key: database.json
+      json: true  # Parse as JSON
+```
+
+Note that Secrets are not a supported source of structured configuration values.
 
 ### Environment Variables
 
@@ -582,6 +697,23 @@ Use the `spec.envRefs` field to set environment variables for the Pulumi program
 such as `PULUMI_ACCESS_TOKEN` or `AWS_SECRET_ACCESS_KEY`.
 
 Values may be literals or based on the contents of a `ConfigMap` or `Secret` object.
+
+You can also set environment variables dynamically through init containers by writing to the `$PULUMI_ENV` file. Environment variables set this way affect the Pulumi CLI during deployment operations:
+
+```yaml
+spec:
+  workspaceTemplate:
+    spec:
+      initContainers:
+        - name: setup-env
+          image: busybox
+          command:
+            - sh
+            - -c
+            - |
+              echo "PULUMI_CONFIG_PASSPHRASE=my-passphrase" >> $PULUMI_ENV
+              echo "MY_CUSTOM_VAR=value" >> $PULUMI_ENV
+```
 
 ### Drift Detection
 
@@ -624,6 +756,39 @@ kubectl annotate stack $STACK_NAME "pulumi.com/reconciliation-request=$(date)" -
 ```
 
 The value of the annotation is arbitrary, and we recommend using a timestamp.
+
+### Preview mode
+
+Preview mode enables you to run Pulumi stacks in dry-run fashion, allowing you to visualize what infrastructure changes would occur without actually applying them. When `spec.preview` is set to `true`, the operator runs `pulumi preview` instead of `pulumi up`.
+
+This is useful for:
+
+- Validating infrastructure changes before deployment
+- Comparing different configurations using multiple Stack resources pointing to the same Pulumi stack
+- Creating tick-tock rollout patterns where you toggle preview mode on and off
+
+Here's an example Stack with preview mode enabled:
+
+```yaml
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: my-infrastructure-preview
+spec:
+  serviceAccountName: pulumi
+  stack: my-org/my-project/prod
+  projectRepo: https://github.com/example/infra
+  branch: feature-branch
+  preview: true  # Only runs pulumi preview
+  envRefs:
+    PULUMI_ACCESS_TOKEN:
+      type: Secret
+      secret:
+        name: pulumi-api-secret
+        key: accessToken
+```
+
+The Stack's Ready condition indicates preview success, and status includes preview links, standard output, and program outputs—all without making actual infrastructure changes.
 
 ## Use With Argo CD
 
