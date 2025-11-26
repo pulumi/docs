@@ -20,6 +20,8 @@ The `pulumi convert` command allows you to translate supported sources to the va
 
 For the detailed usage of this command and options, refer to the [pulumi convert CLI documentation.](https://www.pulumi.com/docs/cli/commands/pulumi_convert/)
 
+For guidance on combining conversion with importing existing resources, including the recommended workflow for each source format, see [Migration Best Practices](/docs/iac/guides/migration/best-practices/#choosing-your-import-approach).
+
 ### Supported source languages
 
 * [YAML](/docs/languages-sdks/yaml/)

@@ -23,6 +23,7 @@ This user guide offers a tour of tried-and-true tools and techniques that can be
 
 Below we will review some basic concepts, but feel free to jump straight to a specific guide:
 
+* [**Best Practices**](/docs/iac/guides/migration/best-practices/): practical guidance for real-world migrations
 * [**Importing Infrastructure**](/docs/using-pulumi/adopting-pulumi/import/): for any cloud, no matter how it's provisioned
 * [**From Terraform**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/): coexist with existing workspaces or convert your HCL
 * [**From AWS CloudFormation**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/): coexist with, deploy, or convert your templates and stacks
@@ -78,3 +79,13 @@ The final approach is to convert an existing infrastructure as code program to P
 Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. This is usually still combined with importing so that you not only get a new program that provisions the right infrastructure, but also adopt existing infrastructure under the management of Pulumi too.
 
 There are conversion tools available for [Terraform HCL](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform#converting-terraform-hcl-to-pulumi), [Kubernetes YAML](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes#converting-kubernetes-yaml), and [Azure Resource Manager (ARM) templates](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure#using-the-next-generation-pulumi-azure-provider).
+
+## AI-assisted migration
+
+For complex migrations, Pulumi offers AI-powered tools that can automate much of the process:
+
+* [**Pulumi Neo**](/docs/ai/) is an infrastructure automation agent that can discover resources, generate code, find correct IDs and type mappings, and iterate until your preview is clean. Start a task in [Pulumi Cloud](https://app.pulumi.com) and describe your migration goal.
+
+* The [**Pulumi MCP Server**](/docs/iac/guides/ai-integration/mcp-server/) brings these migration capabilities to AI assistants like Claude Code, Cursor, Windsurf, and GitHub Copilot, letting you get migration help directly in your development environment.
+
+For detailed guidance on real-world migration challenges, including finding resource IDs, achieving clean previews, and consolidating multiple environments into a single codebase, see the [Best Practices](/docs/iac/guides/migration/best-practices/) guide.
