@@ -1,113 +1,86 @@
 {{ define "hero" }}
-    <header class="page-hero flex justify-center items-center" >
-        <div class="relative" style="max-width: 2400px; ">
-        <img class="hidden xxl:block mx-auto w-full" style="max-height: 600px; max-width: 1500px; object-fit: cover;" src="/images/reinvent/reinvent-header-25.png" />
-        <div class="hidden xxl:flex relative xxl:absolute py-16 xxl:py-0 xxl:pl-8 bg-violet-100 xxl:bg-transparent xxl:inset-0 flex-col items-center xxl:items-start justify-center text-center px-4 gap-y-8 xxl:text-left">
-            <div class="font-semibold text-violet-600">AWS + PULUMI - BETTER TOGETHER</div>
-            <h1 class="text-4xl m-0">Meet with Pulumi at
-            AWS re:Invent</h1>
-            <p class="text-gray-600 text-2xl m-0">Infrastructure as Code, Now with Agentic AI at <b>Booth 1127</b></p>
-            <div class="flex flex-col md:flex-row gap-4">
-                <a href="#experts" class="btn-primary">Meet the Pulumi Experts</a>
-                <a href="https://app.pulumi.com/signup" target="_blank"  class="btn-secondary">Try Pulumi Cloud</a>
-            </div>
-        </div>
-
-        <div class="flex xxl:hidden relative py-16 flex-col items-center justify-center text-center px-4 gap-y-8"
+   <header class="page-hero flex justify-center items-center" >
+        <div class="flex relative py-16 flex-col items-center justify-center text-center px-4 gap-y-8"
             style="background: linear-gradient(90deg, white 0%, #ddd6fe 50%, white 100%);">
-            <div class="font-semibold text-violet-600">AWS + PULUMI - BETTER TOGETHER</div>
-            <h1 class="text-4xl m-0">Meet with Pulumi at
-                AWS re:Invent</h1>
-            <p class="text-gray-600 text-2xl m-0">Infrastructure as Code, Now with Agentic AI at <b>Booth 1127</b></p>
+            <h1 class="text-4xl m-0">Start Building on AWS - Get $500 in AWS Credits</h1>
+            <p class="text-gray-600 text-2xl mx-12" style="max-width: 1000px;">Sign up for Pulumi Cloud (free) and claim $500 in AWS credits to accelerate your next project. Available to the first 20 new signups from re:Invent.
+            </p>
             <div class="flex flex-col md:flex-row gap-4">
-                <a href="#experts" class="btn-primary">Meet the Pulumi Experts</a>
-                <a href="https://app.pulumi.com/signup" target="_blank" class="btn-secondary">Try Pulumi Cloud</a>
+                <a href="https://hubs.ly/Q03R6PWm0" class="btn-primary">Sign Up & Claim Credits</a>
             </div>
-        </div>
-    </div>
+        </div> 
     </header>
+
 {{ end }}
 
 {{ define "main" }}
-
     <section class="container mx-auto my-16 text-center">
         <h2 class="mb-16">Plan your re:Invent with Pulumi</h2>
         <div class="lg:flex lg:flex-wrap justify-center items-stretch">
             <div class="lg:w-1/2 px-3 py-6 mb-32">
                 <div class="card text-left p-6 relative h-full" style="padding-top: 80px;">
-                    <div class="absolute flex items-center justify-center rounded-full bg-white border-3 border-orange-500" style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #E69148;">
-                        <img src="/images/reinvent/code.png" alt="Code" style="width: 40px; height: 40px;" />
+                    <div class="absolute flex items-center justify-center rounded-full bg-white border-3 border-blue-500" style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #3545D7;">
+                        <img src="/images/reinvent/neo.png" alt="Neo" style="width: 40px; height: 40px;" />
                     </div>
                     <div>
-                        <h5>Book Your Tailored AWS Demo</h5>
+                        <h5>See How Neo Automates AWS Operations</h5>
                     </div>
                     <div class="description">
-                        <p>Skip the line at booth 1127 for a one-on-one Pulumi demo tailored to your AWS use case. Get your questions answered,
-                        explore best practices, and see how Pulumi can accelerate your cloud journey with a solution tailored to you.</p>
+                        <p>Watch Neo handle patching, policy checks, drift remediation, and cost cleanups powered by Amazon Bedrock - so you can focus on strategy instead of toil.</p>
                     </div>
                     <div class="card-cta-btn text-center">
-                        <a href="https://calendly.com/pulumi-meetings/demo-pulumi-at-aws-re-invent" target="_blank" class="btn-primary">Book my Demo at re:Invent</a>
+                        <a href="https://app.pulumi.com/neo?prompt=Build+a+GPU-powered+AI+inference+API+on+AWS+using+[…]ls.&utm_source=events&utm_medium=re-invent&prefer_signup=true" target="_blank" class="btn-primary hidden xl:inline">Build a GPU-powered AI inference API on AWS using Python</a>
+                        <a href="https://app.pulumi.com/neo?prompt=Build+a+GPU-powered+AI+inference+API+on+AWS+using+[…]ls.&utm_source=events&utm_medium=re-invent&prefer_signup=true" target="_blank" class="btn-primary inline xl:hidden">See Neo in Action</a>
+
                     </div>
                 </div>
             </div>
             <div class="lg:w-1/2 px-3 py-6 mb-32">
                 <div class="card text-left p-6 relative h-full" style="padding-top: 80px;">
-                    <div class="absolute flex items-center justify-center rounded-full bg-white border-3 border-orange-500" style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #3545D7;">
-                        <img src="/images/reinvent/drink.png" alt="Drink" style="width: 40px; height: 40px;" />
+                    <div class="absolute flex items-center justify-center rounded-full bg-white border-3 border-orange-500" style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #ee975c;">
+                        <img src="/images/reinvent/coding.png" alt="Conversation" style="width: 40px; height: 40px;" />
                     </div>
                     <div>
-                        <h5>1923 Happy Hour</h5>
+                        <h5>Continue the Conversation
+                        </h5>
                     </div>
                     <div class="description">
-                        <p>Don't miss one of the most anticipated nights of re:Invent. Join Pulumi, Buildkite, Honeycomb, and Oso at 1923
-                        Prohibition Bar for craft cocktails, community, and conversations that go late into the night.
-                        </p>
-                        <p>Date: December 3, at 7:00 - 10:00 pm PT</p>
-                        <p>Location: 1923 Bar - The Venetian</p>
+                        <p>Schedule time with Pulumi experts to discuss your specific AWS infrastructure challenges and see custom demos.</p>
                     </div>
                     <div class="card-cta-btn text-center">
-                        <a class="btn-primary" href="https://hubs.ly/Q03Q43R60">RSVP now</a>
+                        <a class="btn-primary" href="https://calendly.com/pulumi-meetings/meet-with-pulumi-after-aws-re-invent">Book a Meeting</a>
                     </div>
                 </div>
             </div>
             <div class="lg:w-1/2 px-3 py-6 mb-32 lg:mb-0">
                 <div class="card text-left p-6 relative h-full" style="padding-top: 80px;">
-                    <div class="absolute flex items-center justify-center rounded-full bg-white border-3 border-orange-500" style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #A25BA8;">
-                        <img src="/images/reinvent/restaurant.png" alt="Restaurant" style="width: 40px; height: 40px;" />
-                    </div>
+                    <div class="absolute flex items-center justify-center rounded-full bg-white border-3" style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #805ac3;">
+                        <img src="/images/reinvent/interests.png" alt="Connect" style="width: 40px; height: 40px;" />               </div>
                     <div>
-                        <h5>Restaurant Reception with Datadog</h5>
+                        <h5>Connect with 200K+ Infrastructure Engineers</h5>
                     </div>
                     <div class="description">
-                        <p>Join Pulumi and Datadog for an exclusive re:Invent evening at one of Las Vegas's top restaurants. Enjoy exceptional
-                        food, drinks, and conversations in a private setting.
-                        </p>
-                        <p>Date: December 1, 6:00 - 8:00 pm PT</p>
-                        <p>Location: Gjelina - The Venetian</p>
+                        <p>Get help, share knowledge, and stay updated on the latest AWS + Pulumi patterns in our active Slack community.</p>
 
                     </div>
                     <div class="card-cta-btn text-center">
-                        <a href="https://events.datadoghq.com/events/sip-social?_gl=1*751l3w*_gcl_au*MTcxNjkyMDQwNC4xNzU1MDE1Mjkx*_ga*MTM4ODg0MzI0NC4xNzU5MzQwOTcx*_ga_KN80RDFSQK*czE3NTkzNDQ1NzkkbzIkZzEkdDE3NTkzNDkwNjYkajU3JGwwJGgxNDgwMjY0MzIx*_fplc*Y0NpOHdFbCUyRlg3YUV6QVN5QnF0V2M4UkNBTnk0QzRGaERhJTJCdWI2Z1RGaXB0cGxpMXRGSHF3STk2NExwenN2WFBGelRGSUVnT280bEkzSlZOWXVvbjhzTXJRdlRUU2Ficzk2ZzVMZjhwbGltOHJPdGRjNk0zRFQlMkZnZVJDTWlBJTNEJTNE" target="_blank" class="btn-primary">RSVP for the reception</a>
+                        <a href="https://slack.pulumi.com/" target="_blank" class="btn-primary">Join Community Slack</a>
                     </div>
                 </div>
             </div>
             <div class="lg:w-1/2 px-3 py-6">
                 <div class="card text-left p-6 relative h-full" style="padding-top: 80px;">
                     <div class="absolute flex items-center justify-center rounded-full bg-white border-3 border-orange-500" style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #A25BA8;">
-                        <img src="/images/reinvent/school.png" alt="Workshop" style="width: 40px; height: 40px;" />
+                        <img src="/images/reinvent/school.png" alt="Learn" style="width: 40px; height: 40px;" />
                     </div>
                     <div>
-                        <p class="m-0 text-violet-600">ONLINE WORKSHOP</p>
-                        <h5 class="m-0 my-3">Day 2 Autonomous Infrastructure Management</h5>
+                        <h5 class="m-0 my-3">Deep Dive into AWS + Pulumi</h5>
                     </div>
                     <div class="description">
-                        <p>Learn how to simplify and automate maintenance of growing infrastructure inventory with monitoring, remediation, and
-                        optimization workflows.
-                        </p>
-                        <p>Date: December 10, 9:00 - 10:00 pm PT</p>
+                        <p>Access hands-on workshops, AWS-specific guides, and best practices for managing infrastructure at scale.</p>
                     </div>
                     <div class="card-cta-btn text-center">
-                        <a href="/events/day-2-autonomous-infrastructure-management/" class="btn-primary">Register for the workshop</a>
+                        <a href="/aws" class="btn-primary">Browse AWS Resources</a>
                     </div>
                 </div>
             </div>
