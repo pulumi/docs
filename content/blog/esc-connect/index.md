@@ -20,7 +20,7 @@ Pulumi ESC has [native integrations](/docs/esc/integrations/) with popular secre
 
 ESC Connect changes this by letting you build simple HTTPS adapter services using the [`external` provider](/docs/esc/integrations/dynamic-secrets/external/). Your adapter handles requests from ESC, fetches secrets from your custom source, and returns them. ESC handles authentication with signed JWT tokens, so you get fine-grained control over access without building a complete security infrastructure.
 
-## Building an Adapter
+## Building an adapter
 
 Here's an [ESC environment](/docs/esc/environments/) configuration that uses ESC Connect:
 
@@ -33,38 +33,32 @@ values:
         secretName: DATABASE_PASSWORD
 ```
 
-When you open this environment, ESC makes an authenticated POST request to your adapter. Your adapter validates the JWT token, fetches the secret from your source, and returns it:
+When you open this environment, ESC makes an authenticated POST request to your adapter. 
+Your adapter validates the JWT token, fetches the secret from your source, and returns it:
 
-```python
-# Simplified example - see docs for complete implementation
-class AdapterHandler(BaseHTTPRequestHandler):
-    def do_POST(self):
-        # Verify JWT token from Authorization header
-        token = self.headers.get("Authorization", "").replace("Bearer ", "")
-        claims = verify_jwt(token)  # Validates signature, expiration, audience
+```typescript
+const handler = async (event) => {
+    // 1. Validate JWT from Authorization header
+    const claims = await validateJWT(event.headers.Authorization);
 
-        # Parse request and fetch secret
-        request = json.loads(self.rfile.read())
-        secret_value = fetch_from_your_source(request["secretName"])
+    // 2. Verify audience and body hash for security
+    verifyAudience(claims.aud, event.url);
+    verifyBodyHash(event.body, claims.body_hash);
 
-        # Return response
-        response = {"value": secret_value}
-        self.send_response(200)
-        self.wfile.write(json.dumps(response).encode())
+    // 3. Fetch secret from your source
+    const request = JSON.parse(event.body);
+    const secret = await fetchFromYourSource(request.secretName);
+
+    // 4. Return the secret
+    return { statusCode: 200, body: JSON.stringify(secret) };
+};
 ```
 
-Once deployed, the secrets become available in your ESC environment:
+The [example reference implementation](#try-it-out) includes an `ESCRequestValidator` class that handles JWT verification and request integrity checking for you. See the [documentation](/docs/esc/integrations/dynamic-secrets/external/) for detailed security requirements and examples in other languages.
 
-```yaml
-environmentVariables:
-  DB_PASSWORD: ${customSecrets.response.value}
-```
+## Automated rotation
 
-The [documentation](/docs/esc/integrations/dynamic-secrets/external/) includes complete adapter examples with JWT verification, body hash validation, and security best practices.
-
-## Automated Rotation
-
-ESC Connect also supports [automated secret rotation](/docs/esc/environments/rotation/) through `fn::rotate::external`. Your rotation adapter receives the current credential state, generates new credentials, updates your target system, and returns the new state. ESC handles scheduling and maintains both current and previous credentials during transitions for zero-downtime rotation.
+ESC Connect also supports automated secret rotation through [`fn::rotate::external`](/docs/esc/integrations/rotated-secrets/external/). Your rotation adapter receives the current credential state, generates new credentials, updates your target system, and returns the new state. ESC handles scheduling and maintains both current and previous credentials during transitions for zero-downtime rotation.
 
 ```yaml
 values:
@@ -77,10 +71,14 @@ values:
           environment: production
 ```
 
-The [rotation documentation](/docs/esc/integrations/rotated-secrets/external/) covers state management, dual-secret strategies, and implementation patterns.
+Learn more about [secret rotation in Pulumi ESC](/docs/esc/environments/rotation/) and the [external rotator implementation patterns](/docs/esc/integrations/rotated-secrets/external/).
 
-## Try It Out
+## Try it out
 
-ESC Connect is available now in Pulumi ESC. Check out the documentation for the [external provider](/docs/esc/integrations/dynamic-secrets/external/) and [external rotation](/docs/esc/integrations/rotated-secrets/external/) to get started. The docs include complete adapter examples with JWT verification, security best practices, and example implementations in multiple languages.
+ESC Connect is available now in Pulumi ESC. We've created a [deployable reference adapter implementation](https://github.com/pulumi/examples/tree/master/aws-ts-esc-external-adapter-lambda) on AWS Lambda that demonstrates secure request validation:
+
+[![Deploy this example with Pulumi](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/blob/master/aws-ts-esc-external-adapter-lambda/README.md)
+
+Check out the documentation for the [external provider](/docs/esc/integrations/dynamic-secrets/external/) and [external rotator](/docs/esc/integrations/rotated-secrets/external/) to learn more about building production adapters.
 
 To learn more about Pulumi ESC, explore the [ESC documentation](/docs/esc/) or [get started for free](/docs/esc/get-started/). If you build an adapter for a system that others might find useful, share it in the [Pulumi Community Slack](https://slack.pulumi.com) — we'd love to see what you build.
