@@ -5,8 +5,11 @@ meta_desc: The `external` Pulumi ESC provider enables you to dynamically import 
 h1: external
 menu:
   esc:
-    identifier: external
+    identifier: external-provider
     parent: esc-dynamic-secrets
+aliases:
+  - /docs/pulumi-cloud/esc/providers/external/
+  - /docs/esc/providers/external/
 ---
 
 The `external` provider enables you to integrate custom secret sources with Pulumi ESC by making authenticated HTTPS requests to user-controlled adapter services.

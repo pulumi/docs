@@ -5,7 +5,7 @@ meta_desc: The `external` rotator enables you to rotate credentials using a cust
 h1: external
 menu:
   esc:
-    identifier: external
+    identifier: external-rotator
     parent: esc-rotated-secrets
 ---
 
