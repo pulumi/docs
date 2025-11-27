@@ -207,7 +207,9 @@ After rotation, applications see only the current secret:
 
 Your application should always use `apiCredentials.current`. After rotation, `current` contains the newly rotated secret, while the previous secret remains valid until the next rotation.
 
-**Important:** Configure your rotation schedule to be less frequent than your application's configuration refresh interval. For example, if your app fetches configuration every 5 minutes, rotate no more than once per hour.
+{{% notes type="warning" %}}
+Configure your rotation schedule to be less frequent than your application's configuration refresh interval. For example, if your app fetches configuration every 5 minutes, rotate no more than once per hour.
+{{% /notes %}}
 
 ### Example Rotator Implementation
 

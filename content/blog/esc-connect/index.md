@@ -33,8 +33,7 @@ values:
         secretName: DATABASE_PASSWORD
 ```
 
-When you open this environment, ESC makes an authenticated POST request to your adapter. 
-Your adapter validates the JWT token, fetches the secret from your source, and returns it:
+When you open this environment, ESC makes an authenticated POST request to your adapter. Your adapter validates the JWT token, fetches the secret from your source, and returns it:
 
 ```typescript
 const handler = async (event) => {
@@ -58,7 +57,7 @@ The [example reference implementation](#try-it-out) includes an `ESCRequestValid
 
 ## Automated rotation
 
-ESC Connect also supports automated secret rotation through [`fn::rotate::external`](/docs/esc/integrations/rotated-secrets/external/). Your rotation adapter receives the current credential state, generates new credentials, updates your target system, and returns the new state. ESC handles scheduling and maintains both current and previous credentials during transitions for zero-downtime rotation.
+ESC Connect also supports automated secret rotation through `fn::rotate::external`. Your rotation adapter receives the current credential state, generates new credentials, updates your target system, and returns the new state. ESC handles scheduling and maintains both current and previous credentials during rotation transitions for zero-downtime rotation.
 
 ```yaml
 values:

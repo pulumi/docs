@@ -27,9 +27,9 @@ The external provider serves as a generic escape hatch for integrating secret so
 
 Use the external provider when:
 
-- You need to integrate a custom or proprietary secret management system
-- You have specific business logic for secret fetching
-- Your secret source is behind a firewall or requires custom networking
+- You need to integrate a custom or proprietary secret management system.
+- You have specific business logic for secret fetching.
+- Your secret source is behind a firewall or requires custom networking.
 
 ## ESC Configuration Example
 
@@ -154,7 +154,7 @@ import jwt
 from jwt import PyJWKClient
 
 # Configuration
-JWKS_URL = "https://api.pulumi.com/.well-known/jwks.json"
+JWKS_URL = "https://api.pulumi.com/oidc/.well-known/jwks"
 ADAPTER_URL = "https://my-adapter.example.com/fetch-secrets"
 PORT = 8443
 
