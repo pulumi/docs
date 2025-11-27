@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: password-rotator
     parent: esc-rotated-secrets
-    weight: 5
+    weight: 1
 ---
 
 The `password` rotator enables you to rotate any user defined key by generating random passwords.
