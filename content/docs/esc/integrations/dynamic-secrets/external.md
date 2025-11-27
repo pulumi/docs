@@ -7,6 +7,7 @@ menu:
   esc:
     identifier: external-provider
     parent: esc-dynamic-secrets
+    weight: 99
 aliases:
   - /docs/pulumi-cloud/esc/providers/external/
   - /docs/esc/providers/external/
