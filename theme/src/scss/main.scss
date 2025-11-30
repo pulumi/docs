@@ -160,7 +160,7 @@ main {
     blockquote,
     table {
         a {
-            @apply text-blue-600 break-words;
+            @apply text-blue-700 break-words;
 
             &:hover {
                 @apply text-blue-700;
@@ -221,14 +221,14 @@ main {
             @apply lowercase border border-blue-200 rounded py-1 px-2 mr-1;
 
             &.tag-blog {
-                @apply bg-gray-100 text-blue-600;
+                @apply bg-gray-100 text-blue-700;
 
                 &:hover {
                     @apply border-blue-300 text-blue-700 no-underline;
                 }
 
                 &.active {
-                    @apply border-blue-600 bg-blue-600 text-white;
+                    @apply border-blue-700 bg-blue-700 text-white;
 
                     &:hover {
                         @apply text-white;
@@ -403,7 +403,7 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
 }
 #segment-consent-manager {
 
-    @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
+    @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-700 rounded-lg shadow-lg;
     z-index: 99999;
 
     @screen lg {
@@ -432,7 +432,7 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
     }
 
     .manage-cookies-btn {
-        @apply mt-2 bg-violet-600 text-white font-bold border-2 border-violet-600 no-underline p-3 rounded-md;
+        @apply mt-2 bg-violet-700 text-white font-bold border-2 border-violet-700 no-underline p-3 rounded-md;
         @include transition;
 
         &.disabled {

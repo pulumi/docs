@@ -555,12 +555,12 @@
     .get-started-pinned-search-container {
         width: 136px;
         .get-started-pinned-search-button {
-            @apply flex items-center justify-center text-violet-600 text-sm;
+            @apply flex items-center justify-center text-violet-700 text-sm;
             height: 33px;
 
             padding: 8px 16px;
 
-            border: 1px solid theme("colors.violet.600");
+            border: 1px solid theme("colors.violet.700");
             border-radius: 20px;
             width: max-content;
 

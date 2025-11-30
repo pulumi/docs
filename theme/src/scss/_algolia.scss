@@ -97,7 +97,7 @@
 
             // When active, show a strong underline.
             &.active, &.active:hover:not(.disabled) {
-                @apply text-gray-900 border-violet-600;
+                @apply text-gray-900 border-violet-700;
 
                 button {
                     img {
@@ -161,7 +161,7 @@
 
     // The highlight indicator (i.e., the portion of item, if any, that matches the search query).
     mark {
-        @apply bg-transparent border-b border-blue-600 border-opacity-50;
+        @apply bg-transparent border-b border-blue-700 border-opacity-50;
     }
 }
 

@@ -75,7 +75,7 @@
                                     {{ if $titleSubText }}
                                         <div class="text-xs text-blue-700 mt-1">{{ $titleSubText }}</div>
                                     {{ end }}
-                                    <div class="text-xs text-blue-600 mt-1">Current post</div>
+                                    <div class="text-xs text-blue-700 mt-1">Current post</div>
                                 </div>
                             {{ else }}
                                 <!-- Other posts in series -->
@@ -93,7 +93,7 @@
                                 {{ else }}
                                     <!-- Published post -->
                                     <div class="pl-3 py-1">
-                                        <a data-track="series-post" class="text-sm hover:text-blue-600" href="{{ $post.RelPermalink }}">
+                                        <a data-track="series-post" class="text-sm hover:text-blue-700" href="{{ $post.RelPermalink }}">
                                             <div class="font-medium">{{ $titleMainText }}</div>
                                             {{ if $titleSubText }}
                                                 <div class="text-xs text-gray-600 mt-1">{{ $titleSubText }}</div>
@@ -108,7 +108,7 @@
                 
                 <!-- Link to view all series posts -->
                 <div class="mt-4 pt-3">
-                    <a class="text-blue-600 text-sm" href="/blog/tag/{{ $currentSeries | urlize }}/">View whole series &rarr;</a>
+                    <a class="text-blue-700 text-sm" href="/blog/tag/{{ $currentSeries | urlize }}/">View whole series &rarr;</a>
                 </div>
             </div>
         {{ end }}
