@@ -48,7 +48,7 @@ outputs:
   home:
     - HTML
     - JSON
-    - LLMSTXT
+    - llms
   section:
     - HTML
 
