@@ -140,7 +140,7 @@ Put the migrated code in the subdirectory re-invent-cdk.
 
 ### Neo creates a plan and confirms before executing
 
-![Placeholder Image](/migrate-your-cdk-to-pulumi-with-neo/neo-plan-screenshot.png)
+![Placeholder Image](neo-plan-screenshot.png)
 
 The conversion analyzes your CDK constructs and generates equivalent Pulumi resources. Where CDK L2 constructs provide implicit defaults (encryption settings, IAM policies), Pulumi code makes those explicit.
 
@@ -157,7 +157,7 @@ Neo creates a pull request with the converted code and documentation. Run pulumi
 ### Converts cleanly:
 
 - Standard AWS constructs: EC2, Lambda, S3, DynamoDB, API Gateway, ECS, RDS
-- Single-stack applications or simple multi-stack setups
+- Single-stack applications or multi-stack setups
 - Applications using CDK's AWS constructs without heavy customization
 
 ### Needs manual attention:
@@ -183,7 +183,7 @@ Operationally, this means:
 - Your team learns 'pulumi up', 'pulumi preview', 'pulumi refresh' instead of 'cdk deploy', 'cdk diff'
 - You manage state explicitly rather than relying on CloudFormation's automatic rollback
 
-**Migration complexity**: State migration for simple, single-stack CDK applications typically succeeds with iteration. Complex multi-stack applications with custom constructs may require significant manual reconciliation. Start with your simplest stack to build confidence with the process.
+**Migration complexity**: State migration for single-stack CDK applications typically succeeds with iteration. Complex multi-stack applications with custom constructs may require significant manual reconciliation. Start with your simplest stack to build confidence with the process.
 
 Recommended path:
 
