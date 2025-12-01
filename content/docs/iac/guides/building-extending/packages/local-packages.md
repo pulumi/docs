@@ -173,7 +173,7 @@ pulumi package add <provider|schema|path> [provider-parameter...] [flags]
 
 For packages from Git repositories, specify a version tag or commit hash to control which version is used.
 
-After regenerating the SDK, ensure you reinstall or relink the SDK in your project using your language's package manager (e.g., `npm add`, `pip install -e`, etc.).
+After regenerating the SDK, run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all dependencies, including the updated local package.
 
 ## Versioning considerations
 

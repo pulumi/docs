@@ -404,5 +404,6 @@ output "availability_zones" {
 1. **Use native providers when available**: Prefer native Pulumi providers over Terraform providers for better performance and type safety
 2. **Document provider usage**: Document which Terraform providers your team uses and why
 3. **Monitor provider updates**: Keep track of provider updates and breaking changes
+4. **Use `pulumi install` for setup**: When cloning a project that uses Terraform providers, run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all dependencies, including local packages defined in `Pulumi.yaml`
 
 {{< get-started-stepper >}}
