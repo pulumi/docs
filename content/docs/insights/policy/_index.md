@@ -21,7 +21,7 @@ aliases:
   - /docs/insights/policy/core-concepts/
 ---
 
-Pulumi Policies empowers you to set guardrails to enforce compliance across your entire cloud infrastructure—whether resources are managed by Pulumi IaC, provisioned by other tools like Terraform or CloudFormation, or created manually. Using Pulumi Policies, you can write flexible business and security policies that protect your organization.
+Pulumi Policies enables you to implement policy as code across your entire cloud infrastructure. You define guardrails in code and apply them consistently across resources managed by Pulumi IaC, provisioned with Terraform or CloudFormation, or created manually. These codified business and security rules provide automated compliance protections for your organization.
 
 ## What is policy as code?
 
