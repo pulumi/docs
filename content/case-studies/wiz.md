@@ -44,7 +44,7 @@ sections:
       anchor: conclusion
 ---
 
-## The Challenge: Planet-Scale Kubernetes
+## The Challenge: Planet-Scale Kubernetes {#the-challenge}
 
 Wiz's core security offering requires them to scan cloud environments and correlate huge amounts of sensitive data: configurations, vulnerabilities, network exposure, identities, permissions, secrets, and workload metadata about where their customers' workloads actually run. This creates a unique infrastructure challenge: they need a presence in every cloud and every region where their customers operate. As Yarin Miran, Lead Engineer at Wiz, explains: "We need to be everywhere. We have clusters in Amazon, Azure, GCP, Alibaba, Oracle Cloud. We have more than a hundred data centers by now, and each data center has its own set of clusters per region, per cloud."
 
@@ -52,7 +52,7 @@ The complexity extends beyond simple geographic distribution. Wiz's scanning inf
 
 This leads to a combinatorial explosion of infrastructure requirements, with virtually limitless permutations. Each customer requires a unique blend of cloud provider, region, network configuration, security controls, and deployment model. Traditional infrastructure management approaches were never designed to support this level of dynamic complexity, automation, and governance at scale—let alone keep pace with constantly evolving customer needs and security threats.
 
-## The Pulumi Solution: Infrastructure as Real Code
+## The Pulumi Solution: Infrastructure as Real Code {#the-pulumi-solution}
 
 Wiz's decision to adopt Pulumi came at a serendipitous moment. "This really clicked for me with Pulumi because when we first thought about the automated solution, how to provision all these clusters, Pulumi had just announced the Automation API," Yarin explains. "I think I started playing with it two days after the announcement."
 
@@ -60,7 +60,7 @@ The Automation API was the key differentiator. Unlike traditional IaC tools that
 
 The Go SDK provided seamless integration with their existing backend services, while Pulumi's multi-cloud support meant they could use a single programming model across AWS, Azure, Google Cloud, Alibaba Cloud, and Oracle Cloud. Most importantly, the programmatic approach allowed them to dynamically generate infrastructure configurations based on customer requirements without maintaining hundreds of static configuration files.
 
-## A Global Infrastructure Orchestration Architecture
+## A Global Infrastructure Orchestration Architecture {#global-infrastructure}
 
 Wiz built their infrastructure provisioning system around two main components that work together to manage their global Kubernetes footprint. The Stack Provisioner uses Pulumi's Automation API to handle the infrastructure layer which involves creating Kubernetes clusters, configuring networking, provisioning storage, and setting up messaging queues for workload distribution. Each deployment is managed as a separate Pulumi stack, giving them fine-grained control over individual customer environments while maintaining consistency across their global infrastructure.
 
@@ -68,7 +68,7 @@ The Helm Provisioner takes over after the infrastructure is ready, managing Kube
 
 Their architecture dynamically adapts to customer requirements. Outpost deployments configure infrastructure within customer accounts using provided service credentials. Different compliance requirements trigger different networking configurations, security controls, and monitoring setups. Feature flags control which capabilities are enabled for each customer, and the system can provision everything from basic scanning clusters to complex multi-tier infrastructures with specialized storage and networking requirements.
 
-## Millions of Resources, Tens of Thousands Kubernetes Clusters
+## Millions of Resources, Tens of Thousands Kubernetes Clusters {#scale}
 
 The results speak to the power of programmatic infrastructure management. Wiz now operates thousands of Pulumi stacks, with each stack managing an individual Kubernetes cluster. These clusters span more than 100 data centers globally and manage over a million cloud resources. The system processes hundreds of thousands of stack updates daily, continuously adapting to changing customer requirements and operational needs.
 
@@ -76,15 +76,15 @@ But the real story isn't just about the numbers, it's about operational efficien
 
 The business impact has been game-changing for revenue growth and market expansion. Wiz can enter new markets in days rather than quarters, provisioning compliant infrastructure across any cloud provider and region. This agility enabled Wiz to capture first-mover advantages in emerging markets and respond to enterprise RFPs 5x faster than competitors still relying on manual infrastructure processes. They can adapt to diverse customer requirements through flexible deployment models. And they can scale their infrastructure automatically as their business grows, without the manual overhead that would typically come with managing thousands of infrastructure deployments.
 
-## From Automation to Business Impact
+## From Automation to Business Impact {#business-impact}
 
 Wiz's infrastructure automation delivers measurable business value: 5x faster customer onboarding, 10x more efficient resource management per engineer, and the ability to enter new geographic markets within days rather than months. This operational leverage has been crucial to Wiz's ability to scale revenue while maintaining industry-leading margins in the competitive cybersecurity market.
 
-## From Resilience to FedRAMP
+## From Resilience to FedRAMP {#resilience}
 
 Operating at this scale requires sophisticated engineering practices. Wiz has built comprehensive error handling and recovery mechanisms that go far beyond basic infrastructure management. They've developed multi-layered parsing systems that interpret Pulumi outputs to understand the actual errors, missing permissions, and customer-facing issues that need to be addressed. Their system includes automated recovery mechanisms for interrupted operations, garbage collection for duplicate or orphaned resources, and health monitoring that continuously validates infrastructure state. When operations are interrupted, whether due to pod crashes, node reallocations, or other infrastructure events, their system can automatically detect and recover without manual intervention. The team has also extended Pulumi's capabilities to accelerate their FedRAMP compliance efforts - achieving FedRAMP High authorization in September 2025.
 
-## Lessons in Large-Scale Infrastructure Management
+## Lessons in Large-Scale Infrastructure Management {#lessons}
 
 Wiz's experience offers several key insights for organizations operating infrastructure at scale. First, programmatic infrastructure management becomes essential when dealing with dynamic, customer-specific requirements. The ability to use real programming languages for infrastructure provisioning enabled them to build systems that would have been impossible with traditional configuration-based approaches.
 
@@ -94,11 +94,11 @@ Third, comprehensive error handling and recovery mechanisms are crucial for larg
 
 Finally, the choice of IaC platform matters significantly when operating at scale. Tools that treat infrastructure as configuration files may work for smaller deployments but become unmaintainable when dealing with hundreds or thousands of unique infrastructure configurations. Programmatic approaches that leverage full programming language capabilities become essential for managing complexity at scale.
 
-## The Future of Infrastructure at Wiz
+## The Future of Infrastructure at Wiz {#the-future}
 
 Wiz continues to expand their use of Pulumi across their platform. They're migrating additional backend services from SDK-based provisioning to Pulumi, enabling more engineering teams to leverage the same infrastructure management capabilities. They're also exploring Pulumi's policy engine for infrastructure governance, which could provide additional controls and compliance capabilities across their global infrastructure.
 
-## Conclusion: Infrastructure as a Competitive Advantage
+## Conclusion: Infrastructure as a Competitive Advantage {#conclusion}
 
 Wiz's success stems from several factors, including the ability to scale rapidly and innovate at speed to maximize customer value. As part of that approach, they proved that IaC can become a competitive advantage when done right. By choosing tools that embrace programming languages and programmatic approaches, they built an infrastructure foundation that scales with meteoric business growth while maintaining the flexibility to meet diverse customer requirements across all of the major cloud providers.
 
