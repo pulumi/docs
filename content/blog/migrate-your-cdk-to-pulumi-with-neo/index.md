@@ -140,13 +140,13 @@ Put the migrated code in the subdirectory re-invent-cdk.
 
 ### Neo creates a plan and confirms before executing
 
-![Placeholder Image](meta.png)
+![Placeholder Image](/migrate-your-cdk-to-pulumi-with-neo/neo-plan-screenshot.png)
 
 The conversion analyzes your CDK constructs and generates equivalent Pulumi resources. Where CDK L2 constructs provide implicit defaults (encryption settings, IAM policies), Pulumi code makes those explicit.
 
 **When complete:**
 
-![Placeholder Image](meta.png)
+![Placeholder Image](neo-preview-update-screenshot.png)
 
 Neo creates a pull request with the converted code and documentation. Run pulumi preview to validate changes before applying anything.
 
