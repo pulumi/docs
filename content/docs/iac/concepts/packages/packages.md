@@ -17,6 +17,7 @@ aliases:
 - /docs/iac/using-pulumi/pulumi-packages/
 - /docs/iac/concepts/packages/
 - /docs/iac/guides/building-extending/packages/
+- /docs/iac/guides/building-extending/packages/packages/
 ---
 
 Pulumi Packages are the core technology that enables Pulumi [resources](/docs/iac/concepts/resources/), [components](/docs/iac/concepts/components/), and [functions](/docs/iac/concepts/functions/) to be defined once and used in all Pulumi languages.
@@ -30,10 +31,34 @@ Pulumi packages consist of two parts that allow them to be consumed in any Pulum
 
 ## Consuming packages
 
-How you consume a Pulumi package depends on whether it has published SDKs:
+There are two ways to add Pulumi packages to your program:
 
-- For packages with published SDKs, you can consume the package by adding a reference to the published SDK from the package feed, e.g. `npm install`, `dotnet package add`, etc. The published SDKs contain commands to automatically download the provider code/binary.
-- For packages without published SDKs, called [local packages](/docs/iac/guides/building-extending/packages/local-packages/#updating-local-packages), you can consume a package via the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command, which will download the provider plugin and generate a local SDK. Generated local SDKs may be committed to version control, or they can be regenerated at any time with the [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) command.
+- **Packages with published SDKs**: Use your language's standard package manager. Most packages in the [Pulumi Registry](/registry/) have published SDKs. Each package's Installation & Configuration page shows the specific command for your language ([example](/registry/packages/aws/installation-configuration/)).
+- **Local packages**: Use [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/), which generates an SDK locally and adds a reference to `Pulumi.yaml`. This is used for components, Terraform providers, and other packages without published SDKs.
+
+### Installing packages
+
+To install all dependencies, use [`pulumi install`](/docs/iac/cli/commands/pulumi_install/). This is the recommended approach because it handles both standard package manager dependencies (from `package.json`, `requirements.txt`, etc.) and any local packages defined in `Pulumi.yaml` in a single command.
+
+Run `pulumi install` when:
+
+- Setting up a project after cloning from source control
+- Adding or updating packages
+- Ensuring all team members have the same dependencies
+
+### Adding local packages
+
+For packages without published SDKs, called [local packages](/docs/iac/guides/building-extending/packages/local-packages/), use the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command. This downloads the provider plugin, generates a local SDK in your language, and adds the package to your `Pulumi.yaml`:
+
+```bash
+# Example: Add a Terraform provider
+pulumi package add terraform-provider hashicorp/random
+
+# Example: Add a component from a git repository
+pulumi package add example.com/org/repo.git/path@version
+```
+
+After adding a local package, run `pulumi install` to complete the installation.
 
 Some common use cases for local packages include:
 
@@ -45,7 +70,7 @@ In order to consume a Pulumi package, there may be additional runtime requiremen
 
 - TypeScript packages require the NodeJS runtime.
 - Python packages require a Python interpreter.
-- Go packages do not require a runtime if they are compiled. If they are referenced via source (e.g. a Pulumi component published via Pulumi IDP), they require a compatible version the Go language to be installed.
+- Go packages do not require a runtime if they are compiled. If they are referenced via source (e.g. a Pulumi component published via Pulumi IDP), they require a compatible version of the Go language to be installed.
 - .NET packages do not require a runtime if they are compiled as runtime-included binaries, which is Pulumi's recommended approach. .NET packages compiled as runtime-dependent binaries require a runtime.
 - Java packages require a JVM runtime.
 - YAML packages do not have any specific runtime requirements.

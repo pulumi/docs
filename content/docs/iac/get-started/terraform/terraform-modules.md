@@ -921,6 +921,7 @@ output "website_url" {
 4. **Monitor module updates**: Keep track of module updates and breaking changes
 5. **Use reputable sources**: Prefer well-maintained modules from trusted sources
 6. **Document module usage**: Document why you chose specific modules and their configuration
+7. **Use `pulumi install` for setup**: When cloning a project that uses Terraform modules, run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all dependencies, including local packages defined in `Pulumi.yaml`
 
 ## Clean up
 
