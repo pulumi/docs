@@ -4,6 +4,7 @@ allow_long_title: true
 date: 2025-11-25
 draft: false
 meta_desc: "Pulumi Kubernetes Operator v2.3.0 adds preview mode for safe infrastructure changes and structured config support for GitOps workflows."
+meta_image: meta.png
 authors:
     - eron-wright
 tags:
