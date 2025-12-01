@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "From Zero to Production in Kubernetes"
+title: "Agentic Workflows for Production-ready Kubernetes"
 meta_desc: Learn to deploy and manage Kubernetes clusters from zero to production with multi-cloud automation, GitOps using Argo CD, and agentic workflows.
 meta_image:
 
@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -31,17 +31,17 @@ url_slug: from-zero-to-production-in-kubernetes
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "From Zero to Production in Kubernetes"
+    title: "Agentic Workflows for Production-ready Kubernetes"
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url: https://www.youtube.com/embed/-KhVTXMXpEQ?si=Uq_zukFFpHQ_-CGE
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-11-20T12:00:00-05:00
 
     # Duration of the webinar.
-    duration: 90 minutes
+    duration: 60 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
@@ -63,7 +63,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["Kubernetes", "GitOps", "Observability", "DevOps", "Argo CD", "Pulumi Neo"]
+        topics:  ["Kubernetes", "GitOps", "DevOps", "Argo CD", "Pulumi Neo"]
         languages: ["Any"]
         clouds: ["AWS"]
 
@@ -74,7 +74,7 @@ form:
     salesforce_campaign_id: 701PQ00000eePWvYAM
 
 event_data:
-  name: "From Zero to Production in Kubernetes"
+  name: "Agentic Workflows for Production-ready Kubernetes"
   start_date: 2025-11-20T12:00:00-05:00
   end_date: 2025-11-20T13:30:00-05:00
   url: "https://www.pulumi.com/resources/from-zero-to-production-in-kubernetes/"
