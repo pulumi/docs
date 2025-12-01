@@ -33,11 +33,6 @@ timeout: 300000
 outputFormats:
   rss:
     baseName: rss
-  llms:
-    mediaType: "text/plain"
-    baseName: "llms"
-    isPlainText: true
-    permalinkable: false
 
 # We set the outputs explicitly to just "HTML" as otherwise they default to both
 # "HTML" and "RSS", and we only want to generate RSS for the blog section -- not
@@ -48,7 +43,6 @@ outputs:
   home:
     - HTML
     - JSON
-    - llms
   section:
     - HTML
 
