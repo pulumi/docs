@@ -78,7 +78,7 @@ var website = new AzureStaticWebsite("my-website",
 
 {{% notes type="warning" %}}
 
-Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/azure/b/destroy-stack/).
+Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/azure/destroy-stack/).
 
 {{% /notes %}}
 
@@ -244,7 +244,7 @@ public class AzureStaticWebsite extends ComponentResource {
 
 {{% notes type="warning" %}}
 
-Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/azure/b/destroy-stack/).
+Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/azure/destroy-stack/).
 
 {{% /notes %}}
 
@@ -626,7 +626,7 @@ class AzureStaticWebsite extends ComponentResource {
 
 {{% notes type="warning" %}}
 
-Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/azure/b/destroy-stack/).
+Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/azure/destroy-stack/).
 
 {{% /notes %}}
 
@@ -755,7 +755,7 @@ public class App {
 
 {{% notes type="warning" %}}
 
-Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/azure/b/destroy-stack/).
+Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/azure/destroy-stack/).
 
 {{% /notes %}}
 
