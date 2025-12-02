@@ -63,17 +63,17 @@ The time for the benchmarks is used in the console using the `time` built-in com
 
 |                    | Time   | Bytes sent |
 |--------------------|--------|------------|
-| Without journaling | 58m26s | 14MB       |
-| With journaling    | 04m31s | 10.2MB     | // TODO: rerun this test with the final implementation
+| Without journaling | 58m26s | 16.5MB     |
+| With journaling    | 03m05s | 2.3MB      |
 | Skip checkpoints   | 01m33s | 0.5MB      |
 
 The second example is setting up an instance of the Pulumi app and API. Here we'll have an example that's a bit more dominated by the cost of setting up the actual infrastructure in the cloud, but we still have a very noticeable improvement in the time it takes to set up the stack.
 
-|                    | Time | Bytes sent |
-|--------------------|------|------------|
-| Without journaling |      |            | // TODO
-| With journaling    |9m45s      |            | // TODO
-| Skip checkpoints   |8m39s      |  2MB          |
+|                    | Time   | Bytes sent |
+|--------------------|--------|------------|
+| Without journaling | 17m52s | 18.5MB     |
+| With journaling    | 9m45s  | 5.9MB      |
+| Skip checkpoints   | 8m39s  | 2MB        |
 
 Note that this feature is still behind a feature flag, but we are ready for testers. To get enrolled in the feature flag, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us). Once that's done, all you need to do is to set the `PULUMI_ENABLE_JOURNALING` environment variable to `true`, and your deployments will start finishing faster.
 
