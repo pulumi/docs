@@ -1,7 +1,7 @@
 ---
 title_tag: Configure access | Azure
 title: Configure access
-h1: "Get started with Pulumi & Azure"
+h1: "Get started with Pulumi and Azure"
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an Azure project.
 weight: 3
 menu:
