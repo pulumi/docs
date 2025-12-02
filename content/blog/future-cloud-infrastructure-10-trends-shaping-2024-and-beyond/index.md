@@ -68,7 +68,7 @@ Hyperscalers are making the largest infrastructure investments in cloud history 
 
 - **AWS** has integrated [Anthropic’s Claude 3 and Claude 4 models into Amazon Bedrock](https://www.aboutamazon.com/news/aws/anthropic-claude-4-opus-sonnet-amazon-bedrock) for enterprise LLM workflows. “Claude Opus 4 and Claude Sonnet 4 are available today in Amazon Bedrock, enabling customers to build agents with stronger reasoning, memory, and tool use.” — AWS, May 2025
 - **Microsoft Azure** revenue rose 33% year-over-year in Q3 (ended March 31), outperforming estimates of ~29.7%. [AI contributed 16 percentage points to this growth](https://www.reuters.com/business/microsoft-beats-quarterly-revenue-estimates-ai-shift-bolsters-cloud-demand-2025-04-30/), up from 13 points in the prior quarter. "Microsoft is on track to invest approximately $80 billion to build out AI-enabled datacenters to train AI models and deploy AI and cloud-based applications around the world," said Brad Smith, the Microsoft Vice Chair and President.
-- **Google Cloud** is committing [$25 billion over two years for data center and AI infrastructure expansion](https://www.utilitydive.com/news/google-cloud-blackstone-aws-us-ai-data-center-buildouts/753202) across the PJM grid, with total capital expenditure for 2025 ranging from $75–85 billion. "As our CEO has said, in these early days of a very transformative technology, the risks of under investing are dramatically higher than the risks of over-investing," said Eunice Huang, Head of AI and Emerging Tech Policy.
+- **Google Cloud** is committing [$25 billion over two years for data center and AI infrastructure expansion](https://www.utilitydive.com/news/google-cloud-blackstone-aws-us-ai-data-center-buildouts/753202) across the PJM grid, with total capital expenditure for 2025 ranging from $75–85 billion. "As our CEO has said, in these early days of a very transformative technology, the risks of under-investing are dramatically higher than the risks of over-investing," said Eunice Huang, Head of AI and Emerging Tech Policy.
 - **Oracle** anticipates 15–20% cloud revenue growth in FY 2026–2027 attributable to AI infrastructure demand, tied to its partnership in the [Stargate initiative](https://www.pcgamer.com/software/ai/openais-skyrocketing-spending-could-see-billions-of-dollars-in-silicon-headed-down-the-ai-mines-in-the-next-few-years-including-2-million-nvidia-chips-headed-to-texas-stargate-facility/).
 
 As hyperscalers integrate AI deeper into their service layers, engineering teams must adapt with IaC-driven automation, reusable patterns, and policy controls to deploy cloud and AI infrastructure consistently.
@@ -98,7 +98,7 @@ Pulumi enables all three through its [multi-cloud IaC model](https://www.pulumi.
 
 While hyperscalers are transforming the global cloud platform, enterprises face a different challenge: adapting their own cloud foundations to support AI at scale. Organizations are moving beyond prototypes and integrating AI into core products, internal workflows, and customer-facing systems, requiring new levels of automation, governance, and AI infrastructure orchestration.
 
-According to Gartner, global AI infrastructure spending is expected to surpass **$2 trillion in 2026**. [IDC predicts that by 2027](https://blogs.idc.com/2025/10/22/futurescape-2026-moving-into-the-agentic-future/), more than 50% of enterprises will use AI agents to drive core workflows, which requires scalable, secure, and automated cloud architectures to support model execution and orchestration.
+According to [Gartner](https://www.networkworld.com/article/4058786/gartner-ai-spending-to-reach-1-5-trillion-dollars-this-year.html), global AI infrastructure spending is expected to surpass **$2 trillion in 2026**. [IDC predicts that by 2027](https://blogs.idc.com/2025/10/22/futurescape-2026-moving-into-the-agentic-future/), more than 50% of enterprises will use AI agents to drive core workflows, which requires scalable, secure, and automated cloud architectures to support model execution and orchestration.
 
 To enable this transition, enterprises are investing in:
 
@@ -113,10 +113,10 @@ As AI becomes deeply embedded across engineering organizations, teams are increa
 
 ### Pulumi users increasingly rely on:
 
-- [Pulumi IaC](https://www.pulumi.com/docs/iac/) for standardized AI infra
-- [Pulumi ESC](https://www.pulumi.com/product/secrets-management/) for secure secrets
-- [Pulumi Insights](https://www.pulumi.com/product/insights-governance/) for visibility, cost detection, and misconfiguration analysis
-- [Pulumi Policies](https://www.pulumi.com/docs/insights/policy/) for AI-specific guardrails
+- [Pulumi IaC](https://www.pulumi.com/docs/iac/) for standardized AI infrastructure
+- [Pulumi ESC](https://www.pulumi.com/product/secrets-management/) to manage all secrets and configuration at scale
+- [Pulumi Insights](https://www.pulumi.com/product/insights-governance/) for visibility and misconfiguration analysis
+- [Pulumi Policies](https://www.pulumi.com/docs/insights/policy/) for AI-specific guardrails in code, cost detection, and to provide automated compliance protections
 
 ## 5. IaC Drives Scalable Cloud, Multi-Cloud, and AI Operations
 
@@ -154,7 +154,7 @@ This perspective mirrors what we’re seeing across modern DevSecOps practices: 
 
 According to [Gartner](https://www.gartner.com/en/articles/what-is-platform-engineering), **by 2026, 80% of large software engineering organizations will establish platform engineering teams** as internal providers of reusable services, components, and tools for application delivery. Platform engineering will ultimately solve the central problem of cooperation between software developers and operators.
 
-Mid-size to large companies will begin or [continue to invest in implementing platform engineering practices](https://www.pulumi.com/product/internal-developer-platforms/), with large tech companies as first adopters. They will provide [Internal Developer Portals (IDP)](https://www.pulumi.com/blog/building-developer-portals/) to elevate the Developer Experience (DX, sometimes referred to as DE or DevEx), helping them work faster, like abstracting the complexities of configuring, testing, and validation, deploying infrastructure, and scanning their code for security.
+Mid-size to large companies will begin or [continue to invest in implementing platform engineering practices](https://www.pulumi.com/product/internal-developer-platforms/), with large tech companies as first adopters. They will provide [Internal Developer Portals (IDP)](https://www.pulumi.com/blog/announcing-pulumi-idp/) to elevate the [Developer Experience](https://www.pulumi.com/blog/developer-experience-business-critical/) (DX, sometimes referred to as DE or DevEx), helping them work faster, like abstracting the complexities of configuring, testing, and validation, deploying infrastructure, and scanning their code for security.
 
 {{< figure alt="Internal developer platform-in-a-box. Credit: Pulumi" src="https://www.pulumi.com/blog/developer-portal-platform-teams/platform-teams.png" caption="Internal developer platform-in-a-box. Credit: Pulumi" width=100% >}}
 
