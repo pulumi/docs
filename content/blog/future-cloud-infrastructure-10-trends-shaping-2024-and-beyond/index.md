@@ -22,7 +22,7 @@ meta_desc: Explore 2026’s top cloud trends, including AI infrastructure, Kuber
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: "cloud-computing-forecast.png.png"
+meta_image: "2026-cloud-trends -ai-idp-security.png"
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -71,7 +71,7 @@ Hyperscalers are making the largest infrastructure investments in cloud history 
 - **Google Cloud** is committing [$25 billion over two years for data center and AI infrastructure expansion](https://www.utilitydive.com/news/google-cloud-blackstone-aws-us-ai-data-center-buildouts/753202) across the PJM grid, with total capital expenditure for 2025 ranging from $75–85 billion. "As our CEO has said, in these early days of a very transformative technology, the risks of under investing are dramatically higher than the risks of over-investing," said Eunice Huang, Head of AI and Emerging Tech Policy.
 - **Oracle** anticipates 15–20% cloud revenue growth in FY 2026–2027 attributable to AI infrastructure demand, tied to its partnership in the [Stargate initiative](https://www.pcgamer.com/software/ai/openais-skyrocketing-spending-could-see-billions-of-dollars-in-silicon-headed-down-the-ai-mines-in-the-next-few-years-including-2-million-nvidia-chips-headed-to-texas-stargate-facility/).
 
-As hyperscalers integrate AI deeper into their service layers, engineering teams must adapt with IaC-driven automation, reusable patterns, and policy controls to deploy cloud and AI infrastructure consistently.  
+As hyperscalers integrate AI deeper into their service layers, engineering teams must adapt with IaC-driven automation, reusable patterns, and policy controls to deploy cloud and AI infrastructure consistently.
 See how organizations [deploy AWS infrastructure at the speed of AI with Pulumi](https://www.pulumi.com/aws/#video) and [Pulumi Policies](https://www.pulumi.com/docs/insights/policy/).
 
 ## 3. Hybrid and Multi-Cloud to Drive Innovation
@@ -85,8 +85,6 @@ Hybrid and multi-cloud strategies are now mainstream:
 {{< figure alt="Most popular cloud computing infrastructure by industry. Credit: Cloud Worldwide Service, Forbes" src="/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/most-popular-cloud-computing-infrastructure-by-industry.png" caption="Credit: Cloud Worldwide Service, Forbes" width=100% >}}
 
 As AI and regulatory requirements grow, organizations must deploy workloads across AWS, Azure, Google Cloud, on-prem, and edge — while maintaining consistent security, compliance, and configuration.
-
-Modern cloud teams use:
 
 Modern cloud teams use:
 
@@ -105,20 +103,20 @@ According to Gartner, global AI infrastructure spending is expected to surpass *
 To enable this transition, enterprises are investing in:
 
 - **GPU provisioning and orchestration**, data pipelines, vector databases, feature stores, and LLM infrastructure needed for real-time AI workloads.
-- **Data pipelines, vector databases, and feature stores** needed for real-time AI workloads  
-- **Model-serving infrastructure**, including gateways, inference routers, and autoscaling layers  
-- **Strong identity, secrets, and access controls** as AI systems increase security exposure  
-- **Automation through Infrastructure as Code** to ensure reproducibility and reduce drift  
-- **Policy-driven governance** to secure cost, compliance, and architectural consistency  
+- **Data pipelines, vector databases, and feature stores** needed for real-time AI workloads
+- **Model-serving infrastructure**, including gateways, inference routers, and autoscaling layers
+- **Strong identity, secrets, and access controls** as AI systems increase security exposure
+- **Automation through Infrastructure as Code** to ensure reproducibility and reduce drift
+- **Policy-driven governance** to secure cost, compliance, and architectural consistency
 
 As AI becomes deeply embedded across engineering organizations, teams are increasingly using software engineering approaches such as Infrastructure as Code, reusable components, platform engineering, and policy automation to standardize how AI infrastructure is deployed, scaled, and secured across clouds.
 
 ### Pulumi users increasingly rely on:
 
-- [Pulumi IaC](https://www.pulumi.com/docs/iac/) for standardized AI infra  
-- [Pulumi ESC](https://www.pulumi.com/product/secrets-management/) for secure secrets  
-- [Pulumi Insights](https://www.pulumi.com/product/insights-governance/) for visibility, cost detection, and misconfiguration analysis  
-- [Pulumi Policies](https://www.pulumi.com/docs/insights/policy/) for AI-specific guardrails  
+- [Pulumi IaC](https://www.pulumi.com/docs/iac/) for standardized AI infra
+- [Pulumi ESC](https://www.pulumi.com/product/secrets-management/) for secure secrets
+- [Pulumi Insights](https://www.pulumi.com/product/insights-governance/) for visibility, cost detection, and misconfiguration analysis
+- [Pulumi Policies](https://www.pulumi.com/docs/insights/policy/) for AI-specific guardrails
 
 ## 5. IaC Drives Scalable Cloud, Multi-Cloud, and AI Operations
 
