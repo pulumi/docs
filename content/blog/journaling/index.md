@@ -49,17 +49,19 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-Pulumi saves a snapshot of the current state of your cloud infrastructure at every deployment, and also at every step of the deployment. This means that Pulumi always has a current view of the state even if there are crashes during an operation. However this comes with a performance penalty especially for large stacks. Today we're introducing an improvement that can speed up deployments up to 10x. Read on for benchmarks and some technical details of the implementation.
+Pulumi saves a snapshot of the current state of your cloud infrastructure at every deployment, and also at every step of the deployment. This means that Pulumi always has a current view of the state even if there are crashes during an operation. However, this comes with a performance penalty especially for large stacks. Today we're introducing an improvement that can speed up deployments up to 10x. Read on for benchmarks and some technical details of the implementation.
 
 <!--more-->
 
 ## Benchmarks
 
-Before getting into the more technical details, here's a number of benchmarks demonstrating what this new experience looks like. To run the benchmarks end we picked a couple of Pulumi projects, one that can be set up massively parallel, which is the worst case scenario for the old snapshot system, and another one that looks a little more like a real world example.  Note that all of these benchmarks were conducted in Europe connecting to Pulumi Cloud, which runs in `us-west-2`, so exact numbers may vary on based on your location and internet connection. This should however give a good indication of the performance improvements.
+Before getting into the more technical details, here's a number of benchmarks demonstrating what this new experience looks like. To run the benchmarks we picked a couple of Pulumi projects, one that can be set up massively parallel, which is the worst case scenario for the old snapshot system, and another one that looks a little more like a real world example.  Note that all of these benchmarks were conducted in Europe connecting to Pulumi Cloud, which runs in `us-west-2`, so exact numbers may vary based on your location and internet connection. This should however give a good indication of the performance improvements.
 
-We're benchmarking two somewhat large stacks, both of which are or were used at Pulumi. The first program sets up a website using AWS bucket objects. We're using the [example-ts-static-website](https://github.com/pulumi/examples/tree/master/aws-ts-static-website) example here, but expand it a little bit to set up what is a version of our docs site. This means we're setting up more than 3000 bucket objects, with 3222 resources in total.
+We're benchmarking two somewhat large stacks, both of which are or were used at Pulumi. The first program sets up a website using AWS bucket objects. We're using the [example-ts-static-website](https://github.com/pulumi/examples/tree/master/aws-ts-static-website) example here, but expand it a little bit to set up a version of our docs site. This means we're setting up more than 3000 bucket objects, with 3222 resources in total.
 
-The time for the benchmarks is used in the console using the `time` built-in command, and we're capturing the network traffic using `tcpdump`, and then use `tshark` to count the bytes.
+The benchmarks were measured using `time` built-in command and using the best time in a best-of-three benchmarks. The network traffic using `tcpdump`, limiting the measured traffic to only the IP addresses for Pulumi Cloud. Finally `tshark` was used to process the packet captures and count the bytes sent.
+
+All the benchmarks are run with journaling off (the default experience), with journaling on (the new experience), and finally with `PULUMI_SKIP_CHECKPOINTS=true` set. The last one means we skip uploading intermediate checkpoints to the backend, which in turn means potentially losing track of changes that are in flight if Pulumi exits unexpectedly due to any reason.
 
 |                    | Time   | Bytes sent |
 |--------------------|--------|------------|
@@ -85,7 +87,9 @@ Pulumi keeps track of all resources in a stack in a snapshot. This snapshot is s
 
 To make sure there are never any resources that are not tracked, even if a deployment is aborted unexpectedly (for example due to network issues, power outages, or bugs), Pulumi creates a new snapshot at the beginning and at the end of each operation.
 
-At the beginning of the operation, Pulumi adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but Pulumi couldn't record the end of it), in the next operation Pulumi asks the user to check the actual state of the resource, and then either removes it from the snapshot, or imports it depending on the users input. This is because it is possible that the resource has been set up correctly, or it is possible that the resource creation failed. If Pulumi aborted midway through the operation it's impossible to know which it is.
+At the beginning of the operation, Pulumi adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but Pulumi couldn't record the end of it), in the next operation Pulumi asks the user to check the actual state of the resource, and then either removes it from the snapshot, or imports it depending on the users input.
+
+This is because it is possible that the resource has been set up correctly, or it is possible that the resource creation failed. If Pulumi aborted midway through the operation it's impossible to know which it is.
 
 Once an operation finished, the pending operation is removed, as we now know the final state of the resource, and the final state of the resource is updated in the snapshot.
 
@@ -111,21 +115,21 @@ After this introduction, we can dive into what's slow, how we fixed it, and some
 
 ## Why is it slow?
 
-To make sure the state is always as up-to-date as possible, even if there are any network hiccups/power outages etc., a step won't start until the snapshot that includes the pending operation. Similarly an operation won't be considered finished until the snapshot with an updated resources list is confirmed to be stored in the backend.
+To make sure the state is always as up-to-date as possible, even if there are any network hiccups/power outages etc., a step won't start until the snapshot that includes the pending operation is confirmed to be stored in the backend. Similarly an operation won't be considered finished until the snapshot with an updated resources list is confirmed to be stored in the backend.
 
-To send the current state to the backend, we simply serialize it as a JSON file, and send it to the backend.  However, as mentioned above, steps can be executed in parallel. If we uploaded the snapshot at the beginning and end of every step with no serialization, there would be a risk that we overwrite the a new snapshot with an older one, leading to incorrect data.
+To send the current state to the backend, we simply serialize it as a JSON file, and send it to the backend.  However, as mentioned above, steps can be executed in parallel. If we uploaded the snapshot at the beginning and end of every step with no serialization, there would be a risk that we overwrite a new snapshot with an older one, leading to incorrect data.
 
 Our workaround for that is to serialize the snapshot uploads, uploading one snapshot at a time. This gives us the data integrity properties we want, however it can slow step execution down, especially on internet connections with lower bandwidth, and/or high latency.
 
 This impacts performance especially for large stacks, as we upload the whole snapshot every time, which can take some time if the snapshot is getting big. For the Pulumi Cloud backend we improved on this a little [at the end of 2022](https://github.com/pulumi/pulumi/pull/10788). We implemented a diff based protocol, which is especially helpful for large snapshots, as we only need to send the diff between the old and the new snapshot, and Pulumi Cloud can then reconstruct the full snapshot based on that. This reduces the amount of data that needs to be transferred, thus improving performance.
 
-However the snapshotting is still a major bottleneck for large Pulumi deployments. Having to serially upload the snapshot twice for each step does still have a big impact on performance, especially if many resources are modified in parallel.
+However, the snapshotting is still a major bottleneck for large Pulumi deployments. Having to serially upload the snapshot twice for each step does still have a big impact on performance, especially if many resources are modified in parallel.
 
 ## Fast, but lacking data integrity?
 
 As long as Pulumi can complete its operation, there's no need for the intermediate checkpoints. It is possible to set the `PULUMI_SKIP_CHECKPOINTS` variable to a truthy value, and skip all the uploading of the intermittent checkpoints to the backend. This, of course, avoids the single serialization point we have sending the snapshots to the backend, and thus makes the operation much more performant.
 
-However it also has the big disadvantage that it's compromising some of the data integrity guarantees Pulumi gives you. If anything goes wrong during the update, Pulumi has no notion of what happened until then, potentially leaving orphaned resources in the provider, or leaving resources in the state that no longer exist.
+However, it also has the big disadvantage that it's compromising some of the data integrity guarantees Pulumi gives you. If anything goes wrong during the update, Pulumi has no notion of what happened until then, potentially leaving orphaned resources in the provider, or leaving resources in the state that no longer exist.
 
 Neither of these solutions is very satisfying, as the tradeoff is either performance or data integrity. We would like to have our cake and eat it too here, and that's exactly what we're doing.
 
@@ -139,7 +143,7 @@ Making that happen is possible because of three facts:
 - Every step the engine executes affects only one resource.
 - We have a service that can reconstruct a snapshot from what is given to it.
 
-(The third point here already hints at it, but this feature is only available and made possible by Pulumi Cloud, but not on the DIY backend).
+(The third point here already hints at it, but this feature is only available and made possible by Pulumi Cloud, not on the DIY backend).
 
 What if instead of sending the whole snapshot, or a diff of the snapshot, we could send the individual changes to the base snapshot to the service, which could then apply it, and reconstruct a full snapshot from it? This is exactly what we are doing here, in the form of what we call journal entries. Each journal entry has the following form:
 
@@ -190,7 +194,7 @@ type JournalEntry struct {
 }
 ```
 
-These journal entries encode all the information needed to reconstruct the snapshot from them. Each journal entry can be sent in parallel from the engine, and the snapshot will still be fully valid. All journal entries have a Sequence ID attached to them, and they need to be replayed in that order on the service side to make sure we get a valid snapshot. It is however okay to replay with journal entries that have not yet been received by the service, and whose sequence ID is thus missing. This is because the engine only sends entries in parallel whose parents/dependencies have been fully created and confirmed by the service.
+These journal entries encode all the information needed to reconstruct the snapshot from them. Each journal entry can be sent in parallel from the engine, and the snapshot will still be fully valid. All journal entries have a Sequence ID attached to them, and they need to be replayed in that order on the service side to make sure we get a valid snapshot. It is however okay to replay with journal entries that have not yet been received by the service, and whose sequence ID is thus missing. This is safe because the engine only sends entries in parallel whose parents/dependencies have been fully created and confirmed by the service.
 
 This way we make sure that the resources list is always in the correct partial order that is required by the engine to function correctly, and for the snapshot to be considered valid.
 
@@ -223,16 +227,16 @@ for entry in journal:
 
             if entry.state and entry.op_id:
                 resources.append(entry.state)
-				operation_id_to_resource_index.add(entry.op_id, index)
-				index++
+                operation_id_to_resource_index.add(entry.op_id, index)
+                index++
             if entry.remove_old:
                 snapshot_deletes.add(entry.remove_old)
-			if entry.remove_new:
-				deletes[remove_new] = true
-			if entry.pending_replacement:
-				mark_pending(entry.pending_replacement)
-			if entry.delete:
-			    mark_deleted(entry.delete)
+            if entry.remove_new:
+                deletes[remove_new] = true
+            if entry.pending_replacement:
+                mark_pending(entry.pending_replacement)
+            if entry.delete:
+                mark_deleted(entry.delete)
             has_refresh |= entry.is_refresh
 
         case REFRESH_SUCCESS:
@@ -243,21 +247,19 @@ for entry in journal:
                     snapshot_replacements[entry.remove_old] = entry.state
                 else:
                     snapshot_deletes.add(entry.remove_old)
-	        if entry.remove_new:
-			    if entry.state:
-				    deletes[entry.remove_new] = true
-				else:
-				    resources.replace(operation_id_to_resource_index(entry.remove_new), entry.state)
-        case REFRESH_SUCCESS:
-		    resources.replace(operation_id_to_resource_index(entry.remove_new), entry.state)
+            if entry.remove_new:
+                if entry.state:
+                    deletes[entry.remove_new] = true
+                else:
+                    resources.replace(operation_id_to_resource_index(entry.remove_new), entry.state)
         case FAILURE:
             del incomplete_ops[entry.op_id]
 
         case OUTPUTS:
             if entry.state and entry.remove_old:
                 snapshot_replacements[entry.remove_old] = entry.state
-			if entry.state and entry.remove_new:
-			    resources.replace(operation_id_to_resource_index(entry.remove_new), entry.state)
+            if entry.state and entry.remove_new:
+                resources.replace(operation_id_to_resource_index(entry.remove_new), entry.state)
 
 deletes = deletes.map(|i| => operation_id_to_resource_index[i])
 
@@ -266,7 +268,7 @@ deletes = deletes.map(|i| => operation_id_to_resource_index[i])
 # that remain together.
 for i, res in resources:
     if i in deletes:
-	    remove_from_resources(resources, i)
+        remove_from_resources(resources, i)
 
 # Merge snapshot resources. These resources have not been touched by the update, and will
 # thus be appended to the end of the resource list. We also need to mark existing resources as
@@ -278,8 +280,8 @@ for i, res in enumerate(snapshot.resources):
         else:
             if i in mark_deleted:
                 res.delete = true
-			if i in mark_pending:
-			    res.pending_replacement = true
+            if i in mark_pending:
+                res.pending_replacement = true
             resources.append(res)
 
 # Collect pending operations. These are stored separately from the resources list
