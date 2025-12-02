@@ -264,9 +264,22 @@ const storageAccount = new storage.StorageAccount("sa", {
     kind: storage.Kind.StorageV2,
 });
 
-// Export the name of the storage account
+const storageAccountKeys = storage.listStorageAccountKeysOutput({
+    resourceGroupName: resourceGroup.name,
+    accountName: storageAccount.name
+});
+
+// Export the primary key of the Storage Account
+export const primaryStorageKey = pulumi.secret(storageAccountKeys.keys[0].value);
+```
+
+After the line that exports the primary key, add the following line to also export the storage account name:
+
+```typescript
 export const storageAccountName = storageAccount.name;
 ```
+
+This exports the storage account name for convenient reference.
 
 {{% /choosable %}}
 {{% choosable language python %}}
@@ -291,9 +304,27 @@ account = storage.StorageAccount(
     kind=storage.Kind.STORAGE_V2,
 )
 
-# Export the name of the storage account
+# Export the primary key of the Storage Account
+primary_key = (
+    pulumi.Output.all(resource_group.name, account.name)
+    .apply(
+        lambda args: storage.list_storage_account_keys(
+            resource_group_name=args[0], account_name=args[1]
+        )
+    )
+    .apply(lambda accountKeys: accountKeys.keys[0].value)
+)
+
+pulumi.export("primary_storage_key", primary_key)
+```
+
+After the line that exports the primary key, add the following line to also export the storage account name:
+
+```python
 pulumi.export("storage_account_name", account.name)
 ```
+
+This exports the storage account name for convenient reference.
 
 {{% /choosable %}}
 {{% choosable language go %}}
@@ -318,7 +349,6 @@ func main() {
         // Create an Azure resource (Storage Account)
         account, err := storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
 			ResourceGroupName: resourceGroup.Name,
-			AccessTier:        storage.AccessTierHot,
 			Sku: &storage.SkuArgs{
 				Name: storage.SkuName_Standard_LRS,
 			},
@@ -328,12 +358,35 @@ func main() {
             return err
         }
 
-        // Export the name of the storage account
-        ctx.Export("storageAccountName", account.Name)
+        // Export the primary key of the Storage Account
+		ctx.Export("primaryStorageKey", pulumi.All(resourceGroup.Name, account.Name).ApplyT(
+			func(args []interface{}) (string, error) {
+				resourceGroupName := args[0].(string)
+				accountName := args[1].(string)
+				accountKeys, err := storage.ListStorageAccountKeys(ctx, &storage.ListStorageAccountKeysArgs{
+					ResourceGroupName: resourceGroupName,
+					AccountName:       accountName,
+				})
+				if err != nil {
+					return "", err
+				}
+
+				return accountKeys.Keys[0].Value, nil
+			},
+		))
+
         return nil
     })
 }
 ```
+
+After the `ctx.Export("primaryStorageKey", ...)` statement, add the following line to also export the storage account name:
+
+```go
+ctx.Export("storageAccountName", account.Name)
+```
+
+This exports the storage account name for convenient reference.
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
@@ -361,13 +414,33 @@ return await Pulumi.Deployment.RunAsync(() =>
         Kind = Kind.StorageV2
     });
 
-    // Export the name of the storage account
+    var storageAccountKeys = ListStorageAccountKeys.Invoke(new ListStorageAccountKeysInvokeArgs
+    {
+        ResourceGroupName = resourceGroup.Name,
+        AccountName = storageAccount.Name
+    });
+
+    var primaryStorageKey = storageAccountKeys.Apply(accountKeys =>
+    {
+        var firstKey = accountKeys.Keys[0].Value;
+        return Output.CreateSecret(firstKey);
+    });
+
+    // Export the primary key of the Storage Account
     return new Dictionary<string, object?>
     {
-        ["storageAccountName"] = storageAccount.Name
+        ["primaryStorageKey"] = primaryStorageKey
     };
 });
 ```
+
+In the returned Dictionary, add this entry after `primaryStorageKey` to also export the storage account name:
+
+```csharp
+["storageAccountName"] = storageAccount.Name
+```
+
+This exports the storage account name for convenient reference.
 
 {{% /choosable %}}
 
@@ -385,6 +458,7 @@ import com.pulumi.azurenative.storage.enums.Kind;
 import com.pulumi.azurenative.storage.enums.SkuName;
 import com.pulumi.azurenative.storage.inputs.ListStorageAccountKeysArgs;
 import com.pulumi.azurenative.storage.inputs.SkuArgs;
+import com.pulumi.azurenative.storage.outputs.EndpointsResponse;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.deployment.InvokeOptions;
@@ -401,11 +475,38 @@ public class App {
                     .kind(Kind.StorageV2)
                     .build());
 
-            ctx.export("storageAccountName", storageAccount.name());
+            var primaryStorageKey = getStorageAccountPrimaryKey(
+                    resourceGroup.name(),
+                    storageAccount.name());
+
+            ctx.export("primaryStorageKey", primaryStorageKey);
+        });
+    }
+
+    private static Output<String> getStorageAccountPrimaryKey(Output<String> resourceGroupName,
+                                                              Output<String> accountName) {
+        return Output.tuple(resourceGroupName, accountName).apply(tuple -> {
+            var actualResourceGroupName = tuple.t1;
+            var actualAccountName = tuple.t2;
+            var invokeResult = StorageFunctions.listStorageAccountKeys(ListStorageAccountKeysArgs.builder()
+                    .resourceGroupName(actualResourceGroupName)
+                    .accountName(actualAccountName)
+                    .build(), InvokeOptions.Empty);
+            return Output.of(invokeResult)
+                    .applyValue(r -> r.keys().get(0).value())
+                    .asSecret();
         });
     }
 }
 ```
+
+After `ctx.export("primaryStorageKey", ...)`, add the following line to also export the storage account name:
+
+```java
+ctx.export("storageAccountName", storageAccount.name());
+```
+
+This exports the storage account name for convenient reference.
 
 {{% /choosable %}}
 
@@ -415,9 +516,12 @@ public class App {
 name: quickstart
 runtime: yaml
 description: A minimal Azure Native Pulumi YAML program
+
 resources:
+  # Create an Azure Resource Group
   resourceGroup:
     type: azure-native:resources:ResourceGroup
+  # Create an Azure resource (Storage Account)
   sa:
     type: azure-native:storage:StorageAccount
     properties:
@@ -425,16 +529,32 @@ resources:
       sku:
         name: Standard_LRS
       kind: StorageV2
+
+variables:
+  storageAccountKeys:
+    fn::azure-native:storage:listStorageAccountKeys:
+      resourceGroupName: ${resourceGroup.name}
+      accountName: ${sa.name}
+
 outputs:
+  # Export the primary key of the Storage Account
+  primaryStorageKey: ${storageAccountKeys.keys[0].value}
+```
+
+In the `outputs` section, add the following line to also export the storage account name:
+
+```yaml
   storageAccountName: ${sa.name}
 ```
+
+This exports the storage account name for convenient reference.
 
 {{% /choosable %}}
 
 The program declares an Azure Resource Group and Storage Account
-[resources](/docs/iac/concepts/resources) and exports the storage account's name as a [stack output](/docs/iac/concepts/stacks/#outputs).
+[resources](/docs/iac/concepts/resources) and exports the storage account's primary key and name as [stack outputs](/docs/iac/concepts/stacks/#outputs).
 Resources are just objects in our language of choice with [properties](/docs/iac/concepts/inputs-outputs) capturing
-their inputs and outputs. Exporting the storage account name makes it convenient to reference afterwards.
+their inputs and outputs. Exporting both values demonstrates different types of outputs: secrets for sensitive data and simple values for convenient reference.
 
 Now you're ready for your first deployment!
 

@@ -59,7 +59,8 @@ Updating (dev):
  +   └─ azure-native:storage:StorageAccount           sa               created
 
 Outputs:
-    storageAccountName: "sa4d2a2b9c"
+    primaryStorageKey  : [secret]
+    storageAccountName : "sa4d2a2b9c"
 
 Resources:
     + 3 created
@@ -74,7 +75,7 @@ may take a bit longer, so the update could finish in 20-30 seconds.
 
 ### Using stack outputs
 
-The storage account's name can be accessed with the `pulumi stack output` command:
+Both the storage account name and primary key are available as stack outputs. To view the storage account name:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
@@ -127,6 +128,56 @@ $ pulumi stack output storageAccountName
 {{% /choosable %}}
 
 Running that command will print out the storage account's name.
+
+The primary key is marked as a secret. To view it, use the `--show-secrets` flag:
+
+{{% choosable language typescript %}}
+
+```bash
+$ pulumi stack output primaryStorageKey --show-secrets
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```bash
+$ pulumi stack output primary_storage_key --show-secrets
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```bash
+$ pulumi stack output primaryStorageKey --show-secrets
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```bash
+$ pulumi stack output primaryStorageKey --show-secrets
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```bash
+$ pulumi stack output primaryStorageKey --show-secrets
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ pulumi stack output primaryStorageKey --show-secrets
+```
+
+{{% /choosable %}}
 
 ### View your update on Pulumi Cloud
 
