@@ -7,7 +7,7 @@ title: "Migrate Your CDK to Pulumi With Neo"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2025-12-01T22:07:17Z
+date: 2025-12-16T02:07:17Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -17,12 +17,12 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Convert CDK apps to Pulumi using real languages, unlock multi-cloud, improve deployments, and gain policy, drift detection, and full enterprise control.
+meta_desc: Convert CDK apps to Pulumi using natural language, unlock multi-cloud, improve deployments, and gain policy, drift detection, and full enterprise control.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
+meta_image: aws-cdk-to-pulumi-with-neo.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
