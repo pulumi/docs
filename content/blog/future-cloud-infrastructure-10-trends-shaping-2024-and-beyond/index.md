@@ -7,7 +7,7 @@ title: "Future of the Cloud: 10 Trends Shaping 2026 and Beyond"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2025-11-18T07:56:40Z
+date: 2025-12-04T07:56:40Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -17,7 +17,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Explore the top 10 cloud trends for 2026, from AI-driven infrastructure and Kubernetes evolution to IaC, DevSecOps, platform engineering, and modern governance
+meta_desc: Explore 2026’s top cloud trends, including AI infrastructure, Kubernetes evolution, IaC, DevSecOps, platform engineering, and modern cloud governance.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -88,21 +88,23 @@ As AI and regulatory requirements grow, organizations must deploy workloads acro
 
 Modern cloud teams use:
 
-- **Infrastructure as Code** for consistent multi-cloud provisioning  
-- **Reusable components and platforms** to standardize architecture  
-- **Policy-driven guardrails** to maintain cost, security, and compliance across clouds  
+Modern cloud teams use:
+
+- **Infrastructure as Code** for consistent multi-cloud provisioning and environment standardization, forming the backbone of AI infrastructure orchestration
+- **Reusable components and internal platforms** to define scalable architecture patterns and accelerate delivery across Kubernetes, AI/ML pipelines, and hybrid environments
+- **Policy-driven guardrails** to maintain cost, security, and compliance across environments, supporting cloud governance automation and modern cloud cost governance
 
 Pulumi enables all three through its [multi-cloud IaC model](https://www.pulumi.com/docs/iac/), [Pulumi Policies](https://www.pulumi.com/product/insights-governance#video), and [internal developer platform capabilities](https://www.pulumi.com/product/internal-developer-platforms/#video).
 
 ## 4. Enterprises Rebuild Their Cloud Foundations to Operationalize AI
 
-While hyperscalers are transforming the global cloud platform, enterprises face a different challenge: adapting their own cloud foundations to support AI at scale. Organizations are moving beyond prototypes and integrating AI into core products, internal workflows, and customer-facing systems, requiring new levels of automation, governance, and architectural rigor.
+While hyperscalers are transforming the global cloud platform, enterprises face a different challenge: adapting their own cloud foundations to support AI at scale. Organizations are moving beyond prototypes and integrating AI into core products, internal workflows, and customer-facing systems, requiring new levels of automation, governance, and AI infrastructure orchestration.
 
 According to Gartner, global AI infrastructure spending is expected to surpass **$2 trillion in 2026**. [IDC predicts that by 2027](https://blogs.idc.com/2025/10/22/futurescape-2026-moving-into-the-agentic-future/), more than 50% of enterprises will use AI agents to drive core workflows, which requires scalable, secure, and automated cloud architectures to support model execution and orchestration.
 
 To enable this transition, enterprises are investing in:
 
-- **GPU provisioning and orchestration** across cloud and on-prem environments  
+- **GPU provisioning and orchestration**, data pipelines, vector databases, feature stores, and LLM infrastructure needed for real-time AI workloads.
 - **Data pipelines, vector databases, and feature stores** needed for real-time AI workloads  
 - **Model-serving infrastructure**, including gateways, inference routers, and autoscaling layers  
 - **Strong identity, secrets, and access controls** as AI systems increase security exposure  
@@ -128,7 +130,7 @@ Modern [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastru
 - **Integrating seamlessly with cloud providers and third-party services**, including data platforms and messaging systems like CockroachDB, Confluent Cloud, and Kafka.
 - **Providing deeper validation and type-safety**, ensuring parameters, dependencies, and security controls are correct before deployment.
 - **Improving cloud resource efficiency and visibility** with tools like [Pulumi Insights Discovery](https://www.pulumi.com/docs/insights/discovery/).
-- **Embedding security and compliance through [Policy as Code*](https://www.pulumi.com/docs/insights/policy/)*, enforcing guardrails, cost controls, and regulatory requirements automatically.
+- **Embedding security and compliance through [Policy as Code](https://www.pulumi.com/docs/insights/policy/)**, enforcing guardrails, cost controls, and regulatory requirements automatically, enabling truly policy-driven cloud management.
 - **Enabling intelligent automation**, from unit and integration tests to auto-remediation policies and policy-driven approvals.
 - **Incorporating AI-driven optimization and insights**, helping teams detect misconfigurations, analyze usage patterns, and generate infrastructure updates with tools like [Pulumi Neo](https://www.pulumi.com/product/neo/) and [Pulumi Policies](https://www.pulumi.com/blog/policy-next-gen/).
 
@@ -144,7 +146,7 @@ As AI becomes embedded across cloud-native systems, DevSecOps is entering a new 
 
 3. **Greater cross-team collaboration**: Dev, Sec, and Ops workflows will converge under shared frameworks: IaC, policy automation, runtime scanning, and GitOps.
 
-As organizations increase their use of AI across cloud-native systems, the need for tightly aligned security, governance, and data practices becomes even more urgent. At the Gartner Data & Analytics Summit in Sydney, Carlie Idoine, VP Analyst at Gartner, emphasized this growing dependency:
+As organizations increase their use of AI across cloud-native systems, the need for tightly aligned security, governance, and cloud governance automation becomes even more urgent. At the Gartner Data & Analytics Summit in Sydney, Carlie Idoine, VP Analyst at Gartner, emphasized this growing dependency:
 
 *"[AI]... it doesn’t deliver value on its own – AI needs to be tightly aligned with data, analytics, and governance to enable intelligent, adaptive decisions and actions across the organization."*
 
@@ -158,11 +160,11 @@ Mid-size to large companies will begin or [continue to invest in implementing pl
 
 {{< figure alt="Internal developer platform-in-a-box. Credit: Pulumi" src="https://www.pulumi.com/blog/developer-portal-platform-teams/platform-teams.png" caption="Internal developer platform-in-a-box. Credit: Pulumi" width=100% >}}
 
-IDPs are reshaping how developers interact with cloud infrastructure — via UI, CLI, APIs, or GitOps—making self-service infrastructure a reality.
+IDPs are reshaping how developers interact with cloud infrastructure, bringing together platform engineering, automation, and emerging AI platform engineering practices.
 
 ## 8. AIOps Matures into a Cloud Operations Standard
 
-AIOps is becoming is mainstream, helping teams predict failures, auto-scale infrastructure, and resolve incidents with minimal manual effort. As AI and automation continue to evolve, the fusion of these technologies will enable organizations to achieve unprecedented levels of efficiency and scalability.
+AIOps is becoming mainstream, helping teams predict failures, auto-scale infrastructure, and resolve incidents with minimal manual effort. As AI and automation continue to evolve, the fusion of these technologies will enable organizations to achieve unprecedented levels of efficiency and scalability.
 
 - **Proactive Operations**: AI-powered tools will assist teams in foreseeing issues with greater accuracy, minimizing downtime, and reducing the firefighting nature of incident management. These tools will automatically detect anomalies, optimize performance, and trigger remediation actions.
 - **[Intelligent Automation](https://www.pulumi.com/docs/iac/packages-and-automation/automation-api/)**: Routine operational tasks like patching, monitoring, and resource scaling will be fully automated. AI-driven decision-making will allow for smarter resource allocation and optimization, dynamically adjusting infrastructure and workloads in response to real-time demands and predictions.
@@ -177,11 +179,11 @@ Kubernetes will continue its ascent in 2026. According to [Markets N Research](h
 
 The CNCF Annual Survey shows AI/ML workloads rapidly moving onto Kubernetes — including batch pipelines, model experimentation, real-time inference, and data preprocessing — even as only 41% of ML/AI developers are cloud-native today. This shift is accelerating as teams need flexible GPU scheduling, distributed pipelines, and portable execution environments.
 
-[Kubernetes is also evolving in response to AI demands](https://www.pulumi.com/blog/beyond-yaml-kubernetes-2026-automation-era/#the-2026-convergence-of-ai-platforms-and-policy-in-kubernetes). Inference workloads, powered by LLMs and GPUs, now require low-latency execution closer to the user. This shift is pushing organizations to build intelligent orchestration layers that schedule AI pipelines across edge and core clusters—often leveraging Kubernetes as the common control plane.
+[Kubernetes is also evolving in response to AI demands](https://www.pulumi.com/blog/beyond-yaml-kubernetes-2026-automation-era/#the-2026-convergence-of-ai-platforms-and-policy-in-kubernetes). Inference workloads, powered by LLMs and GPUs, now require low-latency execution closer to the user. This shift is pushing organizations to build intelligent orchestration layers that schedule AI pipelines across edge and core clusters, often leveraging Kubernetes as the common control plane for AI cluster orchestration.
 
 As we move into 2026, three patterns are becoming clear:
 
-- **Kubernetes is evolving to support AI** through GPU-aware scheduling and more advanced workload orchestration.
+- **Kubernetes is evolving to support AI** through GPU-aware scheduling, Kubernetes GPU scheduling optimizations, and more advanced workload orchestration.
 - **Governance and consistency matter more than ever**, as teams struggle to secure and manage multi-cluster, multi-cloud environments.
 - **Platform engineering is essential**, providing curated patterns and automation rather than raw YAML to reduce cognitive load.
 
@@ -191,11 +193,17 @@ Kubernetes will remain a strategic foundation — but operating it effectively n
 
 Developers worldwide have explored or are currently using AI-powered coding assistants. However, many enterprises have shown resistance to allowing them to be part of their AI tools in software development. Still, software engineering leaders are beginning to recognize that these coding assistants can enhance team productivity, improve code quality, and maintain a competitive advantage.
 
-**By 2027, the use of [AI assistants](https://www.pulumi.com/product/copilot/) will dramatically increase developer velocity** to meet functional business requirements for 70% of new digital solutions in production (source: [IDC](https://www.digitalnewsasia.com/business/idc-reveals-its-top-predictions-cloud-2023-and-beyond)).
+**By 2027, the use of AI assistants will dramatically increase developer velocity** to meet functional business requirements for 70% of new digital solutions in production (source: [IDC](https://www.digitalnewsasia.com/business/idc-reveals-its-top-predictions-cloud-2023-and-beyond)).
 
 {{< figure alt="The value of AI code assistants. Credit: Gartner" src="/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/ai_code_assistants_value.png" caption="The value of AI code assistants. Credit: Gartner" width=100% >}}
 
-According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028), **by 2028, 75% of enterprise software engineers will use dedicated AI code assistants**, and 63% of organizations are currently piloting, deploying or beginning to [use AI code assistants, just like Pulumi AI](https://www.pulumi.com/ai).
+According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028), **by 2028, 75% of enterprise software engineers will use dedicated AI code assistants**, and 63% of organizations are currently piloting, deploying or beginning to use AI code assistants.
+
+As adoption grows, teams want their AI assistants connected to the real state of their cloud environments so they can ask questions, review configurations, and understand drift or misconfigurations. [Pulumi’s Remote MCP Server](https://www.pulumi.com/blog/remote-mcp-server/) makes this possible by allowing teams to integrate their preferred AI assistant, including tools like Claude or Cursor, directly with Pulumi-managed infrastructure. The server provides controlled, secure access so assistants can explore stacks, surface issues, and help teams understand their cloud footprint in real time.
+
+When a task involves multi-step workflows or code-level modifications, [Pulumi Neo performs the execution safely ](https://www.pulumi.com/blog/remote-mcp-server/#autonomous-infrastructure-with-pulumi-neo)using previews, policy enforcement, and automated orchestration. The combination of AI-assisted understanding and Pulumi-driven execution gives teams a modern pattern for cloud operations that is fast, secure, and consistent.
+
+This trend marks a major shift in how engineering teams work. AI assistants are becoming active participants in cloud development and operations, and Pulumi provides the foundation to use them confidently across enterprise environments. For a deeper look at what AI-driven cloud operations can enable, explore [10 things you can do with Pulumi Neo](https://www.pulumi.com/blog/10-things-you-can-do-with-neo/).
 
 ## The Future of Cloud: Reinvented for an AI-First Decade
 
