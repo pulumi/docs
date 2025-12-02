@@ -1,8 +1,8 @@
 ---
-title_tag: Get Started with Azure
-meta_desc: This page provides an overview and guide on how to get started with Azure.
 title: Azure
-h1: Get started with Pulumi & Azure
+title_tag: Get started with Pulumi and Azure
+h1: Get started with Pulumi and Azure
+meta_desc: This page provides an overview and guide on how to get started with Azure.
 menu:
     iac:
         name: Azure

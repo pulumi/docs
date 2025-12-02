@@ -7,6 +7,7 @@ weight: 7
 menu:
     iac:
         name: Create a component
+        identifier: azure-get-started.create-component
         parent: azure-get-started
         weight: 7
 
@@ -520,7 +521,7 @@ public class AzureStaticWebsite : Pulumi.ComponentResource
         });
 
         // Upload each file as a blob:
-        foreach (var file in args.Files) {
+        foreach (var file in args.Files ?? []) {
             new Blob(file, new()
             {
                 AccountName = storageAccount.Name,
@@ -710,7 +711,7 @@ using Pulumi.AzureNative.Resources;
 using Pulumi.AzureNative.Storage;
 using System.Collections.Generic;
 
-return await Deployment.RunAsync(() =>
+return await Pulumi.Deployment.RunAsync(() =>
 {
     // Create an instance of our component with the same files as before:
     var website = new AzureStaticWebsite("my-website", new AzureStaticWebsiteArgs()

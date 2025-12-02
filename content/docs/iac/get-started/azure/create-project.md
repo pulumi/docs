@@ -1,8 +1,8 @@
 ---
 title_tag: Create a New Project | Azure
-meta_desc: This page provides an overview of how to create a new Azure + Pulumi project.
 title: Create project
-h1: "Pulumi & Azure: Create project"
+h1: "Get started with Pulumi and Azure"
+meta_desc: This page provides an overview of how to create a new Azure + Pulumi project.
 weight: 4
 menu:
     iac:
@@ -273,14 +273,6 @@ const storageAccountKeys = storage.listStorageAccountKeysOutput({
 export const primaryStorageKey = pulumi.secret(storageAccountKeys.keys[0].value);
 ```
 
-After the line that exports the primary key, add the following line to also export the storage account name:
-
-```typescript
-export const storageAccountName = storageAccount.name;
-```
-
-This exports the storage account name for convenient reference.
-
 {{% /choosable %}}
 {{% choosable language python %}}
 
@@ -317,14 +309,6 @@ primary_key = (
 
 pulumi.export("primary_storage_key", primary_key)
 ```
-
-After the line that exports the primary key, add the following line to also export the storage account name:
-
-```python
-pulumi.export("storage_account_name", account.name)
-```
-
-This exports the storage account name for convenient reference.
 
 {{% /choosable %}}
 {{% choosable language go %}}
@@ -380,14 +364,6 @@ func main() {
 }
 ```
 
-After the `ctx.Export("primaryStorageKey", ...)` statement, add the following line to also export the storage account name:
-
-```go
-ctx.Export("storageAccountName", account.Name)
-```
-
-This exports the storage account name for convenient reference.
-
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
@@ -433,14 +409,6 @@ return await Pulumi.Deployment.RunAsync(() =>
     };
 });
 ```
-
-In the returned Dictionary, add this entry after `primaryStorageKey` to also export the storage account name:
-
-```csharp
-["storageAccountName"] = storageAccount.Name
-```
-
-This exports the storage account name for convenient reference.
 
 {{% /choosable %}}
 
@@ -500,14 +468,6 @@ public class App {
 }
 ```
 
-After `ctx.export("primaryStorageKey", ...)`, add the following line to also export the storage account name:
-
-```java
-ctx.export("storageAccountName", storageAccount.name());
-```
-
-This exports the storage account name for convenient reference.
-
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
@@ -541,20 +501,91 @@ outputs:
   primaryStorageKey: ${storageAccountKeys.keys[0].value}
 ```
 
-In the `outputs` section, add the following line to also export the storage account name:
-
-```yaml
-  storageAccountName: ${sa.name}
-```
-
-This exports the storage account name for convenient reference.
-
 {{% /choosable %}}
 
 The program declares an Azure Resource Group and Storage Account
-[resources](/docs/iac/concepts/resources) and exports the storage account's primary key and name as [stack outputs](/docs/iac/concepts/stacks/#outputs).
-Resources are just objects in our language of choice with [properties](/docs/iac/concepts/inputs-outputs) capturing
-their inputs and outputs. Exporting both values demonstrates different types of outputs: secrets for sensitive data and simple values for convenient reference.
+[resources](/docs/iac/concepts/resources) and exports the storage account's primary key as a [stack output](/docs/iac/concepts/stacks/#outputs).
+The primary key is marked as a secret to protect sensitive credential data. To demonstrate working with outputs,
+you'll add a non-secret output that exports the storage account's name for convenient reference.
+
+{{% choosable language typescript %}}
+
+After the line that exports the primary key, add the following export to also export the storage account name:
+
+```typescript
+// Export the primary key of the Storage Account
+export const primaryStorageKey = pulumi.secret(storageAccountKeys.keys[0].value);
+export const storageAccountName = storageAccount.name;  // Add this line
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+After the line that exports the primary key, add the following export to also export the storage account name:
+
+```python
+pulumi.export("primary_storage_key", primary_key)
+pulumi.export("storage_account_name", account.name)  # Add this line
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+After the `ctx.Export("primaryStorageKey", ...)` statement, add the following export to also export the storage account name:
+
+```go
+// Export the primary key of the Storage Account
+ctx.Export("primaryStorageKey", pulumi.All(resourceGroup.Name, account.Name).ApplyT(
+    func(args []interface{}) (string, error) {
+        // ... existing code removed for brevity ...
+    },
+))
+ctx.Export("storageAccountName", account.Name)  // Add this line
+
+return nil
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+Update the returned Dictionary to also export the storage account name:
+
+```csharp
+return new Dictionary<string, object?>
+{
+    ["primaryStorageKey"] = primaryStorageKey,
+    ["storageAccountName"] = storageAccount.Name  // Add this line
+};
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+After `ctx.export("primaryStorageKey", ...)`, add the following export to also export the storage account name:
+
+```java
+ctx.export("primaryStorageKey", primaryStorageKey);
+ctx.export("storageAccountName", storageAccount.name());  // Add this line
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+In the `outputs` section, add the following line to also export the storage account name:
+
+```yaml
+outputs:
+  # Export the primary key of the Storage Account
+  primaryStorageKey: ${storageAccountKeys.keys[0].value}
+  storageAccountName: ${sa.name}  # Add this line
+```
+
+{{% /choosable %}}
 
 Now you're ready for your first deployment!
 

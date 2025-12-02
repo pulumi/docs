@@ -1,12 +1,12 @@
 ---
-title_tag: Modify the Program | Azure
+title_tag: Make an Update | Azure
+title: Make an update
+h1: "Get started with Pulumi and Azure"
 meta_desc: This page provides an overview on how to update an Azure project from a Pulumi program.
-title: Modify program
-h1: "Pulumi & Azure: Modify program"
 weight: 6
 menu:
     iac:
-        name: Modify program
+        name: Make an update
         identifier: azure-get-started.modify-program
         parent: azure-get-started
         weight: 6
@@ -19,13 +19,11 @@ aliases:
 
 ## Make an update
 
-Now you will update your project to serve a static website out of your Azure storage account. You will change
-your code and then re-run `pulumi up` which will update your infrastructure.
+Now you will update your project to serve a static website out of your Azure storage account. You will change your code and then re-run `pulumi up` which will update your infrastructure.
 
 ### Add new resources
 
-Pulumi knows how to evolve your current infrastructure to your project's new desired state, both for
-the first deployment as well as subsequent updates.
+Pulumi knows how to evolve your current infrastructure to your project's new desired state, both for the first deployment as well as subsequent updates.
 
 To turn your storage account into a static website, you will add two new Azure resources:
 
@@ -82,14 +80,17 @@ EOT
 
 {{% /choosable %}}
 
-Now open {{< langfile >}} in your editor and enable static website support by adding a [`StorageAccountStaticWebsite`](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/) resource right after the storage account creation:
+Now open {{< langfile >}} in your editor and enable static website support by adding a [`StorageAccountStaticWebsite`](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/) resource right after the storage account is created:
 
 {{% choosable language typescript %}}
 
 ```typescript
-// Storage account...
+// Create an Azure resource (Storage Account)
+const storageAccount = new storage.StorageAccount("sa", {
+    /* existing storage account configuration */
+});
 
-// Enable static website support
+// Enable static website support - add this code
 const staticWebsite = new storage.StorageAccountStaticWebsite("staticWebsite", {
     accountName: storageAccount.name,
     resourceGroupName: resourceGroup.name,
@@ -101,9 +102,13 @@ const staticWebsite = new storage.StorageAccountStaticWebsite("staticWebsite", {
 {{% choosable language python %}}
 
 ```python
-# Storage account...
+# Create an Azure resource (Storage Account)
+account = storage.StorageAccount(
+    "sa",
+    # existing storage account configuration
+)
 
-# Enable static website support
+# Enable static website support - add this code
 static_website = storage.StorageAccountStaticWebsite(
     "staticWebsite",
     account_name=account.name,
@@ -116,9 +121,15 @@ static_website = storage.StorageAccountStaticWebsite(
 {{% choosable language go %}}
 
 ```go
-// Storage account...
+// Create an Azure resource (Storage Account)
+account, err := storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
+    // existing storage account configuration
+})
+if err != nil {
+    return err
+}
 
-// Enable static website support
+// Enable static website support - add this code
 staticWebsite, err := storage.NewStorageAccountStaticWebsite(ctx, "staticWebsite", &storage.StorageAccountStaticWebsiteArgs{
     AccountName:       account.Name,
     ResourceGroupName: resourceGroup.Name,
@@ -133,9 +144,13 @@ if err != nil {
 {{% choosable language csharp %}}
 
 ```csharp
-// Storage account...
+// Create an Azure resource (Storage Account)
+var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+{
+    /* existing storage account configuration */
+});
 
-// Enable static website support
+// Enable static website support - add this code
 var staticWebsite = new StorageAccountStaticWebsite("staticWebsite", new StorageAccountStaticWebsiteArgs
 {
     AccountName = storageAccount.Name,
@@ -162,8 +177,12 @@ import com.pulumi.asset.FileAsset;
 Then add the following right after the storage account creation:
 
 ```java
-// Storage account...
+// Create an Azure resource (Storage Account)
+var storageAccount = new StorageAccount("sa", StorageAccountArgs.builder()
+    // existing storage account configuration
+    .build());
 
+// Enable static website support - add this code
 var staticWebsite = new StorageAccountStaticWebsite("staticWebsite",
                     StorageAccountStaticWebsiteArgs.builder()
                             .accountName(storageAccount.name())
@@ -178,7 +197,12 @@ var staticWebsite = new StorageAccountStaticWebsite("staticWebsite",
 
 ```yaml
 resources:
-  # ...
+  # Create an Azure resource (Storage Account)
+  sa:
+    type: azure-native:storage:StorageAccount
+    # existing storage account configuration
+
+  # Enable static website support - add this code
   staticWebsite:
     type: azure-native:storage:StorageAccountStaticWebsite
     properties:
@@ -296,11 +320,15 @@ This uploads the `index.html` file to your storage container using a Pulumi conc
 
 ### Export the website URL
 
-Now to export the website's URL for easy access add this to the end of your program:
+Now to export the website's URL for easy access, add the `staticEndpoint` export to your return statement as shown in this example:
 
 {{% choosable language typescript %}}
 
 ```typescript
+// Export the primary key of the Storage Account
+export const primaryStorageKey = pulumi.secret(storageAccountKeys.keys[0].value);
+export const storageAccountName = storageAccount.name;
+
 // Web endpoint to the website
 export const staticEndpoint = storageAccount.primaryEndpoints.web;
 ```
@@ -310,6 +338,10 @@ export const staticEndpoint = storageAccount.primaryEndpoints.web;
 {{% choosable language python %}}
 
 ```python
+# Export the primary key of the Storage Account
+pulumi.export("primary_storage_key", primary_key)
+pulumi.export("storage_account_name", account.name)
+
 # Web endpoint to the website
 pulumi.export("staticEndpoint", account.primary_endpoints.web)
 ```
@@ -319,6 +351,24 @@ pulumi.export("staticEndpoint", account.primary_endpoints.web)
 {{% choosable language go %}}
 
 ```go
+// Export the primary key of the Storage Account
+ctx.Export("primaryStorageKey", pulumi.All(resourceGroup.Name, account.Name).ApplyT(
+    func(args []interface{}) (string, error) {
+        resourceGroupName := args[0].(string)
+        accountName := args[1].(string)
+        accountKeys, err := storage.ListStorageAccountKeys(ctx, &storage.ListStorageAccountKeysArgs{
+            ResourceGroupName: resourceGroupName,
+            AccountName:       accountName,
+        })
+        if err != nil {
+            return "", err
+        }
+
+        return accountKeys.Keys[0].Value, nil
+    },
+))
+ctx.Export("storageAccountName", account.Name)
+
 // Web endpoint to the website
 ctx.Export("staticEndpoint", account.PrimaryEndpoints.Web())
 ```
@@ -328,10 +378,11 @@ ctx.Export("staticEndpoint", account.PrimaryEndpoints.Web())
 {{% choosable language csharp %}}
 
 ```csharp
-// Web endpoint to the website
+// Export outputs
 return new Dictionary<string, object?>
 {
     ["primaryStorageKey"] = primaryStorageKey,
+    ["storageAccountName"] = storageAccount.Name,
     ["staticEndpoint"] = storageAccount.PrimaryEndpoints.Apply(primaryEndpoints => primaryEndpoints.Web)
 };
 ```
@@ -341,6 +392,11 @@ return new Dictionary<string, object?>
 {{% choosable language java %}}
 
 ```java
+// Export the primary key of the Storage Account
+ctx.export("primaryStorageKey", primaryStorageKey);
+ctx.export("storageAccountName", storageAccount.name());
+
+// Web endpoint to the website
 ctx.export("staticEndpoint", storageAccount.primaryEndpoints()
         .applyValue(EndpointsResponse::web));
 ```
@@ -351,7 +407,11 @@ ctx.export("staticEndpoint", storageAccount.primaryEndpoints()
 
 ```yaml
 outputs:
-  # ...
+  # Export the primary key of the Storage Account
+  primaryStorageKey: ${storageAccountKeys.keys[0].value}
+  storageAccountName: ${sa.name}
+
+  # Web endpoint to the website
   staticEndpoint: ${sa.primaryEndpoints.web}
 ```
 

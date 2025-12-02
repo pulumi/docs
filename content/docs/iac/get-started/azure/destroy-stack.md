@@ -1,8 +1,8 @@
 ---
 title_tag: Destroy the Stack | Azure
-meta_desc: This page provides an overview of how to destroy a Pulumi stack of an Azure project.
 title: Destroy stack
-h1: "Pulumi & Azure: Destroy stack"
+h1: "Get started with Pulumi and Azure"
+meta_desc: This page provides an overview of how to destroy a Pulumi stack of an Azure project.
 weight: 8
 menu:
     iac:
@@ -48,8 +48,7 @@ Previewing destroy (dev):
  -   └─ azure-native:resources:ResourceGroup                      resourceGroup            delete
 
 Outputs:
-  - primaryStorageKey: "<key_value>"
-  - staticEndpoint   : "https://sa8dd8af62.z22.web.core.windows.net/"
+  - url: "https://sa8dd8af62.z22.web.core.windows.net/"
 
 Resources:
     - 5 to delete
@@ -73,8 +72,7 @@ Destroying (dev):
  -   └─ azure-native:resources:ResourceGroup                resourceGroup       deleted
 
 Outputs:
-  - primaryStorageKey: "<key_value>"
-  - staticEndpoint   : "https://sa8dd8af62.z22.web.core.windows.net/"
+  - url: "https://sa8dd8af62.z22.web.core.windows.net/"
 
 Resources:
     - 5 deleted
