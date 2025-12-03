@@ -123,7 +123,7 @@ To enable this transition, enterprises are investing in:
 - **Automation through Infrastructure as Code** to ensure reproducibility and reduce drift
 - **Policy-driven governance** to secure cost, compliance, and architectural consistency
 
-As AI becomes deeply embedded across engineering organizations, teams are increasingly using software engineering approaches such as Infrastructure as Code, reusable components, platform engineering, and policy automation to standardize how AI infrastructure is deployed, scaled, and secured across clouds. 
+As AI becomes deeply embedded across engineering organizations, teams are increasingly using software engineering approaches such as Infrastructure as Code, reusable components, platform engineering, and policy automation to standardize how AI infrastructure is deployed, scaled, and secured across clouds.
 
 To support this shift, Pulumi's perspective on [Superintelligence Infrastructure](https://www.pulumi.com/product/superintelligence-infrastructure/) explains why AI workloads, from pre-training to inference at massive scale, require dynamic infrastructure orchestration rather than static configuration.
 
