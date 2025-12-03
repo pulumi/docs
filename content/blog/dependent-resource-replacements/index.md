@@ -41,9 +41,11 @@ The `replaceWith` resource option makes these dependencies explicit in your code
 
 ## In code
 
-Here's how this works in practice using the TypeScript SDK:
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-```ts
+{{% choosable language typescript %}}
+
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
@@ -60,6 +62,137 @@ const app = new aws.ec2.Instance("app-service", { /* ... */ }, {
     replaceWith: [database],
 });
 ```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+database = aws.rds.Instance('app-db', {})
+
+# The database location is provided to this instance
+# by other means, so there is not an explicit dependency
+# linking the two.
+application = aws.ec2.Instance('app-service', {},
+    # Here, we explicitly tie the two together: if the
+    # database is upgraded, for example, we will need to
+    # restart the application instance to ensure that
+    # a connection is re-established.
+    opts=pulumi.ResourceOptions(replace_with=[database])
+)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+import (
+    "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+    "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/rds"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+database, err := rds.NewInstance(ctx, "app-db", &rds.InstanceArgs{ ... })
+if err != nil {
+    return err
+}
+
+// The database location is provided to this instance
+// by other means, so there is not an explicit dependency
+// linking the two.
+application, err := ec2.NewInstance(ctx, "app-service", &ec2.InstanceArgs{ ... },
+    // Here, we explicitly tie the two together; if the
+    // database is upgraded, for example, we will need to
+    // restart the application instance to ensure that
+    // a connection is re-established.
+    pulumi.ReplaceWith([]pulumi.Resource{database}))
+if err != nil {
+    return err
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+var database = new Aws.Rds.Instance("app-db", new() { ... });
+
+// The database location is provided to this instance
+// by other means, so there is not an explicit dependency
+// linking the two.
+var application = new Aws.Ec2.Instance("app-service", new() { ... }, new CustomResourceOptions
+{
+    // Here, we explicitly tie the two together; if the
+    // database is upgraded, for example, we will need to
+    // restart the application instance to ensure that
+    // a connection is re-established.
+    ReplaceWith = new[]
+    {
+        database,
+    },
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import com.pulumi.resources.CustomResourceOptions;
+
+var database = new com.pulumi.aws.rds.Instance("app-db",
+    com.pulumi.aws.rds.InstanceArgs.builder()
+        .build());
+
+// The database location is provided to this instance
+// by other means, so there is not an explicit dependency
+// linking the two.
+var application = new Instance("app-service",
+    InstanceArgs.builder()
+        .build(),
+    // Here, we explicitly tie the two together; if the
+    // database is upgraded, for example, we will need to
+    // restart the application instance to ensure that
+    // a connection is re-established.
+    CustomResourceOptions.builder()
+        .replaceWith(database)
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  database:
+    type: aws:rds:Instance
+    properties:
+      # ...
+  # The database location is provided to this instance
+  # by other means, so there is not an explicit dependency
+  # linking the two.
+  application:
+    type: aws:ec2:Instance
+    properties:
+      # ...
+    options:
+      # Here, we explicitly tie the two together: if the
+      # database is upgraded, for example, we will need to
+      # restart the application instance to ensure that
+      # a connection is re-established.
+      replaceWith:
+        - ${database}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Of course, this is a simple example, but hopefully it illustrates the point: we now have a way to make implicit dependencies between resources more explicit within our programs, and provide hints to Pulumi as to which services depend on others.
 
