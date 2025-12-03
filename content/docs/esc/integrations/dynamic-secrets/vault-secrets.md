@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: vault-secrets
     parent: esc-dynamic-secrets
-    weight: 8
+    weight: 1
 aliases:
     - /docs/pulumi-cloud/esc/providers/vault-secrets/
     - /docs/esc/providers/vault-secrets/

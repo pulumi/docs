@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: passphrase-rotator
     parent: esc-rotated-secrets
-    weight: 4
+    weight: 1
 ---
 
 The `passphrase` rotator enables you to any user defined key in your ESC environment generating memorable passphrases.
