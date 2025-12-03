@@ -565,3 +565,22 @@ aliases:
         <pre><code class="text-xs">NO_COLOR</code></pre>
     </dd>
 </dl>
+
+## Setting CLI arguments with environment variables
+
+As of v3.208.0, all Pulumi CLI arguments can be set via environment variables.
+
+All CLI argument environment variables follow a predictable naming convention:
+`PULUMI_OPTION_` followed by the capitalized snake case version of the argument
+name. For example:
+
+| CLI argument example                  | Environment variable example             |
+| ------------------------------------- | ---------------------------------------- |
+| `pulumi up --parallel 1`              | `PULUMI_OPTION_PARALLEL=1 pulumi up`     |
+| `pulumi up --refresh`                 | `PULUMI_OPTION_REFRESH=true pulumi up`   |
+| `pulumi up --yes`                     | `PULUMI_OPTION_YES=1 pulumi up`          |
+| `pulumi up --target foo --target bar` | `PULUMI_OPTION_TARGET=foo,bar pulumi up` |
+
+Note that you can specify boolean arguments either with `true` and `false` or
+`1` and `0`. For more information, as well as some practical examples, see the
+[release article](https://www.pulumi.com/blog/controlling-the-cli-through-environment-variables/).
