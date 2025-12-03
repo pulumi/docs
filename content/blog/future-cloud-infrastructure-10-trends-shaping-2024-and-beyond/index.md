@@ -47,6 +47,20 @@ In 2026, several trends will dominate cloud computing, driving innovation, effic
 
 <!--more-->
 
+## On This Article
+
+- [1. Cloud Will Become a Business Necessity by 2028](#1-cloud-will-become-a-business-necessity-by-2028)
+- [2. Hyperscalers Accelerate AI-Driven Cloud Expansion](#2-hyperscalers-accelerate-ai-driven-cloud-expansion)
+- [3. Hybrid and Multi-Cloud to Drive Innovation](#3-hybrid-and-multi-cloud-to-drive-innovation)
+- [4. Enterprises Rebuild Their Cloud Foundations to Operationalize AI](#4-enterprises-rebuild-their-cloud-foundations-to-operationalize-ai)
+- [5. IaC Drives Scalable Cloud, Multi-Cloud, and AI Operations](#5-iac-drives-scalable-cloud-multi-cloud-and-ai-operations)
+- [6. DevSecOps Evolves Into AI-Integrated Security](#6-devsecops-evolves-into-ai-integrated-security)
+- [7. Platform Engineering and Internal Developer Platforms](#7-platform-engineering--internal-developer-platforms-idps)
+- [8. AIOps Matures Into a Cloud Operations Standard](#8-aiops-matures-into-a-cloud-operations-standard)
+- [9. Kubernetes Dominance and Increased Complexity](#9-kubernetes-dominance-and-increased-complexity)
+- [10. AI Code Assistants in the Enterprise](#10-ai-code-assistants-in-the-enterprise)
+- [The Future of Cloud: Reinvented for an AI-First Decade](#the-future-of-cloud-reinvented-for-an-ai-first-decade)
+
 ## 1. Cloud Will Become a Business Necessity by 2028
 
 According to [Gartner](https://www.gartner.com/en/infrastructure-and-it-operations-leaders/topics/cloud-computing), by 2028 the cloud will be the key driver for business innovation, and estimates that over 95% of new digital workloads will be deployed on cloud-native platforms.
@@ -109,7 +123,7 @@ To enable this transition, enterprises are investing in:
 - **Automation through Infrastructure as Code** to ensure reproducibility and reduce drift
 - **Policy-driven governance** to secure cost, compliance, and architectural consistency
 
-As AI becomes deeply embedded across engineering organizations, teams are increasingly using software engineering approaches such as Infrastructure as Code, reusable components, platform engineering, and policy automation to standardize how AI infrastructure is deployed, scaled, and secured across clouds.
+As AI becomes deeply embedded across engineering organizations, teams are increasingly using software engineering approaches such as Infrastructure as Code, reusable components, platform engineering, and policy automation to standardize how AI infrastructure is deployed, scaled, and secured across clouds. To support this shift, teams are also looking ahead to what AI-native infrastructure will require in the coming decade. Pulumi’s perspective on [Superintelligence Infrastructure](https://www.pulumi.com/product/superintelligence-infrastructure/) outlines how cloud foundations may evolve to meet the demands of large-scale AI systems, autonomous workloads, and next-generation compute orchestration.
 
 ### Pulumi users increasingly rely on:
 
