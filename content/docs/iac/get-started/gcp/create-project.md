@@ -1,8 +1,8 @@
 ---
 title_tag: Create a New Project | Google Cloud
-meta_desc: This page provides an overview of how to create a new Google Cloud + Pulumi project.
 title: Create project
-h1: "Pulumi & Google Cloud: Create project"
+h1: "Get started with Pulumi and Google Cloud"
+meta_desc: This page provides an overview of how to create a new Google Cloud + Pulumi project.
 weight: 3
 menu:
     iac:
@@ -10,68 +10,181 @@ menu:
         identifier: gcp-get-started.create-project
         parent: gcp-get-started
         weight: 3
+
 aliases:
     - /docs/quickstart/gcp/create-project/
     - /docs/clouds/gcp/get-started/create-project/
 ---
 
-Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,
-and configuring your Google Cloud credentials, let's create your first Pulumi program.
+## Create a new project
+
+A [**project**](/docs/iac/concepts/projects) is a program in your chosen language that defines a collection of related
+cloud resources. In this step, you will create a new project.
+
+### Initializing your project
+
+Each project lives in its own directory. Create a new one:
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ mkdir pulumi-start-gcp
+```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> mkdir pulumi-start-gcp
+```
+
+{{% /choosable %}}
+
+Change into the new directory:
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ cd pulumi-start-gcp
+```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> cd pulumi-start-gcp
+```
+
+{{% /choosable %}}
+
+Now initialize a new Pulumi project for Google Cloud using the `pulumi new` command:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new gcp-typescript
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new gcp-typescript
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 {{% choosable language python %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new gcp-python
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new gcp-python
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 {{% choosable language go %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new gcp-go
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new gcp-go
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 {{% choosable language csharp %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new gcp-csharp
 ```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new gcp-csharp
+```
+
+{{% /choosable %}}
 
 {{% /choosable %}}
 
 {{% choosable language java %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new gcp-java
 ```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new gcp-java
+```
+
+{{% /choosable %}}
 
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new gcp-yaml
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
 
-The [`pulumi new`](/docs/cli/commands/pulumi_new) command creates a new Pulumi project with some basic scaffolding based on the cloud and language specified.
+```powershell
+> pulumi new gcp-yaml
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
+
+The [`pulumi new`](/docs/cli/commands/pulumi_new) command interactively walks through initializing a new project, as well as creating a
+[**stack**](/docs/iac/concepts/stacks) and [**configuring**](/docs/iac/concepts/config) it. A stack is an instance of your
+project and you may have many of them -- like `dev`, `staging`, and `prod` -- each with different configuration settings.
+
+You will be prompted for configuration values such as the Google Cloud project. Enter the project ID for the project you
+set with the gcloud CLI or hit ENTER to accept any defaults:
+
+```
+gcp:project: The Google Cloud project to deploy into: my-project
+Saved config
+```
+
+{{< cli-note >}}
 
 {{< cli-note >}}
 

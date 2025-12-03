@@ -2,7 +2,7 @@
 title_tag: Review the New Project | Google Cloud
 meta_desc: This page provides an overview on how to review a new Google Cloud project.
 title: Review project
-h1: "Pulumi & Google Cloud: Review project"
+h1: "Get started with Pulumi and Google Cloud"
 weight: 4
 menu:
     iac:
@@ -13,6 +13,7 @@ menu:
 
 aliases:
     - /docs/quickstart/gcp/review-project/
+    - /docs/get-started/gcp/review-project/
     - /docs/clouds/gcp/get-started/review-project/
 ---
 
@@ -20,17 +21,17 @@ Let's review some of the generated project files:
 
 {{% choosable language "typescript,python,go,csharp,java" %}}
 
-- `Pulumi.yaml` defines the [project](/docs/concepts/projects/).
+- `Pulumi.yaml` defines the [project](/docs/iac/concepts/projects/).
 
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
 
-- `Pulumi.yaml` defines both the [project](/docs/concepts/projects/) and the program that manages your stack resources.
+- `Pulumi.yaml` defines both the [project](/docs/iac/concepts/projects/) and the program that manages your stack resources.
 
 {{% /choosable %}}
 
-- `Pulumi.dev.yaml` contains [configuration](/docs/concepts/config/) values for the [stack](/docs/concepts/stack/) you initialized.
+- `Pulumi.dev.yaml` contains [configuration](/docs/iac/concepts/config/) values for the [stack](/docs/iac/concepts/stack/) you initialized.
 
 {{% choosable language java %}}
 
@@ -122,7 +123,7 @@ using Pulumi;
 using Pulumi.Gcp.Storage;
 using System.Collections.Generic;
 
-return await Deployment.RunAsync(() =>
+return await Pulumi.Deployment.RunAsync(() =>
 {
     // Create a Google Cloud resource (Storage Bucket).
     var bucket = new Bucket("my-bucket", new BucketArgs
