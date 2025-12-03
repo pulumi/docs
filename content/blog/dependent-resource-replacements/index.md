@@ -1,6 +1,6 @@
 ---
 title: "New in Pulumi IaC: `replaceWith` Resource Option"
-date: 2025-12-02
+date: 2025-12-09
 meta_desc: "You can now use the `replaceWith` resource option to inform Pulumi of extra dependencies"
 meta_image: meta.png
 authors:
