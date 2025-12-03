@@ -138,13 +138,18 @@ Kubernetes and Pulumi Neo together represent a future of **autonomous infrastruc
 
 ## Operator-First: Kubernetes Deploys Your Cloud
 
-The [Pulumi Kubernetes Operator 2.0 GA](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-0-ga/) introduced a Kubernetes-native approach to infrastructure management. Each Pulumi stack becomes a **Kubernetes Custom Resource**, allowing Kubernetes itself to execute Pulumi programs written in any supported language.
-
-This enables:
+The [Pulumi Kubernetes Operator 2.0 GA](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-0-ga/) introduced a Kubernetes-native approach to infrastructure management. Each Pulumi stack becomes a **Kubernetes Custom Resource**, allowing Kubernetes itself to execute Pulumi programs written in any supported language. This enables:
 
 - Management of AWS, Azure, and GCP infrastructure from within the cluster
 - Integration with GitOps systems such as Argo CD and Flux
 - Continuous reconciliation and drift detection through Pulumi’s state and policy engine
+
+With the new [Pulumi Kubernetes Operator 2.3](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-3/), the operator gets even more production-ready features:
+
+- Faster and more resilient stack updates through improved workspace lifecycle management
+- Support for multi-namespace and multi-tenant deployments
+- Better visibility with enhanced events, status reporting, and error surfacing
+- Performance improvements for large-scale environments and parallel stack operations
 
 Documentation: [Using the Pulumi Kubernetes Operator](https://www.pulumi.com/docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/)
 
@@ -174,16 +179,18 @@ For teams preparing for the next phase of Kubernetes management in 2026:
 4. [Apply policy guardrails](https://www.pulumi.com/docs/insights/policy/) to enforce security and compliance automatically.
 5. Refactor infrastructure into [reusable components](https://www.pulumi.com/docs/iac/concepts/components/) for consistent, scalable operations.
 
-## Workshop: From Zero to Production in Kubernetes
+## Agentic Workflows for Production-ready Kubernetes
 
-Experience Kubernetes automation in practice.
-Join the hands-on workshop [*From Zero to Production in Kubernetes*](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) to learn how to:
+Experience Kubernetes automation in practice. See how agentic workflows power production-ready Kubernetes by automating GitOps operations, managing environments, and reducing manual effort in this on-demand workshop.
 
-- Provision and manage clusters across clouds using real programming languages
-- Automate workloads with agentic workflows and modern GitOps practices
+Watch [*Agentic Workflows for Production-ready Kubernetes*](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) to learn how to:
+
+- Provision and manage clusters across clouds using general-purpose programming languages
+- Multi-cloud Kubernetes infrastructure management
+- Fleet management with GitOps (Argo CD)
 - Reduce YAML complexity while maintaining reliability and speed
 
-[Register now](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/).
+[Watch On Demand](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/).
 
 ## Final Thoughts
 
