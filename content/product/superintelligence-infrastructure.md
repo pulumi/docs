@@ -2,7 +2,8 @@
 title: Superintelligence Infrastructure
 layout: superintelligence-infrastructure
 
-meta_desc: Manage AI infrastructure with code, not static configuration. From 100,000+ GPU training clusters to billions of inference requests. Built for ML teams.
+meta_desc: Manage AI infrastructure with code, not static configuration. From 100,000+ GPU training clusters to billions of inference requests.
+meta_image: /images/product/superintelligence-meta.png
 
 overview:
     title: Superintelligence Infrastructure
