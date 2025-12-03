@@ -128,4 +128,3 @@ resources:
 {{% /choosable %}}
 
 {{< /chooser >}}
-
