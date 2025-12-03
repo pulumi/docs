@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "CNCF Cloud Native Sophia-Antipolis"
+  title: "Move Promotions Out of CI: Implementing GitOps Promotion Tools"
+  url: "https://community.cncf.io/events/details/cncf-cloud-native-sophia-antipolis-presents-move-promotions-out-of-ci-implementing-gitops-promotion-tools/"
+  date: 2025-11-25T18:30:00.000+01:00
 - event: "Cloud Native Rejekts - NA Atlanta 2025"
   title: "Beyond YAML: Building Platform APIs with kro"
   url: "https://cfp.cloud-native.rejekts.io/cloud-native-rejekts-atlanta-na-atlanta-2025/talk/M3TVS3/"
