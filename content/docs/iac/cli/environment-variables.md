@@ -568,7 +568,7 @@ aliases:
 
 ## Setting CLI arguments with environment variables
 
-As of `v3.208.0`, all Pulumi CLI arguments can be set via environment variables.
+As of v3.208.0, all Pulumi CLI arguments can be set via environment variables.
 
 All CLI argument environment variables follow a predictable naming convention:
 `PULUMI_OPTION_` followed by the capitalized snake case version of the argument
@@ -581,6 +581,6 @@ name. For example:
 | `pulumi up --yes`                     | `PULUMI_OPTION_YES=1 pulumi up`          |
 | `pulumi up --target foo --target bar` | `PULUMI_OPTION_TARGET=foo,bar pulumi up` |
 
-Note that we can specify boolean arguments either with `true` and `false` or
+Note that you can specify boolean arguments either with `true` and `false` or
 `1` and `0`. For more information, as well as some practical examples, see the
 [release article](https://www.pulumi.com/blog/controlling-the-cli-through-environment-variables/).
