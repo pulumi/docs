@@ -17,7 +17,7 @@ aliases:
 
 The `replaceWith` resource option allows you to force a replace operation on the current resource every time one of the given resources is replaced.
 
-Pulumi automatically detects the relationships between your resources, and uses those relationships to calculate what needs to be replaced for a given deployment. However, not all relationships are visible to Pulumi: perhaps there are differences in behavior between providers, or your application introduces its own specific relationships, such as two services that depend on one another and thus must always be replaced together.
+However, not all relationships are visible to Pulumi: perhaps there are differences in behavior between providers, or your application introduces its own specific relationships, such as two services that depend on one another and thus must always be replaced together.
 
 In these cases, you can use `replaceWith` to make these relationships explicit to the Pulumi engine. In the following example, an explicit dependency is declared: whenever the database is replaced, we must also replace the server.
 
@@ -29,8 +29,8 @@ In these cases, you can use `replaceWith` to make these relationships explicit t
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const database = new aws.rds.Instance('app-db', { ... });
-const application = new aws.ec2.Instance('app-service', { ... }, {
+const database = new aws.rds.Instance('app-db', { /* ... */ });
+const application = new aws.ec2.Instance('app-service', { /* ... */ }, {
   replaceWith: [database]
 })
 ```
@@ -42,8 +42,8 @@ const application = new aws.ec2.Instance('app-service', { ... }, {
 import pulumi
 import pulumi_aws as aws
 
-database = aws.rds.Instance('app-db', ...)
-application = aws.ec2.Instance('app-service', ...,
+database = aws.rds.Instance('app-db', {})
+application = aws.ec2.Instance('app-service', {},
     opts=pulumi.ResourceOptions(replace_with=[database])
 )
 ```
@@ -99,8 +99,10 @@ var database = new com.pulumi.aws.rds.Instance("app-db",
     com.pulumi.aws.rds.InstanceArgs.builder()
         .build());
 
-var application = new Instance("app-service", InstanceArgs.builder()
-    .build(), CustomResourceOptions.builder()
+var application = new Instance("app-service",
+    InstanceArgs.builder()
+        .build(),
+    CustomResourceOptions.builder()
         .replaceWith(database)
         .build());
 ```
