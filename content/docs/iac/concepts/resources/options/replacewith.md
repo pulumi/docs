@@ -95,7 +95,7 @@ import com.pulumi.aws.ec2.Instance;
 import com.pulumi.aws.ec2.InstanceArgs;
 import com.pulumi.resources.CustomResourceOptions;
 
-var database = new com.pulumi.aws.rds.Instance("app-db", 
+var database = new com.pulumi.aws.rds.Instance("app-db",
     com.pulumi.aws.rds.InstanceArgs.builder()
         .build());
 
@@ -128,3 +128,4 @@ resources:
 {{% /choosable %}}
 
 {{< /chooser >}}
+
