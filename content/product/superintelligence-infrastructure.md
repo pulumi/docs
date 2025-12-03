@@ -32,7 +32,10 @@ stats:
 
 features:
   title: The Complete AI Infrastructure Lifecycle
-  description: From research experiments to superintelligence-scale production. One platform, one codebase, any cloud.
+  description: |
+    From research experiments to superintelligence-scale production. 
+    
+    One platform, one codebase, any cloud.
   items:
     - header: Pre-Training
       items: 
@@ -68,10 +71,10 @@ casestudy:
       Supabase needed infrastructure that could scale without operational overhead. Terraform's HCL meant constant context switching between TypeScript (application services) and a proprietary configuration language (infrastructure).
 
       After migrating to Pulumi:
-      - Regional expansion: 1 week to infrastructure readiness
-      - Scale: 80,000 resources across 16 AWS regions
-      - Team velocity: 1-2 people to 40+ active engineers
-      - Multi-cloud: AWS + Cloudflare + GCP in single deployments
+      - **Regional expansion**: 1 week to infrastructure readiness
+      - **Scale**: 80,000 resources across 16 AWS regions
+      - **Team velocity**: 1-2 people to 40+ active engineers
+      - **Multi-cloud**: AWS + Cloudflare + GCP in single deployments
 
       Supabase powers AI application builders like Lovable, Bolt, and Vercel v0: 43,000+ databases launched daily, 100K+ API calls per second. The backend infrastructure runs entirely on Pulumi.
     quote: "\"With Pulumi, everything is TypeScript. Our infrastructure is code, not configuration.\""
@@ -79,11 +82,13 @@ casestudy:
     image: /images/case-studies/supabase-architecture-diagram.png
   subheading: Also Trusted By Leading AI and Data Platforms
   items:
-    - body: Snowflake manages 100K+ daily deployments across AWS, Azure, and GCP with Pulumi —  massive-scale infrastructure supporting AI/ML workloads for thousands of enterprise customers.
+    - body: |
+        **Snowflake** manages 100K+ daily deployments across AWS, Azure, and GCP with Pulumi —  massive-scale infrastructure supporting AI/ML workloads for thousands of enterprise customers.
       logo: /logos/pkg/snowflake.svg
       cta: Read the Story
       link: /case-studies/snowflake/
-    - body: BMW enables 15,000 developers to access self-service infrastructure while maintaining enterprise governance.
+    - body: |
+        **BMW** enables 15,000 developers to access self-service infrastructure while maintaining enterprise governance.
       cta: Read the Story
       logo: /logos/customers/bmw.svg
       link: /case-studies/bmw/
@@ -112,7 +117,9 @@ enablement:
 capabilities:
     title: Code-Native Infrastructure for Dynamic AI Workloads
     description: |
-        Infrastructure written in Python, TypeScript, and Go. The same languages your ML engineers already know. No proprietary configuration languages.
+        Infrastructure written in Python, TypeScript, and Go. The same languages your ML engineers already know. 
+        
+        No proprietary configuration languages.
 
 building_blocks:
   title: "Why AI Infrastructure Requires Dynamic Orchestration"
