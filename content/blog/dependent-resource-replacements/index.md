@@ -198,4 +198,4 @@ Of course, this is a simple example, but hopefully it illustrates the point: we 
 
 ## Next steps
 
-This feature is supported as of [Pulumi `v3.207.0`](https://github.com/pulumi/pulumi/releases/tag/v3.207.0), and is now available within the Go, Python, and NodeJS SDKs. Thanks for reading, and feel free to reach out with any questions via [GitHub](https://github.com/pulumi/pulumi), [X](https://x.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
+This feature is supported as of [Pulumi `v3.207.0`](https://github.com/pulumi/pulumi/releases/tag/v3.207.0), and is now available within the Go, Python, NodeJS, and Java SDKs, with C# and YAML coming soon. Thanks for reading, and feel free to reach out with any questions via [GitHub](https://github.com/pulumi/pulumi), [X](https://x.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
