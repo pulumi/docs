@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: infisical-secrets
     parent: esc-dynamic-secrets
-    weight: 7
+    weight: 1
 aliases:
   - /docs/pulumi-cloud/esc/providers/infisical-secrets/
   - /docs/esc/providers/infisical-secrets/

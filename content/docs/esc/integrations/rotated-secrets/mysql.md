@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: mysql-rotator
     parent: esc-rotated-secrets
-    weight: 3
+    weight: 1
 ---
 
 The `mysql` rotator enables you to rotate user credentials for a MySQL database in your Environment.

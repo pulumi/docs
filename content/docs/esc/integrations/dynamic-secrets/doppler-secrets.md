@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: doppler-secrets
     parent: esc-dynamic-secrets
-    weight: 5
+    weight: 1
 aliases:
   - /docs/pulumi-cloud/esc/providers/doppler-secrets/
   - /docs/esc/providers/doppler-secrets/
