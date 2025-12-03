@@ -49,17 +49,17 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-Pulumi saves a snapshot of the current state of your cloud infrastructure at every deployment, and also at every step of the deployment. This means that Pulumi always has a current view of the state even if there are crashes during an operation. However, this comes with a performance penalty especially for large stacks. Today we're introducing an improvement that can speed up deployments up to 10x. Read on for benchmarks and some technical details of the implementation.
+Pulumi saves a snapshot of the current state of your cloud infrastructure at every deployment, and also at every step of the deployment. This means that Pulumi always has a current view of the state even if there is an issue during an operation. However, this comes with a performance penalty especially for large stacks. Today we're introducing an improvement that can speed up deployments up to 10x. Read on for benchmarks and some technical details of the implementation.
 
 <!--more-->
 
 ## Benchmarks
 
-Before getting into the more technical details, here's a number of benchmarks demonstrating what this new experience looks like. To run the benchmarks we picked a couple of Pulumi projects, one that can be set up massively parallel, which is the worst case scenario for the old snapshot system, and another one that looks a little more like a real world example.  Note that all of these benchmarks were conducted in Europe connecting to Pulumi Cloud, which runs in `us-west-2`, so exact numbers may vary based on your location and internet connection. This should however give a good indication of the performance improvements.
+Before getting into the more technical details, here are a number of benchmarks demonstrating what this new experience looks like. To run the benchmarks we picked a couple of Pulumi projects, one that can be set up massively parallel, which is the worst case scenario for the old snapshot system, and another one that looks a little more like a real world example.  Note that all of these benchmarks were conducted in Europe connecting to Pulumi Cloud, which runs in `us-west-2`, so exact numbers may vary based on your location and internet connection. This should however give a good indication of the performance improvements.
 
 We're benchmarking two somewhat large stacks, both of which are or were used at Pulumi. The first program sets up a website using AWS bucket objects. We're using the [example-ts-static-website](https://github.com/pulumi/examples/tree/master/aws-ts-static-website) example here, but expand it a little bit to set up a version of our docs site. This means we're setting up more than 3000 bucket objects, with 3222 resources in total.
 
-The benchmarks were measured using `time` built-in command and using the best time in a best-of-three benchmarks. The network traffic using `tcpdump`, limiting the measured traffic to only the IP addresses for Pulumi Cloud. Finally `tshark` was used to process the packet captures and count the bytes sent.
+The benchmarks were measured using `time` built-in command and using the best time in a best-of-three benchmark. The network traffic was measured using `tcpdump`, limiting the measured traffic to only the IP addresses for Pulumi Cloud. Finally `tshark` was used to process the packet captures and count the bytes sent.
 
 All the benchmarks are run with journaling off (the default experience), with journaling on (the new experience), and finally with `PULUMI_SKIP_CHECKPOINTS=true` set. The last one means we skip uploading intermediate checkpoints to the backend, which in turn means potentially losing track of changes that are in flight if Pulumi exits unexpectedly due to any reason.
 
@@ -91,11 +91,11 @@ At the beginning of the operation, Pulumi adds a new "pending operation" to the 
 
 This is because it is possible that the resource has been set up correctly, or it is possible that the resource creation failed. If Pulumi aborted midway through the operation it's impossible to know which it is.
 
-Once an operation finished, the pending operation is removed, as we now know the final state of the resource, and the final state of the resource is updated in the snapshot.
+Once an operation finishes, the pending operation is removed, as we now know the final state of the resource, and the final state of the resource is updated in the snapshot.
 
 There's also some additional metadata that is stored in the snapshot, that is only updated infrequently.
 
-Here's how the snapshot looks in code. This snapshot is serialized and sent to the backend. `Resources` holds the list of known resource state, and is updated after each operation finishes, and `PendingOperations` is the list of pending operations described above.
+Here's how the snapshot looks in code. This snapshot is serialized and sent to the backend. `Resources` holds the list of known resource states, and is updated after each operation finishes, and `PendingOperations` is the list of pending operations described above.
 
 ```go
 type Snapshot struct {
