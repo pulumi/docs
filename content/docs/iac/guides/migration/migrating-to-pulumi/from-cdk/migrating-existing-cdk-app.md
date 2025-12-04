@@ -230,7 +230,7 @@ new AppStack(app, 'app-stack', {
 });
 ```
 
-When this is converted to a Pulumi application you would have a single Pulumi stack that defines both the RDS database and the Lambda Function. You would then set `protect: true` on the Pulumi RDS Database.
+When this is converted to a Pulumi program you would have a single Pulumi stack that defines both the RDS database and the Lambda Function. You would then set `protect: true` on the Pulumi RDS Database.
 
 ### Handling CDK stages
 
