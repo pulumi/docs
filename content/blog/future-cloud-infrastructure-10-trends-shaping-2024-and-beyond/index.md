@@ -26,6 +26,7 @@ meta_image: "2026-cloud-trends -ai-idp-security.png"
 
 aliases:
     - /future-cloud-infrastructure-10-trends-shaping-2026-and-beyond/
+    - /blog/future-cloud-infrastructure-10-trends-shaping-2026-and-beyond/
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
