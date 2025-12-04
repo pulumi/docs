@@ -24,6 +24,8 @@ If your team has already provisioned infrastructure using AWS CloudFormation, an
 * [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing resources into Pulumi in the usual way.
 * [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
 
+For detailed guidance on finding AWS import IDs and handling CloudFormation-specific edge cases (including examples that also apply to CDK-generated stacks), see [AWS import IDs and special cases](/docs/iac/guides/migration/migrating-to-pulumi/aws-import-ids-and-special-cases/).
+
 ## Referencing Stack Outputs
 
 It is possible to reference existing AWS CloudFormation stacks from your program. It doesn't matter how these stacks were created. This lets you read properties of that CloudFormation stack for use within your Pulumi program. This includes output values computed from resources provisioned that stack.
