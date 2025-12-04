@@ -258,7 +258,7 @@ Next, make four changes:
 3. Generalize the creation of bucket objects by looping over the list of `files`
 4. Assign the resulting website URL to the `url` property of the component
 
-The resulting {{< compfile >}} file will look like this; feel free to make each edit one at a time if you'd like
+The resulting {{< compfile >}} file will look like this; you can make each edit one at a time if preferred
 to get a feel for things, or simply paste the contents of this into {{< compfile >}}:
 
 {{% choosable language typescript %}}

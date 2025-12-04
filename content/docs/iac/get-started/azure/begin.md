@@ -15,7 +15,6 @@ aliases:
     - /docs/quickstart/azure/begin/
     - /docs/quickstart/azure/install-pulumi/
     - /docs/quickstart/azure/install-language-runtime/
-    - /docs/quickstart/azure/configure/
     - /docs/clouds/azure/get-started/begin/
 ---
 

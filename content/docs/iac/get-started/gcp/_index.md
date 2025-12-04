@@ -28,31 +28,31 @@ Make sure you have the <a href="https://cloud.google.com/sdk/docs/install" targe
 
 {{% choosable language "typescript" %}}
 
-* <a href="https://nodejs.org/en/download" target=_blank>Node.js</a> and <a href="https://www.npmjs.com/package/npm" target=_blank>npm</a> installed locally
+* <a href="https://nodejs.org/en/download" target="_blank">Node.js</a> and <a href="https://www.npmjs.com/package/npm" target="_blank">npm</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "python" %}}
 
-* <a href="https://www.python.org/downloads/" target=_blank>Python</a> and <a href="https://pip.pypa.io/en/stable/installation/">pip</a>, <a href="https://python-poetry.org/docs/" target=_blank>Poetry</a> or <a href="https://docs.astral.sh/uv/getting-started/installation/" target=_blank>uv</a> installed locally
+* <a href="https://www.python.org/downloads/" target="_blank">Python</a> and <a href="https://pip.pypa.io/en/stable/installation/">pip</a>, <a href="https://python-poetry.org/docs/" target="_blank">Poetry</a> or <a href="https://docs.astral.sh/uv/getting-started/installation/" target="_blank">uv</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "go" %}}
 
-* <a href="https://go.dev/doc/install" target=_blank>Go</a> installed locally
+* <a href="https://go.dev/doc/install" target="_blank">Go</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "csharp" %}}
 
-* <a href="https://dotnet.microsoft.com/en-us/download/dotnet" target=_blank>.NET</a> installed locally
+* <a href="https://dotnet.microsoft.com/en-us/download/dotnet" target="_blank">.NET</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "java" %}}
 
-* <a href="https://www.oracle.com/java/technologies/downloads/" target=_blank>Java 11+</a> and <a href="https://maven.apache.org/install.html" target=_blank>Maven 3.6.1+</a> installed locally
+* <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">Java 11+</a> and <a href="https://maven.apache.org/install.html" target="_blank">Maven 3.6.1+</a> installed locally
 
 {{% /choosable %}}
 

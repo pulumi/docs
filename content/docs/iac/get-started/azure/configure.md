@@ -9,7 +9,7 @@ menu:
         name: Configure access
         parent: azure-get-started
         weight: 3
-
+        identifier: azure-get-started.configure
 aliases:
     - /docs/quickstart/azure/configure/
     - /docs/clouds/azure/get-started/configure/
@@ -43,7 +43,7 @@ $ az account show
 
 {{% /choosable %}}
 
-If your Azure subscription details are printed, you are good to go. If not, read on:
+If your Azure subscription details are printed, your configuration is correct. If not, read on:
 
 ```json
 {

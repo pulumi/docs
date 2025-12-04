@@ -3,13 +3,13 @@ title_tag: Create a New Project | Google Cloud
 title: Create project
 h1: "Get started with Pulumi and Google Cloud"
 meta_desc: This page provides an overview of how to create a new Google Cloud + Pulumi project.
-weight: 3
+weight: 4
 menu:
     iac:
         name: Create project
         identifier: gcp-get-started.create-project
         parent: gcp-get-started
-        weight: 3
+        weight: 4
 
 aliases:
     - /docs/quickstart/gcp/create-project/

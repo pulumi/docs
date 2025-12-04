@@ -553,6 +553,6 @@ This will reveal your new website!
 
 Feel free to experiment, such as changing the contents of `index.html` and redeploying.
 
-Next, let's wrap this website up into an infrastructure abstraction.
+Next, wrap the website into an infrastructure abstraction.
 
 {{< get-started-stepper >}}

@@ -14,7 +14,7 @@ menu:
 aliases:
     - /docs/quickstart/kubernetes/create-project/
 ---
-Now that you have set up your environment let's create your first Pulumi program.
+Now that you have set up your environment, create your first Pulumi program.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 

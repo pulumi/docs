@@ -15,7 +15,7 @@ aliases:
     - /docs/quickstart/kubernetes/modify-program/
 ---
 
-Now that we have an instance of our Pulumi program deployed, let's update it to do something a little more interesting.
+Now that you have an instance of your Pulumi program deployed, update it to do something a little more interesting.
 
 Replace the entire contents of {{< langfile >}} with the following:
 
