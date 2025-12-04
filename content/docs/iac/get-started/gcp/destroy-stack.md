@@ -50,7 +50,6 @@ Previewing destroy (dev):
  -   └─ gcp:storage:Bucket            my-bucket          delete
 
 Outputs:
-  - bucketName: "gs://my-bucket-daa12be"
   - url       : "http://storage.googleapis.com/my-bucket-daa12be/index.html"
 
 Resources:
@@ -74,7 +73,6 @@ Destroying (dev):
  -   └─ gcp:storage:Bucket            my-bucket          deleted (1s)
 
 Outputs:
-  - bucketName: "gs://my-bucket-daa12be"
   - url       : "http://storage.googleapis.com/my-bucket-daa12be/index.html"
 
 Resources:

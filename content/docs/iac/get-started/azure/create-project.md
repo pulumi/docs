@@ -503,10 +503,7 @@ outputs:
 
 {{% /choosable %}}
 
-The program declares an Azure Resource Group and Storage Account
-[resources](/docs/iac/concepts/resources) and exports the storage account's primary key as a [stack output](/docs/iac/concepts/stacks/#outputs).
-The primary key is marked as a secret to protect sensitive credential data. To demonstrate working with outputs,
-you'll add a non-secret output that exports the storage account's name for convenient reference.
+The program declares an Azure Resource Group and Storage Account [resources](/docs/iac/concepts/resources) and exports the storage account's primary key as a [stack output](/docs/iac/concepts/stacks/#outputs). The primary key is marked as a secret to protect sensitive credential data. To demonstrate working with outputs, you'll add a non-secret output that exports the storage account's name for convenient reference.
 
 {{% choosable language typescript %}}
 

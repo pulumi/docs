@@ -34,7 +34,7 @@ Previewing update (dev)
  +   └─ gcp:storage:Bucket  my-bucket       create
 
 Outputs:
-    bucketName: output<string>
+    bucketName: [unknown]
 
 Resources:
     + 2 to create

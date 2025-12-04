@@ -87,21 +87,15 @@ Now that you have an `index.html` file with some content, open {{< langfile >}} 
 
 For this, you'll use Pulumi's `FileAsset` class to assign the content of the file to a new `BucketObject`.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
-
 {{% choosable language typescript %}}
 
-In `index.ts`, create the `BucketObject` right after creating the bucket itself:
+In `index.ts`, create the `BucketObject` by adding this code immediately following the bucket definition:
 
 ```typescript
-// Create a Google Cloud resource (Storage Bucket)
-const bucket = new gcp.storage.Bucket("my-bucket", {
-    /* existing bucket configuration */
-});
-
 // Upload the file
 const bucketObject = new gcp.storage.BucketObject("index.html", {
     bucket: bucket.name,
+    name: "index.html",
     source: new pulumi.asset.FileAsset("index.html")
 });
 ```
@@ -110,18 +104,15 @@ const bucketObject = new gcp.storage.BucketObject("index.html", {
 
 {{% choosable language python %}}
 
-In `__main__.py`, create a new bucket object by adding the following right after creating the bucket itself:
+In `__main__.py`, create a new bucket object by adding this code immediately following the bucket definition:
 
 ```python
-# Create a Google Cloud resource (Storage Bucket)
-bucket = storage.Bucket(
-    "my-bucket",
-    # existing bucket configuration
-)
-
 # Upload the file
 bucket_object = storage.BucketObject(
-    "index.html", bucket=bucket.name, source=pulumi.FileAsset("index.html")
+    "index.html",
+    bucket=bucket.name,
+    name="index.html",
+    source=pulumi.FileAsset("index.html")
 )
 ```
 
@@ -129,20 +120,13 @@ bucket_object = storage.BucketObject(
 
 {{% choosable language go %}}
 
-In `main.go`, create the `BucketObject` right after creating the bucket itself:
+In `main.go`, create the `BucketObject` by adding this code immediately following the bucket definition:
 
 ```go
-// Create a Google Cloud resource (Storage Bucket)
-bucket, err := storage.NewBucket(ctx, "my-bucket", &storage.BucketArgs{
-    // existing bucket configuration
-})
-if err != nil {
-    return err
-}
-
 // Upload the file
 _, err = storage.NewBucketObject(ctx, "index.html", &storage.BucketObjectArgs{
     Bucket: bucket.Name,
+    Name:   pulumi.String("index.html"),
     Source: pulumi.NewFileAsset("index.html"),
 })
 if err != nil {
@@ -154,19 +138,14 @@ if err != nil {
 
 {{% choosable language csharp %}}
 
-In `Program.cs`, create the `BucketObject` right after creating the bucket itself:
+In `Program.cs`, create the `BucketObject` by adding this code immediately following the bucket definition:
 
 ```csharp
-// Create a Google Cloud resource (Storage Bucket)
-var bucket = new Bucket("my-bucket", new BucketArgs
-{
-    /* existing bucket configuration */
-});
-
 // Upload the file
 var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
     Bucket = bucket.Name,
+    Name = "index.html",
     Source = new FileAsset("./index.html")
 });
 ```
@@ -175,7 +154,7 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 
 {{% choosable language java %}}
 
-In {{< langfile >}}, import the following additional classes, then create the `BucketObject` right after creating the bucket itself:
+In {{< langfile >}}, import the following additional classes, then create the `BucketObject` immediately following the bucket definition by adding this code:
 
 ```java
 // ...
@@ -196,6 +175,7 @@ public class App {
             // Upload the file
             var bucketObject = new BucketObject("index.html", BucketObjectArgs.builder()
                 .bucket(bucket.name())
+                .name("index.html")
                 .source(new FileAsset("index.html"))
                 .build()
             );
@@ -213,19 +193,14 @@ public class App {
 In {{< langfile >}}, create the `BucketObject` right below the bucket itself.
 
 ```yaml
-resources:
-  # Create a Google Cloud resource (Storage Bucket)
-  my-bucket:
-    type: gcp:storage:Bucket
-    # existing bucket configuration
-
-  # Upload the file
-  index-html:
+# Upload the file
+index-html:
     type: gcp:storage:BucketObject
     properties:
-      bucket: ${my-bucket}
-      source:
-        fn::fileAsset: ./index.html
+        bucket: ${my-bucket}
+        name: index.html
+        source:
+            fn::fileAsset: ./index.html
 ```
 
 {{% /choosable %}}
@@ -318,6 +293,13 @@ my-bucket-binding:
 
 {{% /choosable %}}
 
+{{% notes type="info" %}}
+
+If you encounter permission errors when uploading files, the IAM binding may still be propagating. The component
+examples later in this tutorial show how to add explicit dependencies between resources to ensure proper ordering.
+
+{{% /notes %}}
+
 Now that `index.html` exists in the bucket, modify the bucket to serve the file as a static website.
 
 To do that, update the bucket definition to configure its website property. Then, to align with Google Cloud Storage recommendations, set its uniform bucket-level access property to `true`:
@@ -336,7 +318,7 @@ const bucket = new gcp.storage.Bucket("my-bucket", {
 
 ### Export the website URL
 
-Now to export the website's public URL for easy access, add the `url` export to your return statement as shown in this example:
+Now to export the website's public URL for easy access, add the `url` export as shown in this example:
 
 ```typescript
 // Export the DNS name of the bucket
@@ -359,7 +341,13 @@ bucket = storage.Bucket(
     },
     uniform_bucket_level_access=True,
 )
+```
 
+### Export the website URL
+
+Now to export the website's public URL for easy access, add the `url` export as shown in this example:
+
+```python
 # Export the DNS name of the bucket
 pulumi.export("bucket_name", bucket.url)
 
@@ -387,7 +375,13 @@ bucket, err := storage.NewBucket(ctx, "my-bucket", &storage.BucketArgs{
 if err != nil {
     return err
 }
+```
 
+### Export the website URL
+
+Now to export the website's public URL for easy access, add the `url` export as shown in this example:
+
+```go
 // Export the DNS name of the bucket
 ctx.Export("bucketName", bucket.Url)
 
@@ -403,13 +397,19 @@ ctx.Export("url", pulumi.Sprintf("http://storage.googleapis.com/%s/%s", bucket.N
 var bucket = new Bucket("my-bucket", new BucketArgs
 {
     Location = "US",
-    Website = new BucketWebsiteArgs
+    Website = new Pulumi.Gcp.Storage.Inputs.BucketWebsiteArgs
     {
         MainPageSuffix = "index.html"
     },
     UniformBucketLevelAccess = true
 });
+```
 
+### Export the website URL
+
+Now to export the website's public URL for easy access, add the `url` export to your return `Dictionary` as shown in this example:
+
+```csharp
 return new Dictionary<string, object?>
 {
     ["bucketName"] = bucket.Url,
@@ -429,7 +429,13 @@ var bucket = new Bucket("my-bucket", BucketArgs.builder()
         .build())
     .uniformBucketLevelAccess(true)
     .build());
+```
 
+### Export the website URL
+
+Now to export the website's public URL for easy access, add the `url` export as shown in this example:
+
+```java
 // Export the DNS name of the bucket
 ctx.export("bucketName", bucket.url());
 
@@ -497,7 +503,7 @@ Outputs:
 Resources:
     + 2 to create
     ~ 1 to update
-    2 unchanged
+    3 changes. 1 unchanged
 
 Do you want to perform this update?
 > yes
