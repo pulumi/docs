@@ -3,13 +3,13 @@ title_tag: Create a New Project | Kubernetes
 meta_desc: This page provides an overview of how to create a new Kubernetes + Pulumi project.
 title: Create project
 h1: "Pulumi & Kubernetes: Create project"
-weight: 3
+weight: 4
 menu:
   iac:
     name: Create project
     identifier: kubernetes-get-started.create-project
     parent: kubernetes-get-started
-    weight: 3
+    weight: 4
 
 aliases:
     - /docs/quickstart/kubernetes/create-project/

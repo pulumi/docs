@@ -19,22 +19,64 @@ aliases:
     - /docs/clouds/kubernetes/get-started/
 ---
 
-Pulumi's Cloud Native SDK makes it easy to target any Kubernetes environment to
-provision a cluster, configure and deploy applications, and update them as
-required.
+**Infrastructure as code (IaC)** lets you deploy, change, and manage infrastructure safely, consistently,
+and repeatably using code rather than a graphical user interface.
 
-Pulumi supports programming against Kubernetes---Minikube, on-premises and
-cloud-hosted custom Kubernetes clusters, and the managed services from Google
-(GKE), Azure (AKS), and Amazon (EKS). The Pulumi Kubernetes provider
-packages and CLI help you accomplish all these within minutes.
+Complete this step-by-step tutorial to deploy an [NGINX](https://www.nginx.com/) web server on Kubernetes using IaC.
 
-For a quick example of how Pulumi deploys infrastructure on Kubernetes, this tutorial takes you through the following steps to easily deploy an [NGINX](https://www.nginx.com/) web server:
+## Before you begin
 
-1. Setting up and configuring Pulumi to access your Kubernetes cluster.
-1. Creating a new Pulumi project.
-1. Deploying NGINX on Kubernetes.
-1. Creating a service to access the NGINX deployment.
-1. Cleaning up your deployment by destroying the resources you've provisioned.
+First, ensure you have access to a Kubernetes cluster. If not, the next step will show you where to get one. Then choose your language and ensure you've performed any prerequisites:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
+{{% choosable language "typescript" %}}
+
+* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* kubectl installed and configured
+* <a href="https://nodejs.org/en/download" target="_blank">Node.js</a> and <a href="https://www.npmjs.com/package/npm" target="_blank">npm</a> installed locally
+
+{{% /choosable %}}
+
+{{% choosable language "python" %}}
+
+* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* kubectl installed and configured
+* <a href="https://www.python.org/downloads/" target="_blank">Python</a> and <a href="https://pip.pypa.io/en/stable/installation/" target="_blank">pip</a>, <a href="https://python-poetry.org/docs/" target="_blank">Poetry</a> or <a href="https://docs.astral.sh/uv/getting-started/installation/" target="_blank">uv</a> installed locally
+
+{{% /choosable %}}
+
+{{% choosable language "go" %}}
+
+* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* kubectl installed and configured
+* <a href="https://go.dev/doc/install" target="_blank">Go</a> installed locally
+
+{{% /choosable %}}
+
+{{% choosable language "csharp" %}}
+
+* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* kubectl installed and configured
+* <a href="https://dotnet.microsoft.com/en-us/download/dotnet" target="_blank">.NET</a> installed locally
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* kubectl installed and configured
+* <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">Java 11+</a> and <a href="https://maven.apache.org/install.html" target="_blank">Maven 3.6.1+</a> installed locally
+
+{{% /choosable %}}
+
+{{% choosable language "yaml" %}}
+
+* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* kubectl installed and configured
+* A text editor
+
+{{% /choosable %}}
 
 Before you begin, watch this overview of how to deploy Kubernetes infrastructure with Pulumi:
 

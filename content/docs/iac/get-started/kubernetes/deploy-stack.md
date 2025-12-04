@@ -3,13 +3,13 @@ title_tag: Deploy the Stack | Kubernetes
 meta_desc: This page provides an overview of how to deploy a Kubernetes project as a Pulumi Stack.
 title: Deploy stack
 h1: "Pulumi & Kubernetes: Deploy stack"
-weight: 5
+weight: 6
 menu:
     iac:
         name: Deploy stack
         identifier: kubernetes-get-started.deploy-stack
         parent: kubernetes-get-started
-        weight: 5
+        weight: 6
 
 aliases:
     - /docs/quickstart/kubernetes/deploy-stack/
@@ -66,8 +66,16 @@ The `name` of the deployment that we exported is shown as a [stack output](/docs
 
 {{< console-note >}}
 
-{{% notes type="info" %}}
-If you get the error `configured Kubernetes cluster is unreachable: unable to load schema information from the API server: the server has asked for the client to provide credentials`, you may need to configure valid AWS credentials.
+{{% notes type="warning" %}}
+If you get the error `configured Kubernetes cluster is unreachable` or
+`unable to load schema information from the API server`, verify your cluster access:
+
+1. Check your kubeconfig: `kubectl config view`
+2. Test cluster connectivity: `kubectl cluster-info`
+3. Verify authentication: `kubectl auth can-i get pods`
+
+If these commands fail, return to the [Configure access](/docs/iac/get-started/kubernetes/configure/)
+step to set up your Kubernetes cluster and kubectl.
 {{% /notes %}}
 
 Next, we'll make some modifications to the program.

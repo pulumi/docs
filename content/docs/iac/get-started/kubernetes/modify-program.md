@@ -3,13 +3,13 @@ title_tag: Modify the Program | Kubernetes
 meta_desc: This page provides an overview on how to update Kubernetes project from a Pulumi program.
 title: Modify program
 h1: "Pulumi & Kubernetes: Modify program"
-weight: 6
+weight: 7
 menu:
     iac:
         name: Modify program
         identifier: kubernetes-get-started.modify-program
         parent: kubernetes-get-started
-        weight: 6
+        weight: 7
 
 aliases:
     - /docs/quickstart/kubernetes/modify-program/
