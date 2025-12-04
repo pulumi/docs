@@ -22,6 +22,8 @@ Most infrastructure as code projects require working with existing cloud resourc
 
 The first scenario is sometimes called _coexistence_, and you can learn more it in [Adopting Pulumi > Coexistence](/docs/using-pulumi/adopting-pulumi#coexistence). The second scenario is called _adoption_ or _import_, and you can learn more about it the sections that follow.
 
+For practical guidance on real-world import challenges, including finding resource IDs, mapping types, iterating to a clean preview, and avoiding resource replacements, see [Migration Best Practices](/docs/iac/guides/migration/best-practices/).
+
 ## Two ways to import a resource
 
 There are two ways to import an existing cloud resource into a Pulumi project:

@@ -17,6 +17,10 @@ aliases:
 
 If your infrastructure was provisioned with Terraform, there are a number of options that will help you adopt Pulumi.
 
+{{% notes type="info" %}}
+Before starting your migration, read the [Best Practices](/docs/iac/guides/migration/best-practices/) guide for guidance on planning your migration, finding resource IDs, achieving clean previews, and avoiding common pitfalls.
+{{% /notes %}}
+
 * **Coexist** with resources provisioned by Terraform by referencing a `.tfstate` file.
 * **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/) or using `pulumi convert --from terraform` along with some `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `pulumi convert --from terraform`.
