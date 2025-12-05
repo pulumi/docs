@@ -17,6 +17,8 @@ aliases:
     - /docs/get-started/kubernetes/
     - /docs/quickstart/kubernetes/
     - /docs/clouds/kubernetes/get-started/
+    - /docs/iac/get-started/kubernetes/deploy-changes/
+    - /docs/iac/get-started/kubernetes/review-project/
 ---
 
 **Infrastructure as code (IaC)** lets you deploy, change, and manage infrastructure safely, consistently,

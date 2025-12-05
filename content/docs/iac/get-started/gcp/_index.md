@@ -13,6 +13,8 @@ menu:
 aliases:
     - /docs/quickstart/gcp/
     - /docs/clouds/gcp/get-started/
+    - /docs/iac/get-started/gcp/deploy-changes/
+    - /docs/iac/get-started/gcp/review-project/
 ---
 
 **Infrastructure as code (IaC)** lets you deploy, change, and manage infrastructure safely, consistently,

@@ -17,6 +17,8 @@ aliases:
     - /docs/get-started/azure/
     - /docs/quickstart/azure/
     - /docs/clouds/azure/get-started/
+    - /docs/iac/get-started/azure/deploy-changes/
+    - /docs/iac/get-started/azure/review-project/
 ---
 
 **Infrastructure as code (IaC)** lets you deploy, change, and manage infrastructure safely, consistently,
