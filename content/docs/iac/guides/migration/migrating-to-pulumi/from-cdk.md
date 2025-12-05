@@ -6,8 +6,9 @@ h1: "Migrating from AWS CDK to Pulumi"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: AWS CDK
+        name: Overview
         parent: iac-guides-migration-from
+        identifier: iac-guides-migration-from-cdk
         weight: 2
 aliases:
     - /docs/iac/adopting-pulumi/migrating-to-pulumi/from-cdk/
