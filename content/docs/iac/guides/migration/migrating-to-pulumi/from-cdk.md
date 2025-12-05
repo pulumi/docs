@@ -16,8 +16,8 @@ aliases:
 
 If your team has already provisioned infrastructure using AWS CDK, and you'd like to adopt Pulumi, you have two primary strategies you can take:
 
-* Coexist with resources provisioned by CDK by referencing stack outputs.
-* Convert your CDK application to Pulumi, either by using the Pulumi CDK adapter or by migrating to a Pulumi program that imports existing resources.
+* Coexist with resources provisioned by CDK by referencing stack outputs
+* Convert your CDK application to Pulumi, either by using the Pulumi CDK adapter or by migrating to a Pulumi program that imports existing resources
 
 ## Choose a CDK migration path
 

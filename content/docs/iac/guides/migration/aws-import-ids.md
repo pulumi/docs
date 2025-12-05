@@ -21,14 +21,14 @@ Every import requires a resource ID. Whether you are running `pulumi import` for
 
 The first place you should start is the ids from the CloudFormation stack. Most of the time the values for the import ids can be extracted from the `PhysicalResourceId` in the CloudFormation stack.
 
-```console
+```bash
 $ aws cloudformation list-stack-resources --stack-name my-stack \
     --query 'StackResourceSummaries[].{Type:ResourceType,LogicalResourceId:LogicalResourceId,Physical:PhysicalResourceId}'
 ```
 
 Optionally, you can use the `cdk2pulumi` tool to lookup information on the import ids. It has an `ids` subcommand that returns information on the expected import id format. For example:
 
-```console
+```bash
 $ pulumi plugin run cdk2pulumi -- ids AWS::Lambda::Permission
 Resource: aws-native:lambda:Permission (CFN: AWS::Lambda::Permission, provider: aws-native)
 Format: {functionName}|{id}
@@ -43,15 +43,16 @@ Parts:
   - id (Output)
 ```
 
-### Finding IDs Example
+### Finding IDs example
 
 Lets walk through an example of finding the import ids for a couple of resources.
 
-**1\. List the stack resources**
+**1. List the stack resources**
 
-```console
+```bash
 $ aws cloudformation list-stack-resources --stack-name test-app-dev \
     --query 'StackResourceSummaries[].{ResourceType:ResourceType,LogicalResourceId:LogicalResourceId,PhysicalResourceId:PhysicalResourceId}'
+[output]
 [
     {
         "ResourceType": "AWS::ApiGatewayV2::Api",
@@ -77,10 +78,11 @@ $ aws cloudformation list-stack-resources --stack-name test-app-dev \
 
 ```
 
-**2\. Find the import id format for each**
+**1. Find the import id format for each**
 
-```console
+```bash
 $ pulumi plugin run cdk2pulumi -- ids AWS::ApiGatewayV2::Api
+[output]
 Resource: aws-native:apigatewayv2:Api (CFN: AWS::ApiGatewayV2::Api, provider: aws-native)
 Format: {apiId}
 Parts:
@@ -94,7 +96,8 @@ Parts:
   - name (Segment)
 Import doc: to import `aws_apigatewayv2_stage` using the API identifier and stage name.//{  to = aws_apigatewayv2_stage.example  id = "aabbccddee/example-stage"}
 
-pulumi plugin run cdk2pulumi -- ids AWS::ApiGatewayV2::Route
+$ pulumi plugin run cdk2pulumi -- ids AWS::ApiGatewayV2::Route
+[output]
 Resource: aws-native:apigatewayv2:Route (CFN: AWS::ApiGatewayV2::Route, provider: aws-native)
 Format: {apiId}|{routeId}
 Parts:
@@ -109,7 +112,7 @@ Parts:
   - integrationId (Output): The integration ID.
 ```
 
-Typically if the import id consists of a single value (e.g. `apiId` in the Api example) then it will be the `PhysicalResourceId` from CloudFormation. Similarly if it is a composite id where one of the values refers to the `id`, or `name` of itself (e.g. `routeId` of the Route resource) then this will also typically be the `PhyscialResourceId`.
+Typically if the import id consists of a single value (e.g. `apiId` in the Api example) then it will be the `PhysicalResourceId` from CloudFormation. Similarly if it is a composite id where one of the values refers to the `id`, or `name` of itself (e.g. `routeId` of the Route resource) then this will also typically be the `PhysicalResourceId`.
 
 We would then update the `id`s in the bulk import file based on the format and values.
 
@@ -144,7 +147,7 @@ We would then update the `id`s in the bulk import file based on the format and v
 
 Sometimes part of the resource ID is not a `PhysicalResourceId`. In these cases it is necessary to perform AWS API calls to look up the necessary information.
 
-```console
+```bash
 $ aws cloudformation list-stack-resources --stack-name test-app-dev \
     --query 'StackResourceSummaries[].{ResourceType:ResourceType,Logical:LogicalResourceId,PhysicalResourceId:PhysicalResourceId}'
 [
@@ -164,7 +167,7 @@ $ aws cloudformation list-stack-resources --stack-name test-app-dev \
 
 If we look up the information on these two resources we will see these are not as straightforward as the previous examples.
 
-```console
+```bash
 $ pulumi plugin run cdk2pulumi -- ids AWS::ApplicationAutoScaling::ScalingPolicy
 Resource: aws-native:applicationautoscaling:ScalingPolicy (CFN: AWS::ApplicationAutoScaling::ScalingPolicy, provider: aws-native)
 Format: {arn}|{scalableDimension}
@@ -188,7 +191,7 @@ Parts:
 
 Starting with the `ScalingPolicy` resource we can see that we need the `arn` which matches the `PhysicalResourceId`, but we also need the `scalableDimension` which is not in the CloudFormation data. Based on the information provided from the `ids` command we might be able to look at that CloudFormation resource and figure out which `scalableDimension` to use, otherwise we can use the `cloudcontrol` CLI commands. The `aws cloudcontrol list-resources` command will list all the resources of that type, which we can filter using `jq` to only include entries that have the part of the identifier that we know.
 
-```console
+```bash
 $ aws cloudcontrol list-resources --type-name AWS::ApplicationAutoScaling::ScalingPolicy --resource-model '{"ServiceNamespace": "dynamodb"}' --profile dev-admin | jq '.ResourceDescriptions[] | select(.Identifier | contains("arn:aws:autoscaling:us-east-2:12345678910:scalingPolicy:c54f759a-aa04-4c0e-afbc-d45a960593a4:resource/dynamodb/table/Example-Dev-StorageDynamoTable201FACD8-1KCPDDFW2WLP6:policyName/ExampleDevStorageDynamoTableReadScalingTargetTrackingDE82FE6D")) | .Identifier'
 
 "arn:aws:autoscaling:us-east-2:12345678910:scalingPolicy:c54f759a-aa04-4c0e-afbc-d45a960593a4:resource/dynamodb/table/Example-Dev-StorageDynamoTable201FACD8-1KCPDDFW2WLP6:policyName/ExampleDevStorageDynamoTableReadScalingTargetTrackingDE82FE6D|dynamodb:table:ReadCapacityUnits"
@@ -198,7 +201,7 @@ $ aws cloudcontrol list-resources --type-name AWS::ApplicationAutoScaling::Scali
 
 The `EIP` resource is an example of a resource which has an id containing a value that cannot be determined by either the CloudFormation data or the template. It requires the `publicIp`, which we have, and the `allocationId` which we do not. We can use the same `aws cloudcontrol list-resources` command to find the correct identifier.
 
-```console
+```bash
 $ aws cloudcontrol list-resources --type-name AWS::EC2::EIP --profile dev-admin | jq '.ResourceDescriptions[] | select(.Identifier | contains("3.150.255.6")) | .Identifier'
 
 "3.150.255.6|eipalloc-0a79aa2cb81750a49"
