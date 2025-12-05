@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: Introduction to Pulumi IaC with AWS in Python
+title: Getting started on AWS with Python
 meta_desc: Learn how Pulumi makes working with AWS easier by using general purpose languages like Python to manage infrastructure resources.
 meta_image:
 
@@ -31,7 +31,7 @@ url_slug: getting-started-with-iac-on-aws-python
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Introduction to Pulumi IaC with AWS in Python
+    title: Getting started on AWS with Python
 
     event_type: workshop # workshop | event
 
@@ -57,18 +57,18 @@ main:
     learn:
         - How to use Python with Pulumi to provision AWS resources, bringing modern software development practices to your infrastructure management.
         - How Pulumi's intuitive programming model can help you deploy cloud architecture on AWS with greater confidence and control.
-        - How Pulumi's ecosystem supports your infrastructure needs across different environments and cloud providers.
+        - How Pulumi's ecosystem supports your infrastructure needs across different environments.
 
     # The webinar presenters
     presenters:
-        - name: Adam Gordon Bell
-          role: Community Engineer, Pulumi
-          photo: /images/team/adam-gordon-bell.jpg
+        - name: Engin Diri
+          role: Senior Solutions Architect, Pulumi
+          photo: /images/team/engin-diri.jpg
 
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: []
+        topics: [Infrastructure as Code]
         languages: ["Python"]
         clouds: ["AWS"]
 
@@ -79,9 +79,9 @@ form:
     salesforce_campaign_id: 701PQ00000TEJoWYAX
 
 event_data:
-  name: "Introduction to Pulumi IaC with AWS in Python"
-  start_date: 2025-03-19T09:00:00-07:00
-  end_date: 2025-03-10T10:00:00-07:00
+  name: "Getting started on AWS with Python"
+  start_date: 2025-01-22T09:00:00-07:00
+  end_date: 2026-01-22T10:00:00-07:00
   url: "https://www.pulumi.com/events/getting-started-with-iac-on-aws-python/"
   description: |
     This workshop offers a hands-on exploration of how modern infrastructure management can be streamlined using familiar programming languages. In this workshop, you'll discover how Pulumi empowers developers and operations teams to define cloud infrastructure using Python - eliminating the need to learn domain-specific languages while unlocking the full power of software engineering practices for infrastructure code.
