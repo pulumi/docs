@@ -267,7 +267,7 @@ Next, make three changes:
 
 1. Move all resources from {{< langfile >}} into the component's constructor
 2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/options/parent/)
-3. Assign the resulting service IP to the `ip` property of the component
+3. Assign the service output to the `ip` property of the component
 
 The resulting {{< compfile >}} file will look like this; you can make each edit one at a time if preferred
 to get a feel for things, or simply paste the contents of this into {{< compfile >}}:
@@ -618,15 +618,15 @@ import com.pulumi.*;
 import com.pulumi.core.*;
 import com.pulumi.resources.*;
 
-import com.pulumi.kubernetes.apps_v1.Deployment;
-import com.pulumi.kubernetes.apps_v1.DeploymentArgs;
-import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
-import com.pulumi.kubernetes.core_v1.*;
-import com.pulumi.kubernetes.core_v1.ServiceArgs;
-import com.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
-import com.pulumi.kubernetes.core_v1.inputs.*;
-import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
-import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.kubernetes.apps.v1.Deployment;
+import com.pulumi.kubernetes.apps.v1.DeploymentArgs;
+import com.pulumi.kubernetes.apps.v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.core.v1.*;
+import com.pulumi.kubernetes.core.v1.ServiceArgs;
+import com.pulumi.kubernetes.core.v1.enums.ServiceSpecType;
+import com.pulumi.kubernetes.core.v1.inputs.*;
+import com.pulumi.kubernetes.meta.v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs;
 import java.util.Map;
 
 class KubernetesNginxServiceArgs extends ResourceArgs {
@@ -671,12 +671,9 @@ class KubernetesNginxService extends ComponentResource {
                 .build())
             .build(), CustomResourceOptions.builder().parent(this).build());
 
-        var name2 = deployment.metadata()
-            .applyValue(m -> m.orElseThrow().name().orElse(""));
-
         var frontend = new Service("nginx", ServiceArgs.builder()
             .metadata(ObjectMetaArgs.builder()
-                .labels(deployment.spec().applyValue(spec -> spec.get().template().metadata().get().labels()))
+                .labels(labels)
                 .build())
             .spec(ServiceSpecArgs.builder()
                 .type(args.isMinikube ? ServiceSpecType.ClusterIP : ServiceSpecType.LoadBalancer)
@@ -689,14 +686,8 @@ class KubernetesNginxService extends ComponentResource {
                 .build())
             .build(), CustomResourceOptions.builder().parent(this).build());
 
-        this.ip = args.isMinikube
-            ? frontend.spec().applyValue(spec -> spec.get().clusterIP())
-            : Output.tuple(frontend.status(), frontend.spec()).applyValue(t -> {
-                var status = t.t1;
-                var spec = t.t2;
-                var ingress = status.get().loadBalancer().get().ingress().get(0);
-                return ingress.ip().orElse(ingress.hostname().orElse(spec.get().clusterIP().get()));
-            });
+        // Export the service cluster IP (available for both ClusterIP and LoadBalancer types)
+        this.ip = frontend.spec().applyValue(spec -> spec.clusterIP().orElse("pending"));
         this.registerOutputs(Map.of("ip", this.ip));
     }
 }

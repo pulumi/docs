@@ -329,15 +329,15 @@ package myproject;
 
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
-import com.pulumi.kubernetes.apps_v1.Deployment;
-import com.pulumi.kubernetes.apps_v1.DeploymentArgs;
-import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
-import com.pulumi.kubernetes.core_v1.*;
-import com.pulumi.kubernetes.core_v1.ServiceArgs;
-import com.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
-import com.pulumi.kubernetes.core_v1.inputs.*;
-import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
-import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.kubernetes.apps.v1.Deployment;
+import com.pulumi.kubernetes.apps.v1.DeploymentArgs;
+import com.pulumi.kubernetes.apps.v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.core.v1.*;
+import com.pulumi.kubernetes.core.v1.ServiceArgs;
+import com.pulumi.kubernetes.core.v1.enums.ServiceSpecType;
+import com.pulumi.kubernetes.core.v1.inputs.*;
+import com.pulumi.kubernetes.meta.v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs;
 import java.util.Map;
 
 public class App {
@@ -370,12 +370,9 @@ public class App {
                     .build())
                 .build());
 
-            var name = deployment.metadata()
-                .applyValue(m -> m.orElseThrow().name().orElse(""));
-
             var frontend = new Service("nginx", ServiceArgs.builder()
                 .metadata(ObjectMetaArgs.builder()
-                    .labels(deployment.spec().applyValue(spec -> spec.get().template().metadata().get().labels()))
+                    .labels(labels)
                     .build())
                 .spec(ServiceSpecArgs.builder()
                     .type(isMinikube ? ServiceSpecType.ClusterIP : ServiceSpecType.LoadBalancer)
@@ -388,15 +385,8 @@ public class App {
                     .build())
                 .build());
 
-            ctx.export("ip", isMinikube
-                ? frontend.spec().applyValue(spec -> spec.get().clusterIP())
-                : Output.tuple(frontend.status(), frontend.spec()).applyValue(t -> {
-                    var status = t.t1;
-                    var spec = t.t2;
-                    var ingress = status.get().loadBalancer().get().ingress().get(0);
-                    return ingress.ip().orElse(ingress.hostname().orElse(spec.get().clusterIP().get()));
-                })
-            );
+            // Export the service cluster IP (available for both ClusterIP and LoadBalancer types)
+            ctx.export("ip", frontend.spec().applyValue(spec -> spec.clusterIP().orElse("pending")));
         });
     }
 }
