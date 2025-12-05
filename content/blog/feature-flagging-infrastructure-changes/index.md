@@ -25,7 +25,7 @@ Check out the code here: [1 Flag Application With LaunchDarkly](https://github.c
 
 When you define flags in your infrastructure as code, you can configure them alongside all the supporting infrastructure your code needs. You can also encourage flag creation as a best practice in Pulumi components or templates.
 
-With Pulumi, you can use [any Terraform provider](https://www.pulumi.com/docs/iac/concepts/resources/providers/#terraform-bridge-providers) to manage your feature flags, whether that's LaunchDarkly, Statsig, Split, Flagsmith, or any other feature flagging tool with Terraform support. This lets you define flags, targeting rules, and the infrastructure they control in a single codebase. The example uses the [LaunchDarkly provider](https://registry.terraform.io/providers/launchdarkly/launchdarkly/latest/docs):
+With Pulumi, you can use [any Terraform provider](https://www.pulumi.com/docs/iac/concepts/resources/providers/#terraform-bridge-providers) to manage your feature flags, whether that's LaunchDarkly, Statsig, Split, Flagsmith, or any other feature flagging tool with Terraform support. This lets you define flags, targeting rules, and the infrastructure they control in a single codebase. The example uses the [LaunchDarkly provider](https://registry.terraform.io/providers/launchdarkly/launchdarkly/latest/docs) to create flags and supporting infrastructure:
 
 ```typescript
 const flag = new launchdarkly.FeatureFlag("example-flag", {
@@ -35,7 +35,7 @@ const flag = new launchdarkly.FeatureFlag("example-flag", {
 }, { provider });
 ```
 
-The Lambda function uses the LaunchDarkly SDK key passed through environment variables to evaluate the flag at runtime, allowing you to toggle behavior without redeploying code.
+The Lambda function evaluates the flag at runtime using the LaunchDarkly SDK key from environment variables, allowing you to toggle behavior without redeploying code.
 
 ## Using flags to control infrastructure
 
@@ -44,7 +44,7 @@ Check out the code here: [2 Flaggable Infrastructure](https://github.com/Elisabe
 {{% /notes %}}
 
 {{% notes type="warning" %}}
-Before deploying this code, you'll want to deploy either 03 (for [ESC Only](https://github.com/Elisabeth-Team/feature-flagging/tree/main/03-esc-with-webhook-for-updating)) or 04 (for [ESC and LaunchDarkly](https://github.com/Elisabeth-Team/feature-flagging/tree/main/04-flag-driven-infrastructure)) so that the environment is created and available.
+Before deploying this code, deploy either 03 (for [ESC Only](https://github.com/Elisabeth-Team/feature-flagging/tree/main/03-esc-with-webhook-for-updating)) or 04 (for [ESC and LaunchDarkly](https://github.com/Elisabeth-Team/feature-flagging/tree/main/04-flag-driven-infrastructure)) so that the environment is created and available.
 {{% /notes %}}
 
 Once you have flags defined, you can use them to control infrastructure provisioning. Apply the same best practices you would for application feature flags: keep flags focused, remove them when they're no longer needed, and document their purpose. In this example, a boolean flag controls whether internet-facing resources are created:
@@ -59,7 +59,7 @@ if (enableInternetAccess) {
 }
 ```
 
-To enable automatic infrastructure updates when flags change (as shown in examples 3 and 4), configure [deployment settings](https://www.pulumi.com/docs/pulumi-cloud/deployments/reference/#the-deploymentsettings-resource) in your stack. This requires:
+To enable automatic infrastructure updates when flags change (as shown in examples 3 and 4), configure [deployment settings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) in your stack. This requires:
 
 1. The Pulumi GitHub App installed on your repository
 1. Webhook configuration to trigger deployments when configuration values change
