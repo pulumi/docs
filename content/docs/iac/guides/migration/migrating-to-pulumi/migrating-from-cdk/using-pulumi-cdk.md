@@ -70,9 +70,10 @@ The Pulumi CDK Adapter requires the installation of the following npm packages:
 * [@pulumi/aws-native](https://www.npmjs.com/package/@pulumi/aws-native)
 * [@pulumi/docker-build](https://www.npmjs.com/package/@pulumi/docker-build)
 * [@pulumi/pulumi](https://www.npmjs.com/package/@pulumi/pulumi)
+* [@pulumi/cdk](https://www.npmjs.com/package/@pulumi/cdk)
 
 ```console
-npm install @pulumi/aws @pulumi/aws-native @pulumi/docker-build @pulumi/pulumi
+npm install @pulumi/aws @pulumi/aws-native @pulumi/docker-build @pulumi/pulumi @pulumi/cdk
 ```
 
 ### Convert the CDK stack and app
