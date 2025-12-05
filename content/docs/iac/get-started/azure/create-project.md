@@ -232,6 +232,7 @@ If you list the contents of your directory, you'll see some key files:
 {{% choosable language "typescript,python,go,csharp,java" %}}
 
 - <span>{{< langfile >}}</span> contains your project's main code that declares an Azure resource group and storage account
+
 - `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project like its name
 
 {{% /choosable %}}

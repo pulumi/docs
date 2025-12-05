@@ -26,13 +26,13 @@ Complete this step-by-step tutorial to deploy an [NGINX](https://www.nginx.com/)
 
 ## Before you begin
 
-First, ensure you have access to a Kubernetes cluster. If not, the next step will show you where to get one. Then choose your language and ensure you've performed any prerequisites:
+You need access to a Kubernetes cluster (local or cloud-based) and kubectl installed and configured. Choose your language and ensure you've performed any prerequisites:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "typescript" %}}
 
-* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* Access to a Kubernetes cluster (local or cloud-based)
 * kubectl installed and configured
 * <a href="https://nodejs.org/en/download" target="_blank">Node.js</a> and <a href="https://www.npmjs.com/package/npm" target="_blank">npm</a> installed locally
 
@@ -40,7 +40,7 @@ First, ensure you have access to a Kubernetes cluster. If not, the next step wil
 
 {{% choosable language "python" %}}
 
-* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* Access to a Kubernetes cluster (local or cloud-based)
 * kubectl installed and configured
 * <a href="https://www.python.org/downloads/" target="_blank">Python</a> and <a href="https://pip.pypa.io/en/stable/installation/" target="_blank">pip</a>, <a href="https://python-poetry.org/docs/" target="_blank">Poetry</a> or <a href="https://docs.astral.sh/uv/getting-started/installation/" target="_blank">uv</a> installed locally
 
@@ -48,7 +48,7 @@ First, ensure you have access to a Kubernetes cluster. If not, the next step wil
 
 {{% choosable language "go" %}}
 
-* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* Access to a Kubernetes cluster (local or cloud-based)
 * kubectl installed and configured
 * <a href="https://go.dev/doc/install" target="_blank">Go</a> installed locally
 
@@ -56,7 +56,7 @@ First, ensure you have access to a Kubernetes cluster. If not, the next step wil
 
 {{% choosable language "csharp" %}}
 
-* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* Access to a Kubernetes cluster (local or cloud-based)
 * kubectl installed and configured
 * <a href="https://dotnet.microsoft.com/en-us/download/dotnet" target="_blank">.NET</a> installed locally
 
@@ -64,7 +64,7 @@ First, ensure you have access to a Kubernetes cluster. If not, the next step wil
 
 {{% choosable language "java" %}}
 
-* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* Access to a Kubernetes cluster (local or cloud-based)
 * kubectl installed and configured
 * <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">Java 11+</a> and <a href="https://maven.apache.org/install.html" target="_blank">Maven 3.6.1+</a> installed locally
 
@@ -72,7 +72,7 @@ First, ensure you have access to a Kubernetes cluster. If not, the next step wil
 
 {{% choosable language "yaml" %}}
 
-* Access to a Kubernetes cluster (we'll help you set this up in the next step if needed)
+* Access to a Kubernetes cluster (local or cloud-based)
 * kubectl installed and configured
 * A text editor
 

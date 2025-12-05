@@ -4,13 +4,13 @@ meta_desc: This page provides a list of tutorials that take a deeper dive into K
            across all major cloud providers.
 title: Next steps
 h1: "Pulumi & Kubernetes: Next steps"
-weight: 10
+weight: 9
 menu:
   iac:
     name: Next steps
     identifier: kubernetes-get-started.next-steps
     parent: kubernetes-get-started
-    weight: 10
+    weight: 9
 
 aliases:
     - /docs/quickstart/kubernetes/next-steps/

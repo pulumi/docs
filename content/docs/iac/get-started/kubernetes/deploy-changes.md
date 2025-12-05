@@ -3,13 +3,13 @@ title_tag: Deploy the Changes | Kubernetes
 meta_desc: This page provides an overview of how deploy changes to a Kubernetes project.
 title: Deploy changes
 h1: "Pulumi & Kubernetes: Deploy changes"
-weight: 8
+weight: 7
 menu:
   iac:
     name: Deploy changes
     identifier: kubernetes-get-started.deploy-changes
     parent: kubernetes-get-started
-    weight: 8
+    weight: 7
 
 aliases:
     - /docs/quickstart/kubernetes/deploy-changes/
@@ -30,7 +30,7 @@ Previewing update (dev):
  +   └─ kubernetes:core/v1:Service  nginx           create
 
 Outputs:
-  + ip  : "10.96.0.0"
+  + ip  : [unknown]
   - name: "nginx-bec13562"
 
 Resources:
