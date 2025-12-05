@@ -257,7 +257,7 @@ Next, make four changes:
 3. Generalize the creation of bucket objects by looping over the list of `files`
 4. Assign the resulting website URL to the `url` property of the component
 
-The resulting {{< compfile >}} file will look like this; feel free to make each edit one at a time if you'd like
+The resulting {{< compfile >}} file will look like this; you can make each edit one at a time if preferred
 to get a feel for things, or simply paste the contents of this into {{< compfile >}}:
 
 {{% choosable language typescript %}}
@@ -552,7 +552,7 @@ public class AwsS3Website : Pulumi.ComponentResource
         });
 
         // Create an S3 Bucket object for each file; note the changes to name/source:
-        foreach (var file in args.Files) {
+        foreach (var file in args.Files ?? []) {
             new BucketObject(file, new()
             {
                 Bucket = bucket.Id,
@@ -753,7 +753,7 @@ using Pulumi;
 using Pulumi.Aws.S3;
 using System.Collections.Generic;
 
-return await Deployment.RunAsync(() =>
+return await Pulumi.Deployment.RunAsync(() =>
 {
     // Create an instance of our component with the same files as before:
     var website = new AwsS3Website("my-website", new AwsS3WebsiteArgs()
