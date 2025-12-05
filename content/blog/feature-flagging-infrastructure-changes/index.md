@@ -133,7 +133,7 @@ values:
       secret: true
 ```
 
-Your infrastructure code remains unchanged—it still imports the ESC environment and reads flag values the same way as in example 3. The difference is that flag values now come from LaunchDarkly, giving you access to advanced features like targeting rules, percentage rollouts, and flag scheduling.
+Your infrastructure code remains unchanged: it still imports the ESC environment and reads flag values the same way as in example 3. The difference is that flag values now come from LaunchDarkly, giving you access to advanced features like targeting rules, percentage rollouts, and flag scheduling.
 
 ### Automatically triggering deployments with webhooks
 
