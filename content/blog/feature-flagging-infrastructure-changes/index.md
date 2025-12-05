@@ -69,7 +69,20 @@ Check out the code here: [3 ESC Auto-updating](https://github.com/Elisabeth-Team
 
 ### Ingesting config from ESC
 
-TODO: fill out this section with info about the implementation and its benefits
+[Pulumi ESC](https://www.pulumi.com/docs/esc/) provides a centralized way to manage configuration and secrets. In this example, flag values are stored directly in an ESC environment rather than in an external feature flagging service. Your infrastructure stack imports this environment and reads flag values at deployment time:
+
+```typescript
+const pulumiProv = new pulumiservice.Environment("flaggingEnv", {
+  name: "config",
+  organization: pulumi.getOrganization(),
+  yaml: new pulumi.asset.StringAsset(`values:
+  pulumiConfig:
+    flags:
+      enableInternetAccess: 'true'`),
+});
+```
+
+This approach keeps all configuration in one place, eliminates dependencies on external services, and works seamlessly with Pulumi's existing stack configuration system. You can update flag values through the Pulumi CLI or Cloud console.
 
 ### Automatically triggering deployments with webhooks
 
@@ -77,7 +90,19 @@ TODO: fill out this section with info about the implementation and its benefits
 There is some risk involved with automatically triggering updates. You can leave out the webhook and deploy manually if that's safer for your team.
 {{% /notes %}}
 
-TODO: fill out this section with info about the implementation and its benefits
+To make infrastructure respond to flag changes automatically, you can create a [Pulumi Cloud webhook](https://www.pulumi.com/docs/pulumi-cloud/webhooks/) that triggers on ESC environment updates. The example sets up an AWS Lambda function behind API Gateway that receives webhook events and uses the Pulumi Deployments API to update dependent stacks:
+
+```typescript
+const webhook = new pulumiservice.Webhook("escEnvironmentWebhook", {
+  organizationName: pulumi.getOrganization(),
+  displayName: "ESC Environment Change Webhook",
+  payloadUrl: api.apiEndpoint.apply((endpoint) => `${endpoint}/webhook`),
+  active: true,
+  filters: ["environment_revision_created"],
+});
+```
+
+When you update a flag value in ESC, the webhook fires, the Lambda identifies which stacks use that environment, and triggers their redeployment. This creates a continuous delivery pipeline for infrastructure configuration changes.
 
 ## Ingesting flag values from LaunchDarkly
 
