@@ -191,7 +191,6 @@ Both approaches enable automated infrastructure updates based on flag changes, b
 | **Advanced Features** | Basic flag storage, versioning, and approvals | Targeting rules, percentage rollouts, experiments, scheduling |
 | **Best For** | Teams wanting simple config management | Teams already using LaunchDarkly or needing sophisticated flag controls |
 | **Key Benefit** | Centralized Pulumi-native configuration | Unified management of application and infrastructure flags |
-| **Example Use Case** | Toggle infrastructure features on/off | Coordinate UI button enablement with AWS SES infrastructure provisioning |
 
 ## Conclusion
 
