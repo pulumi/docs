@@ -5,10 +5,10 @@ title: Using Pulumi with AWS CDK
 h1: "Using Pulumi with AWS CDK"
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
-    - /docs/iac/guides/migration/migrating-to-pulumi/from-cdk/using-pulumi-cdk/
+    - /docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/using-pulumi-cdk/
 ---
 
-This guide shows how to keep using your existing AWS CDK constructs while adopting Pulumi as the underlying engine through the Pulumi CDK adapter. If you instead want to migrate to a pure Pulumi program and import existing CDK-managed resources, see [Migrating existing AWS CDK applications to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/migrating-existing-cdk-app/).
+This guide shows how to keep using your existing AWS CDK constructs while adopting Pulumi as the underlying engine through the Pulumi CDK adapter. If you instead want to migrate to a pure Pulumi program and import existing CDK-managed resources, see [Migrating existing AWS CDK applications to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/migrating-existing-cdk-app/).
 
 ## Referencing Stack Outputs
 

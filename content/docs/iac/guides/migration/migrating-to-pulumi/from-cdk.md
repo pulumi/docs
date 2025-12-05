@@ -20,6 +20,6 @@ If your team has already provisioned infrastructure using AWS CDK, and you'd lik
 
 ## Choose a CDK migration path
 
-To keep using AWS CDK constructs while adopting Pulumi as the engine, see [Using Pulumi with AWS CDK](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/using-pulumi-cdk/).
+To keep using AWS CDK constructs while adopting Pulumi as the engine, see [Using Pulumi with AWS CDK](/docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/using-pulumi-cdk/).
 
-To migrate an existing AWS CDK application to a Pulumi program that manages your current infrastructure, see [Migrating existing AWS CDK applications to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/migrating-existing-cdk-app/).
+To migrate an existing AWS CDK application to a Pulumi program that manages your current infrastructure, see [Migrating existing AWS CDK applications to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/migrating-existing-cdk-app/).

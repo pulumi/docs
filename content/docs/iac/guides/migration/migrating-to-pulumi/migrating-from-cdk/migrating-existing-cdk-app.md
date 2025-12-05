@@ -5,7 +5,7 @@ title: Migrating existing AWS CDK applications
 h1: "Migrating existing AWS CDK applications to Pulumi"
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
-    - /docs/iac/guides/migration/migrating-to-pulumi/from-cdk/migrating-existing-cdk-app/
+    - /docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/migrating-existing-cdk-app/
 ---
 
 This guide walks through migrating an existing AWS CDK application to a Pulumi program that manages the same infrastructure.
