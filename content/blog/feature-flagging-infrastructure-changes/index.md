@@ -1,7 +1,7 @@
 ---
 title: "Feature Flagging for Your Infrastructure"
 date: "2025-12-06"
-meta_desc: Manage LaunchDarkly feature flags with Pulumi, add feature flags to manage your infrastructure, control and automatically update using ESC or LaunchDarkly!
+meta_desc: Apply feature flagging to infrastructure with Pulumi. Control rollouts, reduce deployment risk, and automate updates using ESC or LaunchDarkly.
 meta_image: Feature_Flags.png
 authors: 
   - "elisabeth-lichtie"
@@ -11,9 +11,9 @@ social:
     linkedin:
 ---
 
-One of Pulumi's foundational benefits is that it allows you to manage your [infrastructure as software](https://www.pulumi.com/what-is/what-is-infrastructure-as-software/) with rich programming languages, verbose testing, and CI/CD patterns that you'd use with your application code. This post will cover applying another classic software development technique to your infrastructure: feature flagging. You can use feature flags to control change rollout, reduce the risk of new releases, and speed up the development of your infrastructure, the same way you do with your applications.
+One of Pulumi's foundational benefits is that it allows you to manage your [infrastructure as software](https://www.pulumi.com/what-is/what-is-infrastructure-as-software/) with rich programming languages, robust testing, and CI/CD patterns that you'd use with your application code. This post will cover applying another classic software development technique to your infrastructure: feature flagging. You can use feature flags to control change rollout, reduce the risk of new releases, and speed up the development of your infrastructure, the same way you do with your applications.
 
-The examples in this post range from simply creating a flag and using it in a Lambda Function to fully integrating with LaunchDarkly to create a verbose flagging system for your infrastructure.
+The examples in this post range from simply creating a flag and using it in a Lambda function to fully integrating with LaunchDarkly to build a comprehensive flagging system for your infrastructure.
 
 <!--more-->
 
@@ -23,7 +23,7 @@ The examples in this post range from simply creating a flag and using it in a La
 Check out the code here: [1 Flag Application With LaunchDarkly](https://github.com/Elisabeth-Team/feature-flagging/tree/main/01-flag-application-launchdarkly).
 {{% /notes %}}
 
-Defining your flags in your infrastructure as code allows you to configure the flags and their rules with all the other supporting infrastructure for your code as well as encourage flag creation as a best practice in Pulumi Components or Templates.
+When you define flags in your infrastructure as code, you can configure them alongside all the supporting infrastructure your code needs. You can also encourage flag creation as a best practice in Pulumi components or templates.
 
 With Pulumi, you can use [any Terraform provider](https://www.pulumi.com/docs/iac/concepts/resources/providers/#terraform-bridge-providers) to manage your feature flags, whether that's LaunchDarkly, Statsig, Split, Flagsmith, or any other feature flagging tool with Terraform support. This lets you define flags, targeting rules, and the infrastructure they control in a single codebase. The example uses the [LaunchDarkly provider](https://registry.terraform.io/providers/launchdarkly/launchdarkly/latest/docs):
 
@@ -35,9 +35,9 @@ const flag = new launchdarkly.FeatureFlag("example-flag", {
 }, { provider });
 ```
 
-The Lambda function receives the SDK key via environment variables and evaluates the flag at runtime, allowing you to toggle behavior without redeploying code.
+The Lambda function uses the LaunchDarkly SDK key passed through environment variables to evaluate the flag at runtime, allowing you to toggle behavior without redeploying code.
 
-## Creating infrastructure as code with flagging
+## Using flags to control infrastructure
 
 {{% notes type="info" %}}
 Check out the code here: [2 Flaggable Infrastructure](https://github.com/Elisabeth-Team/feature-flagging/tree/main/02-flaggable-infra).
@@ -59,7 +59,12 @@ if (enableInternetAccess) {
 }
 ```
 
-If you want flag or configuration changes to automatically trigger infrastructure updates (as shown in examples 3 and 4), you'll need to configure [deployment settings](https://www.pulumi.com/docs/pulumi-cloud/deployments/reference/#the-deploymentsettings-resource) in your stack. This requires the Pulumi GitHub App installed on your repository and allows webhooks to trigger automated deployments when configuration values change.
+To enable automatic infrastructure updates when flags change (as shown in examples 3 and 4), configure [deployment settings](https://www.pulumi.com/docs/pulumi-cloud/deployments/reference/#the-deploymentsettings-resource) in your stack. This requires:
+
+1. The Pulumi GitHub App installed on your repository
+1. Webhook configuration to trigger deployments when configuration values change
+
+With these in place, changing a flag value automatically triggers a deployment.
 
 ## Configuring values with ESC
 
@@ -69,7 +74,7 @@ Check out the code here: [3 ESC Auto-updating](https://github.com/Elisabeth-Team
 
 ### Ingesting config from ESC
 
-[Pulumi ESC](https://www.pulumi.com/docs/esc/) provides a centralized way to manage configuration and secrets. In this example, flag values are stored directly in an ESC environment rather than in an external feature flagging service. Your infrastructure stack imports this environment and reads flag values at deployment time:
+[Pulumi ESC](https://www.pulumi.com/docs/esc/) provides a centralized way to manage configuration and secrets. For teams that don't need the full feature set of a dedicated flagging service, you can store flag values directly in an ESC environment. Your infrastructure stack imports this environment and reads flag values at deployment time:
 
 ```typescript
 const pulumiProv = new pulumiservice.Environment("flaggingEnv", {
@@ -90,7 +95,7 @@ This approach keeps all configuration in one place, eliminates dependencies on e
 There is some risk involved with automatically triggering updates. You can leave out the webhook and deploy manually if that's safer for your team.
 {{% /notes %}}
 
-To make infrastructure respond to flag changes automatically, you can create a [Pulumi Cloud webhook](https://www.pulumi.com/docs/pulumi-cloud/webhooks/) that triggers on ESC environment updates. The example sets up an AWS Lambda function behind API Gateway that receives webhook events and uses the Pulumi Deployments API to update dependent stacks:
+Set up a [Pulumi Cloud webhook](https://www.pulumi.com/docs/pulumi-cloud/webhooks/) to automatically deploy infrastructure when ESC environment values change. The example creates an AWS Lambda function behind API Gateway that receives webhook events and triggers deployments via the Pulumi Deployments API:
 
 ```typescript
 const webhook = new pulumiservice.Webhook("escEnvironmentWebhook", {
@@ -112,7 +117,9 @@ Check out the code here: [4 LaunchDarkly Auto-updating](https://github.com/Elisa
 
 ### Ingesting flags from LaunchDarkly using ESC Connect
 
-For teams already using LaunchDarkly for application feature flags or that need an enterprise-level tool, you can integrate LaunchDarkly flags with your infrastructure using [ESC Connect](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/external/). This approach lets you manage application and infrastructure flags together. The ESC environment uses `fn::open::external` to query a Lambda function that fetches current flag values from LaunchDarkly:
+If your team already uses LaunchDarkly for application feature flags, you can integrate those same flags with your infrastructure using [ESC Connect](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/external/). This is also a good option if you need enterprise-level features like advanced targeting rules or percentage rollouts.
+
+This approach unifies application and infrastructure flag management. The ESC environment uses `fn::open::external` to query a Lambda function that fetches current flag values from LaunchDarkly:
 
 ```yaml
 values:
@@ -134,7 +141,7 @@ Your infrastructure code remains unchanged—it still imports the ESC environmen
 There is some risk involved with automatically triggering updates. You can leave out the webhook and deploy manually if that's safer for your team.
 {{% /notes %}}
 
-When using an external feature flagging service, you can leverage its webhook capabilities to trigger infrastructure updates. The flow works like this:
+LaunchDarkly's webhook system can trigger infrastructure updates whenever a flag changes. Here's how the automation flow works:
 
 ```mermaid
 graph LR
@@ -188,4 +195,6 @@ Both approaches enable automated infrastructure updates based on flag changes, b
 
 ## Conclusion
 
-Feature flagging isn't just for application code—it's a powerful technique for managing infrastructure changes. By treating your infrastructure as software, you can use flags to control rollouts, reduce deployment risk, and coordinate changes across your entire system. Pulumi makes this possible through its support for any Terraform provider, seamless ESC integration, and automated deployment capabilities. Whether you choose the simplicity of ESC-only flag management or integrate with an enterprise feature flagging service like LaunchDarkly, you can build infrastructure that responds dynamically to configuration changes while maintaining the same development practices you use for application code.
+Infrastructure deserves the same development practices as application code. Feature flags let you control rollouts, reduce deployment risk, and coordinate changes across your entire system, not just in your applications, but in the infrastructure that supports them.
+
+Pulumi makes infrastructure feature flagging practical. Whether you choose the simplicity of ESC-only flag management or integrate with an enterprise service like LaunchDarkly, you can build infrastructure that responds dynamically to configuration changes while maintaining the same development practices you use for application code.
