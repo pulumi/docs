@@ -5,7 +5,12 @@ title: AWS import IDs and special cases
 h1: "Finding AWS import IDs and special cases"
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
-    - /docs/iac/guides/migration/migrating-to-pulumi/aws-import-ids-and-special-cases/
+    - /docs/iac/guides/migration/migrating-to-pulumi/aws-import-ids/
+menu:
+    iac:
+        name: Finding AWS import IDs
+        parent: iac-guides-migration
+        weight: 3
 ---
 
 This guide explains how to discover the correct AWS resource IDs to use when importing existing CloudFormation- or CDK-managed resources into Pulumi, and calls out CloudFormation features that require special handling.

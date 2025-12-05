@@ -119,7 +119,7 @@ This runs your program against your real stack backend and uses the `import.json
 
 ### Manual import
 
-You can also import resources manually using the `pulumi import` CLI, either one resource at a time or from an `import.json` file. For help discovering the correct AWS IDs and understanding CloudFormation-specific edge cases, see [Finding AWS import IDs and special cases](/docs/iac/guides/migration/migrating-to-pulumi/aws-import-ids-and-special-cases/).
+You can also import resources manually using the `pulumi import` CLI, either one resource at a time or from an `import.json` file. For help discovering the correct AWS IDs and understanding CloudFormation-specific edge cases, see [Finding AWS import IDs and special cases](/docs/iac/guides/migration/aws-import-ids/).
 
 #### One-at-a-time vs bulk import
 
