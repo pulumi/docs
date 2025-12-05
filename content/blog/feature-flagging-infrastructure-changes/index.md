@@ -47,7 +47,19 @@ Check out the code here: [2 Flaggable Infrastructure](https://github.com/Elisabe
 Before deploying this code, you'll want to deploy either 03 (for [ESC Only](https://github.com/Elisabeth-Team/feature-flagging/tree/main/03-esc-with-webhook-for-updating)) or 04 (for [ESC and LaunchDarkly](https://github.com/Elisabeth-Team/feature-flagging/tree/main/04-flag-driven-infrastructure)) so that the environment is created and available.
 {{% /notes %}}
 
-TODO: talk about creating flaggable infrastructure, emphasize that you should generally follow flagging best practices, and that if you choose to automatically trigger updates on a flag or configuration change, you'll need to set deployment settings
+Once you have flags defined, you can use them to control infrastructure provisioning. Apply the same best practices you would for application feature flags: keep flags focused, remove them when they're no longer needed, and document their purpose. In this example, a boolean flag controls whether internet-facing resources are created:
+
+```typescript
+const config = new pulumi.Config();
+const flags: Record<string, any> | undefined = config.getObject("flags");
+const enableInternetAccess = flags ? flags["enableInternetAccess"] : false;
+
+if (enableInternetAccess) {
+  // Create Internet Gateway, public subnet, route table, and routes
+}
+```
+
+If you want flag or configuration changes to automatically trigger infrastructure updates (as shown in examples 3 and 4), you'll need to configure [deployment settings](https://www.pulumi.com/docs/pulumi-cloud/deployments/reference/#the-deploymentsettings-resource) in your stack. This requires the Pulumi GitHub App installed on your repository and allows webhooks to trigger automated deployments when configuration values change.
 
 ## Configuring values with ESC
 
