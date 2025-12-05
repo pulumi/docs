@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: Getting started on AWS with Python
-meta_desc: Learn how Pulumi makes working with AWS easier by using general purpose languages like Python to manage infrastructure resources.
+meta_desc: Learn how Pulumi makes working with AWS easier by using general-purpose languages like Python to manage infrastructure resources.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -39,7 +39,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2026-01-22T09:00:00.000-07:00
+    sortable_date: 2026-01-22T09:00:00.000-08:00
 
     # Duration of the webinar.
     duration: 60 minutes
@@ -80,8 +80,8 @@ form:
 
 event_data:
   name: "Getting started on AWS with Python"
-  start_date: 2026-01-22T09:00:00-07:00
-  end_date: 2026-01-22T10:00:00-07:00
+  start_date: 2026-01-22T09:00:00-08:00
+  end_date: 2026-01-22T10:00:00-08:00
   url: "https://www.pulumi.com/events/getting-started-with-iac-on-aws-python/"
   description: |
     This workshop offers a hands-on exploration of how modern infrastructure management can be streamlined using familiar programming languages. In this workshop, you'll discover how Pulumi empowers developers and operations teams to define cloud infrastructure using Python - eliminating the need to learn domain-specific languages while unlocking the full power of software engineering practices for infrastructure code.
