@@ -80,7 +80,7 @@ form:
 
 event_data:
   name: "Getting started on AWS with Python"
-  start_date: 2025-01-22T09:00:00-07:00
+  start_date: 2026-01-22T09:00:00-07:00
   end_date: 2026-01-22T10:00:00-07:00
   url: "https://www.pulumi.com/events/getting-started-with-iac-on-aws-python/"
   description: |
