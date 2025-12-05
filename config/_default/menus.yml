@@ -348,22 +348,26 @@ reference:
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-cis
     weight: 1
+  - name: CIS Kubernetes
+    parent: reference-pre-built-policy-packs
+    identifier: reference-pre-built-policy-packs-cis-kubernetes
+    weight: 2
   - name: HITRUST
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-hitrust
-    weight: 2
+    weight: 3
   - name: NIST
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-nist
-    weight: 3
+    weight: 4
   - name: PCI DSS
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-pci-dss
-    weight: 4
+    weight: 5
   - name: Pulumi Best Practices
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-pulumi-best-practices
-    weight: 5
+    weight: 6
 
 # -------------------------------------
 # Insights Policy Menu Section Headers
