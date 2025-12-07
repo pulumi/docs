@@ -8,6 +8,14 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "KCD Suisse Romande 2025"
+  title: "Building AI Platforms Without Losing Your Engineering Principles"
+  url: "https://community.cncf.io/events/details/cncf-kcd-suisse-romande-presents-kcd-suisse-romande/"
+  date: 2025-12-05T10:30:00.000+01:00
+- event: "KCD Suisse Romande 2025"
+  title: "Panel: Kubernetes for AI or AI for Kubernetes"
+  url: "https://community.cncf.io/events/details/cncf-kcd-suisse-romande-presents-kcd-suisse-romande/"
+  date: 2025-12-05T11:55:00.000+01:00
 - event: "CNCF Cloud Native Sophia-Antipolis"
   title: "Move Promotions Out of CI: Implementing GitOps Promotion Tools"
   url: "https://community.cncf.io/events/details/cncf-cloud-native-sophia-antipolis-presents-move-promotions-out-of-ci-implementing-gitops-promotion-tools/"
