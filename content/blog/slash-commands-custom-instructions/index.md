@@ -13,8 +13,10 @@ authors:
     - neo-team
 
 tags:
-    - neo
-    - agentic-ai
+    - ai
+    - ai-agents
+    - platform-engineering
+    - pulumi-neo
 
 schema_type: auto
 
