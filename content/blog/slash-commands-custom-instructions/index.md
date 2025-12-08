@@ -48,6 +48,8 @@ Over time, your team figures out the right way to ask Neo for certain tasks. May
 
 Slash Commands turn these prompts into shortcuts anyone can use. When you type `/` in Neo, you'll see available commands, select one, and Neo receives the full prompt behind it.
 
+![Slash Commands in action](slash-commands.gif)
+
 Neo ships with built-in commands for common tasks:
 
 | Command | What it does |
@@ -61,4 +63,4 @@ You can also create your own. In Pulumi Cloud, you define the prompt and specify
 
 ## Get Started
 
-Custom Instructions and Slash Commands are available now. You can configure Custom Instructions in your organization settings. Slash Commands come with several built-in options, and you can create custom ones tailored to your workflow.
+[Custom Instructions](/docs/ai/settings/#custom-instructions) and [Slash Commands](/docs/ai/settings/#slash-commands) are available now. You can configure Custom Instructions in Neo Settings. Slash Commands come with several built-in options, and you can create custom ones tailored to your workflow.
