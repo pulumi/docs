@@ -21,8 +21,8 @@ stats:
           logo: /logos/customers/supabase-wordmark.svg
           link: /case-studies/supabase/
       snowflake:
-          number: "100,000+"
-          description: daily deployments managing massive-scale data infrastructure
+          number: "< 1 Day"
+          description: reduced deployment cycles from 1.5 weeks to under 24 hours.
           logo: /logos/pkg/snowflake.svg
           link: /case-studies/snowflake/
       bmw:
