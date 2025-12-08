@@ -22,6 +22,10 @@ Pulumi offers a flexible, code-first alternative to Azure ARM templates using C#
 
 If your team has already provisioned Azure infrastructure using ARM (Azure Resource Manager) templates and is looking for a more productive approach, Pulumi provides three primary paths to move forward:
 
+{{% notes type="info" %}}
+Before starting your migration, read the [Best Practices](/docs/iac/guides/migration/best-practices/) guide for guidance on planning your migration, finding resource IDs, achieving clean previews, and avoiding common pitfalls.
+{{% /notes %}}
+
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by ARM by referencing deployment outputs.
 * [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing Azure resources into Pulumi in the usual way.
 * [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.

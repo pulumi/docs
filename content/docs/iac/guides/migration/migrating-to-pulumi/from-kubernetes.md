@@ -21,6 +21,10 @@ Pulumi makes it easy to author your Kubernetes configuration in your choice of l
 
 Pulumi also enables you to render the Kubernetes objects in your program into YAML which eases adoption in the opposite direction: you can use Pulumi to author your configuration, getting the benefits of general-purpose and familiar programming languages, while still being able to deploy the resulting YAML with existing toolchains like `kubectl` or your CI/CD vendor's Kubernetes support.
 
+{{% notes type="info" %}}
+Before starting your migration, read the [Best Practices](/docs/iac/guides/migration/best-practices/) guide for guidance on planning your migration, finding resource IDs, achieving clean previews, and avoiding common pitfalls.
+{{% /notes %}}
+
 > To learn more about Pulumi's Kubernetes support, see [the Kubernetes Overview](/registry/packages/kubernetes/) or jump straight in with [the Getting Started Guide](/docs/iac/get-started/kubernetes/).
 
 ## Deploying Kubernetes YAML
