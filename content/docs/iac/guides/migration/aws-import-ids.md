@@ -19,7 +19,7 @@ This guide explains how to discover the correct AWS resource IDs to use when imp
 
 ## About Pulumi import
 
-The [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) command allows you to bring a resource created outside of Pulumi under Pulumi management. This includes resources created by clicking in the AWS Console, or by other infrastructure as code tools such as Terraform, CloudFormation, and AWS CDK. Each resource to be imported requires a resource ID, along with a name for the resource, and its type. 
+The [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) command allows you to bring a resource created outside of Pulumi under Pulumi management. This includes resources created by clicking in the AWS Console, or by other infrastructure as code tools such as Terraform, CloudFormation, and AWS CDK. Each resource to be imported requires a resource ID, along with a name for the resource, and its type.
 
 ## Finding resource ids
 
@@ -53,70 +53,70 @@ Parts:
 
 Lets walk through an example of finding the import ids for a couple of resources.
 
-**1. List the stack resources**
+1. List the stack resources:
 
-```bash
-$ aws cloudformation list-stack-resources --stack-name test-app-dev \
-    --query 'StackResourceSummaries[].{ResourceType:ResourceType,LogicalResourceId:LogicalResourceId,PhysicalResourceId:PhysicalResourceId}'
-[output]
-[
-    {
-        "ResourceType": "AWS::ApiGatewayV2::Api",
-        "LogicalResourceId": "Api48B32C1D",
-        "PhysicalResourceId": "uzelpdmlxi"
-    },
-    {
-        "ResourceType": "AWS::ApiGatewayV2::Stage",
-        "LogicalResourceId": "ApiDefaultStageB9B75A7A",
-        "PhysicalResourceId": "$default"
-    },
-    {
-        "ResourceType": "AWS::ApiGatewayV2::Route",
-        "LogicalResourceId": "ApiGEThelloF5F722C0",
-        "PhysicalResourceId": "2kaoey7"
-    },
-    {
-        "ResourceType": "AWS::ApiGatewayV2::Integration",
-        "LogicalResourceId": "ApiGEThellointegration392349BE",
-        "PhysicalResourceId": "qwo3s38"
-    }
-]
+    ```bash
+    $ aws cloudformation list-stack-resources --stack-name test-app-dev \
+        --query 'StackResourceSummaries[].{ResourceType:ResourceType,LogicalResourceId:LogicalResourceId,PhysicalResourceId:PhysicalResourceId}'
+    [output]
+    [
+        {
+            "ResourceType": "AWS::ApiGatewayV2::Api",
+            "LogicalResourceId": "Api48B32C1D",
+            "PhysicalResourceId": "uzelpdmlxi"
+        },
+        {
+            "ResourceType": "AWS::ApiGatewayV2::Stage",
+            "LogicalResourceId": "ApiDefaultStageB9B75A7A",
+            "PhysicalResourceId": "$default"
+        },
+        {
+            "ResourceType": "AWS::ApiGatewayV2::Route",
+            "LogicalResourceId": "ApiGEThelloF5F722C0",
+            "PhysicalResourceId": "2kaoey7"
+        },
+        {
+            "ResourceType": "AWS::ApiGatewayV2::Integration",
+            "LogicalResourceId": "ApiGEThellointegration392349BE",
+            "PhysicalResourceId": "qwo3s38"
+        }
+    ]
 
-```
+    ```
 
-**1. Find the import id format for each**
+1. Find the import id format for each:
 
-```bash
-$ pulumi plugin run cdk2pulumi -- ids AWS::ApiGatewayV2::Api
-[output]
-Resource: aws-native:apigatewayv2:Api (CFN: AWS::ApiGatewayV2::Api, provider: aws-native)
-Format: {apiId}
-Parts:
-  - apiId (Output): The API identifier.
+    ```bash
+    $ pulumi plugin run cdk2pulumi -- ids AWS::ApiGatewayV2::Api
+    [output]
+    Resource: aws-native:apigatewayv2:Api (CFN: AWS::ApiGatewayV2::Api, provider: aws-native)
+    Format: {apiId}
+    Parts:
+      - apiId (Output): The API identifier.
 
-pulumi plugin run cdk2pulumi -- ids AWS::ApiGatewayV2::Stage
-Resource: aws:apigatewayv2/stage:Stage (CFN: AWS::ApiGatewayV2::Stage, provider: aws)
-Format: {apiId}/{name}
-Parts:
-  - apiId (Segment)
-  - name (Segment)
-Import doc: to import `aws_apigatewayv2_stage` using the API identifier and stage name.//{  to = aws_apigatewayv2_stage.example  id = "aabbccddee/example-stage"}
+    pulumi plugin run cdk2pulumi -- ids AWS::ApiGatewayV2::Stage
+    Resource: aws:apigatewayv2/stage:Stage (CFN: AWS::ApiGatewayV2::Stage, provider: aws)
+    Format: {apiId}/{name}
+    Parts:
+      - apiId (Segment)
+      - name (Segment)
+    Import doc: to import `aws_apigatewayv2_stage` using the API identifier and stage name.//{  to = aws_apigatewayv2_stage.example  id = "aabbccddee/example-stage"}
 
-$ pulumi plugin run cdk2pulumi -- ids AWS::ApiGatewayV2::Route
-[output]
-Resource: aws-native:apigatewayv2:Route (CFN: AWS::ApiGatewayV2::Route, provider: aws-native)
-Format: {apiId}|{routeId}
-Parts:
-  - apiId (Input): The API identifier.
-  - routeId (Output): The route ID.
+    $ pulumi plugin run cdk2pulumi -- ids AWS::ApiGatewayV2::Route
+    [output]
+    Resource: aws-native:apigatewayv2:Route (CFN: AWS::ApiGatewayV2::Route, provider: aws-native)
+    Format: {apiId}|{routeId}
+    Parts:
+      - apiId (Input): The API identifier.
+      - routeId (Output): The route ID.
 
-pulumi plugin run cdk2pulumi -- ids AWS::ApiGatewayV2::Integration
-Resource: aws-native:apigatewayv2:Integration (CFN: AWS::ApiGatewayV2::Integration, provider: aws-native)
-Format: {apiId}|{integrationId}
-Parts:
-  - apiId (Input): The API identifier.
-  - integrationId (Output): The integration ID.
-```
+    pulumi plugin run cdk2pulumi -- ids AWS::ApiGatewayV2::Integration
+    Resource: aws-native:apigatewayv2:Integration (CFN: AWS::ApiGatewayV2::Integration, provider: aws-native)
+    Format: {apiId}|{integrationId}
+    Parts:
+      - apiId (Input): The API identifier.
+      - integrationId (Output): The integration ID.
+    ```
 
 Typically if the import id consists of a single value (e.g. `apiId` in the Api example) then it will be the `PhysicalResourceId` from CloudFormation. Similarly if it is a composite id where one of the values refers to the `id`, or `name` of itself (e.g. `routeId` of the Route resource) then this will also typically be the `PhysicalResourceId`.
 
