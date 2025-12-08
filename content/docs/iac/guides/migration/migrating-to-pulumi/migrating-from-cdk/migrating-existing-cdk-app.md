@@ -15,7 +15,7 @@ menu:
 
 This guide walks through migrating an existing AWS CDK application to a Pulumi program that manages the same infrastructure.
 
-#### 2. Planning your Migration
+#### Planning your Migration
 
 Before running any tools, it is important to plan your migration strategy. Migrating involves two distinct parts: converting your **Code** (logic) and migrating your **State** (live resources).
 
