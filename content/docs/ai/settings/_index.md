@@ -22,6 +22,8 @@ Neo is enabled by default. To control Neo access for your organization:
 1. Select the "General" tab
 1. Toggle "Enable Neo for organization" on or off
 
+![Toggle Neo access](toggle-neo-access.png)
+
 {{% notes type="info" %}}
 If Pulumi Copilot was previously disabled, it will need to be enabled to use Neo.
 {{% /notes %}}
@@ -59,6 +61,8 @@ When you ask Neo to create resources, it automatically applies your organization
 1. Enter your organization's standards and preferences
 1. Save changes
 
+![Custom Instructions configuration](custom-instructions.png)
+
 ### Custom Instructions Best Practices
 
 - Keep instructions concise and focused on standards that apply across all tasks
@@ -92,6 +96,8 @@ You can create organization-specific commands to capture your team's proven prom
 1. Define the prompt
 1. Save the command
 
+![Slash Commands configuration](slash-commands.png)
+
 Once saved, the command is immediately available to all team members.
 
 ### Slash Command Best Practices
@@ -118,6 +124,8 @@ Organization administrators can set the default task mode. The available modes d
 1. Locate the "Task mode" section
 1. Select the default mode from the dropdown
 1. Save changes
+
+![Task mode configuration](task-mode.png)
 
 ### Task Mode Best Practices
 
