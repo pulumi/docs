@@ -1,5 +1,5 @@
 ---
-title: "Bring Your Organization to Neo: Custom Instructions and Slash Commands"
+title: "Encode What You Know With Neo: Custom Instructions and Slash Commands"
 
 date: 2025-12-10
 
