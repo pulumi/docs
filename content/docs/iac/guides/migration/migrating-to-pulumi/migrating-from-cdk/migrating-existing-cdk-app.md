@@ -17,7 +17,7 @@ This guide walks through migrating an existing AWS CDK application to a Pulumi p
 
 ## The golden path: incremental migration
 
-The safest migration approach is **incremental**: migrate one logical group of resources at a time, verify each group before proceeding, and maintain the ability to roll back.
+Pulumi recommends an incremental path in migrating CDK resources to Pulumi, importing one logical group of resources at a time, and verifying each group of resources before proceeding to the next while maintaining the ability to roll back.
 
 ### Recommended workflow
 
