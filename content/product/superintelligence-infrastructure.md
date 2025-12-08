@@ -22,7 +22,7 @@ stats:
           link: /case-studies/supabase/
       snowflake:
           number: "< 1 Day"
-          description: reduced deployment cycles from 1.5 weeks to under 24 hours.
+          description: deployment cycles reduced from 1.5 weeks to under 24 hours
           logo: /logos/pkg/snowflake.svg
           link: /case-studies/snowflake/
       bmw:
