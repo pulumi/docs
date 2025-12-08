@@ -51,7 +51,7 @@ The migration tools can import resources and generate code, but they don’t org
 
 CDK applications typically organize resources into multiple Stacks per environment to manage blast radius and resource limits. Pulumi Stacks are more powerful and scalable, often allowing you to consolidate multiple CDK stacks into a single Pulumi Stack.
 
-For example, a `StatefulStack` (RDS) and `AppStack` (Lambda) in CDK can be combined into one Pulumi Stack with `protect: true` enabled on the critical resources. This simplifies dependency management and deployment.
+For example, a `StatefulStack` (RDS) and `AppStack` (Lambda) in CDK can be combined into one Pulumi Stack with `[protect: true](/docs/iac/concepts/resources/options/protect/)` enabled on the critical resources. This simplifies dependency management and deployment.
 
 Consider a common scenario of creating your stateful resources (e.g. an RDS database) in one stack and your non-stateful resources (e.g. a Lambda Function) in a separate Stack.
 
