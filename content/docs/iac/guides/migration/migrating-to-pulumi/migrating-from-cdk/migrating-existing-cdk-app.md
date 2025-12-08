@@ -39,7 +39,7 @@ How do you want to handle your live resources?
 Regardless of your strategy, follow these core principles:
 
 1. **Migrate stacks as units**: CDK resources deploy via CloudFormation stacks. Migrate all resources in a stack together; partial stack moves stay risky if you still run CloudFormation updates because they operate on the whole stack.
-1. **Move environment by environment**: Import into dev first, iterate until the preview is clean, then repeat for staging and prod. This surfaces parameterization gaps before you touch production.
+1. **Move environment by environment**: Import into dev first, iterate until the `pulumi preview` is clean, then repeat for staging and prod. This surfaces parameterization gaps before you touch production.
 1. **Verify after every import**: Run `pulumi preview` after each import and confirm zero changes before continuing. Any unexpected diff is a stop signal.
 1. **Retire CloudFormation last**: Only delete CloudFormation stacks after Pulumi manages them with clean previews. Keeping the old state intact gives you a rollback path.
 
