@@ -19,7 +19,9 @@ Thanks to superintelligence, we're in the biggest, fastest infrastructure scalin
 
 This reveals an important insight:
 
-***The infrastructure required to build superintelligence demands superintelligence for infrastructure.***
+<div style="text-align: center; font-size: 1.5em; font-style: italic; margin: 2em 0;">
+The infrastructure required to build superintelligence demands superintelligence for infrastructure.
+</div>
 
 <!--more-->
 
