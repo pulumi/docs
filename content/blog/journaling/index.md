@@ -87,9 +87,7 @@ Pulumi keeps track of all resources in a stack in a snapshot. This snapshot is s
 
 To make sure there are never any resources that are not tracked, even if a deployment is aborted unexpectedly (for example due to network issues, power outages, or bugs), Pulumi creates a new snapshot at the beginning and at the end of each operation.
 
-At the beginning of the operation, Pulumi adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but Pulumi couldn't record the end of it), in the next operation Pulumi asks the user to check the actual state of the resource, and then either removes it from the snapshot, or imports it depending on the users input.
-
-This is because it is possible that the resource has been set up correctly, or it is possible that the resource creation failed. If Pulumi aborted midway through the operation it's impossible to know which it is.
+At the beginning of the operation, Pulumi adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but Pulumi couldn't record the end of it), in the next operation Pulumi asks the user to check the actual state of the resource, and then either removes it from the snapshot, or imports it depending on the users input. This is because it is possible that the resource has been set up correctly, or it is possible that the resource creation failed. If Pulumi aborted midway through the operation it's impossible to know which it is.
 
 Once an operation finishes, the pending operation is removed, as we now know the final state of the resource, and the final state of the resource is updated in the snapshot.
 
