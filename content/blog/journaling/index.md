@@ -85,7 +85,11 @@ The second example is setting up an instance of the Pulumi app and API. Here we'
 | With journaling    | 9m45s  | 5.9MB      |
 | Skip checkpoints   | 8m39s  | 2MB        |
 
-Note that this feature is still behind a feature flag, but we are ready for testers. To get enrolled in the feature flag, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us). Once that's done, all you need to do is to set the `PULUMI_ENABLE_JOURNALING` environment variable to `true`, and your deployments will start finishing faster.
+![Time taken](time.png)
+
+![Data sent](data.png)
+
+*Note that this feature is still behind a feature flag, but we are ready for testers. To get enrolled in the feature flag, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us). Once that's done, all you need to do is to set the `PULUMI_ENABLE_JOURNALING` environment variable to `true`, and your deployments will start finishing faster.*
 
 If you are interested in the more technical details read on!
 
