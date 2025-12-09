@@ -100,6 +100,10 @@ You can create organization-specific commands to capture your team's proven prom
 
 Once saved, the command is immediately available to all team members.
 
+### Viewing Slash Command Instructions
+
+When you have selected a slash command in a new or existing Neo task, click on the highlighted command name to view the instructions this command expands to.
+
 ### Slash Command Best Practices
 
 - Create commands for frequently-used prompts that have proven effective
