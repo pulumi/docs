@@ -11,29 +11,50 @@ draft: false
 # linter test. Max length is 160 characters.
 meta_desc: Pulumi deployments get up to 10x faster with journaling, a new snapshotting approach that speeds up large stacks while keeping full data integrity.
 
-# The meta_image appears in social-media previews and on the blog home page. A
-# placeholder image representing the recommended format, dimensions and aspect
-# ratio has been provided for you.
 meta_image: meta.png
 
-# At least one author is required. The values in this list correspond with the
-# `id` properties of the team member files at /data/team/team. Create a file for
-# yourself if you don't already have one.
 authors:
     - thomas-gummerer
 
-# At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - journaling
     - performance
     - data-integrity
 
 social:
-    twitter: Speeding up your Pulumi deployments by 10x
-    linkedin: Want faster Pulumi deployments on big stacks? Read on how we improved the performance of Pulumi deployments with lots of resources by up to 10x, and how you can get access to it today.
+    twitter: |
+Pulumi deployments just got up to 10x faster:
 
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
-# for details, and please remove these comments before submitting for review.
+- Journaling: Send only changes, not full snapshots
+- Data integrity: No compromise on reliability
+- Network traffic cut by 85%+ on large stacks
+
+Try it: [link]
+    linkedin: |
+# Pulumi Deployments Get Up to 10x Faster
+
+Large Pulumi stacks just got a major performance boost. Here's what changed.
+
+# The Problem
+Pulumi saves snapshots at every deployment step to maintain data integrity. For large stacks, this creates a bottleneck: uploading the full snapshot serially slows everything down.
+
+# The Solution: Journaling
+Instead of sending the whole snapshot, journaling sends only individual changes. These journal entries can go in parallel, and Pulumi Cloud reconstructs the full snapshot on the backend.
+
+# The Results
+In benchmarks on a 3,000+ resource stack:
+
+    Time dropped from 58 minutes to 3 minutes
+    Network traffic cut from 16.5MB to 2.3MB
+
+# Why This Matters
+You get the speed without sacrificing data integrity. Unlike SKIP_CHECKPOINTS, journaling still tracks all in-flight operations. If something fails mid-deployment, Pulumi still knows exactly what happened.
+
+# Get Started
+This feature is in opt-in testing. Reach out on Pulumi Community Slack or through Support to get your org enrolled. Then set PULUMI_ENABLE_JOURNALING=true.
+
+Read more: [link]
+
 ---
 
 Today we're introducing an improvement that can speed up deployments up to 10x. At every deployment, and at every step within a deployment, Pulumi saves a snapshot of your cloud infrastructure. This gives Pulumi a current view of state even if something fails mid-operation, but it comes with a performance penalty for large stacks. Here's how we fixed it.
