@@ -25,7 +25,6 @@ As organizations scale their cloud infrastructure, they face a critical choice: 
 
 Platform engineering teams need solutions that can scale to thousands of resources across multiple environments while maintaining security, compliance, and developer productivity. They need the full power of real programming languages, not limited domain-specific languages. And they need infrastructure that integrates naturally with their existing CI/CD pipelines rather than requiring separate automation workflows.
 
-
 ## About CodeCraft
 
 The automobile is becoming increasingly more connected over time and software is now central to the operation of nearly every component. This necessitates a development platform that is designed for the continuous evolution of technology in vehicles and the additional complexity it brings. CodeCraft is BMW’s integrated toolchain for the software-defined-vehicle that is managed and deployed by Pulumi.
