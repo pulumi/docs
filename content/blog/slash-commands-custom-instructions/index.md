@@ -1,9 +1,9 @@
 ---
 title: "Encode What You Know With Neo: Custom Instructions and Slash Commands"
 
-date: 2025-12-10
+date: 2025-12-09
 
-draft: true
+draft: false
 
 meta_desc: Custom Instructions teach Neo your organization's standards. Slash Commands turn proven prompts into shortcuts anyone can use. Both are available now.
 
