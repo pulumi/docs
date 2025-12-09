@@ -28,19 +28,6 @@ tags:
     - performance
     - data-integrity
 
-
-# The social copy used to promote this post on Twitter and Linkedin. These
-# properties do not actually create the post and have no effect on the
-# generated blog page. They are here strictly for reference.
-
-# Here are some examples of posts we have made in the past for inspiration:
-# https://www.linkedin.com/feed/update/urn:li:activity:7171191945841561601
-# https://www.linkedin.com/feed/update/urn:li:activity:7169021002394296320
-# https://www.linkedin.com/feed/update/urn:li:activity:7155606616455737345
-# https://twitter.com/PulumiCorp/status/1763265391042654623
-# https://twitter.com/PulumiCorp/status/1762900472489185492
-# https://twitter.com/PulumiCorp/status/1755637618631405655
-
 social:
     twitter: Speeding up your Pulumi deployments by 10x
     linkedin: Want faster Pulumi deployments on big stacks? Read on how we improved the performance of Pulumi deployments with lots of resources by up to 10x, and how you can get access to it today.
