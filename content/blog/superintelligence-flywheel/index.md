@@ -45,6 +45,8 @@ These reinforce one another. As AI infrastructure grows more complex, human team
 
 The flywheel accelerates.
 
+![The Superintelligence Flywheel](flywheel.svg)
+
 ---
 
 ## The Technical Reality
