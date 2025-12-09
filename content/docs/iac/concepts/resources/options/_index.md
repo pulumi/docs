@@ -24,6 +24,7 @@ Resource constructors accept the following resource options:
 - [customTimeouts](/docs/concepts/options/customtimeouts/): override the default retry/timeout behavior for resource provisioning. The default value varies by resource.
 - [deleteBeforeReplace](/docs/concepts/options/deletebeforereplace/): override the default create-before-delete behavior when replacing a resource.
 - [deletedWith](/docs/concepts/options/deletedwith/): If set, the provider's Delete method will not be called for this resource if the specified resource is being deleted as well.
+- [replaceWith](/docs/concepts/options/replacewith/): If set, the resource will be replaced if one of the specified resources is replaced.
 - [dependsOn](/docs/concepts/options/dependson/): specify additional explicit dependencies in addition to the ones in the dependency graph.
 - [hideDiffs](/docs/concepts/options/hidediffs/): compact the display of diffs for specified properties in CLI output without affecting update behavior.
 - [hooks](/docs/concepts/options/hooks/): specify a set of resource hooks that will be executed at specific points in the resource lifecycle.
