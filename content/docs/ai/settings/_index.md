@@ -25,7 +25,7 @@ Neo is enabled by default. To control Neo access for your organization:
 ![Toggle Neo access](toggle-neo-access.png)
 
 {{% notes type="info" %}}
-If Pulumi Copilot was previously disabled, it will need to be enabled to use Neo.
+If Pulumi Copilot was previously disabled, Neo will need to be enabled as outlined below.
 {{% /notes %}}
 
 ## Custom Instructions
