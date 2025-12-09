@@ -50,7 +50,7 @@ main:
     description: |
         Learn how to build and deploy a complete multi-service application to Azure Container Apps using Pulumi. This hands-on workshop guides you through deploying a real-world two-tier architecture with a backend API and front-end web UI. Using Pulumi’s infrastructure as code approach, you’ll provision Azure Container Registry, Container Apps environments, and configure service-to-service communication, all as version-controlled, reproducible code.
     learn:
-        - Deploy a multi-service application to Azure Container Apps using Pulumi
+        - Deploy a multi-service application to Azure Container Apps
         - Build and manage container images with Azure Container Registry
         - Implement secure service-to-service communication
         - Manage application configuration and environment variables
