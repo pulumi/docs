@@ -59,7 +59,7 @@ Neo ships with built-in commands for common tasks:
 | `/component-version-report` | Lists components that are outdated in your private registry |
 | `/provider-version-report` | Lists providers that are outdated |
 
-You can also create your own. In Pulumi Cloud, you define the prompt and specify any parameters it should accept - no coding required. Once saved, your team can start using it immediately. If a command needs more information than what's provided, Neo will ask follow-up questions to fill in the gaps.
+You can also create your own. In Pulumi Cloud, you define the prompt - no coding required. Once saved, your team can start using it immediately. If a command needs more information than what's provided, Neo will ask follow-up questions to fill in the gaps.
 
 ## Get Started
 
