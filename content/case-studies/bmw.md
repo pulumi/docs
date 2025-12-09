@@ -1,6 +1,6 @@
 ---
 title_tag: BMW | Case Studies
-title: "Unified Infrastructure and Application Management at Scale"
+title: "Unified Infrastructure and Application Management"
 description: |
     Learn how BMW's Software Factory uses Pulumi to manage 20,000+ cloud resources with Python-based infrastructure code.
 meta_desc: Learn how BMW's Software Factory uses Pulumi to manage 20,000+ cloud resources with Python-based infrastructure code.
