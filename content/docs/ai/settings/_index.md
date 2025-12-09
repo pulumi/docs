@@ -102,7 +102,7 @@ Once saved, the command is immediately available to all team members.
 
 ### Viewing Slash Command Instructions
 
-When you have selected a slash command in a new or existing Neo task, click on the highlighted command name to view the instructions this command expands to.
+When you have selected a slash command in a new or existing Neo task, click on the highlighted command name to view the actual prompt.
 
 ### Slash Command Best Practices
 
