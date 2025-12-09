@@ -38,46 +38,46 @@
   <rect width="1000" height="800" fill="url(#bgGrad)"/>
   
   <!-- Title -->
-  <text x="500" y="60" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="38" font-weight="700" fill="white">The Superintelligence Flywheel</text>
+  <text x="500" y="55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="38" font-weight="700" fill="white">The Superintelligence Flywheel</text>
   
-  <!-- Outer ring track -->
-  <circle cx="500" cy="400" r="200" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="60"/>
+  <!-- Outer ring track - larger -->
+  <circle cx="500" cy="400" r="230" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="70"/>
   
-  <!-- Curved arrows -->
-  <path d="M 320 320 A 200 200 0 0 1 680 320" 
+  <!-- Curved arrows - wider arc -->
+  <path d="M 295 310 A 230 230 0 0 1 705 310" 
         fill="none" stroke="url(#arcGrad1)" stroke-width="6" 
         stroke-linecap="round" marker-end="url(#arrow1)"/>
   
-  <path d="M 680 480 A 200 200 0 0 1 320 480" 
+  <path d="M 705 490 A 230 230 0 0 1 295 490" 
         fill="none" stroke="url(#arcGrad2)" stroke-width="6" 
         stroke-linecap="round" marker-end="url(#arrow2)"/>
   
-  <!-- Top node - taller box with better padding -->
-  <rect x="310" y="100" width="380" height="115" rx="12" fill="url(#purpleGrad)"/>
-  <text x="500" y="140" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">SUPERINTELLIGENCE</text>
-  <text x="500" y="167" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">INFRASTRUCTURE</text>
-  <text x="500" y="193" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="rgba(255,255,255,0.75)">Training · Inference · Scale</text>
+  <!-- Top node - wider box -->
+  <rect x="250" y="90" width="500" height="115" rx="12" fill="url(#purpleGrad)"/>
+  <text x="500" y="130" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">SUPERINTELLIGENCE</text>
+  <text x="500" y="157" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">INFRASTRUCTURE</text>
+  <text x="500" y="183" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="rgba(255,255,255,0.75)">Training · Inference · Scale</text>
   
-  <!-- Bottom node - taller box with better padding -->
-  <rect x="310" y="585" width="380" height="115" rx="12" fill="url(#salmonGrad)"/>
-  <text x="500" y="625" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">INFRASTRUCTURE</text>
-  <text x="500" y="652" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">SUPERINTELLIGENCE</text>
-  <text x="500" y="678" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="rgba(255,255,255,0.75)">AI Agents · Automation · Autonomy</text>
+  <!-- Bottom node - wider box -->
+  <rect x="250" y="595" width="500" height="115" rx="12" fill="url(#salmonGrad)"/>
+  <text x="500" y="635" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">INFRASTRUCTURE</text>
+  <text x="500" y="662" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white">SUPERINTELLIGENCE</text>
+  <text x="500" y="688" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="rgba(255,255,255,0.75)">AI Agents · Automation · Autonomy</text>
   
-  <!-- Left label -->
-  <text x="155" y="380" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="rgba(255,255,255,0.6)">Growing complexity</text>
-  <text x="155" y="405" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#c490c9">DEMANDS</text>
-  <text x="155" y="428" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="rgba(255,255,255,0.6)">intelligent management</text>
+  <!-- Left label - pushed to edge -->
+  <text x="95" y="380" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="rgba(255,255,255,0.6)">Growing complexity</text>
+  <text x="95" y="405" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#c490c9">DEMANDS</text>
+  <text x="95" y="428" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="rgba(255,255,255,0.6)">intelligent management</text>
   
-  <!-- Right label -->
-  <text x="845" y="380" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="rgba(255,255,255,0.6)">Better agents</text>
-  <text x="845" y="405" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#f8a0ac">ENABLE</text>
-  <text x="845" y="428" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="rgba(255,255,255,0.6)">more ambitious scale</text>
+  <!-- Right label - pushed to edge -->
+  <text x="905" y="380" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="rgba(255,255,255,0.6)">Better agents</text>
+  <text x="905" y="405" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#f8a0ac">ENABLE</text>
+  <text x="905" y="428" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="rgba(255,255,255,0.6)">more ambitious scale</text>
   
-  <!-- Center circle - larger -->
+  <!-- Center circle -->
   <circle cx="500" cy="400" r="90" fill="#0d0d14" stroke="#F7BF2A" stroke-width="3"/>
   
-  <!-- Pulumi Logo - much larger -->
+  <!-- Pulumi Logo -->
   <svg x="435" y="335" width="130" height="130" viewBox="0 0 300 300">
     <path d="M97.0239 205.745C103.293 202.125 103.304 190.406 97.0471 179.569C90.7905 168.733 80.6361 162.882 74.3666 166.502C68.0971 170.122 68.0867 181.841 74.3433 192.678C80.5999 203.514 90.7544 209.364 97.0239 205.745Z" fill="#F26E7E"/>
     <path d="M139.748 230.446C146.018 226.826 146.028 215.107 139.772 204.27C133.515 193.434 123.361 187.584 117.091 191.203C110.822 194.823 110.811 206.542 117.068 217.379C123.325 228.215 133.479 234.066 139.748 230.446Z" fill="#F26E7E"/>
@@ -93,6 +93,6 @@
     <path d="M149.771 137.543C162.284 137.543 172.428 131.674 172.428 124.434C172.428 117.195 162.284 111.326 149.771 111.326C137.257 111.326 127.113 117.195 127.113 124.434C127.113 131.674 137.257 137.543 149.771 137.543Z" fill="#F7BF2A"/>
   </svg>
   
-  <!-- Tagline - larger and more prominent -->
+  <!-- Tagline -->
   <text x="500" y="765" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="rgba(255,255,255,0.6)" font-style="italic">"The infrastructure to build superintelligence demands superintelligence for infrastructure."</text>
 </svg>
