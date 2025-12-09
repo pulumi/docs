@@ -1,5 +1,5 @@
 ---
-title: "Speeding up Pulumi deployments by up to 10x"
+title: "Speeding up Pulumi deployments by up to 20x"
 
 date: 2025-12-08T17:57:55+02:00
 
@@ -9,7 +9,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Pulumi deployments get up to 10x faster with journaling, a new snapshotting approach that speeds up large stacks while keeping full data integrity.
+meta_desc: Pulumi deployments get up to 20x faster with journaling, a new snapshotting approach that speeds up large stacks while keeping full data integrity.
 
 meta_image: meta.png
 
@@ -23,7 +23,7 @@ tags:
 
 social:
     twitter: |
-        Pulumi deployments just got up to 10x faster:
+        Pulumi deployments just got up to 20x faster:
 
         - Journaling: Send only changes, not full snapshots
         - Data integrity: No compromise on reliability
@@ -31,7 +31,7 @@ social:
 
         Try it: [link]
     linkedin: |
-        # Pulumi Deployments Get Up to 10x Faster
+        # Pulumi Deployments Get Up to 20x Faster
 
         Large Pulumi stacks just got a major performance boost. Here's what changed.
 
@@ -57,7 +57,7 @@ social:
 
 ---
 
-Today we're introducing an improvement that can speed up deployments up to 10x. At every deployment, and at every step within a deployment, Pulumi saves a snapshot of your cloud infrastructure. This gives Pulumi a current view of state even if something fails mid-operation, but it comes with a performance penalty for large stacks. Here's how we fixed it.
+Today we're introducing an improvement that can speed up deployments up to 20x. At every deployment, and at every step within a deployment, Pulumi saves a snapshot of your cloud infrastructure. This gives Pulumi a current view of state even if something fails mid-operation, but it comes with a performance penalty for large stacks. Here's how we fixed it.
 
 <!--more-->
 
@@ -87,7 +87,7 @@ The second example is setting up an instance of the Pulumi app and API. Here we'
 
 ![Time taken](time.png)
 
-![Data sent](data.png)
+![Data sent](size.png)
 
 *Note that this feature is still behind a feature flag, but we are ready for testers. To get enrolled in the feature flag, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us). Once that's done, all you need to do is to set the `PULUMI_ENABLE_JOURNALING` environment variable to `true`, and your deployments will start finishing faster.*
 
@@ -316,7 +316,7 @@ Pulumi state is a very central part of Pulumi, so we wanted to be extra careful 
 - Since tests can't cover all possible edge cases, the next step was to run the journaler in parallel with the current snapshotting implementation internally. This was still without sending the results to the service. However we would compare the snapshot, and send an error event to the service if the snapshot didn't match. In our data warehouse we could then inspect any mismatches, and fix them. Since this does involve the service in a minor way, we would only do this if the user is using the Cloud backend.
 - Next up was adding a feature flag for the service, so journaling could be turned on selectively for some orgs. At the same time we implemented an opt-in environment variable in the CLI (`PULUMI_ENABLE_JOURNALING`), so the feature could be selectively turned on by users, if both the feature flag is enabled and the user sets the environment variable. This way we could slowly start enabling this in our repos, e.g. first in the integration tests for `pulumi/pulumi`, then in the tests for `pulumi/examples` and `pulumi/templates`, etc.
 - Allow users to start opting in.  If you want to opt-in with your org, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us), and we'll opt your org into the feature flag. Then you can begin seeing the performance improvements by setting the `PULUMI_ENABLE_JOURNALING` env variable to true.
-- Enable this for everyone. After some time with more orgs opted in, we'll enable this feature for everyone using Pulumi Cloud, and by default in the Pulumi CLI.
+- Enable this for everyone. After some time with more orgs opted in, we'll enable this feature for everyone using Pulumi Cloud, and by default in the Pulumi CLI. This is currently planned for the end of January.
 
 ## What's next
 
