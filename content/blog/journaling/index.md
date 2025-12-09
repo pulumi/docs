@@ -9,7 +9,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Learn how journaling helps speed up your deployments in large stacks up to 10x, while maintaining full data integrity guarantees throughout the update
+meta_desc: Pulumi deployments get up to 10x faster with journaling, a new snapshotting approach that speeds up large stacks while keeping full data integrity.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
