@@ -209,6 +209,42 @@ summary = "Company funded by Madrona Venture Group and Tola Capital to help comp
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
 
 [[coverage]]
+date = "6th November 2025"
+title = "Pulumi's AI Agent Tackles Infrastructure Compliance Backlogs"
+img = "/logos/press/newstack.png"
+url = "https://thenewstack.io/pulumis-ai-agent-tackles-infrastructure-compliance-backlogs/"
+
+[[coverage]]
+date = "16th September 2025"
+title = "Seattle startup Pulumi bets big on AI with Neo, an agent that automates cloud infrastructure tasks"
+img = "/logos/press/geekwire.png"
+url = "https://www.geekwire.com/2025/seattle-startup-pulumi-bets-big-on-ai-with-neo-an-agent-that-automates-cloud-infrastructure-tasks/"
+
+[[coverage]]
+date = "16th September 2025"
+title = "Pulumi debuts its first AI agents to take on cloud platform engineering"
+img = "/logos/press/siliconangle.png"
+url = "https://siliconangle.com/2025/09/16/pulumi-debuts-first-ai-agents-take-cloud-platform-engineering/"
+
+[[coverage]]
+date = "16th September 2025"
+title = "Pulumi Previews AI Agents Trained to Automate Infrastructure Management"
+img = "/logos/press/devops.png"
+url = "https://devops.com/pulumi-previews-ai-agents-trained-to-automate-infrastructure-management/"
+
+[[coverage]]
+date = "16th September 2025"
+title = "Pulumi launches Neo: AI agent for infrastructure management"
+img = "/logos/press/techzine.png"
+url = "https://www.techzine.eu/news/infrastructure/134669/pulumi-launches-neo-ai-agent-for-infrastructure-management/"
+
+[[coverage]]
+date = "16th September 2025"
+title = "Pulumi Neo Accelerates Platform Engineering in the AI Era"
+img = "/logos/press/dbta.png"
+url = "https://www.dbta.com/Editorial/News-Flashes/Pulumi-Neo-Accelerates-Platform-Engineering-in-the-AI-Era-171523.aspx"
+
+[[coverage]]
 date = "20 November 2024"
 title = "The 10 Coolest Cloud Computing Startup Companies Of 2024"
 img = "/logos/press/crn.png"
