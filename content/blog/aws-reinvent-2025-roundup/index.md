@@ -3,7 +3,7 @@ title: "AWS built an integrated AI Agent training pipeline and they want you to 
 allow_long_title: true
 date: 2025-12-10
 draft: false
-meta_desc: "A roundup of the most exciting announcements from AWS re:Invent 2025 and how to use them with Pulumi."
+meta_desc: "At re:Invent 2025, AWS revealed a vertically integrated AI training pipeline. Here's who it's actually for."
 meta_image: meta.png
 authors:
     - adam-gordon-bell
