@@ -145,4 +145,4 @@ The race to build frontier AI is driving the largest infrastructure buildout in 
 
 *Pulumi provides the infrastructure platform for the superintelligence era: infrastructure as code in general-purpose languages, unified multi-cloud management, and Neo for progressive infrastructure autonomy.*
 
-[*Pulumi Neo*](http:///product/neo) *・ [Case Studies](http:///case-studies) ・ [Contact](http:///contact)*
+[*Pulumi Neo*](/product/neo) *・ [Case Studies](/case-studies) ・ [Contact](/contact)*
