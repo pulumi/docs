@@ -49,7 +49,7 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-Pulumi saves a snapshot of the current state of your cloud infrastructure at every deployment, and also at every step of the deployment. This means that Pulumi always has a current view of the state even if there is an issue during an operation. However, this comes with a performance penalty especially for large stacks. Today we're introducing an improvement that can speed up deployments up to 10x. Read on for benchmarks and some technical details of the implementation.
+Today we're introducing an improvement that can speed up deployments up to 10x. At every deployment, and at every step within a deployment, Pulumi saves a snapshot of your cloud infrastructure. This gives Pulumi a current view of state even if something fails mid-operation, but it comes with a performance penalty for large stacks. Here's how we fixed it.
 
 <!--more-->
 
