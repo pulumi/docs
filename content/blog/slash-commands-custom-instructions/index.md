@@ -54,8 +54,8 @@ Neo ships with built-in commands for common tasks:
 
 | Command | What it does |
 |---------|--------------|
-| `/policy-issues-report` | Lists your most severe policy violations |
 | `/get-started` | Learn what Neo can do and how to structure effective requests |
+| `/policy-issues-report` | Lists your most severe policy violations |
 | `/component-version-report` | Lists components that are outdated in your private registry |
 | `/provider-version-report` | Lists providers that are outdated |
 
