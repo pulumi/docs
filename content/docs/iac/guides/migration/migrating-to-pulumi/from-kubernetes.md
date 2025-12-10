@@ -30,7 +30,7 @@ The Kubernetes package provides the `yaml` module which defines two resource typ
 * `ConfigFile`: deploy a single Kubernetes YAML file
 * `ConfigGroup`: deploy a collection of Kubernetes YAML files together
 
-By defining these resources in code, you can deploy off-the-shelf Kubernetes YAML files without needing to change them. Pulumi understands the full topology of resource objects inside those YAML files. The examples below show how to do both &mdash; first a single YAML file and then a group of them &mdash; using the standard [Kubernetes Guestbook Application](https://github.com/kubernetes/examples/tree/master/guestbook).
+By defining these resources in code, you can deploy off-the-shelf Kubernetes YAML files without needing to change them. Pulumi understands the full topology of resource objects inside those YAML files. The examples below show how to do both &mdash; first a single YAML file and then a group of them &mdash; using the standard [Kubernetes Guestbook Application](https://github.com/kubernetes/examples/tree/master/web/guestbook).
 
 ### Deploying a Single Kubernetes YAML File
 
@@ -40,7 +40,7 @@ To deploy the Kubernetes Guestbook Application using a single YAML file, first d
 
 ```bash
 $ curl -L --remote-name \
-    https://raw.githubusercontent.com/kubernetes/examples/master/guestbook/all-in-one/guestbook-all-in-one.yaml
+    https://raw.githubusercontent.com/kubernetes/examples/master/web/guestbook/all-in-one/guestbook-all-in-one.yaml
 ```
 
 This Pulumi program uses `ConfigFile` to read that YAML file, provision the resources inside it, and export the resulting IP addresses:
@@ -181,7 +181,7 @@ To deploy the Kubernetes Guestbook Application using a collection of YAML files,
 $ mkdir yaml
 $ pushd yaml
 $ curl -L --remote-name \
-    "https://raw.githubusercontent.com/kubernetes/examples/master/guestbook/{frontend-deployment,frontend-service,redis-master-deployment,redis-master-service,redis-replica-deployment,redis-replica-service}.yaml"
+    "https://raw.githubusercontent.com/kubernetes/examples/master/web/guestbook/{frontend-deployment,frontend-service,redis-master-deployment,redis-master-service,redis-replica-deployment,redis-replica-service}.yaml"
 $ popd
 ```
 
