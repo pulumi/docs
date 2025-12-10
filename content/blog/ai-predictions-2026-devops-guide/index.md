@@ -1,6 +1,6 @@
 ---
 title: "AI Predictions for 2026: A DevOps Engineer's Guide"
-date: 2025-12-07T00:00:00+00:00
+date: 2025-12-11
 meta_image: meta.png
 meta_desc: "AI predictions for 2026 and what they mean for DevOps engineers. From agent orchestration to local AI breakthroughs, here's how to prepare your infrastructure."
 authors:
