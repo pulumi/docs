@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "Day 2 Autonomous Infrastructure Management"
+title: "Day-2 Autonomous Infrastructure Management"
 meta_desc: Learn how to simplify and automate maintenance of growing infrastructure inventory with monitoring, remediation, and optimization workflows.
 meta_image:
 
@@ -31,7 +31,7 @@ url_slug: day-2-autonomous-infrastructure-management
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Day 2 Autonomous Infrastructure Management"
+    title: "Day-2 Autonomous Infrastructure Management"
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
@@ -66,7 +66,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["Policy as Code"]
+        topics:  ["Policy as Code", "Pulumi Neo", "DevSecOps", "PagerDuty"]
         languages: ["Any"]
         clouds: ["AWS"]
 
@@ -77,7 +77,7 @@ form:
     salesforce_campaign_id: 701PQ00000eeXB8YAM
 
 event_data:
-  name: "Day 2 Autonomous Infrastructure Management"
+  name: "Day-2 Autonomous Infrastructure Management"
   start_date: 2025-12-09T12:00:00-05:00
   end_date: 2025-12-09T13:00:00-05:00
   url: "https://www.pulumi.com/resources/day-2-autonomous-infrastructure-management/"
