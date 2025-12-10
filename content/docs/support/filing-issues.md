@@ -14,6 +14,10 @@ menu:
 
 When you encounter a bug or have a feature request, filing it in the correct GitHub repository helps our team respond faster and more effectively. Use this guide to determine where to file your issue.
 
+{{% notes type="info" %}}
+Need help troubleshooting first? Join the [Pulumi Community Slack](https://slack.pulumi.com/) to get quick answers from the community, or check our [troubleshooting guide](/docs/support/troubleshooting/).
+{{% /notes %}}
+
 ## Quick decision guide
 
 Follow this decision tree to find the right repository:
@@ -58,7 +62,7 @@ If you're experiencing issues with a specific cloud provider or resource (errors
 
 - **AWS** → [pulumi/pulumi-aws](https://github.com/pulumi/pulumi-aws/issues) or [pulumi/pulumi-aws-native](https://github.com/pulumi/pulumi-aws-native/issues)
 - **Azure** → [pulumi/pulumi-azure-native](https://github.com/pulumi/pulumi-azure-native/issues) or [pulumi/pulumi-azure](https://github.com/pulumi/pulumi-azure/issues)
-- **Google Cloud** → [pulumi/pulumi-gcp](https://github.com/pulumi/pulumi-gcp/issues) or [pulumi/pulumi-google-native](https://github.com/pulumi/pulumi-google-native/issues)
+- **Google Cloud (GCP)** → [pulumi/pulumi-gcp](https://github.com/pulumi/pulumi-gcp/issues) or [pulumi/pulumi-google-native](https://github.com/pulumi/pulumi-google-native/issues)
 - **Kubernetes** → [pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes/issues)
 
 ### Finding other provider repositories
@@ -96,6 +100,7 @@ If you're unsure where to file your issue:
 
 To help us resolve your issue quickly:
 
+1. **Check the troubleshooting guide** - see our [troubleshooting documentation](/docs/support/troubleshooting/) for solutions to common issues
 1. **Search existing issues** - your issue might already be reported
 1. **Include version information** - run `pulumi version` and include the output
 1. **Provide reproduction steps** - minimal code examples are extremely helpful

@@ -49,7 +49,7 @@ sections:
   heading: Need more help?
   description_md: |
     - Join [Community Slack](https://slack.pulumi.com) for fast community support
-    - Check our [guide for filing GitHub issues](/docs/support/filing-issues/) to report bugs in the right repository
+    - See our [guide for filing GitHub issues](/docs/support/filing-issues/) to report bugs in the right repository
     - [Contact us](/contact/) for paid support options
 
 - type: flat
