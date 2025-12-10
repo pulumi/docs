@@ -1,6 +1,6 @@
 ---
-title: Support
-linktitle: Support
+title: Support & Troubleshooting
+linktitle: Support & Troubleshooting
 docs_home: true
 notitle: true
 norightnav: true
@@ -10,8 +10,8 @@ menu:
     weight: 1
 meta_desc: Get help with Pulumi through FAQs, troubleshooting guides, community resources, and support options.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Support
-description: <p>Get help with Pulumi through troubleshooting guides, debugging tools, FAQs, and community resources.</p>
+h1: Support & Troubleshooting
+description: <p>Get help with Pulumi through logging, troubleshooting guides, debugging tools, FAQs, and community resources.</p>
 aliases:
   - /docs/support/
 
@@ -19,6 +19,11 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
+  - emoji: 📊
+    heading: Logging
+    link: /docs/support/debugging/logging/
+    description: CLI verbose logging and program logging for debugging and diagnostics.
+
   - emoji: 🔧
     heading: Troubleshooting
     link: /docs/support/troubleshooting/
@@ -41,8 +46,8 @@ sections:
 
   - emoji: 🐙
     heading: GitHub Issues
-    link: https://github.com/pulumi/pulumi/issues
-    description: Report bugs and request features.
+    link: /docs/support/filing-issues/
+    description: Learn how to report bugs and request features in the right repository.
 
   - emoji: 📧
     heading: Contact Support
