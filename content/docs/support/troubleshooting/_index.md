@@ -25,6 +25,11 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
+  - emoji: 📊
+    heading: Logging
+    link: /docs/support/debugging/logging/
+    description: CLI verbose logging and program logging for debugging and diagnostics.
+
   - emoji: ⚠️
     heading: Common Issues
     link: /docs/support/troubleshooting/common-issues/
@@ -44,7 +49,7 @@ sections:
   heading: Need more help?
   description_md: |
     - Join [Community Slack](https://slack.pulumi.com) for fast community support
-    - Open [GitHub Issues](https://github.com/pulumi/pulumi/issues/new) to report bugs
+    - Check our [guide for filing GitHub issues](/docs/support/filing-issues/) to report bugs in the right repository
     - [Contact us](/contact/) for paid support options
 
 - type: flat
