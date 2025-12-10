@@ -67,7 +67,7 @@ These example share three properties that break traditional infrastructure appro
 
 3. **Velocity beyond human capacity**: Infrastructure changes that occur faster than human operators can review, approve, and execute manually, often initiated by AI agents.
 
-Of course, even smaller scale examples share these challenges, like using the latest AWS or Google managed AI services for fine-tuning your own models for your enterprise or product.
+Of course, even smaller scale examples share these challenges. Whether you're using AWS SageMaker or Google Vertex AI to fine-tune models for your enterprise, building out your data engineering function to train custom models, or moving your first ML workloads to production—these infrastructure demands become relevant as you scale.
 
 AI-assisted software development tools are making engineers dramatically more productive. Developers are shipping more code than ever before. But unlike software engineering, legacy infrastructure practices lack inherent guardrails to enable AI-assisted infrastructure engineering: linters, static analysis, testing frameworks, canaries, staged rollouts. The tooling that worked when humans were the limiting factor won't work when AI agents are generating and deploying infrastructure code at machine speed.
 
