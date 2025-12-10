@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url: https://www.youtube.com/embed/nx6oJvX2JNE?si=w8flxuKSSsnpKtJo
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-12-09T12:00:00-05:00
@@ -56,6 +56,12 @@ main:
 
     # The webinar presenters
     presenters:
+        - name: Engin Diri
+          role: Senior Solutions Architect, Pulumi
+          photo: /images/team/engin-diri.jpg
+        - name: Adam Bell
+          role: Community Engineer, Pulumi
+          photo: /images/team/adam-gordon-bell.jpg
     
     # case-sensitive
     tags:
