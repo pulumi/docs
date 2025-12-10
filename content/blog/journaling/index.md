@@ -9,7 +9,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Pulumi deployments get up to 20x faster with journaling, a new snapshotting approach that speeds up large stacks while keeping full data integrity.
+meta_desc: Pulumi operations get up to 20x faster with journaling, a new snapshotting approach that speeds up large stacks while keeping full data integrity.
 
 meta_image: meta.png
 
@@ -39,10 +39,10 @@ social:
         Pulumi saves snapshots at every deployment step to maintain data integrity. For large stacks, this creates a bottleneck: uploading the full snapshot serially slows everything down.
 
         # The Solution: Journaling
-        Instead of sending the whole snapshot, journaling sends only individual changes. These journal entries can go in parallel, and Pulumi Cloud reconstructs the full snapshot on the backend.
+        Instead of sending the whole snapshot, journaling sends only individual changes. These journal entries can be written in parallel, and Pulumi Cloud can reconstruct the full snapshot on the backend.
 
         # The Results
-        In benchmarks on a 3,000+ resource stack:
+        In benchmarks when creating a 3,000+ resource stack:
 
             Time dropped from 58 minutes to 3 minutes
             Network traffic cut from 16.5MB to 2.3MB
@@ -63,13 +63,13 @@ Today we're introducing an improvement that can speed up deployments up to 20x. 
 
 ## Benchmarks
 
-Before getting into the more technical details, here are a number of benchmarks demonstrating what this new experience looks like. To run the benchmarks we picked a couple of Pulumi projects, one that can be set up massively parallel, which is the worst case scenario for the old snapshot system, and another one that looks a little more like a real world example.  Note that all of these benchmarks were conducted in Europe connecting to Pulumi Cloud, which runs in `us-west-2`, so exact numbers may vary based on your location and internet connection. This should however give a good indication of the performance improvements.
+Before getting into the more technical details, here are a number of benchmarks demonstrating what this new experience looks like. To run the benchmarks we picked a couple of Pulumi projects: one that can be set up massively parallel, which is the worst case scenario for the old snapshot system, and another that looks a little more like a real world example.  Note that all of these benchmarks were conducted in Europe connecting to Pulumi Cloud, which runs in AWS's `us-west-2` region, so exact numbers may vary based on your location and internet connection. This should however give a good indication of the performance improvements.
 
-We're benchmarking two somewhat large stacks, both of which are or were used at Pulumi. The first program sets up a website using AWS bucket objects. We're using the [example-ts-static-website](https://github.com/pulumi/examples/tree/master/aws-ts-static-website) example here, but expand it a little bit to set up a version of our docs site. This means we're setting up more than 3000 bucket objects, with 3222 resources in total.
+We're benchmarking two somewhat large stacks, both of which are or were used at Pulumi. The first program sets up a website using AWS bucket objects. We're using the [aws-ts-static-website](https://github.com/pulumi/examples/tree/master/aws-ts-static-website) example here, but expand it a little bit to set up a version of our docs site. This means we're setting up more than 3000 bucket objects, with 3222 resources in total.
 
 The benchmarks were measured using `time` built-in command and using the best time in a best-of-three benchmark. The network traffic was measured using `tcpdump`, limiting the measured traffic to only the IP addresses for Pulumi Cloud. Finally `tshark` was used to process the packet captures and count the bytes sent.
 
-All the benchmarks are run with journaling off (the default experience), with journaling on (the new experience), and finally with `PULUMI_SKIP_CHECKPOINTS=true` set. The last one means we skip uploading intermediate checkpoints to the backend, which in turn means potentially losing track of changes that are in flight if Pulumi exits unexpectedly due to any reason.
+All the benchmarks are run with journaling off (the default experience), with journaling on (the new experience), and finally with `PULUMI_SKIP_CHECKPOINTS=true` set. The last configuration skips uploading intermediate checkpoints to the backend, which increases performance at the cost of potentially losing track of changes that are in flight if the `pulumi` CLI loses connectivity or exits unexpectedly.
 
 |                    | Time   | Bytes sent |
 |--------------------|--------|------------|
@@ -93,17 +93,17 @@ The second example is setting up an instance of the Pulumi app and API. Here we'
 
 If you are interested in the more technical details read on!
 
-## Introduction into snapshotting
+## Introduction to snapshotting
 
-Pulumi keeps track of all resources in a stack in a snapshot. This snapshot is stored in the chosen backend, either in Pulumi Cloud, or in a DIY backend. Further deployments of the stack then use this snapshot to figure out which resources need to be created, updated or deleted.
+Pulumi keeps track of all resources in a stack in a snapshot. This snapshot is stored in the stack's configured backend, which is either the Pulumi Cloud or a DIY backend. Further deployments of the stack then use this snapshot to figure out which resources need to be created, updated or deleted.
 
 To make sure there are never any resources that are not tracked, even if a deployment is aborted unexpectedly (for example due to network issues, power outages, or bugs), Pulumi creates a new snapshot at the beginning and at the end of each operation.
 
-At the beginning of the operation, Pulumi adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but Pulumi couldn't record the end of it), in the next operation Pulumi asks the user to check the actual state of the resource, and then either removes it from the snapshot, or imports it depending on the users input. This is because it is possible that the resource has been set up correctly, or it is possible that the resource creation failed. If Pulumi aborted midway through the operation it's impossible to know which it is.
+At the beginning of the operation, `pulumi` adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but `pulumi` couldn't record the end of it),  the next operation will ask the user to check the actual state of the resource. Depending on the user's response, `pulumi` will either remove the operation from the snapshot or import the resource . This is because it is possible that the resource has been set up correctly or that the resource creation failed. If `pulumi` aborted midway through the operation, it's impossible to know which state the resource is in.
 
-Once an operation finishes, the pending operation is removed, as we now know the final state of the resource, and the final state of the resource is updated in the snapshot.
+Once an operation finishes, the pending operation is removed and the resource's final state is recorded in the snapshot.
 
-There's also some additional metadata that is stored in the snapshot, that is only updated infrequently.
+There's also some additional metadata that is stored in the snapshot that is only updated infrequently.
 
 Here's how the snapshot looks in code. This snapshot is serialized and sent to the backend. `Resources` holds the list of known resource states, and is updated after each operation finishes, and `PendingOperations` is the list of pending operations described above.
 
@@ -117,7 +117,7 @@ type Snapshot struct {
 }
 ```
 
-Before we dive in deeper, we also need to understand a little bit about how the Pulumi engine works internally. Whenever a Pulumi operation, e.g. `pulumi up`, `pulumi destroy`, `pulumi refresh` etc. is run, the engine internally generates a series of steps, to create, update, delete etc. resources. This series of steps is then executed. To maintain the correct relationship, the steps need to be executed in a partial order, where all steps whose dependent steps have been executed already can be executed in parallel.
+Before we dive in deeper, we also need to understand a little bit about how the Pulumi engine works internally. Whenever a Pulumi operation, e.g. `pulumi up`, `pulumi destroy`, `pulumi refresh` etc. is run, the engine internally generates and executes a series of steps, to create, update, delete etc. resources. To maintain correct relationships between resources, the steps need to be executed in a partial order such that no step is executed until all of its step dependencies have successfully executed. Steps may otherwise execute concurrently.
 
 As each step is responsible for updating a single resource, we can generate a snapshot of the state before each step starts, and after it completes. Before each step starts, we create a pending operation, and add it to the `PendingOperations` list. After that step completes, we remove the pending operation from that list, and update the `Resources` list, either adding a resource, removing it, or updating it, depending on the kind of operation we just executed.
 
@@ -133,15 +133,15 @@ Our workaround for that is to serialize the snapshot uploads, uploading one snap
 
 This impacts performance especially for large stacks, as we upload the whole snapshot every time, which can take some time if the snapshot is getting big. For the Pulumi Cloud backend we improved on this a little [at the end of 2022](https://github.com/pulumi/pulumi/pull/10788). We implemented a diff based protocol, which is especially helpful for large snapshots, as we only need to send the diff between the old and the new snapshot, and Pulumi Cloud can then reconstruct the full snapshot based on that. This reduces the amount of data that needs to be transferred, thus improving performance.
 
-However, the snapshotting is still a major bottleneck for large Pulumi deployments. Having to serially upload the snapshot twice for each step does still have a big impact on performance, especially if many resources are modified in parallel.
+However, the snapshotting is still a major bottleneck for large Pulumi deployments. Having to serially upload the snapshot twice for each step does still have a big impact on performance, especially if many resources are modified in parallel. Furthermore, the time spent performing textual diffs between snapshots scales in proportion to the size of the data being processed, which adds additional execution time to each operation.
 
 ## Fast, but lacking data integrity?
 
 As long as Pulumi can complete its operation, there's no need for the intermediate checkpoints. It is possible to set the `PULUMI_SKIP_CHECKPOINTS` variable to a truthy value, and skip all the uploading of the intermittent checkpoints to the backend. This, of course, avoids the single serialization point we have sending the snapshots to the backend, and thus makes the operation much more performant.
 
-However, it also has the big disadvantage that it's compromising some of the data integrity guarantees Pulumi gives you. If anything goes wrong during the update, Pulumi has no notion of what happened until then, potentially leaving orphaned resources in the provider, or leaving resources in the state that no longer exist.
+However, it also has the serious disadvantage of compromising some of the data integrity guarantees Pulumi gives you. If anything goes wrong during the update, Pulumi has no notion of what happened until then, potentially leaving orphaned resources in the provider, or leaving resources in the state that no longer exist.
 
-Neither of these solutions is very satisfying, as the tradeoff is either performance or data integrity. We would like to have our cake and eat it too here, and that's exactly what we're doing.
+Neither of these solutions is very satisfying, as the tradeoff is either performance or data integrity. We would like to have our cake and eat it too, and that's exactly what we're doing with journaling.
 
 ## Enter journaling
 
