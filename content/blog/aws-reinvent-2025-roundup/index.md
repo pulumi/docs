@@ -50,7 +50,25 @@ Trainium is what turns Forge from a one-off experiment into an actual developmen
 
 AWS is clearly positioning Trainium3 to anchor a fully vertical stack
 
-**Try it with Neo:** [Provision Trainium instances with Pulumi](https://app.pulumi.com/neo?prefer_signup=true&prompt=Show%20me%20how%20to%20use%20Pulumi%20in%20Python%20to%20provision%20AWS%20Trn1%20EC2%20instances%20for%20ML%20training)
+<div class="note note-info" style="display: block;">
+<p><b>Spinning up a Trainium instance with Pulumi (where available):</b></p>
+
+```python
+import pulumi_aws as aws
+
+# Assumes: ami, subnet, security_group already configured
+trn1_instance = aws.ec2.Instance("trn1-instance",
+    instance_type="trn1.2xlarge",
+    ami=ami.id,
+    subnet_id=subnet.id,
+    vpc_security_group_ids=[security_group.id],
+    associate_public_ip_address=True,
+    tags={"Name": "trn1-training-instance"},
+)
+```
+
+<p><a href="https://app.pulumi.com/neo?prefer_signup=true&prompt=Show%20me%20how%20to%20use%20Pulumi%20in%20Python%20to%20provision%20AWS%20Trn1%20EC2%20instances%20for%20ML%20training">Try it with Neo: Provision Trainium instances</a></p>
+</div>
 
 ## The data moat play
 
@@ -73,7 +91,30 @@ If Nova is the brain and Trainium is the muscle to build it, AgentCore is the ne
 
 [AgentCore](https://aws.amazon.com/bedrock/agentcore/) is a managed runtime for AI agents: instead of you wiring LLMs, tools, memory, auth, and logging together on Lambda or Fargate, AWS gives you a sticky per-session microVM, a standard way to call tools (Gateway), built-in long- and short-term memory, identity/permissions, and observability/evals. You package your agent, deploy it as an AgentCore runtime, and AWS handles the ugly parts: session isolation, scaling, policy guardrails, and tracing. You pay Fargate-ish per-vCPU/GB-hour pricing for the runtime plus normal Bedrock token and tool-call costs.
 
-At re:Invent 2025, [AgentCore](https://aws.amazon.com/bedrock/agentcore/) picked up the missing "production" pieces: **Policy**, **Evaluations**, and **episodic Memory**. These handle guardrails, quality checks, and per-session state so you don’t have to build them yourself.
+At re:Invent 2025, [AgentCore](https://aws.amazon.com/bedrock/agentcore/) picked up the missing "production" pieces: **Policy**, **Evaluations**, and **episodic Memory**. These handle guardrails, quality checks, and per-session state so you don't have to build them yourself.
+
+<div class="note note-info" style="display: block;">
+<p><b>Deploying an AgentCore runtime with Pulumi:</b></p>
+
+```python
+import pulumi_aws as aws
+
+# Assumes: role, ecr_repo already configured
+agent_runtime = aws.bedrock.AgentcoreAgentRuntime("my-agent",
+    agent_runtime_name="my-agent-runtime",
+    role_arn=role.arn,
+    agent_runtime_artifact={
+        "container_configuration": {
+            "container_uri": f"{ecr_repo.repository_url}:latest",
+        },
+    },
+    network_configuration={
+        "network_mode": "PUBLIC",
+    })
+```
+
+<p><a href="https://app.pulumi.com/neo?prefer_signup=true&prompt=Show%20me%20how%20to%20use%20Pulumi%20in%20Python%20to%20deploy%20an%20AWS%20Bedrock%20AgentCore%20runtime%20with%20IAM%20roles%20and%20ECR">Try it with Neo: Deploy an AgentCore runtime</a> — <i>Requires a container image in ECR.</i></p>
+</div>
 
 How does this come together? AWS shipped a use case.
 
