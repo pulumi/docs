@@ -1,5 +1,5 @@
 ---
-title: "Speeding up Pulumi deployments by up to 20x"
+title: "Speeding up `pulumi` operations by up to 20x"
 
 date: 2025-12-08T17:57:55+02:00
 
@@ -23,7 +23,7 @@ tags:
 
 social:
     twitter: |
-        Pulumi deployments just got up to 20x faster:
+        Pulumi operations just got up to 20x faster:
 
         - Journaling: Send only changes, not full snapshots
         - Data integrity: No compromise on reliability
@@ -31,7 +31,7 @@ social:
 
         Try it: [link]
     linkedin: |
-        # Pulumi Deployments Get Up to 20x Faster
+        # Pulumi Operations Get Up to 20x Faster
 
         Large Pulumi stacks just got a major performance boost. Here's what changed.
 
@@ -48,7 +48,7 @@ social:
             Network traffic cut from 16.5MB to 2.3MB
 
         # Why This Matters
-        You get the speed without sacrificing data integrity. Unlike SKIP_CHECKPOINTS, journaling still tracks all in-flight operations. If something fails mid-deployment, Pulumi still knows exactly what happened.
+        You get the speed without sacrificing data integrity. Unlike SKIP_CHECKPOINTS, journaling still tracks all in-flight operations. If something fails mid-deployment, `pulumi` still knows exactly what happened.
 
         # Get Started
         This feature is in opt-in testing. Reach out on Pulumi Community Slack or through Support to get your org enrolled. Then set PULUMI_ENABLE_JOURNALING=true.
@@ -57,7 +57,7 @@ social:
 
 ---
 
-Today we're introducing an improvement that can speed up deployments up to 20x. At every deployment, and at every step within a deployment, Pulumi saves a snapshot of your cloud infrastructure. This gives Pulumi a current view of state even if something fails mid-operation, but it comes with a performance penalty for large stacks. Here's how we fixed it.
+Today we're introducing an improvement that can speed up operations up to 20x. At every deployment, and at every step within a deployment, `pulumi` saves a snapshot of your cloud infrastructure. This gives `pulumi` a current view of state even if something fails mid-operation, but it comes with a performance penalty for large stacks. Here's how we fixed it.
 
 <!--more-->
 
@@ -89,15 +89,15 @@ The second example is setting up an instance of the Pulumi app and API. Here we'
 
 ![Data sent](size.png)
 
-*Note that this feature is still behind a feature flag, but we are ready for testers. To get enrolled in the feature flag, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us). Once that's done, all you need to do is to set the `PULUMI_ENABLE_JOURNALING` environment variable to `true`, and your deployments will start finishing faster.*
+*Note that this feature is still behind a feature flag, but we are ready for testers. To get enrolled in the feature flag, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us). Once that's done, all you need to do is to set the `PULUMI_ENABLE_JOURNALING` environment variable to `true`, and your operations will start finishing faster.*
 
 If you are interested in the more technical details read on!
 
 ## Introduction to snapshotting
 
-Pulumi keeps track of all resources in a stack in a snapshot. This snapshot is stored in the stack's configured backend, which is either the Pulumi Cloud or a DIY backend. Further deployments of the stack then use this snapshot to figure out which resources need to be created, updated or deleted.
+`pulumi` keeps track of all resources in a stack in a snapshot. This snapshot is stored in the stack's configured backend, which is either the Pulumi Cloud or a DIY backend. Further operations of the stack then use this snapshot to figure out which resources need to be created, updated or deleted.
 
-To make sure there are never any resources that are not tracked, even if a deployment is aborted unexpectedly (for example due to network issues, power outages, or bugs), Pulumi creates a new snapshot at the beginning and at the end of each operation.
+To make sure there are never any resources that are not tracked, even if a deployment is aborted unexpectedly (for example due to network issues, power outages, or bugs), `pulumi` creates a new snapshot at the beginning and at the end of each operation.
 
 At the beginning of the operation, `pulumi` adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but `pulumi` couldn't record the end of it),  the next operation will ask the user to check the actual state of the resource. Depending on the user's response, `pulumi` will either remove the operation from the snapshot or import the resource . This is because it is possible that the resource has been set up correctly or that the resource creation failed. If `pulumi` aborted midway through the operation, it's impossible to know which state the resource is in.
 
@@ -117,7 +117,7 @@ type Snapshot struct {
 }
 ```
 
-Before we dive in deeper, we also need to understand a little bit about how the Pulumi engine works internally. Whenever a Pulumi operation, e.g. `pulumi up`, `pulumi destroy`, `pulumi refresh` etc. is run, the engine internally generates and executes a series of steps, to create, update, delete etc. resources. To maintain correct relationships between resources, the steps need to be executed in a partial order such that no step is executed until all of its step dependencies have successfully executed. Steps may otherwise execute concurrently.
+Before we dive in deeper, we also need to understand a little bit about how the `pulumi` engine works internally. Whenever a `pulumi` operation, e.g. `pulumi up`, `pulumi destroy`, `pulumi refresh` etc. is run, the engine internally generates and executes a series of steps, to create, update, delete etc. resources. To maintain correct relationships between resources, the steps need to be executed in a partial order such that no step is executed until all of its step dependencies have successfully executed. Steps may otherwise execute concurrently.
 
 As each step is responsible for updating a single resource, we can generate a snapshot of the state before each step starts, and after it completes. Before each step starts, we create a pending operation, and add it to the `PendingOperations` list. After that step completes, we remove the pending operation from that list, and update the `Resources` list, either adding a resource, removing it, or updating it, depending on the kind of operation we just executed.
 
@@ -133,13 +133,13 @@ Our workaround for that is to serialize the snapshot uploads, uploading one snap
 
 This impacts performance especially for large stacks, as we upload the whole snapshot every time, which can take some time if the snapshot is getting big. For the Pulumi Cloud backend we improved on this a little [at the end of 2022](https://github.com/pulumi/pulumi/pull/10788). We implemented a diff based protocol, which is especially helpful for large snapshots, as we only need to send the diff between the old and the new snapshot, and Pulumi Cloud can then reconstruct the full snapshot based on that. This reduces the amount of data that needs to be transferred, thus improving performance.
 
-However, the snapshotting is still a major bottleneck for large Pulumi deployments. Having to serially upload the snapshot twice for each step does still have a big impact on performance, especially if many resources are modified in parallel. Furthermore, the time spent performing textual diffs between snapshots scales in proportion to the size of the data being processed, which adds additional execution time to each operation.
+However, the snapshotting is still a major bottleneck for large `pulumi` operations. Having to serially upload the snapshot twice for each step does still have a big impact on performance, especially if many resources are modified in parallel. Furthermore, the time spent performing textual diffs between snapshots scales in proportion to the size of the data being processed, which adds additional execution time to each operation.
 
 ## Fast, but lacking data integrity?
 
-As long as Pulumi can complete its operation, there's no need for the intermediate checkpoints. It is possible to set the `PULUMI_SKIP_CHECKPOINTS` variable to a truthy value, and skip all the uploading of the intermittent checkpoints to the backend. This, of course, avoids the single serialization point we have sending the snapshots to the backend, and thus makes the operation much more performant.
+As long as `pulumi` can complete its operation, there's no need for the intermediate checkpoints. It is possible to set the `PULUMI_SKIP_CHECKPOINTS` variable to a truthy value, and skip all the uploading of the intermittent checkpoints to the backend. This, of course, avoids the single serialization point we have sending the snapshots to the backend, and thus makes the operation much more performant.
 
-However, it also has the serious disadvantage of compromising some of the data integrity guarantees Pulumi gives you. If anything goes wrong during the update, Pulumi has no notion of what happened until then, potentially leaving orphaned resources in the provider, or leaving resources in the state that no longer exist.
+However, it also has the serious disadvantage of compromising some of the data integrity guarantees `pulumi` gives you. If anything goes wrong during the update, `pulumi` has no notion of what happened until then, potentially leaving orphaned resources in the provider, or leaving resources in the state that no longer exist.
 
 Neither of these solutions is very satisfying, as the tradeoff is either performance or data integrity. We would like to have our cake and eat it too, and that's exactly what we're doing with journaling.
 
@@ -310,14 +310,14 @@ The full documentation of the algorithm can be found in our [developer docs](htt
 
 ### Rollout
 
-Pulumi state is a very central part of Pulumi, so we wanted to be extra careful with the rollout to make sure we don't break anything. We did this in a few stages:
+`pulumi` state is a very central part of `pulumi`, so we wanted to be extra careful with the rollout to make sure we don't break anything. We did this in a few stages:
 
-- We implemented the replay interface inside the Pulumi CLI, and ran it in parallel with the current snapshotting implementation in our tests. The snapshots were then compared automatically, and tests made to fail when the result didn't match.
+- We implemented the replay interface inside the `pulumi` CLI, and ran it in parallel with the current snapshotting implementation in our tests. The snapshots were then compared automatically, and tests made to fail when the result didn't match.
 - Since tests can't cover all possible edge cases, the next step was to run the journaler in parallel with the current snapshotting implementation internally. This was still without sending the results to the service. However we would compare the snapshot, and send an error event to the service if the snapshot didn't match. In our data warehouse we could then inspect any mismatches, and fix them. Since this does involve the service in a minor way, we would only do this if the user is using the Cloud backend.
 - Next up was adding a feature flag for the service, so journaling could be turned on selectively for some orgs. At the same time we implemented an opt-in environment variable in the CLI (`PULUMI_ENABLE_JOURNALING`), so the feature could be selectively turned on by users, if both the feature flag is enabled and the user sets the environment variable. This way we could slowly start enabling this in our repos, e.g. first in the integration tests for `pulumi/pulumi`, then in the tests for `pulumi/examples` and `pulumi/templates`, etc.
 - Allow users to start opting in.  If you want to opt-in with your org, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us), and we'll opt your org into the feature flag. Then you can begin seeing the performance improvements by setting the `PULUMI_ENABLE_JOURNALING` env variable to true.
-- Enable this for everyone. After some time with more orgs opted in, we'll enable this feature for everyone using Pulumi Cloud, and by default in the Pulumi CLI. This is currently planned for the end of January.
+- Enable this for everyone. After some time with more orgs opted in, we'll enable this feature for everyone using Pulumi Cloud, and by default in the `pulumi` CLI. This is currently planned for the end of January.
 
 ## What's next
 
-While these performance improvements hopefully make your day to day use of Pulumi quicker and more enjoyable, we're not quite done here. We're looking at some other performance improvements, that will hopefully speed up your workflows even more.
+While these performance improvements hopefully make your day to day use of `pulumi` quicker and more enjoyable, we're not quite done here. We're looking at some other performance improvements, that will hopefully speed up your workflows even more.
