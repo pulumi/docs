@@ -13,9 +13,9 @@ tags:
 
 We've been in the infrastructure business for nearly a decade, and we've never been more excited about, or in awe of, the scale we are seeing as we build out superintelligence. We are hitting a tipping point that will require entirely different approaches to how we manage and scale infrastructure in this new era.
 
-What do we mean by superintelligence? Superintelligence goes beyond present-day LLMs with agentic workflows that execute with far greater autonomy and at larger scale, on the path toward human-level and eventually superhuman intelligence. The infrastructure needed to accomplish this is greater than anything we've ever seen. Jensen Huang projects $600 billion in AI infrastructure spending this year, scaling to $3-4 trillion by decade's end. Stargate committed $500 billion to AI infrastructure in the U.S. Microsoft, Meta, and Google are each spending $70-90 billion annually on datacenters. AWS just activated Project Rainier, a data center scaling to one million custom Trainium chips for Anthropic's frontier models.
+What do we mean by superintelligence? Superintelligence means AI systems that operate with genuine autonomy—planning, reasoning, executing, adapting—at scale, on the path toward human-level and eventually superhuman intelligence. The infrastructure needed to accomplish this is greater than anything we've ever seen. Jensen Huang projects $600 billion in AI infrastructure spending this year, scaling to $3-4 trillion by decade's end. Stargate committed $500 billion to AI infrastructure in the U.S. Microsoft, Meta, and Google are each spending $70-90 billion annually on datacenters. AWS just activated Project Rainier, a data center scaling to one million custom Trainium chips for Anthropic's frontier models.
 
-Thanks to superintelligence, we're in the biggest, fastest infrastructure scaling period in the history of computing. This is exciting but comes with challenges: all of that infrastructure has to be managed, secured, scaled, made compliant, and cost effective. Legacy infrastructure tools weren't built for this reality.
+Superintelligence is driving the biggest, fastest infrastructure scaling period in the history of computing. This is exciting but comes with challenges: all of that infrastructure has to be managed, secured, scaled, made compliant, and cost effective. Legacy infrastructure tools weren't built for this reality---they add friction that slows or breaks the flywheel.
 
 This reveals an important insight:
 
@@ -59,7 +59,7 @@ This can be seen most vividly with frontier lab-scale infrastructure challenges:
 
 **Inference** means serving models to an ever-elastic sea of users across massive GPU fleets, many clouds, and distributed globally. ChatGPT, for instance, handles over 2.5 billion queries per day with sub-second time-to-first-token expectations. Traffic patterns shift by geography, time, and viral adoption, and the software must be ready to react. The difference between good and poor GPU utilization at this scale can make or break the user experience and the bank.
 
-These example share three properties that break traditional infrastructure approaches:
+These examples share three properties that break traditional infrastructure approaches:
 
 1. **Massive scale**: Thousands or millions of coordinated resources with complex architectures across multiple regions and cloud providers.  
 
