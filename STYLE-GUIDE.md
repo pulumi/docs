@@ -103,6 +103,22 @@ This is a useful suggestion.
 
 ---
 
+## Shortcode syntax
+
+Hugo supports two shortcode notations:
+
+- **`{{% shortcode %}}`** (percent signs) - Use for shortcodes that process Markdown content. Hugo processes these before Markdown rendering
+  - Examples: `notes`, `choosable`, `details`
+
+- **`{{< shortcode >}}`** (angle brackets) - Use for shortcodes that output pre-formatted content. Hugo processes these after Markdown rendering
+  - Examples: `cleanup`, `example`
+
+**Rule of thumb:** If the shortcode uses `markdownify` internally (check `layouts/shortcodes/`), use percent signs. Otherwise, use angle brackets.
+
+Both syntaxes work for plain text content, but use percent signs for shortcodes with nested Markdown like lists or headings.
+
+---
+
 ## Paragraphs and Line Breaks
 
 - Separate paragraphs with a blank line.  
