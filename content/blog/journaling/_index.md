@@ -57,17 +57,17 @@ social:
 
 ---
 
-Today we're introducing an improvement that can speed up operations up to 20x. At every deployment, and at every step within a deployment, `pulumi` saves a snapshot of your cloud infrastructure. This gives `pulumi` a current view of state even if something fails mid-operation, but it comes with a performance penalty for large stacks. Here's how we fixed it.
+Today we're introducing an improvement that can speed up operations by up to 20x. At every deployment, and at every step within a deployment, `pulumi` saves a snapshot of your cloud infrastructure. This gives `pulumi` a current view of state even if something fails mid-operation, but it comes with a performance penalty for large stacks. Here's how we fixed it.
 
 <!--more-->
 
 ## Benchmarks
 
-Before getting into the more technical details, here are a number of benchmarks demonstrating what this new experience looks like. To run the benchmarks we picked a couple of Pulumi projects: one that can be set up massively parallel, which is the worst case scenario for the old snapshot system, and another that looks a little more like a real world example.  Note that all of these benchmarks were conducted in Europe connecting to Pulumi Cloud, which runs in AWS's `us-west-2` region, so exact numbers may vary based on your location and internet connection. This should however give a good indication of the performance improvements.
+Before getting into the more technical details, here are a number of benchmarks demonstrating what this new experience looks like. To run the benchmarks we picked a couple of Pulumi projects: one that can be set up massively parallel, which is the worst case scenario for the old snapshot system, and another that looks a little more like a real world example.  Note that we conducted all of these benchmarks  in Europe connecting to Pulumi Cloud, which runs in AWS's `us-west-2` region, so exact numbers may vary based on your location and internet connection. This should however give a good indication of the performance improvements.
 
 We're benchmarking two somewhat large stacks, both of which are or were used at Pulumi. The first program sets up a website using AWS bucket objects. We're using the [aws-ts-static-website](https://github.com/pulumi/examples/tree/master/aws-ts-static-website) example here, but expand it a little bit to set up a version of our docs site. This means we're setting up more than 3000 bucket objects, with 3222 resources in total.
 
-The benchmarks were measured using `time` built-in command and using the best time in a best-of-three benchmark. The network traffic was measured using `tcpdump`, limiting the measured traffic to only the IP addresses for Pulumi Cloud. Finally `tshark` was used to process the packet captures and count the bytes sent.
+The benchmarks were measured using the `time` built-in command and using the best time in a best-of-three benchmark. The network traffic was measured using `tcpdump`, limiting the measured traffic to only the IP addresses for Pulumi Cloud. Finally, `tshark` was used to process the packet captures and count the bytes sent.
 
 All the benchmarks are run with journaling off (the default experience), with journaling on (the new experience), and finally with `PULUMI_SKIP_CHECKPOINTS=true` set. The last configuration skips uploading intermediate checkpoints to the backend, which increases performance at the cost of potentially losing track of changes that are in flight if the `pulumi` CLI loses connectivity or exits unexpectedly.
 
@@ -85,9 +85,9 @@ The second example is setting up an instance of the Pulumi app and API. Here we'
 | With journaling    | 9m45s  | 5.9MB      |
 | Skip checkpoints   | 8m39s  | 2MB        |
 
-![Time taken](time.png)
+![Comparison chart of the timings shown in the tables above](time.png)
 
-![Data sent](size.png)
+![Comparison chart of the bytes sent shown in the tables above](size.png)
 
 *Note that this feature is still behind a feature flag, but we are ready for testers. To get enrolled in the feature flag, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us). Once that's done, all you need to do is to set the `PULUMI_ENABLE_JOURNALING` environment variable to `true`, and your operations will start finishing faster.*
 
@@ -99,7 +99,7 @@ If you are interested in the more technical details read on!
 
 To make sure there are never any resources that are not tracked, even if a deployment is aborted unexpectedly (for example due to network issues, power outages, or bugs), `pulumi` creates a new snapshot at the beginning and at the end of each operation.
 
-At the beginning of the operation, `pulumi` adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but `pulumi` couldn't record the end of it),  the next operation will ask the user to check the actual state of the resource. Depending on the user's response, `pulumi` will either remove the operation from the snapshot or import the resource . This is because it is possible that the resource has been set up correctly or that the resource creation failed. If `pulumi` aborted midway through the operation, it's impossible to know which state the resource is in.
+At the beginning of the operation, `pulumi` adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but `pulumi` couldn't record the end of it),  the next operation will ask the user to check the actual state of the resource. Depending on the user's response, `pulumi` will either remove the operation from the snapshot or import the resource. This is because it is possible that the resource has been set up correctly or that the resource creation failed. If `pulumi` aborted midway through the operation, it's impossible to know which state the resource is in.
 
 Once an operation finishes, the pending operation is removed and the resource's final state is recorded in the snapshot.
 
