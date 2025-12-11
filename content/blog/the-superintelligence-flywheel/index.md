@@ -144,7 +144,7 @@ The flywheel isn’t theoretical. We're facilitating it daily with thousands of 
 
 ## The Superintelligence Flywheel is in Motion
 
-The race to build frontier AI is driving the largest infrastructure buildout in history. That complexity demands intelligent agents. Those agents enable more ambitious deployments, generating more data, producing better agents. Organizations positioned at this intersection---building infrastructure for AI while building AI for infrastructure---will define the next era of computing.
+AI is driving the largest infrastructure buildout in history—whether you're training frontier models or deploying your first ML workloads to production. That complexity demands intelligent agents. Organizations that embrace this—building infrastructure for AI while using AI for infrastructure—will define the next era of computing.
 
 The superintelligence flywheel is spinning fast and it’s only going to get faster from here.
 
