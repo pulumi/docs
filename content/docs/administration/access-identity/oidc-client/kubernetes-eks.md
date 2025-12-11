@@ -22,7 +22,7 @@ aliases:
 This document outlines the steps required to configure Pulumi to accept Elastic Kubernetes Service (EKS) id_tokens to be exchanged for a personal access token. With this configuration, Kubernetes pods authenticate to Pulumi Cloud using OIDC tokens issued by EKS.
 
 {{< notes type="info" >}}
-This guide demonstrates using `personal` tokens. Depending on your [Pulumi edition](/docs/pulumi-cloud/access-management/oidc-client/#token-types-by-edition), you may also use `organization` or `team` tokens by adjusting the token type in the authorization policies and the `requested-token-type` parameter.
+This guide demonstrates using `personal` tokens. Depending on your [Pulumi edition](/docs/pulumi-cloud/access-management/oidc-client/#token-types-by-edition), you may also use `organization` or `team` tokens by adjusting the token type in the authorization policies and the `pulumi login` parameters.
 {{< /notes >}}
 
 ## Prerequisites
@@ -148,35 +148,20 @@ For example to reference the pod name, you would use `"kubernetes.io".pod.name` 
 
 import * as kubernetes from "@pulumi/kubernetes";
 
-const tokenParams = {
-    "audience": "urn:pulumi:org:ORG_NAME",
-    "token_type": "urn:pulumi:token-type:access_token:personal",
-    "expiration": 2 * 60 * 60,
-    "scope": "user:USER_LOGIN"
+const loginParams = {
+    "org_name": "MY_ORG_NAME",
+    "user_login": "MY_USER_LOGIN"
 }
 
 const script = new kubernetes.core.v1.ConfigMap("script", {
     data: {
         "entrypoint.sh": `#!/bin/bash
-apt -qq install -y jq
-
 # This is the location of the EKS id token
 EKS_ID_TOKEN=$(cat /var/run/secrets/eks.amazonaws.com/serviceaccount/token)
 
 echo "OIDC Token:"
 echo $EKS_ID_TOKEN
-export PULUMI_ACCESS_TOKEN=$(curl -sS -X POST  \
-    -H 'Content-Type: application/x-www-form-urlencoded' \
-    -d 'audience=${tokenParams.audience}' \
-    -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
-    -d 'subject_token_type=urn:ietf:params:oauth:token-type:id_token' \
-    -d 'requested_token_type=${tokenParams.token_type}' \
-    -d 'expiration=${tokenParams.expiration}' \
-    -d 'scope=${tokenParams.scope}' \
-    -d "subject_token=$EKS_ID_TOKEN" \
-    https://api.pulumi.com/api/oauth/token | jq -r '.access_token')
-echo "Access Token:"
-echo $PULUMI_ACCESS_TOKEN
+pulumi login --oidc-token $EKS_ID_TOKEN --oidc-org ${loginParams.org_name} --oidc-user ${loginParams.user_login}
 pulumi whoami
 `
     }
