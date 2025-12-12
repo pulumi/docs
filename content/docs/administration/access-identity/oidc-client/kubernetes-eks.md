@@ -22,7 +22,7 @@ aliases:
 This document outlines the steps required to configure Pulumi to accept Elastic Kubernetes Service (EKS) id_tokens to be exchanged for a personal access token. With this configuration, Kubernetes pods authenticate to Pulumi Cloud using OIDC tokens issued by EKS.
 
 {{< notes type="info" >}}
-This guide demonstrates using `personal` tokens. Depending on your [Pulumi edition](/docs/pulumi-cloud/access-management/oidc-client/#token-types-by-edition), you may also use `organization` or `team` tokens by adjusting the token type in the authorization policies and the `pulumi login` parameters.
+This guide demonstrates using `personal` tokens. Depending on your [Pulumi edition](/docs/administration/access-identity/oidc-client/#token-types-by-edition), you may also use `organization` or `team` tokens by adjusting the token type in the authorization policies and the `pulumi login` parameters.
 {{< /notes >}}
 
 ## Prerequisites
