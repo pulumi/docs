@@ -22,12 +22,10 @@ management solution, with the command-line interface serving as the primary inte
 cloud service providing centralized state management, deployment orchestration, policy enforcement, and collaboration
 features.
 
-The cloud service architecture follows a microservices pattern deployed across multiple availability zones within cloud
-provider regions. The core service layer provides RESTful application programming interfaces for all platform
+On its core service layer the cloud service provides RESTful application programming interfaces for all platform
 operations, while specialized components handle specific functional domains including deployment execution, resource
 discovery, policy evaluation, workflow orchestration, and artificial intelligence-powered assistance. This separation of
-concerns allows each component to scale independently based on demand patterns while maintaining clear service
-boundaries.
+concerns allows each component to scale independently based on demand patterns while maintaining service boundaries.
 
 ### Infrastructure Deployment Model
 
@@ -283,7 +281,7 @@ aggregation collects logs from all service instances and indexes them for full-t
 retention policies balance the value of historical logs for incident investigation against storage costs, with different
 retention periods for various log categories based on their compliance and operational requirements.
 
-Distributed tracing provides end-to-end visibility into request flows across microservice boundaries. When a request
+Distributed tracing provides end-to-end visibility into request flows across service boundaries. When a request
 enters the system, a unique trace identifier is generated and propagated through all service-to-service calls. Each
 service records timing information and metadata about its request processing, creating trace spans that are assembled
 into complete request traces. Trace sampling strategies balance the observability value of complete traces against the
