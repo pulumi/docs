@@ -21,10 +21,81 @@ multi-tenant cloud service infrastructure. These components work in concert to p
 management solution. The command-line interface serves as the primary interaction point for end users, while the cloud
 service provides centralized state management, deployment orchestration, policy enforcement, and collaboration features.
 
+```mermaid
+flowchart TD
+    %% Pulumi Users / Systems
+    subgraph Users
+        A1[Developers #40;CLI on laptop#41;]
+        A2[CI/CD Agents / Runners]
+        A3[Automation API Clients]
+    end
+
+    %% Pulumi CLI Process
+    subgraph CLI
+        B1[Language Host #40;executes Pulumi program#41;]
+        B2[Deployment Engine #40;diffs desired vs current state#41;]
+        B3[Resource Providers #40;via plugins#41;]
+    end
+
+    %% Cloud Provider APIs
+    subgraph CloudAPIs
+        C1[AWS]
+        C2[Azure]
+        C3[GCP]
+        C4[Kubernetes]
+        C5[Other providers]
+    end
+
+    %% Backend (State)
+    subgraph Backend
+        D1[Pulumi Cloud #40;managed REST API#41;]
+        D2[DIY Backends #40;S3, Blob, Filesystem#41;]
+    end
+
+    %% Connections
+    A1 -->|Invoke Pulumi commands| B1
+    A2 -->|Invoke Pulumi commands| B1
+    A3 -->|Invoke Pulumi commands| B1
+
+    B1 --> B2
+    B2 --> B3
+    B3 -->|Direct API calls| C1
+    B3 --> C2
+    B3 --> C3
+    B3 --> C4
+    B3 --> C5
+
+    B2 -->|Store/read state, secrets, metadata| D1
+    B2 --> D2
+```
+
 On its core service layer the cloud service provides RESTful APIs for all platform operations, while specialized
 components handle specific functional domains including deployment execution, resource discovery, policy evaluation,
-workflow orchestration, and artificial intelligence-powered assistance. This separation of concerns allows each component
-to scale independently based on demand patterns while maintaining service boundaries.
+workflow orchestration, and artificial intelligence-powered assistance. This separation of concerns allows each
+component to scale independently based on demand patterns while maintaining service boundaries.
+
+```mermaid
+flowchart TD
+    %% Pulumi Clients
+    Clients[Pulumi Clients: CLI, SDK, CI/CD Runners]
+
+    %% Pulumi Cloud Core
+    subgraph PulumiCloud["Pulumi Cloud Service"]
+        direction TB
+        CoreAPI[Core Service Layer: RESTful APIs for all platform operations]
+
+        subgraph Components["Specialized Components"]
+            Deployment[Deployment Execution]
+            ResourceDiscovery[Resource Discovery]
+            PolicyEvaluation[Policy Evaluation]
+            Workflow[Workflow Orchestration]
+            AI[AI-Powered Assistance]
+        end
+    end
+
+    %% Connection
+    Clients --> CoreAPI
+```
 
 ### Infrastructure Deployment Model
 
@@ -109,11 +180,21 @@ Regardless of backend choice, the client implements consistent state locking mec
 modifications that could corrupt state data.
 
 The client communicates with the cloud service through RESTful APIs, with all requests authenticated using access
-tokens. Request compression reduces bandwidth consumption for large payloads, while retry logic handles transient network
-failures. Distributed tracing headers are injected into requests, enabling end-to-end observability across the
+tokens. Request compression reduces bandwidth consumption for large payloads, while retry logic handles transient
+network failures. Distributed tracing headers are injected into requests, enabling end-to-end observability across the
 client-service boundary.
 
 ## Cryptographic Architecture
+
+```mermaid
+flowchart TD
+    KMS["External KMS / HSM (Cloud)<br>Key Encryption Keys - Tier 1"]
+    DEK["Data Encryption Keys<br>(Symmetric Keys)"]
+    ENC["Encrypted Customer Content<br>(Secrets, Config, Sensitive State)"]
+
+    KMS -->|Encrypt/Decrypt| DEK
+    DEK -->|Envelope Encryption| ENC
+```
 
 ### Encryption Key Hierarchy
 
