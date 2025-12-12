@@ -1,6 +1,6 @@
 ---
 title: Pulumi Platform Security Whitepaper
-meta_desc: A whitepaper of security topics and how they relate to the Pulumi Platform.
+meta_desc: Technical whitepaper covering Pulumi platform architecture, cryptographic security, operational commitments, and SOC 2 Type II compliance.
 ---
 
 Last updated: December 2025
@@ -10,7 +10,7 @@ Last updated: December 2025
 The Pulumi Cloud platform represents a comprehensive infrastructure-as-code delivery system designed to enable
 organizations to define, deploy, and manage cloud infrastructure through declarative programming interfaces. This
 document provides a detailed technical overview of the platform's architecture, security mechanisms, and operational
-commitments, intended for engineering and security audiences evaluating the system's design and security posture.
+commitments. It is intended for engineering and security audiences evaluating the system's design and security posture.
 
 ## High-Level Architecture
 
@@ -18,14 +18,13 @@ commitments, intended for engineering and security audiences evaluating the syst
 
 The Pulumi platform consists of two primary architectural components: a client-side command-line interface and a
 multi-tenant cloud service infrastructure. These components work in concert to provide a complete infrastructure
-management solution, with the command-line interface serving as the primary interaction point for end users and the
-cloud service providing centralized state management, deployment orchestration, policy enforcement, and collaboration
-features.
+management solution. The command-line interface serves as the primary interaction point for end users, while the cloud
+service provides centralized state management, deployment orchestration, policy enforcement, and collaboration features.
 
-On its core service layer the cloud service provides RESTful application programming interfaces for all platform
-operations, while specialized components handle specific functional domains including deployment execution, resource
-discovery, policy evaluation, workflow orchestration, and artificial intelligence-powered assistance. This separation of
-concerns allows each component to scale independently based on demand patterns while maintaining service boundaries.
+On its core service layer the cloud service provides RESTful APIs for all platform operations, while specialized
+components handle specific functional domains including deployment execution, resource discovery, policy evaluation,
+workflow orchestration, and artificial intelligence-powered assistance. This separation of concerns allows each component
+to scale independently based on demand patterns while maintaining service boundaries.
 
 ### Infrastructure Deployment Model
 
@@ -42,23 +41,21 @@ segments with no direct internet access, communicating through internal service 
 storage resources are further isolated in dedicated network zones with restrictive access controls allowing only
 authorized application connections.
 
-In fully managed cloud deployments the platform is deployed into distinct cloud provider tenants and virtual private
+In fully managed cloud deployments, the platform is deployed into distinct cloud provider tenants and virtual private
 networks.
 
 ### Core Service Components
 
-The platform's application programming interface service forms the central hub for all platform operations, handling
-authentication, authorization, resource management, and coordinating with specialized subsystems. This service maintains
-the primary data model representing organizations, projects, stacks, deployment history, and configuration state. It
-implements comprehensive role-based access control ensuring that all operations respect organizational access policies
-and user permissions.
+The platform's API service forms the central hub for all platform operations, handling authentication, authorization,
+resource management, and coordinating with specialized subsystems. This service maintains the primary data model
+representing organizations, projects, stacks, deployment history, and configuration state. It implements comprehensive
+role-based access control ensuring that all operations respect organizational access policies and user permissions.
 
 Deployment orchestration represents a critical functional domain within the platform. When users initiate infrastructure
 operations, requests are queued and subsequently processed by specialized execution components. These components operate
 in isolated execution environments, pulling the latest infrastructure code, applying the requested changes against cloud
-provider application programming interfaces, and capturing the resulting state. Execution environments are ephemeral,
-created for each operation and destroyed upon completion, ensuring isolation between deployments and preventing state
-pollution across operations.
+provider APIs, and capturing the resulting state. Execution environments are ephemeral, created for each operation and
+destroyed upon completion, ensuring isolation between deployments and preventing state pollution across operations.
 
 Resource discovery and policy compliance functions are handled by specialized scanning and evaluation services. The
 scanning component connects to cloud provider APIs to inventory existing infrastructure resources, building a
@@ -76,21 +73,21 @@ tooling and credentials, reducing job startup latency while maintaining isolatio
 
 The platform employs a multi-layered data storage strategy optimized for different access patterns and data
 characteristics. Structured operational data including user accounts, organizations, resource metadata, deployment
-history, and access control policies resides in a managed relational database service. The database is deployed in a
-highly available configuration with automatic failover capabilities and read replicas to scale query workloads. All
-connections to the database utilize transport layer security with enforced minimum protocol versions, and data at rest
-is encrypted using provider-managed encryption services.
+history, and access control policies resides in a managed relational database service. The platform deploys the database
+in a highly available configuration with automatic failover capabilities and read replicas to scale query workloads. All
+connections to the database utilize transport layer security with enforced minimum protocol versions, and the platform
+encrypts data at rest using provider-managed encryption services.
 
-Unstructured data including infrastructure state checkpoints, policy pack artifacts, and template repositories is stored
-in object storage services. State checkpoints represent the most critical data in the system, as they contain the
-complete state of managed infrastructure including resource identifiers, configuration values, and inter-resource
-dependencies. These checkpoints are stored with versioning enabled, allowing recovery from accidental modifications or
-deletions. Cross-region replication ensures that checkpoint data remains available even in the event of regional
-outages.
+The platform stores unstructured data including infrastructure state checkpoints, policy pack artifacts, and template
+repositories in object storage services. State checkpoints represent the most critical data in the system, as they
+contain the complete state of managed infrastructure including resource identifiers, configuration values, and
+inter-resource dependencies. The platform stores these checkpoints with versioning enabled, allowing recovery from
+accidental modifications or deletions. Cross-region replication ensures that checkpoint data remains available even in
+the event of regional outages.
 
 Caching infrastructure provides performance optimization for frequently accessed data and reduces load on backend
-storage systems. Session information, metadata caches, and query results are stored in managed cache clusters with
-automatic scaling and failure detection. The caching layer implements appropriate cache invalidation strategies to
+storage systems. The platform stores session information, metadata caches, and query results in managed cache clusters
+with automatic scaling and failure detection. The caching layer implements appropriate cache invalidation strategies to
 maintain consistency while maximizing hit rates.
 
 Search functionality is provided through a managed search cluster that indexes resource metadata, enabling fast
@@ -111,10 +108,10 @@ cloud state storage and self-managed options including local filesystems, object
 Regardless of backend choice, the client implements consistent state locking mechanisms to prevent concurrent
 modifications that could corrupt state data.
 
-The client communicates with the cloud service through RESTful application programming interfaces, with all requests
-authenticated using access tokens. Request compression reduces bandwidth consumption for large payloads, while retry
-logic handles transient network failures. Distributed tracing headers are injected into requests, enabling end-to-end
-observability across the client-service boundary.
+The client communicates with the cloud service through RESTful APIs, with all requests authenticated using access
+tokens. Request compression reduces bandwidth consumption for large payloads, while retry logic handles transient network
+failures. Distributed tracing headers are injected into requests, enabling end-to-end observability across the
+client-service boundary.
 
 ## Cryptographic Architecture
 
@@ -122,9 +119,10 @@ observability across the client-service boundary.
 
 The platform implements a sophisticated three-tier key hierarchy that separates key management responsibilities and
 enables flexible key rotation without requiring re-encryption of all data. At the top of the hierarchy are key
-encryption keys, which are never stored unencrypted within the platform's data stores. These keys reside in external key
-management services operated by cloud infrastructure providers or, for self-hosted deployments, in secure local key
-storage protected by operating system access controls and hardware security modules when available.
+encryption keys, which are never stored unencrypted within the platform's data stores. For cloud deployments, these keys
+reside in external key management services operated by cloud infrastructure providers. For self-hosted deployments, they
+reside in secure local key storage protected by operating system access controls and hardware security modules when
+available.
 
 Data encryption keys form the second tier of the hierarchy. These symmetric keys are generated using cryptographically
 secure external key management services and are used for the actual encryption of content. Data encryption keys are
@@ -273,8 +271,8 @@ Metrics collection captures time-series data about service health, resource util
 business-level indicators. Metrics are aggregated at multiple granularities, from individual service instance metrics to
 cluster-wide and system-wide aggregates. Dimensional metrics enable sophisticated queries that slice data across
 multiple attributes such as service version, deployment environment, customer organization, and request characteristics.
-Metric data feeds real-time dashboards displayed to operations teams and powers automated alerting based on threshold
-violations or anomaly detection.
+This metric data feeds real-time dashboards displayed to operations teams. It also powers automated alerting based on
+threshold violations or anomaly detection.
 
 Structured logging captures detailed information about service operations, errors, and security-relevant events. Log
 aggregation collects logs from all service instances and indexes them for full-text search and analytical queries. Log
@@ -398,7 +396,7 @@ reflects defense-in-depth principles with multiple layers of protection, ensurin
 compromises overall security posture.
 
 The separation of key management responsibilities through hierarchical key architectures, support for customer-managed
-encryption keys, and cryptographic binding between encryption layers demonstrates mature approach to data protection.
+encryption keys, and cryptographic binding between encryption layers demonstrates a mature approach to data protection.
 Authentication and authorization mechanisms provide flexible integration with organizational identity providers while
 maintaining strong security guarantees. Comprehensive audit logging and monitoring enable both real-time security event
 detection and post-facto incident investigation.
