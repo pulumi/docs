@@ -9,7 +9,9 @@ menu:
         name: Secrets Handling
         parent: iac-concepts
         weight: 80
+        identifier: iac-concepts-secrets
     concepts:
+        identifier: secrets
         weight: 7
 aliases:
 - /docs/intro/concepts/secrets/
