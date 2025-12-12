@@ -74,15 +74,23 @@ All the benchmarks are run with journaling off (the default experience), with jo
 |                    | Time   | Bytes sent |
 |--------------------|--------|------------|
 | Without journaling | 58m26s | 16.5MB     |
-| With journaling    | 03m05s | 2.3MB      |
-| Skip checkpoints   | 01m33s | 0.5MB      |
+| With journaling    | 02m50s | 2.3MB      |
+| Skip checkpoints   | 01m33s | 1.9MB      |
+
+These numbers are for setting up the stack from scratch. Now let's have a look at what this looks like if we only change half the resources, but the remaining ones remain unchanged:
+
+|                    | Time   | Bytes sent |
+|--------------------|--------|------------|
+| Without journaling | 34m49s | 13.8MB     |
+| With journaling    | 01m45s | 2.3MB      |
+| Skip checkpoints   | 01m02s | 2.1MB      |
 
 The second example is setting up an instance of the Pulumi app and API. Here we'll have an example that's a bit more dominated by the cost of setting up the actual infrastructure in the cloud, but we still have a very noticeable improvement in the time it takes to set up the stack.
 
 |                    | Time   | Bytes sent |
 |--------------------|--------|------------|
 | Without journaling | 17m52s | 18.5MB     |
-| With journaling    | 9m45s  | 5.9MB      |
+| With journaling    | 9m12s  | 5.9MB      |
 | Skip checkpoints   | 8m39s  | 2MB        |
 
 ![Comparison chart of the timings shown in the tables above](time.png)
