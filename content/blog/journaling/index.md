@@ -44,11 +44,11 @@ social:
         # The Results
         In benchmarks when creating a 3,000+ resource stack:
 
-            Time dropped from 58 minutes to 3 minutes
+            Time dropped from 58 minutes to 2.5 minutes
             Network traffic cut from 16.5MB to 2.3MB
 
         # Why This Matters
-        You get the speed without sacrificing data integrity. Unlike SKIP_CHECKPOINTS, journaling still tracks all in-flight operations. If something fails mid-deployment, `pulumi` still knows exactly what happened.
+        You get the speed without sacrificing data integrity. Journaling still tracks all in-flight operations. If something fails mid-deployment, `pulumi` knows exactly what happened.
 
         # Get Started
         This feature is in opt-in testing. Reach out on Pulumi Community Slack or through Support to get your org enrolled. Then set PULUMI_ENABLE_JOURNALING=true.
@@ -69,13 +69,12 @@ We're benchmarking two somewhat large stacks, both of which are or were used at 
 
 The benchmarks were measured using the `time` built-in command and using the best time in a best-of-three benchmark. The network traffic was measured using `tcpdump`, limiting the measured traffic to only the IP addresses for Pulumi Cloud. Finally, `tshark` was used to process the packet captures and count the bytes sent.
 
-All the benchmarks are run with journaling off (the default experience), with journaling on (the new experience), and finally with `PULUMI_SKIP_CHECKPOINTS=true` set. The last configuration skips uploading intermediate checkpoints to the backend, which increases performance at the cost of potentially losing track of changes that are in flight if the `pulumi` CLI loses connectivity or exits unexpectedly.
+All the benchmarks are run with journaling off (the default experience), with journaling on (the new experience).
 
 |                    | Time   | Bytes sent |
 |--------------------|--------|------------|
 | Without journaling | 58m26s | 16.5MB     |
 | With journaling    | 02m50s | 2.3MB      |
-| Skip checkpoints   | 01m33s | 1.9MB      |
 
 These numbers are for setting up the stack from scratch. Now let's have a look at what this looks like if we only change half the resources, but the remaining ones remain unchanged:
 
@@ -83,7 +82,6 @@ These numbers are for setting up the stack from scratch. Now let's have a look a
 |--------------------|--------|------------|
 | Without journaling | 34m49s | 13.8MB     |
 | With journaling    | 01m45s | 2.3MB      |
-| Skip checkpoints   | 01m02s | 2.1MB      |
 
 The second example is setting up an instance of the Pulumi app and API. Here we'll have an example that's a bit more dominated by the cost of setting up the actual infrastructure in the cloud, but we still have a very noticeable improvement in the time it takes to set up the stack.
 
@@ -91,7 +89,6 @@ The second example is setting up an instance of the Pulumi app and API. Here we'
 |--------------------|--------|------------|
 | Without journaling | 17m52s | 18.5MB     |
 | With journaling    | 9m12s  | 5.9MB      |
-| Skip checkpoints   | 8m39s  | 2MB        |
 
 ![Comparison chart of the timings shown in the tables above](time.png)
 
