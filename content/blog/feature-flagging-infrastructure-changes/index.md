@@ -25,7 +25,7 @@ Check out the code here: [01: Flag Application With LaunchDarkly](https://github
 
 When you define flags in your infrastructure as code, you can configure them alongside all the supporting infrastructure your code needs. You can also encourage flag creation as a best practice in Pulumi [components](https://www.pulumi.com/docs/iac/concepts/components/) or [templates](https://www.pulumi.com/docs/idp/developer-portals/templates/).
 
-With Pulumi, you can use [any Terraform provider](https://www.pulumi.com/docs/iac/concepts/resources/providers/#terraform-bridge-providers) to manage your feature flags, whether that's LaunchDarkly, Statsig, Split, Flagsmith, or any other feature flagging tool with Terraform support. This lets you define flags, targeting rules, and the infrastructure they control in a single codebase. The example uses the [LaunchDarkly provider](https://registry.terraform.io/providers/launchdarkly/launchdarkly/latest/docs) to create flags and supporting infrastructure:
+With Pulumi, you can use [any Terraform provider](https://www.pulumi.com/docs/iac/concepts/resources/providers/#terraform-bridge-providers) to manage your feature flags, whether that's LaunchDarkly, Statsig, Split, Flagsmith, or any other feature flagging tool with Terraform support. This lets you define flags, targeting rules, and the infrastructure they control in a single codebase. The example uses the LaunchDarkly provider to create flags and supporting infrastructure:
 
 ```typescript
 const flag = new launchdarkly.FeatureFlag("example-flag", {
