@@ -438,22 +438,7 @@ return await Deployment.RunAsync(() =>
 {{% choosable language java %}}
 
 ```java
-import com.pulumi.Pulumi;
-import com.pulumi.resources.Stash;
-import com.pulumi.resources.StashArgs;
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(ctx -> {
-            var firstDeployer = new Stash("firstDeployer", StashArgs.builder()
-                .input(System.getProperty("user.name"))
-                .build());
-
-            // The output will always show the original deployer, even if others run updates later
-            ctx.export("originalDeployer", firstDeployer.output());
-        });
-    }
-}
+// Coming later
 ```
 
 {{% /choosable %}}
@@ -544,23 +529,7 @@ return await Deployment.RunAsync(() =>
 {{% choosable language java %}}
 
 ```java
-import com.pulumi.Pulumi;
-import com.pulumi.resources.Stash;
-import com.pulumi.resources.StashArgs;
-import java.time.Instant;
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(ctx -> {
-            var creationTime = new Stash("creationTime", StashArgs.builder()
-                .input(Instant.now().toString())
-                .build());
-
-            // This will always return the original creation time
-            ctx.export("firstDeployed", creationTime.output());
-        });
-    }
-}
+// Coming later
 ```
 
 {{% /choosable %}}
@@ -671,29 +640,7 @@ return await Deployment.RunAsync(() =>
 {{% choosable language java %}}
 
 ```java
-import com.pulumi.Pulumi;
-import com.pulumi.core.Output;
-import com.pulumi.resources.Stash;
-import com.pulumi.resources.StashArgs;
-import com.pulumi.random.RandomPassword;
-import com.pulumi.random.RandomPasswordArgs;
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(ctx -> {
-            // Generate a random password once
-            var randomPassword = generatePassword();
-
-            // Stash it so it doesn't change on subsequent deployments
-            var passwordStash = new Stash("passwordStash", StashArgs.builder()
-                .input(Output.secret(randomPassword.result()))
-                .build());
-
-            // Use the stashed password for database configuration
-            ctx.export("dbPassword", passwordStash.output());
-        });
-    }
-}
+// Coming later
 ```
 
 {{% /choosable %}}
