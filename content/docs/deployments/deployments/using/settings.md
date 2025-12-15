@@ -142,7 +142,7 @@ For details on supported clouds see [OIDC Setup for Pulumi Deployments](/docs/de
 
 ## Dependency Caching
 
-When using Pulumi-managed deployment agents, you have the option to speed up deployments using dependency caching.
+When using Pulumi-managed agents, you can speed up deployments using dependency caching.
 
 {{% notes type="info" %}}
 If you have configured the stack to use a [Customer-managed agent](/docs/deployments/deployments/customer-managed-agents/) runner pool this option is unavailable. Running a customer-managed agent pool gives you full control over the lifetime of the agent and its caching.
