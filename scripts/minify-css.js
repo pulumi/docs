@@ -1,7 +1,7 @@
 const fs = require("fs");
 const glob = require("glob");
 const postcss = require("postcss");
-const purgecss = require("@fullhuman/postcss-purgecss");
+const { purgeCSSPlugin } = require("@fullhuman/postcss-purgecss");
 const cssnano = require("cssnano");
 
 function minifyCSS(filePath) {
@@ -18,7 +18,7 @@ function minifyCSS(filePath) {
 
         // PurgeCSS removes unused CSS by analyzing the files of the built website.
         // https://purgecss.com/
-        purgecss({
+        purgeCSSPlugin({
             content: [ "public/**/*.html", "public/js/bundle.*.js" ],
             // PurgeCSS looks through all the built files but, making an exception here
             // to skip the files in the azure-native-v2 package because it is causing

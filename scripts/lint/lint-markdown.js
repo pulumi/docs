@@ -1,7 +1,8 @@
 const fs = require("fs");
 const yaml = require("js-yaml");
-const markdownlint = require("markdownlint");
+const { lint: markdownlint, readConfig } = require("markdownlint/sync");
 const path = require("path");
+const markdownIt = require("markdown-it");
 
 // BEHAVIOR SWITCH: Set to false to use old behavior, true for new behavior
 const USE_NEW_FRONTMATTER_VALIDATION = true;
@@ -196,6 +197,47 @@ function getMarkdownFiles(parentPath) {
 }
 
 /**
+ * Finds the appropriate .markdownlint.json config file for a given file path
+ * by walking up the directory tree.
+ *
+ * @param {string} filePath The absolute path to the markdown file
+ * @returns {Object} The configuration object for this file
+ */
+function getConfigForFile(filePath) {
+    const baseConfigPath = path.resolve(__dirname, "../../.markdownlint-base.json");
+    let currentDir = path.dirname(filePath);
+    const rootDir = path.resolve(__dirname, "../..");
+
+    // Walk up the directory tree looking for .markdownlint.json
+    while (currentDir.startsWith(rootDir)) {
+        const configPath = path.join(currentDir, ".markdownlint.json");
+
+        if (fs.existsSync(configPath)) {
+            try {
+                return readConfig(configPath);
+            } catch (e) {
+                console.warn(`Warning: Failed to read config at ${configPath}: ${e.message}`);
+            }
+        }
+
+        // Move up one directory
+        const parentDir = path.dirname(currentDir);
+        if (parentDir === currentDir) {
+            break;
+        }
+        currentDir = parentDir;
+    }
+
+    // Fallback to base config
+    if (fs.existsSync(baseConfigPath)) {
+        return readConfig(baseConfigPath);
+    }
+
+    // If no config files exist, return null (will use default hardcoded config)
+    return null;
+}
+
+/**
  * Groups the result of linting a file for markdown errors.
  *
  * @param {Object} result Results of lint errors. See: https://github.com/DavidAnson/markdownlint#usage
@@ -259,72 +301,64 @@ function groupLintErrorOutput(result) {
 const filesToLint = getMarkdownFiles(`../../content`);
 
 /**
- * The config options for lint markdown files. All rules
- * are enabled by default. The config object let us customize
- * what rules we enfore and how we enforce them.
- *
- * See: https://github.com/DavidAnson/markdownlint
+ * Custom rule for checking Hugo relrefs
  */
-const opts = {
-    // The array of markdown files to lint.
-    files: filesToLint.files,
-    config: {
-        // Allow inline HTML.
-        MD033: false,
-        // Do not enforce line length.
-        MD013: false,
-        // Don't force language specification on code blocks.
-        MD040: false,
-        // Allow hard tabs.
-        MD010: false,
-        // Allow punctuation in headers.
-        MD026: false,
-        // Allow dollars signs in code blocks without values
-        // immediately below the command.
-        MD014: false,
-        // Allow all code block styles in a file. Code block styles
-        // are created equal and we shall not discriminate.
-        MD046: false,
-        // Allow indents on unordered lists to be 4 spaces instead of 2.
-        MD007: { indent: 4 },
-        // Allow duplicate headings.
-        MD024: false,
-        // Allow headings to be indendented.
-        MD023: false,
-        // Allow blank lines in blockquotes.
-        MD028: false,
-        // Allow indentation in unordered lists.
-        MD007: false,
-        // Allow bare URLs.
-        MD034: false,
-        // Allow bold/italicized paragraphs
-        MD036: false,
-    },
-    customRules: [
-        {
-            names: ["relref"],
-            description: "Hugo relrefs are no longer supported. Use standard [Markdown](/links) instead",
-            tags: ["hugo-relref"],
-            function: (params, onError) => {
-                params.tokens
-                    .filter(token => {
-                        return token.type === "inline";
-                    })
-                    .forEach(inline => {
-                        const line = inline.content;
-                        if (line.match(/{{<[ ]?relref ".+"[ ]?>}}/)) {
-                            onError({
-                                lineNumber: inline.lineNumber,
-                            });
-                        }
-                    });
-            },
+const customRules = [
+    {
+        names: ["relref"],
+        description: "Hugo relrefs are no longer supported. Use standard [Markdown](/links) instead",
+        tags: ["hugo-relref"],
+        function: (params, onError) => {
+            params.tokens
+                .filter(token => {
+                    return token.type === "inline";
+                })
+                .forEach(inline => {
+                    const line = inline.content;
+                    if (line.match(/{{<[ ]?relref ".+"[ ]?>}}/)) {
+                        onError({
+                            lineNumber: inline.lineNumber,
+                        });
+                    }
+                });
         },
-    ],
-};
+    },
+];
 
-// Lint the markdown files.
-const result = markdownlint.sync(opts);
+// Lint markdown files with per-directory configs
+// Group files by their config to minimize repeated linting calls
+const filesByConfig = {};
+
+filesToLint.files.forEach(file => {
+    const config = getConfigForFile(file);
+    const configKey = JSON.stringify(config);
+
+    if (!filesByConfig[configKey]) {
+        filesByConfig[configKey] = {
+            config: config,
+            files: []
+        };
+    }
+
+    filesByConfig[configKey].files.push(file);
+});
+
+// Lint each group of files with their shared config
+let result = {};
+
+Object.values(filesByConfig).forEach(group => {
+    const opts = {
+        files: group.files,
+        markdownItFactory: () => markdownIt(),
+        config: group.config,
+        customRules: customRules,
+    };
+
+    const groupResult = markdownlint(opts);
+
+    // Merge results
+    result = { ...result, ...groupResult };
+});
 
 // Group the lint errors by file.
 const errors = groupLintErrorOutput(result);
