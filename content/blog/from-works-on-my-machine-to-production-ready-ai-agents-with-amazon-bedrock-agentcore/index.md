@@ -951,7 +951,7 @@ Here's the complete architecture:
 
 When evaluating AgentCore for production, consider these cost factors:
 
-**AgentCore Runtime** is priced per session-second. For fraud detection agents that typically run 10-30 seconds per transaction, this is cost-effective compared to maintaining always-on ECS containers. However, if your agents process thousands of transactions per second, the per-session costs add up. Consider batching or using Lambda for simple, fast agents.
+**AgentCore Runtime** charges per session-second. For fraud detection agents that typically run 10-30 seconds per transaction, this is cost-effective compared to maintaining always-on ECS containers. However, if your agents process thousands of transactions per second, the per-session costs add up. Consider batching or using Lambda for simple, fast agents.
 
 **Model costs** dominate most deployments. Claude Opus 4.5 (used for reasoning) costs significantly more than Claude Haiku (used for memory extraction). We deliberately use Haiku for semantic extraction to keep memory costs low while maintaining accuracy. For high-volume production, consider whether Haiku or even smaller models could handle your primary reasoning.
 
