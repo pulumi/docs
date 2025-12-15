@@ -54,7 +54,7 @@ This event-driven pattern is becoming [the new stack for AI agents](https://then
 
 The emerging architecture looks like this:
 
-![img.png](img.png)
+![Architecture diagram showing event-driven AI agents using Kafka, Flink, and MCP protocols](img.png)
 
 In production, you might use Amazon MSK (Managed Kafka), Amazon SQS, or EventBridge to deliver transaction events to your agent. The agent processes each event autonomously, takes action (blocking cards, creating tickets), and publishes results back to another topic.
 
@@ -934,7 +934,7 @@ The MCP Gateway tools provide additional context (merchant reputation, risk scor
 
 Here's the complete architecture:
 
-![img_1.png](img_1.png)
+![Complete architecture diagram showing fraud detection agent with AgentCore, memory, guardrails, and MCP Gateway](img_1.png)
 
 ## Key Takeaways
 
