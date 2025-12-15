@@ -32,7 +32,7 @@ Complete code: [GitHub](https://github.com/dirien/from-works-on-my-machine-to-pr
 
 ## The Challenge: Bridging the Gap
 
-Building AI agents is getting easier. Tools like the [Strands Agents SDK](https://aws.amazon.com/blogs/opensource/introducing-strands-agents-an-open-source-ai-agents-sdk/) let you create functional agents in just a few lines of code. But production deployment introduces challenges that local development doesn't surface:
+Building AI agents is getting easier. Tools like the [Strands Agents SDK](https://aws.amazon.com/blogs/opensource/introducing-strands-agents-an-open-source-ai-agents-sdk/) let you create functional agents in just a few lines of code. Production deployment introduces challenges:
 
 - **Stateless to Stateful**: How does your agent remember previous conversations?
 - **Single-tenant to Multi-tenant**: How do you isolate different users' data?
@@ -88,6 +88,7 @@ from strands.models import BedrockModel
 from tools import get_user_profile, get_recent_transactions, block_credit_card
 
 # Configure Bedrock model with cross-region inference for Claude Opus 4.5
+# Note: Cross-region inference may have different pricing than single-region
 bedrock_model = BedrockModel(
     model_id="us.anthropic.claude-opus-4-5-20251101-v1:0",
     region_name="us-east-1",
@@ -622,7 +623,7 @@ oauth2_credential_provider = bedrock.AgentcoreOauth2CredentialProvider(
 )
 ```
 
-**Connecting the pieces:** Finally, we create a Gateway Target that links the Gateway to the MCP server endpoint, specifying which credential provider to use for outbound calls:
+**Connecting the pieces:** Finally, we create a Gateway Target. This links the Gateway to the MCP server endpoint. It also specifies which credential provider to use for outbound calls:
 
 ```python
 # Connect Gateway to MCP Server
