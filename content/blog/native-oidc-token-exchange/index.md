@@ -41,7 +41,7 @@ identity provider already issues. No long-lived secrets to manage, rotate, or se
 
 ## How it works
 
-The new `pulumi login` command accepts OIDC tokens directly:
+The `pulumi login` command now accepts OIDC tokens directly:
 
 ```bash
 pulumi login --oidc-token <token> --oidc-org <org-name>
