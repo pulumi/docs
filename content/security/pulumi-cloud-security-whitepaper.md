@@ -1,6 +1,6 @@
 ---
 title: Pulumi Platform Security Whitepaper
-meta_desc: Technical whitepaper covering Pulumi platform architecture, cryptographic security, operational commitments, and SOC 2 Type II compliance.
+meta_desc: Technical overview of Pulumi Cloud security architecture, cryptographic controls, key management, and SOC 2 Type II compliance.
 layout: security
 ---
 
@@ -22,7 +22,7 @@ multi-tenant cloud service infrastructure. These components work in concert to p
 management solution. The command-line interface serves as the primary interaction point for end users, while the cloud
 service provides centralized state management, deployment orchestration, policy enforcement, and collaboration features.
 
-On its core service layer the cloud service provides RESTful APIs for all platform operations, while specialized
+At its core service layer, the cloud service provides RESTful APIs for all platform operations, while specialized
 components handle specific functional domains including deployment execution, resource discovery, policy evaluation,
 workflow orchestration, and artificial intelligence-powered assistance. This separation of concerns allows each
 component to scale independently based on demand patterns while maintaining service boundaries.
@@ -66,7 +66,7 @@ Network architecture follows a layered approach with distinct network zones for 
 workloads, and data storage. External traffic enters through a content delivery network and load balancing layer that
 provides distributed denial-of-service protection and request routing. Application services reside in private network
 segments with no direct internet access, communicating through internal service discovery mechanisms. Database and
-storage resources are further isolated in dedicated network zones with restrictive access controls allowing only
+storage resources are further isolated in dedicated network zones. Restrictive access controls allow only
 authorized application connections.
 
 In fully managed cloud deployments, the platform is deployed into distinct cloud provider tenants and virtual private
@@ -85,7 +85,7 @@ in isolated execution environments, pulling the latest infrastructure code, appl
 provider APIs, and capturing the resulting state. Execution environments are ephemeral, created for each operation and
 destroyed upon completion, ensuring isolation between deployments and preventing state pollution across operations.
 
-Resource discovery and policy compliance functions are handled by specialized scanning and evaluation services. The
+Specialized scanning and evaluation services handle resource discovery and policy compliance functions. The
 scanning component connects to cloud provider APIs to inventory existing infrastructure resources, building a
 comprehensive catalog of deployed assets. The evaluation component assesses these resources against organization-defined
 policy packs, identifying compliance violations and generating reports. This architecture enables organizations to
@@ -102,8 +102,9 @@ tooling and credentials, reducing job startup latency while maintaining isolatio
 The platform employs a multi-layered data storage strategy optimized for different access patterns and data
 characteristics. Structured operational data including user accounts, organizations, resource metadata, deployment
 history, and access control policies resides in a managed relational database service. The platform deploys the database
-in a highly available configuration with automatic failover capabilities and read replicas to scale query workloads. All
-connections to the database utilize transport layer security with enforced minimum protocol versions, and the platform
+in a highly available configuration with automatic failover capabilities and read replicas to scale query workloads.
+
+All connections to the database utilize transport layer security with enforced minimum protocol versions. The platform
 encrypts data at rest using provider-managed encryption services.
 
 The platform stores unstructured data including infrastructure state checkpoints, policy pack artifacts, and template
@@ -118,7 +119,7 @@ storage systems. The platform stores session information, metadata caches, and q
 with automatic scaling and failure detection. The caching layer implements appropriate cache invalidation strategies to
 maintain consistency while maximizing hit rates.
 
-Search functionality is provided through a managed search cluster that indexes resource metadata, enabling fast
+A managed search cluster provides search functionality that indexes resource metadata, enabling fast
 full-text and structured queries across large infrastructure catalogs. Search indices are populated through event
 streams that capture resource changes as they occur, ensuring that search results remain current with minimal latency.
 The search infrastructure is deployed in a separate network environment with controlled access from application

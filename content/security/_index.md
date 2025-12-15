@@ -9,7 +9,7 @@ Pulumi takes security and privacy matters very seriously. We appreciate that our
 
 The Pulumi platform employs industry best practices for security and is SOC 2 Type II certified.
 
-For more details on Pulumi’s platform architecture and security practices, please read our [security whitepaper](/security/pulumi-cloud-security-whitepaper).
+For more details, see our [security whitepaper](/security/pulumi-cloud-security-whitepaper).
 
 ## Vulnerability Reporting
 
