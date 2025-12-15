@@ -331,7 +331,7 @@ outputs:
 
 {{< /chooser >}}
 
-When viewing stashed secret values, their plaintext content will not be shown by default. Instead, they will be displayed as `[secret]` in the CLI. Pass `--show-secrets` to reveal the plaintext value.
+When viewing stashed secret values, their plaintext content will not be shown by default. Instead, they will be displayed as `[secret]` in the CLI. Pass `--show-secrets` to the command ran to reveal the plaintext value (`--show-secrets)
 
 ## Updating stashed values
 
