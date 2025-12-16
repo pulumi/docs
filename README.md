@@ -36,6 +36,7 @@ We welcome all contributions to this repository. Be sure to read our [contributi
 
 See also:
 
+* [Build and deployment guide](./BUILD-AND-DEPLOY.md)
 * [Publishing a Pulumi blog post](./BLOGGING.md)
 * [Documentation and coding style guide](./STYLE-GUIDE.md)
 

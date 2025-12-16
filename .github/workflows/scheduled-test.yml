@@ -33,7 +33,7 @@ jobs:
         platform:
           - pulumi-service-ubuntu-24.04-4core
         go-version:
-          - 1.23.x
+          - 1.25.x
         node-version:
           - 20.x
         python-version:
