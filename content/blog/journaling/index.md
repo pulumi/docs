@@ -57,7 +57,7 @@ social:
 
 ---
 
-Today we're introducing an improvement that can speed up operations by up to 20x. At every deployment, and at every step within a deployment, `pulumi` saves a snapshot of your cloud infrastructure. This gives `pulumi` a current view of state even if something fails mid-operation, but it comes with a performance penalty for large stacks. Here's how we fixed it.
+Today we're introducing an improvement that can speed up operations by up to 20x. At every operation, and at every step within an operation, `pulumi` saves a snapshot of your cloud infrastructure. This gives `pulumi` a current view of state even if something fails mid-operation, but it comes with a performance penalty for large stacks. Here's how we fixed it.
 
 <!--more-->
 
@@ -65,18 +65,18 @@ Today we're introducing an improvement that can speed up operations by up to 20x
 
 Before getting into the more technical details, here are a number of benchmarks demonstrating what this new experience looks like. To run the benchmarks we picked a couple of Pulumi projects: one that can be set up massively parallel, which is the worst case scenario for the old snapshot system, and another that looks a little more like a real world example.  Note that we conducted all of these benchmarks  in Europe connecting to Pulumi Cloud, which runs in AWS's `us-west-2` region, so exact numbers may vary based on your location and internet connection. This should however give a good indication of the performance improvements.
 
-We're benchmarking two somewhat large stacks, both of which are or were used at Pulumi. The first program sets up a website using AWS bucket objects. We're using the [aws-ts-static-website](https://github.com/pulumi/examples/tree/master/aws-ts-static-website) example here, but expand it a little bit to set up a version of our docs site. This means we're setting up more than 3000 bucket objects, with 3222 resources in total.
+We're benchmarking two somewhat large stacks, both of which are or were used at Pulumi. The first program sets up a website using AWS bucket objects. We're using the [aws-ts-static-website](https://github.com/pulumi/examples/tree/master/aws-ts-static-website) example here with a small subset of the fraction from our docs site. This means we're setting up more than 3000 bucket objects, with 3222 resources in total.
 
 The benchmarks were measured using the `time` built-in command and using the best time in a best-of-three benchmark. The network traffic was measured using `tcpdump`, limiting the measured traffic to only the IP addresses for Pulumi Cloud. Finally, `tshark` was used to process the packet captures and count the bytes sent.
 
-All the benchmarks are run with journaling off (the default experience), with journaling on (the new experience).
+All the benchmarks are run with journaling off (the default experience) and with journaling on (the new experience). To begin with, let's look at the results when creating our stack from scratch:
 
 |                    | Time   | Bytes sent |
 |--------------------|--------|------------|
 | Without journaling | 58m26s | 16.5MB     |
 | With journaling    | 02m50s | 2.3MB      |
 
-These numbers are for setting up the stack from scratch. Now let's have a look at what this looks like if we only change half the resources, but the remaining ones remain unchanged:
+Now let's have a look at what this looks like if we only change half the resources, but the remaining ones remain unchanged:
 
 |                    | Time   | Bytes sent |
 |--------------------|--------|------------|
@@ -100,9 +100,9 @@ If you are interested in the more technical details read on!
 
 ## Introduction to snapshotting
 
-`pulumi` keeps track of all resources in a stack in a snapshot. This snapshot is stored in the stack's configured backend, which is either the Pulumi Cloud or a DIY backend. Further operations of the stack then use this snapshot to figure out which resources need to be created, updated or deleted.
+`pulumi` keeps track of all resources in a stack in a snapshot. This snapshot is stored in the stack's configured backend, which is either the Pulumi Cloud or a DIY backend. Future operations on the stack then use this snapshot to figure out which resources need to be created, updated or deleted.
 
-To make sure there are never any resources that are not tracked, even if a deployment is aborted unexpectedly (for example due to network issues, power outages, or bugs), `pulumi` creates a new snapshot at the beginning and at the end of each operation.
+`pulumi` creates a new snapshot at the beginning and at the end of each resource operation to minimize the possibility of untracked changes even if a deployment is aborted unexpectedly (for example due to network issues, power outages, or bugs).
 
 At the beginning of the operation, `pulumi` adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but `pulumi` couldn't record the end of it),  the next operation will ask the user to check the actual state of the resource. Depending on the user's response, `pulumi` will either remove the operation from the snapshot or import the resource. This is because it is possible that the resource has been set up correctly or that the resource creation failed. If `pulumi` aborted midway through the operation, it's impossible to know which state the resource is in.
 
@@ -110,7 +110,7 @@ Once an operation finishes, the pending operation is removed and the resource's 
 
 There's also some additional metadata that is stored in the snapshot that is only updated infrequently.
 
-Here's how the snapshot looks in code. This snapshot is serialized and sent to the backend. `Resources` holds the list of known resource states, and is updated after each operation finishes, and `PendingOperations` is the list of pending operations described above.
+Here's how the snapshot looks in code. This snapshot is serialized and sent to the backend. `Resources` holds the list of known resource states and is updated after each operation finishes, and `PendingOperations` is the list of pending operations described above.
 
 ```go
 type Snapshot struct {
@@ -122,7 +122,7 @@ type Snapshot struct {
 }
 ```
 
-Before we dive in deeper, we also need to understand a little bit about how the `pulumi` engine works internally. Whenever a `pulumi` operation, e.g. `pulumi up`, `pulumi destroy`, `pulumi refresh` etc. is run, the engine internally generates and executes a series of steps, to create, update, delete etc. resources. To maintain correct relationships between resources, the steps need to be executed in a partial order such that no step is executed until all of its step dependencies have successfully executed. Steps may otherwise execute concurrently.
+Before we dive in deeper, we also need to understand a little bit about how the `pulumi` engine works internally. Whenever a `pulumi` operation is run (e.g. `pulumi up`, `pulumi destroy`, `pulumi refresh` etc.), the engine internally generates and executes a series of steps, to create, update, delete etc. resources. To maintain correct relationships between resources, the steps need to be executed in a partial order such that no step is executed until all of the steps it depends on have executed successfully. Steps may otherwise execute concurrently.
 
 As each step is responsible for updating a single resource, we can generate a snapshot of the state before each step starts, and after it completes. Before each step starts, we create a pending operation, and add it to the `PendingOperations` list. After that step completes, we remove the pending operation from that list, and update the `Resources` list, either adding a resource, removing it, or updating it, depending on the kind of operation we just executed.
 
@@ -209,7 +209,7 @@ type JournalEntry struct {
 }
 ```
 
-These journal entries encode all the information needed to reconstruct the snapshot from them. Each journal entry can be sent in parallel from the engine, and the snapshot will still be fully valid. All journal entries have a Sequence ID attached to them, and they need to be replayed in that order on the service side to make sure we get a valid snapshot. It is however okay to replay with journal entries that have not yet been received by the service, and whose sequence ID is thus missing. This is safe because the engine only sends entries in parallel whose parents/dependencies have been fully created and confirmed by the service.
+These journal entries encode all the information needed to reconstruct the snapshot from them. Each journal entry can be sent in parallel from the engine, and the snapshot will still be fully valid. All journal entries have a Sequence ID attached to them, and they need to be replayed in that order on the service side to make sure we get a valid snapshot. It is however okay to replay without journal entries that have not yet been received by the service, and whose sequence ID is thus missing. This is safe because the engine only sends entries in parallel for resources whose parents/dependencies have been fully created and confirmed by the service.
 
 This way we make sure that the resources list is always in the correct partial order that is required by the engine to function correctly, and for the snapshot to be considered valid.
 
