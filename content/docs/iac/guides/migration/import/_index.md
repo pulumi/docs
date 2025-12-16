@@ -20,7 +20,7 @@ Most infrastructure as code projects require working with existing cloud resourc
 1. Referencing the properties of the existing cloud resource in order to use those properties to configure a Pulumi-managed resource.
 1. Adopting the existing resource to bring it under management by Pulumi.
 
-The first scenario is sometimes called _coexistence_, and you can learn more about it in [Migrating to Pulumi > Coexistence](/docs/iac/guides/migration/#coexistence). The second scenario is called _adoption_ or _import_, and you can learn more about it the sections that follow.
+The first scenario is sometimes called _coexistence_, and you can learn more about it in [Migrating to Pulumi > Coexistence](/docs/iac/guides/migration/#coexistence). The second scenario is called _adoption_ or _import_, and you can learn more about it in the sections that follow.
 
 ## Two ways to import a resource
 

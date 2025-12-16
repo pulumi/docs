@@ -15,7 +15,7 @@ aliases:
 - /docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/
 ---
 
-If your infrastructure was provisioned with Terraform or CDK for Terraform (CDKTF), there are a number of options that will help you adopt Pulumi.
+If your infrastructure was provisioned with Terraform or the CDK for Terraform (CDKTF), there are a number of options that will help you adopt Pulumi.
 
 * **Coexist** with resources provisioned by Terraform or CDKTF by referencing a `.tfstate` file.
 * **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/) or using `pulumi convert --from terraform` along with `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
@@ -323,7 +323,7 @@ In cases where the converter does not yet support a certain feature, the `pulumi
     <pulumi-choosable type="language" value="csharp"><code>NotImplemented</code></pulumi-choosable>
 </pulumi-chooser> function that will need to be filled in manually. For most projects, the converter should be able to convert 90-95% of the code without any TODOs, with only a small percentage of items to address manually, significantly reducing migration time compared to doing an entire migration by hand.
 
-If you notice a feature that's not yet implemented or encounter a bug, please consider [filing an issue](https://github.com/pulumi/pulumi-converter-terraform).
+If you notice a feature that's not yet implemented or you encounter a bug, please consider [filing an issue](https://github.com/pulumi/pulumi-converter-terraform).
 
 ### Importing Resources
 
