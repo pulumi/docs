@@ -28,7 +28,7 @@ New to Pulumi or evaluating your options? Read [Pulumi Cloud and Open Source Pul
 
 The Pulumi Individual Edition is free forever for unlimited individual use. Create an account to start building with Pulumi Cloud:
 
-<a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
+<a class="btn btn-secondary" href="https://app.pulumi.com/signup">Create an Account</a>
 
 When you sign in, a personal organization is automatically created. You can create unlimited stacks, encrypt configuration and secrets, and browse stack history.
 
