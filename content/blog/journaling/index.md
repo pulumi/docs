@@ -1,5 +1,5 @@
 ---
-title: "Speeding up `pulumi` operations by up to 20x"
+title: "Speeding up Pulumi Operations by up to 20x"
 
 date: 2025-12-08T17:57:55+02:00
 
@@ -142,7 +142,7 @@ However, the snapshotting is still a major bottleneck for large `pulumi` operati
 
 ## Fast, but lacking data integrity?
 
-As long as `pulumi` can complete its operation, there's no need for the intermediate checkpoints. It is possible to set the `PULUMI_SKIP_CHECKPOINTS` variable to a truthy value, and skip all the uploading of the intermittent checkpoints to the backend. This, of course, avoids the single serialization point we have sending the snapshots to the backend, and thus makes the operation much more performant.
+As long as `pulumi` can complete its operation, there's no need for the intermediate checkpoints. We could allow `pulumi` operations to skip uploading the intermittent checkpoints to the backend. This, of course, avoids the single serialization point we have sending the snapshots to the backend, and thus makes the operation much more performant.
 
 However, it also has the serious disadvantage of compromising some of the data integrity guarantees `pulumi` gives you. If anything goes wrong during the update, `pulumi` has no notion of what happened until then, potentially leaving orphaned resources in the provider, or leaving resources in the state that no longer exist.
 
