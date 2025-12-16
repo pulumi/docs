@@ -18,7 +18,7 @@ aliases:
 This document outlines the steps required to configure Pulumi to accept Github id_tokens to be exchanged by Organization access tokens.
 
 {{< notes type="info" >}}
-This guide demonstrates using `organization` tokens. Depending on your [Pulumi edition](/docs/pulumi-cloud/access-management/oidc-client/#token-types-by-edition), you may also use `personal` or `team` tokens by adjusting the token type in the authorization policies and the `requested-token-type` parameter.
+This guide demonstrates using `organization` tokens. Depending on your [Pulumi edition](/docs/administration/access-identity/oidc-client/#token-types-by-edition), you may also use `personal` or `team` tokens by adjusting the token type in the authorization policies and the `requested-token-type` parameter.
 {{< /notes >}}
 
 ## Prerequisites

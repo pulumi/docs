@@ -119,7 +119,19 @@ In this example, it can be configured as `runner-*` to match any pod name with t
 
 ## Exchanging OIDC tokens
 
-To exchange OIDC tokens for Pulumi access tokens, the oauth2 token endpoint and token exchange grant type are used.
+### Using the Pulumi CLI
+
+The Pulumi CLI provides native support for OIDC token exchange via the `pulumi login` command. This is the recommended approach for most use cases:
+
+```bash
+pulumi login --oidc-token <token> --oidc-org <org-name>
+```
+
+The `--oidc-token` flag accepts either a raw token string or a file path prefixed with `file://`. You can also specify optional parameters like `--oidc-team`, `--oidc-user`, or `--oidc-expiration`. For more details, see the [`pulumi login` documentation](/docs/iac/cli/commands/pulumi_login/#oidc-token-exchange).
+
+### Using the REST API directly
+
+For advanced scenarios where you need direct control over the token exchange process, you can use the oauth2 token endpoint and token exchange grant type directly.
 
 This endpoint supports both `application/json` and `application/x-www-form-urlencoded` content types are supported.
 

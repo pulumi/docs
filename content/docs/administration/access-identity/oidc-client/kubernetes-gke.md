@@ -20,7 +20,7 @@ This document outlines the steps required to configure Pulumi to accept Google K
 See ["Bound Tokens"](https://cloud.google.com/blog/products/containers-kubernetes/kubernetes-bound-service-account-tokens) for more background.
 
 {{< notes type="info" >}}
-This guide demonstrates using `organization` tokens. Depending on your [Pulumi edition](/docs/pulumi-cloud/access-management/oidc-client/#token-types-by-edition), you may also use `personal` or `team` tokens by adjusting the token type in the authorization policies and the `requested-token-type` parameter.
+This guide demonstrates using `organization` tokens. Depending on your [Pulumi edition](/docs/administration/access-identity/oidc-client/#token-types-by-edition), you may also use `personal` or `team` tokens by adjusting the token type in the authorization policies and the `pulumi login` parameters.
 {{< /notes >}}
 
 ## Prerequisites
@@ -58,31 +58,17 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 import * as kubernetes from "@pulumi/kubernetes";
 
-const tokenParams = {
-    "audience": "urn:pulumi:org:ORG_NAME",
-    "token_type": "urn:pulumi:token-type:access_token:organization",
-    "expiration": 2 * 60 * 60,
+const loginParams = {
+    "org_name": "MY_ORG_NAME",
 }
 
 const script = new kubernetes.core.v1.ConfigMap("script", {
     data: {
         "entrypoint.sh": `#!/bin/bash
-apt -qq install -y jq
 OIDC_GKE_TOKEN=$(</var/run/secrets/pulumi/token)
 echo "OIDC Token:"
 echo $OIDC_GKE_TOKEN
-export PULUMI_ACCESS_TOKEN=$(curl -sS -X POST  \
-    -H 'Content-Type: application/x-www-form-urlencoded' \
-    -d 'audience=${tokenParams.audience}' \
-    -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
-    -d 'subject_token_type=urn:ietf:params:oauth:token-type:id_token' \
-    -d 'requested_token_type=${tokenParams.token_type}' \
-    -d 'expiration=${tokenParams.expiration}' \
-    -d 'scope=${tokenParams.scope}' \
-    -d "subject_token=$OIDC_GKE_TOKEN" \
-    https://api.pulumi.com/api/oauth/token | jq -r '.access_token')
-echo "Access Token:"
-echo $PULUMI_ACCESS_TOKEN
+pulumi login --oidc-token $OIDC_GKE_TOKEN --oidc-org ${loginParams.org_name}
 pulumi whoami
 `
     }
@@ -119,7 +105,7 @@ const job = new kubernetes.batch.v1.Job("runner", {
                             sources: [
                                 {
                                     serviceAccountToken: {
-                                        audience: "urn:pulumi:org:ORG_NAME",
+                                        audience: "urn:pulumi:org:MY_ORG_NAME",
                                         expirationSeconds: 3600,
                                         path: "token",
                                     },
