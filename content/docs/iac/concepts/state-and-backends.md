@@ -39,7 +39,7 @@ This page covers the technical details of state management and backend configura
 Pulumi supports two classes of state backends for storing your infrastructure state:
 
 - **Pulumi Cloud**: a managed cloud experience using the online or self-hosted Pulumi Cloud application
-- **DIY backend**: "Do it Yourself"- a manually managed object store, including AWS S3, Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, PostgreSQL, or your local filesystem
+- **DIY backend**: "Do it Yourself"- a manually managed object store, including AWS S3, Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, a PostgreSQL database, or your local filesystem
 
 Pulumi's SDK works great with all backends, although some details differ between them.
 
@@ -57,7 +57,7 @@ The Pulumi Cloud backend requires no additional configuration after [installing 
 
 > To learn more about the Pulumi Cloud backend's design, including why it doesn't need your cloud credentials, see [Pulumi Cloud Architecture](#pulumi-cloud-architecture). If you are interested in the hosting your own instance, see the [Self-Hosting User Guide](/docs/pulumi-cloud/self-hosted/).
 
-Pulumi also lets you manage state yourself using a DIY backend. Your state is stored as simple JSON files in AWS S3, Azure Blob Store, Google Cloud Storage, an alternative AWS S3 API compatible server such as Minio or Ceph, or in PostgreSQL, or on your local filesystem. These DIY backends are all open source and free to use in any setting. Using a DIY backend trades off some amount of reliability for additional control over where metadata is stored. For instance, you will need to manually configure secure access, encryption, and history, and devise your own concurrency control and recovery capabilities. To choose a DIY backend, use the `pulumi login` command [as documented below](#using-a-DIY-backend).
+Pulumi also lets you manage state yourself using a DIY backend. Your state is stored as simple JSON files in AWS S3, Azure Blob Store, Google Cloud Storage, an alternative AWS S3 API compatible server such as Minio or Ceph, a PostgreSQL database, or on your local filesystem. These DIY backends are all open source and free to use in any setting. Using a DIY backend trades off some amount of reliability for additional control over where metadata is stored. For instance, you will need to manually configure secure access, encryption, and history, and devise your own concurrency control and recovery capabilities. To choose a DIY backend, use the `pulumi login` command [as documented below](#using-a-DIY-backend).
 
 ## Logging into and out of State Backends
 
@@ -263,7 +263,11 @@ To use the [PostgreSQL](https://www.postgresql.org/) backend pass the `postgres:
 $ pulumi login postgres://<username>:<password>@<hostname>:<port>/<database>
 ```
 
-For additional configuration options, see the [README](https://github.com/pulumi/pulumi/blob/master/pkg/backend/diy/postgres/README.md).
+{{% notes type="warning" %}}
+Avoid including credentials directly in commands. Consider using environment variables or other secure credential management methods.
+{{% /notes %}}
+
+For additional configuration options, see the [README ↗](https://github.com/pulumi/pulumi/blob/master/pkg/backend/diy/postgres/README.md).
 
 ### Scoping
 
