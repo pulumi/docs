@@ -45,7 +45,6 @@ flowchart TD
             Deployment[Deployment Execution]
             ResourceDiscovery[Resource Discovery]
             PolicyEvaluation[Policy Evaluation]
-            Workflow[Workflow Orchestration]
             AI[AI-Powered Assistance]
         end
     end
@@ -80,10 +79,11 @@ representing organizations, projects, stacks, deployment history, and configurat
 role-based access control ensuring that all operations respect organizational access policies and user permissions.
 
 Deployment orchestration represents a critical functional domain within the platform. When users initiate infrastructure
-operations, requests are queued and subsequently processed by specialized execution components. These components operate
-in isolated execution environments, pulling the latest infrastructure code, applying the requested changes against cloud
-provider APIs, and capturing the resulting state. Execution environments are ephemeral, created for each operation and
-destroyed upon completion, ensuring isolation between deployments and preventing state pollution across operations.
+operations, manually or by source control system triggers, requests are queued and subsequently processed by specialized
+execution components. These components operate in isolated execution environments, pulling the latest infrastructure
+code, applying the requested changes against cloud provider APIs, and capturing the resulting state. Execution
+environments are ephemeral, created for each operation and destroyed upon completion, ensuring isolation between
+deployments and preventing state pollution across operations.
 
 Specialized scanning and evaluation services handle resource discovery and policy compliance functions. The
 scanning component connects to cloud provider APIs to inventory existing infrastructure resources, building a
@@ -92,10 +92,13 @@ policy packs, identifying compliance violations and generating reports. This arc
 maintain visibility into their infrastructure posture and enforce governance requirements across their cloud
 environments.
 
-Workflow integration provides continuous deployment capabilities by connecting to source control systems and executing
-infrastructure operations in response to repository events. A pool management component maintains a fleet of execution
-environments that can be rapidly allocated to handle workflow jobs. These environments are pre-configured with necessary
-tooling and credentials, reducing job startup latency while maintaining isolation between executions.
+AI-powered assistance capabilities provide natural language interfaces for infrastructure operations, enabling
+conversational interaction with the platform through purpose-built automation agents. These agents process natural
+language requests, analyze infrastructure dependencies, and generate execution plans for complex multi-step operations.
+The system implements human-in-the-loop governance through a pull request workflow, where all AI-generated
+infrastructure changes are submitted for team review and approval before execution. This architectural pattern ensures
+that automated infrastructure modifications remain subject to organizational oversight and approval processes,
+maintaining control over production environments while leveraging AI capabilities for operational efficiency.
 
 ### Data Storage Architecture
 
@@ -127,10 +130,10 @@ services.
 
 ### Client Architecture
 
-The command-line interface provides the primary user interface for interacting with infrastructure as code. The client
-implements a plugin-based architecture where resource providers are loaded dynamically based on the resources defined in
-user programs. When users execute infrastructure operations, the client coordinates between the user's program code,
-loaded provider plugins, and the backend service to orchestrate the requested changes.
+The command-line interface (CLI) provides the primary user interface for interacting with infrastructure as code. The
+CLI implements a plugin-based architecture where resource providers are loaded dynamically based on the resources
+defined in user programs. When users execute infrastructure operations, the client coordinates between the user's
+program code, loaded provider plugins, and the backend service to orchestrate the requested changes.
 
 State management in the client supports multiple backend implementations, allowing users to choose between fully managed
 cloud state storage and self-managed options including local filesystems, object storage services, or database systems.
