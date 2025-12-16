@@ -9,9 +9,11 @@ authors:
     - adam-gordon-bell
 tags:
     - aws
+    - nova-forge
+    - bedrock-agentcore
     - reinvent
 ---
-AWS re:Invent 2025 delivered myriad of announcements across AI, silicon, and cloud infrastructure. AWS unveiled the expanded Nova model family, introduced Nova Forge for custom model training, launched Trainium3 UltraServers, and added major production features to AgentCore. It was a lot and taken at face value, it looks like another scattershot year of big releases.
+AWS re:Invent 2025 delivered a myriad of announcements across AI, silicon, and cloud infrastructure. AWS unveiled the expanded Nova model family, introduced Nova Forge for custom model training, launched Trainium3 UltraServers, and added major production features to AgentCore. It was a lot, and taken at face value, it looks like another scattershot year of big releases.
 
 But if you look past the firehose, a pattern emerges. These announcements fit together into a single bet about how enterprise AI will be built.
 
@@ -33,7 +35,7 @@ If you can afford that, you bring big proprietary datasets (code, tickets, logs,
 
 Why does this exist? Because the kind of training this enables is usually out of reach. Training a GPT-4-class frontier model from scratch runs tens of millions to $100M+ in compute alone[^1]. You don't own the weights and you're locked into their stack, but you get frontier-level capabilities with your data baked in, without building datacenters or staffing ML teams.
 
-Think of it as frontier-lab-as-a-service. No one else offers anything this close to a public, end-to-end training pipeline. And the only reason AWS can offer it is the next annoucement.
+Think of it as frontier-lab-as-a-service. No one else offers anything this close to a public, end-to-end training pipeline. And the only reason AWS can offer it is the next announcement.
 
 ## The margin weapon: Trainium
 
@@ -42,9 +44,9 @@ Think of it as frontier-lab-as-a-service. No one else offers anything this close
 <figcaption><i>The idealized Trainium flywheel: each generation should decrease training costs.</i></figcaption>
 </figure>
 
-AWS built their own AI accelerator so they don't have to live entirely on Nvidia. Trainium is that chip. You don't buy it; you rent it as a cloud box. This year: their third-gen chip (Trainium3) and new rack-scale `Trn3 UltraServers` are out, with 4× the performance and big energy/cost gains over the previous gen, positioned as a serious alternative to high-end GPUs for training and serving big models.
+AWS built its own AI accelerator so it doesn't have to live entirely on NVIDIA. Trainium is that chip. You don't buy it; you rent it as a cloud box. This year: their third-gen chip (Trainium3) and new rack-scale `Trn3 UltraServers` are out, with 4× the performance and big energy/cost gains over the previous gen, positioned as a serious alternative to high-end GPUs for training and serving big models.
 
-I'm sure one reason for trainium's is AWS wants to stop handing Nvidia half its AI training revenue. But the real story is bigger than cost-cutting. Trainium is the quiet machinery that makes AWS's model-factory ambitions economically viable. You can only rent a frontier training pipeline if you can afford it, and Trainium makes it cheaper (if that word applies to six-figure entry costs).
+I'm sure one reason for Trainium's is that AWS wants to stop handing NVIDIA half its AI training revenue. But the real story is bigger than cost-cutting. Trainium is the quiet machinery that makes AWS's model-factory ambitions economically viable. You can only rent a frontier training pipeline if you can afford it, and Trainium makes it cheaper (if that word applies to six-figure entry costs).
 
 Trainium is what turns Forge from a one-off experiment into an actual development pipeline. By compressing the marginal cost of each training cycle, AWS is trying to make iterative specialization economically viable. You can tune, test, and retrain until you converge on something useful.
 
@@ -74,7 +76,7 @@ trn1_instance = aws.ec2.Instance("trn1-instance",
 
 For most companies, this whole stack is overkill. If your AI roadmap is “add a chatbot and maybe summarize some tickets,” you don’t need Nova Forge, and you definitely don’t need Trainium. Hosted models plus RAG and an Agentic loop will get you 90% of the way there.
 
-But this type of training is powerful and its never before been in reach to so many. If LLMs behave like the distributions they're trained on, then getting your proprietary mess (logs, incident reports, claims histories, deal flows, call transcripts) into the core training loop means the model doesn't just know your docs; it behaves like someone who's lived inside your systems. That’s qualitatively different from “we stuffed a PDF into the context window.”
+But this type of training is powerful, and it's never been in reach to so many. If LLMs behave like the distributions they're trained on, then getting your proprietary mess (logs, incident reports, claims histories, deal flows, call transcripts) into the core training loop means the model doesn't just know your docs; it behaves like someone who's lived inside your systems. That’s qualitatively different from “we stuffed a PDF into the context window.”
 
 Latency and cost at scale matter too. For high-volume workflows like support triage, routing, code review, and fraud checks, "generic frontier model + giant prompt + RAG + tools" is slow and expensive. A smaller model that has your world baked into the weights can run with smaller contexts, simpler prompts, and fewer tool calls. And then there is reinforcement learning, which I'll get to shortly.
 
@@ -91,7 +93,7 @@ If Nova is the brain and Trainium is the muscle to build it, AgentCore is the ne
 
 [AgentCore](https://aws.amazon.com/bedrock/agentcore/) is a managed runtime for AI agents: instead of you wiring LLMs, tools, memory, auth, and logging together on Lambda or Fargate, AWS gives you a sticky per-session microVM, a standard way to call tools (Gateway), built-in long- and short-term memory, identity/permissions, and observability/evals. You package your agent, deploy it as an AgentCore runtime, and AWS handles the ugly parts: session isolation, scaling, policy guardrails, and tracing. You pay Fargate-ish per-vCPU/GB-hour pricing for the runtime plus normal Bedrock token and tool-call costs.
 
-At re:Invent 2025, [AgentCore](https://aws.amazon.com/bedrock/agentcore/) picked up the missing "production" pieces: **Policy**, **Evaluations**, and **episodic Memory**. These handle guardrails, quality checks, and per-session state so you don't have to build them yourself.
+At re:Invent 2025, [AgentCore](https://aws.amazon.com/bedrock/agentcore/) picked up the missing "production" pieces: **Policy**, **Evaluations**, and **episodic Memory**. These handle guardrails, quality checks, and per-session state, so you don't have to build them yourself.
 
 <div class="note note-info" style="display: block;">
 <p><b>Deploying an AgentCore runtime with Pulumi:</b></p>
@@ -127,7 +129,7 @@ How does this come together? AWS shipped a use case.
 
 Nova Act is the concrete example of this whole thing coming together. It handles browser-based UI automation: form filling, search-and-extract, QA testing. Amazon claims ~90% reliability. It deploys directly to AgentCore Runtime.
 
-It's not "an LLM plus Playwright." Nova Act uses a specialized Nova 2 Lite variant trained on synthetic "web gym" environments: browser simulations that mirror enterprise UIs and provide an automatic reward signal when tasks complete correctly. Instead of judging output quality, this model was trained on an RL loop that asks: did the workflow succeed?
+It's not "an LLM plus Playwright." Nova Act uses a specialized Nova 2 Lite variant trained on synthetic "web gym" environments: browser simulations that mirror enterprise UIs and provide an automatic reward signal when tasks are completed correctly. Instead of judging output quality, this model was trained on an RL loop that asks: Did the workflow succeed?
 
 That specialized model is wrapped in AgentCore. The platform handles isolation, scaling, logging, and guardrails, so Nova Act behaves like a production automation system rather than a brittle demo.
 
@@ -139,7 +141,7 @@ So Nova Forge, Trainium, AgentCore, and Nova Act connect. Trainium lowers the co
 
 Most enterprises still won’t choose this path. They don’t have the data, the reward loops, or the operational maturity to make early-stage training worthwhile.
 
-But AWS’s bet is that enterprise AI is moving past stock foundation models and generic chatbots. AWS is expected a world of **agents shaped by proprietary data and domain feedback**. Most companies won't build the infrastructure to train and operate those agents, and so AWS is offering to rent them the whole pipeline.
+But AWS’s bet is that [enterprise AI is moving past stock foundation models and generic chatbots](https://www.pulumi.com/aws/#video). AWS is expecting a world of **agents shaped by proprietary data and domain feedback**. Most companies won't build the infrastructure to train and operate those agents, and so AWS is offering to rent them the whole pipeline.
 
 **Try it with Neo:** [Deploy a Bedrock-powered API with Pulumi](https://app.pulumi.com/neo?prefer_signup=true&prompt=Create%20a%20Python%20Pulumi%20program%20that%20deploys%20an%20AWS%20Lambda%20function%20calling%20Bedrock%20Nova%20Pro%20and%20exposes%20it%20via%20API%20Gateway)
 

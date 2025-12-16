@@ -9,6 +9,7 @@ authors:
 tags:
   - ai
   - aws
+  - bedrock-agentcore
   - pulumi
   - infrastructure-as-code
 allow_long_title: true
@@ -77,7 +78,7 @@ We'll build this progressively:
 
 ## Local Development with Strands SDK
 
-The [Strands Agents SDK](https://github.com/strands-agents/sdk-python) is an open-source framework from AWS that takes a model-driven approach to agent development. Instead of hardcoding complex workflows, you let the LLM reason about tool usage autonomously.
+The [Strands Agents SDK](https://github.com/strands-agents/sdk-python) is an open-source framework from [AWS](https://www.pulumi.com/aws/) that takes a model-driven approach to agent development. Instead of hardcoding complex workflows, you let the LLM reason about tool usage autonomously.
 
 Here's our complete local agent in about 30 lines:
 
@@ -237,7 +238,7 @@ Notice how the agent reasoned about the event using tools and took autonomous ac
 
 Our local prototype works, but where do you actually run it? Lambda times out after 15 minutes. ECS and Kubernetes add operational overhead. And AI agents have different requirements than typical microservices: they reason through multi-step workflows, sometimes taking minutes to analyze a complex fraud case. You need something built for this workload.
 
-[Amazon Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/) fills this gap. It's a managed runtime specifically designed for AI agents, with support for tasks running up to 8 hours. No timeout workarounds, no cluster management.
+[Amazon Bedrock AgentCore](https://www.pulumi.com/blog/aws-reinvent-2025-roundup/#where-the-models-work-agentcore) fills this gap. It's a managed runtime specifically designed for AI agents, with support for tasks running up to 8 hours. No timeout workarounds, no cluster management.
 
 The security model is particularly relevant for fraud detection. AgentCore runs each session in a dedicated microVM using AWS Firecracker (the same isolation technology behind Lambda). When your agent processes one customer's transactions, it's completely isolated from other sessions. No shared memory, no cross-tenant contamination.
 

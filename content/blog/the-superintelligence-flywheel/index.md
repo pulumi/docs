@@ -38,7 +38,7 @@ We call this the *superintelligence flywheel*.
 
 The superintelligence flywheel describes a self-reinforcing cycle between two forces:
 
-**Superintelligence Infrastructure**: The massively distributed compute, storage, networking, and orchestration systems required to train and serve frontier AI models.
+**[Superintelligence Infrastructure](https://www.pulumi.com/product/superintelligence-infrastructure/)**: The massively distributed compute, storage, networking, and orchestration systems required to train and serve frontier AI models.
 
 **Infrastructure Superintelligence**: AI systems capable of managing infrastructure with increasing autonomy. These systems handle the full spectrum of infrastructure automation, from provisioning to securing to evolving and scaling entire environments.
 
@@ -134,9 +134,9 @@ This is the foundation for setting the superintelligence flywheel in motion.
 
 The flywheel isn’t theoretical. We're facilitating it daily with thousands of customers:
 
-**Hyper-scale**: Wiz manages over one million cloud resources across tens of thousands of Kubernetes clusters in hundreds of data centers across every cloud provider imaginable. They do hundreds of thousands of updates daily across thousands of Kubernetes clusters, leading to 5x faster customer onboarding and entering new markets in days rather than months. They treat infrastructure provisioning as just another service in their distributed system.
+**Hyper-scale**: [Wiz](https://www.pulumi.com/case-studies/wiz/) manages over one million cloud resources across tens of thousands of Kubernetes clusters in hundreds of data centers across every cloud provider imaginable. They do hundreds of thousands of updates daily across thousands of Kubernetes clusters, leading to 5x faster customer onboarding and entering new markets in days rather than months. They treat infrastructure provisioning as just another service in their distributed system.
 
-**Infrastructure democratization**: Supabase achieved the infrastructure velocity needed to keep up with the AI era’s demand for their own product, empowering 20x more teammates to scale infrastructure in TypeScript, the same language as their application code, rather than proprietary DSLs that nobody understood. New regions deploy in about a week, with 43,000 new databases daily and 100,000+ API calls per second. According to their platform team, now thanks to Pulumi, "the infrastructure team acts as groundkeepers, not gatekeepers."
+**Infrastructure democratization**: [Supabase](https://www.pulumi.com/case-studies/supabase/) achieved the infrastructure velocity needed to keep up with the AI era’s demand for their own product, empowering 20x more teammates to scale infrastructure in TypeScript, the same language as their application code, rather than proprietary DSLs that nobody understood. New regions deploy in about a week, with 43,000 new databases daily and 100,000+ API calls per second. According to their platform team, now thanks to Pulumi, "the infrastructure team acts as groundkeepers, not gatekeepers."
 
 **Frontier science**: We manage infrastructure for organizations including NVIDIA and multiple frontier labs building the models that will define the next decade. The scale requirements for these workloads exceed any we've ever seen and are only getting bigger. Just as many customers democratize infrastructure for their developers, we're seeing frontier labs use Pulumi to accelerate getting science into production with self-service infrastructure for AI researchers.
 
@@ -146,10 +146,10 @@ The flywheel isn’t theoretical. We're facilitating it daily with thousands of 
 
 AI is driving the largest infrastructure buildout in history—whether you're training frontier models or deploying your first ML workloads to production. That complexity demands intelligent agents. Organizations that embrace this—building infrastructure for AI while using AI for infrastructure—will define the next era of computing.
 
-The superintelligence flywheel is spinning fast and it’s only going to get faster from here.
+The superintelligence flywheel is spinning fast, and it’s only going to get faster from here.
 
 ---
 
 *Pulumi provides the infrastructure platform for the superintelligence era: infrastructure as code in general-purpose languages, unified multi-cloud management, and Neo for progressive infrastructure autonomy.*
 
-[*Pulumi Neo*](/product/neo) *・ [Case Studies](/case-studies) ・ [Contact](/contact)*
+[*Pulumi Neo*](/product/neo) ・ [*Superintelligence Infrastructure*](/product/superintelligence-infrastructure/) ・ [*Case Studies*](/case-studies) ・ [*Contact*](/contact)

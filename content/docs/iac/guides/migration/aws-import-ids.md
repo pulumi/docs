@@ -15,8 +15,6 @@ menu:
 
 This guide explains how to discover the correct AWS resource IDs to use when importing existing CloudFormation- or CDK-managed resources into Pulumi, and calls out CloudFormation features that require special handling.
 
-## Finding Resource IDs
-
 ## About Pulumi import
 
 The [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) command allows you to bring a resource created outside of Pulumi under Pulumi management. This includes resources created by clicking in the AWS Console, or by other infrastructure as code tools such as Terraform, CloudFormation, and AWS CDK. Each resource to be imported requires a resource ID, along with a name for the resource, and its type.
