@@ -1,6 +1,6 @@
 ---
 title: "Native OIDC Token Exchange for Pulumi CLI"
-date: 2025-12-15
+date: 2025-12-16
 draft: false
 meta_desc: The Pulumi CLI now supports native OIDC token exchange, enabling secure authentication without long-lived credentials in automated workflows.
 meta_image: meta.png
