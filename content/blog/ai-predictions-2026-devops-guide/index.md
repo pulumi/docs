@@ -11,6 +11,8 @@ tags:
     - platform-engineering
     - automation
     - aws
+    - nova-forge
+    - bedrock-agentcore
     - pulumi-neo
 
 social:
