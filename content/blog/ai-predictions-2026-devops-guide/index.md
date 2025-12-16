@@ -46,19 +46,19 @@ Traditional IDEs where the code is the focus of the interface are simply going t
 
 We're already seeing this transition. [Google Antigravity](https://developers.googleblog.com/en/build-with-google-antigravity-our-new-agentic-development-platform/) combines a familiar AI-powered coding experience with a new agent-first interface. You can deploy agents that autonomously plan, execute, and verify complex tasks across your editor, terminal, and browser. [Cursor 2.0](https://cursor.com/changelog/2-0) lets you run up to eight agents in parallel on a single prompt, using git worktrees or remote machines to prevent file conflicts. Each agent operates in its own isolated copy of your codebase.
 
-AWS validated this direction at [re:Invent 2025](https://aws.amazon.com/blogs/aws/top-announcements-of-aws-reinvent-2025/) by announcing "frontier agents" including Kiro for autonomous coding, along with dedicated security and DevOps agents. These agents maintain state, log actions, operate with policy guardrails, and integrate directly with CI/CD pipelines.
+AWS validated this direction at [re:Invent 2025](https://www.pulumi.com/blog/aws-reinvent-2025-roundup/) by announcing "frontier agents" including Kiro for autonomous coding, along with dedicated security and DevOps agents. These agents maintain state, log actions, operate with policy guardrails, and integrate directly with CI/CD pipelines.
 
-For infrastructure specifically, [Pulumi Neo](/docs/ai/) represents this same shift. Instead of writing code or running CLI commands for every operation, you describe what you need in natural language and Neo handles the implementation. It works across your entire infrastructure, understanding dependencies and creating execution plans that go through pull requests for review.
+For infrastructure specifically, [Pulumi Neo](/docs/ai/get-started/) represents this same shift. Instead of writing code or running CLI commands for every operation, you describe what you need in natural language and Neo handles the implementation. It works across your entire infrastructure, understanding dependencies and creating execution plans that go through pull requests for review.
 
 For DevOps engineers, this means your pipelines need to accommodate AI-generated code at scale. Multiple agents working simultaneously need isolated, reproducible environments. More generated code means more artifacts to track, version, and deploy.
 
 ## The different paths to AI dominance
 
-A lot of people think that in the future a single large language model is going to have a monopoly and be the best at absolutely everything. But what's really going to happen is different providers will specialize and focus on being the best at different things.
+A lot of people think that in the future, a single large language model will have a monopoly and be the best at absolutely everything. But what's really going to happen is different providers will specialize and focus on being the best at different things.
 
-Google is going down the generalist play with Gemini, aiming to be the jack of all trades. Anthropic is focusing on being the best for coding. You can see this in the benchmarks: when Opus 4.5 came out, the first benchmark they highlighted was for software engineering, because that's what Anthropic is focusing on.
+Google is going down the generalist route with Gemini, aiming to be the jack-of-all-trades. Anthropic is focusing on being the best for coding. You can see this in the benchmarks: when Opus 4.5 came out, the first benchmark they highlighted was for software engineering, because that's what Anthropic is focusing on.
 
-Amazon is carving out its own niche with the [Nova model family](https://www.aboutamazon.com/news/aws/aws-agentic-ai-amazon-bedrock-nova-models), announced at re:Invent 2025. The Nova 2 lineup includes specialized models: Pro for complex reasoning, Sonic for real-time voice conversations, and Omni for simultaneous text, audio, and video processing. With [Nova Forge](https://www.aboutamazon.com/news/aws/aws-re-invent-2025-ai-news-updates), organizations can build custom frontier models by combining their proprietary data with AWS open weight models. The re:Invent message was clear: leveraging your first-party data is now fundamental to going beyond generic AI. We're talking about 30-40% increases in accuracy when you bring your own data into the equation.
+Amazon is carving out its own niche with the [Nova model family](https://www.aboutamazon.com/news/aws/aws-agentic-ai-amazon-bedrock-nova-models), announced at re:Invent 2025. The Nova 2 lineup includes specialized models: Pro for complex reasoning, Sonic for real-time voice conversations, and Omni for simultaneous text, audio, and video processing. With [Nova Forge](https://www.pulumi.com/blog/aws-reinvent-2025-roundup/#rent-the-lab-nova-forge), organizations can build custom frontier models by combining their proprietary data with AWS open weight models. The re:Invent message was clear: leveraging your first-party data is now fundamental to going beyond generic AI. We're talking about 30-40% increases in accuracy when you bring your own data into the equation.
 
 But here's the hot take: I don't think OpenAI is going to come out on top with any kind of specialization. They've [disappointed time and time again](https://garymarcus.substack.com/p/gpt-5-overdue-overhyped-and-underwhelming) with GPT-5 and GPT-4.5. With 4.5, they seemed to try to be the creative specialist, but it just didn't work. The [GPT-5 launch in August 2025](https://www.axios.com/2025/08/12/gpt-5-bumpy-launch-openai) was described as "barely better than last month's flavor of the month" and on some metrics it's actually worse than earlier models.
 
@@ -66,17 +66,17 @@ For DevOps teams, this specialization means you'll need infrastructure that's mo
 
 ## The local AI breakthrough
 
-2026 is going to be the year of local AI. We didn't see that much this year besides DeepSeek at the start of 2025, which was a big deal. We had a couple of new models like Qwen 3, but nothing that fundamentally changed the game. Now we're starting to see new hardware that makes it obvious we're going to be able to run very large models on smaller devices.
+2026 will be the year of local AI. We didn't see that much this year besides DeepSeek at the start of 2025, which was a big deal. We had a couple of new models like Qwen 3, but nothing that fundamentally changed the game. Now we're starting to see new hardware that makes it obvious we're going to be able to run very large models on smaller devices.
 
-There's new AI chips that can run upwards of 120 billion parameter large language models on the edge, which would be a complete game-changer. Right now, hardware requirements are one of the biggest problems when it comes to scaling local AI. If we can solve the hardware problem, we get 100% data privacy and zero-millisecond latency for our agents.
+There's new AI chips that can run upwards of 120 billion parameter large language models on the edge, which would be a complete game-changer. Right now, hardware requirements are one of the biggest challenges for scaling local AI. If we can solve the hardware problem, we get 100% data privacy and zero-millisecond latency for our agents.
 
 AWS is addressing this with [Trainium3 UltraServers](https://techcrunch.com/2025/12/02/amazon-releases-an-impressive-new-ai-chip-and-teases-a-nvidia-friendly-roadmap/), their 3nm AI chips delivering 4.4x more compute than the previous generation. More significantly, [AWS AI Factories](https://www.geekwire.com/2025/amazon-unveils-frontier-agents-new-chips-and-private-ai-factories-in-aws-reinvent-rollout/) allow organizations to deploy racks of Trainium chips and NVIDIA GPUs directly into their own data centers, addressing data sovereignty concerns while keeping AI inference close to the data.
 
-For DevOps, this opens possibilities for zero-latency inference in CI/CD pipelines, complete data privacy for sensitive codebases, and reduced cloud costs for AI-heavy workloads.
+For DevOps, this opens the door to zero-latency inference in CI/CD pipelines, complete data privacy for sensitive codebases, and reduced cloud costs for AI-heavy workloads.
 
 ## Engineers as system architects
 
-We're finally going to get to the point where we're not the coders. We delegate that entirely to our coding agents and we become the system architects. This mirrors the evolution of other engineering disciplines. Civil engineers don't fabricate the steel beams; they design the structure and verify the integrity.
+We're finally going to get to the point where we're not the coders. We delegate that entirely to our coding agents, and we become the system architects. This mirrors the evolution of other engineering disciplines. Civil engineers don't fabricate the steel beams; they design the structure and verify the integrity.
 
 I think of this as a three-step process:
 
@@ -116,7 +116,7 @@ For DevOps, this translates to modular infrastructure definitions, on-demand cap
 
 Agent-to-agent protocols are where AI agents operate in a peer network, discover each other's capabilities in real time, and interact autonomously. When Google released their [A2A protocol](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) earlier this year, there was a ton of buzz. A lot of people thought it was going to be the next big standard, like the next MCP. But then it kind of fell to the wayside.
 
-The big reason is the chicken-and-egg problem. In order for A2A to be useful, you need a lot of people to adopt it at the same time. Otherwise, if you build an A2A-compatible agent, it has no other agents to talk to. The whole value proposition is lost unless you already have a big network to attach to.
+The big reason is the chicken-and-egg problem. For A2A to be useful, you need many people to adopt it at the same time. Otherwise, if you build an A2A-compatible agent, it has no other agents to talk to. The whole value proposition is lost unless you already have a big network to attach to.
 
 But that's finally changing. The [Linux Foundation launched the A2A project](https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents) in June 2025, and adoption is accelerating. Adobe, Microsoft, SAP, ServiceNow, and S&P Global are all implementing A2A. In July 2025, Google released [version 0.3 of the A2A protocol](https://cloud.google.com/blog/products/ai-machine-learning/agent2agent-protocol-is-getting-an-upgrade) with a more stable interface critical to accelerating enterprise adoption.
 
@@ -124,13 +124,13 @@ But that's finally changing. The [Linux Foundation launched the A2A project](htt
 
 My next big prediction is that machines paying machines is going to become a very big thing. [Coinbase released the x402 protocol](https://www.coinbase.com/developer-platform/discover/launches/x402) for exactly this: building AI agents that you expose over the internet but require payment whenever someone else interacts with them.
 
-This goes really well with agent-to-agent protocols. You can create a peer network where you monetize your agents. They all leverage each other but make payments whenever they take advantage of another agent's capabilities. Cryptocurrency is the perfect solution for this kind of machine-to-machine network because you need a currency where it's easy to do micropayments quickly and globally.
+This goes really well with agent-to-agent protocols. You can create a peer network where you monetize your agents. They all leverage each other but make payments whenever they take advantage of another agent's capabilities. Cryptocurrency is the perfect solution for this kind of machine-to-machine network because it enables micropayments to be made quickly and globally.
 
-The x402 protocol has achieved [156,000 weekly transactions with 492% growth](https://www.coingecko.com/learn/x402-autonomous-ai-agent-payment-coinbase) since launching in May 2025. It's now integrated with [Anthropic's MCP Protocol](https://docs.cdp.coinbase.com/x402/welcome), Google Gemini, OpenAI Codex, and other platforms. Stablecoins like USDC make it possible to charge per request, per service, or per second of usage with near-zero transaction costs, enabling payments as low as $0.001 per request.
+The x402 protocol has achieved [156,000 weekly transactions with 492% growth](https://www.coingecko.com/learn/x402-autonomous-ai-agent-payment-coinbase) since launching in May 2025. It's now integrated with [Anthropic's MCP Protocol](https://docs.cdp.coinbase.com/x402/welcome), Google Gemini, OpenAI Codex, and other platforms. Stablecoins like USDC enable charging per request, per service, or per second of usage at near-zero transaction costs, enabling payments as low as $0.001 per request.
 
 ## Artifact reviews instead of diff reviews
 
-When we want to do a rigorous code review traditionally, we look line by line at all the changes. But coding agents are getting to the point where they can prove their code works through artifacts. Instead of reviewing line by line, we can look at browser recordings, full working demos of a backend API, and other artifacts.
+When we want to do a rigorous code review, traditionally, we look line by line at all the changes. But coding agents are getting to the point where they can prove their code works through artifacts. Instead of reviewing line by line, we can look at browser recordings, full working demos of a backend API, and other artifacts.
 
 [Google Antigravity](https://developers.googleblog.com/en/build-with-google-antigravity-our-new-agentic-development-platform/) is a perfect example. As part of its coding process, it can autonomously spin up your website, visit it, scroll through it, take screenshots, and record everything. Agents generate artifacts, including tangible deliverables like task lists, implementation plans, screenshots, and browser recordings. You can verify the agent's logic at a glance.
 
@@ -158,8 +158,9 @@ The technology to make this happen already exists. Agent orchestration platforms
 
 ## Start building for the AI-driven future today
 
-If you want to experience what this future looks like right now, [Pulumi Neo](/docs/ai/) is the place to start. Neo lets you make natural language requests for routine infrastructure tasks, analysis, and management. Instead of writing code for every operation, you describe what you need and Neo handles the implementation, creating task plans, running previews, and opening pull requests for your review.
+If you want to experience what this future looks like right now, [Pulumi Neo](https://www.pulumi.com/product/neo/#video) is the place to start. Neo lets you make natural language requests for routine infrastructure tasks, analysis, and management. Instead of writing code for every operation, you describe what you need, and Neo handles the implementation, creating task plans, running previews, and opening pull requests for your review.
 
 Whether you're looking to update outdated resources across your infrastructure, analyze your cloud spend, or automate complex multi-step workflows, Neo provides the agent-first experience that's defining the next generation of DevOps tooling.
 
-[Get started with Pulumi Neo](/docs/ai/get-started/) and see how AI-powered infrastructure automation can transform your workflow.
+- [**Get started with Pulumi Neo**](/docs/ai/get-started/) and see how AI-powered infrastructure automation can transform your workflow.
+- **Project**: [Build a production-ready AI agent](https://www.pulumi.com/blog/from-works-on-my-machine-to-production-ready-ai-agents-with-amazon-bedrock-agentcore/) by moving from local prototypes to deployed infrastructure with Amazon Bedrock AgentCore, the Strands SDK, and Pulumi.
