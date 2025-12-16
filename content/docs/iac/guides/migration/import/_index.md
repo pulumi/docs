@@ -20,7 +20,7 @@ Most infrastructure as code projects require working with existing cloud resourc
 1. Referencing the properties of the existing cloud resource in order to use those properties to configure a Pulumi-managed resource.
 1. Adopting the existing resource to bring it under management by Pulumi.
 
-The first scenario is sometimes called _coexistence_, and you can learn more it in [Adopting Pulumi > Coexistence](/docs/using-pulumi/adopting-pulumi#coexistence). The second scenario is called _adoption_ or _import_, and you can learn more about it the sections that follow.
+The first scenario is sometimes called _coexistence_, and you can learn more it in [Migrating to Pulumi > Coexistence](/docs/iac/guides/migration/#coexistence). The second scenario is called _adoption_ or _import_, and you can learn more about it the sections that follow.
 
 ## Two ways to import a resource
 
@@ -28,7 +28,7 @@ There are two ways to import an existing cloud resource into a Pulumi project:
 
 1. With the [`pulumi import`](/docs/cli/commands/pulumi_import) CLI command. This command imports the resource into the currently selected [stack](/docs/concepts/stack/) and generates code describing the resource's current configuration for you to add to your Pulumi program.
 
-1. In code, with the [`import` resource option](/docs/concepts/options/import/). This option is supplied by as an additional property on a resource declaration that you write into your Pulumi program yourself.
+1. In code, with the [`import` resource option](/docs/concepts/options/import/). This option is expressed as an additional property on a resource declaration that you write into your Pulumi program yourself.
 
 Both approaches allow you to adopt and begin managing existing cloud resources with Pulumi, but they work in slightly different ways, and are suited to slightly different use cases. The sections below explain both in more detail.
 
@@ -62,9 +62,9 @@ $ pulumi import <type> <name> <id>
 
 * The first argument, `type`, is the Pulumi type token to use for the imported resource.
 
-    As mentioned in [Where to find the type token and lookup property](#how-import-works), you'll find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucket/#import) resource, for example, is `aws:s3/bucket:Bucket`.
+    As mentioned in [Where to find the type token and lookup property](#how-import-works), you'll find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucket/#import) resource, is `aws:s3/bucket:Bucket`.
 
-* The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported. The generated code will use this name for the resource declaration (the first parameter in any resource), so like all Pulumi resource names, it must be unique among all resources for this type within the scope of the containing project. (That is, you may have an S3 bucket and a VPC named `foo`, but you cannot have two S3 buckets named `foo`.)
+* The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported. The generated code will use this name for the resource's [logical name](/docs/iac/concepts/resources/names/#logicalname), so like all Pulumi resource names, it must be unique among resources of the same type within the containing program. (That is, a program can contain an S3 bucket and a VPC both named `foo`, but it cannot contain two S3 buckets named `foo`.)
 
 * The third argument, `id`, is the value to use for the resource lookup in the cloud provider. This value should correspond to the designated lookup property specified in the Import section of the resource's API documentation in the Registry.
 
@@ -430,14 +430,14 @@ The bulk import JSON file follows this schema:
 
 | Property    | Type              | Required | Description                                                                                                     |
 | ----------- | ----------------- | -------- | --------------------------------------------------------------------------------------------------------------- |
-| `nameTable` | `map[URN]`        | No       | A mapping from in-language variable names to URNs. Used on when generating references to parents and providers. |
+| `nameTable` | `map[URN]`        | No       | A mapping from in-language variable names to URNs. Used only when generating references to parents and providers. |
 | `resources` | `array[Resource]` | Yes      | The list of resources to import.                                                                                |
 
 A `Resource` has the following schema:
 
 | Property     | Type            | Required | Description                                                                                                                                                    |
 |--------------|-----------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `id`         | `string`        | Yes      | The provider determined ID for this resource type. The is required unless `component` is `true`                                                                |
+| `id`         | `string`        | Yes      | The provider determined ID for this resource type. This is required unless `component` is `true`.                                                                |
 | `type`       | `Type Token`    | Yes      | The type of the corresponding Pulumi resource.                                                                                                                 |
 | `name`       | `string`        | Yes      | The name of the resource.                                                                                                                                      |
 | `logicalName` | `string`       | No       | The [logical name](/docs/concepts/resources/names/#logicalname) of the resource. The original `name` property is then used just for codegen purposes (i.e. the source name). If either property is not set then the other field is used to fill it in. |

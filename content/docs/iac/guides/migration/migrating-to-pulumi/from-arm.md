@@ -8,7 +8,7 @@ menu:
     iac:
         name: Azure Resource Manager
         parent: iac-guides-migration-from
-        weight: 3
+        weight: 4
 aliases:
 - /docs/guides/adopting/from_azure/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/

@@ -24,7 +24,7 @@ This user guide offers a tour of tried-and-true tools and techniques that can be
 Below we will review some basic concepts, but feel free to jump straight to a specific guide:
 
 * [**Importing Infrastructure**](/docs/using-pulumi/adopting-pulumi/import/): for any cloud, no matter how it's provisioned
-* [**From Terraform**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/): coexist with existing workspaces or convert your HCL
+* [**From Terraform**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/) or [**CDK for Terraform (CDKTF)**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/): coexist with existing workspaces or convert your HCL
 * [**From AWS CloudFormation**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/): coexist with, deploy, or convert your templates and stacks
 * [**From Azure Resource Manager (ARM)**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/): coexist with, deploy, or convert your templates and deployments
 * [**From Kubernetes YAML or Helm**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/): coexist with, deploy, or convert your configuration
@@ -77,4 +77,4 @@ The final approach is to convert an existing infrastructure as code program to P
 
 Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. This is usually still combined with importing so that you not only get a new program that provisions the right infrastructure, but also adopt existing infrastructure under the management of Pulumi too.
 
-There are conversion tools available for [Terraform HCL](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform#converting-terraform-hcl-to-pulumi), [Kubernetes YAML](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes#converting-kubernetes-yaml), and [Azure Resource Manager (ARM) templates](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure#using-the-next-generation-pulumi-azure-provider).
+There are conversion tools available for [Terraform HCL](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform#converting-terraform-hcl-to-pulumi) (which also covers converting from CDKTF), [Kubernetes YAML](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes#converting-kubernetes-yaml), and [Azure Resource Manager (ARM) templates](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure#using-the-next-generation-pulumi-azure-provider).

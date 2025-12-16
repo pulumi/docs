@@ -2,7 +2,7 @@
 title_tag: "Migrating from Terraform"
 meta_desc: Migrate your existing Terraform HCL and/or coexist with existing workspaces.
 title: Terraform
-h1: Migrating from Terraform to Pulumi
+h1: Migrating from Terraform or CDKTF to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -15,10 +15,10 @@ aliases:
 - /docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/
 ---
 
-If your infrastructure was provisioned with Terraform, there are a number of options that will help you adopt Pulumi.
+If your infrastructure was provisioned with Terraform or CDK for Terraform (CDKTF), there are a number of options that will help you adopt Pulumi.
 
-* **Coexist** with resources provisioned by Terraform by referencing a `.tfstate` file.
-* **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/) or using `pulumi convert --from terraform` along with some `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
+* **Coexist** with resources provisioned by Terraform or CDKTF by referencing a `.tfstate` file.
+* **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/) or using `pulumi convert --from terraform` along with `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `pulumi convert --from terraform`.
 * **Use Terraform Modules** directly within your Pulumi programs through the [Terraform Module](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) feature.
 
@@ -29,11 +29,11 @@ This range of techniques helps to either temporarily or permanently use Pulumi a
 Pulumi allows you to reference output values from existing Terraform state files, enabling you to build new infrastructure that depends on resources provisioned with Terraform. This capability is particularly useful for:
 
 * Organizations with existing Terraform infrastructure where the cost of migration isn't justified
-* Teams transitioning gradually from Terraform to Pulumi
-* Scenarios where some infrastructure must remain in Terraform due to organizational constraints
+* Teams transitioning gradually from Terraform or CDKTF to Pulumi
+* Scenarios where some infrastructure must remain under management by Terraform due to organizational constraints
 * Accessing shared infrastructure (like VPCs, networks, or databases) managed by other teams
 
-You can use the [Terraform provider](/registry/packages/terraform) functions to reference output values from a Terraform configuration:
+You can use the [Terraform provider](/registry/packages/terraform) functions to reference output values from a Terraform state source:
 
 * For local state files, use [`terraform.state.getLocalReference`](/registry/packages/terraform/api-docs/state/getlocalreference)
 * For state files stored in Terraform Cloud or Terraform Enterprise, use [`terraform.state.getRemoteReference`](/registry/packages/terraform/api-docs/state/getremotereference/#terraform-state-getremotereference)
@@ -261,13 +261,19 @@ resources:
 
 ## Converting Terraform HCL to Pulumi
 
-The Pulumi CLI can convert existing Terraform source code written in the HashiCorp Configuration Language (HCL) into Pulumi source code via `pulumi convert --from terraform`. In addition to converting source code, there is an option to [automatically insert import IDs](/docs/using-pulumi/adopting-pulumi/import/), so that you can also import state during the conversion. This ensures live resources are brought under the control of Pulumi as well as letting you deploy and manage new copies of that infrastructure.
+The Pulumi CLI can convert existing Terraform source code written in the HashiCorp Configuration Language (HCL) into Pulumi source code using the `pulumi convert` command.
 
-### How to Use the Converter
+If you're coming to Pulumi from CDKTF, you can generate the HCL for the stacks in your project with `cdktf synth`:
 
-To use the converter, [Install Pulumi](/docs/install/) or [try it out online](/tf2pulumi/).
+```bash
+cdktf synth --hcl
+```
 
-Next, `cd` into a Terraform project you'd like to convert. Then run `pulumi convert --from terraform`. It will convert the entire project whose directory you are in and put the resulting code in the local directory.
+This produces a single HCL file for each stack at `./cdktf.out/stacks/<stack-name>/cdk.tf`.
+
+### Using the Converter
+
+To use the converter, first [install Pulumi](/docs/install/), then change to a folder containing the HCL source files you'd like to convert.  Next, run `pulumi convert --from terraform` from within that folder:
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
@@ -307,29 +313,38 @@ This will generate a Pulumi program that when run with `pulumi up` will deploy t
 The following major features are supported:
 
 * Variables, outputs, resources, and data sources
-* Terraform modules are converted to Pulumi components
+* Terraform modules, which are converted to Pulumi components
 * Almost all HCL2 expression syntax
 
-In cases where the converter does not yet support a feature, the `pulumi convert` command succeeds but generates a TODO in the form of a call to a <pulumi-chooser type="language" options="typescript,python,go,csharp" option-style="none" class="inline">
+In cases where the converter does not yet support a certain feature, the `pulumi convert` command succeeds, but generates a TODO in the form of a call to a <pulumi-chooser type="language" options="typescript,python,go,csharp" option-style="none" class="inline">
     <pulumi-choosable type="language" value="typescript"><code>notImplemented</code></pulumi-choosable>
     <pulumi-choosable type="language" value="python"><code>not_implemented</code></pulumi-choosable>
     <pulumi-choosable type="language" value="go"><code>notImplemented</code></pulumi-choosable>
     <pulumi-choosable type="language" value="csharp"><code>NotImplemented</code></pulumi-choosable>
-</pulumi-chooser> function that will need to be filled in manually. For most projects, the converter should be able to convert 90-95% of the code without any TODOs, with only a small percentage of items to address manually, significantly reducing migration time compared to doing an entire migration by hand. We are actively improving the converter by adding support for missing features and improving the overall quality of the converted code to reduce the amount of manual fix-ups required.
+</pulumi-chooser> function that will need to be filled in manually. For most projects, the converter should be able to convert 90-95% of the code without any TODOs, with only a small percentage of items to address manually, significantly reducing migration time compared to doing an entire migration by hand.
+
+If you notice a feature that's not yet implemented or encounter a bug, please consider [filing an issue](https://github.com/pulumi/pulumi-converter-terraform).
 
 ### Importing Resources
 
-That command converted the static HCL source code to Pulumi code. What if you want to import existing resource states from a `.tfstate` file, however, to avoid unnecessarily recreating your infrastructure?
+The `convert` command translates static HCL source code into Pulumi program code. Often, however, you'll also need to import existing resource state from your Terraform or CDKTF project in order to begin managing those resources with Pulumi.
 
-Call `pulumi import --from terraform ./terraform.tfstate` ensuring a valid location of a `.tfstate` file to import resources from that state.
+To do so, you can use `pulumi import --from terraform`:
 
-This will read the resources and their ID's out of the terraform state file and run a standard Pulumi import deployment to read them into the Pulumi state.
+```bash
+pulumi import --from terraform ./terraform.tfstate
+```
 
-Before running the deployment the import file generated will be written out to the current directory, if there are issues importing you can manually edit this file and try again with `pulumi import --file`.
+Given a path to a valid `.tfstate` file and a target Pulumi stack, Pulumi will import the resources defined in that file into the stack and mark them [protected](/docs/iac/concepts/resources/options/protect/) to allow you to make follow-up changes to their source code safely. You can also import resources individually using the [`import`](https://www.pulumi.com/docs/iac/concepts/resources/options/import/) resource option.
 
-### Example Conversion
+To learn more about importing resources with Pulumi, see [Importing Resources](/docs/iac/guides/migration/import/).
 
-For an example of a full conversion, see the [Converting Full Terraform Programs to Pulumi](/blog/converting-full-terraform-programs-to-pulumi/) blog post.
+### Conversion Examples
+
+To help make migration from Terraform and CDKTF more approachable, we've prepared the following examples for reference:
+
+* [Converting Full Terraform Programs to Pulumi](/blog/converting-full-terraform-programs-to-pulumi/): A blog post that covers the process of converting a real-world Terraform codebase
+* [Migrating from CDKTF to Pulumi](https://github.com/pulumi/cdktf-to-pulumi-example): An end-to-end example that covers converting and importing a multi-stack CDKTF project
 
 ## Using Terraform Modules Directly
 

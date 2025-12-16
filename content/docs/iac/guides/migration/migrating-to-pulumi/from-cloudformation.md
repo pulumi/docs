@@ -8,7 +8,7 @@ menu:
     iac:
         name: AWS CloudFormation
         parent: iac-guides-migration-from
-        weight: 2
+        weight: 3
 aliases:
 - /docs/guides/adopting/from_aws/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/
