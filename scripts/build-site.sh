@@ -17,6 +17,7 @@ printf "Atlas URL: $PULUMI_ATLAS_URL\n"
 
 printf "Compiling theme JavaScript and CSS...\n\n"
 export ASSET_BUNDLE_ID="$(build_identifier)"
+export CSS_BUNDLE_ID="${ASSET_BUNDLE_ID}"
 
 # Paths to the CSS and JS bundles we'll generate below. Note that environment variables
 # are read by some templates during the Hugo build process.
