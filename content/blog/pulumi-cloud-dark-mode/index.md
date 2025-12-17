@@ -5,8 +5,6 @@ date: 2025-12-17
 
 meta_desc: Pulumi Cloud now features the ability to choose a dark or light theme.
 
-meta_image: meta.png
-
 # At least one author is required. The values in this list correspond with the `id`
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
