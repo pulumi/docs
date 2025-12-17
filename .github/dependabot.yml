@@ -19,6 +19,10 @@ updates:
         patterns: ["prettier", "husky", "markdownlint"]
     ignore:
       - dependency-name: "tailwindcss"
+      # Stay on Prettier v2.x due to v3.x performance regression (6x slower)
+      # See BUILD-AND-DEPLOY.md for details
+      - dependency-name: "prettier"
+        update-types: ["version-update:semver-major"]
     labels: ["dependencies", "npm"]
     commit-message:
       prefix: "deps"

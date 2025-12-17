@@ -297,8 +297,17 @@ function groupLintErrorOutput(result) {
     return filteredErrors;
 }
 
-// Build the lint object for the content directory.
-const filesToLint = getMarkdownFiles(`../../content`);
+// Get files from command line arguments (for lint-staged) or scan all files (for CI)
+const filesFromArgs = process.argv.slice(2).filter(arg => !arg.startsWith('--'));
+let filesToLint;
+
+if (filesFromArgs.length > 0) {
+    // When specific files are provided (from lint-staged), process only those files
+    filesToLint = searchForMarkdown(filesFromArgs.map(f => path.resolve(process.cwd(), f)));
+} else {
+    // When no files are provided, scan all markdown files (CI behavior)
+    filesToLint = getMarkdownFiles(`../../content`);
+}
 
 /**
  * Custom rule for checking Hugo relrefs

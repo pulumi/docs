@@ -64,6 +64,7 @@ make clean                # Remove build artifacts and dependencies
 ### Prerequisites
 
 **Required Tools:**
+
 - Node.js 22.x
 - Hugo 0.151.0
 - Yarn 1.22.x (not strictly enforced in CI)
@@ -72,6 +73,7 @@ make clean                # Remove build artifacts and dependencies
 - Pulumi CLI (for infrastructure deployments)
 
 **Optional Tools:**
+
 - AWS CLI (for debugging deployments)
 - GitHub CLI (`gh`) (for PR operations)
 - Docker (for dev container)
@@ -138,6 +140,7 @@ make clean                # Remove build artifacts and dependencies
 ### Component Relationships
 
 **Build System:**
+
 - **Hugo**: Transforms content/ markdown into static HTML
 - **Webpack**: Bundles TypeScript and CSS from theme/
 - **TypeDoc**: Generates Node.js SDK documentation
@@ -145,6 +148,7 @@ make clean                # Remove build artifacts and dependencies
 - **Pulumi CLI**: Generates CLI reference documentation
 
 **Deployment Infrastructure:**
+
 - **S3**: Origin buckets for static content
 - **CloudFront**: Global CDN with caching
 - **Lambda@Edge**: Request routing and redirects
@@ -152,6 +156,7 @@ make clean                # Remove build artifacts and dependencies
 - **Pulumi**: Infrastructure as Code for deployment
 
 **CI/CD:**
+
 - **GitHub Actions**: 25 workflows for build, test, deploy
 - **Pulumi ESC**: Secrets and environment management
 - **OIDC**: Secure AWS authentication without static keys
@@ -235,6 +240,7 @@ make ensure
 ```
 
 This will:
+
 1. Run `clean.sh` to remove old artifacts
 2. Install Node.js dependencies for root, theme, theme/stencil, and infrastructure
 3. Build theme assets with webpack
@@ -255,7 +261,7 @@ make serve-all
 make serve-static
 ```
 
-The site will be available at http://localhost:1313.
+The site will be available at <http://localhost:1313>.
 
 > **Note:** The dev server uses `--buildDrafts` and `--buildFuture` flags, showing content not visible in production.
 
@@ -420,34 +426,40 @@ The primary build script that orchestrates the entire build process.
 **What it does:**
 
 1. Sets environment variables for bundle IDs:
+
    ```bash
    ASSET_BUNDLE_ID=${git-sha-short or pr-{num}-{sha}}
    CSS_BUNDLE_ID=${ASSET_BUNDLE_ID}
    ```
 
 2. Exports asset paths for Hugo templates:
+
    ```bash
    REL_CSS_BUNDLE=/css/styles.${ASSET_BUNDLE_ID}.css
    REL_JS_BUNDLE=/js/bundle.min.${ASSET_BUNDLE_ID}.js
    ```
 
 3. Copies prebuilt documentation:
+
    ```bash
    make copy_static_prebuilt
    ```
 
 4. Runs Hugo build with optimization:
+
    ```bash
    hugo --minify --buildFuture --templateMetrics  # For preview/testing
    # Production omits --buildFuture
    ```
 
 5. Generates search index data:
+
    ```bash
    node scripts/content/generate-docs-content.js
    ```
 
 6. Minifies and optimizes CSS:
+
    ```bash
    yarn run minify-css
    ```
@@ -561,6 +573,7 @@ Creates S3 bucket, syncs content, and validates deployment.
 **What it does:**
 
 1. **Creates S3 bucket** with atomic naming:
+
    ```
    www-{environment}-pulumi-docs-origin-{build-id}
    ```
@@ -571,6 +584,7 @@ Creates S3 bucket, syncs content, and validates deployment.
    - CORS configuration
 
 3. **Syncs content**:
+
    ```bash
    aws s3 sync public/ s3://{bucket}/ --delete
    ```
@@ -580,6 +594,7 @@ Creates S3 bucket, syncs content, and validates deployment.
    - Verifies bucket accessibility
 
 5. **Generates metadata**:
+
    ```json
    {
      "bucket": "bucket-name",
@@ -668,6 +683,7 @@ Multi-stage CSS optimization pipeline:
 **Script:** `scripts/minify-css.js`
 
 **Output:**
+
 ```
 public/css/bundle.{CSS_BUNDLE_ID}.css
 public/css/marketing.{CSS_BUNDLE_ID}.css
@@ -724,6 +740,7 @@ This ensures every deployment has unique asset URLs, preventing cache issues.
 **Base Configuration:** `config/_default/config.yml`
 
 Key settings:
+
 ```yaml
 baseURL: https://www.pulumi.com/
 timeout: 300000ms  # 300 seconds
@@ -745,16 +762,19 @@ baseURL: https://www.pulumi.com/
 #### Environment-Specific Builds
 
 **Development:**
+
 ```bash
 hugo server --buildDrafts --buildFuture --renderToMemory
 ```
 
 **Production:**
+
 ```bash
 hugo --minify --templateMetrics  # Note: --buildFuture is omitted in production
 ```
 
 **Preview (PRs):**
+
 ```bash
 hugo --minify --buildFuture --baseURL={preview-url}
 ```
@@ -771,6 +791,7 @@ Hugo processes 46+ content directories:
 > **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing.
 
 Templates are in `/layouts/` with various shortcodes for:
+
 - Code examples
 - Videos and images
 - API references
@@ -779,6 +800,7 @@ Templates are in `/layouts/` with various shortcodes for:
 #### Content Generation
 
 Hugo generates:
+
 - HTML pages from markdown
 - RSS feeds
 - Sitemap.xml
@@ -788,6 +810,7 @@ Hugo generates:
 #### Minification
 
 With `--minify` flag, Hugo minifies:
+
 - HTML (remove whitespace, comments)
 - CSS (via external process)
 - JS (via external process)
@@ -902,9 +925,10 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 #### build-and-deploy.yml
 
-**Purpose:** Deploy the site to production (www.pulumi.com)
+**Purpose:** Deploy the site to production (<www.pulumi.com>)
 
 **Triggers:**
+
 - Push to `master` branch
 - Scheduled: Daily at 6 AM Eastern (7 AM during DST), noon Pacific (1 PM during DST)
 - Manual: `workflow_dispatch`
@@ -944,15 +968,17 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 #### testing-build-and-deploy.yml
 
-**Purpose:** Deploy to testing environment (www.pulumi-test.io)
+**Purpose:** Deploy to testing environment (<www.pulumi-test.io>)
 
 **Triggers:**
+
 - Push to `master` branch
 - Manual: `workflow_dispatch`
 
 **Environment:** Testing (AWS Account: 571684982431)
 
 **Differences from Production:**
+
 - Deploys to separate AWS account
 - Uses testing CloudFront distribution
 - Sends failures to `docs-ops-test` Slack channel
@@ -967,6 +993,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Build and validate PRs, create preview environments
 
 **Triggers:**
+
 - Pull requests to `master` or `release/*` branches
 - PR synchronize (new commits pushed)
 
@@ -980,23 +1007,28 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
    - Check if PR is from fork (skip deployment if true)
    - Build site in preview mode
    - Create PR-specific S3 bucket:
+
      ```
      www-testing-pulumi-docs-origin-pr-{PR_NUMBER}-{SHA}
      ```
+
    - Sync built site to preview bucket
    - Run Cypress browser tests
    - Generate search index
    - Run Pulumi preview (non-destructive)
    - Post preview URL to PR comments:
+
      ```
      http://www-testing-pulumi-docs-origin-pr-123-abc1234.s3-website.us-west-2.amazonaws.com
      ```
+
    - Archive test results and metadata
 
 2. **notify**
    - Slack alert on failure
 
 **Preview Lifecycle:**
+
 - Created on first PR commit
 - Updated on subsequent commits
 - Deleted when PR is closed
@@ -1006,6 +1038,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Clean up PR preview resources
 
 **Triggers:**
+
 - Pull request closed (merged or abandoned)
 
 **Environment:** Testing
@@ -1016,6 +1049,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
    - Find all S3 buckets matching `*-pr-{PR_NUMBER}-*`
    - Delete buckets and all contents
    - Post cleanup notification to PR:
+
      ```
      Site previews for this pull request have been removed.
      ```
@@ -1029,6 +1063,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Auto-generate CLI documentation when Pulumi CLI is released
 
 **Triggers:**
+
 - Repository dispatch event from pulumi/pulumi repository
 - Triggered automatically on Pulumi CLI release
 
@@ -1062,12 +1097,14 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Auto-generate ESC CLI documentation
 
 **Triggers:**
+
 - Repository dispatch from pulumi/esc repository
 - Triggered on ESC CLI release
 
 **Process:** Similar to pulumi-cli.yml but for ESC commands
 
 **Output:**
+
 - ESC CLI command documentation
 - Updated `static/esc/latest-version`
 
@@ -1076,9 +1113,11 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Update CMDA CLI version
 
 **Triggers:**
+
 - Repository dispatch from CMDA repository
 
 **Process:**
+
 - Updates version file for customer-managed-deployment-agent
 - Creates automated PR
 
@@ -1089,6 +1128,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Run comprehensive tests on example programs
 
 **Triggers:**
+
 - Daily at 8:00 AM UTC
 - Pull requests to master
 - Manual: `workflow_dispatch`
@@ -1096,6 +1136,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Platform:** Custom Pulumi runner (pulumi-service-ubuntu-24.04-4core)
 
 **Setup:**
+
 - Multi-language runtimes:
   - Go 1.25
   - Node.js 20
@@ -1107,11 +1148,13 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 - Kubernetes KinD cluster
 
 **Cloud Authentication:**
+
 - AWS via OIDC (gets credentials from Pulumi ESC)
 - GCP via workload identity federation
 - Azure credentials from ESC
 
 **Tests:** Runs `make test` on ~425 example programs across:
+
 - Languages: TypeScript, Python, Go, C#, Java, YAML
 - Clouds: AWS, GCP, Azure, Kubernetes
 - Scenarios: Simple deployments, complex architectures
@@ -1125,10 +1168,12 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Keep example program dependencies up to date
 
 **Triggers:**
+
 - Daily at 6:00 AM UTC
 - Manual: `workflow_dispatch`
 
 **Jobs:**
+
 - Upgrade Go module dependencies in example programs
 - Run tests to verify upgrades work
 - Create PR with branch `examples/upgrade`
@@ -1141,12 +1186,14 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Clean up old S3 buckets in production
 
 **Triggers:**
+
 - Daily at 3:00 PM UTC
 - Manual: Not currently configured
 
 **Environment:** Production (AWS Account: 388588623842)
 
 **Jobs:**
+
 - Run `make ci_bucket_cleanup`
 - Identify buckets older than retention period
 - Delete old origin buckets
@@ -1159,6 +1206,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Clean up old S3 buckets in testing
 
 **Triggers:**
+
 - Daily at 3:00 PM UTC
 - Manual: `workflow_dispatch`
 
@@ -1173,12 +1221,14 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Verify all internal and external links
 
 **Triggers:**
+
 - Daily at 3:00 PM UTC
 - Manual: `workflow_dispatch`
 
 **Jobs:**
+
 - Run `make check_links`
-- Crawl production site (www.pulumi.com)
+- Crawl production site (<www.pulumi.com>)
 - Check all links (internal and external)
 - Report broken links
 
@@ -1189,10 +1239,12 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Validate search index integrity
 
 **Triggers:**
+
 - Daily at 3:00 PM UTC
 - Manual: `workflow_dispatch`
 
 **Jobs:**
+
 - Run `make check_search_urls`
 - Query Algolia search index
 - Verify all indexed URLs are accessible
@@ -1205,11 +1257,13 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Monitor site performance and accessibility
 
 **Triggers:**
+
 - Daily at 3:00 PM UTC
 - Manual: `workflow_dispatch`
 
 **Pages Tested:**
-- Homepage (www.pulumi.com)
+
+- Homepage (<www.pulumi.com>)
 - Product page
 - Pricing page
 - Get Started guide
@@ -1218,6 +1272,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 - Registry package page (AWS S3 bucket)
 
 **Metrics:**
+
 - Performance
 - Accessibility
 - Best Practices
@@ -1232,18 +1287,21 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Update Algolia search index on demand
 
 **Triggers:**
+
 - Hourly (every 60 minutes)
 - Manual: `workflow_dispatch`
 
 **Environment:** Production
 
 **Jobs:**
+
 - Run `make ci_update_search_index`
 - Extract content from built site
 - Update Algolia indices
 - Apply index settings and ranking rules
 
 **Indices Updated:**
+
 - pulumi (main documentation)
 - blog posts
 - registry packages
@@ -1253,12 +1311,14 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Purpose:** Sync private fork with upstream
 
 **Triggers:**
+
 - Every 15 minutes
 - Manual: `workflow_dispatch`
 
 **Target:** Only runs on private fork repositories (not pulumi/docs)
 
 **Jobs:**
+
 - Sync latest commits from pulumi/docs to downstream fork
 - Uses Fork-Sync-With-Upstream action
 - Preserves private fork changes
@@ -1270,22 +1330,27 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 The repository includes 9 additional utility workflows for automation and project management:
 
 **Automation and Auto-merge:**
+
 - **automerge-workflow.yml**: Auto-merge approved PRs from trusted sources
 - **auto-approve-for-auto-merge.yml**: Auto-approve PRs that meet auto-merge criteria (trusted bots, dependency updates)
 
 **AI-Assisted Development:**
+
 - **claude.yml**: AI-assisted code analysis and suggestions
 - **claude-code-review.yml**: AI-powered code review automation for pull requests
 
 **Project Management:**
+
 - **add-triage-label.yml**: Automatically apply triage labels to new issues
 - **add-to-project.yml**: Add issues and PRs to GitHub Projects for tracking
 
 **Secret Management:**
+
 - **export-repo-secrets.yml**: Export repository secrets for CI/CD consumption
 - **export-secrets.yml**: General-purpose secrets export utility for workflows
 
 **Development Versions:**
+
 - **pulumi-cli-dev-version.yml**: Handle development and pre-release versions of Pulumi CLI documentation
 
 These workflows support repository maintenance, automation, and developer experience but are not part of the core build and deployment pipeline documented in detail above.
@@ -1322,6 +1387,7 @@ All deployment infrastructure is managed as code using Pulumi (TypeScript). Infr
 **Primary File:** `infrastructure/index.ts`
 
 **Pulumi Stack Configuration:**
+
 - **Production:** `Pulumi.www-production.yaml`
 - **Testing:** `Pulumi.www-testing.yaml`
 
@@ -1351,10 +1417,12 @@ www-{environment}-pulumi-docs-origin-{identifier}
 ```
 
 Examples:
+
 - Production: `www-production-pulumi-docs-origin-a1b2c3d4`
 - Testing: `www-testing-pulumi-docs-origin-pr-123-abc1234`
 
 **Configuration:**
+
 - Website hosting enabled (index.html, 404.html)
 - Public read access via ACL
 - Object ownership: BucketOwnerPreferred
@@ -1386,10 +1454,12 @@ Delivery: CloudWatch Logs infrastructure v2
 **Purpose:** Global CDN serving the production site
 
 **Domain Aliases:**
-- Production: www.pulumi.com
-- Testing: www.pulumi-test.io
+
+- Production: <www.pulumi.com>
+- Testing: <www.pulumi-test.io>
 
 **SSL/TLS:**
+
 - ACM Certificate (us-east-1)
 - ARN from Pulumi config
 - SNI-only (no dedicated IP)
@@ -1436,13 +1506,14 @@ Delivery: CloudWatch Logs infrastructure v2
 | /fonts/* | S3 Main | 1 hour | Web fonts |
 | /icons/* | S3 Main | 1 hour | Icons |
 | /logos/* | S3 Main | 1 hour | Logos |
-| *.woff, *.woff2 | S3 Main | 1 year | Font files |
+| *.woff,*.woff2 | S3 Main | 1 year | Font files |
 
 **Compression:** Enabled (gzip, brotli)
 
 **Price Class:** All (global distribution)
 
 **Custom Error Responses:**
+
 - 404 → 404.html
 
 **Geo Restrictions:** None
@@ -1456,11 +1527,13 @@ Delivery: CloudWatch Logs infrastructure v2
 **Purpose:** Handle cross-origin redirects at the edge
 
 **Use Cases:**
+
 - Redirect legacy URLs
 - Handle cross-repository navigation
 - Apply custom routing logic
 
 **Configuration:**
+
 ```typescript
 const edgeRedirects = new aws.lambda.Function("edge-redirects", {
     runtime: "nodejs18.x",
@@ -1484,9 +1557,10 @@ const edgeRedirects = new aws.lambda.Function("edge-redirects", {
 
 #### Route53 DNS
 
-**Hosted Zone:** From config (www.pulumi.com or www.pulumi-test.io)
+**Hosted Zone:** From config (<www.pulumi.com> or <www.pulumi-test.io>)
 
 **A Record:**
+
 ```typescript
 new aws.route53.Record("root-record", {
     zoneId: hostedZoneId,
@@ -1509,32 +1583,39 @@ The atomic deployment strategy ensures zero-downtime deployments with instant ro
 **How It Works:**
 
 1. **Build Phase**
+
    ```bash
    ./scripts/build-site.sh
    ```
+
    - Compile assets
    - Generate HTML
    - Optimize CSS
    - Create search index
 
 2. **Create New Bucket**
+
    ```bash
    ./scripts/sync-and-test-bucket.sh update
    ```
+
    - Generate unique bucket name with commit SHA
    - Create S3 bucket
    - Configure website hosting
    - Enable public access
 
 3. **Sync Content**
+
    ```bash
    aws s3 sync public/ s3://{bucket}/ --delete
    ```
+
    - Upload all files
    - Set content types
    - Apply cache headers
 
 4. **Validate Deployment**
+
    ```bash
    # Check file count
    aws s3 ls s3://{bucket}/ --recursive | grep index.html | wc -l
@@ -1542,24 +1623,30 @@ The atomic deployment strategy ensures zero-downtime deployments with instant ro
    ```
 
 5. **Run Tests**
+
    ```bash
    ./scripts/run-browser-tests.sh
    ```
+
    - Cypress smoke tests
    - Verify critical pages
 
 6. **Update Infrastructure**
+
    ```bash
    ./scripts/run-pulumi.sh
    ```
+
    - Pulumi reads `origin-bucket-metadata.json`
    - Updates CloudFront origin to new bucket
    - Applies infrastructure changes
 
 7. **Apply Redirects**
+
    ```bash
    ./scripts/make-s3-redirects.sh
    ```
+
    - Generate S3 redirect rules
    - Apply to bucket
 
@@ -1586,6 +1673,7 @@ Use this when the issue is caused by recent code/content/configuration changes (
 **Prerequisites:** GitHub write access
 
 **Steps:**
+
 ```bash
 # Find the problematic commit
 git log --oneline -10
@@ -1612,12 +1700,13 @@ Use this for faster rollback when the problem isn't in code (e.g., infrastructur
 **Prerequisites:** Access to Pulumi Cloud (pulumi/docs organization)
 
 **Steps:**
+
 1. Find the previous bucket name:
    - Check GitHub Actions → Previous successful run → Artifacts → `origin-bucket-metadata.json`
    - Bucket format: `www-production-pulumi-docs-origin-{git-sha}`
 
 2. Update Pulumi stack config:
-   - Open https://app.pulumi.com/pulumi/docs/www-production
+   - Open <https://app.pulumi.com/pulumi/docs/www-production>
    - Go to Settings → Configuration
    - Set `originBucketNameOverride` to the previous bucket name
    - Save
@@ -1633,6 +1722,7 @@ CloudFront switches origins within 1-2 minutes (no rebuild required).
 **Cons:** Requires Pulumi Cloud access, doesn't fix code issues
 
 **Important:** After the issue is resolved, clear the override to resume normal deployments:
+
 ```yaml
 # In Pulumi Cloud console, set:
 originBucketNameOverride: ""
@@ -1645,12 +1735,14 @@ originBucketNameOverride: ""
 For team members with complete local development environment.
 
 **Prerequisites:**
+
 - Pulumi CLI installed
 - `PULUMI_ACCESS_TOKEN` environment variable set
 - AWS CLI configured with SSO/OIDC
 - Repository cloned locally
 
 **Steps:**
+
 ```bash
 # From repository root
 cd infrastructure
@@ -1719,11 +1811,13 @@ node verify-aliases.js
 ```
 
 **Pros:**
+
 - Automatic (Hugo handles it)
 - Preserves SEO (meta-refresh + robots tag)
 - No infrastructure changes needed
 
 **Cons:**
+
 - Not true 301 redirects (but search engines understand meta-refresh)
 - Requires page to exist in Hugo content
 
@@ -1767,11 +1861,13 @@ docs/old/path/index.html|/docs/new/path/
 ```
 
 **Pros:**
+
 - True 301 redirects
 - Works for any path
 - No Hugo involvement
 
 **Cons:**
+
 - Must be manually added to redirect files
 - Deployed per bucket (atomic deployment limitation)
 
@@ -1807,11 +1903,13 @@ exports.handler = async (event) => {
 **Deployment:** Managed in `infrastructure/index.ts`
 
 **Pros:**
+
 - Works across origins
 - True 301 redirects
 - Lowest latency (executes at edge)
 
 **Cons:**
+
 - Requires code deploy
 - More complex to maintain
 
@@ -1858,6 +1956,7 @@ const securityHeaders = new aws.cloudfront.ResponseHeadersPolicy("security-heade
 ```
 
 **Headers Applied:**
+
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains`
 - `X-Frame-Options: DENY`
 - `X-XSS-Protection: 1; mode=block`
@@ -1866,7 +1965,7 @@ const securityHeaders = new aws.cloudfront.ResponseHeadersPolicy("security-heade
 
 ### Environment-Specific Configuration
 
-#### Production (www.pulumi.com)
+#### Production (<www.pulumi.com>)
 
 **File:** `Pulumi.www-production.yaml`
 
@@ -1887,7 +1986,7 @@ config:
   www.pulumi.com:certificateArn: arn:aws:acm:us-east-1:388588623842:certificate/...
 ```
 
-#### Testing (www.pulumi-test.io)
+#### Testing (<www.pulumi-test.io>)
 
 **File:** `Pulumi.www-testing.yaml`
 
@@ -1921,6 +2020,7 @@ The repository employs multiple testing strategies to ensure quality and reliabi
 **Configuration:** `.markdownlint-base.json`
 
 **Rules Enforced:**
+
 - Heading levels increment by one
 - No trailing spaces
 - Proper list formatting
@@ -1940,6 +2040,7 @@ make lint
 **Tool:** Prettier
 
 **Scope:**
+
 - Markdown files
 - JavaScript/TypeScript
 - JSON files
@@ -1957,6 +2058,32 @@ make format
 
 **Configuration:** `.prettierrc.json`
 
+**Version:** Prettier v2.8.8
+
+**Why v2.x Instead of v3.x:**
+
+We intentionally use Prettier v2.x instead of the newer v3.x due to significant performance regressions:
+
+- **Prettier v2.x performance:** ~4 seconds for full repository lint
+- **Prettier v3.x performance:** ~28 seconds for full repository lint (6x slower)
+- **Root cause:** Prettier v3.x performs 45% more filesystem operations for config resolution, checking 33 .editorconfig files across node_modules directories
+
+**Impact on Workflows:**
+
+- **Local commits:** Fast (1-2 seconds) thanks to `lint-staged` checking only changed files
+- **CI full lint:** Fast (~16 seconds total) thanks to v2.x performance
+- **Git hooks:** Pre-commit hooks run `lint-staged` instead of full `make lint` for speed
+
+**When to Upgrade:**
+
+We will consider upgrading to Prettier v3.x when:
+
+1. The Prettier team addresses the config resolution performance issues
+2. Full repository linting with v3.x approaches v2.x performance (<10 seconds)
+3. Benefits of v3.x features outweigh the performance cost
+
+See [Prettier's CLI Performance Deep Dive](https://prettier.io/blog/2023/11/30/cli-deep-dive) for details on the performance characteristics.
+
 #### Trailing Space Removal
 
 Remove trailing spaces from files:
@@ -1972,6 +2099,7 @@ sed -i '' 's/[[:space:]]*$//' file1.md file2.md
 **Location:** `cypress/integration/`
 
 **Tests:**
+
 - Smoke tests on deployed sites
 - Critical path verification (homepage, docs, registry)
 - Form submissions
@@ -1991,6 +2119,7 @@ npx cypress open
 **CI Integration:**
 
 Runs automatically in:
+
 - `pull-request.yml` (PR builds)
 - `build-and-deploy.yml` (production deployments)
 
@@ -2007,6 +2136,7 @@ Video recordings archived in GitHub Actions artifacts on failure.
 **Programs Tested:** ~425 programs in `/static/programs/`
 
 **Languages:**
+
 - TypeScript
 - Python
 - Go
@@ -2015,6 +2145,7 @@ Video recordings archived in GitHub Actions artifacts on failure.
 - YAML
 
 **Cloud Providers:**
+
 - AWS
 - Google Cloud
 - Azure
@@ -2062,7 +2193,7 @@ ONLY_TEST="aws-s3-bucket-typescript" ./scripts/programs/test.sh
 
 **Process:**
 
-1. Crawl production site (www.pulumi.com)
+1. Crawl production site (<www.pulumi.com>)
 2. Check all links (internal and external)
 3. Report:
    - 404 Not Found
@@ -2070,6 +2201,7 @@ ONLY_TEST="aws-s3-bucket-typescript" ./scripts/programs/test.sh
    - Invalid SSL
 
 **Types of Links Checked:**
+
 - Internal documentation links
 - External reference links
 - Images and assets
@@ -2113,7 +2245,8 @@ make check_search_urls
 **Tool:** Lighthouse CI
 
 **Pages Monitored:**
-- Homepage (www.pulumi.com)
+
+- Homepage (<www.pulumi.com>)
 - Product page (/product/)
 - Pricing (/pricing/)
 - Get Started (/docs/get-started/)
@@ -2122,6 +2255,7 @@ make check_search_urls
 - Registry package (/registry/packages/aws/api-docs/s3/bucket/)
 
 **Metrics:**
+
 - **Performance:** Page load speed, time to interactive
 - **Accessibility:** WCAG compliance, ARIA labels
 - **Best Practices:** HTTPS, console errors, security
@@ -2130,6 +2264,7 @@ make check_search_urls
 **Thresholds:**
 
 Configurable in Lighthouse CI configuration. Typical thresholds:
+
 - Performance: > 90
 - Accessibility: > 95
 - Best Practices: > 95
@@ -2155,7 +2290,7 @@ The Pulumi docs infrastructure operates across multiple environments for differe
 
 ### Production Environment
 
-**Domain:** www.pulumi.com
+**Domain:** <www.pulumi.com>
 
 **AWS Account:** 388588623842
 
@@ -2166,11 +2301,13 @@ The Pulumi docs infrastructure operates across multiple environments for differe
 **CloudFront Distribution:** E3PRSXO1BZJEEY
 
 **Deployment Triggers:**
+
 - Push to `master` branch
 - Scheduled: Daily at 6 AM Eastern (7 AM during DST), noon Pacific (1 PM during DST)
 - Manual via workflow_dispatch
 
 **S3 Bucket Pattern:**
+
 ```
 www-production-pulumi-docs-origin-{git-sha}
 ```
@@ -2180,12 +2317,13 @@ www-production-pulumi-docs-origin-{git-sha}
 **Logs:** CloudWatch Logs, S3 logs bucket
 
 **Access:**
+
 - Developers: Via Pulumi organization
 - CI/CD: Via OIDC role `arn:aws:iam::388588623842:role/ContinuousDelivery`
 
 ### Testing Environment
 
-**Domain:** www.pulumi-test.io
+**Domain:** <www.pulumi-test.io>
 
 **AWS Account:** 571684982431
 
@@ -2194,20 +2332,24 @@ www-production-pulumi-docs-origin-{git-sha}
 **Pulumi Stack:** `www-testing`
 
 **Purpose:**
+
 - Validate infrastructure changes before production
 - Parallel testing environment
 - PR preview deployments
 
 **Deployment Triggers:**
+
 - Push to `master` branch
 - Manual via workflow_dispatch
 
 **S3 Bucket Pattern:**
+
 ```
 www-testing-pulumi-docs-origin-{identifier}
 ```
 
 **Differences from Production:**
+
 - Separate AWS account
 - Separate CloudFront distribution
 - Separate search indices
@@ -2221,22 +2363,26 @@ www-testing-pulumi-docs-origin-{identifier}
 **AWS Account:** 571684982431 (Testing)
 
 **URL Pattern:**
+
 ```
 http://www-testing-pulumi-docs-origin-pr-{PR_NUMBER}-{SHA}.s3-website.us-west-2.amazonaws.com
 ```
 
 **Lifecycle:**
+
 1. **Created:** On first PR commit
 2. **Updated:** On subsequent commits
 3. **Deleted:** When PR is closed
 
 **Characteristics:**
+
 - Direct S3 website hosting (no CloudFront)
 - Ephemeral (deleted after PR closes)
 - No custom domain
 - Limited search indexing
 
 **Bucket Naming:**
+
 ```
 www-testing-pulumi-docs-origin-pr-123-abc1234
 ```
@@ -2265,6 +2411,7 @@ pulumi destroy
 ```
 
 **Benefits:**
+
 - Test infrastructure changes without affecting production or testing
 - Personal sandbox environment
 - Full CloudFront distribution (not just S3)
@@ -2350,6 +2497,7 @@ Pulumi ESC (Environments, Secrets, and Configuration) is a centralized secrets a
 **What It Provides:**
 
 All secrets and config for:
+
 - AWS credentials (via OIDC)
 - Pulumi tokens
 - Algolia keys
@@ -2513,6 +2661,7 @@ aws cloudfront get-invalidation \
 **Cause:** Lambda@Edge replication to edge locations takes time
 
 **Timeline:**
+
 - Code update: Immediate
 - Replication to edges: 5-30 minutes
 - Full propagation: Up to 1 hour
@@ -2597,6 +2746,7 @@ npm update
 **Symptom:** Browser tests fail in CI but pass locally
 
 **Common Causes:**
+
 - Timing issues (page not loaded)
 - Environment differences (URLs, auth)
 - Flaky tests (random failures)
@@ -2657,6 +2807,7 @@ grep -r "broken-url" content/
 **Symptom:** Performance score drops below threshold
 
 **Common Causes:**
+
 - Large images not optimized
 - JavaScript bundle size increased
 - Render-blocking resources
@@ -2677,6 +2828,7 @@ find static/images -type f -size +500k
 ```
 
 **Fix:**
+
 - Optimize images (compress, WebP format)
 - Code split large bundles
 - Lazy load images
@@ -2734,11 +2886,13 @@ pulumi stack -s www-production
 #### Check Logs
 
 **GitHub Actions Logs:**
+
 - Navigate to Actions tab
 - Select workflow run
 - View job logs
 
 **CloudWatch Logs:**
+
 ```bash
 # Lambda@Edge logs are in region where function executed
 # Check multiple regions
@@ -2747,6 +2901,7 @@ aws logs tail /aws/lambda/us-east-1.edge-redirects --follow
 ```
 
 **S3 Access Logs:**
+
 ```bash
 # Download logs
 aws s3 sync s3://www-prod.pulumi.com-website-logs/ ./logs/
@@ -2765,6 +2920,7 @@ Regular maintenance tasks to keep the infrastructure healthy and cost-effective.
 #### Automated Cleanup
 
 **Workflows:**
+
 - `bucket-cleanup.yml` (production)
 - `bucket-cleanup-testing.yml` (testing)
 
@@ -2825,6 +2981,7 @@ aws s3 ls | grep bucket-name
 #### Node.js Dependencies
 
 **Locations:**
+
 - Root `package.json`
 - `theme/package.json`
 - `theme/stencil/package.json`
@@ -2929,6 +3086,7 @@ Review and merge Dependabot PRs regularly.
 **Settings File:** `scripts/search/settings.js`
 
 **Configuration:**
+
 - Searchable attributes
 - Ranking rules
 - Custom ranking
@@ -3019,6 +3177,7 @@ ls -lh public/css/
    - Optimize Tailwind config
 
 2. **Reduce Tailwind Variants**
+
    ```javascript
    // theme/tailwind.config.js
    module.exports = {
@@ -3048,6 +3207,7 @@ npx webpack-bundle-analyzer dist/stats.json
 **Optimization Techniques:**
 
 1. **Code Splitting**
+
    ```javascript
    // Dynamic imports
    const module = await import('./heavy-module');
@@ -3058,6 +3218,7 @@ npx webpack-bundle-analyzer dist/stats.json
    - Avoid default exports
 
 3. **Lazy Loading**
+
    ```javascript
    // Load on interaction
    button.addEventListener('click', async () => {
@@ -3076,6 +3237,7 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
 ```
 
 **Best Practices:**
+
 - Use WebP format with fallback
 - Provide multiple sizes (srcset)
 - Lazy load images below fold
@@ -3104,6 +3266,7 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
    - Use bundle IDs for cache busting
 
 2. **Cache Patterns**
+
    ```typescript
    // infrastructure/index.ts
    cacheBehaviors: [{
@@ -3160,6 +3323,7 @@ All secrets managed via Pulumi ESC with automatic rotation capabilities.
 3. Next deployment uses new secret
 
 **Secrets to Rotate Regularly:**
+
 - Pulumi tokens
 - AWS IAM roles (refresh OIDC trust)
 - Algolia keys
@@ -3222,6 +3386,7 @@ Trust relationship between GitHub and AWS allows temporary credentials:
 ```
 
 **Benefits:**
+
 - No long-lived credentials
 - Automatic expiration (2 hours)
 - Audit trail in CloudTrail
@@ -3305,14 +3470,14 @@ Complete reference of all build and deployment scripts.
 
 | Service | URL/Port | Purpose |
 |---------|----------|---------|
-| **Local Dev Server** | http://localhost:1313 | Hugo development server |
-| **Static Server** | http://localhost:8080 | Serve built public/ directory |
-| **Production** | https://www.pulumi.com | Production site |
-| **Testing** | https://www.pulumi-test.io | Testing environment |
+| **Local Dev Server** | <http://localhost:1313> | Hugo development server |
+| **Static Server** | <http://localhost:8080> | Serve built public/ directory |
+| **Production** | <https://www.pulumi.com> | Production site |
+| **Testing** | <https://www.pulumi-test.io> | Testing environment |
 | **PR Preview** | http://{bucket}.s3-website.{region}.amazonaws.com | PR preview sites |
-| **Pulumi Console** | https://app.pulumi.com | Pulumi service |
-| **Algolia Dashboard** | https://www.algolia.com/apps/OCCYMHQD | Search management |
-| **GitHub Actions** | https://github.com/pulumi/docs/actions | CI/CD workflows |
+| **Pulumi Console** | <https://app.pulumi.com> | Pulumi service |
+| **Algolia Dashboard** | <https://www.algolia.com/apps/OCCYMHQD> | Search management |
+| **GitHub Actions** | <https://github.com/pulumi/docs/actions> | CI/CD workflows |
 
 ### Related Documentation
 
@@ -3327,11 +3492,11 @@ Complete reference of all build and deployment scripts.
 | **SEO.md** | / | Search optimization |
 | **SCHEMA.md** | / | Data schemas |
 | **infrastructure/README.md** | infrastructure/ | Infrastructure details |
-| **Pulumi Docs** | https://www.pulumi.com/docs/ | Pulumi documentation |
-| **Hugo Docs** | https://gohugo.io/documentation/ | Hugo reference |
-| **AWS CloudFront** | https://docs.aws.amazon.com/cloudfront/ | CloudFront documentation |
-| **GitHub Actions** | https://docs.github.com/actions | Workflow documentation |
-| **Algolia Docs** | https://www.algolia.com/doc/ | Search documentation |
+| **Pulumi Docs** | <https://www.pulumi.com/docs/> | Pulumi documentation |
+| **Hugo Docs** | <https://gohugo.io/documentation/> | Hugo reference |
+| **AWS CloudFront** | <https://docs.aws.amazon.com/cloudfront/> | CloudFront documentation |
+| **GitHub Actions** | <https://docs.github.com/actions> | Workflow documentation |
+| **Algolia Docs** | <https://www.algolia.com/doc/> | Search documentation |
 
 ### External Dependencies
 
@@ -3361,6 +3526,7 @@ Complete reference of all build and deployment scripts.
 The atomic deployment strategy makes rollbacks easy. Choose the method based on the situation:
 
 **Most Common: Git Revert (10-15 min)**
+
 ```bash
 git revert {problematic-commit-sha}
 git push origin master
@@ -3373,7 +3539,7 @@ For infrastructure issues or when git revert isn't suitable:
 
 1. Find previous bucket (check GitHub Actions artifacts: `origin-bucket-metadata.json`)
 2. Update config in Pulumi Cloud console:
-   - https://app.pulumi.com/pulumi/docs/www-production
+   - <https://app.pulumi.com/pulumi/docs/www-production>
    - Settings → Configuration → Set `originBucketNameOverride`
 3. Trigger "Build and deploy" workflow in GitHub Actions
 
@@ -3427,6 +3593,7 @@ Update in **all** workflow files and `scripts/ensure.sh`. See [Hugo Version Upda
 ### What is Pulumi ESC and why do we use it?
 
 Pulumi ESC (Environments, Secrets, and Config) manages all secrets and credentials. It provides:
+
 - No static credentials in GitHub
 - OIDC-based AWS authentication
 - Centralized secret management
@@ -3444,19 +3611,22 @@ make build
 make serve-static
 ```
 
-The site will be available at http://localhost:8080.
+The site will be available at <http://localhost:8080>.
 
 ### What access do I need to perform a rollback?
 
 **For Git Revert (Method 1 - Most Common):**
+
 - Write access to GitHub repository (to push reverts to master)
 - That's it! No additional credentials needed
 
 **For Bucket Pinning (Method 2 - Fast Rollback):**
+
 - Access to Pulumi Cloud organization (`pulumi/docs` stack)
 - Permission to trigger GitHub Actions workflows
 
 **For Local Execution (Method 3 - Advanced):**
+
 - All of the above, plus:
 - Pulumi CLI installed locally
 - `PULUMI_ACCESS_TOKEN` environment variable
@@ -3468,24 +3638,29 @@ The site will be available at http://localhost:8080.
 ### Rollback Troubleshooting
 
 **Issue: "Cannot access Pulumi stack"**
-- Verify you're logged into Pulumi Cloud (https://app.pulumi.com)
+
+- Verify you're logged into Pulumi Cloud (<https://app.pulumi.com>)
 - Check you have access to the `pulumi` organization
 - Verify stack name: `pulumi/docs/www-production`
 - Contact team admin for access if needed
 
 **Issue: "AWS credentials not configured" (Local execution)**
+
 - Configure AWS CLI with SSO: `aws sso login --profile production`
 - Or use Pulumi ESC: Credentials are automatically provided in GitHub Actions
 - Check your AWS profile is set: `export AWS_PROFILE=production`
 
 **Issue: "Bucket not found"**
+
 - Verify bucket name format: `www-production-pulumi-docs-origin-{git-sha-short}`
 - Check bucket wasn't cleaned up (retention is 10 buckets beyond current)
 - Older buckets may have been deleted by automated cleanup workflow
 - Find bucket name in GitHub Actions artifacts: `origin-bucket-metadata.json`
 
 **Issue: "Git revert creates conflicts"**
+
 - If automatic revert fails, manually revert changes:
+
   ```bash
   git revert {commit-sha} --no-commit
   # Resolve conflicts manually
@@ -3495,6 +3670,7 @@ The site will be available at http://localhost:8080.
   ```
 
 **Issue: "Rollback didn't fix the problem"**
+
 - Verify you reverted/pinned to a known-good deployment
 - Check GitHub Actions history for last successful deployment
 - Issue might be in external service (check Algolia, CloudFront, Lambda@Edge)
@@ -3509,6 +3685,7 @@ The site will be available at http://localhost:8080.
 5. Check Slack notifications for summary
 
 For deployments, also check:
+
 - AWS CloudWatch Logs
 - S3 bucket contents
 - CloudFront distribution status

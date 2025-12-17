@@ -7,6 +7,14 @@
     "minify-css": "node scripts/minify-css.js",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "content/**/*.md": [
+      "node ./scripts/lint/lint-markdown.js"
+    ],
+    "*.{js,ts,jsx,tsx,json,yaml,yml}": [
+      "prettier --write --cache"
+    ]
+  },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.738.0",
     "@fullhuman/postcss-purgecss": "^7.0.0",
@@ -40,6 +48,7 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "prettier": "^3.4.2"
+    "lint-staged": "^15.2.10",
+    "prettier": "^2.8.8"
   }
 }
