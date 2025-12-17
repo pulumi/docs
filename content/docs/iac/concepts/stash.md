@@ -331,19 +331,17 @@ outputs:
 
 {{< /chooser >}}
 
-When viewing stashed secret values, their plaintext content will not be shown by default. Instead, they will be displayed as `[secret]` in the CLI. Pass `--show-secrets` to the command ran to reveal the plaintext value (`--show-secrets)
+When viewing stashed secret values, their plaintext content will not be shown by default. Instead, they will be displayed as `[secret]` in the CLI. Pass `--show-secrets` to the command run to reveal the plaintext value.
 
 ## Updating stashed values
 
-To update the value stored in a `Stash` you need to replace the resource. There are a few ways to do this.
+To update the value stored in a `Stash` you need to replace it. There are a few ways to do this.
 
 1. Using the `--target-replace` argument to `up` to tell the engine to replace it.
 1. Using `pulumi state taint` to mark the resource to be replaced on the next deployment.
 1. Using the `TriggerReplacement` resource option to trigger the resource to replace on a change of value.
 
-Without a replacement any changes to the input `input` will be reflected in the output property `input`, but
-the output property `output` will not change. It will continue to return the original value the `Stash` was
-constructed with.
+Without a replacement, any changes to the `input` property will be reflected in the `input` output property, but the `output` property will not change. It will continue to return the original value the `Stash` was constructed with.
 
 ## Deleting a stash
 
@@ -351,7 +349,7 @@ To delete a `Stash` resource, remove it from your program and run `pulumi up`. P
 
 ## Common use cases
 
-The `Stash` resource is useful for keeping track of a transient value across deployments. Examples include things like the first user running the deployment, the first time the stash was created, a generated random value that needs to be stable.
+The `Stash` resource is useful for keeping track of a computed value across deployments. Examples include things like the first user running the deployment, the first time the stack was created, a generated random value that needs to be stable.
 
 ### Capturing the first deployment user
 
