@@ -19,10 +19,11 @@ tags:
 ---
 [Pulumi Cloud](/product/pulumi-cloud/) is the smartest and easiest way to automate, secure, and manage everything you run in the cloud. It stores infrastructure state, centralizes secrets management, provides search and clear visibility into all your clouds, runs remote deployments, integrates with CI/CD pipelines, and enforces security and compliance policies. Now, you can explore everything Pulumi Cloud has to offer using a dark theme.
 
-!["Screenshot of Pulumi Cloud dashboard in dark mode"](dashboard.png)
-!["Screenshot of Pulumi Cloud Resources page in dark mode"](resources.png)
-
 <!--more-->
+
+!["Screenshot of Pulumi Cloud dashboard in dark mode"](dashboard.png)
+
+!["Screenshot of Pulumi Cloud Resources page in dark mode"](resources.png)
 Dark mode allows you to opt into a theme that uses lighter text and graphics on a darker background.  You can also choose to keep the current theme, now known as light mode, or follow your system preferences.
 
 For nearly as long as Pulumi Cloud has existed, users have been requesting a darker theme. Recent efforts from our User Experience team to implement a design system for the Cloud have finally enabled us to support theming across Pulumi Cloud.
