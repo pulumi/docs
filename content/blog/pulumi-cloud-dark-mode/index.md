@@ -30,7 +30,10 @@ Pulumi Cloud supports light mode, dark mode, and a system default setting that f
 
 ### Below: Pulumi Cloud dashboard in light mode and dark mode
 
-!["Screenshot of Pulumi Cloud dashboard in dark mode"](dashboard.png)
+<div class="flex flex-col md:flex-row gap-4 my-4">
+  <img src="dashboard-light.png" alt="Screenshot of Pulumi Cloud dashboard in light mode" class="w-full md:w-1/2" />
+  <img src="dashboard.png" alt="Screenshot of Pulumi Cloud dashboard in dark mode" class="w-full md:w-1/2" />
+</div>
 
 Light mode remains the default experience. Dark mode uses lighter text and UI elements on a darker background, which many users prefer for extended sessions or low-light environments.
 
@@ -38,7 +41,12 @@ This update is enabled by recent work from our User Experience team to introduce
 
 ### Below: Pulumi Cloud resources page in light mode and dark mode
 
-!["Screenshot of Pulumi Cloud Resources page in dark mode"](resources.png)
+<div class="flex flex-col md:flex-row gap-4 my-4">
+  <img src="resources-light.png" alt="Screenshot of Pulumi Cloud Resources page in light mode" class="w-full md:w-1/2" />
+  <img src="resources.png" alt="Screenshot of Pulumi Cloud Resources page in dark mode" class="w-full md:w-1/2" />
+</div>
+
+Dark mode allows you to opt into a theme that uses lighter text and graphics on a darker background.  You can also choose to keep the current theme, now known as light mode, or follow your system preferences.
 
 ## How to enable dark mode
 
