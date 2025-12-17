@@ -5,36 +5,70 @@ draft: false
 meta_desc: "CDKTF is deprecated. Here are your options: stay on CDKTF, move to Terraform/OpenTofu, or migrate to Pulumi and keep writing infrastructure in real languages."
 meta_image: meta.png
 authors:
+  - christian-nunciato
   - adam-gordon-bell
 tags:
   - migration
   - terraform
 ---
-If you're using CDK for Terraform (CDKTF), you probably liked the best part of "infrastructure as code": the code. TypeScript, Python, Go, C#, Java.
+<span style="width: 40%; float: right; margin-left: 20px;">
+<img src="cdktf-archived.png" alt="The CDKTF GitHub repository, now archived">
+<figcaption>
+<i>The CDKTF GitHub repository, now archived</i>
+</figcaption>
+</span>
 
-Unfortunately, CDKTF is now deprecated and the repo archived. That puts teams in a familiar spot: it works today, but what about next year?
+In July 2020, CDK for Terraform (CDKTF) was announced and last week (December 10, 2025) it was officially deprecated. Support has stopped and it won't be updated.
 
-## A short history: from Terrastack to CDKTF
+CDKTF still works today, but with the repo archived, you won't get security patches or bug fixes. For most teams, that means picking a migration path. Maintaining a fork isn't realistic unless you have dedicated resources.
 
-Before CDKTF existed, Terrastack explored the same idea: keep Terraform as the engine, but write infrastructure in real languages and synthesize Terraform config.
+Here are the main options.
 
-In July 2020, AWS announced CDK for Terraform as a collaboration with HashiCorp. They thanked Sebastian Korfmann (Terrastack's maintainer) for helping build it and made him a maintainer.
+## Your migration options
 
-CDKTF hit general availability in August 2022 (v0.12). And as of December 10, 2025, it's deprecated.
+## Just use HCL
 
-## Your options
+HashiCorp's official recommendation is to emit HCL and go from there. Once you have the HCL you can use Terraform or OpenTofu.
 
-You have three paths:
+```cdktf synth --hcl```
 
-1. **Stay on CDKTF**:  it still works, but you're on your own for fixes. HashiCorp says "at your own risk."
-1. **Go back to HCL**: run `cdktf synth --hcl` to generate Terraform config, then use Terraform or OpenTofu.
-1. **Migrate to Pulumi**: keep writing infrastructure in real languages.
+But if you're using CDKTF, you probably picked it to avoid HCL in the first place. This path works, but it's unlikely to be anyone's first choice.
 
-This is a Pulumi blog, so I'm biased toward option 3. But it's also the option that preserves what you probably liked about CDKTF: real programming languages, not a DSL.
+## Migrate to AWS CDK
+
+If your team is all-in on AWS, migrating to AWS CDK is an option. It's widely used and well-supported, and the programming model resembles CDKTF. Both transpile to an intermediate language (CloudFormation YAML for CDK, Terraform JSON for CDKTF) that their underlying tools use for deployment.
+
+But the actual code is entirely different. The resource models are incompatible. To migrate, you'd rewrite each resource individually, then import state for each one (or write a program to do it).
+
+For example, here's an S3 bucket in CDKTF:
+
+```typescript
+import { S3Bucket } from '@cdktf/provider-aws/lib/s3-bucket';
+
+new S3Bucket(this, 'my-bucket', {
+  bucket: 'my-app-bucket',
+  versioning: {
+    enabled: true
+  }
+});
+```
+
+And here's the same bucket in CDK:
+
+```typescript
+import * as s3 from 'aws-cdk-lib/aws-s3';
+
+new s3.Bucket(this, 'my-bucket', {
+  bucketName: 'my-app-bucket',
+  versioned: true
+});
+```
+
+The concepts are similar, but the APIs aren't. Different property names, different imports, different configuration patterns. It's a full rewrite.
 
 ## Migrating to Pulumi
 
-At a high level, the workflow is: synthesize to Terraform (HCL), convert to Pulumi code, import existing resources.
+The workflow: synthesize to Terraform (HCL), convert to Pulumi code, import existing resources.
 
 ```bash
 # 1) Export CDKTF to HCL
@@ -53,11 +87,11 @@ pulumi stack init dev
 pulumi import --from terraform --out ./imported.ts ./terraform.dev.tfstate
 ```
 
-After import, you’ll usually make a small pass to align the converted `index.ts` with the imported reality then `pulumi up` to confirm everything is unchanged. See the full walkthrough: [CDKTF to Pulumi migration example](https://github.com/pulumi/cdktf-to-pulumi-example).
+After importing, you'll likely need a small pass to align the converted `index.ts` with the imported state, then run `pulumi up` to confirm nothing changed. See the full walkthrough: [CDKTF to Pulumi migration example](https://github.com/pulumi/cdktf-to-pulumi-example).
 
-**Use Neo for AI-assisted migration**: [Pulumi Neo](/blog/pulumi-neo/) is an LLM agent that's very capable of doing migrations to Pulumi. Pulumi customers often use it to speed up migrations. See [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) for examples.
+**Use Neo for AI-assisted migration**: [Pulumi Neo](/blog/pulumi-neo/) is an LLM agent that handles migrations to Pulumi. Customers use it to speed up the process. See [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) for examples.
 
-**Use Terraform modules directly in Pulumi**: If modules are most of your infra, rewriting them takes time. Pulumi can [use Terraform modules directly](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), even [without conversion](/blog/announcing-direct-tf-modules/):
+**Use Terraform modules directly in Pulumi**: If most of your infra is modules, rewriting takes time. Pulumi can [use Terraform modules directly](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), even [without conversion](/blog/announcing-direct-tf-modules/):
 
 ```bash
 pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
@@ -65,4 +99,4 @@ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
 
 ## Closing
 
-CDKTF solved a real problem. The deprecation is frustrating. But you have options, and you can pick the one that matches why you adopted CDKTF in the first place.
+CDKTF solved a real problem, and its deprecation is frustrating. But you have options that preserve what you liked about it.
