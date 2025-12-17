@@ -18,7 +18,9 @@ tags:
     - user-experience
 
 ---
-[Pulumi Cloud](/product/pulumi-cloud/) is the smartest and easiest way to automate, secure, and manage everything you run in the cloud. It stores infrastructure state, centralizes secrets management, provides search and clear visibility into all your clouds, runs remote deployments, integrates with CI/CD pipelines, and enforces security and compliance policies. Now, you can explore everything Pulumi Cloud has to offer using a dark theme.
+[Pulumi Cloud](/product/pulumi-cloud/) helps teams manage and operate their cloud infrastructure in one place, from state and secrets to deployments, visibility, and policy enforcement.
+
+For a long time, one request has consistently come up from the Pulumi community: dark mode. Today, we’re announcing that this request is now available in Pulumi Cloud.
 
 <!--more-->
 
