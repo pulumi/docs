@@ -54,6 +54,8 @@ Select your profile image in the top-right corner of the Pulumi Cloud UI and nav
 
 ## Try out dark mode today
 
-We'd love for you to try out theming in Pulumi Cloud today!  Don't hesitate to reach out on the [Pulumi Community Slack](https://slack.pulumi.com/?_gl=1*abbv2y*_ga*MTgxNzE0MTI3LjE2NDM3MzcwNTU.*_ga_FQHG5CVY2D*MTY1NzY0ODc4NC4xMzMuMC4xNjU3NjQ4Nzg0LjYw) about any feedback you have about these changes or any and all things Pulumi! We also have a [public GitHub repo](https://github.com/pulumi/pulumi-cloud-requests/issues) to track any requests related to the Cloud.
+Want to try dark mode out for yourself? [Sign in](https://app.pulumi.com) to your Pulumi Cloud account, or if you are new to Pulumi, [create a free account](https://app.pulumi.com/signup).
+
+We would love to hear your feedback. You can reach us in the [Pulumi Community Slack](https://slack.pulumi.com/?_gl=1*abbv2y*_ga*MTgxNzE0MTI3LjE2NDM3MzcwNTU.*_ga_FQHG5CVY2D*MTY1NzY0ODc4NC4xMzMuMC4xNjU3NjQ4Nzg0LjYw) or share requests in the [public GitHub repo](https://github.com/pulumi/pulumi-cloud-requests/issues).
 
 We look forward to hearing what you think of these changes!
