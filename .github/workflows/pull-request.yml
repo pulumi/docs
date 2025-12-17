@@ -21,7 +21,7 @@ jobs:
         id: esc-secrets
         uses: pulumi/esc-action@v1
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
