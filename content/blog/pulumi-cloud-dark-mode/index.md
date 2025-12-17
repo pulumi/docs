@@ -40,9 +40,15 @@ This update is enabled by recent work from our User Experience team to introduce
 
 !["Screenshot of Pulumi Cloud Resources page in dark mode"](resources.png)
 
-## Update your default theme
+## How to enable dark mode
 
-To update your theme, navigate to your Account Settings by selecting your profile image at the top right of your browser window.  In the preferences section, you can select the theme of your choice.  Light mode will be selected by default if you do not update your preferences.  These preferences will affect your account's view of Pulumi Cloud for all organizations you are a member of.
+You can update your theme from your Account Settings at any time.
+
+Select your profile image in the top-right corner of the Pulumi Cloud UI and navigate to **Account Settings**. In the **Preferences** section, choose the theme you want to use:
+
+- Light mode
+- Dark mode
+- System default
 
 !["Screenshot of Account Settings preferences"](preferences.png)
 
