@@ -104,6 +104,12 @@ values:
     url:
       fn::join: [ ", ", "${app.items}" ]
 
+    # Split a string into an array using a delimiter
+    # Result is ["config", "a"]
+    # Path is "app.splitItems"
+    splitItems:
+      fn::split: [ "-", "${app.items[0]}" ]
+
     # Concatenate array
     # Result is [foo, bar, baz, zap]
     # Path is "app.concatenatedArray"
