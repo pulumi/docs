@@ -16,7 +16,7 @@ We work with thousands of customers who prefer Pulumi due to our modern approach
 
 ## The TL;DR
 
-Pulumi Cloud now manages Terraform/OpenTofu with full visibility, governance, and agentic AI included. Pulumi IaC now speaks HCL alongside general purpose languages and YAML. And we'll cover your costs until your HashiCorp contract ends. Read on for the full details.
+Pulumi Cloud now manages Terraform/OpenTofu with full visibility, governance, and agentic AI included. Pulumi IaC now speaks HCL alongside general purpose languages and YAML. And we'll cover your costs until your HashiCorp contract ends.
 
 ## Terraform/OpenTofu in Pulumi Cloud
 
@@ -28,7 +28,7 @@ The great thing about this is that even if you choose Terraform or OpenTofu IaC 
 
 Why would we do such a thing? As we’ve worked with larger and larger companies in our journey to thousands of customers, we’ve seen that there’s significant Terraform out there in the world. Even if a team’s long-term objective is to migrate to 100% Pulumi – reaping the many benefits of modern IaC, like faster time to market by catering better to a polyglot world of developers, infrastructure experts, security engineers, and AI/ML teams – that transition doesn’t happen overnight. Many teams legitimately want a mix of IaC tools. Ensuring all infrastructure is fully automated, secured, and managed is a more righteous outcome to focus on rather than debating one’s choice of IaC tool or language. There are many paths you can take, and now Pulumi can be your one platform to stay on top of all of it and drive towards this outcome.
 
-Support for Terraform/OpenTofu state is in private beta and we are beginning to work with customers directly as we get it ready for prime time. We anticipate GA’ing it in Q1 2026.
+Support for Terraform/OpenTofu state is in private beta and we are beginning to work with customers directly as we get it ready for prime time. We anticipate general availability in Q1 2026.
 
 ## HCL Language Support in Pulumi IaC
 
@@ -42,7 +42,7 @@ The good news is that this is not a bolt on. Just like any of the other Pulumi l
 
 HCL support also integrates with Pulumi’s multi-language technology in a deep way, so that you can author modules in one language and consume them from another. This will let, for example, platform teams author complex components in, say, Go – with the rich facilities offered by the language – and then expose them to teammates who consume them in HCL (or vice versa!)
 
-Similar to Terraform support in Pulumi Cloud, HCL is currently in private beta and we will work with customers directly to ensure it meets our quality standards, with a goal of GA in Q1 2026.
+Similar to Terraform support in Pulumi Cloud, HCL is currently in private beta and we will work with customers directly to ensure it meets our quality standards, with a goal of general availability in Q1 2026.
 
 ## Builds on Existing Coexist/Convert Capabilities
 
