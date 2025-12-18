@@ -3,6 +3,7 @@ title: "Pulumi for All Your IaC — Including Terraform and HCL"
 date: 2025-12-18T00:00:00-00:00
 draft: false
 meta_desc: Pulumi Cloud can now manage Terraform, Pulumi IaC now speaks HCL, and we'll cover your costs until your HashiCorp contract ends.
+meta_image: meta.png
 authors:
     - joe-duffy
 tags:
