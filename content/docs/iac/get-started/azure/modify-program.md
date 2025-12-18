@@ -325,8 +325,7 @@ Now to export the website's URL for easy access, add the `staticEndpoint` export
 {{% choosable language typescript %}}
 
 ```typescript
-// Export the primary key of the Storage Account
-export const primaryStorageKey = pulumi.secret(storageAccountKeys.keys[0].value);
+// Export the storage account name
 export const storageAccountName = storageAccount.name;
 
 // Web endpoint to the website
@@ -338,8 +337,7 @@ export const staticEndpoint = storageAccount.primaryEndpoints.web;
 {{% choosable language python %}}
 
 ```python
-# Export the primary key of the Storage Account
-pulumi.export("primary_storage_key", primary_key)
+# Export the storage account name
 pulumi.export("storage_account_name", account.name)
 
 # Web endpoint to the website
@@ -351,22 +349,7 @@ pulumi.export("staticEndpoint", account.primary_endpoints.web)
 {{% choosable language go %}}
 
 ```go
-// Export the primary key of the Storage Account
-ctx.Export("primaryStorageKey", pulumi.All(resourceGroup.Name, account.Name).ApplyT(
-    func(args []interface{}) (string, error) {
-        resourceGroupName := args[0].(string)
-        accountName := args[1].(string)
-        accountKeys, err := storage.ListStorageAccountKeys(ctx, &storage.ListStorageAccountKeysArgs{
-            ResourceGroupName: resourceGroupName,
-            AccountName:       accountName,
-        })
-        if err != nil {
-            return "", err
-        }
-
-        return accountKeys.Keys[0].Value, nil
-    },
-))
+// Export the storage account name
 ctx.Export("storageAccountName", account.Name)
 
 // Web endpoint to the website
@@ -381,7 +364,6 @@ ctx.Export("staticEndpoint", account.PrimaryEndpoints.Web())
 // Export outputs
 return new Dictionary<string, object?>
 {
-    ["primaryStorageKey"] = primaryStorageKey,
     ["storageAccountName"] = storageAccount.Name,
     ["staticEndpoint"] = storageAccount.PrimaryEndpoints.Apply(primaryEndpoints => primaryEndpoints.Web)
 };
@@ -392,8 +374,7 @@ return new Dictionary<string, object?>
 {{% choosable language java %}}
 
 ```java
-// Export the primary key of the Storage Account
-ctx.export("primaryStorageKey", primaryStorageKey);
+// Export the storage account name
 ctx.export("storageAccountName", storageAccount.name());
 
 // Web endpoint to the website
@@ -407,8 +388,7 @@ ctx.export("staticEndpoint", storageAccount.primaryEndpoints()
 
 ```yaml
 outputs:
-  # Export the primary key of the Storage Account
-  primaryStorageKey: ${storageAccountKeys.keys[0].value}
+  # Export the storage account name
   storageAccountName: ${sa.name}
 
   # Web endpoint to the website
@@ -474,7 +454,7 @@ Updating (dev):
  +   └─ azure-native:storage:Blob                           index.html          created
 
 Outputs:
-    primaryStorageKey: "<key_value>"
+    storageAccountName: "sa8deefa78"
   + staticEndpoint   : "https://sa8dd8af62.z22.web.core.windows.net/"
 
 Resources:
