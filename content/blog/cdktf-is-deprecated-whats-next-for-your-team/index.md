@@ -1,6 +1,6 @@
 ---
 title: "CDKTF is deprecated: What's next for your team?"
-date: 2025-12-18
+date: 2025-12-18T10:00:00-08:00
 draft: false
 meta_desc: "The deprecation of CDKTF has left many teams without a clear path forward. This post outlines the options and shows what it's like to move from CDKTF to Pulumi."
 meta_image: meta.png
