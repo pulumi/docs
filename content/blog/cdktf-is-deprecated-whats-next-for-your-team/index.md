@@ -2,8 +2,8 @@
 title: "CDKTF is deprecated: What's next for your team?"
 date: 2025-12-18
 draft: false
-meta_desc: "The deprecation of CDKTF has left many teams without a clear path forward. This post outlines the options, then shows how to migrate from CDKTF to Pulumi."
-meta_image: cdktf-archived.png
+meta_desc: "The deprecation of CDKTF has left many teams without a clear path forward. This post outlines the options and shows what it's like to move from CDKTF to Pulumi."
+meta_image: meta.png
 authors:
   - adam-gordon-bell
   - christian-nunciato
@@ -13,7 +13,7 @@ tags:
   - cdktf
 ---
 
-In July, 2020, CDK for Terraform (CDKTF) was introduced, and last week, on December 10, it was officially deprecated. Support for CDKTF has stopped, the organization and repository [have been archived](https://github.com/cdktf), and HashiCorp/IBM will no longer be updating or maintaining it, leaving a lot of teams out there without a clear path forward.
+In July, 2020, CDK for Terraform (CDKTF) was introduced, and last week, on December 10, it was officially deprecated. Support for CDKTF has stopped, the [organization](https://github.com/cdktf) and [repository](https://github.com/hashicorp/terraform-cdk) have been archived, and HashiCorp/IBM will no longer be updating or maintaining it, leaving a lot of teams out there without a clear path forward.
 
 For most teams, that means it's time to start looking for a replacement.
 
@@ -89,7 +89,7 @@ const bucket = new aws.s3.Bucket('my-bucket', {
 
 You can also use [any Terraform provider](/docs/iac/get-started/terraform/terraform-providers/) with Pulumi, and you can even [reference Terraform modules directly](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#using-terraform-modules-directly) from within your Pulumi code.
 
-Pulumi is also different from CDKTF in several ways. One is that rather than transpile your source code to a format like JSON as CDKTF does (and then deploying it separately later), Pulumi uses its own declarative deployment engine that resolves the resource graph at runtime and provisions cloud resources directly. You can learn more about the deployment model in [How Pulumi Works](/docs/iac/concepts/how-pulumi-works/).
+Pulumi is also different from CDKTF in several ways. One is that rather than transpile your source code to a format like JSON as CDKTF does (and then deploying it separately later), Pulumi uses its own declarative deployment engine that resolves the resource graph at runtime and provisions cloud resources directly, which is much faster and more flexible. You can learn more about the deployment model in [How Pulumi Works](/docs/iac/concepts/how-pulumi-works/).
 
 Given the API similarities, the support for all Terraform providers and modules, the ability to [coexist](/docs/iac/guides/migration/#coexistence) alongside Terraform-managed projects, and the built-in support for conversion (which we'll cover next), we think Pulumi is the best option for most teams looking to migrate.
 
