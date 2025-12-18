@@ -15,13 +15,13 @@ tags:
 
 In July, 2020, CDK for Terraform (CDKTF) was introduced, and last week, on December 10, it was officially deprecated. Support for CDKTF has stopped, the organization and repository [have been archived](https://github.com/cdktf), and HashiCorp/IBM will no longer be updating or maintaining it, leaving a lot of teams out there without a clear path forward.
 
-While CDKTF still works today, with the repository archived, it'll no longer receive security updates or bug fixes. For most teams, that means it's time to start looking for a replacement.
+For most teams, that means it's time to start looking for a replacement.
 
 It's an unfortunate situation to suddenly find yourself in as a user of CDKTF, but you do have options, and Pulumi is one of them. In this post, we'll help you understand what those options are, how Pulumi fits into them, and what it'd look like to migrate your CDKTF projects to Pulumi.
 
 ## What are the options?
 
-While every situation is different, broadly speaking, teams looking to migrate away from CDKTF have three options:
+Teams migrating away from CDKTF generally have three options:
 
 ### Option 1: Fall back to HCL
 
@@ -95,7 +95,7 @@ Given the API similarities, the support for all Terraform providers and modules,
 
 ## What migrating to Pulumi looks like
 
-At a high level, migrating an active CDKTF project to Pulumi generally happens in three steps:
+Migrating a CDKTF project to Pulumi generally happens in three steps:
 
 1. **Conversion**, which translates your CDKTF code into a new Pulumi program
 2. **Import**, which reads the contents of your CDKTF state into a new Pulumi stack
@@ -103,7 +103,7 @@ At a high level, migrating an active CDKTF project to Pulumi generally happens i
 
 ### Conversion and import
 
-Migration starts with exporting your CDKTF project to HCL with `cdktf synth`. From there, Pulumi's built-in [`convert`](/docs/iac/cli/commands/pulumi_convert/) and [`import`](/docs/iac/cli/commands/pulumi_import/) commands handle creating the new program and importing your state. The process typically looks something like this:
+Migration starts with exporting your CDKTF project to HCL with `cdktf synth`. From there, Pulumi's built-in [`convert`](/docs/iac/cli/commands/pulumi_convert/) and [`import`](/docs/iac/cli/commands/pulumi_import/) commands handle creating the new program and importing your state:
 
 ```bash
 # Export your project to HCL.
@@ -142,7 +142,7 @@ The walkthrough takes only a few minutes to complete, and it's a great way to st
 
 ## What's next?
 
-If you're thinking about migrating from CDKTF to Pulumi, this post may leave you with more questions than answers, but the important thing is that as a language-first practitioner of IaC, there is a way forward, and we're here to help.
+If you’re moving on from CDKTF, there are a few possible paths forward. For teams that want to keep using real languages and avoid a ground-up rewrite, Pulumi offers the clearest way forward.
 
 To learn more about how Pulumi works, how it differs from CDKTF and from Terraform, how to handle additional conversion scenarios, and more, we recommend:
 
