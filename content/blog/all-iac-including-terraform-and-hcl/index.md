@@ -1,6 +1,6 @@
 ---
 title: "Pulumi for All Your IaC — Including Terraform and HCL"
-date: 2025-12-18T00:00:00-00:00
+date: 2025-12-18T14:00:00-08:00
 draft: false
 meta_desc: Pulumi Cloud can now manage Terraform, Pulumi IaC now speaks HCL, and we'll cover your costs until your HashiCorp contract ends.
 meta_image: meta.png
@@ -77,7 +77,7 @@ We’ve worked with thousands of companies over 8+ years to build what we view a
 
 For example:
 
-* [Snowflake](https://www.pulumi.com/case-studies/snowflake/) radically improved time to market on their path to IPO. “When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked.”  
+* [Snowflake](https://www.pulumi.com/case-studies/snowflake/) radically improved time to market on their path to IPO. “When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked.”
 
 * [Lemonade](https://www.pulumi.com/case-studies/lemonade/) switched from Terraform to Pulumi so they could embed business logic into infrastructure, share and reuse logic, and scale their lean ops team to support a much larger group of developers. "We're not limited to one-size-fits-all configurations, but can actually implement environment-specific customizations for our infrastructure."
 
@@ -103,11 +103,11 @@ The final point isn’t even a technical one, but we hear it from our customers 
 
 To learn more about our product capabilities, visit these pages:
 
-* [Platform Overview](https://www.pulumi.com/product/)  
-* [Infrastructure as Code](https://www.pulumi.com/product/infrastructure-as-code/)  
-* [Agentic Infrastructure Engineering with Neo](https://www.pulumi.com/product/neo/)  
-* [Secrets & Configuration](https://www.pulumi.com/product/secrets-management/)  
-* [Insights & Governance](https://www.pulumi.com/product/insights-governance/)  
+* [Platform Overview](https://www.pulumi.com/product/)
+* [Infrastructure as Code](https://www.pulumi.com/product/infrastructure-as-code/)
+* [Agentic Infrastructure Engineering with Neo](https://www.pulumi.com/product/neo/)
+* [Secrets & Configuration](https://www.pulumi.com/product/secrets-management/)
+* [Insights & Governance](https://www.pulumi.com/product/insights-governance/)
 * [Internal Developer Platforms](https://www.pulumi.com/product/internal-developer-platforms/)
 
 ## Get Started Today
