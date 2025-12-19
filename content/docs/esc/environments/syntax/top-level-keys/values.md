@@ -13,7 +13,7 @@ menu:
     weight: 2
 ---
 
-The `values` top-level key defines the environment's values--i.e. the properties and values that the environment will produce when evaluated.
+The `values` top-level key defines the environment's values -- i.e. the properties and values that the environment will produce when evaluated.
 
 The value of this key must be a mapping from string literals (property names) to ESC values.
 
