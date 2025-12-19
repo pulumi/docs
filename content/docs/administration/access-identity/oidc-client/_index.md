@@ -38,7 +38,7 @@ When configuring authorization policies and requesting tokens, ensure you select
 
 ### Register the OIDC issuer
 
-Navigate to **OIDC Issuers** under your Organization's **Settings** and click on **Register a new issuer**.
+Navigate to **Access Management** under **Settings**, select **OIDC Issuers** on the top menu and then select on **Register issuer**.
 
 ![Register new issuer](./register-new-issuer.png)
 
