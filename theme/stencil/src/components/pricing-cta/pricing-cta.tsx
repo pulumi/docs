@@ -44,12 +44,12 @@ export class pricingCta {
 
         if (this.isLoggedIn) {
             return(
-                <a class={this.buttonClass} href="https://app.pulumi.com/?create-organization=1" target="_blank">{this.signedInText}</a>
+                <a class={this.buttonClass} href="https://app.pulumi.com/?create-organization=1">{this.signedInText}</a>
             );
         }
 
         return (
-            <a class={this.buttonClass} href="https://app.pulumi.com/signup/" target="_blank">{this.signedOutText}</a>
+            <a class={this.buttonClass} href="https://app.pulumi.com/signup/">{this.signedOutText}</a>
         );
     }
 

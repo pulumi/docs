@@ -43,7 +43,7 @@ Pulumi supports two classes of state backends for storing your infrastructure st
 
 Pulumi's SDK works great with all backends, although some details differ between them.
 
-Pulumi Cloud, hosted at <a href="https://app.pulumi.com" target="_blank">`app.pulumi.com`</a>, is the default backend, as it provides the best combination of usability, safety, and security for most users. Important features include:
+Pulumi Cloud, hosted at <a href="https://app.pulumi.com">`app.pulumi.com`</a>, is the default backend, as it provides the best combination of usability, safety, and security for most users. Important features include:
 
 - Robust state management, with transactional checkpointing for fault tolerance and recovery
 - Concurrent state locking to prevent corrupting your infrastructure state in a team environment
@@ -53,7 +53,7 @@ Pulumi Cloud, hosted at <a href="https://app.pulumi.com" target="_blank">`app.pu
 - Secure access to cloud resource metadata, with client-side authentication to your cloud provider
 - Team policies, including Policy as Code and Role Based Access Control (RBAC)
 
-The Pulumi Cloud backend requires no additional configuration after [installing the CLI](/docs/install/). Pulumi offers this backend hosted online free for individuals, with [advanced tiers](/pricing/) available for teams and enterprises (with <a href="https://app.pulumi.com/site/trial" target="_blank">free trials</a>). It has successfully undergone multiple security audits including SOC2, pen-testing, and more.
+The Pulumi Cloud backend requires no additional configuration after [installing the CLI](/docs/install/). Pulumi offers this backend hosted online free for individuals, with [advanced tiers](/pricing/) available for teams and enterprises (with <a href="https://app.pulumi.com/site/trial">free trials</a>). It has successfully undergone multiple security audits including SOC2, pen-testing, and more.
 
 > To learn more about the Pulumi Cloud backend's design, including why it doesn't need your cloud credentials, see [Pulumi Cloud Architecture](#pulumi-cloud-architecture). If you are interested in the hosting your own instance, see the [Self-Hosting User Guide](/docs/pulumi-cloud/self-hosted/).
 
@@ -128,7 +128,7 @@ Enter your access token from https://app.pulumi.com/account/tokens
 
 To automatically generate and use a new access token, hit `<ENTER>`. This will open a web browser to interact with Pulumi Cloud and request a token. If this is your first time using Pulumi Cloud, you will be asked to authenticate using your chosen identity provider (GitHub, GitLab, Atlassian, SAML/SSO, or email).
 
-To view your access tokens, or create a new one manually, view the <a href="https://app.pulumi.com/account/tokens" target="_blank">Access Tokens</a> page.  You will see a list of past tokens, when they were last used, as well as the ability to revoke them.
+To view your access tokens, or create a new one manually, view the <a href="https://app.pulumi.com/account/tokens">Access Tokens</a> page.  You will see a list of past tokens, when they were last used, as well as the ability to revoke them.
 
 <img src="/images/docs/reference/state_tokens.png" alt="Pulumi.com Tokens Page" class="img-bordered">
 
