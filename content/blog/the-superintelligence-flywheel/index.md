@@ -98,7 +98,7 @@ But there's a deeper reason this matters now. LLMs have been trained on billions
 
 **One substrate across all of the clouds.** Every cloud, every SaaS provider. Frontier labs run training jobs wherever capacity exists: AWS, Azure, Google Cloud, Oracle Cloud, CoreWeave, Lambda Labs. GPU availability is the constraint; cloud provider preference is now secondary.
 
-A single lab may prefer to train on GCP, overflow to AWS when spot capacity becomes available, and tap CoreWeave when the reservations in the major cloud providers are used up. Inference deployments span every region where users exist, across whichever providers offer the best latency and cost characteristics.
+A single lab may prefer to train on CoreWeave, overflow to AWS when spot capacity becomes available, and tap Google Cloud when the reservations in other cloud providers are used up. Inference deployments span every region where users exist, across whichever providers offer the best latency and cost characteristics.
 
 Infrastructure platforms that aren’t inherently multi-cloud simply can't serve these requirements, forcing teams to adopt many fragmented tools and workflows. A platform for the superintelligence era simply must treat multi-cloud as a given with unified resource management, policy enforcement, and state tracking across all providers.
 
