@@ -50,12 +50,12 @@ Please note that this guide provides step-by-step instructions based on the offi
 <!-- markdownlint-enable no-bare-urls -->
 <!-- markdownlint-enable no-bare-urls -->
 For further information about GitLab token claims, refer to the [official GitLab documentation](https://docs.gitlab.com/ci/secrets/id_token_authentication/).
-
 5. Click on update
 
 ## Set up GitLab CI to use Pulumi OIDC authentication
 
 In your `.gitlab-ci.yml`, configure the job to request an ID token and use it with the Pulumi CLI:
+
 ```yaml
 variables:
   PULUMI_ORG: "org-name"
@@ -74,6 +74,7 @@ variables:
 Replace `org-name` with the right Pulumi organization.
 
 ## Sample GitLab CI pipeline
+
 ```yaml
 variables:
   PULUMI_ORG: "org-name"
