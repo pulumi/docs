@@ -772,15 +772,15 @@ Previewing update (dev)
 
      Type                                            Name                 Plan
      pulumi:pulumi:Stack                             quickstart-dev
- +   ├─ quickstart:index:AzureStaticWebsite          my-site              create
- +   │  ├─ azure-native:resources:ResourceGroup      my-group             create
- +   │  ├─ azure-native:storage:StorageAccount       myaccount            create
- +   │  ├─ azure-native:storage:StorageAccountStaticWebsite  static-website   create
- +   │  └─ azure-native:storage:Blob                 index.html           create
- -   ├─ azure-native:storage:Blob                    index.html           delete
- -   ├─ azure-native:storage:StorageAccountStaticWebsite  static-website   delete
- -   ├─ azure-native:storage:StorageAccount          myaccount            delete
- -   └─ azure-native:resources:ResourceGroup         my-group             delete
+ +   ├─ quickstart:index:AzureStaticWebsite                  my-site         create
+ +   │  ├─ azure-native:resources:ResourceGroup              my-group        create
+ +   │  ├─ azure-native:storage:StorageAccount               myaccount       create
+ +   │  ├─ azure-native:storage:StorageAccountStaticWebsite  static-website  create
+ +   │  └─ azure-native:storage:Blob                         index.html      create
+ -   ├─ azure-native:storage:Blob                            index.html      delete
+ -   ├─ azure-native:storage:StorageAccountStaticWebsite     static-website  delete
+ -   ├─ azure-native:storage:StorageAccount                  myaccount       delete
+ -   └─ azure-native:resources:ResourceGroup                 my-group        delete
 
 Resources:
     + 5 to create
@@ -788,8 +788,8 @@ Resources:
     9 changes. 1 unchanged
 
 Do you want to perform this update?  [Use arrows to move, type to filter]
-  yes
-> no
+> yes
+  no
   details
 ```
 
@@ -811,17 +811,17 @@ Accept the changes by selecting `yes` and the deployment will occur:
 ```
 Updating (dev)
 
-     Type                                            Name                 Status
-     pulumi:pulumi:Stack                             pu-quickstart-dev
- +   ├─ quickstart:index:AzureStaticWebsite          my-site              created (0.16s)
- +   │  ├─ azure-native:resources:ResourceGroup      my-group             created (1s)
- +   │  ├─ azure-native:storage:StorageAccount       myaccount            created (2s)
- +   │  ├─ azure-native:storage:StorageAccountStaticWebsite  static-website   created (0.24s)
- +   │  └─ azure-native:storage:Blob                 index.html           created (0.19s)
- -   ├─ azure-native:storage:Blob                    index.html           deleted (0.18s)
- -   ├─ azure-native:storage:StorageAccountStaticWebsite  static-website   deleted (0.27s)
- -   ├─ azure-native:storage:StorageAccount          myaccount            deleted (0.51s)
- -   └─ azure-native:resources:ResourceGroup         my-group             deleted (0.58s)
+     Type                                                    Name               Status
+     pulumi:pulumi:Stack                                     pu-quickstart-dev
+ +   ├─ quickstart:index:AzureStaticWebsite                  my-site            created (0.16s)
+ +   │  ├─ azure-native:resources:ResourceGroup              my-group           created (1s)
+ +   │  ├─ azure-native:storage:StorageAccount               myaccount          created (2s)
+ +   │  ├─ azure-native:storage:StorageAccountStaticWebsite  static-website     created (0.24s)
+ +   │  └─ azure-native:storage:Blob                         index.html         created (0.19s)
+ -   ├─ azure-native:storage:Blob                            index.html         deleted (0.18s)
+ -   ├─ azure-native:storage:StorageAccountStaticWebsite     static-website     deleted (0.27s)
+ -   ├─ azure-native:storage:StorageAccount                  myaccount          deleted (0.51s)
+ -   └─ azure-native:resources:ResourceGroup                 my-group           deleted (0.58s)
 
 Outputs:
   ~ url: "https://myaccountabc123.z13.web.core.windows.net/" => "https://myaccountxyz789.z13.web.core.windows.net/"

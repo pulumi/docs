@@ -718,7 +718,7 @@ Add this to your now-empty {{< langfile >}}:
 import * as pulumi from "@pulumi/pulumi";
 
 // Import from our new component module:
-import { KubernetesNginxService } from "./nginx";
+import { KubernetesNginxService } from "./website";
 
 // Read the configuration value:
 const config = new pulumi.Config();
@@ -858,13 +858,13 @@ Now deploy the resulting component instantiation. To do so, run `pulumi up` as u
 $ pulumi up
 Previewing update (dev)
 
-     Type                                       Name                  Plan
-     pulumi:pulumi:Stack                        quickstart-dev
- +   ├─ quickstart:index:KubernetesNginxService  my-nginx            create
- +   │  ├─ kubernetes:apps/v1:Deployment        nginx                 create
- +   │  └─ kubernetes:core/v1:Service           nginx                 create
- -   ├─ kubernetes:core/v1:Service              nginx                 delete
- -   └─ kubernetes:apps/v1:Deployment           nginx                 delete
+     Type                                        Name                  Plan
+     pulumi:pulumi:Stack                         quickstart-dev
+ +   ├─ quickstart:index:KubernetesNginxService  my-nginx              create
+ +   │  ├─ kubernetes:apps/v1:Deployment         nginx                 create
+ +   │  └─ kubernetes:core/v1:Service            nginx                 create
+ -   ├─ kubernetes:core/v1:Service               nginx                 delete
+ -   └─ kubernetes:apps/v1:Deployment            nginx                 delete
 
 Outputs:
   ~ ip: "10.110.183.208" => "10.96.0.0"
@@ -875,8 +875,8 @@ Resources:
     5 changes. 1 unchanged
 
 Do you want to perform this update?  [Use arrows to move, type to filter]
-  yes
-> no
+> yes
+  no
   details
 ```
 
