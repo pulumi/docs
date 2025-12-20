@@ -46,10 +46,10 @@ Please note that this guide provides step-by-step instructions based on the offi
 <!-- markdownlint-disable no-bare-urls -->
 * **Aud**: urn:pulumi:org:***org-name***
 
-**Sub**: project_path:***namespace***/***project***:ref_type:branch:ref:***branch-name***
-<!-- markdownlint-enable no-bare-urls -->
+* **Sub**: project_path:***namespace***/***project***:ref_type:branch:ref:***branch-name***
 <!-- markdownlint-enable no-bare-urls -->
 For further information about GitLab token claims, refer to the [official GitLab documentation](https://docs.gitlab.com/ci/secrets/id_token_authentication/).
+   ![Gitlab policy example](../gitlab-policies.png)
 5. Click on update
 
 ## Set up GitLab CI to use Pulumi OIDC authentication
