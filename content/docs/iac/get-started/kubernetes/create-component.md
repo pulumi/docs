@@ -718,7 +718,7 @@ Add this to your now-empty {{< langfile >}}:
 import * as pulumi from "@pulumi/pulumi";
 
 // Import from our new component module:
-import { KubernetesNginxService } from "./nginx";
+import { KubernetesNginxService } from "./website";
 
 // Read the configuration value:
 const config = new pulumi.Config();
