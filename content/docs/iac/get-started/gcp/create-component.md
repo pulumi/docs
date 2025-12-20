@@ -745,8 +745,8 @@ Resources:
     7 changes. 1 unchanged
 
 Do you want to perform this update?  [Use arrows to move, type to filter]
-  yes
-> no
+> yes
+  no
   details
 ```
 

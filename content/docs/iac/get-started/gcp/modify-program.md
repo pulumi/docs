@@ -491,11 +491,11 @@ Just like the first time you will see a preview of the changes before they happe
 ```
 Previewing update (dev):
 
-     Type                         Name             Plan
-     pulumi:pulumi:Stack          quickstart-dev
- +   ├─ gcp:storage:BucketObject  index.html       create
+     Type                             Name               Plan
+     pulumi:pulumi:Stack              quickstart-dev
+ +   ├─ gcp:storage:BucketObject      index.html         create
  +   └─ gcp:storage:BucketIAMBinding  my-bucket-binding  create
- ~   └─ gcp:storage:Bucket        my-bucket        update
+ ~   └─ gcp:storage:Bucket            my-bucket          update
 
 Outputs:
   + url: "http://storage.googleapis.com/my-bucket-a2b3c4d/index.html"
@@ -517,11 +517,11 @@ Choose `yes` to perform the deployment:
 Do you want to perform this update? yes
 Updating (dev):
 
-     Type                         Name             Status
-     pulumi:pulumi:Stack          quickstart-dev
- +   ├─ gcp:storage:BucketObject  index.html       created
+     Type                             Name               Status
+     pulumi:pulumi:Stack              quickstart-dev
+ +   ├─ gcp:storage:BucketObject      index.html         created
  +   └─ gcp:storage:BucketIAMBinding  my-bucket-binding  created
- ~   └─ gcp:storage:Bucket        my-bucket        updated
+ ~   └─ gcp:storage:Bucket            my-bucket          updated
 
 Outputs:
     bucketName: "gs://my-bucket-a2b3c4d"

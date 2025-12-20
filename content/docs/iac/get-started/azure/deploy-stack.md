@@ -75,7 +75,7 @@ Duration: 27s
 Updates can take some time since they wait for the cloud resources to finish being created. Storage accounts
 may take a bit longer, so the update could finish in 20-30 seconds.
 
-{{< auto-naming-note resource="storage account" suffix="a1b2c3d" >}}
+{{< auto-naming-note resource="storage account" suffix="8deefa78" >}}
 
 ### Using stack outputs
 

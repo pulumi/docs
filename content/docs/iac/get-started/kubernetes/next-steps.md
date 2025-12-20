@@ -42,17 +42,17 @@ Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in
 
 {{< get-started-next-step path="/learn/pulumi-fundamentals" label="Learn Pulumi Fundamentals" ref="gs-k8s-learn" >}}
 
-## How-to Guides
+## Launch a new project with a template
 
-Explore our how-to guides if you're looking for examples of specific architectures or application stacks. These guides are available in all Pulumi languages and cover creating managed Kubernetes clusters across all major cloud providers ([AWS](/registry/packages/kubernetes/how-to-guides/eks/), [Azure](/registry/packages/kubernetes/how-to-guides/aks/), [Google Cloud](/registry/packages/kubernetes/how-to-guides/gke/) as well as deploying app workloads on running Kubernetes clusters ([WordPress Helm Chart](/registry/packages/kubernetes/how-to-guides/wordpress-chart/), [Stateless App Deployment](/registry/packages/kubernetes/how-to-guides/stateless-app/).
+Easily deploy the most common cloud architectures, from [static websites](/templates/static-website/) to [serverless applications](/templates/serverless-application/), [virtual machines](/templates/virtual-machine/), [container services](/templates/container-service/), and [Kubernetes clusters](/templates/kubernetes/).
 
-{{< get-started-next-step path="/registry/packages/kubernetes/how-to-guides" label="Explore How-to Guides" ref="gs-k8s-guides" >}}
+{{< get-started-next-step path="/templates/" label="Browse templates" ref="gs-k8s-templates" >}}
 
-## How Pulumi Works
+## Dive into the docs
 
-Learn how Pulumi works from its architecture to key concepts, including [stacks](/docs/concepts/stack/), [state](/docs/concepts/state/), [configuration](/docs/concepts/config/), and [secrets](/docs/concepts/secrets/).
+Read more about Pulumi's architecture and foundational concepts in depth, including [projects](/docs/concepts/projects/), [stacks](/docs/concepts/stack/), [configuration](/docs/concepts/config/), [secrets](/docs/concepts/secrets/), [resources](/docs/concepts/resources/), [state](/docs/concepts/state/), and more.
 
-{{< get-started-next-step path="/docs/concepts/" label="Read Documentation" ref="gs-k8s-docs" >}}
+{{< get-started-next-step path="/docs/concepts/" label="Read the docs" ref="gs-k8s-docs" >}}
 
 ## Blog Posts
 
