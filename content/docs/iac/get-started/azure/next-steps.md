@@ -1,9 +1,10 @@
 ---
 title_tag: Next Steps | Azure
+title: Next steps
+h1: Next Steps with Pulumi & Azure
+stepper_link: "Congratulations!"
 meta_desc: This page provides a list of tutorials that take a deeper dive into
             Azure cloud resources.
-title: Next steps
-h1: "Pulumi & Azure: Next steps"
 weight: 9
 menu:
     iac:
@@ -16,7 +17,15 @@ aliases:
     - /docs/clouds/azure/get-started/next-steps/
 ---
 
-Congrats! You've deployed your first project on Microsoft Azure with Pulumi. Here are some next steps, depending on your learning style.
+Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
+
+- Created a Pulumi new project.
+- Provisioned a new Azure Storage account.
+- Enabled the static website feature on the storage account.
+- Created a website component for easy reuse.
+- Destroyed all of the resources you've provisioned.
+
+Below are some recommended next steps, including examples and tutorials that you can explore or use them as a foundation for your own applications and infrastructure projects. Also be sure to [join the Community Slack](https://slack.pulumi.com/) to meet fellow IaC practitioners.
 
 ## Try Pulumi ESC (Environments, Secrets, and Configuration)
 

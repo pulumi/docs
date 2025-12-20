@@ -129,9 +129,7 @@ $ aws s3 ls ("s3://" + (pulumi stack output bucket_name))
 
 ### View your update on Pulumi Cloud
 
-If you are logged into [Pulumi Cloud](/docs/pulumi-cloud), you'll see "View Live" hyperlinks in the CLI output during your
-update. These go to [a page](https://app.pulumi.com) with detailed information about your stack including resources,
-configuration, a full history of updates, and more. Click on it to check it out:
+If you are logged into [Pulumi Cloud](/docs/pulumi-cloud), you'll see "View Live" hyperlinks in the CLI output during your update. These go to [a page](https://app.pulumi.com) with detailed information about your stack including resources, configuration, a full history of updates, and more. Navigate to it to review the details of your update:
 
 <a href="/images/getting-started/console-update.png" target="_blank">
     <img src="/images/getting-started/console-update.png" alt="A stack update with console output, as shown in the Pulumi Service" />

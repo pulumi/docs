@@ -3,99 +3,173 @@ title_tag: Create a New Project | Kubernetes
 meta_desc: This page provides an overview of how to create a new Kubernetes + Pulumi project.
 title: Create project
 h1: "Pulumi & Kubernetes: Create project"
-weight: 3
+weight: 4
 menu:
   iac:
     name: Create project
     identifier: kubernetes-get-started.create-project
     parent: kubernetes-get-started
-    weight: 3
+    weight: 4
 
 aliases:
     - /docs/quickstart/kubernetes/create-project/
+    - /docs/quickstart/kubernetes/review-project/
 ---
-Now that you have set up your environment let's create your first Pulumi program.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+## Create a new project
+
+A [**project**](/docs/iac/concepts/projects) is a program in your chosen language that defines a collection of related cloud resources. In this step, you will create a new project.
+
+### Initializing your project
+
+Each project lives in its own directory. Create a new one:
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ mkdir quickstart
+```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> mkdir quickstart
+```
+
+{{% /choosable %}}
+
+Change into the new directory:
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ cd quickstart
+```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> cd quickstart
+```
+
+{{% /choosable %}}
+
+Now initialize a new Pulumi project for Kubernetes using the `pulumi new` command:
 
 {{% choosable language typescript %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new kubernetes-typescript
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new kubernetes-typescript
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 {{% choosable language python %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new kubernetes-python
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new kubernetes-python
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 {{% choosable language go %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new kubernetes-go
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new kubernetes-go
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 {{% choosable language csharp %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new kubernetes-csharp
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
 
+```powershell
+> pulumi new kubernetes-csharp
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 {{% choosable language java %}}
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
-$ mkdir quickstart && cd quickstart
 $ pulumi new kubernetes-java
 ```
 
 {{% /choosable %}}
+{{% choosable os "windows" %}}
 
-{{% choosable language yaml %}}
-
-```bash
-$ mkdir quickstart && cd quickstart
-$ pulumi new kubernetes-yaml
+```powershell
+> pulumi new kubernetes-java
 ```
 
 {{% /choosable %}}
 
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ pulumi new kubernetes-yaml
+```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new kubernetes-yaml
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
+
+The `pulumi new` command interactively walks through initializing a new project, as well as creating a [**stack**](/docs/iac/concepts/stacks) and [**configuring**](/docs/iac/concepts/config) it. A stack is an instance of your project and you may have many of them -- like `dev`, `staging`, and `prod` -- each with different configuration settings.
+
 {{< cli-note >}}
-
-After logging in, the CLI will proceed with walking you through creating a new project.
-
-First, you will be asked for a **project name** and **project description**. Hit `ENTER` to accept the default values or specify new values.
-
-```
-This command will walk you through creating a new Pulumi project.
-
-Enter a value or leave blank to accept the (default), and press <ENTER>.
-Press ^C at any time to quit.
-
-project name: (quickstart)
-project description: (A minimal Kubernetes Pulumi program)
-Created project 'quickstart'
-```
-
-Next, you will be asked for a **stack name**. You can hit `ENTER` to accept the default value of `dev`.
-
-```
-Please enter your desired stack name.
-To create a stack in an organization, use the format <org-name>/<stack-name> (e.g. `acmecorp/dev`).
-stack name: (dev)
-Created stack 'dev'
-```
-
-> What are [projects](/docs/concepts/projects/) and [stacks](/docs/concepts/stack/)? Pulumi projects and stacks let you organize Pulumi code. Consider a Pulumi _project_ to be analogous to a GitHub repo---a single place for code---and a _stack_ to be an instance of that code with a separate configuration. For instance, _Project Foo_ may have multiple stacks for different development environments (Dev, Test, or Prod), or perhaps for different cloud configurations (geographic region for example). See [Organizing Projects and Stacks](/docs/using-pulumi/organizing-projects-stacks/) for some best practices on organizing your Pulumi projects and stacks.
 
 {{% choosable language "typescript" %}}
 
@@ -133,6 +207,299 @@ After the command completes, the project and stack will be ready.
 
 {{% /choosable %}}
 
-Next, we'll review the generated project files.
+### Review your new project's contents
+
+Review some of the generated project files:
+
+{{% choosable language "typescript,python,go,csharp,java" %}}
+
+- `Pulumi.yaml` defines the [project](/docs/concepts/projects/).
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+- `Pulumi.yaml` defines both the [project](/docs/concepts/projects/) and the program that manages your stack resources.
+
+{{% /choosable %}}
+
+- If present, `Pulumi.dev.yaml` would contain [configuration](/docs/concepts/config/) values for the [stack](/docs/concepts/stack/) we initialized. However, it's empty since this project doesn't require any configuration.
+
+{{% choosable language java %}}
+
+- `src/main/java/myproject` defines the project's Java package root.
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+- `__main__.py` is the Pulumi program that defines your stack resources.
+
+{{% /choosable %}}
+
+{{% choosable language "typescript,go,csharp,java" %}}
+
+- <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
+
+{{% /choosable %}}
+
+Examine {{< langfile >}}:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+
+const appLabels = { app: "nginx" };
+const deployment = new k8s.apps.v1.Deployment("nginx", {
+    spec: {
+        selector: { matchLabels: appLabels },
+        replicas: 1,
+        template: {
+            metadata: { labels: appLabels },
+            spec: { containers: [{ name: "nginx", image: "nginx" }] }
+        }
+    }
+});
+export const name = deployment.metadata.name;
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+"""A Kubernetes Python Pulumi program"""
+
+import pulumi
+from pulumi_kubernetes.apps.v1 import Deployment, DeploymentSpecArgs
+from pulumi_kubernetes.meta.v1 import LabelSelectorArgs, ObjectMetaArgs
+from pulumi_kubernetes.core.v1 import ContainerArgs, PodSpecArgs, PodTemplateSpecArgs
+
+app_labels = { "app": "nginx" }
+
+deployment = Deployment(
+    "nginx",
+    spec={
+        "selector": { "match_labels": app_labels },
+        "replicas": 1,
+        "template": {
+            "metadata": { "labels": app_labels },
+            "spec": { "containers": [{ "name": "nginx", "image": "nginx" }] }
+        },
+    })
+
+pulumi.export("name", deployment.metadata["name"])
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/apps/v1"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/meta/v1"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+
+		appLabels := pulumi.StringMap{
+			"app": pulumi.String("nginx"),
+		}
+		deployment, err := appsv1.NewDeployment(ctx, "app-dep", &appsv1.DeploymentArgs{
+			Spec: appsv1.DeploymentSpecArgs{
+				Selector: &metav1.LabelSelectorArgs{
+					MatchLabels: appLabels,
+				},
+				Replicas: pulumi.Int(1),
+				Template: &corev1.PodTemplateSpecArgs{
+					Metadata: &metav1.ObjectMetaArgs{
+						Labels: appLabels,
+					},
+					Spec: &corev1.PodSpecArgs{
+						Containers: corev1.ContainerArray{
+							corev1.ContainerArgs{
+								Name:  pulumi.String("nginx"),
+								Image: pulumi.String("nginx"),
+							}},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("name", deployment.Metadata.Name())
+
+		return nil
+	})
+}
+
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Pulumi.Kubernetes.Types.Inputs.Core.V1;
+using Pulumi.Kubernetes.Types.Inputs.Apps.V1;
+using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
+using System.Collections.Generic;
+
+return await Deployment.RunAsync(() =>
+{
+    var appLabels = new InputMap<string>
+    {
+        { "app", "nginx" }
+    };
+
+    var deployment = new Pulumi.Kubernetes.Apps.V1.Deployment("nginx", new DeploymentArgs
+    {
+        Spec = new DeploymentSpecArgs
+        {
+            Selector = new LabelSelectorArgs
+            {
+                MatchLabels = appLabels
+            },
+            Replicas = 1,
+            Template = new PodTemplateSpecArgs
+            {
+                Metadata = new ObjectMetaArgs
+                {
+                    Labels = appLabels
+                },
+                Spec = new PodSpecArgs
+                {
+                    Containers =
+                    {
+                        new ContainerArgs
+                        {
+                            Name = "nginx",
+                            Image = "nginx",
+                            Ports =
+                            {
+                                new ContainerPortArgs
+                                {
+                                    ContainerPortValue = 80
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    // export the deployment name
+    return new Dictionary<string, object?>
+    {
+        ["name"] =  deployment.Metadata.Apply(m => m.Name)
+    };
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.kubernetes.apps.v1.Deployment;
+import com.pulumi.kubernetes.apps.v1.DeploymentArgs;
+import com.pulumi.kubernetes.apps.v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.core.v1.inputs.ContainerArgs;
+import com.pulumi.kubernetes.core.v1.inputs.ContainerPortArgs;
+import com.pulumi.kubernetes.core.v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core.v1.inputs.PodTemplateSpecArgs;
+import com.pulumi.kubernetes.meta.v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs;
+
+import java.util.Map;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var labels = Map.of("app", "nginx");
+
+            var deployment = new Deployment("nginx", DeploymentArgs.builder()
+                    .spec(DeploymentSpecArgs.builder()
+                            .selector(LabelSelectorArgs.builder()
+                                    .matchLabels(labels)
+                                    .build())
+                            .replicas(1)
+                            .template(PodTemplateSpecArgs.builder()
+                                    .metadata(ObjectMetaArgs.builder()
+                                            .labels(labels)
+                                            .build())
+                                    .spec(PodSpecArgs.builder()
+                                            .containers(ContainerArgs.builder()
+                                                    .name("nginx")
+                                                    .image("nginx")
+                                                    .ports(ContainerPortArgs.builder()
+                                                            .containerPort(80)
+                                                            .build())
+                                                    .build())
+                                            .build())
+                                    .build())
+
+                            .build())
+                    .build());
+
+            var name = deployment.metadata()
+                .applyValue(m -> m.orElseThrow().name().orElse(""));
+
+            ctx.export("name", name);
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: quickstart
+runtime: yaml
+description: A minimal Kubernetes Pulumi YAML program
+
+variables:
+  appLabels:
+    app: nginx
+
+resources:
+  deployment:
+    name: nginx
+    type: kubernetes:apps/v1:Deployment
+    properties:
+      spec:
+        selector:
+          matchLabels: ${appLabels}
+        replicas: 1
+        template:
+          metadata:
+            labels: ${appLabels}
+          spec:
+            containers:
+              - name: nginx
+                image: nginx
+
+outputs:
+  name: ${deployment.metadata.name}
+```
+
+{{% /choosable %}}
+
+This Pulumi program creates an NGINX deployment and exports the name of the deployment.
 
 {{< get-started-stepper >}}

@@ -9,7 +9,7 @@ menu:
         name: Configure access
         parent: aws-get-started
         weight: 3
-
+        identifier: aws-get-started.configure
 aliases:
     - /docs/iac/get-started/aws/b/configure/
 ---
@@ -42,7 +42,7 @@ $ aws sts get-caller-identity
 
 {{% /choosable %}}
 
-If your AWS user ID, account, and ARN are printed, you are good to go. If not, read on:
+If your AWS user ID, account, and ARN are printed, your configuration is correct. If not, read on:
 
 ```
 {

@@ -1,23 +1,32 @@
 ---
 title_tag: Next Steps | Google Cloud
+title: Next steps
+h1: Next Steps with Pulumi & Google Cloud
+stepper_link: "Congratulations!"
 meta_desc: This page provides a list of tutorials that take a deeper dive into
             Google Cloud cloud resources.
-title: Next steps
-h1: "Pulumi & Google Cloud: Next steps"
 weight: 9
 menu:
-  iac:
-    name: Next steps
-    identifier: gcp-get-started.next-steps
-    parent: gcp-get-started
-    weight: 9
+    iac:
+        name: Next steps
+        identifier: gcp-get-started.next-steps
+        parent: gcp-get-started
+        weight: 9
 
 aliases:
     - /docs/quickstart/gcp/next-steps/
     - /docs/clouds/gcp/get-started/next-steps/
 ---
 
-Congrats! You've deployed your first project on Google Cloud with Pulumi. Here are some next steps, depending on your learning style.
+Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
+
+- Created a Pulumi new project.
+- Provisioned a new storage bucket.
+- Turned it into a static website.
+- Created a website component for easy reuse.
+- Destroyed all of the resources you've provisioned.
+
+Below are some recommended next steps, including examples and tutorials that you can explore or use them as a foundation for your own applications and infrastructure projects. Also be sure to [join the Community Slack](https://slack.pulumi.com/) to meet fellow IaC practitioners.
 
 ## Try Pulumi ESC (Environments, Secrets, and Configuration)
 
@@ -31,11 +40,11 @@ With Pulumi ESC you can:
 
 {{< get-started-next-step path="/docs/esc/get-started" label="Learn more about Pulumi ESC" ref="gs-gcp-esc" >}}
 
-## Learn Pulumi
+## Try a tutorial
 
-Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in the context of a real-life application.
+Let our Google Cloud tutorials guide you through key Pulumi concepts.
 
-{{< get-started-next-step path="/learn/pulumi-fundamentals" label="Learn Pulumi Fundamentals" ref="gs-gcp-learn" >}}
+{{< get-started-next-step path="/docs/using-pulumi/" label="Browse tutorials" ref="gs-gcp-tutorials" >}}
 
 ## Launch a new project with a template
 
