@@ -354,7 +354,7 @@ const api = new apigateway.RestAPI("api", {
                         body: JSON.stringify({
                             eventPath: event.path,
                             functionName: context.functionName,
-                        })
+                        }),
                     };
                 },
             }),
