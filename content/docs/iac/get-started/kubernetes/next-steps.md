@@ -18,6 +18,12 @@ aliases:
 
 Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are some next steps, depending on your learning style.
 
+## Video Tutorial
+
+Take a deeper look at Pulumi with Kubernetes with this video tutorial.
+
+{{< get-started-next-step path="https://www.youtube.com/watch?v=2P8JLgAc5QI" label="Kubernetes in ~10 minutes" ref="gs-k8s-video" >}}
+
 ## Try Pulumi ESC (Environments, Secrets, and Configuration)
 
 [Pulumi ESC](/docs/esc/) is a centralized secrets management and orchestration service. It introduces the concepts of _environments_ --- managed collections of static and dynamic settings that you can use to configure any project, stack, application, or service, including with short-lived cloud credentials through OpenID Connect.
