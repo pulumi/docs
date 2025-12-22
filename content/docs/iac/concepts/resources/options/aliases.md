@@ -35,7 +35,7 @@ let db = new Database("new-name-for-db", {/*...*/},
 {{% choosable language python %}}
 
 ```python
-db = Database('db',
+db = Database('new-name-for-db',
     opts=ResourceOptions(aliases=[Alias(name='old-name-for-db')]))
 ```
 
@@ -43,7 +43,7 @@ db = Database('db',
 {{% choosable language go %}}
 
 ```go
-db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
+db, err := NewDatabase(ctx, "new-name-for-db", &DatabaseArgs{ /*...*/ },
     pulumi.Aliases([]pulumi.Alias{
         {Name: pulumi.String("old-name-for-db")},
     }))
@@ -99,7 +99,7 @@ let db = new Database("new-name-for-db", {/*...*/},
 {{% choosable language python %}}
 
 ```python
-db = Database('db',
+db = Database('new-name-for-db',
     opts=ResourceOptions(aliases=['urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db']))
 ```
 
@@ -107,7 +107,7 @@ db = Database('db',
 {{% choosable language go %}}
 
 ```go
-db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
+db, err := NewDatabase(ctx, "new-name-for-db", &DatabaseArgs{ /*...*/ },
     pulumi.Aliases([]pulumi.Alias{
         {URN: pulumi.URN("urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db")},
     }))
