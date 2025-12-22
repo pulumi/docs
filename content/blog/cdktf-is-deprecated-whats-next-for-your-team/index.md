@@ -2,7 +2,7 @@
 title: "CDKTF is deprecated: What's next for your team?"
 date: 2025-12-18T10:00:00-08:00
 draft: false
-meta_desc: "The deprecation of CDKTF has left many teams without a clear path forward. This post outlines the options and shows what it's like to move from CDKTF to Pulumi."
+meta_desc: "The deprecation of CDKTF has left many without a clear path forward. This post presents the alternatives and shows what it's like to move from CDKTF to Pulumi."
 meta_image: meta.png
 authors:
   - adam-gordon-bell
@@ -19,7 +19,7 @@ For most teams, that means it's time to start looking for a replacement.
 
 It's an unfortunate situation to suddenly find yourself in as a user of CDKTF, but you do have options, and Pulumi is one of them. In this post, we'll help you understand what those options are, how Pulumi fits into them, and what it'd look like to migrate your CDKTF projects to Pulumi.
 
-## What are the options?
+## What are the alternatives?
 
 Teams migrating away from CDKTF generally have three options:
 
@@ -142,12 +142,13 @@ The walkthrough takes only a few minutes to complete, and it's a great way to st
 
 ## What's next?
 
-If you’re moving on from CDKTF, there are a few possible paths forward. For teams that want to keep using real languages and avoid a ground-up rewrite, Pulumi offers the clearest way forward.
+If you’re moving on from CDKTF and looking for an alternative, there are a few possible paths forward. For teams that want to keep using real languages and avoid a ground-up rewrite, Pulumi offers the clearest way forward.
 
 To learn more about how Pulumi works, how it differs from CDKTF and from Terraform, how to handle additional conversion scenarios, and more, we recommend:
 
 * Diving into [the Pulumi docs](/docs/iac/concepts/) to get familiar with core concepts and features of the platform
 * Reading [Migrating from Terraform or CDKTF to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for more detailed, Terraform-specific migration guidance
 * Joining us in the [Pulumi Community Slack](https://slack.pulumi.com/) to ask questions and learn from others who've successfully made the leap from Terraform and CDKTF to Pulumi
+* Checking out [Pulumi for All Your IaC — Including Terraform and HCL](/blog/all-iac-including-terraform-and-hcl/) to learn more about Pulumi's native support for Terraform and HCL
 
 And of course, [feel free to reach out](/contact/)! We'd love to help in any way we can.
