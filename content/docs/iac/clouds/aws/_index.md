@@ -117,8 +117,8 @@ guides:
   - display_name: AWS index of services
     url: guides/aws-index-of-services/
 policy:
-  url: awsguard/
-  description: Use AWSGuard to configure and enforce best practices for your Pulumi stacks.
+  url: policy/
+  description: Use Pulumi Policies to configure and enforce best practices for your Pulumi stacks.
 aliases:
   - /docs/clouds/aws/
 ---
