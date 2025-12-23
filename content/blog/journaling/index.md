@@ -5,10 +5,6 @@ date: 2025-12-08T17:57:55+02:00
 
 draft: false
 
-# Use the meta_desc property to provide a brief summary (one or two sentences)
-# of the content of the post, which is useful for targeting search results or
-# social-media previews. This field is required or the build will fail the
-# linter test. Max length is 160 characters.
 meta_desc: Pulumi operations get up to 20x faster with journaling, a new snapshotting approach that speeds up large stacks while keeping full data integrity.
 
 meta_image: meta.png
@@ -63,7 +59,7 @@ Today we're introducing an improvement that can speed up operations by up to 20x
 
 ## Benchmarks
 
-Before getting into the more technical details, here are a number of benchmarks demonstrating what this new experience looks like. To run the benchmarks we picked a couple of Pulumi projects: one that can be set up massively parallel, which is the worst case scenario for the old snapshot system, and another that looks a little more like a real world example.  Note that we conducted all of these benchmarks  in Europe connecting to Pulumi Cloud, which runs in AWS's `us-west-2` region, so exact numbers may vary based on your location and internet connection. This should however give a good indication of the performance improvements.
+Before getting into the more technical details, here are a number of benchmarks demonstrating what this new experience looks like. To run the benchmarks we picked a couple of Pulumi projects: one that can be set up massively parallel, which is the worst case scenario for the old snapshot system, and another that looks a little more like a real world example.  Note that we conducted all of these benchmarks in Europe, connecting to Pulumi Cloud, which runs in AWS's `us-west-2` region, so exact numbers may vary based on your location and internet connection. This should however give a good indication of the performance improvements.
 
 We're benchmarking two somewhat large stacks, both of which are or were used at Pulumi. The first program sets up a website using AWS bucket objects. We're using the [aws-ts-static-website](https://github.com/pulumi/examples/tree/master/aws-ts-static-website) example here with a small subset of the fraction from our docs site. This means we're setting up more than 3000 bucket objects, with 3222 resources in total.
 
@@ -94,7 +90,9 @@ The second example is setting up an instance of the Pulumi app and API. Here we'
 
 ![Comparison chart of the bytes sent shown in the tables above](size.png)
 
-*Note that this feature is still behind a feature flag, but we are ready for testers. To get enrolled in the feature flag, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us). Once that's done, all you need to do is to set the `PULUMI_ENABLE_JOURNALING` environment variable to `true`, and your operations will start finishing faster.*
+{{% notes type="tip" %}}
+This feature is still behind a feature flag, but we are ready for testers. To get enrolled in the feature flag, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us). Once that's done, all you need to do is to set the `PULUMI_ENABLE_JOURNALING` environment variable to `true`, and your operations will start finishing faster.
+{{% /notes %}}
 
 If you are interested in the more technical details read on!
 
@@ -104,7 +102,7 @@ If you are interested in the more technical details read on!
 
 `pulumi` creates a new snapshot at the beginning and at the end of each resource operation to minimize the possibility of untracked changes even if a deployment is aborted unexpectedly (for example due to network issues, power outages, or bugs).
 
-At the beginning of the operation, `pulumi` adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but `pulumi` couldn't record the end of it),  the next operation will ask the user to check the actual state of the resource. Depending on the user's response, `pulumi` will either remove the operation from the snapshot or import the resource. This is because it is possible that the resource has been set up correctly or that the resource creation failed. If `pulumi` aborted midway through the operation, it's impossible to know which state the resource is in.
+At the beginning of the operation, `pulumi` adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but `pulumi` couldn't record the end of it), the next operation will ask the user to check the actual state of the resource. Depending on the user's response, `pulumi` will either remove the operation from the snapshot or import the resource. This is because it is possible that the resource has been set up correctly or that the resource creation failed. If `pulumi` aborted midway through the operation, it's impossible to know which state the resource is in.
 
 Once an operation finishes, the pending operation is removed and the resource's final state is recorded in the snapshot.
 
