@@ -102,13 +102,13 @@ If you are interested in the more technical details read on!
 
 `pulumi` creates a new snapshot at the beginning and at the end of each resource operation to minimize the possibility of untracked changes even if a deployment is aborted unexpectedly (for example due to network issues, power outages, or bugs).
 
-At the beginning of the operation, `pulumi` adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but `pulumi` couldn't record the end of it), the next operation will ask the user to check the actual state of the resource. Depending on the user's response, `pulumi` will either remove the operation from the snapshot or import the resource. This is because it is possible that the resource has been set up correctly or that the resource creation failed. If `pulumi` aborted midway through the operation, it's impossible to know which state the resource is in.
+At the beginning of the operation, `pulumi` adds a new "pending operation" to the snapshot. Pending operations declare the intent to mutate a resource. If a pending operation is left in the snapshot (in other words the operation started, but `pulumi` couldn't record the end of it), the next operation will try to resolve this. If we have an ID for the resource already, for example on partial updates/deletes, `pulumi` will try to read the resource state from the cloud and resolve it internally. If there is no ID yet, `pulumi` will ask the user to check the actual state of the resource. Depending on the user's response, `pulumi` will either remove the operation from the snapshot or import the resource. This is because it is possible that the resource has been set up correctly or that the resource creation failed. If `pulumi` aborted midway through the operation, it's impossible to know which state the resource is in.
 
 Once an operation finishes, the pending operation is removed and the resource's final state is recorded in the snapshot.
 
 There's also some additional metadata that is stored in the snapshot that is only updated infrequently.
 
-Here's how the snapshot looks in code. This snapshot is serialized and sent to the backend. `Resources` holds the list of known resource states and is updated after each operation finishes, and `PendingOperations` is the list of pending operations described above.
+Here's how the [snapshot looks in code](https://github.com/pulumi/pulumi/blob/76588836f542c95e8f43ed785cc1828c40369ada/pkg/resource/deploy/snapshot.go#L34). This snapshot is serialized and sent to the backend. `Resources` holds the list of known resource states and is updated after each operation finishes, and `PendingOperations` is the list of pending operations described above.
 
 ```go
 type Snapshot struct {
@@ -319,8 +319,9 @@ The full documentation of the algorithm can be found in our [developer docs](htt
 - Since tests can't cover all possible edge cases, the next step was to run the journaler in parallel with the current snapshotting implementation internally. This was still without sending the results to the service. However we would compare the snapshot, and send an error event to the service if the snapshot didn't match. In our data warehouse we could then inspect any mismatches, and fix them. Since this does involve the service in a minor way, we would only do this if the user is using the Cloud backend.
 - Next up was adding a feature flag for the service, so journaling could be turned on selectively for some orgs. At the same time we implemented an opt-in environment variable in the CLI (`PULUMI_ENABLE_JOURNALING`), so the feature could be selectively turned on by users, if both the feature flag is enabled and the user sets the environment variable. This way we could slowly start enabling this in our repos, e.g. first in the integration tests for `pulumi/pulumi`, then in the tests for `pulumi/examples` and `pulumi/templates`, etc.
 - Allow users to start opting in.  If you want to opt-in with your org, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us), and we'll opt your org into the feature flag. Then you can begin seeing the performance improvements by setting the `PULUMI_ENABLE_JOURNALING` env variable to true.
-- Enable this for everyone. After some time with more orgs opted in, we'll enable this feature for everyone using Pulumi Cloud, and by default in the `pulumi` CLI. This is currently planned for the end of January.
 
 ## What's next
+
+After some time with more orgs opted in, we'll enable this feature for everyone using Pulumi Cloud, and by default in the `pulumi` CLI. This is currently planned for the end of January. We want to make the default experience of using `pulumi` as fast as possible.
 
 While these performance improvements hopefully make your day to day use of `pulumi` quicker and more enjoyable, we're not quite done here. We're looking at some other performance improvements, that will hopefully speed up your workflows even more.
