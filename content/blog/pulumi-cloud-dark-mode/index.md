@@ -11,6 +11,7 @@ meta_image: "meta.png"
 # if you don't already have one.
 authors:
     - kimberley-mackenzie
+    - tom-king
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
