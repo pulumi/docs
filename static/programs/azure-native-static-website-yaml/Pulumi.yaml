@@ -20,6 +20,7 @@ resources:
     properties:
       accountName: websiteblob
       resourceGroupName: ${resourceGroup.name}
+      accountName: websitesa
       kind: "StorageV2"
       sku: { name: "Standard_LRS" }
 

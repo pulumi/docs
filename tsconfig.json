@@ -3,7 +3,9 @@
         "allowJs": true,
         "removeComments": true,
         "sourceMap": true,
-        "sourceRoot": "/"
+        "sourceRoot": "/",
+        "skipLibCheck": true,
+        "target": "es2020"
     },
     "files": [
         "assets/js/main.js",

@@ -1,0 +1,96 @@
+version: 2
+updates:
+  # Root package.json
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    groups:
+      aws-sdk:
+        patterns: ["@aws-sdk/*"]
+      pulumi:
+        patterns: ["@pulumi/*"]
+      testing:
+        patterns: ["cypress", "jest*", "@types/jest"]
+      development:
+        patterns: ["prettier", "husky", "markdownlint"]
+    ignore:
+      - dependency-name: "tailwindcss"
+      # Stay on Prettier v2.x due to v3.x performance regression (6x slower)
+      # See BUILD-AND-DEPLOY.md for details
+      - dependency-name: "prettier"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies", "npm"]
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  # Theme package.json
+  - package-ecosystem: "npm"
+    directory: "/theme"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    groups:
+      webpack:
+        patterns: ["webpack*", "*-loader", "*-webpack-plugin*"]
+      algolia:
+        patterns: ["@algolia/*", "algoliasearch"]
+    ignore:
+      - dependency-name: "tailwindcss"
+    labels: ["dependencies", "npm", "theme"]
+    commit-message:
+      prefix: "deps(theme)"
+      include: "scope"
+
+  # Stencil package.json
+  - package-ecosystem: "npm"
+    directory: "/theme/stencil"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 5
+    groups:
+      stencil:
+        patterns: ["@stencil/*"]
+      testing:
+        patterns: ["jest*", "puppeteer"]
+    labels: ["dependencies", "npm", "stencil"]
+    commit-message:
+      prefix: "deps(stencil)"
+      include: "scope"
+
+  # Infrastructure package.json
+  - package-ecosystem: "npm"
+    directory: "/infrastructure"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 5
+    groups:
+      pulumi:
+        patterns: ["@pulumi/*"]
+    labels: ["dependencies", "npm", "infrastructure"]
+    commit-message:
+      prefix: "deps(infra)"
+      include: "scope"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 5
+    labels: ["dependencies", "github-actions"]
+    commit-message:
+      prefix: "ci"
+      include: "scope"
