@@ -242,6 +242,10 @@ git commit -m "Add generated SDK for terraform-provider random"
 
 Consumers of your component will then be able to use it without needing to regenerate the SDK themselves.
 
+## Using local packages with Automation API
+
+For documentation on how to use local packages with Pulumi's [Automation API](/docs/iac/automation-api/) see [Using local packages with Automation API](/docs/iac/automation-api/getting-started-automation-api/#using-local-packages-with-automation-api).
+
 ## See also
 
 For more information about developing and publishing your own packages, see the [Publishing Packages](/docs/iac/build-with-pulumi/publishing-packages/) guide.
