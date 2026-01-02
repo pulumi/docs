@@ -460,11 +460,13 @@ export const httpbinUrl = gatewayIP.apply(ip =>
 > [!INFO]
 > The demo uses [nip.io](https://nip.io), a wildcard DNS service that resolves `*.IP.nip.io` hostnames to the specified IP address. This eliminates the need to configure separate DNS records during testing. Once deployed, the `httpbinUrl` output provides a ready-to-use endpoint for validating the gateway configuration.
 
-## The short-term option: a quick migration to Traefik
+## The short-term option: Chainguard's ingress-nginx fork
 
-For organizations facing time constraints, a full Gateway API migration might not be feasible immediately. Traefik offers a [migration path from **ingress-nginx**](https://traefik.io/blog/migrate-from-ingress-nginx-to-traefik-now) that allows teams to continue using the traditional Ingress API in the short term.
+For organizations that cannot immediately migrate to the Gateway API, there is another path forward. Chainguard has [forked ingress-nginx](https://www.chainguard.dev/unchained/keeping-ingress-nginx-alive) as part of their EmeritOSS program, providing continued maintenance after the upstream project's retirement.
 
-This approach involves swapping the controller while retaining existing Ingress manifests, thanks to Traefik's compatibility support. It serves as a practical bridge, buying time to plan a proper Gateway API adoption strategy later. However, this should be viewed as an interim step; the limitations of the Ingress API remain, and the eventual move to the Gateway API is inevitable for accessing modern networking features.
+This fork is not about adding new features. Chainguard is explicit that they are maintaining stability, not continuing development. Their commitment includes keeping dependencies updated, addressing CVEs on a best-efforts basis, and providing commercial container images with low vulnerability counts and SLAs. FIPS-compliant versions are also available for regulated environments.
+
+The [chainguard-forks/ingress-nginx](https://github.com/chainguard-forks/ingress-nginx) repository on GitHub provides the maintained codebase. For teams running `ingress-nginx` in production, this fork offers a viable bridge while evaluating the Gateway API or other alternatives. However, this should be viewed as buying time rather than a permanent solution. The architectural limitations of the Ingress API remain, and the eventual move to a more expressive standard like the Gateway API is still the recommended path forward.
 
 ## Looking ahead
 
