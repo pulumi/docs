@@ -8,6 +8,18 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "AiDevTLV 2025"
+  title: "What is AI Platform Engineering and Why Should You Care?"
+  url: "https://aidevtlv.com/agenda/"
+  date: 2025-12-17T12:55:00.000+02:00
+- event: "AWS User Group Israel: Security, AI & Cloud Night"
+  title: "From 'Works on My Machine' to Production-Ready AI Agents with Amazon Bedrock Agent Core"
+  url: "https://www.meetup.com/aws-il/events/312185401/"
+  date: 2025-12-15T18:00:00.000+02:00
+- event: "DevOpsDays Tel Aviv 2025"
+  title: "Orchestrating Autonomous Agents in DevOps: Comparing Strands Agents, Deep Agents, and AutoGen"
+  url: "https://tlvcommunity.dev/devopsdays"
+  date: 2025-12-11T14:40:00.000+02:00
 - event: "KCD Suisse Romande 2025"
   title: "Building AI Platforms Without Losing Your Engineering Principles"
   url: "https://community.cncf.io/events/details/cncf-kcd-suisse-romande-presents-kcd-suisse-romande/"
