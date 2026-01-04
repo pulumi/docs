@@ -20,7 +20,7 @@ aliases:
 
 A provider may make **functions** available in its SDK as well as resource types. These "provider functions" are often for calling a platform API to get a value that is not part of a resource.
 
-For example, the AWS provider includes the function [`aws.ecs.getAmi`](/registry/packages/aws/api-docs/ec2/getami/):
+For example, the AWS provider includes the function [`aws.ec2.getAmi`](/registry/packages/aws/api-docs/ec2/getami/):
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
