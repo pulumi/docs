@@ -19,7 +19,7 @@ For most teams, that means it's time to start looking for a replacement.
 
 It's an unfortunate situation to suddenly find yourself in as a user of CDKTF, but you do have options, and Pulumi is one of them. In this post, we'll help you understand what those options are, how Pulumi fits into them, and what it'd look like to migrate your CDKTF projects to Pulumi.
 
-## CDKTF alternatives
+## What are the alternatives to CDKTF?
 
 Teams migrating away from CDKTF generally have three options:
 
