@@ -19,7 +19,7 @@ For most teams, that means it's time to start looking for a replacement.
 
 It's an unfortunate situation to suddenly find yourself in as a user of CDKTF, but you do have options, and Pulumi is one of them. In this post, we'll help you understand what those options are, how Pulumi fits into them, and what it'd look like to migrate your CDKTF projects to Pulumi.
 
-## What are the alternatives?
+## CDKTF alternatives
 
 Teams migrating away from CDKTF generally have three options:
 
@@ -69,7 +69,7 @@ Despite their surface similarities, CDKTF and AWS CDK have little in common. Mig
 
 ### Option 3: Migrate to Pulumi
 
-This is where we should acknowledge our obvious bias — but we genuinely believe that for most users of CDKTF, Pulumi really is the simplest and most broadly compatible way forward.
+This is where we should acknowledge our obvious bias — but we genuinely believe that for most users of CDKTF, Pulumi really is the simplest and most broadly compatible alternative.
 
 Like CDKTF, Pulumi lets you build and manage your infrastructure with general-purpose languages like TypeScript, Python, Go, C#, and Java, and it supports organizing your code into higher-level abstractions called [_components_](/docs/iac/concepts/components/), which you can think of like CDKTF constructs. Both organize cloud resources into [_stacks_](/docs/iac/concepts/stacks/) (think `dev`, `prod`), and both track [deployment state](/docs/iac/concepts/state-and-backends/) similarly, with local, remote, and cloud-hosted options available.
 
@@ -91,7 +91,7 @@ You can also use [any Terraform provider](/docs/iac/get-started/terraform/terraf
 
 Pulumi is also different from CDKTF in several ways. One is that rather than transpile your source code to a format like JSON as CDKTF does (and then deploying it separately later), Pulumi uses its own declarative deployment engine that resolves the resource graph at runtime and provisions cloud resources directly, which is much faster and more flexible. You can learn more about the deployment model in [How Pulumi Works](/docs/iac/concepts/how-pulumi-works/).
 
-Given the API similarities, the support for all Terraform providers and modules, the ability to [coexist](/docs/iac/guides/migration/#coexistence) alongside Terraform-managed projects, and the built-in support for conversion (which we'll cover next), we think Pulumi is the best option for most teams looking to migrate.
+Given the API similarities, the support for all Terraform providers and modules, the ability to [coexist](/docs/iac/guides/migration/#coexistence) alongside Terraform-managed projects, and the built-in support for conversion (which we'll cover next), we think Pulumi is the best alternative for most teams looking to migrate.
 
 ## What migrating to Pulumi looks like
 
