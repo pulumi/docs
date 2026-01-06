@@ -1,5 +1,5 @@
 ---
-title: "From ingress-nginx to Gateway API: A Modern Approach with kgateway"
+title: "How to Move to the Gateway API: post ingress-nginx Retirement"
 date: 2026-01-02T11:35:51+01:00
 draft: false
 meta_desc: With ingress-nginx retiring in 2026, this post explores the technical shift to Gateway API and evaluates kgateway as a production-grade successor.
