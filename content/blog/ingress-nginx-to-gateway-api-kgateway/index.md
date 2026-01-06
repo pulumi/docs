@@ -146,7 +146,7 @@ Several implementations have emerged to support the new standard, each with a di
 | Aspect | NGINX Gateway Fabric | Traefik | Envoy Gateway | **kgateway** |
 |--------|---------------------|---------|---------------|----------|
 | **Base Technology** | NGINX (C) | Custom Go | Envoy Proxy (C++) | Envoy Proxy (C++) |
-| **Maturity** | Production Ready | Mature | GA (v1.0+) | **Battle-tested (7+ years as Gloo)** |
+| **Maturity** | Production-ready | Mature | GA (v1.0+) | **Battle-tested (7+ years as Gloo)** |
 | **Setup Complexity** | Medium | Low | Low | Low |
 | **Commercial Support** | F5 Enterprise | Traefik Labs | Multiple vendors | Solo.io |
 | **AI/LLM Support** | No | No | Via Envoy AI Gateway | **Native (Agentgateway)** |
