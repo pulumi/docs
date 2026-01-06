@@ -17,9 +17,11 @@ Note: Because renaming a stack will change the value of `getStack()` inside a Pu
 name is used as part of a resource's name, the next `pulumi up` will want to delete the old resource and
 create a new copy. For now, if you don't want these changes to be applied, you should rename your stack
 back to its previous name.
-You can also rename the stack's project by passing a fully-qualified stack name as well. For example:
-'robot-co/new-project-name/production'. However in order to update the stack again, you would also need
-to update the name field of Pulumi.yaml, so the project names match.
+You can also rename the stack's project by passing a fully-qualified stack name. For example:
+`robot-co/new-project-name/production`. However, in order to update the stack again, you would also need to:
+
+1. Update the `name` field in `Pulumi.yaml`, to reflect the new project name.
+1. Update any project-namespaced configuration variables in the stack settings file (e.g. `Pulumi.production.yaml`).
 
 ```
 pulumi stack rename <new-stack-name> [flags]
