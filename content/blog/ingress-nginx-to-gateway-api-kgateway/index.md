@@ -18,13 +18,13 @@ social:
     linkedin:
 ---
 
-The upcoming retirement of **ingress-nginx** in early 2026 gives infrastructure teams both a deadline and an opportunity to rethink traffic management. For years, the standard approach involved stringing together annotations to force a controller to behave. The Gateway API offers a cleaner, standardized alternative. This post investigates the practical reality of this migration and explores why **kgateway** emerges as a robust solution for the future.
+The upcoming retirement of **ingress-nginx** in early 2026 gives infrastructure teams both a deadline and an opportunity to rethink traffic management. Configuring the Ingress API often meant relying on controller-specific annotations that varied between implementations. The Gateway API offers a cleaner, standardized alternative. This post investigates the practical reality of this migration and explores why **kgateway** emerges as a robust solution for the future.
 
 <!--more-->
 
 With **ingress-nginx** entering its sunset phase in early 2026, the Kubernetes community faces a decision point. While the controller served as the default standard for a decade, its architecture now struggles to meet modern requirements. The transition to the Gateway API offers a chance to adopt a standard designed for contemporary traffic patterns.
 
-The Ingress API relied heavily on controller-specific annotations, creating a fragmented ecosystem where configurations were rarely portable. The Gateway API addresses this by establishing a standardized, expressive approach that behaves consistently across implementations. A technical evaluation of the available options points to **kgateway** as a particularly strong candidate for production workloads.
+The Gateway API addresses the portability issues of its predecessor by establishing a standardized, expressive approach that behaves consistently across implementations. A technical evaluation of the available options points to **kgateway** as a particularly strong candidate for production workloads.
 
 ## Why ingress-nginx is retiring
 
