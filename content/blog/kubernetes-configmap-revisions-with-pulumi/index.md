@@ -1,7 +1,7 @@
 ---
 title: "Implementing Kubernetes ConfigMap Revisions with Pulumi and Argo Rollouts"
 h1: "How we implemented ConfigMap revisions in Kubernetes using Pulumi and Argo Rollouts"
-date: "2025-07-03"
+date: "2026-01-13"
 meta_desc: "Learn how to implement ConfigMap revisions in Kubernetes using Pulumi's ConfigMapPatch and owner references with ReplicaSets to leverage Kubernetes garbage collection."
 meta_image: meta.png
 authors: ["matan-baruch"]
