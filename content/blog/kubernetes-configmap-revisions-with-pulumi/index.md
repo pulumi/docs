@@ -22,8 +22,7 @@ using Pulumi's ConfigMapPatch and Kubernetes owner references.
 When deploying applications to Kubernetes using canary strategies with Argo Rollouts,
 we encountered a specific challenge:
 
-1. **Pulumi's ConfigMap suffix behavior**: By default,
-   Pulumi adds a suffix to ConfigMap names when the content changes
+1. **Pulumi ConfigMap replacement behavior**: By default, when a ConfigMap’s data changes, Pulumi may replace it rather than update it in place, which for auto-named ConfigMaps results in a new generated name (suffix).
 2. **Canary deployment issues**: During canary deployments,
    the old ConfigMap gets deleted,
    but older pods (especially on AWS Spot instances that can be replaced during canary) may fail to reload
