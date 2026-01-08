@@ -5,7 +5,7 @@ meta_desc: Pulumi is an infrastructure management platform to automate through i
 include_organization_schema: true
 
 hero:
-  title: [ "Next-Level Infrastructure as Code,", "Now with Agentic AI." ]
+  title: [ "Modern Infrastructure as Code,", "Now with Agentic AI." ]
   description: |
     The cloud infrastructure platform engineers love and enterprises trust. Any cloud, any language. Secure and governed by default.
   cta_text: Try Pulumi Cloud for Free
