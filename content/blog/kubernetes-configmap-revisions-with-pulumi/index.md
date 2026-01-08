@@ -1,8 +1,8 @@
 ---
-title: "Implementing Kubernetes ConfigMap Revisions with Pulumi and Argo Rollouts"
-h1: "How we implemented ConfigMap revisions in Kubernetes using Pulumi and Argo Rollouts"
+title: "Managing Kubernetes ConfigMap Revisions with Pulumi and Argo Rollouts"
+allow_long_title: true
 date: "2026-01-13"
-meta_desc: "Learn how to implement ConfigMap revisions in Kubernetes using Pulumi's ConfigMapPatch and owner references with ReplicaSets to leverage Kubernetes garbage collection."
+meta_desc: "How we used Pulumi's ConfigMapPatch, owner references, and Kubernetes garbage collection to manage ConfigMaps during canary deployments."
 meta_image: meta.png
 authors: ["matan-baruch"]
 tags: ["kubernetes", "pulumi", "configmap", "argo-rollouts", "canary-deployment"]
@@ -13,7 +13,7 @@ which can create challenges when deploying applications with canary strategies.
 When using Argo Rollouts with AWS Spot instances,
 ConfigMap deletions during canary deployments can cause older pods to fail when they try to reload configuration.
 We solved this by implementing a custom ConfigMap revision system
-using Pulumi's ConfigMapPatch and Kubernetes owner references.
+using Pulumi's [ConfigMapPatch](/registry/packages/kubernetes/api-docs/core/v1/configmappatch/) and Kubernetes owner references.
 
 <!--more-->
 
@@ -59,10 +59,10 @@ interface RolloutComponentArgs {
 
 export class ConfigMapRevisionRollout extends pulumi.ComponentResource {
     public readonly rollout: k8s.apiextensions.CustomResource;
-    
+
     constructor(
-        name: string, 
-        args: RolloutComponentArgs, 
+        name: string,
+        args: RolloutComponentArgs,
         opts?: pulumi.ComponentResourceOptions
     ) {
         super("pulumi:component:ConfigMapRevisionRollout", name, {}, opts);
@@ -172,9 +172,9 @@ export class ConfigMapRevisionRollout extends pulumi.ComponentResource {
     ): Promise<k8sClient.V1ReplicaSet[]> {
         const kc = new k8sClient.KubeConfig();
         kc.loadFromString(JSON.stringify(kubeconfig));
-        
+
         const appsV1Api = kc.makeApiClient(k8sClient.AppsV1Api);
-        
+
         try {
             const response = await appsV1Api.listNamespacedReplicaSet(
                 namespace,
@@ -184,7 +184,7 @@ export class ConfigMapRevisionRollout extends pulumi.ComponentResource {
                 undefined, // fieldSelector
                 `configMap=${configMapName}` // labelSelector
             );
-            
+
             return response.body.items;
         } catch (error) {
             pulumi.log.error(`Failed to list ReplicaSets: ${error}`);
@@ -299,7 +299,7 @@ const rollout = new ConfigMapRevisionRollout("my-app", {
 The solution uses several key packages:
 
 - `@pulumi/kubernetes`: For Kubernetes resources and ConfigMapPatch
-- `@kubernetes/client-node`: For direct Kubernetes API access  
+- `@kubernetes/client-node`: For direct Kubernetes API access
 - Argo Rollouts CRDs installed in your cluster
 
 ## Conclusion
