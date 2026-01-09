@@ -48,7 +48,7 @@ Since Stash preserves the original value by design, updating the stored value re
 
 ## Learn more
 
-The Stash resource is available now in Pulumi v3.208.0 and later across all supported languages. Check out the [Stash documentation](/docs/iac/concepts/stash/) for detailed examples in TypeScript, Python, Go, C#, Java, and YAML.
+The Stash resource is available now in Pulumi v3.208.0 and later across all supported languages. Check out the [Stash documentation](/docs/iac/concepts/stash/) for detailed examples in TypeScript, Python, Go, C#, and YAML.
 
 We'd love to hear how you're using Stash and any feedback you have on it! Share your use cases in our [Community Slack](https://slack.pulumi.com/) or open an issue if you see any on [pulumi/pulumi](https://github.com/pulumi/pulumi/issues).
 
