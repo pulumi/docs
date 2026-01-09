@@ -19,7 +19,7 @@ We're excited to announce the `Stash` resource, a new built-in Pulumi resource t
 
 ## Why Stash?
 
-Infrastructure code often produces values that need to persist beyond a single deployment. Maybe you're generating a random identifier that should stay consistent, tracking which team member initially set up a stack, or caching a computed result that's expensive to recreate. Previously, you'd need workarounds like external storage, custom resources, or careful state manipulation.
+Infrastructure code often produces values that need to persist beyond a single deployment. Maybe you're generating a random identifier that should stay consistent, tracking which team member initially set up a stack, or recording a timestamp from the first deployment. Previously, you'd need workarounds like external storage, custom resources, or careful state manipulation.
 
 The `Stash` resource helps with that. It takes an input value, stores it in your stack's state, and makes it available as an output property. The key insight is that the `output` property preserves the *original* value even when the `input` changes in subsequent deployments. This makes Stash perfect for "first-run" scenarios where you want to capture and preserve a value from the initial deployment.
 
