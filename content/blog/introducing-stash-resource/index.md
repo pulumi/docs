@@ -3,6 +3,7 @@ title: "Introducing the Stash Resource in Pulumi IaC"
 date: 2026-01-08
 draft: false
 meta_desc: The new Stash resource lets you save computed values directly to your stack's state, making them persist across deployments.
+meta_image: meta.png
 authors:
     - fraser-waters
     - meagan-cojocar
@@ -10,6 +11,9 @@ tags:
     - features
     - releases
     - iac
+social:
+    twitter: "Ever need a value to stick around between pulumi up runs? Meet Stash, a new built-in resource to Pulumi IaC for persisting data in your stack's state."
+    linkedin: "Introducing the Stash resource in Pulumi IaC, a new built-in resource for saving values directly to your stack's state. Great for first-run scenarios where you need to capture and preserve values from the initial deployment."
 
 ---
 
