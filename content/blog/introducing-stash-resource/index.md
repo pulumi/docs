@@ -13,7 +13,7 @@ tags:
 
 ---
 
-We're excited to announce the `Stash` resource, a new built-in Pulumi resource that lets you save arbitrary values directly to your stack's state. Whether you need to capture a computed result, record who first deployed your infrastructure, or persist configuration that should remain stable across updates, Stash provides a more simple and ergonomic solution.
+We're excited to announce the `Stash` resource, a new built-in Pulumi resource that lets you save arbitrary values directly to your stack's state. Whether you need to capture a computed result, record who first deployed your infrastructure, or persist configuration that should remain stable across updates, Stash provides a simpler and more ergonomic solution.
 
 <!--more-->
 
@@ -21,15 +21,15 @@ We're excited to announce the `Stash` resource, a new built-in Pulumi resource t
 
 Infrastructure code often produces values that need to persist beyond a single deployment. Maybe you're generating a random identifier that should stay consistent, tracking which team member initially set up a stack, or recording a timestamp from the first deployment. Previously, you'd need workarounds like external storage, custom resources, or careful state manipulation.
 
-The `Stash` resource helps with that. It takes an input value, stores it in your stack's state, and makes it available as an output property. The key insight is that the `output` property preserves the *original* value even when the `input` changes in subsequent deployments. This makes Stash perfect for "first-run" scenarios where you want to capture and preserve a value from the initial deployment.
+The `Stash` resource helps with that. It takes an input value, stores it in your stack's state, and makes it available as an output property. The `output` property preserves the *original* value even when the `input` changes in subsequent deployments, making Stash perfect for "first-run" scenarios where you want to capture and preserve a value from the initial deployment.
 
 ## Using Stash
 
-Creating a Stash is straightforward. Here's how you'd capture the username of whoever first deploys the stack:
+Creating a Stash is straightforward. Here's how you'd capture the username of whoever first deploys the stack (using Node.js):
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as os from "os";
+import * as os from "os"; // Node.js built-in module
 
 const firstDeployer = new pulumi.Stash("firstDeployer", {
     input: os.userInfo().username,
