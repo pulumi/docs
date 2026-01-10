@@ -381,6 +381,7 @@ are using within your environment.
 {{% /notes %}}
 
 ## Restoring an environment
+
 {{% notes type="info" %}}
 The ability to restore a deleted environment is limited to Enterprise and Business Critical editions. {{% /notes %}}
 
