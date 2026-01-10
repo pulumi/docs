@@ -476,11 +476,11 @@ $ pulumi config set --path 'api.headers.authorization' "Bearer token123"
 $ pulumi config set --path 'api.headers.content-type' "application/json"
 ```
 
-This creates the following structure in your `Pulumi.<stack-name>.yaml`:
+This creates the following structure in your `Pulumi.<stack-name>.yaml` (where `myproject` is your project name from `Pulumi.yaml`):
 
 ```yaml
 config:
-  proj:api:
+  myproject:api:
     endpoint: https://api.example.com
     timeout: 30
     headers:
@@ -514,7 +514,8 @@ const authHeader = apiConfig.headers.authorization;  // "Bearer token123"
 
 // You CANNOT chain config.require() calls like this:
 // const endpoint = config.require("api").require("endpoint");  // This does NOT work!
-// requireObject() returns a plain object, not a Config instance
+// The reason: requireObject() returns a plain JavaScript object, not a Config instance.
+// Only Config instances have the require() method, so chaining fails.
 ```
 
 {{% /choosable %}}
@@ -608,11 +609,11 @@ $ pulumi config set --path 'database.ssl.enabled' true
 $ pulumi config set --path 'database.ssl.mode' "require"
 ```
 
-**Step 2:** This creates the following in your `Pulumi.<stack-name>.yaml`:
+**Step 2:** This creates the following in your `Pulumi.<stack-name>.yaml` (where `myproject` is your project name):
 
 ```yaml
 config:
-  proj:database:
+  myproject:database:
     host: db.example.com
     port: 5432
     name: myapp
@@ -758,8 +759,8 @@ Project level configuration supports both simple and structured configuration as
 {{% notes type="warning" %}}
 **Important:** Stack-level and project-level YAML files use different syntax for structured configuration:
 
-- **Stack-level files** (`Pulumi.<stack-name>.yaml`): Structured values can be nested directly
-- **Project-level file** (`Pulumi.yaml`): Structured values must be wrapped in a `value` key
+- **Stack-level files** (`Pulumi.<stack-name>.yaml`): Use the format `projectname:key:` and nest structured values directly under the key
+- **Project-level file** (`Pulumi.yaml`): Use the format `key:` (no project name prefix) and nest structured values under a `value:` wrapper
 
 This distinction is easy to miss and can cause confusion when moving configuration between files.
 {{% /notes %}}
@@ -779,13 +780,13 @@ config:
       - 30
 ```
 
-In contrast, the same configuration in a stack-level file (`Pulumi.dev.yaml`) would look like this:
+In contrast, the same configuration in a stack-level file (`Pulumi.dev.yaml`) would look like this (assuming your project name is `myproject`):
 
 ```yaml
 config:
   aws:region: us-east-1
   name: BroomeLLC
-  proj:data:                  # Note: no 'value' key needed in stack files
+  myproject:data:             # Note: uses project name prefix and no 'value' key needed
     active: true
     nums:
     - 10
