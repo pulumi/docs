@@ -759,8 +759,8 @@ Project level configuration supports both simple and structured configuration as
 {{% notes type="warning" %}}
 **Important:** Stack-level and project-level YAML files use different syntax for structured configuration:
 
-- **Stack-level files** (`Pulumi.<stack-name>.yaml`): Use the format `projectname:key:` and nest structured values directly under the key
-- **Project-level file** (`Pulumi.yaml`): Use the format `key:` (no project name prefix) and nest structured values under a `value:` wrapper
+* **Stack-level files** (`Pulumi.<stack-name>.yaml`): Use the format `projectname:key:` and nest structured values directly under the key
+* **Project-level file** (`Pulumi.yaml`): Use the format `key:` (no project name prefix) and nest structured values under a `value:` wrapper
 
 This distinction is easy to miss and can cause confusion when moving configuration between files.
 {{% /notes %}}
