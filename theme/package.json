@@ -14,7 +14,8 @@
         "algoliasearch": "^4.17.0",
         "clipboard-polyfill": "^3.0.3",
         "marked": "^4.3.0",
-        "tailwindcss": "^2.2.9"
+        "tailwindcss": "^2.2.9",
+        "turndown": "^7.1.2"
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^4.0.3",

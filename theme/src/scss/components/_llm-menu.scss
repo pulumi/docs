@@ -1,0 +1,107 @@
+.llm-menu-container {
+    position: relative;
+    display: block;
+}
+
+.llm-menu-trigger {
+    display: inline-flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    i:first-child {
+        width: 14px;
+        margin-right: 0.5rem;
+    }
+
+    .fa-chevron-up,
+    .fa-chevron-down {
+        font-size: 0.625rem;
+        margin-left: 0.25rem;
+    }
+}
+
+.llm-menu-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    min-width: 14rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    z-index: 50;
+}
+
+.llm-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    gap: 0.75rem;
+
+    &:hover {
+        background-color: #f7fafc;
+    }
+
+    &:first-child {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+
+    &:last-child {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+}
+
+.llm-menu-icon {
+    flex-shrink: 0;
+    width: 1.25rem;
+    font-size: 1.125rem;
+    color: #4a5568;
+}
+
+.llm-menu-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.llm-menu-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #2d3748;
+    line-height: 1.25;
+}
+
+.llm-menu-subtitle {
+    font-size: 0.75rem;
+    color: #718096;
+    line-height: 1.25;
+}
+
+.llm-menu-external {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    color: #a0aec0;
+}
+
+.llm-menu-dropdown hr {
+    margin: 0.25rem 0;
+    border: 0;
+    border-top: 1px solid #e2e8f0;
+}

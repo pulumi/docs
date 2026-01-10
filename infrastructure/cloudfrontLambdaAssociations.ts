@@ -43,6 +43,19 @@ export function getAIAnswersRewriteAssociation(): aws.types.input.cloudfront.Dis
     };
 }
 
+export function getMarkdownContentNegotiationAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
+    const markdownNegotiationLambda = new LambdaEdge("markdown-negotiation", {
+        func: getMarkdownContentNegotiationCallback(),
+        funcDescription: "Lambda function that serves markdown when Accept: text/markdown header is present.",
+    }, { provider: usEast1Provider });
+
+    return {
+        includeBody: false,
+        lambdaArn: markdownNegotiationLambda.getLambdaEdgeArn(),
+        eventType: "origin-request",
+    };
+}
+
 function getEdgeRedirectsLambdaCallback(): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
     // https://aws.amazon.com/blogs/networking-and-content-delivery/handling-redirectsedge-part1/
     return (event: CloudFrontRequestEvent, context, callback) => {
@@ -99,6 +112,31 @@ function getAIAnswersRewritesLambdaCallback(): aws.lambda.Callback<CloudFrontReq
 
         callback(null, response);
         return;
+    };
+}
+
+function getMarkdownContentNegotiationCallback(): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
+    return (event: CloudFrontRequestEvent, context, callback) => {
+        const request = event.Records[0].cf.request;
+        const headers = request.headers;
+
+        // Check if Accept header prefers markdown
+        const acceptHeader = headers['accept']?.[0]?.value || '';
+
+        // Only handle docs pages that don't already end in .md
+        if (request.uri.startsWith('/docs/') &&
+            acceptHeader.includes('text/markdown') &&
+            !request.uri.endsWith('.md')) {
+
+            // Rewrite to markdown version
+            if (request.uri.endsWith('/')) {
+                request.uri = request.uri + 'index.md';
+            } else {
+                request.uri = request.uri + '/index.md';
+            }
+        }
+
+        callback(null, request);
     };
 }
 
