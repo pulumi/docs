@@ -388,9 +388,11 @@ Restoring an environment allows you to recover a previously deleted environment 
 
 To restore an environment:
 
-1. Navigate to the Environments page in the Pulumi Cloud console.
-1. Select the three-dot menu beside Create Environment.
-1. Choose 'Restore deleted environments' from the dropdown. In the list of recently deleted environments, use the three-dot menu next to the environment you want to recover and select Restore environment.
+1. Navigate to **Environments** in the Pulumi Cloud console.
+1. Select the three-dot menu beside **Create Environment**.
+1. Select **Restore deleted environments** from the dropdown.
+1. In the list of recently deleted environments, select the three-dot menu next to the environment you want to recover.
+1. Select **Restore environment**.
 
 Restored environments retain their previous history and values. If you need to restore an environment that is not listed, or if it was deleted outside the retention window, contact Pulumi support for assistance.
 
