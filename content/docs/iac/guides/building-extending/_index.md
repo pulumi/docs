@@ -50,6 +50,12 @@ Package and distribute your components and providers for use across teams and pr
 
 **[Schema](/docs/iac/guides/building-extending/packages/schema/)** - Define package schemas that drive SDK generation and documentation for all supported languages.
 
+## Templates
+
+Create project templates for bootstrapping new Pulumi projects.
+
+**[Creating Templates](/docs/iac/guides/building-extending/creating-templates/)** - Build custom templates that can be used with `pulumi new` to quickly bootstrap new projects with your preferred configurations and patterns.
+
 ## Using Existing Tools
 
 Leverage existing infrastructure tools and modules within Pulumi programs.
