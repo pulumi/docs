@@ -1,7 +1,7 @@
 ---
 title: "Speeding up Pulumi Operations by up to 20x"
 
-date: 2025-12-08T17:57:55+02:00
+date: 2026-01-12T18:57:55+02:00
 
 draft: false
 
