@@ -100,7 +100,7 @@ For resources that can't be automatically imported, Neo provides:
 
 ## A real migration walkthrough
 
-Let's a take a look at exactly what happens when you migrate a production CDK application.
+Let's take a look at exactly what happens when you migrate a production CDK application.
 
 ### Starting point: Your CDK application
 
@@ -209,8 +209,7 @@ The conversion report shows 100% coverage: all 7 resources converted successfull
 
 Now comes the critical moment. Neo imports your existing infrastructure:
 
-```text
-
+```output
 [INFO] Starting import of CloudFormation stack ApiStack-prod
 [INFO] Retrieved 7 resources from CloudFormation
 [INFO] Importing aws-native:dynamodb:Table OrdersTable (arn:aws:dynamodb:us-east-1:123456789:table/ApiStack-OrdersTable-ABC123)
@@ -244,12 +243,11 @@ Previewing update (prod)
 
 Resources:
     + 7 to import
-    7 unchanged
 
 Duration: 4s
 ```
 
-Seven unchanged resources. Zero modifications. Your infrastructure is now managed by Pulumi without a single API call being dropped.
+Seven resources to import. Zero modifications. Your infrastructure is now managed by Pulumi without a single API call being dropped.
 
 ## Handling complexity at scale
 
@@ -287,14 +285,6 @@ The migration process maintains your existing security posture:
 - **Audit trail**: Complete migration reports document every change
 - **Policy preservation**: IAM policies and security groups migrate unchanged
 - **Compliance continuity**: Resources maintain their compliance tags and configurations
-
-## What's next
-
-We're continuing to enhance Neo's migration capabilities:
-
-- **Terraform migration**: Similar zero-downtime approach for Terraform users
-- **Cost optimization**: Identify savings opportunities during migration
-- **Policy migration**: Convert CDK aspects to Pulumi policy packs
 
 ## Start your migration today
 
