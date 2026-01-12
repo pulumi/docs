@@ -90,14 +90,14 @@ system will have its results reported back to GitHub.
 
 When you run `pulumi preview` or `pulumi up`, the Pulumi CLI examines the closest `.git` directory to extract commit metadata (such as the commit SHA, branch name, and repository information). This metadata is included with the update and sent to Pulumi Cloud, which uses it to identify the associated pull request and post comments.
 
-{{% notes type="info" %}}
-**Troubleshooting:** If PR comments aren't appearing, verify that:
+#### Troubleshooting PR comments
+
+If comments aren't appearing on your pull requests, verify that:
 
 1. The `.git` folder is present in your Pulumi project directory during CI runs
-1. If you copy your Pulumi code into a container, you must also include the `.git` folder
+1. If you copy your Pulumi code into a container, you also include the `.git` folder
 1. The commit being built matches a commit in an open pull request
-1. The GitHub app has access to the repository (check Settings > Integrations in Pulumi Cloud)
-{{% /notes %}}
+1. The GitHub app has access to the repository (check **Settings** > **Integrations** in Pulumi Cloud)
 
 ## GitHub UI
 
