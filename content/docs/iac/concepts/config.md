@@ -514,8 +514,8 @@ const authHeader = apiConfig.headers.authorization;  // "Bearer token123"
 
 // You CANNOT chain config.require() calls like this:
 // const endpoint = config.require("api").require("endpoint");  // This does NOT work!
-// The reason: requireObject() returns a plain JavaScript object, not a Config instance.
-// Only Config instances have the require() method, so chaining fails.
+// Reason: requireObject() returns a plain JavaScript object, not a Config instance,
+// and only Config instances have the require() method.
 ```
 
 {{% /choosable %}}
@@ -595,7 +595,7 @@ $ pulumi config set api '{"endpoint":"https://api.example.com","timeout":30}'
 
 ### Complete example: Database configuration
 
-Here's a complete example showing how to configure and access a database connection object with nested properties:
+Here's a complete example that shows how to configure and access a database connection object with nested properties:
 
 **Step 1:** Set the configuration values using the CLI:
 
@@ -772,7 +772,7 @@ config:
   aws:region: us-east-1
   name: BroomeLLC
   data:
-    value:                    # The 'value' key is required for project-level structured config
+    value: # Required for project-level structured config
       active: true
       nums:
       - 10
@@ -780,7 +780,7 @@ config:
       - 30
 ```
 
-In contrast, the same configuration in a stack-level file (`Pulumi.dev.yaml`) would look like this (assuming your project name is `myproject`):
+The same configuration in a stack-level file (`Pulumi.dev.yaml`) would look like this (assuming your project name is `myproject`):
 
 ```yaml
 config:
