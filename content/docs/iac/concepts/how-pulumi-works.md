@@ -427,15 +427,17 @@ When you run `pulumi up` or `pulumi preview`, Pulumi displays the operations it 
 
 ### Operation types
 
+Pulumi uses these operation types to indicate the changes it will make:
+
 | Operation | Symbol | Description |
 |-----------|--------|-------------|
-| **same** | (none) | No changes detected. The resource's current state matches the desired state. |
-| **create** | `+` | A new resource will be created. |
-| **update** | `~` | An existing resource will be modified in place. |
-| **delete** | `-` | An existing resource will be removed. |
-| **replace** | `+-` | The resource must be replaced. Pulumi will create a new resource, then delete the old one. |
-| **create-replacement** | `++` | A new resource is being created as part of a replacement operation. |
-| **delete-replaced** | `--` | An old resource is being deleted after its replacement was created. |
+| same | (none) | No changes detected. The resource's current state matches the desired state. |
+| create | `+` | A new resource will be created. |
+| update | `~` | An existing resource will be modified in place. |
+| delete | `-` | An existing resource will be removed. |
+| replace | `+-` | The resource must be replaced. Pulumi will create a new resource, then delete the old one. |
+| create-replacement | `++` | A new resource is being created as part of a replacement operation. |
+| delete-replaced | `--` | An old resource is being deleted after its replacement was created. |
 
 ### Additional operations
 
@@ -443,18 +445,18 @@ These operations appear in specific scenarios:
 
 | Operation | Description |
 |-----------|-------------|
-| **read** | An existing resource is being imported or read into Pulumi's state. |
-| **read-replacement** | Reading an existing resource as part of a replacement. |
-| **refresh** | The resource's state is being synchronized with the actual cloud provider state. |
-| **import** | A resource is being imported into Pulumi management. |
-| **import-replacement** | An imported resource is replacing an existing resource. |
+| read | An existing resource is being imported or read into Pulumi's state. |
+| read-replacement | Reading an existing resource as part of a replacement. |
+| refresh | The resource's state is being synchronized with the actual cloud provider state. |
+| import | A resource is being imported into Pulumi management. |
+| import-replacement | An imported resource is replacing an existing resource. |
 
 ### Understanding replacements
 
 When a resource property changes in a way that cannot be updated in place, Pulumi performs a _replacement_. This involves:
 
-1. **create-replacement** (`++`): Create the new resource with the updated configuration
-1. **delete-replaced** (`--`): Delete the old resource after the new one is ready
+1. Creating the new resource with the updated configuration (create-replacement)
+1. Deleting the old resource after the new one is ready (delete-replaced)
 
 By default, Pulumi creates the replacement before deleting the original to minimize downtime. You can change this behavior with the [deleteBeforeReplace](/docs/concepts/resources#deletebeforereplace) option.
 
