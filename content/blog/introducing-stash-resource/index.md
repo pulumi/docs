@@ -48,7 +48,40 @@ Stash supports any value type—strings, numbers, objects, arrays, and nested st
 
 ## When to replace
 
-Since Stash preserves the original value by design, updating the stored value requires a replacement. You have several options: use `[--target-replace`]() during `pulumi up`, run [`pulumi state taint`](docs/iac/cli/commands/pulumi_state_taint) to mark the resource for replacement, or use the `replacementTrigger` resource option to automate replacements based on value changes.
+Since Stash preserves the original value by design, updating the stored value requires a replacement. You have several options:
+
+**Use `--target-replace` during `pulumi up`:**
+
+```bash
+pulumi up --target-replace urn:pulumi:dev::my-project::pulumi:index:Stash::firstDeployer
+```
+
+**Run [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint/) to mark the resource for replacement:**
+
+```bash
+pulumi state taint urn:pulumi:dev::my-project::pulumi:index:Stash::firstDeployer
+```
+
+**Use the `replacementTrigger` resource option to automate replacements based on value changes:**
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as os from "os";
+
+const remoteConfig = fetch("https://example.com/my-service").then(response => response.json())
+
+const myStash = new pulumi.Stash("myStash",
+    {
+        input: os.userInfo().username,
+    }, {
+        replacementTrigger: remoteConfig.someValue,
+    }
+);
+
+export const stashedValue = myStash.output;
+```
+
+With `replacementTrigger`, when `remoteConfig.someValue` changes, the Stash resource will be replaced and the new input value will be captured.
 
 ## Learn more
 
