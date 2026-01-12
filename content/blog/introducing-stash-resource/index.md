@@ -50,19 +50,19 @@ Stash supports any value type—strings, numbers, objects, arrays, and nested st
 
 Since Stash preserves the original value by design, updating the stored value requires a replacement. You have several options:
 
-**Use `--target-replace` during `pulumi up`:**
+Use `--target-replace` during `pulumi up`:
 
 ```bash
 pulumi up --target-replace urn:pulumi:dev::my-project::pulumi:index:Stash::firstDeployer
 ```
 
-**Run [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint/) to mark the resource for replacement:**
+Run [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint/) to mark the resource for replacement:
 
 ```bash
 pulumi state taint urn:pulumi:dev::my-project::pulumi:index:Stash::firstDeployer
 ```
 
-**Use the `replacementTrigger` resource option to automate replacements based on value changes:**
+Use the `replacementTrigger` resource option to automate replacements based on value changes:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
