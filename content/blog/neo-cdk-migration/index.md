@@ -71,7 +71,7 @@ Neo enforces strict success criteria: every CloudFormation resource must be acco
 Neo transforms CDK Cloud Assemblies into Pulumi programs with high fidelity. The conversion process:
 
 - **Preserves resource identity**: CDK logical IDs are maintained as Pulumi resource names, enabling automated import
-- **Maintains relationships**: Cross-stack references are converted to Pulumi stack references automatically
+- **Maintains relationships**: resource references are converted to Pulumi references automatically
 - **Selects optimal providers**: Defaults to `@pulumi/aws-native` for CloudFormation compatibility, with the ability to fallback to `@pulumi/aws` when needed
 - **Reports conversion coverage**: Identifies any resources requiring manual attention with specific guidance
 
