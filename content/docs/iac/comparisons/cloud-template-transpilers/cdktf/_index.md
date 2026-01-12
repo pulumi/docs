@@ -108,4 +108,9 @@ Pulumi has built-in support for [secrets management](/docs/iac/concepts/secrets/
 
 For teams interested in migrating from CDKTF, Pulumi has several options, including automated tooling that can convert your CDKTF code to Pulumi and import your existing Terraform state. To learn more, see [Migrating from CDKTF to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
 
+## Related content
+
+- [CDKTF is deprecated: What's next for your team?](/blog/cdktf-is-deprecated-whats-next-for-your-team/) - A detailed guide on migration options
+- [Pulumi for All Your IaC — Including Terraform and HCL](/blog/all-iac-including-terraform-and-hcl/) - How Pulumi supports Terraform, OpenTofu, and HCL alongside general-purpose languages
+
 {{< get-started >}}
