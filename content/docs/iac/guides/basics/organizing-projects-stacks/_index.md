@@ -295,13 +295,140 @@ See also the use of multiple projects and stacks in [Crosswalk for Kubernetes](/
 
 ## Organizing your project code
 
-Within your Pulumi project, there are good practices to consider to help keep your code organized, maintainable, and understandable.
+Within your Pulumi project, there are good practices to consider to help keep your code organized, maintainable, and understandable. While Pulumi doesn't enforce a specific project structure, following consistent patterns makes your infrastructure code easier to navigate, review, and maintain.
+
+### Common project structures
+
+Here are several approaches to organizing files within a Pulumi project, each with different tradeoffs:
+
+#### Flat structure (simple projects)
+
+For smaller projects with a handful of resources, a flat structure works well:
+
+```
+my-project/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── index.ts          # Main entrypoint
+└── config.ts         # Config helpers and constants
+```
+
+**When to use:** Small projects, prototypes, or single-purpose stacks with fewer than ~20 resources.
+
+#### Organized by resource layer
+
+For medium-sized projects, organize files by infrastructure layer:
+
+```
+my-project/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── index.ts              # Main entrypoint, imports and composes layers
+├── networking.ts         # VPCs, subnets, security groups
+├── compute.ts            # EC2, ECS, Lambda, etc.
+├── storage.ts            # S3, RDS, DynamoDB, etc.
+├── iam.ts                # IAM roles, policies, users
+└── monitoring.ts         # CloudWatch, alarms, dashboards
+```
+
+**When to use:** Projects with clear separation between infrastructure concerns. This mirrors how cloud architects typically think about infrastructure.
+
+#### Organized by service/feature
+
+For projects that deploy multiple logical services:
+
+```
+my-project/
+├── Pulumi.yaml
+├── index.ts              # Main entrypoint
+├── shared/
+│   ├── networking.ts     # Shared VPC, DNS
+│   └── iam.ts            # Shared IAM resources
+├── api/
+│   ├── index.ts          # API Gateway, Lambda functions
+│   └── routes.ts         # Route definitions
+├── web/
+│   ├── index.ts          # CloudFront, S3 bucket
+│   └── cdn.ts            # CDN configuration
+└── data/
+    ├── index.ts          # Database resources
+    └── migrations.ts     # Migration helpers
+```
+
+**When to use:** Applications with multiple distinct components that share some common infrastructure.
+
+### Pulumi-specific organization tips
+
+**Configuration helpers:** Create a dedicated file for reading and validating configuration:
+
+```typescript
+// config.ts
+import * as pulumi from "@pulumi/pulumi";
+
+const config = new pulumi.Config();
+
+export const environment = pulumi.getStack();
+export const region = config.require("region");
+export const instanceSize = config.get("instanceSize") || "t3.medium";
+
+// Validate config at program start
+if (!["dev", "staging", "prod"].includes(environment)) {
+    throw new Error(`Unknown environment: ${environment}`);
+}
+```
+
+**Resource naming conventions:** Centralize naming logic to ensure consistency:
+
+```typescript
+// naming.ts
+import * as pulumi from "@pulumi/pulumi";
+
+const project = pulumi.getProject();
+const stack = pulumi.getStack();
+
+export function name(resourceName: string): string {
+    return `${project}-${stack}-${resourceName}`;
+}
+```
+
+**Application code alongside infrastructure:** If your Pulumi project also contains application code (such as Lambda function code or Docker build contexts), keep them in clearly labeled directories:
+
+```
+my-project/
+├── Pulumi.yaml
+├── index.ts
+├── infra/                # Infrastructure definitions
+│   ├── api.ts
+│   └── database.ts
+├── app/                  # Application code
+│   ├── lambda/           # Lambda function source
+│   │   └── handler.ts
+│   └── docker/           # Dockerfiles and app source
+│       └── Dockerfile
+└── scripts/              # Build and deployment scripts
+    └── build.sh
+```
+
+### When to split into separate projects
+
+Consider moving code to a separate Pulumi project when:
+
+* **Different deployment cadences:** Database schemas change rarely while application code changes daily
+* **Different owners:** A platform team manages core infrastructure while app teams manage their services
+* **Different security requirements:** Sensitive resources (like KMS keys) need stricter access controls
+* **Performance:** Very large projects (hundreds of resources) may benefit from splitting to reduce deployment time
+
+Use [stack references](/docs/concepts/stack#stackreferences) to share outputs between projects.
+
+### Breaking out reusable code
 
 {{< chooser language "typescript,go" / >}}
 
 {{% choosable language typescript %}}
 
-Organize your code in a way that makes it easy to understand and maintain. One way to do this in Typescript is to break out your code into separate files, and then import them into your main file. In this example, the entrypoint for our Pulumi program is `index.ts`, but we use the `utils.ts` file for supporting functions.
+Organize your code in a way that makes it easy to understand and maintain. One way to do this in TypeScript is to break out your code into separate files, and then import them into your main file. In this example, the entrypoint for our Pulumi program is `index.ts`, but we use the `utils.ts` file for supporting functions.
 
 ```typescript
 // index.ts
