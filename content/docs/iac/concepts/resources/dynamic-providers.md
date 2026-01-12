@@ -348,9 +348,9 @@ The `delete` operation is invoked if the URN exists in the previous state but no
 
 The `read` method is invoked in three scenarios:
 
-1. When using the static [`get` method](/docs/concepts/resources/get/) to read an existing resource that is not managed by Pulumi.
-2. When using [`pulumi import`](/docs/cli/commands/pulumi_import/) to import an existing resource into Pulumi management.
-3. When running [`pulumi refresh`](/docs/cli/commands/pulumi_refresh/) to synchronize the state with the actual state of the resource in the cloud provider.
+1. When using the static [`get` method](/docs/iac/concepts/resources/get/) to read an existing resource that is not managed by Pulumi.
+1. When using [`pulumi import`](/docs/cli/commands/pulumi_import/) to import an existing resource into Pulumi management.
+1. When running [`pulumi refresh`](/docs/cli/commands/pulumi_refresh/) to synchronize the state with the actual state of the resource in the cloud provider.
 
 The method is passed the `id` of the resource, as tracked in the cloud provider, and an optional bag of additional properties that can be used to disambiguate the request, if needed. The `read` method looks up the requested resource, and returns the canonical `id` and output properties of this resource if found. If an error occurs, an exception can be thrown from the `read` method to return this error to the user.
 
