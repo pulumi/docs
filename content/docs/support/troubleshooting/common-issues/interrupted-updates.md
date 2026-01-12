@@ -57,8 +57,8 @@ Then run `pulumi refresh` to remove any pending operations cleanly, allowing you
 
 When you have pending create operations, `pulumi refresh` will prompt you interactively to resolve them. You'll need to determine whether the resource was actually created in your cloud provider:
 
-1. **If the resource was NOT created:** Select "clear" to remove the pending operation
-1. **If the resource WAS created:** You'll need to provide the resource's physical ID so Pulumi can import it into state
+1. **If the resource was not created:** Select "clear" to remove the pending operation
+1. **If the resource was created:** You'll need to provide the resource's physical ID so Pulumi can import it into state
 
 ### Non-interactive mode
 
@@ -95,9 +95,9 @@ The `--import-pending-creates` flag requires **pairs** of values: the resource U
 
 To find the physical ID of a resource that was created:
 
-- **AWS:** Check the AWS Console or use the AWS CLI to find the resource
-- **Azure:** Check the Azure Portal or use `az` CLI
-- **GCP:** Check the Cloud Console or use `gcloud` CLI
+- **AWS:** Check the AWS Console or use the `aws` CLI to find the resource
+- **Azure:** Check the Azure Portal or use the `az` CLI
+- **GCP:** Check the Cloud Console or use the `gcloud` CLI
 
 The physical ID format varies by provider and resource type. For example:
 
