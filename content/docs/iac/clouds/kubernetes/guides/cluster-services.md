@@ -24,21 +24,13 @@ policy enforcement and service meshes.
 
 {{% choosable cloud aws %}}
 
-The full code for the AWS cluster services is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/04-cluster-services
-<!-- markdownlint-enable url -->
+The full code for the AWS cluster services is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/aws/04-cluster-services).
 
 {{% /choosable %}}
 
 {{% choosable cloud azure %}}
 
-The full code for the Azure cluster services is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/04-cluster-services
-<!-- markdownlint-enable url -->
+The full code for the Azure cluster services is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/azure/04-cluster-services).
 
 {{% /choosable %}}
 
@@ -46,20 +38,11 @@ The full code for the Azure cluster services is on [GitHub][gh-repo-stack].
 
 GKE logging and monitoring is managed by Google Cloud through StackDriver.
 
-The repo for the Google Cloud cluster services is on [GitHub][gh-repo-stack], but it is empty since no extra steps are required after cluster and Node Pool creation in the [Cluster Configuration][crosswalk-k8s-cluster] stack.
-
-<!-- markdownlint-disable url -->
-[crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/04-cluster-services
-<!-- markdownlint-enable url -->
+The repo for the Google Cloud cluster services is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/gcp/04-cluster-services), but it is empty since no extra steps are required after cluster and Node Pool creation in the [Cluster Configuration](https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration) stack.
 
 {{% /choosable %}}
 
-The full code for the general cluster services is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/general-cluster-services
-<!-- markdownlint-enable url -->
+The full code for the general cluster services is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/general-cluster-services).
 
 {{% choosable cloud aws %}}
 
