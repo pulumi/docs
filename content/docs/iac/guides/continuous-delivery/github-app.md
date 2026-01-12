@@ -86,7 +86,18 @@ integration Pulumi with whatever system you currently use.
 Once installed in your organization, any `pulumi preview` or `pulumi up` that is run in your CI
 system will have its results reported back to GitHub.
 
-{{% notes type="info" %}}You need to have the `.git` folder included in your Pulumi project folder to take advantage of some of these features. If you copy your Pulumi code into a container or somewhere else and don't include the `.git` folder then some of this functionality won't work.{{% /notes %}}
+### How PR comments work
+
+When you run `pulumi preview` or `pulumi up`, the Pulumi CLI examines the closest `.git` directory to extract commit metadata (such as the commit SHA, branch name, and repository information). This metadata is included with the update and sent to Pulumi Cloud, which uses it to identify the associated pull request and post comments.
+
+{{% notes type="info" %}}
+**Troubleshooting:** If PR comments aren't appearing, verify that:
+
+1. The `.git` folder is present in your Pulumi project directory during CI runs
+1. If you copy your Pulumi code into a container, you must also include the `.git` folder
+1. The commit being built matches a commit in an open pull request
+1. The GitHub app has access to the repository (check Settings > Integrations in Pulumi Cloud)
+{{% /notes %}}
 
 ## GitHub UI
 
