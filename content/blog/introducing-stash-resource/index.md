@@ -48,7 +48,7 @@ Stash supports any value type—strings, numbers, objects, arrays, and nested st
 
 ## When to replace
 
-Since Stash preserves the original value by design, updating the stored value requires a replacement. You have several options: use `--target-replace` during `pulumi up`, run `pulumi state taint` to mark the resource for replacement, or use the `TriggerReplacement` resource option to automate replacements based on value changes.
+Since Stash preserves the original value by design, updating the stored value requires a replacement. You have several options: use `[--target-replace`]() during `pulumi up`, run [`pulumi state taint`](docs/iac/cli/commands/pulumi_state_taint) to mark the resource for replacement, or use the `replacementTrigger` resource option to automate replacements based on value changes.
 
 ## Learn more
 
