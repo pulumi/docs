@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: Getting Started with Infrastructure as Code on Google Cloud
-meta_desc: This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy resources on Google Cloud using Pulumi.
+meta_desc: Workshop on infrastructure as code for Google Cloud, showing how to define, deploy, and manage GCP resources using general-purpose programming languages.
 meta_image: /images/resources/getting-started-iac-google-josh-jay.png
 
 # A featured webinar will display first in the list.
@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -36,36 +36,40 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/4RZWY1n2GPY?rel=0
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-01-31T09:00:00-08:00
+    sortable_date: 2026-02-18T09:00:00-08:00
 
     # Duration of the webinar.
-    duration: 90 minutes
+    duration: 60 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
 
     # Description of the webinar.
     description: |
-        In this workshop, you will learn the fundamentals of infrastructure as code through guided exercises. You will be introduced to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud infrastructure. This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy resources on Google Cloud. We will guide you through the Pulumi platform with diagrams and a series of labs to help accelerate your cloud projects.
-
+        This workshop explores how modern infrastructure management on Google Cloud can be streamlined using infrastructure as code. You’ll see how Pulumi enables teams to define, deploy, and manage GCP infrastructure using real programming languages and established software engineering practices.
+        
+        Through guided examples, diagrams, and walkthroughs, the workshop shows how Pulumi’s programming model connects application and infrastructure development. This approach makes cloud architectures easier to understand and change, and reduces friction when managing infrastructure on Google Cloud.
+        
+        The session focuses on how Pulumi fits into real-world GCP workflows and how teams use it to manage infrastructure consistently across projects and environments.
     learn:
-
+        - How Pulumi models Google Cloud infrastructure using familiar programming constructs
+        - How infrastructure as code improves reliability and repeatability on GCP
+        - How Pulumi supports consistent infrastructure management across environments on Google Cloud
+        
     # The webinar presenters
     presenters:
-        - name: Josh Kodroff
-          role: Sr. Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Jayson Smith
-          role: Sr. Cloud Customer Engineer, Google
+        - name: Adam Bell
+          role: Community Engineer, Pulumi
+          photo: /images/team/adam-gordon-bell.jpg
 
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics: []
-        languages: []
+        languages: ["any"]
         clouds: ["Google Cloud"]
 
 # The right hand side form section.
@@ -73,4 +77,14 @@ form:
     # HubSpot form id.
     hubspot_form_id: ea5da134-9b0e-4a34-83f8-e2074f498f21
     salesforce_campaign_id: 701Du000000Bu2kIAC
+    
+event_data:
+  name: "Getting Started with Infrastructure as Code on Google Cloud"
+  start_date: 2026-02-18T12:00:00-05:00
+  end_date: 2026-02-18T13:00:00-05:00
+  url: "https://www.pulumi.com/events/infrastructure-as-code-google-cloud"
+  description: |
+    Workshop on infrastructure as code for Google Cloud showing how to define, deploy, and manage GCP resources using familiar programming languages and repeatable workflows.
+---
+    
 ---
