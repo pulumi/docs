@@ -50,8 +50,12 @@ If your component uses a local package (such as any Terraform provider via `terr
 A Pulumi Component consists of three main parts:
 
 - The **component resource** encapsulates multiple Pulumi resources, grouping them into a logical unit.
-- The **component resource arguments** define configurable input properties, allowing users to specify parameters that tailor the component’s behavior to specific needs.
+- The **component resource arguments** define configurable input properties, allowing users to specify parameters that tailor the component's behavior to specific needs.
 - The **provider host** registers and runs your component resources, acting as the foundational layer for component creation.
+
+{{< notes type="info" >}}
+Not all [resource options](/docs/iac/concepts/resources/options/) apply to component resources. For example, `ignoreChanges` and `customTimeouts` have no effect on components themselves. To see which options work with components and how to apply options to child resources using `transforms`, see [Resource options and component resources](/docs/iac/concepts/resources/options/#resource-options-and-component-resources).
+{{< /notes >}}
 
 ## Example: Static Web Page Component
 
