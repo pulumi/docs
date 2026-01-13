@@ -395,7 +395,7 @@ export function qualifiedName(resourceName: string): string {
 }
 ```
 
-**Application code alongside infrastructure:** If your Pulumi project also contains application code (such as Lambda function code or Docker build contexts), keep them in clearly labeled directories:
+**Application code alongside infrastructure:** If your Pulumi project also contains application code (such as Lambda function code or Docker build contexts), consider organizing it into clearly labeled directories:
 
 ```
 my-project/
