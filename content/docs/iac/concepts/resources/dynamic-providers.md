@@ -442,7 +442,11 @@ Any outputs can be returned by your create function in the outs property of `pul
 The following only applies to statically typed languages.
 {{% /notes %}}
 
-If you need to access the outputs of your custom resource outside it with strong typing support, declare each output property returned in the `outs` property by your `create` function as a class member of the `pulumi.dynamic.Resource` itself. For example, in TypeScript, these outputs must be declared as `public readonly` class members in your `pulumi.dynamic.Resource` class. These class members must also have the type `pulumi.Output<T>`.
+If you need to access the outputs of your custom resource outside it with strong typing support, declare each output property returned in the `outs` property by your `create` function as a class member of the `pulumi.dynamic.Resource` itself. For example, in TypeScript, these outputs must be declared using the `declare` keyword in your `pulumi.dynamic.Resource` class. These class members must also have the type `pulumi.Output<T>`.
+
+{{% notes type="warning" %}}
+**Important:** Use the `declare` keyword rather than `public readonly` for output properties. Using `public readonly` with the definite assignment assertion (`!`) can cause outputs to be `undefined` in some TypeScript configurations. The `declare` keyword tells TypeScript the property exists without emitting any JavaScript, which is the correct behavior since Pulumi sets these properties dynamically.
+{{% /notes %}}
 
 The name of the class member must match the names of the output properties as returned by the `create` function.
 
@@ -467,8 +471,8 @@ class MyResourceProvider implements pulumi.dynamic.ResourceProvider {
 }
 
 export class MyResource extends pulumi.dynamic.Resource {
-    public readonly myStringOutput!: pulumi.Output<string>;
-    public readonly myNumberOutput!: pulumi.Output<number>;
+    declare readonly myStringOutput: pulumi.Output<string>;
+    declare readonly myNumberOutput: pulumi.Output<number>;
 
     constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
         super(new MyResourceProvider(), name, { myStringOutput: undefined, myNumberOutput: undefined, ...props }, opts);
