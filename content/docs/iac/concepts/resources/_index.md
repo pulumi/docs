@@ -42,10 +42,10 @@ aliases:
         "#creating-child-resources": "/docs/concepts/resources/components/#creating-child-resources",
         "#registering-component-outputs": "/docs/concepts/resources/components/#registering-component-outputs",
         "#inheriting-resource-providers": "/docs/concepts/resources/components/#inheriting-resource-providers",
-        "#providers": "/docs/concepts/resources/providers",
-        "#default-provider-configuration": "/docs/concepts/resources/providers/#default-provider-configuration",
-        "#explicit-provider-configuration": "/docs/concepts/resources/providers/#explicit-provider-configuration",
-        "#dynamicproviders": "/docs/concepts/resources/dynamic-providers",
+        "#providers": "/docs/iac/concepts/providers",
+        "#default-provider-configuration": "/docs/iac/concepts/providers/#default-provider-configuration",
+        "#explicit-provider-configuration": "/docs/iac/concepts/providers/#explicit-provider-configuration",
+        "#dynamicproviders": "/docs/iac/concepts/providers/dynamic-providers",
         "#names": "/docs/concepts/resources/names",
         "#autonaming": "/docs/concepts/resources/names/#autonaming",
         "#urns": "/docs/concepts/resources/names/#urns",
@@ -144,13 +144,13 @@ The following topics provide more details on the core concepts for working with 
         <p>Learn what a component resource is, how to author a new component resource, how to create child resources, and more.</p>
     </div>
     <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/concepts/resources/providers/"><i class="fas fa-server pr-2"></i>Providers</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/providers/"><i class="fas fa-server pr-2"></i>Providers</a></h3>
         <p>Learn how a resource provider handles communications with a cloud service to create, read, update, and delete the resources you define in your Pulumi programs.</p>
     </div>
 </div>
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/concepts/resources/dynamic-providers/"><i class="fas fa-file-alt pr-2"></i>Dynamic Providers</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/providers/dynamic-providers/"><i class="fas fa-file-alt pr-2"></i>Dynamic Providers</a></h3>
         <p>Learn how to use dynamic providers and use cases for them.</p>
     </div>
     <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">

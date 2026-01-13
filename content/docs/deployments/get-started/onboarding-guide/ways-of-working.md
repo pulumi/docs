@@ -168,7 +168,7 @@ Create providers for new or internal systems where neither Terraform nor Pulumi 
 **[Terraform provider bridging](https://www.pulumi.com/blog/any-terraform-provider/)**
 Bridge any Terraform provider at development time to use it from Pulumi IaC programs.
 
-**[Dynamic providers](https://www.pulumi.com/docs/iac/concepts/resources/dynamic-providers/)**
+**[Dynamic providers](https://www.pulumi.com/docs/iac/concepts/providers/dynamic-providers/)**
 Write CRUD logic inline in your Pulumi IaC program without building a separate provider.
 
 ### Contributing to open source

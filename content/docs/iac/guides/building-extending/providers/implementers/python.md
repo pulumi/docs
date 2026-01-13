@@ -14,7 +14,7 @@ menu:
 This guide shows how to implement a Pulumi provider in Python using the gRPC bindings directly. This approach gives you full control over provider behavior and works with any Python version that supports gRPC.
 
 {{% notes type="warning" %}}
-This is an advanced guide for power users. You'll be working directly with the provider protocol, which requires understanding gRPC, Protocol Buffers, and Pulumi's provider semantics. If you're open to writing Go, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) offers a more ergonomic experience with less boilerplate. [Dynamic providers](/docs/iac/concepts/resources/dynamic-providers/) can be useful for quick prototyping, but aren't suitable for production providers.
+This is an advanced guide for power users. You'll be working directly with the provider protocol, which requires understanding gRPC, Protocol Buffers, and Pulumi's provider semantics. If you're open to writing Go, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) offers a more ergonomic experience with less boilerplate. [Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) can be useful for quick prototyping, but aren't suitable for production providers.
 {{% /notes %}}
 
 ## Prerequisites
