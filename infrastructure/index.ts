@@ -817,6 +817,16 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             errorCachingMinTtl: fiveMinutes,
             responsePagePath: "/404.html",
         },
+        // Map 403 Forbidden errors to 404 Not Found.
+        // S3 returns 403 when it can't determine if an object exists due to bucket policy
+        // that denies ListBucket permission. This provides a better user experience by
+        // translating HTTP 403s into proper 404s and showing the 404 error page.
+        {
+            errorCode: 403,
+            responseCode: 404,
+            errorCachingMinTtl: fiveMinutes,
+            responsePagePath: "/404.html",
+        },
     ],
 
     restrictions: {
