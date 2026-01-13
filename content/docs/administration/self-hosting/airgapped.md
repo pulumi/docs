@@ -101,7 +101,7 @@ Pulumi Self-Hosted can be installed using Kubernetes, Docker, or virtual machine
 4. Configure Authentication and Access Control
     * Integrate with your organization's internal identity provider (OIDC, LDAP, SAML).
     * Define role-based access controls (RBAC) to ensure proper permissions.
-    * For more detailed organization configuration options, refer to [this onboarding guide](/docs/deployments/get-started/onboarding-guide/).
+    * For more detailed organization configuration options, refer to [this onboarding guide](/docs/administration/onboarding-guide/).
 
 ### Step 2: Configure the Pulumi CLI and SDKs
 

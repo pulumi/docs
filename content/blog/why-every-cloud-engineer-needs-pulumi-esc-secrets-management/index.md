@@ -142,7 +142,7 @@ Pulumi ESC extends its capabilities beyond Pulumi IaC by integrating with other 
 
 ### Enhanced Security and Compliance
 
-Cloud engineers often have to balance security and operations. Pulumi ESC centralizes secrets in a secure vault, ensuring encrypted storage, access control, and audit visibility. It also [complies with industry standards like SOC 2, PCI-DSS, and MTCS](https://www.pulumi.com/docs/pulumi-cloud/get-started/onboarding-guide/#staying-in-compliance).
+Cloud engineers often have to balance security and operations. Pulumi ESC centralizes secrets in a secure vault, ensuring encrypted storage, access control, and audit visibility. It also [complies with industry standards like SOC 2, PCI-DSS, and MTCS](https://www.pulumi.com/docs/administration/onboarding-guide/#staying-in-compliance).
 
 ### Streamlined Multi-Cloud Management
 

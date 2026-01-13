@@ -35,7 +35,7 @@ When you sign in, a personal organization is automatically created. You can crea
 ### For teams
 
 {{% notes type="info" %}}
-Setting up Pulumi Cloud for your team? The **[Onboarding Guide](./onboarding-guide/)** provides comprehensive guidance on:
+Setting up Pulumi Cloud for your team? The **[Onboarding Guide](/docs/administration/onboarding-guide/)** provides comprehensive guidance on:
 
 - Choosing your deployment model and subscription tier
 - Configuring security, testing strategies, and code reusability
