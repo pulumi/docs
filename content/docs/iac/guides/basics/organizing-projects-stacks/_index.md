@@ -342,6 +342,8 @@ For projects that deploy multiple logical services:
 ```
 my-project/
 ├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
 ├── index.ts              # Main entrypoint
 ├── shared/
 │   ├── networking.ts     # Shared VPC, DNS
