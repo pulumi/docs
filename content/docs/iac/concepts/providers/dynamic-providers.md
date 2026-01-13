@@ -21,11 +21,15 @@ aliases:
 The dynamic resource provider construct can be used to build a local provider for simple APIs and use-cases. Dynamic resource providers are only able to be used in Pulumi programs written in the same language as the dynamic resource provider. But, they are lighter weight than custom providers and for many use-cases are sufficient to leverage the Pulumi state model. For more sophisticated APIs, one can create a [bridged or native provider](/docs/iac/packages-and-automation/pulumi-packages/).
 
 {{% notes type="info" %}}
-**Note:** The Pulumi registry includes the [Command Provider](https://www.pulumi.com/registry/packages/command/) as an even lighter weight solution and can be used in place of a dynamic resource provider in some cases.
+The Pulumi registry includes the [Command Provider](https://www.pulumi.com/registry/packages/command/) as an even lighter weight solution and can be used in place of a dynamic resource provider in some cases.
 {{% /notes %}}
 
 {{% notes type="info" %}}
-**Note:** [Pulumi Policy Packs](/docs/insights/policy/) can be used to validate dynamic provider resources. However, since all dynamic resources share the same resource type (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python), policies must identify specific dynamic providers by checking for unique properties. See [Writing policies for dynamic providers](/docs/insights/policy/policy-packs/authoring/#writing-policies-for-dynamic-providers) for examples and best practices.
+[Pulumi Policy Packs](/docs/insights/policy/) can be used to validate dynamic provider resources. However, since all dynamic resources share the same resource type (`pulumi-nodejs:dynamic:Resource` for TypeScript or `pulumi-python:dynamic:Resource` for Python), policies must identify specific dynamic providers by checking for unique properties. See [Writing policies for dynamic providers](/docs/insights/policy/policy-packs/authoring/#writing-policies-for-dynamic-providers) for examples and best practices.
+{{% /notes %}}
+
+{{% notes type="warning" %}}
+Dynamic providers in TypeScript are incompatible with projects using pnpm as a package manager. If you're using pnpm, consider using npm or yarn instead. For more information, see [pulumi/pulumi#9085](https://github.com/pulumi/pulumi/issues/9085).
 {{% /notes %}}
 
 There are several reasons why you might want to write a dynamic resource provider. Here are some of them:
@@ -170,7 +174,7 @@ See below for details on each of these functions.
 
 Dynamic providers are a flexible and low-level mechanism that allow you to include arbitrary code directly into the deployment process. While most code in a Pulumi program runs while the desired state of the resources is constructed (in other words, as the resource graph is built), the code inside a dynamic provider’s implementation, such as `create` or `update`, runs during resource provisioning, while the resource graph is being turned into a set of CRUD operations scheduled against the cloud provider.
 
-In fact, these two phases of execution actually run in completely separate processes. The construction of a `new MyResource` happens inside the JavaScript, Python, or Go process running in your Pulumi program. In contrast, your implementations of create or update are executed by a special resource provider binary called `pulumi-resource-pulumi-nodejs`. This binary is what actually implements the Pulumi resource provider gRPC interface and it speaks directly to the Pulumi engine.
+These two phases of execution run in separate processes. The construction of a `new MyResource` happens inside the language-specific process running in your Pulumi program. In contrast, your implementations of create or update are executed by a special resource provider binary called, e.g., `pulumi-resource-pulumi-nodejs`. This binary is what actually implements the Pulumi resource provider gRPC interface and it speaks directly to the Pulumi engine.
 
 Because your implementation of the resource provider interface must be used by a different process, potentially at a different point in time, dynamic providers are built on top of the same [function serialization](/docs/iac/concepts/functions/function-serialization/) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions. Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface. You can read more about these limitations in the function serialization documentation.
 
