@@ -3,7 +3,7 @@ on:
   workflow_dispatch: null
   push:
     branches:
-      - CamSoper/403-to-404-mapping
+      - master
 permissions:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout
