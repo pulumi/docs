@@ -28,8 +28,9 @@ Replace the entire contents of {{< langfile >}} with the following:
 import * as pulumi from "@pulumi/pulumi";
 import * as k8s from "@pulumi/kubernetes";
 
-// Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
-// running on minikube, and if so, create only services of type ClusterIP.
+// By default, minikube does not expose LoadBalancer services externally. You can either:
+// 1. Run `minikube tunnel` in a separate terminal (recommended), then set isMinikube to false.
+// 2. Set isMinikube to true to use ClusterIP with port-forwarding instead.
 const config = new pulumi.Config();
 const isMinikube = config.requireBoolean("isMinikube");
 
@@ -75,8 +76,9 @@ import pulumi
 from pulumi_kubernetes.apps.v1 import Deployment
 from pulumi_kubernetes.core.v1 import Service
 
-# Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
-# running on minikube, and if so, create only services of type ClusterIP.
+# By default, minikube does not expose LoadBalancer services externally. You can either:
+# 1. Run `minikube tunnel` in a separate terminal (recommended), then set is_minikube to False.
+# 2. Set is_minikube to True to use ClusterIP with port-forwarding instead.
 config = pulumi.Config()
 is_minikube = config.require_bool("isMinikube")
 
@@ -530,7 +532,21 @@ $ pulumi stack output ip
 {{% /choosable %}}
 
 {{% notes type="info" %}}
-**If using Minikube:** Minikube does not support type `LoadBalancer`. Instead, forward the NGINX service:
+**If using Minikube:** You have two options to access your service:
+
+### Option 1: Use `minikube tunnel` (recommended)
+
+Minikube can provide LoadBalancer support via the `minikube tunnel` command. In a separate terminal, run:
+
+```bash
+$ minikube tunnel
+```
+
+This assigns an external IP to LoadBalancer services. With the tunnel running, you can set `isMinikube` to `false` and access your service via the external IP. Note that `minikube tunnel` may require administrator/sudo privileges.
+
+### Option 2: Use port forwarding
+
+Alternatively, set `isMinikube` to `true` and use port forwarding:
 
 ```bash
 $ kubectl get service

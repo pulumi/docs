@@ -27,11 +27,7 @@ The `kubeconfig` will be shared across users for access, and each IAM role
 will have a particular binding into the cluster's auth to determine how it works
 with the cluster.
 
-The full code for this stack is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
-<!-- markdownlint-enable url -->
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration).
 
 {{% /choosable %}}
 
@@ -44,11 +40,7 @@ The `kubeconfig` will contain user authentication tokens for access, and each AD
 will have a particular binding into the cluster's auth to determine how it works
 with the cluster.
 
-The full code for this stack is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
-<!-- markdownlint-enable url -->
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration).
 
 {{% /choosable %}}
 
@@ -61,11 +53,7 @@ The `kubeconfig` will be shared across ServiceAccounts for access, and each
 ServiceAccount will have a particular binding into the cluster's auth to determine how it works
 with the cluster.
 
-The full code for this stack is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
-<!-- markdownlint-enable url -->
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration).
 
 {{% /choosable %}}
 

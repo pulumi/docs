@@ -33,9 +33,8 @@ In [Crosswalk for AWS][crosswalk-aws] we showcase how to define IAM:
 - [Roles][iam-roles]
 - [Policies][iam-policies]
 
-The full code for this stack is on [GitHub][gh-repo-stack].
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/aws/01-identity).
 
-<!-- markdownlint-disable url -->
 [iam]: https://aws.amazon.com/iam/
 [users]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html
 [groups]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
@@ -46,8 +45,6 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [iam-groups]: /docs/clouds/aws/guides/iam/#iam-groups
 [iam-roles]: /docs/clouds/aws/guides/iam/#iam-roles
 [iam-policies]: /docs/clouds/aws/guides/iam/#using-the-policydocument-interface
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/01-identity
-<!-- markdownlint-enable url -->
 
 {{% /choosable %}}
 
@@ -60,17 +57,14 @@ allocated baseline permissions using [IAM Permissions][azure-permissions].
 
 Azure services can also be granted permissions temporarily, without the need for usernames and passwords, using [Applications and ServicePrincipals][azure-sp].
 
-The full code for this stack is on [GitHub][gh-repo-stack].
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/azure/01-identity).
 
-<!-- markdownlint-disable url -->
 [azure-iam]: https://azure.microsoft.com/en-us/services/active-directory/
 [azure-users]: https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-overview-user-model
 [azure-groups]: https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-overview-user-model
 [azure-roles]: https://docs.microsoft.com/en-us/azure/role-based-access-control/rbac-and-directory-admin-roles?context=azure/active-directory/users-groups-roles/context/ugr-context
 [azure-permissions]: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/users-default-permissions?context=azure/active-directory/users-groups-roles/context/ugr-context
 [azure-sp]: https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/01-identity
-<!-- markdownlint-enable url -->
 
 {{% /choosable %}}
 
@@ -83,16 +77,13 @@ and GSuite accounts, and can then be allocated [IAM Roles][gcp-roles] with basel
 
 Google Cloud services can also be granted permissions temporarily, without the need for usernames and passwords, using [ServiceAccounts][gcp-sa].
 
-The full code for this stack is on [GitHub][gh-repo-stack].
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/gcp/01-identity).
 
-<!-- markdownlint-disable url -->
 [gcp-iam]: https://cloud.google.com/iam/docs/overview
 [gcp-policies]: https://cloud.google.com/iam/docs/reference/rest/v1/Policy
 [gcp-roles]: https://cloud.google.com/iam/docs/understanding-roles
 [gcp-members]: https://cloud.google.com/iam/docs/overview
 [gcp-sa]: https://cloud.google.com/iam/docs/service-accounts
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/01-identity
-<!-- markdownlint-enable url -->
 
 {{% /choosable %}}
 

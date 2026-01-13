@@ -36,6 +36,37 @@ Resource constructors accept the following resource options:
 - [providers](/docs/concepts/options/providers/): pass a set of [explicitly configured providers](/docs/concepts/resources/providers/#explicit-provider-configuration). These are used if provider is not given, and are passed to child resources.
 - [replaceOnChanges](/docs/concepts/options/replaceonchanges/): declare that changes to certain properties should be treated as forcing a replacement.
 - [retainOnDelete](/docs/concepts/options/retainondelete/): if true the resource will be retained in the backing cloud provider during a Pulumi delete operation.
-- [transformations](/docs/concepts/options/transformations/): dynamically transform a resource’s properties on the fly. Prefer `transforms` if possible. `transformations` will be deprecated in the future in favor of `transforms`.
-- [transforms](/docs/concepts/options/transforms/): dynamically transform a resource’s properties on the fly.
+- [transformations](/docs/concepts/options/transformations/): dynamically transform a resource's properties on the fly. Prefer `transforms` if possible. `transformations` will be deprecated in the future in favor of `transforms`.
+- [transforms](/docs/concepts/options/transforms/): dynamically transform a resource's properties on the fly.
 - [version](/docs/concepts/options/version/): pass a provider plugin version that should be used when operating on a resource.
+
+## Resource options and component resources
+
+Not all resource options apply to [component resources](/docs/iac/concepts/components/). Component resources are logical groupings that don't have a backing cloud provider, so options that affect provider behavior have no effect on the component itself (though they may affect child resources).
+
+| Resource option | Applies to components? | Notes |
+|----------------|------------------------|-------|
+| [additionalSecretOutputs](/docs/concepts/options/additionalsecretoutputs/) | No | Components don't have provider-managed outputs |
+| [aliases](/docs/concepts/options/aliases/) | Yes | Works for renaming or refactoring components |
+| [customTimeouts](/docs/concepts/options/customtimeouts/) | No | Components don't have provider operations to time out |
+| [deleteBeforeReplace](/docs/concepts/options/deletebeforereplace/) | No | Components are not replaced by providers |
+| [deletedWith](/docs/concepts/options/deletedwith/) | Yes | Controls deletion behavior |
+| [dependsOn](/docs/concepts/options/dependson/) | Yes | Creates explicit dependencies on the component |
+| [hideDiffs](/docs/concepts/options/hidediffs/) | No | Components don't have provider-generated diffs |
+| [hooks](/docs/concepts/options/hooks/) | No | Components don't have provider lifecycle events |
+| [ignoreChanges](/docs/concepts/options/ignorechanges/) | No | Components don't have provider-managed inputs. The component implementation may choose to propagate this to children. |
+| [import](/docs/concepts/options/import/) | No | Components cannot be imported from cloud providers |
+| [parent](/docs/concepts/options/parent/) | Yes | Establishes parent-child relationships |
+| [protect](/docs/concepts/options/protect/) | Yes | Protects the component from deletion |
+| [provider](/docs/concepts/options/provider/) | No | Use `providers` instead for component resources |
+| [providers](/docs/concepts/options/providers/) | Yes | Pass providers to use for child resources |
+| [replaceOnChanges](/docs/concepts/options/replaceonchanges/) | No | Components are not replaced by providers |
+| [replaceWith](/docs/concepts/options/replacewith/) | No | Components are not replaced by providers |
+| [retainOnDelete](/docs/concepts/options/retainondelete/) | No | Components don't have cloud resources to retain |
+| [transformations](/docs/concepts/options/transformations/) | Yes | Transform child resources within the component |
+| [transforms](/docs/concepts/options/transforms/) | Yes | Transform child resources within the component |
+| [version](/docs/concepts/options/version/) | No | Components don't use provider plugins |
+
+{{% notes type="info" %}}
+When you apply a resource option to a component that doesn't support it, the option is silently ignored. To apply options like `protect` or `ignoreChanges` to the child resources within a component, use the `transforms` option to modify child resources as they're created.
+{{% /notes %}}

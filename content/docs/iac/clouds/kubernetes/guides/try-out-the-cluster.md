@@ -23,25 +23,19 @@ contents, and its cluster name for reference.
 
 {{% choosable cloud aws %}}
 
-The full code for this stack is on [GitHub][gh-repo-stack].
-
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration).
 
 {{% /choosable %}}
 
 {{% choosable cloud azure %}}
 
-The full code for this stack is on [GitHub][gh-repo-stack].
-
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration).
 
 {{% /choosable %}}
 
 {{% choosable cloud gcp %}}
 
-The full code for this stack is on [GitHub][gh-repo-stack].
-
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration).
 
 {{% /choosable %}}
 
