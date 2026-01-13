@@ -380,23 +380,6 @@ Extremely large environments (>10mb) may fail to open due to timeouts. It's reco
 are using within your environment.
 {{% /notes %}}
 
-## Restoring an environment
-
-{{% notes type="info" %}}
-The ability to restore a deleted environment is limited to Enterprise and Business Critical editions. {{% /notes %}}
-
-Restoring an environment allows you to recover a previously deleted environment (for example, if it was deleted by accident).
-
-To restore an environment:
-
-1. Navigate to **Environments** in the Pulumi Cloud console.
-1. Select the three-dot menu beside **Create Environment**.
-1. Select **Restore deleted environments** from the dropdown.
-1. In the list of recently deleted environments, select the three-dot menu next to the environment you want to recover.
-1. Select **Restore environment**.
-
-Restored environments retain their previous history and values. If you need to restore an environment that is not listed, or if it was deleted outside the retention window, contact Pulumi support for assistance.
-
 ## Projecting environment variables
 
 Pulumi ESC can automatically project the settings of a given environment as a set of environment variables. This projection does not happen by default, however; instead, you must define which settings to project, as well as how to name and format them.
@@ -793,6 +776,23 @@ This will permanently remove the "myorg/myproject/test" environment!
 Please confirm that this is what you'd like to do by typing `myorg/myproject/test`: myorg/myproject/test
 Environment "myorg/myproject/test" has been removed!
 ```
+
+## Restoring an environment
+
+{{% notes type="info" %}}
+The ability to restore a deleted environment is limited to Enterprise and Business Critical editions. {{% /notes %}}
+
+Restoring an environment allows you to recover a previously deleted environment (for example, if it was deleted by accident).
+
+To restore an environment:
+
+1. Navigate to **Environments** in the Pulumi Cloud console.
+1. Select the three-dot menu beside **Create Environment**.
+1. Select **Restore deleted environments** from the dropdown.
+1. In the list of recently deleted environments, select the three-dot menu next to the environment you want to recover.
+1. Select **Restore environment**.
+
+Restored environments retain their previous history and values. If you need to restore an environment that is not listed, or if it was deleted outside the retention window, contact Pulumi support for assistance.
 
 ## Cloning an environment
 
