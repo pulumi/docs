@@ -387,6 +387,182 @@ namespace UnitTesting
 
 The definition of the mocks interface is available at the [runtime API reference page](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#Mocks).
 
+## Mocking stack references
+
+If your program uses [StackReference](/docs/concepts/stacks/#stackreferences) to read outputs from another stack, you need to handle them in your mocks. When a `StackReference` resource is created, the mock's `newResource` function receives it with type `pulumi:pulumi:StackReference`. You can return mock outputs that simulate the referenced stack's outputs.
+
+{{% choosable language "typescript" %}}
+
+```ts
+pulumi.runtime.setMocks({
+    newResource: function(args: pulumi.runtime.MockResourceArgs): {id: string, state: any} {
+        // Handle StackReference resources
+        if (args.type === "pulumi:pulumi:StackReference") {
+            return {
+                id: args.inputs.name + "_id",
+                state: {
+                    ...args.inputs,
+                    outputs: {
+                        // Mock the outputs from the referenced stack
+                        vpcId: "vpc-12345678",
+                        subnetIds: ["subnet-11111111", "subnet-22222222"],
+                        clusterName: "my-cluster",
+                    },
+                },
+            };
+        }
+        // Handle all other resources
+        return {
+            id: args.inputs.name + "_id",
+            state: args.inputs,
+        };
+    },
+    call: function(args: pulumi.runtime.MockCallArgs) {
+        return args.inputs;
+    },
+});
+```
+
+In your test, you can then verify that values from the stack reference are used correctly:
+
+```ts
+// Example: Program that reads from a StackReference
+const networkStack = new pulumi.StackReference("organization/network/prod");
+const vpcId = networkStack.getOutput("vpcId");
+
+// In tests, vpcId will resolve to "vpc-12345678" based on the mock above
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+
+class MyMocks(pulumi.runtime.Mocks):
+    def new_resource(self, args: pulumi.runtime.MockResourceArgs):
+        # Handle StackReference resources
+        if args.typ == "pulumi:pulumi:StackReference":
+            return [
+                args.name + "_id",
+                {
+                    **args.inputs,
+                    "outputs": {
+                        # Mock the outputs from the referenced stack
+                        "vpcId": "vpc-12345678",
+                        "subnetIds": ["subnet-11111111", "subnet-22222222"],
+                        "clusterName": "my-cluster",
+                    },
+                },
+            ]
+        # Handle all other resources
+        return [args.name + "_id", args.inputs]
+
+    def call(self, args: pulumi.runtime.MockCallArgs):
+        return {}
+
+pulumi.runtime.set_mocks(MyMocks())
+```
+
+In your program, you can then use a `StackReference` as usual:
+
+```python
+network_stack = pulumi.StackReference("organization/network/prod")
+vpc_id = network_stack.get_output("vpcId")
+
+# In tests, vpc_id will resolve to "vpc-12345678" based on the mock above
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+type mocks int
+
+func (mocks) NewResource(args pulumi.MockResourceArgs) (string, resource.PropertyMap, error) {
+	// Handle StackReference resources
+	if args.TypeToken == "pulumi:pulumi:StackReference" {
+		outputs := resource.NewPropertyMapFromMap(map[string]interface{}{
+			"vpcId":       "vpc-12345678",
+			"subnetIds":   []interface{}{"subnet-11111111", "subnet-22222222"},
+			"clusterName": "my-cluster",
+		})
+		// Copy inputs and add outputs
+		state := args.Inputs.Copy()
+		state["outputs"] = resource.NewObjectProperty(outputs)
+		return args.Name + "_id", state, nil
+	}
+	// Handle all other resources
+	return args.Name + "_id", args.Inputs, nil
+}
+
+func (mocks) Call(args pulumi.MockCallArgs) (resource.PropertyMap, error) {
+	return args.Args, nil
+}
+```
+
+In your program, you can then use a `StackReference` as usual:
+
+```go
+networkStack, err := pulumi.NewStackReference(ctx, "organization/network/prod", nil)
+if err != nil {
+    return err
+}
+vpcId := networkStack.GetStringOutput(pulumi.String("vpcId"))
+
+// In tests, vpcId will resolve to "vpc-12345678" based on the mock above
+```
+
+{{% /choosable %}}
+
+{{% choosable language "csharp" %}}
+
+```csharp
+class Mocks : IMocks
+{
+    public Task<(string? id, object state)> NewResourceAsync(MockResourceArgs args)
+    {
+        var outputs = ImmutableDictionary.CreateBuilder<string, object>();
+        outputs.AddRange(args.Inputs);
+
+        // Handle StackReference resources
+        if (args.Type == "pulumi:pulumi:StackReference")
+        {
+            outputs.Add("outputs", new Dictionary<string, object>
+            {
+                // Mock the outputs from the referenced stack
+                { "vpcId", "vpc-12345678" },
+                { "subnetIds", new[] { "subnet-11111111", "subnet-22222222" } },
+                { "clusterName", "my-cluster" },
+            });
+        }
+
+        args.Id ??= $"{args.Name}_id";
+        return Task.FromResult<(string? id, object state)>((args.Id, (object)outputs));
+    }
+
+    public Task<object> CallAsync(MockCallArgs args)
+    {
+        return Task.FromResult((object)ImmutableDictionary<string, object>.Empty);
+    }
+}
+```
+
+In your program, you can then use a `StackReference` as usual:
+
+```csharp
+var networkStack = new StackReference("organization/network/prod");
+var vpcId = networkStack.GetOutput("vpcId");
+
+// In tests, vpcId will resolve to "vpc-12345678" based on the mock above
+```
+
+{{% /choosable %}}
+
+This approach lets you test how your program uses outputs from other stacks without needing those stacks to actually exist. You can mock different scenarios by returning different outputs in your test setup.
+
 ## Write the Tests
 
 {{% choosable language "typescript" %}}
