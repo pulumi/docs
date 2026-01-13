@@ -20,8 +20,8 @@ back to its previous name.
 You can also rename the stack's project by passing a fully-qualified stack name. For example:
 `robot-co/new-project-name/production`. However, in order to update the stack again, you would also need to:
 
-1. Update the `name` field in `Pulumi.yaml`, to reflect the new project name.
-1. Update any project-namespaced configuration variables in the stack settings file (e.g. `Pulumi.production.yaml`).
+1. Update the `name` field in *Pulumi.yaml* to reflect the new project name.
+1. Update any project-namespaced configuration keys in the stack settings file (e.g., *Pulumi.production.yaml*) from `old-project:key` to `new-project:key`.
 
 ```
 pulumi stack rename <new-stack-name> [flags]
