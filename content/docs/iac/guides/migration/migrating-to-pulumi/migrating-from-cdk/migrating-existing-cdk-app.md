@@ -23,9 +23,9 @@ This guide walks through migrating an existing AWS CDK application to a Pulumi p
 ### Quick start with Neo
 
 1. **Prerequisites**:
-   - Ensure your CDK application synthesizes cleanly: `cdk synth`
-   - Configure AWS credentials in [Pulumi ESC](/docs/esc/)
-   - Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
+   * Ensure your CDK application synthesizes cleanly: `cdk synth`
+   * Configure AWS credentials in [Pulumi ESC](/docs/esc/)
+   * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
 
 2. **Start the migration**:
 
@@ -34,25 +34,26 @@ This guide walks through migrating an existing AWS CDK application to a Pulumi p
    ```
 
 3. **Neo will**:
-   - Synthesize your CDK application
-   - Inventory all CloudFormation resources
-   - Convert CDK code to Pulumi
-   - Import existing resources without touching them
-   - Verify zero changes with `pulumi preview`
+   * Synthesize your CDK application
+   * Inventory all CloudFormation resources
+   * Convert CDK code to Pulumi
+   * Import existing resources without touching them
+   * Verify zero changes with `pulumi preview`
 
 4. **Review and commit**:
-   - Examine the generated Pulumi code
-   - Confirm the preview shows no changes
-   - Commit your new Pulumi program
+   * Examine the generated Pulumi code
+   * Confirm the preview shows no changes
+   * Commit your new Pulumi program
 
-For a detailed technical walkthrough, see our [Neo CDK migration blog post](/blog/neo-cdk-migration/).
+For a detailed technical walkthrough, see our [Neo migration blog post](/blog/neo-migration/).
 
 ### When to use manual migration instead
 
 While Neo handles most CDK applications automatically, you might need manual migration for:
-- Custom CloudFormation resources not yet supported by Neo
-- Complex cross-stack dependencies requiring specific handling
-- Scenarios where you want to fundamentally restructure during migration
+
+* Custom CloudFormation resources not yet supported by Neo
+* Complex cross-stack dependencies requiring specific handling
+* Scenarios where you want to fundamentally restructure during migration
 
 Continue reading below for manual migration approaches if Neo doesn't fit your specific needs.
 
@@ -60,7 +61,7 @@ Continue reading below for manual migration approaches if Neo doesn't fit your s
 
 If Neo doesn't support your specific use case or you prefer manual control over the migration process, the following sections provide comprehensive guidance for manual migration.
 
-#### Planning your Migration
+### Planning your Migration
 
 Before running any tools, it is important to plan your migration strategy. Migrating involves two distinct parts: converting your **Code** (logic) and migrating your **State** (live resources).
 
