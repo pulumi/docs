@@ -84,7 +84,5 @@ event_data:
   end_date: 2026-02-18T13:00:00-05:00
   url: "https://www.pulumi.com/events/infrastructure-as-code-google-cloud"
   description: |
-    Workshop on infrastructure as code for Google Cloud showing how to define, deploy, and manage GCP resources using familiar programming languages and repeatable workflows.
----
-    
+    Workshop on infrastructure as code for Google Cloud showing how to define, deploy, and manage GCP resources using familiar programming languages and repeatable workflows. 
 ---
