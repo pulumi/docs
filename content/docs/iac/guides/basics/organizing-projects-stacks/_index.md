@@ -417,7 +417,7 @@ my-project/
 
 ### When to split into separate projects
 
-Consider moving code to a separate Pulumi project when:
+Consider moving code to a separate Pulumi project when you have:
 
 * **Different deployment cadences:** Database schemas change rarely while application code changes daily
 * **Different owners:** A platform team manages core infrastructure while app teams manage their services
