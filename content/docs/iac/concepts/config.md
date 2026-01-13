@@ -465,7 +465,7 @@ public static void stack(Context ctx) {
 
 ### Accessing nested values
 
-When you retrieve structured configuration using `requireObject` or `getObject`, the returned value is a plain object (or dictionary/map in other languages), not a Config instance. This means you access nested properties using standard object property access, not by chaining Config methods.
+When you retrieve structured configuration using `requireObject` or `getObject`, the returned value is a plain object (or dictionary/map in other languages), not a `Config` instance. This means you access nested properties using standard object property access, not by chaining `Config` methods.
 
 For example, if you have this configuration:
 
@@ -587,161 +587,6 @@ var authHeader = headers.get("authorization");  // "Bearer token123"
 
 {{< /chooser >}}
 
-Alternatively, you can set individual nested values directly without using `--path`:
-
-```bash
-$ pulumi config set api '{"endpoint":"https://api.example.com","timeout":30}'
-```
-
-### Complete example: Database configuration
-
-Here's a complete example that shows how to configure and access a database connection object with nested properties:
-
-**Step 1:** Set the configuration values using the CLI:
-
-```bash
-$ pulumi config set --path 'database.host' "db.example.com"
-$ pulumi config set --path 'database.port' 5432
-$ pulumi config set --path 'database.name' "myapp"
-$ pulumi config set --path 'database.credentials.username' "dbuser"
-$ pulumi config set --path 'database.credentials.password' "secretpass" --secret
-$ pulumi config set --path 'database.ssl.enabled' true
-$ pulumi config set --path 'database.ssl.mode' "require"
-```
-
-**Step 2:** This creates the following in your `Pulumi.<stack-name>.yaml` (where `myproject` is your project name):
-
-```yaml
-config:
-  myproject:database:
-    host: db.example.com
-    port: 5432
-    name: myapp
-    credentials:
-      username: dbuser
-      password:
-        secure: AAABAKKj4T...  # encrypted
-    ssl:
-      enabled: true
-      mode: require
-```
-
-**Step 3:** Access the configuration in your program:
-
-{{< chooser language "typescript,python,go" >}}
-
-{{% choosable language typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-
-interface DatabaseConfig {
-    host: string;
-    port: number;
-    name: string;
-    credentials: {
-        username: string;
-        password: string;
-    };
-    ssl: {
-        enabled: boolean;
-        mode: string;
-    };
-}
-
-const config = new pulumi.Config();
-const dbConfig = config.requireObject<DatabaseConfig>("database");
-
-// Access nested values using standard object notation
-const connectionString = pulumi.interpolate`postgresql://${dbConfig.credentials.username}:${dbConfig.credentials.password}@${dbConfig.host}:${dbConfig.port}/${dbConfig.name}?sslmode=${dbConfig.ssl.mode}`;
-
-// Use the configuration to create resources
-export const host = dbConfig.host;
-export const port = dbConfig.port;
-export const sslEnabled = dbConfig.ssl.enabled;
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-import pulumi
-
-config = pulumi.Config()
-db_config = config.require_object("database")
-
-# Access nested values using dictionary notation
-connection_string = f"postgresql://{db_config['credentials']['username']}:{db_config['credentials']['password']}@{db_config['host']}:{db_config['port']}/{db_config['name']}?sslmode={db_config['ssl']['mode']}"
-
-# Use the configuration to create resources
-pulumi.export("host", db_config["host"])
-pulumi.export("port", db_config["port"])
-pulumi.export("ssl_enabled", db_config["ssl"]["enabled"])
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-package main
-
-import (
-    "fmt"
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
-)
-
-type SSLConfig struct {
-    Enabled bool   `json:"enabled"`
-    Mode    string `json:"mode"`
-}
-
-type Credentials struct {
-    Username string `json:"username"`
-    Password string `json:"password"`
-}
-
-type DatabaseConfig struct {
-    Host        string      `json:"host"`
-    Port        int         `json:"port"`
-    Name        string      `json:"name"`
-    Credentials Credentials `json:"credentials"`
-    SSL         SSLConfig   `json:"ssl"`
-}
-
-func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        cfg := config.New(ctx, "")
-        var dbConfig DatabaseConfig
-        cfg.RequireObject("database", &dbConfig)
-
-        // Access nested values
-        connectionString := fmt.Sprintf(
-            "postgresql://%s:%s@%s:%d/%s?sslmode=%s",
-            dbConfig.Credentials.Username,
-            dbConfig.Credentials.Password,
-            dbConfig.Host,
-            dbConfig.Port,
-            dbConfig.Name,
-            dbConfig.SSL.Mode,
-        )
-
-        // Use the configuration
-        ctx.Export("host", pulumi.String(dbConfig.Host))
-        ctx.Export("port", pulumi.Int(dbConfig.Port))
-        ctx.Export("sslEnabled", pulumi.Bool(dbConfig.SSL.Enabled))
-
-        return nil
-    })
-}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
 ## Project Level Configuration
 
 There are cases where configuration for more than one stack in a given project is the same. For example, `aws:region` may be the same across multiple or all stacks in a project. Project level configuration (also sometimes referred to as hieararchical configuration) allows setting configuration at the project level instead of having to repeat the configuration setting in each stack's configuration file.
@@ -785,7 +630,7 @@ The same configuration in a stack-level file (`Pulumi.dev.yaml`) would look like
 ```yaml
 config:
   aws:region: us-east-1
-  name: BroomeLLC
+  myproject:name: BroomeLLC
   myproject:data:             # Note: uses project name prefix and no 'value' key needed
     active: true
     nums:
