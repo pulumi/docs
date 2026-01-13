@@ -16,13 +16,13 @@ aliases:
 
 If your team has already provisioned infrastructure using AWS CDK, and you'd like to adopt Pulumi, you have three primary strategies you can take:
 
-* **[Neo](/product/neo/) automated migration (Recommended)**: Use Neo to automatically convert your CDK code and import existing resources with zero downtime
+* **[Neo](/product/neo/) (Recommended)**: Use Neo to automatically convert your CDK code and import existing resources with zero downtime
 * Coexist with resources provisioned by CDK by referencing stack outputs
 * Convert your CDK application to Pulumi, either by using the Pulumi CDK adapter or by migrating to a Pulumi program that imports existing resources
 
 ## Choosing a CDK migration path
 
-### Neo automated migration (Recommended)
+### Pulumi Neo (Recommended)
 
 For most teams, Neo provides the fastest and safest migration path from CDK to Pulumi. Neo automates the entire migration process: converting your CDK code, importing existing CloudFormation resources, and verifying zero changes, all without downtime. This approach eliminates manual work and migration risks while preserving your existing infrastructure exactly as it is.
 

@@ -20,11 +20,60 @@ aliases:
 
 Pulumi offers a flexible, code-first alternative to Azure ARM templates using C#, Python, Go, or TypeScript.
 
-If your team has already provisioned Azure infrastructure using ARM (Azure Resource Manager) templates and is looking for a more productive approach, Pulumi provides three primary paths to move forward:
+If your team has already provisioned Azure infrastructure using ARM (Azure Resource Manager) templates and is looking for a more productive approach, Pulumi provides several paths to move forward:
 
+* **[Neo](/product/neo/) (Recommended)**: Use Neo to automatically convert your ARM templates and import existing resources with zero downtime
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by ARM by referencing deployment outputs.
 * [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing Azure resources into Pulumi in the usual way.
 * [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
+
+## Choosing an ARM migration path
+
+### Pulumi Neo (Recommended)
+
+* **Automated conversion**: Neo converts your ARM templates to Pulumi and generates import mappings automatically
+* **Safety verification**: Neo runs `pulumi preview` to prove no changes before you commit
+
+#### Quick start with Neo
+
+1. **Prerequisites**:
+   * Install the [Pulumi GitHub app](https://github.com/apps/pulumi-cloud) with access to your repository that contains your ARM template files
+   * Configure Azure credentials in [Pulumi ESC](/docs/esc/)
+   * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
+
+2. **Start the migration**:
+
+   ```text
+   "Convert my ARM templates to Pulumi"
+   ```
+
+3. **Neo will**:
+   * Parse your ARM templates and parameter files
+   * Evaluate template expressions and functions
+   * Generate equivalent Pulumi code
+   * Import existing Azure resources without touching them
+   * Verify zero changes with `pulumi preview`
+
+4. **Review and commit**:
+   * Examine the generated Pulumi code
+   * Confirm the preview shows no changes
+   * Commit your new Pulumi program
+
+For a detailed technical walkthrough, see our [Neo migration blog post](/blog/neo-migration/).
+
+#### When to use manual migration instead
+
+While Neo handles most ARM templates automatically, you might need manual migration for:
+
+* ARM templates with complex nested template dependencies not yet supported by Neo
+* Custom resource providers or extensions
+* Scenarios where you want to fundamentally restructure during migration
+
+Continue reading below for manual migration approaches if Neo doesn't fit your specific needs.
+
+### Alternative migration paths
+
+If Neo doesn't support your specific use case, or if you prefer manual control over the migration process, the options below provide flexibility to coexist with or migrate from ARM templates at your own pace.
 
 ## Why Move Beyond ARM
 

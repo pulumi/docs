@@ -15,7 +15,7 @@ menu:
 
 This guide walks through migrating an existing AWS CDK application to a Pulumi program that manages the same infrastructure.
 
-## Neo: The Automated Migration Path (Recommended)
+## Pulumi Neo (Recommended)
 
 * **Automated conversion**: Neo converts your CDK code to Pulumi and generates import mappings automatically
 * **Safety verification**: Neo runs `pulumi preview` to prove no changes before you commit
@@ -24,13 +24,13 @@ This guide walks through migrating an existing AWS CDK application to a Pulumi p
 
 1. **Prerequisites**:
    * Ensure your CDK application synthesizes cleanly: `cdk synth`
+   * Install the [Pulumi GitHub app](https://github.com/apps/pulumi-cloud) with access to your repository that contains your CDK application
    * Configure AWS credentials in [Pulumi ESC](/docs/esc/)
-   * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
 
 2. **Start the migration**:
 
    ```text
-   Ask Neo: "Help me migrate my CDK application to Pulumi"
+   "Help me migrate my CDK application to Pulumi"
    ```
 
 3. **Neo will**:
