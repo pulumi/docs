@@ -1,8 +1,8 @@
 ---
-title: "New Esc Editor"
-date: 2026-01-12T13:00:00-03:00
+title: "Introducing the new and improved ESC Editor"
+date: 2026-01-14T13:00:00-03:00
 draft: true
-meta_desc: We’re introducing the new and improved Pulumi ESC Web Editor, designed to make managing secrets and configuration easier, faster, and more intuitive.
+meta_desc: We’re introducing the new and improved Pulumi ESC Editor in the Console, designed to make managing secrets and configuration easier, faster, and more intuitive.
 meta_image: meta.png
 authors:
     - sean-yeh
@@ -27,43 +27,47 @@ That’s why today we’re introducing the new and improved Pulumi ESC Web Edito
 
 <!--more-->
 
-Today, you can create and manage your Pulumi ESC configuration in multiple ways—using the CLI `set` and `edit` commands, or through our VS Code extension. For many users, however, their first experience with ESC happens in the Pulumi Cloud web console.
+Today, you can create and manage your Pulumi ESC configuration in multiple ways—using the CLI `set` and `edit` commands, or through our [VS Code extension](/docs/esc/development/vs-code-extension/). For many users, however, their first experience with ESC happens in the Pulumi Cloud web console.
 
-We know that most of our users are comfortable writing code and editing ESC YAML directly, and our previous Web Editor supported that workflow well. However, using ESC only as a place to store configuration and secrets means missing out on much of the power built into the platform. To address this, we introduced a Table View that allowed users to manage environments through convenient UI elements, exposing a broader set of capabilities without requiring direct YAML edits.
+We know that most of our users are comfortable writing code and editing ESC YAML directly, and our previous Web Editor supported that workflow well. However, using ESC only as a place to store configuration and secrets means missing out on much of the power built into the platform. To address this, we introduced a Table View that allowed users to manage environments through a convenient UI, exposing a broader set of capabilities without requiring direct YAML edits.
 
 While this abstraction made ESC more approachable, it also introduced its own drawbacks. In particular, it could be difficult to understand how UI actions mapped to the underlying YAML, and we heard clear feedback from users that this created confusion.
 
 The new Pulumi ESC Editor brings these two approaches together. You can now freely switch between writing YAML and using rich UI elements to manipulate your environment—while always having clear, in-context information about what you’re doing and what’s possible.
 
-Let’s explore some of these use cases.
+Let’s explore some of these use cases!
 
-## Setting a secret
+## Adding and editing secrets
 
-![Adding a secret to your ESC Environment](./adding-secrets.png)
+Adding secrets is now as simple as selecting **Secret** from the **Add new** menu.
+!["Screenshot of add new menu"](menu.png)
 
-## Using built-int functions
+The **Inspect** tab lets you view and edit your secret securely, automatically encrypting it as ciphertext in your environment definition. No more worrying about accidentally exposing sensitive values!
+
+!["Screenshot of secret editor"](secrets.png)
+
+## Using providers and built-in functions
+
+ESC offers a large library of [providers](/docs/esc/integrations/) and [built-in functions](/docs/esc/environments/syntax/builtin-functions/) to use in your environment. The new editor makes discovering and using them effortless.
+
+<div class="flex flex-col md:flex-row gap-4 my-4">
+  <img src="providers.png" alt="Screenshot of adding providers" class="w-full" />
+</div>
+
+<div class="flex flex-col md:flex-row gap-4 my-4">
+  <img src="functions.png" alt="Screenshot of adding functions" class="w-full" />
+</div>
+
+When you add a provider or function, the editor inserts it with example values to get you started quickly. The **Inspect** tab provides instant access to documentation, so you can more easily configure the integrations.
+
+!["Screenshot of Provider documentation"](provider-docs.png)
 
 ## Exporting configurations
 
-## Setting up integrations
+Consuming your configuration where you need it is now easier than ever. The **Export** menu in the **Inspect** sidebar lets you quickly expose values as Pulumi config for your stacks, or as environment variables in your shell.
 
-## Writing the Post
+!["Screenshot of Exporting configurations"](exports.png)
 
-For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/docs/blob/master/BLOGGING.md). For general formatting guidelines, see the [Style Guide](https://github.com/pulumi/docs/blob/master/STYLE-GUIDE.md).
+## Conclusion
 
-## Code Samples
-
-```typescript
-let bucket = new aws.s3.Bucket("stuff");
-...
-```
-
-## Images
-
-![Placeholder Image](meta.png)
-
-## Videos
-
-{{< youtube "kDB-YRKFfYE?rel=0" >}}
-
-Note the `?rel=0` param, which tells YouTube to suggest only videos from same channel.
+The new Pulumi ESC Editor brings together the best of both worlds: the power of the YAML editor with the ease of UI controls. Try it out today in the Pulumi Cloud console and let us know what you think!
