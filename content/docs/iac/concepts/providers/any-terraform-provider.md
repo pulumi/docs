@@ -1,12 +1,12 @@
 ---
 title_tag: Using Any Terraform Provider
 meta_desc: Learn how to use any Terraform or OpenTofu provider with Pulumi by generating local packages in your preferred programming language.
-title: Any Terraform provider
+title: Any Terraform Provider
 h1: Using any Terraform provider
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Any Terraform provider
+        name: Any Terraform Provider
         parent: iac-concepts-providers
         weight: 5
 ---
