@@ -173,6 +173,12 @@ There are other ways to handle permissions, but this is the simplest for autonom
 
 Then I stepped away and let it run unsupervised. For complex projects, you could even let it run overnight while you sleep.
 
+Here is Claude Code in action during the Ralph loop, fixing CloudFront configuration issues and writing unit tests:
+
+![Claude Code fixing the CloudFront originPath configuration and running pulumi up](claude-fixing-cloudfront.png)
+
+![Claude Code writing unit tests and creating utility functions](claude-writing-tests.png)
+
 ## The results
 
 {{< notes type="info" >}}
@@ -301,12 +307,6 @@ const distribution = new aws.cloudfront.Distribution("frontend-distribution", {
     },
 });
 ```
-
-Here is Claude Code in action during the Ralph loop, fixing CloudFront configuration issues and writing unit tests:
-
-![Claude Code fixing the CloudFront originPath configuration and running pulumi up](claude-fixing-cloudfront.png)
-
-![Claude Code writing unit tests and creating utility functions](claude-writing-tests.png)
 
 **Where it struggled:**
 
