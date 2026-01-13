@@ -159,7 +159,7 @@ pulumi new yaml
 pulumi package add terraform-provider honeycombio/honeycombio
 ```
 
-This command generates a local SDK for the Honeycomb provider in your project's `sdks/` directory (except for YAML projects, where the provider is automatically available through the `Pulumi.yaml` configuration). Run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to complete the installation.
+This command generates a local SDK in your project's `sdks/` directory (except for YAML projects, where the provider is automatically available through the `Pulumi.yaml` configuration). Run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to complete the installation.
 
 ### Step 3: Install the SDK
 
@@ -322,21 +322,21 @@ pulumi up
 You can choose whether to commit the generated SDK directory to version control:
 
 - **Commit the SDK directory**: Faster setup for team members and CI/CD pipelines, but increases repository size. The generated SDK includes a `.gitignore` file that excludes dependencies while allowing the SDK code itself to be committed.
-- **Don't commit the SDK directory**: Smaller repository size, but team members must run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to generate the SDK locally.
+- **Don't commit the SDK directory**: Smaller repository size, but team members will need to generate the SDK locally.
 
 The provider binaries are always downloaded to a shared location outside your project directory and cached, so they only need to be downloaded once per machine.
 
-When team members clone your repository (if you didn't commit the SDK directory), they run:
+When team members clone your repository, they should run:
 
 ```bash
 pulumi install
 ```
 
-This command reads the `packages` configuration in your `Pulumi.yaml` file and generates the local SDK.
+This command reads the `packages` configuration in your `Pulumi.yaml` file and ensures the provider binaries are present on their machine. If the SDK directory wasn't committed, it will also generate the local SDK.
 
 ## How local packages work
 
-Local packages are generated SDKs stored in your project directory rather than pulled from package registries like npm or PyPI. For Terraform providers, the SDK files are generated in a language-specific subdirectory (typically `./sdks/<provider-name>`).
+Local packages are generated SDKs stored in your project directory rather than pulled from package registries like npm or PyPI. The SDK files are generated in a language-specific subdirectory (typically `./sdks/<provider-name>`).
 
 The generated SDK includes:
 
@@ -345,13 +345,15 @@ The generated SDK includes:
 - Language-specific idioms (e.g., camelCase in TypeScript, snake_case in Python)
 - A `.gitignore` file to exclude generated dependencies
 
-Local packages are versioned, and the version information is stored in your `Pulumi.yaml` file. This ensures consistent builds across different environments and team members.
+These generated SDKs are virtually identical to Pulumi's published packages, providing the same IDE integration, type safety, and developer experience you expect from providers in the Pulumi Registry.
+
+Local packages are versioned when you include a version in the `pulumi package add` command (except for YAML projects, where the provider is automatically available through the `Pulumi.yaml` configuration), and the version information is stored in your `Pulumi.yaml` file. This ensures consistent builds across different environments and team members.
 
 ## Relationship to the Pulumi Registry
 
 The [Pulumi Registry](/registry/) contains providers with pre-built SDKs published to package managers for the most popular cloud and SaaS platforms. The Registry also contains many providers that use the Any Terraform Provider feature to generate local SDKs. These registry entries provide documentation and installation instructions, but you generate the SDK locally. For example, the [Honeycomb provider](/registry/packages/honeycombio/) uses this approach.
 
-For providers not in the Registry, or for custom internal providers, you can use the Any Terraform Provider feature to generate a local SDK directly.
+For providers not in the Pulumi Registry, or for custom internal providers, you can use the Any Terraform Provider feature to generate a local SDK directly.
 
 ## Best practices
 
