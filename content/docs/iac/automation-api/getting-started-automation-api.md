@@ -689,7 +689,7 @@ func main() {
 {{% choosable language "csharp,fsharp,visualbasic" %}}
 
 ```
-Comming soon: https://github.com/pulumi/docs/issues/16969
+Coming soon: https://github.com/pulumi/docs/issues/16969
 ```
 
 {{% /choosable %}}
