@@ -390,7 +390,7 @@ import * as pulumi from "@pulumi/pulumi";
 const project = pulumi.getProject();
 const stack = pulumi.getStack();
 
-export function name(resourceName: string): string {
+export function qualifiedName(resourceName: string): string {
     return `${project}-${stack}-${resourceName}`;
 }
 ```
