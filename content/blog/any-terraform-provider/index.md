@@ -148,7 +148,7 @@ Two new technologies in the Pulumi open source project underpin support for usin
 
 **Local Packages** offer the ability to generate a Pulumi SDK for the language of your Pulumi project into a local folder, which can be directly incorporated into your project via your existing package manager along with `pulumi install`.
 
-Local packages are versioned, and parameterized providers support many different formats for their parameters.  For example, the most general form of the command to use an existing Terraform provider is:
+Local packages are versioned when you include a version in the `pulumi package add` command, and parameterized providers support many different formats for their parameters.  For example, the most general form of the command to use an existing Terraform provider is:
 
 ```shell
 $ pulumi package add terraform-provider [<registry>/]<author>/<name> [version]

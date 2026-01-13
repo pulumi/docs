@@ -42,7 +42,7 @@ Create custom providers to integrate new cloud platforms and services with Pulum
 
 Package and distribute your components and providers for use across teams and projects.
 
-**[Pulumi Packages](/docs/iac/guides/building-extending/packages/packages/)** - Overview of Pulumi packages and how they enable sharing infrastructure code across all Pulumi languages.
+**[Pulumi Packages](/docs/iac/concepts/packages/)** - Overview of Pulumi packages and how they enable sharing infrastructure code across all Pulumi languages.
 
 **[Local Packages](/docs/iac/guides/building-extending/packages/local-packages/)** - Develop and test packages locally before publishing them to registries.
 
