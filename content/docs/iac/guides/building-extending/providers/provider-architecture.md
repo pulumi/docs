@@ -14,7 +14,7 @@ menu:
 A Pulumi provider allows you to define new resource types, enabling integration with virtually any service or tool. Providers are how Pulumi communicates with cloud platforms, SaaS APIs, and other external systems to create, read, update, and delete resources.
 
 {{% notes type="info" %}}
-Pulumi also supports [dynamic providers](/docs/iac/concepts/resources/dynamic-providers/), which are lightweight providers defined inline within a Pulumi program. This page focuses on standalone providers that are built and distributed as separate packages.
+Pulumi also supports [dynamic providers](/docs/iac/concepts/providers/dynamic-providers/), which are lightweight providers defined inline within a Pulumi program. This page focuses on standalone providers that are built and distributed as separate packages.
 {{% /notes %}}
 
 Pulumi providers are built on a layered architecture. Understanding these layers helps you choose the right approach for your needs—from high-level SDKs that handle complexity for you, to low-level protocol access for maximum control.

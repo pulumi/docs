@@ -27,7 +27,7 @@ Pulumi supports five categories of plugins:
 
 ### Resource plugins
 
-Resource plugins (also known as [providers](/docs/iac/concepts/resources/providers/)) expose standardized interfaces for managing cloud resources. Resource plugins are distributed as [Pulumi packages](/docs/iac/concepts/packages/). A listing of providers is available in the [Pulumi Registry](/registry/).
+Resource plugins (also known as [providers](/docs/iac/concepts/providers/)) expose standardized interfaces for managing cloud resources. Resource plugins are distributed as [Pulumi packages](/docs/iac/concepts/packages/). A listing of providers is available in the [Pulumi Registry](/registry/).
 
 In addition to the packages in the Pulumi Registry, you can write your own [components](/docs/iac/concepts/resources/components/) and distribute them as resource plugins, enabling consumption in any Pulumi language. Components can be published to [Pulumi IDP](/docs/idp/) for discoverability within your organization or shared directly via Git references.
 
@@ -104,7 +104,7 @@ For more details about Pulumi plugin architecture and how to contribute to plugi
 
 ## Related topics
 
-- [Providers](/docs/iac/concepts/resources/providers/) - Learn more about resource plugins (providers)
+- [Providers](/docs/iac/concepts/providers/) - Learn more about resource plugins (providers)
 - [How Pulumi works](/docs/iac/concepts/how-pulumi-works/) - Understand how plugins fit into Pulumi's architecture
 - [Policy as Code](/docs/insights/policy/) - Learn about analyzer plugins for policy enforcement
 - [Conversion tools](/docs/iac/guides/migration/converters/) - Use converter plugins to migrate from other IaC tools
