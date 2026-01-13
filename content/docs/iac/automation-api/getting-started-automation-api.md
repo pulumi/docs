@@ -522,6 +522,190 @@ stack.setConfig("aws:region", new ConfigValue("us-west-2"));
 
 {{< /chooser >}}
 
+## Using local packages with Automation API {#using-local-packages-with-automation-api}
+
+When working with Automation API, you may need to use [local packages](/docs/iac/guides/building-extending/packages/local-packages/) that aren't published to the Pulumi Registry. This is common when using parameterized providers like [`terraform-provider`](/registry/packages/terraform-provider/) or when developing custom providers.
+
+### Generating and installing local packages
+
+To use a local package with Automation API, you need to:
+
+1. Generate the SDK for your target language using [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/)
+1. Manually install the plugin (not the provider) in your workspace
+1. Reference the generated SDK in your Automation API program
+
+{{% notes type="warning" %}}
+For local packages, you must install the **plugin**, not the provider. The plugin is what the Pulumi engine uses to communicate with resources during deployments.
+{{% /notes %}}
+
+### Example: Using a local Terraform provider
+
+Here's how to use a locally-generated Terraform provider SDK with Automation API:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language "typescript" %}}
+
+First, generate the SDK:
+
+```bash
+pulumi package add terraform-provider@1.0.2 hashicorp/random 3.5.1
+```
+
+Then, in your Automation API program, install the plugin in the workspace:
+
+```typescript
+import * as automation from "@pulumi/pulumi/automation";
+import * as random from "@pulumi/random";
+
+const stack = await automation.LocalWorkspace.createOrSelectStack({
+    stackName: "dev",
+    projectName: "myProject",
+    program: async () => {
+        const pet = new random.Pet("my-pet", { length: 2 });
+        return { petName: pet.id };
+    }
+});
+
+// Install the plugin for the local package
+await stack.workspace.installPlugin("terraform-provider", "v1.0.2");
+
+// Configure any required settings
+await stack.setConfig("aws:region", { value: "us-west-2" });
+
+// Run the deployment
+const result = await stack.up({ onOutput: console.info });
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+First, generate the SDK:
+
+```bash
+pulumi package add terraform-provider@1.0.2 hashicorp/random 3.5.1
+```
+
+Then, in your Automation API program, install the plugin in the workspace:
+
+```python
+import pulumi
+import pulumi_random as random
+from pulumi import automation as auto
+
+def pulumi_program():
+    pet = random.Pet("my-pet", length=2)
+    pulumi.export("pet_name", pet.id)
+
+# Create or select a stack
+stack = auto.create_or_select_stack(
+    stack_name="dev",
+    project_name="myProject",
+    program=pulumi_program
+)
+
+# Install the plugin for the local package
+stack.workspace.install_plugin("terraform-provider", "v1.0.2")
+
+# Configure any required settings
+stack.set_config("aws:region", auto.ConfigValue(value="us-west-2"))
+
+# Run the deployment
+result = stack.up(on_output=print)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+First, generate the SDK:
+
+```bash
+pulumi package add terraform-provider@1.0.2 hashicorp/random 3.5.1
+```
+
+Then, in your Automation API program, install the plugin in the workspace:
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+
+	"github.com/pulumi/pulumi/sdk/v3/go/auto"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+)
+
+func main() {
+	ctx := context.Background()
+
+	// Define the Pulumi program
+	program := func(ctx *pulumi.Context) error {
+		pet, err := random.NewPet(ctx, "my-pet", &random.PetArgs{
+			Length: pulumi.Float64(2),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("petName", pet.ID())
+		return nil
+	}
+
+	// Create or select a stack
+	s, err := auto.UpsertStackInlineSource(ctx, "dev", "myProject", program)
+	if err != nil {
+		fmt.Printf("Failed to create stack: %v\n", err)
+		os.Exit(1)
+	}
+
+	// Install the plugin for the local package
+	w := s.Workspace()
+	err = w.InstallPlugin(ctx, "terraform-provider", "v1.0.2")
+	if err != nil {
+		fmt.Printf("Failed to install plugin: %v\n", err)
+		os.Exit(1)
+	}
+
+	// Configure any required settings
+	s.SetConfig(ctx, "aws:region", auto.ConfigValue{Value: "us-west-2"})
+
+	// Run the deployment
+	res, err := s.Up(ctx)
+	if err != nil {
+		fmt.Printf("Failed to update stack: %v\n", err)
+		os.Exit(1)
+	}
+
+	fmt.Printf("Deployment succeeded! Pet name: %v\n", res.Outputs["petName"].Value)
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "csharp,fsharp,visualbasic" %}}
+
+```
+Coming soon: https://github.com/pulumi/docs/issues/16969
+```
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+```
+Coming soon: https://github.com/pulumi/docs/issues/16969
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+For more information about working with local packages, see the [Local Packages guide](/docs/iac/guides/building-extending/packages/local-packages/).
+
 ## Invoke Pulumi commands against the stack
 
 You're now ready to execute commands against the `Stack`, including update, preview, refresh, destroy, import, and export.
