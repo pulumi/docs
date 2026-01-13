@@ -7,14 +7,16 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Providers
-        parent: iac-concepts-resources
-        weight: 4
+        parent: iac-concepts
+        weight: 55
+        identifier: iac-concepts-providers
     concepts:
-        parent: resources
+        identifier: providers
         weight: 4
 aliases:
 - /docs/intro/concepts/resources/providers/
 - /docs/concepts/resources/providers/
+- /docs/iac/concepts/resources/providers/
 ---
 
 A resource provider handles communications with a cloud or SaaS service to create, read, update, and delete the resources you define in your Pulumi programs.
@@ -36,7 +38,7 @@ There are two methods for installing a provider and using it in your Pulumi prog
 
 The most common method of installing a provider is to use your language's package management tool: npm in Node.js, PyPI in Python, etc. For example, the [AWS provider](/registry/packages/aws/installation-configuration) has the following SDKs available:
 
-- JavaScript/TypeScript: `@pulumi/aws`
+- TypeScript: `@pulumi/aws`
 - Python: `pulumi-aws`
 - Go: `github.com/pulumi/pulumi-aws/sdk/go/aws`
 - .NET: `Pulumi.Aws`
@@ -541,14 +543,7 @@ pulumi config set --path 'pulumi:disable-default-providers[0]' '*'
 
 To set the value correctly using Automation API, you must use the `path` parameter:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
-{{% choosable language javascript %}}
-
-```typescript
-await stack.setConfig("pulumi:disable-default-providers[0]", { value: "*" }, true);
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 {{% choosable language typescript %}}
 
 ```typescript
