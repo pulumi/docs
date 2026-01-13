@@ -173,6 +173,16 @@ In fact, these two phases of execution actually run in completely separate proce
 
 Because your implementation of the resource provider interface must be used by a different process, potentially at a different point in time, dynamic providers are built on top of the same [function serialization](/docs/iac/concepts/functions/function-serialization/) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions. Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface. You can read more about these limitations in the function serialization documentation.
 
+### Provider code changes
+
+When you modify the code of a dynamic provider (for example, updating the logic in `create`, `read`, or `update` methods), Pulumi does not automatically detect these changes. The resource's inputs haven't changed from Pulumi's perspective, so no update is triggered.
+
+If you need to force an update after changing your provider code, you have several options:
+
+- **Add a version input**: Include a version property in your resource inputs and increment it when you change the provider code. This causes Pulumi to see a difference and trigger an update.
+- **Use `diff` to force changes**: Implement a `diff` method that returns `{ changes: true }` when you want to force an update.
+- **Delete and recreate**: Remove the resource from your program, run `pulumi up`, then add it back. This recreates the resource with the updated provider code.
+
 ## The Resource Provider Interface
 
 Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementing a subset of the methods listed further down in this section. Each of these methods can be asynchronous, and most implementations of these methods will perform network I/O to provision resources in a backing cloud provider or other resource model. There are several important contracts between a dynamic provider and the Pulumi CLI that inform when these methods are called and with what data.
@@ -336,7 +346,17 @@ The `delete` operation is invoked if the URN exists in the previous state but no
 
 ### read(id, props)
 
-The `read` method is invoked when the Pulumi engine needs to get data about a resource that is not managed by Pulumi. The method is passed the `id` of the resource, as tracked in the cloud provider, and an optional bag of additional properties that can be used to disambiguate the request, if needed. The `read` method looks up the requested resource, and returns the canonical `id` and output properties of this resource if found. If an error occurs, an exception can be thrown from the `read` method to return this error to the user.
+The `read` method is invoked in three scenarios:
+
+1. When using the static [`get` method](/docs/iac/concepts/resources/get/) to read an existing resource that is not managed by Pulumi.
+1. When using [`pulumi import`](/docs/cli/commands/pulumi_import/) to import an existing resource into Pulumi management.
+1. When running [`pulumi refresh`](/docs/cli/commands/pulumi_refresh/) to synchronize the state with the actual state of the resource in the cloud provider.
+
+The method is passed the `id` of the resource, as tracked in the cloud provider, and an optional bag of additional properties that can be used to disambiguate the request, if needed. The `read` method looks up the requested resource, and returns the canonical `id` and output properties of this resource if found. If an error occurs, an exception can be thrown from the `read` method to return this error to the user.
+
+{{% notes type="info" %}}
+If you implement a `read` method for your dynamic provider, make sure it accurately reflects the current state of the resource in the backing provider. This is especially important when using `pulumi refresh`, as the returned values will update the state file.
+{{% /notes %}}
 
 ## Dynamic Resource Inputs
 
