@@ -15,7 +15,7 @@ aliases:
 - /docs/using-pulumi/pulumi-packages/
 - /docs/iac/packages-and-automation/pulumi-packages/
 - /docs/iac/using-pulumi/pulumi-packages/
-- /docs/iac/concepts/packages/
+- /docs/iac/concepts/packages/packages/
 - /docs/iac/guides/building-extending/packages/
 - /docs/iac/guides/building-extending/packages/packages/
 ---
