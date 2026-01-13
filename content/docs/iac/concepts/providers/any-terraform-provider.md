@@ -324,7 +324,7 @@ You can choose whether to commit the generated SDK directory to version control:
 - **Commit the SDK directory**: Faster setup for team members and CI/CD pipelines, but increases repository size. The generated SDK includes a `.gitignore` file that excludes dependencies while allowing the SDK code itself to be committed.
 - **Don't commit the SDK directory**: Smaller repository size, but team members must run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to generate the SDK locally.
 
-The provider binary is always downloaded to a shared location outside your project directory and cached, so it only needs to be downloaded once per machine.
+The provider binaries are always downloaded to a shared location outside your project directory and cached, so they only need to be downloaded once per machine.
 
 When team members clone your repository (if you didn't commit the SDK directory), they run:
 
