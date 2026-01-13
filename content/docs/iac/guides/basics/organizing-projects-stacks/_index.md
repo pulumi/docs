@@ -400,6 +400,8 @@ export function qualifiedName(resourceName: string): string {
 ```
 my-project/
 ├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
 ├── index.ts
 ├── infra/                # Infrastructure definitions
 │   ├── api.ts
