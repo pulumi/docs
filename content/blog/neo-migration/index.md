@@ -66,7 +66,7 @@ CDK also introduces complexity through its construct hierarchy. A single high-le
 
 ## Terraform to Pulumi
 
-Terraform's state file architecture makes it both easier and harder to migrate than other tools. The good news is that Terraform's state file contains complete information about every resource, including its provider, type, and physical ID. The challenge is that Terraform's state format has evolved over years, with different versions storing information differently, and the mapping between Terraform resource addresses and their actual cloud identities can be complex.
+Migrating from Terraform presents unique considerations due to how state is managed. Terraform's state file contains complete information about every resource, including its provider, type, and physical ID—essential data for a successful migration. However, Terraform state has evolved across versions, and resources created with `count` or `for_each` add complexity through their indexed naming patterns like `aws_instance.web[2]`.
 
 Neo handles this complexity by first converting Terraform's state into Pulumi state, establishing the connection to your real cloud resources. Then, using both the Terraform configuration files and this converted state, Neo generates a Pulumi program that matches your existing infrastructure. When Terraform manages resources with `count` or `for_each`, creating indexed instances like `aws_instance.web[2]`, Neo ensures these map correctly to both the cloud resources and the generated Pulumi code. Your third web server remains exactly that after migration, properly indexed and connected.
 
