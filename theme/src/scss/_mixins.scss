@@ -53,7 +53,8 @@
         }
 
         &:hover {
-            @apply bg-opacity-0 border-opacity-0;
+            @apply border-opacity-0;
+            @include gradient-background;
         }
     }
 

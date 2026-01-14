@@ -22,7 +22,6 @@ We're excited to announce the general availability of the new [AWS Cloud Control
 * __Extended support for third-party resources__: Our platform offers enhanced flexibility and interoperability by supporting third-party resources available in the CloudFormation Registry, such as Atlassian, MongoDB, Datadog, and more.
 * __Easy CloudFormation to Pulumi Migration__: [cf2pulumi](https://www.pulumi.com/cf2pulumi/) provides the ability to migrate existing CloudFormation templates into Pulumi programs in your favorite language.
 
-
 At Pulumi, we're dedicated to empowering our customers with the tools they need to innovate and thrive in the cloud. The launch of the AWS Cloud Control Provider represents our unwavering commitment to providing best-in-class solutions that simplify cloud management, streamline operations, and drive business success. The Pulumi AWS Cloud Control Provider can be used side-by-side with the standard  Pulumi AWS provider and nearly 200  additional Pulumi resource providers that cover a wide variety of cloud and SaaS platforms.
 
 ## Using Pulumi AWS Cloud Control Provider with the Pulumi AWS Provider
@@ -72,6 +71,7 @@ const lambdaFunction = new awscc.lambda.Function("myLambdaFunction", {
 export const lambdaFunctionArn = lambdaFunction.arn;
 export const s3BucketName = bucket.bucket;
 ```
+
 {{% /choosable %}}
 {{% choosable language python %}}
 
@@ -107,6 +107,7 @@ my_lambda_function = aws_cloudcontrol.lambda_.Function("myLambdaFunction",
 pulumi.export("lambdaFunctionArn", my_lambda_function.arn)  # Directly export the value, no need for a dictionary
 pulumi.export("s3BucketName", my_bucket.bucket)
 ```
+
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
@@ -158,6 +159,7 @@ return await Deployment.RunAsync(() =>
         };
 });
 ```
+
 {{% /choosable %}}
 {{% choosable language go %}}
 
@@ -167,7 +169,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/lambda"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -212,6 +214,7 @@ ZipFile: pulumi.String(`exports.handler = async function(event) {
 	})
 }
 ```
+
 {{% /choosable %}}
 {{% choosable language yaml %}}
 
@@ -255,6 +258,7 @@ outputs:
   s3BucketName:
     value: ${myBucket.bucket}
 ```
+
 {{% /choosable %}}
 
 ## Leveraging AWS Cloud Control Provider for Advanced WAFv2 Configurations

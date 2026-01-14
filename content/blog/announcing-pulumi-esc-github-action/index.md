@@ -72,7 +72,7 @@ jobs:
 
 The GitHub Action workflow above does the following:
 
-1.	Authenticate with Pulumi Cloud using pulumi/auth-actions. Instead of storing a permanent token, we use a [short-lived token to authenticate with Pulumi Cloud](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/github/).
+1.	Authenticate with Pulumi Cloud using pulumi/auth-actions. Instead of storing a permanent token, we use a [short-lived token to authenticate with Pulumi Cloud](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc-client/github/).
 2.	Inject the environment variables from `tinyco/someProject/myEnv` into the current GitHub Actions environment, making them accessible to subsequent steps in the workflow.
 
 ## What’s Next?

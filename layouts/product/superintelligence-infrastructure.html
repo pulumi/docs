@@ -1,0 +1,175 @@
+{{ define "main" }}
+    {{ $pageContext := . }}
+
+    <section id="overview" class="max-w-5xl mx-auto text-center my-12 px-6">
+        {{ with .Params.overview }}
+            <div class="px-20 md:px-0">
+                <h1 class="font-display font-bold">{{ .title }}</h2>
+                <p class="text-center text-2xl w-full lg:w-3/4 mx-auto">{{ .description | markdownify }}</p>
+                <div class="mt-8 flex flex-col md:flex-row justify-center gap-12 mb-12">
+                    <a href="https://app.pulumi.com/signup/" class="btn-primary">Try Pulumi Cloud for Free</a>
+                    <a href="#casestudy" class="btn-secondary">See How Supabase Manages 80K Resources</a>
+                </div>
+            </div>
+            <hr/>
+            <img class="mt-12 hidden md:block" src="/images/product/hero.png" alt="Code speaks to code"/>
+            <img class="mt-12 block md:hidden" src="/images/product/superintelligence-hero-mobile.png" alt="Code speaks to code"/>
+        {{ end }}
+    </section>
+
+    <section id="stats" class="text-center pt-12 pb-6 my-12 relative" style="background: linear-gradient(to bottom, white 0%, rgb(237 233 254) 30%, rgb(237 233 254) 60%, white 100%);">
+        <div class="container mx-auto">
+            <div class="mx-6 lg:mx-2 rounded-xl">
+                <h2 class="font-display font-bold">{{ .Params.stats.title }}</h2>
+
+                <div class="flex flex-col lg:flex-row justify-left items-stretch mt-8 lg:mt-16 relative pb-8">
+                    {{ range $section := .Params.stats.sections}}
+                        <div class="card bg-white w-full lg:w-1/3 my-4 lg:my-0 p-6 lg:p-8 mx-0 lg:mx-4 z-10 shadow-xl">
+                            <h3>{{ $section.number }}</h3>
+                            <h6 class="mt-2">{{ $section.description }}</h6>
+                            <a class="mt-12 flex justify-center" href={{ $section.link }}><img src={{ $section.logo }} style="height: 60px; width: auto;" /></a>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="what-it-is" class="text-center pt-12 pb-6 my-12 relative">
+        <div class="container mx-auto">
+            <h2 class="text-center mb-4 font-display font-bold">{{ .Params.features.title }}</h2>
+            <p class="text-center text-2xl w-full lg:w-3/4 mx-auto mb-4">{{ .Params.features.description | markdownify }}</p>
+            <div class="p-0.5 rounded-lg mx-4" style="background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);">
+                <div class="rounded-lg bg-white flex flex-wrap mx-auto p-4 justify-center">
+                    {{ range $feature := .Params.features.items }}
+                        <div class="w-full md:w-1/3 p-4">
+                            <div class="text-left h-full">
+                                <h5>{{ $feature.header }}</h5>
+                                {{ range $item := $feature.items }}
+                                <ul>
+                                    <li>{{ $item }}</li>
+                                </ul>
+                                {{ end }}
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="text-center p-12 pb-6 my-12 relative">
+        {{ with .Params.capabilities }}
+            <h2 class="font-display font-bold">{{ .title }}</h2>
+            <p class="text-center w-full lg:w-3/4 mx-auto text-2xl">{{ .description | markdownify }}</p>
+            <div class="flex justify-center"><img src="/images/product/ml-engineer.png" style="max-height: 1200px; width:auto"/></div>
+        {{ end }}
+    </section>
+
+   
+    <section id="casestudy" class="text-center p-12 pb-6 my-12 relative">
+        <div class="container mx-auto">
+            {{ with .Params.casestudy }}        
+            <h2 class="font-display font-bold">{{ .title }}</h2>
+            <p class="text-center text-2xl w-full lg:w-3/4 mx-auto">{{ .supabase.title | markdownify }}</p>
+
+            <div>
+                <div class="flex flex-col xl:flex-row gap-24 my-12">
+                    <div class="w-full xl:w-1/2 text-left">
+                        <p class="text-left">{{ .supabase.description | markdownify }}</p>
+                        <div><p class="italic">{{ .supabase.quote }}</p><p> - {{ .supabase.author }}</p></div>
+                        <a href="/case-studies/supabase/" class="btn-secondary flex justify-center items-center text-center" style="width: fit-content;">Read the complete Supabase story</a>
+                    </div>
+                    <img class="w-full xl:w-1/2" src="/images/case-studies/supabase-architecture-diagram.png"/>
+                </div>
+                <div class="my-24 mt-48 text-left">
+                    <h3 class="text-center mb-16">{{ .subheading }}</h3>
+                    <div class="flex flex-col md:flex-row gap-12 justify-center">
+                        {{ range $item := .items }}
+                            <div class="p-3">
+                                <div class="card text-left p-6 flex flex-col items-start h-full justify-between" style="max-width: 400px;">
+                                    <div class="flex flex-col gap-8">
+                                        <img src={{ $item.logo }}
+                                            style="height: 72px; width: auto; object-fit: contain; align-self: flex-start;" />
+                                        <div class="description">
+                                            <p>{{ $item.body | markdownify }}</p>
+                                        </div>
+                                    </div>
+                    
+                                    <a href={{ $item.link }} class="btn-primary" style="width: fit-content;">{{ $item.cta }}</a>
+                                </div>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section ic="enablement" class="text-center p-12 pb-6 mt-12 mb-6 relative">
+        <div class="container mx-auto">
+            {{ with .Params.enablement }}
+                <h2 class="font-display font-bold"> {{ .title }}</h2>
+                <div class="flex flex-col xl:flex-row gap-24 my-12">
+                    <div class="w-full xl:w-1/2 text-left mt-8 xl:mt-20">
+                        <h4 class="text-left">{{ .description | markdownify }}</h4>
+                        <p >{{ .body | markdownify }}</p>
+                        <h6 class="text-center">{{ .subheader | markdownify }}</h6>
+                        <p>{{ .subbody | markdownify }}</p>
+                        <p class="mb-12">{{ .closing | markdownify }}</p>
+                        <div class="flex justify-center"><a href={{ .link }} class="flex-inline btn-primary">{{ .cta }}</a></div>
+                    </div>
+                    <img class="w-full xl:w-1/2" src="/images/product/hcl-to-pulumi.png"/>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section id="building-blocks" class="text-center pt-0 pb-6 my-6 mb-12 relative">
+        <div class="container mx-auto">
+            <h2 class="font-display font-bold">{{ .Params.building_blocks.title }}</h2>
+            <div class="flex flex-wrap justify-content items-stretch text-left my-8">
+                {{ range $block := .Params.building_blocks.items }}
+                {{ if not $block.graphic }}
+                <div class="w-full lg:w-1/2 p-4">
+                    <div class="h-full card bg-white p-8">
+                        <h3 class="m-0 p-0 text-2xl mb-4">{{ $block.header }}</h3>
+                        <ul>
+                            {{ range $item := $block.body }}
+                            <li>{{ $item | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    
+    <section id="learn" class="text-center pt-12 pb-6 my-12 relative">
+        <div class="container mx-auto">
+            <h2 class="font-display font-bold">{{ .Params.learn.title }}</h2>
+            <div class="flex flex-wrap justify-content items-stretch my-4">
+                {{ range $index, $item := .Params.learn.items }}
+                <div class="w-full p-3">
+                    <div class="h-full {{ if eq $index 0 }}bg-violet-100{{ else }}card bg-white{{ end }} p-12 rounded-xl">
+                        <div>
+                            <h5>{{ $item.title }}</h5>
+                        </div>
+                        <div class="mt-6">
+                            <p>{{ $item.description | markdownify }}</p>
+                        </div>
+                        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                            {{ range $button := $item.buttons }}
+                            <a href="{{ $button.link }}" class="btn-{{ $button.type }}">{{ $button.action }}</a>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+{{ end }}

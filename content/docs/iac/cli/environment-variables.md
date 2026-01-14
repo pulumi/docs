@@ -32,17 +32,6 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
-            PULUMI_AI_SERVICE_ENDPOINT
-        </span>
-    </dt>
-    <dd>
-        <p>
-            Specifies the endpoint for Pulumi AI service.
-        </p>
-        <pre><code class="text-xs">PULUMI_AI_SERVICE_ENDPOINT="https://www.pulumi.com/ai"</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
             PULUMI_AUTOMATION_API_SKIP_VERSION_CHECK
         </span>
     </dt>
@@ -82,12 +71,12 @@ aliases:
     </dt>
     <dd>
         <p>
-            Sets <a href="/docs/concepts/config">configuration</a> for <a href="/docs/using-pulumi/testing/unit">unit testing</a>. Must be in JSON format.
+            Sets <a href="/docs/concepts/config">configuration</a> for <a href="/docs/iac/guides/testing/unit/">unit testing</a>. Must be in JSON format.
         </p>
         <p>
-            <strong>This environment variable is ignored during normal Pulumi operations -- e.g., <code>up</code>, <code>preview</code>, etc.</strong>
+            <strong>This environment variable is ignored during normal Pulumi operations -- e.g., <code>up</code>, <code>preview</code>, etc. -- but must be valid JSON if present.</strong>
         </p>
-        <pre><code class="text-xs">PULUMI_CONFIG="{'project:myTag':'val1','project:mySecret':'val2'}"</code></pre>
+        <pre><code class="text-xs">PULUMI_CONFIG='{"project:myTag":"val1","project:mySecret":"val2"}'</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -565,3 +554,22 @@ aliases:
         <pre><code class="text-xs">NO_COLOR</code></pre>
     </dd>
 </dl>
+
+## Setting CLI arguments with environment variables
+
+As of v3.208.0, all Pulumi CLI arguments can be set via environment variables.
+
+All CLI argument environment variables follow a predictable naming convention:
+`PULUMI_OPTION_` followed by the capitalized snake case version of the argument
+name. For example:
+
+| CLI argument example                  | Environment variable example             |
+| ------------------------------------- | ---------------------------------------- |
+| `pulumi up --parallel 1`              | `PULUMI_OPTION_PARALLEL=1 pulumi up`     |
+| `pulumi up --refresh`                 | `PULUMI_OPTION_REFRESH=true pulumi up`   |
+| `pulumi up --yes`                     | `PULUMI_OPTION_YES=1 pulumi up`          |
+| `pulumi up --target foo --target bar` | `PULUMI_OPTION_TARGET=foo,bar pulumi up` |
+
+Note that you can specify boolean arguments either with `true` and `false` or
+`1` and `0`. For more information, as well as some practical examples, see the
+[release article](https://www.pulumi.com/blog/controlling-the-cli-through-environment-variables/).

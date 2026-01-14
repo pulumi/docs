@@ -57,7 +57,7 @@ Pulumi is an infrastructure as code tool for provisioning cloud
 infrastructure and deploying applications. The key difference between
 Pulumi and other tools in this space (such as Ansible, Terraform, and
 AWS CloudFormation) is that Pulumi aggressively reclaims the word
-"code": users of Pulumi write programs in *general purpose programing languages*
+"code": users of Pulumi write programs in *general purpose programming languages*
 that, when run, deploy and run applications in cloud
 environments, while still retaining all the known benefits of
 infrastructure as code that our industry has grown accustomed to

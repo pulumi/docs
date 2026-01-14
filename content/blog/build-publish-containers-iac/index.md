@@ -1917,11 +1917,11 @@ The same container image URLs exported above can be used as inputs to other reso
 
 > This article assumes you already have a containerized environment to deploy to, like a Kubernetes cluster, and have [configured your project accordingly](/registry/packages/kubernetes/installation-configuration/). If not, you can provision one using Pulumi first. Pulumi supports many clouds and infrastructure resources, but here are a few starting points to get up and running with:
 
-- [AWS Elastic Container Service ECS](/docs/iac/clouds/aws/guides/ecs/),
-- [AWS Elastic Kubernetes Service (EKS)](/docs/iac/clouds/aws/guides/eks),
-- [Azure Kubernetes Service (AKS)](/registry/packages/kubernetes/how-to-guides/aks),
-- [Google Cloud Kubernetes Engine (GKE)](/registry/packages/kubernetes/how-to-guides/gke),
-- [DigitalOcean Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi).
+* [AWS Elastic Container Service ECS](/docs/iac/clouds/aws/guides/ecs/),
+* [AWS Elastic Kubernetes Service (EKS)](/docs/iac/clouds/aws/guides/eks),
+* [Azure Kubernetes Service (AKS)](/registry/packages/kubernetes/how-to-guides/aks),
+* [Google Cloud Kubernetes Engine (GKE)](/registry/packages/kubernetes/how-to-guides/gke),
+* [DigitalOcean Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi).
 
 This example demonstrates deploying our Nginx web server as a load balanced service within Kubernetes. To do so, we'll declare our Kubernetes configuration, right inside of our existing program defined above, and export its resulting IP address:
 

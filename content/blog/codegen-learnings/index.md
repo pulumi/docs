@@ -15,6 +15,10 @@ tags:
 
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 When asked about his research process, Anthony Bourdain would describe how he'd blend his formal culinary training with deep dives into local food culture - from market stalls to family recipes. Modern AI code generation follows a similar path: it can't just rely on what it knows - it must tap into continuously evolving, domain-specific knowledge bases. Just as Bourdain would combine his classical French training with techniques learned from local kitchens, AI code generators blend their built-in knowledge with retrieved code snippets and type definitions to generate code that accurately represents the user's intent.
 
 This fusion of base knowledge with contextual understanding is especially valuable for Infrastructure as Code (IaC), where rapidly evolving cloud providers and libraries make manual development challenging, traditional debugging cycles impractical, and errors catastrophically expensive.
@@ -112,7 +116,7 @@ Semantic search is based on the conceptual similarity of the term you're looking
 
 A common way to determine the similarity between the two strings is to first turn these strings into _vector embeddings_ - arrays of floating point values representing the semantic meaning of each string - and then calculate the _cosine similarity_ between the two vectors, which is the cosine of the angle between the vectors. [Various methods](https://huggingface.co/blog/matryoshka) of producing vector embeddings are fascinating but we will not cover them here in depth.
 
-For Pulumi code generation we are using the OpenAI's [Ada-002 embedding model](https://medium.com/@siladityaghosh/a-deep-dive-into-openais-text-embedding-ada-002-the-power-of-semantic-understanding-7072c0386f83) which at this moment represents a good balance between performance and cost.
+For Pulumi code generation we are using the OpenAI's [Ada-002 embedding model](https://www.downelink.com/a-deep-dive-into-openais-text-embedding-ada-002-unlocking-the-power-of-semantic-understanding/) which at this moment represents a good balance between performance and cost.
 
 Producing vector embeddings from the user query is the standard approach in this situation. However, for Pulumi code generator we added a little twist - to increase the odds of getting more relevant information from the Registry (i.e. to increase the recall) we first make an LLM call to generate a small set of relevant search terms that will produce an array of vector embeddings.
 
@@ -232,9 +236,9 @@ As we continue to evolve Pulumi's code generation capabilities, we're excited ab
 
 We invite you to try these capabilities in your own projects and share your experiences. Your feedback helps us continue improving and advancing the state of AI-assisted infrastructure development.
 
-<!--raw material 
+<!--raw material
 
-1.2. get multiple "Pulumi Registry schema" elements (40 in our case, 29 unique) - some of them less relevant. 
+1.2. get multiple "Pulumi Registry schema" elements (40 in our case, 29 unique) - some of them less relevant.
 (We call them tokens internally but they are really type names)
 This search uses vector embeddings
 
@@ -283,7 +287,7 @@ Resulting generated prompt can be 1K or more lines of Yaml
 
 4. Full text search and BM25
 
-BM25: 
+BM25:
 - Inverse Document Frequency: how rare is the query term
 - Term frequency in the document: how often does the term appear in the document
 Detailed explanation: https://emschwartz.me/understanding-the-bm25-full-text-search-algorithm/
@@ -291,7 +295,7 @@ Detailed explanation: https://emschwartz.me/understanding-the-bm25-full-text-sea
 5. Vector embeddings, combine the two
 similarity metrics like cosine similarity.
 
-6. Reranking 
+6. Reranking
 
 6.1. It's good to have good recall - you can throw everything and the kitchen sink at the LLM - but too much information can actually be counterproductive:
 
@@ -318,6 +322,6 @@ How do we assess the quality of our RAG? Intuitively, we want two things to be t
 
 - Recall
 - Typecheck
-- `pulumi up` - a "dry run" before the actual deployment and can detect many real or potential problems such potentially destructive actions, incorrect configurations that cannot be detected at compile time, dependency conflicts and policy violations. 
+- `pulumi up` - a "dry run" before the actual deployment and can detect many real or potential problems such potentially destructive actions, incorrect configurations that cannot be detected at compile time, dependency conflicts and policy violations.
 
 -->

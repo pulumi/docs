@@ -11,15 +11,15 @@ class Program
             // Import the configuration values
             var config = new Config();
 
-            // Retrieve the value of "myEnvironment" and "myPassword"
-            var environment = config.Get("myEnvironment");
-            var password = config.GetSecret("myPassword");
+            // Retrieve the value of "region" and "apiKey"
+            var region = config.Get("region");
+            var apiKey = config.GetSecret("apiKey");
 
             // Return a dictionary of outputs
             return new Dictionary<string, object?>
             {
-                ["Environment"] = environment,
-                ["Password"] = password
+                ["Region"] = region,
+                ["ApiKey"] = apiKey
             };
         });
     }

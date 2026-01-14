@@ -1,5 +1,5 @@
 ---
-title: "Organizational Patterns - A Developer Portal"
+title: "Organizational Patterns: A Developer Portal"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
@@ -14,7 +14,8 @@ authors:
 tags:
     - development-environment
     - automation-api
-
+    - organizational-patterns
+series: organizational-patterns
 ---
 
 Using Pulumi is more than just writing code and components. In addition to common software development practices, there are also a number of success patterns related to how your company or team builds and deploys Pulumi programs to successfully build, deploy, and manage your infrastructure and applications. In this continuation of a series, I will explore one of these patterns - using the Pulumi [Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/) to create a developer portal.

@@ -238,7 +238,7 @@ With Pulumi, you get:
 
 - [Infrastructure testing capabilities](/docs/iac/concepts/testing/) to validate your deployments before they go live
 
-- [Container deployment solutions](/containers) for managing Docker images and Lambda functions
+- [Container deployment solutions](/templates/container-service/) for managing Docker images and Lambda functions
 
 - [Rich AWS integration](/registry/packages/aws/) for comprehensive cloud resource management
 

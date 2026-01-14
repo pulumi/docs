@@ -1,16 +1,40 @@
 ---
-title_tag: Modify the Program | Azure
+title_tag: Make an Update | Azure
+title: Make an update
+h1: "Get started with Pulumi and Azure"
 meta_desc: This page provides an overview on how to update an Azure project from a Pulumi program.
-title: Modify program
-h1: "Pulumi & Azure: Modify program"
 weight: 6
+menu:
+    iac:
+        name: Make an update
+        identifier: azure-get-started.modify-program
+        parent: azure-get-started
+        weight: 6
 aliases:
-- /docs/quickstart/azure/modify-program/
-- /docs/get-started/azure/modify-program/
-- /docs/clouds/azure/get-started/modify-program/
+    - /docs/quickstart/azure/modify-program/
+    - /docs/clouds/azure/get-started/modify-program/
+    - /docs/quickstart/azure/deploy-changes/
+    - /docs/clouds/azure/get-started/deploy-changes/
 ---
 
-Now that your storage account is provisioned, let's add an object to it. First, from within your project directory, create a new `index.html` file with some content in it.
+## Make an update
+
+Now you will update your project to serve a static website out of your Azure storage account. You will change your code and then re-run `pulumi up` which will update your infrastructure.
+
+### Add new resources
+
+Pulumi knows how to evolve your current infrastructure to your project's new desired state, both for the first deployment as well as subsequent updates.
+
+To turn your storage account into a static website, you will add two new Azure resources:
+
+1. [`StorageAccountStaticWebsite`](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/):
+    enables static website support on your storage account
+2. [`Blob`](/registry/packages/azure-native/api-docs/storage/blob/):
+    uploads your website content to the storage container
+
+### Add an index.html
+
+First, from within your project directory, create a new `index.html` file with some content in it.
 
 {{< chooser os "macos,linux,windows" / >}}
 
@@ -56,16 +80,17 @@ EOT
 
 {{% /choosable %}}
 
-Now that you have your new `index.html` with some content, you can enable static website support, upload `index.html` to a storage container, and retrieve a public URL through the use of resource properties. These properties can be used to define dependencies between related resources or to retrieve property values for further processing.
-
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+Now open {{< langfile >}} in your editor and enable static website support by adding a [`StorageAccountStaticWebsite`](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/) resource right after the storage account is created:
 
 {{% choosable language typescript %}}
 
-To start, open `index.ts` and add the following right after the storage account creation:
-
 ```typescript
-// Enable static website support
+// Create an Azure resource (Storage Account)
+const storageAccount = new storage.StorageAccount("sa", {
+    /* existing storage account configuration */
+});
+
+// Enable static website support - add this code
 const staticWebsite = new storage.StorageAccountStaticWebsite("staticWebsite", {
     accountName: storageAccount.name,
     resourceGroupName: resourceGroup.name,
@@ -76,10 +101,14 @@ const staticWebsite = new storage.StorageAccountStaticWebsite("staticWebsite", {
 {{% /choosable %}}
 {{% choosable language python %}}
 
-To start, open `__main__.py` and add the following right after the storage account creation:
-
 ```python
-# Enable static website support
+# Create an Azure resource (Storage Account)
+account = storage.StorageAccount(
+    "sa",
+    # existing storage account configuration
+)
+
+# Enable static website support - add this code
 static_website = storage.StorageAccountStaticWebsite(
     "staticWebsite",
     account_name=account.name,
@@ -91,10 +120,16 @@ static_website = storage.StorageAccountStaticWebsite(
 {{% /choosable %}}
 {{% choosable language go %}}
 
-To start, open `main.go` and add the following right after the storage account creation:
-
 ```go
-// Enable static website support
+// Create an Azure resource (Storage Account)
+account, err := storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
+    // existing storage account configuration
+})
+if err != nil {
+    return err
+}
+
+// Enable static website support - add this code
 staticWebsite, err := storage.NewStorageAccountStaticWebsite(ctx, "staticWebsite", &storage.StorageAccountStaticWebsiteArgs{
     AccountName:       account.Name,
     ResourceGroupName: resourceGroup.Name,
@@ -108,10 +143,14 @@ if err != nil {
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
-To start, open `Program.cs` and add the following right after the storage account creation:
-
 ```csharp
-// Enable static website support
+// Create an Azure resource (Storage Account)
+var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+{
+    /* existing storage account configuration */
+});
+
+// Enable static website support - add this code
 var staticWebsite = new StorageAccountStaticWebsite("staticWebsite", new StorageAccountStaticWebsiteArgs
 {
     AccountName = storageAccount.Name,
@@ -124,7 +163,7 @@ var staticWebsite = new StorageAccountStaticWebsite("staticWebsite", new Storage
 
 {{% choosable language java %}}
 
-To start, open `App.java` and add the following imports:
+First, add the following imports at the top of `App.java`:
 
 ```java
 import com.pulumi.azurenative.storage.StorageAccountStaticWebsite;
@@ -135,9 +174,15 @@ import com.pulumi.azurenative.storage.outputs.EndpointsResponse;
 import com.pulumi.asset.FileAsset;
 ```
 
-Next, add the following right after the storage account creation:
+Then add the following right after the storage account creation:
 
 ```java
+// Create an Azure resource (Storage Account)
+var storageAccount = new StorageAccount("sa", StorageAccountArgs.builder()
+    // existing storage account configuration
+    .build());
+
+// Enable static website support - add this code
 var staticWebsite = new StorageAccountStaticWebsite("staticWebsite",
                     StorageAccountStaticWebsiteArgs.builder()
                             .accountName(storageAccount.name())
@@ -150,11 +195,14 @@ var staticWebsite = new StorageAccountStaticWebsite("staticWebsite",
 
 {{% choosable language yaml %}}
 
-To start, open `Pulumi.yaml` and add the following right after the storage account creation:
-
 ```yaml
 resources:
-  # ...
+  # Create an Azure resource (Storage Account)
+  sa:
+    type: azure-native:storage:StorageAccount
+    # existing storage account configuration
+
+  # Enable static website support - add this code
   staticWebsite:
     type: azure-native:storage:StorageAccountStaticWebsite
     properties:
@@ -165,9 +213,10 @@ resources:
 
 {{% /choosable %}}
 
-The static website resource leverages the storage account and resource group names defined previously in your program.
+Notice that resources can reference each other, which forms automatic dependencies between them.
+Pulumi uses this information to parallelize deployments safely.
 
-Now use all of these cloud resources and a local `FileAsset` resource to upload `index.html` into your storage container by adding the following at the end of the file (after enabling the static website support):
+Now use all of these cloud resources and a local `FileAsset` resource to upload `index.html` into your storage container by adding a [`Blob`](/registry/packages/azure-native/api-docs/storage/blob/) at the end of the file (after enabling the static website support):
 {{% choosable language typescript %}}
 
 ```typescript
@@ -267,11 +316,18 @@ resources:
 
 {{% /choosable %}}
 
+This uploads the `index.html` file to your storage container using a Pulumi concept called an [asset](/docs/iac/concepts/assets-archives/#assets).
+
+### Export the website URL
+
+Now to export the website's URL for easy access, add the `staticEndpoint` export to your return statement as shown in this example:
+
 {{% choosable language typescript %}}
 
-Finally, at the end of `index.ts`, export the resulting storage container's endpoint URL to stdout for easy access:
-
 ```typescript
+// Export the storage account name
+export const storageAccountName = storageAccount.name;
+
 // Web endpoint to the website
 export const staticEndpoint = storageAccount.primaryEndpoints.web;
 ```
@@ -280,9 +336,10 @@ export const staticEndpoint = storageAccount.primaryEndpoints.web;
 
 {{% choosable language python %}}
 
-Finally, at the end of `__main__.py`, export the resulting storage container's endpoint URL to stdout for easy access:
-
 ```python
+# Export the storage account name
+pulumi.export("storage_account_name", account.name)
+
 # Web endpoint to the website
 pulumi.export("staticEndpoint", account.primary_endpoints.web)
 ```
@@ -291,9 +348,10 @@ pulumi.export("staticEndpoint", account.primary_endpoints.web)
 
 {{% choosable language go %}}
 
-Finally, at the end of `main.go`, export the resulting storage container's endpoint URL to stdout for easy access:
-
 ```go
+// Export the storage account name
+ctx.Export("storageAccountName", account.Name)
+
 // Web endpoint to the website
 ctx.Export("staticEndpoint", account.PrimaryEndpoints.Web())
 ```
@@ -302,13 +360,11 @@ ctx.Export("staticEndpoint", account.PrimaryEndpoints.Web())
 
 {{% choosable language csharp %}}
 
-Finally, at the end of `Program.cs`, export the resulting storage container's endpoint URL to stdout for easy access:
-
 ```csharp
-// Web endpoint to the website
+// Export outputs
 return new Dictionary<string, object?>
 {
-    ["primaryStorageKey"] = primaryStorageKey,
+    ["storageAccountName"] = storageAccount.Name,
     ["staticEndpoint"] = storageAccount.PrimaryEndpoints.Apply(primaryEndpoints => primaryEndpoints.Web)
 };
 ```
@@ -317,9 +373,11 @@ return new Dictionary<string, object?>
 
 {{% choosable language java %}}
 
-Finally, at the end of `App.java`, export the resulting storage container's endpoint URL to stdout for easy access:
-
 ```java
+// Export the storage account name
+ctx.export("storageAccountName", storageAccount.name());
+
+// Web endpoint to the website
 ctx.export("staticEndpoint", storageAccount.primaryEndpoints()
         .applyValue(EndpointsResponse::web));
 ```
@@ -328,16 +386,114 @@ ctx.export("staticEndpoint", storageAccount.primaryEndpoints()
 
 {{% choosable language yaml %}}
 
-Finally, at the end of `Pulumi.yaml` in the `outputs`, export the resulting storage container's endpoint URL to stdout for easy access:
-
 ```yaml
 outputs:
-  # ...
+  # Export the storage account name
+  storageAccountName: ${sa.name}
+
+  # Web endpoint to the website
   staticEndpoint: ${sa.primaryEndpoints.web}
 ```
 
 {{% /choosable %}}
 
-Now that you have declared how you want your resources to be provisioned, it is time to deploy these remaining changes.
+The storage account's endpoint is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
+that Azure assigns at deployment time, not a raw string, meaning its value is not known in advance.
+
+### Deploy the changes
+
+To deploy the changes, run `pulumi up` again and it will figure out the deltas:
+
+{{% choosable "os" "macos,linux" %}}
+
+```bash
+$ pulumi up
+```
+
+{{% /choosable %}}
+{{% choosable "os" "windows" %}}
+
+```powershell
+> pulumi up
+```
+
+{{% /choosable %}}
+
+Just like the first time you will see a preview of the changes before they happen:
+
+```
+Previewing update (dev):
+
+     Type                                                   Name                 Plan
+     pulumi:pulumi:Stack                                    quickstart-dev
+ +   ├─ azure-native:storage:StorageAccountStaticWebsite    staticWebsite        create
+ +   └─ azure-native:storage:Blob                           index.html           create
+
+Outputs:
+  + staticEndpoint   : "https://sa8dd8af62.z22.web.core.windows.net/"
+
+Resources:
+    + 2 to create
+    3 unchanged
+
+Do you want to perform this update?
+> yes
+  no
+  details
+```
+
+Choose `yes` to perform the deployment:
+
+```
+Do you want to perform this update? yes
+Updating (dev):
+
+     Type                                                   Name                Status
+     pulumi:pulumi:Stack                                    quickstart-dev
+ +   ├─ azure-native:storage:StorageAccountStaticWebsite    staticWebsite       created
+ +   └─ azure-native:storage:Blob                           index.html          created
+
+Outputs:
+    storageAccountName: "sa8deefa78"
+  + staticEndpoint   : "https://sa8dd8af62.z22.web.core.windows.net/"
+
+Resources:
+    + 2 created
+    3 unchanged
+
+Duration: 4s
+```
+
+In just a few seconds, your new website will be ready. Curl the endpoint to see it live:
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ curl $(pulumi stack output staticEndpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable os "windows" %}}
+
+```powershell
+> curl (pulumi stack output staticEndpoint)
+```
+
+{{% /choosable %}}
+
+This will reveal your new website!
+
+```
+<html>
+    <body>
+        <h1>Hello, Pulumi!</h1>
+    </body>
+</html>
+```
+
+Feel free to experiment, such as changing the contents of `index.html` and redeploying.
+
+Next, wrap the website into an infrastructure abstraction.
 
 {{< get-started-stepper >}}

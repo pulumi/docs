@@ -179,7 +179,7 @@ To clean up the resources we've provisioned, run `pulumi destroy`.
 
 ## Next steps
 
-The [sample code for this post](https://github.com/pulumi/examples/tree/master/cloud-js-containers)
+The [sample code for this post](https://github.com/pulumi/examples/tree/5f3eae87bb132595e4c60d2d5f8e8ee1473f6a7b/cloud-js-containers)
 is available in the [Pulumi examples repo on GitHub](https://github.com/pulumi/examples). For an example application
-that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app)
+that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/5f3eae87bb132595e4c60d2d5f8e8ee1473f6a7b/cloud-ts-voting-app)
 TypeScript sample.

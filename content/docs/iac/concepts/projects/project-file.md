@@ -22,7 +22,7 @@ aliases:
 Every Pulumi program has a project file, `Pulumi.yaml`, which specifies metadata about your project, such as the project name and language runtime. The project file must begin with a capital `P` and have an extension of either `.yml` or `.yaml`. For more information about Pulumi projects, see the following [Pulumi projects overview](/docs/intro/concepts/project/).
 
 {{< notes >}}
-For Pulumi programs specifically written in Pulumi YAML, the project file not only serves as a configuration and metadata repository but also contains the program's infrastructure definition itself. To learn more, see [Pulumi YAML](/docs/intro/languages/yaml/).
+For Pulumi programs specifically written in Pulumi YAML, the project file not only serves as a configuration and metadata repository but also contains the program's infrastructure definition itself. For instance, `resources`, `variables`, and `outputs` are [top-level properties that define your infrastructure](/docs/iac/languages-sdks/yaml/yaml-language-reference/). To learn more, see [Pulumi YAML](/docs/intro/languages/yaml/).
 {{< /notes >}}
 
 ## Attributes
@@ -53,6 +53,8 @@ Some languages also support using `main` to point to a specific file to change w
 
 - For .NET projects, `main` can point to a .NET project file (e.g., `example.csproj`) and the file will be passed to `dotnet run`.
 
+- For YAML projects, `main` can point to another YAML file (it must be named `Main.yaml` but it can be in a sub-folder of the project folder) containing the `variables`, `resources`, and `output` properties. The `config` property can exist in either the `Pulumi.yaml` or the referenced file.
+
 For all other languages, the actual filename is ignored, and the system behaves as though `main` referred to the file's containing directory.
 
 ### `runtime` options
@@ -63,7 +65,7 @@ The runtime attribute has an additional property called `options` where you can 
 | - | - | - |
 | `typescript` | Only applies to the `nodejs` runtime | Boolean indicating whether to use `ts-node` or not. |
 | `nodeargs` | Only applies to the `nodejs` runtime | Arguments to pass to `node`. |
-| `packagemanager` | Only applies to the `nodejs` runtime | Packagemanager to use for installing dependencies, `npm` (default), `pnpm` or `yarn`. |
+| `packagemanager` | Only applies to the `nodejs` runtime | Packagemanager to use for installing dependencies, `npm` (default), `pnpm`, `yarn` or `bun`. |
 | `buildTarget` | Only applies to the `go` runtime | Path to save the compiled go binary to. |
 | `binary` | applies to the `go`, `dotnet`, and `java` runtimes | Path to a pre-built executable. |
 | `toolchain` | Only applies to the `python` runtime | Toolchain to use for managing virtual environments, `pip` (default), `poetry` or `uv` |

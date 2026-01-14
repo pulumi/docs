@@ -8,7 +8,7 @@ menu:
   esc:
     name: Google Cloud
     parent: esc-configuring-oidc
-    weight: 1
+    weight: 5
 ---
 
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Google Cloud. OIDC in Google Cloud uses [workload identity federation](https://cloud.google.com/iam/docs/workload-identity-federation) to allow access to resources. Access to the resources is authorized using attribute conditions that validate the contents of the OIDC token issued by the Pulumi Cloud.
@@ -58,7 +58,7 @@ Once you have created your workload identity pool and provider, you will be dire
 4. In the **Attribute name** dropdown, select **Subject**.
 5. In the **Attribute value** field, provide a valid subject claim (see examples at the end of this section). Then click **Save**.
 
-Make a note of the project ID, workload identity pool ID, provider ID, and service account email address from the previous steps. These will be necessary to enable OIDC for your service.
+Make a note of the project number, workload identity pool ID, provider ID, and service account email address from the previous steps. These will be necessary to enable OIDC for your service.
 
 ## Configure ESC for OIDC
 
@@ -76,20 +76,19 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
       gcp:
         login:
           fn::open::gcp-login:
-            project: <your-project-id>
+            project: <your-project-number>
             oidc:
               workloadPoolId: <your-pool-id>
               providerId: <your-provider-id>
               serviceAccount: <your-service-account>
       environmentVariables:
         GOOGLE_PROJECT: ${gcp.login.project}
+        GOOGLE_OAUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
         CLOUDSDK_AUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
-      pulumiConfig:
-        gcp:accessToken: ${gcp.login.accessToken}
     ```
 
-6. Replace `<your-project-id>`, `<your-pool-id>`, `<your-provider-id>`, and `<your-service-account>` with the values from the previous steps.
-7. Scroll to the bottom of the page and click **Save**.
+6. Replace `<your-project-number>`, `<your-pool-id>`, `<your-provider-id>`, and `<your-service-account>` with the values from the previous steps.
+7. Click **Save**.
 
 You can validate that your configuration is working by running either of the following:
 
@@ -120,7 +119,7 @@ Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` wi
 
 ## Subject claim customization
 
-You can [customize](/docs/esc/environments/customizing-oidc-claims/) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions.
+You can [customize](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions.
 
 You can do so by configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
 

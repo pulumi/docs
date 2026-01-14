@@ -26,6 +26,7 @@ body.section-registry {
         h1, h2, h3, h4, h5, h6 {
             font-family: Gilroy;
             line-height: 1.5;
+            scroll-margin-top: 60px;
         }
 
         h2, h3, h4, h5, h6 {
@@ -96,6 +97,10 @@ body.section-registry {
             margin-bottom: 16px;
         }
 
+        ul {
+            margin-bottom: 1.5rem;
+        }
+
         p a:not(.btn-secondary),
         ul li a[href]  {
             color: map-get($brand, "blue");
@@ -133,13 +138,13 @@ body.section-registry {
 
         .docs-main-nav {
             border: none;
-            display: block;
+            display: flex;
+            flex-direction: column;
             padding-bottom: 24px;
             flex-shrink: 0;
             margin: 0;
             width: 32px;
             flex-basis: 32px;
-            overflow-y: auto;
             height: calc(100vh - 38px);
             position: sticky;
             left: 0;
@@ -152,6 +157,26 @@ body.section-registry {
             nav.main-nav {
                 display: none;
                 padding: 32px 0 0 0;
+            }
+
+            // Make the nav element use flexbox layout
+            nav {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                min-height: 0;
+            }
+
+            // Keep search box fixed at top
+            .docs-search {
+                flex-shrink: 0;
+            }
+
+            // Make only the menu items scrollable, not the search box
+            pulumi-docs-nav {
+                overflow-y: auto;
+                flex: 1;
+                min-height: 0;
             }
 
             h2,
@@ -271,7 +296,6 @@ body.section-registry {
             .docs-main-nav-wrapper .docs-main-nav {
                 width: 240px;
                 flex-basis: 240px;
-                overflow-y: auto;
                 height: calc(100vh);
                 padding-left: 16px;
                 background-color: $white;
@@ -342,21 +366,21 @@ body.section-registry {
             min-width: 0;
             flex-shrink: 1;
             flex-grow: 1;
-            width: 700px;
-            max-width: 700px;
+            width: 1200px;
+            max-width: 1200px;
             min-width: 0;
-            margin: 32px 24px 0 16px;
+            margin: 1rem 1.5rem 0 1rem;
             padding-bottom: 24px;
             min-height: 100vh;
 
             @media (min-width: 1024px) {
-                max-width: 634px;
+                max-width: 1200px;
                 flex-direction: column;
             }
 
             @media (min-width: 1024px) {
                 margin-left: 24px;
-                max-width: 700px;
+                max-width: 1200px;
                 min-width: 0;
             }
 
@@ -467,12 +491,12 @@ body.section-registry {
             }
 
             .docs-table-of-contents {
-                margin-top: 38px;
-                padding: 16px 0 16px 0;
+                margin-top: 1rem;
+                padding: 1rem 0;
                 overflow-y: auto;
                 height: 90vh;
                 position: sticky;
-                top: 94px;
+                top: 3.5rem;
                 display: block;
                 margin-right: 10px;
 

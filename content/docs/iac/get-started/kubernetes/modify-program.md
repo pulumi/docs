@@ -1,78 +1,36 @@
 ---
-title_tag: Modify the Program | Kubernetes
-meta_desc: This page provides an overview on how to update Kubernetes project from a Pulumi program.
-title: Modify program
-h1: "Pulumi & Kubernetes: Modify program"
+title_tag: Make an Update | Kubernetes
+meta_desc: This page provides an overview on how to update a Kubernetes project from a Pulumi program.
+title: Make an update
+h1: "Get started with Pulumi and Kubernetes"
 weight: 6
 menu:
-  clouds:
-    parent: kubernetes-get-started
-    identifier: kubernetes-modify-program
+    iac:
+        name: Make an update
+        identifier: kubernetes-get-started.modify-program
+        parent: kubernetes-get-started
+        weight: 6
 
 aliases:
-- /docs/quickstart/kubernetes/modify-program/
-- /docs/get-started/kubernetes/modify-program/
-- /docs/iac/get-started/kubernetes/modify-program/
+    - /docs/quickstart/kubernetes/modify-program/
+    - /docs/quickstart/kubernetes/deploy-changes/
 ---
 
-Now that we have an instance of our Pulumi program deployed, let's update it to do something a little more interesting.
+Now that you have an instance of your Pulumi program deployed, update it to do something a little more interesting.
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-"use strict";
-const pulumi = require("@pulumi/pulumi");
-const k8s = require("@pulumi/kubernetes");
-
-// Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
-// running on minikube, and if so, create only services of type ClusterIP.
-const config = new pulumi.Config();
-const isMinikube = config.requireBoolean("isMinikube");
-
-const appName = "nginx";
-const appLabels = { app: appName };
-const deployment = new k8s.apps.v1.Deployment(appName, {
-    spec: {
-        selector: { matchLabels: appLabels },
-        replicas: 1,
-        template: {
-            metadata: { labels: appLabels },
-            spec: { containers: [{ name: appName, image: "nginx" }] }
-        }
-    }
-});
-
-// Allocate an IP to the Deployment.
-const frontend = new k8s.core.v1.Service(appName, {
-    metadata: { labels: deployment.spec.template.metadata.labels },
-    spec: {
-        type: isMinikube ? "ClusterIP" : "LoadBalancer",
-        ports: [{ port: 80, targetPort: 80, protocol: "TCP" }],
-        selector: appLabels
-    }
-});
-
-// When "done", this will print the public IP.
-exports.ip = isMinikube
-    ? frontend.spec.clusterIP
-    : frontend.status.loadBalancer.apply(
-          (lb) => lb.ingress[0].ip || lb.ingress[0].hostname
-      );
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as k8s from "@pulumi/kubernetes";
 
-// Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
-// running on minikube, and if so, create only services of type ClusterIP.
+// By default, minikube does not expose LoadBalancer services externally. You can either:
+// 1. Run `minikube tunnel` in a separate terminal (recommended), then set isMinikube to false.
+// 2. Set isMinikube to true to use ClusterIP with port-forwarding instead.
 const config = new pulumi.Config();
 const isMinikube = config.requireBoolean("isMinikube");
 
@@ -118,8 +76,9 @@ import pulumi
 from pulumi_kubernetes.apps.v1 import Deployment
 from pulumi_kubernetes.core.v1 import Service
 
-# Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
-# running on minikube, and if so, create only services of type ClusterIP.
+# By default, minikube does not expose LoadBalancer services externally. You can either:
+# 1. Run `minikube tunnel` in a separate terminal (recommended), then set is_minikube to False.
+# 2. Set is_minikube to True to use ClusterIP with port-forwarding instead.
 config = pulumi.Config()
 is_minikube = config.require_bool("isMinikube")
 
@@ -372,15 +331,15 @@ package myproject;
 
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
-import com.pulumi.kubernetes.apps_v1.Deployment;
-import com.pulumi.kubernetes.apps_v1.DeploymentArgs;
-import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
-import com.pulumi.kubernetes.core_v1.*;
-import com.pulumi.kubernetes.core_v1.ServiceArgs;
-import com.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
-import com.pulumi.kubernetes.core_v1.inputs.*;
-import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
-import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.kubernetes.apps.v1.Deployment;
+import com.pulumi.kubernetes.apps.v1.DeploymentArgs;
+import com.pulumi.kubernetes.apps.v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.core.v1.*;
+import com.pulumi.kubernetes.core.v1.ServiceArgs;
+import com.pulumi.kubernetes.core.v1.enums.ServiceSpecType;
+import com.pulumi.kubernetes.core.v1.inputs.*;
+import com.pulumi.kubernetes.meta.v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs;
 import java.util.Map;
 
 public class App {
@@ -413,12 +372,9 @@ public class App {
                     .build())
                 .build());
 
-            var name = deployment.metadata()
-                .applyValue(m -> m.orElseThrow().name().orElse(""));
-
             var frontend = new Service("nginx", ServiceArgs.builder()
                 .metadata(ObjectMetaArgs.builder()
-                    .labels(deployment.spec().applyValue(spec -> spec.get().template().metadata().get().labels()))
+                    .labels(labels)
                     .build())
                 .spec(ServiceSpecArgs.builder()
                     .type(isMinikube ? ServiceSpecType.ClusterIP : ServiceSpecType.LoadBalancer)
@@ -431,15 +387,8 @@ public class App {
                     .build())
                 .build());
 
-            ctx.export("ip", isMinikube
-                ? frontend.spec().applyValue(spec -> spec.get().clusterIP())
-                : Output.tuple(frontend.status(), frontend.spec()).applyValue(t -> {
-                    var status = t.t1;
-                    var spec = t.t2;
-                    var ingress = status.get().loadBalancer().get().ingress().get(0);
-                    return ingress.ip().orElse(ingress.hostname().orElse(spec.get().clusterIP().get()));
-                })
-            );
+            // Export the service cluster IP (available for both ClusterIP and LoadBalancer types)
+            ctx.export("ip", frontend.spec().applyValue(spec -> spec.clusterIP().orElse("pending")));
         });
     }
 }
@@ -502,6 +451,165 @@ If you are currently using Minikube, set `isMinikube` to `true`, otherwise, set 
 $ pulumi config set isMinikube false
 ```
 
-Next, we'll deploy the changes.
+### Deploy the changes
+
+To deploy the changes, run `pulumi up` again:
+
+{{% choosable "os" "macos,linux" %}}
+
+```bash
+$ pulumi up
+```
+
+{{% /choosable %}}
+{{% choosable "os" "windows" %}}
+
+```powershell
+> pulumi up
+```
+
+{{% /choosable %}}
+
+Pulumi computes the minimally disruptive change to achieve the desired state described by the program.
+
+```
+Previewing update (dev):
+     Type                           Name            Plan
+     pulumi:pulumi:Stack            quickstart-dev
+ +   └─ kubernetes:core/v1:Service  nginx           create
+
+Outputs:
+  + ip  : "10.96.0.0"
+  - name: "nginx-bec13562"
+
+Resources:
+    + 1 to create
+    2 unchanged
+
+Do you want to perform this update?
+> yes
+  no
+  details
+```
+
+Select `yes` to proceed. Pulumi will create the new service resource:
+
+```
+Do you want to perform this update? yes
+Updating (dev):
+     Type                           Name            Status
+     pulumi:pulumi:Stack            quickstart-dev
+ +   └─ kubernetes:core/v1:Service  nginx           created (10s)
+
+Outputs:
+  + ip  : "10.110.183.208"
+  - name: "nginx-bec13562"
+
+Resources:
+    + 1 created
+    2 unchanged
+
+Duration: 12s
+```
+
+### Verify the deployment
+
+View the `ip` [stack output](/docs/concepts/stack#outputs) from the NGINX service:
+
+{{% choosable "os" "macos,linux" %}}
+
+```bash
+$ pulumi stack output ip
+```
+
+{{% /choosable %}}
+{{% choosable "os" "windows" %}}
+
+```powershell
+> pulumi stack output ip
+```
+
+{{% /choosable %}}
+
+{{% notes type="info" %}}
+**If using Minikube:** You have two options to access your service:
+
+### Option 1: Use `minikube tunnel` (recommended)
+
+Minikube can provide LoadBalancer support via the `minikube tunnel` command. In a separate terminal, run:
+
+```bash
+$ minikube tunnel
+```
+
+This assigns an external IP to LoadBalancer services. With the tunnel running, you can set `isMinikube` to `false` and access your service via the external IP. Note that `minikube tunnel` may require administrator/sudo privileges.
+
+### Option 2: Use port forwarding
+
+Alternatively, set `isMinikube` to `true` and use port forwarding:
+
+```bash
+$ kubectl get service
+NAME             TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
+kubernetes       ClusterIP   10.96.0.1        <none>        443/TCP   44h
+nginx-9e5d5cd4   ClusterIP   10.103.199.118   <none>        80/TCP    6m47s
+```
+
+The assigned name for this particular nginx service is `nginx-9e5d5cd4`; yours will be different. In a new terminal window, run:
+
+```bash
+$ kubectl port-forward service/nginx-9e5d5cd4 8080:80
+Forwarding from 127.0.0.1:8080 -> 80
+Forwarding from [::1]:8080 -> 80
+```
+
+{{% /notes %}}
+
+You can curl NGINX to verify it is running:
+
+{{% choosable "os" "macos,linux" %}}
+
+```bash
+$ $(pulumi config get isMinikube) && curl "http://localhost:8080" || curl $(pulumi stack output ip)
+```
+
+{{% /choosable %}}
+{{% choosable "os" "windows" %}}
+
+```powershell
+> if (pulumi config get isMinikube) { curl "http://localhost:8080" } else { curl $(pulumi stack output ip) }
+```
+
+{{% /choosable %}}
+
+Expected output:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+```
+
+Now that you have successfully updated your stack, you'll destroy the resources.
 
 {{< get-started-stepper >}}

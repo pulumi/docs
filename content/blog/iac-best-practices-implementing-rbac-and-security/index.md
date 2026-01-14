@@ -11,6 +11,8 @@ tags:
     - best-practices
     - rbac
     - security
+    - iac-best-practices
+series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-rbac-and-security/
 ---
@@ -110,7 +112,7 @@ Finally, Pulumi recommends **allowing users to create their own stacks.** Otherw
 
 Zephyr's RBAC implementation in Pulumi Cloud is represented in part by a diagram that you also saw earlier in this post:
 
-![A diagram illustrating how Zephyr set up role-based access control to their Pulumi stacks](stacks-and-teams.png)
+![A diagram illustrating how Zephyr set up role-based access control to their Pulumi stacks](security-stacks-teams.jpg)
 
 Zephyr set the organization default stack permission to Read. This enabled teams to read all stacks, and enabled the continued use of stack references without any additional configuration. Teams were created to grant "Stack editor" (also called "Stack write access") to stacks based on the overall organizational structure of the company. Thus, the Platform team gained access to the non-production `zephyr-infra` and `zephyr-k8s` stacks, while the Application team was given access to the non-production `zephyr-app` stacks. However, only members of the Production team were given access to the production stacks in all three projects, ensuring that access to update those stacks---and thus the actual resources running Zephyr's online store---remained relatively controlled.
 

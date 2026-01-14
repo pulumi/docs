@@ -2,7 +2,7 @@ import pulumi
 import pulumi_aws as aws
 import json
 
-bucket = aws.s3.BucketV2("content-bucket")
+bucket = aws.s3.Bucket("content-bucket")
 
 bucket_ownership = aws.s3.BucketOwnershipControls(
     "content-bucket",
@@ -10,13 +10,13 @@ bucket_ownership = aws.s3.BucketOwnershipControls(
     rule={"objectOwnership": "BucketOwnerPreferred"}
 )
 
-bucket_acl = aws.s3.BucketAclV2("content-bucket",
+bucket_acl = aws.s3.BucketAcl("content-bucket",
     bucket=bucket.bucket,
     acl="private",
     opts=pulumi.ResourceOptions(depends_on=[bucket_ownership]),
 )
 
-bucket_website = aws.s3.BucketWebsiteConfigurationV2(
+bucket_website = aws.s3.BucketWebsiteConfiguration(
     "content-bucket",
     bucket=bucket.id,
     index_document={"suffix": "index.html"},

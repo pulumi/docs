@@ -141,7 +141,7 @@ spec:
   destroyOnFinalize: true
 ```
 
-If we are using the `GitRepository` source along with GitHub, we can use Flux features like [WebHook Recievers](https://fluxcd.io/flux/guides/webhook-receivers/) to expose a webhook that GitHub can trigger on pushes so that updates will be pushed into Flux and the Pulumi Kubernetes Operator directly (instead of waiting to pull them):
+If we are using the `GitRepository` source along with GitHub, we can use Flux features like [WebHook Receivers](https://fluxcd.io/flux/guides/webhook-receivers/) to expose a webhook that GitHub can trigger on pushes so that updates will be pushed into Flux and the Pulumi Kubernetes Operator directly (instead of waiting to pull them):
 
 ```yaml
 ---

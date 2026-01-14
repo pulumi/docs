@@ -23,7 +23,7 @@ of minutes or hours. And AWS building block services frequently leave
 you to re-implement (and re-discover) best-practices instead of
 providing these as smart defaults.
 
-[Pulumi Crosswalk for AWS](/crosswalk/aws/) is a
+[Pulumi Crosswalk for AWS](/docs/iac/clouds/aws/guides/) is a
 new open source library of infrastructure-as-code components that make
 it easier to get from zero to production on AWS, easier to adopt AWS
 best practices by default, and easier to evolve your AWS infrastructure
@@ -303,11 +303,11 @@ deploy natively in the cloud will unlock creativity and empower
 developers to take advantage of more of the rich capabilities of AWS. We
 can't wait to see what you build with Crosswalk!
 
-Crosswalk for AWS is free and open source, and you can [get started today](/crosswalk/aws/).
+Crosswalk for AWS is free and open source, and you can [get started today](/docs/iac/clouds/aws/guides/).
 
 For more on Crosswalk for AWS see:
 
-- [Pulumi Crosswalk for AWS documentation](/crosswalk/aws/)
+- [Pulumi Crosswalk for AWS documentation](/docs/iac/clouds/aws/guides/)
 - [Get Started with Docker on AWS Fargate using Pulumi](/blog/get-started-with-docker-on-aws-fargate-using-pulumi/)
 - [Easy Serverless Apps and Infrastructure -- Real Events, Real Code](/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/)
 - [Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/)

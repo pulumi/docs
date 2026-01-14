@@ -11,6 +11,8 @@ tags:
     - serverless
     - AKS
     - devops
+    - azure-top-5
+series: azure-top-5
 ---
 
 The Azure cloud platform includes over 200 products and cloud services. Wherever you are in your Microsoft cloud engineering journey, you should be familiar with these top 5 cloud tasks that are essential building blocks commonly used to deploy applications and infrastructure to the Azure cloud.

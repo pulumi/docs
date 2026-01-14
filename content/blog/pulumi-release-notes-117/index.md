@@ -7,7 +7,7 @@ meta_desc: "Explore Pulumi's latest features including AI-assisted development w
 meta_image: meta.png
 authors:
     - arun-loganathan
-    - meagan-cojocar 
+    - meagan-cojocar
 tags:
     - features
     - release-notes
@@ -15,6 +15,10 @@ social:
     twitter: "Pulumi Releases Notes: AI-assisted IaC with our MCP Server, new cross-language components, registry expansion, ESC Rotated Secrets, and more! Check out all the new features we've shipped in the last two months!."
     linkedin: "Pulumi Release Notes are out! Take a look at the improvements we have shipped in the last two months across the Pulumi ecosystem! From AI-assisted IaC with our MCP Server to new cross-language components to powerful new capabilities in Pulumi ESC and Insights, these updates deliver on our commitment to making cloud management more powerful, accessible, and secure. Check out our latest release notes to see what's new!"
 ---
+
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
 
 We've been busy over the past two months, shipping significant enhancements across the Pulumi ecosystem. From major improvements to our core IaC platform with Azure Native V3 and cross-language Components to powerful new capabilities in Pulumi ESC and Insights, these updates deliver on our commitment to making cloud management more powerful, accessible, and secure. We're particularly excited about our AI integration through the MCP Server, enabling developers to work with infrastructure in a more intuitive, contextual way. Let's dive into the details of what's new.
 
@@ -76,15 +80,15 @@ We've optimized secrets performance in Pulumi, resulting in significantly faster
 
 ### Pulumi Kubernetes Operator 2.0
 
-The Pulumi Kubernetes Operator 2.0 is now generally available, bringing advanced automation capabilities for managing Pulumi stacks within Kubernetes clusters. The new version includes a completely rewritten, faster codebase with enhanced reconciliation logic, better error handling, and improved CRD management. Version 2.0 also adds critical features like automatic retry for temporary failures, fine-grained refresh control, idempotent updates, and advanced stack management capabilities. These improvements make the operator more reliable and powerful for managing infrastructure directly from your Kubernetes clusters. [Read the blog post](/blog/pko-2-0-ga/) or check out the [operator documentation](/docs/kubernetes/pulumi-kubernetes-operator/).
+The Pulumi Kubernetes Operator 2.0 is now generally available, bringing advanced automation capabilities for managing Pulumi stacks within Kubernetes clusters. The new version includes a completely rewritten, faster codebase with enhanced reconciliation logic, better error handling, and improved CRD management. Version 2.0 also adds critical features like automatic retry for temporary failures, fine-grained refresh control, idempotent updates, and advanced stack management capabilities. These improvements make the operator more reliable and powerful for managing infrastructure directly from your Kubernetes clusters. [Read the blog post](/blog/pko-2-0-ga/) or check out the [operator documentation](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/).
 
 ### Java SDK 1.0
 
-The Pulumi Java SDK is now generally available with its 1.0 release, providing first-class support for Java in Pulumi's multi-language ecosystem. The GA release includes feature parity with other Pulumi languages, improved documentation, enhanced type safety, and support for the complete Pulumi programming model. We've also expanded the Java SDK to support all current LTS versions and ensure smooth interoperability with the broader Java ecosystem. This milestone makes Pulumi an excellent choice for Java teams looking to manage their infrastructure using their preferred language. [Read the blog post](/blog/java-1-0/) or check out the [Java getting started guide](/docs/languages/java/).
+The Pulumi Java SDK is now generally available with its 1.0 release, providing first-class support for Java in Pulumi's multi-language ecosystem. The GA release includes feature parity with other Pulumi languages, improved documentation, enhanced type safety, and support for the complete Pulumi programming model. We've also expanded the Java SDK to support all current LTS versions and ensure smooth interoperability with the broader Java ecosystem. This milestone makes Pulumi an excellent choice for Java teams looking to manage their infrastructure using their preferred language. [Read the blog post](/blog/java-1-0/) or check out the [Java getting started guide](/docs/iac/languages-sdks/java/).
 
 ### Pulumi Copilot in VSCode
 
-Pulumi Copilot is now available in Visual Studio Code, bringing AI-powered assistance directly to your infrastructure development environment. The VSCode extension helps you write, understand, and debug Pulumi code with inline explanations, transformation suggestions, and code generation capabilities. Copilot can also assist with converting between Pulumi languages and translating from other IaC tools like Terraform and CloudFormation. This integration makes it easier to learn Pulumi, accelerate your infrastructure development, and solve complex configuration challenges. [Read the blog post](/blog/copilot-in-vscode/) or [install the extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-ai) today.
+Pulumi Copilot is now available in Visual Studio Code, bringing AI-powered assistance directly to your infrastructure development environment. The VSCode extension helps you write, understand, and debug Pulumi code with inline explanations, transformation suggestions, and code generation capabilities. Copilot can also assist with converting between Pulumi languages and translating from other IaC tools like Terraform and CloudFormation. This integration makes it easier to learn Pulumi, accelerate your infrastructure development, and solve complex configuration challenges. [Read the blog post](/blog/copilot-in-vscode/) or [install the extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot) today.
 
 ### Autonaming Configuration
 
@@ -100,12 +104,11 @@ Address the persistent challenge of static, long-lived credentials with the new 
 
 Securely inject secrets and configuration directly into your GitHub Actions workflows with the new [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action). This action lets you dynamically inject values from your Pulumi ESC environments as needed during CI/CD runs, eliminating the need to store static, long-lived credentials within GitHub and reducing secret sprawl. Leverage Pulumi ESC's automatic secret rotation capabilities and run ESC commands directly within your workflows for streamlined environment management. Combine this action with [pulumi/auth-actions](https://github.com/marketplace/actions/pulumi-auth-action) for seamless, tokenless authentication to Pulumi Cloud using OIDC, further enhancing security. [Read the blog post](/blog/announcing-pulumi-esc-github-action/).
 
-
 ## Pulumi Insights
 
 ### Enforce Policy as Code on Discovered Resources
 
-Extend the governance reach of Pulumi [Policy as Code](/docs/iac/using-pulumi/crossguard/) beyond IaC-managed resources to encompass your entire cloud environment with a powerful new capability in [Pulumi Insights](/docs/insights/). You can now automatically apply your existing policies to resources discovered by Pulumi Insights, regardless of how they were created. Simply link your [Insights Accounts](/docs/insights/accounts/) (representing cloud provider integrations) to your Policy Groups alongside your stacks. Pulumi will then evaluate all resources within those accounts against your defined policies, surfacing violations centrally. This allows you to write policies once and apply them universally across both IaC and discovered resources, dramatically simplifying how you maintain consistent security and compliance standards at scale across AWS, Azure, OCI, and Kubernetes. [Read the blog post](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/). 
+Extend the governance reach of Pulumi [Policy as Code](/docs/iac/using-pulumi/crossguard/) beyond IaC-managed resources to encompass your entire cloud environment with a powerful new capability in [Pulumi Insights](/docs/insights/). You can now automatically apply your existing policies to resources discovered by Pulumi Insights, regardless of how they were created. Simply link your [Insights Accounts](/docs/insights/accounts/) (representing cloud provider integrations) to your Policy Groups alongside your stacks. Pulumi will then evaluate all resources within those accounts against your defined policies, surfacing violations centrally. This allows you to write policies once and apply them universally across both IaC and discovered resources, dramatically simplifying how you maintain consistent security and compliance standards at scale across AWS, Azure, OCI, and Kubernetes. [Read the blog post](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/).
 
 ## Wrap up
 

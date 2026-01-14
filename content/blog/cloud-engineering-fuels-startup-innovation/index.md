@@ -61,6 +61,7 @@ Panther Labs helps modern security teams build world-class detection and respons
 - Central visibility across hundreds of single-tenant customer deployments, including a history of when changes were made and what changed for each account.
 
 [Read the full case study→](/case-studies/panther-labs)
+
 ## WhyLabs
 
 WhyLabs helps organizations run their AI applications with certainty by monitoring them for problems such as data drift and model degradation. Founded by alumni of AWS, the company began building their platform on AWS and used AWS-provided tools to manage their infrastructure. However, the WhyLabs team needed a platform that could handle the complexity of their modern cloud architectures and would set them up for success when they’re ready to adopt multi-cloud deployments. The team also wanted a platform that integrated with the modern development workflows used by WhyLabs’ developers, who have a software engineering-driven culture of tight collaboration and shared responsibility for infrastructure. By migrating to the Pulumi Cloud Engineering Platform, WhyLabs engineers can continuously and reliably ship new features faster than before for improved time-to-market. Pulumi enabled WhyLabs to adopt cloud engineering best practices out-of-the-box, including building infrastructure as code with general-purpose languages like TypeScript, versioning and reviewing infrastructure code through a code review process, and delivering infrastructure through its existing GitLab CI/CD pipeline using Pulumi’s integrations.
@@ -87,7 +88,7 @@ Fauna provides a flexible, developer-friendly, transactional database delivered 
 - Increased the reliability and quality of infrastructure using existing code review processes and running unit tests.
 - Controlled access to its infrastructure using Pulumi’s SSO integration with its identity provider service.
 
-[Read Fauna's blog post→](https://fauna.com/blog/building-faunas-gdpr-compliant-distributed-and-scalable-database)
+[Read Fauna's blog post→](https://web.archive.org/web/20250516064352/https://fauna.com/blog/building-faunas-gdpr-compliant-distributed-and-scalable-database)
 
 ## Summary
 

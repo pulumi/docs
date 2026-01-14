@@ -141,7 +141,7 @@ values:
 
 The variables defined under the `environmentVariables` parameter above are the same environment variables that the AWS CLI uses if you were authenticating with something like the `aws configure` command.  What the above configuration is doing is dynamically generating the credentials and projecting those credential values into your local environment. From there, the AWS CLI picks up those environment variables and runs the designated command. You can find out more about this provider definition and how it works in the Pulumi ESC documentation for [the AWS provider](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#example) as well as the documentation for [projecting environment variables](https://www.pulumi.com/docs/pulumi-cloud/esc/environments/#projecting-environment-variables).
 
-Scroll to the bottom of the page and click **Save**.
+Click **Save**.
 
 {{< video title="Adding configuration to Pulumi ESC environment" src="https://www.pulumi.com/uploads/add-environment-config.mp4" autoplay="true" loop="true" >}}
 

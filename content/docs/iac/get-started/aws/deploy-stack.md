@@ -7,14 +7,13 @@ weight: 5
 menu:
     iac:
         name: Deploy
-        parent: aws-b-get-started
+        parent: aws-get-started
         weight: 5
 
 aliases:
-- /docs/iac/get-started/aws/b/deploy-stack/
-- /docs/quickstart/aws/deploy-stack/
-- /docs/get-started/aws/deploy-stack/
-- /docs/clouds/aws/get-started/deploy-stack/
+    - /docs/iac/get-started/aws/b/deploy-stack/
+    - /docs/quickstart/aws/deploy-stack/
+    - /docs/clouds/aws/get-started/deploy-stack/
 ---
 
 ## Deploy to AWS
@@ -43,7 +42,7 @@ Previewing update (dev):
 
      Type                 Name            Plan
  +   pulumi:pulumi:Stack  quickstart-dev  create
- +   └─ aws:s3:BucketV2   my-bucket       create
+ +   └─ aws:s3:Bucket     my-bucket       create
 
 Resources:
     + 2 to create
@@ -67,7 +66,7 @@ Updating (dev):
 
      Type                 Name            Status
  +   pulumi:pulumi:Stack  quickstart-dev  created (4s)
- +   └─ aws:s3:BucketV2   my-bucket       created (2s)
+ +   └─ aws:s3:Bucket     my-bucket       created (2s)
 
 Outputs:
     bucketName: "my-bucket-58ce361"
@@ -90,7 +89,7 @@ the contents of your new bucket -- which of course will be empty:
 
 {{% choosable os "linux,macos" %}}
 
-{{% choosable language "javascript,typescript,go,csharp,java,yaml" %}}
+{{% choosable language "typescript,go,csharp,java,yaml" %}}
 
 ```bash
 $ aws s3 ls s3://$(pulumi stack output bucketName)
@@ -110,7 +109,7 @@ $ aws s3 ls s3://$(pulumi stack output bucket_name)
 
 {{% choosable os "windows" %}}
 
-{{% choosable language "javascript,typescript,go,csharp,java,yaml" %}}
+{{% choosable language "typescript,go,csharp,java,yaml" %}}
 
 ```powershell
 $ aws s3 ls ("s3://" + (pulumi stack output bucketName))
@@ -130,9 +129,7 @@ $ aws s3 ls ("s3://" + (pulumi stack output bucket_name))
 
 ### View your update on Pulumi Cloud
 
-If you are logged into [Pulumi Cloud](/docs/pulumi-cloud), you'll see "View Live" hyperlinks in the CLI output during your
-update. These go to [a page](https://app.pulumi.com) with detailed information about your stack including resources,
-configuration, a full history of updates, and more. Click on it to check it out:
+If you are logged into [Pulumi Cloud](/docs/pulumi-cloud), you'll see "View Live" hyperlinks in the CLI output during your update. These go to [a page](https://app.pulumi.com) with detailed information about your stack including resources, configuration, a full history of updates, and more. Navigate to it to review the details of your update:
 
 <a href="/images/getting-started/console-update.png" target="_blank">
     <img src="/images/getting-started/console-update.png" alt="A stack update with console output, as shown in the Pulumi Service" />

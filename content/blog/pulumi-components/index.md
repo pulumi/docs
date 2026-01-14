@@ -11,7 +11,7 @@ authors:
     - mikhail-shilkov
     - meagan-cojocar
 tags:
-    - releases 
+    - releases
     - platform-teams
     - features
     - iac
@@ -137,9 +137,9 @@ class SecureBucket(pulumi.ComponentResource):
     bucket_name: pulumi.Output[str]
     def __init__(self, name: str, args: SecureBucketArgs, opts: Optional[pulumi.ResourceOptions] = None):
         super().__init__('mycomponents:index:SecureBucket', name, {}, opts)
-        
+
         args = args or SecureBucketArgs()
-        
+
         # Create an S3 bucket with best practices by default
         bucket = aws.s3.BucketV2(
             f"{name}",
@@ -150,7 +150,7 @@ class SecureBucket(pulumi.ComponentResource):
             },
             opts=pulumi.ResourceOptions(parent=self)
         )
-        
+
         # Conditionally enable versioning
         if args.get("versioning", True):
             aws.s3.BucketVersioningV2(
@@ -161,7 +161,7 @@ class SecureBucket(pulumi.ComponentResource):
                 ),
                 opts=pulumi.ResourceOptions(parent=self)
             )
-            
+
         # Conditionally enable encryption
         if args.get("encryption", True):
             aws.s3.BucketServerSideEncryptionConfigurationV2(
@@ -174,9 +174,9 @@ class SecureBucket(pulumi.ComponentResource):
                 )],
                 opts=pulumi.ResourceOptions(parent=self)
             )
-            
+
         self.bucket_name = bucket.id
-        
+
         self.register_outputs({
             "bucketName": self.bucket_name
         })
@@ -218,13 +218,13 @@ namespace MyComponents
             : base("mycomponents:index:SecureBucket", name, opts)
         {
             args ??= new SecureBucketArgs();
-            
+
             // Create an S3 bucket with best practices by default
             var tags = new InputMap<string>
             {
                 { "ManagedBy", "Pulumi" }
             };
-            
+
             if (args.Tags != null)
             {
                 foreach (var tag in args.Tags)
@@ -290,7 +290,7 @@ namespace MyComponents
 package components
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -433,7 +433,7 @@ public class SecureBucket extends ComponentResource {
 
         // Conditionally enable encryption
         if (args.encryption() != Boolean.FALSE) {
-            new BucketServerSideEncryptionConfigurationV2(name + "-encryption", 
+            new BucketServerSideEncryptionConfigurationV2(name + "-encryption",
                     BucketServerSideEncryptionConfigurationV2Args.builder()
                             .bucket(bucket.id())
                             .rules(List.of(BucketServerSideEncryptionConfigurationV2RuleArgs.builder()
@@ -476,7 +476,7 @@ public class SecureBucketArgs extends ResourceArgs {
     @Import(name="versioning")
     private Boolean versioning;
 
-    public Boolean versioning() {   
+    public Boolean versioning() {
         return this.versioning;
     }
 
@@ -707,7 +707,7 @@ public class App {
 
 {{% choosable language yaml %}}
 
-No separate entry point is required for YAML. 
+No separate entry point is required for YAML.
 
 {{% /choosable %}}
 
@@ -800,7 +800,7 @@ return await Deployment.RunAsync(() =>
         { "Environment", "production" },
         { "Department", "engineering" }
     };
-    
+
     var secureBucket = new SecureBucket("my-secure-bucket", new SecureBucketArgs
     {
         bucketName = "my-company-secure-assets",
@@ -832,7 +832,7 @@ func main() {
 		tags := make(map[string]string)
 		tags["Environment"] = "production"
 		tags["Department"] = "engineering"
-		
+
 		secureBucket, err := secure.NewSecureBucket(ctx, "my-secure-bucket", &secure.SecureBucketArgs{
 			BucketName: pulumi.String("my-company-secure-assets"),
 			Tags:       pulumi.ToStringMap(tags),
@@ -840,7 +840,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		
+
 		ctx.Export("bucketName", secureBucket.BucketName)
 		return nil
 	})
@@ -868,14 +868,14 @@ public class App {
                 "Environment", "production",
                 "Department", "engineering"
             );
-            
+
             var bucketArgs = SecureBucketArgs.builder()
                 .bucketName("my-company-secure-assets")
                 .tags(tags)
                 .build();
-                
+
             var secureBucket = new SecureBucket("my-secure-bucket", bucketArgs);
-            
+
             ctx.export("bucketName", secureBucket.bucketName());
         });
     }
@@ -893,7 +893,7 @@ description: A stack that uses SecureBucket component
 
 packages:
   secure-s3-component: github.com/myorg/secure-s3-component@v1.0.0
-  
+
 resources:
   secureBucket:
     type: secure-s3-component:SecureBucket

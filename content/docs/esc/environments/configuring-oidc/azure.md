@@ -8,7 +8,7 @@ menu:
   esc:
     name: Azure
     parent: esc-configuring-oidc
-    weight: 1
+    weight: 2
 ---
 
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Azure. OIDC in Azure uses [workload identity federation](https://learn.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation) to access Azure resources via a Microsoft Entra App. Access to the temporary credentials is authorized using federated credentials that validate the contents of the OIDC token issued by the Pulumi Cloud.
@@ -87,7 +87,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
           fn::open::azure-login:
             clientId: <your-client-id>
             tenantId: <your-tenant-id>
-            subscriptionId: /subscriptions/<your-subscription-id>
+            subscriptionId: <your-subscription-id>
             oidc: true
       environmentVariables:
         ARM_USE_OIDC: 'true'
@@ -98,7 +98,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
     ```
 
 6. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps.
-7. Scroll to the bottom of the page and click **Save**.
+7. Click **Save**.
 
 You can validate that your configuration is working by running either of the following:
 
@@ -133,7 +133,7 @@ To learn more about how to set up and use the various providers in Pulumi ESC, p
 
 ## Subject claim customization
 
-You can [customize](/docs/esc/environments/customizing-oidc-claims/) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions
+You can [customize](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions
 
 This is done by configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
 

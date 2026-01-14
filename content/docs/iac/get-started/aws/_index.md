@@ -8,7 +8,7 @@ menu:
         name: AWS
         parent: iac-get-started
         weight: 2
-        identifier: aws-b-get-started
+        identifier: aws-get-started
 
 aliases:
     - /docs/iac/get-started/aws/b/
@@ -27,40 +27,40 @@ Complete this step-by-step tutorial to deploy an AWS S3 bucket-based website usi
 
 First, choose your language and ensure you've performed any prerequisites:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language "typescript,javascript" %}}
+{{% choosable language "typescript" %}}
 
-* An <a href="https://aws.amazon.com/free" target=_blank>AWS account</a>
-* <a href="https://nodejs.org/en/download" target=_blank>Node.js</a> and <a href="https://www.npmjs.com/package/npm" target=_blank>npm</a> installed locally
+* An <a href="https://aws.amazon.com/free" target="_blank">AWS account</a>
+* <a href="https://nodejs.org/en/download" target="_blank">Node.js</a> and <a href="https://www.npmjs.com/package/npm" target="_blank">npm</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "python" %}}
 
 * An <a href="https://aws.amazon.com/free" target="_blank">AWS account</a>
-* <a href="https://www.python.org/downloads/" target=_blank>Python</a> and <a href="https://pip.pypa.io/en/stable/installation/">pip</a>, <a href="https://python-poetry.org/docs/" target=_blank>Poetry</a> or <a href="https://docs.astral.sh/uv/getting-started/installation/" target=_blank>uv</a> installed locally
+* <a href="https://www.python.org/downloads/" target="_blank">Python</a> and <a href="https://pip.pypa.io/en/stable/installation/">pip</a>, <a href="https://python-poetry.org/docs/" target="_blank">Poetry</a> or <a href="https://docs.astral.sh/uv/getting-started/installation/" target="_blank">uv</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "go" %}}
 
 * An <a href="https://aws.amazon.com/free" target="_blank">AWS account</a>
-* <a href="https://go.dev/doc/install" target=_blank>Go</a> installed locally
+* <a href="https://go.dev/doc/install" target="_blank">Go</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "csharp" %}}
 
 * An <a href="https://aws.amazon.com/free" target="_blank">AWS account</a>
-* <a href="https://dotnet.microsoft.com/en-us/download/dotnet" target=_blank>.NET</a> installed locally
+* <a href="https://dotnet.microsoft.com/en-us/download/dotnet" target="_blank">.NET</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "java" %}}
 
 * An <a href="https://aws.amazon.com/free" target="_blank">AWS account</a>
-* <a href="https://www.oracle.com/java/technologies/downloads/" target=_blank>Java 11+</a> and <a href="https://maven.apache.org/install.html" target=_blank>Maven 3.6.1+</a> installed locally
+* <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">Java 11+</a> and <a href="https://maven.apache.org/install.html" target="_blank">Maven 3.6.1+</a> installed locally
 
 {{% /choosable %}}
 

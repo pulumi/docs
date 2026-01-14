@@ -25,7 +25,7 @@ weight: 999
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
   In Pulumi, resources represent the fundamental units that make up your infrastructure, such as virtual machines, networks, storage, and databases. A resource is used to define and manage an infrastructure object in your Pulumi configuration.
-  
+
   In this tutorial, you will create a simple Nginx server hosted on Kubernetes. You will then refer to documentation in the Pulumi Registry to create a service to make the Nginx deployment accessible.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
@@ -119,7 +119,7 @@ Then replace the default code with the following code snippet to scaffold your p
 
         // Create a service
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="72" to="74" >}}  
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="72" to="74" >}}
 ```
 
 {{% /choosable %}}
@@ -222,7 +222,7 @@ The first resource you will create will be a Kubernetes deployment. The [Pulumi 
 
         // Create a service
 
-{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="72" to="74" >}}  
+{{< example-program-snippet path="k8s-deployment-service-for-minikube" language="go" from="72" to="74" >}}
 ```
 
 {{% /choosable %}}
@@ -267,7 +267,7 @@ The property defined in your `kubernetes.apps/v1.Deployment` resource is:
 
 ## Deploy your resources
 
-Now run the `pulumi up` command to preview and deploy the resouces you've just defined in your project.
+Now run the `pulumi up` command to preview and deploy the resources you've just defined in your project.
 
 ```bash
 $ pulumi up -y
@@ -349,7 +349,7 @@ Commercial support is available at
 </html>
 ```
 
-You should be greated with the HTML code of the Nginx landing page as shown above.
+You should be greeted with the HTML code of the Nginx landing page as shown above.
 
 ### View complete solution
 

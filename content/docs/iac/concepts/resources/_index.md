@@ -8,7 +8,7 @@ menu:
     iac:
         name: Resources
         parent: iac-concepts
-        weight: 3
+        weight: 50
         identifier: iac-concepts-resources
     concepts:
         identifier: resources
@@ -22,30 +22,30 @@ aliases:
     // The following list maps the headings that previously appeared on this page to their new locations.
     // We use this list to determine whether we can redirect visitors from the old content to the new.
     var redirects = {
-        "#options": "/docs/concepts/options/",
-        "#additionalsecretoutputs": "/docs/concepts/options/additionalsecretoutputs",
-        "#aliases": "/docs/concepts/options/aliases",
-        "#customtimeouts": "/docs/concepts/options/customtimeouts",
-        "#deletebeforereplace": "/docs/concepts/options/deletebeforereplace",
-        "#dependson": "/docs/concepts/options/dependson",
-        "#ignorechanges": "/docs/concepts/options/ignorechanges",
-        "#import": "/docs/concepts/options/import",
-        "#parent": "/docs/concepts/options/parent",
-        "#protect": "/docs/concepts/options/protect",
-        "#provider": "/docs/concepts/options/provider",
-        "#replaceonchanges": "/docs/concepts/options/replaceonchanges",
-        "#transformations": "/docs/concepts/options/transformations",
-        "#transforms": "/docs/concepts/options/transforms",
-        "#version": "/docs/concepts/options/version",
+        "#options": "/docs/iac/concepts/resources/options/",
+        "#additionalsecretoutputs": "/docs/iac/concepts/resources/options/additionalsecretoutputs",
+        "#aliases": "/docs/iac/concepts/resources/options/aliases",
+        "#customtimeouts": "/docs/iac/concepts/resources/options/customtimeouts",
+        "#deletebeforereplace": "/docs/iac/concepts/resources/options/deletebeforereplace",
+        "#dependson": "/docs/iac/concepts/resources/options/dependson",
+        "#ignorechanges": "/docs/iac/concepts/resources/options/ignorechanges",
+        "#import": "/docs/iac/concepts/resources/options/import",
+        "#parent": "/docs/iac/concepts/resources/options/parent",
+        "#protect": "/docs/iac/concepts/resources/options/protect",
+        "#provider": "/docs/iac/concepts/resources/options/provider",
+        "#replaceonchanges": "/docs/iac/concepts/resources/options/replaceonchanges",
+        "#transformations": "/docs/iac/concepts/resources/options/transformations",
+        "#transforms": "/docs/iac/concepts/resources/options/transforms",
+        "#version": "/docs/iac/concepts/resources/options/version",
         "#components": "/docs/concepts/resources/components",
         "#authoring-a-new-component-resource": "/docs/concepts/resources/components/#authoring-a-new-component-resource",
         "#creating-child-resources": "/docs/concepts/resources/components/#creating-child-resources",
         "#registering-component-outputs": "/docs/concepts/resources/components/#registering-component-outputs",
         "#inheriting-resource-providers": "/docs/concepts/resources/components/#inheriting-resource-providers",
-        "#providers": "/docs/concepts/resources/providers",
-        "#default-provider-configuration": "/docs/concepts/resources/providers/#default-provider-configuration",
-        "#explicit-provider-configuration": "/docs/concepts/resources/providers/#explicit-provider-configuration",
-        "#dynamicproviders": "/docs/concepts/resources/dynamic-providers",
+        "#providers": "/docs/iac/concepts/providers",
+        "#default-provider-configuration": "/docs/iac/concepts/providers/#default-provider-configuration",
+        "#explicit-provider-configuration": "/docs/iac/concepts/providers/#explicit-provider-configuration",
+        "#dynamicproviders": "/docs/iac/concepts/providers/dynamic-providers",
         "#names": "/docs/concepts/resources/names",
         "#autonaming": "/docs/concepts/resources/names/#autonaming",
         "#urns": "/docs/concepts/resources/names/#urns",
@@ -67,15 +67,8 @@ All infrastructure resources are described by one of two subclasses of the `Reso
 
 A resource’s desired state is declared by constructing an instance of the resource:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let res = new Resource(name, args, options);
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -151,13 +144,13 @@ The following topics provide more details on the core concepts for working with 
         <p>Learn what a component resource is, how to author a new component resource, how to create child resources, and more.</p>
     </div>
     <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/concepts/resources/providers/"><i class="fas fa-server pr-2"></i>Providers</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/providers/"><i class="fas fa-server pr-2"></i>Providers</a></h3>
         <p>Learn how a resource provider handles communications with a cloud service to create, read, update, and delete the resources you define in your Pulumi programs.</p>
     </div>
 </div>
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/concepts/resources/dynamic-providers/"><i class="fas fa-file-alt pr-2"></i>Dynamic Providers</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/providers/dynamic-providers/"><i class="fas fa-file-alt pr-2"></i>Dynamic Providers</a></h3>
         <p>Learn how to use dynamic providers and use cases for them.</p>
     </div>
     <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">

@@ -26,13 +26,11 @@ At a minimum, networking must be configured for deployment of an EKS cluster.
 
 AWS exposes a [Virtual Private Cloud][aws-vpc] API which can be used to create
 resources into a virtual network. With the VPC you can define the region's [Availability
-Zones][aws-azs] to use, alongwith [Route Tables][aws-rts], [Subnets][aws-subnets], [Internet Gateways][aws-igw],
+Zones][aws-azs] to use, along with [Route Tables][aws-rts], [Subnets][aws-subnets], [Internet Gateways][aws-igw],
 [NAT Gateways][aws-ngw] and [Security Groups][aws-sgs].
 
-The full code for this stack is on [GitHub][gh-repo-stack].
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/aws/02-managed-infra).
 
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/02-managed-infra
 [crosswalk-aws]: /docs/clouds/aws/guides/
 [aws-managed-svcs]: https://aws.amazon.com/products/
 [aws-vpc]: https://aws.amazon.com/vpc/
@@ -42,7 +40,6 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [aws-igw]: https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
 [aws-ngw]: https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html
 [aws-sgs]: https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html
-<!-- markdownlint-enable url -->
 
 {{% /choosable %}}
 
@@ -53,12 +50,12 @@ support and complement Kubernetes clusters and their workloads.
 
 At a minimum, networking must be configured for deployment of an AKS cluster.
 
-AWS exposes a [Virtual Network][azure-vpc] API which can be used to create
+Azure exposes a [Virtual Network][azure-vpc] API which can be used to create
 resources into a virtual network. With the VPC you can define
-use, alongwith [Route Tables][azure-rts], [Subnets][azure-subnets],
+use, along with [Route Tables][azure-rts], [Subnets][azure-subnets],
 [Security Groups][azure-sgs] and [VPN Gateways][azure-vpn-gw].
 
-The full code for this stack is on [GitHub][gh-repo-stack].
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/azure/02-managed-infra).
 
 [azure-managed-svcs]: https://azure.microsoft.com/en-us/services/
 [azure-vpc]: https://azure.microsoft.com/en-us/services/
@@ -66,7 +63,6 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [azure-rts]: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview#user-defined
 [azure-sgs]: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-vnet-plan-design-arm#security
 [azure-vpn-gw]: https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/02-managed-infra
 
 {{% /choosable %}}
 
@@ -75,24 +71,21 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 Google Cloud has a catalog of [managed infrastructure][gcp-managed-svcs] services that
 support and complement Kubernetes clusters and their workloads.
 
-At a minimum, networking must be configured for deployment of an EKS cluster.
+At a minimum, networking must be configured for deployment of a GKE cluster.
 
 Google Cloud exposes a [Virtual Private Cloud][gcp-vpc] API which can be used to create
 resources into a virtual network. With the VPC you can define the region to use,
-alongwith [Routes][gcp-rts], [Subnets][gcp-subnets], [Forwarding Rules][gcp-fwd-rules],
+along with [Routes][gcp-rts], [Subnets][gcp-subnets], [Forwarding Rules][gcp-fwd-rules],
 and [Firewall Rules][gcp-fw-rules].
 
-The full code for this stack is on [GitHub][gh-repo-stack].
+The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/gcp/02-managed-infra).
 
-<!-- markdownlint-disable url -->
 [gcp-managed-svcs]: https://cloud.google.com/products/
 [gcp-subnets]: https://cloud.google.com/vpc/docs/vpc#vpc_networks_and_subnets
 [gcp-fwd-rules]: https://cloud.google.com/compute/docs/protocol-forwarding
 [gcp-vpc]: https://cloud.google.com/vpc/docs/overview
 [gcp-rts]: https://cloud.google.com/vpc/docs/routes
 [gcp-fw-rules]: https://cloud.google.com/vpc/docs/firewalls
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/02-managed-infra
-<!-- markdownlint-enable url -->
 
 {{% /choosable %}}
 

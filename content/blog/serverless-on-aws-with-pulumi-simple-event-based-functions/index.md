@@ -83,7 +83,7 @@ etc. etc.
 Now, while data should be the start of how you interact with system, it
 shouldn't be the end. Toward that goal, Pulumi makes it possible to
 simply compose and connect these resources in a more natural fashion. By
-just adding our own components, and leveraging what programing languages
+just adding our own components, and leveraging what programming languages
 can already do, we can make it possible to simplify the above down to:
 
 ```typescript

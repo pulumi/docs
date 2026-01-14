@@ -9,6 +9,8 @@ authors:
 tags:
     - azure
     - static websites
+    - azure-top-5
+series: azure-top-5
 ---
 
 Static web applications are a popular way to publish websites. There are many reasons for adopting static web applications, including speed, security, version control, scalability, and reduced cost.

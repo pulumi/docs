@@ -9,14 +9,14 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/cloudfront"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/cloudfront"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		bucket, err := s3.NewBucketV2(ctx, "content-bucket", nil)
+		bucket, err := s3.NewBucket(ctx, "content-bucket", nil)
 		if err != nil {
 			return err
 		}
@@ -32,8 +32,8 @@ func main() {
 			return err
 		}
 
-		_, err = s3.NewBucketAclV2(ctx, "content-bucket",
-			&s3.BucketAclV2Args{
+		_, err = s3.NewBucketAcl(ctx, "content-bucket",
+			&s3.BucketAclArgs{
 				Bucket: bucket.Bucket,
 				Acl:    pulumi.String("private"),
 			}, pulumi.DependsOn([]pulumi.Resource{bucketOwnership}))
@@ -41,13 +41,13 @@ func main() {
 			return err
 		}
 
-		_, err = s3.NewBucketWebsiteConfigurationV2(ctx, "content-bucket",
-			&s3.BucketWebsiteConfigurationV2Args{
+		_, err = s3.NewBucketWebsiteConfiguration(ctx, "content-bucket",
+			&s3.BucketWebsiteConfigurationArgs{
 				Bucket: bucket.Bucket,
-				IndexDocument: s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
+				IndexDocument: s3.BucketWebsiteConfigurationIndexDocumentArgs{
 					Suffix: pulumi.String("index.html"),
 				},
-				ErrorDocument: s3.BucketWebsiteConfigurationV2ErrorDocumentArgs{
+				ErrorDocument: s3.BucketWebsiteConfigurationErrorDocumentArgs{
 					Key: pulumi.String("404.html"),
 				},
 			})

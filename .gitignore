@@ -16,16 +16,15 @@ node_modules
 .idea/
 *.iml
 
-.vscode
-
 # We use yarn instead of npm. If someone happens to use npm, a
 # package-lock.json file will be created, which is redundant with
 # yarn's yarn.lock file. We ignore package-lock.json to prevent
 # it from being added mistakenly.
 /package-lock.json
 
-# Python's virtual env dir.
+# Python virtual env dirs.
 venv/
+.venv/
 
 # Pipenv
 .env
@@ -40,6 +39,10 @@ Pipfile.lock
 # directory in development in order to be able to use livereload.
 static/css/styles.*.css
 static/js/bundle.min.*.js
+
+# Ignore webpack-generated assets from the build process.
+/assets/css/
+/assets/js/
 
 # Ignore Cypress-generated content.
 cypress/videos
@@ -67,6 +70,21 @@ _vendor/
 
 # VScode solution files.
 *.sln
+
+#Claude settings
 **/.claude/settings.local.json
 
-.claude
+# mise local
+mise.local.toml
+
+# alias verification outputs
+scripts/alias-verification/aliases-correct.txt
+scripts/alias-verification/aliases-missing.txt
+scripts/alias-verification/aliases-suspicious.txt
+scripts/alias-verification/deletes.txt
+scripts/alias-verification/renames.txt
+scripts/alias-verification/fixes-data.txt
+scripts/alias-verification/historical-aliases-correct.txt
+scripts/alias-verification/historical-aliases-missing.txt
+scripts/alias-verification/historical-aliases-report.txt
+scripts/alias-verification/historical-fixes.json

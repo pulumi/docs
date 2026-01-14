@@ -314,6 +314,8 @@ configuration file:
 pulumi:disable-default-providers: ["*"]
 ```
 
+To add the `disable-default-providers` configuration setting to your stack configuration file using the Pulumi CLI or the Automation API SDK, please see the [Resource providers](/docs/iac/concepts/resources/providers/#disabling-default-providers) page.
+
 Now that you can [disable the default provider][dis-def-prov], you don’t have to worry about all of the possible unexpected consequences
 accidentally relying on your system configuration. We can’t wait to find out what you’ll build next! If you want to have
 an impact on our roadmap, you can go to our [public roadmap][roadmap] and vote on issues with the rest of the community.

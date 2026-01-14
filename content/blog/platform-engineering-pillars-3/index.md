@@ -9,6 +9,7 @@ authors:
 tags:
     - platform-engineering
     - platform-engineering-pillars
+series: platform-engineering-pillars
 social:
     twitter: >
             Self-Service Infrastructure: the key to scaling platform engineering! Learn how to break free from approval bottlenecks, implement modular abstractions, and create two-level architectures that empower developers while maintaining governance. Stop fighting manual processes and start building platforms that scale.

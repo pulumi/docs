@@ -123,7 +123,6 @@ tbody tr td:first-child {
 | [Amazon MQ](https://aws.amazon.com/amazon-mq/) | Managed ActiveMQ message broker | | [mq](/registry/packages/aws/api-docs/mq/) |
 | [Amazon Managed Streaming for Apache Kafka (MSK)](https://aws.amazon.com/msk/) | Managed Apache Kafka service | | [msk](/registry/packages/aws/api-docs/msk/) |
 | [Amazon Neptune](https://aws.amazon.com/neptune/) | Fast, reliable graph database | | [neptune](/registry/packages/aws/api-docs/neptune/) |
-| [AWS OpsWorks](https://aws.amazon.com/opsworks/) | Automate ops with Chef or Puppet | | [opsworks](/registry/packages/aws/api-docs/opsworks/) |
 | [AWS Organizations](https://aws.amazon.com/organizations/) | Central management of many accounts | | [organizations](/registry/packages/aws/api-docs/organizations/) |
 | [Amazon Pinpoint](https://aws.amazon.com/pinpoint/) | Engage customers | | [pinpoint](/registry/packages/aws/api-docs/pinpoint/) |
 | [AWS Resource Access Manager](https://aws.amazon.com/ram/) | Share AWS resources | | [ram](/registry/packages/aws/api-docs/ram/) |
@@ -139,7 +138,6 @@ tbody tr td:first-child {
 | [Amazon Simple Email Service (SES)](https://aws.amazon.com/ses/) | Send and receive email | | [ses](/registry/packages/aws/api-docs/ses/) |
 | [AWS Step Functions](https://aws.amazon.com/step-functions/) | Build distributed workflows | | [sfn](/registry/packages/aws/api-docs/sfn/) |
 | [AWS Shield](https://aws.amazon.com/shield/) | Managed DDoS protection | | [shield](/registry/packages/aws/api-docs/shield/) |
-| [Amazon SimpleDB](https://aws.amazon.com/simpledb/) | Simple NoSQL database | | [simpledb](/registry/packages/aws/api-docs/simpledb/) |
 | [Amazon Simple Notification Service (SNS)](https://aws.amazon.com/sns/) | Managed pub/sub messaging | | [sns](/registry/packages/aws/api-docs/sns/) |
 | [Amazon Simple Queue Service (SQS)](https://aws.amazon.com/sqs/) | Managed, reliable queuing | | [sqs](/registry/packages/aws/api-docs/sqs/) |
 | [AWS Systems Manager](https://docs.aws.amazon.com/systems-manager/) | Automate management tasks | | [ssm](/registry/packages/aws/api-docs/ssm/) |
@@ -148,7 +146,6 @@ tbody tr td:first-child {
 | [AWS Transfer for SFTP](https://aws.amazon.com/sftp/) | Managed SFTP service | | [transfer](/registry/packages/aws/api-docs/transfer/) |
 | [Amazon Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/) | Secure, isolated networks | [User Guide](/docs/clouds/aws/guides/vpc/) | [vpc](/docs/reference/pkg/nodejs/pulumi/awsx/ec2#Vpc) |
 | [AWS Web Application Firewall (WAF)](https://aws.amazon.com/waf/) | Protect web apps from exploits | | [waf](/registry/packages/aws/api-docs/waf/) |
-| [Amazon WorkLink](https://aws.amazon.com/worklink/) | Secure mobile access to internal apps | | [worklink](/registry/packages/aws/api-docs/worklink/) |
 | [Amazon WorkSpaces](https://aws.amazon.com/workspaces/) | Remote desktop access | | [workspaces](/registry/packages/aws/api-docs/workspaces/) |
 | [AWS X-Ray](https://aws.amazon.com/xray/) | Analyze and debug distributed apps | | [xray](/registry/packages/aws/api-docs/xray/) |
 

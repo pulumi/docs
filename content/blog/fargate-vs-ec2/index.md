@@ -44,7 +44,7 @@ eks_vpc = awsx.ec2.Vpc("eks-vpc",
 eks_cluster = eks.Cluster("eks-cluster",
     vpc_id=eks_vpc.vpc_id,
     private_subnet_ids=eks_vpc.private_subnet_ids,
-    fargate=True,  
+    fargate=True,
 )
 
 pulumi.export("kubeconfig", eks_cluster.kubeconfig)
@@ -62,7 +62,7 @@ If I change my cluster to be backed by EC2 nodes, I get something different.
 eks_cluster = eks.Cluster("eks-cluster",
     vpc_id=eks_vpc.vpc_id,
     private_subnet_ids=eks_vpc.private_subnet_ids,
--   fargate=True,  
+-   fargate=True,
 +   instance_type="t3.medium",
 +   desired_capacity=2,
 +   min_size=1,
@@ -217,7 +217,7 @@ Ready to streamline your EKS infrastructure management?
 
 ## Why Not Both
 
-I hope my examples point to a pragmatic approach: use EC2 as your foundation for efficient microservices that can share resources, like our Go e-commerce setup. Add Fargate when you need isolation or flexible scaling - like for the static analysis workload. Better yet, combine both approaches in the same cluster, for cost-efficency and isolation where needed.
+I hope my examples point to a pragmatic approach: use EC2 as your foundation for efficient microservices that can share resources, like our Go e-commerce setup. Add Fargate when you need isolation or flexible scaling - like for the static analysis workload. Better yet, combine both approaches in the same cluster, for cost-efficiency and isolation where needed.
 
 If you're interested in using Pulumi to manage EKS infra, here's a [practical EKS setup guide](/docs/iac/clouds/aws/guides/eks/) guide to get your started.
 

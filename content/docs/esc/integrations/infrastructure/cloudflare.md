@@ -42,7 +42,7 @@ Ensure you have:
 
 ### 1. Create an ESC Environment
 
-Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, to use the Pulumi Cloud console follow the [console instructions](https://www.pulumi.com/docs/esc/get-started/create-environment/#create-via-the-console).
+Use the Pulumi ESC CLI to create and configure an Environment.
 
 ```bash
 esc login # if needed
@@ -195,7 +195,7 @@ In addition to the [prerequisites above](#prerequisites), ensure you have:
 
 ### 1. Create (or Modify) an ESC Environment
 
-Use the Pulumi ESC CLI to create and configure an Environment. Alternatively, to use the Pulumi Cloud console follow the [console instructions](https://www.pulumi.com/docs/esc/get-started/create-environment/#create-via-the-console).
+Use the Pulumi ESC CLI to create and configure an Environment.
 
 ```bash
 esc login # if needed
@@ -205,7 +205,7 @@ ESC_ENV=my-project/pulumi-environment
 esc env init ${ESC_ENV}
 ```
 
-Paste the contents below in the editor and replace the `abc...` API token and Account ID value with yours. These values are to be consumed by a Pulumi program hence they are placed under the `pulumiConfig` section. See the [syntax reference](https://www.pulumi.com/docs/esc/reference/) for more options.
+Paste the contents below in the editor and replace the `abc...` API token and Account ID value with yours. These values are to be consumed by a Pulumi program hence they are placed under the `pulumiConfig` section. See the [syntax reference](https://www.pulumi.com/docs/esc/environments/syntax/) for more options.
 
 ```yaml
 values:

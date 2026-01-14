@@ -40,13 +40,13 @@ By default, Customer-Managed Agents are deployed on Virtual Machines using Docke
 To use Kubernetes for running Customer-Managed Agents:
 
 1. **Install the Pulumi GitHub App**: [Install the Pulumi GitHub App](/docs/iac/packages-and-automation/continuous-delivery/github-app) and ensure that it is integrated with your source control.
-2. **Set Up Deployment Pools**:
+1. **Set Up Deployment Pools**:
    - Navigate to Deployment Runners under Organization Settings in the left hand navigation bar.
    - Create a new pool by clicking 'Add new pool'
    - You will get a new access token, copy and save the token.
-3. **Install Agents**:
+1. **Install Agents**:
    - Follow the instructions provided on the Deployment Runners page to install agents within your Kubernetes environment.
-4. **Configure Agents**:
+1. **Configure Agents**:
    - All configuration for Customer-Managed Agents is done through the `pulumi-deployment-agent.yaml`file. This file can be created manually or with the `customer-managed-deployment-agent configure` command.
    - Or you can leverage the [Pulumi program example repo](https://github.com/pulumi/customer-managed-deployment-agent/tree/main/kubernetes).
    - Set environment variables directly in your Kubernetes deployment.

@@ -1,0 +1,165 @@
+{{/* Content Aggregator Utility - Extracts effective content from various page types */}}
+{{/* Returns a dict with 'content' (string), 'wordCount' (int), and 'cloudServices' (slice) */}}
+
+{{ $result := dict "content" "" "wordCount" 0 "cloudServices" slice }}
+
+{{/* Strategy 1: Traditional markdown content */}}
+{{ if .Content }}
+  {{ $result = dict 
+    "content" .Content 
+    "wordCount" .WordCount 
+    "cloudServices" slice 
+  }}
+
+{{/* Strategy 2: Cloud overview pages - aggregate from structured data */}}
+{{ else if .Params.cloud_overview }}
+  {{ $aggregated := slice }}
+  
+  {{/* Add description */}}
+  {{ with .Params.description }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  
+  {{/* Extract provider information */}}
+  {{ with .Params.providers }}
+    {{ with .description }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+    {{ range .provider_list }}
+      {{ $aggregated = $aggregated | append .display_name }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Extract component names and descriptions */}}
+  {{ $cloudServicesList := slice }}
+  {{ range .Params.components }}
+    {{ $aggregated = $aggregated | append .display_name }}
+    {{ with .description }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+    {{/* Track cloud services for schema */}}
+    {{ $cloudServicesList = $cloudServicesList | append .display_name }}
+  {{ end }}
+  
+  {{/* Extract templates */}}
+  {{ range .Params.templates }}
+    {{ $aggregated = $aggregated | append .display_name }}
+  {{ end }}
+  
+  {{/* Extract guides */}}
+  {{ with .Params.guides }}
+    {{ with .description }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+    {{ range .guides_list }}
+      {{ $aggregated = $aggregated | append .display_name }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Extract AWS Native section if present */}}
+  {{ with .Params.aws_native }}
+    {{ $aggregated = $aggregated | append .heading }}
+    {{ with .description }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Extract convert tools */}}
+  {{ range .Params.convert }}
+    {{ $aggregated = $aggregated | append .heading }}
+    {{ with .description }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Extract policy information */}}
+  {{ with .Params.policy }}
+    {{ with .description }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+  {{ end }}
+  
+  {{ $combinedContent := delimit $aggregated " " }}
+  {{ $wordCount := len (split $combinedContent " ") }}
+  
+  {{ $result = dict 
+    "content" $combinedContent 
+    "wordCount" $wordCount 
+    "cloudServices" $cloudServicesList 
+  }}
+
+{{/* Strategy 3: Docs home pages */}}
+{{ else if .Params.sections }}
+  {{ $aggregated := slice }}
+  
+  {{/* Add h1 and description */}}
+  {{ with .Params.h1 }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  {{ with .Params.description }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  
+  {{/* Extract section content */}}
+  {{ range .Params.sections }}
+    {{ with .heading }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+    {{ with .description }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+    {{ with .description_md }}
+      {{ $aggregated = $aggregated | append . }}
+    {{ end }}
+    
+    {{/* Extract card content */}}
+    {{ range .cards }}
+      {{ with .heading }}
+        {{ $aggregated = $aggregated | append . }}
+      {{ end }}
+      {{ with .label }}
+        {{ $aggregated = $aggregated | append . }}
+      {{ end }}
+      {{ with .description }}
+        {{ $aggregated = $aggregated | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{ $combinedContent := delimit $aggregated " " }}
+  {{ $wordCount := len (split $combinedContent " ") }}
+  
+  {{ $result = dict 
+    "content" $combinedContent 
+    "wordCount" $wordCount 
+    "cloudServices" slice 
+  }}
+
+{{/* Strategy 4: Minimal pages - use title and description */}}
+{{ else }}
+  {{ $aggregated := slice }}
+  
+  {{ with .Title }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  {{ with .Params.meta_desc }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  {{ with .Params.description }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  {{ with .Summary }}
+    {{ $aggregated = $aggregated | append . }}
+  {{ end }}
+  
+  {{ $combinedContent := delimit $aggregated " " }}
+  {{ $wordCount := len (split $combinedContent " ") }}
+  
+  {{ $result = dict 
+    "content" $combinedContent 
+    "wordCount" $wordCount 
+    "cloudServices" slice 
+  }}
+{{ end }}
+
+{{ return $result }}

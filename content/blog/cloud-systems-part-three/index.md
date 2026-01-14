@@ -1,5 +1,5 @@
 ---
-title: "Cloud Systems Part Three: Deploying to Amazon ECS"
+title: "Cloud Systems: Deploying to Amazon ECS"
 
 date: 2021-12-28T14:52:42Z
 
@@ -15,6 +15,7 @@ tags:
     - aws
     - tutorials
     - docker
+series: cloud-systems
 ---
 
 Cloud engineering is taking over software development. In a lot of ways, this is great; it allows us to build and deploy more complicated applications with less difficulty, and maintaining those applications becomes less troublesome too. We can release smaller updates more quickly than ever, ensuring that we can stay on top of feature requests and security issues. That said, the rise of cloud engineering has also introduced a lot of complexity in the form of dozens of services even within just one cloud provider. Figuring out where to start can be tough, so let’s take a practical tour! In this series, I’ll walk you through building a personal website and deploying it using modern cloud engineering practices.
@@ -229,7 +230,7 @@ flask_image = docker.Image("flask-dockerimage",
 )
 ```
 
-A small helper function is required here. It's grabbing some of our AWS credentials, specificaly an authorization token, so that we can talk to the registry. Next, we build the Docker image for our website and push it to the repository we created in Amazon ECR earlier. Remember, the Dockerfile is in `./website`.
+A small helper function is required here. It's grabbing some of our AWS credentials, specifically an authorization token, so that we can talk to the registry. Next, we build the Docker image for our website and push it to the repository we created in Amazon ECR earlier. Remember, the Dockerfile is in `./website`.
 
 ```python
 flask_task_definition = aws.ecs.TaskDefinition("flask-task-definition",
@@ -326,4 +327,4 @@ Duration: 3m36s
 
 Pulumi has created 20 resources for you, and helpfully returned the DNS address of your load balancer. I've snipped out the `diagnostics` section of this output for the sake of keeping things brief, but you will also see the step-by-step process Docker goes through building and running your image. Go to that URL after a couple of minutes, and your website is online!
 
-We now have a functional, multi-page website with server-side routing, packaged up into a Docker container and deployed to a fully-configured AWS ECS cluster in just a couple hundred lines of Python, all without leaving the same repository our website is stored in. What if we want to be able to scale really large, though? Some resiliency would be nice. Stay tuned for the next blog for an introduction to Kubernetes, where we'll learn to deploy our website to Amazon's Elastic Kubermetes Service!
+We now have a functional, multi-page website with server-side routing, packaged up into a Docker container and deployed to a fully-configured AWS ECS cluster in just a couple hundred lines of Python, all without leaving the same repository our website is stored in. What if we want to be able to scale really large, though? Some resiliency would be nice. Stay tuned for the next blog for an introduction to Kubernetes, where we'll learn to deploy our website to Amazon's Elastic Kubernetes Service!

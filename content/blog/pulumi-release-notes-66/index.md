@@ -62,6 +62,7 @@ As part of creating or updating infrastructure, it is often necessary to run scr
 This new package is supported in all Pulumi languages.
 
 The Command package supports quite a few common patterns involving local and remote scripts execution, such as:
+
 - [A simple local resource (random)](/registry/packages/command#a-simple-local-resource-random)
 - [Remote provisioning of an EC2 instance](/registry/packages/command#remote-provisioning-of-an-ec2-instance)
 - [Invoking a Lambda during a Pulumi deployment](/registry/packages/command#invoking-a-lambda-during-pulumi-deployment)
@@ -72,7 +73,7 @@ Learn more in the [Command package GitHub issue](https://github.com/pulumi/pulum
 
 ### Support `pulumi import` for Kubernetes CRDs
 
-We have added `pulumi import` support for Kubernetes CustomResourceDefiniton (CRD). Now the spec of a CRD will be imported during `pulumi import`. The same fix improves input generation for other Kubernetes resources as well, providing significantly better fidelity in covering inputs for existing resources.
+We have added `pulumi import` support for Kubernetes CustomResourceDefinition (CRD). Now the spec of a CRD will be imported during `pulumi import`. The same fix improves input generation for other Kubernetes resources as well, providing significantly better fidelity in covering inputs for existing resources.
 
 [Learn more in this GitHub issue](https://github.com/pulumi/pulumi-kubernetes/issues/1410).
 
@@ -81,6 +82,7 @@ We have added `pulumi import` support for Kubernetes CustomResourceDefiniton (CR
 This milestone we spent some time making improvements to the Helm `Release` support. Of particular note are the ability to import existing Helm releases installed via the Helm command line into Pulumi and the ability to supply Helm values through YAML files. In addition, we have made a variety of bug fixes this iteration to make Helm Release a more robust option to use for your Kubernetes environment.
 
 Learn more in these GitHub issues:
+
 - [Fix import handling for Helm `Release`](https://github.com/pulumi/pulumi-kubernetes/pull/1818)
 - [Add support for using values from YAML files](https://github.com/pulumi/pulumi-kubernetes/pull/1828)
 
@@ -91,6 +93,7 @@ Learn more in these GitHub issues:
 Native ECMAScript module (ESM) support has been added for the Node.js SDK. Pulumi users can now use Pulumi in projects with "type": "module" configured. In addition, we can now support top-level `await` in Node.js within Pulumi programs.
 
 Learn more in these GitHub issue:
+
 - [Support native ES module for Node.js SDK](https://github.com/pulumi/pulumi/issues/7764)
 - [Support top-level `await` in Node.js](https://github.com/pulumi/pulumi/issues/5161)
 
@@ -99,6 +102,7 @@ Learn more in these GitHub issue:
 Pulumi Packages can now host their plugins anywhere (like GitHub releases) instead of needing to be published by Pulumi. We now detect any dependency that contains pulumi-plugin.json and treat it as a Pulumi Package, automatically downloading associated plugins as needed. To support this, the freshly generated Multi-Language Component (MLC) plugin will now include `pulumi-plugin.json` by default.
 
 Learn more in the following GitHub issues:
+
 - [Check for `pulumiplugin.json` on package lookup](https://github.com/pulumi/pulumi/issues/8515)
 - [Check for `pulumiplugin.json` in `GetRequiredPlugins`](https://github.com/pulumi/pulumi/issues/8516)
 - [Check for `pulumiplugin.json` in package lookup](https://github.com/pulumi/pulumi/issues/8517)

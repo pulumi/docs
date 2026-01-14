@@ -10,6 +10,8 @@ tags:
 - slack
 - chatbot
 - ai
+- ai-slack-bot
+series: ai-slack-bot
 meta_desc: "Learn how to add data to Pinecone using S3, Embedchain and Pulumi on AWS for an AI Slack bot."
 date: 2024-04-10T17:00:00+01:00
 meta_image: meta.png

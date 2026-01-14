@@ -12,6 +12,8 @@ tags:
 - sqs
 - s3
 - ai
+- ai-slack-bot
+series: ai-slack-bot
 meta_desc: "Uploading documents to your AI Slackbot in real-time using S3, SQS and Pulumi on AWS"
 date: 2024-06-03T17:21:02+01:00
 meta_image: meta.png
@@ -25,7 +27,7 @@ For reference, here's what our architecture looked like at the end of the second
 
 To follow along, clone the project, `git clone https://github.com/catmeme/arti.git` or view it on [GitHub](https://github.com/catmeme/arti).
 
-# S3 Events and SQS
+## S3 Events and SQS
 
 AWS provides [a few ways to integrate with AWS S3 Events](https://docs.aws.amazon.com/AmazonS3/latest/userguide/notification-how-to-event-types-and-destinations.html), for this project, we're going to focus on the latest and most straight-forward, [S3 Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/userguide/EventNotifications.html).  Depending on your use case, integrating with [EventBridge](https://docs.aws.amazon.com/AmazonS3/latest/userguide/EventBridge.html) may make more sense.
 
@@ -80,7 +82,7 @@ That's pretty much it on the infrastructure side, here's the updated diagram.
 
 ![arti-architecture-blog-3.png](./arti-architecture-blog-3.png)
 
-# Slack to S3 file upload bridge
+## Slack to S3 file upload bridge
 
 So what do we do with this new functionality?  How do we expose it to the user?   The most obvious approach is to reuse our existing Slack integration.
 
@@ -130,7 +132,7 @@ Here's what it looks like when we drag/drop a file into Slack now.  On the right
 
 ![realtime-slack-s3.png](./realtime-slack-s3.png)
 
-# Slack interactivity
+## Slack interactivity
 
 In minutes, we were able to move from a scheduled task for processing files in a bucket, to real-time file processing integrated with Slack.   We have our `/arti` command we can use to interrogate the documents we just uploaded, but we're going to have a little more fun.
 
@@ -232,7 +234,7 @@ Of course, this same methodology can be used on any of the events exposed by Sla
 
 To learn more about extending this bot, see [Slack Bolt's documentation](https://slack.dev/bolt-python/concepts#basic).
 
-# Conclusion
+## Conclusion
 
 In this blog post, we took our existing Slack bot which has a data loading process that loads documents from an S3 bucket into a vector database on a schedule, and we wired it up to behave in real time.
 

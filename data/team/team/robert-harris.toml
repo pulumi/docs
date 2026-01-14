@@ -1,0 +1,10 @@
+id = "robert-harris"
+name = "Robert Harris"
+title = "Senior Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "rgharris"
+linkedin = "harrisrobertg"

@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: aws-secrets
     parent: esc-dynamic-secrets
-    weight: 2
+    weight: 1
 aliases:
     - /docs/pulumi-cloud/esc/providers/aws-secrets/
     - /docs/esc/providers/aws-secrets/

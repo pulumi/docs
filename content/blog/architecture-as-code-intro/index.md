@@ -10,6 +10,7 @@ tags:
     - serverless
     - architecture-as-code
     - microservices
+series: architecture-as-code
 ---
 
 Abstraction is key to building resilient systems because it encapsulates behavior and decouples code, letting each component perform its function independently. The same principles apply to infrastructure, where we want to declare behavior or state and not implementation details. As an industry, we've moved away from monolithic applications to distributed systems such as serverless, microservices, Kubernetes, and virtual machine deployments. In this article, we'll take a closer look at the characteristics of these architectures and how Pulumi can abstract the components that comprise these systems.

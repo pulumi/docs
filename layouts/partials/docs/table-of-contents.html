@@ -52,33 +52,35 @@
 {{ end }}
 <ul class="p-0 list-none table-of-contents-feedback">
     <!-- Only show "Edit this Page" for pages that are not generated. -->
-    {{ $isCLICommand := hasPrefix .Path "docs/cli/commands" }}
-    {{ $isAPIDoc := and (hasPrefix .Path "docs/reference/pkg/") (ne .Path "docs/reference/pkg/_index.md") }}
-    {{ if not (or $isCLICommand $isAPIDoc $.Page.Params.no_edit_this_page) }}
-        {{ $repoURL := "https://github.com/pulumi/docs" }}
-        {{ if (hasPrefix .Path "registry/") }}
-            {{ $repoURL = "https://github.com/pulumi/registry" }}
+    {{ if .File }}
+        {{ $isCLICommand := hasPrefix .Path "docs/cli/commands" }}
+        {{ $isAPIDoc := and (hasPrefix .Path "docs/reference/pkg/") (ne .Path "docs/reference/pkg/_index.md") }}
+        {{ if not (or $isCLICommand $isAPIDoc $.Page.Params.no_edit_this_page) }}
+            {{ $repoURL := "https://github.com/pulumi/docs" }}
+            {{ if (hasPrefix .Path "registry/") }}
+                {{ $repoURL = "https://github.com/pulumi/registry" }}
+            {{ end }}
+            <li>
+                <a
+                    data-track="edit-page"
+                    class="text-gray-600 hover:text-gray-700 text-xs"
+                    href="{{ $repoURL }}/edit/{{ $.Site.Params.contentRepositoryBaseBranch }}/content/{{ .File.Path }}"
+                    target="_blank"
+                >
+                    <i class="fas fa-edit mr-2" style="width: 14px"></i>Edit this Page
+                </a>
+            </li>
         {{ end }}
         <li>
             <a
-                data-track="edit-page"
+                data-track="request-change"
                 class="text-gray-600 hover:text-gray-700 text-xs"
-                href="{{ $repoURL }}/edit/{{ $.Site.Params.contentRepositoryBaseBranch }}/content/{{ .File.Path }}"
+                href="{{ $.Site.Params.contentRepositoryURL }}/issues/new?body=File: [content/{{ .File.Path }}]({{ $.Page.Permalink }})"
                 target="_blank"
             >
-                <i class="fas fa-edit mr-2" style="width: 14px"></i>Edit this Page
+                <i class="far fa-check-square mr-2" style="width: 14px"></i>Request a Change
             </a>
         </li>
     {{ end }}
-    <li>
-        <a
-            data-track="request-change"
-            class="text-gray-600 hover:text-gray-700 text-xs"
-            href="{{ $.Site.Params.contentRepositoryURL }}/issues/new?body=File: [content/{{ .File.Path }}]({{ $.Page.Permalink }})"
-            target="_blank"
-        >
-            <i class="far fa-check-square mr-2" style="width: 14px"></i>Request a Change
-        </a>
-    </li>
 </ul>
 <pulumi-top-button></pulumi-top-button>

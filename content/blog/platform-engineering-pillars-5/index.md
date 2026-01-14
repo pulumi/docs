@@ -9,6 +9,7 @@ authors:
 tags:
     - platform-engineering
     - platform-engineering-pillars
+series: platform-engineering-pillars
 social:
     twitter: >
       Security doesn't have to be a roadblock! By embedding guardrails directly into your platform with policy-as-code, centralized secrets management, and identity-based authentication, you transform security from gatekeeper to enabler. Developers move faster WITH confidence, not despite security!

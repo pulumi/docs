@@ -97,7 +97,7 @@ jobs:
     strategy:
       matrix:
         nodeversion:
-          - "18.x"
+          - "20.x"
   notify:
     if: failure()
     name: Send slack notification

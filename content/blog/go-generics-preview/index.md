@@ -111,8 +111,8 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/cloudfront"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/cloudfront"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -225,8 +225,8 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/cloudfront"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/cloudfront"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumix"
 )
@@ -284,7 +284,7 @@ func main() {
 }
 ```
 
-Notice how we are importing `pulumix` alongside `pulumi`. Being a subpackage means you can start using the generics-based types and functions alongside the current APIs as necessary without having to switch your code fully from using the old types to the new generic ones. Instead, you can migrate your code gradually to these new APIs where it makes sense. When needed, there are APIs to covert between generics-based APIs and the old ones using functions such as `pulumix.Cast` and `pulumix.ConvertTyped`.
+Notice how we are importing `pulumix` alongside `pulumi`. Being a subpackage means you can start using the generics-based types and functions alongside the current APIs as necessary without having to switch your code fully from using the old types to the new generic ones. Instead, you can migrate your code gradually to these new APIs where it makes sense. When needed, there are APIs to convert between generics-based APIs and the old ones using functions such as `pulumix.Cast` and `pulumix.ConvertTyped`.
 
 ## Generics-Based Cloud Provider SDKs
 
@@ -298,7 +298,7 @@ The following example is an AWS Pulumi program which we'll migrate into the gene
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -321,7 +321,7 @@ func main() {
 }
 ```
 
-To start using the generics-based version of the S3 module from AWS, you need to change the import from `"https://github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"` to `"https://github.com/pulumi/pulumi-aws/sdk/v6/go/aws/x/s3"` (notice the `x` after `aws/`), then change input values to use `pulumix.Ptr` instead of `pulumi.String`.
+To start using the generics-based version of the S3 module from AWS, you need to change the import from `"https://github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3"` to `"https://github.com/pulumi/pulumi-aws/sdk/v7/go/aws/x/s3"` (notice the `x` after `aws/`), then change input values to use `pulumix.Ptr` instead of `pulumi.String`.
 
 {{% notes type="info" %}}
 Rather than passing values as `pulumi.String("foo")` and `pulumi.Int(42)`, with generics, you can simply use `pulumix.Val("foo")` and `pulumix.Val(42)`. Similarly, you can use the `pulumix.Ptr` function for pointer values.
@@ -331,7 +331,7 @@ Rather than passing values as `pulumi.String("foo")` and `pulumi.Int(42)`, with 
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/x/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/x/s3"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumix"
 )
@@ -358,7 +358,7 @@ func main() {
 You'll also need to update your `go.mod` to use the preview branch of the Pulumi AWS Go SDK that includes the `x` subpackage with generic APIs. Run the following:
 
 ```sh
-go get github.com/pulumi/pulumi-aws/sdk/v6@generics
+go get github.com/pulumi/pulumi-aws/sdk/v7@generics
 go mod tidy
 ```
 

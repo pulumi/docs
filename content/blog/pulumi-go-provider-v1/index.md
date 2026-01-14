@@ -4,7 +4,7 @@ date: 2025-05-20
 draft: false
 allow_long_title: true
 
-meta_desc: "Pulumi Go Provider SDK is now generally available: Build custom infrastructure providers in hours, not weeks, while unlocking cross-team collaboration and standardization"
+meta_desc: "Pulumi Go Provider SDK is now GA! Build custom infrastructure providers in hours, not weeks. Create reusable components across all Pulumi languages."
 meta_image: meta.png
 authors:
     - eron-wright
@@ -251,7 +251,7 @@ func TestRandomLogin(t *testing.T) {
 }
 ```
 
-For more information about component resources, see the blog post [Announcing the Next-Generation of Pulumi Components: Enabling Infrastructure Abstractions](../pulumi-components/index.md).
+For more information about component resources, see the blog post [Announcing the Next-Generation of Pulumi Components: Enabling Infrastructure Abstractions](/blog/pulumi-components/).
 
 ## Seamless Multi-Language Support and Sharing
 

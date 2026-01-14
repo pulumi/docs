@@ -91,7 +91,7 @@ Besides the main model, DeepSeek AI has introduced distilled versions in various
 
 Notably, the 8B and smaller models can operate on standard CPUs, GPUs, or Apple Silicon machines, making them convenient for anyone interested in experimenting at home.
 
-That's why I decided to run DeepSeek on an AWS EC2 instance using Pulumi. I wanted to see how easy it is to set up and run DeepSeek on the cloud using [Infrastructure as Code (IaC)](/blog/what-is/what-is-infrastructure-as-code/). So, let's get started!
+That's why I decided to run DeepSeek on an AWS EC2 instance using Pulumi. I wanted to see how easy it is to set up and run DeepSeek on the cloud using [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/). So, let's get started!
 
 ## Setting Up The Environment
 

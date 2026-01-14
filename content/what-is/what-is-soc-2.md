@@ -124,7 +124,7 @@ Organizations can expand their SOC 2 reports to include additional frameworks:
 * **SOC 2 + ISO 27001** - Combines SOC 2 with international information security standards
 * **SOC 2 + CSA STAR** - Includes cloud-specific security requirements
 
-These combined reports can reduce audit fatigue by addressing multiple compliance frameworks in a single assessment. For more information on how combined frameworks work, see our guide on [compliance frameworks](/compliance/).
+These combined reports can reduce audit fatigue by addressing multiple compliance frameworks in a single assessment. For more information on implementing compliance policies, see our guide on [policy packs](/docs/insights/policy/policy-packs/).
 
 ## Compliance process
 

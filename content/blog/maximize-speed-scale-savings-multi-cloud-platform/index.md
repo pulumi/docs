@@ -11,12 +11,13 @@ tags:
     - cloud-native
     - cloud-engineering
 ---
-Overcoming the cost and complexity of mutli-cloud environments and managing infrastructure more effectively is a perpetual challenge. For thousands of companies growing Platform Engineering skills, the solution to these challenges may be closer than you think.
+Overcoming the cost and complexity of multi-cloud environments and managing infrastructure more effectively is a perpetual challenge. For thousands of companies growing Platform Engineering skills, the solution to these challenges may be closer than you think.
 
 <!--more-->
 Hundreds of thousands of developers across the globe already rely on Pulumi to drive more scalable, repeatable deployments in large self-managed production environments. By combining the power of Infrastructure as Code (IaC) with automation, compliance, and robust security within a Pulumi-hosted environment, you can achieve new levels of performance, visibility and security while reducing risk. Here are a few examples:
 
 ### Speed - Streamlined Operations
+
 Pulumi Cloud accelerates time to market. It automates deployments, manages state, and centralizes secrets, eliminating the complexities of DIY IaC backends. Its transactional state management prevents issues like outages caused by mismanaged state files, offering a secure, reliable platform for scaling operations.
 
 {{% notes type="info" %}}
@@ -24,6 +25,7 @@ Pulumi Cloud accelerates time to market. It automates deployments, manages state
 {{% /notes %}}
 
 ### Scale - Improved Developer Productivity
+
 By supporting modern programming languages like Python, TypeScript, and Go, Pulumi Cloud allows developers to define infrastructure using familiar tools, speeding up onboarding and simplifying workflows. Predefined policy packs and dynamic secrets further reduce operational overhead.
 
 {{% notes type="info" %}}
@@ -31,6 +33,7 @@ By supporting modern programming languages like Python, TypeScript, and Go, Pulu
 {{% /notes %}}
 
 ### Security - Enhanced Security and Compliance
+
 With features like Pulumi CrossGuard for policy enforcement and Pulumi ESC for centralized secrets management, Pulumi Cloud ensures adherence to security standards like SOC2 and HIPAA. This eliminates the risks associated with improperly stored credentials or manually enforced policies.
 
 {{% notes type="info" %}}
@@ -38,7 +41,8 @@ With features like Pulumi CrossGuard for policy enforcement and Pulumi ESC for c
 {{% /notes %}}
 
 ### Savings - Cost Efficiency
-Pulumi Cloud’s AI-driven insights identify stale infrastructure and optimize resource use, reducing waste and cutting costs. Its managed service eliminates the need for dedicated backend engineers, freeing resources for core business innovation.
+
+Pulumi Cloud's AI-driven insights identify stale infrastructure and optimize resource use, reducing waste and cutting costs. Its managed service eliminates the need for dedicated backend engineers, freeing resources for core business innovation.
 
 {{% notes type="info" %}}
 [Unity Technologies](/case-studies/unity/) reduced deployment times by 80%, from weeks to hours, significantly improving their time to market.

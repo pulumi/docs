@@ -1,30 +1,29 @@
 ---
 title_tag: BMW | Case Studies
-title: "BMW: Mission Critical Platforms Require Pulumi"
+title: "Unified Infrastructure and Application Management"
 description: |
-    BMW used Pulumi to build a scalable and resilient hybrid cloud implementation that could handle more than eleven thousand developers.
-meta_desc: Learn how BMW used Pulumi to simplify the automation of their AWS and on-premises infrastructure.
+    Learn how BMW's Software Factory uses Pulumi to manage 20,000+ cloud resources with Python-based infrastructure code.
+meta_desc: Learn how BMW's Software Factory uses Pulumi to manage 20,000+ cloud resources with Python-based infrastructure code.
 
 customer_name: BMW
 customer_logo: /logos/customers/bmw.svg
 customer_url: https://www.bmwusa.com/
 
-exec_summary: |
-   BMW, with the assistance of BearingPoint, was determined to build a scalable and resilient Gerrit infrastructure across cloud and on-premises instances. They needed a hybrid cloud implementation that could handle more than eleven thousand developers and hundreds of thousands of builds a day across three distinct environments. The solution needed to be self-documenting, highly available, and have a streamlined disaster recovery approach. BMW utilized Pulumi because it simplified scaling the automation of this architecture out across AWS and on-premises instances while also ensuring that compliance is baked into every step.
-
-sections:
-    - label: Exec Summary
-      anchor: executive-summary
-    - label: Challenges
-      anchor: designed-for-scale
-    - label: Results
-      anchor: pulumi-for-deployment
-    - label: Conclusion
-      anchor: how-pulumi-is-changing-the-game-for-bmw
+quote_block:
+    quote: |
+        Software Factory manages over 20,000 cloud resources using Python-based infrastructure code integrated with existing CI/CD workflows.
+    headline_stat: 20,000+
+    headline: cloud resources managed across multiple stacks
 
 aliases:
     - /case-studies/codecraft
 ---
+
+## The Enterprise Infrastructure Challenge
+
+As organizations scale their cloud infrastructure, they face a critical choice: continue managing infrastructure and applications as separate concerns with different tools and workflows, or unify them under a single, programmable approach. Traditional infrastructure-as-code tools require learning proprietary languages and often force teams to maintain parallel toolchains for application deployment and infrastructure provisioning.
+
+Platform engineering teams need solutions that can scale to thousands of resources across multiple environments while maintaining security, compliance, and developer productivity. They need the full power of real programming languages, not limited domain-specific languages. And they need infrastructure that integrates naturally with their existing CI/CD pipelines rather than requiring separate automation workflows.
 
 ## About CodeCraft
 
@@ -32,18 +31,44 @@ The automobile is becoming increasingly more connected over time and software is
 
 {{< youtube "HIliBBo4c-g?rel=0" >}}
 
-## Designed for Scale
+## Pulumi's Approach
 
-As one of the leading luxury vehicle manufacturers, BMW operates at a scale that naturally brings complexity to the infrastructure and development processes. They needed to architect a toolchain including Gerrit that can scale to more than 11,000 developers and 100,000 builds a day while heavily utilizing Kubernetes across AWS and two on-premises OpenStack regions.
-The solution also needed to be highly available across all three regions and have a hot failover ready in AWS for disaster recovery purposes. The architecture was designed for autoscaling to dynamically grow or shrink with needs over time to ensure readiness at all times. The criticality of this platform requires that a DevOps team is available and on-call 24/7.
+Pulumi addresses these challenges by enabling teams to define both infrastructure and application deployments using familiar programming languages like Python, TypeScript, and Go. This unified approach eliminates the artificial boundary between infrastructure provisioning and application management.
 
-## Pulumi for Deployment
+Key capabilities include:
 
-The requirements for scale and the highly available nature created challenges for BMW on how to define and manage these infrastructure components. The platform required the careful configuration and deployment of more than 20 individual tools. The desire for standardization and consistency drove BMW/BearingPoint to select Pulumi for their deployments.
-As the core of the platform is based around Gerrit on Kubernetes, Pulumi is being utilized for deployment of all of the Kubernetes components as well as the authorization policies, ConfigMaps and secrets, services, and StatefulSets. Pulumi makes it simple to generate random secrets and layer them into the configuration to support the secure interaction between the regions and Gerrit instances.
-The multi-site Gerrit implementation also required AWS Kinesis and DynamoDB for cross-region synchronization. These components are defined and configured with Pulumi and automatically pull in the required randomly generated secrets. Both of these components are critical to scaling out Gerrit and have been designed with Pulumi to autoscale as needed.
-The infrastructure as code and configuration is being continually validated by Pulumi’s policy as code. This means that every change that is defined and implemented has gone through their custom policies for standardization, security, and compliance.
+**Real Programming Languages**: Teams can use standard Python, TypeScript, Go, or other languages they already know. This means access to existing libraries, testing frameworks, and development tools rather than learning proprietary syntax.
 
-## How Pulumi is Changing the Game for BMW
+**Unified Management**: A single Pulumi program can define Kubernetes clusters, configure cloud resources, and deploy applications. This eliminates coordination overhead between separate toolchains and reduces deployment complexity.
 
-Pulumi enables BMW to abstract the complexity of numerous software development tools and a hybrid cloud infrastructure down to a standardized and repeatable approach. Pulumi provides the framework to enforce policy across all changes to ensure that compliance is never left behind. As the needs for highly connected automobiles and their software continue to grow, BMW can rely on the highly scalable automated infrastructure deployed by Pulumi.
+**Cloud-Native Integration**: Pulumi works naturally with modern cloud platforms and Kubernetes. Resources are code that integrates directly into existing CI/CD pipelines without requiring additional infrastructure automation.
+
+**Policy as Code**: Security and compliance requirements can be enforced programmatically across all infrastructure. Teams can define policies once and apply them consistently across all cloud providers and services.
+
+**State Management**: Pulumi provides centralized state management that tracks all deployed resources. This enables teams to understand dependencies, audit changes, and coordinate updates across complex infrastructure.
+
+## Proven at Enterprise Scale
+
+BMW Group's Software Factory IT infrastructure platform demonstrates these capabilities in production. The platform manages over 20,000 cloud resources across multiple stacks using Python-based Pulumi programs integrated with their existing CI/CD pipeline. The implementation consolidated earlier toolchain approaches, including Ansible, Terraform, and Helm, into a unified workflow that manages both Kubernetes clusters and the applications deployed to them.
+
+## Results That Matter
+
+Enterprise implementations of Pulumi demonstrate measurable benefits:
+
+**Reduced Complexity**: Unified infrastructure and application management eliminates coordination overhead between separate toolchains
+
+**Familiar Tools**: Infrastructure defined in standard programming languages rather than proprietary domain-specific languages
+
+**Automated Compliance**: Centralized policy enforcement across all cloud resources ensures security and governance requirements are met automatically
+
+**Single Workflow**: Code commit through infrastructure deployment happens in one integrated process
+
+**Incremental Adoption**: Organizations can adopt Pulumi gradually, running it alongside existing tools during migration for low-risk evaluation
+
+## Looking Forward
+
+As organizations move toward platform engineering models, the need for unified infrastructure and application management continues to increase. The artificial separation between infrastructure and application teams breaks down when both manage cloud-native resources through APIs.
+
+Pulumi's approach treats infrastructure as software, applying the same engineering practices to infrastructure that successful organizations already apply to applications. This includes version control, code review, automated testing, and continuous integration and deployment.
+
+For platform teams managing complex multi-cloud or Kubernetes-based infrastructure, this unified approach reduces operational overhead and improves reliability. Rather than coordinating between multiple tools with different workflows, teams can manage their entire stack through a single, programmable interface.

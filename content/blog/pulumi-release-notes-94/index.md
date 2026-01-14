@@ -72,7 +72,6 @@ We've made several improvements to our Pulumi Cloud Webhooks to enhance deployme
 
 ![Slack](slack.png)
 
-
 ### Microsoft Teams Webhook Integration
 
 Setting up Microsoft Teams notifications is now easier than ever with support for Microsoft Teams formatted webhooks. You can quickly enable notifications about your Pulumi stacks and organizations in your Microsoft Teams workspace by providing an incoming webhook URL. New REST API endpoints and a Service Provider are available, allowing for efficient webhook creation at scale. These improvements enhance ChatOps workflows and provide better visibility into infrastructure changes while maintaining support for generic webhooks. For more details and how to get started, check out [this blog post](/blog/ms-teams-integration/).
@@ -111,11 +110,9 @@ Resource Search for Pulumi Cloud capabilities have been enhanced by allowing use
 | all resources in us east 1                    | `region:"us-east-1"`                                                                                       |
 | resources with a private ip                   | `.privateIpAddress:`                                                                                       |
 
-
 ### Dependent Stack Updates with Pulumi Deployments
 
 Pulumi Deployments has two new features to help manage complex infrastructure projects more easily. The Deployment Webhook Destinations allow automatic triggering of updates in dependent stacks when changes occur in the parent stack. We've also added the Pulumi Auto Deploy Package to simplify the way you express stack dependencies, automating the creation and updating of Deployment Webhooks. For all the details and to get started, visit the [blog post](/blog/dependent-stack-updates/), [auto deploy package](/registry/packages/auto-deploy/) registry page, and [Pulumi Deployments](/docs/pulumi-cloud/deployments/) documentation.
-
 
 ## Core
 
@@ -144,7 +141,6 @@ o := pulumix.Apply2(a, b, func(a int, b string) string {
 ### Pulumi Convert
 
 The introduction of `pulumi convert` in the Pulumi CLI simplifies the migration process for teams transitioning from Terraform to Pulumi. This feature allows you to [convert entire Terraform projects](/blog/converting-full-terraform-programs-to-pulumi/) into Pulumi, including support for modules, core Terraform 1.4 features, and most Terraform built-in functions. Starting from Pulumi CLI version 3.71.0, you can directly access this converter, streamlining the conversion of full Terraform programs. This enhancement builds upon our CrossCode foundations, enabling universal infrastructure as code support and introducing the concept of converter plugins for future integrations. This feature supports various use cases, such as migrating existing Terraform projects and modules to Pulumi, enhancing our commitment to providing versatile solutions for infrastructure as code.
-
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
@@ -179,7 +175,7 @@ $ pulumi convert --from terraform --language csharp --out pulumi
 
 ### Pulumi New support for SSH-style Git URLs
 
-In the [v3.77.0]() release of the Pulumi CLI, we added support for `pulumi new` to use SSH-style Git URLs which enables accessing templates from private Git repos, authenticated via normal Git SSH support.  Many teams have been building libraries of their own private templates, and this enables those templates to be used much more naturally via `pulumi new` and the [Deploy with Pulumi](/docs/pulumi-cloud/pulumi-button/) button.
+In the [v3.77.0](https://github.com/pulumi/pulumi/releases/tag/v3.77.0) release of the Pulumi CLI, we added support for `pulumi new` to use SSH-style Git URLs which enables accessing templates from private Git repos, authenticated via normal Git SSH support.  Many teams have been building libraries of their own private templates, and this enables those templates to be used much more naturally via `pulumi new` and the [Deploy with Pulumi](/docs/pulumi-cloud/pulumi-button/) button.
 
 ```shell
 $ pulumi new git@github.com:acmecorp/templates/website
@@ -189,7 +185,7 @@ $ pulumi new git@github.com:acmecorp/templates/website
 
 The team at [Virtus Lab](https://virtuslab.com/) released support for Scala in Pulumi as part of their Besom project at [https://github.com/VirtusLab/besom](https://github.com/VirtusLab/besom).  As they highlight in their README:
 
->  __Besom Scala SDK for Pulumi__ lets you leverage the full power of Pulumi Infrastructure as Code Platform using the Scala programming language. Scala support is currently in __Public Beta__.
+> __Besom Scala SDK for Pulumi__ lets you leverage the full power of Pulumi Infrastructure as Code Platform using the Scala programming language. Scala support is currently in __Public Beta__.
 
 The Scala language support builds on Pulumi's existing Java and JVM support, but with an SDK custom designed to target idiomatic Scala API design patterns.
 
@@ -219,7 +215,7 @@ The Scala language support builds on Pulumi's existing Java and JVM support, but
 
 The 6.0 release of the [Pulumi AWS](/registry/packages/aws/) provider introduces essential enhancements and updates to one of the most extensively used providers in the Pulumi ecosystem. These improvements encompass TF Plugin Framework support, the inclusion of new resources and functions, significant SDK size optimizations for faster downloads and improved developer experiences, resolutions to top-upvoted issues, and removal of deprecated resources. To dig deeper into these changes, check out the [migration guide](/registry/packages/aws/how-to-guides/6-0-migration/) and [blog post](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/).
 
-![](aws_api.png)
+![Pulumi Classic Provider API Coverage](aws_api.png)
 
 ### Azure Native 2.0
 
@@ -247,23 +243,23 @@ In addition to releasing major versions of 3 of our most popular providers, we'r
 
 Welcome to the 17 new community providers in the registry!
 
-* [Cisco ACI](/registry/packages/aci/)
-* [ACME](/registry/packages/acme/)
-* [CockroachDB Cloud](/registry/packages/cockroach/)
-* [ESXi Native](/registry/packages/esxi-native/)
-* [Impart Security](/registry/packages/impart/)
-* [Cisco IOS XE](/registry/packages/iosxe/)
-* [Matchbox](/registry/packages/matchbox/)
-* [Microsoft SQL Server](/registry/packages/mssql/)
-* [ngrok](/registry/packages/ngrok/)
-* [Cisco NX OS](/registry/packages/nxos/)
-* [Port](/registry/packages/port/)
-* [Prodvana](/registry/packages/prodvana/)
-* [Redis Cloud](/registry/packages/rediscloud/)
-* [Vantage](/registry/packages/vantage/)
-* [Zitadel](/registry/packages/zitadel/)
-* [Vercel](/registry/packages/vercel/)
-* [Volcengine](/registry/packages/volcengine/)
+- [Cisco ACI](/registry/packages/aci/)
+- [ACME](/registry/packages/acme/)
+- [CockroachDB Cloud](/registry/packages/cockroach/)
+- [ESXi Native](/registry/packages/esxi-native/)
+- [Impart Security](/registry/packages/impart/)
+- [Cisco IOS XE](/registry/packages/iosxe/)
+- [Matchbox](/registry/packages/matchbox/)
+- [Microsoft SQL Server](/registry/packages/mssql/)
+- [ngrok](/registry/packages/ngrok/)
+- [Cisco NX OS](/registry/packages/nxos/)
+- [Port](/registry/packages/port/)
+- [Prodvana](/registry/packages/prodvana/)
+- [Redis Cloud](/registry/packages/rediscloud/)
+- [Vantage](/registry/packages/vantage/)
+- [Zitadel](/registry/packages/zitadel/)
+- [Vercel](/registry/packages/vercel/)
+- [Volcengine](/registry/packages/volcengine/)
 
 ## Wrap Up
 

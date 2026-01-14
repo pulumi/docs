@@ -4,7 +4,7 @@ allow_long_title: true
 date: 2024-08-05
 draft: false
 social_media: "TBD"
-meta_desc: "Pulumi Patterns and Practices Platform (P3) is a reference architecture of a Pulumi-based internal platform for infrastructure management and secure deployments in a large-scale environment."
+meta_desc: "Pulumi Patterns and Practices Platform (P3): A reference architecture for building Pulumi-based internal platforms at enterprise scale."
 meta_image: meta.png
 authors:
     - troy-howard
@@ -17,6 +17,10 @@ tags:
     - enterprise
     - devops
 ---
+
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
 
 Infrastructure management is all fun and games until you find yourself scrolling through 1000+ resources in your AWS console. Worse, when one rogue product team wants to use Azure and your data team wants to be on GCP, you're ARM wrestling in Azure and watching your economies of scale tip the wrong direction as you're copy-pasting CloudFormation templates into yet another git repo. This. Needs. To. Be. A. Platform!
 
@@ -69,7 +73,7 @@ Another core aspect of consistency is *[drift detection](https://www.pulumi.com/
 
 Since 2010, scientists have felt that we are in a crisis – a *[reproducibility crisis](https://en.wikipedia.org/wiki/Replication_crisis)* – wherein we cannot easily reproduce an experiment in order to verify published results. Similarly, the software industry is entering into a reproducibility crisis of its own, especially around AI training workflows, where it is increasingly difficult to recreate crucial build and prod environments. [Pulumi Stacks](https://www.pulumi.com/learn/building-with-pulumi/understanding-stacks/) make it very easy to manage both configuration and state across multiple environments, and make [reproducing a deployment](https://www.pulumi.com/blog/simple-reproducible-kubernetes-deployments/) within Pulumi a matter of a few basic operations.
 
-You can use Pulumi programs to capture ***all*** of the necessary resources for an AI training workload, including things like [versioned data](https://www.pulumi.com/ai/answers/xig35anR7ibjAP5MhHDyxC/time-travel-queries-on-snowflake-dynamic-tables) using dynamic tables with time-travel functionality in [Snowflake](https://www.pulumi.com/case-studies/snowflake/). That means you can be sure that not only will your deployment be on the infrastructure you need, it will also have the exact version of data, every time, which is essential to A/B testing and debugging your models.
+You can use Pulumi programs to capture ***all*** of the necessary resources for an AI training workload, including things like versioned data using [dynamic tables](/registry/packages/snowflake/api-docs/dynamictable/) with time-travel functionality in [Snowflake](https://www.pulumi.com/case-studies/snowflake/). That means you can be sure that not only will your deployment be on the infrastructure you need, it will also have the exact version of data, every time, which is essential to A/B testing and debugging your models.
 
 ### Visibility
 

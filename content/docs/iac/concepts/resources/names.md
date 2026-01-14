@@ -33,15 +33,8 @@ Be careful when you change a resource’s name because changing the name of a re
 
 Every resource managed by Pulumi has a logical name that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let role = new aws.iam.Role("my-role");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -122,17 +115,8 @@ This random suffix serves two purposes:
 
 For cases that require specific names, you can override auto-naming by specifying a physical name. Most resources have a `name` property that you can use to name the resource yourself. Specify your name in the argument object to the constructor. Here’s an example.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let role = new aws.iam.Role("my-role", {
-    name: "my-role-001",
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -192,23 +176,14 @@ resources:
 
 {{< /chooser >}}
 
-If the `name` property is not available on a resource, consult the [Registry](/registry/) for the specific resource you are creating. Some resources use a different property to override auto-naming. For instance, the `aws.s3.BucketV2` type uses the property `bucket` instead of name. Other resources, such as `aws.kms.Key`, do not have physical names and use other auto-generated IDs to uniquely identify them.
+If the `name` property is not available on a resource, consult the [Registry](/registry/) for the specific resource you are creating. Some resources use a different property to override auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of name. Other resources, such as `aws.kms.Key`, do not have physical names and use other auto-generated IDs to uniquely identify them.
 
 Overriding auto-naming makes your project susceptible to naming collisions. As a result, for resources that may need to be replaced, you should specify `deleteBeforeReplace: true` in the resource’s options. This option ensures that old resources are deleted before new ones are created, which will prevent those collisions.
 
 Because physical and logical names do not need to match, you can construct the physical name by using your project and stack names. Similarly to auto-naming, this approach protects you from naming collisions while still having meaningful names. Note that `deleteBeforeReplace` is still necessary:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let role = new aws.iam.Role("my-role", {
-    name: "my-role-" + pulumi.getProject() + "-" + pulumi.getStack(),
-}, { deleteBeforeReplace: true });
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -301,7 +276,7 @@ config:
     pattern: ${name}-${project}-${stack}
 ```
 
-And when configuring it in an [ESC environment](/docs/esc/get-started/integrate-with-pulumi-iac/), you can specify the configuration as such:
+And when configuring it in an [ESC environment](/docs/esc/guides/integrate-with-pulumi-iac/), you can specify the configuration as such:
 
 ```yaml
 pulumiConfig:
@@ -413,21 +388,21 @@ Changing the autonaming setting on an existing stack doesn't cause any immediate
 
 Each resource is an instance of a specific Pulumi resource type.  This type is specified by a type token in the format `<package>:<module>:<typename>`.  Concrete examples of this format are:
 
-- `aws:s3/bucketv2:BucketV2`
+- `aws:s3/bucket:Bucket`
 - `azure-native:compute:VirtualMachine`
 - `kubernetes:apps/v1:Deployment`
 - `random:index:RandomPassword`
 
 The `<package>` component of the type (e.g. `aws`, `azure-native`, `kubernetes`, `random`) specifies which [Pulumi Package](/docs/using-pulumi/pulumi-packages/) defines the resource.  This is mapped to the package in the [Pulumi Registry](/registry/) and to the underlying [Resource Provider](/docs/concepts/resources/providers/).
 
-The `<module>` component of the type (e.g. `s3/bucket`, `compute`, `apps/v1`, `index`) is the module path where the resource lives within the package.  It is `/` delimited by component of the path.  Per-language Pulumi SDKs use the module path to emit nested namespaces/modules in a language-specific way to organize all the types defined in a package.  For example, the `Deployment` resource above is available at `kubernetes.apps.v1.Deployment` in TypeScript and in the `github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1` module in Go.  For historical reasons only, some packages include the type name itself as a final component of the module (e.g. `s3/bucketv2` for the type name `BucketV2`) - in this case, this component is not included in the SDK namespace.  The name `index` indicates that the resource is not nested, and is instead available at the top level of the package.  For example, the `RandomPassword` resource above is available at `random.RandomPassword` in TypeScript.
+The `<module>` component of the type (e.g. `s3/bucket`, `compute`, `apps/v1`, `index`) is the module path where the resource lives within the package.  It is `/` delimited by component of the path.  Per-language Pulumi SDKs use the module path to emit nested namespaces/modules in a language-specific way to organize all the types defined in a package.  For example, the `Deployment` resource above is available at `kubernetes.apps.v1.Deployment` in TypeScript and in the `github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1` module in Go.  For historical reasons only, some packages include the type name itself as a final component of the module (e.g. `s3/bucket` for the type name `Bucket`) - in this case, this component is not included in the SDK namespace.  The name `index` indicates that the resource is not nested, and is instead available at the top level of the package.  For example, the `RandomPassword` resource above is available at `random.RandomPassword` in TypeScript.
 
-The `<typename>` component of the type (e.g. `BucketV2`, `VirtualMachine`, `Deployment`, `RandomPassword`) is the identifier used to refer to the resource itself.  It is mapped to the class or constructor name in the per-language Pulumi SDK.
+The `<typename>` component of the type (e.g. `Bucket`, `VirtualMachine`, `Deployment`, `RandomPassword`) is the identifier used to refer to the resource itself.  It is mapped to the class or constructor name in the per-language Pulumi SDK.
 
 Note that because of some of the historical details of how `<module>` is defined, a "simplified" resource type name is accepted or presented in certain places, and mapped into the "full" resource type name specified above.  The simplified resource type name applies the following rules:
 
 1. If the type token is two components instead of three, that is `<package>:<typename>`, it is interpreted as if it was `<package>:index:<typename>`.
-2. The repetition of the `<typename>` as part of the module definition is not required, and will be inferred if necessary - that is `aws:s3:BucketV2` will be interpreted as referring to `aws:s3/bucketv2:BucketV2`.
+2. The repetition of the `<typename>` as part of the module definition is not required, and will be inferred if necessary - that is `aws:s3:Bucket` will be interpreted as referring to `aws:s3/bucket:Bucket`.
 
 This "simplified" type name format is currently used in the following places:
 
@@ -435,7 +410,7 @@ This "simplified" type name format is currently used in the following places:
 
 The examples above can be written in simplified form as:
 
-- `aws:s3:BucketV2`
+- `aws:s3:Bucket`
 - `azure-native:compute:VirtualMachine`
 - `kubernetes:apps/v1:Deployment`
 - `random:RandomPassword`
@@ -449,7 +424,7 @@ The URN is automatically constructed from the project name, stack name, resource
 The following is an example of a URN:
 
 ```text
-urn:pulumi:production::acmecorp-website::custom:resources:Resource$aws:s3/bucketv2:BucketV2::my-bucket
+urn:pulumi:production::acmecorp-website::custom:resources:Resource$aws:s3/bucket:Bucket::my-bucket
            ^^^^^^^^^^  ^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^ ^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^
            <stack-name> <project-name>   <parent-type>             <resource-type>       <resource-name>
 ```
@@ -459,7 +434,7 @@ The type components of the URN are [resource types](#types) as defined above, an
 The URN must be globally unique. This means all of the components that go into a URN must be unique within your program. If you create two resources with the same name, type, and parent path, for instance, you will see an error:
 
 ```bash
-error: Duplicate resource URN 'urn:pulumi:production::acmecorp-website::custom:resources:Resource$aws:s3/bucketv2:BucketV2::my-bucket'; try giving it a unique name
+error: Duplicate resource URN 'urn:pulumi:production::acmecorp-website::custom:resources:Resource$aws:s3/bucket:Bucket::my-bucket'; try giving it a unique name
 ```
 
 Any change to the URN of a resource causes the old and new resources to be treated as unrelated—the new one will be created (since it was not in the prior state) and the old one will be deleted (since it is not in the new desired state). This behavior happens when you change the `name` used to construct the resource or the structure of a resource’s parent hierarchy.

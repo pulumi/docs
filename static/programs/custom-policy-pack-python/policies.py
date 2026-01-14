@@ -9,7 +9,7 @@ from pulumi_policy import (
 REQUIRED_S3_PREFIX="myproduct-"
 
 def s3_product_prefix(args: ResourceValidationArgs, report_violation: ReportViolation):
-    if args.resource_type == "aws:s3/bucketV2:BucketV2" and "bucketPrefix" in args.props:
+    if args.resource_type == "aws:s3/bucket:Bucket" and "bucketPrefix" in args.props:
         actualPrefix = args.props["bucketPrefix"]
         if actualPrefix != REQUIRED_S3_PREFIX:
             report_violation("Invalid prefix: '{}'. S3 buckets must use '{}' prefix.".format(actualPrefix, REQUIRED_S3_PREFIX))

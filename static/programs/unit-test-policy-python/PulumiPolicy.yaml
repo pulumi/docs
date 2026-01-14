@@ -1,0 +1,7 @@
+name: policy-pack-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: A Python policy pack with unit tests
+version: 0.0.1

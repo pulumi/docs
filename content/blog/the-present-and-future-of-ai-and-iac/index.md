@@ -11,6 +11,10 @@ tags:
     - infrastructure-as-code
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 AI is impacting almost every industry today, and for good reason - we are seeing fundamentally new experiences being made possible across a wide variety of products, and a set of new AI capabilities that promise even more incredible change in the near future.
 
 Software development is among the earliest and most prominent fields to realize the benefits of AI, evidenced by the rapid adoption of tools like Github Copilot which is now one of the most heavily adopted developer tools of all time. Developers are benefiting from an incredible increase in their productivity with better scale and faster time to market.
@@ -58,8 +62,7 @@ Of course, it’s not enough just to have the code you need; you actually have t
 
 Even with the rapid progress over the last year, we’re clearly still just getting started in realizing the impact of AI on cloud infrastructure management.
 
-Tightening the feedback loop for tools like Pulumi AI will continue to enable AI to iterate and solve more complex cloud infrastructure challenges, and arrive at correct working solutions. And instead of asking questions and getting back code, these tools will soon be able to actually do the deployments and verify that they work. The result is a natural language interface, which can build and evolve cloud infrastructure. Even as the interface becomes natural language, Infrastructure as Code is a uniquely good “code-behind” for this because it maintains a desired state configuration for the infrastructure, which AI tools can easily iterate on and manage. The incredible pace of improvement in AI model skill and performance for writing code in particular will accrue directly into improvements here.
-
+Tightening the feedback loop for tools like Pulumi AI will continue to enable AI to iterate and solve more complex cloud infrastructure challenges, and arrive at correct working solutions. And instead of asking questions and getting back code, these tools will soon be able to actually do the deployments and verify that they work. The result is a natural language interface, which can build and evolve cloud infrastructure. Even as the interface becomes natural language, Infrastructure as Code is a uniquely good "code-behind" for this because it maintains a desired state configuration for the infrastructure, which AI tools can easily iterate on and manage. The incredible pace of improvement in AI model skill and performance for writing code in particular will accrue directly into improvements here.
 
 | ![`pulumi-ai` CLI in action](https://www.pulumi.com/uploads/content/blog/pulumi-ai/pulumi-ai.gif) |
 |:-:|

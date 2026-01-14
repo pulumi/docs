@@ -1,5 +1,5 @@
 ---
-title: "Cloud Systems Part One: Static Sites and AWS S3"
+title: "Cloud Systems: Static Sites and AWS S3"
 
 date: 2021-12-15
 
@@ -16,6 +16,8 @@ tags:
     - 101
     - tutorials
     - cloud-engineering
+    - cloud-systems
+series: cloud-systems
 ---
 
 Cloud engineering is taking over software development. In a lot of ways, this is great; it allows us to build and deploy more complicated applications with less difficulty, and maintaining those applications becomes less troublesome too. We can release smaller updates more quickly than ever, ensuring that we can stay on top of feature requests and security issues. That said, the rise of cloud engineering has also introduced a lot of complexity in the form of dozens of services even within just one cloud provider. Figuring out where to start can be tough, so let’s take a practical tour! In this series, I’ll walk you through building a personal website and deploying it using modern cloud engineering practices.
@@ -157,7 +159,7 @@ body {
 }
 ```
 
-Your `normalize.css` can be copied from [this respository](https://github.com/necolas/normalize.css), and the expected `background.jpg` can be downloaded from [this repository](https://github.com/katcosgrove/cloud-systems-101/blob/main/part-one/website/background.jpg).
+Your `normalize.css` can be copied from [this repository](https://github.com/necolas/normalize.css), and the expected `background.jpg` can be downloaded from [this repository](https://github.com/katcosgrove/cloud-systems-101/blob/main/part-one/website/background.jpg).
 
 To see what this looks like before we deploy it, we're going to use a tool called `live-server`. This isn't a real, functional webserver, but it's a useful tool during development for static websites. It will reload automatically when a change is detected, so you don't have to wait for deploys.
 
@@ -293,6 +295,6 @@ Duration: 6s
 
 ```
 
-Notice the `Outputs` section there. Those are the two things we exprted at the very end of our `__main__.py`: the ID of the bucket, and the website URL. Click on the website URL, and you'll see your personal site, deployed to AWS S3 and publicly accessible by anyone! If you don't want to keep this up, run `pulumi destroy` to tear down all of these resources, and you're done!
+Notice the `Outputs` section there. Those are the two things we exported at the very end of our `__main__.py`: the ID of the bucket, and the website URL. Click on the website URL, and you'll see your personal site, deployed to AWS S3 and publicly accessible by anyone! If you don't want to keep this up, run `pulumi destroy` to tear down all of these resources, and you're done!
 
 We're not quite done yet, though&mdash;this site is a little slow, and it's not very interactive. Maybe we want some kind of database associated with it, or the convenience of containers, or the scalability of Kubernetes. Stay tuned for the next tutorial in this series, where we'll keep building on this website to introduce more modern cloud engineering tools until it looks like something you'd happily call production!

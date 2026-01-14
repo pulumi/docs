@@ -76,7 +76,7 @@ Loading policy packs...
 
      Type                      Name                                                Plan
  +   pulumi:pulumi:Stack       custom-policy-pack-integration-test-typescript-dev  create
- +   ├─ aws:s3:BucketV2        my-bucket                                           create
+ +   ├─ aws:s3:Bucket           my-bucket                                           create
  +   ├─ aws:ec2:Instance       web-server                                          create
  +   └─ aws:ec2:SecurityGroup  ssh-security-group                                  create
 
@@ -85,13 +85,13 @@ Policies:
         - [mandatory]  all-aws-resources-must-have-tags  (aws:ec2/securityGroup:SecurityGroup: ssh-security-group)
           Ensures all AWS resources have at least one tag.
           All AWS resources must have at least one tag.
-        - [mandatory]  all-aws-resources-must-have-tags  (aws:s3/bucketV2:BucketV2: my-bucket)
+  - [mandatory]  all-aws-resources-must-have-tags  (aws:s3:Bucket: my-bucket)
           Ensures all AWS resources have at least one tag.
           All AWS resources must have at least one tag.
         - [mandatory]  ec2-instance-type-restricted  (aws:ec2/instance:Instance: web-server)
           Ensures EC2 instances use approved instance type.
           Invalid instance type: 't3.micro'. EC2 instances must use 't2.micro' instance type.
-        - [mandatory]  s3-product-prefix  (aws:s3/bucketV2:BucketV2: my-bucket)
+  - [mandatory]  s3-product-prefix  (aws:s3:Bucket: my-bucket)
           Ensures S3 buckets have the correct product prefix.
           Invalid prefix: 'something-unexpected-'. S3 buckets must use 'myproduct-' prefix.
 ```
@@ -107,7 +107,7 @@ Loading policy packs...
 
      Type                      Name                                            Plan
  +   pulumi:pulumi:Stack       custom-policy-pack-integration-test-python-dev  create
- +   ├─ aws:s3:BucketV2        my-bucket                                       create
+ +   ├─ aws:s3:Bucket           my-bucket                                       create
  +   ├─ aws:ec2:Instance       web-server                                      create
  +   └─ aws:ec2:SecurityGroup  ssh-security-group                              create
 
@@ -116,13 +116,13 @@ Policies:
         - [mandatory]  all-aws-resources-must-have-tags  (aws:ec2/securityGroup:SecurityGroup: ssh-security-group)
           Ensures all AWS resources have at least one tag.
           All AWS resources must have at least one tag.
-        - [mandatory]  all-aws-resources-must-have-tags  (aws:s3/bucketV2:BucketV2: my-bucket)
+  - [mandatory]  all-aws-resources-must-have-tags  (aws:s3:Bucket: my-bucket)
           Ensures all AWS resources have at least one tag.
           All AWS resources must have at least one tag.
         - [mandatory]  ec2-instance-type-restricted  (aws:ec2/instance:Instance: web-server)
           Ensures EC2 instances use approved instance type.
           Invalid instance type: 't3.micro'. EC2 instances must use 't2.micro' instance type.
-        - [mandatory]  s3-product-prefix  (aws:s3/bucketV2:BucketV2: my-bucket)
+  - [mandatory]  s3-product-prefix  (aws:s3:Bucket: my-bucket)
           Ensures S3 buckets have the correct product prefix.
           Invalid prefix: 'something-unexpected-'. S3 buckets must use 'myproduct-' prefix.
 ```
@@ -177,7 +177,7 @@ Loading policy packs...
 
      Type                      Name                                                Plan
  +   pulumi:pulumi:Stack       custom-policy-pack-integration-test-typescript-dev  create
- +   ├─ aws:s3:BucketV2        my-bucket                                           create
+ +   ├─ aws:s3:Bucket           my-bucket                                           create
  +   ├─ aws:ec2:Instance       web-server                                          create
  +   └─ aws:ec2:SecurityGroup  ssh-security-group                                  create
 
@@ -196,7 +196,7 @@ Loading policy packs...
 
      Type                      Name                                            Plan
  +   pulumi:pulumi:Stack       custom-policy-pack-integration-test-python-dev  create
- +   ├─ aws:s3:BucketV2        my-bucket                                       create
+ +   ├─ aws:s3:Bucket          my-bucket                                       create
  +   ├─ aws:ec2:Instance       web-server                                      create
  +   └─ aws:ec2:SecurityGroup  ssh-security-group                              create
 

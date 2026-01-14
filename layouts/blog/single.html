@@ -3,7 +3,11 @@
         <div class="xxl:flex">
             <div class="flex flex-col lg:flex-row xxl:w-9/12">
                 <div class="lg:w-1/4 xxl:w-4/12 pr-8">
-                    {{ partial "blog/sidebar.html" . }}
+                    {{ if .Params.series }}
+                        {{ partial "blog/series-sidebar.html" . }}
+                    {{ else }}
+                        {{ partial "blog/sidebar.html" . }}
+                    {{ end }}
                 </div>
 
                 <div class="lg:w-3/4 xxl:w-9/12">
@@ -15,7 +19,11 @@
                         {{ end }}
 
 
-                        <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time></p>
+                        {{ if .Params.updated }}
+                            <p>Updated on <time>{{ (time .Params.updated).Format "Monday, January 2, 2006" }}</time></p>
+                        {{ else }}
+                            <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time></p>
+                        {{ end }}
 
                         <div class="flex items-center">
                             <span class="text-sm text-gray-700">

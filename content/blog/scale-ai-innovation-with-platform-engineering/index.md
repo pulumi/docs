@@ -28,6 +28,10 @@ social:
     linkedin:
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 As leadership teams continue to bet big on AI, the tradeoffs between how much to invest and when to expect a reasonable return are ever-present. While exploring scenarios for accelerating this return on investment, organizations are discovering some unique ways to accelerate their AI payback with Platform Engineering.
 
 As innovation and ROI pressures mount, how are savvy tech organizations using Platform Engineering to get more competitive advantage - and perhaps a quantum leap - from their AI investments?

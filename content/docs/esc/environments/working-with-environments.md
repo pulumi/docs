@@ -450,11 +450,11 @@ For additional options and details, see `esc run --help`.
 
 ## Importing other environments
 
-Environments can also be composed from other environments.
+Pulumi ESC lets you define common configuration values once as reusable environments and then import them into other environments to avoid duplication, delegate ownership, and share settings (including secrets) across applications.
 
-Different applications are often configured in similar ways and with common values --- for example, an e-commerce site and order-management system both configured to use the same cloud account, database-connection string, and third-party API key. Managing the duplication of these values across multiple configuration files, however, can be difficult, especially when one of those values changes --- e.g., when an API key is regenerated.
-
-To address these challenges, Pulumi ESC allows you to identify common or closely related configuration settings and define them only once, as individual environments, and then _import_ those environments into other, more specialized environments as needed. Imports also allow you to expose certain environments without having to distribute any concrete values and to delegate responsibility for particular environments to other teams in your organization. Environments can import both static and dynamic values, including secrets, from any number of other environments.
+{{% notes type="info" %}}
+For a detailed description on how to work with imports, please refer to [Importing other Environments](../imports) documentation page.
+{{% /notes %}}
 
 In the following example, two environments, `aws/dev` and `stripe/dev`, are used to compose a third environment, `myapp/dev`:
 
@@ -601,7 +601,7 @@ Stacks may only read from environments that belong to the same Pulumi organizati
 
 ### With Automation API
 
-You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). The following methods are supported today:
+You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python]/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). The following methods are supported today:
 
 * `addEnvironments(...)`: Append environments to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
 * `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
@@ -776,6 +776,23 @@ This will permanently remove the "myorg/myproject/test" environment!
 Please confirm that this is what you'd like to do by typing `myorg/myproject/test`: myorg/myproject/test
 Environment "myorg/myproject/test" has been removed!
 ```
+
+## Restoring an environment
+
+{{% notes type="info" %}}
+The ability to restore a deleted environment is limited to Enterprise and Business Critical editions. {{% /notes %}}
+
+Restoring an environment allows you to recover a previously deleted environment (for example, if it was deleted by accident).
+
+To restore an environment:
+
+1. Navigate to **Environments** in the Pulumi Cloud console.
+1. Select the three-dot menu beside **Create Environment**.
+1. Select **Restore deleted environments** from the dropdown.
+1. In the list of recently deleted environments, select the three-dot menu next to the environment you want to recover.
+1. Select **Restore environment**.
+
+Restored environments retain their previous history and values. If you need to restore an environment that is not listed, or if it was deleted outside the retention window, contact Pulumi support for assistance.
 
 ## Cloning an environment
 

@@ -75,7 +75,7 @@ In Pulumi, there are three paths to take when importing resources:
 
 ### Import using the CLI
 
-The `pulumi import` command looks up the resource using the specified type token and resource identifier, adds the resource to the stack's current state, and emits the code required to manage the resource with Pulumi from that point forward. This option requires the least manual effort, so it is generally recommended and best suited to projects consisting consisting of only one stack.
+The `pulumi import` command looks up the resource using the specified type token and resource identifier, adds the resource to the stack's current state, and emits the code required to manage the resource with Pulumi from that point forward. This option requires the least manual effort, so it is generally recommended and best suited to projects consisting of only one stack.
 
 To import an existing cloud resource with the Pulumi CLI, use the following syntax:
 
@@ -284,7 +284,7 @@ Now, navigate to your program code file and update the code with the following r
 
 {{< example-program path="gcp-import-service-account" >}}
 
-As you can see, the lookup property of the Resource Goup resource has been provided as the value of the `import` option in the resource definition.
+As you can see, the lookup property of the Resource Group resource has been provided as the value of the `import` option in the resource definition.
 
 At this point, the definition for the imported resources has only been written, meaning it has not yet been imported into your project's state and is therefore not yet under management by Pulumi. To complete the import process using this method, you will need to save your file and run the `pulumi up` command. You should see output resembling the following example:
 

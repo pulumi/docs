@@ -8,7 +8,7 @@ menu:
     iac:
         name: Configuration
         parent: iac-concepts
-        weight: 6
+        weight: 40
     concepts:
         weight: 6
 aliases:
@@ -23,7 +23,7 @@ In many cases, different stacks for a single project will need differing values.
 
 Pulumi offers a configuration system for managing such differences. Instead of hard-coding the differences, you can store and retrieve configuration values using a combination of the [CLI](/docs/cli/) and the programming model.
 
-The key-value pairs for any given stack are stored in [your project's stack settings file](/docs/concepts/projects#stack-settings-file), which is automatically named `Pulumi.<stack-name>.yaml`. You can typically ignore this file, although you may want to check it in and version it with your project source code.
+The key-value pairs for any given stack are stored in [your project's stack settings file](/docs/concepts/projects#stack-settings-file), which is automatically named `Pulumi.<stack-name>.yaml`. Stack configuration files should be committed to version control because their values drive the behavior of your Pulumi program.
 
 ## Configuration Options {#config-stack}
 
@@ -100,22 +100,16 @@ $ pulumi new aws-typescript --config="aws:region=us-west-2"
 
 Configuration values can be retrieved for a given stack using either {{< pulumi-config-get >}} or {{< pulumi-config-require >}}. Using {{< pulumi-config-get >}} will return {{< language-null >}} if the configuration value was not provided, and {{< pulumi-config-require >}} will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI.
 
+{{% notes type="info" %}}
+Configuration values can only be **read** during program execution, not set. To programmatically manage stack configurations (like setting config values or creating stacks dynamically), use [Automation API](/docs/iac/automation-api/). Automation API provides full programmatic control over Pulumi operations, including writing configuration values to stack files and managing stack lifecycle.
+{{% /notes %}}
+
 For potentially-secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}, which will return the config value as an `Output` which carries both the value and the secret-ness of the config value so that it will be encrypted whenever serialized (see [secrets](/docs/concepts/secrets/) for more on managing secret values).
 
 Configuration methods operate on a particular namespace, which by default is the name of the current project. Passing an empty constructor to {{< pulumi-config >}}, as in the following example, sets it up to read values set without an explicit namespace (e.g., `pulumi config set name Joe`):
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let config = new pulumi.Config();
-let name = config.require("name");
-let lucky = config.getNumber("lucky") || 42;
-let secret = config.requireSecret("secret");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -201,16 +195,8 @@ config:
 
 To access a namespaced configuration value, such as one set for a provider library like `aws`, you must pass the library's name to the constructor. For example, to retrieve the configured value of `aws:region`:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let awsConfig = new pulumi.Config("aws");
-let awsRegion = awsConfig.require("region");
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -264,29 +250,13 @@ variables:
 
 Similarly, if you are writing code that will be imported into a broader project, such as your own library of [Pulumi components](/docs/concepts/resources/components/), you should instead pass your library's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your library:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
 class MyComponent extends pulumi.ComponentResource {
     constructor(name: string, args = {}, opts: pulumi.ComponentResourceOptions = {}) {
-        super("mylib:index:MyComponent", name, args, opts);
-
-        // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
-        const config = new pulumi.Config("mylib");
-        const name = config.require("name");
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language javascript %}}
-
-```javascript
-class MyComponent extends pulumi.ComponentResource {
-    constructor(name, args, opts) {
         super("mylib:index:MyComponent", name, args, opts);
 
         // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
@@ -411,17 +381,8 @@ For structured config, `true` and `false` values are persisted as boolean values
 
 The `data` config can be accessed in your Pulumi program using:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let config = new pulumi.Config();
-let data = config.requireObject("data");
-console.log(`Active: ${data.active}`);
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -502,6 +463,130 @@ public static void stack(Context ctx) {
 
 {{< /chooser >}}
 
+### Accessing nested values
+
+When you retrieve structured configuration using `requireObject` or `getObject`, the returned value is a plain object (or dictionary/map in other languages), not a `Config` instance. This means you access nested properties using standard object property access, not by chaining `Config` methods.
+
+For example, if you have this configuration:
+
+```bash
+$ pulumi config set --path 'api.endpoint' "https://api.example.com"
+$ pulumi config set --path 'api.timeout' 30
+$ pulumi config set --path 'api.headers.authorization' "Bearer token123"
+$ pulumi config set --path 'api.headers.content-type' "application/json"
+```
+
+This creates the following structure in your `Pulumi.<stack-name>.yaml` (where `myproject` is your project name from `Pulumi.yaml`):
+
+```yaml
+config:
+  myproject:api:
+    endpoint: https://api.example.com
+    timeout: 30
+    headers:
+      authorization: Bearer token123
+      content-type: application/json
+```
+
+You can access these nested values in your program like this:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+interface ApiConfig {
+    endpoint: string;
+    timeout: number;
+    headers: {
+        authorization: string;
+        "content-type": string;
+    };
+}
+
+const config = new pulumi.Config();
+const apiConfig = config.requireObject<ApiConfig>("api");
+
+// Access nested properties directly using standard object notation
+const endpoint = apiConfig.endpoint;  // "https://api.example.com"
+const timeout = apiConfig.timeout;    // 30
+const authHeader = apiConfig.headers.authorization;  // "Bearer token123"
+
+// You CANNOT chain config.require() calls like this:
+// const endpoint = config.require("api").require("endpoint");  // This does NOT work!
+// Reason: requireObject() returns a plain JavaScript object, not a Config instance,
+// and only Config instances have the require() method.
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+config = pulumi.Config()
+api_config = config.require_object("api")
+
+# Access nested properties using dictionary notation
+endpoint = api_config["endpoint"]  # "https://api.example.com"
+timeout = api_config["timeout"]    # 30
+auth_header = api_config["headers"]["authorization"]  # "Bearer token123"
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+type ApiConfig struct {
+    Endpoint string
+    Timeout  int
+    Headers  map[string]string
+}
+
+cfg := config.New(ctx, "")
+var apiConfig ApiConfig
+cfg.RequireObject("api", &apiConfig)
+
+// Access nested properties directly
+endpoint := apiConfig.Endpoint  // "https://api.example.com"
+timeout := apiConfig.Timeout    // 30
+authHeader := apiConfig.Headers["authorization"]  // "Bearer token123"
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+var config = new Pulumi.Config();
+var apiConfig = config.RequireObject<JsonElement>("api");
+
+// Access nested properties
+var endpoint = apiConfig.GetProperty("endpoint").GetString();  // "https://api.example.com"
+var timeout = apiConfig.GetProperty("timeout").GetInt32();    // 30
+var authHeader = apiConfig.GetProperty("headers")
+    .GetProperty("authorization").GetString();  // "Bearer token123"
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+var config = ctx.config();
+var apiConfig = config.requireObject("api", Map.class);
+
+// Access nested properties
+var endpoint = (String) apiConfig.get("endpoint");  // "https://api.example.com"
+var timeout = (Integer) apiConfig.get("timeout");   // 30
+var headers = (Map<String, String>) apiConfig.get("headers");
+var authHeader = headers.get("authorization");  // "Bearer token123"
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ## Project Level Configuration
 
 There are cases where configuration for more than one stack in a given project is the same. For example, `aws:region` may be the same across multiple or all stacks in a project. Project level configuration (also sometimes referred to as hieararchical configuration) allows setting configuration at the project level instead of having to repeat the configuration setting in each stack's configuration file.
@@ -514,19 +599,44 @@ Project level configuration is defined inside the project folder's `Pulumi.yaml`
 At this time, the `pulumi config set` command does not support project level configuration. Therefore the configuration values are entered directly in the `Pulumi.yaml` file. Also, project level configuration only supports clear text configuration. Support for [pulumi config](https://github.com/pulumi/pulumi/issues/12041) and [project-level secrets](https://github.com/pulumi/pulumi/issues/11549) and other features are planned.
 {{% /notes %}}
 
-Project level configuration supports both simple and structured configuration as described in the sections above. However, structured config needs to include a `value` keyword. The following example shows what the project level configuration (inside `Pulumi.yaml`) looks like based on the examples shown above.
+Project level configuration supports both simple and structured configuration as described in the sections above.
 
-```
+{{% notes type="warning" %}}
+**Important:** Stack-level and project-level YAML files use different syntax for structured configuration:
+
+* **Stack-level files** (`Pulumi.<stack-name>.yaml`): Use the format `projectname:key:` and nest structured values directly under the key
+* **Project-level file** (`Pulumi.yaml`): Use the format `key:` (no project name prefix) and nest structured values under a `value:` wrapper
+
+This distinction is easy to miss and can cause confusion when moving configuration between files.
+{{% /notes %}}
+
+The following example shows what the project level configuration (inside `Pulumi.yaml`) looks like based on the examples shown above:
+
+```yaml
 config:
   aws:region: us-east-1
   name: BroomeLLC
   data:
-    value:
+    value: # Required for project-level structured config
       active: true
       nums:
       - 10
       - 20
       - 30
+```
+
+The same configuration in a stack-level file (`Pulumi.dev.yaml`) would look like this (assuming your project name is `myproject`):
+
+```yaml
+config:
+  aws:region: us-east-1
+  myproject:name: BroomeLLC
+  myproject:data:             # Note: uses project name prefix and no 'value' key needed
+    active: true
+    nums:
+    - 10
+    - 20
+    - 30
 ```
 
 When project level configuration is set as such, the stacks will consume the project level configuration settings by default unless stack-specific configuration overrides the project-level settings.

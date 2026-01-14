@@ -1,5 +1,5 @@
 ---
-title: "It’s Time to Embrace Kubernetes! Really? (Part 1)"
+title: "It's Time to Embrace Kubernetes: Part 1"
 date: 2020-12-09
 meta_desc: "How to evaluate your choices when choosing Kubernetes as your application platform"
 meta_image: embrace-k8s.png
@@ -7,7 +7,8 @@ authors:
     - lee-briggs
 tags:
     - kubernetes
-
+    - embrace-kubernetes
+series: embrace-kubernetes
 ---
 
 When you’re considering whether or not to implement Kubernetes, perhaps the first question to ask yourself is do you need it at all?

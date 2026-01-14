@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: postgres-rotator
     parent: esc-rotated-secrets
-    weight: 4
+    weight: 1
 ---
 
 The `postgres` rotator enables you to rotate user credentials for a PostgreSQL database in your Environment.
@@ -127,7 +127,7 @@ state:
 
 | Property    | Type                                | Description                      |
 |-------------|-------------------------------------|----------------------------------|
-| `awsLambda` | [AWSLambdaConfig](#awslambdaconfig) | An [AWS Lambda connector](/docs/esc/environment/rotation/aws-lambda) needs to be setup |
+| `awsLambda` | [AWSLambdaConfig](#awslambdaconfig) | An [AWS Lambda connector](/docs/esc/environments/rotation/aws-lambda) needs to be setup |
 
 ### AWSLambdaConfig
 

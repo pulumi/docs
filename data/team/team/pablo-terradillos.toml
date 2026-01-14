@@ -1,0 +1,12 @@
+id = "pablo-terradillos"
+name = "Pablo Terradillos"
+title = "Engineering Manager"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "tehsis"
+linkedin = "terradillospablo"
+x = "terradillospab"

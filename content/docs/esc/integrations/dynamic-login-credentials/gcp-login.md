@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: gcp-login
     parent: esc-dynamic-login-credentials
-    weight: 3
+    weight: 5
 aliases:
     - /docs/pulumi-cloud/esc/providers/gcp-login/
     - /docs/esc/providers/gcp-login/

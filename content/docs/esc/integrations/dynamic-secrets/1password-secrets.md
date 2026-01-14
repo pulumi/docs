@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: 1password-secrets
     parent: esc-dynamic-secrets
-    weight: 6
+    weight: 1
 aliases:
     - /docs/pulumi-cloud/esc/providers/1password-secrets/
     - /docs/esc/providers/1password-secrets/

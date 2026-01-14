@@ -102,7 +102,7 @@ as a Stack by the Operator in its cluster.
 
 Choose your preferred language below, or check out [how to create Pulumi Stacks using kubectl][stacks-use-kubectl].
 
-[stacks-use-kubectl]: https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/create-stacks-using-kubectl.md
+[stacks-use-kubectl]: https://github.com/pulumi/pulumi-kubernetes-operator/blob/6a4943af8b888adcf3f7fc2b0400f57768a0dcf7/docs/create-stacks-using-kubectl.md
 [k8s-crd]: https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/
 
 {{< chooser language "typescript,python,go,csharp" >}}
@@ -579,7 +579,7 @@ different selection of updated, "green" pods.
 
 Similar to the Stack CustomResources in the previous sections, we can deploy a Stack
 of a [Blue/Green Kubernetes app in Pulumi][blue-green-example], and step through a sequence of its Git commits
-similiar to how a CI/CD pipeline does. Additionally, we can use the [Pulumi config system][pulumi-config] to parameterize
+similar to how a CI/CD pipeline does. Additionally, we can use the [Pulumi config system][pulumi-config] to parameterize
 settings and secrets on how to manage the Stack CustomResource project.
 
 Deploying the active blue and passive green versions of the app can be done on
@@ -637,7 +637,7 @@ the video clip below for a demo.
 [blue-green-example]: https://github.com/metral/pulumi-blue-green/blob/master/index.ts
 [k8s-deployment]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 [k8s-service]: https://kubernetes.io/docs/concepts/services-networking/service/
-[blue-green-walkthrough]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples/blue-green/
+[blue-green-walkthrough]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/6a4943af8b888adcf3f7fc2b0400f57768a0dcf7/examples/blue-green/
 
 ## Wrap-Up
 

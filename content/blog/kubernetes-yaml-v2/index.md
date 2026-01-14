@@ -120,7 +120,7 @@ resources:
           cronSpec: "* * * * */5"
 ```
 
-This feature is expecially useful for Pulumi YAML, since the `apiextensions.k8s.io:CustomResource` resource isn't
+This feature is especially useful for Pulumi YAML, since the `apiextensions.k8s.io:CustomResource` resource isn't
 supported yet (see [pulumi-kubernetes#2787](https://github.com/pulumi/pulumi-kubernetes/issues/2787)).
 
 ### Resource Ordering

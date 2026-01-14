@@ -77,7 +77,7 @@ If the GitHub organization you want to write to isn’t the one currently shown,
 
 ### Deployment settings
 
-Configure the behavior of Deployments, including when to trigger new Deployments and any environment variables required for the Pulumi program to run. Unless you have configured this project to use an Environment, you will need to add variables for `AWS_ACCESS_KEY_ID' and `AWS_SECRET_ACCESS_KEY`.
+Configure the behavior of Deployments, including when to trigger new Deployments and any environment variables required for the Pulumi program to run. Unless you have configured this project to use an Environment, you will need to add variables for `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
 {{% notes type="info" %}}
 Secret environment variables, such as `AWS_SECRET_ACCESS_KEY`, are encrypted end-to-end with Pulumi and can be set on each stack. However, by creating an [environment](/docs/pulumi-cloud/esc) with Pulumi ESC, you can centralize secrets and set up OIDC for secure authentication. This allows you to manage and share sensitive configuration data across multiple stacks efficiently.
