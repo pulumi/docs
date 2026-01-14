@@ -1,7 +1,7 @@
 ---
 title: "Pulumi IAM Now Available for Self-Hosted Instances"
 allow_long_title: true
-date: 2026-01-15
+date: 2026-01-14
 draft: false
 meta_desc: "Pulumi IAM with Custom Roles and scoped Access Tokens is now available for self-hosted Pulumi Cloud instances."
 meta_image: meta.png
