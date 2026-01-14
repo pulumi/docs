@@ -1,5 +1,5 @@
 ---
-title: "Pulumi IAM Now Available for Self-Hosted Instances"
+title: "Pulumi IAM Now Available for Self-Hosted Pulumi Cloud"
 allow_long_title: true
 date: 2026-01-14
 draft: false
