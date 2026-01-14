@@ -20,7 +20,7 @@ tags:
   - self-hosted
 ---
 
-We're excited to announce that **Pulumi Identity and Access Management (IAM)** is now available for self-hosted instances of Pulumi Cloud. This foundational security capability brings the same enterprise-grade access controls we launched for Pulumi Cloud SaaS to organizations running Pulumi on their own infrastructure.
+We're excited to announce that **Pulumi Identity and Access Management (IAM)** is now available for self-hosted instances of Pulumi Cloud. This foundational security capability brings the same [enterprise-grade access management](/blog/pulumi-cloud-iam-launch/) we launched for Pulumi Cloud SaaS to organizations running Pulumi on their own infrastructure.
 
 <!--more-->
 
