@@ -54,18 +54,13 @@ This file provides a structured guide to Pulumi's documentation, organized by pr
   {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
 {{- end }}
 
-## Internal Developer Platform (IDP)
+## Internal Developer Platform
 {{- with index site.Menus "idp" }}
   {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
 {{- end }}
 
-## AI-Driven Tasks
+## Infrastructure AI
 {{- with index site.Menus "ai" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Migration
-{{- with index site.Menus "migration" }}
   {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
 {{- end }}
 
