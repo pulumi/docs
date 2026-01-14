@@ -79,8 +79,6 @@ aws s3 cp "$build_dir/esc/latest-version" "${destination_bucket_uri}/esc/latest-
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 aws s3 cp "$build_dir/customer-managed-workflow-agent/latest-version" "${destination_bucket_uri}/customer-managed-workflow-agent/latest-version" \
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
-aws s3 cp "$build_dir/llms.txt" "${destination_bucket_uri}/llms.txt" \
-    --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 
 # Smoke test the deployed website. Specs are in ../cypress/integration.
 echo "Running tests..."
