@@ -4,6 +4,7 @@ date: 2024-08-29T10:00:00-06:00
 allow_long_title: true
 meta_desc: "Pulumi now supports using any Terraform or OpenTofu provider with Pulumi, in just a few seconds"
 meta_image: meta.png # TODO
+canonical_url: "/docs/iac/concepts/providers/any-terraform-provider/"
 authors:
   - luke-hoban
   - ian-wahbe
@@ -23,7 +24,11 @@ social:
 
 ---
 
-One of our core goals at Pulumi is to provide access to manage **any** cloud infrastructure with a single unified programming model.  Whether it’s multi-cloud (AWS+Azure+Kubernetes), hybrid cloud (GCP+VMWare+Cisco), or managed services (Databricks+GitHub+Cloudflare), Pulumi makes it easy to deploy and manage infrastructure across all of your cloud environments using any of the 150+ cloud providers in the Pulumi Registry.
+{{% notes type="info" %}}
+For the most up-to-date information about using any Terraform provider with Pulumi, see the [Any Terraform Provider documentation](/docs/iac/concepts/providers/any-terraform-provider/).
+{{% /notes %}}
+
+One of our core goals at Pulumi is to provide access to manage **any** cloud infrastructure with a single unified programming model.  Whether it's multi-cloud (AWS+Azure+Kubernetes), hybrid cloud (GCP+VMWare+Cisco), or managed services (Databricks+GitHub+Cloudflare), Pulumi makes it easy to deploy and manage infrastructure across all of your cloud environments using any of the 150+ cloud providers in the Pulumi Registry.
 
 We’re excited to take this even further by introducing support for using [_any_ Terraform or OpenTofu provider](https://www.pulumi.com/registry/packages/terraform-provider/) from within your Pulumi programs.  If there is a long tail Cloud or SaaS platform that has a provider for those ecosystems, it now works with Pulumi as well.  And if your organization has built your own custom Terraform or OpenTofu provider to support an internal cloud platform, you can use it from Pulumi as well, without having to publish it to any registry.
 
