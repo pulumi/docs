@@ -75,8 +75,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: ea5da134-9b0e-4a34-83f8-e2074f498f21
-    salesforce_campaign_id: 701Du000000Bu2kIAC
+    hubspot_form_id: 1ae87a2f-ffee-4e67-926f-c0b893bd8cfb
+    salesforce_campaign_id: 701PQ00000pBFcfYAG
     
 event_data:
   name: "Getting Started with Infrastructure as Code on Google Cloud"
