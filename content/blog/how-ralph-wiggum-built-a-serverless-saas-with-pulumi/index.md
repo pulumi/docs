@@ -1,9 +1,9 @@
 ---
-title: "When Ralph Wiggum Meets Pulumi"
+title: "How Ralph Wiggum Built a Serverless SaaS with Pulumi"
 allow_long_title: true
-date: 2026-01-13T09:00:00-08:00
+date: 2026-01-14T09:00:00-08:00
 draft: false
-meta_desc: "How the Ralph Wiggum autonomous loop technique built a complete serverless URL shortener SaaS on AWS using Pulumi without supervision."
+meta_desc: "See how an AI agent using the Ralph Wiggum loop built a full AWS serverless SaaS with Pulumi—unsupervised. Frontend, backend, tests, and CloudFront included."
 meta_image: meta.png
 authors:
     - engin-diri
@@ -76,7 +76,7 @@ claude mcp add playwright npx @playwright/mcp@latest
 
 ## Why Pulumi is perfect for Ralph
 
-Infrastructure as code has something most application code does not: objective success criteria. Your Lambda either deploys or it does not. Your DynamoDB table either exists or it does not. Tests either pass or they fail.
+[Infrastructure as code](/what-is/infrastructure-as-code/) has something most application code does not: objective success criteria. Your Lambda either deploys or it does not. Your DynamoDB table either exists or it does not. Tests either pass or they fail.
 
 This makes Pulumi an ideal candidate for autonomous AI development:
 
@@ -396,7 +396,7 @@ The experience is remarkably similar to Ralph:
 
 The main difference is that Neo runs in Pulumi Cloud rather than on your local machine, and it is purpose-built for infrastructure tasks. You get the autonomous loop experience without needing to configure plugins or bash loops.
 
-![img.png](img.png)
+![Pulumi Neo interface showing task configuration with auto mode enabled](img.png)
 
 For teams already using Pulumi Cloud, Neo with auto mode might be the fastest path to autonomous infrastructure development.
 
