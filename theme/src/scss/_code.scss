@@ -69,6 +69,7 @@ pre {
 pre.mermaid {
     @apply bg-transparent p-0;
     @apply text-gray-900;
+    @apply flex justify-center items-center;
 }
 
 div.highlight.line-numbers {
