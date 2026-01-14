@@ -34,7 +34,7 @@ Self-hosted Pulumi customers can now leverage the full power of **Custom Roles**
 
 ## Secure Automation for On-Premises Infrastructure
 
-This release is particularly powerful for self-hosted deployments where security and compliance requirements are often even more stringent. You can now:
+This release is powerful for self-hosted Pulumi Cloud deployments where security and compliance requirements are often even more stringent. You can now:
 
 *   **Implement Least Privilege CI/CD:** Scope pipeline tokens to only the actions and resources they absolutely need, ensuring your automation follows the same security standards as your infrastructure.
 *   **Enhance Compliance Posture:** Demonstrate precise, auditable control over programmatic access to auditors and security teams.
