@@ -13,7 +13,6 @@
   {{- end }}
 {{- end }}
 
-{{- if ne hugo.Environment "preview" -}}
 # Pulumi
 
 > Infrastructure as code using real programming languages. Build, deploy, and manage cloud infrastructure on AWS, Azure, GCP, Kubernetes, and 150+ providers with TypeScript, Python, Go, C#, Java, or YAML.
@@ -118,5 +117,3 @@ This file provides a structured guide to Pulumi's documentation, organized by pr
 - [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
   {{- end }}
 {{- end }}
-
-{{- end -}}
