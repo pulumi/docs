@@ -26,7 +26,7 @@ We're excited to announce that **Pulumi Identity and Access Management (IAM)** i
 
 ## Enterprise Security for Self-Hosted Deployments
 
-Self-hosted Pulumi customers can now leverage the full power of **Custom Roles** and **Granular Access Tokens** to implement Zero Trust security principles and least privilege access controls within their own environments. This means you can:
+Self-hosted Pulumi Cloud customers can now leverage the full power of **Custom Roles** and **Granular Access Tokens** to implement Zero Trust security principles and least privilege access controls within their own environments. This means you can:
 
 *   **Define Custom Permissions** with fine-grained scopes (e.g., `stack:delete`, `environment:read`) tailored to your organization's security requirements.
 *   **Create Custom Roles** by combining these permissions with specific Pulumi entities (Stacks, Environments, etc.).
