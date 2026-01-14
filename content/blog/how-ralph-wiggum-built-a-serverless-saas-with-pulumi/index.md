@@ -20,7 +20,7 @@ social:
     linkedin: "The Ralph Wiggum autonomous loop technique is changing how developers work with AI coding assistants. I tested it with Pulumi to build infrastructure unsupervised. The results were surprising."
 ---
 
-I was about to do something that felt either genius or completely reckless: hand over my AWS credentials to an AI and step away from my computer. The technique is called "Ralph Wiggum," named after the Simpsons character who eats glue and says "I'm in danger" while everything burns around him. And honestly, that felt about right for what I was attempting.
+I was about to do something that felt either genius or completely reckless: hand over my AWS credentials to an AI and step away from my computer. The technique is called "[Ralph Wiggum](https://simpsons.fandom.com/wiki/Ralph_Wiggum)," named after the Simpsons character who eats glue and says "I'm in danger" while everything burns around him. And honestly, that felt about right for what I was attempting.
 
 <!--more-->
 
@@ -32,7 +32,7 @@ You stare at the screen. "No. No, you have not. You maybe did a third of what I 
 
 So you reprompt it. It does a little more. Then it stops again. You are babysitting. The whole point of using an AI assistant was to save time, but if you have to check on it every five minutes, you are not saving anything. You are just a very expensive supervisor.
 
-This is the problem Geoffrey Huntley decided to solve.
+This is the problem [Geoffrey Huntley](https://x.com/GeoffreyHuntley) decided to solve.
 
 ## What if we just do not let it stop?
 
@@ -60,7 +60,7 @@ The official Claude Code plugin formalizes this with some important additions:
 
 - **Completion promises**: You tell Claude to output a specific string like `<promise>COMPLETE</promise>` when it has genuinely finished
 - **Max iterations**: A safety limit so your API bill does not reach infinity
-- **Stop hooks**: The mechanism that intercepts exit attempts and re-injects the prompt
+- **Stop hooks**: [The mechanism that intercepts exit attempts and re-injects the prompt](https://docs.anthropic.com/en/docs/claude-code/hooks)
 
 To install it:
 
@@ -205,9 +205,15 @@ When Claude finished, it had:
 - Dark mode toggle that actually worked
 - Responsive design that looked good on mobile
 
+### Home screen
+
 ![The landing page Claude built, complete with hero section, features, and pricing tiers](landing-page.png)
 
+### Dashboard
+
 ![The dashboard showing the URL shortening form and list of created URLs](dashboard-page.png)
+
+### Documentation
 
 ![The documentation page with API reference and getting started guide](docs-page.png)
 
