@@ -79,7 +79,7 @@ const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain'
 // Reference to the Astro stack for data warehouse access (only if enabled)
 let astroAwsRoleArn: pulumi.Output<any> | undefined;
 if (config.enableDataWarehouseAccess) {
-    const astroStack = new pulumi.StackReference('pulumi/dwh-workflows-orchestrate-astro/production');
+    const astroStack = new pulumi.StackReference('pulumi/dwh-workflows-astro/production');
     astroAwsRoleArn = astroStack.getOutput('astroAwsRoleArn');
 }
 
