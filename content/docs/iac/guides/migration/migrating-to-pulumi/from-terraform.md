@@ -45,11 +45,9 @@ If your infrastructure was provisioned with Terraform or the CDK for Terraform (
    ```
 
 3. **Neo will**:
-   * Parse your Terraform configuration files
-   * Read and convert your Terraform state
-   * Generate equivalent Pulumi code
-   * Import existing resources without touching them
-   * Verify zero changes with `pulumi preview`
+   * Convert your Terraform state to Pulumi state
+   * Generate equivalent Pulumi code using your Terraform configuration
+   * Verify no changes with `pulumi preview`
 
 4. **Review and commit**:
    * Examine the generated Pulumi code
@@ -63,8 +61,9 @@ For a detailed technical walkthrough, see our [Neo migration blog post](/blog/ne
 While Neo handles most Terraform configurations automatically, you might need manual migration for:
 
 * Terraform modules with complex dynamic blocks not yet supported by Neo
-* Scenarios where you want to fundamentally restructure during migration
 * Edge cases with custom providers or unusual state configurations
+
+If you want to fundamentally restructure your infrastructure, we recommend completing the migration first and then refactoring your Pulumi code.
 
 Continue reading below for manual migration approaches if Neo doesn't fit your specific needs.
 

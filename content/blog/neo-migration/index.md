@@ -36,13 +36,13 @@ The promise of Infrastructure as Code is that your code perfectly describes your
 
 When you rewrite your infrastructure code in a new tool, you have two choices, both problematic. You can destroy and recreate all your resources to match the new code, accepting downtime and risk. Or you can try to import existing resources, which requires perfect knowledge of how every resource maps between the old and new systems. Many teams get stuck here, wanting Pulumi's modern platform but unable to safely make the switch.
 
-## Neo's insight: State knowledge enables perfect imports
+## Neo's insight: State knowledge enables perfect migrations
 
 The key to safe migration isn't just converting code - it's understanding the complete relationship between your existing IaC tool's state and your actual cloud resources. Each IaC tool maintains this relationship differently: CDK through CloudFormation stacks, Terraform through state files, and ARM through Azure deployments. But they all have complete knowledge of what they manage.
 
-Neo leverages this existing state knowledge to orchestrate perfect imports. Instead of asking you to manually find resource IDs and construct import commands, Neo reads your current tool's state, discovers every resource's physical identity, and maps them to Pulumi's import system. This isn't just automation - it's using the source tool's own knowledge against the migration problem.
+Neo leverages this existing state knowledge to orchestrate perfect resource transitions. Instead of asking you to manually find resource IDs and construct migration commands, Neo reads your current tool's state, discovers every resource's physical identity, and brings them under Pulumi management. This isn't just automation - it's using the source tool's own knowledge against the migration problem.
 
-In practice, this means Neo can bridge the gap between how tools name resources and where they actually live. A Lambda function that CDK knows as `OrderHandler9I0J1K2L` actually exists in AWS as `my-app-OrderHandler-9I0J1K2L`, while a Terraform resource at address `aws_instance.web[2]` maps to EC2 instance `i-0abc123def456`. Neo understands these mappings and handles the complex cases like composite IDs (`FunctionName|StatementId`), resource references, and dependency chains that must be imported in order.
+In practice, this means Neo can bridge the gap between how tools name resources and where they actually live. A Lambda function that CDK knows as `OrderHandler9I0J1K2L` actually exists in AWS as `my-app-OrderHandler-9I0J1K2L`, while a Terraform resource at address `aws_instance.web[2]` maps to EC2 instance `i-0abc123def456`. Neo understands these mappings and handles the complex cases like composite IDs (`FunctionName|StatementId`), resource references, and dependency chains that must be migrated in order.
 
 Because Neo uses the source tool's own state knowledge, your infrastructure doesn't change at all during migration. Not a single resource is modified, recreated, or even touched. We're simply transferring ownership from one IaC tool to another.
 
@@ -66,17 +66,17 @@ CDK also introduces complexity through its construct hierarchy. A single high-le
 
 ## Terraform to Pulumi
 
-Migrating from Terraform presents unique considerations due to how state is managed. Terraform's state file contains complete information about every resource, including its provider, type, and physical ID—essential data for a successful migration. However, Terraform state has evolved across versions, and resources created with `count` or `for_each` add complexity through their indexed naming patterns like `aws_instance.web[2]`. For complete migration instructions, see our [Terraform migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
+Terraform migrations require two transformations: converting state to establish Pulumi's connection to your resources, and transforming HCL configuration into Pulumi code. The state conversion is direct - Neo reads your Terraform state and converts it into Pulumi state, preserving the mappings between resource names and cloud IDs. This ensures Pulumi knows that `aws_instance.web[2]` corresponds to EC2 instance `i-0abc123def456`.
 
-Neo handles this complexity by first converting Terraform's state into Pulumi state, establishing the connection to your real cloud resources. Then, using both the Terraform configuration files and this converted state, Neo generates a Pulumi program that matches your existing infrastructure. When Terraform manages resources with `count` or `for_each`, creating indexed instances like `aws_instance.web[2]`, Neo ensures these map correctly to both the cloud resources and the generated Pulumi code. Your third web server remains exactly that after migration, properly indexed and connected.
+The code transformation analyzes your HCL to generate equivalent Pulumi code. Neo handles Terraform patterns like `count` and `for_each` loops, module structures, and resource dependencies, recreating them idiomatically in Pulumi. The generated code manages your existing infrastructure without modifications - `pulumi preview` confirms zero changes. For complete migration instructions, see our [Terraform migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
 
 ## Azure ARM to Pulumi
 
 ARM templates present unique migration challenges. Unlike CDK and Terraform, which maintain clear separation between code and state, ARM templates blur this line. The template is both the definition and, through deployment history, part of the state tracking. ARM's template expression language, with its concat functions and resource ID constructors, makes it difficult to determine what resources actually exist until deployment time. For step-by-step migration guidance, see our [ARM migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/).
 
-Neo orchestrates ARM migrations through intelligent AI-driven conversion. When an ARM template uses functions like `concat(parameters('appName'), '-plan')`, the conversion process evaluates these expressions using the actual parameter values to generate the correct resource names. Azure resource IDs follow predictable patterns - subscription IDs, resource groups, providers, and resource names - and Neo ensures these are correctly mapped to Pulumi's import system using inline import IDs directly in the generated code.
+Neo orchestrates ARM migrations through intelligent AI-driven conversion. When an ARM template uses functions like `concat(parameters('appName'), '-plan')`, the conversion process evaluates these expressions using the actual parameter values to generate the correct resource names. Azure resource IDs follow predictable patterns - subscription IDs, resource groups, providers, and resource names - and Neo ensures these are correctly brought under Pulumi management using inline resource specifications directly in the generated code.
 
-The biggest challenge with ARM migrations is handling the implicit dependencies and resource provider quirks. An App Service might implicitly create a service plan, a SQL database requires a server that might be defined in a linked template, and child resources like application settings need separate imports. Neo understands these Azure-specific patterns and generates the appropriate Pulumi code with imports for every resource. The migration completes with a zero-diff preview, confirming your exact Azure configuration is preserved while giving you a more maintainable, type-safe way to manage it going forward.
+The biggest challenge with ARM migrations is handling the implicit dependencies and resource provider quirks. An App Service might implicitly create a service plan, a SQL database requires a server that might be defined in a linked template, and child resources like application settings need separate migration steps. Neo understands these Azure-specific patterns and generates the appropriate Pulumi code to manage every resource. The migration completes with a zero-diff preview, confirming your exact Azure configuration is preserved while giving you a more maintainable, type-safe way to manage it going forward.
 
 ## The architecture powering it all
 
@@ -89,14 +89,14 @@ Neo acts as the intelligent migration coordinator, regardless of source tool:
 - **Credential verification**: Ensures proper cloud credentials are configured in Pulumi ESC
 - **Resource inventory**: Builds a complete catalog of existing resources
 - **Conversion orchestration**: Manages the code transformation
-- **Import coordination**: Executes resource imports in the correct order
+- **State migration**: Brings existing resources under Pulumi management
 - **Audit trail generation**: Creates comprehensive migration reports
 
-### Unified import engine
+### Unified state management engine
 
-The import engine works consistently across all tools:
+The state management engine works consistently across all tools:
 
-- Maps source resource IDs to Pulumi import formats
+- Maps source resource IDs to Pulumi's state management
 - Handles complex and composite resource identifiers
 - Provides fallback strategies for edge cases
 - Ensures idempotent operations
@@ -105,7 +105,7 @@ The import engine works consistently across all tools:
 
 While Neo automates the heavy lifting, we maintain human checkpoints:
 
-- Review generated code before import
+- Review generated code before migrating resources
 - Verify preview shows zero changes
 - Approve the resulting pull request
 
