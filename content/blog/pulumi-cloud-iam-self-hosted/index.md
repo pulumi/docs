@@ -42,7 +42,7 @@ This release is powerful for self-hosted Pulumi Cloud deployments where security
 
 ## Getting Started
 
-Self-hosted customers can access IAM features through the same intuitive interface available in Pulumi Cloud SaaS. Navigate to Organization Settings -> Roles to begin creating Custom Permissions and Custom Roles, then generate scoped Organization Access Tokens from Organization Settings -> Access Tokens.
+Self-hosted customers can access IAM features through the same intuitive interface available in Pulumi Cloud SaaS. Navigate to **Settings** -> **Access Management** -> **Roles** to begin creating Custom Permissions and Custom Roles, then generate scoped Organization Access Tokens from **Settings** -> **Access Management** -> **Access Tokens**.
 
 For detailed information about Pulumi IAM capabilities, including step-by-step guides and best practices, see our [comprehensive announcement blog post](/blog/pulumi-cloud-iam-launch/).
 
