@@ -366,7 +366,8 @@ config:
       azure-native:
         mode: verbatim  # Azure resources use exact names
         resources:
-          "azure-native:storage:Account": ${name}${string(6)}  # Storage accounts need unique names
+          azure-native:storage:Account:
+            pattern: ${name}${string(6)}  # Storage accounts need unique names
 ```
 
 ### Strict Name Pattern Enforcement
