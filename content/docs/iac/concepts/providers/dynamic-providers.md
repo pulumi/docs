@@ -7,24 +7,29 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Dynamic providers
-        parent: iac-concepts-resources
+        parent: iac-concepts-providers
         weight: 6
     concepts:
-        parent: resources
+        parent: providers
         weight: 6
 aliases:
 - /docs/intro/concepts/resources/dynamic-providers/
 - /docs/concepts/resources/dynamic-providers/
+- /docs/iac/concepts/resources/dynamic-providers/
 ---
 
 The dynamic resource provider construct can be used to build a local provider for simple APIs and use-cases. Dynamic resource providers are only able to be used in Pulumi programs written in the same language as the dynamic resource provider. But, they are lighter weight than custom providers and for many use-cases are sufficient to leverage the Pulumi state model. For more sophisticated APIs, one can create a [bridged or native provider](/docs/iac/packages-and-automation/pulumi-packages/).
 
 {{% notes type="info" %}}
-**Note:** The Pulumi registry includes the [Command Provider](https://www.pulumi.com/registry/packages/command/) as an even lighter weight solution and can be used in place of a dynamic resource provider in some cases.
+The Pulumi registry includes the [Command Provider](https://www.pulumi.com/registry/packages/command/) as an even lighter weight solution and can be used in place of a dynamic resource provider in some cases.
 {{% /notes %}}
 
 {{% notes type="info" %}}
-**Note:** [Pulumi Policy Packs](/docs/insights/policy/) can be used to validate dynamic provider resources. However, since all dynamic resources share the same resource type (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python), policies must identify specific dynamic providers by checking for unique properties. See [Writing policies for dynamic providers](/docs/insights/policy/policy-packs/authoring/#writing-policies-for-dynamic-providers) for examples and best practices.
+[Pulumi Policy Packs](/docs/insights/policy/) can be used to validate dynamic provider resources. However, since all dynamic resources share the same resource type (`pulumi-nodejs:dynamic:Resource` for TypeScript or `pulumi-python:dynamic:Resource` for Python), policies must identify specific dynamic providers by checking for unique properties. See [Writing policies for dynamic providers](/docs/insights/policy/policy-packs/authoring/#writing-policies-for-dynamic-providers) for examples and best practices.
+{{% /notes %}}
+
+{{% notes type="warning" %}}
+Dynamic providers in TypeScript are incompatible with projects using pnpm as a package manager. If you're using pnpm, consider using npm or yarn instead. For more information, see [pulumi/pulumi#9085](https://github.com/pulumi/pulumi/issues/9085).
 {{% /notes %}}
 
 There are several reasons why you might want to write a dynamic resource provider. Here are some of them:
@@ -169,9 +174,19 @@ See below for details on each of these functions.
 
 Dynamic providers are a flexible and low-level mechanism that allow you to include arbitrary code directly into the deployment process. While most code in a Pulumi program runs while the desired state of the resources is constructed (in other words, as the resource graph is built), the code inside a dynamic provider’s implementation, such as `create` or `update`, runs during resource provisioning, while the resource graph is being turned into a set of CRUD operations scheduled against the cloud provider.
 
-In fact, these two phases of execution actually run in completely separate processes. The construction of a `new MyResource` happens inside the JavaScript, Python, or Go process running in your Pulumi program. In contrast, your implementations of create or update are executed by a special resource provider binary called `pulumi-resource-pulumi-nodejs`. This binary is what actually implements the Pulumi resource provider gRPC interface and it speaks directly to the Pulumi engine.
+These two phases of execution run in separate processes. The construction of a `new MyResource` happens inside the language-specific process running in your Pulumi program. In contrast, your implementations of create or update are executed by a special resource provider binary called, e.g., `pulumi-resource-pulumi-nodejs`. This binary is what actually implements the Pulumi resource provider gRPC interface and it speaks directly to the Pulumi engine.
 
 Because your implementation of the resource provider interface must be used by a different process, potentially at a different point in time, dynamic providers are built on top of the same [function serialization](/docs/iac/concepts/functions/function-serialization/) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions. Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface. You can read more about these limitations in the function serialization documentation.
+
+### Provider code changes
+
+When you modify the code of a dynamic provider (for example, updating the logic in `create`, `read`, or `update` methods), Pulumi does not automatically detect these changes. The resource's inputs haven't changed from Pulumi's perspective, so no update is triggered.
+
+If you need to force an update after changing your provider code, you have several options:
+
+- **Add a version input**: Include a version property in your resource inputs and increment it when you change the provider code. This causes Pulumi to see a difference and trigger an update.
+- **Use `diff` to force changes**: Implement a `diff` method that returns `{ changes: true }` when you want to force an update.
+- **Delete and recreate**: Remove the resource from your program, run `pulumi up`, then add it back. This recreates the resource with the updated provider code.
 
 ## The Resource Provider Interface
 
@@ -336,7 +351,17 @@ The `delete` operation is invoked if the URN exists in the previous state but no
 
 ### read(id, props)
 
-The `read` method is invoked when the Pulumi engine needs to get data about a resource that is not managed by Pulumi. The method is passed the `id` of the resource, as tracked in the cloud provider, and an optional bag of additional properties that can be used to disambiguate the request, if needed. The `read` method looks up the requested resource, and returns the canonical `id` and output properties of this resource if found. If an error occurs, an exception can be thrown from the `read` method to return this error to the user.
+The `read` method is invoked in three scenarios:
+
+1. When using the static [`get` method](/docs/iac/concepts/resources/get/) to read an existing resource that is not managed by Pulumi.
+1. When using [`pulumi import`](/docs/cli/commands/pulumi_import/) to import an existing resource into Pulumi management.
+1. When running [`pulumi refresh`](/docs/cli/commands/pulumi_refresh/) to synchronize the state with the actual state of the resource in the cloud provider.
+
+The method is passed the `id` of the resource, as tracked in the cloud provider, and an optional bag of additional properties that can be used to disambiguate the request, if needed. The `read` method looks up the requested resource, and returns the canonical `id` and output properties of this resource if found. If an error occurs, an exception can be thrown from the `read` method to return this error to the user.
+
+{{% notes type="info" %}}
+If you implement a `read` method for your dynamic provider, make sure it accurately reflects the current state of the resource in the backing provider. This is especially important when using `pulumi refresh`, as the returned values will update the state file.
+{{% /notes %}}
 
 ## Dynamic Resource Inputs
 
@@ -422,7 +447,11 @@ Any outputs can be returned by your create function in the outs property of `pul
 The following only applies to statically typed languages.
 {{% /notes %}}
 
-If you need to access the outputs of your custom resource outside it with strong typing support, declare each output property returned in the `outs` property by your `create` function as a class member of the `pulumi.dynamic.Resource` itself. For example, in TypeScript, these outputs must be declared as `public readonly` class members in your `pulumi.dynamic.Resource` class. These class members must also have the type `pulumi.Output<T>`.
+If you need to access the outputs of your custom resource outside it with strong typing support, declare each output property returned in the `outs` property by your `create` function as a class member of the `pulumi.dynamic.Resource` itself. For example, in TypeScript, these outputs must be declared using the `declare` keyword in your `pulumi.dynamic.Resource` class. These class members must also have the type `pulumi.Output<T>`.
+
+{{% notes type="warning" %}}
+**Important:** Use the `declare` keyword rather than `public readonly` for output properties. Using `public readonly` with the definite assignment assertion (`!`) can cause outputs to be `undefined` in some TypeScript configurations. The `declare` keyword tells TypeScript the property exists without emitting any JavaScript, which is the correct behavior since Pulumi sets these properties dynamically.
+{{% /notes %}}
 
 The name of the class member must match the names of the output properties as returned by the `create` function.
 
@@ -447,8 +476,8 @@ class MyResourceProvider implements pulumi.dynamic.ResourceProvider {
 }
 
 export class MyResource extends pulumi.dynamic.Resource {
-    public readonly myStringOutput!: pulumi.Output<string>;
-    public readonly myNumberOutput!: pulumi.Output<number>;
+    declare readonly myStringOutput: pulumi.Output<string>;
+    declare readonly myNumberOutput: pulumi.Output<number>;
 
     constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
         super(new MyResourceProvider(), name, { myStringOutput: undefined, myNumberOutput: undefined, ...props }, opts);

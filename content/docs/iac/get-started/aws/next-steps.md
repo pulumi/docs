@@ -43,7 +43,7 @@ With Pulumi ESC you can:
 
 Let our AWS tutorials guide you through key Pulumi concepts.
 
-{{< get-started-next-step path="/docs/using-pulumi/" label="Browse tutorials" ref="gs-aws-tutorials" >}}
+{{< get-started-next-step path="/tutorials/" label="Browse tutorials" ref="gs-aws-tutorials" >}}
 
 ## Launch a new project with a template
 

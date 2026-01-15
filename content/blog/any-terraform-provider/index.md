@@ -23,7 +23,11 @@ social:
 
 ---
 
-One of our core goals at Pulumi is to provide access to manage **any** cloud infrastructure with a single unified programming model.  Whether it’s multi-cloud (AWS+Azure+Kubernetes), hybrid cloud (GCP+VMWare+Cisco), or managed services (Databricks+GitHub+Cloudflare), Pulumi makes it easy to deploy and manage infrastructure across all of your cloud environments using any of the 150+ cloud providers in the Pulumi Registry.
+{{% notes type="info" %}}
+For the most up-to-date information about using any Terraform provider with Pulumi, see the [Any Terraform Provider documentation](/docs/iac/concepts/providers/any-terraform-provider/).
+{{% /notes %}}
+
+One of our core goals at Pulumi is to provide access to manage **any** cloud infrastructure with a single unified programming model.  Whether it's multi-cloud (AWS+Azure+Kubernetes), hybrid cloud (GCP+VMWare+Cisco), or managed services (Databricks+GitHub+Cloudflare), Pulumi makes it easy to deploy and manage infrastructure across all of your cloud environments using any of the 150+ cloud providers in the Pulumi Registry.
 
 We’re excited to take this even further by introducing support for using [_any_ Terraform or OpenTofu provider](https://www.pulumi.com/registry/packages/terraform-provider/) from within your Pulumi programs.  If there is a long tail Cloud or SaaS platform that has a provider for those ecosystems, it now works with Pulumi as well.  And if your organization has built your own custom Terraform or OpenTofu provider to support an internal cloud platform, you can use it from Pulumi as well, without having to publish it to any registry.
 
@@ -148,7 +152,7 @@ Two new technologies in the Pulumi open source project underpin support for usin
 
 **Local Packages** offer the ability to generate a Pulumi SDK for the language of your Pulumi project into a local folder, which can be directly incorporated into your project via your existing package manager along with `pulumi install`.
 
-Local packages are versioned, and parameterized providers support many different formats for their parameters.  For example, the most general form of the command to use an existing Terraform provider is:
+Local packages are versioned when you include a version in the `pulumi package add` command, and parameterized providers support many different formats for their parameters.  For example, the most general form of the command to use an existing Terraform provider is:
 
 ```shell
 $ pulumi package add terraform-provider [<registry>/]<author>/<name> [version]

@@ -24,14 +24,6 @@ aliases:
 - /docs/clouds/aws/get-started/begin/
 ---
 
-## Install Pulumi
-
-Download and install Pulumi for your platform:
-
-{{< install-pulumi >}}
-{{% notes info %}}
-All Windows examples in this tutorial assume you are running in PowerShell.
-{{% /notes %}}
-{{< /install-pulumi >}}
+{{< get-started-install-body >}}
 
 {{< get-started-stepper >}}

@@ -8,7 +8,7 @@ menu:
     iac:
         name: Kubernetes YAML or Helm Charts
         parent: iac-guides-migration-from
-        weight: 4
+        weight: 5
 aliases:
 - /docs/guides/adopting/from_kubernetes/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/

@@ -338,6 +338,7 @@ Context objects are supplied to all Lambda functions and are typed as Lambda [`C
 To use these types, you can apply them as type annotations to your callback arguments. Here, for example, the `APIGatewayProxyEvent` and `Context` types are applied to the arguments of an inline AWS API Gateway route handler:
 
 ```typescript
+import * as aws from "@pulumi/aws";
 import * as apigateway from "@pulumi/aws-apigateway";
 import { APIGatewayProxyEvent, Context } from "aws-lambda";
 
@@ -345,15 +346,18 @@ const api = new apigateway.RestAPI("api", {
     routes: [
         {
             path: "/api",
-            eventHandler: async (event: APIGatewayProxyEvent, context: Context) => {
-                return {
-                    statusCode: 200,
-                    body: JSON.stringify({
-                        eventPath: event.path,
-                        functionName: context.functionName,
-                    })
-                };
-            },
+            method: "GET",
+            eventHandler: new aws.lambda.CallbackFunction("handler", {
+                callback: async (event: APIGatewayProxyEvent, context: Context) => {
+                    return {
+                        statusCode: 200,
+                        body: JSON.stringify({
+                            eventPath: event.path,
+                            functionName: context.functionName,
+                        }),
+                    };
+                },
+            }),
         },
     ],
 });

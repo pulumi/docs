@@ -32,17 +32,6 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
-            PULUMI_AI_SERVICE_ENDPOINT
-        </span>
-    </dt>
-    <dd>
-        <p>
-            Specifies the endpoint for Pulumi AI service.
-        </p>
-        <pre><code class="text-xs">PULUMI_AI_SERVICE_ENDPOINT="https://www.pulumi.com/ai"</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
             PULUMI_AUTOMATION_API_SKIP_VERSION_CHECK
         </span>
     </dt>
@@ -82,7 +71,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Sets <a href="/docs/concepts/config">configuration</a> for <a href="/docs/using-pulumi/testing/unit">unit testing</a>. Must be in JSON format.
+            Sets <a href="/docs/concepts/config">configuration</a> for <a href="/docs/iac/guides/testing/unit/">unit testing</a>. Must be in JSON format.
         </p>
         <p>
             <strong>This environment variable is ignored during normal Pulumi operations -- e.g., <code>up</code>, <code>preview</code>, etc. -- but must be valid JSON if present.</strong>

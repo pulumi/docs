@@ -19,7 +19,7 @@ The `files` reserved property contains values that should be written to temporar
 
 | Property | Type              | Description                                                       |
 |----------|-------------------|-------------------------------------------------------------------|
-| name     | `string | binary` | The contents of the temporary file whose path will be exported in the environment variable `name`
+| name     | string or binary | The contents of the temporary file whose path will be exported in the environment variable `name`
 
 ## Example
 
@@ -28,7 +28,7 @@ values:
   files:
     GREETING: Hello, ${context.pulumi.user.login}!
     BINARY:
-     fn::fromBase64: ...
+      fn::fromBase64: ...
 ```
 
 ### Evaluated result

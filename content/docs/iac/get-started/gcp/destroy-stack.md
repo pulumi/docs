@@ -1,33 +1,47 @@
 ---
 title_tag: Destroy the Stack | Google Cloud
-meta_desc: This page provides an overview of how to destroy a Pulumi stack of a Google Cloud (GCP) project.
 title: Destroy stack
-h1: "Pulumi & Google Cloud: Destroy stack"
+h1: "Get started with Pulumi and Google Cloud"
+meta_desc: This page provides an overview of how to destroy a Pulumi stack of a Google Cloud project.
 weight: 8
 menu:
-  iac:
-    name: Destroy stack
-    identifier: gcp-get-started.destroy-stack
-    parent: gcp-get-started
-    weight: 8
+    iac:
+        name: Cleanup & destroy
+        identifier: gcp-get-started.destroy-stack
+        parent: gcp-get-started
+        weight: 8
 
 aliases:
     - /docs/quickstart/gcp/destroy-stack/
     - /docs/clouds/gcp/get-started/destroy-stack/
 ---
 
-Now that you've seen how to deploy and manage cloud resources with Pulumi, let's clean up by tearing down all of the resources that belong to this stack.
+## Cleanup & destroy the stack
 
-To do so, run the following:
+Our final step is to clean up all of the resources we've allocated in this tutorial.
+
+Run the `pulumi destroy` command to delete all cloud resources in this project/stack:
+
+{{% choosable os "linux,macos" %}}
 
 ```bash
 $ pulumi destroy
 ```
 
-Again you'll be presented with a preview of the changes to be made. Choose `yes`. The destroy operation may take few moments, as Pulumi waits for all resources are to be deleted before considering the operation complete:
+{{% /choosable %}}
+
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi destroy
+```
+
+{{% /choosable %}}
+
+Just like `pulumi up`, you'll be shown a preview to ensure that you want to proceed:
 
 ```
-Previewing destroy (dev)
+Previewing destroy (dev):
 
      Type                             Name               Plan
  -   pulumi:pulumi:Stack              quickstart-dev     delete
@@ -36,24 +50,30 @@ Previewing destroy (dev)
  -   └─ gcp:storage:Bucket            my-bucket          delete
 
 Outputs:
-  - bucketEndpoint: "http://storage.googleapis.com/my-bucket-daa12be/index.html-a52debd"
-  - bucketName    : "gs://my-bucket-daa12be"
+  - url       : "http://storage.googleapis.com/my-bucket-daa12be/index.html"
 
 Resources:
     - 4 to delete
 
-Do you want to perform this destroy? yes
-Destroying (dev)
+Do you want to perform this destroy?
+> yes
+  no
+  details
+```
+
+As with an update, we can choose `no` or `details`; select `yes` to proceed:
+
+```
+Destroying (dev):
 
      Type                             Name               Status
- -   pulumi:pulumi:Stack              quickstart-dev     deleted
+ -   pulumi:pulumi:Stack              quickstart-dev     deleted (0.31s)
  -   ├─ gcp:storage:BucketIAMBinding  my-bucket-binding  deleted (6s)
  -   ├─ gcp:storage:BucketObject      index.html         deleted (0.78s)
  -   └─ gcp:storage:Bucket            my-bucket          deleted (1s)
 
 Outputs:
-  - bucketEndpoint: "http://storage.googleapis.com/my-bucket-daa12be/index.html-a52debd"
-  - bucketName    : "gs://my-bucket-daa12be"
+  - url       : "http://storage.googleapis.com/my-bucket-daa12be/index.html"
 
 Resources:
     - 4 deleted
@@ -61,16 +81,29 @@ Resources:
 Duration: 9s
 ```
 
-Optionally, to delete the stack itself, you can also run [`pulumi stack rm`](/docs/cli/commands/pulumi_stack_rm). Doing so removes the stack entirely from the Pulumi Cloud, along with all of its update history.
+At this stage, your stack still exists, but all cloud resources have been deleted from it.
 
-Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
+## Remove the stack
 
-- Created a Pulumi new project.
-- Provisioned a new storage bucket.
-- Added an `index.html` file to your bucket.
-- Served the file as a static website.
-- Destroyed the resources you've provisioned.
+The final step is to remove the stack itself. Destroy keeps the stack around so that you still have the full
+history of what happened to the stack. Running [`pulumi stack rm`](/docs/cli/commands/pulumi_stack_rm) will
+delete it entirely, including all history and state snapshots. Be careful, this step cannot be undone!
 
-On the next page, we have a collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
+{{% choosable "os" "macos,linux" %}}
+
+```bash
+$ pulumi stack rm
+```
+
+{{% /choosable %}}
+{{% choosable "os" "windows" %}}
+
+```powershell
+> pulumi stack rm
+```
+
+{{% /choosable %}}
+
+You'll be prompted to confirm the removal. Confirm it to successfully complete this tutorial.
 
 {{< get-started-stepper >}}

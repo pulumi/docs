@@ -198,6 +198,14 @@ The Pulumi MCP server provides prompts for common workflows:
 
 - **`convert-terraform-to-typescript`** - Converts Terraform HCL code to Pulumi TypeScript
 
+- **`cdk-migration-plan`** - Create a migration plan from AWS CDK to Pulumi
+
+- **`cdk-migration-automated`** - Automated AWS CDK to Pulumi migration workflow
+
+- **`cdk-migration-manual`** - Manual migration approach for AWS CDK to Pulumi
+
+- **`cdk-migration-troubleshoot`** - Troubleshoot AWS CDK to Pulumi migration issues
+
 ## Getting started
 
 Here's a typical workflow using an AI assistant with the Pulumi MCP server:

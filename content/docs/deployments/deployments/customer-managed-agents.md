@@ -1,7 +1,7 @@
 ---
 title: Customer-managed agents
 title_tag: Get started with customer-managed agents
-meta_desc: Customer-managed agents allows you to self-host deployment agents and get all the power and flexibility of Pulumi Deployments in your isolated environments
+meta_desc: Customer-managed agents allows you to self-host agents and get all the power and flexibility of Pulumi Deployments in your isolated environments
 menu:
   deployments:
     name: Customer-managed agents
@@ -13,12 +13,12 @@ aliases:
 - /docs/pulumi-cloud/deployments/customer-managed-agents/
 ---
 
-Customer-Managed Agents allow you to self-host deployment agents bringing the same power and flexibility as Pulumi-hosted deployments. Self-hosting your agents comes with many benefits:
+Customer-Managed Agents allow you to self-host agents bringing the same power and flexibility as Pulumi-hosted deployments. Self-hosting your agents comes with many benefits:
 
-- **Host anywhere**: You can host the deployment agents anywhere to manage infrastructure, even within your fully private VPCs
+- **Host anywhere**: You can host the agents anywhere to manage infrastructure, even within your fully private VPCs
 - **Any hardware, any environment<sup>1</sup>**: Run the agents on any hardware of your choice and configure the environment that meets your needs
 - **Mix & match**: You can use standard Pulumi-hosted deployments for your development stacks and use self-hosted Customer-Managed Agents for your private network infrastructure. You can mix and match to suit your unique needs
-- **Multiple pools**: You can set up multiple deployment agent pools, assign stacks to specific pools, and scale agents dynamically to increase your deployment concurrency. Customers can have up to 150 concurrent deployments
+- **Multiple pools**: You can set up multiple agent pools, assign stacks to specific pools, and scale agents dynamically to increase your deployment concurrency. Customers can have up to 150 concurrent deployments
 - **Meet compliance**: You can configure the agents with the credentials needed to manage your infrastructure. This way your cloud provider credentials never leave your private network
 
 <sup>1</sup> *Currently Linux and MacOS are supported*
@@ -43,7 +43,7 @@ Before you begin, ensure you have installed the [Pulumi Github App](/docs/using-
 
 ![Pool Details view](../../../../blog/customer-managed-deployment-agents-launch/view-agent-status.png)
 
-Agents poll Pulumi Cloud every 30 seconds to check for pending deployments and will disappear from the Pool details page 1-2 hours after being offline. On the deployments page, you can see all the deployments including pending deployments, and which deployment agents were used in a deployment.
+Agents poll Pulumi Cloud every 30 seconds to check for pending workflows and will disappear from the Pool details page 1-2 hours after being offline. On the deployments page, you can see all the deployments including pending deployments, and which deployment agents were used in a deployment.
 
 {{% notes "info" %}}
 If you are running the agent inside a firewall ensure to allow outbound requests to api.pulumi.com. Ensure agents have the cloud provider credentials to be able to deploy in your environments.
@@ -70,10 +70,10 @@ There are two methods to provide cloud provider credentials to the agents:
 2. Directly provide credentials to agents through environment variables configured in the host, or passing the environment variables when invoking the binary. Example:
 
    ```bash
-   VARIABLE=value customer-managed-deployment-agent run
+   VARIABLE=value customer-managed-workflow-agent run
    ```
 
-   You also need to update the `pulumi-deployment-agent.yaml` [configuration file](#configuration-reference) by setting `env_forward_allowlist`. `env_forward_allowlist` expects an array of strings. Example:
+   You also need to update the `pulumi-workflow-agent.yaml` [configuration file](#configuration-reference) by setting `env_forward_allowlist`. `env_forward_allowlist` expects an array of strings. Example:
 
     ```yaml
     token: pul-d2d2….
@@ -86,24 +86,24 @@ There are two methods to provide cloud provider credentials to the agents:
 
 ## Configuration Reference
 
-All configuration for customer-managed agents are done through the `pulumi-deployment-agent.yaml` file. This can be created manually or with the `customer-managed-deployment-agent configure` command.
+All configuration for customer-managed agents are done through the `pulumi-workflow-agent.yaml` file. This can be created manually or with the `customer-managed-workflow-agent configure` command.
 
-The customer-managed agent will look for `pulumi-deployment-agent.yaml` in the following directories:
+The customer-managed agent will look for `pulumi-workflow-agent.yaml` in the following directories:
 
 - Current directory
 - Home directory
 - `/etc`
-- Location of the `customer-managed-deployment-agent` binary
+- Location of the `customer-managed-workflow-agent` binary
 
 \
 Below are available configuration parameters and their default values. In most cases, only `token` is required.
 
 ```yaml
-# pulumi-deployment-agent.yaml
+# pulumi-workflow-agent.yaml
 
 ## Required settings
 
-# Pulumi token provided when creating a new deployment runner pool
+# Pulumi token provided when creating a new workflow runner pool
 # Environment variable override: PULUMI_AGENT_TOKEN
 token: pul-xxx
 
@@ -115,10 +115,10 @@ token: pul-xxx
 shared_volume_directory: ""
 
 # The base path from which to load the runners
-# This defaults to the location of the customer-managed-deployment-agent binary
-# (usually ~/.pulumi/bin/customer-managed-deployment-agent)
+# This defaults to the location of the customer-managed-workflow-agent binary
+# (usually ~/.pulumi/bin/customer-managed-workflow-agent)
 # Environment variable override: PULUMI_AGENT_WORKING_DIRECTORY
-working_directory: "<location of customer-managed-deployment-agent binary>"
+working_directory: "<location of customer-managed-workflow-agent binary>"
 
 # If using Self-Hosted Pulumi, set this to API domain of instance
 # Environment variable override: PULUMI_AGENT_SERVICE_URL
@@ -147,7 +147,7 @@ token_expiration: ""
 # Environment variable override: PULUMI_AGENT_OIDC_TOKEN_FILE
 oidc_token_file: ""
 
-# List of environment variables to pass to the deployment agent
+# List of environment variables to pass to the agent
 # Environment variable override: PULUMI_AGENT_ENV_FORWARD_ALLOWLIST
 # Environment variable format is: PULUMI_AGENT_ENV_FORWARD_ALLOWLIST="VAR1 VAR2"
 env_forward_allowlist: []

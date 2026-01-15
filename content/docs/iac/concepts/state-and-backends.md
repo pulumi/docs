@@ -39,11 +39,11 @@ This page covers the technical details of state management and backend configura
 Pulumi supports two classes of state backends for storing your infrastructure state:
 
 - **Pulumi Cloud**: a managed cloud experience using the online or self-hosted Pulumi Cloud application
-- **DIY backend**: "Do it Yourself"- a manually managed object store, including AWS S3, Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, or your local filesystem
+- **DIY backend**: "Do it Yourself"- a manually managed object store, including AWS S3, Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, a PostgreSQL database, or your local filesystem
 
 Pulumi's SDK works great with all backends, although some details differ between them.
 
-Pulumi Cloud, hosted at <a href="https://app.pulumi.com" target="_blank">`app.pulumi.com`</a>, is the default backend, as it provides the best combination of usability, safety, and security for most users. Important features include:
+Pulumi Cloud, hosted at <a href="https://app.pulumi.com">`app.pulumi.com`</a>, is the default backend, as it provides the best combination of usability, safety, and security for most users. Important features include:
 
 - Robust state management, with transactional checkpointing for fault tolerance and recovery
 - Concurrent state locking to prevent corrupting your infrastructure state in a team environment
@@ -53,11 +53,11 @@ Pulumi Cloud, hosted at <a href="https://app.pulumi.com" target="_blank">`app.pu
 - Secure access to cloud resource metadata, with client-side authentication to your cloud provider
 - Team policies, including Policy as Code and Role Based Access Control (RBAC)
 
-The Pulumi Cloud backend requires no additional configuration after [installing the CLI](/docs/install/). Pulumi offers this backend hosted online free for individuals, with [advanced tiers](/pricing/) available for teams and enterprises (with <a href="https://app.pulumi.com/site/trial" target="_blank">free trials</a>). It has successfully undergone multiple security audits including SOC2, pen-testing, and more.
+The Pulumi Cloud backend requires no additional configuration after [installing the CLI](/docs/install/). Pulumi offers this backend hosted online free for individuals, with [advanced tiers](/pricing/) available for teams and enterprises (with <a href="https://app.pulumi.com/site/trial">free trials</a>). It has successfully undergone multiple security audits including SOC2, pen-testing, and more.
 
 > To learn more about the Pulumi Cloud backend's design, including why it doesn't need your cloud credentials, see [Pulumi Cloud Architecture](#pulumi-cloud-architecture). If you are interested in the hosting your own instance, see the [Self-Hosting User Guide](/docs/pulumi-cloud/self-hosted/).
 
-Pulumi also lets you manage state yourself using a DIY backend. Your state is stored as simple JSON files in AWS S3, Azure Blob Store, Google Cloud Storage, an alternative AWS S3 API compatible server such as Minio or Ceph, or on your local filesystem. These DIY backends are all open source and free to use in any setting. Using a DIY backend trades off some amount of reliability for additional control over where metadata is stored. For instance, you will need to manually configure secure access, encryption, and history, and devise your own concurrency control and recovery capabilities. To choose a DIY backend, use the `pulumi login` command [as documented below](#using-a-DIY-backend).
+Pulumi also lets you manage state yourself using a DIY backend. Your state is stored as simple JSON files in AWS S3, Azure Blob Store, Google Cloud Storage, an alternative AWS S3 API compatible server such as Minio or Ceph, a PostgreSQL database, or on your local filesystem. These DIY backends are all open source and free to use in any setting. Using a DIY backend trades off some amount of reliability for additional control over where metadata is stored. For instance, you will need to manually configure secure access, encryption, and history, and devise your own concurrency control and recovery capabilities. To choose a DIY backend, use the `pulumi login` command [as documented below](#using-a-DIY-backend).
 
 ## Logging into and out of State Backends
 
@@ -128,7 +128,7 @@ Enter your access token from https://app.pulumi.com/account/tokens
 
 To automatically generate and use a new access token, hit `<ENTER>`. This will open a web browser to interact with Pulumi Cloud and request a token. If this is your first time using Pulumi Cloud, you will be asked to authenticate using your chosen identity provider (GitHub, GitLab, Atlassian, SAML/SSO, or email).
 
-To view your access tokens, or create a new one manually, view the <a href="https://app.pulumi.com/account/tokens" target="_blank">Access Tokens</a> page.  You will see a list of past tokens, when they were last used, as well as the ability to revoke them.
+To view your access tokens, or create a new one manually, view the <a href="https://app.pulumi.com/account/tokens">Access Tokens</a> page.  You will see a list of past tokens, when they were last used, as well as the ability to revoke them.
 
 <img src="/images/docs/reference/state_tokens.png" alt="Pulumi.com Tokens Page" class="img-bordered">
 
@@ -254,6 +254,20 @@ $ pulumi login gs://<my-pulumi-state-bucket>
 ```
 
 To configure credentials for this backend, see [Application Default Credentials](https://cloud.google.com/docs/authentication/production). For additional configuration options, see [Google Cloud Setup](/registry/packages/gcp/installation-configuration/). If you're new to Google Cloud Storage, see [the Google Cloud documentation](https://cloud.google.com/storage/docs/quickstarts).
+
+### PostgreSQL
+
+To use the [PostgreSQL](https://www.postgresql.org/) backend pass the `postgres://<username>:<password>@<hostname>:<port>/<database>` as your `<backend-url>`:
+
+```sh
+$ pulumi login postgres://<username>:<password>@<hostname>:<port>/<database>
+```
+
+{{% notes type="warning" %}}
+Avoid including credentials directly in commands. Consider using environment variables or other secure credential management methods.
+{{% /notes %}}
+
+For additional configuration options, see the [README ↗](https://github.com/pulumi/pulumi/blob/master/pkg/backend/diy/postgres/README.md).
 
 ### Scoping
 

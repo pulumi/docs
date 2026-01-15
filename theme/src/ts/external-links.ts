@@ -26,8 +26,12 @@
                 const url = new URL(href, window.location.origin);
                 const linkDomain = url.hostname.replace(/^www\./, '');
                 
-                // If the domain is different from the current domain, it's external
-                if (linkDomain !== currentDomain) {
+                // Check if link is internal (same domain or subdomain relationship)
+                const isInternal = linkDomain === currentDomain ||
+                    linkDomain.endsWith('.' + currentDomain) ||
+                    currentDomain.endsWith('.' + linkDomain);
+
+                if (!isInternal) {
                     // Add target="_blank" and rel="noopener" (for security)
                     link.setAttribute('target', '_blank');
                     
