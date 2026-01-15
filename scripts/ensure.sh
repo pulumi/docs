@@ -30,14 +30,6 @@ check_version "Node.js"  "node"  "node -v | sed 's/v\([0-9\.]*\).*$/\1/'"       
 check_version "Hugo"     "hugo"  "hugo version | sed 's/hugo v\([0-9\.]*\).*$/\1/'"  "0.151.0"
 check_version "Yarn"     "yarn"  "yarn -v | sed 's/v\([0-9\.]*\).*$/\1/'"            "1.22"
 
-# Inform user about expected warnings
-color_blue=$(echo -e "\033[0;34m")
-color_end=$(echo -e "\033[0m")
-echo ""
-echo -e "${color_blue}Note:${color_end} The following warnings during dependency installation are expected and can be safely ignored:"
-echo "  • typedoc engine dependency warnings (informational only)"
-echo ""
-
 # Install the Node dependencies for the website and the infrastructure.
 yarn install --ignore-engines
 yarn --cwd infrastructure install
