@@ -39,4 +39,4 @@ yarn --cwd theme/stencil install
 # Warm up prettier cache for faster linting
 echo ""
 echo -e "${color_blue}Note:${color_end} Warming prettier cache (this will make 'make lint' faster)..."
-yarn prettier --check . --cache --log-level=warn
+yarn prettier --check . --cache --loglevel warn
