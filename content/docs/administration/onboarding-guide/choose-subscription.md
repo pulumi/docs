@@ -3,9 +3,10 @@ title: Select the right model and subscription
 meta_desc: Understanding your deployment options, subscription tiers, and support needs to help you choose the right approach for your organization.
 aliases:
   - /docs/pulumi-cloud/get-started/onboarding-guide/choose-subscription/
+  - /docs/deployments/get-started/onboarding-guide/choose-subscription/
 weight: 1
 menu:
-    deployments:
+    administration:
         name: Select the right model
         parent: pulumi-onboarding-guide
         identifier: select-a-model

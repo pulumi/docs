@@ -3,9 +3,10 @@ title: Migrating to Pulumi
 meta_desc: Focus on building momentum with early wins while establishing practices that will scale with your organization.
 aliases:
   - /docs/pulumi-cloud/get-started/onboarding-guide/migrating-to-pulumi/
+  - /docs/deployments/get-started/onboarding-guide/migrating-to-pulumi/
 weight: 4
 menu:
-    deployments:
+    administration:
         name: Migrating to Pulumi
         parent: pulumi-onboarding-guide
         identifier: migrating-to-pulumi

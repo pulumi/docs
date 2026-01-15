@@ -3,9 +3,10 @@ title: Setting up for success
 meta_desc: Make key decisions about security, testing strategies, and code reusability that will set your team up for success.
 aliases:
   - /docs/pulumi-cloud/get-started/onboarding-guide/setting-up-for-success/
+  - /docs/deployments/get-started/onboarding-guide/setting-up-for-success/
 weight: 3
 menu:
-    deployments:
+    administration:
         name: Setting up for success
         parent: pulumi-onboarding-guide
         identifier: setting-up-for-success

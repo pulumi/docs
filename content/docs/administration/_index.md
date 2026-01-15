@@ -26,6 +26,11 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
+  - emoji: 🚀
+    heading: Onboarding Guide
+    link: /docs/administration/onboarding-guide/
+    description: Set up Pulumi for your organization with guidance on subscriptions, security, team structure, and migration.
+
   - emoji: 🏢
     heading: Organizations & Teams
     link: /docs/administration/organizations-teams/
