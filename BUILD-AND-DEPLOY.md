@@ -331,7 +331,7 @@ make new-example-program
 ### Directory Structure
 
 ```
-/workspaces/src/pulumi/docs/
+./
 ├── content/              # All content (docs, blog, etc.)
 │   ├── docs/            # Documentation
 │   ├── blog/            # Blog posts
@@ -417,7 +417,7 @@ make new-example-program
 
 ### Build Scripts
 
-All scripts are located in `/workspaces/src/pulumi/docs/scripts/`.
+All scripts are located in `scripts/`.
 
 #### build-site.sh - Main Build Orchestrator
 
@@ -1380,7 +1380,7 @@ These workflows support repository maintenance, automation, and developer experi
 
 ## Deployment Infrastructure
 
-All deployment infrastructure is managed as code using Pulumi (TypeScript). Infrastructure code is in `/workspaces/src/pulumi/docs/infrastructure/`.
+All deployment infrastructure is managed as code using Pulumi (TypeScript). Infrastructure code is in `infrastructure/`.
 
 ### Infrastructure as Code
 
