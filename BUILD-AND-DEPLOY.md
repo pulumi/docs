@@ -2017,7 +2017,7 @@ The repository employs multiple testing strategies to ensure quality and reliabi
 
 **Tool:** Custom markdown linter
 
-**Configuration:** `.markdownlint-base.json`
+**Configuration:** Cascading configuration using `.markdownlint-base.json` at the root and optional `.markdownlint.json` files in subdirectories.
 
 **Rules Enforced:**
 
@@ -3693,4 +3693,3 @@ For deployments, also check:
 
 ---
 
-**End of Document**
