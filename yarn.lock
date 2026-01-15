@@ -5678,11 +5678,6 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-typedoc-plugin-script-inject@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-script-inject/-/typedoc-plugin-script-inject-2.0.0.tgz#a75eb99e20a8fc278bcacac3f07c9590e1432dac"
-  integrity sha512-o1dEsvvyJU2dFeTfjIado9l+SDYuop+jfjMwwanFBXf75N9cbSA/qPJNUplhODtWCWF/ZyevUemZUnqiEAn9ig==
-
 typedoc@^0.28.15:
   version "0.28.15"
   resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.28.15.tgz#667faf77eb934deb935fbfd5108a6de5f953948f"
