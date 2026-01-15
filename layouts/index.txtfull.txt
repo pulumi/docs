@@ -17,7 +17,7 @@
 
 > Infrastructure as code using real programming languages. Build, deploy, and manage cloud infrastructure on AWS, Azure, GCP, Kubernetes, and 150+ providers with TypeScript, Python, Go, C#, Java, or YAML.
 
-This file provides a structured guide to Pulumi's documentation, organized by product area. Each section includes nested pages with descriptions to help you navigate topics from high-level concepts to detailed reference material.
+This file provides a curated guide to Pulumi's documentation, organized by product area. Each section includes nested pages with descriptions to help you navigate topics from high-level concepts to detailed reference material. For a complete list of all pages, see sitemap.xml.
 {{- /*
   DOCS SECTIONS
   Mirror the structure from layouts/partials/docs/menu.html
