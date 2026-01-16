@@ -10,7 +10,7 @@ hero:
 
 options:
     - id: first-deploy
-      icon: rocket
+      icon: rocketship
       icon_color: purple
       title: Deploy infrastructure for the first time
       description: New to infrastructure as code or just getting started with Pulumi? We'll help you deploy your first resources.
@@ -28,7 +28,7 @@ options:
       track: intent-migration
 
     - id: team-eval
-      icon: users
+      icon: team
       icon_color: yellow
       title: Evaluate Pulumi for my team
       description: Looking to evaluate Pulumi for your organization? Get started with a team workspace and collaboration features.
@@ -37,7 +37,7 @@ options:
       track: intent-team-eval
 
     - id: enterprise
-      icon: building
+      icon: buildings
       icon_color: salmon
       title: Talk to someone about enterprise needs
       description: Need custom pricing, SLAs, or have questions about enterprise features? Our team is here to help.
