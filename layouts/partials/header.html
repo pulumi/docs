@@ -6,8 +6,8 @@
 </div>
 {{ else }}
 <!-- CONV-003: Secondary Nav Bar A/B Test -->
-<!-- This nav bar can be hidden via GrowthBook feature flag conv-003-hide-secondary-nav -->
-<nav id="secondary-nav-bar" class="top-nav-bar transition-all">
+<!-- Nav bar hidden by default for PR preview. When running the actual experiment, remove style="display:none" and uncomment the GrowthBook script. -->
+<nav id="secondary-nav-bar" class="top-nav-bar transition-all" style="display: none;">
     <div class="top-nav-container lg:container lg:px-4 flex-wrap justify-end">
         {{ partial "banner" . }}
         <div class="w-full p-4">
@@ -56,6 +56,14 @@
         </div>
     </div>
 </nav>
+<!-- CONV-003: Add body class for hero CSS adjustments (PR preview) -->
+<script>document.body.classList.add('conv-003-nav-hidden');</script>
+
+<!--
+CONV-003: Secondary Nav Bar Removal A/B Test - GrowthBook Integration
+NOTE: This script is commented out for PR preview purposes.
+When running the actual experiment, uncomment this script and remove style="display:none" from the nav element above.
+
 <script>
 // CONV-003: Secondary Nav Bar Removal A/B Test
 // Hides the secondary navigation bar to test impact on conversion
@@ -95,6 +103,7 @@
     }
 })();
 </script>
+-->
 
 <div class="header-container">
     <nav class="lg:container lg:mx-auto lg:px-4 py-3">
