@@ -14,7 +14,12 @@
 
                 <div
                     class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
-                    <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ .Params.hero.cta_link }}">{{
+                    <!-- CONV-002: Primary CTA with intent path option -->
+                    <a id="hero-primary-cta" class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0"
+                        href="{{ .Params.hero.cta_link }}"
+                        data-default-href="{{ .Params.hero.cta_link }}"
+                        data-intent-href="/start/"
+                        data-track="hero-cta-primary">{{
                         .Params.hero.cta_text }}</a>
                     <a class="btn-secondary home-hero-btn-secondary rounded-full cursor-pointer"
                         href="{{ .Params.hero.secondary_cta_link }}">{{ .Params.hero.secondary_cta_text }}</a>
@@ -27,6 +32,46 @@
         </div>
     </div>
 </header>
+
+<script>
+// CONV-002: Intent Path A/B Test
+// Routes users to /start/ page for intent qualification instead of direct signup
+(function() {
+    function initIntentPathExperiment() {
+        // Wait for GrowthBook to be ready
+        if (typeof window.gb === 'undefined') {
+            setTimeout(initIntentPathExperiment, 100);
+            return;
+        }
+
+        // Get the variant from GrowthBook feature flag
+        // Feature flag should return: true (use intent path) or false (direct signup)
+        var useIntentPath = window.gb.getFeatureValue("conv-002-intent-path", false);
+
+        var primaryCta = document.getElementById('hero-primary-cta');
+        if (primaryCta && useIntentPath) {
+            // Update CTA to go to intent qualification page
+            primaryCta.href = primaryCta.getAttribute('data-intent-href');
+            primaryCta.textContent = 'Get Started Free';
+        }
+
+        // Track experiment exposure
+        if (window.analytics && window.analytics.track) {
+            window.analytics.track('Experiment Viewed', {
+                experimentId: 'conv-002-intent-path',
+                variationId: useIntentPath ? 'intent-path' : 'direct-signup'
+            });
+        }
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initIntentPathExperiment);
+    } else {
+        initIntentPathExperiment();
+    }
+})();
+</script>
 {{ end }}
 
 {{ define "main" }}

@@ -1,0 +1,79 @@
+{{ define "hero" }}
+<header class="container mx-auto text-center py-16 px-6">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ .Params.hero.title }}</h1>
+    <p class="text-xl text-gray-600">{{ .Params.hero.subtitle }}</p>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<section class="container mx-auto px-6 pb-24">
+    <!-- Intent Options Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        {{ range .Params.options }}
+        <div class="intent-option-card bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-violet-400 hover:shadow-lg transition-all cursor-pointer" data-track="start-{{ .track }}">
+            <div class="flex items-start mb-4">
+                <div class="w-12 h-12 flex-shrink-0">
+                    {{ partial "color-icon.html" (dict "icon" .icon "icon_color" .icon_color) }}
+                </div>
+                <h3 class="text-xl font-semibold ml-4">{{ .title }}</h3>
+            </div>
+            <p class="text-gray-600 mb-6">{{ .description }}</p>
+            <a href="{{ .cta_link }}" class="btn-primary inline-block" data-track="{{ .track }}">
+                {{ .cta_text }}
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+        {{ end }}
+    </div>
+
+    <!-- Additional help text -->
+    <div class="text-center mt-12">
+        <p class="text-gray-600">
+            Not sure which option is right for you?
+            <a href="/docs/get-started/" class="text-violet-600 hover:underline">Browse our documentation</a>
+            or
+            <a href="/community/" class="text-violet-600 hover:underline">join our community</a> for help.
+        </p>
+    </div>
+</section>
+
+<script>
+// CONV-002: Track intent selection
+(function() {
+    document.querySelectorAll('.intent-option-card').forEach(function(card) {
+        card.addEventListener('click', function(e) {
+            // If they clicked directly on the button, let it handle navigation
+            if (e.target.tagName === 'A' || e.target.closest('a')) {
+                return;
+            }
+
+            // Otherwise, find the button and navigate
+            var link = card.querySelector('a.btn-primary');
+            if (link) {
+                var trackId = card.getAttribute('data-track');
+                if (window.analytics && window.analytics.track) {
+                    window.analytics.track('Intent Selection', {
+                        intent: trackId,
+                        source: 'start-page'
+                    });
+                }
+                window.location.href = link.href;
+            }
+        });
+    });
+
+    // Track when users click the CTA buttons
+    document.querySelectorAll('.intent-option-card a.btn-primary').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var trackId = btn.getAttribute('data-track');
+            if (window.analytics && window.analytics.track) {
+                window.analytics.track('Intent Selection', {
+                    intent: trackId,
+                    source: 'start-page'
+                });
+            }
+        });
+    });
+})();
+</script>
+{{ end }}
