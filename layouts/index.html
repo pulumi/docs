@@ -3,21 +3,64 @@
     <div class="home-page-hero-background border-b border-gray-300">
         <div class="flex">
             <div class="w-full p-6 home-page-hero-text lg:pt-8">
-                <h1 class="flex flex-col items-center">
-                    <span class="inline-block mb-3 text-center" data-text="{{ index (.Params.hero.title) 0 }}"><span
-                            class="rainbow-text">{{ index (.Params.hero.title) 0 }}</span></span>
-                    <span class="inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index
-                        (.Params.hero.title) 1 }}</span>
-                </h1>
+                <!-- CONV-001: Hero Messaging A/B Test -->
+                <!-- Variant A: Control (default) -->
+                <div id="hero-variant-control" class="hero-variant">
+                    <h1 class="flex flex-col items-center">
+                        <span class="inline-block mb-3 text-center" data-text="{{ index (.Params.hero.title) 0 }}"><span
+                                class="rainbow-text">{{ index (.Params.hero.title) 0 }}</span></span>
+                        <span class="inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index
+                            (.Params.hero.title) 1 }}</span>
+                    </h1>
 
-                <p class="mt-6 text-center leading-7 text-xl">{{ .Params.hero.description | markdownify }}</p>
+                    <p class="mt-6 text-center leading-7 text-xl">{{ .Params.hero.description | markdownify }}</p>
 
-                <div
-                    class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
-                    <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ .Params.hero.cta_link }}">{{
-                        .Params.hero.cta_text }}</a>
-                    <a class="btn-secondary home-hero-btn-secondary rounded-full cursor-pointer"
-                        href="{{ .Params.hero.secondary_cta_link }}">{{ .Params.hero.secondary_cta_text }}</a>
+                    <div
+                        class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
+                        <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" data-track="hero-cta-control" href="{{ .Params.hero.cta_link }}">{{
+                            .Params.hero.cta_text }}</a>
+                        <a class="btn-secondary home-hero-btn-secondary rounded-full cursor-pointer" data-track="hero-secondary-cta-control"
+                            href="{{ .Params.hero.secondary_cta_link }}">{{ .Params.hero.secondary_cta_text }}</a>
+                    </div>
+                </div>
+
+                <!-- Variant B: Aha Moment Focus -->
+                <div id="hero-variant-aha" class="hero-variant hidden">
+                    <h1 class="flex flex-col items-center">
+                        <span class="inline-block mb-3 text-center" data-text="Deploy Real Infrastructure"><span
+                                class="rainbow-text">Deploy Real Infrastructure</span></span>
+                        <span class="inline-block text-center" data-text="in Minutes">in Minutes</span>
+                    </h1>
+
+                    <p class="mt-6 text-center leading-7 text-xl">Use TypeScript, Python, Go, or any language you love. Ship to any cloud with confidence.</p>
+
+                    <div
+                        class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
+                        <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" data-track="hero-cta-aha" href="https://app.pulumi.com/signup?utm_source=hero-aha-variant">Start Free</a>
+                    </div>
+                    <p class="mt-4 text-center text-gray-600">
+                        <a href="/docs/iac/download-install/" class="text-gray-600 hover:text-violet-600 underline" data-track="hero-secondary-cta-aha">Prefer the CLI? Download open source</a>
+                    </p>
+                    <p class="mt-6 text-center text-lg font-medium text-violet-700">See why 3,700+ companies trust Pulumi</p>
+                </div>
+
+                <!-- Variant C: Social Proof Focus -->
+                <div id="hero-variant-social" class="hero-variant hidden">
+                    <h1 class="flex flex-col items-center">
+                        <span class="inline-block mb-3 text-center" data-text="Join 3,700+ Companies"><span
+                                class="rainbow-text">Join 3,700+ Companies</span></span>
+                        <span class="inline-block text-center" data-text="Shipping Infrastructure Faster">Shipping Infrastructure Faster</span>
+                    </h1>
+
+                    <p class="mt-6 text-center leading-7 text-xl">Snowflake, NVIDIA, BMW, and thousands more trust Pulumi. Deploy cloud infrastructure in any language you love.</p>
+
+                    <div
+                        class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
+                        <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" data-track="hero-cta-social" href="https://app.pulumi.com/signup?utm_source=hero-social-variant">Start Free</a>
+                    </div>
+                    <p class="mt-4 text-center text-gray-600">
+                        <a href="/docs/iac/download-install/" class="text-gray-600 hover:text-violet-600 underline" data-track="hero-secondary-cta-social">Prefer the CLI? Download open source</a>
+                    </p>
                 </div>
             </div>
 
@@ -27,6 +70,62 @@
         </div>
     </div>
 </header>
+
+<script>
+// CONV-001: Hero Messaging A/B Test
+// This script integrates with GrowthBook to show different hero variants
+(function() {
+    function initHeroExperiment() {
+        // Wait for GrowthBook to be ready
+        if (typeof window.gb === 'undefined') {
+            setTimeout(initHeroExperiment, 100);
+            return;
+        }
+
+        // Get the variant from GrowthBook feature flag
+        // Feature flag should return: "control", "aha", or "social"
+        var variant = window.gb.getFeatureValue("conv-001-hero-messaging", "control");
+
+        // Hide all variants first
+        var variants = document.querySelectorAll('.hero-variant');
+        variants.forEach(function(v) {
+            v.classList.add('hidden');
+        });
+
+        // Show the selected variant
+        var selectedVariant;
+        switch(variant) {
+            case 'aha':
+                selectedVariant = document.getElementById('hero-variant-aha');
+                break;
+            case 'social':
+                selectedVariant = document.getElementById('hero-variant-social');
+                break;
+            default:
+                selectedVariant = document.getElementById('hero-variant-control');
+        }
+
+        if (selectedVariant) {
+            selectedVariant.classList.remove('hidden');
+        }
+
+        // Track experiment exposure
+        if (window.analytics && window.analytics.track) {
+            window.analytics.track('Experiment Viewed', {
+                experimentId: 'conv-001-hero-messaging',
+                variationId: variant
+            });
+        }
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHeroExperiment);
+    } else {
+        initHeroExperiment();
+    }
+})();
+</script>
 {{ end }}
 
 {{ define "main" }}
