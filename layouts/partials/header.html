@@ -5,7 +5,9 @@
     {{ .Scratch.Set "mode" .Section }}
 </div>
 {{ else }}
-<nav class="top-nav-bar transition-all">
+<!-- CONV-003: Secondary Nav Bar A/B Test -->
+<!-- This nav bar can be hidden via GrowthBook feature flag conv-003-hide-secondary-nav -->
+<nav id="secondary-nav-bar" class="top-nav-bar transition-all">
     <div class="top-nav-container lg:container lg:px-4 flex-wrap justify-end">
         {{ partial "banner" . }}
         <div class="w-full p-4">
@@ -54,6 +56,45 @@
         </div>
     </div>
 </nav>
+<script>
+// CONV-003: Secondary Nav Bar Removal A/B Test
+// Hides the secondary navigation bar to test impact on conversion
+(function() {
+    function initSecondaryNavExperiment() {
+        // Wait for GrowthBook to be ready
+        if (typeof window.gb === 'undefined') {
+            setTimeout(initSecondaryNavExperiment, 100);
+            return;
+        }
+
+        // Get the variant from GrowthBook feature flag
+        // Feature flag should return: true (hide nav bar) or false (show nav bar)
+        var hideSecondaryNav = window.gb.getFeatureValue("conv-003-hide-secondary-nav", false);
+
+        var secondaryNav = document.getElementById('secondary-nav-bar');
+        if (secondaryNav && hideSecondaryNav) {
+            secondaryNav.style.display = 'none';
+            // Add class to body for any necessary CSS adjustments
+            document.body.classList.add('secondary-nav-hidden');
+        }
+
+        // Track experiment exposure
+        if (window.analytics && window.analytics.track) {
+            window.analytics.track('Experiment Viewed', {
+                experimentId: 'conv-003-hide-secondary-nav',
+                variationId: hideSecondaryNav ? 'hidden' : 'visible'
+            });
+        }
+    }
+
+    // Initialize as early as possible to reduce flash of content
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSecondaryNavExperiment);
+    } else {
+        initSecondaryNavExperiment();
+    }
+})();
+</script>
 
 <div class="header-container">
     <nav class="lg:container lg:mx-auto lg:px-4 py-3">
