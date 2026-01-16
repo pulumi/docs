@@ -123,6 +123,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.get_default_copy"><code class="docutils literal notranslate"><span class="pre">Configuration.get_default_copy()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.get_host_from_settings"><code class="docutils literal notranslate"><span class="pre">Configuration.get_host_from_settings()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.get_host_settings"><code class="docutils literal notranslate"><span class="pre">Configuration.get_host_settings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.get_proxy_for_url"><code class="docutils literal notranslate"><span class="pre">Configuration.get_proxy_for_url()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.host"><code class="docutils literal notranslate"><span class="pre">Configuration.host</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.key_file"><code class="docutils literal notranslate"><span class="pre">Configuration.key_file</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.logger"><code class="docutils literal notranslate"><span class="pre">Configuration.logger</span></code></a></li>
@@ -130,6 +131,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.logger_file_handler"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_file_handler</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.logger_format"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_format</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.logger_stream_handler"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_stream_handler</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.no_proxy"><code class="docutils literal notranslate"><span class="pre">Configuration.no_proxy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.proxy"><code class="docutils literal notranslate"><span class="pre">Configuration.proxy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.proxy_headers"><code class="docutils literal notranslate"><span class="pre">Configuration.proxy_headers</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_esc_sdk.Configuration.refresh_api_key_hook"><code class="docutils literal notranslate"><span class="pre">Configuration.refresh_api_key_hook</span></code></a></li>
@@ -1168,18 +1170,19 @@ templated server configuration. The validation of enums is performed for
 variables with defined enum values before.</p>
 </dd>
 <dt class="field-odd">param server_operation_index<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Mapping from operation ID to an index to server
-configuration.</p>
+<dd class="field-odd"><p>Mapping from operation ID to an index
+to server configuration.</p>
 </dd>
 <dt class="field-even">param server_operation_variables<span class="colon">:</span></dt>
-<dd class="field-even"><p>Mapping from operation ID to a mapping with
-string values to replace variables in templated server configuration.
+<dd class="field-even"><p>Mapping from operation ID to a
+mapping with string values to replace variables in templated server
+configuration.
 The validation of enums is performed for variables with defined enum
 values before.</p>
 </dd>
 <dt class="field-odd">param ssl_ca_cert<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str - the path to a file of concatenated CA certificates
-in PEM format.</p>
+<dd class="field-odd"><p>str - the path to a file of concatenated CA
+certificates in PEM format.</p>
 </dd>
 <dt class="field-even">Example<span class="colon">:</span></dt>
 <dd class="field-even"><p></p></dd>
@@ -1341,6 +1344,22 @@ configuration.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.get_proxy_for_url">
+<span class="sig-name descname"><span class="pre">get_proxy_for_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.get_proxy_for_url" title="Permalink to this definition"></a></dt>
+<dd><p>Get the proxy URL to use for the given target URL.</p>
+<p>This method considers both the explicit proxy configuration and
+environment variables (HTTPS_PROXY, HTTP_PROXY, NO_PROXY).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url</strong> – The target URL.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The proxy URL to use, or None if no proxy should be used.</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.host">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">host</span></span><a class="headerlink" href="#pulumi_esc_sdk.Configuration.host" title="Permalink to this definition"></a></dt>
@@ -1384,9 +1403,19 @@ configuration.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.no_proxy">
+<span class="sig-name descname"><span class="pre">no_proxy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi_esc_sdk.Configuration.no_proxy" title="Permalink to this definition"></a></dt>
+<dd><p>List of hosts that should bypass the proxy. If not set, will be
+read from NO_PROXY environment variable when making requests.
+Supports exact matches and suffix matches (e.g., ‘.example.com’
+matches ‘sub.example.com’). Use ‘*’ to bypass all proxies.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="pulumi_esc_sdk.Configuration.proxy">
 <span class="sig-name descname"><span class="pre">proxy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi_esc_sdk.Configuration.proxy" title="Permalink to this definition"></a></dt>
-<dd><p>Proxy URL</p>
+<dd><p>Proxy URL. If not set, will be read from environment variables
+(HTTPS_PROXY, HTTP_PROXY, ALL_PROXY) when making requests.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -5069,7 +5098,7 @@ It wraps the raw API client and provides a more convenient interface.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pulumi_esc_sdk.EscClient.open_and_read_environment">
-<span class="sig-name descname"><span class="pre">open_and_read_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">org_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple[pulumi_esc_sdk.models.environment.Environment,</span> <span class="pre">typing.Mapping[str,</span> <span class="pre">&lt;built-in</span> <span class="pre">function</span> <span class="pre">any&gt;],</span> <span class="pre">str]</span></span></span><a class="headerlink" href="#pulumi_esc_sdk.EscClient.open_and_read_environment" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">open_and_read_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">org_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pulumi_esc_sdk.Environment" title="pulumi_esc_sdk.models.environment.Environment"><span class="pre">pulumi_esc_sdk.models.environment.Environment</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pulumi_esc_sdk.EscClient.open_and_read_environment" title="Permalink to this definition"></a></dt>
 <dd><p>Open and read an environment and resolves config and data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -5087,7 +5116,7 @@ It wraps the raw API client and provides a more convenient interface.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pulumi_esc_sdk.EscClient.open_and_read_environment_at_version">
-<span class="sig-name descname"><span class="pre">open_and_read_environment_at_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">org_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple[pulumi_esc_sdk.models.environment.Environment,</span> <span class="pre">typing.Mapping[str,</span> <span class="pre">&lt;built-in</span> <span class="pre">function</span> <span class="pre">any&gt;],</span> <span class="pre">str]</span></span></span><a class="headerlink" href="#pulumi_esc_sdk.EscClient.open_and_read_environment_at_version" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">open_and_read_environment_at_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">org_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pulumi_esc_sdk.Environment" title="pulumi_esc_sdk.models.environment.Environment"><span class="pre">pulumi_esc_sdk.models.environment.Environment</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pulumi_esc_sdk.EscClient.open_and_read_environment_at_version" title="Permalink to this definition"></a></dt>
 <dd><p>Open and read an environment at a specific version and resolves config and data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
