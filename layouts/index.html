@@ -4,8 +4,8 @@
         <div class="flex">
             <div class="w-full p-6 home-page-hero-text lg:pt-8">
                 <!-- CONV-001: Hero Messaging A/B Test -->
-                <!-- Variant A: Control (default) -->
-                <div id="hero-variant-control" class="hero-variant">
+                <!-- Variant A: Control (hidden for preview - this PR shows Variant B) -->
+                <div id="hero-variant-control" class="hero-variant hidden">
                     <h1 class="flex flex-col items-center">
                         <span class="inline-block mb-3 text-center" data-text="{{ index (.Params.hero.title) 0 }}"><span
                                 class="rainbow-text">{{ index (.Params.hero.title) 0 }}</span></span>
@@ -24,8 +24,8 @@
                     </div>
                 </div>
 
-                <!-- Variant B: Aha Moment Focus -->
-                <div id="hero-variant-aha" class="hero-variant hidden">
+                <!-- Variant B: Aha Moment Focus (shown for preview) -->
+                <div id="hero-variant-aha" class="hero-variant">
                     <h1 class="flex flex-col items-center">
                         <span class="inline-block mb-3 text-center" data-text="Deploy Real Infrastructure"><span
                                 class="rainbow-text">Deploy Real Infrastructure</span></span>
@@ -79,6 +79,11 @@
         </div>
     </div>
 </header>
+
+<!--
+CONV-001: Hero Messaging A/B Test - GrowthBook Integration
+NOTE: This script is commented out for PR preview purposes.
+When running the actual experiment, uncomment this script to enable GrowthBook variant assignment.
 
 <script>
 // CONV-001: Hero Messaging A/B Test
@@ -135,6 +140,7 @@
     }
 })();
 </script>
+-->
 {{ end }}
 
 {{ define "main" }}
