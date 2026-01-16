@@ -19,15 +19,15 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: '22.x'
 
-      - uses: actions/setup-go@v2
+      - uses: actions/setup-go@v5
         with:
-          go-version: 1.20.x
+          go-version: 1.25.x
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2

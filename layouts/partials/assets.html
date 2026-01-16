@@ -19,9 +19,15 @@
 {{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "tutorials" "providers" "collections" "templates" "ai" "authors" "tags" "legal" }}
 {{ if in $nonMarketingSections .Section }}
 {{ else }}
+    {{/* Force Hugo to publish the resource by fingerprinting it, but don't use the fingerprinted URL */}}
     {{ $marketingCss := resources.Get "css/marketing.css" | fingerprint }}
-    <link rel="stylesheet" href="{{ $marketingCss.RelPermalink }}">
+    {{ $_ := $marketingCss.Permalink }}
+    {{ $cssBundleId := getenv "CSS_BUNDLE_ID" }}
+    <link rel="stylesheet" href="/css/marketing.{{ $cssBundleId }}.css">
 {{ end }}
 
+{{/* Force Hugo to publish the resource by fingerprinting it, but don't use the fingerprinted URL */}}
 {{ $css := resources.Get "css/bundle.css" | fingerprint }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{ $_ := $css.Permalink }}
+{{ $cssBundleId := getenv "CSS_BUNDLE_ID" }}
+<link rel="stylesheet" href="/css/bundle.{{ $cssBundleId }}.css">

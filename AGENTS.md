@@ -12,6 +12,8 @@ This repository contains the source for the Pulumi website, built with [Hugo](ht
 
 ## Build / Test / Lint Workflow
 
+> **Note:** For comprehensive details on the build system, deployment infrastructure, and CI/CD workflows, see `BUILD-AND-DEPLOY.md`. This file is large (~3700 lines), so read only specific sections as needed to conserve tokens.
+
 Agents must use these exact commands:
 
 - Install deps: `make ensure`

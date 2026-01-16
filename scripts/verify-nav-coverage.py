@@ -136,7 +136,7 @@ def find_parent_with_menu(file_path, docs_content_root):
     return None
 
 def main():
-    repo_root = Path('/workspaces/src/pulumi/docs')
+    repo_root = Path(__file__).resolve().parent.parent
     docs_content_root = repo_root / 'content' / 'docs'
 
     if not docs_content_root.exists():

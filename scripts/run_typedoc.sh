@@ -63,7 +63,6 @@ generate_docs() {
             --excludeInternal --excludeExternals --excludePrivate \
             --cleanOutputDir \
             --skipErrorChecking \
-            --plugin typedoc-plugin-script-inject \
             --options "$TOOL_TYPEDOC_CONFIG" \
             "$2"
 

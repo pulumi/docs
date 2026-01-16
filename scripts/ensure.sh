@@ -26,12 +26,17 @@ check_version() {
         echo $details
     fi
 }
-check_version "Node.js"  "node"  "node -v | sed 's/v\([0-9\.]*\).*$/\1/'"            "18"
-check_version "Hugo"     "hugo"  "hugo version | sed 's/hugo v\([0-9\.]*\).*$/\1/'"  "0.126.0"
+check_version "Node.js"  "node"  "node -v | sed 's/v\([0-9\.]*\).*$/\1/'"            "22"
+check_version "Hugo"     "hugo"  "hugo version | sed 's/hugo v\([0-9\.]*\).*$/\1/'"  "0.151.0"
 check_version "Yarn"     "yarn"  "yarn -v | sed 's/v\([0-9\.]*\).*$/\1/'"            "1.22"
 
 # Install the Node dependencies for the website and the infrastructure.
-yarn install
+yarn install --ignore-engines
 yarn --cwd infrastructure install
 yarn --cwd theme install
 yarn --cwd theme/stencil install
+
+# Warm up prettier cache for faster linting
+echo ""
+echo -e "${color_blue}Note:${color_end} Warming prettier cache (this will make 'make lint' faster)..."
+yarn prettier --check . --cache --loglevel warn

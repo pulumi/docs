@@ -137,6 +137,9 @@ Always provide relevant line numbers for any issues you identify.
 - **Files moved, renamed, or deleted**:
   - Confirm that moved or renamed files have appropriate aliases added to the frontmatter to avoid broken links.
   - Confirm that deleted files have a redirect created, if applicable.
+- **Build, test, and infrastructure changes**:
+  - If changes are made to build scripts (scripts/), GitHub Actions workflows (.github/workflows/), the Makefile, or infrastructure code (infrastructure/), verify that BUILD-AND-DEPLOY.md has been updated to reflect these changes.
+  - Examples of changes requiring documentation updates: new make targets, modified deployment workflows, infrastructure configuration changes, new environment variables, updated build processes.
 - **Images and assets**:
   - Check images have alt text for accessibility.
   - Verify image file sizes are reasonable.

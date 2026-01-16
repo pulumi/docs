@@ -9,10 +9,10 @@
 			"version": "lts"
 		},
 		"ghcr.io/devcontainers/features/go:1": {
-			"version": "latest"
+			"version": "1.25"
 		},
 		"ghcr.io/devcontainers/features/hugo:1": {
-			"version": "latest"
+			"version": "0.151.0"
 		},
 		"ghcr.io/devcontainers/features/python:1": {
 			"installTools": true,
