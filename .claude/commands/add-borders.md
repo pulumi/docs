@@ -17,7 +17,7 @@ Analyze PNG images referenced in the specified markdown file at {{arg}} and add 
 Before running the border tool, ensure dependencies are installed:
 
 ```bash
-cd /workspaces/src/pulumi/docs/scripts/image-borders && pipenv install
+cd scripts/image-borders && pipenv install
 ```
 
 If this is the first run or if Pillow is not yet installed, the installation will complete automatically.
@@ -27,7 +27,7 @@ If this is the first run or if Pillow is not yet installed, the installation wil
 Execute the Python script with the provided documentation file:
 
 ```bash
-cd /workspaces/src/pulumi/docs && pipenv run python scripts/image-borders/add_borders.py {{arg}}
+pipenv run python scripts/image-borders/add_borders.py {{arg}}
 ```
 
 The script will:
