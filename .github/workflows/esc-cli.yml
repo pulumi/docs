@@ -53,11 +53,11 @@ jobs:
           path: esc
           ref: ${{ github.event.client_payload.ref }}
       - name: Install pulumictl
-        uses: jaxxstorm/action-install-gh-release@v1.10.0
+        uses: jaxxstorm/action-install-gh-release@v2.1.0
         with:
           repo: pulumi/pulumictl
       - name: Install esc
-        uses: jaxxstorm/action-install-gh-release@v1.10.0
+        uses: jaxxstorm/action-install-gh-release@v2.1.0
         with:
           repo: pulumi/esc
           binaries-location: esc
