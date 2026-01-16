@@ -228,10 +228,10 @@
   dependencies:
     purgecss "^4.0.3"
 
-"@growthbook/growthbook@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@growthbook/growthbook/-/growthbook-1.2.1.tgz#efc236afec8aa061d306d72ab1c9fa67697e513e"
-  integrity sha512-V0of0mGXZ69poOTPoZ8TFkJkPpC9T766NZiJ1qwzwFAl8ZsuunmguC6RP4muri4q5DRPDzf3lRUSWLk0g8bdbw==
+"@growthbook/growthbook@^1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@growthbook/growthbook/-/growthbook-1.6.2.tgz#6a25122deac8a09955f6bddeb134af62b209809b"
+  integrity sha512-x3sK6Lff4BVusIzcdBeHZqA3B4kLs3kM/pJ7vvLTJwb6N/+Yn99EF1yc0XU6cfDVqFq6uFkvIFhMwDWUaKD73g==
   dependencies:
     dom-mutator "^0.6.0"
 
