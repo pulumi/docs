@@ -14,13 +14,11 @@
 
                 <div
                     class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
-                    <!-- CONV-002: Primary CTA with intent path option -->
+                    <!-- CONV-002: Primary CTA pointing to /start/ for PR preview -->
+                    <!-- When running the actual experiment, restore the GrowthBook-controlled version -->
                     <a id="hero-primary-cta" class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0"
-                        href="{{ .Params.hero.cta_link }}"
-                        data-default-href="{{ .Params.hero.cta_link }}"
-                        data-intent-href="/start/"
-                        data-track="hero-cta-primary">{{
-                        .Params.hero.cta_text }}</a>
+                        href="/start/"
+                        data-track="hero-cta-primary">Get Started Free</a>
                     <a class="btn-secondary home-hero-btn-secondary rounded-full cursor-pointer"
                         href="{{ .Params.hero.secondary_cta_link }}">{{ .Params.hero.secondary_cta_text }}</a>
                 </div>
@@ -32,6 +30,11 @@
         </div>
     </div>
 </header>
+
+<!--
+CONV-002: Intent Path A/B Test - GrowthBook Integration
+NOTE: This script is commented out for PR preview purposes.
+When running the actual experiment, uncomment this script and restore the original CTA.
 
 <script>
 // CONV-002: Intent Path A/B Test
@@ -72,6 +75,7 @@
     }
 })();
 </script>
+-->
 {{ end }}
 
 {{ define "main" }}
