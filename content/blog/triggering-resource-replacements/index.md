@@ -10,29 +10,29 @@ tags:
     - iac
     - releases
 social:
-    twitter: "New in Pulumi IaC: Use the `replacementTrigger` resource option to control redeployments of your infrastructure resources."
-    linkedin: "Pulumi introduces a powerful new feature for fine-grained control over infrastructure deployment: the `replacementTrigger` resource option. Now you can override the replacement mechanism in the Pulumi engine to enable finer control over features like key cycling and versioning.
+    twitter: "New in Pulumi IaC: Use the replacementTrigger resource option to control when your infrastructure resources are replaced."
+    linkedin: "Pulumi introduces a powerful new feature for fine-grained control over infrastructure deployment: the replacementTrigger resource option. Now you can override the replacement mechanism in the Pulumi engine to enable finer control over features like key cycling and versioning."
 ---
 
-Pulumi IaC gives us a declarative interface to deployments. When we perform a deploy, Pulumi calculates the difference between your currently deployed infrastructure and what is being proposed, then deploys only what is required to migrate from the old state to the new state. Normally, this is exactly what we want: we minimise the amount of work required to perform the deploy, and don’t recreate anything unnecessarily. However, every now and then, we want to override this behaviour.
+Pulumi IaC gives us a declarative interface to updates. When we perform an update, Pulumi calculates the difference between your currently deployed infrastructure and what is being proposed, then deploys only what is required to migrate from the old state to the new state. Normally, this is exactly what we want: we minimize the amount of work required to perform the update, and don’t recreate anything unnecessarily. However, every now and then, we want to override this behavior.
 
 <!--more-->
 
-Recently, we talked about the new [`replaceWith`](https://www.pulumi.com/blog/dependent-resource-replacements/) option, which allows us to tell Pulumi that any replacement of one resource should always trigger a replacement of another (for example, if the database is replaced, we should re-deploy our application server). Today, we’re going to take this idea one step further and talk about another new feature that gives us even more control over this process: replacement triggers.
+Recently, we talked about the new [`replaceWith`](https://www.pulumi.com/blog/dependent-resource-replacements/) option, which allows us to tell Pulumi that any replacement of one resource should always trigger a replacement of another (for example, if the database is replaced, we should replace our application server). Today, we’re going to take this idea one step further and talk about another new feature that gives us even more control over this process: replacement triggers.
 
-## Forcing redeployments
+## Forcing replacements
 
-Let’s imagine we have a resource that, upon deployment, generates some private keys. If that’s all the resource does, it probably isn’t ever going to change as far as Pulumi’s concerned: we wanted the resource before, and we want it after, so there is no change and no need to replace the resource that is already live. Now, let’s imagine that we want to cycle these private keys every month. How do we tell Pulumi that, if this deployment happens more than two weeks after the last time this resource was deployed, we want to recreate it?
+Let’s imagine we have a resource that, upon creation, generates some private keys. If that’s all the resource does, it probably isn’t ever going to change as far as Pulumi’s concerned: we wanted the resource before, and we want it after, so there is no change and no need to replace the resource that is already live. Now, let’s imagine that we want to cycle these private keys every month. How do we tell Pulumi that, if this update happens more than two weeks after the last time this resource was created, we want to recreate it?
 
-As another example, perhaps we want to replace a resource every time some external version number is bumped. Let’s imagine a documentation server may need to be redeployed every time a new version of an API is made available. We could use the `--replace` flag each time, but this process is error prone to do manually, and would incur a maintenance burden to automate.
+As another example, perhaps we want to replace a resource every time some external version number is bumped. Let’s imagine a documentation server may need to be replaced every time a new version of an API is made available. We could use the `--replace` flag each time, but this process is error-prone to do manually, and would incur a maintenance burden to automate.
 
 ## Defining replacement triggers
 
-In essence, a replacement trigger is just a value attached to the resource as metadata. However, whenever this value changes between deployments, it will trigger a replace operation on the given resource, regardless of whether anything else has changed.
+In essence, a replacement trigger is just a value attached to the resource as metadata. However, whenever this value changes between updates, it will trigger a replace operation on the given resource, regardless of whether anything else has changed.
 
-Let’s take our previous example: we want something to be replaced every month. With replacement triggers, we can solve this by representing the current year and month as as a string:
+Let’s take our previous example: we want something to be replaced every month. With replacement triggers, we can solve this by representing the current year and month as a string:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -117,7 +117,7 @@ var keyManager = new KeyManagerResource("key-manager", new KeyManagerResourceArg
 {{% /choosable %}}
 {{< /chooser >}}
 
-When we run this deploy for the first time, the replacement trigger will be persisted to the Pulumi state. Each time we run a deploy, we’ll re-calculate the date string, and compare it against the current string. Finally, when we run the deploy again next month, and the date string no longer matches, our `key-manager` will be replaced and our new keys will be generated!
+When we run this update for the first time, the replacement trigger will be persisted to the Pulumi state. Each time we run an update, we’ll re-calculate the date string, and compare it against the current string. Finally, when we run the update again next month, and the date string no longer matches, our `key-manager` will be replaced and our new keys will be generated!
 
 ## Next steps
 
