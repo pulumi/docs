@@ -78,7 +78,7 @@ Due to the fragile nature of the blob store protocol, teams often need to manual
 
 Managing state files by hand in a DIY backend can also cause outages if not handled properly. For example, [Spotify described at KubeCon](https://www.youtube.com/watch?v=ix0Tw8uinWs) how they accidentally deleted nearly all of their production Kubernetes clusters due to a merge mistake when managing the equivalent of Pulumi DIY state files in Terraform. Pulumi Cloud avoids this issue entirely by construction because the Pulumi Cloud service carefully handles concurrency, serialization, and safety.
 
-Pulumi Cloud itself features [a secure, scalable, fault-tolerant, highly-available global architecture](https://www.pulumi.com/security/pulumi-cloud-security-whitepaper.pdf). This results in a level of robustness and scalability that is difficult to replicate when building a custom DIY backend. Numerous organizations use Pulumi Cloud with thousands of end users, hundreds of thousands of stacks, and millions of updates. BMW's scalable and resilient cloud development platform, for example, [was built using Pulumi](/case-studies/bmw/) and supports over 11,000 developers.
+Pulumi Cloud itself features [a secure, scalable, fault-tolerant, highly-available global architecture](https://www.pulumi.com/security/pulumi-cloud-security-whitepaper). This results in a level of robustness and scalability that is difficult to replicate when building a custom DIY backend. Numerous organizations use Pulumi Cloud with thousands of end users, hundreds of thousands of stacks, and millions of updates. BMW's scalable and resilient cloud development platform, for example, [was built using Pulumi](/case-studies/bmw/) and supports over 11,000 developers.
 
 ### 4. Governance and extensibility
 
