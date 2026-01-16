@@ -200,3 +200,23 @@
         @apply top-0;
     }
 }
+
+// CONV-003: Adjust hero height when secondary nav bar is hidden
+// This provides more space for hero content when the top nav is removed
+.secondary-nav-hidden {
+    .home-page-hero {
+        min-height: 26rem;
+
+        @screen lg {
+            min-height: 28rem;
+        }
+    }
+
+    .home-page-hero-text {
+        @apply pt-4;
+
+        @screen lg {
+            @apply pt-8;
+        }
+    }
+}
