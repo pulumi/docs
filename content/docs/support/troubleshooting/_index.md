@@ -63,4 +63,10 @@ sections:
 if (window.location.hash === "#conflict") {
   window.location = "/docs/support/troubleshooting/common-issues/update-conflicts/"
 }
+
+// Redirect old verbose-logging anchor to new logging page
+// https://github.com/pulumi/docs/issues/16985
+if (window.location.hash === "#verbose-logging") {
+  window.location = "/docs/support/debugging/logging/#cli-verbose-logging"
+}
 </script>
