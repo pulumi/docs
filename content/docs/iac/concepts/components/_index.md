@@ -448,6 +448,9 @@ class MyComponent extends pulumi.ComponentResource {
 
 ```python
 class MyComponent(pulumi.ComponentResource):
+    bucket_dns_name: pulumi.Output[str]
+    """bucket_dns_name: The DNS name of the bucket"""
+
     def __init__(self, name, my_component_args, opts = None):
         super().__init__('pkg:index:MyComponent', name, None, opts)
 
