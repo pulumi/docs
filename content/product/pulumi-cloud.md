@@ -233,7 +233,7 @@ products:
           tabid: copilot-select
           subheader: AI-powered infrastructure management
           link: /product/neo/
-          image: /images/product/copilot-prompt.png
+          image: /images/product/neo-prompt.png
           details:
             - title: Generate infrastructure as code
               description: |
