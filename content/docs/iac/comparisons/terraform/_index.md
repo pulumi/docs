@@ -68,8 +68,8 @@ With Pulumi IaC, you can:
 - Advanced automation capabilities
 - Enhanced security with built-in secret encryption
 - Full IDE support with code completion and type checking
-- Automatic resource naming prevents naming conflicts across stacks
-- Zero-downtime replacements with create-before-delete semantics
+- Automatic resource naming to prevent naming conflicts across stacks
+- Zero-downtime replacements using create-before-delete semantics
 
 ## What is Pulumi?
 
@@ -224,9 +224,9 @@ While Terraform requires you to manually ensure unique names across workspaces (
 
 For more details, see [Resource Names](/docs/iac/concepts/resources/names/).
 
-**Create-Before-Delete Replacement Strategy**
+**Create-before-delete replacement strategy**
 
-When a resource must be replaced rather than updated in place, Pulumi creates the new resource first, updates any references to point to the new resource, and only then deletes the old resource. This create-before-delete approach minimizes downtime and reduces the risk of service interruption during infrastructure updates.
+When a resource needs to be replaced rather than updated in place, Pulumi creates the new resource first, updates any references to point to the new resource, and only then deletes the old resource. This create-before-delete approach minimizes downtime and reduces the risk of service interruption during infrastructure updates.
 
 Terraform typically uses a delete-before-create strategy, which can cause downtime during replacements. While Terraform offers a `create_before_destroy` lifecycle setting, it must be explicitly configured on each resource and comes with limitations. Pulumi makes create-before-delete the default behavior, ensuring zero-downtime deployments without additional configuration.
 
