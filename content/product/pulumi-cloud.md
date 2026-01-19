@@ -229,10 +229,10 @@ products:
                 Call Pulumi's [REST API endpoint](/docs/platform/deployments/api/) to trigger Pulumi commands that run in Pulumi Cloud (e.g., update, destroy, refresh, preview).
 
                 Offload your local Automation API deployment workloads to Pulumi Cloud via the [Remote Automation API feature](/docs/platform/deployments/#deployment-triggers).
-        - header: Pulumi Copilot
+        - header: Pulumi Neo
           tabid: copilot-select
           subheader: AI-powered infrastructure management
-          link: /product/copilot/
+          link: /product/neo/
           image: /images/product/copilot-prompt.png
           details:
             - title: Generate infrastructure as code
@@ -240,7 +240,7 @@ products:
                 Generate a Pulumi program and deploy cloud infrastructure in seconds with a few simple text prompts.
 
               more_info: |
-                **Example Pulumi Copilot prompts:**
+                **Example Pulumi Neo prompts:**
 
                 *“Create a new serverless application on AWS”*
 
@@ -250,10 +250,10 @@ products:
 
             - title: Understand your team's cloud usage
               description: |
-                Pulumi Copilot has access to all of your Pulumi projects and stacks, and can relate those to your live cloud environments.
+                Pulumi Neo has access to all of your Pulumi projects and stacks, and can relate those to your live cloud environments.
 
               more_info: |
-                **Example Pulumi Copilot prompts:**
+                **Example Pulumi Neo prompts:**
 
                 *“What versions of Kubernetes do I currently have deployed?”*
 
@@ -265,10 +265,10 @@ products:
 
             - title: Discover cost savings opportunities
               description: |
-                Pulumi Copilot uses a combination of Pulumi and cloud understanding to discover and reclaim cloud waste.
+                Pulumi Neo uses a combination of Pulumi and cloud understanding to discover and reclaim cloud waste.
 
               more_info: |
-                **Example Pulumi Copilot prompts:**
+                **Example Pulumi Neo prompts:**
 
                 *“What are my least used, most expensive resources?”*
 
@@ -278,10 +278,10 @@ products:
 
             - title: Stay secure
               description: |
-                Pulumi Copilot leverages knowledge about security best practices by combining Pulumi’s supergraph and cloud skills.
+                Pulumi Neo leverages knowledge about security best practices by combining Pulumi’s supergraph and cloud skills.
 
               more_info: |
-                **Example Pulumi Copilot prompts:**
+                **Example Pulumi Neo prompts:**
 
                 *“Do I have any insecure endpoints open to the Internet?”*
 
@@ -291,10 +291,10 @@ products:
 
             - title: Debug cloud failures
               description: |
-                Pulumi Copilot can access history, logs, and runtime metrics so you can easily get answers about what is failing and why.
+                Pulumi Neo can access history, logs, and runtime metrics so you can easily get answers about what is failing and why.
 
               more_info: |
-                **Example Pulumi Copilot prompts:**
+                **Example Pulumi Neo prompts:**
 
                 *“Why did my deployment yesterday fail?”*
 
