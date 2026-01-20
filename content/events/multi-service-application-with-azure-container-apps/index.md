@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url: https://www.youtube.com/embed/yTRPd39oN7A?si=KedQE5WTQbSnCxgq
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2026-01-15T12:00:00-05:00
@@ -66,7 +66,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics:  ["Azure Container Apps"]
-        languages: ["Any"]
+        languages: ["C#"]
         clouds: ["Azure"]
 
 # The right hand side form section.

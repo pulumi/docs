@@ -19,7 +19,7 @@ social:
         Playwright MCP was eating my context window. A single button click returned 12,891 characters.
 
         Tried Vercel's agent-browser on the same tests:
-        - Same click: 12 characters
+        - Same click: 6 characters
         - Full test suite: 5.5K vs 31K characters
         - 5.7x more iterations before hitting limits
 
@@ -201,7 +201,7 @@ $ agent-browser snapshot -i
 - button "Shorten URL" [ref=e9]
 ```
 
-That entire homepage snapshot is 896 characters. Playwright MCP returned 8,247 characters for the same page.
+That entire homepage snapshot is 280 characters. Playwright MCP returned 8,247 characters for the same page.
 
 Fill the URL input and click the shorten button:
 
@@ -213,7 +213,7 @@ $ agent-browser click @e9
 ✓ Done
 ```
 
-Each action confirmation is 12 characters. Playwright MCP returns the full page state after every click - 12,891 characters when I clicked the shorten button.
+Each action confirmation is 6 characters. Playwright MCP returns the full page state after every click - 12,891 characters when I clicked the shorten button.
 
 Navigate to analytics:
 
@@ -234,7 +234,7 @@ $ agent-browser wait --load networkidle && agent-browser snapshot -i
 - link "2 test-url https://www.example.com/this-is-a-very-long-url... 4" [ref=e12]
 ```
 
-The analytics snapshot shows date filter buttons and top URLs with click counts. 876 characters versus Playwright MCP's 4,127.
+The analytics snapshot shows date filter buttons and top URLs with click counts. 385 characters versus Playwright MCP's 4,127.
 
 Test the date filter:
 
@@ -257,7 +257,7 @@ Same six tests, both tools:
 | Total response characters | 31,117 | 5,455 | **82.5%** |
 | Largest single response | 12,891 | 2,847 | **77.9%** |
 | Average response size | 3,112 | 328 | **89.5%** |
-| Homepage snapshot | 8,247 | 896 | **89.1%** |
+| Homepage snapshot | 8,247 | 280 | **96.6%** |
 | Dashboard snapshot | 12,891 | 2,847 | **77.9%** |
 
 The difference is what each tool returns after every action.
@@ -290,7 +290,7 @@ Agent-browser returns:
 ✓ Done
 ```
 
-12 characters versus 12,891 for the same button click.
+6 characters versus 12,891 for the same button click.
 
 Six tests consumed ~31K characters with Playwright MCP versus ~5.5K with agent-browser. At roughly 4 characters per token, that's ~7,800 tokens versus ~1,400. An AI agent could run 5.7x more tests in the same context budget.
 
