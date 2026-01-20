@@ -26,7 +26,7 @@ schema_type: auto
 
 ---
 
-The barrier to migrating to Pulumi has always been the infrastructure you already have. Your existing resources can't be disrupted, and manually importing them into a new tool is risky and time-consuming. Today, we're excited to share how Neo removes this barrier entirely with automated, zero-downtime migration to Pulumi from AWS CDK, Terraform, and Azure ARM templates.
+The barrier to migrating to Pulumi has always been the infrastructure you already have. Your existing resources can't be disrupted, and manually importing them into a new tool is risky and time-consuming. Today, we're excited to share how Neo removes this barrier entirely with automated, zero-downtime migration to Pulumi from AWS CDK, Terraform, CDKTF, and Azure ARM templates.
 
 <!--more-->
 
@@ -38,7 +38,7 @@ When you rewrite your infrastructure code in a new tool, you have two choices, b
 
 ## Neo's insight: State knowledge enables perfect migrations
 
-The key to safe migration isn't just converting code - it's understanding the complete relationship between your existing IaC tool's state and your actual cloud resources. Each IaC tool maintains this relationship differently: CDK through CloudFormation stacks, Terraform through state files, and ARM through Azure deployments. But they all have complete knowledge of what they manage.
+The key to safe migration isn't just converting code - it's understanding the complete relationship between your existing IaC tool's state and your actual cloud resources. Each IaC tool maintains this relationship differently: CDK through CloudFormation stacks, Terraform/CDKTF through state files, and ARM through Azure deployments. But they all have complete knowledge of what they manage.
 
 Neo leverages this existing state knowledge to orchestrate perfect resource transitions. Instead of asking you to manually find resource IDs and construct migration commands, Neo reads your current tool's state, discovers every resource's physical identity, and brings them under Pulumi management. This isn't just automation - it's using the source tool's own knowledge against the migration problem.
 
@@ -64,11 +64,15 @@ The challenge with CDK migrations isn't the CloudFormation layer - it's the cryp
 
 CDK also introduces complexity through its construct hierarchy. A single high-level construct might expand into dozens of CloudFormation resources, each with dependencies and references to others. Neo preserves these relationships during migration, ensuring that IAM roles still reference the right Lambda functions, API Gateway deployments still point to the correct stages, and security groups maintain their exact rules. The migration completes with your infrastructure unchanged and Pulumi's preview confirming zero modifications.
 
+{{< blog/cta-button "Migrate Your CDK Now" "https://app.pulumi.com/neo?prompt=Leverage the cdk-to-pulumi skill to migrate my CDK application to a Pulumi application" "_blank" >}}
+
 ## Terraform to Pulumi
 
-Terraform migrations require two transformations: converting state to establish Pulumi's connection to your resources, and transforming HCL configuration into Pulumi code. The state conversion is direct - Neo reads your Terraform state and converts it into Pulumi state, preserving the mappings between resource names and cloud IDs. This ensures Pulumi knows that `aws_instance.web[2]` corresponds to EC2 instance `i-0abc123def456`.
+Terraform and CDKTF migrations require two transformations: converting state to establish Pulumi's connection to your resources, and transforming HCL configuration into Pulumi code. The state conversion is direct - Neo reads your Terraform state and converts it into Pulumi state, preserving the mappings between resource names and cloud IDs. This ensures Pulumi knows that `aws_instance.web[2]` corresponds to EC2 instance `i-0abc123def456`.
 
 The code transformation analyzes your HCL to generate equivalent Pulumi code. Neo handles Terraform patterns like `count` and `for_each` loops, module structures, and resource dependencies, recreating them idiomatically in Pulumi. The generated code manages your existing infrastructure without modifications - `pulumi preview` confirms zero changes. For complete migration instructions, see our [Terraform migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
+
+{{< blog/cta-button "Migrate Your TF/CDKTF Now" "https://app.pulumi.com/neo?prompt=Leverage the terraform-migration skill to migrate my Terraform application to a Pulumi application" "_blank" >}}
 
 ## Azure ARM to Pulumi
 
@@ -77,6 +81,8 @@ ARM templates present unique migration challenges. Unlike CDK and Terraform, whi
 Neo orchestrates ARM migrations through intelligent AI-driven conversion. When an ARM template uses functions like `concat(parameters('appName'), '-plan')`, the conversion process evaluates these expressions using the actual parameter values to generate the correct resource names. Azure resource IDs follow predictable patterns - subscription IDs, resource groups, providers, and resource names - and Neo ensures these are correctly brought under Pulumi management using inline resource specifications directly in the generated code.
 
 The biggest challenge with ARM migrations is handling the implicit dependencies and resource provider quirks. An App Service might implicitly create a service plan, a SQL database requires a server that might be defined in a linked template, and child resources like application settings need separate migration steps. Neo understands these Azure-specific patterns and generates the appropriate Pulumi code to manage every resource. The migration completes with a zero-diff preview, confirming your exact Azure configuration is preserved while giving you a more maintainable, type-safe way to manage it going forward.
+
+{{< blog/cta-button "Migrate Your ARM Now" "https://app.pulumi.com/neo?prompt=Leverage the arm-to-pulumi skill to migrate my ARM application to a Pulumi application" "_blank" >}}
 
 ## The architecture powering it all
 
@@ -108,50 +114,6 @@ While Neo automates the heavy lifting, we maintain human checkpoints:
 - Review generated code before migrating resources
 - Verify preview shows zero changes
 - Approve the resulting pull request
-
-## Start your migration today
-
-Ready to migrate to Pulumi? Here's how to get started with Neo, regardless of your current tool:
-
-### From AWS CDK
-
-```text
-"Help me migrate my CDK application to Pulumi"
-```
-
-Prerequisites:
-
-- CDK application that synthesizes cleanly
-- AWS credentials configured in Pulumi ESC
-
-For detailed instructions, see our [CDK migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/).
-
-### From Terraform
-
-```text
-"Migrate my Terraform configuration to Pulumi"
-```
-
-Prerequisites:
-
-- Access to Terraform configuration and state files
-- Cloud credentials in Pulumi ESC
-
-For detailed instructions, see our [Terraform migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
-
-### From Azure ARM
-
-```text
-"Convert my ARM templates to Pulumi"
-```
-
-Prerequisites:
-
-- ARM template files (JSON)
-- Azure subscription access
-- Azure credentials in Pulumi ESC
-
-For detailed instructions, see our [ARM migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/).
 
 ## What this means for your team
 
