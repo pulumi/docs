@@ -91,7 +91,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
    ```bash
    mkdir my-pulumi-project && cd my-pulumi-project
-   pulumi new <language-template> 
+   pulumi new typescript # or python, go, csharp, etc.
    pulumi up
    ```
 
@@ -127,7 +127,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
    Use an AI coding assistant to translate your Terraform HCL files into Pulumi code. Popular options include:
 
-   * [Pulumi Neo](https://www.pulumi.com/product/neo/) - the advantage of Neo is that it already knows about this flow.
+   * [Neo](https://www.pulumi.com/product/neo/) - the advantage of Neo is that it already knows about this flow.
    * [Claude Code](https://claude.com/product/claude-code)
    * [Cursor](https://cursor.com)
    * [Codex](https://openai.com/codex/)
@@ -136,9 +136,9 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
    * Your original `.tf` files
    * Your target programming language (TypeScript, Python, Go, C#, etc.)
    * The generated `pulumi-state.json` for context on resource names and structure
-   * Make sure to ask the agent to loop on the code changes until `pulumi preview --diff` generates as few diffs as possible. If it fails make sure to prod it to try again.
+   * Ask the agent to iterate on the code changes until `pulumi preview --diff` generates as few diffs as possible. If it fails, prompt it to try again.
 
-1. **Verify with pulumi preview**:
+2. **Verify with pulumi preview**:
 
    Run `pulumi preview` to confirm the translated code matches your migrated state with no unexpected changes:
 
@@ -148,9 +148,9 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
    A clean preview with no changes indicates a successful migration. Some minor diffs might be OK.
 
-1. **Run pulumi up**
+3. **Run pulumi up**
    
-   Once you are happy with the migration make sure to run `pulumi up` to finish the state translation. The migration tool doesn't produce a full Pulumi state so you need to run `pulumi up` once to finish that.
+   Once you are satisfied with the migration, run `pulumi up` to finalize the state translation. The migration tool produces an intermediate state file that requires one `pulumi up` run to complete.
 
 ## Referencing Terraform State
 
