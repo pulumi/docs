@@ -51,7 +51,7 @@ For a detailed technical walkthrough, see our [Neo migration blog post](/blog/ne
 
 While Neo handles most CDK applications automatically, you might need manual migration for:
 
-* Custom CloudFormation resources not yet supported by Neo
+* Custom CloudFormation resources and artifact bundling not yet supported by Neo
 * Complex cross-stack dependencies requiring specific handling
 * Scenarios where you want to fundamentally restructure during migration
 
@@ -469,16 +469,16 @@ In summary, the most reliable way to migrate is:
 ### Option 1: Use Neo (Recommended for most users)
 
 1. **Prepare**: Ensure your CDK app synthesizes cleanly and configure AWS credentials in Pulumi ESC.
-2. **Migrate**: Ask Neo to migrate your CDK application—it handles conversion, import, and verification automatically.
-3. **Review**: Examine the generated code and confirm `pulumi preview` shows zero changes.
-4. **Commit**: Save your new Pulumi program and optionally refactor for better organization.
-5. **Retire CloudFormation**: Delete the old stacks after confirming Pulumi manages everything correctly.
+1. **Migrate**: Ask Neo to migrate your CDK application—it handles conversion, import, and verification automatically.
+1. **Review**: Examine the generated code and confirm `pulumi preview` shows zero changes.
+1. **Commit**: Commit your new Pulumi program and optionally refactor for better organization.
+1. **Retire CloudFormation**: Delete the old stacks after confirming Pulumi manages everything correctly.
 
 ### Option 2: Semi-automated migration (When Neo doesn't fit)
 
 1. **Plan**: Decide on your target structure and strategy.
-2. **Convert**: Use `cdk2pulumi` to get a working baseline of code.
-3. **Verify Code**: Deploy to a disposable test stack to prove compilation and logic.
-4. **Import**: Use `cdk-importer` to bring production state into Pulumi.
-5. **Refactor**: Clean up the code into components and proper modules, using aliases to migrate state.
-6. **Retire CloudFormation**: Only delete the old CFN stacks after Pulumi shows a clean preview and you have successfully deployed an update.
+1. **Convert**: Use `cdk2pulumi` to get a working baseline of code.
+1. **Verify Code**: Deploy to a disposable test stack to prove compilation and logic.
+1. **Import**: Use `cdk-importer` to bring production state into Pulumi.
+1. **Refactor**: Clean up the code into components and proper modules, using aliases to migrate state.
+1. **Retire CloudFormation**: Only delete the old CFN stacks after Pulumi shows a clean preview and you have successfully deployed an update.
