@@ -331,6 +331,35 @@ This generates a `Pulumi.yaml` which you can then convert to your language of ch
 pulumi convert --from yaml --generate-only --language typescript --out ./converted-project
 ```
 
+##### Handling Custom Resources
+
+CDK uses Lambda-backed Custom Resources for functionality not available in CloudFormation. In synthesized CloudFormation, these appear as resources with type `AWS::CloudFormation::CustomResource` or `Custom::<name>`.
+
+By default, `cdk2pulumi` rewrites custom resources to [`aws-native:cloudformation:CustomResourceEmulator`](https://www.pulumi.com/registry/packages/aws-native/api-docs/cloudformation/customresourceemulator/), which invokes the original Lambda at runtime. This preserves functionality but has drawbacks.
+
+The Lambda was deployed by CDK and won't receive updates after migration, so security patches and bug fixes from newer CDK versions won't be applied. The Pulumi stack also depends on infrastructure it doesn't manage, creating an implicit dependency that breaks if the Lambda is deleted or modified. Resource operations are also subject to cold starts, eventual consistency, and Lambda timeout limits.
+
+Where possible, replace custom resources with native Pulumi resources instead. For handlers not listed below, review them during migration to see if a native replacement exists.
+
+**Migration strategies by handler type:**
+
+| Handler | Strategy |
+|---------|----------|
+| `aws-certificatemanager/dns-validated-certificate-handler` | Replace with `aws.acm.Certificate`, `aws.route53.Record`, and `aws.acm.CertificateValidation` |
+| `aws-ec2/restrict-default-security-group-handler` | Replace with `aws.ec2.DefaultSecurityGroup` resource with empty ingress/egress rules |
+| `aws-ecr/auto-delete-images-handler` | Replace `aws-native:ecr:Repository` with `aws.ecr.Repository` with `forceDelete: true` |
+| `aws-s3/auto-delete-objects-handler` | Replace `aws-native:s3:Bucket` with `aws.s3.Bucket` with `forceDestroy: true` |
+| `aws-s3/notifications-resource-handler` | Replace with `aws.s3.BucketNotification` |
+| `aws-logs/log-retention-handler` | Replace with `aws.cloudwatch.LogGroup` with explicit `retentionInDays` |
+| `aws-iam/oidc-handler` | Replace with `aws.iam.OpenIdConnectProvider` |
+| `aws-route53/delete-existing-record-set-handler` | Replace with `aws.route53.Record` with `allowOverwrite: true` |
+| `aws-dynamodb/replica-handler` | Replace with `aws.dynamodb.TableReplica` |
+
+**Cross-account/region handlers:**
+
+- `aws-cloudfront/edge-function`: Use `aws.lambda.Function` with `region: "us-east-1"`
+- `aws-route53/cross-account-zone-delegation-handler`: Use a separate AWS provider with cross-account role assumption
+
 #### 2. Test converted code
 
 Before importing, verify the generated code works by deploying it to a temporary stack (e.g., `dev-test`).
