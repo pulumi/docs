@@ -655,7 +655,7 @@ faq:
 
             First, Pulumi Cloud is free to use, now and forever, for individuals. You get all of the convenience of automatic state management, unlimited updates, and many other great features without needing to pay anything at all for it.
 
-            Second, Pulumi is an [open-source project](https://github.com/pulumi/pulumi). You can [run Pulumi entirely offline](/docs/iac/concepts/state-and-backends#using-a-DIY-backend) without the online service's features, and manage state yourself, instead of using the online service. There are no restrictions — it's all there in the open for you to use freely as you'd like.
+            Second, Pulumi is an [open-source project](https://github.com/pulumi/pulumi). You can [run Pulumi entirely offline](/docs/iac/concepts/state-and-backends#using-a-diy-backend) without the online service's features, and manage state yourself, instead of using the online service. There are no restrictions — it's all there in the open for you to use freely as you'd like.
 
             Finally, we offer a 14-day free trial for the Business-critical Edition. Once the trial is over, you can continue to use the Business-critical Edition by chatting with sales or changing to Team or Enterprise Edition. After your trial expires, no data will be lost, and there is a grace period.
         - question: What is an organization? What are projects and stacks?
