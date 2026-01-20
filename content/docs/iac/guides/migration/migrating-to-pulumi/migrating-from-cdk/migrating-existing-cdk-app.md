@@ -357,8 +357,8 @@ Where possible, replace custom resources with native Pulumi resources instead. F
 
 **Cross-account/region handlers:**
 
-- `aws-cloudfront/edge-function`: Use `aws.lambda.Function` with `region: "us-east-1"`
-- `aws-route53/cross-account-zone-delegation-handler`: Use a separate AWS provider with cross-account role assumption
+* `aws-cloudfront/edge-function`: Use `aws.lambda.Function` with `region: "us-east-1"`
+* `aws-route53/cross-account-zone-delegation-handler`: Use a separate AWS provider with cross-account role assumption
 
 #### 2. Test converted code
 
