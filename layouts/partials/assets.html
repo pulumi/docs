@@ -12,22 +12,24 @@
 {{ $js := resources.Get "js/bundle.js" | fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>
 
+{{/* Inline template for CSS links: uses fingerprinted bundle in dev, post-processed bundle in prod */}}
+{{ define "css-link" }}
+    {{- $css := resources.Get .source | fingerprint -}}
+    {{- $_ := $css.Permalink -}}
+    {{- if hugo.IsServer -}}
+        <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    {{- else -}}
+        <link rel="stylesheet" href="/css/{{ .name }}.{{ getenv "CSS_BUNDLE_ID" }}.css">
+    {{- end -}}
+{{ end }}
+
 <!--
   Our marketing styles diverge a bit from the other parts of the website so we load
   in a different bundle on our marketing pages.
 -->
 {{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "tutorials" "providers" "collections" "templates" "ai" "authors" "tags" "legal" }}
-{{ if in $nonMarketingSections .Section }}
-{{ else }}
-    {{/* Force Hugo to publish the resource by fingerprinting it, but don't use the fingerprinted URL */}}
-    {{ $marketingCss := resources.Get "css/marketing.css" | fingerprint }}
-    {{ $_ := $marketingCss.Permalink }}
-    {{ $cssBundleId := getenv "CSS_BUNDLE_ID" }}
-    <link rel="stylesheet" href="/css/marketing.{{ $cssBundleId }}.css">
+{{ if not (in $nonMarketingSections .Section) }}
+    {{ template "css-link" (dict "source" "css/marketing.css" "name" "marketing") }}
 {{ end }}
 
-{{/* Force Hugo to publish the resource by fingerprinting it, but don't use the fingerprinted URL */}}
-{{ $css := resources.Get "css/bundle.css" | fingerprint }}
-{{ $_ := $css.Permalink }}
-{{ $cssBundleId := getenv "CSS_BUNDLE_ID" }}
-<link rel="stylesheet" href="/css/bundle.{{ $cssBundleId }}.css">
+{{ template "css-link" (dict "source" "css/bundle.css" "name" "bundle") }}

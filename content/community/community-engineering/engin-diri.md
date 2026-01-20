@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "AWS / Honeycomb / Pulumi Workshop"
+  title: "AI Agents That Reason Over Your Infrastructure"
+  url: "https://www.pulumi.com/events/ai-agents-that-reason/"
+  date: 2026-01-14T15:00:00.000-07:00
 - event: "AiDevTLV 2025"
   title: "What is AI Platform Engineering and Why Should You Care?"
   url: "https://aidevtlv.com/agenda/"
