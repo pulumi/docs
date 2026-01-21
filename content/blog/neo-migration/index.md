@@ -64,7 +64,7 @@ The challenge with CDK migrations isn't the CloudFormation layer - it's the cryp
 
 CDK also introduces complexity through its construct hierarchy. A single high-level construct might expand into dozens of CloudFormation resources, each with dependencies and references to others. Neo preserves these relationships during migration, ensuring that IAM roles still reference the right Lambda functions, API Gateway deployments still point to the correct stages, and security groups maintain their exact rules. The migration completes with your infrastructure unchanged and Pulumi's preview confirming zero modifications.
 
-{{< blog/cta-button "Migrate Your CDK Now" "https://app.pulumi.com/neo?prompt=Leverage the cdk-to-pulumi skill to migrate my CDK application to a Pulumi application" "_blank" >}}
+{{< neo-card title="Leverage the cdk-to-pulumi skill to migrate my CDK application to a Pulumi application" >}}
 
 ## Terraform to Pulumi
 
@@ -72,7 +72,7 @@ Terraform and CDKTF migrations require two transformations: converting state to 
 
 The code transformation analyzes your HCL to generate equivalent Pulumi code. Neo handles Terraform patterns like `count` and `for_each` loops, module structures, and resource dependencies, recreating them idiomatically in Pulumi. The generated code manages your existing infrastructure without modifications - `pulumi preview` confirms zero changes. For complete migration instructions, see our [Terraform migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
 
-{{< blog/cta-button "Migrate Your TF/CDKTF Now" "https://app.pulumi.com/neo?prompt=Leverage the terraform-migration skill to migrate my Terraform application to a Pulumi application" "_blank" >}}
+{{< neo-card title="Leverage the terraform-migration skill to migrate my Terraform application to a Pulumi application" >}}
 
 ## Azure ARM to Pulumi
 
@@ -82,7 +82,7 @@ Neo orchestrates ARM migrations through intelligent AI-driven conversion. When a
 
 The biggest challenge with ARM migrations is handling the implicit dependencies and resource provider quirks. An App Service might implicitly create a service plan, a SQL database requires a server that might be defined in a linked template, and child resources like application settings need separate migration steps. Neo understands these Azure-specific patterns and generates the appropriate Pulumi code to manage every resource. The migration completes with a zero-diff preview, confirming your exact Azure configuration is preserved while giving you a more maintainable, type-safe way to manage it going forward.
 
-{{< blog/cta-button "Migrate Your ARM Now" "https://app.pulumi.com/neo?prompt=Leverage the arm-to-pulumi skill to migrate my ARM application to a Pulumi application" "_blank" >}}
+{{< neo-card title="Leverage the arm-to-pulumi skill to migrate my ARM application to a Pulumi application" >}}
 
 ## The architecture powering it all
 

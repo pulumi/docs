@@ -1,0 +1,37 @@
+{{/*
+    Neo Card Shortcode
+
+    Renders a card linking to Pulumi Neo with a task description.
+    The title text is automatically URL-encoded and used as the prompt parameter.
+
+    Usage:
+        {{< neo-card title="Create a resource with an automatic name" >}}
+        {{< neo-card title="Leverage the cdk-to-pulumi skill to migrate my CDK application" subtitle="Try Neo" >}}
+
+    Parameters:
+        - title (required): The main text/task description (also used as the prompt parameter)
+        - subtitle (optional): The smaller text above title (default: "Start a Neo task")
+*/}}
+
+{{ $title := .Get "title" }}
+{{ $subtitle := .Get "subtitle" | default "Start a Neo task" }}
+{{ $href := printf "https://app.pulumi.com/neo?prompt=%s" ($title | urlquery) }}
+
+{{ if $title }}
+<a href="{{ $href }}" class="neo-card">
+    <div class="neo-card-content">
+        <div class="neo-card-icon">
+            <img src="/icons/pdi-neo.svg" alt="Neo" />
+        </div>
+        <div class="neo-card-text">
+            <span class="neo-card-subtitle">{{ $subtitle }}</span>
+            <span class="neo-card-title">{{ $title }}</span>
+        </div>
+    </div>
+    <div class="neo-card-arrow">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+</a>
+{{ else }}
+    {{ errorf "neo-card shortcode requires a 'title' parameter: %s" .Position }}
+{{ end }}
