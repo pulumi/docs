@@ -200,3 +200,25 @@
         @apply top-0;
     }
 }
+
+/* CONV-004: Neo as Default Hero Experience
+   This styling supports the Neo hero variant with side-by-side text and image layout */
+.conv-004-neo-hero {
+    min-height: 28rem;
+
+    @screen lg {
+        min-height: 32rem;
+        height: auto;
+    }
+
+    .home-page-hero-text {
+        @screen lg {
+            @apply flex flex-col justify-center;
+
+            p {
+                @apply mx-0;
+                max-width: 36rem !important;
+            }
+        }
+    }
+}
