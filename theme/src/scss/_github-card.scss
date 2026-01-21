@@ -1,49 +1,23 @@
 .github-card {
-    display: block;
-    margin: 16px auto;
-    max-width: 480px;
-    background-color: map-get($gray, 100);
-    border: 1px solid map-get($gray, 300);
-    border-radius: 12px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: box-shadow 0.15s ease;
+    @apply block mx-auto max-w-lg my-8 bg-gray-100 border border-gray-300 rounded-xl overflow-hidden no-underline transition-colors;
 
     &:hover {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        text-decoration: none;
+        @apply border-gray-400;
     }
 
-    img.github-card-image {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin: 0 !important;
-        padding: 0 !important;
-        border: none !important;
-        vertical-align: bottom;
+    .github-card-image {
+        @apply block w-full h-auto m-0 p-0 border-none align-bottom;
     }
 
     .github-card-content {
-        padding: 10px 16px;
-        border-top: 1px solid map-get($gray, 300);
+        @apply px-4 py-2.5 border-t border-gray-300;
     }
 
     .github-card-domain {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 13px;
-        color: map-get($gray, 600);
-        margin: 0;
-        padding: 0;
+        @apply flex items-center gap-1.5 text-sm text-gray-600 m-0 p-0;
     }
 
     .github-card-icon {
-        width: 16px;
-        height: 16px;
-        flex-shrink: 0;
+        @apply text-base;
     }
 }
-
