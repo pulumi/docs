@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: "Zero to Production in Kubernetes"
-meta_desc: Learn to deploy and manage Kubernetes clusters from zero to production with multi-cloud automation, GitOps using Argo CD, and agentic workflows.
+meta_desc: Deploy Kubernetes with GitOps, IaC, and AI-powered workflows using Pulumi. Go from zero to production with modern, scalable cloud infrastructure.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -52,7 +52,7 @@ main:
         
         In this **hands-on Kubernetes workshop**, you will learn how to take clusters and workloads from zero to production using infrastructure as code, **GitOps automation**, and modern strategies for visibility and resilience. You will also explore how **agentic workflows** and AI-assisted infrastructure are reshaping the way teams manage Kubernetes at scale.
     learn:
-        - Deploy production-ready applications in a repeatable and automated way
+        - Deploy production-ready applications with repeatable automation
         - Manage Kubernetes fleets using GitOps workflows
         - Improve cluster and workload observability across environments
 
@@ -72,11 +72,11 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 510e62c5-8e2e-4e88-89f5-4853bff9e567
+    hubspot_form_id: 5441c618-7158-48fc-a7a1-c96abd11d675
     salesforce_campaign_id: 701PQ00000eePWvYAM
 
 event_data:
-  name: "Agentic Workflows for Production-ready Kubernetes"
+  name: "Zero to Production in Kubernetes"
   start_date: 2026-03-31T09:00:00-04:00
   end_date: 2026-03-31T10:00:00-04:00
   url: "https://www.pulumi.com/resources/from-zero-to-production-in-kubernetes/"
