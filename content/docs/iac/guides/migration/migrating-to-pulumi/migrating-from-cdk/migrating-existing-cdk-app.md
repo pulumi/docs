@@ -15,9 +15,59 @@ menu:
 
 This guide walks through migrating an existing AWS CDK application to a Pulumi program that manages the same infrastructure.
 
-#### Planning your Migration
+## Pulumi Neo (Recommended)
+
+* **Automated conversion**: Neo converts your CDK code to Pulumi and generates import mappings automatically
+* **Safety verification**: Neo runs `pulumi preview` to prove no changes before you commit
+
+### Quick start with Neo
+
+1. **Prerequisites**:
+   * Ensure your CDK application synthesizes cleanly: `cdk synth`
+   * Install the [Pulumi GitHub app](https://github.com/apps/pulumi-cloud) with access to your repository that contains your CDK application
+   * Configure AWS credentials in [Pulumi ESC](/docs/esc/integrations/dynamic-login-credentials/aws-login/)
+
+2. **Start the migration**:
+
+   ```text
+   "Help me migrate my CDK application to Pulumi"
+   ```
+
+3. **Neo will**:
+   * Synthesize your CDK application
+   * Inventory all CloudFormation resources
+   * Convert CDK code to Pulumi
+   * Import existing resources without touching them
+   * Verify zero changes with `pulumi preview`
+
+4. **Review and commit**:
+   * Examine the generated Pulumi code
+   * Confirm the preview shows no changes
+   * Commit your new Pulumi program
+
+For a detailed technical walkthrough, see our [Neo migration blog post](/blog/neo-migration/).
+
+### When to use manual migration instead
+
+While Neo handles most CDK applications automatically, you might need manual migration for:
+
+* Custom CloudFormation resources and artifact bundling not yet supported by Neo
+* Complex cross-stack dependencies requiring specific handling
+* Scenarios where you want to fundamentally restructure during migration
+
+Continue reading below for manual migration approaches if Neo doesn't fit your specific needs.
+
+## Manual Migration Approaches
+
+If Neo doesn't support your specific use case or you prefer manual control over the migration process, the following sections provide comprehensive guidance for manual migration.
+
+### Planning your Migration
 
 Before running any tools, it is important to plan your migration strategy. Migrating involves two distinct parts: converting your **Code** (logic) and migrating your **State** (live resources).
+
+{{% notes type="info" %}}
+**Consider Neo first**: For most CDK applications, [Neo](#neo-the-automated-migration-path-recommended) automates both code conversion and state migration with zero downtime. The manual approaches below are best for edge cases or when you need specific control over the migration process.
+{{% /notes %}}
 
 ### Strategy: Convert vs. Rewrite
 
@@ -297,12 +347,13 @@ If you write your component code first, you can import directly into the hierarc
 
 Once you have a plan, choose the execution path that fits your goals:
 
-* [Approach A: The Automated Path (Recommended)](#approach-a-the-automated-path-recommended)
-* [Approach B: Manual Migration](#approach-b-manual-migration)
+* [Neo: Fully Automated Migration (Recommended)](#neo-the-automated-migration-path-recommended) - Use Neo for zero-downtime automated migration
+* [Approach A: Semi-Automated Path](#approach-a-the-semi-automated-path) - Use tools like `cdk2pulumi` and `cdk-importer` with manual steps
+* [Approach B: Manual Migration](#approach-b-manual-migration) - Full manual control over the migration process
 
-### Approach A: The Automated Path (Recommended)
+### Approach A: The Semi-Automated Path
 
-This path uses `cdk2pulumi` to convert your code and the `cdk-importer` tool to automatically generate the import mapping. This is the fastest way to migrate standard stacks.
+This path uses `cdk2pulumi` to convert your code and the `cdk-importer` tool to automatically generate the import mapping. This approach provides more control than Neo while still automating key parts of the migration.
 
 **The Workflow:**
 
@@ -443,6 +494,16 @@ Don’t quit early. Iterate until your preview is completely clean with no diffs
 ## The Golden Path: Recommended Workflow
 
 In summary, the most reliable way to migrate is:
+
+### Option 1: Use Neo (Recommended for most users)
+
+1. **Prepare**: Ensure your CDK app synthesizes cleanly and configure AWS credentials in Pulumi ESC.
+1. **Migrate**: Ask Neo to migrate your CDK application—it handles conversion, import, and verification automatically.
+1. **Review**: Examine the generated code and confirm `pulumi preview` shows zero changes.
+1. **Commit**: Commit your new Pulumi program and optionally refactor for better organization.
+1. **Retire CloudFormation**: Delete the old stacks after confirming Pulumi manages everything correctly.
+
+### Option 2: Semi-automated migration (When Neo doesn't fit)
 
 1. **Plan**: Decide on your target structure and strategy.
 1. **Convert**: Use `cdk2pulumi` to get a working baseline of code.
