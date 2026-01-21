@@ -15,14 +15,61 @@ aliases:
 - /docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/
 ---
 
-If your infrastructure was provisioned with Terraform or the CDK for Terraform (CDKTF), there are a number of options that will help you adopt Pulumi.
+If your infrastructure was provisioned with Terraform or the CDK for Terraform (CDKTF), there are a number of options that will help you adopt Pulumi:
 
+* **[Neo](/product/neo/) (Recommended)**: Use Neo to automatically convert your Terraform code and import existing resources with zero downtime
 * **Coexist** with resources provisioned by Terraform or CDKTF by referencing a `.tfstate` file.
 * **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/) or using `pulumi convert --from terraform` along with `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `pulumi convert --from terraform`.
 * **Use Terraform Modules** directly within your Pulumi programs through the [Terraform Module](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) feature.
 
-This range of techniques helps to either temporarily or permanently use Pulumi alongside Terraform, in addition to fully migrating existing infrastructure to Pulumi.
+## Choosing a Terraform migration path
+
+### Pulumi Neo (Recommended)
+
+* **Automated conversion**: Neo converts your Terraform HCL and state to Pulumi automatically
+* **Safety verification**: Neo runs `pulumi preview` to prove no changes before you commit
+
+#### Quick start with Neo
+
+1. **Prerequisites**:
+   * Ensure you have access to your state file (`.tfstate`)
+   * Install the [Pulumi GitHub app](https://github.com/apps/pulumi-cloud) with access to your repository that contains your Terraform configuration files
+   * Configure cloud credentials in [Pulumi ESC](/docs/esc/)
+   * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
+
+2. **Start the migration**:
+
+   ```text
+   "Migrate my Terraform configuration to Pulumi"
+   ```
+
+3. **Neo will**:
+   * Convert your Terraform state to Pulumi state
+   * Generate equivalent Pulumi code using your Terraform configuration
+   * Verify no changes with `pulumi preview`
+
+4. **Review and commit**:
+   * Examine the generated Pulumi code
+   * Confirm the preview shows no changes
+   * Commit your new Pulumi program
+
+For a detailed technical walkthrough, see our [Neo migration blog post](/blog/neo-migration/).
+
+#### When to use manual migration instead
+
+While Neo handles most Terraform configurations automatically, you might need manual migration for:
+
+* Terraform modules with complex dynamic blocks not yet supported by Neo
+* Edge cases with custom providers or unusual state configurations
+
+If you want to fundamentally restructure your infrastructure, we recommend completing the migration first and then refactoring your Pulumi code.
+
+Continue reading below for manual migration approaches if Neo doesn't fit your specific needs.
+
+### Alternative migration paths
+
+If Neo doesn't support your specific use case, or if you prefer manual control over the migration process, the options below provide flexibility to coexist with or migrate from Terraform at your own pace.
 
 ## Referencing Terraform State
 
