@@ -643,7 +643,7 @@ When project level configuration is set as such, the stacks will consume the pro
 
 ### Project and Stack Configuration Scope
 
-Stack level configuration using the same key supercedes the project level configuration for that key. For example, if, given the above project level configuration example, one had a `Pulumi.dev.yaml` file containing:
+Stack level configuration using the same key supersedes the project level configuration for that key. For example, if, given the above project level configuration example, one had a `Pulumi.dev.yaml` file containing:
 
 ```
 config:
