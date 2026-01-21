@@ -1,27 +1,91 @@
+{{/* CONV-005: Developer/Business Leader Persona Selector
+     This treatment variant adds a MongoDB-inspired experience selector that allows visitors
+     to self-identify their role, with the page adapting content and CTAs to that persona. */}}
 {{ define "hero" }}
-    <header class="home-page-hero shadow">
+    <header class="home-page-hero shadow conv-005-persona-hero">
         <div class="home-page-hero-background">
+            <!-- Persona Selector -->
+            <div class="persona-selector-container flex justify-center pt-4">
+                <div class="persona-selector bg-gray-800 rounded-full p-1 inline-flex">
+                    <span class="text-gray-300 px-3 py-2 text-sm">Select Experience:</span>
+                    <button id="persona-developer" class="persona-btn persona-btn-active rounded-full px-4 py-2 text-sm font-medium transition-all">
+                        Developer
+                    </button>
+                    <button id="persona-business" class="persona-btn rounded-full px-4 py-2 text-sm font-medium transition-all">
+                        Business Leader
+                    </button>
+                </div>
+            </div>
+
             <div class="flex">
                 <div class="w-full p-6 home-page-hero-text">
-                    <h1 class="flex flex-col items-center">
-                        <span class="inline-block mb-3 text-center" data-text="{{ index (.Params.hero.title) 0 }}">{{ index (.Params.hero.title) 0 }}</span>
-                        <span class="rainbow-text inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
-                    </h1>
+                    <!-- Developer Experience (shown by default) -->
+                    <div id="developer-content" class="persona-content">
+                        <h1 class="flex flex-col items-center">
+                            <span class="inline-block mb-3 text-center" data-text="Infrastructure as Code">Infrastructure as Code</span>
+                            <span class="rainbow-text inline-block text-center" data-text="in Your Favorite Language.">in Your Favorite Language.</span>
+                        </h1>
 
-                    <p class="mt-6 text-center leading-7">{{ .Params.hero.description | markdownify }}</p>
+                        <p class="mt-6 text-center leading-7">Build, deploy, and manage infrastructure with TypeScript, Python, Go, C#, Java, or YAML. Full IDE support, testing, and real programming constructs.</p>
 
-                    <div class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
-                        <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ .Params.hero.cta_link }}">{{ .Params.hero.cta_text }}</a>
-                        <a class="btn-secondary home-hero-btn-secondary rounded-full cursor-pointer" href="{{ .Params.hero.secondary_cta_link }}">{{ .Params.hero.secondary_cta_text }}</a>
+                        <div class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
+                            <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="/docs/get-started/">Get Started</a>
+                            <a class="btn-secondary home-hero-btn-secondary rounded-full cursor-pointer" href="/docs/">Documentation</a>
+                        </div>
+                    </div>
+
+                    <!-- Business Leader Experience (hidden by default) -->
+                    <div id="business-content" class="persona-content hidden">
+                        <h1 class="flex flex-col items-center">
+                            <span class="inline-block mb-3 text-center" data-text="Ship Infrastructure">Ship Infrastructure</span>
+                            <span class="rainbow-text inline-block text-center" data-text="Faster and More Securely.">Faster and More Securely.</span>
+                        </h1>
+
+                        <p class="mt-6 text-center leading-7">Join 3,700+ companies using Pulumi to reduce cloud costs, improve security, and accelerate time to market. SOC 2 Type II certified.</p>
+
+                        <div class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
+                            <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="/pricing/">See Pricing</a>
+                            <a class="btn-secondary home-hero-btn-secondary rounded-full cursor-pointer" href="/contact/?form=sales">Contact Sales</a>
+                        </div>
                     </div>
                 </div>
-
-                <!--<div class="hidden lg:block lg:w-1/2 p-6 flex justify-center align-center">
-                    <img src="/images/home/dancing-music.svg" />
-                </div>-->
             </div>
         </div>
     </header>
+
+    <script>
+    // CONV-005: Persona selector interaction
+    document.addEventListener('DOMContentLoaded', function() {
+        const developerBtn = document.getElementById('persona-developer');
+        const businessBtn = document.getElementById('persona-business');
+        const developerContent = document.getElementById('developer-content');
+        const businessContent = document.getElementById('business-content');
+
+        if (developerBtn && businessBtn && developerContent && businessContent) {
+            developerBtn.addEventListener('click', function() {
+                developerBtn.classList.add('persona-btn-active');
+                businessBtn.classList.remove('persona-btn-active');
+                developerContent.classList.remove('hidden');
+                businessContent.classList.add('hidden');
+                // Track persona selection
+                if (window.analytics) {
+                    window.analytics.track('Persona Selected', { persona: 'developer' });
+                }
+            });
+
+            businessBtn.addEventListener('click', function() {
+                businessBtn.classList.add('persona-btn-active');
+                developerBtn.classList.remove('persona-btn-active');
+                businessContent.classList.remove('hidden');
+                developerContent.classList.add('hidden');
+                // Track persona selection
+                if (window.analytics) {
+                    window.analytics.track('Persona Selected', { persona: 'business_leader' });
+                }
+            });
+        }
+    });
+    </script>
 {{ end }}
 
 {{ define "main" }}

@@ -200,3 +200,47 @@
         @apply top-0;
     }
 }
+
+/* CONV-005: Developer/Business Leader Persona Selector
+   MongoDB-inspired experience selector that adapts content based on visitor role */
+.conv-005-persona-hero {
+    min-height: 28rem;
+
+    @screen lg {
+        min-height: 30rem;
+        height: auto;
+    }
+
+    .persona-selector-container {
+        position: relative;
+        z-index: 10;
+    }
+
+    .persona-selector {
+        @apply items-center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .persona-btn {
+        @apply text-gray-400 cursor-pointer;
+        background: transparent;
+        border: none;
+
+        &:hover {
+            @apply text-white;
+        }
+
+        &.persona-btn-active {
+            @apply text-white;
+            background: theme("colors.violet.600");
+        }
+    }
+
+    .persona-content {
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .persona-content.hidden {
+        display: none;
+    }
+}
