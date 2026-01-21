@@ -710,7 +710,7 @@ func (File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *FileS
 
 ### Multi-language support
 
-In our above example, we created a provider in Go and used it in YAML. This "just works" by default. However, if you would like to use your provider from the other Pulumi authoring langauges (e.g. TypeScript, Python, Java, Go, C#) it will be necessary to generate SDKs for each target language.
+In our above example, we created a provider in Go and used it in YAML. This "just works" by default. However, if you would like to use your provider from the other Pulumi authoring languages (e.g. TypeScript, Python, Java, Go, C#) it will be necessary to generate SDKs for each target language.
 
 That is a very streamlined process with the Pulumi Provider SDK. The following command will generate language SDKs for all supported languages:
 

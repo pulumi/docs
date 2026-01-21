@@ -36,4 +36,4 @@ values:
 
 ```
 
-This configuration will genrate passphrases like `Mouth%Purebred%Headstone%Plausibly`.
+This configuration will generate passphrases like `Mouth%Purebred%Headstone%Plausibly`.

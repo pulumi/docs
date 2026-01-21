@@ -54,7 +54,7 @@ type HelloWorld struct{}
 
 // Each resource has in input struct, defining what arguments it accepts.
 type HelloWorldArgs struct {
-	// Fields projected into Pulumi must be public and hava a `pulumi:"..."` tag.
+	// Fields projected into Pulumi must be public and have a `pulumi:"..."` tag.
 	// The pulumi tag doesn't need to match the field name, but its generally a
 	// good idea.
 	Name string `pulumi:"name"`

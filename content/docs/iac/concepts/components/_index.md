@@ -695,7 +695,7 @@ runtime: java
 
 ### Define an Entry Point
 
-The entrypoint analyzes components to automatically build a schema, and interact with the Pulumi engine to mange the component lifecycle.
+The entrypoint analyzes components to automatically build a schema, and interact with the Pulumi engine to manage the component lifecycle.
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
