@@ -84,6 +84,20 @@ var keyManager = new KeyManagerResource("key-manager", new KeyManagerResourceArg
 ```
 
 {{% /choosable %}}
+
+{{% choosable language yaml }}
+configuration:
+  rotationPeriod:
+    type: string
+    default: "11-2024"
+
+resources:
+  keyManager:
+    type: example:components:KeyManager
+    options:
+      replacementTrigger: ${rotationPeriod}
+{{% /choosable }}
+
 {{< /chooser >}}
 
 {{% notes type="info" %}}
