@@ -1,0 +1,33 @@
+{{/*
+    GitHub Social Card Shortcode
+
+    Renders a social preview card for a GitHub repository using the
+    Open Graph image which contains all repository information.
+
+    Usage:
+        {{< github-card repo="owner/repo" >}}
+
+    Parameters:
+        - repo (required): The GitHub repository in "owner/repo" format
+*/}}
+
+{{ $repo := .Get "repo" }}
+
+{{ if $repo }}
+<a href="https://github.com/{{ $repo }}" target="_blank" rel="noopener noreferrer" class="github-card">
+    <img
+        src="https://opengraph.githubassets.com/1/{{ $repo }}"
+        alt="GitHub repository: {{ $repo }}"
+        class="github-card-image"
+        loading="lazy"
+    />
+    <div class="github-card-content">
+        <div class="github-card-domain">
+            <i class="fab fa-github github-card-icon"></i>
+            github.com/{{ $repo }}
+        </div>
+    </div>
+</a>
+{{ else }}
+    {{ errorf "github-card shortcode requires a 'repo' parameter (e.g., repo=\"owner/repo\"): %s" .Position }}
+{{ end }}
