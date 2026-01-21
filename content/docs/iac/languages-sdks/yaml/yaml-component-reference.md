@@ -17,7 +17,7 @@ aliases:
 
 Pulumi components can be defined in many languages, and the Pulumi YAML dialect offers an additional language for authoring Pulumi components.
 
-The Pulumi YAML provider supports components written in YAML or JSON. Each YAML component plugin consists of a top level `components` section, which consists of a map of component names to a component definition.
+Pulumi supports components written with YAML or JSON syntax. Each YAML component plugin consists of a top level `components` section, which consists of a map of component names to a component definition.
 
 ```yaml
 components:
