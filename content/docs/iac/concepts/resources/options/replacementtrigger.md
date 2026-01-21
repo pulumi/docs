@@ -15,10 +15,9 @@ aliases:
   - /docs/iac/concepts/options/replacementtrigger/
 ---
 
-The `replacementTrigger` resource option forces a replace operation on the
-current resource every time a given value is updated. This value could be a
-`YYYY-MM` string to ensure the given resource is replaced each month, or a
-version number to synchronize resource updates with new releases.
+The `replacementTrigger` resource option forces a replacement operation on a resource whenever a specified trigger value changes. This is useful when you need to replace resources on a schedule or in response to external events that aren't captured by the resource's properties.
+
+For example, you might want to rotate cryptographic keys monthly by using a `YYYY-MM` string as the trigger, or synchronize infrastructure updates with application releases by using a version number. Unlike `replaceOnChanges`, which triggers replacements based on resource property changes, `replacementTrigger` allows you to control replacement timing based on arbitrary values.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
