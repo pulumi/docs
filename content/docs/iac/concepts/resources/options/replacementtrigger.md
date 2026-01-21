@@ -89,7 +89,7 @@ var keyManager = new KeyManagerResource("key-manager", new KeyManagerResourceArg
 configuration:
   rotationPeriod:
     type: string
-    default: "11-2024"
+    default: "01-2026"
 
 resources:
   keyManager:
