@@ -185,6 +185,23 @@ To embed a GitHub repository preview card, use the `github-card` shortcode with 
 
 This renders a clickable card showing the repository's Open Graph image, which includes the repository name, description, stars, language, and other metadata. The card links directly to the repository on GitHub.
 
+#### Neo Cards
+
+To embed a card linking to Pulumi Neo with a pre-filled prompt, use the `neo-card` shortcode:
+
+```plain
+{{< neo-card title="Migrate your CDK application" >}}
+{{< neo-card title="Migrate your CDK application" prompt="Leverage the cdk-to-pulumi skill to migrate my CDK application to a Pulumi application" >}}
+{{< neo-card title="Try Neo" subtitle="Get started" prompt="Help me create infrastructure" >}}
+```
+
+**Parameters:**
+- `title` (required): The main text displayed on the card
+- `prompt` (optional): The prompt sent to Neo (defaults to title if not specified)
+- `subtitle` (optional): The smaller text above title (default: "Start a Neo task")
+
+This renders a card with the Neo icon, subtitle, title, and a chevron arrow. Clicking the card opens Pulumi Neo with the specified prompt.
+
 #### Animated GIFs
 
 GIFs are welcome, but should be optimized. In general, animated GIFs should be no more than 1200 pixels wide and 3 MB in size. If you need help optimizing your GIF, consider [Gifsicle](https://www.lcdf.org/gifsicle/); it's available through Homebrew and has an easy-to-use command-line API. For example, to resize (e.g., downscale) and optimize a GIF in place:
