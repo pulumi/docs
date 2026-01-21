@@ -13,7 +13,7 @@ menu:
         weight: 2
 ---
 
-[Buildkite](https://buildkite.com/) is a continuous intergration and delivery platform designed to scale with your projects. This guide shows you how to install, configure, and run Pulumi in a Buildkite pipeline.
+[Buildkite](https://buildkite.com/) is a continuous integration and delivery platform designed to scale with your projects. This guide shows you how to install, configure, and run Pulumi in a Buildkite pipeline.
 
 ## Prerequisites
 

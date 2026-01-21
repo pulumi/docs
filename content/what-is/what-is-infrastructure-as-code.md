@@ -17,7 +17,7 @@ In this article, we'll touch on four key questions regarding infrastructure as c
 * What benefits does infrastructure as code provide?
 * How do you get started with infrastructure as code?
 
-Let's start with examing why infrastructure as code is important.
+Let's start with examining why infrastructure as code is important.
 
 ## Why is infrastructure as code important?
 

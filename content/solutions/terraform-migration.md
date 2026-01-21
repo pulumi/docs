@@ -27,7 +27,7 @@ benefits:
           description: |
             You can increase automation across the entire lifecycle of your cloud infrastructure. You can program logic that orchestrates complex workflows during infrastructure provisioning instead of needing to use Bash scripts or glue code. In addition to its CLI, Pulumi provides the Automation API, a programmatic interface for infrastructure as code, so you can build applications that dynamically manage infrastructure.
 
-        - title: Shareable and reuseable infrastructure
+        - title: Shareable and reusable infrastructure
           icon: puzzle
           icon_color: yellow
           description: |
