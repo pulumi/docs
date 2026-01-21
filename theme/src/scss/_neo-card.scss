@@ -1,7 +1,6 @@
 .neo-card {
-    @apply block w-full my-8 border border-gray-200 rounded-lg overflow-hidden no-underline transition-all;
+    @apply block w-full my-8 bg-transparent border border-gray-200 rounded-lg overflow-hidden no-underline transition-all;
     @apply flex items-center justify-between px-4 py-3;
-    background-color: rgb(255 255 255 / 0);
 
     &:hover {
         @apply border-gray-300 shadow-sm;
