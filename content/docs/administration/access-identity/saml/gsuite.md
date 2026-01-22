@@ -91,13 +91,15 @@ provider.
 1. Sign in to the Pulumi Cloud where your SAML organization resides, then navigate to the **Settings** tab for that
 organization.
 
-1. Select **Access Management** and then **Change requirements**.
+1. Select **Access Management**, then select the **Other** tab.
 
-1. Select **SAML SSO** and **Next**
+1. In the **Membership Requirements** section, select **Change requirements**.
+
+1. Select **SAML SSO** and **Next**.
 
      ![Pulumi SAML SSO](/images/docs/reference/service/saml-gsuite/pulumi-enable-saml-sso.png)
 
-1. Paste the full contents of the XML IDP document you have previously downloaded into the text box.
+1. Paste the full contents of the XML IDP document you have previously downloaded into the text area.
 
     ![Provide the XML IDP descriptor](/images/docs/reference/service/saml-gsuite/pulumi-load-sso-xml.png)
 

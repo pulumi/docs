@@ -104,12 +104,11 @@ a user's identity.
 With the block of XML text in your clipboard, open the Pulumi Cloud and navigate to your SAML
 organization. Select the **Settings** tab, and then select **Access Management**.
 
-In the **Membership Requirements** section, select the **Change requirements** button.
+Select the **Other** tab, then in the **Membership Requirements** section, select the **Change requirements** button.
 
 Select **SAML SSO** for the IDP and then **Next**.
 
-Paste the IDP metadata descriptor into the bottom card
-titled **SAML SSO Settings**. Then select **Save** at the bottom of the card.
+Paste the IDP metadata descriptor into the text area and select **Apply changes**.
 
 ![Pulumi Organization Settings](/images/docs/reference/service/saml-okta/pulumi-org-settings.png)
 

@@ -97,7 +97,8 @@ A SAML admin can log in to your Pulumi organization using an alternative login m
 Whoever configures SAML for your organization is automatically made the SAML admin. To change the SAML admin:
 
 1. Navigate to **Settings** > **Access Management**.
-1. In the **SAML SSO** section, select the **SAML Admin** button.
+1. Select the **SAML & SCIM** tab.
+1. In the **SAML SSO** section, select the **SAML Admin** dropdown.
 1. Select a new SAML admin from the list.
 
 {{% notes type="info" %}}
