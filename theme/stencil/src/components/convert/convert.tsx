@@ -1,6 +1,8 @@
 import { Component, Element, h, Prop, State } from "@stencil/core";
 import * as clipboard from "clipboard-polyfill";
 
+declare const saveAs: any;
+
 export type SourceKind = "tf" | "kube" | "arm" | "cf";
 export type InputEditorMode = "ruby" | "javascript" | "yaml";
 export type OutputEditorLanguage = "typescript" | "python" | "go" | "csharp";
