@@ -47,13 +47,13 @@ This update is enabled by recent work from our User Experience team to introduce
   <img src="resources.png" alt="Screenshot of Pulumi Cloud Resources page in dark mode" class="w-full md:w-1/2" />
 </div>
 
-Dark mode allows you to opt into a theme that uses lighter text and graphics on a darker background.  You can also choose to keep the current theme, now known as light mode.
+Dark mode allows you to opt into a theme that uses lighter text and graphics on a darker background. You can also choose to keep the current theme, now known as light mode.
 
 ## How to enable dark mode
 
 You can update your theme from the utility bar at any time.
 
-!["Screenshot of dark mode toggle in utility bar"](darktoggle.png)
+![Screenshot of dark mode toggle in utility bar](darktoggle.png)
 
 ## Try out dark mode today
 
