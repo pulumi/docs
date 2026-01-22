@@ -30,7 +30,7 @@
     "cheerio": "^1.1.2",
     "concurrently": "^9.1.2",
     "cssnano": "^7.0.7",
-    "cypress": "^15.7.1",
+    "cypress": "^15.9.0",
     "glob": "^10.4.5",
     "gray-matter": "^4.0.3",
     "http-server": "^14.1.1",
