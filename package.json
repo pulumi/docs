@@ -41,7 +41,7 @@
     "parse-diff": "^0.11.1",
     "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",
-    "sitemapper": "^3.2.9",
+    "sitemapper": "^4.0.2",
     "turndown": "^7.2.0",
     "typedoc": "^0.28.15",
     "typescript": "^5.7.2"
