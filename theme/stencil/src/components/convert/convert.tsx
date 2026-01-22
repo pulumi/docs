@@ -2,6 +2,8 @@ import { Component, Element, h, Prop, State } from "@stencil/core";
 import * as clipboard from "clipboard-polyfill";
 
 declare const saveAs: any;
+declare const CodeMirror: any;
+declare const JSZip: any;
 
 export type SourceKind = "tf" | "kube" | "arm" | "cf";
 export type InputEditorMode = "ruby" | "javascript" | "yaml";
