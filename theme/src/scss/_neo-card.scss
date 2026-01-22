@@ -1,0 +1,36 @@
+.neo-card {
+    @apply block w-full my-8 bg-transparent border border-gray-200 rounded-lg overflow-hidden no-underline transition-all;
+    @apply flex items-center justify-between px-4 py-3;
+
+    &:hover {
+        @apply border-gray-300 shadow-sm;
+    }
+
+    .neo-card-content {
+        @apply flex items-center gap-3;
+    }
+
+    .neo-card-icon {
+        @apply flex-shrink-0;
+
+        img {
+            @apply w-8 h-8;
+        }
+    }
+
+    .neo-card-text {
+        @apply flex flex-col;
+    }
+
+    .neo-card-subtitle {
+        @apply text-xs text-gray-500;
+    }
+
+    .neo-card-title {
+        @apply text-sm font-medium text-gray-900;
+    }
+
+    .neo-card-arrow {
+        @apply flex-shrink-0 text-gray-700;
+    }
+}
