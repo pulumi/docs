@@ -9,6 +9,12 @@ declare namespace CodeMirror {
         setValue(value: string): void;
         [key: string]: any;
     }
+    export interface Editor {
+        [key: string]: any;
+    }
+    export interface EditorConfiguration {
+        [key: string]: any;
+    }
 }
 
 export type SourceKind = "tf" | "kube" | "arm" | "cf";
