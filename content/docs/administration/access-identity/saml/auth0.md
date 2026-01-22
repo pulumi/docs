@@ -41,10 +41,18 @@ the browser or a command line tool like `curl`.
 
 ![Auth0 Application Endpoints](/images/docs/reference/service/saml-auth0/auth0-app-endpoints.png)
 
-Paste the contents of the downloaded XML file in the **Change Membership Requirements** dialog for setting up Pulumi
-SAML SSO.
+To configure Pulumi with the SAML metadata:
 
-![Pulumi SAML SSO Configuration](/images/docs/reference/service/saml-auth0/auth0-saml-sso-config.png)
+1. Sign into the Pulumi Cloud and navigate to your organization.
+1. Select **Settings**, then **Access Management**.
+1. Select the **Other** tab.
+1. In the **Membership Requirements** section, select **Change requirements**.
+1. Select **SAML SSO** and then **Next**.
+1. Paste the contents of the downloaded XML file into the text area.
+
+    ![Pulumi SAML SSO Configuration](/images/docs/reference/service/saml-auth0/auth0-saml-sso-config.png)
+
+1. Select **Apply changes**.
 
 Finally, in the **Settings** tab of your application, navigate to the **Application URIs** section. In the **Application
 Login URI** field, enter the URL of your Pulumi organization in following format:

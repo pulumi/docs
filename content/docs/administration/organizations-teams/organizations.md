@@ -114,7 +114,8 @@ Organization members must first add the new identity provider to their individua
 To change an organization's identity provider:
 
 1. Navigate to **Settings** > **Access Management**.
-1. Select **Change requirements**.
+1. Select the **Other** tab.
+1. In the **Membership Requirements** section, select **Change requirements**.
 
 ### Disconnecting identity providers
 
@@ -123,7 +124,8 @@ In order to disconnect an identity provider you need to select another identity 
 Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
 
 1. Navigate to **Settings** > **Access Management**.
-1. Select **Change requirements**.
+1. Select the **Other** tab.
+1. In the **Membership Requirements** section, select **Change requirements**.
 1. Select a new identity provider.
 
 ### GitHub identity provider
