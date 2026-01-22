@@ -496,7 +496,7 @@
     "@tufjs/canonical-json" "2.0.0"
     minimatch "^9.0.4"
 
-"@types/aws-lambda@^8.10.95":
+"@types/aws-lambda@^8.10.159":
   version "8.10.160"
   resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.160.tgz#7a3afdd919d730e4e2be7239d0af5f36a8b0ce1e"
   integrity sha512-uoO4QVQNWFPJMh26pXtmtrRfGshPUSpMZGUyUQY20FhfHEElEBOPKgVmFs1z+kbpyBsRs2JnoOPT7++Z4GA9pA==
