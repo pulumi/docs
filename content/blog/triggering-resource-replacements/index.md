@@ -1,6 +1,6 @@
 ---
 title: "New in Pulumi IaC: `replacementTrigger` Resource Option"
-date: 2026-01-19
+date: 2026-01-22
 meta_desc: "You can now use the `replacementTrigger` resource option to control when resources are recreated"
 meta_image: meta.png
 authors:
@@ -121,4 +121,6 @@ When we run this update for the first time, the replacement trigger will be pers
 
 ## Next steps
 
-This feature is fully supported across all our SDKs as of v3.215.0. Thanks for reading, and feel free to reach out with any questions via [GitHub](https://github.com/pulumi/pulumi), [X](https://x.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
+This feature is fully supported across all our SDKs as of v3.215.0. For more information about resource options, see the [resource options documentation](/docs/iac/concepts/resources/options/).
+
+Thanks for reading, and feel free to reach out with any questions via [GitHub](https://github.com/pulumi/pulumi), [X](https://x.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
