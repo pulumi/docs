@@ -18,6 +18,8 @@ The `gcp-login` provider enables you to log in to Google Cloud using OpenID Conn
 
 ## Example
 
+### Basic configuration
+
 ```yaml
 values:
   gcp:
@@ -29,6 +31,39 @@ values:
           providerId: pulumi-esc
           serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com
 ```
+
+### Using outputs with Pulumi IaC and gcloud CLI
+
+The `gcp-login` provider outputs credentials for use with both Pulumi's Google Cloud provider and the `gcloud` CLI. This example shows how to configure both:
+
+```yaml
+values:
+  gcp:
+    login:
+      fn::open::gcp-login:
+        project: 123456789
+        oidc:
+          workloadPoolId: pulumi-esc
+          providerId: pulumi-esc
+          serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com
+  pulumiConfig:
+    gcp:project: ${gcp.login.project}
+  environmentVariables:
+    # The Google Cloud SDK (used by Pulumi's GCP provider) requires the project to be set by number
+    GOOGLE_CLOUD_PROJECT: ${gcp.login.project}
+    # The gcloud CLI requires the project to be set by name, and via a different env var
+    # See: https://cloud.google.com/sdk/docs/properties#setting_properties_using_environment_variables
+    CLOUDSDK_CORE_PROJECT: my-project-name
+    # Provide OAuth access tokens to both the Google Cloud SDK and gcloud CLI
+    GOOGLE_OAUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
+    CLOUDSDK_AUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
+```
+
+Note that both `GOOGLE_CLOUD_PROJECT` (numeric project ID) and `CLOUDSDK_CORE_PROJECT` (project name) are set because the Google Cloud SDK and gcloud CLI have different requirements for project identification.
+
+This configuration enables:
+- **Pulumi IaC**: The `pulumiConfig` section sets the GCP project for Pulumi's Google Cloud provider.
+- **gcloud CLI**: The `environmentVariables` section configures authentication for the `gcloud` command-line tool.
 
 ## Configuring OIDC
 
