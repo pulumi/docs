@@ -51,15 +51,9 @@ Dark mode allows you to opt into a theme that uses lighter text and graphics on 
 
 ## How to enable dark mode
 
-You can update your theme from your Account Settings at any time.
+You can update your theme from the utility bar at any time.
 
-Select your profile image in the top-right corner of the Pulumi Cloud UI and navigate to **Account Settings**. In the **Preferences** section, choose the theme you want to use:
-
-- Light mode
-- Dark mode
-- System default
-
-!["Screenshot of Account Settings preferences"](preferences.png)
+!["Screenshot of dark mode toggle in utility bar"](darktoggle.png)
 
 ## Try out dark mode today
 
