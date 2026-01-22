@@ -37,19 +37,6 @@ The following pre-built policy packs are available out of the box in Pulumi Clou
 | **Pulumi Best Practices** | [AWS](/docs/reference/pre-built-policy-packs/pulumi-best-practices/aws/), [Azure](/docs/reference/pre-built-policy-packs/pulumi-best-practices/azure/), [Google Cloud](/docs/reference/pre-built-policy-packs/pulumi-best-practices/google-cloud/) | Offers a foundational set of recommended governance and security controls, serving as a strong starting point for organizations seeking comprehensive security coverage. |
 | **AWS Organizations Tag Policies** | [AWS and AWS-Native](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) | Integrates with AWS Organizations Tag Policies to validate that infrastructure as code resources have required tags before deployment. [Learn more](/docs/insights/policy/integrations/aws-organizations-tag-policies/). |
 
-### Enabling Pulumi policy packs for your organization
-
-Pulumi policy packs can be enabled at the **organization level**, allowing you to enforce compliance and governance standards across all projects and stacks within your organization.
-
-1. From within your organization, navigate to the **Policies** tab
-2. Under Policy Packs, select the **Available** tab
-3. Select the packs to apply to your organization, and select **Add to organization**
-4. From the Organizations tab, apply the policies to a Policy Group to enforce compliance controls
-
-{{< video title="Adding policy packs to organization" src="/docs/insights/assets/Adding policy-packs to organization.mp4" autoplay="true" loop="true" >}}
-
-Enabling Pulumi policy packs ensures consistent governance, simplifies compliance management, and reduces the risk of misconfigured resources across your entire organization.
-
 ### A foundation for your governance strategy
 
 Our pre-built packs provide a strong foundation for cloud governance by covering common controls for major frameworks. However, every organization has unique requirements.
