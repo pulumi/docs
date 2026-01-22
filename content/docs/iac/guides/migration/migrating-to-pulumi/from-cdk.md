@@ -26,7 +26,7 @@ If your team has already provisioned infrastructure using AWS CDK, and you'd lik
 
 For most teams, Neo provides the fastest and safest migration path from CDK to Pulumi. Neo automates the entire migration process: converting your CDK code, importing existing CloudFormation resources, and verifying zero changes, all without downtime. This approach eliminates manual work and migration risks while preserving your existing infrastructure exactly as it is.
 
-To migrate your CDK application with Neo, see [Migrating existing AWS CDK applications to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/migrating-existing-cdk-app/) or read about the [technical details of Neo's CDK migration capabilities](/blog/neo-cdk-migration/).
+To migrate your CDK application with Neo, see [Migrating existing AWS CDK applications to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/migrating-existing-cdk-app/) or read about the [technical details of Neo's CDK migration capabilities](/blog/neo-migration/).
 
 ### Alternative migration paths
 
