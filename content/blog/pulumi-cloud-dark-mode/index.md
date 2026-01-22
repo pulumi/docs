@@ -27,7 +27,7 @@ For a long time, one request has consistently come up from the Pulumi community:
 
 ## Light mode and dark mode
 
-Pulumi Cloud supports light mode, dark mode, and a system default setting that follows your operating system preferences. You can switch themes at any time from your account settings.
+Pulumi Cloud supports light mode and dark mode. You can switch themes at any time from the utility bar.
 
 ### Below: Pulumi Cloud dashboard in light mode and dark mode
 
@@ -47,7 +47,7 @@ This update is enabled by recent work from our User Experience team to introduce
   <img src="resources.png" alt="Screenshot of Pulumi Cloud Resources page in dark mode" class="w-full md:w-1/2" />
 </div>
 
-Dark mode allows you to opt into a theme that uses lighter text and graphics on a darker background.  You can also choose to keep the current theme, now known as light mode, or follow your system preferences.
+Dark mode allows you to opt into a theme that uses lighter text and graphics on a darker background.  You can also choose to keep the current theme, now known as light mode.
 
 ## How to enable dark mode
 
