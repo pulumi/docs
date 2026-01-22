@@ -131,6 +131,17 @@ Create your first policy pack:
     >     virtualenv: .venv
     > ```
 
+    > **Using .gitignore to manage policy pack size**: Create a `.gitignore` file alongside `PulumiPolicy.yaml` to exclude unnecessary files from the published policy pack archive (`.tgz`). Add patterns to ignore Python bytecode files, virtual environments, and other development artifacts:
+    >
+    > ```
+    > *.pyc
+    > __pycache__/
+    > venv/
+    > .venv/
+    > ```
+    >
+    > This keeps your published policy pack size small and ensures only the necessary policy code is distributed.
+
 3. Replace the generated policy in `__main__.py` with this example, which demonstrates a clearer pattern for organizational policy enforcement:
 
     Each policy must have:
