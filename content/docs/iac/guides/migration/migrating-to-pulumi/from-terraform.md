@@ -151,7 +151,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
    A clean preview with no changes indicates a successful migration. Some minor diffs might be OK.
 
 1. **Run pulumi up**
-   
+
    Once you are satisfied with the migration, run `pulumi up` to finalize the state translation. The migration tool produces an intermediate state file that requires one `pulumi up` run to complete.
 
 ## Referencing Terraform State
