@@ -106,7 +106,6 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make serve-static` runs a local HTTP server that serves the contents of `./public`
 * `make test` tests all of the programs in `./static/programs` (see `./scripts/programs/test.sh` for options)
 * `make generate` builds the TypeScript, Python, and Pulumi CLI documentation
-* `make new-blog-post` scaffolds a new, bare-bones blog post with placeholder content
 * `make new-tutorial` scaffolds a new single-page tutorial
 * `make new-tutorial-module` scaffolds a new multi-page tutorial
 * `make new-tutorial-topic` scaffolds a new tutorial topic and adds it to an existing multi-page tutorial
@@ -121,6 +120,18 @@ make ensure    # Install or update dependencies.
 make serve     # Run the development server locally on http://localhost:1313.
 make lint      # Identify any Markdown or code-formatting issues so you can fix them.
 ```
+
+### Claude Commands
+
+If you have [Claude Code](https://claude.com/claude-code) installed, you can use these slash commands to streamline your workflow:
+
+* `/new-blog-post` creates a new blog post with automatic author detection and onboarding
+* `/docs-review` reviews documentation changes for style, accuracy, and best practices (works on PRs, branches, or open files)
+* `/glow-up` provides focused review and improvement of a single documentation file and any included images
+* `/add-borders` adds 1px grey borders to PNG images for better visual clarity
+* `/fix-issue` analyzes a documentation issue and creates an implementation plan
+
+These commands provide intelligent assistance beyond what make targets can offer, including context awareness, interactive prompts, and automatic configuration.
 
 ## Generating SDK and CLI documentation
 
