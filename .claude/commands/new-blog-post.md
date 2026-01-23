@@ -2,7 +2,7 @@
 description: Create a new blog post with proper structure, frontmatter, and automatic author onboarding.
 ---
 
-# New Blog Post Command
+# /new-blog-post Command
 
 This command helps create a new blog post with proper structure, frontmatter, and author onboarding if needed.
 
@@ -31,7 +31,7 @@ When this command is invoked, you should:
 **Blog Post Details:**
 
 - **Title**: The blog post title (will be Title Case in frontmatter)
-- **Author ID**: The author's ID (e.g., "jane-doe"). Pre-populate with the suggested author ID from git config if detected.
+- **Author ID**: The author's ID (e.g., "jane-doe"). Prepopulate with the suggested author ID from git config if detected.
 - **Summary**: Suggest a concise, one-sentence meta description based on the post title (50-160 characters, optimized for SEO and social media)
 - **Tags**: Suggest 1-3 relevant tags based on the post title and similar existing blog posts. Common tags include: features, product-launches, pulumi-cloud, aws, azure, kubernetes, tutorials, announcements
 - **Date**: Publication date (default to today). Future dates are supported - the post will be merged to master but won't appear on the live site until after this date.
@@ -40,7 +40,7 @@ When this command is invoked, you should:
 
 If the author file doesn't exist, also gather:
 
-- **Full name**: Pre-populate with git user.name if available
+- **Full name**: Prepopulate with git user.name if available
 - **Title**: Job title (e.g., "Senior Software Engineer")
 - **GitHub username**: Try to extract from git config or recent commits
 - **LinkedIn username**: LinkedIn handle (without linkedin.com/in/)
@@ -130,7 +130,7 @@ After creating the files, tell the user:
    - If existing author profiles were used, confirm which ones were found and used
    - If information was auto-detected, remind user to review it for accuracy
 3. **Next steps**:
-   - Replace the placeholder `meta.png` with your own image (recommended size: 1200x630px, optimal for social media previews)
+   - Replace the placeholder `meta.png` with your own image (recommended size: 1200×630 pixels, optimal for social media previews)
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
    - **Optional but recommended**: Run `/add-borders` on the blog post to add 1px grey borders to PNG images for better visual presentation

@@ -87,7 +87,7 @@ For best results, we suggest the following specs for the `meta_image`, largely b
 
 | Aspect Ratio | Recommended Size | Format | Background               |
 | ------------ | ---------------- | ------ | ------------------------ |
-| 2:1          | 1200×628         | PNG    | Opaque (No Transparency) |
+| 2:1          | 1200×630         | PNG    | Opaque (No Transparency) |
 
 Remember to replace the `meta_image` placeholder (or remove the property altogether and delete the placeholder `meta.png` file) before submitting your post.
 
@@ -192,7 +192,7 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
 
    This will prompt you for a "slug" (a URL-friendly path) for your post and create a minimal post that you can browse to at http://localhost:1313/blog/. You'll find the new post's source file at `content/blog/[your-slug]/_index.md` containing the set of [Hugo front matter](https://gohugo.io/content-management/front-matter/) properties you'll need to get started:
 
-   ```
+   ```yaml
    ---
    title: "My New Post"
    date: 2019-07-17T14:26:50-07:00
@@ -212,7 +212,7 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
 
 The `title` will populate the `<title>` tag of the page, the `<h1>`, and the display value if it is linked to internally. This field has a strict 60 character limit because of SEO related limitations. If you would like to have a longer display title (i.e. the `<h1>` tag) then you will need to specify it by adding `allow_long_title: True` to the front matter. If you would like to display different text on internal links than what the `title` value is, you can also specify a `linktitle` value. Both the `allow_long_title` and `linktitle` values can be of any length. Below is an example of this:
 
-```
+```yaml
 ---
 title: This a Page Title
 allow_long_title: true
