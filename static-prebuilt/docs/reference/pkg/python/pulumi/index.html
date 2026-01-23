@@ -284,6 +284,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.input_type"><code class="docutils literal notranslate"><span class="pre">input_type()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.output_type"><code class="docutils literal notranslate"><span class="pre">output_type()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.property"><code class="docutils literal notranslate"><span class="pre">property()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pulumi.require_pulumi_version"><code class="docutils literal notranslate"><span class="pre">require_pulumi_version()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.set"><code class="docutils literal notranslate"><span class="pre">set()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.type_token"><code class="docutils literal notranslate"><span class="pre">type_token()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.warn"><code class="docutils literal notranslate"><span class="pre">warn()</span></code></a></li>
@@ -609,6 +610,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.register_resource_transform"><code class="docutils literal notranslate"><span class="pre">register_resource_transform()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.register_stack_transform"><code class="docutils literal notranslate"><span class="pre">register_stack_transform()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.register_stack_transformation"><code class="docutils literal notranslate"><span class="pre">register_stack_transformation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.require_pulumi_version"><code class="docutils literal notranslate"><span class="pre">require_pulumi_version()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.reset_options"><code class="docutils literal notranslate"><span class="pre">reset_options()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.run_in_stack"><code class="docutils literal notranslate"><span class="pre">run_in_stack()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.runtime.set_all_config"><code class="docutils literal notranslate"><span class="pre">set_all_config()</span></code></a></li>
@@ -2757,6 +2759,22 @@ representing the outputs.</p>
 <span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default:</span> <span class="pre">~typing.Any</span> <span class="pre">=</span> <span class="pre">&lt;pulumi._types._MISSING_TYPE</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#pulumi.property" title="Permalink to this definition"></a></dt>
 <dd><p>Return an object to identify Pulumi properties.</p>
 <p>name is the Pulumi property name.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pulumi.require_pulumi_version">
+<span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">require_pulumi_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.require_pulumi_version" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if the engine we are connected to is compatible with the passed in version range. If the version is not
+compatible with the specified range, an exception is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rg</strong> (<em>str</em>) – The range to check. The supported syntax for the range is that of
+<a class="reference external" href="https://pkg.go.dev/github.com/blang/semver#ParseRange">https://pkg.go.dev/github.com/blang/semver#ParseRange</a>. For example “&gt;=3.0.0”, or “!3.1.2”. Ranges can be
+AND-ed together by concatenating with spaces “&gt;=3.5.0 !3.7.7”, meaning greater-or-equal to 3.5.0 and not
+exactly 3.7.7. Ranges can be OR-ed with the <cite>||</cite> operator: “&lt;3.4.0 || &gt;3.8.0”, meaning less-than 3.4.0 or
+greater-than 3.8.0.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -5972,6 +5990,22 @@ for the argument <cite>preview</cite>.</p>
 <dt class="sig sig-object py" id="pulumi.runtime.register_stack_transformation">
 <span class="sig-prename descclassname"><span class="pre">pulumi.runtime.</span></span><span class="sig-name descname"><span class="pre">register_stack_transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pulumi.ResourceTransformationArgs" title="pulumi.resource.ResourceTransformationArgs"><span class="pre">ResourceTransformationArgs</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pulumi.ResourceTransformationResult" title="pulumi.resource.ResourceTransformationResult"><span class="pre">ResourceTransformationResult</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.runtime.register_stack_transformation" title="Permalink to this definition"></a></dt>
 <dd><p>Add a transformation to all future resources constructed in this Pulumi stack.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pulumi.runtime.require_pulumi_version">
+<span class="sig-prename descclassname"><span class="pre">pulumi.runtime.</span></span><span class="sig-name descname"><span class="pre">require_pulumi_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.runtime.require_pulumi_version" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if the engine we are connected to is compatible with the passed in version range. If the version is not
+compatible with the specified range, an exception is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rg</strong> (<em>str</em>) – The range to check. The supported syntax for the range is that of
+<a class="reference external" href="https://pkg.go.dev/github.com/blang/semver#ParseRange">https://pkg.go.dev/github.com/blang/semver#ParseRange</a>. For example “&gt;=3.0.0”, or “!3.1.2”. Ranges can be
+AND-ed together by concatenating with spaces “&gt;=3.5.0 !3.7.7”, meaning greater-or-equal to 3.5.0 and not
+exactly 3.7.7. Ranges can be OR-ed with the <cite>||</cite> operator: “&lt;3.4.0 || &gt;3.8.0”, meaning less-than 3.4.0 or
+greater-than 3.8.0.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
