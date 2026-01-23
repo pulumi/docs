@@ -6,6 +6,8 @@ const sitemap = new Sitemapper();
 const path = require("path");
 const fs = require("fs");
 
+// Internal domain for separating internal vs external broken links
+const INTERNAL_DOMAIN = "pulumi.com";
 
 // Additional routes to check that are not included in the sitemap.
 const additionalRoutes = [
@@ -163,8 +165,8 @@ function onPage(error, pageURL, brokenLinks) {
 // Handles the BLC 'complete' event, which is raised at the end of a run.
 async function onComplete(brokenLinks) {
     // Split broken links into internal and external
-    const internalLinks = brokenLinks.filter(link => link.destination.includes("pulumi.com"));
-    const externalLinks = brokenLinks.filter(link => !link.destination.includes("pulumi.com"));
+    const internalLinks = brokenLinks.filter(link => link.destination.includes(INTERNAL_DOMAIN));
+    const externalLinks = brokenLinks.filter(link => !link.destination.includes(INTERNAL_DOMAIN));
 
     // Apply filters to each group
     const filteredInternal = excludeAcceptable(internalLinks);
@@ -383,6 +385,9 @@ function getDefaultExcludedKeywords() {
 
 // Filters out transient errors that needn't fail a link-check run.
 function excludeAcceptable(links) {
+    // HTTP status codes to filter out for external sites (bot protection, auth walls, timeouts)
+    const externalErrorReasons = ["HTTP_403", "HTTP_401", "HTTP_undefined"];
+
     return (links
         // Ignore GitHub and npm 429s (rate-limited). We should really be handling these more
         // intelligently, but we can come back to that in a follow up.
@@ -403,14 +408,8 @@ function excludeAcceptable(links) {
         // Ignore HTTP 503s.
         .filter(b => b.reason !== "HTTP_503")
 
-        // Filter 403s from external sites (almost always bot protection)
-        .filter(b => !(b.reason === "HTTP_403" && !b.destination.includes("pulumi.com")))
-
-        // Filter 401s from external sites (auth walls)
-        .filter(b => !(b.reason === "HTTP_401" && !b.destination.includes("pulumi.com")))
-
-        // Filter HTTP_undefined (connection timeouts/issues with external sites)
-        .filter(b => !(b.reason === "HTTP_undefined" && !b.destination.includes("pulumi.com")))
+        // Filter errors from external sites (bot protection, auth walls, connection issues)
+        .filter(b => !(externalErrorReasons.includes(b.reason) && !b.destination.includes(INTERNAL_DOMAIN)))
 
         // Ignore complaints about MIME types. BLC currently hard-codes an expectation of
         // type text/html, which causes it to fail on direct links to images, PDFs, and
