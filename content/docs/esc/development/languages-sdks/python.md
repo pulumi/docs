@@ -48,6 +48,8 @@ configuration = esc.Configuration(access_token=myAccessToken)
 client = esc.EscClient(configuration)
 ```
 
+Standard proxy environment variables are honored: `https_proxy`, `http_proxy`, and `no_proxy` (upper case accepted as well).
+
 ## Examples
 
 All of these examples expect a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environment variable to be set.
