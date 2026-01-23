@@ -9,6 +9,16 @@ const fs = require("fs");
 // Internal domain for separating internal vs external broken links
 const INTERNAL_DOMAIN = "pulumi.com";
 
+// Helper function to check if a URL is an internal Pulumi link
+function isInternalLink(url) {
+    try {
+        const urlObj = new URL(url);
+        return urlObj.hostname === INTERNAL_DOMAIN || urlObj.hostname.endsWith(`.${INTERNAL_DOMAIN}`);
+    } catch {
+        return false;
+    }
+}
+
 // Additional routes to check that are not included in the sitemap.
 const additionalRoutes = [
     "https://github.com/pulumi/pulumi",
@@ -165,8 +175,8 @@ function onPage(error, pageURL, brokenLinks) {
 // Handles the BLC 'complete' event, which is raised at the end of a run.
 async function onComplete(brokenLinks) {
     // Split broken links into internal and external
-    const internalLinks = brokenLinks.filter(link => link.destination.includes(INTERNAL_DOMAIN));
-    const externalLinks = brokenLinks.filter(link => !link.destination.includes(INTERNAL_DOMAIN));
+    const internalLinks = brokenLinks.filter(link => isInternalLink(link.destination));
+    const externalLinks = brokenLinks.filter(link => !isInternalLink(link.destination));
 
     // Apply filters to each group
     const filteredInternal = excludeAcceptable(internalLinks);
@@ -409,7 +419,7 @@ function excludeAcceptable(links) {
         .filter(b => b.reason !== "HTTP_503")
 
         // Filter errors from external sites (bot protection, auth walls, connection issues)
-        .filter(b => !(externalErrorReasons.includes(b.reason) && !b.destination.includes(INTERNAL_DOMAIN)))
+        .filter(b => !(externalErrorReasons.includes(b.reason) && !isInternalLink(b.destination)))
 
         // Ignore complaints about MIME types. BLC currently hard-codes an expectation of
         // type text/html, which causes it to fail on direct links to images, PDFs, and
