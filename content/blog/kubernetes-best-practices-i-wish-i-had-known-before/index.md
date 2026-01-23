@@ -123,7 +123,7 @@ In Kubernetes, networking can get complicated fast. Between Services, Ingress Co
 </div>
 
 {{% notes type="info" %}}
-ingress-nginx in retiring in March 2026.
+ingress-nginx is retiring in March 2026.
 
 Here is a guide on [How to Move to the Gateway API: post ingress-nginx Retirement](https://www.pulumi.com/blog/ingress-nginx-to-gateway-api-kgateway/).
 {{% /notes %}}
