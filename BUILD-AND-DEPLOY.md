@@ -65,7 +65,7 @@ make clean                # Remove build artifacts and dependencies
 
 **Required Tools:**
 
-- Node.js 22.x
+- Node.js 24.x
 - Hugo 0.154.5
 - Yarn 1.22.x (not strictly enforced in CI)
 - Go 1.25.x (for documentation generation)
@@ -207,9 +207,9 @@ code .
 **Install Required Tools:**
 
 ```bash
-# Node.js 22 (via nvm)
-nvm install 22
-nvm use 22
+# Node.js 24 (via nvm)
+nvm install 24
+nvm use 24
 
 # Yarn
 npm install -g yarn@1.22
@@ -481,7 +481,7 @@ Installs and verifies all required dependencies.
 **What it does:**
 
 1. Checks for required tools:
-   - Node.js 22.x
+   - Node.js 24.x
    - Hugo 0.154.5
    - Yarn 1.22.x
 
@@ -940,7 +940,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 1. **buildSite**
    - Checkout code
    - Fetch secrets from Pulumi ESC
-   - Setup: Node.js 22, Go 1.25, Hugo 0.154.5
+   - Setup: Node.js 24, Go 1.25, Hugo 0.154.5
    - Configure AWS credentials via OIDC (role: ContinuousDelivery, 2-hour session)
    - Install Pulumi CLI
    - Run `make ci_push`:
@@ -3533,7 +3533,7 @@ Complete reference of all build and deployment scripts.
 
 | Dependency | Version | Purpose |
 |------------|---------|---------|
-| **Node.js** | 22.x | Runtime for build tools |
+| **Node.js** | 24.x | Runtime for build tools |
 | **Hugo** | 0.154.5 | Static site generator |
 | **Yarn** | 1.22.x | Package manager |
 | **Go** | 1.25+ | Doc generation |

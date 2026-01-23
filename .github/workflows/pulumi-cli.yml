@@ -137,7 +137,7 @@ jobs:
         pythonversion:
           - "3.13"
         nodeversion:
-          - "22.x"
+          - "24.x"
   notify:
     if: failure()
     name: Send slack notification

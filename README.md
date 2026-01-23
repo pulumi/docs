@@ -51,7 +51,7 @@ We build the Pulumi website with Hugo, manage our dependencies with Node.js and 
 
 * [Hugo](https://gohugo.io/installation/) (>= 0.154.5)
   * Hugo 0.154.5 is highly recommended. This is the version we use in our deployment pipelines.
-* [Node.js](https://nodejs.org/en/download/package-manager) (>= 22)
+* [Node.js](https://nodejs.org/en/download/package-manager) (>= 24)
 * [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
 
 Additionally, to build the SDK and CLI documentation, you'll also need:
