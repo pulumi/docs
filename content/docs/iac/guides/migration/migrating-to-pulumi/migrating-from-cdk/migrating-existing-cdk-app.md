@@ -411,6 +411,31 @@ Where possible, replace custom resources with native Pulumi resources instead. F
 * `aws-cloudfront/edge-function`: Use `aws.lambda.Function` with `region: "us-east-1"`
 * `aws-route53/cross-account-zone-delegation-handler`: Use a separate AWS provider with cross-account role assumption
 
+##### Handling assets and bundling
+
+CDK uses Assets and Bundling to handle deployment artifacts like Lambda code, Docker images, and static files. These are processed by the CDK CLI during synthesis and appear in the `cdk.out` directory alongside `*.assets.json` metadata files. CloudFormation templates contain hard-coded references to asset locations (S3 bucket/key or ECR repo/tag).
+
+**Migration strategies by asset type:**
+
+| Asset Type | Detection | Pulumi Migration |
+|------------|-----------|------------------|
+| Docker image | `dockerImages` in assets.json | Use `docker-build.Image` to build and push. Replace hard-coded ECR URI with image output. |
+| Static file | `files` without `executable`, no bundling in CDK source | Use `pulumi.FileArchive` or `pulumi.FileAsset` |
+| File with build command | `files` with `executable` field | Build command needs setup in Pulumi (see below) |
+| Bundled file | `files` without `executable`, but CDK source uses bundling | Bundling needs setup in Pulumi (see below) |
+
+**Handling bundled assets:**
+
+CDK constructs like `NodejsFunction`, `PythonFunction`, `GoFunction`, or resources using the `bundling` option run build steps during synthesis. These build steps need to be replicated in Pulumi for ongoing development—otherwise source changes would require manually re-running `cdk synth`.
+
+Options for handling bundling:
+
+1. **CI/CD pipeline (Recommended)**: Move the build step to your CI pipeline and reference the pre-built artifact in Pulumi. This provides the best caching, reproducibility, and deployment speed for production workloads.
+1. **Pulumi Command provider**: Use `command.local.Command` to run the build command during `pulumi up`. This keeps the build integrated with Pulumi but may affect deployment times.
+1. **Pre-build script**: Create a build script that runs before `pulumi up` and outputs to a known location. This is the simplest approach for development workflows.
+
+Each option has tradeoffs around caching, reproducibility, and deployment speed. For production workloads, the CI/CD pipeline approach is typically preferred.
+
 #### 2. Test converted code
 
 Before importing, verify the generated code works by deploying it to a temporary stack (e.g., `dev-test`).
