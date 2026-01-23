@@ -48,7 +48,7 @@ configuration = esc.Configuration(access_token=myAccessToken)
 client = esc.EscClient(configuration)
 ```
 
-Standard proxy environment variables are honored: `https_proxy`, `http_proxy`, and `no_proxy` (upper case accepted as well).
+The Python SDK honors standard proxy environment variables: `https_proxy`, `http_proxy`, and `no_proxy`. Both lowercase and uppercase variants are supported.
 
 ## Examples
 
