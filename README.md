@@ -49,8 +49,8 @@ See also:
 
 We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
 
-* [Hugo](https://gohugo.io/installation/) (>= 0.151.0)
-  * Hugo 0.151.0 is highly recommended. This is the version we use in our deployment pipelines.
+* [Hugo](https://gohugo.io/installation/) (>= 0.154.5)
+  * Hugo 0.154.5 is highly recommended. This is the version we use in our deployment pipelines.
 * [Node.js](https://nodejs.org/en/download/package-manager) (>= 22)
 * [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
 

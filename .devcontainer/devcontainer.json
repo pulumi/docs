@@ -12,7 +12,7 @@
 			"version": "1.25"
 		},
 		"ghcr.io/devcontainers/features/hugo:1": {
-			"version": "0.151.0"
+			"version": "0.154.5"
 		},
 		"ghcr.io/devcontainers/features/python:1": {
 			"installTools": true,
