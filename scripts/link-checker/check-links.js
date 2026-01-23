@@ -162,9 +162,17 @@ function onPage(error, pageURL, brokenLinks) {
 
 // Handles the BLC 'complete' event, which is raised at the end of a run.
 async function onComplete(brokenLinks) {
-    const filtered = excludeAcceptable(brokenLinks);
+    // Split broken links into internal and external
+    const internalLinks = brokenLinks.filter(link => link.destination.includes("pulumi.com"));
+    const externalLinks = brokenLinks.filter(link => !link.destination.includes("pulumi.com"));
 
-    if (filtered.length > 0) {
+    // Apply filters to each group
+    const filteredInternal = excludeAcceptable(internalLinks);
+    const filteredExternal = excludeAcceptable(externalLinks);
+
+    const totalFiltered = filteredInternal.length + filteredExternal.length;
+
+    if (totalFiltered > 0) {
 
         // If we failed and a retry count was provided, retry. Note that retry count !==
         // run count, so a retry count of 1 means run once, then retry once, which means a
@@ -176,13 +184,29 @@ async function onComplete(brokenLinks) {
             return;
         }
 
-        const list = filtered
-            .map(link => `:link: <${link.source}|${new URL(link.source).pathname}> → ${link.destination} (${link.reason})`)
-            .join("\n");
+        // Post internal broken links first (if any)
+        if (filteredInternal.length > 0) {
+            const internalList = filteredInternal
+                .map(link => `:link: <${link.source}|${new URL(link.source).pathname}> → ${link.destination} (${link.reason})`)
+                .join("\n");
 
-        // Post the results to Slack.
-        console.warn("Posting to slack: " + list);
-        await postToSlack("docs-ops", list);
+            const internalMessage = `:pulumipus-jedi: *Internal Broken Links (${filteredInternal.length} found)*\nThese are links within pulumi.com that need attention:\n\n${internalList}`;
+
+            console.warn("Posting internal broken links to Slack: " + internalList);
+            await postToSlack("docs-ops", internalMessage);
+        }
+
+        // Post external broken links second (if any)
+        if (filteredExternal.length > 0) {
+            const externalList = filteredExternal
+                .map(link => `:link: <${link.source}|${new URL(link.source).pathname}> → ${link.destination} (${link.reason})`)
+                .join("\n");
+
+            const externalMessage = `:pulumipus-sith: *External Broken Links (${filteredExternal.length} found)*\nThese are links to third-party sites (may be false positives due to bot protection):\n\n${externalList}`;
+
+            console.warn("Posting external broken links to Slack: " + externalList);
+            await postToSlack("docs-ops", externalMessage);
+        }
     }
 }
 
@@ -318,6 +342,42 @@ function getDefaultExcludedKeywords() {
         "https://www.downelink.com/a-deep-dive-into-openais-text-embedding-ada-002-unlocking-the-power-of-semantic-understanding/",
         "https://github.com/serverless/components",
         "https://docs.spot.io/spot-connect/integrations/pulumi",
+        // News/Media sites with aggressive bot protection
+        "https://devops.com/",
+        "https://www.bizjournals.com/",
+        "https://redmonk.com/",
+        "https://www.eweek.com/",
+        "https://www.axios.com/",
+        "https://www.mordorintelligence.com/",
+        "https://betterprogramming.pub/",
+        "https://garymarcus.substack.com/",
+        "https://www.coingecko.com/",
+        "https://news.ycombinator.com/",
+        "https://www.gao.gov/",
+        "https://apps.dtic.mil/",
+        "https://queue.acm.org/",
+        // NPM (block all, not just 429s)
+        "https://www.npmjs.com/",
+        "https://npmjs.com/",
+        // Developer tools/platforms with bot protection
+        "https://dev.mysql.com/",
+        "https://circleci.com/docs/",
+        "https://docs.gitlab.com/",
+        "https://gitlab.com/help/",
+        // Conference/event sites
+        "https://sched.com",
+        "https://static.sched.com/",
+        "colocatedevents",
+        "kccnc",
+        "wasmcon",
+        "gitopscon",
+        // Archive/rate-limited Pulumi properties
+        "https://archive.pulumi.com/",
+        // Sites with known connection issues
+        "https://trivy.dev/",
+        "https://elastisys.com/",
+        "https://cloudnativedenmark.dk/",
+        "https://stackconf.eu/",
     ];
 }
 
@@ -342,6 +402,15 @@ function excludeAcceptable(links) {
 
         // Ignore HTTP 503s.
         .filter(b => b.reason !== "HTTP_503")
+
+        // Filter 403s from external sites (almost always bot protection)
+        .filter(b => !(b.reason === "HTTP_403" && !b.destination.includes("pulumi.com")))
+
+        // Filter 401s from external sites (auth walls)
+        .filter(b => !(b.reason === "HTTP_401" && !b.destination.includes("pulumi.com")))
+
+        // Filter HTTP_undefined (connection timeouts/issues with external sites)
+        .filter(b => !(b.reason === "HTTP_undefined" && !b.destination.includes("pulumi.com")))
 
         // Ignore complaints about MIME types. BLC currently hard-codes an expectation of
         // type text/html, which causes it to fail on direct links to images, PDFs, and
