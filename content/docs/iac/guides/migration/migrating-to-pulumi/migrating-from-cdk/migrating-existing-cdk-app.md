@@ -506,8 +506,8 @@ In summary, the most reliable way to migrate is:
 ### Option 2: Semi-automated migration (When Neo doesn't fit)
 
 1. **Plan**: Decide on your target structure and strategy.
-2. **Convert**: Use `cdk2pulumi` to get a working baseline of code.
-3. **Verify Code**: Deploy to a disposable test stack to prove compilation and logic.
-4. **Import**: Use `cdk-importer` to bring production state into Pulumi.
-5. **Refactor**: Clean up the code into components and proper modules, using aliases to migrate state.
-6. **Retire CloudFormation**: Only delete the old CFN stacks after Pulumi shows a clean preview and you have successfully deployed an update.
+1. **Convert**: Use `cdk2pulumi` to get a working baseline of code.
+1. **Verify Code**: Deploy to a disposable test stack to prove compilation and logic.
+1. **Import**: Use `cdk-importer` to bring production state into Pulumi.
+1. **Refactor**: Clean up the code into components and proper modules, using aliases to migrate state.
+1. **Retire CloudFormation**: Only delete the old CFN stacks after Pulumi shows a clean preview and you have successfully deployed an update.
