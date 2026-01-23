@@ -131,6 +131,17 @@ Create your first policy pack:
     >     virtualenv: .venv
     > ```
 
+    > **Using .gitignore to manage policy pack size**: Create a `.gitignore` file alongside `PulumiPolicy.yaml` to exclude unnecessary files from the published policy pack archive (`.tgz`). Add patterns to ignore Python bytecode files, virtual environments, and other development artifacts:
+    >
+    > ```
+    > *.pyc
+    > __pycache__/
+    > venv/
+    > .venv/
+    > ```
+    >
+    > This keeps your published policy pack size small and ensures only the necessary policy code is distributed.
+
 3. Replace the generated policy in `__main__.py` with this example, which demonstrates a clearer pattern for organizational policy enforcement:
 
     Each policy must have:
@@ -250,7 +261,7 @@ Most policies are resource validation policies. Stack validation policies are us
 
 ## Writing policies for dynamic providers
 
-[Dynamic providers](/docs/iac/concepts/resources/dynamic-providers/) allow you to create custom resource types directly in your Pulumi programs. When writing policies for dynamic providers, you need to account for a key constraint: **all dynamic resources share the same resource type** (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python).
+[Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) allow you to create custom resource types directly in your Pulumi programs. When writing policies for dynamic providers, you need to account for a key constraint: **all dynamic resources share the same resource type** (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python).
 
 Since you cannot rely on the resource type alone to identify which dynamic provider a resource uses, you must inspect the resource's properties to differentiate between different dynamic provider implementations.
 

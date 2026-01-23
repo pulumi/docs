@@ -21,7 +21,7 @@ This guide uses the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending
 
 ## When to use a provider
 
-A Pulumi Provider allows you to define new resource types, enabling integration with virtually any service or tool. Pulumi providers are ideal when you need to manage resources that are not yet supported by existing Pulumi providers or when you require custom behavior for managing external systems or APIs. Providers are a powerful extension point, but before building a full provider consider if your use case can be covered by [building a component](/docs/iac/using-pulumi/extending-pulumi/build-a-component/) or using [dynamic provider functions](/docs/iac/concepts/resources/dynamic-providers/).
+A Pulumi Provider allows you to define new resource types, enabling integration with virtually any service or tool. Pulumi providers are ideal when you need to manage resources that are not yet supported by existing Pulumi providers or when you require custom behavior for managing external systems or APIs. Providers are a powerful extension point, but before building a full provider consider if your use case can be covered by [building a component](/docs/iac/using-pulumi/extending-pulumi/build-a-component/) or using [dynamic provider functions](/docs/iac/concepts/providers/dynamic-providers/).
 
 ## What’s needed to implement a provider?
 
@@ -710,7 +710,7 @@ func (File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *FileS
 
 ### Multi-language support
 
-In our above example, we created a provider in Go and used it in YAML. This "just works" by default. However, if you would like to use your provider from the other Pulumi authoring langauges (e.g. TypeScript, Python, Java, Go, C#) it will be necessary to generate SDKs for each target language.
+In our above example, we created a provider in Go and used it in YAML. This "just works" by default. However, if you would like to use your provider from the other Pulumi authoring languages (e.g. TypeScript, Python, Java, Go, C#) it will be necessary to generate SDKs for each target language.
 
 That is a very streamlined process with the Pulumi Provider SDK. The following command will generate language SDKs for all supported languages:
 

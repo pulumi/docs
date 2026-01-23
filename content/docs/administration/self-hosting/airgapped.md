@@ -30,7 +30,7 @@ In this guide, we will explore how to deploy Pulumi Self-Hosted in an air-gapped
 Pulumi Cloud is a secure service with compliance built in. The default mode is to use Pulumi as a multi-tenanted software-as-a-service (SaaS) over the internet. Pulumi also offers a Self-Hosted edition for those who want more control over their configuration, often for advanced security and compliance reasons. Air-gapped Self-Host builds upon this even further to use Pulumi in the most rigorous and secure configuration possible.
 
 {{% notes type="info" %}}
-For most information about Pulumi Cloud's security and compliance posture, [download our security whitepaper](/security/pulumi-cloud-security-whitepaper.pdf).
+For most information about Pulumi Cloud's security and compliance posture, [read our security whitepaper](/security/pulumi-cloud-security-whitepaper).
 {{% /notes %}}
 
 Air-gapped environments are completely isolated from the public internet, for scenarios with heightened data security and compliance. Common air-gapped scenarios include:
@@ -101,7 +101,7 @@ Pulumi Self-Hosted can be installed using Kubernetes, Docker, or virtual machine
 4. Configure Authentication and Access Control
     * Integrate with your organization's internal identity provider (OIDC, LDAP, SAML).
     * Define role-based access controls (RBAC) to ensure proper permissions.
-    * For more detailed organization configuration options, refer to [this onboarding guide](/docs/deployments/get-started/onboarding-guide/).
+    * For more detailed organization configuration options, refer to [this onboarding guide](/docs/administration/onboarding-guide/).
 
 ### Step 2: Configure the Pulumi CLI and SDKs
 

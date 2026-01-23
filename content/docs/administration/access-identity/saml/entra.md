@@ -102,9 +102,13 @@ download the SAML application's configuration data and then pass that to Pulumi.
 1. Sign into the Pulumi Cloud and navigate to your SAML organization. Navigate to the
   **Settings** tab and then select **Access Management**.
 
-1. Select the **Change Requirements** button and then **SAML SSO**.
+1. Select the **Other** tab.
 
-1. Open up the XML document you downloaded from the Entra ID portal, and paste its full contents into the text box.
+1. In the **Membership Requirements** section, select the **Change requirements** button.
+
+1. Select **SAML SSO** and then **Next**.
+
+1. Open up the XML document you downloaded from the Entra ID portal, and paste its full contents into the text area.
 
     ![Provide the XML IDP descriptor](/images/docs/reference/service/saml-aad/pulumi-saml-settings-page.png)
 

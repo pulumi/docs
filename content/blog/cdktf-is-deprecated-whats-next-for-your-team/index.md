@@ -131,7 +131,7 @@ Refactoring can get a bit more complicated when custom logic and higher-level ab
 
 The best way to get a feel for how this works, though, is to try it yourself.
 
-The [**pulumi/cdktf-to-pulumi-example**](https://github.com/pulumi/cdktf-to-pulumi-example) repository on GitHub contains a CDKTF project with multiple stacks written in TypeScript, along with a guide that walks you through the process of migrating that project to Pulumi. The guide covers everything we've discussed here so far, including:
+The [pulumi/cdktf-to-pulumi-example](https://github.com/pulumi/cdktf-to-pulumi-example) repository on GitHub contains a CDKTF project with multiple stacks written in TypeScript, along with a guide that walks you through the process of migrating that project to Pulumi. The guide covers everything we've discussed here so far, including:
 
 * Converting the CDKTF project into a new Pulumi project
 * Importing its actively running resources into Pulumi stacks
@@ -139,6 +139,8 @@ The [**pulumi/cdktf-to-pulumi-example**](https://github.com/pulumi/cdktf-to-pulu
 * Performing an initial deployment with Pulumi to complete the migration process
 
 The walkthrough takes only a few minutes to complete, and it's a great way to stand up an example of your own to get more familiar with Pulumi.
+
+{{< github-card repo="pulumi/cdktf-to-pulumi-example" >}}
 
 ## What's next?
 

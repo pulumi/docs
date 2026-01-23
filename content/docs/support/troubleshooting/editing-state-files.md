@@ -71,6 +71,16 @@ If you want to undo the changes you make in subsequent steps, you can restore yo
 pulumi stack import --file pulumi-state-backup.json
 ```
 
+{{% notes type="info" %}}
+**Pulumi Cloud users**: You can download the state file for any stack update directly from the Pulumi Cloud console. This can be useful if you need to access a specific point-in-time state file.
+
+To download a state file:
+
+1. From the Stack Detail page, navigate to the update you want. The latest update is shown on the **Overview** tab, and all updates are available on the **Updates** tab.
+1. Click **Details** on the update to open the Stack Update Detail page.
+1. Click **Download** to download the state file as it existed when that update completed.
+{{% /notes %}}
+
 ### 2. Try targeted fixes with the `pulumi state` command
 
 The [`pulumi state`](/docs/iac/cli/commands/pulumi_state) command allows you to make targeted, surgical changes to your state file without the risk of exposing your entire state file in an editor for hand-editing, which can cause additional errors.

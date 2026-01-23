@@ -68,6 +68,8 @@ With Pulumi IaC, you can:
 - Advanced automation capabilities
 - Enhanced security with built-in secret encryption
 - Full IDE support with code completion and type checking
+- Automatic resource naming to prevent naming conflicts across stacks
+- Zero-downtime replacements using create-before-delete semantics
 
 ## What is Pulumi?
 
@@ -205,6 +207,30 @@ Pulumi IaC also has deep support for cloud native technologies like Kubernetes, 
 ### Declarative Infrastructure as Code {#declarative}
 
 Declarative Infrastructure as Code (IaC) defines the desired state of infrastructure without specifying the exact steps to achieve it. It focuses on what the infrastructure should look like, rather than how to get there. Key aspects include a focus on the end state, idempotency, simplified maintenance, reduced configuration drift, and abstraction of complexity. Benefits include consistency, repeatability, efficiency, version control, and collaboration. Both Terraform and Pulumi IaC use a declarative model for managing infrastructure.
+
+### Resource Management and Deployment Workflow {#resource-management}
+
+Pulumi provides intelligent resource management features that minimize downtime and prevent common infrastructure pitfalls.
+
+**Automatic Resource Naming**
+
+Pulumi automatically appends a random suffix to most resource names (for example, `my-bucket` becomes `my-bucket-a1b2c3d`). This auto-naming behavior serves two critical purposes:
+
+1. **Collision prevention across stacks**: Multiple stacks of the same project can coexist without resource name conflicts, making it easy to create separate development, staging, and production environments or to deploy the same infrastructure across multiple regions.
+
+1. **Zero-downtime replacements**: Auto-naming enables Pulumi to create replacement resources before deleting old ones, ensuring continuous availability during updates.
+
+While Terraform requires you to manually ensure unique names across workspaces (often using interpolation with workspace names or random suffixes), Pulumi handles this automatically. You can override auto-naming when specific names are required, but the default behavior optimizes for reliability and multi-stack workflows.
+
+For more details, see [Resource Names](/docs/iac/concepts/resources/names/).
+
+**Create-before-delete replacement strategy**
+
+When a resource needs to be replaced rather than updated in place, Pulumi creates the new resource first, updates any references to point to the new resource, and only then deletes the old resource. This create-before-delete approach minimizes downtime and reduces the risk of service interruption during infrastructure updates.
+
+Terraform typically uses a delete-before-create strategy, which can cause downtime during replacements. While Terraform offers a `create_before_destroy` lifecycle setting, it must be explicitly configured on each resource and comes with limitations. Pulumi makes create-before-delete the default behavior, ensuring zero-downtime deployments without additional configuration.
+
+In cases where create-before-delete is not desired, you can explicitly opt into delete-before-replace semantics using the [`deleteBeforeReplace` resource option](/docs/iac/concepts/resources/options/deletebeforereplace/).
 
 ### Cloud Native Support {#cloud-native}
 

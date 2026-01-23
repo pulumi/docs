@@ -35,7 +35,7 @@ When you sign in, a personal organization is automatically created. You can crea
 ### For teams
 
 {{% notes type="info" %}}
-Setting up Pulumi Cloud for your team? The **[Onboarding Guide](./onboarding-guide/)** provides comprehensive guidance on:
+Setting up Pulumi Cloud for your team? The **[Onboarding Guide](/docs/administration/onboarding-guide/)** provides comprehensive guidance on:
 
 - Choosing your deployment model and subscription tier
 - Configuring security, testing strategies, and code reusability
@@ -85,4 +85,4 @@ To collaborate with other developers or use advanced features like [SAML SSO](/d
 
 - **Explore features**: Browse the sections in the left navigation to learn about specific Pulumi Cloud capabilities
 - **See it in action**: Try the [Get Started tutorial](/docs/iac/get-started/) to deploy your first infrastructure
-- **Review security**: Read the [Pulumi Cloud security whitepaper](/security/pulumi-cloud-security-whitepaper.pdf) for details on our SOC 2 Type II certified platform
+- **Review security**: Read the [Pulumi Cloud security whitepaper](/security/pulumi-cloud-security-whitepaper) for details on our SOC 2 Type II certified platform

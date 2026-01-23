@@ -76,11 +76,11 @@ const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const aiAppDomain = aiAppStack.requireOutput('aiAppDistributionDomain');
 const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
 
-// Reference to the Airflow stack for data warehouse access (only if enabled)
-let airflowTaskRoleArn: pulumi.Output<any> | undefined;
+// Reference to the Astro stack for data warehouse access (only if enabled)
+let astroAwsRoleArn: pulumi.Output<any> | undefined;
 if (config.enableDataWarehouseAccess) {
-    const airflowStack = new pulumi.StackReference('pulumi/dwh-workflows-orchestrate-airflow/production');
-    airflowTaskRoleArn = airflowStack.getOutput('airflowTaskRoleArn');
+    const astroStack = new pulumi.StackReference('pulumi/dwh-workflows-astro/production');
+    astroAwsRoleArn = astroStack.getOutput('astroAwsRoleArn');
 }
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
@@ -255,9 +255,9 @@ const logsBucketOwnershipControls = new aws.s3.BucketOwnershipControls("logs-buc
 // https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-infrastructure-V2-S3.html
 const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
     bucket: websiteLogsBucket.id,
-    policy: config.enableDataWarehouseAccess && airflowTaskRoleArn
-        ? pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity(), airflowTaskRoleArn])
-            .apply(([bucketArn, caller, airflowRole]) => {
+    policy: config.enableDataWarehouseAccess && astroAwsRoleArn
+        ? pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity(), astroAwsRoleArn])
+            .apply(([bucketArn, caller, astroRole]) => {
                 const statements: any[] = [
                     {
                         Sid: "AWSLogDeliveryWriteObjects",
@@ -294,12 +294,12 @@ const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
                             }
                         }
                     },
-                    // Data warehouse (Airflow) read access
+                    // Data warehouse (Astro) read access
                     {
                         Sid: "DataWarehouseReadObjects",
                         Effect: "Allow",
                         Principal: {
-                            AWS: airflowRole
+                            AWS: astroRole
                         },
                         Action: ["s3:GetObject", "s3:GetObjectVersion"],
                         Resource: `${bucketArn}/*`
@@ -308,7 +308,7 @@ const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
                         Sid: "DataWarehouseListBucket",
                         Effect: "Allow",
                         Principal: {
-                            AWS: airflowRole
+                            AWS: astroRole
                         },
                         Action: ["s3:ListBucket", "s3:GetBucketLocation"],
                         Resource: bucketArn
@@ -813,6 +813,16 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     customErrorResponses: [
         {
             errorCode: 404,
+            responseCode: 404,
+            errorCachingMinTtl: fiveMinutes,
+            responsePagePath: "/404.html",
+        },
+        // Map 403 Forbidden errors to 404 Not Found.
+        // S3 returns 403 when it can't determine if an object exists due to bucket policy
+        // that denies ListBucket permission. This provides a better user experience by
+        // translating HTTP 403s into proper 404s and showing the 404 error page.
+        {
+            errorCode: 403,
             responseCode: 404,
             errorCachingMinTtl: fiveMinutes,
             responsePagePath: "/404.html",

@@ -3,9 +3,10 @@ title: Select the right model and subscription
 meta_desc: Understanding your deployment options, subscription tiers, and support needs to help you choose the right approach for your organization.
 aliases:
   - /docs/pulumi-cloud/get-started/onboarding-guide/choose-subscription/
+  - /docs/deployments/get-started/onboarding-guide/choose-subscription/
 weight: 1
 menu:
-    deployments:
+    administration:
         name: Select the right model
         parent: pulumi-onboarding-guide
         identifier: select-a-model
@@ -52,7 +53,7 @@ Pulumi Cloud offers two deployment options, each designed for different organiza
 
 ### SaaS (Recommended for most organizations)
 
-Choose Pulumi Cloud SaaS if you want the simplest setup with enterprise-grade reliability built in. You get high availability, disaster recovery, and geo-replication out of the box, plus security and compliance features detailed in the [Pulumi Cloud Security Whitepaper](https://www.pulumi.com/security/pulumi-cloud-security-whitepaper.pdf). Simply sign up at [pulumi.com](http://pulumi.com) to get started.
+Choose Pulumi Cloud SaaS if you want the simplest setup with enterprise-grade reliability built in. You get high availability, disaster recovery, and geo-replication out of the box, plus security and compliance features detailed in the [Pulumi Cloud Security Whitepaper](https://www.pulumi.com/security/pulumi-cloud-security-whitepaper). Simply sign up at [pulumi.com](http://pulumi.com) to get started.
 
 ### Self-hosted (For regulated or air-gapped environments)
 
