@@ -7,7 +7,8 @@
         "start": "stencil build --dev --watch --serve --no-open",
         "test": "stencil test --spec --e2e",
         "test.watch": "stencil test --spec --e2e --watchAll",
-        "generate": "stencil generate"
+        "generate": "stencil generate",
+        "postinstall": "node scripts/patch-stencil-redux.js"
     },
     "dependencies": {
         "@stencil/core": "^4.41.2",
