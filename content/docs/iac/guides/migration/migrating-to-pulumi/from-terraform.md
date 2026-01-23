@@ -110,6 +110,8 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
    This generates:
    * `pulumi-state.json`: The translated Pulumi state file
    * `required-plugins.json`: A list of required Pulumi plugins and versions
+  
+   Note that this step must be repeated for each Terraform stack.
 
 1. **Install required plugins and import state**:
 
@@ -138,7 +140,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
    * The generated `pulumi-state.json` for context on resource names and structure
    * Ask the agent to iterate on the code changes until `pulumi preview --diff` generates as few diffs as possible. If it fails, prompt it to try again.
 
-2. **Verify with pulumi preview**:
+1. **Verify with pulumi preview**:
 
    Run `pulumi preview` to confirm the translated code matches your migrated state with no unexpected changes:
 
@@ -148,7 +150,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
    A clean preview with no changes indicates a successful migration. Some minor diffs might be OK.
 
-3. **Run pulumi up**
+1. **Run pulumi up**
    
    Once you are satisfied with the migration, run `pulumi up` to finalize the state translation. The migration tool produces an intermediate state file that requires one `pulumi up` run to complete.
 
