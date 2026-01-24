@@ -51,7 +51,7 @@ Do not substitute other tools or commands.
 
 - **Markdown**:
   - Standard paragraph formatting.  
-  - Must always end with a newline.  
+  - Must always end with a newline. This *only* applies to Markdown files.
 - **Headings**:  
   - H1 = Title Case  
   - H2+ = Sentence case
@@ -76,11 +76,13 @@ Do not substitute other tools or commands.
 
 - **Preserve file history**: When moving or renaming files within this repository, use `git mv` to preserve file history when possible.
 - **Hugo content files**: Add an `aliases` field to the frontmatter of the moved file, listing the old paths:
+
   ```yaml
   aliases:
   - /old/path/to/file/
   - /another/old/path/
   ```
+
 - **Verification toolset**: After moving files, use the scripts in `/scripts/alias-verification/` to verify all moved files have proper aliases. See the README in that directory for usage details.
 - **Non-Hugo files**: For generated content or files outside Hugo's content management, add redirects to the S3 redirect files located in `/scripts/redirects/`.
   - When adding S3 redirects, place entries in topic-appropriate files (e.g., `neo-redirects.txt` for Neo-related content).
@@ -104,6 +106,7 @@ When moving documentation files, aliases automatically handle redirects. Update 
 - **Why**: Blog posts and tutorials represent a point in time. Aliases handle redirects automatically, preserving the historical record without modification.
 
 - **Implementation**: When using `find` or `sed` to update links, always exclude blog and tutorial directories:
+
   ```bash
   find content/docs content/product -name "*.md" -exec sed -i 's|/old/path|/new/path|g' {} +
   ```
