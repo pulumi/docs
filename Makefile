@@ -141,8 +141,22 @@ new-example-program:
 
 .PHONY: new-blog-post
 new-blog-post:
-	hugo new --kind blog-post --contentDir content \
-	"blog/$(shell bash -c 'read -p "Slug (e.g., 'my-new-post'): " slug; echo $$slug')"
+	@echo "⚠️  DEPRECATED: This command is no longer maintained."
+	@echo ""
+	@echo "Please use the Claude Code slash command instead:"
+	@echo "  /new-blog-post"
+	@echo ""
+	@echo "The slash command provides:"
+	@echo "  • Automatic author detection from git config"
+	@echo "  • Smart author onboarding for new contributors"
+	@echo "  • Pre-populated fields to reduce manual work"
+	@echo "  • Consistent structure matching latest standards"
+	@echo ""
+	@echo "If you don't have Claude Code, see: https://claude.com/claude-code"
+	@echo ""
+	@echo "Running the old command anyway in 5 seconds... (Ctrl+C to cancel)"
+	@sleep 5
+	@bash -c 'read -p "Slug (e.g., \"my-new-post\"): " slug; hugo new --kind blog-post --contentDir content "blog/$$slug"'
 
 .PHONY: lint
 lint:
