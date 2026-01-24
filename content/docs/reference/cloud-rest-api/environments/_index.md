@@ -24,6 +24,7 @@ The API provides endpoints for the following operations:
 - Listing available environments
 - Creating new environments
 - Retrieving, updating, and deleting environments
+- Managing environment settings (such as deletion protection)
 - Opening environments to access their values
 - Cloning environments
 
@@ -180,6 +181,54 @@ curl \
   --request PATCH \
   --data '<yaml content>' \
   https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}
+```
+
+## Update Environment Settings
+
+Update settings for an environment, such as deletion protection.
+
+```plain
+PATCH /api/esc/environments/{organization}/{project}/{environment}/settings
+```
+
+### Parameters
+
+| Parameter           | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `organization`      | string | path  | organization name |
+| `project`           | string | path  | project name      |
+| `environment`       | string | path  | environment name  |
+
+### Body
+
+| Key                 | Type    | Description                                                |
+|---------------------|---------|------------------------------------------------------------|
+| `deletionProtected` | boolean | when set to `true`, prevents the environment from deletion |
+
+### Example
+
+Enable deletion protection:
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{"deletionProtected": true}' \
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}/settings
+```
+
+Disable deletion protection:
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{"deletionProtected": false}' \
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}/settings
 ```
 
 ## Delete Environment
