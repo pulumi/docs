@@ -511,8 +511,10 @@ That `nvidia.com/mig.config: "all-balanced"` label on line 435 does more than yo
 The label value has to match a profile name in the `default-mig-parted-config` ConfigMap. The GPU Operator creates this ConfigMap with pre-defined configurations for different GPU models:
 
 ```bash
-pulumi env run pulumi-idp/auth -- kubectl get configmap -n gpu-operator default-mig-parted-config -o yaml
+kubectl get configmap -n gpu-operator default-mig-parted-config -o yaml
 ```
+
+> **Note:** If you're using [Pulumi ESC](/docs/esc/) for cluster authentication, you can run this via `pulumi env run <your-env> -- kubectl get configmap ...` to inject credentials automatically.
 
 For A100-40GB GPUs (p4d.24xlarge), you get these options:
 
