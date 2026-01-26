@@ -97,7 +97,7 @@ The numbers speak for themselves: a 2025 IPO, a $12 billion partnership with Ope
 
 ### Lambda Labs
 
-Lambda Labs focuses on making GPU access simple. You don't need infrastructure expertise to get started - their environments come pre-configured with PyTorch and TensorFlow ready to go.
+Lambda Labs focuses on making GPU access straightforward. You don't need infrastructure expertise to get started - their environments come pre-configured with PyTorch and TensorFlow ready to go.
 
 **License**: Proprietary
 **Best for**: Research teams, startups, and developers who want GPUs without the configuration headache
@@ -105,7 +105,7 @@ Lambda Labs focuses on making GPU access simple. You don't need infrastructure e
 On-demand and reserved instances, environments that just work, competitive pricing. Lambda built their reputation on being the approachable option.
 
 **Key strengths**:
-- Actually simple to use (not just "simple" in marketing copy)
+- Straightforward to use (not just claiming simplicity in marketing copy)
 - Pre-configured deep learning environments
 - Good pricing for on-demand access
 - Strong community and learning resources
@@ -114,7 +114,7 @@ On-demand and reserved instances, environments that just work, competitive prici
 
 ### Modal
 
-Modal's pitch is simple: you write Python functions, they handle the GPUs. No infrastructure configuration, no capacity planning, no idle instances burning money.
+Modal's pitch is straightforward: you write Python functions, they handle the GPUs. No infrastructure configuration, no capacity planning, no idle instances burning money.
 
 **License**: Proprietary
 **Best for**: Developers and data scientists who want to run ML workloads without touching infrastructure
