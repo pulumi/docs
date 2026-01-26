@@ -1,5 +1,6 @@
 ---
-title: "Securely Deploy Clawdbot with Pulumi and Tailscale"
+title: "Deploy and Secure Clawdbot on AWS and Hetzner with Pulumi and Tailscale"
+allow_long_title: true
 date: 2026-01-26
 meta_desc: "Deploy Clawdbot, an open-source AI assistant, to AWS and Hetzner using Pulumi with Tailscale for secure private access."
 meta_image: meta.png
