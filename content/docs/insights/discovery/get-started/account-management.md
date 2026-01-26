@@ -40,7 +40,7 @@ Let's kick off the scan for the new account you created.
 
 ![Insights Account Discovery](/docs/insights/assets/insights-accounts-list.png)
 
-After you select the `insights-aws-account` account, click on the **Actions** drop-down, choose the **Scan** action, and click **Scan**
+After you select the `insights-aws-account` account, click on the **Actions** drop-down, choose the **Scan** action, and click the **Scan** button.
 
 ## View account discovery progress
 
