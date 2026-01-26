@@ -1,5 +1,5 @@
 ---
-title: "Deploy and Secure Clawdbot on AWS and Hetzner with Pulumi and Tailscale"
+title: "Deploy and Secure Clawdbot on AWS or Hetzner with Pulumi and Tailscale"
 allow_long_title: true
 date: 2026-01-26
 meta_desc: "Deploy Clawdbot, an open-source AI assistant, to AWS and Hetzner using Pulumi with Tailscale for secure private access."
@@ -35,7 +35,7 @@ With all this hype, I had to try it myself. But instead of clicking through the 
 
 ![Dan's tweet suggesting Hetzner VMs instead of Mac Minis for Clawdbot](dan-hetzner-tweet.png)
 
-In this post, I'll show you how to deploy [Clawdbot](https://clawd.bot/) to AWS or, for European data residency or cost-conscious folks, Hetzner Cloud—using Pulumi for infrastructure as code and Tailscale to keep your AI assistant off the public internet.
+In this post, I'll show you how to deploy [Clawdbot](https://clawd.bot/) to AWS or Hetzner Cloud (if you want European data residency or just want to spend less). We'll use Pulumi to define the infrastructure and Tailscale to keep your AI assistant off the public internet.
 
 <!--more-->
 
@@ -75,7 +75,7 @@ The Gateway connects to messaging platforms (WhatsApp, Slack, Discord, etc.), th
 
 ## Setting up ESC for secrets management
 
-Deploying Clawdbot requires sensitive credentials: your Anthropic API key, Tailscale auth key, and cloud provider tokens. Rather than hardcoding these in your codebase or juggling environment variables, we'll use [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) to store them securely and pass them directly to your Pulumi program.
+Deploying Clawdbot means handling sensitive credentials: API keys, auth tokens, cloud provider secrets. You don't want these hardcoded or scattered across environment variables. [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) stores them securely and passes them directly to your Pulumi program.
 
 Create a new ESC environment:
 
@@ -158,7 +158,7 @@ Do not use `t3.micro` instances for Clawdbot. The 1 GB memory is insufficient fo
 
 ### The Pulumi program
 
-Running Clawdbot on AWS requires several resources: a VPC with subnets and routing, security groups to control network access, an EC2 instance with the right AMI and instance type, SSH keys, and a cloud-init script that installs Docker, Node.js, Clawdbot, and Tailscale. Rather than clicking through the AWS console or writing fragile shell scripts, we express all of this in code.
+Running Clawdbot on AWS means setting up a VPC, subnets, security groups, an EC2 instance, SSH keys, and a cloud-init script that installs everything. That's a lot of clicking in the AWS console. The Pulumi program below defines all of it in code.
 
 Replace the contents of `index.ts` with the following:
 
@@ -411,7 +411,7 @@ export const gatewayTokenOutput = gatewayToken;
 
 Hetzner Cloud is a solid choice if you need European data residency or want to spend less money. Spoiler: it's a lot less money.
 
-Hetzner offers similar compute services to AWS, but the names and configurations differ slightly. Instead of EC2 instances, you create Servers. Instead of security groups, you use Firewalls. The principles are the same—we're still defining infrastructure in code—but the resource types come from the `@pulumi/hcloud` provider.
+Hetzner has similar concepts to AWS but different names. EC2 instances become Servers. Security groups become Firewalls. Same idea, different provider. The resource types come from `@pulumi/hcloud`.
 
 Create a new project for Hetzner:
 
