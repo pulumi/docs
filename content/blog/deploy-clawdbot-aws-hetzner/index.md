@@ -1,5 +1,5 @@
 ---
-title: "Deploy and Secure Clawdbot on AWS or Hetzner with Pulumi and Tailscale"
+title: "Deploy Clawdbot on AWS or Hetzner Securely with Pulumi and Tailscale"
 allow_long_title: true
 date: 2026-01-26
 meta_desc: "Deploy Clawdbot, an open-source AI assistant, to AWS and Hetzner using Pulumi with Tailscale for secure private access."
@@ -18,7 +18,7 @@ tags:
     - security
 social:
     twitter: |
-        Everyone's buying Mac Minis to run Clawdbot. Here's the thing: you don't need one. A Hetzner VM costs $7/month and a single pulumi up gets you there. Plus Tailscale so your AI assistant isn't hanging out on Shodan.
+        Everyone's buying Mac Minis to run Clawdbot. You don't need one. A Hetzner VM costs $7/month. One `pulumi up` and you're done. Plus Tailscale so your AI assistant isn't hanging out on Shodan. Here's how:
     linkedin: |
         The Clawdbot craze has people buying Mac Minis just to run an AI assistant. But you can deploy it to AWS or Hetzner for a fraction of the cost.
 
@@ -45,7 +45,7 @@ In this post, I'll show you how to deploy [Clawdbot](https://clawd.bot/) to AWS 
 
 Clawdbot is an open-source AI assistant created by [Peter Steinberger](https://x.com/steipete) that runs on your own infrastructure. It connects to WhatsApp, Slack, Discord, Google Chat, Signal, and iMessage. It can control browsers, generate videos and images, clone your voice for voice notes, and run scheduled tasks via cron. There's a skills system for extending functionality, and you can run it on pretty much anything: Mac Mini, Raspberry Pi, VPS, laptop, or gaming PC.
 
-The difference from cloud-hosted AI? Clawdbot runs on your server, not Anthropic's. It's available 24/7 across all your devices, can schedule automated tasks, and keeps your entire conversation history locally.
+The difference from cloud-hosted AI? Clawdbot runs on your server, not Anthropic's. It's available 24/7 across all your devices, can schedule automated tasks, and keeps your entire conversation history locally. Check the [official Clawdbot documentation](https://docs.clawd.bot/) for the full feature list.
 
 ## Prerequisites
 
