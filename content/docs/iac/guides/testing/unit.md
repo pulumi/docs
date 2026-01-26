@@ -257,13 +257,50 @@ import * as pulumi from "@pulumi/pulumi";
 
 pulumi.runtime.setMocks({
     newResource: function(args: pulumi.runtime.MockResourceArgs): {id: string, state: any} {
-        return {
-            id: args.inputs.name + "_id",
-            state: args.inputs,
-        };
+        switch (args.type) {
+            case "aws:ec2/securityGroup:SecurityGroup":
+                return {
+                    id: "sg-12345678",
+                    state: {
+                        ...args.inputs,
+                        // Mock output properties that may be used in tests
+                        arn: "arn:aws:ec2:us-west-2:123456789012:security-group/sg-12345678",
+                        name: args.inputs.name || args.name + "-sg",
+                    },
+                };
+            case "aws:ec2/instance:Instance":
+                return {
+                    id: "i-1234567890abcdef0",
+                    state: {
+                        ...args.inputs,
+                        // Mock output properties that may be used in tests
+                        arn: "arn:aws:ec2:us-west-2:123456789012:instance/i-1234567890abcdef0",
+                        instanceState: "running",
+                        primaryNetworkInterfaceId: "eni-12345678",
+                        privateDns: "ip-10-0-1-17.ec2.internal",
+                        publicDns: "ec2-203-0-113-12.compute-1.amazonaws.com",
+                        publicIp: "203.0.113.12",
+                    },
+                };
+            default:
+                return {
+                    id: args.inputs.name + "_id",
+                    state: {
+                        ...args.inputs,
+                    },
+                };
+        }
     },
     call: function(args: pulumi.runtime.MockCallArgs) {
-        return args.inputs;
+        switch (args.token) {
+            case "aws:ec2/getAmi:getAmi":
+                return {
+                    "architecture": "x86_64",
+                    "id": "ami-0eb1f3cdeeb8eed2a",
+                };
+            default:
+                return args.inputs;
+        }
     },
 },
   "project",
@@ -271,6 +308,13 @@ pulumi.runtime.setMocks({
   false, // Sets the flag `dryRun`, which indicates if pulumi is running in preview mode.
 );
 ```
+
+The mock implementation uses a `switch` statement to return different properties based on resource type. This is important because:
+
+- **Input properties** (like `tags`, `userData`, `ingress`) are set by your code and passed via `args.inputs`
+- **Output properties** (like `arn`, `publicIp`, `instanceState`) are computed by the cloud provider and need to be mocked explicitly
+
+The tests shown later in this guide access both input properties (spread from `args.inputs`) and output properties (like `arn` and `publicIp`). Without mocking these output properties, they would be `undefined` in your tests
 
 {{% /choosable %}}
 
