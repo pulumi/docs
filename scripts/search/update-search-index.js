@@ -1,6 +1,6 @@
 const axios = require('axios');
 const settings = require("./settings");
-const algoliasearch = require("algoliasearch");
+const { algoliasearch } = require("algoliasearch");
 
 // URL of the JSON file
 const registrySearchIndexUrl = "https://www.pulumi.com/registry/search-index.json";
