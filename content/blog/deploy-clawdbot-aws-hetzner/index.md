@@ -35,7 +35,7 @@ With all this hype, I had to try it myself. But instead of clicking through the 
 
 ![Dan's tweet suggesting Hetzner VMs instead of Mac Minis for Clawdbot](dan-hetzner-tweet.png)
 
-In this post, I'll show you how I deployed [Clawdbot](https://clawd.bot/) to both AWS and Hetzner Cloud using Pulumi—and how to secure it with Tailscale so your AI assistant isn't exposed to the public internet.
+In this post, I'll show you how to deploy [Clawdbot](https://clawd.bot/) to AWS or, for European data residency or cost-conscious folks, Hetzner Cloud—using Pulumi for infrastructure as code and Tailscale to keep your AI assistant off the public internet.
 
 <!--more-->
 
@@ -75,7 +75,9 @@ The Gateway connects to messaging platforms (WhatsApp, Slack, Discord, etc.), th
 
 ## Setting up ESC for secrets management
 
-Before deploying, let's configure [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) to securely manage our credentials. Create a new ESC environment:
+Deploying Clawdbot requires sensitive credentials: your Anthropic API key, Tailscale auth key, and cloud provider tokens. Rather than hardcoding these in your codebase or juggling environment variables, we'll use [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) to store them securely and pass them directly to your Pulumi program.
+
+Create a new ESC environment:
 
 ```bash
 pulumi env init <your-org>/clawdbot-secrets
@@ -155,6 +157,8 @@ Do not use `t3.micro` instances for Clawdbot. The 1 GB memory is insufficient fo
 {{% /notes %}}
 
 ### The Pulumi program
+
+Running Clawdbot on AWS requires several resources: a VPC with subnets and routing, security groups to control network access, an EC2 instance with the right AMI and instance type, SSH keys, and a cloud-init script that installs Docker, Node.js, Clawdbot, and Tailscale. Rather than clicking through the AWS console or writing fragile shell scripts, we express all of this in code.
 
 Replace the contents of `index.ts` with the following:
 
@@ -406,6 +410,8 @@ export const gatewayTokenOutput = gatewayToken;
 ## Deploying to Hetzner
 
 Hetzner Cloud is a solid choice if you need European data residency or want to spend less money. Spoiler: it's a lot less money.
+
+Hetzner offers similar compute services to AWS, but the names and configurations differ slightly. Instead of EC2 instances, you create Servers. Instead of security groups, you use Firewalls. The principles are the same—we're still defining infrastructure in code—but the resource types come from the `@pulumi/hcloud` provider.
 
 Create a new project for Hetzner:
 
