@@ -10,9 +10,9 @@
         "generate": "stencil generate"
     },
     "dependencies": {
-        "@stencil/core": "^2.7.1",
+        "@stencil/core": "^4.41.3",
         "@stencil/redux": "^0.2.0",
-        "@stencil/sass": "^1.4.1",
+        "@stencil/sass": "^3.2.3",
         "@types/codemirror": "^0.0.98",
         "@types/file-saver": "^2.0.1",
         "@types/jest": "^26.0.21",
