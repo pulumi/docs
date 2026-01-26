@@ -1208,6 +1208,26 @@ Total tests: 3
 
 All the tests passed!
 
+## Limitations
+
+When using mocks for unit testing, it's important to understand that the mock server does not implement the full Pulumi engine. This means certain features that rely on the engine's deployment orchestration will not execute during mock-based tests.
+
+### Lifecycle hooks and transforms
+
+Lifecycle hooks and resource transforms are not executed in mock tests. While your program can register hooks and transforms with the mock server, they will not actually run during test execution.
+
+This limitation exists because implementing full hook and transform support would require reimplementing significant portions of the Pulumi engine in each language SDK. Since mocks are designed to run fast and deterministically without external dependencies, this trade-off is intentional.
+
+**How to handle this in tests:**
+
+If your program uses lifecycle hooks or transforms, structure your tests to work around this limitation:
+
+1. **Test the logic separately**: Extract the logic from hooks and transforms into standalone functions that can be unit tested independently.
+1. **Mock the expected outcomes**: Configure your mocks to return resource state that reflects what would happen after hooks or transforms execute.
+1. **Use integration tests**: For end-to-end validation of hook and transform behavior, use integration tests that deploy actual resources to a testing environment.
+
+For example, if you have a transform that adds default tags to all resources, your mock's `newResource` function can return resource state that already includes those tags, simulating the transform's effect without actually executing it.
+
 ## Full Example
 
 {{% choosable language "typescript" %}}
