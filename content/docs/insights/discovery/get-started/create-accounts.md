@@ -26,11 +26,11 @@ Currently while in public preview, Pulumi Insights Account discovery supports AW
 
 1. Click **+ Add New** and choose your cloud provider (AWS, Azure, Oracle Cloud, or Kubernetes)
 
-1. Click on the drop-down to select your newly created environment `insights-discovery/insights-discovery-env`, then provide a unique account name, such as `Insights-aws-account`.
+1. Click on the drop-down to select your newly created environment `insights-discovery/insights-discovery-env`, then provide a unique account name, such as `insights-aws-account`.
 
 1. Add any provider-specific configuration, such as the regions to scan for AWS.
 
-1. Finally, you can select whether to enable automatic scans or run them manually, let's keep the default selection.
+1. Finally, you can select whether to enable automatic scans or run them manually. Let's keep the default selection.
 
 {{< notes type="info" >}}
 When automatic scans are enabled, Pulumi automatically scans the account every 24 hours.

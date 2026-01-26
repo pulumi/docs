@@ -22,7 +22,7 @@ Now that you have created a new account you can click on the **Accounts** page t
 
 Here you will notice that Insights automatically created child accounts based on the underlying platform model for each group you decide to enable. Child accounts enable you to control the discovery behavior for each group separately.
 
-For example, AWS enables you to divide you infrastructure into regions and Insights will create separate child accounts for each region you specify. In this case you will see:
+For example, AWS enables you to divide your infrastructure into regions and Insights will create separate child accounts for each region you specify. In this case you will see:
 
 - Parent account: `insights-aws-account`
 - Child account (region): `insights-aws-account/us-east-1`
@@ -44,7 +44,7 @@ After you select the `insights-aws-account` account, click on the **Actions** dr
 
 ## View account discovery progress
 
-Pulumi Insights will kick off a scan across each child account / region in parallel and as reasources are discovered you will begin to see a status of the number of resources known to Pulumi.
+Pulumi Insights will kick off a scan across each child account / region in parallel and as resources are discovered you will begin to see a status of the number of resources known to Pulumi.
 
 ![Insights Account Discovery Scan](/docs/insights/assets/insights-account-discovery-scan.png)
 

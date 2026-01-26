@@ -60,7 +60,7 @@ Let's say you are working with your security team as part of an audit, you could
 
 **"show me all s3 public buckets"**
 
-`type:"aws:s3/bucket:Bucket" .acl:public-read'
+`type:"aws:s3/bucket:Bucket" .acl:public-read`
 
 ![Insights Explorer Ai assist public s3](/docs/insights/assets/resource-explorer-pulumi-ai-assist-public-s3.png)
 
