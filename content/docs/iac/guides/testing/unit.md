@@ -314,7 +314,7 @@ The mock implementation uses a `switch` statement to return different properties
 - **Input properties** (like `tags`, `userData`, `ingress`) are set by your code and passed via `args.inputs`
 - **Output properties** (like `arn`, `publicIp`, `instanceState`) are computed by the cloud provider and need to be mocked explicitly
 
-The tests shown later in this guide access both input properties (spread from `args.inputs`) and output properties (like `arn` and `publicIp`). Without mocking these output properties, they would be `undefined` in your tests
+The tests shown later in this guide access both input properties (spread from `args.inputs`) and output properties (like `arn` and `publicIp`). Without mocking these output properties, they would be `undefined` in your tests.
 
 {{% /choosable %}}
 
