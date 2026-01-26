@@ -20,7 +20,6 @@ if (!config.appID || !config.searchAPIKey || !config.adminAPIKey || !config.inde
 
 // Initialize the Algolia search client.
 const client = algoliasearch(config.appID, config.adminAPIKey);
-const algoliaIndex = client.initIndex(config.indexName);
 
 async function publishIndex() {
 
@@ -78,17 +77,49 @@ async function publishIndex() {
 
         try {
             console.log(` ↳ Replacing all records in the '${ config.indexName }' index...`);
-            const result = await algoliaIndex.replaceAllObjects(objects, { safe: true });
-            console.log(`   ↳ ${result.objectIDs.length} records updated.`);
+            const result = await client.replaceAllObjects({
+                indexName: config.indexName,
+                objects: objects,
+            });
+            await client.waitForTask({
+                indexName: config.indexName,
+                taskID: result.taskID
+            });
+            console.log(`   ↳ ${objects.length} records updated.`);
 
             console.log(` ↳ Updating index settings...`)
-            await algoliaIndex.setSettings(indexSettings);
+            const settingsResult = await client.setSettings({
+                indexName: config.indexName,
+                indexSettings: indexSettings
+            });
+            await client.waitForTask({
+                indexName: config.indexName,
+                taskID: settingsResult.taskID
+            });
 
             console.log(" ↳ Updating synonyms...")
-            await algoliaIndex.saveSynonyms(indexSynonyms, { replaceExistingSynonyms: true });
+            const synonymsResult = await client.saveSynonyms({
+                indexName: config.indexName,
+                synonymHits: indexSynonyms,
+                forwardToReplicas: false,
+                replaceExistingSynonyms: true
+            });
+            await client.waitForTask({
+                indexName: config.indexName,
+                taskID: synonymsResult.taskID
+            });
 
             console.log(" ↳ Updating rules...")
-            await algoliaIndex.replaceAllRules(indexRules);
+            const rulesResult = await client.saveRules({
+                indexName: config.indexName,
+                rules: indexRules,
+                forwardToReplicas: false,
+                clearExistingRules: true
+            });
+            await client.waitForTask({
+                indexName: config.indexName,
+                taskID: rulesResult.taskID
+            });
 
             console.log(" ↳ Done. ✨\n");
         }
