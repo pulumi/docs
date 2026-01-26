@@ -27,6 +27,8 @@ social:
 
 Clawdbot is taking the tech world by storm. The open-source AI assistant [gained 9,000 GitHub stars in a single day](https://news.aibase.com/news/24901), received public praise from former Tesla AI head Andrej Karpathy, and has sparked a global run on Mac Minis as developers scramble to give this "lobster assistant" a home. Users are calling it "Jarvis living in a hard drive" and "Claude with hands"—the personal AI assistant that Siri promised but never delivered.
 
+<!--more-->
+
 The Mac Mini craze is real: [people are buying dedicated hardware just to run Clawdbot](https://medium.com/@orami98/why-ai-enthusiasts-are-racing-to-buy-mac-minis-inside-the-clawdbot-phenomenon-16263ae0aa0a), with some enthusiasts [purchasing 40 Mac Minis at once](https://eu.36kr.com/en/p/3655411080568966). Even Logan Kilpatrick from Google DeepMind couldn't resist ordering one. But here's the thing: [you don't actually need a Mac Mini](https://dev.to/sivarampg/you-dont-need-a-mac-mini-to-run-clawdbot-heres-how-to-run-it-anywhere-217l). Clawdbot runs anywhere—on a VPS, in the cloud, or on that old laptop gathering dust.
 
 With all this hype, I had to try it myself. But instead of clicking through the AWS console or running manual commands on a VPS, I wanted to do it right from the start: infrastructure as code with Pulumi. Why? Because when I inevitably want to tear it down, spin up a new instance, or deploy to a different region, I don't want to remember which buttons I clicked three weeks ago. I want a single `pulumi up` command.
