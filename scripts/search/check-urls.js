@@ -1,6 +1,6 @@
 const fs = require("fs");
 const axios = require("axios").default;
-const retry = require("axios-retry");
+const retry = require("axios-retry").default;
 
 async function checkSearchURLs(baseURL) {
 
