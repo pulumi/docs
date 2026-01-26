@@ -17,7 +17,7 @@ aliases:
 Now that you have set up your ESC and your cloud account, let’s create your first Pulumi Insights account and kick off a discovery scan. In this example you will see the steps for AWS and you can follow along with any cloud provider.
 
 {{< notes type="info" >}}
-Currently while in public preview, Pulumi Insights Account discovery supports AWS, Azure, Oracle Cloud, and Kubernetes.
+Currently while in public preview, Pulumi Insights Account discovery supports AWS, Azure, Oracle Cloud, Kubernetes, and Google Cloud.
 {{< /notes >}}
 
 ## Create an Insights account
