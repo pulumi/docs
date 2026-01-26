@@ -50,11 +50,11 @@ To see all resources with a certain tag in your cloud provider, you can use the 
 
 To quickly find the right keywords and search syntax, you can ask natural language questions and let Pulumi AI assist suggest the correct search syntax.
 
-**"show me all virtual machines"**
+**"show me all cloud storage buckets"**
 
-`type:"aws:ec2/instance:Instance" OR type:"azure:compute/virtualMachine:VirtualMachine"`
+`type:"aws:s3/bucket:Bucket" OR type:"gcp:storage/bucket:Bucket" OR type:"azure:storage/bucket:Bucket"`
 
-![Insights Explorer Ai assist vm](/docs/insights/assets/resource-explorer-pulumi-ai-assist-vm.png)
+![Insights Explorer Ai assist vm](/docs/insights/assets/resource-explorer-pulumi-ai-assist-cloud-buckets.png)
 
 Let's say you are working with your security team as part of an audit, you could quickly find (or confirm compliance) on risks such as public facing S3 buckets.
 
@@ -62,12 +62,8 @@ Let's say you are working with your security team as part of an audit, you could
 
 `type:"aws:s3/bucket:Bucket" .acl:public-read'
 
-![Insights Explorer Ai assist public s3](/docs/insights/assets/insights-explorer-pulumi-ai-assist-public-s3.png)
+![Insights Explorer Ai assist public s3](/docs/insights/assets/resource-explorer-pulumi-ai-assist-public-s3.png)
 
 With Pulumi Neo and Resource Search, you are able to gain insights and ask questions about your infrastructure that would otherwise be challenging to answer, saving time and providing the critical information needed
-
-{{% notes "info" %}}
-Insights Account Discovery is free while in public preview, with per-resource pricing for Team, Enterprise and Business Critical tiers coming in Q1 2025.
-{{% /notes %}}
 
 {{< get-started-stepper >}}
