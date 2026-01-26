@@ -2,29 +2,6 @@ const fs = require("fs");
 const axios = require("axios").default;
 const retry = require("axios-retry").default;
 
-// Helper function to run promises with limited concurrency
-async function promiseAllWithConcurrency(promises, concurrency) {
-    const results = [];
-    const executing = [];
-
-    for (const [index, promise] of promises.entries()) {
-        const p = Promise.resolve().then(() => promise).then(
-            value => ({ status: 'fulfilled', value }),
-            reason => ({ status: 'rejected', reason })
-        );
-        results[index] = p;
-
-        const e = p.then(() => executing.splice(executing.indexOf(e), 1));
-        executing.push(e);
-
-        if (executing.length >= concurrency) {
-            await Promise.race(executing);
-        }
-    }
-
-    return Promise.all(results);
-}
-
 async function checkSearchURLs(baseURL) {
 
     // We operate on the result of a call to the Algolia CLI to fetch the full index, which is
@@ -61,13 +38,12 @@ async function checkSearchURLs(baseURL) {
 
         // Add delay before each batch to avoid rate limiting (except first batch)
         if (chunk.chunk > 0) {
-            const delayMs = 2000;  // 2 seconds between batches
+            const delayMs = 10000;  // 10 seconds between batches
+            console.log(`   [Waiting ${delayMs/1000}s before next batch...]`);
             await new Promise(resolve => setTimeout(resolve, delayMs));
         }
 
-        // Limit concurrent requests to avoid overwhelming the server
-        const concurrencyLimit = 50;
-        const promises = chunk.objects.map(obj => {
+        const result = await Promise.allSettled(chunk.objects.map(obj => {
             const url = obj.href.startsWith("http") ? obj.href : `${baseURL}${obj.href}`;
 
             return new Promise(async (resolve, reject) => {
@@ -98,9 +74,8 @@ async function checkSearchURLs(baseURL) {
                     reject(`${url} ERROR: ${errorMsg}`);
                 }
             });
-        });
+        }));
 
-        const result = await promiseAllWithConcurrency(promises, concurrencyLimit);
         results.push(...result);
     }
 
