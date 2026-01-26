@@ -18,8 +18,6 @@ Now that you have created a new account you can click on the **Accounts** page t
 
 ## View accounts
 
-![Insights Account Discovery](/docs/insights/assets/insights-accounts-list.png)
-
 Here you will notice that Insights automatically created child accounts based on the underlying platform model for each group you decide to enable. Child accounts enable you to control the discovery behavior for each group separately.
 
 For example, AWS enables you to divide your infrastructure into regions and Insights will create separate child accounts for each region you specify. In this case you will see:
@@ -38,19 +36,13 @@ You can manage each by selecting your desired account, where you can see the pro
 
 Let's kick off the scan for the new account you created.
 
-![Insights Account Discovery](/docs/insights/assets/insights-accounts-list.png)
-
 After you select the `insights-aws-account` account, click on the **Actions** drop-down, choose the **Scan** action, and click the **Scan** button.
 
 ## View account discovery progress
 
 Pulumi Insights will kick off a scan across each child account / region in parallel and as resources are discovered you will begin to see a status of the number of resources known to Pulumi.
 
-![Insights Account Discovery Scan](/docs/insights/assets/insights-account-discovery-scan.png)
-
 As each account scan completes, you will see a checkmark and status update per account. The scan duration will depend on the number of resources for each account, however as soon as they are discovered you can begin to explore insights and do not have to wait for the entire discovery to finish.
-
-![Insights Account Discovery Scan](/docs/insights/assets/insights-account-discovery-complete.png)
 
 Let's introduce the Pulumi Resource Explorer for your newly discovered resources and learn how to draw insights about your cloud infrastructure.
 
