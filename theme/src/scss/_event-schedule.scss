@@ -1,5 +1,3 @@
-@use "sass:color";
-
 .event-schedule {
   input {
     position: absolute;
@@ -21,7 +19,7 @@
       background-color: #fff;
       cursor: pointer;
       &:hover {
-        background: color.scale(#fff, $lightness: -2%);
+        background: darken(#fff, 2%);
       }
       &::after {
         content: "\276F";
@@ -45,7 +43,7 @@
       background: #fff;
       cursor: pointer;
       &:hover {
-        background: color.scale(#fff, $lightness: -2%);
+        background: darken(#fff, 2%);
       }
     }
   }

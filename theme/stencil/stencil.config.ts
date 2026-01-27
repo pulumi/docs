@@ -2,12 +2,11 @@ import { Config } from "@stencil/core";
 import { sass } from "@stencil/sass";
 
 export const config: Config = {
-    namespace: "pulumi-docs",
     enableCache: true,
     buildDist: true,
     outputTargets: [
         {
-            type: "dist",
+            type: "dist-custom-elements-bundle",
             dir: "./dist",
         },
         {

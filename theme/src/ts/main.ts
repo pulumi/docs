@@ -1,4 +1,4 @@
-import { defineCustomElements } from "../../stencil/dist/loader";
+import { defineCustomElements } from "../../stencil/dist";
 
 import "../scss/main.scss";
 

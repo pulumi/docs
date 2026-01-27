@@ -24,7 +24,7 @@ jobs:
 
       - name: Sync upstream changes
         id: sync
-        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.2
         with:
           upstream_sync_repo: pulumi/docs
           upstream_sync_branch: master

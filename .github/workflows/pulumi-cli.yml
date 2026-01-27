@@ -54,11 +54,11 @@ jobs:
           path: pulumi
           ref: v${{ github.event.client_payload.ref }}
       - name: Install pulumictl
-        uses: jaxxstorm/action-install-gh-release@v2.1.0
+        uses: jaxxstorm/action-install-gh-release@v1.1.0
         with:
           repo: pulumi/pulumictl
       - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2.0.0
+        uses: pulumi/action-install-pulumi-cli@v1.0.1
         with:
           pulumi-version: ${{ env.PULUMI_VERSION }}
       - name: Install go
@@ -68,10 +68,10 @@ jobs:
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.154.5'
+          hugo-version: '0.151.0'
           extended: true
       - name: Install node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: ${{matrix.nodeversion}}
       - name: Install python
@@ -137,7 +137,7 @@ jobs:
         pythonversion:
           - "3.13"
         nodeversion:
-          - "24.x"
+          - "22.x"
   notify:
     if: failure()
     name: Send slack notification

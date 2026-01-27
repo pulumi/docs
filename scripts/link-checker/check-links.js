@@ -1,7 +1,7 @@
 const { HtmlUrlChecker } = require("broken-link-checker");
 const { WebClient, LogLevel } = require('@slack/web-api');
 const httpServer = require("http-server");
-const Sitemapper = require("sitemapper").default;
+const Sitemapper = require("sitemapper");
 const sitemap = new Sitemapper();
 const path = require("path");
 const fs = require("fs");

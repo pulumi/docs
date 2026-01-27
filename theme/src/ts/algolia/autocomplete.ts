@@ -1,4 +1,4 @@
-import { liteClient as algoliasearch, SearchClient } from "algoliasearch/lite";
+import algoliasearch, { SearchClient } from "algoliasearch/lite";
 import { autocomplete, getAlgoliaResults, getAlgoliaFacets } from "@algolia/autocomplete-js";
 import { getTags, getTagsPlugin, setTags, Tag, iconForTag, labelForTag, mapTagsToFilters, groupBy, formatCount, debounce, listenForEvents } from "./utils";
 

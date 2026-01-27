@@ -56,8 +56,6 @@ module.exports = function (env, { mode }) {
                                 sourceMap: false,
                                 sassOptions: {
                                     outputStyle: "compressed",
-                                    quietDeps: true,
-                                    silenceDeprecations: ['import', 'global-builtin'],
                                 },
                             },
                         },

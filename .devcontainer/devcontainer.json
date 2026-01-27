@@ -3,7 +3,7 @@
 	"image": "mcr.microsoft.com/devcontainers/base:trixie",
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
-			"version": "24"
+			"version": "22"
 		},
 		"ghcr.io/devcontainers/features/dotnet:2": {
 			"version": "lts"
@@ -12,7 +12,7 @@
 			"version": "1.25"
 		},
 		"ghcr.io/devcontainers/features/hugo:1": {
-			"version": "0.154.5"
+			"version": "0.151.0"
 		},
 		"ghcr.io/devcontainers/features/python:1": {
 			"installTools": true,

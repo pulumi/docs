@@ -65,8 +65,8 @@ make clean                # Remove build artifacts and dependencies
 
 **Required Tools:**
 
-- Node.js 24.x
-- Hugo 0.154.5
+- Node.js 22.x
+- Hugo 0.151.0
 - Yarn 1.22.x (not strictly enforced in CI)
 - Go 1.25.x (for documentation generation)
 - Python 3.9 (for testing workflows) and 3.13 (for SDK documentation generation)
@@ -207,17 +207,17 @@ code .
 **Install Required Tools:**
 
 ```bash
-# Node.js 24 (via nvm)
-nvm install 24
-nvm use 24
+# Node.js 22 (via nvm)
+nvm install 22
+nvm use 22
 
 # Yarn
 npm install -g yarn@1.22
 
-# Hugo 0.154.5
+# Hugo 0.151.0
 # macOS:
-brew install hugo@0.154.5
-# Linux: Download from https://github.com/gohugoio/hugo/releases/tag/v0.154.5
+brew install hugo@0.151.0
+# Linux: Download from https://github.com/gohugoio/hugo/releases/tag/v0.151.0
 
 # Pulumi CLI
 curl -fsSL https://get.pulumi.com | sh
@@ -481,8 +481,8 @@ Installs and verifies all required dependencies.
 **What it does:**
 
 1. Checks for required tools:
-   - Node.js 24.x
-   - Hugo 0.154.5
+   - Node.js 22.x
+   - Hugo 0.151.0
    - Yarn 1.22.x
 
 2. Installs dependencies for:
@@ -940,7 +940,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 1. **buildSite**
    - Checkout code
    - Fetch secrets from Pulumi ESC
-   - Setup: Node.js 24, Go 1.25, Hugo 0.154.5
+   - Setup: Node.js 22, Go 1.25, Hugo 0.151.0
    - Configure AWS credentials via OIDC (role: ContinuousDelivery, 2-hour session)
    - Install Pulumi CLI
    - Run `make ci_push`:
@@ -1143,7 +1143,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
   - Python 3.9
   - .NET 8.0
   - Java 11
-- Hugo 0.154.5
+- Hugo 0.151.0
 - Latest Pulumi CLI
 - Kubernetes KinD cluster
 
@@ -2526,7 +2526,7 @@ Common issues and their solutions.
 # Check Hugo version
 hugo version
 
-# Should be: hugo v0.154.5
+# Should be: hugo v0.151.0
 
 # Update if different
 # macOS:
@@ -3027,10 +3027,10 @@ git commit -m "Update Node.js dependencies"
 
 ```bash
 # Update Hugo version in all workflow files
-find .github/workflows -name "*.yml" -exec sed -i 's/hugo-version: 0.154.5/hugo-version: 0.155.0/g' {} +
+find .github/workflows -name "*.yml" -exec sed -i 's/hugo-version: 0.151.0/hugo-version: 0.152.0/g' {} +
 
 # Update ensure.sh
-sed -i 's/0.154.5/0.155.0/g' scripts/ensure.sh
+sed -i 's/0.151.0/0.152.0/g' scripts/ensure.sh
 
 # Test locally
 make clean
@@ -3067,48 +3067,17 @@ make generate
 
 #### GitHub Actions Versions
 
-Dependabot automatically updates GitHub Actions versions. Review and merge Dependabot PRs regularly.
-
-**Current Action Versions (as of January 2026):**
-
-| Action | Version | Purpose |
-|--------|---------|---------|
-| `actions/checkout` | v4 | Repository checkout |
-| `actions/setup-node` | v6 | Node.js environment setup |
-| `actions/setup-go` | v5 | Go environment setup |
-| `actions/setup-python` | v5 | Python environment setup |
-| `actions/setup-dotnet` | v4 | .NET environment setup |
-| `actions/setup-java` | v3 | Java environment setup |
-| `actions/upload-artifact` | v4 | Artifact upload |
-| `actions/create-github-app-token` | v2 | GitHub App token generation |
-| `aws-actions/configure-aws-credentials` | v4 | AWS credential configuration |
-| `google-github-actions/auth` | v2 | Google Cloud authentication |
-| `peaceiris/actions-hugo` | v2 | Hugo installation |
-| `pulumi/actions` | v4 | Pulumi CLI installation |
-| `pulumi/esc-action` | v1 | Pulumi ESC integration |
-| `pulumi/action-install-pulumi-cli` | v2.0.0 | Pulumi CLI installation (specific version) |
-| `jaxxstorm/action-install-gh-release` | v2.1.0 | Install tools from GitHub releases |
-| `treosh/lighthouse-ci-action` | v12 | Lighthouse CI integration |
-| `hmarr/auto-approve-action` | v4 | Automated PR approval |
-| `repo-sync/pull-request` | v2 | Pull request creation |
-| `helm/kind-action` | v1 | Kubernetes KinD cluster setup |
-
-**Recent Major Version Updates:**
-
-- **setup-node v4 → v6**: Updated Node.js setup action with improved caching and performance
-- **jaxxstorm/action-install-gh-release v1 → v2**: Enhanced GitHub release installation with better error handling
-- **create-github-app-token v1 → v2**: Updated GitHub App token generation with security improvements
-- **pulumi/action-install-pulumi-cli v1 → v2**: Major version update for Pulumi CLI installation
-
-**Example Update:**
+Dependabot automatically updates GitHub Actions versions:
 
 ```yaml
 # Before
-- uses: actions/setup-node@v4
+- uses: actions/checkout@v3
 
 # After (Dependabot PR)
-- uses: actions/setup-node@v6
+- uses: actions/checkout@v4
 ```
+
+Review and merge Dependabot PRs regularly.
 
 ### Search Index Management
 
@@ -3533,8 +3502,8 @@ Complete reference of all build and deployment scripts.
 
 | Dependency | Version | Purpose |
 |------------|---------|---------|
-| **Node.js** | 24.x | Runtime for build tools |
-| **Hugo** | 0.154.5 | Static site generator |
+| **Node.js** | 22.x | Runtime for build tools |
+| **Hugo** | 0.151.0 | Static site generator |
 | **Yarn** | 1.22.x | Package manager |
 | **Go** | 1.25+ | Doc generation |
 | **Python** | 3.13+ | Doc generation |
