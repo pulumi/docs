@@ -5,7 +5,7 @@ date: 2026-01-21
 
 draft: false
 
-meta_desc: Neo automates migrations from CDK, Terraform, and ARM to Pulumi with zero downtime and verified safety.
+meta_desc: Neo automates migrations from CDK, Terraform, CloudFormation, and ARM to Pulumi with zero downtime and verified safety.
 
 meta_image: meta.png
 
@@ -16,6 +16,7 @@ tags:
     - neo
     - aws
     - cdk
+    - cloudformation
     - terraform
     - azure
     - arm
@@ -26,7 +27,7 @@ schema_type: auto
 
 ---
 
-The barrier to migrating to Pulumi has always been the infrastructure you already have. Your existing resources can't be disrupted, and manually importing them into a new tool is risky and time-consuming. Today, we're excited to share how Neo removes this barrier entirely with automated, zero-downtime migration to Pulumi from AWS CDK, Terraform, CDKTF, and Azure ARM templates.
+The barrier to migrating to Pulumi has always been the infrastructure you already have. Your existing resources can't be disrupted, and manually importing them into a new tool is risky and time-consuming. Today, we're excited to share how Neo removes this barrier entirely with automated, zero-downtime migration to Pulumi from AWS CDK, AWS CloudFormation, Terraform, CDKTF, and Azure ARM templates.
 
 <!--more-->
 
@@ -52,7 +53,7 @@ This approach delivers three critical guarantees:
 2. **Zero risk**: Since nothing changes, you can abandon the migration at any point without consequence
 3. **Zero surprises**: Preview confirms no infrastructure changes before you commit
 
-## Migration in action: Three tools, one approach
+## Migration in action: Four tools, one approach
 
 Neo adapts its migration strategy to each tool's unique characteristics while maintaining the same zero-downtime guarantee. Let's explore how Neo handles migrations from each major IaC tool.
 
@@ -65,6 +66,16 @@ The challenge with CDK migrations isn't the CloudFormation layer - it's the cryp
 CDK also introduces complexity through its construct hierarchy. A single high-level construct might expand into dozens of CloudFormation resources, each with dependencies and references to others. Neo preserves these relationships during migration, ensuring that IAM roles still reference the right Lambda functions, API Gateway deployments still point to the correct stages, and security groups maintain their exact rules. The migration completes with your infrastructure unchanged and Pulumi's preview confirming zero modifications.
 
 {{< neo-card title="Migrate your CDK application" prompt="Leverage the cdk-to-pulumi skill to migrate my CDK application to a Pulumi application" >}}
+
+## AWS CloudFormation to Pulumi
+
+For teams using CloudFormation directly (rather than through CDK), Neo provides a streamlined migration path. CloudFormation stacks contain complete resource metadata - every resource's logical ID maps to a physical resource in AWS, and CloudFormation tracks these relationships in its stack state. Neo reads this state directly to build a complete picture of your infrastructure. For detailed migration steps, see our [CloudFormation migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/).
+
+The main challenge with CloudFormation migrations is the template language itself. CloudFormation templates use intrinsic functions like `!Ref`, `!GetAtt`, and `!Sub` that create implicit dependencies between resources. A security group might reference a VPC using `!Ref MyVpc`, while a Lambda function's role uses `!GetAtt LambdaRole.Arn`. Neo evaluates these expressions against the actual deployed stack to resolve every reference to its concrete value.
+
+CloudFormation also supports features like conditionals, mappings, and nested stacks that add layers of indirection. Neo handles these by examining what actually got deployed rather than trying to interpret every possible template path. The result is Pulumi code that manages your exact infrastructure configuration - not a theoretical interpretation of your template. The migration completes with `pulumi preview` confirming zero changes to your running resources.
+
+{{< neo-card title="Migrate your CloudFormation stack" prompt="Leverage the cloudformation-to-pulumi skill to migrate my CloudFormation stack to a Pulumi application" >}}
 
 ## Terraform to Pulumi
 
@@ -119,4 +130,4 @@ While Neo automates the heavy lifting, we maintain human checkpoints:
 
 Migration friction no longer locks you into your current IaC tool. If you want Pulumi's programming model, policy engine, and multi-cloud support, Neo gets you there without disrupting your infrastructure.
 
-Ready to migrate? Check out our migration guides for [CDK](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/), [Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/), or [Azure ARM](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/). Join us in the [Pulumi Community Slack](https://slack.pulumi.com/) or reach out to your account team for a guided migration session.
+Ready to migrate? Check out our migration guides for [CDK](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/), [CloudFormation](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/), [Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/), or [Azure ARM](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/). Join us in the [Pulumi Community Slack](https://slack.pulumi.com/) or reach out to your account team for a guided migration session.
