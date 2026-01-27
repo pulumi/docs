@@ -1,10 +1,11 @@
 permissions: write-all # Equivalent to default permissions + id-token: write
 name: "Scheduled jobs: Check search URLs"
 on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string.
-    # Run every day at 3:00PM UTC.
-    - cron: '0 15 * * *'
+  # Schedule disabled due to rate limiting issues - see https://github.com/pulumi/docs/issues/17245
+  # schedule:
+  #   # * is a special character in YAML so you have to quote this string.
+  #   # Run every day at 3:00PM UTC.
+  #   - cron: '0 15 * * *'
   workflow_dispatch: null
 jobs:
   all:
