@@ -20,9 +20,9 @@ But if you look past the firehose, a pattern emerges. These announcements fit to
 
 <!--more-->
 
-{{< youtube "M1OEOmqLz9s?rel=0" >}}
-
 **AWS built a vertically integrated agent-training pipeline; it’s expensive, ambitious, and not for everyone.**
+
+{{< youtube "M1OEOmqLz9s?rel=0" >}}
 
 The clearest place to see that pattern is in how AWS talked about the Nova models. AWS dropped four new foundation models (Lite, Pro, Sonic, Omni) spanning text, multimodal, and speech. And AWS downplayed benchmarks entirely. A hint that the models aren’t the real story.
 
