@@ -28,7 +28,7 @@
         "redux-devtools-extension": "^2.13.9",
         "redux-thunk": "^2.3.0",
         "swiper": "^6.5.6",
-        "uuid": "^8.1.0"
+        "uuid": "^13.0.0"
     },
     "devDependencies": {
         "workbox-build": "^4.3.1"
