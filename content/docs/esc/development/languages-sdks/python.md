@@ -48,6 +48,8 @@ configuration = esc.Configuration(access_token=myAccessToken)
 client = esc.EscClient(configuration)
 ```
 
+The Python SDK honors standard proxy environment variables: `https_proxy`, `http_proxy`, and `no_proxy`. Both lowercase and uppercase variants are supported.
+
 ## Examples
 
 All of these examples expect a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environment variable to be set.
