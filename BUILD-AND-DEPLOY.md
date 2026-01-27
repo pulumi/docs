@@ -1536,7 +1536,7 @@ Delivery: CloudWatch Logs infrastructure v2
 
 ```typescript
 const edgeRedirects = new aws.lambda.Function("edge-redirects", {
-    runtime: "nodejs18.x",
+    runtime: "nodejs22.x",
     handler: "index.handler",
     role: edgeRole.arn,
     code: new pulumi.asset.AssetArchive({
