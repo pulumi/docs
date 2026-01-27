@@ -3,7 +3,7 @@ title: Meet the Pulumi team at KubeCon Europe | Booth X
 meta_desc: Meet the Pulumi team at KubeCon Europe 2026 to see how teams manage Kubernetes with code, reduce YAML complexity, and deploy across AWS, Azure, and GCP.
 meta_image: /images/kubecon/kubecon-meta-26.png
 type: page
-layout: kubecon
+layout: event-page
 
 hero:
   title: "Tame Kubernetes Complexity with Code"

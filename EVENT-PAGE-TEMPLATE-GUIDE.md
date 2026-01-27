@@ -204,7 +204,7 @@ footer_cta:
 
 1. Create a new markdown file in the appropriate content directory (e.g., `content/my-event/`).
 
-1. Add frontmatter with the `kubecon` layout and define your widgets:
+1. Add frontmatter with the `event-page` layout and define your widgets:
 
 ```yaml
 ---
@@ -212,7 +212,7 @@ title: Your Event Title
 meta_desc: Event description for SEO
 meta_image: /images/event/event-meta.png
 type: page
-layout: kubecon
+layout: event-page
 
 hero:
   title: "Event Title"
