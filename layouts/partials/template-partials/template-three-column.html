@@ -1,0 +1,50 @@
+{{/*
+    Template Three Column Partial
+
+    Parameters:
+    - tag_line: Optional tag line (displays in violet above title)
+    - title: Section title
+    - subtitle: Section subtitle/description
+    - columns: Array of column objects
+      Example: [{"icon": "fa-shield", "title": "Title", "description": "Description"}]
+      Note: icon should be Font Awesome icon class (e.g., "fa-shield", "fa-rocket")
+*/}}
+
+{{ $tagLine := .tag_line }}
+{{ $title := .title }}
+{{ $subtitle := .subtitle }}
+{{ $columns := .columns }}
+
+<section class="template-three-column">
+    <div class="text-center">
+        {{ if $tagLine }}
+        <div class="mb-4">
+            <span class="three-column-tag-line">{{ $tagLine }}</span>
+        </div>
+        {{ end }}
+        {{ if $title }}
+        <h2 class="mt-0 mb-4 three-column-title">{{ $title }}</h2>
+        {{ end }}
+        {{ if $subtitle }}
+        <p class="three-column-description max-w-3xl mx-auto">{{ $subtitle }}</p>
+        {{ end }}
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mt-20">
+        {{ range $columns }}
+        <div class="three-column-item text-left">
+            {{ if .title }}
+            <h4 class="three-column-item-title mb-3">
+                {{ if .icon }}
+                <i class="fa {{ .icon }} mr-3"></i>
+                {{ end }}
+                {{ .title }}
+            </h4>
+            {{ end }}
+            {{ if .description }}
+            <p class="three-column-item-description">{{ .description | markdownify }}</p>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>

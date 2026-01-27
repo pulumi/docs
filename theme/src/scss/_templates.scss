@@ -1,0 +1,205 @@
+// Template Components Stylesheet
+// Styles for reusable template partials (template-hero, template-logo-banner, etc.)
+
+$violet-primary: #673EAC;
+@mixin page-header {
+    @apply font-bold leading-extra-tight text-black font-body;
+    font-size: 48px;
+    @screen sm {
+        font-size: 64px;
+    }
+}
+
+@mixin section-header {
+    @apply font-bold leading-extra-tight text-black font-body;
+    font-size: 40px;
+}
+
+@mixin section-header-small {
+    font-feature-settings: 'salt' on;
+    @apply font-bold leading-extra-tight text-black font-body;
+    font-size: 36px;
+}
+
+@mixin section-header-extra-small {
+    font-feature-settings: 'salt' on;
+    @apply font-bold leading-extra-tight text-black font-body;
+    font-size: 32px;
+}
+
+@mixin section-description {
+    @apply font-normal leading-normal text-2xl font-body;
+    font-feature-settings: 'salt' on;
+    color: #5b5b5b;
+}
+
+@mixin section-subheader-bold {
+    @apply font-semibold leading-extra-tight text-black text-2xl font-body;
+    font-feature-settings: 'salt' on;
+}
+
+@mixin section-hint {
+    @apply font-semibold leading-normal text-xl font-body;
+    color: #1e1e1e;
+}
+
+@mixin section-hint-accent {
+    @apply font-semibold leading-normal text-xl font-body;
+    color: $violet-primary;
+}
+
+@mixin section-hint-small {
+    @apply font-semibold leading-normal text-base font-body;
+    font-feature-settings: 'salt' on;
+    color: #757576;
+}
+
+@mixin section-body-medium {
+    @apply font-normal leading-normal text-xl font-body;
+    font-feature-settings: 'salt' on;
+    color: #5b5b5b;
+}
+
+.template-hero {
+    .hero-tag-line {
+        @include section-hint-accent();
+    }
+
+    .hero-booth-number {
+        @include section-hint();
+    }
+
+    .hero-bullet {
+        @apply text-gray-400;
+    }
+
+    .title {
+        @include page-header();
+        line-height: 110% !important;
+    }
+
+    .description {
+        @include section-description();
+    }
+}
+
+.template-logo-banner {
+    .logo-banner-text {
+        @include section-hint-small();
+    }
+}
+
+.template-features {
+    .features-tag-line {
+        @include section-hint-accent();
+    }
+
+    .features-title {
+        @include section-header();
+    }
+
+    .features-description {
+        @include section-description();
+    }
+
+    .feature-title {
+        @include section-subheader-bold();
+    }
+
+    .feature-description {
+        @include section-body-medium();
+    }
+}
+
+.template-card {
+    @apply flex flex-1 items-start rounded-2xl p-8;
+    border: 0.5px solid #AAA;
+
+    .card-label {
+        @include section-hint-accent();
+    }
+
+    .card-title {
+        @include section-header-extra-small();
+    }
+
+    .card-description {
+        @include section-body-medium();
+    }
+}
+
+.template-promo-banner {
+    .promo-banner-title {
+        @include section-header-extra-small();
+        @apply text-white;
+    }
+
+    .promo-banner-description {
+        @include section-body-medium();
+        @apply text-white;
+    }
+
+    .promo-banner-cta {
+        @include section-hint();
+        color: #C19BFF;
+        font-feature-settings: 'salt' on;
+    }
+}
+
+.template-three-column {
+    .three-column-tag-line {
+        @include section-hint-accent();
+    }
+
+    .three-column-title {
+        @include section-header();
+    }
+
+    .three-column-item-title {
+        @include section-subheader-bold();
+    }
+
+    .three-column-item-description {
+        @include section-body-medium();
+    }
+}
+
+.template-testimonial {
+    .template-testimonial-quote {
+        @apply text-white font-body font-semibold leading-normal;
+        font-size: 24px;
+        @screen sm {
+            font-size: 36px;
+        }
+    }
+
+    .template-testimonial-credit {
+        @apply text-white opacity-70 font-body text-2xl font-normal leading-normal;
+    }
+}
+
+.template-location {
+    .location-tag-line {
+        @include section-hint-accent();
+    }
+
+    .location-title {
+        @include section-header();
+    }
+
+    .location-details {
+        @include section-subheader-bold();
+        color: #404041;
+    }
+
+    .location-description {
+        @include section-body-medium();
+        color: #757576;
+    }
+}
+
+.template-footer {
+    .template-footer-title {
+        @include section-header-small();
+    }
+}

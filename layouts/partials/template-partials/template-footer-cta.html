@@ -1,0 +1,32 @@
+{{/*
+    Template Footer CTA Partial
+
+    Parameters:
+    - title: Section title
+    - cta_primary_text: Primary CTA button text
+    - cta_primary_link: Primary CTA button link
+    - cta_secondary_text: Secondary CTA button text
+    - cta_secondary_link: Secondary CTA button link
+*/}}
+
+{{ $title := .title }}
+{{ $ctaPrimaryText := .cta_primary_text }}
+{{ $ctaPrimaryLink := .cta_primary_link }}
+{{ $ctaSecondaryText := .cta_secondary_text }}
+{{ $ctaSecondaryLink := .cta_secondary_link }}
+
+<section class="template-footer">
+    <div class="text-center flex flex-col xxl:flex-row items-center justify-center lg:justify-between gap-8">
+        {{ if $title }}
+        <h2 class="template-footer-title">{{ $title }}</h2>
+        {{ end }}
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {{ if $ctaSecondaryText }}
+            <a href="{{ $ctaSecondaryLink }}" class="btn-secondary">{{ $ctaSecondaryText }}</a>
+            {{ end }}
+            {{ if $ctaPrimaryText }}
+            <a href="{{ $ctaPrimaryLink }}" class="btn-primary">{{ $ctaPrimaryText }}</a>
+            {{ end }}
+        </div>
+    </div>
+</section>

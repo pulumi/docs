@@ -1,70 +1,117 @@
 ---
-title: KubeCon 2025
-meta_desc: Discover how Pulumi transforms cloud infrastructure for the AI era at KubeCon, Booth 1045. Book your demo today.
+title: Meet the Pulumi team at KubeCon Europe | Booth X
+meta_desc: Meet the Pulumi team at KubeCon Europe 2026 to see how teams manage Kubernetes with code, reduce YAML complexity, and deploy across AWS, Azure, and GCP.
 meta_image: /images/kubecon/kubecon-meta-26.png
 type: page
 layout: kubecon
 
-kubernetes_overview:
-    title: Scale Kubernetes Operations with Agentic AI, Not AI Features
+hero:
+  title: "Tame Kubernetes Complexity with Code"
+  description: "Learn how teams provision Kubernetes clusters, enforce security policies, and deploy AI workloads across AWS, Azure, and GCP without the YAML complexity and coordination overhead."
+  cta_text: "Book Your Demo"
+  cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
+  cta_secondary_text: "Get $500 AWS Credits"
+  cta_secondary_link: "#promo-banner"
+  image: "/images/kubecon/kubecon-hero-2026.png"
+  image_alt: "KubeCon Europe 2026"
+  tag_line: "Join us at KubeCon Europe 2026"
+  booth_number: "Booth [TBD]"
+
+logos_text: "Trusted by over 3,700 innovative companies"
+logos:
+  - src: "/logos/customers/deloitte.png"
+    alt: "Deloitte"
+  - src: "/logos/customers/nvidia.png"
+    alt: "NVIDIA"
+  - src: "/logos/customers/bmw.svg"
+    alt: "BMW"  
+  - src: "/logos/customers/webflow-wordmark.svg"
+    alt: "Webflow"
+  - src: "/logos/customers/snowflake-logo.svg"
+    alt: "Snowflake"
+  - src: "/logos/customers/mercedes-benz-RDNA_logo.png"
+    alt: "Mercedes Benz"
+
+features:
+  title: "Do Kubernetes Smarter"
+  subtitle: "Managing Kubernetes at scale is hard enough without having to wrestle with reams of YAML. Meet our engineering team to talk through your Kubernetes challenges."
+  image: "/images/kubecon/code-kubecon-2026.png"
+  image_alt: "Pulumi code example for Kubernetes"
+  features:
+    - icon: "fa-code"
+      title: "Cloud-Native Infrastructure as Code"
+      description: "Write infrastructure in TypeScript, Python, Go, C#, Java, or YAML (your choice), then deploy it anywhere with built-in policy enforcement and secrets management."
+    - icon: "fa-robot"
+      title: "Neo, Your AI Platform Engineer"
+      description: "Watch our AI infrastructure agent handle the work platform teams actually need: upgrade all your clusters, migrate workloads across clouds, or implement security policies across your entire fleet. Neo understands your intent and executes complex infrastructure operations that would take hours manually."
+    - icon: "fa-cloud"
+      title: "Multi-Cloud, One Platform"
+      description: "Provision and manage Kubernetes resources across AWS, Azure, GCP, and on-prem with over 290 providers using a single workflow."
+
+two_column:
+  - label: "Book a Demo"
+    title: "Book a Demo"
+    description: "Schedule a demo with one of our solutions architects to share your specific Kubernetes challenges. They'll come prepared and dive straight into what matters most to you."
+    cta_text: "Book your demo"
+    cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
+  - label: "Attend a Technical Workshop"
+    title: "From Zero to Production in Kubernetes"
     description: |
-      Neo for Kubernetes: The first purpose-built infrastructure AI agent that understands your K8s environment, cloud dependencies, and container policies—delivering expert-level automation for modern container workloads.
-    emphasis: "Visit Pulumi booth #1045 at KubeCon Atlanta to see live demos."
+      March 31 | 9 AM ET / 2 PM BST
 
-superpowers:
-    - title: Turn Kubernetes Complexity into Competitive Advantage
-      icon_type: provisioning
-      description:
-        - When AI development creates 3x more Kubernetes demands, your platform team shouldn't become the constraint. Neo brings Kubernetes expertise to AI—purpose-built intelligence that understands container orchestration, multi-cloud K8s deployments, and enterprise governance
+      Learn how to:
+      - Deploy production-ready applications repeatably across environments
+      - Implement security-by-construction practices with policy-as-code
+      - Manage Kubernetes and cloud infrastructure together in a single workflow
 
-    - title: Built on Kubernetes Intelligence, Not Just AI
-      icon_type: delivery
-      description:
-        - 6+ years of production Kubernetes automation across AWS, Azure, GCP, and on-premises
-        - Native K8s governance respects existing RBAC, network policies, and security constraints
-        - "Proven results: Snowflake (1.5 weeks→1 day deployments), Starburst (112x faster), Unity (80% reduced deployment times)"
+      Hands-on and practical, focused on real-world Kubernetes workflows.
+    cta_text: "Register for workshop"
+    cta_link: "/events/from-zero-to-production-in-kubernetes/"
 
-    - title: Kubernetes-Native Integration
-      icon_type: policy
-      description:
-        - CI/CD & GitOps ready, drift detection & reconciliation, preview changes, and secure secrets management with External Secrets Operator integration.
+promo_banner:
+  title: "Get $500 in AWS Credits"
+  description: "All KubeCon attendees who sign up for Pulumi Cloud receive $500 in AWS credits to use on their own infrastructure."
+  cta_text: "Scan the QR code at the booth to get started."
+  bg_image: "/images/kubecon/aws-credits-background.png"
 
-    - title: Expert Help Without the Wait
-      icon_type: cloud
-      description:
-        - Handle complex K8s operations in minutes. Delegate jobs like "Neo, upgrade all clusters to latest stable" and get enterprise-grade execution with full audit trails. Platform teams handle 10x more Kubernetes requests with the same headcount.
+three_column:
+  tag_line: "Why platform teams choose Pulumi"
+  title: "Infrastructure That Reduces Kubernetes Complexity"
+  columns:
+    - icon: "fa-code"
+      title: "Stop Context-Switching"
+      description: "Your team already knows Python, TypeScript, or Go. Use those skills to provision infrastructure instead of learning another DSL. BMW's platform engineering team ramped new hires in 2-3 days using their existing Python knowledge."
+    - icon: "fa-check"
+      title: "Keep What Works"
+      description: "Using Terraform already? Pulumi Cloud manages your existing Terraform and OpenTofu state files. No migration required. Start new projects with Pulumi and convert legacy infrastructure when it makes sense for your team."
+    - icon: "fa-robot"
+      title: "Ship AI Workloads Confidently"
+      description: "41% of AI developers are moving to cloud-native infrastructure. Teams need predictable ways to provision GPU resources, manage model deployments, and scale inference workloads. Pulumi provides the infrastructure foundation AI teams depend on."
 
-detail_sections:
-    - title: Pulumi at KubeCon North America
-      description: |
-        Pulumi streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
-      items:
-          - title: Join our Kubernetes Happy Hour
-            icon: security
-            icon_color: violet
-            description: |
-              Join Pulumi, Buildkite, Oso, and Honeycomb for premium cocktails and stunning Atlanta skyline views at Glenn's Skylounge. Tuesday, November 11, 8-10 PM – the perfect KubeCon wind-down! 21+ only, first-come, first served.
-            link: https://buildkite.com/resources/events/25/kubecon-happy-hour/
-            cta: RSVP to Happy Hour
+testimonial:
+  quote: "We manage over 20,000 resources across multiple clouds with Pulumi. It solved our Terraform coordination overhead and gave us the velocity we needed."
+  author: " — Platform Engineering Team, BMW"
+  title: ""
+  company: "BMW"
+  logo: "/logos/customers/bmw.svg"
+  bg_image: "/images/kubecon/bmw-background.png"
 
-          - title: Book a 1:1 Demo with a Kubernetes Expert in Booth 1045
-            icon: pen
-            icon_color: yellow
-            description: |
-              See Neo Solve Your Specific Container Challenges:
+location:
+  tag_line: "Venue & location"
+  title: "Where to Find Us"
+  location: |
+    Booth [TBD], Amsterdam RAI<br>
+    March 23-26, 2026
+  description: "Stop by to see Neo live demos, grab exclusive Pulumi Neo sunglasses (limited quantities), register for $500 AWS credits (first 25 signups), and talk infrastructure architecture with our engineering team."
+  map_embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.6116720155323!2d4.886040676670286!3d52.341190572014874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60a1f63d57e25%3A0xa08f37a724d09338!2sAmsterdam%20RAI!5e0!3m2!1sen!2sus!4v1769463657049!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+  cta_text: "Book a technical discussion"
+  cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
 
-              Get a personalized demo showing how Neo handles your exact K8s use cases - from multi-cloud cluster management to application deployment automation, all within your governance framework.
-            link: "https://calendly.com/pulumi-meetings/demo-pulumi-at-kubecon-atlanta"
-            cta: Book your demo
-
-          - title: "Join the Kubernetes Workshop: From Zero to Production in Kubernetes"
-            icon: team
-            icon_color: salmon
-            description: |
-              Nov 20, 2025 9 am PT/Noon ET
-
-              Join us to explore how agentic workflows and modern tooling accelerate Kubernetes deployments to production, covering multi-cloud management, large-scale operations, complex migrations, and enterprise-grade infrastructure coordination
-            link: /events/from-zero-to-production-in-kubernetes/
-            cta: RSVP for Workshop
-
+footer_cta:
+  title: "The Infrastructure-as-Code platform for any cloud."
+  cta_primary_text: "Try Pulumi for free"
+  cta_primary_link: "/signup"
+  cta_secondary_text: "Contact sales"
+  cta_secondary_link: "/contact"
 ---
+

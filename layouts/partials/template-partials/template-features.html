@@ -1,0 +1,58 @@
+{{/*
+    Template Features Partial
+
+    Parameters:
+    - tag_line: Optional tag line (displays in violet above title)
+    - title: Section title
+    - subtitle: Section subtitle
+    - image: Optional image path for right column
+    - image_alt: Optional alt text for image
+    - features: Array of feature objects
+      Example: [{"icon": "fa-rocket", "title": "Title", "description": "Description"}]
+      Note: icon should be Font Awesome icon class (e.g., "fa-rocket", "fa-code")
+*/}}
+
+{{ $tagLine := .tag_line }}
+{{ $title := .title }}
+{{ $subtitle := .subtitle }}
+{{ $image := .image }}
+{{ $imageAlt := .image_alt | default $title }}
+{{ $features := .features }}
+
+<section class="template-features">
+    <div class="text-center mb-24">
+        {{ if $tagLine }}
+        <div class="mb-4">
+            <span class="features-tag-line">{{ $tagLine }}</span>
+        </div>
+        {{ end }}
+        {{ if $title }}
+        <h2 class="features-title mb-4">{{ $title }}</h2>
+        {{ end }}
+        {{ if $subtitle }}
+        <p class="features-description max-w-3xl mx-auto">{{ $subtitle }}</p>
+        {{ end }}
+    </div>
+
+    <div class="flex flex-col xl:flex-row items-start gap-16 xl:gap-48">
+        <div class="xl:w-1/2 space-y-6 text-left">
+            {{ range $features }}
+            <div class="py-4 feature-item flex flex-col text-left">
+                <h4 class="feature-title mb-2">
+                    {{ if .icon }}
+                    <i class="fa {{ .icon }} mr-3"></i>
+                    {{ end }}
+                    {{ .title }}
+                </h4>
+                <p class="feature-description">{{ .description | markdownify }}</p>
+            </div>
+            {{ end }}
+        </div>
+
+        {{ if $image }}
+        <div class="xl:w-1/2">
+            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto rounded-lg">
+        </div>
+        {{ end }}
+    </div>
+</section>

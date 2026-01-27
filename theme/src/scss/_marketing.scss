@@ -55,7 +55,7 @@ body {
             @apply underline;
         }
 
-        &.btn-primary {
+        &.btn-primary, &.btn-primary-template-variant {
             @apply text-white;
         }
     }
@@ -75,12 +75,32 @@ body {
     }
 
     .btn-primary,
-    .btn-secondary {
+    .btn-secondary,
+    .btn-primary-template-variant,
+    .btn-secondary-template-variant {
         @apply whitespace-normal;
     }
 
     .btn-primary {
         @include gradient-button;
+    }
+
+    .btn-primary-template-variant {
+        @apply relative text-white bg-violet-600 border-violet-600 border-2 rounded-lg cursor-pointer z-auto;
+        background-color: #673eac;
+        &:hover {
+            background-color: #805ac3;
+        }
+    }
+
+    .btn-secondary-template-variant {
+        @apply relative border-2 rounded-lg cursor-pointer z-auto;
+        background-color: white;
+        border: 0.5px solid #5B5B5B;
+        color: #2B2B2C;
+        &:hover {
+            background-color: #faf9fd;
+        }
     }
 
     .btn-secondary {

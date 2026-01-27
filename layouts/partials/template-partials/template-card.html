@@ -1,0 +1,40 @@
+{{/*
+    Template Card Partial
+
+    Parameters:
+    - label: Optional label/subheader text
+    - title: Card title
+    - description: Card description (supports markdown)
+    - cta_text: CTA button text
+    - cta_link: CTA button link
+*/}}
+
+{{ $label := .label }}
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
+
+<div class="template-card">
+    <div class="flex flex-col gap-8 h-full w-full">
+        <div class="flex flex-col gap-4">
+            {{ if $label }}
+            <p class="card-label m-0">{{ $label }}</p>
+            {{ end }}
+
+            {{ if $title }}
+            <h3 class="card-title m-0 mb-2">{{ $title }}</h3>
+            {{ end }}        
+            
+            {{ if $ctaText }}
+            <a href="{{ $ctaLink }}" class="btn-secondary-template-variant self-start">{{ $ctaText }}</a>
+            {{ end }}
+        </div>
+
+        {{ if $description }}
+        <div class="card-description flex-grow">
+            {{ $description | markdownify }}
+        </div>
+        {{ end }}
+    </div>
+</div>

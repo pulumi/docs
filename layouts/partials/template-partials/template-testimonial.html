@@ -1,0 +1,38 @@
+{{/*
+    Template Testimonial Partial
+
+    Parameters:
+    - quote: Testimonial quote
+    - author: Author name
+    - title: Author title
+    - company: Company name
+    - logo: Logo path
+    - bg_image: Optional background image path
+*/}}
+
+{{ $quote := .quote }}
+{{ $author := .author }}
+{{ $title := .title }}
+{{ $company := .company }}
+{{ $logo := .logo }}
+{{ $bgImage := .bg_image }}
+
+<section class="rounded-2xl template-testimonial px-12 py-24 {{ if not $bgImage }}bg-violet-700{{ end }}" {{ if $bgImage }}style="background-image: url('{{ $bgImage }}'); background-size: cover; background-position: center;"{{ end }}>
+        {{ if $logo }}
+        <div class="mb-8">
+            <img src="{{ $logo }}" alt="{{ $company }}" class="h-16 w-auto" />
+        </div>
+        {{ end }}
+        {{ if $quote }}
+        <p class="template-testimonial-quote w-full md:w-3/4">
+            "{{ $quote }}"
+        </p>
+        {{ end }}
+        {{ if or $author $title $company }}
+        <div class="template-testimonial-credit">
+            {{ if $author }}<span class="">{{ $author }}</span>{{ end }}
+            {{ if $title }}{{ if $author }}, {{ end }}<span>{{ $title }}</span>{{ end }}
+            {{ if $company }}{{ if or $author $title }} at {{ end }}<span>{{ $company }}</span>{{ end }}
+        </div>
+        {{ end }}
+</section>
