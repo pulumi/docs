@@ -2,6 +2,7 @@
 title: "AWS built an integrated AI Agent training pipeline and they want you to rent it"
 allow_long_title: true
 date: 2025-12-10
+updated: 2026-01-27
 draft: false
 meta_desc: "At re:Invent 2025, AWS revealed a vertically integrated AI training pipeline. Here's who it's actually for."
 meta_image: meta.png
@@ -16,6 +17,10 @@ tags:
 AWS re:Invent 2025 delivered a myriad of announcements across AI, silicon, and cloud infrastructure. AWS unveiled the expanded Nova model family, introduced Nova Forge for custom model training, launched Trainium3 UltraServers, and added major production features to AgentCore. It was a lot, and taken at face value, it looks like another scattershot year of big releases.
 
 But if you look past the firehose, a pattern emerges. These announcements fit together into a single bet about how enterprise AI will be built.
+
+<!--more-->
+
+{{< youtube "M1OEOmqLz9s?rel=0" >}}
 
 **AWS built a vertically integrated agent-training pipeline; it’s expensive, ambitious, and not for everyone.**
 
