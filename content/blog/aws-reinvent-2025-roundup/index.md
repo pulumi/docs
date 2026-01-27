@@ -2,6 +2,7 @@
 title: "AWS built an integrated AI Agent training pipeline and they want you to rent it"
 allow_long_title: true
 date: 2025-12-10
+updated: 2026-01-27
 draft: false
 meta_desc: "At re:Invent 2025, AWS revealed a vertically integrated AI training pipeline. Here's who it's actually for."
 meta_image: meta.png
@@ -17,7 +18,11 @@ AWS re:Invent 2025 delivered a myriad of announcements across AI, silicon, and c
 
 But if you look past the firehose, a pattern emerges. These announcements fit together into a single bet about how enterprise AI will be built.
 
+<!--more-->
+
 **AWS built a vertically integrated agent-training pipeline; it’s expensive, ambitious, and not for everyone.**
+
+{{< youtube "M1OEOmqLz9s?rel=0" >}}
 
 The clearest place to see that pattern is in how AWS talked about the Nova models. AWS dropped four new foundation models (Lite, Pro, Sonic, Omni) spanning text, multimodal, and speech. And AWS downplayed benchmarks entirely. A hint that the models aren’t the real story.
 
