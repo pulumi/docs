@@ -18,7 +18,7 @@
         "tailwindcss": "^2.2.9"
     },
     "devDependencies": {
-        "@fullhuman/postcss-purgecss": "^4.0.3",
+        "@fullhuman/postcss-purgecss": "^8.0.0",
         "@types/jquery": "^3.5.6",
         "autoprefixer": "^10.3.3",
         "concurrently": "^6.2.1",
