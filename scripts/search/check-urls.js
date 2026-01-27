@@ -1,6 +1,6 @@
 const fs = require("fs");
 const axios = require("axios").default;
-const retry = require("axios-retry");
+const retry = require("axios-retry").default;
 
 async function checkSearchURLs(baseURL) {
 
@@ -20,15 +20,28 @@ async function checkSearchURLs(baseURL) {
         chunks.push({ chunk: i / chunkSize, objects: objects.slice(i, i + chunkSize) });
     }
 
-    // Retry failed requests up to three times.
+    // Retry failed requests up to three times with exponential backoff.
     retry(axios, {
         retries: 3,
+        retryDelay: (retryCount) => {
+            return retryCount * 1000;  // Exponential backoff: 1s, 2s, 3s
+        },
         shouldResetTimeout: true,
-        onRetry: (count, error, config) => console.log(`    ↳ ${config.url} failed (${error.message}). Retrying...`),
+        onRetry: (count, error, config) => {
+            const errorInfo = error.code || error.response?.status || error.message || 'Unknown error';
+            console.log(`    ↳ ${config.url} failed (${errorInfo}). Retry ${count}/3...`);
+        },
     });
 
     for await (const chunk of chunks) {
         console.log(` ↳ Checking group ${chunk.chunk + 1} of ${chunks.length} (${chunk.objects.length} URLs)...`);
+
+        // Add delay before each batch to avoid rate limiting (except first batch)
+        if (chunk.chunk > 0) {
+            const delayMs = 10000;  // 10 seconds between batches
+            console.log(`   [Waiting ${delayMs/1000}s before next batch...]`);
+            await new Promise(resolve => setTimeout(resolve, delayMs));
+        }
 
         const result = await Promise.allSettled(chunk.objects.map(obj => {
             const url = obj.href.startsWith("http") ? obj.href : `${baseURL}${obj.href}`;
@@ -47,7 +60,18 @@ async function checkSearchURLs(baseURL) {
                     }
                 }
                 catch (error) {
-                    reject(`${url} ERROR: ${error}`);
+                    // Log full error details for diagnosis
+                    const errorDetails = {
+                        code: error.code,
+                        message: error.message,
+                        status: error.response?.status,
+                        statusText: error.response?.statusText,
+                    };
+                    console.error(`    ✗ ${url} error details:`, JSON.stringify(errorDetails));
+
+                    // Reject with meaningful error message
+                    const errorMsg = error.code || error.response?.status || error.message || 'Unknown error';
+                    reject(`${url} ERROR: ${errorMsg}`);
                 }
             });
         }));
@@ -71,11 +95,27 @@ checkSearchURLs(process.argv[2] || "https://www.pulumi.com")
         console.log(" ↳ Done. ✨\n");
 
         if (summary.rejected.length > 0) {
-            throw new Error(`One or more URLs failed: \n\n${summary.rejected.join("\n")}\n`);
+            console.error(`\n✗ ${summary.rejected.length} URLs failed:\n`);
+
+            // Group errors by type for better visibility
+            const errorTypes = {};
+            summary.rejected.forEach(reason => {
+                const match = reason.match(/ERROR: (.+)$/);
+                const errorType = match ? match[1] : 'Unknown';
+                errorTypes[errorType] = (errorTypes[errorType] || 0) + 1;
+            });
+
+            console.error('Error types:');
+            Object.entries(errorTypes).forEach(([type, count]) => {
+                console.error(`  - ${type}: ${count} URLs`);
+            });
+
+            throw new Error(`One or more URLs failed:\n\n${summary.rejected.join("\n")}\n`);
         }
     });
 
 // Exit non-zero when something goes wrong in the promise chain.
 process.on("unhandledRejection", error => {
-    throw new Error(error);
+    console.error('Unhandled rejection:', error);
+    process.exit(1);
 });

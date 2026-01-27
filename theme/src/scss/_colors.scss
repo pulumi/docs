@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $black: #000;
 $white: #fff;
 
@@ -13,12 +15,12 @@ $brand: (
     "blue-darker": #4552c3,
 );
 
-$brand-yellow: map-get($brand, "yellow");
-$brand-salmon: map-get($brand, "salmon");
-$brand-fuchsia: map-get($brand, "fuchsia");
-$brand-purple: map-get($brand, "purple");
-$brand-violet: map-get($brand, "violet");
-$brand-blue: map-get($brand, "blue");
+$brand-yellow: map.get($brand, "yellow");
+$brand-salmon: map.get($brand, "salmon");
+$brand-fuchsia: map.get($brand, "fuchsia");
+$brand-purple: map.get($brand, "purple");
+$brand-violet: map.get($brand, "violet");
+$brand-blue: map.get($brand, "blue");
 
 $gray: (
     100: #f9f9f9,
