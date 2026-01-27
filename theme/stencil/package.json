@@ -31,6 +31,6 @@
         "uuid": "^8.1.0"
     },
     "devDependencies": {
-        "workbox-build": "^4.3.1"
+        "workbox-build": "^7.4.0"
     }
 }
