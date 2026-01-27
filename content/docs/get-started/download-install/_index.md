@@ -585,7 +585,7 @@ To install, run our installation script:
 1. Run our installation script:
 
 <div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-install-script">&gt; @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString</code></pre>
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-install-script">&gt; @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &amp; ([ScriptBlock]::Create((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))) -Version dev" &amp;&amp; SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"</code></pre>
 </div>
 
 {{% /choosable %}}
