@@ -3086,7 +3086,7 @@ Dependabot automatically updates GitHub Actions versions. Review and merge Depen
 | `peaceiris/actions-hugo` | v2 | Hugo installation |
 | `pulumi/actions` | v4 | Pulumi CLI installation |
 | `pulumi/esc-action` | v1 | Pulumi ESC integration |
-| `pulumi/action-install-pulumi-cli` | v2.0.0 | Pulumi CLI installation (specific version) |
+| `pulumi/action-install-pulumi-cli` | v1.0.1 | Legacy action used in the CLI release workflow; `pulumi/actions` should be used everywhere else |
 | `jaxxstorm/action-install-gh-release` | v2.1.0 | Install tools from GitHub releases |
 | `treosh/lighthouse-ci-action` | v12 | Lighthouse CI integration |
 | `hmarr/auto-approve-action` | v4 | Automated PR approval |
@@ -3098,7 +3098,6 @@ Dependabot automatically updates GitHub Actions versions. Review and merge Depen
 - **setup-node v4 → v6**: Updated Node.js setup action with improved caching and performance
 - **jaxxstorm/action-install-gh-release v1 → v2**: Enhanced GitHub release installation with better error handling
 - **create-github-app-token v1 → v2**: Updated GitHub App token generation with security improvements
-- **pulumi/action-install-pulumi-cli v1 → v2**: Major version update for Pulumi CLI installation
 
 **Example Update:**
 
