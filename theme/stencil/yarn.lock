@@ -796,10 +796,10 @@
   dependencies:
     "@sinonjs/commons" "^3.0.1"
 
-"@stencil/core@^4.41.2":
-  version "4.41.2"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.41.2.tgz#833919cce5bb8b09a8ffdca885482cc95db38f49"
-  integrity sha512-H+WRGshEgcRLrnyj2G+gvMlzEYaAFTjqDQeiP+AuVB7YneuA9pM3Ms8T1L+KwcCSzcZFsLfQN/3sAhHSlpZAQQ==
+"@stencil/core@^4.41.3":
+  version "4.41.3"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.41.3.tgz#d28e55fec74223fd8481950316c1ad9653241f42"
+  integrity sha512-zQ/7/hwsJBKYz0CzN3LyKJ3JdnNTdsYMY+futdyodTLkPNlPeRWVF1EI5syaBb09W+ay/T+TsYbPMXbXgG/3qQ==
   optionalDependencies:
     "@rollup/rollup-darwin-arm64" "4.34.9"
     "@rollup/rollup-darwin-x64" "4.34.9"
