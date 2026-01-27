@@ -16,9 +16,9 @@
     ]
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.738.0",
+    "@aws-sdk/client-s3": "^3.971.0",
     "@fullhuman/postcss-purgecss": "^7.0.0",
-    "@growthbook/growthbook": "^1.2.1",
+    "@growthbook/growthbook": "^1.6.2",
     "@octokit/auth-action": "^5.1.1",
     "@octokit/graphql": "^8.1.1",
     "@octokit/rest": "^21.1.1",
@@ -30,25 +30,25 @@
     "cheerio": "^1.1.2",
     "concurrently": "^9.1.2",
     "cssnano": "^7.0.7",
-    "cypress": "^15.7.1",
+    "cypress": "^15.9.0",
     "glob": "^10.4.5",
     "gray-matter": "^4.0.3",
     "http-server": "^14.1.1",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "jsdom": "^25.0.1",
     "markdown-it": "^14.1.0",
     "markdownlint": "^0.40.0",
     "parse-diff": "^0.11.1",
     "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",
-    "sitemapper": "^3.2.9",
+    "sitemapper": "^4.0.2",
     "turndown": "^7.2.0",
     "typedoc": "^0.28.15",
     "typescript": "^5.7.2"
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.10",
+    "lint-staged": "^16.2.7",
     "prettier": "^2.8.8"
   }
 }
