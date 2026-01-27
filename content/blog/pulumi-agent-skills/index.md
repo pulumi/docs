@@ -50,7 +50,7 @@ AI coding assistants have transformed how developers write software, including i
 
 <!--more-->
 
-The gap is not intelligence, it is expertise. General-purpose agents lack the domain knowledge that experienced Pulumi developers accumulate over time. They do not know that creating resources inside `apply()` means those resources will not appear in preview. They do not know the specific flags needed to import an existing Azure resource. They have not internalized the workflow differences between converting Terraform state versus just translating HCL syntax.
+That's because general-purpose agents lack the domain knowledge that experienced IaC developers build up over time. Pulumi developers know, for example, that creating resources inside `apply()` means those resources will not appear in preview. They do not know the specific flags needed to import an existing Azure resource. They have not internalized the workflow differences between converting Terraform state versus just translating HCL syntax.
 
 We built [Neo](https://www.pulumi.com/product/neo/) for teams that want deep Pulumi expertise combined with organizational context and deployment governance. But developers have preferred tools, and we want people to succeed with Pulumi wherever they work. Some teams live in Claude Code. Others use Cursor, Copilot, Codex, or Gemini. That is why we are releasing Pulumi Agent Skills, a collection of packaged expertise that teaches any AI coding assistant how to work with Pulumi the way an experienced practitioner would.
 
@@ -66,13 +66,13 @@ We are launching with skills covering two areas: migration workflows and Pulumi 
 
 These skills help AI assistants guide you through complete migrations, not just syntax translation.
 
-**Terraform to Pulumi** walks through the full migration workflow. It handles state translation, provider version alignment, and the iterative process of achieving a clean `pulumi preview` with no unexpected changes.
+* **Terraform to Pulumi** walks through the full migration workflow. It handles state translation, provider version alignment, and the iterative process of achieving a clean `pulumi preview` with no unexpected changes.
 
-**CDK to Pulumi** covers AWS CDK migrations in depth. The skill includes strategies for handling CDK's Lambda-backed custom resources, asset bundling, cross-stack references, and the decision framework for when to use `aws-native` versus `aws` providers.
+* **CDK to Pulumi** covers AWS CDK migrations in depth. The skill includes strategies for handling CDK's Lambda-backed custom resources, asset bundling, cross-stack references, and the decision framework for when to use `aws-native` versus `aws` providers.
 
-**CloudFormation to Pulumi** guides assistants through converting CloudFormation templates and importing existing stacks into Pulumi management.
+* **CloudFormation to Pulumi** guides assistants through converting CloudFormation templates and importing existing stacks into Pulumi management.
 
-**ARM to Pulumi** handles Azure Resource Manager and Bicep template conversion, including the import workflow for bringing existing Azure resources under Pulumi management.
+* **ARM to Pulumi** handles Azure Resource Manager and Bicep template conversion, including the import workflow for bringing existing Azure resources under Pulumi management.
 
 ### Capability skills
 
@@ -183,3 +183,5 @@ We expect this collection to grow. If you have Pulumi expertise worth packaging,
 ## Get started
 
 The skills are available now at [github.com/pulumi/agent-skills](https://github.com/pulumi/agent-skills). Install them in your preferred AI coding environment and let us know what you build.
+
+{{< github-card repo="pulumi/agent-skills" >}}
