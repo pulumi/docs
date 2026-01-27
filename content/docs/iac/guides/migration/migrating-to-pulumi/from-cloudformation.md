@@ -18,11 +18,61 @@ aliases:
 
 <img src="/logos/tech/aws_cloudformation.png" align="right" class="h-32 px-8 pb-4">
 
-If your team has already provisioned infrastructure using AWS CloudFormation, and you'd like to adopt Pulumi, you have three primary strategies you can take:
+If your team has already provisioned infrastructure using AWS CloudFormation, and you'd like to adopt Pulumi, you have several strategies you can take:
 
+* **[Neo](/product/neo/) (Recommended)**: Use Neo to automatically convert your CloudFormation templates and import existing resources with zero downtime
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by CloudFormation by referencing stack outputs.
 * [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing resources into Pulumi in the usual way.
 * [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
+
+## Choosing a CloudFormation migration path
+
+### Pulumi Neo (Recommended)
+
+* **Automated conversion**: Neo converts your CloudFormation templates to Pulumi code automatically
+* **Safety verification**: Neo runs `pulumi preview` to prove no changes before you commit
+
+#### Quick start with Neo
+
+1. **Prerequisites**:
+   * Install the [Pulumi GitHub app](https://github.com/apps/pulumi-cloud) with access to your repository that contains your CloudFormation template files
+   * Configure AWS credentials in [Pulumi ESC](/docs/esc/)
+   * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
+
+1. **Start the migration**:
+
+   ```text
+   "Convert my CloudFormation templates to Pulumi"
+   ```
+
+1. **Neo will**:
+   * Parse your CloudFormation templates
+   * Evaluate template expressions and intrinsic functions
+   * Generate equivalent Pulumi code
+   * Import existing AWS resources without touching them
+   * Verify zero changes with `pulumi preview`
+
+1. **Review and commit**:
+   * Examine the generated Pulumi code
+   * Confirm the preview shows no changes
+   * Commit your new Pulumi program
+
+For a detailed technical walkthrough, see our [Neo migration blog post](/blog/neo-migration/).
+
+#### When to use manual migration instead
+
+While Neo handles most CloudFormation templates automatically, you might need manual migration for:
+
+* Custom resources or macros not yet supported by Neo
+* Scenarios where you want to fundamentally restructure during migration
+
+If you want to fundamentally restructure your infrastructure, we recommend completing the migration first and then refactoring your Pulumi code.
+
+Continue reading below for manual migration approaches if Neo doesn't fit your specific needs.
+
+### Alternative migration paths
+
+If Neo doesn't support your specific use case, or if you prefer manual control over the migration process, the options below provide flexibility to coexist with or migrate from CloudFormation at your own pace.
 
 For detailed guidance on finding AWS import IDs and handling CloudFormation-specific edge cases (including examples that also apply to CDK-generated stacks), see [AWS import IDs and special cases](/docs/iac/guides/migration/aws-import-ids/).
 
