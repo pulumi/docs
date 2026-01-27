@@ -18,7 +18,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.971.0",
     "@fullhuman/postcss-purgecss": "^7.0.0",
-    "@growthbook/growthbook": "^1.6.2",
+    "@growthbook/growthbook": "^1.6.4",
     "@octokit/auth-action": "^5.1.1",
     "@octokit/graphql": "^8.1.1",
     "@octokit/rest": "^21.1.1",
