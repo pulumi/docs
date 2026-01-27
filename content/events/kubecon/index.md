@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: KubeCon + CloudNativeCon Europe 2025
-meta_desc: Ready to streamline your Kubernetes setup? Visit Pulumi in booth S450 to hear about universal infrastructure as code for Kubernetes.
+title: KubeCon Europe 2026
+meta_desc: Meet the Pulumi team at KubeCon Europe 2026 to see how teams manage Kubernetes with code, reduce YAML complexity, and deploy across AWS, Azure, and GCP.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,12 +26,12 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: /kubecon-europe
+url_slug: https://www.pulumi.com/kubecon
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: KubeCon Europe
+    title: KubeCon + CloudNativeCon Europe 2026
 
     event_type: event # workshop | event
 
@@ -39,16 +39,17 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-04-01T09:00:00-07:00
+    sortable_date: 2026-03-23T09:00:00+00:00
 
     # Duration of the webinar.
-    duration: 1 hour
+    duration: 4 days
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: London, England
+    location: Amsterdam
 
     # Description of the webinar.
-    description:
+    description: |
+        Meet the Pulumi team at KubeCon Europe 2026 to see how teams manage Kubernetes with code, reduce YAML complexity, and deploy across AWS, Azure, and GCP.
 
     # The webinar presenters
     presenters:
