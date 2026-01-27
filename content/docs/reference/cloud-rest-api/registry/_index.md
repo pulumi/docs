@@ -230,7 +230,7 @@ curl \
 List all registry templates visible to the user.
 
 ```plain
-GET /api/preview/registry/templates
+GET /api/registry/templates
 ```
 
 ### Parameters
@@ -246,7 +246,7 @@ GET /api/preview/registry/templates
 curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/preview/registry/templates?orgLogin=my-org
+  https://api.pulumi.com/api/registry/templates?orgLogin=my-org
 ```
 
 ### Default response
@@ -282,7 +282,7 @@ Status: 200 OK
 Retrieve metadata for a specific template version.
 
 ```plain
-GET /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{version}
+GET /api/registry/templates/{source}/{publisher}/{name}/versions/{version}
 ```
 
 ### Parameters
@@ -300,7 +300,7 @@ GET /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{versio
 curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/preview/registry/templates/private/my-org/my-template/versions/1.0.0
+  https://api.pulumi.com/api/registry/templates/private/my-org/my-template/versions/1.0.0
 ```
 
 ### Default response
@@ -365,7 +365,7 @@ Status: 200 OK
 Initiates the process of publishing a new version of a template to the registry.
 
 ```plain
-POST /api/preview/registry/templates/{source}/{publisher}/{name}/versions
+POST /api/registry/templates/{source}/{publisher}/{name}/versions
 ```
 
 ### Parameters
@@ -386,7 +386,7 @@ curl \
   -H "Content-Type: application/json" \
   --request POST \
   --data '{"version":"1.0.0"}' \
-  https://api.pulumi.com/api/preview/registry/templates/private/my-org/my-template/versions
+  https://api.pulumi.com/api/registry/templates/private/my-org/my-template/versions
 ```
 
 ### Default response
@@ -412,7 +412,7 @@ After receiving the upload URL:
 Complete the template publishing process after uploading the template archive.
 
 ```plain
-POST /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{version}/complete
+POST /api/registry/templates/{source}/{publisher}/{name}/versions/{version}/complete
 ```
 
 ### Parameters
@@ -434,7 +434,7 @@ curl \
   -H "Content-Type: application/json" \
   --request POST \
   --data '{"operationID":"a1b2c3d4-e5f6-7890-abcd-ef1234567890"}' \
-  https://api.pulumi.com/api/preview/registry/templates/private/my-org/my-template/versions/1.0.0/complete
+  https://api.pulumi.com/api/registry/templates/private/my-org/my-template/versions/1.0.0/complete
 ```
 
 ### Default response
@@ -456,7 +456,7 @@ The template version is now published and available to your organization.
 Delete a specific version of a template from the registry.
 
 ```plain
-DELETE /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{version}
+DELETE /api/registry/templates/{source}/{publisher}/{name}/versions/{version}
 ```
 
 ### Parameters
