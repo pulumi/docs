@@ -21,7 +21,7 @@
     "@growthbook/growthbook": "^1.6.2",
     "@octokit/auth-action": "^5.1.1",
     "@octokit/graphql": "^8.1.1",
-    "@octokit/rest": "^21.1.1",
+    "@octokit/rest": "^22.0.1",
     "@slack/web-api": "^7.11.0",
     "algoliasearch": "^5.20.0",
     "axios": "^1.7.9",
