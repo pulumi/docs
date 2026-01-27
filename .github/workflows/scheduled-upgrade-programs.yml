@@ -69,7 +69,7 @@ jobs:
           extended: true
 
       - name: Install Pulumi
-        uses: pulumi/actions@v4
+        uses: pulumi/actions@v6
 
       - name: Check out the code
         uses: actions/checkout@v4
