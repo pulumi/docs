@@ -85,7 +85,7 @@ jobs:
           pulumi-version: latest
 
       - name: Check out the code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Fetch master branch
         if: github.ref != 'refs/heads/master'

@@ -21,7 +21,7 @@ jobs:
         id: esc-secrets
         uses: pulumi/esc-action@v1
       - name: checkout docs repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: set the pulumi version
         run: |
           echo "PULUMI_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
@@ -44,11 +44,11 @@ jobs:
         run: |
           echo "PULUMI_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
       - name: checkout docs repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: docs
       - name: checkout pulumi repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: pulumi/pulumi
           path: pulumi

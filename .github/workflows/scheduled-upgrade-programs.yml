@@ -72,7 +72,7 @@ jobs:
         uses: pulumi/actions@v4
 
       - name: Check out the code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
 
