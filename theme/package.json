@@ -13,7 +13,7 @@
         "@types/marked": "^4.0.8",
         "algoliasearch": "^5.46.3",
         "clipboard-polyfill": "^3.0.3",
-        "marked": "^4.3.0",
+        "marked": "^17.0.1",
         "search-insights": "^2.17.2",
         "tailwindcss": "^2.2.9"
     },
