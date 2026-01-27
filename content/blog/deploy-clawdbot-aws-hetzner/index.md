@@ -25,7 +25,7 @@ social:
         I wrote up how to do it with Pulumi - one command to deploy, one command to tear down. The post also covers securing it with Tailscale, because a lot of Clawdbot instances are showing up on Shodan with zero auth.
 ---
 
-Clawdbot is taking the tech world by storm. The open-source AI assistant [gained 9,000 GitHub stars in a single day](https://news.aibase.com/news/24901), received public praise from former Tesla AI head Andrej Karpathy, and has sparked a global run on Mac Minis as developers scramble to give this "lobster assistant" a home. Users are calling it "Jarvis living in a hard drive" and "Claude with hands," the personal AI assistant that Siri promised but never delivered.
+Clawdbot is everywhere right now. The open-source AI assistant [gained 9,000 GitHub stars in a single day](https://news.aibase.com/news/24901), received public praise from former Tesla AI head Andrej Karpathy, and has sparked a global run on Mac Minis as developers scramble to give this "lobster assistant" a home. Users are calling it "Jarvis living in a hard drive" and "Claude with hands"—the personal AI assistant that Siri promised but never delivered.
 
 <!--more-->
 
@@ -429,7 +429,7 @@ npm install @pulumi/hcloud @pulumi/tls
 ```
 
 {{% notes type="info" %}}
-The default server type `cax21` is an ARM-based (Ampere) instance with 4 vCPUs and 8 GB RAM. ARM instances offer excellent price-performance. If you need x86 architecture, use `ccx13` or similar CCX series instead.
+The default server type `cax21` is an ARM-based (Ampere) instance with 4 vCPUs and 8 GB RAM. ARM instances cost less for the same compute. If you need x86 architecture, use `ccx13` or similar CCX series instead.
 {{% /notes %}}
 
 ### The Hetzner Pulumi program
@@ -664,7 +664,7 @@ Before deploying, let's compare the costs between AWS and Hetzner for running Cl
 | **Monthly price** | ~$33 (with storage) | €6.49 (~$7) |
 | **Annual cost** | ~$396 | ~$84 |
 
-The numbers speak for themselves: Hetzner gives you double the vCPUs, double the RAM, at less than a quarter of the price. The trade-off? ARM architecture instead of x86. But Clawdbot doesn't care - it's just Node.js and Docker.
+Hetzner gives you double the vCPUs, double the RAM, at less than a quarter of the price. The trade-off? ARM architecture instead of x86. But Clawdbot doesn't care - it's just Node.js and Docker.
 
 {{% notes type="info" %}}
 Prices are for on-demand instances as of January 2026. AWS prices are for us-east-1; Hetzner prices exclude VAT. Both include standard networking and storage. Check [AWS EC2 pricing](https://aws.amazon.com/ec2/pricing/on-demand/) and [Hetzner Cloud pricing](https://www.hetzner.com/cloud/) for current rates.
@@ -771,7 +771,14 @@ Don't let your instance be one of them.
 SSH remains accessible as a fallback even with Tailscale enabled. This allows you to troubleshoot if Tailscale fails to connect. Once you've confirmed Tailscale is working, you can manually remove the SSH ingress rule from your security group for maximum security.
 {{% /notes %}}
 
-My recommendations: always use Tailscale for production, rotate your auth keys periodically, use Pulumi ESC for secrets instead of hardcoding, enable Tailscale SSH to avoid managing keys manually, keep an eye on your Tailscale admin console for unauthorized devices, and remove the SSH fallback after confirming Tailscale works if you want zero public ports.
+My recommendations:
+
+- Always use Tailscale for production
+- Rotate your auth keys periodically
+- Use Pulumi ESC for secrets instead of hardcoding
+- Enable Tailscale SSH to avoid managing keys manually
+- Monitor your Tailscale admin console for unauthorized devices
+- Remove the SSH fallback after confirming Tailscale works if you want zero public ports
 
 ## What's next?
 
