@@ -14,7 +14,7 @@
         "@stencil/core": "^4.41.2",
         "@stencil/redux": "^0.2.0",
         "@stencil/sass": "^3.2.3",
-        "@types/codemirror": "^0.0.98",
+        "@types/codemirror": "^5.60.17",
         "@types/file-saver": "^2.0.1",
         "@types/jest": "^30.0.0",
         "@types/jszip": "^3.4.1",
