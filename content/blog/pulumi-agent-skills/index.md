@@ -66,9 +66,11 @@ We are launching with skills covering two areas: migration workflows and Pulumi 
 
 These skills help AI assistants guide you through complete migrations, not just syntax translation.
 
-**Terraform to Pulumi** walks through the full migration workflow using the `terraform-migrate` plugin. It handles state translation, provider version alignment, and the iterative process of achieving a clean `pulumi preview` with no unexpected changes.
+**Terraform to Pulumi** walks through the full migration workflow. It handles state translation, provider version alignment, and the iterative process of achieving a clean `pulumi preview` with no unexpected changes.
 
-**CDK to Pulumi** covers AWS CDK migrations in depth. The skill includes strategies for handling CDK's Lambda-backed custom resources, asset bundling, cross-stack references, and the decision framework for when to use `aws-native` versus `aws` providers. It guides the assistant through using `cdk2pulumi` for automated conversion while filling gaps manually where needed.
+**CDK to Pulumi** covers AWS CDK migrations in depth. The skill includes strategies for handling CDK's Lambda-backed custom resources, asset bundling, cross-stack references, and the decision framework for when to use `aws-native` versus `aws` providers.
+
+**CloudFormation to Pulumi** guides assistants through converting CloudFormation templates and importing existing stacks into Pulumi management.
 
 **ARM to Pulumi** handles Azure Resource Manager and Bicep template conversion, including the import workflow for bringing existing Azure resources under Pulumi management.
 
@@ -108,7 +110,7 @@ const object = new aws.s3.BucketObject("object", {
 });
 ```
 
-The skill teaches the assistant why this matters: resources created inside `apply()` do not appear in preview, making deployments unpredictable and breaking the dependency graph that Pulumi uses to order operations correctly.
+The skill teaches the assistant why this matters: resources created inside `apply()` may not appear in preview, making deployments unpredictable and breaking the dependency graph that Pulumi uses to order operations correctly.
 
 ## How to install
 
