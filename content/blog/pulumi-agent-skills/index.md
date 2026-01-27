@@ -176,7 +176,7 @@ Or describe what you need in natural language:
 
 > "Review this Pulumi code for best practices issues"
 
-The assistant will follow the skill's procedures, ask clarifying questions when needed, and produce output that reflects accumulated Pulumi expertise rather than generic code generation.
+The assistant will follow the skill's procedures, ask clarifying questions when needed, and produce output that reflects Pulumi best practices rather than generic code generation.
 
 We expect this collection to grow. If you have Pulumi expertise worth packaging, whether provider-specific patterns, debugging workflows, or operational practices, we welcome contributions. See the [contributing guide](https://github.com/pulumi/agent-skills/blob/main/CONTRIBUTING.md) for details.
 
