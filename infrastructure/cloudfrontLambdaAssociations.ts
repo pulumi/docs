@@ -8,7 +8,7 @@ import {
     CloudFrontResponse,
     CloudFrontResponseEvent,
 } from "aws-lambda";
-import * as URLPattern from "url-pattern";
+const URLPattern = require("url-pattern");
 import { LambdaEdge } from "./lambdaEdge";
 import { getResources } from "@pulumi/aws/resourcegroupstaggingapi/getResources";
 
