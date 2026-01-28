@@ -131,12 +131,18 @@ jobs:
             if (existingLabels.includes('github-actions')) labelsToAdd.push('github-actions');
 
             // Apply labels
-            await github.rest.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: prNumber,
-              labels: labelsToAdd
-            });
+            try {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                labels: labelsToAdd
+              });
+              console.log(`Applied labels: ${labelsToAdd.join(', ')}`);
+            } catch (error) {
+              console.error('Failed to apply labels:', error.message);
+              core.setFailed(`Failed to apply labels: ${error.message}`);
+            }
 
             // Generate triage comment
             let triageComment = '## Automated Dependabot Triage\n\n';
@@ -160,7 +166,7 @@ jobs:
 
             if (hasLambdaEdgeRisk) {
               triageComment += '🚨 **Lambda@Edge Risk** - This update affects webpack, bundlers, or AWS SDK. ';
-              triageComment += 'See [Infrastructure Change Review](../BUILD-AND-DEPLOY.md#infrastructure-change-review) ';
+              triageComment += 'See [Infrastructure Change Review](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#infrastructure-change-review) ';
               triageComment += 'section for deployment risks.\n\n';
             }
 
@@ -169,15 +175,18 @@ jobs:
             }
 
             triageComment += '---\n';
-            triageComment += 'For detailed triage guidance, see the [Dependency Management](../BUILD-AND-DEPLOY.md#dependency-management) section in BUILD-AND-DEPLOY.md.\n';
+            triageComment += 'For detailed triage guidance, see the [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management) section in BUILD-AND-DEPLOY.md.\n';
 
             // Post comment
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: prNumber,
-              body: triageComment
-            });
-
-            console.log(`Applied labels: ${labelsToAdd.join(', ')}`);
-            console.log(`Posted triage comment for ${dependencies.length} dependencies`);
+            try {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: triageComment
+              });
+              console.log(`Posted triage comment for ${dependencies.length} dependencies`);
+            } catch (error) {
+              console.error('Failed to post comment:', error.message);
+              // Don't fail the workflow if comment posting fails
+            }

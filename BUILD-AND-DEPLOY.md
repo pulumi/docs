@@ -3170,11 +3170,11 @@ Dependabot automatically updates GitHub Actions versions. Review and merge Depen
 - uses: actions/setup-node@v6
 ```
 
-## Dependency Management
+## Dependency management
 
 This section provides comprehensive guidance for triaging and managing Dependabot pull requests in this repository.
 
-### Dependabot Configuration
+### Dependabot configuration
 
 **Schedule:** Monthly updates (first Monday at 09:00 UTC)
 
@@ -3198,7 +3198,7 @@ This section provides comprehensive guidance for triaging and managing Dependabo
 
 **Security Updates:** Arrive immediately regardless of schedule (Dependabot auto-override)
 
-### Automated Risk Labeling
+### Automated risk labeling
 
 All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHub Action workflow with:
 
@@ -3216,9 +3216,9 @@ All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHu
 - `deps-lambda-edge-risk` - Webpack/bundler/AWS SDK updates (see Infrastructure Change Review)
 - `deps-bulk-update` - 10+ dependencies in single PR
 
-### Dependency Risk Tiers
+### Dependency risk tiers
 
-#### HIGH RISK - Runtime/Browser/Parser Dependencies
+#### HIGH RISK - Runtime/browser/parser dependencies
 
 **Characteristics:**
 - Execute in browser or server runtime
@@ -3243,7 +3243,7 @@ All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHu
 1. Test interactive components (code copy, tabs, etc.)
 1. Check A/B testing integration (GrowthBook)
 
-#### MEDIUM RISK - Build Tools/Infrastructure Dependencies
+#### MEDIUM RISK - Build tools/infrastructure dependencies
 
 **Characteristics:**
 - Affect build process and bundling
@@ -3271,7 +3271,7 @@ All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHu
 1. Test TypeScript updates last (compilation check)
 1. Merge in order of successful testing
 
-#### LOW RISK - Dev Tools Only
+#### LOW RISK - Dev tools only
 
 **Characteristics:**
 - Testing and development tools
@@ -3294,7 +3294,7 @@ All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHu
 1. Merge all if tests pass
 1. If failures, debug individually
 
-### Monthly Triage Workflow
+### Monthly triage workflow
 
 On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (one per ecosystem). Follow this workflow:
 
@@ -3325,7 +3325,7 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 
 **Expected Monthly Time:** 5-10 minutes for triage + 20-30 minutes for HIGH-risk testing
 
-### Quarterly Review Cycle
+### Quarterly review cycle
 
 **Schedule:** January, April, July, October (first week)
 
@@ -3340,7 +3340,7 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 
 **Expected Quarterly Time:** 1-2 hours for batch testing and merging
 
-### Security Patch Handling
+### Security patch handling
 
 **Override Rule:** Security patches bypass all other processes
 
@@ -3361,7 +3361,7 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 - Run HIGH risk testing checklist
 - Merge and deploy within 24 hours
 
-### Bulk Updates (10+ Dependencies)
+### Bulk updates (10+ dependencies)
 
 **Label:** `deps-bulk-update`
 
@@ -3379,7 +3379,7 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 1. Visual regression testing on key pages
 1. Extended soak testing (leave `make serve-all` running for 30 minutes)
 
-### Cross-References
+### Cross-references
 
 **Lambda@Edge Deployment Risks:**
 - See [Infrastructure Change Review](#infrastructure-change-review) section
@@ -3390,7 +3390,7 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 - Pulumi infrastructure updates (`@pulumi/*`, `@aws-sdk/*`)
 - See [Infrastructure Change Review](#infrastructure-change-review) for deployment process
 
-### Known Exceptions
+### Known exceptions
 
 **Prettier v3.x:**
 - Ignored in root and theme `dependabot.yml`
