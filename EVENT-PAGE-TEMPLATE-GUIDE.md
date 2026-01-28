@@ -193,7 +193,7 @@ Displays a final call-to-action section before the footer.
 **Frontmatter:**
 ```yaml
 footer_cta:
-  title: "The Infrastructure-as-Code platform for any cloud."
+  title: "The Infrastructure As Code platform for any cloud."
   cta_primary_text: "Get Started for Free"
   cta_primary_link: "/signup"
   cta_secondary_text: "Contact Sales"

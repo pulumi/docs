@@ -8,7 +8,7 @@ layout: event-page
 hero:
   title: "Tame Kubernetes Complexity with Code"
   description: "Learn how teams provision Kubernetes clusters, enforce security policies, and deploy AI workloads across AWS, Azure, and GCP without the YAML complexity and coordination overhead."
-  cta_text: "Book Your Demo"
+  cta_text: "Book your demo"
   cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
   cta_secondary_text: "Get $500 AWS Credits"
   cta_secondary_link: "#promo-banner"
@@ -49,17 +49,17 @@ features:
       description: "Provision and manage Kubernetes resources across AWS, Azure, GCP, and on-prem with over 290 providers using a single workflow."
 
 two_column:
-  - label: "Book a Demo"
-    title: "Book a Demo"
-    description: "Schedule a demo with one of our solutions architects to share your specific Kubernetes challenges. They'll come prepared and dive straight into what matters most to you."
+  - label: "Talk to an Expert"
+    title: "Book a Kubernetes Demo"
+    description: "Schedule a demo with one of our solutions architects to share your specific Kubernetes challenges. The session is tailored to your environment and can include reviewing your current setup, digging into workflow, governance, or scale concerns, and exploring solutions that fit your needs. The focus is on what you want to solve, not a generic walkthrough."
     cta_text: "Book your demo"
     cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
   - label: "Attend a Technical Workshop"
     title: "From Zero to Production in Kubernetes"
     description: |
-      March 31 | 9 AM ET / 2 PM BST
+      **March 31 | 9 AM ET / 2 PM BST**
 
-      Learn how to:
+      You'll learn how to:
       - Deploy production-ready applications repeatably across environments
       - Implement security-by-construction practices with policy-as-code
       - Manage Kubernetes and cloud infrastructure together in a single workflow
@@ -104,7 +104,7 @@ location:
     March 23-26, 2026
   description: "Stop by to see Neo live demos, grab exclusive Pulumi Neo sunglasses (limited quantities), register for $500 AWS credits (first 25 signups), and talk infrastructure architecture with our engineering team."
   map_embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.6116720155323!2d4.886040676670286!3d52.341190572014874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60a1f63d57e25%3A0xa08f37a724d09338!2sAmsterdam%20RAI!5e0!3m2!1sen!2sus!4v1769463657049!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
-  cta_text: "Book a technical discussion"
+  cta_text: "Book your demo"
   cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
 
 footer_cta:
