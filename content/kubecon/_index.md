@@ -1,7 +1,7 @@
 ---
 title: Meet the Pulumi team at KubeCon Europe | Booth X
 meta_desc: Meet the Pulumi team at KubeCon Europe 2026 to see how teams manage Kubernetes with code, reduce YAML complexity, and deploy across AWS, Azure, and GCP.
-meta_image: /images/kubecon/kubecon-meta-26.png
+meta_image: /images/kubecon/kubecon-2026-meta.png
 type: page
 layout: event-page
 
@@ -19,7 +19,7 @@ hero:
 
 logos_text: "Trusted by over 3,700 innovative companies"
 logos:
-  - src: "/logos/customers/deloitte.png"
+  - src: "/logos/customers/deloitte.svg"
     alt: "Deloitte"
   - src: "/logos/customers/nvidia.png"
     alt: "NVIDIA"
