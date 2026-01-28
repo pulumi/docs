@@ -35,6 +35,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          allowed_bots: 'dependabot[bot]'
           # Invoke the docs-review slash command, which contains all review criteria and CI-specific guidance.
           # See .claude/commands/docs-review.md for the complete review workflow.
           prompt: |

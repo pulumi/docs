@@ -24,6 +24,8 @@ env:
 
 jobs:
   test:
+    # Skip tests for Dependabot PRs since they don't have access to ESC secrets
+    if: github.event_name != 'pull_request' || github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ${{ matrix.platform }}
     permissions:
       contents: read
