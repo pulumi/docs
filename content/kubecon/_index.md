@@ -51,7 +51,8 @@ features:
 two_column:
   - label: "Talk to an Expert"
     title: "Book a Kubernetes Demo"
-    description: "Schedule a demo with one of our solutions architects to share your specific Kubernetes challenges. The session is tailored to your environment and can include reviewing your current setup, digging into workflow, governance, or scale concerns, and exploring solutions that fit your needs. The focus is on what you want to solve, not a generic walkthrough."
+    description: "Schedule a demo with one of our solutions architects to share your specific Kubernetes challenges. 
+    The session is tailored to your environment and can include reviewing your current setup, digging into workflow, governance, or scale concerns, and exploring solutions that fit your needs. The focus is on what you want to solve, not a generic walkthrough."
     cta_text: "Book your demo"
     cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
   - label: "Attend a Technical Workshop"
