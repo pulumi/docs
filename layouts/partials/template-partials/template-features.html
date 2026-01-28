@@ -34,8 +34,8 @@
         {{ end }}
     </div>
 
-    <div class="flex flex-col xl:flex-row items-start gap-16 xl:gap-48">
-        <div class="xl:w-1/2 space-y-6 text-left">
+    <div class="flex flex-col xl:flex-row items-start gap-16 xl:gap-24">
+        <div class="features-content space-y-6 text-left">
             {{ range $features }}
             <div class="py-4 feature-item flex flex-col text-left">
                 <h4 class="feature-title mb-2">
@@ -50,7 +50,7 @@
         </div>
 
         {{ if $image }}
-        <div class="xl:w-1/2">
+        <div class="features-image">
             <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto rounded-lg">
         </div>
         {{ end }}

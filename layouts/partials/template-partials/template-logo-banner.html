@@ -16,10 +16,10 @@
             <p class="logo-banner-text">{{ $text }}</p>
         </div>
         {{ end }}
-        <div class="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
+        <div class="logo-grid flex flex-wrap items-center justify-center">
             {{ range $logos }}
-            <div class="flex items-center justify-center">
-                <img src="{{ .src }}" alt="{{ .alt }}" class="h-8 lg:h-12 w-auto" />
+            <div class="logo-container flex items-center justify-center">
+                <img src="{{ .src }}" alt="{{ .alt }}" />
             </div>
             {{ end }}
         </div>

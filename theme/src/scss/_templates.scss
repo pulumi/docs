@@ -5,9 +5,6 @@ $violet-primary: #673EAC;
 @mixin page-header {
     @apply font-bold leading-extra-tight text-black font-body;
     font-size: 48px;
-    @screen sm {
-        font-size: 64px;
-    }
 }
 
 @mixin section-header {
@@ -18,19 +15,27 @@ $violet-primary: #673EAC;
 @mixin section-header-small {
     font-feature-settings: 'salt' on;
     @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 36px;
+    font-size: 40px;
 }
 
 @mixin section-header-extra-small {
     font-feature-settings: 'salt' on;
     @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 32px;
+    font-size: 24px;
 }
 
+@mixin section-header-extra-extra-small {
+    font-feature-settings: 'salt' on;
+    @apply font-bold leading-extra-tight text-black font-body;
+    font-size: 20px;
+}
+
+
 @mixin section-description {
-    @apply font-normal leading-normal text-2xl font-body;
+    @apply font-normal leading-normal font-body;
     font-feature-settings: 'salt' on;
     color: #5b5b5b;
+    font-size: 20px;
 }
 
 @mixin section-subheader-bold {
@@ -39,25 +44,29 @@ $violet-primary: #673EAC;
 }
 
 @mixin section-hint {
-    @apply font-semibold leading-normal text-xl font-body;
+    @apply font-semibold leading-normal font-body;
     color: #1e1e1e;
+    font-size: 20px;
 }
 
 @mixin section-hint-accent {
-    @apply font-semibold leading-normal text-xl font-body;
+    @apply font-semibold leading-normal font-body;
     color: $violet-primary;
+    font-size: 20px;
 }
 
 @mixin section-hint-small {
-    @apply font-semibold leading-normal text-base font-body;
+    @apply font-semibold leading-normal font-body;
     font-feature-settings: 'salt' on;
     color: #757576;
+    font-size: 20px;
 }
 
 @mixin section-body-medium {
-    @apply font-normal leading-normal text-xl font-body;
+    @apply font-normal leading-normal text-lg font-body;
     font-feature-settings: 'salt' on;
     color: #5b5b5b;
+    font-size: 18px;
 }
 
 .template-hero {
@@ -87,6 +96,18 @@ $violet-primary: #673EAC;
     .logo-banner-text {
         @include section-hint-small();
     }
+
+    .logo-container {
+        img {
+            height: 54px;
+            max-height: 54px;
+            width: auto;
+        }
+    }
+
+    .logo-grid {
+        gap: 100px;
+    }
 }
 
 .template-features {
@@ -103,11 +124,30 @@ $violet-primary: #673EAC;
     }
 
     .feature-title {
-        @include section-subheader-bold();
+        @include section-header-extra-extra-small();
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        i {
+            flex-shrink: 0;
+        }
     }
 
     .feature-description {
         @include section-body-medium();
+    }
+
+    .features-content {
+        @screen xl {
+            width: 37.5%;
+        }
+    }
+
+    .features-image {
+        @screen xl {
+            width: 62.5%;
+        }
     }
 }
 
@@ -156,7 +196,14 @@ $violet-primary: #673EAC;
     }
 
     .three-column-item-title {
-        @include section-subheader-bold();
+        @include section-header-extra-extra-small();
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        i {
+            flex-shrink: 0;
+        }
     }
 
     .three-column-item-description {
@@ -195,6 +242,10 @@ $violet-primary: #673EAC;
     .location-description {
         @include section-body-medium();
         color: #757576;
+    }
+
+    iframe {
+        border-radius: 1rem;
     }
 }
 
