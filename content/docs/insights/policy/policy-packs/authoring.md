@@ -233,6 +233,9 @@ For a complete example including additional test cases, see the [unit test polic
 
 {{< /chooser >}}
 
+<a id="resource-validation"></a>
+<a id="stack-validation"></a>
+
 ## Resource validation vs stack validation
 
 Pulumi policies validate at two scopes:
@@ -484,6 +487,8 @@ Test your policy pack locally before publishing.
 
 Configuration makes policy packs flexible and reusable. Adjust enforcement levels, allowed values, and other settings without modifying code.
 
+<a id="enforcement-levels"></a>
+
 ### Enforcement levels
 
 All policies support configurable enforcement levels. Set enforcement for all policies in a pack or override individual policies:
@@ -508,6 +513,8 @@ As shorthand, specify enforcement levels directly:
 }
 ```
 
+<a id="advisory"></a>
+<a id="mandatory"></a>
 **Enforcement levels:**
 
 - **advisory** — Issues warnings but allows deployments to proceed

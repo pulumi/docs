@@ -13,6 +13,9 @@ aliases:
   - /docs/pulumi-cloud/insights/pre-built-packs/
   - /docs/iac/crossguard/pre-built-packs/
   - /docs/insights/pre-built-packs/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-aws
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azure
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-gcp
 ---
 
 Pulumi Cloud comes with pre-built policy packs that codify best practices for common security and compliance frameworks. These packs allow you to quickly evaluate your organization's compliance posture and "shift left," embedding continuous compliance directly into your IaC workflow. Proactively enforce controls, reduce misconfiguration risks before deployment, and help your organization meet its regulatory obligations with confidence.

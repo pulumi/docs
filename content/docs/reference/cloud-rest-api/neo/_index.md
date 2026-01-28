@@ -11,6 +11,9 @@ aliases:
   - /docs/pulumi-cloud/reference/neo/
   - /docs/reference/cloud-rest-api/copilot/
   - /docs/ai/copilot/api/
+  - /docs/ai/copilot/api
+  - /docs/pulumi-cloud/copilot/api/
+  - /docs/pulumi-cloud/copilot/api
   - /docs/pulumi-cloud/reference/copilot/
   - /docs/reference/cloud-rest-api/ai/
 ---

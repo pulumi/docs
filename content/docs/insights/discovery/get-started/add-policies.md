@@ -70,7 +70,7 @@ With your policy pack published, you'll need to create a Policy Group that assoc
 
 1. In the Pulumi Cloud console, navigate to **Policies** under the **Pulumi Insights** section.
 
-    ![Insights Policies - New Policy Pack](/docs/insights/assets/create-policy-group.png)
+    ![Insights Policies - New Policy Pack](/docs/insights/assets/policy-groups.png)
 
 1. Click **Create policy group** and provide a descriptive name, such as "s3-security-policy-group". Then click **Add policy group**
 

@@ -1,0 +1,29 @@
+# Redirects for various broken internal links
+
+# Azure mobile module removed in v6
+registry/packages/azure/api-docs/mobile/index.html|/registry/packages/azure/
+
+# Containers landing page (no longer exists as standalone)
+containers/index.html|/docs/iac/clouds/kubernetes/
+
+# General guides moved to product-specific
+docs/guides/index.html|/docs/iac/guides/
+
+# AI integration guide
+docs/iac/guides/ai-integration/index.html|/docs/iac/guides/ai-integration/mcp-server/
+
+# Using Pulumi migration conversion section
+docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/index.html|/docs/iac/guides/migration/
+
+# What-is IaC
+what-is/infrastructure-as-code/index.html|/what-is/what-is-infrastructure-as-code/
+
+# Debugging images (moved from troubleshooting to debugging)
+docs/support/troubleshooting/debugging/images/automatic-1.png|/docs/support/debugging/images/automatic-1.png
+docs/support/troubleshooting/debugging/images/automatic-2.png|/docs/support/debugging/images/automatic-2.png
+docs/support/troubleshooting/debugging/images/stack-selection-1.png|/docs/support/debugging/images/stack-selection-1.png
+docs/support/troubleshooting/debugging/images/debugging.png|/docs/support/debugging/images/debugging.png
+docs/support/troubleshooting/debugging/images/debug-console.png|/docs/support/debugging/images/debug-console.png
+
+# Policy group image (missing asset - redirect to section)
+docs/insights/assets/create-policy-group.png|/docs/insights/discovery/get-started/add-policies/
