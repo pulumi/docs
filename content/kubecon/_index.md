@@ -23,13 +23,13 @@ logos:
     alt: "Deloitte"
   - src: "/logos/customers/nvidia.png"
     alt: "NVIDIA"
-  - src: "/logos/customers/bmw.svg"
+  - src: "/logos/customers/bmw-shortened.svg"
     alt: "BMW"  
   - src: "/logos/customers/webflow-wordmark.svg"
     alt: "Webflow"
   - src: "/logos/customers/snowflake-logo.svg"
     alt: "Snowflake"
-  - src: "/logos/customers/mercedes-benz-RDNA_logo.png"
+  - src: "/logos/customers/mercedes-benz-shortened.svg"
     alt: "Mercedes Benz"
 
 features:
@@ -57,9 +57,8 @@ two_column:
     cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
   - label: "Attend a Technical Workshop"
     title: "From Zero to Production in Kubernetes"
+    subheader: "March 31, 2026 at 9 AM EST"
     description: |
-      **March 31 | 9 AM ET / 2 PM BST**
-
       You'll learn how to:
       - Deploy production-ready applications repeatably across environments
       - Implement security-by-construction practices with policy-as-code
@@ -94,7 +93,7 @@ testimonial:
   author: " — Platform Engineering Team, BMW"
   title: ""
   company: "BMW"
-  logo: "/logos/customers/bmw.svg"
+  logo: "/logos/customers/bmw-shortened.svg"
   bg_image: "/images/kubecon/bmw-background.png"
 
 location:

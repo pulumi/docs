@@ -163,6 +163,11 @@ $violet-primary: #673EAC;
         @include section-header-extra-small();
     }
 
+    .card-subheader {
+        @include section-header-extra-extra-small();
+        color: #5b5b5b;
+    }
+
     .card-description {
         @include section-body-medium();
     }
