@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: KubeCon Europe 2026
-meta_desc: Meet the Pulumi team at KubeCon Europe 2026 to see how teams manage Kubernetes with code, reduce YAML complexity, and deploy across AWS, Azure, and GCP.
+title: AWS AI Builder Lab
+meta_desc: Join Pulumi in San Francisco, limited to 250 developers
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,12 +26,12 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://www.pulumi.com/kubecon
+url_slug: https://www.aicamp.ai/event/eventdetails/W2026021308
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: KubeCon + CloudNativeCon Europe 2026
+    title: AWS AI Builder Lab
 
     event_type: event # workshop | event
 
@@ -39,17 +39,17 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2026-03-23T09:00:00+00:00
+    sortable_date: 2026-02-13T09:00:00-08:00
 
     # Duration of the webinar.
-    duration: 4 days
+    duration: 1 day
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: Amsterdam
+    location: San Francisco, CA
 
     # Description of the webinar.
     description: |
-        Meet the Pulumi team at KubeCon Europe 2026 to see how teams manage Kubernetes with code, reduce YAML complexity, and deploy across AWS, Azure, and GCP.
+        Join Pulumi in San Francisco, limited to 250 developers
 
     # The webinar presenters
     presenters:
@@ -57,7 +57,7 @@ main:
     # case-sensitive
     tags:
         level: # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
+        topics: ["AI"]
         languages: []
 
 # The right hand side form section.
