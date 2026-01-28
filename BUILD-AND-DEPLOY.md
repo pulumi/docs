@@ -2960,17 +2960,6 @@ Large batches of dependency updates (especially Dependabot PRs with 20+ updates)
 - Critical pages return expected status codes (not 503/500)
 - CloudWatch logs checked for Lambda@Edge errors (logs appear in edge regions)
 
-**Validation commands** (for reference):
-
-```bash
-# Test critical pages on staging
-curl -I https://www.pulumi-test.io/docs/
-curl -I https://www.pulumi-test.io/registry/
-
-# Check Lambda@Edge logs
-aws logs tail /aws/lambda/us-east-1.edge-redirects --follow
-```
-
 ### Resources
 
 - Lambda@Edge limits: <https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-requirements-limits.html>
