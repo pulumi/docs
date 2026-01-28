@@ -6,7 +6,7 @@
     - title: Section title
     - subtitle: Section subtitle/description
     - columns: Array of column objects
-      Example: [{"icon": "fa-shield", "title": "Title", "description": "Description"}]
+      Example: [{"icon": "fa-shield", "title": "Title", "description": "Description", "cta_text": "Learn more", "cta_link": "/link"}]
       Note: icon should be Font Awesome icon class (e.g., "fa-shield", "fa-rocket")
 */}}
 
@@ -32,9 +32,9 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mt-20">
         {{ range $columns }}
-        <div class="three-column-item text-left">
+        <div class="three-column-item text-left flex flex-col justify-between">
             {{ if .title }}
-            <h4 class="three-column-item-title mb-3">
+            <h4 class="three-column-item-title mb-3 flex items-center">
                 {{ if .icon }}
                 <i class="fa {{ .icon }} mr-3"></i>
                 {{ end }}
@@ -42,7 +42,10 @@
             </h4>
             {{ end }}
             {{ if .description }}
-            <p class="three-column-item-description">{{ .description | markdownify }}</p>
+            <p class="three-column-item-description mb-6">{{ .description | markdownify }}</p>
+            {{ end }}
+            {{ if .cta_text }}
+            <a href="{{ .cta_link }}" class="btn-secondary-template-variant">{{ .cta_text }}</a>
             {{ end }}
         </div>
         {{ end }}

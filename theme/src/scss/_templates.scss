@@ -171,6 +171,11 @@ $violet-primary: #673EAC;
     .card-description {
         @include section-body-medium();
     }
+
+    .btn-secondary-template-variant {
+        display: inline-block;
+        width: auto;
+    }
 }
 
 .template-promo-banner {
@@ -202,9 +207,6 @@ $violet-primary: #673EAC;
 
     .three-column-item-title {
         @include section-header-extra-extra-small();
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
 
         i {
             flex-shrink: 0;
@@ -213,6 +215,11 @@ $violet-primary: #673EAC;
 
     .three-column-item-description {
         @include section-body-medium();
+    }
+
+    .btn-secondary-template-variant {
+        display: inline-block;
+        width: auto;
     }
 }
 

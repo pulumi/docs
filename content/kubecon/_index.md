@@ -81,12 +81,18 @@ three_column:
     - icon: "fa-code"
       title: "Stop Context-Switching"
       description: "Your team already knows Python, TypeScript, or Go. Use those skills to provision infrastructure instead of learning another DSL. BMW's platform engineering team ramped new hires in 2-3 days using their existing Python knowledge."
+      cta_text: "See examples"
+      cta_link: "https://www.pulumi.com/product/infrastructure-as-code/"
     - icon: "fa-check"
       title: "Keep What Works"
       description: "Using Terraform already? Pulumi Cloud manages your existing Terraform and OpenTofu state files. No migration required. Start new projects with Pulumi and convert legacy infrastructure when it makes sense for your team."
+      cta_text: "Migration guide"
+      cta_link: "https://www.pulumi.com/docs/iac/guides/migration/"
     - icon: "fa-robot"
       title: "Ship AI Workloads Confidently"
       description: "41% of AI developers are moving to cloud-native infrastructure. Teams need predictable ways to provision GPU resources, manage model deployments, and scale inference workloads. Pulumi provides the infrastructure foundation AI teams depend on."
+      cta_text: "Explore AI"
+      cta_link: "https://www.pulumi.com/product/superintelligence-infrastructure/"
 
 testimonial:
   quote: "We manage over 20,000 resources across multiple clouds with Pulumi. It solved our Terraform coordination overhead and gave us the velocity we needed."
