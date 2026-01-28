@@ -1,6 +1,6 @@
 ---
 title: "Pulumi Agent Skills: Best practices and more for AI coding assistants"
-date: 2026-01-28
+date: 2026-01-29
 draft: false
 meta_desc: "Introducing packaged Pulumi expertise that works across Claude Code, Cursor, GitHub Copilot, and other AI coding assistants."
 meta_image: meta.png
@@ -111,7 +111,7 @@ This works across all platforms that support the Agent Skills specification.
 
 Once installed, skills activate automatically based on context. When you ask your assistant to help migrate a Terraform project, it draws on the Terraform skill's workflow. When you are debugging why resources are being recreated unexpectedly, the best practices skill helps the assistant check for missing aliases.
 
-In Claude Code and Codex, you can invoke skills directly via slash commands:
+In Codex, you can invoke skills directly via slash commands. You can typically do this in Claude Code as well, but a bug currently prevents it.
 
 ```text
 /pulumi-terraform-to-pulumi
