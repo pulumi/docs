@@ -128,9 +128,3 @@ We welcome contributions to Pulumi Agent Skills. Visit the [agent-skills reposit
 - Report issues
 
 See the [CONTRIBUTING.md](https://github.com/pulumi/agent-skills/blob/main/CONTRIBUTING.md) file for guidelines.
-
-## Resources
-
-- [Pulumi Documentation](/docs/)
-- [Agent Skills Specification](https://agentskills.io/specification)
-- [Pulumi ESC Documentation](/docs/esc/)

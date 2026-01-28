@@ -61,7 +61,7 @@ Skills are structured knowledge packages that follow the open [Agent Skills](htt
 
 We are launching a set of skills organized into two plugin groups: migration and authoring. You can install all skills at once or choose specific plugin groups based on your needs.
 
-### Migration Plugin
+### Migration Skills
 
 Convert and import infrastructure from other tools to Pulumi. This plugin includes seven skills covering complete migration workflows, not just syntax translation.
 
@@ -71,7 +71,7 @@ Convert and import infrastructure from other tools to Pulumi. This plugin includ
 
 * **Azure to Pulumi** covers the complete Azure Resource Manager and Bicep migration workflow, handling template conversion and resource import with guidance on achieving zero-diff validation.
 
-### Authoring Plugin
+### Authoring Skills
 
 This plugin includes four skills focused on code quality, reusability, and credential management.
 
