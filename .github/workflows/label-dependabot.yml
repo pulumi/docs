@@ -34,7 +34,7 @@ jobs:
 
             const mediumRiskDeps = [
               'webpack', '-loader', '-webpack-plugin', 'postcss',
-              'sass', 'typescript', 'cssnano', 'autoprefefixer',
+              'sass', 'typescript', 'cssnano', 'autoprefixer',
               '@fullhuman/postcss-purgecss', '@pulumi/', '@aws-sdk/',
               'tailwindcss'
             ];
