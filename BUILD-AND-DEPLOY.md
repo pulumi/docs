@@ -1165,12 +1165,14 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 #### scheduled-upgrade-programs.yml
 
+**Status:** ⚠️ Currently disabled due to disk space issues (see issue #17321)
+
 **Purpose:** Keep example program dependencies up to date
 
 **Triggers:**
 
-- Daily at 6:00 AM UTC
-- Manual: `workflow_dispatch`
+- ~~Daily at 6:00 AM UTC~~ (schedule disabled)
+- Manual: `workflow_dispatch` (but will likely fail without fixes)
 
 **Jobs:**
 
@@ -1180,6 +1182,8 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 - Uses PULUMI_BOT_TOKEN for authentication
 
 **Why It Matters:** Prevents example programs from using outdated dependencies with security vulnerabilities.
+
+**Note:** The workflow consistently fails due to GitHub Actions runner disk space exhaustion when testing 385+ example programs. The schedule has been disabled while we investigate proper fixes.
 
 #### bucket-cleanup.yml
 
@@ -1366,7 +1370,7 @@ These workflows support repository maintenance, automation, and developer experi
 | pulumi-cli | Repository dispatch | N/A | 5-10 min | Auto-generate CLI docs |
 | esc-cli | Repository dispatch | N/A | 3-5 min | Auto-generate ESC docs |
 | scheduled-test | Daily 8 AM UTC, PRs | Testing | 2-2.5 hrs (scheduled), 3-5 min (PR) | Test example programs |
-| scheduled-upgrade-programs | Daily 6 AM UTC | N/A | 10-20 min | Update dependencies |
+| scheduled-upgrade-programs | ~~Daily 6 AM UTC~~ (disabled) | N/A | N/A (fails) | Update dependencies |
 | bucket-cleanup | Daily 3 PM UTC | Production | 2-5 min | Delete old buckets |
 | bucket-cleanup-testing | Daily 3 PM UTC | Testing | 2-5 min | Delete old buckets |
 | check-links | Daily 3 PM UTC | N/A | 5-10 min | Verify links |
@@ -3108,6 +3112,243 @@ Dependabot automatically updates GitHub Actions versions. Review and merge Depen
 # After (Dependabot PR)
 - uses: actions/setup-node@v6
 ```
+
+## Dependency Management
+
+This section provides comprehensive guidance for triaging and managing Dependabot pull requests in this repository.
+
+### Dependabot Configuration
+
+**Schedule:** Monthly updates (first Monday at 09:00 UTC)
+
+**Ecosystems:**
+- npm (root, theme, stencil, infrastructure)
+- GitHub Actions
+- pip (Python dependencies)
+
+**Grouping Strategy:** Ultra-aggressive single catch-all group per ecosystem
+- Root: `all-dependencies` group captures all npm packages
+- Theme: `all-dependencies` group captures all theme packages
+- Stencil: `all-dependencies` group captures all stencil packages
+- Infrastructure: `all-dependencies` group captures all infrastructure packages
+- GitHub Actions: `all-actions` group captures all action updates
+
+**Expected Volume:** 5 grouped PRs per month + security patches as needed
+
+**PR Limits:** 1 PR per ecosystem (prevents flooding)
+
+**Major Version Updates:** Blocked for non-security updates via wildcard ignore rules
+
+**Security Updates:** Arrive immediately regardless of schedule (Dependabot auto-override)
+
+### Automated Risk Labeling
+
+All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHub Action workflow with:
+
+**Risk Tier Labels:**
+- `deps-risk-high` - Runtime/browser/parser dependencies
+- `deps-risk-medium` - Build tools/infrastructure dependencies
+- `deps-risk-low` - Dev tools only
+
+**Action Labels:**
+- `deps-merge-after-test` - Test locally, then merge (HIGH risk or security patches)
+- `deps-security-patch` - Security update, merge immediately after testing
+- `deps-quarterly-review` - Close for batch review in quarterly cycle (MEDIUM/LOW risk)
+
+**Special Flags:**
+- `deps-lambda-edge-risk` - Webpack/bundler/AWS SDK updates (see Infrastructure Change Review)
+- `deps-bulk-update` - 10+ dependencies in single PR
+
+### Dependency Risk Tiers
+
+#### HIGH RISK - Runtime/Browser/Parser Dependencies
+
+**Characteristics:**
+- Execute in browser or server runtime
+- Parse user content or external data
+- Directly affect site functionality and user experience
+
+**Packages:**
+- **Search:** `@algolia/*`, `algoliasearch`, `search-insights`
+- **A/B Testing:** `@growthbook/*`
+- **Content Parsing:** `marked`, `markdown-it`, `js-yaml`, `cheerio`, `gray-matter`
+- **Browser APIs:** `clipboard-polyfill`
+- **Web Components:** `@stencil/*`, `swiper`
+- **Utilities:** `uuid`
+
+**Triage Action:** `deps-merge-after-test`
+
+**Testing Checklist:**
+1. Run `make serve-all` and verify site loads
+1. Test search functionality (Algolia integration)
+1. Check browser console for errors
+1. Verify markdown rendering on multiple pages
+1. Test interactive components (code copy, tabs, etc.)
+1. Check A/B testing integration (GrowthBook)
+
+#### MEDIUM RISK - Build Tools/Infrastructure Dependencies
+
+**Characteristics:**
+- Affect build process and bundling
+- Infrastructure as code dependencies
+- Lambda@Edge function dependencies (special attention required)
+
+**Packages:**
+- **Webpack Ecosystem:** `webpack*`, `*-loader`, `*-webpack-plugin*`
+- **CSS Processing:** `postcss*`, `sass*`, `cssnano`, `autoprefixer`, `@fullhuman/postcss-purgecss`, `tailwindcss`
+- **TypeScript:** `typescript`
+- **Pulumi:** `@pulumi/*`
+- **AWS SDK:** `@aws-sdk/*` (Lambda@Edge risk)
+
+**Triage Action:** `deps-quarterly-review` (unless security patch)
+
+**Special Considerations:**
+- **Lambda@Edge Risk:** Webpack, bundlers, and AWS SDK updates affect Lambda@Edge function size. See [Infrastructure Change Review](#infrastructure-change-review) section for deployment risks and 1MB compressed size limit.
+- **Build Performance:** CSS/PostCSS updates can affect build times
+- **TypeScript:** Breaking changes may require code updates
+
+**Quarterly Review Process:**
+1. Batch all MEDIUM-risk PRs from the quarter
+1. Test webpack/bundler updates first (Lambda@Edge size check)
+1. Test CSS processing updates second (build time check)
+1. Test TypeScript updates last (compilation check)
+1. Merge in order of successful testing
+
+#### LOW RISK - Dev Tools Only
+
+**Characteristics:**
+- Testing and development tools
+- Code quality and formatting tools
+- Documentation generation tools
+- Local development servers
+
+**Packages:**
+- **Testing:** `cypress`, `jest*`, `puppeteer`
+- **Build Optimization:** `workbox-build`
+- **Code Quality:** `prettier`, `eslint*`, `markdownlint`, `husky`, `lint-staged`
+- **Dev Servers:** `http-server`, `concurrently`
+- **Documentation:** `typedoc`
+
+**Triage Action:** `deps-quarterly-review`
+
+**Quarterly Review Process:**
+1. Batch all LOW-risk PRs from the quarter
+1. Quick smoke test: `make test && make lint`
+1. Merge all if tests pass
+1. If failures, debug individually
+
+### Monthly Triage Workflow
+
+On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (one per ecosystem). Follow this workflow:
+
+**Step 1: Check Labels (30 seconds per PR)**
+- Look at auto-applied risk tier and action labels
+- No need to read PR bodies initially—labels tell you everything
+
+**Step 2: Security Patches (Immediate)**
+- PRs with `deps-security-patch` label: Test and merge immediately
+- Run testing checklist for applicable risk tier
+- Merge within 24 hours
+
+**Step 3: HIGH Risk Runtime Dependencies (Same Day)**
+- PRs with `deps-risk-high` + `deps-merge-after-test` labels
+- Run HIGH risk testing checklist (see above)
+- Merge if tests pass, or debug and fix issues
+
+**Step 4: MEDIUM/LOW Risk Dependencies (Defer)**
+- PRs with `deps-quarterly-review` label
+- Close with comment: "Deferring to quarterly review cycle. Will batch with other MEDIUM/LOW-risk updates."
+- Do not merge monthly—wait for quarterly batch
+
+**Step 5: Lambda@Edge Risk Flag (Extra Attention)**
+- PRs with `deps-lambda-edge-risk` label
+- Cross-reference [Infrastructure Change Review](#infrastructure-change-review) section
+- Check Lambda@Edge function size after webpack/bundler updates
+- Verify CloudFront deployment succeeds in testing environment
+
+**Expected Monthly Time:** 5-10 minutes for triage + 20-30 minutes for HIGH-risk testing
+
+### Quarterly Review Cycle
+
+**Schedule:** January, April, July, October (first week)
+
+**Process:**
+1. Review all closed PRs from past 3 months with `deps-quarterly-review` label
+1. Check if newer versions are available (Dependabot may have newer PRs open)
+1. Create consolidated testing branch with all MEDIUM/LOW updates
+1. Run full test suite: `make test && make lint && make build`
+1. Test Lambda@Edge function size for webpack/bundler updates
+1. Merge if all tests pass
+1. If failures, debug individually and merge successful updates only
+
+**Expected Quarterly Time:** 1-2 hours for batch testing and merging
+
+### Security Patch Handling
+
+**Override Rule:** Security patches bypass all other processes
+
+**Arrival:** Immediately when vulnerability discovered (ignores monthly schedule)
+
+**Labels:** Auto-labeled with `deps-security-patch` + applicable risk tier
+
+**Workflow:**
+1. Dependabot opens PR immediately (any time of month)
+1. Auto-labeling workflow adds `deps-security-patch` + risk tier
+1. Test using checklist for applicable risk tier
+1. Merge within 24 hours regardless of risk tier
+1. Deploy to production immediately
+
+**Example:** CVE in `marked` (HIGH risk parser)
+- PR arrives immediately
+- Labels: `deps-security-patch`, `deps-risk-high`, `deps-merge-after-test`
+- Run HIGH risk testing checklist
+- Merge and deploy within 24 hours
+
+### Bulk Updates (10+ Dependencies)
+
+**Label:** `deps-bulk-update`
+
+**Risk:** Higher chance of conflicts or breaking changes
+
+**Process:**
+1. Review PR carefully—don't rely solely on automated labels
+1. Check for major version updates within the bulk (may be hidden)
+1. Test more thoroughly than single-dependency updates
+1. Consider splitting into smaller batches if failures occur
+
+**Testing:**
+1. Full test suite: `make test && make lint`
+1. Local build: `make serve-all`
+1. Visual regression testing on key pages
+1. Extended soak testing (leave `make serve-all` running for 30 minutes)
+
+### Cross-References
+
+**Lambda@Edge Deployment Risks:**
+- See [Infrastructure Change Review](#infrastructure-change-review) section
+- Webpack, bundlers, and AWS SDK updates affect Lambda@Edge function size
+- 1MB compressed size limit—test after bundler updates
+
+**Infrastructure Changes:**
+- Pulumi infrastructure updates (`@pulumi/*`, `@aws-sdk/*`)
+- See [Infrastructure Change Review](#infrastructure-change-review) for deployment process
+
+### Known Exceptions
+
+**Prettier v3.x:**
+- Ignored in root and theme `dependabot.yml`
+- Reason: Performance regression (5-10x slower than v2.x)
+- Revisit: When performance regression is fixed upstream
+
+**Tailwindcss Major Versions:**
+- Ignored in root and theme `dependabot.yml`
+- Reason: Breaking changes require manual migration
+- Revisit: During planned design system updates
+
+**Major Versions (Wildcard):**
+- Ignored across all ecosystems via wildcard rule
+- Reason: Breaking changes require manual review and testing
+- Exception: Security patches override this rule
 
 ### Search Index Management
 

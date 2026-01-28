@@ -147,6 +147,11 @@ Always provide relevant line numbers for any issues you identify.
 - **Build, test, and infrastructure changes**:
   - If changes are made to build scripts (scripts/), GitHub Actions workflows (.github/workflows/), the Makefile, or infrastructure code (infrastructure/), verify that BUILD-AND-DEPLOY.md has been updated to reflect these changes.
   - Examples of changes requiring documentation updates: new make targets, modified deployment workflows, infrastructure configuration changes, new environment variables, updated build processes.
+- **Dependabot dependency updates**:
+  - Dependabot PRs are automatically labeled with risk tiers and action guidance.
+  - For detailed triage guidance and dependency categorizations, see the [Dependency Management](../../../BUILD-AND-DEPLOY.md#dependency-management) section in BUILD-AND-DEPLOY.md.
+  - Check labels: `deps-risk-high/medium/low` and `deps-merge-after-test`/`deps-security-patch`/`deps-quarterly-review`.
+  - For webpack/bundler updates, also check the [Infrastructure Change Review](../../../BUILD-AND-DEPLOY.md#infrastructure-change-review) section for Lambda@Edge risks.
 - **Images and assets**:
   - Check images have alt text for accessibility.
   - Verify image file sizes are reasonable.
