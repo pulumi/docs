@@ -1,8 +1,17 @@
+# NOTE: This workflow is currently disabled due to consistent failures from disk space
+# exhaustion on GitHub Actions runners. The workflow attempts to test 385+ example programs
+# across all languages, which exceeds the ~14GB disk space available.
+#
+# The workflow can be manually triggered via workflow_dispatch if needed, but it will
+# likely still fail without significant changes to reduce disk usage.
+#
+# See issue #17321 for details and potential solutions.
+
 permissions: write-all # Equivalent to default permissions + id-token: write
 name: "Scheduled Jobs: Upgrade Examples"
 on:
-  schedule:
-    - cron: "0 6 * * *"
+  # schedule:
+  #   - cron: "0 6 * * *"  # DISABLED: See issue #17321
   workflow_dispatch: {}
 
 env:

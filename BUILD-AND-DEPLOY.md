@@ -1165,12 +1165,14 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 #### scheduled-upgrade-programs.yml
 
+**Status:** ⚠️ Currently disabled due to disk space issues (see issue #17321)
+
 **Purpose:** Keep example program dependencies up to date
 
 **Triggers:**
 
-- Daily at 6:00 AM UTC
-- Manual: `workflow_dispatch`
+- ~~Daily at 6:00 AM UTC~~ (schedule disabled)
+- Manual: `workflow_dispatch` (but will likely fail without fixes)
 
 **Jobs:**
 
@@ -1180,6 +1182,8 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 - Uses PULUMI_BOT_TOKEN for authentication
 
 **Why It Matters:** Prevents example programs from using outdated dependencies with security vulnerabilities.
+
+**Note:** The workflow consistently fails due to GitHub Actions runner disk space exhaustion when testing 385+ example programs. The schedule has been disabled while we investigate proper fixes.
 
 #### bucket-cleanup.yml
 
@@ -1366,7 +1370,7 @@ These workflows support repository maintenance, automation, and developer experi
 | pulumi-cli | Repository dispatch | N/A | 5-10 min | Auto-generate CLI docs |
 | esc-cli | Repository dispatch | N/A | 3-5 min | Auto-generate ESC docs |
 | scheduled-test | Daily 8 AM UTC, PRs | Testing | 2-2.5 hrs (scheduled), 3-5 min (PR) | Test example programs |
-| scheduled-upgrade-programs | Daily 6 AM UTC | N/A | 10-20 min | Update dependencies |
+| scheduled-upgrade-programs | ~~Daily 6 AM UTC~~ (disabled) | N/A | N/A (fails) | Update dependencies |
 | bucket-cleanup | Daily 3 PM UTC | Production | 2-5 min | Delete old buckets |
 | bucket-cleanup-testing | Daily 3 PM UTC | Testing | 2-5 min | Delete old buckets |
 | check-links | Daily 3 PM UTC | N/A | 5-10 min | Verify links |
