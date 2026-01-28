@@ -87,7 +87,7 @@ This plugin includes four skills focused on code quality, reusability, and crede
 
 ### Claude Code Plugin Marketplace
 
-For Claude Code Users, the plugin system provides the simplest installation experience and automatically configures the [Pulumi MCP server](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/mcp/) for organizational context:
+For Claude Code users, the plugin system provides the simplest installation experience:
 
 ```bash
 /plugin marketplace add pulumi/agent-skills
@@ -95,7 +95,7 @@ For Claude Code Users, the plugin system provides the simplest installation expe
 /plugin install pulumi-authoring     # Install authoring skills
 ```
 
-You can install both plugin groups or choose only the ones you need. The plugin installation includes MCP server configuration, giving your AI assistant access to your Pulumi Cloud organization data, cross-stack visibility through Pulumi Insights, and registry schema information.
+You can install both plugin groups or choose only the ones you need.
 
 ### Universal installation
 
@@ -106,10 +106,6 @@ npx skills add pulumi/agent-skills
 ```
 
 This works across all platforms that support the Agent Skills specification.
-
-### MCP server integration
-
-When you install plugins through Claude Code, the Pulumi MCP server is automatically configured to provide your AI assistant with live access to your Pulumi Cloud organization. This integration gives your assistant organizational context that skills alone cannot provide: which stacks exist, what resources are deployed, cross-stack dependencies, and provider schemas from the Pulumi Registry.
 
 ## Using skills
 

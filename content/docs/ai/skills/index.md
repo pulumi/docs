@@ -62,8 +62,6 @@ For Claude Code users, the plugin system provides the simplest installation expe
 /plugin install pulumi-authoring     # Install authoring skills
 ```
 
-This also configures the [Pulumi MCP server](/docs/iac/guides/ai-integration/mcp-server/), giving your agent access to your Pulumi Cloud organization data.
-
 ### Universal Installation
 
 Install all skills for use with any AI coding assistant:
@@ -121,17 +119,6 @@ Help me create a reusable Pulumi component for a web service
 
 The assistant will use the `pulumi-component` skill to guide you through component authoring best practices.
 
-## MCP Server Integration
-
-When you install plugins through Claude Code, the [Pulumi MCP server](/docs/iac/guides/ai-integration/mcp-server/) is automatically configured. This provides:
-
-- Access to your Pulumi Cloud organization data
-- Cross-stack visibility through Pulumi Insights
-- Live infrastructure context
-- Registry schema information
-
-The MCP server requires the `PULUMI_ACCESS_TOKEN` environment variable. [Create an access token](/docs/pulumi-cloud/access-management/access-tokens/) and set it in your shell profile.
-
 ## Contributing
 
 We welcome contributions to Pulumi Agent Skills. Visit the [agent-skills repository](https://github.com/pulumi/agent-skills) on GitHub to:
@@ -141,3 +128,9 @@ We welcome contributions to Pulumi Agent Skills. Visit the [agent-skills reposit
 - Report issues
 
 See the [CONTRIBUTING.md](https://github.com/pulumi/agent-skills/blob/main/CONTRIBUTING.md) file for guidelines.
+
+## Resources
+
+- [Pulumi Documentation](/docs/)
+- [Agent Skills Specification](https://agentskills.io/specification)
+- [Pulumi ESC Documentation](/docs/esc/)
