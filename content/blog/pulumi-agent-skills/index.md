@@ -85,7 +85,7 @@ This plugin includes four skills focused on code quality, reusability, and crede
 
 ## How to install
 
-### Claude Code Plugin System
+### Claude Code Plugin Marketplace
 
 For Claude Code Users, the plugin system provides the simplest installation experience and automatically configures the [Pulumi MCP server](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/mcp/) for organizational context:
 
@@ -97,18 +97,9 @@ For Claude Code Users, the plugin system provides the simplest installation expe
 
 You can install both plugin groups or choose only the ones you need. The plugin installation includes MCP server configuration, giving your AI assistant access to your Pulumi Cloud organization data, cross-stack visibility through Pulumi Insights, and registry schema information.
 
-### Gemini CLI Extension
-
-For Gemini CLI users, install skills as Gemini extensions. Each extension includes skills and the [Pulumi MCP server](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/mcp/) for organizational context:
-
-```bash
-gemini extension install pulumi/pulumi-migration    # Terraform, CDK, and Azure migration workflows
-gemini extension install pulumi/pulumi-authoring    # Best practices, components, Automation API, and ESC
-```
-
 ### Universal installation
 
-For Cursor, GitHub Copilot, VS Code, Codex, and other platforms, use the universal [Agent Skills](https://agentskills.io) CLI:
+For Cursor, GitHub Copilot, VS Code, Codex, Gemini and other platforms, use the universal [Agent Skills](https://agentskills.io) CLI:
 
 ```bash
 npx skills add pulumi/agent-skills
@@ -118,7 +109,7 @@ This works across all platforms that support the Agent Skills specification.
 
 ### MCP server integration
 
-When you install plugins through Claude Code or extensions through the Gemini CLI, the Pulumi MCP server is automatically configured to provide your AI assistant with live access to your Pulumi Cloud organization. This integration gives your assistant organizational context that skills alone cannot provide: which stacks exist, what resources are deployed, cross-stack dependencies, and provider schemas from the Pulumi Registry.
+When you install plugins through Claude Code, the Pulumi MCP server is automatically configured to provide your AI assistant with live access to your Pulumi Cloud organization. This integration gives your assistant organizational context that skills alone cannot provide: which stacks exist, what resources are deployed, cross-stack dependencies, and provider schemas from the Pulumi Registry.
 
 ## Using skills
 
