@@ -10,19 +10,21 @@ tags:
     - ai
     - platform-engineering
     - features
+    - claude-code
+    - codex
+    - ai-agents
 schema_type: auto
 
 social:
     twitter: |
-        Introducing Pulumi Agent Skills:
+        Introducing Pulumi Agent Skills: 11 skills in 2 plugin groups
 
-        - Migration workflows: Terraform, CDK, ARM to Pulumi
-        - Best practices: Catch common mistakes before deploy
-        - Pulumi ESC: OIDC and secrets done right
+        - Migration (7): Terraform, CDK, ARM/Azure to Pulumi
+        - Authoring (4): Best practices, components, Automation API, ESC
 
         Works with Claude Code, Cursor, Copilot, and more.
 
-        Install: npx add-skill pulumi/agent-skills
+        Install: npx skills add pulumi/agent-skills
     linkedin: |
         **Pulumi Agent Skills: Teaching AI Assistants How Experts Write Infrastructure**
 
@@ -32,16 +34,15 @@ social:
         General-purpose agents lack the domain knowledge that experienced Pulumi developers accumulate. They do not know that creating resources inside apply() breaks preview. They have not internalized the workflow differences between converting Terraform state versus just translating HCL syntax.
 
         **The Solution**
-        Pulumi Agent Skills packages this expertise into structured knowledge that works across Claude Code, Cursor, GitHub Copilot, VS Code, Codex, and Gemini.
+        Pulumi Agent Skills packages this expertise into structured knowledge that works across Claude Code, Cursor, GitHub Copilot, VS Code, Codex, and Gemini. Now available in 11 skills organized into two plugin groups.
 
         **What You Get**
-        - Migration skills: Complete Terraform, CDK, and ARM migration workflows, not just syntax translation
-        - Best practices: Automatic detection of common mistakes like resources in apply(), missing aliases, improper secret handling
-        - Pulumi ESC: OIDC setup, environment composition, and credential management patterns
-        - Automation API: Multi-stack orchestration, self-service platforms, and embedded infrastructure patterns
+        - Migration Plugin (7 skills): Complete Terraform, CDK, and ARM/Azure migration workflows with automated conversion and import tools
+        - Authoring Plugin (4 skills): Best practices, component authoring, Automation API patterns, and Pulumi ESC for OIDC setup and credential management
 
-        **One Command to Install**
-        npx add-skill pulumi/agent-skills
+        **Install All Skills or Choose Specific Groups**
+        Claude Code: /plugin install pulumi-migration
+        Universal: npx skills add pulumi/agent-skills
 
         Read more: pulumi.com/blog/pulumi-agent-skills
 ---
@@ -50,115 +51,74 @@ AI coding assistants have transformed how developers write software, including i
 
 <!--more-->
 
-That's because general-purpose agents lack the domain knowledge that experienced IaC developers build up over time. Pulumi developers know, for example, that creating resources inside `apply()` means those resources will not appear in preview. They do not know the specific flags needed to import an existing Azure resource. They have not internalized the workflow differences between converting Terraform state versus just translating HCL syntax.
-
-We built [Neo](https://www.pulumi.com/product/neo/) for teams that want deep Pulumi expertise combined with organizational context and deployment governance. But developers have preferred tools, and we want people to succeed with Pulumi wherever they work. Some teams live in Claude Code. Others use Cursor, Copilot, Codex, or Gemini. That is why we are releasing Pulumi Agent Skills, a collection of packaged expertise that teaches any AI coding assistant how to work with Pulumi the way an experienced practitioner would.
+We built [Neo](https://www.pulumi.com/product/neo/) for teams that want deep Pulumi expertise combined with organizational context and deployment governance. But developers have preferred tools, and we want people to succeed with Pulumi wherever they work. Some teams live in Claude Code. Others use Cursor, Copilot, Codex, Gemini CLI, or other platforms. That is why we are releasing Pulumi Agent Skills, a collection of packaged expertise that teaches any AI coding assistant how to work with Pulumi the way an experienced practitioner would.
 
 ## What are agent skills?
 
-Skills are structured knowledge packages that follow the open [Agent Skills](https://agentskills.io) specification. They work across multiple AI coding platforms including Claude Code, GitHub Copilot, Cursor, VS Code, Codex, and Gemini. When you install Pulumi skills, your AI assistant gains access to detailed workflows, code patterns, and decision trees for common infrastructure tasks.
+Skills are structured knowledge packages that follow the open [Agent Skills](https://agentskills.io) specification. They work across multiple AI coding platforms including Claude Code, GitHub Copilot, Cursor, VS Code, Codex, and Gemini CLI. When you install Pulumi skills, your AI assistant gains access to detailed workflows, code patterns, and decision trees for common infrastructure tasks.
 
 ## Available Pulumi skills
 
-We are launching with skills covering two areas: migration workflows and Pulumi capabilities.
+We are launching a set of skills organized into two plugin groups: migration and authoring. You can install all skills at once or choose specific plugin groups based on your needs.
 
-### Migration skills
+### Migration Plugin
 
-These skills help AI assistants guide you through complete migrations, not just syntax translation.
+Convert and import infrastructure from other tools to Pulumi. This plugin includes seven skills covering complete migration workflows, not just syntax translation.
 
 * **Terraform to Pulumi** walks through the full migration workflow. It handles state translation, provider version alignment, and the iterative process of achieving a clean `pulumi preview` with no unexpected changes.
 
-* **CDK to Pulumi** covers AWS CDK migrations in depth. The skill includes strategies for handling CDK's Lambda-backed custom resources, asset bundling, cross-stack references, and the decision framework for when to use `aws-native` versus `aws` providers.
+* **CDK to Pulumi** covers the complete AWS CDK migration workflow end to end, from conversion and import to handling CDK-specific constructs like Lambda-backed custom resources and cross-stack references.
 
-* **CloudFormation to Pulumi** guides assistants through converting CloudFormation templates and importing existing stacks into Pulumi management.
+* **Azure to Pulumi** covers the complete Azure Resource Manager and Bicep migration workflow, handling template conversion and resource import with guidance on achieving zero-diff validation.
 
-* **ARM to Pulumi** handles Azure Resource Manager and Bicep template conversion, including the import workflow for bringing existing Azure resources under Pulumi management.
+### Authoring Plugin
 
-### Capability skills
+This plugin includes four skills focused on code quality, reusability, and credential management.
 
-These skills teach assistants how to use Pulumi features effectively.
+**Pulumi best practices** encodes the patterns that prevent common mistakes. It covers output handling, component structure, secrets management, safe refactoring with aliases, and deployment workflows. The skill flags anti-patterns that can cause issues with preview, dependencies, and production deployments.
 
-**Pulumi ESC** covers Environments, Secrets, and Configuration. The skill explains when to use `esc env get` versus `esc env open`, how to set up OIDC credentials for AWS, Azure, and GCP, and the patterns for composing environments across teams and stacks.
+**Pulumi Component** provides a complete guide for authoring ComponentResource classes. The skill covers designing component interfaces, multi-language support, and distribution. It teaches assistants how to build reusable infrastructure abstractions that work across TypeScript, Python, Go, C#, Java, and YAML.
 
-**Pulumi best practices** encodes the patterns that prevent common mistakes. It covers output handling (never create resources inside `apply()`), component structure (always set `parent: this`), secrets management (encrypt from day one), safe refactoring with aliases, and deployment workflows. The skill flags anti-patterns like resources created inside `apply()` callbacks, missing parent relationships in components, and unencrypted secrets in stack configuration.
+**Pulumi Automation API** covers programmatic orchestration of Pulumi operations. The skill explains when to use Automation API versus the CLI, the tradeoffs between local source and inline programs, and patterns for multi-stack deployments.
 
-**Pulumi Automation API** covers programmatic orchestration of Pulumi operations. The skill explains when to use Automation API versus the CLI, the tradeoffs between local source and inline programs, and patterns for multi-stack deployments. It guides assistants through building self-service platforms, replacing fragile shell scripts, and embedding infrastructure provisioning in applications.
-
-## Example: best practices in action
-
-When you ask an assistant with the best practices skill to review code, it catches issues that generic agents miss. Consider this common mistake:
-
-```typescript
-const bucket = new aws.s3.Bucket("bucket");
-
-bucket.id.apply(bucketId => {
-    new aws.s3.BucketObject("object", {
-        bucket: bucketId,
-        content: "hello",
-    });
-});
-```
-
-A general-purpose agent might not flag this. An agent with the Pulumi best practices skill recognizes that creating resources inside `apply()` means they will not appear in `pulumi preview`, and suggests the correct pattern:
-
-```typescript
-const bucket = new aws.s3.Bucket("bucket");
-
-const object = new aws.s3.BucketObject("object", {
-    bucket: bucket.id,  // Pass the Output directly
-    content: "hello",
-});
-```
-
-The skill teaches the assistant why this matters: resources created inside `apply()` may not appear in preview, making deployments unpredictable and breaking the dependency graph that Pulumi uses to order operations correctly.
+**Pulumi ESC** covers centralized secrets and configuration management. The skill guides assistants through setting up dynamic OIDC credentials, composing environments, and integrating secrets into Pulumi programs and other applications.
 
 ## How to install
 
-The quickest way to install is with the [add-skill](https://add-skill.org/) CLI:
+### Claude Code Plugin System
+
+For Claude Code Users, the plugin system provides the simplest installation experience and automatically configures the [Pulumi MCP server](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/mcp/) for organizational context:
 
 ```bash
-npx add-skill pulumi/agent-skills
+/plugin marketplace add pulumi/agent-skills
+/plugin install pulumi-migration     # Install migration skills
+/plugin install pulumi-authoring     # Install authoring skills
 ```
 
-This works across Claude Code, Cursor, GitHub Copilot, VS Code, Codex, Gemini, and other platforms that support the Agent Skills specification.
+You can install both plugin groups or choose only the ones you need. The plugin installation includes MCP server configuration, giving your AI assistant access to your Pulumi Cloud organization data, cross-stack visibility through Pulumi Insights, and registry schema information.
 
-### Manual installation
+### Gemini CLI Extension
 
-You can also install manually for specific platforms:
-
-**Claude Code**: Clone to your skills directory (`~/.claude/skills/` for global, or `.claude/skills/` for a project):
+For Gemini CLI users, install skills as Gemini extensions. Each extension includes skills and the [Pulumi MCP server](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/mcp/) for organizational context:
 
 ```bash
-# Global (available across all projects)
-git clone https://github.com/pulumi/agent-skills.git ~/.claude/skills/pulumi
-
-# Project-specific
-git clone https://github.com/pulumi/agent-skills.git .claude/skills/pulumi
+gemini extension install pulumi/pulumi-migration    # Terraform, CDK, and Azure migration workflows
+gemini extension install pulumi/pulumi-authoring    # Best practices, components, Automation API, and ESC
 ```
 
-**Cursor**: Add to your project's `.cursor/skills/` directory:
+### Universal installation
+
+For Cursor, GitHub Copilot, VS Code, Codex, and other platforms, use the universal [Agent Skills](https://agentskills.io) CLI:
 
 ```bash
-git clone https://github.com/pulumi/agent-skills.git .cursor/skills/pulumi
+npx skills add pulumi/agent-skills
 ```
 
-**GitHub Copilot / VS Code**: Clone to your skills directory:
+This works across all platforms that support the Agent Skills specification.
 
-```bash
-git clone https://github.com/pulumi/agent-skills.git .github/skills/pulumi
-```
+### MCP server integration
 
-**Codex**: Add to your project's `.codex/skills/` directory:
-
-```bash
-git clone https://github.com/pulumi/agent-skills.git .codex/skills/pulumi
-```
-
-**Gemini**: Add to your project's `.gemini/skills/` directory:
-
-```bash
-git clone https://github.com/pulumi/agent-skills.git .gemini/skills/pulumi
-```
+When you install plugins through Claude Code or extensions through the Gemini CLI, the Pulumi MCP server is automatically configured to provide your AI assistant with live access to your Pulumi Cloud organization. This integration gives your assistant organizational context that skills alone cannot provide: which stacks exist, what resources are deployed, cross-stack dependencies, and provider schemas from the Pulumi Registry.
 
 ## Using skills
 
@@ -176,12 +136,12 @@ Or describe what you need in natural language:
 
 > "Review this Pulumi code for best practices issues"
 
-The assistant will follow the skill's procedures, ask clarifying questions when needed, and produce output that reflects Pulumi best practices rather than generic code generation.
+> "Create a reusable component for a web service with load balancer"
 
-We expect this collection to grow. If you have Pulumi expertise worth packaging, whether provider-specific patterns, debugging workflows, or operational practices, we welcome contributions. See the [contributing guide](https://github.com/pulumi/agent-skills/blob/main/CONTRIBUTING.md) for details.
+The assistant will follow the skill's procedures, ask clarifying questions when needed, and produce output that reflects Pulumi best practices rather than generic code generation.
 
 ## Get started
 
-The skills are available now at [github.com/pulumi/agent-skills](https://github.com/pulumi/agent-skills). Install them in your preferred AI coding environment and let us know what you build.
+We expect this collection to grow. If you have Pulumi expertise worth packaging, whether provider-specific patterns, debugging workflows, or operational practices, we welcome contributions. See the [contributing guide](https://github.com/pulumi/agent-skills/blob/main/CONTRIBUTING.md) for details.
 
-{{< github-card repo="pulumi/agent-skills" >}}
+The skills are available now at [github.com/pulumi/agent-skills](https://github.com/pulumi/agent-skills). Install them in your preferred AI coding environment and let us know what you build.
