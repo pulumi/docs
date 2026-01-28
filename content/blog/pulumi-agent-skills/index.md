@@ -90,9 +90,9 @@ This plugin includes four skills focused on code quality, reusability, and crede
 For Claude Code users, the plugin system provides the simplest installation experience:
 
 ```bash
-/plugin marketplace add pulumi/agent-skills
-/plugin install pulumi-migration     # Install migration skills
-/plugin install pulumi-authoring     # Install authoring skills
+claude plugin marketplace add pulumi/agent-skills
+claude plugin install pulumi-migration     # Install migration skills
+claude plugin install pulumi-authoring     # Install authoring skills
 ```
 
 You can install both plugin groups or choose only the ones you need.

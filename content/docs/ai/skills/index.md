@@ -57,9 +57,9 @@ Write quality Pulumi programs, components, automation, and secrets management:
 For Claude Code users, the plugin system provides the simplest installation experience:
 
 ```bash
-/plugin marketplace add pulumi/agent-skills
-/plugin install pulumi-migration     # Install migration skills
-/plugin install pulumi-authoring     # Install authoring skills
+claude plugin marketplace add pulumi/agent-skills
+claude plugin install pulumi-migration     # Install migration skills
+claude plugin install pulumi-authoring     # Install authoring skills
 ```
 
 ### Universal Installation
