@@ -147,6 +147,7 @@ Always provide relevant line numbers for any issues you identify.
 - **Build, test, and infrastructure changes**:
   - If changes are made to build scripts (scripts/), GitHub Actions workflows (.github/workflows/), the Makefile, or infrastructure code (infrastructure/), verify that BUILD-AND-DEPLOY.md has been updated to reflect these changes.
   - Examples of changes requiring documentation updates: new make targets, modified deployment workflows, infrastructure configuration changes, new environment variables, updated build processes.
+  - **For infrastructure changes** (infrastructure/, package.json, webpack config, Lambda@Edge, CloudFront): Apply the comprehensive review checklist in the [Infrastructure Change Review](../../../BUILD-AND-DEPLOY.md#infrastructure-change-review) section of BUILD-AND-DEPLOY.md. Pay special attention to Lambda@Edge bundling, dependency updates, and deployment risks.
 - **Images and assets**:
   - Check images have alt text for accessibility.
   - Verify image file sizes are reasonable.

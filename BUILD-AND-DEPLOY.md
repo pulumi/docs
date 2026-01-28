@@ -15,8 +15,9 @@ This document provides comprehensive documentation of the entire build, test, de
 7. [Testing Strategy](#testing-strategy)
 8. [Environment Management](#environment-management)
 9. [Troubleshooting](#troubleshooting)
-10. [Maintenance Tasks](#maintenance-tasks)
-11. [Reference](#reference)
+10. [Infrastructure Change Review](#infrastructure-change-review)
+11. [Maintenance Tasks](#maintenance-tasks)
+12. [Reference](#reference)
 
 ---
 
@@ -2908,6 +2909,185 @@ aws s3 sync s3://www-prod.pulumi.com-website-logs/ ./logs/
 
 # Analyze with AWS Athena (if configured)
 ```
+
+---
+
+## Infrastructure Change Review
+
+When reviewing changes to infrastructure code, build scripts, dependencies, or deployment workflows, apply additional scrutiny to prevent production incidents. This section provides a comprehensive checklist for reviewing infrastructure changes.
+
+### When to Use This Checklist
+
+Apply this review checklist when changes are made to:
+
+- `infrastructure/` - Pulumi infrastructure code
+- `package.json` - Node.js dependencies (especially webpack, bundlers, AWS SDK)
+- `Makefile` - Build system changes
+- `.github/workflows/` - CI/CD workflows
+- Webpack/bundler configuration
+- Lambda@Edge functions
+- CloudFront distribution settings
+
+### Lambda@Edge Review Checklist
+
+Lambda@Edge functions have strict requirements and common pitfalls:
+
+**Bundling & Compatibility:**
+
+- [ ] Verify all npm dependencies bundle correctly (check for ESM/CommonJS compatibility issues)
+- [ ] Confirm dependencies are Lambda@Edge compatible (no browser-only APIs like `window`, `document`)
+- [ ] Check bundle size is reasonable (<1MB compressed, <50MB uncompressed per AWS limits)
+- [ ] Look for dynamic imports or `require()` patterns that may break in Lambda@Edge
+- [ ] Verify Node.js runtime version matches package.json engine requirements
+
+**Common Issues:**
+
+- ESM-only packages (e.g., `url-pattern` >=7.0.0) require CommonJS bundling
+- Webpack configuration changes may break bundling (especially `output.module` or `experiments.outputModule`)
+- Browser-only polyfills (e.g., `buffer`, `process`) may inflate bundle size
+
+**Testing:**
+
+- [ ] Test Lambda function execution manually after deployment (not just deployment success)
+- [ ] Check CloudWatch Logs for execution errors in edge locations (logs appear in region where function executes)
+- [ ] Verify affected pages return expected status codes (200, not 503/500)
+
+**Resources:**
+
+- Lambda@Edge limits: <https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-requirements-limits.html>
+- Lambda@Edge function code is in `infrastructure/index.ts`
+- Logs location: CloudWatch Logs in edge regions (not us-east-1)
+
+### CloudFront Review Checklist
+
+**Distribution Changes:**
+
+- [ ] Confirm redirect logic changes preserve existing redirects
+- [ ] Verify cache invalidation is triggered if cache behavior changes
+- [ ] Validate that CloudFront-Lambda associations are updated if event types change
+- [ ] Check that cache TTLs are appropriate for content type
+
+**Testing:**
+
+- [ ] Test redirects from legacy URLs to ensure they still work
+- [ ] Verify cached content refreshes as expected
+- [ ] Check cross-origin behavior for `/registry`, `/answers`, `/ai`, `/guides` paths
+
+### Deployment Risk Assessment
+
+Before merging infrastructure changes, assess the risk:
+
+**Impact Analysis:**
+
+- [ ] Identify which infrastructure components are affected (Lambda@Edge, CloudFront, S3, DNS)
+- [ ] Determine if changes affect user-facing functionality (especially SDK docs, redirects, search)
+- [ ] Check if changes require infrastructure rebuild (`pulumi up`) or just code redeploy
+- [ ] Consider rollback complexity if changes fail in production
+
+**User Impact:**
+
+- High Risk: Lambda@Edge, CloudFront, DNS changes (affect all users immediately)
+- Medium Risk: Build system, asset bundling (affect next deployment)
+- Low Risk: Documentation, scripts (limited blast radius)
+
+### Testing Requirements
+
+**Pre-Production Testing:**
+
+- [ ] Verify changes were tested on pulumi-test.io before production deployment
+- [ ] Confirm environment-specific testing (check hardcoded URLs, environment variables)
+- [ ] For Lambda@Edge changes, confirm manual testing of Lambda execution (not just deployment)
+- [ ] Run browser tests (`make test` or Cypress) against preview environment
+
+**Validation Steps:**
+
+```bash
+# Test on staging (pulumi-test.io)
+# 1. Deploy to testing environment
+pulumi up -s www-testing
+
+# 2. Verify critical pages
+curl -I https://www.pulumi-test.io/docs/
+curl -I https://www.pulumi-test.io/registry/
+
+# 3. Check Lambda@Edge execution in CloudWatch
+aws logs tail /aws/lambda/us-east-1.edge-redirects --follow --region us-east-1
+
+# 4. Test redirects
+curl -I https://www.pulumi-test.io/old/url/path
+```
+
+### Dependency Update Review
+
+**Webpack/Bundler Updates:**
+
+- [ ] Review changelog for breaking changes, especially ESM/CommonJS handling
+- [ ] Check for changes to `output.module`, `experiments.outputModule`, or module system defaults
+- [ ] Test asset bundling locally before merging
+- [ ] Verify that Lambda@Edge functions still bundle correctly
+
+**AWS SDK Updates:**
+
+- [ ] Verify Lambda@Edge compatibility (SDK v3 is modular, but check bundle size)
+- [ ] Check for breaking changes in CloudFront, S3, or Lambda APIs
+
+**Major Version Bumps:**
+
+- [ ] Scrutinize changelogs for breaking changes affecting bundling or runtime
+- [ ] Test in preview environment before production
+- [ ] Consider incremental updates for large version jumps
+
+**Dependabot PRs:**
+
+- Batch dependency updates (e.g., 43 updates in one PR) increase risk
+- Review bundled dependency updates separately from independent updates
+- For build tool updates (webpack, babel, etc.), prefer individual PRs
+
+### Monitoring & Rollback
+
+**Failure Detection:**
+
+- [ ] Identify how to detect if this change fails in production (CloudWatch metrics, error logs, user reports)
+- [ ] Know which CloudWatch Log Groups to check (Lambda@Edge logs appear in edge regions)
+- [ ] Consider if CloudWatch alarms should be added for new failure modes
+
+**Rollback Procedure:**
+
+For atomic deployments (S3 bucket swaps):
+
+```bash
+# Rollback to previous bucket
+# 1. Find previous bucket name
+aws s3 ls | grep pulumi-docs-origin | sort -r
+
+# 2. Update infrastructure to use previous bucket
+# Edit infrastructure/index.ts or use saved bucket metadata
+
+# 3. Run Pulumi update
+pulumi up -s www-production
+```
+
+For Lambda@Edge changes:
+
+```bash
+# Revert to previous Lambda function version
+aws lambda update-function-configuration \
+  --function-name edge-redirects \
+  --region us-east-1 \
+  --description "Rollback to previous version"
+
+# Note: Lambda@Edge propagation takes 5-30 minutes
+```
+
+**Incident Response:**
+
+If an infrastructure change breaks production:
+
+1. Check incident response runbook (if available)
+1. Notify team in Slack #pulumi-docs-ops channel
+1. Assess severity (full outage vs. degraded functionality)
+1. Decide: rollback or fix-forward
+1. Document incident and root cause for future prevention
 
 ---
 
