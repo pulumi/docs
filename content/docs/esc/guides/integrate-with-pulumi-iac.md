@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-guides
     identifier: esc-guides-integrate-pulumi-iac
-    weight: 1
+    weight: 10
 aliases:
   - /docs/esc/get-started/integrate-with-pulumi-iac/
   - /docs/pulumi-cloud/esc/get-started/integrate-with-pulumi-iac/
@@ -112,7 +112,7 @@ values:
 
 This pattern works everywhere Pulumi runs: locally, in CI/CD, Pulumi Deployments, and GitHub Actions. Similar patterns are available for Azure (`fn::open::azure-login`) and GCP (`fn::open::gcp-login`).
 
-Learn more in [Dynamic login credentials](/docs/esc/integrations/dynamic-login-credentials/) and [Configuring OIDC](/docs/esc/environments/configuring-oidc/).
+Learn more in [Dynamic login credentials](/docs/esc/integrations/dynamic-login-credentials/) and [Configuring OIDC](/docs/esc/guides/configuring-oidc/).
 
 ### Managing API keys and secrets
 

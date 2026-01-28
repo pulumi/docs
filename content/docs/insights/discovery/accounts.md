@@ -125,7 +125,7 @@ The AWS scanner for Pulumi Cloud requires access to the AWS account you want to 
   Learn more about the [AWS ReadOnlyAccess policy](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/ReadOnlyAccess.html).  
 {{< /notes >}}
 
-3. **Create an ESC environment**: Configure it to assume the role via OIDC. See [ESC AWS provider documentation](/docs/esc/environments/configuring-oidc/aws/).
+3. **Create an ESC environment**: Configure it to assume the role via OIDC. See [ESC AWS provider documentation](/docs/esc/guides/configuring-oidc/aws/).
 
 4. **Assign the ESC environment**: Link the ESC environment to your Insights account during account creation.
 
@@ -140,7 +140,7 @@ The Azure scanner for Pulumi Cloud requires access to your Azure subscription. T
 #### Option 1: OIDC authentication (recommended)
 
 1. Create a Microsoft Entra application and configure federated credentials:
-   * Follow the steps in [Configuring OpenID Connect for Azure](/docs/esc/environments/configuring-oidc/azure/)
+   * Follow the steps in [Configuring OpenID Connect for Azure](/docs/esc/guides/configuring-oidc/azure/)
    * When configuring the federated credential:
      * **Audience**: `azure:<your-pulumi-org-name>`
      * **Subject identifier**: `pulumi:environments:org:<your-pulumi-org-name>:env:<esc-project-name>/<esc-environment-name>`
@@ -387,7 +387,7 @@ echo "Kubeconfig written to $KUBECONFIG_PATH"
 The Google Cloud scanner for Pulumi Cloud requires read access to your project. Configure ESC to generate Service Account credentials dynamically through OpenID Connect (OIDC).
 
 1. Configure OpenID Connect for Google Cloud:
-   * Follow the steps in [Configuring OpenID Connect For Google Cloud](/docs/esc/environments/configuring-oidc/gcp/)
+   * Follow the steps in [Configuring OpenID Connect For Google Cloud](/docs/esc/guides/configuring-oidc/gcp/)
    * The service account must be granted the **Viewer** role
 
 2. Use the following ESC configuration:

@@ -77,7 +77,7 @@ This will set up a trust relationship to allow Pulumi Cloud to assume the role u
 }
 ```
 
-For a more detailed step-by-step guide, including screenshots see the [Configuring OpenID Connect for AWS](/docs/esc/environments/configuring-oidc/aws/) Pulumi documentation.
+For a more detailed step-by-step guide, including screenshots see the [Configuring OpenID Connect for AWS](/docs/esc/guides/configuring-oidc/aws/) Pulumi documentation.
 
 Next, go back to Pulumi ESC and configure your cloud credentials using the role ARN and trust relationship you just created:
 
