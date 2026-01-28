@@ -15,8 +15,9 @@ This document provides comprehensive documentation of the entire build, test, de
 7. [Testing Strategy](#testing-strategy)
 8. [Environment Management](#environment-management)
 9. [Troubleshooting](#troubleshooting)
-10. [Maintenance Tasks](#maintenance-tasks)
-11. [Reference](#reference)
+10. [Infrastructure Change Review](#infrastructure-change-review)
+11. [Maintenance Tasks](#maintenance-tasks)
+12. [Reference](#reference)
 
 ---
 
@@ -2912,6 +2913,62 @@ aws s3 sync s3://www-prod.pulumi.com-website-logs/ ./logs/
 
 # Analyze with AWS Athena (if configured)
 ```
+
+---
+
+## Infrastructure Change Review
+
+When reviewing infrastructure changes (`infrastructure/`, `package.json`, webpack config, Lambda@Edge, CloudFront), identify potential risks that require human attention. This section provides guidance on common issues to flag during review.
+
+### Key Risk Areas
+
+**Lambda@Edge Bundling Issues:**
+
+Lambda@Edge failures are often caused by bundling problems that aren't caught until runtime:
+
+- **ESM/CommonJS incompatibility**: ESM-only packages (e.g., `url-pattern` >=7.0.0) break if webpack is misconfigured
+- **Webpack config changes**: Changes to `output.module` or `experiments.outputModule` can break bundling
+- **Dynamic imports**: `import()` statements may not work in Lambda@Edge runtime
+- **Bundle size**: Lambda@Edge has strict limits (1MB compressed, 50MB uncompressed)
+
+**What to flag in reviews:**
+- Dependency updates that affect webpack, babel, or bundlers (especially major versions)
+- Changes to webpack configuration files
+- New dependencies in `package.json` used by Lambda@Edge code
+- Changes to `infrastructure/index.ts` (Lambda@Edge function code)
+
+**CloudFront Distribution Changes:**
+
+- **Redirect logic**: Changes to redirect handling may break existing URLs
+- **Cache behavior**: Modified cache settings require invalidation
+- **Lambda associations**: Changes to CloudFront-Lambda event types must be coordinated
+
+**Deployment Risks:**
+
+- **High risk** (affects all users immediately): Lambda@Edge, CloudFront, DNS changes
+- **Medium risk** (affects next deployment): Build system, dependency updates
+- **Low risk** (limited scope): Documentation, scripts
+
+**Dependency Updates:**
+
+Large batches of dependency updates (especially Dependabot PRs with 20+ updates) increase risk:
+- Flag webpack/bundler updates for testing against Lambda@Edge bundling
+- Flag major version bumps for changelog review
+- Suggest splitting build tool updates into separate PRs
+
+### Testing & Validation
+
+**For human reviewers to verify:**
+- Changes tested on pulumi-test.io staging environment
+- Lambda@Edge execution tested manually (not just deployment)
+- Critical pages return expected status codes (not 503/500)
+- CloudWatch logs checked for Lambda@Edge errors (logs appear in edge regions)
+
+### Resources
+
+- Lambda@Edge limits: <https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-requirements-limits.html>
+- Lambda@Edge code: `infrastructure/index.ts`
+- CloudWatch logs: Edge regions (not us-east-1)
 
 ---
 
