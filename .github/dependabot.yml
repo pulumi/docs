@@ -90,6 +90,8 @@ updates:
     labels: ["dependencies", "github-actions"]
     commit-message:
       prefix: "ci"
+    ignore:
+      - dependency-name: "pulumi/action-install-pulumi-cli"
 
   # Python dependencies
   - package-ecosystem: "pip"

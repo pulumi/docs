@@ -3402,6 +3402,13 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 - Reason: Breaking changes require manual migration
 - Revisit: During planned design system updates
 
+**pulumi/action-install-pulumi-cli:**
+- Ignored in `dependabot.yml` GitHub Actions section
+- Reason: v2+ has circular dependency on `versions.json` which the CLI release workflow creates
+- Current version: v1.0.1 (downloads directly from GitHub releases)
+- Usage: `.github/workflows/pulumi-cli.yml` only; `pulumi/actions` should be used elsewhere
+- Revisit: When action is fixed to support direct GitHub release downloads without `versions.json`
+
 **Major Versions (Wildcard):**
 - Ignored across all ecosystems via wildcard rule
 - Reason: Breaking changes require manual review and testing
