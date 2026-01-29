@@ -7,9 +7,11 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     name: Configuring OIDC
-    identifier: esc-configuring-oidc
-    parent: esc-environments
-    weight: 7
+    identifier: esc-guides-configuring-oidc
+    parent: esc-guides
+    weight: 20
+aliases:
+  - /docs/esc/environments/configuring-oidc/
 ---
 
 Pulumi ESC can be configured to act as an OpenID Connect (OIDC) provider, issuing signed, short-lived tokens. These tokens can then be exchanged by external systems for temporary cloud provider credentials, eliminating the need for hard-coded credentials.
@@ -35,12 +37,12 @@ In this example we have an environment definition and ARN that identifies us to 
 
 To configure OIDC for your cloud provider, refer to one of our guides:
 
-* [Configuring OIDC for AWS](/docs/esc/environments/configuring-oidc/aws/)
-* [Configuring OIDC for Azure](/docs/esc/environments/configuring-oidc/azure/)
-* [Configuring OIDC for Doppler](/docs/esc/environments/configuring-oidc/doppler/)
-* [Configuring OIDC for Google Cloud](/docs/esc/environments/configuring-oidc/gcp/)
-* [Configuring OIDC for Infisical](/docs/esc/environments/configuring-oidc/infisical/)
-* [Configuring OIDC for Vault](/docs/esc/environments/configuring-oidc/vault/)
+* [Configuring OIDC for AWS](/docs/esc/guides/configuring-oidc/aws/)
+* [Configuring OIDC for Azure](/docs/esc/guides/configuring-oidc/azure/)
+* [Configuring OIDC for Doppler](/docs/esc/guides/configuring-oidc/doppler/)
+* [Configuring OIDC for Google Cloud](/docs/esc/guides/configuring-oidc/gcp/)
+* [Configuring OIDC for Infisical](/docs/esc/guides/configuring-oidc/infisical/)
+* [Configuring OIDC for Vault](/docs/esc/guides/configuring-oidc/vault/)
 
 ## Customizing OIDC claims
 

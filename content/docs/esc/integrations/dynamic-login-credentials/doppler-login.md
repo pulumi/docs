@@ -33,7 +33,7 @@ values:
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Doppler, see
-the [OpenID Connect integration](/docs/esc/environments/configuring-oidc/doppler/) documentation.
+the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/doppler/) documentation.
 
 ## Inputs
 
@@ -46,7 +46,7 @@ the [OpenID Connect integration](/docs/esc/environments/configuring-oidc/doppler
 | Property            | Type     | Description                                                                                                                                                                                              |
 |---------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `identityId`        | string   | The identityId of the Doppler service account identity to assume.                                                                                                                                                                |
-| `subjectAttributes` | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/environments/configuring-oidc/#custom-token-claim) documentation |
+| `subjectAttributes` | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim) documentation |
 
 ## Outputs
 

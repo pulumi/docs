@@ -7,8 +7,10 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     name: AWS
-    parent: esc-configuring-oidc
+    parent: esc-guides-configuring-oidc
     weight: 1
+aliases:
+  - /docs/esc/environments/configuring-oidc/aws/
 ---
 
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with AWS. OIDC in AWS uses a web identity provider to assume an IAM role. Access to the IAM role is authorized using a trust policy that validates the contents of the OIDC token issued by the Pulumi Cloud.

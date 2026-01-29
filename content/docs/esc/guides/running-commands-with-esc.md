@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-guides
     identifier: esc-guides-running-commands
-    weight: 3
+    weight: 40
 ---
 
 This guide shows you how to use `esc run` to inject secrets and configuration from ESC environments into any command or script as environment variables.

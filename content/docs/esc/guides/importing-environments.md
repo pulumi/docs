@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-guides
     identifier: esc-guides-importing-environments
-    weight: 5
+    weight: 50
 aliases:
   - /docs/esc/get-started/import-environments/
   - /docs/pulumi-cloud/esc/get-started/import-environments/

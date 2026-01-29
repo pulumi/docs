@@ -143,7 +143,7 @@ New to Pulumi IaC? Start with the [Pulumi IaC Get Started guide](/docs/get-start
 Extend ESC with external secret providers and advanced OIDC configuration:
 
 - **[Dynamic secrets](/docs/esc/integrations/dynamic-secrets/)** - Pull secrets from external providers like AWS Secrets Manager, Azure Key Vault, and 1Password
-- **[Configuring OIDC](/docs/esc/environments/configuring-oidc/)** - Deep dive into OpenID Connect configuration and trust relationships
+- **[Configuring OIDC](/docs/esc/guides/configuring-oidc/)** - Deep dive into OpenID Connect configuration and trust relationships
 
 ### Learn the fundamentals
 

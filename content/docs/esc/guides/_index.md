@@ -15,6 +15,7 @@ These guides walk you through common Pulumi ESC tasks. Each guide is self-contai
 ## Getting started guides
 
 - **[Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)** - Use ESC environments in your Pulumi infrastructure code
+- **[Configuring OIDC](/docs/esc/guides/configuring-oidc/)** - Set up OpenID Connect for secure, credential-free authentication
 - **[Managing secrets](/docs/esc/guides/managing-secrets/)** - Store, retrieve, and organize secrets in ESC environments
 - **[Running commands with esc run](/docs/esc/guides/running-commands-with-esc/)** - Inject secrets into any command or script
 

@@ -7,9 +7,10 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     name: Vault
-    parent: esc-configuring-oidc
+    parent: esc-guides-configuring-oidc
     weight: 7
 aliases:
+  - /docs/esc/environments/configuring-oidc/vault/
   - /docs/pulumi-cloud/oidc/provider/vault
   - /docs/pulumi-cloud/oidc/provider/vault/
   - /docs/administration/access-identity/oidc/provider/vault

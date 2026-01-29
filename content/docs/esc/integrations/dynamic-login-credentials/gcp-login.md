@@ -67,7 +67,7 @@ This configuration enables:
 
 ## Configuring OIDC
 
-To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Google Cloud, see the [OpenID Connect integration](/docs/esc/environments/configuring-oidc/gcp/) documentation.
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Google Cloud, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/gcp/) documentation.
 
 ## Inputs
 
@@ -94,7 +94,7 @@ To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Google 
 | `serviceAccount` | string | The email address of the service account to use.                           |
 | `region`         | string | [Optional] - The region of the GCP project.                                |
 | `tokenLifetime`  | string | [Optional] - The lifetime of the temporary credentials.                    |
-| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/environments/configuring-oidc/#custom-token-claim) documentation |
+| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim) documentation |
 
 ## Outputs
 
