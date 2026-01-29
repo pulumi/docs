@@ -44,7 +44,7 @@ pulumi env run my-esc-project/my-esc-environment -- npm install
 
 Both Pulumi Deployments OIDC and Pulumi ESC require configuring an OIDC Identity Provider in your cloud environment in order to enable the secure exchange of tokens between Pulumi Cloud and your cloud provider in order to obtain temporary credentials. For more information:
 
-- If using Pulumi ESC, see [Configuring OpenID Connect for Pulumi ESC](/docs/esc/environments/configuring-oidc/).
+- If using Pulumi ESC, see [Configuring OpenID Connect for Pulumi ESC](/docs/esc/guides/configuring-oidc/).
 - If using Pulumi Deployments OIDC, see [OIDC Setup for Pulumi Deployments](/docs/deployments/deployments/oidc/).
 
 After an OIDC Identity Provider has been configured:
