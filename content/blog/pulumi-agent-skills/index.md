@@ -38,7 +38,7 @@ social:
 
         **What You Get**
         - Migration Plugin (7 skills): Complete Terraform, CDK, and ARM/Azure migration workflows with automated conversion and import tools
-        - Authoring Plugin (4 skills): Best practices, component authoring, Automation API patterns, and Pulumi ESC for OIDC setup and credential management
+        - Authoring Plugin (4 skills): Best practices, component authoring, Automation API patterns, and Pulumi ESC for OIDC setup and configuration
 
         **Install All Skills or Choose Specific Groups**
         Claude Code: /plugin install pulumi-migration
@@ -73,7 +73,7 @@ Convert and import infrastructure from other tools to Pulumi. This plugin includ
 
 ### Authoring Skills
 
-This plugin includes four skills focused on code quality, reusability, and credential management.
+This plugin includes four skills focused on code quality, reusability, and configuration.
 
 **Pulumi best practices** encodes the patterns that prevent common mistakes. It covers output handling, component structure, secrets management, safe refactoring with aliases, and deployment workflows. The skill flags anti-patterns that can cause issues with preview, dependencies, and production deployments.
 
