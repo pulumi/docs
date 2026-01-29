@@ -168,7 +168,7 @@ public class App {
 Storing a component in a Git repository allows for version control, collaboration, and easier integration into multiple projects. Developers can add the component to their Pulumi projects using the command:
 
 ```bash
-$ pulumi package add <repo_url>@<release-version>
+$ pulumi package add <repo_url>[/path/to/component]@<release-version>
 ```
 
 The only steps necessary to enable this are to push your component project to a git repo, and create a release tag for the versioning. Pulumi supports referencing both GitHub and GitLab releases. You can also target a standard internally hosted git service, just by providing the repo URL without the `<release-version>` portion.
