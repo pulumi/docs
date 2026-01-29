@@ -103,7 +103,7 @@ When considering provider-based components, bear the following tradeoffs in mind
 - **No Pulumi IDP support**: Cannot be published to Pulumi IDP Private Registry
 
 {{% notes type="info" %}}
-Providers (and provider-based components) may technically be written in any language if the author is willing to hand-author the schema. Maintaining schemas by hand is labor-intensive and the learning curve maintaining schemas may be prohibitive for many teams. Pulumi provides tooling in the `pulumi-go-provider` framework to automatically infer the schema and reduce the need for manually maintained schema files. Pulumi does not provide tooling for inferring schemas in languages other than Go.
+Providers (and provider-based components) may technically be written in any language if the author is willing to hand-author the schema. Maintaining schemas by hand is labor-intensive and the learning curve maintaining schemas may be prohibitive for many teams. Pulumi provides tooling in the [`pulumi-go-provider`](github.com/pulumi/pulumi-go-provider) framework to automatically infer the schema and reduce the need for manually maintained schema files. Pulumi does not provide tooling for inferring schemas in languages other than Go.
 
 Consuming providers written in languages other than Go requires consumers to have the runtime of the provider's language installed, similar to Cross-language components.
 {{% /notes %}}
