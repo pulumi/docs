@@ -61,7 +61,7 @@ Skills are structured knowledge packages that follow the open [Agent Skills](htt
 
 We are launching a set of skills organized into two plugin groups: migration and authoring. You can install all skills at once or choose specific plugin groups based on your needs.
 
-### Migration Skills
+### Migration skills
 
 Convert and import infrastructure from other tools to Pulumi. This plugin includes four skills covering complete migration workflows, not just syntax translation.
 
@@ -73,21 +73,21 @@ Convert and import infrastructure from other tools to Pulumi. This plugin includ
 
 * **Azure to Pulumi** covers the complete Azure Resource Manager and Bicep migration workflow, handling template conversion and resource import with guidance on achieving zero-diff validation.
 
-### Authoring Skills
+### Authoring skills
 
 This plugin includes four skills focused on code quality, reusability, and configuration.
 
-**Pulumi best practices** encodes the patterns that prevent common mistakes. It covers output handling, component structure, secrets management, safe refactoring with aliases, and deployment workflows. The skill flags anti-patterns that can cause issues with preview, dependencies, and production deployments.
+* **Pulumi best practices** encodes the patterns that prevent common mistakes. It covers output handling, component structure, secrets management, safe refactoring with aliases, and deployment workflows. The skill flags anti-patterns that can cause issues with preview, dependencies, and production deployments.
 
-**Pulumi Component** provides a complete guide for authoring ComponentResource classes. The skill covers designing component interfaces, multi-language support, and distribution. It teaches assistants how to build reusable infrastructure abstractions that work across TypeScript, Python, Go, C#, Java, and YAML.
+* **Pulumi Component** provides a complete guide for authoring ComponentResource classes. The skill covers designing component interfaces, multi-language support, and distribution. It teaches assistants how to build reusable infrastructure abstractions that work across TypeScript, Python, Go, C#, Java, and YAML.
 
-**Pulumi Automation API** covers programmatic orchestration of Pulumi operations. The skill explains when to use Automation API versus the CLI, the tradeoffs between local source and inline programs, and patterns for multi-stack deployments.
+* **Pulumi Automation API** covers programmatic orchestration of Pulumi operations. The skill explains when to use Automation API versus the CLI, the tradeoffs between local source and inline programs, and patterns for multi-stack deployments.
 
-**Pulumi ESC** covers centralized secrets and configuration management. The skill guides assistants through setting up dynamic OIDC credentials, composing environments, and integrating secrets into Pulumi programs and other applications.
+* **Pulumi ESC** covers centralized secrets and configuration management. The skill guides assistants through setting up dynamic OIDC credentials, composing environments, and integrating secrets into Pulumi programs and other applications.
 
 ## How to install
 
-### Claude Code Plugin Marketplace
+### Claude Code plugin marketplace
 
 For Claude Code users, the plugin system provides the simplest installation experience:
 
