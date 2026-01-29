@@ -28,29 +28,32 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Check organization membership
-        id: check-membership
+      - name: Check repository write access
+        id: check-access
         run: |
-          # Check if PR author is a member of the pulumi organization
-          ORG="pulumi"
+          # Check if PR author has write access to the repository
+          OWNER="pulumi"
+          REPO="docs"
           AUTHOR="${{ github.event.pull_request.user.login }}"
 
-          # Use GitHub API to check membership (returns 204 if member, 404 if not)
-          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+          # Get user's permission level (admin, write, read, or none)
+          PERMISSION=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/orgs/$ORG/members/$AUTHOR")
+            "https://api.github.com/repos/$OWNER/$REPO/collaborators/$AUTHOR/permission" \
+            | jq -r '.permission // "none"')
 
-          if [ "$HTTP_CODE" = "204" ]; then
-            echo "is_member=true" >> $GITHUB_OUTPUT
-            echo "✓ PR author $AUTHOR is a member of $ORG"
+          # Allow admin or write access
+          if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "✓ User $AUTHOR has $PERMISSION access to $OWNER/$REPO"
           else
-            echo "is_member=false" >> $GITHUB_OUTPUT
-            echo "✗ PR author $AUTHOR is not a member of $ORG (HTTP $HTTP_CODE)"
+            echo "has_write_access=false" >> $GITHUB_OUTPUT
+            echo "✗ User $AUTHOR has $PERMISSION access to $OWNER/$REPO (insufficient permissions)"
           fi
 
       - name: Run Claude Code Review
-        if: steps.check-membership.outputs.is_member == 'true'
+        if: steps.check-access.outputs.has_write_access == 'true'
         id: claude-review
         uses: anthropics/claude-code-action@v1
         env:
