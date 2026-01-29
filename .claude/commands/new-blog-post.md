@@ -1,5 +1,5 @@
 ---
-description: Create a new blog post with proper structure, frontmatter, and automatic author detection/onboarding
+description: Create a new blog post with proper structure, frontmatter, and automatic author detection/onboarding.
 ---
 
 # /new-blog-post Command

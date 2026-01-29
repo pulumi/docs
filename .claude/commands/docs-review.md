@@ -1,5 +1,5 @@
 ---
-description: Review content quality while writing or before committing (checks style, accuracy, best practices on open files, branches, or PRs)
+description: Review content quality while writing or before committing (checks style, accuracy, best practices on open files, branches, or PRs).
 ---
 
 # Documentation Review Command

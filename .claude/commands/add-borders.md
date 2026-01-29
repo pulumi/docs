@@ -1,5 +1,5 @@
 ---
-description: Add 1px grey borders to PNG images for better visual clarity in documentation
+description: Add 1px grey borders to PNG images for better visual clarity in documentation.
 ---
 
 # Usage

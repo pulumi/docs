@@ -1,5 +1,5 @@
 ---
-description: Deep review and polish of a single documentation file and its images (comprehensive improvement suggestions)
+description: Deep review and polish of a single documentation file and its images (comprehensive improvement suggestions).
 ---
 
 # Usage

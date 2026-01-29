@@ -1,5 +1,5 @@
 ---
-description: Analyze a documentation issue and create an implementation plan (investigates problem and plans solution)
+description: Analyze a documentation issue and create an implementation plan (investigates problem and plans solution).
 ---
 
 # Usage
