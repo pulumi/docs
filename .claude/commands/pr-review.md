@@ -59,9 +59,14 @@ Fetch all PR data and detect contributor type with minimal commands:
    echo "Author: $AUTHOR"
    echo "Contributor type: $CONTRIBUTOR_TYPE"
    echo "$PR_DATA" | jq -r '{number, title, url}'
+
+   # Display file paths for use in Step 4
+   echo ""
+   echo "Files changed:"
+   echo "$PR_DATA" | jq -r '.files[].path'
    ```
 
-2. Store the results: PR data (in PR_DATA variable), contributor type (bot/internal/external)
+2. Store the results: PR data (in PR_DATA variable), contributor type (bot/internal/external), file paths (displayed for Step 4 reference)
 
 3. Display: "[icon] Reviewing PR #{{arg}} from @username ([type] contributor)" (🤖 for bot account, 📝 for internal/external)
 
@@ -166,7 +171,7 @@ Continue to Step 4.
 
 ### Step 4: Offer Infrastructure Deployment
 
-Check if the PR contains dependency or infrastructure changes by examining the files changed (from Step 2):
+Check if the PR contains dependency or infrastructure changes by examining the files changed (displayed in Step 1):
 
 **Dependency changes** - Any of these patterns:
 
