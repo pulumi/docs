@@ -14,21 +14,43 @@ jobs:
   claude-review:
     # Skip automated PRs from pulumi-bot
     if: github.event.pull_request.user.login != 'pulumi-bot'
-    
+
     runs-on: ubuntu-latest
     permissions:
       contents: read
       pull-requests: write
       issues: read
       id-token: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
+      - name: Check organization membership
+        id: check-membership
+        run: |
+          # Check if PR author is a member of the pulumi organization
+          ORG="pulumi"
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+
+          # Use GitHub API to check membership (returns 204 if member, 404 if not)
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/orgs/$ORG/members/$AUTHOR")
+
+          if [ "$HTTP_CODE" = "204" ]; then
+            echo "is_member=true" >> $GITHUB_OUTPUT
+            echo "✓ PR author $AUTHOR is a member of $ORG"
+          else
+            echo "is_member=false" >> $GITHUB_OUTPUT
+            echo "✗ PR author $AUTHOR is not a member of $ORG (HTTP $HTTP_CODE)"
+          fi
+
       - name: Run Claude Code Review
+        if: steps.check-membership.outputs.is_member == 'true'
         id: claude-review
         uses: anthropics/claude-code-action@v1
         env:
@@ -42,9 +64,4 @@ jobs:
             You are running in a CI environment.
 
             Review pull request #${{ github.event.pull_request.number }} by following the instructions in `.claude/commands/docs-review.md` under the "Continuous Integration (CI) Context" section.
-
-          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          # or https://docs.anthropic.com/en/docs/claude-code/sdk#command-line for available options
-          # Allow essential file reading tools (Read, Glob, Grep) and gh commands for PR interaction
-          claude_args: '--allowed-tools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr comment:*),Bash(gh issue view:*)"'
 
