@@ -3200,7 +3200,12 @@ This section provides comprehensive guidance for triaging and managing Dependabo
 
 ### Automated risk labeling
 
-All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHub Action workflow with:
+All Dependabot PRs automatically receive:
+
+**Dependabot-applied labels:**
+- `dependencies` - Standard label applied by Dependabot
+
+**Auto-applied labels (via label-dependabot.yml workflow):**
 
 **Risk Tier Labels:**
 - `deps-risk-high` - Runtime/browser/parser dependencies
