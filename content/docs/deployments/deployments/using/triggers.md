@@ -49,10 +49,6 @@ Push to Deploy requires the [Pulumi GitHub App](/docs/iac/using-pulumi/continuou
 
 Pulumi Deployments can run a `pulumi preview` for a stack (e.g., `dev`) when a Pull Request is opened against a particular git branch (e.g., a proposed change to the `main` branch). This will give the reviewer the full context necessary to understand the impact of the changes in your Pull Request: both the code changes _and the changes to your resources_ (i.e., the `pulumi preview` output). The Pulumi GitHub app will create or update a comment on your Pull Request with the results of `pulumi preview`.
 
-{{% notes type="info" %}}
-The `pulumi preview` on Pull Request capability requires that the Github user creating the Pull Request has their Github Organization Visibility set to `Public`.
-{{% /notes %}}
-
 GitHub Push to Deploy can also be configured to run a `pulumi update` for a stack when changes are merged to a particular git branch. This feature is useful to enable continuous delivery, for example to a shared development or QA environment.
 
 ## Scheduled Deployments
