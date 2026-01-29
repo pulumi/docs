@@ -17,9 +17,9 @@ schema_type: auto
 
 social:
     twitter: |
-        Introducing Pulumi Agent Skills: 11 skills in 2 plugin groups
+        Introducing Pulumi Agent Skills: 8 skills in 2 plugin groups
 
-        - Migration (7): Terraform, CDK, ARM/Azure to Pulumi
+        - Migration (4): Terraform, CloudFormation, CDK, ARM/Azure to Pulumi
         - Authoring (4): Best practices, components, Automation API, ESC
 
         Works with Claude Code, Cursor, Copilot, and more.
@@ -34,10 +34,10 @@ social:
         General-purpose agents lack the domain knowledge that experienced Pulumi developers accumulate. They do not know that creating resources inside apply() breaks preview. They have not internalized the workflow differences between converting Terraform state versus just translating HCL syntax.
 
         **The Solution**
-        Pulumi Agent Skills packages this expertise into structured knowledge that works across Claude Code, Cursor, GitHub Copilot, VS Code, Codex, and Gemini. Now available in 11 skills organized into two plugin groups.
+        Pulumi Agent Skills packages this expertise into structured knowledge that works across Claude Code, Cursor, GitHub Copilot, VS Code, Codex, and Gemini. Now available in 8 skills organized into two plugin groups.
 
         **What You Get**
-        - Migration Plugin (7 skills): Complete Terraform, CDK, and ARM/Azure migration workflows with automated conversion and import tools
+        - Migration Plugin (4 skills): Complete Terraform, CloudFormation, CDK, and ARM/Azure migration workflows with automated conversion and import tools
         - Authoring Plugin (4 skills): Best practices, component authoring, Automation API patterns, and Pulumi ESC for OIDC setup and configuration
 
         **Install All Skills or Choose Specific Groups**
@@ -63,9 +63,11 @@ We are launching a set of skills organized into two plugin groups: migration and
 
 ### Migration Skills
 
-Convert and import infrastructure from other tools to Pulumi. This plugin includes seven skills covering complete migration workflows, not just syntax translation.
+Convert and import infrastructure from other tools to Pulumi. This plugin includes four skills covering complete migration workflows, not just syntax translation.
 
 * **Terraform to Pulumi** walks through the full migration workflow. It handles state translation, provider version alignment, and the iterative process of achieving a clean `pulumi preview` with no unexpected changes.
+
+* **CloudFormation to Pulumi** covers the complete AWS CloudFormation migration workflow, from template conversion and stack import to handling CloudFormation-specific constructs.
 
 * **CDK to Pulumi** covers the complete AWS CDK migration workflow end to end, from conversion and import to handling CDK-specific constructs like Lambda-backed custom resources and cross-stack references.
 
