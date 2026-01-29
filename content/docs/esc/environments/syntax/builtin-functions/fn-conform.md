@@ -154,9 +154,11 @@ values:
 }
 ```
 
-### Reusing schemas from imported environments
+### Reusing schemas from other environments
 
-You can define schemas in a separate environment and import them for reuse across multiple environments. This allows you to centralize schema definitions and ensure consistent validation.
+You can define schemas in a separate environment and reference them for reuse across multiple environments. This allows you to centralize schema definitions and ensure consistent validation.
+
+Using the [`environments` built-in property](/docs/esc/environments/syntax/builtin-properties/environments/) to reference the schema is the recommended approach because it doesn't merge the schema into your environment's output.
 
 #### Schema environment (myproj/schemas)
 
@@ -170,16 +172,13 @@ values:
     required: [name, email]
 ```
 
-#### Environment using the imported schema
+#### Environment using the schema reference
 
 ```yaml
-imports:
-  - schemas
-
 values:
   user:
     fn::conform:
-      schema: ${user-schema}
+      schema: ${environments.myproj.schemas.user-schema}
       value:
         name: "Alice"
         email: "alice@example.com"
