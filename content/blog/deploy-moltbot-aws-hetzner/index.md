@@ -750,7 +750,7 @@ The cloud-init script needs a few minutes to finish. It installs Docker, Node.js
 
 Open the gateway dashboard using the `tailscaleUrlWithToken` output and use the built-in chat to test your assistant:
 
-![Moltbot gateway dashboard showing a chat conversation](clawdbot-chat.png)
+![Moltbot gateway dashboard showing a chat conversation](moltbot-chat.png)
 
 Your personal AI assistant is now running 24/7 on your own infrastructure, accessible securely through Tailscale.
 
@@ -758,7 +758,7 @@ Your personal AI assistant is now running 24/7 on your own infrastructure, acces
 
 When self-hosting an AI assistant, security matters. Moltbot's rapid adoption meant thousands of instances spun up in days, and not everyone locked them down. The community noticed:
 
-![Tweet warning about exposed Moltbot gateways with zero auth](clawdbot-security-tweet.png)
+![Tweet warning about exposed Moltbot gateways with zero auth](moltbot-security-tweet.png)
 
 The tweet isn't exaggerating. A quick Shodan search shows exposed gateways on port 18789 with shell access, browser automation, and API keys up for grabs:
 
