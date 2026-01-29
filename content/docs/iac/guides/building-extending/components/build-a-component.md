@@ -2909,46 +2909,8 @@ Duration: 10s
 
 Success! We were able to use our component as just a single resource within our Pulumi program and it managed five other resources under the hood for us. This greatly reduces the amount of code an end user has to write to be able to host an HTML file in S3.
 
-## Sharing and Reuse
+## Next steps
 
-In the above examples, the component was referenced from a nearby directory, local to the machine. In order to share a component, it needs to be accessed outside of your local machine. There are two main ways to do that; sharing via a Git repo, or publishing as a Pulumi Package.
+Now that you've built a component, you can package and distribute it for reuse. See [Packaging a Component](/docs/iac/guides/building-extending/components/packaging-a-component/) to learn about single-language, cross-language, and provider-based packaging approaches.
 
-### Sharing via Git
-
-Storing a component in a Git repository allows for version control, collaboration, and easier integration into multiple projects. Developers can add the component to their Pulumi projects using the command:
-
-```bash
-$ pulumi package add <repo_url>@<release-version>
-```
-
-The only steps necessary to enable this are to push your component project to a git repo, and create a release tag for the versioning. Pulumi supports referencing both GitHub and GitLab releases. You can also target a standard internally hosted git service, just by providing the repo URL without the `<release-version>` portion.
-
-Pulumi will automatically generate the needed language-specific end user SDK for your project. For example, if the Pulumi project was written in Python, the `pulumi package add` command would detect this and generate the Python SDK on-the-fly, as well as adding the dependency to your `requirements.txt` and running `pip install -r requirements.txt` for you. The output will also give you an example of the correct `import` statement to use the component.
-
-```
-$ pulumi package add https://github.com/pulumi/staticpagecomponent@v0.1.0
-Downloading provider: github.com_pulumi_staticpagecomponent.git
-Successfully generated a Python SDK for the staticpagecomponent package at /example/use-static-page-component/sdks/staticpagecomponent
-
-[...]
-
-You can then import the SDK in your Python code with:
-
-  import pulumi_static_page_component as static_page_component
-```
-
-{{< notes type="tip" >}}
-
-Pulumi also supports private repos in GitHub and GitLab. Pulumi will read standard environment variables like `GITHUB_TOKEN` and `GITLAB_TOKEN` if available in order to authenticate access to a private repo during `pulumi package add`.
-
-{{< /notes >}}
-
-### Generating Local SDKs with pulumi install
-
-Once you've added an entry to the packages section of your Pulumi.yaml file, you can run `pulumi install` to generate a local SDK in your project. This command will process all packages listed in your Pulumi.yaml and create the necessary SDK files. Check in these files if you want fully reproducible builds, or add them to .gitignore if you prefer to regenerate them on each checkout. When using .gitignore, team members will need to run `pulumi install` after checkout to regenerate the SDK.
-
-### Sharing via Pulumi Package
-
-Publishing a component as a Pulumi package makes it easier to distribute and integrate into Pulumi workflows. This method enables community contributions and ensures that infrastructure components remain modular and maintainable. By packaging the component, it becomes easier to reuse across teams and projects, improving consistency and efficiency in infrastructure management. It also makes your component available for use within Pulumi Cloud Deployments.
-
-Learn more in the [Publishing packages](/docs/iac/using-pulumi/extending-pulumi/publishing-packages/) guide.
+For testing strategies, see [Testing Components](/docs/iac/guides/building-extending/components/testing-components/).
