@@ -113,7 +113,7 @@ This works across all platforms that support the Agent Skills specification.
 
 Once installed, skills activate automatically based on context. When you ask your assistant to help migrate a Terraform project, it draws on the Terraform skill's workflow. When you are debugging why resources are being recreated unexpectedly, the best practices skill helps the assistant check for missing aliases.
 
-In Codex, you can invoke skills directly via slash commands. You can typically do this in Claude Code as well, but a bug currently prevents it.
+In Codex and Claude Code, you can invoke skills directly via slash commands.
 
 ```text
 /pulumi-terraform-to-pulumi
