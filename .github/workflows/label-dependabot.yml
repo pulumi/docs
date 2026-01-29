@@ -200,7 +200,7 @@ jobs:
             triageComment += 'Automated Claude reviews are not available for Dependabot PRs. ';
             triageComment += 'To review this PR with Claude Code, run:\n\n';
             triageComment += '```bash\n';
-            triageComment += `/docs-review ${prNumber}\n`;
+            triageComment += `/pr-review ${prNumber}\n`;
             triageComment += '```\n\n';
 
             triageComment += '---\n';

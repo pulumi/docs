@@ -1,12 +1,14 @@
 ---
-description: Focused review and improvement of a single documentation file and any included images.
+description: Deep review and polish of a single documentation file and its images (comprehensive improvement suggestions).
 ---
 
 # Usage
 
 `/glow-up [file-path]`
 
-Analyze and improve the documentation quality of the specified file. You are acting as a professional technical writer focused on making documentation clear, concise, and consistent with Pulumi style guidelines.
+**Use this when:** You want to significantly improve an existing documentation page with comprehensive suggestions for content, structure, clarity, and visuals.
+
+Performs deep analysis and improvement of a single file, acting as a professional technical writer focused on making documentation clear, concise, and consistent with Pulumi style guidelines.
 
 The `file-path` argument is optional. If not provided, the command will attempt to infer the target file from context (e.g., a file currently open in the IDE).
 

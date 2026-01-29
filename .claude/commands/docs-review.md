@@ -1,10 +1,12 @@
 ---
-description: Review changes for style, accuracy, and Pulumi best practices. Context-sensitive in IDEs, or provide a PR number to review a PR from this repo.
+description: Review content quality while writing or before committing (checks style, accuracy, best practices on open files, branches, or PRs).
 ---
 
 # Documentation Review Command
 
-You will review documentation changes and provide feedback on style, accuracy, and best practices.
+**Use this when:** You're writing or editing documentation and want to check quality before committing, or when you want content feedback without the full PR approval workflow.
+
+Reviews documentation changes for style, accuracy, and Pulumi best practices. Works on currently open files (context-sensitive) or on a specific PR number.
 
 ---
 
