@@ -3200,7 +3200,12 @@ This section provides comprehensive guidance for triaging and managing Dependabo
 
 ### Automated risk labeling
 
-All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHub Action workflow with:
+All Dependabot PRs automatically receive:
+
+**Dependabot-applied labels:**
+- `dependencies` - Standard label applied by Dependabot
+
+**Auto-applied labels (via label-dependabot.yml workflow):**
 
 **Risk Tier Labels:**
 - `deps-risk-high` - Runtime/browser/parser dependencies
@@ -3401,6 +3406,13 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 - Ignored in root and theme `dependabot.yml`
 - Reason: Breaking changes require manual migration
 - Revisit: During planned design system updates
+
+**pulumi/action-install-pulumi-cli:**
+- Ignored in `dependabot.yml` GitHub Actions section
+- Reason: v2+ has circular dependency on `versions.json` which the CLI release workflow creates
+- Current version: v1.0.1 (downloads directly from GitHub releases)
+- Usage: `.github/workflows/pulumi-cli.yml` only; `pulumi/actions` should be used elsewhere
+- Revisit: When action is fixed to support direct GitHub release downloads without `versions.json`
 
 **Major Versions (Wildcard):**
 - Ignored across all ecosystems via wildcard rule
