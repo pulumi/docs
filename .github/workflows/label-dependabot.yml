@@ -196,6 +196,13 @@ jobs:
               triageComment += '📦 **Bulk Update** - 10+ dependencies. Review carefully for conflicts.\n\n';
             }
 
+            triageComment += '### Claude Code Review\n\n';
+            triageComment += 'Automated Claude reviews are not available for Dependabot PRs. ';
+            triageComment += 'To review this PR with Claude Code, run:\n\n';
+            triageComment += '```bash\n';
+            triageComment += `/docs-review ${prNumber}\n`;
+            triageComment += '```\n\n';
+
             triageComment += '---\n';
             triageComment += 'For detailed triage guidance, see the [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management) section in BUILD-AND-DEPLOY.md.\n';
 
