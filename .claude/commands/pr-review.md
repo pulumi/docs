@@ -373,7 +373,7 @@ Select template based on contributor type (Step 1). Bot templates: professional/
 | Action | External | Internal | Bot |
 |--------|----------|----------|-----|
 | **Approve** | "Thank you! [≤1 sentence praise if warranted]. Welcome! 🎉" | "LGTM! [feedback/suggestions]" | **Dependabot**: "Security patch approved [testing notes]" (security), "High-risk update reviewed. Checklist: [items]" (high), "Update reviewed for quarterly batch" (med/low)<br>**Other**: "Automated changes approved." |
-| **Approve and merge** | "Thank you! [≤1 sentence praise]. Merging now. 🎉" | "LGTM! Merging now." | **Dependabot**: "Security patch approved. Merging for deployment." (security), "High-risk update tested. Merging now." (high), "Update approved. Merging now." (med/low)<br>**Other**: "Automated changes approved. Merging now." |
+| **Approve and merge** | "Thank you! [≤1 sentence praise]. Auto-merge enabled. 🎉" | "LGTM! Auto-merge enabled." | **Dependabot**: "Security patch approved. Auto-merge enabled." (security), "High-risk update tested. Auto-merge enabled." (high), "Update approved. Auto-merge enabled." (med/low)<br>**Other**: "Automated changes approved. Auto-merge enabled." |
 | **Make changes and approve** | "Applied minor style/formatting fixes. Thank you! 🙏" | "Applied style/formatting fixes. LGTM!" | N/A (excluded for bots) |
 | **Request changes** | Opening: "Thank you!"<br>Acknowledge positives (≤1 sentence)<br>Issues with line numbers<br>Suggestion blocks<br>Close: "Mention @claude if you need help" | Professional opening<br>Issues with line numbers<br>Suggestion blocks<br>Clear action items | Technical issue description<br>Line numbers<br>What needs changing<br>No suggestion blocks<br>Close: "This automated PR may need closing and regeneration after fixing source configuration." |
 | **Close PR** | "Thank you for contributing!"<br>Clear, kind closing reason<br>Acknowledge valuable aspects<br>Suggest alternatives<br>"We appreciate your interest in Pulumi!" | Clear closing reason | **Dependabot quarterly**: "Closing to batch with other low/medium-risk updates in quarterly review. See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management)."<br>**Dependabot other**: "Closing this update. [Technical reason: conflicts, superseded, etc.]"<br>**Other bots**: "Closing. [Technical reason]" |
@@ -385,7 +385,7 @@ Select template based on contributor type (Step 1). Bot templates: professional/
 **Commands** (see Step 7 for detailed flow):
 
 - **Approve**: `gh pr review {{arg}} --approve --body "{{COMMENT}}"`
-- **Approve and merge**: `gh pr review {{arg}} --approve --body "{{COMMENT}}"` then `gh pr merge {{arg}} --auto --squash`
+- **Approve and merge**: `gh pr review {{arg}} --approve --body "{{COMMENT}}"` then `gh pr merge {{arg}} --auto --squash` (Note: `--auto` enables auto-merge; PR merges when checks pass)
 - **Request changes**: `gh pr review {{arg}} --request-changes --body "{{COMMENT}}"`
 - **Close PR**: `gh pr comment {{arg}} --body "{{COMMENT}}"` then `gh pr close {{arg}}`
 - **Do nothing yet**: Exit with "No action taken. Run this command again when ready."
@@ -409,12 +409,12 @@ Select template based on contributor type (Step 1). Bot templates: professional/
 | Action | Result Message | Additional Info |
 |--------|---------------|-----------------|
 | **Approve** | ✅ PR #{{arg}} approved successfully!<br><br>Approval comment posted. | PR URL |
-| **Approve and merge** | ✅ PR #{{arg}} approved and merged!<br><br>Merged using squash. | PR URL<br>Bot context (if bot): @username, Risk tier, Labels<br>If Dependabot HIGH/MEDIUM: "⚠️ Next merge to master triggers pulumi-test.io deployment" |
+| **Approve and merge** | ✅ PR #{{arg}} approved with auto-merge enabled!<br><br>PR will merge using squash when checks pass. Verify with: `gh pr view {{arg}} --json state,mergedAt,autoMergeRequest` | PR URL<br>Bot context (if bot): @username, Risk tier, Labels<br>If Dependabot HIGH/MEDIUM: "⚠️ Next merge to master triggers pulumi-test.io deployment" |
 | **Make changes and approve** | ✅ Changes applied and PR #{{arg}} approved!<br><br>Changes committed: [SHA]<br>Files: [list] | PR URL/commits |
 | **Request changes** | ✅ Changes requested on PR #{{arg}}<br><br>Review posted with request-changes flag. | PR URL |
 | **Close PR** | ✅ PR #{{arg}} closed<br><br>Closing comment posted. | PR URL |
 | **Do nothing yet** | No action taken on PR #{{arg}}.<br><br>Run /pr-review {{arg}} again when ready. | - |
-| **Error** | ❌ Error executing action<br><br>Command: [failed command]<br>Error: [message]<br><br>No changes made to PR #{{arg}}. | Recovery:<br>• Run /pr-review {{arg}} again<br>• Check: gh auth status<br>• Verify: gh pr view {{arg}}<br>• Use GitHub web UI<br><br>If checked out PR branch: `git checkout <original-branch>` before displaying error |
+| **Error** | ❌ Error executing action<br><br>Command: [failed command]<br>Error: [message]<br><br>No changes made to PR #{{arg}}. | Recovery:<br>• Run /pr-review {{arg}} again<br>• Check: `gh auth status`<br>• Verify: `gh pr view {{arg}} --json state,url`<br>• Use GitHub web UI<br><br>If checked out PR branch: `git checkout <original-branch>` before displaying error |
 
 ---
 
@@ -436,3 +436,4 @@ Select template based on contributor type (Step 1). Bot templates: professional/
 - **Bot PR editing**: "Make changes and approve" option is excluded for bot PRs. Bot PRs should be closed and regenerated rather than manually edited to avoid breaking automation.
 - **AskUserQuestion limit**: The tool accepts a maximum of 4 options. Bot-specific menus are adapted by risk tier to stay within this limit.
 - **GitHub workflow refs**: When triggering workflows for PRs, always fetch the branch name first with `gh pr view --json headRefName` and use that as the ref. Do not use `refs/pull/{PR}/head` format as it is not accepted by the workflow dispatch API.
+- **GitHub CLI fields**: When checking PR status, use `state`, `mergedAt`, and `autoMergeRequest` fields. Do not use `merged` field (does not exist).
