@@ -73,6 +73,7 @@ Reviews any pull request and presents action choices for approval, changes, or c
 2. Get the diff: `gh pr diff {{arg}}`
 3. Note the PR title, description, and files changed
 4. **If contributor type is bot**, also fetch labels:
+
    ```bash
    gh pr view {{arg}} --json labels --jq '.labels[].name' | tr '\n' ',' | sed 's/,$//'
    ```
@@ -201,31 +202,34 @@ You can proceed with the code review now and check the deployment later.
 - **Blog posts**: For blog posts, focus on readability, images, and code examples rather than cross-references
 - **Mixed content types**: Group by content type (docs pages, blog posts, examples, infrastructure)
 
-#### Part E: Offer Infrastructure Deployment for Dependabot PRs
+#### Part E: Offer Infrastructure Deployment
 
-**If contributor type is bot AND author contains "dependabot" AND risk tier is HIGH or MEDIUM**, offer to deploy to pulumi-test.io:
+If the PR contains changes to dependencies (e.g., Dependabot updates) or infrastructure (e.g. configuration changes, anything in `infrastructure/`), present the following prompt to the user before proceeding to Step 4:
 
 1. Use AskUserQuestion with these options:
 
-   **Question**: "This PR contains dependency changes that may affect infrastructure. Would you like to deploy this PR to pulumi-test.io for testing before review?"
+   **Question**: This PR contains dependency or infrastructure changes. Would you like to deploy this PR to pulumi-test.io for testing before review?"
 
    **Options**:
-   1. **Yes, deploy to pulumi-test.io now** - Trigger deployment and provide monitoring link (Recommended for HIGH risk)
+   1. **Yes, deploy to pulumi-test.io now** - Trigger deployment and provide monitoring link
    2. **No, skip infrastructure testing** - Continue with code review only
 
 2. **If user chooses "Yes, deploy to pulumi-test.io now"**:
 
    a. Trigger the workflow on the PR branch:
+
    ```bash
    gh workflow run testing-build-and-deploy.yml --ref refs/pull/{{arg}}/head
    ```
 
    b. Wait 2-3 seconds, then fetch the workflow run URL:
+
    ```bash
    gh run list --workflow=testing-build-and-deploy.yml --limit 1 --json databaseId,status,url,headBranch --jq '.[0]'
    ```
 
    c. Display the deployment information:
+
    ```markdown
    ## 🔧 Infrastructure Deployment Initiated
 
@@ -252,6 +256,7 @@ You can proceed with the code review now and check the deployment later.
 3. **If user chooses "No, skip infrastructure testing"**:
 
    Display:
+
    ```markdown
    ## 🔧 Infrastructure Testing Skipped
 
@@ -311,6 +316,7 @@ Present the review in the conversation:
 2. Use AskUserQuestion to present these options:
 
 **Header text** (construct based on labels found):
+
 ```
 🤖 Dependabot PR Detected
 
@@ -345,6 +351,7 @@ Risk Tier: [HIGH/MEDIUM/LOW or UNKNOWN if no label]
 **Testing Checklist** (display below options based on risk tier):
 
 HIGH Risk:
+
 - [ ] Run `make serve-all` and verify site loads
 - [ ] Test search functionality
 - [ ] Check for console errors
@@ -356,11 +363,13 @@ HIGH Risk:
   - [ ] Verify navigation and routing work correctly
 
 MEDIUM Risk:
+
 - [ ] Run `make build` and verify successful build
 - [ ] Check for build warnings
 - [ ] **Infrastructure verification** (if build tools changed): Check PR deployment URL loads
 
 LOW Risk:
+
 - [ ] Run `make lint` to verify formatting
 
 **For Other Bot PRs** (any bot that's not Dependabot):
@@ -368,6 +377,7 @@ LOW Risk:
 Use AskUserQuestion with simpler options:
 
 **Header text** (construct based on author and labels):
+
 ```
 🤖 Bot Account Detected: @username
 
@@ -587,22 +597,27 @@ Use these templates when executing actions. Select the appropriate template base
 All bot templates use professional, technical tone. No emojis or community-building language.
 
 **Approve** (Dependabot):
+
 - Security patch: "Security patch reviewed and approved. [Note any testing performed]"
 - High risk: "High-risk dependency update reviewed. Testing checklist completed: [list items]"
 - Medium/Low risk: "Dependency update reviewed for quarterly batch."
 
 **Approve** (other bots):
+
 - "Automated changes reviewed and approved."
 
 **Approve and merge** (Dependabot):
+
 - Security patch: "Security patch approved. Merging immediately for deployment."
 - High risk: "High-risk dependency update tested and approved. Merging now."
 - Medium/Low risk: "Dependency update approved. Merging now."
 
 **Approve and merge** (other bots):
+
 - "Automated changes approved. Merging now."
 
 **Request changes** (all bots):
+
 - Format with:
   - Technical issue description with line numbers
   - Clear explanation of what needs to change
@@ -610,12 +625,15 @@ All bot templates use professional, technical tone. No emojis or community-build
   - Closing note: "Note: This automated PR may need to be closed and regenerated after addressing these issues in the source configuration."
 
 **Close PR** (Dependabot - quarterly deferral):
+
 - "Closing this dependency update PR to batch with other low/medium-risk updates in the quarterly review cycle. See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management) for details."
 
 **Close PR** (Dependabot - other reasons):
+
 - "Closing this dependency update PR. [Technical explanation: conflicts, superseded, not needed, etc.]"
 
 **Close PR** (other bots):
+
 - "Closing this automated PR. [Technical explanation]"
 
 ### Step 8: Execute Confirmed Action
