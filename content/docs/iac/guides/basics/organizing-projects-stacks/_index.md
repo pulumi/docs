@@ -318,22 +318,27 @@ my-project/
 
 #### Organized by resource layer
 
-For medium-sized projects, organize files by infrastructure layer:
+For most projects, keep the majority of your resources in your main entrypoint file (e.g., `index.ts`). Use separate files primarily for:
+
+* **Local component resources** - Reusable components you create within your project
+* **Shared libraries** - Helper functions and utilities
+* **Structured config classes** - Complex configuration structures
+
+If your project grows large enough that splitting by infrastructure layer seems necessary, consider whether you should instead split into multiple Pulumi projects with [stack references](/docs/concepts/stack#stackreferences). This provides better separation of concerns, independent deployment cadences, and clearer ownership boundaries.
+
+For projects where layer-based organization makes sense:
 
 ```
 my-project/
 ├── Pulumi.yaml
 ├── Pulumi.dev.yaml
 ├── Pulumi.prod.yaml
-├── index.ts              # Main entrypoint, imports and composes layers
-├── networking.ts         # VPCs, subnets, security groups
-├── compute.ts            # EC2, ECS, Lambda, etc.
-├── storage.ts            # S3, RDS, DynamoDB, etc.
-├── iam.ts                # IAM roles, policies, users
-└── monitoring.ts         # CloudWatch, alarms, dashboards
+├── index.ts              # Main entrypoint with most resources
+├── components.ts         # Local component resources
+└── config.ts             # Configuration helpers
 ```
 
-**When to use:** Projects with clear separation between infrastructure concerns. This mirrors how cloud architects typically think about infrastructure.
+**When to use:** Use this approach sparingly. If you have many resources that seem to require separate files (networking.ts, compute.ts, storage.ts, etc.), you likely need separate Pulumi projects instead.
 
 #### Organized by service/feature
 
@@ -344,7 +349,7 @@ my-project/
 ├── Pulumi.yaml
 ├── Pulumi.dev.yaml
 ├── Pulumi.prod.yaml
-├── index.ts              # Main entrypoint
+├── index.ts              # Main entrypoint - imports and composes all services
 ├── shared/
 │   ├── networking.ts     # Shared VPC, DNS
 │   └── iam.ts            # Shared IAM resources
@@ -363,7 +368,9 @@ my-project/
 
 ### Pulumi-specific organization tips
 
-**Configuration helpers:** Create a dedicated file for reading and validating configuration:
+#### Configuration helpers
+
+Consider creating a dedicated file for reading configuration. This is optional for simple projects where inline config in your main file works well, but becomes helpful as your project grows:
 
 ```typescript
 // config.ts
@@ -374,45 +381,41 @@ const config = new pulumi.Config();
 export const environment = pulumi.getStack();
 export const region = config.require("region");
 export const instanceSize = config.get("instanceSize") || "t3.medium";
-
-// Validate config at program start
-if (!["dev", "staging", "prod"].includes(environment)) {
-    throw new Error(`Unknown environment: ${environment}`);
-}
 ```
 
-**Resource naming conventions:** Centralize naming logic to ensure consistency:
+#### Application code alongside infrastructure
 
-```typescript
-// naming.ts
-import * as pulumi from "@pulumi/pulumi";
+If your Pulumi project contains application code (such as Lambda functions or Docker images), organize it into clearly labeled directories separate from your infrastructure code.
 
-const project = pulumi.getProject();
-const stack = pulumi.getStack();
-
-export function qualifiedName(resourceName: string): string {
-    return `${project}-${stack}-${resourceName}`;
-}
-```
-
-**Application code alongside infrastructure:** If your Pulumi project also contains application code (such as Lambda function code or Docker build contexts), consider organizing it into clearly labeled directories:
+For serverless applications:
 
 ```
 my-project/
 ├── Pulumi.yaml
 ├── Pulumi.dev.yaml
 ├── Pulumi.prod.yaml
-├── index.ts
-├── infra/                # Infrastructure definitions
-│   ├── api.ts
-│   └── database.ts
+├── index.ts              # Infrastructure definitions (API Gateway, Lambda resources)
 ├── app/                  # Application code
-│   ├── lambda/           # Lambda function source
-│   │   └── handler.ts
-│   └── docker/           # Dockerfiles and app source
-│       └── Dockerfile
+│   └── lambda/           # Lambda function source
+│       └── handler.ts
 └── scripts/              # Build and deployment scripts
     └── build.sh
+```
+
+For containerized applications:
+
+```
+my-project/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── Makefile              # Orchestrates build and deployment
+├── app/                  # Application code
+│   ├── Dockerfile
+│   └── src/
+│       └── index.js
+└── infra/                # Pulumi infrastructure code
+    └── index.ts          # Container registry, ECS/K8s resources
 ```
 
 ### When to split into separate projects
