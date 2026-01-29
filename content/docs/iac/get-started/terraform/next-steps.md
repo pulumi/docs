@@ -362,7 +362,7 @@ We always welcome contributions, especially from our more advanced users who hav
 
 * **[Pulumi Blog](https://www.pulumi.com/blog/)**: Write about your experience
 * **[Community Events](https://www.pulumi.com/events/)**: Speak at meetups and conferences
-* **[User Groups](https://www.pulumi.com/community/user-groups/)**: Join or start a local user group
+* **[User Groups](https://www.pulumi.com/community/)**: Join or start a local user group
 
 ---
 

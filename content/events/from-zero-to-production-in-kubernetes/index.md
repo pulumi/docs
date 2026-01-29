@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: "Agentic Workflows for Production-ready Kubernetes"
-meta_desc: Learn to deploy and manage Kubernetes clusters from zero to production with multi-cloud automation, GitOps using Argo CD, and agentic workflows.
+title: "Zero to Production in Kubernetes"
+meta_desc: Deploy Kubernetes with GitOps, IaC, and AI-powered workflows using Pulumi. Go from zero to production with modern, scalable cloud infrastructure.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -31,14 +31,14 @@ url_slug: from-zero-to-production-in-kubernetes
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Agentic Workflows for Production-ready Kubernetes"
+    title: "Zero to Production in Kubernetes"
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/-KhVTXMXpEQ?si=Uq_zukFFpHQ_-CGE
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-11-20T12:00:00-05:00
+    sortable_date: 2026-03-31T09:00:00-04:00
 
     # Duration of the webinar.
     duration: 60 minutes
@@ -50,34 +50,36 @@ main:
     description: |
         According to the **CNCF Annual Survey, 93% of organizations** are using, piloting, or evaluating Kubernetes as their core platform for modern cloud infrastructure. Engineering teams adopt Kubernetes for its consistency, scalability, and cloud-agnostic flexibility, making it the standard for building and operating developer platforms.
         
-        In this **hands-on Kubernetes workshop**, you will learn how to take clusters and workloads from zero to production. Explore multi-cloud management, **GitOps** automation with **Argo CD**, and strategies for observability and reliability across environments using modern best practices and **agentic workflows**.
+        In this **hands-on Kubernetes workshop**, you will learn how to take clusters and workloads from zero to production using infrastructure as code, **GitOps automation**, and modern strategies for visibility and resilience. You will also explore how **agentic workflows** and AI-assisted infrastructure are reshaping the way teams manage Kubernetes at scale.
     learn:
-        - Multi-cloud Kubernetes infrastructure management
-        - Fleet management with GitOps (Argo CD)
-        - Cluster and workload observability challenges
+        - Deploy production-ready applications with repeatable automation
+        - Manage Kubernetes fleets using GitOps workflows
+        - Improve cluster and workload observability across environments
 
     # The webinar presenters
     presenters:
-
+        - name: Engin Diri
+          role: Senior Solutions Architect, Pulumi
+          photo: /images/team/engin-diri.jpg
 
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["Kubernetes", "GitOps", "DevOps", "Argo CD", "Pulumi Neo"]
+        topics:  ["Kubernetes", "GitOps", "DevOps", "Pulumi Neo"]
         languages: ["Any"]
         clouds: ["AWS"]
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 510e62c5-8e2e-4e88-89f5-4853bff9e567
+    hubspot_form_id: 5441c618-7158-48fc-a7a1-c96abd11d675
     salesforce_campaign_id: 701PQ00000eePWvYAM
 
 event_data:
-  name: "Agentic Workflows for Production-ready Kubernetes"
-  start_date: 2025-11-20T12:00:00-05:00
-  end_date: 2025-11-20T13:30:00-05:00
+  name: "Zero to Production in Kubernetes"
+  start_date: 2026-03-31T09:00:00-04:00
+  end_date: 2026-03-31T10:00:00-04:00
   url: "https://www.pulumi.com/resources/from-zero-to-production-in-kubernetes/"
   description: |
-    According to the CNCF Annual Survey, 93% of organizations use or are evaluating Kubernetes as the foundation of their modern cloud infrastructure. In this hands-on Kubernetes workshop, you will learn how to take clusters and workloads from zero to production. Explore multi-cloud management, GitOps automation with Argo CD, and strategies for observability and reliability across environments using modern DevOps practices and agentic workflows.
+    According to the CNCF Annual Survey, 93% of organizations use or are evaluating Kubernetes as the foundation of their modern cloud infrastructure. In this hands-on Kubernetes workshop, you will learn how to take clusters and workloads from zero to production, manage Kubernetes fleets using GitOps workflows, and improve cluster and workload observability across environments.
 ---

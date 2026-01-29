@@ -16,7 +16,7 @@ aliases:
 - /docs/iac/guides/building-extending/providers/pulumi-provider-sdk/
 ---
 
-The [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) is a high-level library that simplifies the process of writing a Pulumi [provider](https://www.pulumi.com/docs/iac/concepts/resources/providers/) in Go. It abstracts much of the complexity involved in defining custom infrastructure resources, allowing developers to focus on business logic rather than boilerplate code.
+The [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) is a high-level library that simplifies the process of writing a Pulumi [provider](https://www.pulumi.com/docs/iac/concepts/providers/) in Go. It abstracts much of the complexity involved in defining custom infrastructure resources, allowing developers to focus on business logic rather than boilerplate code.
 
 Some key advantages of the SDK are:
 
@@ -54,7 +54,7 @@ type HelloWorld struct{}
 
 // Each resource has in input struct, defining what arguments it accepts.
 type HelloWorldArgs struct {
-	// Fields projected into Pulumi must be public and hava a `pulumi:"..."` tag.
+	// Fields projected into Pulumi must be public and have a `pulumi:"..."` tag.
 	// The pulumi tag doesn't need to match the field name, but its generally a
 	// good idea.
 	Name string `pulumi:"name"`

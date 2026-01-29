@@ -22,39 +22,23 @@ resources, and typical apps and workloads.
 
 {{% choosable cloud aws %}}
 
-The full code for the AWS apps stack is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/06-apps
-<!-- markdownlint-enable url -->
+The full code for the AWS apps stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/aws/06-apps).
 
 {{% /choosable %}}
 
 {{% choosable cloud azure %}}
 
-The full code for the Azure apps stack is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/06-apps
-<!-- markdownlint-enable url -->
+The full code for the Azure apps stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/azure/06-apps).
 
 {{% /choosable %}}
 
 {{% choosable cloud gcp %}}
 
-The full code for the Google Cloud apps stack is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/06-apps
-<!-- markdownlint-enable url -->
+The full code for the Google Cloud apps stack is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/gcp/06-apps).
 
 {{% /choosable %}}
 
-The full code for the apps is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps
-<!-- markdownlint-enable url -->
+The full code for the apps is on [GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/apps).
 
 ## Overview
 

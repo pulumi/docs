@@ -6,6 +6,7 @@ security:
   funcs:
     getenv:
       - ASSET_BUNDLE_ID
+      - CSS_BUNDLE_ID
       - PULUMI_CONVERT_URL
       - PULUMI_AI_WS_URL
       - PULUMI_ATLAS_URL
@@ -43,6 +44,11 @@ outputFormats:
     baseName: index
     isPlainText: true
     notAlternative: true
+  txtfull:
+    mediaType: "text/plain"
+    baseName: "llms"
+    isPlainText: true
+    permalinkable: false
 
 # We set the outputs explicitly to just "HTML" as otherwise they default to both
 # "HTML" and "RSS", and we only want to generate RSS for the blog section -- not
@@ -53,6 +59,7 @@ outputs:
   home:
     - HTML
     - JSON
+    - txtfull
   section:
     - HTML
 

@@ -53,4 +53,56 @@ If `pulumi cancel` fails with `error: [400] Bad Request: the update has already 
 
 Then run `pulumi refresh` to remove any pending operations cleanly, allowing you to resolve any pending operations that Pulumi could not fix unaided.
 
+## Resolving pending creates
+
+When you have pending create operations, `pulumi refresh` will prompt you interactively to resolve them. You'll need to determine whether the resource was actually created in your cloud provider:
+
+1. **If the resource was not created:** Select "clear" to remove the pending operation
+1. **If the resource was created:** You'll need to provide the resource's physical ID so Pulumi can import it into state
+
+### Non-interactive mode
+
+In CI/CD environments or scripts where interactive prompts aren't available, use these flags:
+
+**To clear all pending creates (resource was not created):**
+
+```bash
+pulumi refresh --clear-pending-creates --yes
+```
+
+**To import pending creates (resource was created):**
+
+Use `--import-pending-creates` with pairs of URN and physical ID:
+
+```bash
+pulumi refresh --import-pending-creates "urn:pulumi:dev::myproject::aws:s3/bucket:Bucket::mybucket" "my-bucket-abc123" --yes
+```
+
+For multiple pending creates, provide additional URN/ID pairs:
+
+```bash
+pulumi refresh \
+  --import-pending-creates "urn:pulumi:dev::myproject::aws:s3/bucket:Bucket::bucket1" "bucket1-id" \
+  --import-pending-creates "urn:pulumi:dev::myproject::aws:s3/bucket:Bucket::bucket2" "bucket2-id" \
+  --yes
+```
+
+{{% notes type="warning" %}}
+The `--import-pending-creates` flag requires **pairs** of values: the resource URN followed by its physical ID from the cloud provider. If you provide an odd number of values, you'll see the error: `each URN must be followed by an ID: found an odd number of entries`.
+{{% /notes %}}
+
+### Finding the physical ID
+
+To find the physical ID of a resource that was created:
+
+- **AWS:** Check the AWS Console or use the `aws` CLI to find the resource
+- **Azure:** Check the Azure Portal or use the `az` CLI
+- **GCP:** Check the Cloud Console or use the `gcloud` CLI
+
+The physical ID format varies by provider and resource type. For example:
+
+- AWS S3 bucket: the bucket name (e.g., `my-bucket-abc123`)
+- AWS EC2 instance: the instance ID (e.g., `i-0123456789abcdef0`)
+- Azure resource: the full resource ID path
+
 At this point your stack should be valid, up-to-date, and ready to accept future updates.

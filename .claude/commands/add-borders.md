@@ -17,7 +17,7 @@ Analyze PNG images referenced in the specified markdown file at {{arg}} and add 
 Before running the border tool, ensure dependencies are installed:
 
 ```bash
-cd /workspaces/src/pulumi/docs/scripts/image-borders && pipenv install
+cd scripts/image-borders && pipenv install
 ```
 
 If this is the first run or if Pillow is not yet installed, the installation will complete automatically.
@@ -27,10 +27,11 @@ If this is the first run or if Pillow is not yet installed, the installation wil
 Execute the Python script with the provided documentation file:
 
 ```bash
-cd /workspaces/src/pulumi/docs && pipenv run python scripts/image-borders/add_borders.py {{arg}}
+pipenv run python scripts/image-borders/add_borders.py {{arg}}
 ```
 
 The script will:
+
 - Parse the markdown file to find all PNG image references
 - Check each image's edge pixels to detect existing borders
 - Add a 1px #999999 border to images that don't have one
@@ -40,11 +41,13 @@ The script will:
 ### 3. Review the results
 
 The script outputs:
+
 - **Modified**: Images that received new borders
 - **Skipped**: Images that already had borders
 
 Example output:
-```
+
+```output
 Found 3 PNG image(s)
 
 ✓ Added border: content/docs/esc/assets/create-environment.png
@@ -59,11 +62,13 @@ Summary:
 ### 4. Verify the changes
 
 After borders are added:
+
 1. View the modified images to ensure borders look correct
 2. Check that border width and color (#CCCCCC) are appropriate
 3. Verify the images still display correctly in the documentation
 
 You can preview the documentation locally:
+
 ```bash
 make serve
 ```
@@ -89,6 +94,7 @@ The script supports additional options:
 - `--repo-root <path>` - Specify repository root (auto-detected by default)
 
 Example with dry run:
+
 ```bash
 pipenv run python scripts/image-borders/add_borders.py {{arg}} --dry-run
 ```
@@ -97,6 +103,7 @@ pipenv run python scripts/image-borders/add_borders.py {{arg}} --dry-run
 
 ## Notes
 
+- Do not apply borders to `meta.png` images used for social sharing
 - The script uses edge pixel analysis to detect existing borders with 80% confidence threshold
 - Handles RGBA images (preserves transparency)
 - Uses #999999 (medium grey) for visibility on both white and light backgrounds

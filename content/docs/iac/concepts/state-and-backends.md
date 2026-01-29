@@ -20,6 +20,7 @@ aliases:
 - /docs/reference/state/
 - /docs/intro/concepts/state/
 - /docs/concepts/state/
+- /docs/iac/concepts/state
 ---
 
 Pulumi stores metadata about your infrastructure so that it can manage your cloud resources. This metadata is called _state_. Each [stack](/docs/concepts/stack/) has its own state, and state is how Pulumi knows when and how to create, read, delete, or update cloud resources.
@@ -55,9 +56,25 @@ Pulumi Cloud, hosted at <a href="https://app.pulumi.com">`app.pulumi.com`</a>, i
 
 The Pulumi Cloud backend requires no additional configuration after [installing the CLI](/docs/install/). Pulumi offers this backend hosted online free for individuals, with [advanced tiers](/pricing/) available for teams and enterprises (with <a href="https://app.pulumi.com/site/trial">free trials</a>). It has successfully undergone multiple security audits including SOC2, pen-testing, and more.
 
-> To learn more about the Pulumi Cloud backend's design, including why it doesn't need your cloud credentials, see [Pulumi Cloud Architecture](#pulumi-cloud-architecture). If you are interested in the hosting your own instance, see the [Self-Hosting User Guide](/docs/pulumi-cloud/self-hosted/).
+> To learn more about the Pulumi Cloud backend's design, including why it doesn't need your cloud credentials, see [Pulumi Cloud Architecture](#pulumi-cloud-architecture). If you are interested in hosting your own instance, see the [Self-Hosting User Guide](/docs/pulumi-cloud/self-hosted/).
 
-Pulumi also lets you manage state yourself using a DIY backend. Your state is stored as simple JSON files in AWS S3, Azure Blob Store, Google Cloud Storage, an alternative AWS S3 API compatible server such as Minio or Ceph, a PostgreSQL database, or on your local filesystem. These DIY backends are all open source and free to use in any setting. Using a DIY backend trades off some amount of reliability for additional control over where metadata is stored. For instance, you will need to manually configure secure access, encryption, and history, and devise your own concurrency control and recovery capabilities. To choose a DIY backend, use the `pulumi login` command [as documented below](#using-a-DIY-backend).
+Pulumi also lets you manage state yourself using a DIY backend. Your state is stored in AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server such as Minio or Ceph, a PostgreSQL database, or on your local filesystem. These DIY backends are all open source and free to use in any setting.
+
+DIY backends include several important built-in features:
+
+- **State locking**: Enabled by default to prevent concurrent state modifications
+- **History tracking**: Automatic checkpoint history for each stack
+- **Project-scoped stacks**: Stacks are [namespaced by project](#scoping) for backends created with Pulumi v3.61.0+
+- **Secrets encryption**: Support for multiple encryption providers including passphrase, AWS KMS, Azure Key Vault, Google Cloud KMS, and HashiCorp Vault
+
+However, using a DIY backend requires you to manage operational aspects yourself, including:
+
+- Configuring secure access to your storage backend (IAM policies, network security)
+- Implementing backup and disaster recovery procedures
+- Monitoring and maintaining high availability
+- Managing team access and permissions
+
+To choose a DIY backend, use the `pulumi login` command [as documented below](#using-a-diy-backend).
 
 ## Logging into and out of State Backends
 
@@ -160,7 +177,7 @@ To learn more about self-host options, see [Self-Hosted Pulumi Cloud](/docs/pulu
 
 The filesystem and cloud storage backends allow you to store state locally on your machine or remotely within a cloud object store. For DIY backends, state management including backup, sharing, and team access synchronization is custom and implemented manually. A basic file-based locking system is enabled by default for all DIY backends.
 
-> **Note**: Both the Pulumi Cloud backend and a DIY backend provide reliable ways to manage your infrastructure state. While a DIY backend give you full control over your state storage and management, most users will find the Pulumi Cloud backend to be the easiest way to get started and scale. With DIY backends, you'll want to familiarize yourself with state management concepts (see [Advanced State](#advanced-state)) and implement your own backup and maintenance procedures. The Pulumi Cloud backend streamlines your experience by automatically handling these operational aspects, providing built-in security, collaboration features, and automated state management out of the box.
+> **Note**: Both Pulumi Cloud and DIY backends provide reliable state management. DIY backends include built-in state locking and history tracking. However, most users find Pulumi Cloud to be the easiest way to get started and scale. Pulumi Cloud handles operational concerns automatically, including backup and recovery, team collaboration, RBAC, and audit logging. It also provides a transactional API that offers stronger guarantees than blob storage protocols. With DIY backends, you will need to implement your own backup procedures and manage access control. For advanced state management concepts, see [Advanced State](#advanced-state).
 
 To use a DIY backend, specify a storage endpoint URL as `pulumi login`'s `<backend-url>` argument: `s3://<bucket-path>`, `azblob://<container-path>`, `gs://<bucket-path>`, or `file://<fs-path>`. This will tell Pulumi to store state in AWS S3, Azure Blob Storage, Google Cloud Storage, or the local filesystem, respectively. Checkpoint files are stored in a relative`.pulumi` directory. For example, if you were using the Amazon S3 DIY backend, your checkpoint files would be stored at `s3://my-pulumi-state-bucket/.pulumi` where `my-pulumi-state-bucket` represents the name of your S3 bucket.
 
@@ -324,7 +341,7 @@ To learn more about importing existing resources, see [Importing Infrastructure]
 
 Pulumi state is usually stored in a transactional snapshot called a _checkpoint_. Pulumi records checkpoints early and often as it executes so that Pulumi can operate reliably, similar to how database transactions work. The basic functions of state allow Pulumi to diff your program's goal state against the last known update, recover from failure, and destroy resources accurately to clean up afterwards. The checkpoint format augments this with additional failure recovery capabilities in the face of partial failure.
 
-The Pulumi Cloud backend records every checkpoint so that it is possible to recover from exotic failure scenarios. DIY backends may have more trouble recovering from these situations as they typically store a singular Pulumi state file.
+The Pulumi Cloud backend records every checkpoint through a transactional API, making it possible to recover from unusual failure scenarios such as network interruptions during updates. DIY backends also maintain checkpoint history (in the `.pulumi/history/` directory), but blob storage backends use a less transactional protocol that may have more difficulty recovering from partial failures.
 
 ### State Encryption
 

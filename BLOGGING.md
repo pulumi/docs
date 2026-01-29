@@ -3,6 +3,35 @@
 So you're interested in contributing to the Pulumi blog? Great! Follow these
 steps to make it happen.
 
+## Quick Start: Creating a Blog Post with Claude Code
+
+The easiest way to create a new blog post is with the `/new-blog-post` command in Claude Code.
+
+**Prerequisites:**
+- [Claude Code](https://claude.com/claude-code) installed
+- This repository cloned
+- Git configured with your name and email
+
+**Steps:**
+
+1. Create a new branch: `git checkout -b your-initials/your-post-slug`
+2. Run `/new-blog-post` in Claude Code
+3. Answer the interactive prompts (title, summary, tags, etc.)
+
+**What the command does for you:**
+
+- Detects your author information from git config
+- Finds your existing author profile or creates one for you
+- Suggests relevant tags based on your title
+- Generates a meta description suggestion
+- Handles multi-author posts
+- Creates the blog post directory structure
+- Adds a placeholder meta image (replace with your own 1200×630 PNG)
+
+Once complete, you'll have a new blog post ready for writing at `content/blog/[your-slug]/index.md`.
+
+**Next steps:** Jump to [Write Your Post](#write-your-post) to learn about formatting and media.
+
 ## Set Up Your Development Environment
 
 If you haven't already, clone this repository and
@@ -18,101 +47,9 @@ make serve
 If you can browse the site locally at http://localhost:1313/ then you are ready to
 proceed to the next section.
 
-## Make a New Post
-
-1. Move onto a new branch for your blog post using `git checkout -b initials/your-blog-post` (replace initials with your initials, and replace your-blog-post with the name of your blog post).
-
-1. Resist the temptation to copy-and-tweak an existing post! Instead, run the following
-command into the terminal (at the root of the project). This will generate a new file,
-including all the required frontmatter parameters.
-
-   ```zsh
-   make new-blog-post
-   ```
-
-   This will prompt you for a "slug" (a URL-friendly path) for your post and create a
-   minimal post that you can browse to at http://localhost:1313/blog/. You'll find the new
-   post's source file at `content/blog/[your-slug]/_index.md` containing the set of
-   [Hugo front matter](https://gohugo.io/content-management/front-matter/) properties you'll need to get started:
-
-   ```
-   ---
-   title: "My New Post"
-   date: 2019-07-17T14:26:50-07:00
-   meta_image: meta.png
-   authors:
-       - joe-duffy
-   tags:
-       - some-tag
-   ---
-   ```
-
-   Adjust the title and authors and add tags as appropriate (see the two headings below for more details). To change the post's URL, simply rename the folder containing `_index.md`; changing the folder name to `my-awesome-post`, for example, would result in a post ultimately published at https://www.pulumi.com/blog/my-awesome-post.
-
-   **Important**
-
-   The `title` will populate the `<title>` tag of the page, the `<h1>`, and the display value if it is linked to internally. This field has a strict 60 character limit because of SEO related limitations. If you would like to have a longer display title (i.e. the `<h1>` tag) then you will need to specify it by adding `allow_long_title: True` to the front matter. If you would like to display different text on internal links than what the `title` value is, you can also specify a `linktitle` value. Both the `allow_long_title` and `linktitle` values can be of any length. Below is an example of this:
-
-   ```
-   ---
-   title: This a Page Title
-   allow_long_title: true
-   linktitle: This is the link text
-   ...
-   ---
-   ```
-
-   **Tags**
-
-   Every tag added makes the overall tagging system harder to quickly grok and use. So, we strongly prefer using existing tags wherever possible. The tag system is as follows:
-
-   - **Pulumi tags:** `pulumi-news` for company news (funding, certifications, etc.), `pulumi-events` for events we participate in or host, `pulumi-interns` for intern posts, `pulumi-enterprise` for enterprise-focused blog posts
-   - **Cloud provider tags:** Only add a cloud provider tag if we expect to have multiple posts about the provider. Today, that means `aws`, `azure`, `google-cloud`, `digitalocean`
-   - **Feature tags:** Only add a feature tag if we expect to have multiple posts about the feature. Today, that means `features` (for feature announcements), `aliases`, `continuous-delivery`, `logging`, `migration`, `native-providers`, `packages`, `policy-as-code`, `secrets`, `testing`.
-   - **Technology/scenario tags:** Similar to feature tags, but focused on user scenarios. Today, that means `cloud-engineering`, `cloud-native`, `containers`, `data-and-analytics`, `development-environment`, `github-actions`, `kubernetes`, `serverless`.
-   - **Language tags:** Any post that is language/ecosystem specific should have one or more of `.net`, `go`, `javascript`, `python`, `typescript`.
-
-   **Canonical link**
-   If you are posting a blog that originated somewhere else (for example, a syndicated community post) you will want to add the setting `canonical_url` for the URL where the blog post originated.
-
-   Additionally, if you're writing a blog post to announce a new product or feature that is also documented in our docs, you should set the `canonical_url` to point from the blog post to the relevant docs page. This helps consolidate optimization signals and ensures the docs page remains the primary source of truth in search engines.
-
-   **Schema type (structured data)**
-   Blog posts automatically get BlogPosting schema for SEO. You can optionally override this with `schema_type` in frontmatter if needed (rare). See [SCHEMA.md](./SCHEMA.md) for details.
-
-1. If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/docs/tree/master/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this (your `id` can be any string, but we recommend `firstname-lastname`):
-
-   ```toml
-   id = "christian-nunciato"
-   name = "Christian Nunciato"
-   title = "Software Engineer"
-   status = "active"
-
-   [social]
-   github = "cnunciato"
-   linkedin = "cnunciato"
-   x = "cnunciato"
-   ```
-
-   For community contributors, it's mostly the same, but with a `status` of `guest`, and a more informative `title`:
-
-   ```toml
-   id = "mikhail-shilkov"
-   name = "Mikhail Shilkov"
-   title = "Microsoft Azure MVP and early Pulumi user"
-   status = "guest"
-   ...
-   ```
-
-   The `social` section, and the items within it, are optional.
-
-   Once your team-member file's been created, add your author image at [`static/images/team`](https://github.com/pulumi/docs/tree/master/static/images/team). The image should be a square JPG (400x400 max) named with your author `id` (e.g., `christian-nunciato.jpg`).
-
-   Update the new post's `authors` property to use your author `id`. If you're still running the development server, you should see the change reflected in the browser immediately.
-
 ## Write Your Post
 
-Posts are written in [Markdown](https://daringfireball.net/projects/markdown/) and rendered with [BlackFriday](https://github.com/russross/blackfriday), Hugo's default Markdown processor. GitHub's [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) guide is a helpful syntax reference if you need it. You can also include HTML in your posts, if you need greater control over the output than Markdown can provide.
+Once you've created your post structure with `/new-blog-post`, focus on writing great content. Posts are written in [Markdown](https://daringfireball.net/projects/markdown/) and rendered with [BlackFriday](https://github.com/russross/blackfriday), Hugo's default Markdown processor. GitHub's [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) guide is a helpful syntax reference if you need it. You can also include HTML in your posts, if you need greater control over the output than Markdown can provide.
 
 For formatting guidelines, see [the Style Guide](./STYLE-GUIDE.md).
 
@@ -150,7 +87,7 @@ For best results, we suggest the following specs for the `meta_image`, largely b
 
 | Aspect Ratio | Recommended Size | Format | Background               |
 | ------------ | ---------------- | ------ | ------------------------ |
-| 2:1          | 1200×628         | PNG    | Opaque (No Transparency) |
+| 2:1          | 1200×630         | PNG    | Opaque (No Transparency) |
 
 Remember to replace the `meta_image` placeholder (or remove the property altogether and delete the placeholder `meta.png` file) before submitting your post.
 
@@ -175,6 +112,33 @@ To embed a YouTube video, you can use Hugo's built-in [`youtube` shortcode](http
 
 For videos belonging to the [Pulumi YouTube channel](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw), you'll usually want to append the `?rel=0` query parameter as well (as above), which tells YouTube to limit the suggestions it makes at the end of a video to those from the same YouTube channel. [Learn more about player parameters here](https://developers.google.com/youtube/player_parameters).
 
+#### GitHub Repository Cards
+
+To embed a GitHub repository preview card, use the `github-card` shortcode with the repository in `owner/repo` format:
+
+```plain
+{{< github-card repo="pulumi/pulumi" >}}
+```
+
+This renders a clickable card showing the repository's Open Graph image, which includes the repository name, description, stars, language, and other metadata. The card links directly to the repository on GitHub.
+
+#### Neo Cards
+
+To embed a card linking to Pulumi Neo with a pre-filled prompt, use the `neo-card` shortcode:
+
+```plain
+{{< neo-card title="Migrate your CDK application" >}}
+{{< neo-card title="Migrate your CDK application" prompt="Leverage the cdk-to-pulumi skill to migrate my CDK application to a Pulumi application" >}}
+{{< neo-card title="Try Neo" subtitle="Get started" prompt="Help me create infrastructure" >}}
+```
+
+**Parameters:**
+- `title` (required): The main text displayed on the card
+- `prompt` (optional): The prompt sent to Neo (defaults to title if not specified)
+- `subtitle` (optional): The smaller text above title (default: "Start a Neo task")
+
+This renders a card with the Neo icon, subtitle, title, and a chevron arrow. Clicking the card opens Pulumi Neo with the specified prompt.
+
 #### Animated GIFs
 
 GIFs are welcome, but should be optimized. In general, animated GIFs should be no more than 1200 pixels wide and 3 MB in size. If you need help optimizing your GIF, consider [Gifsicle](https://www.lcdf.org/gifsicle/); it's available through Homebrew and has an easy-to-use command-line API. For example, to resize (e.g., downscale) and optimize a GIF in place:
@@ -183,14 +147,18 @@ GIFs are welcome, but should be optimized. In general, animated GIFs should be n
 gifsicle ./my-animation.gif --resize-width=1200 --optimize=3 --batch
 ```
 
-## Done? Submit!
+## Review and Publish
 
-When you're ready to submit your post for review, issue a Pull Request against the `master` branch of the repo, and the team will have a look. Once merged, the post will be deployed to https://www.pulumi.com/.
+Before submitting your post:
 
-## Publicize your blog
+1. **Review for quality**: Run `/docs-review` in Claude Code to check for style and content issues
+2. **Add borders to images**: If you have screenshots, run `/add-borders` to add 1px grey borders for better visual clarity
+3. **Preview locally**: Run `make serve` and check your post at http://localhost:1313/blog/[your-slug]
+4. **Replace the placeholder meta image**: Create a custom 1200×630 PNG for social media previews (see [meta image guidelines](#social-meta-images) above)
+5. **Submit for review**: Create a Pull Request against the `master` branch
+6. **Publicize**: Before merge, reach out in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) so Marketing can help broadcast your post
 
-When you create an awesome blog post, we want to make sure it reaches as many people as possible.
-After your Pull Request is approved, but before merge/publication date, reach out in #blogs so that Marketing can broadcast your publication via social media.
+Once merged to master, your post will go live on https://www.pulumi.com/ (after its publish date).
 
 ## A Note on Dates and Scheduling for Future Publishing
 
@@ -198,10 +166,109 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
 
 ## Publishing Checklist
 
-- [ ] As mentioned, use the Hugo blog-post generator instead of copying another post: `make new-blog-post` (or alternatively, the more verbose but equivalent `hugo new --kind blog-post "content/blog/[your-slug]"`)
-- [ ] Check for a break `<!--more-->` after the first paragraph, and ensure that your post's introduction looks right on the blog home page.
-- [ ] Check that your meta_image appears properly on the blog home page. Do not use animated GIFs for preview images.
-- [ ] Check that your meta_image is using the current logos for Pulumi and others.
-- [ ] Preview locally. Check formatting, links, and images for appearance.
-- [ ] Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check how the blog appears in a tweet (use the preview provided in the PR).
+- [ ] Use `/new-blog-post` in Claude Code to create your post (or see [Appendix](#appendix-creating-blog-posts-manually) for manual method)
+- [ ] Check for a break `<!--more-->` after the first paragraph, and ensure that your post's introduction looks right on the blog home page
+- [ ] Run `/docs-review` to check for style and content issues
+- [ ] Run `/add-borders` if your post includes images
+- [ ] Check that your meta_image appears properly on the blog home page. Do not use animated GIFs for preview images
+- [ ] Check that your meta_image is using the current logos for Pulumi and others
+- [ ] Preview locally with `make serve`. Check formatting, links, and images for appearance
+- [ ] Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check how the blog appears in a tweet (use the preview provided in the PR)
 - [ ] Reach out in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) to make Marketing aware that your post is about to go live!
+
+## Appendix: Creating Blog Posts Manually
+
+> **Note**: Most contributors should use the `/new-blog-post` command documented at the top of this guide. This section documents the manual process for reference or for contributors who don't have access to Claude Code.
+
+### Manual Steps
+
+1. Move onto a new branch for your blog post using `git checkout -b initials/your-blog-post` (replace initials with your initials, and replace your-blog-post with the name of your blog post).
+
+1. Resist the temptation to copy-and-tweak an existing post! Instead, run the following command into the terminal (at the root of the project). This will generate a new file, including all the required frontmatter parameters.
+
+   ```zsh
+   make new-blog-post
+   ```
+
+   This will prompt you for a "slug" (a URL-friendly path) for your post and create a minimal post that you can browse to at http://localhost:1313/blog/. You'll find the new post's source file at `content/blog/[your-slug]/_index.md` containing the set of [Hugo front matter](https://gohugo.io/content-management/front-matter/) properties you'll need to get started:
+
+   ```yaml
+   ---
+   title: "My New Post"
+   date: 2019-07-17T14:26:50-07:00
+   meta_image: meta.png
+   authors:
+       - joe-duffy
+   tags:
+       - some-tag
+   ---
+   ```
+
+   Adjust the title and authors and add tags as appropriate (see the subsections below for more details). To change the post's URL, simply rename the folder containing `_index.md`; changing the folder name to `my-awesome-post`, for example, would result in a post ultimately published at https://www.pulumi.com/blog/my-awesome-post.
+
+### Frontmatter Fields
+
+**Title**
+
+The `title` will populate the `<title>` tag of the page, the `<h1>`, and the display value if it is linked to internally. This field has a strict 60 character limit because of SEO related limitations. If you would like to have a longer display title (i.e. the `<h1>` tag) then you will need to specify it by adding `allow_long_title: True` to the front matter. If you would like to display different text on internal links than what the `title` value is, you can also specify a `linktitle` value. Both the `allow_long_title` and `linktitle` values can be of any length. Below is an example of this:
+
+```yaml
+---
+title: This a Page Title
+allow_long_title: true
+linktitle: This is the link text
+...
+---
+```
+
+**Tags**
+
+Every tag added makes the overall tagging system harder to quickly grok and use. So, we strongly prefer using existing tags wherever possible. The tag system is as follows:
+
+- **Pulumi tags:** `pulumi-news` for company news (funding, certifications, etc.), `pulumi-events` for events we participate in or host, `pulumi-interns` for intern posts, `pulumi-enterprise` for enterprise-focused blog posts
+- **Cloud provider tags:** Only add a cloud provider tag if we expect to have multiple posts about the provider. Today, that means `aws`, `azure`, `google-cloud`, `digitalocean`
+- **Feature tags:** Only add a feature tag if we expect to have multiple posts about the feature. Today, that means `features` (for feature announcements), `aliases`, `continuous-delivery`, `logging`, `migration`, `native-providers`, `packages`, `policy-as-code`, `secrets`, `testing`.
+- **Technology/scenario tags:** Similar to feature tags, but focused on user scenarios. Today, that means `cloud-engineering`, `cloud-native`, `containers`, `data-and-analytics`, `development-environment`, `github-actions`, `kubernetes`, `serverless`.
+- **Language tags:** Any post that is language/ecosystem specific should have one or more of `.net`, `go`, `javascript`, `python`, `typescript`.
+
+**Canonical link**
+
+If you are posting a blog that originated somewhere else (for example, a syndicated community post) you will want to add the setting `canonical_url` for the URL where the blog post originated.
+
+Additionally, if you're writing a blog post to announce a new product or feature that is also documented in our docs, you should set the `canonical_url` to point from the blog post to the relevant docs page. This helps consolidate optimization signals and ensures the docs page remains the primary source of truth in search engines.
+
+**Schema type (structured data)**
+
+Blog posts automatically get BlogPosting schema for SEO. You can optionally override this with `schema_type` in frontmatter if needed (rare). See [SCHEMA.md](./SCHEMA.md) for details.
+
+### Creating Author Profiles
+
+If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/docs/tree/master/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this (your `id` can be any string, but we recommend `firstname-lastname`):
+
+```toml
+id = "christian-nunciato"
+name = "Christian Nunciato"
+title = "Software Engineer"
+status = "active"
+
+[social]
+github = "cnunciato"
+linkedin = "cnunciato"
+x = "cnunciato"
+```
+
+For community contributors, it's mostly the same, but with a `status` of `guest`, and a more informative `title`:
+
+```toml
+id = "mikhail-shilkov"
+name = "Mikhail Shilkov"
+title = "Microsoft Azure MVP and early Pulumi user"
+status = "guest"
+...
+```
+
+The `social` section, and the items within it, are optional.
+
+Once your team-member file's been created, add your author image at [`static/images/team`](https://github.com/pulumi/docs/tree/master/static/images/team). The image should be a square JPG (400x400 max) named with your author `id` (e.g., `christian-nunciato.jpg`).
+
+Update the new post's `authors` property to use your author `id`. If you're still running the development server, you should see the change reflected in the browser immediately.

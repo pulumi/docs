@@ -32,7 +32,7 @@ CDK for Terraform (CDKTF) is a tool that allows you to define infrastructure usi
 
 ## Pulumi vs. CDKTF: Similarities
 
-In addition to supporting general-purpose languages, both CDKTF and Pulumi organize cloud resources into [_stacks_](/docs/iac/concepts/stacks/), encourage the use of higher-level abstractions (called _constructs_ in CDKTF, [_components_](/docs/iac/concepts/resources/components/) in Pulumi), and track [resource state](/docs/iac/concepts/state-and-backends/) similarly, with local, remote, and cloud-hosted options available. Both tools also support deploying to multiple clouds through open-source [resource providers](/docs/iac/concepts/resources/providers/).
+In addition to supporting general-purpose languages, both CDKTF and Pulumi organize cloud resources into [_stacks_](/docs/iac/concepts/stacks/), encourage the use of higher-level abstractions (called _constructs_ in CDKTF, [_components_](/docs/iac/concepts/resources/components/) in Pulumi), and track [resource state](/docs/iac/concepts/state-and-backends/) similarly, with local, remote, and cloud-hosted options available. Both tools also support deploying to multiple clouds through open-source [resource providers](/docs/iac/concepts/providers/).
 
 Also, because many of Pulumi's most popular providers are derived from open-source Terraform provider schemas, their resource models are typically identical to CDKTF's. Compare, for example, the following declaration of an Amazon S3 bucket in CDKTF:
 
@@ -86,7 +86,7 @@ Both CDKTF and Pulumi support the full Terraform provider ecosystem, though in s
 
 ### Dynamic provider support {#dynamic-providers}
 
-In addition to standard pre-built providers, Pulumi also supports [dynamic resource providers](/docs/iac/concepts/resources/dynamic-providers/), which allow you to extend the Pulumi resource model by building and distributing lightweight, custom providers of your own. CDKTF does not support this capability.
+In addition to standard pre-built providers, Pulumi also supports [dynamic resource providers](/docs/iac/concepts/providers/dynamic-providers/), which allow you to extend the Pulumi resource model by building and distributing lightweight, custom providers of your own. CDKTF does not support this capability.
 
 ### Terraform module integration {#terraform-modules}
 
@@ -107,5 +107,10 @@ Pulumi has built-in support for [secrets management](/docs/iac/concepts/secrets/
 ## Migrating from CDKTF to Pulumi
 
 For teams interested in migrating from CDKTF, Pulumi has several options, including automated tooling that can convert your CDKTF code to Pulumi and import your existing Terraform state. To learn more, see [Migrating from CDKTF to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
+
+## Related content
+
+- [CDKTF is deprecated: What's next for your team?](/blog/cdktf-is-deprecated-whats-next-for-your-team/) - A detailed guide on migration options
+- [Pulumi for All Your IaC — Including Terraform and HCL](/blog/all-iac-including-terraform-and-hcl/) - How Pulumi supports Terraform, OpenTofu, and HCL alongside general-purpose languages
 
 {{< get-started >}}

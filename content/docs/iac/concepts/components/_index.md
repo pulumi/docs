@@ -115,6 +115,10 @@ A component resource must register a unique type name with the base constructor.
 For a complete end-to-end walkthrough of building a component from scratch, including setup, implementation, and publishing, see the [Build a Component](/docs/iac/using-pulumi/build-a-component/) guide.
 {{< /notes >}}
 
+{{< notes type="info" >}}
+Not all [resource options](/docs/iac/concepts/resources/options/) apply to component resources. For a complete list of which options work with components and how to apply options to child resources, see [Resource options and component resources](/docs/iac/concepts/resources/options/#resource-options-and-component-resources).
+{{< /notes >}}
+
 ## Component arguments and type requirements
 
 When authoring components that will be consumed across different languages (multi-language components), the arguments class has specific requirements and limitations due to the need for serialization. These constraints ensure that component arguments can be transmitted to the Pulumi engine and reconstructed across language boundaries.
@@ -444,6 +448,9 @@ class MyComponent extends pulumi.ComponentResource {
 
 ```python
 class MyComponent(pulumi.ComponentResource):
+    bucket_dns_name: pulumi.Output[str]
+    """The DNS name of the bucket"""
+
     def __init__(self, name, my_component_args, opts = None):
         super().__init__('pkg:index:MyComponent', name, None, opts)
 
@@ -691,7 +698,7 @@ runtime: java
 
 ### Define an Entry Point
 
-The entrypoint analyzes components to automatically build a schema, and interact with the Pulumi engine to mange the component lifecycle.
+The entrypoint analyzes components to automatically build a schema, and interact with the Pulumi engine to manage the component lifecycle.
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 

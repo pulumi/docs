@@ -50,8 +50,12 @@ If your component uses a local package (such as any Terraform provider via `terr
 A Pulumi Component consists of three main parts:
 
 - The **component resource** encapsulates multiple Pulumi resources, grouping them into a logical unit.
-- The **component resource arguments** define configurable input properties, allowing users to specify parameters that tailor the component’s behavior to specific needs.
+- The **component resource arguments** define configurable input properties, allowing users to specify parameters that tailor the component's behavior to specific needs.
 - The **provider host** registers and runs your component resources, acting as the foundational layer for component creation.
+
+{{< notes type="info" >}}
+Not all [resource options](/docs/iac/concepts/resources/options/) apply to component resources. For example, `ignoreChanges` and `customTimeouts` have no effect on components themselves. To see which options work with components and how to apply options to child resources using `transforms`, see [Resource options and component resources](/docs/iac/concepts/resources/options/#resource-options-and-component-resources).
+{{< /notes >}}
 
 ## Example: Static Web Page Component
 
@@ -2331,7 +2335,7 @@ Now lets create our `package.json` and `tsconfig.json`. We'll need the standard 
 }
 ```
 
-Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever language you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
 The TypeScript config is the same as any standard Pulumi program.
 
@@ -2435,7 +2439,7 @@ Now lets create our `requirements.txt`. We'll need the standard `pulumi` SDK:
 pulumi>=3.191.0,<4.0
 ```
 
-Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever language you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
 #### Setup the virtual environment
 
@@ -2599,7 +2603,7 @@ Now lets create our `.csproj`. We'll need the standard `pulumi` SDK and our cust
 </Project>
 ```
 
-Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever language you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
 #### Install dependencies
 
@@ -2792,7 +2796,7 @@ We'll need to add the sources from the generated SDK output into the build sourc
 </project>
 ```
 
-Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK, and add its dependencies, which will provide us access to the component via RPC, which is running inside of its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever language you implemented it in. We just need to carry a reference to the component SDK, and add its dependencies, which will provide us access to the component via RPC, which is running inside of its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
 #### Install dependencies
 

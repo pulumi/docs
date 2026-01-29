@@ -131,6 +131,17 @@ Create your first policy pack:
     >     virtualenv: .venv
     > ```
 
+    > **Using .gitignore to manage policy pack size**: Create a `.gitignore` file alongside `PulumiPolicy.yaml` to exclude unnecessary files from the published policy pack archive (`.tgz`). Add patterns to ignore Python bytecode files, virtual environments, and other development artifacts:
+    >
+    > ```
+    > *.pyc
+    > __pycache__/
+    > venv/
+    > .venv/
+    > ```
+    >
+    > This keeps your published policy pack size small and ensures only the necessary policy code is distributed.
+
 3. Replace the generated policy in `__main__.py` with this example, which demonstrates a clearer pattern for organizational policy enforcement:
 
     Each policy must have:
@@ -222,6 +233,9 @@ For a complete example including additional test cases, see the [unit test polic
 
 {{< /chooser >}}
 
+<a id="resource-validation"></a>
+<a id="stack-validation"></a>
+
 ## Resource validation vs stack validation
 
 Pulumi policies validate at two scopes:
@@ -250,7 +264,7 @@ Most policies are resource validation policies. Stack validation policies are us
 
 ## Writing policies for dynamic providers
 
-[Dynamic providers](/docs/iac/concepts/resources/dynamic-providers/) allow you to create custom resource types directly in your Pulumi programs. When writing policies for dynamic providers, you need to account for a key constraint: **all dynamic resources share the same resource type** (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python).
+[Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) allow you to create custom resource types directly in your Pulumi programs. When writing policies for dynamic providers, you need to account for a key constraint: **all dynamic resources share the same resource type** (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python).
 
 Since you cannot rely on the resource type alone to identify which dynamic provider a resource uses, you must inspect the resource's properties to differentiate between different dynamic provider implementations.
 
@@ -473,6 +487,8 @@ Test your policy pack locally before publishing.
 
 Configuration makes policy packs flexible and reusable. Adjust enforcement levels, allowed values, and other settings without modifying code.
 
+<a id="enforcement-levels"></a>
+
 ### Enforcement levels
 
 All policies support configurable enforcement levels. Set enforcement for all policies in a pack or override individual policies:
@@ -497,6 +513,8 @@ As shorthand, specify enforcement levels directly:
 }
 ```
 
+<a id="advisory"></a>
+<a id="mandatory"></a>
 **Enforcement levels:**
 
 - **advisory** — Issues warnings but allows deployments to proceed

@@ -13,6 +13,9 @@ aliases:
   - /docs/pulumi-cloud/insights/pre-built-packs/
   - /docs/iac/crossguard/pre-built-packs/
   - /docs/insights/pre-built-packs/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-aws
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azure
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-gcp
 ---
 
 Pulumi Cloud comes with pre-built policy packs that codify best practices for common security and compliance frameworks. These packs allow you to quickly evaluate your organization's compliance posture and "shift left," embedding continuous compliance directly into your IaC workflow. Proactively enforce controls, reduce misconfiguration risks before deployment, and help your organization meet its regulatory obligations with confidence.
@@ -37,19 +40,6 @@ The following pre-built policy packs are available out of the box in Pulumi Clou
 | **PCI DSS v4.0.1** | [AWS](/docs/reference/pre-built-policy-packs/pci-dss/aws/) | Enforces PCI DSS v4.0.1 compliance controls for AWS resources, ensuring payment card data security and helping organizations meet payment card industry standards. |
 | **Pulumi Best Practices** | [AWS](/docs/reference/pre-built-policy-packs/pulumi-best-practices/aws/), [Azure](/docs/reference/pre-built-policy-packs/pulumi-best-practices/azure/), [Google Cloud](/docs/reference/pre-built-policy-packs/pulumi-best-practices/google-cloud/) | Offers a foundational set of recommended governance and security controls, serving as a strong starting point for organizations seeking comprehensive security coverage. |
 | **AWS Organizations Tag Policies** | [AWS and AWS-Native](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) | Integrates with AWS Organizations Tag Policies to validate that infrastructure as code resources have required tags before deployment. [Learn more](/docs/insights/policy/integrations/aws-organizations-tag-policies/). |
-
-### Enabling Pulumi policy packs for your organization
-
-Pulumi policy packs can be enabled at the **organization level**, allowing you to enforce compliance and governance standards across all projects and stacks within your organization.
-
-1. From within your organization, navigate to the **Policies** tab
-2. Under Policy Packs, select the **Available** tab
-3. Select the packs to apply to your organization, and select **Add to organization**
-4. From the Organizations tab, apply the policies to a Policy Group to enforce compliance controls
-
-{{< video title="Adding policy packs to organization" src="/docs/insights/assets/Adding policy-packs to organization.mp4" autoplay="true" loop="true" >}}
-
-Enabling Pulumi policy packs ensures consistent governance, simplifies compliance management, and reduces the risk of misconfigured resources across your entire organization.
 
 ### A foundation for your governance strategy
 

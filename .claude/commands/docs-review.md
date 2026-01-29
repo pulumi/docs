@@ -23,12 +23,14 @@ The `PR_NUMBER` argument is optional. If not provided in interactive mode, the c
 This command operates in two modes based on execution context:
 
 **CI Mode** - Detected when the prompt includes "You are running in a CI environment"
+
 - Minimizes token usage by working primarily from diffs
 - Posts review as a PR comment using `gh pr comment`
 - Tool access is restricted (no `make` commands, limited to Read, Glob, Grep, and gh commands)
 - Applies special handling for efficiency (e.g., trailing newline checks)
 
 **Interactive Mode** - When running in IDE or terminal (outside CI)
+
 - Provides review directly in the conversation (never uses `gh pr comment`)
 - Full tool access available
 - Auto-detects scope from:
@@ -56,11 +58,12 @@ When running in CI (e.g., GitHub Actions), follow these efficiency guidelines to
 
 After completing your review, post it to the PR by running:
 
-```
+```bash
 gh pr comment <PR_NUMBER> --body "YOUR_REVIEW_CONTENT_HERE"
 ```
 
 Your review should include:
+
 - Issues found with specific line numbers from the affected files. Do not use line numbers from the diff.
 - Constructive suggestions using suggestion code fence formatting blocks
 - An instruction to mention you (@claude) if the author wants additional reviews or fixes
@@ -76,6 +79,7 @@ When running outside of CI, always provide your review directly in the conversat
 Before beginning your review, you must determine the scope of changes to review:
 
 **If a PR number is provided** ({{arg}}):
+
 - Use `gh pr view {{arg}}` to retrieve the PR title, description, and metadata
 - Use `gh pr diff {{arg}}` to get the full diff of changes
 - Review the PR changes according to the criteria below.
@@ -86,6 +90,7 @@ Before beginning your review, you must determine the scope of changes to review:
 #### Step 1: Check for open files in IDE
 
 DO NOT RUN ANY COMMANDS YET. First check the conversation context:
+
 - Look for system reminders about files open in the IDE
 - If you find an open file mentioned, read that file and review it
 - Stop and offer to review additional files if desired
@@ -94,6 +99,7 @@ DO NOT RUN ANY COMMANDS YET. First check the conversation context:
 #### Step 2: Check for uncommitted changes
 
 If Step 1 didn't apply, check the gitStatus at the start of the conversation:
+
 - Look for modified (M) or untracked (??) files in the git status
 - If there are uncommitted changes, use `git diff` and `git status` to see what changed
 - Review those specific files
@@ -102,6 +108,7 @@ If Step 1 didn't apply, check the gitStatus at the start of the conversation:
 #### Step 3: Compare against branch point
 
 ONLY if Steps 1 and 2 didn't apply:
+
 - Use `git merge-base --fork-point master HEAD` to find the ancestor branch point
 - Use `git diff $(git merge-base --fork-point master HEAD)...HEAD` to compare current branch against its immediate ancestor
 - If `--fork-point` fails (no reflog), fall back to `git diff $(git merge-base master HEAD)...HEAD`
@@ -137,6 +144,10 @@ Always provide relevant line numbers for any issues you identify.
 - **Files moved, renamed, or deleted**:
   - Confirm that moved or renamed files have appropriate aliases added to the frontmatter to avoid broken links.
   - Confirm that deleted files have a redirect created, if applicable.
+- **Build, test, and infrastructure changes**:
+  - If changes are made to build scripts (scripts/), GitHub Actions workflows (.github/workflows/), the Makefile, or infrastructure code (infrastructure/), verify that BUILD-AND-DEPLOY.md has been updated to reflect these changes.
+  - Examples of changes requiring documentation updates: new make targets, modified deployment workflows, infrastructure configuration changes, new environment variables, updated build processes.
+  - **High-risk changes**: Flag infrastructure changes (infrastructure/, package.json, webpack config, Lambda@Edge, CloudFront) and Dependabot dependency updates that affect runtime/bundling. **Your role is to identify and flag risks for human review**—see [Infrastructure Change Review](../../BUILD-AND-DEPLOY.md#infrastructure-change-review) and [Dependency Management](../../BUILD-AND-DEPLOY.md#dependency-management) sections in BUILD-AND-DEPLOY.md for risk details. Key risks: Lambda@Edge bundling (ESM/CommonJS, webpack changes), large dependency batches, runtime dependencies (marked, algolia, stencil), CloudFront changes
 - **Images and assets**:
   - Check images have alt text for accessibility.
   - Verify image file sizes are reasonable.
@@ -149,6 +160,7 @@ Always provide relevant line numbers for any issues you identify.
   - Verify terminology is consistent with other docs.
 - **SEO**:
   - Check that page titles and descriptions are SEO-friendly.
+  - Check that the titles and descriptions match the content.
   - Verify URL structure follows conventions.
 - **Role-Specific Review Guidelines**
   - Documentation and blog/marketing materials have additional role-specific criteria below.

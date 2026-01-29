@@ -15,14 +15,144 @@ aliases:
 - /docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/
 ---
 
-If your infrastructure was provisioned with Terraform or the CDK for Terraform (CDKTF), there are a number of options that will help you adopt Pulumi.
+If your infrastructure was provisioned with Terraform or the CDK for Terraform (CDKTF), there are a number of options that will help you adopt Pulumi:
 
+* **[Neo](/product/neo/) (Recommended)**: Use Neo to automatically convert your Terraform code and import existing resources with zero downtime
+* **State-first migration**: Use [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform-migrate) to translate your Terraform state to Pulumi state, then use an LLM agent to convert your code.
 * **Coexist** with resources provisioned by Terraform or CDKTF by referencing a `.tfstate` file.
 * **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/) or using `pulumi convert --from terraform` along with `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `pulumi convert --from terraform`.
 * **Use Terraform Modules** directly within your Pulumi programs through the [Terraform Module](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) feature.
 
-This range of techniques helps to either temporarily or permanently use Pulumi alongside Terraform, in addition to fully migrating existing infrastructure to Pulumi.
+## Choosing a Terraform migration path
+
+### Pulumi Neo (Recommended)
+
+* **Automated conversion**: Neo converts your Terraform HCL and state to Pulumi automatically
+* **Safety verification**: Neo runs `pulumi preview` to prove no changes before you commit
+
+#### Quick start with Neo
+
+1. **Prerequisites**:
+   * Ensure you have access to your state file (`.tfstate`)
+   * Install the [Pulumi GitHub app](https://github.com/apps/pulumi-cloud) with access to your repository that contains your Terraform configuration files
+   * Configure cloud credentials in [Pulumi ESC](/docs/esc/)
+   * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
+
+2. **Start the migration**:
+
+   ```text
+   "Migrate my Terraform configuration to Pulumi"
+   ```
+
+3. **Neo will**:
+   * Convert your Terraform state to Pulumi state
+   * Generate equivalent Pulumi code using your Terraform configuration
+   * Verify no changes with `pulumi preview`
+
+4. **Review and commit**:
+   * Examine the generated Pulumi code
+   * Confirm the preview shows no changes
+   * Commit your new Pulumi program
+
+For a detailed technical walkthrough, see our [Neo migration blog post](/blog/neo-migration/).
+
+#### When to use manual migration instead
+
+While Neo handles most Terraform configurations automatically, you might need manual migration for:
+
+* Terraform modules with complex dynamic blocks not yet supported by Neo
+* Edge cases with custom providers or unusual state configurations
+
+If you want to fundamentally restructure your infrastructure, we recommend completing the migration first and then refactoring your Pulumi code.
+
+Continue reading below for manual migration approaches if Neo doesn't fit your specific needs.
+
+### Alternative migration paths
+
+If Neo doesn't support your specific use case, or if you prefer manual control over the migration process, the options below provide flexibility to coexist with or migrate from Terraform at your own pace.
+
+## State-first migration with pulumi-terraform-migrate
+
+The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform-migrate) tool provides a state-first approach to migration by translating your Terraform state into Pulumi state. You then use an LLM agent to convert your Terraform code to Pulumi. This approach is useful when:
+
+* You don't have access to Neo
+* You want precise control over the state migration process
+
+### Migration workflow
+
+1. **Install the tool**:
+
+   The tool runs as a Pulumi plugin. Ensure you have the [Pulumi CLI](/docs/install/) installed.
+
+1. **Set up your Pulumi project**:
+
+   Create a new Pulumi project in your target language and initialize a stack:
+
+   ```bash
+   mkdir my-pulumi-project && cd my-pulumi-project
+   pulumi new typescript # or python, go, csharp, etc.
+   pulumi up
+   ```
+
+1. **Translate your Terraform state**:
+
+   Run the migration tool to translate your Terraform state into Pulumi state:
+
+   ```bash
+   pulumi plugin run terraform-migrate -- stack \
+       --from path/to/terraform-sources \
+       --to path/to/pulumi-project \
+       --out /tmp/pulumi-state.json \
+       --plugins /tmp/required-plugins.json
+   ```
+
+   This generates:
+   * `pulumi-state.json`: The translated Pulumi state file
+   * `required-plugins.json`: A list of required Pulumi plugins and versions
+  
+   Note that this step must be repeated for each Terraform stack.
+
+1. **Install required plugins and import state**:
+
+   Install the recommended plugins and import the translated state:
+
+   ```bash
+   # Install plugins (example for AWS)
+   pulumi plugin install resource aws 7.12.0
+
+   # Import the translated state
+   pulumi stack import --file /tmp/pulumi-state.json
+   ```
+
+1. **Convert your code with an LLM agent**:
+
+   Use an AI coding assistant to translate your Terraform HCL files into Pulumi code. Popular options include:
+
+   * [Neo](https://www.pulumi.com/product/neo/) - the advantage of Neo is that it already knows about this flow.
+   * [Claude Code](https://claude.com/product/claude-code)
+   * [Cursor](https://cursor.com)
+   * [Codex](https://openai.com/codex/)
+
+   When prompting the LLM, provide:
+   * Your original `.tf` files
+   * Your target programming language (TypeScript, Python, Go, C#, etc.)
+   * The generated `pulumi-state.json` for context on resource names and structure
+   * Ask the agent to iterate on the code changes until `pulumi preview --diff` generates as few diffs as possible. If it fails, prompt it to try again.
+
+1. **Verify with pulumi preview**:
+
+   Run `pulumi preview` to confirm the translated code matches your migrated state with no unexpected changes:
+
+   ```bash
+   pulumi preview
+   ```
+
+   A clean preview with no changes indicates a successful migration. Some minor diffs might be OK.
+
+1. **Run pulumi up**
+
+   Once you are satisfied with the migration, run `pulumi up` to finalize the state translation. The migration tool produces an intermediate state file that requires one `pulumi up` run to complete.
 
 ## Referencing Terraform State
 

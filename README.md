@@ -36,8 +36,10 @@ We welcome all contributions to this repository. Be sure to read our [contributi
 
 See also:
 
+* [Build and deployment guide](./BUILD-AND-DEPLOY.md)
 * [Publishing a Pulumi blog post](./BLOGGING.md)
 * [Documentation and coding style guide](./STYLE-GUIDE.md)
+* [AI agent instructions](./AGENTS.md)
 
 # Setup and Development
 
@@ -47,14 +49,14 @@ See also:
 
 We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
 
-* [Hugo](https://gohugo.io/installation/) (>= 0.126.0)
-  * Hugo 0.126.0 is highly recommended. This is the version we use in our deployment pipelines.
-* [Node.js](https://nodejs.org/en/download/package-manager) (>= 18)
+* [Hugo](https://gohugo.io/installation/) (>= 0.154.5)
+  * Hugo 0.154.5 is highly recommended. This is the version we use in our deployment pipelines.
+* [Node.js](https://nodejs.org/en/download/package-manager) (>= 24)
 * [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
 
 Additionally, to build the SDK and CLI documentation, you'll also need:
 
-* [Go](https://golang.org/) (>= 1.21)
+* [Go](https://golang.org/) (>= 1.25)
 * [Python](https://www.python.org) (>= 3.7)
 * [.NET](https://dotnet.microsoft.com/download) (>= 6)
 * [Pulumi](https://www.pulumi.com/docs/install)
@@ -104,7 +106,6 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make serve-static` runs a local HTTP server that serves the contents of `./public`
 * `make test` tests all of the programs in `./static/programs` (see `./scripts/programs/test.sh` for options)
 * `make generate` builds the TypeScript, Python, and Pulumi CLI documentation
-* `make new-blog-post` scaffolds a new, bare-bones blog post with placeholder content
 * `make new-tutorial` scaffolds a new single-page tutorial
 * `make new-tutorial-module` scaffolds a new multi-page tutorial
 * `make new-tutorial-topic` scaffolds a new tutorial topic and adds it to an existing multi-page tutorial
@@ -119,6 +120,18 @@ make ensure    # Install or update dependencies.
 make serve     # Run the development server locally on http://localhost:1313.
 make lint      # Identify any Markdown or code-formatting issues so you can fix them.
 ```
+
+### Claude Commands
+
+If you have [Claude Code](https://claude.com/claude-code) installed, you can use these slash commands to streamline your workflow:
+
+* `/new-blog-post` creates a new blog post with automatic author detection and onboarding
+* `/docs-review` reviews documentation changes for style, accuracy, and best practices (works on PRs, branches, or open files)
+* `/glow-up` provides focused review and improvement of a single documentation file and any included images
+* `/add-borders` adds 1px grey borders to PNG images for better visual clarity
+* `/fix-issue` analyzes a documentation issue and creates an implementation plan
+
+These commands provide intelligent assistance beyond what make targets can offer, including context awareness, interactive prompts, and automatic configuration.
 
 ## Generating SDK and CLI documentation
 

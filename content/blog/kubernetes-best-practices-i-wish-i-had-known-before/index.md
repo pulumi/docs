@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes Best Practices I Wish I Had Known Before"
 date: 2025-01-20
-updated: 2025-03-20
+updated: 2026-01-23
 draft: false
 
 meta_desc: |
@@ -121,6 +121,12 @@ In Kubernetes, networking can get complicated fast. Between Services, Ingress Co
 <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
     <img src="img_1.png" alt="A meme featuring two side-by-side images of Mr. Incredible. The left side shows a normal, happy face labeled “I’M LEARNING KUBERNETES”, while the right side is a dark, distorted version of his face with the same caption, humorously implying the increasing complexity and challenges of learning Kubernetes." style="width: 80%; height: 100%">
 </div>
+
+{{% notes type="info" %}}
+ingress-nginx is retiring in March 2026.
+
+Here is a guide on [How to Move to the Gateway API: post ingress-nginx Retirement](https://www.pulumi.com/blog/ingress-nginx-to-gateway-api-kgateway/).
+{{% /notes %}}
 
 ## 6. Lean On Liveness, Readiness, and Startup Probes
 
@@ -256,6 +262,6 @@ Kubernetes is like a Swiss Army knife: powerful, versatile, but also easy to mis
 
 If you’ve already learned some lessons the hard way, you’re not alone. But the beauty of Kubernetes is that with each setback, you gain more experience to fine-tune your approach.
 
-Let’s learn (and unlearn) together, so we can keep taming this Kubernetes beast like the pros we are. Or at least, like the pros we will be!
+Want to learn how to put these practices into action? Meet us at KubeCon Europe 2026 or register for our upcoming [Zero to Production in Kubernetes](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) workshop.
 
 {{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}

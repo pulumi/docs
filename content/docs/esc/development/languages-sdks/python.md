@@ -32,9 +32,9 @@ Run `pip install pulumi-esc-sdk` to install the SDK package.
 The easiest way to initialize an ESC SDK client is to run:
 
 ```python
-import pulumi_esc_sdk as esc
+from pulumi_esc_sdk import esc_client
 
-client = esc.esc_client.default_client()
+client = esc_client.default_client()
 ```
 
 This method will first look for the `PULUMI_ACCESS_TOKEN` environment variable, and if it's not present, it will fall back to CLI credentials that are present on your machine if you have logged in using Pulumi CLI or ESC CLI.
@@ -47,6 +47,8 @@ import pulumi_esc_sdk as esc
 configuration = esc.Configuration(access_token=myAccessToken)
 client = esc.EscClient(configuration)
 ```
+
+The Python SDK honors standard proxy environment variables: `https_proxy`, `http_proxy`, and `no_proxy`. Both lowercase and uppercase variants are supported.
 
 ## Examples
 

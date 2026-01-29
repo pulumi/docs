@@ -23,14 +23,19 @@ Pulumi provides two main types of logging to help with debugging and troubleshoo
 
 Verbose logging of the internals of the Pulumi engine and resource providers can be enabled by passing the `-v` flag to any `pulumi` CLI command. Pulumi emits logs at log levels between `1` and `11`, with `11` being the most verbose. At log level 10 or below, Pulumi will avoid intentionally exposing any *known* credentials. At log level 11, Pulumi will intentionally expose some known credentials to aid with debugging, so these log levels should be used only when absolutely needed.
 
-By default, logs are written to the top-level temp directory (usually `/tmp` or the value of `$TMPDIR`). The `--logtostderr` flag can be used to write logs to stderr instead. Use the flag `--logflow` to apply the same log level to resource providers.
+By default, logs are written to the top-level temp directory (usually `/tmp` or the value of `$TMPDIR`). The following flags control logging behavior:
+
+* `--logtostderr`: Write logs to stderr instead of temp files.
+* `--logflow`: Pass the same log level to resource providers. Without this flag, only the Pulumi engine logs at the specified verbosity level, while resource providers use their default log level.
+
+The `--logflow` flag is particularly useful when debugging cloud provider API interactions. At high verbosity levels (such as `-v=9`), resource providers will log HTTP requests and responses to their cloud APIs. This helps diagnose issues like incorrect resource references, unexpected 404 errors, or API parameter problems.
 
 {{% notes type="warning" %}}
 Enabling verbose logging may reveal sensitive information (tokens, credentials...) that is provided from your execution environment directly to your cloud provider, and which Pulumi may not be aware of. Before sharing the logs, be careful to audit and redact any sensitive information.
 {{% /notes %}}
 
 ```bash
-$ pulumi up --logtostderr --logflow -v=10 2> out.txt
+$ pulumi up --logtostderr --logflow -v=9 2> out.txt
 ```
 
 Diagnostic logging can also be controlled with flags and environment variables of the resource providers. For example, Pulumi providers that use a bridged Terraform provider can make use of the [`TF_LOG`](https://www.terraform.io/docs/internals/debugging.html) environment variable (set to `TRACE`, `DEBUG`, `INFO`, `WARN` or `ERROR`) in order to provide additional diagnostic information.
@@ -122,7 +127,21 @@ When troubleshooting issues, you may want to use both CLI verbose logging and pr
 
 ```bash
 # Enable both CLI verbose logging and program debug logging
-$ pulumi up --logtostderr --logflow -v=10 -d 2> out.txt
+$ pulumi up --logtostderr --logflow -v=9 -d 2> out.txt
 ```
 
 This combination provides the most comprehensive view of what's happening during your Pulumi operations, showing both engine internals and your custom program diagnostics.
+
+## Debugging cloud provider API calls
+
+When you encounter errors from cloud providers (such as 404 responses or permission issues), the verbose logs can help you see exactly what API calls are being made. For example:
+
+```bash
+$ pulumi up --logtostderr --logflow -v=9 2>&1 | grep -i "http"
+```
+
+This is particularly useful for debugging scenarios where:
+
+* A resource property expects a name versus a fully qualified ID
+* You're getting generic errors without clear root causes
+* You need to verify the exact API endpoints being called

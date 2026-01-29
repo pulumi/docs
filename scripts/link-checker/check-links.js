@@ -1,11 +1,23 @@
 const { HtmlUrlChecker } = require("broken-link-checker");
 const { WebClient, LogLevel } = require('@slack/web-api');
 const httpServer = require("http-server");
-const Sitemapper = require("sitemapper");
+const Sitemapper = require("sitemapper").default;
 const sitemap = new Sitemapper();
 const path = require("path");
 const fs = require("fs");
 
+// Internal domain for separating internal vs external broken links
+const INTERNAL_DOMAIN = "pulumi.com";
+
+// Helper function to check if a URL is an internal Pulumi link
+function isInternalLink(url) {
+    try {
+        const urlObj = new URL(url);
+        return urlObj.hostname === INTERNAL_DOMAIN || urlObj.hostname.endsWith(`.${INTERNAL_DOMAIN}`);
+    } catch {
+        return false;
+    }
+}
 
 // Additional routes to check that are not included in the sitemap.
 const additionalRoutes = [
@@ -162,9 +174,17 @@ function onPage(error, pageURL, brokenLinks) {
 
 // Handles the BLC 'complete' event, which is raised at the end of a run.
 async function onComplete(brokenLinks) {
-    const filtered = excludeAcceptable(brokenLinks);
+    // Split broken links into internal and external
+    const internalLinks = brokenLinks.filter(link => isInternalLink(link.destination));
+    const externalLinks = brokenLinks.filter(link => !isInternalLink(link.destination));
 
-    if (filtered.length > 0) {
+    // Apply filters to each group
+    const filteredInternal = excludeAcceptable(internalLinks);
+    const filteredExternal = excludeAcceptable(externalLinks);
+
+    const totalFiltered = filteredInternal.length + filteredExternal.length;
+
+    if (totalFiltered > 0) {
 
         // If we failed and a retry count was provided, retry. Note that retry count !==
         // run count, so a retry count of 1 means run once, then retry once, which means a
@@ -176,13 +196,29 @@ async function onComplete(brokenLinks) {
             return;
         }
 
-        const list = filtered
-            .map(link => `:link: <${link.source}|${new URL(link.source).pathname}> → ${link.destination} (${link.reason})`)
-            .join("\n");
+        // Post internal broken links first (if any)
+        if (filteredInternal.length > 0) {
+            const internalList = filteredInternal
+                .map(link => `:link: <${link.source}|${new URL(link.source).pathname}> → ${link.destination} (${link.reason})`)
+                .join("\n");
 
-        // Post the results to Slack.
-        console.warn("Posting to slack: " + list);
-        await postToSlack("docs-ops", list);
+            const internalMessage = `:pulumipus-jedi: *Internal Broken Links (${filteredInternal.length} found)*\nThese are links within pulumi.com that need attention:\n\n${internalList}`;
+
+            console.warn("Posting internal broken links to Slack: " + internalList);
+            await postToSlack("docs-ops", internalMessage);
+        }
+
+        // Post external broken links second (if any)
+        if (filteredExternal.length > 0) {
+            const externalList = filteredExternal
+                .map(link => `:link: <${link.source}|${new URL(link.source).pathname}> → ${link.destination} (${link.reason})`)
+                .join("\n");
+
+            const externalMessage = `:pulumipus-sith: *External Broken Links (${filteredExternal.length} found)*\nThese are links to third-party sites (may be false positives due to bot protection):\n\n${externalList}`;
+
+            console.warn("Posting external broken links to Slack: " + externalList);
+            await postToSlack("docs-ops", externalMessage);
+        }
     }
 }
 
@@ -318,11 +354,50 @@ function getDefaultExcludedKeywords() {
         "https://www.downelink.com/a-deep-dive-into-openais-text-embedding-ada-002-unlocking-the-power-of-semantic-understanding/",
         "https://github.com/serverless/components",
         "https://docs.spot.io/spot-connect/integrations/pulumi",
+        // News/Media sites with aggressive bot protection
+        "https://devops.com/",
+        "https://www.bizjournals.com/",
+        "https://redmonk.com/",
+        "https://www.eweek.com/",
+        "https://www.axios.com/",
+        "https://www.mordorintelligence.com/",
+        "https://betterprogramming.pub/",
+        "https://garymarcus.substack.com/",
+        "https://www.coingecko.com/",
+        "https://news.ycombinator.com/",
+        "https://www.gao.gov/",
+        "https://apps.dtic.mil/",
+        "https://queue.acm.org/",
+        // NPM (block all, not just 429s)
+        "https://www.npmjs.com/",
+        "https://npmjs.com/",
+        // Developer tools/platforms with bot protection
+        "https://dev.mysql.com/",
+        "https://circleci.com/docs/",
+        "https://docs.gitlab.com/",
+        "https://gitlab.com/help/",
+        // Conference/event sites
+        "https://sched.com",
+        "https://static.sched.com/",
+        "colocatedevents",
+        "kccnc",
+        "wasmcon",
+        "gitopscon",
+        // Archive/rate-limited Pulumi properties
+        "https://archive.pulumi.com/",
+        // Sites with known connection issues
+        "https://trivy.dev/",
+        "https://elastisys.com/",
+        "https://cloudnativedenmark.dk/",
+        "https://stackconf.eu/",
     ];
 }
 
 // Filters out transient errors that needn't fail a link-check run.
 function excludeAcceptable(links) {
+    // HTTP status codes to filter out for external sites (bot protection, auth walls, timeouts)
+    const externalErrorReasons = ["HTTP_403", "HTTP_401", "HTTP_undefined"];
+
     return (links
         // Ignore GitHub and npm 429s (rate-limited). We should really be handling these more
         // intelligently, but we can come back to that in a follow up.
@@ -342,6 +417,9 @@ function excludeAcceptable(links) {
 
         // Ignore HTTP 503s.
         .filter(b => b.reason !== "HTTP_503")
+
+        // Filter errors from external sites (bot protection, auth walls, connection issues)
+        .filter(b => !(externalErrorReasons.includes(b.reason) && !isInternalLink(b.destination)))
 
         // Ignore complaints about MIME types. BLC currently hard-codes an expectation of
         // type text/html, which causes it to fail on direct links to images, PDFs, and
@@ -429,3 +507,4 @@ async function getURLsToCheck(base) {
             return urls;
         });
 }
+

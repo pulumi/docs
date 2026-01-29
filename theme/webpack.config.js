@@ -29,6 +29,9 @@ module.exports = function (env, { mode }) {
                     use: [
                         {
                             loader: "ts-loader",
+                            options: {
+                                transpileOnly: true,
+                            },
                         },
                     ],
                     exclude: /node_modules/,
@@ -53,6 +56,8 @@ module.exports = function (env, { mode }) {
                                 sourceMap: false,
                                 sassOptions: {
                                     outputStyle: "compressed",
+                                    quietDeps: true,
+                                    silenceDeprecations: ['import', 'global-builtin'],
                                 },
                             },
                         },
@@ -87,6 +92,13 @@ module.exports = function (env, { mode }) {
                     extractComments: false,
                 }),
             ],
+        },
+        performance: {
+            // Increase thresholds to accommodate TailwindCSS utility classes
+            // bundle.css is ~4.21 MiB due to comprehensive utility generation
+            maxAssetSize: 5242880,        // 5 MiB
+            maxEntrypointSize: 5767168,   // 5.5 MiB
+            hints: 'warning',              // Keep as warnings to monitor growth
         },
     };
 };

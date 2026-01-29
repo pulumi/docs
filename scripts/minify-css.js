@@ -1,10 +1,10 @@
 const fs = require("fs");
 const glob = require("glob");
 const postcss = require("postcss");
-const purgecss = require("@fullhuman/postcss-purgecss");
+const { purgeCSSPlugin } = require("@fullhuman/postcss-purgecss");
 const cssnano = require("cssnano");
 
-function minifyCSS(filePath) {
+function minifyCSS(filePath, outputFilename) {
     const bundlePath = glob.sync(filePath)[0];
 
     // If there is no matching bundle then we will skip minifying things.
@@ -13,12 +13,13 @@ function minifyCSS(filePath) {
     }
 
     const css = fs.readFileSync(bundlePath);
+    const outputPath = `public/css/${outputFilename}`;
 
     return postcss([
 
         // PurgeCSS removes unused CSS by analyzing the files of the built website.
         // https://purgecss.com/
-        purgecss({
+        purgeCSSPlugin({
             content: [ "public/**/*.html", "public/js/bundle.*.js" ],
             // PurgeCSS looks through all the built files but, making an exception here
             // to skip the files in the azure-native-v2 package because it is causing
@@ -68,7 +69,7 @@ function minifyCSS(filePath) {
             ],
         }),
     ])
-    .process(css, { from: bundlePath, to: bundlePath })
+    .process(css, { from: bundlePath, to: outputPath })
     .then(result => {
         const css = result.css;
 
@@ -77,15 +78,31 @@ function minifyCSS(filePath) {
             throw new Error(`Unexpected PostCSS result: ${css}`);
         }
 
-        // Write the result back to the file.
-        fs.writeFileSync(bundlePath, css);
+        // Write to the output file with build ID in the name.
+        fs.writeFileSync(outputPath, css);
+        console.log(`Minified: ${outputPath}`);
     });
 }
 
-minifyCSS("public/css/bundle.*.css").then(() => {
-    minifyCSS("public/css/marketing.*.css").then(() => {
-        console.log("CSS bundles minified successfully!");
-    });
+const cssBundleId = process.env.CSS_BUNDLE_ID;
+
+if (!cssBundleId) {
+    console.error("ERROR: CSS_BUNDLE_ID environment variable not set");
+    process.exit(1);
+}
+
+// Ensure output directory exists
+if (!fs.existsSync("public/css")) {
+    fs.mkdirSync("public/css", { recursive: true });
+}
+
+Promise.all([
+    minifyCSS("public/css/bundle.*.css", `bundle.${cssBundleId}.css`),
+    minifyCSS("public/css/marketing.*.css", `marketing.${cssBundleId}.css`),
+]).then(() => {
+    console.log("CSS bundles minified successfully!");
+    console.log(`  - bundle.${cssBundleId}.css`);
+    console.log(`  - marketing.${cssBundleId}.css`);
 });
 
 // Exit non-zero when something goes wrong in the promise chain.

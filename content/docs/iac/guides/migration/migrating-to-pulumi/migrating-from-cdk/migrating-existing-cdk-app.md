@@ -15,9 +15,59 @@ menu:
 
 This guide walks through migrating an existing AWS CDK application to a Pulumi program that manages the same infrastructure.
 
-#### Planning your Migration
+## Pulumi Neo (Recommended)
+
+* **Automated conversion**: Neo converts your CDK code to Pulumi and generates import mappings automatically
+* **Safety verification**: Neo runs `pulumi preview` to prove no changes before you commit
+
+### Quick start with Neo
+
+1. **Prerequisites**:
+   * Ensure your CDK application synthesizes cleanly: `cdk synth`
+   * Install the [Pulumi GitHub app](https://github.com/apps/pulumi-cloud) with access to your repository that contains your CDK application
+   * Configure AWS credentials in [Pulumi ESC](/docs/esc/integrations/dynamic-login-credentials/aws-login/)
+
+2. **Start the migration**:
+
+   ```text
+   "Help me migrate my CDK application to Pulumi"
+   ```
+
+3. **Neo will**:
+   * Synthesize your CDK application
+   * Inventory all CloudFormation resources
+   * Convert CDK code to Pulumi
+   * Import existing resources without touching them
+   * Verify zero changes with `pulumi preview`
+
+4. **Review and commit**:
+   * Examine the generated Pulumi code
+   * Confirm the preview shows no changes
+   * Commit your new Pulumi program
+
+For a detailed technical walkthrough, see our [Neo migration blog post](/blog/neo-migration/).
+
+### When to use manual migration instead
+
+While Neo handles most CDK applications automatically, you might need manual migration for:
+
+* Custom CloudFormation resources and artifact bundling not yet supported by Neo
+* Complex cross-stack dependencies requiring specific handling
+* Scenarios where you want to fundamentally restructure during migration
+
+Continue reading below for manual migration approaches if Neo doesn't fit your specific needs.
+
+## Manual Migration Approaches
+
+If Neo doesn't support your specific use case or you prefer manual control over the migration process, the following sections provide comprehensive guidance for manual migration.
+
+### Planning your Migration
 
 Before running any tools, it is important to plan your migration strategy. Migrating involves two distinct parts: converting your **Code** (logic) and migrating your **State** (live resources).
+
+{{% notes type="info" %}}
+**Consider Neo first**: For most CDK applications, [Neo](#neo-the-automated-migration-path-recommended) automates both code conversion and state migration with zero downtime. The manual approaches below are best for edge cases or when you need specific control over the migration process.
+{{% /notes %}}
 
 ### Strategy: Convert vs. Rewrite
 
@@ -297,12 +347,13 @@ If you write your component code first, you can import directly into the hierarc
 
 Once you have a plan, choose the execution path that fits your goals:
 
-* [Approach A: The Automated Path (Recommended)](#approach-a-the-automated-path-recommended)
-* [Approach B: Manual Migration](#approach-b-manual-migration)
+* [Neo: Fully Automated Migration (Recommended)](#neo-the-automated-migration-path-recommended) - Use Neo for zero-downtime automated migration
+* [Approach A: Semi-Automated Path](#approach-a-the-semi-automated-path) - Use tools like `cdk2pulumi` and `cdk-importer` with manual steps
+* [Approach B: Manual Migration](#approach-b-manual-migration) - Full manual control over the migration process
 
-### Approach A: The Automated Path (Recommended)
+### Approach A: The Semi-Automated Path
 
-This path uses `cdk2pulumi` to convert your code and the `cdk-importer` tool to automatically generate the import mapping. This is the fastest way to migrate standard stacks.
+This path uses `cdk2pulumi` to convert your code and the `cdk-importer` tool to automatically generate the import mapping. This approach provides more control than Neo while still automating key parts of the migration.
 
 **The Workflow:**
 
@@ -330,6 +381,60 @@ This generates a `Pulumi.yaml` which you can then convert to your language of ch
 ```shell
 pulumi convert --from yaml --generate-only --language typescript --out ./converted-project
 ```
+
+##### Handling Custom Resources
+
+CDK uses Lambda-backed Custom Resources for functionality not available in CloudFormation. In synthesized CloudFormation, these appear as resources with type `AWS::CloudFormation::CustomResource` or `Custom::<name>`.
+
+By default, `cdk2pulumi` rewrites custom resources to [`aws-native:cloudformation:CustomResourceEmulator`](https://www.pulumi.com/registry/packages/aws-native/api-docs/cloudformation/customresourceemulator/), which invokes the original Lambda at runtime. This preserves functionality but has drawbacks.
+
+The Lambda was deployed by CDK and won't receive updates after migration, so security patches and bug fixes from newer CDK versions won't be applied. The Pulumi stack also depends on infrastructure it doesn't manage, creating an implicit dependency that breaks if the Lambda is deleted or modified. Resource operations are also subject to cold starts, eventual consistency, and Lambda timeout limits.
+
+Where possible, replace custom resources with native Pulumi resources instead. For handlers not listed below, review them during migration to see if a native replacement exists.
+
+**Migration strategies by handler type:**
+
+| Handler | Strategy |
+|---------|----------|
+| `aws-certificatemanager/dns-validated-certificate-handler` | Replace with `aws.acm.Certificate`, `aws.route53.Record`, and `aws.acm.CertificateValidation` |
+| `aws-ec2/restrict-default-security-group-handler` | Replace with `aws.ec2.DefaultSecurityGroup` resource with empty ingress/egress rules |
+| `aws-ecr/auto-delete-images-handler` | Replace `aws-native:ecr:Repository` with `aws.ecr.Repository` with `forceDelete: true` |
+| `aws-s3/auto-delete-objects-handler` | Replace `aws-native:s3:Bucket` with `aws.s3.Bucket` with `forceDestroy: true` |
+| `aws-s3/notifications-resource-handler` | Replace with `aws.s3.BucketNotification` |
+| `aws-logs/log-retention-handler` | Replace with `aws.cloudwatch.LogGroup` with explicit `retentionInDays` |
+| `aws-iam/oidc-handler` | Replace with `aws.iam.OpenIdConnectProvider` |
+| `aws-route53/delete-existing-record-set-handler` | Replace with `aws.route53.Record` with `allowOverwrite: true` |
+| `aws-dynamodb/replica-handler` | Replace with `aws.dynamodb.TableReplica` |
+
+**Cross-account/region handlers:**
+
+* `aws-cloudfront/edge-function`: Use `aws.lambda.Function` with `region: "us-east-1"`
+* `aws-route53/cross-account-zone-delegation-handler`: Use a separate AWS provider with cross-account role assumption
+
+##### Handling assets and bundling
+
+CDK uses Assets and Bundling to handle deployment artifacts like Lambda code, Docker images, and static files. These are processed by the CDK CLI during synthesis and appear in the `cdk.out` directory alongside `*.assets.json` metadata files. CloudFormation templates contain hard-coded references to asset locations (S3 bucket/key or ECR repo/tag).
+
+**Migration strategies by asset type:**
+
+| Asset Type | Detection | Pulumi Migration |
+|------------|-----------|------------------|
+| Docker image | `dockerImages` in assets.json | Use `docker-build.Image` to build and push. Replace hard-coded ECR URI with image output. |
+| Static file | `files` without `executable`, no bundling in CDK source | Use `pulumi.FileArchive` or `pulumi.FileAsset` |
+| File with build command | `files` with `executable` field | Build command needs setup in Pulumi (see below) |
+| Bundled file | `files` without `executable`, but CDK source uses bundling | Bundling needs setup in Pulumi (see below) |
+
+**Handling bundled assets:**
+
+CDK constructs like `NodejsFunction`, `PythonFunction`, `GoFunction`, or resources using the `bundling` option run build steps during synthesis. These build steps need to be replicated in Pulumi for ongoing development—otherwise source changes would require manually re-running `cdk synth`.
+
+Options for handling bundling:
+
+1. **CI/CD pipeline (Recommended)**: Move the build step to your CI pipeline and reference the pre-built artifact in Pulumi. This provides the best caching, reproducibility, and deployment speed for production workloads.
+1. **Pulumi Command provider**: Use `command.local.Command` to run the build command during `pulumi up`. This keeps the build integrated with Pulumi but may affect deployment times.
+1. **Pre-build script**: Create a build script that runs before `pulumi up` and outputs to a known location. This is the simplest approach for development workflows.
+
+Each option has tradeoffs around caching, reproducibility, and deployment speed. For production workloads, the CI/CD pipeline approach is typically preferred.
 
 #### 2. Test converted code
 
@@ -414,6 +519,16 @@ Don’t quit early. Iterate until your preview is completely clean with no diffs
 ## The Golden Path: Recommended Workflow
 
 In summary, the most reliable way to migrate is:
+
+### Option 1: Use Neo (Recommended for most users)
+
+1. **Prepare**: Ensure your CDK app synthesizes cleanly and configure AWS credentials in Pulumi ESC.
+1. **Migrate**: Ask Neo to migrate your CDK application—it handles conversion, import, and verification automatically.
+1. **Review**: Examine the generated code and confirm `pulumi preview` shows zero changes.
+1. **Commit**: Commit your new Pulumi program and optionally refactor for better organization.
+1. **Retire CloudFormation**: Delete the old stacks after confirming Pulumi manages everything correctly.
+
+### Option 2: Semi-automated migration (When Neo doesn't fit)
 
 1. **Plan**: Decide on your target structure and strategy.
 1. **Convert**: Use `cdk2pulumi` to get a working baseline of code.

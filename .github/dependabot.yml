@@ -1,0 +1,110 @@
+version: 2
+updates:
+  # Root package.json
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "tailwindcss"
+      - dependency-name: "prettier"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies", "npm"]
+    commit-message:
+      prefix: "deps"
+
+  # Theme package.json
+  - package-ecosystem: "npm"
+    directory: "/theme"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "tailwindcss"
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies", "npm", "theme"]
+    commit-message:
+      prefix: "deps(theme)"
+
+  # Stencil package.json
+  - package-ecosystem: "npm"
+    directory: "/theme/stencil"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies", "npm", "stencil"]
+    commit-message:
+      prefix: "deps(stencil)"
+
+  # Infrastructure package.json
+  - package-ecosystem: "npm"
+    directory: "/infrastructure"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies", "npm", "infrastructure"]
+    commit-message:
+      prefix: "deps(infra)"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 1
+    groups:
+      all-actions:
+        patterns: ["*"]
+    labels: ["dependencies", "github-actions"]
+    commit-message:
+      prefix: "ci"
+
+  # Python dependencies
+  - package-ecosystem: "pip"
+    directory: "/scripts"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 1
+    groups:
+      all-pip-dependencies:
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies", "pip"]
+    commit-message:
+      prefix: "deps(pip)"

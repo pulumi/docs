@@ -270,7 +270,7 @@ Note that if you provide any of the `--loader`, `--import` or `--require` argume
 
 ## Using ESM only modules with CommonJS Pulumi templates
 
-Older versions of Node.js do not support loading ESM modules using the `require` function (`require` is part of CommonJS, the default runtime targetted by TypeScript in the Pulumi templates). You may encounter an error like the following:
+Older versions of Node.js do not support loading ESM modules using the `require` function (`require` is part of CommonJS, the default runtime targeted by TypeScript in the Pulumi templates). You may encounter an error like the following:
 
 `Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/alice/pulumi/projects/esm-test-project/node_modules/@kubernetes/client-node/dist/index.js from /Users/alice/pulumi/projects/esm-test-project/index.ts not supported.`
 

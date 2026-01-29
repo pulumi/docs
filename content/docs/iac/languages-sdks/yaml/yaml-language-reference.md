@@ -19,7 +19,7 @@ aliases:
 
 Pulumi programs can be defined in many languages, and the Pulumi YAML dialect offers an additional language for authoring Pulumi programs.
 
-The Pulumi YAML provider supports programs written in YAML or JSON.  In both cases, the programs (`.yaml` or `.json` files) follow a simple schema, including four top level sections:
+Pulumi supports programs written in YAML or JSON.  In both cases, the programs (`.yaml` or `.json` files) follow a simple schema, including four top level sections:
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
