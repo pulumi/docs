@@ -63,4 +63,9 @@ sections:
 if (window.location.hash === "#conflict") {
   window.location = "/docs/support/troubleshooting/common-issues/update-conflicts/"
 }
+
+// Redirect to the new verbose logging page
+if (window.location.hash === "#verbose-logging") {
+  window.location = "/docs/support/debugging/logging/#cli-verbose-logging"
+}
 </script>
