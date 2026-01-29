@@ -1,5 +1,5 @@
 ---
-description: Comprehensive PR review with approve/request changes/close workflow
+description: Comprehensive Pulumi Docs PR review with approve/request changes/close workflow
 ---
 
 # Pull Request Review Command
