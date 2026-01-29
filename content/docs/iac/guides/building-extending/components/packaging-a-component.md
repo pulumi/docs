@@ -46,7 +46,7 @@ When considering single-language components, bear the following tradeoffs in min
 
 ## Cross-language components
 
-Cross-language components support consumption in any Pulumi language. You implement the component once in your preferred language, and Pulumi automatically generates an SDKs via [local packages](/docs/iac/guides/building-extending/packages/local-packages/) for other languages when the component is added to a downstream Pulumi program.
+Cross-language components support consumption in any Pulumi language. You implement the component once in your preferred language, and Pulumi automatically generates SDKs via [local packages](/docs/iac/guides/building-extending/packages/local-packages/) for other languages when the component is added to a downstream Pulumi program.
 
 For detailed information on packaging and using cross-language components, see [Cross-language Components](/docs/iac/concepts/components/cross-language-components/).
 
@@ -80,7 +80,7 @@ Provider-based components are built as full Pulumi [providers](/docs/iac/concept
 {{% notes type="info" %}}
 If you want to create a component for public consumption and publish it in the [Pulumi Registry](/registry), you should create a provider-based component, author it in Go, and publish SDKs in the public feeds for each language (npmjs.org, etc.).
 
-For more information on submitting packages to the Pulumi Regisitry, see [Publishing Pulumi packages](docs/iac/guides/building-extending/packages/publishing-packages/).
+For more information on submitting packages to the Pulumi Registry, see [Publishing Pulumi packages](/docs/iac/guides/building-extending/packages/publishing-packages/).
 {{% /notes %}}
 
 ### Distribution and consumption
