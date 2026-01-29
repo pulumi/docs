@@ -6,15 +6,24 @@
 
     Usage:
         {{< github-card repo="owner/repo" >}}
+        {{< github-card repo="owner/repo" path="tree/master/example-folder" >}}
 
     Parameters:
         - repo (required): The GitHub repository in "owner/repo" format
+        - path (optional): Additional path within the repo (e.g., "tree/master/folder-name")
 */}}
 
 {{ $repo := .Get "repo" }}
+{{ $path := .Get "path" }}
 
 {{ if $repo }}
-<a href="https://github.com/{{ $repo }}" target="_blank" rel="noopener noreferrer" class="github-card">
+{{ $linkUrl := printf "https://github.com/%s" $repo }}
+{{ $displayUrl := printf "github.com/%s" $repo }}
+{{ if $path }}
+    {{ $linkUrl = printf "https://github.com/%s/%s" $repo $path }}
+    {{ $displayUrl = printf "github.com/%s/%s" $repo $path }}
+{{ end }}
+<a href="{{ $linkUrl }}" target="_blank" rel="noopener noreferrer" class="github-card">
     <img
         src="https://opengraph.githubassets.com/1/{{ $repo }}"
         alt="GitHub repository: {{ $repo }}"
@@ -24,7 +33,7 @@
     <div class="github-card-content">
         <div class="github-card-domain">
             <i class="fab fa-github github-card-icon"></i>
-            github.com/{{ $repo }}
+            {{ $displayUrl }}
         </div>
     </div>
 </a>
