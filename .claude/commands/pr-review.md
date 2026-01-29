@@ -30,55 +30,29 @@ Reviews any pull request and presents action choices for approval, changes, or c
 
 1. Verify the PR exists: `gh pr view {{arg}}`
 2. Get PR author: `gh pr view {{arg}} --json author --jq '.author.login'`
-3. Check if author is a bot account:
-
-   Bot detection patterns:
-   - Username contains `[bot]` (e.g., `dependabot[bot]`, `renovate[bot]`)
-   - Username equals `pulumi-bot`
-   - Username starts with `app/` (GitHub Apps)
+3. Check if author is bot (username contains `[bot]`, equals `pulumi-bot`, or starts with `app/`):
 
    ```bash
    AUTHOR="$(gh pr view {{arg}} --json author --jq '.author.login')"
-
    if [[ "$AUTHOR" == *"[bot]"* ]] || [[ "$AUTHOR" == "pulumi-bot" ]] || [[ "$AUTHOR" == app/* ]]; then
      CONTRIBUTOR_TYPE="bot"
    else
-     # Check if author is pulumi org member
-     HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
-       -H "Authorization: token $GITHUB_TOKEN" \
-       -H "Accept: application/vnd.github+json" \
-       "https://api.github.com/orgs/pulumi/members/$AUTHOR")
-
-     if [ "$HTTP_CODE" = "204" ]; then
-       CONTRIBUTOR_TYPE="internal"
-     else
-       CONTRIBUTOR_TYPE="external"
-     fi
+     HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
+       -H "Accept: application/vnd.github+json" "https://api.github.com/orgs/pulumi/members/$AUTHOR")
+     [ "$HTTP_CODE" = "204" ] && CONTRIBUTOR_TYPE="internal" || CONTRIBUTOR_TYPE="external"
    fi
    ```
 
-4. Store contributor type for later use:
-   - If bot: Bot account (automated contributor)
-   - If HTTP 204: Internal contributor (pulumi org member)
-   - If HTTP 404: External contributor (non-org member)
+4. Store type: bot (automated), internal (HTTP 204/org member), external (HTTP 404/non-member)
 
-5. Display message with contributor type indicator:
-   - Bot: "🤖 Reviewing PR #{{arg}} from @username (bot account)"
-   - Internal: "📝 Reviewing PR #{{arg}} from @username (internal contributor)"
-   - External: "📝 Reviewing PR #{{arg}} from @username (external contributor)"
+5. Display: "[icon] Reviewing PR #{{arg}} from @username ([type] contributor)" (🤖 for bot account, 📝 for internal/external)
 
 ### Step 2: Gather PR Information
 
 1. Get full PR details: `gh pr view {{arg}} --json title,body,files,additions,deletions`
 2. Get the diff: `gh pr diff {{arg}}`
 3. Note the PR title, description, and files changed
-4. **If contributor type is bot**, also fetch labels:
-
-   ```bash
-   gh pr view {{arg}} --json labels --jq '.labels[].name' | tr '\n' ',' | sed 's/,$//'
-   ```
-
-   Store labels for use in Step 6 to determine recommended actions and display risk information.
+4. **If bot**, fetch labels: `gh pr view {{arg}} --json labels --jq '.labels[].name' | tr '\n' ',' | sed 's/,$//'` (used in Step 6 for actions/risk)
 
 ### Step 3: Present Test Deployment and Review Guidance
 
@@ -86,57 +60,26 @@ Reviews any pull request and presents action choices for approval, changes, or c
 
 #### Part A: Fetch Test Deployment URL
 
-1. Get all pulumi-bot comments from the PR and extract the most recent one:
-
-   ```bash
-   gh api repos/pulumi/docs/issues/{{arg}}/comments \
-     --jq '.[] | select(.user.login == "pulumi-bot") | {created_at, body}' | tail -1
-   ```
-
-2. Extract the deployment base URL from the `body` field:
-   - Look for the pattern: `http://www-testing-pulumi-docs-origin-pr-{PR_NUMBER}-{COMMIT_HASH}.s3-website.us-west-2.amazonaws.com`
-   - Store this as the base deployment URL
-
-3. Handle edge cases:
-   - **No pulumi-bot comment yet**: Display "⏳ Test deployment is not ready yet (no pulumi-bot comment found). The deployment typically appears within a few minutes after pushing commits. You can review the code now and check the deployment later."
-   - **Multiple comments exist**: Use the most recent based on `created_at` timestamp
-   - **Comment exists but no URL**: Treat same as no comment case
+1. Get most recent pulumi-bot comment: `gh api repos/pulumi/docs/issues/{{arg}}/comments --jq '.[] | select(.user.login == "pulumi-bot") | {created_at, body}' | tail -1`
+2. Extract deployment URL: `http://www-testing-pulumi-docs-origin-pr-{PR}-{HASH}.s3-website.us-west-2.amazonaws.com`
+3. **No comment/URL**: Display "⏳ Deployment not ready. Typically appears in minutes. Review code now, check deployment later."
 
 #### Part B: Analyze Changes and Generate Targeted Review Guidance
 
-**IMPORTANT**: The guidance must be based on the **actual substance of changes in the diff**, not generic style guide rules.
+**IMPORTANT**: Base guidance on **actual diff substance**, not generic rules.
 
-1. **Analyze the diff** from Step 2 (`gh pr diff {{arg}}`) to identify:
-   - New sections or headings added (lines with `+ ##`, `+ ###`, etc.)
-   - New code examples or code blocks (lines with `+` followed by `````)
-   - New images or assets (lines containing `+ ![` or `+ <img`)
-   - Modified links or references (lines with `+ [` or `+ <a href`)
-   - Configuration changes (frontmatter, YAML)
-   - Table additions/modifications
-   - New callouts, warnings, or notes
-   - Content restructuring (moved sections, reordered content)
-   - Terminology changes (consistent patterns of replacements)
+1. **Analyze diff** to identify: Content (headings `+ ##`, code blocks `+ `````, images`+ ![`, links`+ [`), Config (frontmatter, YAML), Assets (tables, callouts), Structure (moved sections), Terminology (replacements)
 
-2. **Generate change-specific guidance** based on what actually changed:
+2. **Generate specific guidance**:
+   - ✅ "Verify new TypeScript example on Components page runs"
+   - ✅ "Check reorganized sections flow logically"
+   - ❌ Avoid generic: "Check formatting, links, code rendering"
 
-   ✅ **Good**: "Verify the new TypeScript code example on the Components page runs correctly"
-   ✅ **Good**: "Check that the reorganized sections flow logically from basic to advanced concepts"
-   ❌ **Avoid**: "Check formatting, broken links, code examples rendering, headings"
-   ❌ **Avoid**: "Verify images display correctly, have reasonable file size, and have alt text"
-
-3. **Construct direct URLs** for each changed documentation page:
-
-   **URL mapping pattern**: Remove `content/` prefix, remove `.md`/`_index.md` suffix, add trailing `/`, prepend base deployment URL
-
-   **Examples**:
-   - `content/docs/iac/concepts/components/_index.md` → `[base-url]/docs/iac/concepts/components/`
-   - `content/blog/my-post.md` → `[base-url]/blog/my-post/`
-
-   **CRITICAL**: Each changed page MUST have its own direct, clickable link. Do NOT just show the base URL.
-
-4. **Group guidance by page/file** with 2-4 specific items per page based on what changed
+3. **Construct direct URLs**: Remove `content/` prefix, remove `.md`/`_index.md` suffix, add trailing `/`, prepend base URL. Example: `content/docs/iac/concepts/components/_index.md` → `[base]/docs/iac/concepts/components/`. **CRITICAL**: Each page needs direct link, not just base URL.
 
 #### Part C: Display the Review Guidance
+
+1. **Group guidance by page/file** with 2-4 specific items per page based on what changed
 
 **TIMING**: Display this output IMMEDIATELY after Step 2 completes, BEFORE starting the comprehensive AI review in Step 4. This allows users to review the deployment while the AI performs its analysis.
 
@@ -196,84 +139,80 @@ You can proceed with the code review now and check the deployment later.
 
 #### Part D: Handle Edge Cases
 
-- **Large file lists**: If more than 10 files changed, prioritize documentation pages (`.md` files under `content/`) and show "... and N more files" for others
-- **Purely mechanical changes**: If changes are only typo fixes or whitespace (no new content, no structural changes), note: "Changes appear to be mechanical fixes (typos, formatting). Suggest quick scan rather than detailed review."
-- **Infrastructure/non-visual changes**: For non-content files (`.yaml`, `.json`, build scripts), explain what behavior to verify rather than visual appearance
-- **Blog posts**: For blog posts, focus on readability, images, and code examples rather than cross-references
-- **Mixed content types**: Group by content type (docs pages, blog posts, examples, infrastructure)
+- **>10 files** - Prioritize `.md` under `content/`, show "... and N more"
+- **Mechanical changes** - Typos/whitespace only → "Mechanical fixes. Suggest quick scan."
+- **Infrastructure/non-visual** - `.yaml`/`.json`/scripts → Explain behavior verification
+- **Blog posts** - Focus: readability, images, code (not cross-refs)
+- **Mixed types** - Group by: docs/blog/examples/infrastructure
 
-#### Part E: Offer Infrastructure Deployment
+Continue to Step 4.
 
-If the PR contains changes to dependencies (e.g., Dependabot updates) or infrastructure (e.g. configuration changes, anything in `infrastructure/`), present the following prompt to the user before proceeding to Step 4:
+### Step 4: Offer Infrastructure Deployment
 
-1. Use AskUserQuestion with these options:
+**CRITICAL - MANDATORY CHECK**: This step MUST be evaluated before proceeding to Step 5. Do NOT skip this check.
 
-   **Question**: This PR contains dependency or infrastructure changes. Would you like to deploy this PR to pulumi-test.io for testing before review?"
+Check if the PR contains dependency or infrastructure changes by examining the files changed (from Step 2):
 
-   **Options**:
-   1. **Yes, deploy to pulumi-test.io now** - Trigger deployment and provide monitoring link
-   2. **No, skip infrastructure testing** - Continue with code review only
+**Dependency changes** - Any of these patterns:
 
-2. **If user chooses "Yes, deploy to pulumi-test.io now"**:
+- PR author contains `dependabot` or `renovate`
+- Files changed include: `package.json`, `yarn.lock`, `package-lock.json`
+- Files changed include: `go.mod`, `go.sum`
+- Files changed include: `requirements.txt`, `Pipefile`, `Pipefile.lock`, `poetry.lock`
+- Files changed include: `Gemfile`, `Gemfile.lock`
 
-   a. Trigger the workflow on the PR branch:
+**Infrastructure changes** - Any of these patterns:
 
-   ```bash
-   gh workflow run testing-build-and-deploy.yml --ref refs/pull/{{arg}}/head
-   ```
+- Files changed include anything in `infrastructure/` directory
+- Files changed include: `.github/workflows/*.yml` or `.github/workflows/*.yaml`
+- Files changed include: `netlify.toml`, `vercel.json`, or deployment configuration files
 
-   b. Wait 2-3 seconds, then fetch the workflow run URL:
+**Decision Point**:
 
-   ```bash
-   gh run list --workflow=testing-build-and-deploy.yml --limit 1 --json databaseId,status,url,headBranch --jq '.[0]'
-   ```
+- ❌ **If NONE of the patterns above match** → Skip to Step 5
+- ✅ **If ANY pattern matches** → **STOP HERE** and present the infrastructure deployment prompt below
 
-   c. Display the deployment information:
+**WHEN PATTERNS MATCH, USE AskUserQuestion WITH:**
 
-   ```markdown
-   ## 🔧 Infrastructure Deployment Initiated
+**Question**: "This PR contains dependency/infrastructure changes. Deploy to pulumi-test.io for testing?"
 
-   **Deployment started** for PR #{{arg}} to pulumi-test.io
+**Options**: Yes, deploy now | No, skip
 
-   📊 **Monitor workflow progress**: [Workflow URL from above]
-   🌐 **Test site** (available after ~10 minutes): https://pulumi-test.io
+**If Yes**:
 
-   **Instructions**:
-   1. Click the workflow link above to monitor deployment progress
-   2. Wait for workflow to complete (~10 minutes)
-   3. Visit https://pulumi-test.io to verify infrastructure
-   4. Check for errors in browser console (F12)
-   5. Test search functionality if dependencies affect search/algolia
-   6. Verify no Lambda@Edge errors
+1. Get PR branch name: `gh pr view {{arg}} --json headRefName --jq '.headRefName'`
+2. Trigger workflow: `gh workflow run testing-build-and-deploy.yml --ref <branch-name>`
+3. Wait 2-3s, fetch URL: `gh run list --workflow=testing-build-and-deploy.yml --limit 1 --json databaseId,status,url,headBranch --jq '.[0]'`
 
-   ⚠️ **Note**: The next merge to master will reset pulumi-test.io to master branch. This deployment is temporary for testing purposes only.
+Display:
 
-   **PR Deployment** (if available): [URL from Part A if available]
+```markdown
+## 🔧 Infrastructure Deployment Initiated
 
-   Please review pulumi-test.io before proceeding with approval.
-   ```
+Deployment started for PR #{{arg}} to pulumi-test.io
 
-3. **If user chooses "No, skip infrastructure testing"**:
+📊 Monitor: [Workflow URL] | 🌐 Test site (~10 min): https://pulumi-test.io
 
-   Display:
+Instructions: Monitor workflow → Wait ~10 min → Visit pulumi-test.io → Check console (F12) → Test search/algolia → Verify no Lambda@Edge errors
 
-   ```markdown
-   ## 🔧 Infrastructure Testing Skipped
+⚠️ Next merge to master resets pulumi-test.io. This is temporary.
 
-   **PR Deployment** (if available): [URL from Part A if available]
+PR Deployment [if available]: [URL from Part A]
+```
 
-   You can manually verify the PR deployment URL above if needed.
-   ```
+**If No**: Display `## 🔧 Infrastructure Testing Skipped\n\nPR Deployment [if available]: [URL from Part A]`
 
-4. **After completing Part E**, continue to Step 4 (Comprehensive Review).
+**After completing Step 4 (or confirming no infrastructure/dependency changes)**, continue to Step 5.
 
-### Step 4: Perform Comprehensive Review
+### Step 5: Perform Comprehensive Review
+
+**PREREQUISITE**: Step 4 must be completed before starting this step. If you haven't checked Step 4 yet, go back and evaluate whether infrastructure deployment is needed.
 
 Review the PR changes using the **Review Criteria** section from `docs-review.md`.
 
 This includes all standard checks: style guide enforcement, spelling/grammar, link validation, code examples, file standards, SEO, special cases (file moves, redirects, infrastructure changes), and role-specific guidelines for documentation vs blog/marketing content.
 
-### Step 5: Present Review Findings
+### Step 6: Present Review Findings
 
 Present the review in the conversation:
 
@@ -300,523 +239,195 @@ Present the review in the conversation:
 
    This summary helps users understand scope when choosing an action in Step 6.
 
-### Step 6: Present Action Choices
+### Step 7: Present Action Choices
 
 **If contributor type is bot**, use bot-specific action menu. Otherwise, use standard action menu.
 
 #### Bot-Specific Action Menu
 
-**For Dependabot PRs** (when author contains "dependabot"):
+**Dependabot PRs**: Parse labels (`deps-risk-*`, `deps-security-patch`, `deps-lambda-edge-risk`, `deps-bulk-update`, `deps-merge-after-test`, `deps-quarterly-review`)
 
-1. Parse labels to extract:
-   - Risk tier: `deps-risk-high` / `deps-risk-medium` / `deps-risk-low`
-   - Action label: `deps-merge-after-test` / `deps-quarterly-review`
-   - Special flags: `deps-security-patch`, `deps-lambda-edge-risk`, `deps-bulk-update`
-
-2. Use AskUserQuestion to present these options:
-
-**Header text** (construct based on labels found):
+Use AskUserQuestion with header:
 
 ```
-🤖 Dependabot PR Detected
-
-Risk Tier: [HIGH/MEDIUM/LOW or UNKNOWN if no label]
-[If security patch] 🔒 Security Update Detected
-[If lambda-edge risk] 🚨 Lambda@Edge Risk - Review deployment impact
-[If bulk update] 📦 Bulk Update (10+ dependencies)
+🤖 Dependabot PR | Risk: [HIGH/MEDIUM/LOW/UNKNOWN]
+[If security] 🔒 Security Update
+[If lambda-edge] 🚨 Lambda@Edge Risk - Review deployment
+[If bulk] 📦 Bulk Update (10+ deps)
 ```
 
-**Options** (5 choices):
+**Options** (max 4 - adjust based on risk tier):
 
-1. **Approve and merge** (Recommended for: security patches, HIGH risk after testing)
-   - Approve and merge immediately (squash)
-   - Use: When testing checklist complete and changes validated
+**For HIGH risk or security patches:**
 
-2. **Approve** (Recommended for: LOW/MEDIUM risk with quarterly-review label)
-   - Approve without merging
-   - Use: To mark as reviewed for quarterly batch
+1. **Approve and merge** (Recommended after testing) - Approve + merge (squash) when testing complete
+2. **Approve** - Approve only, manual merge later
+3. **Request changes** - Technical feedback needed
+4. **Do nothing yet** - Need to test/investigate
 
-3. **Request changes**
-   - Post technical feedback
-   - Use: When update needs adjustment (rare)
+**For LOW/MEDIUM risk with quarterly-review label:**
 
-4. **Close with quarterly review note**
-   - Close with explanation about quarterly review cycle
-   - Use: For low-risk updates to defer to next quarterly batch
+1. **Approve** (Recommended) - Approve for quarterly batch
+2. **Approve and merge** - Merge now if urgent
+3. **Close with quarterly note** - Defer to next quarterly batch
+4. **Do nothing yet** - Need to test/investigate
 
-5. **Do nothing yet**
-   - Exit without action
-   - Use: Need to run tests or investigate
+**For other Dependabot PRs (no clear risk label):**
 
-**Testing Checklist** (display below options based on risk tier):
+1. **Approve and merge** - Ready for immediate merge
+2. **Approve** - Approve for later merge
+3. **Request changes** - Technical feedback needed
+4. **Do nothing yet** - Need investigation
 
-HIGH Risk:
+**Testing Checklist** (show by risk):
 
-- [ ] Run `make serve-all` and verify site loads
-- [ ] Test search functionality
-- [ ] Check for console errors
-- [ ] Verify markdown rendering
-- [ ] **Infrastructure verification**: Check PR deployment (from Step 3)
-  - [ ] Verify PR deployment URL loads in browser
-  - [ ] Check browser console for Lambda@Edge errors (F12)
-  - [ ] Test search functionality on deployed site
-  - [ ] Verify navigation and routing work correctly
+- **HIGH**: `make serve-all`, search, console errors, markdown, PR deployment (URL loads, Lambda@Edge errors via F12, search, navigation)
+- **MEDIUM**: `make build`, warnings, [if build tools] PR deployment URL loads
+- **LOW**: `make lint`
 
-MEDIUM Risk:
-
-- [ ] Run `make build` and verify successful build
-- [ ] Check for build warnings
-- [ ] **Infrastructure verification** (if build tools changed): Check PR deployment URL loads
-
-LOW Risk:
-
-- [ ] Run `make lint` to verify formatting
-
-**For Other Bot PRs** (any bot that's not Dependabot):
-
-Use AskUserQuestion with simpler options:
-
-**Header text** (construct based on author and labels):
+**Other Bot PRs**: Use AskUserQuestion with header (max 4 options):
 
 ```
-🤖 Bot Account Detected: @username
-
-Note: This appears to be a bot account.
-[If automation/merge label detected] ✓ automation/merge label detected
+🤖 Bot: @username
+[If automation/merge] ✓ automation/merge label
 ```
-
-**Options** (5 choices):
-
-1. **Approve**
-   - Approve PR
-   - Use: When changes are acceptable
-
-2. **Approve and merge**
-   - Approve and merge immediately
-   - Use: When ready for immediate merge
-
-3. **Request changes**
-   - Post technical feedback
-   - Use: When issues need addressing
-
-4. **Close PR**
-   - Close with explanation
-   - Use: When PR should not be merged
-
-5. **Do nothing yet**
-   - Exit without action
-   - Use: Need more investigation
-
-**Note**: The "Make changes and approve" option is excluded for bot PRs because bot PRs are typically regenerated, not manually edited. Editing bot PRs can break automation workflows.
-
-#### Standard Action Menu (Non-Bot Contributors)
-
-Use AskUserQuestion to present these 6 options (messaging tone adapts: warm/welcoming for external contributors, professional for internal):
-
-1. **Approve** (Recommended)
-   - Approve PR with feedback
-   - Use: When PR is ready to merge
-
-2. **Approve and merge**
-   - Approve and merge immediately (squash)
-   - Use: When PR is ready for immediate merge
-
-3. **Make changes and approve**
-   - Make minor edits, then approve
-   - Use: For small fixes (typos, formatting) that preserve contributor's credit
-
-4. **Request changes**
-   - Post review feedback with request-changes flag
-   - Use: When author should address issues
-
-5. **Close PR**
-   - Close with explanation
-   - Use: When PR doesn't fit or is no longer needed
-
-6. **Do nothing yet**
-   - Exit without action
-   - Use: Need more time or team discussion
-
-### Step 7: Preview Planned Actions and Get Confirmation
-
-**CRITICAL**: Always show the user what will happen before executing any action.
-
-Generate a preview based on the user's choice from Step 6:
-
-#### For "Approve"
-
-```text
-## Preview: Approval Comment
-
-Comment: See "Approve" template in Message Templates section (adapts to contributor type)
-
-GitHub command: gh pr review {{arg}} --approve --body "{{COMMENT}}"
-```
-
-#### For "Approve and merge"
-
-```text
-## Preview: Approval and Merge
-
-Comment: See "Approve and merge" template in Message Templates section (adapts to contributor type)
-
-GitHub commands:
-1. gh pr review {{arg}} --approve --body "{{COMMENT}}"
-2. gh pr merge {{arg}} --auto --squash
-```
-
-#### For "Make changes and approve"
-
-**Note**: This option is not available for bot PRs (excluded in Step 6).
-
-First, ask the user: "What changes should I make to the PR? (describe the specific edits needed)"
-
-Then, analyze which files will be affected and display:
-
-```text
-## Preview: Changes and Approval
-
-I will:
-1. Save current branch
-2. Check out PR branch: gh pr checkout {{arg}}
-3. Make these changes:
-   - File: [path] - [description of edits]
-   - File: [path] - [description of edits]
-4. Show you the diff before committing
-5. Commit: "Apply style and formatting fixes"
-6. Push changes
-7. Approve with comment from "Make changes and approve" template (adapts to contributor type)
-8. Return to original branch
-```
-
-#### For "Request changes"
-
-```text
-## Preview: Request Changes Comment
-
-Comment format: See "Request changes" template in Message Templates section (adapts to contributor type)
-
-Include specific issues with line numbers from Step 4 findings and suggestion code blocks.
-
-GitHub command: gh pr review {{arg}} --request-changes --body "{{COMMENT}}"
-```
-
-#### For "Close PR"
-
-```text
-## Preview: Close PR
-
-Comment format: See "Close PR" template in Message Templates section (adapts to contributor type)
-
-Include clear explanation of why closing.
-
-GitHub commands:
-1. gh pr comment {{arg}} --body "{{COMMENT}}"
-2. gh pr close {{arg}}
-```
-
-#### For "Do nothing yet"
-
-```text
-## Preview: No Action
-
-No changes will be made to PR #{{arg}}.
-
-You can run /pr-review {{arg}} again when ready to take action.
-```
-
-#### Request Confirmation
-
-Use AskUserQuestion with these options:
-
-**Question**: "Proceed with this action?"
 
 **Options**:
 
-1. **Yes, proceed** - Execute the action as previewed
-2. **Edit comment** - Modify the comment text before posting
-3. **Change action** - Go back and choose a different action
-4. **Cancel** - Exit without taking any action
+1. **Approve and merge** (Recommended if automation/merge label) - Ready for immediate merge
+2. **Approve** - Changes acceptable, manual merge later
+3. **Request changes** - Issues need addressing
+4. **Do nothing yet** - Need investigation
 
-**Handle responses**:
+**Note**: If "Close PR" is needed, user can select "Do nothing yet" and close manually via web UI or by re-running with updated guidance.
 
-- **"Yes, proceed"**: Continue to Step 8 (execution)
-- **"Edit comment"**:
-  - Ask user: "Please provide the revised comment text:"
-  - Generate updated preview with new comment
-  - Request confirmation again with same options
-  - Repeat until user confirms or cancels
-- **"Change action"**: Return to Step 6 (action selection) and let user choose again
-- **"Cancel"**: Display "No action taken on PR #{{arg}}." and exit
+**Note**: "Make changes and approve" excluded for bots (editing breaks automation; bot PRs regenerated, not manually edited).
 
-### Message Templates
+#### Standard Action Menu (Non-Bot)
 
-Use these templates when executing actions. Select the appropriate template based on contributor type (determined in Step 1):
+Use AskUserQuestion with 6 options (tone: warm/welcoming for external, professional for internal):
 
-**Approve**:
+| Option | Action | When to Use |
+|--------|--------|-------------|
+| 1. **Approve** (Recommended) | Approve PR with feedback | PR ready to merge |
+| 2. **Approve and merge** | Approve + merge (squash) | Ready for immediate merge |
+| 3. **Make changes and approve** | Minor edits + approve | Small fixes (typos, formatting) preserving contributor credit |
+| 4. **Request changes** | Review feedback with request-changes flag | Author should address issues |
+| 5. **Close PR** | Close with explanation | Doesn't fit or no longer needed |
+| 6. **Do nothing yet** | Exit without action | Need more time/discussion |
 
-- External: "Thank you for this contribution! [Brief specific praise, 1 sentence max, or omit if nothing stands out]. Welcome to the community! 🎉"
-- Internal: "LGTM! [Any specific positive feedback or minor suggestions]"
+### Step 8: Preview Planned Actions and Get Confirmation
 
-**Approve and merge**:
+**CRITICAL**: Always show what will happen before executing. Preview format:
 
-- External: "Thank you for this contribution! [Brief specific praise, 1 sentence max]. Merging now. 🎉"
-- Internal: "LGTM! Merging now."
+| Action | Preview | Commands |
+|--------|---------|----------|
+| **Approve** | Comment: [Template from Message Templates] | `gh pr review {{arg}} --approve --body "{{COMMENT}}"` |
+| **Approve and merge** | Comment: [Template from Message Templates] | `gh pr review {{arg}} --approve --body "{{COMMENT}}"`<br>`gh pr merge {{arg}} --auto --squash` |
+| **Request changes** | Comment: [Template from Message Templates]<br>Include issues with line numbers + suggestion blocks | `gh pr review {{arg}} --request-changes --body "{{COMMENT}}"` |
+| **Close PR** | Comment: [Template from Message Templates]<br>Include clear closing explanation | `gh pr comment {{arg}} --body "{{COMMENT}}"`<br>`gh pr close {{arg}}` |
+| **Do nothing yet** | No changes will be made to PR #{{arg}}.<br>Run /pr-review {{arg}} again when ready. | - |
 
-**Make changes and approve**:
+**Make changes and approve** (not available for bots):
 
-- External: "I've applied some minor style and formatting fixes. Thank you for your contribution! 🙏"
-- Internal: "Applied some style/formatting fixes. LGTM!"
+1. Ask user: "What changes should I make to the PR?"
+2. Display preview:
 
-**Request changes**:
+   ```
+   ## Preview: Changes and Approval
 
-- External: Format with:
-  - Brief opening: "Thank you for this contribution!"
-  - Brief acknowledgment of good aspects if applicable (1 sentence max)
-  - Specific issues with line numbers
-  - Suggestion code blocks for fixes
-  - Simple closing: "Feel free to mention @claude if you need help with these changes"
-- Internal: Format with:
-  - Professional opening
-  - Specific issues with line numbers
-  - Suggestion code blocks for fixes
-  - Clear action items
-
-**Close PR**:
-
-- External: Format with:
-  - Brief thank you: "Thank you for taking the time to contribute!"
-  - Clear, kind explanation of why closing
-  - Brief acknowledgment of valuable aspects if applicable
-  - Suggest alternatives if appropriate
-  - Simple closing: "We appreciate your interest in Pulumi!"
-- Internal: Clear explanation of why closing
-
-**Bot PRs**:
-
-All bot templates use professional, technical tone. No emojis or community-building language.
-
-**Approve** (Dependabot):
-
-- Security patch: "Security patch reviewed and approved. [Note any testing performed]"
-- High risk: "High-risk dependency update reviewed. Testing checklist completed: [list items]"
-- Medium/Low risk: "Dependency update reviewed for quarterly batch."
-
-**Approve** (other bots):
-
-- "Automated changes reviewed and approved."
-
-**Approve and merge** (Dependabot):
-
-- Security patch: "Security patch approved. Merging immediately for deployment."
-- High risk: "High-risk dependency update tested and approved. Merging now."
-- Medium/Low risk: "Dependency update approved. Merging now."
-
-**Approve and merge** (other bots):
-
-- "Automated changes approved. Merging now."
-
-**Request changes** (all bots):
-
-- Format with:
-  - Technical issue description with line numbers
-  - Clear explanation of what needs to change
-  - No suggestion code blocks (bots cannot apply manual suggestions)
-  - Closing note: "Note: This automated PR may need to be closed and regenerated after addressing these issues in the source configuration."
-
-**Close PR** (Dependabot - quarterly deferral):
-
-- "Closing this dependency update PR to batch with other low/medium-risk updates in the quarterly review cycle. See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management) for details."
-
-**Close PR** (Dependabot - other reasons):
-
-- "Closing this dependency update PR. [Technical explanation: conflicts, superseded, not needed, etc.]"
-
-**Close PR** (other bots):
-
-- "Closing this automated PR. [Technical explanation]"
-
-### Step 8: Execute Confirmed Action
-
-**Using the confirmed/edited content from Step 7**, execute the action based on the user's choice and contributor type:
-
-**For "Approve"**:
-
-Use "Approve" template from Message Templates section based on contributor type.
-
-```bash
-gh pr review {{arg}} --approve --body "{{COMMENT}}"
-```
-
-**For "Approve and merge"**:
-
-Use "Approve and merge" template from Message Templates section based on contributor type.
-
-```bash
-gh pr review {{arg}} --approve --body "{{COMMENT}}"
-gh pr merge {{arg}} --auto --squash
-```
-
-**For "Make changes and approve"**:
-
-1. Save current branch: `git rev-parse --abbrev-ref HEAD`
-2. Check out PR: `gh pr checkout {{arg}}`
-3. Make the requested changes (from Step 7) using Edit/Write tools
-4. Show the diff: `git diff`
-5. Display the diff in the conversation
-6. Ask user: "Proceed with commit and approval? (Yes/No)"
-   - If No: Ask "Would you like to make additional changes or cancel? (Additional changes/Cancel)"
-     - Additional changes: Return to making edits, show diff again, repeat confirmation
-     - Cancel: Return to original branch and exit without committing
-   - If Yes: Continue to next step
-7. Commit: `git add . && git commit -m "Apply style and formatting fixes\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"`
-8. Push: `git push`
-9. Approve (use "Make changes and approve" template from Message Templates section):
-
-   ```bash
-   gh pr review {{arg}} --approve --body "{{COMMENT}}"
+   I will:
+   1. Save current branch
+   2. Check out PR: gh pr checkout {{arg}}
+   3. Make changes:
+      - File: [path] - [description]
+      - File: [path] - [description]
+   4. Show diff before committing
+   5. Commit: "Apply style and formatting fixes"
+   6. Push changes
+   7. Approve with comment: [Template from Message Templates]
+   8. Return to original branch
    ```
 
-10. Return: `git checkout <original-branch>`
+**Confirmation** (use AskUserQuestion):
 
-**For "Request changes"**:
+**Options**: Yes, proceed | Edit comment | Change action | Cancel
 
-Use "Request changes" template from Message Templates section based on contributor type.
+**Responses**:
 
-```bash
-gh pr review {{arg}} --request-changes --body "{{COMMENT}}"
-```
+- **Yes, proceed** → Continue to Step 8
+- **Edit comment** → Ask for revised text → Show updated preview → Confirm again
+- **Change action** → Return to Step 6
+- **Cancel** → Exit with "No action taken on PR #{{arg}}."
 
-**For "Close PR"**:
+#### Message Templates
 
-Use "Close PR" template from Message Templates section based on contributor type.
+Select template based on contributor type (Step 1). Bot templates: professional/technical, no emojis.
 
-```bash
-gh pr comment {{arg}} --body "{{COMMENT}}"
-gh pr close {{arg}}
-```
+| Action | External | Internal | Bot |
+|--------|----------|----------|-----|
+| **Approve** | "Thank you! [≤1 sentence praise if warranted]. Welcome! 🎉" | "LGTM! [feedback/suggestions]" | **Dependabot**: "Security patch approved [testing notes]" (security), "High-risk update reviewed. Checklist: [items]" (high), "Update reviewed for quarterly batch" (med/low)<br>**Other**: "Automated changes approved." |
+| **Approve and merge** | "Thank you! [≤1 sentence praise]. Merging now. 🎉" | "LGTM! Merging now." | **Dependabot**: "Security patch approved. Merging for deployment." (security), "High-risk update tested. Merging now." (high), "Update approved. Merging now." (med/low)<br>**Other**: "Automated changes approved. Merging now." |
+| **Make changes and approve** | "Applied minor style/formatting fixes. Thank you! 🙏" | "Applied style/formatting fixes. LGTM!" | N/A (excluded for bots) |
+| **Request changes** | Opening: "Thank you!"<br>Acknowledge positives (≤1 sentence)<br>Issues with line numbers<br>Suggestion blocks<br>Close: "Mention @claude if you need help" | Professional opening<br>Issues with line numbers<br>Suggestion blocks<br>Clear action items | Technical issue description<br>Line numbers<br>What needs changing<br>No suggestion blocks<br>Close: "This automated PR may need closing and regeneration after fixing source configuration." |
+| **Close PR** | "Thank you for contributing!"<br>Clear, kind closing reason<br>Acknowledge valuable aspects<br>Suggest alternatives<br>"We appreciate your interest in Pulumi!" | Clear closing reason | **Dependabot quarterly**: "Closing to batch with other low/medium-risk updates in quarterly review. See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management)."<br>**Dependabot other**: "Closing this update. [Technical reason: conflicts, superseded, etc.]"<br>**Other bots**: "Closing. [Technical reason]" |
 
-**For "Do nothing yet"**:
+### Step 9: Execute Confirmed Action
 
-No confirmation needed - exit directly with message: "No action taken. You can run this command again when ready."
+**Use confirmed/edited content from Step 7**. All actions use templates from Message Templates section based on contributor type.
 
-### Step 9: Report Execution Results
+**Commands** (see Step 7 for detailed flow):
 
-After execution completes, provide clear confirmation of what happened:
+- **Approve**: `gh pr review {{arg}} --approve --body "{{COMMENT}}"`
+- **Approve and merge**: `gh pr review {{arg}} --approve --body "{{COMMENT}}"` then `gh pr merge {{arg}} --auto --squash`
+- **Request changes**: `gh pr review {{arg}} --request-changes --body "{{COMMENT}}"`
+- **Close PR**: `gh pr comment {{arg}} --body "{{COMMENT}}"` then `gh pr close {{arg}}`
+- **Do nothing yet**: Exit with "No action taken. Run this command again when ready."
 
-**For successful approval (action: "Approve")**:
+**Make changes and approve** (detailed steps):
 
-```text
-✅ PR #{{arg}} approved successfully!
+1. Save branch: `git rev-parse --abbrev-ref HEAD`
+2. Check out: `gh pr checkout {{arg}}`
+3. Make changes from Step 7 (Edit/Write tools)
+4. Show diff: `git diff`
+5. Ask: "Proceed with commit and approval? (Yes/No)"
+   - No → Ask: "Additional changes or cancel?" → Repeat from step 3 or return to original branch
+   - Yes → Continue
+6. Commit: `git add . && git commit -m "Apply style and formatting fixes\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"`
+7. Push: `git push`
+8. Approve: `gh pr review {{arg}} --approve --body "{{COMMENT}}"`
+9. Return: `git checkout <original-branch>`
 
-Approval comment posted to the PR.
-The PR author has been notified.
+### Step 10: Report Execution Results
 
-View the PR at: [PR URL from gh pr view]
-```
-
-**For successful approval and merge (action: "Approve and merge")**:
-
-```text
-✅ PR #{{arg}} approved and merged successfully!
-
-[If bot PR, add bot context:]
-Bot: @bot-username
-[If Dependabot, add:]
-Risk Tier: [HIGH/MEDIUM/LOW from labels]
-Labels: [comma-separated list of labels]
-
-Approval comment posted and PR merged using squash merge.
-The PR author has been notified.
-
-[If Dependabot with HIGH or MEDIUM risk:]
-⚠️ Note: The next merge to master will trigger automatic deployment to pulumi-test.io.
-
-View the merged PR at: [PR URL from gh pr view]
-```
-
-**For successful changes and approval (action: "Make changes and approve")**:
-
-```text
-✅ Changes applied and PR #{{arg}} approved successfully!
-
-Changes committed: [commit SHA from git log -1 --format=%h]
-Files modified:
-- [list files from git diff --name-only HEAD~1]
-
-Approval comment posted to the PR.
-
-View changes at: [PR URL from gh pr view]/commits
-```
-
-**For successful change request (action: "Request changes")**:
-
-```text
-✅ Changes requested on PR #{{arg}}
-
-Review posted with request-changes flag.
-The PR author has been notified and will receive your feedback.
-
-View the review at: [PR URL from gh pr view]
-```
-
-**For successful PR closure (action: "Close with thanks" / "Close PR")**:
-
-```text
-✅ PR #{{arg}} closed successfully
-
-Closing comment posted explaining the decision.
-The PR author has been notified.
-
-View the closed PR at: [PR URL from gh pr view]
-```
-
-**For "Do nothing yet" exit**:
-
-```text
-No action taken on PR #{{arg}}.
-
-You can run /pr-review {{arg}} again when ready to take action.
-```
-
-**For errors**:
-
-```text
-❌ Error executing action
-
-Command failed: [command that failed]
-Error output: [error message from gh or git]
-
-No changes were made to PR #{{arg}}.
-
-Recovery options:
-1. Run /pr-review {{arg}} to try again
-2. Check your permissions with: gh auth status
-3. Verify PR status with: gh pr view {{arg}}
-4. Perform the action manually via GitHub web interface
-```
-
-If you checked out a PR branch and an error occurred, return to the original branch before displaying the error:
-
-```bash
-git checkout <original-branch>
-```
+| Action | Result Message | Additional Info |
+|--------|---------------|-----------------|
+| **Approve** | ✅ PR #{{arg}} approved successfully!<br><br>Approval comment posted. | PR URL |
+| **Approve and merge** | ✅ PR #{{arg}} approved and merged!<br><br>Merged using squash. | PR URL<br>Bot context (if bot): @username, Risk tier, Labels<br>If Dependabot HIGH/MEDIUM: "⚠️ Next merge to master triggers pulumi-test.io deployment" |
+| **Make changes and approve** | ✅ Changes applied and PR #{{arg}} approved!<br><br>Changes committed: [SHA]<br>Files: [list] | PR URL/commits |
+| **Request changes** | ✅ Changes requested on PR #{{arg}}<br><br>Review posted with request-changes flag. | PR URL |
+| **Close PR** | ✅ PR #{{arg}} closed<br><br>Closing comment posted. | PR URL |
+| **Do nothing yet** | No action taken on PR #{{arg}}.<br><br>Run /pr-review {{arg}} again when ready. | - |
+| **Error** | ❌ Error executing action<br><br>Command: [failed command]<br>Error: [message]<br><br>No changes made to PR #{{arg}}. | Recovery:<br>• Run /pr-review {{arg}} again<br>• Check: gh auth status<br>• Verify: gh pr view {{arg}}<br>• Use GitHub web UI<br><br>If checked out PR branch: `git checkout <original-branch>` before displaying error |
 
 ---
 
 ## Important Notes
 
-- **Preview accuracy**: Previews show the planned action with exact comment text. The actual execution in Step 8 uses the confirmed (or edited) content from Step 7.
-- **Preview-to-execution consistency**: What users see in the preview is exactly what gets posted to GitHub. Always use the confirmed comment text from Step 7 when executing in Step 8.
+- **Step 4 is mandatory**: Always evaluate Step 4 (infrastructure deployment) before proceeding to Step 5. This step checks for dependency/infrastructure changes and offers pulumi-test.io deployment. Do not skip this check - it's critical for testing infrastructure and dependency updates.
+- **Preview accuracy**: Previews show the planned action with exact comment text. The actual execution in Step 9 uses the confirmed (or edited) content from Step 8.
+- **Preview-to-execution consistency**: What users see in the preview is exactly what gets posted to GitHub. Always use the confirmed comment text from Step 8 when executing in Step 9.
 - **Edit flexibility**: The "Edit comment" option allows users to refine tone, add context, or adjust wording before posting. After editing, show the updated preview and confirm again.
 - **Communication tone**: Use warm, welcoming language with external contributors. Keep praise brief and specific (1 sentence max).
 - **Encouragement**: Make contributors feel welcomed to the Pulumi community
 - **Credit**: Use "make changes" option judiciously - only for minor fixes that don't reduce contributor's credit for the work
 - **Branch safety**: Always track current branch and return to it after PR checkout, especially if errors occur
-- **Error handling**: See error recovery template in Step 9
-- **Token efficiency**: Generate preview text once in Step 7 and reuse it in Step 8. For large diffs (>100 lines), show summary with option to expand full diff.
+- **Error handling**: See error recovery template in Step 10
+- **Token efficiency**: Generate preview text once in Step 8 and reuse it in Step 9. For large diffs (>100 lines), show summary with option to expand full diff.
 - **Large diffs**: When showing diffs in "Make changes and approve", if the diff exceeds 100 lines, show a summary (files changed, lines added/removed) and ask if user wants to see the full diff
-- **Contributor type caching**: Store the contributor type (internal/external/bot) result from Step 1 and reuse it throughout Steps 6-9. Don't re-query the GitHub API if the user changes actions during preview.
+- **Contributor type caching**: Store the contributor type (internal/external/bot) result from Step 1 and reuse it throughout Steps 7-10. Don't re-query the GitHub API if the user changes actions during preview.
 - **Bot contributor handling**: Bot PRs receive technical, professional messaging without emojis. Dependabot PRs get risk-based workflow with testing checklists. Other bots get generic professional workflow.
 - **Label-based recommendations**: For Dependabot PRs, action recommendations are based on auto-applied risk tier and action labels from label-dependabot.yml workflow. Always check labels before choosing an action.
 - **Bot PR editing**: "Make changes and approve" option is excluded for bot PRs. Bot PRs should be closed and regenerated rather than manually edited to avoid breaking automation.
+- **AskUserQuestion limit**: The tool accepts a maximum of 4 options. Bot-specific menus are adapted by risk tier to stay within this limit.
+- **GitHub workflow refs**: When triggering workflows for PRs, always fetch the branch name first with `gh pr view --json headRefName` and use that as the ref. Do not use `refs/pull/{PR}/head` format as it is not accepted by the workflow dispatch API.
