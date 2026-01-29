@@ -6,7 +6,7 @@ description: Review and approve/merge pull requests as a maintainer (full workfl
 
 **Use this when:** You're reviewing someone's pull request as a maintainer and need to approve, request changes, merge, or close it.
 
-Performs comprehensive review with style and accuracy checks, then provides an interactive workflow for approval actions. Automatically detects external contributors and adapts communication tone (warm/welcoming for external, professional for internal).
+Performs comprehensive review with style and accuracy checks, then provides an interactive workflow for approval actions. Automatically detects contributor type (internal/external/bot) and adapts communication tone (warm/welcoming for external, professional for internal, technical/professional for bots).
 
 ---
 
@@ -18,9 +18,9 @@ Reviews any pull request and presents action choices for approval, changes, or c
 
 **Required**: PR number
 
-**Works with**: All PRs (internal and external)
+**Works with**: All PRs (internal, external, and bots)
 
-**Special handling**: Automatically detects external contributors and uses warmer, more appreciative tone
+**Special handling**: Automatically detects contributor type and adapts messaging (warm for external, professional for internal, technical for bots). Provides risk-based workflow for Dependabot PRs with testing checklists and label-driven recommendations.
 
 ---
 
@@ -30,25 +30,54 @@ Reviews any pull request and presents action choices for approval, changes, or c
 
 1. Verify the PR exists: `gh pr view {{arg}}`
 2. Get PR author: `gh pr view {{arg}} --json author --jq '.author.login'`
-3. Check if author is pulumi org member:
+3. Check if author is a bot account:
+
+   Bot detection patterns:
+   - Username contains `[bot]` (e.g., `dependabot[bot]`, `renovate[bot]`)
+   - Username equals `pulumi-bot`
+   - Username starts with `app/` (GitHub Apps)
 
    ```bash
-   curl -s -o /dev/null -w "%{http_code}" \
-     -H "Authorization: token $GITHUB_TOKEN" \
-     -H "Accept: application/vnd.github+json" \
-     "https://api.github.com/orgs/pulumi/members/$AUTHOR"
+   AUTHOR="$(gh pr view {{arg}} --json author --jq '.author.login')"
+
+   if [[ "$AUTHOR" == *"[bot]"* ]] || [[ "$AUTHOR" == "pulumi-bot" ]] || [[ "$AUTHOR" == app/* ]]; then
+     CONTRIBUTOR_TYPE="bot"
+   else
+     # Check if author is pulumi org member
+     HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+       -H "Authorization: token $GITHUB_TOKEN" \
+       -H "Accept: application/vnd.github+json" \
+       "https://api.github.com/orgs/pulumi/members/$AUTHOR")
+
+     if [ "$HTTP_CODE" = "204" ]; then
+       CONTRIBUTOR_TYPE="internal"
+     else
+       CONTRIBUTOR_TYPE="external"
+     fi
+   fi
    ```
 
 4. Store contributor type for later use:
+   - If bot: Bot account (automated contributor)
    - If HTTP 204: Internal contributor (pulumi org member)
    - If HTTP 404: External contributor (non-org member)
-5. Display: "📝 Reviewing PR #{{arg}} from @username (external/internal contributor)"
+
+5. Display message with contributor type indicator:
+   - Bot: "🤖 Reviewing PR #{{arg}} from @username (bot account)"
+   - Internal: "📝 Reviewing PR #{{arg}} from @username (internal contributor)"
+   - External: "📝 Reviewing PR #{{arg}} from @username (external contributor)"
 
 ### Step 2: Gather PR Information
 
 1. Get full PR details: `gh pr view {{arg}} --json title,body,files,additions,deletions`
 2. Get the diff: `gh pr diff {{arg}}`
 3. Note the PR title, description, and files changed
+4. **If contributor type is bot**, also fetch labels:
+   ```bash
+   gh pr view {{arg}} --json labels --jq '.labels[].name' | tr '\n' ',' | sed 's/,$//'
+   ```
+
+   Store labels for use in Step 6 to determine recommended actions and display risk information.
 
 ### Step 3: Present Test Deployment and Review Guidance
 
@@ -172,6 +201,67 @@ You can proceed with the code review now and check the deployment later.
 - **Blog posts**: For blog posts, focus on readability, images, and code examples rather than cross-references
 - **Mixed content types**: Group by content type (docs pages, blog posts, examples, infrastructure)
 
+#### Part E: Offer Infrastructure Deployment for Dependabot PRs
+
+**If contributor type is bot AND author contains "dependabot" AND risk tier is HIGH or MEDIUM**, offer to deploy to pulumi-test.io:
+
+1. Use AskUserQuestion with these options:
+
+   **Question**: "This PR contains dependency changes that may affect infrastructure. Would you like to deploy this PR to pulumi-test.io for testing before review?"
+
+   **Options**:
+   1. **Yes, deploy to pulumi-test.io now** - Trigger deployment and provide monitoring link (Recommended for HIGH risk)
+   2. **No, skip infrastructure testing** - Continue with code review only
+
+2. **If user chooses "Yes, deploy to pulumi-test.io now"**:
+
+   a. Trigger the workflow on the PR branch:
+   ```bash
+   gh workflow run testing-build-and-deploy.yml --ref refs/pull/{{arg}}/head
+   ```
+
+   b. Wait 2-3 seconds, then fetch the workflow run URL:
+   ```bash
+   gh run list --workflow=testing-build-and-deploy.yml --limit 1 --json databaseId,status,url,headBranch --jq '.[0]'
+   ```
+
+   c. Display the deployment information:
+   ```markdown
+   ## 🔧 Infrastructure Deployment Initiated
+
+   **Deployment started** for PR #{{arg}} to pulumi-test.io
+
+   📊 **Monitor workflow progress**: [Workflow URL from above]
+   🌐 **Test site** (available after ~10 minutes): https://pulumi-test.io
+
+   **Instructions**:
+   1. Click the workflow link above to monitor deployment progress
+   2. Wait for workflow to complete (~10 minutes)
+   3. Visit https://pulumi-test.io to verify infrastructure
+   4. Check for errors in browser console (F12)
+   5. Test search functionality if dependencies affect search/algolia
+   6. Verify no Lambda@Edge errors
+
+   ⚠️ **Note**: The next merge to master will reset pulumi-test.io to master branch. This deployment is temporary for testing purposes only.
+
+   **PR Deployment** (if available): [URL from Part A if available]
+
+   Please review pulumi-test.io before proceeding with approval.
+   ```
+
+3. **If user chooses "No, skip infrastructure testing"**:
+
+   Display:
+   ```markdown
+   ## 🔧 Infrastructure Testing Skipped
+
+   **PR Deployment** (if available): [URL from Part A if available]
+
+   You can manually verify the PR deployment URL above if needed.
+   ```
+
+4. **After completing Part E**, continue to Step 4 (Comprehensive Review).
+
 ### Step 4: Perform Comprehensive Review
 
 Review the PR changes using the **Review Criteria** section from `docs-review.md`.
@@ -206,6 +296,110 @@ Present the review in the conversation:
    This summary helps users understand scope when choosing an action in Step 6.
 
 ### Step 6: Present Action Choices
+
+**If contributor type is bot**, use bot-specific action menu. Otherwise, use standard action menu.
+
+#### Bot-Specific Action Menu
+
+**For Dependabot PRs** (when author contains "dependabot"):
+
+1. Parse labels to extract:
+   - Risk tier: `deps-risk-high` / `deps-risk-medium` / `deps-risk-low`
+   - Action label: `deps-merge-after-test` / `deps-quarterly-review`
+   - Special flags: `deps-security-patch`, `deps-lambda-edge-risk`, `deps-bulk-update`
+
+2. Use AskUserQuestion to present these options:
+
+**Header text** (construct based on labels found):
+```
+🤖 Dependabot PR Detected
+
+Risk Tier: [HIGH/MEDIUM/LOW or UNKNOWN if no label]
+[If security patch] 🔒 Security Update Detected
+[If lambda-edge risk] 🚨 Lambda@Edge Risk - Review deployment impact
+[If bulk update] 📦 Bulk Update (10+ dependencies)
+```
+
+**Options** (5 choices):
+
+1. **Approve and merge** (Recommended for: security patches, HIGH risk after testing)
+   - Approve and merge immediately (squash)
+   - Use: When testing checklist complete and changes validated
+
+2. **Approve** (Recommended for: LOW/MEDIUM risk with quarterly-review label)
+   - Approve without merging
+   - Use: To mark as reviewed for quarterly batch
+
+3. **Request changes**
+   - Post technical feedback
+   - Use: When update needs adjustment (rare)
+
+4. **Close with quarterly review note**
+   - Close with explanation about quarterly review cycle
+   - Use: For low-risk updates to defer to next quarterly batch
+
+5. **Do nothing yet**
+   - Exit without action
+   - Use: Need to run tests or investigate
+
+**Testing Checklist** (display below options based on risk tier):
+
+HIGH Risk:
+- [ ] Run `make serve-all` and verify site loads
+- [ ] Test search functionality
+- [ ] Check for console errors
+- [ ] Verify markdown rendering
+- [ ] **Infrastructure verification**: Check PR deployment (from Step 3)
+  - [ ] Verify PR deployment URL loads in browser
+  - [ ] Check browser console for Lambda@Edge errors (F12)
+  - [ ] Test search functionality on deployed site
+  - [ ] Verify navigation and routing work correctly
+
+MEDIUM Risk:
+- [ ] Run `make build` and verify successful build
+- [ ] Check for build warnings
+- [ ] **Infrastructure verification** (if build tools changed): Check PR deployment URL loads
+
+LOW Risk:
+- [ ] Run `make lint` to verify formatting
+
+**For Other Bot PRs** (any bot that's not Dependabot):
+
+Use AskUserQuestion with simpler options:
+
+**Header text** (construct based on author and labels):
+```
+🤖 Bot Account Detected: @username
+
+Note: This appears to be a bot account.
+[If automation/merge label detected] ✓ automation/merge label detected
+```
+
+**Options** (5 choices):
+
+1. **Approve**
+   - Approve PR
+   - Use: When changes are acceptable
+
+2. **Approve and merge**
+   - Approve and merge immediately
+   - Use: When ready for immediate merge
+
+3. **Request changes**
+   - Post technical feedback
+   - Use: When issues need addressing
+
+4. **Close PR**
+   - Close with explanation
+   - Use: When PR should not be merged
+
+5. **Do nothing yet**
+   - Exit without action
+   - Use: Need more investigation
+
+**Note**: The "Make changes and approve" option is excluded for bot PRs because bot PRs are typically regenerated, not manually edited. Editing bot PRs can break automation workflows.
+
+#### Standard Action Menu (Non-Bot Contributors)
 
 Use AskUserQuestion to present these 6 options (messaging tone adapts: warm/welcoming for external contributors, professional for internal):
 
@@ -262,6 +456,8 @@ GitHub commands:
 ```
 
 #### For "Make changes and approve"
+
+**Note**: This option is not available for bot PRs (excluded in Step 6).
 
 First, ask the user: "What changes should I make to the PR? (describe the specific edits needed)"
 
@@ -386,6 +582,42 @@ Use these templates when executing actions. Select the appropriate template base
   - Simple closing: "We appreciate your interest in Pulumi!"
 - Internal: Clear explanation of why closing
 
+**Bot PRs**:
+
+All bot templates use professional, technical tone. No emojis or community-building language.
+
+**Approve** (Dependabot):
+- Security patch: "Security patch reviewed and approved. [Note any testing performed]"
+- High risk: "High-risk dependency update reviewed. Testing checklist completed: [list items]"
+- Medium/Low risk: "Dependency update reviewed for quarterly batch."
+
+**Approve** (other bots):
+- "Automated changes reviewed and approved."
+
+**Approve and merge** (Dependabot):
+- Security patch: "Security patch approved. Merging immediately for deployment."
+- High risk: "High-risk dependency update tested and approved. Merging now."
+- Medium/Low risk: "Dependency update approved. Merging now."
+
+**Approve and merge** (other bots):
+- "Automated changes approved. Merging now."
+
+**Request changes** (all bots):
+- Format with:
+  - Technical issue description with line numbers
+  - Clear explanation of what needs to change
+  - No suggestion code blocks (bots cannot apply manual suggestions)
+  - Closing note: "Note: This automated PR may need to be closed and regenerated after addressing these issues in the source configuration."
+
+**Close PR** (Dependabot - quarterly deferral):
+- "Closing this dependency update PR to batch with other low/medium-risk updates in the quarterly review cycle. See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management) for details."
+
+**Close PR** (Dependabot - other reasons):
+- "Closing this dependency update PR. [Technical explanation: conflicts, superseded, not needed, etc.]"
+
+**Close PR** (other bots):
+- "Closing this automated PR. [Technical explanation]"
+
 ### Step 8: Execute Confirmed Action
 
 **Using the confirmed/edited content from Step 7**, execute the action based on the user's choice and contributor type:
@@ -470,8 +702,17 @@ View the PR at: [PR URL from gh pr view]
 ```text
 ✅ PR #{{arg}} approved and merged successfully!
 
+[If bot PR, add bot context:]
+Bot: @bot-username
+[If Dependabot, add:]
+Risk Tier: [HIGH/MEDIUM/LOW from labels]
+Labels: [comma-separated list of labels]
+
 Approval comment posted and PR merged using squash merge.
 The PR author has been notified.
+
+[If Dependabot with HIGH or MEDIUM risk:]
+⚠️ Note: The next merge to master will trigger automatic deployment to pulumi-test.io.
 
 View the merged PR at: [PR URL from gh pr view]
 ```
@@ -557,4 +798,7 @@ git checkout <original-branch>
 - **Error handling**: See error recovery template in Step 9
 - **Token efficiency**: Generate preview text once in Step 7 and reuse it in Step 8. For large diffs (>100 lines), show summary with option to expand full diff.
 - **Large diffs**: When showing diffs in "Make changes and approve", if the diff exceeds 100 lines, show a summary (files changed, lines added/removed) and ask if user wants to see the full diff
-- **Contributor type caching**: Store the contributor type (internal/external) result from Step 1 and reuse it throughout Steps 6-9. Don't re-query the GitHub API if the user changes actions during preview.
+- **Contributor type caching**: Store the contributor type (internal/external/bot) result from Step 1 and reuse it throughout Steps 6-9. Don't re-query the GitHub API if the user changes actions during preview.
+- **Bot contributor handling**: Bot PRs receive technical, professional messaging without emojis. Dependabot PRs get risk-based workflow with testing checklists. Other bots get generic professional workflow.
+- **Label-based recommendations**: For Dependabot PRs, action recommendations are based on auto-applied risk tier and action labels from label-dependabot.yml workflow. Always check labels before choosing an action.
+- **Bot PR editing**: "Make changes and approve" option is excluded for bot PRs. Bot PRs should be closed and regenerated rather than manually edited to avoid breaking automation.
