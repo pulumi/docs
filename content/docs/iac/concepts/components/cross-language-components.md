@@ -18,7 +18,7 @@ Cross-language components support consumption in any Pulumi language. You implem
 
 By default, components are authored and consumed in the same programming language by extending the `ComponentResource` class. The class can then be imported or referenced using the language's applicable pattern. To support consuming components in other languages, Pulumi can introspect your component class and generate the necessary SDKs. To support multi-language consumption, a couple additional steps are required.
 
-### Define a PulumiPlugin.yaml file
+### Define a `PulumiPlugin.yaml` file
 
 In your component directory, create a `PulumiPlugin.yaml` file and specify the runtime the component is authored in.
 
