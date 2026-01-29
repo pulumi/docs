@@ -26,37 +26,50 @@ Reviews any pull request and presents action choices for approval, changes, or c
 
 ## Process
 
-**SUCCESS CRITERIA**: Complete all 10 steps in sequence. Every step is mandatory and serves a critical purpose in the review workflow. **DO NOT SKIP ANY STEP OR END THE WORKFLOW PREMATURELY!**
+**CRITICAL SUCCESS CRITERIA**: Complete all 10 steps in sequence. Every step is mandatory and serves a critical purpose in the review workflow. **DO NOT SKIP ANY STEP OR END THE WORKFLOW PREMATURELY!**
+
+**Step Counter**: Display progress before each step as: **[Step X/10]** followed by the step heading. This helps users track progress through the workflow.
 
 ---
 
 ### Step 1: Verify PR and Detect Contributor Type
 
-1. Verify the PR exists: `gh pr view {{arg}}`
-2. Get PR author: `gh pr view {{arg}} --json author --jq '.author.login'`
-3. Check if author is bot (username contains `[bot]`, equals `pulumi-bot`, or starts with `app/`):
+Fetch all PR data and detect contributor type with minimal commands:
+
+1. Get PR details, metadata, and detect contributor type in a single bash execution:
 
    ```bash
-   AUTHOR="$(gh pr view {{arg}} --json author --jq '.author.login')"
+   # Fetch PR data once (excluding body to avoid control character parsing issues)
+   PR_DATA=$(gh pr view {{arg}} --json number,title,author,url,files,additions,deletions,labels,headRefName)
+
+   # Extract author
+   AUTHOR=$(echo "$PR_DATA" | jq -r '.author.login')
+
+   # Detect contributor type
    if [[ "$AUTHOR" == *"[bot]"* ]] || [[ "$AUTHOR" == "pulumi-bot" ]] || [[ "$AUTHOR" == app/* ]]; then
      CONTRIBUTOR_TYPE="bot"
    else
-     HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
-       -H "Accept: application/vnd.github+json" "https://api.github.com/orgs/pulumi/members/$AUTHOR")
-     [ "$HTTP_CODE" = "204" ] && CONTRIBUTOR_TYPE="internal" || CONTRIBUTOR_TYPE="external"
+     if gh api orgs/pulumi/members/$AUTHOR --silent 2>/dev/null; then
+       CONTRIBUTOR_TYPE="internal"
+     else
+       CONTRIBUTOR_TYPE="external"
+     fi
    fi
+
+   echo "Author: $AUTHOR"
+   echo "Contributor type: $CONTRIBUTOR_TYPE"
+   echo "$PR_DATA" | jq -r '{number, title, url}'
    ```
 
-4. Store type: bot (automated), internal (HTTP 204/org member), external (HTTP 404/non-member)
+2. Store the results: PR data (in PR_DATA variable), contributor type (bot/internal/external)
 
-5. Display: "[icon] Reviewing PR #{{arg}} from @username ([type] contributor)" (🤖 for bot account, 📝 for internal/external)
+3. Display: "[icon] Reviewing PR #{{arg}} from @username ([type] contributor)" (🤖 for bot account, 📝 for internal/external)
 
-### Step 2: Gather PR Information
+### Step 2: Gather PR Diff
 
-1. Get full PR details: `gh pr view {{arg}} --json title,body,files,additions,deletions`
+1. View the full PR context: `gh pr view {{arg}}`
 2. Get the diff: `gh pr diff {{arg}}`
-3. Note the PR title, description, and files changed
-4. **If bot**, fetch labels: `gh pr view {{arg}} --json labels --jq '.labels[].name' | tr '\n' ',' | sed 's/,$//'` (used in Step 6 for actions/risk)
+3. Note the PR title, description (from PR view), files changed, additions/deletions (from Step 1), and labels (if bot, from Step 1)
 
 ### Step 3: Present Test Deployment and Review Guidance
 
@@ -72,7 +85,7 @@ Reviews any pull request and presents action choices for approval, changes, or c
 
 **IMPORTANT**: Base guidance on **actual diff substance**, not generic rules.
 
-1. **Analyze diff** to identify: Content (headings `+ ##`, code blocks `+ `````, images`+ ![`, links`+ [`), Config (frontmatter, YAML), Assets (tables, callouts), Structure (moved sections), Terminology (replacements)
+1. **Analyze the diff from Step 2** to identify: Content (headings `+ ##`, code blocks `+ `````, images`+ ![`, links`+ [`), Config (frontmatter, YAML), Assets (tables, callouts), Structure (moved sections), Terminology (replacements)
 
 2. **Generate specific guidance**:
    - ✅ "Verify new TypeScript example on Components page runs"
@@ -210,9 +223,17 @@ PR Deployment [if available]: [URL from Part A]
 
 **PREREQUISITE**: Step 4 must be completed before starting this step. If you haven't checked Step 4 yet, go back and evaluate whether infrastructure deployment is needed.
 
-Review the PR changes using the **Review Criteria** section from `docs-review.md`.
+1. Read the review criteria: Use the Read tool to read `.claude/commands/docs-review.md` and locate the **Review Criteria** section.
 
-This includes all standard checks: style guide enforcement, spelling/grammar, link validation, code examples, file standards, SEO, special cases (file moves, redirects, infrastructure changes), and role-specific guidelines for documentation vs blog/marketing content.
+2. Review the PR changes using those criteria, which include:
+   - Style guide enforcement (STYLE-GUIDE.md compliance)
+   - Spelling/grammar
+   - Link validation
+   - Code examples
+   - File standards (frontmatter, structure)
+   - SEO considerations
+   - Special cases (file moves, redirects, infrastructure changes)
+   - Role-specific guidelines for documentation vs blog/marketing content
 
 ### Step 6: Present Review Findings
 
@@ -228,7 +249,7 @@ Present the review in the conversation:
 
    **Changes:** [X] file(s) changed (+[additions]/-[deletions] lines)
 
-   Extract counts from the `gh pr view {{arg}} --json files,additions,deletions` command already run in Step 2.
+   Extract counts from the PR data fetched in Step 1:
    - Files count: Length of `files` array
    - Additions: `additions` field
    - Deletions: `deletions` field
