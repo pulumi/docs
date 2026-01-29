@@ -12,7 +12,7 @@ menu:
     identifier: deployments-deployments-versus
 aliases:
 - /docs/pulumi-cloud/deployments/versus/
-  - /docs/intro/deployments/versus/
+- /docs/intro/deployments/versus/
 ---
 
 Pulumi Deployments is purpose-built for infrastructure automation, complementing and enhancing traditional CI/CD systems like GitHub Actions or GitLab CI rather than replacing them. While simply calling the Pulumi CLI directly in these traditional systems is an option, Pulumi Deployments provides specialized infrastructure-focused functionality that works alongside your existing CI/CD pipelines, addressing the unique needs of infrastructure management that general-purpose CI/CD tools weren't designed to handle.

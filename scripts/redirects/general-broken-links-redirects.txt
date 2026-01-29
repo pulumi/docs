@@ -1,0 +1,12 @@
+registry/packages/azure/api-docs/mobile/index.html|/registry/packages/azure/
+containers/index.html|/docs/iac/clouds/kubernetes/
+docs/guides/index.html|/docs/iac/guides/
+docs/iac/guides/ai-integration/index.html|/docs/iac/guides/ai-integration/mcp-server/
+docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/index.html|/docs/iac/guides/migration/
+what-is/infrastructure-as-code/index.html|/what-is/what-is-infrastructure-as-code/
+docs/support/troubleshooting/debugging/images/automatic-1.png|/docs/support/debugging/images/automatic-1.png
+docs/support/troubleshooting/debugging/images/automatic-2.png|/docs/support/debugging/images/automatic-2.png
+docs/support/troubleshooting/debugging/images/stack-selection-1.png|/docs/support/debugging/images/stack-selection-1.png
+docs/support/troubleshooting/debugging/images/debugging.png|/docs/support/debugging/images/debugging.png
+docs/support/troubleshooting/debugging/images/debug-console.png|/docs/support/debugging/images/debug-console.png
+docs/insights/assets/create-policy-group.png|/docs/insights/discovery/get-started/add-policies/
