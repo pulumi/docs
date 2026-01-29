@@ -125,11 +125,25 @@ make lint      # Identify any Markdown or code-formatting issues so you can fix 
 
 If you have [Claude Code](https://claude.com/claude-code) installed, you can use these slash commands to streamline your workflow:
 
-* `/new-blog-post` creates a new blog post with automatic author detection and onboarding
-* `/docs-review` reviews documentation changes for style, accuracy, and best practices (works on PRs, branches, or open files)
-* `/glow-up` provides focused review and improvement of a single documentation file and any included images
-* `/add-borders` adds 1px grey borders to PNG images for better visual clarity
-* `/fix-issue` analyzes a documentation issue and creates an implementation plan
+**Content Creation:**
+* `/new-blog-post` - Create a new blog post with automatic author detection and onboarding
+
+**Review and Approval:**
+* `/pr-review` - Review and approve/merge pull requests as a maintainer (includes approve, request changes, merge, and close actions)
+* `/docs-review` - Review content quality while writing or before committing (checks style, accuracy, and best practices on open files, branches, or PRs)
+
+**Content Improvement:**
+* `/glow-up` - Deep review and polish of a single documentation file and its images
+* `/add-borders` - Add 1px grey borders to PNG images for better visual clarity in documentation
+
+**Issue Resolution:**
+* `/fix-issue` - Analyze a documentation issue and create an implementation plan
+
+**When to use what:**
+- Writing new content? Use `/docs-review` to check your work before committing
+- Reviewing someone's PR as a maintainer? Use `/pr-review` for the full approval workflow
+- Want to improve an existing doc page? Use `/glow-up` for comprehensive suggestions
+- Need to fix a reported issue? Use `/fix-issue` to create a plan
 
 These commands provide intelligent assistance beyond what make targets can offer, including context awareness, interactive prompts, and automatic configuration.
 

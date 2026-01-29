@@ -1,10 +1,12 @@
 ---
-description: Create a new blog post with proper structure, frontmatter, and automatic author onboarding.
+description: Create a new blog post with proper structure, frontmatter, and automatic author detection/onboarding.
 ---
 
 # /new-blog-post Command
 
-This command helps create a new blog post with proper structure, frontmatter, and author onboarding if needed.
+**Use this when:** You're creating a new blog post for the Pulumi website.
+
+Creates a new blog post with proper structure, frontmatter, and author onboarding if needed. Automatically detects the author from git configuration and handles all required setup.
 
 **Note**: This slash command is the preferred method for creating blog posts. The old `make new-blog-post` command is deprecated and no longer maintained.
 
@@ -134,7 +136,7 @@ After creating the files, tell the user:
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
    - **Optional but recommended**: Run `/add-borders` on the blog post to add 1px grey borders to PNG images for better visual presentation
-   - Preview locally: `make serve` and visit `http://localhost:1313/blog/{slug}/`
+   - Preview locally: `make serve` and visit <http://localhost:1313/blog/{slug}/>
    - **Recommended**: Run `/docs-review` on your blog post to check for style issues before committing
    - Run `make lint` before committing
    - **Important**: If your post is merged to master but not showing on the live site, check the date in frontmatter - posts only appear after their publish date.

@@ -30,7 +30,44 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Check repository write access
+        id: check-access
+        run: |
+          # Check if user who invoked Claude has write access to the repository
+          OWNER="pulumi"
+          REPO="docs"
+
+          # Determine the author based on event type
+          if [ "${{ github.event_name }}" = "issue_comment" ]; then
+            AUTHOR="${{ github.event.comment.user.login }}"
+          elif [ "${{ github.event_name }}" = "pull_request_review_comment" ]; then
+            AUTHOR="${{ github.event.comment.user.login }}"
+          elif [ "${{ github.event_name }}" = "pull_request_review" ]; then
+            AUTHOR="${{ github.event.review.user.login }}"
+          elif [ "${{ github.event_name }}" = "issues" ]; then
+            AUTHOR="${{ github.event.issue.user.login }}"
+          else
+            AUTHOR="unknown"
+          fi
+
+          # Get user's permission level (admin, write, read, or none)
+          PERMISSION=$(curl -s \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$OWNER/$REPO/collaborators/$AUTHOR/permission" \
+            | jq -r '.permission // "none"')
+
+          # Allow admin or write access
+          if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "✓ User $AUTHOR has $PERMISSION access to $OWNER/$REPO"
+          else
+            echo "has_write_access=false" >> $GITHUB_OUTPUT
+            echo "✗ User $AUTHOR has $PERMISSION access to $OWNER/$REPO (insufficient permissions)"
+          fi
+
       - name: Run Claude Code
+        if: steps.check-access.outputs.has_write_access == 'true'
         id: claude
         uses: anthropics/claude-code-action@v1
         with:

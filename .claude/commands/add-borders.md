@@ -1,12 +1,14 @@
 ---
-description: Add 1px grey borders to PNG images in a documentation file.
+description: Add 1px grey borders to PNG images for better visual clarity in documentation.
 ---
 
 # Usage
 
 `/add-borders <doc-file-path>`
 
-Analyze PNG images referenced in the specified markdown file at {{arg}} and add 1px #999999 (medium grey) borders to any images that don't already have them. This improves visual clarity and consistency of screenshots and diagrams in documentation.
+**Use this when:** Screenshots or diagrams in your documentation need borders for better visual separation from the background.
+
+Analyzes PNG images referenced in the specified markdown file at {{arg}} and adds 1px #999999 (medium grey) borders to any images that don't already have them. This improves visual clarity and consistency of screenshots and diagrams in documentation.
 
 ---
 
@@ -73,7 +75,7 @@ You can preview the documentation locally:
 make serve
 ```
 
-Then navigate to the affected page at http://localhost:1313
+Then navigate to the affected page at <http://localhost:1313>
 
 ### 5. Commit the changes (if appropriate)
 
