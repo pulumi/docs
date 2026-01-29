@@ -1,10 +1,12 @@
 ---
-description: Comprehensive Pulumi Docs PR review with approve/request changes/close workflow
+description: Review and approve/merge pull requests as a maintainer (full workflow with approve, request changes, merge, close actions)
 ---
 
 # Pull Request Review Command
 
-Perform comprehensive Pulumi Docs review of any pull request with style and accuracy checks, then streamline the approval workflow with automated actions. Automatically detects external contributors and uses warm, welcoming communication.
+**Use this when:** You're reviewing someone's pull request as a maintainer and need to approve, request changes, merge, or close it.
+
+Performs comprehensive review with style and accuracy checks, then provides an interactive workflow for approval actions. Automatically detects external contributors and adapts communication tone (warm/welcoming for external, professional for internal).
 
 ---
 
@@ -48,13 +50,135 @@ Reviews any pull request and presents action choices for approval, changes, or c
 2. Get the diff: `gh pr diff {{arg}}`
 3. Note the PR title, description, and files changed
 
-### Step 3: Perform Comprehensive Review
+### Step 3: Present Test Deployment and Review Guidance
+
+**CRITICAL**: This step must be completed and presented to the user IMMEDIATELY after Step 2 and BEFORE starting Step 4. Do not delay this output.
+
+#### Part A: Fetch Test Deployment URL
+
+1. Get all pulumi-bot comments from the PR and extract the most recent one:
+
+   ```bash
+   gh api repos/pulumi/docs/issues/{{arg}}/comments \
+     --jq '.[] | select(.user.login == "pulumi-bot") | {created_at, body}' | tail -1
+   ```
+
+2. Extract the deployment base URL from the `body` field:
+   - Look for the pattern: `http://www-testing-pulumi-docs-origin-pr-{PR_NUMBER}-{COMMIT_HASH}.s3-website.us-west-2.amazonaws.com`
+   - Store this as the base deployment URL
+
+3. Handle edge cases:
+   - **No pulumi-bot comment yet**: Display "⏳ Test deployment is not ready yet (no pulumi-bot comment found). The deployment typically appears within a few minutes after pushing commits. You can review the code now and check the deployment later."
+   - **Multiple comments exist**: Use the most recent based on `created_at` timestamp
+   - **Comment exists but no URL**: Treat same as no comment case
+
+#### Part B: Analyze Changes and Generate Targeted Review Guidance
+
+**IMPORTANT**: The guidance must be based on the **actual substance of changes in the diff**, not generic style guide rules.
+
+1. **Analyze the diff** from Step 2 (`gh pr diff {{arg}}`) to identify:
+   - New sections or headings added (lines with `+ ##`, `+ ###`, etc.)
+   - New code examples or code blocks (lines with `+` followed by `````)
+   - New images or assets (lines containing `+ ![` or `+ <img`)
+   - Modified links or references (lines with `+ [` or `+ <a href`)
+   - Configuration changes (frontmatter, YAML)
+   - Table additions/modifications
+   - New callouts, warnings, or notes
+   - Content restructuring (moved sections, reordered content)
+   - Terminology changes (consistent patterns of replacements)
+
+2. **Generate change-specific guidance** based on what actually changed:
+
+   ✅ **Good**: "Verify the new TypeScript code example on the Components page runs correctly"
+   ✅ **Good**: "Check that the reorganized sections flow logically from basic to advanced concepts"
+   ❌ **Avoid**: "Check formatting, broken links, code examples rendering, headings"
+   ❌ **Avoid**: "Verify images display correctly, have reasonable file size, and have alt text"
+
+3. **Construct direct URLs** for each changed documentation page:
+
+   **URL mapping pattern**: Remove `content/` prefix, remove `.md`/`_index.md` suffix, add trailing `/`, prepend base deployment URL
+
+   **Examples**:
+   - `content/docs/iac/concepts/components/_index.md` → `[base-url]/docs/iac/concepts/components/`
+   - `content/blog/my-post.md` → `[base-url]/blog/my-post/`
+
+   **CRITICAL**: Each changed page MUST have its own direct, clickable link. Do NOT just show the base URL.
+
+4. **Group guidance by page/file** with 2-4 specific items per page based on what changed
+
+#### Part C: Display the Review Guidance
+
+**TIMING**: Display this output IMMEDIATELY after Step 2 completes, BEFORE starting the comprehensive AI review in Step 4. This allows users to review the deployment while the AI performs its analysis.
+
+**Format** (adapt based on whether deployment URL is available):
+
+**If deployment URL is available:**
+
+```markdown
+## 🔍 Test Deployment Review
+
+**Deployment URL**: [base-url]
+
+### Review the Following Changes
+
+**[Page/File Name]** - [Direct link to this specific page]
+- [ ] [Specific change-based item from diff analysis]
+- [ ] [Specific change-based item from diff analysis]
+- [ ] [Specific change-based item from diff analysis]
+
+**[Another Page/File Name]** - [Direct link to this specific page]
+- [ ] [Specific change-based item from diff analysis]
+- [ ] [Specific change-based item from diff analysis]
+
+[... continue for all pages with substantive changes ...]
+
+---
+
+*Please review these specific changes in the deployment before proceeding.*
+```
+
+**If deployment URL is NOT available:**
+
+```markdown
+## 🔍 Test Deployment Review
+
+⏳ Test deployment is not ready yet (no pulumi-bot comment found)
+
+The deployment typically appears within a few minutes after pushing commits.
+You can proceed with the code review now and check the deployment later.
+
+### When the deployment is ready, review:
+
+**[Page/File Name]**
+- [ ] [Specific change-based item from diff analysis]
+- [ ] [Specific change-based item from diff analysis]
+
+**[Another Page/File Name]**
+- [ ] [Specific change-based item from diff analysis]
+- [ ] [Specific change-based item from diff analysis]
+
+[... continue for all pages with substantive changes ...]
+
+---
+
+*The deployment URL will be available at: http://www-testing-pulumi-docs-origin-pr-{{arg}}-[commit-hash].s3-website.us-west-2.amazonaws.com*
+```
+
+#### Part D: Handle Edge Cases
+
+- **Large file lists**: If more than 10 files changed, prioritize documentation pages (`.md` files under `content/`) and show "... and N more files" for others
+- **Purely mechanical changes**: If changes are only typo fixes or whitespace (no new content, no structural changes), note: "Changes appear to be mechanical fixes (typos, formatting). Suggest quick scan rather than detailed review."
+- **Infrastructure/non-visual changes**: For non-content files (`.yaml`, `.json`, build scripts), explain what behavior to verify rather than visual appearance
+- **Blog posts**: For blog posts, focus on readability, images, and code examples rather than cross-references
+- **Mixed content types**: Group by content type (docs pages, blog posts, examples, infrastructure)
+
+### Step 4: Perform Comprehensive Review
 
 Review the PR changes using the **Review Criteria** section from `docs-review.md`.
 
 This includes all standard checks: style guide enforcement, spelling/grammar, link validation, code examples, file standards, SEO, special cases (file moves, redirects, infrastructure changes), and role-specific guidelines for documentation vs blog/marketing content.
 
-### Step 4: Present Review Findings
+### Step 5: Present Review Findings
 
 Present the review in the conversation:
 
@@ -79,42 +203,14 @@ Present the review in the conversation:
    - "**Changes:** 1 file changed (+3/-1 lines)" - Small, focused change
    - "**Changes:** 15 files changed (+543/-234 lines)" - Substantial change
 
-   This summary helps users understand scope when choosing an action in Step 5.
+   This summary helps users understand scope when choosing an action in Step 6.
 
-### Step 5: Present Action Choices
+### Step 6: Present Action Choices
 
-Use AskUserQuestion to present these 6 options (labels and descriptions adapt based on contributor type):
-
-**For External Contributors**:
+Use AskUserQuestion to present these 6 options (messaging tone adapts: warm/welcoming for external contributors, professional for internal):
 
 1. **Approve** (Recommended)
-   - Approve PR with warm, personalized thank you comment
-   - Use: When PR is ready to merge
-
-2. **Approve and merge**
-   - Approve with heartfelt thanks and merge immediately
-   - Use: When PR is excellent and ready for immediate merge
-
-3. **Make changes and approve**
-   - Make minor edits, then approve with appreciation
-   - Use: For small fixes (typos, formatting) that preserve contributor's credit
-
-4. **Request changes**
-   - Post encouraging, constructive feedback with request-changes flag
-   - Use: When contributor should make the changes themselves
-
-5. **Close with thanks**
-   - Post grateful explanation and close
-   - Use: When PR doesn't fit but you appreciate their effort
-
-6. **Do nothing yet**
-   - Exit without action
-   - Use: Need more time or team discussion
-
-**For Internal Contributors**:
-
-1. **Approve** (Recommended)
-   - Approve PR with constructive feedback
+   - Approve PR with feedback
    - Use: When PR is ready to merge
 
 2. **Approve and merge**
@@ -122,8 +218,8 @@ Use AskUserQuestion to present these 6 options (labels and descriptions adapt ba
    - Use: When PR is ready for immediate merge
 
 3. **Make changes and approve**
-   - Make edits, then approve
-   - Use: For minor fixes before approval
+   - Make minor edits, then approve
+   - Use: For small fixes (typos, formatting) that preserve contributor's credit
 
 4. **Request changes**
    - Post review feedback with request-changes flag
@@ -131,53 +227,37 @@ Use AskUserQuestion to present these 6 options (labels and descriptions adapt ba
 
 5. **Close PR**
    - Close with explanation
-   - Use: When PR is no longer needed or doesn't fit
+   - Use: When PR doesn't fit or is no longer needed
 
 6. **Do nothing yet**
    - Exit without action
-   - Use: Need more time or discussion
+   - Use: Need more time or team discussion
 
-### Step 6: Preview Planned Actions and Get Confirmation
+### Step 7: Preview Planned Actions and Get Confirmation
 
 **CRITICAL**: Always show the user what will happen before executing any action.
 
-Generate a preview based on the user's choice from Step 5:
+Generate a preview based on the user's choice from Step 6:
 
 #### For "Approve"
-
-Display the exact comment that will be posted:
 
 ```text
 ## Preview: Approval Comment
 
-The following comment will be posted when approving PR #{{arg}}:
+Comment: See "Approve" template in Message Templates section (adapts to contributor type)
 
----
-[Exact comment text based on contributor type:
- - External: "Thank you for this contribution! [Brief specific praise if applicable]. Welcome to the community! 🎉"
- - Internal: "LGTM! [Any specific positive feedback or minor suggestions]"]
----
-
-GitHub command: gh pr review {{arg}} --approve --body "[comment]"
+GitHub command: gh pr review {{arg}} --approve --body "{{COMMENT}}"
 ```
 
 #### For "Approve and merge"
 
-Display the exact comment and merge action:
-
 ```text
 ## Preview: Approval and Merge
 
-The following comment will be posted when approving PR #{{arg}}:
-
----
-[Exact comment text based on contributor type:
- - External: "Thank you for this contribution! [Brief specific praise]. Merging now. 🎉"
- - Internal: "LGTM! Merging now."]
----
+Comment: See "Approve and merge" template in Message Templates section (adapts to contributor type)
 
 GitHub commands:
-1. gh pr review {{arg}} --approve --body "[comment]"
+1. gh pr review {{arg}} --approve --body "{{COMMENT}}"
 2. gh pr merge {{arg}} --auto --squash
 ```
 
@@ -199,77 +279,37 @@ I will:
 4. Show you the diff before committing
 5. Commit: "Apply style and formatting fixes"
 6. Push changes
-7. Approve with this comment:
-
----
-[Exact comment text based on contributor type:
- - External: "I've applied some minor style and formatting fixes. Thank you for your contribution! 🙏"
- - Internal: "Applied some style/formatting fixes. LGTM!"]
----
-
+7. Approve with comment from "Make changes and approve" template (adapts to contributor type)
 8. Return to original branch
 ```
 
 #### For "Request changes"
 
-Display the full formatted comment:
-
 ```text
 ## Preview: Request Changes Comment
 
-The following review will be posted with request-changes flag on PR #{{arg}}:
+Comment format: See "Request changes" template in Message Templates section (adapts to contributor type)
 
----
-[Full formatted comment based on contributor type:
+Include specific issues with line numbers from Step 4 findings and suggestion code blocks.
 
-External contributor:
-- Opening: "Thank you for this contribution!"
-- Brief acknowledgment of good aspects (1 sentence max, if applicable)
-- Specific issues with line numbers from Step 4 findings
-- Suggestion code blocks for fixes
-- Closing: "Feel free to mention @claude if you need help with these changes"
-
-Internal contributor:
-- Professional opening
-- Specific issues with line numbers from Step 4 findings
-- Suggestion code blocks for fixes
-- Clear action items]
----
-
-GitHub command: gh pr review {{arg}} --request-changes --body "[comment]"
+GitHub command: gh pr review {{arg}} --request-changes --body "{{COMMENT}}"
 ```
 
-#### For "Close with thanks" / "Close PR"
-
-Display the full closing comment:
+#### For "Close PR"
 
 ```text
 ## Preview: Close PR
 
-The following comment will be posted before closing PR #{{arg}}:
+Comment format: See "Close PR" template in Message Templates section (adapts to contributor type)
 
----
-[Full formatted comment based on contributor type:
-
-External contributor ("Close with thanks"):
-- "Thank you for taking the time to contribute!"
-- Clear, kind explanation of why closing
-- Brief acknowledgment of valuable aspects (if applicable)
-- Suggest alternatives if appropriate
-- Closing: "We appreciate your interest in Pulumi!"
-
-Internal contributor ("Close PR"):
-- Clear explanation of why closing]
----
+Include clear explanation of why closing.
 
 GitHub commands:
-1. gh pr comment {{arg}} --body "[comment]"
+1. gh pr comment {{arg}} --body "{{COMMENT}}"
 2. gh pr close {{arg}}
 ```
 
 #### For "Do nothing yet"
-
-Display:
 
 ```text
 ## Preview: No Action
@@ -294,46 +334,76 @@ Use AskUserQuestion with these options:
 
 **Handle responses**:
 
-- **"Yes, proceed"**: Continue to Step 7 (execution)
+- **"Yes, proceed"**: Continue to Step 8 (execution)
 - **"Edit comment"**:
   - Ask user: "Please provide the revised comment text:"
   - Generate updated preview with new comment
   - Request confirmation again with same options
   - Repeat until user confirms or cancels
-- **"Change action"**: Return to Step 5 (action selection) and let user choose again
+- **"Change action"**: Return to Step 6 (action selection) and let user choose again
 - **"Cancel"**: Display "No action taken on PR #{{arg}}." and exit
 
-### Step 7: Execute Confirmed Action
+### Message Templates
 
-**Using the confirmed/edited content from Step 6**, execute the action based on the user's choice and contributor type:
+Use these templates when executing actions. Select the appropriate template based on contributor type (determined in Step 1):
+
+**Approve**:
+
+- External: "Thank you for this contribution! [Brief specific praise, 1 sentence max, or omit if nothing stands out]. Welcome to the community! 🎉"
+- Internal: "LGTM! [Any specific positive feedback or minor suggestions]"
+
+**Approve and merge**:
+
+- External: "Thank you for this contribution! [Brief specific praise, 1 sentence max]. Merging now. 🎉"
+- Internal: "LGTM! Merging now."
+
+**Make changes and approve**:
+
+- External: "I've applied some minor style and formatting fixes. Thank you for your contribution! 🙏"
+- Internal: "Applied some style/formatting fixes. LGTM!"
+
+**Request changes**:
+
+- External: Format with:
+  - Brief opening: "Thank you for this contribution!"
+  - Brief acknowledgment of good aspects if applicable (1 sentence max)
+  - Specific issues with line numbers
+  - Suggestion code blocks for fixes
+  - Simple closing: "Feel free to mention @claude if you need help with these changes"
+- Internal: Format with:
+  - Professional opening
+  - Specific issues with line numbers
+  - Suggestion code blocks for fixes
+  - Clear action items
+
+**Close PR**:
+
+- External: Format with:
+  - Brief thank you: "Thank you for taking the time to contribute!"
+  - Clear, kind explanation of why closing
+  - Brief acknowledgment of valuable aspects if applicable
+  - Suggest alternatives if appropriate
+  - Simple closing: "We appreciate your interest in Pulumi!"
+- Internal: Clear explanation of why closing
+
+### Step 8: Execute Confirmed Action
+
+**Using the confirmed/edited content from Step 7**, execute the action based on the user's choice and contributor type:
 
 **For "Approve"**:
 
-*External contributor*:
+Use "Approve" template from Message Templates section based on contributor type.
 
 ```bash
-gh pr review {{arg}} --approve --body "Thank you for this contribution! [Brief specific praise, 1 sentence max, or omit if nothing stands out]. Welcome to the community! 🎉"
-```
-
-*Internal contributor*:
-
-```bash
-gh pr review {{arg}} --approve --body "LGTM! [Any specific positive feedback or minor suggestions]"
+gh pr review {{arg}} --approve --body "{{COMMENT}}"
 ```
 
 **For "Approve and merge"**:
 
-*External contributor*:
+Use "Approve and merge" template from Message Templates section based on contributor type.
 
 ```bash
-gh pr review {{arg}} --approve --body "Thank you for this contribution! [Brief specific praise, 1 sentence max]. Merging now. 🎉"
-gh pr merge {{arg}} --auto --squash
-```
-
-*Internal contributor*:
-
-```bash
-gh pr review {{arg}} --approve --body "LGTM! Merging now."
+gh pr review {{arg}} --approve --body "{{COMMENT}}"
 gh pr merge {{arg}} --auto --squash
 ```
 
@@ -341,7 +411,7 @@ gh pr merge {{arg}} --auto --squash
 
 1. Save current branch: `git rev-parse --abbrev-ref HEAD`
 2. Check out PR: `gh pr checkout {{arg}}`
-3. Make the requested changes (from Step 6) using Edit/Write tools
+3. Make the requested changes (from Step 7) using Edit/Write tools
 4. Show the diff: `git diff`
 5. Display the diff in the conversation
 6. Ask user: "Proceed with commit and approval? (Yes/No)"
@@ -351,72 +421,36 @@ gh pr merge {{arg}} --auto --squash
    - If Yes: Continue to next step
 7. Commit: `git add . && git commit -m "Apply style and formatting fixes\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"`
 8. Push: `git push`
-9. Approve with appropriate tone (using confirmed comment from Step 6):
-
-   *External contributor*:
+9. Approve (use "Make changes and approve" template from Message Templates section):
 
    ```bash
-   gh pr review {{arg}} --approve --body "I've applied some minor style and formatting fixes. Thank you for your contribution! 🙏"
-   ```
-
-   *Internal contributor*:
-
-   ```bash
-   gh pr review {{arg}} --approve --body "Applied some style/formatting fixes. LGTM!"
+   gh pr review {{arg}} --approve --body "{{COMMENT}}"
    ```
 
 10. Return: `git checkout <original-branch>`
 
 **For "Request changes"**:
 
-*External contributor*:
+Use "Request changes" template from Message Templates section based on contributor type.
 
 ```bash
-gh pr review {{arg}} --request-changes --body "[Format with:
-- Brief opening: 'Thank you for this contribution!'
-- Brief acknowledgment of good aspects if applicable (1 sentence max)
-- Specific issues with line numbers
-- Suggestion code blocks for fixes
-- Simple closing: 'Feel free to mention @claude if you need help with these changes']"
-```
-
-*Internal contributor*:
-
-```bash
-gh pr review {{arg}} --request-changes --body "[Format with:
-- Professional opening
-- Specific issues with line numbers
-- Suggestion code blocks for fixes
-- Clear action items]"
+gh pr review {{arg}} --request-changes --body "{{COMMENT}}"
 ```
 
 **For "Close PR"**:
 
-*External contributor*:
+Use "Close PR" template from Message Templates section based on contributor type.
 
 ```bash
-gh pr comment {{arg}} --body "[Format with:
-- Brief thank you: 'Thank you for taking the time to contribute!'
-- Clear, kind explanation of why closing
-- Brief acknowledgment of valuable aspects if applicable
-- Suggest alternatives if appropriate
-- Simple closing: 'We appreciate your interest in Pulumi!']"
-gh pr close {{arg}}
-```
-
-*Internal contributor*:
-
-```bash
-gh pr comment {{arg}} --body "[Clear explanation of why closing]"
+gh pr comment {{arg}} --body "{{COMMENT}}"
 gh pr close {{arg}}
 ```
 
 **For "Do nothing yet"**:
 
-- Display: "No action taken. You can run this command again when ready."
-- Exit
+No confirmation needed - exit directly with message: "No action taken. You can run this command again when ready."
 
-### Step 8: Report Execution Results
+### Step 9: Report Execution Results
 
 After execution completes, provide clear confirmation of what happened:
 
@@ -513,14 +547,14 @@ git checkout <original-branch>
 
 ## Important Notes
 
-- **Preview accuracy**: Previews show the planned action with exact comment text. The actual execution in Step 7 uses the confirmed (or edited) content from Step 6.
-- **Preview-to-execution consistency**: What users see in the preview is exactly what gets posted to GitHub. Always use the confirmed comment text from Step 6 when executing in Step 7.
+- **Preview accuracy**: Previews show the planned action with exact comment text. The actual execution in Step 8 uses the confirmed (or edited) content from Step 7.
+- **Preview-to-execution consistency**: What users see in the preview is exactly what gets posted to GitHub. Always use the confirmed comment text from Step 7 when executing in Step 8.
 - **Edit flexibility**: The "Edit comment" option allows users to refine tone, add context, or adjust wording before posting. After editing, show the updated preview and confirm again.
 - **Communication tone**: Use warm, welcoming language with external contributors. Keep praise brief and specific (1 sentence max).
 - **Encouragement**: Make contributors feel welcomed to the Pulumi community
 - **Credit**: Use "make changes" option judiciously - only for minor fixes that don't reduce contributor's credit for the work
 - **Branch safety**: Always track current branch and return to it after PR checkout, especially if errors occur
-- **Error handling**: If any gh or git command fails, return to original branch (if applicable), display the error with recovery options, and ensure no partial state (e.g., don't post comment if merge fails)
-- **Token efficiency**: Generate preview text once in Step 6 and reuse it in Step 7. For large diffs (>100 lines), show summary with option to expand full diff.
+- **Error handling**: See error recovery template in Step 9
+- **Token efficiency**: Generate preview text once in Step 7 and reuse it in Step 8. For large diffs (>100 lines), show summary with option to expand full diff.
 - **Large diffs**: When showing diffs in "Make changes and approve", if the diff exceeds 100 lines, show a summary (files changed, lines added/removed) and ask if user wants to see the full diff
-- **Contributor type caching**: Store the contributor type (internal/external) result from Step 1 and reuse it throughout Steps 5-8. Don't re-query the GitHub API if the user changes actions during preview.
+- **Contributor type caching**: Store the contributor type (internal/external) result from Step 1 and reuse it throughout Steps 6-9. Don't re-query the GitHub API if the user changes actions during preview.

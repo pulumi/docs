@@ -1,10 +1,12 @@
 ---
-description: Create a new blog post with proper structure, frontmatter, and automatic author onboarding.
+description: Create a new blog post with proper structure, frontmatter, and automatic author detection/onboarding
 ---
 
 # /new-blog-post Command
 
-This command helps create a new blog post with proper structure, frontmatter, and author onboarding if needed.
+**Use this when:** You're creating a new blog post for the Pulumi website.
+
+Creates a new blog post with proper structure, frontmatter, and author onboarding if needed. Automatically detects the author from git configuration and handles all required setup.
 
 **Note**: This slash command is the preferred method for creating blog posts. The old `make new-blog-post` command is deprecated and no longer maintained.
 

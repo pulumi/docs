@@ -1,12 +1,14 @@
 ---
-description: Analyze a documentation issue and create a plan to fix it.
+description: Analyze a documentation issue and create an implementation plan (investigates problem and plans solution)
 ---
 
 # Usage
 
 `/fix-issue <issue-number>`
 
-Analyze GitHub issue #{{arg}} and create a comprehensive plan to address it. You are acting as a technical content engineer focused on improving documentation quality.
+**Use this when:** You need to address a GitHub issue and want help investigating the problem and creating a step-by-step implementation plan.
+
+Analyzes GitHub issue #{{arg}} and creates a comprehensive plan to address it, acting as a technical content engineer focused on improving documentation quality.
 
 ---
 
@@ -15,6 +17,7 @@ Analyze GitHub issue #{{arg}} and create a comprehensive plan to address it. You
 ### 1. Gather issue details
 
 Use `gh issue view {{arg}}` to retrieve the complete issue information:
+
 - Read the full issue description to understand the problem
 - Review labels to identify issue type (bug, enhancement, clarification, etc.)
 - Read all comments and discussion to understand user pain points
@@ -24,6 +27,7 @@ Use `gh issue view {{arg}}` to retrieve the complete issue information:
 ### 2. Research current documentation
 
 Use semantic search and file tools to thoroughly investigate:
+
 - Locate the specific documentation files mentioned or affected
 - Read the current content to understand what's written today
 - Identify what's missing, incorrect, outdated, or unclear
@@ -34,6 +38,7 @@ Use semantic search and file tools to thoroughly investigate:
 ### 3. Review guidelines
 
 Before proposing changes, verify compliance with:
+
 - `AGENTS.md` — Repository conventions, build/test workflow, file movement rules, SEO requirements
 - `STYLE-GUIDE.md` — Writing style, heading capitalization, code formatting, terminology
 - Existing documentation patterns in the same section to maintain consistency
@@ -72,7 +77,7 @@ Develop a detailed plan with these components:
 
 5. **Verification** — Define how to validate the fix:
    - Run `make lint` to check for errors
-   - Run `make serve` to preview rendering at http://localhost:1313
+   - Run `make serve` to preview rendering at <http://localhost:1313>
    - Test any code examples using program tests
    - Verify all links work (internal and external)
    - Confirm technical accuracy with subject matter experts if needed
@@ -91,6 +96,7 @@ Develop a detailed plan with these components:
 **IMPORTANT: Do NOT implement without user approval.**
 
 Present the complete plan to the user including:
+
 - Clear, numbered steps in logical order
 - Exact file paths with section headings or line numbers
 - Specific commands that will be run (e.g., `make lint`, `make serve`)
