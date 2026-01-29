@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Cloud: Billing Managers"
-meta_desc: The Billing Manager role gives customers the ability to have someone in their Pulumi Organization manage billing operations. Learn more about this role here.
+meta_desc: Learn about Billing Manager role.
 title: "Billing managers"
 h1: "Billing managers"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -16,13 +16,13 @@ aliases:
 - /docs/intro/pulumi-cloud/billing-managers/
 ---
 
-The Billing Manager role gives customers the ability to have someone in their Pulumi Organization manage billing operations without granting them any additional permissions to view or modify your stacks, policies, or other organizational settings.
+The Billing Manager role enables you to designate someone in your Pulumi organization to manage billing operations without granting additional permissions to view or modify stacks, policies, or other organizational settings. This separation of duties provides better control over financial operations while maintaining security.
 
 Any Organization Admin can view, invite, and remove Billing Managers from their organization.
 
 Team Editions of the Pulumi Cloud are limited to 1 Billing Manager at a time. Enterprise and Business Critical subscriptions can have unlimited Billing Managers in their organization. Visit our [Pricing page](/pricing) to learn more about Pulumi Cloud Editions.
 
-## Inviting a Billing Manager to an Organization
+## Inviting A Billing Manager To An Organization
 
 Billing Manager invitations work much the same way member invitations do, but they are managed on the Billing and Usage page.
 
@@ -45,7 +45,7 @@ Billing Managers are not included in an organization's member count. For example
 
 Billing Managers and pending Billing Manager invitations can be viewed by going to the organization's Settings page, then selecting Billing & usage from the menu. As with the Members page, this table displays all Billing Managers belonging to your organization, their email address, and when they accepted the invite. For pending Billing Manager invitations, the invitation status column will include the date an invitation was sent, and will note if a potential Billing Manager encountered an error while attempting to accept an invitation.
 
-Pending invites and Billing Manager emails and invite status are only viewable by Organization Admins. Billing Manager will be able to see other Billing Managers, but only their names.
+Pending invites and Billing Manager emails and invite status are only viewable by Organization Admins. Billing Managers will be able to see other Billing Managers, but only their names and thier contact details.
 
 ## Removing a Billing Manager from an Organization
 
