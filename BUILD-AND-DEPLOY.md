@@ -1560,6 +1560,81 @@ const edgeRedirects = new aws.lambda.Function("edge-redirects", {
 
 **Why:** Informs search engines that AI answers are intentionally unpublished
 
+**3. Markdown Content Negotiation**
+
+**Event Type:** origin-request
+
+**Purpose:** Serve markdown versions of docs pages when requested via Accept header
+
+**Applied To:** `/docs/*` paths (when `doMarkdownContentNegotiation` config is enabled)
+
+**Configuration:**
+
+```typescript
+const markdownNegotiationLambda = new LambdaEdge("markdown-negotiation", {
+    func: getMarkdownContentNegotiationCallback(),
+    funcDescription: "Lambda function that serves markdown when Accept: text/markdown header is present.",
+}, { provider: usEast1Provider });
+```
+
+**How It Works:**
+
+1. Intercepts requests to `/docs/*` paths at CloudFront edge
+1. Checks if Accept header contains `text/markdown`
+1. Rewrites URL from `/docs/path/` to `/docs/path/index.md`
+1. Rewrites URL from `/docs/path` to `/docs/path/index.md`
+1. Returns original request if not a markdown request or already ends in `.md`
+
+**Cache Policy:**
+
+The docs content negotiation feature uses a dedicated CloudFront cache policy that varies on the Accept header:
+
+```typescript
+const docsCachePolicy = new aws.cloudfront.CachePolicy("docs-cache-policy", {
+    minTtl: 0,
+    defaultTtl: fiveMinutes,
+    maxTtl: fiveMinutes,
+    parametersInCacheKeyAndForwardedToOrigin: {
+        headersConfig: {
+            headerBehavior: "whitelist",
+            headers: {
+                items: ["Accept"],
+            },
+        },
+    },
+});
+```
+
+This ensures that:
+
+- HTML and markdown versions are cached separately
+- Clients receive the correct format based on their Accept header
+- Cache keys include the Accept header value
+
+**Enabling/Disabling:**
+
+Control via Pulumi stack config:
+
+```bash
+# Enable markdown content negotiation
+pulumi config set doMarkdownContentNegotiation true
+
+# Disable markdown content negotiation (default)
+pulumi config set doMarkdownContentNegotiation false
+```
+
+**Use Cases:**
+
+- LLM tools (ChatGPT, Claude) can request markdown versions via Accept header
+- Provides cleaner, more semantic content for AI analysis
+- Maintains backward compatibility (HTML served by default)
+
+**Implementation Files:**
+
+- Lambda function: `infrastructure/cloudfrontLambdaAssociations.ts` (lines 117-140)
+- Cache behavior: `infrastructure/index.ts` (lines 650-660)
+- Hugo markdown templates: `layouts/docs/single.md`, `layouts/docs/list.md`
+
 #### Route53 DNS
 
 **Hosted Zone:** From config (<www.pulumi.com> or <www.pulumi-test.io>)
@@ -1980,6 +2055,7 @@ config:
   www.pulumi.com:addSecurityHeaders: "true"
   www.pulumi.com:doEdgeRedirects: "true"
   www.pulumi.com:doAIAnswersRewrites: "true"
+  www.pulumi.com:doMarkdownContentNegotiation: "true"
   www.pulumi.com:websiteDomain: www.pulumi.com
   www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-website-logs
   www.pulumi.com:hostedZone: www.pulumi.com
@@ -2001,6 +2077,7 @@ config:
   www.pulumi.com:addSecurityHeaders: "true"
   www.pulumi.com:doEdgeRedirects: "true"
   www.pulumi.com:doAIAnswersRewrites: "true"
+  www.pulumi.com:doMarkdownContentNegotiation: "true"
   www.pulumi.com:websiteDomain: www.pulumi-test.io
   www.pulumi.com:websiteLogsBucketName: pulumi-test-io-website-logs
   www.pulumi.com:hostedZone: www.pulumi-test.io
