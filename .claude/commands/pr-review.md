@@ -26,6 +26,10 @@ Reviews any pull request and presents action choices for approval, changes, or c
 
 ## Process
 
+**SUCCESS CRITERIA**: Complete all 10 steps in sequence. Every step is mandatory and serves a critical purpose in the review workflow. **DO NOT SKIP ANY STEP OR END THE WORKFLOW PREMATURELY!**
+
+---
+
 ### Step 1: Verify PR and Detect Contributor Type
 
 1. Verify the PR exists: `gh pr view {{arg}}`
@@ -149,8 +153,6 @@ Continue to Step 4.
 
 ### Step 4: Offer Infrastructure Deployment
 
-**CRITICAL - MANDATORY CHECK**: This step MUST be evaluated before proceeding to Step 5. Do NOT skip this check.
-
 Check if the PR contains dependency or infrastructure changes by examining the files changed (from Step 2):
 
 **Dependency changes** - Any of these patterns:
@@ -237,7 +239,11 @@ Present the review in the conversation:
    - "**Changes:** 1 file changed (+3/-1 lines)" - Small, focused change
    - "**Changes:** 15 files changed (+543/-234 lines)" - Substantial change
 
-   This summary helps users understand scope when choosing an action in Step 6.
+   This summary helps users understand scope when choosing an action in Step 7.
+
+**After presenting the review findings above, immediately continue to Step 7.** Do not stop here - the workflow is incomplete without presenting action choices.
+
+---
 
 ### Step 7: Present Action Choices
 
@@ -414,7 +420,6 @@ Select template based on contributor type (Step 1). Bot templates: professional/
 
 ## Important Notes
 
-- **Step 4 is mandatory**: Always evaluate Step 4 (infrastructure deployment) before proceeding to Step 5. This step checks for dependency/infrastructure changes and offers pulumi-test.io deployment. Do not skip this check - it's critical for testing infrastructure and dependency updates.
 - **Preview accuracy**: Previews show the planned action with exact comment text. The actual execution in Step 9 uses the confirmed (or edited) content from Step 8.
 - **Preview-to-execution consistency**: What users see in the preview is exactly what gets posted to GitHub. Always use the confirmed comment text from Step 8 when executing in Step 9.
 - **Edit flexibility**: The "Edit comment" option allows users to refine tone, add context, or adjust wording before posting. After editing, show the updated preview and confirm again.
