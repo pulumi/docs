@@ -136,7 +136,7 @@ After creating the files, tell the user:
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
    - **Optional but recommended**: Run `/add-borders` on the blog post to add 1px grey borders to PNG images for better visual presentation
-   - Preview locally: `make serve` and visit `http://localhost:1313/blog/{slug}/`
+   - Preview locally: `make serve` and visit <http://localhost:1313/blog/{slug}/>
    - **Recommended**: Run `/docs-review` on your blog post to check for style issues before committing
    - Run `make lint` before committing
    - **Important**: If your post is merged to master but not showing on the live site, check the date in frontmatter - posts only appear after their publish date.

@@ -281,7 +281,7 @@ Present the review in the conversation:
 
 Use AskUserQuestion with header:
 
-```
+```output
 🤖 Dependabot PR | Risk: [HIGH/MEDIUM/LOW/UNKNOWN]
 [If security] 🔒 Security Update
 [If lambda-edge] 🚨 Lambda@Edge Risk - Review deployment
@@ -319,7 +319,7 @@ Use AskUserQuestion with header:
 
 **Other Bot PRs**: Use AskUserQuestion with header (max 4 options):
 
-```
+```output
 🤖 Bot: @username
 [If automation/merge] ✓ automation/merge label
 ```
