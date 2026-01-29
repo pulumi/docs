@@ -65,6 +65,7 @@ if (window.location.hash === "#conflict") {
 }
 
 // Redirect to the new verbose logging page
+// https://github.com/pulumi/docs/issues/16985
 if (window.location.hash === "#verbose-logging") {
   window.location = "/docs/support/debugging/logging/#cli-verbose-logging"
 }
