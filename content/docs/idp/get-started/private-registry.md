@@ -20,9 +20,11 @@ Developers leverage templates and components in their preferred workflows, wheth
 
 [Pulumi Components](/docs/iac/concepts/resources/components/) are a way to encapsulate resources in a reusable manner. Components are also a powerful way for platform teams to integrate security, compliance, and operational requirements into golden paths so that developers don't need to worry about it. Once a component is pushed to GitHub or GitLab, it is published to an organization's private registry using the `publish` CLI command. Pulumi automatically introspects the component schema and generates API docs, which are displayed in the registry.
 
+For detailed information about different component packaging approaches, see [Packaging a Component](/docs/iac/guides/building-extending/components/packaging-a-component/).
+
 ### Publishing Components
 
-If you're new to Pulumi components, the [Build a Component](/docs/iac/using-pulumi/extending-pulumi/build-a-component/) guide is a great resource for getting started. Once you've authored your component, push it to a GitHub or GitLab repository that Pulumi can access. Private repositories are supported, but the repository must be open to inbound requests.
+If you're new to Pulumi components, the [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/) guide is a great resource for getting started. Once you've authored your component, push it to a GitHub or GitLab repository that Pulumi can access. Private repositories are supported, but the repository must be open to inbound requests.
 
 The `publish` CLI command is used to publish components to the private registry.
 
