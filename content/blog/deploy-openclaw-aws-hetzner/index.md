@@ -31,7 +31,7 @@ social:
 ---
 
 {{% notes type="info" %}}
-**Update (January 2026):** The lobster has molted into its final form! Moltbot is now **OpenClaw**. With 100k+ GitHub stars and 2M visitors in a week, the project finally has a name that'll stick. The CLI command is now `openclaw` and the new handle is [@openclaw](https://x.com/openclaw). Same mission: AI that actually does things. Your assistant. Your machine. Your rules. See the [official getting started guide](https://docs.openclaw.ai/start/getting-started) for updated installation instructions.
+**Update (January 2026):** The lobster has molted into its final form! From Clawdbot to [Moltbot](https://x.com/openclaw/status/2016058924403753024) to [**OpenClaw**](https://x.com/openclaw/status/2017103710959075434). With 100k+ GitHub stars and 2M visitors in a week, the project finally has a name that'll stick. The CLI command is now `openclaw` and the new handle is [@openclaw](https://x.com/openclaw). Same mission: AI that actually does things. Your assistant. Your machine. Your rules. See the [official getting started guide](https://docs.openclaw.ai/start/getting-started) for updated installation instructions.
 {{% /notes %}}
 
 OpenClaw is everywhere right now. The open-source AI assistant [gained 9,000 GitHub stars in a single day](https://news.aibase.com/news/24901), received public praise from former Tesla AI head Andrej Karpathy, and has sparked a global run on Mac Minis as developers scramble to give this "lobster assistant" a home. Users are calling it "Jarvis living in a hard drive" and "Claude with hands"—the personal AI assistant that Siri promised but never delivered.
