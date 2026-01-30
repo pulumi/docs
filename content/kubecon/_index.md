@@ -6,11 +6,11 @@ type: page
 layout: event-page
 
 hero:
-  title: "Tame Kubernetes Complexity with Code"
+  title: "Tame Kubernetes complexity with code"
   description: "Learn how teams provision Kubernetes clusters, enforce security policies, and deploy AI workloads across AWS, Azure, and GCP without the YAML complexity and coordination overhead."
-  cta_text: "Book your demo"
+  cta_text: "Book a demo"
   cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
-  cta_secondary_text: "Get $500 AWS Credits"
+  cta_secondary_text: "Get $500 in AWS credits"
   cta_secondary_link: "#promo-banner"
   image: "/images/kubecon/kubecon-hero-2026.png"
   image_alt: "KubeCon Europe 2026"
@@ -24,7 +24,7 @@ logos:
   - src: "/logos/customers/nvidia.png"
     alt: "NVIDIA"
   - src: "/logos/customers/bmw-shortened.svg"
-    alt: "BMW"  
+    alt: "BMW"
   - src: "/logos/customers/webflow-wordmark.svg"
     alt: "Webflow"
   - src: "/logos/customers/snowflake-logo.svg"
@@ -33,29 +33,29 @@ logos:
     alt: "Mercedes Benz"
 
 features:
-  title: "Do Kubernetes Smarter"
+  title: "Do Kubernetes smarter"
   subtitle: "Managing Kubernetes at scale is hard enough without having to wrestle with reams of YAML. Meet our engineering team to talk through your Kubernetes challenges."
   image: "/images/kubecon/code-kubecon-2026.png"
   image_alt: "Pulumi code example for Kubernetes"
   features:
     - icon: "fa-code"
-      title: "Cloud-Native Infrastructure as Code"
+      title: "Cloud-native infrastructure as code"
       description: "Write infrastructure in TypeScript, Python, Go, C#, Java, or YAML (your choice), then deploy it anywhere with built-in policy enforcement and secrets management."
     - icon: "fa-robot"
-      title: "Neo, Your AI Platform Engineer"
+      title: "Neo, your AI platform engineer"
       description: "Watch our AI infrastructure agent handle the work platform teams actually need: upgrade all your clusters, migrate workloads across clouds, or implement security policies across your entire fleet. Neo understands your intent and executes complex infrastructure operations that would take hours manually."
     - icon: "fa-cloud"
-      title: "Multi-Cloud, One Platform"
+      title: "Many clouds, one platform"
       description: "Provision and manage Kubernetes resources across AWS, Azure, GCP, and on-prem with over 290 providers using a single workflow."
 
 two_column:
-  - label: "Talk to an Expert"
-    title: "Book a Kubernetes Demo"
-    description: "Schedule a demo with one of our solutions architects to share your specific Kubernetes challenges. 
+  - label: "Talk to an expert"
+    title: "Book a technical discussion"
+    description: "Schedule some booth time with one of our solutions architects to share your specific Kubernetes challenges.
     The session is tailored to your environment and can include reviewing your current setup, digging into workflow, governance, or scale concerns, and exploring solutions that fit your needs. The focus is on what you want to solve, not a generic walkthrough."
-    cta_text: "Book your demo"
+    cta_text: "Save your spot"
     cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
-  - label: "Attend a Technical Workshop"
+  - label: "Attend a hands-on workshop"
     title: "From Zero to Production in Kubernetes"
     subheader: "March 31, 2026 at 9 AM EST"
     description: |
@@ -69,27 +69,27 @@ two_column:
     cta_link: "/events/from-zero-to-production-in-kubernetes/"
 
 promo_banner:
-  title: "Get $500 in AWS Credits"
+  title: "Get $500 in AWS credits"
   description: "All KubeCon attendees who sign up for Pulumi Cloud receive $500 in AWS credits to use on their own infrastructure."
   cta_text: "Scan the QR code at the booth to get started."
   bg_image: "/images/kubecon/aws-credits-background.png"
 
 three_column:
   tag_line: "Why platform teams choose Pulumi"
-  title: "Infrastructure That Reduces Kubernetes Complexity"
+  title: "Tools that reduce Kubernetes complexity"
   columns:
     - icon: "fa-code"
-      title: "Stop Context-Switching"
+      title: "Stop context-switching"
       description: "Your team already knows Python, TypeScript, or Go. Use those skills to provision infrastructure instead of learning another DSL. BMW's platform engineering team ramped new hires in 2-3 days using their existing Python knowledge."
       cta_text: "See examples"
       cta_link: "https://www.pulumi.com/product/infrastructure-as-code/"
     - icon: "fa-check"
-      title: "Keep What Works"
+      title: "Keep what works"
       description: "Using Terraform already? Pulumi Cloud manages your existing Terraform and OpenTofu state files. No migration required. Start new projects with Pulumi and convert legacy infrastructure when it makes sense for your team."
       cta_text: "Migration guide"
       cta_link: "https://www.pulumi.com/docs/iac/guides/migration/"
     - icon: "fa-robot"
-      title: "Ship AI Workloads Confidently"
+      title: "Ship AI workloads confidently"
       description: "41% of AI developers are moving to cloud-native infrastructure. Teams need predictable ways to provision GPU resources, manage model deployments, and scale inference workloads. Pulumi provides the infrastructure foundation AI teams depend on."
       cta_text: "Explore AI"
       cta_link: "https://www.pulumi.com/product/superintelligence-infrastructure/"
@@ -104,7 +104,7 @@ testimonial:
 
 location:
   tag_line: "Venue & location"
-  title: "Where to Find Us"
+  title: "Where to find us"
   location: |
     Booth [TBD], Amsterdam RAI<br>
     March 23-26, 2026
@@ -114,10 +114,9 @@ location:
   cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
 
 footer_cta:
-  title: "The Infrastructure-as-Code platform for any cloud."
-  cta_primary_text: "Try Pulumi for free"
+  title: "The infrastructure as code platform for any cloud."
+  cta_primary_text: "Try Pulumi"
   cta_primary_link: "/signup"
   cta_secondary_text: "Contact sales"
   cta_secondary_link: "/contact"
 ---
-
