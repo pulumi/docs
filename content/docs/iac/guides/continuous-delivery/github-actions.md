@@ -893,7 +893,7 @@ jobs:
 
 ### Caching Plugins and Policy Packs
 
-When running Pulumi in GitHub Actions, plugins and policy packs are downloaded on each workflow run. To improve CI performance and reduce workflow execution times, you can cache these artifacts using GitHub's [`actions/cache`](https://github.com/actions/cache).
+GitHub Actions downloads plugins and policy packs on each workflow run. To improve CI performance and reduce workflow execution times, you can cache these artifacts using GitHub's [`actions/cache`](https://github.com/actions/cache).
 
 Pulumi stores plugins in `~/.pulumi/plugins` and policy packs in `~/.pulumi/policies`. By caching these directories, subsequent workflow runs can skip downloading plugins and policies that have already been fetched, significantly reducing the time spent in the setup phase.
 
@@ -1083,7 +1083,7 @@ jobs:
 
 {{< /chooser >}}
 
-The cache key includes a hash of your dependency files (e.g., `package.json`, `requirements.txt`, `go.sum`, or `.csproj`) to ensure the cache is invalidated when your project dependencies change, which may require different plugins. The `restore-keys` fallback allows the cache to be used even if there isn't an exact match, providing benefit in most scenarios.
+The cache key includes a hash of your dependency files (e.g., `package.json`, `requirements.txt`, `go.sum`, or `.csproj`) to invalidate the cache when dependencies change and may require different plugins. The `restore-keys` fallback allows the cache to be used even if there isn't an exact match, providing benefit in most scenarios.
 
 {{% notes type="info" %}}
 If your workflow uses multiple language runtimes or has specific versioning requirements, you can create more sophisticated cache keys by incorporating additional environment variables. For example, you might include the Python version, Node.js version, or GitHub Actions runner image version in your cache key to ensure compatibility.
