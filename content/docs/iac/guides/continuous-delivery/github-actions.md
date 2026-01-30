@@ -891,205 +891,204 @@ jobs:
 
 {{< /chooser >}}
 
-    ### Caching Plugins and Policy Packs
-    
-    When running Pulumi in GitHub Actions, plugins and policy packs are downloaded on each workflow run. To improve CI performance and reduce workflow execution times, you can cache these artifacts using GitHub's [`actions/cache`](https://github.com/actions/cache).
-    
-    Pulumi stores plugins in `~/.pulumi/plugins` and policy packs in `~/.pulumi/policies`. By caching these directories, subsequent workflow runs can skip downloading plugins and policies that have already been fetched, significantly reducing the time spent in the setup phase.
-    
-    Here's an example workflow that caches both plugins and policy packs:
-    
-    {{< chooser language "typescript,python,go,csharp" >}}
-    
-    {{% choosable language typescript %}}
-    
-    ```yaml
-    name: Pulumi
-    on:
-      - pull_request
-    jobs:
-      preview:
-        name: Preview
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v4
-          - uses: actions/setup-node@v4
-            with:
-              node-version-file: package.json
-          - name: Configure AWS Credentials
-            uses: aws-actions/configure-aws-credentials@v4
-            with:
-              aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              aws-region: ${{ secrets.AWS_REGION }}
-              aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          - name: Cache Pulumi plugins
-            uses: actions/cache@v4
-            with:
-              path: ~/.pulumi/plugins
-              key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('**/package.json') }}
-              restore-keys: |
-                ${{ runner.os }}-pulumi-plugins-
-          - name: Cache Pulumi policy packs
-            uses: actions/cache@v4
-            with:
-              path: ~/.pulumi/policies
-              key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('**/package.json') }}
-              restore-keys: |
-                ${{ runner.os }}-pulumi-policies-
-          - run: npm install
-          - uses: pulumi/actions@v6
-            with:
-              command: preview
-              stack-name: org-name/stack-name
-            env:
-              PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-    ```
-    
-    {{% /choosable %}}
-    {{% choosable language python %}}
-    
-    ```yaml
-    name: Pulumi
-    on:
-      - pull_request
-    jobs:
-      preview:
-        name: Preview
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v4
-          - uses: actions/setup-python@v5
-            with:
-              python-version: 3.11
-          - name: Configure AWS Credentials
-            uses: aws-actions/configure-aws-credentials@v4
-            with:
-              aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              aws-region: ${{ secrets.AWS_REGION }}
-              aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          - name: Cache Pulumi plugins
-            uses: actions/cache@v4
-            with:
-              path: ~/.pulumi/plugins
-              key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('requirements.txt') }}
-              restore-keys: |
-                ${{ runner.os }}-pulumi-plugins-
-          - name: Cache Pulumi policy packs
-            uses: actions/cache@v4
-            with:
-              path: ~/.pulumi/policies
-              key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('requirements.txt') }}
-              restore-keys: |
-                ${{ runner.os }}-pulumi-policies-
-          - run: pip install -r requirements.txt
-          - uses: pulumi/actions@v6
-            with:
-              command: preview
-              stack-name: org-name/stack-name
-            env:
-              PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-    ```
-    
-    {{% /choosable %}}
-    {{% choosable language go %}}
-    
-    ```yaml
-    name: Pulumi
-    on:
-      - pull_request
-    jobs:
-      preview:
-        name: Preview
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v4
-          - uses: actions/setup-go@v5
-            with:
-              go-version: 'stable'
-          - name: Configure AWS Credentials
-            uses: aws-actions/configure-aws-credentials@v4
-            with:
-              aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              aws-region: ${{ secrets.AWS_REGION }}
-              aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          - name: Cache Pulumi plugins
-            uses: actions/cache@v4
-            with:
-              path: ~/.pulumi/plugins
-              key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('go.sum') }}
-              restore-keys: |
-                ${{ runner.os }}-pulumi-plugins-
-          - name: Cache Pulumi policy packs
-            uses: actions/cache@v4
-            with:
-              path: ~/.pulumi/policies
-              key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('go.sum') }}
-              restore-keys: |
-                ${{ runner.os }}-pulumi-policies-
-          - run: go mod download
-          - uses: pulumi/actions@v6
-            with:
-              command: preview
-              stack-name: org-name/stack-name
-            env:
-              PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-    ```
-    
-    {{% /choosable %}}
-    {{% choosable language csharp %}}
-    
-    ```yaml
-    name: Pulumi
-    on:
-      - pull_request
-    jobs:
-      preview:
-        name: Preview
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v4
-          - uses: actions/setup-dotnet@v3
-            with:
-              dotnet-version: 6.0.x
-          - name: Configure AWS Credentials
-            uses: aws-actions/configure-aws-credentials@v4
-            with:
-              aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              aws-region: ${{ secrets.AWS_REGION }}
-              aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          - name: Cache Pulumi plugins
-            uses: actions/cache@v4
-            with:
-              path: ~/.pulumi/plugins
-              key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('**/*.csproj') }}
-              restore-keys: |
-                ${{ runner.os }}-pulumi-plugins-
-          - name: Cache Pulumi policy packs
-            uses: actions/cache@v4
-            with:
-              path: ~/.pulumi/policies
-              key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('**/*.csproj') }}
-              restore-keys: |
-                ${{ runner.os }}-pulumi-policies-
-          - uses: pulumi/actions@v6
-            with:
-              command: preview
-              stack-name: org-name/stack-name
-            env:
-              PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-    ```
-    
-    {{% /choosable %}}
-    
-    {{< /chooser >}}
-    
-    The cache key includes a hash of your dependency files (e.g., `package.json`, `requirements.txt`, `go.sum`, or `.csproj`) to ensure the cache is invalidated when your project dependencies change, which may require different plugins. The `restore-keys` fallback allows the cache to be used even if there isn't an exact match, providing benefit in most scenarios.
-    
-    {{% notes type="info" %}}
-    If your workflow uses multiple language runtimes or has specific versioning requirements, you can create more sophisticated cache keys by incorporating additional environment variables. For example, you might include the Python version, Node.js version, or GitHub Actions runner image version in your cache key to ensure compatibility.
-    {{% /notes %}}
-    
-    
+### Caching Plugins and Policy Packs
+
+When running Pulumi in GitHub Actions, plugins and policy packs are downloaded on each workflow run. To improve CI performance and reduce workflow execution times, you can cache these artifacts using GitHub's [`actions/cache`](https://github.com/actions/cache).
+
+Pulumi stores plugins in `~/.pulumi/plugins` and policy packs in `~/.pulumi/policies`. By caching these directories, subsequent workflow runs can skip downloading plugins and policies that have already been fetched, significantly reducing the time spent in the setup phase.
+
+Here's an example workflow that caches both plugins and policy packs:
+
+{{< chooser language "typescript,python,go,csharp" >}}
+
+{{% choosable language typescript %}}
+
+```yaml
+name: Pulumi
+on:
+  - pull_request
+jobs:
+  preview:
+    name: Preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Cache Pulumi plugins
+        uses: actions/cache@v4
+        with:
+          path: ~/.pulumi/plugins
+          key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-pulumi-plugins-
+      - name: Cache Pulumi policy packs
+        uses: actions/cache@v4
+        with:
+          path: ~/.pulumi/policies
+          key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-pulumi-policies-
+      - run: npm install
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: org-name/stack-name
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```yaml
+name: Pulumi
+on:
+  - pull_request
+jobs:
+  preview:
+    name: Preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Cache Pulumi plugins
+        uses: actions/cache@v4
+        with:
+          path: ~/.pulumi/plugins
+          key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pulumi-plugins-
+      - name: Cache Pulumi policy packs
+        uses: actions/cache@v4
+        with:
+          path: ~/.pulumi/policies
+          key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pulumi-policies-
+      - run: pip install -r requirements.txt
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: org-name/stack-name
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```yaml
+name: Pulumi
+on:
+  - pull_request
+jobs:
+  preview:
+    name: Preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Cache Pulumi plugins
+        uses: actions/cache@v4
+        with:
+          path: ~/.pulumi/plugins
+          key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-pulumi-plugins-
+      - name: Cache Pulumi policy packs
+        uses: actions/cache@v4
+        with:
+          path: ~/.pulumi/policies
+          key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-pulumi-policies-
+      - run: go mod download
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: org-name/stack-name
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```yaml
+name: Pulumi
+on:
+  - pull_request
+jobs:
+  preview:
+    name: Preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Cache Pulumi plugins
+        uses: actions/cache@v4
+        with:
+          path: ~/.pulumi/plugins
+          key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-pulumi-plugins-
+      - name: Cache Pulumi policy packs
+        uses: actions/cache@v4
+        with:
+          path: ~/.pulumi/policies
+          key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-pulumi-policies-
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: org-name/stack-name
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+The cache key includes a hash of your dependency files (e.g., `package.json`, `requirements.txt`, `go.sum`, or `.csproj`) to ensure the cache is invalidated when your project dependencies change, which may require different plugins. The `restore-keys` fallback allows the cache to be used even if there isn't an exact match, providing benefit in most scenarios.
+
+{{% notes type="info" %}}
+If your workflow uses multiple language runtimes or has specific versioning requirements, you can create more sophisticated cache keys by incorporating additional environment variables. For example, you might include the Python version, Node.js version, or GitHub Actions runner image version in your cache key to ensure compatibility.
+{{% /notes %}}
+
 ## Migrating from GitHub Action v1
 
 If you previously used GitHub Action v1, the following are changes you should know about when migrating from v1 to v2:
