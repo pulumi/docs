@@ -891,11 +891,11 @@ jobs:
 
 {{< /chooser >}}
 
-### Caching Plugins and Policy Packs
+### Caching plugins and policy packs
 
 GitHub Actions downloads plugins and policy packs on each workflow run. To improve CI performance and reduce workflow execution times, you can cache these artifacts using GitHub's [`actions/cache`](https://github.com/actions/cache).
 
-Pulumi stores plugins in `~/.pulumi/plugins` and policy packs in `~/.pulumi/policies`. By caching these directories, subsequent workflow runs can skip downloading plugins and policies that have already been fetched, significantly reducing the time spent in the setup phase.
+Pulumi stores plugins in `~/.pulumi/plugins` and policy packs in `~/.pulumi/policies`. By caching these directories, subsequent workflow runs skip re-downloading plugins and policies, significantly reducing setup time.
 
 Here's an example workflow that caches both plugins and policy packs:
 
