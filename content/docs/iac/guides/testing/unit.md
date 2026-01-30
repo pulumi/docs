@@ -39,8 +39,6 @@ Throughout this guide, we are testing a program that creates a simple AWS EC2-ba
 - Instances must not use an inline `userData` script&mdash;we must use a virtual machine image.
 - Instances must not have SSH open to the Internet.
 
-Our starting code is loosely based on the [aws-js-webserver example](https://github.com/pulumi/examples/tree/master/aws-js-webserver):
-
 {{< notes >}}
 Choose a language below to adjust the contents of this guide. Your choice is applied throughout the guide.
 {{< /notes >}}
