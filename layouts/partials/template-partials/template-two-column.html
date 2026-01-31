@@ -1,0 +1,17 @@
+{{/*
+    Template Two Column Partial
+
+    Parameters:
+    - columns: Array of column objects
+      Example: [{"label": "Label", "title": "Title", "description": "Description", "cta_text": "CTA", "cta_link": "/link"}]
+*/}}
+
+{{ $columns := .columns }}
+
+<section class="template-two-column">
+    <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+        {{ range $columns }}
+        {{ partial "template-partials/template-card.html" . }}
+        {{ end }}
+    </div>
+</section>

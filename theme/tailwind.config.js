@@ -179,6 +179,9 @@ module.exports = {
             colors: {
                 'cache-bust-2025-12': '#000001',
             },
+            lineHeight: {
+                'extra-tight': '1.1',
+            }
         },
         rgbColors: {
             gray: colorFamilyToRGB(gray),
