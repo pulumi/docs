@@ -295,13 +295,147 @@ See also the use of multiple projects and stacks in [Crosswalk for Kubernetes](/
 
 ## Organizing your project code
 
-Within your Pulumi project, there are good practices to consider to help keep your code organized, maintainable, and understandable.
+Within your Pulumi project, there are good practices to consider to help keep your code organized, maintainable, and understandable. While Pulumi doesn't enforce a specific project structure, following consistent patterns makes your infrastructure code easier to navigate, review, and maintain.
+
+### Common project structures
+
+Here are several approaches to organizing files within a Pulumi project, each with different tradeoffs:
+
+#### Flat structure (simple projects)
+
+For smaller projects with a handful of resources, a flat structure works well:
+
+```
+my-project/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── index.ts          # Main entrypoint
+└── config.ts         # Config helpers and constants
+```
+
+**When to use:** Small projects, prototypes, or single-purpose stacks with fewer than ~20 resources.
+
+#### Organized by resource layer
+
+For most projects, keep the majority of your resources in your main entrypoint file (e.g., `index.ts`). Use separate files primarily for:
+
+* **Local component resources** - Reusable components you create within your project
+* **Shared libraries** - Helper functions and utilities
+* **Structured config classes** - Complex configuration structures
+
+If your project grows large enough that splitting by infrastructure layer seems necessary, consider whether you should instead split into multiple Pulumi projects with [stack references](/docs/concepts/stack#stackreferences). This provides better separation of concerns, independent deployment cadences, and clearer ownership boundaries.
+
+For projects where layer-based organization makes sense:
+
+```
+my-project/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── index.ts              # Main entrypoint with most resources
+├── components.ts         # Local component resources
+└── config.ts             # Configuration helpers
+```
+
+**When to use:** Use this approach sparingly. If you have many resources that seem to require separate files (networking.ts, compute.ts, storage.ts, etc.), you likely need separate Pulumi projects instead.
+
+#### Organized by service/feature
+
+For projects that deploy multiple logical services:
+
+```
+my-project/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── index.ts              # Main entrypoint - imports and composes all services
+├── shared/
+│   ├── networking.ts     # Shared VPC, DNS
+│   └── iam.ts            # Shared IAM resources
+├── api/
+│   ├── index.ts          # API Gateway, Lambda functions
+│   └── routes.ts         # Route definitions
+├── web/
+│   ├── index.ts          # CloudFront, S3 bucket
+│   └── cdn.ts            # CDN configuration
+└── data/
+    ├── index.ts          # Database resources
+    └── migrations.ts     # Migration helpers
+```
+
+**When to use:** Applications with multiple distinct components that share some common infrastructure.
+
+### Pulumi-specific organization tips
+
+#### Configuration helpers
+
+Consider creating a dedicated file for reading configuration. This is optional for simple projects where inline config in your main file works well, but becomes helpful as your project grows:
+
+```typescript
+// config.ts
+import * as pulumi from "@pulumi/pulumi";
+
+const config = new pulumi.Config();
+
+export const environment = pulumi.getStack();
+export const region = config.require("region");
+export const instanceSize = config.get("instanceSize") || "t3.medium";
+```
+
+#### Application code alongside infrastructure
+
+If your Pulumi project contains application code (such as Lambda functions or Docker images), organize it into clearly labeled directories separate from your infrastructure code.
+
+For serverless applications:
+
+```
+my-project/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── index.ts              # Infrastructure definitions (API Gateway, Lambda resources)
+├── app/                  # Application code
+│   └── lambda/           # Lambda function source
+│       └── handler.ts
+└── scripts/              # Build and deployment scripts
+    └── build.sh
+```
+
+For containerized applications:
+
+```
+my-project/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── Makefile              # Orchestrates build and deployment
+├── app/                  # Application code
+│   ├── Dockerfile
+│   └── src/
+│       └── index.js
+└── infra/                # Pulumi infrastructure code
+    └── index.ts          # Container registry, ECS/K8s resources
+```
+
+### When to split into separate projects
+
+Consider moving code to a separate Pulumi project when you have:
+
+* **Different deployment cadences:** Database schemas change rarely while application code changes daily
+* **Different owners:** A platform team manages core infrastructure while app teams manage their services
+* **Different security requirements:** Sensitive resources (like KMS keys) need stricter access controls
+* **Performance:** Very large projects (hundreds of resources) may benefit from splitting to reduce deployment time
+
+Use [stack references](/docs/concepts/stack#stackreferences) to share outputs between projects.
+
+### Breaking out reusable code
 
 {{< chooser language "typescript,go" / >}}
 
 {{% choosable language typescript %}}
 
-Organize your code in a way that makes it easy to understand and maintain. One way to do this in Typescript is to break out your code into separate files, and then import them into your main file. In this example, the entrypoint for our Pulumi program is `index.ts`, but we use the `utils.ts` file for supporting functions.
+Organize your code in a way that makes it easy to understand and maintain. One way to do this in TypeScript is to break out your code into separate files, and then import them into your main file. In this example, the entrypoint for our Pulumi program is `index.ts`, but we use the `utils.ts` file for supporting functions.
 
 ```typescript
 // index.ts

@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-guides
     identifier: esc-guides-managing-secrets
-    weight: 2
+    weight: 30
 aliases:
   - /docs/esc/get-started/store-and-retrieve-secrets/
   - /docs/pulumi-cloud/esc/get-started/store-and-retrieve-secrets/

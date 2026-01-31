@@ -19,21 +19,21 @@ This guide walks through setting up automated testing and publishing workflows t
 ## Prerequisites
 
 - A Pulumi component authored and working locally (see [Build a Component](/docs/iac/using-pulumi/build-a-component))
-- A [GitHub repository](https://github.com/pulumi/pulumi-component-lifecycle-example) containing your component code
+- A [GitHub repository](https://github.com/pulumi-labs/pulumi-component-lifecycle-example) containing your component code
 - Access to a [Pulumi Cloud private registry](/docs/idp/get-started/private-registry)
 - Configure Pulumi and GitHub integrations: [OIDC](/docs/administration/access-identity/oidc-client/github/), [GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/), etc.
-- Component [documentation](https://github.com/pulumi/pulumi-component-lifecycle-example#static-page-component) written and committed to your repository
+- Component [documentation](https://github.com/pulumi-labs/pulumi-component-lifecycle-example#static-page-component) written and committed to your repository
 
 ## Development Workflow Overview
 
 The recommended workflow for developing and publishing components follows these stages:
 
 1. **Local Development**: Author your component using a [local development workflow](/docs/iac/using-pulumi/build-a-component)
-2. **Repository Setup**: Create a [GitHub repository](https://github.com/pulumi/pulumi-component-lifecycle-example) with proper documentation
+2. **Repository Setup**: Create a [GitHub repository](https://github.com/pulumi-labs/pulumi-component-lifecycle-example) with proper documentation
 3. **Testing Infrastructure**: Write [comprehensive unit and integration tests](/docs/iac/concepts/components/testing-components)
-4. **Automated Testing**: Set up [GitHub Actions](https://github.com/pulumi/pulumi-component-lifecycle-example/tree/main/.github/workflows/test.yml) for continuous testing
+4. **Automated Testing**: Set up [GitHub Actions](https://github.com/pulumi-labs/pulumi-component-lifecycle-example/tree/main/.github/workflows/test.yml) for continuous testing
 5. **Versioned Releases**: Create semantic [versioned releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) on GitHub
-6. **Automated Publishing**: Automate the [release and publishing](https://github.com/pulumi/pulumi-component-lifecycle-example/tree/main/.github/workflows/release.yml) process
+6. **Automated Publishing**: Automate the [release and publishing](https://github.com/pulumi-labs/pulumi-component-lifecycle-example/tree/main/.github/workflows/release.yml) process
 
 ## Repository Structure
 
@@ -58,7 +58,7 @@ We recommend *one component per repository*, rather than a single repository for
 
 ## Example Component Repository
 
-For the purposes of this documentation, please refer to the [example component repository](https://github.com/pulumi/pulumi-component-lifecycle-example). This GitHub repo contains the component code, tests, and GitHub Actions described here. If you'd like to follow along, pull this repo locally as a reference.
+For the purposes of this documentation, please refer to the [example component repository](https://github.com/pulumi-labs/pulumi-component-lifecycle-example). This GitHub repo contains the component code, tests, and GitHub Actions described here. If you'd like to follow along, pull this repo locally as a reference.
 
 ### Create a Makefile
 

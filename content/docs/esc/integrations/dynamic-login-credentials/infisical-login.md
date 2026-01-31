@@ -33,7 +33,7 @@ values:
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Infisical, see
-the [OpenID Connect integration](/docs/esc/environments/configuring-oidc/infisical/) documentation.
+the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/infisical/) documentation.
 
 ## Inputs
 
@@ -48,7 +48,7 @@ the [OpenID Connect integration](/docs/esc/environments/configuring-oidc/infisic
 | Property            | Type     | Description                                                                                                                                                                                              |
 |---------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `identityId`        | string   | The identityId of the Identity to assume.                                                                                                                                                                |
-| `subjectAttributes` | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/environments/configuring-oidc/#custom-token-claim) documentation |
+| `subjectAttributes` | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim) documentation |
 
 ### InfisicalLoginStatic
 

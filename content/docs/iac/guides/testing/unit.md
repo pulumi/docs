@@ -39,8 +39,6 @@ Throughout this guide, we are testing a program that creates a simple AWS EC2-ba
 - Instances must not use an inline `userData` script&mdash;we must use a virtual machine image.
 - Instances must not have SSH open to the Internet.
 
-Our starting code is loosely based on the [aws-js-webserver example](https://github.com/pulumi/examples/tree/master/aws-js-webserver):
-
 {{< notes >}}
 Choose a language below to adjust the contents of this guide. Your choice is applied throughout the guide.
 {{< /notes >}}
@@ -257,13 +255,50 @@ import * as pulumi from "@pulumi/pulumi";
 
 pulumi.runtime.setMocks({
     newResource: function(args: pulumi.runtime.MockResourceArgs): {id: string, state: any} {
-        return {
-            id: args.inputs.name + "_id",
-            state: args.inputs,
-        };
+        switch (args.type) {
+            case "aws:ec2/securityGroup:SecurityGroup":
+                return {
+                    id: "sg-12345678",
+                    state: {
+                        ...args.inputs,
+                        // Mock output properties that may be used in tests
+                        arn: "arn:aws:ec2:us-west-2:123456789012:security-group/sg-12345678",
+                        name: args.inputs.name || args.name + "-sg",
+                    },
+                };
+            case "aws:ec2/instance:Instance":
+                return {
+                    id: "i-1234567890abcdef0",
+                    state: {
+                        ...args.inputs,
+                        // Mock output properties that may be used in tests
+                        arn: "arn:aws:ec2:us-west-2:123456789012:instance/i-1234567890abcdef0",
+                        instanceState: "running",
+                        primaryNetworkInterfaceId: "eni-12345678",
+                        privateDns: "ip-10-0-1-17.ec2.internal",
+                        publicDns: "ec2-203-0-113-12.compute-1.amazonaws.com",
+                        publicIp: "203.0.113.12",
+                    },
+                };
+            default:
+                return {
+                    id: args.inputs.name + "_id",
+                    state: {
+                        ...args.inputs,
+                    },
+                };
+        }
     },
     call: function(args: pulumi.runtime.MockCallArgs) {
-        return args.inputs;
+        switch (args.token) {
+            case "aws:ec2/getAmi:getAmi":
+                return {
+                    "architecture": "x86_64",
+                    "id": "ami-0eb1f3cdeeb8eed2a",
+                };
+            default:
+                return args.inputs;
+        }
     },
 },
   "project",
@@ -271,6 +306,13 @@ pulumi.runtime.setMocks({
   false, // Sets the flag `dryRun`, which indicates if pulumi is running in preview mode.
 );
 ```
+
+The mock implementation uses a `switch` statement to return different properties based on resource type. This is important because:
+
+- **Input properties** (like `tags`, `userData`, `ingress`) are set by your code and passed via `args.inputs`
+- **Output properties** (like `arn`, `publicIp`, `instanceState`) are computed by the cloud provider and need to be mocked explicitly
+
+The tests shown later in this guide access both input properties (spread from `args.inputs`) and output properties (like `arn` and `publicIp`). Without mocking these output properties, they would be `undefined` in your tests.
 
 {{% /choosable %}}
 
@@ -1207,6 +1249,26 @@ Total tests: 3
 {{% /choosable %}}
 
 All the tests passed!
+
+## Limitations
+
+When using mocks for unit testing, it's important to understand that the mock server does not implement the full Pulumi engine. This means certain features that rely on the engine's deployment orchestration will not execute during mock-based tests.
+
+### Lifecycle hooks and transforms
+
+Lifecycle hooks and resource transforms are not executed in mock tests. While your program can register hooks and transforms with the mock server, they will not actually run during test execution.
+
+This limitation exists because implementing full hook and transform support would require reimplementing significant portions of the Pulumi engine in each language SDK. Since mocks are designed to run fast and deterministically without external dependencies, this trade-off is intentional.
+
+**How to handle this in tests:**
+
+If your program uses lifecycle hooks or transforms, structure your tests to work around this limitation:
+
+1. **Test the logic separately**: Extract the logic from hooks and transforms into standalone functions that can be unit tested independently.
+1. **Mock the expected outcomes**: Configure your mocks to return resource state that reflects what would happen after hooks or transforms execute.
+1. **Use integration tests**: For end-to-end validation of hook and transform behavior, use integration tests that deploy actual resources to a testing environment.
+
+For example, if you have a transform that adds default tags to all resources, your mock's `newResource` function can return resource state that already includes those tags, simulating the transform's effect without actually executing it.
 
 ## Full Example
 
