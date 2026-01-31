@@ -4,7 +4,7 @@ import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
-import { getAIAnswersRewriteAssociation, getEdgeRedirectAssociation, getMarkdownContentNegotiationAssociation } from "./cloudfrontLambdaAssociations";
+import { getAIAnswersRewriteAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 
 const stackConfig = new pulumi.Config();
 
@@ -34,10 +34,6 @@ const config = {
     // (e.g., due to unpublishing) as HTTP 410 (Gone). Setting this true will add a Lambda@Edge
     // function that handles this logic.
     doAIAnswersRewrites: stackConfig.getBoolean("doAIAnswersRewrites") || false,
-    // doMarkdownContentNegotiation indicates whether to serve markdown versions of docs pages
-    // when the Accept header includes text/markdown. Setting this true will add a Lambda@Edge
-    // function that handles content negotiation.
-    doMarkdownContentNegotiation: stackConfig.getBoolean("doMarkdownContentNegotiation") || false,
     // makeFallbackBucket toggles whether to configure a bucket for serving the website
     // directly out of S3 --- for example, when CloudFront is unavailable. In order to
     // comply with AWS configuration rules, the bucket will be named to match the
@@ -445,29 +441,6 @@ const SecurityHeadersPolicy = newSecurityHeadersPolicy('security-headers', confi
 // Copilot lives in an iframe
 const CopilotSecurityHeadersPolicy = newSecurityHeadersPolicy('copilot-security-headers', 'SAMEORIGIN');
 
-// Cache policy for docs that varies on Accept header to support content negotiation
-const docsCachePolicy = new aws.cloudfront.CachePolicy("docs-cache-policy", {
-    minTtl: 0,
-    defaultTtl: fiveMinutes,
-    maxTtl: fiveMinutes,
-    parametersInCacheKeyAndForwardedToOrigin: {
-        cookiesConfig: {
-            cookieBehavior: "none",
-        },
-        headersConfig: {
-            headerBehavior: "whitelist",
-            headers: {
-                items: ["Accept"],
-            },
-        },
-        queryStringsConfig: {
-            queryStringBehavior: "none",
-        },
-        enableAcceptEncodingGzip: true,
-        enableAcceptEncodingBrotli: true,
-    },
-});
-
 const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
     compress: true,
@@ -647,17 +620,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     orderedCacheBehaviors: [
-        // Docs content negotiation for markdown
-        ...(config.doMarkdownContentNegotiation ? [{
-            ...baseCacheBehavior,
-            pathPattern: "/docs/*",
-            cachePolicyId: docsCachePolicy.id,
-            lambdaFunctionAssociations: [
-                ...(config.doEdgeRedirects ? [getEdgeRedirectAssociation()] : []),
-                getMarkdownContentNegotiationAssociation(),
-            ],
-            forwardedValues: undefined,
-        }] : []),
         ...registryBehaviors,
         ...guidesBehaviors,
         ...answersBehaviors,

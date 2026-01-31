@@ -1341,8 +1341,10 @@ The repository includes 9 additional utility workflows for automation and projec
 
 **AI-Assisted Development:**
 
-- **claude.yml**: AI-assisted code analysis and suggestions
+- **claude.yml**: AI-assisted code analysis and suggestions (triggered by @claude mentions in issues/PRs)
 - **claude-code-review.yml**: AI-powered code review automation for pull requests
+
+Both workflows include a permission check step that verifies the triggering user has write access to the repository before running Claude. Users without write access will see the workflow skip Claude execution.
 
 **Project Management:**
 
@@ -1559,81 +1561,6 @@ const edgeRedirects = new aws.lambda.Function("edge-redirects", {
 **Applied To:** `/ai/answers/*` paths
 
 **Why:** Informs search engines that AI answers are intentionally unpublished
-
-**3. Markdown Content Negotiation**
-
-**Event Type:** origin-request
-
-**Purpose:** Serve markdown versions of docs pages when requested via Accept header
-
-**Applied To:** `/docs/*` paths (when `doMarkdownContentNegotiation` config is enabled)
-
-**Configuration:**
-
-```typescript
-const markdownNegotiationLambda = new LambdaEdge("markdown-negotiation", {
-    func: getMarkdownContentNegotiationCallback(),
-    funcDescription: "Lambda function that serves markdown when Accept: text/markdown header is present.",
-}, { provider: usEast1Provider });
-```
-
-**How It Works:**
-
-1. Intercepts requests to `/docs/*` paths at CloudFront edge
-1. Checks if Accept header contains `text/markdown`
-1. Rewrites URL from `/docs/path/` to `/docs/path/index.md`
-1. Rewrites URL from `/docs/path` to `/docs/path/index.md`
-1. Returns original request if not a markdown request or already ends in `.md`
-
-**Cache Policy:**
-
-The docs content negotiation feature uses a dedicated CloudFront cache policy that varies on the Accept header:
-
-```typescript
-const docsCachePolicy = new aws.cloudfront.CachePolicy("docs-cache-policy", {
-    minTtl: 0,
-    defaultTtl: fiveMinutes,
-    maxTtl: fiveMinutes,
-    parametersInCacheKeyAndForwardedToOrigin: {
-        headersConfig: {
-            headerBehavior: "whitelist",
-            headers: {
-                items: ["Accept"],
-            },
-        },
-    },
-});
-```
-
-This ensures that:
-
-- HTML and markdown versions are cached separately
-- Clients receive the correct format based on their Accept header
-- Cache keys include the Accept header value
-
-**Enabling/Disabling:**
-
-Control via Pulumi stack config:
-
-```bash
-# Enable markdown content negotiation
-pulumi config set doMarkdownContentNegotiation true
-
-# Disable markdown content negotiation (default)
-pulumi config set doMarkdownContentNegotiation false
-```
-
-**Use Cases:**
-
-- LLM tools (ChatGPT, Claude) can request markdown versions via Accept header
-- Provides cleaner, more semantic content for AI analysis
-- Maintains backward compatibility (HTML served by default)
-
-**Implementation Files:**
-
-- Lambda function: `infrastructure/cloudfrontLambdaAssociations.ts` (lines 117-140)
-- Cache behavior: `infrastructure/index.ts` (lines 650-660)
-- Hugo markdown templates: `layouts/docs/single.md`, `layouts/docs/list.md`
 
 #### Route53 DNS
 
@@ -2055,7 +1982,6 @@ config:
   www.pulumi.com:addSecurityHeaders: "true"
   www.pulumi.com:doEdgeRedirects: "true"
   www.pulumi.com:doAIAnswersRewrites: "true"
-  www.pulumi.com:doMarkdownContentNegotiation: "true"
   www.pulumi.com:websiteDomain: www.pulumi.com
   www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-website-logs
   www.pulumi.com:hostedZone: www.pulumi.com
@@ -2077,7 +2003,6 @@ config:
   www.pulumi.com:addSecurityHeaders: "true"
   www.pulumi.com:doEdgeRedirects: "true"
   www.pulumi.com:doAIAnswersRewrites: "true"
-  www.pulumi.com:doMarkdownContentNegotiation: "true"
   www.pulumi.com:websiteDomain: www.pulumi-test.io
   www.pulumi.com:websiteLogsBucketName: pulumi-test-io-website-logs
   www.pulumi.com:hostedZone: www.pulumi-test.io
@@ -3009,6 +2934,7 @@ Lambda@Edge failures are often caused by bundling problems that aren't caught un
 - **Bundle size**: Lambda@Edge has strict limits (1MB compressed, 50MB uncompressed)
 
 **What to flag in reviews:**
+
 - Dependency updates that affect webpack, babel, or bundlers (especially major versions)
 - Changes to webpack configuration files
 - New dependencies in `package.json` used by Lambda@Edge code
@@ -3029,6 +2955,7 @@ Lambda@Edge failures are often caused by bundling problems that aren't caught un
 **Dependency Updates:**
 
 Large batches of dependency updates (especially Dependabot PRs with 20+ updates) increase risk:
+
 - Flag webpack/bundler updates for testing against Lambda@Edge bundling
 - Flag major version bumps for changelog review
 - Suggest splitting build tool updates into separate PRs
@@ -3036,6 +2963,7 @@ Large batches of dependency updates (especially Dependabot PRs with 20+ updates)
 ### Testing & Validation
 
 **For human reviewers to verify:**
+
 - Changes tested on pulumi-test.io staging environment
 - Lambda@Edge execution tested manually (not just deployment)
 - Critical pages return expected status codes (not 503/500)
@@ -3256,11 +3184,13 @@ This section provides comprehensive guidance for triaging and managing Dependabo
 **Schedule:** Monthly updates (first Monday at 09:00 UTC)
 
 **Ecosystems:**
+
 - npm (root, theme, stencil, infrastructure)
 - GitHub Actions
 - pip (Python dependencies)
 
 **Grouping Strategy:** Ultra-aggressive single catch-all group per ecosystem
+
 - Root: `all-dependencies` group captures all npm packages
 - Theme: `all-dependencies` group captures all theme packages
 - Stencil: `all-dependencies` group captures all stencil packages
@@ -3277,19 +3207,28 @@ This section provides comprehensive guidance for triaging and managing Dependabo
 
 ### Automated risk labeling
 
-All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHub Action workflow with:
+All Dependabot PRs automatically receive:
+
+**Dependabot-applied labels:**
+
+- `dependencies` - Standard label applied by Dependabot
+
+**Auto-applied labels (via label-dependabot.yml workflow):**
 
 **Risk Tier Labels:**
+
 - `deps-risk-high` - Runtime/browser/parser dependencies
 - `deps-risk-medium` - Build tools/infrastructure dependencies
 - `deps-risk-low` - Dev tools only
 
 **Action Labels:**
+
 - `deps-merge-after-test` - Test locally, then merge (HIGH risk or security patches)
 - `deps-security-patch` - Security update, merge immediately after testing
 - `deps-quarterly-review` - Close for batch review in quarterly cycle (MEDIUM/LOW risk)
 
 **Special Flags:**
+
 - `deps-lambda-edge-risk` - Webpack/bundler/AWS SDK updates (see Infrastructure Change Review)
 - `deps-bulk-update` - 10+ dependencies in single PR
 
@@ -3298,11 +3237,13 @@ All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHu
 #### HIGH RISK - Runtime/browser/parser dependencies
 
 **Characteristics:**
+
 - Execute in browser or server runtime
 - Parse user content or external data
 - Directly affect site functionality and user experience
 
 **Packages:**
+
 - **Search:** `@algolia/*`, `algoliasearch`, `search-insights`
 - **A/B Testing:** `@growthbook/*`
 - **Content Parsing:** `marked`, `markdown-it`, `js-yaml`, `cheerio`, `gray-matter`
@@ -3313,6 +3254,7 @@ All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHu
 **Triage Action:** `deps-merge-after-test`
 
 **Testing Checklist:**
+
 1. Run `make serve-all` and verify site loads
 1. Test search functionality (Algolia integration)
 1. Check browser console for errors
@@ -3323,11 +3265,13 @@ All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHu
 #### MEDIUM RISK - Build tools/infrastructure dependencies
 
 **Characteristics:**
+
 - Affect build process and bundling
 - Infrastructure as code dependencies
 - Lambda@Edge function dependencies (special attention required)
 
 **Packages:**
+
 - **Webpack Ecosystem:** `webpack*`, `*-loader`, `*-webpack-plugin*`
 - **CSS Processing:** `postcss*`, `sass*`, `cssnano`, `autoprefixer`, `@fullhuman/postcss-purgecss`, `tailwindcss`
 - **TypeScript:** `typescript`
@@ -3337,11 +3281,13 @@ All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHu
 **Triage Action:** `deps-quarterly-review` (unless security patch)
 
 **Special Considerations:**
+
 - **Lambda@Edge Risk:** Webpack, bundlers, and AWS SDK updates affect Lambda@Edge function size. See [Infrastructure Change Review](#infrastructure-change-review) section for deployment risks and 1MB compressed size limit.
 - **Build Performance:** CSS/PostCSS updates can affect build times
 - **TypeScript:** Breaking changes may require code updates
 
 **Quarterly Review Process:**
+
 1. Batch all MEDIUM-risk PRs from the quarter
 1. Test webpack/bundler updates first (Lambda@Edge size check)
 1. Test CSS processing updates second (build time check)
@@ -3351,12 +3297,14 @@ All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHu
 #### LOW RISK - Dev tools only
 
 **Characteristics:**
+
 - Testing and development tools
 - Code quality and formatting tools
 - Documentation generation tools
 - Local development servers
 
 **Packages:**
+
 - **Testing:** `cypress`, `jest*`, `puppeteer`
 - **Build Optimization:** `workbox-build`
 - **Code Quality:** `prettier`, `eslint*`, `markdownlint`, `husky`, `lint-staged`
@@ -3366,6 +3314,7 @@ All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHu
 **Triage Action:** `deps-quarterly-review`
 
 **Quarterly Review Process:**
+
 1. Batch all LOW-risk PRs from the quarter
 1. Quick smoke test: `make test && make lint`
 1. Merge all if tests pass
@@ -3376,25 +3325,30 @@ All Dependabot PRs are automatically labeled by the `label-dependabot.yml` GitHu
 On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (one per ecosystem). Follow this workflow:
 
 **Step 1: Check Labels (30 seconds per PR)**
+
 - Look at auto-applied risk tier and action labels
 - No need to read PR bodies initially—labels tell you everything
 
 **Step 2: Security Patches (Immediate)**
+
 - PRs with `deps-security-patch` label: Test and merge immediately
 - Run testing checklist for applicable risk tier
 - Merge within 24 hours
 
 **Step 3: HIGH Risk Runtime Dependencies (Same Day)**
+
 - PRs with `deps-risk-high` + `deps-merge-after-test` labels
 - Run HIGH risk testing checklist (see above)
 - Merge if tests pass, or debug and fix issues
 
 **Step 4: MEDIUM/LOW Risk Dependencies (Defer)**
+
 - PRs with `deps-quarterly-review` label
 - Close with comment: "Deferring to quarterly review cycle. Will batch with other MEDIUM/LOW-risk updates."
 - Do not merge monthly—wait for quarterly batch
 
 **Step 5: Lambda@Edge Risk Flag (Extra Attention)**
+
 - PRs with `deps-lambda-edge-risk` label
 - Cross-reference [Infrastructure Change Review](#infrastructure-change-review) section
 - Check Lambda@Edge function size after webpack/bundler updates
@@ -3407,6 +3361,7 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 **Schedule:** January, April, July, October (first week)
 
 **Process:**
+
 1. Review all closed PRs from past 3 months with `deps-quarterly-review` label
 1. Check if newer versions are available (Dependabot may have newer PRs open)
 1. Create consolidated testing branch with all MEDIUM/LOW updates
@@ -3426,6 +3381,7 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 **Labels:** Auto-labeled with `deps-security-patch` + applicable risk tier
 
 **Workflow:**
+
 1. Dependabot opens PR immediately (any time of month)
 1. Auto-labeling workflow adds `deps-security-patch` + risk tier
 1. Test using checklist for applicable risk tier
@@ -3433,6 +3389,7 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 1. Deploy to production immediately
 
 **Example:** CVE in `marked` (HIGH risk parser)
+
 - PR arrives immediately
 - Labels: `deps-security-patch`, `deps-risk-high`, `deps-merge-after-test`
 - Run HIGH risk testing checklist
@@ -3445,12 +3402,14 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 **Risk:** Higher chance of conflicts or breaking changes
 
 **Process:**
+
 1. Review PR carefully—don't rely solely on automated labels
 1. Check for major version updates within the bulk (may be hidden)
 1. Test more thoroughly than single-dependency updates
 1. Consider splitting into smaller batches if failures occur
 
 **Testing:**
+
 1. Full test suite: `make test && make lint`
 1. Local build: `make serve-all`
 1. Visual regression testing on key pages
@@ -3459,27 +3418,40 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 ### Cross-references
 
 **Lambda@Edge Deployment Risks:**
+
 - See [Infrastructure Change Review](#infrastructure-change-review) section
 - Webpack, bundlers, and AWS SDK updates affect Lambda@Edge function size
 - 1MB compressed size limit—test after bundler updates
 
 **Infrastructure Changes:**
+
 - Pulumi infrastructure updates (`@pulumi/*`, `@aws-sdk/*`)
 - See [Infrastructure Change Review](#infrastructure-change-review) for deployment process
 
 ### Known exceptions
 
 **Prettier v3.x:**
+
 - Ignored in root and theme `dependabot.yml`
 - Reason: Performance regression (5-10x slower than v2.x)
 - Revisit: When performance regression is fixed upstream
 
 **Tailwindcss Major Versions:**
+
 - Ignored in root and theme `dependabot.yml`
 - Reason: Breaking changes require manual migration
 - Revisit: During planned design system updates
 
+**pulumi/action-install-pulumi-cli:**
+
+- Ignored in `dependabot.yml` GitHub Actions section
+- Reason: v2+ has circular dependency on `versions.json` which the CLI release workflow creates
+- Current version: v1.0.1 (downloads directly from GitHub releases)
+- Usage: `.github/workflows/pulumi-cli.yml` only; `pulumi/actions` should be used elsewhere
+- Revisit: When action is fixed to support direct GitHub release downloads without `versions.json`
+
 **Major Versions (Wildcard):**
+
 - Ignored across all ecosystems via wildcard rule
 - Reason: Breaking changes require manual review and testing
 - Exception: Security patches override this rule
@@ -4097,4 +4069,3 @@ For deployments, also check:
 - Pulumi stack history
 
 ---
-
