@@ -1,6 +1,7 @@
 import { Component, Prop, State, h, Host, Element } from "@stencil/core";
 import * as clipboard from "clipboard-polyfill";
 import TurndownService from "turndown";
+import { gfm } from "turndown-plugin-gfm";
 
 @Component({
     tag: "pulumi-llm-menu",
@@ -18,10 +19,194 @@ export class LlmMenu {
     private turndown = new TurndownService({
         headingStyle: "atx",
         codeBlockStyle: "fenced",
+        bulletListMarker: "-",
+        emDelimiter: "*",
     });
 
     componentDidLoad() {
         document.addEventListener("click", this.handleClickOutside);
+
+        // Add GitHub Flavored Markdown support (tables, strikethrough, etc.)
+        this.turndown.use(gfm);
+
+        // Capture the base URL for converting relative URLs
+        const baseUrl = window.location.origin;
+
+        // Configure TurndownService to remove unwanted elements
+        this.turndown.remove([
+            "button",
+            "script",
+            "style",
+            "pulumi-tooltip",
+            ".copy-button-container",
+            ".example-program-footer",
+            "pulumi-chooser > ul"  // Remove chooser navigation tabs (but keep choosable content)
+        ]);
+
+        // Custom rule for code blocks to avoid "Copy" button artifacts
+        this.turndown.addRule("codeBlocks", {
+            filter: function(node) {
+                return node.nodeName === "DIV" &&
+                       node.classList.contains("highlight");
+            },
+            replacement: function(content, node) {
+                const codeElement = (node as HTMLElement).querySelector("code");
+                if (!codeElement) return content;
+
+                const language = Array.from(codeElement.classList)
+                    .find(cls => cls.startsWith("language-"))
+                    ?.replace("language-", "") || "";
+
+                const code = (codeElement.textContent || "").trim();
+                return `\n\`\`\`${language}\n${code}\n\`\`\`\n`;
+            }
+        });
+
+        // Custom rule for mermaid diagrams
+        this.turndown.addRule("mermaidDiagrams", {
+            filter: function(node) {
+                return node.nodeName === "PRE" &&
+                       node.classList.contains("mermaid");
+            },
+            replacement: function(_content, node) {
+                // Use preserved source if available, otherwise fall back to textContent
+                const element = node as HTMLElement;
+                const code = element.getAttribute('data-mermaid-source') || element.textContent || "";
+                return `\n\`\`\`mermaid\n${code.trim()}\n\`\`\`\n`;
+            }
+        });
+
+        // Custom rule for GoAT ASCII diagrams (rendered server-side, source not available)
+        this.turndown.addRule("goatDiagrams", {
+            filter: function(node) {
+                return node.nodeName === "DIV" &&
+                       node.classList.contains("goat");
+            },
+            replacement: function() {
+                return `\n\n*[ASCII Diagram - rendered as SVG]*\n\n`;
+            }
+        });
+
+        // Custom rule for links to convert relative URLs to absolute
+        this.turndown.addRule("absoluteLinks", {
+            filter: "a",
+            replacement: function(content, node) {
+                const href = (node as HTMLElement).getAttribute("href");
+                if (!href) return `[${content}]()`;
+
+                // Skip anchor links, mailto, and external links
+                if (href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("http")) {
+                    return `[${content}](${href})`;
+                }
+
+                // Convert relative URL to absolute
+                const absoluteUrl = baseUrl + (href.startsWith("/") ? href : "/" + href);
+                return `[${content}](${absoluteUrl})`;
+            }
+        });
+
+        // Custom rule for images to convert relative URLs to absolute
+        this.turndown.addRule("absoluteImages", {
+            filter: "img",
+            replacement: function(_content, node) {
+                const src = (node as HTMLElement).getAttribute("src");
+                const alt = (node as HTMLElement).getAttribute("alt") || "";
+                if (!src) return "";
+
+                // Skip external images
+                if (src.startsWith("http")) {
+                    return `![${alt}](${src})`;
+                }
+
+                // Convert relative URL to absolute
+                const absoluteUrl = baseUrl + (src.startsWith("/") ? src : "/" + src);
+                return `![${alt}](${absoluteUrl})`;
+            }
+        });
+
+        // Custom rule for choosable sections to add labels
+        this.turndown.addRule("choosable", {
+            filter: function(node) {
+                return node.nodeName === "PULUMI-CHOOSABLE";
+            },
+            replacement: function(content, node) {
+                const type = (node as HTMLElement).getAttribute("type") || "";
+                const values = (node as HTMLElement).getAttribute("values") ||
+                              (node as HTMLElement).getAttribute("value") || "";
+
+                if (!content.trim()) return "";
+
+                // Capitalize first letter of type for display
+                const displayType = type.charAt(0).toUpperCase() + type.slice(1);
+
+                // Check if this choosable is nested (parent is also a choosable)
+                const parent = (node as HTMLElement).parentElement;
+                const isNested = parent && parent.closest("pulumi-choosable");
+
+                // Use different formatting for nested vs top-level
+                // Trim content to remove leading/trailing whitespace
+                const trimmedContent = content.trim();
+
+                if (isNested) {
+                    return `\n*${displayType}: ${values}*\n\n${trimmedContent}`;
+                } else {
+                    return `\n**${displayType}: ${values}**\n\n${trimmedContent}`;
+                }
+            }
+        });
+
+        // Custom rule for chooser wrapper - just pass through content
+        this.turndown.addRule("chooser", {
+            filter: "pulumi-chooser",
+            replacement: function(content) {
+                return content;
+            }
+        });
+
+        // Custom rule for callouts/notes to make them stand out
+        this.turndown.addRule("notes", {
+            filter: function(node) {
+                return node.nodeName === "DIV" &&
+                       node.classList.contains("note");
+            },
+            replacement: function(content, node) {
+                // Extract the note type from the class (e.g., "note-info", "note-warning", "note-tip")
+                const classList = Array.from((node as HTMLElement).classList);
+                const noteClass = classList.find(cls => cls.startsWith("note-"));
+                const noteType = noteClass ? noteClass.replace("note-", "") : "info";
+
+                // Get just the content div, not the icon
+                const contentDiv = (node as HTMLElement).querySelector(".content");
+                const noteContent = contentDiv ? contentDiv.innerHTML : content;
+
+                // Choose emoji based on type
+                let emoji = "ℹ️";
+                let label = "Info";
+
+                if (noteType === "warning") {
+                    emoji = "⚠️";
+                    label = "Warning";
+                } else if (noteType === "tip") {
+                    emoji = "💡";
+                    label = "Tip";
+                }
+
+                // Convert content to markdown
+                const markdownContent = new TurndownService({
+                    headingStyle: "atx",
+                    codeBlockStyle: "fenced",
+                    bulletListMarker: "-",
+                }).turndown(noteContent);
+
+                // Format as blockquote with emoji prefix
+                const lines = markdownContent.split("\n");
+                const quotedLines = lines.map((line, index) =>
+                    index === 0 ? `> ${emoji} **${label}:** ${line}` : `> ${line}`
+                ).join("\n");
+
+                return `\n${quotedLines}\n`;
+            }
+        });
     }
 
     disconnectedCallback() {
@@ -37,23 +222,88 @@ export class LlmMenu {
     private getMarkdown(): string {
         const content = document.querySelector(".docs-content");
         if (!content) return "";
-        const md = this.turndown.turndown(content.innerHTML);
-        return `# ${this.pageTitle}\n\nSource: ${this.pageUrl}\n\n${md}`;
-    }
 
-    private getMarkdownUrl(): string {
-        // Convert /docs/foo/ to /docs/foo/index.md
-        // Use current origin so it works in dev environments
-        const url = new URL(this.pageUrl);
-        return url.pathname.endsWith("/")
-            ? `${url.origin}${url.pathname}index.md`
-            : `${url.origin}${url.pathname}/index.md`;
+        // Clone the content to avoid modifying the page
+        const clone = content.cloneNode(true) as HTMLElement;
+
+        // Remove unwanted elements before conversion
+        const selectorsToRemove = [
+            "button",
+            ".copy-button",
+            ".edit-link",
+            "pulumi-tooltip",
+            ".llm-menu-container",
+            ".page-edit-links",
+            "script",
+            "style"
+        ];
+
+        selectorsToRemove.forEach(selector => {
+            clone.querySelectorAll(selector).forEach(el => el.remove());
+        });
+
+        // Convert to markdown
+        let md = this.turndown.turndown(clone.innerHTML);
+
+        // Clean up the markdown
+        md = md
+            .replace(/\n{3,}/g, "\n\n") // Remove excessive newlines (max 1 blank line)
+            .replace(/^\s+$/gm, "") // Remove whitespace-only lines
+            .replace(/\[.*?\]\(\)/g, "") // Remove all empty links [text]() anywhere in content
+            .replace(/^\s*(-\s*)+$/gm, "") // Remove lines with only dashes and whitespace (handles multiple dashes)
+            .replace(/\n{3,}/g, "\n\n") // Collapse any remaining excessive newlines
+            .trim();
+
+        // Construct proper source URL using current window location
+        // Extract just the pathname from pageUrl (in case it's a full URL or protocol-relative URL)
+        let pathname = this.pageUrl;
+
+        // Handle protocol-relative URLs (//domain/path)
+        if (pathname.startsWith('//')) {
+            pathname = pathname.substring(pathname.indexOf('/', 2));
+        } else {
+            // Try to parse as full URL to extract pathname
+            try {
+                const url = new URL(this.pageUrl, window.location.origin);
+                pathname = url.pathname;
+            } catch {
+                // pageUrl is already a pathname, use as-is
+            }
+        }
+
+        const sourceUrl = window.location.origin + pathname;
+
+        return `# ${this.pageTitle}\n\n[View this page on Pulumi Docs](${sourceUrl})\n\n${md}`;
     }
 
     private async copyPage() {
         await clipboard.writeText(this.getMarkdown());
         this.showCopied("page");
         this.trackEvent("copy-page");
+    }
+
+    private viewMarkdown() {
+        try {
+            // Get the markdown content (same as copy)
+            const markdown = this.getMarkdown();
+
+            // Create a Blob with the markdown content (UTF-8 charset for emoji support)
+            const blob = new Blob([markdown], { type: 'text/plain; charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+
+            // Open in new tab
+            const newWindow = window.open(url, '_blank');
+
+            // Clean up the blob URL after a short delay
+            // (window needs time to load the content)
+            if (newWindow) {
+                setTimeout(() => URL.revokeObjectURL(url), 1000);
+            }
+
+            this.trackEvent("view-markdown");
+        } catch (error) {
+            console.error('Failed to view markdown:', error);
+        }
     }
 
     private showCopied(type: string) {
@@ -115,14 +365,14 @@ export class LlmMenu {
                                         <div class="llm-menu-subtitle">Copy page for LLMs</div>
                                     </div>
                                 </button>
-                                <a class="llm-menu-item" href={this.getMarkdownUrl()} target="_blank">
+                                <button class="llm-menu-item" onClick={() => this.viewMarkdown()}>
                                     <i class="fab fa-markdown llm-menu-icon"></i>
                                     <div class="llm-menu-text">
                                         <div class="llm-menu-title">View as Markdown</div>
                                         <div class="llm-menu-subtitle">Open Markdown in new tab</div>
                                     </div>
                                     <i class="fas fa-external-link-alt llm-menu-external"></i>
-                                </a>
+                                </button>
                                 <hr />
                                 <button class="llm-menu-item" onClick={() => this.openInChatGPT()}>
                                     {chatGptLogo}
