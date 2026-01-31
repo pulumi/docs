@@ -277,9 +277,13 @@ export class LlmMenu {
     }
 
     private async copyPage() {
-        await clipboard.writeText(this.getMarkdown());
-        this.showCopied("page");
-        this.trackEvent("copy-page");
+        try {
+            await clipboard.writeText(this.getMarkdown());
+            this.showCopied("page");
+            this.trackEvent("copy-page");
+        } catch (error) {
+            console.error('Failed to copy page to clipboard:', error);
+        }
     }
 
     private viewMarkdown() {
@@ -331,9 +335,13 @@ export class LlmMenu {
     }
 
     private async copyUrl() {
-        await clipboard.writeText(window.location.href);
-        this.showCopied("url");
-        this.trackEvent("copy-url");
+        try {
+            await clipboard.writeText(window.location.href);
+            this.showCopied("url");
+            this.trackEvent("copy-url");
+        } catch (error) {
+            console.error('Failed to copy URL to clipboard:', error);
+        }
     }
 
     render() {
