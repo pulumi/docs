@@ -66,7 +66,7 @@ values:
   ENDPOINT_URL: "https://wordsapiv1.p.rapidapi.com/"
 ```
 
-Then, open your first environment (e.g. `my-project/dev-environment`) via the Pulumi console or the ESC CLI and add the following configuration to the top of your file:
+Then, open your first environment (e.g. `my-project/dev-environment`) via Pulumi Cloud or the ESC CLI and add the following configuration to the top of your file:
 
 ```yaml
 imports:
