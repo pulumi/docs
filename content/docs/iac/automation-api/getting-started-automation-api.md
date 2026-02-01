@@ -688,16 +688,104 @@ func main() {
 
 {{% choosable language "csharp,fsharp,visualbasic" %}}
 
+First, generate the SDK:
+
+```bash
+pulumi package add terraform-provider@1.0.2 hashicorp/random 3.5.1
 ```
-Coming soon: https://github.com/pulumi/docs/issues/16969
+
+Then, in your Automation API program, install the plugin in the workspace:
+
+```csharp
+using Pulumi.Automation;
+using Pulumi.Random;
+
+var program = PulumiFn.Create(() =>
+{
+    var pet = new Pet("my-pet", new() { Length = 2 });
+    return new Dictionary<string, object?>
+    {
+        ["petName"] = pet.Id
+    };
+});
+
+var projectName = "myProject";
+var stackName = "dev";
+
+// Create or select a stack
+var stackArgs = new InlineProgramArgs(projectName, stackName, program);
+var stack = await LocalWorkspace.CreateOrSelectStackAsync(stackArgs);
+
+// Install the plugin for the local package
+await stack.Workspace.InstallPluginAsync("terraform-provider", "v1.0.2");
+
+// Configure any required settings
+await stack.SetConfigAsync("aws:region", new ConfigValue("us-west-2"));
+
+// Run the deployment
+var result = await stack.UpAsync(new UpOptions { OnStandardOutput = Console.WriteLine });
 ```
 
 {{% /choosable %}}
 
 {{% choosable language "java" %}}
 
+First, generate the SDK:
+
+```bash
+pulumi package add terraform-provider@1.0.2 hashicorp/random 3.5.1
 ```
-Coming soon: https://github.com/pulumi/docs/issues/16969
+
+Then, in your Automation API program, install the plugin in the workspace:
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.automation.*;
+import com.pulumi.random.Pet;
+import com.pulumi.random.PetArgs;
+
+public class App {
+    public static void main(String[] args) {
+        var projectName = "myProject";
+        var stackName = "dev";
+        
+        // Define the Pulumi program
+        var program = (Context ctx) -> {
+            var pet = new Pet("my-pet", PetArgs.builder()
+                .length(2)
+                .build());
+            
+            ctx.export("petName", pet.id());
+        };
+        
+        try {
+            // Create or select a stack
+            var stack = LocalWorkspace.createOrSelectStack(LocalProgramArgs.builder()
+                .stackName(stackName)
+                .projectName(projectName)
+                .program(program)
+                .build());
+            
+            // Install the plugin for the local package
+            stack.workspace().installPlugin("terraform-provider", "v1.0.2");
+            
+            // Configure any required settings
+            stack.setConfig("aws:region", ConfigValue.builder().value("us-west-2").build());
+            
+            // Run the deployment
+            var result = stack.up(UpOptions.builder()
+                .onOutput(System.out::println)
+                .build());
+            
+            System.out.printf("Deployment succeeded! Pet name: %s%n", 
+                result.outputs().get("petName").value());
+        } catch (Exception e) {
+            System.err.println("Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
 ```
 
 {{% /choosable %}}
