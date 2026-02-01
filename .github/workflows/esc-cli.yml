@@ -20,7 +20,7 @@ jobs:
         id: esc-secrets
         uses: pulumi/esc-action@v1
       - name: checkout docs repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: set the esc version
         run: |
           echo "ESC_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
@@ -43,11 +43,11 @@ jobs:
         run: |
           echo "ESC_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
       - name: checkout docs repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: docs
       - name: checkout esc repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: pulumi/esc
           path: esc
@@ -62,7 +62,7 @@ jobs:
           repo: pulumi/esc
           binaries-location: esc
       - name: Install Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.154.5'
           extended: true

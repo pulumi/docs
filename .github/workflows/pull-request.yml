@@ -21,19 +21,19 @@ jobs:
         id: esc-secrets
         uses: pulumi/esc-action@v1
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - uses: actions/setup-node@v6
         with:
           node-version: '24.x'
 
-      - uses: peaceiris/actions-hugo@v2
+      - uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.154.5'
           extended: true
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v5
         with:
           role-to-assume: arn:aws:iam::571684982431:role/ContinuousDelivery
           role-session-name: docs-deploy
@@ -41,7 +41,7 @@ jobs:
           aws-region: us-west-2
 
       - name: Install Pulumi CLI
-        uses: pulumi/actions@v4
+        uses: pulumi/actions@v6
 
       - name: Build and deploy
         run: make ci_pull_request
@@ -59,13 +59,13 @@ jobs:
           NODE_OPTIONS: "--max_old_space_size=8192"
 
       - name: Archive test results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: browser-test-results
           path: cypress/videos
 
       - name: Archive bucket metadata
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: origin-bucket-metadata
           path: origin-bucket-metadata.json
