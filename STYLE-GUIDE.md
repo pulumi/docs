@@ -233,6 +233,18 @@ See [Hugo diagrams docs](https://gohugo.io/content-management/diagrams/) and [Me
 
 ---
 
+    ## Glossary
+    
+    The [Pulumi glossary](/docs/iac/concepts/glossary/) defines common terms and concepts used throughout the documentation.
+    
+    - When introducing a new concept or Pulumi-specific term in documentation, consider adding it to the glossary.
+    - The glossary helps users (both human and AI agents) quickly understand Pulumi terminology.
+    - To add or update glossary terms, edit `data/glossary.toml`.
+    - Link to specific glossary terms using anchor links: `/docs/iac/concepts/glossary/#term-name`
+    
+    ---
+    
+
 ## References to Commands or UI
 
 - CLI commands: wrap in backticks (e.g., `pulumi up`).  
