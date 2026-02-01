@@ -56,7 +56,6 @@ In this guide, you will:
 1. Create a shared environment with common configuration
 1. Import that environment into another environment
 1. Verify that imported values are accessible
-1. Learn how to use both the code editor and table view to manage imports
 
 ## Import an environment
 
@@ -67,9 +66,7 @@ values:
   ENDPOINT_URL: "https://wordsapiv1.p.rapidapi.com/"
 ```
 
-![Image showing same base URL and different endpoints](/docs/esc/assets/esc-import-environments.png)
-
-Then, open your first environment (e.g. `my-project/dev-environment`) via the Pulumi console or the ESC CLI and add the following configuration to the top of your file:
+Then, open your first environment (e.g. `my-project/dev-environment`) via Pulumi Cloud or the ESC CLI and add the following configuration to the top of your file:
 
 ```yaml
 imports:
@@ -89,23 +86,13 @@ values:
       ciphertext: ZXNjeAA....
 ```
 
-You should now see `"ENDPOINT_URL": "https://wordsapiv1.p.rapidapi.com/"` in the environment preview pane. This confirms that the value was successfully imported from the `my-project/app-global-config` environment.
-
-![Importing the global config environment in the Pulumi Console](/docs/esc/assets/esc-import-environments2.png)
+After saving your changes, you should now see `"ENDPOINT_URL": "https://wordsapiv1.p.rapidapi.com/"` in the environment preview pane. This confirms that the value was successfully imported from the `my-project/app-global-config` environment.
 
 **Success!** You've now imported an environment. The imported `ENDPOINT_URL` value is accessible in the same way as values defined directly in this environment. You can retrieve it via the console or CLI just like any other value.
 
 {{% notes type="info" %}}
 To test this, try retrieving the imported value via the console or CLI. See [Managing secrets](/docs/esc/guides/managing-secrets/#retrieving-secrets) for details on retrieving values.
 {{% /notes %}}
-
-### Import via the Table view
-
-Alternatively, you can import environments using the Table view of the Pulumi console. Navigate to the **Table view** of your environment and select the **Import** button under the **Imports** section. You will be presented with a dropdown list of environments that you can import. Search for the name of the environment you want to import and select it. Then select **Import**.
-
-![Importing the global config environment in the Pulumi Console](/docs/esc/assets/esc-import-pulumi-console.png)
-
-To view the imported values, you will need to [open your environment](/docs/esc/guides/managing-secrets/#retrieving-secrets).
 
 {{% notes type="info" %}}
 You can import multiple environments and reorder them. Import order matters when the same keys appear in multiple imported environments. For details on merge behavior and override semantics, see the [imports reference](/docs/esc/environments/imports/).
