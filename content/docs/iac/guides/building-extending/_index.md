@@ -28,6 +28,8 @@ Build reusable infrastructure components to encapsulate and share infrastructure
 
 **[Testing Components](/docs/iac/guides/building-extending/components/testing-components/)** - Write automated tests for your components to ensure they work correctly and maintain quality as they evolve.
 
+**[Package a Component](/docs/iac/guides/building-extending/components/packaging-a-component/)** - Choose the right packaging approach for your components: single-language, cross-language, or provider-based distribution.
+
 ## Providers
 
 Create custom providers to integrate new cloud platforms and services with Pulumi.
