@@ -96,6 +96,10 @@ To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Google 
 | `tokenLifetime`  | string | [Optional] - The lifetime of the temporary credentials.                    |
 | `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim) documentation |
 
+{{< notes type="info" >}}
+If you encounter authentication errors with GCP OIDC, see the [GCP OIDC troubleshooting guide](/docs/esc/guides/configuring-oidc/gcp/#troubleshooting) for common issues and solutions.
+{{< /notes >}}
+
 ## Outputs
 
 | Property      | Type   | Description                                                                      |
