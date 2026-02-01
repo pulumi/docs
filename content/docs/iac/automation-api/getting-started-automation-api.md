@@ -719,9 +719,6 @@ var stack = await LocalWorkspace.CreateOrSelectStackAsync(stackArgs);
 // Install the plugin for the local package
 await stack.Workspace.InstallPluginAsync("terraform-provider", "v1.0.2");
 
-// Configure any required settings
-await stack.SetConfigAsync("aws:region", new ConfigValue("us-west-2"));
-
 // Run the deployment
 var result = await stack.UpAsync(new UpOptions { OnStandardOutput = Console.WriteLine });
 ```
@@ -769,9 +766,6 @@ public class App {
             
             // Install the plugin for the local package
             stack.workspace().installPlugin("terraform-provider", "v1.0.2");
-            
-            // Configure any required settings
-            stack.setConfig("aws:region", ConfigValue.builder().value("us-west-2").build());
             
             // Run the deployment
             var result = stack.up(UpOptions.builder()
