@@ -119,6 +119,37 @@ Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` wi
 }
 ```
 
+## Troubleshooting
+
+### Invalid audience errors with correct audience configuration
+
+If you encounter an error message about an invalid `audience` value despite having correctly configured the audience in your Workload Identity Pool:
+
+```
+oauth2/google: status code 400: {"error":"invalid_request","error_description":"Invalid value for \"audience\". This value should be the full resource name of the Identity Provider."}
+```
+
+The root cause may be an incorrect `region` value in your ESC environment configuration. GCP Workload Identity Pools are global resources, so the `region` field (if specified) must be `global`, not a regional value like `us-central1`.
+
+Pulumi ESC uses the `region` field to construct the Workload Identity URL internally. When set to a regional value, the URL becomes invalid, resulting in misleading error messages about the audience.
+
+**Solution**: In your ESC environment configuration, ensure the `region` field is set to `global` or omit it entirely (as `global` is the default):
+
+```yaml
+values:
+  gcp:
+    login:
+      fn::open::gcp-login:
+        project: <your-project-number>
+        oidc:
+          workloadPoolId: <your-pool-id>
+          providerId: <your-provider-id>
+          serviceAccount: <your-service-account>
+          region: global  # Explicitly set to global, or omit this line entirely
+```
+
+For more details about the `region` field, see the [gcp-login provider documentation](/docs/esc/integrations/dynamic-login-credentials/gcp-login/#gcploginoidc).
+
 ## Subject claim customization
 
 You can [customize](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions.

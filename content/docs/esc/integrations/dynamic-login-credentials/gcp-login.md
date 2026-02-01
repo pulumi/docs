@@ -92,9 +92,13 @@ To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Google 
 | `workloadPoolId` | string | The (short) ID of the workload pool to use.                                |
 | `providerId`     | string | The (short) ID of the identity provider associated with the workload pool. |
 | `serviceAccount` | string | The email address of the service account to use.                           |
-| `region`         | string | [Optional] - The region of the GCP project.                                |
+| `region`         | string | [Optional] - The location of the Workload Identity Pool. For standard Workload Identity Pools, this should be `global` (the default). Only specify a regional value if you have explicitly created a regional Workload Identity Pool. |
 | `tokenLifetime`  | string | [Optional] - The lifetime of the temporary credentials.                    |
 | `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim) documentation |
+
+{{< notes type="info" >}}
+If you encounter authentication errors with GCP OIDC, see the [GCP OIDC troubleshooting guide](/docs/esc/guides/configuring-oidc/gcp/#troubleshooting) for common issues and solutions.
+{{< /notes >}}
 
 ## Outputs
 
