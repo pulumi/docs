@@ -8,6 +8,7 @@
     - company: Company name
     - logo: Logo path
     - bg_image: Optional background image path
+    - anchor: Optional anchor for section id
 */}}
 
 {{ $quote := .quote }}
@@ -16,8 +17,9 @@
 {{ $company := .company }}
 {{ $logo := .logo }}
 {{ $bgImage := .bg_image }}
+{{ $anchor := .anchor }}
 
-<section class="rounded-2xl template-testimonial px-12 py-24 {{ if not $bgImage }}bg-violet-700{{ end }}" {{ if $bgImage }}style="background-image: url('{{ $bgImage }}'); background-size: cover; background-position: center;"{{ end }}>
+<section class="rounded-2xl template-testimonial px-12 py-24 {{ if not $bgImage }}bg-violet-700{{ end }}"{{ if $anchor }} id="{{ $anchor }}"{{ end }} {{ if $bgImage }}style="background-image: url('{{ $bgImage }}'); background-size: cover; background-position: center;"{{ end }}>
         {{ if $logo }}
         <div class="mb-8">
             <img src="{{ $logo }}" alt="{{ $company }}" class="h-16 w-auto" />

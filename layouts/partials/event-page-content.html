@@ -15,7 +15,7 @@
 {{ end }}
 
 {{ with .Params.logos }}
-{{ partial "template-partials/template-logo-banner.html" (dict "logos" . "text" $.Params.logos_text) }}
+{{ partial "template-partials/template-logo-banner.html" (dict "logos" . "text" $.Params.logos_text "anchor" $.Params.logos_anchor) }}
 {{ end }}
 
 {{ with .Params.features }}
@@ -23,7 +23,7 @@
 {{ end }}
 
 {{ with .Params.two_column }}
-{{ partial "template-partials/template-two-column.html" (dict "columns" .) }}
+{{ partial "template-partials/template-two-column.html" (dict "columns" . "anchor" $.Params.two_column_anchor) }}
 {{ end }}
 
 {{ with .Params.workshop_banner }}

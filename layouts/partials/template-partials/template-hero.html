@@ -12,6 +12,7 @@
     - image_alt: Alt text for hero image (optional)
     - tag_line: Tag line text (optional, displays in violet)
     - booth_number: Booth number (optional, displays in black)
+    - anchor: Optional anchor for section id
 */}}
 
 {{ $title := .title }}
@@ -24,8 +25,9 @@
 {{ $imageAlt := .image_alt | default $title }}
 {{ $tagLine := .tag_line }}
 {{ $boothNumber := .booth_number }}
+{{ $anchor := .anchor }}
 
-<section class="template-hero">
+<section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col xl:flex-row items-start justify-between gap-8">
         <div class="xl:w-1/2">
             {{ if or $tagLine $boothNumber }}

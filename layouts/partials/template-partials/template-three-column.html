@@ -8,15 +8,17 @@
     - columns: Array of column objects
       Example: [{"icon": "fa-shield", "title": "Title", "description": "Description", "cta_text": "Learn more", "cta_link": "/link"}]
       Note: icon should be Font Awesome icon class (e.g., "fa-shield", "fa-rocket")
+    - anchor: Optional anchor for section id
 */}}
 
 {{ $tagLine := .tag_line }}
 {{ $title := .title }}
 {{ $subtitle := .subtitle }}
 {{ $columns := .columns }}
+{{ $anchor := .anchor }}
 
-<section class="template-three-column">
-    <div class="text-center">
+<section class="template-three-column"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="text-left sm:text-center">
         {{ if $tagLine }}
         <div class="mb-4">
             <span class="three-column-tag-line">{{ $tagLine }}</span>
@@ -26,7 +28,7 @@
         <h2 class="mt-0 mb-4 three-column-title">{{ $title }}</h2>
         {{ end }}
         {{ if $subtitle }}
-        <p class="three-column-description max-w-3xl mx-auto">{{ $subtitle }}</p>
+        <p class="three-column-description max-w-3xl sm:mx-auto">{{ $subtitle }}</p>
         {{ end }}
     </div>
 

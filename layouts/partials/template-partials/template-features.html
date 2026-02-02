@@ -10,6 +10,7 @@
     - features: Array of feature objects
       Example: [{"icon": "fa-rocket", "title": "Title", "description": "Description"}]
       Note: icon should be Font Awesome icon class (e.g., "fa-rocket", "fa-code")
+    - anchor: Optional anchor for section id
 */}}
 
 {{ $tagLine := .tag_line }}
@@ -18,8 +19,9 @@
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default $title }}
 {{ $features := .features }}
+{{ $anchor := .anchor }}
 
-<section class="template-features">
+<section class="template-features"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="text-center mb-24">
         {{ if $tagLine }}
         <div class="mb-4">

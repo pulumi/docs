@@ -11,6 +11,7 @@
     - map_image: Map image path
     - cta_text: CTA button text
     - cta_link: CTA button link
+    - anchor: Optional anchor for section id
 */}}
 
 {{ $tagLine := .tag_line }}
@@ -22,8 +23,9 @@
 {{ $mapImage := .map_image }}
 {{ $ctaText := .cta_text }}
 {{ $ctaLink := .cta_link }}
+{{ $anchor := .anchor }}
 
-<section class="template-location">
+<section class="template-location"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-8">
         <div>
             {{ if $tagLine }}
@@ -53,7 +55,7 @@
         </div>
         <div class="hidden md:block">
             {{ if $mapEmbed }}
-            <div class="w-full md:max-w-2xl md:h-96">
+            <div class="w-full md:max-w-2xl">
                 {{ $mapEmbed | safeHTML }}
             </div>
             {{ else if $mapImage }}

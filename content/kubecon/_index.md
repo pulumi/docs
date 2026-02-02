@@ -15,9 +15,11 @@ hero:
   image: "/images/kubecon/kubecon-hero-2026.png"
   image_alt: "KubeCon Europe 2026"
   tag_line: "Join us at KubeCon Europe 2026"
-  booth_number: "Booth [TBD]"
+  booth_number: "Booth 784"
+  anchor: "hero"
 
 logos_text: "Trusted by over 3,700 innovative companies"
+logos_anchor: "customers"
 logos:
   - src: "/logos/customers/deloitte.svg"
     alt: "Deloitte"
@@ -37,6 +39,7 @@ features:
   subtitle: "Managing Kubernetes at scale is hard enough without having to wrestle with reams of YAML. Meet our engineering team to talk through your Kubernetes challenges."
   image: "/images/kubecon/code-kubecon-2026.png"
   image_alt: "Pulumi code example for Kubernetes"
+  anchor: "features"
   features:
     - icon: "fa-code"
       title: "Cloud-native infrastructure as code"
@@ -48,6 +51,7 @@ features:
       title: "Many clouds, one platform"
       description: "Provision and manage Kubernetes resources across AWS, Azure, GCP, and on-prem with over 290 providers using a single workflow."
 
+two_column_anchor: "demo-workshop"
 two_column:
   - label: "Talk to an expert"
     title: "Book a technical discussion"
@@ -73,10 +77,12 @@ promo_banner:
   description: "All KubeCon attendees who sign up for Pulumi Cloud receive $500 in AWS credits to use on their own infrastructure."
   cta_text: "Scan the QR code at the booth to get started."
   bg_image: "/images/kubecon/aws-credits-background.png"
+  anchor: "aws-credits"
 
 three_column:
   tag_line: "Why platform teams choose Pulumi"
   title: "Tools that reduce Kubernetes complexity"
+  anchor: "why-pulumi"
   columns:
     - icon: "fa-code"
       title: "Stop context-switching"
@@ -101,17 +107,19 @@ testimonial:
   company: "BMW"
   logo: "/logos/customers/bmw-shortened.svg"
   bg_image: "/images/kubecon/bmw-background.png"
+  anchor: "testimonial"
 
 location:
   tag_line: "Venue & location"
   title: "Where to find us"
   location: |
-    Booth [TBD], Amsterdam RAI<br>
+    Booth 784, Amsterdam RAI<br>
     March 23-26, 2026
   description: "Stop by to see Neo live demos, grab exclusive Pulumi Neo sunglasses (limited quantities), register for $500 AWS credits (first 25 signups), and talk infrastructure architecture with our engineering team."
   map_embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.6116720155323!2d4.886040676670286!3d52.341190572014874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60a1f63d57e25%3A0xa08f37a724d09338!2sAmsterdam%20RAI!5e0!3m2!1sen!2sus!4v1769463657049!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
   cta_text: "Book your demo"
   cta_link: "https://info.pulumi.com/book-demo-kubecon-2026"
+  anchor: "location"
 
 footer_cta:
   title: "The infrastructure as code platform for any cloud."
@@ -119,4 +127,5 @@ footer_cta:
   cta_primary_link: "/signup"
   cta_secondary_text: "Contact sales"
   cta_secondary_link: "/contact"
+  anchor: "get-started"
 ---

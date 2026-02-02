@@ -8,6 +8,7 @@
     - description: Card description (supports markdown)
     - cta_text: CTA button text
     - cta_link: CTA button link
+    - anchor: Optional anchor for section id
 */}}
 
 {{ $label := .label }}
@@ -16,8 +17,9 @@
 {{ $description := .description }}
 {{ $ctaText := .cta_text }}
 {{ $ctaLink := .cta_link }}
+{{ $anchor := .anchor }}
 
-<div class="template-card">
+<div class="template-card"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col h-full w-full">
         <div class="flex flex-col gap-4 mb-8">
             {{ if $label }}
@@ -34,7 +36,7 @@
         </div>
 
         {{ if $description }}
-        <div class="card-description flex-grow mb-8">
+        <div class="card-description mb-8">
             {{ $description | markdownify }}
         </div>
         {{ end }}

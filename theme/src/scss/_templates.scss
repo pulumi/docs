@@ -39,7 +39,7 @@ $violet-primary: #673EAC;
 }
 
 @mixin section-subheader-bold {
-    @apply font-semibold leading-extra-tight text-black text-2xl font-body;
+    @apply font-semibold leading-normal text-black text-2xl font-body;
     font-feature-settings: 'salt' on;
 }
 
@@ -106,7 +106,7 @@ $violet-primary: #673EAC;
     }
 
     .logo-grid {
-        gap: 100px;
+        gap: 48px;
     }
 }
 
@@ -175,6 +175,7 @@ $violet-primary: #673EAC;
     .btn-secondary-template-variant {
         display: inline-block;
         width: auto;
+        align-self: flex-start;
     }
 }
 
@@ -220,6 +221,7 @@ $violet-primary: #673EAC;
     .btn-secondary-template-variant {
         display: inline-block;
         width: auto;
+        align-self: flex-start;
     }
 }
 
