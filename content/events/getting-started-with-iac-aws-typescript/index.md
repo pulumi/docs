@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: Getting Started with Infrastructure as Code on AWS
-meta_desc: In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using the Pulumi Cloud Engineering platform.
+title: Getting started on AWS with Typescript
+meta_desc: Learn how to manage AWS infrastructure using TypeScript and Pulumi. Define, deploy, and manage cloud resources using familiar programming practices.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -31,7 +31,7 @@ url_slug: getting-started-with-iac-aws-typescript
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Getting Started with Infrastructure as Code on AWS
+    title: Getting started on AWS with Typescript
 
     event_type: workshop # workshop | event
 
@@ -39,35 +39,34 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-06-27T09:00:00.000-07:00
+    sortable_date: 2026-04-15T09:00:00.000-07:00
 
     # Duration of the webinar.
-    duration: 90 minutes
+    duration: 60 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
 
     # Description of the webinar.
     description: |
-        Learn the fundamentals of Infrastructure as Code through a series of guided exercises using AWS and Pulumi’s platform, where you can use familiar programming languages to provision modern cloud infrastructure.
+        This workshop explores how modern infrastructure management on Amazon Web Services (AWS) can be streamlined using infrastructure as code and familiar programming languages. You’ll learn how Pulumi enables teams to define, deploy, and manage AWS infrastructure using TypeScript, applying established software engineering practices to cloud infrastructure.
 
-        This workshop is designed to help users who are completely new to Pulumi become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands-on exercises to help you understand the building blocks available in Pulumi.
-
+        Through guided examples, diagrams, and walkthroughs, the session shows how Pulumi’s programming model connects application and infrastructure development. This approach makes AWS architectures easier to understand, change, and maintain, while reducing friction when managing infrastructure across projects and environments.
     learn:
-        - The basics of the Pulumi Programming Model
-        - How to provision, update, and destroy AWS resources
-        - Build a simple serverless App with Lambda and s3 bucket
+        - How to model AWS infrastructure using TypeScript and familiar programming constructs
+        - How infrastructure as code improves reliability and repeatability on AWS
+        - How Pulumi supports consistent infrastructure management across environments
 
     # The webinar presenters
     presenters:
         - name: Engin Diri
-          role: Customer Experience Architect, Pulumi
+          role: Senior Solutions Architect, Pulumi
           photo: /images/team/engin-diri.jpg
 
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: []
+        topics: ["IaC", "DevOps", "Automation"]
         languages: ["TypeScript"]
         clouds: ["AWS"]
 
@@ -76,4 +75,12 @@ form:
     # HubSpot form id.
     hubspot_form_id: f1c53015-61ab-4d37-bc32-21869a3d7286
     salesforce_campaign_id: 701PQ00000DVVBJYA5
+    
+event_data:
+    name: "Getting started on AWS with Typescript"
+    start_date: 2026-04-15T09:00:00.000-07:00
+    end_date: 2026-04-15T10:00:00.000-07:00
+    url: "https://www.pulumi.com/events/getting-started-with-iac-aws-typescript/"
+    description: |
+    Learn how to manage AWS infrastructure using TypeScript and Pulumi. Define, deploy, and manage cloud resources using familiar programming practices.
 ---
