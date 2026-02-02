@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: Getting Started with Kubernetes on Google Cloud
-meta_desc: Get started with Kubernetes on Google Cloud using GKE. Learn to create clusters, deploy applications, and manage Kubernetes infrastructure with Pulumi.
+meta_desc: Learn how Kubernetes runs on Google Cloud using GKE. Learn to create clusters, deploy applications, and manage Kubernetes infrastructure with Pulumi.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
     
     # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/QFegMu87K0M?rel=0
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2026-05-13T09:00:00.000-07:00
@@ -66,7 +66,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
+        topics: ["Kubernetes", "Google Kubernetes Engine (GKE)", "Automation"]
         languages: [Any]
         clouds: ["Google Cloud"]
 
