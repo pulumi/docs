@@ -1,8 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: Getting Started with Kubernetes on Azure
-meta_desc: In this workshop, you will learn how to deploy a Kubernetes cluster on Microsoft Azure and run containerized applications on the cluster.
-meta_image:
+meta_desc: Learn how Kubernetes runs on Azure using AKS. Create clusters, deploy containerized apps, and manage infrastructure with Pulumi.
 
 # A featured webinar will display first in the list.
 featured: false
@@ -12,7 +11,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -36,36 +35,39 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/qBoRBDZRkDk?rel=0
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-04-25T12:00:00.000Z
+    sortable_date: 2026-06-10T09:00:00.000-07:00
 
     # Duration of the webinar.
-    duration: 90 minutes
+    duration: 60 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
 
     # Description of the webinar.
     description: |
-        In this workshop, you will learn how to deploy a Kubernetes cluster on Microsoft Azure and run containerized applications on the cluster. The workshop will include a brief introduction to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
-        
-        This 200-level workshop is designed to help users who have basic familiarity with Pulumi effectively handle real-world use cases. We will guide you through the process with diagrams and a series of labs to help accelerate your cloud projects.
+        This workshop introduces the fundamentals of running Kubernetes on Azure using Azure Kubernetes Service (AKS). You’ll learn how Kubernetes fits into the Azure platform and how clusters and containerized workloads are created and managed.
+
+        Through guided exercises, you’ll create an AKS cluster and deploy a containerized application using Pulumi to define infrastructure in code. The focus is on practical workflows that help you understand Kubernetes on Azure before moving on to more advanced topics.
+    learn:
+        - Create an Azure Kubernetes Service (AKS) cluster using Pulumi
+        - How Pulumi manages Azure and Kubernetes resources together
+        - Deploy and update containerized application to AKS using safe, repeatable workflows
+        - How to preview, update, and tear down Kubernetes infrastructure safely
 
     # The webinar presenters
     presenters:
-        - name: Josh Kodroff
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: April Edwards
-          role: Senior Enterprise Advocate, GitHub
+        - name: Adam Gordon Bell
+          role: Community Engineer, Pulumi
+          photo: /images/team/adam-gordon-bell.jpg
 
     # case-sensitive
     tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
-        languages: []
+        level: Beginner # Beginner, Intermediate, Advanced
+        topics: ["Kubernetes", "Azure Kubernetes Service (AKS)", "Automation"]
+        languages: [Any]
         clouds: ["Azure"]
 
 # The right hand side form section.
@@ -73,4 +75,12 @@ form:
     # HubSpot form id.
     hubspot_form_id: 81a49dce-f5b7-4277-a9ca-98bbaa5df6cb
     salesforce_campaign_id: 701Du0000009z7QIAQ
+
+event_data:
+  name: "Start Building Azure Infrastructure with C#"
+  start_date: 2026-06-10T09:00:00.000-07:00
+  end_date: 2026-06-10T10:00:00.000-07:00
+  url: "https://www.pulumi.com/resources/intro-to-iac-azure/"
+  description: |
+    Learn how Kubernetes runs on Azure using AKS. Create clusters, deploy containerized apps, and manage infrastructure with Pulumi.
 ---
