@@ -27,6 +27,7 @@ Pulumi supports programs written in YAML or JSON.  In both cases, the programs (
 | `resources` | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/concepts/resources/) that will be deployed and managed by the program |
 | `variables` | map[string]Expression | No | Yes | Variables specifies intermediate values of the program, the values of variables are expressions that can be re-used. |
 | `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/concepts/stack#outputs) of the program and how they are computed from the `resources` is a value of the appropriate type for the template to use if no value is specified. |
+| `pulumi` | map[string]Expression | No | No | Configuration of the Pulumi CLI |
 
 In many locations within this schema, values may be expressions which computed a value based on the `config`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
 
@@ -233,6 +234,17 @@ outputs:
 ```
 
 The above output will have the value of the `outputName` output from the stack `org/project/stack`.
+
+### Pulumi CLI Configuration
+
+The `pulumi` section configures the Pulumi CLI. The `requiredVersion` option specifies the version range of the Pulumi CLI that this project requires. The format follows the syntax of [semantic version ranges](https://pkg.go.dev/github.com/blang/semver#ParseRange). This option is useful when your program requires a newer feature and you want to ensure the program won't be run with a CLI that is too old.
+
+```yaml
+pulumi:
+  requiredVersion: ">=3.0.0 !3.1.2"
+```
+
+The above configuration will ensure that the Pulumi CLI version is at least 3.0.0 but not 3.1.2. If run with a version that is not within this range, the program will exit with an error.
 
 ### Expressions
 
