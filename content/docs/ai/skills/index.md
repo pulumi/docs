@@ -68,14 +68,14 @@ claude plugin install pulumi-authoring     # Install authoring skills
 Install all skills for use with any AI coding assistant:
 
 ```bash
-npx skills add pulumi/agent-skills
+npx skills add pulumi/agent-skills --skill '*'
 ```
 
 Or install individual plugin groups:
 
 ```bash
-npx skills add pulumi/agent-skills/migration      # 4 migration skills
-npx skills add pulumi/agent-skills/authoring      # 4 authoring skills
+npx skills add pulumi/agent-skills/migration --skill '*'     # 4 migration skills
+npx skills add pulumi/agent-skills/authoring --skill '*'     # 4 authoring skills
 ```
 
 This works with Claude Code, Cursor, Copilot, Codex, and other agent tools.

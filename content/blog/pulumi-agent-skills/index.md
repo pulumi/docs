@@ -104,7 +104,7 @@ You can install both plugin groups or choose only the ones you need.
 For Cursor, GitHub Copilot, VS Code, Codex, Gemini and other platforms, use the universal [Agent Skills](https://agentskills.io) CLI:
 
 ```bash
-npx skills add pulumi/agent-skills
+npx skills add pulumi/agent-skills --skill '*'
 ```
 
 This works across all platforms that support the Agent Skills specification.
