@@ -77,10 +77,10 @@ form:
     salesforce_campaign_id: 701PQ00000qES8CYAW
 
 event_data:
-  name: "Start Building Azure Infrastructure with C#"
+  name: "Getting Started with Kubernetes on Azure"
   start_date: 2026-06-10T09:00:00.000-07:00
   end_date: 2026-06-10T10:00:00.000-07:00
-  url: "https://www.pulumi.com/resources/intro-to-iac-azure/"
+  url: "https://www.pulumi.com/events/getting-started-with-kubernetes-azure/"
   description: |
     Learn how Kubernetes runs on Azure using AKS. Create clusters, deploy containerized apps, and manage infrastructure with Pulumi.
 ---
