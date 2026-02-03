@@ -117,6 +117,6 @@ For PRs with `deps-quarterly-review` label:
 
 When closing to batch with other quarterly updates:
 
-```
+```text
 Closing to batch with other quarterly dependency updates. We'll merge accumulated quarterly updates together after comprehensive testing. This reduces testing overhead while keeping dependencies current.
 ```

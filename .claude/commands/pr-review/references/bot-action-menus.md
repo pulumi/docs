@@ -15,7 +15,7 @@ Parse labels from PR data: `deps-risk-*`, `deps-security-patch`, `deps-lambda-ed
 
 Use AskUserQuestion with header:
 
-```
+```text
 🤖 Dependabot PR | Risk: [HIGH/MEDIUM/LOW/UNKNOWN]
 [If security] 🔒 Security Update
 [If lambda-edge] 🚨 Lambda@Edge Risk - Review deployment
@@ -59,7 +59,7 @@ For non-Dependabot bots (pulumi-bot, renovate, etc.)
 
 ### Display Header
 
-```
+```text
 🤖 Bot: @username
 [If automation/merge] ✓ automation/merge label
 ```

@@ -10,12 +10,14 @@ description: Test deployment URL fetching and review guidance generation
 ## Part A: Fetch Test Deployment URL
 
 1. Get most recent pulumi-bot comment:
+
    ```bash
    gh api repos/pulumi/docs/issues/{{arg}}/comments --jq '.[] | select(.user.login == "pulumi-bot") | {created_at, body}' | tail -1
    ```
 
 2. Extract deployment URL pattern:
-   ```
+
+   ```text
    http://www-testing-pulumi-docs-origin-pr-{PR}-{HASH}.s3-website.us-west-2.amazonaws.com
    ```
 

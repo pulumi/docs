@@ -39,6 +39,7 @@ Fetch all PR data and detect contributor type (bot/internal/external).
 See [contributor-detection.md](references/contributor-detection.md) for complete detection script and display formatting.
 
 **Key actions**:
+
 - Fetch PR data once using gh CLI
 - Detect contributor type: bot (username contains "[bot]" or matches bot patterns), internal (Pulumi org member), or external (community contributor)
 - Display: "[icon] Reviewing PR #{{arg}} from @username ([type] contributor)"

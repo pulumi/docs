@@ -31,7 +31,8 @@ Select template based on contributor type (from Step 1).
 - Build community connection
 
 **Example (Approve)**:
-```
+
+```text
 Thank you for your first contribution to Pulumi! This documentation improvement is excellent. Welcome! 🎉
 ```
 
@@ -45,7 +46,8 @@ Thank you for your first contribution to Pulumi! This documentation improvement 
 - Direct and clear
 
 **Example (Approve)**:
-```
+
+```text
 LGTM! Nice improvements to the error handling section. Consider adding a link to the troubleshooting guide in line 42.
 ```
 
@@ -59,7 +61,8 @@ LGTM! Nice improvements to the error handling section. Consider adding a link to
 - Reference documentation for context
 
 **Example (Dependabot HIGH)**:
-```
+
+```text
 High-risk update reviewed. Testing checklist completed:
 - ✅ make serve-all passed
 - ✅ Search functionality verified
@@ -73,7 +76,8 @@ High-risk update reviewed. Testing checklist completed:
 ### Security Patches (HIGH Priority)
 
 **Approve**:
-```
+
+```text
 Security patch approved. Testing completed:
 - ✅ make serve-all passed
 - ✅ PR deployment verified
@@ -83,7 +87,8 @@ Critical security update merged despite high-risk classification.
 ```
 
 **Approve and merge**:
-```
+
+```text
 Security patch approved. Auto-merge enabled. Testing completed:
 - ✅ make serve-all passed
 - ✅ PR deployment verified
@@ -92,7 +97,8 @@ Security patch approved. Auto-merge enabled. Testing completed:
 ### High Risk (Non-Security)
 
 **Approve**:
-```
+
+```text
 High-risk update reviewed. Testing checklist completed:
 - ✅ make serve-all passed
 - ✅ Search functionality verified
@@ -103,7 +109,8 @@ Safe to merge after additional checks pass.
 ```
 
 **Approve and merge**:
-```
+
+```text
 High-risk update tested. Auto-merge enabled. Checklist:
 - ✅ make serve-all passed
 - ✅ PR deployment verified
@@ -113,20 +120,23 @@ High-risk update tested. Auto-merge enabled. Checklist:
 ### Medium/Low Risk
 
 **Approve**:
-```
+
+```text
 Update reviewed for quarterly batch. Basic checks passed:
 - ✅ make lint passed
 ```
 
 **Approve and merge**:
-```
+
+```text
 Update approved. Auto-merge enabled. Lint checks passed.
 ```
 
 ### Quarterly Review
 
 **Close with quarterly note**:
-```
+
+```text
 Closing to batch with other low/medium-risk updates in quarterly review. We'll merge accumulated quarterly updates together after comprehensive testing. This reduces testing overhead while keeping dependencies current.
 
 See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management) for details.

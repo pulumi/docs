@@ -41,21 +41,24 @@ Use AskUserQuestion with:
 ## If User Chooses "Yes"
 
 1. Get PR branch name:
+
    ```bash
    gh pr view {{arg}} --json headRefName --jq '.headRefName'
    ```
 
 2. Trigger workflow:
+
    ```bash
    gh workflow run testing-build-and-deploy.yml --ref <branch-name>
    ```
 
 3. Wait 2-3s, fetch URL:
+
    ```bash
    gh run list --workflow=testing-build-and-deploy.yml --limit 1 --json databaseId,status,url,headBranch --jq '.[0]'
    ```
 
-### Display Template (Yes):
+### Display Template (Yes)
 
 ```markdown
 ## 🔧 Infrastructure Deployment Initiated
@@ -73,7 +76,7 @@ PR Deployment [if available]: [URL from Part A]
 
 ## If User Chooses "No"
 
-### Display Template (No):
+### Display Template (No)
 
 ```markdown
 ## 🔧 Infrastructure Testing Skipped

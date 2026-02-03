@@ -33,7 +33,8 @@ Report results to user after executing confirmed action.
 - **For Dependabot HIGH/MEDIUM**: Warn about pulumi-test.io deployment trigger
 
 Example (Dependabot HIGH):
-```
+
+```text
 ✅ PR #1234 approved with auto-merge enabled!
 
 PR will merge using squash when checks pass. Verify with:
@@ -54,7 +55,8 @@ Labels: deps-security-patch, deps-lambda-edge-risk
 - Confirm approval was posted
 
 Example:
-```
+
+```text
 ✅ Changes applied and PR #1234 approved!
 
 Changes committed: a1b2c3d
@@ -87,7 +89,7 @@ View: https://github.com/pulumi/docs/pull/1234/commits/a1b2c3d
 
 If any command fails during execution:
 
-```
+```text
 ❌ Failed to [action] PR #{{arg}}
 
 Error: [error message]
@@ -107,6 +109,7 @@ For status verification, use these gh CLI fields:
 - `autoMergeRequest` - Auto-merge configuration (null if not enabled)
 
 Example verification command:
+
 ```bash
 gh pr view {{arg}} --json state,mergedAt,autoMergeRequest
 ```
