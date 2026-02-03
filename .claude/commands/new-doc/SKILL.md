@@ -1,11 +1,10 @@
 ---
 name: new-doc
 description: |
-  Create documentation pages (regular or index) with proper frontmatter, menu structure,
-  and SEO optimization for the Pulumi docs site. Use when Claude needs to: (1) Create
-  a new documentation page, (2) Set up an index page (_index.md) with sections, (3) Add
-  pages to the Hugo menu system with proper weights and identifiers, (4) Generate
-  SEO-optimized metadata.
+  Create Pulumi documentation with proper frontmatter and menu structure. 
+
+  Use when Claude needs to: (1) Create a new documentation page, (2) Set up an index page (_index.md) with sections, (3) Add
+  pages to the Hugo menu system with proper weights and identifiers, (4) Generate SEO-optimized metadata.
 ---
 
 # new-doc
