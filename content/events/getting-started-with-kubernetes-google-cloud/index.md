@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: Getting Started with Kubernetes on Google Cloud
-meta_desc: Learn how Kubernetes runs on Google Cloud using GKE. Learn to create clusters, deploy applications, and manage Kubernetes infrastructure with Pulumi.
+meta_desc: Learn how Kubernetes runs on Google Cloud using GKE. Create clusters, deploy applications, and manage Kubernetes infrastructure with Pulumi.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -32,8 +32,9 @@ url_slug: getting-started-with-kubernetes-google-cloud
 main:
     # Webinar title.
     title: Getting Started with Kubernetes on Google Cloud
+
     event_type: workshop # workshop | event
-    
+
     # URL for embedding a URL for ungated webinars.
     youtube_url:
 
@@ -49,7 +50,7 @@ main:
     # Description of the webinar.
     description: |
         Getting started with Kubernetes on Google Cloud doesn’t have to be complex. This workshop introduces the fundamentals of running Kubernetes using Google Kubernetes Engine (GKE) and shows how Pulumi can be used to define and manage Kubernetes and cloud infrastructure in code.
-        
+
         You’ll be guided through creating a GKE cluster and deploying a containerized application, using diagrams and hands-on exercises to reinforce core Kubernetes concepts. The focus is on practical, beginner-friendly workflows that help you understand how Kubernetes works on Google Cloud before moving on to more advanced topics.
     learn:
         - Create a Google Kubernetes Engine (GKE) cluster
