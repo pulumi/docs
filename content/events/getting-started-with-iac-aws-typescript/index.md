@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: Getting started on AWS with Typescript
+title: Getting Started on AWS with TypeScript
 meta_desc: Learn how to manage AWS infrastructure using TypeScript and Pulumi. Define, deploy, and manage cloud resources using familiar programming practices.
 meta_image:
 
@@ -31,7 +31,7 @@ url_slug: getting-started-with-iac-aws-typescript
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Getting started on AWS with TypeScript
+    title: Getting Started on AWS with TypeScript
 
     event_type: workshop # workshop | event
 
@@ -76,7 +76,7 @@ form:
     hubspot_form_id: 644d3f9d-9e44-49dd-8e8b-13a80f0457c5
     salesforce_campaign_id: 701PQ00000qEPv7YAG
 event_data:
-    name: "Getting started on AWS with TypeScript"
+    name: "Getting Started on AWS with TypeScript"
     start_date: 2026-04-15T09:00:00.000-07:00
     end_date: 2026-04-15T10:00:00.000-07:00
     url: "https://www.pulumi.com/events/getting-started-with-iac-aws-typescript/"
