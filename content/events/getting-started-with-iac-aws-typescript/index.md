@@ -49,13 +49,13 @@ main:
 
     # Description of the webinar.
     description: |
-        This workshop explores how modern infrastructure management on Amazon Web Services (AWS) can be streamlined using infrastructure as code and familiar programming languages. You’ll learn how Pulumi enables teams to define, deploy, and manage AWS infrastructure using TypeScript, applying established software engineering practices to cloud infrastructure.
+        This workshop explores how modern infrastructure management on Amazon Web Services (AWS) can be streamlined using infrastructure as code (IaC) and familiar programming languages. You’ll learn how Pulumi enables teams to define, deploy, and manage AWS infrastructure using TypeScript, applying established software engineering practices to cloud infrastructure.
 
         Through guided examples, diagrams, and walkthroughs, the session shows how Pulumi’s programming model connects application and infrastructure development. This approach makes AWS architectures easier to understand, change, and maintain, while reducing friction when managing infrastructure across projects and environments.
     learn:
         - How to model AWS infrastructure using TypeScript and familiar programming constructs
-        - How infrastructure as code improves reliability and repeatability on AWS
-        - How Pulumi supports consistent infrastructure management across environments
+        - How IaC improves reliability and repeatability on AWS
+        - How Pulumi supports consistent AWS infrastructure management across environments
 
     # The webinar presenters
     presenters:
