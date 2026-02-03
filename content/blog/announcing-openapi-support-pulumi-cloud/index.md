@@ -44,7 +44,7 @@ The OpenAPI spec is not hand-written. It is generated from the same API definiti
 
 ## What we are building next
 
-We are using this spec as the foundation for our own tooling, and have plans to continue leveraging the spec in our toolchain longer-term.
+We are using this spec as the foundation for our own tooling, and have plans to continue leveraging the spec in our toolchain longer term.
 
 * **CLI**: We plan to drive the Pulumi CLI’s API client from the OpenAPI spec so that CLI and API stay in lockstep.
 * **Pulumi Service Provider**: We are also building towards day 1 updates to the [Pulumi Service Provider](https://www.pulumi.com/registry/packages/pulumi-service/) so that new and changed API resources are generated from the spec and ship in sync with the service.
