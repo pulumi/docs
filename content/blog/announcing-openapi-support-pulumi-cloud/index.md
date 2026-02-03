@@ -53,4 +53,3 @@ We are using this spec as the foundation for our own tooling, and have plans to 
 As we ship those updates, you will get a single source of truth from API to CLI to provider.
 
 If you have questions or feedback about the OpenAPI spec or the Pulumi Cloud API, reach out in our [Community Slack](https://slack.pulumi.com/) or open an issue in the [Pulumi repository](https://github.com/pulumi/pulumi). We're excited to see what you build with it.
-
