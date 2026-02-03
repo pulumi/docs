@@ -13,11 +13,11 @@ tags:
   - api
 ---
 
-We're excited to announce that the Pulumi Service REST API is now described by an OpenAPI 3.0 specification!
+We're thrilled to announce that the Pulumi Service REST API is now described by an OpenAPI 3.0 specification, and we're just getting started.
 
-This is a feature that has been a long time coming. We have heard your requests for OpenAPI support [loud and clear](https://github.com/pulumi/pulumi-cloud-requests/issues/100), and are thrilled to be able to announce that not only do we have a published specification for consumption, but that our API code is now building from this specification as well.
+This is a feature that has been a long time coming. We have heard your requests for OpenAPI support [loud and clear](https://github.com/pulumi/pulumi-cloud-requests/issues/100), and we're excited to share that not only do we have a published specification for consumption, but our API code is now built from this specification as well. Moving forward, this single source of truth unlocks better tooling, tighter integration, and a more predictable API experience for everyone.
 
-You can fetch the spec directly from the API at runtime or use it for client generation, validation, and documentation—all from a single, machine-readable contract.
+You can fetch the spec directly from the API at runtime or use it for client generation, validation, and documentation, all from one machine-readable contract.
 
 ## A single contract for the Pulumi Cloud API
 
