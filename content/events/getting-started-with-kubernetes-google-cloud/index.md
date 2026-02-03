@@ -57,7 +57,6 @@ main:
         - Build reusable infrastructure components that scale across teams and projects
         - Deploy and update containerized applications using safe, repeatable workflows
         - Understand the lifecycle of Kubernetes infrastructure on Google Cloud
-    
     # The webinar presenters
     presenters:
         - name: Adam Gordon Bell

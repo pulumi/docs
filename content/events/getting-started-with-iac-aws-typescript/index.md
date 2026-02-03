@@ -75,7 +75,6 @@ form:
     # HubSpot form id.
     hubspot_form_id: 644d3f9d-9e44-49dd-8e8b-13a80f0457c5
     salesforce_campaign_id: 701PQ00000qEPv7YAG
-    
 event_data:
     name: "Getting started on AWS with TypeScript"
     start_date: 2026-04-15T09:00:00.000-07:00
