@@ -11,6 +11,7 @@ menu:
     weight: 30
 aliases:
   - /docs/insights/policy/policy-as-code/policy-metadata/
+  - /docs/insights/policy/metadata.md
 ---
 
 Each policy includes metadata that defines its identity, purpose, and behavior. Metadata provides important context for how a policy is displayed, enforced, and remediated. This information helps both authors and users understand what the policy does, how severe its violations are, and how to resolve them.
