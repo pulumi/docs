@@ -59,19 +59,7 @@ Skills are structured knowledge packages that follow the open [Agent Skills](htt
 
 ## Available Pulumi skills
 
-We are launching a set of skills organized into two plugin groups: migration and authoring. You can install all skills at once or choose specific plugin groups based on your needs.
-
-### Migration skills
-
-Convert and import infrastructure from other tools to Pulumi. This plugin includes four skills covering complete migration workflows, not just syntax translation.
-
-* **Terraform to Pulumi** walks through the full migration workflow. It handles state translation, provider version alignment, and the iterative process of achieving a clean `pulumi preview` with no unexpected changes.
-
-* **CloudFormation to Pulumi** covers the complete AWS CloudFormation migration workflow, from template conversion and stack import to handling CloudFormation-specific constructs.
-
-* **CDK to Pulumi** covers the complete AWS CDK migration workflow end to end, from conversion and import to handling CDK-specific constructs like Lambda-backed custom resources and cross-stack references.
-
-* **Azure to Pulumi** covers the complete Azure Resource Manager and Bicep migration workflow, handling template conversion and resource import with guidance on achieving zero-diff validation.
+We are launching a set of skills organized into two plugin groups: authoring and migration. You can install all skills at once or choose specific plugin groups based on your needs.
 
 ### Authoring skills
 
@@ -85,6 +73,18 @@ This plugin includes four skills focused on code quality, reusability, and confi
 
 * **Pulumi ESC** covers centralized secrets and configuration management. The skill guides assistants through setting up dynamic OIDC credentials, composing environments, and integrating secrets into Pulumi programs and other applications.
 
+### Migration skills
+
+Convert and import infrastructure from other tools to Pulumi. This plugin includes four skills covering complete migration workflows, not just syntax translation.
+
+* **Terraform to Pulumi** walks through the full migration workflow. It handles state translation, provider version alignment, and the iterative process of achieving a clean `pulumi preview` with no unexpected changes.
+
+* **CloudFormation to Pulumi** covers the complete AWS CloudFormation migration workflow, from template conversion and stack import to handling CloudFormation-specific constructs.
+
+* **CDK to Pulumi** covers the complete AWS CDK migration workflow end to end, from conversion and import to handling CDK-specific constructs like Lambda-backed custom resources and cross-stack references.
+
+* **Azure to Pulumi** covers the complete Azure Resource Manager and Bicep migration workflow, handling template conversion and resource import with guidance on achieving zero-diff validation.
+
 ## How to install
 
 ### Claude Code plugin marketplace
@@ -93,8 +93,8 @@ For Claude Code users, the plugin system provides the simplest installation expe
 
 ```bash
 claude plugin marketplace add pulumi/agent-skills
-claude plugin install pulumi-migration     # Install migration skills
 claude plugin install pulumi-authoring     # Install authoring skills
+claude plugin install pulumi-migration     # Install migration skills
 ```
 
 You can install both plugin groups or choose only the ones you need.
@@ -133,4 +133,4 @@ The assistant will follow the skill's procedures, ask clarifying questions when 
 
 We expect this collection to grow. If you have Pulumi expertise worth packaging, whether provider-specific patterns, debugging workflows, or operational practices, we welcome contributions. See the [contributing guide](https://github.com/pulumi/agent-skills/blob/main/CONTRIBUTING.md) for details.
 
-The skills are available now at [github.com/pulumi/agent-skills](https://github.com/pulumi/agent-skills). Install them in your preferred AI coding environment and let us know what you build.
+The skills are available now in the [agent-skills repository](https://github.com/pulumi/agent-skills). Install them in your preferred AI coding environment and let us know what you build.
