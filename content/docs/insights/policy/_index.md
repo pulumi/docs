@@ -11,14 +11,16 @@ menu:
     weight: 20
     identifier: insights-policy
 aliases:
-  - /docs/guides/crossguard/
-  - /policy-as-code/
-  - /docs/using-pulumi/crossguard/
-  - /docs/iac/packages-and-automation/crossguard/
-  - /docs/iac/using-pulumi/crossguard/
-  - /docs/iac/crossguard/
-  - /docs/insights/policy-as-code/
-  - /docs/insights/policy/core-concepts/
+- /docs/guides/crossguard/
+- /policy-as-code/
+- /docs/using-pulumi/crossguard/
+- /docs/iac/packages-and-automation/crossguard/
+- /docs/iac/using-pulumi/crossguard/
+- /docs/iac/crossguard/
+- /docs/insights/policy-as-code/
+- /docs/insights/policy/core-concepts/
+- /docs/iac/packages-and-automation/crossguard/core-concepts/
+- /docs/iac/using-pulumi/crossguard/core-concepts/
 ---
 
 Pulumi Policies enables you to implement policy as code across your entire cloud infrastructure. You define guardrails in code and apply them consistently across resources managed by Pulumi IaC, provisioned with Terraform or CloudFormation, or created manually. These codified business and security rules provide automated compliance protections for your organization.

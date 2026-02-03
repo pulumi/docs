@@ -16,6 +16,7 @@ aliases:
 - /docs/administration/access-identity/oidc/client/
 - /docs/administration/access-identity/oidc/
 - /docs/pulumi-cloud/access-management/oidc-client/
+- /docs/pulumi-cloud/access-management/oidc/
 ---
 
 Pulumi supports establishing trust relationships with third party OIDC providers by leveraging id_tokens and allowing it to be exchanged for a short-lived Pulumi access token. This mechanism enhances security by eliminating the necessity for hardcoded credentials.

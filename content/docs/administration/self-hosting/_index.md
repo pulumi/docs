@@ -20,6 +20,7 @@ aliases:
   - /docs/pulumi-cloud/self-hosted/
   - /docs/pulumi-cloud/admin/self-hosted/
   - /docs/administration/self-hosting/
+  - /docs/administration/self-hosting/pulumi-cloud
 
 sections:
 - type: flat

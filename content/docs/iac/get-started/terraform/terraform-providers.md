@@ -11,6 +11,7 @@ menu:
         weight: 6
 
 aliases:
+- /docs/iac/using-pulumi/pulumi-packages/terraform-provider/
 ---
 
 ## Access the provider ecosystem

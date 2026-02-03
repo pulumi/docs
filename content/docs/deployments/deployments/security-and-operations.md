@@ -12,8 +12,8 @@ menu:
     identifier: deployments-deployments-security-operations
 aliases:
 - /docs/pulumi-cloud/deployments/security-and-operations/
-  - /docs/intro/deployments/faq/
-  - /docs/pulumi-cloud/deployments/faq/
+- /docs/intro/deployments/faq/
+- /docs/pulumi-cloud/deployments/faq/
 ---
 
 ## Security and Isolation

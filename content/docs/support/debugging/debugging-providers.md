@@ -20,6 +20,7 @@ aliases:
     - /docs/iac/extending-pulumi/debugging-providers/
     - /docs/iac/build-with-pulumi/debugging-providers/
     - /docs/iac/troubleshooting/debugging/debugging-providers/
+    - /docs/iac/guides/building-extending/providers/debugging-providers/
 ---
 
 When developing or troubleshooting Pulumi providers, you may need to debug the provider code locally. This guide walks you through starting your provider in debug mode, setting breakpoints, and running tests.

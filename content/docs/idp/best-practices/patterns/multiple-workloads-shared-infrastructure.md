@@ -9,6 +9,8 @@ meta_desc: Separate application deployment from infrastructure management using 
 allow_long_title: true
 h1: "IDP Pattern: Multiple workloads on shared infrastructure"
 description: <p>Separate application deployment from infrastructure management using components for centrally managed shared infrastructure.</p>
+aliases:
+  - /docs/idp/best-practices/patterns/container-based-apps-centrally-managed-infra
 ---
 
 ## Description
