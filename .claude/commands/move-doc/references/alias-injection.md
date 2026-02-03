@@ -1,3 +1,7 @@
+---
+user-invocable: false
+---
+
 # Alias Injection Reference
 
 How to inject Hugo aliases into frontmatter when moving files.

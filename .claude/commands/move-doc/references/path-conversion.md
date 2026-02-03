@@ -1,3 +1,7 @@
+---
+user-invocable: false
+---
+
 # Path Conversion Reference
 
 How to convert Hugo content file paths to URL paths for alias calculation.

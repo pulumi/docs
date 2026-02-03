@@ -1,3 +1,7 @@
+---
+user-invocable: false
+---
+
 # Link Updates Reference
 
 How to find and update internal links when moving documentation files.

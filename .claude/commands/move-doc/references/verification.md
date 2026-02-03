@@ -1,3 +1,7 @@
+---
+user-invocable: false
+---
+
 # Alias Verification Reference
 
 How to use repository scripts to verify Hugo aliases are correct after moving files.
