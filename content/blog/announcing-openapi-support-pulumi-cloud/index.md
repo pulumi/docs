@@ -1,7 +1,7 @@
 ---
-title: "Announcing OpenAPI support for the Pulumi Cloud API"
+title: "Announcing OpenAPI support for the Pulumi Cloud REST API"
 date: "2026-02-03"
-meta_desc: "The Pulumi Service REST API now has an OpenAPI 3.0 specification you can fetch at runtime. Use it for client generation, validation, and discovery."
+meta_desc: "The Pulumi Cloud REST API now has an OpenAPI 3.0 specification you can fetch at runtime. Use it for client generation, validation, and discovery."
 authors:
   - davide-massarenti
   - devon-grove
@@ -13,15 +13,15 @@ tags:
   - api
 ---
 
-We're thrilled to announce that the Pulumi Service REST API is now described by an OpenAPI 3.0 specification, and we're just getting started.
+We're thrilled to announce that the Pulumi Cloud REST API is now described by an OpenAPI 3.0 specification, and we're just getting started.
 
 This is a feature that has been a long time coming. We have heard your requests for OpenAPI support [loud and clear](https://github.com/pulumi/pulumi-cloud-requests/issues/100), and we're excited to share that not only do we have a published specification for consumption, but our API code is now built from this specification as well. Moving forward, this single source of truth unlocks better tooling, tighter integration, and a more predictable API experience for everyone.
 
 You can fetch the spec directly from the API at runtime or use it for client generation, validation, and documentation, all from one machine-readable contract.
 
-## A single contract for the Pulumi Cloud API
+## A single contract for the Pulumi Cloud REST API
 
-The Pulumi Service API powers the Pulumi CLI, the Pulumi Console, and third-party integrations. Until now, there was no single, published machine-readable description of that API. We've changed that. The API is now defined and served as a standard OpenAPI 3.0.3 document.
+The Pulumi Cloud API powers the Pulumi CLI, the Pulumi Console, and third-party integrations. Until now, there was no single, published machine-readable description of that API. We've changed that. The API is now defined and served as a standard OpenAPI 3.0.3 document.
 
 * **Runtime discovery**: You can retrieve the spec from the API itself, so your tooling always sees the same surface the service implements.
 * **Client generation**: Use your favorite OpenAPI tooling (e.g. OpenAPI Generator, Swagger Codegen) to generate API clients in the language of your choice.
