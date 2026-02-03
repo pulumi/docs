@@ -12,6 +12,8 @@ menu:
 aliases:
   - /docs/idp/developer-portals/new-project-wizard/
   - /docs/pulumi-cloud/developer-platforms/new-project-wizard/
+  - /docs/pulumi-cloud/developer-portals/new-project-wizard/
+  - /docs/pulumi-cloud/developer-portals/new-project-wizard
 ---
 
 Pulumi Cloud provides a New Project Wizard to help walk your organization's members through the process of creating new Pulumi projects. This provides a more turnkey alternative to the [Pulumi Backstage Plugin](/docs/idp/developer-portals/backstage) or custom-built integrations.

@@ -12,6 +12,7 @@ aliases:
   - /docs/reference/esc-syntax/
   - /docs/esc/syntax-reference
   - /docs/esc/reference/
+  - /docs/esc/environments/structure/
 ---
 
 This is a reference for the syntactical constructs defined by ESC.
