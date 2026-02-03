@@ -146,8 +146,8 @@ After reading the target file in step 2, check if it contains any image referenc
 
 If the document contains screenshots, load the reference images to compare against:
 
-1. Read `.claude/command-assets/pulumi-logo-current.png` to see the current Pulumi logo
-2. Read `.claude/command-assets/pulumi-cloud-console-current.png` to see the current Cloud Console UI
+1. Read `.claude/commands/_common/images/pulumi-logo-current.png` to see the current Pulumi logo
+2. Read `.claude/commands/_common/images/pulumi-cloud-console-current.png` to see the current Cloud Console UI
 
 These references represent current branding standards. Use them to:
 
@@ -310,7 +310,7 @@ Report verification results to the user, including any flagged images that need 
 
 **Image analysis guidelines:**
 
-- Only load reference images (`.claude/command-assets/pulumi-logo-current.png` and `.claude/command-assets/pulumi-cloud-console-current.png`) if the document contains screenshots or images
+- Only load reference images (`.claude/commands/_common/images/pulumi-logo-current.png` and `.claude/commands/_common/images/pulumi-cloud-console-current.png`) if the document contains screenshots or images
 - Compare screenshots against reference images rather than relying on memory
 - Always use the Read tool to view images before commenting on them
 - Be specific about what appears outdated (UI elements, logos, branding)
