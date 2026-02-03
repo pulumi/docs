@@ -23,124 +23,33 @@ Select template based on contributor type (from Step 1).
 
 ### External Contributors
 
-- Warm and welcoming tone
-- Express gratitude explicitly
-- Use emojis appropriately (🎉, 🙏, etc.)
-- Acknowledge learning curve and effort
-- Offer continued support
-- Build community connection
+Warm and welcoming tone with explicit gratitude, appropriate emojis (🎉, 🙏), and community-building language.
 
-**Example (Approve)**:
-
-```text
-Thank you for your first contribution to Pulumi! This documentation improvement is excellent. Welcome! 🎉
-```
+**Example**: "Thank you for your first contribution to Pulumi! This documentation improvement is excellent. Welcome! 🎉"
 
 ### Internal Contributors
 
-- Professional and efficient tone
-- Brief acknowledgments
-- Focus on technical feedback
-- "LGTM" acceptable shorthand
-- No excessive praise
-- Direct and clear
+Professional and efficient tone. Brief acknowledgments, technical focus, "LGTM" acceptable. Direct and clear.
 
-**Example (Approve)**:
-
-```text
-LGTM! Nice improvements to the error handling section. Consider adding a link to the troubleshooting guide in line 42.
-```
+**Example**: "LGTM! Nice improvements to the error handling section."
 
 ### Bot PRs (All Types)
 
-- Technical and factual tone
-- No emojis
-- State what was checked/tested
-- Mention risk level for Dependabot
-- Note any special handling required
-- Reference documentation for context
+Technical and factual tone. No emojis. State what was checked/tested, mention risk level for Dependabot.
 
-**Example (Dependabot HIGH)**:
+**Example**: "High-risk update reviewed. Testing checklist completed: ✅ make serve-all passed, ✅ PR deployment verified, ✅ Lambda@Edge functions operating normally."
 
-```text
-High-risk update reviewed. Testing checklist completed:
-- ✅ make serve-all passed
-- ✅ Search functionality verified
-- ✅ No console errors
-- ✅ PR deployment loads correctly
-- ✅ Lambda@Edge functions operating normally
-```
+## Dependabot Template Patterns
 
-## Dependabot Variations
-
-### Security Patches (HIGH Priority)
-
-**Approve**:
-
-```text
-Security patch approved. Testing completed:
-- ✅ make serve-all passed
-- ✅ PR deployment verified
-- ✅ No Lambda@Edge errors
-
-Critical security update merged despite high-risk classification.
-```
-
-**Approve and merge**:
-
-```text
-Security patch approved. Auto-merge enabled. Testing completed:
-- ✅ make serve-all passed
-- ✅ PR deployment verified
-```
-
-### High Risk (Non-Security)
-
-**Approve**:
-
-```text
-High-risk update reviewed. Testing checklist completed:
-- ✅ make serve-all passed
-- ✅ Search functionality verified
-- ✅ No console errors
-- ✅ PR deployment loads correctly
-
-Safe to merge after additional checks pass.
-```
-
-**Approve and merge**:
-
-```text
-High-risk update tested. Auto-merge enabled. Checklist:
-- ✅ make serve-all passed
-- ✅ PR deployment verified
-- ✅ Lambda@Edge functions operating normally
-```
-
-### Medium/Low Risk
-
-**Approve**:
-
-```text
-Update reviewed for quarterly batch. Basic checks passed:
-- ✅ make lint passed
-```
-
-**Approve and merge**:
-
-```text
-Update approved. Auto-merge enabled. Lint checks passed.
-```
-
-### Quarterly Review
-
-**Close with quarterly note**:
-
-```text
-Closing to batch with other low/medium-risk updates in quarterly review. We'll merge accumulated quarterly updates together after comprehensive testing. This reduces testing overhead while keeping dependencies current.
-
-See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management) for details.
-```
+| Risk Level | Action | Template Pattern |
+|-----------|--------|------------------|
+| **Security (HIGH)** | Approve | "Security patch approved. Testing completed: [checklist]. Critical security update merged despite high-risk classification." |
+| **Security (HIGH)** | Approve and merge | "Security patch approved. Auto-merge enabled. Testing completed: [checklist]." |
+| **High (Non-Security)** | Approve | "High-risk update reviewed. Testing checklist completed: [checklist]. Safe to merge after additional checks pass." |
+| **High (Non-Security)** | Approve and merge | "High-risk update tested. Auto-merge enabled. Checklist: [checklist]." |
+| **Medium/Low** | Approve | "Update reviewed for quarterly batch. Basic checks passed: [checklist]." |
+| **Medium/Low** | Approve and merge | "Update approved. Auto-merge enabled. Lint checks passed." |
+| **Quarterly Close** | Close PR | "Closing to batch with other quarterly updates. We'll merge accumulated updates after comprehensive testing. See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management)." |
 
 ## Implementation Notes
 

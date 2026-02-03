@@ -84,48 +84,33 @@ For non-Dependabot bots (pulumi-bot, renovate, etc.)
 
 Choose the appropriate menu based on review findings:
 
-- **Scenario A**: Issues found (blockers or changes needed) → Request changes menu
-- **Scenario B**: Clean review or minor suggestions → Approve menu
-- **Scenario C**: PR should be closed (duplicate, obsolete, wrong direction) → Close menu
+- **Scenario A**: Issues found → Request changes menu
+- **Scenario B**: Clean review → Approve menu
+- **Scenario C**: Should close → Close menu
 
 ### Scenario A: Issues Found - Request Changes Recommended
 
-Use when there are technical issues, style violations, or changes needed before merge.
-
 **Options**:
-
 1. **Request changes** (Recommended) - Author should address issues
-2. **Make changes and approve** - Fix issues yourself + approve (preserves contributor credit)
+2. **Make changes and approve** - Fix issues yourself + approve
 3. **Approve** - Approve despite issues (non-blocking feedback)
 4. **Do nothing yet** - Need more time/discussion
 
-**Tone**: Warm/welcoming for external, professional for internal
-
 ### Scenario B: Clean Review - Approve Recommended
 
-Use when PR is ready to merge or has only minor non-blocking suggestions.
-
 **Options**:
-
 1. **Approve** (Recommended) - Approve PR with feedback
 2. **Approve and merge** - Approve + merge (squash) for immediate merge
 3. **Make changes and approve** - Minor edits (typos, formatting) + approve
 4. **Do nothing yet** - Need more time/discussion
 
-**Tone**: Warm/welcoming for external, professional for internal
-
 ### Scenario C: Should Close - Close PR Recommended
 
-Use when PR doesn't fit, is duplicate, obsolete, or going in wrong direction.
-
 **Options**:
-
 1. **Close PR** (Recommended) - Close with explanation
-2. **Request changes** - Give author chance to address fundamental issues
+2. **Request changes** - Give author chance to address issues
 3. **Approve** - Override concerns and approve anyway
 4. **Do nothing yet** - Need discussion before closing
-
-**Tone**: Respectful and explanatory, especially for external contributors
 
 ## Implementation Notes
 

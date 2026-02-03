@@ -18,6 +18,7 @@ Options:
 ```
 
 **Logic:**
+
 - Convert user's description to Title Case (capitalize major words)
 - Present as recommended option
 - If user selects "Enter different", prompt for text input
@@ -35,6 +36,7 @@ Options:
 ```
 
 **Logic:**
+
 - Use title from Field 1 and append " | Pulumi Docs"
 - Present as recommended option
 - If user selects "Enter different", prompt for text input
@@ -52,6 +54,7 @@ Options:
 ```
 
 **Logic:**
+
 - Generate concise description (50-160 chars) based on user's intent
 - Present as recommended option
 - If user selects "Enter different", prompt for text input
@@ -71,6 +74,7 @@ Options:
 ```
 
 **Logic:**
+
 - Convert title to lowercase kebab-case (e.g., "My Page" → "my-page")
 - Remove special characters, use hyphens for spaces
 - Present as recommended option

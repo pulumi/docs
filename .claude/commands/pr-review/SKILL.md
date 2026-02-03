@@ -96,11 +96,7 @@ Continue to Step 5.
 
 **PREREQUISITE**: Step 4 must be completed before starting this step.
 
-1. Read review criteria: Use Read tool to load `.claude/commands/_common/review-criteria.md`
-2. Review all files in the diff against criteria
-3. Check: STYLE-GUIDE.md compliance, spelling/grammar, links, code examples, file moves with aliases, infrastructure changes, images, frontmatter, cross-references, SEO
-4. Apply role-specific guidelines (documentation vs blog/marketing)
-5. For blog posts announcing features: Check if corresponding documentation exists
+Review all files against STYLE-GUIDE.md compliance: spelling, grammar, links, code examples, file moves with aliases, images, frontmatter, and cross-references. Apply role-specific guidelines per content type. See _common/review-criteria.md for full criteria.
 
 **Large diffs (>100 lines)**: Summarize findings by category rather than line-by-line.
 
@@ -189,19 +185,7 @@ Execute using confirmed/edited content from Step 8.
 - **Close PR**: `gh pr comment {{arg}} --body "{{COMMENT}}"` then `gh pr close {{arg}}`
 - **Do nothing yet**: Exit with message
 
-**Make changes and approve** (8-step flow):
-
-1. Save current branch
-2. Check out PR: `gh pr checkout {{arg}}`
-3. Make changes (Edit/Write tools)
-4. Show diff: `git diff`
-5. Ask: "Proceed with commit and approval?"
-   - No → Ask for additional changes or cancel → Return to original branch
-   - Yes → Continue
-6. Commit with co-author: `git add . && git commit -m "Apply style and formatting fixes\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"`
-7. Push: `git push`
-8. Approve: `gh pr review {{arg}} --approve --body "{{COMMENT}}"`
-9. Return to original branch
+**Make changes and approve**: See [action-preview-templates.md](references/action-preview-templates.md) for complete workflow.
 
 Continue to Step 10.
 
@@ -222,47 +206,92 @@ Workflow complete.
 
 ---
 
-## Important Notes
+## Message Templates by Contributor Type
 
-### Message Templates
+See [message-templates.md](references/message-templates.md) for complete templates. Quick reference:
 
-All review comments use templates from [message-templates.md](references/message-templates.md) based on contributor type:
+| Contributor Type | Tone | Emojis | Example |
+|-----------------|------|--------|---------|
+| **External** | Warm, welcoming | Yes | "Thank you for your contribution! Welcome! 🎉" |
+| **Internal** | Professional, efficient | Yes | "LGTM! Nice work on the error handling." |
+| **Bot (all)** | Technical, factual | No | "Security patch approved. Testing completed." |
+| **Dependabot** | Risk-aware with testing details | No | "High-risk update reviewed. Testing checklist completed: ✅ make serve-all passed..." |
 
-- **External**: Warm, welcoming, with emojis
-- **Internal**: Professional, efficient, brief
-- **Bot**: Technical, factual, no emojis
-- **Dependabot**: Risk-aware with testing details
+---
 
-### Dependabot Handling
+## Dependabot Risk Classification
 
-Complete handling guidelines in [dependabot-labels.md](references/dependabot-labels.md):
+See [dependabot-labels.md](references/dependabot-labels.md) for complete taxonomy. Quick reference:
 
-- Risk classification from labels
-- Testing checklists by tier
-- Quarterly review workflow
-- Message variations by risk
+**Determine risk tier from labels**:
 
-### Critical Workflow Rules
+1. **HIGH Risk**:
+   - Has `deps-security-patch` label, OR
+   - Has `deps-lambda-edge-risk` label, OR
+   - Has `deps-risk-high` label
 
-1. **Never skip steps** - All 10 steps are mandatory
+2. **MEDIUM Risk**:
+   - Has `deps-risk-medium` label
+
+3. **LOW Risk**:
+   - Has `deps-risk-low` label
+
+4. **UNKNOWN Risk**:
+   - No risk label present, OR
+   - Has `deps-risk-unknown` label
+
+**Testing requirements by risk tier**:
+
+- **HIGH**: Run `make serve-all`, test search, check console errors (F12), verify PR deployment (URL loads, Lambda@Edge errors via F12, search, navigation)
+- **MEDIUM**: Run `make build`, check warnings, verify PR deployment URL loads if build tools affected
+- **LOW**: Run `make lint`
+
+---
+
+## Dependabot Action Menu
+
+When contributor type is bot and labels indicate Dependabot, show risk-appropriate menu:
+
+**For HIGH Risk or Security Patches** (4 options):
+1. **Approve and merge** (Recommended after testing) - Approve + merge (squash) when testing complete
+2. **Approve** - Approve only, manual merge later
+3. **Request changes** - Technical feedback needed
+4. **Do nothing yet** - Need to test/investigate
+
+**For LOW/MEDIUM Risk with quarterly-review label** (4 options):
+1. **Approve** (Recommended) - Approve for quarterly batch
+2. **Approve and merge** - Merge now if urgent
+3. **Close with quarterly note** - Defer to next quarterly batch
+4. **Do nothing yet** - Need to test/investigate
+
+Display testing checklist with menu based on risk tier (see above).
+
+---
+
+## Critical Workflow Rules
+
+1. **Complete all 10 steps in sequence** - Never skip steps or end workflow prematurely
 2. **Step 3 timing** - Present test deployment guidance BEFORE starting comprehensive review (Step 5)
-3. **Step 4 prerequisite** - Must complete before Step 5
-4. **Always preview** - Show exactly what will happen before executing (Step 8)
-5. **Use confirmed content** - Execute with user-approved text from Step 8 (Step 9)
+3. **Step 4 prerequisite** - Must complete infrastructure deployment check before Step 5
+4. **Always preview before execution** - Show exactly what will happen (Step 8) before executing (Step 9)
+5. **Use confirmed content** - Execute only with user-approved text from Step 8
+6. **Track progress** - Display **[Step X/10]** before each step heading
+7. **Preserve branch safety** - For "Make changes and approve": save current branch, return to it even on errors
 
-### Error Handling
+---
 
-If any command fails:
+## Error Recovery
 
-- Display error message with context
-- Provide recovery commands
-- For "Make changes and approve": Return to original branch on error
+If any command fails during execution:
 
-### Branch Safety
+```text
+❌ Failed to [action] PR #{{arg}}
 
-For "Make changes and approve":
+Error: [error message]
 
-- Always save and restore original branch
-- Show diff before committing
-- Allow cancellation at any point
-- Return to original branch even on errors
+Recovery options:
+- /pr-review {{arg}} (re-run full workflow)
+- Or use gh CLI directly: [relevant commands based on failure]
+```
+
+For "Make changes and approve" failures: Always return to original branch before reporting error.

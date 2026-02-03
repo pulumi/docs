@@ -21,11 +21,7 @@ description: Preview formats and confirmation flows for PR actions
 
 **Note**: Not available for bot PRs (excluded from bot menus)
 
-### Step-by-Step Flow
-
-1. Ask user: "What changes should I make to the PR?"
-
-2. Display detailed preview:
+**Flow**: Ask user for changes, then display preview:
 
 ```
 ## Preview: Changes and Approval
@@ -33,15 +29,15 @@ description: Preview formats and confirmation flows for PR actions
 I will:
 1. Save current branch
 2. Check out PR: gh pr checkout {{arg}}
-3. Make changes:
-   - File: [path] - [description]
-   - File: [path] - [description]
+3. Make changes: [file: path - description]
 4. Show diff before committing
-5. Commit: "Apply style and formatting fixes"
+5. Commit: "Apply style and formatting fixes\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
 6. Push changes
-7. Approve with comment: [Template from message-templates.md]
+7. Approve with comment: [Template]
 8. Return to original branch
 ```
+
+See SKILL.md Step 9 for complete workflow details.
 
 ## Confirmation Question
 

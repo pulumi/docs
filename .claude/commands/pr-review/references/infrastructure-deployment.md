@@ -67,19 +67,17 @@ Deployment started for PR #{{arg}} to pulumi-test.io
 
 📊 Monitor: [Workflow URL] | 🌐 Test site (~10 min): https://pulumi-test.io
 
-Instructions: Monitor workflow → Wait ~10 min → Visit pulumi-test.io → Check console (F12) → Test search/algolia → Verify no Lambda@Edge errors
+Instructions: Monitor workflow → Wait ~10 min → Visit pulumi-test.io → Check console (F12) → Test search → Verify no Lambda@Edge errors
 
-⚠️ Next merge to master resets pulumi-test.io. This is temporary.
+⚠️ Next merge to master resets pulumi-test.io.
 
-PR Deployment [if available]: [URL from Part A]
+PR Deployment [if available]: [URL]
 ```
 
 ## If User Chooses "No"
 
-### Display Template (No)
-
 ```markdown
 ## 🔧 Infrastructure Testing Skipped
 
-PR Deployment [if available]: [URL from Part A]
+PR Deployment [if available]: [URL]
 ```

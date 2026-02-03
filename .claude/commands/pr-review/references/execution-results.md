@@ -22,68 +22,34 @@ Report results to user after executing confirmed action.
 
 ### Approve
 
-- Show PR URL for easy access
-- Confirm comment was posted successfully
+Show PR URL and confirm comment posted.
 
 ### Approve and Merge
 
 - Explain auto-merge behavior (merges when checks pass)
-- Provide verification command to check merge status
+- Provide verification command
 - **For bot PRs**: Include bot username, risk tier, relevant labels
 - **For Dependabot HIGH/MEDIUM**: Warn about pulumi-test.io deployment trigger
 
-Example (Dependabot HIGH):
-
-```text
-✅ PR #1234 approved with auto-merge enabled!
-
-PR will merge using squash when checks pass. Verify with:
-gh pr view 1234 --json state,mergedAt,autoMergeRequest
-
-Bot: @dependabot[bot]
-Risk: HIGH
-Labels: deps-security-patch, deps-lambda-edge-risk
-
-⚠️ Next merge to master triggers pulumi-test.io deployment
-```
+**Example** (Dependabot HIGH): "✅ PR #1234 approved with auto-merge enabled! PR will merge using squash when checks pass. Verify with: gh pr view 1234 --json state,mergedAt,autoMergeRequest | Bot: @dependabot[bot] | Risk: HIGH | Labels: deps-security-patch | ⚠️ Next merge to master triggers pulumi-test.io deployment"
 
 ### Make Changes and Approve
 
-- Show commit SHA for reference
-- List files that were modified
-- Provide links to view changes
-- Confirm approval was posted
+Show commit SHA, list modified files with links.
 
-Example:
-
-```text
-✅ Changes applied and PR #1234 approved!
-
-Changes committed: a1b2c3d
-Files modified:
-- content/docs/intro/index.md (typo fixes)
-- content/docs/install/index.md (formatting)
-
-View: https://github.com/pulumi/docs/pull/1234/commits/a1b2c3d
-```
+**Example**: "✅ Changes applied and PR #1234 approved! Changes committed: a1b2c3d | Files: content/docs/intro/index.md (typo fixes), content/docs/install/index.md (formatting) | View: [URL]"
 
 ### Request Changes
 
-- Confirm request-changes flag was set
-- Show PR URL
-- Remind user that author will be notified
+Confirm request-changes flag set, show PR URL.
 
 ### Close PR
 
-- Confirm PR closed successfully
-- Show closing comment was posted
-- Provide PR URL for reference
+Confirm closed, show PR URL.
 
 ### Do Nothing Yet
 
-- Explain no changes were made
-- Remind how to re-run when ready
-- No PR URL needed (nothing changed)
+Explain no changes made, remind how to re-run.
 
 ## Error Handling
 

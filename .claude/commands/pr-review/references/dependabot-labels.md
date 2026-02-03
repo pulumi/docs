@@ -47,21 +47,13 @@ Determine risk tier from labels:
 
 ### HIGH Risk Testing
 
-Required tests before merge:
-
 - Run `make serve-all` (full rebuild with asset pipeline)
 - Test site search functionality
 - Check browser console for errors (F12)
 - Verify markdown rendering
-- Test PR deployment:
-  - URL loads successfully
-  - Check for Lambda@Edge errors via F12 console
-  - Test search functionality on deployment
-  - Verify navigation works
+- Test PR deployment: URL loads, Lambda@Edge errors via F12, search, navigation
 
 ### MEDIUM Risk Testing
-
-Required tests before merge:
 
 - Run `make build`
 - Check for build warnings
@@ -69,31 +61,7 @@ Required tests before merge:
 
 ### LOW Risk Testing
 
-Required tests before merge:
-
 - Run `make lint`
-
-## Message Template Variations by Risk
-
-See [message-templates.md](message-templates.md) for complete templates.
-
-### Security Patches (HIGH)
-
-- Emphasize urgency and security context
-- Thank for the critical update
-- Mention testing completed despite priority
-
-### High Risk (Non-Security)
-
-- Detail testing performed
-- Explain why changes are safe despite risk
-- Reference specific checks (Lambda@Edge, bundling, etc.)
-
-### Medium/Low Risk
-
-- Brief acknowledgment
-- Confirm lint/build passed
-- Simpler approval language
 
 ## Quarterly Review Workflow
 

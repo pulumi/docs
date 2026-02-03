@@ -58,16 +58,12 @@ description: Test deployment URL fetching and review guidance generation
 
 ### Review the Following Changes
 
-**[Page/File Name]** - [Direct link to this specific page]
-- [ ] [Specific change-based item from diff analysis]
-- [ ] [Specific change-based item from diff analysis]
-- [ ] [Specific change-based item from diff analysis]
+**[Page Name]** - [Direct link]
+- [ ] [Specific item from diff]
+- [ ] [Specific item from diff]
 
-**[Another Page/File Name]** - [Direct link to this specific page]
-- [ ] [Specific change-based item from diff analysis]
-- [ ] [Specific change-based item from diff analysis]
-
-[... continue for all pages with substantive changes ...]
+**[Another Page]** - [Direct link]
+- [ ] [Specific item from diff]
 
 ---
 
@@ -81,24 +77,19 @@ description: Test deployment URL fetching and review guidance generation
 
 ⏳ Test deployment is not ready yet (no pulumi-bot comment found)
 
-The deployment typically appears within a few minutes after pushing commits.
-You can proceed with the code review now and check the deployment later.
+The deployment typically appears within a few minutes. You can proceed with code review now and check the deployment later.
 
-### When the deployment is ready, review:
+### When ready, review:
 
-**[Page/File Name]**
-- [ ] [Specific change-based item from diff analysis]
-- [ ] [Specific change-based item from diff analysis]
+**[Page Name]**
+- [ ] [Specific item from diff]
 
-**[Another Page/File Name]**
-- [ ] [Specific change-based item from diff analysis]
-- [ ] [Specific change-based item from diff analysis]
-
-[... continue for all pages with substantive changes ...]
+**[Another Page]**
+- [ ] [Specific item from diff]
 
 ---
 
-*The deployment URL will be available at: http://www-testing-pulumi-docs-origin-pr-{{arg}}-[commit-hash].s3-website.us-west-2.amazonaws.com*
+*The deployment URL will be available at: http://www-testing-pulumi-docs-origin-pr-{{arg}}-[hash].s3-website.us-west-2.amazonaws.com*
 ```
 
 ## Part D: Handle Edge Cases
