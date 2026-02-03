@@ -53,6 +53,12 @@
 <ul class="p-0 list-none table-of-contents-feedback">
     <!-- Only show "Edit this Page" for pages that are not generated. -->
     {{ if .File }}
+        <li>
+            <pulumi-llm-menu
+                page-url="{{ .Permalink }}"
+                page-title="{{ .Title }}"
+            ></pulumi-llm-menu>
+        </li>
         {{ $isCLICommand := hasPrefix .Path "docs/cli/commands" }}
         {{ $isAPIDoc := and (hasPrefix .Path "docs/reference/pkg/") (ne .Path "docs/reference/pkg/_index.md") }}
         {{ if not (or $isCLICommand $isAPIDoc $.Page.Params.no_edit_this_page) }}

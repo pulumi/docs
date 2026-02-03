@@ -405,7 +405,18 @@
     {{ if .Store.Get "hasMermaid" }}
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true });
+
+        // Initialize mermaid with manual control to preserve source before rendering
+        mermaid.initialize({ startOnLoad: false });
+
+        // Preserve original mermaid source, then render
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('pre.mermaid').forEach(pre => {
+                pre.setAttribute('data-mermaid-source', pre.textContent.trim());
+            });
+            // Render mermaid diagrams after preserving source
+            mermaid.run();
+        });
     </script>
     {{ end }}
 
