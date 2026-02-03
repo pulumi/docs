@@ -73,8 +73,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 9abcfddf-7663-442c-b13d-cfae10a7e0d9
-    salesforce_campaign_id: 701Du0000009z7LIAQ
+    hubspot_form_id: aeff7912-e56d-4d8d-96ff-d3a88538e524
+    salesforce_campaign_id: 701PQ00000qEJ3KYAW
 
 event_data:
   name: "Getting Started with Kubernetes on Google Cloud"
