@@ -53,9 +53,9 @@ main:
 
         You’ll be guided through creating a GKE cluster and deploying a containerized application, using diagrams and hands-on exercises to reinforce core Kubernetes concepts. The focus is on practical, beginner-friendly workflows that help you understand how Kubernetes works on Google Cloud before moving on to more advanced topics.
     learn:
-        - Create a Google Kubernetes Engine (GKE) cluster
-        - Build reusable infrastructure components that scale across teams and projects
-        - Deploy and update containerized applications using safe, repeatable workflows
+        - Create a Google Kubernetes Engine (GKE) cluster using Pulumi
+        - Build reusable infrastructure components for GKE
+        - Deploy and update containerized applications to GKE using safe, repeatable workflows
         - Understand the lifecycle of Kubernetes infrastructure on Google Cloud
     # The webinar presenters
     presenters:
