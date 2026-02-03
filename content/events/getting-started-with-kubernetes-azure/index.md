@@ -73,8 +73,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 81a49dce-f5b7-4277-a9ca-98bbaa5df6cb
-    salesforce_campaign_id: 701Du0000009z7QIAQ
+    hubspot_form_id: 96796c7d-0213-4112-b895-d475253cafbf
+    salesforce_campaign_id: 701PQ00000qES8CYAW
 
 event_data:
   name: "Start Building Azure Infrastructure with C#"
