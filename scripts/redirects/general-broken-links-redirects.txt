@@ -31,3 +31,4 @@ docs/idp/best-practices/patterns/container-based-apps-centrally-managed-infra/in
 docs/insights/policy/metadata.md|/docs/insights/policy/policy-packs/metadata/
 docs/iac/using-pulumi/crossguard/core-concepts/index.html|/docs/insights/policy/
 blog/pulumi-kubernetes-operator-2-0-ga/index.html|/blog/
+registry/packages/pinecone/api-docs/pineconeindex/index.html|/registry/packages/pinecone/
