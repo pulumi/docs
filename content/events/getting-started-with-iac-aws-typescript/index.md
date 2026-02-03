@@ -73,8 +73,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: f1c53015-61ab-4d37-bc32-21869a3d7286
-    salesforce_campaign_id: 701PQ00000DVVBJYA5
+    hubspot_form_id: 644d3f9d-9e44-49dd-8e8b-13a80f0457c5
+    salesforce_campaign_id: 701PQ00000qEPv7YAG
     
 event_data:
     name: "Getting started on AWS with Typescript"
