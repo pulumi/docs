@@ -40,11 +40,11 @@ No authentication is required. The response is the OpenAPI 3.0 document for the 
 
 ## Source of truth and stability
 
-The OpenAPI spec is not hand-written. It is generated from the same API definition that drives our backend and console code. When we add or change API routes or models, the spec is regenerated, so the published document stays in sync with what the service actually implements. That gives you a clear, stable contract for the Pulumi Cloud API.
+We do not hand-write the OpenAPI spec. We generate it from the same API definition that drives our backend and console code. When we add or change API routes or models, we regenerate the spec so the published document stays in sync with what the service actually implements. That gives you a clear, stable contract for the Pulumi Cloud API.
 
 ## What we are building next
 
-We are using this spec as the foundation for our own tooling, and have plans to continue leveraging the spec in our toolchain longer term.
+We are using this spec as the foundation for our own tooling, and have plans to continue leveraging the spec in our toolchain long-term.
 
 * **CLI**: We plan to drive the Pulumi CLI’s API client from the OpenAPI spec so that CLI and API stay in lockstep.
 * **Pulumi Service Provider**: We are also building towards day 1 updates to the [Pulumi Service Provider](https://www.pulumi.com/registry/packages/pulumi-service/) so that new and changed API resources are generated from the spec and ship in sync with the service.
@@ -52,4 +52,5 @@ We are using this spec as the foundation for our own tooling, and have plans to 
 
 As we ship those updates, you will get a single source of truth from API to CLI to provider.
 
-If you have questions or feedback about the OpenAPI spec or the Pulumi Cloud API, reach out in our [Community Slack](https://pulumi-community.slack.com/join/shared_invite/zt-2amio1u4h-5Y35enT27Y0dk4N8ZYHbMg#/shared_invite/email) or open an issue in the [Pulumi repository](https://github.com/pulumi/pulumi). We're excited to see what you build with it.
+If you have questions or feedback about the OpenAPI spec or the Pulumi Cloud API, reach out in our [Community Slack](https://slack.pulumi.com/) or open an issue in the [Pulumi repository](https://github.com/pulumi/pulumi). We're excited to see what you build with it.
+
