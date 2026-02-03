@@ -10,10 +10,8 @@ menu:
     weight: 3
     identifier: idp-developer-portals-backstage
 aliases:
-  - /docs/idp/developer-portals/backstage/
-  - /docs/pulumi-cloud/developer-platforms/backstage/
-  - /docs/pulumi-cloud/developer-portals/backstage/
-  - /docs/pulumi-cloud/developer-portals/backstage
+- /docs/pulumi-cloud/developer-platforms/backstage/
+- /docs/pulumi-cloud/developer-portals/backstage/
 ---
 
 We’ve seen many developer portal technologies rapidly growing in popularity over the last few years.  In particular, we’ve seen Pulumi users adopting [Backstage](https://backstage.io/) and as a result we built the [Pulumi Backstage Plugin](/blog/pulumi-backstage-plugin/) to address the needs of organizations using Backstage and Pulumi together.

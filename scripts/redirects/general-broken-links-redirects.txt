@@ -27,8 +27,7 @@ docs/concepts/options/hidediffs/index.html|/docs/iac/concepts/resources/options/
 docs/iac/guides/building-extending/providers/debugging-providers/index.html|/docs/support/debugging/debugging-providers/
 docs/iac/using-pulumi/pulumi-packages/terraform-provider/index.html|/docs/iac/get-started/terraform/terraform-providers/
 docs/concepts/stacks/index.html|/docs/iac/concepts/stacks/
-docs/idp/best-practices/patterns/container-based-apps-centrally-managed-infra/index.html|/docs/idp/best-practices/patterns/
-docs/insights/policy/metadata.md|/docs/insights/policy/policy-packs/metadata/
+docs/insights/policy/metadata/index.html|/docs/insights/policy/policy-packs/metadata/
 docs/iac/using-pulumi/crossguard/core-concepts/index.html|/docs/insights/policy/
-blog/pulumi-kubernetes-operator-2-0-ga/index.html|/blog/
+blog/pulumi-kubernetes-operator-2-0-ga/index.html|/blog/pko-2-0-ga/
 registry/packages/pinecone/api-docs/pineconeindex/index.html|/registry/packages/pinecone/
