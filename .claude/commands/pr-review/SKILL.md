@@ -253,12 +253,14 @@ See [dependabot-labels.md](references/dependabot-labels.md) for complete taxonom
 When contributor type is bot and labels indicate Dependabot, show risk-appropriate menu:
 
 **For HIGH Risk or Security Patches** (4 options):
+
 1. **Approve and merge** (Recommended after testing) - Approve + merge (squash) when testing complete
 2. **Approve** - Approve only, manual merge later
 3. **Request changes** - Technical feedback needed
 4. **Do nothing yet** - Need to test/investigate
 
 **For LOW/MEDIUM Risk with quarterly-review label** (4 options):
+
 1. **Approve** (Recommended) - Approve for quarterly batch
 2. **Approve and merge** - Merge now if urgent
 3. **Close with quarterly note** - Defer to next quarterly batch
