@@ -61,6 +61,7 @@ Continue to Step 3.
 See [test-deployment-guidance.md](references/test-deployment-guidance.md) for complete implementation.
 
 **Key actions**:
+
 - Fetch test deployment URL from pulumi-bot comment
 - Analyze diff to generate specific, targeted review guidance (not generic checklists)
 - Construct direct URLs for each changed page
@@ -76,10 +77,12 @@ Check if PR contains dependency or infrastructure changes.
 See [infrastructure-deployment.md](references/infrastructure-deployment.md) for patterns and workflow.
 
 **Decision point**:
+
 - If NO dependency/infrastructure patterns match → Skip to Step 5
 - If ANY pattern matches → Prompt user to deploy to pulumi-test.io
 
 **Patterns that trigger prompt**:
+
 - Dependency files (package.json, go.mod, requirements.txt, etc.)
 - Infrastructure directory or workflow files
 - Author is dependabot or renovate
@@ -131,11 +134,13 @@ Continue to Step 7.
 See [bot-action-menus.md](references/bot-action-menus.md) for complete menu structures.
 
 **Bot PRs**:
+
 - **Dependabot**: Parse labels, determine risk tier, show appropriate 4-option menu with testing checklist
   - See [dependabot-labels.md](references/dependabot-labels.md) for label taxonomy and risk classification
 - **Other bots**: Show 4-option menu with automation/merge label detection
 
 **Non-bot PRs** (adaptive 3-scenario approach):
+
 - **Scenario A: Issues found** → Request changes recommended (4 options)
 - **Scenario B: Clean review** → Approve recommended (4 options)
 - **Scenario C: Should close** → Close PR recommended (4 options)
@@ -151,17 +156,20 @@ Continue to Step 8 with selected action.
 See [action-preview-templates.md](references/action-preview-templates.md) for preview formats.
 
 Display preview showing:
+
 - Exact comment text that will be posted (using templates from [message-templates.md](references/message-templates.md))
 - Commands that will be executed
 - For "Make changes and approve": Show file-by-file changes
 
 **Confirmation options** (use AskUserQuestion):
+
 1. **Yes, proceed** - Execute as previewed
 2. **Edit comment** - Modify comment text
 3. **Change action** - Return to Step 7
 4. **Cancel** - Exit without changes
 
 Handle each response appropriately:
+
 - Edit comment → Show updated preview → Confirm again
 - Change action → Return to action menu (Step 7)
 - Cancel → Exit with "No action taken"
@@ -173,6 +181,7 @@ Continue to Step 9 with confirmed action.
 Execute using confirmed/edited content from Step 8.
 
 **Commands by action**:
+
 - **Approve**: `gh pr review {{arg}} --approve --body "{{COMMENT}}"`
 - **Approve and merge**: `gh pr review {{arg}} --approve --body "{{COMMENT}}"` then `gh pr merge {{arg}} --auto --squash`
 - **Request changes**: `gh pr review {{arg}} --request-changes --body "{{COMMENT}}"`
@@ -180,6 +189,7 @@ Execute using confirmed/edited content from Step 8.
 - **Do nothing yet**: Exit with message
 
 **Make changes and approve** (8-step flow):
+
 1. Save current branch
 2. Check out PR: `gh pr checkout {{arg}}`
 3. Make changes (Edit/Write tools)
@@ -199,6 +209,7 @@ Continue to Step 10.
 See [execution-results.md](references/execution-results.md) for result message templates.
 
 Display appropriate success message with:
+
 - Confirmation of action taken
 - PR URL for easy access
 - Additional context (bot info, risk tier, deployment warnings)
@@ -215,6 +226,7 @@ Workflow complete.
 ### Message Templates
 
 All review comments use templates from [message-templates.md](references/message-templates.md) based on contributor type:
+
 - **External**: Warm, welcoming, with emojis
 - **Internal**: Professional, efficient, brief
 - **Bot**: Technical, factual, no emojis
@@ -223,6 +235,7 @@ All review comments use templates from [message-templates.md](references/message
 ### Dependabot Handling
 
 Complete handling guidelines in [dependabot-labels.md](references/dependabot-labels.md):
+
 - Risk classification from labels
 - Testing checklists by tier
 - Quarterly review workflow
@@ -239,6 +252,7 @@ Complete handling guidelines in [dependabot-labels.md](references/dependabot-lab
 ### Error Handling
 
 If any command fails:
+
 - Display error message with context
 - Provide recovery commands
 - For "Make changes and approve": Return to original branch on error
@@ -246,6 +260,7 @@ If any command fails:
 ### Branch Safety
 
 For "Make changes and approve":
+
 - Always save and restore original branch
 - Show diff before committing
 - Allow cancellation at any point

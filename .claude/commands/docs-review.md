@@ -122,6 +122,6 @@ Once scope is determined, review the changes according to the criteria below. Pr
 
 ## Review Criteria
 
-For complete review criteria, see [review-criteria.md](_common/review-criteria.md).
+For complete review criteria, see [review-criteria.md](_common/review-criteria.md) (shared with pr-review and other skills).
 
 **Quick reference**: Check STYLE-GUIDE.md compliance, spelling/grammar, links, code examples, file moves with aliases, infrastructure changes, images with alt text, frontmatter, cross-references, SEO, and role-specific guidelines (documentation vs blog).
