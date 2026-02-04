@@ -19,7 +19,7 @@ This pattern is especially useful for platform teams that need to balance delive
 <!--more-->
 
 {{% notes type="info" %}}
-Going to [KubeCon Europe 2026](https://www.pulumi.com/kubecon/)? 
+Going to [KubeCon Europe 2026](https://www.pulumi.com/kubecon/)?
 
 Visit [Pulumi at Booth 784](https://www.pulumi.com/kubecon/) for live demos of Pulumi Kubernetes Operator and Kargo workflows for managing infrastructure change at scale.
 {{% /notes %}}
@@ -240,6 +240,6 @@ This gives you a way to codify your deployment standards and ensure they're enfo
 
 Combining the Pulumi Kubernetes Operator with Kargo gives you systematic control over how infrastructure changes move through your environments. Rather than manually managing deployments or pushing changes directly to production, you get automated promotions with verification steps, approval gates where human review is needed, and a clear audit trail of what changed and when. This approach is particularly valuable for teams managing multiple environments where infrastructure changes need to be tested and approved before reaching production. By defining your promotion pipeline as code with stages, approval gates, and verification templates, you ensure that your infrastructure changes follow the same rigorous process every time.
 
-If you want to put this pattern into practice, you can see it live at [KubeCon Europe 2026 (Booth 784)](www.pulumi.com/kubecon) or register for our upcoming [Zero to Production in Kubernetes](www.pulumi.com/events/from-zero-to-production-in-kubernetes) workshop.
+If you want to put this pattern into practice, you can see it live at [KubeCon Europe 2026 (Booth 784)](https://www.pulumi.com/kubecon/) or register for our upcoming [Zero to Production in Kubernetes](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) workshop.
 
 {{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
