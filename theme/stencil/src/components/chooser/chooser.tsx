@@ -202,14 +202,12 @@ export class Chooser {
 
                         // In local mode, there's no need to listen for store updates anymore,
                         // so we unsubscribe.
-                        // setTimeout(() => this.storeUnsubscribe());
                         if (this.storeUnsubscribe) {
                             this.storeUnsubscribe();
                         }
                     } else {
                         // This is a global chooser with (presumably) on-page choosables,
                         // so we need to dispatch an event to reset the selected language.
-                        // setTimeout(() => this.setChoice(this.type, defaultChoice));
                         this.setChoice(this.type, defaultChoice);
                     }
                 }
@@ -230,7 +228,7 @@ export class Chooser {
                 case "backend":
                     return preferredOrDefault(backend);
                 case "pythontoolchain":
-                    return preferredOrDefault(pythontoolchain)
+                    return preferredOrDefault(pythontoolchain);
                 default:
                     return {};
             }

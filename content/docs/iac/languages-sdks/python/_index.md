@@ -194,8 +194,6 @@ $ venv/bin/pip install -r requirements.txt
 
 {{% /choosable %}}
 
-{{< /chooser >}}
-
 {{% choosable pythontoolchain poetry %}}
 
 To add a new dependency when using `poetry`, run the `poetry add` command in your project directory. The dependency will be added to the `pyproject.toml` file and installed in the virtual environment:
@@ -222,7 +220,6 @@ $ poetry add ${PACKAGE_NAME}
 
 ```bat
 > poetry add ${PACKAGE_NAME}
-
 ```
 
 {{% /choosable %}}
@@ -257,10 +254,11 @@ $ uv add ${PACKAGE_NAME}
 
 ```bat
 > uv add ${PACKAGE_NAME}
-
 ```
 
 {{% /choosable %}}
+
+{{< /chooser >}}
 
 {{% /choosable %}}
 
