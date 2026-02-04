@@ -4,6 +4,7 @@ meta_desc: Meet the Pulumi team at KubeCon Europe 2026 to see how teams manage K
 meta_image: /images/kubecon/kubecon-2026-meta.png
 type: page
 layout: event-page
+aliases: kubecon-europe
 
 hero:
   title: Tame Kubernetes complexity with code
