@@ -268,6 +268,6 @@ Kubernetes is like a Swiss Army knife: powerful, versatile, but also easy to mis
 
 If you’ve already learned some lessons the hard way, you’re not alone. But the beauty of Kubernetes is that with each setback, you gain more experience to fine-tune your approach.
 
-Want to learn how to put these practices into action? Meet us at KubeCon Europe 2026 or register for our upcoming [Zero to Production in Kubernetes](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) workshop.
+Want to learn how to put these practices into action? Meet us at [KubeCon Europe 2026 (Booth 784)](https://www.pulumi.com/kubecon/) or register for our upcoming [Zero to Production in Kubernetes](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) workshop.
 
 {{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
