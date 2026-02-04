@@ -36,6 +36,13 @@ jobs:
           REPO="docs"
           AUTHOR="${{ github.event.pull_request.user.login }}"
 
+          # Allow GitHub Copilot bot PRs (whitelist trusted automation)
+          if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "✓ Copilot bot $AUTHOR is whitelisted for Claude reviews"
+            exit 0
+          fi
+
           # Get user's permission level (admin, write, read, or none)
           PERMISSION=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \

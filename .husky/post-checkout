@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Only show on initial clone (not branch switches)
+if [ "$3" = "1" ] && [ ! -f .git/.claude-welcome-shown ] && [ -f .git/config ]; then
+  printf '\n'
+  printf '%s\n' "💡 Tip: Run /docs-tools in Claude Code or GitHub Copilot to see available custom Pulumi Docs commands."
+  printf '\n'
+  touch .git/.claude-welcome-shown
+fi
