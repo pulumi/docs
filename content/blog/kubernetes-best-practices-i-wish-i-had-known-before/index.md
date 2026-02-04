@@ -39,7 +39,7 @@ As a cloud-native citizen and Kubernetes enthusiast, I’ve learned the hard way
 {{% notes type="info" %}}
 Going to [KubeCon Europe 2026](https://www.pulumi.com/kubecon/)? Tame Kubernetes complexity with code.
 
-Pulumi demos, platform engineering talks, Neo in action, and yes, free plushies. [Booth 784](https://www.pulumi.com/kubecon/).
+Pulumi demos, platform engineering talks, AI-powered Neo in action, and yes, free plushies. [Booth 784](https://www.pulumi.com/kubecon/).
 {{% /notes %}}
 
 {{< figure alt="The 'Kubernetes is easy'-iceberg meme is a classic example of how Kubernetes can be deceivingly complex" src="img.png" caption="The 'Kubernetes is easy'-iceberg meme is a classic example of how Kubernetes can be deceivingly complex" width=100% >}}
