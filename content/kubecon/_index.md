@@ -15,7 +15,7 @@ hero:
   cta_text: Book some time with us
   cta_link: "#demo-workshop"
   cta_secondary_text: Get $500 in AWS credits
-  cta_secondary_link: "#promo-banner"
+  cta_secondary_link: "#aws-credits"
   image: /images/kubecon/kubecon-hero-2026.png
   image_alt: KubeCon Europe 2026
   tag_line: "Join us at KubeCon Europe 2026"
