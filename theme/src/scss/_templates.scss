@@ -74,8 +74,24 @@ $violet-primary: #673EAC;
         @include section-hint-accent();
     }
 
+    .hero-event-details {
+        @apply flex flex-wrap items-center font-semibold leading-normal font-body;
+        font-feature-settings: 'salt' on;
+        color: #5b5b5b;
+        font-size: 18px;
+    }
+
+    .hero-date-and-location {
+        @apply font-semibold;
+
+        a, a:hover, a:visited {
+            color: inherit;
+        }
+    }
+
     .hero-booth-number {
-        @include section-hint();
+        @apply font-semibold;
+        color: $violet-primary;
     }
 
     .hero-bullet {
@@ -125,9 +141,7 @@ $violet-primary: #673EAC;
 
     .feature-title {
         @include section-header-extra-extra-small();
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
+        @apply flex flex-row items-center;
 
         i {
             flex-shrink: 0;

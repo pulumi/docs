@@ -24,26 +24,36 @@
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default $title }}
 {{ $tagLine := .tag_line }}
-{{ $boothNumber := .booth_number }}
+{{ $dateAndLocation .date_and_location }}
+{{ $booth := .booth }}
 {{ $anchor := .anchor }}
 
 <section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col xl:flex-row items-start justify-between gap-8">
         <div class="xl:w-1/2">
-            {{ if or $tagLine $boothNumber }}
-            <div class="text-left mb-4">
+            {{ if $tagLine }}
+            <div class="text-left mb-2">
                 {{ if $tagLine }}
                 <span class="hero-tag-line">{{ $tagLine }}</span>
                 {{ end }}
-                {{ if and $tagLine $boothNumber }}
-                <span class="hero-bullet mx-2">•</span>
-                {{ end }}
-                {{ if $boothNumber }}
-                <span class="hero-booth-number">{{ $boothNumber }}</span>
-                {{ end }}
             </div>
             {{ end }}
-            <h1 class="title mb-12">{{ $title }}</h1>
+            <h1 class="title mt-6 mb-8">{{ $title }}</h1>
+            <p class="hero-event-details mb-8">
+                {{ if $dateAndLocation }}
+                <span><i class="far fa-calendar mr-3"></i></span>
+                <span class="hero-date-and-location"><a href="#location">{{ $dateAndLocation }}</a></span>
+                {{ end }}
+                {{ if and $dateAndLocation $booth }}
+                <span class="hero-bullet mx-2">•</span>
+                <span class="hero-booth-number">{{ $booth }}</span>
+                {{ end }}
+            </p>
+            {{ if $image }}
+            <div class="block xl:hidden">
+                <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full max-w-[680px] mx-auto">
+            </div>
+            {{ end }}
             <p class="description mb-12">{{ $description }}</p>
             {{ if $ctaText }}
             <div class="flex flex-col sm:flex-row items-start gap-4">
