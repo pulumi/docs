@@ -20,6 +20,8 @@ This is a feature that has been a long time coming. We have heard your requests 
 
 You can fetch the spec directly from the API at runtime or use it for client generation, validation, and documentation, all from one machine-readable contract.
 
+<!--more-->
+
 ## A single contract for the Pulumi Cloud REST API
 
 The Pulumi Cloud API powers the Pulumi CLI, the Pulumi Console, and third-party integrations. Until now, there was no single, published machine-readable description of that API. We've changed that. The API is now defined and served as a standard OpenAPI 3.0.3 document.
