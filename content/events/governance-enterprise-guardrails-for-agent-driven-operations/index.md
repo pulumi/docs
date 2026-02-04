@@ -65,7 +65,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics:  ["AI", "Pulumi Neo", "Policy as Code", "Platform Engineering"]
-        languages: ["Any"]
+        languages: []
         clouds: ["AWS"]
 
 # The right hand side form section.
