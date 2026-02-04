@@ -71,7 +71,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics:  ["AI", "Automation", "AWS Bedrock", "DevOps"]
-        languages: ["Any"]
+        languages: [ ]
         clouds: ["AWS"]
 
 # The right hand side form section.
