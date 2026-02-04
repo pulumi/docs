@@ -155,6 +155,10 @@ env_forward_allowlist: []
 # Deployment target for the agent: docker (default) or kubernetes
 # Environment variable override: PULUMI_AGENT_DEPLOY_TARGET
 deploy_target: "docker"
+
+# Port of health check endpoint
+# Environment variable override: PULUMI_AGENT_HTTP_SERVER_PORT
+http_server_port: 8080
 ```
 
 ### Kubernetes-Managed Agents
