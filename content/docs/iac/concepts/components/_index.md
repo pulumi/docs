@@ -675,7 +675,7 @@ The contents of the `PulumiPlugin.yaml` file depends on what you're using to man
 
 If you're using `pip`, you only need to specify the runtime language:
 
-```python
+```yaml
 runtime: python
 ```
 
@@ -683,7 +683,7 @@ runtime: python
 
 {{% choosable pythontoolchain uv %}}
 
-If you're using `uv` you'll need to specify the toolchain option:
+If you're using `uv`, you'll need to specify the toolchain option:
 
 ```yaml
 runtime:
@@ -696,7 +696,7 @@ runtime:
 
 {{% choosable pythontoolchain poetry %}}
 
-If you're using `poetry` you'll need to specify the toolchain option:
+If you're using `poetry`, you'll need to specify the toolchain option:
 
 ```yaml
 runtime:

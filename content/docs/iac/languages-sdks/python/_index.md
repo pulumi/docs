@@ -164,33 +164,9 @@ There are many [Pulumi Python packages](/registry) available.
 
 To install a new dependency in the virtual environment when using `pip`, add an entry to `requirements.txt`, and run the following in your project directory:
 
-{{< chooser os "macos,windows,linux" >}}
-
-{{% choosable os macos %}}
-
 ```bash
-$ venv/bin/pip install -r requirements.txt
+pip install -r requirements.txt
 ```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
-
-```bash
-$ venv/bin/pip install -r requirements.txt
-```
-
-{{% /choosable %}}
-
-{{% choosable os windows %}}
-
-```bat
-> venv\Scripts\pip install -r requirements.txt
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 {{% /choosable %}}
 
@@ -198,33 +174,9 @@ $ venv/bin/pip install -r requirements.txt
 
 To add a new dependency when using `poetry`, run the `poetry add` command in your project directory. The dependency will be added to the `pyproject.toml` file and installed in the virtual environment:
 
-{{< chooser os "macos,windows,linux" >}}
-
-{{% choosable os macos %}}
-
 ```bash
-$ poetry add ${PACKAGE_NAME}
+poetry add ${PACKAGE_NAME}
 ```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
-
-```bash
-$ poetry add ${PACKAGE_NAME}
-```
-
-{{% /choosable %}}
-
-{{% choosable os windows %}}
-
-```bat
-> poetry add ${PACKAGE_NAME}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 {{% /choosable %}}
 
@@ -232,33 +184,9 @@ $ poetry add ${PACKAGE_NAME}
 
 To add a new dependency when using `uv`, run the `uv add` command in your project directory. The dependency will be added to the `pyproject.toml` file and installed in the virtual environment:
 
-{{< chooser os "macos,windows,linux" >}}
-
-{{% choosable os macos %}}
-
 ```bash
-$ uv add ${PACKAGE_NAME}
+uv add ${PACKAGE_NAME}
 ```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
-
-```bash
-$ uv add ${PACKAGE_NAME}
-```
-
-{{% /choosable %}}
-
-{{% choosable os windows %}}
-
-```bat
-> uv add ${PACKAGE_NAME}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 {{% /choosable %}}
 
