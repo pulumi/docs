@@ -11,6 +11,7 @@ menu:
     weight: 8
 aliases:
   - /docs/iac/concepts/options/hidediffs/
+  - /docs/concepts/options/hidediffs/
 ---
 
 The `hideDiffs` resource option specifies a list of property paths whose diff details Pulumi will compact in CLI output. Setting `hideDiffs` does not affect what resources are updated, only how those updates are displayed.
