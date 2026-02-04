@@ -1,5 +1,5 @@
 ---
-title: "Neo: Share Tasks for Collaborative AI Infrastructure Operations"
+title: "Neo: Share Tasks with Your Team"
 date: 2026-02-04
 draft: false
 meta_desc: "Collaborate on infrastructure operations by sharing Neo tasks with teammates for review and assistance."
@@ -37,11 +37,11 @@ social:
         Available now in Pulumi Cloud.
 ---
 
-Neo shows its work, but until now that context was locked away with you. When you wanted a teammate's input on a decision Neo made, you had to describe it in Slack or screenshot fragments of the conversation. Today we're introducing task sharing: share any Neo task with anyone in your organization, full context preserved.
+Neo shows its work, but until now that context was only viewable by the user that initiated the conversation. When you wanted a teammate's input on a decision Neo made, you had to describe it in Slack or screenshot fragments of the conversation. Today we're introducing task sharing: share a read-only view of any Neo task with anyone in your organization, full context preserved.
 
 <!--more-->
 
-To share a Neo task, click the share button to generate a read-only link, then send it to a teammate. They see the complete picture: the original prompt, Neo's reasoning process, the actions it took, and the outcome. Full context preserved. Instead of writing up what happened and losing detail in the retelling, you share the task itself.
+To share a Neo task, click the share button to generate a read-only link, then send it to a teammate. They see the complete picture: the original prompt, Neo's reasoning process, the actions it took, and the outcome. Instead of writing up what happened and losing detail in the retelling, you share the task itself.
 
 {{< video title="Sharing a Neo task" src="neo-task-share.mp4" autoplay="true" loop="true" >}}
 
