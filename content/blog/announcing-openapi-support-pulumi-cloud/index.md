@@ -27,7 +27,7 @@ The Pulumi Cloud API powers the Pulumi CLI, the Pulumi Console, and third-party 
 * **Runtime discovery**: You can retrieve the spec from the API itself, so your tooling always sees the same surface the service implements.
 * **Client generation**: Use your favorite OpenAPI tooling (e.g. OpenAPI Generator, Swagger Codegen) to generate API clients in the language of your choice.
 * **Validation and testing**: Validate requests and responses, or build mocks and tests, from the same spec the service uses.
-* **Documentation**: The spec is the source of truth; no separate, hand-maintained API doc that can drift from reality. Load the spec into Swagger UI, Redoc, or another viewer to browse the Pulumi Cloud API interactively.
+* **Documentation**: The spec is the source of truth, not a separate, hand-maintained API doc that can drift from reality. Load the spec into Swagger UI, Redoc, or another viewer to browse the Pulumi Cloud API interactively.
 
 ## How to get the spec
 
