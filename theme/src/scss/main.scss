@@ -89,6 +89,7 @@
 @import "components/user-toggle";
 @import "components/tabs";
 @import "components/llm-menu";
+@import "templates";
 @import "neo-mode";
 
 h1,
@@ -416,7 +417,7 @@ section.newsletter-input pulumi-hubspot-form input.hs-input {
     div {
        @apply bg-white;
     }
-    
+
     p {
         @apply text-black text-left text-sm pr-2;
 

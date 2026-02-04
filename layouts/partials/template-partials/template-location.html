@@ -1,0 +1,68 @@
+{{/*
+    Template Location Partial
+
+    Parameters:
+    - tag_line: Optional tag line (displays in violet above title)
+    - title: Section title
+    - subtitle: Optional section subtitle/description
+    - location: Location details (booth, venue, dates) - accepts markdown
+    - description: Additional description text - accepts markdown
+    - map_embed: Map embed HTML
+    - map_image: Map image path
+    - cta_text: CTA button text
+    - cta_link: CTA button link
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $tagLine := .tag_line }}
+{{ $title := .title }}
+{{ $subtitle := .subtitle }}
+{{ $location := .location }}
+{{ $description := .description }}
+{{ $mapEmbed := .map_embed }}
+{{ $mapImage := .map_image }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
+{{ $anchor := .anchor }}
+
+<section class="template-location"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-8">
+        <div>
+            {{ if $tagLine }}
+            <div class="mb-4">
+                <span class="location-tag-line">{{ $tagLine }}</span>
+            </div>
+            {{ end }}
+            {{ if $title }}
+            <h2 class="location-title mt-0 mb-4">{{ $title }}</h2>
+            {{ end }}
+            {{ if $subtitle }}
+            <p class="location-subtitle mb-6">{{ $subtitle }}</p>
+            {{ end }}
+            {{ if $location }}
+            <div class="location-details mb-6">
+                {{ $location | markdownify }}
+            </div>
+            {{ end }}
+            {{ if $description }}
+            <div class="location-description w-full md:w-3/4 mb-12">
+                {{ $description | markdownify }}
+            </div>
+            {{ end }}
+            {{ if $ctaText }}
+            <a href="{{ $ctaLink }}" target="_blank" class="btn-primary-template-variant">{{ $ctaText }}</a>
+            {{ end }}
+        </div>
+        <div class="hidden md:block">
+            {{ if $mapEmbed }}
+            <div class="w-full md:max-w-2xl">
+                {{ $mapEmbed | safeHTML }}
+            </div>
+            {{ else if $mapImage }}
+            <div class="w-full rounded-lg overflow-hidden shadow-lg">
+                <img src="{{ $mapImage }}" alt="Event location map" class="w-full h-auto" />
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

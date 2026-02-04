@@ -1,0 +1,55 @@
+{{/*
+    Template Three Column Partial
+
+    Parameters:
+    - tag_line: Optional tag line (displays in violet above title)
+    - title: Section title
+    - subtitle: Section subtitle/description
+    - columns: Array of column objects
+      Example: [{"icon": "fa-shield", "title": "Title", "description": "Description", "cta_text": "Learn more", "cta_link": "/link"}]
+      Note: icon should be Font Awesome icon class (e.g., "fa-shield", "fa-rocket")
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $tagLine := .tag_line }}
+{{ $title := .title }}
+{{ $subtitle := .subtitle }}
+{{ $columns := .columns }}
+{{ $anchor := .anchor }}
+
+<section class="template-three-column"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="text-left sm:text-center">
+        {{ if $tagLine }}
+        <div class="mb-4">
+            <span class="three-column-tag-line">{{ $tagLine }}</span>
+        </div>
+        {{ end }}
+        {{ if $title }}
+        <h2 class="mt-0 mb-4 three-column-title">{{ $title }}</h2>
+        {{ end }}
+        {{ if $subtitle }}
+        <p class="three-column-description max-w-3xl sm:mx-auto">{{ $subtitle }}</p>
+        {{ end }}
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mt-20">
+        {{ range $columns }}
+        <div class="three-column-item text-left flex flex-col justify-start">
+            {{ if .title }}
+            <h4 class="three-column-item-title mb-3 flex items-center">
+                {{ if .icon }}
+                <i class="fa {{ .icon }} mr-3"></i>
+                {{ end }}
+                {{ .title }}
+            </h4>
+            {{ end }}
+            {{ if .description }}
+            <p class="three-column-item-description mb-6">{{ .description | markdownify }}</p>
+            {{ end }}
+            {{ if .cta_text }}
+            <a href="{{ .cta_link }}" class="btn-secondary-template-variant">{{ .cta_text }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>

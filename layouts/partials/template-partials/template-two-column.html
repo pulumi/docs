@@ -1,0 +1,19 @@
+{{/*
+    Template Two Column Partial
+
+    Parameters:
+    - columns: Array of column objects
+      Example: [{"label": "Label", "title": "Title", "description": "Description", "cta_text": "CTA", "cta_link": "/link"}]
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $columns := .columns }}
+{{ $anchor := .anchor }}
+
+<section class="template-two-column"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+        {{ range $columns }}
+        {{ partial "template-partials/template-card.html" . }}
+        {{ end }}
+    </div>
+</section>

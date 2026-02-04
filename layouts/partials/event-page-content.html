@@ -1,0 +1,52 @@
+{{/*
+    Event Page Content Partial
+
+    Renders all event page widgets in order, pulling data from the context passed in.
+
+    Expected context: Page context with .Params containing widget data
+
+    Usage in layouts:
+    {{ partial "event-page-content.html" . }}
+*/}}
+
+<div class="font-body container mx-auto mb-16 mt-16 px-8 flex flex-col gap-36">
+{{ with .Params.hero }}
+{{ partial "template-partials/template-hero.html" . }}
+{{ end }}
+
+{{ with .Params.logos }}
+{{ partial "template-partials/template-logo-banner.html" (dict "logos" . "text" $.Params.logos_text "anchor" $.Params.logos_anchor) }}
+{{ end }}
+
+{{ with .Params.features }}
+{{ partial "template-partials/template-features.html" . }}
+{{ end }}
+
+{{ with .Params.two_column }}
+{{ partial "template-partials/template-two-column.html" (dict "columns" . "anchor" $.Params.two_column_anchor) }}
+{{ end }}
+
+{{ with .Params.workshop_banner }}
+{{ partial "template-partials/template-workshop-banner.html" . }}
+{{ end }}
+
+{{ with .Params.promo_banner }}
+{{ partial "template-partials/template-promo-banner.html" . }}
+{{ end }}
+
+{{ with .Params.three_column }}
+{{ partial "template-partials/template-three-column.html" . }}
+{{ end }}
+
+{{ with .Params.testimonial }}
+{{ partial "template-partials/template-testimonial.html" . }}
+{{ end }}
+
+{{ with .Params.location }}
+{{ partial "template-partials/template-location.html" . }}
+{{ end }}
+
+{{ with .Params.footer_cta }}
+{{ partial "template-partials/template-footer-cta.html" . }}
+{{ end }}
+</div>

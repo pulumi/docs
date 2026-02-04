@@ -1,0 +1,30 @@
+{{/*
+    Template Promo Banner Partial
+
+    Parameters:
+    - title: Banner title
+    - description: Banner description
+    - cta_text: CTA button text
+    - cta_link: CTA button link
+    - bg_image: Optional background image path
+    - anchor: Optional anchor for section id (defaults to "promo-banner")
+*/}}
+
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
+{{ $bgImage := .bg_image }}
+{{ $anchor := .anchor | default "promo-banner" }}
+
+<section id="{{ $anchor }}" class="rounded-2xl template-promo-banner px-12 py-24 {{ if not $bgImage }}bg-violet-600{{ end }} text-white" {{ if $bgImage }}style="background-image: url('{{ $bgImage }}'); background-size: cover; background-position: center;"{{ end }}>
+    {{ if $title }}
+    <h2 class="promo-banner-title">{{ $title }}</h2>
+    {{ end }}
+    {{ if $description }}
+    <p class="promo-banner-description mb-8 w-full md:w-1/2">{{ $description }}</p>
+    {{ end }}
+    {{ if $ctaText }}
+    <p class="promo-banner-cta">{{ $ctaText }}</p>
+    {{ end }}
+</section>
