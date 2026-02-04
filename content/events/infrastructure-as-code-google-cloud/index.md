@@ -69,7 +69,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics: []
-        languages: ["any"]
+        languages: []
         clouds: ["Google Cloud"]
 
 # The right hand side form section.
