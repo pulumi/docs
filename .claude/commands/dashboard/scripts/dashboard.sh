@@ -1,8 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 
 # This script collects repository data and outputs structured JSON
 # The SKILL.md file instructs Claude how to interpret and present this data
+
+# Check required dependencies
+for cmd in jq gh git; do
+  if ! command -v "$cmd" >/dev/null 2>&1; then
+    printf 'Error: Required command "%s" not found\n' "$cmd" >&2
+    exit 1
+  fi
+done
 
 # ═══════════════════════════════════════════════════════════════════════════
 # 1. Collect User Context
@@ -15,7 +23,7 @@ if gh api orgs/pulumi/members/$GITHUB_USER --silent 2>/dev/null; then
 fi
 
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "unknown")
-UNCOMMITTED_CHANGES=$(git status --porcelain 2>/dev/null | wc -l | tr -d ' ')
+UNCOMMITTED_CHANGES=$(git status --porcelain 2>/dev/null | wc -l | awk '{print $1}')
 
 # Check GitHub API rate limit
 RATE_REMAINING=$(gh api rate_limit --jq '.rate.remaining' 2>/dev/null || echo "0")
@@ -24,7 +32,7 @@ RATE_REMAINING=$(gh api rate_limit --jq '.rate.remaining' 2>/dev/null || echo "0
 # 2. Parallel Data Collection
 # ═══════════════════════════════════════════════════════════════════════════
 
-TMPDIR=$(mktemp -d)
+TMPDIR=$(mktemp -d) || exit 1
 trap "rm -rf $TMPDIR" EXIT
 
 (
@@ -48,7 +56,8 @@ trap "rm -rf $TMPDIR" EXIT
 
   wait
 ) || {
-  echo '{"error": "Some GitHub API calls failed"}' >&2
+  printf '{"error": "Some GitHub API calls failed", "user": {"login": "%s"}, "prs": [], "issues": [], "workflows": [], "rate_remaining": 0}\n' "$GITHUB_USER" >&2
+  exit 1
 }
 
 # ═══════════════════════════════════════════════════════════════════════════

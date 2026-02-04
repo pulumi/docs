@@ -50,6 +50,41 @@ Display: "[icon] Reviewing PR #{{arg}} from @username ([type] contributor)"
 - 🤖 for bot account
 - 📝 for internal/external contributors
 
+## Bot Detection Patterns
+
+A PR author is classified as a bot if it matches any of these patterns:
+
+1. **Username ends with `[bot]`**
+   - Examples: `github-copilot[bot]`, `dependabot[bot]`, `renovate[bot]`
+   - Pattern: `*[bot]*`
+
+1. **Username matches known bot accounts**
+   - `pulumi-bot`
+   - Pattern: Exact string match
+
+1. **Username starts with `app/`**
+   - GitHub Apps use this prefix
+   - Pattern: `app/*`
+
+Detection code (from Step 2):
+
+```bash
+if [[ "$AUTHOR" == *"[bot]"* ]] || [[ "$AUTHOR" == "pulumi-bot" ]] || [[ "$AUTHOR" == app/* ]]; then
+  CONTRIBUTOR_TYPE="bot"
+fi
+```
+
+The workflow in `.github/workflows/claude-code-review.yml` uses similar detection to determine if a PR should be auto-reviewed:
+
+```bash
+AUTHOR="${{ github.event.pull_request.user.login }}"
+
+# GitHub Copilot bot is whitelisted (exact match only for security)
+if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
+  echo "has_write_access=true"
+fi
+```
+
 ## Implementation Notes
 
 - Cache PR_DATA for reuse in later steps (test deployment detection, action execution)

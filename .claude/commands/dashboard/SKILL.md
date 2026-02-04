@@ -112,7 +112,7 @@ Create a terminal-friendly dashboard with these sections:
 👤 User: @{github_user} ({internal|external}) | Branch: {branch} | Uncommitted: {count}
 ```
 
-If `rate_remaining` < 10, show warning: `⚠️  GitHub API rate limit low ({count} remaining)`
+If `rate_remaining` < 50, show warning: `⚠️  GitHub API rate limit low ({count} remaining) - dashboard requires 6+ API calls`
 
 #### Priority Items Section
 
