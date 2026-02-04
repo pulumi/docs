@@ -1,6 +1,6 @@
 ---
 title: "Announcing OpenAPI support for the Pulumi Cloud REST API"
-date: "2026-02-03"
+date: "2026-02-05"
 meta_desc: "The Pulumi Cloud REST API now has an OpenAPI 3.0 specification you can fetch at runtime. Use it for client generation, validation, and discovery."
 meta_image: meta.png
 authors:
