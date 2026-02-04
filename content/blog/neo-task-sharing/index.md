@@ -1,5 +1,5 @@
 ---
-title: "Neo Task Sharing"
+title: "Neo: Share Tasks for Collaborative AI Infrastructure Operations"
 date: 2026-02-04
 draft: false
 meta_desc: "Collaborate on infrastructure operations by sharing Neo tasks with teammates for review and assistance."
@@ -41,9 +41,9 @@ Neo shows its work, but until now that context was locked away with you. When yo
 
 <!--more-->
 
-Platform engineering is collaborative. Teams build on each other's work and learn from how problems get solved. When Neo's work is trapped with individual users, that collaboration breaks down.
+To share a Neo task, click the share button to generate a read-only link, then send it to a teammate. They see the complete picture: the original prompt, Neo's reasoning process, the actions it took, and the outcome. Full context preserved. Instead of writing up what happened and losing detail in the retelling, you share the task itself.
 
-You can now share any Neo task with anyone in your organization. Click the share button to generate a read-only link, then send it to a teammate. They see the complete picture: the original prompt, Neo's reasoning process, the actions it took, and the outcome. Full context preserved. Instead of writing up what happened and losing detail in the retelling, you share the task itself.
+{{< video title="Sharing a Neo task" src="neo-task-share.mp4" autoplay="true" loop="true" >}}
 
 We built this with security as a core constraint. The original task system enforced strict RBAC, ensuring users could only see and act on resources they had permission to access. Task sharing preserves these guarantees. Viewers can see the conversation with Neo, but they cannot trigger any actions, and links within the shared task to stacks or resources still enforce the viewer's existing permissions.
 
