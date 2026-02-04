@@ -67,7 +67,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics:  ["Policy as Code", "Pulumi Neo", "DevSecOps", "PagerDuty"]
-        languages: ["Any"]
+        languages: []
         clouds: ["AWS"]
 
 # The right hand side form section.
