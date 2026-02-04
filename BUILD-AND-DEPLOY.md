@@ -1,7 +1,5 @@
 # Pulumi Docs: Build and Deployment Guide
 
-**Last Updated:** 2025-12-16
-
 This document provides comprehensive documentation of the entire build, test, deployment, and infrastructure system for the Pulumi documentation site.
 
 ## Table of Contents

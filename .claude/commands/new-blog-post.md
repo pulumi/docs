@@ -50,6 +50,7 @@ If the author file doesn't exist, also gather:
 **Additional Authors:**
 
 After gathering the primary author information, ask:
+
 - **Are there additional authors on this post?** If yes, ask for their names or author IDs (comma-separated)
 - For each additional author:
   1. Try to find their existing TOML file in `data/team/team/`
@@ -86,7 +87,7 @@ Inform the user if author information was auto-populated and give them a chance 
 
 1. **Generate slug**: Convert title to lowercase, replace spaces with hyphens, keep only alphanumeric characters and hyphens (remove all other special characters)
 2. **Create directory**: `content/blog/{slug}/`
-3. **Copy placeholder meta.png**: Use Bash to copy `.claude/command-assets/blog-post-meta-placeholder.png` to `content/blog/{slug}/meta.png`
+3. **Copy placeholder meta.png**: Use Bash to copy `.claude/commands/_common/images/blog-post-meta-placeholder.png` to `content/blog/{slug}/meta.png`
 4. **Create index.md** with this structure:
 
 ```markdown

@@ -37,7 +37,7 @@ Once the target file is determined, proceed with the analysis.
 
 Read the entire target file and perform comprehensive analysis.
 
-**Base criteria**: Use the "Review Criteria" section from `/docs-review` (not the workflow or context detection logic) as your foundation for quality standards. This command extends those criteria with proactive improvements and detailed image analysis specific to the glow-up workflow.
+**Base criteria**: Use `_common:review-criteria` as your foundation for quality standards. This command extends those criteria with proactive improvements and detailed image analysis specific to the glow-up workflow.
 
 #### Text analysis
 
@@ -96,7 +96,7 @@ Read the entire target file and perform comprehensive analysis.
 **Content type considerations:**
 
 - Consider whether the content is Documentation or Blog/Marketing material
-- Apply appropriate style guidelines based on content type (see `/docs-review` role-specific guidelines)
+- Apply appropriate style guidelines based on content type (see `_common:review-criteria` role-specific guidelines)
 - Documentation should be clear and objective; blogs can be more engaging
 
 #### Image and diagram analysis
@@ -146,8 +146,8 @@ After reading the target file in step 2, check if it contains any image referenc
 
 If the document contains screenshots, load the reference images to compare against:
 
-1. Read `.claude/command-assets/pulumi-logo-current.png` to see the current Pulumi logo
-2. Read `.claude/command-assets/pulumi-cloud-console-current.png` to see the current Cloud Console UI
+1. Read `.claude/commands/_common/images/pulumi-logo-current.png` to see the current Pulumi logo
+2. Read `.claude/commands/_common/images/pulumi-cloud-console-current.png` to see the current Cloud Console UI
 
 These references represent current branding standards. Use them to:
 
@@ -310,7 +310,7 @@ Report verification results to the user, including any flagged images that need 
 
 **Image analysis guidelines:**
 
-- Only load reference images (`.claude/command-assets/pulumi-logo-current.png` and `.claude/command-assets/pulumi-cloud-console-current.png`) if the document contains screenshots or images
+- Only load reference images (`.claude/commands/_common/images/pulumi-logo-current.png` and `.claude/commands/_common/images/pulumi-cloud-console-current.png`) if the document contains screenshots or images
 - Compare screenshots against reference images rather than relying on memory
 - Always use the Read tool to view images before commenting on them
 - Be specific about what appears outdated (UI elements, logos, branding)
