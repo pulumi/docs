@@ -1,7 +1,7 @@
 import { Component, Element, Host, h, Listen, Prop, State } from "@stencil/core";
 import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
-import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd } from "../../store/actions/preferences";
+import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd, setPythonToolchain } from "../../store/actions/preferences";
 
 export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
@@ -9,12 +9,13 @@ export type OSKey = "macos" | "linux" | "windows";
 export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes" | "digitalocean" | "oci" | "docker";
 export type PersonaKey = "developer" | "devops" | "security" | "leader";
 export type BackEndKey = "service" | "self-managed";
+export type PythonToolchainKey = "pip" | "uv" | "poetry";
 
 export type ChooserMode = "local" | "global";
 export type ChooserOptionStyle = "tabbed" | "none";
-export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "persona" | "backend";
-export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey | BackEndKey;
-export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud | SupportedPersona | SupportedBackEnd;
+export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "persona" | "backend" | "pythontoolchain";
+export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey | BackEndKey | PythonToolchainKey;
+export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud | SupportedPersona | SupportedBackEnd | SupportedPythonToolchain;
 
 export interface SupportedLanguage {
     key: LanguageKey;
@@ -49,6 +50,12 @@ interface SupportedPersona {
 
 interface SupportedBackEnd {
     key: BackEndKey;
+    name: string;
+    preview: boolean;
+}
+
+interface SupportedPythonToolchain {
+    key: PythonToolchainKey;
     name: string;
     preview: boolean;
 }
@@ -123,6 +130,7 @@ export class Chooser {
     setCloud: typeof setCloud;
     setPersona: typeof setPersona;
     setBackEnd: typeof setBackEnd;
+    setPythonToolchain: typeof setPythonToolchain;
 
     componentWillLoad() {
         // Translate the set of options provided into choices.
@@ -158,12 +166,13 @@ export class Chooser {
             setCloud,
             setPersona,
             setBackEnd,
+            setPythonToolchain,
         });
 
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
             const {
-                preferences: { language, k8sLanguage, os, cloud, persona, backend },
+                preferences: { language, k8sLanguage, os, cloud, persona, backend, pythontoolchain },
             } = state;
 
             // In some cases, the user's preferred (i.e., most recently selected) choice
@@ -208,6 +217,8 @@ export class Chooser {
                     return preferredOrDefault(persona);
                 case "backend":
                     return preferredOrDefault(backend);
+                case "pythontoolchain":
+                    return preferredOrDefault(pythontoolchain)
                 default:
                     return {};
             }
@@ -284,6 +295,9 @@ export class Chooser {
             case "backend":
                 options = this.supportedBackEnds;
                 break;
+            case "pythontoolchain":
+                options = this.supportedPythonToolchains;
+                break;
         }
 
         this.currentOptions = options.filter(opt => keys.includes(opt.key));
@@ -342,6 +356,9 @@ export class Chooser {
                     break;
                 case "backend":
                     this.setBackEnd(key as BackEndKey);
+                    break;
+                case "pythontoolchain":
+                    this.setPythonToolchain(key as PythonToolchainKey);
                     break;
             }
         }
@@ -526,6 +543,25 @@ export class Chooser {
         {
             key: "docker",
             name: "Docker",
+            preview: false,
+        },
+    ];
+
+    // The list of supported Python toolchains.
+    private supportedPythonToolchains: SupportedPythonToolchain[] = [
+        {
+            key: "pip",
+            name: "pip",
+            preview: false,
+        },
+        {
+            key: "uv",
+            name: "uv",
+            preview: false,
+        },
+        {
+            key: "poetry",
+            name: "poetry",
             preview: false,
         },
     ];

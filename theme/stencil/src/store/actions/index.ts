@@ -1,4 +1,4 @@
-import { SetLanguage, SetK8sLanguage, SetOS, SetCloud, SetPersona, SetBackEnd } from "./preferences";
+import { SetLanguage, SetK8sLanguage, SetOS, SetCloud, SetPersona, SetBackEnd, SetPythonToolchain } from "./preferences";
 import { DismissBanner } from "./banners";
 import { GetUser } from "./user";
 
@@ -11,6 +11,7 @@ export enum TypeKeys {
     SET_CLOUD = "SET_CLOUD",
     SET_PERSONA = "SET_PERSONA",
     SET_BACKEND = "SET_BACKEND",
+    SET_PYTHONTOOLCHAIN = "SET_PYTHONTOOLCHAIN",
 
     // Banner-related action types.
     DISMISS_BANNER = "DISMISS_BANNER",
@@ -19,6 +20,6 @@ export enum TypeKeys {
     GET_USER_INFO = "GET_USER_INFO",
 }
 
-export type PreferencesAction = SetLanguage | SetK8sLanguage | SetOS | SetCloud | SetPersona | SetBackEnd;
+export type PreferencesAction = SetLanguage | SetK8sLanguage | SetOS | SetCloud | SetPersona | SetBackEnd | SetPythonToolchain;
 export type BannersAction = DismissBanner;
 export type UserAction = GetUser;
