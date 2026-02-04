@@ -1,8 +1,0 @@
-# Author photo: add static/images/team/zac-cook.jpg (400x400 JPG) when available.
-id = "zac-cook"
-name = "Zac Cook"
-title = "Software Engineer"
-weight = 1
-
-status = "active"
-

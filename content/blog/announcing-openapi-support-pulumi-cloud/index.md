@@ -7,7 +7,7 @@ authors:
   - davide-massarenti
   - devon-grove
   - arun-loganathan
-  - zac-cook
+  - zachary-cook
 tags:
   - features
   - pulumi-cloud
