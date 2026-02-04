@@ -18,6 +18,12 @@ Pulumi Cloud provides a New Project Wizard to help walk your organization's memb
 
 By using the wizard, users can generate projects from your [Organization Templates](/docs/idp/developer-portals/templates), commit and push code to GitHub, and trigger an initial deployment -- all in a few clicks and without leaving the browser.
 
+## Accessing the New Project Wizard
+
+You can access the New Project Wizard from the [Stacks page](https://app.pulumi.com/pulumi/projects) in the Pulumi Cloud console. Look for the "New Project" button in the left navigation. You can also navigate directly to the wizard at [https://app.pulumi.com/new](https://app.pulumi.com/new).
+
+## Deployment methods
+
 The New Project Wizard supports multiple deployment methods:
 - **[Deployments - no-code](#deployments---no-code)**: Deploy without VCS, configuration stored in Pulumi ESC
 - **[Deployments - git](#deployments---git)**: Full git integration with automated deployments
@@ -25,9 +31,7 @@ The New Project Wizard supports multiple deployment methods:
 
 For git-based deployments, [install](/docs/deployments/deployments/reference/#github-app-installation) the Pulumi GitHub App.
 
-### Deployment method options
-
-#### Deployments - no-code
+### Deployments - no-code
 
 The no-code deployment method enables users to create and deploy Pulumi stacks without writing to a VCS repository. Stack configuration is stored in [Pulumi ESC](/docs/esc/), making this ideal for self-service workflows where developers need to provision infrastructure quickly without managing source code.
 
@@ -43,7 +47,7 @@ The no-code deployment method enables users to create and deploy Pulumi stacks w
 
 For more information on no-code workflows, see [Workflows](/docs/idp/get-started/workflows).
 
-#### Deployments - git
+### Deployments - git
 
 The git deployment method creates a full Pulumi project in a GitHub repository with [Pulumi Deployments](/docs/deployments/deployments/) configured for automated deployments. This is the traditional infrastructure-as-code approach where your Pulumi program is stored in version control.
 
@@ -60,7 +64,7 @@ The git deployment method creates a full Pulumi project in a GitHub repository w
 
 For more detailed instructions, see [Get Started with Deployments](/docs/deployments/deployments/get-started/#new-project-wizard).
 
-#### CLI (step-by-step commands)
+### CLI (step-by-step commands)
 
 If your organization doesn't have Pulumi Deployments configured, you can still use the New Project Wizard to generate projects. Instead of deploying from the browser, you'll receive step-by-step CLI commands to run in your terminal.
 
