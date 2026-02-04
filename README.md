@@ -133,6 +133,8 @@ To see all available commands, run:
 
 This will display the complete list of documentation tools and commands with descriptions, including commands for content creation, review and approval, content improvement, and issue resolution.
 
+> Note: While these skills are built for Claude Code, they also work with other AI agents! GitHub Copilot can execute them with the slash prefix (e.g., `/docs-tools`), while Codex works without the slash (e.g., `docs-tools`).
+
 ## Generating SDK and CLI documentation
 
 We generate two kinds of reference documentation with this repository: language-specific SDK docs (for a subset of Pulumi packages) and CLI docs (for command-line tools like `pulumi` and `esc`). Instructions for generating both types of docs are listed below.
