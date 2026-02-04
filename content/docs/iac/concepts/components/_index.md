@@ -667,9 +667,47 @@ runtime: nodejs
 {{% /choosable %}}
 {{% choosable language python %}}
 
+The contents of the `PulumiPlugin.yaml` file depends on what you're using to manage your Python dependencies:
+
+{{< chooser pythontoolchain "pip,uv,poetry" >}}
+
+{{% choosable pythontoolchain pip %}}
+
+If you're using `pip`, you only need to specify the runtime language:
+
 ```python
 runtime: python
 ```
+
+{{% /choosable %}}
+
+{{% choosable pythontoolchain uv %}}
+
+If you're using `uv` you'll need to specify the toolchain option:
+
+```yaml
+runtime:
+  name: python
+  options:
+    toolchain: uv
+```
+
+{{% /choosable %}}
+
+{{% choosable pythontoolchain poetry %}}
+
+If you're using `poetry` you'll need to specify the toolchain option:
+
+```yaml
+runtime:
+  name: python
+  options:
+    toolchain: poetry
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 {{% /choosable %}}
 {{% choosable language go %}}
