@@ -249,7 +249,7 @@ The service is configurable to serve the API using TLS. The following environmen
 ```
 openssl \
   req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem \
-  -days { days_unitl_expiration } -nodes -subj "/CN={ common_name }"
+  -days { days_until_expiration } -nodes -subj "/CN={ common_name }"
 ```
 
 ### Database Connections

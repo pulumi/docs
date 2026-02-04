@@ -155,7 +155,7 @@ The following fields are part of the standard header defined by CEF:
 **Severity**: severity level reflecting the importance of the event
 
 **Extensions**: the extensions field is collection of key-value pairs. These keys come from a pre-defined set as well as some keys that we have
-defined on our own. The following is a list of the keys we are setting on the extention field.
+defined on our own. The following is a list of the keys we are setting on the extension field.
 
 Pre-defined keys by the CEF standard:
 
