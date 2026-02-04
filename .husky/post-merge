@@ -3,6 +3,6 @@
 # Show message if commands or agents were added/modified
 if git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep -qE "^\.claude/(commands|agents)/"; then
   printf '\n'
-  printf '%s\n' "💡 New or updated custom Pulumi Docs commands available! In Claude Code or GitHub Copilot, run: /docs-tools"
+  printf '%s\n' "💡 New or updated custom Pulumi Docs commands available! Run /docs-tools in Claude Code or GitHub Copilot 🚀"
   printf '\n'
 fi
