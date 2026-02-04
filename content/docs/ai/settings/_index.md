@@ -2,7 +2,7 @@
 title: Settings
 title_tag: Neo Settings
 h1: Neo Settings
-meta_desc: Configure Neo for your organization with Custom Instructions, Slash Commands, access controls, and task modes.
+meta_desc: Configure Neo for your organization with Custom Instructions, Repository Instructions (AGENTS.md), Slash Commands, access controls, and task modes.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
@@ -12,7 +12,7 @@ menu:
         identifier: ai-settings
 ---
 
-Organization-level settings control how Neo behaves and what capabilities are available to your team.
+Neo can be configured at both the organization and repository level. Organization-level settings control default behaviors and capabilities for your team, while repository-level instructions let you define project-specific conventions that Neo follows automatically.
 
 ## Neo Access
 
@@ -68,6 +68,61 @@ When you ask Neo to create resources, it automatically applies your organization
 - Keep instructions concise and focused on standards that apply across all tasks
 - Update instructions as your team's practices evolve
 - Test instructions in individual prompts before rolling out broadly
+
+## Repository Instructions
+
+While Custom Instructions apply to all tasks across your organization, you can also define project-specific instructions that Neo follows when working in a particular repository. This is done through an `AGENTS.md` file placed in the root of your repository.
+
+### How it works
+
+When Neo enters a repository, it automatically reads the `AGENTS.md` file and applies the instructions without being asked. This makes project-specific conventions explicit and consistent across all tasks in that codebase.
+
+### What to include
+
+Use `AGENTS.md` to capture conventions that aren't enforced by linters or formatters:
+
+- **Coding standards**: Language-specific conventions, preferred patterns, or internal style rules
+- **Naming conventions**: How functions, variables, files, or resources should be named
+- **Test commands**: How to run tests, which test framework to use, or specific flags required
+- **Build processes**: Commands for building, linting, or validating the project
+- **Architecture guidelines**: Preferred project structure, module organization, or design patterns
+- **Other guidance**: Any team-specific requirements your team needs to follow
+
+### Example
+
+```markdown
+# Project Instructions
+
+## Build commands
+- Install dependencies: `npm install`
+- Run tests: `npm test`
+- Lint code: `npm run lint`
+
+## Coding standards
+- Use TypeScript for all new files
+- Prefer async/await over callbacks
+- All exported functions must have JSDoc comments
+
+## Naming conventions
+- React components: PascalCase (e.g., `UserProfile.tsx`)
+- Utility functions: camelCase (e.g., `formatDate.ts`)
+- Test files: `*.test.ts` suffix
+```
+
+### Subdirectory support
+
+You can place `AGENTS.md` files in subdirectories for more specific instructions. When Neo works in a subdirectory, it reads the nearest `AGENTS.md` file, with subdirectory files taking precedence over parent files. This lets you define general project-wide conventions at the root while providing specialized guidance for specific areas of your codebase.
+
+### Cross-tool compatibility
+
+The `AGENTS.md` format aligns with the emerging standard supported by other AI coding tools, including Cursor, Claude Code, and others. This means your team can write instructions once and have them work across multiple AI tools, reducing duplication and ensuring consistency regardless of which tool team members prefer.
+
+### Repository Instructions Best Practices
+
+- Start simple with a few key conventions, then expand as needed
+- Focus on conventions that can't be enforced by automated tools
+- Keep instructions actionable and specific
+- Review and update as your project's practices evolve
 
 ## Slash Commands
 

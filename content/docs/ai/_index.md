@@ -51,6 +51,10 @@ sections:
     heading: Previews
     link: /docs/ai/running-previews/
     description: Generate infrastructure previews with approval gates.
+  - emoji: ⚙️
+    heading: Settings
+    link: /docs/ai/settings/
+    description: Configure Neo with Custom Instructions, AGENTS.md, and Slash Commands.
 
 - type: flat
   heading: Have questions?
