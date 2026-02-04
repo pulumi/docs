@@ -1,0 +1,28 @@
+{{/*
+    Template Logo Banner Partial
+
+    Parameters:
+    - logos: Array of logo objects with src and alt fields
+      Example: [{"src": "/logos/customers/company.svg", "alt": "Company Name"}]
+    - text: Optional text to display above logos
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $logos := .logos }}
+{{ $text := .text }}
+{{ $anchor := .anchor }}
+
+<section class="template-logo-banner"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+        {{ if $text }}
+        <div class="text-center mb-8">
+            <p class="logo-banner-text">{{ $text }}</p>
+        </div>
+        {{ end }}
+        <div class="logo-grid flex flex-wrap items-center justify-center">
+            {{ range $logos }}
+            <div class="logo-container flex items-center justify-center">
+                <img src="{{ .src }}" alt="{{ .alt }}" />
+            </div>
+            {{ end }}
+        </div>
+</section>

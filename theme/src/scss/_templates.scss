@@ -1,0 +1,284 @@
+// Template Components Stylesheet
+// Styles for reusable template partials (template-hero, template-logo-banner, etc.)
+
+$violet-primary: #673EAC;
+@mixin page-header {
+    @apply font-bold leading-extra-tight text-black font-body;
+    font-size: 48px;
+}
+
+@mixin section-header {
+    @apply font-bold leading-extra-tight text-black font-body;
+    font-size: 40px;
+}
+
+@mixin section-header-small {
+    font-feature-settings: 'salt' on;
+    @apply font-bold leading-extra-tight text-black font-body;
+    font-size: 40px;
+}
+
+@mixin section-header-extra-small {
+    font-feature-settings: 'salt' on;
+    @apply font-bold leading-extra-tight text-black font-body;
+    font-size: 24px;
+}
+
+@mixin section-header-extra-extra-small {
+    font-feature-settings: 'salt' on;
+    @apply font-bold leading-extra-tight text-black font-body;
+    font-size: 20px;
+}
+
+
+@mixin section-description {
+    @apply font-normal leading-normal font-body;
+    font-feature-settings: 'salt' on;
+    color: #5b5b5b;
+    font-size: 20px;
+}
+
+@mixin section-subheader-bold {
+    @apply font-semibold leading-normal text-black text-2xl font-body;
+    font-feature-settings: 'salt' on;
+}
+
+@mixin section-hint {
+    @apply font-semibold leading-normal font-body;
+    color: #1e1e1e;
+    font-size: 20px;
+}
+
+@mixin section-hint-accent {
+    @apply font-semibold leading-normal font-body;
+    color: $violet-primary;
+    font-size: 20px;
+}
+
+@mixin section-hint-small {
+    @apply font-semibold leading-normal font-body;
+    font-feature-settings: 'salt' on;
+    color: #757576;
+    font-size: 20px;
+}
+
+@mixin section-body-medium {
+    @apply font-normal leading-normal text-lg font-body;
+    font-feature-settings: 'salt' on;
+    color: #5b5b5b;
+    font-size: 18px;
+}
+
+.template-hero {
+    .hero-tag-line {
+        @include section-hint-accent();
+    }
+
+    .hero-event-details {
+        @apply flex flex-wrap items-center font-semibold leading-normal font-body;
+        font-feature-settings: 'salt' on;
+        color: #5b5b5b;
+        font-size: 18px;
+    }
+
+    .hero-date-and-location {
+        @apply font-semibold;
+
+        a, a:hover, a:visited {
+            color: inherit;
+        }
+    }
+
+    .hero-booth-number {
+        @apply font-semibold;
+        color: $violet-primary;
+    }
+
+    .hero-bullet {
+        @apply text-gray-400;
+    }
+
+    .title {
+        @include page-header();
+        line-height: 110% !important;
+    }
+
+    .description {
+        @include section-description();
+    }
+}
+
+.template-logo-banner {
+    .logo-banner-text {
+        @include section-hint-small();
+    }
+
+    .logo-container {
+        img {
+            height: 54px;
+            max-height: 54px;
+            width: auto;
+        }
+    }
+
+    .logo-grid {
+        gap: 48px;
+    }
+}
+
+.template-features {
+    .features-tag-line {
+        @include section-hint-accent();
+    }
+
+    .features-title {
+        @include section-header();
+    }
+
+    .features-description {
+        @include section-description();
+    }
+
+    .feature-title {
+        @include section-header-extra-extra-small();
+        @apply flex flex-row items-center;
+
+        i {
+            flex-shrink: 0;
+        }
+    }
+
+    .feature-description {
+        @include section-body-medium();
+    }
+
+    .features-content {
+        @screen xl {
+            width: 37.5%;
+        }
+    }
+
+    .features-image {
+        @screen xl {
+            width: 62.5%;
+        }
+    }
+}
+
+.template-card {
+    @apply flex flex-1 items-start rounded-2xl p-8;
+    border: 0.5px solid #AAA;
+
+    .card-label {
+        @include section-hint-accent();
+    }
+
+    .card-title {
+        @include section-header-extra-small();
+    }
+
+    .card-subheader {
+        @include section-header-extra-extra-small();
+        color: #5b5b5b;
+    }
+
+    .card-description {
+        @include section-body-medium();
+    }
+
+    .btn-secondary-template-variant {
+        display: inline-block;
+        width: auto;
+        align-self: flex-start;
+    }
+}
+
+.template-promo-banner {
+    .promo-banner-title {
+        @include section-header-extra-small();
+        @apply text-white;
+    }
+
+    .promo-banner-description {
+        @include section-body-medium();
+        @apply text-white;
+    }
+
+    .promo-banner-cta {
+        @include section-hint();
+        color: #C19BFF;
+        font-feature-settings: 'salt' on;
+    }
+}
+
+.template-three-column {
+    .three-column-tag-line {
+        @include section-hint-accent();
+    }
+
+    .three-column-title {
+        @include section-header();
+    }
+
+    .three-column-item-title {
+        @include section-header-extra-extra-small();
+
+        i {
+            flex-shrink: 0;
+        }
+    }
+
+    .three-column-item-description {
+        @include section-body-medium();
+    }
+
+    .btn-secondary-template-variant {
+        display: inline-block;
+        width: auto;
+        align-self: flex-start;
+    }
+}
+
+.template-testimonial {
+    .template-testimonial-quote {
+        @apply text-white font-body font-semibold leading-normal;
+        font-size: 24px;
+        @screen sm {
+            font-size: 36px;
+        }
+    }
+
+    .template-testimonial-credit {
+        @apply text-white opacity-70 font-body text-2xl font-normal leading-normal;
+    }
+}
+
+.template-location {
+    .location-tag-line {
+        @include section-hint-accent();
+    }
+
+    .location-title {
+        @include section-header();
+    }
+
+    .location-details {
+        @include section-subheader-bold();
+        color: #404041;
+    }
+
+    .location-description {
+        @include section-body-medium();
+        color: #757576;
+    }
+
+    iframe {
+        border-radius: 1rem;
+    }
+}
+
+.template-footer {
+    .template-footer-title {
+        @include section-header-small();
+    }
+}

@@ -1,0 +1,79 @@
+{{/*
+    Template Hero Partial
+
+    Parameters:
+    - title: Hero title
+    - description: Hero description
+    - cta_text: CTA button text
+    - cta_link: CTA button link
+    - cta_secondary_text: Secondary CTA button text (optional)
+    - cta_secondary_link: Secondary CTA button link (optional)
+    - image: Hero image path
+    - image_alt: Alt text for hero image (optional)
+    - tag_line: Tag line text (optional, displays in violet)
+    - booth_number: Booth number (optional, displays in black)
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
+{{ $ctaSecondaryText := .cta_secondary_text }}
+{{ $ctaSecondaryLink := .cta_secondary_link }}
+{{ $image := .image }}
+{{ $imageAlt := .image_alt | default $title }}
+{{ $tagLine := .tag_line }}
+{{ $dateAndLocation := .date_and_location }}
+{{ $booth := .booth }}
+{{ $anchor := .anchor }}
+
+<section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="flex flex-col xl:flex-row items-start justify-between gap-8">
+        <div class="xl:w-1/2">
+            {{ if $tagLine }}
+            <div class="text-left mb-2">
+                {{ if $tagLine }}
+                <span class="hero-tag-line">{{ $tagLine }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+            <h1 class="title mt-6 mb-8">{{ $title }}</h1>
+            <p class="hero-event-details mb-8">
+                {{ if $dateAndLocation }}
+                <span><i class="far fa-calendar mr-3"></i></span>
+                <span class="hero-date-and-location"><a href="#location">{{ $dateAndLocation }}</a></span>
+                {{ end }}
+                {{ if and $dateAndLocation $booth }}
+                <span class="hero-bullet mx-2">•</span>
+                <span class="hero-booth-number">{{ $booth }}</span>
+                {{ end }}
+            </p>
+            {{ if $image }}
+            <div class="block xl:hidden">
+                <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full max-w-[680px] mx-auto">
+            </div>
+            {{ end }}
+            <p class="description mb-12">{{ $description }}</p>
+            {{ if $ctaText }}
+            <div class="flex flex-col sm:flex-row items-start gap-4">
+                <a href="{{ $ctaLink }}" class="btn-primary-template-variant inline-flex items-center gap-2">
+                    <span>{{ $ctaText }}</span>
+                    <span>→</span>
+                </a>
+                {{ if $ctaSecondaryText }}
+                <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2">
+                    <span>{{ $ctaSecondaryText }}</span>
+                    <span>→</span>
+                </a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        {{ if $image }}
+        <div class="hidden xl:block xl:w-1/2">
+            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto max-w-[680px] mx-auto">
+        </div>
+        {{ end }}
+    </div>
+</section>
