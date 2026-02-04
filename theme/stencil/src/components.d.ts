@@ -224,6 +224,10 @@ export namespace Components {
     interface PulumiInstall {
         "os"?: OSKey;
     }
+    interface PulumiLlmMenu {
+        "pageTitle": string;
+        "pageUrl": string;
+    }
     interface PulumiMultiSelectForm {
         /**
           * @default ""
@@ -573,6 +577,12 @@ declare global {
         prototype: HTMLPulumiInstallElement;
         new (): HTMLPulumiInstallElement;
     };
+    interface HTMLPulumiLlmMenuElement extends Components.PulumiLlmMenu, HTMLStencilElement {
+    }
+    var HTMLPulumiLlmMenuElement: {
+        prototype: HTMLPulumiLlmMenuElement;
+        new (): HTMLPulumiLlmMenuElement;
+    };
     interface HTMLPulumiMultiSelectFormElement extends Components.PulumiMultiSelectForm, HTMLStencilElement {
     }
     var HTMLPulumiMultiSelectFormElement: {
@@ -742,6 +752,7 @@ declare global {
         "pulumi-greenhouse-jobs-list": HTMLPulumiGreenhouseJobsListElement;
         "pulumi-hubspot-form": HTMLPulumiHubspotFormElement;
         "pulumi-install": HTMLPulumiInstallElement;
+        "pulumi-llm-menu": HTMLPulumiLlmMenuElement;
         "pulumi-multi-select-form": HTMLPulumiMultiSelectFormElement;
         "pulumi-pricing-calculator": HTMLPulumiPricingCalculatorElement;
         "pulumi-registry-list-search": HTMLPulumiRegistryListSearchElement;
@@ -963,6 +974,10 @@ declare namespace LocalJSX {
     interface PulumiInstall {
         "os"?: OSKey;
     }
+    interface PulumiLlmMenu {
+        "pageTitle"?: string;
+        "pageUrl"?: string;
+    }
     interface PulumiMultiSelectForm {
         /**
           * @default ""
@@ -1109,6 +1124,7 @@ declare namespace LocalJSX {
         "pulumi-greenhouse-jobs-list": PulumiGreenhouseJobsList;
         "pulumi-hubspot-form": PulumiHubspotForm;
         "pulumi-install": PulumiInstall;
+        "pulumi-llm-menu": PulumiLlmMenu;
         "pulumi-multi-select-form": PulumiMultiSelectForm;
         "pulumi-pricing-calculator": PulumiPricingCalculator;
         "pulumi-registry-list-search": PulumiRegistryListSearch;
@@ -1182,6 +1198,7 @@ declare module "@stencil/core" {
             "pulumi-greenhouse-jobs-list": LocalJSX.PulumiGreenhouseJobsList & JSXBase.HTMLAttributes<HTMLPulumiGreenhouseJobsListElement>;
             "pulumi-hubspot-form": LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
             "pulumi-install": LocalJSX.PulumiInstall & JSXBase.HTMLAttributes<HTMLPulumiInstallElement>;
+            "pulumi-llm-menu": LocalJSX.PulumiLlmMenu & JSXBase.HTMLAttributes<HTMLPulumiLlmMenuElement>;
             "pulumi-multi-select-form": LocalJSX.PulumiMultiSelectForm & JSXBase.HTMLAttributes<HTMLPulumiMultiSelectFormElement>;
             "pulumi-pricing-calculator": LocalJSX.PulumiPricingCalculator & JSXBase.HTMLAttributes<HTMLPulumiPricingCalculatorElement>;
             "pulumi-registry-list-search": LocalJSX.PulumiRegistryListSearch & JSXBase.HTMLAttributes<HTMLPulumiRegistryListSearchElement>;
