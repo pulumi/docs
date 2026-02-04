@@ -70,7 +70,7 @@ Your review should include:
 - Constructive suggestions using suggestion code fence formatting blocks
 - An instruction to mention you (@claude) if the author wants additional reviews or fixes
 
-Use the **Review Criteria** section below for your review, except for the following adjustments:
+Use `_common:review-criteria` for your review, except for the following adjustments:
 
 - Diffs do not display the trailing newline status of files. Do not flag missing trailing newlines unless you have confirmed the absence while reading the full file for another reason. Suspected missing newlines are not sufficient reason to read the full file.
 

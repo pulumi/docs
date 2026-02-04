@@ -37,7 +37,7 @@ Once the target file is determined, proceed with the analysis.
 
 Read the entire target file and perform comprehensive analysis.
 
-**Base criteria**: Use the "Review Criteria" section from `/docs-review` (not the workflow or context detection logic) as your foundation for quality standards. This command extends those criteria with proactive improvements and detailed image analysis specific to the glow-up workflow.
+**Base criteria**: Use `_common:review-criteria` as your foundation for quality standards. This command extends those criteria with proactive improvements and detailed image analysis specific to the glow-up workflow.
 
 #### Text analysis
 
@@ -96,7 +96,7 @@ Read the entire target file and perform comprehensive analysis.
 **Content type considerations:**
 
 - Consider whether the content is Documentation or Blog/Marketing material
-- Apply appropriate style guidelines based on content type (see `/docs-review` role-specific guidelines)
+- Apply appropriate style guidelines based on content type (see `_common:review-criteria` role-specific guidelines)
 - Documentation should be clear and objective; blogs can be more engaging
 
 #### Image and diagram analysis

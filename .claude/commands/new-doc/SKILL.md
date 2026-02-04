@@ -1,10 +1,6 @@
 ---
 name: new-doc
-description: |
-  Create Pulumi documentation with proper frontmatter and menu structure. 
-
-  Use when Claude needs to: (1) Create a new documentation page, (2) Set up an index page (_index.md) with sections, (3) Add
-  pages to the Hugo menu system with proper weights and identifiers, (4) Generate SEO-optimized metadata.
+description: Create Pulumi documentation with proper frontmatter and menu structure. 
 ---
 
 # new-doc
@@ -75,7 +71,7 @@ Options:
 
 **If not found**: Display "No existing documentation found. Proceeding with new page creation." and continue.
 
-**Suggest based on keywords** (see [directory-hints.md](references/directory-hints.md) for complete mapping):
+**Suggest based on keywords** (see `new-doc:references:directory-hints` for complete mapping):
 
 Common patterns:
 
@@ -176,14 +172,14 @@ Continue navigation until placement is determined.
 
 Gather all required metadata using AskUserQuestion with smart suggestions.
 
-**For regular pages**, follow all patterns in [questions-regular.md](references/questions-regular.md):
+**For regular pages**, follow all patterns in `new-doc:references:questions-regular`:
 
 1. Title (with Title Case suggestion)
 2. Title tag (with "| Pulumi Docs" format)
 3. Meta description (50-160 chars validation)
 4. Filename (kebab-case validation)
 
-**For index pages**, follow patterns in [questions-index.md](references/questions-index.md):
+**For index pages**, follow patterns in `new-doc:references:questions-index`:
 
 - Part 1: Basic metadata (8 fields with smart suggestions)
   - Title, Link title, H1, Meta description, Description HTML
@@ -209,7 +205,7 @@ Then proceed to Step 4b for index pages, or Step 5 for regular pages.
 
 ### [Step 4b/7] Build Sections Array (Index Pages)
 
-For index pages only, build the sections array iteratively following the complete patterns in [questions-index.md - Part 2](references/questions-index.md#part-2-sections-array-builder).
+For index pages only, build the sections array iteratively following the complete patterns in `new-doc:references:questions-index` (Part 2: sections array builder).
 
 **For each section:**
 
@@ -264,7 +260,7 @@ If conflict, append `-2`, `-3`, etc.
 
 **Meta image**: Use cloud-specific images for AWS, Azure, GCP, Kubernetes paths, default for others.
 
-**For complete mapping**: See [meta-images.md](references/meta-images.md)
+**For complete mapping**: See `new-doc:references:meta-images`
 
 **Display result**: "Menu identifier: {identifier}, Parent: {parent}, Meta image: {meta_image}"
 
@@ -272,7 +268,7 @@ If conflict, append `-2`, `-3`, etc.
 
 **Display**: "[Step 7/7] Creating file and validating..."
 
-Run validation checks from [validation.md](references/validation.md):
+Run validation checks from `new-doc:references:validation`:
 
 - File doesn't exist
 - Parent identifier exists
@@ -284,7 +280,7 @@ Run validation checks from [validation.md](references/validation.md):
 - Meta desc 50-160 chars
 - Links valid (start with `/docs/` or external)
 
-Create file using templates from [frontmatter.md](references/frontmatter.md):
+Create file using templates from `new-doc:references:frontmatter`:
 
 - **Regular pages**: Use regular page template with title, title_tag, meta_desc, menu structure
   - **If rough draft requested**: Generate initial content sections based on the user's description and context
@@ -307,7 +303,7 @@ Create file using templates from [frontmatter.md](references/frontmatter.md):
 
 - **Index pages**: Use index page template with sections array, link_buttons, docs_home flags (no additional content needed)
 
-Display success output as defined in [validation.md](references/validation.md):
+Display success output as defined in `new-doc:references:validation`:
 
 ```text
 ✅ Created at /docs/{path}/{filename}.md
@@ -322,7 +318,7 @@ Next: Write content, run /docs-review, run make lint
 
 ## Error Handling
 
-For complete error handling strategies, see [validation.md - Error Handling](references/validation.md#error-handling).
+For complete error handling strategies, see `new-doc:references:validation` (Error Handling section).
 
 Common scenarios:
 

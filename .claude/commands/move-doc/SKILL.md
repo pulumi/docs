@@ -94,7 +94,7 @@ How would you like to move this file?
 - Kebab-case filename (unless `_index.md`)
 - Different from source path
 
-**Calculate URL changes** using algorithm from `references/path-conversion.md`. Preview source, destination, old URL, new URL, and alias that will be added. Confirm with user before proceeding.
+**Calculate URL changes** using algorithm from `move-doc:references:path-conversion`. Preview source, destination, old URL, new URL, and alias that will be added. Confirm with user before proceeding.
 
 **Error handling**:
 
@@ -129,9 +129,9 @@ mkdir -p "$(dirname "{destination_file}")"
 git mv "{source_file}" "{destination_file}"
 ```
 
-**3c. Calculate old URL** using algorithm from `references/path-conversion.md`
+**3c. Calculate old URL** using algorithm from `move-doc:references:path-conversion`
 
-**3d. Inject alias into frontmatter** using Edit tool for string replacement. See `references/alias-injection.md` for frontmatter manipulation strategies.
+**3d. Inject alias into frontmatter** using Edit tool for string replacement. See `move-doc:references:alias-injection` for frontmatter manipulation strategies.
 
 **Display results**:
 
@@ -206,7 +206,7 @@ with open('scripts/alias-verification/aliases-missing.txt', 'r') as f:
 - Scripts not found → Critical error, ensure in repository root
 - Script execution fails → Warn, suggest manual verification at localhost
 
-See `references/verification.md` for detailed script usage and error handling.
+See `move-doc:references:verification` for detailed script usage and error handling.
 
 ### Step 5: Update Internal Links
 
@@ -239,7 +239,7 @@ Searching for internal references...
 - `sed` fails → List failed files, offer continue or rollback
 - Many files modified → Remind to review with `git diff`, provide revert command if needed
 
-**Important**: Always skip `blog/` and `tutorials/` per AGENTS.md. See `references/link-updates.md` for patterns and edge cases.
+**Important**: Always skip `blog/` and `tutorials/` per AGENTS.md. See `move-doc:references:link-updates` for patterns and edge cases.
 
 ### Step 6: Summary and Next Steps
 
@@ -304,12 +304,12 @@ Internal Links:
 
 ## Reference Files
 
-This skill uses detailed reference documentation in `references/`:
+This skill uses detailed reference documentation:
 
-- **path-conversion.md** - Hugo URL path calculation algorithm
-- **alias-injection.md** - Frontmatter manipulation patterns
-- **link-updates.md** - Internal link update patterns and edge cases
-- **verification.md** - Alias verification script usage
+- `move-doc:references:path-conversion` - Hugo URL path calculation algorithm
+- `move-doc:references:alias-injection` - Frontmatter manipulation patterns
+- `move-doc:references:link-updates` - Internal link update patterns and edge cases
+- `move-doc:references:verification` - Alias verification script usage
 
 ## Critical Requirements
 

@@ -8,8 +8,8 @@ Match keywords from the user's description to suggest appropriate documentation 
 
 ## Keyword-to-Directory Mapping
 
-- **Concepts** (`iac/concepts/`): "what is", "understanding", "overview"
-- **Guides** (`iac/guides/`): "how to", "guide", "tutorial"
+- **Concepts** (`*/concepts/`): "what is", "understanding", "overview"
+- **Guides** (`*/guides/`): "how to", "guide", "tutorial"
 - **Clouds** (`iac/clouds/[provider]/`): AWS, Azure, GCP, Kubernetes
 - **Languages** (`iac/languages-sdks/[lang]/`): TypeScript, Python, Go, .NET, Java, YAML
 - **CLI** (`iac/cli/`): "command", "cli"

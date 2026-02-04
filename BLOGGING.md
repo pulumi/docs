@@ -8,6 +8,7 @@ steps to make it happen.
 The easiest way to create a new blog post is with the `/new-blog-post` command in Claude Code.
 
 **Prerequisites:**
+
 - [Claude Code](https://claude.com/claude-code) installed
 - This repository cloned
 - Git configured with your name and email
@@ -44,7 +45,7 @@ Once you're able to run:
 make serve
 ```
 
-If you can browse the site locally at http://localhost:1313/ then you are ready to
+If you can browse the site locally at <http://localhost:1313/> then you are ready to
 proceed to the next section.
 
 ## Write Your Post
@@ -133,6 +134,7 @@ To embed a card linking to Pulumi Neo with a pre-filled prompt, use the `neo-car
 ```
 
 **Parameters:**
+
 - `title` (required): The main text displayed on the card
 - `prompt` (optional): The prompt sent to Neo (defaults to title if not specified)
 - `subtitle` (optional): The smaller text above title (default: "Start a Neo task")
@@ -153,12 +155,12 @@ Before submitting your post:
 
 1. **Review for quality**: Run `/docs-review` in Claude Code to check for style and content issues
 2. **Add borders to images**: If you have screenshots, run `/add-borders` to add 1px grey borders for better visual clarity
-3. **Preview locally**: Run `make serve` and check your post at http://localhost:1313/blog/[your-slug]
+3. **Preview locally**: Run `make serve` and check your post at <http://localhost:1313/blog/[your-slug>]
 4. **Replace the placeholder meta image**: Create a custom 1200×630 PNG for social media previews (see [meta image guidelines](#social-meta-images) above)
 5. **Submit for review**: Create a Pull Request against the `master` branch
 6. **Publicize**: Before merge, reach out in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) so Marketing can help broadcast your post
 
-Once merged to master, your post will go live on https://www.pulumi.com/ (after its publish date).
+Once merged to master, your post will go live on <https://www.pulumi.com/> (after its publish date).
 
 ## A Note on Dates and Scheduling for Future Publishing
 
@@ -190,7 +192,7 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
    make new-blog-post
    ```
 
-   This will prompt you for a "slug" (a URL-friendly path) for your post and create a minimal post that you can browse to at http://localhost:1313/blog/. You'll find the new post's source file at `content/blog/[your-slug]/_index.md` containing the set of [Hugo front matter](https://gohugo.io/content-management/front-matter/) properties you'll need to get started:
+   This will prompt you for a "slug" (a URL-friendly path) for your post and create a minimal post that you can browse to at <http://localhost:1313/blog/>. You'll find the new post's source file at `content/blog/[your-slug]/_index.md` containing the set of [Hugo front matter](https://gohugo.io/content-management/front-matter/) properties you'll need to get started:
 
    ```yaml
    ---
@@ -204,7 +206,7 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
    ---
    ```
 
-   Adjust the title and authors and add tags as appropriate (see the subsections below for more details). To change the post's URL, simply rename the folder containing `_index.md`; changing the folder name to `my-awesome-post`, for example, would result in a post ultimately published at https://www.pulumi.com/blog/my-awesome-post.
+   Adjust the title and authors and add tags as appropriate (see the subsections below for more details). To change the post's URL, simply rename the folder containing `_index.md`; changing the folder name to `my-awesome-post`, for example, would result in a post ultimately published at <https://www.pulumi.com/blog/my-awesome-post>.
 
 ### Frontmatter Fields
 

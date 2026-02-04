@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Show message if commands or agents were added/modified
+if git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep -qE "^\.claude/(commands|agents)/"; then
+  echo ""
+  echo "💡 New or updated custom Pulumi Docs commands available! In Claude, run: /docs-tools"
+  echo ""
+fi

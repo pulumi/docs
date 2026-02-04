@@ -36,7 +36,7 @@ Reviews any pull request and presents action choices for approval, changes, or c
 
 Fetch all PR data and detect contributor type (bot/internal/external).
 
-See [contributor-detection.md](references/contributor-detection.md) for complete detection script and display formatting.
+See `pr-review:references:contributor-detection` for complete detection script and display formatting.
 
 **Key actions**:
 
@@ -59,7 +59,7 @@ Continue to Step 3.
 
 **CRITICAL**: This step must be completed and presented to the user IMMEDIATELY after Step 2 and BEFORE starting Step 4. Do not delay this output.
 
-See [test-deployment-guidance.md](references/test-deployment-guidance.md) for complete implementation.
+See `pr-review:references:test-deployment-guidance` for complete implementation.
 
 **Key actions**:
 
@@ -75,7 +75,7 @@ Continue to Step 4.
 
 Check if PR contains dependency or infrastructure changes.
 
-See [infrastructure-deployment.md](references/infrastructure-deployment.md) for patterns and workflow.
+See `pr-review:references:infrastructure-deployment` for patterns and workflow.
 
 **Decision point**:
 
@@ -96,7 +96,7 @@ Continue to Step 5.
 
 **PREREQUISITE**: Step 4 must be completed before starting this step.
 
-Review all files against STYLE-GUIDE.md compliance: spelling, grammar, links, code examples, file moves with aliases, images, frontmatter, and cross-references. Apply role-specific guidelines per content type. See _common/review-criteria.md for full criteria.
+Review all files against STYLE-GUIDE.md compliance: spelling, grammar, links, code examples, file moves with aliases, images, frontmatter, and cross-references. Apply role-specific guidelines per content type. See `_common:review-criteria` for full criteria.
 
 **Large diffs (>100 lines)**: Summarize findings by category rather than line-by-line.
 
@@ -128,12 +128,12 @@ Continue to Step 7.
 
 **If contributor type is bot**, use bot-specific menus. Otherwise, use standard action menu adapted to review findings.
 
-See [bot-action-menus.md](references/bot-action-menus.md) for complete menu structures.
+See `pr-review:references:bot-action-menus` for complete menu structures.
 
 **Bot PRs**:
 
 - **Dependabot**: Parse labels, determine risk tier, show appropriate 4-option menu with testing checklist
-  - See [dependabot-labels.md](references/dependabot-labels.md) for label taxonomy and risk classification
+  - See `pr-review:references:dependabot-labels` for label taxonomy and risk classification
 - **Other bots**: Show 4-option menu with automation/merge label detection
 
 **Non-bot PRs** (adaptive 3-scenario approach):
@@ -150,11 +150,11 @@ Continue to Step 8 with selected action.
 
 **CRITICAL**: Always show what will happen before executing.
 
-See [action-preview-templates.md](references/action-preview-templates.md) for preview formats.
+See `pr-review:references:action-preview-templates` for preview formats.
 
 Display preview showing:
 
-- Exact comment text that will be posted (using templates from [message-templates.md](references/message-templates.md))
+- Exact comment text that will be posted (using templates from `pr-review:references:message-templates`)
 - Commands that will be executed
 - For "Make changes and approve": Show file-by-file changes
 
@@ -185,13 +185,13 @@ Execute using confirmed/edited content from Step 8.
 - **Close PR**: `gh pr comment {{arg}} --body "{{COMMENT}}"` then `gh pr close {{arg}}`
 - **Do nothing yet**: Exit with message
 
-**Make changes and approve**: See [action-preview-templates.md](references/action-preview-templates.md) for complete workflow.
+**Make changes and approve**: See `pr-review:references:action-preview-templates` for complete workflow.
 
 Continue to Step 10.
 
 ### Step 10: Report Execution Results
 
-See [execution-results.md](references/execution-results.md) for result message templates.
+See `pr-review:references:execution-results` for result message templates.
 
 Display appropriate success message with:
 
@@ -208,7 +208,7 @@ Workflow complete.
 
 ## Message Templates by Contributor Type
 
-See [message-templates.md](references/message-templates.md) for complete templates. Quick reference:
+See `pr-review:references:message-templates` for complete templates. Quick reference:
 
 | Contributor Type | Tone | Emojis | Example |
 |-----------------|------|--------|---------|
@@ -221,7 +221,7 @@ See [message-templates.md](references/message-templates.md) for complete templat
 
 ## Dependabot Risk Classification
 
-See [dependabot-labels.md](references/dependabot-labels.md) for complete taxonomy. Quick reference:
+See `pr-review:references:dependabot-labels` for complete taxonomy. Quick reference:
 
 **Determine risk tier from labels**:
 
