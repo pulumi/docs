@@ -1002,7 +1002,25 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 **Jobs:**
 
-1. **buildSite**
+1. **detect-changes**
+   - Analyze changed files to determine if PR contains only version file updates
+   - Output: `version-files-only` flag (true/false)
+
+1. **fast-track-version-update** (conditional)
+   - Runs only when PR contains only version file changes:
+     - `static/latest-dev-version`
+     - `static/latest-version`
+     - `static/esc/latest-version`
+     - `static/customer-managed-workflow-agent/latest-version`
+   - Performs lightweight validation:
+     - Install dependencies (`make ensure`)
+     - Validate no whitespace in version files
+     - Quick Hugo build test (`hugo --minify --quiet`)
+   - **Duration:** ~2-3 minutes (vs 10-15 minutes for full build)
+   - **Why:** Version files are updated multiple times daily via automation. Full CI/CD (site build, Cypress tests, deployment) is unnecessary for these simple text file changes.
+
+1. **buildSite** (conditional)
+   - Runs only when PR contains changes beyond version files
    - Check if PR is from fork (skip deployment if true)
    - Build site in preview mode
    - Create PR-specific S3 bucket:
@@ -1023,8 +1041,8 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
    - Archive test results and metadata
 
-2. **notify**
-   - Slack alert on failure
+1. **notify**
+   - Slack alert on failure from either fast-track or full build
 
 **Preview Lifecycle:**
 
@@ -1366,7 +1384,7 @@ These workflows support repository maintenance, automation, and developer experi
 |----------|---------|-------------|----------|---------|
 | build-and-deploy | Push to master, Scheduled | Production | 8-12 min | Production deployment |
 | testing-build-and-deploy | Push to master, Manual | Testing | 8-12 min | Testing deployment |
-| pull-request | PRs to master | Testing | 10-15 min | PR validation & preview |
+| pull-request | PRs to master | Testing | 2-3 min (version files only), 10-15 min (full build) | PR validation & preview |
 | pr-closed | PR closed | Testing | <1 min | Cleanup preview resources |
 | pulumi-cli | Repository dispatch | N/A | 5-10 min | Auto-generate CLI docs |
 | esc-cli | Repository dispatch | N/A | 3-5 min | Auto-generate ESC docs |
