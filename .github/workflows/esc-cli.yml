@@ -53,21 +53,21 @@ jobs:
           path: esc
           ref: ${{ github.event.client_payload.ref }}
       - name: Install pulumictl
-        uses: jaxxstorm/action-install-gh-release@v1.10.0
+        uses: jaxxstorm/action-install-gh-release@v2.1.0
         with:
           repo: pulumi/pulumictl
       - name: Install esc
-        uses: jaxxstorm/action-install-gh-release@v1.10.0
+        uses: jaxxstorm/action-install-gh-release@v2.1.0
         with:
           repo: pulumi/esc
           binaries-location: esc
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.151.0'
+          hugo-version: '0.154.5'
           extended: true
       - name: Install node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{matrix.nodeversion}}
       - run: make ensure
@@ -97,7 +97,7 @@ jobs:
     strategy:
       matrix:
         nodeversion:
-          - "22.x"
+          - "24.x"
   notify:
     if: failure()
     name: Send slack notification

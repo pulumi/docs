@@ -8,7 +8,6 @@ import {
     CloudFrontResponse,
     CloudFrontResponseEvent,
 } from "aws-lambda";
-import * as URLPattern from "url-pattern";
 import { LambdaEdge } from "./lambdaEdge";
 import { getResources } from "@pulumi/aws/resourcegroupstaggingapi/getResources";
 
@@ -213,8 +212,8 @@ function getResourcesRedirect(uri: string): string | undefined {
 }
 
 function nodeSDKRedirect(uri: string): string | undefined {
-    const pattern = new URLPattern("/docs/reference/pkg/nodejs/pulumi/:provider(/:service)(*)");
-    const match = pattern.match(uri);
+    const regex = /^\/docs\/reference\/pkg\/nodejs\/pulumi\/([^\/]+)(?:\/([^\/]+))?/;
+    const match = uri.match(regex);
     const exceptions = [
         "pulumi",
         "cloud",
@@ -225,19 +224,19 @@ function nodeSDKRedirect(uri: string): string | undefined {
         "esc-sdk",
     ];
 
-    if (match && match.provider && !exceptions.includes(match.provider)) {
-        if (match.service && !match.service.match(/types|config/)) {
-            return `/docs/reference/pkg/${match.provider}/${match.service}/?language=nodejs`;
+    if (match && match[1] && !exceptions.includes(match[1])) {
+        if (match[2] && !match[2].match(/types|config/)) {
+            return `/docs/reference/pkg/${match[1]}/${match[2]}/?language=nodejs`;
         }
-        return `/docs/reference/pkg/${match.provider}/?language=nodejs`;
+        return `/docs/reference/pkg/${match[1]}/?language=nodejs`;
     }
 
     return undefined;
 }
 
 function pythonSDKRedirect(uri: string): string | undefined {
-    const pattern = new URLPattern("/docs/reference/pkg/python/pulumi_(:provider)(/:service)(*)");
-    const match = pattern.match(uri);
+    const regex = /^\/docs\/reference\/pkg\/python\/pulumi_([^\/]+)(?:\/([^\/]+))?/;
+    const match = uri.match(regex);
     const exceptions = [
         "pulumi",
         "policy",
@@ -245,32 +244,30 @@ function pythonSDKRedirect(uri: string): string | undefined {
         "esc_sdk",
     ];
 
-    if (match && match.provider && !exceptions.includes(match.provider)) {
-        if (match.service) {
-            return `/docs/reference/pkg/${match.provider}/${match.service}/?language=python`;
+    if (match && match[1] && !exceptions.includes(match[1])) {
+        if (match[2]) {
+            return `/docs/reference/pkg/${match[1]}/${match[2]}/?language=python`;
         }
-        return `/docs/reference/pkg/${match.provider}/?language=python`;
+        return `/docs/reference/pkg/${match[1]}/?language=python`;
     }
 
     return undefined;
 }
 
 function dotnetSDKRedirect(uri: string): string | undefined {
-    const pattern = new URLPattern(
-        "/docs/reference/pkg/dotnet/Pulumi.:provider/Pulumi.:providerRepeated(.:service)(.*).html"
-    );
-    const match = pattern.match(uri);
+    const regex = /^\/docs\/reference\/pkg\/dotnet\/Pulumi\.([^\/]+)\/Pulumi\.\1(?:\.([^\/\.]+))?.*\.html/;
+    const match = uri.match(regex);
     const exceptions = [
         "Automation",
         "FSharp",
     ];
 
-    if (match && match.provider && !exceptions.includes(match.provider)) {
-        if (match.service && !match.service.match(/Types|Config/)) {
+    if (match && match[1] && !exceptions.includes(match[1])) {
+        if (match[2] && !match[2].match(/Types|Config/)) {
             // tslint:disable-next-line:max-line-length
-            return `/docs/reference/pkg/${match.provider.toLowerCase()}/${match.service.toLowerCase()}/?language=csharp`;
+            return `/docs/reference/pkg/${match[1].toLowerCase()}/${match[2].toLowerCase()}/?language=csharp`;
         }
-        return `/docs/reference/pkg/${match.provider.toLowerCase()}/?language=csharp`;
+        return `/docs/reference/pkg/${match[1].toLowerCase()}/?language=csharp`;
 
     }
 

@@ -1,10 +1,12 @@
 ---
-description: Review changes for style, accuracy, and Pulumi best practices. Context-sensitive in IDEs, or provide a PR number to review a PR from this repo.
+description: Review content quality while writing or before committing (checks style, accuracy, best practices on open files, branches, or PRs).
 ---
 
 # Documentation Review Command
 
-You will review documentation changes and provide feedback on style, accuracy, and best practices.
+**Use this when:** You're writing or editing documentation and want to check quality before committing, or when you want content feedback without the full PR approval workflow.
+
+Reviews documentation changes for style, accuracy, and Pulumi best practices. Works on currently open files (context-sensitive) or on a specific PR number.
 
 ---
 
@@ -147,6 +149,7 @@ Always provide relevant line numbers for any issues you identify.
 - **Build, test, and infrastructure changes**:
   - If changes are made to build scripts (scripts/), GitHub Actions workflows (.github/workflows/), the Makefile, or infrastructure code (infrastructure/), verify that BUILD-AND-DEPLOY.md has been updated to reflect these changes.
   - Examples of changes requiring documentation updates: new make targets, modified deployment workflows, infrastructure configuration changes, new environment variables, updated build processes.
+  - **High-risk changes**: Flag infrastructure changes (infrastructure/, package.json, webpack config, Lambda@Edge, CloudFront) and Dependabot dependency updates that affect runtime/bundling. **Your role is to identify and flag risks for human review**—see [Infrastructure Change Review](../../BUILD-AND-DEPLOY.md#infrastructure-change-review) and [Dependency Management](../../BUILD-AND-DEPLOY.md#dependency-management) sections in BUILD-AND-DEPLOY.md for risk details. Key risks: Lambda@Edge bundling (ESM/CommonJS, webpack changes), large dependency batches, runtime dependencies (marked, algolia, stencil), CloudFront changes
 - **Images and assets**:
   - Check images have alt text for accessibility.
   - Verify image file sizes are reasonable.

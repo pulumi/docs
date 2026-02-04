@@ -1,0 +1,221 @@
+name: Label Dependabot PRs
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to test labeling on'
+        required: true
+        type: number
+
+jobs:
+  label:
+    if: github.actor == 'dependabot[bot]' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Label and triage Dependabot PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Get PR details - either from event payload or workflow input
+            let prNumber, prTitle, prBody;
+
+            if (context.eventName === 'workflow_dispatch') {
+              // Manual trigger - fetch PR details
+              prNumber = parseInt(context.payload.inputs.pr_number);
+              const { data: pr } = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber
+              });
+              prTitle = pr.title;
+              prBody = pr.body || '';
+            } else {
+              // Automatic trigger from PR event
+              prNumber = context.payload.pull_request.number;
+              prTitle = context.payload.pull_request.title;
+              prBody = context.payload.pull_request.body || '';
+            }
+
+            // Dependency categorization by risk tier
+            const highRiskDeps = [
+              '@algolia/', 'algoliasearch', '@growthbook/', 'marked',
+              'clipboard-polyfill', 'search-insights', '@stencil/',
+              'swiper', 'uuid', 'markdown-it', 'js-yaml', 'cheerio', 'gray-matter'
+            ];
+
+            const mediumRiskDeps = [
+              'webpack', '-loader', '-webpack-plugin', 'postcss',
+              'sass', 'typescript', 'cssnano', 'autoprefixer',
+              '@fullhuman/postcss-purgecss', '@pulumi/', '@aws-sdk/',
+              'tailwindcss'
+            ];
+
+            const lowRiskDeps = [
+              'cypress', 'jest', 'puppeteer', 'workbox-build',
+              'prettier', 'eslint', 'markdownlint', 'husky',
+              'lint-staged', 'http-server', 'concurrently', 'typedoc'
+            ];
+
+            const lambdaEdgeRiskDeps = [
+              'webpack', '-loader', '-webpack-plugin', '@aws-sdk/'
+            ];
+
+            // Extract dependency names from PR body
+            const dependencyPattern = /(?:Bumps|Updates) \[([^\]]+)\]/g;
+            const dependencies = [];
+            let match;
+            while ((match = dependencyPattern.exec(prBody)) !== null) {
+              dependencies.push(match[1]);
+            }
+
+            // Also check PR title for dependency names
+            const titleMatch = prTitle.match(/bump\s+(.+?)\s+from/i);
+            if (titleMatch) {
+              dependencies.push(titleMatch[1]);
+            }
+
+            // Categorize dependencies
+            let highestRisk = 'LOW';
+            let hasLambdaEdgeRisk = false;
+
+            for (const dep of dependencies) {
+              const depLower = dep.toLowerCase();
+
+              // Check HIGH risk
+              if (highRiskDeps.some(pattern => depLower.includes(pattern.toLowerCase()))) {
+                highestRisk = 'HIGH';
+              }
+
+              // Check MEDIUM risk (only if not already HIGH)
+              if (highestRisk !== 'HIGH' && mediumRiskDeps.some(pattern => depLower.includes(pattern.toLowerCase()))) {
+                highestRisk = 'MEDIUM';
+              }
+
+              // Check Lambda@Edge risk
+              if (lambdaEdgeRiskDeps.some(pattern => depLower.includes(pattern.toLowerCase()))) {
+                hasLambdaEdgeRisk = true;
+              }
+            }
+
+            // Prepare labels to add
+            const labelsToAdd = ['dependencies'];
+
+            // Add risk tier label
+            if (highestRisk === 'HIGH') {
+              labelsToAdd.push('deps-risk-high');
+            } else if (highestRisk === 'MEDIUM') {
+              labelsToAdd.push('deps-risk-medium');
+            } else {
+              labelsToAdd.push('deps-risk-low');
+            }
+
+            // Check for security updates
+            const isSecurity = prTitle.toLowerCase().includes('security') ||
+                               prBody.toLowerCase().includes('security');
+
+            if (isSecurity) {
+              labelsToAdd.push('deps-security-patch');
+            }
+
+            // Check for bulk updates (10+ dependencies)
+            if (dependencies.length >= 10) {
+              labelsToAdd.push('deps-bulk-update');
+            }
+
+            // Add Lambda@Edge risk flag
+            if (hasLambdaEdgeRisk) {
+              labelsToAdd.push('deps-lambda-edge-risk');
+            }
+
+            // Determine action label
+            if (isSecurity) {
+              labelsToAdd.push('deps-merge-after-test');
+            } else if (highestRisk === 'HIGH') {
+              labelsToAdd.push('deps-merge-after-test');
+            } else {
+              labelsToAdd.push('deps-quarterly-review');
+            }
+
+            // Add ecosystem label based on PR labels
+            const existingLabels = context.payload.pull_request.labels.map(l => l.name);
+            if (existingLabels.includes('npm')) labelsToAdd.push('npm');
+            if (existingLabels.includes('github-actions')) labelsToAdd.push('github-actions');
+
+            // Apply labels
+            try {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                labels: labelsToAdd
+              });
+              console.log(`Applied labels: ${labelsToAdd.join(', ')}`);
+            } catch (error) {
+              console.error('Failed to apply labels:', error.message);
+              core.setFailed(`Failed to apply labels: ${error.message}`);
+            }
+
+            // Generate triage comment
+            let triageComment = '## Automated Dependabot Triage\n\n';
+            triageComment += `**Risk Tier:** ${highestRisk}\n`;
+            triageComment += `**Dependencies:** ${dependencies.length > 0 ? dependencies.join(', ') : 'See PR body'}\n\n`;
+
+            if (isSecurity) {
+              triageComment += '🔒 **Security Update** - Test locally and merge immediately.\n\n';
+            } else if (highestRisk === 'HIGH') {
+              triageComment += '⚠️ **High Risk** - Runtime/browser dependencies. Test locally before merging.\n\n';
+              triageComment += '**Testing checklist:**\n';
+              triageComment += '- [ ] Run `make serve-all` and verify site loads\n';
+              triageComment += '- [ ] Test search functionality\n';
+              triageComment += '- [ ] Check for console errors\n';
+              triageComment += '- [ ] Verify markdown rendering\n\n';
+            } else if (highestRisk === 'MEDIUM') {
+              triageComment += '⚡ **Medium Risk** - Build tools/infrastructure. Consider for quarterly review.\n\n';
+            } else {
+              triageComment += '✅ **Low Risk** - Dev tools only. Safe to defer to quarterly review.\n\n';
+            }
+
+            if (hasLambdaEdgeRisk) {
+              triageComment += '🚨 **Lambda@Edge Risk** - This update affects webpack, bundlers, or AWS SDK. ';
+              triageComment += 'See [Infrastructure Change Review](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#infrastructure-change-review) ';
+              triageComment += 'section for deployment risks.\n\n';
+            }
+
+            if (dependencies.length >= 10) {
+              triageComment += '📦 **Bulk Update** - 10+ dependencies. Review carefully for conflicts.\n\n';
+            }
+
+            triageComment += '### Claude Code Review\n\n';
+            triageComment += 'Automated Claude reviews are not available for Dependabot PRs. ';
+            triageComment += 'To review this PR with Claude Code, run:\n\n';
+            triageComment += '```bash\n';
+            triageComment += `/pr-review ${prNumber}\n`;
+            triageComment += '```\n\n';
+
+            triageComment += '---\n';
+            triageComment += 'For detailed triage guidance, see the [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management) section in BUILD-AND-DEPLOY.md.\n';
+
+            // Post comment
+            try {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: triageComment
+              });
+              console.log(`Posted triage comment for ${dependencies.length} dependencies`);
+            } catch (error) {
+              console.error('Failed to post comment:', error.message);
+              // Don't fail the workflow if comment posting fails
+            }

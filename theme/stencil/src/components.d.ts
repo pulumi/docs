@@ -11,6 +11,12 @@ import { ChooserKey as ChooserKey1, ChooserMode as ChooserMode1, ChooserOptionSt
 import { SourceKind } from "./components/convert/convert";
 import { Filter } from "./components/filter-select/filter-select-option";
 import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
+export { APINavNode } from "./components/pulumi-api-doc-filterable-nav/pulumi-api-doc-filterable-nav";
+export { ChooserKey, ChooserMode, ChooserType, OSKey } from "./components/chooser/chooser";
+export { ChooserKey as ChooserKey1, ChooserMode as ChooserMode1, ChooserOptionStyle, ChooserType as ChooserType1 } from "./components/chooser/chooser";
+export { SourceKind } from "./components/convert/convert";
+export { Filter } from "./components/filter-select/filter-select-option";
+export { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
 export namespace Components {
     interface CopilotSidebar {
         "atlasUrl": string;
@@ -20,18 +26,39 @@ export namespace Components {
         "buttonText": string;
         "eventSessions": string;
         "modalTitle": string;
+        /**
+          * @default "/pulumi-up/thank-you/"
+         */
         "redirectUrl": string;
     }
     interface HeaderCta {
+        /**
+          * @default ""
+         */
         "buttonClass": string;
     }
     interface HomeSlots {
+        /**
+          * @default ""
+         */
         "centerItems": string;
+        /**
+          * @default ""
+         */
         "imageClass": string;
+        /**
+          * @default ""
+         */
         "leftItems": string;
+        /**
+          * @default ""
+         */
         "rightItems": string;
     }
     interface PricingCta {
+        /**
+          * @default ""
+         */
         "buttonClass": string;
         "signedInText": string;
         "signedOutText": string;
@@ -41,6 +68,9 @@ export namespace Components {
         "packageName": string;
     }
     interface PulumiApiDocNavNode {
+        /**
+          * @default 0
+         */
         "depth": number;
         "href": string;
         "isExpanded": boolean;
@@ -56,10 +86,25 @@ export namespace Components {
         "url": string;
     }
     interface PulumiBanner {
+        /**
+          * @default true
+         */
         "dismissible": boolean;
         "name": string;
+        /**
+          * @default false
+         */
         "visible": boolean;
     }
+    /**
+     * The Choosable component is useful for showing or hiding information based on the
+     * currently selected ChooserType and value. For example, a component defined as:
+     *     <pulumi-choosable type="language" value="typescript">
+     *         I <3 TypeScript.
+     *     </pulumi-choosable>
+     * ...would display "I <3 TypeScript" only when the user's currently (or most recently)
+     * selected language choice is TypeScript.
+     */
     interface PulumiChoosable {
         "mode": ChooserMode;
         "selection": ChooserKey;
@@ -67,12 +112,27 @@ export namespace Components {
         "value": ChooserKey;
         "values": ChooserKey;
     }
+    /**
+     * The Chooser component renders a set of selectable tabs based on the type and options
+     * properties provided. For example, this definition:
+     *     <pulumi-chooser type="language" value="typescript,python,go"></pulumi-chooser>
+     * ...would render three tabs. Clicking a tab dispatches an action that sets the
+     * associated value on the store, allowing any pulumi-choosable component on the page to
+     * be shown or hidden automatically.
+     * Alternatively, you can provide one or more pulumi-choosable components as children of
+     * this component, which will have the effect of treating them as tabbed content,
+     * irrespective of what may or may not be set on the global store. For example:
+     *     <pulumi-chooser type="language" value="typescript,javascript">
+     *         <pulumi choosable type="language" value="typescript">Some TypeScript</pulumi-choosable>
+     *         <pulumi choosable type="language" value="javascript">Some JavaScript</pulumi-choosable>
+     *     </pulumi-chooser>
+     */
     interface PulumiChooser {
-        "mode": ChooserMode;
+        "mode": ChooserMode1;
         "optionStyle": ChooserOptionStyle;
         "options": string;
-        "selection": ChooserKey;
-        "type": ChooserType;
+        "selection": ChooserKey1;
+        "type": ChooserType1;
     }
     interface PulumiContactUsForm {
         "items": string;
@@ -83,18 +143,39 @@ export namespace Components {
         "endpoint": string;
         "examples": string;
         "from": SourceKind;
+        /**
+          * @default ""
+         */
         "theme": string;
     }
     interface PulumiDateCountdown {
+        /**
+          * @default ""
+         */
         "containerClass": string;
+        /**
+          * @default ""
+         */
         "countdownOverText": string;
         "dateString": string;
+        /**
+          * @default ""
+         */
         "textClass": string;
+        /**
+          * @default ""
+         */
         "valueLabelClass": string;
     }
     interface PulumiDateCountdownCircles {
+        /**
+          * @default ""
+         */
         "containerClass": string;
         "dateString": string;
+        /**
+          * @default ""
+         */
         "valueLabelClass": string;
     }
     interface PulumiDatetime {
@@ -106,6 +187,9 @@ export namespace Components {
         "quotes": string;
     }
     interface PulumiDocsNav {
+        /**
+          * @default ""
+         */
         "expandedMenuIDs": string;
     }
     interface PulumiExample {
@@ -141,7 +225,13 @@ export namespace Components {
         "os"?: OSKey;
     }
     interface PulumiMultiSelectForm {
+        /**
+          * @default ""
+         */
         "defaultFormId": string;
+        /**
+          * @default []
+         */
         "items": MultiSelectFormItem[];
         "labelClass"?: string;
         "labelText": string;
@@ -167,16 +257,49 @@ export namespace Components {
     interface PulumiSwipeable {
     }
     interface PulumiSwiper {
+        /**
+          * @default false
+         */
         "autoplay": boolean;
+        /**
+          * @default 3000
+         */
         "autoplayDelay": number;
+        /**
+          * @default false
+         */
         "centeredSlides": boolean;
+        /**
+          * @default "horizontal"
+         */
         "direction": "vertical" | "horizontal";
+        /**
+          * @default true
+         */
         "enableMouseEvents": boolean;
+        /**
+          * @default 1
+         */
         "initialSlide": number;
+        /**
+          * @default false
+         */
         "loop": boolean;
+        /**
+          * @default false
+         */
         "navControls": boolean;
+        /**
+          * @default 1
+         */
         "slides": number;
+        /**
+          * @default 0
+         */
         "spaceBetween": number;
+        /**
+          * @default 300
+         */
         "speed": number;
         "startSwiper": () => Promise<void>;
         "stopSwiper": () => Promise<void>;
@@ -192,6 +315,18 @@ export namespace Components {
         "selection": any;
         "tabContent": string[];
     }
+    /**
+     * The ToolTip component shows a tooltip bubble above another element when you hover over
+     * (or, on mobile tap on) it. Use the named `content` slot for supplying the markup to
+     * show in the bubble.
+     * Usage:
+     * <pulumi-tooltip>
+     *     <i class="fas fa-question-circle"></i>
+     *     <span slot="content">
+     *         You hovered over (or tapped on) the thing!
+     *     </span>
+     * </pulumi-tooltip>
+     */
     interface PulumiTooltip {
         "hide": () => Promise<void>;
         "show": () => Promise<void>;
@@ -208,6 +343,26 @@ export namespace Components {
         "selectClass"?: string;
         "sessions": string;
     }
+}
+export interface PulumiFilterSelectCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLPulumiFilterSelectElement;
+}
+export interface PulumiFilterSelectOptionCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLPulumiFilterSelectOptionElement;
+}
+export interface PulumiRegistryListSearchCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLPulumiRegistryListSearchElement;
+}
+export interface PulumiRootCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLPulumiRootElement;
+}
+export interface PulumiTabsCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLPulumiTabsElement;
 }
 declare global {
     interface HTMLCopilotSidebarElement extends Components.CopilotSidebar, HTMLStencilElement {
@@ -270,12 +425,36 @@ declare global {
         prototype: HTMLPulumiBannerElement;
         new (): HTMLPulumiBannerElement;
     };
+    /**
+     * The Choosable component is useful for showing or hiding information based on the
+     * currently selected ChooserType and value. For example, a component defined as:
+     *     <pulumi-choosable type="language" value="typescript">
+     *         I <3 TypeScript.
+     *     </pulumi-choosable>
+     * ...would display "I <3 TypeScript" only when the user's currently (or most recently)
+     * selected language choice is TypeScript.
+     */
     interface HTMLPulumiChoosableElement extends Components.PulumiChoosable, HTMLStencilElement {
     }
     var HTMLPulumiChoosableElement: {
         prototype: HTMLPulumiChoosableElement;
         new (): HTMLPulumiChoosableElement;
     };
+    /**
+     * The Chooser component renders a set of selectable tabs based on the type and options
+     * properties provided. For example, this definition:
+     *     <pulumi-chooser type="language" value="typescript,python,go"></pulumi-chooser>
+     * ...would render three tabs. Clicking a tab dispatches an action that sets the
+     * associated value on the store, allowing any pulumi-choosable component on the page to
+     * be shown or hidden automatically.
+     * Alternatively, you can provide one or more pulumi-choosable components as children of
+     * this component, which will have the effect of treating them as tabbed content,
+     * irrespective of what may or may not be set on the global store. For example:
+     *     <pulumi-chooser type="language" value="typescript,javascript">
+     *         <pulumi choosable type="language" value="typescript">Some TypeScript</pulumi-choosable>
+     *         <pulumi choosable type="language" value="javascript">Some JavaScript</pulumi-choosable>
+     *     </pulumi-chooser>
+     */
     interface HTMLPulumiChooserElement extends Components.PulumiChooser, HTMLStencilElement {
     }
     var HTMLPulumiChooserElement: {
@@ -336,13 +515,35 @@ declare global {
         prototype: HTMLPulumiExamplesElement;
         new (): HTMLPulumiExamplesElement;
     };
+    interface HTMLPulumiFilterSelectElementEventMap {
+        "filterSelect": any[];
+    }
     interface HTMLPulumiFilterSelectElement extends Components.PulumiFilterSelect, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLPulumiFilterSelectElementEventMap>(type: K, listener: (this: HTMLPulumiFilterSelectElement, ev: PulumiFilterSelectCustomEvent<HTMLPulumiFilterSelectElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLPulumiFilterSelectElementEventMap>(type: K, listener: (this: HTMLPulumiFilterSelectElement, ev: PulumiFilterSelectCustomEvent<HTMLPulumiFilterSelectElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLPulumiFilterSelectElement: {
         prototype: HTMLPulumiFilterSelectElement;
         new (): HTMLPulumiFilterSelectElement;
     };
+    interface HTMLPulumiFilterSelectOptionElementEventMap {
+        "optionChange": any;
+    }
     interface HTMLPulumiFilterSelectOptionElement extends Components.PulumiFilterSelectOption, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLPulumiFilterSelectOptionElementEventMap>(type: K, listener: (this: HTMLPulumiFilterSelectOptionElement, ev: PulumiFilterSelectOptionCustomEvent<HTMLPulumiFilterSelectOptionElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLPulumiFilterSelectOptionElementEventMap>(type: K, listener: (this: HTMLPulumiFilterSelectOptionElement, ev: PulumiFilterSelectOptionCustomEvent<HTMLPulumiFilterSelectOptionElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLPulumiFilterSelectOptionElement: {
         prototype: HTMLPulumiFilterSelectOptionElement;
@@ -384,7 +585,18 @@ declare global {
         prototype: HTMLPulumiPricingCalculatorElement;
         new (): HTMLPulumiPricingCalculatorElement;
     };
+    interface HTMLPulumiRegistryListSearchElementEventMap {
+        "packageSearch": string;
+    }
     interface HTMLPulumiRegistryListSearchElement extends Components.PulumiRegistryListSearch, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLPulumiRegistryListSearchElementEventMap>(type: K, listener: (this: HTMLPulumiRegistryListSearchElement, ev: PulumiRegistryListSearchCustomEvent<HTMLPulumiRegistryListSearchElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLPulumiRegistryListSearchElementEventMap>(type: K, listener: (this: HTMLPulumiRegistryListSearchElement, ev: PulumiRegistryListSearchCustomEvent<HTMLPulumiRegistryListSearchElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLPulumiRegistryListSearchElement: {
         prototype: HTMLPulumiRegistryListSearchElement;
@@ -396,7 +608,18 @@ declare global {
         prototype: HTMLPulumiResourceLinksElement;
         new (): HTMLPulumiResourceLinksElement;
     };
+    interface HTMLPulumiRootElementEventMap {
+        "rendered": any;
+    }
     interface HTMLPulumiRootElement extends Components.PulumiRoot, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLPulumiRootElementEventMap>(type: K, listener: (this: HTMLPulumiRootElement, ev: PulumiRootCustomEvent<HTMLPulumiRootElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLPulumiRootElementEventMap>(type: K, listener: (this: HTMLPulumiRootElement, ev: PulumiRootCustomEvent<HTMLPulumiRootElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLPulumiRootElement: {
         prototype: HTMLPulumiRootElement;
@@ -426,7 +649,18 @@ declare global {
         prototype: HTMLPulumiTabElement;
         new (): HTMLPulumiTabElement;
     };
+    interface HTMLPulumiTabsElementEventMap {
+        "tabSelect": any[];
+    }
     interface HTMLPulumiTabsElement extends Components.PulumiTabs, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLPulumiTabsElementEventMap>(type: K, listener: (this: HTMLPulumiTabsElement, ev: PulumiTabsCustomEvent<HTMLPulumiTabsElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLPulumiTabsElementEventMap>(type: K, listener: (this: HTMLPulumiTabsElement, ev: PulumiTabsCustomEvent<HTMLPulumiTabsElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLPulumiTabsElement: {
         prototype: HTMLPulumiTabsElement;
@@ -438,6 +672,18 @@ declare global {
         prototype: HTMLPulumiTertiaryNavElement;
         new (): HTMLPulumiTertiaryNavElement;
     };
+    /**
+     * The ToolTip component shows a tooltip bubble above another element when you hover over
+     * (or, on mobile tap on) it. Use the named `content` slot for supplying the markup to
+     * show in the bubble.
+     * Usage:
+     * <pulumi-tooltip>
+     *     <i class="fas fa-question-circle"></i>
+     *     <span slot="content">
+     *         You hovered over (or tapped on) the thing!
+     *     </span>
+     * </pulumi-tooltip>
+     */
     interface HTMLPulumiTooltipElement extends Components.PulumiTooltip, HTMLStencilElement {
     }
     var HTMLPulumiTooltipElement: {
@@ -523,18 +769,39 @@ declare namespace LocalJSX {
         "buttonText"?: string;
         "eventSessions"?: string;
         "modalTitle"?: string;
+        /**
+          * @default "/pulumi-up/thank-you/"
+         */
         "redirectUrl"?: string;
     }
     interface HeaderCta {
+        /**
+          * @default ""
+         */
         "buttonClass"?: string;
     }
     interface HomeSlots {
+        /**
+          * @default ""
+         */
         "centerItems"?: string;
+        /**
+          * @default ""
+         */
         "imageClass"?: string;
+        /**
+          * @default ""
+         */
         "leftItems"?: string;
+        /**
+          * @default ""
+         */
         "rightItems"?: string;
     }
     interface PricingCta {
+        /**
+          * @default ""
+         */
         "buttonClass"?: string;
         "signedInText"?: string;
         "signedOutText"?: string;
@@ -544,6 +811,9 @@ declare namespace LocalJSX {
         "packageName"?: string;
     }
     interface PulumiApiDocNavNode {
+        /**
+          * @default 0
+         */
         "depth"?: number;
         "href"?: string;
         "isExpanded"?: boolean;
@@ -559,10 +829,25 @@ declare namespace LocalJSX {
         "url"?: string;
     }
     interface PulumiBanner {
+        /**
+          * @default true
+         */
         "dismissible"?: boolean;
         "name"?: string;
+        /**
+          * @default false
+         */
         "visible"?: boolean;
     }
+    /**
+     * The Choosable component is useful for showing or hiding information based on the
+     * currently selected ChooserType and value. For example, a component defined as:
+     *     <pulumi-choosable type="language" value="typescript">
+     *         I <3 TypeScript.
+     *     </pulumi-choosable>
+     * ...would display "I <3 TypeScript" only when the user's currently (or most recently)
+     * selected language choice is TypeScript.
+     */
     interface PulumiChoosable {
         "mode"?: ChooserMode;
         "selection"?: ChooserKey;
@@ -570,12 +855,27 @@ declare namespace LocalJSX {
         "value"?: ChooserKey;
         "values"?: ChooserKey;
     }
+    /**
+     * The Chooser component renders a set of selectable tabs based on the type and options
+     * properties provided. For example, this definition:
+     *     <pulumi-chooser type="language" value="typescript,python,go"></pulumi-chooser>
+     * ...would render three tabs. Clicking a tab dispatches an action that sets the
+     * associated value on the store, allowing any pulumi-choosable component on the page to
+     * be shown or hidden automatically.
+     * Alternatively, you can provide one or more pulumi-choosable components as children of
+     * this component, which will have the effect of treating them as tabbed content,
+     * irrespective of what may or may not be set on the global store. For example:
+     *     <pulumi-chooser type="language" value="typescript,javascript">
+     *         <pulumi choosable type="language" value="typescript">Some TypeScript</pulumi-choosable>
+     *         <pulumi choosable type="language" value="javascript">Some JavaScript</pulumi-choosable>
+     *     </pulumi-chooser>
+     */
     interface PulumiChooser {
-        "mode"?: ChooserMode;
+        "mode"?: ChooserMode1;
         "optionStyle"?: ChooserOptionStyle;
         "options"?: string;
-        "selection"?: ChooserKey;
-        "type"?: ChooserType;
+        "selection"?: ChooserKey1;
+        "type"?: ChooserType1;
     }
     interface PulumiContactUsForm {
         "items"?: string;
@@ -586,18 +886,39 @@ declare namespace LocalJSX {
         "endpoint"?: string;
         "examples"?: string;
         "from"?: SourceKind;
+        /**
+          * @default ""
+         */
         "theme"?: string;
     }
     interface PulumiDateCountdown {
+        /**
+          * @default ""
+         */
         "containerClass"?: string;
+        /**
+          * @default ""
+         */
         "countdownOverText"?: string;
         "dateString"?: string;
+        /**
+          * @default ""
+         */
         "textClass"?: string;
+        /**
+          * @default ""
+         */
         "valueLabelClass"?: string;
     }
     interface PulumiDateCountdownCircles {
+        /**
+          * @default ""
+         */
         "containerClass"?: string;
         "dateString"?: string;
+        /**
+          * @default ""
+         */
         "valueLabelClass"?: string;
     }
     interface PulumiDatetime {
@@ -609,6 +930,9 @@ declare namespace LocalJSX {
         "quotes"?: string;
     }
     interface PulumiDocsNav {
+        /**
+          * @default ""
+         */
         "expandedMenuIDs"?: string;
     }
     interface PulumiExample {
@@ -616,11 +940,11 @@ declare namespace LocalJSX {
     interface PulumiExamples {
     }
     interface PulumiFilterSelect {
-        "onFilterSelect"?: (event: CustomEvent<any[]>) => void;
+        "onFilterSelect"?: (event: PulumiFilterSelectCustomEvent<any[]>) => void;
     }
     interface PulumiFilterSelectOption {
         "label"?: string;
-        "onOptionChange"?: (event: CustomEvent<any>) => void;
+        "onOptionChange"?: (event: PulumiFilterSelectOptionCustomEvent<any>) => void;
         "selected"?: boolean;
         "value"?: string;
     }
@@ -640,7 +964,13 @@ declare namespace LocalJSX {
         "os"?: OSKey;
     }
     interface PulumiMultiSelectForm {
+        /**
+          * @default ""
+         */
         "defaultFormId"?: string;
+        /**
+          * @default []
+         */
         "items"?: MultiSelectFormItem[];
         "labelClass"?: string;
         "labelText"?: string;
@@ -649,7 +979,7 @@ declare namespace LocalJSX {
     interface PulumiPricingCalculator {
     }
     interface PulumiRegistryListSearch {
-        "onPackageSearch"?: (event: CustomEvent<string>) => void;
+        "onPackageSearch"?: (event: PulumiRegistryListSearchCustomEvent<string>) => void;
     }
     interface PulumiResourceLinks {
         "moduleName"?: string;
@@ -657,7 +987,7 @@ declare namespace LocalJSX {
         "resourceName"?: string;
     }
     interface PulumiRoot {
-        "onRendered"?: (event: CustomEvent<any>) => void;
+        "onRendered"?: (event: PulumiRootCustomEvent<any>) => void;
     }
     interface PulumiSlotMachine {
         "centerImages"?: string;
@@ -668,16 +998,49 @@ declare namespace LocalJSX {
     interface PulumiSwipeable {
     }
     interface PulumiSwiper {
+        /**
+          * @default false
+         */
         "autoplay"?: boolean;
+        /**
+          * @default 3000
+         */
         "autoplayDelay"?: number;
+        /**
+          * @default false
+         */
         "centeredSlides"?: boolean;
+        /**
+          * @default "horizontal"
+         */
         "direction"?: "vertical" | "horizontal";
+        /**
+          * @default true
+         */
         "enableMouseEvents"?: boolean;
+        /**
+          * @default 1
+         */
         "initialSlide"?: number;
+        /**
+          * @default false
+         */
         "loop"?: boolean;
+        /**
+          * @default false
+         */
         "navControls"?: boolean;
+        /**
+          * @default 1
+         */
         "slides"?: number;
+        /**
+          * @default 0
+         */
         "spaceBetween"?: number;
+        /**
+          * @default 300
+         */
         "speed"?: number;
     }
     interface PulumiTab {
@@ -685,13 +1048,25 @@ declare namespace LocalJSX {
         "label"?: string;
     }
     interface PulumiTabs {
-        "onTabSelect"?: (event: CustomEvent<any[]>) => void;
+        "onTabSelect"?: (event: PulumiTabsCustomEvent<any[]>) => void;
     }
     interface PulumiTertiaryNav {
         "items"?: string;
         "selection"?: any;
         "tabContent"?: string[];
     }
+    /**
+     * The ToolTip component shows a tooltip bubble above another element when you hover over
+     * (or, on mobile tap on) it. Use the named `content` slot for supplying the markup to
+     * show in the bubble.
+     * Usage:
+     * <pulumi-tooltip>
+     *     <i class="fas fa-question-circle"></i>
+     *     <span slot="content">
+     *         You hovered over (or tapped on) the thing!
+     *     </span>
+     * </pulumi-tooltip>
+     */
     interface PulumiTooltip {
     }
     interface PulumiTopButton {
@@ -766,7 +1141,31 @@ declare module "@stencil/core" {
             "pulumi-api-doc-nav-tree": LocalJSX.PulumiApiDocNavTree & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavTreeElement>;
             "pulumi-audio": LocalJSX.PulumiAudio & JSXBase.HTMLAttributes<HTMLPulumiAudioElement>;
             "pulumi-banner": LocalJSX.PulumiBanner & JSXBase.HTMLAttributes<HTMLPulumiBannerElement>;
+            /**
+             * The Choosable component is useful for showing or hiding information based on the
+             * currently selected ChooserType and value. For example, a component defined as:
+             *     <pulumi-choosable type="language" value="typescript">
+             *         I <3 TypeScript.
+             *     </pulumi-choosable>
+             * ...would display "I <3 TypeScript" only when the user's currently (or most recently)
+             * selected language choice is TypeScript.
+             */
             "pulumi-choosable": LocalJSX.PulumiChoosable & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
+            /**
+             * The Chooser component renders a set of selectable tabs based on the type and options
+             * properties provided. For example, this definition:
+             *     <pulumi-chooser type="language" value="typescript,python,go"></pulumi-chooser>
+             * ...would render three tabs. Clicking a tab dispatches an action that sets the
+             * associated value on the store, allowing any pulumi-choosable component on the page to
+             * be shown or hidden automatically.
+             * Alternatively, you can provide one or more pulumi-choosable components as children of
+             * this component, which will have the effect of treating them as tabbed content,
+             * irrespective of what may or may not be set on the global store. For example:
+             *     <pulumi-chooser type="language" value="typescript,javascript">
+             *         <pulumi choosable type="language" value="typescript">Some TypeScript</pulumi-choosable>
+             *         <pulumi choosable type="language" value="javascript">Some JavaScript</pulumi-choosable>
+             *     </pulumi-chooser>
+             */
             "pulumi-chooser": LocalJSX.PulumiChooser & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
             "pulumi-contact-us-form": LocalJSX.PulumiContactUsForm & JSXBase.HTMLAttributes<HTMLPulumiContactUsFormElement>;
             "pulumi-convert": LocalJSX.PulumiConvert & JSXBase.HTMLAttributes<HTMLPulumiConvertElement>;
@@ -794,6 +1193,18 @@ declare module "@stencil/core" {
             "pulumi-tab": LocalJSX.PulumiTab & JSXBase.HTMLAttributes<HTMLPulumiTabElement>;
             "pulumi-tabs": LocalJSX.PulumiTabs & JSXBase.HTMLAttributes<HTMLPulumiTabsElement>;
             "pulumi-tertiary-nav": LocalJSX.PulumiTertiaryNav & JSXBase.HTMLAttributes<HTMLPulumiTertiaryNavElement>;
+            /**
+             * The ToolTip component shows a tooltip bubble above another element when you hover over
+             * (or, on mobile tap on) it. Use the named `content` slot for supplying the markup to
+             * show in the bubble.
+             * Usage:
+             * <pulumi-tooltip>
+             *     <i class="fas fa-question-circle"></i>
+             *     <span slot="content">
+             *         You hovered over (or tapped on) the thing!
+             *     </span>
+             * </pulumi-tooltip>
+             */
             "pulumi-tooltip": LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
             "pulumi-top-button": LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
             "pulumi-user-toggle": LocalJSX.PulumiUserToggle & JSXBase.HTMLAttributes<HTMLPulumiUserToggleElement>;

@@ -492,6 +492,30 @@ or visit https://pulumi.com/docs/reference/install/ for manual instructions and 
 
 {{< skip-version-check >}}
 
+## Enhance your AI coding assistant with agent skills
+
+Skills are structured knowledge packages that follow the open [Agent Skills](https://agentskills.io) specification. They work across multiple AI coding platforms including Claude Code, GitHub Copilot, Cursor, VS Code, Codex, and Gemini CLI. When you install Pulumi skills, your AI assistant gains access to detailed workflows, code patterns, and decision trees for common infrastructure tasks.
+
+### Claude Code Plugin Marketplace
+
+For Claude Code users, the plugin system provides the simplest installation experience:
+
+```bash
+claude plugin marketplace add pulumi/agent-skills
+claude plugin install pulumi-migration     # Install migration skills
+claude plugin install pulumi-authoring     # Install authoring skills
+```
+
+You can install both plugin groups or choose only the ones you need.
+
+### Universal installation
+
+For Cursor, GitHub Copilot, VS Code, Codex, Gemini and other platforms, use the universal [Agent Skills](https://agentskills.io) CLI:
+
+```bash
+npx skills add pulumi/agent-skills
+```
+
 ## Upgrading Pulumi
 
 If you are upgrading from Pulumi 2.0 to 3.0, please see our [migration guide](/docs/install/migrating-3.0).
@@ -585,7 +609,7 @@ To install, run our installation script:
 1. Run our installation script:
 
 <div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-install-script">&gt; @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString</code></pre>
+   <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-install-script">&gt; @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &amp; ([ScriptBlock]::Create((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))) -Version dev" &amp;&amp; SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"</code></pre>
 </div>
 
 {{% /choosable %}}

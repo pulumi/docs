@@ -12,23 +12,48 @@ on:
 
 jobs:
   claude-review:
-    # Skip automated PRs from pulumi-bot
-    if: github.event.pull_request.user.login != 'pulumi-bot'
-    
+    # Skip automated PRs from pulumi-bot and dependabot (secrets not available)
+    if: github.event.pull_request.user.login != 'pulumi-bot' && github.event.pull_request.user.login != 'dependabot[bot]'
+
     runs-on: ubuntu-latest
     permissions:
       contents: read
       pull-requests: write
       issues: read
       id-token: write
-    
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 1
 
+      - name: Check repository write access
+        id: check-access
+        run: |
+          # Check if PR author has write access to the repository
+          OWNER="pulumi"
+          REPO="docs"
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+
+          # Get user's permission level (admin, write, read, or none)
+          PERMISSION=$(curl -s \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$OWNER/$REPO/collaborators/$AUTHOR/permission" \
+            | jq -r '.permission // "none"')
+
+          # Allow admin or write access
+          if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "✓ User $AUTHOR has $PERMISSION access to $OWNER/$REPO"
+          else
+            echo "has_write_access=false" >> $GITHUB_OUTPUT
+            echo "✗ User $AUTHOR has $PERMISSION access to $OWNER/$REPO (insufficient permissions)"
+          fi
+
       - name: Run Claude Code Review
+        if: steps.check-access.outputs.has_write_access == 'true'
         id: claude-review
         uses: anthropics/claude-code-action@v1
         env:
@@ -41,7 +66,6 @@ jobs:
             You are running in a CI environment.
 
             Review pull request #${{ github.event.pull_request.number }} by following the instructions in `.claude/commands/docs-review.md` under the "Continuous Integration (CI) Context" section.
-
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
           # or https://docs.anthropic.com/en/docs/claude-code/sdk#command-line for available options
           # Allow essential file reading tools (Read, Glob, Grep) and gh commands for PR interaction

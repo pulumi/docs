@@ -49,7 +49,7 @@ export class PulumiRegistryListSearch {
                 <input
                     class="registry-filter-input"
                     placeholder="Filter by package name..."
-                    onInput={(event: KeyboardEvent) => this.onChange(event.target as HTMLInputElement)}
+                    onInput={(event: InputEvent) => this.onChange(event.target as HTMLInputElement)}
                     value={this.filterContent}
                     autocomplete="off"
                 ></input>

@@ -4,93 +4,109 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
       day: "monday"
       time: "09:00"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 1
     groups:
-      aws-sdk:
-        patterns: ["@aws-sdk/*"]
-      pulumi:
-        patterns: ["@pulumi/*"]
-      testing:
-        patterns: ["cypress", "jest*", "@types/jest"]
-      development:
-        patterns: ["prettier", "husky", "markdownlint"]
+      all-dependencies:
+        patterns: ["*"]
     ignore:
       - dependency-name: "tailwindcss"
-      # Stay on Prettier v2.x due to v3.x performance regression (6x slower)
-      # See BUILD-AND-DEPLOY.md for details
       - dependency-name: "prettier"
         update-types: ["version-update:semver-major"]
-    labels: ["dependencies", "npm"]
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies"]
     commit-message:
       prefix: "deps"
-      include: "scope"
 
   # Theme package.json
   - package-ecosystem: "npm"
     directory: "/theme"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
       day: "monday"
       time: "09:00"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 1
     groups:
-      webpack:
-        patterns: ["webpack*", "*-loader", "*-webpack-plugin*"]
-      algolia:
-        patterns: ["@algolia/*", "algoliasearch"]
+      all-dependencies:
+        patterns: ["*"]
     ignore:
       - dependency-name: "tailwindcss"
-    labels: ["dependencies", "npm", "theme"]
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies"]
     commit-message:
       prefix: "deps(theme)"
-      include: "scope"
 
   # Stencil package.json
   - package-ecosystem: "npm"
     directory: "/theme/stencil"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
       day: "monday"
       time: "09:00"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
     groups:
-      stencil:
-        patterns: ["@stencil/*"]
-      testing:
-        patterns: ["jest*", "puppeteer"]
-    labels: ["dependencies", "npm", "stencil"]
+      all-dependencies:
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies"]
     commit-message:
       prefix: "deps(stencil)"
-      include: "scope"
 
   # Infrastructure package.json
   - package-ecosystem: "npm"
     directory: "/infrastructure"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
       day: "monday"
       time: "09:00"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1
     groups:
-      pulumi:
-        patterns: ["@pulumi/*"]
-    labels: ["dependencies", "npm", "infrastructure"]
+      all-dependencies:
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies"]
     commit-message:
       prefix: "deps(infra)"
-      include: "scope"
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
       day: "monday"
       time: "09:00"
-    open-pull-requests-limit: 5
-    labels: ["dependencies", "github-actions"]
+    open-pull-requests-limit: 1
+    groups:
+      all-actions:
+        patterns: ["*"]
+    labels: ["dependencies"]
     commit-message:
       prefix: "ci"
-      include: "scope"
+    ignore:
+      - dependency-name: "pulumi/action-install-pulumi-cli"
+
+  # Python dependencies
+  - package-ecosystem: "pip"
+    directory: "/scripts"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 1
+    groups:
+      all-pip-dependencies:
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps(pip)"
