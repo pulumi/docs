@@ -244,7 +244,6 @@ The [Pulumi glossary](/docs/iac/concepts/glossary/) defines common terms and con
 
 ---
 
-
 ## References to Commands or UI
 
 - CLI commands: wrap in backticks (e.g., `pulumi up`).  
