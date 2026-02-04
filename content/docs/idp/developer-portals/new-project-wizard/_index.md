@@ -20,7 +20,7 @@ By using the wizard, users can generate projects from your [Organization Templat
 
 ## Accessing the New Project Wizard
 
-You can access the New Project Wizard from the [Stacks page](https://app.pulumi.com/pulumi/projects) in the Pulumi Cloud console. Look for the "New Project" button in the left navigation. You can also navigate directly to the wizard at [https://app.pulumi.com/new](https://app.pulumi.com/new).
+You can access the New Project Wizard by clicking the "New Project" button on the Stacks page in the Pulumi Cloud console. You can also navigate directly to the wizard at [https://app.pulumi.com/new](https://app.pulumi.com/new).
 
 ## Deployment methods
 
