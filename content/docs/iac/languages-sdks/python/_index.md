@@ -80,7 +80,9 @@ It is not required, but we recommend using a [virtual environment](https://docs.
 
 When creating a new Python project with `pulumi new`, you are offered the choice between `pip` (default), `poetry` and `uv` to manage your dependencies. You can also change this at any time by updating the `toolchain` option in `Pulumi.yaml`. Existing Python projects that do not use a virtual environment can opt-in to using the built-in virtual environment support by setting the option and then running `pulumi install` to create the virtual environment and install dependencies.
 
-#### Pip
+{{< chooser pythontoolchain "pip,uv,poetry" >}}
+
+{{% choosable pythontoolchain pip %}}
 
 When using `pip` Pulumi will create a virtual environment and install the required dependencies from `requirements.txt`. The `virtualenv` option is required for `pip` and controls the name of the virtual environment directory.
 
@@ -92,7 +94,23 @@ runtime:
     virtualenv: venv
 ```
 
-### Poetry
+{{% /choosable %}}
+
+{{% choosable pythontoolchain uv %}}
+
+When using `uv` Pulumi will create a virtual environment in the `.venv` directory and install the required dependencies from `pyproject.toml`. When no `pyproject.toml` file is present, Pulumi will look for a `requirements.txt` file and convert it to a `pyproject.toml` file. The `virtualenv` option controls the name of the virtual environment directory. This is optional for `uv` and defaults to `.venv`.
+
+```yaml
+runtime:
+  name: python
+  options:
+    toolchain: uv
+    virtualenv: .venv
+```
+
+{{% /choosable %}}
+
+{{% choosable pythontoolchain poetry %}}
 
 When using `poetry` Pulumi will run Poetry to create a virtual environment in its [default location](https://python-poetry.org/docs/basic-usage/#using-your-virtual-environment) and install the required dependencies from `pyproject.toml`. When no `pyproject.toml` file is present, Pulumi will look for a `requirements.txt` file and convert it to a `pyproject.toml` file.
 
@@ -107,17 +125,9 @@ runtime:
 
 To further configure `poetry`, you can provide a [`poetry.toml` configuration file](https://python-poetry.org/docs/configuration/#local-configuration) in the project directory.
 
-### Uv
+{{% /choosable %}}
 
-When using `uv` Pulumi will create a virtual environment in the `.venv` directory and install the required dependencies from `pyproject.toml`. When no `pyproject.toml` file is present, Pulumi will look for a `requirements.txt` file and convert it to a `pyproject.toml` file. The `virtualenv` option controls the name of the virtual environment directory. This is optional for `uv` and defaults to `.venv`.
-
-```yaml
-runtime:
-  name: python
-  options:
-    toolchain: uv
-    virtualenv: .venv
-```
+{{< /chooser >}}
 
 #### Self managed virtual environments
 
@@ -148,7 +158,9 @@ When set, Pulumi will invoke the type checker before running your program. This 
 
 There are many [Pulumi Python packages](/registry) available.
 
-#### Pip
+{{< chooser pythontoolchain "pip,uv,poetry" >}}
+
+{{% choosable pythontoolchain pip %}}
 
 To install a new dependency in the virtual environment when using `pip`, add an entry to `requirements.txt`, and run the following in your project directory:
 
@@ -180,7 +192,11 @@ $ venv/bin/pip install -r requirements.txt
 
 {{< /chooser >}}
 
-#### Poetry
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+{{% choosable pythontoolchain poetry %}}
 
 To add a new dependency when using `poetry`, run the `poetry add` command in your project directory. The dependency will be added to the `pyproject.toml` file and installed in the virtual environment:
 
@@ -213,7 +229,9 @@ $ poetry add ${PACKAGE_NAME}
 
 {{< /chooser >}}
 
-#### Uv
+{{% /choosable %}}
+
+{{% choosable pythontoolchain uv %}}
 
 To add a new dependency when using `uv`, run the `uv add` command in your project directory. The dependency will be added to the `pyproject.toml` file and installed in the virtual environment:
 
@@ -241,6 +259,8 @@ $ uv add ${PACKAGE_NAME}
 > uv add ${PACKAGE_NAME}
 
 ```
+
+{{% /choosable %}}
 
 {{% /choosable %}}
 
