@@ -123,7 +123,7 @@ When reviewing PRs and changes, follow the instructions in `.claude/commands/doc
 
 This repository includes specialized workflow skills in `.claude/commands/` that provide detailed instructions for documentation tasks like creating new docs, reviewing PRs, moving files, and more.
 
-**Non-Claude agents**: If the user runs a slash command that seems unfamiliar (or issues a one-two word command that could be intended as a slash command), look for a corresponding file in `.claude/commands/` to guide your actions.
+**Non-Claude agents**: If the user runs a slash command that seems unfamiliar (or issues a short command that could be intended as a slash command), look for a corresponding file in `.claude/commands/` to guide your actions.
 
 ---
 
