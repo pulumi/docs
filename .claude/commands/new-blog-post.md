@@ -50,6 +50,7 @@ If the author file doesn't exist, also gather:
 **Additional Authors:**
 
 After gathering the primary author information, ask:
+
 - **Are there additional authors on this post?** If yes, ask for their names or author IDs (comma-separated)
 - For each additional author:
   1. Try to find their existing TOML file in `data/team/team/`
