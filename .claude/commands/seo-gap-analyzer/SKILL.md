@@ -13,6 +13,7 @@ description: Analyze content coverage gaps for specific topics and produce strat
 ```
 
 **Examples:**
+
 - `/seo-gap-analyzer configuration management` - Analyze gap for a topic
 - `/seo-gap-analyzer content/docs/esc/` - Analyze a documentation section
 - `/seo-gap-analyzer https://pulumi.com/docs/iac/concepts/` - Analyze a specific page
@@ -24,12 +25,14 @@ This is a **hybrid skill**: research and plan first, then ask for approval befor
 ### Phase 1: Intake and Context Gathering
 
 Extract from the user's request:
+
 - **Target**: Topic, keyword, URL, or content section to analyze
 - **Scope**: Single page, section/topic, or cross-site competitive analysis
 - **Goals**: What outcome is expected (rank higher, get AI citations, etc.)
 - **Context**: Any Slack threads, competitor URLs, or product requirements provided
 
 If critical context is missing, ask:
+
 1. What specific search behavior should trigger Pulumi appearing?
 2. What Pulumi capabilities solve the searcher's problem?
 3. Are there specific competitors to benchmark against?
@@ -41,11 +44,13 @@ If critical context is missing, ask:
 For the target topic, identify keyword variants:
 
 **Unbranded keywords (PRIMARY FOCUS):**
+
 - Head term: `[topic]` (e.g., "configuration management")
 - Long-tail: `[topic] + [modifier]` (e.g., "configuration management kubernetes")
 - Intent variants: `[topic] tutorial`, `what is [topic]`, `[topic] tools`
 
 **Branded keywords (SECONDARY):**
+
 - `pulumi [topic]`
 - `[topic] with pulumi`
 - `pulumi vs [competitor] [topic]`
@@ -57,12 +62,14 @@ Prioritize unbranded keywords - they have higher volume and capture users earlie
 **For SEO (use WebSearch):**
 
 Run searches for prioritized keywords:
+
 1. `[topic]` - Pure unbranded head term
 2. `[topic] infrastructure as code` - Category-qualified
 3. `[topic] tutorial` / `[topic] guide` - Educational intent
 4. `pulumi [topic]` - Branded
 
 For each search, document:
+
 - Pulumi's position (if ranking)
 - Which URL ranks (note if `/registry/` - non-editable)
 - Top 3 competitors and their content type
@@ -71,6 +78,7 @@ For each search, document:
 **For AEO (describe approach to user):**
 
 Explain that AI tools (ChatGPT, Claude, Perplexity) should be tested with queries like:
+
 - "What is [topic]?"
 - "How do I use Pulumi for [topic]?"
 - "Best tools for [topic] with infrastructure as code"
@@ -79,18 +87,14 @@ Document whether AI tools mention Pulumi and in what context.
 
 ### Phase 4: Existing Content Audit
 
-Search the repository for relevant content:
+Use the Grep tool to search the repository for relevant content:
 
-```bash
-# Find pages mentioning the topic
-grep -ri "[topic]" content/ --include="*.md" -l
-
-# Check frontmatter
-grep -ri "title:.*[topic]" content/ --include="*.md"
-grep -ri "meta_desc:.*[topic]" content/ --include="*.md"
-```
+- Find pages mentioning the topic in content
+- Check frontmatter for title and meta_desc fields containing the topic
+- Identify which content sections (docs, blog, learn, what-is, product) cover the topic
 
 **Categorize pages:**
+
 - **EDITABLE**: `/content/docs/`, `/content/blog/`, `/content/learn/`, `/content/what-is/`, `/content/product/`
 - **NON-EDITABLE** (different repo): Anything rendering to `/registry/*`
 
@@ -127,6 +131,7 @@ Categorize identified gaps:
 Produce a prioritized plan:
 
 #### Executive Summary
+
 - 2-3 sentence summary of gap and opportunity
 - Primary unbranded keyword target
 - Key existing page(s) to optimize
@@ -145,10 +150,12 @@ For each page to optimize:
 | H1 | [current] | [new] | Match search intent |
 
 **Content changes:**
+
 - Add section: [H2 heading] - [description]
 - Expand section: [existing H2] - [what to add]
 
 **Internal links:**
+
 - Link TO this page FROM: [pages with anchor text]
 - Link FROM this page TO: [pages with anchor text]
 
@@ -168,6 +175,7 @@ Only recommend if existing pages cannot cover the keyword:
 - **Content brief**: [H1, key H2s, main points]
 
 #### Success Metrics
+
 - Rank top 10 for "[unbranded keyword]" within 90 days
 - Rank top 3 for "[branded keyword]" within 30 days
 - AI tools cite Pulumi for "[topic]" queries
@@ -177,6 +185,7 @@ Only recommend if existing pages cannot cover the keyword:
 **CRITICAL**: Present the complete plan to the user and ask for approval before making any changes.
 
 Use AskUserQuestion to confirm:
+
 - Which recommendations to implement
 - Any modifications to the plan
 - Priority order for implementation
@@ -188,6 +197,7 @@ Use AskUserQuestion to confirm:
 After approval, implement changes:
 
 1. Create a feature branch:
+
    ```bash
    git checkout -b seo/[topic]-optimization
    ```
@@ -196,17 +206,20 @@ After approval, implement changes:
    - Edit frontmatter (title, meta_desc)
    - Update markdown content
    - Add internal links using Hugo syntax:
+
      ```markdown
      [descriptive anchor text]({{< relref "/docs/path/to/page" >}})
      ```
 
 3. Validate:
+
    ```bash
    make lint
    make serve  # Preview at http://localhost:1313
    ```
 
 4. Commit with clear message:
+
    ```bash
    git add content/[files]
    git commit -m "SEO: Optimize [page] for '[keyword]'
