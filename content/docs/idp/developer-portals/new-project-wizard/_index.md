@@ -18,26 +18,12 @@ Pulumi Cloud provides a New Project Wizard to help walk your organization's memb
 
 By using the wizard, users can generate projects from your [Organization Templates](/docs/idp/developer-portals/templates), commit and push code to GitHub, and trigger an initial deployment -- all in a few clicks and without leaving the browser.
 
-{{% notes "info" %}}
 The New Project Wizard supports multiple deployment methods:
 - **[Deployments - no-code](#deployments---no-code)**: Deploy without VCS, configuration stored in Pulumi ESC
 - **[Deployments - git](#deployments---git)**: Full git integration with automated deployments
 - **[CLI](#cli-step-by-step-commands)**: Step-by-step commands for local execution
 
 For git-based deployments, [install](/docs/deployments/deployments/reference/#github-app-installation) the Pulumi GitHub App.
-{{% /notes %}}
-
-The New Project Wizard can be found in the left sidebar:
-
-![New Project Wizard Sidebar Location](/docs/idp/developer-portals/new-project-wizard/npw-sidebar.png)
-
-If you chose to create a project from a template, you'll be able to pick from one of Pulumi's numerous public templates, or from your [Organization Templates](/docs/idp/developer-portals/templates). Choosing a "starter" creates a new Pulumi project with some basic scaffolding based on the cloud and language specified.
-
-![New Project Wizard](/docs/idp/developer-portals/new-project-wizard/npw-start.png)
-
-After configuring your project, you'll choose a deployment method. The available options depend on your organization's configuration:
-
-![New Project Wizard Deployment Method](/docs/idp/developer-portals/new-project-wizard/npw-deploy-method.png)
 
 ### Deployment method options
 
@@ -55,7 +41,7 @@ The no-code deployment method enables users to create and deploy Pulumi stacks w
 1. The stack is created and deployed automatically
 1. Configuration is stored in Pulumi ESC (no VCS commits required)
 
-For more information on no-code workflows, see [Workflows](/docs/idp/get-started/workflows/#no-code).
+For more information on no-code workflows, see [Workflows](/docs/idp/get-started/workflows).
 
 #### Deployments - git
 
