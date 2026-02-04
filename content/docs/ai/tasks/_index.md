@@ -20,16 +20,17 @@ Tasks are Neo's primary unit of work. Each task represents a distinct conversati
 
 ## Key Characteristics
 
-### User Isolation
+### Ownership and sharing
 
-Tasks are completely isolated between users:
+Each task belongs to the user who created it. By default, tasks are private, but you can share any task with others in your organization by generating a read-only link. Shared tasks let teammates see the full conversation, including Neo's reasoning, the actions it took, and the outcome.
 
-- Each task belongs exclusively to the user who created it
-- Tasks cannot be shared, transferred, or viewed by other users
-- User permissions and [RBAC](/docs/pulumi-cloud/access-management/rbac/) are enforced within each task
-- Conversation history and context remain private to the creating user
+Sharing preserves security boundaries:
 
-This isolation prevents the opportunity for escalation.
+- Viewers can see the conversation but cannot trigger any actions
+- Links to stacks or resources within the shared task still enforce the viewer's existing [RBAC](/docs/pulumi-cloud/access-management/rbac/) permissions
+- The original task owner retains full control
+
+This design enables collaboration without creating opportunities for privilege escalation.
 
 ### Task Modes
 
