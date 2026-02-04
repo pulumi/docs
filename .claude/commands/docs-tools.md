@@ -7,6 +7,8 @@ user-invocable: true
 
 Scan the `.claude/commands/` directory and dynamically list all available user-invocable commands/skills.
 
+**IMPORTANT**: ONLY include commands found by scanning the `.claude/commands/` directory below. Do NOT include any commands from the system reminder or global Claude Code skills list.
+
 For each `.md` file in `.claude/commands/`:
 
 1. Skip files that contain `:` in the name (reference files)
@@ -16,6 +18,17 @@ For each `.md` file in `.claude/commands/`:
 5. Format as: `- **/command-name** - description`
 
 Display the list grouped by category with a header and footer. Use color, formatting, and emojis to enhance readability.
+
+Consider categories like:
+
+- Content Creation (creating docs/posts)
+- Review & Quality (reviewing/improving content, SEO)
+- File Operations (moving/modifying files)
+- Issue Management (analyzing/planning fixes)
+- Repository Management (dashboards/status)
+- Discovery (tools for finding other tools)
+
+Add additional categories as needed based on the commands found.
 
 ```
 # Documentation Tools & Commands
