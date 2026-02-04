@@ -48,7 +48,7 @@ We do not hand-write the OpenAPI spec. We generate it from the same API definiti
 We are using this spec as the foundation for our own tooling, and have plans to continue leveraging the spec in our toolchain long-term.
 
 * **CLI**: We plan to drive the Pulumi CLI’s API client from the OpenAPI spec so that CLI and API stay in lockstep.
-* **Pulumi Service Provider**: We are also building towards day 1 updates to the [Pulumi Service Provider](https://www.pulumi.com/registry/packages/pulumi-service/) so that new and changed API resources are generated from the spec and ship in sync with the service.
+* **Pulumi Service Provider**: We are also building towards day 1 updates to the [Pulumi Service Provider](https://www.pulumi.com/registry/packages/pulumiservice/) so that new and changed API resources are generated from the spec and ship in sync with the service.
 * **Docs Enhancements**: Although you can load the spec using Swagger UI for your own browsing, we are intent on shipping enhancements to our public REST API docs that will keep them up-to-date according to the OpenAPI spec.
 
 As we ship those updates, you will get a single source of truth from API to CLI to provider.
