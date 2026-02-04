@@ -133,29 +133,11 @@ export class Chooser {
     setPythonToolchain: typeof setPythonToolchain;
 
     componentWillLoad() {
-        // Translate the set of options provided into choices.
-        this.parseOptions();
-    }
-
-    disconnectedCallback() {
-        if (this.storeUnsubscribe) {
-            this.storeUnsubscribe();
-        }
-    }
-
-    componentDidRender() {
-        this.applyChoice();
-    }
-
-    @Listen("rendered", { target: "document" })
-    onRendered(_event: CustomEvent) {
         // By default, choosers act globally and use a tabbed layout.
         this.mode = "global";
         this.optionStyle = "tabbed";
 
-        // As this callback may be invoked before the component's first lifecycle method,
-        // we parse the set of options provided just to be sure we have a default option
-        // to select if we need to.
+        // Translate the set of options provided into choices.
         this.parseOptions();
 
         // Map internal methods to actions defined on the store.
@@ -169,6 +151,32 @@ export class Chooser {
             setPythonToolchain,
         });
 
+        // Try to subscribe immediately if the store is ready.
+        // This avoids waiting for the "rendered" event when possible.
+        if (store.getStore()) {
+            this.subscribeToStore();
+        }
+    }
+
+    @Listen("rendered", { target: "document" })
+    onRendered(_event: CustomEvent) {
+        // Subscribe to the store when it's ready (if not already subscribed).
+        if (!this.storeUnsubscribe) {
+            this.subscribeToStore();
+        }
+    }
+
+    disconnectedCallback() {
+        if (this.storeUnsubscribe) {
+            this.storeUnsubscribe();
+        }
+    }
+
+    componentDidRender() {
+        this.applyChoice();
+    }
+
+    private subscribeToStore() {
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
             const {
@@ -194,11 +202,15 @@ export class Chooser {
 
                         // In local mode, there's no need to listen for store updates anymore,
                         // so we unsubscribe.
-                        setTimeout(() => this.storeUnsubscribe());
+                        // setTimeout(() => this.storeUnsubscribe());
+                        if (this.storeUnsubscribe) {
+                            this.storeUnsubscribe();
+                        }
                     } else {
                         // This is a global chooser with (presumably) on-page choosables,
                         // so we need to dispatch an event to reset the selected language.
-                        setTimeout(() => this.setChoice(this.type, defaultChoice));
+                        // setTimeout(() => this.setChoice(this.type, defaultChoice));
+                        this.setChoice(this.type, defaultChoice);
                     }
                 }
                 return { selection: key };
@@ -246,8 +258,9 @@ export class Chooser {
     }
 
     // The choosable elements of this chooser, if any.
+    // Only returns choosables that match this chooser's type.
     private get choosables() {
-        return this.el.querySelectorAll("pulumi-choosable");
+        return this.el.querySelectorAll(`pulumi-choosable[type="${this.type}"]`);
     }
 
     // Convert inbound options lists into ChooserKeys, so they can be converted into

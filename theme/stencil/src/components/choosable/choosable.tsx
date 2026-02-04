@@ -63,11 +63,26 @@ export class Choosable {
         }
     }
 
-    @Listen("rendered", { target: "document" })
-    onRendered(_event: CustomEvent) {
+    componentWillLoad() {
         // By default, mode is global, until told otherwise by some parental chooser.
         this.mode = "global";
 
+        // Try to subscribe immediately if the store is ready.
+        // This avoids waiting for the "rendered" event when possible.
+        if (store.getStore()) {
+            this.subscribeToStore();
+        }
+    }
+
+    @Listen("rendered", { target: "document" })
+    onRendered(_event: CustomEvent) {
+        // Subscribe to the store when it's ready (if not already subscribed).
+        if (!this.storeUnsubscribe && this.mode === "global") {
+            this.subscribeToStore();
+        }
+    }
+
+    private subscribeToStore() {
         if (this.mode === "global") {
             // @ts-ignore-next-line
             this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
@@ -89,7 +104,7 @@ export class Choosable {
                     case "backend":
                         return { selection: backend };
                     case "pythontoolchain":
-                        return {selection: pythontoolchain};
+                        return { selection: pythontoolchain };
                 }
             });
         }
