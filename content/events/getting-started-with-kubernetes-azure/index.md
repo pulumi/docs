@@ -67,7 +67,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics: ["Kubernetes", "Azure Kubernetes Service (AKS)", "Automation"]
-        languages: [Any]
+        languages: []
         clouds: ["Azure"]
 
 # The right hand side form section.

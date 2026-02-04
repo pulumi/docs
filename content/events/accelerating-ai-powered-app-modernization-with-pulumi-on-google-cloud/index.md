@@ -73,7 +73,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics:  ["AI", "LLM", "CI/CD", "GPU Infrastructure"]
-        languages: ["Any"]
+        languages: []
         clouds: ["Google Cloud"]
 
 # The right hand side form section.

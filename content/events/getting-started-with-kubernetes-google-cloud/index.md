@@ -67,7 +67,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics: ["Kubernetes", "Google Kubernetes Engine (GKE)", "Automation"]
-        languages: [Any]
+        languages: []
         clouds: ["Google Cloud"]
 
 # The right hand side form section.

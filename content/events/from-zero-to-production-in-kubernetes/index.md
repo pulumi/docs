@@ -66,7 +66,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics:  ["Kubernetes", "GitOps", "DevOps", "Pulumi Neo"]
-        languages: ["Any"]
+        languages: []
         clouds: ["AWS"]
 
 # The right hand side form section.

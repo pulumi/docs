@@ -71,7 +71,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics:  ["Platform Engineering", "Argo CD", "Kubernetes", "Pulumi Neo", "AI"]
-        languages: ["Any"]
+        languages: []
         clouds: ["AWS", "DigitalOcean"]
 
 # The right hand side form section.

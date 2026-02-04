@@ -56,7 +56,7 @@ main:
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
         topics:  ["AI agents", "observability", "Infrastructure as Code", "DevOps"]
-        languages: ["Any"]
+        languages: []
         clouds: ["AWS"]
 
 # The right hand side form section.
