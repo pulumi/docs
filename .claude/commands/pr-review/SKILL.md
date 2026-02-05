@@ -103,9 +103,9 @@ Continue to Step 3.
 
    - Show deployment URL (or pending message if not ready)
    - For each page: display direct link + specific review items based on:
-     * Type of content (docs/blog/tutorials)
-     * What changed (headings → check structure, codeBlocks → test examples, images → verify loading, links → test navigation)
-     * Change magnitude (small typo vs major rewrite)
+     - Type of content (docs/blog/tutorials)
+     - What changed (headings → check structure, codeBlocks → test examples, images → verify loading, links → test navigation)
+     - Change magnitude (small typo vs major rewrite)
    - Adapt tone and specificity to change type
    - Generate concrete, actionable guidance based on actual diff content
 
