@@ -35,7 +35,7 @@ If your team has already provisioned infrastructure using AWS CloudFormation, an
 #### Quick start with Neo
 
 1. **Prerequisites**:
-   * Install the [Pulumi GitHub app](https://github.com/apps/pulumi-cloud) with access to your repository that contains your CloudFormation template files
+   * Install the [Pulumi GitHub app](/docs/iac/guides/continuous-delivery/github-app/) with access to your repository that contains your CloudFormation template files
    * Configure AWS credentials in [Pulumi ESC](/docs/esc/)
    * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
 

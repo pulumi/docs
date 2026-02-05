@@ -46,7 +46,7 @@ Over the last two years, we have added support for several new modules. Among th
 - [Elastic SAN](https://www.pulumi.com/registry/packages/azure/api-docs/elasticsan/)
 - [Fluid Relay](https://www.pulumi.com/registry/packages/azure/api-docs/fluidrelay/)
 - [Managed Lustre](https://www.pulumi.com/registry/packages/azure/api-docs/managedlustre/)
-- [Private 5G Core](https://www.pulumi.com/registry/packages/azure/api-docs/mobile/)
+- [Private 5G Core](https://www.pulumi.com/registry/packages/azure/)
 - [New Relic](https://www.pulumi.com/registry/packages/azure/api-docs/newrelic/)
 - [NGINXaaS](https://www.pulumi.com/registry/packages/azure/api-docs/nginx/)
 - [Orbital Ground Station](https://www.pulumi.com/registry/packages/azure/api-docs/orbital/)
