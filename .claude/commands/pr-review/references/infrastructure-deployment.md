@@ -5,7 +5,9 @@ description: Infrastructure deployment detection and workflow triggers
 
 # Infrastructure Deployment
 
-Check if the PR contains dependency or infrastructure changes by examining the files changed (displayed in Step 1).
+Check if the PR contains dependency or infrastructure changes by examining the files changed.
+
+**CRITICAL OUTPUT**: Always use the message templates below to display deployment status to the user.
 
 ## Dependency Changes - Patterns
 
@@ -38,7 +40,7 @@ Use AskUserQuestion with:
 
 **Options**: Yes, deploy now | No, skip
 
-## If User Chooses "Yes"
+### If User Chooses "Yes"
 
 1. Get PR branch name:
 
@@ -58,23 +60,25 @@ Use AskUserQuestion with:
    gh run list --workflow=testing-build-and-deploy.yml --limit 1 --json databaseId,status,url,headBranch --jq '.[0]'
    ```
 
-### Display Template (Yes)
+4. Display deployment monitoring instructions with this template and continue:
 
-```markdown
-## 🔧 Infrastructure Deployment Initiated
+   ```markdown
+   ## 🔧 Infrastructure Deployment Initiated
 
-Deployment started for PR #{{arg}} to pulumi-test.io
+   Deployment started for PR #{{arg}} to pulumi-test.io
 
-📊 Monitor: [Workflow URL] | 🌐 Test site (~10 min): https://pulumi-test.io
+   📊 Monitor: [Workflow URL] | 🌐 Test site (~10 min): https://pulumi-test.io
 
-Instructions: Monitor workflow → Wait ~10 min → Visit pulumi-test.io → Check console (F12) → Test search → Verify no Lambda@Edge errors
+   Instructions: Monitor workflow → Wait ~10 min → Visit pulumi-test.io → Check console (F12) → Test search → Verify no Lambda@Edge errors
 
-⚠️ Next merge to master resets pulumi-test.io.
+   ⚠️ Next merge to master resets pulumi-test.io.
 
-PR Deployment [if available]: [URL]
-```
+   PR Deployment [if available]: [URL]
+   ```
 
-## If User Chooses "No"
+### If User Chooses "No"
+
+Display this message and continue:
 
 ```markdown
 ## 🔧 Infrastructure Testing Skipped
