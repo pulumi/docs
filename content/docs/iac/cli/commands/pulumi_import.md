@@ -32,7 +32,7 @@ must be provided.  For example:
 
 The type token and property used for resource lookup are available in the Import section of
 the resource's API documentation in the Pulumi Registry (https://www.pulumi.com/registry/).
-To fully specify parent and/or provider, subsitute the <urn> for each into the following:
+To fully specify parent and/or provider, substitute the <urn> for each into the following:
 
      pulumi import 'aws:iam/user:User' name id --parent 'parent=<urn>' --provider 'admin=<urn>'
 

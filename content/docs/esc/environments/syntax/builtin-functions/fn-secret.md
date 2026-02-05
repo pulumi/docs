@@ -51,7 +51,7 @@ values:
       ciphertext: ...
 ```
 
-### Evaluted result
+### Evaluated result
 
 ```json
 {

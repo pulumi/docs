@@ -94,7 +94,7 @@ async function main() {
         return;
     }
 
-    // Acces the value of the secret
+    // Access the value of the secret
     const secretValue = openEnv.values?.my_secret;
     console.log(`Secret value: ${secretValue}\n`);
 
