@@ -12,6 +12,14 @@ Creates a new blog post with proper structure, frontmatter, and author onboardin
 
 ## Instructions for Claude
 
+**CRITICAL**: Complete all 5 steps in sequence. Display progress as **[Step X/5]** before each step.
+
+**Important**:
+
+- **Always display all 5 steps**: Even when skipping a step, display it with an explanation (e.g., "[Step 2/5] Skipped - using suggested location from Step 1")
+- **Minimize open-ended questions**: Use AskUserQuestion with prepopulated suggestions for nearly all inputs. Always provide smart defaults based on context.
+- **Store decisions**: Track choices to avoid re-asking
+- **Check for existing docs first**: Prevent duplication
 When this command is invoked, you should:
 
 ### 1. Detect Context and Gather Information
@@ -122,7 +130,21 @@ Avoid using images or code samples in the first 70 words, as they may not render
 For more guidance, see [BLOGGING.md](https://github.com/pulumi/docs/blob/master/BLOGGING.md).
 ```
 
-### 4. Provide Next Steps
+### 4. Validation
+
+Before finishing:
+
+- Verify git config was readable (if not, inform user and proceed with manual entry for all fields)
+- Verify all author files exist and are valid TOML
+- Verify all author IDs in the frontmatter match the author IDs that were created/found (prevent typos)
+- Verify the blog post directory was created
+- Verify meta.png was copied to the blog post directory
+- Verify index.md has valid YAML frontmatter
+- Verify the user is not committing to `master` directly (if so, warn them)
+- Check that all required fields are present (especially meta_desc, authors, tags)
+- If information was auto-populated, remind user to double-check author profile accuracy
+
+### 5. Provide Next Steps
 
 After creating the files, tell the user:
 
@@ -142,7 +164,7 @@ After creating the files, tell the user:
    - Run `make lint` before committing
    - **Important**: If your post is merged to master but not showing on the live site, check the date in frontmatter - posts only appear in deployments built after their publish date.
 
-### 5. Important Notes
+## Important Notes
 
 - **Publishing workflow**: Blog posts go live when merged to master, but only appear on the site after their publish date. There is no draft mode - make sure content is ready before merging.
 - **Directory naming**: Use just the slug (e.g., `my-awesome-post`), not date-prefixed (e.g., `2026-01-23-my-awesome-post`)
@@ -150,20 +172,6 @@ After creating the files, tell the user:
 - **Author array**: The `authors` field in frontmatter is an array. For multi-author posts, add additional author IDs to the array (e.g., `- jane-doe\n    - john-smith`)
 - **More marker**: The `<!--more-->` comment marks where the excerpt ends on listing pages
 - **Style guide**: Remind users to follow `STYLE-GUIDE.md` (Heading style: H1 = Title Case, H2+ = Sentence case)
-
-### 6. Validation
-
-Before finishing:
-
-- Verify git config was readable (if not, inform user and proceed with manual entry for all fields)
-- Verify all author files exist and are valid TOML
-- Verify all author IDs in the frontmatter match the author IDs that were created/found (prevent typos)
-- Verify the blog post directory was created
-- Verify meta.png was copied to the blog post directory
-- Verify index.md has valid YAML frontmatter
-- Verify the user is not committing to `master` directly (if so, warn them)
-- Check that all required fields are present (especially meta_desc, authors, tags)
-- If information was auto-populated, remind user to double-check author profile accuracy
 
 ## Example Usage
 
