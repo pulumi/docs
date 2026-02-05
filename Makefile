@@ -154,8 +154,7 @@ new-blog-post:
 	@echo ""
 	@echo "If you don't have Claude Code, see: https://claude.com/claude-code"
 	@echo ""
-	@echo "Running the old command anyway in 5 seconds... (Ctrl+C to cancel)"
-	@sleep 5
+	@echo "Running the old command anyway... (Ctrl+C to cancel)"
 	@bash -c 'read -p "Slug (e.g., \"my-new-post\"): " slug; hugo new --kind blog-post --contentDir content "blog/$$slug"'
 
 .PHONY: lint

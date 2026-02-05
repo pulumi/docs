@@ -17,7 +17,7 @@ Creates a new blog post with proper structure, frontmatter, and author onboardin
 **Important**:
 
 - **Always display all 5 steps**: Even when skipping a step, display it with an explanation (e.g., "[Step 2/5] Skipped - using suggested location from Step 1")
-- **Minimize open-ended questions**: Use AskUserQuestion with prepopulated suggestions for nearly all inputs. Always provide smart defaults based on context.
+- **Minimize open-ended questions**: ALWAYS use AskUserQuestion with prepopulated suggestions whenever possible. Always provide smart defaults based on context.
 - **Store decisions**: Track choices to avoid re-asking
 
 When this command is invoked, you should:
@@ -44,7 +44,18 @@ When this command is invoked, you should:
 - **Author ID**: The author's ID (e.g., "jane-doe"). Prepopulate with the suggested author ID from git config if detected.
 - **Summary**: Suggest a concise, one-sentence meta description based on the post title (50-160 characters, optimized for SEO and social media)
 - **Tags**: Suggest 1-3 relevant tags based on the post title and similar existing blog posts. Common tags include: features, product-launches, pulumi-cloud, aws, azure, kubernetes, tutorials, announcements
-- **Date**: Publication date (default to today). Future dates are supported - the post will be merged to master but won't appear on the live site until after this date.
+- **Date**: Publication date. Ask using AskUserQuestion with these options:
+  - Question: "When should this blog post be published?"
+  - Header: "Publish Date"
+  - Options:
+    1. label: "Today ({current-date}) (Recommended)" / description: "Publish immediately when merged to master"
+    2. label: "Enter a specific date" / description: "Schedule for future publication (you'll provide YYYY-MM-DD format)"
+    3. label: "I don't know yet" / description: "Sets placeholder date 2099-01-01 (must be updated before publishing)"
+  - After getting the response:
+    - Option 1: Use today's date in YYYY-MM-DD format
+    - Option 2: Prompt for custom date in YYYY-MM-DD format, validate the format
+    - Option 3: Use 2099-01-01 and set a flag to add TODO comment in frontmatter
+  - Note: Replace {current-date} with the actual current date (e.g., "2026-02-05")
 
 **For New Authors Only (skip if existing author detected):**
 
@@ -101,7 +112,9 @@ Inform the user if author information was auto-populated and give them a chance 
 ```markdown
 ---
 title: "Title in Title Case"
-date: YYYY-MM-DD
+# If user selected "I don't know yet": Add TODO comment above date
+# TODO: Update this date before publishing! Currently set to far future to prevent premature publication.
+date: YYYY-MM-DD  # Use 2099-01-01 if "I don't know yet" was selected, otherwise use the chosen date
 draft: false
 meta_desc: "The one-sentence summary provided by user"
 meta_image: meta.png
@@ -155,6 +168,7 @@ After creating the files, tell the user:
    - If existing author profiles were used, confirm which ones were found and used
    - If information was auto-detected, remind user to review it for accuracy
 3. **Next steps**:
+   - **If date was set to 2099-01-01**: Update the publication date in frontmatter before publishing! The current placeholder date will prevent the post from appearing on the live site.
    - Replace the placeholder `meta.png` with your own image (recommended size: 1200×630 pixels, optimal for social media previews). Figma templates are available for internal use, ask in `#docs` for a link.
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
