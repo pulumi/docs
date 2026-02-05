@@ -262,6 +262,7 @@ Run validation checks from `new-doc:references:validation`:
 - Kebab-case filename (regular pages)
 - Meta desc 50-160 chars
 - Links valid (start with `/docs/` or external)
+- Verify the user is not committing to `master` directly (if so, warn them)
 
 Create file using templates from `new-doc:references:frontmatter`:
 

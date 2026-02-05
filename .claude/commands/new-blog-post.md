@@ -133,14 +133,14 @@ After creating the files, tell the user:
    - If existing author profiles were used, confirm which ones were found and used
    - If information was auto-detected, remind user to review it for accuracy
 3. **Next steps**:
-   - Replace the placeholder `meta.png` with your own image (recommended size: 1200×630 pixels, optimal for social media previews)
+   - Replace the placeholder `meta.png` with your own image (recommended size: 1200×630 pixels, optimal for social media previews). Figma templates are available at <https://www.figma.com/design/TnD7nxjIxVvXq8w0W7awPG/Build-Your-Own-Meta-Image?node-id=4909-709&p=f&t=wQmECcE2lm6jdbWH-0>
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
    - **Optional but recommended**: Run `/add-borders` on the blog post to add 1px grey borders to PNG images for better visual presentation
    - Preview locally: `make serve` and visit <http://localhost:1313/blog/{slug}/>
    - **Recommended**: Run `/docs-review` on your blog post to check for style issues before committing
    - Run `make lint` before committing
-   - **Important**: If your post is merged to master but not showing on the live site, check the date in frontmatter - posts only appear after their publish date.
+   - **Important**: If your post is merged to master but not showing on the live site, check the date in frontmatter - posts only appear in deployments built after their publish date.
 
 ### 5. Important Notes
 
@@ -161,6 +161,7 @@ Before finishing:
 - Verify the blog post directory was created
 - Verify meta.png was copied to the blog post directory
 - Verify index.md has valid YAML frontmatter
+- Verify the user is not committing to `master` directly (if so, warn them)
 - Check that all required fields are present (especially meta_desc, authors, tags)
 - If information was auto-populated, remind user to double-check author profile accuracy
 
