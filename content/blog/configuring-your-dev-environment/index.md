@@ -678,4 +678,4 @@ This command will download the project from Github, create a virtual environment
 $ pulumi new https://github.com/pulumi/examples/tree/master/azure-py-aks
 ```
 
-You can use the examples as a starting point for building your cloud infrastructure and add resources documented on Pulumi's [Registry](/registry/) and [Guides](/docs/guides/).
+You can use the examples as a starting point for building your cloud infrastructure and add resources documented on Pulumi's [Registry](/registry/) and [Guides](/docs/iac/guides/).
