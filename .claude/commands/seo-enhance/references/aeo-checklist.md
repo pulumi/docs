@@ -179,6 +179,41 @@ Pulumi has been around for a long time.
 - Benefits/advantages summaries
 - Tool or option roundups
 
+### 8. E-E-A-T Signals (Experience, Expertise, Authoritativeness, Trustworthiness)
+
+**Why it matters:** Google's quality guidelines emphasize E-E-A-T as a key factor in content evaluation. AI systems similarly prefer citing sources that demonstrate clear expertise and authority.
+
+**Check:**
+- **Experience**: Content shows real-world usage (code examples, screenshots, case studies)
+- **Expertise**: Author credentials visible, technical depth appropriate to topic
+- **Authoritativeness**: Citations to official docs, industry recognition, backlinks
+- **Trustworthiness**: Accurate information, recent updates, transparent about limitations
+
+**Good signals:**
+```markdown
+<!-- Experience -->
+In our production deployment at [Company], we reduced deployment time by 40%...
+Here's the actual Pulumi code we use to manage our Kubernetes clusters:
+
+<!-- Expertise -->
+Authors: jane-doe (Senior Platform Engineer, 8 years IaC experience)
+
+<!-- Authoritativeness -->
+Per Google's official documentation: "..."
+As recommended in the CIS Kubernetes Benchmark...
+
+<!-- Trustworthiness -->
+Last updated: January 2026
+Note: This approach works for Pulumi v3.x. For v2.x, see [migration guide].
+```
+
+**Content indicators:**
+- Author bios with relevant credentials
+- "Last updated" dates on technical content
+- Links to official documentation and standards
+- Real code examples from production use
+- Acknowledgment of edge cases or limitations
+
 ## AEO Scoring
 
 | Pattern | Weight | Pass Criteria |
@@ -190,12 +225,13 @@ Pulumi has been around for a long time.
 | Comparison Tables | Medium | At least 1 table (where appropriate) |
 | Question Coverage | Medium | Addresses 3+ question types |
 | Listicle Format | Medium | Uses lists for key points (where appropriate) |
+| E-E-A-T Signals | High | Shows experience, expertise, authority, trust |
 
 **Scoring:**
-- 7/7: Excellent AEO readiness
-- 5-6/7: Good, minor improvements needed
-- 3-4/7: Moderate, significant gaps
-- 0-2/7: Poor, major restructuring needed
+- 8/8: Excellent AEO readiness
+- 6-7/8: Good, minor improvements needed
+- 4-5/8: Moderate, significant gaps
+- 0-3/8: Poor, major restructuring needed
 
 ## Content Type Applicability
 
@@ -208,3 +244,4 @@ Pulumi has been around for a long time.
 | Comparison Tables | Optional | Optional | Recommended | Optional |
 | Question Coverage | Recommended | Optional | Required | Optional |
 | Listicle Format | Recommended | Recommended | Recommended | Required |
+| E-E-A-T Signals | Required | Recommended | Required | Recommended |
