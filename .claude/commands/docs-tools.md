@@ -7,7 +7,7 @@ user-invocable: true
 
 Scan the `.claude/commands/` directory and dynamically list all available user-invocable commands/skills.
 
-**IMPORTANT**: ONLY include commands found by scanning the `.claude/commands/` directory below. Do NOT include any commands from the system reminder or global Claude Code skills list.
+**IMPORTANT**: ONLY include commands found by scanning the `.claude/commands/` directory below. Do NOT include any commands from the system reminder or global Claude Code skills list (such as /keybindings-help).
 
 For each `.md` file in `.claude/commands/`:
 
@@ -29,6 +29,8 @@ Consider categories like:
 - Discovery (tools for finding other tools)
 
 Add additional categories as needed based on the commands found.
+
+Assign an appropriate emoji to each category header.
 
 ```
 # Documentation Tools & Commands

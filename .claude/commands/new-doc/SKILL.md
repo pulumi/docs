@@ -71,14 +71,7 @@ Options:
 
 **If not found**: Display "No existing documentation found. Proceeding with new page creation." and continue.
 
-**Suggest based on keywords** (see `new-doc:references:directory-hints` for complete mapping):
-
-Common patterns:
-
-- **Concepts** (iac/concepts): "what is", "understanding", "overview"
-- **Guides** (iac/guides): "how to", "guide", "tutorial"
-- **Clouds** (iac/clouds/[provider]): AWS, Azure, GCP, Kubernetes
-- **Languages** (iac/languages-sdks/[lang]): TypeScript, Python, Go, .NET, Java, YAML
+**Suggest based on keywords** - See `new-doc:references:directory-hints` for complete keyword mapping.
 
 **Present suggestions via AskUserQuestion:**
 
@@ -119,17 +112,7 @@ Based on the user's response to the Step 1 question:
 **CRITICAL**: Display locations by menu weight (NOT alphabetically) to match left-nav order.
 
 ```bash
-# For each subdirectory, extract title and weight
-for dir in $(ls -1 {path}/ | grep -v "^_" | grep -v "^\."); do
-  index_file="{path}/$dir/_index.md"
-  if [ -f "$index_file" ]; then
-    title=$(grep -m1 "^title:" "$index_file" | sed 's/title: *//' | tr -d '"')
-    weight=$(grep -A10 "^menu:" "$index_file" | grep -m1 "weight:" | grep -oE '[0-9]+')
-    echo "${weight:-999}|${title:-$dir}|$dir"
-  else
-    echo "999|$dir|$dir"
-  fi
-done | sort -n -t'|' -k1 | nl -w1 -s'. '
+bash .claude/commands/new-doc/scripts/list-directories.sh {path}
 ```
 
 **Display format:**
@@ -279,6 +262,7 @@ Run validation checks from `new-doc:references:validation`:
 - Kebab-case filename (regular pages)
 - Meta desc 50-160 chars
 - Links valid (start with `/docs/` or external)
+- Verify the user is not committing to `master` directly (if so, warn them)
 
 Create file using templates from `new-doc:references:frontmatter`:
 
@@ -327,11 +311,3 @@ Common scenarios:
 - Missing parent: Warn about navigation issues, offer to create
 - Duplicate identifier: Auto-append `-2`, `-3` until unique
 - Empty sections (index pages): Require at least one section before proceeding
-
-## Repository-Specific Notes
-
-- H1 = Title Case, H2+ = Sentence case (per STYLE-GUIDE.md)
-- Aliases only for moved files, not new pages
-- Weight spacing: multiples of 10 for easy insertion
-- Index pages need: `docs_home: true`, `notitle: true`, `norightnav: true`
-- Menu section = first directory under `/docs/` (e.g., `/docs/iac/...` → section: `iac`)
