@@ -113,10 +113,6 @@ Use `AGENTS.md` to capture conventions that aren't enforced by linters or format
 
 You can place `AGENTS.md` files in subdirectories for more specific instructions. When Neo works in a subdirectory, it reads the nearest `AGENTS.md` file, with subdirectory files taking precedence over parent files. This lets you define general project-wide conventions at the root while providing specialized guidance for specific areas of your codebase.
 
-### Cross-tool compatibility
-
-The `AGENTS.md` format aligns with the emerging standard supported by other AI coding tools, including Cursor, Claude Code, and others. This means your team can write instructions once and have them work across multiple AI tools, reducing duplication and ensuring consistency regardless of which tool team members prefer.
-
 ### Repository Instructions Best Practices
 
 - Start simple with a few key conventions, then expand as needed
