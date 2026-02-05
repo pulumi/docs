@@ -697,12 +697,14 @@ pulumi package add terraform-provider@1.0.2 hashicorp/random 3.5.1
 Then, in your Automation API program, install the plugin in the workspace:
 
 ```csharp
+using System;
+using System.Collections.Generic;
 using Pulumi.Automation;
 using Pulumi.Random;
 
 var program = PulumiFn.Create(() =>
 {
-    var pet = new Pet("my-pet", new() { Length = 2 });
+    var pet = new RandomPet("my-pet", new RandomPetArgs { Length = 2 });
     return new Dictionary<string, object?>
     {
         ["petName"] = pet.Id
@@ -739,17 +741,17 @@ Then, in your Automation API program, install the plugin in the workspace:
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.automation.*;
-import com.pulumi.random.Pet;
-import com.pulumi.random.PetArgs;
+import com.pulumi.random.RandomPet;
+import com.pulumi.random.RandomPetArgs;
 
 public class App {
     public static void main(String[] args) {
         var projectName = "myProject";
         var stackName = "dev";
-        
+
         // Define the Pulumi program
         var program = (Context ctx) -> {
-            var pet = new Pet("my-pet", PetArgs.builder()
+            var pet = new RandomPet("my-pet", RandomPetArgs.builder()
                 .length(2)
                 .build());
             
