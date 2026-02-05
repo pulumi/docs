@@ -133,7 +133,7 @@ After creating the files, tell the user:
    - If existing author profiles were used, confirm which ones were found and used
    - If information was auto-detected, remind user to review it for accuracy
 3. **Next steps**:
-   - Replace the placeholder `meta.png` with your own image (recommended size: 1200×630 pixels, optimal for social media previews). Figma templates are available at <https://www.figma.com/design/TnD7nxjIxVvXq8w0W7awPG/Build-Your-Own-Meta-Image?node-id=4909-709&p=f&t=wQmECcE2lm6jdbWH-0>
+   - Replace the placeholder `meta.png` with your own image (recommended size: 1200×630 pixels, optimal for social media previews). Figma templates are available for internal use, ask if needed.
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
    - **Optional but recommended**: Run `/add-borders` on the blog post to add 1px grey borders to PNG images for better visual presentation
