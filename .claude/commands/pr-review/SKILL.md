@@ -84,7 +84,32 @@ Continue to Step 3.
 
 **CRITICAL**: This step must be completed and presented to the user IMMEDIATELY after Step 2 and BEFORE starting Step 4. Do not delay this output.
 
-See `pr-review:references:test-deployment-guidance` for complete implementation.
+1. Run the test deployment guidance script:
+
+   ```bash
+   bash .claude/commands/pr-review/scripts/test-deployment-guidance.sh {{arg}}
+   ```
+
+   The script outputs JSON with:
+
+   - `deploymentUrl` - The test deployment URL or null
+   - `deploymentStatus` - "ready" or "pending"
+   - `pages[]` - Array of changed pages with titles, URLs, and change statistics
+   - `nonContentFiles[]` - Array of non-content file paths
+
+2. Parse the JSON output and analyze the PR diff context to understand what changed.
+
+3. **Critical!** Present deployment review with context-aware guidance to the user immediately:
+
+   - Show deployment URL (or pending message if not ready)
+   - For each page: display direct link + specific review items based on:
+     * Type of content (docs/blog/tutorials)
+     * What changed (headings → check structure, codeBlocks → test examples, images → verify loading, links → test navigation)
+     * Change magnitude (small typo vs major rewrite)
+   - Adapt tone and specificity to change type
+   - Generate concrete, actionable guidance based on actual diff content
+
+   This allows users to review the deployment while you perform the comprehensive analysis in Step 5.
 
 **Only after displaying output from this step**, continue to Step 4.
 
