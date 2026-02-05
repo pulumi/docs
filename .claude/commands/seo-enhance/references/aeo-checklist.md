@@ -13,6 +13,7 @@ Use this checklist to evaluate content for AI discoverability. AI answer engines
 - Definition can be quoted without requiring surrounding context
 - Avoids jargon or assumes minimal prior knowledge
 - Under 50 words for the core definition
+- **No hedging, no fluff** - direct answer without qualifiers
 
 **Good example:**
 ```
@@ -21,10 +22,18 @@ and software in a desired, consistent state. It ensures that changes are
 tracked, controlled, and can be reversed if needed.
 ```
 
-**Bad example:**
+**Bad examples:**
+
+Fluffy intro (no direct answer):
 ```
 In this article, we'll explore how modern teams are approaching the
 challenge of keeping their infrastructure consistent. Let's dive in!
+```
+
+Hedging language (avoids commitment):
+```
+Configuration management can mean different things depending on context.
+It depends on your specific needs, but generally speaking, it might involve...
 ```
 
 ### 2. Semantic Chunking
@@ -55,15 +64,21 @@ challenge of keeping their infrastructure consistent. Let's dive in!
 [Mixes definition, history, benefits, and tools in one section]
 ```
 
-### 3. FAQ Sections
+### 3. FAQ Sections (Doubt-Removers)
 
-**Why it matters:** FAQ schema is explicitly designed for AI extraction. Q&A format directly matches how users query AI tools.
+**Why it matters:** Q&A format directly matches how users query AI tools. FAQs should target "doubt-removers" - the specific questions that block purchase decisions.
 
 **Check:**
-- Common questions addressed in explicit Q&A format
-- Questions match natural language queries
+- Questions target high-stakes evaluation criteria (not general education)
 - Answers are direct and complete (2-4 sentences)
-- Can implement FAQPage schema markup
+- Structure matters more than schema markup for LLM extraction
+
+**Priority FAQ topics (doubt-removers):**
+- **Integrations**: "Does Pulumi work with X?" / "Can I use Pulumi with Kubernetes?"
+- **Limits/constraints**: "What are the limits?" / "How many resources can I manage?"
+- **Pricing/billing**: "How does pricing work?" / "Is there a free tier?"
+- **Security/compliance**: "Is Pulumi SOC 2 compliant?" / "How are secrets stored?"
+- **Migration**: "How do I migrate from Terraform?" / "Can I import existing resources?"
 
 **Good format:**
 ```markdown
@@ -214,24 +229,91 @@ Note: This approach works for Pulumi v3.x. For v2.x, see [migration guide].
 - Real code examples from production use
 - Acknowledgment of edge cases or limitations
 
+### 9. Down-Funnel Specificity
+
+**Why it matters:** AEO skews heavily toward "down-funnel, specific, messy" questions - integrations, workflows, edge cases, comparisons. These are the queries where LLMs need authoritative answers most, and where generic content fails.
+
+**Check:**
+- Content addresses specific use cases, not just general concepts
+- Covers integrations with other tools/platforms
+- Documents edge cases and workarounds
+- Addresses real evaluation criteria buyers have
+
+**High-value content types:**
+- Integration guides ("Pulumi + Kubernetes + ArgoCD")
+- Workflow documentation ("CI/CD with Pulumi and GitHub Actions")
+- Edge case coverage ("Handling state drift", "Managing large stacks")
+- Comparison content ("Pulumi vs Terraform for multi-cloud")
+- Migration guides ("Moving from CloudFormation to Pulumi")
+
+**Bad example (too generic):**
+```
+Pulumi is an infrastructure as code platform. It helps you manage cloud resources.
+```
+
+**Good example (specific, actionable):**
+```
+To deploy a Kubernetes application with Pulumi and ArgoCD, first create a
+Pulumi program that defines your Kubernetes resources, then configure ArgoCD
+to watch your Git repository for changes. Here's a working example...
+```
+
+### 10. Agent-Friendly Content
+
+**Why it matters:** AI agents increasingly complete tasks, not just answer questions. Content should include clear, executable steps that an agent could follow or recommend.
+
+**Check:**
+- Clear CTAs with specific next steps
+- Numbered steps for executable actions
+- Well-defined tasks with concrete outcomes
+- Commands and code that can be copied/executed
+
+**Good format:**
+```markdown
+## Get started in 3 steps
+
+1. **Install the Pulumi CLI**
+   ```bash
+   curl -fsSL https://get.pulumi.com | sh
+   ```
+
+2. **Create a new project**
+   ```bash
+   pulumi new typescript
+   ```
+
+3. **Deploy your infrastructure**
+   ```bash
+   pulumi up
+   ```
+```
+
+**Why this works for agents:**
+- Each step has a concrete action
+- Commands are copy-pasteable
+- Success criteria is clear (infrastructure deployed)
+- No ambiguity about what to do next
+
 ## AEO Scoring
 
 | Pattern | Weight | Pass Criteria |
 |---------|--------|---------------|
-| Quotable Definition | High | Clear definition in first 2 sentences |
+| Quotable Definition | High | Clear definition in first 2 sentences, no hedging |
 | Semantic Chunking | High | Single concept per section |
-| FAQ Sections | Medium | At least 3 Q&A pairs (where appropriate) |
+| FAQ Sections | Medium | Targets doubt-removers (integrations, limits, security, migration) |
 | Citable Claims | Medium | 3+ specific data points |
 | Comparison Tables | Medium | At least 1 table (where appropriate) |
 | Question Coverage | Medium | Addresses 3+ question types |
 | Listicle Format | Medium | Uses lists for key points (where appropriate) |
 | E-E-A-T Signals | High | Shows experience, expertise, authority, trust |
+| Down-Funnel Specificity | High | Covers integrations, edge cases, specific workflows |
+| Agent-Friendly Content | Medium | Clear CTAs, numbered steps, executable actions |
 
 **Scoring:**
-- 8/8: Excellent AEO readiness
-- 6-7/8: Good, minor improvements needed
-- 4-5/8: Moderate, significant gaps
-- 0-3/8: Poor, major restructuring needed
+- 10/10: Excellent AEO readiness
+- 8-9/10: Good, minor improvements needed
+- 5-7/10: Moderate, some gaps to address
+- 0-4/10: Poor, major restructuring needed
 
 ## Content Type Applicability
 
@@ -245,3 +327,5 @@ Note: This approach works for Pulumi v3.x. For v2.x, see [migration guide].
 | Question Coverage | Recommended | Optional | Required | Optional |
 | Listicle Format | Recommended | Recommended | Recommended | Required |
 | E-E-A-T Signals | Required | Recommended | Required | Recommended |
+| Down-Funnel Specificity | Recommended | Required | Recommended | Required |
+| Agent-Friendly Content | Recommended | Required | Recommended | Required |

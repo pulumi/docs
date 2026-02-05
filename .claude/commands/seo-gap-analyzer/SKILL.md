@@ -57,6 +57,17 @@ For the target topic, identify keyword variants:
 
 Prioritize unbranded keywords - they have higher volume and capture users earlier in the discovery journey.
 
+**Identify "Money Prompts":**
+
+Money prompts are high-value queries worth winning in AI tools. Identify them using these proxies:
+
+- **Paid search winners**: Keywords competitors bid on (high commercial intent)
+- **Sales call themes**: Questions prospects ask during evaluations
+- **Support tickets**: Common questions from existing users
+- **High-intent threads**: Reddit/HackerNews discussions about tool selection
+
+Aim to identify 30-100 prompts worth winning for any major topic area. These become AEO targets.
+
 ### Phase 3: Current State Analysis
 
 **For SEO (use WebSearch):**
@@ -84,6 +95,17 @@ Explain that AI tools (ChatGPT, Claude, Perplexity) should be tested with querie
 - "Best tools for [topic] with infrastructure as code"
 
 Document whether AI tools mention Pulumi and in what context.
+
+**Reddit/Community Research:**
+
+Mine Reddit and other developer communities for valuable insights:
+
+- **Question phrasing**: How do users actually phrase their questions?
+- **Edge cases**: What specific scenarios cause confusion?
+- **Objections**: What concerns do people raise about Pulumi or alternatives?
+- **Comparison criteria**: What factors do people use to evaluate tools?
+
+Search relevant subreddits (r/devops, r/kubernetes, r/aws, r/terraform) for topic discussions. Turn findings into FAQ sections, comparison content, and use-case pages.
 
 ### Phase 4: Existing Content Audit
 
@@ -123,6 +145,21 @@ Categorize identified gaps:
 | **Internal linking** | Pages exist but aren't connected | HIGH - Quick fix |
 | **Keyword coverage** | No page targeting key unbranded terms | MEDIUM - New content |
 | **AEO/GEO** | AI tools don't surface Pulumi | MEDIUM - Long-term |
+| **Citation gaps** | Competitors cited but Pulumi is not | HIGH - Content opportunity |
+
+**Citation Gap Mapping:**
+
+For each target topic, document the current citation landscape:
+
+1. **What gets cited?** - Which sources do AI tools currently reference for this topic?
+2. **Why them?** - What makes those sources "path of least resistance" for AI?
+3. **What's missing?** - What would Pulumi need to be the preferred citation?
+
+Common citation gap patterns:
+- Competitor has a dedicated page; Pulumi only mentions topic in passing
+- Competitor content is more structured (tables, lists, clear definitions)
+- Competitor content is more recent or comprehensive
+- Pulumi content exists but isn't well-connected (poor internal linking)
 
 ### Phase 6: Strategic Plan
 
