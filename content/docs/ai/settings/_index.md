@@ -113,7 +113,7 @@ Use `AGENTS.md` to capture conventions that aren't enforced by linters or format
 
 You can place `AGENTS.md` files in subdirectories for more specific instructions. When Neo works in a subdirectory, it reads the nearest `AGENTS.md` file, with subdirectory files taking precedence over parent files. This lets you define general project-wide conventions at the root while providing specialized guidance for specific areas of your codebase.
 
-### Repository Instructions Best Practices
+### Repository instructions best practices
 
 - Start simple with a few key conventions, then expand as needed
 - Focus on conventions that can't be enforced by automated tools
