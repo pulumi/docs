@@ -117,6 +117,6 @@ The Pulumi [Getting Started guide](/docs/get-started/) is the easiest way to get
 
 The tutorial series, [Infrastructure as Code Recommended Practices](/blog/iac-recommended-practices-code-organization-and-stacks/), is a great overview of many concerns you will encounter along your Infrastructure as Code journey. This ranges from how to organize your project code and stacks, how to do local development and testing of your code, how to evolve these structures as your needs change, automation scenarios and more.
 
-The [Using Pulumi](/docs/using-pulumi/) page is a collection of tutorials and getting started guides on specific infrastructure as code topics, such as deeper dives into fundamental concepts, how to simplify your infrastructure projects, and more.
+The [Using Pulumi](/docs/iac/guides/) page is a collection of tutorials and getting started guides on specific infrastructure as code topics, such as deeper dives into fundamental concepts, how to simplify your infrastructure projects, and more.
 
 We hope this article has given you a good grasp of the core Infrastructure as Code concepts you’re likely to encounter, no matter the tool you choose, as well as demonstrated some of the unique benefits Pulumi Cloud offers by using general-purpose and popular programming languages.

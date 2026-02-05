@@ -37,7 +37,7 @@ If your team has already provisioned Azure infrastructure using ARM (Azure Resou
 #### Quick start with Neo
 
 1. **Prerequisites**:
-   * Install the [Pulumi GitHub app](https://github.com/apps/pulumi-cloud) with access to your repository that contains your ARM template files
+   * Install the [Pulumi GitHub app](/docs/iac/guides/continuous-delivery/github-app/) with access to your repository that contains your ARM template files
    * Configure Azure credentials in [Pulumi ESC](/docs/esc/)
    * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
 

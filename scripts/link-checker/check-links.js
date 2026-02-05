@@ -390,13 +390,34 @@ function getDefaultExcludedKeywords() {
         "https://elastisys.com/",
         "https://cloudnativedenmark.dk/",
         "https://stackconf.eu/",
+        // HashiCorp maintains redirects when reorganizing docs - skip checking entirely
+        "https://developer.hashicorp.com/",
+        "https://www.hashicorp.com/",
+        // Archived/deleted personal repositories referenced in historical blog posts
+        "https://github.com/chrsmith/static-website-aws",
+        "https://github.com/chrsmith/browserhack-demo",
+        "https://github.com/chrsmith/pulumi-aws-travis-cicd-demo",
+        "https://github.com/jasonsmithio/pulumi-experiments",
+        // Old example repository paths that have been renamed or removed
+        "https://github.com/pulumi/examples/tree/master/aws-js-webserver",
+        "https://github.com/pulumi/examples/tree/master/aws-js-s3-folder",
+        "https://github.com/pulumi/examples/tree/master/aws-js-sqs-slack",
+        "https://github.com/pulumi/examples/tree/master/aws-py-oidc-provider-pulumi-cloud",
+        "https://github.com/pulumi/examples/tree/master/gcp-py-oidc-provider-pulumi-cloud",
+        "https://github.com/pulumi/examples/tree/master/google-native-ts-k8s-ruby-on-rails-postgresql",
+        "https://github.com/pulumi/examples/tree/master/google-native-ts-functions",
+        "https://github.com/kubernetes/examples/tree/master/guestbook",
+        // Old internal URLs with working S3 redirects (issue #17449)
+        "https://www.pulumi.com/docs/cli/commands/pulumi_plugin_install",
+        "https://www.pulumi.com/docs/cli/commands/pulumi_schema_check",
+        "https://www.pulumi.com/docs/using-pulumi/crossguard/compliance-ready-policies/",
     ];
 }
 
 // Filters out transient errors that needn't fail a link-check run.
 function excludeAcceptable(links) {
     // HTTP status codes to filter out for external sites (bot protection, auth walls, timeouts)
-    const externalErrorReasons = ["HTTP_403", "HTTP_401", "HTTP_undefined"];
+    const externalErrorReasons = ["HTTP_403", "HTTP_401", "HTTP_202", "HTTP_undefined"];
 
     return (links
         // Ignore GitHub and npm 429s (rate-limited). We should really be handling these more

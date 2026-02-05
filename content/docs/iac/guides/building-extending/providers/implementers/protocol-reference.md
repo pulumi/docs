@@ -13,7 +13,7 @@ menu:
 
 This document describes the gRPC protocol that all Pulumi providers implement. Understanding this protocol is essential for [implementing providers directly](/docs/iac/guides/building-extending/providers/provider-architecture/#layer-2-generated-language-bindings) without a higher-level SDK.
 
-The complete protocol definition is in [`provider.proto`](https://github.com/pulumi/pulumi/blob/master/proto/pulumi/provider.proto). You can also find auto-generated documentation at [pulumi.io/docs/proto](https://pulumi.io/docs/proto/).
+The complete protocol definition is in [`provider.proto`](https://github.com/pulumi/pulumi/blob/master/proto/pulumi/provider.proto). Additional protocol documentation is available at [pulumi-developer-docs.readthedocs.io](https://pulumi-developer-docs.readthedocs.io/latest/proto/README.html).
 
 ## Overview
 
