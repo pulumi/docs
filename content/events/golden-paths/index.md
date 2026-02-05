@@ -66,7 +66,7 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics:  ["Platform Engineering", "IaC", "Components"]
+        topics:  ["Platform Engineering", "Infrastructure as Code", "Components"]
         clouds: ["AWS"]
 
 # The right hand side form section.
