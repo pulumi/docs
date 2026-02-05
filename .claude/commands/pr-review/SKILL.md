@@ -30,20 +30,45 @@ Reviews any pull request and presents action choices for approval, changes, or c
 
 **Step Counter**: Display progress before each step as: **[Step X/10]** followed by the step heading. This helps users track progress through the workflow.
 
+**References**: Always follow the detailed instructions in the referenced documents for each step. The references contain the complete implementation details required.
+
 ---
 
 ### Step 1: Verify PR and Detect Contributor Type
 
-Fetch all PR data and detect contributor type (bot/internal/external).
+1. Run the contributor detection script:
 
-See `pr-review:references:contributor-detection` for complete detection script and display formatting.
+   ```bash
+   bash .claude/commands/pr-review/scripts/contributor-detection.sh {{arg}}
+   ```
 
-**Key actions**:
+   The script outputs:
 
-- Fetch PR data once using gh CLI
-- Detect contributor type: bot (username contains "[bot]" or matches bot patterns), internal (Pulumi org member), or external (community contributor)
-- Display: "[icon] Reviewing PR #{{arg}} from @username ([type] contributor)"
-- Cache PR_DATA for reuse in later steps
+   - `AUTHOR` - GitHub username
+   - `CONTRIBUTOR_TYPE` - bot/internal/external
+   - `PR_METADATA` - JSON with number, title, url
+   - `FILES_CHANGED` - List of changed file paths
+   - `PR_DATA_JSON` - Complete PR data for caching
+
+   After running the script, store the following for later steps:
+
+    - PR data (in PR_DATA variable for use in later steps)
+    - Contributor type (bot/internal/external)
+    - File paths (displayed for Step 4 reference)
+
+2. **Critical!** Display this output to the user immediately:
+
+   ```markdown
+   ## 👤 Contributor Detection
+
+   [icon] Reviewing PR #{{arg}} from @username ([type] contributor)
+   ```
+
+   Icons:
+
+   - 🤖 for bot account
+   - 📝 for internal contributors
+   - 🌍 for external contributors
 
 Continue to Step 2.
 
@@ -59,42 +84,42 @@ Continue to Step 3.
 
 **CRITICAL**: This step must be completed and presented to the user IMMEDIATELY after Step 2 and BEFORE starting Step 4. Do not delay this output.
 
-See `pr-review:references:test-deployment-guidance` for complete implementation.
+1. Run the test deployment guidance script:
 
-**Key actions**:
+   ```bash
+   bash .claude/commands/pr-review/scripts/test-deployment-guidance.sh {{arg}}
+   ```
 
-- Fetch test deployment URL from pulumi-bot comment
-- Analyze diff to generate specific, targeted review guidance (not generic checklists)
-- Construct direct URLs for each changed page
-- Display review guidance immediately (allows user to review deployment while AI performs comprehensive review in Step 5)
-- Handle edge cases (>10 files, mechanical changes, infrastructure files, blog posts, mixed types)
+   The script outputs JSON with:
 
-Continue to Step 4.
+   - `deploymentUrl` - The test deployment URL or null
+   - `deploymentStatus` - "ready" or "pending"
+   - `pages[]` - Array of changed pages with titles, URLs, and change statistics
+   - `nonContentFiles[]` - Array of non-content file paths
+
+2. Parse the JSON output and analyze the PR diff context to understand what changed.
+
+3. **Critical!** Present deployment review with context-aware guidance to the user immediately:
+
+   - Show deployment URL (or pending message if not ready)
+   - For each page: display direct link + specific review items based on:
+     - Type of content (docs/blog/tutorials)
+     - What changed (headings → check structure, codeBlocks → test examples, images → verify loading, links → test navigation)
+     - Change magnitude (small typo vs major rewrite)
+   - Adapt tone and specificity to change type
+   - Generate concrete, actionable guidance based on actual diff content
+
+   This allows users to review the deployment while you perform the comprehensive analysis in Step 5.
+
+**Only after displaying output from this step**, continue to Step 4.
 
 ### Step 4: Offer Infrastructure Deployment
 
-Check if PR contains dependency or infrastructure changes.
+Check if PR contains dependency or infrastructure changes. See `pr-review:references:infrastructure-deployment` for patterns and workflow.
 
-See `pr-review:references:infrastructure-deployment` for patterns and workflow.
-
-**Decision point**:
-
-- If NO dependency/infrastructure patterns match → Skip to Step 5
-- If ANY pattern matches → Prompt user to deploy to pulumi-test.io
-
-**Patterns that trigger prompt**:
-
-- Dependency files (package.json, go.mod, requirements.txt, etc.)
-- Infrastructure directory or workflow files
-- Author is dependabot or renovate
-
-If user chooses "Yes": Trigger testing-build-and-deploy.yml workflow and display monitoring instructions.
-
-Continue to Step 5.
+**Only after displaying output from this step**, continue to Step 5.
 
 ### Step 5: Perform Comprehensive Review
-
-**PREREQUISITE**: Step 4 must be completed before starting this step.
 
 Review all files against STYLE-GUIDE.md compliance: spelling, grammar, links, code examples, file moves with aliases, images, frontmatter, and cross-references. Apply role-specific guidelines per content type. See `_common:review-criteria` for full criteria.
 
@@ -126,23 +151,9 @@ Continue to Step 7.
 
 ### Step 7: Present Action Menu
 
-**If contributor type is bot**, use bot-specific menus. Otherwise, use standard action menu adapted to review findings.
+Present action menu based on contributor type (bot vs non-bot) and review findings.
 
-See `pr-review:references:bot-action-menus` for complete menu structures.
-
-**Bot PRs**:
-
-- **Dependabot**: Parse labels, determine risk tier, show appropriate 4-option menu with testing checklist
-  - See `pr-review:references:dependabot-labels` for label taxonomy and risk classification
-- **Other bots**: Show 4-option menu with automation/merge label detection
-
-**Non-bot PRs** (adaptive 3-scenario approach):
-
-- **Scenario A: Issues found** → Request changes recommended (4 options)
-- **Scenario B: Clean review** → Approve recommended (4 options)
-- **Scenario C: Should close** → Close PR recommended (4 options)
-
-Select appropriate menu based on review findings. Max 4 options per menu (AskUserQuestion limit).
+See `pr-review:references:bot-action-menus` for complete menu structures and logic.
 
 Continue to Step 8 with selected action.
 
@@ -203,70 +214,6 @@ Display appropriate success message with:
 **For Dependabot HIGH/MEDIUM**: Warn that next merge to master triggers pulumi-test.io deployment.
 
 Workflow complete.
-
----
-
-## Message Templates by Contributor Type
-
-See `pr-review:references:message-templates` for complete templates. Quick reference:
-
-| Contributor Type | Tone | Emojis | Example |
-|-----------------|------|--------|---------|
-| **External** | Warm, welcoming | Yes | "Thank you for your contribution! Welcome! 🎉" |
-| **Internal** | Professional, efficient | Yes | "LGTM! Nice work on the error handling." |
-| **Bot (all)** | Technical, factual | No | "Security patch approved. Testing completed." |
-| **Dependabot** | Risk-aware with testing details | No | "High-risk update reviewed. Testing checklist completed: ✅ make serve-all passed..." |
-
----
-
-## Dependabot Risk Classification
-
-See `pr-review:references:dependabot-labels` for complete taxonomy. Quick reference:
-
-**Determine risk tier from labels**:
-
-1. **HIGH Risk**:
-   - Has `deps-security-patch` label, OR
-   - Has `deps-lambda-edge-risk` label, OR
-   - Has `deps-risk-high` label
-
-2. **MEDIUM Risk**:
-   - Has `deps-risk-medium` label
-
-3. **LOW Risk**:
-   - Has `deps-risk-low` label
-
-4. **UNKNOWN Risk**:
-   - No risk label present, OR
-   - Has `deps-risk-unknown` label
-
-**Testing requirements by risk tier**:
-
-- **HIGH**: Run `make serve-all`, test search, check console errors (F12), verify PR deployment (URL loads, Lambda@Edge errors via F12, search, navigation)
-- **MEDIUM**: Run `make build`, check warnings, verify PR deployment URL loads if build tools affected
-- **LOW**: Run `make lint`
-
----
-
-## Dependabot Action Menu
-
-When contributor type is bot and labels indicate Dependabot, show risk-appropriate menu:
-
-**For HIGH Risk or Security Patches** (4 options):
-
-1. **Approve and merge** (Recommended after testing) - Approve + merge (squash) when testing complete
-2. **Approve** - Approve only, manual merge later
-3. **Request changes** - Technical feedback needed
-4. **Do nothing yet** - Need to test/investigate
-
-**For LOW/MEDIUM Risk with quarterly-review label** (4 options):
-
-1. **Approve** (Recommended) - Approve for quarterly batch
-2. **Approve and merge** - Merge now if urgent
-3. **Close with quarterly note** - Defer to next quarterly batch
-4. **Do nothing yet** - Need to test/investigate
-
-Display testing checklist with menu based on risk tier (see above).
 
 ---
 
