@@ -19,7 +19,7 @@ Creates a new blog post with proper structure, frontmatter, and author onboardin
 - **Always display all 5 steps**: Even when skipping a step, display it with an explanation (e.g., "[Step 2/5] Skipped - using suggested location from Step 1")
 - **Minimize open-ended questions**: Use AskUserQuestion with prepopulated suggestions for nearly all inputs. Always provide smart defaults based on context.
 - **Store decisions**: Track choices to avoid re-asking
-- **Check for existing docs first**: Prevent duplication
+
 When this command is invoked, you should:
 
 ### 1. Detect Context and Gather Information
@@ -155,7 +155,7 @@ After creating the files, tell the user:
    - If existing author profiles were used, confirm which ones were found and used
    - If information was auto-detected, remind user to review it for accuracy
 3. **Next steps**:
-   - Replace the placeholder `meta.png` with your own image (recommended size: 1200×630 pixels, optimal for social media previews). Figma templates are available for internal use, ask if needed.
+   - Replace the placeholder `meta.png` with your own image (recommended size: 1200×630 pixels, optimal for social media previews). Figma templates are available for internal use, ask in `#docs` for a link.
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
    - **Optional but recommended**: Run `/add-borders` on the blog post to add 1px grey borders to PNG images for better visual presentation
