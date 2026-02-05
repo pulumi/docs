@@ -1,7 +1,7 @@
 import { Component, Element, Host, h, Listen, Prop, State } from "@stencil/core";
 import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
-import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd } from "../../store/actions/preferences";
+import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd, setPythonToolchain } from "../../store/actions/preferences";
 
 export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
@@ -9,12 +9,13 @@ export type OSKey = "macos" | "linux" | "windows";
 export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes" | "digitalocean" | "oci" | "docker";
 export type PersonaKey = "developer" | "devops" | "security" | "leader";
 export type BackEndKey = "service" | "self-managed";
+export type PythonToolchainKey = "pip" | "uv" | "poetry";
 
 export type ChooserMode = "local" | "global";
 export type ChooserOptionStyle = "tabbed" | "none";
-export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "persona" | "backend";
-export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey | BackEndKey;
-export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud | SupportedPersona | SupportedBackEnd;
+export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "persona" | "backend" | "pythontoolchain";
+export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey | BackEndKey | PythonToolchainKey;
+export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud | SupportedPersona | SupportedBackEnd | SupportedPythonToolchain;
 
 export interface SupportedLanguage {
     key: LanguageKey;
@@ -49,6 +50,12 @@ interface SupportedPersona {
 
 interface SupportedBackEnd {
     key: BackEndKey;
+    name: string;
+    preview: boolean;
+}
+
+interface SupportedPythonToolchain {
+    key: PythonToolchainKey;
     name: string;
     preview: boolean;
 }
@@ -123,10 +130,40 @@ export class Chooser {
     setCloud: typeof setCloud;
     setPersona: typeof setPersona;
     setBackEnd: typeof setBackEnd;
+    setPythonToolchain: typeof setPythonToolchain;
 
     componentWillLoad() {
+        // By default, choosers act globally and use a tabbed layout.
+        this.mode = "global";
+        this.optionStyle = "tabbed";
+
         // Translate the set of options provided into choices.
         this.parseOptions();
+
+        // Map internal methods to actions defined on the store.
+        store.mapDispatchToProps(this, {
+            setLanguage,
+            setK8sLanguage,
+            setOS,
+            setCloud,
+            setPersona,
+            setBackEnd,
+            setPythonToolchain,
+        });
+
+        // Try to subscribe immediately if the store is ready.
+        // This avoids waiting for the "rendered" event when possible.
+        if (store.getStore()) {
+            this.subscribeToStore();
+        }
+    }
+
+    @Listen("rendered", { target: "document" })
+    onRendered(_event: CustomEvent) {
+        // Subscribe to the store when it's ready (if not already subscribed).
+        if (!this.storeUnsubscribe) {
+            this.subscribeToStore();
+        }
     }
 
     disconnectedCallback() {
@@ -139,31 +176,11 @@ export class Chooser {
         this.applyChoice();
     }
 
-    @Listen("rendered", { target: "document" })
-    onRendered(_event: CustomEvent) {
-        // By default, choosers act globally and use a tabbed layout.
-        this.mode = "global";
-        this.optionStyle = "tabbed";
-
-        // As this callback may be invoked before the component's first lifecycle method,
-        // we parse the set of options provided just to be sure we have a default option
-        // to select if we need to.
-        this.parseOptions();
-
-        // Map internal methods to actions defined on the store.
-        store.mapDispatchToProps(this, {
-            setLanguage,
-            setK8sLanguage,
-            setOS,
-            setCloud,
-            setPersona,
-            setBackEnd,
-        });
-
+    private subscribeToStore() {
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
             const {
-                preferences: { language, k8sLanguage, os, cloud, persona, backend },
+                preferences: { language, k8sLanguage, os, cloud, persona, backend, pythontoolchain },
             } = state;
 
             // In some cases, the user's preferred (i.e., most recently selected) choice
@@ -185,11 +202,13 @@ export class Chooser {
 
                         // In local mode, there's no need to listen for store updates anymore,
                         // so we unsubscribe.
-                        setTimeout(() => this.storeUnsubscribe());
+                        if (this.storeUnsubscribe) {
+                            this.storeUnsubscribe();
+                        }
                     } else {
                         // This is a global chooser with (presumably) on-page choosables,
                         // so we need to dispatch an event to reset the selected language.
-                        setTimeout(() => this.setChoice(this.type, defaultChoice));
+                        this.setChoice(this.type, defaultChoice);
                     }
                 }
                 return { selection: key };
@@ -208,6 +227,8 @@ export class Chooser {
                     return preferredOrDefault(persona);
                 case "backend":
                     return preferredOrDefault(backend);
+                case "pythontoolchain":
+                    return preferredOrDefault(pythontoolchain);
                 default:
                     return {};
             }
@@ -235,8 +256,9 @@ export class Chooser {
     }
 
     // The choosable elements of this chooser, if any.
+    // Only returns choosables that match this chooser's type.
     private get choosables() {
-        return this.el.querySelectorAll("pulumi-choosable");
+        return this.el.querySelectorAll(`pulumi-choosable[type="${this.type}"]`);
     }
 
     // Convert inbound options lists into ChooserKeys, so they can be converted into
@@ -283,6 +305,9 @@ export class Chooser {
                 break;
             case "backend":
                 options = this.supportedBackEnds;
+                break;
+            case "pythontoolchain":
+                options = this.supportedPythonToolchains;
                 break;
         }
 
@@ -342,6 +367,9 @@ export class Chooser {
                     break;
                 case "backend":
                     this.setBackEnd(key as BackEndKey);
+                    break;
+                case "pythontoolchain":
+                    this.setPythonToolchain(key as PythonToolchainKey);
                     break;
             }
         }
@@ -526,6 +554,25 @@ export class Chooser {
         {
             key: "docker",
             name: "Docker",
+            preview: false,
+        },
+    ];
+
+    // The list of supported Python toolchains.
+    private supportedPythonToolchains: SupportedPythonToolchain[] = [
+        {
+            key: "pip",
+            name: "pip",
+            preview: false,
+        },
+        {
+            key: "uv",
+            name: "uv",
+            preview: false,
+        },
+        {
+            key: "poetry",
+            name: "poetry",
             preview: false,
         },
     ];

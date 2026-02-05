@@ -11,6 +11,7 @@ const getInitialState = (): PreferencesState => {
         os: guessOS(),
         cloud: "aws",
         backend: "service",
+        pythontoolchain: "pip",
     };
 };
 
@@ -45,6 +46,8 @@ export const preferences = (currentState = getInitialState(), action: Preference
             return { ...currentState, persona: action.key };
         case TypeKeys.SET_BACKEND:
             return { ...currentState, backend: action.key };
+        case TypeKeys.SET_PYTHONTOOLCHAIN:
+            return { ...currentState, pythontoolchain: action.key };
         default:
             return currentState;
     }

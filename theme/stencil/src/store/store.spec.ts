@@ -32,6 +32,7 @@ describe("normalizeState", () => {
                         cloud: "aws",
                         k8sLanguage: "typescript",
                         persona: "developer",
+                        pythontoolchain: "pip",
                     },
                 });
             });
