@@ -71,7 +71,7 @@ When you ask Neo to create resources, it automatically applies your organization
 
 ## Repository Instructions
 
-While Custom Instructions apply to all tasks across your organization, you can also define project-specific instructions that Neo follows when working in a particular repository. This is done through an `AGENTS.md` file placed in the root of your repository.
+While Custom Instructions apply to all tasks across your organization, you can also define project-specific instructions that Neo follows when working in a particular repository. This is done through an `AGENTS.md` file placed in your repository.
 
 ### How it works
 
