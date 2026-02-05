@@ -337,7 +337,7 @@ var cert = new Aws.Acm.Certificate("cert", new Aws.Acm.CertificateArgs
 {
     DomainName = "foo.com",
     ValidationMethod = "EMAIL",
-}, new CustomResourseOptions { Provider = useast1 });
+}, new CustomResourceOptions { Provider = useast1 });
 
 // Create an ALB listener in the default region that references the ACM certificate created above.
 var listener = new Aws.Lb.Listener("listener", new Aws.Lb.ListenerArgs

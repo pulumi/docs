@@ -1010,7 +1010,7 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
-// Create a ClusterRoleBinding for the SeviceAccounts of Namespace ingress-nginx
+// Create a ClusterRoleBinding for the ServiceAccounts of Namespace ingress-nginx
 // to the ClusterRole that uses the privileged PodSecurityPolicy.
 const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
     metadata: { name: "allow-privileged-ingress-nginx" },

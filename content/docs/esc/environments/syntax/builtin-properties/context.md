@@ -13,7 +13,7 @@ menu:
     weight: 1
 ---
 
-The `context` built-in property provides information about the user evaluting an ESC environment.
+The `context` built-in property provides information about the user evaluating an ESC environment.
 
 ## Properties
 

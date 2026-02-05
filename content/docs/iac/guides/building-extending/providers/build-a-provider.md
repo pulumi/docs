@@ -407,7 +407,7 @@ An important piece of information
 
 #### Preamble and dependencies
 
-Like any other Go language module, you start with a `package` declaration and and `import` block. Here we are adding a few important packages from the base library (`context`, `fmt`, and `os`) which will help us with file operations, and a selection of imports from the Pulumi Provider SDK.
+Like any other Go language module, you start with a `package` declaration and `import` block. Here we are adding a few important packages from the base library (`context`, `fmt`, and `os`) which will help us with file operations, and a selection of imports from the Pulumi Provider SDK.
 
 ```go
 package main

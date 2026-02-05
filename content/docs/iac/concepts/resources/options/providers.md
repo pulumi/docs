@@ -39,7 +39,7 @@ let k8_namespace = new kubernetes.v1.Namespace("namespace", {}, opts);
 aws_provider = aws.Provider("awsProvider", region="us-west-2")
 kube_provider = kubernetes.Provider("kubeProvider", kubeconfig="./kubeconfig)
 
-opts = ResourceOptions(providers=[aws_provder, kube_provider])
+opts = ResourceOptions(providers=[aws_provider, kube_provider])
 
 vpc = aws.ec2.Vpc("vpc", opts=opts)
 namespace = kubernetes.v1.Namespace("namespace", opts=opts)

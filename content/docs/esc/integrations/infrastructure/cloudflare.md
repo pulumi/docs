@@ -148,7 +148,7 @@ Add a new value to your `my-project/dev-environment` Environment:
 
 ```bash
 ESC_ENV=my-project/dev-environment
-esc env set ${ESC_ENV} environementVariables.TOP_SECRET "aliens are real" --secret
+esc env set ${ESC_ENV} environmentVariables.TOP_SECRET "aliens are real" --secret
 ```
 
 Share the secret with your Worker.

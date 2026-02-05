@@ -819,7 +819,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: my-app
-  namespace: some-namepace
+  namespace: some-namespace
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -836,13 +836,13 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: my-app
-  namespace: some-namepace
+  namespace: some-namespace
 ---
 apiVersion: pulumi.com/v1
 kind: Stack
 metadata:
   name: my-app-dev
-  namespace: some-namepace
+  namespace: some-namespace
   labels:
     app.kubernetes.io/instance: my-app
   annotations:

@@ -86,7 +86,7 @@ $ terraform init
 
 ESC integrates with Terraform by exporting environment variables from an opened environment. These environment variables typically come in two flavors: those used by Terraform providers and those used to provide values for Terraform input variables. The former are specific to each Terraform provider, while the latter are of the form [`TF_VAR_<variable name>`](https://developer.hashicorp.com/terraform/language/values/variables#environment-variables).
 
-For this guide, we'll create an environment that supplies both temporary credentials for the Terraform AWS provider as well as values for our confguration's `region` and `instance_type` input variables:
+For this guide, we'll create an environment that supplies both temporary credentials for the Terraform AWS provider as well as values for our configuration's `region` and `instance_type` input variables:
 
 ```yaml
 values:

@@ -204,7 +204,7 @@ name: provider-functions
 runtime: yaml
 
 variables:
-  lastestAmi:
+  latestAmi:
     fn::invoke:
       function: aws:ec2/getAmi:getAmi
       arguments:
@@ -220,7 +220,7 @@ resources:
   myInstance:
     type: aws:ec2:Instance
     properties:
-      ami: ${lastestAmi.imageId}
+      ami: ${latestAmi.imageId}
       instanceType: "t3.micro"
 ```
 
