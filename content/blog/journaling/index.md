@@ -91,7 +91,7 @@ The second example is setting up an instance of the Pulumi app and API. Here we'
 ![Comparison chart of the bytes sent shown in the tables above](size.png)
 
 {{% notes type="tip" %}}
-This feature is still behind a feature flag, but we are ready for testers. To get enrolled in the feature flag, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us). Once that's done, all you need to do is get a `pulumi` version newer than v3.211.0, set the `PULUMI_ENABLE_JOURNALING` environment variable to `true`, and your operations will start finishing faster.
+To use this feature, you need a `pulumi` version newer than v3.211.0, and set the `PULUMI_ENABLE_JOURNALING` environment variable to `true`.
 {{% /notes %}}
 
 If you are interested in the more technical details read on!
@@ -319,9 +319,9 @@ The full documentation of the algorithm can be found in our [developer docs](htt
 - Since tests can't cover all possible edge cases, the next step was to run the journaler in parallel with the current snapshotting implementation internally. This was still without sending the results to the service. However we would compare the snapshot, and send an error event to the service if the snapshot didn't match. In our data warehouse we could then inspect any mismatches, and fix them. Since this does involve the service in a minor way, we would only do this if the user is using the Cloud backend.
 - Next up was adding a feature flag for the service, so journaling could be turned on selectively for some orgs. At the same time we implemented an opt-in environment variable in the CLI (`PULUMI_ENABLE_JOURNALING`), so the feature could be selectively turned on by users, if both the feature flag is enabled and the user sets the environment variable. This way we could slowly start enabling this in our repos, e.g. first in the integration tests for `pulumi/pulumi`, then in the tests for `pulumi/examples` and `pulumi/templates`, etc.
 - Allow users to start opting in.  If you want to opt-in with your org, please reach out to us, either on the [Community Slack](https://slack.pulumi.com/), or through our [Support channels](https://support.pulumi.com/hc/en-us), and we'll opt your org into the feature flag. Then you can begin seeing the performance improvements by setting the `PULUMI_ENABLE_JOURNALING` env variable to true.
+- Turn on the feature flag for everyone, but still require the `PULUMI_ENABLE_JOURNALING` env variable to be set to true. (We are here right now).
+- Flip the feature on by default, but still allow users to opt out using a `PULUMI_DISABLE_JOURNALING` env variable.
 
 ## What's next
-
-After some time with more orgs opted in, we'll enable this feature for everyone using Pulumi Cloud, and by default in the `pulumi` CLI. This is currently planned for the end of January. We want to make the default experience of using `pulumi` as fast as possible.
 
 While these performance improvements hopefully make your day to day use of `pulumi` quicker and more enjoyable, we're not quite done here. We're looking at some other performance improvements, that will hopefully speed up your workflows even more.
