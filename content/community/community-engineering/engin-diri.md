@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "CfgMgmtCamp 2026 Ghent"
+  title: "Building AI-Assisted Operations: Agentic AI Workshop"
+  url: "https://cfp.cfgmgmtcamp.org/ghent2026/talk/DCRWVC/"
+  date: 2026-02-04T09:00:00.000+01:00
 - event: "AWS / Honeycomb / Pulumi Workshop"
   title: "AI Agents That Reason Over Your Infrastructure"
   url: "https://www.pulumi.com/events/ai-agents-that-reason/"
