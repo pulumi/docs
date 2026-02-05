@@ -67,7 +67,7 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics:  ["Pulumi Features", "Platform Engineering", "DevOps", "Security", "IaC", "Pulumi IDP"]
+        topics:  ["Pulumi Features", "Platform Engineering", "DevOps", "Security", "Infrastructure as Code", "Pulumi IDP"]
         languages: ["TypeScript"]
         clouds: ["AWS"]
 

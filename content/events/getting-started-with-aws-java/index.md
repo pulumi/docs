@@ -67,7 +67,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["IaC"]
+        topics: ["Infrastructure as Code"]
         languages: ["Java"]
         clouds: ["AWS"]
 

@@ -71,7 +71,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["IaC", "DevOps", "Automation"]
+        topics:  ["Infrastructure as Code", "DevOps", "Automation"]
         languages: ["C#"]
         clouds: ["Azure"]
 
