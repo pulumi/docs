@@ -77,16 +77,7 @@ While Custom Instructions apply to all tasks across your organization, you can a
 
 When Neo enters a repository, it automatically reads the `AGENTS.md` file and applies the instructions without being asked. This makes project-specific conventions explicit and consistent across all tasks in that codebase.
 
-### What to include
-
-Use `AGENTS.md` to capture conventions that aren't enforced by linters or formatters:
-
-- **Coding standards**: Language-specific conventions, preferred patterns, or internal style rules
-- **Naming conventions**: How functions, variables, files, or resources should be named
-- **Test commands**: How to run tests, which test framework to use, or specific flags required
-- **Build processes**: Commands for building, linting, or validating the project
-- **Architecture guidelines**: Preferred project structure, module organization, or design patterns
-- **Other guidance**: Any team-specific requirements your team needs to follow
+Use `AGENTS.md` to capture conventions that aren't enforced by linters or formatters: coding standards, naming conventions, how to run tests, or any other guidance your team needs.
 
 ### Example
 
