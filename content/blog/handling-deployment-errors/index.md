@@ -14,17 +14,13 @@ social:
     linkedin: "Pulumi introduces a new type of resource hook: the `onError` hook, letting you control the retry behaviour of resources that fail to create."
 ---
 
-Last year, Pulumi IaC introduced the [resource hooks](/blog/resource-hooks/) feature, allowing you to run custom code at different points in the lifecycle of resources. Today, we'd like to talk about the latest addition to these hooks: the `onError` hook.
+Last year, Pulumi IaC introduced the [resource hooks](/blog/resource-hooks/) feature, allowing you to run custom code at different points in the lifecycle of resources. Today, we'd like to introduce the latest addition to these hooks: the `onError` hook.
 
 <!--more-->
 
 ## Recovering from errors
 
-A Pulumi program will run for as long as things go according to plan. When an error is encountered, this error is reported back to us with information about what went wrong. However, sometimes, these errors are intermitent or temporary.
-
-For this blog, we'll look at a common example: resource readiness. Often, we want to create resources that depend on things like DNS propagation, or the readiness state of other servers. In these cases, a Pulumi program can fail simply because we executed the program too quickly!
-
-In this case, we often don't want the program to fail - we just want to wait for a period of time and retry the operation. This is where the `onError` hook can help us:
+When a Pulumi program encounters an error while creating, updating, or deleting a resource, this error halts the operation and the error is reported back to us with information about what went wrong. However, this isn't always what we want: sometimes, these errors are intermitent or temporary. For this blog, we'll look at a common example: resource readiness. Often, we want to create resources that depend on things like DNS propagation, or the readiness state of other servers. In these cases, a Pulumi program can fail simply because we executed the program too quickly! In this case, we often don't want the program to fail - we just want to wait for a period of time and retry the operation. This is where the `onError` hook can help us:
 
 {{< chooser language "typescript,python,go,csharp" >}}
 
@@ -173,7 +169,7 @@ class ErrorHookStack : Stack
 
 {{< /chooser >}}
 
-Each time the operation fails, the new error will be passed along with all the previous attempts' errors (newest first) to the error hook. The hook should then return either true or false to tell Pulumi whether to retry the operation or not. If we decide not to retry the operation, the program will fail as normal, with the most recent error being shown as the reason for failure. What the error hook does is up to you: the number of errors can be used to determine how many times the operation has failed, which means we can implement systems like exponential backoff or maximum retries as error hooks!
+Each time the operation fails, the new error will be passed along with all the previous attempts' errors (newest first) to the error hook. The hook should then return either true or false to tell Pulumi whether to retry the operation or not. If we decide not to retry the operation, the program will fail as normal, with the most recent error being shown as the reason for failure. With this information, we can implement many failure models. For example, the number of errors tells us how many times the operation has failed. If all these failures have been readiness failures, we can use this to implement backoff mechanisms: perhaps we wait one second the first time, two seconds the second time, and so on. As another example, maybe we have some resource that is known to be intermitent, so we'll always retry once just in case. The callback exists in your language of choice, so you have full freedom over what and how these failures are handled.
 
 ## Next steps
 
