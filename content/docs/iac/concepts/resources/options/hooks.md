@@ -514,7 +514,7 @@ Just as the other resource hooks can be executed before and after certain operat
 | `update`         | ✓          | ✓          | ✓           |
 | `delete`         | ✓          |            | ✓           |
 
-As well as the standard hook information and the name of the failing operation, error hooks also receive a list of errors encountered during previous runs (starting with the most recent). In other words, if a resource has failed three times, the hook receives three errors. The hook must then reply with a flag that determines whether to retry the operation, or whether to let the failure cascade and exit the program.
+As well as the standard hook information and the name of the failing operation, error hooks also receive a list of errors encountered during previous runs (starting with the most recent). In other words, if a resource has failed three times, the hook receives three errors. The hook must then reply with a flag that determines whether to retry the operation, or whether to let the failure cascade and exit the program. Note that an operation can be retried up to 100 times.
 
 {{< chooser language "typescript,python,go,csharp" >}}
 
@@ -528,11 +528,11 @@ const notStartedRetryHook = new pulumi.ErrorHook(
         const latestError = args.errors[0] ?? "";
 
         if (!latestError.includes("resource has not yet started")) {
-          return false; // this is another type of error
+          return false; // do not retry, this is another type of error
         }
 
         await new Promise((resolve) => setTimeout(resolve, 1000));
-        return true;
+        return true; // retry
     },
 );
 
@@ -555,10 +555,10 @@ def retry_when_not_started(args: pulumi.ErrorHookArgs) -> bool:
     latest_error = args.errors[0] if args.errors else ""
 
     if "resource has not yet started" not in latest_error:
-        return False
+        return False # do not retry, this is another type of error
 
     time.sleep(5)
-    return True
+    return True # retry
 
 
 not_started_retry_hook = pulumi.ErrorHook(
@@ -599,11 +599,11 @@ func main() {
                 }
 
                 if !strings.Contains(latest, "resource has not yet started") {
-                    return false, nil
+                    return false, nil // do not retry, this is another type of error
                 }
 
                 time.Sleep(5 * time.Second)
-                return true, nil
+                return true, nil // retry
             },
         )
         if err != nil {
@@ -642,11 +642,11 @@ class ErrorHookStack : Stack
 
                 if (!latestError.Contains("resource has not yet started"))
                 {
-                    return false;
+                    return false; // do not retry, this is another type of error
                 }
 
                 await Task.Delay(TimeSpan.FromSeconds(5), cancellationToken);
-                return true;
+                return true; // retry
             });
 
         var res = new MyResource("res", new MyResourceArgs(), new CustomResourceOptions
