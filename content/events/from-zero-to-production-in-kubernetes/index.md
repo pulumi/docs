@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: "Zero to Production in Kubernetes"
 meta_desc: Deploy Kubernetes with GitOps, IaC, and AI-powered workflows using Pulumi. Go from zero to production with modern, scalable cloud infrastructure.
-meta_image: zero-to-production-k8s.png
+meta_image: /zero-to-production-k8s.png
 
 # A featured webinar will display first in the list.
 featured: false
