@@ -13,8 +13,24 @@ tags:
 schema_type: auto
 
 social:
-    twitter:
-    linkedin:
+    twitter: |
+        Neo now reads AGENTS.md files.
+
+        Same format as Codex, Windsurf, and GitHub Copilot. Write your project conventions once, and every AI tool follows them automatically.
+
+        No more "remember to add the environment tag" on every task.
+    linkedin: |
+        **Neo Now Supports AGENTS.md**
+
+        Every codebase has conventions that aren't captured in linters: naming patterns, test commands, deployment rules. Without a shared format, you end up repeating these instructions to every AI tool you use.
+
+        **The Solution**
+        AGENTS.md is an open standard for project instructions, already supported by Cursor, Windsurf, GitHub Copilot, Zed, and over 60,000 open source projects. Neo now reads these files automatically.
+
+        **How It Works**
+        Add an AGENTS.md file to your repo with your project conventions. Neo picks it up on the next task. In monorepos, you can have specific instructions in subdirectories. Your conversation instructions always take precedence when you need to override.
+
+        Write once, every tool follows.
 ---
 
 Neo now reads [AGENTS.md](https://agents.md/) files, the open standard for giving AI coding tools context about your project. If you're already using AGENTS.md, Neo will pick up those same instructions automatically.
