@@ -521,7 +521,6 @@ As well as the standard hook information and the name of the failing operation, 
 {{% choosable language typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
 
 const notStartedRetryHook = new pulumi.ErrorHook(
     "retry-when-not-started",
@@ -537,7 +536,7 @@ const notStartedRetryHook = new pulumi.ErrorHook(
     },
 );
 
-const bucket = new aws.s3.Bucket("example-bucket", {}, {
+const res = new MyResource("res", {}, {
     hooks: {
         onError: [notStartedRetryHook],
     },
@@ -550,7 +549,6 @@ const bucket = new aws.s3.Bucket("example-bucket", {}, {
 import time
 
 import pulumi
-from pulumi_aws import s3
 
 
 def retry_when_not_started(args: pulumi.ErrorHookArgs) -> bool:
@@ -568,8 +566,8 @@ not_started_retry_hook = pulumi.ErrorHook(
     retry_when_not_started,
 )
 
-bucket = s3.Bucket(
-    "example-bucket",
+res = MyResource(
+    "res",
     opts=pulumi.ResourceOptions(
         hooks=pulumi.ResourceHookBinding(
             on_error=[not_started_retry_hook],
@@ -587,7 +585,6 @@ import (
     "strings"
     "time"
 
-    "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -613,7 +610,7 @@ func main() {
             return err
         }
 
-        _, err = s3.NewBucket(ctx, "example-bucket", nil, pulumi.ResourceHooks(&pulumi.ResourceHookBinding{
+        _, err = NewMyResource(ctx, "res", &MyResourceArgs{}, pulumi.ResourceHooks(&pulumi.ResourceHookBinding{
             OnError: []*pulumi.ErrorHook{hook},
         }))
         if err != nil {
@@ -632,7 +629,6 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Aws.S3;
 
 class ErrorHookStack : Stack
 {
@@ -653,7 +649,7 @@ class ErrorHookStack : Stack
                 return true;
             });
 
-        var bucket = new Bucket("example-bucket", new BucketArgs(), new CustomResourceOptions
+        var res = new MyResource("res", new MyResourceArgs(), new CustomResourceOptions
         {
             Hooks = new ResourceHookBinding
             {
