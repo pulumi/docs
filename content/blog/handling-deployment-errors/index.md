@@ -10,7 +10,7 @@ tags:
     - iac
     - releases
 social:
-    twitter: "New in Pulumi IaC: the new `onError` hook gives you full control over deployment failures"
+    twitter: "New in Pulumi IaC: the `onError` hook gives you full control over deployment failures"
     linkedin: "Pulumi introduces a new type of resource hook: the `onError` hook, letting you control the retry behaviour of resources that fail to create."
 ---
 
@@ -20,7 +20,7 @@ Last year, Pulumi IaC introduced the [resource hooks](/blog/resource-hooks/) fea
 
 ## Recovering from errors
 
-When a Pulumi program encounters an error while creating, updating, or deleting a resource, this error halts the operation and the error is reported back to us with information about what went wrong. However, this isn't always what we want: sometimes, these errors are intermitent or temporary. For this blog, we'll look at a common example: resource readiness. Often, we want to create resources that depend on things like DNS propagation, or the readiness state of other servers. In these cases, a Pulumi program can fail simply because we executed the program too quickly! In this case, we often don't want the program to fail - we just want to wait for a period of time and retry the operation. This is where the `onError` hook can help us:
+When a Pulumi program encounters an error while creating, updating, or deleting a resource, this error halts the operation and the error is reported back to us with information about what went wrong. However, this isn't always what we want: sometimes, these errors are intermittent or temporary. For this blog, we'll look at a common example: resource readiness. Often, we want to create resources that depend on things like DNS propagation, or the readiness state of other servers. In these cases, a Pulumi program can fail simply because we executed the program too quickly! In this case, we often don't want the program to fail - we just want to wait for a period of time and retry the operation. This is where the `onError` hook can help us:
 
 {{< chooser language "typescript,python,go,csharp" >}}
 
@@ -37,7 +37,7 @@ const notStartedRetryHook = new pulumi.ErrorHook(
           return false; // do not retry, this is another type of error
         }
 
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        await new Promise((resolve) => setTimeout(resolve, 5000));
         return true; // retry
     },
 );
