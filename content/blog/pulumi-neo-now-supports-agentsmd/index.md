@@ -2,7 +2,7 @@
 title: "Pulumi Neo Now Supports AGENTS.md"
 date: 2026-02-06
 draft: false
-meta_desc: "Neo now reads AGENTS.md files to follow your project conventions automatically, using the same format as Claude Code, Cursor, and GitHub Copilot."
+meta_desc: "Neo now reads AGENTS.md files to follow your project conventions automatically, using the same format as Cursor, GitHub Copilot, and other AI coding tools."
 meta_image: meta.png
 authors:
     - neo-team
@@ -61,7 +61,7 @@ Your instructions in conversation always take precedence, so you can override th
 
 ## Works with the tools you're already using
 
-AGENTS.md is an open format supported by most AI coding tools: Claude Code, Cursor, Windsurf, GitHub Copilot, Zed, and now Neo. If your team uses different tools for different tasks, they'll all follow the same project conventions without any extra configuration.
+AGENTS.md is an open format supported by most AI coding tools: Cursor, Windsurf, GitHub Copilot, Zed, and now Neo. If your team uses different tools for different tasks, they'll all follow the same project conventions without any extra configuration.
 
 The format is managed by the Agentic AI Foundation under the Linux Foundation, and it's already in use in over 60,000 open source projects. See [agents.md](https://agents.md/) for the full specification.
 
