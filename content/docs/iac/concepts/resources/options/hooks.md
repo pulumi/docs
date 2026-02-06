@@ -506,7 +506,7 @@ In order for delete hooks to run successfully, Pulumi must have access to any ne
 
 ## Error hooks
 
-Just as the other resource hooks can be executed before and after certain operations, you can also add hooks to run when operations fail. For example, to retry a failing resource registration, or to implement change the error-handling behaviour based on the type of error encountered. The inputs and outputs received will depend on the operation that fails:
+Just as the other resource hooks can be executed before and after certain operations, you can also add hooks to run when operations fail. For example, to retry a failing resource registration, or to change the error-handling behavior based on the type of error encountered. The inputs and outputs received will depend on the operation that fails:
 
 | Failed operation | Old inputs | New inputs | Old outputs |
 |------------------|------------|------------|-------------|
@@ -514,7 +514,7 @@ Just as the other resource hooks can be executed before and after certain operat
 | `update`         | ✓          | ✓          | ✓           |
 | `delete`         | ✓          |            | ✓           |
 
-As well as the standard hook information and the name of the failing operation, error hooks also receive a list of errors encountered during previous runs (starting with the most recent). In other words, if a resource has failed three times, the hook receives three errors. The hook must then reply with a flag that determines whether to retry the operation, or whether to let the failure cascade and exit the program. Note that an operation can be retried up to 100 times.
+As well as the standard hook information and the name of the failing operation, error hooks also receive a list of errors encountered during previous runs (starting with the most recent). In other words, if a resource has failed three times, the hook receives three errors. The hook must then reply with a flag that determines whether to retry the operation, or whether to let the failure cascade and exit the program.
 
 {{< chooser language "typescript,python,go,csharp" >}}
 
@@ -531,7 +531,7 @@ const notStartedRetryHook = new pulumi.ErrorHook(
           return false; // do not retry, this is another type of error
         }
 
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        await new Promise((resolve) => setTimeout(resolve, 5000));
         return true; // retry
     },
 );
@@ -662,3 +662,7 @@ class ErrorHookStack : Stack
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+{{% notes type="info" %}}
+An operation can only be retried a maximum of 100 times. After this, the engine will report the failure as a program failure, and the deployment will fail as normal.
+{{% /notes %}}
