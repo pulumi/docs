@@ -134,7 +134,7 @@ flowchart TB
 
 The workflow is: discover domains, explore cubes, understand the schema, construct and execute the query. This mirrors how a data analyst would work. You don't jump straight to SQL; you first understand what data is available and what the metrics mean.
 
-The AI's role is narrower than people expect. It's a translator between human intent and a well-defined data model, not a general-purpose data scientist. This is a feature, not a limitation. By constraining the AI to operate within the semantic layer, we get reliability. The creativity goes into understanding the question, not into inventing SQL.
+The system's role is narrower than people expect. It's a translator between human intent and a well-defined data model, not a general-purpose data scientist. This is a feature, not a limitation. By constraining Platybot to operate within the semantic layer, we get reliability. The creativity goes into understanding the question, not into inventing SQL.
 
 ## Meeting users where they are
 
