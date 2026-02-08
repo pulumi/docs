@@ -32,9 +32,9 @@ The naive solution is obvious: connect an LLM to your database and let it write 
 - **Account queries need exclusions.** Most queries should exclude Pulumi's own internal accounts and deleted ones. Without these filters, you're counting test data alongside real customers.
 - **User queries need employee filters.** Querying active users without excluding Pulumi employees inflates adoption metrics.
 
-The risk isn't that the AI fails visibly. It's that it succeeds convincingly with wrong numbers. A confidently wrong ARR figure presented to leadership is worse than no answer at all.
+The danger shows up when results feel decision-ready before anyone has validated how the numbers were derived. A confidently wrong ARR figure presented to leadership is worse than no answer at all.
 
-This isn't unique to Pulumi. Every growing company hits this wall. Dashboards answer yesterday's questions, not today's. Ad-hoc LLM queries answer today's questions, but incorrectly. The gap between "I have a question" and "I have a trustworthy answer" is where data teams can get stuck.
+Many organizations run into the same constraint once data usage spreads. Dashboards answer yesterday's questions, not today's. Ad-hoc LLM queries answer today's questions, but incorrectly. The gap between "I have a question" and "I have a trustworthy answer" is where data teams can get stuck.
 
 ## Why we built a semantic layer first
 
@@ -42,7 +42,7 @@ Before writing a single line of AI code, we built a semantic layer using [Cube](
 
 A semantic layer is a shared, versioned definition of what your business metrics mean.
 
-"Monthly active users" isn't just `COUNT(DISTINCT user_id)`. It's that calculation applied to the right table (`fct_pulumi_operations`), with the right filters (exclude Pulumi employees, exclude deleted organizations), scoped to a calendar month, and counting only users who performed real operations — not just previews. The semantic layer encodes all of this once, and the AI can use it to build queries without needing to guess which tables are related to each other, whether it's one-to-one or many-to-many, etc.
+“Monthly active users” starts with COUNT(DISTINCT user_id), but the aggregation is only the outer layer. It has to be applied to the right table (`fct_pulumi_operations`), with the right filters (exclude Pulumi employees, exclude deleted organizations), scoped to a calendar month, and counting only users who performed real operations — not just previews. The semantic layer encodes all of this once, and the AI can use it to build queries without needing to guess which tables are related to each other, whether it's one-to-one or many-to-many, etc.
 
 We organized our data into seven domains: Revenue, Cloud, Core, Clickstream, Community, Support, and People. Each domain contains cubes (think of them as well-defined, composable views) with explicit measures, dimensions, and joins. Here's a real example from our Cloud domain (trimmed for readability):
 
@@ -105,7 +105,7 @@ Platybot supports multiple models: Claude Opus 4.6, Claude Sonnet 4.5, and Gemin
 
 The system prompt gives the model awareness of available cubes, their measures, dimensions, and joins. When a user asks "What's the ARR breakdown by plan type?", the model doesn't write SQL. Instead, it constructs a Cube query, selecting the `total_arr` measure from the ARR table and grouping by the `sku` from the subscriptions dimension. Cube handles the SQL generation, the joins, and the filters. For edge cases the semantic layer doesn't cover, the model can fall back to direct (read-only) SQL against Snowflake, but it may already have a basic query that is already close to what it needs.
 
-The AI follows a workflow that maps to the same tools a human analyst would use:
+Query generation follows a workflow that maps to the same tools a human analyst would use:
 
 ```mermaid
 flowchart TB
@@ -138,13 +138,13 @@ The system's role is narrower than people expect. It's a translator between huma
 
 ## Meeting users where they are
 
-Building a good AI backend is only half the problem. If people don't use it, it doesn't matter. We launched Platybot across three interfaces, each designed for a different workflow.
+The backend solved query generation. It did not solve usage and if people don't use it, it doesn't matter. We launched Platybot across three interfaces, each designed for a different workflow.
 
 ### The web UI
 
 The web app is the primary interface: a React 19 + TypeScript + Vite + Tailwind conversational UI where employees can explore data through multi-turn conversations. It supports table visualization, data export, and conversation history so you can pick up where you left off.
 
-Every analysis produces a shareable report with a permanent link, protected behind company authentication. The report shows the AI's reasoning so you can verify its approach, and lists every query and table used along with a sample of the data. Each query includes a direct link to run it in Metabase, our reporting tool, so any useful query can be saved, scheduled, or extended without starting from scratch.
+Every analysis produces a shareable report with a permanent link, protected behind company authentication. The report shows the agent's reasoning so you can verify its approach, and lists every query and table used along with a sample of the data. Each query includes a direct link to run it in Metabase, our reporting tool, so any useful query can be saved, scheduled, or extended without starting from scratch.
 
 ![Screenshot of a Platybot report showing the AI's reasoning process, an executed SQL query, and a link to open the query in Metabase](platybot-report.png)
 
@@ -225,7 +225,7 @@ Dogfooding Pulumi for our internal tools has real benefits beyond the obvious. S
 
 ## Results
 
-Since launch in September 2025: over 1,700 questions from 83 employees across every team. Usage grew steadily — from around 8 questions per day in the first month to 18 per day by January 2026, with 51 unique users that month alone. Not tire-kicking — real work. Customer analysis for sales calls, resource breakdowns for account managers, blog performance metrics for marketing, policy adoption research for product, ARR deep-dives for leadership.
+Since launch in September 2025: over 1,700 questions from 83 employees across every team. Usage grew steadily — from around 8 questions per day in the first month to 18 per day by January 2026, with 51 unique users that month alone. This was real production work, not experimentation. Customer analysis for sales calls, resource breakdowns for account managers, blog performance metrics for marketing, policy adoption research for product, ARR deep-dives for leadership.
 
 The impact on the data team was immediate. Questions that used to land in the #analytics channel and wait for a human now get answered in seconds. The data team shifted from answering routine queries to building better models and improving data quality. We went from being a help desk to being a platform team.
 
@@ -235,7 +235,7 @@ Accuracy is harder to quantify, but the semantic layer gives us confidence. Beca
 
 **The semantic layer matters more than the model.** We spent more time defining metrics in Cube than we did on any AI work. That investment pays for itself: swap the model, and the answers stay correct. Swap the semantic layer, and nothing works.
 
-**Meet users where they already are.** A standalone app isn't enough. Slack catches the quick questions, the web UI handles deep exploration, and MCP makes data ambient for AI-native workflows. Each interface serves a different mode of thinking.
+**Meet users where they already are.** Different UIs handle different cognitive loads. Slack catches the quick questions, the web UI handles deep exploration, and MCP makes data ambient for AI-native workflows. Each interface serves a different mode of thinking.
 
 **Transparency builds trust.** Showing the AI's reasoning, the queries it ran, and linking to Metabase for verification turned skeptics into regular users. People don't trust a black box, but they'll trust a tool that shows its work.
 
