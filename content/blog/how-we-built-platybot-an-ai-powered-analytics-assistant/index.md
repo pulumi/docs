@@ -158,7 +158,9 @@ One fun detail we've added during our last hackathon: while queries iterate thro
 
 Platybot is also available as a Slack bot. Users @mention it in any channel, and it replies in a thread with the answer, keeping the channel clean while making results visible to the whole team. It's best suited for quick lookups — "what's the ARR for account X?" — where the answer fits in a message rather than a deep analysis. Most usage stayed in the web UI, but the Slack bot fills a different niche: answers that benefit from being shared in context.
 
-### MCP: Making Platybot AI-native
+![Screenshot of a Slack thread where a user asks Platybot for the split between operation types in the last 30 days, and Platybot replies with a summary of 10.1 million operations broken down by type along with a bar chart](platybot-slack.png)
+
+### MCP: Making Platybot usable by Agents
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server is the newest addition, launched February 4, 2026. It exposes six tools that any MCP-compatible client can use:
 
