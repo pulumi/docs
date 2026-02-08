@@ -8,9 +8,82 @@ permissions:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout
 jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      version-files-only: ${{ steps.check.outputs.version-files-only }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            version-files:
+              - 'static/latest-dev-version'
+              - 'static/latest-version'
+              - 'static/esc/latest-version'
+              - 'static/customer-managed-workflow-agent/latest-version'
+            other-files:
+              - '**/*'
+              - '!static/latest-dev-version'
+              - '!static/latest-version'
+              - '!static/esc/latest-version'
+              - '!static/customer-managed-workflow-agent/latest-version'
+
+      - name: Check if version files only
+        id: check
+        run: |
+          if [[ "${{ steps.filter.outputs.version-files }}" == "true" && "${{ steps.filter.outputs.other-files }}" == "false" ]]; then
+            echo "version-files-only=true" >> $GITHUB_OUTPUT
+          else
+            echo "version-files-only=false" >> $GITHUB_OUTPUT
+          fi
+
+  fast-track-version-update:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.version-files-only == 'true'
+    name: Fast-track version file validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24.x'
+
+      - uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.154.5'
+          extended: true
+
+      - name: Install dependencies
+        run: make ensure
+
+      - name: Validate version files
+        run: |
+          # Check for whitespace in version files
+          for file in static/latest-dev-version static/latest-version static/esc/latest-version static/customer-managed-workflow-agent/latest-version; do
+            if [[ -f "$file" ]]; then
+              if grep -q '[[:space:]]' "$file"; then
+                echo "ERROR: $file contains whitespace"
+                exit 1
+              fi
+              echo "✓ $file is valid"
+            fi
+          done
+
+      - name: Quick Hugo build test
+        run: hugo --minify --quiet
+        env:
+          HUGO_ENVIRONMENT: production
+
   buildSite:
     # Only run this job for events that originate on this repository.
-    if: github.event.pull_request.head.repo.full_name == github.repository
+    needs: detect-changes
+    if: |
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      needs.detect-changes.outputs.version-files-only == 'false'
     env:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
@@ -70,10 +143,13 @@ jobs:
           name: origin-bucket-metadata
           path: origin-bucket-metadata.json
   notify:
-    if: (startsWith(github.ref, 'refs/heads/release/') || github.ref == 'refs/heads/master' || (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'pulumi-bot')) && failure()
+    if: |
+      always() &&
+      (startsWith(github.ref, 'refs/heads/release/') || github.ref == 'refs/heads/master' || (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'pulumi-bot')) &&
+      (needs.buildSite.result == 'failure' || needs.fast-track-version-update.result == 'failure')
     name: Send slack notification
     runs-on: ubuntu-latest
-    needs: [buildSite]
+    needs: [detect-changes, fast-track-version-update, buildSite]
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
