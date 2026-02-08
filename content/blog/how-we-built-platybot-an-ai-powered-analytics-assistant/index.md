@@ -103,7 +103,7 @@ With the semantic layer in place, the AI becomes a translation problem: convert 
 
 Platybot supports multiple models: Claude Opus 4.6, Claude Sonnet 4.5, and Gemini 3 Pro. Users can choose which model to use. We found that different models have different strengths. Claude excels at structured data queries, while Gemini performs very well on text-heavy tasks like analyzing call transcriptions.
 
-The system prompt gives the model awareness of available cubes, their measures, dimensions, and joins. When a user asks "What's the ARR breakdown by plan type?", the model doesn't write SQL. Instead, it constructs a Cube query, selecting the `total_arr` measure from the ARR table and grouping by the `sku` from the subscriptions dimension. Cube handles the SQL generation, the joins, and the filters. For edge cases the semantic layer doesn't cover, the model can fall back to direct (read-only) SQL against Snowflake, but even then it may already have a basic query that is already close to what it needs.
+The system prompt gives the model awareness of available cubes, their measures, dimensions, and joins. When a user asks "What's the ARR breakdown by plan type?", the model doesn't write SQL. Instead, it constructs a Cube query, selecting the `total_arr` measure from the ARR table and grouping by the `sku` from the subscriptions dimension. Cube handles the SQL generation, the joins, and the filters. For edge cases the semantic layer doesn't cover, the model can fall back to direct (read-only) SQL against Snowflake, but it may already have a basic query that is already close to what it needs.
 
 The AI follows a workflow that maps to the same tools a human analyst would use:
 
@@ -146,19 +146,19 @@ The web app is the primary interface: a React 19 + TypeScript + Vite + Tailwind 
 
 Every analysis produces a shareable report with a permanent link, protected behind company authentication. The report shows the AI's reasoning so you can verify its approach, and lists every query and table used along with a sample of the data. Each query includes a direct link to run it in Metabase, our reporting tool, so any useful query can be saved, scheduled, or extended without starting from scratch.
 
-![A Platybot report showing the AI's reasoning, queries used, and direct links to Metabase](platybot-report.png)
+![Screenshot of a Platybot report showing the AI's reasoning process, an executed SQL query, and a link to open the query in Metabase](platybot-report.png)
 
 The web UI sees the highest adoption of all three access points. It's where people go for deeper data exploration: multi-step analyses, follow-up questions, and comparing metrics across different dimensions.
 
 One fun detail we've added during our last hackathon: while queries iterate through analysis steps (discovering domains, exploring cubes, executing queries), users are entertained by a platypus-themed runner game. Think Chrome's dinosaur game, but with our mascot on a skateboard. Sometimes Platybot can take a long time iterating, so you can try to beat your high score in the meantime!
 
-![The Platybot web UI with the platypus runner minigame shown during query processing](platybot-web-ui.png)
+![Screenshot of the Platybot web interface showing a chat conversation on the left side and a platypus character on a skateboard in a runner-style minigame on the right, displayed while processing a query](platybot-web-ui.png)
 
 ### Slack
 
 Platybot is also available as a Slack bot. Users @mention it in any channel, and it replies in a thread with the answer, keeping the channel clean while making results visible to the whole team. It's best suited for quick lookups — "what's the ARR for account X?" — where the answer fits in a message rather than a deep analysis. Most usage stayed in the web UI, but the Slack bot fills a different niche: answers that benefit from being shared in context.
 
-### MCP: making Platybot AI-native
+### MCP: Making Platybot AI-native
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server is the newest addition, launched February 4, 2026. It exposes six tools that any MCP-compatible client can use:
 
