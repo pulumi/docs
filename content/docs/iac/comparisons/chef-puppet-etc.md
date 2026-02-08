@@ -35,3 +35,14 @@ Pulumi works well with modern "immutable infrastructure" architectures, where bo
 unnecessary. In such cases, configuration management is not needed in the usual sense. Pulumi also works well with
 classical approaches to infrastructure, however, which often entail virtual machines and where continuing to use a
 configuration tool in conjunction is easy. In either case, Pulumi will help on your path to cloud native architectures.
+
+## When you might not need a separate configuration management tool
+
+For many modern cloud workloads—especially containers, serverless functions, and immutable infrastructure—traditional configuration management tools may not be necessary. Even for virtual machines with simpler needs, Pulumi's [Command provider](/registry/packages/command/) can handle common [configuration management](/registry/packages/command/) tasks like:
+
+- Running initialization scripts after instance creation
+- Installing packages or software
+- Copying configuration files to remote hosts
+- Executing setup commands via SSH
+
+The Command provider integrates directly into your Pulumi program, providing a unified workflow for both provisioning and configuration. For complex, ongoing configuration management needs, combining Pulumi with Ansible, Chef, or Puppet remains a powerful pattern.
