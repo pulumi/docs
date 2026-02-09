@@ -9,10 +9,10 @@ aliases: kubecon-europe
 hero:
   title: Tame Kubernetes complexity with code
   description: |
-    Join us at KubeCon to learn how teams are moving beyond YAML with programming languages like TypeScript, Python, and Go to build platforms that scale. Also, free plushies.
+    Learn how teams are moving beyond YAML with programming languages like TypeScript, Python, and Go to build platforms that scale. Also, free plushies.
   date_and_location: March 23-26, Amsterdam RAI
   booth: Booth 784
-  cta_text: Book some time with us
+  cta_text: Book a technical demo
   cta_link: "#demo-workshop"
   cta_secondary_text: Get $500 in AWS credits
   cta_secondary_link: "#aws-credits"
@@ -50,7 +50,7 @@ features:
       description: |
         Define your apps and infrastructure in your language of choice: TypeScript, Python, Go, C#, or Java. Then deploy to any cloud, with built-in policy enforcement and secrets management.
     - icon: fa-robot
-      title: Neo, your AI platform engineer
+      title: Neo, your AI infrastructure agent
       description: |
         Our AI agent Neo is built to handle the work that platform teams actually do. Stand up new clusters, keep them updated, migrate workloads across clouds, and enforce security policies across your entire fleet.
     - icon: fa-cloud
@@ -60,11 +60,11 @@ features:
 
 two_column_anchor: demo-workshop
 two_column:
-  - label: Meet with an expert
-    title: Book a technical discussion
+  - label: Talk with an expert
+    title: Book a Kubernetes demo
     description: |
       Schedule some booth time with a solution architect to talk through your specific Kubernetes challenges. We'll come prepared to dig into whatever you're facing, from scaling issues and complex deployments to finding ways to improve your workflows and operational efficiency.
-    cta_text: Save your spot
+    cta_text: Book a technical demo
     cta_link: https://info.pulumi.com/book-demo-kubecon-2026
   - label: Attend a workshop
     title: From Zero to Production in Kubernetes
@@ -132,7 +132,7 @@ location:
   description: |
     Stop by to see Neo in action, grab an exclusive Neo plushie, register for $500 in AWS credits, and talk infrastructure automation with the Pulumi engineering team.
   map_embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.6116720155323!2d4.886040676670286!3d52.341190572014874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60a1f63d57e25%3A0xa08f37a724d09338!2sAmsterdam%20RAI!5e0!3m2!1sen!2sus!4v1769463657049!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
-  cta_text: Book your demo
+  cta_text: Book a technical demo
   cta_link: https://info.pulumi.com/book-demo-kubecon-2026
   anchor: location
 
