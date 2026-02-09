@@ -1,6 +1,6 @@
 ---
 title: "Schema Validation Comes to Pulumi ESC with fn::conform"
-date: 2026-02-04
+date: 2026-02-09
 draft: false
 meta_desc: "Validate configuration values against JSON Schema with fn::conform in Pulumi ESC."
 meta_image: meta.png
@@ -10,7 +10,6 @@ authors:
 tags:
     - esc
     - features
-    - validation
 schema_type: auto
 social:
     twitter:
