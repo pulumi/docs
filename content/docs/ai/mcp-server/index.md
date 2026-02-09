@@ -4,12 +4,11 @@ meta_desc: "Learn how to use Pulumi's Model Context Protocol (MCP) server to int
 title: MCP server
 h1: Pulumi Model Context Protocol server
 meta_image: /images/docs/meta-images/docs-meta.png
-weight: 6
 menu:
     ai:
         name: MCP server
         parent: ai-home
-        weight: 6
+        weight: 70
 aliases:
 - /docs/iac/using-pulumi/mcp-server/
 - /docs/iac/guides/mcp-server.md
