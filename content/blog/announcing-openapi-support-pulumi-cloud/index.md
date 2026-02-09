@@ -8,6 +8,7 @@ authors:
   - devon-grove
   - arun-loganathan
   - zachary-cook
+  - claire-gaestel
 tags:
   - features
   - pulumi-cloud
