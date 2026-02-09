@@ -26,10 +26,10 @@ Leveraging Pulumi's RBAC features empower Enterprise organizations to follow bes
 Pulumi Cloud's RBAC system is built on these core concepts:
 
 - [**Scopes**](/docs/administration/access-identity/rbac/scopes): Granular access rights that define specific actions on resources
-- [**Permissions**](/docs/administration/access-identity/rbac/permissions): Predefined bundles of scopes that are commonly used together
-- [**Roles**](/docs/administration/access-identity/rbac/roles): Collections of permissions applied to resources and assigned to principals.
+- [**Permission sets**](/docs/administration/access-identity/rbac/permission-sets): Predefined bundles of scopes that are commonly used together
+- [**Roles**](/docs/administration/access-identity/rbac/roles): Collections of permission sets applied to resources and assigned to principals.
 - [**Teams**](/docs/administration/access-identity/rbac/teams): Groups of users that can be assigned roles.
 
 ### Customization
 
-Enterprise organizations have access to manage and create their own Teams. They also can manage and create their own custom Permissions and Roles, on top of the defaults available to every organization in Pulumi.
+Enterprise organizations have access to manage and create their own teams. They also can manage and create their own custom permission sets and roles, on top of the defaults available to every organization in Pulumi.

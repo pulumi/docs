@@ -16,7 +16,7 @@ aliases:
 - /docs/pulumi-cloud/access-management/rbac/scopes/org-settings/
 ---
 
-This document defines all the available scopes in Pulumi Cloud, organized by [entity type](../../permissions#entity-types) and group.
+This document defines all the available scopes in Pulumi Cloud, organized by [entity type](../permission-sets#entity-types) and group.
 
 ## Agent Pools
 
@@ -64,7 +64,7 @@ These scopes control access to Pulumi's AI features, including [Pulumi Neo](/doc
 | `environment:list` | View all environments in the organization. This provides a list of available environments and their basic information.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `environment:list_deleted` | View a list of environments that have been recently deleted but are still recoverable.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `environment:restore_deleted` | Recover a previously deleted environment. This restores the environment and its configurations to their previous state.<br><br>**Granted by default roles**: `Admin` |
-| `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default permission**: `Environment Read` |
+| `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default permission set**: `Environment Read` |
 | `environment_yaml:open` | Access and view environment configuration in YAML format. This provides a structured view of environment settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Insights Accounts
@@ -168,7 +168,7 @@ These scopes control access to Pulumi's AI features, including [Pulumi Neo](/doc
 |-------|-------------|
 | `role:create` | Allows creating new custom roles with specific permission sets.<br><br>**Granted by default roles**: `Admin` |
 | `role:delete` | Allows deleting existing custom roles.<br><br>**Granted by default roles**: `Admin` |
-| `role:read` | Allows viewing role definitions and their associated permissions.<br><br>**Granted by default roles**: `Admin` |
+| `role:read` | Allows viewing role definitions and their associated permission sets.<br><br>**Granted by default roles**: `Admin` |
 | `role:update` | Allows modifying existing custom roles and their permission sets.<br><br>**Granted by default roles**: `Admin` |
 
 ## SAML

@@ -15,7 +15,7 @@ aliases:
 - /docs/pulumi-cloud/access-management/rbac/scopes/
 ---
 
-Scopes are the most granular level of access control in Pulumi Cloud's RBAC system. Each scope represents a specific action that can be performed on a resource, such as reading stack configurations or updating environment settings. Scopes are the building blocks of [permissions](../permissions), which are then bundled into [roles](../roles) to create comprehensive access control configurations.
+Scopes are the most granular level of access control in Pulumi Cloud's RBAC system. Each scope represents a specific action that can be performed on a resource, such as reading stack configurations or updating environment settings. Scopes are the building blocks of [permission sets](../permission-sets), which are then bundled into [roles](../roles) to create comprehensive access control configurations.
 
 ## How Scopes Work
 
@@ -25,9 +25,9 @@ Scopes follow a consistent naming pattern: `object:action`. For example:
 - `environment:write` - Allows modifying environment settings
 - `team:create` - Allows creating new teams
 
-Scopes are always associated with a specific [entity type](../permissions#entity-types) (like stacks, environments, insights accounts, etc.) and can only be used within permissions that match that entity type. This ensures that permissions remain logically grouped and can't mix actions across different types of resources.
+Scopes are always associated with a specific [entity type](../permission-sets#entity-types) (like stacks, environments, insights accounts, etc.) and can only be used within permission sets that match that entity type. This ensures that permission sets remain logically grouped and can't mix actions across different types of resources.
 
-You can use scopes to build [custom permissions](../permissions#creating-custom-permissions), which allow you to combine commonly related scopes to create meaningful access patterns. For example, a "Stack Manager" permission might include scopes like:
+You can use scopes to build [custom permission sets](../permission-sets#creating-custom-permission-sets), which allow you to combine commonly related scopes to create meaningful access patterns. For example, a "Stack Manager" permission set might include scopes like:
 
 - `stack:read`
 - `stack:write`
@@ -55,4 +55,4 @@ You can view the list of available scopes, organized by entity type:
 
 - [Teams](/docs/administration/access-identity/rbac/teams)
 - [Roles](/docs/administration/access-identity/rbac/roles)
-- [Permissions](/docs/administration/access-identity/rbac/permissions)
+- [Permission sets](/docs/administration/access-identity/rbac/permission-sets)
