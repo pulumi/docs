@@ -9,7 +9,7 @@ menu:
     name: Permission sets
     parent: administration-access-identity-rbac
     weight: 3
-    identifier: pulumi-cloud-access-management-rbac-permissions
+    identifier: pulumi-cloud-access-management-rbac-permission-sets
 aliases:
 - /docs/administration/access-identity/rbac/permissions/
 - /docs/pulumi-cloud/access-management/rbac/permissions/
