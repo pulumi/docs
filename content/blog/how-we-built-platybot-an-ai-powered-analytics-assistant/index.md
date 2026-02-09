@@ -6,6 +6,7 @@ meta_desc: "How Pulumi built an AI-powered analytics assistant that lets any emp
 meta_image: meta.png
 authors:
     - pablo-seibelt
+    - lucas-crespo
 tags:
     - ai
     - ai-agents
@@ -19,6 +20,11 @@ social:
 Before Platybot, our #analytics Slack channel was a support queue. Every day, people from every team would ask questions: "Which customers use feature X?", "What's our ARR by plan type?", "Do we have a report for template usage?" Our two-person data team was a bottleneck.
 
 <!--more-->
+
+<figure style="width: 50%; float: right; margin-left: 20px; margin-bottom: 10px;">
+<img src="data-request-inbox.jpeg" alt="A fictional Slack #analytics channel showing multiple employees asking data questions like report requests, ARR breakdowns, and active user numbers">
+<figcaption><i>Our #analytics channel, before Platybot (dramatized).</i></figcaption>
+</figure>
 
 We didn't want to just throw an LLM at our [Snowflake](/case-studies/snowflake/) warehouse either. Without guardrails, large language models generate SQL that may work but silently gets the answer wrong. Different join logic, wrong filters, missing snapshot handling, incorrect summarization. We needed something that could answer reliably for most queries, otherwise we'd switch to fixing LLM SQL queries.
 
@@ -231,6 +237,9 @@ Since launch in September 2025: over 1,700 questions from 83 employees across ev
 
 The impact on the data team was immediate. Questions that used to land in the #analytics channel and wait for a human now get answered in seconds. The data team shifted from answering routine queries to building better models and improving data quality. We went from being a help desk to being a platform team.
 
+![Pablo Seibelt and Lucas Crespo, Pulumi's data team](pablo-and-lucas.png)
+{{% figcaption %}}Rumours of our replacement have been greatly exaggerated. Platybot just freed us up for the work that doesn't fit in a Slack reply.{{% /figcaption %}}
+
 Accuracy is harder to quantify, but the semantic layer gives us confidence. Because Platybot uses pre-defined measures instead of generating arbitrary SQL, entire categories of errors (wrong joins, missing filters, incorrect aggregations) are structurally less likely. When the model does get something wrong, it's usually in interpreting the question, not in the data — and users can verify that through the report's reasoning trace.
 
 ## What we learned
@@ -241,6 +250,7 @@ Accuracy is harder to quantify, but the semantic layer gives us confidence. Beca
 
 **Transparency builds trust.** Showing the AI's reasoning, the queries it ran, and linking to Metabase for verification turned skeptics into regular users. People don't trust a black box, but they'll trust a tool that shows its work.
 
+<!--
 If you're building something similar, here are the resources that helped us:
 
 - [Cube](https://cube.dev/) for building a semantic layer on top of your data warehouse
@@ -248,3 +258,4 @@ If you're building something similar, here are the resources that helped us:
 - [Pulumi Community Slack](https://slack.pulumi.com) for questions and conversation
 
 {{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+-->
