@@ -238,7 +238,7 @@ Since launch in September 2025: over 1,700 questions from 83 employees across ev
 The impact on the data team was immediate. Questions that used to land in the #analytics channel and wait for a human now get answered in seconds. The data team shifted from answering routine queries to building better models and improving data quality. We went from being a help desk to being a platform team.
 
 ![Pablo Seibelt and Lucas Crespo, Pulumi's data team](pablo-and-lucas.png)
-{{% figcaption %}}Platybot answers the questions now. We just maintain the thing that keeps it from being wrong.{{% /figcaption %}}
+{{% figcaption %}}Rumours of our replacement have been greatly exaggerated. Platybot just freed us up for the work that doesn't fit in a Slack reply.{{% /figcaption %}}
 
 Accuracy is harder to quantify, but the semantic layer gives us confidence. Because Platybot uses pre-defined measures instead of generating arbitrary SQL, entire categories of errors (wrong joins, missing filters, incorrect aggregations) are structurally less likely. When the model does get something wrong, it's usually in interpreting the question, not in the data — and users can verify that through the report's reasoning trace.
 
