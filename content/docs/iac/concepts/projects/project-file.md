@@ -188,7 +188,7 @@ Use this option to link to local plugin binaries. This option is intended for us
 | `path` | optional | Path to the plugin folder. |
 | `version` | optional | Version of the plugin, if not set, will match any version the engine requests. |
 
-### `requiredPulumiVersion` options
+### `requiredPulumiVersion` option
 
 This option specifies the version range of the Pulumi CLI that this project requires. The format follows the syntax of [semantic version ranges](https://pkg.go.dev/github.com/blang/semver#ParseRange). This option is useful when your program requires a newer feature and you want to ensure the program won't be run with a CLI that is too old.
 
