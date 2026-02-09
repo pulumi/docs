@@ -1,6 +1,6 @@
 ---
 title: "How We Built Platybot: An AI-Powered Analytics Assistant"
-date: 2026-02-10
+date: 2026-02-11
 draft: false
 meta_desc: "How Pulumi built an AI-powered analytics assistant that lets any employee query data using natural language."
 meta_image: meta.png
