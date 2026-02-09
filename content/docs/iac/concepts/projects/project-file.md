@@ -40,6 +40,7 @@ For Pulumi programs specifically written in Pulumi YAML, the project file not on
 | `options` | optional | Additional project options. | [options options](#options-options) |
 | `template` | optional | Config to be used when creating new stacks in the project. | [template options](#template-options) |
 | `plugins` | optional | Override for the plugin selection. Intended for use in developing pulumi plugins.  | [plugins options](#plugins-options) |
+| `requiredPulumiVersion` | optional | The version range of the Pulumi CLI this project requires. | [requiredPulumiVersion options](#requiredpulumiversion-options) |
 
 ### About `main`
 
@@ -187,6 +188,16 @@ Use this option to link to local plugin binaries. This option is intended for us
 | `path` | optional | Path to the plugin folder. |
 | `version` | optional | Version of the plugin, if not set, will match any version the engine requests. |
 
+### `requiredPulumiVersion` option
+
+This option specifies the version range of the Pulumi CLI that this project requires. The format follows the syntax of [semantic version ranges](https://pkg.go.dev/github.com/blang/semver#ParseRange). This option is useful when your program requires a newer feature and you want to ensure the program won't be run with a CLI that is too old.
+
+Examples:
+- `">=3.0.0"` - requires Pulumi CLI version 3.0.0 or later
+- `"!3.1.2"` - any version except 3.1.2
+- `">=3.5.0 !3.7.7"` - version 3.5.0 or later, but not exactly 3.7.7 (ranges are AND-ed together by concatenating with spaces)
+- `"<3.4.0 || >3.8.0"` - version less than 3.4.0 or greater than 3.8.0 (ranges can be OR-ed with the `||` operator)
+
 ### Deprecated attributes
 
 | Name | Required | Description |
@@ -232,4 +243,5 @@ plugins:
     - name: yaml
       path: ../../../pulumi-yaml/bin
       version: 1.2.3
+requiredPulumiVersion: ">=3.0.0"
 ```
