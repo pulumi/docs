@@ -24,13 +24,13 @@ environment variables, allowing you to set them to multiple different values whe
 <!--more-->
 
 When configuring a Pulumi provider to authenticate against a cloud provider, there are two main options available.
-You can set authentication values as secrets in your Pulumi.yaml config.
+You can set authentication values as secrets in your Pulumi.yaml config:
 
 ```bash
 $ pulumi config set azure-native:clientSecret <clientSecret> --secret
 ```
 
-Alternately, you can also use the terminal environment of where you're running your Pulumi commands.
+Alternately, you can also use the terminal environment of where you're running your Pulumi commands:
 
 ```bash
 export ARM_CLIENT_SECRET=1234567`
@@ -44,23 +44,102 @@ But there's currently several use cases where this breaks down, due to the hard-
 For example,  the Azure Native provider as well as the Azure Classic provider expect `ARM_CLIENT_SECRET` to be set.
 But if you're using both providers in the same process, you're limited to using the same value for `ARM_CLIENT_SECRET`.
 
-Similarly, multiple explicit providers targeting different AWS regions were up until now not able to set their configuration via environment variable.
+Similarly, multiple explicit providers targeting different AWS accounts were up until now not able to set their configuration via environment variable.
 Users had to set these values in the provider config, which not only writes secrets to state, but also results in a noisy diff on an otherwise no-op upgrade when token rotation is used.
+
+## Remapping environment variables
 
 For these and similar scenarios, we have a new solution for you: setting mappings of environment variable keys on your provider.
 The concept is as follows:
 
-"For any environment variable that my provider expects, I want to be able to tell Pulumi to use the value of a custom-defined environment variable instead."
+"For any environment variable that my Pulumi provider expects, I want to be able to tell the provider to use the value of a custom-defined environment variable instead."
 
-Example (make it in all languages)
-TODO: give example code
+## Example
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const provider = new command.Provider("command-provider", {}, {
+    envVarMappings: {
+        "MY_SPECIAL_ARM_CLIENT_SECRET": "ARM_CLIENT_SECRET", // If MY_SPECIAL_ARM_CLIENT_SECRET exists, provider sees ARM_CLIENT_SECRET
+    },
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+provider = command.Provider("command-provider",
+    opts=pulumi.ResourceOptions(
+        env_var_mappings={
+            "MY_SPECIAL_ARM_CLIENT_SECRET": "ARM_CLIENT_SECRET",  # If MY_SPECIAL_ARM_CLIENT_SECRET exists, provider sees ARM_CLIENT_SECRET
+        }
+    )
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+provider, err := command.NewProvider(
+    ctx,
+    "command-provider",
+    &command.ProviderArgs{},
+    pulumi.EnvVarMappings(map[string]string{
+        "MY_SPECIAL_ARM_CLIENT_SECRET": "ARM_CLIENT_SECRET", // If MY_SPECIAL_ARM_CLIENT_SECRET exists, provider sees ARM_CLIENT_SECRET
+    }),
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+var provider = new Command.Provider("command-provider", new Command.ProviderArgs(), new CustomResourceOptions
+{
+    EnvVarMappings = new Dictionary<string, string>
+    {
+        { "MY_SPECIAL_ARM_CLIENT_SECRET", "ARM_CLIENT_SECRET" } // If MY_SPECIAL_ARM_CLIENT_SECRET exists, provider sees ARM_CLIENT_SECRET
+    }
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+var provider = new Provider("command-provider", ProviderArgs.Empty, CustomResourceOptions.builder()
+    .envVarMappings(Map.of(
+        "MY_SPECIAL_ARM_CLIENT_SECRET", "ARM_CLIENT_SECRET" // If MY_SPECIAL_ARM_CLIENT_SECRET exists, provider sees ARM_CLIENT_SECRET
+    ))
+    .build());
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  command-provider:
+    type: pulumi:providers:command
+    options:
+      envVarMappings:
+        MY_SPECIAL_ARM_CLIENT_SECRET: ARM_CLIENT_SECRET  # If MY_SPECIAL_ARM_CLIENT_SECRET exists, provider sees ARM_CLIENT_SECRET
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 You can now customize each value your provider sees by defining a new environment variable, and then mapping your provider's defined variable to yours.
 
 Available in Pulumi version 1.250.awesome and higher.
-
-Main content goes here. Everything after the <!--more--> comment appears only on the full post page.
-
-Avoid using images or code samples in the first 70 words, as they may not render properly in summaries.
-
-For more guidance, see [BLOGGING.md](https://github.com/pulumi/docs/blob/master/BLOGGING.md).
