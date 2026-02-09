@@ -5,9 +5,11 @@ meta_desc: "The Pulumi Cloud REST API now has an OpenAPI 3.0 specification you c
 meta_image: meta.png
 authors:
   - davide-massarenti
+  - claire-gaestel
   - devon-grove
   - arun-loganathan
   - zachary-cook
+
 tags:
   - features
   - pulumi-cloud
