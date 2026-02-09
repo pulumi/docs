@@ -61,7 +61,7 @@ features:
 two_column_anchor: demo-workshop
 two_column:
   - label: Talk with an expert
-    title: Book a Kubernetes Demo
+    title: Book a Kubernetes demo
     description: |
       Schedule some booth time with a solution architect to talk through your specific Kubernetes challenges. We'll come prepared to dig into whatever you're facing, from scaling issues and complex deployments to finding ways to improve your workflows and operational efficiency.
     cta_text: Book a technical demo
