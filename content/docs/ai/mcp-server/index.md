@@ -4,16 +4,16 @@ meta_desc: "Learn how to use Pulumi's Model Context Protocol (MCP) server to int
 title: MCP server
 h1: Pulumi Model Context Protocol server
 meta_image: /images/docs/meta-images/docs-meta.png
-weight: 6
 menu:
-    iac:
+    ai:
         name: MCP server
-        parent: iac-guides-ai-integration
-        weight: 6
+        parent: ai-home
+        weight: 70
 aliases:
 - /docs/iac/using-pulumi/mcp-server/
 - /docs/iac/guides/mcp-server.md
 - /docs/iac/using-pulumi/mcp-server/index/
+- /docs/iac/guides/ai-integration/mcp-server/
 ---
 
 The Pulumi Model Context Protocol (MCP) server enables AI-powered coding assistants to access your Pulumi Cloud resources and delegate infrastructure tasks to [Pulumi Neo](/docs/pulumi-cloud/neo/). This integration allows you to query your cloud infrastructure, search for resources, and launch automated infrastructure workflows - all from within the AI assistant of your choice.
