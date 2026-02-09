@@ -32,4 +32,4 @@ Pulumi Cloud's RBAC system is built on these core concepts:
 
 ### Customization
 
-Enterprise organizations have access to manage and create their own Teams. They also can manage and create their own custom permission sets and Roles, on top of the defaults available to every organization in Pulumi.
+Enterprise organizations have access to manage and create their own teams. They also can manage and create their own custom permission sets and roles, on top of the defaults available to every organization in Pulumi.
