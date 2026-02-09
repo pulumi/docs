@@ -25,12 +25,14 @@ description: Automates moving documentation files with git history preservation,
 
 1. **Determines source file** - Identifies file to move from argument, context, or prompts user
 2. **Gets destination** - Interactive destination selection with validation and preview
-3. **Moves file safely** - Uses `git mv` to preserve history and injects Hugo alias
-4. **Verifies aliases** - Runs repository alias verification scripts
-5. **Updates internal links** - Updates references in docs/ and product/ directories
-6. **Provides summary** - Shows comprehensive checklist and next steps
+3. **Detects co-located assets** - Finds images and assets that should move with the file
+4. **Moves file and assets safely** - Uses `git mv` to preserve history and injects Hugo alias
+5. **Updates menu frontmatter** - Adjusts menu section when crossing section boundaries
+6. **Verifies aliases** - Runs repository alias verification scripts
+7. **Updates internal links** - Updates references in docs/ and product/ directories
+8. **Provides summary** - Shows comprehensive checklist and next steps, including orphaned menu detection
 
-## 6-Step Workflow
+## 8-Step Workflow
 
 ### Step 1: Determine Source File
 
@@ -54,7 +56,7 @@ description: Automates moving documentation files with git history preservation,
 **Display**:
 
 ```
-[Step 1/6] Determine Source File
+[Step 1/8] Determine Source File
 
 📄 Moving: content/docs/old/path/file.md
    Type: Hugo content file
@@ -103,16 +105,110 @@ How would you like to move this file?
 - Same as source → Error, ask for different destination
 - Invalid filename format → Explain kebab-case, ask again
 
-### Step 3: Execute Move and Add Alias
+### Step 3: Detect and Handle Co-located Assets
 
-**Goal**: Move file with git and inject Hugo alias.
+**Goal**: Identify and optionally move images and other assets co-located with the source file.
 
 **Display**:
 
 ```
-[Step 3/6] Execute Move and Add Alias
+[Step 3/8] Detect Co-located Assets
 
-Moving file with git...
+Checking for images and assets in source directory...
+```
+
+**Action**:
+
+Run asset detection script:
+
+```bash
+bash .claude/commands/move-doc/scripts/detect-assets.sh "{source_file}"
+```
+
+**Parse JSON output**:
+
+- `assetCount` - Number of assets found
+- `assets[]` - Array of asset file paths
+- `sourceDir` - Source directory path
+
+**Decision tree based on asset count**:
+
+**0 assets**:
+```
+✓ No co-located assets found
+```
+Continue to Step 4.
+
+**1-3 assets**:
+```
+Found {count} asset(s) in {sourceDir}:
+  - filename1.png
+  - filename2.svg
+  - filename3.jpg
+
+Move these assets to the new location?
+```
+
+Use AskUserQuestion with options:
+- Yes - Move all assets (recommended)
+- No - Keep assets at current location
+- Review individually - Select which assets to move
+
+**4+ assets**:
+```
+Found {count} assets in {sourceDir}
+
+Would you like to move these assets with the file?
+```
+
+Use AskUserQuestion with options:
+- Move all assets (recommended)
+- Review and select specific assets
+- Skip asset movement
+
+**Asset reference detection**:
+
+If user chooses not to move assets, check if markdown file references them:
+
+```bash
+for asset in "${skipped_assets[@]}"; do
+  basename=$(basename "$asset")
+  if grep -q "$basename" "{source_file}"; then
+    # Found reference
+  fi
+done
+```
+
+If references found, display warning:
+```
+⚠️  Warning: Source file references assets that won't be moved:
+  - image.png (referenced in markdown)
+  - diagram.svg (referenced in markdown)
+
+These image references will break unless you update them manually.
+Consider moving these assets or updating the references to absolute paths.
+```
+
+**Store asset move list**: Keep track of which assets to move for execution in Step 4.
+
+**Error handling**:
+
+- Script execution fails → Warn, continue without asset detection
+- Permission errors reading directory → Warn, continue without asset detection
+- Very large number of assets (20+) → Offer batch operations, don't list all individually
+
+See `move-doc:references:asset-handling` for detailed asset co-location patterns and verification strategies.
+
+### Step 4: Execute Move and Add Alias
+
+**Goal**: Move file and selected assets with git, then inject Hugo alias.
+
+**Display**:
+
+```
+[Step 4/8] Execute Move and Add Alias
+
+Moving file and assets with git...
 ```
 
 **Actions**:
@@ -123,10 +219,21 @@ Moving file with git...
 mkdir -p "$(dirname "{destination_file}")"
 ```
 
-**3b. Execute git mv**:
+**3b. Execute git mv for markdown file**:
 
 ```bash
 git mv "{source_file}" "{destination_file}"
+```
+
+**3b-assets. Execute git mv for selected assets** (if any from Step 3):
+
+```bash
+dest_dir=$(dirname "{destination_file}")
+
+for asset in "${assets_to_move[@]}"; do
+  asset_basename=$(basename "$asset")
+  git mv "$asset" "$dest_dir/$asset_basename"
+done
 ```
 
 **3c. Calculate old URL** using algorithm from `move-doc:references:path-conversion`
@@ -137,6 +244,7 @@ git mv "{source_file}" "{destination_file}"
 
 ```
 ✅ File moved: {source_file} → {destination_file}
+✅ Assets moved: {asset_count} file(s)
 ✅ Git history preserved (used git mv)
 ✅ Alias added: {old_url}
 ```
@@ -144,17 +252,143 @@ git mv "{source_file}" "{destination_file}"
 **Error handling**:
 
 - `git mv` fails → Report error (uncommitted changes, conflicts, permissions), rollback not needed as no changes made
+- Asset move fails → Report which assets failed, continue with markdown file
 - Alias injection fails → Warn user, provide manual instructions, continue with verification
 - Duplicate alias exists → Report success (already correct)
 
-### Step 4: Run Alias Verification
+### Step 5: Analyze and Update Menu Frontmatter
+
+**Goal**: Detect and update menu frontmatter when moving between documentation sections.
+
+**Display**:
+
+```
+[Step 5/8] Analyze Menu Frontmatter
+
+Checking if menu updates are needed...
+```
+
+**Action**:
+
+Run menu analysis script:
+
+```bash
+bash .claude/commands/move-doc/scripts/analyze-menu.sh "{source_file}" "{destination_file}"
+```
+
+**Parse JSON output**:
+
+- `needsUpdate` - Boolean indicating if update needed
+- `sourceMenu` - Current menu section (e.g., "iac")
+- `destPathSection` - Destination section based on path (e.g., "ai")
+- `recommendation` - Human-readable recommendation
+
+**Decision tree**:
+
+**needsUpdate = false**:
+```
+✓ Menu frontmatter matches destination section
+```
+Continue to Step 6.
+
+**needsUpdate = true**:
+
+Display context:
+```
+ℹ️  Menu Section Change Detected
+
+Current menu section: {sourceMenu}
+Destination path: /docs/{destPathSection}/...
+
+The file is moving between sections and menu frontmatter needs updating.
+```
+
+Use AskUserQuestion with options:
+- Update menu automatically (recommended)
+- Show me what to change (manual instructions)
+- Skip (file will appear in wrong navigation section)
+
+**If automatic update chosen**:
+
+1. **Find appropriate parent identifier** for destination section:
+   - Check destination section's `_index.md` for menu identifier
+   - Look at sibling files in destination directory for common parent
+   - Fallback to `{section}-home` pattern
+
+2. **Read current frontmatter** to extract menu block:
+   ```bash
+   grep -A 5 "menu:" "{destination_file}"
+   ```
+
+3. **Use Edit tool** to update menu section and parent:
+
+   Example:
+   ```yaml
+   # Before
+   menu:
+       iac:
+           name: MCP server
+           parent: iac-guides-ai-integration
+           weight: 6
+
+   # After
+   menu:
+       ai:
+           name: MCP server
+           parent: ai-home
+           weight: 6
+   ```
+
+4. **Display confirmation**:
+   ```
+   ✅ Updated menu frontmatter:
+     Section: {sourceMenu} → {destPathSection}
+     Parent: {old_parent} → {new_parent}
+   ```
+
+**If manual instructions chosen**:
+
+Display exact changes needed:
+```
+Update menu frontmatter in {destination_file}:
+
+Lines X-Y:
+  Change: menu.iac → menu.ai
+  Change: parent: iac-guides-ai-integration → parent: ai-home
+
+Command to edit:
+  code {destination_file}:X
+```
+
+**If skip chosen**:
+
+Display warning:
+```
+⚠️  Warning: Menu frontmatter not updated
+
+The file will appear in the '{sourceMenu}' navigation section instead of '{destPathSection}'.
+This may cause confusion for users navigating the documentation.
+
+To fix later, manually update the menu section in the frontmatter.
+```
+
+**Error handling**:
+
+- No menu frontmatter found → Skip this step, display info message
+- Malformed YAML in menu section → Offer manual update guidance, don't attempt automatic fix
+- Cannot determine parent identifier → Ask user for parent identifier input
+- File staying in same section → Skip update, display info message
+
+See `move-doc:references:menu-updates` for detailed menu structure, parent discovery algorithms, and verification procedures.
+
+### Step 6: Run Alias Verification
 
 **Goal**: Verify alias correctness using repository scripts.
 
 **Display**:
 
 ```
-[Step 4/6] Run Alias Verification
+[Step 6/8] Run Alias Verification
 
 Running alias verification scripts...
 ```
@@ -208,14 +442,14 @@ with open('scripts/alias-verification/aliases-missing.txt', 'r') as f:
 
 See `move-doc:references:verification` for detailed script usage and error handling.
 
-### Step 5: Update Internal Links
+### Step 7: Update Internal Links
 
 **Goal**: Update references in `docs/` and `product/` (skip `blog/` and `tutorials/` per AGENTS.md).
 
 **Display**:
 
 ```
-[Step 5/6] Update Internal Links
+[Step 7/8] Update Internal Links
 
 Searching for internal references...
 ```
@@ -241,14 +475,14 @@ Searching for internal references...
 
 **Important**: Always skip `blog/` and `tutorials/` per AGENTS.md. See `move-doc:references:link-updates` for patterns and edge cases.
 
-### Step 6: Summary and Next Steps
+### Step 8: Summary and Next Steps
 
-**Goal**: Provide comprehensive summary and actionable next steps.
+**Goal**: Provide comprehensive summary with orphaned menu detection and actionable next steps.
 
 **Display**:
 
 ```
-[Step 6/6] Summary and Next Steps
+[Step 8/8] Summary and Next Steps
 
 ═══════════════════════════════════════════════════════════
 📋 Move Summary
@@ -258,12 +492,80 @@ File Move:
 ✅ Moved: {old_url} → {new_url}
 ✅ Git history preserved (used git mv)
 
+Assets:
+{asset_status}
+
+Menu Frontmatter:
+{menu_status}
+
 Aliases:
 {alias_status}
 
 Internal Links:
 {link_update_status}
 
+═══════════════════════════════════════════════════════════
+```
+
+**Additional Check: Orphaned Menu Entries**
+
+Run orphaned menu detection:
+
+```bash
+bash .claude/commands/move-doc/scripts/check-orphaned-menus.sh "{old_url}"
+```
+
+**Parse JSON output**:
+
+- `found` - Whether a menu entry was found
+- `isOrphaned` - Whether entry has no remaining references
+- `identifier` - Menu identifier checked
+- `lineNumber` - Line in menus.yml
+- `referenceCount` - Number of files still referencing this identifier
+
+**If orphaned entry found** (`found: true` and `isOrphaned: true`):
+
+Display warning in summary:
+
+```
+⚠️  Orphaned Menu Entry Detected
+
+The menu entry in config/_default/menus.yml may be orphaned:
+  Identifier: {identifier}
+  Location: config/_default/menus.yml:{lineNumber}
+  References: 0 files
+
+Consider removing this entry from menus.yml if no other pages use it.
+Manual verification recommended before removal.
+```
+
+Add to next steps:
+
+```markdown
+6. Review orphaned menus (if detected):
+   - Open config/_default/menus.yml:{lineNumber}
+   - Verify no other pages reference '{identifier}'
+   - Search: grep -r "parent: {identifier}" content/docs/
+   - If confirmed unused, remove the menu entry
+   - Test: make serve (verify navigation still works)
+   - Commit: git commit -m "docs: remove orphaned menu entry for {identifier}"
+```
+
+**If entry still referenced** (`found: true` and `isOrphaned: false`):
+
+Display info message:
+
+```
+ℹ️  Menu entry '{identifier}' still in use by {referenceCount} file(s). No cleanup needed.
+```
+
+**If no entry found** (`found: false`):
+
+No additional message needed (old location didn't have corresponding menu entry).
+
+**Complete next steps display**:
+
+```
 ═══════════════════════════════════════════════════════════
 📝 Next Steps
 ═══════════════════════════════════════════════════════════
@@ -279,6 +581,7 @@ Internal Links:
    make serve
    Visit: http://localhost:1313{new_url}
    Old URL: http://localhost:1313{old_url} (should redirect)
+   {asset_verification_note}
 
 4. Commit:
    git add -A
@@ -289,16 +592,33 @@ Internal Links:
    - External docs pointing to old URL
    - Related content links
 
+{orphaned_menu_steps}
+
 ═══════════════════════════════════════════════════════════
 ```
 
 **Status templates**:
 
-- Alias success: "✅ Added alias: {old_url}" + "✅ Alias verification: PASSED"
-- Alias warning: "⚠️ Added alias: {old_url}" + "⚠️ Alias verification: FAILED"
-- Links updated: "✅ Updated {count} reference(s)" + note about skipped blog/tutorials
-- Links skipped: "ℹ️ {count} reference(s) not updated (manual update needed)"
-- No links: "✅ No internal links to update"
+- **Assets**:
+  - Moved: "✅ Moved {count} asset(s) with file"
+  - Skipped: "ℹ️ {count} asset(s) not moved (verify references)"
+  - None: "✅ No co-located assets"
+
+- **Menu**:
+  - Updated: "✅ Updated menu section: {old} → {new}"
+  - Updated parent: "✅ Updated menu parent: {old_parent} → {new_parent}"
+  - No update needed: "✅ Menu frontmatter matches destination"
+  - Skipped: "⚠️ Menu frontmatter not updated (manual update needed)"
+  - No menu: "ℹ️ No menu frontmatter in file"
+
+- **Aliases**:
+  - Success: "✅ Added alias: {old_url}" + "✅ Alias verification: PASSED"
+  - Warning: "⚠️ Added alias: {old_url}" + "⚠️ Alias verification: FAILED"
+
+- **Links**:
+  - Updated: "✅ Updated {count} reference(s)" + note about skipped blog/tutorials
+  - Skipped: "ℹ️ {count} reference(s) not updated (manual update needed)"
+  - None: "✅ No internal links to update"
 
 **Optional commit assistance**: Offer to create commit with message following repository conventions.
 
@@ -308,6 +628,9 @@ This skill uses detailed reference documentation:
 
 - `move-doc:references:path-conversion` - Hugo URL path calculation algorithm
 - `move-doc:references:alias-injection` - Frontmatter manipulation patterns
+- `move-doc:references:asset-handling` - Asset co-location patterns and movement strategies
+- `move-doc:references:menu-updates` - Menu structure and frontmatter update procedures
+- `move-doc:references:orphaned-menus` - Orphaned menu detection and cleanup guidance
 - `move-doc:references:link-updates` - Internal link update patterns and edge cases
 - `move-doc:references:verification` - Alias verification script usage
 
