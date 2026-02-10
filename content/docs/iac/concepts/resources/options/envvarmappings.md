@@ -22,7 +22,7 @@ This is useful when you need to run multiple providers or provider instances tha
 
 Use this option when:
 
-- **Running multiple providers targeting different accounts or regions**: For example, two AWS providers targeting different accounts can each use their own environnment variable-based credentials without conflicting.
+- **Running multiple providers targeting different accounts or regions**: For example, two AWS providers targeting different accounts can each use their own environment variable-based credentials without conflicting.
 
 {{% notes type="info" %}}
 The `envVarMappings` resource option only applies to provider resources.

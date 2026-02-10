@@ -17,9 +17,10 @@ social:
     linkedin:
 ---
 
-Pulumi is excited to introduce environment variable remapping as a provider resource option.
-From Pulumi version 3.220.0, you can use the new `envVarMappings` resource option to redirect provider environment variables to custom keys.
-This is useful when you need multiple Pulumi providers to use different values for the same environment variable.
+Running multiple providers with different credentials in the same Pulumi program has always been tricky.
+Providers expect fixed environment variable names like `AWS_ACCESS_KEY_ID` or `ARM_CLIENT_SECRET`, so if you need two AWS providers targeting different accounts, you couldn't configure them both via environment variables.
+
+Pulumi v3.220.0 introduces `envVarMappings`, a new resource option that solves this problem by letting you remap provider environment variables to custom keys.
 
 <!--more-->
 
@@ -55,14 +56,13 @@ The concept is as follows:
 
 ## Example
 
-Let's say you want to give your provider a specific value for `ARM_CLIENT_SECRET`, one that is different from the `ARM_CLIENT_SECRET` otherwise in use in your shell.
-You would first define a new, custom environment variable as follows:
+Let's say your provider expects `ARM_CLIENT_SECRET`, but you want it to use a different value than the one set in your shell. First, define a custom environment variable with your desired value:
 
 ```bash
 $ export CUSTOM_ARM_CLIENT_SECRET=7654321
 ```
 
-And then you'd tell your provider to setits `ARM_CLIENT_SECRET` to the value of your special  `CUSTOM_ARM_CLIENT_SECRET`.
+Then, use `envVarMappings` to tell the provider: "When you look for `ARM_CLIENT_SECRET`, read from `CUSTOM_ARM_CLIENT_SECRET` instead." The mapping format is `{ "SOURCE_VAR": "TARGET_VAR" }`:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -155,6 +155,7 @@ resources:
 {{< /chooser >}}
 
 You can now customize each environment variable value your provider sees by defining a new environment variable, and then mapping your provider's defined variable to yours.
+Try it out with Pulumi v3.220.0 today!
 
 For full details, see the [envVarMappings documentation](/docs/iac/concepts/resources/options/envvarmappings/).
 
