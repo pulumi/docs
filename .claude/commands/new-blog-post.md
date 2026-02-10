@@ -8,8 +8,6 @@ description: Create a new blog post with proper structure, frontmatter, and auto
 
 Creates a new blog post with proper structure, frontmatter, and author onboarding if needed. Automatically detects the author from git configuration and handles all required setup.
 
-**Note**: This slash command is the preferred method for creating blog posts. The old `make new-blog-post` command is deprecated and no longer maintained.
-
 ## Instructions for Claude
 
 **CRITICAL**: Complete all 5 steps in sequence. Display progress as **[Step X/5]** before each step.
@@ -40,7 +38,7 @@ When this command is invoked, you should:
 
 **Blog Post Details:**
 
-- **Title**: The blog post title (will be Title Case in frontmatter)
+- **Title**: The blog post title (will be Title Case in frontmatter). If the user doesn't have a title yet, ask for a working title or topic to generate a slug and suggested meta description/tags. Be clear that the user can update the title later before publishing.
 - **Author ID**: The author's ID (e.g., "jane-doe"). Prepopulate with the suggested author ID from git config if detected.
 - **Summary**: Suggest a concise, one-sentence meta description based on the post title (50-160 characters, optimized for SEO and social media)
 - **Tags**: Suggest 1-3 relevant tags based on the post title and similar existing blog posts. Common tags include: features, product-launches, pulumi-cloud, aws, azure, kubernetes, tutorials, announcements
@@ -56,6 +54,7 @@ When this command is invoked, you should:
     - Option 2: Prompt for custom date in YYYY-MM-DD format, validate the format
     - Option 3: Use 2099-01-01 and set a flag to add TODO comment in frontmatter
   - Note: Replace {current-date} with the actual current date (e.g., "2026-02-05")
+  - DO NOT display the day of the week in the date options. Use only the date in YYYY-MM-DD format for clarity and consistency.
 
 **For New Authors Only (skip if existing author detected):**
 
