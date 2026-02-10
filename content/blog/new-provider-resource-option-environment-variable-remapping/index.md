@@ -18,7 +18,7 @@ social:
 ---
 
 Pulumi is excited to introduce environment variable remapping as a provider resource option.
-From Pulumi version (TODO: version), you can use the new `envVarMappings` resource option to redirect provider environment variables to custom keys.
+From Pulumi version 3.220.0, you can use the new `envVarMappings` resource option to redirect provider environment variables to custom keys.
 This is useful when you need multiple Pulumi providers to use different values for the same environment variable.
 
 <!--more-->
