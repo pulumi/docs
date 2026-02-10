@@ -13,7 +13,7 @@ menu:
     identifier: deployments-deployments-get-started-npw
 ---
 
-This guide describes how to start using Pulumi Deployments with a new Pulumi IaC project created via the Pulumi Cloud [New Project Wizard](/docs/idp/developer-portals/new-project-wizard/).
+This guide describes how to start using Pulumi Deployments with a new Pulumi IaC project created via the Pulumi Cloud [New Project Wizard](/docs/idp/concepts/new-project-wizard/).
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ In order to use templates you will need to authorize Pulumi with GitHub so that 
 Click the button and accept the required permissions if you would like to use templates.
 
 {{% notes "info" %}}
-If you select "Use a template" and your Pulumi administrator has configured [custom templates](/docs/idp/developer-portals/templates) for your organization, you will be able to choose from your organization's custom templates in a later step.
+If you select "Use a template" and your Pulumi administrator has configured [custom templates](/docs/idp/concepts/templates) for your organization, you will be able to choose from your organization's custom templates in a later step.
 If you select "Use a template" but your organization doesn't have custom templates, you'll be able to choose one of Pulumi's public templates.
 {{% /notes %}}
 
@@ -50,7 +50,7 @@ This impacts the resulting `Pulumi.yaml` file and the name of `Pulumi.<stack>.ya
 
 ### Configuration
 
-This section allows you to provide values for any necessary configuration if you're using a [template](/docs/idp/developer-portals/templates) that declares required configuration keys.
+This section allows you to provide values for any necessary configuration if you're using a [template](/docs/idp/concepts/templates) that declares required configuration keys.
 
 This impacts the `config` stanza in `Pulumi.<stack>.yaml`.
 

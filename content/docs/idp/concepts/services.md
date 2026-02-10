@@ -2,14 +2,14 @@
 title_tag: Services | Pulumi IDP
 title: Services
 h1: "Services"
-meta_desc: This page provides an overview on how to get started with Pulumi IDP Service.
-weight: 5
+meta_desc: Learn about Pulumi Services for organizing and managing infrastructure entities.
 aliases:
-  - /docs/idp/get-started/services/
+  - /docs/idp/concepts/services/
 menu:
   idp:
-    parent: idp-get-started
-    identifier: idp-get-started-services
+    parent: idp-concepts
+    identifier: idp-concepts-services
+    weight: 50
 ---
 
 Pulumi Services are logical groupings of Pulumi entities such as [stacks](/docs/iac/concepts/stacks/) and [ESC environments](/docs/esc/environments/). They enable users to model infrastructure in Pulumi in a way that is familiar to them.
@@ -31,5 +31,3 @@ Entities can be added when a service is created or after the fact.
 ## Service Properties
 
 Service properties are metadata that provide additional context to a service. Properties can be a URL, such as an observability dashboard link, free-form text describing the service in more detail, Slack channels, or Teams channels. Properties can be set during the service creation flow or after the fact.
-
-{{< get-started-stepper >}}

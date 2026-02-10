@@ -72,7 +72,7 @@ To collaborate with other developers or use advanced features like [SAML SSO](/d
 ### Developer experience
 
 - **[Pulumi Neo](/docs/ai/)**: AI agent for infrastructure automation, debugging, code generation, and infrastructure questions
-- **[Developer portals](/docs/idp/developer-portals/)**: Self-service infrastructure with templates and the New Project Wizard
+- **[Developer portals](/docs/idp/concepts/)**: Self-service infrastructure with templates and the New Project Wizard
 - **[Pulumi Insights](/docs/insights/)**: Search, visualize, and manage cloud resources across your organization
 
 ### Extensibility

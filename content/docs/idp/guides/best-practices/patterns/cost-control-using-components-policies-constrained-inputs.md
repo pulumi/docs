@@ -5,6 +5,8 @@ menu:
   idp:
     parent: idp-patterns
     weight: 90
+aliases:
+  - /docs/idp/guides/best-practices/patterns/cost-control-using-components-policies-constrained-inputs/
 meta_desc: Implement cost control through constrained component inputs, policies, and predefined options
 allow_long_title: true
 h1: "IDP Pattern: Cost control using Components, Policies, and constrained inputs"
@@ -147,6 +149,6 @@ const database = new CostControlledDatabase("app-db", {
 
 ## Related patterns
 
-- [IDP Pattern: Policies as tests](/docs/idp/best-practices/patterns/policies-as-tests) - For enforcing cost policies
-- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/best-practices/patterns/validating-component-inputs-using-policy-functions) - For shared validation logic
-- [IDP Pattern: Components using other Components](/docs/idp/best-practices/patterns/components-using-other-components) - For cost-controlled component hierarchies
+- [IDP Pattern: Policies as tests](/docs/idp/guides/best-practices/patterns/policies-as-tests) - For enforcing cost policies
+- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/guides/best-practices/patterns/validating-component-inputs-using-policy-functions) - For shared validation logic
+- [IDP Pattern: Components using other Components](/docs/idp/guides/best-practices/patterns/components-using-other-components) - For cost-controlled component hierarchies

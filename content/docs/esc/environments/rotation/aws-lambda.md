@@ -21,7 +21,7 @@ The `aws-lambda` rotation connector enables you to rotate credentials inside of 
 
 First, we need to setup infrastructure that will actually call your database and rotate the user credentials.
 
-If you are using AWS RDS, we recommend using a template called `esc-connector-lambda-typescript`. You can instantiate a new project from it using either [New Project Wizard](https://www.pulumi.com/docs/idp/developer-portals/new-project-wizard/) or using [Pulumi CLI](https://www.pulumi.com/docs/iac/cli/) by running `pulumi new esc-connector-lambda-typescript`. Fill out the template configuration and run `pulumi up` to deploy the infrastructure.
+If you are using AWS RDS, we recommend using a template called `esc-connector-lambda-typescript`. You can instantiate a new project from it using either [New Project Wizard](https://www.pulumi.com/docs/idp/concepts/new-project-wizard/) or using [Pulumi CLI](https://www.pulumi.com/docs/iac/cli/) by running `pulumi new esc-connector-lambda-typescript`. Fill out the template configuration and run `pulumi up` to deploy the infrastructure.
 
 If you are not using AWS RDS, or if you want to deploy connector infrastructure manually, take a look at the [template readme](https://github.com/pulumi/templates/blob/master/esc-connector-lambda-typescript/README.md).
 

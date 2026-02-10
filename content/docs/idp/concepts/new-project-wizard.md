@@ -1,15 +1,16 @@
 ---
 title: New Project Wizard
 title_tag: Get started with New Project Wizard
-h1: The Pulumi Cloud New Project Wizard
+h1: New Project Wizard
 meta_desc: Learn how to create new projects from Organization Templates, with Pulumi Deployments configured out-of-the-box.
 menu:
   idp:
     name: New Project Wizard
-    parent: idp-developer-portals
-    weight: 2
-    identifier: idp-developer-portals-npw
+    parent: idp-concepts
+    weight: 30
+    identifier: idp-concepts-new-project-wizard
 aliases:
+- /docs/idp/developer-portals/new-project-wizard/
 - /docs/pulumi-cloud/developer-platforms/new-project-wizard/
 - /docs/pulumi-cloud/developer-portals/new-project-wizard/
 ---
@@ -20,7 +21,7 @@ The New Project Wizard (NPW) is an interactive interface in the Pulumi Cloud con
 
 The New Project Wizard supports three primary workflows:
 
-1. **Create a new project from a template**: Create a new project and its first stack by forking code from a Pulumi organization [template](/docs/idp/developer-portals/templates/). This creates a copy of the template code in your repository, which you can then modify independently.
+1. **Create a new project from a template**: Create a new project and its first stack by forking code from a Pulumi organization [template](/docs/idp/concepts/organization-templates/). This creates a copy of the template code in your repository, which you can then modify independently.
 1. **Add a no-code stack to a template**: Add a new stack to an organization template without forking the template code. The template code remains the single source of truth, and the stack references the template directly.
 1. **Add a stack to an existing project**: Add a new stack to any existing Pulumi project, whether or not it was originally created from a template.
 
@@ -34,7 +35,7 @@ Within the New Project Wizard, you can configure:
   - Import [ESC environments](/docs/esc/environments/) to provide configuration and secrets
   - Set individual configuration values using a form-based interface (see note below)
 - **Deployment settings**: Configure [Pulumi Deployments](/docs/deployments/deployments/) for the new stack, including [drift detection and remediation](/docs/deployments/deployments/drift/)
-- **Service assignment**: Assign the new stack to a Pulumi IDP [Service](/docs/idp/get-started/services/)
+- **Service assignment**: Assign the new stack to a Pulumi IDP [Service](/docs/idp/concepts/services/)
 
 {{% notes "info" %}}
 Configuration value forms are displayed in two scenarios:
