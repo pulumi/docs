@@ -166,9 +166,9 @@ For more information on how to integrate Pulumi with your CI/CD provider of choi
 
 ### Policy as Code {#policy}
 
-Pulumi CrossGuard gives you the ability to set guardrails that enforce best practices and security compliance, allowing developers to provision infrastructure easily while at the same time adhering to the standards defined by their teams and organizations. Using Policy as Code, you can write flexible business or security policies in any Pulumi-supported language as well as Open Policy Agent (OPA) Rego, and administrators can apply these policies either to individual stacks or to all of the stacks in an organization. CrossGuard is open source and free to use. Comparable functionality is possible through the use of CloudFormation hooks, though the process of building, testing, and using CloudFormation hooks is considerably different.
+Pulumi Policies gives you the ability to set guardrails that enforce best practices and security compliance, allowing developers to provision infrastructure easily while at the same time adhering to the standards defined by their teams and organizations. Using Policy as Code, you can write flexible business or security policies in any Pulumi-supported language as well as Open Policy Agent (OPA) Rego, and administrators can apply these policies either to individual stacks or to all of the stacks in an organization. Pulumi Policies is open source and free to use. Comparable functionality is possible through the use of CloudFormation hooks, though the process of building, testing, and using CloudFormation hooks is considerably different.
 
-To learn more about policy as code with Pulumi, see [Policy as Code ("CrossGuard")](/docs/using-pulumi/crossguard/).
+To learn more about policy as code with Pulumi, see [Pulumi Policies](/docs/insights/policy/).
 
 ### Secrets Management {#secrets}
 

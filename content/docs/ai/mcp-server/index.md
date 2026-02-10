@@ -415,4 +415,4 @@ Now that you have the Pulumi MCP server set up, explore these related topics:
 - [Pulumi Neo](/docs/pulumi-cloud/neo/) for autonomous infrastructure automation
 - [Pulumi concepts](/docs/iac/concepts/) to understand core IaC principles
 - [Getting started guides](/docs/iac/get-started/) for your preferred cloud provider
-- [Policy as Code](/docs/iac/crossguard/) for infrastructure compliance
+- [Policy as Code](/docs/insights/policy/) for infrastructure compliance

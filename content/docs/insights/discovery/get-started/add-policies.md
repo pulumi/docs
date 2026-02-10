@@ -18,7 +18,7 @@ Now that you have scanned your cloud accounts and discovered resources, you can 
 
 ## Creating a policy pack
 
-First, we'll create a policy pack using the Pulumi CLI. [Policy packs](/docs/iac/using-pulumi/crossguard/core-concepts/#policy-packs) are collections of rules that can evaluate your cloud resources against specific criteria. In this example we'll show you how to use one of Pulumi's policy templates that enforces specific compliance for your AWS resources, in this case an S3 bucket.
+First, we'll create a policy pack using the Pulumi CLI. [Policy packs](/docs/insights/policy/policy-packs/) are collections of rules that can evaluate your cloud resources against specific criteria. In this example we'll show you how to use one of Pulumi's policy templates that enforces specific compliance for your AWS resources, in this case an S3 bucket.
 
 {{% notes type="info" %}}
 To see the full list of available policy pack templates, check out the [`pulumi/templates-policy`](https://github.com/pulumi/templates-policy) GitHub repository.
