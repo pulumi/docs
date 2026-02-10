@@ -1,8 +1,8 @@
 ---
-title: "New Provider Resource Option: Environment Variable Remapping"
+title: "Introducing envVarMappings: Managing Multiple Provider Credentials Just Got Easier"
 date: 2026-02-12
 draft: false
-meta_desc: "Remap provider environment variables to custom keys using the new resource option, pulumi.EnvVarMappings"
+meta_desc: "Use envVarMappings to run multiple providers with different credentials in the same Pulumi program, no more environment variable conflicts."
 meta_image: meta.png
 authors:
     - guinevere-saenger
