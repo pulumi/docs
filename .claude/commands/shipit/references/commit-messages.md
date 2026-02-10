@@ -1,3 +1,7 @@
+---
+user-invocable: false
+---
+
 # Commit Message Guidelines
 
 Quick reference for generating meaningful commit messages that follow repository conventions.

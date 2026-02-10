@@ -1,3 +1,7 @@
+---
+user-invocable: false
+---
+
 # Quality Checks Reference
 
 Quick reference for quality check procedures in the `/shipit` skill.
