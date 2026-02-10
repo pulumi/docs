@@ -16,7 +16,7 @@ aliases:
 - /docs/pulumi-cloud/access-management/rbac/scopes/org-settings/
 ---
 
-This document defines all the available scopes in Pulumi Cloud, organized by [entity type](../permission-sets#entity-types) and group.
+This document defines all the available scopes in Pulumi Cloud, organized by [entity type](../../permission-sets#entity-types) and group.
 
 ## Agent Pools
 
