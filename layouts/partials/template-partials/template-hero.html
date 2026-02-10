@@ -56,13 +56,13 @@
             {{ end }}
             <p class="description mb-12">{{ $description }}</p>
             {{ if $ctaText }}
-            <div class="flex flex-col sm:flex-row items-start gap-4">
-                <a href="{{ $ctaLink }}" class="btn-primary-template-variant inline-flex items-center gap-2">
+            <div class="flex flex-col lg:flex-row items-start gap-4">
+                <a href="{{ $ctaLink }}" class="btn-primary-template-variant inline-flex items-center gap-2 w-full xl:w-auto justify-center xl:justify-start">
                     <span>{{ $ctaText }}</span>
                     <span>→</span>
                 </a>
                 {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2">
+                <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2 w-full xl:w-auto justify-center xl:justify-start">
                     <span>{{ $ctaSecondaryText }}</span>
                     <span>→</span>
                 </a>

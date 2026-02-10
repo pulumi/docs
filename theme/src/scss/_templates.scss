@@ -185,12 +185,6 @@ $violet-primary: #673EAC;
     .card-description {
         @include section-body-medium();
     }
-
-    .btn-secondary-template-variant {
-        display: inline-block;
-        width: auto;
-        align-self: flex-start;
-    }
 }
 
 .template-promo-banner {
@@ -230,12 +224,6 @@ $violet-primary: #673EAC;
 
     .three-column-item-description {
         @include section-body-medium();
-    }
-
-    .btn-secondary-template-variant {
-        display: inline-block;
-        width: auto;
-        align-self: flex-start;
     }
 }
 

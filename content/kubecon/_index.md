@@ -131,7 +131,7 @@ location:
     March 23-26, 2026
   description: |
     Stop by to see Neo in action, grab an exclusive Neo plushie, register for $500 in AWS credits, and talk infrastructure automation with the Pulumi engineering team.
-  map_embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.6116720155323!2d4.886040676670286!3d52.341190572014874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60a1f63d57e25%3A0xa08f37a724d09338!2sAmsterdam%20RAI!5e0!3m2!1sen!2sus!4v1769463657049!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+  map_embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.6116720155323!2d4.886040676670286!3d52.341190572014874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60a1f63d57e25%3A0xa08f37a724d09338!2sAmsterdam%20RAI!5e0!3m2!1sen!2sus!4v1769463657049!5m2!1sen!2sus"
   cta_text: Book a technical demo
   cta_link: https://info.pulumi.com/book-demo-kubecon-2026
   anchor: location

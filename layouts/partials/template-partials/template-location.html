@@ -26,8 +26,8 @@
 {{ $anchor := .anchor }}
 
 <section class="template-location"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-8">
-        <div>
+    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
+        <div class="w-full lg:w-1/2">
             {{ if $tagLine }}
             <div class="mb-4">
                 <span class="location-tag-line">{{ $tagLine }}</span>
@@ -53,13 +53,19 @@
             <a href="{{ $ctaLink }}" target="_blank" class="btn-primary-template-variant">{{ $ctaText }}</a>
             {{ end }}
         </div>
-        <div class="hidden md:block">
+        <div class="w-full lg:w-1/2">
             {{ if $mapEmbed }}
-            <div class="w-full md:max-w-2xl">
-                {{ $mapEmbed | safeHTML }}
+            <div class="relative w-full overflow-hidden mt-4 lg:mt-0" style="padding-top: 75%;">
+                <iframe
+                    src="{{ $mapEmbed }}"
+                    class="absolute top-0 left-0 w-full h-full border-0"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                ></iframe>
             </div>
             {{ else if $mapImage }}
-            <div class="w-full rounded-lg overflow-hidden shadow-lg">
+            <div class="w-full rounded-lg overflow-hidden mt-4 lg:mt-0">
                 <img src="{{ $mapImage }}" alt="Event location map" class="w-full h-auto" />
             </div>
             {{ end }}
