@@ -37,6 +37,12 @@ Getting started with GitOps can feel like trying to herd cats through a YAML fac
 
 If you're not familiar with the formal definition, the [OpenGitOps](https://opengitops.dev/) project distills it into four principles: declarative desired state, versioned and immutable storage, automatic pulling, and continuous reconciliation. Those principles define the "what." This post is about the "how" — the practical lessons that make or break a GitOps implementation.
 
+{{% notes type="info" %}}
+Going to [KubeCon Europe 2026](https://www.pulumi.com/kubecon/)? Tame Kubernetes complexity with code.
+
+Pulumi demos, platform engineering talks, AI-powered Neo in action, and yes, free plushies. [Booth 784](https://www.pulumi.com/kubecon/).
+{{% /notes %}}
+
 In this post, I'll walk you through the GitOps best practices I've picked up from production experience, community talks, and more than a few late-night incident calls. Whether you're just getting started with GitOps or looking to level up an existing setup, these tips should help you avoid the potholes.
 
 **Key takeaways:** Git is your only source of truth — no manual edits. Use pull-based, declarative deployments with directory-per-environment structure. Validate every change in CI before it hits your cluster. Manage secrets outside of Git. Bridge your IaC and GitOps layers instead of choosing one. And above all, be pragmatic — even the biggest GitOps adopters deviate when the situation calls for it.
