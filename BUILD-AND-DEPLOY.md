@@ -2162,7 +2162,7 @@ After Pulumi updates complete, automated health checks validate the deployed sit
 - Health check workflow marked as failed in GitHub Actions
 - Deployment workflow remains marked as successful (separation of concerns)
 
-**Testing locally:**
+### Local testing
 
 ```bash
 # Test production
@@ -2173,7 +2173,7 @@ make serve-static
 node scripts/post-deployment-health-check.js http://localhost:8080
 ```
 
-**Adding new checks:**
+### Adding new checks
 
 Edit `scripts/post-deployment-health-check.js` and add to:
 
