@@ -341,5 +341,5 @@ Commands that will run:
 - This skill respects the `/AGENTS.md` repository guidelines
 - Commit messages always include co-author attribution for Claude
 - PR descriptions never include "Generated with Claude Code"
-- Branch names follow `GitHubUser/{descriptive-name}` format
+- Branch names follow `{GitHub-alias}/{descriptive-name}` format
 - All git operations use safe practices (no force push, no destructive defaults)
