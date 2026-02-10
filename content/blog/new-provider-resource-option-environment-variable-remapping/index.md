@@ -156,4 +156,6 @@ resources:
 
 You can now customize each environment variable value your provider sees by defining a new environment variable, and then mapping your provider's defined variable to yours.
 
-Available in Pulumi version 1.250.awesome and higher.
+For full details, see the [envVarMappings documentation](/docs/iac/concepts/resources/options/envvarmappings/).
+
+Happy coding!
