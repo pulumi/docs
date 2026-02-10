@@ -48,12 +48,12 @@ You can access the New Project Wizard from multiple locations in the Pulumi Clou
 
 To create a new project from a template (fork) or add a no-code stack to a template (no fork):
 
-- Navigate to **Stacks** → **Create Project** → Select a template from the card view → click **Use this Template**
-- Navigate to **Platform** → **Templates** → Select a template → Click **Deploy with Pulumi**
+- Navigate to **Stacks** → **Create Project** → Select a template from the card view → select **Use this Template**
+- Navigate to **Platform** → **Templates** → Select a template → select **Deploy with Pulumi**
 
 To add a stack to an existing project:
 
-- Navigate to **Stacks** → Select a stack → Click **Add Stack**
+- Navigate to **Stacks** → Select a stack → select **Add Stack**
 
 ## Limitations
 
