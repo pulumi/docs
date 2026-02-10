@@ -63,6 +63,10 @@ Evaluate against AI discoverability patterns:
 | **Citable Claims** | Factual statements include specific data | Pass/Fail |
 | **Comparison Tables** | Structured tables for comparisons | Pass/Fail/N/A |
 | **Question Coverage** | Content answers what/how/why/when | Pass/Fail |
+| **Listicle Format** | Uses numbered/bulleted lists for key points | Pass/Fail |
+| **E-E-A-T Signals** | Shows experience, expertise, authority, trust | Pass/Fail |
+| **Down-Funnel Specificity** | Addresses specific use cases, integrations, edge cases | Pass/Fail |
+| **Agent-Friendly Content** | Clear CTAs, numbered steps, executable actions | Pass/Fail |
 
 ### Step 4: Check SEO Fundamentals
 
@@ -102,8 +106,8 @@ Present findings in a structured format:
 
 | Category | Score | Priority Items |
 |----------|-------|----------------|
-| AEO Readiness | X/6 | [top issues] |
-| SEO Fundamentals | X/5 | [top issues] |
+| AEO Readiness | X/10 | [top issues] |
+| SEO Fundamentals | X/6 | [top issues] |
 | Positioning | X/3 | [top issues] |
 
 ### Priority Recommendations
@@ -188,8 +192,8 @@ Additional checks for explainer content:
 
 | Category | Score | Priority Items |
 |----------|-------|----------------|
-| AEO Readiness | 3/6 | Missing quotable definition, no FAQ section |
-| SEO Fundamentals | 4/5 | Title slightly long (67 chars) |
+| AEO Readiness | 5/10 | Missing quotable definition, no FAQ section, no E-E-A-T signals |
+| SEO Fundamentals | 4/6 | Title slightly long (67 chars) |
 | Positioning | 2/3 | Could emphasize real programming languages |
 
 ### Priority Recommendations

@@ -55,12 +55,12 @@ For any target topic, generate these variant types:
 
 ### Modifier-Based Variants
 
-| Modifier Type | Examples |
-|---------------|----------|
-| Technology | "[topic] kubernetes", "[topic] aws" |
-| Use case | "[topic] best practices", "[topic] security" |
-| Audience | "[topic] for developers", "[topic] enterprise" |
-| Format | "[topic] guide", "[topic] examples" |
+| Modifier Type | Pattern | Example |
+|---------------|---------|---------|
+| Technology | "[topic] [platform]" | "configuration management kubernetes" |
+| Use case | "[topic] [use case]" | "secrets management best practices" |
+| Audience | "[topic] for [audience]" | "infrastructure as code for developers" |
+| Format | "[topic] [format]" | "policy as code examples" |
 
 ## Search Intent Categories
 
