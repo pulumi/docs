@@ -39,6 +39,8 @@ If you're not familiar with the formal definition, the [OpenGitOps](https://open
 
 In this post, I'll walk you through the GitOps best practices I've picked up from production experience, community talks, and more than a few late-night incident calls. Whether you're just getting started with GitOps or looking to level up an existing setup, these tips should help you avoid the potholes.
 
+**Key takeaways:** Git is your only source of truth — no manual edits. Use pull-based, declarative deployments with directory-per-environment structure. Validate every change in CI before it hits your cluster. Manage secrets outside of Git. Bridge your IaC and GitOps layers instead of choosing one. And above all, be pragmatic — even the biggest GitOps adopters deviate when the situation calls for it.
+
 1. [Git is your single source of truth (no, really)](/blog/gitops-best-practices-i-wish-i-had-known-before/#1-git-is-your-single-source-of-truth-no-really)
 1. [Declarative over imperative, always](/blog/gitops-best-practices-i-wish-i-had-known-before/#2-declarative-over-imperative-always)
 1. [Pull-based deployments are the way](/blog/gitops-best-practices-i-wish-i-had-known-before/#3-pull-based-deployments-are-the-way)
@@ -195,7 +197,7 @@ Catching errors after they've been applied to your cluster is expensive. Catchin
 
 Your GitOps CI pipeline should validate everything it can before the change reaches your cluster: YAML syntax, Kubernetes schema validation, policy compliance, dry-run rendering.
 
-- Tools like `yamllint` and `kubeval` catch syntax errors and schema violations before they become runtime failures.
+- Tools like [`yamllint`](https://github.com/adrienverge/yamllint) and [`kubeconform`](https://github.com/yannh/kubeconform) catch syntax errors and schema violations before they become runtime failures. (Note: `kubeval`, which you'll see in older guides, is no longer maintained — its own README points to kubeconform as the replacement.)
 - Run `helm template` or `kustomize build` in CI to verify that your templates render without errors.
 - Use [OPA](https://www.openpolicyagent.org/)/[Conftest](https://www.conftest.dev/) or [Kyverno](https://kyverno.io/) to enforce organizational policies (no privileged containers, required labels, resource limits set) before merge.
 - If you're using the [rendered manifests pattern](/blog/gitops-best-practices-i-wish-i-had-known-before/#5-use-directories-not-branches-for-environments) from Section 5, your CI gets a bonus: PRs against the environment branches show the actual rendered YAML diff, not just a one-line Helm chart version bump hiding a thousand lines of manifest changes. One caveat — don't use SOPS or anything that renders plaintext secrets into the output. Stick with External Secrets Operator or similar reference-based approaches.
@@ -214,7 +216,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Validate YAML schemas
-        run: kubeval --strict environments/**/*.yaml
+        run: kubeconform --strict environments/**/*.yaml
       - name: Build and verify Kustomize output
         run: |
           for env in environments/*/; do
@@ -311,7 +313,16 @@ This is one of the biggest pain points in GitOps. The good news: there are sever
 - [External Secrets Operator](https://external-secrets.io/) syncs secrets from external providers (AWS Secrets Manager, HashiCorp Vault, [Pulumi ESC](/docs/esc/)) into Kubernetes secrets.
 - [Sealed Secrets](https://sealed-secrets.netlify.app/) encrypts secrets client-side so only the controller in your cluster can decrypt them. Safe to commit the encrypted version to Git.
 - [Pulumi ESC](/docs/esc/) manages secrets and configuration across environments with fine-grained access controls, and integrates with [Kubernetes via the External Secrets Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/) or the [Secret Store CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/).
-- For a purely GitOps-native approach, [SOPS](https://github.com/getsops/sops) + age encrypts secret values in-place within your YAML files using `age` keys, so you can commit encrypted secrets directly to Git without a cluster-side operator. Widely used in the Flux ecosystem.
+- For a purely GitOps-native approach, [SOPS](https://github.com/getsops/sops) + age encrypts only the secret values inside your YAML files using `age` keys — the keys and file structure stay in plaintext, so diffs are still readable. Unlike Sealed Secrets, which introduces a `SealedSecret` CRD and a controller to decrypt it, SOPS works directly on your manifest files. No extra CRDs, no cluster-side operator. Just commit the encrypted files to Git. Widely used in the Flux ecosystem.
+
+Here's how these approaches compare:
+
+| Approach | Encryption model | Requires cluster operator | Git-native | Best for |
+|---|---|---|---|---|
+| External Secrets Operator | Secrets stay in external provider | Yes | No (references only) | Teams already using a cloud secrets manager or Vault |
+| Sealed Secrets | Asymmetric encryption (public/private key pair) | Yes (controller decrypts) | Yes (encrypted CRD in Git) | Simple setups needing Git-committed secrets without external providers |
+| SOPS + age | In-place value encryption in YAML | No | Yes (encrypted values in Git) | Flux-based workflows wanting minimal infrastructure |
+| Pulumi ESC | Centralized secrets with RBAC and environment composition | Yes (via ESO or CSI Driver) | No (references only) | Teams managing secrets across multiple environments and clouds |
 
 Here's what an ExternalSecret referencing a secret store looks like:
 
