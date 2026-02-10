@@ -29,7 +29,7 @@ exec_summary: |
     and [Amazon RDS](https://aws.amazon.com/rds/) using real programming languages. This
     enables the company to modernize its infrastructure quickly and cleanly, ensuring
     reliability and accelerating recovery times when needed. Beyond infrastructure configuration
-    and deployment, Credijusto is going one step further in using the new Pulumi CrossGuard
+    and deployment, Credijusto is going one step further in using the new Pulumi Policies
     ‘Policy as Code’ capabilities to ensure that engineering teams stand up new services that
     comply with company standards.
 

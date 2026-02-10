@@ -56,14 +56,14 @@ sections:
       icon: testing
       color: blue
       subtitle: Gain full auditability and visibility into all your environments to tame complexity and put security first
-      description: Manage cloud infrastructure with dashboards that provide visibility into your infrastructure and any changes, [role-based access controls](/docs/pulumi-cloud/admin/organizations/#organization-roles), and [Policy as Code](/docs/iac/packages-and-automation/crossguard/) enforcement across your organization.
+      description: Manage cloud infrastructure with dashboards that provide visibility into your infrastructure and any changes, [role-based access controls](/docs/pulumi-cloud/admin/organizations/#organization-roles), and [Policy as Code](/docs/insights/policy/) enforcement across your organization.
       image: /images/product/insights-resource-search.png
       points:
         - header: Converse about your infrastructure
           body: |
             [Pulumi Copilot](/product/copilot/) makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question.
         - header: Enforce compliance
-          body: Enable [Policy as Code](/docs/iac/packages-and-automation/crossguard/) within your organization so that you can define guardrails for your infrastructure, ensuring engineers are following best practices and putting security first. This helps you prevent mistakes before they occur and respond rapidly to any incidents.
+          body: Enable [Policy as Code](/docs/insights/policy/) within your organization so that you can define guardrails for your infrastructure, ensuring engineers are following best practices and putting security first. This helps you prevent mistakes before they occur and respond rapidly to any incidents.
         - header: Clear visibility across AWS resources
           body: Ask any questions about your AWS infrastructure. Pulumi Insights helps you find that needle in the haystack – locating a single resource across regions and accounts. See every resource running in each stack with deep links to the AWS Console, actions performed by team members, Git-like diffs for infrastructure changes, and much more.
 
@@ -99,7 +99,7 @@ crosswalk:
     body: Pulumi Crosswalk for AWS is a collection of libraries that use automatic well-architected best practices to make common infrastructure-as-code tasks in AWS easier and more secure. Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
     points:
         - header: Deploy CDK Constructs with Pulumi
-          body: You can deploy any AWS CDK construct from within a Pulumi deployment. If you're already using AWS CDK, you can now use Pulumi to orchestrate deployments instead of CloudFormation. This gives you [improved deployment speed](/case-studies/panther-labs/#proving-pulumis-advantages/) and integration with all features of Pulumi (like [Policy as Code](/docs/using-pulumi/crossguard/), [Audit Logs](/docs/pulumi-cloud/audit-logs/), Secrets, and much more).
+          body: You can deploy any AWS CDK construct from within a Pulumi deployment. If you're already using AWS CDK, you can now use Pulumi to orchestrate deployments instead of CloudFormation. This gives you [improved deployment speed](/case-studies/panther-labs/#proving-pulumis-advantages/) and integration with all features of Pulumi (like [Policy as Code](/docs/insights/policy/), [Audit Logs](/docs/pulumi-cloud/audit-logs/), Secrets, and much more).
         - header: Application and Infrastructure Together
           body: Crosswalk enables you to blur the lines between application and infrastructure code enabling you to author an entire full-stack application in one program. With support for inline Lambda functions and ease-of-use helper functions, building robust applications on AWS has never been easier.
     cta: Learn More About Crosswalk

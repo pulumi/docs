@@ -170,20 +170,20 @@ products:
                 Share queries with your teammates.
     - header: Cross-Product Capabilities
       content:
-        - header: Pulumi CrossGuard
-          tabid: crossguard-select
+        - header: Pulumi Policies
+          tabid: policies-select
           subheader: Policy as code
-          link: /crossguard/
+          link: /docs/insights/policy/
           image: /images/product/console-policy-group.svg
           details:
             - title: Proactive compliance enforcement
               description: |
-                Set guardrails for developers deploying with Pulumi by creating [policy packs](/docs/using-pulumi/crossguard/configuration/) that enforce your [deployment rules](/docs/using-pulumi/crossguard/).
+                Set guardrails for developers deploying with Pulumi by creating [policy packs](/docs/insights/policy/policy-packs/) that enforce your [deployment rules](/docs/insights/policy/).
 
               more_info: |
-                Define [Policy as Code](/docs/using-pulumi/crossguard/) rules for security, best practices, and more.
+                Define [Policy as Code](/docs/insights/policy/) rules for security, best practices, and more.
 
-                Assign [policy packs](/docs/using-pulumi/crossguard/configuration/) that run on specific stacks (e.g., dev/test/staging rules).
+                Assign [policy packs](/docs/insights/policy/policy-packs/) that run on specific stacks (e.g., dev/test/staging rules).
 
                 Automatically block deployments that violate your organization's policies.
             - title:  Enterprise compliance enforcement

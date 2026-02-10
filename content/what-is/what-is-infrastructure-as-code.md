@@ -95,7 +95,7 @@ Assuming your infrastructure code is integrated with your continuous delivery pi
 
 ### Think about policies and security
 
-<!-- It would be ideal to link to /docs/using-pulumi/crossguard/ instead of a blog post, but that page isn't well-organized -->
+<!-- The blog post provides a good high-level overview of policy as code -->
 
 Next, you'll want to enforce policy for the entire organization. That way, you'll have a standard that applies to everyone who builds infrastructure. [Those policies should run against everything anyone does](/blog/benefits-of-policy-as-code/).
 

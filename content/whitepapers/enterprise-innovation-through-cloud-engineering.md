@@ -84,7 +84,7 @@ In Stage 1, Pulumi acts as a single interface across thousands of resources span
 
 #### Building greenfield applications
 
-The first step of Stage 1 is to apply infrastructure as code to new greenfield applications. Teams can engineer new projects from the ground up using infrastructure as code. With Pulumi, new projects can immediately achieve the benefits of infrastructure and policy as code. Security and compliance can be enforced through Pulumi CrossGuard. Project costs can be closely monitored to stay within budgets. Because Pulumi enables teams to build infrastructure alongside their applications with the same programming languages, infrastructure needs can grow with a greenfield application, ensuring it stays compliant and secure throughout the entire project lifecycle.
+The first step of Stage 1 is to apply infrastructure as code to new greenfield applications. Teams can engineer new projects from the ground up using infrastructure as code. With Pulumi, new projects can immediately achieve the benefits of infrastructure and policy as code. Security and compliance can be enforced through Pulumi Policies. Project costs can be closely monitored to stay within budgets. Because Pulumi enables teams to build infrastructure alongside their applications with the same programming languages, infrastructure needs can grow with a greenfield application, ensuring it stays compliant and secure throughout the entire project lifecycle.
 
 #### Working in hybrid environments
 
