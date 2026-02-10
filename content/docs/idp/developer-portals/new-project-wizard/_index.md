@@ -20,10 +20,8 @@ The New Project Wizard (NPW) is an interactive interface in the Pulumi Cloud con
 
 The New Project Wizard supports three primary workflows:
 
-1. **Create a new project from a template with fork**: Create a new project and its first stack by forking code from a Pulumi organization [template](/docs/idp/developer-portals/templates/). This creates a copy of the template code in your repository, which you can then modify independently.
-
+1. **Create a new project from a template**: Create a new project and its first stack by forking code from a Pulumi organization [template](/docs/idp/developer-portals/templates/). This creates a copy of the template code in your repository, which you can then modify independently.
 1. **Add a no-code stack to a template**: Add a new stack to an organization template without forking the template code. The template code remains the single source of truth, and the stack references the template directly.
-
 1. **Add a stack to an existing project**: Add a new stack to any existing Pulumi project, whether or not it was originally created from a template.
 
 ## Configuration options
@@ -39,7 +37,12 @@ Within the New Project Wizard, you can configure:
 - **Service assignment**: Assign the new stack to a Pulumi IDP [Service](/docs/idp/get-started/services/)
 
 {{% notes "info" %}}
-Configuration value forms are displayed when the [project file](/docs/iac/concepts/projects/project-file/) (`Pulumi.yaml`) includes a `config` section, or when the project file references an upstream template via `pulumi:tags` (e.g., `pulumi:template: https://github.com/org/repo/tree/HEAD/template-name`). In the latter case, the form uses the config section from the upstream template.
+Configuration value forms are displayed in two scenarios:
+
+1. When the project file (`Pulumi.yaml`) includes a `config` section directly
+1. When the project file references an upstream template via `Pulumi.yaml` (e.g., `pulumi:template: https://github.com/org/repo/tree/HEAD/template-name`)
+
+In the second scenario, the form uses the config section from the upstream template.
 {{% /notes %}}
 
 ## Accessing the New Project Wizard
@@ -48,12 +51,12 @@ You can access the New Project Wizard from multiple locations in the Pulumi Clou
 
 To create a new project from a template (fork) or add a no-code stack to a template (no fork):
 
-- Navigate to **Stacks** → **Create Project** → Select a template from the card view → select **Use this Template**
-- Navigate to **Platform** → **Templates** → Select a template → select **Deploy with Pulumi**
+- Navigate to **Stacks** → **Create Project** → select a template from the card view → select **Use this Template**
+- Navigate to **Platform** → **Templates** → select a template → select **Deploy with Pulumi**
 
 To add a stack to an existing project:
 
-- Navigate to **Stacks** → Select a stack → select **Add Stack**
+- Navigate to **Stacks** → select a stack → select **Add Stack**
 
 ## Limitations
 
