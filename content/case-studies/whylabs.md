@@ -84,7 +84,7 @@ Pulumi allows the infrastructure code review process to fit naturally within the
 
 ### Test and Deploy
 
-Since infrastructure is software with Pulumi, it can be tested like software through a CI/CD pipeline. WhyLabs uses Pulumi and GitLab to run automated [unit tests](/docs/iac/concepts/testing/unit/) on infrastructure and [Policy as Code](/crossguard/) tests that check for common human errors such as leaving an S3 bucket open to the public. The pipeline also runs [integration tests](/docs/iac/concepts/testing/integration/) that can detect issues with the stack early in the development process by provisioning ephemeral environments. Furthermore, WhyLabs developers can use Pulumi to deploy private environments to test their logic, enabling them to iterate on complex cloud environments without causing issues to the production environment.
+Since infrastructure is software with Pulumi, it can be tested like software through a CI/CD pipeline. WhyLabs uses Pulumi and GitLab to run automated [unit tests](/docs/iac/concepts/testing/unit/) on infrastructure and [Policy as Code](/docs/insights/policy/) tests that check for common human errors such as leaving an S3 bucket open to the public. The pipeline also runs [integration tests](/docs/iac/concepts/testing/integration/) that can detect issues with the stack early in the development process by provisioning ephemeral environments. Furthermore, WhyLabs developers can use Pulumi to deploy private environments to test their logic, enabling them to iterate on complex cloud environments without causing issues to the production environment.
 
 ### Security
 

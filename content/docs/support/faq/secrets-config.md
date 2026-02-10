@@ -47,4 +47,4 @@ Yes. [Contact sales](/contact/?form=sales) for a demo or trial of self-hosted Pu
 - [Pulumi IaC FAQ](/docs/iac/support/faq/)
 - [Pulumi Cloud FAQ](/docs/support/pulumi-cloud-faq/)
 - [Pulumi Cloud SCIM FAQ](/docs/administration/access-identity/scim/faq/)
-- [Pulumi Policies FAQ](/docs/insights/policy/faq/)
+- [Pulumi Policies FAQ](/docs/support/faq/policies)

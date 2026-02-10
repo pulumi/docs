@@ -52,7 +52,7 @@ main:
     description: |
        As organizations scale their cloud infrastructure, maintaining security and compliance becomes increasingly complex. This workshop explores how Policy as Code (PaC) transforms traditional manual compliance processes into automated, version-controlled, and programmatically enforced guardrails
        
-       Participants will learn how to implement effective cloud governance strategies using modern PaC approaches, including writing custom policies, integrating them into CI/CD pipelines, and establishing automated enforcement mechanisms. Through practical demonstrations using Pulumi's CrossGuard, you'll discover how to bridge the gap between security requirements and infrastructure deployment while maintaining development velocity.
+       Participants will learn how to implement effective cloud governance strategies using modern PaC approaches, including writing custom policies, integrating them into CI/CD pipelines, and establishing automated enforcement mechanisms. Through practical demonstrations using Pulumi Policies, you'll discover how to bridge the gap between security requirements and infrastructure deployment while maintaining development velocity.
        
        Whether you're dealing with cost management, security compliance, or architectural standards, you'll leave with actionable insights to implement PaC in your organization.
 
@@ -88,7 +88,7 @@ event_data:
   description: |
     As organizations scale their cloud infrastructure, maintaining security and compliance becomes increasingly complex. This workshop explores how Policy as Code (PaC) transforms traditional manual compliance processes into automated, version-controlled, and programmatically enforced guardrails.
     
-    Participants will learn how to implement effective cloud governance strategies using modern PaC approaches, including writing custom policies, integrating them into CI/CD pipelines, and establishing automated enforcement mechanisms. Through practical demonstrations using Pulumi's CrossGuard, you'll discover how to bridge the gap between security requirements and infrastructure deployment while maintaining development velocity.
+    Participants will learn how to implement effective cloud governance strategies using modern PaC approaches, including writing custom policies, integrating them into CI/CD pipelines, and establishing automated enforcement mechanisms. Through practical demonstrations using Pulumi Policies, you'll discover how to bridge the gap between security requirements and infrastructure deployment while maintaining development velocity.
     
     Whether you're dealing with cost management, security compliance, or architectural standards, you'll leave with actionable insights to implement PaC in your organization.
 ---

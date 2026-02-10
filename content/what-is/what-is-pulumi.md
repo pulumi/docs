@@ -88,9 +88,9 @@ Pulumi goes beyond basic infrastructure provisioning to provide a comprehensive 
 
 The Automation API enables teams to embed infrastructure management directly into their applications, creating custom deployment tools, self-service portals, and dynamic infrastructure provisioning systems. This programmatic approach enables organizations to build advanced infrastructure automation that integrates seamlessly with their development workflows, particularly valuable when dealing with AI-generated code that requires automated deployment pipelines.
 
-### Policy as Code with CrossGuard
+### Policy as Code with Pulumi Policies
 
-CrossGuard provides policy as code capabilities that are both open source and free, unlike competitive offerings. Teams can write policies in Python, JavaScript, or Open Policy Agent (OPA) Rego to enforce security, compliance, and cost controls across their entire infrastructure. These policies run server-side and can provide automated remediation, ensuring that all infrastructure deployments—whether created by humans or AI—meet organizational standards.
+Pulumi Policies provides policy as code capabilities that are both open source and free, unlike competitive offerings. Teams can write policies in Python, JavaScript, or Open Policy Agent (OPA) Rego to enforce security, compliance, and cost controls across their entire infrastructure. These policies run server-side and can provide automated remediation, ensuring that all infrastructure deployments—whether created by humans or AI—meet organizational standards.
 
 ### Pulumi ESC for secrets and configuration
 

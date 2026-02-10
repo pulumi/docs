@@ -97,10 +97,10 @@ to update one and apply it to each stack for all clusters. The team also found t
 facilitates and is well-integrated with AWS best practices, ensuring consistency,
 scalability, and reliability across teams and infrastructure.
 
-With Pulumi CrossGuard, Credijusto was also able to enforce policies for consistent
+With Pulumi Policies, Credijusto was also able to enforce policies for consistent
 tagging, naming, and metadata for new resources.
 
-> "With Pulumi CrossGuard we can provide reusable infrastructure components to our
+> "With Pulumi Policies we can provide reusable infrastructure components to our
 > application teams and ensure that their implementations adhere to company standards."
 >
 > &mdash; Fernando Carlietti, Lead DevOps Engineer, Credijusto.
@@ -146,7 +146,7 @@ updates.
 
 Pulumi also helped Credijusto to accelerate the adoption of EKS across the organization,
 further simplifying their configuration while improving scalability.  Finally, Pulumi
-CrossGuard greatly improves their process of reporting and project cost allocation as new
+Pulumi Policies greatly improves their process of reporting and project cost allocation as new
 updates are deployed.
 
 ## Next Steps
