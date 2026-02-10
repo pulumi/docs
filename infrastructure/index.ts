@@ -111,14 +111,19 @@ const originBucket = pulumi.output(aws.s3.getBucket({
 }));
 
 // Create a bucket to store files we do not keep in source control.
-const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
-    website: {
-        indexDocument: "index.html",
+const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {});
+
+const uploadsBucketWebsite = new aws.s3.BucketWebsiteConfiguration("uploads-bucket-website", {
+    bucket: uploadsBucket.id,
+    indexDocument: {
+        suffix: "index.html",
     },
+});
+
+const uploadsBucketCors = new aws.s3.BucketCorsConfiguration("uploads-bucket-cors", {
+    bucket: uploadsBucket.id,
     corsRules: [{
-        allowedMethods: [
-            "GET",
-        ],
+        allowedMethods: ["GET"],
         allowedOrigins: ["*"],
     }],
 });
@@ -185,8 +190,12 @@ const uploadsBucketAcl = new aws.s3.BucketAcl("uploads-bucket-acl", {
 
 const bundlesBucket = new aws.s3.Bucket("bundles-bucket", {
     forceDestroy: true,
-    website: {
-        indexDocument: "index.html",
+});
+
+const bundlesBucketWebsite = new aws.s3.BucketWebsiteConfiguration("bundles-bucket-website", {
+    bucket: bundlesBucket.id,
+    indexDocument: {
+        suffix: "index.html",
     },
 });
 
@@ -197,9 +206,20 @@ if (config.makeFallbackBucket) {
         "fallback-bucket", {
             bucket: config.websiteDomain,
             acl: aws.s3.CannedAcl.PublicRead,
-            website: {
-                indexDocument: "index.html",
-                errorDocument: "404.html",
+        },
+        {
+            protect: true,
+        },
+    );
+
+    const fallbackBucketWebsite = new aws.s3.BucketWebsiteConfiguration(
+        "fallback-bucket-website", {
+            bucket: fallbackBucket.id,
+            indexDocument: {
+                suffix: "index.html",
+            },
+            errorDocument: {
+                key: "404.html",
             },
         },
         {
@@ -574,7 +594,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             originId: uploadsBucket.arn,
-            domainName: uploadsBucket.websiteEndpoint,
+            domainName: uploadsBucketWebsite.websiteEndpoint,
             customOriginConfig: {
                 originProtocolPolicy: "http-only",
                 httpPort: 80,
