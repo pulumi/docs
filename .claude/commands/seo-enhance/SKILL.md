@@ -164,7 +164,7 @@ If user approves changes:
 Additional checks for blog content:
 - **Recency signal**: Year in title or prominent placement
 - **Author credibility**: Author has bio with relevant expertise
-- **Social meta**: og:image, og:description present
+- **Social meta**: og:image, og:description present and not placeholders (verify `meta.png` is a real image)
 - **Call to action**: Clear next step for readers
 
 ### Documentation

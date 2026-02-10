@@ -216,7 +216,7 @@ Additional SEO considerations:
 
 - **Date freshness**: Include year in title for timely topics
 - **Author authority**: Author bio establishes expertise
-- **Social sharing**: og:title, og:description, og:image
+- **Social sharing**: og:title, og:description, og:image must be present and not placeholders (check that `meta.png` is a real image, not a default/placeholder)
 - **Related posts**: Link to other relevant blog content
 
 ### Documentation
