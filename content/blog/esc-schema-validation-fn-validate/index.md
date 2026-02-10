@@ -1,8 +1,8 @@
 ---
-title: "Schema Validation Comes to Pulumi ESC with fn::conform"
+title: "Schema Validation Comes to Pulumi ESC with fn::validate"
 date: 2026-02-09
 draft: false
-meta_desc: "Validate configuration values against JSON Schema with fn::conform in Pulumi ESC."
+meta_desc: "Validate configuration values against JSON Schema with fn::validate in Pulumi ESC."
 meta_image: meta.png
 authors:
     - pablo-terradillos
@@ -14,21 +14,23 @@ schema_type: auto
 social:
     twitter:
     linkedin:
+aliases:
+    - /blog/esc-schema-validation-fn-conform/
 ---
 
-Pulumi ESC environments can now validate configuration values against JSON Schema with the new `fn::conform` built-in function. Invalid configurations are caught immediately when you save, preventing misconfigurations from reaching your deployments.
+Pulumi ESC environments can now validate configuration values against JSON Schema with the new `fn::validate` built-in function. Invalid configurations are caught immediately when you save, preventing misconfigurations from reaching your deployments.
 <!--more-->
 
-Configuration errors are often discovered too late during deployment or, worse, in production. With `fn::conform`, you define validation rules directly in your environment, and ESC enforces them at save time. If a value doesn't match its schema, the environment cannot be saved until the issue is resolved.
+Configuration errors are often discovered too late during deployment or, worse, in production. With `fn::validate`, you define validation rules directly in your environment, and ESC enforces them at save time. If a value doesn't match its schema, the environment cannot be saved until the issue is resolved.
 
 ## How it works
 
-The `fn::conform` function takes a JSON Schema and a value. If the value conforms to the schema, it passes through unchanged. If not, ESC raises a validation error.
+The `fn::validate` function takes a JSON Schema and a value. If the value conforms to the schema, it passes through unchanged. If not, ESC raises a validation error.
 
 ```yaml
 values:
   port:
-    fn::conform:
+    fn::validate:
       schema: { type: number, minimum: 1, maximum: 65535 }
       value: 8080
 ```
@@ -42,7 +44,7 @@ For complex configurations, you can enforce structure and required fields:
 ```yaml
 values:
   database:
-    fn::conform:
+    fn::validate:
       schema:
         type: object
         properties:
@@ -79,7 +81,7 @@ values:
 ```yaml
 values:
   database:
-    fn::conform:
+    fn::validate:
       schema: ${environments.myorg.schemas.database-schema}
       value:
         host: "prod-db.example.com"
@@ -95,7 +97,7 @@ When a value doesn't conform to its schema, ESC returns a clear error message:
 ```yaml
 values:
   port:
-    fn::conform:
+    fn::validate:
       schema: { type: string }
       value: 8080
 ```
@@ -104,7 +106,7 @@ This raises: `expected string, got number`. The environment cannot be saved unti
 
 ## When to use schema validation
 
-Enable `fn::conform` for:
+Enable `fn::validate` for:
 
 - Values with specific type requirements (numbers, strings, arrays)
 - Objects that must have certain fields present
@@ -114,6 +116,6 @@ Enable `fn::conform` for:
 
 ## Getting started
 
-The `fn::conform` function is available now in all Pulumi ESC environments. Add schema validation to your existing environments or use it when creating new ones.
+The `fn::validate` function is available now in all Pulumi ESC environments. Add schema validation to your existing environments or use it when creating new ones.
 
-For more information, see the [fn::conform documentation](/docs/esc/environments/syntax/builtin-functions/fn-conform/).
+For more information, see the [fn::validate documentation](/docs/esc/environments/syntax/builtin-functions/fn-validate/).

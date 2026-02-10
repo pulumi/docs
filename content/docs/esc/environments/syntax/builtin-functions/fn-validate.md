@@ -1,21 +1,23 @@
 ---
-title: fn::conform
-title_tag: fn::conform
-h1: fn::conform
+title: fn::validate
+title_tag: fn::validate
+h1: fn::validate
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/environments/syntax/builtin-functions/fn-conform/
 menu:
   esc:
     parent: esc-syntax-builtin-functions
-    identifier: esc-syntax-fn-conform
+    identifier: esc-syntax-fn-validate
     weight: 2
 ---
 
-The `fn::conform` built-in function validates a value against a JSON Schema. If the value does not conform to the schema, a validation error is raised and the environment cannot be saved until the issues are resolved.
+The `fn::validate` built-in function validates a value against a JSON Schema. If the value does not conform to the schema, a validation error is raised and the environment cannot be saved until the issues are resolved.
 
 ## Declaration
 
 ```yaml
-fn::conform:
+fn::validate:
   schema: json-schema
   value: value-to-validate
 ```
@@ -40,7 +42,7 @@ If validation passes, the original `value` is returned. If validation fails, an 
 ```yaml
 values:
   valid-string:
-    fn::conform:
+    fn::validate:
       schema: { type: string }
       value: "hello"
 ```
@@ -60,7 +62,7 @@ values:
 ```yaml
 values:
   validated-number:
-    fn::conform:
+    fn::validate:
       schema: { type: number, minimum: 0 }
       value: 42
 ```
@@ -80,7 +82,7 @@ values:
 ```yaml
 values:
   user:
-    fn::conform:
+    fn::validate:
       schema:
         type: object
         properties:
@@ -115,7 +117,7 @@ values:
     type: string
     minLength: 1
   validated:
-    fn::conform:
+    fn::validate:
       schema: ${my-schema}
       value: "hello"
 ```
@@ -139,7 +141,7 @@ values:
 ```yaml
 values:
   tags:
-    fn::conform:
+    fn::validate:
       schema:
         type: array
         items: { type: string }
@@ -177,7 +179,7 @@ values:
 ```yaml
 values:
   user:
-    fn::conform:
+    fn::validate:
       schema: ${environments.myproj.schemas.user-schema}
       value:
         name: "Alice"
@@ -199,14 +201,14 @@ This pattern is useful for enforcing consistent validation rules across teams an
 
 ## Validation errors
 
-When a value does not conform to its schema, `fn::conform` raises an error that prevents the environment from being saved. This ensures configuration issues are caught before the environment is used.
+When a value does not conform to its schema, `fn::validate` raises an error that prevents the environment from being saved. This ensures configuration issues are caught before the environment is used.
 
 ### Example: type mismatch
 
 ```yaml
 values:
   type-error:
-    fn::conform:
+    fn::validate:
       schema: { type: string }
       value: 42
 ```
@@ -218,7 +220,7 @@ This raises an error: `expected string, got number`. The environment cannot be s
 ```yaml
 values:
   missing-required:
-    fn::conform:
+    fn::validate:
       schema:
         type: object
         properties:

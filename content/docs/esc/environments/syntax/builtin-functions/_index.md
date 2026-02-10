@@ -20,7 +20,7 @@ All function invocations take the form of an object with a single key that names
 ## Functions
 
 - [`fn::concat`](/docs/esc/environments/syntax/builtin-functions/fn-concat)
-- [`fn::conform`](/docs/esc/environments/syntax/builtin-functions/fn-conform)
+- [`fn::validate`](/docs/esc/environments/syntax/builtin-functions/fn-validate)
 - [`fn::fromBase64`](/docs/esc/environments/syntax/builtin-functions/fn-from-base64)
 - [`fn::fromJSON`](/docs/esc/environments/syntax/builtin-functions/fn-from-json)
 - [`fn::join`](/docs/esc/environments/syntax/builtin-functions/fn-join)
