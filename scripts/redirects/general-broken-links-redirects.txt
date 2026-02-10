@@ -1,6 +1,7 @@
 registry/packages/azure/api-docs/mobile/index.html|/registry/packages/azure/
 containers/index.html|/docs/iac/clouds/kubernetes/
 docs/guides/index.html|/docs/iac/guides/
+docs/iac/guides/index.html|/docs/iac/
 docs/iac/guides/ai-integration/index.html|/docs/iac/guides/ai-integration/mcp-server/
 docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/index.html|/docs/iac/guides/migration/
 what-is/infrastructure-as-code/index.html|/what-is/what-is-infrastructure-as-code/

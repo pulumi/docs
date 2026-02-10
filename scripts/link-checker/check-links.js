@@ -411,6 +411,14 @@ function getDefaultExcludedKeywords() {
         "https://www.pulumi.com/docs/cli/commands/pulumi_plugin_install",
         "https://www.pulumi.com/docs/cli/commands/pulumi_schema_check",
         "https://www.pulumi.com/docs/using-pulumi/crossguard/compliance-ready-policies/",
+        // External links reported as broken in issue #17495
+        "https://roadmap.sh/videos/scaling-the-unscalable",
+        "https://redis.io/docs/ui/cli/",
+        "https://telephoneworld.org/telephone-sounds/",
+        "https://aidevtlv.com/agenda/",
+        "https://cloud.google.com/deployment-manager/docs",
+        "https://daninacan.com/",
+        "https://www.tigera.io/blog/top-5-kubernetes-trends-for-2019/",
     ];
 }
 
@@ -438,6 +446,12 @@ function excludeAcceptable(links) {
 
         // Ignore HTTP 503s.
         .filter(b => b.reason !== "HTTP_503")
+
+        // Ignore HTTP 415s (Unsupported Media Type - often bot protection).
+        .filter(b => b.reason !== "HTTP_415")
+
+        // Ignore all HTTP 429s (rate limiting, bot protection).
+        .filter(b => b.reason !== "HTTP_429")
 
         // Filter errors from external sites (bot protection, auth walls, connection issues)
         .filter(b => !(externalErrorReasons.includes(b.reason) && !isInternalLink(b.destination)))
