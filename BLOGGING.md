@@ -5,15 +5,13 @@ steps to make it happen.
 
 ## Quick Start: Creating a Blog Post with Claude Code
 
-The easiest way to create a new blog post is with the `/new-blog-post` command in Claude Code. This command takes a step-by-step approach to creating a new blog post, prompting you for the necessary information and generating the required files and frontmatter for you.
+The easiest way to create a new blog post is with the `/new-blog-post` command in Claude Code. This command guides you step-by-step through creating a post, generating the required files and frontmatter automatically.
 
-If you're using Claude Code, run `/new-blog-post` and then jump to [Write Your Post](#write-your-post) to learn about formatting and media. Otherwise, if you prefer to create your post manually, follow the instructions in the next section.
+If you're using Claude Code, run `/new-blog-post` and then jump to [Write Your Post](#write-your-post) to learn about formatting and media. Otherwise, follow the manual instructions in the next section.
 
 ## Set Up Your Development Environment
 
-If you haven't already, clone this repository and
-[follow the instructions in the README](https://github.com/pulumi/docs)
-to set up your environment and run the development web server.
+If you haven't already, clone this repository and [follow the instructions in the README](https://github.com/pulumi/docs) to set up your environment and run the development web server.
 
 Once you're able to run:
 
@@ -26,7 +24,7 @@ proceed to the next section.
 
 ## Creating a Blog Post
 
-> **Note**: Most contributors should use the `/new-blog-post` command documented at the top of this guide, as it simplifies the process significantly. This section documents the manual process for reference or for contributors who don't have access to Claude Code.
+> **Note**: [The `/new-blog-post` command](#quick-start-creating-a-blog-post-with-claude-code) is recommended for most contributors as it simplifies the process significantly. This section documents the manual process for reference or for contributors who don't have access to Claude Code.
 
 ### Manual Steps
 
