@@ -5,12 +5,13 @@ h1: Publishing Components from GitHub Actions
 meta_desc: Learn how to set up automated publishing of Pulumi components from GitHub Actions to your Pulumi Cloud private registry.
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
+  - /docs/idp/concepts/publishing-from-github-actions/
   - /docs/idp/get-started/publishing-from-github-actions/
 menu:
   idp:
-    parent: idp-get-started
-    identifier: idp-publishing-github-actions
-    weight: 6
+    parent: idp-guides
+    identifier: idp-guides-publishing-github-actions
+    weight: 20
 ---
 
 Automating the publication of Pulumi components from GitHub Actions to your Pulumi Cloud private registry enables robust CI/CD workflows for infrastructure building blocks.
@@ -20,7 +21,7 @@ This guide walks through setting up automated testing and publishing workflows t
 
 - A Pulumi component authored and working locally (see [Build a Component](/docs/iac/using-pulumi/build-a-component))
 - A [GitHub repository](https://github.com/pulumi-labs/pulumi-component-lifecycle-example) containing your component code
-- Access to a [Pulumi Cloud private registry](/docs/idp/get-started/private-registry)
+- Access to a [Pulumi Cloud private registry](/docs/idp/concepts/private-registry)
 - Configure Pulumi and GitHub integrations: [OIDC](/docs/administration/access-identity/oidc-client/github/), [GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/), etc.
 - Component [documentation](https://github.com/pulumi-labs/pulumi-component-lifecycle-example#static-page-component) written and committed to your repository
 
@@ -429,6 +430,6 @@ Once your automated publishing workflow is established, consider these enhanceme
 
 - [Build a Component](/docs/iac/using-pulumi/build-a-component)
 - [Testing Components](/docs/iac/concepts/components/testing-components)
-- [Private Registry](/docs/idp/get-started/private-registry)
+- [Private Registry](/docs/idp/concepts/private-registry)
 - [GitHub Actions for Pulumi](/docs/iac/using-pulumi/continuous-delivery/github-actions)
 - [Pulumi Deployments](/docs/pulumi-cloud/deployments)

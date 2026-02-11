@@ -5,6 +5,8 @@ menu:
   idp:
     parent: idp-patterns
     weight: 20
+aliases:
+  - /docs/idp/guides/best-practices/patterns/one-esc-environment-per-team/
 meta_desc: Use one Pulumi ESC environment per team to align configuration management with organizational structure in your Pulumi IDP implementation
 h1: "IDP Pattern: One ESC environment per team"
 description: <p>Use one Pulumi ESC environment per team to align configuration management with organizational structure in your Pulumi IDP implementation.</p>
@@ -86,6 +88,6 @@ This allows teams to maintain autonomy while accessing shared organizational res
 
 ## Related patterns
 
-- [IDP Pattern: One ESC environment per service](/docs/idp/best-practices/patterns/one-esc-environment-per-service) - Alternative service-focused approach
-- [IDP Pattern: One ESC environment per lifecycle stage](/docs/idp/best-practices/patterns/one-esc-environment-per-lifecycle-stage) - Complementary staging approach
-- [IDP Pattern: Composable environments](/docs/idp/best-practices/patterns/composable-environments) - For sharing configuration across teams
+- [IDP Pattern: One ESC environment per service](/docs/idp/guides/best-practices/patterns/one-esc-environment-per-service) - Alternative service-focused approach
+- [IDP Pattern: One ESC environment per lifecycle stage](/docs/idp/guides/best-practices/patterns/one-esc-environment-per-lifecycle-stage) - Complementary staging approach
+- [IDP Pattern: Composable environments](/docs/idp/guides/best-practices/patterns/composable-environments) - For sharing configuration across teams

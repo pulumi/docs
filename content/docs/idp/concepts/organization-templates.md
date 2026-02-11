@@ -1,14 +1,14 @@
 ---
 title: Organization templates
 title_tag: Get started with organization templates
-h1: Building developer portals with organization templates
+h1: Organization templates
 meta_desc: Learn how to build template projects and configure them to work with your Pulumi organization.
 menu:
   idp:
     name: Organization templates
-    parent: idp-developer-portals
-    weight: 1
-    identifier: idp-developer-portals-organizational-templates
+    parent: idp-concepts
+    weight: 20
+    identifier: idp-concepts-organization-templates
 aliases:
   - /docs/idp/developer-portals/templates/
   - /docs/pulumi-cloud/developer-platforms/templates/
@@ -168,11 +168,11 @@ pulumi new private/my-org/my-template@1.0.0
 
 ## Using Organization Templates within your Pulumi organization
 
-Organization templates are available to users in the [private registry](/docs/idp/get-started/private-registry/). They also power the New Project Wizard workflow.
+Organization templates are available to users in the [private registry](/docs/idp/concepts/private-registry/). They also power the New Project Wizard workflow.
 
 By doing publishing organization templates, your organization's members will be able to:
 
-- Discover template in the [private registry](/docs/idp/get-started/private-registry/).
+- Discover template in the [private registry](/docs/idp/concepts/private-registry/).
 - Configure and launch new Pulumi projects from their browser.
 - Configure [Pulumi Deployments](/docs/pulumi-cloud/deployments) to automatically work with new projects.
 
@@ -199,7 +199,7 @@ If you plan on using no-code or CLI deployment methods these prerequisites are n
 This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when fetching and creating private repositories.
 More specifically, this ensures that only repositories your GitHub user would normally have access can be used as template sources.
 
-Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized the app you will see an "Authorize GitHub" button. Click the button and accept the required permissions. This can also be set up during the new [project wizard flow](https://www.pulumi.com/docs/idp/developer-portals/new-project-wizard/#github-oauth-application).
+Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized the app you will see an "Authorize GitHub" button. Click the button and accept the required permissions. This can also be set up during the new [project wizard flow](/docs/idp/concepts/new-project-wizard/#github-oauth-application).
 
 If you have OAuth App access restrictions enabled in your Github organization, you will also need to
 [authorize the Pulumi Github App](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/approving-oauth-apps-for-your-organization)

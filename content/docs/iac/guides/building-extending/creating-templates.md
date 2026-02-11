@@ -226,13 +226,13 @@ pulumi new https://github.com/myorg/my-template
 
 ### Organization templates
 
-For Pulumi Enterprise and Business Critical customers, you can publish templates to your organization's [Private Registry](/docs/idp/developer-portals/templates/). This provides:
+For Pulumi Enterprise and Business Critical customers, you can publish templates to your organization's [Private Registry](/docs/idp/concepts/organization-templates/). This provides:
 
 - Version management with semantic versioning
 - Integration with the Pulumi Cloud console
 - Access control through your organization settings
 
-See [Organization Templates](/docs/idp/developer-portals/templates/) for details.
+See [Organization Templates](/docs/idp/concepts/organization-templates/) for details.
 
 ### Multiple templates in one repository
 
@@ -275,4 +275,4 @@ pulumi new https://github.com/myorg/templates/tree/main/aws-typescript
 
 - [Project file reference](/docs/iac/concepts/projects/project-file/) - Full reference for `Pulumi.yaml` including all template options
 - [`pulumi new` command](/docs/iac/cli/commands/pulumi_new/) - CLI reference with all available flags
-- [Organization templates](/docs/idp/developer-portals/templates/) - Enterprise template management features
+- [Organization templates](/docs/idp/concepts/organization-templates/) - Enterprise template management features

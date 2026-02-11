@@ -18,7 +18,7 @@ overview:
   title: Everything platform engineers need to build an IDP
   description: Create golden paths with reusable components and templates. Enable self-service infrastructure through code, YAML, or developer portals. Enforce standards automatically with policies. Ship infrastructure faster while maintaining control.
   cta: Start Building Your IDP
-  link: /docs/idp/get-started/
+  link: /docs/idp/concepts/
   cta_secondary: Get a Demo
   link_secondary: /contact/?form=request-a-demo
 
@@ -90,7 +90,7 @@ learn:
         - title: Platform engineering guide
           description: Learn how to build an IDP with components, templates, policies, and self-service patterns.
           buttons:
-            - link: /docs/idp/get-started/
+            - link: /docs/idp/concepts/
               type: primary
               action: Read the Docs
             - link: https://info.pulumi.com/whitepaper/accelerating-business-value-at-every-stage-of-idp-maturity

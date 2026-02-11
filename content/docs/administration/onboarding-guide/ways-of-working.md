@@ -113,7 +113,7 @@ Developers log into a portal and click buttons to provision infrastructure. Opti
 - [Pulumi's Backstage plugin](https://www.pulumi.com/blog/pulumi-backstage-plugin/)
 - Custom portals powered by [Pulumi's Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/)
 
-[Learn more about building developer portals](https://www.pulumi.com/docs/idp/developer-portals/).
+[Learn more about building developer portals](https://www.pulumi.com/docs/idp/concepts/).
 
 ## Working together on deployments
 

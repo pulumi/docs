@@ -5,6 +5,8 @@ menu:
   idp:
     parent: idp-patterns
     weight: 70
+aliases:
+  - /docs/idp/guides/best-practices/patterns/components-using-other-components/
 meta_desc: Build complex infrastructure patterns by composing Pulumi components that use other components
 h1: "IDP Pattern: Components using other Components"
 description: <p>Build complex infrastructure patterns by composing Pulumi components that use other components.</p>
@@ -134,6 +136,6 @@ const myApp = new WebApplication("my-web-app", {
 
 ## Related patterns
 
-- [IDP Pattern: Container-based apps, centrally managed container infra](/docs/idp/best-practices/patterns/container-based-apps-centrally-managed-infra) - Example of component composition
-- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/best-practices/patterns/validating-component-inputs-using-policy-functions) - For validating composed components
-- [IDP Pattern: Security Updates using Components](/docs/idp/best-practices/patterns/security-updates-using-components) - For updating component hierarchies
+- [IDP Pattern: Container-based apps, centrally managed container infra](/docs/idp/guides/best-practices/patterns/container-based-apps-centrally-managed-infra) - Example of component composition
+- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/guides/best-practices/patterns/validating-component-inputs-using-policy-functions) - For validating composed components
+- [IDP Pattern: Security Updates using Components](/docs/idp/guides/best-practices/patterns/security-updates-using-components) - For updating component hierarchies

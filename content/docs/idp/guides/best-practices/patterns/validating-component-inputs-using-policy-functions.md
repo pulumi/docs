@@ -5,6 +5,8 @@ menu:
   idp:
     parent: idp-patterns
     weight: 80
+aliases:
+  - /docs/idp/guides/best-practices/patterns/validating-component-inputs-using-policy-functions/
 meta_desc: Use Pulumi policy functions to validate component inputs and enforce constraints at the component level
 allow_long_title: true
 h1: "IDP Pattern: Validating Component Inputs using Policy functions"
@@ -134,6 +136,6 @@ This ensures consistent validation whether the database is created directly or t
 
 ## Related patterns
 
-- [IDP Pattern: Policies as tests](/docs/idp/best-practices/patterns/policies-as-tests) - For organization-wide policy enforcement
-- [IDP Pattern: Cost control using Components, Policies, and constrained inputs](/docs/idp/best-practices/patterns/cost-control-using-components-policies-constrained-inputs) - For cost-related validation
-- [IDP Pattern: Components using other Components](/docs/idp/best-practices/patterns/components-using-other-components) - For validating complex component hierarchies
+- [IDP Pattern: Policies as tests](/docs/idp/guides/best-practices/patterns/policies-as-tests) - For organization-wide policy enforcement
+- [IDP Pattern: Cost control using Components, Policies, and constrained inputs](/docs/idp/guides/best-practices/patterns/cost-control-using-components-policies-constrained-inputs) - For cost-related validation
+- [IDP Pattern: Components using other Components](/docs/idp/guides/best-practices/patterns/components-using-other-components) - For validating complex component hierarchies

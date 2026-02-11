@@ -5,6 +5,8 @@ menu:
   idp:
     parent: idp-patterns
     weight: 100
+aliases:
+  - /docs/idp/guides/best-practices/patterns/security-updates-using-components/
 meta_desc: Implement security updates and patches through centralized component management
 h1: "IDP Pattern: Security Updates using Components"
 description: <p>Implement security updates and patches through centralized component management.</p>
@@ -199,6 +201,6 @@ The policy ensures that outdated component versions cannot be deployed, forcing 
 
 ## Related patterns
 
-- [IDP Pattern: Components using other Components](/docs/idp/best-practices/patterns/components-using-other-components) - For building secure component hierarchies
-- [IDP Pattern: Policies as tests](/docs/idp/best-practices/patterns/policies-as-tests) - For enforcing security policies
-- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/best-practices/patterns/validating-component-inputs-using-policy-functions) - For validating security configurations
+- [IDP Pattern: Components using other Components](/docs/idp/guides/best-practices/patterns/components-using-other-components) - For building secure component hierarchies
+- [IDP Pattern: Policies as tests](/docs/idp/guides/best-practices/patterns/policies-as-tests) - For enforcing security policies
+- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/guides/best-practices/patterns/validating-component-inputs-using-policy-functions) - For validating security configurations

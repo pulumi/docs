@@ -2,19 +2,19 @@
 title_tag: Private Registry | Pulumi IDP
 title: Private Registry
 h1: "Private Registry"
-meta_desc: This page provides an overview on how to get started with Pulumi IDP Private Registry.
-weight: 3
+meta_desc: Learn about Pulumi Private Registry for managing infrastructure components and templates.
 aliases:
   - /docs/idp/get-started/private-registry/
 menu:
   idp:
-    parent: idp-get-started
-    identifier: idp-get-started-private-registry
+    parent: idp-concepts
+    identifier: idp-concepts-private-registry
+    weight: 10
 ---
 
-Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. Platform engineers can codify organizational standards in their building blocks using features like [Pulumi ESC](/docs/esc/) and [Pulumi IaC Policies](/docs/insights/get-started/add-policies/), ensuring that all infrastructure users provision is compliant from the beginning.
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/concepts/organization-templates/) that power golden path workflows in Pulumi. Platform engineers can codify organizational standards in their building blocks using features like [Pulumi ESC](/docs/esc/) and [Pulumi IaC Policies](/docs/insights/get-started/add-policies/), ensuring that all infrastructure users provision is compliant from the beginning.
 
-Developers leverage templates and components in their preferred workflows, whether it be incorporating components into Pulumi programs, scaffolding a low-code program with components and YAML, or using the Pulumi console for no-code deployments. The private registry is also a resource for developers to discover components and templates, browse their APIs, and use READMEs to understand how to use them.
+Developers leverage templates and components in their preferred workflows, whether it be incorporating components into Pulumi programs, scaffolding a low-code program with components and YAML, or using the Pulumi console for [no-code deployments](/docs/idp/concepts/no-code-stacks/). The private registry is also a resource for developers to discover components and templates, browse their APIs, and use READMEs to understand how to use them.
 
 ## Component Publishing
 
@@ -169,65 +169,12 @@ GITHUB_TOKEN="$(gh auth token)"
 pulumi package publish COMPONENT_LOCATION
 ```
 
-## Pulumi Templates
+## Templates
 
-[Pulumi Templates](/docs/idp/developer-portals/templates/) are an efficient way to scaffold new Pulumi programs. Templates are available to users in the private registry and [New Project Wizard](/docs/idp/developer-portals/new-project-wizard/).
+[Organization templates](/docs/idp/concepts/organization-templates/) are an efficient way to scaffold new Pulumi programs. Templates are available to users in the private registry and [New Project Wizard](/docs/idp/concepts/new-project-wizard/).
 
 {{% notes type="info" %}}
 Organization templates require the Enterprise or Business Critical plan
 {{% /notes %}}
 
-### Template publishing
-
-Pulumi supports two approaches for template management:
-
-#### Registry-backed templates
-
-Registry-backed templates are published directly to the Private Registry using the `pulumi template publish` command.
-
-**Publishing a template:**
-
-```bash
-pulumi template publish <directory> --name <template-name> --version <version>
-```
-
-**Example:**
-
-```bash
-pulumi template publish ./my-template --name my-template --version 1.0.0
-```
-
-This approach provides:
-
-- Full semantic versioning support
-- Immutable version storage
-- Simple single-command publishing
-
-For detailed information, see [Publishing Registry-backed Templates](/docs/idp/developer-portals/templates/#publishing-registry-backed-templates).
-
-#### VCS-backed templates
-
-VCS-backed templates are sourced from configured GitHub or GitLab repositories.
-
-To configure VCS-backed templates, follow [this integration guide](/docs/idp/developer-portals/templates/#configuring-vcs-backed-templates).
-
-### Components in Templates
-
-You can reference components in the `packages` section of the `Pulumi.yaml` project file. The component and its SDK are installed when running `pulumi install`.
-
-```yaml
-name: ${PROJECT}
-description: ${DESCRIPTION}
-runtime: yaml
-
-packages:
-  aws-k8s: github.com/flostadler/aws-k8s@v0.0.19
-
-# Define the template's configuration settings
-template:
-  ....
-resource:
-  aws-k8s
-```
-
-{{< get-started-stepper >}}
+Templates can be published directly to the Private Registry using the `pulumi template publish` command, or sourced from configured GitHub or GitLab repositories. For detailed information on template publishing and management, see [Organization Templates](/docs/idp/concepts/organization-templates/).

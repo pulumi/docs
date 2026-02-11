@@ -18,7 +18,7 @@ description: Build self-service infrastructure workflows with reusable component
 link_buttons:
   primary:
     label: Get Started
-    link: /docs/idp/get-started/
+    link: /docs/idp/concepts/
 
 sections:
 - type: flat
@@ -32,39 +32,39 @@ sections:
   heading: Getting started
   cards:
   - emoji: 🚀
-    heading: Get Started
-    link: /docs/idp/get-started/
+    heading: Concepts
+    link: /docs/idp/concepts/
     description: Learn the IDP approach and how platform teams provide self-service infrastructure workflows.
 
   - emoji: 📦
     heading: Private Registry
-    link: /docs/idp/get-started/private-registry/
+    link: /docs/idp/concepts/private-registry/
     description: Centralized registry for your organization's templates, components, and infrastructure building blocks.
 
   - emoji: 🎯
-    heading: Templates
-    link: /docs/idp/developer-portals/templates/
+    heading: Organization Templates
+    link: /docs/idp/concepts/organization-templates/
     description: Scaffold new projects from organization templates that encode standards and best practices.
 
   - emoji: ⚙️
-    heading: Workflows
-    link: /docs/idp/get-started/workflows/
-    description: Provision infrastructure through code, low-code YAML templates, or no-code deployment from the console.
+    heading: No-code Stacks
+    link: /docs/idp/concepts/no-code-stacks/
+    description: Deploy infrastructure without writing code using the New Project Wizard and templates.
 
   - emoji: 🏗️
     heading: Services
-    link: /docs/idp/get-started/services/
+    link: /docs/idp/concepts/services/
     description: Logical groupings of stacks, environments, and resources that model your infrastructure.
 
   - emoji: 🔗
-    heading: Developer Portals
-    link: /docs/idp/developer-portals/
-    description: Integrate with Backstage, use the New Project Wizard, or build custom portals.
+    heading: New Project Wizard
+    link: /docs/idp/concepts/new-project-wizard/
+    description: Create new projects from templates directly in your browser with automatic deployment setup.
 
-  - emoji: 🤖
-    heading: Publishing from GitHub Actions
-    link: /docs/idp/get-started/publishing-from-github-actions/
-    description: Automate component testing and publishing to your private registry with GitHub Actions workflows.
+  - emoji: 📚
+    heading: Guides
+    link: /docs/idp/guides/
+    description: Learn best practices, the Four Factors framework, and how to automate component publishing.
 
 - type: flat
   heading: Have questions?

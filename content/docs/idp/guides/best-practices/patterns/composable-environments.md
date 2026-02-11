@@ -5,6 +5,8 @@ menu:
   idp:
     parent: idp-patterns
     weight: 40
+aliases:
+  - /docs/idp/guides/best-practices/patterns/composable-environments/
 meta_desc: Use composable Pulumi ESC environments to share configuration across services, teams, and lifecycle stages
 h1: "IDP Pattern: Composable environments"
 description: Use composable Pulumi ESC environments to share configuration across services, teams, and lifecycle stages.
@@ -88,6 +90,6 @@ This allows developers to use either `monitoring-production` or `monitoring-stag
 
 ## Related patterns
 
-- [IDP Pattern: One ESC environment per service](/docs/idp/best-practices/patterns/one-esc-environment-per-service) - Benefits from shared base configuration
-- [IDP Pattern: One ESC environment per team](/docs/idp/best-practices/patterns/one-esc-environment-per-team) - Can import from organizational environments
-- [IDP Pattern: One ESC environment per lifecycle stage](/docs/idp/best-practices/patterns/one-esc-environment-per-lifecycle-stage) - Can share base configuration across stages
+- [IDP Pattern: One ESC environment per service](/docs/idp/guides/best-practices/patterns/one-esc-environment-per-service) - Benefits from shared base configuration
+- [IDP Pattern: One ESC environment per team](/docs/idp/guides/best-practices/patterns/one-esc-environment-per-team) - Can import from organizational environments
+- [IDP Pattern: One ESC environment per lifecycle stage](/docs/idp/guides/best-practices/patterns/one-esc-environment-per-lifecycle-stage) - Can share base configuration across stages

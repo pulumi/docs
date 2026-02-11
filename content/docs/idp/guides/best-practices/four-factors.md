@@ -7,13 +7,15 @@ menu:
   idp:
     parent: idp-best-practices
     weight: 5
+aliases:
+  - /docs/idp/best-practices/four-factors/
 ---
 
 This guide introduces a framework for building with Pulumi IDP that leverages four key factors to create secure, scalable, and flexible developer workflows. By understanding and effectively combining these factors, platform teams can build robust internal developer platforms that enable developers to provision infrastructure efficiently while maintaining compliance and security.
 
 ## Templates
 
-[Templates](/docs/idp/developer-portals/templates/) are user-configurable scaffolding that creates new instances of infrastructure resources. They serve as the entry point for developers to quickly bootstrap new projects or components with pre-configured settings and best practices baked in.
+[Templates](/docs/idp/concepts/organization-templates/) are user-configurable scaffolding that creates new instances of infrastructure resources. They serve as the entry point for developers to quickly bootstrap new projects or components with pre-configured settings and best practices baked in.
 
 Key characteristics:
 
@@ -107,10 +109,10 @@ By leveraging these four factors together, organizations can create internal dev
 
 ## Learn More
 
-To see how these four factors can be used together in some common use cases, check out our [patterns](/docs/idp/best-practices/patterns) library.
+To see how these four factors can be used together in some common use cases, check out our [patterns](/docs/idp/guides/best-practices/patterns) library.
 
 ### Additional Resources
 
-- [Get Started with Pulumi IDP](/docs/idp/get-started)
-- [Private Registry](/docs/idp/get-started/private-registry)
-- [Workflows](/docs/idp/get-started/workflows)
+- [Pulumi IDP Concepts](/docs/idp/concepts)
+- [Private Registry](/docs/idp/concepts/private-registry)
+- [No-code Stacks](/docs/idp/concepts/no-code-stacks)
