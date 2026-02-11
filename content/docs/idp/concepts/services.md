@@ -4,7 +4,7 @@ title: Services
 h1: "Services"
 meta_desc: Learn about Pulumi Services for organizing and managing infrastructure entities.
 aliases:
-  - /docs/idp/concepts/services/
+  - /docs/idp/get-started/services/
 menu:
   idp:
     parent: idp-concepts

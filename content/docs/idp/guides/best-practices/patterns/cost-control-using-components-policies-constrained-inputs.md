@@ -6,7 +6,7 @@ menu:
     parent: idp-patterns
     weight: 90
 aliases:
-  - /docs/idp/guides/best-practices/patterns/cost-control-using-components-policies-constrained-inputs/
+  - /docs/idp/best-practices/patterns/cost-control-using-components-policies-constrained-inputs/
 meta_desc: Implement cost control through constrained component inputs, policies, and predefined options
 allow_long_title: true
 h1: "IDP Pattern: Cost control using Components, Policies, and constrained inputs"

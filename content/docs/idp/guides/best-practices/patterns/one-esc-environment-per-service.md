@@ -6,7 +6,7 @@ menu:
     parent: idp-patterns
     weight: 10
 aliases:
-  - /docs/idp/guides/best-practices/patterns/one-esc-environment-per-service/
+  - /docs/idp/best-practices/patterns/one-esc-environment-per-service/
 meta_desc: Use one Pulumi ESC environment per service to maintain clear boundaries and improve security isolation in your Pulumi IDP implementation
 h1: "IDP Pattern: One ESC environment per service"
 description: <p>Use one Pulumi ESC environment per service to maintain clear boundaries and improve security isolation in your Pulumi IDP implementation.</p>

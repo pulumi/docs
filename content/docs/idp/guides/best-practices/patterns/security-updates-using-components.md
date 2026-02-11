@@ -6,7 +6,7 @@ menu:
     parent: idp-patterns
     weight: 100
 aliases:
-  - /docs/idp/guides/best-practices/patterns/security-updates-using-components/
+  - /docs/idp/best-practices/patterns/security-updates-using-components/
 meta_desc: Implement security updates and patches through centralized component management
 h1: "IDP Pattern: Security Updates using Components"
 description: <p>Implement security updates and patches through centralized component management.</p>
