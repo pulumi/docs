@@ -16,6 +16,32 @@ Pulumi Private Registry is the source of truth for an organization's infrastruct
 
 Developers leverage templates and components in their preferred workflows, whether it be incorporating components into Pulumi programs, scaffolding a low-code program with components and YAML, or using the Pulumi console for [no-code deployments](/docs/idp/concepts/no-code-stacks/). The private registry is also a resource for developers to discover components and templates, browse their APIs, and use READMEs to understand how to use them.
 
+## Registry views
+
+The Platform menu includes two package views:
+
+### Registry
+
+![Platform menu showing Registry tab](/docs/idp/concepts/platform-menu.png)
+
+Browse all packages available to your organization, including public providers and components from [pulumi.com/registry](https://www.pulumi.com/registry/) plus your organization's private packages. Features include:
+
+- View documentation for any version of a package
+- See usage data showing how packages are adopted across your organization
+- Filter by usage status to find packages that need attention
+
+### Private Components
+
+This tab shows only the component packages published by your organization via `pulumi package publish`.
+
+### Usage tracking
+
+![Package list showing usage columns and filters](/docs/idp/concepts/usage-columns.png)
+
+Both package list views display usage columns for each package: how many stacks are on the latest version, how many are on older versions, and the total number of stacks using the package. You can filter the list to show only used packages, unused packages, or packages where stacks are running older versions.
+
+Each package page also includes a "Used by" tab showing which stacks use that package, including the stack name, project, version in use, and last update timestamp. This helps you assess the impact of changes before updating versions and identify stacks that may need upgrading.
+
 ## Component Publishing
 
 [Pulumi Components](/docs/iac/concepts/resources/components/) are a way to encapsulate resources in a reusable manner. Components are also a powerful way for platform teams to integrate security, compliance, and operational requirements into golden paths so that developers don't need to worry about it. Once a component is pushed to GitHub or GitLab, it is published to an organization's private registry using the `publish` CLI command. Pulumi automatically introspects the component schema and generates API docs, which are displayed in the registry.
@@ -138,19 +164,9 @@ func (f *PetAbstractedOutputs) Annotate(a infer.Annotator) {
 
 {{< /chooser >}}
 
-#### Component usage tracking
+## Component Options
 
-Each component in the private registry includes a usage tab that shows which stacks are using that component. This helps platform teams understand component adoption and assess the impact of changes before updating versions.
-
-The usage tab displays:
-
-- Stack name and project
-- Component version in use
-- Last update timestamp
-
-This information helps you identify stacks that may need updating when releasing new component versions and provides visibility into which teams are adopting standardized components.
-
-#### Specifying an Organization
+### Specifying an Organization
 
 If you're part of multiple organizations and do not have a [default organization](/docs/iac/cli/commands/pulumi_org_set-default/) set, you must specify the org by using the `--publisher` flag.
 
@@ -158,7 +174,7 @@ If you're part of multiple organizations and do not have a [default organization
 pulumi package publish github.com/acme/k8s-cluster --publisher ORG_NAME
 ```
 
-#### Authenticating with Private Repositories
+### Authenticating with Private Repositories
 
  If your repository is private, a valid `GITHUB_TOKEN` or `GITLAB_TOKEN` is required for all commands, including `publish`, `get schema`, and when using the component in a program -- `pulumi install`, `pulumi up`, etc.
 
