@@ -2136,11 +2136,11 @@ Video recordings archived in GitHub Actions artifacts on failure.
 
 ### Post-Deployment Health Checks
 
-After Pulumi updates complete, automated health checks validate the deployed site.
+After Pulumi updates complete, automated health checks validate the deployed site using curl-based tests.
 
 **Workflow:** `.github/workflows/post-deployment-health-check.yml`
 
-**Script:** `scripts/post-deployment-health-check.js`
+**Implementation:** Inline bash script using curl (no external dependencies or repository checkout required)
 
 **What it checks:**
 
@@ -2165,20 +2165,19 @@ After Pulumi updates complete, automated health checks validate the deployed sit
 ### Local testing
 
 ```bash
-# Test production
-node scripts/post-deployment-health-check.js https://www.pulumi.com
+# Test individual endpoint
+curl -s -o /dev/null -w "%{http_code}\n" -L https://www.pulumi.com/docs
 
-# Test local build
-make serve-static
-node scripts/post-deployment-health-check.js http://localhost:8080
+# Test redirect
+curl -s -o /dev/null -w "%{http_code}|%{redirect_url}\n" https://www.pulumi.com/docs/intro/cloud-providers/aws/
 ```
 
 ### Adding new checks
 
-Edit `scripts/post-deployment-health-check.js` and add to:
+Edit `.github/workflows/post-deployment-health-check.yml` and add calls to:
 
-- `endpoints` array for page availability checks
-- `redirectTests` array for Lambda@Edge redirect tests
+- `check_endpoint` function for page availability checks (expects 200 status)
+- `check_redirect` function for Lambda@Edge redirect tests (expects 301 with location match)
 
 ### Example Program Testing
 

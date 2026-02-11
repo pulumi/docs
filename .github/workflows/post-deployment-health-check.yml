@@ -47,14 +47,6 @@ jobs:
       slack_channel: ${{ steps.target.outputs.slack_channel }}
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: '24.x'
-
       - name: Determine target environment
         id: target
         run: |
@@ -77,9 +69,77 @@ jobs:
           fi
 
       - name: Run health checks
-        id: health-check
         run: |
-          node scripts/post-deployment-health-check.js "${{ steps.target.outputs.url }}"
+          #!/bin/bash
+          set -e
+
+          BASE_URL="${{ steps.target.outputs.url }}"
+          FAILED=0
+
+          echo "🏥 Post-Deployment Health Check"
+          echo "Target: $BASE_URL"
+          echo ""
+
+          # Function to check endpoint returns 200
+          check_endpoint() {
+            local path="$1"
+            local name="$2"
+            local url="${BASE_URL}${path}"
+
+            status=$(curl -s -o /dev/null -w "%{http_code}" -L "$url")
+            if [[ "$status" == "200" ]]; then
+              echo "✅ $name: $status"
+            else
+              echo "❌ $name: Expected 200, got $status"
+              FAILED=1
+            fi
+          }
+
+          # Function to check redirect
+          check_redirect() {
+            local path="$1"
+            local expected_location="$2"
+            local name="$3"
+            local url="${BASE_URL}${path}"
+
+            # Get status and location without following redirects
+            response=$(curl -s -o /dev/null -w "%{http_code}|%{redirect_url}" "$url")
+            status="${response%%|*}"
+            location="${response##*|}"
+
+            if [[ "$status" == "301" ]] && [[ "$location" =~ $expected_location ]]; then
+              echo "✅ $name: $status → $location"
+            else
+              echo "❌ $name: Expected 301 to match '$expected_location', got $status → $location"
+              FAILED=1
+            fi
+          }
+
+          echo "Testing endpoints..."
+          check_endpoint "/" "Homepage"
+          check_endpoint "/docs" "Docs landing"
+          check_endpoint "/registry" "Registry landing"
+          check_endpoint "/docs/reference/pkg/nodejs/pulumi/pulumi/" "Node.js SDK"
+          check_endpoint "/docs/reference/pkg/python/pulumi/" "Python SDK"
+          check_endpoint "/docs/reference/pkg/dotnet/Pulumi/Pulumi.html" ".NET SDK"
+          check_endpoint "/docs/reference/pkg/java/" "Java SDK"
+          check_endpoint "/docs/iac/get-started/" "Getting started"
+          check_endpoint "/docs/cli/commands/" "CLI reference"
+
+          echo ""
+          echo "Testing Lambda@Edge redirects..."
+          check_redirect "/docs/intro/cloud-providers/aws/" "/registry/packages/aws/" "Cloud provider redirect"
+          check_redirect "/docs/reference/pkg/nodejs/pulumi/aws/" "/docs/reference/pkg/aws/\\?language=nodejs" "Node.js SDK redirect"
+
+          echo ""
+          echo "=================================================="
+          if [[ $FAILED -eq 0 ]]; then
+            echo "✅ All health checks passed!"
+            exit 0
+          else
+            echo "❌ Some health checks failed!"
+            exit 1
+          fi
 
   notify:
     name: Send Slack notification on failure
