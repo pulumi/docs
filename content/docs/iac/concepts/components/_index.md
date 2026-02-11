@@ -149,7 +149,7 @@ The following types are supported in component arguments:
 
 The following types are not supported in component arguments:
 
-- **Union types**: TypeScript union types like `string | number` are not supported due to limitations in schema inference.
+- **Union types**: TypeScript and Python union types like `string | number` are not supported due to limitations in schema inference. One exception: unions of `undefined` (TypeScript) or `None` (Python) with exactly one other type are supported to represent optional values (e.g., `string | undefined` or `str | None`).
 - **Functions/callbacks**: Functions cannot be used in component arguments as they cannot be represented in the schema.
 - **Platform-specific types**: Types that exist only in one language and cannot be translated.
 
