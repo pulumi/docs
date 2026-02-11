@@ -20,7 +20,7 @@ Platform teams need visibility into package adoption at scale. Responding to sec
 
 ## From Individual to Organizational Visibility
 
-Last October, we [introduced the "Used by" tab](/blog/announcing-pulumi-private-registry/) on individual package pages, giving you visibility into which stacks use a specific package. That was a start, but navigating package by package doesn't scale when you're managing dozens of packages across hundreds of stacks.
+Last October, we [introduced the "Used by" tab](/blog/announcing-pulumi-private-registry/) on individual package pages, giving you visibility into which stacks use a specific package. However, navigating package by package doesn't scale when you're managing dozens of packages across hundreds of stacks.
 
 Today, we're extending that visibility to the organization level. You can now see adoption data for all packages at a glance, filter by usage status, and share specific views with your team.
 
@@ -38,7 +38,7 @@ These numbers update as stacks are deployed, giving you a real-time view of adop
 
 ## Find What Matters with Filters
 
-![Filter dropdown](usage-columns.png)
+![Filter dropdown](filter-dropdown.png)
 
 Three filters help you find packages that need attention:
 
@@ -46,7 +46,7 @@ Three filters help you find packages that need attention:
 - **Unused**: packages with zero usage
 - **Not on latest**: packages where stacks are running older versions
 
-Combine filters with search to quickly narrow down to exactly what you're looking for.
+Combine filters with search to find specific packages.
 
 ## Browse All Packages in One Place
 
@@ -62,11 +62,11 @@ Search queries, filters, and pagination sync to the URL. Copy the URL to share a
 
 These features are designed for the scenarios platform teams face regularly:
 
-- **Security response**: when a CVE drops, filter to "Not on latest" and immediately see which stacks need attention
+- **Security response**: filter to "Not on latest" to identify stacks running vulnerable versions
 - **Deprecation planning**: before retiring a package, check its usage to understand the migration scope
 - **Version sprawl**: identify packages where teams are running many different versions and prioritize standardization efforts
 - **Adoption tracking**: see which packages are gaining traction and which aren't being adopted
 
 ## Get Started
 
-Navigate to **Platform > Registry** in Pulumi Cloud to explore your organization's packages with the new usage columns and filters. For more details on the private registry features, see the [Private Registry documentation](/docs/idp/get-started/private-registry/).
+Navigate to **Platform > Registry** in Pulumi Cloud to explore your organization's packages with the new usage columns and filters. For more details on the private registry features, see the [Private Registry documentation](/docs/idp/concepts/private-registry/).
