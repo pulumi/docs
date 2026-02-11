@@ -458,7 +458,7 @@ comparison_table:
                 link: /docs/insights/policy-as-code
                 items: 
                   - content: "Manual"
-                  - content: "[Organization-managed](/docs/insights/policy/get-started/#enforcing-a-policy-pack)"
+                  - content: "[Organization-managed](/docs/insights/policy/#pulumi-cloud-integration)"
                   - content: "[Organization-managed](/docs/insights/policy/get-started/#enforcing-a-policy-pack)"
                   - content: "[Organization-managed](/docs/insights/policy/get-started/#enforcing-a-policy-pack)"
               - title: Preventative Policies
