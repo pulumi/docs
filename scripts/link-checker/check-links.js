@@ -400,6 +400,7 @@ function getDefaultExcludedKeywords() {
         "https://github.com/jasonsmithio/pulumi-experiments",
         // Old example repository paths that have been renamed or removed
         "https://github.com/pulumi/examples/tree/master/aws-js-webserver",
+        "https://github.com/pulumi/examples/blob/master/aws-js-webserver/index.js",
         "https://github.com/pulumi/examples/tree/master/aws-js-s3-folder",
         "https://github.com/pulumi/examples/tree/master/aws-js-sqs-slack",
         "https://github.com/pulumi/examples/tree/master/aws-py-oidc-provider-pulumi-cloud",
@@ -446,6 +447,9 @@ function excludeAcceptable(links) {
 
         // Ignore HTTP 503s.
         .filter(b => b.reason !== "HTTP_503")
+
+        // Ignore HTTP 502s (Bad Gateway - transient server errors).
+        .filter(b => b.reason !== "HTTP_502")
 
         // Ignore HTTP 415s (Unsupported Media Type - often bot protection).
         .filter(b => b.reason !== "HTTP_415")

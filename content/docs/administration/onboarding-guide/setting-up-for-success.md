@@ -65,7 +65,7 @@ Pulumi projects, stacks, and environments help reduce "sprawl"—the copy-and-pa
 
 Components provide all the benefits of native language packages: storage in package managers, versioning, secure dependencies, and more.
 
-**[Templates](https://www.pulumi.com/docs/idp/developer-portals/templates/)** are blueprints that scaffold entirely new projects. While components encapsulate cloud resource usage patterns, templates provide standard starting points for complete projects with many resources. [Pulumi offers templates](https://www.pulumi.com/templates/) for common architectures and patterns, but you can create your own. You can also register your organization's templates in the Pulumi Cloud New Project Wizard for easy access.
+**[Templates](https://www.pulumi.com/docs/idp/concepts/organization-templates/)** are blueprints that scaffold entirely new projects. While components encapsulate cloud resource usage patterns, templates provide standard starting points for complete projects with many resources. [Pulumi offers templates](https://www.pulumi.com/templates/) for common architectures and patterns, but you can create your own. You can also register your organization's templates in the Pulumi Cloud New Project Wizard for easy access.
 
 ### Make the decision
 

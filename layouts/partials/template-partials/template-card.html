@@ -36,13 +36,13 @@
         </div>
 
         {{ if $description }}
-        <div class="card-description mb-4">
+        <div class="card-description mb-6">
             {{ $description | markdownify }}
         </div>
         {{ end }}
 
         {{ if $ctaText }}
-        <a href="{{ $ctaLink }}" class="btn-secondary-template-variant self-start">{{ $ctaText }}</a>
+        <a href="{{ $ctaLink }}" class="btn-secondary-template-variant block text-center xl:text-left self-start w-full xl:w-auto">{{ $ctaText }}</a>
         {{ end }}
     </div>
 </div>

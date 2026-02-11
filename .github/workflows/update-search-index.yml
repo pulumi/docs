@@ -19,7 +19,7 @@ jobs:
           node-version: '24.x'
 
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
 
