@@ -458,9 +458,9 @@ comparison_table:
                 link: /docs/insights/policy-as-code
                 items: 
                   - content: "Manual"
-                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
-                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
-                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
+                  - content: "[Organization-managed](/docs/insights/policy/#pulumi-cloud-integration)"
+                  - content: "[Organization-managed](/docs/insights/policy/get-started/#enforcing-a-policy-pack)"
+                  - content: "[Organization-managed](/docs/insights/policy/get-started/#enforcing-a-policy-pack)"
               - title: Preventative Policies
                 link: /docs/insights/preventative-vs-audit-policies/
                 items: 
@@ -490,7 +490,7 @@ comparison_table:
                   - content: Up to 100 policies (3 pack limit)
                   - content: Unlimited
               - title: Enforcement Modes
-                link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
+                link: /docs/insights/policy/#local-policy-execution
                 items:
                   - content: _blank
                   - content: Advisory & Mandatory

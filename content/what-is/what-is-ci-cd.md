@@ -74,7 +74,7 @@ For a detailed exploration and steps to implement CI/CD and DevOps practices, re
 
 * **Continuous integration and continuous delivery (CI/CD)**: For integrating CI/CD processes with Pulumi, visit our [CI/CD integration documentation](https://www.pulumi.com/docs/guides/continuous-delivery/).
 
-* **Policy as code**: To manage policies using Pulumi CrossGuard, visit the [Pulumi CrossGuard documentation](https://www.pulumi.com/docs/guides/crossguard/).
+* **Policy as code**: To manage policies using Pulumi Policies, visit the [Pulumi Policies documentation](https://www.pulumi.com/docs/insights/policy/).
 
 * **[Infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/)**: Start with Infrastructure as Code using Pulumi by accessing our [getting started guide](https://www.pulumi.com/docs/get-started/).
 

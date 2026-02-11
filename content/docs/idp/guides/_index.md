@@ -28,4 +28,4 @@ The [best practices section](/docs/idp/guides/best-practices/) introduces the Fo
 - [Private Registry](/docs/idp/concepts/private-registry/)
 - [Components](/docs/iac/concepts/components/)
 - [Environments](/docs/esc/environments/)
-- [Policies](/docs/iac/crossguard/)
+- [Policies](/docs/insights/policy/)

@@ -61,7 +61,7 @@ You have two main options:
 This approach makes it easier to standardize on tools, patterns, and practices, and to train your team. Choose the language your team already uses to leverage existing standards.
 
 **Multi-language (common in large organizations)**
-While offering flexibility, this approach risks fragmentation between teams using different languages. Pulumi addresses this through consistent experiences across languages in Pulumi Cloud and CrossGuard policies, plus [Pulumi Packages](https://www.pulumi.com/docs/iac/guides/packages/) that let you author packages in one language and consume them in another.
+While offering flexibility, this approach risks fragmentation between teams using different languages. Pulumi addresses this through consistent experiences across languages in Pulumi Cloud and Pulumi Policies, plus [Pulumi Packages](https://www.pulumi.com/docs/iac/guides/packages/) that let you author packages in one language and consume them in another.
 
 ## Organizing people for collaboration
 

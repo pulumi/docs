@@ -108,7 +108,7 @@ Despite its necessity, achieving and maintaining HIPAA compliance presents sever
 
 HIPAA provides the fundamental framework for protecting health information in the United States, setting standards that help organizations safeguard sensitive patient data while enabling necessary healthcare operations. Compliance requires ongoing attention to evolving regulations and technology.
 
-Pulumi's infrastructure as code solutions can help organizations implement the technical safeguards required by HIPAA, particularly around secure infrastructure configuration, access controls, and automation of compliance checks. [Learn how Pulumi supports security and compliance](/docs/iac/using-pulumi/crossguard/).
+Pulumi's infrastructure as code solutions can help organizations implement the technical safeguards required by HIPAA, particularly around secure infrastructure configuration, access controls, and automation of compliance checks. [Learn how Pulumi supports security and compliance](/docs/insights/policy/).
 
 For more information about related compliance topics:
 

@@ -62,7 +62,7 @@ Pulumi enables faster development and deployment workflows compared to CDK due t
 Pulumi natively integrates security features with infrastructure provisioning.
 
 - __Secrets management__: Pulumi has built-in secrets management that encrypts secrets both in transit and at rest. It also integrates seamlessly with external secrets managers like AWS Secrets Manager. CDK has no built-in support for managing or handling encrypted secrets.
-- __Policy as code__: Pulumi enables your organization to enforce security and compliance policies during deployment using Pulumi CrossGuard's policy as code. This feature is tightly integrated into Pulumi's workflows, whereas CDK offers only limited support for such policies.
+- __Policy as code__: Pulumi enables your organization to enforce security and compliance policies during deployment using Pulumi Policies. This feature is tightly integrated into Pulumi's workflows, whereas CDK offers only limited support for such policies.
 
 ### Savings
 

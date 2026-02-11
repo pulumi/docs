@@ -54,7 +54,7 @@ Environments eliminate the need for developers to manage complex credential and 
 
 ## Policies
 
-[Policies](/docs/iac/crossguard/) ensure continued compliance with company requirements through automated validation. They provide guardrails that prevent misconfigurations and enforce organizational standards across all infrastructure deployments.
+[Policies](/docs/insights/policy/) ensure continued compliance with company requirements through automated validation. They provide guardrails that prevent misconfigurations and enforce organizational standards across all infrastructure deployments.
 
 Key characteristics:
 
@@ -81,7 +81,7 @@ Consider a developer who needs to deploy a new web site hosted in a S3 bucket. H
 - **Environment**: Based on the stack name, different ESC environments are automatically applied:
    - `staging` stack uses AWS credentials for `us-west-2` region
    - `production` stack uses AWS credentials for `us-east-1` region
-- **Policy**: Pulumi Crossguard policies automatically validate the deployment:
+- **Policy**: Pulumi Policies automatically validate the deployment:
    - Ensures the `user:Stack` tag is present on all resources
    - Ensures access policies meet organizational security standards
    - Blocks deployment if compliance requirements aren't met

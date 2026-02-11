@@ -89,4 +89,4 @@ While we do not formally designate older versions for long term support, we are 
 - [Pulumi ESC FAQ](/docs/support/faq/secrets-config/)
 - [Pulumi Cloud FAQ](/docs/support/pulumi-cloud-faq/)
 - [Pulumi Cloud SCIM FAQ](/docs/administration/access-identity/scim/faq/)
-- [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)
+- [Pulumi Policies FAQ](/docs/support/faq/policies)

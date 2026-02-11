@@ -309,7 +309,7 @@ Pulumi IaC always transmits and stores entire state files securely. However, Pul
 
 ### Policy as Code {#policy}
 
-Terraform provides policy as code through its Sentinel product, which is closed source and limited to Terraform Enterprise and Terraform Cloud. Sentinel also requires the use of a proprietary HashiCorp Sentinel Language. Pulumi IaC, however, provides policy as code through CrossGuard which acts as programmable guardrails to enforce security, best practices, and cost across all infrastructure. CrossGuard is open source, free to use, and lets you write rules in Python, JavaScript, or Open Policy Agent (OPA) Rego. For more information on how to implement policy as code using Pulumi IaC, see [Policy as Code ("CrossGuard")](/docs/using-pulumi/crossguard/).
+Terraform provides policy as code through its Sentinel product, which is closed source and limited to Terraform Enterprise and Terraform Cloud. Sentinel also requires the use of a proprietary HashiCorp Sentinel Language. Pulumi IaC, however, provides policy as code through Pulumi Policies which acts as programmable guardrails to enforce security, best practices, and cost across all infrastructure. Pulumi Policies is open source, free to use, and lets you write rules in Python, JavaScript, or Open Policy Agent (OPA) Rego. For more information on how to implement policy as code using Pulumi IaC, see [Pulumi Policies](/docs/insights/policy/).
 
 ### Audit Capabilities {#auditing}
 

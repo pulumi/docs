@@ -91,9 +91,9 @@ Organizations pursuing HITRUST certification often need to engage specialized co
 
 HITRUST provides a comprehensive framework for managing information security risks and demonstrating regulatory compliance, particularly in the healthcare sector. By adopting HITRUST, organizations can streamline their compliance efforts and build trust with partners and customers.
 
-Pulumi's infrastructure as code solutions can help with implementing some of the technical controls required by HITRUST, especially around infrastructure security, configuration management, and automated compliance verification. [Learn how Pulumi supports security and compliance](/docs/iac/using-pulumi/crossguard/).
+Pulumi's infrastructure as code solutions can help with implementing some of the technical controls required by HITRUST, especially around infrastructure security, configuration management, and automated compliance verification. [Learn how Pulumi supports security and compliance](/docs/insights/policy/).
 
-Pulumi offers off-the-shelf support for HITRUST compliance through Pulumi CrossGuard's `frameworks` option. For AWS environments, you can quickly get started with a comprehensive HITRUST policy pack by running:
+Pulumi offers off-the-shelf support for HITRUST compliance through Pulumi Policies' `frameworks` option. For AWS environments, you can quickly get started with a comprehensive HITRUST policy pack by running:
 
 ```bash
 pulumi policy new aws-hitrust-compliance-policies-typescript
