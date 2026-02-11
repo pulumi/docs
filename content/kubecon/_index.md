@@ -13,7 +13,7 @@ hero:
   date_and_location: March 23-26, Amsterdam RAI
   booth: Booth 784
   cta_text: Book a technical demo
-  cta_link: "#demo-workshop"
+  cta_link: https://info.pulumi.com/book-demo-kubecon-2026
   cta_secondary_text: Get $500 in AWS credits
   cta_secondary_link: "#aws-credits"
   image: /images/kubecon/kubecon-hero-2026.png
