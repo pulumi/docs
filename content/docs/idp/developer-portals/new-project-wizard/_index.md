@@ -14,36 +14,61 @@ aliases:
 - /docs/pulumi-cloud/developer-portals/new-project-wizard/
 ---
 
-Pulumi Cloud provides a New Project Wizard to help walk your organization's members through the process of creating new Pulumi projects. This provides a more turnkey alternative to the [Pulumi Backstage Plugin](/docs/idp/developer-portals/backstage) or custom-built integrations.
+The New Project Wizard (NPW) is an interactive interface in the Pulumi Cloud console that streamlines creating new [projects](/docs/iac/concepts/projects/) and [stacks](/docs/iac/concepts/stacks/). The wizard consolidates multiple setup tasks into a single workflow, allowing you to configure project settings, repository details, stack [configuration](/docs/iac/concepts/config/), [deployment settings](/docs/deployments/deployments/), and service assignments all in one place.
 
-By using the wizard, users can generate projects from your [Organization Templates](/docs/idp/developer-portals/templates), commit and push code to GitHub, and trigger an initial deployment -- all in a few clicks and without leaving the browser.
+## What the New Project Wizard does
+
+The New Project Wizard supports three primary workflows:
+
+1. **Create a new project from a template**: Create a new project and its first stack by forking code from a Pulumi organization [template](/docs/idp/developer-portals/templates/). This creates a copy of the template code in your repository, which you can then modify independently.
+1. **Add a no-code stack to a template**: Add a new stack to an organization template without forking the template code. The template code remains the single source of truth, and the stack references the template directly.
+1. **Add a stack to an existing project**: Add a new stack to any existing Pulumi project, whether or not it was originally created from a template.
+
+## Configuration options
+
+Within the New Project Wizard, you can configure:
+
+- **Project configuration**: When creating a new project, set the project name, description, and other metadata
+- **Destination repository**: Select an existing repository or create a new one on GitHub
+- **Stack configuration values**:
+  - Import [ESC environments](/docs/esc/environments/) to provide configuration and secrets
+  - Set individual configuration values using a form-based interface (see note below)
+- **Deployment settings**: Configure [Pulumi Deployments](/docs/deployments/deployments/) for the new stack, including [drift detection and remediation](/docs/deployments/deployments/drift/)
+- **Service assignment**: Assign the new stack to a Pulumi IDP [Service](/docs/idp/get-started/services/)
 
 {{% notes "info" %}}
-Make sure you [install](/docs/deployments/deployments/reference/#github-app-installation) the Pulumi GitHub App to ensure the New Project Wizard works seamlessly with [Pulumi Deployments](/docs/pulumi-cloud/deployments).
+Configuration value forms are displayed in two scenarios:
+
+1. When the project file (`Pulumi.yaml`) includes a `config` section directly
+1. When the project file references an upstream template via `Pulumi.yaml` (e.g., `pulumi:template: https://github.com/org/repo/tree/HEAD/template-name`)
+
+In the second scenario, the form uses the config section from the upstream template.
 {{% /notes %}}
 
-The New Project Wizard can be found in the left sidebar:
+## Accessing the New Project Wizard
 
-![New Project Wizard Sidebar Location](/docs/idp/developer-portals/new-project-wizard/npw-sidebar.png)
+You can access the New Project Wizard from multiple locations in the Pulumi Cloud console:
 
-If you chose to create a project from a template, you'll be able to pick from one of Pulumi's numerous public templates, or from your [Organization Templates](/docs/idp/developer-portals/templates). Choosing a "starter" creates a new Pulumi project with some basic scaffolding based on the cloud and language specified.
+To create a new project from a template (fork) or add a no-code stack to a template (no fork):
 
-![New Project Wizard](/docs/idp/developer-portals/new-project-wizard/npw-start.png)
+- Navigate to **Stacks** → **Create Project** → select a template from the card view → select **Use this Template**
+- Navigate to **Platform** → **Templates** → select a template → select **Deploy with Pulumi**
 
-If you've configured your Pulumi organization to work with [Pulumi Deployments](/docs/pulumi-cloud/deployments), you'll be able to commit and deploy your new project entirely from your browser. Otherwise, you'll be able to follow step-by-step CLI commands to invoke in your terminal.
+To add a stack to an existing project:
 
-![New Project Wizard Deployment Method](/docs/idp/developer-portals/new-project-wizard/npw-deploy-method.png)
+- Navigate to **Stacks** → select a stack → select **Add Stack**
 
-For more detailed instructions on how to use the New Project Wizard with Pulumi Deployments, see [Get Started with Deployments](/docs/deployments/deployments/get-started/#new-project-wizard).
+## Limitations
 
-## GitHub OAuth Application
+- No-code stacks are only supported on GitHub
+- When forking templates, destination repositories can only be created on GitHub, even if the source template is hosted on GitLab
 
-In order to use the New Project Wizard with [Pulumi Deployments](/docs/pulumi-cloud/deployments), users will be prompted to authorize an additional GitHub OAuth application.
+## GitHub OAuth application
 
-![New Project Wizard OAuth Prompt](/docs/idp/developer-portals/new-project-wizard/npw-github-oauth-prompt.png)
+To use the New Project Wizard with [Pulumi Deployments](/docs/deployments/deployments/), users must authorize a GitHub OAuth application.
 
-The GitHub authorization will require permissions to manage public and private repositories and workflows.
+The GitHub authorization requires permissions to manage public and private repositories and workflows. Pulumi uses these permissions to read template sources, write template content into repositories, and optionally create new repositories. While the authorization request includes additional repository permissions, Pulumi does not use all of them. This is due to GitHub lacking fine-grained repository permissions as part of the [OAuth application scopes](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes).
 
-![New Project Wizard GitHub Permissions Prompt](/docs/idp/developer-portals/new-project-wizard/npw-github-permissions.png)
-
-As part of the New Project Wizard, Pulumi must be able to read template sources, write template source content into repositories, and optionally create new repositories. While the GitHub authorization request will include additional permissions against repositories, Pulumi does not use these. This is due to GitHub lacking fine-grained repository permissions as part of the [OAuth application scopes](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes).
+{{% notes "info" %}}
+Make sure you [install](/docs/deployments/deployments/reference/#github-app-installation) the Pulumi GitHub App to ensure the New Project Wizard works seamlessly with [Pulumi Deployments](/docs/deployments/deployments/).
+{{% /notes %}}
