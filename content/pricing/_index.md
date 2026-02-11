@@ -490,7 +490,7 @@ comparison_table:
                   - content: Up to 100 policies (3 pack limit)
                   - content: Unlimited
               - title: Enforcement Modes
-                link: /docs/insights/policy/core-concepts/#enforcement-levels
+                link: /docs/insights/policy/#local-policy-execution
                 items:
                   - content: _blank
                   - content: Advisory & Mandatory
