@@ -13,6 +13,7 @@ aliases:
   - /docs/idp/developer-portals/templates/
   - /docs/pulumi-cloud/developer-platforms/templates/
   - /docs/pulumi-cloud/developer-portals/templates/
+  - /docs/idp/concepts/templates
 ---
 
 {{% notes "info" %}}

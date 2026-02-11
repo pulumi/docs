@@ -6,7 +6,7 @@ menu:
     parent: idp-patterns
     weight: 80
 aliases:
-  - /docs/idp/guides/best-practices/patterns/validating-component-inputs-using-policy-functions/
+  - /docs/idp/best-practices/patterns/validating-component-inputs-using-policy-functions/
 meta_desc: Use Pulumi policy functions to validate component inputs and enforce constraints at the component level
 allow_long_title: true
 h1: "IDP Pattern: Validating Component Inputs using Policy functions"

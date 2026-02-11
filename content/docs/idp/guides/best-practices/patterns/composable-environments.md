@@ -6,7 +6,7 @@ menu:
     parent: idp-patterns
     weight: 40
 aliases:
-  - /docs/idp/guides/best-practices/patterns/composable-environments/
+  - /docs/idp/best-practices/patterns/composable-environments/
 meta_desc: Use composable Pulumi ESC environments to share configuration across services, teams, and lifecycle stages
 h1: "IDP Pattern: Composable environments"
 description: Use composable Pulumi ESC environments to share configuration across services, teams, and lifecycle stages.

@@ -6,7 +6,7 @@ menu:
     parent: idp-patterns
     weight: 70
 aliases:
-  - /docs/idp/guides/best-practices/patterns/components-using-other-components/
+  - /docs/idp/best-practices/patterns/components-using-other-components/
 meta_desc: Build complex infrastructure patterns by composing Pulumi components that use other components
 h1: "IDP Pattern: Components using other Components"
 description: <p>Build complex infrastructure patterns by composing Pulumi components that use other components.</p>

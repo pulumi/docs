@@ -6,7 +6,7 @@ menu:
     parent: idp-patterns
     weight: 30
 aliases:
-  - /docs/idp/guides/best-practices/patterns/one-esc-environment-per-lifecycle-stage/
+  - /docs/idp/best-practices/patterns/one-esc-environment-per-lifecycle-stage/
 meta_desc: Use one Pulumi ESC environment per lifecycle stage to manage configuration across development, staging, and production environments
 h1: "IDP Pattern: One ESC environment per lifecycle stage"
 description: <p>Use one Pulumi ESC environment per lifecycle stage to manage configuration across development, staging, and production environments.</p>

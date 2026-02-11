@@ -6,7 +6,7 @@ menu:
     parent: idp-patterns
     weight: 20
 aliases:
-  - /docs/idp/guides/best-practices/patterns/one-esc-environment-per-team/
+  - /docs/idp/best-practices/patterns/one-esc-environment-per-team/
 meta_desc: Use one Pulumi ESC environment per team to align configuration management with organizational structure in your Pulumi IDP implementation
 h1: "IDP Pattern: One ESC environment per team"
 description: <p>Use one Pulumi ESC environment per team to align configuration management with organizational structure in your Pulumi IDP implementation.</p>

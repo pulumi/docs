@@ -10,7 +10,7 @@ meta_desc: Best practices patterns for building secure, scalable, and flexible d
 h1: IDP Patterns
 description: <p>Common architectural patterns and design approaches for organizing your infrastructure code and workflows with Pulumi IDP.</p>
 aliases:
-  - /docs/idp/guides/best-practices/patterns/
+  - /docs/idp/best-practices/patterns/
 ---
 
 This section provides proven patterns that help you implement best practices solutions with Pulumi IDP. Each pattern includes a description, use cases, anti-patterns, and related patterns to help you choose the right approach for your specific needs.

@@ -6,7 +6,7 @@ menu:
     parent: idp-patterns
     weight: 60
 aliases:
-  - /docs/idp/guides/best-practices/patterns/policies-as-tests/
+  - /docs/idp/best-practices/patterns/policies-as-tests/
 meta_desc: Implement governance and compliance requirements using Pulumi policies that run as automated tests
 h1: "IDP Pattern: Policies as tests"
 description: <p>Implement governance and compliance requirements using Pulumi policies that run as automated tests.</p>

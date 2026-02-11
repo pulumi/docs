@@ -8,14 +8,17 @@ Quick reference for quality check procedures in the `/shipit` skill.
 
 ## Check Detection Matrix
 
-| File Type Changed | Mandatory Checks | Optional Suggestions |
+| Content Changed | Mandatory Checks | Optional Suggestions |
 |-------------------|------------------|---------------------|
-| Any | `make lint` (unless already run) | - |
-| Markdown | `make build` (unless already run) | - |
-| Markdown with code snippets | Test inline code compilation | `/docs-review` (if not in history) |
+| Markdown files - meta content (README.md, AGENTS.md, Claude commands, etc.) | Correctness check | - |
+| Markdown files - docs/blogs/website content | `make lint` | `make build`, `/docs-review` |
+| Hugo templates and shortcodes | `make build` | `/docs-review` |
+| Layout and style files (static/css/, static/js/) | `make build` | `/docs-review` |
+| Inline code snippets | Test inline code compilation | `/docs-review` |
 | Program examples (`static/programs/`) | Test changed programs | - |
-| Test files | - | `make test` or specific test |
-| TypeScript files | - | Check tsconfig compliance |
+| Other changes | Use your best judgment | - |
+
+Any check above may be skipped at your discretion, e.g. if it was run recently or is unnecessary in context.
 
 ## Detecting Already-Run Checks
 
