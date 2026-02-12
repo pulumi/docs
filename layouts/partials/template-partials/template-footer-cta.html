@@ -18,16 +18,20 @@
 {{ $anchor := .anchor }}
 
 <section class="template-footer"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="flex flex-col xxl:flex-row items-start xxl:items-center justify-center lg:justify-between gap-6">
+    <div class="flex flex-col xxl:flex-row justify-center lg:justify-between gap-6">
         {{ if $title }}
-        <h2 class="template-footer-title text-left xxl:text-center">{{ $title }}</h2>
+        <h2 class="template-footer-title text-left md:text-center my-0 w-full max-w-xl xl:max-w-none mx-auto">{{ $title }}</h2>
         {{ end }}
-        <div class="flex flex-col lg:flex-row w-full xl:w-auto gap-4 items-center">
+        <div class="flex flex-col lg:flex-row w-full xl:w-auto gap-4 items-center md:justify-center">
             {{ if $ctaPrimaryText }}
-            <a href="{{ $ctaPrimaryLink }}" class="btn-primary text-center w-full lg:w-1/2 xl:w-auto">{{ $ctaPrimaryText }}</a>
+            <a href="{{ $ctaPrimaryLink }}" class="btn-primary text-center md:w-1/2 w-full lg:w-auto">
+                <span class="whitespace-nowrap">{{ $ctaPrimaryText }}</span>
+            </a>
             {{ end }}
             {{ if $ctaSecondaryText }}
-            <a href="{{ $ctaSecondaryLink }}" class="btn-secondary text-center w-full lg:w-1/2 xl:w-auto">{{ $ctaSecondaryText }}</a>
+            <a href="{{ $ctaSecondaryLink }}" class="btn-secondary text-center md:w-1/2 w-full lg:w-auto">
+                <span class="whitespace-nowrap">{{ $ctaSecondaryText }}</span>
+            </a>
             {{ end }}
         </div>
     </div>
