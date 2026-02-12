@@ -9,8 +9,8 @@ tags: ["esc", "terraform"]
 ---
 
 Many organizations have years of infrastructure built and managed with Terraform.
-Outputs such as VPC IDs, subnet lists, database endpoints, cluster names are the connective tissue between infrastructure layers.
-But getting those values into other tools and workflows often means manual copy-paste, wrapper scripts, or brittle glue code.
+Outputs such as VPC IDs, subnet lists, database endpoints, and cluster names are the connective tissue between infrastructure layers.
+Getting those values into other tools and workflows often means manual copy-paste, wrapper scripts, or brittle glue code.
 
 The [`terraform-state` provider](/docs/esc/integrations/infrastructure/terraform/terraform-state/) for Pulumi ESC helps bridge that gap.
 It reads outputs directly from your Terraform state files and makes them available as first-class values in your ESC environments — no scripts, no duplication, no drift.
