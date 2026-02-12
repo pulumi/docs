@@ -8,6 +8,7 @@ title: "Future of the Cloud: 10 Trends Shaping 2026 and Beyond"
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
 date: 2025-12-04T07:56:40Z
+updated: 2026-02-12
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -44,6 +45,7 @@ tags:
     - devops
     - devsecops
     - security
+    - kubernetes
 
 ---
 
@@ -193,7 +195,7 @@ AIOps features include observability, automation, and real-time analytics to bri
 
 ## 9. Kubernetes Dominance and Increased Complexity
 
-Kubernetes will continue its ascent in 2026. According to [Markets N Research](https://marketsnresearch.com/report/1649/global-kubernetes-market), the global Kubernetes market size was valued at USD 1.8 billion in 2022 and is projected to be **USD 7.8 billion by 2030, exhibiting a CAGR of 23.40%** during the forecast period.
+Kubernetes will continue its ascent in 2026. According to [Research & Markets](https://www.researchandmarkets.com/reports/6110428/kubernetes-global-strategic-business-report), the global Kubernetes market was valued at USD 2.3 billion in 2024 and is projected to reach USD 8.2 billion by 2030, with a CAGR of 23.8% over the forecast period.
 
 The CNCF Annual Survey shows AI/ML workloads rapidly moving onto Kubernetes — including batch pipelines, model experimentation, real-time inference, and data preprocessing — even as only 41% of ML/AI developers are cloud-native today. This shift is accelerating as teams need flexible GPU scheduling, distributed pipelines, and portable execution environments.
 
@@ -209,7 +211,7 @@ Kubernetes will remain a strategic foundation — but operating it effectively n
 
 ## 10. AI Code Assistants in the Enterprise
 
-Developers worldwide have explored or are currently using AI-powered coding assistants. However, many enterprises have shown resistance to allowing them to be part of their AI tools in software development. Still, software engineering leaders are beginning to recognize that these coding assistants can enhance team productivity, improve code quality, and maintain a competitive advantage.
+AI-powered coding assistants like GitHub Copilot, Claude Code, Cursor, and others are rapidly becoming part of modern software development.
 
 **By 2027, the use of AI assistants will dramatically increase developer velocity** to meet functional business requirements for 70% of new digital solutions in production (source: [IDC](https://www.digitalnewsasia.com/business/idc-reveals-its-top-predictions-cloud-2023-and-beyond)).
 
@@ -217,11 +219,13 @@ Developers worldwide have explored or are currently using AI-powered coding assi
 
 According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028), **by 2028, 75% of enterprise software engineers will use dedicated AI code assistants**, and 63% of organizations are currently piloting, deploying or beginning to use AI code assistants.
 
-As adoption grows, teams want their AI assistants connected to the real state of their cloud environments so they can ask questions, review configurations, and understand drift or misconfigurations. [Pulumi’s Remote MCP Server](https://www.pulumi.com/blog/remote-mcp-server/) makes this possible by allowing teams to integrate their preferred AI assistant, including tools like Claude or Cursor, directly with Pulumi-managed infrastructure. The server provides controlled, secure access so assistants can explore stacks, surface issues, and help teams understand their cloud footprint in real time.
+As enterprise adoption of AI assistants increases, expectations are rising: they must not only generate code but also understand the state of infrastructure, configurations, and security posture. That means being able to answer questions about environments, surface misconfigurations, or act directly on infrastructure.
 
-When a task involves multi-step workflows or code-level modifications, [Pulumi Neo performs the execution safely](https://www.pulumi.com/blog/remote-mcp-server/#autonomous-infrastructure-with-pulumi-neo)using previews, policy enforcement, and automated orchestration. The combination of AI-assisted understanding and Pulumi-driven execution gives teams a modern pattern for cloud operations that is fast, secure, and consistent.
+One of the newest developments is the release of [Pulumi Agent Skills](https://www.pulumi.com/blog/pulumi-agent-skills/), a collection of infrastructure expertise packaged for use in AI coding assistants. These skills teach tools such as Claude Code, Cursor, or Gemini CLI to reason about Pulumi projects, reducing hallucination and improving outputs based on real infrastructure conventions and practices.
 
-This trend marks a major shift in how engineering teams work. AI assistants are becoming active participants in cloud development and operations, and Pulumi provides the foundation to use them confidently across enterprise environments. For a deeper look at what AI-driven cloud operations can enable, explore [10 things you can do with Pulumi Neo](https://www.pulumi.com/blog/10-things-you-can-do-with-neo/).
+Combined with infrastructure access via tools like [Pulumi’s Remote MCP Server](https://www.pulumi.com/blog/remote-mcp-server/), teams can build secure, AI-driven workflows where assistants provide insights and Pulumi Neo safely executes actions with previews, policies, and orchestration.
+
+AI code assistants are no longer experimental; they're fast becoming a competitive advantage in cloud software development.
 
 ## The Future of Cloud: Reinvented for an AI-First Decade
 
