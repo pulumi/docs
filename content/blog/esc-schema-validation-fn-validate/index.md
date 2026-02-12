@@ -64,7 +64,7 @@ If any required field is missing or has the wrong type, the environment cannot b
 
 Define schemas once and reference them across multiple environments. Using the [`environments` built-in property](/docs/esc/environments/syntax/builtin-properties/environments/) keeps the schema out of your environment's output:
 
-**Schema environment (myorg/schemas)**
+**Schema environment (my-project/schemas)**
 
 ```yaml
 values:
@@ -82,7 +82,7 @@ values:
 values:
   database:
     fn::validate:
-      schema: ${environments.myorg.schemas.database-schema}
+      schema: ${environments.my-project.schemas.database-schema}
       value:
         host: "prod-db.example.com"
         port: 5432
