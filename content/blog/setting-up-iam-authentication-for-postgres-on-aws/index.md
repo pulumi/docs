@@ -1,6 +1,6 @@
 ---
 title: "Passwordless PostgreSQL: IAM Authentication with Pulumi"
-date: 2026-02-11
+date: 2026-02-13
 draft: false
 meta_desc: "Secure your PostgreSQL databases with IAM authentication. Eliminate password rotation, simplify access control, and build reusable infrastructure."
 meta_image: iam-for-postgres.png
@@ -25,7 +25,7 @@ Traditional database authentication relies on usernames and passwords. These cre
 
 IAM authentication changes this model fundamentally. Instead of passwords, your applications generate authentication tokens on demand using their IAM credentials. These tokens are valid for only 15 minutes, eliminating the need for password rotation. Access control happens through IAM policies, which you're already using to manage other AWS resources. The result is a more secure system that's easier to maintain and audit.
 
-The benefits become even more pronounced when you componentize this setup with Pulumi. Rather than repeating the same configuration steps for each database, you can build reusable components that handle IAM authentication setup automatically. This turns a complex, multi-step process into a simple, repeatable pattern that your entire team can use.
+The benefits become even more pronounced when you componentize this setup with Pulumi. Rather than repeating the same configuration steps for each database, you can build reusable components that handle IAM authentication setup automatically. This turns a complex, multi-step process into a simple, repeatable pattern that your entire team can use. In this post, we'll cover an example that sets up the complete flow: an RDS cluster with IAM authentication, the necessary IAM roles and policies, and a Kubernetes application that connects using IAM tokens.
 
 ## Architecture overview
 
@@ -296,7 +296,7 @@ echo "Demo app: http://$APP_URL"
 The application shows the database endpoint and IAM username it's using, and provides buttons to create tables and add data. Behind the scenes, every database operation authenticates using IAM tokens, demonstrating that the entire authentication flow is working correctly.
 
 {{% notes type="info" %}}
-The full code for this example is available at [https://github.com/lichtie/iam-for-postgres](https://github.com/lichtie/iam-for-postgres). The example includes all the component code referenced in this post.
+The full code for this example is available at [https://github.com/pulumi-demos/examples/tree/main/typescript/aws-iam-for-postgres](https://github.com/pulumi-demos/examples/tree/main/typescript/aws-iam-for-postgres). The example includes all the component code referenced in this post.
 {{% /notes %}}
 
 ## Production considerations
