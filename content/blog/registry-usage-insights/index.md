@@ -20,7 +20,7 @@ Platform teams need visibility into package adoption at scale. Responding to sec
 
 ## From Individual to Organizational Visibility
 
-Last October, we [introduced the "Used by" tab](/blog/announcing-pulumi-private-registry/) on individual package pages, giving you visibility into which stacks use a specific package. However, navigating package by package doesn't scale when you're managing dozens of packages across hundreds of stacks.
+Previously, we [introduced the "Used by" tab](/blog/announcing-pulumi-private-registry/) on individual package pages, giving you visibility into which stacks use a specific package. However, navigating package by package doesn't scale when you're managing dozens of packages across hundreds of stacks.
 
 Today, we're extending that visibility to the organization level. You can now see adoption data for all packages at a glance, filter by usage status, and share specific views with your team.
 
