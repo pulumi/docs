@@ -1409,6 +1409,23 @@ const guidesStack = new pulumi.StackReference('pulumi/guides/production');
 
 These provide outputs like domain names, ALB ARNs, and distribution IDs for integration.
 
+#### How stack references work for origins
+
+The docs CloudFront distribution uses StackReferences to dynamically configure origins from external stacks:
+
+- **Registry**: Reads `cloudFrontDomain` from `pulumi/registry/{environment}`
+- **Guides**: Reads `cloudFrontDomain` from `pulumi/guides/{environment}`
+- **Answers**: Reads `cloudFrontDomain` from `pulumi/answers/{environment}`
+
+**When external stacks are updated:**
+
+1. External stack (for example, registry) deploys → creates new CloudFront distribution with new domain
+2. Docs infrastructure automatically reads the updated output via StackReference on next deployment
+3. Docs CloudFront distribution origins are updated with the new domain
+4. CloudFront changes propagate globally (15-20 minutes)
+
+**Important:** StackReferences always read the latest outputs from referenced stacks. No manual refresh is needed.
+
 ### AWS Resources
 
 #### S3 Buckets
