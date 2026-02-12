@@ -305,7 +305,7 @@ This example demonstrates IAM authentication in a working environment, but you'l
 
 **Network security**: The example places RDS in public subnets to allow the PostgreSQL provider to connect during deployment. In production, place RDS in private subnets and ensure your deployment environment (like GitHub Actions or Pulumi Cloud) can reach the database for initial setup, either through a bastion host or VPN.
 
-**Connection pooling and performance**: IAM tokens expire after 15 minutes. If you're using connection pooling, you'll need logic to refresh tokens before they expire. AWS recommends using IAM authentication only when your application creates fewer than 200 new connections per second. For higher connection rates, consider using Amazon RDS Proxy, which manages connection pooling and can reduce the overhead of IAM token generation.
+**Connection pooling and performance**: IAM tokens expire after 15 minutes. If you're using connection pooling, you'll need logic to refresh tokens before they expire. AWS recommends using IAM authentication only when your application creates [fewer than 200 new connections per second](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html#UsingWithRDS.IAMDBAuth.ConnectionsPerSecond). For higher connection rates, consider using Amazon RDS Proxy, which manages connection pooling and can reduce the overhead of IAM token generation.
 
 **Master password management**: You still need a master password for database administration and for the initial user setup. Store this in AWS Secrets Manager or Pulumi ESC, and restrict access to it carefully.
 
