@@ -1,6 +1,6 @@
 ---
 title: "Schema Validation Comes to Pulumi ESC with fn::validate"
-date: 2026-02-09
+date: 2026-02-12T11:00:00-03:00
 draft: false
 meta_desc: "Validate configuration values against JSON Schema with fn::validate in Pulumi ESC."
 meta_image: meta.png
