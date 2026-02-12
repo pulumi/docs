@@ -1,7 +1,7 @@
 ---
 title: "Registry usage insights: know which stacks run which versions"
 allow_long_title: true
-date: 2026-02-13
+date: 2026-02-12
 draft: false
 meta_desc: "See which stacks use which package versions at a glance. Filter by adoption status and track version sprawl across your organization."
 meta_image: meta.png
