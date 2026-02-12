@@ -225,7 +225,7 @@ One of the newest developments is the release of [Pulumi Agent Skills](https://w
 
 Combined with infrastructure access via tools like [Pulumi’s Remote MCP Server](https://www.pulumi.com/blog/remote-mcp-server/), teams can build secure, AI-driven workflows where assistants provide insights and Pulumi Neo safely executes actions with previews, policies, and orchestration.
 
-AI code assistants are no longer experimental, they're fast becoming a competitive advantage in cloud software development.
+AI code assistants are no longer experimental; they're fast becoming a competitive advantage in cloud software development.
 
 ## The Future of Cloud: Reinvented for an AI-First Decade
 
