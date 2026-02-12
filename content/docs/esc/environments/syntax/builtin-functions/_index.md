@@ -19,14 +19,15 @@ All function invocations take the form of an object with a single key that names
 
 ## Functions
 
-- [`fn::fromJSON`](/docs/esc/environments/syntax/builtin-functions/fn-from-json)
-- [`fn::fromBase64`](/docs/esc/environments/syntax/builtin-functions/fn-from-base64)
-- [`fn::join`](/docs/esc/environments/syntax/builtin-functions/fn-join)
-- [`fn::split`](/docs/esc/environments/syntax/builtin-functions/fn-split)
 - [`fn::concat`](/docs/esc/environments/syntax/builtin-functions/fn-concat)
+- [`fn::validate`](/docs/esc/environments/syntax/builtin-functions/fn-validate)
+- [`fn::fromBase64`](/docs/esc/environments/syntax/builtin-functions/fn-from-base64)
+- [`fn::fromJSON`](/docs/esc/environments/syntax/builtin-functions/fn-from-json)
+- [`fn::join`](/docs/esc/environments/syntax/builtin-functions/fn-join)
 - [`fn::open`](/docs/esc/environments/syntax/builtin-functions/fn-open)
 - [`fn::rotate`](/docs/esc/environments/syntax/builtin-functions/fn-rotate)
 - [`fn::secret`](/docs/esc/environments/syntax/builtin-functions/fn-secret)
+- [`fn::split`](/docs/esc/environments/syntax/builtin-functions/fn-split)
 - [`fn::toBase64`](/docs/esc/environments/syntax/builtin-functions/fn-to-base64)
 - [`fn::toJSON`](/docs/esc/environments/syntax/builtin-functions/fn-to-json)
 - [`fn::toString`](/docs/esc/environments/syntax/builtin-functions/fn-to-string)
