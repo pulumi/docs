@@ -2151,6 +2151,51 @@ Video recordings archived in GitHub Actions artifacts on failure.
 
 **Typical Duration:** 3-5 minutes
 
+### Post-Deployment Health Checks
+
+After Pulumi updates complete, automated health checks validate the deployed site using curl-based tests.
+
+**Workflow:** `.github/workflows/post-deployment-health-check.yml`
+
+**Implementation:** Inline bash script using curl (no external dependencies or repository checkout required)
+
+**What it checks:**
+
+- Core pages (homepage, docs, registry)
+- SDK documentation endpoints (Node.js, Python, .NET, Java)
+- High-traffic documentation pages
+- Lambda@Edge redirect functionality
+
+**When it runs:**
+
+- Automatically after `build-and-deploy.yml` or `testing-build-and-deploy.yml` completes successfully
+- Can be manually triggered via GitHub Actions UI
+- Can be scheduled (add `schedule` trigger to workflow)
+
+**On failure:**
+
+- Dedicated Slack notification sent to #docs-ops (production) or #docs-ops-test (testing)
+- Notification includes deployment info, commit SHA, and link to logs
+- Health check workflow marked as failed in GitHub Actions
+- Deployment workflow remains marked as successful (separation of concerns)
+
+### Local testing
+
+```bash
+# Test individual endpoint
+curl -s -o /dev/null -w "%{http_code}\n" -L https://www.pulumi.com/docs
+
+# Test redirect
+curl -s -o /dev/null -w "%{http_code}|%{redirect_url}\n" https://www.pulumi.com/docs/intro/cloud-providers/aws/
+```
+
+### Adding new checks
+
+Edit `.github/workflows/post-deployment-health-check.yml` and add calls to:
+
+- `check_endpoint` function for page availability checks (expects 200 status)
+- `check_redirect` function for Lambda@Edge redirect tests (expects 301 with location match)
+
 ### Example Program Testing
 
 **Purpose:** Validate that all code examples are functional

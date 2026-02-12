@@ -47,7 +47,7 @@
             <p class="three-column-item-description mb-6">{{ .description | markdownify }}</p>
             {{ end }}
             {{ if .cta_text }}
-            <a href="{{ .cta_link }}" class="btn-secondary-template-variant block xl:inline-block text-center xl:text-left self-start w-full xl:w-auto">{{ .cta_text }}</a>
+            <a href="{{ .cta_link }}" class="btn-secondary-template-variant block xl:inline-block text-center w-full xl:w-auto">{{ .cta_text }}</a>
             {{ end }}
         </div>
         {{ end }}
