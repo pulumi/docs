@@ -119,5 +119,9 @@ Choose your path based on your needs:
 - **Need custom policies?** Learn to [write custom policy packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, or Python. Create organization-specific rules tailored to your requirements.
 - **Managing compliance?** View violations and track remediation progress in [Policy Findings](/docs/insights/policy/policy-findings/). Triage issues, assign owners, and monitor compliance trends across your organization.
 - **Configuring discovered resources?** Visit the [Insights Get Started tutorial](/docs/insights/discovery/get-started/) for a detailed guide on audit policies for cloud resources discovered outside Pulumi.
+- **Using the CLI?** See the [CLI reference](/docs/insights/policy/cli/) for `pulumi policy` commands to create, publish, and manage policy packs from the command line.
+- **Enforcing policies in CI/CD?** Learn how to [integrate policy enforcement](/docs/insights/policy/ci-cd/) into GitHub Actions, Google Cloud Build, and other CI/CD pipelines.
+- **Building custom tooling?** Explore the [API & SDK reference](/docs/insights/policy/api-reference/) for the Policy SDK and Pulumi Cloud REST API endpoints.
+- **Looking for tutorials?** Browse [tutorials and guides](/docs/insights/policy/tutorials-and-guides/) including hands-on walkthroughs and advanced IDP patterns.
 
-For common questions and troubleshooting, see the [FAQ](/docs/support/faq/policies).
+For common questions and troubleshooting, see the [FAQ](/docs/support/faq/policies/).
