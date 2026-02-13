@@ -438,8 +438,8 @@ comparison_table:
                 items:
                   - content: 1
                   - content: 1
-                  - content: 10
-                  - content: 20
+                  - content: 10 / Custom
+                  - content: Custom
               - title: Data export
                 link: /docs/insights/export/
                 items:
