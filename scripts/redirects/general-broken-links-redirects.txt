@@ -1,4 +1,5 @@
 registry/packages/azure/api-docs/mobile/index.html|/registry/packages/azure/
+registry/packages/gcp/how-to-guides/gcp-py-oidc-provider-pulumi-cloud/index.html|/docs/esc/guides/configuring-oidc/gcp/
 containers/index.html|/docs/iac/clouds/kubernetes/
 docs/guides/index.html|/docs/iac/guides/
 docs/iac/guides/index.html|/docs/iac/
