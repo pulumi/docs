@@ -21,6 +21,7 @@ module.exports = {
             [".NET", "dotnet"],
             ["aws", "aws classic"],
             ["azure", "azure native"],
+            ["aliyun", "alicloud"],
             ["azuread", "azure ad", "azure active directory"],
             ["c#", "csharp"],
             ["cfn", "cloudformation"],
@@ -123,6 +124,30 @@ module.exports = {
                             position: 0,
                             objectIDs: [
                                 page.getObjectID({ href: "/docs/pulumi-cloud/" }),
+                            ],
+                        },
+                    ],
+                },
+            },
+
+            // Promote environment variables page for queries containing "PULUMI_"
+            {
+                objectID: "contains-pulumi-env",
+                enabled: true,
+                conditions: [
+                    {
+                        anchoring: "contains",
+                        pattern: "PULUMI_",
+                        alternatives: false,
+                    }
+                ],
+                consequence: {
+                    filterPromotes: true,
+                    promote: [
+                        {
+                            position: 0,
+                            objectIDs: [
+                                page.getObjectID({ href: "/docs/iac/cli/environment-variables/" }),
                             ],
                         },
                     ],

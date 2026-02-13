@@ -11,6 +11,22 @@ menu:
 aliases:
     - /docs/reference/cli/environment-variables/
     - /docs/cli/environment-variables/
+search:
+  keywords:
+    - PULUMI_CONFIG_PASSPHRASE
+    - PULUMI_CONFIG_PASSPHRASE_FILE
+    - PULUMI_BACKEND_URL
+    - PULUMI_ACCESS_TOKEN
+    - PULUMI_HOME
+    - PULUMI_SKIP_UPDATE_CHECK
+    - PULUMI_PARALLEL
+    - PULUMI_STACK
+    - PULUMI_DEBUG_COMMANDS
+    - PULUMI_ENABLE_LEGACY_DIFF
+    - environment variables
+    - env vars
+    - pulumi env
+  boost: true
 ---
 
 <dl class="tabular tabular-5-col break-words">
