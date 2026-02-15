@@ -815,7 +815,7 @@ You should see rows with event types like `star`, `push`, or `issues`, real GitH
 Three loading patterns are available; pick the one that fits your latency and cost requirements:
 
 - **Direct streaming (recommended).** Firehose streams directly to Snowflake via the Snowpipe Streaming API. No S3 intermediate. This is the pattern we demo end-to-end above.
-- **S3 auto-ingest.** Firehose buffers to S3, Snowpipe auto-ingests. Latency is about two minutes. Best when you need an S3 bucket as part of the pipeline, or can't use AWS DirectLink with Snowflake.
+- **S3 auto-ingest.** Firehose buffers to S3, Snowpipe auto-ingests. Latency is about two minutes. Best when you need an S3 bucket as part of the pipeline, or can't use AWS PrivateLink with Snowflake.
 - **Batch loading.** Your orchestrator (Airflow, Prefect, Mage, cron, etc) runs `COPY INTO` on a schedule. Best for full control over timing and deduplication.
 
 ### S3 auto-ingest via Snowpipe
