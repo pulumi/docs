@@ -1,5 +1,5 @@
 ---
-description: Enhance content for better search engine and AI discoverability. Works during content creation (proactive) or on existing content (reactive).
+description: Optimize content for search engine and AI discoverability. Use when writing new blog posts, documentation, or what-is pages, or when improving existing content for SEO and AEO (checks titles, meta descriptions, headings, AEO patterns, and positioning).
 ---
 
 # /seo-enhance Command

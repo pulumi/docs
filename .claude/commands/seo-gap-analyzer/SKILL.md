@@ -1,5 +1,5 @@
 ---
-description: Analyze content coverage gaps for specific topics and produce strategic plans to improve Pulumi's visibility in traditional search (SEO) and AI discovery (AEO/GEO).
+description: Analyze content coverage gaps for specific topics and produce strategic plans to improve Pulumi's visibility in traditional search (SEO) and AI discovery (AEO/GEO). Use when identifying ranking issues, competitors outranking Pulumi, or AI tools not citing Pulumi for relevant queries.
 ---
 
 # /seo-gap-analyzer Command
@@ -275,9 +275,72 @@ After approval, implement changes:
 3. **Focus on unbranded keywords** - Higher volume, earlier funnel, builds awareness
 4. **Follow Google's guidelines** - See `references/seo-aeo-sources.md` for authoritative sources
 
-## Example Triggers
+## Troubleshooting
 
-- "We need better coverage for 'configuration management' - here's the Slack thread..."
-- "Competitors are outranking us for '[term]', what can we do?"
-- "AI tools don't mention Pulumi when asked about [capability]"
-- "The Command provider should rank for 'configuration management' but it's in Registry"
+### Topic is too broad
+
+**Symptom:** Analysis produces generic recommendations with no clear keyword focus.
+
+**Solution:** Ask the user to narrow the scope. "Configuration management" is workable; "cloud" is too broad. If the user gives a broad area, suggest 2-3 specific sub-topics and ask which to prioritize.
+
+### All relevant content is in /registry/
+
+**Symptom:** The pages that should rank are in `/registry/*`, which lives in a separate repository (pulumi/registry).
+
+**Solution:** Document this as a finding. Recommend creating supporting content in this repo (blog posts, what-is pages, docs) that link to the registry page and target the same keywords. Flag to the user that registry changes require a separate effort.
+
+### WebSearch returns no Pulumi results
+
+**Symptom:** Pulumi doesn't appear in search results for target keywords.
+
+**Solution:** This IS the gap - document it clearly. Check if Pulumi has any content on the topic at all (Phase 4). If content exists but doesn't rank, it's an optimization problem. If no content exists, recommend new content in Priority 3.
+
+### User provides a URL instead of a topic
+
+**Symptom:** User passes a specific URL like `https://pulumi.com/docs/esc/`.
+
+**Solution:** Read the page content to extract the primary topic and keywords, then proceed with the standard analysis. The URL becomes one of the pages evaluated in Phase 4.
+
+## Examples
+
+### Example 1: Topic-based analysis
+
+User says: "We need better coverage for 'configuration management'"
+
+Actions:
+
+1. Identify keyword variants: "configuration management", "configuration management kubernetes", "what is configuration management", "configuration management tools"
+1. Search each keyword, document Pulumi's position and competitors
+1. Audit existing content in `content/docs/`, `content/blog/`, `content/what-is/`
+1. Identify gaps: missing what-is page, thin docs section, no internal links
+1. Produce prioritized plan with specific page edits
+
+Result: Strategic plan with 3 priorities - optimize existing docs page, create what-is page, add internal linking campaign.
+
+### Example 2: Competitive response
+
+User says: "Competitors are outranking us for 'secrets management', what can we do?"
+
+Actions:
+
+1. Search "secrets management" and document who ranks (HashiCorp Vault, AWS Secrets Manager docs, etc.)
+1. Analyze what makes competitor content rank (dedicated page, comprehensive coverage, strong internal linking)
+1. Audit Pulumi ESC content for the same keywords
+1. Identify citation gaps in AI tools
+1. Produce plan focused on closing specific competitive disadvantages
+
+Result: Plan to expand ESC documentation, add comparison tables, strengthen internal linking from related docs.
+
+### Example 3: AI citation gap
+
+User says: "AI tools don't mention Pulumi when asked about policy as code"
+
+Actions:
+
+1. Document what AI tools currently cite for "policy as code" queries
+1. Identify why those sources get cited (dedicated pages, clear definitions, structured content)
+1. Audit Pulumi's policy-as-code content for AEO readiness
+1. Identify what's missing for Pulumi to be the preferred citation
+1. Produce plan focused on AEO patterns (quotable definitions, FAQ sections, comparison tables)
+
+Result: Plan to restructure policies documentation with AEO-optimized content, add what-is page for "policy as code".
