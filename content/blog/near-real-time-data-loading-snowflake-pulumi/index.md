@@ -93,16 +93,16 @@ The following diagram shows how the ESC environments compose. The stack imports 
 
 ```mermaid
 flowchart TD
-    AWS["snowpipe-demo-aws<br/><i>AWS OIDC login</i>"]
-    SF["snowpipe-demo-snowflake<br/><i>Snowflake OIDC login</i>"]
-    GH["snowpipe-demo-github<br/><i>GitHub token</i>"]
-    Dev["snowpipe-demo-dev<br/><i>Combined environment</i>"]
-    Stack["Pulumi.&lt;stack&gt;.yaml<br/>(Stack Config)"]
+AWS["snowpipe-demo-aws<br/><i>AWS OIDC login</i>"]
+SF["snowpipe-demo-snowflake<br/><i>Snowflake OIDC login</i>"]
+GH["snowpipe-demo-github<br/><i>GitHub token</i>"]
+Dev["snowpipe-demo-dev<br/><i>Combined environment</i>"]
+Stack["Pulumi.&lt;stack&gt;.yaml<br/>(Stack Config)"]
 
-    AWS --> Dev
-    SF --> Dev
-    Dev --> Stack
-    GH --> Stack
+AWS --> Dev
+SF --> Dev
+Dev --> Stack
+GH --> Stack
 ```
 
 ### One-time Snowflake setup
@@ -287,7 +287,7 @@ Note: `github:appAuth` and `github:token` are mutually exclusive. Use one or the
 
 We decided to import this environment directly in the stack YAML alongside the dev environment instead of composing through the dev environment because it serves a different concern (GitHub API access vs. cloud provider credentials).
 
-### Referencing the environment from your stack
+### Referencing ESC environments from your stack
 
 Add the `environment:` block to `Pulumi.<stack>.yaml`. Note two environment imports, one for cloud credentials and one for GitHub:
 
