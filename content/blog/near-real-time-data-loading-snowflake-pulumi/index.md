@@ -83,7 +83,7 @@ All examples in this post are in Python, but Pulumi supports multiple languages.
 
 This project needs credentials for two cloud providers, AWS and Snowflake. Hardcoding secrets in `Pulumi.<stack>.yaml` is insecure and doesn't scale: secrets leak into version control, rotate manually, and multiply across environments. [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) solves this by providing dynamic, short-lived credentials for both providers via OIDC (OpenID Connect). No static secrets are stored anywhere.
 
-If you're not using Pulumi ESC, you can add these credentials directly to your stack configuration file (`Pulumi.<stack>.yaml`) using `pulumi config set` or by editing the YAML manually.
+If you're not using Pulumi ESC, you can add these credentials directly to your stack configuration file (`Pulumi.<stack>.yaml`) using `pulumi config set`.
 
 ### How it works
 
