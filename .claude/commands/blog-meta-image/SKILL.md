@@ -1,13 +1,13 @@
 ---
-name: meta
-description: "Generate a meta image (Open Graph / social share) for a blog post. Reads the blog post title, selects a pre-composed template (dark/light, mascot/logos), and renders a 1200x628 PNG. Use when the user types /meta or asks to create, generate, or regenerate a blog post's meta image, social card, or Open Graph image. Accepts optional arguments like theme, mascot style, or logo names."
+name: blog-meta-image
+description: "Generate a meta image (Open Graph / social share) for a blog post. Reads the blog post title, selects a pre-composed template (dark/light, mascot/logos), and renders a 1200x628 PNG. Use when the user types /blog-meta-image or asks to create, generate, or regenerate a blog post's meta image, social card, or Open Graph image. Accepts optional arguments like theme, mascot style, or logo names."
 ---
 
-# `/meta` — Generate Blog Meta Image
+# `/blog-meta-image` — Generate Blog Meta Image
 
 You are generating a meta image for a Pulumi blog post. Follow these steps precisely.
 
-**Skill directory**: `.claude/commands/meta/` — all paths below are relative to the project root unless noted.
+**Skill directory**: `.claude/commands/blog-meta-image/` — all paths below are relative to the project root unless noted.
 
 ## [Step 1/4] Find the Blog Post
 
@@ -32,11 +32,11 @@ Read the full blog post file (frontmatter + body).
 - **Style**: "mascot", "flying", "closeup", "wireframe", "shield", or logo names like "aws kubernetes"
 - **Title override**: if the user explicitly provides different text in quotes, use that instead of the blog title
 
-If `$ARGUMENTS` fully specifies the template (e.g., `/meta dark flying`), skip the interactive questions and go straight to Step 3's rendering. If partially specified, only ask about the unspecified parts.
+If `$ARGUMENTS` fully specifies the template (e.g., `/blog-meta-image dark flying`), skip the interactive questions and go straight to Step 3's rendering. If partially specified, only ask about the unspecified parts.
 
 ## [Step 3/4] Select Template & Render
 
-Read the asset catalog reference at `.claude/commands/meta/references/asset-catalog.md` for the full template list and logo inventory.
+Read the asset catalog reference at `.claude/commands/blog-meta-image/references/asset-catalog.md` for the full template list and logo inventory.
 
 ### Interactive Selection (3 progressive questions)
 
@@ -112,7 +112,7 @@ The number of selected logos (1, 2, or 3) determines which template to use (`log
 1. Try [simple-icons](https://github.com/simple-icons/simple-icons/tree/develop/icons) first — clean vector SVGs for 3000+ brands. Download from `https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/{slug}.svg` and add a `fill` attribute with the brand color to `<path>` elements.
 2. Otherwise use `WebSearch` to find the official SVG (`"<technology> logo SVG site:github.com"`)
 3. Use `WebFetch` to download the SVG content
-4. Save it to `.claude/commands/meta/assets/logos/<name>.svg`
+4. Save it to `.claude/commands/blog-meta-image/assets/logos/<name>.svg`
 
 ---
 
@@ -193,15 +193,15 @@ No `uv sync` is needed — the script has inline PEP 723 metadata declaring its 
 
 ### Rendering
 
-1. Write the JSON config to a temporary file (e.g., `/tmp/meta-config.json`)
+1. Write the JSON config to a temporary file named after the blog post slug (e.g., `/tmp/meta-<slug>.json`, where `<slug>` is the blog directory name like `my-post`)
 2. Determine the blog post directory (e.g., `content/blog/my-post/`)
-3. The composition script is at `.claude/commands/meta/scripts/compose_meta_image.py`
-4. The assets directory is at `.claude/commands/meta/assets/`
+3. The composition script is at `.claude/commands/blog-meta-image/scripts/compose_meta_image.py`
+4. The assets directory is at `.claude/commands/blog-meta-image/assets/`
 5. Run with `uv run`:
    ```bash
-   uv run .claude/commands/meta/scripts/compose_meta_image.py \
-     --config /tmp/meta-config.json \
-     --assets-dir .claude/commands/meta/assets \
+   uv run .claude/commands/blog-meta-image/scripts/compose_meta_image.py \
+     --config /tmp/meta-<slug>.json \
+     --assets-dir .claude/commands/blog-meta-image/assets \
      --output <blog-dir>/meta.png
    ```
 
