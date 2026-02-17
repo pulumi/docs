@@ -4,36 +4,46 @@
 # dependencies = [
 #     "cairosvg>=2.8.2",
 #     "pillow>=12.1.1",
+#     "pyyaml>=6.0",
 # ]
 # ///
-"""Compose meta images from SVG assets.
+"""Compose meta images from pre-designed PNG templates.
 
-Layer stack (bottom->top): Background -> Pattern -> Overlays (z-order) -> Text
+Pipeline: Load template PNG -> Place logos on placeholders -> Draw text -> Save
 """
 
 import argparse
+import base64
+import html
 import json
-import os
 import subprocess
-import textwrap
+from io import BytesIO
 from pathlib import Path
 
 import cairosvg
-from PIL import Image, ImageDraw, ImageFont
+import yaml
+from PIL import Image, ImageFont
 
-CANVAS_WIDTH = 1200
-CANVAS_HEIGHT = 600
+
+def load_catalog(assets_dir: Path) -> dict:
+    """Load the catalog.yaml from the assets directory."""
+    catalog_path = assets_dir / "catalog.yaml"
+    with open(catalog_path) as f:
+        return yaml.safe_load(f)
+
+
+def find_template(catalog: dict, filename: str) -> dict | None:
+    """Look up a template entry by filename."""
+    for t in catalog["templates"]:
+        if t["filename"] == filename:
+            return t
+    return None
 
 
 def svg_to_png(svg_path: str, width: int, height: int) -> Image.Image:
-    """Rasterize an SVG file to a PIL Image at the given dimensions.
-
-    Renders at the target width, then crops/resizes to exact height to avoid
-    aspect-ratio letterboxing (e.g. 1200x628 SVGs rendered to 1200x600).
-    """
+    """Rasterize an SVG file to a PIL Image fitting within width x height."""
     svg_path = str(svg_path)
     try:
-        # Render at target width only -- let height be natural
         png_data = cairosvg.svg2png(url=svg_path, output_width=width)
     except Exception:
         result = subprocess.run(
@@ -44,146 +54,161 @@ def svg_to_png(svg_path: str, width: int, height: int) -> Image.Image:
             raise RuntimeError(f"Failed to rasterize {svg_path}")
         png_data = result.stdout
 
-    from io import BytesIO
     img = Image.open(BytesIO(png_data)).convert("RGBA")
 
-    # Crop to exact target dimensions (top-aligned crop for backgrounds)
-    if img.size != (width, height):
-        img = img.crop((0, 0, width, height))
-
+    # Fit within bounding box preserving aspect ratio
+    img.thumbnail((width, height), Image.LANCZOS)
     return img
-
-
-def apply_pattern(bg_svg_path: str, pattern_svg_path: str) -> Image.Image:
-    """Compose background + pattern as a combined SVG to preserve CSS blend modes.
-
-    Creates an intermediate SVG that embeds both as <image> elements,
-    letting the SVG renderer handle mix-blend-mode natively.
-    """
-    import base64
-
-    bg_data = Path(bg_svg_path).read_bytes()
-    pat_data = Path(pattern_svg_path).read_bytes()
-    bg_b64 = base64.b64encode(bg_data).decode()
-    pat_b64 = base64.b64encode(pat_data).decode()
-
-    combined_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="{CANVAS_WIDTH}" height="{CANVAS_HEIGHT}"
-     viewBox="0 0 {CANVAS_WIDTH} {CANVAS_HEIGHT}">
-  <image width="{CANVAS_WIDTH}" height="{CANVAS_HEIGHT}"
-         preserveAspectRatio="none"
-         href="data:image/svg+xml;base64,{bg_b64}"/>
-  <image width="{CANVAS_WIDTH}" height="{CANVAS_HEIGHT}"
-         preserveAspectRatio="none"
-         href="data:image/svg+xml;base64,{pat_b64}"/>
-</svg>"""
-
-    from io import BytesIO
-    png_data = cairosvg.svg2png(
-        bytestring=combined_svg.encode(),
-        output_width=CANVAS_WIDTH,
-        output_height=CANVAS_HEIGHT,
-    )
-    return Image.open(BytesIO(png_data)).convert("RGBA")
 
 
 def draw_text(
     image: Image.Image,
     content: str,
     fonts_dir: Path,
-    x: int = 80,
-    y: int = 200,
-    font_size: int = 48,
-    font_weight: str = "bold",
-    color: str = "#FFFFFF",
-    max_width: int = 650,
-    line_spacing: int = 8,
+    catalog_text: dict,
+    font_size: int = 71,
 ) -> Image.Image:
-    """Render text onto the image with word-wrapping."""
-    img = image.copy()
-    draw = ImageDraw.Draw(img)
-
-    font_file = "Inter-Bold.ttf" if font_weight == "bold" else "Inter-Regular.ttf"
-    font_path = fonts_dir / font_file
+    """Render text via SVG for native letter-spacing and kerning support."""
+    font_path = fonts_dir / catalog_text["font"]
+    font_b64 = base64.b64encode(font_path.read_bytes()).decode()
     font = ImageFont.truetype(str(font_path), font_size)
 
-    # Word-wrap: measure words and break lines to fit max_width
-    words = content.split()
-    lines = []
-    current_line = ""
+    x = catalog_text.get("x", 90)
+    y_top = catalog_text.get("y", 80)
+    max_width = catalog_text.get("max_width", 520)
+    color = catalog_text.get("color", "#FFFFFF")
+    letter_spacing_em = catalog_text.get("letter_spacing_em", -0.03)
+    line_height_pct = catalog_text.get("line_height_pct", 110)
+
+    letter_spacing_px = letter_spacing_em * font_size
+    line_height_px = font_size * line_height_pct / 100
+
+    lines = _word_wrap(content, font, max_width)
+    canvas_w, canvas_h = image.size
+
+    # Build tspans — top-anchored, each line offset by line_height
+    tspans = []
+    for i, line in enumerate(lines):
+        baseline_y = y_top + i * line_height_px + font_size * 0.85
+        escaped = html.escape(line)
+        tspans.append(f'<tspan x="{x}" y="{baseline_y}">{escaped}</tspan>')
+
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{canvas_w}" height="{canvas_h}">
+      <defs><style>
+        @font-face {{
+          font-family: 'Inter';
+          src: url('data:font/truetype;base64,{font_b64}');
+          font-weight: bold;
+        }}
+      </style></defs>
+      <text font-family="Inter" font-weight="bold" font-size="{font_size}"
+            fill="{color}" letter-spacing="{letter_spacing_px}">
+        {"".join(tspans)}
+      </text>
+    </svg>'''
+
+    png_data = cairosvg.svg2png(bytestring=svg.encode(),
+                                 output_width=canvas_w, output_height=canvas_h)
+    text_layer = Image.open(BytesIO(png_data)).convert("RGBA")
+    return Image.alpha_composite(image.convert("RGBA"), text_layer)
+
+
+def _word_wrap(text: str, font: ImageFont.FreeTypeFont, max_width: float) -> list[str]:
+    """Word-wrap text to fit within max_width using font metrics."""
+    words = text.split()
+    lines, current = [], ""
     for word in words:
-        test = f"{current_line} {word}".strip()
+        test = f"{current} {word}".strip()
         bbox = font.getbbox(test)
         if bbox[2] - bbox[0] <= max_width:
-            current_line = test
+            current = test
         else:
-            if current_line:
-                lines.append(current_line)
-            current_line = word
-    if current_line:
-        lines.append(current_line)
+            if current:
+                lines.append(current)
+            current = word
+    if current:
+        lines.append(current)
+    return lines
 
-    # Draw each line
-    cy = y
-    for line in lines:
-        draw.text((x, cy), line, fill=color, font=font)
-        bbox = font.getbbox(line)
-        line_height = bbox[3] - bbox[1]
-        cy += line_height + line_spacing
+
+def place_logos(
+    canvas: Image.Image,
+    logo_paths: list[str],
+    placeholders: list[dict],
+    assets_dir: Path,
+) -> Image.Image:
+    """Place logo SVGs centered on white placeholder regions."""
+    img = canvas.copy()
+
+    for i, logo_path in enumerate(logo_paths):
+        if i >= len(placeholders):
+            break
+
+        ph = placeholders[i]
+        ph_x, ph_y = ph["x"], ph["y"]
+        ph_w, ph_h = ph["width"], ph["height"]
+
+        # Scale padding to placeholder size (larger placeholders have bigger rounded corners)
+        padding = max(20, min(ph_w, ph_h) // 6)
+
+        # Rasterize logo SVG to fit within placeholder (with padding)
+        target_w = ph_w - 2 * padding
+        target_h = ph_h - 2 * padding
+        svg_path = str((assets_dir / logo_path).resolve())
+        logo_img = svg_to_png(svg_path, target_w, target_h)
+
+        # Center logo within the placeholder
+        lw, lh = logo_img.size
+        offset_x = ph_x + (ph_w - lw) // 2
+        offset_y = ph_y + (ph_h - lh) // 2
+
+        img.paste(logo_img, (offset_x, offset_y), logo_img)
 
     return img
 
 
 def compose(config: dict, output_path: str, assets_dir: Path) -> str:
-    """Full composition pipeline: BG -> pattern -> overlays -> text -> save."""
+    """Full composition pipeline: Template PNG -> Logos -> Text -> Save."""
+    catalog = load_catalog(assets_dir)
     fonts_dir = assets_dir / "fonts"
+    canvas_w = catalog["canvas"]["width"]
+    canvas_h = catalog["canvas"]["height"]
 
-    # 1. Background (with optional pattern)
-    bg_path = str((assets_dir / config["background"]).resolve())
+    # 1. Load template PNG
+    template_path = assets_dir / config["template"]
+    canvas = Image.open(str(template_path)).convert("RGBA")
+    canvas = canvas.resize((canvas_w, canvas_h), Image.LANCZOS)
 
-    if config.get("pattern"):
-        pat_path = str((assets_dir / config["pattern"]).resolve())
-        canvas = apply_pattern(bg_path, pat_path)
-    else:
-        canvas = svg_to_png(bg_path, CANVAS_WIDTH, CANVAS_HEIGHT)
+    # 2. Place logos if any
+    logos = config.get("logos", [])
+    if logos:
+        template_filename = Path(config["template"]).name
+        template_entry = find_template(catalog, template_filename)
+        if template_entry and "placeholders" in template_entry:
+            canvas = place_logos(canvas, logos, template_entry["placeholders"], assets_dir)
 
-    # 2. Overlays in z-order (behind first, front last)
-    for overlay in config.get("overlays", []):
-        svg_path = str((assets_dir / overlay["svg_path"]).resolve())
-        ov_w = overlay.get("width", 300)
-        ov_h = overlay.get("height", 300)
-
-        ov_img = svg_to_png(svg_path, ov_w, ov_h)
-
-        # Preserve aspect ratio: fit within the bounding box
-        ov_img.thumbnail((ov_w, ov_h), Image.LANCZOS)
-
-        ox = overlay.get("x", 0)
-        oy = overlay.get("y", 0)
-        canvas.paste(ov_img, (ox, oy), ov_img)
-
-    # 3. Text
+    # 3. Draw text
     if config.get("text"):
         t = config["text"]
+        font_size = t.get("font_size", 71)
+        # Allow config to override catalog text defaults (e.g. max_width)
+        text_config = {**catalog["text"]}
+        for key in ("max_width", "x", "y", "color"):
+            if key in t:
+                text_config[key] = t[key]
         canvas = draw_text(
             canvas,
             content=t["content"],
             fonts_dir=fonts_dir,
-            x=t.get("x", 80),
-            y=t.get("y", 200),
-            font_size=t.get("font_size", 48),
-            font_weight=t.get("font_weight", "bold"),
-            color=t.get("color", "#FFFFFF"),
-            max_width=t.get("max_width", 650),
+            catalog_text=text_config,
+            font_size=font_size,
         )
 
-    # 4. Save as PNG (flatten alpha onto white if needed, then save RGB)
+    # 4. Save as PNG
     output = Path(output_path)
     output.parent.mkdir(parents=True, exist_ok=True)
 
-    # Flatten to RGB for final PNG
-    final = Image.new("RGB", (CANVAS_WIDTH, CANVAS_HEIGHT), (255, 255, 255))
+    final = Image.new("RGB", (canvas_w, canvas_h), (255, 255, 255))
     final.paste(canvas, (0, 0), canvas if canvas.mode == "RGBA" else None)
     final.save(str(output), "PNG")
 
@@ -191,13 +216,13 @@ def compose(config: dict, output_path: str, assets_dir: Path) -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Compose a meta image from SVG assets")
+    parser = argparse.ArgumentParser(description="Compose a meta image from a template PNG")
     parser.add_argument("--config", required=True, help="JSON config file path")
     parser.add_argument("--output", required=True, help="Output PNG path")
     parser.add_argument(
         "--assets-dir",
         required=True,
-        help="Base directory containing assets/ subdirs (backgrounds, patterns, mascots, icons) and fonts/",
+        help="Base directory containing templates/, logos/, fonts/, and catalog.yaml",
     )
     args = parser.parse_args()
 

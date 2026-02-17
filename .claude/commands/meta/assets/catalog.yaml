@@ -1,839 +1,187 @@
 # Meta Image Asset Catalog
-# Auto-generated from SVG analysis — render target is 1200x600
+# Template-based system — render target is 1200x628
 
 canvas:
   width: 1200
-  height: 600
-
-backgrounds:
-  # === Flat Backgrounds ===
-  - filename: flat-blue.svg
-    type: flat
-    render_width: 1200
-    render_height: 600
-    colors: { primary: "#949DE8" }
-    is_dark: false
-    tags: [blue, solid, light]
-
-  - filename: flat-violet.svg
-    type: flat
-    render_width: 1200
-    render_height: 600
-    colors: { primary: "#B39CDB" }
-    is_dark: false
-    tags: [violet, solid, light]
-
-  - filename: flat-lavender.svg
-    type: flat
-    render_width: 1200
-    render_height: 600
-    colors: { primary: "#B985BD" }
-    is_dark: false
-    tags: [lavender, solid, light]
-
-  - filename: flat-rose.svg
-    type: flat
-    render_width: 1200
-    render_height: 600
-    colors: { primary: "#D794B6" }
-    is_dark: false
-    tags: [rose, solid, light]
-
-  - filename: flat-salmon.svg
-    type: flat
-    render_width: 1200
-    render_height: 600
-    colors: { primary: "#F7A8B2" }
-    is_dark: false
-    tags: [salmon, solid, light]
-
-  - filename: flat-yellow.svg
-    type: flat
-    render_width: 1200
-    render_height: 600
-    colors: { primary: "#FAD97F" }
-    is_dark: false
-    tags: [yellow, solid, light]
-
-  - filename: flat-dark-blue.svg
-    type: flat
-    render_width: 1200
-    render_height: 600
-    colors: { primary: "#1F2457" }
-    is_dark: true
-    tags: [blue, solid, dark]
-
-  - filename: flat-dark-purple.svg
-    type: flat
-    render_width: 1200
-    render_height: 600
-    colors: { primary: "#33244E" }
-    is_dark: true
-    tags: [purple, solid, dark]
-
-  - filename: flat-dark-magenta.svg
-    type: flat
-    render_width: 1200
-    render_height: 600
-    colors: { primary: "#37143A" }
-    is_dark: true
-    tags: [magenta, solid, dark]
-
-  # === Horizontal Gradients ===
-  - filename: horizontal-gradient-blue.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#949DE8", end: "#DBDEF7" }
-    is_dark: false
-    tags: [blue, gradient, light]
-
-  - filename: horizontal-gradient-violet.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#B39CDB", end: "#E6DEF3" }
-    is_dark: false
-    tags: [violet, gradient, light]
-
-  - filename: horizontal-gradient-lavender.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#B985BD", end: "#E8D6E9" }
-    is_dark: false
-    tags: [lavender, gradient, light]
-
-  - filename: horizontal-gradient-rose.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#D794B6", end: "#F2DBE7" }
-    is_dark: false
-    tags: [rose, gradient, light]
-
-  - filename: horizontal-gradient-salmon.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#F7A8B2", end: "#FCE2E5" }
-    is_dark: false
-    tags: [salmon, gradient, light]
-
-  - filename: horizontal-gradient-yellow.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#FAD97F", end: "#FDF2D4" }
-    is_dark: false
-    tags: [yellow, gradient, light]
-
-  - filename: horizontal-gradient-violet-blue.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#B39CDB", end: "#949DE8" }
-    is_dark: false
-    tags: [violet, blue, gradient, light]
-
-  - filename: horizontal-gradient-rose-lavender.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#D794B6", end: "#B985BD" }
-    is_dark: false
-    tags: [rose, lavender, gradient, light]
-
-  - filename: horizontal-gradient-yellow-salmon.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#FAD97F", end: "#F7A8B2" }
-    is_dark: false
-    tags: [yellow, salmon, gradient, light]
-
-  - filename: horizontal-gradient-dark-blue.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#1F2457", end: "#2E3782" }
-    is_dark: true
-    tags: [blue, gradient, dark]
-
-  - filename: horizontal-gradient-dark-purple.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#33244E", end: "#4D3675" }
-    is_dark: true
-    tags: [purple, gradient, dark]
-
-  - filename: horizontal-gradient-dark-magenta.svg
-    type: horizontal-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#37143A", end: "#531F57" }
-    is_dark: true
-    tags: [magenta, gradient, dark]
-
-  # === Vertical Gradients ===
-  - filename: vertical-gradient-blue.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#949DE8", end: "#DBDEF7" }
-    is_dark: false
-    tags: [blue, gradient, light]
-
-  - filename: vertical-gradient-violet.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#B39CDB", end: "#E6DEF3" }
-    is_dark: false
-    tags: [violet, gradient, light]
-
-  - filename: vertical-gradient-lavender.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#B985BD", end: "#E8D6E9" }
-    is_dark: false
-    tags: [lavender, gradient, light]
-
-  - filename: vertical-gradient-rose.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#D794B6", end: "#F2DBE7" }
-    is_dark: false
-    tags: [rose, gradient, light]
-
-  - filename: vertical-gradient-salmon.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#F7A8B2", end: "#FCE2E5" }
-    is_dark: false
-    tags: [salmon, gradient, light]
-
-  - filename: vertical-gradient-yellow.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#FAD97F", end: "#FDF2D4" }
-    is_dark: false
-    tags: [yellow, gradient, light]
-
-  - filename: vertical-gradient-violet-blue.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#B39CDB", end: "#949DE8" }
-    is_dark: false
-    tags: [violet, blue, gradient, light]
-
-  - filename: vertical-gradient-rose-lavender.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#D794B6", end: "#B985BD" }
-    is_dark: false
-    tags: [rose, lavender, gradient, light]
-
-  - filename: vertical-gradient-yellow-salmon.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#FAD97F", end: "#F7A8B2" }
-    is_dark: false
-    tags: [yellow, salmon, gradient, light]
-
-  - filename: vertical-gradient-dark-blue.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#1F2457", end: "#2E3782" }
-    is_dark: true
-    tags: [blue, gradient, dark]
-
-  - filename: vertical-gradient-dark-purple.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#33244E", end: "#4D3675" }
-    is_dark: true
-    tags: [purple, gradient, dark]
-
-  - filename: vertical-gradient-dark-magenta.svg
-    type: vertical-gradient
-    render_width: 1200
-    render_height: 600
-    colors: { start: "#37143A", end: "#531F57" }
-    is_dark: true
-    tags: [magenta, gradient, dark]
-
-patterns:
-  - filename: arrows-directions.svg
-    blend_mode: soft-light
-    opacity: 0.3
-    style: geometric
-    tags: [arrows, directional, geometric]
-
-  - filename: build-construction.svg
-    blend_mode: soft-light
-    opacity: 0.5
-    style: geometric
-    tags: [construction, building, tools]
-
-  - filename: circles-bubbles.svg
-    blend_mode: soft-light
-    opacity: 0.5
-    style: organic
-    tags: [circles, bubbles, organic]
-
-  - filename: circuits.svg
-    blend_mode: soft-light
-    opacity: 0.5
-    style: geometric
-    tags: [circuits, tech, electronic]
-
-  - filename: clouds.svg
-    blend_mode: soft-light
-    opacity: 0.5
-    style: organic
-    tags: [clouds, sky, organic]
-
-  - filename: dots.svg
-    blend_mode: color-burn
-    opacity: 0.5
-    style: geometric
-    tags: [dots, tiled, rainbow]
-
-  - filename: hexagons.svg
-    blend_mode: soft-light
-    opacity: 0.3
-    style: geometric
-    tags: [hexagons, tiled, geometric]
-
-  - filename: science.svg
-    blend_mode: soft-light
-    opacity: 0.2
-    style: organic
-    tags: [science, molecular, organic]
-
-  - filename: ship-wheel.svg
-    blend_mode: soft-light
-    opacity: 0.35
-    style: organic
-    tags: [wheel, spiral, nautical]
-
-  - filename: stars.svg
-    blend_mode: soft-light
-    opacity: 0.7
-    style: geometric
-    tags: [stars, sparkle, geometric]
-
-mascots:
-  - filename: ai-friend-pulumipus.svg
-    dimensions: { width: 610, height: 411 }
-    pose: standing
-    tags: [ai, friend, companion]
-
-  - filename: ai-robot-pulumipus.svg
-    dimensions: { width: 508, height: 636 }
-    pose: standing
-    tags: [ai, robot, tech]
-
-  - filename: at-computer.svg
-    dimensions: { width: 522, height: 342 }
-    pose: sitting
-    tags: [computer, working, desk]
-
-  - filename: backpack-hat-handsup-blue-waterbottle.svg
-    dimensions: { width: 400, height: 442 }
-    pose: hands-up
-    tags: [backpack, hat, adventure, blue]
-
-  - filename: backpack-hat-handsup-gray-waterbottle-sneakers.svg
-    dimensions: { width: 400, height: 455 }
-    pose: hands-up
-    tags: [backpack, hat, adventure, gray]
-
-  - filename: balance-one-cube-one-hand-down.svg
-    dimensions: { width: 400, height: 404 }
-    pose: balancing
-    tags: [balance, cube, skill]
-
-  - filename: balance-one-cube.svg
-    dimensions: { width: 400, height: 381 }
-    pose: balancing
-    tags: [balance, cube, skill]
-
-  - filename: balance-two-cubes.svg
-    dimensions: { width: 400, height: 387 }
-    pose: balancing
-    tags: [balance, cubes, skill]
-
-  - filename: banjo-pulumipus.svg
-    dimensions: { width: 417, height: 524 }
-    pose: playing
-    tags: [banjo, music, fun]
-
-  - filename: binoculars-pulumipus.svg
-    dimensions: { width: 376, height: 464 }
-    pose: looking
-    tags: [binoculars, search, explore]
-
-  - filename: blob.svg
-    dimensions: { width: 320, height: 400 }
-    pose: blob
-    tags: [blob, simple, minimal]
-
-  - filename: books-pulumipus.svg
-    dimensions: { width: 428, height: 498 }
-    pose: reading
-    tags: [books, learning, education]
-
-  - filename: cape-sparkles-plump.svg
-    dimensions: { width: 326, height: 312 }
-    pose: flying
-    tags: [cape, sparkles, hero, plump]
-
-  - filename: cape-sparkles.svg
-    dimensions: { width: 326, height: 312 }
-    pose: flying
-    tags: [cape, sparkles, hero]
-
-  - filename: cellphone.svg
-    dimensions: { width: 331, height: 338 }
-    pose: standing
-    tags: [cellphone, mobile, tech]
-
-  - filename: chill-hoodie.svg
-    dimensions: { width: 400, height: 483 }
-    pose: standing
-    tags: [chill, hoodie, casual]
-
-  - filename: chilling.svg
-    dimensions: { width: 325, height: 155 }
-    pose: lying
-    tags: [chill, relaxed, lounging]
-
-  - filename: coffee-hat-pointing-up.svg
-    dimensions: { width: 400, height: 442 }
-    pose: pointing
-    tags: [coffee, hat, pointing]
-
-  - filename: coffee-hat.svg
-    dimensions: { width: 400, height: 391 }
-    pose: standing
-    tags: [coffee, hat, casual]
-
-  - filename: coffee.svg
-    dimensions: { width: 317, height: 503 }
-    pose: standing
-    tags: [coffee, morning, casual]
-
-  - filename: dancing-music.svg
-    dimensions: { width: 400, height: 385 }
-    pose: dancing
-    tags: [dancing, music, party]
-
-  - filename: detectypus.svg
-    dimensions: { width: 523, height: 508 }
-    pose: standing
-    tags: [detective, mystery, investigate]
-
-  - filename: einsteinypus.svg
-    dimensions: { width: 464, height: 508 }
-    pose: standing
-    tags: [einstein, science, genius]
-
-  - filename: flying-at-rest.svg
-    dimensions: { width: 400, height: 162 }
-    pose: flying
-    tags: [flying, rest, floating]
-
-  - filename: flying-sparkles-purple-cape.svg
-    dimensions: { width: 400, height: 218 }
-    pose: flying
-    tags: [flying, sparkles, purple, cape]
-
-  - filename: flying-sparkles.svg
-    dimensions: { width: 440, height: 356 }
-    pose: flying
-    tags: [flying, sparkles, hero]
-
-  - filename: gopher-coffee.svg
-    dimensions: { width: 600, height: 600 }
-    pose: standing
-    tags: [gopher, coffee, go]
-
-  - filename: gopher-pulumipus.svg
-    dimensions: { width: 441, height: 460 }
-    pose: standing
-    tags: [gopher, go, crossover]
-
-  - filename: group-747.svg
-    dimensions: { width: 400, height: 211 }
-    pose: group
-    tags: [group, crowd, team]
-
-  - filename: hammock-chill.svg
-    dimensions: { width: 400, height: 178 }
-    pose: lying
-    tags: [hammock, chill, relaxed]
-
-  - filename: hat.svg
-    dimensions: { width: 400, height: 384 }
-    pose: standing
-    tags: [hat, casual]
-
-  - filename: hoodie-cube.svg
-    dimensions: { width: 400, height: 357 }
-    pose: standing
-    tags: [hoodie, cube, casual]
-
-  - filename: hoodie-hat-phone.svg
-    dimensions: { width: 400, height: 352 }
-    pose: standing
-    tags: [hoodie, hat, phone]
-
-  - filename: hoodie-jumping-spinning-cube.svg
-    dimensions: { width: 400, height: 674 }
-    pose: jumping
-    tags: [hoodie, jumping, cube, spinning]
-
-  - filename: inside-egg.svg
-    dimensions: { width: 475, height: 381 }
-    pose: sitting
-    tags: [egg, hatching, birth]
-
-  - filename: juggler.svg
-    dimensions: { width: 602, height: 721 }
-    pose: juggling
-    tags: [juggling, cubes, skill]
-
-  - filename: jumping-pointing.svg
-    dimensions: { width: 400, height: 687 }
-    pose: jumping
-    tags: [jumping, pointing, excited]
-
-  - filename: jumping-spinning-cube.svg
-    dimensions: { width: 400, height: 687 }
-    pose: jumping
-    tags: [jumping, cube, spinning]
-
-  - filename: lie-down.svg
-    dimensions: { width: 326, height: 132 }
-    pose: lying
-    tags: [lying, rest, relaxed]
-
-  - filename: lightning.svg
-    dimensions: { width: 452, height: 397 }
-    pose: standing
-    tags: [lightning, power, energy]
-
-  - filename: mascot-party.svg
-    dimensions: { width: 1065, height: 828 }
-    pose: group
-    tags: [party, group, celebration]
-
-  - filename: medal-open-dark-mouth.svg
-    dimensions: { width: 400, height: 484 }
-    pose: celebrating
-    tags: [medal, winner, dark-mouth]
-
-  - filename: medal-open-light-mouth.svg
-    dimensions: { width: 400, height: 484 }
-    pose: celebrating
-    tags: [medal, winner, light-mouth]
-
-  - filename: mid-mod-chair.svg
-    dimensions: { width: 346, height: 501 }
-    pose: sitting
-    tags: [chair, sitting, modern]
-
-  - filename: on-the-go.svg
-    dimensions: { width: 400, height: 342 }
-    pose: walking
-    tags: [walking, moving, active]
-
-  - filename: original-no-cube.svg
-    dimensions: { width: 400, height: 348 }
-    pose: standing
-    tags: [original, classic, simple]
-
-  - filename: original.svg
-    dimensions: { width: 400, height: 348 }
-    pose: standing
-    tags: [original, classic, cube]
-
-  - filename: peeking.svg
-    dimensions: { width: 295, height: 292 }
-    pose: peeking
-    tags: [peeking, curious, playful]
-
-  - filename: phdypus.svg
-    dimensions: { width: 330, height: 506 }
-    pose: standing
-    tags: [phd, academic, graduation]
-
-  - filename: pulumipus-option-05.svg
-    dimensions: { width: 639, height: 636 }
-    pose: standing
-    tags: [option, variant]
-
-  - filename: pulumipus-option-08.svg
-    dimensions: { width: 568, height: 724 }
-    pose: standing
-    tags: [option, variant]
-
-  - filename: pulumipus_ai-code.svg
-    dimensions: { width: 646, height: 518 }
-    pose: coding
-    tags: [ai, code, programming]
-
-  - filename: pulumipus_developer.svg
-    dimensions: { width: 488, height: 481 }
-    pose: standing
-    tags: [developer, coding, tech]
-
-  - filename: pulumipus_drummer.svg
-    dimensions: { width: 760, height: 584 }
-    pose: playing
-    tags: [drummer, music, drums]
-
-  - filename: pulumipus_front-laptop.svg
-    dimensions: { width: 393, height: 395 }
-    pose: sitting
-    tags: [laptop, working, front]
-
-  - filename: pulumipus_present.svg
-    dimensions: { width: 481, height: 420 }
-    pose: presenting
-    tags: [present, gift, giving]
-
-  - filename: rocket.svg
-    dimensions: { width: 447, height: 316 }
-    pose: flying
-    tags: [rocket, launch, space]
-
-  - filename: scientist.svg
-    dimensions: { width: 400, height: 403 }
-    pose: standing
-    tags: [scientist, lab, research]
-
-  - filename: snooze.svg
-    dimensions: { width: 441, height: 182 }
-    pose: sleeping
-    tags: [sleeping, snooze, rest]
-
-  - filename: standing-around.svg
-    dimensions: { width: 331, height: 331 }
-    pose: standing
-    tags: [standing, idle, casual]
-
-  - filename: standing-balance-cube.svg
-    dimensions: { width: 400, height: 408 }
-    pose: balancing
-    tags: [standing, balance, cube]
-
-  - filename: standing-spinning-cube.svg
-    dimensions: { width: 400, height: 637 }
-    pose: standing
-    tags: [standing, spinning, cube]
-
-  - filename: streetwear.svg
-    dimensions: { width: 331, height: 361 }
-    pose: standing
-    tags: [streetwear, fashion, urban]
-
-  - filename: vitory-blue.svg
-    dimensions: { width: 400, height: 554 }
-    pose: celebrating
-    tags: [victory, blue, winner]
-
-  - filename: vitory-green.svg
-    dimensions: { width: 400, height: 578 }
-    pose: celebrating
-    tags: [victory, green, winner]
-
-  - filename: vitory-medal-one-hand.svg
-    dimensions: { width: 400, height: 559 }
-    pose: celebrating
-    tags: [victory, medal, one-hand]
-
-  - filename: vitory-medal-sparkles-two-hands.svg
-    dimensions: { width: 400, height: 554 }
-    pose: celebrating
-    tags: [victory, medal, sparkles]
-
-  - filename: vitory-medal-two-hands.svg
-    dimensions: { width: 400, height: 556 }
-    pose: celebrating
-    tags: [victory, medal, two-hands]
-
-  - filename: wizard.svg
-    dimensions: { width: 453, height: 337 }
-    pose: standing
-    tags: [wizard, magic, hat]
-
-icons:
-  # === Monochrome Icons ===
-  - filename: abstractions.svg
-    type: icon
-    dimensions: { width: 240, height: 243 }
-    tags: [abstractions, layers, architecture]
-
-  - filename: cloud-download.svg
-    type: icon
-    dimensions: { width: 240, height: 239 }
-    tags: [cloud, download, transfer]
-
-  - filename: cloud-upload.svg
-    type: icon
-    dimensions: { width: 240, height: 240 }
-    tags: [cloud, upload, transfer]
-
-  - filename: clouds.svg
-    type: icon
-    dimensions: { width: 240, height: 231 }
-    tags: [clouds, sky, infrastructure]
-
-  - filename: code.svg
-    type: icon
-    dimensions: { width: 240, height: 244 }
-    tags: [code, programming, development]
-
-  - filename: collaboration.svg
-    type: icon
-    dimensions: { width: 240, height: 240 }
-    tags: [collaboration, teamwork, people]
-
-  - filename: cycle.svg
-    type: icon
-    dimensions: { width: 240, height: 242 }
-    tags: [cycle, refresh, loop]
-
-  - filename: eye.svg
-    type: icon
-    dimensions: { width: 240, height: 179 }
-    tags: [eye, visibility, monitoring]
-
-  - filename: gauge.svg
-    type: icon
-    dimensions: { width: 240, height: 239 }
-    tags: [gauge, performance, metrics]
-
-  - filename: gavel.svg
-    type: icon
-    dimensions: { width: 240, height: 240 }
-    tags: [gavel, policy, compliance]
-
-  - filename: gear.svg
-    type: icon
-    dimensions: { width: 240, height: 238 }
-    tags: [gear, settings, configuration]
-
-  - filename: lightning.svg
-    type: icon
-    dimensions: { width: 240, height: 238 }
-    tags: [lightning, speed, power]
-
-  - filename: monitor.svg
-    type: icon
-    dimensions: { width: 240, height: 243 }
-    tags: [monitor, display, dashboard]
-
-  - filename: nodes-rays.svg
-    type: icon
-    dimensions: { width: 240, height: 239 }
-    tags: [nodes, network, distributed]
-
-  - filename: puzzle-piece.svg
-    type: icon
-    dimensions: { width: 240, height: 242 }
-    tags: [puzzle, integration, modular]
-
-  - filename: rocket.svg
-    type: icon
-    dimensions: { width: 240, height: 242 }
-    tags: [rocket, launch, deployment]
-
-  - filename: security.svg
-    type: icon
-    dimensions: { width: 240, height: 240 }
-    tags: [security, shield, protection]
-
-  - filename: settings.svg
-    type: icon
-    dimensions: { width: 240, height: 238 }
-    tags: [settings, configuration, gear]
-
-  - filename: unlocked.svg
-    type: icon
-    dimensions: { width: 240, height: 240 }
-    tags: [unlocked, access, open]
-
-  - filename: warning.svg
-    type: icon
-    dimensions: { width: 240, height: 239 }
-    tags: [warning, alert, caution]
-
-  - filename: web.svg
-    type: icon
-    dimensions: { width: 240, height: 242 }
-    tags: [web, globe, internet]
-
-  # === Decorative Stamps ===
-  - filename: bubbles-stamp.svg
-    type: stamp
-    dimensions: { width: 163, height: 229 }
-    tags: [bubbles, decorative, colored]
-
-  - filename: cellphone-stamp.svg
-    type: stamp
-    dimensions: { width: 154, height: 156 }
-    tags: [cellphone, mobile, decorative]
-
-  - filename: cloud-stamp.svg
-    type: stamp
-    dimensions: { width: 307, height: 98 }
-    tags: [cloud, decorative, wide]
-
-  - filename: cube-stamp.svg
-    type: stamp
-    dimensions: { width: 209, height: 221 }
-    tags: [cube, decorative, branded]
-
-  - filename: doodle-stamp.svg
-    type: stamp
-    dimensions: { width: 196, height: 175 }
-    tags: [doodle, decorative, hand-drawn]
-
-  - filename: lightning-stamp.svg
-    type: stamp
-    dimensions: { width: 248, height: 307 }
-    tags: [lightning, energy, decorative]
-
-  - filename: shiny-2-stamp.svg
-    type: stamp
-    dimensions: { width: 154, height: 180 }
-    tags: [shiny, sparkle, decorative]
-
-  - filename: shiny-stamp.svg
-    type: stamp
-    dimensions: { width: 153, height: 223 }
-    tags: [shiny, sparkle, decorative]
-
-  - filename: sparkles-2-stamp.svg
-    type: stamp
-    dimensions: { width: 200, height: 247 }
-    tags: [sparkles, magic, decorative]
-
-  - filename: sparkles-stamp.svg
-    type: stamp
-    dimensions: { width: 307, height: 142 }
-    tags: [sparkles, magic, decorative]
+  height: 628
+
+text:
+  font: Inter-Bold.ttf
+  color: "#FFFFFF"
+  letter_spacing_em: -0.03
+  line_height_pct: 110
+  x: 90
+  y: 80
+  max_width: 700
+
+templates:
+  # -- Dark mascot variants --
+  - filename: dark-flying.png
+    theme: dark
+    type: mascot
+    mascot: flying
+    description: "3D Pulumipus flying with sunglasses"
+
+  - filename: dark-closeup.png
+    theme: dark
+    type: mascot
+    mascot: closeup
+    description: "3D Pulumipus head closeup with sunglasses"
+
+  - filename: dark-wireframe.png
+    theme: dark
+    type: mascot
+    mascot: wireframe
+    description: "Wireframe/line-art Pulumipus with sunglasses"
+
+  - filename: dark-shield.png
+    theme: dark
+    type: mascot
+    mascot: shield
+    description: "3D Pulumipus holding a shield with sunglasses"
+
+  # -- Dark logo variants --
+  - filename: dark-logo-1.png
+    theme: dark
+    type: logo
+    logo_slots: 1
+    placeholders:
+      - { x: 678, y: 72, width: 522, height: 476 }
+
+  - filename: dark-logo-2.png
+    theme: dark
+    type: logo
+    logo_slots: 2
+    placeholders:
+      - { x: 900, y: 88, width: 200, height: 182 }
+      - { x: 900, y: 349, width: 200, height: 181 }
+
+  - filename: dark-logo-3.png
+    theme: dark
+    type: logo
+    logo_slots: 3
+    placeholders:
+      - { x: 822, y: 116, width: 145, height: 173 }
+      - { x: 998, y: 202, width: 145, height: 173 }
+      - { x: 822, y: 329, width: 145, height: 173 }
+
+  # -- Light mascot variants --
+  - filename: light-flying.png
+    theme: light
+    type: mascot
+    mascot: flying
+    description: "3D Pulumipus flying with sunglasses (light bg)"
+
+  - filename: light-closeup.png
+    theme: light
+    type: mascot
+    mascot: closeup
+    description: "3D Pulumipus head closeup with sunglasses (light bg)"
+
+  - filename: light-wireframe.png
+    theme: light
+    type: mascot
+    mascot: wireframe
+    description: "Wireframe/line-art Pulumipus with sunglasses (light bg)"
+
+  - filename: light-shield.png
+    theme: light
+    type: mascot
+    mascot: shield
+    description: "3D Pulumipus holding a shield with sunglasses (light bg)"
+
+  # -- Light logo variants --
+  - filename: light-logo-1.png
+    theme: light
+    type: logo
+    logo_slots: 1
+    placeholders:
+      - { x: 678, y: 72, width: 522, height: 476 }
+
+  - filename: light-logo-2.png
+    theme: light
+    type: logo
+    logo_slots: 2
+    placeholders:
+      - { x: 900, y: 88, width: 200, height: 182 }
+      - { x: 900, y: 349, width: 200, height: 181 }
+
+  - filename: light-logo-3.png
+    theme: light
+    type: logo
+    logo_slots: 3
+    placeholders:
+      - { x: 822, y: 116, width: 145, height: 173 }
+      - { x: 998, y: 202, width: 145, height: 173 }
+      - { x: 822, y: 329, width: 145, height: 173 }
+
+logos:
+  - filename: 1password.svg
+    name: 1Password
+    tags: [1password, password, security]
+  - filename: amazon-ebs.svg
+    name: Amazon EBS
+    tags: [aws, amazon, ebs, storage]
+  - filename: amazon-sagemaker.svg
+    name: Amazon SageMaker
+    tags: [aws, amazon, sagemaker, ml, ai]
+  - filename: aws-cdk.svg
+    name: AWS CDK
+    tags: [aws, cdk, iac]
+  - filename: aws-dark.svg
+    name: AWS (dark)
+    tags: [aws, amazon, cloud, dark]
+  - filename: aws.svg
+    name: AWS
+    tags: [aws, amazon, cloud]
+  - filename: azure-icon.svg
+    name: Azure (icon)
+    tags: [azure, microsoft, cloud]
+  - filename: azure-storage.svg
+    name: Azure Storage
+    tags: [azure, microsoft, storage]
+  - filename: azure.svg
+    name: Azure
+    tags: [azure, microsoft, cloud]
+  - filename: bicep.svg
+    name: Bicep
+    tags: [bicep, azure, iac]
+  - filename: bun.svg
+    name: Bun
+    tags: [bun, javascript, runtime]
+  - filename: docker.svg
+    name: Docker
+    tags: [docker, containers]
+  - filename: google-cloud-icon.svg
+    name: Google Cloud (icon)
+    tags: [gcp, google, cloud]
+  - filename: google-cloud-logo.svg
+    name: Google Cloud
+    tags: [gcp, google, cloud]
+  - filename: hashicorp-terraform.svg
+    name: Terraform
+    tags: [terraform, hashicorp, iac]
+  - filename: huggingface.svg
+    name: Hugging Face
+    tags: [huggingface, ai, ml]
+  - filename: kubernetes.svg
+    name: Kubernetes
+    tags: [kubernetes, k8s, containers]
+  - filename: microsoft.svg
+    name: Microsoft
+    tags: [microsoft, windows]
+  - filename: python.svg
+    name: Python
+    tags: [python, language]
+  - filename: redis.svg
+    name: Redis
+    tags: [redis, database, cache]
+  - filename: slack.svg
+    name: Slack
+    tags: [slack, messaging]
+  - filename: typescript.svg
+    name: TypeScript
+    tags: [typescript, javascript, language]
+  - filename: vercel.svg
+    name: Vercel
+    tags: [vercel, hosting, frontend]
