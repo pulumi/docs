@@ -1,7 +1,7 @@
 ---
 title: "How We Load Data into Snowflake in Seconds with Pulumi"
 allow_long_title: true
-date: 2026-02-14
+date: 2026-02-18
 draft: false
 meta_desc: "Learn how we load data into Snowflake in seconds using Firehose streaming and reusable Pulumi ComponentResources. Direct, auto-ingest, and batch patterns."
 meta_image: meta.png
