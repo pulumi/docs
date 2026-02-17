@@ -1,6 +1,6 @@
 # Asset Catalog Reference
 
-All assets live in `.claude/commands/meta/assets/`. Paths in the JSON config are relative to the `--assets-dir` directory.
+All assets live in `.claude/commands/blog-meta-image/assets/`. Paths in the JSON config are relative to the `--assets-dir` directory.
 
 ## Templates
 
