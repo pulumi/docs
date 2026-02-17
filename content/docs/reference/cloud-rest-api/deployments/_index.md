@@ -918,7 +918,7 @@ The Settings object is the top-level configuration for deployment settings that 
     // See SourceContext schema below
   },
   "operationContext": {
-    // See OperationContext schema below  
+    // See OperationContext schema below
   },
   "executorContext": {
     // See ExecutorContext schema below
@@ -1009,6 +1009,9 @@ The operation context describes any context required for Pulumi operations to ex
       "roleArn": "arn:aws:iam::123456789000:role/pulumi-deploy-role",
       "sessionName": "pulumi-deploy-session"
     }
+  },
+  "role": {
+    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   }
 }
 ```
@@ -1024,6 +1027,8 @@ The operation context describes any context required for Pulumi operations to ex
 | `options.skipIntermediateDeployments` | boolean | **Optional.** Skip intermediate deployments. |
 | `options.deleteAfterDestroy` | boolean | **Optional.** Delete stack after destroy operation. |
 | `oidc` | object | **Optional.** OIDC configuration for cloud provider authentication. |
+| `role` | object | **Optional.** Deployment role configuration. |
+| `role.id` | string | **Optional.** The identifier of the deployment role to use for this operation. |
 
 ### ExecutorContext
 
