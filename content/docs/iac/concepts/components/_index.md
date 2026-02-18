@@ -144,6 +144,30 @@ The following types are supported in component arguments:
   - Go: `pulumi.StringInput`, `pulumi.IntInput`, etc.
   - .NET: `Input<T>`
   - Java: `Output<T>`
+- **Enums**: Enum types are supported in TypeScript and Python:
+
+  **TypeScript:** Both the `enum` keyword and the "as const object pattern" are supported:
+
+  ```typescript
+  // Using the enum keyword
+  enum MyEnum { Value1 = "Value1", Value2 = "Value2" }
+
+  // or alternatively using a const object
+  const MyEnum = { Value1: "Value1", Value2: "Value2" } as const;
+  type MyEnum = typeof MyEnum[keyof typeof MyEnum];
+  ```
+
+  **Python:** The standard library `enum` module is supported:
+
+  ```python
+  from enum import Enum
+
+  class MyEnum(Enum):
+      VALUE1 = "Value1"
+      VALUE2 = "Value2"
+  ```
+
+- **Utility types** (TypeScript): The `Required<T>` and `Partial<T>` utility types are supported.
 
 ### Unsupported types
 
