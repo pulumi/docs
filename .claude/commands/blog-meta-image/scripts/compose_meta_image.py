@@ -75,7 +75,7 @@ def draw_text(
 
     x = catalog_text.get("x", 90)
     y_top = catalog_text.get("y", 80)
-    max_width = catalog_text.get("max_width", 520)
+    max_width = catalog_text.get("max_width", 700)
     color = catalog_text.get("color", "#FFFFFF")
     letter_spacing_em = catalog_text.get("letter_spacing_em", -0.03)
     line_height_pct = catalog_text.get("line_height_pct", 110)

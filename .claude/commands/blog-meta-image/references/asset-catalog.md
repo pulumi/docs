@@ -85,8 +85,8 @@ From `catalog.yaml`:
 - **Line-height**: 110% of font size
 - **X position**: 90px from left edge (aligned with Pulumi logo)
 - **Y position**: 80px from top edge (top-anchored, flows downward)
-- **Max width**: 520px (safe text area on left half)
-- **Font size**: variable (44-80px depending on title length)
+- **Max width**: 700px (text area on left half)
+- **Font size**: variable (60-104px depending on title length)
 
 ## Template Selection Guide
 
@@ -103,7 +103,7 @@ From `catalog.yaml`:
 ## Composition Rules
 
 1. **Text is always white** — all templates have dark-enough backgrounds for white text readability
-2. **Text stays on the left** — max_width of 550px ensures text doesn't overlap the right-side mascot/logos
+2. **Text stays on the left** — max_width of 700px keeps text on the left side
 3. **Logos go on white placeholders** — the compose script centers logos within the measured placeholder bounds
 4. **1-3 logos max** — template determines slot count; select the template matching logo count
 5. **Font size scales with title length** — shorter titles get larger fonts for visual impact
