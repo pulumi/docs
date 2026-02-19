@@ -11,7 +11,7 @@ menu:
     weight: 56
 ---
 
-Pulumi policies integrate with CI/CD pipelines to automatically enforce compliance and security rules on every deployment. When policy packs are enabled for your organization, they run during `pulumi preview` and `pulumi up` — including when these commands execute in CI/CD workflows. Non-compliant changes are blocked before they reach production.
+Pulumi policies integrate with CI/CD pipelines to automatically enforce compliance and security rules on every deployment. When policy packs are enabled for your organization, they run during `pulumi preview` and `pulumi up`, including when these commands execute in CI/CD workflows. Non-compliant changes are blocked before they reach production.
 
 ## How policy enforcement works in CI/CD
 
@@ -57,7 +57,7 @@ For detailed setup instructions, see the [Google Cloud Build guide](/docs/iac/gu
 
 ## Other CI/CD providers
 
-Pulumi policies work with any CI/CD system that can run the Pulumi CLI. Policy enforcement requires no special configuration — if your stack has policy packs enabled in Pulumi Cloud, they are enforced automatically. For local policy execution, pass the `--policy-pack` flag.
+Pulumi policies work with any CI/CD system that can run the Pulumi CLI. Policy enforcement requires no special configuration. If your stack has policy packs enabled in Pulumi Cloud, they are enforced automatically. For local policy execution, pass the `--policy-pack` flag.
 
 Pulumi provides integration guides for many CI/CD providers:
 

@@ -517,9 +517,9 @@ As shorthand, specify enforcement levels directly:
 <a id="mandatory"></a>
 **Enforcement levels:**
 
-- **advisory** — Issues warnings but allows deployments to proceed
-- **mandatory** — Blocks deployments when violations are detected
-- **disabled** — Skips policy evaluation entirely
+- **advisory** - Issues warnings but allows deployments to proceed
+- **mandatory** - Blocks deployments when violations are detected
+- **disabled** - Skips policy evaluation entirely
 
 ### Custom configuration
 

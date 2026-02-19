@@ -81,3 +81,20 @@ Query policy evaluation results to monitor compliance across your organization.
 View the policy packs and policy groups associated with a specific stack.
 
 - [Stack Policy API reference](/docs/reference/cloud-rest-api/stack-policy/)
+
+## Pulumi Service Provider
+
+The [Pulumi Cloud (pulumiservice) provider](/registry/packages/pulumiservice/) includes resources and functions for managing policies programmatically as part of your Pulumi infrastructure code.
+
+### Resources
+
+| Resource | Description |
+| --- | --- |
+| [`PolicyGroup`](/registry/packages/pulumiservice/api-docs/policygroup/) | Apply policy packs to a set of stacks or cloud accounts in your organization. Supports `audit` and `preventative` enforcement modes. |
+
+### Functions
+
+| Function | Description |
+| --- | --- |
+| [`getPolicyPack`](/registry/packages/pulumiservice/api-docs/getpolicypack/) | Get details about a specific version of a policy pack, including its configuration and policies. |
+| [`getPolicyPacks`](/registry/packages/pulumiservice/api-docs/getpolicypacks/) | List all policy packs for an organization. |
