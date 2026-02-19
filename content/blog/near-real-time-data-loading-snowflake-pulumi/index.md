@@ -3,7 +3,7 @@ title: "How We Load Data into Snowflake in Seconds with Pulumi"
 allow_long_title: true
 date: 2026-02-18
 draft: false
-meta_desc: "Learn how we load data into Snowflake in seconds using Firehose streaming and reusable Pulumi ComponentResources. Direct, auto-ingest, and batch patterns."
+meta_desc: "Learn how we load data into Snowflake in seconds using Firehose direct streaming and reusable Pulumi ComponentResources."
 meta_image: meta.png
 authors:
     - pablo-seibelt
@@ -23,7 +23,7 @@ social:
 
 When you manage dozens of data-loading pipelines into Snowflake, copy-pasting resources becomes a maintenance problem: IAM (Identity and Access Management) policies drift, naming conventions diverge, and every new source is a chance to introduce a subtle misconfiguration. This post shows how to encapsulate those patterns into composable components and walks through the production lessons we learned running 25+ pipelines for over three years.
 
-We'll pipe GitHub webhooks into Snowflake with a few lines of Pulumi code. Lambda validates, Amazon Data Firehose streams directly into Snowflake, and data lands in seconds, all wired together by a reusable [`ComponentResource`](/docs/iac/concepts/components/). We also cover two alternative loading patterns (S3 auto-ingest and batch) available in the [companion template](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time). We use Pulumi ESC to handle authentication to both AWS and Snowflake.
+We'll pipe GitHub webhooks into Snowflake with a few lines of Pulumi code. Lambda validates the webhook signature, Amazon Data Firehose streams the payload directly into Snowflake, and data lands in seconds; all wired together by a reusable [`ComponentResource`](/docs/iac/concepts/components/). The [companion template](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time) also includes S3 auto-ingest and batch loading patterns, which we'll cover in upcoming posts. We use Pulumi ESC to handle authentication to both AWS and Snowflake.
 
 <!--more-->
 
@@ -44,9 +44,12 @@ The following diagram shows the recommended pipeline for loading GitHub webhooks
 
 ![Architecture diagram showing the pipeline: GitHub Webhook sends events to AWS Lambda for HMAC validation, then Firehose streams directly to Snowflake's REPOSITORY_EVENTS_DIRECT landing table. S3 is used only for backup and errors.](architecture-direct.png)
 
-GitHub sends webhook events to a Lambda Function URL, which validates the HMAC (Hash-based Message Authentication Code) signature and forwards the payload to Amazon Data Firehose. Firehose streams records directly into Snowflake via the Snowpipe Streaming API. Data appears in Snowflake within seconds. S3 is used only as a backup destination for failed records.
+1. GitHub sends webhook events to a Lambda Function URL.
+1. Lambda validates the HMAC (Hash-based Message Authentication Code) signature and forwards the payload to Amazon Data Firehose.
+1. Firehose streams records directly into Snowflake via the Snowpipe Streaming API. Data appears in Snowflake within seconds.
+1. S3 is used only as a backup destination for failed records.
 
-The direct Firehose-to-Snowflake destination is an AWS-native feature that works with any Snowflake account. The S3-based patterns (auto-ingest and batch) also support [Azure Blob Storage](https://www.pulumi.com/registry/packages/azure-native/api-docs/storage/blobcontainer/) and [Google Cloud Storage](https://www.pulumi.com/registry/packages/gcp/api-docs/storage/bucket/) via Snowflake storage integrations.
+The direct Firehose-to-Snowflake destination is an AWS-native feature that works with any Snowflake account.
 
 ## Project setup
 
@@ -301,12 +304,9 @@ config:
   snowpipe-data-loading:webhook-repo: <your-test-repo-name>
   snowflake:previewFeaturesEnabled:
     - snowflake_table_resource
-    - snowflake_storage_integration_aws_resource
-    - snowflake_stage_external_s3_resource
-    - snowflake_pipe_resource
 ```
 
-The `snowflake:previewFeaturesEnabled` list is required since `pulumi-snowflake` v2.12.0, which moved [`Table`](https://www.pulumi.com/registry/packages/snowflake/api-docs/table/), [`StorageIntegrationAws`](https://www.pulumi.com/registry/packages/snowflake/api-docs/storageintegrationaws/), [`StageExternalS3`](https://www.pulumi.com/registry/packages/snowflake/api-docs/stageexternals3/), and [`Pipe`](https://www.pulumi.com/registry/packages/snowflake/api-docs/pipe/) behind preview feature flags. The direct pattern only needs `snowflake_table_resource`; the S3-based patterns (auto-ingest and batch) need all four.
+The `snowflake:previewFeaturesEnabled` list is required since `pulumi-snowflake` v2.12.0, which moved [`Table`](https://www.pulumi.com/registry/packages/snowflake/api-docs/table/) among other resources behind a preview feature flag.
 
 That's the entire change. No credentials are stored in the Pulumi configuration yaml; the providers pick up their credentials from ESC-injected config transparently.
 
@@ -344,7 +344,7 @@ Amazon Data Firehose supports [Snowflake as a native destination](https://docs.a
 
 ### The Lambda handler
 
-The [Lambda function](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/function/) is the entry point for GitHub webhooks. It validates the HMAC-SHA256 signature, wraps the payload in an envelope with the event type, and forwards it to Firehose. This handler is reused by the alternative loading patterns:
+The [Lambda function](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/function/) is the entry point for GitHub webhooks. It validates the HMAC-SHA256 signature, wraps the payload in an envelope with the event type, and forwards it to Firehose:
 
 ```python
 import hashlib
@@ -698,7 +698,7 @@ A few things to note:
 - **Immediate flushing.** `buffering_interval=0` and `buffering_size=1` ensure records are sent to Snowflake as soon as they arrive, minimizing latency. Tune according to your needs.
 
 {{% notes type="warning" %}}
-Amazon Data Firehose does not connect from fixed IP addresses, so you cannot use Snowflake [network policies](https://docs.snowflake.com/en/user-guide/network-policies) to restrict access by IP. If your Snowflake account uses network policies, you have three options: use [AWS PrivateLink](https://docs.snowflake.com/en/user-guide/admin-security-privatelink) (requires Snowflake Business Critical edition), allow public internet access for the Firehose service user, or switch to **S3 auto-ingest via Snowpipe** which does not require direct network access to Snowflake from Firehose.
+Amazon Data Firehose does not connect from fixed IP addresses, so you cannot use Snowflake [network policies](https://docs.snowflake.com/en/user-guide/network-policies) to restrict access by IP. If your Snowflake account uses network policies, you have three options: use [AWS PrivateLink](https://docs.snowflake.com/en/user-guide/admin-security-privatelink) (requires Snowflake Business Critical edition), allow public internet access for the Firehose service user, or switch to *S3 auto-ingest via Snowpipe* which does not require direct network access to Snowflake from Firehose.
 {{% /notes %}}
 
 ## Wiring it together
@@ -775,7 +775,7 @@ pulumi.export("firehose_stream", direct.firehose_stream_name)
 That's the entire pipeline. One component, one GitHub webhook, one secret. The `DirectSnowflakeIngestion` component handles the TLS key pair, Snowflake service user, landing table, Firehose stream, and Lambda function internally.
 
 {{% notes type="info" %}}
-The full code for this example is available at [https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time). The template ships the direct streaming pipeline as the default `__main__.py` and includes `__main_snowpipe__.py` and `__main_batch__.py` as alternative entrypoints you can swap in.
+The full code for this example is available at [https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time).
 {{% /notes %}}
 
 ## Testing the pipeline
@@ -810,262 +810,20 @@ ORDER BY ingested_at DESC;
 
 You should see rows with event types like `star`, `push`, or `issues`, real GitHub events flowing through the entire pipeline. The `METADATA` column includes Firehose metadata like `IngestionTime`, which you can use to track end-to-end latency.
 
-## Alternative patterns: S3 auto-ingest and batch loading
+## Other loading patterns
 
-Three loading patterns are available; pick the one that fits your latency and cost requirements:
+Direct streaming is the fastest path, but two other patterns are available in the [companion template](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time) for different requirements:
 
-- **Direct streaming (recommended).** Firehose streams directly to Snowflake via the Snowpipe Streaming API. No S3 intermediate. This is the pattern we demo end-to-end above.
-- **S3 auto-ingest.** Firehose buffers to S3, Snowpipe auto-ingests. Latency is about two minutes. Best when you need an S3 bucket as part of the pipeline, or can't use AWS PrivateLink with Snowflake.
-- **Batch loading.** Your orchestrator (Airflow, Prefect, Mage, cron, etc) runs `COPY INTO` on a schedule. Best for full control over timing and deduplication.
+- **S3 auto-ingest via Snowpipe.** Firehose buffers to S3, and Snowpipe auto-ingests new files. Latency is about two minutes. Best when you need S3 as the system of record or can't use direct Snowpipe Streaming.
+- **Batch loading.** Your orchestrator (Airflow, Prefect, cron, etc.) runs `COPY INTO` on a schedule. Best for full control over timing and deduplication.
 
-### S3 auto-ingest via Snowpipe
-
-The S3 path uses two components working together. `WebhookIngestion` handles the upstream pipeline (Lambda + Firehose buffering to S3), and `SnowpipePipeline` handles the downstream (external stage, landing tables, and Snowpipe pipes with auto-ingest). An S3 event notification wires the two together via SQS.
-
-![Architecture diagram showing the S3 auto-ingest pipeline: GitHub Webhook sends events to AWS Lambda for HMAC validation, then Firehose buffers into files in S3, SQS notifies Snowpipe which auto-ingests rows into the REPOSITORY_EVENTS landing table.](architecture-s3-snowpipe.png)
-
-Choose this pattern when you need S3 as the system of record, have existing Snowpipe infrastructure, or require file-level auditability. Latency is about two minutes (60 seconds for Firehose buffering plus Snowpipe detection).
-
-#### Step 1: Storage integration and IAM role
-
-This pattern builds on the same shared infrastructure (bucket, database, schema) from the [earlier section](#shared-infrastructure). It also needs `import json` and the AWS account ID to construct the IAM role ARN:
-
-Snowflake's [`StorageIntegrationAws`](/registry/packages/snowflake/api-docs/storageintegrationaws/) needs an IAM role ARN, and the IAM role's trust policy needs Snowflake's IAM user ARN and external ID, which come from the storage integration. This creates a circular dependency.
-
-The fix: use a **fixed IAM role name** so you can construct the ARN before the role exists, then create the storage integration first. After Snowflake provisions it, you read back the `iam_user_arn` and `external_id` from `describe_outputs` and feed them into the IAM role's trust policy:
-
-```python
-current = aws.get_caller_identity()
-account_id = current.account_id
-
-FIXED_ROLE_NAME = f"snowpipe-demo-{environment}-role"
-
-storage_integration = snowflake.StorageIntegrationAws(
-    "storage-integration",
-    name="SNOWPIPE_DEMO_INTEGRATION",
-    enabled=True,
-    storage_aws_role_arn=f"arn:aws:iam::{account_id}:role/{FIXED_ROLE_NAME}",
-    storage_provider="S3",
-    storage_allowed_locations=[bucket.bucket.apply(lambda b: f"s3://{b}/")],
-)
-
-sf_iam_user_arn = storage_integration.describe_outputs.apply(
-    lambda d: d[0].iam_user_arn
-)
-sf_external_id = storage_integration.describe_outputs.apply(
-    lambda d: d[0].external_id
-)
-
-iam_role = aws.iam.Role(
-    "snowpipe-role",
-    name=FIXED_ROLE_NAME,
-    assume_role_policy=pulumi.Output.all(
-        sf_iam_user_arn, sf_external_id,
-    ).apply(lambda args: json.dumps({
-        "Version": "2012-10-17",
-        "Statement": [{
-            "Effect": "Allow",
-            "Action": "sts:AssumeRole",
-            "Principal": {"AWS": args[0]},
-            "Condition": {"StringEquals": {"sts:ExternalId": args[1]}},
-        }],
-    })),
-)
-```
-
-Attach an S3 access policy to this role granting `GetObject`, `GetObjectVersion`, and `ListBucket` on your bucket. Snowflake's external stage reads files through this role.
-
-#### Step 2: Upstream pipeline
-
-The `WebhookIngestion` component encapsulates the Lambda + Firehose-to-S3 path. It creates a Lambda function with a public URL, a Firehose delivery stream that buffers to S3 with timestamp-partitioned prefixes, and the IAM roles that wire them together:
-
-```python
-webhook_secret = random.RandomPassword(
-    "github-webhook-secret", length=32, special=False
-)
-
-webhook = WebhookIngestion(
-    "github-webhooks",
-    WebhookIngestionArgs(
-        bucket_arn=bucket.arn,
-        bucket_name=bucket.bucket,
-        lambda_code=pulumi.AssetArchive({
-            "webhook_handler.py": pulumi.FileAsset("lambda/webhook_handler.py"),
-        }),
-        lambda_handler="webhook_handler.handler",
-        lambda_environment={"WEBHOOK_SECRET": webhook_secret.result},
-    ),
-)
-```
-
-Firehose buffers records for 60 seconds (or 100 MB), then writes them as files to S3 under `github-webhooks/YYYY/MM/DD/HH/`. The same Lambda handler from the direct pattern is reused unchanged.
-
-#### Step 3: Table and pipe definitions
-
-The `SnowpipePipeline` component (shown in Step 4) accepts table and pipe definitions as dataclasses. `ColumnDef` describes a single Snowflake column, `TableDef` groups columns into a landing table, and `PipeDef` pairs a `COPY INTO` statement with its target table. These are defined in `components/snowpipe_pipeline.py`:
-
-```python
-from dataclasses import dataclass
-
-@dataclass
-class ColumnDef:
-    name: str
-    type: str
-    nullable: bool = True
-
-@dataclass
-class TableDef:
-    name: str
-    columns: list[ColumnDef]
-    comment: str = ""
-
-@dataclass
-class PipeDef:
-    name: str
-    copy_statement: pulumi.Input[str]
-    target_table: str
-    comment: str = ""
-```
-
-Every S3-loaded landing table gets four standard columns for consistent lineage: the S3 filename, file timestamp, the raw JSON payload, and a load timestamp:
-
-```python
-STANDARD_COLUMNS = [
-    ColumnDef(name="FILENAME", type="STRING", nullable=False),
-    ColumnDef(name="LAST_MODIFIED_AT", type="TIMESTAMP_NTZ", nullable=False),
-    ColumnDef(name="CONTENT", type="VARIANT", nullable=True),
-    ColumnDef(name="LOADED_AT", type="TIMESTAMP_NTZ", nullable=True),
-]
-
-webhooks_table = TableDef(
-    name="REPOSITORY_EVENTS",
-    columns=STANDARD_COLUMNS,
-    comment="GitHub webhook events loaded via Snowpipe auto-ingest",
-)
-```
-
-The `PipeDef` defines the `COPY INTO` statement that Snowpipe executes for each new file. It reads metadata columns (`metadata$filename`, `metadata$file_last_modified`) and the raw JSON (`$1`) from the external stage, filtered by a `PATTERN` that matches only files from this pipeline:
-
-```python
-webhooks_pipe = PipeDef(
-    name="REPOSITORY_EVENTS_PIPE",
-    target_table="REPOSITORY_EVENTS",
-    copy_statement=pulumi.Output.all(
-        database.name, schema.name
-    ).apply(lambda args: (
-        f'COPY INTO "{args[0]}"."{args[1]}"."REPOSITORY_EVENTS" '
-        f"FROM ("
-        f"SELECT metadata$filename, metadata$file_last_modified, "
-        f'$1, sysdate() FROM @"{args[0]}"."{args[1]}"."REPOSITORY_EVENTS_STAGE"'
-        f") "
-        f"file_format = (type = JSON) "
-        f"PATTERN = 'github-webhooks/.*'"
-    )),
-    comment="Auto-ingest pipe for GitHub webhook events",
-)
-```
-
-#### Step 4: Snowpipe pipeline
-
-The `SnowpipePipeline` component takes the storage integration, table definitions, and pipe definitions and creates the external stage, landing tables, and Snowpipe pipes:
-
-```python
-snowpipe = SnowpipePipeline(
-    "github-webhooks",
-    SnowpipePipelineArgs(
-        bucket_name=bucket.bucket,
-        storage_integration=storage_integration,
-        database=database.name,
-        schema_name=schema.name,
-        stage_name="REPOSITORY_EVENTS_STAGE",
-        tables=[webhooks_table],
-        pipes=[webhooks_pipe],
-        stage_comment="External stage for GitHub webhook data",
-    ),
-    opts=pulumi.ResourceOptions(depends_on=[policy_attachment]),
-)
-```
-
-{{% notes type="info" %}}
-The `depends_on=[policy_attachment]` ensures the IAM role has S3 permissions before Snowflake tries to validate the stage.
-{{% /notes %}}
-
-#### Step 5: Wire S3 notifications
-
-The final step connects S3 to Snowpipe. When Firehose writes a new file, S3 sends an event notification to the SQS queue that Snowpipe manages. The `notification_channel` output from the `SnowpipePipeline` component is the SQS queue ARN:
-
-```python
-aws.s3.BucketNotification(
-    "webhooks-notification",
-    bucket=bucket.bucket,
-    queues=[
-        aws.s3.BucketNotificationQueueArgs(
-            queue_arn=snowpipe.notification_channel,
-            events=["s3:ObjectCreated:*"],
-            filter_prefix="github-webhooks/",
-        )
-    ],
-)
-```
-
-Use `filter_prefix` to scope notifications to only the files from this pipeline. If you have multiple pipelines writing to the same bucket, each gets its own prefix filter.
-
-#### Production notes
-
-The `SnowpipePipeline` component includes several production patterns worth noting:
-
-- **`delete_before_replace=True` on pipes.** Snowflake can't update pipes in-place. The component uses `delete_before_replace` so Pulumi deletes the old pipe before creating the replacement, avoiding name conflicts.
-- **Per-pipe target dependencies.** The `PipeDef.target_table` field links each pipe to its landing table. The component resolves this to a resource dependency, so adding an unrelated table doesn't trigger a replacement of existing pipes.
-- **Exposed `notification_channel`.** The SQS queue ARN is an output, not hardcoded internally. This lets you wire S3 notifications from any bucket, including cross-account setups where the bucket lives in a different AWS account.
-
-{{% notes type="info" %}}
-The full S3 auto-ingest pipeline is available as `__main_snowpipe__.py` in the [companion template](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time). This pattern requires additional preview feature flags in your stack config: `snowflake_storage_integration_aws_resource`, `snowflake_stage_external_s3_resource`, and `snowflake_pipe_resource`.
-{{% /notes %}}
-
-### Batch stage loading
-
-![Architecture diagram showing the batch loading pipeline: an orchestrator (Airflow/Cron) runs on schedule, data files land in S3, Snowflake reads via an external stage and COPY INTO loads rows into the GITHUB_EVENTS landing table.](architecture-batch.png)
-
-For orchestrator-controlled loading, the `BatchStage` component creates an external stage, landing tables, and grants to a specified Snowflake role. No pipes are created. Your orchestrator (Airflow, cron, etc.) runs `COPY INTO` statements on a schedule.
-
-Choose this pattern when you need full control over timing, error handling, and deduplication, or when loading large volumes on a fixed schedule.
-
-{{% notes type="info" %}}
-The full batch loading pipeline is available as `__main_batch__.py` in the [companion template](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time). The `BatchStage` component lives in `components/batch_stage.py`. This pattern reuses the same storage integration and IAM role from the auto-ingest pattern.
-{{% /notes %}}
+We'll walk through both patterns in detail in upcoming posts.
 
 ## Production tips
 
 A few things we learned running this at scale:
 
-**Use direct Firehose to Snowflake for lowest latency.** The direct path delivers data in seconds vs. about two minutes for S3 auto-ingest. It also reduces the number of resources you manage (no stages, pipes, SQS queues, or S3 notifications). Use S3 auto-ingest if you don't need such a low latency or if you can't properly secure your instance using Snowpipe Streaming.
-
-**Consolidate IAM policies.** AWS limits the number of managed policies per role to 10 (or 20 with a support request). With many pipelines, you can't create one policy per pipeline. Instead, build a single policy that covers all buckets, as shown in the shared infrastructure section.
-
-**Use `pulumi.Output.all()` for dynamic policies.** When your bucket list comes from stack references and config values, `Output.all()` lets you wait for all of them to resolve before building the policy document:
-
-```python
-s3_policy = aws.iam.Policy(
-    "consolidated-access",
-    policy=pulumi.Output.all(
-        bucket_a, bucket_b, bucket_c
-    ).apply(lambda buckets: json.dumps({
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Action": ["s3:GetObject", "s3:GetObjectVersion"],
-                "Effect": "Allow",
-                "Resource": [f"arn:aws:s3:::{b}/*" for b in buckets],
-            },
-            {
-                "Action": ["s3:ListBucket"],
-                "Effect": "Allow",
-                "Resource": [f"arn:aws:s3:::{b}" for b in buckets],
-            },
-        ],
-    })),
-)
-```
+**Use direct Firehose to Snowflake for lowest latency.** The direct path delivers data in seconds and reduces the number of resources you manage (no stages, pipes, SQS queues, or S3 notifications).
 
 **Use separate ESC environments per deployment target.** Each environment (dev, staging, production) needs its own OIDC role ARN, so create separate ESC environments for each. Use [`imports`](/docs/esc/environments/imports/) to share common settings like provider versions and non-secret configuration:
 
@@ -1126,4 +884,4 @@ This gives you auto-generated API docs, usage tracking across teams, and cross-l
 
 The `DirectSnowflakeIngestion` component in this post delivers data from GitHub webhooks into Snowflake in seconds: Lambda validates the HMAC signature, Firehose streams directly to Snowflake via the Snowpipe Streaming API, and the TLS key pair is managed entirely within Pulumi. No S3 intermediate, no SQS queues.
 
-The components accept pluggable Lambda handlers, so swapping GitHub for Stripe webhooks or any other source is just a matter of providing different `lambda_code` and `lambda_environment` arguments. These patterns have been running in production for over three years across dozens of pipelines without significant changes to the infrastructure code. When you're ready to share them across teams, `pulumi package add` or `pulumi package publish` turns them into versioned, cross-language packages. You'll find the complete example in the [GitHub repository](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time).
+The component accepts pluggable Lambda handlers, so swapping GitHub for Stripe webhooks or any other source is just a matter of providing different `lambda_code` and `lambda_environment` arguments. This pattern has been running in production for over three years across dozens of pipelines without significant changes to the infrastructure code. When you're ready to share components across teams, `pulumi package add` or `pulumi package publish` turns them into versioned, cross-language packages. You'll find the complete example in the [GitHub repository](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time).
