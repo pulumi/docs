@@ -1,6 +1,6 @@
 ---
 title: "GitOps Best Practices I Wish I Had Known Before"
-date: 2026-02-11
+date: 2026-02-19
 draft: false
 
 meta_desc: |
