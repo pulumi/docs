@@ -16,7 +16,7 @@ user-invocable: true
 Run the metadata scraper:
 
 ```bash
-bash .claude/commands/docs-tools/scripts/scrape-metadata.sh
+python3 .claude/commands/docs-tools/scripts/scrape-metadata.py
 ```
 
 The script outputs a JSON array:
