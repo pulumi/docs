@@ -49,14 +49,14 @@ main:
 
     # Description of the webinar.
     description: |
-        This workshop explores how modern infrastructure management on Google Cloud can be streamlined using infrastructure as code. You’ll see how Pulumi enables teams to define, deploy, and manage GCP infrastructure using real programming languages and established software engineering practices.
+        This workshop explores how modern infrastructure management on Google Cloud can be streamlined using infrastructure as code (IaC). You’ll see how Pulumi enables teams to define, deploy, and manage GCP infrastructure using real programming languages and established software engineering practices.
         
         Through guided examples, diagrams, and walkthroughs, the workshop shows how Pulumi’s programming model connects application and infrastructure development. This approach makes cloud architectures easier to understand and change, and reduces friction when managing infrastructure on Google Cloud.
         
         The session focuses on how Pulumi fits into real-world GCP workflows and how teams use it to manage infrastructure consistently across projects and environments.
     learn:
         - How Pulumi models Google Cloud infrastructure using familiar programming constructs
-        - How infrastructure as code improves reliability and repeatability on GCP
+        - How IaC improves reliability and repeatability on GCP
         - How Pulumi supports consistent infrastructure management across environments on Google Cloud
         
     # The webinar presenters
