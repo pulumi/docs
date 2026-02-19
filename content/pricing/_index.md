@@ -273,6 +273,27 @@ comparison_table:
                     - content: _blank
                     - content: _check
                     - content: _check
+                - title: Custom Roles
+                  link: /docs/administration/access-identity/rbac/roles
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Up to 25
+                    - content: Unlimited
+                - title: Tag-based access control
+                  link: /blog/expanding-pulumi-iam-custom-permissions/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Assign custom roles to users and teams
+                  link: /blog/expanding-pulumi-iam-custom-permissions/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
                 - title: Organization and Team Access Tokens
                   link: /docs/pulumi-cloud/access-management/organization-access-tokens/
                   tooltip: These are machine access tokens that are scoped to the organization or team level
