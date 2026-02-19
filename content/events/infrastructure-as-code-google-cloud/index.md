@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -36,7 +36,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url:
+    youtube_url: https://www.youtube.com/embed/WNiBPJz3mKA?si=5XeXMjm7LspIiTfj
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2026-02-18T09:00:00-08:00
@@ -49,14 +49,14 @@ main:
 
     # Description of the webinar.
     description: |
-        This workshop explores how modern infrastructure management on Google Cloud can be streamlined using infrastructure as code. You’ll see how Pulumi enables teams to define, deploy, and manage GCP infrastructure using real programming languages and established software engineering practices.
+        This workshop explores how modern infrastructure management on Google Cloud can be streamlined using infrastructure as code (IaC). You’ll see how Pulumi enables teams to define, deploy, and manage GCP infrastructure using real programming languages and established software engineering practices.
         
         Through guided examples, diagrams, and walkthroughs, the workshop shows how Pulumi’s programming model connects application and infrastructure development. This approach makes cloud architectures easier to understand and change, and reduces friction when managing infrastructure on Google Cloud.
         
         The session focuses on how Pulumi fits into real-world GCP workflows and how teams use it to manage infrastructure consistently across projects and environments.
     learn:
         - How Pulumi models Google Cloud infrastructure using familiar programming constructs
-        - How infrastructure as code improves reliability and repeatability on GCP
+        - How IaC improves reliability and repeatability on GCP
         - How Pulumi supports consistent infrastructure management across environments on Google Cloud
         
     # The webinar presenters
@@ -68,8 +68,8 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: []
-        languages: []
+        topics: ["Infrastructure as Code"]
+        languages: ["Python"]
         clouds: ["Google Cloud"]
 
 # The right hand side form section.
