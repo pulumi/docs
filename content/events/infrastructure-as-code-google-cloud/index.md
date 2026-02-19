@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -36,7 +36,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url:
+    youtube_url: https://www.youtube.com/embed/WNiBPJz3mKA?si=5XeXMjm7LspIiTfj
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2026-02-18T09:00:00-08:00
@@ -68,8 +68,8 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics: []
-        languages: []
+        topics: ["Infrastructure as Code"]
+        languages: ["python"]
         clouds: ["Google Cloud"]
 
 # The right hand side form section.
