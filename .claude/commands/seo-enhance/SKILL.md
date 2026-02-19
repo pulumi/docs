@@ -67,6 +67,7 @@ Evaluate against AI discoverability patterns:
 | **E-E-A-T Signals** | Shows experience, expertise, authority, trust | Pass/Fail |
 | **Down-Funnel Specificity** | Addresses specific use cases, integrations, edge cases | Pass/Fail |
 | **Agent-Friendly Content** | Clear CTAs, numbered steps, executable actions | Pass/Fail |
+| **Natural Voice** | No AI-generated red flags (formulaic transitions, buzzwords, vague openings) | Pass/Fail |
 
 ### Step 4: Check SEO Fundamentals
 
@@ -106,7 +107,7 @@ Present findings in a structured format:
 
 | Category | Score | Priority Items |
 |----------|-------|----------------|
-| AEO Readiness | X/10 | [top issues] |
+| AEO Readiness | X/11 | [top issues] |
 | SEO Fundamentals | X/6 | [top issues] |
 | Positioning | X/3 | [top issues] |
 
@@ -192,7 +193,7 @@ Additional checks for explainer content:
 
 | Category | Score | Priority Items |
 |----------|-------|----------------|
-| AEO Readiness | 5/10 | Missing quotable definition, no FAQ section, no E-E-A-T signals |
+| AEO Readiness | 5/11 | Missing quotable definition, no FAQ section, no E-E-A-T signals |
 | SEO Fundamentals | 4/6 | Title slightly long (67 chars) |
 | Positioning | 2/3 | Could emphasize real programming languages |
 

@@ -294,6 +294,46 @@ to watch your Git repository for changes. Here's a working example...
 - Success criteria is clear (infrastructure deployed)
 - No ambiguity about what to do next
 
+### 11. Natural Voice (Anti-AI-Generated Signals)
+
+**Why it matters:** Google's Helpful Content system penalizes content that reads as AI-generated. Human readers and AI answer engines both prefer content with authentic voice, specific experience, and genuine perspective. Content that sounds robotic or formulaic undermines E-E-A-T signals and reduces citation likelihood.
+
+**Red flags (AI-generated patterns to catch):**
+- Formulaic transitions: "Additionally," "Furthermore," "Moreover," starting every paragraph
+- Buzzword padding: "leverage," "utilize," "facilitate," "empower," "cutting-edge," "game-changing"
+- Vague openings: "In today's rapidly evolving landscape..." / "In the world of..."
+- Hedging everything: "It's important to note that..." / "It's worth mentioning..."
+- Mechanical symmetry: every list has exactly 3 or 5 items, every section the same length
+- No specifics: general claims without concrete examples, versions, dates, or names
+- Closing cliches: "In conclusion," "To summarize," "By following these best practices..."
+- Missing voice: no opinions, no perspective, no personality
+
+**Check:**
+- Content has varied sentence length and structure (not every sentence 15-20 words)
+- Paragraphs use natural transitions, not mechanical connectors
+- Includes specific examples from real usage (tool versions, error messages, actual commands)
+- Author's perspective or opinion is present where appropriate
+- "Rough edges" exist: mentions of limitations, gotchas, workarounds, trade-offs
+- No more than 2 of the red flag patterns above appear in any section
+
+**Good example:**
+```
+We hit a wall trying to manage 200+ microservices with Terraform. The HCL
+got unmanageable around service 50 -- mostly because we couldn't share logic
+between modules without copy-pasting. Switching to Pulumi with TypeScript
+let us write actual functions and share them as npm packages. Deployment
+time dropped from 45 minutes to 12.
+```
+
+**Bad example (AI-generated):**
+```
+In today's rapidly evolving cloud landscape, managing microservices at scale
+presents significant challenges. Organizations leveraging Infrastructure as
+Code solutions often find that traditional approaches may not fully address
+their needs. By utilizing modern programming languages, teams can empower
+their developers to achieve greater efficiency and scalability.
+```
+
 ## AEO Scoring
 
 | Pattern | Weight | Pass Criteria |
@@ -308,12 +348,13 @@ to watch your Git repository for changes. Here's a working example...
 | E-E-A-T Signals | High | Shows experience, expertise, authority, trust |
 | Down-Funnel Specificity | High | Covers integrations, edge cases, specific workflows |
 | Agent-Friendly Content | Medium | Clear CTAs, numbered steps, executable actions |
+| Natural Voice | High | No more than 2 AI-generated red flags per section |
 
 **Scoring:**
-- 10/10: Excellent AEO readiness
-- 8-9/10: Good, minor improvements needed
-- 5-7/10: Moderate, some gaps to address
-- 0-4/10: Poor, major restructuring needed
+- 11/11: Excellent AEO readiness
+- 9-10/11: Good, minor improvements needed
+- 6-8/11: Moderate, some gaps to address
+- 0-5/11: Poor, major restructuring needed
 
 ## Content Type Applicability
 
@@ -329,3 +370,4 @@ to watch your Git repository for changes. Here's a working example...
 | E-E-A-T Signals | Required | Recommended | Required | Recommended |
 | Down-Funnel Specificity | Recommended | Required | Recommended | Required |
 | Agent-Friendly Content | Recommended | Required | Recommended | Required |
+| Natural Voice | Required | Recommended | Required | Recommended |
