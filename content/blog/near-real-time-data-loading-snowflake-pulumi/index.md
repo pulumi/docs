@@ -46,7 +46,7 @@ The following diagram shows the recommended pipeline for loading GitHub webhooks
 
 GitHub sends webhook events to a Lambda Function URL, which validates the HMAC (Hash-based Message Authentication Code) signature and forwards the payload to Amazon Data Firehose. Firehose streams records directly into Snowflake via the Snowpipe Streaming API. Data appears in Snowflake within seconds. S3 is used only as a backup destination for failed records.
 
-This post demonstrates the pattern with AWS (Lambda, Firehose) and Snowflake. The direct Firehose-to-Snowflake destination is an AWS-native feature that works with any Snowflake account. The S3-based patterns (auto-ingest and batch) also support [Azure Blob Storage](https://www.pulumi.com/registry/packages/azure-native/api-docs/storage/blobcontainer/) and [Google Cloud Storage](https://www.pulumi.com/registry/packages/gcp/api-docs/storage/bucket/) via Snowflake storage integrations.
+The direct Firehose-to-Snowflake destination is an AWS-native feature that works with any Snowflake account. The S3-based patterns (auto-ingest and batch) also support [Azure Blob Storage](https://www.pulumi.com/registry/packages/azure-native/api-docs/storage/blobcontainer/) and [Google Cloud Storage](https://www.pulumi.com/registry/packages/gcp/api-docs/storage/bucket/) via Snowflake storage integrations.
 
 ## Project setup
 
