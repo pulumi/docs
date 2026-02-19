@@ -69,7 +69,7 @@ main:
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
         topics: ["Infrastructure as Code"]
-        languages: ["python"]
+        languages: ["Python"]
         clouds: ["Google Cloud"]
 
 # The right hand side form section.
