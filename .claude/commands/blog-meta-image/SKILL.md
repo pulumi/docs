@@ -146,7 +146,7 @@ Build a JSON config. For mascot templates:
   "template": "templates/dark-flying.png",
   "text": {
     "content": "Blog Post Title Here",
-    "font_size": 71
+    "font_size": 88
   },
   "logos": []
 }
@@ -159,7 +159,7 @@ For logo templates:
   "template": "templates/dark-logo-2.png",
   "text": {
     "content": "Blog Post Title Here",
-    "font_size": 71,
+    "font_size": 88,
     "max_width": 700
   },
   "logos": [

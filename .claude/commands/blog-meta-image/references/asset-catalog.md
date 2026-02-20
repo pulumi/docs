@@ -103,7 +103,7 @@ From `catalog.yaml`:
 ## Composition Rules
 
 1. **Text is always white** — all templates have dark-enough backgrounds for white text readability
-2. **Text stays on the left** — max_width of 700px keeps text on the left side
+2. **Text stays on the left** — max_width of 700px prevents text from overlapping the right-side mascot/logos
 3. **Logos go on white placeholders** — the compose script centers logos within the measured placeholder bounds
 4. **1-3 logos max** — template determines slot count; select the template matching logo count
 5. **Font size scales with title length** — shorter titles get larger fonts for visual impact
