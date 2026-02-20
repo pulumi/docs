@@ -164,7 +164,7 @@ def place_logos(
 def compose(config: dict, output_path: str, assets_dir: Path) -> str:
     """Full composition pipeline: Template PNG -> Logos -> Text -> Save."""
     catalog = load_catalog(assets_dir)
-    fonts_dir = assets_dir / "fonts"
+    fonts_dir = assets_dir.parents[3] / "static" / "fonts"
     canvas_w = catalog["canvas"]["width"]
     canvas_h = catalog["canvas"]["height"]
 
@@ -216,7 +216,7 @@ def main():
     parser.add_argument(
         "--assets-dir",
         required=True,
-        help="Base directory containing templates/, logos/, fonts/, and catalog.yaml",
+        help="Base directory containing templates/, logos/, and catalog.yaml",
     )
     args = parser.parse_args()
 
