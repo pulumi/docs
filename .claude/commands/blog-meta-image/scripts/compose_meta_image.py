@@ -13,8 +13,6 @@ Pipeline: Load template PNG -> Place logos on placeholders -> Draw text -> Save
 """
 
 import argparse
-import base64
-import html
 import json
 import subprocess
 from io import BytesIO
@@ -22,7 +20,7 @@ from pathlib import Path
 
 import cairosvg
 import yaml
-from PIL import Image, ImageFont
+from PIL import Image, ImageDraw, ImageFont
 
 
 def load_catalog(assets_dir: Path) -> dict:
@@ -68,12 +66,23 @@ def draw_text(
     catalog_text: dict,
     font_size: int = 71,
 ) -> Image.Image:
-    """Render text via SVG for native letter-spacing and kerning support."""
+    """Render text directly with Pillow using the Inter variable font."""
     font_path = fonts_dir / catalog_text["font"]
-    font_b64 = base64.b64encode(font_path.read_bytes()).decode()
     font = ImageFont.truetype(str(font_path), font_size)
 
-    x = catalog_text.get("x", 90)
+    # Set variable font weight axis
+    font_weight = catalog_text.get("font_weight", 700)
+    try:
+        axes = font.get_variation_axes()
+        axis_values = [ax["default"] for ax in axes]
+        for i, ax in enumerate(axes):
+            if ax["name"] in (b"Weight", b"wght"):
+                axis_values[i] = font_weight
+        font.set_variation_by_axes(axis_values)
+    except Exception:
+        pass  # Static fonts don't support variations
+
+    x_start = catalog_text.get("x", 90)
     y_top = catalog_text.get("y", 80)
     max_width = catalog_text.get("max_width", 700)
     color = catalog_text.get("color", "#FFFFFF")
@@ -82,35 +91,20 @@ def draw_text(
 
     letter_spacing_px = letter_spacing_em * font_size
     line_height_px = font_size * line_height_pct / 100
-
     lines = _word_wrap(content, font, max_width)
-    canvas_w, canvas_h = image.size
 
-    # Build tspans — top-anchored, each line offset by line_height
-    tspans = []
+    # Create transparent text layer
+    txt_layer = Image.new("RGBA", image.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(txt_layer)
+
     for i, line in enumerate(lines):
-        baseline_y = y_top + i * line_height_px + font_size * 0.85
-        escaped = html.escape(line)
-        tspans.append(f'<tspan x="{x}" y="{baseline_y}">{escaped}</tspan>')
+        x = x_start
+        y = y_top + i * line_height_px
+        for char in line:
+            draw.text((x, y), char, font=font, fill=color)
+            x += font.getlength(char) + letter_spacing_px
 
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{canvas_w}" height="{canvas_h}">
-      <defs><style>
-        @font-face {{
-          font-family: 'Inter';
-          src: url('data:font/truetype;base64,{font_b64}');
-          font-weight: bold;
-        }}
-      </style></defs>
-      <text font-family="Inter" font-weight="bold" font-size="{font_size}"
-            fill="{color}" letter-spacing="{letter_spacing_px}">
-        {"".join(tspans)}
-      </text>
-    </svg>'''
-
-    png_data = cairosvg.svg2png(bytestring=svg.encode(),
-                                 output_width=canvas_w, output_height=canvas_h)
-    text_layer = Image.open(BytesIO(png_data)).convert("RGBA")
-    return Image.alpha_composite(image.convert("RGBA"), text_layer)
+    return Image.alpha_composite(image.convert("RGBA"), txt_layer)
 
 
 def _word_wrap(text: str, font: ImageFont.FreeTypeFont, max_width: float) -> list[str]:
