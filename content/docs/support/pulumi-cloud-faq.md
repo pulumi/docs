@@ -70,7 +70,7 @@ In addition, if you have any encrypted configuration in your stack, you'll need 
 
 ### Which domains and IPs should I allowlist?
 
-Should your network have egress limitations, please ensure you allowlist the subsequent domain and IP addresses:
+If you have a requirement to allow Pulumi Cloud access to some part of your network, please ensure you allowlist the subsequent domain and IP addresses:
 
 - app.pulumi.com
 - api.pulumi.com
