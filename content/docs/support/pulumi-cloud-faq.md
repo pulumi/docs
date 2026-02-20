@@ -79,7 +79,7 @@ If you have requirements to allow egress access to or ingress access from Pulumi
 - 44.241.59.217
 - 52.40.198.20
 
-These IP addresses and hostnames are the external-facing addresses of the Pulumi Cloud SaaS and should be added to your allowlist to allow traffic from your network to reach our services.
+These IP addresses and hostnames are the external-facing addresses of the Pulumi Cloud SaaS.
 
 ## Organizations
 
