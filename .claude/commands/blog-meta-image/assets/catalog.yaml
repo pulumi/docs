@@ -6,9 +6,10 @@ canvas:
   height: 628
 
 text:
-  font: Inter-Bold.ttf
+  font: inter-bold.woff
+  font_weight: 700
   color: "#FFFFFF"
-  letter_spacing_em: -0.03
+  letter_spacing_em: -0.025
   line_height_pct: 110
   x: 90
   y: 80
