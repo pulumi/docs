@@ -146,21 +146,21 @@ Build a JSON config. For mascot templates:
   "template": "templates/dark-flying.png",
   "text": {
     "content": "Blog Post Title Here",
-    "font_size": 71
+    "font_size": 88
   },
   "logos": []
 }
 ```
 
-For logo templates (use `max_width: 520` to avoid overlapping logo placeholders):
+For logo templates:
 
 ```json
 {
   "template": "templates/dark-logo-2.png",
   "text": {
     "content": "Blog Post Title Here",
-    "font_size": 71,
-    "max_width": 520
+    "font_size": 88,
+    "max_width": 700
   },
   "logos": [
     "logos/aws.svg",
@@ -170,10 +170,10 @@ For logo templates (use `max_width: 520` to avoid overlapping logo placeholders)
 ```
 
 **Font size guidelines:**
-- Short titles (1-3 words): `font_size: 80`
-- Medium titles (4-8 words): `font_size: 71`
-- Long titles (9+ words): `font_size: 56`
-- Very long titles (15+ words): `font_size: 44`
+- Short titles (1-3 words): `font_size: 104`
+- Medium titles (4-8 words): `font_size: 88`
+- Long titles (9+ words): `font_size: 72`
+- Very long titles (15+ words): `font_size: 60`
 
 **Important**: Paths in the JSON config are relative to the `--assets-dir` directory.
 
