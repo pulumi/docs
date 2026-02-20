@@ -70,7 +70,7 @@ In addition, if you have any encrypted configuration in your stack, you'll need 
 
 ### Which domains and IPs should I allowlist?
 
-If you have a requirement to allow Pulumi Cloud access to some part of your network, please ensure you allowlist the subsequent domain and IP addresses:
+If you have a requirement to allow Pulumi Cloud access to some part of your network, please ensure you allowlist the subsequent hostnames and IP addresses:
 
 - app.pulumi.com
 - api.pulumi.com
@@ -79,7 +79,7 @@ If you have a requirement to allow Pulumi Cloud access to some part of your netw
 - 44.241.59.217
 - 52.40.198.20
 
-These IP addresses and URL are the external facing addresses of the Pulumi Cloud SaaS and should be added to your allowlist to allow traffic from your network to reach our services.
+These IP addresses and hostnames are the external facing addresses of the Pulumi Cloud SaaS and should be added to your allowlist to allow traffic from your network to reach our services.
 
 ## Organizations
 
