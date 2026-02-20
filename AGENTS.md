@@ -1,18 +1,10 @@
-# AGENTS.md — Canonical Instructions for This Repository
-
-This file defines guidance for AI agents like Claude Code and GitHub Copilot when working in this repository. All automated or manual contributions must comply with these rules.
-
----
-
-## Repository context
-
-This repository contains the source for the Pulumi website, built with [Hugo](https://gohugo.io/). It includes documentation, blog posts, marketing material, and example programs.
+# AGENTS.md — Pulumi website (Hugo): docs, blog, marketing, and example programs
 
 ---
 
 ## Build / Test / Lint Workflow
 
-> **Note:** For comprehensive details on the build system, deployment infrastructure, and CI/CD workflows, see `BUILD-AND-DEPLOY.md`. This file is large (~3700 lines), so read only specific sections as needed to conserve tokens.
+> **Note:** For comprehensive details on the build system, deployment infrastructure, and CI/CD workflows, see `BUILD-AND-DEPLOY.md`. This file is large, so read only specific sections as needed to conserve tokens.
 
 Agents must use these exact commands:
 
@@ -29,39 +21,28 @@ Agents must use these exact commands:
 - Fix trailing spaces:  
   `sed -i '' 's/[[:space:]]*$//' file1.md file2.md ...`
 
-Do not substitute other tools or commands.
-
----
-
-## Style Authority
-
-1. Always follow `STYLE-GUIDE.md`.  
-2. If a rule is not covered there, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).  
-3. Do not invent new style conventions. Ask for clarification if something is ambiguous.
-
----
-
-## Absolute Prohibitions
-
-- **Package manager**: Do **not** change `package.json` to use pnpm. Yarn/npm only.  
+Do not substitute other tools or commands, or change `package.json` to use pnpm (Yarn/npm only).
 
 ---
 
 ## Code & Content Rules
 
-- **Markdown**:
-  - Standard paragraph formatting.  
-  - Must always end with a newline. This *only* applies to Markdown files.
+For all content files, follow `STYLE-GUIDE.md`. If a rule is not covered there, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style). Do not invent new style conventions; ask for clarification if something is ambiguous.
+
+Meta files like this one, `BUILD-AND-DEPLOY.md`, and agent instruction/skill files (e.g., `.claude/commands/*.md`) are exempt from formatting rules (heading case, trailing newlines, etc.).
+
+For all content files (docs, blogs, tutorials, etc.):
+
+- **Markdown**: Must always end with a newline.
 - **Headings**:  
   - H1 = Title Case  
   - H2+ = Sentence case
-- **Code Examples**: Place in `/static/programs` with language suffix in filename.  
 - **TypeScript/JavaScript**: Must follow `tsconfig.json` settings. No comments unless explicitly requested.  
 - **File Placement**:  
   - Docs go under `content/docs/...`
   - Blog posts go under `content/blog/...`
   - Other content goes into appropriate `content/...` subdirectory
-  - Program examples go under `/static/programs`  
+  - Code examples go under `/static/programs` with a language suffix in the filename.  
   - Mirror the structure of existing content; do not invent new layouts.
 - **Includes**: Use Hugo shortcodes for shared content, never raw Markdown copy-paste.  
 - **Naming**: Use lowercase for non-proper nouns (e.g. “stack,” not “Stack”).  
@@ -74,8 +55,10 @@ Do not substitute other tools or commands.
 
 **⚠️ SEO CRITICAL**: Missing aliases on moved files will break search engine rankings and external links. Always verify aliases after file moves.
 
-- **Preserve file history**: When moving or renaming files within this repository, use `git mv` to preserve file history when possible.
-- **Hugo content files**: Add an `aliases` field to the frontmatter of the moved file, listing the old paths:
+**Use the `/move-doc` skill** when moving Hugo content files — it handles `git mv`, alias injection, link updates, and verification automatically. If moving manually:
+
+- Use `git mv` to preserve file history.
+- Add an `aliases` field to the frontmatter listing the old paths:
 
   ```yaml
   aliases:
@@ -83,7 +66,7 @@ Do not substitute other tools or commands.
   - /another/old/path/
   ```
 
-- **Verification toolset**: After moving files, use the scripts in `/scripts/alias-verification/` to verify all moved files have proper aliases. See the README in that directory for usage details.
+- Verify aliases using the scripts in `/scripts/alias-verification/`.
 - **Non-Hugo files**: For generated content or files outside Hugo's content management, add redirects to the S3 redirect files located in `/scripts/redirects/`.
   - When adding S3 redirects, place entries in topic-appropriate files (e.g., `neo-redirects.txt` for Neo-related content).
   - S3 redirect format: `source-path|destination-url` (e.g., `docs/old/path/index.html|/docs/new/path/`)
@@ -103,8 +86,6 @@ When moving documentation files, aliases automatically handle redirects. Update 
   - `/content/blog/` - Blog posts are historical documents
   - `/content/tutorials/` - Tutorials are historical content
 
-- **Why**: Blog posts and tutorials represent a point in time. Aliases handle redirects automatically, preserving the historical record without modification.
-
 - **Implementation**: When using `find` or `sed` to update links, always exclude blog and tutorial directories:
 
   ```bash
@@ -113,21 +94,8 @@ When moving documentation files, aliases automatically handle redirects. Update 
 
 ---
 
-## Reviewing changes
+## Workflow Skills
 
-When reviewing PRs and changes, follow the instructions in `.claude/commands/docs-review.md`.
+Before starting any documentation task, check `.claude/commands/` for a relevant skill — there are well-structured skills covering common tasks like creating docs, reviewing PRs (see `.claude/commands/docs-review.md`), moving files, and more. To see a full inventory, run `.claude/commands/docs-tools/scripts/scrape-metadata.py`.
 
----
-
-## Claude Code Skills
-
-This repository includes specialized workflow skills in `.claude/commands/` that provide detailed instructions for documentation tasks like creating new docs, reviewing PRs, moving files, and more.
-
-**Non-Claude agents**: If the user runs a slash command that seems unfamiliar (or issues a short command that could be intended as a slash command), look for a corresponding file in `.claude/commands/` to guide your actions.
-
----
-
-## Enforcement
-
-If there is any conflict between these instructions and tool defaults, **this file takes precedence**.  
-Do not improvise, "improve," or override these rules.
+**Non-Claude agents**: If the user runs a slash command or issues a short command that could be a skill name (e.g., `fix-issue`, `new-doc`), look for a matching file in `.claude/commands/` to guide your actions.
