@@ -1,6 +1,5 @@
 ---
 title: "How We Load Data into Snowflake in Seconds with Pulumi"
-allow_long_title: true
 date: 2026-02-19
 draft: false
 meta_desc: "Learn how we load data into Snowflake in seconds using Firehose direct streaming and reusable Pulumi ComponentResources."
@@ -32,7 +31,7 @@ We'll pipe GitHub webhooks into Snowflake with a few lines of Pulumi code. Lambd
 If you're loading data into Snowflake and want reusable, composable infrastructure, this post is for you. Common use cases include:
 
 - **Webhook and event ingestion:** SaaS webhooks (GitHub, Stripe, HubSpot), application events, or any HTTP-driven data that needs to land in Snowflake quickly.
-- **Change Data Capture (CDC) replication:** streaming database changes via Debezium, [Fivetran](https://www.pulumi.com/registry/packages/fivetran/), or [AWS DMS](https://www.pulumi.com/registry/packages/aws/api-docs/dms/) into Snowflake.
+- **Change Data Capture (CDC) replication:** streaming database changes via [Debezium](https://debezium.io/), [Estuary](https://estuary.dev/), [Fivetran](https://www.pulumi.com/registry/packages/fivetran/), or [AWS DMS](https://www.pulumi.com/registry/packages/aws/api-docs/dms/) into Snowflake.
 - **Log and telemetry pipelines:** application logs, CloudTrail events, or IoT telemetry flowing through Firehose into Snowflake for analytics.
 - **Multi-source data pipelines:** teams managing dozens of sources into a centralized Snowflake Data Warehouse with consistent infrastructure and naming conventions.
 
@@ -46,7 +45,7 @@ The following diagram shows the recommended pipeline for loading GitHub webhooks
 
 1. GitHub sends webhook events to a Lambda Function URL.
 1. Lambda validates the HMAC (Hash-based Message Authentication Code) signature and forwards the payload to Amazon Data Firehose.
-1. Firehose streams records directly into Snowflake via the Snowpipe Streaming API. Data appears in Snowflake within seconds.
+1. Firehose streams records directly into Snowflake via the [Snowpipe Streaming API](https://docs.snowflake.com/en/user-guide/snowpipe-streaming/data-load-snowpipe-streaming-overview). Data appears in Snowflake within seconds.
 1. S3 is used only as a backup destination for failed records.
 
 The direct Firehose-to-Snowflake destination is an AWS-native feature that works with any Snowflake account.
@@ -78,7 +77,7 @@ uv add 'pulumi>=3.0.0,<4.0.0' 'pulumi-aws>=7.0.0' 'pulumi-snowflake>=2.0.0' \
      'pulumi-github>=6.0.0' 'pulumi-random>=4.0.0' 'pulumi-tls>=5.0.0'
 ```
 
-That's it. `uv` creates the virtual environment and lockfile automatically. Pulumi will use `uv run` under the hood to execute your program.
+That's it. `uv` creates the virtual environment and lockfile automatically, and Pulumi uses `uv run` under the hood to execute your program.
 
 All examples in this post are in Python, but Pulumi supports multiple languages. You can implement the same components in TypeScript, Go, .NET, Java, or YAML.
 
@@ -246,7 +245,7 @@ values:
     aws:region: us-west-2
 ```
 
-The `imports` directive merges values from both base environments into the combined one. Each base environment handles its own provider config: the AWS base uses `environmentVariables` for CLI access, while the Snowflake base uses `pulumiConfig` to map OIDC credentials to Snowflake provider config keys. The combined dev environment only needs to add `aws:region`. This keeps credential configuration DRY (Don't Repeat Yourself); if the AWS role ARN or Snowflake account changes, you update one environment.
+The `imports` directive merges values from both base environments into the combined one. Each base environment handles its own provider config: the AWS base uses `environmentVariables` for CLI access, while the Snowflake base uses `pulumiConfig` to map OIDC credentials to Snowflake provider config keys. The combined dev environment only needs to add `aws:region`. This keeps credential configuration DRY; if the AWS role ARN or Snowflake account changes, you update one environment.
 
 ### GitHub environment
 
@@ -392,13 +391,25 @@ The envelope format `{"github_event": "<type>", "payload": {...}}\n` is importan
 
 ### Why direct Firehose to Snowflake?
 
-With an S3 intermediate path, you wait for Firehose to buffer records (60 seconds), then for Snowpipe to detect the new file and load it. Total latency: about two minutes. With the direct Snowflake destination, Firehose uses the Snowpipe Streaming API to insert records as soon as they arrive, typically in seconds.
+With an S3 intermediate path, you wait for Firehose to buffer records (60 seconds), then for Snowpipe to detect the new file and load it. Total latency: about two minutes. With the direct Snowflake destination, Firehose uses the Snowpipe Streaming API to insert records as soon as they arrive, in seconds.
 
 The direct path also removes the need for S3 event notifications, SQS queues, external stages, and pipe resources. S3 is still used, but only as a backup destination for failed records.
 
 ### The DirectSnowflakeIngestion component
 
 The component creates everything needed for the direct path: a TLS key pair for Snowflake authentication, a Snowflake service user with least-privilege grants, the landing table, a Firehose delivery stream with `destination="snowflake"`, and a Lambda function with a public URL.
+
+The `ColumnDef` dataclass is a simple schema definition used across all pipeline components. It lives in `components/snowpipe_pipeline.py`:
+
+```python
+@dataclass
+class ColumnDef:
+    """Column definition for a Snowflake table."""
+
+    name: str
+    type: str
+    nullable: bool = True
+```
 
 ```python
 import json
@@ -688,6 +699,12 @@ class DirectSnowflakeIngestion(pulumi.ComponentResource):
         self.function_url = fn_url.function_url
         self.firehose_stream_name = stream.name
         self.snowflake_user_name = sf_user.name
+
+        self.register_outputs({
+            "function_url": self.function_url,
+            "firehose_stream_name": self.firehose_stream_name,
+            "snowflake_user_name": self.snowflake_user_name,
+        })
 ```
 
 A few things to note:
@@ -860,7 +877,7 @@ name: snowpipe-components
 version: 1.0.0
 ```
 
-Consumers add the package to their project:
+Consumers add the package to their project with [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/):
 
 ```bash
 pulumi package add github.com/your-org/pulumi-snowpipe@v1.0.0
@@ -870,7 +887,7 @@ Pulumi downloads the package and generates typed SDKs automatically. The consume
 
 ### Pulumi Cloud Private Registry
 
-For organization-level discoverability, publish to the [Pulumi Cloud Private Registry](/docs/idp/concepts/private-registry/):
+For organization-level discoverability, publish to the [Pulumi Cloud Private Registry](/docs/idp/concepts/private-registry/) with [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/):
 
 ```bash
 pulumi package publish ./schema.json
@@ -884,4 +901,4 @@ This gives you auto-generated API docs, usage tracking across teams, and cross-l
 
 The `DirectSnowflakeIngestion` component in this post delivers data from GitHub webhooks into Snowflake in seconds: Lambda validates the HMAC signature, Firehose streams directly to Snowflake via the Snowpipe Streaming API, and the TLS key pair is managed entirely within Pulumi. No S3 intermediate, no SQS queues.
 
-The component accepts pluggable Lambda handlers, so swapping GitHub for Stripe webhooks or any other source is just a matter of providing different `lambda_code` and `lambda_environment` arguments. This pattern has been running in production for over three years across dozens of pipelines without significant changes to the infrastructure code. When you're ready to share components across teams, `pulumi package add` or `pulumi package publish` turns them into versioned, cross-language packages. You'll find the complete example in the [GitHub repository](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time).
+The component accepts pluggable Lambda handlers, so swapping GitHub for Stripe webhooks or any other source is just a matter of providing different `lambda_code` and `lambda_environment` arguments. This pattern has been running in production for over three years across dozens of pipelines without significant changes to the infrastructure code. When you're ready to share components across teams, [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) or [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/) turns them into versioned, cross-language packages. You'll find the complete example in the [GitHub repository](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time).
