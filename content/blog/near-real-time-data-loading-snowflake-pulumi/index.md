@@ -30,10 +30,10 @@ When you manage dozens of data-loading pipelines, copying and pasting IaC config
 
 If you're loading data into Snowflake and want reusable, composable infrastructure, this post is for you. Here's what we'll cover:
 
-* Handling and validating GitHub webhooks with AWS Lambda 
-* Streaming webhook payloads directly into Snowflake with Amazon Data Firehose 
+* Handling and validating GitHub webhooks with AWS Lambda
+* Streaming webhook payloads directly into Snowflake with Amazon Data Firehose
 * Wiring it all up with a reusable Pulumi [`ComponentResource`](/docs/iac/concepts/components/)
- 
+
 The [companion template](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time) also includes S3 auto-ingest and batch loading patterns, which we'll cover in upcoming posts. We also use Pulumi ESC to handle authentication to both AWS and Snowflake using OpenID Connect.
 
 Our own [Josh Kodroff](/blog/author/josh-kodroff/) wrote an excellent [introduction to Snowpipe with Pulumi](https://medium.com/snowflake/lightning-fast-elt-for-python-devs-with-aws-snowpipe-and-pulumi-4eaf056dd097). This post builds on his work using the newest [Snowflake](https://www.pulumi.com/registry/packages/snowflake/) and [AWS](https://www.pulumi.com/registry/packages/aws/) provider APIs and the direct Firehose-to-Snowflake destination, which wasn't available when Josh wrote his post. Some resource names and grant patterns will also differ if you're comparing the two.
@@ -83,7 +83,7 @@ All examples in this post are in Python, but Pulumi supports multiple languages.
 
 ## Managing credentials with Pulumi ESC
 
-This project requires credentials for two cloud providers, AWS and Snowflake. To avoid having to manage credentials locally, it uses [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) to obtain dynamic, short-lived credentials for both providers via OIDC (OpenID Connect). 
+This project requires credentials for two cloud providers, AWS and Snowflake. To avoid having to manage credentials locally, it uses [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) to obtain dynamic, short-lived credentials for both providers via OIDC (OpenID Connect).
 
 If you're not using Pulumi ESC, you can add these credentials directly to your stack configuration file (`Pulumi.<stack>.yaml`) using [`pulumi config set --secret`](https://www.pulumi.com/docs/iac/concepts/secrets/).
 
@@ -715,10 +715,10 @@ class DirectSnowflakeIngestion(pulumi.ComponentResource):
 
 A few things to note:
 
-- **TLS key pair for authentication.** The component generates an RSA key pair using the [`pulumi-tls`](/registry/packages/tls/) provider. The public key is assigned to the Snowflake service user; the private key (PKCS#8 format, base64-encoded) is passed to Firehose. No passwords or OAuth tokens are stored.
-- **`ServiceUser` instead of `User`.** Snowflake [service users](https://docs.snowflake.com/en/sql-reference/sql/create-user#service-type) can't log in interactively. They authenticate only via key pair, which is exactly what Firehose needs.
-- **`destination="snowflake"` on Firehose.** This tells Firehose to use the Snowpipe Streaming API rather than writing to S3. The `s3_configuration` block is still required, but only for backup/error records.
-- **Immediate flushing.** `buffering_interval=0` and `buffering_size=1` ensure records are sent to Snowflake as soon as they arrive, minimizing latency. Tune according to your needs.
+* **TLS key pair for authentication.** The component generates an RSA key pair using the [`pulumi-tls`](/registry/packages/tls/) provider. The public key is assigned to the Snowflake service user; the private key (PKCS#8 format, base64-encoded) is passed to Firehose. No passwords or OAuth tokens are stored.
+* **`ServiceUser` instead of `User`.** Snowflake [service users](https://docs.snowflake.com/en/sql-reference/sql/create-user#service-type) can't log in interactively. They authenticate only via key pair, which is exactly what Firehose needs.
+* **`destination="snowflake"` on Firehose.** This tells Firehose to use the Snowpipe Streaming API rather than writing to S3. The `s3_configuration` block is still required, but only for backup/error records.
+* **Immediate flushing.** `buffering_interval=0` and `buffering_size=1` ensure records are sent to Snowflake as soon as they arrive, minimizing latency. Tune according to your needs.
 
 {{% notes type="warning" %}}
 Amazon Data Firehose does not connect from fixed IP addresses, so you cannot use Snowflake [network policies](https://docs.snowflake.com/en/user-guide/network-policies) to restrict access by IP. If your Snowflake account uses network policies, you have three options: use [AWS PrivateLink](https://docs.snowflake.com/en/user-guide/admin-security-privatelink) (requires Snowflake Business Critical edition), allow public internet access for the Firehose service user, or switch to *S3 auto-ingest via Snowpipe* which does not require direct network access to Snowflake from Firehose.
@@ -837,8 +837,8 @@ You should see rows with event types like `star`, `push`, or `issues`, real GitH
 
 Direct streaming is the fastest path, but two other patterns are available in the [companion template](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time) for different requirements:
 
-- **S3 auto-ingest via Snowpipe.** Firehose buffers to S3, and Snowpipe auto-ingests new files. Latency is about two minutes. Best when you need S3 as the system of record or can't use direct Snowpipe Streaming.
-- **Batch loading.** Your orchestrator (Airflow, Prefect, cron, etc.) runs `COPY INTO` on a schedule. Best for full control over timing and deduplication.
+* **S3 auto-ingest via Snowpipe.** Firehose buffers to S3, and Snowpipe auto-ingests new files. Latency is about two minutes. Best when you need S3 as the system of record or can't use direct Snowpipe Streaming.
+* **Batch loading.** Your orchestrator (Airflow, Prefect, cron, etc.) runs `COPY INTO` on a schedule. Best for full control over timing and deduplication.
 
 We'll walk through both patterns in detail in upcoming posts.
 
