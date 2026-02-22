@@ -1,0 +1,23 @@
+{
+    "version": "0.0.1",
+    "configurations": [
+        {
+            "name": "hugo-server",
+            "runtimeExecutable": "bash",
+            "runtimeArgs": ["./scripts/serve.sh"],
+            "port": 1313
+        },
+        {
+            "name": "serve-all",
+            "runtimeExecutable": "make",
+            "runtimeArgs": ["serve-all"],
+            "port": 1313
+        },
+        {
+            "name": "static-server",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": ["run", "http-server", "public"],
+            "port": 8080
+        }
+    ]
+}
