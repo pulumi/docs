@@ -192,7 +192,7 @@ def handler(event, context):
 
 The envelope format `{"github_event": "<type>", "payload": {...}}\n` is important. The `github_event` field (e.g., `push`, `pull_request`, `star`) comes from the `x-github-event` header and lets downstream queries filter by event type. The trailing newline delimits records in the [S3 backup destination](https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html), where Firehose concatenates them into files.
 
-Another interesting part of this snippet is that instead of manually creating a secret which would have to be copy-pasted into both your webhook configuration and your Lambda environment; we are using `random.RandomPassword` to generate it in Pulumi state.
+Another interesting part of this snippet is that instead of manually creating a secret which would have to be copy-pasted into both your webhook configuration and your Lambda environment, we are using `random.RandomPassword` to generate and store it securely it in Pulumi state.
 
 The secret is automatically wired to both the Lambda env var and the GitHub webhook config, and it rotates cleanly if you ever need to replace it.
 
