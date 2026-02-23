@@ -1,7 +1,7 @@
 ---
 title: "New in Pulumi IaC: `onError` Resource Hook"
 date: 2026-02-06
-meta_desc: "You can now use the `onError` resource hook to control the retry behaviour of failing resource registrations"
+meta_desc: "You can now use the `onError` resource hook to control the retry behavior of failing resource registrations"
 meta_image: meta.png
 authors:
     - tom-harding
@@ -11,20 +11,23 @@ tags:
     - releases
 social:
     twitter: "New in Pulumi IaC: the `onError` hook gives you full control over deployment failures"
-    linkedin: "Pulumi introduces a new type of resource hook: the `onError` hook, letting you control the retry behaviour of resources that fail to create."
+    linkedin: "Pulumi introduces a new type of resource hook: the `onError` hook, letting you control the retry behavior of resources that fail to create."
 ---
 
-Last year, Pulumi IaC introduced the [resource hooks](/blog/resource-hooks/) feature, allowing you to run custom code at different points in the lifecycle of resources. Today, we'd like to introduce the latest addition to these hooks: the `onError` hook.
+You can now control what happens when a resource fails during create, update, or delete—retry with backoff, fail fast, or handle errors in custom code. Last year, Pulumi IaC introduced the [resource hooks](/blog/resource-hooks/) feature, allowing you to run custom code at different points in the lifecycle of resources. Today we're adding the `onError` hook so you can react when operations fail.
 
 <!--more-->
 
 ## Recovering from errors
 
-When a Pulumi program encounters an error while creating, updating, or deleting a resource, this error halts the operation and the error is reported back to us with information about what went wrong. However, this isn't always what we want: sometimes, these errors are intermittent or temporary. For this blog, we'll look at a common example: resource readiness. Often, we want to create resources that depend on things like DNS propagation, or the readiness state of other servers. In these cases, a Pulumi program can fail simply because we executed the program too quickly! In this case, we often don't want the program to fail - we just want to wait for a period of time and retry the operation. This is where the `onError` hook can help us:
+When a Pulumi program encounters an error while creating, updating, or deleting a resource, the operation halts and the error is reported back. Sometimes that's not what we want—errors can be intermittent or temporary. If you've hit transient failures or resource-not-ready errors, the `onError` hook can help.
+
+A common case is resource readiness: creating resources that depend on DNS propagation or the readiness of other servers. The program can fail simply because it ran too soon. Instead of failing, we can wait and retry. The example below shows how:
 
 {{< chooser language "typescript,python,go,csharp" >}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 
@@ -48,9 +51,11 @@ const res = new MyResource("res", {}, {
     },
 });
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 import time
 
@@ -81,9 +86,11 @@ res = MyResource(
     ),
 )
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```go
 package main
 
@@ -127,9 +134,11 @@ func main() {
     })
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```csharp
 using System;
 using System.Threading;
@@ -165,12 +174,19 @@ class ErrorHookStack : Stack
     }
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
 
-Each time the operation fails, the new error will be passed along with all the previous attempts' errors (newest first) to the error hook. The hook should then return either true or false to tell Pulumi whether to retry the operation or not. If we decide not to retry the operation, the program will fail as normal, with the most recent error being shown as the reason for failure. With this information, we can implement many failure models. For example, the number of errors tells us how many times the operation has failed. If all these failures have been readiness failures, we can use this to implement backoff mechanisms: perhaps we wait one second the first time, two seconds the second time, and so on. As another example, maybe we have some resource that is known to be intermittent, so we'll always retry once just in case. The callback exists in your language of choice, so you have full freedom over what and how these failures are handled.
+Each time the operation fails, the hook receives the new error plus all previous attempts' errors (newest first). The hook returns true or false to tell Pulumi whether to retry. If you return false, the program fails as normal with the most recent error. With that information, you can implement many failure models:
+
+1. Use the number of errors to implement backoff—for example, wait one second on the first failure, two seconds on the second, and so on.
+1. For known-intermittent resources, always retry once before failing.
+1. Inspect error text to retry only for specific conditions (as in the example) and fail fast for others.
+
+The callback runs in your language of choice, so you have full control over how failures are handled.
 
 ## Next steps
 
-This feature is fully supported in our Node, Python, and Go SDKs as of v3.219.0, with .NET support landing in the next release. For more information, see the [hooks documentation](/docs/iac/concepts/resources/options/hooks/). Thanks for reading, and feel free to reach out with any questions via [GitHub](https://github.com/pulumi/pulumi), [X](https://x.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
+This feature is fully supported in our Node, Python, Go, and .NET SDKs as of v3.219.0. For more information, see the [hooks documentation](/docs/iac/concepts/resources/options/hooks/). Thanks for reading, and feel free to reach out with any questions via [GitHub](https://github.com/pulumi/pulumi), [X](https://x.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
