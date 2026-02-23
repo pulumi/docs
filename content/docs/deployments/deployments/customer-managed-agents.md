@@ -21,7 +21,7 @@ Customer-Managed Workflow Runners allow you to self-host workflow runners, bring
 - **Multiple pools**: You can set up multiple workflow runner pools, assign stacks to specific pools, and scale workflow runners dynamically to increase your workflow concurrency. Customers can have up to 150 concurrent workflows
 - **Meet compliance**: You can configure the workflow runners with the credentials needed to manage your infrastructure. This way your cloud provider credentials never leave your private network
 
-<sup>1</sup> *Currently Linux and MacOS are supported*
+<sup>1</sup> *Currently Linux and macOS are supported*
 
 Customer-Managed Workflow Runners support all the [deployment triggers](/docs/deployments/deployments/#deployment-triggers) currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API. They also support running Insights discovery scans and policy evaluations.
 
