@@ -26,7 +26,7 @@ Deployments are queued on a first-come, first-served basis. If you have multiple
 
 On a stack level, only one deployment can run at a time. On an organization level, the concurrency limit is determined by [SKU](/pricing/).
 
-Deployments will remain in the queue for a maximum of 7 days. If a deployment is not started within 7 days (if deployments are paused or the agent pool assigned to the stack is unavailable), it will be automatically removed from the queue and marked as `skipped`.
+Deployments will remain in the queue for a maximum of 7 days. If a deployment is not started within 7 days (if deployments are paused or the workflow runner pool assigned to the stack is unavailable), it will be automatically removed from the queue and marked as `skipped`.
 
 ## Paused deployments
 

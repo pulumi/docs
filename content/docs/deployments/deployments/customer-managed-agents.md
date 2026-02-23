@@ -94,16 +94,15 @@ There are two methods to provide cloud provider credentials to the workflow runn
 
 ## Configuration Reference
 
-All configuration for customer-managed agents are done through the `pulumi-workflow-agent.yaml` file. This can be created manually or with the `customer-managed-workflow-agent configure` command.
+All configuration for customer-managed workflow runners is done through the `pulumi-workflow-agent.yaml` file. This can be created manually or with the `customer-managed-workflow-agent configure` command.
 
-The customer-managed agent will look for `pulumi-workflow-agent.yaml` in the following directories:
+The workflow runner will look for `pulumi-workflow-agent.yaml` in the following directories:
 
 - Current directory
 - Home directory
 - `/etc`
 - Location of the `customer-managed-workflow-agent` binary
 
-\
 Below are available configuration parameters and their default values. In most cases, only `token` is required.
 
 ```yaml
@@ -215,7 +214,7 @@ circuit_breaker_timeout: "10m"
 job_status_loop_interval: "30s"
 ```
 
-### Kubernetes-Managed Workflow Runners
+### Kubernetes-managed workflow runners
 
 For Kubernetes-native installations, configuration for customer-managed workflow runners is set on the Kubernetes Deployment that runs the workflow runner. Configuration values may be set as environment variables, or by mounting a configuration file in the workflow runner Pod.
 
