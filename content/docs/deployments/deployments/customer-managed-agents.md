@@ -29,7 +29,7 @@ Customer-Managed Workflow Runners support all the [deployment triggers](/docs/de
 Customer-Managed Workflow Runners are available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Workflow Runners.
 {{% /notes %}}
 
-## Using Customer-Managed Workflow Runners
+## Using customer-managed workflow runners
 
 Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) installed, which is required for running the workflow runner. If you plan to use workflow runners for **deployments**, you must also install the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and update the [source control settings](/docs/deployments/deployments/get-started) of the stack you want to deploy.
 
@@ -57,7 +57,7 @@ Workflow runners support multiple workflow types beyond deployments, including P
 If you are running the workflow runner inside a firewall ensure to allow outbound requests to api.pulumi.com. Ensure workflow runners have the cloud provider credentials to be able to deploy in your environments.
 {{% /notes %}}
 
-### Leveraging OpenID Authentication
+### Leveraging OpenID authentication
 
 It is possible to use OpenID authentication to fetch Pulumi Pool tokens dynamically instead of configuring a static token for the workflow runners. You must first register the OpenID provider as a trusted OIDC issuer in your Pulumi account, as documented at [OIDC documentation](/docs/administration/access-identity/oidc-client/).
 
@@ -70,7 +70,7 @@ After registering the provider, the workflow runner requires this information:
 
 The workflow runner will attempt to read the `oidc_token_file` for a fresh OIDC token and exchange it automatically for a Pulumi token every time the Pulumi token expires.
 
-## Providing Credentials to Workflow Runners
+## Providing credentials to workflow runners
 
 There are two methods to provide cloud provider credentials to the workflow runners:
 
@@ -92,7 +92,7 @@ There are two methods to provide cloud provider credentials to the workflow runn
         - key_three
     ```
 
-## Configuration Reference
+## Configuration reference
 
 All configuration for customer-managed workflow runners is done through the `pulumi-workflow-agent.yaml` file. This can be created manually or with the `customer-managed-workflow-agent configure` command.
 
