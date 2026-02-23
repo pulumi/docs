@@ -1,6 +1,6 @@
 ---
 title: "How We Load Data into Snowflake in Seconds with Pulumi"
-date: 2026-02-24
+date: 2026-02-23
 draft: false
 meta_desc: "Learn how we load data into Snowflake in seconds using Firehose direct streaming and reusable Pulumi ComponentResources."
 meta_image: meta.png
@@ -105,12 +105,12 @@ values:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
     AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
+    SNOWFLAKE_USER: ${snowflake.login.user}
+    SNOWFLAKE_TOKEN: ${snowflake.login.token}
   pulumiConfig:
     aws:region: us-west-2
     snowflake:organizationName: ${snowflake.organizationName}
     snowflake:accountName: ${snowflake.accountName}
-    snowflake:user: ${snowflake.login.user}
-    snowflake:token: ${snowflake.login.token}
     snowflake:authenticator: OAUTH
     snowflake:role: PULUMI_DEPLOYER
     github:token:
