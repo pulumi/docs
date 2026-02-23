@@ -152,7 +152,13 @@ def draw_text(
                 pad_x, pad_y = 14, 6
                 pill_end = x + 2 * pad_x + word_w - letter_spacing_px
                 rect = [x, y - pad_y, pill_end, y + font_size + pad_y]
-                draw.rounded_rectangle(rect, radius=12, fill=(255, 255, 255, 65))
+                draw.rounded_rectangle(
+                    rect,
+                    radius=24,
+                    fill=(255, 255, 255, 20),
+                    outline=(255, 255, 255, 102),
+                    width=3,
+                )
                 cx = x + pad_x
                 for char in word:
                     draw.text((cx, y), char, font=active_font, fill=color)
