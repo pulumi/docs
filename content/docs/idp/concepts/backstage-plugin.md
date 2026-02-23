@@ -31,4 +31,4 @@ The plugin provides:
 The Pulumi Backstage Plugin is available through the [Backstage Plugin directory](https://backstage.io/plugins/). For detailed installation and configuration instructions, see:
 
 - [Pulumi Backstage Plugin repository](https://github.com/pulumi/pulumi-backstage-plugin)
-- [Roadie Pulumi Backstage Plugin guide](https://roadie.io/backstage/plugins/pulumi/)
+- [Roadie Pulumi Backstage Plugin guide](https://roadie.io/docs/integrations/pulumi/)
