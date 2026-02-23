@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Kubernetes on Google Cloud
 meta_desc: Learn how Kubernetes runs on Google Cloud using GKE. Create clusters, deploy applications, and manage Kubernetes infrastructure with Pulumi.
-meta_image:
+meta_image: /events/getting-started-with-kubernetes-google-cloud/intro-google-cloud-gke-adam.png
 
 # A featured webinar will display first in the list.
 featured: false
@@ -59,9 +59,9 @@ main:
         - Understand the lifecycle of Kubernetes infrastructure on Google Cloud
     # The webinar presenters
     presenters:
-        - name: Adam Gordon Bell
-          role: Community Engineer, Pulumi
-          photo: /images/team/adam-gordon-bell.jpg
+        - name: Engin Diri
+          role: Senior Solutions Architect, Pulumi
+          photo: /images/team/engin-diri.jpg
 
     # case-sensitive
     tags:

@@ -161,7 +161,7 @@ key_features:
                     Full API coverage for Azure with same-day updates. Every property of each resource is always represented in the SDKs.
               - title: Policy as Code for Azure
                 description: |
-                    Set guardrails for resources to ensure best practices and security compliance are consistently followed, using [CrossGuard](/docs/iac/crossguard/).
+                    Set guardrails for resources to ensure best practices and security compliance are consistently followed, using [Pulumi Policies](/docs/insights/policy/).
               - title: Everything In One Place
                 description: |
                     Full coverage for Azure services, including Azure Static Web Apps, Azure Logic Apps, Azure DevOps, Azure Blockchain Service, Azure API Management and more.

@@ -198,8 +198,8 @@ Want to learn more about Pulumi? Our [Get Started with Pulumi](https://www.pulum
 
 If you’re looking for an automated (and faster) way to configure OIDC with Pulumi, we’ve got you covered! Check out our [Examples repo](https://github.com/pulumi/examples) where we offer a wide variety of automations using Pulumi Infrastructure as Code (IaC). For OIDC configuration in particular, we have example automation for:
 
-- [AWS](https://github.com/pulumi/examples/tree/master/aws-py-oidc-provider-pulumi-cloud)
-- [Azure](https://github.com/pulumi/examples/tree/master/azure-py-oidc-provider-pulumi-cloud)
-- [Google Cloud](https://github.com/pulumi/examples/tree/master/gcp-py-oidc-provider-pulumi-cloud)
+- [AWS](https://github.com/pulumi/examples/tree/master/aws-ts-oidc-provider-pulumi-cloud)
+- [Azure](https://github.com/pulumi/examples/tree/master/azure-ts-oidc-provider-pulumi-cloud)
+- [Google Cloud](https://github.com/pulumi/examples/tree/master/gcp-ts-oidc-provider-pulumi-cloud)
 
 Feel free to [join our community on Slack](https://slack.pulumi.com/) and let us know what you think!

@@ -6,15 +6,27 @@
 
     Usage:
         {{< github-card repo="owner/repo" >}}
+        {{< github-card repo="owner/repo" path="example-folder" >}}
+        {{< github-card repo="owner/repo" branch="master" path="example-folder" >}}
 
     Parameters:
         - repo (required): The GitHub repository in "owner/repo" format
+        - path (optional): Path within the repo (e.g., "example-folder")
+        - branch (optional): Branch name, defaults to "main"
 */}}
 
 {{ $repo := .Get "repo" }}
+{{ $path := .Get "path" }}
+{{ $branch := .Get "branch" | default "main" }}
 
 {{ if $repo }}
-<a href="https://github.com/{{ $repo }}" target="_blank" rel="noopener noreferrer" class="github-card">
+{{ $linkUrl := printf "https://github.com/%s" $repo }}
+{{ $displayUrl := printf "github.com/%s" $repo }}
+{{ if $path }}
+    {{ $linkUrl = printf "https://github.com/%s/tree/%s/%s" $repo $branch $path }}
+    {{ $displayUrl = printf "github.com/%s/tree/%s/%s" $repo $branch $path }}
+{{ end }}
+<a href="{{ $linkUrl }}" target="_blank" rel="noopener noreferrer" class="github-card">
     <img
         src="https://opengraph.githubassets.com/1/{{ $repo }}"
         alt="GitHub repository: {{ $repo }}"
@@ -24,7 +36,7 @@
     <div class="github-card-content">
         <div class="github-card-domain">
             <i class="fab fa-github github-card-icon"></i>
-            github.com/{{ $repo }}
+            {{ $displayUrl }}
         </div>
     </div>
 </a>

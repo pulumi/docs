@@ -13,7 +13,7 @@ jobs:
         id: esc-secrets
         uses: pulumi/esc-action@v1
       - name: Add to Docs
-        uses: actions/add-to-project@v0.4.0
+        uses: actions/add-to-project@v1.0.2
         with:
           project-url: https://github.com/orgs/pulumi/projects/79
           github-token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_GHA_MARKETING }}

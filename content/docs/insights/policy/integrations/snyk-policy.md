@@ -30,7 +30,7 @@ aliases:
 
 [Snyk container scanning](https://github.com/pulumi/templates-policy/tree/master/snyk-typescript) is a Pulumi policy as code template that allows you to uses the [Snyk CLI](https://docs.snyk.io/cli-ide-and-ci-cd-integrations/snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-container) to scan [`docker.Image`](/registry/packages/docker/api-docs/image/) resources for vulnerabilities.
 
-For more information on Pulumi's Policy as Code solution, see [Get started with Pulumi policy as code](/docs/using-pulumi/crossguard/get-started/).
+For more information on Pulumi's Policy as Code solution, see [Get started with Pulumi policy as code](/docs/insights/policy/get-started/).
 
 ## Using Snyk container scanning
 
@@ -268,4 +268,4 @@ To set the configuration, you can do one of the following:
 
 ## Next steps
 
-Once you've tested the Policy Pack, an organization administrator can publish the Policy Pack to Pulumi Cloud to be enforced across your organization. To learn more,see [Enforcing a Policy Pack Across an Organization](/docs/using-pulumi/crossguard/get-started#enforcing-a-policy-pack).
+Once you've tested the Policy Pack, an organization administrator can publish the Policy Pack to Pulumi Cloud to be enforced across your organization. To learn more,see [Enforcing a Policy Pack Across an Organization](/docs/insights/policy/get-started#enforcing-a-policy-pack).

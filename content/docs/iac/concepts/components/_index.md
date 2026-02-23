@@ -144,12 +144,36 @@ The following types are supported in component arguments:
   - Go: `pulumi.StringInput`, `pulumi.IntInput`, etc.
   - .NET: `Input<T>`
   - Java: `Output<T>`
+- **Enums**: Enum types are supported in TypeScript and Python:
+
+  **TypeScript:** Both the `enum` keyword and the "as const object pattern" are supported:
+
+  ```typescript
+  // Using the enum keyword
+  enum MyEnum { Value1 = "Value1", Value2 = "Value2" }
+
+  // or alternatively using a const object
+  const MyEnum = { Value1: "Value1", Value2: "Value2" } as const;
+  type MyEnum = typeof MyEnum[keyof typeof MyEnum];
+  ```
+
+  **Python:** The standard library `enum` module is supported:
+
+  ```python
+  from enum import Enum
+
+  class MyEnum(Enum):
+      VALUE1 = "Value1"
+      VALUE2 = "Value2"
+  ```
+
+- **Utility types** (TypeScript): The `Required<T>` and `Partial<T>` utility types are supported.
 
 ### Unsupported types
 
 The following types are not supported in component arguments:
 
-- **Union types**: TypeScript union types like `string | number` are not supported due to limitations in schema inference.
+- **Union types**: TypeScript and Python union types like `string | number` are not supported due to limitations in schema inference. One exception: unions of `undefined` (TypeScript) or `None` (Python) with exactly one other type are supported to represent optional values (e.g., `string | undefined` or `str | None`).
 - **Functions/callbacks**: Functions cannot be used in component arguments as they cannot be represented in the schema.
 - **Platform-specific types**: Types that exist only in one language and cannot be translated.
 
@@ -835,11 +859,11 @@ public class App {
 
 ### Publishing the Component
 
-Once a component is authored, it can be published to the [IDP Private Registry](/docs/idp/get-started/private-registry/) or consumed directly from a git repo.
+Once a component is authored, it can be published to the [IDP Private Registry](/docs/idp/concepts/private-registry/) or consumed directly from a git repo.
 
 #### Private Registry Publishing
 
-Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/docs/idp/get-started/private-registry/).
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/concepts/organization-templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/docs/idp/concepts/private-registry/).
 
 #### Consumption
 

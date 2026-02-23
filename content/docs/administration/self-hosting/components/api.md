@@ -482,7 +482,7 @@ In order to enable [Pulumi ESC](/docs/esc), the following must be configured:
 
 ## Pulumi IDP Registry
 
-In order to enable the [Pulumi IDP Registry](/docs/idp/get-started/private-registry/), the following must be configured:
+In order to enable the [Pulumi IDP Registry](/docs/idp/concepts/private-registry/), the following must be configured:
 
 * Environment variables for where to store public and private artifacts in a remote object store (see below).
 * [Cloud provider authentication](#cloud-provider-authentication) where the remote object store lives.
