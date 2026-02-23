@@ -1,6 +1,6 @@
 ---
 title: "How We Load Data into Snowflake in Seconds with Pulumi"
-date: 2026-02-19
+date: 2026-02-24
 draft: false
 meta_desc: "Learn how we load data into Snowflake in seconds using Firehose direct streaming and reusable Pulumi ComponentResources."
 meta_image: meta.png
@@ -83,111 +83,9 @@ All examples in this post are in Python, but Pulumi supports multiple languages.
 
 ## Managing credentials with Pulumi ESC
 
-This project requires credentials for two cloud providers, AWS and Snowflake. To avoid having to manage credentials locally, it uses [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) to obtain dynamic, short-lived credentials for both providers via OIDC (OpenID Connect).
+This project needs credentials for AWS, Snowflake, and GitHub. Rather than managing long-lived secrets locally, we can use [Pulumi ESC](/docs/esc/) to obtain dynamic, short-lived OIDC credentials for AWS and Snowflake at runtime. When you run `pulumi up`, ESC exchanges a Pulumi-issued OIDC token for temporary credentials from each provider and injects them into your stack config automatically. If you prefer not to use ESC, you can set credentials directly with [`pulumi config set --secret`](/docs/iac/concepts/secrets/).
 
-If you're not using Pulumi ESC, you can add these credentials directly to your stack configuration file (`Pulumi.<stack>.yaml`) using [`pulumi config set --secret`](https://www.pulumi.com/docs/iac/concepts/secrets/).
-
-### How it works
-
-You define an ESC environment that opens OIDC connections to AWS and Snowflake. When you run `pulumi up`, ESC exchanges a Pulumi-issued OIDC token for short-lived credentials from each provider, then injects them into your stack config automatically. Your Pulumi program doesn't change at all; the providers read their configuration from `pulumiConfig` as usual.
-
-The following diagram shows how this project's ESC environments compose. The stack imports a combined dev environment (which itself imports the AWS and Snowflake base environments) plus a separate GitHub environment:
-
-```mermaid
-flowchart TD
-AWS["snowpipe-demo-aws<br/><i>AWS OIDC login</i>"]
-SF["snowpipe-demo-snowflake<br/><i>Snowflake OIDC login</i>"]
-GH["snowpipe-demo-github<br/><i>GitHub token</i>"]
-Dev["snowpipe-demo-dev<br/><i>Combined environment</i>"]
-Stack["Pulumi.&lt;stack&gt;.yaml<br/>(Stack Config)"]
-
-AWS --> Dev
-SF --> Dev
-Dev --> Stack
-GH --> Stack
-```
-
-### One-time Snowflake setup
-
-Follow the [Snowflake OIDC login guide](/docs/esc/integrations/dynamic-login-credentials/snowflake-login/) to create nan integration that trusts Pulumi's OIDC issuer. Replace `<your-pulumi-org>` with your Pulumi organization name:
-
-```sql
--- Run using an administrative role like ACCOUNTADMIN or SYSADMIN
-CREATE SECURITY INTEGRATION pulumi_oidc
-  TYPE = EXTERNAL_OAUTH
-  ENABLED = TRUE
-  EXTERNAL_OAUTH_TYPE = CUSTOM
-  EXTERNAL_OAUTH_ISSUER = 'https://api.pulumi.com/oidc'
-  EXTERNAL_OAUTH_JWS_KEYS_URL = 'https://api.pulumi.com/oidc/.well-known/jwks'
-  EXTERNAL_OAUTH_TOKEN_USER_MAPPING_CLAIM = 'snowflake_user'
-  EXTERNAL_OAUTH_SNOWFLAKE_USER_MAPPING_ATTRIBUTE = 'login_name'
-  EXTERNAL_OAUTH_AUDIENCE_LIST = ('snowflake:<your-pulumi-org>')
-  EXTERNAL_OAUTH_ANY_ROLE_MODE = 'ENABLE'
-  EXTERNAL_OAUTH_ALLOWED_ROLES_LIST = ('PULUMI_DEPLOYER');
-```
-
-Then create a service user and a deployer role for Pulumi:
-
-```sql
--- Deployer role inherits ACCOUNTADMIN privileges but isn't on
--- Snowflake's blocked privileged roles list, so External OAuth accepts it.
-CREATE ROLE PULUMI_DEPLOYER;
-GRANT ROLE ACCOUNTADMIN TO ROLE PULUMI_DEPLOYER;
-
-CREATE USER ESC_SERVICE_USER
-  LOGIN_NAME = 'ESC_SERVICE_USER'
-  DEFAULT_ROLE = PULUMI_DEPLOYER
-  TYPE = SERVICE;
-
-GRANT ROLE PULUMI_DEPLOYER TO USER ESC_SERVICE_USER;
-```
-
-### One-time AWS setup
-
-Follow the [AWS OIDC guide](/docs/esc/guides/configuring-oidc/aws/) for full details. There are two steps: creating an IAM OIDC identity provider and an IAM role with a trust policy.
-
-1. **Create an IAM OIDC identity provider.** In the AWS console (or via CLI/IaC), add a new identity provider with provider URL `https://api.pulumi.com/oidc` and audience `aws:<your-pulumi-org>`. The audience string scopes trust to your specific Pulumi organization, so only OIDC tokens issued for that org are accepted.
-
-1. **Create an IAM role with a trust policy.** The trust policy validates that the OIDC token was issued by Pulumi and carries the correct audience claim before allowing `sts:AssumeRoleWithWebIdentity`:
-
-    ```json
-    {
-      "Version": "2012-10-17",
-      "Statement": [
-        {
-          "Effect": "Allow",
-          "Principal": {
-            "Federated": "arn:aws:iam::<your-aws-account-id>:oidc-provider/api.pulumi.com/oidc"
-          },
-          "Action": "sts:AssumeRoleWithWebIdentity",
-          "Condition": {
-            "StringEquals": {
-              "api.pulumi.com/oidc:aud": "aws:<your-pulumi-org>"
-            }
-          }
-        }
-      ]
-    }
-    ```
-
-    This policy allows any Pulumi ESC environment in your org to assume the role. You can further restrict it using subject claim conditions. The role needs whatever AWS permissions your Pulumi program requires. For this project that means Lambda, Firehose, S3, and IAM.
-
-### The ESC environments
-
-Rather than putting everything in one flat environment, we split credentials by provider and compose them with [`imports`](/docs/esc/environments/imports/). Each base environment is single-concern (one cloud provider) and handles its own credential-to-config mapping. The combined environment merges them and adds cross-cutting config like `aws:region`. This way we can reuse credentials among many stacks, each one only importing what they need. It also makes switching from a development to production environment, for example, much more straightforward.
-
-#### AWS-only environment
-
-This environment handles AWS OIDC login and sets environment variables for CLI operations:
-
-{{% notes type="tip" %}}
-You can run these commands or create your environments [in the Pulumi Cloud Console](https://app.pulumi.com).
-{{% /notes %}}
-
-```bash
-pulumi env init <your-org>/<project>/snowpipe-demo-aws
-pulumi env edit <your-org>/<project>/snowpipe-demo-aws
-```
+Here is a single ESC environment that handles all three providers:
 
 ```yaml
 values:
@@ -198,24 +96,6 @@ values:
           duration: 1h
           roleArn: arn:aws:iam::123456789012:role/pulumi-esc-oidc
           sessionName: pulumi-snowpipe-demo
-  environmentVariables:
-    AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
-    AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
-    AWS_SESSION_TOKEN: ${aws.login.sessionToken}
-    AWS_REGION: us-west-2
-```
-
-#### Snowflake-only environment
-
-This environment handles Snowflake OIDC login:
-
-```bash
-pulumi env init <your-org>/<project>/snowpipe-demo-snowflake
-pulumi env edit <your-org>/<project>/snowpipe-demo-snowflake
-```
-
-```yaml
-values:
   snowflake:
     login:
       fn::open::snowflake-login:
@@ -224,85 +104,29 @@ values:
           user: ESC_SERVICE_USER
     organizationName: <your-org-name>
     accountName: <your-account-name>
+  environmentVariables:
+    AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
+    AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
+    AWS_SESSION_TOKEN: ${aws.login.sessionToken}
   pulumiConfig:
+    aws:region: us-west-2
     snowflake:organizationName: ${snowflake.organizationName}
     snowflake:accountName: ${snowflake.accountName}
     snowflake:user: ${snowflake.login.user}
     snowflake:token: ${snowflake.login.token}
     snowflake:authenticator: OAUTH
     snowflake:role: PULUMI_DEPLOYER
-```
-
-#### Combined dev environment
-
-Imports both base environments. Since each base already maps its own credentials via `pulumiConfig`, the combined environment only needs to add `aws:region`:
-
-```bash
-pulumi env init <your-org>/<project>/snowpipe-demo-dev
-pulumi env edit <your-org>/<project>/snowpipe-demo-dev
-```
-
-```yaml
-imports:
-  - <project>/snowpipe-demo-aws
-  - <project>/snowpipe-demo-snowflake
-values:
-  pulumiConfig:
-    aws:region: us-west-2
-```
-
-The `imports` directive merges values from both base environments into the combined one. Each base environment handles its own provider config: the AWS base uses `environmentVariables` for CLI access, while the Snowflake base uses `pulumiConfig` to map OIDC credentials to Snowflake provider config keys. The combined dev environment only needs to add `aws:region`. This keeps credential configuration DRY; if the AWS role ARN or Snowflake account changes, you update one environment.
-
-### GitHub environment
-
-The webhook pipeline needs GitHub credentials to create repository webhooks via the [`pulumi-github`](https://www.pulumi.com/registry/packages/github/) provider. Pick whichever authentication method fits your security posture.
-
-Create a separate ESC environment for GitHub:
-
-```bash
-pulumi env init <your-org>/<project>/snowpipe-demo-github
-pulumi env edit <your-org>/<project>/snowpipe-demo-github
-```
-
-#### Option 1: Personal access token (recommended for individuals)
-
-Create a [fine-grained PAT](https://github.com/settings/personal-access-tokens/new) scoped to the specific repository with the **Webhooks: Read and write** permission. Fine-grained PATs are repository-scoped and have a configurable expiration. Alternatively, create a [classic PAT](https://github.com/settings/tokens) with the **`admin:repo_hook`** scope (broader access, simpler setup). The ESC configuration is the same for both:
-
-```yaml
-values:
-  pulumiConfig:
     github:token:
-      fn::secret: <your-pat>
+      fn::secret: <your-github-pat>
     github:owner: <your-github-org-or-user>
 ```
 
-#### Option 2: GitHub App (best for organizations)
-
-If you'd rather not use a personal token at all, install a [GitHub App](https://docs.github.com/en/apps/creating-github-apps) with the **Webhooks: Read and write** repository permission. GitHub Apps authenticate as the app installation rather than a personal account, get higher rate limits (10,000 requests/hour vs. 5,000 for PATs), and don't break when an employee leaves.
+Then reference the environment from your stack config:
 
 ```yaml
-values:
-  pulumiConfig:
-    github:appAuth:
-      fn::secret:
-        id: "<your-app-id>"
-        installationId: "<your-installation-id>"
-        pemFile: "<contents-of-your-private-key.pem>"
-    github:owner: <your-github-org-or-user>
-```
-
-Note: `github:appAuth` and `github:token` are mutually exclusive. Use one or the other. When using a GitHub App, `github:owner` is required (the provider can't infer it from the app installation). As an alternative to any of these approaches, you can also create the webhook manually in GitHub's UI.
-
-We decided to import this environment directly in the stack YAML alongside the dev environment instead of composing through the dev environment because it serves a different concern (GitHub API access vs. cloud provider credentials).
-
-### Referencing ESC environments from your stack
-
-Add the `environment:` block to `Pulumi.<stack>.yaml`. Note two environment imports, one for cloud credentials and one for GitHub:
-
-```yaml
+# Pulumi.<stack>.yaml
 environment:
-  - <project>/snowpipe-demo-dev
-  - <project>/snowpipe-demo-github
+  - <project>/my-snowpipe-env
 config:
   snowpipe-data-loading:database: LANDING_ZONE_WEBHOOKS
   snowpipe-data-loading:environment: dev
@@ -311,37 +135,13 @@ config:
     - snowflake_table_resource
 ```
 
-The `snowflake:previewFeaturesEnabled` list is required since `pulumi-snowflake` v2.12.0, which moved [`Table`](https://www.pulumi.com/registry/packages/snowflake/api-docs/table/) among other resources behind a preview feature flag.
+Depending on your preferences, you can split credentials into separate per-provider environments and compose them with [`imports`](/docs/esc/environments/imports/) and reuse across stacks.
 
-That's the entire change. No credentials are stored in the Pulumi configuration yaml; the providers pick up their credentials from ESC-injected config transparently.
+To set up OIDC trust for each provider, see the [AWS OIDC guide](/docs/esc/guides/configuring-oidc/aws/) and the [Snowflake OIDC login guide](/docs/esc/integrations/dynamic-login-credentials/snowflake-login/). For GitHub authentication options (fine-grained PATs, classic PATs, or GitHub Apps), see the [`pulumi-github` provider docs](/registry/packages/github/#authentication).
 
 ## Shared infrastructure
 
-The direct streaming pipeline needs an [S3 bucket](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/) for backup/errors, a Snowflake database, and a schema. Add the following code to `__main__.py`:
-
-```python
-import pulumi
-import pulumi_aws as aws
-import pulumi_snowflake as snowflake
-
-config = pulumi.Config()
-database_name = config.get("database") or "LANDING_ZONE_WEBHOOKS"
-environment = config.get("environment") or "dev"
-
-# S3 bucket for backup/errors
-bucket = aws.s3.Bucket(
-    "data-landing-bucket",
-    force_destroy=True,  # Demo only - remove in production
-)
-
-# Snowflake database and schema
-database = snowflake.Database("demo-database", name=database_name)
-schema = snowflake.Schema(
-    "demo-schema",
-    name="GITHUB",
-    database=database.name,
-)
-```
+The direct streaming pipeline needs an [S3 bucket](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/) for backup/errors, a Snowflake database, and a schema.
 
 ## Building the direct ingestion ComponentResource
 
@@ -349,7 +149,7 @@ Amazon Data Firehose supports [Snowflake as a native destination](https://docs.a
 
 ### The Lambda handler
 
-The [Lambda function](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/function/) is the entry point for GitHub webhooks. It validates the HMAC-SHA256 signature, wraps the payload in an envelope with the event type, and forwards it to Firehose:
+The [Lambda function](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/function/) is the entry point for GitHub webhooks. It validates the HMAC-SHA256 signature, wraps the payload in an envelope with the event type, and forwards it to Firehose. Create this as [`lambda/webhook_handler.py`](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time/lambda/webhook_handler.py):
 
 ```python
 import hashlib
@@ -379,7 +179,7 @@ def handler(event, context):
 
     github_event = (event.get("headers") or {}).get("x-github-event", "unknown")
 
-    # Wrap in envelope - newline-delimited so Firehose can concatenate records
+    # Wrap in envelope - newline-delimited for S3 backup where Firehose concatenates records
     record = json.dumps({
         "github_event": github_event,
         "payload": json.loads(body),
@@ -393,7 +193,11 @@ def handler(event, context):
     return {"statusCode": 200, "body": "OK"}
 ```
 
-The envelope format `{"github_event": "<type>", "payload": {...}}\n` is important. The `github_event` field (e.g., `push`, `pull_request`, `star`) comes from the `x-github-event` header and lets downstream queries filter by event type.
+The envelope format `{"github_event": "<type>", "payload": {...}}\n` is important. The `github_event` field (e.g., `push`, `pull_request`, `star`) comes from the `x-github-event` header and lets downstream queries filter by event type. The trailing newline delimits records in the [S3 backup destination](https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html), where Firehose concatenates them into files.
+
+Another interesting part of this snippet is that instead of manually creating a secret which would have to be copy-pasted into both your webhook configuration and your Lambda environment; we are using `random.RandomPassword` to generate it in Pulumi state.
+
+The secret is automatically wired to both the Lambda env var and the GitHub webhook config, and it rotates cleanly if you ever need to replace it.
 
 ### Why direct Firehose to Snowflake?
 
@@ -403,19 +207,9 @@ The direct path also removes the need for S3 event notifications, SQS queues, ex
 
 ### The DirectSnowflakeIngestion component
 
-The component creates everything needed for the direct path: a TLS key pair for Snowflake authentication, a Snowflake service user with least-privilege grants, the landing table, a Firehose delivery stream with `destination="snowflake"`, and a Lambda function with a public URL.
+The component creates everything needed for the direct path: a TLS key pair for Snowflake authentication, a Snowflake service user with least-privilege grants, the landing table, a Firehose delivery stream with `destination="snowflake"`, and a Lambda function with a public URL. Create an empty [`components/__init__.py`](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time/components/__init__.py) so that Python treats the directory as a package.
 
-The `ColumnDef` dataclass is a simple schema definition used across all pipeline components. It lives in `components/snowpipe_pipeline.py`:
-
-```python
-@dataclass
-class ColumnDef:
-    """Column definition for a Snowflake table."""
-
-    name: str
-    type: str
-    nullable: bool = True
-```
+The full component lives in [`components/direct_snowflake_ingestion.py`](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time/components/direct_snowflake_ingestion.py):
 
 ```python
 import json
@@ -426,8 +220,14 @@ import pulumi_aws as aws
 import pulumi_snowflake as snowflake
 import pulumi_tls as tls
 
-from components.snowpipe_pipeline import ColumnDef
+# In the example repository, you will find this class imported from a common library file instead
+@dataclass
+class ColumnDef:
+    """Column definition for a Snowflake table."""
 
+    name: str
+    type: str
+    nullable: bool = True
 
 def strip_pem_headers(pem: str) -> str:
     """Remove PEM header/footer lines, returning only the base64 content."""
@@ -457,11 +257,7 @@ class DirectSnowflakeIngestionArgs:
     data_loading_option: str = "VARIANT_CONTENT_AND_METADATA_MAPPING"
     content_column_name: str = "CONTENT"
     metadata_column_name: str = "METADATA"
-```
 
-The key configuration values: `buffering_interval=0` and `buffering_size=1` tell Firehose to flush immediately (no batching delay), and `VARIANT_CONTENT_AND_METADATA_MAPPING` maps the JSON payload to a `CONTENT` column and Firehose metadata to a `METADATA` column.
-
-```python
 class DirectSnowflakeIngestion(pulumi.ComponentResource):
     function_url: pulumi.Output[str]
     firehose_stream_name: pulumi.Output[str]
@@ -726,15 +522,39 @@ Amazon Data Firehose does not connect from fixed IP addresses, so you cannot use
 
 ## Wiring it together
 
-With the component defined, `__main__.py` wires the direct ingestion pipeline:
+With the component defined, [`__main__.py`](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time/__main__.py) wires the direct ingestion pipeline:
 
 ```python
+import pulumi
+import pulumi_aws as aws
 import pulumi_github as github
 import pulumi_random as random
+import pulumi_snowflake as snowflake
 from components.direct_snowflake_ingestion import (
     DirectSnowflakeIngestion, DirectSnowflakeIngestionArgs,
 )
 from components.snowpipe_pipeline import ColumnDef
+
+config = pulumi.Config()
+database_name = config.get("database") or "LANDING_ZONE_WEBHOOKS"
+environment = config.get("environment") or "dev"
+
+# --- Shared infrastructure ---
+
+# S3 bucket for backup/errors
+bucket = aws.s3.Bucket(
+    "data-landing-bucket",
+)
+
+# Snowflake database and schema
+database = snowflake.Database("demo-database", name=database_name)
+schema = snowflake.Schema(
+    "demo-schema",
+    name="GITHUB",
+    database=database.name,
+)
+
+# --- Direct ingestion pipeline ---
 
 webhook_repo = config.require("webhook-repo")
 
@@ -795,7 +615,7 @@ pulumi.export("webhook_url", direct.function_url)
 pulumi.export("firehose_stream", direct.firehose_stream_name)
 ```
 
-That's the entire pipeline. One component, one GitHub webhook, one secret. The `DirectSnowflakeIngestion` component handles the TLS key pair, Snowflake service user, landing table, Firehose stream, and Lambda function internally.
+That's the entire pipeline. One component, one GitHub webhook, one secret. The `DirectSnowflakeIngestion` component handles the TLS key pair, Snowflake service user, landing table, Firehose stream, and Lambda function internally, and now you can reuse this component for as many pipelines as you need.
 
 {{% notes type="info" %}}
 The full code for this example is available at [https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time).
@@ -841,33 +661,6 @@ Direct streaming is the fastest path, but two other patterns are available in th
 * **Batch loading.** Your orchestrator (Airflow, Prefect, cron, etc.) runs `COPY INTO` on a schedule. Best for full control over timing and deduplication.
 
 We'll walk through both patterns in detail in upcoming posts.
-
-## Production tips
-
-A few things we learned running this at scale:
-
-**Use direct Firehose to Snowflake for lowest latency.** The direct path delivers data in seconds and reduces the number of resources you manage (no stages, pipes, SQS queues, or S3 notifications).
-
-**Use separate ESC environments per deployment target.** Each environment (dev, staging, production) needs its own OIDC role ARN, so create separate ESC environments for each. Use [`imports`](/docs/esc/environments/imports/) to share common settings like provider versions and non-secret configuration:
-
-```yaml
-# snowpipe-demo-production
-imports:
-  - snowpipe-demo-shared-settings
-values:
-  aws:
-    login:
-      fn::open::aws-login:
-        oidc:
-          duration: 1h
-          roleArn: arn:aws:iam::111111111111:role/pulumi-esc-production
-          sessionName: pulumi-snowpipe-production
-  pulumiConfig:
-    aws:region: us-west-2
-    snowflake:role: PULUMI_DEPLOYER
-```
-
-**Generate webhook secrets with Pulumi.** Instead of manually creating a secret and copy-pasting it into both your webhook configuration and your Lambda environment, use `random.RandomPassword` to generate it in Pulumi state. The secret is automatically wired to both the Lambda env var and the GitHub webhook config, and it rotates cleanly if you ever need to replace it.
 
 ## Publishing as reusable components
 
