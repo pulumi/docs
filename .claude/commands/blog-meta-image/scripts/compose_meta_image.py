@@ -14,7 +14,6 @@ Pipeline: Load template PNG -> Place logos on placeholders -> Draw text -> Save
 
 import argparse
 import json
-import re
 import subprocess
 from io import BytesIO
 from pathlib import Path
@@ -60,19 +59,6 @@ def svg_to_png(svg_path: str, width: int, height: int) -> Image.Image:
     return img
 
 
-def _extract_code_spans(content: str) -> tuple[str, set[str]]:
-    """Strip backticks and return (plain_text, set_of_code_words)."""
-    code_words: set[str] = set()
-
-    def replace(m: re.Match) -> str:
-        for w in m.group(1).split():
-            code_words.add(w)
-        return m.group(1)
-
-    plain = re.sub(r"`([^`]+)`", replace, content)
-    return plain, code_words
-
-
 def draw_text(
     image: Image.Image,
     content: str,
@@ -80,11 +66,7 @@ def draw_text(
     catalog_text: dict,
     font_size: int = 71,
 ) -> Image.Image:
-    """Render text directly with Pillow using the Inter variable font.
-
-    Supports inline code spans delimited by backticks — these are rendered
-    with a monospace font and a rounded-rectangle background pill.
-    """
+    """Render text directly with Pillow using the Inter variable font."""
     font_path = fonts_dir / catalog_text["font"]
     font = ImageFont.truetype(str(font_path), font_size)
 
@@ -100,17 +82,6 @@ def draw_text(
     except Exception:
         pass  # Static fonts don't support variations
 
-    # Load monospace font for code spans (Iosevka Bold, falling back to Inter)
-    code_font = font
-    for candidate in ("iosevka-fixed-extendedbold.woff2", "iosevka-fixed-extended.woff2"):
-        candidate_path = fonts_dir / candidate
-        if candidate_path.exists():
-            try:
-                code_font = ImageFont.truetype(str(candidate_path), font_size)
-            except Exception:
-                pass
-            break
-
     x_start = catalog_text.get("x", 90)
     y_top = catalog_text.get("y", 80)
     max_width = catalog_text.get("max_width", 700)
@@ -120,10 +91,7 @@ def draw_text(
 
     letter_spacing_px = letter_spacing_em * font_size
     line_height_px = font_size * line_height_pct / 100
-
-    # Strip backticks and identify code words, then word-wrap the plain text
-    plain_content, code_words = _extract_code_spans(content)
-    lines = _word_wrap(plain_content, font, max_width)
+    lines = _word_wrap(content, font, max_width)
 
     # Create transparent text layer
     txt_layer = Image.new("RGBA", image.size, (0, 0, 0, 0))
@@ -132,35 +100,9 @@ def draw_text(
     for i, line in enumerate(lines):
         x = x_start
         y = y_top + i * line_height_px
-        words = line.split(" ")
-        for j, word in enumerate(words):
-            if not word:
-                x += font.getlength(" ") + letter_spacing_px
-                continue
-
-            is_code = word in code_words
-            active_font = code_font if is_code else font
-            word_w = sum(active_font.getlength(c) + letter_spacing_px for c in word)
-
-            if is_code:
-                pad_x, pad_y = 14, 6
-                rect = [
-                    x - pad_x,
-                    y - pad_y,
-                    x + word_w - letter_spacing_px + pad_x,
-                    y + font_size + pad_y,
-                ]
-                draw.rounded_rectangle(rect, radius=12, fill=(255, 255, 255, 65))
-
-            cx = x
-            for char in word:
-                draw.text((cx, y), char, font=active_font, fill=color)
-                cx += active_font.getlength(char) + letter_spacing_px
-            x = cx
-
-            # Advance past the space between words
-            if j < len(words) - 1:
-                x += font.getlength(" ") + letter_spacing_px
+        for char in line:
+            draw.text((x, y), char, font=font, fill=color)
+            x += font.getlength(char) + letter_spacing_px
 
     return Image.alpha_composite(image.convert("RGBA"), txt_layer)
 
