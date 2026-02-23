@@ -11,9 +11,6 @@
 
 # Pulumi Documentation Site
 
-
-CAM WAS HERE to test pre-commit hooks.
-
 ## Table of contents
 
 * :blue_book: [View Pulumi Docs](https://pulumi.com/docs/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-toc)
