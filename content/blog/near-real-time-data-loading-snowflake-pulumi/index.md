@@ -20,8 +20,6 @@ social:
     linkedin: "After running dozens of data loading pipelines in production for over three years, we distilled the patterns into reusable Pulumi ComponentResources. This post walks through a complete end-to-end pipeline: GitHub webhooks to Lambda to Amazon Data Firehose directly into Snowflake. Data lands in seconds, not minutes. Three components, zero copy-paste."
 ---
 
-When you manage dozens of data-loading pipelines into Snowflake, copy-pasting resources becomes a maintenance problem: IAM (Identity and Access Management) policies drift, naming conventions diverge, and every new source is a chance to introduce a subtle misconfiguration. This post shows how to encapsulate those patterns into composable components and walks through the production lessons we learned running 25+ pipelines for over three years.
-
 When you manage dozens of data-loading pipelines, copying and pasting IaC configurations between them is a recipe for mishap. IAM policies can drift, naming conventions diverge, and every new source is a new opportunity to make a mistake — not to mention compound the problem of duplication. In this post, we'll show you how you can identify and encapsulate common patterns into composable components and walk through the production lessons we've learned running 25+ pipelines for over three years.
 
 <!--more-->
@@ -649,6 +647,8 @@ FROM LANDING_ZONE_WEBHOOKS.GITHUB.REPOSITORY_EVENTS_DIRECT
 ORDER BY ingested_at DESC;
 ```
 
+![Snowflake UI showing the data that streamed from Github directly into Snowflake using the Data Pipeline](select.png)
+
 You should see rows with event types like `star`, `push`, or `issues`, real GitHub events flowing through the entire pipeline. The `METADATA` column includes Firehose metadata like `IngestionTime`, which you can use to track end-to-end latency.
 
 ## Other loading patterns
@@ -698,4 +698,4 @@ This gives you auto-generated API docs, usage tracking across teams, and cross-l
 
 The `DirectSnowflakeIngestion` component in this post delivers data from GitHub webhooks into Snowflake in seconds: Lambda validates the HMAC signature, Firehose streams directly to Snowflake via the Snowpipe Streaming API, and the TLS key pair is managed entirely within Pulumi. No S3 intermediate, no SQS queues.
 
-The component accepts pluggable Lambda handlers, so swapping GitHub for Stripe webhooks or any other source is just a matter of providing different `lambda_code` and `lambda_environment` arguments. This pattern has been running in production for over three years across dozens of pipelines without significant changes to the infrastructure code. When you're ready to share components across teams, [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) or [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/) turns them into versioned, cross-language packages. You'll find the complete example in the [GitHub repository](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time).
+The component accepts pluggable Lambda handlers, so swapping GitHub for Stripe webhooks or any other source is just a matter of providing different `lambda_code` and `lambda_environment` arguments. A similar pattern has been running in production for over three years across dozens of pipelines without significant changes to the infrastructure code. When you're ready to share components across teams, [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) or [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/) turns them into versioned, cross-language packages. You'll find the complete example in the [GitHub repository](https://github.com/pulumi-demos/examples/tree/main/python/aws-snowflake-data-loading-real-time).
