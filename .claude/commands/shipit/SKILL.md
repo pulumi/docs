@@ -233,6 +233,7 @@ Commands that will run:
    - Brief summary (1-2 sentences from commit message)
    - Changes included (from `git diff --stat master...HEAD`)
    - Keep concise (aim for < 500 characters)
+   - Include issue references if applicable (e.g., "Fixes #123")
    - No "Generated with Claude Code" footer
 
    Example:
