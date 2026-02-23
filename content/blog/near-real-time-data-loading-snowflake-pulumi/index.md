@@ -615,6 +615,7 @@ pulumi.export("firehose_stream", direct.firehose_stream_name)
 That's the entire pipeline. One component, one GitHub webhook, one secret. The `DirectSnowflakeIngestion` component handles the TLS key pair, Snowflake service user, landing table, Firehose stream, and Lambda function internally, and now you can reuse this component for as many pipelines as you need.
 
 The full code for this example is available on GitHub:
+
 {{< github-card repo="pulumi-demos/examples" path="python/aws-snowflake-data-loading-real-time" >}}
 
 ## Testing the pipeline
