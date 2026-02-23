@@ -149,9 +149,15 @@ def draw_text(
             if is_code:
                 # Pill starts at current x so the full inter-word space is preserved;
                 # text is inset pad_x inside the pill on each side.
+                # Use the actual glyph bounding box for vertical placement so the
+                # visual margin is equal on top and bottom regardless of ascender/
+                # descender space in the font's line box.
                 pad_x, pad_y = 14, 6
+                glyph_bbox = active_font.getbbox(word)  # (l, top, r, bottom) rel. to y
+                glyph_top = y + glyph_bbox[1]
+                glyph_bottom = y + glyph_bbox[3]
                 pill_end = x + 2 * pad_x + word_w - letter_spacing_px
-                rect = [x, y - pad_y, pill_end, y + font_size + pad_y]
+                rect = [x, glyph_top - pad_y, pill_end, glyph_bottom + pad_y]
                 draw.rounded_rectangle(
                     rect,
                     radius=24,
