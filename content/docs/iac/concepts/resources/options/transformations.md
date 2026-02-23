@@ -59,7 +59,7 @@ class MyVpcComponent extends pulumi.ComponentResource {
 
 ```python
 class MyVpcComponent(pulumi.ComponentResource):
-    def __init__(self, name: str, opts: Optional[pulumi.ResourceOptions] = None):
+    def __init__(self, name: str, opts: pulumi.ResourceOptions | None = None):
         super().__init__("custom:index:MyVpcComponent", name, {}, opts)
 
         vpc = aws.ec2.Vpc(f"{name}-vpc",
@@ -226,6 +226,9 @@ transformation := func(args *pulumi.ResourceTransformationArgs) *pulumi.Resource
 }
 
 vpc, err := NewMyVpcComponent(ctx, "vpc", pulumi.Transformations([]pulumi.ResourceTransformation{transformation}))
+if err != nil {
+    return err
+}
 ```
 
 {{% /choosable %}}
