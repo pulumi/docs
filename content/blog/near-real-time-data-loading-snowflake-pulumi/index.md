@@ -68,7 +68,6 @@ runtime:
   name: python
   options:
     toolchain: uv
-description: Production-grade data loading with Pulumi, AWS, and Snowflake
 ```
 
 Add the provider dependencies for [AWS](/registry/packages/aws/), [Snowflake](/registry/packages/snowflake/), [GitHub](/registry/packages/github/), and the [Random](/registry/packages/random/) and [TLS](/registry/packages/tls/) providers:
