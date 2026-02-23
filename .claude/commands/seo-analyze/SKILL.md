@@ -59,7 +59,6 @@ Scan content against AI discoverability patterns. For each pattern, note what yo
 |---------|------------------|
 | **Quotable Definition** | Opening paragraph contains a clear, direct answer |
 | **Semantic Chunking** | Each section covers one focused concept |
-| **FAQ Sections** | Common questions addressed in Q&A format |
 | **Citable Claims** | Factual statements include specific data |
 | **Comparison Tables** | Structured tables for comparisons |
 | **Question Coverage** | Content answers what/how/why/when |
