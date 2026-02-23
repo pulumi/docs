@@ -13,6 +13,10 @@ const INTERNAL_DOMAIN = "pulumi.com";
 function isInternalLink(url) {
     try {
         const urlObj = new URL(url);
+        // Exclude CDN subdomains — these serve binary downloads, not documentation,
+        // and the link checker cannot reliably handle CDN redirects for binary files.
+        const cdnSubdomains = ["get.pulumi.com"];
+        if (cdnSubdomains.includes(urlObj.hostname)) return false;
         return urlObj.hostname === INTERNAL_DOMAIN || urlObj.hostname.endsWith(`.${INTERNAL_DOMAIN}`);
     } catch {
         return false;
