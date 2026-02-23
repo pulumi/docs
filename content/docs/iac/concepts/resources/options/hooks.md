@@ -519,6 +519,7 @@ As well as the standard hook information and the name of the failing operation, 
 {{< chooser language "typescript,python,go,csharp" >}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 
@@ -542,9 +543,11 @@ const res = new MyResource("res", {}, {
     },
 });
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 import time
 
@@ -575,9 +578,11 @@ res = MyResource(
     ),
 )
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```go
 package main
 
@@ -621,9 +626,11 @@ func main() {
     })
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```csharp
 using System;
 using System.Threading;
@@ -659,6 +666,7 @@ class ErrorHookStack : Stack
     }
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
