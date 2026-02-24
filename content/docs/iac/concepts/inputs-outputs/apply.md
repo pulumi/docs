@@ -558,6 +558,10 @@ resources:
 
 Outputs that return to the engine as strings cannot be used directly in operations such as string concatenation until the output value has returned to Pulumi. In these scenarios, you'll need to wait for the value to return using [`apply`](/docs/concepts/inputs-outputs/apply/).
 
+{{% notes type="info" %}}
+For the common case of building a string from output values, Pulumi's [output helpers](/docs/concepts/inputs-outputs/helpers/#string-interpolation) provide a more concise alternative that doesn't require calling `apply` directly.
+{{% /notes %}}
+
 For example, the following code creates an HTTPS URL from the DNS name (the plain value) of a virtual machine (in this case an EC2 instance):
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,yaml" / >}}
@@ -672,7 +676,7 @@ The returned value of the call to {{< pulumi-apply >}} is a new `pulumi.Output<s
 
 ### Outputs and JSON
 
-Many cloud resources require JavaScript Object Notation (JSON) documents, such as policies that control access to resources. The Pulumi SDK provides helper methods in most languages to make it easier to work with Pulumi outputs and JSON documents. These helper methods have similar names and function signatures to their plain-value analogues.
+Many cloud resources require JavaScript Object Notation (JSON) documents, such as policies that control access to resources. The Pulumi SDK provides helper methods in most languages to make it easier to work with Pulumi outputs and JSON documents. These helper methods have similar names and function signatures to their plain-value analogues. For a consolidated reference of all JSON helpers, see [Using output helpers](/docs/concepts/inputs-outputs/helpers/#json-helpers).
 
 #### Converting JSON objects to strings
 
