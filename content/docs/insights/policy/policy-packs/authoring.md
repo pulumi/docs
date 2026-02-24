@@ -266,15 +266,15 @@ Most policies are resource validation policies. Stack validation policies are us
 
 Stack validation policies can access tags assigned to the stack via `args.stackTags` (TypeScript) or `args.stack_tags` (Python). This enables you to enforce tagging standards — such as requiring every stack to declare an environment or owning team — as a governance gate.
 
-{{% notes type="warning" %}}
-`args.stackTags` / `args.stack_tags` reflects the tags that existed **before** the current update started. If your program creates tags using [`StackTag`](/registry/packages/pulumiservice/api-docs/stacktag/) resources from the [Pulumi Cloud provider](/registry/packages/pulumiservice/), those tags are not visible to stack validation policies during that same deployment. They only appear on the next `pulumi up`.
+There are several ways to assign tags to a stack:
 
-To ensure tags are available on the first deployment, set them before running `pulumi up` using one of:
+- **CLI**: [`pulumi stack tag set`](/docs/iac/cli/commands/pulumi_stack_tag_set/) (e.g., `pulumi stack tag set env production`)
+- **Pulumi Cloud provider**: The [`StackTag`](/registry/packages/pulumiservice/api-docs/stacktag/) resource lets you manage tags declaratively in your Pulumi program
+- **Pulumi Cloud console**: Set tags from the stack's Settings tab
+- **REST API**: The [Stack Tags API](/docs/reference/cloud-rest-api/stack-tags/) supports programmatic tag management
 
-- The CLI: `pulumi stack tag set env production`
-- The [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/#stack-tags)
-- The Pulumi Cloud console
-
+{{% notes type="info" %}}
+`args.stackTags` / `args.stack_tags` reflects the tags that existed **before** the current update started. Tags created using `StackTag` resources in the same deployment are not visible to stack validation policies until the next `pulumi up`. The policy example below accounts for this by also checking for `StackTag` resources in the stack, so it passes even when tags are created as part of the same deployment.
 {{% /notes %}}
 
 {{< chooser language "typescript,python" >}}
@@ -284,15 +284,23 @@ To ensure tags are available on the first deployment, set them before running `p
 ```typescript
 import { PolicyPack } from "@pulumi/policy";
 
+const requiredTags = ["env", "team"];
+
 new PolicyPack("stack-tag-policies", {
     policies: [{
         name: "require-stack-tags",
         description: "Requires 'env' and 'team' tags on every stack.",
         enforcementLevel: "mandatory",
         validateStack: (args, reportViolation) => {
-            const required = ["env", "team"];
-            for (const tag of required) {
-                if (!args.stackTags.has(tag)) {
+            // Collect tag names set via StackTag resources in this deployment.
+            const resourceTagNames = args.resources
+                .filter(r => r.type === "pulumiservice:index:StackTag")
+                .map(r => r.props.name as string);
+
+            for (const tag of requiredTags) {
+                const inStackTags = args.stackTags.has(tag);
+                const inResources = resourceTagNames.includes(tag);
+                if (!inStackTags && !inResources) {
                     reportViolation(`Missing required stack tag: '${tag}'.`);
                 }
             }
@@ -307,10 +315,20 @@ new PolicyPack("stack-tag-policies", {
 ```python
 from pulumi_policy import EnforcementLevel, PolicyPack, StackValidationPolicy
 
+REQUIRED_TAGS = ["env", "team"]
+
 def require_stack_tags(args, report_violation):
-    required = ["env", "team"]
-    for tag in required:
-        if tag not in args.stack_tags:
+    # Collect tag names set via StackTag resources in this deployment.
+    resource_tag_names = [
+        r.props.get("name")
+        for r in args.resources
+        if r.resource_type == "pulumiservice:index:StackTag"
+    ]
+
+    for tag in REQUIRED_TAGS:
+        in_stack_tags = tag in args.stack_tags
+        in_resources = tag in resource_tag_names
+        if not in_stack_tags and not in_resources:
             report_violation(f"Missing required stack tag: '{tag}'.")
 
 PolicyPack(
