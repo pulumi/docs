@@ -155,6 +155,10 @@ export = async () => {
 
 {{< /chooser >}}
 
+{{< notes type="info" >}}
+ESM projects can use [top-level `await`](#top-level-await) instead of the export function pattern above. See [Native ESM Support](#native-esm-support) for configuration details.
+{{< /notes >}}
+
 ## Defining resources
 
 Writing a Pulumi program in Node.js involves declaring infrastructure resources using resource constructors. Here are the key concepts:
@@ -233,12 +237,13 @@ If you wish to instead use [ESM](https://nodejs.org/api/esm.html) natively, you 
 }
 ```
 
-Your `tsconfig.json` file should also be updated to ensure that TypeScript outputs ESM, by setting the [`module`](https://www.typescriptlang.org/tsconfig/#module) and [`moduleResolution`](https://www.typescriptlang.org/tsconfig/#moduleResolution) fields to `nodenext`.
+Your `tsconfig.json` file should also be updated to ensure that TypeScript outputs ESM. Set the [`module`](https://www.typescriptlang.org/tsconfig/#module) and [`moduleResolution`](https://www.typescriptlang.org/tsconfig/#moduleResolution) fields to `nodenext`. To also enable [top-level await](#top-level-await), set [`target`](https://www.typescriptlang.org/tsconfig/#target) to `ES2022` or later:
 
 ```json
 {
     "compilerOptions": {
         ...
+        "target": "ES2022",
         "module": "nodenext",
         "moduleResolution": "nodenext",
         ...
@@ -267,6 +272,52 @@ runtime:
 Note that if you provide any of the `--loader`, `--import` or `--require` arguments in `nodeargs`, Pulumi will not automatically configure an ESM loader, and you have to specify one yourself, for example `--loader ts-node/esm` as above, or `--import tsx` when using [tsx](https://tsx.is).
 
 {{< /notes >}}
+
+### Top-level await
+
+One of the benefits of using native ESM is that you can use [top-level `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) in your Pulumi program. Unlike the [export function pattern](#enabling-async-support) used in CommonJS programs, top-level `await` lets you `await` any Promise directly at the module level, before or between resource declarations, without wrapping your code in a function.
+
+For TypeScript, ensure your `tsconfig.json` includes `"target": "ES2022"` or later as shown above, so that TypeScript emits native `await` in the compiled output. In JavaScript ESM projects, top-level `await` works without any additional configuration beyond `"type": "module"` in `package.json`.
+
+The following example uses top-level await to resolve a data source before declaring resources. Stack outputs use named `export const` statements:
+
+{{< chooser language "typescript,javascript" >}}
+
+{{% choosable language "typescript" %}}
+
+```typescript
+import * as aws from "@pulumi/aws";
+
+// Resolve data sources before declaring resources using top-level await
+const azs: aws.GetAvailabilityZonesResult = await aws.getAvailabilityZones({ state: "available" });
+
+const buckets: aws.s3.Bucket[] = azs.names.map(az =>
+    new aws.s3.Bucket(`my-bucket-${az}`)
+);
+
+export const bucketNames = buckets.map(b => b.id);
+```
+
+{{% /choosable %}}
+
+{{% choosable language "javascript" %}}
+
+```javascript
+import * as aws from "@pulumi/aws";
+
+// Resolve data sources before declaring resources using top-level await
+const azs = await aws.getAvailabilityZones({ state: "available" });
+
+const buckets = azs.names.map(az =>
+    new aws.s3.Bucket(`my-bucket-${az}`)
+);
+
+export const bucketNames = buckets.map(b => b.id);
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Using ESM only modules with CommonJS Pulumi templates
 
