@@ -17,6 +17,10 @@ aliases:
 
 The `hooks` resource option provides a set of resource hooks linked to a resource. Hooks are used to execute custom logic at specific points in the resource lifecycle, such as before or after creation, update, or deletion.
 
+{{% notes type="info" %}}
+Resource hooks are supported in TypeScript/JavaScript, Python, Go, and C#/.NET. Java and YAML do not support resource hooks.
+{{% /notes %}}
+
 Each hook is a callback that gets invoked by the Pulumi engine. Hooks that execute before an action are called **before hooks** and have names beginning with `before` or `Before` depending on the language. Hooks that execute after an action are called **after hooks** and have names beginning with `after` or `After` depending on the language. Pulumi currently supports the following hook types:
 
 * *Create hooks* are called before or after a resource is created. This may occur during the initial creation of a resource or when a resource requires replacement due to e.g. a change in an immutable property.
@@ -482,7 +486,7 @@ nohup python -m SimpleHTTPServer 80 &";
 {{% choosable language java %}}
 
 ```java
-// Pulumi Java support for hooks is coming soon
+// Pulumi Java does not support resource hooks
 ```
 
 {{% /choosable %}}
@@ -516,7 +520,7 @@ Just as the other resource hooks can be executed before and after certain operat
 
 As well as the standard hook information and the name of the failing operation, error hooks also receive a list of errors encountered during previous runs (starting with the most recent). In other words, if a resource has failed three times, the hook receives three errors. The hook must then reply with a flag that determines whether to retry the operation, or whether to let the failure cascade and exit the program.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -667,6 +671,18 @@ class ErrorHookStack : Stack
 }
 ```
 
+{{% /choosable %}}
+
+{{% choosable language java %}}
+```java
+// Pulumi Java does not support resource hooks
+```
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+```yaml
+# Pulumi YAML does not support resource hooks
+```
 {{% /choosable %}}
 
 {{< /chooser >}}
