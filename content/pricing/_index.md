@@ -409,7 +409,14 @@ comparison_table:
                   - content: _check
                   - content: _check
                   - content: _check
-              
+              - title: Customer managed keys
+                link: /docs/esc/administration/customer-managed-keys/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+
           ## Pulumi Insights Table
           - header: Insights & Governance
             subheader: Visibility and governance across your entire cloud estate
