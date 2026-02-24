@@ -165,7 +165,7 @@ Server=tcp:myDbServer.database.windows.net;initial catalog=myExampleDatabase;
 
 ### Using string interpolation
 
-For the common case of constructing a string from output values, Pulumi's string interpolation helpers offer a more concise alternative to `all`. These helpers accept both single and multiple outputs, and their interfaces closely mirror each language's native string formatting functions.
+For the common case of constructing a string from output values, Pulumi's string interpolation helpers offer a more concise alternative to `all`. These helpers accept both single and multiple outputs, and their interfaces closely mirror each language's native string formatting functions. The following example shows how to build an S3 URL from bucket output values using each language's interpolation helper.
 
 {{< example-program path="aws-s3bucket-bucketobject-interpolate" >}}
 

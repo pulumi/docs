@@ -1,8 +1,8 @@
 ---
 title_tag: "Using Output Helpers | Inputs and Outputs"
 meta_desc: "Learn how to use Pulumi's built-in output helper functions for string interpolation and JSON serialization."
-title: Using output helpers
-h1: Using output helpers
+title: Using Output Helpers
+h1: Using Output Helpers
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -15,7 +15,7 @@ aliases:
 
 Pulumi's SDKs include helper functions designed for the most common output manipulation tasks: constructing strings from output values and working with JSON. These helpers wrap [`apply`](/docs/concepts/inputs-outputs/apply/) and [`all`](/docs/concepts/inputs-outputs/all/) internally, but expose a more concise interface that closely mirrors each language's native string and JSON facilities.
 
-Using a helper is usually the right choice when you need to build a string from one or more outputs or serialize a data structure that contains outputs to JSON. Using `apply` or `all` directly gives you more flexibility when the transformation you need is more complex.
+Use a helper when you need to build a string from one or more outputs or serialize a data structure that contains outputs to JSON. Use `apply` or `all` directly when the transformation you need is more complex than a simple string or JSON operation.
 
 ## String interpolation
 
@@ -130,6 +130,12 @@ For more details, see the [.NET SDK documentation](/docs/reference/pkg/dotnet/Pu
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+Java does not provide a dedicated JSON stringify helper. Use `apply` with a JSON library such as Jackson or Gson to serialize output values to JSON strings manually.
+
+{{% /choosable %}}
+
 ### Converting JSON strings to outputs
 
 If you have an output in the form of a JSON string and need to read individual fields from it or pass it to a function that expects a plain object, use one of the JSON parse helpers. These accept an output containing a JSON string and return a deserialized output.
@@ -165,5 +171,11 @@ For more details, see the [Go SDK documentation](https://pkg.go.dev/github.com/p
 - **`Output.JsonDeserialize<T>()`** — Accepts an `Output<string>` containing JSON and returns an `Output<T>` of the deserialized value using `System.Text.Json`.
 
 For more details, see the [.NET SDK documentation](/docs/reference/pkg/dotnet/Pulumi/Pulumi.Output.html).
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+Java does not provide a dedicated JSON parse helper. Use `apply` with a JSON library such as Jackson or Gson to deserialize JSON string outputs into Java objects manually.
 
 {{% /choosable %}}
