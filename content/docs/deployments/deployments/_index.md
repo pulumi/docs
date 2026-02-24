@@ -35,7 +35,7 @@ Pulumi Deployments is a managed CI/CD platform purpose-built for infrastructure 
 - **Drift Detection**: [Automatically detect](/docs/deployments/deployments/drift) when your infrastructure differs from its desired state.
 - **Scheduled Operations**: Run any Pulumi operation (up/preview/refresh) on a [schedule](/docs/deployments/deployments/schedules).
 - **Temporary Infrastructure**: Automatically tear down development or testing environments with [TTL stacks](/docs/deployments/deployments/ttl).
-- **Custom Compute**: Run Pulumi operations on your own infrastructure with [customer-managed agents](/docs/deployments/deployments/customer-managed-agents).
+- **Custom Compute**: Run Pulumi operations, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/using-pulumi/crossguard/) on your own infrastructure with [customer-managed workflow runners](/docs/deployments/deployments/customer-managed-agents).
 
 ### Platform engineering features
 

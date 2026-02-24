@@ -48,12 +48,12 @@ As with any other deployment setting, the path filters may be set via the Pulumi
 
 ## Deployment Runner Pools
 
-When using Pulumi Deployments, you have options for where your deployments run:
+When using Pulumi Deployments, you have options for where your workflows run:
 
 - **Default Runner Pool**: Managed by Pulumi and available to all Pulumi Cloud customers
-- **Customer-Managed Agents**: Self-hosted runners that can access private networks and resources
+- **Customer-Managed Workflow Runners**: Self-hosted runners that can access private networks and resources, supporting deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/using-pulumi/crossguard/)
 
-For more information on customer-managed agents, see the [Customer Managed Agents documentation](../../customer-managed-agents).
+For more information on customer-managed workflow runners, see the [Customer-Managed Workflow Runners documentation](../../customer-managed-agents).
 
 ### Role assignment
 

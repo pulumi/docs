@@ -18,7 +18,7 @@ aliases:
 
 ## Security and Isolation
 
-Deployments run on single-use virtual machines and compute and storage are never shared across runs. We designed our architecture to maximize isolation. In addition, security features like OIDC allow you to fine tune credential scope, lifetime, and expiration policies at a per-deployment level. It is also possible to use [self-hosted runners](/docs/deployments/deployments/customer-managed-agents/) if you require additional isolation.
+Deployments run on single-use virtual machines and compute and storage are never shared across runs. We designed our architecture to maximize isolation. In addition, security features like OIDC allow you to fine tune credential scope, lifetime, and expiration policies at a per-deployment level. It is also possible to use [customer-managed workflow runners](/docs/deployments/deployments/customer-managed-agents/) if you require additional isolation. The same isolation applies to all workflow types supported by workflow runners, including [Insights](/docs/insights/) discovery scans and [policy evaluations](/docs/using-pulumi/crossguard/).
 
 ## Deployment queue
 
@@ -26,7 +26,7 @@ Deployments are queued on a first-come, first-served basis. If you have multiple
 
 On a stack level, only one deployment can run at a time. On an organization level, the concurrency limit is determined by [SKU](/pricing/).
 
-Deployments will remain in the queue for a maximum of 7 days. If a deployment is not started within 7 days (if deployments are paused or the agent pool assigned to the stack is unavailable), it will be automatically removed from the queue and marked as `skipped`.
+Deployments will remain in the queue for a maximum of 7 days. If a deployment is not started within 7 days (if deployments are paused or the workflow runner pool assigned to the stack is unavailable), it will be automatically removed from the queue and marked as `skipped`.
 
 ## Paused deployments
 
