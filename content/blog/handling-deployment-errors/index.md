@@ -189,4 +189,10 @@ The callback runs in your language of choice, so you have full control over how 
 
 ## Next steps
 
-This feature is fully supported in our Node, Python, Go, and .NET SDKs as of v3.219.0. For more information, see the [hooks documentation](/docs/iac/concepts/resources/options/hooks/). Thanks for reading, and feel free to reach out with any questions via [GitHub](https://github.com/pulumi/pulumi), [X](https://x.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
+This feature is fully supported in our Node, Python, Go, and .NET SDKs as of v3.219.0. For more information, see the [hooks documentation](/docs/iac/concepts/resources/options/hooks/).
+
+{{% notes type="info" %}}
+Java and YAML do not support resource hooks.
+{{% /notes %}}
+
+Thanks for reading, and feel free to reach out with any questions via [GitHub](https://github.com/pulumi/pulumi), [X](https://x.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
