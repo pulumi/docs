@@ -75,7 +75,7 @@ Review for:
 **AI writing patterns** (most commonly flagged — check these first):
 
 - Em-dash overuse: flag more than 1–2 em-dashes per section
-- Contrastive patterns: "It's not X, it's Y" constructions
+- Flag contrastive patterns: "It's not X, it's Y" constructions
 - Choppy, uniform sentence lengths (vary sentence rhythm)
 - Unnecessary TL;DR or summary paragraphs that restate what follows
 - Repetitive sentence openers across consecutive paragraphs
@@ -88,7 +88,7 @@ Review for:
 - Clear structure with headings and subheadings; use liberal subheadings for scannability
 - Each section opens with 1–2 motivation sentences explaining why the reader should care
 - Concise paragraphs (3–4 sentences max); convert dense paragraphs to lists
-- Listicles and best-practices posts should target ≤3,000 words; flag if >12 items with no cuts suggested
+- Listicles and best-practices posts should target ≤3,000 words; flag lists with >12 items and suggest which to cut
 - No "easy" or "simple" per STYLE-GUIDE.md
 
 **Writing quality:**
@@ -152,7 +152,7 @@ Review for:
 - [ ] Author profile exists with avatar
 - [ ] All links resolve
 - [ ] Code examples correct with language specifiers
-- [ ] No animated GIFs used as the preview image
+- [ ] No animated GIFs used as `meta_image`
 - [ ] Images have alt text; screenshots have 1px gray borders
 - [ ] Title ≤60 chars or `allow_long_title: true` set
 
