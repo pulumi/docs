@@ -33,7 +33,7 @@ Preventative policy groups apply to Pulumi stacks and run *before* resources are
 
 ### Audit policy groups
 
-Audit policy groups provide continuous compliance monitoring for both Pulumi stacks and [cloud accounts](/docs/insights/accounts/). For stacks, they evaluate the latest state whenever the stack updates. For cloud accounts, they scan all resources on a schedule—including resources not managed by Pulumi.
+Audit policy groups provide continuous compliance monitoring for both Pulumi stacks and [cloud accounts](/docs/insights/accounts/). For stacks, they evaluate the latest state whenever the stack updates. For cloud accounts, they scan all resources on a schedule, including resources not managed by Pulumi.
 
 **Key characteristics:**
 
@@ -67,16 +67,16 @@ Policies within policy groups can have different enforcement levels:
 
 ### Use preventative policy groups when you want to:
 
-- **Block non-compliant deployments before they happen** — Prevent security issues like public S3 buckets or unencrypted databases from ever reaching production
-- **Provide fast feedback to developers** — Catch policy violations during development and testing, before code review or CI/CD
-- **Enforce standards for Pulumi-managed infrastructure** — Ensure all resources deployed through Pulumi meet organizational requirements
+- **Block non-compliant deployments before they happen** - Prevent security issues like public S3 buckets or unencrypted databases from ever reaching production
+- **Provide fast feedback to developers** - Catch policy violations during development and testing, before code review or CI/CD
+- **Enforce standards for Pulumi-managed infrastructure** - Ensure all resources deployed through Pulumi meet organizational requirements
 
 ### Use audit policy groups when you want to:
 
-- **Monitor compliance continuously** — Track policy adherence across your entire cloud footprint, not just at deployment time
-- **Include non-Pulumi resources** — Scan resources created manually, through other tools, or by AWS/Azure/GCP services
-- **Test new policies safely** — Validate policy behavior in production without risking deployment disruptions
-- **Generate compliance reports** — Provide auditors with continuous evidence of policy monitoring and findings
+- **Monitor compliance continuously** - Track policy adherence across your entire cloud footprint, not just at deployment time
+- **Include non-Pulumi resources** - Scan resources created manually, through other tools, or by AWS/Azure/GCP services
+- **Test new policies safely** - Validate policy behavior in production without risking deployment disruptions
+- **Generate compliance reports** - Provide auditors with continuous evidence of policy monitoring and findings
 
 ## Best practices
 
