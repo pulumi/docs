@@ -57,20 +57,20 @@
                                 </div>
                                 {{ if eq $index 0 }}
                                     <div class="flex flex-wrap flex-col justify-center align-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="https://app.pulumi.com/signup">Sign up</a>
+                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="https://app.pulumi.com/signup?plan=individual">Sign up</a>
                                     </div>
                                 {{ else if eq $index 1 }}
                                     <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="https://app.pulumi.com/?create-organization=1">Start a free trial</a>
+                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="https://app.pulumi.com/?create-organization=1&plan=team">Start a free trial</a>
                                     </div>
                                 {{ else if eq $index 2 }}
                                     <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="https://app.pulumi.com/?create-organization=1">Start a free trial</a>
-                                        <a href="/contact/?form=sales" class="text-violet-600 text-s border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-100">Contact sales</a>
+                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="https://app.pulumi.com/?create-organization=1&plan=enterprise">Start a free trial</a>
+                                        <a href="/contact/?form=sales&plan=enterprise" class="text-violet-600 text-s border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-100">Contact sales</a>
                                     </div>
                                 {{ else }}
                                     <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="/contact/?form=sales">Contact sales</a>
+                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="/contact/?form=sales&plan=business-critical">Contact sales</a>
                                     </div>
                                 {{ end }}
                                 <div class="border-dotted border-2 border-gray-200 rounded-lg px-4">
@@ -261,11 +261,11 @@
                             <h2 class="mb-12 text-center">Ready to try Pulumi Cloud?</h2>
                             <div class="flex flex-col lg:flex-row self-stretch items-center lg:justify-between">
                                 <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-4 mb-14 lg:mb-0 z-0">
-                                    <a href="https://app.pulumi.com/?create-organization=1" id="pricingStartTrialBottomCTA" class="btn-primary py-3">Start trial</a>
+                                    <a href="https://app.pulumi.com/?create-organization=1&plan=team" id="pricingStartTrialBottomCTA" class="btn-primary py-3">Start trial</a>
                                     <p class="text-xs pt-1 my-0">14-day trial. No credit card needed.</p>
                                 </div>
                                 <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:mr-14 lg:ml-4">
-                                    <a href="/contact/?form=sales" class="btn-secondary py-3 px-6">Talk to a human</a>
+                                    <a href="/contact/?form=sales&plan=team" class="btn-secondary py-3 px-6">Talk to a human</a>
                                     <p class="text-xs pt-1 my-0">Contact us for a demo & quote.</p>
                                 </div>
                             </div>
