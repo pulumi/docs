@@ -80,71 +80,11 @@ For users with unique access requirements, go to **Settings** > **Access Managem
 
 **<span style="color:red">Placeholder: add a video on Custom Roles</span>**
 
-## Automate Governance with Pulumi Policy
+## Enforce tagging standards with Pulumi Policy
 
-Tag-based access control works well on its own, but it becomes even more powerful when combined with [Pulumi Policy](/docs/insights/policy/). You can write a policy that enforces stack tagging standards and then set it up as a [preventative policy group](/docs/insights/policy/policy-groups/) so that any `pulumi up` on a stack without the required tags is blocked before deployment.
+Tag-based access control relies on consistent tagging. If a stack is missing a tag or has an incorrect value, permissions won't be applied as expected. [Pulumi Policy](/docs/insights/policy/) closes this gap by letting you enforce tagging standards as a [preventative policy group](/docs/insights/policy/policy-groups/), so any `pulumi up` on a stack with missing or invalid tags is blocked before deployment. This ensures your tag-based RBAC rules always grant the correct permissions. Policy enforces the standard, RBAC enforces the access.
 
-Here's a simple example of a policy that requires all stacks to have `env` and `team` stack tags:
-
-{{< chooser language "typescript,python" />}}
-
-{{% choosable language typescript %}}
-
-```typescript
-import { PolicyPack } from "@pulumi/policy";
-
-new PolicyPack("required-stack-tags", {
-    policies: [{
-        name: "require-env-and-team-tags",
-        description: "Stacks must have 'env' and 'team' tags.",
-        enforcementLevel: "mandatory",
-        validateStack: (args, reportViolation) => {
-            const tags = args.stackTags;
-            if (!tags.has("env")) {
-                reportViolation("Stack is missing the required 'env' tag.");
-            }
-            if (!tags.has("team")) {
-                reportViolation("Stack is missing the required 'team' tag.");
-            }
-        },
-    }],
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-from pulumi_policy import (
-    EnforcementLevel,
-    PolicyPack,
-    StackValidationPolicy,
-)
-
-def require_stack_tags(args, report_violation):
-    tags = args.stack_tags
-    if "env" not in tags:
-        report_violation("Stack is missing the required 'env' tag.")
-    if "team" not in tags:
-        report_violation("Stack is missing the required 'team' tag.")
-
-PolicyPack(
-    "required-stack-tags",
-    policies=[
-        StackValidationPolicy(
-            name="require-env-and-team-tags",
-            description="Stacks must have 'env' and 'team' tags.",
-            enforcement_level=EnforcementLevel.MANDATORY,
-            validate=require_stack_tags,
-        ),
-    ],
-)
-```
-
-{{% /choosable %}}
-
-Add this policy pack to a [preventative policy group](/docs/insights/policy/policy-groups/) and once stack tagging is guaranteed by policy, your tag-based RBAC rules reliably grant the correct permissions. Policy enforces the standard, RBAC enforces the access.
+To learn how to write policies that validate stack tags, see [Using stack tags in policies](/docs/insights/policy/policy-packs/authoring/#using-stack-tags-in-policies).
 
 {{% notes type="info" %}}
 Pulumi Policy currently supports tag enforcement for IaC stacks. For ESC environments and Insights accounts, tags are managed through the Pulumi Cloud console or REST API.
