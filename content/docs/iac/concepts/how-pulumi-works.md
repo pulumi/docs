@@ -451,6 +451,8 @@ These operations appear in specific scenarios:
 | import | A resource is being imported into Pulumi management. |
 | import-replacement | An imported resource is replacing an existing resource. |
 
+The `refresh` operation only occurs when you explicitly run `pulumi refresh` or pass the `--refresh` flag to `pulumi up` or `pulumi preview`. Pulumi does not refresh state automatically before every operation. To learn more about when and why to refresh, see [Refreshing state](/docs/iac/concepts/state-and-backends/#refreshing-state).
+
 ### Understanding replacements
 
 When a resource property changes in a way that cannot be updated in place, Pulumi performs a _replacement_. This involves:
