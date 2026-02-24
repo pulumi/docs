@@ -91,25 +91,23 @@ Here's a simple example of a policy that requires all stacks to have `env` and `
 {{% choosable language typescript %}}
 
 ```typescript
-import { PolicyPack, StackValidationPolicy } from "@pulumi/policy";
+import { PolicyPack } from "@pulumi/policy";
 
 new PolicyPack("required-stack-tags", {
-    policies: [
-        StackValidationPolicy.of({
-            name: "require-env-and-team-tags",
-            description: "Stacks must have 'env' and 'team' tags.",
-            enforcementLevel: "mandatory",
-            validateStack: (args, reportViolation) => {
-                const tags = args.stackTags;
-                if (!tags.has("env")) {
-                    reportViolation("Stack is missing the required 'env' tag.");
-                }
-                if (!tags.has("team")) {
-                    reportViolation("Stack is missing the required 'team' tag.");
-                }
-            },
-        }),
-    ],
+    policies: [{
+        name: "require-env-and-team-tags",
+        description: "Stacks must have 'env' and 'team' tags.",
+        enforcementLevel: "mandatory",
+        validateStack: (args, reportViolation) => {
+            const tags = args.stackTags;
+            if (!tags.has("env")) {
+                reportViolation("Stack is missing the required 'env' tag.");
+            }
+            if (!tags.has("team")) {
+                reportViolation("Stack is missing the required 'team' tag.");
+            }
+        },
+    }],
 });
 ```
 
