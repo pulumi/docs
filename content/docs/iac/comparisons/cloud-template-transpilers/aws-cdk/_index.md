@@ -54,7 +54,7 @@ Pulumi enables faster development and deployment workflows compared to CDK due t
 - __Deployment__: Pulumi communicates directly with cloud providers, bypassing the intermediate step of generating CloudFormation templates as required by CDK. Since CDK relies on CloudFormation as its deployment engine, it inherits many of CloudFormation's speed limitations. (see [Pulumi vs. CloudFormation](/docs/concepts/vs/cloud-templates/cloudformation/)).
 - __Development__: Pulumi's runtime engine allows for immediate feedback (milliseconds) in your IDE during deployment, enabling you to debug and iterate more quickly. In contrast, CDK's reliance on CloudFormation introduces delays (tens of minutes) due to template transpilation and longer error resolution times.
 - __Testing__: Pulumi supports fast, in-memory unit tests that mock external calls, enabling developers to validate infrastructure without deploying it. CDK testing is limited to assertions against synthesized CloudFormation templates, which slows down the feedback loop.
-- __Developer self-service__: Pulumi empowers you to build modern infrastructure platforms that enable developers to self-service cloud infrastructure. You can easily build GUI, CLI, or YAML based developer portals or use the built-in [New Project Wizard](/docs/idp/developer-portals/new-project-wizard/) with customizable organizational templates. In contrast, CDK lacks features specifically designed for building developer platforms.
+- __Developer self-service__: Pulumi empowers you to build modern infrastructure platforms that enable developers to self-service cloud infrastructure. You can easily build GUI, CLI, or YAML based developer portals or use the built-in [New Project Wizard](/docs/idp/concepts/new-project-wizard/) with customizable organizational templates. In contrast, CDK lacks features specifically designed for building developer platforms.
 - __AI-powered__: [Pulumi Neo](/docs/ai/) is an AI-powered agent that automates infrastructure management tasks. It can generate a Pulumi program from a few simple text prompts, create pull requests with infrastructure changes, and provides insights to analyze and preempt potential operational issues. CDK doesn't include AI capabilities for generating code or providing operational insights.
 
 ### Security
@@ -62,7 +62,7 @@ Pulumi enables faster development and deployment workflows compared to CDK due t
 Pulumi natively integrates security features with infrastructure provisioning.
 
 - __Secrets management__: Pulumi has built-in secrets management that encrypts secrets both in transit and at rest. It also integrates seamlessly with external secrets managers like AWS Secrets Manager. CDK has no built-in support for managing or handling encrypted secrets.
-- __Policy as code__: Pulumi enables your organization to enforce security and compliance policies during deployment using Pulumi CrossGuard's policy as code. This feature is tightly integrated into Pulumi's workflows, whereas CDK offers only limited support for such policies.
+- __Policy as code__: Pulumi enables your organization to enforce security and compliance policies during deployment using Pulumi Policies. This feature is tightly integrated into Pulumi's workflows, whereas CDK offers only limited support for such policies.
 
 ### Savings
 

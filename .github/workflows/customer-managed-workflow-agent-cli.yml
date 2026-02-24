@@ -20,7 +20,7 @@ jobs:
         id: esc-secrets
         uses: pulumi/esc-action@v1
       - name: checkout docs repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
       - name: set the customer-managed-workflow-agent version
         run: |
           echo "CMWA_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
@@ -43,7 +43,7 @@ jobs:
         run: |
           echo "CMWA_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
       - name: checkout docs repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
         with:
           path: docs
       - name: Update latest version

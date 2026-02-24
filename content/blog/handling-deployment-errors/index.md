@@ -1,6 +1,6 @@
 ---
 title: "New in Pulumi IaC: `onError` Resource Hook"
-date: 2026-02-06
+date: 2026-02-23
 meta_desc: "You can now use the `onError` resource hook to control the retry behavior of failing resource registrations"
 meta_image: meta.png
 authors:

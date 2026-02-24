@@ -21,9 +21,9 @@ Security is a team effort that's best established from the outset. Pulumi Cloud 
 
 Modern enterprises face rigorous compliance requirements. Pulumi Cloud is SOC 2 Type II certified and AWS-reviewed for compliance best practices. The infrastructure hosting Pulumi Cloud aligns with IT security standards including SOC 1/SSAE 16/ISAE 3402, SOC 2, SOC 3, FISMA, FedRAMP, DOD SRG Levels 2 and 4, PCI DSS Level 1, EU Model Clauses, ISO 9001/27001/27017/27018, ITAR, IRAP, FIPS 140-2, MLPS Level 3, and MTCS. Learn more at [Pulumi Security](https://www.pulumi.com/security/).
 
-Use Pulumi's Policy as Code engine, [CrossGuard](https://www.pulumi.com/docs/iac/crossguard/), to enforce compliant infrastructure practices. CrossGuard includes hundreds of out-of-the-box policies for AWS, Azure, Google Cloud, and Kubernetes, spanning PCI DSS, ISO 27001, SOC 2, HITRUST, and CIS Benchmarks. You can also write custom policies for your specific industry or enterprise requirements.
+Use Pulumi's Policy as Code engine, [Pulumi Policies](https://www.pulumi.com/docs/insights/policy/), to enforce compliant infrastructure practices. Pulumi Policies includes hundreds of out-of-the-box policies for AWS, Azure, Google Cloud, and Kubernetes, spanning PCI DSS, ISO 27001, SOC 2, HITRUST, and CIS Benchmarks. You can also write custom policies for your specific industry or enterprise requirements.
 
-CrossGuard identifies issues in existing cloud infrastructure and prevents new problems from being introduced. Configure it at various warning and error levels, and apply it flexibly across projects—for example, GDPR rules might only apply to infrastructure in European regions. CrossGuard also features automatic remediations.
+Pulumi Policies identifies issues in existing cloud infrastructure and prevents new problems from being introduced. Configure it at various warning and error levels, and apply it flexibly across projects—for example, GDPR rules might only apply to infrastructure in European regions. Pulumi Policies also features automatic remediations.
 
 Pulumi Cloud maintains an audit log of every activity and who performed it for complete visibility.
 
@@ -65,7 +65,7 @@ Pulumi projects, stacks, and environments help reduce "sprawl"—the copy-and-pa
 
 Components provide all the benefits of native language packages: storage in package managers, versioning, secure dependencies, and more.
 
-**[Templates](https://www.pulumi.com/docs/idp/developer-portals/templates/)** are blueprints that scaffold entirely new projects. While components encapsulate cloud resource usage patterns, templates provide standard starting points for complete projects with many resources. [Pulumi offers templates](https://www.pulumi.com/templates/) for common architectures and patterns, but you can create your own. You can also register your organization's templates in the Pulumi Cloud New Project Wizard for easy access.
+**[Templates](https://www.pulumi.com/docs/idp/concepts/organization-templates/)** are blueprints that scaffold entirely new projects. While components encapsulate cloud resource usage patterns, templates provide standard starting points for complete projects with many resources. [Pulumi offers templates](https://www.pulumi.com/templates/) for common architectures and patterns, but you can create your own. You can also register your organization's templates in the Pulumi Cloud New Project Wizard for easy access.
 
 ### Make the decision
 

@@ -120,4 +120,4 @@ Choose your path based on your needs:
 - **Managing compliance?** View violations and track remediation progress in [Policy Findings](/docs/insights/policy/policy-findings/). Triage issues, assign owners, and monitor compliance trends across your organization.
 - **Configuring discovered resources?** Visit the [Insights Get Started tutorial](/docs/insights/discovery/get-started/) for a detailed guide on audit policies for cloud resources discovered outside Pulumi.
 
-For common questions and troubleshooting, see the [FAQ](/docs/insights/policy/faq/).
+For common questions and troubleshooting, see the [FAQ](/docs/support/faq/policies).

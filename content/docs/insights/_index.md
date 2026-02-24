@@ -81,6 +81,14 @@ sections:
     link: /docs/insights/policy/policy-findings/
     description: View violations, track remediation progress, and monitor compliance trends across all infrastructure.
 
+- type: button-cards
+  heading: Self-hosted
+  cards:
+  - emoji: 🏢
+    heading: Self-hosted Insights
+    link: /docs/insights/self-hosted/
+    description: Run Insights discovery scans and policy evaluations in your own environment using customer-managed workflow runners.
+
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>

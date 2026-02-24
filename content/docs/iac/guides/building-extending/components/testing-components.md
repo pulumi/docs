@@ -97,7 +97,7 @@ This makes invalid configurations impossible to compile or deploy, removing the 
 
 ### Prevention Strategy: Use Policies as Guardrails
 
-[Pulumi CrossGuard](/docs/iac/crossguard/) policies can enforce input constraints dynamically at deployment time. For example:
+[Pulumi Policies](/docs/insights/policy/) policies can enforce input constraints dynamically at deployment time. For example:
 
 ***Example:** A custom policy in TypeScript that enforces the allowed instance sizes*
 

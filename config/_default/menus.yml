@@ -10,10 +10,6 @@ iac:
     parent: iac-home
     identifier: iac-using-pulumi
     weight: 20
-  - name: AI Integration
-    parent: iac-using-pulumi
-    identifier: iac-guides-ai-integration
-    weight: 60
   - name: Components
     parent: iac-guides-building-extending
     identifier: iac-guides-components

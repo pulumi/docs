@@ -16,7 +16,7 @@ menu:
         identifier: ai-running-previews
 ---
 
-Neo can run [preview](/docs/iac/cli/commands/pulumi_preview/) directly from Pulumi Cloud to validate proposed infrastructure changes before creating pull requests. This capability provides confidence that suggested modifications do not result in unexpected resource changes and comply with [policies](/docs/iac/crossguard/).
+Neo can run [preview](/docs/iac/cli/commands/pulumi_preview/) directly from Pulumi Cloud to validate proposed infrastructure changes before creating pull requests. This capability provides confidence that suggested modifications do not result in unexpected resource changes and comply with [policies](/docs/insights/policy/).
 
 ## Public Preview Access
 
@@ -49,7 +49,7 @@ When you ask Neo to make infrastructure changes, it utilizes previews to:
 
 1. **Validate proposed changes**: Ensure the generated code is syntactically correct and will execute successfully
 2. **Show impact analysis**: Display what resources will be created, updated, or deleted
-3. **Check policy compliance**: Verify changes comply with your organization's [CrossGuard policies](/docs/iac/crossguard/)
+3. **Check policy compliance**: Verify changes comply with your organization's [policies](/docs/insights/policy/)
 
 ### Preview Workflow
 

@@ -21,7 +21,7 @@ jobs:
         id: esc-secrets
         uses: pulumi/esc-action@v1
       - name: checkout docs repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: set the pulumi version
         run: |
           echo "PULUMI_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
@@ -44,11 +44,11 @@ jobs:
         run: |
           echo "PULUMI_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
       - name: checkout docs repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: docs
       - name: checkout pulumi repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: pulumi/pulumi
           path: pulumi
@@ -62,11 +62,11 @@ jobs:
         with:
           pulumi-version: ${{ env.PULUMI_VERSION }}
       - name: Install go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: ${{ matrix.goversion }}
       - name: Install Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.154.5'
           extended: true
@@ -75,13 +75,13 @@ jobs:
         with:
           node-version: ${{matrix.nodeversion}}
       - name: Install python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{matrix.pythonversion}}
       - name: Install Pipenv
         run: pip3 install pipenv
       - name: Install dotnet
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: ${{matrix.dotnetverson}}
       - run: make ensure

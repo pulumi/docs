@@ -21,7 +21,7 @@ jobs:
         id: esc-secrets
         uses: pulumi/esc-action@v1
       - name: checkout docs repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
@@ -38,7 +38,7 @@ jobs:
         id: esc-secrets
         uses: pulumi/esc-action@v1
       - name: checkout docs repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
       - name: Update latest version
         run: |
           echo -n "${{ github.event.client_payload.dev_version }}" > ./static/latest-dev-version

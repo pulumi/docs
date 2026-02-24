@@ -54,7 +54,7 @@ Because cloud resources are not created, you can't write a test that would evalu
 
 ## Property Testing
 
-Property tests are based on [Policy as Code](/docs/using-pulumi/crossguard/) (also known as "CrossGuard"), Pulumi's offering to set guardrails and enforce compliance for cloud resources. In addition to authoring company-wide policies, CrossGuard enables another type of infrastructure testing. Each policy becomes a property, an invariant, that a test evaluates and asserts.
+Property tests are based on [Policy as Code](/docs/insights/policy/), Pulumi's offering to set guardrails and enforce compliance for cloud resources. In addition to authoring company-wide policies, Pulumi Policies enables another type of infrastructure testing. Each policy becomes a property, an invariant, that a test evaluates and asserts.
 
 Property tests run inside the Pulumi CLI before and after infrastructure provisioning. In contrast to "black-box" integration testing, policy rules have access to all input and output values of all cloud resources in the stack. As opposed to unit testing, property tests can evaluate real values returned from the cloud provider instead of the mocked ones.
 

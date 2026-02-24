@@ -78,6 +78,7 @@ When reviewing **Blog posts or marketing materials**, serve the role of a profes
 - Reject filler, vague generalities, or AI-generated slop.
 - Avoid clickbait phrasing.
 - Clear call-to-action at the end.
+- Ensure `meta.png` is present and relevant to the content. **Ensure it ISN'T the default placeholder image!**
 
 ## Additional Instructions
 

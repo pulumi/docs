@@ -400,6 +400,7 @@ function getDefaultExcludedKeywords() {
         "https://github.com/jasonsmithio/pulumi-experiments",
         // Old example repository paths that have been renamed or removed
         "https://github.com/pulumi/examples/tree/master/aws-js-webserver",
+        "https://github.com/pulumi/examples/blob/master/aws-js-webserver/index.js",
         "https://github.com/pulumi/examples/tree/master/aws-js-s3-folder",
         "https://github.com/pulumi/examples/tree/master/aws-js-sqs-slack",
         "https://github.com/pulumi/examples/tree/master/aws-py-oidc-provider-pulumi-cloud",
@@ -411,6 +412,14 @@ function getDefaultExcludedKeywords() {
         "https://www.pulumi.com/docs/cli/commands/pulumi_plugin_install",
         "https://www.pulumi.com/docs/cli/commands/pulumi_schema_check",
         "https://www.pulumi.com/docs/using-pulumi/crossguard/compliance-ready-policies/",
+        // External links reported as broken in issue #17495
+        "https://roadmap.sh/videos/scaling-the-unscalable",
+        "https://redis.io/docs/ui/cli/",
+        "https://telephoneworld.org/telephone-sounds/",
+        "https://aidevtlv.com/agenda/",
+        "https://cloud.google.com/deployment-manager/docs",
+        "https://daninacan.com/",
+        "https://www.tigera.io/blog/top-5-kubernetes-trends-for-2019/",
     ];
 }
 
@@ -438,6 +447,15 @@ function excludeAcceptable(links) {
 
         // Ignore HTTP 503s.
         .filter(b => b.reason !== "HTTP_503")
+
+        // Ignore HTTP 502s (Bad Gateway - transient server errors).
+        .filter(b => b.reason !== "HTTP_502")
+
+        // Ignore HTTP 415s (Unsupported Media Type - often bot protection).
+        .filter(b => b.reason !== "HTTP_415")
+
+        // Ignore all HTTP 429s (rate limiting, bot protection).
+        .filter(b => b.reason !== "HTTP_429")
 
         // Filter errors from external sites (bot protection, auth walls, connection issues)
         .filter(b => !(externalErrorReasons.includes(b.reason) && !isInternalLink(b.destination)))

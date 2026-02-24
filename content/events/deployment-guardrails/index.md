@@ -48,7 +48,7 @@ main:
 
     # Description of the webinar.
     description: |
-        Effective Internal Developer Platforms provide guardrails, not gates—enabling developer autonomy while automatically enforcing security, compliance, and operational standards. This workshop demonstrates how to implement comprehensive policy as code using Pulumi CrossGuard. You'll learn to create policies that prevent misconfigurations, enforce tagging standards, and ensure compliance requirements are met automatically, turning your IDP into a secure-by-default platform.
+        Effective Internal Developer Platforms provide guardrails, not gates—enabling developer autonomy while automatically enforcing security, compliance, and operational standards. This workshop demonstrates how to implement comprehensive policy as code using Pulumi Policies. You'll learn to create policies that prevent misconfigurations, enforce tagging standards, and ensure compliance requirements are met automatically, turning your IDP into a secure-by-default platform.
     learn:
         - How to implement security and compliance policies that run automatically in CI/CD
         - Strategies for creating policies that guide rather than block developer productivity
@@ -82,5 +82,5 @@ event_data:
   end_date: 2025-08-13T13:00:00-04:00
   url: "https://www.pulumi.com/resources/deployment-guardrails/"
   description: |
-    Effective Internal Developer Platforms provide guardrails, not gates—enabling developer autonomy while automatically enforcing security, compliance, and operational standards. This workshop demonstrates how to implement comprehensive policy as code using Pulumi CrossGuard. You'll learn to create policies that prevent misconfigurations, enforce tagging standards, and ensure compliance requirements are met automatically, turning your IDP into a secure-by-default platform.
+    Effective Internal Developer Platforms provide guardrails, not gates—enabling developer autonomy while automatically enforcing security, compliance, and operational standards. This workshop demonstrates how to implement comprehensive policy as code using Pulumi Policies. You'll learn to create policies that prevent misconfigurations, enforce tagging standards, and ensure compliance requirements are met automatically, turning your IDP into a secure-by-default platform.
 --- 

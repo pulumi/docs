@@ -127,7 +127,7 @@ Pulumi integrates with existing CI/CD providers, including AWS Code Services, Az
 
 ### Policy as Code {#policy}
 
-Pulumi provides policy as code through CrossGuard which acts as programmable guardrails to enforce security, best practices, and cost across all infrastructure. CrossGuard is open source, free to use, and lets you write rules in Python, JavaScript, or Open Policy Agent (OPA) Rego. For more information on how to implement policy as code using Pulumi, see [Policy as Code ("CrossGuard")](/docs/using-pulumi/crossguard/).
+Pulumi provides policy as code through Pulumi Policies which acts as programmable guardrails to enforce security, best practices, and cost across all infrastructure. Pulumi Policies is open source, free to use, and lets you write rules in Python, JavaScript, or Open Policy Agent (OPA) Rego. For more information on how to implement policy as code using Pulumi, see [Pulumi Policies](/docs/insights/policy/).
 
 ### Secrets Management {#secrets}
 

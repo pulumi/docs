@@ -26,6 +26,7 @@ Resource constructors accept the following resource options:
 - [deletedWith](/docs/concepts/options/deletedwith/): If set, the provider's Delete method will not be called for this resource if the specified resource is being deleted as well.
 - [replaceWith](/docs/concepts/options/replacewith/): If set, the resource will be replaced if one of the specified resources is replaced.
 - [dependsOn](/docs/concepts/options/dependson/): specify additional explicit dependencies in addition to the ones in the dependency graph.
+- [envVarMappings](/docs/concepts/options/envvarmappings/): remap environment variables to custom keys for provider authentication.
 - [hideDiffs](/docs/concepts/options/hidediffs/): compact the display of diffs for specified properties in CLI output without affecting update behavior.
 - [hooks](/docs/concepts/options/hooks/): specify a set of resource hooks that will be executed at specific points in the resource lifecycle.
 - [ignoreChanges](/docs/concepts/options/ignorechanges/): declare that changes to certain properties should be ignored during a diff.
@@ -52,6 +53,7 @@ Not all resource options apply to [component resources](/docs/iac/concepts/compo
 | [deleteBeforeReplace](/docs/concepts/options/deletebeforereplace/) | No | Components are not replaced by providers |
 | [deletedWith](/docs/concepts/options/deletedwith/) | Yes | Controls deletion behavior |
 | [dependsOn](/docs/concepts/options/dependson/) | Yes | Creates explicit dependencies on the component |
+| [envVarMappings](/docs/concepts/options/envvarmappings/) | No | Only applies to provider resources |
 | [hideDiffs](/docs/concepts/options/hidediffs/) | No | Components don't have provider-generated diffs |
 | [hooks](/docs/concepts/options/hooks/) | No | Components don't have provider lifecycle events |
 | [ignoreChanges](/docs/concepts/options/ignorechanges/) | No | Components don't have provider-managed inputs. The component implementation may choose to propagate this to children. |

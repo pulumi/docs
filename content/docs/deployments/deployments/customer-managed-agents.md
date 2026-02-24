@@ -1,10 +1,10 @@
 ---
-title: Customer-managed agents
-title_tag: Get started with customer-managed agents
-meta_desc: Customer-managed agents allows you to self-host agents and get all the power and flexibility of Pulumi Deployments in your isolated environments
+title: Customer-managed workflow runners
+title_tag: Get started with customer-managed workflow runners
+meta_desc: Self-host workflow runners and get all the power and flexibility of Pulumi Deployments in your isolated environments.
 menu:
   deployments:
-    name: Customer-managed agents
+    name: Customer-managed workflow runners
     parent: deployments-deployments
     weight: 40
     identifier: deployments-deployments-customer-managed-agents
@@ -13,61 +13,69 @@ aliases:
 - /docs/pulumi-cloud/deployments/customer-managed-agents/
 ---
 
-Customer-Managed Agents allow you to self-host agents bringing the same power and flexibility as Pulumi-hosted deployments. Self-hosting your agents comes with many benefits:
+Customer-Managed Workflow Runners allow you to self-host workflow runners, bringing the same power and flexibility as Pulumi-hosted workflows. Self-hosting your workflow runners comes with many benefits for deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/using-pulumi/crossguard/):
 
-- **Host anywhere**: You can host the agents anywhere to manage infrastructure, even within your fully private VPCs
-- **Any hardware, any environment<sup>1</sup>**: Run the agents on any hardware of your choice and configure the environment that meets your needs
-- **Mix & match**: You can use standard Pulumi-hosted deployments for your development stacks and use self-hosted Customer-Managed Agents for your private network infrastructure. You can mix and match to suit your unique needs
-- **Multiple pools**: You can set up multiple agent pools, assign stacks to specific pools, and scale agents dynamically to increase your deployment concurrency. Customers can have up to 150 concurrent deployments
-- **Meet compliance**: You can configure the agents with the credentials needed to manage your infrastructure. This way your cloud provider credentials never leave your private network
+- **Host anywhere**: You can host the workflow runners anywhere to manage infrastructure, even within your fully private VPCs
+- **Any hardware, any environment<sup>1</sup>**: Run the workflow runners on any hardware of your choice and configure the environment that meets your needs
+- **Mix & match**: You can use standard Pulumi-hosted workflows for your development stacks and use self-hosted Customer-Managed Workflow Runners for your private network infrastructure. You can mix and match to suit your unique needs
+- **Multiple pools**: You can set up multiple workflow runner pools, assign stacks to specific pools, and scale workflow runners dynamically to increase your workflow concurrency. Customers can have up to 150 concurrent workflows
+- **Meet compliance**: You can configure the workflow runners with the credentials needed to manage your infrastructure. This way your cloud provider credentials never leave your private network
 
-<sup>1</sup> *Currently Linux and MacOS are supported*
+<sup>1</sup> *Currently Linux and macOS are supported*
 
-Customer-Managed Agents support all the [deployment triggers](/docs/deployments/deployments/#deployment-triggers) currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API.
-
-{{% notes "info" %}}
-Customer-Managed Agents is available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Agents.
-{{% /notes %}}
-
-## Using Customer-Managed Agents
-
-Before you begin, ensure you have installed the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and updated the [source control settings](/docs/deployments/deployments/get-started) of the stack you want to use Deployment agents. [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) is a requirement for running the agent.
-
-1. Go to **Deployment runners** under Organization Settings
-2. Create a new pool. Ensure to copy and save the token
-3. Install the agents as per the instructions on the page
-4. Verify the agent status by refreshing the page
-5. Configure a stack to use the agent by going to the Deploy tab within Stack Settings, and selecting the pool you created under the **Deployment Runner** pool drop-down
-6. **(Optional)** Add more agents to the pool to increase concurrency by using the same token
-7. Verify setup by doing a 'pulumi refresh' through the **Actions** drop-down in your stack page
-
-![Pool Details view](../../../../blog/customer-managed-deployment-agents-launch/view-agent-status.png)
-
-Agents poll Pulumi Cloud every 30 seconds to check for pending workflows and will disappear from the Pool details page 1-2 hours after being offline. On the deployments page, you can see all the deployments including pending deployments, and which deployment agents were used in a deployment.
+Customer-Managed Workflow Runners support all the [deployment triggers](/docs/deployments/deployments/#deployment-triggers) currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API. They also support running Insights discovery scans and policy evaluations.
 
 {{% notes "info" %}}
-If you are running the agent inside a firewall ensure to allow outbound requests to api.pulumi.com. Ensure agents have the cloud provider credentials to be able to deploy in your environments.
+Customer-Managed Workflow Runners are available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Workflow Runners.
 {{% /notes %}}
 
-### Leveraging OpenID Authentication
+## Using customer-managed workflow runners
 
-It is possible to use OpenID authentication to fetch Pulumi Pool tokens dynamically instead of configuring a static token for the agents. You must first register the OpenID provider as a trusted OIDC issuer in your Pulumi account, as documented at [OIDC documentation](/docs/administration/access-identity/oidc-client/).
+Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) installed, which is required for running the workflow runner. If you plan to use workflow runners for **deployments**, you must also install the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and update the [source control settings](/docs/deployments/deployments/get-started) of the stack you want to deploy.
 
-After registering the provider, this other information is required by the agent:
+1. Navigate to **Workflow Runners** under Deployments
+2. Create a new pool. Copy and save the token
+3. Install the workflow runners as per the instructions on the page
+4. Verify the workflow runner status by refreshing the page
+5. Configure the workflow runner pool for the workflows you want to run:
+   - **Deployments**: Go to **Stack Settings** > **Deploy** tab and select the pool under the **Deployment Runner** pool drop-down
+   - **Insights discovery scans**: Go to **Management** > **Accounts** and select the pool for the account you want to scan
+   - **Policy evaluation**: Go to **Management** > **Policies** > **Policy Groups** and select the pool for an audit policy group
+6. **(Optional)** Add more workflow runners to the pool to increase concurrency by using the same token
+7. Verify your setup:
+   - **Deployments**: Run a `pulumi refresh` through the **Actions** drop-down in your stack page
+   - **Insights discovery scans**: Trigger a scan from the **Management** > **Accounts** page and confirm it completes successfully
+   - **Policy evaluation**: Run a policy evaluation against a stack and confirm the results appear as expected
+
+![Pool Details view](customer-managed-agents-assets/workflow-runners.png)
+
+Workflow runners poll Pulumi Cloud for pending workflows at a configurable interval (default: every 1 minute) and will disappear from the Pool details page 1-2 hours after being offline. On the deployments page, you can see all the deployments including pending deployments, and which workflow runners were used in a deployment.
+
+Workflow runners support multiple workflow types beyond deployments, including Pulumi Insights scans and policy evaluations. By default, all workflow types are enabled. You can restrict which workflow types a workflow runner handles using the `enabled_workflow_types` configuration option.
+
+{{% notes "info" %}}
+If you are running the workflow runner inside a firewall ensure to allow outbound requests to api.pulumi.com. Ensure workflow runners have the cloud provider credentials to be able to deploy in your environments.
+{{% /notes %}}
+
+### Leveraging OpenID authentication
+
+It is possible to use OpenID authentication to fetch Pulumi Pool tokens dynamically instead of configuring a static token for the workflow runners. You must first register the OpenID provider as a trusted OIDC issuer in your Pulumi account, as documented at [OIDC documentation](/docs/administration/access-identity/oidc-client/).
+
+After registering the provider, the workflow runner requires this information:
 
 - `organization_name`: your Pulumi Organization name
 - `runner_pool_id`: the pool ID that the instance will connect to
-- `token_expiration` (optional): the expiration in seconds for the tokens requested by the agent
+- `token_expiration` (optional): the expiration in seconds for the tokens requested by the workflow runner
 - `oidc_token_file`: the location of the file where the OIDC token will be recorded
 
-The agent will attempt to read the `oidc_token_file` for a fresh OIDC token and exchange it automatically for a Pulumi token every time the Pulumi token expires.
+The workflow runner will attempt to read the `oidc_token_file` for a fresh OIDC token and exchange it automatically for a Pulumi token every time the Pulumi token expires.
 
-## Providing Credentials to Agents
+## Providing credentials to workflow runners
 
-There are two methods to provide cloud provider credentials to the agents:
+There are two methods to provide cloud provider credentials to the workflow runners:
 
 1. Use [OpenID Connect (OIDC) to generate credentials](/docs/pulumi-cloud/oidc)
-2. Directly provide credentials to agents through environment variables configured in the host, or passing the environment variables when invoking the binary. Example:
+2. Directly provide credentials to workflow runners through environment variables configured in the host, or passing the environment variables when invoking the binary. Example:
 
    ```bash
    VARIABLE=value customer-managed-workflow-agent run
@@ -84,18 +92,17 @@ There are two methods to provide cloud provider credentials to the agents:
         - key_three
     ```
 
-## Configuration Reference
+## Configuration reference
 
-All configuration for customer-managed agents are done through the `pulumi-workflow-agent.yaml` file. This can be created manually or with the `customer-managed-workflow-agent configure` command.
+All configuration for customer-managed workflow runners is done through the `pulumi-workflow-agent.yaml` file. This can be created manually or with the `customer-managed-workflow-agent configure` command.
 
-The customer-managed agent will look for `pulumi-workflow-agent.yaml` in the following directories:
+The workflow runner will look for `pulumi-workflow-agent.yaml` in the following directories:
 
 - Current directory
 - Home directory
 - `/etc`
 - Location of the `customer-managed-workflow-agent` binary
 
-\
 Below are available configuration parameters and their default values. In most cases, only `token` is required.
 
 ```yaml
@@ -159,11 +166,57 @@ deploy_target: "docker"
 # Port of health check endpoint
 # Environment variable override: PULUMI_AGENT_HTTP_SERVER_PORT
 http_server_port: 8080
+
+# Workflow types the workflow runner is allowed to execute
+# Valid values: deployment, insights_scan, policy_evaluation
+# All types are enabled by default
+# Environment variable override: PULUMI_AGENT_ENABLED_WORKFLOW_TYPES
+# Environment variable format is comma-separated: PULUMI_AGENT_ENABLED_WORKFLOW_TYPES="deployment,insights_scan,policy_evaluation"
+enabled_workflow_types:
+    - deployment
+    - insights_scan
+    - policy_evaluation
+
+# Polling interval for checking for new workflow jobs
+# Environment variable override: PULUMI_AGENT_POLLING_INTERVAL
+polling_interval: "1m"
+
+# If true, ignore the Retry-After header from the server and always use polling_interval
+# Environment variable override: PULUMI_AGENT_POLLING_INTERVAL_OVERRIDE
+polling_interval_override: false
+
+# Timeout for API calls to fetch workflows and check workflow status
+# Environment variable override: PULUMI_AGENT_REQUEST_TIMEOUT
+request_timeout: "30s"
+
+# Maximum number of retries for rate-limited requests
+# Environment variable override: PULUMI_AGENT_REQUEST_RETRY_COUNT
+request_retry_count: 2
+
+# Wait time between retries
+# Environment variable override: PULUMI_AGENT_REQUEST_RETRY_WAIT
+request_retry_wait: "20s"
+
+# Maximum wait time between retries
+# Environment variable override: PULUMI_AGENT_REQUEST_RETRY_MAX_WAIT
+request_retry_max_wait: "2m"
+
+# Number of consecutive failures before the circuit breaker opens
+# Environment variable override: PULUMI_AGENT_CIRCUIT_BREAKER_FAILURES
+circuit_breaker_failures: 2
+
+# Timeout for the circuit breaker to mark an operation as failed
+# Environment variable override: PULUMI_AGENT_CIRCUIT_BREAKER_TIMEOUT
+circuit_breaker_timeout: "10m"
+
+# Interval for checking workflow job status (e.g., for cancellations)
+# Environment variable override: PULUMI_AGENT_JOB_STATUS_LOOP_INTERVAL
+job_status_loop_interval: "30s"
 ```
 
-### Kubernetes-Managed Agents
+### Kubernetes-managed workflow runners
 
-For Kubernetes-native installations, configuration for customer-managed agents is set on the Kubernetes Deployment that runs the agent. Configuration values may be set as environment variables, or by mounting a configuration file in the agent Pod.
+For Kubernetes-native installations, configuration for customer-managed workflow runners is set on the Kubernetes Deployment that runs the workflow runner. Configuration values may be set as environment variables, or by mounting a configuration file in the workflow runner Pod.
 
 The following Kubernetes-specific configuration options are available:
 

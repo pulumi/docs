@@ -21,7 +21,7 @@ Converting HCL to Pulumi code makes sense in several scenarios:
 * **Testing requirements**: You need unit testing capabilities for infrastructure code
 * **Integration needs**: Infrastructure code needs to integrate with application code
 * **Team preferences**: Your team prefers general-purpose programming languages
-* **Advanced features**: You want to use Pulumi-specific features like CrossGuard or Automation API
+* **Advanced features**: You want to use Pulumi-specific features like Pulumi Policies or Automation API
 
 ## Conversion approaches
 

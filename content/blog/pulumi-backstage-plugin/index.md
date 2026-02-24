@@ -90,7 +90,7 @@ By integrating with Backstage, Pulumi is simplifying a common scenario that many
 There are two ways to get the **Pulumi Backstage Plugin**:
 First, if you are hosting Backstage yourself, you can find the plugin in our [GitHub repo](https://github.com/pulumi/pulumi-backstage-plugin).
 
-Secondly, if you are using the [Roadie managed Backstage](https://roadie.io/) service, you can follow [these instructions](https://roadie.io/backstage/plugins/pulumi/) to use the Pulumi plugin with Roadie.
+Secondly, if you are using the [Roadie managed Backstage](https://roadie.io/) service, you can follow [these instructions](https://roadie.io/docs/integrations/pulumi/) to use the Pulumi plugin with Roadie.
 
 {{< related-posts >}}
 

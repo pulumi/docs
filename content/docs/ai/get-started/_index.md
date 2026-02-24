@@ -87,7 +87,6 @@ Let's run a simple infrastructure [task](/docs/ai/tasks/) to see Neo in action
 ## Considerations and Limitations
 
 - GitHub Only - Neo only works with GitHub repositories. GitLab, Bitbucket, and other platforms are not supported yet.
-- Tasks Cannot Be Shared - Each task is private to the user who created it. Tasks cannot be shared, transferred, or collaborated on between team members.
 - Code Changes Only - Neo can only modify infrastructure through code. It cannot perform API or UI actions like configure deployments, updating stack configurations, or managing environments in Pulumi Cloud.
 - Cannot Create GitHub Repos - Neo cannot create new GitHub repositories or initialize new Git repos. It only works within existing repositories.
 - Cannot Create New Projects - Neo cannot initialize new Pulumi projects. It can only work within existing projects that are already set up.
