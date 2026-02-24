@@ -672,23 +672,90 @@ you access the outputs of that stack.
 
 In the above example, you construct a stack reference to a specific stack in this project which has the same name
 as your current stack (i.e. when deploying the "staging" stack of the above program, you reference the "staging" stack)
-from the infra project. Once you have that resource, you can fetch the `kubeConfig` output variable with the `getOutput`
-function. From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
+from the infra project. Once you have that resource, you can read output variables from it.
+From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
 
 ### Reading outputs from stack references
 
-Stack references support two ways of reading outputs from the referenced stack:
+Stack references support the following methods for reading outputs from the referenced stack:
 
-* `getOutput` returns an `Output` that provides gated access to the output value.
-  The output value can be accessed and transformed with methods like `Output.apply`.
-  This is useful when the output is used as an input to another resource.
-* `getOutputDetails` returns an `OutputDetails` object that provides direct access to the output value.
-  This is useful when you want to process the output directly in your code.
+* `requireOutput` returns an `Output` wrapping the named output value and fails at deployment
+  time if the output does not exist in the referenced stack. This is the recommended method for
+  most use cases, as it surfaces a missing or misspelled output name as a clear, immediate error
+  rather than silently propagating an undefined value.
+* `getOutput` returns an `Output` wrapping the named output value, or an `Output` wrapping
+  `undefined` (or `None` in Python) if the output does not exist. Use this only when the
+  absence of an output is an expected and explicitly handled condition in your program.
+* `getOutputDetails` returns an `OutputDetails` object that provides direct access to the output
+  value. This is useful when you need the raw value in your program's logic rather than an
+  `Output` wrapper.
 
-As a demonstration of `getOutput`,
-suppose that your referenced stack exports a `privateIp` output.
-You want to incorporate the IP address into the name of an S3 bucket object
-containing logs from that machine.
+The following example uses `requireOutput`, the recommended method for reading stack reference
+outputs. It reads a `vpcId` export and fails immediately at deployment time if that output is
+absent from the referenced stack:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const infra: StackReference = new pulumi.StackReference("acmecorp/infra/prod");
+
+// Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+const vpcId: Output<any> = infra.requireOutput("vpcId");
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+infra = StackReference("acmecorp/infra/prod")
+
+# Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+vpc_id = infra.require_output("vpcId")
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+infra, err := pulumi.NewStackReference(ctx, "acmecorp/infra/prod", nil)
+if err != nil {
+    return err
+}
+
+// Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+vpcId := infra.RequireOutput(pulumi.String("vpcId"))
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var infra = new StackReference("acmecorp/infra/prod");
+
+// Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+var vpcId = infra.RequireOutput("vpcId");
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+StackReference infra = new StackReference("acmecorp/infra/prod");
+
+// Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+Output<Object> vpcId = infra.requireOutput("vpcId");
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Use `getOutput` when the absence of an output is an expected, handled condition in your program.
+The following example reads a `privateIp` output and transforms it with `Output.apply` to build
+a derived value. If the output is missing, the undefined value propagates silently rather than
+surfacing as an error:
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
