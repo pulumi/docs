@@ -262,6 +262,65 @@ Use stack validation policies when you need to:
 
 Most policies are resource validation policies. Stack validation policies are useful for more complex scenarios that require understanding the full context of your infrastructure.
 
+### Using stack tags in policies
+
+Stack validation policies can access tags assigned to the stack via `args.stackTags` (TypeScript) or `args.stack_tags` (Python). This enables you to enforce tagging standards — such as requiring every stack to declare an environment or owning team — as a governance gate.
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import { PolicyPack } from "@pulumi/policy";
+
+new PolicyPack("stack-tag-policies", {
+    policies: [{
+        name: "require-stack-tags",
+        description: "Requires 'env' and 'team' tags on every stack.",
+        enforcementLevel: "mandatory",
+        validateStack: (args, reportViolation) => {
+            const required = ["env", "team"];
+            for (const tag of required) {
+                if (!args.stackTags.has(tag)) {
+                    reportViolation(`Missing required stack tag: '${tag}'.`);
+                }
+            }
+        },
+    }],
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+from pulumi_policy import EnforcementLevel, PolicyPack, StackValidationPolicy
+
+PolicyPack(
+    "stack-tag-policies",
+    policies=[
+        StackValidationPolicy(
+            name="require-stack-tags",
+            description="Requires 'env' and 'team' tags on every stack.",
+            enforcement_level=EnforcementLevel.MANDATORY,
+            validate=lambda args, report_violation: [
+                report_violation(f"Missing required stack tag: '{tag}'.")
+                for tag in ["env", "team"]
+                if tag not in args.stack_tags
+            ],
+        ),
+    ],
+)
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+{{% notes type="info" %}}
+Stack tags are available on both `StackValidationArgs` and `ResourceValidationArgs`, so resource-level policies can also make decisions based on stack metadata. To learn how to assign tags to stacks and apply policy packs to groups of stacks, see [policy groups](/docs/insights/policy/policy-groups/).
+{{% /notes %}}
+
 ## Writing policies for dynamic providers
 
 [Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) allow you to create custom resource types directly in your Pulumi programs. When writing policies for dynamic providers, you need to account for a key constraint: **all dynamic resources share the same resource type** (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python).
