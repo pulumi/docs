@@ -7,7 +7,7 @@ menu:
         weight: 3
 ---
 
-# **TERMS OF SERVICE**
+## **TERMS OF SERVICE**
 
 1. ### **GENERAL TERMS**
 
@@ -169,4 +169,4 @@ menu:
 
           6. #### The Terms, and your relationship with Pulumi under the Terms, shall be governed by the laws of the State of Washington without regard to its conflict of laws provisions. You and Pulumi agree to submit to the exclusive jurisdiction of the courts located within King County, Washington to resolve any legal matter arising from the Terms; however, before filing any lawsuit in connection with any such legal matter, the parties agree to participate in a half-day, non-binding, virtual mediation session via videoconference.
 
-          7. #### Neither party may assign any of its rights or obligations under these Terms, whether by operation of law or otherwise, without the prior written consent of the other party (not to be unreasonably withheld). Notwithstanding the foregoing, either party may assign the entirety of its rights and obligations under these Terms, without consent of the other party, to its affiliate or in connection with a merger, acquisition, corporate reorganization, or sale of all or substantially all of its assets not involving a direct competitor of the other party. A party’s sole remedy for any purported assignment by the other party in breach of this paragraph shall be, at the non-assigning party’s election, termination of your use of the Pulumi Services upon written notice to the assigning party. 
+          7. #### Neither party may assign any of its rights or obligations under these Terms, whether by operation of law or otherwise, without the prior written consent of the other party (not to be unreasonably withheld). Notwithstanding the foregoing, either party may assign the entirety of its rights and obligations under these Terms, without consent of the other party, to its affiliate or in connection with a merger, acquisition, corporate reorganization, or sale of all or substantially all of its assets not involving a direct competitor of the other party. A party’s sole remedy for any purported assignment by the other party in breach of this paragraph shall be, at the non-assigning party’s election, termination of your use of the Pulumi Services upon written notice to the assigning party.
