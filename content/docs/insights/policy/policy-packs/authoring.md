@@ -275,7 +275,6 @@ To ensure tags are available on the first deployment, set them before running `p
 - The [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/#stack-tags)
 - The Pulumi Cloud console
 
-The policy example below accounts for this by also checking for `StackTag` resources in the stack, so it passes even when tags are created as part of the same deployment.
 {{% /notes %}}
 
 {{< chooser language "typescript,python" >}}
@@ -285,23 +284,15 @@ The policy example below accounts for this by also checking for `StackTag` resou
 ```typescript
 import { PolicyPack } from "@pulumi/policy";
 
-const requiredTags = ["env", "team"];
-
 new PolicyPack("stack-tag-policies", {
     policies: [{
         name: "require-stack-tags",
         description: "Requires 'env' and 'team' tags on every stack.",
         enforcementLevel: "mandatory",
         validateStack: (args, reportViolation) => {
-            // Collect tag names set via StackTag resources in this deployment.
-            const resourceTagNames = args.resources
-                .filter(r => r.type === "pulumiservice:index:StackTag")
-                .map(r => r.props.name as string);
-
-            for (const tag of requiredTags) {
-                const inStackTags = args.stackTags.has(tag);
-                const inResources = resourceTagNames.includes(tag);
-                if (!inStackTags && !inResources) {
+            const required = ["env", "team"];
+            for (const tag of required) {
+                if (!args.stackTags.has(tag)) {
                     reportViolation(`Missing required stack tag: '${tag}'.`);
                 }
             }
@@ -316,20 +307,10 @@ new PolicyPack("stack-tag-policies", {
 ```python
 from pulumi_policy import EnforcementLevel, PolicyPack, StackValidationPolicy
 
-REQUIRED_TAGS = ["env", "team"]
-
 def require_stack_tags(args, report_violation):
-    # Collect tag names set via StackTag resources in this deployment.
-    resource_tag_names = [
-        r.props.get("name")
-        for r in args.resources
-        if r.resource_type == "pulumiservice:index:StackTag"
-    ]
-
-    for tag in REQUIRED_TAGS:
-        in_stack_tags = tag in args.stack_tags
-        in_resources = tag in resource_tag_names
-        if not in_stack_tags and not in_resources:
+    required = ["env", "team"]
+    for tag in required:
+        if tag not in args.stack_tags:
             report_violation(f"Missing required stack tag: '{tag}'.")
 
 PolicyPack(
