@@ -351,11 +351,11 @@ To synchronize Pulumi's recorded state with the actual state of your cloud resou
 $ pulumi refresh
 ```
 
-This command queries each resource in your stack from the cloud provider and updates Pulumi's state file to reflect any differences. If a resource has been deleted outside of Pulumi, it will be removed from the state. If properties have changed, the state is updated to match.
+This command queries each resource in your stack from the cloud provider and updates Pulumi's state file to reflect any differences. If a resource has been deleted outside of Pulumi, Pulumi removes it from the state. If properties have changed, Pulumi updates the state to match.
 
-Note that `pulumi refresh` updates only the state. It does not modify your Pulumi program or apply any changes to your infrastructure. If you want to preserve external changes going forward, you also need to update your program to reflect the new configuration; otherwise, the next `pulumi up` will attempt to revert those properties back to what your program declares.
+`pulumi refresh` updates only the state. It does not modify your Pulumi program or apply any changes to your infrastructure. If you want to preserve external changes going forward, you also need to update your program to reflect the new configuration; otherwise, the next `pulumi up` will attempt to revert those properties back to what your program declares.
 
-You should consider running `pulumi refresh` when:
+Run `pulumi refresh` when:
 
 - Resources have been modified or deleted outside of Pulumi, such as through the cloud console or another tool.
 - You are troubleshooting unexpected diffs during a `pulumi preview` and suspect the state may be stale.
