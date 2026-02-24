@@ -264,7 +264,9 @@ Most policies are resource validation policies. Stack validation policies are us
 
 ### Using stack tags in policies
 
-Stack validation policies can access tags assigned to the stack via `args.stackTags` (TypeScript) or `args.stack_tags` (Python). This enables you to enforce tagging standards — such as requiring every stack to declare an environment or owning team — as a governance gate.
+Stack validation policies can access tags assigned to the stack via `args.stackTags` (TypeScript) or `args.stack_tags` (Python). This lets you enforce tagging standards, like requiring every stack to declare an environment or owning team, as a governance gate.
+
+The following example requires `env` and `team` tags on every stack. Because `args.stackTags` only contains tags that existed before the current update, the policy also checks for [`StackTag`](/registry/packages/pulumiservice/api-docs/stacktag/) resources in the stack so it passes on the first deployment when tags are created declaratively.
 
 {{< chooser language "typescript,python" >}}
 
@@ -273,15 +275,23 @@ Stack validation policies can access tags assigned to the stack via `args.stackT
 ```typescript
 import { PolicyPack } from "@pulumi/policy";
 
+const requiredTags = ["env", "team"];
+
 new PolicyPack("stack-tag-policies", {
     policies: [{
         name: "require-stack-tags",
         description: "Requires 'env' and 'team' tags on every stack.",
         enforcementLevel: "mandatory",
         validateStack: (args, reportViolation) => {
-            const required = ["env", "team"];
-            for (const tag of required) {
-                if (!args.stackTags.has(tag)) {
+            // Collect tag names set via StackTag resources in this deployment.
+            const resourceTagNames = args.resources
+                .filter(r => r.type === "pulumiservice:index:StackTag")
+                .map(r => r.props.name as string);
+
+            for (const tag of requiredTags) {
+                const inStackTags = args.stackTags.has(tag);
+                const inResources = resourceTagNames.includes(tag);
+                if (!inStackTags && !inResources) {
                     reportViolation(`Missing required stack tag: '${tag}'.`);
                 }
             }
@@ -296,6 +306,22 @@ new PolicyPack("stack-tag-policies", {
 ```python
 from pulumi_policy import EnforcementLevel, PolicyPack, StackValidationPolicy
 
+REQUIRED_TAGS = ["env", "team"]
+
+def require_stack_tags(args, report_violation):
+    # Collect tag names set via StackTag resources in this deployment.
+    resource_tag_names = [
+        r.props.get("name")
+        for r in args.resources
+        if r.resource_type == "pulumiservice:index:StackTag"
+    ]
+
+    for tag in REQUIRED_TAGS:
+        in_stack_tags = tag in args.stack_tags
+        in_resources = tag in resource_tag_names
+        if not in_stack_tags and not in_resources:
+            report_violation(f"Missing required stack tag: '{tag}'.")
+
 PolicyPack(
     "stack-tag-policies",
     policies=[
@@ -303,11 +329,7 @@ PolicyPack(
             name="require-stack-tags",
             description="Requires 'env' and 'team' tags on every stack.",
             enforcement_level=EnforcementLevel.MANDATORY,
-            validate=lambda args, report_violation: [
-                report_violation(f"Missing required stack tag: '{tag}'.")
-                for tag in ["env", "team"]
-                if tag not in args.stack_tags
-            ],
+            validate=require_stack_tags,
         ),
     ],
 )
@@ -318,7 +340,9 @@ PolicyPack(
 {{< /chooser >}}
 
 {{% notes type="info" %}}
-Stack tags are available on both `StackValidationArgs` and `ResourceValidationArgs`, so resource-level policies can also make decisions based on stack metadata. To learn how to assign tags to stacks and apply policy packs to groups of stacks, see [policy groups](/docs/insights/policy/policy-groups/).
+Stack tags are available on both `StackValidationArgs` and `ResourceValidationArgs`, so resource-level policies can also make decisions based on stack metadata.
+
+You can assign tags to a stack using the CLI ([`pulumi stack tag set`](/docs/iac/cli/commands/pulumi_stack_tag_set/)), the [`StackTag`](/registry/packages/pulumiservice/api-docs/stacktag/) resource from the [Pulumi Cloud provider](/registry/packages/pulumiservice/), the Pulumi Cloud console, or the [Stack Tags REST API](/docs/reference/cloud-rest-api/stack-tags/). To learn how to apply policy packs to groups of stacks, see [policy groups](/docs/insights/policy/policy-groups/).
 {{% /notes %}}
 
 ## Writing policies for dynamic providers
