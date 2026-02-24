@@ -8,7 +8,7 @@ menu:
     iac:
         name: Property Paths
         parent: iac-concepts-inputs-outputs
-        weight: 3
+        weight: 4
 aliases:
 - /docs/iac/concepts/resources/options/property-paths/
 - /docs/iac/concepts/miscellaneous/property-paths/

@@ -214,19 +214,21 @@ Outputs are similar to [promises or futures](https://en.wikipedia.org/wiki/Futur
 
 Because outputs represent asynchronous values, they must be handled differently than plain types like `string`. For example, you cannot directly print the value of an output using your language's string printing function (e.g. `console.log()` in TypeScript, `print` in Python, etc.). Instead, you must use methods supplied in the Pulumi SDK to access the value once it is known.
 
-The Pulumi SDK provides several basic methods for accessing the plain values of outputs once they are known:
+The Pulumi SDK provides several methods for accessing the plain values of outputs once they are known:
 
 - [Apply](/docs/concepts/inputs-outputs/apply/) allows you to access a single output's plain value
 - [All](/docs/concepts/inputs-outputs/all/) allows you to access multiple outputs' plain values
+- [Helpers](/docs/concepts/inputs-outputs/helpers/) provides convenient shorthand functions for the most common output transformations: building strings from outputs and working with JSON
 
 Both `apply` and `all` allow you to return a value, which itself is also a Pulumi output. Transforming output values into other outputs is often useful. For example, you may want to take a DNS name that is the output of a load balancer and transform it into a full URL by appending `https://`. You can do this using `apply`.
 
-In addition to the basic methods `apply` and `all`, each Pulumi language's SDK may also provide helper methods that allow you to work with Outputs similarly to plain types. For example:
+In addition to `apply` and `all`, each Pulumi language's SDK provides [helper functions](/docs/concepts/inputs-outputs/helpers/) for the most common output manipulation tasks. For example:
 
-- The Pulumi Node SDK contains a method [`pulumi.jsonStringify()`](/docs/reference/pkg/nodejs/pulumi/pulumi/functions/jsonStringify.html) which mirrors Node's `JSON.stringify()` function.
-- The Pulumi Python SDK contains a method [`pulumi.Output.json_dumps()`](/docs/reference/pkg/python/pulumi/#pulumi.Output.json_dumps) which mirrors the function `dumps()` in the standard Python `json` library.
+- **String interpolation**: `pulumi.interpolate` (TypeScript), `pulumi.Output.format()` (Python), `pulumi.Sprintf()` (Go), `Output.Format()` (.NET), and `Output.format()` (Java) let you construct strings from outputs without calling `apply` directly.
+- **JSON serialization**: `pulumi.jsonStringify()` (TypeScript), `pulumi.Output.json_dumps()` (Python), `pulumi.JSONMarshal()` (Go), and `Output.JsonSerialize()` (.NET) serialize data structures containing outputs to JSON strings.
+- **JSON deserialization**: `pulumi.jsonParse()` (TypeScript), `pulumi.Output.json_loads()` (Python), and `Output.JsonDeserialize<T>()` (.NET) parse JSON string outputs into native objects.
 
-Check your language's Pulumi SDK documentation for a complete listing:
+For a complete guide and examples for each language, see [Using output helpers](/docs/concepts/inputs-outputs/helpers/). For the full SDK reference, see:
 
 - [TypeScript (Node.js)](/docs/reference/pkg/nodejs/pulumi/pulumi/)
 - [Python](/docs/reference/pkg/python/pulumi/)
