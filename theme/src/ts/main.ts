@@ -23,6 +23,7 @@ import "./docs-main";
 import "./redirects";
 import "./algolia/autocomplete";
 import "./terraform-compare";
+import "./signup-cta-experiment";
 import "./external-links";
 import "./neo-mode";
 
