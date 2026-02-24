@@ -279,7 +279,7 @@ One of the benefits of using native ESM is that you can use [top-level `await`](
 
 For TypeScript, ensure your `tsconfig.json` includes `"target": "ES2022"` or later as shown above, so that TypeScript emits native `await` in the compiled output. In JavaScript ESM projects, top-level `await` works without any additional configuration beyond `"type": "module"` in `package.json`.
 
-Stack outputs are declared using named `export const` statements:
+The following example uses top-level await to resolve a data source before declaring resources. Stack outputs use named `export const` statements:
 
 {{< chooser language "typescript,javascript" >}}
 
@@ -288,10 +288,10 @@ Stack outputs are declared using named `export const` statements:
 ```typescript
 import * as aws from "@pulumi/aws";
 
-// Top-level await: resolve data before declaring resources
-const azs = await aws.getAvailabilityZones({ state: "available" });
+// Resolve data sources before declaring resources using top-level await
+const azs: aws.GetAvailabilityZonesResult = await aws.getAvailabilityZones({ state: "available" });
 
-const buckets = azs.names.map(az =>
+const buckets: aws.s3.Bucket[] = azs.names.map(az =>
     new aws.s3.Bucket(`my-bucket-${az}`)
 );
 
@@ -305,7 +305,7 @@ export const bucketNames = buckets.map(b => b.id);
 ```javascript
 import * as aws from "@pulumi/aws";
 
-// Top-level await: resolve data before declaring resources
+// Resolve data sources before declaring resources using top-level await
 const azs = await aws.getAvailabilityZones({ state: "available" });
 
 const buckets = azs.names.map(az =>
