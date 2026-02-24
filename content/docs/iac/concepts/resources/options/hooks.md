@@ -674,15 +674,19 @@ class ErrorHookStack : Stack
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
 ```java
 // Pulumi Java does not support resource hooks
 ```
+
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
 ```yaml
 # Pulumi YAML does not support resource hooks
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
