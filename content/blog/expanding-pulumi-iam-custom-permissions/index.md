@@ -1,7 +1,7 @@
 ---
 title: "Pulumi IAM Expands: Manage Access at Scale with Tags, Roles, and Teams"
 allow_long_title: true
-date: 2026-02-25T00:00:00-08:00
+date: 2026-03-02T00:00:00-08:00
 draft: false
 meta_desc: "Pulumi IAM introduces tag-based access control and role assignments for teams and users, enabling least-privilege access management at scale."
 meta_image: "meta.png"
@@ -18,7 +18,7 @@ tags:
   - pulumi-cloud
 ---
 
-Since the launch of [Pulumi IAM](/blog/pulumi-cloud-iam-launch/) with [Custom Roles](/docs/administration/access-identity/rbac/roles) and scoped Access Tokens, organizations have been using fine-grained permissions to secure their automation and CI/CD pipelines. As teams scale to hundreds or thousands of stacks, environments, and accounts, the next challenge is applying those permissions efficiently. Today, we're excited to announce three powerful new capabilities in Pulumi IAM: **Tag-Based Access Control**, **Team Role Assignments**, and **User Role Assignments**. Together, these features enable you to automate and manage permissions at scale, ensuring security keeps pace with the speed of your cloud development.
+Since the launch of [Pulumi IAM](/blog/pulumi-cloud-iam-launch/) with [Custom Roles](/docs/administration/access-identity/rbac/roles) and scoped Access Tokens, organizations have been using fine-grained permissions to secure their automation and CI/CD pipelines. As teams scale to hundreds or thousands of stacks, environments, and accounts, the next challenge is applying those permissions efficiently. Today, we're excited to introduce **Tag-Based Access Control** in Pulumi IAM, enabling you to dynamically manage permissions at scale based on tags applied to your Pulumi entities. We're also launching **Team Role Assignments** and **User Role Assignments**, so you can assign Custom Roles directly to teams and individual users. Together, these features ensure security keeps pace with the speed of your cloud development.
 
 <!--more-->
 
@@ -42,9 +42,13 @@ Custom Roles can now be assigned directly to [teams](/docs/administration/access
 
 Teams support both **inline permissions** (ad-hoc access to specific stacks, environments, or accounts) and **role-based permissions** simultaneously. You can assign **multiple roles** to a single team, giving you full flexibility to compose access from reusable building blocks while retaining the ability to grant one-off access where needed. If you have existing workflows built around ad-hoc assignments to teams, those continue to work exactly as before. You can adopt roles incrementally or mix both approaches on the same team.
 
+{{% notes type="info" %}}
+Team admins (or users with the `team:update` scope) can continue to manage their team's inline permissions as they do today. However, assigning organization-level custom roles to a team requires additional permissions: `role:read` and `role:update`.
+{{% /notes %}}
+
 ### User role assignments
 
-Custom Roles can also be assigned directly to individual organization members. This provides a way to grant specific permissions to users whose responsibilities span multiple teams or require a unique set of entitlements, going beyond the existing org-level `admin`, `member`, and `billing manager` [roles](/docs/administration/access-identity/rbac/roles).
+Custom Roles can also be assigned directly to individual organization members. This provides a way to grant specific permissions to users whose responsibilities span multiple teams or require a unique set of entitlements, going beyond the existing org-level `Admin`, `Member`, and `Billing Manager` [roles](/docs/administration/access-identity/rbac/roles).
 
 ### How permissions work together
 
@@ -78,30 +82,33 @@ For users with unique access requirements, go to **Settings** > **Access Managem
 
 ## Automate Governance with Pulumi Policy
 
-Tag-based access control works well on its own, but it becomes even more powerful when combined with [Pulumi Policy](/docs/insights/policy/). You can write a policy that enforces tagging standards on all resources and then set it up as a [preventative policy group](/docs/insights/policy/policy-groups/) so that any `pulumi up` without the required tags is blocked before deployment.
+Tag-based access control works well on its own, but it becomes even more powerful when combined with [Pulumi Policy](/docs/insights/policy/). You can write a policy that enforces stack tagging standards and then set it up as a [preventative policy group](/docs/insights/policy/policy-groups/) so that any `pulumi up` on a stack without the required tags is blocked before deployment.
 
-Here's a simple example of a policy that requires all AWS resources to have an `env` and `team` tag:
+Here's a simple example of a policy that requires all stacks to have `env` and `team` stack tags:
 
 {{< chooser language "typescript,python" />}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-new PolicyPack("required-tags", {
+import { PolicyPack, StackValidationPolicy } from "@pulumi/policy";
+
+new PolicyPack("required-stack-tags", {
     policies: [
-        {
+        StackValidationPolicy.of({
             name: "require-env-and-team-tags",
-            description: "All AWS resources must have 'env' and 'team' tags.",
+            description: "Stacks must have 'env' and 'team' tags.",
             enforcementLevel: "mandatory",
-            validateResource: (args, reportViolation) => {
-                if (args.type.startsWith("aws:")) {
-                    const tags = args.props.tags;
-                    if (!tags || !tags["env"] || !tags["team"]) {
-                        reportViolation("Resource must include 'env' and 'team' tags.");
-                    }
+            validateStack: (args, reportViolation) => {
+                const tags = args.stackTags;
+                if (!tags.has("env")) {
+                    reportViolation("Stack is missing the required 'env' tag.");
+                }
+                if (!tags.has("team")) {
+                    reportViolation("Stack is missing the required 'team' tag.");
                 }
             },
-        },
+        }),
     ],
 });
 ```
@@ -111,22 +118,27 @@ new PolicyPack("required-tags", {
 {{% choosable language python %}}
 
 ```python
-def require_tags(args, report_violation):
-    if args.resource_type.startswith("aws:"):
-        tags = args.props.get("tags", {})
-        if not tags or "env" not in tags or "team" not in tags:
-            report_violation(
-                "Resource must include 'env' and 'team' tags."
-            )
+from pulumi_policy import (
+    EnforcementLevel,
+    PolicyPack,
+    StackValidationPolicy,
+)
+
+def require_stack_tags(args, report_violation):
+    tags = args.stack_tags
+    if "env" not in tags:
+        report_violation("Stack is missing the required 'env' tag.")
+    if "team" not in tags:
+        report_violation("Stack is missing the required 'team' tag.")
 
 PolicyPack(
-    "required-tags",
+    "required-stack-tags",
     policies=[
-        ResourceValidationPolicy(
+        StackValidationPolicy(
             name="require-env-and-team-tags",
-            description="All AWS resources must have 'env' and 'team' tags.",
+            description="Stacks must have 'env' and 'team' tags.",
             enforcement_level=EnforcementLevel.MANDATORY,
-            validate=require_tags,
+            validate=require_stack_tags,
         ),
     ],
 )
@@ -134,7 +146,7 @@ PolicyPack(
 
 {{% /choosable %}}
 
-Add this policy pack to a [preventative policy group](/docs/insights/policy/policy-groups/) and once tagging is guaranteed by policy, your tag-based RBAC rules reliably grant the correct permissions. Policy enforces the standard, RBAC enforces the access.
+Add this policy pack to a [preventative policy group](/docs/insights/policy/policy-groups/) and once stack tagging is guaranteed by policy, your tag-based RBAC rules reliably grant the correct permissions. Policy enforces the standard, RBAC enforces the access.
 
 {{% notes type="info" %}}
 Pulumi Policy currently supports tag enforcement for IaC stacks. For ESC environments and Insights accounts, tags are managed through the Pulumi Cloud console or REST API.
