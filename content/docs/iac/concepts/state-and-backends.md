@@ -1,12 +1,14 @@
 ---
 title_tag: "State and Backends | Pulumi Concepts"
-meta_desc: Learn about how Pulumi handles your infrastructure state files and supported backend options for these state files.
+meta_desc: Learn about how Pulumi manages infrastructure state, supported backend options, and how to use pulumi refresh to synchronize state with your cloud provider.
 title: "State & backends"
 h1: Managing state & backend options
 keywords:
  - IaC
  - infrastructure state
  - state backend
+ - pulumi refresh
+ - drift detection
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -326,6 +328,58 @@ $ pulumi stack import --file my-app-production.stack.json
 After performing these steps, your stack will now be under the management of Pulumi Cloud. All subsequent operations should be performed using this new backend.
 
 > **Note:**: After migration, your stack's state will be managed by the Pulumi Cloud backend, but the stack will continue using the same secrets provider. You can separately [change the secrets provider](/docs/concepts/secrets#changing-the-secrets-provider-for-a-stack) for your stack if needed.
+
+## Refreshing state
+
+Pulumi's state records what your infrastructure looked like after the last `pulumi up` or `pulumi refresh`. When you run `pulumi preview` or `pulumi up`, Pulumi compares this recorded state against the configuration declared in your program to determine which changes need to be made. It does not query each resource directly from your cloud provider on every run.
+
+This means that if someone modifies a resource _outside_ of Pulumi (by editing it in the cloud provider's console, applying a change with a provider CLI, or by some other out-of-band means), that change is not automatically reflected in Pulumi's state. The next `pulumi up` or `pulumi preview` will not account for those changes, and may produce unexpected results including overwriting them.
+
+### Why Pulumi does not refresh automatically
+
+Pulumi intentionally does not refresh state before every operation, for several reasons:
+
+- **Performance**: Querying every resource's live state from the cloud provider can be slow, particularly for large stacks with hundreds or thousands of resources. Doing this implicitly on every `pulumi up` or `pulumi preview` would add significant latency for the typical case where no out-of-band changes have been made.
+- **Explicit control**: Pulumi treats your program as the source of truth for desired state. Automatically reconciling out-of-band changes before each operation could cause your program and your actual infrastructure to diverge silently, or could cause Pulumi to preserve changes you intended to overwrite.
+- **Predictability**: Keeping refresh explicit means you decide when and whether to incorporate external changes versus overwrite them, giving you confidence about what each `pulumi up` will do.
+
+### Running `pulumi refresh`
+
+To synchronize Pulumi's recorded state with the actual state of your cloud resources, run:
+
+```sh
+$ pulumi refresh
+```
+
+This command queries each resource in your stack from the cloud provider and updates Pulumi's state file to reflect any differences. If a resource has been deleted outside of Pulumi, Pulumi removes it from the state. If properties have changed, Pulumi updates the state to match.
+
+`pulumi refresh` updates only the state. It does not modify your Pulumi program or apply any changes to your infrastructure. If you want to preserve external changes going forward, you also need to update your program to reflect the new configuration; otherwise, the next `pulumi up` will attempt to revert those properties back to what your program declares.
+
+Run `pulumi refresh` when:
+
+- Resources have been modified or deleted outside of Pulumi, such as through the cloud console or another tool.
+- You are troubleshooting unexpected diffs during a `pulumi preview` and suspect the state may be stale.
+- You want to verify that Pulumi's recorded state accurately reflects reality before running a `pulumi destroy`.
+
+### Refreshing as part of an update
+
+To refresh state and then apply your program's desired state in a single step, pass the `--refresh` flag to `pulumi up`:
+
+```sh
+$ pulumi up --refresh
+```
+
+Similarly, to preview what an update would look like after first refreshing state:
+
+```sh
+$ pulumi preview --refresh
+```
+
+### Automated drift detection
+
+For teams that want to detect and remediate out-of-band changes on a schedule, Pulumi Cloud provides built-in [drift detection and remediation](/docs/deployments/deployments/drift/). With drift detection configured, Pulumi Cloud periodically runs `pulumi refresh` against your stacks and alerts you (or optionally remediates automatically) when the actual state of your infrastructure diverges from Pulumi's recorded state.
+
+To learn more, see [Drift detection](/docs/deployments/deployments/drift/).
 
 ## Advanced State
 
