@@ -10,7 +10,7 @@
             <h2>{{ .title }}</h2>
             <p class="text-center w-full lg:w-3/4 mx-auto">{{ .description | markdownify }}</p>
             <div class="mt-8">
-                {{ partial "cta-get-started" (dict "class" "btn-secondary") }}
+                <a href="/docs/deployments/get-started/" class="btn-secondary">Get Started with Deployments</a>
             </div>
         {{ end }}
     </section>
@@ -93,7 +93,7 @@
                         {{ partial "color-icon.html" (dict "icon" "eye" "icon_color" "blue") }}
                         <h5>Drift Detection</h5>
                         <p>
-                            Continuously detect and remediate drift, the deviation of actual cloud infrastructure from the infrastructure as code source of truth. 
+                            Continuously detect and remediate drift, the deviation of actual cloud infrastructure from the infrastructure as code source of truth.
                         </p>
                     </div>
                 </div>
@@ -189,7 +189,7 @@
                 <div class="trialed-editions">
                     <div class="hidden lg:block gradient lg:w-full"></div>
                     <div class=" lg:flex lg:flex-row">
-                        
+
                         <div class="edition py-5 px-0 lg:hidden">
                             <div class="h-full bg-white max-w-md mx-auto">
                                 <div class="h-full flex flex-col px-4 py-4">
