@@ -81,16 +81,17 @@ You can learn more by going to the [`pulumi refresh` documentation](https://www.
 
 There are some flags you can pass to modify the new behavior:
 
-- `--import-pending-creates` gives Pulumi a list of URN ID pairs. This is equivalent to selecting the `import` option when running in interactive mode, but only for the URNs listed.
+- `--import-pending-creates` tells Pulumi to import resources that were created during pending operations. For each resource, pass its full URN as one flag invocation and its cloud provider physical ID as the next. This is equivalent to selecting the `import` option when running in interactive mode, but only for the specified resources.
 - `--clear-pending-creates` will remove any pending CREATEs from the state.
-- `--skip-pending-creates` will skip all pending CREATEs. This is the default behavior when running the CLI outside of interactive more.
+- `--skip-pending-creates` will skip all pending CREATEs. This is the default behavior when running the CLI outside of interactive mode.
 
 These flags can be combined:
 
 ```sh
-    pulumi refresh \
-        --import-pending-creates="aws_native:s3:Bucket::my-bucket my-bucket-6e3d099"\
-        --clear-pending-creates
+pulumi refresh \
+    --import-pending-creates "urn:pulumi:dev::my-project::aws-native:s3:Bucket::my-bucket" \
+    --import-pending-creates "my-bucket-6e3d099" \
+    --clear-pending-creates
 ```
 
 The above command will run the pending CREATE resolution for our example S3 bucket, and will clear all other pending CREATE operations.
