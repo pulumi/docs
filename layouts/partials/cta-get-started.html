@@ -1,0 +1,15 @@
+{{/*
+  CTA Get Started Button Partial
+
+  Usage:
+    {{ partial "cta-get-started" (dict "class" "btn-primary" "style" "width:fit-content") }}
+
+  Parameters:
+    - class: CSS class for the button (default: "btn-primary")
+    - style: Optional inline style
+*/}}
+
+{{ $class := .class | default "btn-primary" }}
+{{ $style := .style | default "" }}
+
+<a href="/docs/get-started/" class="{{ $class }}" data-role="cta-get-started"{{ with $style }} style="{{ . }}"{{ end }}>Get Started</a>

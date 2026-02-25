@@ -7,7 +7,7 @@
                 <h1 class="font-display font-bold">{{ .title }}</h2>
                 <p class="text-center text-2xl w-full lg:w-3/4 mx-auto">{{ .description | markdownify }}</p>
                 <div class="mt-8 flex flex-col md:flex-row justify-center gap-12 mb-12">
-                    <a href="https://app.pulumi.com/signup/" class="btn-primary">Try Pulumi Cloud for Free</a>
+                    {{ partial "cta-get-started" (dict "class" "btn-primary") }}
                     <a href="#casestudy" class="btn-secondary">See How Supabase Manages 80K Resources</a>
                 </div>
             </div>

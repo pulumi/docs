@@ -21,8 +21,8 @@ key_features_above:
             Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
           image: "/images/product/pulumi-iac-code.png"
           button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-github"
+            text: "Get Started"
+            link: "/docs/get-started/?utm_source=gads-github"
           features:
               - title: Code faster
                 description: |
@@ -138,8 +138,8 @@ key_features:
                 outputs:
                   kubeconfig: ${cluster.kubeconfig}
           button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-github"
+            text: "Get Started"
+            link: "/docs/get-started/?utm_source=gads-github"
           features:
               - title: Native cloud providers
                 description: |
@@ -157,8 +157,8 @@ key_features:
             Version, review, test, and deploy infrastructure code through the same tools and processes used for your application code.
           image: "/images/product/pulumi-cicd.png"
           button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-github"
+            text: "Get Started"
+            link: "/docs/get-started/?utm_source=gads-github"
           features:
               - title: Version and review
                 description: |
@@ -193,8 +193,8 @@ key_features_below:
              A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-github"
+            text: "Get Started"
+            link: "/docs/get-started/?utm_source=gads-github"
           features:
               - title: Pulumi IaC
                 description: |

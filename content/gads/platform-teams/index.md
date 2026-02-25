@@ -22,8 +22,8 @@ key_features_above:
             Write policies in TypeScript, Python, or Go to define what teams can provision, then let them self-service within boundaries
           image: "/images/product/pulumi-iac-code.png"
           button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
+            text: "Get Started"
+            link: "/docs/get-started/?utm_source=gads-platform-teams"
           features:
               - title: Empower developers with guardrails
                 description: |
@@ -137,8 +137,8 @@ key_features:
                 outputs:
                   kubeconfig: ${cluster.kubeconfig}
           button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
+            text: "Get Started"
+            link: "/docs/get-started/?utm_source=gads-platform-teams"
           features:
               - title: Native cloud providers
                 description: |
@@ -156,8 +156,8 @@ key_features:
             Version, review, test, and deploy infrastructure code through the same tools and processes used for your application code.
           image: "/images/product/pulumi-cicd.png"
           button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
+            text: "Get Started"
+            link: "/docs/get-started/?utm_source=gads-platform-teams"
           features:
               - title: Version and review
                 description: |
@@ -192,8 +192,8 @@ key_features_below:
              A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
+            text: "Get Started"
+            link: "/docs/get-started/?utm_source=gads-platform-teams"
           features:
               - title: Pulumi IaC
                 description: |
