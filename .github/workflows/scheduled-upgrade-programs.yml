@@ -45,10 +45,22 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
+
+      - name: Check out the code
+        uses: actions/checkout@v6
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+
       - name: Install Node.js
         uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+          cache-dependency-path: |
+            yarn.lock
+            infrastructure/yarn.lock
+            theme/yarn.lock
+            theme/stencil/yarn.lock
 
       - name: Install Python
         uses: actions/setup-python@v6
@@ -79,11 +91,6 @@ jobs:
 
       - name: Install Pulumi
         uses: pulumi/actions@v6
-
-      - name: Check out the code
-        uses: actions/checkout@v6
-        with:
-          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v5
