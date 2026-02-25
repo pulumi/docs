@@ -8,11 +8,15 @@ const fs = require("fs");
 
 // Internal domain for separating internal vs external broken links
 const INTERNAL_DOMAIN = "pulumi.com";
+// CDN subdomains serve binary downloads, not documentation, and the link checker
+// cannot reliably handle CDN redirects for binary files.
+const CDN_SUBDOMAINS = ["get.pulumi.com"];
 
 // Helper function to check if a URL is an internal Pulumi link
 function isInternalLink(url) {
     try {
         const urlObj = new URL(url);
+        if (CDN_SUBDOMAINS.includes(urlObj.hostname)) return false;
         return urlObj.hostname === INTERNAL_DOMAIN || urlObj.hostname.endsWith(`.${INTERNAL_DOMAIN}`);
     } catch {
         return false;
