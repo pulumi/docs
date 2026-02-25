@@ -24,12 +24,6 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '24.x'
-          cache: 'yarn'
-          cache-dependency-path: |
-            yarn.lock
-            infrastructure/yarn.lock
-            theme/yarn.lock
-            theme/stencil/yarn.lock
 
       - uses: actions/setup-go@v6
         with:
