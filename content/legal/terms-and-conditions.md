@@ -7,11 +7,9 @@ menu:
         weight: 3
 ---
 
-## TERMS OF SERVICE
-
 ### 1. GENERAL TERMS
 
-1. Your use of the Pulumi Services is governed by these Terms of Service (the "**Terms**"). "**Pulumi**" means Pulumi Corporation, located at Two Union Square, 601 Union St., Suite 1415, Seattle, WA 98101, and its subsidiaries or affiliates involved in providing the Pulumi Services. The “**Pulumi Services**” means the services Pulumi makes available through the website found at [https://www.pulumi.com](https://www.pulumi.com/), the Pulumi platform, and any other software or services offered by Pulumi in connection with any of those.
+1. Your use of the Pulumi Services is governed by these Terms and Conditions (the "**Terms**"). "**Pulumi**" means Pulumi Corporation, located at Two Union Square, 601 Union St., Suite 1415, Seattle, WA 98101, and its subsidiaries or affiliates involved in providing the Pulumi Services. The “**Pulumi Services**” means the services Pulumi makes available through the website found at [https://www.pulumi.com](https://www.pulumi.com/), the Pulumi platform, and any other software or services offered by Pulumi in connection with any of those.
 
 2. In order to use the Pulumi Services, you must first agree to the Terms. You can agree to the Terms by actually using the Pulumi Services. You understand and agree that Pulumi will treat your use of the Pulumi Services as acceptance of the Terms from that point onwards.
 
