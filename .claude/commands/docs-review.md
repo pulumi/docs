@@ -1,12 +1,10 @@
 ---
-description: Review content quality while writing or before committing (checks style, accuracy, best practices on open files, branches, or PRs).
+description: Review docs and blog post quality before committing (checks style, accuracy, and Pulumi best practices on open files, branches, or PRs).
 ---
 
-# Documentation Review Command
+# Docs Review Command
 
-**Use this when:** You're writing or editing documentation and want to check quality before committing, or when you want content feedback without the full PR approval workflow.
-
-Reviews documentation changes for style, accuracy, and Pulumi best practices. Works on currently open files (context-sensitive) or on a specific PR number.
+**Use this when:** You're writing or editing documentation and/or blogs and want to check quality before committing, or when you want content feedback without the full PR approval workflow.
 
 ---
 
@@ -14,7 +12,7 @@ Reviews documentation changes for style, accuracy, and Pulumi best practices. Wo
 
 `/docs-review [PR_NUMBER]`
 
-Reviews documentation changes for style, accuracy, and Pulumi best practices.
+Reviews `pulumi/docs` changes for style, accuracy, and Pulumi best practices.
 
 The `PR_NUMBER` argument is optional. If not provided in interactive mode, the command will auto-detect scope from IDE context (open files), uncommitted changes, or branch changes.
 
