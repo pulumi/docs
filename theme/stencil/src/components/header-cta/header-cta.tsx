@@ -44,7 +44,7 @@ export class HeaderCta {
         }
 
         return (
-            <a class={this.buttonClass} data-track="header-signup" data-role="cta-get-started" href="/docs/get-started/" title="Get Started">Get Started</a>
+            <a class={this.buttonClass} data-track="header-signup" data-role="cta-get-started" href="https://app.pulumi.com/signup" title="Get Started">Get Started</a>
         );
     }
 
