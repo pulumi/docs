@@ -81,9 +81,9 @@ You can learn more by going to the [`pulumi refresh` documentation](https://www.
 
 There are some flags you can pass to modify the new behavior:
 
-- `--import-pending-creates` tells Pulumi to import a specific resource that was created during a pending operation. Pass the resource's full URN as one invocation and its cloud provider physical ID as the next invocation. This is equivalent to selecting the `import` option when running in interactive mode, but only for the specified resources.
+- `--import-pending-creates` tells Pulumi to import resources that were created during pending operations. For each resource, pass its full URN as one flag invocation and its cloud provider physical ID as the next. This is equivalent to selecting the `import` option when running in interactive mode, but only for the specified resources.
 - `--clear-pending-creates` will remove any pending CREATEs from the state.
-- `--skip-pending-creates` will skip all pending CREATEs. This is the default behavior when running the CLI outside of interactive more.
+- `--skip-pending-creates` will skip all pending CREATEs. This is the default behavior when running the CLI outside of interactive mode.
 
 These flags can be combined:
 
