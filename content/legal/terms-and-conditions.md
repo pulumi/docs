@@ -6,7 +6,7 @@ menu:
     legal:
         weight: 3
 ---
-Please do not download this document and convert it for purposes of proposing revisions/redlined changes, as the conversion process even using the best PDF-to-Word converters badly mangles the formatting, section numbering, and section breaks.  If you would like an editable version for redlining (and if the support level of your subscription is above the threshold that Pulumi sets for entertaining contract modifications), please contact your Pulumi Account Executive and we will provide one.
+NOTE: Please do not copy this document for purposes of proposing revisions/redlined changes as the conversion process breaks formatting, section numbering, and section breaks. If you would like an editable version for redlining (and if your Pulumi support level permits contract modifications to be considered), please contact your Pulumi Account Executive.
 
 ### 1. GENERAL TERMS
 
