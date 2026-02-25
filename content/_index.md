@@ -8,10 +8,6 @@ hero:
   title: [ "Modern Infrastructure as Code,", "Now with Agentic AI." ]
   description: |
     The cloud infrastructure platform engineers love and enterprises trust. Any cloud, any language. Secure and governed by default.
-  cta_text: Get Started
-  cta_link: /docs/get-started
-  secondary_cta_text: Contact Us
-  secondary_cta_link: /contact
 
 pillars:
     items:

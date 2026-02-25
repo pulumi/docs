@@ -1,6 +1,13 @@
 {{/*
   CTA Get Started Button Partial
 
+  Uses site-wide CTA configuration from config.yml:
+    params:
+      cta:
+        primary:
+          label: "Get Started"
+          href: "/docs/get-started/"
+
   Usage:
     {{ partial "cta-get-started" (dict "class" "btn-primary" "style" "width:fit-content") }}
 
@@ -11,5 +18,7 @@
 
 {{ $class := .class | default "btn-primary" }}
 {{ $style := .style | default "" }}
+{{ $label := site.Params.cta.primary.label | default "Get Started" }}
+{{ $href := site.Params.cta.primary.href | default "/docs/get-started/" }}
 
-<a href="/docs/get-started/" class="{{ $class }}" data-role="cta-get-started"{{ with $style }} style="{{ . }}"{{ end }}>Get Started</a>
+<a href="{{ $href }}" class="{{ $class }}" data-role="cta-get-started"{{ with $style }} style="{{ . }}"{{ end }}>{{ $label }}</a>

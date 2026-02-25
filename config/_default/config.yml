@@ -85,6 +85,15 @@ markup:
       xhtml: false
 
 params:
+    # CTA configuration
+    cta:
+        primary:
+            label: "Get Started"
+            href: "/docs/get-started/"
+        secondary:
+            label: "Contact Us"
+            href: "/contact/"
+
     canonicalURL: https://www.pulumi.com
     contentRepositoryURL: https://github.com/pulumi/docs
     contentRepositoryBaseBranch: master
