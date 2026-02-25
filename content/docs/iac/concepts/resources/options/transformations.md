@@ -27,7 +27,156 @@ Transforms support modifying child resources of packaged components (such as tho
 See [Migrating from Transformations to Transforms](#migrating-from-transformations-to-transforms) below for guidance on how to migrate from Transformations to Transforms.
 {{% /notes %}}
 
-This example looks for all VPC and Subnet resources inside of a component’s child hierarchy and adds an option to ignore any changes for tags properties (perhaps because we manage all VPC and Subnet tags outside of Pulumi):
+The following example defines a `MyVpcComponent` component resource that creates an AWS VPC and subnet as child resources, then applies a transformation to ignore tag changes on those resources.
+
+First, define the component resource:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+class MyVpcComponent extends pulumi.ComponentResource {
+    constructor(name: string, opts?: pulumi.ComponentResourceOptions) {
+        super("custom:index:MyVpcComponent", name, {}, opts);
+
+        const vpc = new aws.ec2.Vpc(`${name}-vpc`, {
+            cidrBlock: "10.0.0.0/16",
+        }, { parent: this });
+
+        const subnet = new aws.ec2.Subnet(`${name}-subnet`, {
+            vpcId: vpc.id,
+            cidrBlock: "10.0.1.0/24",
+        }, { parent: this });
+
+        this.registerOutputs({});
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+class MyVpcComponent(pulumi.ComponentResource):
+    def __init__(self, name: str, opts: pulumi.ResourceOptions | None = None):
+        super().__init__("custom:index:MyVpcComponent", name, {}, opts)
+
+        vpc = aws.ec2.Vpc(f"{name}-vpc",
+            cidr_block="10.0.0.0/16",
+            opts=pulumi.ResourceOptions(parent=self))
+
+        aws.ec2.Subnet(f"{name}-subnet",
+            vpc_id=vpc.id,
+            cidr_block="10.0.1.0/24",
+            opts=pulumi.ResourceOptions(parent=self))
+
+        self.register_outputs({})
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+type MyVpcComponent struct {
+    pulumi.ResourceState
+}
+
+func NewMyVpcComponent(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOption) (*MyVpcComponent, error) {
+    component := &MyVpcComponent{}
+    err := ctx.RegisterComponentResource("custom:index:MyVpcComponent", name, component, opts...)
+    if err != nil {
+        return nil, err
+    }
+
+    vpc, err := ec2.NewVpc(ctx, name+"-vpc", &ec2.VpcArgs{
+        CidrBlock: pulumi.String("10.0.0.0/16"),
+    }, pulumi.Parent(component))
+    if err != nil {
+        return nil, err
+    }
+
+    _, err = ec2.NewSubnet(ctx, name+"-subnet", &ec2.SubnetArgs{
+        VpcId:     vpc.ID(),
+        CidrBlock: pulumi.String("10.0.1.0/24"),
+    }, pulumi.Parent(component))
+    if err != nil {
+        return nil, err
+    }
+
+    if err := ctx.RegisterResourceOutputs(component, pulumi.Map{}); err != nil {
+        return nil, err
+    }
+
+    return component, nil
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+public class MyVpcComponent : Pulumi.ComponentResource
+{
+    public MyVpcComponent(string name, ComponentResourceOptions? opts = null)
+        : base("custom:index:MyVpcComponent", name, opts)
+    {
+        var vpc = new Vpc($"{name}-vpc", new VpcArgs
+        {
+            CidrBlock = "10.0.0.0/16",
+        }, new CustomResourceOptions { Parent = this });
+
+        var subnet = new Subnet($"{name}-subnet", new SubnetArgs
+        {
+            VpcId = vpc.Id,
+            CidrBlock = "10.0.1.0/24",
+        }, new CustomResourceOptions { Parent = this });
+
+        this.RegisterOutputs();
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+public class MyVpcComponent extends ComponentResource {
+    public MyVpcComponent(String name, ComponentResourceOptions opts) {
+        super("custom:index:MyVpcComponent", name, opts);
+
+        var vpc = new Vpc(name + "-vpc", VpcArgs.builder()
+            .cidrBlock("10.0.0.0/16")
+            .build(),
+            CustomResourceOptions.builder()
+                .parent(this)
+                .build());
+
+        var subnet = new Subnet(name + "-subnet", SubnetArgs.builder()
+            .vpcId(vpc.id())
+            .cidrBlock("10.0.1.0/24")
+            .build(),
+            CustomResourceOptions.builder()
+                .parent(this)
+                .build());
+
+        this.registerOutputs();
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+# Pulumi YAML does not support transformations
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+With the component defined, the following transformation finds all VPC and Subnet resources inside the component's child hierarchy and adds an option to ignore any changes for tags properties (perhaps because we manage all VPC and Subnet tags outside of Pulumi):
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -39,8 +188,8 @@ const vpc = new MyVpcComponent("vpc", {}, {
         if (args.type === "aws:ec2/vpc:Vpc" || args.type === "aws:ec2/subnet:Subnet") {
             return {
                 props: args.props,
-                opts: pulumi.mergeOptions(args.opts, { ignoreChanges: ["tags"] })
-            }
+                opts: pulumi.mergeOptions(args.opts, { ignoreChanges: ["tags"] }),
+            };
         }
         return undefined;
     }],
@@ -70,13 +219,16 @@ transformation := func(args *pulumi.ResourceTransformationArgs) *pulumi.Resource
     if args.Type == "aws:ec2/vpc:Vpc" || args.Type == "aws:ec2/subnet:Subnet" {
         return &pulumi.ResourceTransformationResult{
             Props: args.Props,
-            Opts:  append(args.Opts, pulumi.IgnoreChanges([]string{"tags"}))
+            Opts:  append(args.Opts, pulumi.IgnoreChanges([]string{"tags"})),
         }
     }
     return nil
 }
 
-vpc := MyVpcComponent("vpc", pulumi.Transformations([]pulumi.ResourceTransformation{transformation}))
+vpc, err := NewMyVpcComponent(ctx, "vpc", pulumi.Transformations([]pulumi.ResourceTransformation{transformation}))
+if err != nil {
+    return err
+}
 ```
 
 {{% /choosable %}}
