@@ -54,6 +54,7 @@ tiers:
                   - Audit logs
                   - Drift detection and remediation
                   - Time-to-live stacks
+                  - Customer Managed Keys
                   - Priority feature requests
                   - 12x5 Enterprise Support available
             - title: Business Critical
@@ -391,6 +392,13 @@ comparison_table:
                   - content: _check
               - title: Database Secrets Rotation in private networks
                 link: /blog/esc-db-secrets-rotation-launch/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Customer Managed Keys
+                link: /docs/esc/administration/customer-managed-keys/
                 items:
                   - content: _blank
                   - content: _blank
