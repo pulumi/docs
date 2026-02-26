@@ -145,7 +145,7 @@ if (config.marketingPortalStack) {
                         ],
                         "Principal": {
                             "AWS": roleArn,
-                            },
+                        },
                         "Effect": "Allow",
                         "Resource": bucketArn,
                     },
@@ -203,7 +203,8 @@ const bundlesBucketWebsite = new aws.s3.BucketWebsiteConfiguration("bundles-buck
 // https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html
 if (config.makeFallbackBucket) {
     const fallbackBucket = new aws.s3.Bucket(
-        "fallback-bucket", {
+        "fallback-bucket",
+        {
             bucket: config.websiteDomain,
             acl: aws.s3.CannedAcl.PublicRead,
         },
@@ -213,7 +214,8 @@ if (config.makeFallbackBucket) {
     );
 
     const fallbackBucketWebsite = new aws.s3.BucketWebsiteConfiguration(
-        "fallback-bucket-website", {
+        "fallback-bucket-website",
+        {
             bucket: fallbackBucket.id,
             indexDocument: {
                 suffix: "index.html",
@@ -248,7 +250,7 @@ const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
                     },
                 },
             ],
-    })),
+        })),
 });
 
 // websiteLogsBucket stores the request logs for incoming requests.
@@ -775,6 +777,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             cachePolicyId: cachingDisabledId,
             lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            // unset defaultTtl and maxTtl: the caching disabled policy will reset these to zero.
+            defaultTtl: 0,
+            maxTtl: 0,
         },
         {
             ...baseCacheBehavior,
@@ -789,6 +794,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             cachePolicyId: cachingDisabledId,
             lambdaFunctionAssociations: config.doAIAnswersRewrites ? [getAIAnswersRewriteAssociation()] : [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            // unset defaultTtl and maxTtl: the caching disabled policy will reset these to zero.
+            defaultTtl: 0,
+            maxTtl: 0,
         },
 
         // Copilot app
@@ -806,6 +814,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
             responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
+            // unset defaultTtl and maxTtl: the caching disabled policy will reset these to zero.
+            defaultTtl: 0,
+            maxTtl: 0,
         },
         {
             ...baseCacheBehavior,
@@ -821,6 +832,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
             responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
+            // unset defaultTtl and maxTtl: the caching disabled policy will reset these to zero.
+            defaultTtl: 0,
+            maxTtl: 0,
         }
     ],
 
@@ -869,7 +883,7 @@ const cdn = new aws.cloudfront.Distribution(
     distributionArgs,
     {
         protect: true,
-        dependsOn: [ websiteLogsBucket ],
+        dependsOn: [websiteLogsBucket],
     },
 );
 
@@ -905,7 +919,7 @@ if (config.cdnLogDeliverySourceName) {
 
 // Split a domain name into its subdomain and parent domain names.
 // e.g. "www.example.com" => "www", "example.com".
-function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomain: string} {
+function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomain: string } {
     const parts = domain.split(".");
     if (parts.length < 2) {
         throw new Error(`No TLD found on ${domain}`);
