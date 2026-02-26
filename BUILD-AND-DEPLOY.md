@@ -1949,38 +1949,11 @@ Is the file managed by Hugo?
 
 Production CloudFront distribution applies security headers via response headers policy:
 
-```typescript
-const securityHeaders = new aws.cloudfront.ResponseHeadersPolicy("security-headers", {
-    securityHeadersConfig: {
-        strictTransportSecurity: {
-            accessControlMaxAgeSec: 31536000,
-            includeSubdomains: true,
-            override: true
-        },
-        frameOptions: {
-            frameOption: "DENY",
-            override: true
-        },
-        xssProtection: {
-            modeBlock: true,
-            protection: true,
-            override: true
-        },
-        contentTypeOptions: {
-            override: true
-        },
-        referrerPolicy: {
-            referrerPolicy: "strict-origin-when-cross-origin",
-            override: true
-        }
-    }
-});
-```
-
 **Headers Applied:**
 
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains`
-- `X-Frame-Options: DENY`
+- `X-Frame-Options: DENY` (production) or `SAMEORIGIN` (testing/Copilot)
+- `Content-Security-Policy: frame-ancestors 'self' *.learnworlds.com`
 - `X-XSS-Protection: 1; mode=block`
 - `X-Content-Type-Options: nosniff`
 - `Referrer-Policy: strict-origin-when-cross-origin`
