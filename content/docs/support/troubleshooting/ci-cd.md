@@ -75,7 +75,7 @@ beforehand using the `pulumi stack init` command and in the **appropriate organi
 
   For example, for a stack named `production`, the `Pulumi.production.yaml` file must exist alongside the `Pulumi.yaml`.
   If your Pulumi app is in a different folder, you can use the `--cwd` flag with almost every `pulumi` command.
-  Learn more about the [global flags](/docs/cli/commands/#options).
+  Learn more about the [global flags](/docs/iac/cli/commands/pulumi/#options).
 
 ### Installing the Pulumi CLI
 

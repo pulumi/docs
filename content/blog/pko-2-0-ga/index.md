@@ -14,6 +14,9 @@ tags:
   - releases
   - features
 
+aliases:
+  - /blog/pulumi-kubernetes-operator-2-0-ga/
+
 social:
     twitter: "The GA release of Pulumi Kubernetes Operator 2.0 is here! Enhanced logging control, improved observability, and smarter workspace management make infrastructure automation easier than ever. Get started today!"
     linkedin: "Announcing Pulumi Kubernetes Operator 2.0 GA: Now with enhanced logging control, richer controller events, and flexible workspace management. Experience enterprise-grade infrastructure automation with improved observability and resource management in your Kubernetes clusters."

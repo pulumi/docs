@@ -74,6 +74,13 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{matrix.nodeversion}}
+          cache: 'yarn'
+          cache-dependency-path: |
+            docs/yarn.lock
+            docs/infrastructure/yarn.lock
+            docs/theme/yarn.lock
+            docs/theme/stencil/yarn.lock
+            pulumi/sdk/nodejs/yarn.lock
       - name: Install python
         uses: actions/setup-python@v6
         with:
