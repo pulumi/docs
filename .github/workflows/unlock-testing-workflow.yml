@@ -1,0 +1,16 @@
+name: Unlock testing workflow
+on:
+  schedule:
+    - cron: '50 5 * * *'  # 5:50 AM UTC, 10 minutes before nightly testing deploy
+  workflow_dispatch: null
+permissions:
+  actions: write
+jobs:
+  unlock:
+    name: Re-enable testing workflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable testing-build-and-deploy workflow
+        run: gh workflow enable testing-build-and-deploy.yml --repo ${{ github.repository }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
