@@ -7,7 +7,8 @@
     {{ $utm_source := .Params.utm_source | default "" }}
     {{ $cta_href := site.Params.cta.primary.href }}
     {{ if $utm_source }}
-        {{ $cta_href = printf "%s?utm_source=%s" site.Params.cta.primary.href $utm_source }}
+        {{ $separator := cond (strings.Contains $cta_href "?") "&" "?" }}
+        {{ $cta_href = printf "%s%sutm_source=%s" $cta_href $separator $utm_source }}
     {{ end }}
 
     <section id="overview" class="my-8 relative">

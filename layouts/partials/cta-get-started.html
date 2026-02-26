@@ -25,7 +25,8 @@
 {{ $utm_source := .utm_source | default "" }}
 {{ $href := $baseHref }}
 {{ if $utm_source }}
-    {{ $href = printf "%s?utm_source=%s" $baseHref $utm_source }}
+    {{ $separator := cond (strings.Contains $baseHref "?") "&" "?" }}
+    {{ $href = printf "%s%sutm_source=%s" $baseHref $separator $utm_source }}
 {{ end }}
 
 <a href="{{ $href }}" class="{{ $class }}" data-role="cta-get-started"{{ with $style }} style="{{ . }}"{{ end }}>{{ $label }}</a>

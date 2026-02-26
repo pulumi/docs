@@ -56,8 +56,10 @@
                                     <div class="text-center text-xs text-gray-700">{{ $tier.note | markdownify }}</div>
                                 </div>
                                 {{ if eq $index 0 }}
+                                    {{ $individualHref := site.Params.cta.primary.href }}
+                                    {{ $separator := cond (strings.Contains $individualHref "?") "&" "?" }}
                                     <div class="flex flex-wrap flex-col justify-center align-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="{{ site.Params.cta.primary.href }}?utm_source=individual" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
+                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="{{ $individualHref }}{{ $separator }}utm_source=individual" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
                                     </div>
                                 {{ else if eq $index 1 }}
                                     <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
