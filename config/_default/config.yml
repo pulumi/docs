@@ -92,7 +92,7 @@ params:
             href: "https://app.pulumi.com/signup"
         secondary:
             label: "Contact Sales"
-            href: "/contact/form=sales"
+            href: "/contact/?form=sales"
 
     canonicalURL: https://www.pulumi.com
     contentRepositoryURL: https://github.com/pulumi/docs
