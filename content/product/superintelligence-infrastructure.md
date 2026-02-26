@@ -150,9 +150,7 @@ learn:
           description: |
             Join Snowflake, Supabase, BMW, and leading AI companies managing production-ready infrastructure at massive scale with code, not static configuration.
           buttons:
-            - link: /docs/get-started/
-              type: primary
-              action: Get Started
+            - type: primary
             - link: /enterprise/
               type: secondary
               action: Explore Pulumi for Enterprises

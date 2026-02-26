@@ -163,7 +163,11 @@
                         </div>
                         <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
                             {{ range $button := $item.buttons }}
+                            {{ if eq $button.type "primary" }}
+                            <a href="{{ site.Params.cta.primary.href }}" class="btn-primary" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
+                            {{ else }}
                             <a href="{{ $button.link }}" class="btn-{{ $button.type }}">{{ $button.action }}</a>
+                            {{ end }}
                             {{ end }}
                         </div>
                     </div>
