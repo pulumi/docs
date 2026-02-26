@@ -21,9 +21,9 @@ tags:
 
 Insights provides two complementary capabilities that together form a governance lifecycle for your cloud infrastructure.
 
-**Discovery** scans cloud accounts across AWS, Azure, GCP, and more to catalog every resource regardless of how it was provisioned: Pulumi, Terraform, CloudFormation, or manual creation. Once cataloged, you can search, filter, group, and [export](/docs/insights/discovery/data-export/) your resource data. You can also [import](/docs/insights/discovery/visual-import/) unmanaged resources into Pulumi to bring them under IaC management.
+**Discovery** scans cloud accounts across [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/), [GCP](https://cloud.google.com/), and more to catalog every resource regardless of how it was provisioned: Pulumi, [Terraform](https://www.terraform.io/), [CloudFormation](https://aws.amazon.com/cloudformation/), or manual creation. Once cataloged, you can search, filter, group, and [export](/docs/insights/discovery/data-export/) your resource data. You can also [import](/docs/insights/discovery/visual-import/) unmanaged resources into Pulumi to bring them under IaC management.
 
-**Policy** enforces compliance with policy-as-code written in TypeScript or Python. Pulumi ships [pre-built compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) for CIS, NIST, PCI DSS, HITRUST, and other frameworks so you can start evaluating without writing any code. [Audit policy groups](/docs/insights/policy/policy-groups/#audit-policy-groups) continuously evaluate all discovered resources and IaC stacks, while preventative policies block non-compliant deployments before they reach production.
+**Policy** enforces compliance with policy-as-code written in [TypeScript](https://www.typescriptlang.org/) or [Python](https://www.python.org/). Pulumi ships [pre-built compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) for CIS, NIST, PCI DSS, HITRUST, and other frameworks so you can start evaluating without writing any code. [Audit policy groups](/docs/insights/policy/policy-groups/#audit-policy-groups) continuously evaluate all discovered resources and IaC stacks, while preventative policies block non-compliant deployments before they reach production.
 
 This enables you to map out your cloud estate, evaluate compliance, and then remediate any issues uncovered by policy.
 
@@ -34,7 +34,7 @@ Running Insights on your own infrastructure with [customer-managed workflow runn
 - **Data residency**: Scan execution and policy evaluation run entirely within your private network.
 - **Private infrastructure access**: Scan resources in VPCs and environments that are not accessible from the public internet.
 - **Compliance**: Cloud provider credentials can stay internal to your network, meeting regulatory requirements for credential handling.
-- **Flexible hosting**: Run workflow runners on any environment that meets your needs, including Linux, macOS, Docker, and Kubernetes.
+- **Flexible hosting**: Run workflow runners on any environment that meets your needs, including Linux, macOS, [Docker](https://www.docker.com/), and [Kubernetes](https://kubernetes.io/).
 
 ## How it works
 
