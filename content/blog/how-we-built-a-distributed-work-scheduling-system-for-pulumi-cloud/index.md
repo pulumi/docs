@@ -1,7 +1,7 @@
 ---
 title: "How We Built a Distributed Work Scheduling System for Pulumi Cloud"
 allow_long_title: true
-date: 2026-02-24
+date: 2026-02-26
 draft: false
 meta_desc: "A look inside the distributed scheduling system that powers Pulumi Cloud's workflow runners across hosted and self-managed infrastructure."
 meta_image: meta.png
