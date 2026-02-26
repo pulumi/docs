@@ -55,7 +55,7 @@ To pin an environment to a specific version, append a version tag or revision nu
 ```yaml
 # Pulumi.dev.yaml
 environment:
-  - myapp/dev@production
+  - myapp/common@production
   - myapp/dev@7
 ```
 
