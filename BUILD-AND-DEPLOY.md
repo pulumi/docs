@@ -414,6 +414,13 @@ make new-example-program
 | `new-template` | Create new template |
 | `new-example-program` | Create new example program |
 
+#### Testing Environment (pulumi-test.io)
+
+| Target | Description |
+|--------|-------------|
+| `deploy_testing` | Trigger a deploy to pulumi-test.io and disable the workflow to prevent overwrite. Accepts optional `TESTING_BRANCH` variable (defaults to `master`). |
+| `unlock_testing` | Re-enable the testing workflow for nightly automation. |
+
 ### Build Scripts
 
 All scripts are located in `scripts/`.
