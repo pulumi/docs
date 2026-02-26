@@ -89,6 +89,7 @@ params:
     cta:
         primary:
             label: "Try Pulumi Cloud for Free"
+            label_short: "Sign Up"
             href: "https://app.pulumi.com/signup"
         secondary:
             label: "Contact Sales"
