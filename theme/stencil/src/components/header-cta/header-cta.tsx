@@ -14,7 +14,7 @@ export class HeaderCta {
     href = "https://app.pulumi.com/signup";
 
     @Prop()
-    label = "Get Started";
+    label = "Sign Up";
 
     @State()
     loading = true;
