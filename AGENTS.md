@@ -27,13 +27,13 @@ Do not substitute other tools or commands, or change `package.json` to use pnpm 
 
 ## Testing environment (pulumi-test.io)
 
-The testing workflow (`testing-build-and-deploy.yml`) runs on a nightly schedule. To deploy a specific branch and prevent automated runs from overwriting it while you test:
+pulumi-test.io is a staging environment for testing production-like deployments, including automation, GitHub integration, and infrastructure provisioning. Use it to validate changes that could impact production before deploying to the live site.
 
 - Deploy and lock: `make deploy_testing` (deploys `master` by default)
 - Deploy a specific branch: `make deploy_testing TESTING_BRANCH=your-branch-name`
 - Unlock (re-enable nightly automation): `make unlock_testing`
 
-Requires the `gh` CLI to be installed and authenticated (`gh auth login`).
+Requires the `gh` CLI to be installed and a user with appropriate permissions authenticated (`gh auth login`).
 
 ---
 
