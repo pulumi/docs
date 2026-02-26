@@ -49,10 +49,24 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
+
+      - name: Check out the code
+        uses: actions/checkout@v6
+
+      - name: Fetch master branch
+        if: github.ref != 'refs/heads/master'
+        run: git fetch origin master:master
+
       - name: Install Node.js
         uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+          cache-dependency-path: |
+            yarn.lock
+            infrastructure/yarn.lock
+            theme/yarn.lock
+            theme/stencil/yarn.lock
 
       - name: Install Python
         uses: actions/setup-python@v6
@@ -85,13 +99,6 @@ jobs:
         uses: pulumi/actions@v6
         with:
           pulumi-version: latest
-
-      - name: Check out the code
-        uses: actions/checkout@v6
-
-      - name: Fetch master branch
-        if: github.ref != 'refs/heads/master'
-        run: git fetch origin master:master
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v5
