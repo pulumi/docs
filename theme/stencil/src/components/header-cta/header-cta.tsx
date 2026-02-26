@@ -10,6 +10,12 @@ export class HeaderCta {
     @Prop()
     buttonClass = "";
 
+    @Prop()
+    href = "https://app.pulumi.com/signup";
+
+    @Prop()
+    label = "Get Started";
+
     @State()
     loading = true;
 
@@ -44,7 +50,7 @@ export class HeaderCta {
         }
 
         return (
-            <a class={this.buttonClass} data-track="header-signup" data-role="cta-get-started" href="https://app.pulumi.com/signup" title="Get Started">Get Started</a>
+            <a class={this.buttonClass} data-track="header-signup" data-role="cta-get-started" href={this.href} title={this.label}>{this.label}</a>
         );
     }
 
