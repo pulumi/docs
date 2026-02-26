@@ -58,14 +58,19 @@ Once you tag a revision, you can use the tag to [open](/docs/esc/environments/wo
 $ esc open myorg/test@prod
 ```
 
-You can specify the tagged version when importing the environment. This helps you ensure that you are importing a stable environment version that is not affected by changes.
+You can also pin to a tagged version when importing an environment. This ensures you are using a known, fixed version that is not affected by subsequent changes to the source environment.
+
+To pin an import in an ESC environment definition, append `@tag` to the environment name in the `imports` list:
 
 ```yaml
-# Importing in another ESC Environment
+# myorg/myapp/dev
 imports:
   - test@prod
+```
 
-# Importing in Pulumi stack Config
+To pin an environment used by a Pulumi IaC stack, append `@tag` to the environment name in your stack configuration file:
+
+```yaml
 # Pulumi.dev.yaml
 environment:
   - test@prod

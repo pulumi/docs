@@ -50,6 +50,17 @@ environment:
   - myapp/dev
 ```
 
+To pin an environment to a specific version, append a version tag or revision number with `@`. This ensures your stack uses a known, fixed version that is not affected by subsequent changes to the source environment:
+
+```yaml
+# Pulumi.dev.yaml
+environment:
+  - myapp/common@production
+  - myapp/dev@7
+```
+
+See [Environment versioning](/docs/esc/environments/versioning/) for more details on tagging and pinning versions.
+
 Values are accessible using the standard [configuration API](/docs/concepts/config/#code):
 
 ```typescript
