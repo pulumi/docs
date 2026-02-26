@@ -54,6 +54,18 @@ environment:
   - my-project/dev
 ```
 
+{{< notes type="info" >}}
+**Pin imports to a specific version.** By default, Pulumi uses the `@latest` tag of each environment (always the most recent revision). To ensure your stack uses a known, fixed version, append a version tag or revision number with `@`:
+
+```yaml
+environment:
+  - my-project/common@production
+  - my-project/dev@3
+```
+
+This prevents unexpected changes when someone updates the source environment. Learn more in [Environment versioning](/docs/esc/environments/versioning/).
+{{< /notes >}}
+
 ### Step 2: Define configuration in your ESC environment
 
 ESC environments are YAML documents that you can edit using the CLI or Pulumi Cloud console. Use the CLI to edit your environment:
