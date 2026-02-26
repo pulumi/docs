@@ -433,6 +433,12 @@ function newSecurityHeadersPolicy(name: string, frameOption: string) {
                 frameOption,
                 override: false,
             },
+            contentSecurityPolicy: {
+                // Allow embedding from LearnWorlds (LMS). X-Frame-Options is ignored by modern
+                // browsers when frame-ancestors is present in CSP.
+                contentSecurityPolicy: "frame-ancestors 'self' *.learnworlds.com",
+                override: false,
+            },
             // These remaining options are derived from:
             // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
             // "SecurityHeadersPolicy" with ID "67f7725c-6f97-4210-82d7-5512b31e9d03"
