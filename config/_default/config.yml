@@ -88,7 +88,7 @@ params:
     # CTA configuration
     cta:
         primary:
-            label: "Get Started"
+            label: "Try Pulumi Cloud for Free"
             href: "https://app.pulumi.com/signup"
         secondary:
             label: "Contact Sales"
