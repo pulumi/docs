@@ -12,6 +12,7 @@ tags:
     - pulumi-cloud
     - features
     - engineering
+    - insights
 schema_type: auto
 
 ---
