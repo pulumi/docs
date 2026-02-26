@@ -11,7 +11,7 @@ menu:
     weight: 6
 ---
 
-The Pulumi ESC CLI includes a [`run` command](/docs/esc-cli/commands/esc_run/) that allows you to run commands with Pulumi ESC managed environment variables, without exporting them to your shell.
+The Pulumi ESC CLI includes a [`run` command](/docs/esc/cli/commands/esc_run/) that allows you to run commands with Pulumi ESC managed environment variables, without exporting them to your shell.
 
 You can run `esc run` using an environment:
 
