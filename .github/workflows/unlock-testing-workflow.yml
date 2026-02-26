@@ -1,7 +1,7 @@
 name: Unlock testing workflow
 on:
   schedule:
-    - cron: '50 5 * * *'  # 5:50 AM UTC, 10 minutes before nightly testing deploy
+    - cron: '0 6 * * *'  # 6 AM UTC = 2 AM ET / 11 PM PT
   workflow_dispatch: null
 permissions:
   actions: write
