@@ -47,6 +47,7 @@ For all content files (docs, blogs, tutorials, etc.):
 - **Includes**: Use Hugo shortcodes for shared content, never raw Markdown copy-paste.  
 - **Naming**: Use lowercase for non-proper nouns (e.g. “stack,” not “Stack”).  
 - **Ordered Lists**: Every item begins with `1.` to minimize diff noise.
+- **Diagrams**: Prefer Mermaid diagrams over ASCII art. The site renders Mermaid natively via a Hugo code block hook (`layouts/_default/_markup/render-codeblock-mermaid.html`). Use ` ```mermaid ` fenced code blocks. See [Mermaid docs](https://mermaid.js.org/) for syntax.
 - **Spelling/Grammar**: Always correct errors. Use American English spelling.
 
 ---
