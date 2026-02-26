@@ -25,6 +25,18 @@ Do not substitute other tools or commands, or change `package.json` to use pnpm 
 
 ---
 
+## Testing environment (pulumi-test.io)
+
+The testing workflow (`testing-build-and-deploy.yml`) runs on a nightly schedule. To deploy a specific branch and prevent automated runs from overwriting it while you test:
+
+- Deploy and lock: `make deploy_testing` (deploys `master` by default)
+- Deploy a specific branch: `make deploy_testing TESTING_BRANCH=your-branch-name`
+- Unlock (re-enable nightly automation): `make unlock_testing`
+
+Requires the `gh` CLI to be installed and authenticated (`gh auth login`).
+
+---
+
 ## Code & Content Rules
 
 For all content files, follow `STYLE-GUIDE.md`. If a rule is not covered there, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style). Do not invent new style conventions; ask for clarification if something is ambiguous.

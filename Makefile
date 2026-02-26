@@ -176,3 +176,22 @@ deploy-dev-stack:
 .PHONY: destroy-dev-stack
 destroy-dev-stack:
 	./scripts/destroy-dev-stack.sh
+
+TESTING_BRANCH ?= master
+
+.PHONY: deploy_testing
+deploy_testing:
+	@command -v gh > /dev/null 2>&1 || (echo "Error: gh CLI is not installed. See https://cli.github.com" && exit 1)
+	@gh auth status > /dev/null 2>&1 || (echo "Error: gh CLI is not authenticated. Run 'gh auth login' first." && exit 1)
+	@echo "Deploying branch '$(TESTING_BRANCH)' to pulumi-test.io..."
+	gh workflow run testing-build-and-deploy.yml --ref $(TESTING_BRANCH)
+	gh workflow disable testing-build-and-deploy.yml
+	@echo "Deployment triggered. Workflow disabled — pulumi-test.io will not be auto-overwritten."
+	@echo "Run 'make unlock_testing' when you are done testing."
+
+.PHONY: unlock_testing
+unlock_testing:
+	@command -v gh > /dev/null 2>&1 || (echo "Error: gh CLI is not installed. See https://cli.github.com" && exit 1)
+	@gh auth status > /dev/null 2>&1 || (echo "Error: gh CLI is not authenticated. Run 'gh auth login' first." && exit 1)
+	gh workflow enable testing-build-and-deploy.yml
+	@echo "Testing workflow re-enabled."

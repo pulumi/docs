@@ -1,9 +1,8 @@
 name: Build and deploy testing
 on:
   workflow_dispatch: null
-  push:
-    branches:
-      - master
+  schedule:
+    - cron: '0 6 * * *'   # 6 AM UTC = 2 AM ET / 11 PM PT
 permissions:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout
