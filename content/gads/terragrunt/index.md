@@ -21,9 +21,6 @@ key_features_above:
           description:
             Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Built-in support for stacks, configuration, and environments eliminates the need for wrapper tools.
           image: "/images/product/pulumi-iac-code.png"
-          button:
-            text: "Get Started"
-            link: "/docs/get-started/?utm_source=gads-terragrunt"
           features:
               - title: Native stack management
                 description: |
@@ -299,9 +296,6 @@ key_features:
                 outputs:
                   vpcId: ${vpc.id}
                   instanceId: ${webInstance.id}
-          button:
-            text: "Get Started"
-            link: "/docs/get-started/?utm_source=gads-terragrunt"
           features:
               - title: Native multi-environment support
                 description: |
@@ -318,9 +312,6 @@ key_features:
           description: |
             Create reusable infrastructure components using real programming language features like functions, classes, and packages. Share components across teams through standard package managers.
           image: "/images/product/pulumi-cicd.png"
-          button:
-            text: "Get Started"
-            link: "/docs/get-started/?utm_source=gads-terragrunt"
           features:
               - title: True code reusability
                 description: |
@@ -354,9 +345,6 @@ key_features_below:
           description: |
              A fully-managed service for Pulumi IaC that provides everything Terragrunt adds to Terraform, but natively integrated. Manage state, secrets, team collaboration, and compliance without wrapper tools or complex configurations.
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
-          button:
-            text: "Get Started"
-            link: "/docs/get-started/?utm_source=gads-terragrunt"
           features:
               - title: Pulumi IaC
                 description: |

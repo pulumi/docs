@@ -50,9 +50,6 @@ key_features_above:
                       });
                     }
                 }
-          button:
-            text: "Get Started"
-            link: "/docs/get-started/?utm_source=gads-azure"
         
 key_features:
     title: Key features
@@ -152,9 +149,6 @@ key_features:
                     sku=azure_native.storage.SkuArgs(
                         name="Standard_LRS",
                     ))
-          button:
-            text: "Get Started"
-            link: "/docs/get-started/?utm_source=gads-azure"
           features:
               - title: 100% API Coverage
                 description: |
@@ -171,9 +165,6 @@ key_features:
           description: |
             Version, review, test, and deploy infrastructure code through the same tools and processes used for your application code.
           image: "/images/product/pulumi-cicd.png"
-          button:
-            text: "Get Started"
-            link: "/docs/get-started/?utm_source=gads-azure"
           features:
               - title: Version and review
                 description: |
@@ -207,9 +198,6 @@ key_features_below:
           description: |
              A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
-          button:
-            text: "Get Started"
-            link: "/docs/get-started/?utm_source=gads-azure"
           features:
               - title: Pulumi IaC
                 description: |

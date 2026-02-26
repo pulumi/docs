@@ -119,7 +119,7 @@
                     {{ end }}
                 </div>
                 <div class="pt-8 text-center">
-                    <a href="{{ $feature.button.link }}" class="btn-secondary block sm:inline">{{ $feature.button.text }}</a>
+                    <a href="{{ site.Params.cta.primary.href }}" class="btn-secondary block sm:inline" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
                 </div>
             </div>
         {{ end }}
@@ -165,7 +165,7 @@
                     </div>
                 </div>
                 <div class="pt-8">
-                    <a href="{{ $item.button.link }}" class="btn-secondary block sm:inline">{{ $item.button.text }}</a>
+                    <a href="{{ site.Params.cta.primary.href }}" class="btn-secondary block sm:inline" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
                 </div>
             </div>
         {{ end }}
@@ -240,7 +240,7 @@
                     </div>
                 </div>
                 <div class="pt-8">
-                    <a href="{{ $item.button.link }}" class="btn-secondary block sm:inline">{{ $item.button.text }}</a>
+                    <a href="{{ site.Params.cta.primary.href }}" class="btn-secondary block sm:inline" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
                 </div>
             </div>
         {{ end }}
