@@ -777,7 +777,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             cachePolicyId: cachingDisabledId,
             lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-            // unset defaultTtl and maxTtl: the caching disabled policy will reset these to zero.
+            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
             defaultTtl: 0,
             maxTtl: 0,
         },
@@ -794,7 +794,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             cachePolicyId: cachingDisabledId,
             lambdaFunctionAssociations: config.doAIAnswersRewrites ? [getAIAnswersRewriteAssociation()] : [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-            // unset defaultTtl and maxTtl: the caching disabled policy will reset these to zero.
+            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
             defaultTtl: 0,
             maxTtl: 0,
         },
@@ -814,7 +814,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
             responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
-            // unset defaultTtl and maxTtl: the caching disabled policy will reset these to zero.
+            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
             defaultTtl: 0,
             maxTtl: 0,
         },
@@ -832,7 +832,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
             responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
-            // unset defaultTtl and maxTtl: the caching disabled policy will reset these to zero.
+            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
             defaultTtl: 0,
             maxTtl: 0,
         }
