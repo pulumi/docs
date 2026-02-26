@@ -10,15 +10,22 @@
 
   Usage:
     {{ partial "cta-get-started" (dict "class" "btn-primary" "style" "width:fit-content") }}
+    {{ partial "cta-get-started" (dict "class" "btn-primary" "utm_source" "gads-terraform") }}
 
   Parameters:
     - class: CSS class for the button (default: "btn-primary")
     - style: Optional inline style
+    - utm_source: Optional UTM source parameter to append to the URL
 */}}
 
 {{ $class := .class | default "btn-primary" }}
 {{ $style := .style | default "" }}
 {{ $label := site.Params.cta.primary.label | default "Get Started" }}
-{{ $href := site.Params.cta.primary.href | default "/docs/get-started/" }}
+{{ $baseHref := site.Params.cta.primary.href | default "/docs/get-started/" }}
+{{ $utm_source := .utm_source | default "" }}
+{{ $href := $baseHref }}
+{{ if $utm_source }}
+    {{ $href = printf "%s?utm_source=%s" $baseHref $utm_source }}
+{{ end }}
 
 <a href="{{ $href }}" class="{{ $class }}" data-role="cta-get-started"{{ with $style }} style="{{ . }}"{{ end }}>{{ $label }}</a>

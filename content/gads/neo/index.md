@@ -4,6 +4,7 @@ layout: gads-neo
 aliases:
     - /gads/neo
 block_external_search_index: true
+utm_source: gads-neo
 
 heading: Pulumi Neo
 subheading: |
