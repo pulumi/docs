@@ -102,9 +102,113 @@ Plugins are deployed through two approaches:
 
 For more details about Pulumi plugin architecture and how to contribute to plugin development, see the [Pulumi Developer Documentation](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/plugins.html).
 
+## Plugin configuration file
+
+Directory-based plugins use a `PulumiPlugin.yaml` file to configure how the plugin runs. This file is similar to [`Pulumi.yaml`](/docs/iac/concepts/projects/project-file/) but is specifically for plugin configuration rather than program configuration. The plugin file must begin with a capital `P` and have an extension of either `.yml` or `.yaml`.
+
+This configuration file is primarily used when developing custom components or providers that will be distributed as plugins. Most Pulumi users working with standard programs will not need to create or modify a `PulumiPlugin.yaml` file.
+
+### Attributes
+
+| Name | Required | Description | Options |
+| - | - | - | - |
+| `runtime` | required | Installed language runtime used to run the plugin: `nodejs`, `python`, `go`, `dotnet`, `java` or `yaml`. | [runtime options](#plugin-runtime-options) |
+| `packages` | optional | Additional packages to be used in the plugin. | Same as [`Pulumi.yaml` packages](/docs/iac/concepts/projects/project-file/#packages-options) |
+| `requiredPulumiVersion` | optional | The version range of the Pulumi CLI this plugin requires. | Same as [`Pulumi.yaml` requiredPulumiVersion](/docs/iac/concepts/projects/project-file/#requiredpulumiversion-options) |
+
+### Plugin runtime options
+
+The runtime attribute can be specified as a simple string or as an object with additional options. Not all runtime options from [`Pulumi.yaml`](/docs/iac/concepts/projects/project-file/#runtime-options) are supported for plugins.
+
+#### Simple runtime specification
+
+```yaml
+runtime: nodejs
+```
+
+#### Runtime with options
+
+```yaml
+runtime:
+  name: nodejs
+  options:
+    packagemanager: yarn
+```
+
+#### Node.js runtime options
+
+| Option | Description |
+| - | - |
+| `nodeargs` | Arguments to pass to `node` when running the plugin. |
+| `packagemanager` | Package manager to use for installing dependencies: `npm` (default), `pnpm`, `yarn` or `bun`. |
+
+#### Python runtime options
+
+| Option | Description |
+| - | - |
+| `toolchain` | Toolchain to use for managing virtual environments: `pip` (default), `poetry` or `uv`. |
+| `virtualenv` | Virtual environment path (only applies with `pip` or `uv` toolchain). |
+
+#### Go runtime options
+
+Go plugins do not currently support any runtime options.
+
+#### .NET runtime options
+
+| Option | Description |
+| - | - |
+| `binary` | Path to a pre-built executable. |
+| `use-executor` | Override the `dotnet` binary path (e.g., `dotnet.exe`, `/opt/homebrew/bin/dotnet`) to use when running the plugin. |
+
+#### Java runtime options
+
+| Option | Description |
+| - | - |
+| `binary` | Path to a pre-built executable. |
+| `use-executor` | Override how Java is run. This can be set to build tools like `gradle`, `mvn`, etc. See the [Java executors](https://github.com/pulumi/pulumi-java/blob/main/pkg/internal/executors/executor.go) for available options. |
+
+#### YAML runtime options
+
+YAML plugins do not currently support any runtime options.
+
+### Example plugin files
+
+#### Minimal Node.js plugin
+
+```yaml
+runtime: nodejs
+```
+
+#### Python plugin with virtual environment
+
+```yaml
+runtime:
+  name: python
+  options:
+    toolchain: uv
+    virtualenv: venv
+```
+
+#### .NET plugin with custom binary path
+
+```yaml
+runtime:
+  name: dotnet
+  options:
+    use-executor: /opt/homebrew/bin/dotnet
+```
+
+#### Plugin with packages and version requirements
+
+```yaml
+runtime: nodejs
+packages:
+  aws: "6.0.0"
+  kubernetes: "4.0.0"
+requiredPulumiVersion: ">=3.100.0"
+```
+
 ## Related topics
 
 - [Providers](/docs/iac/concepts/providers/) - Learn more about resource plugins (providers)
 - [How Pulumi works](/docs/iac/concepts/how-pulumi-works/) - Understand how plugins fit into Pulumi's architecture
-- [Policy as Code](/docs/insights/policy/) - Learn about analyzer plugins for policy enforcement
-- [Conversion tools](/docs/iac/guides/migration/converters/) - Use converter plugins to migrate from other IaC tools
