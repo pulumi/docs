@@ -33,3 +33,4 @@ docs/iac/using-pulumi/crossguard/core-concepts/index.html|/docs/insights/policy/
 blog/pulumi-kubernetes-operator-2-0-ga/index.html|/blog/pko-2-0-ga/
 registry/packages/pinecone/api-docs/pineconeindex/index.html|/registry/packages/pinecone/
 docs/reference/pkg/dotnet/pulumi/pulumi.html|/docs/reference/pkg/dotnet/Pulumi/Pulumi.html
+docs/iac/clouds/aws/guides/more/index.html|/docs/iac/clouds/aws/guides/
