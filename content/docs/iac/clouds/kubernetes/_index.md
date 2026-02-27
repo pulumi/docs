@@ -50,7 +50,7 @@ convert:
   - display_name: Convert Kubernetes YAML manifests to Pulumi
     url: /kube2pulumi/
   - display_name: Generate types in Pulumi for Custom Resources
-    url: /blog/introducing-crd2pulumi/
+    url: /docs/iac/clouds/kubernetes/crd2pulumi/
 templates:
 - display_name: Kubernetes cluster on AWS
   url: kubernetes/aws/

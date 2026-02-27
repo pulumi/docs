@@ -10,7 +10,7 @@ menu:
     name: Guides
     parent: kubernetes-clouds
     identifier: kubernetes-clouds-guides
-    weight: 5
+    weight: 30
 aliases:
 - /docs/guides/k8s-the-prod-way/app
 - /docs/guides/k8s-the-prod-way/architecture
