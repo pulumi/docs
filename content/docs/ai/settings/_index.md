@@ -69,6 +69,31 @@ When you ask Neo to create resources, it automatically applies your organization
 - Update instructions as your team's practices evolve
 - Test instructions in individual prompts before rolling out broadly
 
+### Bootstrapping repository instructions
+
+Neo reads `AGENTS.md` files when it enters a repository, but it needs to clone the repository first. To ensure Neo picks up your repository instructions early in every task, add a bootstrapping instruction to your Custom Instructions:
+
+```text
+When working on a task, immediately clone the associated repository
+and look for an AGENTS.md file. Follow any setup instructions it
+contains before proceeding with the task.
+
+If your task involves loading additional repositories, do the same
+for those repositories as well.
+```
+
+This ensures that environment setup, git hooks, and coding standards defined in `AGENTS.md` are applied before Neo starts working.
+
+## Configuration precedence
+
+Neo applies configuration in layers, with later layers taking priority:
+
+1. **Custom Instructions** set organization-wide defaults that apply to every task
+1. **Repository instructions** (`AGENTS.md`) add project-specific conventions when Neo enters a repository
+1. **Conversation instructions** override both when you give Neo direct guidance in a task
+
+This layering means you can set broad standards in Custom Instructions, refine them per-repository in `AGENTS.md`, and override anything for a specific task in the conversation.
+
 ## Repository Instructions
 
 While Custom Instructions apply to all tasks across your organization, you can also define project-specific instructions that Neo follows when working in a particular repository. This is done through an `AGENTS.md` file placed in your repository.
@@ -77,6 +102,13 @@ While Custom Instructions apply to all tasks across your organization, you can a
 
 When Neo enters a repository, it automatically reads the `AGENTS.md` file and applies the instructions without being asked. This makes project-specific conventions explicit and consistent across all tasks in that codebase.
 
+Common uses for `AGENTS.md` include:
+
+- **Build and test commands**: How to install dependencies, run tests, and lint
+- **Environment setup**: Required tool versions, environment variables, and runtime configuration
+- **Git hooks**: Hook paths and setup commands that must run before committing
+- **Coding standards**: Language preferences, naming conventions, and style requirements
+
 Use `AGENTS.md` to capture conventions that aren't enforced by linters or formatters: coding standards, naming conventions, how to run tests, or any other guidance your team needs.
 
 ### Example
@@ -84,20 +116,23 @@ Use `AGENTS.md` to capture conventions that aren't enforced by linters or format
 ```markdown
 # Project Instructions
 
+## Environment setup
+- Run `git config core.hooksPath .githooks` to enable git hooks
+- Tool requirements: Node.js 20+, Python 3.11+
+
 ## Build commands
 - Install dependencies: `npm install`
 - Run tests: `npm test`
 - Lint code: `npm run lint`
 
+## Git hooks
+Pre-commit and pre-push hooks are located in `.githooks/`.
+Always run `git config core.hooksPath .githooks` before committing.
+
 ## Coding standards
 - Use TypeScript for all new files
 - Prefer async/await over callbacks
 - All exported functions must have JSDoc comments
-
-## Naming conventions
-- React components: PascalCase (e.g., `UserProfile.tsx`)
-- Utility functions: camelCase (e.g., `formatDate.ts`)
-- Test files: `*.test.ts` suffix
 ```
 
 ### Subdirectory support
