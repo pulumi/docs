@@ -102,11 +102,11 @@ Plugins are deployed through two approaches:
 
 For more details about Pulumi plugin architecture and how to contribute to plugin development, see the [Pulumi Developer Documentation](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/plugins.html).
 
-## Plugin configuration file
+## PulumiPlugin.yaml reference
 
-Directory-based plugins use a `PulumiPlugin.yaml` file to configure how the plugin runs. This file is similar to [`Pulumi.yaml`](/docs/iac/concepts/projects/project-file/) but is specifically for plugin configuration rather than program configuration. The plugin file must begin with a capital `P` and have an extension of either `.yml` or `.yaml`.
+Directory-based plugins use a `PulumiPlugin.yaml` file to configure how the plugin runs. This file is similar to [`Pulumi.yaml`](/docs/iac/concepts/projects/project-file/) but is specifically for plugin configuration rather than program configuration. The filename is case-sensitive: it must be exactly `PulumiPlugin.yaml` or `PulumiPlugin.yml`.
 
-This configuration file is primarily used when developing custom components or providers that will be distributed as plugins. Most Pulumi users working with standard programs will not need to create or modify a `PulumiPlugin.yaml` file.
+Use this configuration file when developing custom components or providers to distribute as plugins. Most Pulumi users working with standard programs will not need to create or modify a `PulumiPlugin.yaml` file.
 
 ### Attributes
 
@@ -118,7 +118,7 @@ This configuration file is primarily used when developing custom components or p
 
 ### Plugin runtime options
 
-The runtime attribute can be specified as a simple string or as an object with additional options. Not all runtime options from [`Pulumi.yaml`](/docs/iac/concepts/projects/project-file/#runtime-options) are supported for plugins.
+The runtime attribute can be specified as a simple string or as an object with additional options. When using the object form, `name` is required and takes the same values as the string form. Not all runtime options from [`Pulumi.yaml`](/docs/iac/concepts/projects/project-file/#runtime-options) are supported for plugins.
 
 #### Simple runtime specification
 
@@ -151,7 +151,7 @@ runtime:
 
 #### Go runtime options
 
-Go plugins do not currently support any runtime options.
+Go plugins do not support any runtime options.
 
 #### .NET runtime options
 
@@ -169,15 +169,9 @@ Go plugins do not currently support any runtime options.
 
 #### YAML runtime options
 
-YAML plugins do not currently support any runtime options.
+YAML plugins do not support any runtime options.
 
 ### Example plugin files
-
-#### Minimal Node.js plugin
-
-```yaml
-runtime: nodejs
-```
 
 #### Python plugin with virtual environment
 
@@ -198,13 +192,10 @@ runtime:
     use-executor: /opt/homebrew/bin/dotnet
 ```
 
-#### Plugin with packages and version requirements
+#### Plugin with version requirement
 
 ```yaml
 runtime: nodejs
-packages:
-  aws: "6.0.0"
-  kubernetes: "4.0.0"
 requiredPulumiVersion: ">=3.100.0"
 ```
 
