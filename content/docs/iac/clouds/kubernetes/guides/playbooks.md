@@ -1,7 +1,6 @@
 ---
-title_tag: "Crosswalk Playbooks for Kubernetes"
-meta_desc: The Pulumi Crosswalk Playbooks for Kubernetes is a collection of
-           industry standard best-practices for managing Kubernetes in production.
+title_tag: "Kubernetes Playbooks"
+meta_desc: The Kubernetes playbooks are a collection of industry standard best-practices for managing Kubernetes in production.
 title: Playbooks
 h1: Kubernetes playbooks
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
@@ -16,12 +15,8 @@ aliases:
   - /docs/clouds/kubernetes/guides/playbooks/
 ---
 
-<a href="./">
-    <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
-</a>
-
-The [Pulumi Crosswalk Playbooks for Kubernetes][cw-guides] is a collection of
-industry standard best-practices for managing Kubernetes,
+The Kubernetes playbooks are a collection of
+industry standard best-practices for managing Kubernetes
 and its infrastructure in production.
 
 These guides are for provisioning and configuring production-grade Kubernetes
@@ -159,5 +154,4 @@ Deploy applications and workloads into the cluster.
 [crosswalk-apps]: /docs/clouds/kubernetes/guides/apps/
 [crosswalk-update-worker-nodes]: /docs/clouds/kubernetes/guides/update-worker-nodes/
 [least-privileged]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
-[cw-guides]: /docs/clouds/kubernetes/guides/playbooks/
 <!-- markdownlint-enable url -->

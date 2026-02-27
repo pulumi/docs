@@ -329,10 +329,4 @@ contact_us_form:
     section_id: contact
     hubspot_form_id: 30017141-1093-4b94-b0eb-20aabc08447b
     headline: Want a demo?
-    quote:
-        title: See why the world’s best engineering teams use Pulumi + Kubernetes to enable true collaboration between developers and operators.
-        name: Fernando Carletti
-        name_title: Head of DevOps, Credijusto
-        content: |
-            Pulumi enables our teams to deploy, scale and manage Kubernetes clusters in a fraction of the time that it took them previously, by giving them the ability to work with the languages they already know, bypassing YAML and unwieldy DSLs. It helps bring together application and infrastructure developers by eliminating silos and reducing friction in their workflows and interactions. We're excited that Pulumi Crosswalk for Kubernetes will simplify our infrastructure provisioning even further, advancing application lifecycle management throughout our organization.
 ---
