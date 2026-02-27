@@ -86,7 +86,7 @@ For organizations with access to Pulumi Neo, you can select multiple issues and 
 
 For each issue, you can set:
 
-- **Status:** Open, In Progress, Fixed, or Ignored
+- **Status:** Open, In Progress, or Ignored
 - **Priority:** P0 (critical) through P4 (low)
 - **Assignment:** Assign to specific team members in your organization
 
