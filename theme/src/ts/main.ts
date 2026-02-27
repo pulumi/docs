@@ -22,9 +22,11 @@ import "./toc";
 import "./docs-main";
 import "./redirects";
 import "./algolia/autocomplete";
-import "./terraform-compare";
 import "./external-links";
 import "./neo-mode";
+
+import "./experiments/terraform-compare";
+import "./experiments/cta-activations-direct-vs-docs";
 
 // Register all Stencil components.
 defineCustomElements();
