@@ -14,7 +14,7 @@ menu:
 
 Neo can be configured at both the organization and repository level. Organization-level settings control default behaviors and capabilities for your team, while repository-level instructions let you define project-specific conventions that Neo follows automatically.
 
-## Neo Access
+## Neo access
 
 Neo is enabled by default. To control Neo access for your organization:
 
@@ -28,7 +28,7 @@ Neo is enabled by default. To control Neo access for your organization:
 If Pulumi Copilot was previously disabled, Neo will need to be enabled as outlined below.
 {{% /notes %}}
 
-## Custom Instructions
+## Custom instructions
 
 Custom Instructions teach Neo your organization's standards, preferences, and requirements so they're applied automatically to every task. Instead of repeating context in each task, you define it once from a central location.
 
@@ -92,13 +92,13 @@ Neo applies configuration in layers, with later layers taking priority:
 
 This layering means you can set broad standards in Custom Instructions, refine them per-repository in `AGENTS.md`, and override anything for a specific task in the conversation.
 
-## Repository Instructions
+## Repository instructions
 
 While Custom Instructions apply to all tasks across your organization, you can also define project-specific instructions that Neo follows when working in a particular repository. This is done through an `AGENTS.md` file placed in your repository.
 
 ### How it works
 
-When Neo enters a repository, it reads the `AGENTS.md` file into context. This makes project-specific conventions explicit and consistent across all tasks in that codebase.
+When Neo enters a repository, it reads the `AGENTS.md` file and follows the instructions it contains. This makes project-specific conventions explicit and consistent across all tasks in that codebase.
 
 Common uses for `AGENTS.md` include:
 
@@ -144,7 +144,7 @@ You can place `AGENTS.md` files in subdirectories for more specific instructions
 - Keep instructions actionable and specific
 - Review and update as your project's practices evolve
 
-## Slash Commands
+## Slash commands
 
 Slash Commands capture proven prompts as shortcuts that anyone on your team can use. When you type `/` in a Neo conversation, you'll see available commands. Selecting a command sends the full prompt to Neo.
 
@@ -184,7 +184,7 @@ When you have selected a slash command in a new or existing Neo task, click on t
 - Create commands for frequently-used prompts that have proven effective
 - Use clear, descriptive names that indicate what the command does
 
-## Task Modes
+## Task modes
 
 Task modes are presets that control what actions Neo can take automatically. Each mode represents a predefined configuration of allowed commands. New tasks start with a default mode, which users can adjust or override during the task.
 
