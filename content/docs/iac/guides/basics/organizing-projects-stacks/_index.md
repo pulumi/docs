@@ -291,7 +291,7 @@ To be clear, each of the applications/services inside our monorepo (including th
 
 ### Other examples
 
-See also the use of multiple projects and stacks in [Crosswalk for Kubernetes](/docs/clouds/kubernetes/guides/), which contains a tutorial, reference architecture, and collection of prod-first code examples that demonstrate industry best-practices for using Kubernetes in contexts where an organization of people must ship production applications.
+See also the use of multiple projects and stacks in the [Kubernetes guides](/docs/clouds/kubernetes/guides/), which contains a reference architecture and collection of examples demonstrating best-practices for managing Kubernetes with a team.
 
 ## Organizing your project code
 

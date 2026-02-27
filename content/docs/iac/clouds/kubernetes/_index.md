@@ -69,7 +69,7 @@ guides:
   - display_name: Introductory Video
     url: https://www.youtube.com/watch?v=2P8JLgAc5QI
     external_link: true
-  - display_name: Crosswalk playbooks for Kubernetes
+  - display_name: Kubernetes playbooks
     url: guides/playbooks/
   - display_name: Control plane
     url: guides/control-plane/
