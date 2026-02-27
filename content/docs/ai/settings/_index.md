@@ -32,7 +32,7 @@ If Pulumi Copilot was previously disabled, Neo will need to be enabled as outlin
 
 Custom Instructions teach Neo your organization's standards, preferences, and requirements so they're applied automatically to every task. Instead of repeating context in each task, you define it once from a central location.
 
-### What to Include
+### What to include
 
 Custom Instructions can define many things, including:
 
@@ -54,7 +54,7 @@ All AWS resources must follow these standards:
 
 When you ask Neo to create resources, it automatically applies your organization's standards without you needing to repeat them in every conversation.
 
-### Configuring Custom Instructions
+### Configuring custom instructions
 
 1. Navigate to Neo Settings in Pulumi Cloud
 1. Select the "Organization instructions" tab
@@ -63,7 +63,7 @@ When you ask Neo to create resources, it automatically applies your organization
 
 ![Custom Instructions configuration](custom-instructions.png)
 
-### Custom Instructions Best Practices
+### Custom instructions best practices
 
 - Keep instructions concise and focused on standards that apply across all tasks
 - Update instructions as your team's practices evolve
@@ -75,11 +75,9 @@ Neo reads `AGENTS.md` files when it enters a repository, but it needs to clone t
 
 ```text
 When working on a task, immediately clone the associated repository
-and look for an AGENTS.md file. Follow any setup instructions it
-contains before proceeding with the task.
-
-If your task involves loading additional repositories, do the same
-for those repositories as well.
+(and any additional repositories involved) and look for an AGENTS.md
+file. Follow any setup instructions it contains before proceeding
+with the task.
 ```
 
 This ensures that environment setup, git hooks, and coding standards defined in `AGENTS.md` are applied before Neo starts working.
@@ -100,7 +98,7 @@ While Custom Instructions apply to all tasks across your organization, you can a
 
 ### How it works
 
-When Neo enters a repository, it automatically reads the `AGENTS.md` file and applies the instructions without being asked. This makes project-specific conventions explicit and consistent across all tasks in that codebase.
+When Neo enters a repository, it reads the `AGENTS.md` file into context. This makes project-specific conventions explicit and consistent across all tasks in that codebase.
 
 Common uses for `AGENTS.md` include:
 
@@ -150,7 +148,7 @@ You can place `AGENTS.md` files in subdirectories for more specific instructions
 
 Slash Commands capture proven prompts as shortcuts that anyone on your team can use. When you type `/` in a Neo conversation, you'll see available commands. Selecting a command sends the full prompt to Neo.
 
-### Built-in Commands
+### Built-in commands
 
 Neo includes several built-in commands for common infrastructure tasks:
 
@@ -161,7 +159,7 @@ Neo includes several built-in commands for common infrastructure tasks:
 | `/component-version-report` | Lists components that are outdated in your private registry |
 | `/provider-version-report` | Lists providers that are outdated |
 
-### Creating Custom Commands
+### Creating custom commands
 
 You can create organization-specific commands to capture your team's proven prompts:
 
@@ -177,11 +175,11 @@ You can create organization-specific commands to capture your team's proven prom
 
 Once saved, the command is immediately available to all team members.
 
-### Viewing Slash Command Instructions
+### Viewing slash command instructions
 
 When you have selected a slash command in a new or existing Neo task, click on the highlighted command name to view the actual prompt.
 
-### Slash Command Best Practices
+### Slash command best practices
 
 - Create commands for frequently-used prompts that have proven effective
 - Use clear, descriptive names that indicate what the command does
@@ -190,7 +188,7 @@ When you have selected a slash command in a new or existing Neo task, click on t
 
 Task modes are presets that control what actions Neo can take automatically. Each mode represents a predefined configuration of allowed commands. New tasks start with a default mode, which users can adjust or override during the task.
 
-### Available Modes
+### Available modes
 
 Organization administrators can set the default task mode. The available modes determine how much automation Neo applies:
 
@@ -198,7 +196,7 @@ Organization administrators can set the default task mode. The available modes d
 - **Balanced mode**: Automatically approves requests that don't run `pulumi up`
 - **Review mode**: Requires manual approval before any request runs
 
-### Configuring Default Task Mode
+### Configuring default task mode
 
 1. Navigate to Neo Settings in Pulumi Cloud
 1. Select the "General" tab
@@ -208,7 +206,7 @@ Organization administrators can set the default task mode. The available modes d
 
 ![Task mode configuration](task-mode.png)
 
-### Task Mode Best Practices
+### Task mode best practices
 
 - Start with the most restrictive mode -- it's best for most organizations
 - Remember, users can override the default for individual tasks when needed
