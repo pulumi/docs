@@ -1,7 +1,7 @@
 ---
 title: "Pulumi IAM Expands: Manage Access at Scale with Tags, Roles, and Teams"
 allow_long_title: true
-date: 2026-03-02T00:00:00-08:00
+date: 2026-03-09T00:00:00-08:00
 draft: false
 meta_desc: "Pulumi IAM introduces tag-based access control and role assignments for teams and users, enabling least-privilege access management at scale."
 meta_image: "meta.png"
