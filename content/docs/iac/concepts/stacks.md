@@ -687,8 +687,9 @@ Stack references support the following methods for reading outputs from the refe
   `undefined` (or `None` in Python) if the output does not exist. Use this only when the
   absence of an output is an expected and explicitly handled condition in your program.
 * `getOutputDetails` returns an `OutputDetails` object that provides direct access to the output
-  value. This is useful when you need the raw value in your program's logic rather than an
-  `Output` wrapper.
+  value, bypassing the `Output` wrapper. This is most useful when you need the raw value for
+  use in your program's logic, or when you need to distinguish between a non-secret output
+  (available as `.value`) and a secret output (available as `.secretValue`).
 
 The following example uses `requireOutput`, the recommended method for reading stack reference
 outputs. It reads a `vpcId` export and fails immediately at deployment time if that output is
@@ -832,28 +833,26 @@ BucketObject logFile = new BucketObject("log", new BucketObjectArgs.Builder()
 
 {{< /chooser >}}
 
-On the other hand, as an example of using **`getOutputDetails`**,
-suppose that your referenced stack creates a VPC
-and exports a list of public subnets as a JSON-serialized string,
-and you want to add a bastion host to each subnet.
-With `getOutputDetails`, this would look something like this:
+`getOutputDetails` is useful when you need direct access to a resolved output value.
+This is most helpful when you want to inspect whether a value is marked as a secret, or when
+you need to use the value in your program logic without calling `Output.apply()`. The method
+returns an `OutputDetails` object whose `value` field holds the raw value for non-secret
+outputs, and whose `secretValue` field holds the raw value for outputs the referenced stack
+has marked as secret.
+
+As an example, suppose your referenced stack exports a database hostname as a plain string:
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-const infra: StackReference = new pulumi.StackReference(...);
-const subnetsJSON: StackReferenceOutputDetails = await infra.getOutputDetails("subnets");
-const subnets = JSON.parse(subnetsJSON.value);
-for (let i = 0; i < subnets.length; i++) {
-    const subnet = subnets[i];
-    const host = new aws.ec2.Instance(`bastion-${i}`, {
-        // ...
-        subnetId: subnet.id,
-    });
-    // ...
-}
+const infra = new pulumi.StackReference("acmecorp/infra/prod");
+const dbHostDetails = await infra.getOutputDetails("dbHost");
+
+// For non-secret outputs, the value is in .value.
+// For outputs marked as secret in the referenced stack, use .secretValue instead.
+const dbHost = dbHostDetails.value as string;
 ```
 
 Note that your Pulumi program must export a top-level `async` function
@@ -878,62 +877,41 @@ if you need this functionality.
 {{% /notes %}}
 
 <!-- ```python -->
-<!-- infra = StackReference(...) -->
-<!-- subnets_json = await infra.get_output_details("subnets") -->
-<!-- subnets = json.loads(subnets_json.value) -->
-<!-- for i, subnet in enumerate(subnets): -->
-<!--     host = aws.ec2.Instance(f"bastion-{i}", { -->
-<!--         # ... -->
-<!--         subnet_id: subnet["id"], -->
-<!--     }) -->
-<!--     # ... -->
+<!-- infra = StackReference("acmecorp/infra/prod") -->
+<!-- db_host_details = await infra.get_output_details("dbHost") -->
+<!-- # For non-secret outputs, the value is in .value. -->
+<!-- # For outputs marked as secret, use .secret_value instead. -->
+<!-- db_host = db_host_details.value -->
 <!-- ``` -->
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-infra, err := pulumi.NewStackReference(ctx, ...)
+infra, err := pulumi.NewStackReference(ctx, "acmecorp/infra/prod", nil)
 if err != nil {
     return err
 }
-subnetsJSON, err := infra.GetOutputDetails("subnets")
+dbHostDetails, err := infra.GetOutputDetails("dbHost")
 if err != nil {
-    return err
-}
-var subnets []struct{ ID string `json:"id"` }
-if err := json.Unmarshal([]byte(subnetsJSON.Value.(string)), &subnets); err != nil {
     return err
 }
 
-for i, subnet := range subnets {
-    host, err := ec2.NewInstance(ctx, fmt.Sprintf("bastion-%d", i), &ec2.InstanceArgs{
-        // ...
-        SubnetId: pulumi.String(subnet.ID),
-    })
-    if err != nil {
-        return err
-    }
-    // ...
-}
+// For non-secret outputs, the value is in .Value.
+// For outputs marked as secret in the referenced stack, use .SecretValue instead.
+dbHost := dbHostDetails.Value.(string)
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-var infra = new StackReference(...);
-var subnetsJSON = await infra.GetOutputDetailsAsync("subnets");
-var subnets = JsonConvert.DeserializeObject<Subnet[]>((string)subnetsJSON.Value);
-for (int i = 0; i < subnets.Length; i++) {
-    var subnet = subnets[i];
-    var host = new Aws.Ec2.Instance($"bastion-{i}", new Aws.Ec2.InstanceArgs
-    {
-        // ...
-        SubnetId = subnet.Id,
-    });
-    // ...
-}
+var infra = new StackReference("acmecorp/infra/prod");
+var dbHostDetails = await infra.GetOutputDetailsAsync("dbHost");
+
+// For non-secret outputs, the value is in .Value.
+// For outputs marked as secret in the referenced stack, use .SecretValue instead.
+var dbHost = (string)dbHostDetails.Value;
 ```
 
 Note that your Pulumi program must be inside an `async` function
@@ -951,18 +929,13 @@ return await Deployment.RunAsync(async () =>
 {{% choosable language java %}}
 
 ```java
-StackReferenceOutputDetails subnetsJSON = infra.outputDetails("subnets");
-infra.outputDetailsAsync("subnets").thenAccept(subnetsJSON -> {
-    Subnet[] subnets = new Gson().fromJson((String)subnetsJSON.getValue().get(), Subnet[].class);
-    for (int i = 0; i < subnets.length; i++) {
-        Subnet subnet = subnets[i];
-        Instance host = new Instance(String.format("bastion-%d", i), new InstanceArgs.Builder()
-            // ...
-            .subnetId(subnet.getId())
-            .build());
-        // ...
-    }
-})
+StackReference infra = new StackReference("acmecorp/infra/prod");
+infra.outputDetailsAsync("dbHost").thenAccept(dbHostDetails -> {
+    // For non-secret outputs, the value is in getValue().
+    // For outputs marked as secret in the referenced stack, use getSecretValue() instead.
+    String dbHost = (String) dbHostDetails.getValue().get();
+    // ...
+});
 ```
 
 {{% /choosable %}}
