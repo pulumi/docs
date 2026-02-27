@@ -193,9 +193,10 @@ config:
 
 {{< /chooser >}}
 
-To access a namespaced configuration value, such as one set for a provider library like `aws`, you must pass the library's name to the constructor. The examples below assume the value has already been set in your stack's configuration file (e.g., `Pulumi.dev.yaml`) — either by running `pulumi config set aws:region us-west-2` at the command line, or by adding it to the file directly:
+To access a namespaced configuration value, such as one set for a provider library like `aws`, you must pass the library's name to the constructor. The examples below assume the value has already been set in your stack's configuration file (e.g., `Pulumi.dev.yaml`) — either by running `pulumi config set aws:region us-west-2` from the command line, or by adding it to the file directly:
 
 ```yaml
+# Pulumi.dev.yaml
 config:
   aws:region: us-west-2
 ```
