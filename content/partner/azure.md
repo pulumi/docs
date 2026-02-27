@@ -25,13 +25,13 @@ hero:
                 using Pulumi.AzureNative.Resources;
                 using Pulumi.AzureNative.Storage;
                 using Pulumi.AzureNative.Storage.Inputs;
-    
+
                 class MyStack : Stack
                 {
                     public MyStack()
                     {
                         var resourceGroup = new ResourceGroup("resourceGroup");
-    
+
                         var storageAccount = new StorageAccount("sa", new StorageAccountArgs
                         {
                             ResourceGroupName = resourceGroup.Name,
@@ -156,8 +156,8 @@ azure_overview:
     - Increase your productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate all of your Azure resources.
     - Keep your cloud secure and in compliance by enforcing policies on every deployment.
     - Codify best practices and policies, then share them with your team or community as self-service architectures.
-  cta: Try Pulumi Cloud for FREE
-  cta_url: "https://app.pulumi.com/signup"
+  cta: Get Started
+  cta_url: "/docs/iac/get-started/azure/"
 
 arm2pulumi:
   title: ARM &rarr; Pulumi
@@ -190,7 +190,7 @@ detail_sections:
           icon: security
           icon_color: salmon
           description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
-    
+
         - title: Multi Cloud
           icon: cloud
           icon_color: blue
@@ -205,8 +205,8 @@ detail_sections:
           icon: delivery
           icon_color: violet
           description: You can integrate Pulumi directly with your favorite CI/CD and SCM systems to continuously deliver Azure infrastructure and applications. Improve the velocity and visibility into your deployments from simple to complex global environments.
-    cta: Try Pulumi Cloud for FREE
-    cta_url: "https://app.pulumi.com/signup"
+    cta: Get Started
+    cta_url: "/docs/iac/get-started/azure/"
 
   - title: Always Up to Date
     description: |
@@ -244,8 +244,8 @@ detail_sections:
           icon: testing
           icon_color: violet
           description: Pulumi lets you take advantage of common tools, frameworks, and techniques to unit, integration, and property test your Azure infrastructure. Ensure your infrastructure is correct before and after deployment.
-    cta: Try Pulumi Cloud for FREE
-    cta_url: "https://app.pulumi.com/signup"
+    cta: Get Started
+    cta_url: "/docs/iac/get-started/azure/"
 
 contact_us_form:
     section_id: contact-us

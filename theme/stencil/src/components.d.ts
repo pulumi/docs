@@ -36,6 +36,14 @@ export namespace Components {
           * @default ""
          */
         "buttonClass": string;
+        /**
+          * @default "https://app.pulumi.com/signup"
+         */
+        "href": string;
+        /**
+          * @default "Sign Up"
+         */
+        "label": string;
     }
     interface HomeSlots {
         /**
@@ -790,6 +798,14 @@ declare namespace LocalJSX {
           * @default ""
          */
         "buttonClass"?: string;
+        /**
+          * @default "https://app.pulumi.com/signup"
+         */
+        "href"?: string;
+        /**
+          * @default "Sign Up"
+         */
+        "label"?: string;
     }
     interface HomeSlots {
         /**

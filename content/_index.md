@@ -8,10 +8,6 @@ hero:
   title: [ "Modern Infrastructure as Code,", "Now with Agentic AI." ]
   description: |
     The cloud infrastructure platform engineers love and enterprises trust. Any cloud, any language. Secure and governed by default.
-  cta_text: Try Pulumi Cloud for Free
-  cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
-  secondary_cta_text: Download Open Source
-  secondary_cta_link: /docs/iac/download-install
 
 pillars:
     items:
