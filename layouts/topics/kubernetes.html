@@ -4,7 +4,7 @@
             <h1>
                 <span class="rainbow-text text-6xl leading-normal" data-text="Universal Infrastructure as Code for Kubernetes">Infrastructure Management for Kubernetes</span>
             </h1>
-            
+
         </div>
     </header>
 {{ end }}
@@ -19,8 +19,8 @@
                 <p>{{ .Params.hero.body | markdownify }}</p>
                 <div class="mt-8 flex justify-start items-start">
                     <div class="flex flex-col lg:flex-row items-start">
-                        <a class="btn-primary mr-4" href="{{ relref . "/docs/iac/get-started/kubernetes/" }}">Get Started</a>
-                        <a class="btn-secondary" href="#contact">Request A Demo</a>
+                        <a class="btn-primary mr-4" href="{{ relref . "/docs/iac/get-started/kubernetes/" }}" data-role="cta-get-started">Get Started</a>
+                        <a class="btn-secondary" href="/contact/?form=request-a-demo">Request a Demo</a>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@
             {{ end }}
         </div>
     </section>
-    
+
     <section id="code-example" class="container mx-auto my-16">
         <div class="text-center mb-8">
             <h3>Infrastructure as Code for Kubernetes</h3>
@@ -129,7 +129,7 @@
                             </pulumi-choosable>
                         {{ end }}
                     </pulumi-chooser>
-                    
+
                     <div class="flex justify-center items-center mt-8 h-8">
                         <span title="TypeScript">
                             <svg class="mx-4 h-8 rounded" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -98,8 +98,8 @@
                         {{ .body | markdownify | safeHTML }}
                     </p>
                     <p class="my-8">
-                        <a data-track="cta-{{ .cta.label | urlize }}" class="btn-primary" href="{{ .cta.url }}">
-                            {{ .cta.label }}
+                        <a data-track="cta-get-started" class="btn-primary" href="{{ site.Params.cta.primary.href }}" data-role="cta-get-started">
+                            {{ site.Params.cta.primary.label }}
                         </a>
                     </p>
                 </div>

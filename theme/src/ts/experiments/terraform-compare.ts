@@ -1,6 +1,6 @@
-import { gb } from "../../stencil/src/util/util";
-import { generateOnThisPage } from "./misc";
-import { getQueryVariable } from "./util";
+import { gb } from "../../../stencil/src/util/util";
+import { generateOnThisPage } from "../misc";
+import { getQueryVariable } from "../util";
 
  // Add type declarations for global functions we'll use
 declare global {

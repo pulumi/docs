@@ -14,10 +14,6 @@ hero:
   title: [ "Automate your infrastructure at any scale", "Your Code, Your Cloud, Your Success" ]
   description: |
     Build, manage, and scale your infrastructure, secrets, and configurations in one place.
-  cta_text: Get Started
-  cta_link: /docs/iac/get-started/
-  secondary_cta_text: Talk to a human
-  secondary_cta_link: /contact/?form=sales
 
 code_faster:
   title: Build and ship faster with infrastructure as code
