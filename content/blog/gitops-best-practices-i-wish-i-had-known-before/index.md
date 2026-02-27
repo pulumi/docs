@@ -284,21 +284,58 @@ The [gitops-bridge](https://github.com/gitops-bridge-dev/gitops-bridge) pattern 
 
 Here's how the gitops-bridge looks in practice. Pulumi provisions cloud resources and writes metadata into a ConfigMap that ArgoCD consumes:
 
-```yaml
-# ConfigMap written by Pulumi after provisioning cloud resources
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: cluster-metadata
-  namespace: argocd
-  labels:
-    gitops-bridge: "true"
-data:
-  aws_account_id: "123456789012"
-  cluster_name: "prod-us-east-1"
-  iam_role_arn: "arn:aws:iam::123456789012:role/app-role"
-  oidc_provider: "oidc.eks.us-east-1.amazonaws.com/id/EXAMPLE"
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+
+const clusterMetadata = new k8s.core.v1.ConfigMap("cluster-metadata", {
+    metadata: {
+        name: "cluster-metadata",
+        namespace: "argocd",
+        labels: {
+            "gitops-bridge": "true",
+        },
+    },
+    data: {
+        aws_account_id: "123456789012",
+        cluster_name: "prod-us-east-1",
+        iam_role_arn: "arn:aws:iam::123456789012:role/app-role",
+        oidc_provider: "oidc.eks.us-east-1.amazonaws.com/id/EXAMPLE",
+    },
+});
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi_kubernetes as k8s
+
+cluster_metadata = k8s.core.v1.ConfigMap(
+    "cluster-metadata",
+    metadata=k8s.meta.v1.ObjectMetaArgs(
+        name="cluster-metadata",
+        namespace="argocd",
+        labels={
+            "gitops-bridge": "true",
+        },
+    ),
+    data={
+        "aws_account_id": "123456789012",
+        "cluster_name": "prod-us-east-1",
+        "iam_role_arn": "arn:aws:iam::123456789012:role/app-role",
+        "oidc_provider": "oidc.eks.us-east-1.amazonaws.com/id/EXAMPLE",
+    },
+)
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Your ArgoCD Applications or Helm values can then reference this ConfigMap, closing the loop between IaC and GitOps without hardcoding cloud-specific values.
 
