@@ -115,7 +115,7 @@ This random suffix serves two purposes:
 
 {{% notes type="info" %}}
 
-The exact format of auto-generated physical names varies by provider. While the general pattern is the logical name followed by a random suffix, individual providers may transform the logical name—for example, by removing hyphens or truncating it—to satisfy the naming constraints of the underlying cloud platform. Consult the [Registry](/registry/) for provider-specific documentation on naming behavior.
+The exact format of auto-generated physical names varies by provider. While the general pattern is a logical name followed by a random suffix, individual providers may transform the logical name—for example, by removing hyphens or truncating it—to satisfy platform naming constraints. Consult the [Registry](/registry/) for provider-specific documentation.
 
 {{% /notes %}}
 
