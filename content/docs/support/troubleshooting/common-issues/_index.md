@@ -23,3 +23,4 @@ Guide to fixing specific problems that may arise in Pulumi programs, including u
 - **[Connection issues](/docs/support/troubleshooting/common-issues/connection-issues/)** - Fix network connectivity and proxy problems
 - **[Destroy failures](/docs/support/troubleshooting/common-issues/destroy-failures/)** - Handle scenarios when `pulumi destroy` fails
 - **[Interrupted updates](/docs/support/troubleshooting/common-issues/interrupted-updates/)** - Recover from interrupted deployments
+- **[macOS architecture mismatch](/docs/support/troubleshooting/common-issues/architecture-mismatch/)** - Fix crashes or hangs on Apple Silicon caused by x86_64 binaries running under Rosetta 2
