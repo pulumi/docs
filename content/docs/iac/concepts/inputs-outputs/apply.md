@@ -23,6 +23,7 @@ The `apply` method is typically used for:
 - [Printing output values](#accessing-single-output-values) for debugging Pulumi programs
 - [Accessing nested values](#accessing-nested-output-values) in complex types (outputs that are objects or dictionaries)
 - [Transforming an output](#creating-new-output-values) by referencing its plain value
+- [Converting inputs to outputs](#converting-inputs-to-outputs) to call `apply` on a value typed as `Input<T>`
 
 For more information about what outputs are and why they are necessary in Pulumi programs, see [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/).
 
@@ -717,3 +718,119 @@ For more details [view the Go documentation](https://pkg.go.dev/github.com/pulum
 For more details [view the .NET documentation](/docs/reference/pkg/dotnet/Pulumi/Pulumi.Output.html).
 
 {{% /choosable %}}
+
+## Converting inputs to outputs
+
+Resource arguments in Pulumi accept `Input<T>` values, which means they will take either a plain value or an `Output<T>`. In most programs this flexibility is all you need. There are situations, however, where you have a value typed as `Input<T>` and need to ensure it is a definite `Output<T>`—most commonly to call `apply` on it.
+
+This situation arises most often in the following cases:
+
+- **Writing a component resource.** Component constructors typically accept `Input<T>` parameters to give callers the flexibility to pass either a plain value or an existing output. Inside the component body, you often need to call `apply` or chain other output operations on those parameters, which requires `Output<T>`.
+- **Writing utility functions that accept `Input<T>`.** A function that accepts `Input<T>` for caller flexibility must convert to `Output<T>` internally before it can call `apply` to perform any transformation.
+- **Combining values with `all`.** While the `all` function accepts a mix of plain values and outputs in most SDKs, explicitly converting to outputs first can make your program’s data flow clearer and more predictable.
+
+Pulumi's SDKs provide a dedicated function to wrap any `Input<T>` as a guaranteed `Output<T>`:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+`pulumi.output()` accepts any `Input<T>`—a plain value or an existing `Output<T>`—and returns `Output<T>`.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// A helper function that accepts Input<string> but needs to call apply.
+function buildUrl(host: pulumi.Input<string>): pulumi.Output<string> {
+    return pulumi.output(host).apply(h => `https://${h}`);
+}
+
+// Works with a plain string.
+const fromPlain = buildUrl("example.com");
+
+// Works equally well with an Output<string> from a resource.
+const bucket = new aws.s3.BucketV2("my-bucket");
+const fromOutput = buildUrl(bucket.websiteEndpoint);
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+`pulumi.Output.from_input()` accepts any `Input[T]`—a plain value or an existing `Output[T]`—and returns `Output[T]`.
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+# A helper function that accepts Input[str] but needs to call apply.
+def build_url(host: pulumi.Input[str]) -> pulumi.Output[str]:
+    return pulumi.Output.from_input(host).apply(lambda h: f"https://{h}")
+
+# Works with a plain string.
+from_plain = build_url("example.com")
+
+# Works equally well with an Output[str] from a resource.
+bucket = aws.s3.BucketV2("my-bucket")
+from_output = build_url(bucket.website_endpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+In Go, each typed input interface exposes a `ToXxxOutput()` method that returns the corresponding concrete output type. For example, `pulumi.StringInput` provides `ToStringOutput()`:
+
+```go
+import (
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+// A helper that accepts StringInput but needs to call ApplyT.
+func buildURL(input pulumi.StringInput) pulumi.StringOutput {
+    return input.ToStringOutput().ApplyT(func(host string) string {
+        return "https://" + host
+    }).(pulumi.StringOutput)
+}
+```
+
+Each typed input interface in the Go SDK—`pulumi.StringInput`, `pulumi.IntInput`, `pulumi.BoolInput`, and so on—follows this same `ToXxxOutput()` pattern.
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+In C#, `Input<T>` exposes `Apply` through Pulumi SDK extension methods, so you can often call `apply` without an explicit conversion step:
+
+```csharp
+// Input<T> supports Apply through extension methods in the Pulumi C# SDK.
+Input<string> host = "example.com"; // could be a plain string or Output<string>
+Output<string> url = host.Apply(h => $"https://{h}");
+```
+
+When you need to construct a standalone `Output<T>` from a plain value, use `Output.Create`:
+
+```csharp
+Output<string> output = Output.Create("example.com");
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+`Output.of()` wraps a plain value as an `Output<T>`. When your value is already an `Output<T>`, you can use it directly without any conversion.
+
+```java
+import com.pulumi.core.Output;
+
+// Wrap a plain value as Output<String>.
+Output<String> output = Output.of("example.com");
+output.applyValue(host -> "https://" + host);
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+When the value you pass is already an `Output<T>`, the conversion function returns it unchanged. When you pass a plain value, it is wrapped in a new output that resolves immediately with that value. In either case, the result is a definite `Output<T>` on which you can call `apply` or any other output method.
