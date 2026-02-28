@@ -136,4 +136,3 @@ GODEBUG=asyncpreemptoff=1 pulumi up
 ```
 
 This is not a permanent fix. The underlying issue is that x86_64 binaries are running under an unsupported configuration, and the workaround may not be reliable across all scenarios. Migrating to native arm64 binaries is the correct resolution.
-
