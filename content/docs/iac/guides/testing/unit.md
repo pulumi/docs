@@ -335,6 +335,10 @@ pulumi.runtime.set_mocks(
 )
 ```
 
+{{% notes type="warning" %}}
+When returning explicit output properties from `new_resource`, property names must use camelCase (e.g., `"publicIp"`, `"instanceState"`) rather than snake_case. This is because Pulumi uses camelCase for its internal property serialization regardless of the programming language. For example, use `"publicIp"` rather than `"public_ip"`.
+{{% /notes %}}
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
