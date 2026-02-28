@@ -1,8 +1,8 @@
 ---
 title_tag: "Resolving macOS Architecture Mismatch Issues"
 meta_desc: "Learn how to diagnose and fix Pulumi crashes or hangs on Apple Silicon Macs caused by x86_64 binaries running under Rosetta 2."
-title: macOS architecture mismatch
-h1: macOS architecture mismatch
+title: macOS Architecture Mismatch
+h1: macOS Architecture Mismatch
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     support:
@@ -103,7 +103,10 @@ Verify the binary is now arm64:
 
 ```bash
 file "$(which pulumi)"
-# Expected: /opt/homebrew/bin/pulumi: Mach-O 64-bit executable arm64
+```
+
+```
+/opt/homebrew/bin/pulumi: Mach-O 64-bit executable arm64
 ```
 
 Alternatively, you can install Pulumi directly [from the official install script](/docs/install/) or download an arm64 binary directly from the [GitHub releases page](https://github.com/pulumi/pulumi/releases).
