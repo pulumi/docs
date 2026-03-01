@@ -112,7 +112,8 @@ project structures, and organizations that prefer fine-grained repos tend to pre
 This alignment is not a requirement, of course. We have many users who have chosen to have multiple projects in a
 single Git repo -- or the reverse, using Git submodules, they might deploy code from multiple Git repos in a single
 Pulumi project. However, most users find that a close alignment between Git repo structure and Pulumi project
-structure enables seamless continuous deployment.
+structure enables seamless continuous deployment. For a concrete walkthrough of the multi-repo approach using
+stack references, see [Multi-repo structure](#multi-repo-structure) in the Examples section below.
 
 In this model, there is a rough correspondence between a Git repo and a Pulumi project, and a Git branch and
 its associated Pulumi stack. Read more about
@@ -288,6 +289,208 @@ To be clear, each of the applications/services inside our monorepo (including th
 │     └── app.go
 └── .etc
 ```
+
+### Multi-repo structure
+
+Not all teams work from a monorepo. Many organizations distribute infrastructure ownership across separate teams, each with their own Git repository and deployment lifecycle. A platform team might own shared networking and cluster infrastructure, while individual service teams own the resources specific to their applications. In this model, each team's code lives in its own repository, and Pulumi [stack references](/docs/concepts/stacks/#stack-references) provide the mechanism for connecting them.
+
+A stack reference lets any Pulumi program read the outputs published by another stack, regardless of which repository that stack's code lives in. Pulumi Cloud stores stack outputs and makes them available to any authorized consumer by the stack's fully qualified name: `<organization>/<project>/<stack>`.
+
+Consider a platform team responsible for shared networking infrastructure -- VPCs, subnets, and security groups -- and a service team responsible for deploying an application on top of it. The platform team's repository might look like this:
+
+{{< chooser language "typescript,go" / >}}
+
+{{% choosable language typescript %}}
+
+```
+platform-infra/
+├── index.ts
+├── package.json
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.staging.yaml
+└── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```
+platform-infra/
+├── main.go
+├── go.mod
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.staging.yaml
+└── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+The platform team's program provisions the shared infrastructure and exports its key outputs so that downstream stacks can consume them:
+
+{{< chooser language "typescript,go" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const vpc = new aws.ec2.Vpc("main", { cidrBlock: "10.0.0.0/16" });
+
+const privateSubnet = new aws.ec2.Subnet("private", {
+    vpcId: vpc.id,
+    cidrBlock: "10.0.1.0/24",
+    availabilityZone: "us-west-2a",
+});
+
+export const vpcId = vpc.id;
+export const privateSubnetId = privateSubnet.id;
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        vpc, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+            CidrBlock: pulumi.String("10.0.0.0/16"),
+        })
+        if err != nil {
+            return err
+        }
+        subnet, err := ec2.NewSubnet(ctx, "private", &ec2.SubnetArgs{
+            VpcId:            vpc.ID(),
+            CidrBlock:        pulumi.String("10.0.1.0/24"),
+            AvailabilityZone: pulumi.String("us-west-2a"),
+        })
+        if err != nil {
+            return err
+        }
+        ctx.Export("vpcId", vpc.ID())
+        ctx.Export("privateSubnetId", subnet.ID())
+        return nil
+    })
+}
+```
+
+{{% /choosable %}}
+
+The service team's repository has the same basic shape, but its program reads from the platform stack rather than recreating the shared infrastructure itself:
+
+{{< chooser language "typescript,go" / >}}
+
+{{% choosable language typescript %}}
+
+```
+my-service/
+├── index.ts
+├── package.json
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.staging.yaml
+└── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```
+my-service/
+├── main.go
+├── go.mod
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.staging.yaml
+└── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+Inside the service program, a stack reference retrieves the outputs from the corresponding environment stack in the platform repository:
+
+{{< chooser language "typescript,go" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+
+const config = new pulumi.Config();
+const org = config.require("org");
+
+// Resolves to e.g. "myorg/platform-infra/dev" when deploying the dev stack.
+const infra = new pulumi.StackReference(`${org}/platform-infra/${pulumi.getStack()}`);
+
+const vpcId = infra.getOutput("vpcId");
+const subnetId = infra.getOutput("privateSubnetId");
+
+// Deploy service resources into the shared VPC...
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    "fmt"
+
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        cfg := config.New(ctx, "")
+        org := cfg.Require("org")
+
+        // Resolves to e.g. "myorg/platform-infra/dev" when deploying the dev stack.
+        ref, err := pulumi.NewStackReference(ctx,
+            fmt.Sprintf("%s/platform-infra/%s", org, ctx.Stack()), nil)
+        if err != nil {
+            return err
+        }
+
+        vpcId := ref.GetOutput(pulumi.String("vpcId"))
+        subnetId := ref.GetOutput(pulumi.String("privateSubnetId"))
+
+        // Deploy service resources into the shared VPC...
+        _ = vpcId
+        _ = subnetId
+        return nil
+    })
+}
+```
+
+{{% /choosable %}}
+
+The stack name resolves dynamically: when you run `pulumi up` against the `dev` stack in `my-service`, Pulumi looks up the `dev` stack of `platform-infra` in the same organization. This symmetry makes it straightforward to promote changes consistently across environments.
+
+A second variant of the multi-repo pattern arises when a platform team authors a reusable [component resource](/docs/iac/concepts/components/) and publishes it as a versioned package to a package registry such as npm, PyPI, or NuGet. Service teams then add it as a dependency in their `package.json` or `go.mod` and instantiate it like any other resource, without needing access to the component's source repository. This is the right approach when the component interface is stable and multiple independent teams need to use it. See [Building and publishing packages](/docs/iac/guides/building-extending/) for guidance on authoring and distributing components.
+
+There are several tradeoffs to weigh when adopting a multi-repo structure:
+
+- **Team ownership.** Each repository has its own access controls, CI/CD pipeline, and release process. The platform team can evolve shared infrastructure on its own schedule without modifying service team code.
+- **Security.** Pulumi Cloud's [stack permissions](/docs/pulumi-cloud/access-management/stack-permissions/) let you grant service teams read-only access to platform stack outputs without granting write access to the underlying infrastructure.
+- **Stack reference coupling.** Stack references resolve at deployment time, so they always return the current outputs of the referenced stack. If the platform team renames or removes an exported output, service stacks that depend on it will fail until updated. Treat exported output names as a stable interface and coordinate breaking changes carefully.
+- **Discoverability.** In a monorepo, all projects are visible at a glance. In a multi-repo setup, teams need to agree on and document naming conventions for organizations, projects, and stacks.
+
+For most teams starting out, a monorepo is simpler to manage. Multi-repo structures become the right choice when team boundaries, access control requirements, or independent deployment lifecycles justify the additional coordination overhead.
 
 ### Other examples
 
