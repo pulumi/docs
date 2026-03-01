@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: protect
     parent: options-concepts
-    weight: 11
+    weight: 130
 aliases:
   - /docs/iac/concepts/options/protect/
   - /docs/intro/concepts/resources/options/protect/

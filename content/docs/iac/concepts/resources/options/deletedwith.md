@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: deletedWith
     parent: options-concepts
-    weight: 5
+    weight: 50
 aliases:
   - /docs/intro/concepts/resources/options/deletedwith/
   - /docs/concepts/options/deletedwith/
