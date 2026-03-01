@@ -292,7 +292,7 @@ To be clear, each of the applications/services inside our monorepo (including th
 
 ### Multi-repo structure
 
-Not all teams work from a monorepo. Many organizations distribute infrastructure ownership across separate teams, each with their own Git repository and deployment lifecycle. A platform team might own shared networking and cluster infrastructure, while individual service teams own the resources specific to their applications. In this model, each team's code lives in its own repository, and Pulumi [stack references](/docs/concepts/stacks/#stack-references) provide the mechanism for connecting them.
+Not all teams work from a monorepo. Many organizations distribute infrastructure ownership across separate teams, each with their own Git repository and deployment lifecycle. A platform team might own shared networking and cluster infrastructure, while individual service teams own the resources specific to their applications. In this model, each team's code lives in its own repository, and Pulumi [stack references](/docs/concepts/stack#stackreferences) provide the mechanism for connecting them.
 
 A stack reference lets any Pulumi program read the outputs published by another stack, regardless of which repository that stack's code lives in. Pulumi Cloud stores stack outputs and makes them available to any authorized consumer by the stack's fully qualified name: `<organization>/<project>/<stack>`.
 
@@ -481,7 +481,7 @@ func main() {
 
 The stack name resolves dynamically: when you run `pulumi up` against the `dev` stack in `my-service`, Pulumi looks up the `dev` stack of `platform-infra` in the same organization. This symmetry makes it straightforward to promote changes consistently across environments.
 
-A second variant of the multi-repo pattern arises when a platform team authors a reusable [component resource](/docs/iac/concepts/components/) and publishes it as a versioned package to a package registry such as npm, PyPI, or NuGet. Service teams then add it as a dependency in their `package.json` or `go.mod` and instantiate it like any other resource, without needing access to the component's source repository. This is the right approach when the component interface is stable and multiple independent teams need to use it. See [Building and publishing packages](/docs/iac/guides/building-extending/) for guidance on authoring and distributing components.
+A second variant of the multi-repo pattern arises when a platform team authors a reusable [component resource](/docs/iac/concepts/components/) and publishes it as a versioned package to a package registry such as npm, PyPI, or NuGet. Service teams then add it as a dependency in their `package.json` or `go.mod` and instantiate it like any other resource, without needing access to the component's source repository. This is the right approach when the component interface is stable and multiple independent teams need to use it. See [Building & Extending Pulumi](/docs/iac/guides/building-extending/) for guidance on authoring and distributing components.
 
 There are several tradeoffs to weigh when adopting a multi-repo structure:
 
@@ -490,7 +490,7 @@ There are several tradeoffs to weigh when adopting a multi-repo structure:
 - **Stack reference coupling.** Stack references resolve at deployment time, so they always return the current outputs of the referenced stack. If the platform team renames or removes an exported output, service stacks that depend on it will fail until updated. Treat exported output names as a stable interface and coordinate breaking changes carefully.
 - **Discoverability.** In a monorepo, all projects are visible at a glance. In a multi-repo setup, teams need to agree on and document naming conventions for organizations, projects, and stacks.
 
-For most teams starting out, a monorepo is simpler to manage. Multi-repo structures become the right choice when team boundaries, access control requirements, or independent deployment lifecycles justify the additional coordination overhead.
+For most teams starting out, a monorepo requires less coordination. Multi-repo structures become the right choice when team boundaries, access control requirements, or independent deployment lifecycles justify the additional overhead.
 
 ### Other examples
 
