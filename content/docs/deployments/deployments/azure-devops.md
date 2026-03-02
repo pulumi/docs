@@ -1,6 +1,6 @@
 ---
 title_tag: "Azure DevOps Integration | Pulumi Deployments"
-meta_desc: Connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push, preview pull requests, and get AI-powered PR summaries.
+meta_desc: Connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push, preview pull requests, and post PR summaries.
 title: "Azure DevOps Integration"
 h1: "Azure DevOps Integration"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,7 +11,7 @@ menu:
     identifier: deployments-deployments-azure-devops
 ---
 
-Pulumi Cloud supports Azure DevOps as a VCS provider for Deployments. Connect your ADO repositories to deploy infrastructure on push, preview pull requests, and get AI-powered PR summaries — the same workflow available for GitHub.
+Pulumi Cloud supports Azure DevOps as a VCS provider for Deployments. Connect your ADO repositories to deploy on push, preview pull requests, and post PR summaries.
 
 ## Prerequisites
 
@@ -34,8 +34,8 @@ Go to **Settings > Integrations** in your Pulumi Cloud organization.
 
 Click **Authorize Azure DevOps**. This opens an OAuth popup that authenticates against Microsoft Entra ID (Azure AD). You'll authorize two scopes:
 
-1. **Microsoft Graph** — lets Pulumi discover your Azure AD tenant and manage app registrations.
-1. **Azure DevOps** — grants access to repos, projects, and service hooks (`vso.code`, `vso.identity`, `vso.project_manage`).
+1. **Microsoft Graph**: lets Pulumi discover your Azure AD tenant and manage app registrations.
+1. **Azure DevOps**: grants access to repos, projects, and service hooks
 
 <!-- [SCREENSHOT: OAuth consent popup showing requested permissions] -->
 
@@ -84,7 +84,7 @@ After creating an integration, you can configure PR behavior. Toggle these setti
 
 <!-- [SCREENSHOT: Integration settings showing the three toggles] -->
 
-To update, toggle the setting directly — changes save automatically.
+To update, toggle the setting directly. Changes save automatically.
 
 ### Deleting an integration
 
@@ -151,7 +151,7 @@ ADO-backed stacks support the same deployment settings as GitHub. Configure thes
 
 ## Per-project app authentication (OIDC)
 
-For production workloads, configure OIDC-based authentication so Pulumi doesn't rely on individual user OAuth tokens. This uses Microsoft Entra ID federated credentials — no long-lived access tokens are stored.
+For production workloads, configure OIDC-based authentication so Pulumi doesn't rely on individual user OAuth tokens. This uses Microsoft Entra ID federated credentials, so no long-lived access tokens are stored.
 
 ### How it works
 
@@ -195,8 +195,8 @@ The per-project app credential is associated with your ADO integration. Once con
 
 Neo, Pulumi's AI assistant, works with Azure DevOps pull requests. When enabled (the default), Neo posts:
 
-- **Change summaries** — AI-generated plain-language explanation of what infrastructure changes a PR introduces.
-- **Resource diff details** — property-level before/after comparisons for modified resources.
+- **Change summaries**: plain-language explanation of what infrastructure changes a PR introduces.
+- **Resource diff details**: property-level before/after comparisons for modified resources.
 
 These appear as comments on your ADO pull requests alongside standard deployment status updates.
 
