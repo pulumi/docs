@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: customTimeouts
     parent: options-concepts
-    weight: 3
+    weight: 30
 aliases:
   - /docs/iac/concepts/options/customtimeouts/
   - /docs/intro/concepts/resources/options/customtimeouts/

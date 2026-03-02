@@ -8,14 +8,30 @@ menu:
   iac:
     identifier: ignoreChanges
     parent: options-concepts
-    weight: 8
+    weight: 100
 aliases:
   - /docs/intro/concepts/resources/options/ignorechanges/
   - /docs/concepts/options/ignorechanges/
   - /docs/iac/concepts/options/ignorechanges/
 ---
 
-The `ignoreChanges` resource option specifies a list of properties that Pulumi will ignore when it updates existing resources. Pulumi ignores a property by using the old value from the state instead of the value provided by the Pulumi program when determining whether an update or replace is needed. Ignored properties will still be used from the program when there is no previous value in the state, most importantly when creating the resource.
+The `ignoreChanges` resource option specifies a list of properties that Pulumi will ignore when it updates existing resources. Pulumi ignores a property by using the old value from the state instead of the value provided by the Pulumi program when determining whether an update or replace is needed. Ignored properties will still be used from the program when there is no previous value in the state (most commonly when creating the resource).
+
+{{% notes type="info" %}}
+The `ignoreChanges` option only applies to resource inputs, not outputs.
+{{% /notes %}}
+
+{{% notes type="warning" %}}
+The `ignoreChanges` resource option does not automatically apply to inputs to component resources.  If `ignoreChanges` is passed to a component resource, it is up to that component's implementation to decide what if anything it will do.
+{{% /notes %}}
+
+In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/reference/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
+
+{{% notes type="info" %}}
+For arrays with different lengths, only changes for elements that are in both arrays are ignored. If the new input array is longer, additional elements will be taken from the new array. If the new array is shorter, we only take that number of elements from the original array.
+
+For example `ignoreChanges` on an old array `[1, 2]` and a new array `[a, b, c]` results in `[1, 2, c]`, and an old array `[1, 2, 3]` and a new array `[a, b]` results in `[1, 2]`.
+{{% /notes %}}
 
 ## How ignoreChanges works
 
@@ -405,19 +421,3 @@ resources:
 {{< /chooser >}}
 
 After the initial deployment, an external process could change the weights (for example, to a 50/50 split). Before you next run `pulumi up` to add a third target group, run `pulumi refresh` so that the stack captures the live weights. Without the refresh, Pulumi retains the original `100` and `0` values in state and will resend them to the AWS API on the next update, resetting the weights you meant to preserve.
-
-{{% notes type="info" %}}
-The `ignoreChanges` option only applies to resource inputs, not outputs.
-{{% /notes %}}
-
-{{% notes type="info" %}}
-The `ignoreChanges` resource option does not apply to inputs to component resources.  If `ignoreChanges` is passed to a component resource, it is up to that component's implementation to decide what if anything it will do.
-{{% /notes %}}
-
-In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/iac/concepts/inputs-outputs/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
-
-{{% notes type="info" %}}
-For arrays with different lengths, only changes for elements that are in both arrays are ignored. If the new input array is longer, additional elements will be taken from the new array. If the new array is shorter, we only take that number of elements from the original array.
-
-For example `ignoreChanges` on an old array `[1, 2]` and a new array `[a, b, c]` results in `[1, 2, c]`, and an old array `[1, 2, 3]` and a new array `[a, b]` results in `[1, 2]`.
-{{% /notes %}}

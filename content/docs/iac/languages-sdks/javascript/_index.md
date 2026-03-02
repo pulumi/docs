@@ -333,27 +333,31 @@ To resolve this issue, you can either follow the instructions above to convert y
 
 The [Pulumi SDK (`@pulumi/pulumi`)](/docs/reference/pkg/nodejs/pulumi/pulumi) contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. You will need to reference it in most Pulumi programs.
 
-Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch. If you would like to install them, you can use the `dev` tag. For example:
+### Provider SDKs
 
-```bash
-npm add @pulumi/pulumi@dev
-```
+For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/).
 
-Or with yarn:
-
-```bash
-yarn add @pulumi/pulumi@dev
-```
+When building component packages, see [Provider package version management](./provider-package-versions/) for guidance on handling provider package versions across component boundaries.
 
 ### Policy SDK
 
 The [Pulumi Policy SDK (`@pulumi/policy`)](/docs/reference/pkg/nodejs/pulumi/policy) allows you to author Pulumi Policy as Code policies for validating resource configurations.
 
-### Provider packages
+### Dev versions
 
-For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/).
+Pulumi also publishes pre-release versions of SDKs that include all the latest changes from the main development branch. If you would like to install them, you can use the `dev` tag. For example:
 
-When building component packages, see [Provider package version management](./provider-package-versions/) for guidance on handling provider package versions across component boundaries.
+```bash
+npm add @pulumi/pulumi@dev
+```
+
+For provider packages, use the same `dev` tag:
+
+```bash
+npm add @pulumi/aws@dev
+```
+
+For more information on when and how to use dev builds, see [Using dev builds for unreleased fixes](/docs/support/troubleshooting/using-dev-builds/).
 
 ### Testing
 

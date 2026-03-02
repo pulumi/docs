@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: additionalSecretOutputs
     parent: options-concepts
-    weight: 1
+    weight: 10
 aliases:
   - /docs/intro/concepts/resources/options/additionalsecretoutputs/
   - /docs/concepts/options/additionalsecretoutputs/

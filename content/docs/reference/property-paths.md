@@ -5,11 +5,12 @@ title: Property Paths
 h1: Property Paths
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    reference:
         name: Property Paths
-        parent: iac-concepts-inputs-outputs
-        weight: 4
+        parent: reference-home
+        weight: 10
 aliases:
+- /docs/iac/concepts/inputs-outputs/property-paths/
 - /docs/iac/concepts/resources/options/property-paths/
 - /docs/iac/concepts/miscellaneous/property-paths/
 ---
@@ -38,3 +39,14 @@ Below are some example property paths:
 - `["root key with a ."][100]`
 - `root.array[*].field`
 - `root.array["*"].field`
+
+## Used in
+
+Property paths are used in the following Pulumi features (this list is not exhaustive):
+
+- [`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/) resource option
+- [`replaceOnChanges`](/docs/iac/concepts/resources/options/replaceonchanges/) resource option
+- [`hideDiffs`](/docs/iac/concepts/resources/options/hidediffs/) resource option
+- [`pulumi config set --path`](/docs/iac/cli/commands/pulumi_config_set/) flag
+- [ESC interpolations and references](/docs/esc/environments/syntax/interpolations-and-references/)
+- [Insights resource search](/docs/insights/discovery/search/)

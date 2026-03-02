@@ -87,6 +87,11 @@ sections:
     description: Reference for ESC environment definitions, interpolations, functions, and providers.
     link: /docs/esc/environments/syntax/
 
+  - emoji: 🔗
+    heading: Property Paths
+    description: Reference for property path syntax used in resource options, ESC, and Insights.
+    link: /docs/reference/property-paths/
+
 - type: button-cards
   heading: Packages & Providers
   cards:
