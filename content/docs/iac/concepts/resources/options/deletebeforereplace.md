@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: deleteBeforeReplace
     parent: options-concepts
-    weight: 4
+    weight: 40
 aliases:
   - /docs/intro/concepts/resources/options/deletebeforereplace/
   - /docs/concepts/options/deletebeforereplace/

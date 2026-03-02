@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: dependsOn
     parent: options-concepts
-    weight: 6
+    weight: 60
 aliases:
   - /docs/iac/concepts/options/dependson/
   - /docs/intro/concepts/resources/options/dependson/

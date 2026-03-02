@@ -19,7 +19,7 @@ References take the form `${property-path}`. References may appear alone or embe
 
 ## Property paths
 
-Property paths--[used throughout the Pulumi ecosystem](/docs/iac/concepts/miscellaneous/property-paths)--are JavaScript-inspired expressions that refer to properties within JSON-like values.
+Property paths--[used throughout the Pulumi ecosystem](/docs/reference/property-paths/)--are JavaScript-inspired expressions that refer to properties within JSON-like values.
 
 The syntax supports both dot notation and bracket notation.
 For keys that contain special characters (i.e. `[`, `]`, `"`, or `.`) or begin with a digit,

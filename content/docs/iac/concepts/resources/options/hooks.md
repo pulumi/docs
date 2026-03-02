@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: hooks
     parent: options-concepts
-    weight: 7
+    weight: 90
 aliases:
   - /docs/iac/concepts/options/hooks/
   - /docs/intro/concepts/resources/options/hooks/
