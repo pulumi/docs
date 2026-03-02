@@ -114,8 +114,6 @@ guides:
     url: guides/lambda/
   - display_name: Using AWS Virtual Private Cloud (VPC)
     url: guides/vpc/
-  - display_name: AWS index of services
-    url: guides/aws-index-of-services/
 policy:
   url: policy/
   description: Use Pulumi Policies to configure and enforce best practices for your Pulumi stacks.

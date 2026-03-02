@@ -1,1 +1,6 @@
 crosswalk/kubernetes/index.html|https://www.pulumi.com/docs/iac/clouds/kubernetes/
+docs/iac/clouds/aws/guides/aws-index-of-services/index.html|https://www.pulumi.com/docs/iac/clouds/aws/guides/
+docs/reference/crosswalk/aws/other/index.html|https://www.pulumi.com/docs/iac/clouds/aws/guides/
+docs/guides/crosswalk/aws/other/index.html|https://www.pulumi.com/docs/iac/clouds/aws/guides/
+docs/guides/crosswalk/aws/aws-index-of-services/index.html|https://www.pulumi.com/docs/iac/clouds/aws/guides/
+docs/clouds/aws/guides/aws-index-of-services/index.html|https://www.pulumi.com/docs/iac/clouds/aws/guides/
