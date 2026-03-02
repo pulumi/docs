@@ -1,5 +1,5 @@
 ---
-title_tag: Deploy Kubernetes Apps | Crosswalk
+title_tag: Deploy Kubernetes Apps
 meta_desc: This page gives you an overview on how to deploy Kubernetes applications to different cloud providers.
 title: Apps
 h1: Kubernetes Apps
@@ -121,6 +121,8 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 
 {{< choosable k8s-language typescript-kx >}}
 
+{{< kubernetesx-deprecated >}}
+
 ```ts
 import * as awsx from "@pulumi/awsx";
 import * as k8s from "@pulumi/kubernetes";
@@ -234,6 +236,8 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 {{< /choosable >}}
 
 {{< choosable k8s-language typescript-kx >}}
+
+{{< kubernetesx-deprecated >}}
 
 ```ts
 import * as azure from "@pulumi/azure";
@@ -356,6 +360,8 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 {{< /choosable >}}
 
 {{< choosable k8s-language typescript-kx >}}
+
+{{< kubernetesx-deprecated >}}
 
 ```ts
 import * as docker from "@pulumi/docker";
@@ -636,6 +642,8 @@ const nginx = new k8s.apps.v1.Deployment(appName, {
 
 {{% choosable k8s-language typescript-kx %}}
 
+{{< kubernetesx-deprecated >}}
+
 ```ts
 import * as kx from "@pulumi/kubernetesx";
 
@@ -718,6 +726,8 @@ const exampleJob = new k8s.batch.v1.Job("example-job", {
 
 {{% choosable k8s-language typescript-kx %}}
 
+{{< kubernetesx-deprecated >}}
+
 ```ts
 import * as kx from "@pulumi/kubernetesx";
 
@@ -752,10 +762,6 @@ The full code for this app stack is on [GitHub][gh-ds-stack].
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 <!-- markdownlint-enable url -->
 
-{{< chooser k8s-language "typescript,typescript-kx" >}}
-
-{{% choosable k8s-language typescript %}}
-
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -783,16 +789,6 @@ const nginx = new k8s.apps.v1.DaemonSet(appName, {
 }, { provider: provider });
 ```
 
-{{% /choosable %}}
-
-{{% choosable k8s-language typescript-kx %}}
-
-Coming Soon.
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
 ## Deploy a CronJob
 
 Deploy a [CronJob][k8s-cj] of a command that runs every minute.
@@ -803,10 +799,6 @@ The full code for this app stack is on [GitHub][gh-cronjob-stack].
 [gh-cronjob-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/cronjob
 [k8s-cj]: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
 <!-- markdownlint-enable url -->
-
-{{< chooser k8s-language "typescript,typescript-kx" >}}
-
-{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -835,16 +827,6 @@ const exampleCronJob = new k8s.batch.v1beta1.CronJob("example-cronjob", {
 }, { provider: provider });
 ```
 
-{{% /choosable %}}
-
-{{% choosable k8s-language typescript-kx %}}
-
-Coming soon.
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
 ## Deploy a StatefulSet
 
 Deploy a [StatefulSet][k8s-ss] of [MariaDB][mariadb].
@@ -856,10 +838,6 @@ The full code for this app stack is on [GitHub][gh-ss-stack].
 [k8s-ss]: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
 [mariadb]: https://mariadb.org/
 <!-- markdownlint-enable url -->
-
-{{< chooser k8s-language "typescript,typescript-kx" >}}
-
-{{% choosable k8s-language typescript %}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -1009,16 +987,6 @@ const mariadb = new k8s.apps.v1.StatefulSet("mariadb", {
     }
 }, { provider: provider });
 ```
-
-{{% /choosable %}}
-
-{{% choosable k8s-language typescript-kx %}}
-
-Coming soon.
-
-{{% /choosable %}}
-
-{{< /chooser >}}
 
 ## Learn More
 
