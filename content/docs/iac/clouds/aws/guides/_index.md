@@ -84,12 +84,6 @@ relevant User Guides to get started:
 
 * [Using Pulumi from AWS Code Services](/docs/using-pulumi/continuous-delivery/aws-code-services/)
 
-### Other AWS Services
-
-Pulumi supports the entirety of the AWS platform. If your favorite service isn't listed above, check out:
-
-* [AWS Index of Services](aws-index-of-services/)
-
 ## Frequently Asked Questions (FAQ)
 
 ### What Clouds Does Pulumi Crosswalk Support?
