@@ -105,7 +105,7 @@ serve-all:
 
 .PHONY: serve-cms
 serve-cms:
-	./node_modules/.bin/concurrently --kill-others -r "./scripts/serve.sh" "npx decap-server"
+	./node_modules/.bin/concurrently --kill-others -r "./scripts/serve.sh" "node scripts/cms-proxy.js"
 
 .PHONY: build-assets
 build-assets:

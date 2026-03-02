@@ -23,7 +23,9 @@ backend:
 
 local_backend: true
 
-publish_mode: editorial_workflow
+# editorial_workflow creates a PR per post (supported by GitHub backend only).
+# Uncomment for production after switching to the GitHub backend.
+# publish_mode: editorial_workflow
 
 media_folder: content/blog
 public_folder: /blog
@@ -80,13 +82,68 @@ collections:
 
       - label: Tags
         name: tags
-        widget: list
-        field:
-          label: Tag
-          name: tag
-          widget: string
-        hint: "Common tags: ai, aws, azure, gcp, kubernetes, pulumi-cloud, platform-engineering, releases."
+        widget: select
+        multiple: true
         required: false
+        options:
+          - ai
+          - ai-agents
+          - architecture
+          - automation-api
+          - aws
+          - azure
+          - azure-top-5
+          - best-practices
+          - cloud-engineering
+          - cloud-native
+          - community
+          - components
+          - containers
+          - continuous-delivery
+          - crossguard
+          - developer-experience-devex
+          - devops
+          - docker
+          - eks
+          - esc
+          - features
+          - google-cloud
+          - governance
+          - guest-post
+          - iac
+          - iac-best-practices
+          - idp
+          - infrastructure-as-code
+          - infrastructure-lifecycle-management
+          - insights
+          - kubernetes
+          - lambda
+          - llm
+          - migration
+          - oidc
+          - packages
+          - platform-engineering
+          - platform-engineering-pillars
+          - policy-as-code
+          - providers
+          - pulumi-cloud
+          - pulumi-enterprise
+          - pulumi-events
+          - pulumi-neo
+          - pulumi-news
+          - pulumi-releases
+          - pulumi-service
+          - python
+          - releases
+          - secrets
+          - security
+          - serverless
+          - templates
+          - terraform
+          - testing
+          - typescript
+          - yaml
+        hint: "Select all that apply. For a tag not in the list, add it directly to the file."
 
       - label: Allow long title
         name: allow_long_title
@@ -96,8 +153,10 @@ collections:
 
       - label: Updated date
         name: updated
-        widget: date
+        widget: datetime
         format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
         required: false
         hint: "Set when refreshing a post with significant new content."
 
@@ -117,3 +176,15 @@ collections:
         name: body
         widget: markdown
         hint: "Place <!--more--> after the opening paragraph to set the excerpt shown in post listings."
+
+  # Data source for the Authors relation widget above. Not intended for direct editing.
+  - name: team
+    label: Team Members
+    folder: data/team/team
+    extension: toml
+    format: toml
+    create: false
+    identifier_field: id
+    fields:
+      - { label: ID, name: id, widget: string }
+      - { label: Name, name: name, widget: string }
