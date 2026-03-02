@@ -103,6 +103,10 @@ ci_update_search_index:
 serve-all:
 	./node_modules/.bin/concurrently --kill-others -r "./scripts/serve.sh" "yarn --cwd ./theme run start"
 
+.PHONY: serve-cms
+serve-cms:
+	./node_modules/.bin/concurrently --kill-others -r "./scripts/serve.sh" "npx decap-server"
+
 .PHONY: build-assets
 build-assets:
 	yarn --cwd ./theme run build

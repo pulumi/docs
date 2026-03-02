@@ -1,0 +1,113 @@
+# Decap CMS configuration for Pulumi Docs blog
+#
+# Local backend (PoC) — works immediately with `make serve-cms`, no auth required.
+# The CMS UI appears at http://localhost:1313/admin/; click "Login" to proceed.
+#
+# To switch to the GitHub backend for production:
+#   1. Comment out `local_backend: true` below.
+#   2. Uncomment the `backend:` block and set `base_url` to your OAuth proxy URL.
+#   3. Register a GitHub OAuth App (callback: <oauth-proxy>/callback).
+#   4. Deploy the OAuth proxy with GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET.
+
+local_backend: true
+
+# backend:
+#   name: github
+#   repo: pulumi/docs
+#   branch: master
+#   base_url: https://<your-oauth-proxy-url>
+
+publish_mode: editorial_workflow
+
+media_folder: content/blog
+public_folder: /blog
+
+collections:
+  - name: blog
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: content/blog
+    path: "{{slug}}/index"
+    create: true
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: "Keep under 60 characters for best SEO results."
+
+      - label: Date
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+
+      - label: Draft
+        name: draft
+        widget: boolean
+        default: false
+
+      - label: Meta description
+        name: meta_desc
+        widget: text
+        hint: "Appears in search results. Keep under 160 characters."
+        pattern:
+          - "^.{1,160}$"
+          - "Must be 160 characters or fewer"
+
+      - label: Meta image
+        name: meta_image
+        widget: image
+        hint: "Social share image. Typically named meta.png and stored in the post folder."
+        required: false
+
+      - label: Authors
+        name: authors
+        widget: list
+        field:
+          label: Author ID
+          name: author
+          widget: string
+        hint: "Use the author's ID from data/team/team/ (e.g. 'meagan-cojocar')."
+
+      - label: Tags
+        name: tags
+        widget: list
+        field:
+          label: Tag
+          name: tag
+          widget: string
+        hint: "Common tags: ai, aws, azure, gcp, kubernetes, pulumi-cloud, platform-engineering, releases."
+        required: false
+
+      - label: Allow long title
+        name: allow_long_title
+        widget: boolean
+        default: false
+        required: false
+
+      - label: Updated date
+        name: updated
+        widget: date
+        format: "YYYY-MM-DD"
+        required: false
+        hint: "Set when refreshing a post with significant new content."
+
+      - label: Series
+        name: series
+        widget: string
+        required: false
+        hint: "Slug of the series this post belongs to (e.g. 'pulumi-watch')."
+
+      - label: Canonical URL
+        name: canonical_url
+        widget: string
+        required: false
+        hint: "Set for syndicated content originally published elsewhere."
+
+      - label: Body
+        name: body
+        widget: markdown
+        hint: "Place <!--more--> after the opening paragraph to set the excerpt shown in post listings."
