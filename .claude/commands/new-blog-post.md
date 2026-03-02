@@ -166,20 +166,11 @@ After creating the files, tell the user:
    - If new author profiles were created, show the file paths and confirm which details were auto-populated
    - If existing author profiles were used, confirm which ones were found and used
    - If information was auto-detected, remind user to review it for accuracy
-3. **Open in Decap CMS (if running)**:
-   - Check whether the CMS proxy is running:
-     ```bash
-     curl -s -m 1 -X POST http://localhost:8081/api/v1 \
-       -H "Content-Type: application/json" -d '{"action":"info"}' 2>/dev/null
-     ```
-   - The Decap CMS edit URL for the new post is always:
+3. **Open in Decap CMS**:
+   - The Decap CMS edit URL for the new post is:
      `http://localhost:1313/admin/#/collections/blog/entries/{slug}/index`
-   - **If the proxy responded** (CMS is running): use the Playwright MCP tool to
-     navigate to that URL and take a screenshot so the user can see the post
-     loaded in the editor. Then show the URL to the user.
-   - **If the proxy did not respond**: show the URL anyway and tell the user to
-     run `make serve-cms` first (instead of the plain `make serve`) to enable
-     CMS editing.
+   - Show this URL to the user and tell them to run `make serve-cms` (instead of
+     the plain `make serve`) to enable CMS editing.
 4. **Next steps**:
    - **If date was set to 2099-01-01**: Update the publication date in frontmatter before publishing! The current placeholder date will prevent the post from appearing on the live site.
    - Replace the placeholder `meta.png` with your own image (recommended size: 1200×630 pixels, optimal for social media previews). Figma templates are available for internal use, ask in `#docs` for a link.
