@@ -2,20 +2,26 @@
 #
 # Local backend (PoC) — works immediately with `make serve-cms`, no auth required.
 # The CMS UI appears at http://localhost:1313/admin/; click "Login" to proceed.
+# `local_backend: true` intercepts all backend calls and routes them to the local
+# decap-server proxy, so no GitHub credentials are needed.
 #
 # To switch to the GitHub backend for production:
-#   1. Comment out `local_backend: true` below.
-#   2. Uncomment the `backend:` block and set `base_url` to your OAuth proxy URL.
+#   1. Remove `local_backend: true` below.
+#   2. Update the backend block: remove the git-gateway name and uncomment the
+#      github block, then set `base_url` to your OAuth proxy URL.
 #   3. Register a GitHub OAuth App (callback: <oauth-proxy>/callback).
 #   4. Deploy the OAuth proxy with GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET.
 
-local_backend: true
-
-# backend:
+# Active for PoC — overridden by local_backend: true at runtime.
+# For production, replace with:
 #   name: github
 #   repo: pulumi/docs
 #   branch: master
 #   base_url: https://<your-oauth-proxy-url>
+backend:
+  name: git-gateway
+
+local_backend: true
 
 publish_mode: editorial_workflow
 
