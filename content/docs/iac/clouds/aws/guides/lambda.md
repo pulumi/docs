@@ -552,8 +552,7 @@ authors and manages the serverless functions attached to them. For more informat
 
 ## Easy Lambda log consumption
 
-[Pulumi Crosswalk for AWS CloudWatch](/docs/clouds/aws/guides/cloudwatch/) ensures that resources have built-in
-logging, with easy ways to customize associated policies. Additionally, the [`pulumi logs`](/docs/cli/commands/pulumi_logs/) CLI command allows
+Lambda functions automatically emit logs to Amazon CloudWatch. The [`pulumi logs`](/docs/cli/commands/pulumi_logs/) CLI command allows
 you to monitor your infrastructure's CloudWatch logs in real time. For Lambda functions, this means
 you can run `pulumi logs -f` (`--force`) to stream all of the logs from all of the Lambdas that belong to the current stack.
 

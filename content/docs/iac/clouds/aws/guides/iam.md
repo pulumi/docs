@@ -2,8 +2,8 @@
 title_tag: "Using AWS Identity & Access Management (IAM) | Crosswalk"
 title: IAM
 h1: AWS Identity & Access Management (IAM)
-meta_desc: Pulumi Crosswalk for AWS adds strongly typed IAM resource classes, for creating, updating, and
-           otherwise managing AWS users, groups, and roles securely.
+meta_desc: Pulumi Crosswalk for AWS makes it easy to create, update, and
+           otherwise manage AWS users, groups, and roles securely.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -28,7 +28,7 @@ deny their access to AWS resources.
 
 ## Overview
 
-Pulumi Crosswalk for AWS adds strongly typed IAM resource classes, to ensure that you can create, update, and
+Pulumi Crosswalk for AWS provides IAM resource classes to help you create, update, and
 otherwise manage AWS users, groups, and roles securely and robustly.
 
 ## Creating IAM Policy Documents Safely and Easily
@@ -62,23 +62,6 @@ OR across all of those policies when evaluating them.
 
 For more extensive details about IAM policies and their contents, refer to the [AWS access policies documentation](
 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html).
-
-#### Strongly Typed Policy Documents (TypeScript-only)
-
-Pulumi Crosswalk for AWS in TypeScript defines [the `aws.iam.PolicyDocument` interface](
-/registry/packages/aws/api-docs/iam) to add strong type checking to your policy documents. By using
-this type, you will know at compile time whether you've mistyped an attribute:
-
-```typescript
-{{% example-program-snippet path="aws-iam-strongly-typed" language="typescript" from="1" to="15" %}}
-```
-
-This policy object can then be used to configure a variety of IAM objects, as you will see below. For example, you can
-use the above policy to configure an IAM role that permits an assume role action for a given principal:
-
-```typescript
-{{% example-program-snippet path="aws-iam-strongly-typed" language="typescript" from="17" to="22" %}}
-```
 
 ### Pre-Defined IAM Managed Policies
 
