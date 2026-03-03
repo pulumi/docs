@@ -2,6 +2,7 @@
 title_tag: Get Started Pulumi and Kubernetes
 meta_desc: This page provides an overview and guide on how to get started with Kubernetes.
 title: Kubernetes
+overview_label: Get started with Kubernetes
 h1: Get Started with Pulumi and Kubernetes
 menu:
     iac:

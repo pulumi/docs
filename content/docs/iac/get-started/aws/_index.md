@@ -1,5 +1,6 @@
 ---
 title: AWS
+overview_label: Get started with AWS
 title_tag: Get started with Pulumi and AWS
 h1: Get started with Pulumi and AWS
 meta_desc: This page provides an overview and guide on how to get started with AWS.

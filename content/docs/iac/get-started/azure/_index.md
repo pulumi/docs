@@ -1,5 +1,6 @@
 ---
 title: Azure
+overview_label: Get started with Azure
 title_tag: Get started with Pulumi and Azure
 h1: Get started with Pulumi and Azure
 meta_desc: This page provides an overview and guide on how to get started with Azure.

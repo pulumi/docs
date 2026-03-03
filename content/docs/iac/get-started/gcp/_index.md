@@ -1,5 +1,6 @@
 ---
 title: Google Cloud
+overview_label: Get started with Google Cloud
 title_tag: Get started with Pulumi and Google Cloud
 h1: Get started with Pulumi and Google Cloud
 meta_desc: This page provides an overview and guide on how to get started with Google Cloud.
