@@ -1,16 +1,17 @@
 ---
-title_tag: "Using Pulumi GitHub App | CI/CD"
+title_tag: "Pulumi GitHub App | Integrations"
 meta_desc: Pulumi's GitHub app integrates the results of Pulumi stack updates. It
            will show you any potential infrastructure changes on Pull Requests and commit Checks.
 title: Pulumi GitHub App
-h1: Pulumi Github App
+h1: Pulumi GitHub App
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: GitHub App
-        parent: iac-using-pulumi-cicd
-        weight: 7
+        parent: iac-integrations
+        weight: 1
 aliases:
+- /docs/iac/guides/continuous-delivery/github-app/
 - /docs/iac/using-pulumi/continuous-delivery/github-app/
 - /docs/reference/cd-github/
 - /docs/console/continuous-delivery/github-app/

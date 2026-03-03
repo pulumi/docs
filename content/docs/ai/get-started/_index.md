@@ -26,7 +26,7 @@ Neo is enabled by default. To disable Neo for your organization, navigate to the
 
 ## GitHub App Installation
 
-Installing the [Pulumi GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/) significantly enhances Neo's capabilities, though it is not required. The Pulumi GitHub App:
+Installing the [Pulumi GitHub App](/docs/iac/integrations/github-app/) significantly enhances Neo's capabilities, though it is not required. The Pulumi GitHub App:
 
 - Allows Neo to read repository content for better context
 - Enables pull request creation
@@ -34,7 +34,7 @@ Installing the [Pulumi GitHub App](/docs/iac/using-pulumi/continuous-delivery/gi
 
 Neo can still provide code change suggestions without the GitHub App, but you'll need to apply the changes and open PRs manually.
 
-To install the GitHub App, see the [GitHub integration guide](/docs/iac/using-pulumi/continuous-delivery/github-app/).
+To install the GitHub App, see the [GitHub integration guide](/docs/iac/integrations/github-app/).
 
 ## Neo's Permission Model
 

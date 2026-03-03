@@ -131,7 +131,7 @@ While most teams start by running the Pulumi CLI manually, you'll eventually wan
 
 **GitHub users**: Install the [Pulumi GitHub App](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/github-app/) for instant GitOps workflow support, including deployment previews in pull requests.
 
-**GitLab users**: Use the [Pulumi GitLab Integration](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/gitlab-app/) to set up Pipelines and Webhooks for GitLab CI/CD.
+**GitLab users**: Use the [Pulumi GitLab Integration](https://www.pulumi.com/docs/iac/integrations/gitlab-app/) to set up Pipelines and Webhooks for GitLab CI/CD.
 
 **Setting up CI/CD:**
 

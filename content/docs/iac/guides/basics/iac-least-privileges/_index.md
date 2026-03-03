@@ -92,7 +92,7 @@ Choose one of these secure deployment approaches in your sensitive environments:
    - Navigate to your stack in Pulumi Cloud Console → `Stack Settings > Deploy`.
    - Set deployment triggers (e.g., PR merges to `main` branch).
 
-**Learn more:** [Pulumi Deployments GitHub Integration](/docs/iac/using-pulumi/continuous-delivery/github-app/)
+**Learn more:** [Pulumi Deployments GitHub Integration](/docs/iac/integrations/github-app/)
 
 **REST API documentation:** [Pulumi Deployments REST API](/docs/reference/cloud-rest-api/deployments/)
 
