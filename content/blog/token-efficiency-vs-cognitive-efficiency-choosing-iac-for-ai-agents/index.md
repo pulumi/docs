@@ -1,7 +1,7 @@
 ---
 title: "Token Efficiency vs Cognitive Efficiency: Choosing IaC for AI Agents"
 allow_long_title: true
-date: 2026-02-25
+date: 2026-03-03
 draft: false
 meta_desc: "We benchmarked Terraform HCL and Pulumi TypeScript across two LLMs. HCL uses fewer tokens, but Pulumi's total pipeline cost is 41% lower."
 meta_image: meta.png
