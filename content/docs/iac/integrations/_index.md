@@ -20,4 +20,4 @@ These integrations connect Pulumi with your version control system, enabling inf
 
 - [GitHub App](/docs/iac/integrations/github-app/) — Surface Pulumi stack previews as GitHub PR comments and checks
 - [Azure DevOps](/docs/iac/integrations/azure-devops/) — Integrate Pulumi with Azure Pipelines and surface results on pull requests
-- [GitLab Integration](/docs/iac/integrations/gitlab-app/) — Add Pulumi previews to GitLab merge requests
+- [GitLab App](/docs/iac/integrations/gitlab-app/) — Add Pulumi previews to GitLab merge requests

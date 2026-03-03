@@ -106,7 +106,7 @@ sections:
     description: Integrate Pulumi with Azure Pipelines and pull request workflows.
     link: /docs/iac/integrations/azure-devops/
   - emoji: 🦊
-    heading: GitLab Integration
+    heading: GitLab App
     description: Add infrastructure previews to GitLab merge requests.
     link: /docs/iac/integrations/gitlab-app/
 - type: flat
