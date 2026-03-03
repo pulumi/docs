@@ -110,13 +110,10 @@ Never use raw HTML `<div>` grids, FontAwesome `<i>` icons, or inline Tailwind cl
 
 ### Sidebar "first item" labels
 
-The sidebar template automatically injects the section's `_index.md` as the first item of each section's submenu. The label defaults to the page's title. To override it with a shorter or more descriptive label, add `overview_label:` to the section's `_index.md` frontmatter:
+The sidebar template automatically injects the section's `_index.md` as the first item of each section's submenu:
 
-```yaml
-overview_label: What Is Pulumi?
-```
-
-Use `overview_label` when the page title is too long for comfortable sidebar display or when a more contextually descriptive label improves navigation.
+- If the page has `docs_home: true`, the sidebar label is **"Section home"**.
+- Otherwise, the sidebar label is the page's title.
 
 ---
 

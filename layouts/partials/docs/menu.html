@@ -323,6 +323,9 @@
                             {{- $overviewPage := site.GetPage $currentMenuItem.URL }}
                             {{- if $overviewPage }}
                                 {{- $overviewLabel := $overviewPage.Title }}
+                                {{- if $overviewPage.Params.docs_home }}
+                                    {{- $overviewLabel = "Section home" }}
+                                {{- end }}
                                 {{- with $overviewPage.Params.overview_label }}
                                     {{- $overviewLabel = . }}
                                 {{- end }}

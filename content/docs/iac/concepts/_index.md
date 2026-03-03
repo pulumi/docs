@@ -4,7 +4,6 @@ meta_desc: Learn about what Pulumi is, how it works, and how its components work
 title: Concepts
 h1: What is Pulumi?
 meta_image: /images/docs/meta-images/docs-meta.png
-overview_label: What Is Pulumi?
 menu:
     iac:
         name: Concepts
