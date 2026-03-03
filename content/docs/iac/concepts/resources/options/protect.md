@@ -84,7 +84,7 @@ resources:
 
 ## Overriding inherited protection
 
-Child resources inherit the `protect` option from their [parent resource](/docs/iac/concepts/options/parent). When a parent resource has `protect: true`, all of its children are also protected by default. To allow a specific child resource to be deleted independently of its protected parent, explicitly set `protect: false` on that child.
+Child resources inherit the `protect` option from their [parent resource](/docs/iac/concepts/resources/options/parent/). When a parent resource has `protect: true`, all of its children are also protected by default. To allow a specific child resource to be deleted independently of its protected parent, explicitly set `protect: false` on that child.
 
 The following example creates a protected parent resource alongside a child resource with protection explicitly disabled:
 
@@ -162,4 +162,4 @@ resources:
 
 ## Applying protection to all resources
 
-There is no built-in configuration flag to mark every resource in a stack as protected. To apply `protect: true` to all resources in a stack, use [stack transforms](/docs/iac/concepts/options/transforms#stack-transforms). A stack transform is a callback that the Pulumi engine invokes for every resource during deployment; it can inspect and modify resource options, including `protect`, before the resource is created or updated.
+There is no built-in configuration flag to mark every resource in a stack as protected. To apply `protect: true` to all resources in a stack, use [stack transforms](/docs/iac/concepts/resources/options/transforms/#stack-transforms). A stack transform is a callback that the Pulumi engine invokes for every resource during deployment; it can inspect and modify resource options, including `protect`, before the resource is created or updated.
