@@ -41,7 +41,7 @@ With Pulumi ESC you can:
 
 ## Try a tutorial
 
-Let our AWS tutorials guide you through key Pulumi concepts.
+Explore AWS tutorials that guide you through key Pulumi concepts.
 
 {{< get-started-next-step path="/tutorials/" label="Browse tutorials" ref="gs-aws-tutorials" >}}
 

@@ -18,7 +18,7 @@ aliases:
 
 ## Cleanup & destroy the stack
 
-Our final step is to clean up all of the resources we've allocated in this tutorial.
+The final step is to clean up all of the resources you've created in this tutorial.
 
 Run the `pulumi destroy` command to delete all cloud resources in this project/stack:
 
@@ -64,7 +64,7 @@ Do you want to perform this destroy?
   details
 ```
 
-As with an update, we can choose `no` or `details`; select `yes` to proceed:
+As with an update, you can choose `no` or `details`; select `yes` to proceed:
 
 ```
 Destroying (dev):

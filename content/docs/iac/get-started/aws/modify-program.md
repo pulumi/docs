@@ -465,7 +465,7 @@ outputs:
 
 {{% /choosable %}}
 
-We prepend `http://` using a helper because `websiteEndpoint` is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
+The code prepends `http://` using a helper because `websiteEndpoint` is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
 that AWS assigns at deployment time, not a raw string, meaning its value isn't known in advance.
 
 ### Deploy the changes

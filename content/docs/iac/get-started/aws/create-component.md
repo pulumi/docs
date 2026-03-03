@@ -679,17 +679,17 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 ### Instantiate the component
 
 Now go back to your original file {{< langfile >}}. Now that you have moved all of the resources, you can start over with a clean slate.
-Ensure the file is empty and we will build it back up by importing and instantiating our new component.
+Ensure the file is empty and then build it back up by simply importing and instantiating your new component.
 
 Add this to your now-empty {{< langfile >}}:
 
 {{% choosable language typescript %}}
 
 ```typescript
-// Import from our new component module:
+// Import from your new component module:
 import { AwsS3Website } from "./website";
 
-// Create an instance of our component with the same files as before:
+// Create an instance of your component with the same files as before:
 const website = new AwsS3Website("my-website", {
     files: [ "index.html" ],
 });
@@ -705,10 +705,10 @@ export const url = website.url;
 ```python
 import pulumi
 
-# Import from our new component module:
+# Import from your new component module:
 from website import AwsS3Website
 
-# Create an instance of our component with the same files as before:
+# Create an instance of your component with the same files as before:
 website = AwsS3Website('my-website', files=['index.html'])
 
 # And export its autoassigned URL:
@@ -728,7 +728,7 @@ import (
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create an instance of our component with the same files as before:
+        // Create an instance of your component with the same files as before:
         website, err := NewAwsS3Website(ctx, "my-website", AwsS3WebsiteArgs{
             Files: []string{"index.html"},
         })
@@ -755,7 +755,7 @@ using System.Collections.Generic;
 
 return await Pulumi.Deployment.RunAsync(() =>
 {
-    // Create an instance of our component with the same files as before:
+    // Create an instance of your component with the same files as before:
     var website = new AwsS3Website("my-website", new AwsS3WebsiteArgs()
     {
         Files = new[] { "index.html" }
@@ -781,7 +781,7 @@ import com.pulumi.Pulumi;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            // Create an instance of our component with the same files as before:
+            // Create an instance of your component with the same files as before:
             var website = new AwsS3Website("my-website",
                 new AwsS3WebsiteArgs(new String[] { "index.html" }));
 
@@ -837,7 +837,7 @@ Do you want to perform this update?  [Use arrows to move, type to filter]
   details
 ```
 
-This preview shows you a few things. First, you'll see our `AwsS3Website` component with all of its children
+This preview shows you a few things. First, you'll see the `AwsS3Website` component with all of its children
 resources neatly parented underneath it. This helps to see what resources relate to which components. Next,
 you'll see that your old resources are being destroyed.
 
@@ -908,6 +908,6 @@ $ curl $(pulumi stack output url)
 
 {{% /choosable %}}
 
-Once you are ready to move on, let's destroy everything we've spun up in this tutorial.
+Once you are ready to move on, destroy everything you've created in this tutorial.
 
 {{< get-started-stepper >}}
