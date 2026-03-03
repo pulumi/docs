@@ -113,6 +113,12 @@ This random suffix serves two purposes:
 - It ensures that two stacks for the same project can be deployed without their resources colliding. The suffix helps you to create multiple instances of your project more easily, whether because you want, for example, many development or testing stacks, or to scale to new regions.
 - It allows Pulumi to do zero-downtime resource updates. Due to the way some cloud providers work, certain updates require replacing resources rather than updating them in place. By default, Pulumi creates replacements first, then updates the existing references to them, and finally deletes the old resources.
 
+{{% notes type="info" %}}
+
+The exact format of auto-generated physical names varies by provider. While the general pattern is a logical name followed by a random suffix, individual providers may transform the logical name—for example, by removing hyphens or truncating it—to satisfy platform naming constraints. Consult the [Registry](/registry/) for provider-specific documentation.
+
+{{% /notes %}}
+
 For cases that require specific names, you can override auto-naming by specifying a physical name. Most resources have a `name` property that you can use to name the resource yourself. Specify your name in the argument object to the constructor. Here’s an example.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
