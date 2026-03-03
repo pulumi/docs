@@ -1,6 +1,6 @@
 ---
 title_tag: Configuring Microsoft Entra ID | SAML SSO
-meta_desc: This page provides a walkthrough important aspects of configuring 
+meta_desc: This page provides a walkthrough important aspects of configuring
            Entra ID as a SAML SSO identity provider (IDP).
 title: Microsoft Entra ID
 h1: "SAML: Configuring Microsoft Entra ID"
@@ -9,7 +9,7 @@ menu:
   administration:
     name: Entra ID
     parent: administration-access-identity-saml
-    weight: 3
+    weight: 30
     identifier: pulumi-cloud-access-management-saml-entra
 aliases:
 - /docs/reference/service/saml-aad/
@@ -20,12 +20,8 @@ aliases:
 - /docs/pulumi-cloud/access-management/saml/aad/
 ---
 
-This guide walks you through configuring Microsoft Entra ID as a SAML SSO identity provider
-(IDP) for the Pulumi Cloud.
-
-## Prerequisites
-
-- [Single Sign-On](/docs/administration/access-identity/saml/sso/)
+This guide walks you through configuring Microsoft Entra ID as a [SAML SSO](/docs/administration/access-identity/saml/) identity provider
+(IDP) for Pulumi Cloud.
 
 ## Configuring Microsoft Entra ID
 
@@ -87,10 +83,10 @@ This guide walks you through configuring Microsoft Entra ID as a SAML SSO identi
 > for more information.
 
 Now that the Entra ID side of the SAML SSO configuration is complete, you will need
-to configure the Pulumi Cloud to receive SAML SSO requests from your
+to configure Pulumi Cloud to receive SAML SSO requests from your
 Entra ID application.
 
-## Configuring Your Pulumi Organization
+## Configuring your Pulumi organization
 
 To configure your Pulumi organization to accept SAML SSO requests from Entra ID, you will need to
 download the SAML application's configuration data and then pass that to Pulumi.
@@ -100,33 +96,22 @@ download the SAML application's configuration data and then pass that to Pulumi.
 
     ![Download XML](/images/docs/reference/service/saml-aad/download-xml.png)
 
-1. Sign into the Pulumi Cloud and navigate to your SAML organization. Navigate to the
-  **Settings** tab and then select **Access Management**.
-
+1. Sign in to Pulumi Cloud and navigate to your organization.
+1. Select **Settings** > **Access Management**.
 1. Select the **Other** tab.
-
-1. In the **Membership Requirements** section, select the **Change requirements** button.
-
+1. In the **Membership Requirements** section, select **Change requirements**.
 1. Select **SAML SSO** and then **Next**.
-
-1. Open up the XML document you downloaded from the Entra ID portal, and paste its full contents into the text area.
-
-    ![Provide the XML IDP descriptor](/images/docs/reference/service/saml-aad/pulumi-saml-settings-page.png)
-
+1. Open the XML document you downloaded from the Entra ID portal and paste its full contents into the text area.
 1. Select **Apply changes**.
 
-## Signing into Pulumi using Entra ID
+## Signing in to Pulumi using Entra ID
 
-Once your Entra ID application is created, and its configuration data passed to Pulumi, you can now
-sign in to the Pulumi Cloud using your SAML SSO credentials.
-
-Navigate to [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
+Once your Entra ID application is created and its configuration data passed to Pulumi, you can sign in to
+Pulumi Cloud using your SAML SSO credentials. Navigate to
+[https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization. If everything is configured correctly, you should be prompted to
-sign in to your Entra ID instance, and then immediately be redirected back to the Pulumi Cloud.
-
-![Pulumi Cloud](/images/docs/reference/service/saml-aad/pulumi-console-signin.png)
+sign in to your Entra ID instance, and then immediately be redirected back to Pulumi Cloud.
 
 ## Troubleshooting
 
-If you have any trouble configuring Entra ID, signing into Pulumi, or need additional assistance, please
-[contact support](https://support.pulumi.com/).
+For help resolving SAML SSO configuration issues, see the [SAML SSO troubleshooting guide](/docs/administration/access-identity/saml/troubleshooting/) or [contact support](https://support.pulumi.com/).

@@ -2,14 +2,14 @@
 title_tag: Configuring Okta | SAML SSO
 meta_desc: This page provides a walkthrough important aspects of configuring
            Okta as a SAML SSO identity provider (IdP).
+meta_image: /images/docs/meta-images/docs-meta.png
 title: Okta
 h1: "SAML: Configuring Okta"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Okta
     parent: administration-access-identity-saml
-    weight: 5
+    weight: 50
     identifier: pulumi-cloud-access-management-saml-okta
 aliases:
 - /docs/reference/service/saml-okta/
@@ -18,20 +18,16 @@ aliases:
 - /docs/pulumi-cloud/access-management/saml/okta/
 ---
 
-This guide walks you through configuring Okta as a SAML SSO identity provider (IdP) for the Pulumi Cloud.
+This guide walks you through configuring Okta as a [SAML SSO](/docs/administration/access-identity/saml/) identity provider (IdP) for Pulumi Cloud.
 
-## Prerequisites
-
-- [Single Sign-On](/docs/administration/access-identity/saml/sso/)
-
-## Creating the Okta Application
+## Creating the Okta application
 
 The first step is to create a new Okta Application Integration. Of the various "sign-in methods"
 available, choose **SAML 2.0**.
 
 ![Creating an Okta Application](/images/docs/reference/service/saml-okta/create-okta-application.png)
 
-### Configuring the Application
+### Configuring the application
 
 Next you will be guided through a wizard to configure the Okta application. The first step is to
 give it a name---Pulumi Cloud for example---and an [icon](https://www.pulumi.com/brand/).
@@ -72,7 +68,7 @@ If you plan on using [SCIM](/docs/administration/access-identity/scim/okta/), yo
 
 ![Configuration Settings](/images/docs/reference/service/saml-okta/configure-saml-settings.png)
 
-### User Assignments
+### User assignments
 
 After the Pulumi SAML application has been created in Okta, the next step is to assign users to it.
 This will grant specific users or groups access to sign into Pulumi with their Okta-provided
@@ -83,11 +79,10 @@ page.
 
 ![User Assignments](/images/docs/reference/service/saml-okta/user-assignments.png)
 
-## Configuring Your Pulumi Organization
+## Configuring your Pulumi organization
 
-The final step is to configure the Pulumi Cloud with details on your new Okta-based
-SAML application. To do this, you need to obtain the IDP metadata document from Okta and then provide
-it to Pulumi.
+To configure Pulumi Cloud with details on your new Okta-based SAML application, you need to
+obtain the IdP metadata document from Okta and then provide it to Pulumi.
 
 First, navigate to the **Sign On** tab on the application page and click the
 **"View SAML setup instructions"** link in the right column.
@@ -101,20 +96,17 @@ a user's identity.
 
 ![SAML Application Metadata](/images/docs/reference/service/saml-okta/okta-xml-descriptor.png)
 
-With the block of XML text in your clipboard, open the Pulumi Cloud and navigate to your SAML
-organization. Select the **Settings** tab, and then select **Access Management**.
+With the block of XML text in your clipboard:
 
-Select the **Other** tab, then in the **Membership Requirements** section, select the **Change requirements** button.
+1. Sign in to Pulumi Cloud and navigate to your organization.
+1. Select **Settings** > **Access Management**.
+1. Select the **Other** tab.
+1. In the **Membership Requirements** section, select **Change requirements**.
+1. Select **SAML SSO** and then **Next**.
+1. Paste the IdP metadata descriptor into the text area.
+1. Select **Apply changes**.
 
-Select **SAML SSO** for the IDP and then **Next**.
-
-Paste the IDP metadata descriptor into the text area and select **Apply changes**.
-
-![Pulumi Organization Settings](/images/docs/reference/service/saml-okta/pulumi-org-settings.png)
-
-Once the IDP metadata descriptor has been saved, you are all set to log into Pulumi.
-
-## Configuring Session Lifetime
+## Configuring session lifetime
 
 The Pulumi Cloud uses the `SessionNotOnOrAfter` attribute in the `AuthnStatement` element to configure the session lifetime. To configure this in Okta, you must use a [SAML assertion inline hook](https://developer.okta.com/docs/guides/saml-inline-hook/main/).
 
@@ -129,23 +121,20 @@ The JSON payload the inline hook sends to Okta should contain the following:
         {
           "op": "add",
           "path": "/authentication/sessionLifetime",
-          "value": 21600 // lifetime in seconds
+          "value": 21600 // Lifetime in seconds
         }
       ]
     }
   ]
 }
-
 ```
 
-### Signing into Pulumi using Okta
+## Signing in to Pulumi using Okta
 
-Members of your Okta application can now sign into Pulumi. Navigate to
+Members of your Okta application can now sign in to Pulumi. Navigate to
 [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization.
 
-![Pulumi Cloud](/images/docs/reference/service/saml-okta/pulumi-console-signin.png)
-
 ## Troubleshooting
 
-If you run into any troubles configuring Okta, signing into Pulumi, or need some assistance, [contact us](/about#contact-us).
+For help resolving SAML SSO configuration issues, see the [SAML SSO troubleshooting guide](/docs/administration/access-identity/saml/troubleshooting/) or [contact support](https://support.pulumi.com/).
