@@ -72,10 +72,6 @@ guides:
   guides_list:
   - display_name: Configuring AWS API Gateway
     url: guides/api-gateway/
-  - display_name: Configuring AWS Auto Scaling
-    url: guides/autoscaling/
-  - display_name: Using AWS CloudWatch
-    url: guides/cloudwatch/
   - display_name: Using AWS Elastic Container Registry (ECR)
     url: guides/ecr/
   - display_name: Using AWS Elastic Container Service (ECS)
