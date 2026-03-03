@@ -9,7 +9,7 @@ menu:
   administration:
     name: Google Workspace
     parent: administration-access-identity-saml
-    weight: 4
+    weight: 40
     identifier: pulumi-cloud-access-management-saml-gsuite
 aliases:
 - /docs/reference/service/saml-gsuite/
@@ -18,14 +18,10 @@ aliases:
 - /docs/pulumi-cloud/access-management/saml/gsuite/
 ---
 
-This guide walks you through configuring your Google Workspace (formerly known as G Suite) service as a SAML SSO identity provider
-(IDP) for the Pulumi Cloud.
+This guide walks you through configuring your Google Workspace (formerly known as G Suite) service as a [SAML SSO](/docs/administration/access-identity/saml/) identity provider
+(IDP) for Pulumi Cloud.
 
-## Prerequisites
-
-- [Single Sign-On](/docs/administration/access-identity/saml/sso/)
-
-## Creating the SAML Application
+## Creating the SAML application
 
 1. In the [administrator console](https://admin.google.com/) for your Google Workspace domain, open the flyout menu
 in the upper-left corner and choose **Apps &gt; Web and mobile apps**.
@@ -81,42 +77,28 @@ domain users by selecting the down arrow in the **User access** panel:
     ![Enable the SAML application part 2](/images/docs/reference/service/saml-gsuite/gsuite-app-enable-2.png)
 
    At this point, you're done configuring Google Workspace, and can move on to completing SAML SSO setup in
-   the Pulumi Cloud.
+   Pulumi Cloud.
 
-## Configuring Your Pulumi Organization
+## Configuring your Pulumi organization
 
-The final step in the process consists of associating your Pulumi organization with your SSO identity
-provider.
-
-1. Sign in to the Pulumi Cloud where your SAML organization resides, then navigate to the **Settings** tab for that
-organization.
-
-1. Select **Access Management**, then select the **Other** tab.
-
+1. Sign in to Pulumi Cloud and navigate to your organization.
+1. Select **Settings** > **Access Management**.
+1. Select the **Other** tab.
 1. In the **Membership Requirements** section, select **Change requirements**.
+1. Select **SAML SSO** and then **Next**.
+1. Paste the full contents of the XML IDP document you downloaded into the text area.
+1. Select **Apply changes**.
 
-1. Select **SAML SSO** and **Next**.
+Your Pulumi organization is now configured to use Google Workspace as a SAML SSO identity provider.
 
-     ![Pulumi SAML SSO](/images/docs/reference/service/saml-gsuite/pulumi-enable-saml-sso.png)
+## Signing in to Pulumi with Google Workspace
 
-1. Paste the full contents of the XML IDP document you have previously downloaded into the text area.
-
-    ![Provide the XML IDP descriptor](/images/docs/reference/service/saml-gsuite/pulumi-load-sso-xml.png)
-
-1. Select **Apply changes** and refresh your browser page to see the SAML SSO settings.
-
-Your Pulumi organization is now configured to use Google as a SAML SSO identity provider.
-
-## Signing in to Pulumi with Google
-
-Members of your Google Workspace can now sign into Pulumi. Navigate to
+Members of your Google Workspace can now sign in to Pulumi. Navigate to
 [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization.
 
-![Pulumi Cloud](/images/docs/reference/service/saml-gsuite/pulumi-console-signin.png)
-
 ## Troubleshooting
 
-Google Workspace SAML troubleshooting page: [SAML app error messages](https://support.google.com/a/answer/6301076)
+Google Workspace SAML troubleshooting: [SAML app error messages](https://support.google.com/a/answer/6301076)
 
-If you need additional assistance, [contact us](/about#contact-us).
+For additional help, see the [SAML SSO troubleshooting guide](/docs/administration/access-identity/saml/troubleshooting/) or [contact support](https://support.pulumi.com/).

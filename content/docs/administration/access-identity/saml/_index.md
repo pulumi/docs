@@ -2,7 +2,7 @@
 title_tag: SAML Single Sign-On (SSO) Guides
 meta_desc:
   This page provides an overview of how to configure any SAML 2.0 identity provider
-  with the Pulumi Cloud.
+  with Pulumi Cloud.
 title: SAML(SSO)
 h1: Pulumi Cloud SAML(SSO)
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -20,7 +20,9 @@ aliases:
 
 The [Pulumi Cloud](https://app.pulumi.com) can be configured to work with any SAML 2.0 identity provider. SAML support requires Pulumi Enterprise or Pulumi Business Critical. To learn more about the capabilities of Pulumi Enterprise or Pulumi Business Critical, refer to the [pricing page](/pricing/).
 
-> Looking for information on how to enable SAML SSO for self-hosted Pulumi? Learn more [here](/docs/administration/self-hosting/saml-sso/).
+{{% notes type="info" %}}
+Running self-hosted Pulumi Cloud? You'll first need to [configure your self-hosted infrastructure for SAML SSO](/docs/administration/self-hosting/saml-sso/) (API service keys and environment variables), then return here to complete IdP configuration.
+{{% /notes %}}
 
 ## Single Sign-On (SSO)
 

@@ -8,7 +8,7 @@ menu:
   administration:
     name: Auth0
     parent: administration-access-identity-saml
-    weight: 2
+    weight: 20
     identifier: pulumi-cloud-access-management-saml-auth0
 aliases:
 - /docs/reference/service/saml-auth0/
@@ -17,16 +17,10 @@ aliases:
 - /docs/pulumi-cloud/access-management/saml/auth0/
 ---
 
-This guide walks you through configuring your Auth0 Authentication Platform as a SAML SSO identity provider
-(IDP) for the Pulumi Cloud.
+This guide walks you through configuring your Auth0 Authentication Platform as a [SAML SSO](/docs/administration/access-identity/saml/) identity provider
+(IDP) for Pulumi Cloud.
 
-## Prerequisites
-
-* Your organization must already be configured to use [SAML](/docs/administration/access-identity/saml/sso/) with Pulumi.
-* You must be an admin of your Pulumi organization.
-* (Optional, but highly recommended) You should have more than one admin for your Pulumi organization.
-
-## Enabling SAML For Your Auth0 Authentication Platform
+## Enabling SAML for your Auth0 authentication platform
 
 To enable SAML for your Auth0 Authentication Platform, navigate to the **Applications** section of your Auth0 dashboard. You may
 need to create a new application or select an existing application. Next, we need to get the SAML metadata XML to
@@ -41,21 +35,8 @@ the browser or a command line tool like `curl`.
 
 ![Auth0 Application Endpoints](/images/docs/reference/service/saml-auth0/auth0-app-endpoints.png)
 
-To configure Pulumi with the SAML metadata:
-
-1. Sign into the Pulumi Cloud and navigate to your organization.
-1. Select **Settings**, then **Access Management**.
-1. Select the **Other** tab.
-1. In the **Membership Requirements** section, select **Change requirements**.
-1. Select **SAML SSO** and then **Next**.
-1. Paste the contents of the downloaded XML file into the text area.
-
-    ![Pulumi SAML SSO Configuration](/images/docs/reference/service/saml-auth0/auth0-saml-sso-config.png)
-
-1. Select **Apply changes**.
-
 Finally, in the **Settings** tab of your application, navigate to the **Application URIs** section. In the **Application
-Login URI** field, enter the URL of your Pulumi organization in following format:
+Login URI** field, enter the URL of your Pulumi organization in the following format:
 
 ```
 https://api.pulumi.com/login/{orgName}/sso/saml/acs
@@ -64,8 +45,20 @@ https://api.pulumi.com/login/{orgName}/sso/saml/acs
 where `{orgName}` is the name of your Pulumi organization. Additionally, in the **Allowed Callback URLs** field, enter
 the same URL.
 
+## Configuring your Pulumi organization
+
+To configure Pulumi with the SAML metadata:
+
+1. Sign in to Pulumi Cloud and navigate to your organization.
+1. Select **Settings** > **Access Management**.
+1. Select the **Other** tab.
+1. In the **Membership Requirements** section, select **Change requirements**.
+1. Select **SAML SSO** and then **Next**.
+1. Paste the contents of the downloaded XML file into the text area.
+1. Select **Apply changes**.
+
 ## Troubleshooting
 
-Auth0 Troubleshoot SAML Configurations: [SAML app error messages](https://auth0.com/docs/troubleshoot/authentication-issues/troubleshoot-saml-configurations)
+Auth0 troubleshooting: [SAML app error messages](https://auth0.com/docs/troubleshoot/authentication-issues/troubleshoot-saml-configurations)
 
-If you need additional assistance, [contact us](/about#contact-us).
+For additional help, see the [SAML SSO troubleshooting guide](/docs/administration/access-identity/saml/troubleshooting/) or [contact support](https://support.pulumi.com/).
