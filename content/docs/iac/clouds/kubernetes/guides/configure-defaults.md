@@ -45,7 +45,7 @@ We'll examine how to create:
 
 * [Namespaces](#namespaces)
 * [Quotas](#quotas)
-* [PodSecurityPolicies](#podsecuritypolicies)
+* [Pod Security Standards](#pod-security-standards)
 
 ## Prerequisites
 
@@ -217,818 +217,119 @@ resourcequotas          1     1
 services                0     5
 ```
 
-## PodSecurityPolicies
+## Pod Security Standards
 
-{{% choosable cloud aws %}}
+Kubernetes replaced PodSecurityPolicy (PSP) with the [Pod Security Admission][k8s-psa]
+controller, which became stable in Kubernetes 1.25. PSP was removed in Kubernetes 1.25,
+and is no longer available in current versions of EKS, AKS, or GKE.
 
-By default, EKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
-`eks.privileged`. This PSP is bound to the `system:authenticated` group, which means **any**
-authenticated user in the cluster can run privileged workloads. It is highly
-recommended that you replace this PSP with an appropriate, restricted PSP by user.
+Pod Security Admission enforces [Pod Security Standards][k8s-pss] at the namespace level
+using namespace labels. There are three policy levels:
 
-> Note: PSPs should only be removed **after** its replacements have been created
-to ensure running workloads continue executing properly (order matters).
+| Level | Description |
+|---|---|
+| `privileged` | Unrestricted; allows known privilege escalations |
+| `baseline` | Minimally restrictive; prevents known privilege escalations |
+| `restricted` | Heavily restricted; follows pod hardening best practices |
 
-See the official [EKS Pod Security Policy][eks-psp] docs and the
-[Kubernetes docs][k8s-psp] for more details.
+Each level can be applied in three modes:
 
-<!-- markdownlint-disable url -->
-[k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
-[eks-psp]: https://docs.aws.amazon.com/eks/latest/userguide/pod-security-policy.html
-<!-- markdownlint-enable url -->
-
-{{% /choosable %}}
-
-{{% choosable cloud azure %}}
-
-By default, AKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
-`privileged`. [Per AKS][aks-psp-priv], this privileged PSP should not be removed.
-
-Users who are **not** in the `cluster-admins` ClusterRole will not be able to
-create Pods if the cluster was created with `enablePodSecurityPolicy: true`.
-We'll need to create a PSP with proper Kubernetes RBAC for these users.
-
-See the official [AKS Pod Security Policy][aks-psp] docs and the
-[Kubernetes docs][k8s-psp] for more details.
+| Mode | Description |
+|---|---|
+| `enforce` | Policy violations cause the pod to be rejected |
+| `warn` | Policy violations trigger a user-facing warning but do not block |
+| `audit` | Policy violations are recorded in the audit log |
 
 <!-- markdownlint-disable url -->
-[k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
-[aks-psp]: https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies
-[aks-psp-priv]: https://docs.microsoft.com/en-us/azure/aks/use-pod-security-policies
+[k8s-psa]: https://kubernetes.io/docs/concepts/security/pod-security-admission/
+[k8s-pss]: https://kubernetes.io/docs/concepts/security/pod-security-standards/
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+### Apply Pod Security Standards to a namespace
 
-{{% choosable cloud gcp %}}
-
-By default, GKE ships with the following [PodSecurityPolicies][k8s-psp].
-These PSPs are used by GKE Pods and should generally be left untouched. If you
-choose to replace them, they should be removed **after** its replacements
-have been created to ensure running workloads continue executing properly (order matters).
-
-| PSP Name |
-|---|
-| gce.event-exporter |
-| gce.fluentd-gcp |
-| gce.persistent-volume-binder |
-| gce.privileged |
-| gce.unprivileged-addon |
-
-See the official [GKE Pod Security Policy][gke-psp] docs and the
-[Kubernetes docs][k8s-psp] for more details.
-
-[k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
-[gke-psp]: https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies
-
-{{% /choosable %}}
-
-### Create a Restrictive PSP
-
-Create a PSP that allows a restrictive, but usable set of permissions to deploy
-workloads.
-
-{{< chooser k8s-language "typescript,yaml" / >}}
-
-{{% choosable cloud aws %}}
-
-{{< choosable k8s-language yaml >}}
-
-```yaml
-cat > restrictive-psp.yaml << EOF
-apiVersion: policy/v1beta1
-kind: PodSecurityPolicy
-metadata:
-  name: demo-restrictive
-spec:
-  privileged: false
-  hostNetwork: false
-  allowPrivilegeEscalation: false
-  defaultAllowPrivilegeEscalation: false
-  hostPID: false
-  hostIPC: false
-  runAsUser:
-    rule: RunAsAny
-  fsGroup:
-    rule: RunAsAny
-  seLinux:
-    rule: RunAsAny
-  supplementalGroups:
-    rule: RunAsAny
-  volumes:
-  - 'configMap'
-  - 'downwardAPI'
-  - 'emptyDir'
-  - 'persistentVolumeClaim'
-  - 'secret'
-  - 'projected'
-  allowedCapabilities:
-  - '*'
-
----
-
-# Create a ClusterRole to use the restrictive PSP.
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: demo-restrictive
-rules:
-- apiGroups:
-  - policy
-  resourceNames:
-  - restrictive
-  resources:
-  - podsecuritypolicies
-  verbs:
-  - use
-
----
-
-# Create a binding to the restrictive PSP for the controllers running in
-# kube-system that use ServiceAccounts.
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: allow-restricted-kube-system
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: demo-restrictive
-subjects:
-- kind: Group
-  name: system:serviceaccounts
-  namespace: kube-system
-
----
-
-# Create a binding to the restrictive PSP for the pulumi:devs RBAC group running in
-# apps Namespace.
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: allow-restricted-apps
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: demo-restrictive
-subjects:
-- kind: Group
-  name: pulumi:devs
-  namespace: `pulumi stack output appsNamespaceName`
-EOF
-```
-
-```bash
-$ kubectl apply -f restrictive-psp.yaml
-```
-
-{{< /choosable >}}
-
-{{< choosable k8s-language typescript >}}
-
-```ts
-import * as k8s from "@pulumi/kubernetes";
-
-// Create a restrictive PodSecurityPolicy.
-const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("demo-restrictive", {
-    metadata: { name: "demo-restrictive" },
-    spec: {
-        privileged: false,
-        hostNetwork: false,
-        allowPrivilegeEscalation: false,
-        defaultAllowPrivilegeEscalation: false,
-        hostPID: false,
-        hostIPC: false,
-        runAsUser: { rule: "RunAsAny" },
-        fsGroup: { rule: "RunAsAny" },
-        seLinux: { rule: "RunAsAny" },
-        supplementalGroups: { rule: "RunAsAny" },
-        volumes: [
-            "configMap",
-            "downwardAPI",
-            "emptyDir",
-            "persistentVolumeClaim",
-            "secret",
-            "projected"
-        ],
-        allowedCapabilities: [
-            "*"
-        ]
-    }
-});
-
-// Create a ClusterRole to use the restrictive PodSecurityPolicy.
-const restrictiveClusterRole = new k8s.rbac.v1.ClusterRole("demo-restrictive", {
-    metadata: { name: "demo-restrictive" },
-    rules: [
-        {
-            apiGroups: [
-                "policy"
-            ],
-            resourceNames: [
-                restrictivePSP.metadata.name,
-            ],
-            resources: [
-                "podsecuritypolicies"
-            ],
-            verbs: [
-                "use"
-            ]
-        }
-    ]
-});
-
-// Create a ClusterRoleBinding for the ServiceAccounts of Namespace kube-system
-// to the ClusterRole that uses the restrictive PodSecurityPolicy.
-const allowRestrictedKubeSystemCRB = new k8s.rbac.v1.ClusterRoleBinding("allow-restricted-kube-system", {
-    metadata: { name: "allow-restricted-kube-system" },
-    roleRef: {
-        apiGroup: "rbac.authorization.k8s.io",
-        kind: "ClusterRole",
-        name: restrictiveClusterRole.metadata.name
-    },
-    subjects: [
-        {
-            kind: "Group",
-            name: "system:serviceaccounts",
-            namespace: "kube-system"
-        }
-    ]
-});
-
-// Create a ClusterRoleBinding for the RBAC group pulumi:devs
-// to the ClusterRole that uses the restrictive PodSecurityPolicy.
-const allowRestrictedAppsCRB = new k8s.rbac.v1.ClusterRoleBinding("allow-restricted-apps", {
-    metadata: { name: "allow-restricted-apps" },
-    roleRef: {
-        apiGroup: "rbac.authorization.k8s.io",
-        kind: "ClusterRole",
-        name: restrictiveClusterRole.metadata.name
-    },
-    subjects: [
-        {
-            kind: "Group",
-            name: "pulumi:devs",
-            namespace: appsNamespaceName
-        }
-    ]
-});
-```
-
-{{< /choosable >}}
-
-{{% /choosable %}}
-
-{{% choosable cloud azure %}}
-
-{{< choosable k8s-language yaml >}}
-
-```yaml
-cat > restrictive-psp.yaml << EOF
-apiVersion: policy/v1beta1
-kind: PodSecurityPolicy
-metadata:
-  name: demo-restrictive
-spec:
-  privileged: false
-  hostNetwork: false
-  allowPrivilegeEscalation: false
-  defaultAllowPrivilegeEscalation: false
-  hostPID: false
-  hostIPC: false
-  runAsUser:
-    rule: RunAsAny
-  fsGroup:
-    rule: RunAsAny
-  seLinux:
-    rule: RunAsAny
-  supplementalGroups:
-    rule: RunAsAny
-  volumes:
-  - 'configMap'
-  - 'downwardAPI'
-  - 'emptyDir'
-  - 'persistentVolumeClaim'
-  - 'secret'
-  - 'projected'
-  allowedCapabilities:
-  - '*'
-
----
-
-# Create a ClusterRole to use the restrictive PSP.
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: demo-restrictive
-rules:
-- apiGroups:
-  - policy
-  resourceNames:
-  - restrictive
-  resources:
-  - podsecuritypolicies
-  verbs:
-  - use
-
----
-
-# Create a binding to the restrictive PSP for the controllers running in
-# kube-system that use ServiceAccounts.
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: allow-restricted-kube-system
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: demo-restrictive
-subjects:
-- kind: Group
-  name: system:serviceaccounts
-  namespace: kube-system
-
----
-
-# Create a binding to the restrictive PSP for the pulumi:devs RBAC group running in
-# apps Namespace.
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: allow-restricted-apps
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: demo-restrictive
-subjects:
-- kind: Group
-  name: pulumi:devs
-  namespace: `pulumi stack output appsNamespaceName`
-EOF
-```
-
-```bash
-$ kubectl apply -f restrictive-psp.yaml
-```
-
-{{< /choosable >}}
-
-{{< choosable k8s-language typescript >}}
-
-```ts
-import * as k8s from "@pulumi/kubernetes";
-
-// Create a restrictive PodSecurityPolicy.
-const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("demo-restrictive", {
-    metadata: { name: "demo-restrictive" },
-    spec: {
-        privileged: false,
-        hostNetwork: false,
-        allowPrivilegeEscalation: false,
-        defaultAllowPrivilegeEscalation: false,
-        hostPID: false,
-        hostIPC: false,
-        runAsUser: { rule: "RunAsAny" },
-        fsGroup: { rule: "RunAsAny" },
-        seLinux: { rule: "RunAsAny" },
-        supplementalGroups: { rule: "RunAsAny" },
-        volumes: [
-            "configMap",
-            "downwardAPI",
-            "emptyDir",
-            "persistentVolumeClaim",
-            "secret",
-            "projected"
-        ],
-        allowedCapabilities: [
-            "*"
-        ]
-    }
-});
-
-// Create a ClusterRole to use the restrictive PodSecurityPolicy.
-const restrictiveClusterRole = new k8s.rbac.v1.ClusterRole("demo-restrictive", {
-    metadata: { name: "demo-restrictive" },
-    rules: [
-        {
-            apiGroups: [
-                "policy"
-            ],
-            resourceNames: [
-                restrictivePSP.metadata.name,
-            ],
-            resources: [
-                "podsecuritypolicies"
-            ],
-            verbs: [
-                "use"
-            ]
-        }
-    ]
-});
-
-// Create a ClusterRoleBinding for the ServiceAccounts of Namespace kube-system
-// to the ClusterRole that uses the restrictive PodSecurityPolicy.
-const allowRestrictedKubeSystemCRB = new k8s.rbac.v1.ClusterRoleBinding("allow-restricted-kube-system", {
-    metadata: { name: "allow-restricted-kube-system" },
-    roleRef: {
-        apiGroup: "rbac.authorization.k8s.io",
-        kind: "ClusterRole",
-        name: restrictiveClusterRole.metadata.name
-    },
-    subjects: [
-        {
-            kind: "Group",
-            name: "system:serviceaccounts",
-            namespace: "kube-system"
-        }
-    ]
-});
-
-// Create a ClusterRoleBinding for the RBAC group pulumi:devs
-// to the ClusterRole that uses the restrictive PodSecurityPolicy.
-const allowRestrictedAppsCRB = new k8s.rbac.v1.ClusterRoleBinding("allow-restricted-apps", {
-    metadata: { name: "allow-restricted-apps" },
-    roleRef: {
-        apiGroup: "rbac.authorization.k8s.io",
-        kind: "ClusterRole",
-        name: restrictiveClusterRole.metadata.name
-    },
-    subjects: [
-        {
-            kind: "Group",
-            name: "pulumi:devs",
-            namespace: appsNamespaceName
-        }
-    ]
-});
-```
-
-{{< /choosable >}}
-
-{{% /choosable %}}
-
-{{% choosable cloud gcp %}}
-
-{{< choosable k8s-language yaml >}}
-
-```yaml
-cat > restrictive-psp.yaml << EOF
-apiVersion: policy/v1beta1
-kind: PodSecurityPolicy
-metadata:
-  name: demo-restrictive
-spec:
-  privileged: false
-  hostNetwork: false
-  allowPrivilegeEscalation: false
-  defaultAllowPrivilegeEscalation: false
-  hostPID: false
-  hostIPC: false
-  runAsUser:
-    rule: RunAsAny
-  fsGroup:
-    rule: RunAsAny
-  seLinux:
-    rule: RunAsAny
-  supplementalGroups:
-    rule: RunAsAny
-  volumes:
-  - 'configMap'
-  - 'downwardAPI'
-  - 'emptyDir'
-  - 'persistentVolumeClaim'
-  - 'secret'
-  - 'projected'
-  allowedCapabilities:
-  - '*'
-
----
-
-# Create a ClusterRole to use the restrictive PSP.
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: demo-restrictive
-rules:
-- apiGroups:
-  - policy
-  resourceNames:
-  - restrictive
-  resources:
-  - podsecuritypolicies
-  verbs:
-  - use
-
----
-
-# Create a binding to the restrictive PSP for the controllers running in
-# kube-system that use ServiceAccounts.
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: allow-restricted-kube-system
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: demo-restrictive
-subjects:
-- kind: Group
-  name: system:serviceaccounts
-  namespace: kube-system
-
----
-
-# Create a binding to the restrictive PSP for the pulumi:devs RBAC group running in
-# apps Namespace.
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: allow-restricted-apps
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: demo-restrictive
-subjects:
-- kind: User
-  name: k8s-devs@pulumi-development.iam.gserviceaccount.com
-  namespace: `pulumi stack output appsNamespaceName`
-EOF
-```
-
-```bash
-$ kubectl apply -f restrictive-psp.yaml
-```
-
-{{< /choosable >}}
-
-{{< choosable k8s-language typescript >}}
-
-```ts
-import * as k8s from "@pulumi/kubernetes";
-
-// Create a restrictive PodSecurityPolicy.
-const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("demo-restrictive", {
-    metadata: { name: "demo-restrictive" },
-    spec: {
-        privileged: false,
-        hostNetwork: false,
-        allowPrivilegeEscalation: false,
-        defaultAllowPrivilegeEscalation: false,
-        hostPID: false,
-        hostIPC: false,
-        runAsUser: { rule: "RunAsAny" },
-        fsGroup: { rule: "RunAsAny" },
-        seLinux: { rule: "RunAsAny" },
-        supplementalGroups: { rule: "RunAsAny" },
-        volumes: [
-            "configMap",
-            "downwardAPI",
-            "emptyDir",
-            "persistentVolumeClaim",
-            "secret",
-            "projected"
-        ],
-        allowedCapabilities: [
-            "*"
-        ]
-    }
-});
-
-// Create a ClusterRole to use the restrictive PodSecurityPolicy.
-const restrictiveClusterRole = new k8s.rbac.v1.ClusterRole("demo-restrictive", {
-    metadata: { name: "demo-restrictive" },
-    rules: [
-        {
-            apiGroups: [
-                "policy"
-            ],
-            resourceNames: [
-                restrictivePSP.metadata.name,
-            ],
-            resources: [
-                "podsecuritypolicies"
-            ],
-            verbs: [
-                "use"
-            ]
-        }
-    ]
-});
-
-// Create a ClusterRoleBinding for the ServiceAccounts of Namespace kube-system
-// to the ClusterRole that uses the restrictive PodSecurityPolicy.
-const allowRestrictedKubeSystemCRB = new k8s.rbac.v1.ClusterRoleBinding("allow-restricted-kube-system", {
-    metadata: { name: "allow-restricted-kube-system" },
-    roleRef: {
-        apiGroup: "rbac.authorization.k8s.io",
-        kind: "ClusterRole",
-        name: restrictiveClusterRole.metadata.name
-    },
-    subjects: [
-        {
-            kind: "Group",
-            name: "system:serviceaccounts",
-            namespace: "kube-system"
-        }
-    ]
-});
-
-// Create a ClusterRoleBinding for the RBAC group pulumi:devs
-// to the ClusterRole that uses the restrictive PodSecurityPolicy.
-const allowRestrictedAppsCRB = pulumi.all([
-    config.project,
-    config.devsAccountId,
-]).apply(([project, devsAccountId]) => {
-    return new k8s.rbac.v1.ClusterRoleBinding("allow-restricted-apps", {
-        metadata: { name: "allow-restricted-apps" },
-        roleRef: {
-            apiGroup: "rbac.authorization.k8s.io",
-            kind: "ClusterRole",
-            name: restrictiveClusterRole.metadata.name
-        },
-        subjects: [{
-            kind: "User",
-            name: `${devsAccountId}@${project}.iam.gserviceaccount.com`,
-            namespace: appsNamespaceName
-        }],
-    })
-});
-```
-
-{{< /choosable >}}
-
-{{% /choosable %}}
-
-### Create a Privileged PSP Role Binding
-
-If you wish to grant the ability to use a privileged PSP, we need to
-create a ClusterRoleBinding to the PSP. For example, here's how to bind the PSP to
-a given Namespace's (`ingress-nginx`) ServiceAccounts.
+Apply pod security standards to a namespace by adding labels. For most application
+workloads, enforce the `restricted` level:
 
 {{< chooser k8s-language "typescript,yaml" / >}}
 
 {{% choosable k8s-language yaml %}}
 
-{{< choosable cloud aws >}}
-
 ```yaml
-cat > privileged-clusterrolebinding.yaml << EOF
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
+cat > apps-namespace.yaml << EOF
+apiVersion: v1
+kind: Namespace
 metadata:
-  name: allow-privileged-ingress-nginx
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: eks:podsecuritypolicy:privileged
-subjects:
-- kind: Group
-  name: system:serviceaccounts:ingress-nginx
-  apiGroup: rbac.authorization.k8s.io
+  name: apps
+  labels:
+    pod-security.kubernetes.io/enforce: restricted
+    pod-security.kubernetes.io/warn: restricted
+    pod-security.kubernetes.io/audit: restricted
 EOF
 ```
 
 ```bash
-$ kubectl apply -f privileged-rolebinding.yaml
+$ kubectl apply -f apps-namespace.yaml
 ```
-
-{{< /choosable >}}
-
-{{< choosable cloud azure >}}
-
-```yaml
-cat > privileged-clusterrolebinding.yaml << EOF
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: allow-privileged-ingress-nginx
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: psp:privileged
-subjects:
-- kind: Group
-  name: system:serviceaccounts:ingress-nginx
-  apiGroup: rbac.authorization.k8s.io
-EOF
-```
-
-```bash
-$ kubectl apply -f privileged-rolebinding.yaml
-```
-
-{{< /choosable >}}
-
-{{< choosable cloud gcp >}}
-
-```yaml
-cat > privileged-clusterrolebinding.yaml << EOF
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: allow-privileged-ingress-nginx
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: gce:podsecuritypolicy:privileged
-subjects:
-- kind: Group
-  name: system:serviceaccounts:ingress-nginx
-  apiGroup: rbac.authorization.k8s.io
-EOF
-```
-
-```bash
-$ kubectl apply -f privileged-rolebinding.yaml
-```
-
-{{< /choosable >}}
 
 {{% /choosable %}}
 
 {{% choosable k8s-language typescript %}}
 
-{{< choosable cloud aws >}}
-
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 
-const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
-    metadata: { name: "allow-privileged-ingress-nginx" },
-    roleRef: {
-        apiGroup: "rbac.authorization.k8s.io",
-        kind: "ClusterRole",
-        name: "eks.privileged"
+const appsNamespace = new k8s.core.v1.Namespace("apps", {
+    metadata: {
+        labels: {
+            "pod-security.kubernetes.io/enforce": "restricted",
+            "pod-security.kubernetes.io/warn": "restricted",
+            "pod-security.kubernetes.io/audit": "restricted",
+        },
     },
-    subjects: [
-        {
-            kind: "Group",
-            name: "system:serviceaccounts:ingress-nginx",
-            apiGroup: "rbac.authorization.k8s.io"
-        }
-    ]
-});
+}, { provider: cluster.provider });
 ```
-
-{{< /choosable >}}
-
-{{< choosable cloud azure >}}
-
-```ts
-import * as k8s from "@pulumi/kubernetes";
-
-const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
-    metadata: { name: "allow-privileged-ingress-nginx" },
-    roleRef: {
-        apiGroup: "rbac.authorization.k8s.io",
-        kind: "ClusterRole",
-        name: "psp:privileged"
-    },
-    subjects: [
-        {
-            kind: "Group",
-            name: "system:serviceaccounts:ingress-nginx",
-            apiGroup: "rbac.authorization.k8s.io"
-        }
-    ]
-});
-```
-
-{{< /choosable >}}
-
-{{< choosable cloud gcp >}}
-
-```ts
-import * as k8s from "@pulumi/kubernetes";
-
-// Create a ClusterRoleBinding for the ServiceAccounts of Namespace ingress-nginx
-// to the ClusterRole that uses the privileged PodSecurityPolicy.
-const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
-    metadata: { name: "allow-privileged-ingress-nginx" },
-    roleRef: {
-        apiGroup: "rbac.authorization.k8s.io",
-        kind: "ClusterRole",
-        name: "gce:podsecuritypolicy:privileged"
-    },
-    subjects: [
-        {
-            kind: "Group",
-            name: "system:serviceaccounts:ingress-nginx",
-            apiGroup: "rbac.authorization.k8s.io"
-        }
-    ]
-});
-```
-
-{{< /choosable >}}
 
 {{% /choosable %}}
+
+For workloads that require elevated permissions, such as ingress controllers, use the
+`privileged` or `baseline` level on those specific namespaces instead:
+
+{{< chooser k8s-language "typescript,yaml" / >}}
+
+{{% choosable k8s-language yaml %}}
+
+```yaml
+cat > ingress-nginx-namespace.yaml << EOF
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ingress-nginx
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
+EOF
+```
+
+```bash
+$ kubectl apply -f ingress-nginx-namespace.yaml
+```
+
+{{% /choosable %}}
+
+{{% choosable k8s-language typescript %}}
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+
+const ingressNamespace = new k8s.core.v1.Namespace("ingress-nginx", {
+    metadata: {
+        name: "ingress-nginx",
+        labels: {
+            "pod-security.kubernetes.io/enforce": "privileged",
+        },
+    },
+}, { provider: cluster.provider });
+```
+
+{{% /choosable %}}
+
+For more details, see the [Kubernetes Pod Security Standards documentation][k8s-pss].
