@@ -1,15 +1,15 @@
 ---
-title_tag: "Azure DevOps | CI/CD"
+title_tag: "Using Azure DevOps Pipelines | CI/CD"
 meta_desc: This page details how to use Azure DevOps to manage deploying stacks based on
            commits to specific Git branches, and based on the build reason.
-title: Azure DevOps
-h1: Pulumi CI/CD & Azure DevOps
+title: Azure DevOps Pipelines
+h1: Pulumi CI/CD & Azure DevOps Pipelines
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Azure DevOps
+        name: Azure DevOps Pipelines
         parent: iac-using-pulumi-cicd
-        weight: 100
+        weight: 1
 aliases:
 - /docs/iac/integrations/azure-devops/
 - /docs/iac/using-pulumi/continuous-delivery/azure-devops/
