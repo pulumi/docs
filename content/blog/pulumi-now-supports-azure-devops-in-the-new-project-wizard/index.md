@@ -1,6 +1,6 @@
 ---
 title: "Pulumi Now Supports Azure DevOps and GitLab"
-date: 2026-02-26
+date: 2026-03-03
 draft: false
 meta_desc: "Pulumi now supports Azure DevOps and GitLab as VCS providers. Connect your repos, configure integrations, and deploy infrastructure."
 meta_image: meta.png
