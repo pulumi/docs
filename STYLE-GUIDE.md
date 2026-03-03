@@ -79,19 +79,19 @@ The symbol is not needed in regular in-text links within documentation pages.
 
 ## Navigation patterns
 
-Documentation pages fall into two categories with different structural approaches.
+Section index pages (`_index.md`) fall into two categories with different structural approaches.
 
-### Navigation hub pages
+### Section home pages
 
-A navigation hub page is a section landing page whose primary purpose is routing readers to child pages. It contains minimal prose.
+A section home page is a section index whose primary purpose is routing readers to child pages. It contains minimal prose.
 
-Use `docs_home: true` in frontmatter for navigation hub pages. All content is defined in a `sections:` list. See `content/docs/iac/_index.md` for the canonical example.
+Use `docs_home: true` in frontmatter for section home pages. All content is defined in a `sections:` list. See `content/docs/iac/_index.md` for the canonical example.
 
 Required frontmatter fields:
 
 - `docs_home: true`
-- `notitle: true` — suppresses the duplicate H1 (the hub template renders the H1 itself from `h1:`)
-- `norightnav: true` — hides the right-hand table of contents, which is unused on hub pages
+- `notitle: true` — suppresses the duplicate H1 (the template renders the H1 itself from `h1:`)
+- `norightnav: true` — hides the right-hand table of contents, which is unused on section home pages
 - `h1:` — displayed in the page banner
 - `description:` — short paragraph rendered in the banner (HTML string)
 - `sections:` — list of section blocks using `type: cards-logo-label-link`, `type: button-cards`, or `type: flat`
