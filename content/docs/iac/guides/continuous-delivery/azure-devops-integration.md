@@ -62,8 +62,6 @@ After creating an integration, you can configure PR behavior. Toggle these setti
 | Neo Summaries | Enabled | Include AI-generated summaries of infrastructure changes in PR comments |
 | Detailed Diff | Disabled | Show property-level before/after diffs for changed resources in PR comments |
 
-![Integration settings](../ado-settings.png)
-
 To update, toggle the setting directly. Changes save automatically.
 
 ### Deleting an integration
@@ -85,8 +83,6 @@ Choose a starter template or start from scratch.
 ### Step 3: Select Azure DevOps as the VCS provider
 
 In the project details step, select **Azure DevOps** from the VCS provider dropdown. If only one provider is configured, it's selected automatically.
-
-![New project wizard with Azure DevOps repository settings](../ado-npw.png)
 
 ### Step 4: Choose a repository
 
@@ -111,8 +107,6 @@ ADO-backed stacks support the same deployment settings as GitHub. Configure thes
 | PR Templates | Create a PR with the preview results when running a preview |
 | Path Filters | Only trigger deployments when files matching specified glob patterns change (e.g., `infra/**`) |
 
-![Deployment settings](../ado-deploymentsettings.png)
-
 ### Selecting a repository and branch
 
 1. Choose the ADO integration (if multiple are configured).
@@ -133,8 +127,6 @@ Neo, Pulumi's AI assistant, works with Azure DevOps pull requests. When enabled 
 These appear as comments on your ADO pull requests alongside standard deployment status updates.
 
 To disable Neo summaries, toggle **Neo Summaries** off in your [integration settings](#integration-settings).
-
-![Neo PR comment on an Azure DevOps pull request](../ado-prcomments.png)
 
 ## Troubleshooting
 

@@ -30,9 +30,13 @@ These features apply to both Azure DevOps and GitLab integrations:
 
 **Repo and branch operations**: Browse, select, or create repositories within your project. Pick a branch and wire it up without leaving the wizard.
 
+![New project wizard with Azure DevOps repository settings](ado-npw.png)
+
 **OIDC authentication**: Exchange Pulumi's OIDC token for a provider-specific access token — via Entra ID for ADO or GitLab's OIDC provider. No long-lived secrets stored.
 
 **Neo on pull requests and merge requests**: Neo posts summaries and infrastructure change explanations to your ADO pull requests and GitLab merge requests, same as it does for GitHub.
+
+![Neo PR comment showing resource changes on an Azure DevOps pull request](ado-prcomments.png)
 
 **Deployment**: Stacks backed by ADO or GitLab support push-to-deploy, pull/merge request previews, path filters, environment variables, secrets, and drift detection schedules.
 
