@@ -16,7 +16,7 @@ social:
     linkedin:
 ---
 
-We've added Azure DevOps (ADO) as a VCS provider for Pulumi. If your team uses ADO, you can now deploy infrastructure directly from your ADO repositories, the same git-backed workflow we've had for GitHub.
+We've added Azure DevOps (ADO) as a VCS provider for Pulumi. If your team uses ADO, you can now deploy infrastructure directly from your ADO repositories - the same git-backed workflow we've had for GitHub.
 
 <!--more-->
 
@@ -32,7 +32,7 @@ We've added Azure DevOps (ADO) as a VCS provider for Pulumi. If your team uses A
 
 **Deployment**: ADO-backed stacks support push-to-deploy, PR previews, path filters, environment variables, secrets, and drift detection schedules.
 
-**...and more.  Anything you can do with GitHub, you can do with ADO.**
+**...and more.** Anything you can do with GitHub, you can do with ADO.
 
 ## Getting started
 
