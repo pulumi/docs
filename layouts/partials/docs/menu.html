@@ -322,7 +322,7 @@
                         {{- if $currentMenuItem.URL }}
                             {{- $overviewPage := site.GetPage $currentMenuItem.URL }}
                             {{- if $overviewPage }}
-                                {{- $overviewLabel := "Overview" }}
+                                {{- $overviewLabel := $overviewPage.Title }}
                                 {{- with $overviewPage.Params.overview_label }}
                                     {{- $overviewLabel = . }}
                                 {{- end }}

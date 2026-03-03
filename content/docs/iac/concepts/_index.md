@@ -4,6 +4,7 @@ meta_desc: Learn about what Pulumi is, how it works, and how its components work
 title: Concepts
 h1: What is Pulumi?
 meta_image: /images/docs/meta-images/docs-meta.png
+overview_label: What Is Pulumi?
 menu:
     iac:
         name: Concepts
@@ -77,90 +78,17 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 
 The following topics provide more details on the core concepts of Pulumi and how to use it:
 
-<!-- how & pulumi cloud -->
-<div class="md:flex flex-row mt-6 mb-6">
-    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/how-pulumi-works"><i class="fas fa-laptop-code pr-2"></i>How Pulumi works</a></h3>
-        <p>Learn about how Pulumi performs deployments under the hood.</p>
-    </div>
-    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/pulumi-cloud"><i class="fas fa-cloud-upload-alt pr-2"></i>Pulumi Cloud</a></h3>
-        <p>Learn how Pulumi Cloud relates to the open source tool and what it offers for teams.</p>
-    </div>
-</div>
-
-<!-- projects & stacks -->
-<div class="md:flex flex-row mt-6 mb-6">
-    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/projects"><i class="fas fa-folder-open pr-2"></i>Projects</a></h3>
-        <p>Learn how Pulumi projects are organized and configured.</p>
-    </div>
-    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/stacks"><i class="fas fa-layer-group pr-2"></i>Stacks</a></h3>
-        <p>Learn how to create and deploy stacks.</p>
-    </div>
-</div>
-
-<!-- resources -->
-<div class="md:flex flex-row mt-6 mb-6">
-    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/resources"><i class="fas fa-server pr-2"></i>Resources</a></h3>
-        <p>Learn more about how to use and manage resources in your programs.</p>
-    </div>
-</div>
-
-<!-- resource options & inputs/outputs -->
-<div class="md:flex flex-row mt-6 mb-6">
-    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/options"><i class="fas fa-swatchbook pr-2"></i>Resource options</a></h3>
-        <p>Learn more about how to use and manage resource options in your program.</p>
-    </div>
-    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/inputs-outputs"><i class="fas fa-file-import pr-2"></i>Inputs and outputs</a></h3>
-        <p>Learn how to use resource properties to handle dependencies between resources.</p>
-    </div>
-</div>
-
-<!-- config & secrets -->
-<div class="md:flex flex-row mt-6 mb-6">
-    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/config"><i class="fas fa-toolbox pr-2"></i>Configuration</a></h3>
-        <p>Learn how to configure stacks for different deployment scenarios.</p>
-    </div>
-    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/secrets"><i class="fas fa-key pr-2"></i>Secrets</a></h3>
-        <p>Learn how to handle sensitive data and how to store secret encrypted settings in Pulumi.</p>
-    </div>
-</div>
-
-<!--  esc & state backends-->
-<div class="md:flex flex-row mt-6 mb-6">
-    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/esc/concepts/"><i class="fas fa-cubes pr-2"></i>Environments (ESC)</a></h3>
-        <p>Learn how to configure your deployment environments with Pulumi ESC.</p>
-    </div>
-     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/state"><i class="fas fa-file-alt pr-2"></i>State and backends</a></h3>
-        <p>Learn how Pulumi stores state and manages concurrency.</p>
-    </div>
-</div>
-
-<!-- logging & update plans -->
-<div class="md:flex flex-row mt-6 mb-6">
-    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/update-plans"><i class="fas fa-upload pr-2"></i>Update plans</a></h3>
-        <p>Learn about how to constrain your deployments with update plans.</p>
-    </div>
-</div>
-
-<!-- glossary & compare-->
-<div class="md:flex flex-row mt-6 mb-6">
-    <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/glossary"><i class="fas fa-book pr-2"></i>Glossary</a></h3>
-        <p>Look up definitions to commonly used terms.</p>
-    </div>
-    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/comparisons/"><i class="fas fa-table pr-2"></i>Comparisons</a></h3>
-        <p>Learn about how Pulumi compares to other infrastructure tools.</p>
-    </div>
-</div>
+- [How Pulumi works](/docs/iac/concepts/how-pulumi-works) — Learn about how Pulumi performs deployments under the hood.
+- [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud) — Learn how Pulumi Cloud relates to the open source tool and what it offers for teams.
+- [Projects](/docs/iac/concepts/projects) — Learn how Pulumi projects are organized and configured.
+- [Stacks](/docs/iac/concepts/stacks) — Learn how to create and deploy stacks.
+- [Resources](/docs/iac/concepts/resources) — Learn more about how to use and manage resources in your programs.
+- [Resource options](/docs/iac/concepts/options) — Learn more about how to use and manage resource options in your program.
+- [Inputs and outputs](/docs/iac/concepts/inputs-outputs) — Learn how to use resource properties to handle dependencies between resources.
+- [Configuration](/docs/iac/concepts/config) — Learn how to configure stacks for different deployment scenarios.
+- [Secrets](/docs/iac/concepts/secrets) — Learn how to handle sensitive data and store secret encrypted settings in Pulumi.
+- [Environments (ESC)](/docs/esc/concepts/) — Learn how to configure your deployment environments with Pulumi ESC.
+- [State and backends](/docs/iac/concepts/state) — Learn how Pulumi stores state and manages concurrency.
+- [Update plans](/docs/iac/concepts/update-plans) — Learn about how to constrain your deployments with update plans.
+- [Glossary](/docs/iac/concepts/glossary) — Look up definitions for commonly used terms.
+- [Comparisons](/docs/iac/comparisons/) — Learn about how Pulumi compares to other infrastructure tools.

@@ -77,6 +77,49 @@ The symbol is not needed in regular in-text links within documentation pages.
 
 ---
 
+## Navigation patterns
+
+Documentation pages fall into two categories with different structural approaches.
+
+### Navigation hub pages
+
+A navigation hub page is a section landing page whose primary purpose is routing readers to child pages. It contains minimal prose.
+
+Use `docs_home: true` in frontmatter for navigation hub pages. All content is defined in a `sections:` list. See `content/docs/iac/_index.md` for the canonical example.
+
+Required frontmatter fields:
+
+- `docs_home: true`
+- `notitle: true` — suppresses the duplicate H1 (the hub template renders the H1 itself from `h1:`)
+- `norightnav: true` — hides the right-hand table of contents, which is unused on hub pages
+- `h1:` — displayed in the page banner
+- `description:` — short paragraph rendered in the banner (HTML string)
+- `sections:` — list of section blocks using `type: cards-logo-label-link`, `type: button-cards`, or `type: flat`
+
+Never use raw HTML to build navigation tiles or grid layouts.
+
+### Content pages with incidental navigation
+
+A content page has substantive prose that stands alone as documentation. When a content page also links to related child pages, use a plain markdown unordered list — not raw HTML grids.
+
+```markdown
+- [Page title](url) — Brief description.
+```
+
+Never use raw HTML `<div>` grids, FontAwesome `<i>` icons, or inline Tailwind classes to build navigation link sections within content pages.
+
+### Sidebar "first item" labels
+
+The sidebar template automatically injects the section's `_index.md` as the first item of each section's submenu. The label defaults to the page's title. To override it with a shorter or more descriptive label, add `overview_label:` to the section's `_index.md` frontmatter:
+
+```yaml
+overview_label: What Is Pulumi?
+```
+
+Use `overview_label` when the page title is too long for comfortable sidebar display or when a more contextually descriptive label improves navigation.
+
+---
+
 ## Images and Media
 
 - Use relative paths for images stored in the same directory or a subdirectory.  
