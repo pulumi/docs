@@ -42,6 +42,6 @@ These features apply to both Azure DevOps and GitLab integrations:
 
 1. An org admin configures the integration under **Settings** > **Integrations**.
 1. Authorize with your Azure DevOps or GitLab account via OAuth.
-1. Create a project using the new project wizard and select your VCS provider.
+1. Enjoy first-class workflows for deploying infrastructure.
 
 See the [Azure DevOps integration docs](/docs/iac/guides/continuous-delivery/azure-devops-integration/) or the [GitLab integration docs](/docs/iac/guides/continuous-delivery/gitlab-app/) for the full setup walkthrough. If you're using GitHub, check out the [Pulumi GitHub App](/docs/iac/guides/continuous-delivery/github-app/).
