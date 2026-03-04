@@ -122,12 +122,12 @@ Run Pulumi commands directly in GitLab CI/CD pipelines to preview and deploy inf
 
 ## OIDC authentication
 
-Use GitLab CI's built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as CI variables. See [GitLab OIDC](/docs/esc/integrations/dynamic-login-credentials/) for configuration details.
+Use GitLab CI's built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as CI variables. See [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-client/gitlab/) for configuration details.
 
 ## Template source
 
-Use GitLab repositories as template sources for [Pulumi IDP](/docs/idp/). Your teams can reference GitLab-hosted Pulumi templates when creating new projects through the developer portal.
+Use GitLab repositories as template sources for [Pulumi IDP](/docs/idp/concepts/organization-templates/). Your teams can reference GitLab-hosted Pulumi templates when creating new projects through the developer portal. Note that destination repositories for new projects can only be created on GitHub, even when the source template is hosted on GitLab.
 
 ## Pulumi Deployments
 
-Connect a GitLab repository to trigger automatic deployments whenever code is pushed. Pulumi Deployments monitors your GitLab repo and runs `pulumi up` on matching events. See [Pulumi Deployments](/docs/deployments/deployments/) to get started.
+Trigger [Pulumi Deployments](/docs/deployments/deployments/) from GitLab CI by calling the [Deployments REST API](https://www.pulumi.com/docs/deployments/api/) from your GitLab CI job. Native push-to-deploy from GitLab repositories is not currently supported; that feature requires the [Pulumi GitHub App](/docs/integrations/github-app/).
