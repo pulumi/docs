@@ -79,41 +79,32 @@ The symbol is not needed in regular in-text links within documentation pages.
 
 ## Navigation patterns
 
-Section index pages (`_index.md`) fall into two categories with different structural approaches.
+Every section has an `_index.md` that the sidebar automatically injects as the first item of the section's submenu. The label it receives — **"Overview"** or **"Introduction"** — depends on the page's role.
 
-### Section home pages
+### Overview pages
 
-A section home page is a section index whose primary purpose is routing readers to child pages. It contains minimal prose.
+Use **"Overview"** for section indexes whose primary purpose is routing readers to child pages, with little or no prose of their own. Add `docs_home: true` to the frontmatter to mark the page as an overview and enable the section home template.
 
-Use `docs_home: true` in frontmatter for section home pages. All content is defined in a `sections:` list. See `content/docs/iac/_index.md` for the canonical example.
-
-Required frontmatter fields:
+Required frontmatter:
 
 - `docs_home: true`
-- `notitle: true` — suppresses the duplicate H1 (the template renders the H1 itself from `h1:`)
-- `norightnav: true` — hides the right-hand table of contents, which is unused on section home pages
+- `notitle: true` — suppresses the duplicate H1 (the template renders it from `h1:`)
+- `norightnav: true` — hides the right-hand table of contents (unused on overview pages)
 - `h1:` — displayed in the page banner
 - `description:` — short paragraph rendered in the banner (HTML string)
 - `sections:` — list of section blocks using `type: cards-logo-label-link`, `type: button-cards`, or `type: flat`
 
-Never use raw HTML to build navigation tiles or grid layouts.
+See `content/docs/iac/_index.md` for the canonical example. Never use raw HTML to build navigation tiles or grid layouts.
 
-### Content pages with incidental navigation
+### Introduction pages
 
-A content page has substantive prose that stands alone as documentation. When a content page also links to related child pages, use a plain markdown unordered list — not raw HTML grids.
+Use **"Introduction"** for section indexes that contain substantive prose introducing a topic. No special frontmatter is required; any `_index.md` without `docs_home: true` receives this label automatically.
+
+If the page also links to related child pages, use a plain markdown list — not raw HTML grids or inline Tailwind classes:
 
 ```markdown
 - [Page title](url) — Brief description.
 ```
-
-Never use raw HTML `<div>` grids, FontAwesome `<i>` icons, or inline Tailwind classes to build navigation link sections within content pages.
-
-### Sidebar "first item" labels
-
-The sidebar template automatically injects the section's `_index.md` as the first item of each section's submenu:
-
-- If the page has `docs_home: true`, the sidebar label is **"Overview"**.
-- Otherwise, the sidebar label is **"Introduction"**.
 
 ---
 
