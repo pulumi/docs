@@ -2,6 +2,7 @@ id = "michael-fallihee"
 name = "Michael Fallihee"
 title = "Software Engineer"
 company = "Pulumi"
+image = "static/images/team/michael-fallihee.jpg"
 weight = 1
 bio = ""
 
