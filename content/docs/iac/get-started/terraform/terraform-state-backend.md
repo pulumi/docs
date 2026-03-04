@@ -48,24 +48,6 @@ When you migrate state, each Terraform workspace maps to a Pulumi stack. The wor
 
 If you use Terraform [workspace prefixes](https://developer.hashicorp.com/terraform/language/backend/remote#workspace-prefix) instead of a single named workspace, Pulumi Cloud supports the `workspaces.prefix` configuration as well. Each workspace matching the prefix maps to a separate stack under the same project.
 
-### Resource mapping
-
-When Terraform state is stored in Pulumi Cloud, each Terraform resource is converted to a synthetic Pulumi resource for visibility in the console and Resource Search. Resources are stored using a `pulumi:terraform:<tf-type>` type convention — for example, an `aws_instance` resource in Terraform appears as `pulumi:terraform:aws_instance` in Pulumi Cloud.
-
-This "mechanical" mapping preserves the Terraform resource structure (attribute names, IDs, dependencies) without transforming it to Pulumi provider schemas. Resource properties use Terraform naming conventions, so practitioners can search for resources in Resource Search using the attribute names they are already familiar with. Sensitive values marked in your Terraform state are encrypted.
-
-Terraform root module outputs are mapped to Pulumi [stack outputs](/docs/iac/concepts/stacks/#outputs), making them available for [stack references](/docs/iac/concepts/stacks/#stackreferences) and the [`pulumi-stacks` ESC provider](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/). This means your Pulumi stacks can directly reference Terraform outputs — useful for sharing foundational infrastructure like VPC IDs or DNS zones, and for incremental migrations where legacy infrastructure can stay in Terraform while new stacks are written in Pulumi.
-
-### Audit policies
-
-You can run [audit (detective) policy packs](/docs/insights/policy/policy-groups/) against Terraform-managed stacks. During policy evaluation, Pulumi performs a best-effort schema mapping from Terraform resource shapes to their Pulumi bridged provider equivalents using the latest provider version. This allows existing policy packs written against Pulumi schemas — including Pulumi's [pre-built compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) — to evaluate Terraform resources.
-
-To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/insights/policy/policy-groups/) in Insights. Policy packs are then evaluated continuously against the stack's resources.
-
-{{% notes "info" %}}
-Only audit (detective) policies are supported for Terraform-managed stacks. Preventative policies require a Pulumi program and are not applicable to stacks updated via the Terraform CLI. The schema mapping works automatically for [bridged providers](/docs/iac/concepts/resources/providers/) but does not currently cover native Pulumi providers like Kubernetes.
-{{% /notes %}}
-
 ## Migrate from a standard backend (S3, Azure Blob, GCS, local)
 
 If your Terraform state is currently stored in S3, Azure Blob Storage, GCS, a local file, or any other standard backend, migration is a single command.
@@ -242,6 +224,24 @@ Once your Terraform state is in Pulumi Cloud, you can:
 - **View resources** in [Resource Search](/docs/pulumi-cloud/insights/search/) alongside your Pulumi-managed resources
 - **Run audit policies** by adding the stack to an [audit policy group](/docs/insights/policy/policy-groups/) in Insights
 - **Continue using Terraform or OpenTofu** for all `plan`, `apply`, and `destroy` operations
+
+### Resource mapping
+
+When Terraform state is stored in Pulumi Cloud, each Terraform resource is converted to a synthetic Pulumi resource for visibility in the console and Resource Search. Resources are stored using a `pulumi:terraform:<tf-type>` type convention — for example, an `aws_instance` resource in Terraform appears as `pulumi:terraform:aws_instance` in Pulumi Cloud.
+
+This "mechanical" mapping preserves the Terraform resource structure (attribute names, IDs, dependencies) without transforming it to Pulumi provider schemas. Resource properties use Terraform naming conventions, so practitioners can search for resources in Resource Search using the attribute names they are already familiar with. Sensitive values marked in your Terraform state are encrypted.
+
+Terraform root module outputs are mapped to Pulumi [stack outputs](/docs/iac/concepts/stacks/#outputs), making them available for [stack references](/docs/iac/concepts/stacks/#stackreferences) and the [`pulumi-stacks` ESC provider](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/). This means your Pulumi stacks can directly reference Terraform outputs — useful for sharing foundational infrastructure like VPC IDs or DNS zones, and for incremental migrations where legacy infrastructure can stay in Terraform while new stacks are written in Pulumi.
+
+### Audit policies
+
+You can run [audit (detective) policy packs](/docs/insights/policy/policy-groups/) against Terraform-managed stacks. During policy evaluation, Pulumi performs a best-effort schema mapping from Terraform resource shapes to their Pulumi bridged provider equivalents using the latest provider version. This allows existing policy packs written against Pulumi schemas — including Pulumi's [pre-built compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) — to evaluate Terraform resources.
+
+To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/insights/policy/policy-groups/) in Insights. Policy packs are then evaluated continuously against the stack's resources.
+
+{{% notes "info" %}}
+Only audit (detective) policies are supported for Terraform-managed stacks. Preventative policies require a Pulumi program and are not applicable to stacks updated via the Terraform CLI. The schema mapping works automatically for [bridged providers](/docs/iac/concepts/resources/providers/) but does not currently cover native Pulumi providers like Kubernetes.
+{{% /notes %}}
 
 ### Restoring a previous state version
 
