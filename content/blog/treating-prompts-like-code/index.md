@@ -13,7 +13,7 @@ tags:
 schema_type: auto
 ---
 
-Pulumi has a lot of engineers. It has marketers, solution architects, developer advocates. Everyone has something to contribute to docs and blog posts — domain expertise, hard-won lessons, real-world examples. What they don't all have is familiarity with our Hugo setup, our style guide, our metadata conventions, or where a new document is supposed to live in the navigation tree. I joined Pulumi in July 2025 as a Senior Technical Content Engineer. A few months in, my sole teammate departed. The docs practice was now, functionally, me.
+Pulumi has a lot of engineers. It has marketers, solution architects, developer advocates. Everyone has something to contribute to docs and blog posts — domain expertise, hard-won lessons, real-world examples. What they don't all have is familiarity with our Hugo setup, our style guide, our metadata conventions, or where a new document is supposed to live in the navigation tree. I joined Pulumi in July 2025 as a Senior Technical Content Engineer. A few weeks in, my sole teammate departed. The docs practice was now, functionally, me.
 
 The problem was clear enough: how do you take one docs engineer's accumulated knowledge and make it available to everyone who needs it, without that engineer becoming a bottleneck?
 
