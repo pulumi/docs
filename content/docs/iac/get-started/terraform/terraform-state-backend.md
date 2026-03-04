@@ -271,7 +271,7 @@ Terraform [check blocks](https://developer.hashicorp.com/terraform/language/chec
 
 ### How are Terraform resources priced?
 
-Each Terraform resource stored in Pulumi Cloud counts as a resource under management (RUM), the same as a Pulumi-managed resource. See the [pricing page](https://pulumi.com/pricing) for details.
+Each Terraform resource stored in Pulumi Cloud counts as a resource under management (RUM), the same as a Pulumi-managed resource. See the [pricing page](/pricing/) for details.
 
 ## Troubleshooting
 
