@@ -32,7 +32,7 @@ These features apply to both Azure DevOps and GitLab integrations:
 
 ![New project wizard with Azure DevOps repository settings](ado-npw.png)
 
-**OIDC authentication**: Exchange Pulumi's OIDC token for a provider-specific access token — via Entra ID for ADO or GitLab's OIDC provider. No long-lived secrets stored.
+**OIDC authentication**: Exchange Pulumi's OIDC token for a provider-specific access token — via Entra ID for ADO or GitLab's OIDC provider.
 
 **Neo on pull requests and merge requests**: Neo posts summaries and infrastructure change explanations to your ADO pull requests and GitLab merge requests, same as it does for GitHub.
 
