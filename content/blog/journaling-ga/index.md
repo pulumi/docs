@@ -45,40 +45,31 @@ social:
 
         ## What you need to do
 
-        Nothing. If you're on Pulumi CLI v3.211.0 or later, you're already getting the faster experience. 
+        Nothing. If you're on Pulumi CLI v3.225.0 or later, you're already getting the faster experience.
 
         Read more: [link]
 ---
 
-In January, we [introduced a major performance enhancement for Pulumi Cloud](/blog/journaling/) through a fundamental change to how Pulumi manages state that speeds up operations by up to [TODO: x]. After a staged rollout across many organizations, **it is now enabled by default for every Pulumi Cloud organization**. No opt-in required.
+In January, we [introduced a major performance enhancement for Pulumi Cloud](/blog/journaling/) through a fundamental change to how Pulumi manages state that speeds up operations by up to [TODO: x]. After a staged rollout across many organizations, **it is now enabled by default for every Pulumi Cloud operation**. No opt-in required.
 
 <!--more-->
 
-## What is new here?
+## What this means for you
 
-Every time you run `pulumi up`, `pulumi destroy`, or `pulumi refresh`, Pulumi saves a snapshot of your infrastructure state at each step. This guarantees that if something fails mid-operation, Pulumi knows exactly what happened — but for large stacks, serializing and uploading the full snapshot at every step is a bottleneck.
-
-The improvement sends incremental state updates to Pulumi Cloud in parallel; Pulumi Cloud reconstructs the full snapshot server-side. Same data integrity, dramatically less overhead. For the full technical deep-dive, see our [original blog post](/blog/journaling/).
+First and foremost nothing about how you work with `pulumi` needs to change, except your update now benefit from better parallelism, and should thus complete faster. Before this change, `pulumi` always saved a full snapshot to the cloud, so the current state could always be recovered if something goes wrong. With journaling, we now only send the state of each operation, which allows us to send these updates in parallel, as long as resources are not related to each other. For the full deep dive please see the blog post linked above.
 
 ## Production results
 
-Since January, we've processed many state updates across many organizations:
+Since January, we've had many early adopters of journaling. This helped us shake out one final bug on the server side, and journaling has been stable since then.  With that we feel confident in rolling this out to all our users.
 
-| Metric | Value |
-|--------|-------|
-| p99 state update time | [TODO: x] |
-| p50 state update time | [TODO: x] |
-| Network traffic reduction | [TODO: x] |
-| Operation time improvement | [TODO: x] |
+We've also gathered some real world data on how journaling is performing.  Unfortunately this data is quite noisy (many updates, especially on smaller stacks are dominated by the time it takes to update Cloud resources, rather than the time `pulumi` takes.
 
-The gains are most dramatic on stacks with high parallelism, but every stack benefits from reduced per-step overhead.
+Regardless, the data we do have shows some significant improvements for update times.  For stacks with less than 100 resources, the median improvement is 25.3%, while the p90 improvement is 75.2%, and the p99 improvement 92.6%  Meanwhile, for larger stacks, the median improvement is 60.2%. Unfortunately we don't have as many stacks with more than 100 resources yet, so the p90 time there is not very significant.
 
-## How we rolled it out
-
-We took a staged approach — shadow mode in CI, opt-in beta with a feature flag, then flag-for-all gated by `PULUMI_ENABLE_JOURNALING=true`. At each stage we monitored for snapshot mismatches. We found zero data integrity issues in production, and today we're flipping the default.
+This data already shows the expected significant improvement in update times, especially for larger stacks, though the improvements strongly depend on the shape and type of resources that are being set up. Stacks with many resources, that are quick to update benefit more than smaller stacks with slower to set up resources.
 
 ## What you need to do
 
-**Nothing.** If you're on Pulumi CLI v3.211.0+ with Pulumi Cloud, it's already active.
+While this was an opt-in process using the `PULUMI_ENABLE_JOURNALING` environment variable, this opt-in is no longer required. Just upgrade your Pulumi CLI to v3.225.0+ and use the Pulumi Cloud backend, and journaling will automatically speed up your updates.
 
-If you encounter any issues, reach out on the [Pulumi Community Slack](https://slack.pulumi.com/) or through [Pulumi Support](https://support.pulumi.com/hc/en-us).
+If you encounter any issues, reach out on the [Pulumi Community Slack](https://slack.pulumi.com/) or through [Pulumi Support](https://support.pulumi.com/hc/en-us).  You can also set the `PULUMI_DISABLE_JOURNALING=true` env variable to opt out of journaling.
