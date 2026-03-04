@@ -74,11 +74,6 @@ $ export AWS_SECRET_ACCESS_KEY="<YOUR_SECRET_ACCESS_KEY>"
 
 {{% /choosable %}}
 
-{{% notes type="info" %}}
-Consider using [Pulumi ESC's AWS login support](/docs/esc/providers/login/aws-login) for dynamic,
-short-lived AWS credentials via OpenID Connect (OIDC) instead of long-lived static credentials. This is a security best practice.
-{{% /notes %}}
-
 You may optionally use AWS profiles if your configuration requires them:
 
 {{% choosable os "linux,macos" %}}
