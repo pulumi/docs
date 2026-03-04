@@ -111,4 +111,4 @@ If you're a technical writer, a developer advocate, or a solo practitioner figur
 
 The blank page is still there. It's just a lot less intimidating when you've got a good collaborator and a solid set of tools.
 
-{{< blog/cta-button "Get started with Pulumi" "/docs/get-started/" >}}
+{{< blog/cta-button "See our docs skills for inspiration" "https://github.com/pulumi/docs/tree/master/.claude/commands" "_blank" >}}
