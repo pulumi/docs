@@ -112,8 +112,8 @@ Never use raw HTML `<div>` grids, FontAwesome `<i>` icons, or inline Tailwind cl
 
 The sidebar template automatically injects the section's `_index.md` as the first item of each section's submenu:
 
-- If the page has `docs_home: true`, the sidebar label is **"Section home"**.
-- Otherwise, the sidebar label is the page's title.
+- If the page has `docs_home: true`, the sidebar label is **"Overview"**.
+- Otherwise, the sidebar label is **"Introduction"**.
 
 ---
 
