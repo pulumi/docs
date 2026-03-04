@@ -1,16 +1,17 @@
 ---
-title_tag: "Azure DevOps Integration | CI/CD"
+title_tag: "Azure DevOps Integration | Integrations"
 meta_desc: Connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push, preview pull requests, and post PR summaries.
 title: "Azure DevOps Integration"
 h1: "Azure DevOps Integration"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    integrations:
         name: Azure DevOps Integration
-        parent: iac-using-pulumi-cicd
-        weight: 1
+        parent: integrations-home
+        weight: 4
 aliases:
 - /docs/deployments/deployments/azure-devops/
+- /docs/iac/guides/continuous-delivery/azure-devops-integration/
 ---
 
 Pulumi Cloud supports Azure DevOps as a VCS provider for Deployments. Connect your ADO repositories to deploy on push, preview pull requests, and post PR summaries.

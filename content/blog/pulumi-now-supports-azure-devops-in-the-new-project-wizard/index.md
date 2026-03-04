@@ -48,4 +48,4 @@ These features apply to both Azure DevOps and GitLab integrations:
 1. Authorize with your Azure DevOps or GitLab account via OAuth.
 1. Enjoy first-class workflows for deploying infrastructure.
 
-See the [Azure DevOps integration docs](/docs/iac/guides/continuous-delivery/azure-devops-integration/) or the [GitLab integration docs](/docs/iac/guides/continuous-delivery/gitlab-app/) for the full setup walkthrough. If you're using GitHub, check out the [Pulumi GitHub App](/docs/iac/guides/continuous-delivery/github-app/).
+See the [Azure DevOps integration docs](/docs/integrations/azure-devops-integration/) or the [GitLab integration docs](/docs/integrations/gitlab/) for the full setup walkthrough. If you're using GitHub, check out the [Pulumi GitHub App](/docs/integrations/github-app/).
