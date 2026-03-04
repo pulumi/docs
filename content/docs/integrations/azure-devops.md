@@ -5,10 +5,10 @@ title: Azure DevOps Task Extension
 h1: Azure DevOps Task Extension
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  integrations:
+  iac:
     name: Azure DevOps
-    parent: integrations-home
-    weight: 3
+    parent: iac-using-pulumi-cicd
+    weight: 1
 ---
 
 The [Pulumi Task Extension for Azure Pipelines](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) is a Pulumi-maintained extension available on the Visual Studio Marketplace. It installs the Pulumi CLI and runs Pulumi commands in your Azure Pipelines without requiring custom scripts.

@@ -28,7 +28,15 @@ sections:
     description: Add Pulumi previews to merge requests, run Pulumi in GitLab CI, and use GitLab repos as IDP template sources.
     link: /docs/integrations/gitlab/
   - image: /logos/tech/ci-cd/azure-devops.svg
-    heading: Azure DevOps
+    heading: Azure DevOps Integration
+    description: Connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push, preview pull requests, and post PR summaries.
+    link: /docs/integrations/azure-devops-integration/
+
+- type: button-cards
+  heading: Continuous delivery
+  cards:
+  - image: /logos/tech/ci-cd/azure-devops.svg
+    heading: Azure DevOps Task Extension
     description: Install the Pulumi task extension to run Pulumi commands in Azure Pipelines without custom scripts.
     link: /docs/integrations/azure-devops/
 
