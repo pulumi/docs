@@ -97,7 +97,7 @@ When moving documentation files, aliases automatically handle redirects. Update 
 
 ## Navigation and llms.txt
 
-The left nav is defined in `layouts/partials/docs/menu.html`. Whenever you add, remove, or reorder top-level nav sections, also update `layouts/index.txtfull.txt` to match — it mirrors the nav structure for LLM consumption and its own comment says so.
+The left nav is defined in `layouts/partials/docs/menu.html`. Whenever you add, remove, or reorder top-level nav sections, also update `layouts/index.txtfull.txt` to match.
 
 ---
 
