@@ -1,7 +1,7 @@
 ---
 title: Meet Pulumi at Google Cloud Next 2026 | Booth 3624
 meta_desc: Secure and automate Google Cloud infrastructure using code, policy, and agents. See Pulumi live at Google Cloud Next 2026.
-meta_image: /images/kubecon/kubecon-2026-meta.png
+meta_image: /images/google-next/google-next-2026-meta.png
 type: page
 layout: event-page
 aliases:
@@ -17,7 +17,7 @@ hero:
   cta_link: https://calendly.com/pulumi-meetings/google-cloud-next-booth-demo-2026
   cta_secondary_text: Play the Infra Chaos game
   cta_secondary_link: "#promo"
-  image: /images/kubecon/kubecon-hero-2026.png
+  image: /images/google-next/google-next-hero-2026.png
   image_alt: Google Cloud Next 2026
   tag_line: "Join us at Google Cloud Next 2026 | Booth 3624"
   anchor: hero
@@ -42,7 +42,7 @@ features:
   title: Operate GCP at AI-speed without losing control
   subtitle: |
     As GCP environments scale and AI accelerates change, visibility drops, security drifts, and waste increases without a consistent operational model. Give us a few minutes, and we'll show you how Pulumi can help.
-  image: /images/kubecon/code-kubecon-2026.svg
+  image: /images/google-next/code-google-next-2026.svg
   image_alt: Pulumi code example for Google Cloud
   anchor: features
   features:
@@ -119,7 +119,7 @@ testimonial:
   title: former Head of Engineering, Cloud Platform
   company: Snowflake
   logo: /logos/customers/snowflake-logo.svg
-  bg_image: /images/kubecon/bmw-background.png
+  bg_image: /images/google-next/snowflake-background.png
   anchor: testimonial
 
 location:
