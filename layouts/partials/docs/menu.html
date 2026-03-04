@@ -38,6 +38,8 @@
     {{ $currentSection = "ai" }}
 {{ else if hasPrefix $page.Path "/docs/deployments" }}
     {{ $currentSection = "deployments" }}
+{{ else if hasPrefix $page.Path "/docs/integrations" }}
+    {{ $currentSection = "integrations" }}
 {{ else if hasPrefix $page.Path "/docs/migration" }}
     {{ $currentSection = "migration" }}
 {{ else if hasPrefix $page.Path "/docs/administration" }}
@@ -113,6 +115,15 @@
             <li class="expandable expanded{{ if eq $currentSection "deployments" }} expanded{{ end }}" data-menu-id="deployments-top">
                 <ul class="list-none">
                     {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "deployments" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* Integrations Section */}}
+            {{- with index site.Menus "integrations" }}
+            <li class="expandable expanded{{ if eq $currentSection "integrations" }} expanded{{ end }}" data-menu-id="integrations-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "integrations" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
                 </ul>
             </li>
             {{- end }}
