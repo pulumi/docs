@@ -17,7 +17,7 @@ This guide describes how to start using Pulumi Deployments with a new Pulumi IaC
 
 ## Prerequisites
 
-Before you start, see the GitHub app [installation instructions](/docs/iac/integrations/github-app/#installation-and-configuration) to configure your Pulumi organization to work seamlessly with Deployments.
+Before you start, see the GitHub app [installation instructions](/docs/integrations/github-app/#installation-and-configuration) to configure your Pulumi organization to work seamlessly with Deployments.
 
 ## New Project Wizard
 

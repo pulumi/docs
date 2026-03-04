@@ -94,21 +94,6 @@ sections:
     heading: AI Integration
     description: Integrate AI assistants with Pulumi infrastructure.
     link: /docs/iac/guides/ai-integration/
-- type: button-cards
-  heading: Integrations
-  cards:
-  - emoji: 🐙
-    heading: GitHub App
-    description: Surface infrastructure previews directly on GitHub pull requests.
-    link: /docs/iac/integrations/github-app/
-  - emoji: 🔷
-    heading: Azure DevOps
-    description: Integrate Pulumi with Azure Pipelines and pull request workflows.
-    link: /docs/iac/integrations/azure-devops/
-  - emoji: 🦊
-    heading: GitLab App
-    description: Add infrastructure previews to GitLab merge requests.
-    link: /docs/iac/integrations/gitlab-app/
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>

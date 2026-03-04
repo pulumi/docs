@@ -22,7 +22,7 @@ This guide walks through setting up automated testing and publishing workflows t
 - A Pulumi component authored and working locally (see [Build a Component](/docs/iac/using-pulumi/build-a-component))
 - A [GitHub repository](https://github.com/pulumi-labs/pulumi-component-lifecycle-example) containing your component code
 - Access to a [Pulumi Cloud private registry](/docs/idp/concepts/private-registry)
-- Configure Pulumi and GitHub integrations: [OIDC](/docs/administration/access-identity/oidc-client/github/), [GitHub App](/docs/iac/integrations/github-app/), etc.
+- Configure Pulumi and GitHub integrations: [OIDC](/docs/administration/access-identity/oidc-client/github/), [GitHub App](/docs/integrations/github-app/), etc.
 - Component [documentation](https://github.com/pulumi-labs/pulumi-component-lifecycle-example#static-page-component) written and committed to your repository
 
 ## Development Workflow Overview

@@ -34,6 +34,10 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
         <img src="/logos/tech/ci-cd/argo.svg" alt="ArgoCD">
         <h4 class="no-anchor">ArgoCD</h4>
     </a>
+    <a href="/docs/iac/guides/continuous-delivery/azure-devops">
+        <img src="/logos/tech/ci-cd/azure-devops.svg" alt="Azure DevOps">
+        <h4 class="no-anchor">Azure DevOps</h4>
+    </a>
     <a href="/docs/iac/using-pulumi/continuous-delivery/aws-code-services">
         <img src="/logos/tech/ci-cd/aws-codedeploy.svg" alt="AWS Code Services">
         <h4 class="no-anchor">AWS Code Services</h4>
@@ -100,7 +104,7 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
     </a>
 </div>
 
-> Looking for Pulumi-maintained VCS integrations? See [Integrations](/docs/iac/integrations/) for the GitHub App, Azure DevOps, and GitLab integrations.
+> Looking for Pulumi-maintained VCS integrations? See [Integrations](/docs/integrations/) for the GitHub App, Azure DevOps Task Extension, and GitLab integrations.
 
 ### Configuration and Secrets
 
@@ -125,5 +129,5 @@ to use one branch-per-[stack](/docs/concepts/stack/). This allows you to control
 using your usual commit, code review, and approval process, such as GitHub pull requests.
 
 If you are using GitHub pull requests to trigger updates, you will likely want to use the
-[Pulumi GitHub App](/docs/iac/integrations/github-app/). This gives you interactive infrastructure change previews
+[Pulumi GitHub App](/docs/integrations/github-app/). This gives you interactive infrastructure change previews
 inside of your Pull Request, making it easier to see, review, and comment on any changes before a deployment occurs.

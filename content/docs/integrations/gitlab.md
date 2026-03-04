@@ -1,16 +1,16 @@
 ---
-title_tag: "GitLab Integration | Integrations"
-meta_desc: Integrate the results of Pulumi stack previews to GitLab Merge Requests. It
-           will show you any potential infrastructure changes on Merge Requests.
-title: GitLab Integration
-h1: Pulumi & GitLab Integration
+title_tag: "GitLab | Integrations"
+meta_desc: Pulumi integrates with GitLab for merge request previews, CI/CD pipelines, OIDC authentication, template sources, and automated deployments.
+title: GitLab
+h1: GitLab
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: GitLab Integration
-        parent: iac-integrations
-        weight: 3
+    integrations:
+        name: GitLab
+        parent: integrations-home
+        weight: 2
 aliases:
+- /docs/iac/integrations/gitlab-app/
 - /docs/iac/guides/continuous-delivery/gitlab-app/
 - /docs/iac/using-pulumi/continuous-delivery/gitlab-app/
 - /docs/guides/continuous-delivery/gitlab-app/
@@ -18,47 +18,48 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/gitlab-app/
 ---
 
-With this GitLab integration, Pulumi is able to add Pulumi Previews to a GitLab Merge Request.
+Pulumi integrates with GitLab across multiple products. Here's what you can do.
 
-## Integration Methods
+## Merge request previews
 
-There are two ways to integrate Pulumi and GitLab.
+Pulumi can post infrastructure preview output as notes on GitLab merge requests, so your team can review planned changes before they're applied.
 
-* If you are a Premium or Ultimate GitLab customer, you will use a GitLab Group Access Token. This integration type is simpler to setup and is not tied to a specific user. The user configuring the integration will need to be a GitLab Organization Owner.
-* If you are not a paying GitLab customer, you will use a User OAuth Token. You will also need to configure a webhook, as described below.
+There are two ways to set up merge request previews:
+
+- **GitLab Group Access Token** (Premium/Ultimate plans) — simpler to configure, not tied to a specific user
+- **User OAuth Token** (all plans) — requires a webhook configuration
 
 {{% notes type="info" %}}
-This feature is currently not compatible with GitLab's [pipelines for merged results](https://docs.gitlab.com/ee/ci/pipelines/merged_results_pipelines.html).
-See the [GitLab issue](https://gitlab.com/gitlab-org/gitlab/-/issues/350086) for details as to why.
+This feature is not compatible with GitLab's [pipelines for merged results](https://docs.gitlab.com/ee/ci/pipelines/merged_results_pipelines.html). See the [GitLab issue](https://gitlab.com/gitlab-org/gitlab/-/issues/350086) for details.
 {{% /notes %}}
 
-## Integrating via GitLab Group Access Token
+### Integrating via GitLab Group Access Token
 
-If you are a Premium or Ultimate GitLab customer, you have access to GitLab Group Access Tokens, which Pulumi will use to add Pulumi Previews to your merge requests.
+If you are a Premium or Ultimate GitLab customer, you have access to GitLab Group Access Tokens, which Pulumi will use to add Pulumi previews to your merge requests.
 
-### In Pulumi Cloud
+#### In Pulumi Cloud
 
 1. Navigate to **Settings** > **Integrations** in the Pulumi Cloud dashboard.
 1. In the GitLab integration card, select **Authorize GitLab**.
 
-### In GitLab
+#### In GitLab
 
 1. You will be redirected to GitLab, where you will be asked to approve the integration. Authenticate with your GitLab identity. This authorization is temporary and can be removed later.
 
-### Back in Pulumi Cloud
+#### Back in Pulumi Cloud
 
 1. After approving the integration and being redirected back to Pulumi Cloud, use the dropdown to select the GitLab organization you would like to integrate with and select **Save**.
 1. The authorization between the GitLab organization and Pulumi is now complete. Optionally, you can disassociate your personal GitLab identity from Pulumi by selecting your identity in the top right corner of the integration card, then selecting **Remove Identity**.
 
-### Configuring the GitLab pipeline
+#### Configuring the GitLab pipeline
 
 For the Pulumi preview command to run, you need to add a GitLab pipeline file to your project. If you are already using pipelines, you just need to update your pipeline file.
 
-#### In Pulumi Cloud
+##### In Pulumi Cloud
 
 1. [Generate a Pulumi access token](/docs/administration/access-identity/access-tokens/) using the account that you would like to post the merge request notes. Save this token for use in the next step.
 
-#### In GitLab
+##### In GitLab
 
 1. Set the newly generated token as a CI Variable for your project. Name it `PULUMI_ACCESS_TOKEN`.
 1. In your GitLab project, create a `.gitlab-ci.yml` file if one doesn't already exist.
@@ -80,25 +81,25 @@ For the Pulumi preview command to run, you need to add a GitLab pipeline file to
 
 1. Commit the file.
 
-## Configuring the GitLab webhook
+### Configuring the GitLab webhook
 
 {{% notes type="warning" %}}
 This step is only required for users whose GitLab plan does not include Group Access Tokens.
 {{% /notes %}}
 
-### In Pulumi Cloud
+#### In Pulumi Cloud
 
 1. [Create a Pulumi access token](/docs/pulumi-cloud/accounts#access-tokens) using the account that you would like the merge request notes to be posted as. Save this token for use in the next step.
 
-### In GitLab
+#### In GitLab
 
 You can configure a Group Hook or a Project Hook. The configuration values are the same regardless of where the webhook is registered. Configuring a webhook at the Group level means you don't have to configure it for every project manually.
 
 1. Navigate to **Settings** > **Webhooks** in your GitLab Group or Project.
 1. Fill out the form as follows:
-    * **URL**: `https://api.pulumi.com/workflow/gitlab`
-    * **Secret Token**: The Pulumi access token you created above
-    * Uncheck all trigger boxes and check only **Merge request events**
+    - **URL**: `https://api.pulumi.com/workflow/gitlab`
+    - **Secret Token**: The Pulumi access token you created above
+    - Uncheck all trigger boxes and check only **Merge request events**
 
     ![GitLab webhook configuration - triggers](/images/docs/guides/continuous-delivery/gitlab-app/group_hook_1.png)
 
@@ -107,14 +108,26 @@ You can configure a Group Hook or a Project Hook. The configuration values are t
 
     ![GitLab webhook configuration - SSL verification](/images/docs/guides/continuous-delivery/gitlab-app/group_hook_2.png)
 
-That's it! Now when you create a merge request and run Pulumi in a merge request pipeline, you should see notes in the MR that show a summary of the Pulumi preview. Learn how to run [Pulumi in GitLab CI/CD](/docs/using-pulumi/continuous-delivery/gitlab-ci/).
-
-Here's a preview of what the merge request note looks like in GitLab:
+Now when you create a merge request and run Pulumi in a merge request pipeline, you will see notes in the MR that show a summary of the Pulumi preview.
 
 ![GitLab merge request showing Pulumi preview note](/images/docs/guides/continuous-delivery/gitlab-app/merge_request_note.png)
 
-## Disabling the Integration
+### Disabling merge request previews
 
-If would like to disable the integration for a specific execution of Pulumi,
-you can always set the `PULUMI_DISABLE_CI_DETECTION` env var to `false` without having to remove
-the integration configuration itself.
+To disable the integration for a specific execution of Pulumi, set the `PULUMI_DISABLE_CI_DETECTION` environment variable to `false` without removing the integration configuration itself.
+
+## GitLab CI
+
+Run Pulumi commands directly in GitLab CI/CD pipelines to preview and deploy infrastructure on every commit or merge request. See the [GitLab CI guide](/docs/iac/using-pulumi/continuous-delivery/gitlab-ci/) for setup instructions and example pipeline configurations.
+
+## OIDC authentication
+
+Use GitLab CI's built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as CI variables. See [GitLab OIDC](/docs/esc/integrations/dynamic-login-credentials/) for configuration details.
+
+## Template source
+
+Use GitLab repositories as template sources for [Pulumi IDP](/docs/idp/). Your teams can reference GitLab-hosted Pulumi templates when creating new projects through the developer portal.
+
+## Pulumi Deployments
+
+Connect a GitLab repository to trigger automatic deployments whenever code is pushed. Pulumi Deployments monitors your GitLab repo and runs `pulumi up` on matching events. See [Pulumi Deployments](/docs/deployments/deployments/) to get started.

@@ -6,11 +6,12 @@ title: Pulumi GitHub App
 h1: Pulumi GitHub App
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    integrations:
         name: GitHub App
-        parent: iac-integrations
+        parent: integrations-home
         weight: 1
 aliases:
+- /docs/iac/integrations/github-app/
 - /docs/iac/guides/continuous-delivery/github-app/
 - /docs/iac/using-pulumi/continuous-delivery/github-app/
 - /docs/reference/cd-github/

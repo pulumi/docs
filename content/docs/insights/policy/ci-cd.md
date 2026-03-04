@@ -62,7 +62,7 @@ Pulumi policies work with any CI/CD system that can run the Pulumi CLI. Policy e
 Pulumi provides integration guides for many CI/CD providers:
 
 - [AWS Code Services](/docs/iac/guides/continuous-delivery/aws-code-services/)
-- [Azure DevOps](/docs/iac/integrations/azure-devops/)
+- [Azure DevOps](/docs/iac/guides/continuous-delivery/azure-devops/)
 - [CircleCI](/docs/iac/guides/continuous-delivery/circleci/)
 - [GitLab CI](/docs/iac/guides/continuous-delivery/gitlab-ci/)
 - [Jenkins](/docs/iac/guides/continuous-delivery/jenkins/)
