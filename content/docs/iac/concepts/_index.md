@@ -75,7 +75,7 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 
 ## Concepts in depth
 
-The following topics provide more details on the core concepts of Pulumi and how to use it:
+### Core concepts
 
 - [How Pulumi works](/docs/iac/concepts/how-pulumi-works) — Learn about how Pulumi performs deployments under the hood.
 - [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud) — Learn how Pulumi Cloud relates to the open source tool and what it offers for teams.
@@ -84,10 +84,16 @@ The following topics provide more details on the core concepts of Pulumi and how
 - [Resources](/docs/iac/concepts/resources) — Learn more about how to use and manage resources in your programs.
 - [Resource options](/docs/iac/concepts/options) — Learn more about how to use and manage resource options in your program.
 - [Inputs and outputs](/docs/iac/concepts/inputs-outputs) — Learn how to use resource properties to handle dependencies between resources.
+
+### Configuration and state
+
 - [Configuration](/docs/iac/concepts/config) — Learn how to configure stacks for different deployment scenarios.
 - [Secrets](/docs/iac/concepts/secrets) — Learn how to handle sensitive data and store secret encrypted settings in Pulumi.
 - [Environments (ESC)](/docs/esc/concepts/) — Learn how to configure your deployment environments with Pulumi ESC.
 - [State and backends](/docs/iac/concepts/state) — Learn how Pulumi stores state and manages concurrency.
 - [Update plans](/docs/iac/concepts/update-plans) — Learn about how to constrain your deployments with update plans.
+
+### Reference
+
 - [Glossary](/docs/iac/concepts/glossary) — Look up definitions for commonly used terms.
 - [Comparisons](/docs/iac/comparisons/) — Learn about how Pulumi compares to other infrastructure tools.
