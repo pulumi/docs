@@ -64,9 +64,9 @@ Since January, we've had many early adopters of journaling. This helped us shake
 
 We've also gathered some real world data on how journaling is performing.  Unfortunately this data is quite noisy (many updates, especially on smaller stacks are dominated by the time it takes to update Cloud resources, rather than the time `pulumi` takes.
 
-Regardless, the data we do have shows some significant improvements for update times.  For stacks with less than 100 resources, the median improvement is 25.3%, while the p90 improvement is 75.2%, and the p99 improvement 92.6%  Meanwhile, for larger stacks, the median improvement is 60.2%. Unfortunately we don't have as many stacks with more than 100 resources yet, so the p90 time there is not very significant.
+Regardless, the data we do have shows some significant improvements for update times.  For stacks with less than 100 resources, the median improvement is 25.3%, while the p90 improvement is 75.2%, and we've seen a p99 improvement of up to 92.6%  Meanwhile, for larger stacks, the median improvement is 60.2%. Unfortunately we don't have as many stacks with more than 100 resources yet, so the p90 time there is not very significant.
 
-This data already shows the expected significant improvement in update times, especially for larger stacks, though the improvements strongly depend on the shape and type of resources that are being set up. Stacks with many resources, that are quick to update benefit more than smaller stacks with slower to set up resources.
+This data already shows the expected significant improvement in update times, especially for larger stacks, though the improvements strongly depend on the shape and type of resources that are being set up. Stacks with many resources, that are quick to update benefit more than smaller stacks with slower to set up resources. For more numbers see also the [Benchmarks section in the previous blog post](blog/journaling/#benchmarks)
 
 ## What you need to do
 
