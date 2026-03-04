@@ -19,15 +19,15 @@ sections:
 - type: button-cards
   heading: VCS integrations
   cards:
-  - emoji: 🐙
+  - image: /logos/tech/github.svg
     heading: GitHub App
     description: Surface Pulumi stack previews as PR comments and checks. Enable push-to-deploy via Pulumi Deployments.
     link: /docs/integrations/github-app/
-  - emoji: 🦊
+  - image: /logos/tech/gitlab.svg
     heading: GitLab
     description: Add Pulumi previews to merge requests, run Pulumi in GitLab CI, and use GitLab repos as IDP template sources.
     link: /docs/integrations/gitlab/
-  - emoji: 🔷
+  - image: /logos/tech/ci-cd/azure-devops.svg
     heading: Azure DevOps
     description: Install the Pulumi task extension to run Pulumi commands in Azure Pipelines without custom scripts.
     link: /docs/integrations/azure-devops/
