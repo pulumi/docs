@@ -22,7 +22,7 @@ social:
         - 25% median improvement for smaller stacks
         - Zero config required — just upgrade to CLI v3.225.0+
 
-        Your deploys just got a whole lot faster. [link]
+        Your deploys just got a whole lot faster. https://www.pulumi.com/blog/journaling-ga/
     linkedin: |
         Now GA: Up to 20x Faster Pulumi Operations for Everyone
 
@@ -44,7 +44,7 @@ social:
 
         Nothing. If you're on Pulumi CLI v3.225.0 or later, you're already getting the faster experience.
 
-        Read more: [link]
+        Read more: https://www.pulumi.com/blog/journaling-ga/
 ---
 
 In January, we [introduced a major performance enhancement for Pulumi Cloud](/blog/journaling/) through a fundamental change to how Pulumi manages state that speeds up operations by up to 20x. After a staged rollout across many organizations, **it is now enabled by default for every Pulumi Cloud operation**. No opt-in required—just use Pulumi CLI v3.225.0+ with Pulumi Cloud. The improvement applies to `pulumi up`, `pulumi destroy`, and `pulumi refresh`; `pulumi preview` does not modify state, so it is unchanged.
@@ -53,7 +53,7 @@ In January, we [introduced a major performance enhancement for Pulumi Cloud](/bl
 
 ## What this means for you
 
-First and foremost nothing about how you work with `pulumi` needs to change, except your updates now benefit from better parallelism, and should thus complete faster. Before this change, `pulumi` always saved a full snapshot to the cloud, so the current state could always be recovered if something goes wrong. With journaling, we now only send the state of each operation, which allows us to send these updates in parallel, as long as resources are not related to each other. For the full deep dive please see the blog post linked above.
+First and foremost, nothing about how you work with `pulumi` needs to change. Your updates now benefit from better parallelism and should thus complete faster. Before this change, `pulumi` always saved a full snapshot to the cloud, so the current state could always be recovered if something goes wrong. With journaling, we now only send the state of each operation, which allows us to send these updates in parallel, as long as resources are not related to each other. For the full deep dive, see the blog post linked above.
 
 ## Production results
 
