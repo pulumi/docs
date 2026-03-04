@@ -17,27 +17,24 @@ social:
     twitter: |
         Now GA: Up to 20x Faster Pulumi Operations for Everyone
 
-        - Up to [TODO: x] faster operations
-        - p99 state updates under [TODO: x] seconds
-        - [TODO: x]%+ reduction in network traffic
-        - Zero config required — just upgrade your CLI
+        - Up to 92% faster state updates (p99)
+        - 60% median improvement for large stacks (100+ resources)
+        - 25% median improvement for smaller stacks
+        - Zero config required — just upgrade to CLI v3.225.0+
 
         Your deploys just got a whole lot faster. [link]
     linkedin: |
         Now GA: Up to 20x Faster Pulumi Operations for Everyone
 
-        In January we introduced a new state management approach that sends incremental changes instead of full snapshots, cutting operation times by up to [TODO: x].
-
-        Today, it's enabled by default for every Pulumi Cloud organization. No environment variables, no feature flags, no opt-in. Just faster deploys.
+        In January we introduced a new state management approach that sends incremental changes instead of full snapshots. Today, it's enabled by default for every Pulumi Cloud organization. No environment variables, no feature flags, no opt-in. Just faster deploys.
 
         ## The numbers
 
         Since the opt-in launch, we've processed thousands of state updates across many organizations. Here's what we're seeing in production:
 
-        - p99 state update time: under [TODO: x] seconds
-        - p50 state update time: under [TODO: x]ms
-        - Network traffic reduction: [TODO: x]%+ for large stacks
-        - Operation time reduction: up to [TODO: x] on parallelizable workloads
+        - Stacks with &lt;100 resources: 25.3% median improvement, up to 92.6% faster at p99
+        - Stacks with 100+ resources: 60.2% median improvement
+        - p90 improvement: 75.2% for smaller stacks
 
         ## What changed
 
@@ -50,7 +47,7 @@ social:
         Read more: [link]
 ---
 
-In January, we [introduced a major performance enhancement for Pulumi Cloud](/blog/journaling/) through a fundamental change to how Pulumi manages state that speeds up operations by up to [TODO: x]. After a staged rollout across many organizations, **it is now enabled by default for every Pulumi Cloud operation**. No opt-in required.
+In January, we [introduced a major performance enhancement for Pulumi Cloud](/blog/journaling/) through a fundamental change to how Pulumi manages state that speeds up operations by up to 20x. After a staged rollout across many organizations, **it is now enabled by default for every Pulumi Cloud operation**. No opt-in required—just use Pulumi CLI v3.225.0+ with Pulumi Cloud. The improvement applies to `pulumi up`, `pulumi destroy`, and `pulumi refresh`; `pulumi preview` does not modify state, so it is unchanged.
 
 <!--more-->
 
