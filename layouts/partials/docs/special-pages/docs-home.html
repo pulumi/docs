@@ -68,12 +68,18 @@
                                 <h4 class="no-anchor">
                                     {{ if .emoji }}
                                         <span class="text-2xl mr-2">{{ .emoji }}</span>
+                                        {{ .heading }}
                                     {{ else if .icon }}
                                         <div class="icon icon-21-21 {{ .icon }}"></div>
+                                        {{ .heading }}
                                     {{ else if .image }}
-                                        <img src="{{ .image }}" alt="{{ .heading }}" class="inline-block h-6 w-6 mr-2 object-contain align-middle">
+                                        <span class="flex items-center gap-2">
+                                            <img src="{{ .image }}" alt="" class="h-6 w-6 object-contain flex-shrink-0">
+                                            <span>{{ .heading }}</span>
+                                        </span>
+                                    {{ else }}
+                                        {{ .heading }}
                                     {{ end }}
-                                    {{ .heading }}
                             </h4>
                             <p class="pb-4">
                             {{ if .description }}
