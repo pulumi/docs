@@ -29,7 +29,7 @@ Other GitHub accounts then install the application into their account to grant y
 defined by your GitHub App.
 
 {{% notes type="info" %}}
-This is different from installing the Pulumi GitHub App for Deployments and CI/CD integration, which should be installed according to the instructions in the [GitHub App documentation](/docs/iac/using-pulumi/continuous-delivery/github-app/#installation-and-configuration).
+This is different from installing the Pulumi GitHub App for Deployments and CI/CD integration, which should be installed according to the instructions in the [GitHub App documentation](/docs/integrations/github-app/#installation-and-configuration).
 {{% /notes %}}
 
 - To register an app on a personal account, visit: [https://github.com/settings/apps/new](https://github.com/settings/apps/new?contents=read&metadata=read&webhook_active=false&description=Enables%20access%20for%20a%20Pulumi%20ESC%20environment.&url=https://www.pulumi.com/product/esc/).
