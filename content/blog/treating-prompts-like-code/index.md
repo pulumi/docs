@@ -13,7 +13,7 @@ tags:
 schema_type: auto
 ---
 
-Pulumi has a lot of engineers. It has marketers, solution architects, developer advocates. Everyone has something to contribute to docs and blog posts — domain expertise, hard-won lessons, real-world examples. What they don't all have is familiarity with our Hugo setup, our style guide, our metadata conventions, or where a new document is supposed to live in the navigation tree. I joined Pulumi in July 2025 as a Senior Technical Content Engineer. A few weeks in, my sole teammate departed. The docs practice was now, functionally, me.
+Pulumi has a lot of engineers. It has marketers, solution architects, developer advocates. Everyone has something to contribute to docs and blog posts — domain expertise, hard-won lessons, real-world examples. What they don't all have is familiarity with our [Hugo](https://gohugo.io) setup, our style guide, our metadata conventions, or where a new document is supposed to live in the navigation tree. I joined Pulumi in July 2025 as a Senior Technical Content Engineer. A few weeks in, my sole teammate departed. The docs practice was now, functionally, me.
 
 The problem was clear enough: how do you take one docs engineer's accumulated knowledge and make it available to everyone who needs it, without that engineer becoming a bottleneck?
 
@@ -25,13 +25,13 @@ I started packaging it.
 
 Everyone talks about AI making you faster. That's not wrong, but it's not the most interesting part — at least not for me.
 
-The most interesting part is what it does to the *starting* problem. I have an ADHD brain — not formally diagnosed, but with enough self-recognition to know what's going on. I know what that means for my relationship with most tasks: I can see the problem, I understand it, I want to fix it, and then the sheer weight of starting crushes me flat.
+The most interesting part is what it does to the *starting* problem. I have an ADHD brain (not formally diagnosed, but with enough self-recognition to know what's going on). I know what that means for my relationship with most tasks: I can see the problem, I understand it, I want to fix it, and then the sheer weight of starting crushes me flat.
 
 When I'm stuck on a task, the issue is almost never that I don't know what to do. It's that my brain is trying to hold the entire finished product in working memory while simultaneously producing the first step. That's an enormous cognitive tax, and for an ADHD brain it's often insurmountable.
 
-Talking through a problem conversationally is a completely different cognitive load. I can tell Claude "here's the issue, here's what I'm trying to accomplish, here's what's weird about it" — and suddenly I'm not staring at a blank page anymore. I'm in a conversation. The scaffold exists. I can build on it.
+Talking through a problem conversationally is a completely different cognitive load. I can tell [Claude](https://claude.ai) "here's the issue, here's what I'm trying to accomplish, here's what's weird about it," and suddenly I'm not staring at a blank page anymore. I'm in a conversation. The scaffold exists. I can build on it.
 
-I've been in this situation before. In a previous role writing training modules at Microsoft, I did some of my best work — not because the work was easy, but because I had a collaborator. A friend to think out loud with. Someone to say "okay, so what are we actually trying to say here?" That conversational scaffolding was the difference between spinning and shipping.
+I've been in this situation before. In a previous role writing training modules at Microsoft, I did some of my best work, not because the work was easy, but because I had a collaborator. A friend to think out loud with. Someone to say "okay, so what are we actually trying to say here?" That conversational scaffolding was the difference between spinning and shipping.
 
 In my current role as a team of one, AI turned out to be that collaborator.
 
@@ -57,13 +57,13 @@ The mental model I kept coming back to: **Don't Repeat Yourself.** It's the same
 
 From there, the system grew organically. Whenever I found myself doing something more than once, I asked: "Can I turn this into a skill?" Here's a sampling of what that produced:
 
-**`/fix-issue`** — takes a GitHub issue and recommends a concrete plan of attack, so I go from "here's a ticket" to "here's what I'm doing" without the spinning-up tax.
+**`/fix-issue`** — takes a [GitHub](https://github.com) issue and recommends a concrete plan of attack, so I go from "here's a ticket" to "here's what I'm doing" without the spinning-up tax.
 
 **`/shipit`** — runs pre-commit checks, writes a focused commit message, and drafts a PR description.
 
 **`/pr-review`** — full doc review on a PR branch: style guide, code examples, screenshots, optional test deployment, then an Approve/Merge/Request Changes dialog with a drafted comment.
 
-**`/slack-to-issue`** — converts `#docs` Slack conversations into properly formed GitHub issues. Slack is where decisions happen; issues are where work gets tracked.
+**`/slack-to-issue`** — converts `#docs` [Slack](https://slack.com) conversations into properly formed GitHub issues. Slack is where decisions happen; issues are where work gets tracked.
 
 **`/glow-up`** — runs an older doc through the modern style guide and flags outdated screenshots, for digging out of accumulated technical debt.
 
@@ -83,13 +83,13 @@ The thing I'd built as a personal survival tool had become a shared platform. Th
 
 It's not a replacement for human judgment. These are probabilistic tools — they're right most of the time, not all of the time. `/pr-review` doesn't approve PRs autonomously. It highlights things and then asks me, the human, to read them and make the call. The AI does the first pass; I do the last one. That's not a workaround for a limitation — that's the design.
 
-It's also not finished. It's probably never finished. I'm still tweaking review criteria, still finding edge cases where a skill produces something weird, still adding new tools as new pain points emerge. Treating prompts like code means treating them like software: you ship, you iterate, you maintain. There's no version 1.0 and done.
+The system isn't finished, either. It's probably never finished. I'm still tweaking review criteria, still finding edge cases where a skill produces something weird, still adding new tools as new pain points emerge. Treating prompts like code means treating them like software: you ship, you iterate, you maintain. There's no version 1.0 and done.
 
 And the ADHD angle is real but it's not magic. There are still days where the paralysis wins. AI lowers the activation energy for starting; it doesn't eliminate it. I'm still the one who has to show up. I suppose I could automate that too, but then we'd be in a whole different kind of dystopia.
 
 ## Lessons to share
 
-**Know your models and their costs.** At Pulumi we primarily use Claude, and I work in Claude Code; for most tasks I reach for Sonnet rather than Opus. Opus is excellent, but it's significantly more expensive, and well-crafted instructions to Sonnet handle the vast majority of my work just as effectively.
+**Know your models and their costs.** At Pulumi we primarily use Claude, and I work in [Claude Code](https://claude.ai/claude-code); for most tasks I reach for Sonnet rather than Opus. Opus is excellent, but it's significantly more expensive, and well-crafted instructions to Sonnet handle the vast majority of my work just as effectively.
 
 **Treat it like a coworker.** Don't just issue commands and wait for output. Ask what it thinks. Push back when it's wrong. Explain your reasoning. The more you engage conversationally, the better the results tend to be. That extends to alignment, too — before diving into a complex task, talk through the approach first. A few minutes of alignment up front beats iterating on a misunderstood spec. I've gone as far as adding personal instructions to my config — things like playing along when I'm pretending to be Captain Picard, or using colorful language when the context calls for it. (Yes, those are literal config settings.) That sounds frivolous, but it isn't: a tool you actually enjoy using is a tool you'll reach for instead of avoid.
 
@@ -107,6 +107,8 @@ And the ADHD angle is real but it's not magic. There are still days where the pa
 
 The next frontier is bringing some of this tooling to the less technical members of the team — marketing, in particular. The skills I've built assume a certain comfort level with terminals and repos. That's fine for engineers. It's a barrier for everyone else. A friendly interface would lower that bar significantly — that's the direction I'm currently exploring.
 
-If you're a technical writer, a developer advocate, or a solo practitioner trying to figure out how AI fits into your workflow — I hope some of this is useful. The tools matter, but the mental model matters more: treat your prompts like code. Make them reusable. Document them. Share them.
+If you're a technical writer, a developer advocate, or a solo practitioner figuring out how AI fits into your workflow, the approach described here is a solid starting point. The tools matter, but the mental model matters more: treat your prompts like code. Make them reusable. Document them. Share them.
 
 The blank page is still there. It's just a lot less intimidating when you've got a good collaborator and a solid set of tools.
+
+{{< blog/cta-button "Get started with Pulumi" "/docs/get-started/" >}}
