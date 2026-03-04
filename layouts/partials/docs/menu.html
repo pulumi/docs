@@ -28,12 +28,12 @@
     {{ $currentSection = "get-started" }}
 {{ else if hasPrefix $page.Path "/docs/iac" }}
     {{ $currentSection = "iac" }}
+{{ else if hasPrefix $page.Path "/docs/integrations" }}
+    {{ $currentSection = "integrations" }}
 {{ else if hasPrefix $page.Path "/docs/esc" }}
     {{ $currentSection = "esc" }}
 {{ else if hasPrefix $page.Path "/docs/insights" }}
     {{ $currentSection = "insights" }}
-{{ else if hasPrefix $page.Path "/docs/integrations" }}
-    {{ $currentSection = "integrations" }}
 {{ else if hasPrefix $page.Path "/docs/idp" }}
     {{ $currentSection = "idp" }}
 {{ else if hasPrefix $page.Path "/docs/ai" }}
@@ -110,6 +110,15 @@
             </li>
             {{- end }}
 
+            {{/* Integrations Section */}}
+            {{- with index site.Menus "integrations" }}
+            <li class="expandable expanded{{ if eq $currentSection "integrations" }} expanded{{ end }}" data-menu-id="integrations-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "integrations" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
             {{/* Deployments & Workflows Section */}}
             {{- with index site.Menus "deployments" }}
             <li class="expandable expanded{{ if eq $currentSection "deployments" }} expanded{{ end }}" data-menu-id="deployments-top">
@@ -133,15 +142,6 @@
             <li class="expandable expanded{{ if eq $currentSection "insights" }} expanded{{ end }}" data-menu-id="insights-top">
                 <ul class="list-none">
                     {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "insights" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
-                </ul>
-            </li>
-            {{- end }}
-
-            {{/* Integrations Section */}}
-            {{- with index site.Menus "integrations" }}
-            <li class="expandable expanded{{ if eq $currentSection "integrations" }} expanded{{ end }}" data-menu-id="integrations-top">
-                <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "integrations" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
                 </ul>
             </li>
             {{- end }}
