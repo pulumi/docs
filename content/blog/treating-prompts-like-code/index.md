@@ -43,7 +43,7 @@ If conversational scaffolding could lower my own activation energy, the next que
 
 Then it occurred to me: every PR to our docs repo should get this automatically. So I wired it into our CI/CD pipeline. Meagan, my manager, loved it — and after a few weeks, she noticed that PR quality had improved dramatically. On almost every PR, contributors were now spontaneously pushing an "Addressing feedback" commit right after the automated review posts — catching and fixing issues before I ever saw the PR.
 
-That's when something clicked: I wasn't writing prompts anymore. I was writing *modules*.
+That's when something clicked: I wasn't writing prompts anymore. I was writing *modules* — reusable, composable pieces of my own expertise.
 
 The insight was straightforward, but it changed how I thought about the whole system: if multiple skills need the same context — our style guide, our review criteria, our content standards — that context should live in one place and get consumed by everything that needs it. Just like a shared library. Just like any decent software project.
 
