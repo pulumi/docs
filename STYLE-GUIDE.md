@@ -100,11 +100,7 @@ See `content/docs/iac/_index.md` for the canonical example. Never use raw HTML t
 
 Use **"Introduction"** for section indexes that contain substantive prose introducing a topic. No special frontmatter is required; any `_index.md` without `docs_home: true` receives this label automatically.
 
-If the page also links to related child pages, use a plain markdown list — not raw HTML grids or inline Tailwind classes:
-
-```markdown
-- [Page title](url) — Brief description.
-```
+If the page also links to related child pages, use standard markdown (lists, tables) — not raw HTML grids or inline Tailwind classes.
 
 ---
 
