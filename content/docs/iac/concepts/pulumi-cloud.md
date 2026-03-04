@@ -60,7 +60,7 @@ Pulumi Cloud also offers short-lived stacks in the form of [Review Stacks](/docs
 
 ### 2. Automatic security
 
-Pulumi Cloud has [a rich identity model](/docs/pulumi-cloud/access-management/) that integrates with your security identity provider of choice, whether that is Azure Active Directory, Google Workspace, Okta, or any SAML/SSO provider, to regulate all access to your cloud assets.
+Pulumi Cloud has [a rich identity model](/docs/pulumi-cloud/access-management/) that integrates with your security identity provider of choice, whether that is Microsoft Entra ID, Google Workspace, Okta, or any SAML/SSO provider, to regulate all access to your cloud assets.
 
 If you manage your IaC state with a DIY approach, you will need to come up with a scheme that works for your organization. While you can use AWS IAM for the S3 bucket that stores your state, large-scale teams rarely want to grant full access to all engineers. In fact, this may be the difference between passing and failing a compliance audit.
 
