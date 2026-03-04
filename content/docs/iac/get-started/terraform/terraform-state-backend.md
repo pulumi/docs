@@ -29,6 +29,7 @@ If you are managing Terraform state in S3, Azure Blob Storage, or another DIY ba
 - **Automatic state locking** — prevents concurrent operations from corrupting state
 - **Role-based access control** — control who can read or modify each stack with [teams and RBAC](/docs/administration/access-identity/rbac/)
 - **Unified resource visibility** — view Terraform-managed resources alongside Pulumi-managed resources in [Resource Search](/docs/pulumi-cloud/insights/search/)
+- **Platform integration** — root module outputs become Pulumi stack outputs, accessible via [stack references](/docs/iac/concepts/stacks/#stackreferences) from other Pulumi stacks or via the [`pulumi-stacks` ESC provider](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/) with no extra tokens or credentials required
 
 ## How it works
 
@@ -53,7 +54,7 @@ When Terraform state is stored in Pulumi Cloud, each Terraform resource is conve
 
 This "mechanical" mapping preserves the Terraform resource structure (attribute names, IDs, dependencies) without transforming it to Pulumi provider schemas. Resource properties use Terraform naming conventions, so practitioners can search for resources in Resource Search using the attribute names they are already familiar with. Sensitive values marked in your Terraform state are encrypted.
 
-Terraform root module outputs are mapped to Pulumi [stack outputs](/docs/iac/concepts/stacks/#outputs), making them available for [stack references](/docs/iac/concepts/stacks/#stackreferences). This means your Pulumi stacks can directly reference Terraform outputs — useful for sharing foundational infrastructure like VPC IDs or DNS zones across teams.
+Terraform root module outputs are mapped to Pulumi [stack outputs](/docs/iac/concepts/stacks/#outputs), making them available for [stack references](/docs/iac/concepts/stacks/#stackreferences) and the [`pulumi-stacks` ESC provider](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/). This means your Pulumi stacks can directly reference Terraform outputs — useful for sharing foundational infrastructure like VPC IDs or DNS zones, and for incremental migrations where legacy infrastructure can stay in Terraform while new stacks are written in Pulumi.
 
 ### Audit policies
 
