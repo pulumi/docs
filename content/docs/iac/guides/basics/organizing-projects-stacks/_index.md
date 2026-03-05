@@ -485,10 +485,10 @@ A second variant of the multi-repo pattern arises when a platform team authors a
 
 There are several tradeoffs to weigh when adopting a multi-repo structure:
 
-- **Team ownership.** Each repository has its own access controls, CI/CD pipeline, and release process. The platform team can evolve shared infrastructure on its own schedule without modifying service team code.
-- **Security.** Pulumi Cloud's [stack permissions](/docs/pulumi-cloud/access-management/stack-permissions/) let you grant service teams read-only access to platform stack outputs without granting write access to the underlying infrastructure.
-- **Stack reference coupling.** Stack references resolve at deployment time, so they always return the current outputs of the referenced stack. If the platform team renames or removes an exported output, service stacks that depend on it will fail until updated. Treat exported output names as a stable interface and coordinate breaking changes carefully.
-- **Discoverability.** In a monorepo, all projects are visible at a glance. In a multi-repo setup, teams need to agree on and document naming conventions for organizations, projects, and stacks.
+* **Team ownership.** Each repository has its own access controls, CI/CD pipeline, and release process. The platform team can evolve shared infrastructure on its own schedule without modifying service team code.
+* **Security.** Pulumi Cloud's [stack permissions](/docs/pulumi-cloud/access-management/stack-permissions/) let you grant service teams read-only access to platform stack outputs without granting write access to the underlying infrastructure.
+* **Stack reference coupling.** Stack references resolve at deployment time, so they always return the current outputs of the referenced stack. If the platform team renames or removes an exported output, service stacks that depend on it will fail until updated. Treat exported output names as a stable interface and coordinate breaking changes carefully.
+* **Discoverability.** In a monorepo, all projects are visible at a glance. In a multi-repo setup, teams need to agree on and document naming conventions for organizations, projects, and stacks.
 
 For most teams starting out, a monorepo requires less coordination. Multi-repo structures become the right choice when team boundaries, access control requirements, or independent deployment lifecycles justify the additional overhead.
 
