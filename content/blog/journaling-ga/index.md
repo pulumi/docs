@@ -1,7 +1,7 @@
 ---
 title: "Now GA: Up to 20x Faster Pulumi Operations for Everyone"
 allow_long_title: true
-date: 2026-03-04
+date: 2026-03-05
 draft: false
 meta_desc: "A major performance enhancement is now on by default for all Pulumi Cloud organizations. Faster operations, less network traffic, no opt-in required."
 meta_image: meta.png
