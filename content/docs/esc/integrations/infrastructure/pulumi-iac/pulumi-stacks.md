@@ -13,7 +13,7 @@ aliases:
     - /docs/esc/providers/pulumi-stacks/
 ---
 
-The `pulumi-stacks` provider enables you to import Stack outputs from Pulumi into your Environment.
+The `pulumi-stacks` provider enables you to import stack outputs from Pulumi into your environment. This includes stacks updated via the Pulumi CLI as well as stacks whose [Terraform state is stored in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/) — Terraform root module outputs are mapped to stack outputs and accessible here with no additional tokens or credentials required.
 
 ## Example
 
