@@ -145,7 +145,13 @@ const green = {
 };
 
 module.exports = {
-    content: [],
+    content: [
+        "../layouts/**/*.html",
+        "../content/**/*.{html,md}",
+        "../assets/js/**/*.js",
+        "./stencil/src/**/*.tsx",
+        "./src/**/*.{js,ts}",
+    ],
     theme: {
         extend: {
             fontFamily: {

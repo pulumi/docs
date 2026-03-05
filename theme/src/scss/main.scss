@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+// Tell Tailwind v4 where to scan for utility class usage in templates.
+// Paths are relative to this file (theme/src/scss/).
+@source "../../../layouts/**/*.html";
+@source "../../../content/**/*.{html,md}";
+@source "../../../assets/js/**/*.js";
+@source "../../stencil/src/**/*.tsx";
+@source "../**/*.{js,ts}";
+
 // v4 CSS-first theme: defines custom properties for colors, fonts, screens, etc.
 // Values are sourced from tokens.json (same source as the old tailwind.config.js).
 @theme {
@@ -112,451 +120,474 @@
 @import "colors";
 @import "mixins";
 
-@import "about";
-@import "accordion";
-@import "algolia";
-@import "animation";
-@import "api-nodejs";
-@import "api-python";
-@import "api-symbol";
-@import "awards";
-@import "marketing/automation-api";
-@import "badges";
-@import "benefits";
-@import "breadcrumb";
-@import "buttons";
-@import "card";
-@import "marketing/cloud-engineering";
-@import "marketing/dismissable-banner";
-@import "code";
-@import "container";
-@import "copilot";
-@import "copy-button";
-@import "docs/cloud-overview";
-@import "docs/continuous-delivery";
-@import "docs/docs-main";
-@import "docs/docs-top-nav";
-@import "docs/main-nav";
-@import "docs/docs-home";
-@import "customer-logo";
-@import "marketing/developer-advocates";
-@import "docs/footer";
-@import "docs/icons";
-@import "event-list";
-@import "event-schedule";
-@import "fonts";
-@import "footer";
-@import "glossary";
-@import "header";
-@import "hero";
-@import "hubspot";
-@import "icons";
-@import "marketing/learn";
-@import "lists";
-@import "no-select";
-@import "notes";
-@import "github-card";
-@import "neo-card";
-@import "docs/packages";
-@import "pagination";
-@import "marketing/pricing";
-@import "marketing/product";
-@import "responsive-video";
-@import "marketing/pulumi-deployments";
-@import "marketing/pulumi-up";
-@import "search";
-@import "section-nav";
-@import "marketing/self-hosted";
-@import "marketing/shape-backgrounds";
-@import "marketing/signup";
-@import "marketing/workshop-signup";
-@import "marketing/slot-machine";
-@import "marketing/stacked-carousel";
-@import "docs/registry";
-@import "docs/tutorials";
-@import "tables";
-@import "tiles";
-@import "toggle";
-@import "tooltip";
-@import "404";
+// Sass variables (no CSS output)
+$sitenav-height: 90px;
+$sitenav-offset: calc($sitenav-height + 16px);
 
-@import "components/banner";
-@import "components/chooser";
-@import "components/choosable";
-@import "components/convert";
-@import "components/docs-nav";
-@import "components/filter-select";
-@import "components/greenhouse-jobs-list";
-@import "components/install";
-@import "components/resource-links";
-@import "components/examples";
-@import "components/audio";
-@import "components/swiper";
-@import "components/slot-machine";
-@import "components/pulumi-tertiary-nav";
-@import "components/user-toggle";
-@import "components/tabs";
-@import "components/llm-menu";
-@import "templates";
-@import "neo-mode";
+// @utility declarations must be top-level (cannot be nested inside @layer).
+// These register custom utility classes with Tailwind v4.
+@utility btn {
+    transition: all 120ms linear;
+    @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded inline-block;
+    @apply bg-blue-600 border border-blue-600 text-white text-center;
+}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    @apply font-display text-gray-800 mb-2;
+@utility btn-lg {
+    @apply py-3 px-5;
+}
 
-    &:not(:first-child) {
-        // Don't apply top margin when one's being specified.
-        &:not([class*="mt-"]):not([class*="m-"]) {
-            @apply mt-8;
+@utility btn-orange {
+    @apply bg-orange-500 border-orange-600;
+}
+
+// v4 layer placement: base styles go in @layer base so Tailwind utilities can override them.
+// Component styles go in @layer components for the same reason.
+// In v2, utilities came last in the stylesheet and won via cascade order.
+// In v4, utilities are in @layer utilities which beats @layer base and @layer components,
+// but loses to unlayered CSS. So we must layer our custom styles.
+
+@layer base {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-display text-gray-800 mb-2;
+
+        &:not(:first-child) {
+            // Don't apply top margin when one's being specified.
+            &:not([class*="mt-"]):not([class*="m-"]) {
+                @apply mt-8;
+            }
         }
     }
-}
 
-h1 {
-    @apply text-4xl;
-}
+    h1 {
+        @apply text-4xl;
+    }
 
-h2 {
-    font-size: 32px;
-}
+    h2 {
+        font-size: 32px;
+    }
 
-h3 {
-    @apply text-2xl;
-}
+    h3 {
+        @apply text-2xl;
+    }
 
-h4 {
-    @apply text-xl;
-}
+    h4 {
+        @apply text-xl;
+    }
 
-h5 {
-    @apply text-lg;
-}
+    h5 {
+        @apply text-lg;
+    }
 
-h6 {
-    @apply text-sm;
-}
+    h6 {
+        @apply text-sm;
+    }
 
-p {
-    @apply mb-4 leading-normal my-4;
-}
+    p {
+        @apply mb-4 leading-normal my-4;
+    }
 
-body {
-    @apply font-body text-gray-800;
+    body {
+        @apply font-body text-gray-800;
 
-    figure {
-        figcaption {
-            clear: left;
-            margin: 0.75em 0;
-            text-align: center;
-            font-style: italic;
-            line-height: 1.5em;
+        figure {
+            figcaption {
+                clear: left;
+                margin: 0.75em 0;
+                text-align: center;
+                font-style: italic;
+                line-height: 1.5em;
+            }
         }
     }
-}
 
-.nav-main {
-    a {
-        @include transition;
-    }
-}
+    main {
+        @apply text-gray-800;
 
-main {
-    @apply text-gray-800;
+        p,
+        li,
+        blockquote,
+        table {
+            a {
+                @apply text-blue-600 break-words;
 
-    p,
-    li,
-    blockquote,
-    table {
-        a {
-            @apply text-blue-600 break-words;
+                &:hover {
+                    @apply text-blue-700;
 
-            &:hover {
-                @apply text-blue-700;
-
-                .section-docs &,
-                .section-blog &,
-                .section-authors &,
-                .section-tags & {
-                    @apply underline;
+                    .section-docs &,
+                    .section-blog &,
+                    .section-authors &,
+                    .section-tags & {
+                        @apply underline;
+                    }
                 }
+            }
+
+            strong {
+                @apply font-semibold;
             }
         }
 
-        strong {
-            @apply font-semibold;
+        ul,
+        ol {
+            @apply pl-5;
+        }
+
+        ul {
+            @apply list-disc;
+        }
+
+        ol {
+            @apply list-decimal;
+        }
+
+        li {
+            @apply my-2 leading-normal;
+        }
+
+        blockquote {
+            @apply border-l-4 rounded border-blue-100 px-4 py-1 text-sm my-4;
+
+            p {
+                @apply my-1 leading-relaxed;
+            }
         }
     }
 
-    ul,
-    ol {
-        @apply pl-5;
-    }
-
-    ul {
-        @apply list-disc;
-    }
-
-    ol {
-        @apply list-decimal;
-    }
-
-    li {
-        @apply my-2 leading-normal;
-    }
-
-    blockquote {
-        @apply border-l-4 rounded border-blue-100 px-4 py-1 text-sm my-4;
-
-        p {
-            @apply my-1 leading-relaxed;
+    // Anchor offset for fixed navbar (medium and up).
+    @include screen-md {
+        :target {
+            &::before {
+                content: " ";
+                display: block;
+                height: $sitenav-offset;
+                margin-top: -$sitenav-offset;
+                position: absolute;
+                z-index: -1;
+            }
         }
     }
 }
 
-.section-docs {
-    .footer-dots-container {
-        @apply hidden;
+@layer components {
+    @import "about";
+    @import "accordion";
+    @import "algolia";
+    @import "animation";
+    @import "api-nodejs";
+    @import "api-python";
+    @import "api-symbol";
+    @import "awards";
+    @import "marketing/automation-api";
+    @import "badges";
+    @import "benefits";
+    @import "breadcrumb";
+    @import "buttons";
+    @import "card";
+    @import "marketing/cloud-engineering";
+    @import "marketing/dismissable-banner";
+    @import "code";
+    @import "container";
+    @import "copilot";
+    @import "copy-button";
+    @import "docs/cloud-overview";
+    @import "docs/continuous-delivery";
+    @import "docs/docs-main";
+    @import "docs/docs-top-nav";
+    @import "docs/main-nav";
+    @import "docs/docs-home";
+    @import "customer-logo";
+    @import "marketing/developer-advocates";
+    @import "docs/footer";
+    @import "docs/icons";
+    @import "event-list";
+    @import "event-schedule";
+    @import "fonts";
+    @import "footer";
+    @import "glossary";
+    @import "header";
+    @import "hero";
+    @import "hubspot";
+    @import "icons";
+    @import "marketing/learn";
+    @import "lists";
+    @import "no-select";
+    @import "notes";
+    @import "github-card";
+    @import "neo-card";
+    @import "docs/packages";
+    @import "pagination";
+    @import "marketing/pricing";
+    @import "marketing/product";
+    @import "responsive-video";
+    @import "marketing/pulumi-deployments";
+    @import "marketing/pulumi-up";
+    @import "search";
+    @import "section-nav";
+    @import "marketing/self-hosted";
+    @import "marketing/shape-backgrounds";
+    @import "marketing/signup";
+    @import "marketing/workshop-signup";
+    @import "marketing/slot-machine";
+    @import "marketing/stacked-carousel";
+    @import "docs/registry";
+    @import "docs/tutorials";
+    @import "tables";
+    @import "tiles";
+    @import "toggle";
+    @import "tooltip";
+    @import "404";
+
+    @import "components/banner";
+    @import "components/chooser";
+    @import "components/choosable";
+    @import "components/convert";
+    @import "components/docs-nav";
+    @import "components/filter-select";
+    @import "components/greenhouse-jobs-list";
+    @import "components/install";
+    @import "components/resource-links";
+    @import "components/examples";
+    @import "components/audio";
+    @import "components/swiper";
+    @import "components/slot-machine";
+    @import "components/pulumi-tertiary-nav";
+    @import "components/user-toggle";
+    @import "components/tabs";
+    @import "components/llm-menu";
+    @import "templates";
+    @import "neo-mode";
+
+    .nav-main {
+        a {
+            @include transition;
+        }
     }
-}
 
-.link {
-    @apply text-blue-700;
-}
+    .section-docs {
+        .footer-dots-container {
+            @apply hidden;
+        }
+    }
 
-.section-blog, .section-tags, .section-authors {
-    .tags {
-        .tag {
-            @apply lowercase border border-blue-200 rounded py-1 px-2 mr-1;
+    .link {
+        @apply text-blue-700;
+    }
 
-            &.tag-blog {
-                @apply bg-gray-100 text-blue-600;
+    .section-blog, .section-tags, .section-authors {
+        .tags {
+            .tag {
+                @apply lowercase border border-blue-200 rounded py-1 px-2 mr-1;
 
-                &:hover {
-                    @apply border-blue-300 text-blue-700 no-underline;
-                }
-
-                &.active {
-                    @apply border-blue-600 bg-blue-600 text-white;
+                &.tag-blog {
+                    @apply bg-gray-100 text-blue-600;
 
                     &:hover {
-                        @apply text-white;
+                        @apply border-blue-300 text-blue-700 no-underline;
+                    }
+
+                    &.active {
+                        @apply border-blue-600 bg-blue-600 text-white;
+
+                        &:hover {
+                            @apply text-white;
+                        }
                     }
                 }
             }
         }
     }
-}
 
-.popup-overlay {
-    @apply flex w-full h-full fixed inset-0 z-50;
-    background-color: rgba(44, 44, 44, 0.6);
-}
-
-.transition-all {
-    @include transition(all);
-
-    &-200 {
-        @include transition($duration: 200ms);
-    }
-}
-
-.github-widget {
-    > span {
-        @apply flex;
-    }
-}
-
-// Custom css for the Calendly iframe we use on the event registration pages.
-#calendly-widget {
-    min-width: 270px;
-    height: 600px;
-
-    @include screen-md {
-        min-width: 320px;
-        height: 750px;
+    .popup-overlay {
+        @apply flex w-full h-full fixed inset-0 z-50;
+        background-color: rgba(44, 44, 44, 0.6);
     }
 
-    .booking-container {
-        background-color: green;
-        max-width: initial !important;
-    }
-}
+    .transition-all {
+        @include transition(all);
 
-$sitenav-height: 90px;
-
-// A 16px offset makes it easier to position elements below the nav when it's pinned.
-$sitenav-offset: calc($sitenav-height + 16px);
-
-// This little trick prepends anchor targets with a pseudoelement that the browser picks
-// up as the anchor target, allowing us to position the actual target below the fixed
-// navbar. Only necessary at medium and up.
-@include screen-md {
-    :target {
-        &::before {
-            content: " ";
-            display: block;
-            height: $sitenav-offset;
-            margin-top: -$sitenav-offset;
-            position: absolute;
-            z-index: -1;
+        &-200 {
+            @include transition($duration: 200ms);
         }
     }
-}
 
-.sticky-sidebar {
-    @include screen-lg {
-        @apply sticky self-start overflow-y-auto;
-        max-height: 90vh;
-        top: $sitenav-offset;
-
-        // Registry's nav isn't sticky, so we don't need to position sidebars in relation to it.
-        .section-registry & {
-            @apply top-8;
+    .github-widget {
+        > span {
+            @apply flex;
         }
     }
-}
 
-.resource-deprecated {
-    @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
-}
+    // Custom css for the Calendly iframe we use on the event registration pages.
+    #calendly-widget {
+        min-width: 270px;
+        height: 600px;
 
-.aws-reinvent-blog-image {
-    img {
-        @apply mb-0;
+        @include screen-md {
+            min-width: 320px;
+            height: 750px;
+        }
+
+        .booking-container {
+            background-color: green;
+            max-width: initial !important;
+        }
+    }
+
+    .sticky-sidebar {
+        @include screen-lg {
+            @apply sticky self-start overflow-y-auto;
+            max-height: 90vh;
+            top: $sitenav-offset;
+
+            // Registry's nav isn't sticky, so we don't need to position sidebars in relation to it.
+            .section-registry & {
+                @apply top-8;
+            }
+        }
+    }
+
+    .resource-deprecated {
+        @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
+    }
+
+    .aws-reinvent-blog-image {
+        img {
+            @apply mb-0;
+
+            @include screen-lg {
+                @apply mb-8;
+            }
+        }
+    }
+
+    .section-docs {
+        // Hide the language-specific SDK-docs tables until we've removed them from the provider builds.
+        main .container dl.package-details + p + dl.tabular {
+            @apply hidden;
+        }
+        // Hide input and output type notes as well.
+        #supporting-types ~ h4 ~ div pulumi-choosable .active blockquote {
+            @apply hidden;
+        }
+    }
+
+    // New Styles
+    .rainbow-text {
+        background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+
+        text-shadow: none;
+    }
+
+    .blue-star-background {
+        @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-blue-200 shadow-lg;
+
+        .blue-star-background-image {
+            @apply w-full h-full;
+            background-image: url("/images/home/hero-background.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+        }
+    }
+
+    .purple-hex-background {
+        @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-violet-200 shadow-lg;
+
+        .purple-hex-background-image {
+            @apply w-full h-full;
+            background-image: url("/images/home/hexagons.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+        }
+    }
+
+    #architectures {
+        @apply text-center;
+
+        h2 {
+            @apply pl-2 pr-2 inline;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    .blog-list-description {
+        // Make the min height of the section equal to the anchor-wrapped image
+        // and padding, so the border isn't misaligned on items with shorter descriptions.
+        min-height: 178px;
+    }
+
+    pulumi-tree-item {
+        &::part(expand-collapse-button) {
+            @apply text-xs;
+        }
+        &.expanded {
+            .glyph {
+                transform: rotateZ(90deg);
+            }
+        }
+    }
+
+    section.newsletter-input pulumi-hubspot-form input.hs-input {
+        @apply rounded;
+    }
+
+    #segment-consent-manager:empty {
+        @apply hidden;
+    }
+    #segment-consent-manager {
+
+        @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
+        z-index: 99999;
 
         @include screen-lg {
-            @apply mb-8;
-        }
-    }
-}
-
-.section-docs {
-    // Hide the language-specific SDK-docs tables until we've removed them from the provider builds.
-    main .container dl.package-details + p + dl.tabular {
-        @apply hidden;
-    }
-    // Hide input and output type notes as well.
-    #supporting-types ~ h4 ~ div pulumi-choosable .active blockquote {
-        @apply hidden;
-    }
-}
-
-// New Styles
-.rainbow-text {
-    background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-
-    text-shadow: none;
-}
-
-.blue-star-background {
-    @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-blue-200 shadow-lg;
-
-    .blue-star-background-image {
-        @apply w-full h-full;
-        background-image: url("/images/home/hero-background.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 0.5;
-    }
-}
-
-.purple-hex-background {
-    @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-violet-200 shadow-lg;
-
-    .purple-hex-background-image {
-        @apply w-full h-full;
-        background-image: url("/images/home/hexagons.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 0.5;
-    }
-}
-
-#architectures {
-    @apply text-center;
-
-    h2 {
-        @apply pl-2 pr-2 inline;
-        background-color: rgba(255, 255, 255, 0.7);
-    }
-}
-
-.blog-list-description {
-    // Make the min height of the section equal to the anchor-wrapped image
-    // and padding, so the border isn't misaligned on items with shorter descriptions.
-    min-height: 178px;
-}
-
-pulumi-tree-item {
-    &::part(expand-collapse-button) {
-        @apply text-xs;
-    }
-    &.expanded {
-        .glyph {
-            transform: rotateZ(90deg);
-        }
-    }
-}
-
-section.newsletter-input pulumi-hubspot-form input.hs-input {
-    @apply rounded;
-}
-
-#segment-consent-manager:empty {
-    @apply hidden;
-}
-#segment-consent-manager {
-
-    @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
-    z-index: 99999;
-
-    @include screen-lg {
-        @apply w-1/3 right-auto m-4 overflow-hidden;
-    }
-
-    div {
-       @apply bg-white;
-    }
-
-    p {
-        @apply text-black text-left text-sm pr-2;
-
-        a {
-            text-decoration: none;
-            color: map-get($blue, 600);
-        }
-    }
-
-    button {
-        @apply font-bold no-underline;
-    }
-
-    button[aria-label="Close"] {
-        @apply text-violet-800 mt-4 top-0 right-0 text-lg;
-    }
-
-    .manage-cookies-btn {
-        @apply mt-2 bg-violet-600 text-white font-bold border-2 border-violet-600 no-underline p-3 rounded-md;
-        @include transition;
-
-        &.disabled {
-            opacity: 0.3rem;
+            @apply w-1/3 right-auto m-4 overflow-hidden;
         }
 
-        &:hover {
-            @apply bg-violet-100 text-violet-700;
+        div {
+           @apply bg-white;
         }
 
-        &:focus {
-            @apply bg-violet-100 text-violet-200;
+        p {
+            @apply text-black text-left text-sm pr-2;
+
+            a {
+                text-decoration: none;
+                color: map-get($blue, 600);
+            }
+        }
+
+        button {
+            @apply font-bold no-underline;
+        }
+
+        button[aria-label="Close"] {
+            @apply text-violet-800 mt-4 top-0 right-0 text-lg;
+        }
+
+        .manage-cookies-btn {
+            @apply mt-2 bg-violet-600 text-white font-bold border-2 border-violet-600 no-underline p-3 rounded-md;
+            @include transition;
+
+            &.disabled {
+                opacity: 0.3rem;
+            }
+
+            &:hover {
+                @apply bg-violet-100 text-violet-700;
+            }
+
+            &:focus {
+                @apply bg-violet-100 text-violet-200;
+            }
         }
     }
 }
