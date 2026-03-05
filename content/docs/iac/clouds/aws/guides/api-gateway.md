@@ -1,8 +1,8 @@
 ---
-title_tag: "Configuring AWS API Gateway | Crosswalk"
+title_tag: "Using AWS API Gateway"
 title: API Gateway
 h1: Amazon API Gateway
-meta_desc: Pulumi Crosswalk for AWS provides a significantly easier way of programming API Gateway. Here is how.
+meta_desc: The AWS API Gateway component for Pulumi provides an easier way to create and manage API Gateway resources.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -17,21 +17,16 @@ aliases:
 - /docs/clouds/aws/guides/api-gateway/
 ---
 
-{{< crosswalk-header >}}
-
 [Amazon API Gateway](https://aws.amazon.com/api-gateway/) is a fully managed service for creating, monitoring, and
 securing APIs at scale. It acts as a "front door" for REST and WebSocket applications that use backend services,
 and handles all the tasks necessary to accept and process up to hundreds of thousands of concurrent API calls,
-including traffic management, authorization and access control, monitoring, and API version management. API Gateway
-is inexpensive, has no minimum fees, and you only pay for the API calls you receive and the data transferred out.
+including traffic management, authorization and access control, monitoring, and API version management.
 
 ## Overview
 
-Pulumi Crosswalk for Amazon Web Services (AWS) provides better AWS API management through significantly easier
-ways of programming an API Gateway. This includes using infrastructure as code techniques for simple, declarative
-APIs, including easy Lambda integration.
+The [AWS API Gateway component](/registry/packages/aws-apigateway/), available in the Pulumi Registry, provides an easier way to manage API Gateway resources. It uses infrastructure as code techniques for simple, declarative APIs, including easy Lambda integration.
 
-The examples below all use the [AWS API Gateway component](/registry/packages/aws-apigateway/) to configure API Gateway to serve several common scenarios. For more information about how to install and use this component, see its full [documentation](/registry/packages/aws-apigateway/) in the Pulumi Registry.
+The examples below all use the AWS API Gateway component to configure API Gateway to serve several common scenarios.
 
 ## Creating and configuring routes
 
@@ -46,7 +41,7 @@ Each API Gateway instance defines a new API endpoint and a collection of API rou
 {{% notes type="info" %}}
 
 Internally the API Gateway resource uses a collection of supporting objects, like resources, methods, and more,
-however one of the benefits of Pulumi Crosswalk for AWS is that it hides these mechanics behind a simpler interface.
+however one of the benefits of the AWS API Gateway component is that it hides these mechanics behind a simpler interface.
 
 {{% /notes %}}
 
@@ -57,7 +52,7 @@ stage name, but if you leave it off, a default of `stage` will be chosen.
 API Gateway will auto-generate a domain name with built-in HTTPS support. The stage name will also be part of this URL.
 You'll see later how to assign a custom domain, SSL certificate, and/or eliminate the stage name from the URL.
 
-There are multiple ways to define APIs using Pulumi Crosswalk for AWS:
+There are multiple ways to define APIs using the AWS API Gateway component:
 
 - [Lambda Function Event Handler Route](#lambda)
 - [Static Route Served by S3](#s3)
@@ -123,7 +118,7 @@ $ curl $(pulumi stack output url)
 {"message":"Hello from API Gateway!"}%
 ```
 
-For more complete information about creating Lambda Functions, see the [Pulumi Crosswalk for AWS Lambda documentation](/docs/clouds/aws/guides/lambda/).
+For more complete information about creating Lambda functions, see the [AWS Lambda guide](/docs/clouds/aws/guides/lambda/).
 
 ### Serving static files from S3 {#s3}
 
@@ -210,7 +205,7 @@ You can define a Lambda Authorizer for an event-handler route or a static route.
 
 - Token authorizers use an authorization token (i.e., a header of the form `Authorization: token <token>`)
 
-To define an Authorizer, you provide a Lambda that receives an [authorizer event](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-input.html) and responds with a valid [authorizer response](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-output.html). See [Pulumi Crosswalk for AWS Lambda](/docs/clouds/aws/guides/lambda/) for other ways you can define your Lambda for the Authorizer.
+To define an Authorizer, you provide a Lambda that receives an [authorizer event](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-input.html) and responds with a valid [authorizer response](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-output.html). See [AWS Lambda](/docs/clouds/aws/guides/lambda/) for other ways you can define your Lambda for the authorizer.
 
 Below is an example of a custom `request` authorizer. Because the authorizer has access to the content of the HTTP request, it can use any of the request's properties to determine whether to grant access to the resource requested. For demonstration, this authorizer validates the request using a single, hard-coded token. (In practice, you'd more likely have the authorizer query a database or contact another service for this purpose.)
 
@@ -273,8 +268,7 @@ The following program uses request validation to ensure that the `q` parameter i
 For more information about request validation, see [Use Request Validation in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html#api-gateway-request-validation-basic-definitions) in the AWS documentation.
 
 {{% notes type="info" %}}
-Request body validation is not yet supported. If you have a need for it, we would love to hear from you.
-Comment on [this open issue](https://github.com/pulumi/pulumi-aws-apigateway/issues/36) with details about your use case.
+Request body validation is not yet supported. To follow progress or share your use case, comment on [this open issue](https://github.com/pulumi/pulumi-aws-apigateway/issues/36).
 {{% /notes %}}
 
 ### Use API Keys to Limit Requests
@@ -354,7 +348,7 @@ $ curl $(pulumi stack output url)
 ```
 
 This is more complex than the above examples, but an escape hatch that you can use to access any API
-Gateway features not yet supported by the easier abstractions in Pulumi Crosswalk for AWS API Gateway. You must manually
+Gateway features not yet supported by the API Gateway component. You must manually
 provide permission for any route targets to be invoked by API Gateway when using this option.
 
 ### Defining a Single Route {#openapi-route}
