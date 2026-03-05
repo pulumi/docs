@@ -13,7 +13,7 @@ pulumi-chooser {
                 @apply border-gray-500;
             }
 
-            @screen md {
+            @include screen-md {
                 @apply text-base;
             }
 
@@ -32,11 +32,11 @@ pulumi-chooser {
                     @apply hidden;
                 }
 
-                @screen md {
+                @include screen-md {
                     @apply pt-4 pb-3 px-6;
                 }
 
-                @screen xl {
+                @include screen-xl {
                     span {
                         @apply inline;
                     }

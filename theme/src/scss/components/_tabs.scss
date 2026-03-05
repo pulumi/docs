@@ -14,7 +14,7 @@ pulumi-tabs {
 
     &[justify="center"] {
         &::part(tabs) {
-            @screen sm {
+            @include screen-sm {
                 @apply justify-center;
             }
         }
@@ -33,7 +33,7 @@ pulumi-tabs {
     &::part(anchor) {
         @apply py-2 px-6;
 
-        @screen md {
+        @include screen-md {
             @apply px-8;
         }
     }

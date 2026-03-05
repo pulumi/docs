@@ -15,7 +15,8 @@
         "clipboard-polyfill": "^3.0.3",
         "marked": "^4.3.0",
         "search-insights": "^2.17.2",
-        "tailwindcss": "^2.2.9",
+        "@tailwindcss/postcss": "^4",
+        "tailwindcss": "^4",
         "turndown": "^7.1.2",
         "turndown-plugin-gfm": "^1.0.2"
     },

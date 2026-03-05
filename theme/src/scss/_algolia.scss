@@ -4,15 +4,15 @@
 // https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic
 :root {
     --aa-base-unit: 14;
-    --aa-primary-color-rgb: theme(rgbColors.blue.400);
+    --aa-primary-color-rgb: 148,157,232;
     --aa-font-family: theme(fontFamily.body);
     --aa-input-icon-size: 16px;
-    --aa-icon-color-rgb: theme(rgbColors.gray.900);
-    --aa-input-border-color-rgb: theme(rgbColors.gray.500);
+    --aa-icon-color-rgb: 19,19,20;
+    --aa-input-border-color-rgb: 190,191,201;
     --aa-input-border-color-alpha: 1;
-    --aa-selected-color-rgb: theme(rgbColors.blue.100);
+    --aa-selected-color-rgb: 237,239,251;
     --aa-selected-color-alpha: 0.9;
-    --aa-description-highlight-background-color-rgb: theme(rgbColors.blue.200);
+    --aa-description-highlight-background-color-rgb: 219,222,247;
     --aa-description-highlight-background-color-alpha: 0;
     --aa-search-input-height: 42px;
 }
@@ -81,7 +81,7 @@
 
                 // The result-count badge.
                 .count {
-                    @apply ml-2 text-xs flex items-center rounded bg-violet-100 bg-opacity-60 text-gray-700 px-1.5 py-0.5;
+                    @apply ml-2 text-xs flex items-center rounded bg-violet-100/60 text-gray-700 px-1.5 py-0.5;
 
                     // When the item count is zero, don't show a background.
                     &.count-0 {
@@ -124,7 +124,7 @@
 
 // The container of an individual result item.
 .aa-Item {
-    @apply bg-gray-100 bg-opacity-80 mb-2 px-2 relative;
+    @apply bg-gray-100/80 mb-2 px-2 relative;
 
     .result {
 
@@ -161,7 +161,7 @@
 
     // The highlight indicator (i.e., the portion of item, if any, that matches the search query).
     mark {
-        @apply bg-transparent border-b border-blue-600 border-opacity-50;
+        @apply bg-transparent border-b border-blue-600/50;
     }
 }
 

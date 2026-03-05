@@ -1,6 +1,21 @@
 @import "colors";
 @import "mixins";
 
+// v4: define custom utilities so @apply btn / btn-lg / btn-orange work in other files.
+@utility btn {
+    transition: all 120ms linear;
+    @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded inline-block;
+    @apply bg-blue-600 border border-blue-600 text-white text-center;
+}
+
+@utility btn-lg {
+    @apply py-3 px-5;
+}
+
+@utility btn-orange {
+    @apply bg-orange-500 border-orange-600;
+}
+
 .btn {
     @include transition;
 

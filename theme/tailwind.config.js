@@ -9,22 +9,6 @@
 const { global } = require("./tokens.json");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
-const hexToRGB = (hexString) => {
-    let color = hexString.replace(/#/g, "");
-    var r = parseInt(color.substr(0, 2), 16);
-    var g = parseInt(color.substr(2, 2), 16);
-    var b = parseInt(color.substr(4, 2), 16);
-    return [ r, g, b];
-};
-
-const colorFamilyToRGB = (tailwindColorObject) => {
-    return Object.keys(tailwindColorObject)
-        .reduce((o, key) => {
-            o[key] = hexToRGB(tailwindColorObject[key]).join(",");
-            return o;
-        }, {});
-};
-
 const brand = {
     yellow: global.colors.brand.yellow.value,
     salmon: global.colors.brand.salmon.value,
@@ -34,9 +18,10 @@ const brand = {
     blue: global.colors.brand.blue.value,
 };
 
-const white = defaultTheme.colors.white;
-const black = defaultTheme.colors.black;
-const transparent = defaultTheme.colors.transparent;
+// defaultTheme.colors no longer exports these in v4; use explicit values.
+const white = "#fff";
+const black = "#000";
+const transparent = "transparent";
 
 const red = {
     100: global.colors.red["100"].value,
@@ -160,11 +145,7 @@ const green = {
 };
 
 module.exports = {
-    // ⚠️ CACHE BUST: October/December 2025 - Force new CSS fingerprint to invalidate CloudFront cache
-    // This is a temporary fix for the reinvent page missing CSS classes.
-    // See GitHub issue #16274 for long-term architectural fix.
-    // TODO: Remove this unused color after proper fingerprinting is implemented.
-    purge: false,
+    content: [],
     theme: {
         extend: {
             fontFamily: {
@@ -182,10 +163,6 @@ module.exports = {
             lineHeight: {
                 'extra-tight': '1.1',
             }
-        },
-        rgbColors: {
-            gray: colorFamilyToRGB(gray),
-            blue: colorFamilyToRGB(blue),
         },
         colors: {
             white,

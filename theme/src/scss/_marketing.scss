@@ -1,5 +1,9 @@
+@config "../../tailwind.config.js";
+@reference "tailwindcss";
+
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 @import "colors";
 @import "mixins";
@@ -36,7 +40,7 @@ body {
         // now get line-heights of 1. This is generally a good thing, but it makes the
         // headings in our marketing pages lose some intentional vertical spacing. So we
         // override it here to avoid having to sprinkle `leading-*` utilities everywhere.
-        @apply leading-snug #{!important};
+        line-height: 1.375 !important; /* leading-snug */
     }
 
     p {
@@ -144,7 +148,7 @@ body {
         }
     }
 
-    @screen md {
+    @include screen-md {
         h1 {
             @apply text-7xl;
 
