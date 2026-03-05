@@ -21,7 +21,7 @@ Teams are only available to organizations using Pulumi Enterprise Edition and Pu
 To learn more about editions visit the [pricing page](/pricing/).
 {{% /notes %}}
 
-The Pulumi Cloud offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions to a group of users.
+The Pulumi Cloud offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions to a group of users. When your organization has custom roles enabled, teams can also be assigned **roles** (in addition to stack-level permissions), so that members receive the union of the team's roles and their own user role.
 
 ## Creating a Team{#creating-a-team}
 
@@ -37,13 +37,21 @@ To give members permission to create teams:
 1. Navigate to **Settings** > **Access Management**.
 1. Use the toggle to turn on the **Allow organization members to create teams** setting.
 
+## Team role assignments {#team-role-assignments}
+
+When your organization has custom roles enabled, teams can be assigned **roles** (default or custom). This is separate from [Team permissions](#team-permissions) (stack-level access) and [Team roles](#team-roles) (Team admin vs Team member).
+
+- Each team can have **multiple role assignments**. Members of the team receive the permissions from all of those roles in addition to their own [organization role](/docs/administration/access-identity/rbac/roles#users).
+- Only **team admins** can add or remove role assignments for the team.
+- **Role-backed teams**: Create a team, assign it a custom role (e.g. with access only to certain stacks or [tag-based rules](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules)), then add members; those members gain the team's roles in addition to their own user role.
+
 ## GitHub-based Teams
 
 If your Pulumi organization is backed by GitHub, you can import your existing
 GitHub teams into Pulumi.
 
 For these teams, membership is managed on GitHub, while the set of stack
-permissions granted to team members is managed in the Pulumi Cloud.
+permissions and role assignments granted to team members is managed in the Pulumi Cloud.
 
 ## Team Permissions
 
