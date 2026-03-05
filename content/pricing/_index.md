@@ -66,7 +66,6 @@ tiers:
               items: |
                   Everything in **Enterprise**, plus:
                   - [Self-hosting available](/product/self-hosted)
-                  - Compliance policies
                   - NIST, CIS, HITRUST policy enforcement
                   - Automatic group & user sync (SCIM)
                   - Audit logs export
