@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: resource-option-import
     parent: options-concepts
-    weight: 9
+    weight: 110
 aliases:
   - /docs/iac/concepts/options/import/
   - /docs/intro/concepts/resources/options/import/

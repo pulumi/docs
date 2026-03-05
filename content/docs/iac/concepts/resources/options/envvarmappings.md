@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: envVarMappings
     parent: options-concepts
-    weight: 6
+    weight: 70
 aliases:
   - /docs/iac/concepts/options/envvarmappings/
   - /docs/intro/concepts/resources/options/envvarmappings/

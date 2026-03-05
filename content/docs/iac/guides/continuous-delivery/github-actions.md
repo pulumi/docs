@@ -32,8 +32,6 @@ and GitHub. This includes previewing, validating, and collaborating on proposed
 deployments in the context of Pull Requests, and triggering deployments or promotions
 between different environments by merging or directly committing changes.
 
-Let's see how to get started -- it's easy!
-
 {{% notes type="info" %}}
 Users in organizations can use the [CI/CD Integration Assistant](/docs/deployments/deployments/ci-cd-integration-assistant/) with GitHub Actions.
 {{% /notes %}}
@@ -370,6 +368,125 @@ based on your provider of choice. For example:
 * `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure](/registry/packages/azure/installation-configuration/)
 * `GOOGLE_CREDENTIALS` for [Google Cloud](/registry/packages/gcp/installation-configuration/)
 * `KUBECONFIG` for [Kubernetes](/registry/packages/kubernetes/installation-configuration/)
+
+## Using OIDC for cloud provider credentials
+
+Instead of storing long-lived cloud provider credentials as GitHub Secrets, you can use OpenID Connect (OIDC) to obtain short-lived credentials at runtime. This eliminates static API keys that never expire and reduces credential exposure.
+
+### Using Pulumi ESC (recommended)
+
+[Pulumi ESC](/docs/esc/) is the recommended approach for OIDC-based cloud credentials in GitHub Actions. Rather than configuring trust between GitHub Actions and each cloud provider separately, you configure trust once between Pulumi ESC and your cloud provider. ESC then surfaces the resulting short-lived credentials as environment variables that the Pulumi CLI and cloud provider SDKs consume automatically.
+
+This approach is preferred because it is:
+
+* **Provider-agnostic**: Works with [AWS](/docs/esc/guides/configuring-oidc/aws/), [Azure](/docs/esc/guides/configuring-oidc/azure/), [Google Cloud](/docs/esc/guides/configuring-oidc/gcp/), and others using the same workflow pattern.
+* **Portable**: The same ESC environment works locally and in any CI/CD system, not just GitHub Actions.
+* **Centralized**: Credential configuration lives in ESC, not scattered across individual pipelines.
+
+To set this up:
+
+1. Configure OIDC between Pulumi ESC and your cloud provider using one of the [ESC OIDC guides](/docs/esc/guides/configuring-oidc/).
+1. Configure Pulumi Cloud to trust GitHub OIDC tokens using the [GitHub OIDC client guide](/docs/administration/access-identity/oidc-client/github/).
+1. Update your workflow to use `pulumi/auth-actions` and `pulumi/esc-action` instead of long-lived secrets:
+
+```yaml
+name: Pulumi
+on:
+  - pull_request
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write # Required when using comment-on-pr: true
+jobs:
+  preview:
+    name: Preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+      - name: Authenticate with Pulumi Cloud
+        uses: pulumi/auth-actions@v1
+        with:
+          organization: org-name
+          requested-token-type: urn:pulumi:token-type:access_token:organization
+      - name: Inject ESC environment variables
+        uses: pulumi/esc-action@v1
+        with:
+          environment: org-name/project-name/env-name
+      - run: npm install
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: org-name/stack-name
+          comment-on-pr: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+```
+
+The `pulumi/auth-actions` step exchanges the GitHub OIDC token for a short-lived Pulumi access token, so no `PULUMI_ACCESS_TOKEN` secret is required. The `pulumi/esc-action` step opens the specified ESC environment and injects its `environmentVariables` into the workflow — for example, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` for AWS — which the Pulumi AWS provider picks up automatically.
+
+Replace the `npm install` step with the appropriate install command for your language. For more details, see the [Pulumi ESC GitHub Action documentation](/docs/esc/integrations/dev-tools/github/).
+
+### Direct GitHub → AWS OIDC (without ESC)
+
+If you prefer to configure OIDC directly between GitHub Actions and AWS without ESC, use the `aws-actions/configure-aws-credentials` action with the `role-to-assume` parameter. You must first [configure an IAM identity provider and role trust policy in AWS](https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services) that allows GitHub Actions to assume an IAM role.
+
+Note that this approach is AWS-specific. For other cloud providers you would need to configure separate trust relationships.
+
+When using OIDC, the workflow job requires the `id-token: write` permission. When also posting PR comments via `comment-on-pr: true`, you must add `pull-requests: write` as well:
+
+```yaml
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write # Required when using comment-on-pr: true
+```
+
+Replace the static credentials step with:
+
+```yaml
+- name: Configure AWS credentials
+  uses: aws-actions/configure-aws-credentials@v4
+  with:
+    role-to-assume: arn:aws:iam::123456789012:role/my-github-actions-role
+    aws-region: us-east-1
+```
+
+A complete pull request workflow using direct AWS OIDC:
+
+```yaml
+name: Pulumi
+on:
+  - pull_request
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+jobs:
+  preview:
+    name: Preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::123456789012:role/my-github-actions-role
+          aws-region: us-east-1
+      - run: npm install
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: org-name/stack-name
+          comment-on-pr: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
 
 ## Try It Out!
 
@@ -1089,35 +1206,4 @@ The cache key includes a hash of your dependency files (e.g., `package.json`, `r
 If your workflow uses multiple language runtimes or has specific versioning requirements, you can create more sophisticated cache keys by incorporating additional environment variables. For example, you might include the Python version, Node.js version, or GitHub Actions runner image version in your cache key to ensure compatibility.
 {{% /notes %}}
 
-## Migrating from GitHub Action v1
-
-If you previously used GitHub Action v1, the following are changes you should know about when migrating from v1 to v2:
-
-* The following inputs have changed from environment variables to action inputs:
-    * `PULUMI_ROOT` is now `work-dir`
-    * `PULUMI_BACKEND_URL` is now `cloud-url`
-    * `COMMENT_ON_PR` is now `comment-on-pr`
-    * `GITHUB_TOKEN` is now `github-token`
-
-* `IS_PR_WORKFLOW` is no longer used. GitHub Action v2 (and above) is able to understand if the workflow is a pull_request due to the action type.
-
-* GitHub Action v2 (and above) now runs natively, so the action workflow needs to have the correct environment configured. For
-  example, if you are running a NodeJS (for example) app then you need to ensure that your action has NodeJS available to it. Specify the [`engines`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#engines) in your `package.json` and configure the workflow using:
-
-```yaml
-- uses: actions/setup-node@v4
-  with:
-    node-version-file: package.json
-```
-
-* A `.pulumi\ci.json` file is no longer used for defining stacks for each branch. You need to use `stack-name` as described above.
-
 For additional examples, see the sample workflows available in our [Actions repository](https://github.com/pulumi/actions/tree/master/.github/workflows).
-
-* GitHub Action v2 no longer runs `npm ci | npm install | pip3 install | pipenv install`. Please ensure that you install
-  your dependencies before Pulumi commands are executed. For example:
-
-```yaml
-- run: pip install -r requirements
-  working-directory: infra
-```

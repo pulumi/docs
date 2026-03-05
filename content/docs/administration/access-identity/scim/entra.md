@@ -23,7 +23,7 @@ Please note that some advanced SCIM features aren't supported yet. For more info
 
 ## Prerequisites
 
-* Your organization must already be configured to use [SAML SSO](/docs/administration/access-identity/saml/aad/) with Pulumi.
+* Your organization must already be configured to use [SAML SSO](/docs/administration/access-identity/saml/entra/) with Pulumi.
 * You must be an admin of your Pulumi organization.
 * (Optional, but highly recommended) You should have more than one admin for your Pulumi organization.
 

@@ -687,6 +687,12 @@ The following example demonstrates using helper methods for JSON serialization:
 
 {{< example-program path="aws-s3-bucketpolicy-jsonstringify" languages="javascript,typescript,python,go,csharp" >}}
 
+When constructing a JSON policy document, it is often necessary to build a resource identifier by appending a path suffix to an output value. For example, Amazon S3 bucket policies that apply to objects rather than to the bucket itself require a resource ARN ending in `/*`. Because the bucket ARN is a Pulumi output, you must combine the JSON stringify helper with your language's string interpolation facility to produce the correct value.
+
+The following example demonstrates this pattern, using the bucket's ARN as a base and appending `/*` to target all objects in the bucket:
+
+{{< example-program path="aws-s3-bucketpolicy-jsonstringify-interpolate" languages="javascript,typescript,python,go,csharp" >}}
+
 #### Converting JSON strings to outputs
 
 If you have an output in the form of a JSON string and you need to interact with it like you would a regular JSON object, you can use Pulumi's parsing helper function.

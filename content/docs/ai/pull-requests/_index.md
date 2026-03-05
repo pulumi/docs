@@ -29,7 +29,7 @@ At this time, Neo only supports reading code from and creating pull requests in 
 
 ### GitHub App Installation
 
-Neo requires the [Pulumi GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/) to be installed to create pull requests. Additionally, without the Pulumi GitHub App, Neo will not be able to view the IaC code backing a stack. Neo can still propose code changes, but they will not be fully contextualized to your IaC code.
+Neo requires the [Pulumi GitHub App](/docs/integrations/github-app/) to be installed to create pull requests. Additionally, without the Pulumi GitHub App, Neo will not be able to view the IaC code backing a stack. Neo can still propose code changes, but they will not be fully contextualized to your IaC code.
 
 ### Code Access
 

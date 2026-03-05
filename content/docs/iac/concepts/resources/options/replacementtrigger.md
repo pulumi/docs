@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: replacementTrigger
     parent: options-concepts
-    weight: 5
+    weight: 160
 aliases:
   - /docs/intro/concepts/resources/options/replacementtrigger/
   - /docs/concepts/options/replacementtrigger/

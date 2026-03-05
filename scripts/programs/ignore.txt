@@ -51,6 +51,10 @@ azure-native-import-resource-group-go
 gcp-import-service-account-typescript
 aws-s3bucket-bucketpolicy-csharp
 deepseek-ollama-csharp
-gcp-import-service-account-javascript
 gcp-simple-webserver-yaml
 azure-native-import-resource-group-csharp
+
+# All JS examples were removed from static programs.
+# TODO: See if this line can be removed once the code has been merged to master
+and the tests have been run. 
+*-javascript

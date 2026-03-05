@@ -95,6 +95,12 @@ When moving documentation files, aliases automatically handle redirects. Update 
 
 ---
 
+## Navigation and llms.txt
+
+The left nav is defined in `layouts/partials/docs/menu.html`. Whenever you add, remove, or reorder top-level nav sections, also update `layouts/index.txtfull.txt` to match.
+
+---
+
 ## Workflow Skills
 
 Before starting any documentation task, check `.claude/commands/` for a relevant skill — there are well-structured skills covering common tasks like creating docs, reviewing PRs (see `.claude/commands/docs-review.md`), moving files, and more. To see a full inventory, run `.claude/commands/docs-tools/scripts/scrape-metadata.py`.

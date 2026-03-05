@@ -45,6 +45,11 @@ sections:
     link: /docs/support/troubleshooting/editing-state-files/
     description: Safe techniques for modifying Pulumi state files when necessary.
 
+  - emoji: 🔧
+    heading: Using dev builds
+    link: /docs/support/troubleshooting/using-dev-builds/
+    description: Install pre-release builds to access bug fixes that haven't shipped in a stable release yet.
+
 - type: flat
   heading: Need more help?
   description_md: |

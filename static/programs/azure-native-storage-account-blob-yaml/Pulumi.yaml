@@ -8,6 +8,7 @@ resources:
   storageAccount:
     type: azure-native:storage:StorageAccount
     properties:
+      accountName: storageacct
       resourceGroupName: ${resourceGroup.name}
       sku:
         name: Standard_LRS
@@ -25,7 +26,7 @@ resources:
       containerName: ${blobContainerName}
       resourceGroupName: ${resourceGroupName}
       source:
-        fn::StringAsset: content
+        fn::stringAsset: content
       type: Block
 
 variables:
