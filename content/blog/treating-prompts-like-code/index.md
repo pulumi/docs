@@ -1,5 +1,5 @@
 ---
-title: "Treating Prompts Like Code: The Content Engineer's Playbook"
+title: "Treating Prompts Like Code: A Content Engineer's AI Workflow"
 date: 2026-03-03
 draft: false
 meta_desc: "How I built a modular AI workflow system to scale a solo docs practice — treating prompts like code, with reusable skills, shared context, and CI/CD."
@@ -17,7 +17,7 @@ Pulumi has a lot of engineers. It has marketers, solution architects, developer 
 
 The problem was clear enough: how do you take one docs engineer's accumulated knowledge and make it available to everyone who needs it, without that engineer becoming a bottleneck?
 
-I started packaging it.
+I started packaging it. Here's what that looked like in practice.
 
 <!--more-->
 
@@ -110,5 +110,7 @@ The next frontier is bringing some of this tooling to the less technical members
 If you're a technical writer, a developer advocate, or a solo practitioner figuring out how AI fits into your workflow, the approach described here is a solid starting point. The tools matter, but the mental model matters more: treat your prompts like code. Make them reusable. Document them. Share them.
 
 The blank page is still there. It's just a lot less intimidating when you've got a good collaborator and a solid set of tools.
+
+Our docs repo is public, so the skills are there for anyone who wants them. If you're building something similar, steal freely — or contribute back.
 
 {{< blog/cta-button "See our docs skills for inspiration" "https://github.com/pulumi/docs/tree/master/.claude/commands" "_blank" >}}
