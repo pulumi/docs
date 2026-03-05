@@ -16,11 +16,15 @@ tags:
 social:
     twitter:
     linkedin:
+aliases:
+    - /blog/pulumi-now-supports-azure-devops-in-the-new-project-wizard/
 ---
 
 We've added Azure DevOps (ADO) and GitLab as VCS providers for Pulumi. If your team uses ADO or GitLab, you can now deploy infrastructure directly from your repositories - the same git-backed workflow we've had for GitHub.
 
 <!--more-->
+
+Connecting your VCS unlocks the full Pulumi Cloud workflow: push-to-deploy pipelines, pull request previews, Neo-powered change summaries on PRs and merge requests, and scheduled drift detection, all without managing separate CI/CD integrations.
 
 ## What's included
 
@@ -32,7 +36,7 @@ These features apply to both Azure DevOps and GitLab integrations:
 
 ![New project wizard with Azure DevOps repository settings](ado-npw.png)
 
-**OIDC authentication**: Exchange Pulumi's OIDC token for a provider-specific access token — via Entra ID for ADO or GitLab's OIDC provider.
+**OIDC authentication (ADO)**: Exchange Pulumi's OIDC token for an Azure access token via Entra ID — no long-lived secrets stored. GitLab uses stored group access tokens.
 
 **Neo on pull requests and merge requests**: Neo posts summaries and infrastructure change explanations to your ADO pull requests and GitLab merge requests, same as it does for GitHub.
 
