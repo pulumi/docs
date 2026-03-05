@@ -124,7 +124,7 @@ Each policy violation creates an issue that you can act on:
 - **Fix violations yourself**: Update the non-compliant resources directly
 - **Assign to Pulumi Neo**: Let Pulumi's AI agent analyze and fix the violation automatically
 
-This workflow—setting up policies, monitoring findings, and taking action—forms the core compliance management cycle in Pulumi Policies.
+This workflow of setting up policies, monitoring findings, and taking action forms the core compliance management cycle in Pulumi Policies.
 
 For detailed information on managing findings, see [Policy Findings](/docs/insights/policy/policy-findings/).
 

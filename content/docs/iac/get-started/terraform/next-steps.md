@@ -3,12 +3,12 @@ title_tag: Next Steps | Pulumi for Terraform Users
 title: Next Steps
 h1: "Next Steps"
 meta_desc: Explore advanced Pulumi features and resources for Terraform users ready to deepen their integration or consider migration.
-weight: 9
+weight: 10
 menu:
     iac:
         name: Next Steps
         parent: terraform-get-started
-        weight: 9
+        weight: 10
 
 aliases:
 ---
@@ -142,12 +142,12 @@ export class TerraformMigrationHelper {
 
 ## Advanced Pulumi features
 
-### CrossGuard for policy enforcement
+### Policies for policy enforcement
 
 Implement infrastructure policies that work across both Terraform and Pulumi:
 
 ```typescript
-// crossguard/index.ts
+// policies/index.ts
 import * as aws from "@pulumi/aws";
 import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
 
@@ -327,7 +327,7 @@ const app = new WebApplication("my-app", {
 * **[Adopting Pulumi](/docs/using-pulumi/adopting-pulumi/)**: Comprehensive migration strategies
 * **[Pulumi vs Terraform](/docs/intro/vs/terraform/)**: Detailed comparison of features
 * **[Automation API](/docs/using-pulumi/automation-api/)**: Programmatic infrastructure management
-* **[Policy as Code](/docs/using-pulumi/crossguard/)**: Infrastructure governance and compliance
+* **[Policy as Code](/docs/insights/policy/)**: Infrastructure governance and compliance
 
 ### Community resources
 

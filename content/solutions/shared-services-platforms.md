@@ -88,7 +88,7 @@ diagrams:
         - title: 5. Define the guardrails & policies
           image: /images/solutions/shared-services-platform/diagram-five.svg
           content: |
-            Use Pulumi CrossGuard to define cost guardrails and security policies. CrossGuard can also be used to enforce general best practices (e.g., closing ports) or best practices specific to your business (e.g., regional locality requirements).
+            Use Pulumi Policies to define cost guardrails and security policies. Pulumi Policies can also be used to enforce general best practices (e.g., closing ports) or best practices specific to your business (e.g., regional locality requirements).
 
 customer_logos:
   title: Organizations building shared services platforms with Pulumi

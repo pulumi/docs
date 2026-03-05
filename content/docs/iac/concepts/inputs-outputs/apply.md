@@ -23,6 +23,7 @@ The `apply` method is typically used for:
 - [Printing output values](#accessing-single-output-values) for debugging Pulumi programs
 - [Accessing nested values](#accessing-nested-output-values) in complex types (outputs that are objects or dictionaries)
 - [Transforming an output](#creating-new-output-values) by referencing its plain value
+- [Converting inputs to outputs](#converting-inputs-to-outputs) to call `apply` on a value typed as `Input<T>`
 
 For more information about what outputs are and why they are necessary in Pulumi programs, see [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/).
 
@@ -558,6 +559,10 @@ resources:
 
 Outputs that return to the engine as strings cannot be used directly in operations such as string concatenation until the output value has returned to Pulumi. In these scenarios, you'll need to wait for the value to return using [`apply`](/docs/concepts/inputs-outputs/apply/).
 
+{{% notes type="info" %}}
+For the common case of building a string from output values, Pulumi's [output helpers](/docs/concepts/inputs-outputs/helpers/#string-interpolation) provide a more concise alternative that doesn't require calling `apply` directly.
+{{% /notes %}}
+
 For example, the following code creates an HTTPS URL from the DNS name (the plain value) of a virtual machine (in this case an EC2 instance):
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,yaml" / >}}
@@ -672,7 +677,7 @@ The returned value of the call to {{< pulumi-apply >}} is a new `pulumi.Output<s
 
 ### Outputs and JSON
 
-Many cloud resources require JavaScript Object Notation (JSON) documents, such as policies that control access to resources. The Pulumi SDK provides helper methods in most languages to make it easier to work with Pulumi outputs and JSON documents. These helper methods have similar names and function signatures to their plain-value analogues.
+Many cloud resources require JavaScript Object Notation (JSON) documents, such as policies that control access to resources. The Pulumi SDK provides helper methods in most languages to make it easier to work with Pulumi outputs and JSON documents. These helper methods have similar names and function signatures to their plain-value analogues. For a consolidated reference of all JSON helpers, see [Using output helpers](/docs/concepts/inputs-outputs/helpers/#json-helpers).
 
 #### Converting JSON objects to strings
 
@@ -681,6 +686,12 @@ If you need to construct a JSON string using output values from Pulumi resources
 The following example demonstrates using helper methods for JSON serialization:
 
 {{< example-program path="aws-s3-bucketpolicy-jsonstringify" languages="javascript,typescript,python,go,csharp" >}}
+
+When constructing a JSON policy document, it is often necessary to build a resource identifier by appending a path suffix to an output value. For example, Amazon S3 bucket policies that apply to objects rather than to the bucket itself require a resource ARN ending in `/*`. Because the bucket ARN is a Pulumi output, you must combine the JSON stringify helper with your language's string interpolation facility to produce the correct value.
+
+The following example demonstrates this pattern, using the bucket's ARN as a base and appending `/*` to target all objects in the bucket:
+
+{{< example-program path="aws-s3-bucketpolicy-jsonstringify-interpolate" languages="javascript,typescript,python,go,csharp" >}}
 
 #### Converting JSON strings to outputs
 
@@ -713,3 +724,121 @@ For more details [view the Go documentation](https://pkg.go.dev/github.com/pulum
 For more details [view the .NET documentation](/docs/reference/pkg/dotnet/Pulumi/Pulumi.Output.html).
 
 {{% /choosable %}}
+
+## Converting inputs to outputs
+
+Resource arguments in Pulumi accept `Input<T>` values, which means they will take either a plain value or an `Output<T>`. In most programs this flexibility is all you need. There are situations, however, where you have a value typed as `Input<T>` and need to ensure it is a definite `Output<T>`—most commonly to call `apply` on it.
+
+This situation arises most often in the following cases:
+
+- **Writing a component resource.** Component constructors typically accept `Input<T>` parameters to give callers the flexibility to pass either a plain value or an existing output. Inside the component body, you often need to call `apply` or chain other output operations on those parameters, which requires `Output<T>`.
+- **Writing utility functions that accept `Input<T>`.** A function that accepts `Input<T>` for caller flexibility must convert to `Output<T>` internally before it can call `apply` to perform any transformation.
+- **Combining values with `all`.** While the `all` function accepts a mix of plain values and outputs in most SDKs, explicitly converting to outputs first can make your program’s data flow clearer and more predictable.
+
+Pulumi's SDKs provide a dedicated function to wrap any `Input<T>` as a guaranteed `Output<T>`:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+`pulumi.output()` accepts any `Input<T>`—a plain value or an existing `Output<T>`—and returns `Output<T>`. The example below defines a helper that requires `Output<string>` internally, then calls it with both a plain string and with an `Output<string>` from a resource to show that both work.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+function buildUrl(host: pulumi.Input<string>): pulumi.Output<string> {
+    return pulumi.output(host).apply(h => `https://${h}`);
+}
+
+const fromPlain = buildUrl("example.com");
+
+const bucket = new aws.s3.BucketV2("my-bucket");
+const fromOutput = buildUrl(bucket.websiteEndpoint);
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+`pulumi.Output.from_input()` accepts any `Input[T]`—a plain value or an existing `Output[T]`—and returns `Output[T]`.
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+# A helper function that accepts Input[str] but needs to call apply.
+def build_url(host: pulumi.Input[str]) -> pulumi.Output[str]:
+    return pulumi.Output.from_input(host).apply(lambda h: f"https://{h}")
+
+# Works with a plain string.
+from_plain = build_url("example.com")
+
+# Works equally well with an Output[str] from a resource.
+bucket = aws.s3.BucketV2("my-bucket")
+from_output = build_url(bucket.website_endpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+In Go, each typed input interface exposes a `ToXxxOutput()` method that returns the corresponding concrete output type. For example, `pulumi.StringInput` provides `ToStringOutput()`. The snippet below defines a helper that requires `pulumi.StringOutput` internally, then calls it with both a plain value and a `StringOutput` from a resource.
+
+```go
+import (
+    awss3 "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func buildURL(input pulumi.StringInput) pulumi.StringOutput {
+    return input.ToStringOutput().ApplyT(func(host string) string {
+        return "https://" + host
+    }).(pulumi.StringOutput)
+}
+
+// Inside a Pulumi program:
+fromPlain := buildURL(pulumi.String("example.com"))
+
+bucket, _ := awss3.NewBucketV2(ctx, "my-bucket", nil, nil)
+fromOutput := buildURL(bucket.Bucket)
+```
+
+Each typed input interface in the Go SDK—`pulumi.StringInput`, `pulumi.IntInput`, `pulumi.BoolInput`, and so on—follows this same `ToXxxOutput()` pattern.
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+In C#, `Input<T>` exposes `Apply` through Pulumi SDK extension methods, so you can often call `Apply` without an explicit conversion step:
+
+```csharp
+// Input<T> supports Apply through extension methods in the Pulumi C# SDK.
+Input<string> host = "example.com"; // could be a plain string or Output<string>
+Output<string> url = host.Apply(h => $"https://{h}");
+```
+
+When you need to construct a standalone `Output<T>` from a plain value, use `Output.Create`:
+
+```csharp
+Output<string> output = Output.Create("example.com");
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+`Output.of()` wraps a plain value as an `Output<T>`. When your value is already an `Output<T>`, you can use it directly without any conversion.
+
+```java
+import com.pulumi.core.Output;
+
+Output<String> output = Output.of("example.com");
+Output<String> url = output.applyValue(host -> "https://" + host);
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+When the value you pass is already an `Output<T>`, the conversion function returns it unchanged. When you pass a plain value, Pulumi wraps it in a new output that resolves immediately with that value. In either case, the result is a definite `Output<T>` on which you can call `apply` or any other output method.

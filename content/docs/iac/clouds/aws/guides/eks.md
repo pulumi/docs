@@ -39,7 +39,6 @@ related AWS services. This includes
 * [ELB](/docs/clouds/aws/guides/elb/) for load balancing
 * [IAM](/docs/clouds/aws/guides/iam/) for security
 * [VPC](/docs/clouds/aws/guides/vpc/) for network isolation
-* [CloudWatch](/docs/clouds/aws/guides/cloudwatch/) for monitoring
 
 Amazon EKS runs up-to-date versions of the open-source Kubernetes software, so you can use all the existing plugins and
 tooling from the Kubernetes community, including Pulumi's support for deploying Helm charts. Applications running on
@@ -2235,9 +2234,9 @@ Specifying your Kubernetes object configurations in Pulumi lets you take advanta
 like variables, loops, conditionals, functions, and classes. It is possible, however, to deploy existing Kubernetes
 YAML. The two approaches can be mixed, which is useful when converting an existing project.
 
-The [`ConfigFile` class](/registry/packages/kubernetes/api-docs/yaml/configfile) can be
+The [`ConfigFile` class](/registry/packages/kubernetes/api-docs/yaml/v2/configfile) can be
 used to deploy a single YAML file, whereas the [`ConfigGroup` class](
-/registry/packages/kubernetes/api-docs/yaml/configgroup) can deploy
+/registry/packages/kubernetes/api-docs/yaml/v2/configgroup) can deploy
 a collection of files, either from a set of files or in-memory representations.
 
 For example, imagine we have a directory, `yaml/`, containing the full YAML for the [Kubernetes Guestbook application](
@@ -2255,7 +2254,7 @@ import * as k8s from "@pulumi/kubernetes";
 const cluster = new eks.Cluster("my-cluster");
 
 // Create resources from standard Kubernetes guestbook YAML example.
-const guestbook = new k8s.yaml.ConfigGroup("guestbook",
+const guestbook = new k8s.yaml.v2.ConfigGroup("guestbook",
     { files: "yaml/*.yaml" },
     { provider: cluster.provider },
 );
@@ -2270,20 +2269,20 @@ export const frontendIp = guestbook.getResource("v1/Service", "frontend", "").sp
 ```python
 import pulumi
 import pulumi_eks as eks
-import pulumi_kubernetes as k8s
+from pulumi_kubernetes.yaml.v2 import ConfigGroup
 
 # Create an EKS cluster.
-cluster = eks.Cluster('my-cluster')
+cluster = eks.Cluster("my-cluster")
 
 # Create resources from standard Kubernetes guestbook YAML example.
-guestbook = k8s.yaml.ConfigGroup('guestbook',
-    files = ['yaml/*.yaml'],
-    opts = pulumi.ResourceOptions(provider = cluster.provider)
+guestbook = ConfigGroup("guestbook",
+    files=["yaml/*.yaml"],
+    opts=pulumi.ResourceOptions(provider=cluster.provider)
 )
 
 # Export the (cluster-private) IP address of the Guestbook frontend.
-pulumi.export('frontendIp',
-    guestbook.get_resource('v1/Service', 'frontend', '').spec.cluster_ip)
+pulumi.export("frontendIp",
+    guestbook.get_resource("v1/Service", "frontend", "").spec.cluster_ip)
 ```
 
 {{% /choosable %}}
@@ -2294,12 +2293,11 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 
 	"github.com/pulumi/pulumi-eks/sdk/go/eks"
-	k8s "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
-	k8syaml "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/yaml"
+	k8s "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
+	k8syaml "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/yaml/v2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -2328,7 +2326,7 @@ func main() {
 
 		// Create resources from standard Kubernetes guestbook YAML example.
 		guestbook, err := k8syaml.NewConfigGroup(ctx, "guestbook", &k8syaml.ConfigGroupArgs{
-			Files: []string{"yaml/*.yaml"},
+			Files: pulumi.StringArray{pulumi.String("yaml/*.yaml")},
 		}, pulumi.Provider(prov))
 
 		// Export the (cluster-private) IP address of the Guestbook frontend.
@@ -2346,7 +2344,7 @@ func main() {
 ```csharp
 using K8s = Pulumi.Kubernetes;
 using K8sCore = Pulumi.Kubernetes.Core.V1;
-using K8sYaml = Pulumi.Kubernetes.Yaml;
+using K8sYaml = Pulumi.Kubernetes.Yaml.V2;
 using Newtonsoft.Json;
 using Pulumi;
 using Pulumi.Eks;
@@ -2358,7 +2356,7 @@ class MyStack : Stack
         // Create an EKS cluster.
         var cluster = new Cluster("my-cluster");
 
-		// Create a Kubernetes provider using the new cluster's Kubeconfig.
+        // Create a Kubernetes provider using the new cluster's Kubeconfig.
         var eksProvider = new K8s.Provider("eksProvider", new K8s.ProviderArgs {
             KubeConfig = cluster.Kubeconfig.Apply(JsonConvert.SerializeObject)
         });
@@ -2371,7 +2369,7 @@ class MyStack : Stack
             new ComponentResourceOptions { Provider = eksProvider }
         );
 
-		// Export the (cluster-private) IP address of the Guestbook frontend.
+        // Export the (cluster-private) IP address of the Guestbook frontend.
         this.FrontendIp = guestbook.GetResource<K8sCore.Service>(
             "frontend").Apply((svc) => svc.Spec.Apply((spec) => spec.ClusterIP));
     }
@@ -2448,16 +2446,10 @@ outputs:
 
 {{% /choosable %}}
 
-The `ConfigFile` and `ConfigGroup` classes both support a [`transformations` property](
-/registry/packages/kubernetes#transformations_nodejs) which can be used to ['monkey patch'](
+The `ConfigFile` and `ConfigGroup` classes support [`transforms`](
+/docs/concepts/options/transforms/) via `ResourceOptions`, which can be used to ['monkey patch'](
 https://en.wikipedia.org/wiki/Monkey_patch) Kubernetes configuration on the fly. This can be used to rewrite
 configuration to include additional services (like Envoy sidecars), inject tags, and so on.
-
-{{% notes type="info" %}}
-Note that the `transformations` property is available only with the "v1" version
-of `ConfigFile` and `ConfigGroup`; for the "v2" version, use the
-`transforms` option.
-{{% /notes %}}
 
 For example, a transformation like the following can make all services private to a cluster, by
 changing `LoadBalancer` specs into `ClusterIPs`, in addition to placing objects into a desired namespace:
@@ -2467,26 +2459,22 @@ changing `LoadBalancer` specs into `ClusterIPs`, in addition to placing objects 
 {{% choosable language typescript %}}
 
 ```typescript
-const guestbook = new k8s.yaml.ConfigGroup("guestbook",
+const guestbook = new k8s.yaml.v2.ConfigGroup("guestbook",
+    { files: "yaml/*.yaml" },
     {
-        files: "yaml/*.yaml",
-        transformations: [
-            (obj: any) => {
+        provider: eksProvider,
+        transforms: [
+            async (args) => {
+                const props = args.props as any;
                 // Make every service private to the cluster.
-                if (obj.kind == "Service" && obj.apiVersion == "v1") {
-                    if (obj.spec && obj.spec.type && obj.spec.type == "LoadBalancer") {
-                        obj.spec.type = "ClusterIP";
-                    }
+                if (args.type === "kubernetes:core/v1:Service" &&
+                        props?.spec?.type === "LoadBalancer") {
+                    props.spec.type = "ClusterIP";
                 }
+                // Put every resource in the created namespace.
+                props.metadata = { ...props.metadata, namespace: namespaceName };
+                return { props, opts: args.opts };
             },
-            // Put every resource in the created namespace.
-            (obj: any) => {
-                if (obj.metadata !== undefined) {
-                    obj.metadata.namespace = namespaceName
-                } else {
-                    obj.metadata = {namespace: namespaceName}
-                }
-            }
         ],
     },
 );
@@ -2496,29 +2484,25 @@ const guestbook = new k8s.yaml.ConfigGroup("guestbook",
 {{% choosable language python %}}
 
 ```python
-def xform_service_private(obj):
-    """Make every service private to the cluster."""
-    if (isinstance(obj, k8s.core.v1.Service) and
-            obj.kind == 'Service' and obj.api_version == 'v1' and
-            obj.spec and obj.spec.type and obj.spec.type == 'LoadBalancer'):
-        obj.spec.type = 'ClusterIP'
+def xform(args):
+    props = dict(args.props)
+    # Make every service private to the cluster.
+    if args.type_ == "kubernetes:core/v1:Service":
+        spec = dict(props.get("spec", {}))
+        if spec.get("type") == "LoadBalancer":
+            spec["type"] = "ClusterIP"
+            props["spec"] = spec
+    # Put every resource in the created namespace.
+    meta = dict(props.get("metadata", {}))
+    meta["namespace"] = namespace_name
+    props["metadata"] = meta
+    return pulumi.ResourceTransformResult(props=props, opts=args.opts)
 
-def xform_resource_ns(obj):
-    """Put every resource in the created namespace."""
-    if (hasattr(obj, 'metadata')):
-        if (obj.metadata is not None):
-            obj.metadata.namespace = namespaceName
-        else:
-            obj.metadata = k8s.meta.v1.ObjectMetaArgs(namespace = namespaceName)
-
-guestbook = k8s.yaml.ConfigGroup('guestbook',
-    files = ['yaml/*.yaml'],
-    opts = pulumi.ResourceOptions(
-        provider = cluster.provider,
-        transformations = [
-            xform_service_private,
-            xform_resource_ns,
-        ]
+guestbook = ConfigGroup("guestbook",
+    files=["yaml/*.yaml"],
+    opts=pulumi.ResourceOptions(
+        provider=cluster.provider,
+        transforms=[xform],
     )
 )
 ```
@@ -2528,28 +2512,30 @@ guestbook = k8s.yaml.ConfigGroup('guestbook',
 
 ```go
 guestbook, err := k8syaml.NewConfigGroup(ctx, "guestbook", &k8syaml.ConfigGroupArgs{
-    Files: []string{"yaml/*.yaml"},
-    Transformations: []k8syaml.Transformation{
+    Files: pulumi.StringArray{pulumi.String("yaml/*.yaml")},
+}, pulumi.Provider(prov), pulumi.Transforms([]pulumi.ResourceTransform{
+    func(ctx context.Context, args *pulumi.ResourceTransformArgs) *pulumi.ResourceTransformResult {
+        props := args.Props.ObjectValue()
         // Make every service private to the cluster.
-        func(state map[string]interface{}, opts ...pulumi.ResourceOption) {
-            if state["kind"] == "Service" && state["apiVersion"] == "v1" {
-                spec := state["spec"].(map[string]interface{})
-                spec["type"] = "ClusterIP"
-            }
-        },
-        // Put every resource in the created namespace.
-        func(state map[string]interface{}, opts ...pulumi.ResourceOption) {
-            if state["metadata"] != nil {
-                meta := state["metadata"].(map[string]interface{})
-                meta["namespace"] = namespaceName
-            } else {
-                state["metadata"] = map[string]interface{}{
-                    "namespace": namespaceName,
+        if args.Type == "kubernetes:core/v1:Service" {
+            if spec, ok := props["spec"]; ok {
+                specMap := spec.ObjectValue()
+                if specMap["type"].StringValue() == "LoadBalancer" {
+                    specMap["type"] = resource.NewStringProperty("ClusterIP")
+                    props["spec"] = resource.NewObjectProperty(specMap)
                 }
             }
-        },
+        }
+        // Put every resource in the created namespace.
+        meta := props["metadata"].ObjectValue()
+        meta["namespace"] = resource.NewStringProperty(namespaceName)
+        props["metadata"] = resource.NewObjectProperty(meta)
+        return &pulumi.ResourceTransformResult{
+            Props: resource.NewObjectProperty(props),
+            Opts:  args.Opts,
+        }
     },
-})
+}))
 ```
 
 {{% /choosable %}}
@@ -2559,41 +2545,43 @@ guestbook, err := k8syaml.NewConfigGroup(ctx, "guestbook", &k8syaml.ConfigGroupA
 var guestbook = new K8sYaml.ConfigGroup("guestbook",
     new K8sYaml.ConfigGroupArgs {
         Files = new[] { "yaml/*.yaml" },
-        Transformations = {
-            // Make every service private to the cluster.
-            (state, opts) => {
-                if (state["kind"] != null && state["kind"].Equals("Service") &&
-                        state["apiVersion"] != null && state["apiVersion"].Equals("v1")) {
-                    var spec = (ImmutableDictionary<string, object>)state["spec"];
-                    return state.SetItem("spec", spec.SetItem("type", "ClusterIP"));
-                }
-                return state;
-            },
-            // Put every resource in the created namespace.
-            (state, opts) => {
-                if (state["metadata"] != null) {
-                    var meta = (ImmutableDictionary<string, object>)state["metadata"];
-                    return state.SetItem("metadata", meta.SetItem("namespace", namespaceName));
-                }
-                return state.SetItem("metadata", new Dictionary<string, object> {
-                    { "namespace", namespaceName }
-                }.ToImmutableDictionary());
-            }
-        }
     },
-    new ComponentResourceOptions { Provider = eksProvider }
+    new ComponentResourceOptions {
+        Provider = eksProvider,
+        ResourceTransformations = {
+            (args) => {
+                var props = args.Args as ImmutableDictionary<string, object>
+                    ?? ImmutableDictionary<string, object>.Empty;
+                // Make every service private to the cluster.
+                if (args.Resource.GetResourceType() == "kubernetes:core/v1:Service") {
+                    var spec = props.GetValueOrDefault("spec")
+                        as ImmutableDictionary<string, object>
+                        ?? ImmutableDictionary<string, object>.Empty;
+                    if (spec.TryGetValue("type", out var t) && (string)t == "LoadBalancer") {
+                        props = props.SetItem("spec", spec.SetItem("type", "ClusterIP"));
+                    }
+                }
+                // Put every resource in the created namespace.
+                var meta = props.GetValueOrDefault("metadata")
+                    as ImmutableDictionary<string, object>
+                    ?? ImmutableDictionary<string, object>.Empty;
+                props = props.SetItem("metadata", meta.SetItem("namespace", namespaceName));
+                return new ResourceTransformationResult(props, args.Options);
+            },
+        }
+    }
 );
 ```
 
 {{% /choosable %}}
 {{% choosable language java %}}
 {{% notes type="info" %}}
-This functionality is currently not available in Java.
+Transforms are not yet supported for this resource in Java.
 {{% /notes %}}
 {{% /choosable %}}
 {{% choosable language yaml %}}
 {{% notes type="info" %}}
-This functionality is currently not available in YAML.
+Transforms are not yet supported for this resource in Pulumi YAML.
 {{% /notes %}}
 {{% /choosable %}}
 

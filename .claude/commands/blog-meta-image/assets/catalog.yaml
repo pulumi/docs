@@ -1,0 +1,188 @@
+# Meta Image Asset Catalog
+# Template-based system — render target is 1200x628
+
+canvas:
+  width: 1200
+  height: 628
+
+text:
+  font: inter-bold.woff
+  font_weight: 700
+  color: "#FFFFFF"
+  letter_spacing_em: -0.025
+  line_height_pct: 110
+  x: 90
+  y: 80
+  max_width: 700
+
+templates:
+  # -- Dark mascot variants --
+  - filename: dark-flying.png
+    theme: dark
+    type: mascot
+    mascot: flying
+    description: "3D Pulumipus flying with sunglasses"
+
+  - filename: dark-closeup.png
+    theme: dark
+    type: mascot
+    mascot: closeup
+    description: "3D Pulumipus head closeup with sunglasses"
+
+  - filename: dark-wireframe.png
+    theme: dark
+    type: mascot
+    mascot: wireframe
+    description: "Wireframe/line-art Pulumipus with sunglasses"
+
+  - filename: dark-shield.png
+    theme: dark
+    type: mascot
+    mascot: shield
+    description: "3D Pulumipus holding a shield with sunglasses"
+
+  # -- Dark logo variants --
+  - filename: dark-logo-1.png
+    theme: dark
+    type: logo
+    logo_slots: 1
+    placeholders:
+      - { x: 678, y: 72, width: 522, height: 476 }
+
+  - filename: dark-logo-2.png
+    theme: dark
+    type: logo
+    logo_slots: 2
+    placeholders:
+      - { x: 900, y: 88, width: 200, height: 182 }
+      - { x: 900, y: 349, width: 200, height: 181 }
+
+  - filename: dark-logo-3.png
+    theme: dark
+    type: logo
+    logo_slots: 3
+    placeholders:
+      - { x: 822, y: 116, width: 145, height: 173 }
+      - { x: 998, y: 202, width: 145, height: 173 }
+      - { x: 822, y: 329, width: 145, height: 173 }
+
+  # -- Light mascot variants --
+  - filename: light-flying.png
+    theme: light
+    type: mascot
+    mascot: flying
+    description: "3D Pulumipus flying with sunglasses (light bg)"
+
+  - filename: light-closeup.png
+    theme: light
+    type: mascot
+    mascot: closeup
+    description: "3D Pulumipus head closeup with sunglasses (light bg)"
+
+  - filename: light-wireframe.png
+    theme: light
+    type: mascot
+    mascot: wireframe
+    description: "Wireframe/line-art Pulumipus with sunglasses (light bg)"
+
+  - filename: light-shield.png
+    theme: light
+    type: mascot
+    mascot: shield
+    description: "3D Pulumipus holding a shield with sunglasses (light bg)"
+
+  # -- Light logo variants --
+  - filename: light-logo-1.png
+    theme: light
+    type: logo
+    logo_slots: 1
+    placeholders:
+      - { x: 678, y: 72, width: 522, height: 476 }
+
+  - filename: light-logo-2.png
+    theme: light
+    type: logo
+    logo_slots: 2
+    placeholders:
+      - { x: 900, y: 88, width: 200, height: 182 }
+      - { x: 900, y: 349, width: 200, height: 181 }
+
+  - filename: light-logo-3.png
+    theme: light
+    type: logo
+    logo_slots: 3
+    placeholders:
+      - { x: 822, y: 116, width: 145, height: 173 }
+      - { x: 998, y: 202, width: 145, height: 173 }
+      - { x: 822, y: 329, width: 145, height: 173 }
+
+logos:
+  - filename: 1password.svg
+    name: 1Password
+    tags: [1password, password, security]
+  - filename: amazon-ebs.svg
+    name: Amazon EBS
+    tags: [aws, amazon, ebs, storage]
+  - filename: amazon-sagemaker.svg
+    name: Amazon SageMaker
+    tags: [aws, amazon, sagemaker, ml, ai]
+  - filename: aws-cdk.svg
+    name: AWS CDK
+    tags: [aws, cdk, iac]
+  - filename: aws-dark.svg
+    name: AWS (dark)
+    tags: [aws, amazon, cloud, dark]
+  - filename: aws.svg
+    name: AWS
+    tags: [aws, amazon, cloud]
+  - filename: azure-icon.svg
+    name: Azure (icon)
+    tags: [azure, microsoft, cloud]
+  - filename: azure-storage.svg
+    name: Azure Storage
+    tags: [azure, microsoft, storage]
+  - filename: azure.svg
+    name: Azure
+    tags: [azure, microsoft, cloud]
+  - filename: bicep.svg
+    name: Bicep
+    tags: [bicep, azure, iac]
+  - filename: bun.svg
+    name: Bun
+    tags: [bun, javascript, runtime]
+  - filename: docker.svg
+    name: Docker
+    tags: [docker, containers]
+  - filename: google-cloud-icon.svg
+    name: Google Cloud (icon)
+    tags: [gcp, google, cloud]
+  - filename: google-cloud-logo.svg
+    name: Google Cloud
+    tags: [gcp, google, cloud]
+  - filename: hashicorp-terraform.svg
+    name: Terraform
+    tags: [terraform, hashicorp, iac]
+  - filename: huggingface.svg
+    name: Hugging Face
+    tags: [huggingface, ai, ml]
+  - filename: kubernetes.svg
+    name: Kubernetes
+    tags: [kubernetes, k8s, containers]
+  - filename: microsoft.svg
+    name: Microsoft
+    tags: [microsoft, windows]
+  - filename: python.svg
+    name: Python
+    tags: [python, language]
+  - filename: redis.svg
+    name: Redis
+    tags: [redis, database, cache]
+  - filename: slack.svg
+    name: Slack
+    tags: [slack, messaging]
+  - filename: typescript.svg
+    name: TypeScript
+    tags: [typescript, javascript, language]
+  - filename: vercel.svg
+    name: Vercel
+    tags: [vercel, hosting, frontend]

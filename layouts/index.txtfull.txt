@@ -43,6 +43,11 @@ This file provides a curated guide to Pulumi's documentation, organized by produ
   {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
 {{- end }}
 
+## Integrations
+{{- with index site.Menus "integrations" }}
+  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
+{{- end }}
+
 ## Secrets & Configuration (ESC)
 {{- with index site.Menus "esc" }}
   {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}

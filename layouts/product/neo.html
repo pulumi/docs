@@ -25,7 +25,7 @@
 {{ end }}
 
 <section id="cta" class="container mx-auto text-center mb-16">
-    <a href="https://app.pulumi.com/signup" class="btn-primary">Get Started</a>
+    {{ partial "cta-get-started" (dict "class" "btn-primary") }}
     <a href="/contact/?form=request-a-demo" class="btn-secondary ml-4">Book a Demo</a>
 </section>
 

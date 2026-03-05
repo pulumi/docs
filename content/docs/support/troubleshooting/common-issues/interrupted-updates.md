@@ -72,23 +72,30 @@ pulumi refresh --clear-pending-creates --yes
 
 **To import pending creates (resource was created):**
 
-Use `--import-pending-creates` with pairs of URN and physical ID:
+Use `--import-pending-creates` to specify each resource to import. Because this flag accepts exactly one value per invocation, you must pass the resource URN and its physical ID as **two consecutive flag invocations** — one for the URN and one for the ID.
 
-```bash
-pulumi refresh --import-pending-creates "urn:pulumi:dev::myproject::aws:s3/bucket:Bucket::mybucket" "my-bucket-abc123" --yes
-```
-
-For multiple pending creates, provide additional URN/ID pairs:
+The full resource URN appears in the diagnostic output of `pulumi up` (as shown above) and can also be retrieved by running `pulumi stack --show-urns`.
 
 ```bash
 pulumi refresh \
-  --import-pending-creates "urn:pulumi:dev::myproject::aws:s3/bucket:Bucket::bucket1" "bucket1-id" \
-  --import-pending-creates "urn:pulumi:dev::myproject::aws:s3/bucket:Bucket::bucket2" "bucket2-id" \
+  --import-pending-creates "urn:pulumi:dev::myproject::aws:s3/bucket:Bucket::mybucket" \
+  --import-pending-creates "my-bucket-abc123" \
+  --yes
+```
+
+For multiple pending creates, alternate URN and physical ID invocations in order:
+
+```bash
+pulumi refresh \
+  --import-pending-creates "urn:pulumi:dev::myproject::aws:s3/bucket:Bucket::bucket1" \
+  --import-pending-creates "bucket1-id" \
+  --import-pending-creates "urn:pulumi:dev::myproject::aws:s3/bucket:Bucket::bucket2" \
+  --import-pending-creates "bucket2-id" \
   --yes
 ```
 
 {{% notes type="warning" %}}
-The `--import-pending-creates` flag requires **pairs** of values: the resource URN followed by its physical ID from the cloud provider. If you provide an odd number of values, you'll see the error: `each URN must be followed by an ID: found an odd number of entries`.
+Each `--import-pending-creates` invocation accepts exactly one value. Do not combine a URN and ID in a single invocation — for example, `--import-pending-creates "urn:... my-id"` will fail with `each URN must be followed by an ID: found an odd number of entries`. Similarly, do not pass both values as arguments to a single flag — for example, `--import-pending-creates "urn:..." "my-id"` will fail with `unknown command "my-id" for "pulumi refresh"`.
 {{% /notes %}}
 
 ### Finding the physical ID

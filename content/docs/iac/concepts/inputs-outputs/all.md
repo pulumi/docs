@@ -8,6 +8,7 @@ menu:
     iac:
         name: All
         parent: iac-concepts-inputs-outputs
+        weight: 2
     concepts:
         weight: 2
         parent: inputs-outputs
@@ -164,11 +165,11 @@ Server=tcp:myDbServer.database.windows.net;initial catalog=myExampleDatabase;
 
 ### Using string interpolation
 
-There is an easier way to generate a concatenated string value using multiple outputs, and that is by using interpolation. Pulumi exposes interpolation helpers that enables you to create strings that contain outputs. These interpolation methods wrap [all](/docs/concepts/inputs-outputs/all/) and [apply](/docs/concepts/inputs-outputs/apply/) with an interface that resembles your language's native string formatting functions. The example below demonstrates how to create a URL from the hostname and port output values of a web server.
+For the common case of constructing a string from output values, Pulumi's string interpolation helpers offer a more concise alternative to `all`. These helpers accept both single and multiple outputs, and their interfaces closely mirror each language's native string formatting functions. The following example shows how to build an S3 URL from bucket output values using each language's interpolation helper.
 
 {{< example-program path="aws-s3bucket-bucketobject-interpolate" >}}
 
-You can use string interpolation to do things like export a [stack output](/docs/using-pulumi/stack-outputs-and-references/) or provide a dynamically computed string as a new resource argument.
+You can use string interpolation to do things like export a [stack output](/docs/using-pulumi/stack-outputs-and-references/) or provide a dynamically computed string as a new resource argument. For a full reference of the interpolation helpers available in each language, see [Using output helpers](/docs/concepts/inputs-outputs/helpers/).
 
 ## Creating a new data structure
 

@@ -95,7 +95,7 @@ project and set up starter resources for the chosen cloud. The `yaml` template i
 
 By default, `pulumi new` provides a number of templates provided by Pulumi, but it can also use your own custom templates.
 
-To learn more about building and working with custom templates, see [Custom Templates](/docs/idp/developer-portals/templates) and the [`pulumi new`](/docs/cli/commands/pulumi_new/) docs.
+To learn more about building and working with custom templates, see [Custom Templates](/docs/idp/concepts/templates) and the [`pulumi new`](/docs/cli/commands/pulumi_new/) docs.
 
 ## Pulumi Programming Model
 

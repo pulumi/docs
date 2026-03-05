@@ -26,7 +26,7 @@ Neo is enabled by default. To disable Neo for your organization, navigate to the
 
 ## GitHub App Installation
 
-Installing the [Pulumi GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/) significantly enhances Neo's capabilities, though it is not required. The Pulumi GitHub App:
+Installing the [Pulumi GitHub App](/docs/integrations/github-app/) significantly enhances Neo's capabilities, though it is not required. The Pulumi GitHub App:
 
 - Allows Neo to read repository content for better context
 - Enables pull request creation
@@ -34,7 +34,7 @@ Installing the [Pulumi GitHub App](/docs/iac/using-pulumi/continuous-delivery/gi
 
 Neo can still provide code change suggestions without the GitHub App, but you'll need to apply the changes and open PRs manually.
 
-To install the GitHub App, see the [GitHub integration guide](/docs/iac/using-pulumi/continuous-delivery/github-app/).
+To install the GitHub App, see the [GitHub integration guide](/docs/integrations/github-app/).
 
 ## Neo's Permission Model
 
@@ -87,7 +87,6 @@ Let's run a simple infrastructure [task](/docs/ai/tasks/) to see Neo in action
 ## Considerations and Limitations
 
 - GitHub Only - Neo only works with GitHub repositories. GitLab, Bitbucket, and other platforms are not supported yet.
-- Tasks Cannot Be Shared - Each task is private to the user who created it. Tasks cannot be shared, transferred, or collaborated on between team members.
 - Code Changes Only - Neo can only modify infrastructure through code. It cannot perform API or UI actions like configure deployments, updating stack configurations, or managing environments in Pulumi Cloud.
 - Cannot Create GitHub Repos - Neo cannot create new GitHub repositories or initialize new Git repos. It only works within existing repositories.
 - Cannot Create New Projects - Neo cannot initialize new Pulumi projects. It can only work within existing projects that are already set up.

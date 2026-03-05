@@ -54,6 +54,7 @@ tiers:
                   - Audit logs
                   - Drift detection and remediation
                   - Time-to-live stacks
+                  - Customer Managed Keys
                   - Priority feature requests
                   - 12x5 Enterprise Support available
             - title: Business Critical
@@ -396,6 +397,13 @@ comparison_table:
                   - content: _blank
                   - content: _check
                   - content: _check
+              - title: Customer Managed Keys
+                link: /docs/esc/administration/customer-managed-keys/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
               - title: Integrations - Sync
                 items:
                   - content: _check
@@ -438,8 +446,8 @@ comparison_table:
                 items:
                   - content: 1
                   - content: 1
-                  - content: 10
-                  - content: 20
+                  - content: 10 / Custom
+                  - content: Custom
               - title: Data export
                 link: /docs/insights/export/
                 items:
@@ -458,9 +466,9 @@ comparison_table:
                 link: /docs/insights/policy-as-code
                 items: 
                   - content: "Manual"
-                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
-                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
-                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
+                  - content: "[Organization-managed](/docs/insights/policy/#pulumi-cloud-integration)"
+                  - content: "[Organization-managed](/docs/insights/policy/get-started/#enforcing-a-policy-pack)"
+                  - content: "[Organization-managed](/docs/insights/policy/get-started/#enforcing-a-policy-pack)"
               - title: Preventative Policies
                 link: /docs/insights/preventative-vs-audit-policies/
                 items: 
@@ -490,7 +498,7 @@ comparison_table:
                   - content: Up to 100 policies (3 pack limit)
                   - content: Unlimited
               - title: Enforcement Modes
-                link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
+                link: /docs/insights/policy/#local-policy-execution
                 items:
                   - content: _blank
                   - content: Advisory & Mandatory

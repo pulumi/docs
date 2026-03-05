@@ -187,7 +187,7 @@ personas:
               icon: shield
               icon_color: purple
               description: |
-                Pulumi CrossGuard lets you author policies in programming languages to enforce best practices and correct configuration drift.
+                Pulumi Policies lets you author policies in programming languages to enforce best practices and correct configuration drift.
             - title: Built-in Secrets
               icon: security
               icon_color: yellow

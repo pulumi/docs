@@ -1,6 +1,7 @@
 ---
 title: "Improving Pulumi’s Docker Images"
 date: 2024-09-27
+updated: 2026-02-23
 draft: false
 meta_desc: New versioned images for Pulumi Docker Containers and support for setting Node.js and Python versions in Pulumi Deployments.
 meta_image: meta.png
@@ -61,7 +62,7 @@ To support more flexibility for .NET versions, the default image now also ships 
     ...
 ```
 
-If you want to use one of the language specific images, or your own custom built image, you can [set a custom executor image](https://www.pulumi.com/docs/pulumi-cloud/deployments/reference/#customizing-the-deployment-environment) in the Deployment settings.
+If you want to use one of the language specific images, or your own custom built image, you can [set a custom executor image](https://www.pulumi.com/docs/deployments/deployments/using/settings/#custom-executor-images) in the Deployment settings.
 
 ### Additional Tools
 

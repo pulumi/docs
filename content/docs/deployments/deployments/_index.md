@@ -25,7 +25,7 @@ Pulumi Deployments is a managed CI/CD platform purpose-built for infrastructure 
 
 ### Managed infrastructure CI/CD
 
-- **Zero Touch CI/CD**: App teams can select a template from Pulumi Cloud's [New Project Wizard](/docs/idp/developer-portals/new-project-wizard) and deploy infrastructure in minutes. Learn how with our [Getting Started guide](/docs/deployments/deployments/get-started).
+- **Zero Touch CI/CD**: App teams can select a template from Pulumi Cloud's [New Project Wizard](/docs/idp/concepts/new-project-wizard) and deploy infrastructure in minutes. Learn how with our [Getting Started guide](/docs/deployments/deployments/get-started).
 - **Git Integration**: Automatically preview infrastructure changes on pull requests and deploy on merge with our GitHub integration.
 - **Live Preview Environments**: Each pull request can automatically create a [review stack](/docs/deployments/deployments/review-stacks) with real infrastructure, letting you validate changes in a production-like environment before merging.
 - **Secure by Default**: Integration with [Pulumi ESC](/docs/pulumi-cloud/esc) ensures your secrets and cloud credentials are securely handled.
@@ -35,7 +35,7 @@ Pulumi Deployments is a managed CI/CD platform purpose-built for infrastructure 
 - **Drift Detection**: [Automatically detect](/docs/deployments/deployments/drift) when your infrastructure differs from its desired state.
 - **Scheduled Operations**: Run any Pulumi operation (up/preview/refresh) on a [schedule](/docs/deployments/deployments/schedules).
 - **Temporary Infrastructure**: Automatically tear down development or testing environments with [TTL stacks](/docs/deployments/deployments/ttl).
-- **Custom Compute**: Run Pulumi operations on your own infrastructure with [customer-managed agents](/docs/deployments/deployments/customer-managed-agents).
+- **Custom Compute**: Run Pulumi operations, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/using-pulumi/crossguard/) on your own infrastructure with [customer-managed workflow runners](/docs/deployments/deployments/customer-managed-agents).
 
 ### Platform engineering features
 
@@ -75,7 +75,7 @@ Pulumi Deployments combines three key components to enable secure, scalable infr
 
 The fastest way to get started with Pulumi Deployments is to:
 
-1. Create a new project using the Pulumi Cloud [New Project Wizard](/docs/idp/developer-portals/new-project-wizard), which will automatically configure Deployments for your repository
+1. Create a new project using the Pulumi Cloud [New Project Wizard](/docs/idp/concepts/new-project-wizard), which will automatically configure Deployments for your repository
 1. Follow our [Getting Started guide](/docs/deployments/deployments/get-started) to configure an existing project
 1. Explore our [deployment patterns](/docs/deployments/deployments/reference/) to implement common infrastructure automation scenarios
 

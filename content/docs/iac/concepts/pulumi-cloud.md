@@ -60,7 +60,7 @@ Pulumi Cloud also offers short-lived stacks in the form of [Review Stacks](/docs
 
 ### 2. Automatic security
 
-Pulumi Cloud has [a rich identity model](/docs/pulumi-cloud/access-management/) that integrates with your security identity provider of choice, whether that is Azure Active Directory, Google Workspace, Okta, or any SAML/SSO provider, to regulate all access to your cloud assets.
+Pulumi Cloud has [a rich identity model](/docs/pulumi-cloud/access-management/) that integrates with your security identity provider of choice, whether that is Microsoft Entra ID, Google Workspace, Okta, or any SAML/SSO provider, to regulate all access to your cloud assets.
 
 If you manage your IaC state with a DIY approach, you will need to come up with a scheme that works for your organization. While you can use AWS IAM for the S3 bucket that stores your state, large-scale teams rarely want to grant full access to all engineers. In fact, this may be the difference between passing and failing a compliance audit.
 
@@ -86,7 +86,7 @@ Pulumi Cloud makes it easier to ensure your team uses the cloud as intended, tha
 
 Pulumi Cloud offers organization-wide policies thanks to Pulumi's policy as code engine, [Pulumi Policies](/docs/insights/policy/), allowing you to enforce policies for security, compliance, cost, team practices, and more. This works over your IaC resources -- to block violations from ever getting deployed -- as well as it does to find and fix existing violations in your cloud accounts, no matter how they were provisioned thanks to Pulumi Insights. You can even auto-remediate violations, such as automatically tagging all AWS resources with certain configurable metadata.
 
-Pulumi Cloud lets you set up [private templates](/docs/idp/developer-portals/templates/) for your organization which allows end users to spin up infrastructure following patterns you have designated for your team, within an [interactive Internal Developer Platform (IDP) experience](/docs/idp/developer-portals/new-project-wizard/). This, in combination with [Pulumi components](/docs/iac/concepts/resources/components/), can help ensure you are adopting best practices at scale. Many infrastructure teams review their templates and components with their security counterparts to agree on safe patterns they'll use throughout the organization.
+Pulumi Cloud lets you set up [private templates](/docs/idp/concepts/organization-templates/) for your organization which allows end users to spin up infrastructure following patterns you have designated for your team, within an [interactive Internal Developer Platform (IDP) experience](/docs/idp/concepts/new-project-wizard/). This, in combination with [Pulumi components](/docs/iac/concepts/resources/components/), can help ensure you are adopting best practices at scale. Many infrastructure teams review their templates and components with their security counterparts to agree on safe patterns they'll use throughout the organization.
 
 Pulumi Cloud's [drift detection capabilities](/docs/deployments/deployments/drift/) can uncover situations where a manual edit to a cloud resource was made outside of your infrastructure as code specifications, with automatic remediation. Left unchecked, these drift issues can cause surprises, outages, and security incidents.
 

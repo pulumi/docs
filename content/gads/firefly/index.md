@@ -3,6 +3,7 @@ title: "Firefly Alternative | Pulumi"
 meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
 layout: gads-template
 block_external_search_index: true
+utm_source: gads-firefly
 heading: "Firefly Alternative"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
@@ -20,9 +21,6 @@ key_features_above:
           description:
             Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
           image: "/images/product/pulumi-iac-code.png"
-          button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-firefly"
           features:
               - title: Code faster
                 description: |
@@ -137,9 +135,6 @@ key_features:
                     type: eks:Cluster
                 outputs:
                   kubeconfig: ${cluster.kubeconfig}
-          button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-firefly"
           features:
               - title: Native cloud providers
                 description: |
@@ -156,9 +151,6 @@ key_features:
           description: |
             Version, review, test, and deploy infrastructure code through the same tools and processes used for your application code.
           image: "/images/product/pulumi-cicd.png"
-          button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-firefly"
           features:
               - title: Version and review
                 description: |
@@ -192,9 +184,6 @@ key_features_below:
           description: |
              A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
-          button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-firefly"
           features:
               - title: Pulumi IaC
                 description: |

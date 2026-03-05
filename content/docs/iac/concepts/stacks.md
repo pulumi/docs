@@ -672,25 +672,108 @@ you access the outputs of that stack.
 
 In the above example, you construct a stack reference to a specific stack in this project which has the same name
 as your current stack (i.e. when deploying the "staging" stack of the above program, you reference the "staging" stack)
-from the infra project. Once you have that resource, you can fetch the `kubeConfig` output variable with the `getOutput`
-function. From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
+from the infra project. Once you have that resource, you can read output variables from it.
+From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
 
 ### Reading outputs from stack references
 
-Stack references support two ways of reading outputs from the referenced stack:
+Stack references support the following methods for reading outputs from the referenced stack:
 
-* `getOutput` returns an `Output` that provides gated access to the output value.
-  The output value can be accessed and transformed with methods like `Output.apply`.
-  This is useful when the output is used as an input to another resource.
-* `getOutputDetails` returns an `OutputDetails` object that provides direct access to the output value.
-  This is useful when you want to process the output directly in your code.
+* `requireOutput` returns an `Output` wrapping the named output value and fails at deployment
+  time if the output does not exist in the referenced stack. This is the recommended method for
+  most use cases, as it surfaces a missing or misspelled output name as a clear, immediate error
+  rather than silently propagating an undefined value.
+* `getOutput` returns an `Output` wrapping the named output value, or an `Output` wrapping
+  `undefined` (or `None` in Python) if the output does not exist. Use this only when the
+  absence of an output is an expected and explicitly handled condition in your program.
+* `getOutputDetails` returns an `OutputDetails` object that provides direct access to the output
+  value, bypassing the `Output` wrapper. This is most useful when you need the raw value for
+  use in your program's logic, or when you need to distinguish between a non-secret output
+  (available as `.value`) and a secret output (available as `.secretValue`).
 
-As a demonstration of `getOutput`,
-suppose that your referenced stack exports a `privateIp` output.
-You want to incorporate the IP address into the name of an S3 bucket object
-containing logs from that machine.
+The following example uses `requireOutput`, the recommended method for reading stack reference
+outputs. It reads a `vpcId` export and fails immediately at deployment time if that output is
+absent from the referenced stack:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const infra: StackReference = new pulumi.StackReference("acmecorp/infra/prod");
+
+// Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+const vpcId: Output<any> = infra.requireOutput("vpcId");
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+infra = StackReference("acmecorp/infra/prod")
+
+# Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+vpc_id = infra.require_output("vpcId")
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+infra, err := pulumi.NewStackReference(ctx, "acmecorp/infra/prod", nil)
+if err != nil {
+    return err
+}
+
+// Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+vpcId := infra.RequireOutput(pulumi.String("vpcId"))
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var infra = new StackReference("acmecorp/infra/prod");
+
+// Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+var vpcId = infra.RequireOutput("vpcId");
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+StackReference infra = new StackReference("acmecorp/infra/prod");
+
+// Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+Output<Object> vpcId = infra.requireOutput("vpcId");
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  infra:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: acmecorp/infra/prod
+
+variables:
+  # Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+  vpcId: ${infra.outputs["vpcId"]}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Use `getOutput` when the absence of an output is an expected, handled condition in your program.
+The following example reads a `privateIp` output and transforms it with `Output.apply` to build
+a derived value. If the output is missing, the undefined value propagates silently rather than
+surfacing as an error:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -762,31 +845,50 @@ BucketObject logFile = new BucketObject("log", new BucketObjectArgs.Builder()
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  infra:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: acmecorp/infra/prod
+  logFile:
+    type: aws:s3:BucketObject
+    properties:
+      key: logs/${infra.outputs["privateIp"]}.log
+```
+
+{{% notes "info" %}}
+Pulumi YAML does not distinguish between `requireOutput` and `getOutput`. Accessing a stack
+reference output via interpolation will fail at deployment time if the named output does not
+exist in the referenced stack.
+{{% /notes %}}
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
-On the other hand, as an example of using **`getOutputDetails`**,
-suppose that your referenced stack creates a VPC
-and exports a list of public subnets as a JSON-serialized string,
-and you want to add a bastion host to each subnet.
-With `getOutputDetails`, this would look something like this:
+`getOutputDetails` is useful when you need direct access to a resolved output value.
+This is most helpful when you want to inspect whether a value is marked as a secret, or when
+you need to use the value in your program logic without calling `Output.apply()`. The method
+returns an `OutputDetails` object whose `value` field holds the raw value for non-secret
+outputs, and whose `secretValue` field holds the raw value for outputs the referenced stack
+has marked as secret.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+As an example, suppose your referenced stack exports a database hostname as a plain string:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-const infra: StackReference = new pulumi.StackReference(...);
-const subnetsJSON: StackReferenceOutputDetails = await infra.getOutputDetails("subnets");
-const subnets = JSON.parse(subnetsJSON.value);
-for (let i = 0; i < subnets.length; i++) {
-    const subnet = subnets[i];
-    const host = new aws.ec2.Instance(`bastion-${i}`, {
-        // ...
-        subnetId: subnet.id,
-    });
-    // ...
-}
+const infra = new pulumi.StackReference("acmecorp/infra/prod");
+const dbHostDetails = await infra.getOutputDetails("dbHost");
+
+// For non-secret outputs, the value is in .value.
+// For outputs marked as secret in the referenced stack, use .secretValue instead.
+const dbHost = dbHostDetails.value as string;
 ```
 
 Note that your Pulumi program must export a top-level `async` function
@@ -811,62 +913,41 @@ if you need this functionality.
 {{% /notes %}}
 
 <!-- ```python -->
-<!-- infra = StackReference(...) -->
-<!-- subnets_json = await infra.get_output_details("subnets") -->
-<!-- subnets = json.loads(subnets_json.value) -->
-<!-- for i, subnet in enumerate(subnets): -->
-<!--     host = aws.ec2.Instance(f"bastion-{i}", { -->
-<!--         # ... -->
-<!--         subnet_id: subnet["id"], -->
-<!--     }) -->
-<!--     # ... -->
+<!-- infra = StackReference("acmecorp/infra/prod") -->
+<!-- db_host_details = await infra.get_output_details("dbHost") -->
+<!-- # For non-secret outputs, the value is in .value. -->
+<!-- # For outputs marked as secret, use .secret_value instead. -->
+<!-- db_host = db_host_details.value -->
 <!-- ``` -->
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-infra, err := pulumi.NewStackReference(ctx, ...)
+infra, err := pulumi.NewStackReference(ctx, "acmecorp/infra/prod", nil)
 if err != nil {
     return err
 }
-subnetsJSON, err := infra.GetOutputDetails("subnets")
+dbHostDetails, err := infra.GetOutputDetails("dbHost")
 if err != nil {
-    return err
-}
-var subnets []struct{ ID string `json:"id"` }
-if err := json.Unmarshal([]byte(subnetsJSON.Value.(string)), &subnets); err != nil {
     return err
 }
 
-for i, subnet := range subnets {
-    host, err := ec2.NewInstance(ctx, fmt.Sprintf("bastion-%d", i), &ec2.InstanceArgs{
-        // ...
-        SubnetId: pulumi.String(subnet.ID),
-    })
-    if err != nil {
-        return err
-    }
-    // ...
-}
+// For non-secret outputs, the value is in .Value.
+// For outputs marked as secret in the referenced stack, use .SecretValue instead.
+dbHost := dbHostDetails.Value.(string)
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-var infra = new StackReference(...);
-var subnetsJSON = await infra.GetOutputDetailsAsync("subnets");
-var subnets = JsonConvert.DeserializeObject<Subnet[]>((string)subnetsJSON.Value);
-for (int i = 0; i < subnets.Length; i++) {
-    var subnet = subnets[i];
-    var host = new Aws.Ec2.Instance($"bastion-{i}", new Aws.Ec2.InstanceArgs
-    {
-        // ...
-        SubnetId = subnet.Id,
-    });
-    // ...
-}
+var infra = new StackReference("acmecorp/infra/prod");
+var dbHostDetails = await infra.GetOutputDetailsAsync("dbHost");
+
+// For non-secret outputs, the value is in .Value.
+// For outputs marked as secret in the referenced stack, use .SecretValue instead.
+var dbHost = (string)dbHostDetails.Value;
 ```
 
 Note that your Pulumi program must be inside an `async` function
@@ -884,19 +965,23 @@ return await Deployment.RunAsync(async () =>
 {{% choosable language java %}}
 
 ```java
-StackReferenceOutputDetails subnetsJSON = infra.outputDetails("subnets");
-infra.outputDetailsAsync("subnets").thenAccept(subnetsJSON -> {
-    Subnet[] subnets = new Gson().fromJson((String)subnetsJSON.getValue().get(), Subnet[].class);
-    for (int i = 0; i < subnets.length; i++) {
-        Subnet subnet = subnets[i];
-        Instance host = new Instance(String.format("bastion-%d", i), new InstanceArgs.Builder()
-            // ...
-            .subnetId(subnet.getId())
-            .build());
-        // ...
-    }
-})
+StackReference infra = new StackReference("acmecorp/infra/prod");
+infra.outputDetailsAsync("dbHost").thenAccept(dbHostDetails -> {
+    // For non-secret outputs, the value is in getValue().
+    // For outputs marked as secret in the referenced stack, use getSecretValue() instead.
+    String dbHost = (String) dbHostDetails.getValue().get();
+    // ...
+});
 ```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+{{% notes "info" %}}
+`getOutputDetails` is not supported in Pulumi YAML. To read a stack reference
+output in YAML, use the `outputs` property of a `StackReference` resource, as shown in the
+`requireOutput` example above.
+{{% /notes %}}
 
 {{% /choosable %}}
 

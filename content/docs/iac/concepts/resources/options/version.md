@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: resource-option-version
     parent: options-concepts
-    weight: 17
+    weight: 220
 aliases:
   - /docs/iac/concepts/options/version/
   - /docs/intro/concepts/resources/options/version/

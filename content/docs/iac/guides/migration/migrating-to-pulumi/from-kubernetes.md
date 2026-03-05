@@ -34,7 +34,7 @@ By defining these resources in code, you can deploy off-the-shelf Kubernetes YAM
 
 ### Deploying a Single Kubernetes YAML File
 
-The `ConfigFile` resource type accepts a `file` parameter that indicates the path or URL to read the YAML configuration from. By default, names are used as-is, however you can specify a `resourcePrefix` to rewrite the names. One or more `transformations` callbacks can be supplied to arbitrarily rewrite resource configurations on-the-fly before deploying them.
+The `ConfigFile` resource type accepts a `file` parameter that indicates the path or URL to read the YAML configuration from. By default, names are used as-is, however you can specify a `resourcePrefix` to rewrite the names. One or more `transforms` callbacks can be supplied via `ResourceOptions` to arbitrarily rewrite resource configurations on-the-fly before deploying them.
 
 To deploy the Kubernetes Guestbook Application using a single YAML file, first download the "all-in-one" configuration:
 
@@ -45,7 +45,7 @@ $ curl -L --remote-name \
 
 This Pulumi program uses `ConfigFile` to read that YAML file, provision the resources inside it, and export the resulting IP addresses:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -53,7 +53,7 @@ This Pulumi program uses `ConfigFile` to read that YAML file, provision the reso
 import * as k8s from "@pulumi/kubernetes";
 
 // Create resources from standard Kubernetes guestbook YAML example.
-const guestbook = new k8s.yaml.ConfigFile("guestbook", {
+const guestbook = new k8s.yaml.v2.ConfigFile("guestbook", {
     file: "guestbook-all-in-one.yaml",
 });
 
@@ -67,14 +67,14 @@ export const privateIp = frontend.spec.clusterIP;
 
 ```python
 import pulumi
-import pulumi_kubernetes as k8s
+from pulumi_kubernetes.yaml.v2 import ConfigFile
 
 # Create resources from standard Kubernetes guestbook YAML example.
-guestbook = k8s.yaml.ConfigFile('guestbook', 'guestbook-all-in-one.yaml')
+guestbook = ConfigFile("guestbook", file="guestbook-all-in-one.yaml")
 
 # Export the private cluster IP address of the frontend.
-frontend = guestbook.get_resource('v1/Service', 'frontend')
-pulumi.export('private_ip', frontend.spec['cluster_ip'])
+frontend = guestbook.get_resource("v1/Service", "frontend")
+pulumi.export("private_ip", frontend.spec["cluster_ip"])
 ```
 
 {{% /choosable %}}
@@ -84,15 +84,15 @@ pulumi.export('private_ip', frontend.spec['cluster_ip'])
 package main
 
 import (
-    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
-    "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/yaml"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
+    yamlv2 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/yaml/v2"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        guestbook, err := yaml.NewConfigFile(ctx, "guestbook", &yaml.ConfigFileArgs{
-            File: "guestbook-all-in-one.yaml",
+        guestbook, err := yamlv2.NewConfigFile(ctx, "guestbook", &yamlv2.ConfigFileArgs{
+            File: pulumi.String("guestbook-all-in-one.yaml"),
         })
         if err != nil {
             return err
@@ -113,11 +113,10 @@ func main() {
 ```csharp
 using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Threading.Tasks;
 
 using Pulumi;
-using Pulumi.Kubernetes.Yaml;
+using Pulumi.Kubernetes.Yaml.V2;
 using Pulumi.Kubernetes.Core.V1;
 
 class Program
@@ -141,6 +140,41 @@ class Program
         });
     }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.kubernetes.yaml.v2.ConfigFile;
+import com.pulumi.kubernetes.yaml.v2.ConfigFileArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        // Create resources from standard Kubernetes guestbook YAML example.
+        var guestbook = new ConfigFile("guestbook",
+            ConfigFileArgs.builder()
+                .file("guestbook-all-in-one.yaml")
+                .build());
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  guestbook:
+    type: kubernetes:yaml/v2:ConfigFile
+    properties:
+      file: guestbook-all-in-one.yaml
 ```
 
 {{% /choosable %}}
@@ -173,7 +207,7 @@ Resources:
 
 ### Deploying Multiple Kubernetes YAML Files
 
-The `ConfigGroup` resource type is similar to `ConfigFile`. Instead of a single file, it accepts a `files` parameter that contains a list of file paths, file globs, and/or URLs from which to read the YAML configuration from. By default, names are used as-is, however you can specify a `resourcePrefix` to rewrite the names. One or more `transformations` callbacks can be supplied to arbitrarily rewrite resource configurations on-the-fly before deploying them.
+The `ConfigGroup` resource type is similar to `ConfigFile`. Instead of a single file, it accepts a `files` parameter that contains a list of file paths, file globs, and/or URLs from which to read the YAML configuration from. By default, names are used as-is, however you can specify a `resourcePrefix` to rewrite the names. One or more `transforms` callbacks can be supplied via `ResourceOptions` to arbitrarily rewrite resource configurations on-the-fly before deploying them.
 
 To deploy the Kubernetes Guestbook Application using a collection of YAML files, first create a `yaml` directory and download them into it:
 
@@ -187,7 +221,7 @@ $ popd
 
 This Pulumi program uses `ConfigGroup` to read these YAML files, provision the resources inside of them, and export the resulting IP addresses:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -196,7 +230,7 @@ import * as k8s from "@pulumi/kubernetes";
 import * as path from "path";
 
 // Create resources from standard Kubernetes guestbook YAML example.
-const guestbook = new k8s.yaml.ConfigGroup("guestbook", {
+const guestbook = new k8s.yaml.v2.ConfigGroup("guestbook", {
     files: [ path.join("yaml", "*.yaml") ],
 });
 
@@ -209,19 +243,15 @@ export const privateIp = frontend.spec.clusterIP;
 {{% choosable language python %}}
 
 ```python
-from pulumi_kubernetes.yaml import ConfigGroup
-from pulumi import export
+import pulumi
+from pulumi_kubernetes.yaml.v2 import ConfigGroup
 
 # Create resources from standard Kubernetes guestbook YAML example.
-guestbook = ConfigGroup(
-  "guestbook",
-  files=["yaml/*.yaml"])
+guestbook = ConfigGroup("guestbook", files=["yaml/*.yaml"])
 
 # Export the private cluster IP address of the frontend.
 frontend = guestbook.get_resource("v1/Service", "frontend")
-export(
-  name="privateIp",
-  value=frontend.spec.cluster_ip)
+pulumi.export("private_ip", frontend.spec["cluster_ip"])
 ```
 
 {{% /choosable %}}
@@ -233,15 +263,15 @@ package main
 import (
     "path/filepath"
 
-    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
-    "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/yaml"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
+    yamlv2 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/yaml/v2"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        guestbook, err := yaml.NewConfigGroup(ctx, "guestbook", &yaml.ConfigGroupArgs{
-            Files: []string{filepath.Join("yaml", "*.yaml")},
+        guestbook, err := yamlv2.NewConfigGroup(ctx, "guestbook", &yamlv2.ConfigGroupArgs{
+            Files: pulumi.StringArray{pulumi.String(filepath.Join("yaml", "*.yaml"))},
         })
         if err != nil {
             return err
@@ -262,12 +292,11 @@ func main() {
 ```csharp
 using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.IO;
 using System.Threading.Tasks;
 
 using Pulumi;
-using Pulumi.Kubernetes.Yaml;
+using Pulumi.Kubernetes.Yaml.V2;
 using Pulumi.Kubernetes.Core.V1;
 
 class Program
@@ -291,6 +320,42 @@ class Program
         });
     }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.kubernetes.yaml.v2.ConfigGroup;
+import com.pulumi.kubernetes.yaml.v2.ConfigGroupArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        // Create resources from standard Kubernetes guestbook YAML example.
+        var guestbook = new ConfigGroup("guestbook",
+            ConfigGroupArgs.builder()
+                .files("yaml/*.yaml")
+                .build());
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  guestbook:
+    type: kubernetes:yaml/v2:ConfigGroup
+    properties:
+      files:
+      - "yaml/*.yaml"
 ```
 
 {{% /choosable %}}
@@ -965,23 +1030,29 @@ There are two important caveats to note about YAML rendering support:
 
 ## Configuration Transformations
 
-Let's see how to assign our service a public IP address, starting with [the single `ConfigFile` example above](#deploying-a-single-kubernetes-yaml-file), using transformations.
+Let's see how to assign our service a public IP address, starting with [the single `ConfigFile` example above](#deploying-a-single-kubernetes-yaml-file), using transforms.
 
-The Kubernetes Guestbook by default does not assign a load balancer for the frontend service. To fix this, we could edit the YAML file, of course, but let's see `transformations` in action. By supplying the `transformations` callback that rewrites the object configuration on the fly, we can cause a load balancer to get created:
+The Kubernetes Guestbook by default does not assign a load balancer for the frontend service. To fix this, we could edit the YAML file, of course, but let's see `transforms` in action. By supplying a `transforms` callback in the resource options, we can rewrite the object configuration on the fly and cause a load balancer to get created:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
 ...
-const guestbook = new k8s.yaml.ConfigFile("guestbook", {
+const guestbook = new k8s.yaml.v2.ConfigFile("guestbook", {
     file: "guestbook-all-in-one.yaml",
-    transformations: [(obj: any) => {
-        if (obj.kind === "Service" && obj.metadata.name === "frontend") {
-            obj.spec.type = "LoadBalancer";
-        }
-    }],
+}, {
+    transforms: [
+        async (args) => {
+            if (args.type === "kubernetes:core/v1:Service" &&
+                    (args.props as any)?.metadata?.name === "frontend") {
+                const props = args.props as any;
+                props.spec = { ...props.spec, type: "LoadBalancer" };
+                return { props, opts: args.opts };
+            }
+        },
+    ],
 });
 ...
 export const publicIp = frontend.status.loadBalancer.ingress[0].ip;
@@ -992,13 +1063,20 @@ export const publicIp = frontend.status.loadBalancer.ingress[0].ip;
 
 ```python
 ...
-def make_frontend_public(obj):
-    if obj['kind'] == "Service" and obj['metadata']['name'] == "frontend":
-        obj['spec']['type'] = "LoadBalancer"
-guestbook = k8s.yaml.ConfigFile('guestbook', 'guestbook-all-in-one.yaml',
-    transformations=[make_frontend_public])
+def make_frontend_public(args):
+    if (args.type_ == "kubernetes:core/v1:Service" and
+            args.props.get("metadata", {}).get("name") == "frontend"):
+        props = dict(args.props)
+        spec = dict(props.get("spec", {}))
+        spec["type"] = "LoadBalancer"
+        props["spec"] = spec
+        return pulumi.ResourceTransformResult(props=props, opts=args.opts)
+
+guestbook = ConfigFile("guestbook",
+    file="guestbook-all-in-one.yaml",
+    opts=pulumi.ResourceOptions(transforms=[make_frontend_public]))
 ...
-pulumi.export('public_ip', frontend.status['load_balancer']['ingress'][0]['ip'])
+pulumi.export("public_ip", frontend.status["load_balancer"]["ingress"][0]["ip"])
 ```
 
 {{% /choosable %}}
@@ -1006,14 +1084,26 @@ pulumi.export('public_ip', frontend.status['load_balancer']['ingress'][0]['ip'])
 
 ```go
 ...
-guestbook, err := yaml.NewConfigFile(ctx, "guestbook", &yaml.ConfigFileArgs{
-    File: "guestbook-all-in-one.yaml",
-    Transformations: []yaml.Transformation{func(state map[string]interface{}, opts ...pulumi.ResourceOption) {
-        if kind, ok := state["kind"]; ok && kind == "Service" && state["metadata"].(map[string]interface{})["name"] == "frontend" {
-            state["spec"].(map[string]interface{})["type"] = "LoadBalancer"
+guestbook, err := yamlv2.NewConfigFile(ctx, "guestbook", &yamlv2.ConfigFileArgs{
+    File: pulumi.String("guestbook-all-in-one.yaml"),
+}, pulumi.Transforms([]pulumi.ResourceTransform{
+    func(ctx context.Context, args *pulumi.ResourceTransformArgs) *pulumi.ResourceTransformResult {
+        if args.Type == "kubernetes:core/v1:Service" {
+            props := args.Props.ObjectValue()
+            meta := props["metadata"].ObjectValue()
+            if name, ok := meta["name"]; ok && name.StringValue() == "frontend" {
+                spec := props["spec"].ObjectValue()
+                spec["type"] = resource.NewStringProperty("LoadBalancer")
+                props["spec"] = resource.NewObjectProperty(spec)
+                return &pulumi.ResourceTransformResult{
+                    Props: resource.NewObjectProperty(props),
+                    Opts:  args.Opts,
+                }
+            }
         }
-    }},
-})
+        return nil
+    },
+}))
 if err != nil {
     return err
 }
@@ -1030,23 +1120,31 @@ ctx.Export("publicIP", frontend.Status.LoadBalancer().Ingress().Index(pulumi.Int
 
 ```csharp
 ...
-Func<ImmutableDictionary<string, object>,
-    CustomResourceOptions, ImmutableDictionary<string, object>>[] transformations =
-{
-    (obj, opts) => {
-        if ((string)obj["kind"] == "Service" &&
-                (string)((ImmutableDictionary<string, object>)obj["metadata"])["name"] == "frontend")
-        {
-            var spec = ((ImmutableDictionary<string, object>)obj["spec"]);
-            obj = obj.SetItem("spec", spec.SetItem("type", "LoadBalancer"));
-        }
-        return obj;
-    },
-};
 var guestbook = new ConfigFile("guestbook", new ConfigFileArgs
 {
     File = "guestbook-all-in-one.yaml",
-    Transformations = transformations,
+}, new ComponentResourceOptions
+{
+    ResourceTransformations =
+    {
+        (args) => {
+            if (args.Resource.GetResourceType() == "kubernetes:core/v1:Service") {
+                var props = args.Args as ImmutableDictionary<string, object>
+                    ?? ImmutableDictionary<string, object>.Empty;
+                var meta = props.GetValueOrDefault("metadata")
+                    as ImmutableDictionary<string, object>
+                    ?? ImmutableDictionary<string, object>.Empty;
+                if (meta.TryGetValue("name", out var name) && (string)name == "frontend") {
+                    var spec = props.GetValueOrDefault("spec")
+                        as ImmutableDictionary<string, object>
+                        ?? ImmutableDictionary<string, object>.Empty;
+                    props = props.SetItem("spec", spec.SetItem("type", "LoadBalancer"));
+                    return new ResourceTransformationResult(props, args.Options);
+                }
+            }
+            return null;
+        },
+    },
 });
 ...
 return new Dictionary<string, object?>
@@ -1057,6 +1155,16 @@ return new Dictionary<string, object?>
 ...
 ```
 
+{{% /choosable %}}
+{{% choosable language java %}}
+{{% notes type="info" %}}
+Transforms are not yet supported for this resource in Java.
+{{% /notes %}}
+{{% /choosable %}}
+{{% choosable language yaml %}}
+{{% notes type="info" %}}
+Transforms are not yet supported for this resource in Pulumi YAML.
+{{% /notes %}}
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -1091,7 +1199,7 @@ $ curl http://$(pulumi stack output publicIp)
 </html>
 ```
 
-Although this example shows the YAML `ConfigFile` resource, the same behavior is available with YAML `ConfigGroup` and Helm `Chart` resource types.
+Although this example shows the YAML `ConfigFile` resource, the same transform behavior is available with YAML `ConfigGroup` and Helm `Chart` resource types.
 
 ## Provisioning Mixed Configurations
 

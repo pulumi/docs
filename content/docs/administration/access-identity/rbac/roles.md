@@ -16,7 +16,7 @@ aliases:
 - /docs/deployments/access-management/rbac/roles/
 ---
 
-A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, or machine token) can access and what they can do with them. Roles allow you to apply [permissions](../permissions) to a set of [entities](../permissions#entities) and assign this access to a principal.
+A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, or machine token) can access and what they can do with them. Roles allow you to apply [permission sets](../permission-sets) to a set of [entities](../permission-sets#entities) and assign this access to a principal.
 
 ## Default roles
 
@@ -39,7 +39,7 @@ To learn more about editions visit the [pricing page](/pricing/).
 
 You can create and manage custom roles to define more granular access controls for your organization. Custom roles allow you to:
 
-- Bundle specific permissions for different resource types
+- Bundle specific permission sets for different resource types
 - Control access to like resources or groups of resources
 
 ### Creating custom roles
@@ -58,15 +58,15 @@ You will need to provide a unique name for the role. Optionally, but recommended
 
 ![Providing a name and description for the role](/docs/administration/access-identity/rbac/3-create-role.png).
 
-You can assign permissions to the role to be applied globally across all RBAC entities of a specific type, or to individual entities (specific stacks, environments, or insights accounts).
+You can assign permission sets to the role to be applied globally across all RBAC entities of a specific type, or to individual entities (specific stacks, environments, or insights accounts).
 
-You'll first see the option to assign permissions to entities globally within the org:
+You'll first see the option to assign permission sets to entities globally within the org:
 
-![Assigning a global permission to the role](/docs/administration/access-identity/rbac/4-create-role.png).
+![Assigning a global permission set to the role](/docs/administration/access-identity/rbac/4-create-role.png).
 
-You can also select **Add Pulumi entities** to assign permissions to specific entities. You'll be able to search for stacks, environments, or insights accounts within your org and assign existing permissions of their entity type to the entity.
+You can also select **Add Pulumi entities** to assign permission sets to specific entities. You'll be able to search for stacks, environments, or insights accounts within your org and assign existing permission sets of their entity type to the entity.
 
-![Assigning permissions to two stacks](/docs/administration/access-identity/rbac/5-create-role.png).
+![Assigning permission sets to two stacks](/docs/administration/access-identity/rbac/5-create-role.png).
 
 When done, click **Create role**. You should be taken back to the Roles page, where you will see your new role:
 
@@ -101,12 +101,12 @@ Proceed with creating the token. The access token you have created will be narro
 When working with roles in Pulumi Cloud, consider these best practices:
 
 1. **Principle of Least Privilege**: Assign only the scopes necessary for users to perform their tasks.
-2. **Role Reusability**: Design custom roles and permissions in a way that maps to real-world concepts within your org, allowing for easy reuse.
+2. **Role Reusability**: Design custom roles and permission sets in a way that maps to real-world concepts within your org, allowing for easy reuse.
 3. **Regular Review**: Periodically schedule reviews of role assignments and scopes.
 4. **Documentation**: Document the purpose and scopes of custom roles both internally and within the role's metadata.
 
 ## Related resources
 
 - [Teams](/docs/administration/access-identity/rbac/teams)
-- [Permissions](/docs/administration/access-identity/rbac/permissions)
+- [Permission sets](/docs/administration/access-identity/rbac/permission-sets)
 - [Scopes](/docs/administration/access-identity/rbac/scopes)

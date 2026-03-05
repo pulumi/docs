@@ -111,14 +111,19 @@ const originBucket = pulumi.output(aws.s3.getBucket({
 }));
 
 // Create a bucket to store files we do not keep in source control.
-const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
-    website: {
-        indexDocument: "index.html",
+const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {});
+
+const uploadsBucketWebsite = new aws.s3.BucketWebsiteConfiguration("uploads-bucket-website", {
+    bucket: uploadsBucket.id,
+    indexDocument: {
+        suffix: "index.html",
     },
+});
+
+const uploadsBucketCors = new aws.s3.BucketCorsConfiguration("uploads-bucket-cors", {
+    bucket: uploadsBucket.id,
     corsRules: [{
-        allowedMethods: [
-            "GET",
-        ],
+        allowedMethods: ["GET"],
         allowedOrigins: ["*"],
     }],
 });
@@ -140,7 +145,7 @@ if (config.marketingPortalStack) {
                         ],
                         "Principal": {
                             "AWS": roleArn,
-                            },
+                        },
                         "Effect": "Allow",
                         "Resource": bucketArn,
                     },
@@ -185,8 +190,12 @@ const uploadsBucketAcl = new aws.s3.BucketAcl("uploads-bucket-acl", {
 
 const bundlesBucket = new aws.s3.Bucket("bundles-bucket", {
     forceDestroy: true,
-    website: {
-        indexDocument: "index.html",
+});
+
+const bundlesBucketWebsite = new aws.s3.BucketWebsiteConfiguration("bundles-bucket-website", {
+    bucket: bundlesBucket.id,
+    indexDocument: {
+        suffix: "index.html",
     },
 });
 
@@ -194,12 +203,25 @@ const bundlesBucket = new aws.s3.Bucket("bundles-bucket", {
 // https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html
 if (config.makeFallbackBucket) {
     const fallbackBucket = new aws.s3.Bucket(
-        "fallback-bucket", {
+        "fallback-bucket",
+        {
             bucket: config.websiteDomain,
             acl: aws.s3.CannedAcl.PublicRead,
-            website: {
-                indexDocument: "index.html",
-                errorDocument: "404.html",
+        },
+        {
+            protect: true,
+        },
+    );
+
+    const fallbackBucketWebsite = new aws.s3.BucketWebsiteConfiguration(
+        "fallback-bucket-website",
+        {
+            bucket: fallbackBucket.id,
+            indexDocument: {
+                suffix: "index.html",
+            },
+            errorDocument: {
+                key: "404.html",
             },
         },
         {
@@ -228,7 +250,7 @@ const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
                     },
                 },
             ],
-    })),
+        })),
 });
 
 // websiteLogsBucket stores the request logs for incoming requests.
@@ -413,6 +435,12 @@ function newSecurityHeadersPolicy(name: string, frameOption: string) {
                 frameOption,
                 override: false,
             },
+            contentSecurityPolicy: {
+                // Allow embedding from LearnWorlds (LMS). X-Frame-Options is ignored by modern
+                // browsers when frame-ancestors is present in CSP.
+                contentSecurityPolicy: "frame-ancestors 'self' *.learnworlds.com",
+                override: false,
+            },
             // These remaining options are derived from:
             // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
             // "SecurityHeadersPolicy" with ID "67f7725c-6f97-4210-82d7-5512b31e9d03"
@@ -574,7 +602,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             originId: uploadsBucket.arn,
-            domainName: uploadsBucket.websiteEndpoint,
+            domainName: uploadsBucketWebsite.websiteEndpoint,
             customOriginConfig: {
                 originProtocolPolicy: "http-only",
                 httpPort: 80,
@@ -755,6 +783,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             cachePolicyId: cachingDisabledId,
             lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
+            defaultTtl: 0,
+            maxTtl: 0,
         },
         {
             ...baseCacheBehavior,
@@ -769,6 +800,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             cachePolicyId: cachingDisabledId,
             lambdaFunctionAssociations: config.doAIAnswersRewrites ? [getAIAnswersRewriteAssociation()] : [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
+            defaultTtl: 0,
+            maxTtl: 0,
         },
 
         // Copilot app
@@ -786,6 +820,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
             responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
+            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
+            defaultTtl: 0,
+            maxTtl: 0,
         },
         {
             ...baseCacheBehavior,
@@ -801,6 +838,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             lambdaFunctionAssociations: [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
             responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
+            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
+            defaultTtl: 0,
+            maxTtl: 0,
         }
     ],
 
@@ -849,7 +889,7 @@ const cdn = new aws.cloudfront.Distribution(
     distributionArgs,
     {
         protect: true,
-        dependsOn: [ websiteLogsBucket ],
+        dependsOn: [websiteLogsBucket],
     },
 );
 
@@ -885,7 +925,7 @@ if (config.cdnLogDeliverySourceName) {
 
 // Split a domain name into its subdomain and parent domain names.
 // e.g. "www.example.com" => "www", "example.com".
-function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomain: string} {
+function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomain: string } {
     const parts = domain.split(".");
     if (parts.length < 2) {
         throw new Error(`No TLD found on ${domain}`);

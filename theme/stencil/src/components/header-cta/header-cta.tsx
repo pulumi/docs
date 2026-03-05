@@ -10,6 +10,12 @@ export class HeaderCta {
     @Prop()
     buttonClass = "";
 
+    @Prop()
+    href = "https://app.pulumi.com/signup";
+
+    @Prop()
+    label = "Sign Up";
+
     @State()
     loading = true;
 
@@ -39,12 +45,12 @@ export class HeaderCta {
 
         if (this.isLoggedIn) {
             return(
-                <a class={this.buttonClass} data-track="header-signup" href="https://app.pulumi.com/signup?utm_source=header-button" title="Dashboard">Dashboard</a>
+                <a class={this.buttonClass} href="https://app.pulumi.com/?utm_source=header-button" title="Dashboard">Dashboard</a>
             );
         }
 
         return (
-            <a class={this.buttonClass} data-track="header-signup" href="https://app.pulumi.com/signup?utm_source=header-button" title="Sign up">Sign up</a>
+            <a class={this.buttonClass} data-track="header-signup" data-role="cta-get-started" href={`${this.href}${this.href.includes("?") && "&" || "?"}utm_source=header-button`} title={this.label}>{this.label}</a>
         );
     }
 

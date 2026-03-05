@@ -8,13 +8,21 @@ menu:
   iac:
     identifier: hideDiffs
     parent: options-concepts
-    weight: 8
+    weight: 80
 aliases:
   - /docs/iac/concepts/options/hidediffs/
   - /docs/concepts/options/hidediffs/
 ---
 
 The `hideDiffs` resource option specifies a list of property paths whose diff details Pulumi will compact in CLI output. Setting `hideDiffs` does not affect what resources are updated, only how those updates are displayed.
+
+{{% notes type="info" %}}
+The `hideDiffs` option only affects CLI display output. It does not change resource update behavior, prevent changes from being detected, or modify what gets stored in state.
+{{% /notes %}}
+
+{{% notes type="info" %}}
+Unlike `ignoreChanges`, `hideDiffs` does not affect which properties trigger updates. If you want to prevent updates based on property changes, use the [`ignoreChanges`](/docs/concepts/options/ignorechanges/) option instead.
+{{% /notes %}}
 
 ## How hideDiffs works
 
@@ -98,7 +106,7 @@ resources:
 
 ## Property Paths
 
-In addition to passing simple property names, nested properties can also be supplied to hide diffs for a more targeted nested part of the resource's properties. See [property paths](/docs/iac/concepts/inputs-outputs/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
+In addition to passing simple property names, nested properties can also be supplied to hide diffs for a more targeted nested part of the resource's properties. See [property paths](/docs/reference/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
 
 For example, to hide diffs for all weights in an AWS load balancer listener's target groups:
 
@@ -254,11 +262,3 @@ resources:
 {{% /choosable %}}
 
 {{< /chooser >}}
-
-{{% notes type="info" %}}
-The `hideDiffs` option only affects CLI display output. It does not change resource update behavior, prevent changes from being detected, or modify what gets stored in state.
-{{% /notes %}}
-
-{{% notes type="info" %}}
-Unlike `ignoreChanges`, `hideDiffs` does not affect which properties trigger updates. If you want to prevent updates based on property changes, use the [`ignoreChanges`](/docs/concepts/options/ignorechanges/) option instead.
-{{% /notes %}}

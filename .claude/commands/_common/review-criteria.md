@@ -68,16 +68,93 @@ When reviewing **Documentation**, serve the role of a professional technical wri
 
 ### Blogs or Marketing Materials
 
-When reviewing **Blog posts or marketing materials**, serve the role of a professional technical blogger. Review for:
+When reviewing **Blog posts or marketing materials**, serve the role of a professional technical blogger. Blogs have specific review criteria that differ from general documentation.
 
-- Clear, engaging titles.
-- Strong opening that hooks the reader.
-- Clear structure with headings and subheadings.
-- Concise paragraphs (3-4 sentences max).
-- Use of lists and bullet points for readability.
-- Reject filler, vague generalities, or AI-generated slop.
-- Avoid clickbait phrasing.
-- Clear call-to-action at the end.
+Review for:
+
+**AI writing patterns** (most commonly flagged — check these first):
+
+- Em-dash overuse: flag more than 1–2 em-dashes per section
+- Flag contrastive patterns: "It's not X, it's Y" constructions
+- Choppy, uniform sentence lengths (vary sentence rhythm)
+- Unnecessary TL;DR or summary paragraphs that restate what follows
+- Repetitive sentence openers across consecutive paragraphs
+- Hedging language: "generally", "typically", "tends to", "can often" — write with confidence
+
+**Content and structure:**
+
+- Clear, engaging title with primary search term; no clickbait
+- Strong opening that hooks the reader
+- Clear structure with headings and subheadings; use liberal subheadings for scannability
+- Each section opens with 1–2 motivation sentences explaining why the reader should care
+- Concise paragraphs (3–4 sentences max); convert dense paragraphs to lists
+- Listicles and best-practices posts should target ≤3,000 words; flag lists with >12 items and suggest which to cut
+- No "easy" or "simple" per STYLE-GUIDE.md
+
+**Writing quality:**
+
+- Write recommendations with confidence; remove hedging language
+- No self-criticism of prior Pulumi product decisions
+- Strong conclusions with specific next steps (not vague "check out Pulumi")
+- Reject filler, vague generalities, or AI-generated slop
+
+**Links and sources:**
+
+- First mention of every tool, technology, or product must be hyperlinked
+- Unsourced technical claims require citations
+- Internal Pulumi features must link to `/docs/`
+- Use `{{< github-card >}}` shortcode for GitHub repo references
+
+**Product accuracy:**
+
+- Use official Pulumi product names only
+- Don't describe existing features as "new" — use "now supports" or "recently added"
+- Verify every technical claim (language support, API names, UI paths) is correct
+
+**Meta elements and publishing readiness:**
+
+- `meta_image` must be set — not the default placeholder image
+- `meta_image` must use current Pulumi logos (old logo variants hurt social sharing)
+- `<!--more-->` break is present, positioned after the first 1–3 paragraphs
+- Author exists in `data/team/team/` with an avatar image
+- Publish date is correct
+
+**SEO:**
+
+- Title contains primary search terms and accurately describes content
+- Title is ≤60 characters, or `allow_long_title: true` is set in frontmatter
+- Meta description is ≤160 characters and includes key terms
+- H2 headings use answer-first phrasing (lead with the answer, not the question)
+
+**CTAs and closing:**
+
+- CTA is specific to the post's topic domain, not generic
+- Feature announcements link directly to relevant docs
+- Use `{{< blog/cta-button >}}` shortcode where appropriate
+
+**Code examples:**
+
+- Use `chooser`/`choosable` shortcodes for multi-language code blocks
+- Language specifier required on all fenced code blocks
+
+**Images:**
+
+- Comparison screenshots use side-by-side images of the same view (before/after)
+- Screenshots have alt text and 1px gray borders
+- Image file format matches its actual content (no WebP files saved as .png)
+- Animated GIFs: max 1200px wide, 3 MB
+
+**End-of-review publishing readiness checklist** — summarize as a checklist at the end of every blog review:
+
+- [ ] `<!--more-->` break present after intro
+- [ ] `meta_image` set and not the default placeholder
+- [ ] `meta_image` uses current Pulumi logos
+- [ ] Author profile exists with avatar
+- [ ] All links resolve
+- [ ] Code examples correct with language specifiers
+- [ ] No animated GIFs used as `meta_image`
+- [ ] Images have alt text; screenshots have 1px gray borders
+- [ ] Title ≤60 chars or `allow_long_title: true` set
 
 ## Additional Instructions
 

@@ -20,7 +20,7 @@ link_buttons:
 sections:
 - type: cards-logo-label-link
   heading: Clouds
-  description: <p>Manage infrastructure across AWS, Azure, Google Cloud, Kubernetes, and <a href="/registry/">120+ cloud providers</a>.</p>
+  description: <p>Manage infrastructure across AWS, Azure, Google Cloud, Kubernetes, and <a href="/registry/">thousands of cloud providers</a>.</p>
   cards:
   - label: AWS & Pulumi
     icon: aws-40

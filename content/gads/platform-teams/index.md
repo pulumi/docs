@@ -3,6 +3,7 @@ title: "Platform Engineering | Pulumi"
 meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
 layout: gads-template
 block_external_search_index: true
+utm_source: gads-platform-teams
 
 heading: "Platform engineering"
 subheading: |
@@ -21,9 +22,6 @@ key_features_above:
           description:
             Write policies in TypeScript, Python, or Go to define what teams can provision, then let them self-service within boundaries
           image: "/images/product/pulumi-iac-code.png"
-          button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
           features:
               - title: Empower developers with guardrails
                 description: |
@@ -136,9 +134,6 @@ key_features:
                     type: eks:Cluster
                 outputs:
                   kubeconfig: ${cluster.kubeconfig}
-          button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
           features:
               - title: Native cloud providers
                 description: |
@@ -155,9 +150,6 @@ key_features:
           description: |
             Version, review, test, and deploy infrastructure code through the same tools and processes used for your application code.
           image: "/images/product/pulumi-cicd.png"
-          button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
           features:
               - title: Version and review
                 description: |
@@ -191,9 +183,6 @@ key_features_below:
           description: |
              A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
-          button:
-            text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
           features:
               - title: Pulumi IaC
                 description: |

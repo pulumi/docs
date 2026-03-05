@@ -17,9 +17,9 @@ aliases:
   - /docs/pulumi-cloud/admin/self-hosted/saml-sso/
 ---
 
-The self-hosted option allows you to control various aspects of the Pulumi Cloud including how users will sign in to the [Pulumi Cloud](/docs/administration/self-hosting/components/console/).
+The self-hosted option allows you to control various aspects of Pulumi Cloud including how users will sign in to the [Pulumi Cloud console](/docs/administration/self-hosting/components/console/).
 
-## Creating The Keys
+## Creating the keys
 
 Before you can use SAML SSO to logon to the Console, you will need to ensure that the [API service](/docs/administration/self-hosting/components/api/) has a pair of keys that will be used to sign
 and validate requests/responses, regardless of the IdP you choose to use.
@@ -29,9 +29,11 @@ In the following snippets, we show you how you can generate a key pair by using 
 The snippet shows the command for a self-hosted API service that is accessible via `api.company.com`.
 Be sure to adjust the value accordingly.
 
-> OpenSSL's official [wiki](https://wiki.openssl.org/index.php/Binaries) site contains links to pre-built binaries.
+{{% notes type="info" %}}
+OpenSSL's official [wiki](https://wiki.openssl.org/index.php/Binaries) site contains links to pre-built binaries.
+{{% /notes %}}
 
-```
+```bash
 # Generate a new 2048-bit RSA key with a validity of 365 days.
 openssl \
   req -x509 -newkey rsa:2048 \
@@ -42,10 +44,11 @@ openssl \
 
 If you also want to additionally specify an SAN (Subject Alternative Name) for your public cert, you can do so by passing the `-addext` flag as shown below.
 
-> For this to work, though, you'll need to install _at least_ version 1.1. Once installed ensure that the 1.1 version is on your path when you run the command.
-> Otherwise `-addext` will not be recognized as a valid flag.
+{{% notes type="info" %}}
+For this to work, you'll need to install _at least_ version 1.1. Once installed, ensure that the 1.1 version is on your path when you run the command. Otherwise `-addext` will not be recognized as a valid flag.
+{{% /notes %}}
 
-```
+```bash
 openssl \
   req -x509 -newkey rsa:2048 \
   -days 365 -nodes -subj "/CN=api.company.com" \
@@ -54,7 +57,7 @@ openssl \
   -out cert.cert
 ```
 
-## Configure The API Service
+## Configure the API service
 
 Once the key pair has been generated, set the value of the following environment variables for the API service:
 
@@ -63,10 +66,16 @@ Once the key pair has been generated, set the value of the following environment
 
 For these values to take effect, you will need to restart the API Service.
 
-> Restart the service only during a planned maintenance window.
+{{% notes type="info" %}}
+Restart the service only during a planned maintenance window.
+{{% /notes %}}
 
 ## Enabling SAML SSO as an identity option
 
 By default, the SAML SSO signin/signup option is not displayed to end users of the Console service.
 To enable this, set the `SAML_SSO_ENABLED` environment variable for the [console](/docs/administration/self-hosting/components/console/) container to `true`
 and restart the service.
+
+## Next steps
+
+Once your self-hosted infrastructure is configured, complete the SAML SSO setup by configuring your identity provider and Pulumi organization using the [Pulumi Cloud SAML SSO guides](/docs/administration/access-identity/saml/).

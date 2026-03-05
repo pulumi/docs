@@ -24,7 +24,7 @@ In this article, we'll touch on the following key areas regarding DevOps:
 
 * **Testing infrastructure as code**: [Testing infrastructure as code](/docs/iac/guides/testing/) (IaC) in DevOps is similar to testing applications using standard testing tools for various test types. Unit tests swiftly validate code segments without real infrastructure, relying on the same programming language as the IaC programs. Property tests take a step further by provisioning real infrastructure to check resource configurations before and after deployment. Integration tests comprehensively establish a temporary infrastructure setup to verify end-to-end functionality, particularly useful in CI/CD workflows. For more robust testing, one might employ fuzz testing to challenge the infrastructure with unexpected inputs, chaos testing to assess resilience by intentionally causing disruptions, and stress testing to push the system to its limits. These advanced tests, enabled by the flexibility of using general-purpose languages for IaC, provide a wide array of tools to ensure the infrastructure's integrity and robustness.
 
-* **Policy as code**: Policy as code refers to the practice of writing high-level policy descriptions in a language that can be processed by a computer. Instead of manually maintaining compliance documentation and procedures, policies are managed in version-controlled systems and integrated into the development and deployment lifecycle. This enables automatic and continuous enforcement of policies, providing a clear, auditable trail of compliance and security practices. Policy as code is an essential part of modern cloud infrastructure, ensuring that policies are consistently applied across all environments and enabling quicker response to policy violations. Learn more about [Policy as code in Pulumi](/docs/guides/crossguard/)
+* **Policy as code**: Policy as code refers to the practice of writing high-level policy descriptions in a language that can be processed by a computer. Instead of manually maintaining compliance documentation and procedures, policies are managed in version-controlled systems and integrated into the development and deployment lifecycle. This enables automatic and continuous enforcement of policies, providing a clear, auditable trail of compliance and security practices. Policy as code is an essential part of modern cloud infrastructure, ensuring that policies are consistently applied across all environments and enabling quicker response to policy violations. Learn more about [Policy as code in Pulumi](/docs/insights/policy/)
 
 ## DevOps terms and tools
 
@@ -53,7 +53,7 @@ For a detailed exploration and implementation of DevOps practices, refer to the 
 
 * **Continuous integration and continuous delivery (CI/CD)**: For integrating CI/CD processes with Pulumi, visit our [CI/CD integration documentation](https://www.pulumi.com/docs/guides/continuous-delivery/).
 
-* **Policy as code**: To manage policies using Pulumi CrossGuard, visit the [Pulumi CrossGuard documentation](https://www.pulumi.com/docs/guides/crossguard/).
+* **Policy as code**: To manage policies using Pulumi Policies, visit the [Pulumi Policies documentation](https://www.pulumi.com/docs/insights/policy/).
 
 * **Version control**: Learn about version control systems supported by Pulumi in our [version control documentation](https://www.pulumi.com/docs/intro/concepts/state/#backends).
 

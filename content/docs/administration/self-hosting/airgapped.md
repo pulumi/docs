@@ -128,7 +128,7 @@ Once Pulumi Self-Hosted is installed and the CLI is configured, teams can:
 
 * Deploy infrastructure using `pulumi up` while storing state internally.
 * Automate deployments via internal CI/CD systems like Jenkins, GitLab CI, or an internal GitHub Actions runner.
-* Enforce policies using Pulumi Policy as Code (CrossGuard) without external dependencies.
+* Enforce policies using Pulumi Policy as Code without external dependencies.
 
 ## Best Practices for Air-Gapped Pulumi Deployments
 

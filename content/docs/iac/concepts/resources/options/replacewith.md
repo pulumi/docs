@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: replaceWith
     parent: options-concepts
-    weight: 5
+    weight: 180
 aliases:
   - /docs/intro/concepts/resources/options/replacewith/
   - /docs/concepts/options/replacewith/

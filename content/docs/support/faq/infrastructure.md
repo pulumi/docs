@@ -29,6 +29,24 @@ currently in progress and then exit and report the error or failure.
 
 To accomplish a _manual_ rollback after a failed deployment, revert the code and configuration changes of the failed deployment and run `pulumi up` to update your infrastructure to its previous state.
 
+## Refresh
+
+### Why doesn't Pulumi refresh state automatically before every update?
+
+Pulumi does not automatically query your cloud provider's live state before running `pulumi up` or `pulumi preview`. Instead, it compares the desired state declared in your program against the last recorded state to determine what changes to make.
+
+This is an intentional design decision. Refreshing requires a round-trip to your cloud provider for every resource in a stack, which adds significant latency, especially for large stacks. It also reflects Pulumi's design philosophy: your program is the source of truth for desired state, and changes made outside of Pulumi are treated as drift that you decide explicitly how to handle.
+
+To synchronize Pulumi's recorded state with the actual state of your cloud resources, run:
+
+```sh
+$ pulumi refresh
+```
+
+You can also refresh and apply your desired state in a single step using `pulumi up --refresh`. For automated drift detection and remediation on a schedule, Pulumi Cloud provides built-in [drift detection](/docs/deployments/deployments/drift/).
+
+For a detailed explanation of refresh behavior, see [Refreshing state](/docs/iac/concepts/state-and-backends/#refreshing-state).
+
 ## Resource names
 
 ### Why do resource names have random hex character suffixes?
@@ -89,4 +107,4 @@ While we do not formally designate older versions for long term support, we are 
 - [Pulumi ESC FAQ](/docs/support/faq/secrets-config/)
 - [Pulumi Cloud FAQ](/docs/support/pulumi-cloud-faq/)
 - [Pulumi Cloud SCIM FAQ](/docs/administration/access-identity/scim/faq/)
-- [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)
+- [Pulumi Policies FAQ](/docs/support/faq/policies)

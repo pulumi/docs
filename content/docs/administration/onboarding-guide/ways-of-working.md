@@ -61,7 +61,7 @@ You have two main options:
 This approach makes it easier to standardize on tools, patterns, and practices, and to train your team. Choose the language your team already uses to leverage existing standards.
 
 **Multi-language (common in large organizations)**
-While offering flexibility, this approach risks fragmentation between teams using different languages. Pulumi addresses this through consistent experiences across languages in Pulumi Cloud and CrossGuard policies, plus [Pulumi Packages](https://www.pulumi.com/docs/iac/guides/packages/) that let you author packages in one language and consume them in another.
+While offering flexibility, this approach risks fragmentation between teams using different languages. Pulumi addresses this through consistent experiences across languages in Pulumi Cloud and Pulumi Policies, plus [Pulumi Packages](https://www.pulumi.com/docs/iac/guides/packages/) that let you author packages in one language and consume them in another.
 
 ## Organizing people for collaboration
 
@@ -113,7 +113,7 @@ Developers log into a portal and click buttons to provision infrastructure. Opti
 - [Pulumi's Backstage plugin](https://www.pulumi.com/blog/pulumi-backstage-plugin/)
 - Custom portals powered by [Pulumi's Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/)
 
-[Learn more about building developer portals](https://www.pulumi.com/docs/idp/developer-portals/).
+[Learn more about building developer portals](https://www.pulumi.com/docs/idp/concepts/).
 
 ## Working together on deployments
 
@@ -129,9 +129,9 @@ While most teams start by running the Pulumi CLI manually, you'll eventually wan
 - **[Pulumi Kubernetes Operator](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/)**: Trigger deployments from within Kubernetes clusters
 - **Existing CI/CD solutions**: GitHub Actions, GitLab CI, Octopus Deploy, and [many others](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/)
 
-**GitHub users**: Install the [Pulumi GitHub App](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/github-app/) for instant GitOps workflow support, including deployment previews in pull requests.
+**GitHub users**: Install the [Pulumi GitHub App](/docs/integrations/github-app/) for instant GitOps workflow support, including deployment previews in pull requests.
 
-**GitLab users**: Use the [Pulumi GitLab Integration](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/gitlab-app/) to set up Pipelines and Webhooks for GitLab CI/CD.
+**GitLab users**: Use the [Pulumi GitLab Integration](https://www.pulumi.com/docs/integrations/gitlab/) to set up Pipelines and Webhooks for GitLab CI/CD.
 
 **Setting up CI/CD:**
 

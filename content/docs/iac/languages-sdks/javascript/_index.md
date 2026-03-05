@@ -155,6 +155,10 @@ export = async () => {
 
 {{< /chooser >}}
 
+{{< notes type="info" >}}
+ESM projects can use [top-level `await`](#top-level-await) instead of the export function pattern above. See [Native ESM Support](#native-esm-support) for configuration details.
+{{< /notes >}}
+
 ## Defining resources
 
 Writing a Pulumi program in Node.js involves declaring infrastructure resources using resource constructors. Here are the key concepts:
@@ -233,12 +237,13 @@ If you wish to instead use [ESM](https://nodejs.org/api/esm.html) natively, you 
 }
 ```
 
-Your `tsconfig.json` file should also be updated to ensure that TypeScript outputs ESM, by setting the [`module`](https://www.typescriptlang.org/tsconfig/#module) and [`moduleResolution`](https://www.typescriptlang.org/tsconfig/#moduleResolution) fields to `nodenext`.
+Your `tsconfig.json` file should also be updated to ensure that TypeScript outputs ESM. Set the [`module`](https://www.typescriptlang.org/tsconfig/#module) and [`moduleResolution`](https://www.typescriptlang.org/tsconfig/#moduleResolution) fields to `nodenext`. To also enable [top-level await](#top-level-await), set [`target`](https://www.typescriptlang.org/tsconfig/#target) to `ES2022` or later:
 
 ```json
 {
     "compilerOptions": {
         ...
+        "target": "ES2022",
         "module": "nodenext",
         "moduleResolution": "nodenext",
         ...
@@ -268,6 +273,52 @@ Note that if you provide any of the `--loader`, `--import` or `--require` argume
 
 {{< /notes >}}
 
+### Top-level await
+
+One of the benefits of using native ESM is that you can use [top-level `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) in your Pulumi program. Unlike the [export function pattern](#enabling-async-support) used in CommonJS programs, top-level `await` lets you `await` any Promise directly at the module level, before or between resource declarations, without wrapping your code in a function.
+
+For TypeScript, ensure your `tsconfig.json` includes `"target": "ES2022"` or later as shown above, so that TypeScript emits native `await` in the compiled output. In JavaScript ESM projects, top-level `await` works without any additional configuration beyond `"type": "module"` in `package.json`.
+
+The following example uses top-level await to resolve a data source before declaring resources. Stack outputs use named `export const` statements:
+
+{{< chooser language "typescript,javascript" >}}
+
+{{% choosable language "typescript" %}}
+
+```typescript
+import * as aws from "@pulumi/aws";
+
+// Resolve data sources before declaring resources using top-level await
+const azs: aws.GetAvailabilityZonesResult = await aws.getAvailabilityZones({ state: "available" });
+
+const buckets: aws.s3.Bucket[] = azs.names.map(az =>
+    new aws.s3.Bucket(`my-bucket-${az}`)
+);
+
+export const bucketNames = buckets.map(b => b.id);
+```
+
+{{% /choosable %}}
+
+{{% choosable language "javascript" %}}
+
+```javascript
+import * as aws from "@pulumi/aws";
+
+// Resolve data sources before declaring resources using top-level await
+const azs = await aws.getAvailabilityZones({ state: "available" });
+
+const buckets = azs.names.map(az =>
+    new aws.s3.Bucket(`my-bucket-${az}`)
+);
+
+export const bucketNames = buckets.map(b => b.id);
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ## Using ESM only modules with CommonJS Pulumi templates
 
 Older versions of Node.js do not support loading ESM modules using the `require` function (`require` is part of CommonJS, the default runtime targeted by TypeScript in the Pulumi templates). You may encounter an error like the following:
@@ -282,27 +333,31 @@ To resolve this issue, you can either follow the instructions above to convert y
 
 The [Pulumi SDK (`@pulumi/pulumi`)](/docs/reference/pkg/nodejs/pulumi/pulumi) contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. You will need to reference it in most Pulumi programs.
 
-Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch. If you would like to install them, you can use the `dev` tag. For example:
+### Provider SDKs
 
-```bash
-npm add @pulumi/pulumi@dev
-```
+For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/).
 
-Or with yarn:
-
-```bash
-yarn add @pulumi/pulumi@dev
-```
+When building component packages, see [Provider package version management](./provider-package-versions/) for guidance on handling provider package versions across component boundaries.
 
 ### Policy SDK
 
 The [Pulumi Policy SDK (`@pulumi/policy`)](/docs/reference/pkg/nodejs/pulumi/policy) allows you to author Pulumi Policy as Code policies for validating resource configurations.
 
-### Provider packages
+### Dev versions
 
-For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/).
+Pulumi also publishes pre-release versions of SDKs that include all the latest changes from the main development branch. If you would like to install them, you can use the `dev` tag. For example:
 
-When building component packages, see [Provider package version management](./provider-package-versions/) for guidance on handling provider package versions across component boundaries.
+```bash
+npm add @pulumi/pulumi@dev
+```
+
+For provider packages, use the same `dev` tag:
+
+```bash
+npm add @pulumi/aws@dev
+```
+
+For more information on when and how to use dev builds, see [Using dev builds for unreleased fixes](/docs/support/troubleshooting/using-dev-builds/).
 
 ### Testing
 
