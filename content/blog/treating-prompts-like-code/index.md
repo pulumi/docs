@@ -1,6 +1,6 @@
 ---
 title: "Treating Prompts Like Code: A Content Engineer's AI Workflow"
-date: 2026-03-03
+date: 2026-03-05
 draft: false
 meta_desc: "How I built a modular AI workflow system to scale a solo docs practice — treating prompts like code, with reusable skills, shared context, and CI/CD."
 meta_image: meta.png
