@@ -31,7 +31,7 @@ When I'm stuck on a task, the issue is almost never that I don't know what to do
 
 Talking through a problem conversationally is a completely different cognitive load. I can tell [Claude](https://claude.ai) "here's the issue, here's what I'm trying to accomplish, here's what's weird about it," and suddenly I'm not staring at a blank page anymore. I'm in a conversation. The scaffold exists. I can build on it.
 
-I've been in this situation before. In a previous role writing training modules at Microsoft, I did some of my best work, not because the work was easy, but because I had a collaborator. A friend to think out loud with. Someone to say "okay, so what are we actually trying to say here?" That conversational scaffolding was the difference between spinning and shipping.
+That dynamic isn't new for me. In a previous role writing training modules at Microsoft, I did some of my best work, not because the work was easy, but because I had a collaborator. A friend to think out loud with. Someone to say "okay, so what are we actually trying to say here?" That conversational scaffolding was the difference between spinning and shipping.
 
 In my current role as a team of one, AI turned out to be that collaborator.
 
@@ -109,7 +109,7 @@ The next frontier is bringing some of this tooling to the less technical members
 
 If you're a technical writer, a developer advocate, or a solo practitioner figuring out how AI fits into your workflow, the approach described here is a solid starting point. The tools matter, but the mental model matters more: treat your prompts like code. Make them reusable. Document them. Share them.
 
-Our docs repo is public, so the skills are there for anyone who wants them. If you're building something similar, steal freely — or contribute back.
+Our [docs repo](https://github.com/pulumi/docs) is public, so the skills are there for anyone who wants them. If you're building something similar, steal freely — or contribute back.
 
 The blank page is still there. It's just a lot less intimidating when you've got a good collaborator and a solid set of tools.
 
