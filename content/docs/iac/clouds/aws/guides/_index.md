@@ -28,18 +28,18 @@ This section contains guides for working with AWS services using Pulumi. The gui
 - [EKS (`@pulumi/eks`)](/registry/packages/eks/) — components for creating and managing [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/) clusters
 - [AWS Cloud Control (`@pulumi/aws-native`)](/registry/packages/aws-native/) — provider with coverage of all resources in the AWS Cloud Control API
 
-### Containers
+## Containers
 
 - [Elastic Container Service (ECS)](ecs)
 - [Elastic Kubernetes Service (EKS)](eks)
 - [Elastic Container Registry (ECR)](ecr)
 
-### Serverless
+## Serverless
 
 - [Lambda](lambda/)
 - [API Gateway](api-gateway/)
 
-### Core infrastructure
+## Core infrastructure
 
 - [Elastic Load Balancing (ELB)](elb)
 - [Identity and Access Management (IAM)](iam)
