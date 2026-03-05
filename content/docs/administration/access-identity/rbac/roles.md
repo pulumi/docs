@@ -72,7 +72,7 @@ You can also select **Add Pulumi entities** to assign permission sets to specifi
 
 ![Assigning permission sets to two stacks](/docs/administration/access-identity/rbac/5-create-role.png).
 
-2. **Tag-based rules** — Add rules that grant a permission set when resource tags match conditions. For each rule, choose the entity type (stack, environment, or insights account), define tag conditions (e.g. tag key/value or tag presence), and select the permission set to grant when conditions match. You can add multiple tag rules per role.
+1. **Tag-based rules** — Add rules that grant a permission set when resource tags match conditions. For each rule, choose the entity type (stack, environment, or insights account), define tag conditions (e.g. tag key/value or tag presence), and select the permission set to grant when conditions match. You can add multiple tag rules per role.
 
 When done, click **Create role**. You should be taken back to the Roles page, where you will see your new role:
 
