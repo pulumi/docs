@@ -39,7 +39,7 @@ jobs:
           extended: true
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v5
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::571684982431:role/ContinuousDelivery
           role-session-name: docs-deploy
@@ -65,13 +65,13 @@ jobs:
           NODE_OPTIONS: "--max_old_space_size=8192"
 
       - name: Archive test results
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: browser-test-results
           path: cypress/videos
 
       - name: Archive bucket metadata
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: origin-bucket-metadata
           path: origin-bucket-metadata.json
