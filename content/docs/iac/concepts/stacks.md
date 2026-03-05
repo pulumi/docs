@@ -695,7 +695,7 @@ The following example uses `requireOutput`, the recommended method for reading s
 outputs. It reads a `vpcId` export and fails immediately at deployment time if that output is
 absent from the referenced stack:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -750,6 +750,21 @@ Output<Object> vpcId = infra.requireOutput("vpcId");
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  infra:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: acmecorp/infra/prod
+
+variables:
+  # Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+  vpcId: ${infra.outputs["vpcId"]}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -758,7 +773,7 @@ The following example reads a `privateIp` output and transforms it with `Output.
 a derived value. If the output is missing, the undefined value propagates silently rather than
 surfacing as an error:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -830,6 +845,27 @@ BucketObject logFile = new BucketObject("log", new BucketObjectArgs.Builder()
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  infra:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: acmecorp/infra/prod
+  logFile:
+    type: aws:s3:BucketObject
+    properties:
+      key: logs/${infra.outputs["privateIp"]}.log
+```
+
+{{% notes "info" %}}
+Pulumi YAML does not distinguish between `requireOutput` and `getOutput`. Accessing a stack
+reference output via interpolation will fail at deployment time if the named output does not
+exist in the referenced stack.
+{{% /notes %}}
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -842,7 +878,7 @@ has marked as secret.
 
 As an example, suppose your referenced stack exports a database hostname as a plain string:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -937,6 +973,15 @@ infra.outputDetailsAsync("dbHost").thenAccept(dbHostDetails -> {
     // ...
 });
 ```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+{{% notes "info" %}}
+`getOutputDetails` is not currently supported in Pulumi YAML. To read a stack reference
+output in YAML, use the `outputs` property of a `StackReference` resource, as shown in the
+`requireOutput` example above.
+{{% /notes %}}
 
 {{% /choosable %}}
 
