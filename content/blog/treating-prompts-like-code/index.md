@@ -109,8 +109,8 @@ The next frontier is bringing some of this tooling to the less technical members
 
 If you're a technical writer, a developer advocate, or a solo practitioner figuring out how AI fits into your workflow, the approach described here is a solid starting point. The tools matter, but the mental model matters more: treat your prompts like code. Make them reusable. Document them. Share them.
 
-The blank page is still there. It's just a lot less intimidating when you've got a good collaborator and a solid set of tools.
-
 Our docs repo is public, so the skills are there for anyone who wants them. If you're building something similar, steal freely — or contribute back.
+
+The blank page is still there. It's just a lot less intimidating when you've got a good collaborator and a solid set of tools.
 
 {{< blog/cta-button "See our docs skills for inspiration" "https://github.com/pulumi/docs/tree/master/.claude/commands" "_blank" >}}
