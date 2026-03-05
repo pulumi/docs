@@ -333,9 +333,9 @@
                         {{- if $currentMenuItem.URL }}
                             {{- $overviewPage := site.GetPage $currentMenuItem.URL }}
                             {{- if $overviewPage }}
-                                {{- $overviewLabel := "Overview" }}
-                                {{- with $overviewPage.Params.overview_label }}
-                                    {{- $overviewLabel = . }}
+                                {{- $overviewLabel := "Introduction" }}
+                                {{- if $overviewPage.Params.docs_home }}
+                                    {{- $overviewLabel = "Overview" }}
                                 {{- end }}
                                 <li data-menu-id="overview">
                                     <a href="{{ $overviewPage.RelPermalink }}"
