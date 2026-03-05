@@ -1,5 +1,5 @@
 ---
-title: "Now in Private Preview: Store Terraform State in Pulumi Cloud"
+title: "Now in Public Beta: Store Terraform State in Pulumi Cloud"
 date: 2026-03-04
 allow_long_title: true
 draft: false
@@ -7,6 +7,7 @@ meta_desc: "Pulumi Cloud now serves as a Terraform state backend with encrypted 
 meta_image: meta.png
 authors:
     - claire-gaestel
+    - meagan-cojocar
 tags:
     - releases
     - features
@@ -62,3 +63,4 @@ Migration from S3, Azure Blob, GCS, local backends, or HCP Terraform (Terraform 
 Ready to try it? Head to the [documentation](/docs/iac/get-started/terraform/terraform-state-backend/) for step-by-step migration instructions, or check out the [pricing page](/pricing/) for details on how resources are charged. Each Terraform resource stored in Pulumi Cloud counts as a resource under management, the same as a Pulumi-managed resource.
 
 If you have questions or feedback, join us in the [Pulumi Community Slack](https://slack.pulumi.com/) or open an issue on [GitHub](https://github.com/pulumi/pulumi).
+
