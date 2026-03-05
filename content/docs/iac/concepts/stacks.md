@@ -978,7 +978,7 @@ infra.outputDetailsAsync("dbHost").thenAccept(dbHostDetails -> {
 {{% choosable language yaml %}}
 
 {{% notes "info" %}}
-`getOutputDetails` is not currently supported in Pulumi YAML. To read a stack reference
+`getOutputDetails` is not supported in Pulumi YAML. To read a stack reference
 output in YAML, use the `outputs` property of a `StackReference` resource, as shown in the
 `requireOutput` example above.
 {{% /notes %}}
