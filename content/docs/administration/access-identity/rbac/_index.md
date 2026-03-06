@@ -57,7 +57,7 @@ Pulumi Cloud's RBAC system is built on these core concepts:
 - [**Roles**](/docs/administration/access-identity/rbac/roles): Collections of permission sets applied to resources and assigned to principals
 - [**Teams**](/docs/administration/access-identity/rbac/teams): Groups of users that can be assigned roles
 
-Custom roles can also include **tag-based (ABAC) rules**: when resource tags match a rule's conditions, the role grants a chosen permission set on that resource. Details are in [Roles](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules) and [Scopes](/docs/administration/access-identity/rbac/scopes#tag-based-rules-and-scopes).
+Custom roles can also include **tag-based (ABAC) rules**: when resource tags match a rule's conditions, the role grants a chosen permission set on that resource. Details are in [Roles](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules).
 
 ### Customization
 

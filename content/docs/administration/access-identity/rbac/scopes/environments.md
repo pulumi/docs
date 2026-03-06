@@ -77,7 +77,7 @@ Note that creating, listing, or restoring environments are organization-level op
 | `environment_webhook:read` | View environment webhook configurations. This includes access to webhook settings and event triggers.<br><br>**Granted by default permission set**: `Environment Write` |
 | `environment_webhook:update` | Modify an existing environment webhook. This allows updating webhook settings and event triggers.<br><br>**Granted by default permission set**: `Environment Write` |
 
-## Environment change requests (Approvals)
+## Environment change requests (approvals)
 
 | Value | Description |
 |-------|-------------|

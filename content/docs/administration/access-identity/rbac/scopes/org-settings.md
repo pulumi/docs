@@ -47,7 +47,7 @@ These scopes control access to Pulumi's AI features, including [Pulumi Neo](/doc
 | `ai_conversations:read` | Access and view the content of Copilot conversations. This allows users to read their own conversations and continue previous interactions.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `ai_conversations:update` | Modify and continue existing Copilot conversations. This enables users to update their conversations with new questions or context.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
-## Change requests (Approvals)
+## Change requests (approvals)
 
 | Value | Description |
 |-------|-------------|

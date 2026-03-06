@@ -96,7 +96,7 @@ Tag-based rules (also called tag-based access control or ABAC — attribute-base
 
 **How it works:** When evaluating access, Pulumi Cloud checks the user's roles (and the roles of the teams they belong to). For each tag rule in those roles, it evaluates the resource's tags against the rule's conditions. If they match, the rule's permission set is applied to that resource.
 
-In the API and UI these are "tag rules" or "tag-based access control rules"; "ABAC" is the general term. Use "tag-based" as the primary user-facing term. Tag rules are stored in the role definition (`tagRules` in the role payload), with `entityType`, `permissionRoleId` (the permission set to grant), and `tagConditions` (e.g. key/value).
+In the Pulumi Cloud UI and API, these rules may be labeled "tag rules" or "tag-based access control rules"; ABAC (attribute-based access control) is the general industry term.
 
 ## Role assignment
 
