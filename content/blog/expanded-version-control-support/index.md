@@ -1,8 +1,8 @@
 ---
-title: "Pulumi Cloud Now Supports Azure DevOps and More"
+title: "Expanded Version Control Support in Pulumi Cloud"
 date: 2026-03-03
 draft: false
-meta_desc: "Pulumi expands version control support with Azure DevOps and more. Connect your repos, configure deployments, and use Neo across your VCS providers."
+meta_desc: "Deploy on every push, preview infrastructure on pull requests, and let Neo explain changes, all from Pulumi Cloud, regardless of where your code lives."
 meta_image: meta.png
 authors:
     - luke-ward
@@ -14,6 +14,7 @@ tags:
     - pulumi-cloud
     - azure
     - github
+    - gitlab
 social:
     twitter:
     linkedin:
@@ -22,35 +23,45 @@ aliases:
     - /blog/pulumi-now-supports-azure-devops-and-gitlab/
 ---
 
-We've added Azure DevOps (ADO) as a VCS provider for Pulumi, and GitHub Enterprise Server and GitLab support are also now available. If your team uses ADO, you can now deploy infrastructure directly from your repositories, using the same git-backed workflow we've had for GitHub.
+Your version control provider shouldn't limit your infrastructure workflows. Pulumi Cloud now works with [GitHub](/docs/integrations/github-app/), [GitHub Enterprise Server](/docs/integrations/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/integrations/azure-devops-integration/), and [GitLab](/docs/integrations/gitlab/). Every team gets the same deployment pipelines, PR previews, and AI-powered change summaries regardless of where their code lives.
 
 <!--more-->
 
-Connecting your VCS gives your team a single place to manage deployments, no more manually triggering runs or context-switching between tools. Once connected, you get push-to-deploy pipelines, pull request previews, Neo-powered change summaries on PRs, and scheduled drift detection, all managed through our new CI/CD integrations.
-
 ![Add account screen showing GitHub, GitLab, and Azure DevOps as VCS options](VCS.png)
 
-## What's included
+## What your team can do
 
-These features ship with Azure DevOps, and GitHub Enterprise Server and GitLab support is also included:
+### Deploy on every push
 
-**Org and project discovery**: During setup, Pulumi lists your organizations and projects so you can pick where your infrastructure code lives.
+Connect a repository to a stack, and infrastructure deploys automatically when you push. Configure path filters to trigger only when relevant files change, and manage environment variables and secrets directly in Pulumi Cloud. No external CI/CD pipeline required.
 
-**Repo and branch operations**: Browse, select, or create repositories within your project. Pick a branch and wire it up without leaving the wizard.
+### Preview changes on pull requests
 
-![New project wizard with Azure DevOps repository settings](ado-npw.png)
+Every pull request gets an infrastructure preview so reviewers can see exactly what will change before merging. The preview runs the same Pulumi operations your deployment would, giving your team confidence that a merge won't break anything.
 
-**OpenID Connect (OIDC) authentication (ADO)**: Exchange Pulumi's OIDC token for an Azure access token via Entra ID, so no long-lived secrets are stored.
+### Neo explains your changes
 
-**Neo on pull requests**: Neo posts summaries and infrastructure change explanations to your ADO pull requests, same as it does for GitHub.
+[Neo](/product/neo/) posts AI-generated summaries on your pull requests explaining what infrastructure changes mean in plain language. Reviewers who aren't Pulumi experts can still understand the impact of a change without reading resource diffs.
 
-![Neo PR comment showing resource changes on an Azure DevOps pull request](ado-prcomments.png)
+![Neo posting an infrastructure change summary on a pull request](ado-prcomments.png)
 
-**Neo tasks**: Neo works with your ADO repositories. Ask Neo to make changes, and it can open pull requests directly against your connected repos.
+### Let Neo open pull requests for you
 
-**Deployment**: Stacks connected to ADO support push-to-deploy, pull request previews, path filters, environment variables, secrets, and drift detection schedules.
+Ask Neo to make infrastructure changes and it opens pull requests directly against your connected repositories. Describe what you want in natural language, and Neo writes the code, opens the PR, and kicks off a preview, all without leaving Pulumi Cloud.
 
-**...and more.** Anything you could do with GitHub, you can do with all of these VCS providers.
+### Detect and fix drift
+
+Schedule [drift detection](/docs/pulumi-cloud/deployments/drift/) to catch out-of-band changes automatically. When someone modifies infrastructure outside of your Pulumi programs, drift detection flags the difference so your team can remediate before it causes issues.
+
+### Secure authentication
+
+Pulumi Cloud authenticates with your VCS provider using OIDC or OAuth so no long-lived credentials need to be stored. Short-lived tokens keep your deployment pipelines secure without manual secret rotation.
+
+### Set up new projects from your VCS
+
+The new project wizard discovers your organizations, repositories, and branches so you can scaffold and deploy a new stack without leaving Pulumi Cloud. Pick your repo, choose a branch, and you're ready to deploy.
+
+![New project wizard showing repository settings](ado-npw.png)
 
 ## Getting started
 
@@ -58,4 +69,6 @@ These features ship with Azure DevOps, and GitHub Enterprise Server and GitLab s
 1. Authorize with your VCS provider.
 1. Deploy infrastructure with first-class workflows.
 
-See the [Azure DevOps integration docs](/docs/integrations/azure-devops-integration/) for the full setup walkthrough. We also support [GitHub Enterprise Server](/docs/integrations/github-app/#github-enterprise-server-support) and [GitLab](/docs/integrations/gitlab/). If you're using GitHub.com, check out the [Pulumi GitHub App](/docs/integrations/github-app/).
+For setup details, see the docs for [GitHub](/docs/integrations/github-app/), [GitHub Enterprise Server](/docs/integrations/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/integrations/azure-devops-integration/), and [GitLab](/docs/integrations/gitlab/).
+
+{{< blog/cta-button "Connect your VCS" "https://app.pulumi.com" "_blank" >}}
