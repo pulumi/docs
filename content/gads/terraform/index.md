@@ -1,28 +1,28 @@
 ---
-title: "Terraform Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+title: "Terraform Free Tier Ending | Switch to Pulumi"
+meta_desc: HCP Terraform legacy Free plan ends March 31, 2026. Pulumi is free with no resource caps. Migrate from HCL to Python, TypeScript, Go, or C#.
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-terraform
 aliases:
     - /gads/gads-template
 
-heading: "Terraform Alternative"
+heading: "Terraform Free Tier Ending March 31"
 subheading: |
-    Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
-    make managing infrastructure secure, reliable, and hassle-free.
+    HCP Terraform's legacy Free plan ends March 31, 2026. Pulumi is free, open source,
+    and has no resource caps. Switch to real programming languages for your infrastructure.
 
 overview:
-    title: Infrastructure as Code<br/>in any Programming Language
+    title: Switch to Real Code.<br/>No Resource Limits.
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform alternative</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+        HashiCorp is ending the legacy HCP Terraform Free plan on March 31, 2026. The new Free tier caps you at <span style="font-weight: bold;">500 managed resources</span>. Pulumi has <span style="font-weight: bold;">no resource caps</span> on the free tier. Write infrastructure in Python, TypeScript, Go, or C# with full IDE support, testing, and 180+ cloud providers. Free migration tools included.
 
 key_features_above:
     items:
-        - title: "Author in any language, deploy to any cloud"
+        - title: "Switch from HCL to real languages"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+            Stop writing HCL. Author infrastructure as code using programming languages you already know, including Python, TypeScript, Go, C#, Java, and YAML. Use the free tf2pulumi converter to migrate your existing Terraform files. Deploy to 180+ providers.
           image: "/images/product/pulumi-iac-code.png"
           features:
               - title: Code faster
@@ -46,6 +46,22 @@ key_features_above:
 key_features:
     title: Key features
     items:
+        - title: "Migrate from Terraform in minutes"
+          sub_title: "Free Migration Tools"
+          description: |
+            Use tf2pulumi to convert your existing Terraform HCL to Python, TypeScript, Go, or C#. Import existing state with pulumi import. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
+          image: "/images/product/pulumi-iac-code.png"
+          features:
+              - title: Convert HCL to real code
+                description: |
+                    The tf2pulumi tool converts your .tf files to Pulumi programs in your language of choice. Try it at pulumi.com/tf2pulumi.
+              - title: Import existing state
+                description: |
+                    Already have infrastructure managed by Terraform? Import your state directly into Pulumi without re-provisioning. Zero downtime migration.
+              - title: No 500 resource limit
+                description: |
+                    Pulumi Cloud's free tier has no managed resource caps. Manage as many resources as you need. Scale when you're ready.
+
         - title: "Build infrastructure faster with reusable components"
           sub_title: "Pulumi Packages"
           description: |
@@ -225,17 +241,11 @@ case_studies:
           description: |
             Developers reduced their time spent on maintenance by 50%.
 
-        - name: Elkjop
-          link: /case-studies/elkjop-nordic/
-          logo: elkjop-nordic
-          description: |
-            Increased developers' agility and speed through platform engineering.
-
         - name: Starburst
           link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
           logo: starburst
           description: |
-            Increased velocity and speed, with deployments that are up to 3x faster.
+            Migrated from Terraform. Deployments now up to 3x faster.
 
         - name: BMW
           link: /case-studies/bmw/
@@ -253,5 +263,5 @@ case_studies:
           link: /case-studies/snowflake/
           logo: snowflake
           description: |
-            Built a multi-cloud, Kubernetes-based platform to standardize all deployments
+            Cut 50,000 lines of YAML to 500 lines of Python after switching from Terraform.
 ---
