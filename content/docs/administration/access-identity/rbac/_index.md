@@ -46,7 +46,7 @@ These settings are distinct from RBAC permission scopes:
 - **RBAC scopes** (e.g. `stack:create`, `team:create`) are granted per-role and only affect principals who hold that role.
 - **Organization-wide settings** apply unconditionally to every member. When an org-wide setting restricts an action (e.g. "Members cannot create stacks" is off), that restriction applies even to members whose role includes the corresponding scope.
 
-Think of org-wide settings as an org-level override layer on top of the RBAC system. A member needs **both** the relevant RBAC scope in their role **and** the org-wide setting to be enabled in order to perform the action.
+Think of org-wide settings as an org-level override layer on top of the RBAC system. A member needs **both** the relevant RBAC scope in their role **and** the org-wide setting to be enabled to perform the action.
 
 ## RBAC Constructs
 

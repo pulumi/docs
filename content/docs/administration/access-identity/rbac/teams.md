@@ -42,7 +42,7 @@ To give members permission to create teams:
 When your organization has custom roles enabled, teams can be assigned **roles** (default or custom). This is separate from [Team permissions](#team-permissions) (stack-level access) and [Team roles](#team-roles) (Team admin vs Team member).
 
 - Each team can have **multiple role assignments**. Members of the team receive the permissions from all of those roles in addition to their own [organization role](/docs/administration/access-identity/rbac/roles#users).
-- Only **team admins** can add or remove role assignments for the team. Additionally, to assign a role the team admin must themselves hold a role that grants the `role:create` and `role:update` scopes — you cannot assign a role that grants more permissions than you yourself hold (role escalation is not permitted).
+- Only **team admins** can add or remove role assignments for the team. Additionally, to assign a role, the team admin must hold a role that grants the `role:create` and `role:update` scopes, and cannot assign a role that grants more permissions than they themselves hold (role escalation is not permitted).
 - **Role-backed teams**: Create a team, assign it a custom role (e.g. with access only to certain stacks or [tag-based rules](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules)), then add members; those members gain the team's roles in addition to their own user role.
 
 ## GitHub-based Teams
