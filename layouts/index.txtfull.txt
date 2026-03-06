@@ -43,8 +43,8 @@ This file provides a curated guide to Pulumi's documentation, organized by produ
   {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
 {{- end }}
 
-## Integrations
-{{- with index site.Menus "integrations" }}
+## Version Control
+{{- with index site.Menus "version-control" }}
   {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
 {{- end }}
 
