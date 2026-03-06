@@ -15,14 +15,14 @@ subheading: |
 overview:
     title: Switch to Real Code.<br/>No Resource Limits.
     description: |
-        HashiCorp is ending the legacy HCP Terraform Free plan on March 31, 2026. The new Free tier caps you at <span style="font-weight: bold;">500 managed resources</span>. Pulumi has <span style="font-weight: bold;">no resource caps</span> on the free tier. Write infrastructure in Python, TypeScript, Go, or C# with full IDE support, testing, and 180+ cloud providers. Free migration tools included.
+        HashiCorp is ending the legacy HCP Terraform Free plan on March 31, 2026. The new Free tier caps you at <span style="font-weight: bold;">500 managed resources</span>. Pulumi has <span style="font-weight: bold;">no resource caps</span> on the free tier. Write infrastructure in Python, TypeScript, Go, or C# with full IDE support, testing, and 170+ cloud providers. Free migration tools included.
 
 key_features_above:
     items:
         - title: "Switch from HCL to real languages"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Stop writing HCL. Author infrastructure as code using programming languages you already know, including Python, TypeScript, Go, C#, Java, and YAML. Use the free tf2pulumi converter to migrate your existing Terraform files. Deploy to 180+ providers.
+            Stop writing HCL. Author infrastructure as code using programming languages you already know, including Python, TypeScript, Go, C#, Java, and YAML. Use the free tf2pulumi converter to migrate your existing Terraform files. Deploy to 170+ providers.
           image: "/images/product/pulumi-iac-code.png"
           features:
               - title: Code faster
@@ -54,7 +54,7 @@ key_features:
           features:
               - title: Convert HCL to real code
                 description: |
-                    The tf2pulumi tool converts your .tf files to Pulumi programs in your language of choice. Try it at pulumi.com/tf2pulumi.
+                    The tf2pulumi tool converts your .tf files to Pulumi programs in your language of choice. Try it at [pulumi.com/tf2pulumi](/tf2pulumi/).
               - title: Import existing state
                 description: |
                     Already have infrastructure managed by Terraform? Import your state directly into Pulumi without re-provisioning. Zero downtime migration.
@@ -245,7 +245,7 @@ case_studies:
           link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
           logo: starburst
           description: |
-            Migrated from Terraform. Deployments now up to 3x faster.
+            Deployments up to 3x faster with Pulumi infrastructure automation.
 
         - name: BMW
           link: /case-studies/bmw/
@@ -263,5 +263,5 @@ case_studies:
           link: /case-studies/snowflake/
           logo: snowflake
           description: |
-            Cut 50,000 lines of YAML to 500 lines of Python after switching from Terraform.
+            Switched from HCL to Go with Pulumi. Deployment time cut from 1.5 weeks to under a day.
 ---
