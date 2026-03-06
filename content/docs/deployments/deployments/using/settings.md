@@ -130,7 +130,7 @@ Using a custom image may result in slower execution due to time spent pulling th
 Additionally, we only support static credentials in custom executor images.
 {{% /notes %}}
 
-## Custom Executor Root Path {#custom-executor-root-path}
+## Custom executor root path {#custom-executor-root-path}
 
 By default, the deployment executor uses `/` as its root working directory. You can override this by setting a custom executor root path, which changes the base directory used by the executor for all file operations during the deployment.
 
@@ -194,7 +194,7 @@ These can be overridden or extended by configuring custom environment variables:
 
 Environment variables can be persisted between pre-run commands and the final pulumi deployment by appending them to the file on the file system named `PULUMI_ENV`.
 
-By default this file is `/PULUMI_ENV`. If you configure a [custom executor root path](#custom-executor-root-path), Deployments sets `PULUMI_ENV_FILE` to `<executorRootPath>/PULUMI_ENV` and uses that file instead.
+By default, this file is `/PULUMI_ENV`. If you configure a [custom executor root path](#custom-executor-root-path), Deployments sets `PULUMI_ENV_FILE` to `<executorRootPath>/PULUMI_ENV` and uses that file instead.
 
 Example Usage:
 
