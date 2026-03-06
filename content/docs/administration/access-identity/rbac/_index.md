@@ -37,6 +37,17 @@ Roles can be assigned to three kinds of principals in Pulumi Cloud:
 
 A user's effective permissions are the **union** of (1) their user role and (2) all roles assigned to the teams they belong to. Team role assignments add on top of the user's baseline role.
 
+## Organization-wide settings
+
+Pulumi Cloud has a set of **organization-wide access settings** (configured at **Settings** > **Access Management**) that predate the full RBAC system and continue to work alongside it. These settings — such as whether members can create stacks, delete stacks, create teams, or create Insights accounts — are simple on/off toggles that apply to **all members** regardless of their assigned role.
+
+These settings are distinct from RBAC permission scopes:
+
+- **RBAC scopes** (e.g. `stack:create`, `team:create`) are granted per-role and only affect principals who hold that role.
+- **Organization-wide settings** apply unconditionally to every member. When an org-wide setting restricts an action (e.g. "Members cannot create stacks" is off), that restriction applies even to members whose role includes the corresponding scope.
+
+Think of org-wide settings as an org-level override layer on top of the RBAC system. A member needs **both** the relevant RBAC scope in their role **and** the org-wide setting to be enabled in order to perform the action.
+
 ## RBAC Constructs
 
 Pulumi Cloud's RBAC system is built on these core concepts:

@@ -56,6 +56,10 @@ There are four qualified entity types in Pulumi, these are:
   * Audit logs
   * Integration configurations
 
+{{% notes "info" %}}
+**Organization settings permission sets vs. org-wide access toggles**: The Organization settings entity type covers RBAC scopes (e.g. `stack:create`, `team:create`) that you grant through a role. These are separate from the organization-wide access toggles at **Settings** > **Access Management** (e.g. "Members can create stacks"), which apply unconditionally to all members regardless of their role. See the [RBAC overview](/docs/administration/access-identity/rbac/#organization-wide-settings) for details.
+{{% /notes %}}
+
 ## Default permission sets
 
 Pulumi Cloud provides several default permission sets that you can use to quickly get started:

@@ -27,7 +27,7 @@ Pulumi Cloud provides several default roles that you can use to quickly get star
 | <div style="width: 200px;">Role</div>| Description |
 |------|-------------|
 | `Admin` | Full access to all organization resources and settings. Can manage members, roles, and organization-wide configurations. |
-| `Member` | Basic access to view organization resources and participate in stack operations. Cannot modify organization settings. When your organization has custom roles, you can set an **organization default role** (a custom role) that applies to all members who have the Member organization role and have not been given an explicit custom role. Default access can be controlled via the **Access management** page under **Settings**. |
+| `Member` | Basic access to view organization resources and participate in stack operations. Cannot modify organization settings. When your organization has custom roles, you can set an **organization default role** — a custom role that applies to all members who have the Member organization role and have not been given an explicit custom role. To set the default role, navigate to **Settings** > **Roles**, open a custom role, and choose **Set as default role**. |
 | `Billing Manager` | Access to view and manage billing information. Cannot modify other organization settings or resources. |
 
 ## Custom roles
@@ -35,7 +35,7 @@ Pulumi Cloud provides several default roles that you can use to quickly get star
 {{% notes "info" %}}
 Custom roles are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition. To learn more about editions, visit the [pricing page](/pricing/).
 
-To assign custom roles to **individual users**, the **Assign custom roles to users** setting must be enabled for your organization (**Settings** > **Access Management**). When your organization has custom roles, you can also set an **organization default role** (a custom role that applies to members who have the Member organization role and have not been given an explicit custom role).
+To assign custom roles to **individual users**, the **Assign custom roles to users** setting must be enabled for your organization (**Settings** > **Access Management**). When your organization has custom roles, you can also set an **organization default role** — a custom role that serves as the baseline for all members who have the Member organization role and have not been given an explicit custom role. The default role is set from **Settings** > **Roles** (not from the Access Management page).
 {{% /notes %}}
 
 You can create and manage custom roles to define more granular access controls for your organization. Custom roles can include:
