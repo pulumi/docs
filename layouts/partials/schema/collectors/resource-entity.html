@@ -94,14 +94,26 @@
 {{ $authors := slice }}
 {{ with .Params.authors }}
   {{ range . }}
-    {{ $authorEntity := dict
-      "@type" "Person"
-      "@id" (printf "https://www.pulumi.com/authors/%s/#person" (. | urlize))
-      "name" .
-      "url" (printf "https://www.pulumi.com/authors/%s/" (. | urlize))
-      "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
-    }}
-    {{ $authors = $authors | append $authorEntity }}
+    {{ $authorData := index $.Site.Data.team.team . }}
+    {{ if $authorData }}
+      {{ $authorEntity := dict
+        "@type" "Person"
+        "@id" (printf "https://www.pulumi.com/authors/%s/#person" $authorData.id)
+        "name" $authorData.name
+        "url" (printf "https://www.pulumi.com/authors/%s/" $authorData.id)
+        "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+      }}
+      {{ $authors = $authors | append $authorEntity }}
+    {{ else }}
+      {{ $authorEntity := dict
+        "@type" "Person"
+        "@id" (printf "https://www.pulumi.com/authors/%s/#person" (. | urlize))
+        "name" (replace . "-" " " | title)
+        "url" (printf "https://www.pulumi.com/authors/%s/" (. | urlize))
+        "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+      }}
+      {{ $authors = $authors | append $authorEntity }}
+    {{ end }}
   {{ end }}
 {{ else }}
   {{ $authors = $authors | append (dict
