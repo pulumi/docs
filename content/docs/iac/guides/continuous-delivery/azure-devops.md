@@ -84,7 +84,3 @@ To use the task extension with AWS, Google Cloud, or other providers, pass the r
     AWS_ACCESS_KEY_ID: $(awsAccessKeyId)
     AWS_SECRET_ACCESS_KEY: $(awsSecretAccessKey)
 ```
-
-## Full Azure DevOps CI/CD guide
-
-For a complete walkthrough of setting up Pulumi in Azure Pipelines — including stack and branch mapping, YAML pipeline configuration, and deployment scripts — see the [Azure DevOps CI/CD guide](/docs/iac/guides/continuous-delivery/azure-devops/).

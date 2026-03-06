@@ -26,7 +26,7 @@ We've added Azure DevOps (ADO) as a VCS provider for Pulumi, and GitHub Enterpri
 
 <!--more-->
 
-Connecting your VCS unlocks the full Pulumi Cloud workflow: push-to-deploy pipelines, pull request previews, Neo-powered change summaries on PRs, and scheduled drift detection, all while managing through our new CI/CD integrations.
+Connecting your VCS gives your team a single place to manage deployments, no more manually triggering runs or context-switching between tools. Once connected, you get push-to-deploy pipelines, pull request previews, Neo-powered change summaries on PRs, and scheduled drift detection, all managed through our new CI/CD integrations.
 
 ![Add account screen showing GitHub, GitLab, and Azure DevOps as VCS options](VCS.png)
 
