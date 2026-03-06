@@ -151,9 +151,9 @@ Continue to Step 7.
 
 ### Step 7: Present Action Menu
 
-Present action menu based on contributor type (bot vs non-bot) and review findings.
+**Use AskUserQuestion** (max 4 options) to present the appropriate action menu based on contributor type (bot vs non-bot) and review findings.
 
-See `pr-review:references:bot-action-menus` for complete menu structures and logic.
+See `pr-review:references:action-menus` for complete menu structures and logic.
 
 Continue to Step 8 with selected action.
 
