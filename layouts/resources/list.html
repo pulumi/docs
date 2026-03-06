@@ -1,0 +1,25 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    {{ $resources := where (where $.Site.Pages "Type" "resources") "Kind" "page" }}
+
+    <div class="bg-gray-50 py-8">
+        <div class="container mx-auto px-4 max-w-6xl">
+            {{ with .Content }}
+                <div class="bg-white rounded-lg shadow-sm p-6 md:p-8 mb-8 prose prose-lg max-w-none">
+                    {{ . }}
+                </div>
+            {{ end }}
+
+            {{ if $resources }}
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {{ range sort $resources ".Date" "desc" }}
+                        {{ partial "resources/resource-card.html" . }}
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

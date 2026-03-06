@@ -96,7 +96,15 @@ This file provides a curated guide to Pulumi's documentation, organized by produ
   {{- end }}
 {{- end }}
 
-## Resources
+## Resource Library
+{{ $resourcePages := where $.Site.Pages "Section" "resources" }}
+{{- range $resourcePages }}
+  {{- if and (not .Params.llms_exclude) (ne .Title "") .IsPage }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
+  {{- end }}
+{{- end }}
+
+## Blog & Media
 
 ### Recent Blog Posts
 {{- $blogPages := where $.Site.Pages "Section" "blog" }}
