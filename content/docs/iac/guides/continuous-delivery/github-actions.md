@@ -21,6 +21,11 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/github-actions/
 ---
 
+{{% notes type="info" %}}
+The content and examples in this guide refer to Pulumi's GitHub Action v6. Pulumi's GitHub Action v1 has been deprecated
+and reached its End of Life (EOL) on August 31st, 2021.
+{{% /notes %}}
+
 Pulumi's [GitHub Actions](https://developer.github.com/actions) help you deploy apps and
 infrastructure to your cloud of choice, using nothing but code in your favorite language
 and GitHub. This includes previewing, validating, and collaborating on proposed
@@ -144,7 +149,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v3
+      - uses: actions/setup-go@v6
         with:
           go-version: 'stable'
       - name: Configure AWS Credentials
@@ -175,9 +180,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v3
+      - uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 10.0.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -284,7 +289,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v3
+      - uses: actions/setup-go@v6
         with:
           go-version: 'stable'
       - name: Configure AWS Credentials
@@ -317,9 +322,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v1
+      - uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 3.1.x
+          dotnet-version: 10.0.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -617,7 +622,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v3
+      - uses: actions/setup-go@v6
         with:
           go-version: 'stable'
       - name: Configure AWS Credentials
@@ -650,9 +655,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v1
+      - uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 3.1.x
+          dotnet-version: 10.0.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -776,7 +781,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - uses: actions/setup-go@v3
+      - uses: actions/setup-go@v6
         with:
           go-version: 'stable'
       - name: Configure AWS Credentials
@@ -813,9 +818,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - uses: actions/setup-dotnet@v1
+      - uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 3.1.x
+          dotnet-version: 10.0.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -940,7 +945,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v6
         with:
           go-version: 'stable'
       - name: Configure AWS Credentials
@@ -978,9 +983,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - uses: actions/setup-dotnet@v1
+      - uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 3.1.x
+          dotnet-version: 10.0.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -1115,7 +1120,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v6
         with:
           go-version: 'stable'
       - name: Configure AWS Credentials
@@ -1160,9 +1165,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v3
+      - uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 10.0.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:

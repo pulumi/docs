@@ -3,9 +3,9 @@ user-invocable: false
 description: Action menu options for bot and non-bot PRs
 ---
 
-# Bot Action Menus
+# Action Menus
 
-**Decision Point**: If contributor type is bot, use bot-specific action menu. Otherwise, use standard action menu.
+**Decision Point**: Select the appropriate section based on contributor type.
 
 ## Dependabot PRs
 
