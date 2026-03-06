@@ -4,15 +4,15 @@
 // https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic
 :root {
     --aa-base-unit: 14;
-    --aa-primary-color-rgb: 148,157,232;
+    --aa-primary-color-rgb: 148,157,232; // blue-400 (#949de8)
     --aa-font-family: theme(fontFamily.body);
     --aa-input-icon-size: 16px;
-    --aa-icon-color-rgb: 19,19,20;
-    --aa-input-border-color-rgb: 190,191,201;
+    --aa-icon-color-rgb: 19,19,20; // gray-900 (#131314)
+    --aa-input-border-color-rgb: 190,191,201; // gray-500 (#bebfc9)
     --aa-input-border-color-alpha: 1;
-    --aa-selected-color-rgb: 237,239,251;
+    --aa-selected-color-rgb: 237,239,251; // blue-100 (#edeffb)
     --aa-selected-color-alpha: 0.9;
-    --aa-description-highlight-background-color-rgb: 219,222,247;
+    --aa-description-highlight-background-color-rgb: 219,222,247; // blue-200 (#dbdef7)
     --aa-description-highlight-background-color-alpha: 0;
     --aa-search-input-height: 42px;
 }
