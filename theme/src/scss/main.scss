@@ -147,6 +147,31 @@ $sitenav-offset: calc($sitenav-height + 16px);
 // but loses to unlayered CSS. So we must layer our custom styles.
 
 @layer base {
+    // Custom elements default to display: inline in browsers. Tailwind v4 preflight
+    // does not reset them to block, so we do it here for all Pulumi web components.
+    pulumi-chooser,
+    pulumi-choosable,
+    pulumi-swiper,
+    pulumi-swipeable,
+    pulumi-tabs,
+    pulumi-tab-panel,
+    pulumi-install,
+    pulumi-banner,
+    pulumi-examples,
+    pulumi-convert,
+    pulumi-tooltip,
+    pulumi-audio,
+    pulumi-slot-machine,
+    pulumi-tertiary-nav,
+    pulumi-greenhouse-jobs-list,
+    pulumi-resource-links,
+    pulumi-filter-select,
+    pulumi-user-toggle,
+    pulumi-hubspot-form,
+    pulumi-copilot {
+        display: block;
+    }
+
     h1,
     h2,
     h3,
