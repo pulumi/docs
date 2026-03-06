@@ -29,7 +29,7 @@ An org admin must set up the integration before users can connect ADO repos.
 
 ### Step 1: Navigate to integrations
 
-Navigate to **Settings** > **Integrations** in your Pulumi Cloud organization.
+Navigate to **Settings** > **Version control** in your Pulumi Cloud organization.
 
 ### Step 2: Authorize with Azure
 
@@ -71,31 +71,7 @@ Select **Delete Integration** on the integration card. This removes the service 
 
 ## Create a project with the new project wizard
 
-Once an admin has configured an ADO integration and you've authorized your account, you can create projects backed by ADO repos.
-
-### Step 1: Open the New Project Wizard
-
-Select **New Project** from your organization's dashboard.
-
-### Step 2: Select a template
-
-Choose a starter template or start from scratch.
-
-### Step 3: Select Azure DevOps as the VCS provider
-
-In the project details step, select **Azure DevOps** from the VCS provider dropdown. If only one provider is configured, it's selected automatically.
-
-### Step 4: Choose a repository
-
-Select an existing repository from the dropdown, or create a new one by entering a name.
-
-### Step 5: Choose a branch
-
-Pick the branch to deploy from. Defaults to the repo's default branch.
-
-### Step 6: Configure and deploy
-
-Set your project name, stack name, and any required configuration values. Select **Create Project** to push the template and trigger the initial deployment.
+Once an admin has configured an ADO integration and you've authorized your account, you can use the [New Project Wizard](/docs/idp/concepts/new-project-wizard/) to create projects backed by ADO repos. Select **Azure DevOps** as the VCS provider during project setup. If only one provider is configured, it's selected automatically.
 
 ## Deployment settings
 
