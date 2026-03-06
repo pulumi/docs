@@ -117,12 +117,18 @@
 @import "mixins";
 
 @layer base {
+    // Tailwind v2 preflight set default border-color to gray-200. v4 defaults to
+    // currentColor, which makes `.border` dividers render too dark. Restore the old default.
+    *,
+    ::before,
+    ::after {
+        border-color: var(--color-gray-200);
+    }
+
     // Custom elements default to display: inline in browsers. Tailwind v4 preflight
     // does not reset them to block, so we do it here for all Pulumi web components.
     pulumi-chooser,
     pulumi-choosable,
-    pulumi-swiper,
-    pulumi-swipeable,
     pulumi-tabs,
     pulumi-tab-panel,
     pulumi-install,
