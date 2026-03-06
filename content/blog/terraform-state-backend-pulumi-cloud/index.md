@@ -1,13 +1,12 @@
 ---
 title: "Now in Public Beta: Store Terraform State in Pulumi Cloud"
-date: 2026-03-04
+date: 2026-03-05
 allow_long_title: true
 draft: false
 meta_desc: "Pulumi Cloud now serves as a Terraform state backend with encrypted state, audit policies, and unified resource visibility — no workflow changes required."
 meta_image: meta.png
 authors:
     - claire-gaestel
-    - meagan-cojocar
 tags:
     - releases
     - features
@@ -20,7 +19,7 @@ social:
     linkedin: "We just launched Terraform State Backend support in Pulumi Cloud (public beta). Platform teams can now store and manage Terraform state alongside Pulumi stacks — no code changes required. Your team keeps using the Terraform or OpenTofu CLI while you get encrypted state, update history, state locking, RBAC, audit policies, and unified resource visibility through Pulumi Insights. Migration from S3, Azure Blob, or GCS takes minutes. Read more about how it works and how to get started."
 ---
 
-Platform engineering teams managing infrastructure across Terraform and Pulumi now have a way to unify state management without rewriting a single line of HCL. Starting today, Pulumi Cloud can serve as a [Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/), letting you store and manage Terraform state alongside your Pulumi stacks. Your team continues using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: encrypted state storage, update history, state locking, role-based access control, audit policies, and unified resource visibility through [Insights](/docs/pulumi-cloud/insights/).
+Platform engineering teams managing infrastructure across Terraform and Pulumi now have a way to unify state management without rewriting a single line of HCL. Starting today, Pulumi Cloud can serve as a [Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/), letting you store and manage Terraform state alongside your Pulumi stacks. Your team continues using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: AI-powered infrastructure management with [Pulumi Neo](/docs/ai) — our infrastructure agent — encrypted state storage, update history, state locking, role-based access control, audit policies, and unified resource visibility through [Insights](/docs/pulumi-cloud/insights/).
 
 <!--more-->
 
@@ -30,11 +29,13 @@ This feature is now available in **public beta**.
 
 Most organizations adopting Pulumi are not starting from scratch. They have years of Terraform deployments spread across teams, and migrating everything to a new IaC tool overnight is not realistic. We have heard from customers who are excited about the power of Pulumi Cloud but have had to manage migration projects before they can fully benefit from centralized visibility and governance.
 
-The Terraform state backend in Pulumi Cloud changes that equation. Instead of requiring a full code conversion before teams see value, you can migrate your state in minutes and immediately unlock Pulumi Cloud capabilities for your existing Terraform infrastructure. Teams that prefer Terraform can keep using it, while platform engineers get centralized visibility across the entire infrastructure estate.
+The Terraform state backend in Pulumi Cloud changes that equation. Instead of requiring a full code conversion before teams see value, you can migrate your state in minutes and immediately unlock Pulumi Cloud capabilities for your existing Terraform infrastructure — including Neo, Pulumi's AI infrastructure agent. Once your Terraform state is in Pulumi Cloud, Neo can reason about those resources the same way it does for Pulumi IaC stacks: finding resources, troubleshooting issues, understanding dependencies, and writing infrastructure code PRs. Teams that prefer Terraform can keep using it, while platform engineers get a single AI-powered control plane across the entire infrastructure estate.
 
 ## What you get
 
 When you store Terraform state in Pulumi Cloud, your Terraform-managed resources get the following added functionality:
+
+**Agentic infrastructure with Neo.** [Neo](/docs/ai/), Pulumi's AI infrastructure agent, works across your entire cloud footprint — Terraform and Pulumi IaC alike. Once your Terraform state is in Pulumi Cloud, you can ask Neo to find resources across both tools, trace dependencies that span Terraform and Pulumi stacks, troubleshoot configuration issues, and generate new infrastructure code informed by your existing resources. This means platform teams get a single AI-powered interface regardless of which IaC tool manages each piece of infrastructure.
 
 **Encrypted state with update history.** State is encrypted in transit and at rest. Every change is tracked as a versioned checkpoint visible in the [stack activity tab](/docs/deployments/projects-and-stacks/#stack-activity), giving you full rollback capability. This is a common concern for teams currently storing state in S3 buckets.
 
