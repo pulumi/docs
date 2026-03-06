@@ -23,7 +23,7 @@ aliases:
     - /blog/pulumi-now-supports-azure-devops-and-gitlab/
 ---
 
-Your version control provider shouldn't limit your infrastructure workflows. Pulumi Cloud now works with [GitHub](/docs/integrations/github-app/), [GitHub Enterprise Server](/docs/integrations/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/integrations/azure-devops-integration/), and [GitLab](/docs/integrations/gitlab/). Every team gets the same deployment pipelines, PR previews, and AI-powered change summaries regardless of where their code lives.
+Your version control provider shouldn't limit your infrastructure workflows. Pulumi Cloud now works with [GitHub](/docs/integrations/github-app/), [GitHub Enterprise Server](/docs/integrations/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/integrations/azure-devops-integration/), and [GitLab](/docs/integrations/gitlab/). Every team gets the same [deployment pipelines](/docs/deployments/deployments/), [PR previews](/docs/deployments/deployments/review-stacks/), and [AI-powered change summaries](/docs/ai/) regardless of where their code lives.
 
 <!--more-->
 
