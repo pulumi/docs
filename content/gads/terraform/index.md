@@ -7,7 +7,7 @@ utm_source: gads-terraform
 aliases:
     - /gads/gads-template
 
-heading: "Terraform Free Tier Ending March 31"
+heading: "Terraform Free Tier Ends Mar 31"
 subheading: |
     HCP Terraform's legacy Free plan ends March 31, 2026. Pulumi is free, open source,
     and has no resource caps. Switch to real programming languages for your infrastructure.
