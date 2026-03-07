@@ -78,7 +78,7 @@ Go to **Settings** > **Access Management** > **Teams**, select a team, and assig
 
 For users with unique access requirements, go to **Settings** > **Access Management** > **Members**, select a user, and assign a Custom Role directly.
 
-**<span style="color:red">Placeholder: add a video on Custom Roles</span>**
+{{< video title="Custom Roles with Tag-Based Access Control" src="abac-demo.mp4" controls="true" autoplay="true" loop="true" >}}
 
 ## Enforce tagging standards with Pulumi Policy
 
