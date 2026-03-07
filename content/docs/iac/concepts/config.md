@@ -463,8 +463,26 @@ public static void stack(Context ctx) {
 {{% /choosable %}}
 {{% choosable language yaml %}}
 
+In Pulumi YAML, you declare the config inputs your program accepts using the `config` block in your `Pulumi.yaml` file. To work with structured (object) configuration, declare the key with `type: object`. The value is then passed in from the stack configuration file using `pulumi config set --path`, and you reference the whole object or individual properties in your program via `${data}` interpolation.
+
 ```yaml
-# Pulumi YAML config values are currently limited to String, Number, List<String> and List<Number>
+name: my-project
+runtime: yaml
+config:
+  data:
+    type: object
+    default:
+      active: true
+      nums:
+        - 1
+        - 2
+        - 3
+resources:
+  my-bucket:
+    type: aws:s3:BucketV2
+    properties:
+      tags:
+        Active: ${data.active}
 ```
 
 {{% /choosable %}}
@@ -498,7 +516,7 @@ config:
 
 You can access these nested values in your program like this:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -589,6 +607,31 @@ var endpoint = (String) apiConfig.get("endpoint");  // "https://api.example.com"
 var timeout = (Integer) apiConfig.get("timeout");   // 30
 var headers = (Map<String, String>) apiConfig.get("headers");
 var authHeader = headers.get("authorization");  // "Bearer token123"
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+In Pulumi YAML, declare the object config input in your `Pulumi.yaml` file, then reference its properties using dot notation in interpolation expressions.
+
+```yaml
+name: my-project
+runtime: yaml
+config:
+  api:
+    type: object
+    default:
+      endpoint: https://api.example.com
+      timeout: 30
+      headers:
+        authorization: Bearer token123
+        content-type: application/json
+outputs:
+  # Access nested properties using dot notation in interpolation expressions
+  endpoint: ${api.endpoint}
+  timeout: ${api.timeout}
+  authHeader: ${api.headers.authorization}
 ```
 
 {{% /choosable %}}
