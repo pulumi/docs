@@ -112,6 +112,31 @@ From there, select the transfer destination and tick any stacks you'd like to tr
 
 To learn more about this process, see [Transferring Stacks](/docs/deployments/projects-and-stacks#transferring-stacks).
 
+### How can I delete a Pulumi Organization?
+
+Organization deletion is a permanent action and can only be performed by an organization admin.
+
+In the Pulumi Cloud, open your organization in <https://app.pulumi.com>, go to **Settings**, and use the **Delete organization** option.
+
+If you don't see this option, confirm you're an org admin.
+
+### I created my Pulumi account before receiving an invite from my company's Pulumi org? How do I link my account to their org?
+
+To join your company's organization, you must sign in with the identity provider that organization is backed by (for example, GitHub, GitLab, SAML/SSO, or email).
+
+If you already have a Pulumi account, go to your profile in <https://app.pulumi.com> and connect that identity provider, then accept the organization invite.
+
+If this fails, delete your account, then accept the organization invite.
+
+## Account
+
+### How can I delete my Pulumi Account?
+
+You can delete your personal account from your account settings in <https://app.pulumi.com>.
+
+Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
+
+
 ## Pricing
 
 ### How do I get started for free?
@@ -179,6 +204,13 @@ The following editions are also available as upgrade options:
 
 For more information about the specific differences and capabilities offered for the
 Pulumi Team, Enterprise and Business Critical editions, refer to the [pricing page](/pricing/).
+
+### How can I update my payment information?
+
+Self-serve organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in <https://app.pulumi.com> under **Payment methods**.
+
+If you need to delegate billing-only access, see [Billing Managers](/docs/administration/organizations-teams/billing-managers/).
+
 
 ## GitLab Support
 
