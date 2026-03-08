@@ -158,29 +158,37 @@ examples:
     - id: code-timer
       title: Super-simple serverless cron jobs
       body: >
-          Pulumi’s Cloud Framework has a timer module that lets you schedule cron jobs that run
-          serverless functions. This is the easiest way to get up and running with serverless
-          functions, because you don’t even need any other resources to trigger events from.
+          Pulumi makes it straightforward to schedule serverless functions on a cron schedule.
+          Using AWS EventBridge (CloudWatch Events), you can trigger a Lambda function on any
+          schedule without needing to manage additional orchestration infrastructure.
 
 
-          There are several ways to schedule a timer, depending on your stylistic preferences. These
-          examples simply print the current time to the console on a given interval.
+          Schedules can be specified using either a rate expression or a cron expression.
+          These examples create an EventBridge rule and wire it to a Lambda function that
+          prints the current time to the console every minute.
       code: |
           import * as aws from "@pulumi/aws";
 
-          // Run a timer every minute:
-          aws.cloudwatch.onSchedule("everyMinute", "rate(1 minute)", async (event) => {
-              console.log(`everyMinute: ${Date.now()}`);
+          const rule = new aws.cloudwatch.EventRule("everyMinute", {
+              scheduleExpression: "rate(1 minute)",
           });
 
-          // Run a timer every minute (cron-style expression):
-          aws.cloudwatch.onSchedule("everyMinuteCron", "cron(0 * * * * *)", async (event) => {
-              console.log(`everyMinuteCron: ${Date.now()}`);
+          const fn = new aws.lambda.CallbackFunction("handler", {
+              callback: async () => {
+                  console.log(`everyMinute: ${Date.now()}`);
+              },
           });
 
-          // Run a timer every day at 7:30 UTC:
-          aws.cloudwatch.onSchedule("everyDay730", "cron(30 7 * * ? *)", async (event) => {
-              console.log(`everyDay730: ${Date.now()}`);
+          new aws.lambda.Permission("allow-events", {
+              function: fn,
+              action: "lambda:InvokeFunction",
+              principal: "events.amazonaws.com",
+              sourceArn: rule.arn,
+          });
+
+          new aws.cloudwatch.EventTarget("everyMinuteTarget", {
+              rule: rule.name,
+              arn: fn.arn,
           });
       cta:
           url: /docs/get-started/
@@ -189,34 +197,35 @@ examples:
     - id: code-queue
       title: Post AWS SQS Messages to Slack
       body: >
-          This example wires up a serverless AWS Lambda to an AWS SQS queue and demonstrates posting
-          a message to Slack. This program provisions resources using Pulumi's deployment system,
-          but lets you write serverless code as ordinary JavaScript functions.
+          This example wires up an AWS Lambda to an SQS queue and posts a message to Slack
+          whenever a new item arrives. Pulumi provisions all the infrastructure, while you
+          write the event handler as an ordinary JavaScript function.
       code: |
-          let aws = require("@pulumi/aws");
-          let serverless = require("@pulumi/aws-serverless");
-          let config = require("./config");
+          import * as aws from "@pulumi/aws";
 
-          let queue = new aws.sqs.Queue("mySlackQueue", { visibilityTimeoutSeconds: 180 });
+          const queue = new aws.sqs.Queue("mySlackQueue", { visibilityTimeoutSeconds: 180 });
 
-          serverless.queue.subscribe("mySlackPoster",
-              queue, async (e) => {
-              let slack = require("@slack/client");
-              let client = new slack.WebClient(config.slackToken);
-              for (let rec of e.Records) {
-                  await client.chat.postMessage({
-                      channel: config.slackChannel,
-                      text: `*Msg ${rec.messageId}*:\n${rec.body}\n`+
-                          `(with :love_letter: from Pulumi)`,
-                      as_user: true,
-                  });
-                  console.log(`Posted SQS message ${rec.messageId} to ${config.slackChannel}`);
-              }
-          }, { batchSize: 1 });
+          const fn = new aws.lambda.CallbackFunction("mySlackPoster", {
+              callback: async (event: aws.sqs.QueueEvent) => {
+                  const { WebClient } = require("@slack/web-api");
+                  const client = new WebClient(process.env.SLACK_TOKEN);
+                  for (const rec of event.Records) {
+                      await client.chat.postMessage({
+                          channel: process.env.SLACK_CHANNEL!,
+                          text: `*Msg ${rec.messageId}*:\n${rec.body}\n(with :love_letter: from Pulumi)`,
+                      });
+                      console.log(`Posted SQS message ${rec.messageId}`);
+                  }
+              },
+          });
 
-          module.exports = {
-              queueURL: queue.id,
-          };
+          new aws.lambda.EventSourceMapping("queueTrigger", {
+              eventSourceArn: queue.arn,
+              functionName: fn.arn,
+              batchSize: 1,
+          });
+
+          export const queueURL = queue.id;
       cta:
           url: /docs/get-started/
           label: Get Started
