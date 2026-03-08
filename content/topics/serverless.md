@@ -164,7 +164,7 @@ examples:
 
 
           Schedules can be specified using either a rate expression or a cron expression.
-          These examples create an EventBridge rule and wire it to a Lambda function that
+          This example creates an EventBridge rule and wires it to a Lambda function that
           prints the current time to the console every minute.
       code: |
           import * as aws from "@pulumi/aws";
@@ -199,7 +199,7 @@ examples:
       body: >
           This example wires up an AWS Lambda to an SQS queue and posts a message to Slack
           whenever a new item arrives. Pulumi provisions all the infrastructure, while you
-          write the event handler as an ordinary JavaScript function.
+          write the event handler as an ordinary TypeScript function.
       code: |
           import * as aws from "@pulumi/aws";
 
