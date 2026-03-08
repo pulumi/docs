@@ -47,6 +47,14 @@ These scopes control access to Pulumi's AI features, including [Pulumi Neo](/doc
 | `ai_conversations:read` | Access and view the content of Copilot conversations. This allows users to read their own conversations and continue previous interactions.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `ai_conversations:update` | Modify and continue existing Copilot conversations. This enables users to update their conversations with new questions or context.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
+## Change requests (approvals)
+
+| Value | Description |
+|-------|-------------|
+| `change_gate:create` | Create approval rules (change gates) that require approval before deployments or changes proceed.<br><br>**Granted by default roles**: `Admin` |
+| `change_gate:update` | Modify existing approval rules and their conditions.<br><br>**Granted by default roles**: `Admin` |
+| `change_gate:delete` | Remove approval rules (change gates).<br><br>**Granted by default roles**: `Admin` |
+
 ## Deployments
 
 | Value | Description |
@@ -61,7 +69,6 @@ These scopes control access to Pulumi's AI features, including [Pulumi Neo](/doc
 | Value | Description |
 |-------|-------------|
 | `environment:create` | Create a new environment for managing infrastructure configurations. Environments provide isolated spaces for different deployment stages.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `environment:list` | View all environments in the organization. This provides a list of available environments and their basic information.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `environment:list_deleted` | View a list of environments that have been recently deleted but are still recoverable.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `environment:restore_deleted` | Recover a previously deleted environment. This restores the environment and its configurations to their previous state.<br><br>**Granted by default roles**: `Admin` |
 | `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default permission set**: `Environment Read` |
@@ -72,7 +79,6 @@ These scopes control access to Pulumi's AI features, including [Pulumi Neo](/doc
 | Value | Description |
 |-------|-------------|
 | `insights_account:create` | Create a new insights account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `Admin` |
-| `insights_account:list` | View all insights accounts in the organization, subject to having `account:read` permissions on specific accounts.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Insights Policy
 
@@ -86,7 +92,10 @@ These scopes control access to Pulumi's AI features, including [Pulumi Neo](/doc
 | `policy_pack:delete` | Remove an existing Infrastructure as Code policy pack. This permanently deletes the policy pack and its configurations.<br><br>**Granted by default roles**: `Admin` |
 | `policy_pack:read` | View Infrastructure as Code policy pack contents. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Admin` |
 | `policy_pack:update` | Modify an existing Infrastructure as Code policy pack. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
+| `policy_results:create` | Create policy evaluation results for an insights account.<br><br>**Granted by default roles**: `Admin` |
 | `policy_results:read` | View results of Infrastructure as Code policy evaluations. This provides insights into policy compliance and violations.<br><br>**Granted by default roles**: `Admin` |
+| `policy_results:update` | Update policy evaluation results and compliance data.<br><br>**Granted by default roles**: `Admin` |
+| `policy_results:delete` | Delete policy evaluation results.<br><br>**Granted by default roles**: `Admin` |
 
 ## Membership
 
@@ -112,7 +121,7 @@ These scopes control access to Pulumi's AI features, including [Pulumi Neo](/doc
 | `oidc_issuers:regenerate_thumbprints` | Regenerate security thumbprints for an OIDC issuer. This is used to maintain secure authentication.<br><br>**Granted by default roles**: `Admin` |
 | `oidc_issuers:update` | Modify OIDC issuer settings. This allows updating identity provider details and authentication parameters.<br><br>**Granted by default roles**: `Admin` |
 | `auth_policies:read` | View authentication policy configurations. This includes access to OIDC, SAML, and other identity provider settings.<br><br>**Granted by default roles**: `Admin` |
-| `auth_policies:update` | Modify authentication policies and identity provider settings. This allows updating security configurations
+| `auth_policies:update` | Modify authentication policies and identity provider settings. This allows updating security configurations.<br><br>**Granted by default roles**: `Admin` |
 
 ## Organization
 
@@ -186,21 +195,11 @@ These scopes control access to Pulumi's AI features, including [Pulumi Neo](/doc
 | `scim:read` | Allows viewing SCIM configuration and integration settings.<br><br>**Granted by default roles**: `Admin` |
 | `scim:update` | Allows modifying SCIM configuration and integration settings.<br><br>**Granted by default roles**: `Admin` |
 
-## Services
-
-| Value | Description |
-|-------|-------------|
-| `services:admin` | Allows full administrative control over service configurations and settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `services:create` | Allows creating new service instances and configurations.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `services:read` | Allows viewing service configurations and their current state.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `services:write` | Allows modifying existing service configurations and settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
-
 ## Stacks
 
 | Value | Description |
 |-------|-------------|
 | `stack:create` | Create a new stack for managing infrastructure resources. Stacks represent isolated units of deployment.<br><br>**Granted by default roles**: `Admin` |
-| `stack:list` | View all stacks in the organization, subject to having `stack:read` permissions on specific stacks.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `stack:list_deleted` | View a list of stacks that have been recently deleted but are still recoverable.<br><br>**Granted by default roles**: `Admin` |
 | `stack:restore_deleted` | Recover a previously deleted stack. This restores the stack and its configurations to their previous state.<br><br>**Granted by default roles**: `Admin` |
 | `stack_access:read` | View information about the users and teams that have access to a stack.<br><br>**Granted by default roles**: `Member`, `Admin` |
