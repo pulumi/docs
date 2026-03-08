@@ -463,14 +463,14 @@ public static void stack(Context ctx) {
 {{% /choosable %}}
 {{% choosable language yaml %}}
 
-In Pulumi YAML, you declare the config inputs your program accepts using the `config` block in your `Pulumi.yaml` file. To work with structured (object) configuration, declare the key with `type: object`. The value is then passed in from the stack configuration file using `pulumi config set --path`, and you reference the whole object or individual properties in your program via `${data}` interpolation.
+In Pulumi YAML, you declare the config inputs your program accepts using the `config` block in your `Pulumi.yaml` file. To work with structured (object) configuration, declare the key with `type: Object`. Pass the value from the stack configuration file using `pulumi config set --path`, and reference the whole object or individual properties in your program using `${configKey}` interpolation.
 
 ```yaml
 name: my-project
 runtime: yaml
 config:
   data:
-    type: object
+    type: Object
     default:
       active: true
       nums:
@@ -620,7 +620,7 @@ name: my-project
 runtime: yaml
 config:
   api:
-    type: object
+    type: Object
     default:
       endpoint: https://api.example.com
       timeout: 30
