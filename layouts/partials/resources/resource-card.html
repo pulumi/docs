@@ -1,0 +1,41 @@
+{{ $labels := dict
+    "ai-and-automation" "AI and Automation"
+    "policy-as-code" "Policy as Code"
+    "secrets-management" "Secrets Management"
+    "multi-cloud" "Multi-Cloud"
+    "kubernetes" "Kubernetes"
+    "infrastructure-unification" "Infrastructure Unification"
+    "security-and-compliance" "Security & Compliance"
+    "infrastructure-at-scale" "Infrastructure at Scale"
+}}
+<a href="{{ .RelPermalink }}" class="group block bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg hover:border-purple-300 transition-all">
+    {{ with .Params.content_type }}
+        {{ $badgeColor := "bg-violet-100 text-violet-700" }}
+        {{ if eq . "comparison-guide" }}
+            {{ $badgeColor = "bg-blue-100 text-blue-700" }}
+        {{ else if eq . "solution-guide" }}
+            {{ $badgeColor = "bg-green-100 text-green-700" }}
+        {{ end }}
+        <span class="inline-block px-2.5 py-0.5 text-xs font-medium rounded-full {{ $badgeColor }} mb-3">
+            {{ index $labels . | default (replace . "-" " " | title) }}
+        </span>
+    {{ end }}
+    <h3 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors mb-3">
+        {{ .Title }}
+    </h3>
+    <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+        {{ .Params.meta_desc }}
+    </p>
+    <div class="flex flex-wrap gap-2">
+        {{ range .Params.solution_areas }}
+            <span class="text-xs px-2 py-1 rounded-full bg-purple-50 text-purple-700">
+                {{ index $labels . | default (replace . "-" " " | title) }}
+            </span>
+        {{ end }}
+        {{ range .Params.capabilities }}
+            <span class="text-xs px-2 py-1 rounded-full bg-purple-50 text-purple-700">
+                {{ index $labels . | default (replace . "-" " " | title) }}
+            </span>
+        {{ end }}
+    </div>
+</a>

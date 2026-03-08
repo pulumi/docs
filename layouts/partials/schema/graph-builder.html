@@ -171,6 +171,34 @@
   {{ $graph = $graph | append $software }}
 {{ end }}
 
+{{/* Add FAQPage schema for resource library pages with frontmatter faq */}}
+{{ if and (eq .Type "resources") .IsPage .Params.faq }}
+  {{ $faqQuestions := slice }}
+  {{ range .Params.faq }}
+    {{ if and .question .answer }}
+      {{ $qa := dict
+        "@type" "Question"
+        "name" .question
+        "acceptedAnswer" (dict
+          "@type" "Answer"
+          "text" .answer
+        )
+      }}
+      {{ $faqQuestions = $faqQuestions | append $qa }}
+    {{ end }}
+  {{ end }}
+  {{ if $faqQuestions }}
+    {{ $faqSchema := dict
+      "@type" "FAQPage"
+      "mainEntity" $faqQuestions
+      "url" .Permalink
+      "name" (printf "%s - FAQ" .Title)
+      "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+    }}
+    {{ $graph = $graph | append $faqSchema }}
+  {{ end }}
+{{ end }}
+
 {{/* Add video schema if page contains YouTube videos */}}
 {{ if not .IsHome }}
   {{ $videoEntity := partial "schema/collectors/video-entity.html" . }}

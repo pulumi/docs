@@ -1,0 +1,143 @@
+{{/* Returns Article entity for resource library pages in @graph */}}
+
+{{/* Get content for analysis */}}
+{{ $content := .Content | plainify }}
+{{ $wordCount := $content | countwords }}
+{{ if not $wordCount }}
+  {{ $wordCount = 500 }}
+{{ end }}
+
+{{/* Build Article entity */}}
+{{ $schema := dict
+  "@type" "Article"
+  "@id" "#main-content"
+  "headline" .Title
+  "url" .Permalink
+  "wordCount" $wordCount
+  "inLanguage" "en-US"
+}}
+
+{{/* Add articleSection from content_type */}}
+{{ with .Params.content_type }}
+  {{ $schema = merge $schema (dict "articleSection" (replace . "-" " " | title)) }}
+{{ end }}
+
+{{/* Add dates - use last_reviewed for dateModified when available */}}
+{{ $publishDate := .PublishDate }}
+{{ $modifiedDate := .Lastmod }}
+
+{{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
+  {{ if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $publishDate = .GitInfo.AuthorDate }}
+  {{ else }}
+    {{ $publishDate = now }}
+  {{ end }}
+{{ end }}
+
+{{/* Prefer last_reviewed for dateModified (freshness signal for AEO) */}}
+{{ with .Params.last_reviewed }}
+  {{ $modifiedDate = time . }}
+{{ else }}
+  {{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
+    {{ if and $.GitInfo $.GitInfo.AuthorDate }}
+      {{ $modifiedDate = $.GitInfo.AuthorDate }}
+    {{ else }}
+      {{ $modifiedDate = $publishDate }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $schema = merge $schema (dict
+  "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
+  "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
+) }}
+
+{{/* Add description */}}
+{{ with (or .Params.meta_desc .Summary) }}
+  {{ $schema = merge $schema (dict "description" .) }}
+{{ end }}
+
+{{/* Add image */}}
+{{ $image := "" }}
+{{ if .Params.meta_image }}
+  {{ $baseURL := .Permalink }}
+  {{ if not (strings.HasSuffix $baseURL "/") }}
+    {{ $baseURL = printf "%s/" $baseURL }}
+  {{ end }}
+  {{ $imagePath := .Params.meta_image }}
+  {{ if strings.HasPrefix $imagePath "/" }}
+    {{ $imagePath = strings.TrimPrefix "/" $imagePath }}
+  {{ end }}
+  {{ $image = printf "%s%s" $baseURL $imagePath }}
+{{ else }}
+  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
+{{ end }}
+{{ $schema = merge $schema (dict "image" $image) }}
+
+{{/* Add keywords from tags + capabilities */}}
+{{ $keywords := slice }}
+{{ with .Params.tags }}
+  {{ range . }}
+    {{ $keywords = $keywords | append . }}
+  {{ end }}
+{{ end }}
+{{ with .Params.capabilities }}
+  {{ range . }}
+    {{ $keywords = $keywords | append (replace . "-" " ") }}
+  {{ end }}
+{{ end }}
+{{ if $keywords }}
+  {{ $schema = merge $schema (dict "keywords" (delimit ($keywords | uniq) ", ")) }}
+{{ end }}
+
+{{/* Add authors */}}
+{{ $authors := slice }}
+{{ with .Params.authors }}
+  {{ range . }}
+    {{ $authorData := index $.Site.Data.team.team . }}
+    {{ if $authorData }}
+      {{ $authorEntity := dict
+        "@type" "Person"
+        "@id" (printf "https://www.pulumi.com/authors/%s/#person" $authorData.id)
+        "name" $authorData.name
+        "url" (printf "https://www.pulumi.com/authors/%s/" $authorData.id)
+        "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+      }}
+      {{ $authors = $authors | append $authorEntity }}
+    {{ else }}
+      {{ $authorEntity := dict
+        "@type" "Person"
+        "@id" (printf "https://www.pulumi.com/authors/%s/#person" (. | urlize))
+        "name" (replace . "-" " " | title)
+        "url" (printf "https://www.pulumi.com/authors/%s/" (. | urlize))
+        "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+      }}
+      {{ $authors = $authors | append $authorEntity }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ $authors = $authors | append (dict
+    "@type" "Person"
+    "name" "Pulumi Team"
+    "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+  ) }}
+{{ end }}
+{{ if $authors }}
+  {{ $schema = merge $schema (dict "author" $authors) }}
+{{ end }}
+
+{{/* Add publisher reference */}}
+{{ $schema = merge $schema (dict
+  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+) }}
+
+{{/* Add article body (truncated for schema) */}}
+{{ $articleBody := $content | truncate 5000 }}
+{{ $schema = merge $schema (dict "articleBody" $articleBody) }}
+
+{{/* Add mainEntityOfPage reference */}}
+{{ $schema = merge $schema (dict
+  "mainEntityOfPage" (dict "@id" (printf "%s#webpage" .Permalink))
+) }}
+
+{{ return $schema }}
