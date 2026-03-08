@@ -5,7 +5,7 @@ pulumi-tertiary-nav {
         @apply flex justify-evenly items-center flex-wrap text-base px-4;
         list-style: none !important;
 
-        @screen md {
+        @include screen-md {
             @apply text-base py-0;
         }
 
@@ -15,7 +15,7 @@ pulumi-tertiary-nav {
             > a {
                 @apply block py-2 px-4 font-normal text-lg text-center text-gray-700 no-underline cursor-pointer;
 
-                @screen md {
+                @include screen-md {
                     @apply py-4;
                 }
             }

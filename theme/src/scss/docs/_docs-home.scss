@@ -29,22 +29,22 @@ section.docs-home {
             @apply max-w-2xl;
         }
 
-        @screen md {
+        @include screen-md {
             @apply bg-auto;
             background-image: url("/images/docs/docs-home-header-background-tablet.svg");
         }
 
-        @screen lg {
+        @include screen-lg {
             background-image: url("/images/docs/docs-home-header-background-desktop.svg");
         }
 
-        @screen xl {
+        @include screen-xl {
             .docs-content-width-expanded & {
                 background-image: url("/images/docs/docs-home-header-background-desktop-wide.svg");
             }
         }
 
-        @screen xxl {
+        @include screen-xxl {
             .docs-content-width-expanded & {
                 p {
                     @apply max-w-2xl;

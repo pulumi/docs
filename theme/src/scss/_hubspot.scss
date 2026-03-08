@@ -106,7 +106,7 @@
         input {
             @apply block py-3 px-4 rounded-lg border;
 
-            @screen md {
+            @include screen-md {
                 @apply w-56;
             }
 
@@ -126,7 +126,7 @@
         &.newsletter-wide input {
             @apply w-full;
 
-            @screen lg {
+            @include screen-lg {
                 width: 24rem;
             }
 

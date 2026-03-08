@@ -153,13 +153,13 @@ $violet-primary: #673EAC;
     }
 
     .features-content {
-        @screen xl {
+        @include screen-xl {
             width: 37.5%;
         }
     }
 
     .features-image {
-        @screen xl {
+        @include screen-xl {
             width: 62.5%;
         }
     }
@@ -231,7 +231,7 @@ $violet-primary: #673EAC;
     .template-testimonial-quote {
         @apply text-white font-body font-semibold leading-normal;
         font-size: 24px;
-        @screen sm {
+        @include screen-sm {
             font-size: 36px;
         }
     }

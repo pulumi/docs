@@ -33,7 +33,7 @@
             max-height: 20rem;
             transition: max-height 0.5s ease-in;
 
-            @screen lg {
+            @include screen-lg {
                 max-height: 10rem;
             }
         }
@@ -42,7 +42,7 @@
             max-height: 120rem;
             transition: max-height 1s ease-in;
 
-            @screen md {
+            @include screen-md {
                 max-height: 90rem;
             }
         }
