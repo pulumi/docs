@@ -75,6 +75,8 @@ between the API and the database. The API also supports [exporting OpenTelemetry
 | PULUMI_DATABASE_NAME     | The name of the database on the database server.                                                                                             |
 | PULUMI_API_DOMAIN        | The internet or network-local domain using which the API service can be reached, e.g. `pulumiapi.acmecorp.com`. Default is `localhost:8080`. |
 | PULUMI_CONSOLE_DOMAIN    | The internet or network-local domain using which the Console can be reached, e.g. `pulumiconsole.acmecorp.com`. Default is `localhost:3000`. |
+| PULUMI_ENGINE_EVENTS_SCHEMA_V2 | Set this environment variable to `true` for fresh installs. **If you have an existing installation and the environment variable is currently not set or set to `false`, contact [Pulumi support](/support/) before setting it to `true`.** |
+| PULUMI_ENGINE_EVENTS_LEGACY_WRITE | Set this environment variable to `false` for fresh installs. **If you have an existing installation and the environment variable is currently not set or set to `true` in your installation, contact [Pulumi support](/support/) before setting it to `false`.** |
 
 ## Object storage
 
