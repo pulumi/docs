@@ -1,8 +1,8 @@
 ---
 title_tag: "Security Hardening | Self-Hosting Pulumi"
 meta_desc: Security hardening best practices for self-hosted Pulumi Cloud including network security, encryption, SMTP, and bot protection.
-title: Security hardening
-h1: Security hardening
+title: Security Hardening
+h1: Security Hardening
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:

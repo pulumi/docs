@@ -1,8 +1,8 @@
 ---
 title_tag: "Backup and Recovery | Self-Hosting Pulumi"
 meta_desc: Backup strategies, recovery procedures, and RTO targets for self-hosted Pulumi Cloud deployments.
-title: Backup and recovery
-h1: Backup and recovery
+title: Backup and Recovery
+h1: Backup and Recovery
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:

@@ -2,7 +2,7 @@
 title_tag: "Networking and Load Balancing | Self-Hosting Pulumi"
 meta_desc: Best practices for multi-AZ deployment, network architecture, auto-scaling, load balancing, TLS, and DNS for self-hosted Pulumi Cloud.
 title: Networking
-h1: Networking and load balancing
+h1: Networking and Load Balancing
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:

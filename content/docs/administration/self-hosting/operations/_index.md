@@ -2,7 +2,7 @@
 title_tag: "Operations Guide | Self-Hosting Pulumi"
 meta_desc: Production operations guide for self-hosted Pulumi Cloud covering high availability, disaster recovery, monitoring, sizing, and security hardening.
 title: Operations
-h1: Self-hosted operations guide
+h1: Self-Hosted Operations Guide
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:

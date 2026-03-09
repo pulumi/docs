@@ -2,7 +2,7 @@
 title_tag: "Monitoring and Alerting | Self-Hosting Pulumi"
 meta_desc: Best practices for monitoring, alerting, and anomaly detection for self-hosted Pulumi Cloud deployments.
 title: Monitoring
-h1: Monitoring and alerting
+h1: Monitoring and Alerting
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:

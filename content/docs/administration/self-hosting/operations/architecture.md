@@ -2,7 +2,7 @@
 title_tag: "Architecture Overview | Self-Hosting Pulumi"
 meta_desc: Architecture overview for self-hosted Pulumi Cloud covering core components, supporting infrastructure, and data flow.
 title: Architecture
-h1: Self-hosted architecture overview
+h1: Self-Hosted Architecture Overview
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:

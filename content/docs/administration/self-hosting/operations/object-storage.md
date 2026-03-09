@@ -1,8 +1,8 @@
 ---
 title_tag: "Object Storage Best Practices | Self-Hosting Pulumi"
 meta_desc: Best practices for object storage configuration, bucket architecture, versioning, and lifecycle management for self-hosted Pulumi Cloud.
-title: Object storage
-h1: Object storage best practices
+title: Object Storage
+h1: Object Storage Best Practices
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
