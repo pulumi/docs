@@ -232,7 +232,7 @@ Of course, this same methodology can be used on any of the events exposed by Sla
 
 ![arti-react.png](./arti-react.png)
 
-To learn more about extending this bot, see [Slack Bolt's documentation](https://slack.dev/bolt-python/concepts#basic).
+To learn more about extending this bot, see [Slack Bolt's documentation](https://docs.slack.dev/tools/bolt-python/concepts/).
 
 ## Conclusion
 
