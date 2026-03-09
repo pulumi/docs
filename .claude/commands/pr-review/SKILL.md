@@ -121,7 +121,35 @@ Check if PR contains dependency or infrastructure changes. See `pr-review:refere
 
 ### Step 5: Perform Comprehensive Review
 
-Review all files against STYLE-GUIDE.md compliance: spelling, grammar, links, code examples, file moves with aliases, images, frontmatter, and cross-references. Apply role-specific guidelines per content type. See `_common:review-criteria` for full criteria.
+#### 5a: Read full file contents
+
+For every changed content file (`.md`, `.html`, or template files), read the **entire file** — not just the diff. This enables catching pre-existing issues that exist outside the changed lines.
+
+#### 5b: Style guide compliance
+
+Review the full file content against STYLE-GUIDE.md. See `_common:review-criteria` for full criteria. Apply role-specific guidelines per content type.
+
+For each issue found, classify it as one of:
+
+- **PR-introduced**: The issue is within lines added or modified by this PR's diff.
+- **Pre-existing**: The issue exists in the file but was not introduced by this PR.
+
+#### 5c: Code snippet verification
+
+For every code example in changed files — both inline fenced code blocks and referenced `/static/programs/` files — verify correctness using the code examples criteria in `_common:review-criteria`. Read the full source of any referenced program files.
+
+#### 5d: Program tests
+
+If files under `static/programs/` are changed:
+
+1. Check `scripts/programs/ignore.txt` — if the program is listed there, note it is ignored and skip testing.
+2. For non-ignored programs, run:
+
+   ```bash
+   ONLY_TEST="program-name" ./scripts/programs/test.sh
+   ```
+
+3. Report pass/fail results in the review summary.
 
 **Large diffs (>100 lines)**: Summarize findings by category rather than line-by-line.
 
@@ -129,23 +157,38 @@ Continue to Step 6.
 
 ### Step 6: Summarize Review Findings
 
-Present review results in terminal-friendly format:
+Present review results in terminal-friendly format. Separate PR-introduced issues from pre-existing ones:
 
 ```markdown
 ## 📋 Review Summary
 
 **Overall Assessment**: [Clean/Minor issues/Issues found/Critical issues]
 
-### Findings
+### Issues introduced by this PR
 
 **[Category]**: [Brief summary]
-- Line X: [Issue description]
-- Line Y: [Issue description]
+- file:line: [Issue description]
+
+### Pre-existing issues
+
+These were not introduced by this PR but are improvement opportunities.
+
+**[Category]**: [Brief summary]
+- file:line: [Issue description]
+
+### Code verification results
+
+- `program-name`: [✅ pass / ❌ fail / ⏭️ ignored / 🔍 syntax-only]
+- Inline snippet (file:line): [✅ valid / ⚠️ issue description]
 
 ### Recommendations
 
 [Specific recommendations based on findings]
 ```
+
+**Assessment criteria**: Only **PR-introduced issues** determine the overall assessment level (Clean / Minor issues / Issues found / Critical issues). Pre-existing issues alone do not block approval — they are surfaced as improvement opportunities.
+
+**Note for Step 7**: When offering "Make changes and approve", include both PR-introduced and pre-existing issues as fix candidates.
 
 Continue to Step 7.
 
