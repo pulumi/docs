@@ -1,4 +1,4 @@
-name: new-tf-provider-py
+name: tf-state-ref-python
 description: A minimal Python Pulumi program
 runtime:
   name: python

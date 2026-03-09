@@ -1,4 +1,4 @@
-name: my-terraform-state-example
+name: tf-state-ref-yaml
 runtime: yaml
 
 variables:
