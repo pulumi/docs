@@ -42,13 +42,55 @@ The supported expression forms for each of these is detailed below.
 
 In beta, Pulumi YAML projects used the `configuration` key. This will eventually be deprecated; switching from `configuration` to `config` will not break existing projects.
 
-The value of `configuration` is an object whose keys are logical names by which the config input will be referenced in expressions within the program, and whose values are elements of the schema below.  Each item in this object represents an independent config input. Either `type` or `default` is required.
+The value of `config` is an object whose keys are logical names by which the config input will be referenced in expressions within the program, and whose values are elements of the schema below. Each item in this object represents an independent config input. Either `type` or `default` is required.
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
-| `type` | string | No | No | Type is the (required) data type for the parameter. It can be one of: `String`, `Number`, `List<Number>`, or `List<String>`. |
+| `type` | string | No | No | The data type for the config value. Valid types are: `String`, `Number`, `Integer`, `Boolean`, `Object`, `List<String>`, `List<Number>`, `List<Integer>`, `List<Boolean>`, and `List<Object>`. |
 | `default` | any | No | No | Default is a value of the appropriate type for the template to use if no value is specified. |
 | `secret` | bool | No | No | Secret specifies if the config value should be encrypted as a secret. |
+
+The following example demonstrates several common config declarations, including scalar types, secrets, lists, and objects:
+
+```yaml
+name: my-project
+runtime: yaml
+config:
+  # A required string value (no default)
+  environment:
+    type: String
+  # A number with a default
+  replicas:
+    type: Number
+    default: 3
+  # A secret string (encrypted at rest)
+  databasePassword:
+    type: String
+    secret: true
+  # A list of strings
+  allowedRegions:
+    type: List<String>
+    default:
+      - us-east-1
+      - us-west-2
+  # An object (map of string keys to any values)
+  apiConfig:
+    type: Object
+    default:
+      endpoint: https://api.example.com
+      timeout: 30
+resources:
+  my-bucket:
+    type: aws:s3:BucketV2
+    properties:
+      tags:
+        Environment: ${environment}
+outputs:
+  # Reference the whole object or individual properties using dot notation
+  apiEndpoint: ${apiConfig.endpoint}
+```
+
+Config values are set using `pulumi config set` for scalar types, `pulumi config set --path` for nested object properties, and `pulumi config set --secret` for secrets. They are referenced in your program using `${configKey}` interpolation expressions, with dot notation (`${configKey.property}`) for accessing properties within object-typed values.
 
 ### Resources
 
