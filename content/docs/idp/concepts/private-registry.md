@@ -46,7 +46,7 @@ Each package page also includes a "Used by" tab showing which stacks use that pa
 
 [Pulumi Components](/docs/iac/concepts/resources/components/) are a way to encapsulate resources in a reusable manner. Components are also a powerful way for platform teams to integrate security, compliance, and operational requirements into golden paths so that developers don't need to worry about it. Once a component is pushed to GitHub or GitLab, it is published to an organization's private registry using the `publish` CLI command. Pulumi automatically introspects the component schema and generates API docs, which are displayed in the registry.
 
-For detailed information about different component packaging approaches, see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-a-component/).
+For detailed information about different component packaging approaches, see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/).
 
 ### Publishing Components
 

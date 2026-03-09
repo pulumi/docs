@@ -2911,6 +2911,6 @@ Success! We were able to use our component as just a single resource within our 
 
 ## Next steps
 
-Now that you've built a component, you can package and distribute it for reuse. See [Packaging Components](/docs/iac/guides/building-extending/components/packaging-a-component/) to learn about single-language, cross-language, and provider-based packaging approaches.
+Now that you've built a component, you can package and distribute it for reuse. See [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) to learn about single-language, cross-language, and provider-based packaging approaches.
 
 For testing strategies, see [Testing Components](/docs/iac/guides/building-extending/components/testing-components/).

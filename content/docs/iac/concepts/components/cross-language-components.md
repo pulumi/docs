@@ -8,8 +8,6 @@ menu:
     iac:
         parent: iac-concepts-components
         weight: 5
-aliases:
-- /docs/iac/concepts/components/cross-language-components/
 ---
 
 Cross-language components support consumption in any Pulumi language. You implement the component once in your preferred language, and Pulumi automatically generates SDKs for other languages.
@@ -26,35 +24,35 @@ In your component directory, create a `PulumiPlugin.yaml` file and specify the r
 
 {{% choosable language typescript %}}
 
-```typescript
+```yaml
 runtime: nodejs
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
-```python
+```yaml
 runtime: python
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
-```go
+```yaml
 runtime: go
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
-```csharp
+```yaml
 runtime: dotnet
 ```
 
 {{% /choosable %}}
 {{% choosable language java %}}
 
-```java
+```yaml
 runtime: java
 ```
 
@@ -75,7 +73,7 @@ Not required for TypeScript.
 {{% /choosable %}}
 {{% choosable language python %}}
 
-1. Create a `_main_.py` file in your component directory
+1. Create a `__main__.py` file in your component directory
 1. In the `main` function, add a call to `component_provider_host`, specifying a list of components for the `components` argument
 
 ```python
@@ -168,7 +166,7 @@ public class App {
 Storing a component in a Git repository allows for version control, collaboration, and easier integration into multiple projects. Developers can add the component to their Pulumi projects using the command:
 
 ```bash
-$ pulumi package add <repo_url>[/path/to/component]@<release-version>
+pulumi package add <repo_url>[/path/to/component]@<release-version>
 ```
 
 The only steps necessary to enable this are to push your component project to a git repo, and create a release tag for the versioning. Pulumi supports referencing both GitHub and GitLab releases. You can also target a standard internally hosted git service, just by providing the repo URL without the `<release-version>` portion.

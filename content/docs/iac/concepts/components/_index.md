@@ -678,4 +678,4 @@ By default, components are authored and consumed in the same programming languag
 
 For detailed information on setting up and using cross-language components, including how to configure `PulumiPlugin.yaml`, define entry points, publish, and consume components, see [Cross-language Components](/docs/iac/concepts/components/cross-language-components/).
 
-For a comparison of all component packaging approaches (single-language, cross-language, and provider-based), see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-a-component/).
+For a comparison of all component packaging approaches (single-language, cross-language, and provider-based), see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/).

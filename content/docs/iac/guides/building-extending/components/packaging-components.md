@@ -42,7 +42,7 @@ When considering single-language components, bear the following tradeoffs in min
 - **Lowest overhead**: Components work like any other class in your language and do not require SDKs
 - **No argument type limitations**: Arguments to single-language components can use any type, including union types, as they do not need to be serializable
 - **Single language only**: Cannot be consumed from other Pulumi languages
-- **No Pulumi IDP support**: Cannot be published to Pulumi IDP Private Registry at this time
+- **No Pulumi IDP support**: Cannot be published to Pulumi IDP Private Registry
 
 ## Cross-language components
 
@@ -77,7 +77,7 @@ When considering cross-language components, bear the following tradeoffs in mind
 - **Pulumi IDP support**: Can be published to Pulumi Cloud for discoverability and automatic API documentation
 - **SDK regeneration overhead**: If SDKs are not pre-published, consumers must regenerate them when the component is updated
 - **Runtime dependencies**: Consumers must have the runtime installed for the language in which the component is written (Node.js, Python, etc.)
-- **Argument type limitations**: Because calls to cross-language components are serialized, there are some limitations on the types that can be included in the component's resources. For more information see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements)
+- **Argument type limitations**: Because calls to cross-language components are serialized, there are some limitations on the types that can be included in the component's resources. For more information, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements)
 
 ## Provider-based components
 
@@ -95,7 +95,7 @@ Provider-based components are typically distributed as pre-built SDKs published 
 
 Consumers install the published SDKs (like any other Pulumi provider package). Pulumi will automatically download (and cache) the provider binary when the consuming Pulumi program is first run (just like providers).
 
-For more information on authoring providers, see [Build a provider](/docs/iac/guides/building-extending/providers/build-a-provider/)
+For more information on authoring providers, see [Build a provider](/docs/iac/guides/building-extending/providers/build-a-provider/).
 
 ### Advantages and limitations
 
@@ -105,7 +105,7 @@ When considering provider-based components, bear the following tradeoffs in mind
 - **Full provider capabilities**: In addition to components, provider packages can include custom resources and functions. Note that cross-language components written in Go can also mix in custom resources and functions, since Go has a single library for authoring both component and custom resources.
 - **Go strongly recommended**: Providers are usually written in Go because the Pulumi supported tooling makes maintaining the provider [schema](/docs/iac/guides/building-extending/packages/schema/) significantly easier compared to other languages (see note for details)
 - **CI/CD Overhead**: Provider-based components typically have pre-published SDKs, which requires a more involved CI/CD process (including publishing to a package feed after a release)
-- **Argument type limitations**: Because calls to provider-based components are serialized, there are some limitations on the types that can be included in the component's resources. For more information see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements)
+- **Argument type limitations**: Because calls to provider-based components are serialized, there are some limitations on the types that can be included in the component's resources. For more information, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements)
 
 {{% notes type="info" %}}
 Providers (and provider-based components) may technically be written in any language if the author is willing to hand-author the schema. Maintaining schemas by hand is labor-intensive and the learning curve maintaining schemas may be prohibitive for many teams. Pulumi provides tooling in the [`pulumi-go-provider`](https://github.com/pulumi/pulumi-go-provider) framework to automatically infer the schema and reduce the need for manually maintained schema files. Pulumi does not provide tooling for inferring schemas in languages other than Go.
