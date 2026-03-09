@@ -44,7 +44,7 @@ Document and test these recovery scenarios:
 | Single AZ failure | Automatic failover (DB, compute, LB) | < 5 minutes |
 | Database instance failure | Automatic failover to replica | < 1 minute (Aurora), < 5 minutes (RDS) |
 | Object storage corruption | Restore from versioned object | < 15 minutes |
-| Full region failure | Restore DB from cross-region backup, fail over storage | 1-4 hours |
+| Full region failure | Restore DB from cross-region backup, fail over storage | 1–4 hours |
 | Accidental state deletion | Restore from S3 versioning or DB PITR | < 30 minutes |
 
 ## Resource protection

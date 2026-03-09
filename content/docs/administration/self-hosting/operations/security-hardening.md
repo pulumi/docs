@@ -43,7 +43,7 @@ SMTP is optional for initial testing but required for production use. See the [A
 
 ## CAPTCHA and bot protection
 
-Configure Cloudflare Turnstile for signup protection:
+Configure Cloudflare Turnstile for signup protection. Despite the `recaptcha` naming, these config keys accept Cloudflare Turnstile credentials:
 
-- Set `recaptchaSiteKey` (Turnstile widget site key)
-- Set `recaptchaSecretKey` (Turnstile widget secret key)
+- Set `recaptchaSiteKey` (Turnstile site key)
+- Set `recaptchaSecretKey` (Turnstile secret key)

@@ -28,7 +28,7 @@ For component configuration details, see [Components](/docs/administration/self-
 | Console | 512m (0.5 vCPU) | 512 Mi | Static web UI, low resource usage |
 | Migrations | 128m | 128 Mi | Runs once per upgrade before service rollout |
 
-For production, 2 vCPU / 1 GB RAM per API instance is a reasonable starting point. Scale horizontally (more instances) rather than vertically for the API service, since it is stateless and benefits from running behind a load balancer across multiple AZs.
+For production, 2 vCPU / 1 GB RAM per API instance is a good starting point. Scale horizontally (more instances) rather than vertically for the API service, since it is stateless and benefits from running behind a load balancer across multiple AZs.
 
 {{% notes type="info" %}}
 The ECS installer exposes `apiTaskCpu` and `apiTaskMemory` Pulumi config options for customizing API service resources. Other installers can adjust resource requests/limits directly in the Kubernetes manifests.

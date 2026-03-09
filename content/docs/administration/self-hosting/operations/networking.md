@@ -45,7 +45,7 @@ Additional recommendations:
 
 Configure auto-scaling for the API service based on CPU utilization:
 
-- **Target**: 50-60% average CPU utilization
+- **Target**: 50–60% average CPU utilization
 - **Minimum instances**: 2 (for HA across AZs)
 - **Maximum instances**: 4x desired count (to handle burst traffic)
 - **Scale-in protection**: Use graceful draining to allow in-flight requests to complete before terminating instances
@@ -55,7 +55,7 @@ Configure auto-scaling for the API service based on CPU utilization:
 When scaling in or deploying updates, ensure containers have time to finish in-flight requests:
 
 - Set container stop timeout to at least 120 seconds.
-- **Kubernetes**: Set `terminationGracePeriodSeconds: 130` on the API pod spec.
+- **Kubernetes**: Set `terminationGracePeriodSeconds: 130` on the API pod spec (slightly above the 120-second stop timeout to allow clean shutdown before Kubernetes force-kills the pod).
 - **ECS**: Configure deregistration delay on the target group and set `stopTimeout` on the container definition.
 - Use lifecycle hooks (ECS) or preStop hooks (Kubernetes) to drain connections before shutdown.
 
