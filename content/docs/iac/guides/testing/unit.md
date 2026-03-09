@@ -747,6 +747,8 @@ var vpcId = networkStack.GetOutput("vpcId");
 {{% choosable language "java" %}}
 
 ```java
+import java.util.List;
+
 class MyMocks implements Mocks {
     @Override
     public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
@@ -1255,8 +1257,10 @@ void securityGroupMustNotHaveSshOpenToInternet() {
             var ingress = PulumiTest.extractValue(group.ingress());
             if (ingress != null) {
                 for (var rule : ingress) {
-                    boolean sshOpen = rule.fromPort().map(p -> p == 22).orElse(false)
-                        && rule.cidrBlocks().orElse(List.of()).contains("0.0.0.0/0");
+                    var fromPort = PulumiTest.extractValue(rule.fromPort());
+                    var cidrBlocks = PulumiTest.extractValue(rule.cidrBlocks());
+                    boolean sshOpen = fromPort != null && fromPort == 22
+                        && cidrBlocks != null && cidrBlocks.contains("0.0.0.0/0");
                     assertFalse(sshOpen, "Illegal SSH port 22 open to the Internet "
                         + "(CIDR 0.0.0.0/0) on group " + urn);
                 }
