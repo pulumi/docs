@@ -1,8 +1,8 @@
 ---
 title_tag: "Pulumi Cloud: RBAC Scopes - Organization settings"
 meta_desc: Learn about the available RBAC scopes in Pulumi Cloud.
-title: "RBAC Scopes: Organization settings"
-h1: "RBAC Scopes: Organization settings"
+title: "RBAC Scopes: Organization Settings"
+h1: "RBAC Scopes: Organization Settings"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:

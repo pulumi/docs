@@ -41,8 +41,8 @@ To assign custom roles to **individual users**, the **Assign custom roles to use
 You can create and manage custom roles to define more granular access controls for your organization. Custom roles can include:
 
 1. **Global permission sets** — Organization-wide permissions (e.g. membership, billing, audit logs).
-2. **Entity-specific permission sets** — Permission sets applied to specific stacks, environments, or insights accounts (you select the entities when defining the role).
-3. **Tag-based (ABAC) rules** — When resource tags match the rule's conditions, the role grants a chosen permission set on that resource. Entity types for tag rules are stacks, environments, and insights accounts. See [Tag-based (ABAC) rules](#tag-based-abac-rules) below.
+1. **Entity-specific permission sets** — Permission sets applied to specific stacks, environments, or insights accounts (you select the entities when defining the role).
+1. **Tag-based (ABAC) rules** — When resource tags match the rule's conditions, the role grants a chosen permission set on that resource. Entity types for tag rules are stacks, environments, and insights accounts. See [Tag-based (ABAC) rules](#tag-based-abac-rules) below.
 
 ### Creating custom roles
 
@@ -129,10 +129,10 @@ When your organization has custom roles enabled, [teams can have role assignment
 When working with roles in Pulumi Cloud, consider these best practices:
 
 1. **Principle of least privilege**: Assign only the scopes necessary for users to perform their tasks.
-2. **Role reusability**: Design custom roles and permission sets in a way that maps to real-world concepts within your org, allowing for easy reuse.
-3. **Tag-based rules**: Use tag-based rules to grant access to many resources by tag (e.g. `team=platform`) without listing each resource.
-4. **Regular review**: Periodically schedule reviews of role assignments and scopes.
-5. **Documentation**: Document the purpose and scopes of custom roles both internally and within the role's metadata.
+1. **Role reusability**: Design custom roles and permission sets in a way that maps to real-world concepts within your org, allowing for easy reuse.
+1. **Tag-based rules**: Use tag-based rules to grant access to many resources by tag (e.g. `team=platform`) without listing each resource.
+1. **Regular review**: Periodically schedule reviews of role assignments and scopes.
+1. **Documentation**: Document the purpose and scopes of custom roles both internally and within the role's metadata.
 
 ## Related resources
 

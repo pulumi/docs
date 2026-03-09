@@ -1,8 +1,8 @@
 ---
 title_tag: "Pulumi Cloud: RBAC Scopes - Insights accounts"
 meta_desc: Learn about the available RBAC scopes in Pulumi Cloud.
-title: "RBAC Scopes: Insights accounts"
-h1: "RBAC Scopes: Insights accounts"
+title: "RBAC Scopes: Insights Accounts"
+h1: "RBAC Scopes: Insights Accounts"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:

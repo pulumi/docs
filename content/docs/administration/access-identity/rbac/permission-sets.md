@@ -1,8 +1,8 @@
 ---
 title_tag: "Pulumi Cloud: Permission sets"
 meta_desc: Learn about permission sets in Pulumi Cloud and how they control access to resources
-title: "Permission sets"
-h1: "Permission sets"
+title: "Permission Sets"
+h1: "Permission Sets"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
