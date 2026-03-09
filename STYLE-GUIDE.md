@@ -257,6 +257,7 @@ See [Hugo diagrams docs](https://gohugo.io/content-management/diagrams/) and [Me
 - *Pulumi Policies* is the product name, so it's a singular proper noun (like "United States" or "Brooks Brothers").
   - Always refer to it in the singular form (e.g., "Pulumi Policies enforces compliance").
   - Never refer to it in the plural (e.g., avoid "Pulumi Policies enforce compliance").
+- Use **"public preview"** for pre-GA features, not "public beta." This aligns with Pulumi's release terminology.
 
 ---
 
