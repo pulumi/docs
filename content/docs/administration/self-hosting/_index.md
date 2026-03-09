@@ -83,6 +83,29 @@ sections:
     link: /docs/administration/self-hosting/network/
     description: Ingress, egress, and infrastructure requirements for self-hosted deployments.
 
+- type: button-cards
+  heading: Operations
+  cards:
+  - emoji: 📊
+    heading: Operations Guide
+    link: /docs/administration/self-hosting/operations/
+    description: HA, DR, monitoring, sizing, and security hardening for production deployments.
+
+  - emoji: 💾
+    heading: Backup and Recovery
+    link: /docs/administration/self-hosting/operations/backup-recovery/
+    description: Backup strategies, recovery procedures, and RTO targets.
+
+  - emoji: 📈
+    heading: Monitoring and Alerting
+    link: /docs/administration/self-hosting/operations/monitoring/
+    description: Three-tier alerting strategy and key metrics to watch.
+
+  - emoji: 🔒
+    heading: Security Hardening
+    link: /docs/administration/self-hosting/operations/security-hardening/
+    description: Network security, encryption, SMTP, and bot protection.
+
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>

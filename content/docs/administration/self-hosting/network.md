@@ -68,3 +68,7 @@ Although these containers require networking access by default, self-hosted Pulu
 These depend on what services you are using:
 
 - Login/Auth services if SAML is configured
+
+## Operations guide
+
+For VPC architecture, multi-AZ networking, load balancing, auto-scaling, and DNS configuration best practices, see the [Networking operations guide](/docs/administration/self-hosting/operations/networking/).
