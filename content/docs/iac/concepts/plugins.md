@@ -50,7 +50,7 @@ Policy plugins are installed automatically with the Pulumi CLI.
 
 ### Converter plugins
 
-Converter plugins transform existing infrastructure-as-code from other tools (like Terraform, Kubernetes YAML, or CloudFormation) into Pulumi programs. Learn more about [conversion tools](/docs/iac/guides/migration/converters/).
+Converter plugins transform existing infrastructure-as-code from other tools (like Terraform, Kubernetes YAML, or CloudFormation) into Pulumi programs. Learn more about [converters](/docs/iac/concepts/converters/).
 
 Converter plugins are installed automatically with the Pulumi CLI when you run the [`pulumi convert`](/docs/iac/cli/commands/pulumi_convert) command.
 

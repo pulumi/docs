@@ -97,3 +97,4 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 
 - [Glossary](/docs/iac/concepts/glossary) — Look up definitions for commonly used terms.
 - [Comparisons](/docs/iac/comparisons/) — Learn about how Pulumi compares to other infrastructure tools.
+- [Converters](/docs/iac/concepts/converters) — Learn how to translate IaC from other tools into Pulumi programs.
