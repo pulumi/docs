@@ -38,9 +38,9 @@ sections:
     description: Search, compliance, and policy enforcement across your cloud infrastructure.
     link: /docs/insights/
   - emoji: 🔗
-    heading: Integrations
-    description: Connect Pulumi with GitHub, GitLab, and Azure DevOps using Pulumi-maintained integrations.
-    link: /docs/integrations/
+    heading: Version Control
+    description: Connect Pulumi with GitHub, GitLab, and Azure DevOps using Pulumi-maintained version control integrations.
+    link: /docs/version-control/
   - emoji: 🎯
     heading: Internal Developer Platform
     description: Self-service infrastructure with templates, guardrails, and developer portals.
