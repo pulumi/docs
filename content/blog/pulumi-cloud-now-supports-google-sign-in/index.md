@@ -1,6 +1,6 @@
 ---
 title: "Pulumi Cloud Now Supports Google Sign-In"
-date: 2026-03-06
+date: 2026-03-09
 draft: false
 meta_desc: "Pulumi Cloud now supports Google as an identity provider, letting you sign in, sign up, and link your Google account alongside GitHub, GitLab, and Atlassian."
 meta_image: meta.png
