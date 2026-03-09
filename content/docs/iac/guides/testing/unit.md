@@ -1,8 +1,8 @@
 ---
 title_tag: "Unit Testing Pulumi Programs"
-meta_desc: "Guide to unit testing of Pulumi programs: mock-based tests across Node.js, Python, Go, and .NET."
-title: Unit testing
-h1: Unit testing Pulumi programs
+meta_desc: "Guide to unit testing of Pulumi programs: mock-based tests across Node.js, Python, Go, .NET, and Java."
+title: Unit Testing
+h1: Unit Testing Pulumi Programs
 meta_image: /images/docs/meta-images/docs-meta.png
 weight: 1
 menu:
@@ -25,13 +25,13 @@ When running an update, your Pulumi program talks to the Pulumi CLI to orchestra
 
 Because mocks don't execute any real work, unit tests run very fast. Also, they can be made deterministic because tests don't depend on the behavior of any external system.
 
-## Get Started
+## Get started
 
 Let's build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/clouds/aws/get-started/) guide to set up a basic Pulumi program in your language of choice.
 
 Note that unit tests are supported in all [existing Pulumi runtimes](https://www.pulumi.com/docs/languages-sdks/).
 
-## Sample Program
+## Sample program
 
 Throughout this guide, we are testing a program that creates a simple AWS EC2-based webserver. We want to develop unit tests to ensure:
 
@@ -43,7 +43,7 @@ Throughout this guide, we are testing a program that creates a simple AWS EC2-ba
 Choose a language below to adjust the contents of this guide. Your choice is applied throughout the guide.
 {{< /notes >}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 <div></div>
 
@@ -189,6 +189,81 @@ public class WebserverStack : Stack
 ```
 
 {{% /choosable %}}
+{{% choosable language "java" %}}
+
+App.java:
+
+```java
+package myproject;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var group = new SecurityGroup("web-secgrp", SecurityGroupArgs.builder()
+            .ingress(
+                SecurityGroupIngressArgs.builder()
+                    .protocol("tcp").fromPort(22).toPort(22).cidrBlocks("0.0.0.0/0")
+                    .build(),
+                SecurityGroupIngressArgs.builder()
+                    .protocol("tcp").fromPort(80).toPort(80).cidrBlocks("0.0.0.0/0")
+                    .build())
+            .build());
+
+        var userData = "#!/bin/bash echo \"Hello, World!\" > index.html nohup python -m SimpleHTTPServer 80 &";
+
+        var server = new Instance("web-server-www", InstanceArgs.builder()
+            .instanceType("t2.micro")
+            .securityGroups(group.name())  // reference the group object above
+            .ami("ami-c55673a0")           // AMI for us-east-2 (Ohio)
+            .userData(userData)            // start a simple web server
+            .build());
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+Pulumi.yaml:
+
+```yaml
+name: webserver
+runtime: yaml
+resources:
+  web-secgrp:
+    type: aws:ec2:SecurityGroup
+    properties:
+      ingress:
+        - protocol: tcp
+          fromPort: 22
+          toPort: 22
+          cidrBlocks: ["0.0.0.0/0"]
+        - protocol: tcp
+          fromPort: 80
+          toPort: 80
+          cidrBlocks: ["0.0.0.0/0"]
+  web-server-www:
+    type: aws:ec2:Instance
+    properties:
+      instanceType: t2.micro
+      securityGroups:
+        - ${web-secgrp.name}
+      ami: ami-c55673a0
+      userData: "#!/bin/bash echo \"Hello, World!\" > index.html nohup python -m SimpleHTTPServer 80 &"
+```
+
+{{% /choosable %}}
 
 This basic Pulumi program allocates a security group and an instance. Notice, however, that we are violating all three of the rules stated above&mdash;let's write some tests!
 
@@ -241,8 +316,33 @@ dotnet add package Pulumi.Aws
 ```
 
 {{% /choosable %}}
+{{% choosable language "java" %}}
 
-## Add Mocks
+This guide uses [JUnit 5](https://junit.org/junit5/) as the testing framework. Add the following dependencies to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.10.0</version>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.10.0</version>
+    <scope>test</scope>
+</dependency>
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+YAML programs are declarative and do not have a general-purpose language runtime, so mock-based unit testing is not applicable. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to validate your Pulumi YAML programs.
+
+{{% /choosable %}}
+
+## Add mocks
 
 Let's add the following code to mock the external calls to the Pulumi CLI.
 
@@ -430,6 +530,44 @@ namespace UnitTesting
 ```
 
 {{% /choosable %}}
+{{% choosable language "java" %}}
+
+Ec2Tests.java:
+
+```java
+package myproject;
+
+import com.pulumi.test.Mocks;
+import com.pulumi.test.Mocks.CallArgs;
+import com.pulumi.test.Mocks.ResourceArgs;
+import com.pulumi.test.Mocks.ResourceResult;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
+
+class MyMocks implements Mocks {
+    @Override
+    public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
+        var state = new HashMap<>(args.inputs);
+        return CompletableFuture.completedFuture(
+            ResourceResult.of(Optional.of(args.name + "_id"), state)
+        );
+    }
+
+    @Override
+    public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
+        return CompletableFuture.completedFuture(Map.of());
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to validate your Pulumi YAML programs.
+
+{{% /choosable %}}
 
 The definition of the mocks interface is available at the [runtime API reference page](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#Mocks).
 
@@ -606,10 +744,55 @@ var vpcId = networkStack.GetOutput("vpcId");
 ```
 
 {{% /choosable %}}
+{{% choosable language "java" %}}
+
+```java
+import java.util.List;
+
+class MyMocks implements Mocks {
+    @Override
+    public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
+        var state = new HashMap<>(args.inputs);
+        // Handle StackReference resources
+        if ("pulumi:pulumi:StackReference".equals(args.type)) {
+            state.put("outputs", Map.of(
+                "vpcId", "vpc-12345678",
+                "subnetIds", List.of("subnet-11111111", "subnet-22222222"),
+                "clusterName", "my-cluster"
+            ));
+        }
+        return CompletableFuture.completedFuture(
+            ResourceResult.of(Optional.of(args.name + "_id"), state)
+        );
+    }
+
+    @Override
+    public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
+        return CompletableFuture.completedFuture(Map.of());
+    }
+}
+```
+
+In your program, you can use a `StackReference` as usual:
+
+```java
+var networkStack = new StackReference("organization/network/prod",
+    StackReferenceArgs.builder().build());
+var vpcId = networkStack.getOutput(Output.of("vpcId"));
+
+// In tests, vpcId will resolve to "vpc-12345678" based on the mock above
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+YAML programs are declarative and do not support stack references in unit test mocks. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test programs that use stack references.
+
+{{% /choosable %}}
 
 This approach lets you test how your program uses outputs from other stacks without needing those stacks to actually exist. You can mock different scenarios by returning different outputs in your test setup.
 
-## Write the Tests
+## Write the tests
 
 {{% choosable language "typescript" %}}
 The overall structure and scaffolding of our tests will look like any ordinary Mocha testing:
@@ -732,6 +915,38 @@ namespace UnitTesting
 ```
 
 {{% /choosable %}}
+{{% choosable language "java" %}}
+
+The overall structure and scaffolding of our tests will look like any ordinary JUnit 5 test class. Note that `PulumiTest.cleanup()` must be called after each test to reset the Pulumi runtime state:
+
+Ec2Tests.java:
+
+```java
+package myproject;
+
+import com.pulumi.test.PulumiTest;
+import com.pulumi.test.TestOptions;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
+
+class Ec2Tests {
+    @AfterEach
+    void cleanup() {
+        PulumiTest.cleanup();
+    }
+
+    // TODO(check 1): Instances have a Name tag.
+    // TODO(check 2): Instances must not use an inline userData script.
+    // TODO(check 3): Instances must not have SSH open to the Internet.
+}
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
+
+{{% /choosable %}}
 
 Now let's implement our first test: ensuring that instances have a `Name` tag. To verify this we need to grab hold of the EC2 instance object, and check the relevant property:
 
@@ -798,6 +1013,40 @@ public async Task InstanceHasNameTag()
     tags.Should().ContainKey("Name");
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language "java" %}}
+
+```java
+// check 1: Instances have a Name tag.
+@Test
+void instanceMustHaveNameTag() {
+    var result = PulumiTest
+        .withMocks(new MyMocks())
+        .withOptions(TestOptions.builder()
+            .projectName("project").stackName("stack").preview(false)
+            .build())
+        .runTest(App::stack);
+
+    var instances = result.resources().stream()
+        .filter(r -> r instanceof Instance)
+        .map(r -> (Instance) r)
+        .toList();
+
+    assertFalse(instances.isEmpty(), "EC2 Instance not found");
+    for (var instance : instances) {
+        var urn = PulumiTest.extractValue(instance.urn());
+        var tags = PulumiTest.extractValue(instance.tags());
+        assertNotNull(tags, "Server " + urn + " must have tags");
+        assertTrue(tags.containsKey("Name"), "Server " + urn + " must have a Name tag");
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
 
 {{% /choosable %}}
 
@@ -872,6 +1121,37 @@ public async Task InstanceMustNotUseInlineUserData()
     tags.Should().BeNull();
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language "java" %}}
+
+```java
+// check 2: Instances must not use an inline userData script.
+@Test
+void instanceMustNotUseInlineUserData() {
+    var result = PulumiTest
+        .withMocks(new MyMocks())
+        .withOptions(TestOptions.builder()
+            .projectName("project").stackName("stack").preview(false)
+            .build())
+        .runTest(App::stack);
+
+    var instance = result.resources().stream()
+        .filter(r -> r instanceof Instance)
+        .map(r -> (Instance) r)
+        .findFirst().orElse(null);
+
+    assertNotNull(instance, "EC2 Instance not found");
+    var urn = PulumiTest.extractValue(instance.urn());
+    var userData = PulumiTest.extractValue(instance.userData());
+    assertNull(userData, "Illegal use of userData on server " + urn);
+}
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
 
 {{% /choosable %}}
 
@@ -958,10 +1238,48 @@ public async Task SecurityGroupMustNotHaveSshPortsOpenToInternet()
 ```
 
 {{% /choosable %}}
+{{% choosable language "java" %}}
+
+```java
+// check 3: Instances must not have SSH open to the Internet.
+@Test
+void securityGroupMustNotHaveSshOpenToInternet() {
+    var result = PulumiTest
+        .withMocks(new MyMocks())
+        .withOptions(TestOptions.builder()
+            .projectName("project").stackName("stack").preview(false)
+            .build())
+        .runTest(App::stack);
+
+    for (var resource : result.resources()) {
+        if (resource instanceof SecurityGroup group) {
+            var urn = PulumiTest.extractValue(group.urn());
+            var ingress = PulumiTest.extractValue(group.ingress());
+            if (ingress != null) {
+                for (var rule : ingress) {
+                    var fromPort = PulumiTest.extractValue(rule.fromPort());
+                    var cidrBlocks = PulumiTest.extractValue(rule.cidrBlocks());
+                    boolean sshOpen = fromPort != null && fromPort == 22
+                        && cidrBlocks != null && cidrBlocks.contains("0.0.0.0/0");
+                    assertFalse(sshOpen, "Illegal SSH port 22 open to the Internet "
+                        + "(CIDR 0.0.0.0/0) on group " + urn);
+                }
+            }
+        }
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
+
+{{% /choosable %}}
 
 That's it&mdash;now let's run the tests.
 
-## Run the Tests
+## Run the tests
 
 {{% choosable language "typescript" %}}
 
@@ -994,6 +1312,19 @@ Run the following command to execute your Python tests:
 ```bash
 $ dotnet test
 ```
+
+{{% /choosable %}}
+{{% choosable language "java" %}}
+Run the following command to execute your Java tests:
+
+```bash
+$ mvn test
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
 
 {{% /choosable %}}
 
@@ -1076,6 +1407,22 @@ Test Run Failed.
 Total tests: 3
      Failed: 3
 ```
+
+{{% /choosable %}}
+{{% choosable language "java" %}}
+
+```
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0
+[ERROR] Ec2Tests.instanceMustHaveNameTag -- AssertionFailedError: Server ... must have a Name tag
+[ERROR] Ec2Tests.instanceMustNotUseInlineUserData -- AssertionFailedError: Illegal use of userData on server ...
+[ERROR] Ec2Tests.securityGroupMustNotHaveSshOpenToInternet -- AssertionFailedError: Illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group ...
+[ERROR] BUILD FAILURE
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
 
 {{% /choosable %}}
 
@@ -1206,6 +1553,74 @@ public class WebserverStack : Stack
 ```
 
 {{% /choosable %}}
+{{% choosable language "java" %}}
+
+App.java:
+
+```java
+package myproject;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+import java.util.Map;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var group = new SecurityGroup("web-secgrp", SecurityGroupArgs.builder()
+            .ingress(
+                SecurityGroupIngressArgs.builder()
+                    .protocol("tcp").fromPort(80).toPort(80).cidrBlocks("0.0.0.0/0")
+                    .build())
+            .build());
+
+        var server = new Instance("web-server-www", InstanceArgs.builder()
+            .instanceType("t2.micro")
+            .securityGroups(group.name())  // reference the group object above
+            .ami("ami-c55673a0")           // AMI for us-east-2 (Ohio)
+            .tags(Map.of("Name", "webserver")) // name tag
+            .build());
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+Pulumi.yaml:
+
+```yaml
+name: webserver
+runtime: yaml
+resources:
+  web-secgrp:
+    type: aws:ec2:SecurityGroup
+    properties:
+      ingress:
+        - protocol: tcp
+          fromPort: 80
+          toPort: 80
+          cidrBlocks: ["0.0.0.0/0"]
+  web-server-www:
+    type: aws:ec2:Instance
+    properties:
+      instanceType: t2.micro
+      securityGroups:
+        - ${web-secgrp.name}
+      ami: ami-c55673a0
+      tags:
+        Name: webserver
+```
+
+{{% /choosable %}}
 
 And then rerun our tests:
 
@@ -1251,6 +1666,19 @@ Total tests: 3
 ```
 
 {{% /choosable %}}
+{{% choosable language "java" %}}
+
+```
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
+```
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
+
+{{% /choosable %}}
 
 All the tests passed!
 
@@ -1274,7 +1702,7 @@ If your program uses lifecycle hooks or transforms, structure your tests to work
 
 For example, if you have a transform that adds default tags to all resources, your mock's `newResource` function can return resource state that already includes those tags, simulating the transform's effect without actually executing it.
 
-## Full Example
+## Full example
 
 {{% choosable language "typescript" %}}
 
@@ -1300,6 +1728,20 @@ The full code for this guide is available in the examples repository: [Unit Test
 {{% choosable language "csharp" %}}
 
 The full code for this guide is available in the examples repository: [Unit Tests in C#](https://github.com/pulumi/examples/tree/master/testing-unit-cs).
+
+&nbsp;
+
+{{% /choosable %}}
+{{% choosable language "java" %}}
+
+A Java unit testing example is not yet available in the examples repository. Contributions are welcome at [pulumi/examples](https://github.com/pulumi/examples).
+
+&nbsp;
+
+{{% /choosable %}}
+{{% choosable language "yaml" %}}
+
+YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
 
 &nbsp;
 
