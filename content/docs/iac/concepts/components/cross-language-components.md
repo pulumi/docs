@@ -193,9 +193,9 @@ Pulumi also supports private repos in GitHub and GitLab. Pulumi will read standa
 
 ### Publishing to Pulumi IDP Private Registry
 
-Once a component is authored, it can be published to the [IDP Private Registry](/docs/idp/get-started/private-registry/) or consumed directly from a git repo.
+Once a component is authored, it can be published to the [IDP Private Registry](/docs/idp/concepts/private-registry/) or consumed directly from a git repo.
 
-Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/docs/idp/get-started/private-registry/).
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/docs/idp/concepts/private-registry/).
 
 ### Generating local SDKs with pulumi install
 
