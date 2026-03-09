@@ -1,8 +1,8 @@
 ---
 title_tag: "Unit Testing Pulumi Programs"
 meta_desc: "Guide to unit testing of Pulumi programs: mock-based tests across Node.js, Python, Go, .NET, and Java."
-title: Unit testing
-h1: Unit testing Pulumi programs
+title: Unit Testing
+h1: Unit Testing Pulumi Programs
 meta_image: /images/docs/meta-images/docs-meta.png
 weight: 1
 menu:
@@ -25,13 +25,13 @@ When running an update, your Pulumi program talks to the Pulumi CLI to orchestra
 
 Because mocks don't execute any real work, unit tests run very fast. Also, they can be made deterministic because tests don't depend on the behavior of any external system.
 
-## Get Started
+## Get started
 
 Let's build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/clouds/aws/get-started/) guide to set up a basic Pulumi program in your language of choice.
 
 Note that unit tests are supported in all [existing Pulumi runtimes](https://www.pulumi.com/docs/languages-sdks/).
 
-## Sample Program
+## Sample program
 
 Throughout this guide, we are testing a program that creates a simple AWS EC2-based webserver. We want to develop unit tests to ensure:
 
@@ -342,7 +342,7 @@ YAML programs are declarative and do not have a general-purpose language runtime
 
 {{% /choosable %}}
 
-## Add Mocks
+## Add mocks
 
 Let's add the following code to mock the external calls to the Pulumi CLI.
 
@@ -792,7 +792,7 @@ YAML programs are declarative and do not support stack references in unit test m
 
 This approach lets you test how your program uses outputs from other stacks without needing those stacks to actually exist. You can mock different scenarios by returning different outputs in your test setup.
 
-## Write the Tests
+## Write the tests
 
 {{% choosable language "typescript" %}}
 The overall structure and scaffolding of our tests will look like any ordinary Mocha testing:
@@ -1279,7 +1279,7 @@ YAML programs are declarative and do not support mock-based unit testing. See [i
 
 That's it&mdash;now let's run the tests.
 
-## Run the Tests
+## Run the tests
 
 {{% choosable language "typescript" %}}
 
@@ -1702,7 +1702,7 @@ If your program uses lifecycle hooks or transforms, structure your tests to work
 
 For example, if you have a transform that adds default tags to all resources, your mock's `newResource` function can return resource state that already includes those tags, simulating the transform's effect without actually executing it.
 
-## Full Example
+## Full example
 
 {{% choosable language "typescript" %}}
 
