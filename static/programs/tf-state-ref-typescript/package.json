@@ -1,5 +1,5 @@
 {
-    "name": "new-tf-provider-ts",
+    "name": "tf-state-ref-typescript",
     "main": "index.ts",
     "devDependencies": {
         "@types/node": "^18",

@@ -1,4 +1,4 @@
-module new-tf-provider-go
+module tf-state-ref-go
 
 go 1.23.0
 
