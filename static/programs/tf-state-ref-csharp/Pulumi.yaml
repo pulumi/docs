@@ -1,0 +1,7 @@
+name: new-tf-provider-csharp
+description: A minimal C# Pulumi program
+runtime: dotnet
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: csharp

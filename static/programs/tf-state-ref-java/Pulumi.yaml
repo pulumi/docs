@@ -1,0 +1,9 @@
+name: new-tf-provider-java
+description: A minimal Java Pulumi program with Maven builds
+runtime: java
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: java
+packages:
+  terraform: terraform@6.0.1

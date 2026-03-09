@@ -1,0 +1,14 @@
+{
+    "name": "new-tf-provider-ts",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18",
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@pulumi/aws": "^6.81.0",
+        "@pulumi/eks": "^3.9.1",
+        "@pulumi/pulumi": "^3.113.0",
+        "@pulumi/terraform": "^6.0.1"
+    }
+}

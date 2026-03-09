@@ -1,0 +1,7 @@
+name: new-tf-provider-go
+description: A minimal Go Pulumi program
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: go
