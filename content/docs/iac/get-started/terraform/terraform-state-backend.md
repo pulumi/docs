@@ -17,7 +17,7 @@ aliases:
 Pulumi Cloud can serve as a [Terraform state backend](https://developer.hashicorp.com/terraform/language/backend), letting you store and manage Terraform state alongside your Pulumi stacks. Your team can continue using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: encrypted state storage, update history, state locking, agentic infrastructure coding with Neo, role-based access control, audit policies, and unified resource visibility through [Insights](/docs/pulumi-cloud/insights/).
 
 {{% notes "info" %}}
-This feature is currently in **public beta**.
+This feature is currently in **public preview**.
 {{% /notes %}}
 
 ## Why store Terraform state in Pulumi Cloud

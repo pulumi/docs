@@ -1,5 +1,5 @@
 ---
-title: "Now in Public Beta: Store Terraform State in Pulumi Cloud"
+title: "Now in Public Preview: Store Terraform State in Pulumi Cloud"
 date: 2026-03-05
 allow_long_title: true
 draft: false
@@ -16,14 +16,14 @@ tags:
 
 social:
     twitter: "Exciting launch: Pulumi Cloud can now serve as a Terraform state backend! Migrate your state in minutes — keep using the Terraform CLI while gaining encrypted state, RBAC, audit policies, and unified resource visibility across your entire infrastructure estate."
-    linkedin: "We just launched Terraform State Backend support in Pulumi Cloud (public beta). Platform teams can now store and manage Terraform state alongside Pulumi stacks — no code changes required. Your team keeps using the Terraform or OpenTofu CLI while you get encrypted state, update history, state locking, RBAC, audit policies, and unified resource visibility through Pulumi Insights. Migration from S3, Azure Blob, or GCS takes minutes. Read more about how it works and how to get started."
+    linkedin: "We just launched Terraform State Backend support in Pulumi Cloud (public preview). Platform teams can now store and manage Terraform state alongside Pulumi stacks — no code changes required. Your team keeps using the Terraform or OpenTofu CLI while you get encrypted state, update history, state locking, RBAC, audit policies, and unified resource visibility through Pulumi Insights. Migration from S3, Azure Blob, or GCS takes minutes. Read more about how it works and how to get started."
 ---
 
 Platform engineering teams managing infrastructure across Terraform and Pulumi now have a way to unify state management without rewriting a single line of HCL. Starting today, Pulumi Cloud can serve as a [Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/), letting you store and manage Terraform state alongside your Pulumi stacks. Your team continues using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: AI-powered infrastructure management with [Pulumi Neo](/docs/ai) — our infrastructure agent — encrypted state storage, update history, state locking, role-based access control, audit policies, and unified resource visibility through [Insights](/docs/pulumi-cloud/insights/).
 
 <!--more-->
 
-This feature is now available in **public beta**.
+This feature is now available in **public preview**.
 
 ## Why this matters
 
