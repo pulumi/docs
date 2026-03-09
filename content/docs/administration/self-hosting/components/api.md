@@ -82,6 +82,10 @@ The service saves the state of every stack, that uses it as the backend, to a pe
 packs, then anytime a user publishes a policy pack, it gets uploaded to the same object storage service as well. Both the
 state (checkpoint) and the policy pack must use different buckets on the same object storage service.
 
+{{% notes type="warning" %}}
+**S3-compatible storage providers**: The Pulumi API service stores objects using gzip compression. Your S3-compatible object storage provider and any intermediary (such as a reverse proxy or ingress controller) must correctly preserve the `Content-Encoding: gzip` header on responses. If this header is stripped or missing, clients will receive garbled content instead of valid data.
+{{% /notes %}}
+
 ### Local storage
 
 | Variable Name                         | Description                                                                                                                                                                                           |
