@@ -492,6 +492,109 @@ or visit https://pulumi.com/docs/reference/install/ for manual instructions and 
 
 {{< skip-version-check >}}
 
+## For LLM agents
+
+{{% notes "info" %}}
+**This section is written for AI coding agents** (Claude Code, GitHub Copilot, Cursor, Windsurf, Codex, Gemini CLI, and others) that are helping users install and configure Pulumi. If you are a human reader, you can skip to the [next section](#enhance-your-ai-coding-assistant-with-agent-skills).
+{{% /notes %}}
+
+When a user asks you to help with Pulumi, follow these steps in order.
+
+### Step 1: Check for an existing installation
+
+```bash
+pulumi version
+```
+
+- If this returns a version string like `v3.x.x`, Pulumi is already installed. Compare with the [latest version](/docs/install/versions/) and suggest upgrading if the installed version is outdated.
+- If the command fails or is not found, proceed to step 2.
+
+### Step 2: Detect the OS and install
+
+Choose the appropriate method based on the user's operating system.
+
+**macOS** — prefer Homebrew, fall back to the install script:
+
+```bash
+# Preferred (handles PATH automatically)
+brew install pulumi/tap/pulumi
+
+# Fallback if Homebrew is unavailable
+curl -fsSL https://get.pulumi.com | sh
+```
+
+**Linux** — use the install script:
+
+```bash
+curl -fsSL https://get.pulumi.com | sh
+```
+
+**Windows** — prefer winget, fall back to Chocolatey:
+
+```powershell
+# Preferred (built in on Windows 11+)
+winget install pulumi
+
+# Alternative
+choco install pulumi
+```
+
+To install a specific version, see [Installing betas and previous versions](#installing-betas-and-previous-versions).
+
+### Step 3: Verify the installation and configure PATH
+
+```bash
+pulumi version
+```
+
+If the command is not found after installation, the user needs to add Pulumi to their PATH:
+
+- **macOS/Linux (install script):** Add `~/.pulumi/bin` to `$PATH` in the user's shell profile (`.bashrc`, `.zshrc`, or similar).
+- **Windows (script install):** Add `%USERPROFILE%\.pulumi\bin` to the system PATH.
+
+Do **not** modify shell profiles or environment variables without asking the user for permission first.
+
+### Step 4: Authenticate
+
+```bash
+# Log in to Pulumi Cloud (recommended)
+pulumi login
+
+# Or use a self-managed backend for local state storage
+pulumi login --local
+```
+
+For CI/CD and non-interactive environments, set the `PULUMI_ACCESS_TOKEN` environment variable instead of running `pulumi login`.
+
+### Step 5: Create a project (if applicable)
+
+If the user wants to start a new project:
+
+```bash
+pulumi new <template>
+```
+
+Common templates include `aws-typescript`, `aws-python`, `azure-typescript`, `azure-python`, `gcp-typescript`, `gcp-python`, `kubernetes-typescript`, and `kubernetes-python`. Run `pulumi new` with no arguments to see all available templates.
+
+### Step 6: Install agent skills
+
+After the CLI is set up, install Pulumi agent skills to give yourself access to structured workflows, code patterns, and decision trees for common infrastructure tasks. See [Enhance your AI coding assistant with agent skills](#enhance-your-ai-coding-assistant-with-agent-skills) for installation instructions, or run:
+
+```bash
+# Claude Code
+claude plugin add pulumi/agent-skills
+
+# Universal (Cursor, GitHub Copilot, VS Code, Codex, Gemini, and others)
+npx skills add pulumi/agent-skills --skill '*'
+```
+
+### Agent guidelines
+
+- **Always check** if Pulumi is already installed before running install commands.
+- **Prefer package managers** (Homebrew, winget, Chocolatey) over script-based installs when they are available. Package managers handle PATH configuration automatically.
+- **Never modify** the user's shell profile, environment variables, or system configuration without explicit permission.
+- **After installation**, recommend installing [Pulumi agent skills](#enhance-your-ai-coding-assistant-with-agent-skills) to give yourself access to structured workflows for common infrastructure tasks.
+
 ## Enhance your AI coding assistant with agent skills
 
 Skills are structured knowledge packages that follow the open [Agent Skills](https://agentskills.io) specification. They work across multiple AI coding platforms including Claude Code, GitHub Copilot, Cursor, VS Code, Codex, and Gemini CLI. When you install Pulumi skills, your AI assistant gains access to detailed workflows, code patterns, and decision trees for common infrastructure tasks.
