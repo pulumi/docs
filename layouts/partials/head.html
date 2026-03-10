@@ -20,8 +20,12 @@
         {{- end }}
     </script>
 
-    <!-- Our CSS and JS bundles. -->
-    {{ partial "assets" . }}
+    <!-- Our CSS and JS bundles. Gads pages use deferred jQuery for LP Quality Score. -->
+    {{ if eq .Section "gads" }}
+        {{ partial "assets-gads.html" . }}
+    {{ else }}
+        {{ partial "assets" . }}
+    {{ end }}
 
 
     <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
@@ -171,7 +175,8 @@
     <!-- RSS link for the blog. -->
     <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
 
-    <!-- Lazy-load Sentry.  -->
+    {{ if ne .Section "gads" }}
+    <!-- Lazy-load Sentry. Excluded on gads LPs to avoid console errors and wasted requests (LP Quality Score). -->
     <script src="https://js.sentry-cdn.com/02614bf2f18e4615a73218b810563ced.min.js" crossorigin="anonymous"></script>
     <script>
         Sentry.onLoad(function() {
@@ -194,6 +199,7 @@
             });
         });
     </script>
+    {{ end }}
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 

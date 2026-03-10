@@ -261,7 +261,7 @@
                 {{ range .Params.case_studies.items }}
                     <div class="w-full lg:w-1/3 text-center my-8 relative">
                         <div class="h-full p-8">
-                            <div class="h-16">{{ partial "customer-logo.html" (dict "logo" .logo) }}</div>
+                            <div class="h-16">{{ partial "customer-logo.html" (dict "logo" .logo "section" $.Section) }}</div>
                             <h5>{{ .name }}</h5>
                             <p class="pb-8">{{ .description | markdownify }}</p>
                             <div class="absolute bottom-0 left-0 right-0 px-8 pb-8">

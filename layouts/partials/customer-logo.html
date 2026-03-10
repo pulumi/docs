@@ -5,7 +5,12 @@
     {{ $logoClass = "customer-logo-hoverable" }}
 {{ end }}
 
-{{ if eq .logo "ro" }}
+{{/* On gads LPs use external SVG files for BMW, Lemonade, Snowflake to reduce HTML size (LP Quality Score). */}}
+{{ if and (eq .section "gads") (in (slice "bmw" "lemonade" "snowflake") .logo) }}
+    <span class="{{ $logoClass }} w-full h-full flex m-auto justify-center">
+        <img src="/logos/customers/{{ .logo }}.svg" alt="{{ .logo }}" class="max-h-16 w-auto object-contain" loading="lazy" />
+    </span>
+{{ else if eq .logo "ro" }}
     <span class="w-full h-full flex">
         {{ if eq .hoverable true }}
             <span class="ro-hoverable">

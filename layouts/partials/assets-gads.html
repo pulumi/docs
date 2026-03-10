@@ -1,0 +1,30 @@
+<!--
+  Gads pages: jQuery loaded with defer to avoid render-blocking (LP Quality Score).
+  Same CSS/JS bundle as main site; bundle already uses defer.
+-->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  defer></script>
+
+{{ $js := resources.Get "js/bundle.js" | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+
+{{ define "css-link" }}
+    {{- $css := resources.Get .source | fingerprint -}}
+    {{- $_ := $css.Permalink -}}
+    {{- if hugo.IsServer -}}
+        <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    {{- else -}}
+        <link rel="stylesheet" href="/css/{{ .name }}.{{ getenv "CSS_BUNDLE_ID" }}.css">
+    {{- end -}}
+{{ end }}
+
+{{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "tutorials" "providers" "collections" "templates" "ai" "authors" "tags" "legal" }}
+{{ if not (in $nonMarketingSections .Section) }}
+    {{ template "css-link" (dict "source" "css/marketing.css" "name" "marketing") }}
+{{ end }}
+
+{{ template "css-link" (dict "source" "css/bundle.css" "name" "bundle") }}
