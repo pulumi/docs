@@ -62,8 +62,8 @@ components:
   description:
 convert:
 - heading: Convert ARM Templates to Pulumi
-  url: /arm2pulumi/
-  description: Convert ARM templates to your language of choice with Pulumi's conversion tool.
+  url: /docs/iac/guides/migration/migrating-to-pulumi/from-arm/
+  description: Convert ARM templates to your language of choice using the pulumi convert command.
 templates:
 - display_name: Container service on Azure
   url: container-service/azure/
