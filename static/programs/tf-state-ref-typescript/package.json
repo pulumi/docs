@@ -1,0 +1,13 @@
+{
+    "name": "tf-state-ref-typescript",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18",
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@pulumi/eks": "^3.9.1",
+        "@pulumi/pulumi": "^3.113.0",
+        "@pulumi/terraform": "^6.0.1"
+    }
+}
