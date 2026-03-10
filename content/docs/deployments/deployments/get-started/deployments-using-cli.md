@@ -19,7 +19,7 @@ This walk-through shows you how to create a new project using `pulumi new`, uplo
 
 ### Prerequisites
 
-Before you start, see the GitHub app [installation instructions](/docs/deployments/deployments/reference/#github-app-installation) to configure your Pulumi organization to work seamlessly with Deployments.
+Before you start, configure a [version control integration](/docs/version-control/) for your Pulumi organization. Deployments works with [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/). This walkthrough uses GitHub and the `gh` CLI, but equivalent workflows are available for Azure DevOps and GitLab.
 
 You will need the following tools to complete this tutorial:
 
