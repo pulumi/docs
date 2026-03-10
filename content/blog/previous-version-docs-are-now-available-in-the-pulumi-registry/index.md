@@ -27,7 +27,7 @@ Select a previous version from the dropdown, and the Registry loads the full API
 
 ## What's available
 
-This feature currently includes documentation for the newest release of each of the past two major versions of first-party providers. For example, if a provider is on v7.x, you'll be able to view docs for the latest v6.x and v5.x releases in addition to the current version.
+This feature currently includes documentation for the latest release of each previous major version, going back two major versions. For example, if a provider is on v7.x, you'll be able to view docs for the latest v6.x and v5.x releases in addition to the current version.
 
 ## Get started
 
