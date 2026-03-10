@@ -6,6 +6,7 @@
 /resources
 
 .DS_Store
+__pycache__
 node_modules
 # Prettier cache
 node_modules/.cache/prettier/

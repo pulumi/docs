@@ -82,6 +82,30 @@ jobs:
         with:
           name: origin-bucket-metadata
           path: origin-bucket-metadata.json
+  schedule-social:
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    name: Schedule social media posts
+    runs-on: ubuntu-latest
+    environment: production
+    needs: [buildSite]
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
+
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+
+      - uses: astral-sh/setup-uv@v4
+
+      - name: Schedule social posts for new blog content
+        env:
+          UPLOAD_POST_API_KEY: ${{ steps.esc-secrets.outputs.UPLOAD_POST_API_KEY }}
+          UPLOAD_POST_USER: ${{ steps.esc-secrets.outputs.UPLOAD_POST_USER }}
+          UPLOAD_POST_LINKEDIN_PAGE_ID: ${{ steps.esc-secrets.outputs.UPLOAD_POST_LINKEDIN_PAGE_ID }}
+        run: uv run scripts/social/schedule-posts.py
+
   notify:
     if: (github.ref == 'refs/heads/master' || (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'pulumi-bot')) && failure()
     name: Send slack notification
