@@ -27,7 +27,11 @@ Deploy updates through staged environments:
 
 ## Update process
 
-The self-hosted installers deploy in layers, which should be updated in order:
+{{% notes type="info" %}}
+Many customers use the self-hosted installers as reference architectures and build their own deployment pipelines. The guidance below applies whether you use the installers directly or your own automation.
+{{% /notes %}}
+
+Self-hosted deployments have three logical layers, which should be updated in order:
 
 1. **Infrastructure layer** (network, database, storage) - rarely changes
 1. **Compute layer** (Kubernetes cluster, ECS cluster) - occasional updates
@@ -35,10 +39,9 @@ The self-hosted installers deploy in layers, which should be updated in order:
 
 For application updates:
 
-1. Update the `imageTag` configuration to the new version.
-1. Run `pulumi up` on the application stack.
-1. The installer runs database migrations before updating service containers.
-1. New containers are rolled out with zero downtime.
+1. Update the container image tag to the new version.
+1. Run database migrations before updating service containers.
+1. Roll out new containers with zero downtime.
 
 ## Version pinning
 

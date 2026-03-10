@@ -27,8 +27,7 @@ Use this checklist when planning or validating your self-hosted deployment.
 - Choose deployment platform ([ECS](/docs/administration/self-hosting/deployment-options/ecs-hosted/), [EKS](/docs/administration/self-hosting/deployment-options/eks-hosted/), [AKS](/docs/administration/self-hosting/deployment-options/aks-hosted/), [GKE](/docs/administration/self-hosting/deployment-options/gke-hosted/), [BYO](/docs/administration/self-hosting/deployment-options/byo-infra-hosted/))
 - Obtain Pulumi Cloud license key from your Pulumi contact
 - Define domain names for API and console endpoints
-- Obtain or generate TLS certificates
-- Get SMTP server credentials (optional for testing, required for production)
+- Get SMTP server credentials (optional if using SAML SSO exclusively)
 - Set up Cloudflare Turnstile for bot protection (recommended for publicly accessible installations)
 - Commit installer code as-is to your own source control before customizing
 
@@ -42,9 +41,7 @@ Use this checklist when planning or validating your self-hosted deployment.
 ### Application
 
 - API service and console deployed with 2+ replicas
-- Database migrations run successfully
 - DNS records configured for both API and console domains
-- TLS termination configured on load balancer
 - Health checks passing for all services
 
 ### Operations

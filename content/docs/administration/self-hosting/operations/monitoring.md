@@ -18,6 +18,8 @@ Self-hosting is only available with **Pulumi Business Critical**. If you would l
 
 Effective monitoring is critical for maintaining a reliable self-hosted Pulumi Cloud deployment. This page covers a recommended alerting strategy and the key metrics to watch.
 
+The API service exposes Prometheus metrics and supports OpenTelemetry for tracing. See [OpenTelemetry configuration](/docs/administration/self-hosting/components/api/#opentelemetry) for setup details.
+
 ## Three-tier alerting strategy
 
 Implement alerts at three severity levels:

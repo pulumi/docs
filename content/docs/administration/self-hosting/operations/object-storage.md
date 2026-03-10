@@ -18,6 +18,8 @@ Self-hosting is only available with **Pulumi Business Critical**. If you would l
 
 Pulumi Cloud uses object storage for checkpoint (state) files, policy packs, and other data. This page covers the storage architecture and best practices for production deployments.
 
+You can also use a local filesystem path for storage instead of a cloud object store. See [Local storage](/docs/administration/self-hosting/components/api/#local-storage) for configuration details.
+
 ## Storage architecture
 
 Pulumi Cloud uses multiple storage buckets. The exact set depends on your installer and which features are enabled:

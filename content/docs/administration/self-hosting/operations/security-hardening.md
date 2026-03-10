@@ -33,13 +33,13 @@ This page covers security hardening recommendations for production self-hosted P
 
 ## SMTP and email
 
-For production deployments, configure SMTP to enable:
+Configure SMTP to enable email-based features:
 
 - User invitation workflows
-- Password reset emails
 - Organization notifications
+- Password reset emails (only relevant if not using SAML SSO)
 
-SMTP is optional for initial testing but required for production use. See the [API component reference](/docs/administration/self-hosting/components/api/) for SMTP environment variables.
+SMTP is optional if your organization uses SAML SSO exclusively and does not need email notifications. See the [API component reference](/docs/administration/self-hosting/components/api/) for SMTP environment variables.
 
 ## CAPTCHA and bot protection
 

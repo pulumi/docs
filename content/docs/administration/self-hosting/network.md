@@ -63,6 +63,10 @@ Although these containers require networking access by default, self-hosted Pulu
 - download.docker.com
 - production.cloudflare.docker.com
 
+### Destination - OpenSearch / Elasticsearch
+
+- *9200*: OpenSearch or Elasticsearch HTTP API (used for resource search)
+
 ### Destination - Additional outbound targets
 
 These depend on what services you are using:

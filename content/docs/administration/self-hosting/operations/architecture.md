@@ -32,8 +32,7 @@ This page describes the high-level architecture of a self-hosted Pulumi Cloud de
 | Component | Description |
 | :-- | :-- |
 | Object storage | Blob storage for checkpoint (state) files and policy packs. Supported: S3 and compatible implementations, Azure Blob Storage, Google Cloud Storage |
-| Search (optional) | OpenSearch 2.x or Elasticsearch 7.x for resource search and AI features |
-| Cache (optional) | Redis 6.2 or later for session caching and performance |
+| Search | OpenSearch 2.x or Elasticsearch 7.x for resource search and AI features |
 
 ## Data flow
 
@@ -58,9 +57,8 @@ graph TB
         S3[Object Storage]
     end
 
-    subgraph Optional
-        Search[OpenSearch]
-        Cache[Redis]
+    subgraph Search
+        OpenSearch[OpenSearch]
     end
 
     CLI -->|api.domain| LB
@@ -69,8 +67,7 @@ graph TB
     LB --> Console
     API --> DB
     API --> S3
-    API -.-> Search
-    API -.-> Cache
+    API --> OpenSearch
     Console -->|API calls| API
 ```
 

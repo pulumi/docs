@@ -41,17 +41,13 @@ Deploy your database cluster across multiple availability zones with at least on
 
 The self-hosted installers default to the following database instance types:
 
-| Installer | Default instance type | Notes |
+| Cloud | Default instance type | Notes |
 | :-- | :-- | :-- |
-| ECS | db.t3.medium (4 GB RAM) | Suitable for small-to-medium workloads |
-| EKS | db.r5.large (16 GB RAM) | Memory-optimized, better for production |
-| GKE | db-g1-small (1.7 GB RAM) | Minimal; upgrade for production use |
+| AWS | db.r5.large (16 GB RAM) | Memory-optimized, recommended for production |
+| Azure | General Purpose D2ads_v5 or equivalent | 2 vCPU / 8 GB RAM |
+| GCP | db-g1-small (1.7 GB RAM) | Minimal; upgrade for production use |
 
-For production workloads, start with a memory-optimized instance (db.r5.large, db.r6g.large, or equivalent with 16 GB RAM) and scale based on monitoring. Burstable instances (db.t3.*) are acceptable for development and light workloads but may throttle under sustained load.
-
-### Connection pooling
-
-For AWS deployments with many concurrent users, consider placing [Amazon RDS Proxy](https://aws.amazon.com/rds/proxy/) in front of your Aurora or RDS instance. RDS Proxy pools and shares database connections, reducing connection overhead and improving failover times.
+For production workloads, start with a memory-optimized instance with at least 16 GB RAM (db.r5.large, db.r6g.large, General Purpose D4s_v3, or equivalent) and scale based on monitoring. Burstable instances (db.t3.*) are acceptable for development and light workloads but may throttle under sustained load.
 
 ## Zero-downtime migrations
 
