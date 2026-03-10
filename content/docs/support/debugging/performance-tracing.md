@@ -44,3 +44,23 @@ $ pulumi up --tracing http://localhost:9411/api/v1/spans
 ```
 
 To view a trace locally navigate to the [Jaeger UI](http://localhost:16686/search).
+
+## OpenTelemetry tracing
+
+Pulumi also supports exporting traces using [OpenTelemetry](https://opentelemetry.io/) via the `--otel-traces` flag. This produces richer traces that can be viewed using any OpenTelemetry tooling.
+
+To save traces as OTLP JSON to a local file (this is often the most convenient option if the traces are to be shared):
+
+```bash
+$ pulumi up --otel-traces file:///tmp/traces.json
+```
+
+To send traces to an OTLP-compatible backend (such as [Jaeger](https://www.jaegertracing.io/), [Grafana Tempo](https://grafana.com/oss/tempo/), or [Honeycomb](https://www.honeycomb.io/)) via gRPC:
+
+```bash
+$ pulumi up --otel-traces grpc://localhost:4317
+```
+
+Under the hood, Pulumi starts a local OTLP receiver and sets `PULUMI_OTEL_EXPORTER_OTLP_ENDPOINT` for all child processes, so that spans from resource providers and language hosts are collected and forwarded to your endpoint. Legacy OpenTracing plugins are automatically bridged into the OTel trace.
+
+Both `--tracing` and `--otel-traces` can be used at the same time.
