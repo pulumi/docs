@@ -1,0 +1,46 @@
+{{/*
+    Template Testimonial Product Partial
+
+    Product-page variant: dark grey card, two-column layout (quote left, logo and
+    attribution right). No purple; white text on dark grey with subtle border and shadow.
+
+    Parameters:
+    - quote: Testimonial quote (supports markdown)
+    - author: Author name (e.g. "Austin Byers")
+    - title: Author title/role (e.g. "Principal Platform Engineer")
+    - company: Company name (for logo alt)
+    - logo: Logo path (displayed in right column)
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $quote := .quote }}
+{{ $author := .author }}
+{{ $title := .title }}
+{{ $company := .company }}
+{{ $logo := .logo }}
+{{ $anchor := .anchor }}
+
+<section class="template-testimonial-product rounded-2xl px-10 py-16 md:px-16 md:py-20"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+        <div class="flex-1 lg:max-w-[65%]">
+            {{ if $quote }}
+            <blockquote class="template-testimonial-product-quote text-left m-0">
+                "{{ $quote | markdownify }}"
+            </blockquote>
+            {{ end }}
+        </div>
+        <div class="flex flex-col items-start lg:items-end lg:w-[35%] lg:min-w-[280px] shrink-0 template-testimonial-product-credit">
+            {{ if $logo }}
+            <div class="template-testimonial-product-logo mb-6">
+                <img src="{{ $logo }}" alt="{{ $company }}" />
+            </div>
+            {{ end }}
+            {{ if $author }}
+            <p class="template-testimonial-product-author m-0 mb-1">{{ $author }}</p>
+            {{ end }}
+            {{ if $title }}
+            <p class="template-testimonial-product-title m-0">{{ $title }}</p>
+            {{ end }}
+        </div>
+    </div>
+</section>

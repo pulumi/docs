@@ -1,0 +1,29 @@
+{{/*
+    Template Counter Cards Partial
+
+    Horizontal row of stat cards: large number + label.
+    E.g., "350,000+ Engineers", "3,700+ Companies", "1,000+ Providers".
+
+    Parameters:
+    - cards: Array of card objects
+      Example: [{"number": "350,000+", "label": "Engineers building with Pulumi"}, ...]
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $cards := .cards }}
+{{ $anchor := .anchor }}
+
+<section class="template-counter-cards"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+        {{ range $cards }}
+        <div class="counter-card text-center">
+            {{ if .number }}
+            <div class="counter-card-number">{{ .number }}</div>
+            {{ end }}
+            {{ if .label }}
+            <p class="counter-card-label">{{ .label }}</p>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
