@@ -43,22 +43,22 @@ If you're a new user, Pulumi Cloud will create an account for you automatically 
 If you already have a Pulumi Cloud account, you can link your Google identity from your account settings:
 
 1. Navigate to your [Account Settings](https://app.pulumi.com/account/settings).
-1. Scroll to the **Connected identities** section.
-1. Select **Connect** next to Google.
+1. Scroll to the **Identity providers** section.
+1. Under **Available identities**, select **Connect Google**.
 
-Once connected, you can use Google as an alternative way to sign in to your existing account.
+Once connected, you can use Google to sign in to your existing Pulumi Cloud account.
 
 ![Account settings showing connected identities including Google](connected-identities.png)
 
 ### Google sign-in vs. SAML SSO
 
-Google sign-in lets you authenticate to Pulumi Cloud with your individual Google account. It does not allow Google to back a Pulumi organization the way GitHub, GitLab, or Atlassian can.
+Google sign-in lets you authenticate with Pulumi Cloud using your individual Google account. It does not enable Google as a single sign-on (SSO) identity provider for your Pulumi Cloud organization.
 
-If your organization uses Google Workspace and needs centralized membership governance, configure [SAML SSO with Google Workspace](/docs/administration/access-identity/saml/gsuite/) instead. SAML SSO is available on Pulumi Enterprise and Business Critical editions.
+If your team uses Google Workspace and needs centralized membership governance for Pulumi Cloud, configure [SAML SSO with Google Workspace](/docs/administration/access-identity/saml/gsuite/) instead. SAML SSO is available on Pulumi Enterprise and Business Critical editions.
 
 ## Get started
 
-Google sign-in is available now for all Pulumi Cloud users:
+Google sign-in is available now for all new and existing Pulumi Cloud users:
 
 - **New users**: [Sign up with Google](https://app.pulumi.com/signup) on the Pulumi Cloud sign-up page.
 - **Existing users**: [Connect your Google account](https://app.pulumi.com/account/settings) in your account settings.
