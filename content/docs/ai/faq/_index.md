@@ -16,7 +16,7 @@ aliases:
 
 ## What model does Neo use?
 
-Neo uses Anthropic Claude models (latest Opus and Sonnet), hosted on [Amazon Bedrock](https://aws.amazon.com/bedrock/) in a Pulumi-managed AWS account. Over time, the combination of models may change to improve answer quality and task performance.
+Neo uses Anthropic Claude models hosted on [Amazon Bedrock](https://aws.amazon.com/bedrock/) in a Pulumi-managed AWS account. The specific models may change over time to improve answer quality and task performance.
 
 ## Will my data be used to train Neo?
 
@@ -34,15 +34,15 @@ Users can opt in to running [`pulumi up`](/docs/ai/running-previews/) directly, 
 
 ## What data is sent to the model provider?
 
-Neo transmits conversation context and relevant infrastructure data to Amazon Bedrock to generate responses. All data is encrypted in transit using TLS and encrypted at rest by Amazon Bedrock. No third-party MCP servers or external services receive your data as part of Neo's processing.
+Neo transmits conversation context and relevant infrastructure data to Amazon Bedrock to generate responses. All data is encrypted in transit with TLS and at rest by Amazon Bedrock. No third-party MCP servers or external services receive your data as part of Neo's processing.
 
 ## Are my secrets exposed?
 
-No. Neo cannot decrypt [secrets](/docs/concepts/secrets/). Secret values managed by Pulumi remain encrypted and are never exposed to the model provider or included in conversation context.
+No. Neo cannot decrypt [secrets](/docs/concepts/secrets/). Secret values remain encrypted and are never exposed to the model provider or included in conversation context.
 
 ## What data does Neo store?
 
-Pulumi stores conversation data, including model responses, for debugging and measuring quality. This data is treated sensitively and used only for operational purposes, consistent with how other Pulumi Cloud product telemetry is handled.
+Pulumi stores conversation data, including model responses, for debugging and measuring quality. This data is used only for operational purposes and handled in accordance with [Pulumi's privacy policy](https://www.pulumi.com/privacy/), consistent with other Pulumi Cloud product telemetry.
 
 ## Can I control Neo access for my organization?
 
