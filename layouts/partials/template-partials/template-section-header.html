@@ -1,0 +1,58 @@
+{{/*
+    Template Section Header Partial
+
+    Centered section intro: optional tag line, title, description.
+    Used to introduce a new content area (e.g., "Scale confidently with Pulumi Cloud").
+
+    Parameters:
+    - tag_line: Optional tag line (displays in violet above title)
+    - title: Section title (line 1 when title_line_2 is set)
+    - title_line_2: Optional second line of title (renders on its own line below title)
+    - description: Section description/subtitle
+    - image: Optional image path (e.g. dashboard placeholder), below text unless image_above is true
+    - image_alt: Alt text for image
+    - image_above: Optional true to display image above the title
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $tagLine := .tag_line }}
+{{ $title := .title }}
+{{ $titleLine2 := .title_line_2 }}
+{{ $description := .description }}
+{{ $image := .image }}
+{{ $imageAlt := .image_alt | default "" }}
+{{ $imageAbove := .image_above }}
+{{ $anchor := .anchor }}
+
+<section class="template-section-header"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="text-center max-w-4xl mx-auto">
+        {{ if and $image $imageAbove }}
+        <div class="section-header-image section-header-image-above mb-6 w-full flex justify-center">
+            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="section-header-image-above-img rounded-lg">
+        </div>
+        {{ end }}
+        {{ if $tagLine }}
+        <div class="section-header-tag-wrap">
+            <span class="section-header-tag-line">{{ $tagLine }}</span>
+        </div>
+        {{ end }}
+        {{ if $title }}
+        <h2 class="section-header-title mb-4">
+            {{ if $titleLine2 }}
+            <span class="block">{{ $title }}</span>
+            <span class="block">{{ $titleLine2 }}</span>
+            {{ else }}
+            {{ $title }}
+            {{ end }}
+        </h2>
+        {{ end }}
+        {{ if $description }}
+        <p class="section-header-description">{{ $description | markdownify }}</p>
+        {{ end }}
+    </div>
+    {{ if and $image (not $imageAbove) }}
+    <div class="section-header-image mt-10 w-full flex justify-center">
+        <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full rounded-lg">
+    </div>
+    {{ end }}
+</section>

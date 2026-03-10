@@ -1,0 +1,60 @@
+{{/*
+    Template Icon Grid Partial
+
+    Two-column layout: left = grid of tech icons, right = text block.
+    Used for "GitOps & CI/CD Native" / "Ship infrastructure like software" sections.
+
+    Parameters:
+    - tag_line: Optional small uppercase label (left column)
+    - title: Section title (or line 1 when title_line_2 is set)
+    - title_line_2: Optional second line of title
+    - description: Section description
+    - icons: Array of icon objects with src and alt (ignored if image is set)
+      Example: [{"src": "/images/icons/github.svg", "alt": "GitHub"}, ...]
+    - image: Optional single image path (replaces the icon grid when set)
+    - image_alt: Alt text for the single image
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $tagLine := .tag_line }}
+{{ $title := .title }}
+{{ $titleLine2 := .title_line_2 }}
+{{ $description := .description }}
+{{ $icons := .icons }}
+{{ $image := .image }}
+{{ $imageAlt := .image_alt | default "" }}
+{{ $anchor := .anchor }}
+
+<section class="template-icon-grid"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="flex flex-col xl:flex-row items-start gap-16 xl:gap-24">
+        <div class="icon-grid-visual w-full xl:w-2/5 flex-shrink-0">
+            {{ if $image }}
+            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto max-w-full object-contain">
+            {{ else }}
+            <div class="icon-grid-container grid grid-cols-3 gap-8 md:gap-10">
+                {{ range $icons }}
+                <div class="icon-grid-item flex items-center justify-center p-5 md:p-6 rounded-lg bg-gray-50">
+                    <img src="{{ .src }}" alt="{{ .alt }}" class="h-12 w-auto max-w-full object-contain">
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        <div class="icon-grid-content flex-1">
+            {{ if $tagLine }}
+            <div class="icon-grid-tag-wrap">
+                <span class="icon-grid-tag-line">{{ $tagLine }}</span>
+            </div>
+            {{ end }}
+            {{ if or $title $titleLine2 }}
+            <h2 class="icon-grid-title mb-4">
+                {{ if $title }}<span class="block">{{ $title }}</span>{{ end }}
+                {{ if $titleLine2 }}<span class="block">{{ $titleLine2 }}</span>{{ end }}
+            </h2>
+            {{ end }}
+            {{ if $description }}
+            <p class="icon-grid-description">{{ $description | markdownify }}</p>
+            {{ end }}
+        </div>
+    </div>
+</section>

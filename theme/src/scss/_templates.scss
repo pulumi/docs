@@ -2,6 +2,7 @@
 // Styles for reusable template partials (template-hero, template-logo-banner, etc.)
 
 $violet-primary: #673EAC;
+
 @mixin page-header {
     @apply font-bold leading-extra-tight text-black font-body;
     font-size: 48px;
@@ -30,6 +31,17 @@ $violet-primary: #673EAC;
     font-size: 20px;
 }
 
+@mixin product-hero-heading {
+    color: #000;
+    text-align: center;
+    font-feature-settings: 'salt' on;
+    font-family: Inter, sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 95%;
+    letter-spacing: -0.64px;
+}
 
 @mixin section-description {
     @apply font-normal leading-normal font-body;
@@ -84,7 +96,9 @@ $violet-primary: #673EAC;
     .hero-date-and-location {
         @apply font-semibold;
 
-        a, a:hover, a:visited {
+        a,
+        a:hover,
+        a:visited {
             color: inherit;
         }
     }
@@ -215,11 +229,22 @@ $violet-primary: #673EAC;
     }
 
     .three-column-item-title {
-        @include section-header-extra-extra-small();
+        color: #000;
+        font-feature-settings: 'salt' on;
+        font-family: Inter, sans-serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: -0.84px;
 
         i {
             flex-shrink: 0;
         }
+    }
+
+    &.icons-black .three-column-item-title i {
+        @apply text-black;
     }
 
     .three-column-item-description {
@@ -227,10 +252,38 @@ $violet-primary: #673EAC;
     }
 }
 
+// Shared feature card (icon above title + description) — used by template-product-two-column and template-three-column (icon_layout: above)
+.template-feature-card-icon {
+    @apply text-black flex items-center justify-center;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    border-radius: 8px;
+    border: 0.5px solid #CECECE;
+    margin-bottom: 48px;
+
+    i {
+        flex-shrink: 0;
+    }
+}
+
+.template-feature-card-title {
+    font-size: 28px;
+    font-weight: 600;
+    @apply font-body text-black leading-tight m-0;
+    margin-bottom: 24px;
+}
+
+.template-feature-card-description {
+    @include section-body-medium();
+    font-size: 16px;
+}
+
 .template-testimonial {
     .template-testimonial-quote {
         @apply text-white font-body font-semibold leading-normal;
         font-size: 24px;
+
         @screen sm {
             font-size: 36px;
         }
@@ -238,6 +291,43 @@ $violet-primary: #673EAC;
 
     .template-testimonial-credit {
         @apply text-white opacity-70 font-body text-2xl font-normal leading-normal;
+    }
+}
+
+.template-testimonial-product {
+    @apply font-body;
+    background-color: #2d2d2d;
+    border: 1px solid #404040;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+
+    .template-testimonial-product-quote {
+        @apply text-white leading-relaxed text-left border-0;
+        font-size: 28px;
+        font-weight: 600;
+
+        p {
+            @apply m-0;
+        }
+    }
+
+    .template-testimonial-product-logo img {
+        @apply block;
+        height: 28px;
+        width: auto;
+        max-width: 120px;
+        filter: invert(1);
+    }
+
+    .template-testimonial-product-credit {
+        @apply text-right;
+    }
+
+    .template-testimonial-product-author {
+        @apply text-white font-bold font-body text-lg;
+    }
+
+    .template-testimonial-product-title {
+        @apply text-gray-300 font-normal font-body text-base;
     }
 }
 
@@ -269,4 +359,198 @@ $violet-primary: #673EAC;
     .template-footer-title {
         @include section-header-small();
     }
+}
+
+// Product page widgets
+.template-product-hero {
+    .product-hero-heading {
+        @include product-hero-heading();
+    }
+
+    .product-hero-title-primary {
+        @apply block;
+        background: linear-gradient(to right, #7842D4, #A374F1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .product-hero-title-secondary {
+        @apply block text-black;
+    }
+
+    .product-hero-title {
+        @include product-hero-heading();
+    }
+
+    .product-hero-description {
+        @include section-description();
+        font-size: 24px;
+    }
+}
+
+.template-section-header {
+    .section-header-image-above-img {
+        width: auto;
+        max-width: 120px;
+        height: auto;
+    }
+
+    .section-header-tag-line {
+        color: var(--gray-primary, #404041);
+        text-align: center;
+        font-family: Inter, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: -0.2px;
+    }
+
+    .section-header-tag-wrap {
+        margin-bottom: 0.5rem;
+    }
+
+    .section-header-title {
+        @include section-header();
+    }
+
+    .section-header-description {
+        @include section-description();
+        font-size: 16px;
+        max-width: 36rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            pointer-events: none;
+        }
+    }
+}
+
+.template-section-header-with-code {
+    .template-section-header-with-code-inner {
+        @apply gap-12;
+
+        @screen xl {
+            gap: 96px;
+        }
+    }
+
+    .template-section-header-with-code-content {
+        @screen xl {
+            flex: 1 1 0%;
+            min-width: 0;
+        }
+    }
+
+    .template-section-header-with-code-image {
+        @screen xl {
+            flex: 1 1 0%;
+            min-width: 0;
+        }
+    }
+
+    .section-header-with-code-tag {
+        @include section-hint-small();
+        @apply m-0;
+    }
+
+    .section-header-with-code-title {
+        @include section-header();
+        @apply text-black text-left;
+    }
+
+    .section-header-with-code-description {
+        color: var(--gray-tertiary, #757576);
+        font-feature-settings: 'salt' on;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        @apply text-left font-body;
+
+        p {
+            @apply m-0;
+        }
+
+        p+p {
+            @apply mt-4;
+        }
+    }
+
+    .section-header-with-code-cta {
+        @apply text-violet-600 font-semibold font-body no-underline;
+
+        &:hover {
+            @apply underline;
+        }
+    }
+}
+
+.template-counter-cards {
+    .counter-card-number {
+        @include section-header();
+        @apply mb-2;
+        background: linear-gradient(to bottom, #6C6C6C, #1B1B1B);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    .counter-card-label {
+        @include section-body-medium();
+        @apply m-0;
+    }
+}
+
+.template-icon-grid {
+    .icon-grid-tag-line {
+        color: var(--gray-primary, #404041);
+        text-align: center;
+        font-family: Inter, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: -0.2px;
+    }
+
+    .icon-grid-tag-wrap {
+        margin-bottom: 0.5rem;
+    }
+
+    .icon-grid-title {
+        @include section-header();
+    }
+
+    .icon-grid-description {
+        @include section-description();
+    }
+}
+
+.template-product-two-column {
+    .product-two-column-heading {
+        @include section-header();
+    }
+
+    .product-two-column-description {
+        @include section-description();
+        font-size: 24px;
+
+        p:first-of-type {
+            color: #000;
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        p+p {
+            @apply mt-4;
+        }
+    }
+
 }

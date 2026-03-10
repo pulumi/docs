@@ -1,0 +1,77 @@
+{{/*
+    Product Page Content Partial
+
+    Renders all product page widgets in order, pulling data from the context passed in.
+    Follows the same pattern as event-page-content.html with gap-36 spacing between sections.
+
+    Expected context: Page context with .Params containing widget data
+
+    Usage in layouts:
+    {{ partial "product-page-content.html" . }}
+*/}}
+
+<div class="font-body container mx-auto mb-16 mt-16 px-8 flex flex-col gap-36">
+{{ with .Params.hero }}
+{{ partial "template-partials/template-product-hero.html" . }}
+{{ end }}
+
+{{ with .Params.logos }}
+{{ partial "template-partials/template-logo-banner.html" (dict "logos" . "text" $.Params.logos_text "anchor" $.Params.logos_anchor) }}
+{{ end }}
+
+{{ with .Params.product_two_column }}
+{{ partial "template-partials/template-product-two-column.html" . }}
+{{ end }}
+
+{{ with .Params.section_header }}
+{{ partial "template-partials/template-section-header.html" . }}
+{{ end }}
+
+{{ with .Params.counter_cards }}
+{{ partial "template-partials/template-counter-cards.html" . }}
+{{ end }}
+
+{{ with .Params.testimonial }}
+{{ partial "template-partials/template-testimonial-product.html" . }}
+{{ end }}
+
+{{ with .Params.section_header_with_code }}
+{{ partial "template-partials/template-section-header-with-code.html" . }}
+{{ end }}
+
+{{ with .Params.section_header_secondary }}
+{{ partial "template-partials/template-section-header.html" . }}
+{{ end }}
+
+{{ with .Params.features }}
+{{ partial "template-partials/template-features.html" . }}
+{{ end }}
+
+{{ with .Params.three_column }}
+{{ partial "template-partials/template-three-column.html" . }}
+{{ end }}
+
+{{ with .Params.icon_grid }}
+{{ partial "template-partials/template-icon-grid.html" . }}
+{{ end }}
+
+{{ with .Params.three_column_cicd }}
+{{ partial "template-partials/template-three-column.html" . }}
+{{ end }}
+
+{{ with .Params.section_header_scale }}
+{{ partial "template-partials/template-section-header.html" . }}
+{{ end }}
+
+{{ with .Params.three_column_cloud }}
+{{ partial "template-partials/template-three-column.html" . }}
+{{ end }}
+
+{{ with .Params.two_column }}
+{{ partial "template-partials/template-two-column.html" (dict "columns" . "anchor" $.Params.two_column_anchor) }}
+{{ end }}
+
+{{ with .Params.footer_cta }}
+{{ partial "template-partials/template-footer-cta.html" . }}
+{{ end }}
+</div>
