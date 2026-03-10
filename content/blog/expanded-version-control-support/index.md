@@ -29,6 +29,14 @@ Your version control provider shouldn't limit your infrastructure workflows. Pul
 
 ![Add account screen showing GitHub, GitLab, and Azure DevOps as VCS options](VCS.png)
 
+## Connect multiple providers and accounts
+
+You can connect multiple VCS providers to a single Pulumi organization simultaneously, like GitHub, GitLab, and Azure DevOps all at once. You can also connect multiple accounts of the same provider, such as two separate GitHub organizations or two GitLab groups. This means teams that work across different repositories, providers, or organizational boundaries can manage everything from one place.
+
+{{< notes type="info" >}}
+GitHub Enterprise Server is currently limited to one connection per Pulumi organization.
+{{< /notes >}}
+
 ## What your team can do
 
 ### Deploy on every push
