@@ -21,7 +21,6 @@ Many developers and platform engineers already use Google accounts daily for ema
 
 <!--more-->
 
-## Why Google sign-in
 
 Adding Google as an identity provider brings several benefits:
 
