@@ -33,7 +33,7 @@ Adding Google as an identity provider brings several benefits:
 On the Pulumi Cloud sign-in page, you'll see a new **Sign in with Google** button alongside the existing GitHub, GitLab, and Atlassian options. If you are a new user, select it, authenticate with your Google account, and you're in.
 
 {{% notes type="info" %}}
-If you already have an existing Pulumi Cloud account, make sure to associate to your existing account as described in the next section
+If you already have an existing Pulumi Cloud account, make sure to associate to your existing account as described in the next section.
 {{% /notes %}}
 
 ![Pulumi Cloud sign-in page showing Google as an identity provider option](sign-in.png)
