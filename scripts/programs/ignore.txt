@@ -54,6 +54,9 @@ deepseek-ollama-csharp
 gcp-simple-webserver-yaml
 azure-native-import-resource-group-csharp
 
+# Terraform reference projects are not Pulumi programs.
+tf-state-ref-terraform
+
 # All JS examples were removed from static programs.
 # TODO: See if this line can be removed once the code has been merged to master
 and the tests have been run. 
