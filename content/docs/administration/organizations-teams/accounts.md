@@ -26,6 +26,7 @@ To create your Pulumi account, navigate to [app.pulumi.com](https://app.pulumi.c
 
 * GitHub
 * GitLab
+* Google
 * Atlassian
 * [Email](https://app.pulumi.com/signin/email)
 * [Single Sign-on](https://app.pulumi.com/signin/sso)
