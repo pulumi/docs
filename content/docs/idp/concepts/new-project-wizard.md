@@ -30,7 +30,7 @@ The New Project Wizard supports three primary workflows:
 Within the New Project Wizard, you can configure:
 
 - **Project configuration**: When creating a new project, set the project name, description, and other metadata
-- **Destination repository**: Select an existing repository or create a new one on GitHub
+- **Destination repository**: Select an existing repository or create a new one on [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), or [GitLab](/docs/version-control/gitlab/)
 - **Stack configuration values**:
   - Import [ESC environments](/docs/esc/environments/) to provide configuration and secrets
   - Set individual configuration values using a form-based interface (see note below)
@@ -64,12 +64,12 @@ To add a stack to an existing project:
 - No-code stacks are only supported on GitHub
 - When forking templates, destination repositories can only be created on GitHub, even if the source template is hosted on GitLab
 
-## GitHub OAuth application
+## VCS authorization
 
-To use the New Project Wizard with [Pulumi Deployments](/docs/deployments/deployments/), users must authorize a GitHub OAuth application.
+To use the New Project Wizard with [Pulumi Deployments](/docs/deployments/deployments/), users must authorize their VCS provider. Pulumi supports [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/).
 
-The GitHub authorization requires permissions to manage public and private repositories and workflows. Pulumi uses these permissions to read template sources, write template content into repositories, and optionally create new repositories. While the authorization request includes additional repository permissions, Pulumi does not use all of them. This is due to GitHub lacking fine-grained repository permissions as part of the [OAuth application scopes](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes).
+For GitHub, the authorization requires permissions to manage public and private repositories and workflows. Pulumi uses these permissions to read template sources, write template content into repositories, and optionally create new repositories. While the authorization request includes additional repository permissions, Pulumi does not use all of them. This is due to GitHub lacking fine-grained repository permissions as part of the [OAuth application scopes](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes).
 
 {{% notes "info" %}}
-Make sure you [install](/docs/deployments/deployments/reference/#github-app-installation) the Pulumi GitHub App to ensure the New Project Wizard works seamlessly with [Pulumi Deployments](/docs/deployments/deployments/).
+Make sure you configure a [version control integration](/docs/version-control/) to ensure the New Project Wizard works seamlessly with [Pulumi Deployments](/docs/deployments/deployments/).
 {{% /notes %}}

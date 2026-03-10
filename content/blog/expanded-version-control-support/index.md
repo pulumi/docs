@@ -23,7 +23,7 @@ aliases:
     - /blog/pulumi-now-supports-azure-devops-and-gitlab/
 ---
 
-Your version control provider shouldn't limit your infrastructure workflows. Pulumi Cloud now works with [GitHub](/docs/integrations/github-app/), [GitHub Enterprise Server](/docs/integrations/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/integrations/azure-devops-integration/), and [GitLab](/docs/integrations/gitlab/). Every team gets the same [deployment pipelines](/docs/deployments/deployments/), [PR previews](/docs/deployments/deployments/review-stacks/), and [AI-powered change summaries](/docs/ai/) regardless of where their code lives.
+Your version control provider shouldn't limit your infrastructure workflows. Pulumi Cloud now works with [GitHub](/docs/version-control/github-app/), [GitHub Enterprise Server](/docs/version-control/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/). Every team gets the same [deployment pipelines](/docs/deployments/deployments/), [PR previews](/docs/deployments/deployments/review-stacks/), and [AI-powered change summaries](/docs/ai/) regardless of where their code lives.
 
 <!--more-->
 
@@ -69,6 +69,6 @@ The new project wizard discovers your organizations, repositories, and branches 
 1. Authorize with your VCS provider.
 1. Deploy infrastructure with first-class workflows.
 
-For setup details, see the docs for [GitHub](/docs/integrations/github-app/), [GitHub Enterprise Server](/docs/integrations/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/integrations/azure-devops-integration/), and [GitLab](/docs/integrations/gitlab/).
+For setup details, see the docs for [GitHub](/docs/version-control/github-app/), [GitHub Enterprise Server](/docs/version-control/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/).
 
 {{< blog/cta-button "Connect your VCS" "https://app.pulumi.com" "_blank" >}}
