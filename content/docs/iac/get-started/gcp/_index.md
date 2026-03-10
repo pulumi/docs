@@ -12,6 +12,7 @@ menu:
 
 aliases:
     - /docs/quickstart/gcp/
+    - /docs/get-started/gcp/
     - /docs/clouds/gcp/get-started/
     - /docs/iac/get-started/gcp/deploy-changes/
     - /docs/iac/get-started/gcp/review-project/

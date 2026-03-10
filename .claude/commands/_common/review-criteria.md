@@ -21,11 +21,14 @@ Always provide relevant line numbers for any issues you identify.
 - Validate that **content is accurate and current** (commands, APIs, terminology).
 - Ensure **all new files end with a newline**.
 - Double-check indented lines to ensure they are not incorrectly indented as code blocks.
-- **Code examples** must run correctly and follow best practices:
-  - Do not suggest untested code.
-  - Examples should show realistic use cases, not contrived demos.
-  - Examples should handle errors appropriately.
-  - Examples should follow language-specific best practices.
+- **Code examples** must be correct and verifiable:
+  - **Syntax check**: Valid syntax — no unclosed brackets, correct indentation, no obvious typos.
+  - **Import validation**: Correct module/package names (e.g., `@pulumi/aws` not `@pulumi/pulumi-aws`), imported symbols exist in the referenced package, no unused imports.
+  - **API correctness**: Cross-reference resource types, property names, and constructor arguments against Pulumi provider docs. Verify property naming conventions per language (camelCase for TypeScript/JavaScript, snake_case for Python, PascalCase for C#/Go). Check enum values, required properties, and valid types.
+  - **Realistic usage**: Examples should show real use cases, not contrived demos. Handle errors appropriately.
+  - **Language-specific best practices**: Idiomatic patterns per language (e.g., `async`/`await` in TypeScript, context managers in Python).
+  - **`/static/programs/` programs**: These are testable — verify they have complete project structure (`Pulumi.yaml`, dependency files, all source files). Flag missing or incomplete projects.
+  - **Fix proposals**: Do not suggest untested code as fixes. Verify that any proposed code changes meet the same checks listed above.
 - **Files moved, renamed, or deleted**:
   - Confirm that moved or renamed files have appropriate aliases added to the frontmatter to avoid broken links.
   - Confirm that deleted files have a redirect created, if applicable.

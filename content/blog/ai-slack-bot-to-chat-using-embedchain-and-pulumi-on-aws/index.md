@@ -98,7 +98,7 @@ The `app_config` reference is the [Embedchain configuration schema](https://docs
 
 ### The Slack application
 
-Now that our brain is built, we need a way for our users to interact with it. [Slack Bolt](https://slack.dev/bolt-python/tutorial/getting-started) is an official library for building Slack bots.
+Now that our brain is built, we need a way for our users to interact with it. [Slack Bolt](https://docs.slack.dev/tools/bolt-python/getting-started/) is an official library for building Slack bots.
 
 Follow their instructions to [create a new Slack app](https://api.slack.com/start/quickstart).
 

@@ -136,7 +136,7 @@ Now that we have a dynamic approach to loading configuration from YAML, lets mov
 
 The current application architecture uses a single process with the expectation that a response is generated **within 29 seconds**, before the [API Gateway timeout](https://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html#api-gateway-execution-service-limits-table).
 
-[Slack also has an expectation](https://slack.dev/bolt-python/concepts#acknowledge), that we must acknowledge (or ack) a request **within 3 seconds**.
+[Slack also has an expectation](https://docs.slack.dev/tools/bolt-python/concepts/acknowledge/), that we must acknowledge (or ack) a request **within 3 seconds**.
 
 Currently, when the application receives a request, the API Gateway Lambda integration starts the application.  The lifecycle of this single process approach is diagrammed below.
 

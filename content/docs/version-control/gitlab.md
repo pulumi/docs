@@ -131,4 +131,4 @@ Use GitLab repositories as template sources for [Pulumi IDP](/docs/idp/concepts/
 
 ## Pulumi Deployments
 
-Trigger [Pulumi Deployments](/docs/deployments/deployments/) from GitLab CI by calling the [Deployments REST API](https://www.pulumi.com/docs/deployments/api/) from your GitLab CI job. Native push-to-deploy from GitLab repositories is not currently supported; that feature requires the [Pulumi GitHub App](/docs/version-control/github-app/).
+Trigger [Pulumi Deployments](/docs/deployments/deployments/) from GitLab CI by calling the [Deployments REST API](/docs/reference/cloud-rest-api/deployments/) from your GitLab CI job. Native push-to-deploy from GitLab repositories is not currently supported; that feature requires the [Pulumi GitHub App](/docs/version-control/github-app/).

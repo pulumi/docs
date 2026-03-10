@@ -67,7 +67,7 @@ Choose one of the following deployment platforms. (You can actually choose more 
 - [Azure](https://azure.microsoft.com/en-us)
   - [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 - [Runpod.io](https://runpod.io)
-  - [Runpod api key](https://docs.runpod.io/docs/graphql-api)
+  - [Runpod api key](https://docs.runpod.io/graphql-api)
 
 Now, for the real fun, let's start the timer and deploy our own chatbot! Note that the instructions below are for Runpod; instructions for the other two deployment platforms are found in [the GitHub repository](https://github.com/pulumiverse/katwalk).
 
