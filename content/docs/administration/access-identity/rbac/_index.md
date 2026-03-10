@@ -35,18 +35,27 @@ Roles can be assigned to three kinds of principals in Pulumi Cloud:
 - **Organization default role**: When your organization has custom roles, you can set a **default role for members**. That custom role becomes the baseline for members who have the Member organization role and have not been given an explicit custom role.
 - **Team roles**: Teams can have **role assignments** (one or more roles). Members of a team effectively get the union of those roles plus their own user role in the organization. See [Teams](/docs/administration/access-identity/rbac/teams#team-role-assignments) for details.
 
-A user's effective permissions are the **union** of (1) their user role and (2) all roles assigned to the teams they belong to. Team role assignments add on top of the user's baseline role.
+## How permissions accumulate
 
-## Organization-wide settings
+Access in Pulumi Cloud is built up progressively. A user's effective permissions are the union of every grant that applies to them — from the broadest organizational constraints down to the most resource-specific automatic grants.
 
-Pulumi Cloud has a set of **organization-wide access settings** (configured at **Settings** > **Access Management**) that predate the full RBAC system and continue to work alongside it. These settings — such as whether members can create stacks, delete stacks, create teams, or create Insights accounts — are simple on/off toggles that apply to **all members** regardless of their assigned role.
+### Organization-wide settings {#organization-wide-settings}
 
-These settings are distinct from RBAC permission scopes:
+The outermost layer is a set of **organization-wide access settings** at **Settings** > **Access Management**. These on/off toggles cover capabilities such as creating or deleting stacks, creating teams, and creating Insights accounts. When a setting is **enabled**, that capability is granted to all members unconditionally, regardless of their role. When a setting is **disabled**, only members whose role explicitly includes the corresponding RBAC scope retain the capability. These settings are distinct from RBAC scopes: RBAC scopes (e.g. `stack:create`, `team:create`) are granted per-role, while org-wide settings apply to everyone when enabled.
 
-- **RBAC scopes** (e.g. `stack:create`, `team:create`) are granted per-role and only affect principals who hold that role.
-- **Organization-wide settings** apply unconditionally to every member. When an org-wide setting restricts an action (e.g. "Members cannot create stacks" is off), that restriction applies even to members whose role includes the corresponding scope.
+### Team roles
 
-Think of org-wide settings as an org-level override layer on top of the RBAC system. A member needs **both** the relevant RBAC scope in their role **and** the org-wide setting to be enabled to perform the action.
+Members who belong to teams inherit all roles assigned to those teams, on top of their own individual role. Users in multiple teams accumulate permissions from all of them. Team roles can include tag-based (ABAC) rules that automatically apply a permission set to any resource whose tags match specified conditions, without requiring per-resource grants.
+
+### Organization role
+
+Every member has a baseline organization role (Admin, Member, Billing Manager, or a custom role). Members with the Member organization role who have not been assigned an explicit custom role inherit the organization's default custom role, if one has been configured.
+
+### Creator grants
+
+Any user who creates a stack is automatically granted the Stack Admin permission set on that stack, regardless of their organization role or team memberships.
+
+All grants are strictly **additive**: no grant can reduce what another provides.
 
 ## RBAC Constructs
 
