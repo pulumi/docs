@@ -18,6 +18,13 @@ description: |
   Pulumi-maintained version control integrations connect Pulumi with your VCS provider, enabling infrastructure previews on pull requests and automated deployment workflows.
 
 sections:
+- type: flat
+  heading: Multiple providers and accounts
+  description_md: |
+    You can connect multiple VCS providers to a single Pulumi organization simultaneously, for example GitHub, GitLab, and Azure DevOps all at once. You can also connect multiple accounts of the same provider, such as two separate GitHub organizations or two GitLab groups.
+
+    GitHub Enterprise Server is currently limited to one connection per Pulumi organization.
+
 - type: button-cards
   heading: VCS integrations
   cards:

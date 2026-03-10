@@ -20,7 +20,7 @@ You can create and manage deployment settings in several ways:
 
 ### From the Pulumi Cloud UI
 
-From the Pulumi Console, a stack's deployment settings can be accessed via the `Settings > Deploy` tab. Once the settings are defined via the UI, they apply to all Deployment triggers, including push-to-deploy (if you have the GitHub app installed), click-to-deploy and the REST API.
+From the Pulumi Console, a stack's deployment settings can be accessed via the `Settings > Deploy` tab. Once the settings are defined via the UI, they apply to all Deployment triggers, including push-to-deploy (if you have a [VCS integration](/docs/version-control/) configured), click-to-deploy and the REST API.
 
 ![Pulumi UI - Deployment Settings](../../ui-settings.png)
 
@@ -38,7 +38,7 @@ Pulumi recommends against a stack defining its own Deployment Settings (that is,
 
 ## Path Filtering
 
-When using the GitHub app and push-to-deploy, you may want to filter deployment events to only target file changes in specific directories. You can easily do this using path filtering, so a deployment is only triggered if there is a change in files that match the path filters. This is especially useful for monorepos where you may have multiple Pulumi programs within the same repository.
+When using a [VCS integration](/docs/version-control/) and push-to-deploy, you may want to filter deployment events to only target file changes in specific directories. You can easily do this using path filtering, so a deployment is only triggered if there is a change in files that match the path filters. This is especially useful for monorepos where you may have multiple Pulumi programs within the same repository.
 
 Path filters are relative to the repository root, and should reference a file by name or a directory must reference files by name relative to the repository or directories via glob patterns such as `/**` to include all changes within a directory.
 

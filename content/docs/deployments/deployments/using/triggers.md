@@ -15,7 +15,7 @@ menu:
 A deployment trigger is a method of initializing a deployment. Deployments may be triggered in the following ways:
 
 - **[Click to Deploy](#click-to-deploy):** Run any Deployments operation on demand by clicking a button in the Pulumi Cloud console UI
-- **[GitHub Push to Deploy](#github-push-to-deploy):** Automatically run a `pulumi preview` when a Pull Request is created and/or run `pulumi up` when a Pull Request is merged
+- **[Push to Deploy](#push-to-deploy):** Automatically run a `pulumi preview` when a Pull Request is created and/or run `pulumi up` when a Pull Request is merged
 - **[Review Stacks](#review-stacks):** Create and deploy an ephemeral stack on the current branch whenever a new Pull Request is created, and tear it down automatically once the Pull Request is merged
 - **[Scheduled Deployments](#scheduled-deployments):** Run any Deployments operation on a recurring basis
 - **[TTL Stacks](#ttl-stacks):** Run `pulumi destroy` on a stack (and optionally delete the stack entirely) after a specific amount of time has passed
@@ -41,15 +41,15 @@ A deployment may be triggered on demand by clicking a button in the Pulumi Conso
 
 ![Pulumi UI - Click to Deploy](../../ui-deploy-button.png)
 
-## GitHub Push to Deploy
+## Push to Deploy
 
 {{% notes type="info" %}}
-Push to Deploy requires the [Pulumi GitHub App](/docs/version-control/github-app/#installation-and-configuration) be installed to your GitHub organization. The app requires read access to your repos so it can clone your Pulumi programs and listen to merge commits to automatically trigger deployments on `git push`.
+Push to Deploy requires a [version control integration](/docs/version-control/) to be configured for your organization. This is available with [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/). The integration requires read access to your repos so it can clone your Pulumi programs and listen to merge commits to automatically trigger deployments on `git push`.
 {{% /notes %}}
 
-Pulumi Deployments can run a `pulumi preview` for a stack (e.g., `dev`) when a Pull Request is opened against a particular git branch (e.g., a proposed change to the `main` branch). This will give the reviewer the full context necessary to understand the impact of the changes in your Pull Request: both the code changes _and the changes to your resources_ (i.e., the `pulumi preview` output). The Pulumi GitHub app will create or update a comment on your Pull Request with the results of `pulumi preview`.
+Pulumi Deployments can run a `pulumi preview` for a stack (e.g., `dev`) when a Pull Request is opened against a particular git branch (e.g., a proposed change to the `main` branch). This will give the reviewer the full context necessary to understand the impact of the changes in your Pull Request: both the code changes _and the changes to your resources_ (i.e., the `pulumi preview` output). Your VCS integration will create or update a comment on your Pull Request with the results of `pulumi preview`.
 
-GitHub Push to Deploy can also be configured to run a `pulumi update` for a stack when changes are merged to a particular git branch. This feature is useful to enable continuous delivery, for example to a shared development or QA environment.
+Push to Deploy can also be configured to run a `pulumi update` for a stack when changes are merged to a particular git branch. This feature is useful to enable continuous delivery, for example to a shared development or QA environment.
 
 ## Scheduled Deployments
 
@@ -63,7 +63,7 @@ GitHub Push to Deploy can also be configured to run a `pulumi update` for a stac
 
 ## Review Stacks
 
-[Review Stacks](/docs/deployments/deployments/review-stacks) are dedicated cloud environments that get created automatically every time a pull request is opened. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and the Pulumi GitHub App will add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
+[Review Stacks](/docs/deployments/deployments/review-stacks) are dedicated cloud environments that get created automatically every time a pull request is opened. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
 
 ![Review Stack Pull Request Comment](../../comment.png)
 
