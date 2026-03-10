@@ -25,7 +25,7 @@ Use this checklist when planning or validating your self-hosted deployment.
 ### Pre-deployment
 
 - Choose deployment platform ([ECS](/docs/administration/self-hosting/deployment-options/ecs-hosted/), [EKS](/docs/administration/self-hosting/deployment-options/eks-hosted/), [AKS](/docs/administration/self-hosting/deployment-options/aks-hosted/), [GKE](/docs/administration/self-hosting/deployment-options/gke-hosted/), [BYO](/docs/administration/self-hosting/deployment-options/byo-infra-hosted/))
-- Obtain Pulumi license key from your Pulumi contact
+- Obtain Pulumi Cloud license key from your Pulumi contact
 - Define domain names for API and console endpoints
 - Obtain or generate TLS certificates
 - Get SMTP server credentials (optional for testing, required for production)
