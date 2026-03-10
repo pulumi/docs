@@ -61,8 +61,8 @@ To add a stack to an existing project:
 
 ## Limitations
 
-- No-code stacks are only supported on GitHub
-- When forking templates, destination repositories can only be created on GitHub, even if the source template is hosted on GitLab
+- No-code stacks are supported on [GitHub](/docs/version-control/github-app/) and [Azure DevOps](/docs/version-control/azure-devops-integration/)
+- When forking templates, destination repositories can be created on [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), or [GitLab](/docs/version-control/gitlab/)
 
 ## VCS authorization
 
