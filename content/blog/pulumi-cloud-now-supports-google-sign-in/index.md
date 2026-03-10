@@ -25,10 +25,8 @@ Many developers and platform engineers already use Google accounts daily for ema
 
 Adding Google as an identity provider brings several benefits:
 
-- **Use the account you already have.** If your team lives in [Google Workspace](https://workspace.google.com/), you can sign in to Pulumi Cloud without creating yet another set of credentials.
-- **Faster onboarding.** New users can sign up with a single click using their existing Google account, reducing friction when joining an organization.
-- **Fewer passwords to manage.** Leverage Google's built-in security features like two-factor authentication instead of maintaining a separate password.
-- **Works with your existing security policies.** If your team already enforces two-factor authentication or device management through Google Workspace, those protections carry over to Pulumi Cloud sign-in automatically.
+* Use the account you already have. If your team already lives in [Google Workspace](https://workspace.google.com/), you can sign in to Pulumi Cloud with a single click, no new credentials required.
+* Inherit your existing security policies. If you've already configured two-factor authentication, device management, and other protections in a Google Workspace, you can carry them over to Pulumi Cloud automatically.
 
 ## How it works
 
