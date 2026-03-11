@@ -148,31 +148,28 @@ To add images to the body of your post, first place them within the folder conta
 ![The humble platypus](platypus.png)
 ```
 
-#### Social ("Meta") Images
+#### Social ("Meta") and Feature Images
 
 > [!IMPORTANT]
-> If you are adding _any_ logos to the meta image, you must absolutely ensure these are current. Using a wrong or outdated logo can have a severe negative impact on social sharing timelines due caching.
+> If you are adding _any_ logos to the images, you must absolutely ensure these are current. Using a wrong or outdated logo can have a severe negative impact on social sharing timelines due to caching.
 
-When you generate a new post, an [OpenGraph](http://ogp.me/) placeholder image is included for you, and a reference to that image is added to the post's frontmatter as well, as its `meta_image`. The `meta_image` is meant to accompany the post in social previews (Twitter cards, unfurled Slack links, etc.) and on the Pulumi blog home page. It's optional, but recommended, as it can help to make your post more attractive and informative.
+When you generate a new post, placeholder images are included for two types of blog images:
 
-For best results, we suggest the following specs for the `meta_image`, largely based on [Twitter's dev docs](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards):
+- **`feature_image`** — A high-resolution hero image (1884×1256) displayed in the blog listing and at the top of the blog post page.
+- **`meta_image`** — An [OpenGraph](http://ogp.me/) image (1200×628) used in social previews (Twitter cards, unfurled Slack links, etc.) and on the Pulumi blog home page.
 
-| Aspect Ratio | Recommended Size | Format | Background               |
-| ------------ | ---------------- | ------ | ------------------------ |
-| 2:1          | 1200×630         | PNG    | Opaque (No Transparency) |
+Both are optional but strongly recommended.
 
-Remember to replace the `meta_image` placeholder (or remove the property altogether and delete the placeholder `meta.png` file) before submitting your post.
+Please reach out in the #marketing Slack channel to get a feature image generated for you. You can then use the `/blog-meta-image` command in Claude Code to generate a meta image that matches the feature image.
 
-For help creating your `meta_image`, check out our [Build Your Own Meta Image file](https://www.figma.com/file/TnD7nxjIxVvXq8w0W7awPG/Build-Your-Own-Meta-Image?node-id=0%3A1) in Figma. There you’ll find backgrounds, images, and logos to assemble the `meta_image` for your blog post.
+If you're in a hurry you can use the same Claude Code command to generate both images automatically from a curated set of branded templates.
 
-To use Pulumi's primary brand font Gilroy in your `meta_image`, first [download Gilroy](https://drive.google.com/file/d/1893zFNypEQTvZU0J2Bz5_mVx6xa_7Zxh/view?usp=sharing) and install the file to your local font folder. Then [download the Figma font installer](https://www.figma.com/downloads/) to access your local fonts in Figma.
+| Field           | Recommended Size | Aspect Ratio | Format | Background               |
+| --------------- | ---------------- | ------------ | ------ | ------------------------ |
+| `feature_image` | 1884×1256        | 3:2          | PNG    | Opaque (No Transparency) |
+| `meta_image`    | 1200×628         | ~2:1         | PNG    | Opaque (No Transparency) |
 
-A few things to keep in mind when designing a `meta image`:
-
-- Avoid placing important text or graphic elements too close to the edges of the frame — elements at the edges may get cropped at some display ratios
-- Try to include at least one Pulumi identifier (word mark, Pulumipus) so viewers can tell at a glance that the image belongs to the Pulumi blog
-- Use dark text on light backgrounds, and light text on dark backgrounds to ensure readability
-- Remember to zoom out from your image and confirm it looks as you intend at a thumbnail size
+Remember to replace both placeholder images (or remove the properties and delete the placeholder files) before submitting your post.
 
 #### Video
 

@@ -1,11 +1,11 @@
 ---
 name: blog-meta-image
-description: "Generate a meta image (Open Graph / social share) for a blog post. Reads the blog post title, selects a pre-composed template (dark/light, mascot/logos), and renders a 1200x628 PNG. Use when the user types /blog-meta-image or asks to create, generate, or regenerate a blog post's meta image, social card, or Open Graph image. Accepts optional arguments like theme, mascot style, or logo names."
+description: "Generate a feature image (1884x1256) and OpenGraph meta image (1200x628) for a blog post. Reads the blog post title, selects a feature template (neo, platform, rocket, shield, tutorial, or logo variant), renders feature.png, then composites it with title text onto meta.png. Use when the user types /blog-meta-image or asks to create, generate, or regenerate a blog post's feature image, meta image, social card, or Open Graph image. Accepts optional arguments like feature template name or logo names."
 ---
 
-# `/blog-meta-image` — Generate Blog Meta Image
+# `/blog-meta-image` — Generate Blog Feature & Meta Images
 
-You are generating a meta image for a Pulumi blog post. Follow these steps precisely.
+You are generating two images for a Pulumi blog post: a **feature image** (1884×1256) and a **meta/OpenGraph image** (1200×628). Follow these steps precisely.
 
 **Skill directory**: `.claude/commands/blog-meta-image/` — all paths below are relative to the project root unless noted.
 
@@ -28,71 +28,72 @@ Read the full blog post file (frontmatter + body).
 - **Topics**: scan the body for key signals — cloud providers (AWS, Azure, GCP), languages (Go, Python, TypeScript), technologies (Kubernetes, Terraform, Docker), features (ESC, secrets, OIDC, policy), concepts (AI, ML, platform engineering, IDP)
 
 ### From `$ARGUMENTS`, parse user preferences:
-- **Theme**: "dark" or "light"
-- **Style**: "mascot", "flying", "closeup", "wireframe", "shield", or logo names like "aws kubernetes"
+- **Feature template**: name of a feature template (e.g., "neo", "platform", "rocket", "shield", "tutorial") or logo names like "aws kubernetes"
 - **Title override**: if the user explicitly provides different text in quotes, use that instead of the blog title
 
-If `$ARGUMENTS` fully specifies the template (e.g., `/blog-meta-image dark flying`), skip the interactive questions and go straight to Step 3's rendering. If partially specified, only ask about the unspecified parts.
+### Fast-path: existing feature image with no frontmatter declaration
 
-## [Step 3/4] Select Template & Render
+Check whether `feature.png` exists in the blog post's directory **and** the frontmatter does **not** already have a `feature_image:` field set (i.e., it is absent or still the placeholder `feature.png` value but the file is a real rendered image, not the placeholder).
+
+If a real `feature.png` is present and `feature_image` is not yet committed in frontmatter:
+- **Skip all interactive questions entirely**
+- Use the existing `feature.png` as the feature image source for the meta render
+- Jump directly to the meta render portion of Step 3 (build meta config, render `meta.png`)
+- Still update frontmatter with both `feature_image: feature.png` and `meta_image: meta.png` in Step 4
+
+If `$ARGUMENTS` fully specifies the feature template (e.g., `/blog-meta-image rocket`), skip the interactive question and go straight to Step 3's rendering. If partially specified, only ask about the unspecified parts.
+
+## [Step 3/4] Select Feature Template & Render
 
 Read the asset catalog reference at `.claude/commands/blog-meta-image/references/asset-catalog.md` for the full template list and logo inventory.
 
-### Interactive Selection (3 progressive questions)
+### Interactive Selection
 
-Ask the following questions **progressively** (one at a time) using `AskUserQuestion`. Skip any question that was already answered via `$ARGUMENTS`.
-
----
-
-### Question 1: Theme
-
-```
-header: "Theme"
-question: "Dark or light background?"
-options:
-  - label: "Dark"
-    description: "Deep purple gradient with grid lines"
-  - label: "Light"
-    description: "Lighter purple gradient with grid lines"
-```
+Ask questions **progressively** (one at a time) using `AskUserQuestion`. Skip any question already answered via `$ARGUMENTS`.
 
 ---
 
-### Question 2: Style
+### Question 1: Custom or template?
 
 ```
-header: "Style"
-question: "Feature a Pulumipus mascot or product logos?"
+header: "Feature Image Source"
+question: "Do you have a custom feature image, or use a built-in template? (Reach out in #marketing Slack to get a custom image. If you can't get one fast enough, continue with templates.)"
 options:
-  - label: "Pulumipus mascot"
-    description: "One of 4 Pulumipus character poses on the right side"
-  - label: "Product logos"
-    description: "1-3 product/technology logo SVGs on white placeholder shapes"
+  - label: "I have a custom image"
+    description: "Provide a path to your own feature image file"
+  - label: "Use a template"
+    description: "Choose from the built-in Pulumi feature image templates"
 ```
+
+If **I have a custom image** is selected, ask for the file path and skip straight to the meta render step.
 
 ---
 
-### Question 3a (if Pulumipus mascot): Which mascot?
+### Question 2: Feature template
 
 ```
-header: "Mascot"
-question: "Which Pulumipus style?"
+header: "Feature Image"
+question: "Choose a feature template for this blog post:"
 options:
-  - label: "Flying"
-    description: "3D Pulumipus flying with wings spread and sunglasses"
-  - label: "Closeup"
-    description: "3D teal Pulumipus head closeup with big sunglasses"
-  - label: "Wireframe"
-    description: "Purple line-art wireframe outline of Pulumipus"
+  - label: "Neo"
+    description: "Neo / AI-focused Pulumipus design"
+  - label: "Platform"
+    description: "Platform engineering design"
+  - label: "Rocket"
+    description: "Rocket / deployment and automation design"
   - label: "Shield"
-    description: "3D Pulumipus holding a shield with sunglasses"
+    description: "Shield / security and compliance design"
+  - label: "Tutorial"
+    description: "Tutorial / learning and education design"
+  - label: "Logo variant (1-3 logos)"
+    description: "Product/technology logo SVGs placed in circular placeholders"
 ```
 
-The selected mascot + theme determines the template file. For example: dark + flying = `templates/dark-flying.png`.
+If **Logo variant** is selected, ask which logos (Question 3):
 
 ---
 
-### Question 3b (if Product logos): Which logos?
+### Question 3: Which logos?
 
 ```
 header: "Logos"
@@ -106,7 +107,27 @@ Based on technologies detected in the blog post (AWS, Kubernetes, TypeScript, Do
 - "Docker" — `logos/docker.svg`
 - "TypeScript" — `logos/typescript.svg`
 
-The number of selected logos (1, 2, or 3) determines which template to use (`logo-1`, `logo-2`, or `logo-3`). If more than 3 are selected, ask the user to narrow down to 3.
+The number of selected logos (1, 2, or 3) determines which template to use (`feature-logo-1`, `feature-logo-2`, or `feature-logo-3`). If more than 3 are selected, ask the user to narrow down to 3.
+
+---
+
+### Question 4: Logo tint style
+
+_Only ask if logos were selected in Question 3._
+
+```
+header: "Logo Tint Style"
+question: "How should the tint color be applied to the logos?"
+options:
+  - label: "Overlay (default)"
+    description: "Replace all logo colors with a flat #B59CDF tint — best for single-color cutout logos"
+  - label: "Colorize"
+    description: "Preserve internal contrast: bright areas stay bright, dark areas stay dark, all tinted toward #B59CDF — better for multi-color or detailed logos"
+```
+
+Set `logo_tint_mode` in the feature config to `"overlay"` or `"colorize"` accordingly. Default is `"overlay"`.
+
+---
 
 **Logo lookup**: Check `assets/logos/` first. If a needed logo isn't found locally:
 1. Try [simple-icons](https://github.com/simple-icons/simple-icons/tree/develop/icons) first — clean vector SVGs for 3000+ brands. Download from `https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/{slug}.svg` and add a `fill` attribute with the brand color to `<path>` elements.
@@ -118,54 +139,56 @@ The number of selected logos (1, 2, or 3) determines which template to use (`log
 
 ### Template Resolution
 
-Combine theme + style to determine the template file:
+| Selection | Feature Template |
+|-----------|-----------------|
+| Neo | `templates/feature-neo.png` |
+| Platform | `templates/feature-platform.png` |
+| Rocket | `templates/feature-rocket.png` |
+| Shield | `templates/feature-shield.png` |
+| Tutorial | `templates/feature-tutorial.png` |
+| 1 logo | `templates/feature-logo-1.png` |
+| 2 logos | `templates/feature-logo-2.png` |
+| 3 logos | `templates/feature-logo-3.png` |
+| Custom | _(provided path, skip feature render)_ |
 
-| Theme | Style | Template |
-|-------|-------|----------|
-| dark | flying | `templates/dark-flying.png` |
-| dark | closeup | `templates/dark-closeup.png` |
-| dark | wireframe | `templates/dark-wireframe.png` |
-| dark | shield | `templates/dark-shield.png` |
-| dark | 1 logo | `templates/dark-logo-1.png` |
-| dark | 2 logos | `templates/dark-logo-2.png` |
-| dark | 3 logos | `templates/dark-logo-3.png` |
-| light | flying | `templates/light-flying.png` |
-| light | closeup | `templates/light-closeup.png` |
-| light | wireframe | `templates/light-wireframe.png` |
-| light | shield | `templates/light-shield.png` |
-| light | 1 logo | `templates/light-logo-1.png` |
-| light | 2 logos | `templates/light-logo-2.png` |
-| light | 3 logos | `templates/light-logo-3.png` |
+### Build Composition Configs
 
-### Build Composition Config
+Build **two** JSON configs: one for `feature.png` (1884×1256) and one for `meta.png` (1200×628).
 
-Build a JSON config. For mascot templates:
+**Feature config** — for mascot/static templates (no text, no logos):
 
 ```json
 {
-  "template": "templates/dark-flying.png",
-  "text": {
-    "content": "Blog Post Title Here",
-    "font_size": 88
-  },
+  "template": "templates/feature-neo.png",
   "logos": []
 }
 ```
 
-For logo templates:
+**Feature config** — for logo variants (logos composited onto circular placeholders, no text):
 
 ```json
 {
-  "template": "templates/dark-logo-2.png",
-  "text": {
-    "content": "Blog Post Title Here",
-    "font_size": 88,
-    "max_width": 700
-  },
+  "template": "templates/feature-logo-2.png",
   "logos": [
     "logos/aws.svg",
     "logos/kubernetes.svg"
-  ]
+  ],
+  "logo_tint_mode": "overlay"
+}
+```
+
+**Meta config** — no template; starts from a `#20054E` background, composites the feature image offset to the right, applies the overlay and logo, then draws the title text:
+
+```json
+{
+  "background_color": "#20054E",
+  "feature_image": "<absolute-path-to-blog-dir>/feature.png",
+  "overlay": "templates/meta-overlay.png",
+  "logo": "templates/meta-logo.png",
+  "text": {
+    "content": "Blog Post Title Here",
+    "font_size": 88
+  }
 }
 ```
 
@@ -175,7 +198,7 @@ For logo templates:
 - Long titles (9+ words): `font_size: 72`
 - Very long titles (15+ words): `font_size: 60`
 
-**Important**: Paths in the JSON config are relative to the `--assets-dir` directory.
+**Important**: In the feature config, all paths are relative to `--assets-dir`. In the meta config, `feature_image` must be an **absolute path** to the rendered (or custom) feature image.
 
 ### Environment Setup (first time only)
 
@@ -193,11 +216,25 @@ No `uv sync` is needed — the script has inline PEP 723 metadata declaring its 
 
 ### Rendering
 
-1. Write the JSON config to a temporary file named after the blog post slug (e.g., `/tmp/meta-<slug>.json`, where `<slug>` is the blog directory name like `my-post`)
-2. Determine the blog post directory (e.g., `content/blog/my-post/`)
-3. The composition script is at `.claude/commands/blog-meta-image/scripts/compose_meta_image.py`
-4. The assets directory is at `.claude/commands/blog-meta-image/assets/`
-5. Run with `uv run`:
+Generate **two images** by running the composition script twice.
+
+**Step A — Feature image (1884×1256):** Skip if the user provided a custom image.
+
+1. Determine the blog post directory (e.g., `content/blog/my-post/`) and use its name as `<slug>`
+2. Write the feature JSON config to `/tmp/feature-<slug>.json`
+3. Run:
+   ```bash
+   uv run .claude/commands/blog-meta-image/scripts/compose_meta_image.py \
+     --config /tmp/feature-<slug>.json \
+     --assets-dir .claude/commands/blog-meta-image/assets \
+     --output <blog-dir>/feature.png
+   ```
+
+**Step B — Meta image (1200×628):**
+
+1. Write the meta JSON config to `/tmp/meta-<slug>.json`
+   - Set `feature_image` to the **absolute path** of the feature image (either just rendered or the custom path provided by the user)
+2. Run:
    ```bash
    uv run .claude/commands/blog-meta-image/scripts/compose_meta_image.py \
      --config /tmp/meta-<slug>.json \
@@ -207,17 +244,18 @@ No `uv sync` is needed — the script has inline PEP 723 metadata declaring its 
 
 ## [Step 4/4] Confirm & Update Frontmatter
 
-1. Verify the PNG was created successfully at the expected path
-2. Check the blog post's frontmatter for `meta_image:` — if missing or set to something else, update it:
+1. Verify both PNGs were created successfully at their expected paths
+2. Update the blog post's frontmatter — add or update both image fields:
    ```yaml
    meta_image: meta.png
+   feature_image: feature.png
    ```
 3. Report to the user:
    - Which blog post was used
-   - What template was selected (theme + style) and why
+   - What feature template was selected and why
    - What logos were placed (if any)
-   - Where the meta.png was saved
-   - Remind them to preview the image to make sure it looks good
+   - Where `feature.png` and `meta.png` were saved
+   - Remind them to preview both images to make sure they look good
 
 ## Error Handling
 

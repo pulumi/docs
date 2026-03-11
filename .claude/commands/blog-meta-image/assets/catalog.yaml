@@ -1,7 +1,12 @@
 # Meta Image Asset Catalog
-# Template-based system — render target is 1200x628
+# Feature image render target: 1884x1256
+# Meta image render target:    1200x628
 
-canvas:
+feature_canvas:
+  width: 1884
+  height: 1256
+
+meta_canvas:
   width: 1200
   height: 628
 
@@ -16,105 +21,61 @@ text:
   max_width: 700
 
 templates:
-  # -- Dark mascot variants --
-  - filename: dark-flying.png
-    theme: dark
+  # -- Feature templates (1884x1256, no text) --
+  - filename: feature-neo.png
+    mode: feature
     type: mascot
-    mascot: flying
-    description: "3D Pulumipus flying with sunglasses"
+    description: "Neo / AI-focused Pulumipus design"
 
-  - filename: dark-closeup.png
-    theme: dark
+  - filename: feature-platform.png
+    mode: feature
     type: mascot
-    mascot: closeup
-    description: "3D Pulumipus head closeup with sunglasses"
+    description: "Platform engineering design"
 
-  - filename: dark-wireframe.png
-    theme: dark
+  - filename: feature-rocket.png
+    mode: feature
     type: mascot
-    mascot: wireframe
-    description: "Wireframe/line-art Pulumipus with sunglasses"
+    description: "Rocket / deployment and automation design"
 
-  - filename: dark-shield.png
-    theme: dark
+  - filename: feature-shield.png
+    mode: feature
     type: mascot
-    mascot: shield
-    description: "3D Pulumipus holding a shield with sunglasses"
+    description: "Shield / security and compliance design"
 
-  # -- Dark logo variants --
-  - filename: dark-logo-1.png
-    theme: dark
+  - filename: feature-tutorial.png
+    mode: feature
+    type: mascot
+    description: "Tutorial / learning and education design"
+
+  # -- Feature logo variants (1884x1256, logos composited onto circles) --
+  - filename: feature-logo-1.png
+    mode: feature
     type: logo
     logo_slots: 1
     placeholders:
-      - { x: 678, y: 72, width: 522, height: 476 }
+      - { x: 602, y: 288, width: 680, height: 680 }
 
-  - filename: dark-logo-2.png
-    theme: dark
+  - filename: feature-logo-2.png
+    mode: feature
     type: logo
     logo_slots: 2
     placeholders:
-      - { x: 900, y: 88, width: 200, height: 182 }
-      - { x: 900, y: 349, width: 200, height: 181 }
+      - { x: 499, y: 432, width: 390, height: 390 }
+      - { x: 992, y: 432, width: 390, height: 390 }
 
-  - filename: dark-logo-3.png
-    theme: dark
+  - filename: feature-logo-3.png
+    mode: feature
     type: logo
     logo_slots: 3
     placeholders:
-      - { x: 822, y: 116, width: 145, height: 173 }
-      - { x: 998, y: 202, width: 145, height: 173 }
-      - { x: 822, y: 329, width: 145, height: 173 }
+      - { x: 720, y: 234, width: 390, height: 390 }
+      - { x: 499, y: 630, width: 390, height: 390 }
+      - { x: 993, y: 630, width: 390, height: 390 }
 
-  # -- Light mascot variants --
-  - filename: light-flying.png
-    theme: light
-    type: mascot
-    mascot: flying
-    description: "3D Pulumipus flying with sunglasses (light bg)"
-
-  - filename: light-closeup.png
-    theme: light
-    type: mascot
-    mascot: closeup
-    description: "3D Pulumipus head closeup with sunglasses (light bg)"
-
-  - filename: light-wireframe.png
-    theme: light
-    type: mascot
-    mascot: wireframe
-    description: "Wireframe/line-art Pulumipus with sunglasses (light bg)"
-
-  - filename: light-shield.png
-    theme: light
-    type: mascot
-    mascot: shield
-    description: "3D Pulumipus holding a shield with sunglasses (light bg)"
-
-  # -- Light logo variants --
-  - filename: light-logo-1.png
-    theme: light
-    type: logo
-    logo_slots: 1
-    placeholders:
-      - { x: 678, y: 72, width: 522, height: 476 }
-
-  - filename: light-logo-2.png
-    theme: light
-    type: logo
-    logo_slots: 2
-    placeholders:
-      - { x: 900, y: 88, width: 200, height: 182 }
-      - { x: 900, y: 349, width: 200, height: 181 }
-
-  - filename: light-logo-3.png
-    theme: light
-    type: logo
-    logo_slots: 3
-    placeholders:
-      - { x: 822, y: 116, width: 145, height: 173 }
-      - { x: 998, y: 202, width: 145, height: 173 }
-      - { x: 822, y: 329, width: 145, height: 173 }
+  # -- Meta assets (1200x628) --
+  # meta.png is no longer used as a template; kept for reference only.
+  # meta-overlay.png: full-bleed gradient/vignette composited over the feature image
+  # meta-logo.png:    Pulumi wordmark (175x44) placed bottom-left above text baseline
 
 logos:
   - filename: 1password.svg
