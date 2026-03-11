@@ -140,6 +140,10 @@ without any downtime required. This is as easy to do by hand as it is in
 
 One way to author a Lambda Function is to write it inline, within your Pulumi program. The Pulumi compiler and runtime work in tandem to extract your function, package it up along with its dependencies, upload the package to AWS Lambda, and configure the resulting AWS Lambda resources automatically.
 
+{{< notes type="warning" >}}
+Magic functions rely on [function serialization](/docs/iac/concepts/functions/function-serialization/), which is not supported when using Bun as the TypeScript/JavaScript runtime. If your program uses magic functions, use Node.js instead.
+{{< /notes >}}
+
 For example, this code creates an S3 bucket and executes an AWS Lambda anytime a new object is created within it:
 
 ```typescript

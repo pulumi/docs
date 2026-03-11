@@ -36,7 +36,11 @@ Pulumi supports writing your infrastructure as code using TypeScript and JavaScr
 
 ### Runtime
 
-Pulumi supports Node.js [Current, Active, and Maintenance LTS versions](https://nodejs.org/en/about/previous-releases). We recommend using the latest LTS version for the best experience.
+Pulumi supports Node.js [Current, Active, and Maintenance LTS versions](https://nodejs.org/en/about/previous-releases) and [Bun](https://bun.sh/). We recommend using the latest Node.js LTS version for the best experience.
+
+{{< notes type="warning" >}}
+[Magic functions (function serialization)](/docs/iac/concepts/functions/function-serialization/) are not supported when using Bun as the runtime. If your program uses magic functions (such as inline Lambda callbacks), use Node.js instead.
+{{< /notes >}}
 
 ### Package managers
 
@@ -45,7 +49,7 @@ Pulumi supports the following package managers:
 - **npm**: Fully supported (default)
 - **Yarn 1 (Classic)**: Fully supported
 - **pnpm**: Fully supported
-- **Bun**: Supported as a package manager only (not as a runtime)
+- **Bun**: Fully supported as both a package manager and a runtime
 
 {{< notes type="info" >}}
 Dynamic providers may not work correctly with all package managers. If you encounter issues with dynamic providers, try using npm or Yarn 1.

@@ -32,6 +32,10 @@ The Pulumi registry includes the [Command Provider](https://www.pulumi.com/regis
 Dynamic providers in TypeScript are incompatible with projects using pnpm as a package manager. If you're using pnpm, consider using npm or yarn instead. For more information, see [pulumi/pulumi#9085](https://github.com/pulumi/pulumi/issues/9085).
 {{% /notes %}}
 
+{{% notes type="warning" %}}
+Dynamic providers in TypeScript are not supported when using Bun as the runtime. If your program uses dynamic providers, use Node.js instead.
+{{% /notes %}}
+
 There are several reasons why you might want to write a dynamic resource provider. Here are some of them:
 
 - You want to create some new custom resource types.
