@@ -4,31 +4,26 @@
 $violet-primary: #673EAC;
 
 @mixin page-header {
-    @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 48px;
+    @apply font-bold leading-extra-tight text-black font-body text-heading-m;
 }
 
 @mixin section-header {
-    @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 40px;
+    @apply font-bold leading-extra-tight text-black font-body text-heading-s;
 }
 
 @mixin section-header-small {
     font-feature-settings: 'salt' on;
-    @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 40px;
+    @apply font-bold leading-extra-tight text-black font-body text-heading-s;
 }
 
 @mixin section-header-extra-small {
     font-feature-settings: 'salt' on;
-    @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 24px;
+    @apply font-semibold leading-extra-tight text-black font-body text-heading-2xs;
 }
 
 @mixin section-header-extra-extra-small {
     font-feature-settings: 'salt' on;
-    @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 20px;
+    @apply font-semibold leading-extra-tight text-black font-body text-heading-2xsSmall;
 }
 
 @mixin product-hero-heading {
@@ -36,49 +31,43 @@ $violet-primary: #673EAC;
     text-align: center;
     font-feature-settings: 'salt' on;
     font-family: Inter, sans-serif;
-    font-size: 64px;
     font-style: normal;
-    font-weight: 700;
     line-height: 95%;
     letter-spacing: -0.64px;
+    @apply font-bold text-heading-l;
 }
 
 @mixin section-description {
-    @apply font-normal leading-normal font-body;
+    @apply font-normal leading-normal font-body text-body-l;
     font-feature-settings: 'salt' on;
     color: #5b5b5b;
-    font-size: 20px;
 }
 
 @mixin section-subheader-bold {
-    @apply font-semibold leading-normal text-black text-2xl font-body;
+    @apply font-semibold leading-normal text-black font-body text-body-xl;
     font-feature-settings: 'salt' on;
 }
 
 @mixin section-hint {
-    @apply font-semibold leading-normal font-body;
+    @apply font-semibold leading-normal font-body text-body-l;
     color: #1e1e1e;
-    font-size: 20px;
 }
 
 @mixin section-hint-accent {
-    @apply font-semibold leading-normal font-body;
+    @apply font-semibold leading-normal font-body text-body-l;
     color: $violet-primary;
-    font-size: 20px;
 }
 
 @mixin section-hint-small {
-    @apply font-semibold leading-normal font-body;
+    @apply font-semibold leading-normal font-body text-body-l;
     font-feature-settings: 'salt' on;
     color: #404041;
-    font-size: 20px;
 }
 
 @mixin section-body-medium {
-    @apply font-normal leading-normal text-lg font-body;
+    @apply font-normal leading-normal font-body text-body-m;
     font-feature-settings: 'salt' on;
     color: #5b5b5b;
-    font-size: 18px;
 }
 
 .template-hero {
@@ -87,10 +76,9 @@ $violet-primary: #673EAC;
     }
 
     .hero-event-details {
-        @apply flex flex-wrap items-center font-semibold leading-normal font-body;
+        @apply flex flex-wrap items-center font-semibold leading-normal font-body text-body-m;
         font-feature-settings: 'salt' on;
         color: #5b5b5b;
-        font-size: 18px;
     }
 
     .hero-date-and-location {
@@ -232,9 +220,8 @@ $violet-primary: #673EAC;
         font-feature-settings: 'salt' on;
         font-family: Inter, sans-serif;
         letter-spacing: -0.84px;
-        @apply text-black font-semibold;
-        font-size: 28px;
         line-height: 120%;
+        @apply text-black font-semibold text-heading-xs;
 
         i {
             @apply flex-shrink-0;
@@ -252,7 +239,7 @@ $violet-primary: #673EAC;
 
 // Shared feature card (icon above title + description) — used by template-product-two-column and template-three-column (icon_layout: above)
 .template-feature-card-icon {
-    @apply text-black flex items-center justify-center w-12 h-12 text-2xl rounded-lg mb-12;
+    @apply text-black flex items-center justify-center w-12 h-12 text-body-xl rounded-lg mb-12;
     border: 0.5px solid #CECECE;
 
     i {
@@ -261,27 +248,25 @@ $violet-primary: #673EAC;
 }
 
 .template-feature-card-title {
-    @apply font-body text-black leading-tight m-0 font-semibold mb-6;
-    font-size: 28px;
+    @apply font-body text-black leading-tight m-0 font-semibold mb-6 text-heading-xs;
 }
 
 .template-feature-card-description {
     @include section-body-medium();
-    @apply text-base;
+    @apply text-body-s;
 }
 
 .template-testimonial {
     .template-testimonial-quote {
-        @apply text-white font-body font-semibold leading-normal;
-        font-size: 24px;
+        @apply text-white font-body font-semibold leading-normal text-body-xl;
 
         @screen sm {
-            font-size: 36px;
+            @apply text-heading-m;
         }
     }
 
     .template-testimonial-credit {
-        @apply text-white opacity-70 font-body text-2xl font-normal leading-normal;
+        @apply text-white opacity-70 font-body text-body-xl font-normal leading-normal;
     }
 }
 
@@ -292,8 +277,7 @@ $violet-primary: #673EAC;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 
     .template-testimonial-product-quote {
-        @apply text-white leading-relaxed text-left border-0 font-semibold;
-        font-size: 28px;
+        @apply text-white leading-relaxed text-left border-0 font-semibold text-heading-xs;
 
         p {
             @apply m-0;
@@ -311,11 +295,11 @@ $violet-primary: #673EAC;
     }
 
     .template-testimonial-product-author {
-        @apply text-white font-bold font-body text-lg;
+        @apply text-white font-bold font-body text-body-m;
     }
 
     .template-testimonial-product-title {
-        @apply text-gray-300 font-normal font-body text-base;
+        @apply text-gray-300 font-normal font-body text-body-s;
     }
 }
 
@@ -353,15 +337,7 @@ $violet-primary: #673EAC;
 .template-product-hero {
     .product-hero-heading {
         @include product-hero-heading();
-        font-size: 40px;
-
-        @screen sm {
-            font-size: 52px;
-        }
-
-        @screen md {
-            font-size: 64px;
-        }
+        @apply text-heading-s sm:text-heading-m md:text-heading-l;
     }
 
     .product-hero-title-primary {
@@ -378,20 +354,12 @@ $violet-primary: #673EAC;
 
     .product-hero-title {
         @include product-hero-heading();
-        font-size: 40px;
-
-        @screen sm {
-            font-size: 52px;
-        }
-
-        @screen md {
-            font-size: 64px;
-        }
+        @apply text-heading-s sm:text-heading-m md:text-heading-l;
     }
 
     .product-hero-description {
         @include section-description();
-        font-size: 24px;
+        @apply text-body-xl;
     }
 }
 
@@ -405,7 +373,7 @@ $violet-primary: #673EAC;
         color: var(--gray-primary, #404041);
         font-family: Inter, sans-serif;
         letter-spacing: -0.2px;
-        @apply text-center text-xl font-normal font-semibold leading-normal;
+        @apply text-center text-body-l font-normal font-semibold leading-normal;
     }
 
     .section-header-tag-wrap {
@@ -418,7 +386,7 @@ $violet-primary: #673EAC;
 
     .section-header-description {
         @include section-description();
-        @apply text-base max-w-xl mx-auto;
+        @apply text-body-s max-w-xl mx-auto;
 
         a {
             color: inherit;
@@ -454,7 +422,7 @@ $violet-primary: #673EAC;
         color: var(--gray-tertiary, #757576);
         font-feature-settings: 'salt' on;
         font-family: Inter, sans-serif;
-        @apply text-left font-body text-base font-normal leading-normal;
+        @apply text-left font-body text-body-s font-normal leading-normal;
 
         p {
             @apply m-0;
@@ -517,7 +485,7 @@ $violet-primary: #673EAC;
 
     .product-two-column-description {
         @include section-description();
-        @apply text-2xl;
+        @apply text-body-xl;
 
         p:first-of-type {
             @apply text-black font-semibold mt-0;
