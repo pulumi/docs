@@ -37,13 +37,27 @@ To give members permission to create teams:
 1. Navigate to **Settings** > **Access Management**.
 1. Use the toggle to turn on the **Allow organization members to create teams** setting.
 
-## Team role assignments {#team-role-assignments}
+## Team Access Types
 
-When your organization has custom roles enabled, teams can be assigned **roles** (default or custom). This is separate from [Team permissions](#team-permissions) (stack-level access) and [Team roles](#team-roles) (Team admin vs Team member).
+Members of a team can be granted `Team admin` or `Team member` permissions. Team admins can add members to a
+team. By default, any new team members will be assigned the team member role.
+
+To change a team member's role:
+
+1. Navigate to **Settings** > **Teams** and then the specific team.
+1. In the **Members** section use the action menu item at the end of the table row and select **Change role to**.
+
+## Role assignments {#role-assignments}
+
+When your organization has custom roles enabled, teams can be assigned **roles** (default or custom). This is separate from [Team entity access grants](#team-entity-access-grants) (stack-level access) and [Team access types](#team-access-types) (Team admin vs Team member).
 
 - Each team can have **multiple role assignments**. Members of the team receive the permissions from all of those roles in addition to their own [organization role](/docs/administration/access-identity/rbac/roles#users).
-- Only **team admins** can add or remove role assignments for the team. Additionally, to assign a role, the team admin must hold a role that grants the `role:create` and `role:update` scopes, and cannot assign a role that grants more permissions than they themselves hold (role escalation is not permitted).
+- To add or remove role assignments for a team, a user must hold a role that grants the `role:update` and `team:update` scopes — for example, an organization admin. Being a team admin is not sufficient on its own; a team admin without `role:update` access cannot modify role assignments. Team admins can, however, always manage the team's **Entity Access** grants directly, regardless of their role scopes.
 - **Role-backed teams**: Create a team, assign it a custom role (e.g. with access only to certain stacks or [tag-based rules](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules)), then add members; those members gain the team's roles in addition to their own user role.
+
+To manage role assignments for a team, navigate to the team's **Access** tab. The **Role assignments** section lists the roles currently assigned to the team; use **Add role** to assign an additional role.
+
+![Team Access tab showing Entity Access and Role assignments sections](/docs/administration/access-identity/rbac/1-team-role-assignment.png).
 
 ## GitHub-based Teams
 
@@ -53,7 +67,7 @@ GitHub teams into Pulumi.
 For these teams, membership is managed on GitHub, while the set of stack
 permissions and role assignments granted to team members is managed in the Pulumi Cloud.
 
-## Team Permissions
+## Team Entity Access Grants
 
 By default only organization admins can create teams.
 
@@ -67,13 +81,3 @@ To allow all members to create teams:
 Teams can be granted access to stacks, which grants all team members access to those stack based on the selected permission level.
 
 ![Editing team stacks and permissions](/images/docs/reference/service/editing-stack-permissions.png)
-
-### Team Roles
-
-Members of a team can be granted `Team admin` or `Team member` permissions. Team admins can add members to a
-team. By default, any new team members will be assigned the team member role.
-
-To change a team member's role:
-
-1. Navigate to **Settings** > **Teams** and then the specific team.
-1. In the **Members** section use the action menu item at the end of the table row and select **Change role to**.

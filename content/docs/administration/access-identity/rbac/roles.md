@@ -54,23 +54,25 @@ Visit the **Roles** page under **Settings** to see your organization roles
 
 To create a new role, click **Create custom role**. Provide a unique name and, optionally, a description to contextualize the role's purpose.
 
-When creating or editing a custom role, you can configure entity access rules and organization access:
+When creating or editing a custom role, you can configure two types of access:
 
-1. **Entity access rules** — Add rules to grant a permission set on specific entities or on all entities of a given type. For each rule, choose the entity type (stack, environment, or insights account) and whether the rule applies to specific entities, all entities, or entities matching tag conditions (ABAC). Select a permission set to grant when the rule matches.
+**Entity access rules** grant a permission set on specific entities or all entities of a given type. For each rule, choose the entity type (stack, environment, or insights account) and whether the rule applies to specific entities, all entities, or entities matching tag conditions (ABAC). Select a permission set to grant when the rule matches.
 
 To add a rule for specific stacks, select **Stacks** as the entity type, choose **Select specific stacks**, then click **Choose stacks**.
 
 ![Configuring an entity access rule for stacks](/docs/administration/access-identity/rbac/2-create-role.png).
 
-A dialog lists the stacks in your organization. Search and select the stacks to include in the rule.
+A dialog lists the stacks in your organization. You can search by name to filter the list.
 
 ![Browsing available stacks in the rule criteria dialog](/docs/administration/access-identity/rbac/3-create-role.png).
 
+Check the stacks to include in the rule, then click **Confirm selection**.
+
 ![Selecting stacks to include in the rule](/docs/administration/access-identity/rbac/4-create-role.png).
 
-After saving rules, the **Entity Access** section displays a table of all configured rules. You can add additional rules with **Add rule**.
+After confirming, click **Save rule**. The **Entity Access** section displays a table of all configured rules, and you can add more with **Add rule**.
 
-1. **Organization access** — Set the permission level for organization-level operations (e.g. creating stacks, managing billing, audit logs). This applies to the organization as a whole and is separate from the entity-based rules above.
+**Organization access** sets the permission level for organization-level operations (e.g. creating stacks, managing billing, audit logs). This applies to the organization as a whole and is separate from the entity-based rules above.
 
 ![Entity access rules and organization access configured, ready to create the role](/docs/administration/access-identity/rbac/5-create-role.png).
 
