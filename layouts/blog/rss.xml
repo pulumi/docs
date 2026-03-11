@@ -20,7 +20,7 @@
                     {{ .Content | html }}
                 </description>
                 {{ range $id := .Params.authors }}
-                    {{ $author := index $.Site.Data.team.team $id }}
+                    {{ $author := index $.site.Data.team.team $id }}
                     {{ if $author }}
                         <author>{{ $author.name }}</author>
                     {{ end }}

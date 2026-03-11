@@ -6,13 +6,13 @@
             </div>
 
             <div class="lg:w-7/12">
-                {{ $authorData := index $.Site.Data.team.team .Data.Term }}
+                {{ $authorData := index $.site.Data.team.team .Data.Term }}
                 {{ $blogPosts := where .Data.Pages "Section" "blog" }}
                 
                 <!-- List of tags that should be displayed in chronological order (oldest first) -->
                 {{ $chronologicalTags := slice }}
                 {{ $currentSeries := false }}
-                {{ with .Site.Data.blog_series }}
+                {{ with .site.Data.blog_series }}
                     {{ range .series }}
                         {{ $chronologicalTags = $chronologicalTags | append .slug }}
                         {{ if eq .slug $.Data.Term }}

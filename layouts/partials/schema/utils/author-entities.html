@@ -3,7 +3,7 @@
 
 {{ with .Params.authors }}
   {{ range . }}
-    {{ with index $.Site.Data.team.team . }}
+    {{ with index $.site.Data.team.team . }}
       {{/* Build author entity with comprehensive knowledge graph properties */}}
       {{ $author := dict "@type" "Person" }}
       {{ $author = merge $author (dict "@id" (printf "https://www.pulumi.com/authors/%s/#person" .id)) }}
