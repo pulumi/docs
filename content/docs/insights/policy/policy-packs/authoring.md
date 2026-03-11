@@ -215,23 +215,31 @@ There is no `pulumi policy new` template for OPA. Create the policy pack files m
 1. Create a `PulumiPolicy.yaml` file with the OPA runtime:
 
     ```yaml
+    description: My AWS Security Policies
     runtime: opa
     ```
 
-1. Create a Rego policy file (e.g., `s3_bucket_prefix.rego`) with a `deny` rule. The policy receives each resource as `input` and returns a set of violation messages:
+1. Create a Rego policy file (e.g., `s3_security.rego`) with `deny` rules. Each resource is passed as `input` with metadata fields like `__name` (logical name), `__urn`, and `type`, plus all resource properties at the top level:
 
     ```rego
-    package s3_bucket_prefix
+    package aws
 
+    # Deny public S3 buckets
     deny[msg] {
         input.type == "aws:s3/bucket:Bucket"
-        prefix := object.get(input.props, "bucketPrefix", "")
-        not startswith(prefix, "mycompany-")
-        msg := sprintf("S3 bucket must use 'mycompany-' prefix. Current prefix: '%s'", [prefix])
+        input.acl == "public-read"
+        msg := sprintf("S3 bucket '%s' must not have public-read ACL", [input.__name])
+    }
+
+    # Require encryption
+    deny[msg] {
+        input.type == "aws:s3/bucket:Bucket"
+        not input.serverSideEncryptionConfiguration
+        msg := sprintf("S3 bucket '%s' must have encryption enabled", [input.__name])
     }
     ```
 
-    Each policy must define a `deny` rule that evaluates to a set of violation message strings. An empty set means the resource is compliant.
+    Each policy must define a `deny` rule that evaluates to a set of violation message strings. An empty set means the resource is compliant. Resource properties are available directly on `input` (e.g., `input.acl`), not nested under a `props` key.
 
 {{% /choosable %}}
 
@@ -271,22 +279,25 @@ For a complete example including additional test cases, see the [unit test polic
 
 {{% choosable language opa %}}
 
-OPA policies can be tested using the standard `opa test` command from the [OPA CLI](https://www.openpolicyagent.org/docs/latest/#running-opa). Create a test file (e.g., `s3_bucket_prefix_test.rego`) alongside your policy:
+OPA policies can be tested using the standard `opa test` command from the [OPA CLI](https://www.openpolicyagent.org/docs/latest/#running-opa). Create a test file (e.g., `s3_security_test.rego`) alongside your policy:
 
 ```rego
-package s3_bucket_prefix
+package aws
 
-test_deny_wrong_prefix {
+test_deny_public_bucket {
     count(deny) > 0 with input as {
         "type": "aws:s3/bucket:Bucket",
-        "props": {"bucketPrefix": "wrongprefix-"}
+        "__name": "my-bucket",
+        "acl": "public-read"
     }
 }
 
-test_allow_correct_prefix {
+test_allow_private_bucket {
     count(deny) == 0 with input as {
         "type": "aws:s3/bucket:Bucket",
-        "props": {"bucketPrefix": "mycompany-prod"}
+        "__name": "my-bucket",
+        "acl": "private",
+        "serverSideEncryptionConfiguration": {}
     }
 }
 ```
