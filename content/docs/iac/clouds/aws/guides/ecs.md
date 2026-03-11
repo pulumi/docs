@@ -25,17 +25,19 @@ scale a cluster of virtual machines, or schedule containers on those virtual mac
 
 ## Overview
 
-Pulumi's AWSX library simplifies deploying containerized applications into ECS and managing all of the
+Pulumi's [AWSx library](https://www.pulumi.com/registry/packages/awsx/) simplifies deploying containerized applications into ECS and managing all of the
 associated resources. This includes simple support for load-balanced container services and one-off tasks, in addition
 to managing the clusters and associated scaling, network, and security policies. This includes ECS Fargate---the
-simplest option, alleviating the need to manage the cluster's servers themselves---in addition to ECS classic---
+simplest option, alleviating the need to manage the cluster's servers themselves---in addition to the EC2 launch type---
 providing full control over the underlying EC2 machine resources that power your cluster.
 
-> An alternative to ECS is Amazon's Elastic Kubernetes Service (EKS). Similar to ECS, EKS lets you operate
-> containerized applications in a cluster. EKS tends to be more complex to provision and manage, but has
-> the added advantage of using the industry standard container orchestrator, Kubernetes, and therefore can help
-> with portability between clouds and self-hosted configurations. See
-> [the EKS guide](/docs/clouds/aws/guides/eks/) for more information about using EKS.
+{{< notes type="info" >}}
+An alternative to ECS is Amazon's Elastic Kubernetes Service (EKS). Similar to ECS, EKS lets you operate
+containerized applications in a cluster. EKS tends to be more complex to provision and manage, but has
+the added advantage of using the industry standard container orchestrator, Kubernetes, and therefore can help
+with portability between clouds and self-hosted configurations. See
+[AWS Guides for EKS](/docs/clouds/aws/guides/eks/) for more information about using EKS.
+{{< /notes >}}
 
 ## Creating a Load Balanced ECS Service
 
@@ -63,7 +65,7 @@ Giving the following output:
 
 We have chosen to create an [Elastic Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing) so that we
 can access our services over the Internet at a stable address, spread evenly across two instances. Any of the ELB
-options described in [the ELB guide](/docs/clouds/aws/guides/elb/) can be used with our ECS service.
+options described in the [AWS Guides for ELB](/docs/clouds/aws/guides/elb/) can be used with our ECS service.
 
 Behind the scenes, our program creates the ECS cluster in the default VPC to run the compute. This is something
 [we can configure](/docs/clouds/aws/guides/eks#configuring-your-eks-clusters-networking) if we want to use a different VPC.
@@ -78,7 +80,7 @@ approach is simple and hides a lot of complexity, it's often desirable to contro
 ## Creating an ECS Cluster in a VPC
 
 To create an ECS service inside of a VPC, we will first create or use an existing VPC using any of the techniques
-described in [the VPC guide](/docs/clouds/aws/guides/vpc/). Then we pass the subnets
+described in [AWS Guides for VPC](/docs/clouds/aws/guides/vpc/). Then we pass the subnets
 from that VPC into the network configuration argument for our cluster:
 
 {{< example-program path="awsx-vpc-fargate-service" >}}
@@ -102,7 +104,7 @@ After that, ECS containers may be run as one-off [Tasks](
 https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html), or long-lived [Services](
 https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html).
 
-For full details of the available component arguments, please refer to the registry API documentation.
+For full details of the available component arguments, please refer to the [registry API documentation](/registry/packages/awsx/api-docs/ecs/).
 
 ## Building and Publishing Docker Images Automatically
 
@@ -115,7 +117,7 @@ the private ECR repository path to the container:
 
 {{< example-program path="awsx-load-balanced-fargate-ecr" >}}
 
-For more information about using ECR, refer to [the ECR guide](/docs/clouds/aws/guides/ecr/).
+For more information about using ECR, refer to Pulumi's [AWS Guide for ECR](/docs/clouds/aws/guides/ecr/).
 
 ## Additional ECS Resources
 
