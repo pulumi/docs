@@ -198,9 +198,9 @@ Create your first policy pack:
 
 {{% /choosable %}}
 
-{{% choosable language opa %}}
-
 <a id="opa"></a>
+
+{{% choosable language opa %}}
 
 {{% notes type="info" %}}
 There is no `pulumi policy new` template for OPA. Create the policy pack files manually as shown below.
@@ -634,24 +634,15 @@ Test your policy pack locally before publishing.
 
 {{% choosable language opa %}}
 
-1. Use the `--policy-pack` flag to specify your OPA policy pack directory:
+Running OPA policy packs locally works the same way as TypeScript and Python packs. If you need a test program, create one with `pulumi new aws-typescript` or `pulumi new aws-python`.
 
-    If you need a test program, create one with `pulumi new aws-typescript` or `pulumi new aws-python`. This creates an S3 bucket to test the policy.
+> For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
 
-    ```sh
-    $ mkdir test-program && cd test-program
-    $ pulumi new aws-typescript
-    ```
+In the Pulumi program's directory, run:
 
-    > For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
-
-1. In the Pulumi program's directory, run:
-
-    ```sh
-    $ pulumi preview --policy-pack <path-to-opa-policy-pack-directory>
-    ```
-
-    The `--policy-pack` flag works the same way for OPA packs as it does for TypeScript and Python packs.
+```sh
+$ pulumi preview --policy-pack <path-to-opa-policy-pack-directory>
+```
 
 {{% /choosable %}}
 
