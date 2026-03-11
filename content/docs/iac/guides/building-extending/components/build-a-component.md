@@ -71,18 +71,7 @@ The component will take as input the contents of the file you wish to host, and 
 
 ***Example:** Using the custom StaticPage component in a Pulumi Program*
 
-```yaml
-name: static-page-yaml
-description: A minimal Pulumi YAML program
-runtime: yaml
-packages:
-  static-page-component: ../
-resources:
-  mystaticpage:
-    type: static-page-component:StaticPage
-    properties:
-      indexContent: "<h1>Hello, World!</h1>"
-```
+{{< example-program path="sample-components" languages="yaml" >}}
 
 The core implementation of the AWS API is handled by the [Pulumi AWS Provider](/registry/packages/aws/), which gives us those five underlying resource types. Our `StaticPage` component will work with those existing types and create a new type of resource with a simpler API.
 
@@ -91,8 +80,8 @@ The core implementation of the AWS API is handled by the [Pulumi AWS Provider](/
 A Pulumi Component is a separate project from your Pulumi program. So, let's create a new directory for it, and create some project files:
 
 ```bash
-$ mkdir static-page-component
-$ cd static-page-component
+$ mkdir sample-components
+$ cd sample-components
 ```
 
 #### PulumiPlugin.yaml
@@ -106,7 +95,7 @@ The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, ra
 ***Example:** `PulumiPlugin.yaml` for TypeScript*
 
 ```yaml
-name: static-page-component
+name: sample-components
 version: 0.1.0
 runtime: nodejs
 ```
@@ -119,7 +108,7 @@ Next, we need to define our dependencies in `package.json`.
 
 ```json
 {
-    "name": "static-page-component",
+    "name": "sample-components",
     "description": "Static Page Component",
     "dependencies": {
         "@pulumi/aws": "^7.6.0",
@@ -159,7 +148,7 @@ We'll also need a TypeScript project file called `tsconfig.json`.
     },
     "files": [
         "index.ts",
-        "staticpage.ts"
+        "StaticPage.ts"
     ]
 }
 ```
@@ -187,7 +176,7 @@ This compiles the TypeScript files and generates the JavaScript output in the `b
 ***Example:** `PulumiPlugin.yaml` for Python*
 
 ```yaml
-name: static-page-component
+name: sample-components
 version: 0.1.0
 runtime: python
 ```
@@ -211,7 +200,7 @@ The `pulumi` SDK contains everything we need for making a component. The `pulumi
 ***Example:** `PulumiPlugin.yaml` for Go*
 
 ```yaml
-name: static-page-component
+name: sample-components
 version: 0.1.0
 runtime: go
 ```
@@ -223,7 +212,7 @@ Next, we need to define our dependencies in `go.mod`.
 ***Example:** `go.mod` for a Pulumi Component*
 
 ```go
-module github.com/static-page-component
+module github.com/sample-components
 
 go 1.25
 
@@ -242,7 +231,7 @@ The `pulumi` SDK contains everything we need for making a component. The `pulumi
 ***Example:** `PulumiPlugin.yaml` for C#*
 
 ```yaml
-name: static-page-component
+name: sample-components
 version: 0.1.0
 runtime: dotnet
 ```
@@ -260,7 +249,7 @@ Next, we need to define our dependencies in `StaticPageComponent.csproj`.
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <AssemblyName>static-page-component</AssemblyName>
+    <AssemblyName>sample-components</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -282,7 +271,7 @@ Note that the `AssemblyName` specifies the name of the component package. This n
 ***Example:** `PulumiPlugin.yaml` for Java*
 
 ```yaml
-name: static-page-component
+name: sample-components
 version: 0.1.0
 runtime: java
 ```
@@ -301,7 +290,7 @@ Next, we need to define our dependencies and project configuration in a Maven `p
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.pulumi</groupId>
-  <artifactId>static-page-component</artifactId>
+  <artifactId>sample-components</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <properties>
@@ -386,7 +375,7 @@ from pulumi.provider.experimental import component_provider_host
 from staticpage import StaticPage
 
 if __name__ == "__main__":
-    component_provider_host(name="static-page-component", components=[StaticPage])
+    component_provider_host(name="sample-components", components=[StaticPage])
 ```
 
 Here, the `component_provider_host` call invokes a Pulumi provider implementation which acts as a shim for the component. The name we pass to it will be important later on in the component implementation, so make sure it's something unique and descriptive!
@@ -418,7 +407,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error: %s", err.Error())
 		os.Exit(1)
 	}
-	err = provider.Run(context.Background(), "static-page-component", "0.1.0")
+	err = provider.Run(context.Background(), "sample-components", "0.1.0")
 
 	if err != nil {
 		panic(err)
@@ -432,13 +421,13 @@ func provider() (p.Provider, error) {
 			infer.ComponentF(NewStaticPage),
 		).
 		WithModuleMap(map[tokens.ModuleName]tokens.ModuleName{
-			"static-page-component": "index",
+			"sample-components": "index",
 		}).
 		Build()
 }
 ```
 
-Here, the `infer.NewProviderBuilder()..Build()` call builds a Pulumi provider implementation which acts as a shim for the component. Then, in the `main` function we call `provider.Run(...)` to execute the provider. The name we pass to this function and to the module map (`static-page-component`) will be important later on in the component implementation, so make sure it's something unique and descriptive!
+Here, the `infer.NewProviderBuilder()..Build()` call builds a Pulumi provider implementation which acts as a shim for the component. Then, in the `main` function we call `provider.Run(...)` to execute the provider. The name we pass to this function and to the module map (`sample-components`) will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
 {{% /choosable %}}
 
@@ -476,7 +465,7 @@ import com.pulumi.provider.internal.ComponentProviderHost;
 
 public class App {
     public static void main(String[] args) throws IOException, InterruptedException {
-        new ComponentProviderHost("static-page-component", App.class.getPackage()).start(args);
+        new ComponentProviderHost("sample-components", App.class.getPackage()).start(args);
     }
 }
 ```
@@ -507,51 +496,31 @@ Components typically require two parts: a subclass of `pulumi.ComponentResource`
 
 {{% choosable language typescript %}}
 
-First create a file called `staticpage.ts`, and add the imports we will need:
+First create a file called `StaticPage.ts`, and add the imports we will need:
 
-***Example:** `staticpage.ts` required imports*
+***Example:** `StaticPage.ts` required imports*
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-```
+{{< example-program path="sample-components" languages="typescript:StaticPage.ts:1-2" >}}
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-First create a file called `staticpage.py`, and add the imports we will need:
+First create a file called `static_page.py`, and add the imports we will need:
 
-***Example:** `staticpage.py` required dependencies*
+***Example:** `static_page.py` required dependencies*
 
-```python
-import json
-from typing import Optional, TypedDict
-
-import pulumi
-from pulumi import ResourceOptions
-from pulumi_aws import s3
-```
+{{< example-program path="sample-components" languages="python:static_page.py:1-6" >}}
 
 {{% /choosable %}}
 
 {{% choosable language go %}}
 
-First create a directory called `staticpagecomponent` and create a file called `staticpage.go` inside it. This will be our importable Go package:
+First create a directory called `staticpagecomponent` and create a file called `static_page.go` inside it. This will be our importable Go package:
 
-***Example:** `staticpagecomponent/staticpage.go` required dependencies*
+***Example:** `staticpagecomponent/static_page.go` required dependencies*
 
-```go
-package staticpagecomponent
-
-import (
-	"encoding/json"
-	"fmt"
-
-	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-```
+{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:1-9" >}}
 
 {{% /choosable %}}
 
@@ -561,16 +530,7 @@ First create a file called `StaticPage.cs`, and add the imports we will need:
 
 ***Example:** `StaticPage.cs` required imports*
 
-```csharp
-using System;
-using System.Collections.Generic;
-
-using Pulumi;
-using Pulumi.Aws.S3;
-using Pulumi.Aws.S3.Inputs;
-
-using Newtonsoft.Json;
-```
+{{< example-program path="sample-components" languages="csharp:StaticPage.cs:1-8" >}}
 
 {{% /choosable %}}
 
@@ -580,32 +540,7 @@ First create a file called `StaticPage.java`, and add the imports we will need:
 
 ***Example:** `StaticPage.java` required imports*
 
-```java
-package staticpagecomponent;
-
-import java.util.Map;
-
-import com.pulumi.aws.s3.BucketObject;
-import com.pulumi.aws.s3.BucketObjectArgs;
-import com.pulumi.aws.s3.BucketPolicy;
-import com.pulumi.aws.s3.BucketPolicyArgs;
-import com.pulumi.aws.s3.BucketPublicAccessBlock;
-import com.pulumi.aws.s3.BucketPublicAccessBlockArgs;
-import com.pulumi.aws.s3.Bucket;
-import com.pulumi.aws.s3.BucketWebsiteConfiguration;
-import com.pulumi.aws.s3.BucketWebsiteConfigurationArgs;
-import com.pulumi.aws.s3.inputs.BucketWebsiteConfigurationIndexDocumentArgs;
-
-import com.pulumi.core.Output;
-import com.pulumi.core.Either;
-import com.pulumi.core.annotations.Export;
-import com.pulumi.core.annotations.Import;
-
-import com.pulumi.resources.ComponentResource;
-import com.pulumi.resources.ComponentResourceOptions;
-import com.pulumi.resources.CustomResourceOptions;
-import com.pulumi.resources.ResourceArgs;
-```
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:1-24" >}}
 
 {{% /choosable %}}
 
@@ -625,14 +560,9 @@ Next, we will implement the arguments class. In our example here, we will pass t
 
 {{% choosable language typescript %}}
 
-***Example:** `staticpage.ts` the Component arguments implementation*
+***Example:** `StaticPage.ts` the Component arguments implementation*
 
-```typescript
-export interface StaticPageArgs {
-    // The HTML content for index.html
-    indexContent: pulumi.Input<string>;
-}
-```
+{{< example-program path="sample-components" languages="typescript:StaticPage.ts:4-6" >}}
 
 Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. Certain types like union types (e.g., `string | number`) and functions are not supported due to schema inference limitations. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
 
@@ -640,13 +570,9 @@ Note that argument classes must be *serializable* and use `pulumi.Input` types, 
 
 {{% choosable language python %}}
 
-***Example:** `staticpage.py` the Component arguments implementation*
+***Example:** `static_page.py` the Component arguments implementation*
 
-```python
-class StaticPageArgs(TypedDict):
-    index_content: pulumi.Input[str]
-    """The HTML content for index.html."""
-```
+{{< example-program path="sample-components" languages="python:static_page.py:9-11" >}}
 
 Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. This means certain types like union types and functions are not supported. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
 
@@ -655,13 +581,9 @@ Python class properties are typically written in lowercase with words separated 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-***Example:** `staticpage.go` the Component arguments implementation*
+***Example:** `static_page.go` the Component arguments implementation*
 
-```go
-type StaticPageArgs struct {
-	IndexContent pulumi.StringInput `pulumi:"indexContent"`
-}
-```
+{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:11-13" >}}
 
 Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
 
@@ -673,12 +595,7 @@ Go struct fields are typically written in title case, with the first letter capi
 
 ***Example:** `StaticPage.cs` the Component arguments implementation*
 
-```csharp
-public sealed class StaticPageArgs : ResourceArgs {
-    [Input("indexContent")]
-    public Input<string> IndexContent { get; set; } = null!;
-}
-```
+{{< example-program path="sample-components" languages="csharp:StaticPage.cs:10-13" >}}
 
 Note that argument classes must be *serializable* and use `Pulumi.Input` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
 
@@ -688,23 +605,7 @@ Note that argument classes must be *serializable* and use `Pulumi.Input` types, 
 
 ***Example:** `StaticPage.java` the Component arguments implementation*
 
-```java
-class StaticPageArgs extends ResourceArgs {
-    @Import(name = "indexContent", required = true)
-    private Output<String> IndexContent;
-
-    public Output<String> indexContent() {
-        return this.IndexContent;
-    }
-
-    private StaticPageArgs() {
-    }
-
-    public StaticPageArgs(Output<String> indexContent) {
-        this.IndexContent = indexContent;
-    }
-}
-```
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:26-40" >}}
 
 Note that argument classes must be *serializable* and use `com.pulumi.core.Output<T>` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
 
@@ -718,15 +619,7 @@ In YAML, rather than defining a separate args class, the inputs are declared und
 
 ***Example:** `PulumiPlugin.yaml` the Component arguments implementation*
 
-```yaml {hl_lines=["5-7"]}
-runtime: yaml
-name: static-page-component
-components:
-  StaticPage:
-    inputs:
-      indexContent:
-        type: string
-```
+{{< example-program path="sample-components" languages="yaml:sample-components/PulumiPlugin.yaml:5-7" >}}
 
 Inputs can be any basic type (e.g. `boolean`, `integer`, `string`) or an `array` of any of those types. You can provide a default value via the `default` property.
 
@@ -742,72 +635,9 @@ Inputs can be any basic type (e.g. `boolean`, `integer`, `string`) or an `array`
 
 Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
-***Example:** `staticpage.ts` the Component implementation*
+***Example:** `StaticPage.ts` the Component implementation*
 
-```typescript
-export class StaticPage extends pulumi.ComponentResource {
-    // The URL of the static website.
-    public readonly endpoint: pulumi.Output<string>;
-
-    constructor(name: string, args: StaticPageArgs, opts?: pulumi.ComponentResourceOptions) {
-        super("static-page-component:index:StaticPage", name, args, opts);
-
-        // Create a bucket
-        const bucket = new aws.s3.Bucket(`${name}-bucket`, {}, { parent: this });
-
-        // Configure the bucket website
-        const bucketWebsite = new aws.s3.BucketWebsiteConfiguration(`${name}-website`, {
-            bucket: bucket.bucket,
-            indexDocument: { suffix: "index.html" },
-        }, { parent: bucket });
-
-        // Create a bucket object for the index document.
-        const bucketObject = new aws.s3.BucketObject(`${name}-index-object`, {
-            bucket: bucket.bucket,
-            key: 'index.html',
-            content: args.indexContent,
-            contentType: 'text/html',
-        }, { parent: bucket });
-
-        // Create a public access block for the bucket
-        const publicAccessBlock = new aws.s3.BucketPublicAccessBlock(`${name}-public-access-block`, {
-            bucket: bucket.id,
-            blockPublicAcls: false,
-        }, { parent: bucket });
-
-        // Set the access policy for the bucket so all objects are readable
-        const bucketPolicy = new aws.s3.BucketPolicy(`${name}-bucket-policy`, {
-            bucket: bucket.id, // refer to the bucket created earlier
-            policy: bucket.bucket.apply(this.allowGetObjectPolicy),
-        }, { parent: bucket, dependsOn: publicAccessBlock });
-
-        this.endpoint = bucketWebsite.websiteEndpoint;
-
-        // By registering the outputs on which the component depends, we ensure
-        // that the Pulumi CLI will wait for all the outputs to be created before
-        // considering the component itself to have been created.
-        this.registerOutputs({
-            endpoint: bucketWebsite.websiteEndpoint,
-        });
-    }
-
-    allowGetObjectPolicy(bucketName: string) {
-        return JSON.stringify({
-            Version: "2012-10-17",
-            Statement: [{
-                Effect: "Allow",
-                Principal: "*",
-                Action: [
-                    "s3:GetObject"
-                ],
-                Resource: [
-                    `arn:aws:s3:::${bucketName}/*`
-                ]
-            }]
-        });
-    }
-}
-```
+{{< example-program path="sample-components" languages="typescript:StaticPage.ts:8-67" >}}
 
 {{% /choosable %}}
 
@@ -815,178 +645,18 @@ export class StaticPage extends pulumi.ComponentResource {
 
 Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.register_outputs` signals Pulumi that the process of creating the component resource has completed.
 
-***Example:** `staticpage.py` the Component implementation*
+***Example:** `static_page.py` the Component implementation*
 
-```python
-class StaticPage(pulumi.ComponentResource):
-    endpoint: pulumi.Output[str]
-    """The URL of the static website."""
-
-    def __init__(self,
-                 name: str,
-                 args: StaticPageArgs,
-                 opts: Optional[ResourceOptions] = None) -> None:
-
-        super().__init__('static-page-component:index:StaticPage', name, {}, opts)
-
-        # Create a bucket
-        bucket = s3.Bucket(
-            f'{name}-bucket',
-            opts=ResourceOptions(parent=self))
-
-        # Configure the bucket website
-        bucket_website = s3.BucketWebsiteConfiguration(
-            f'{name}-website',
-            bucket=bucket.bucket,
-            index_document={"suffix": "index.html"},
-            opts=ResourceOptions(parent=bucket))
-
-        # Create a bucket object for the index document
-        s3.BucketObject(
-            f'{name}-index-object',
-            bucket=bucket.bucket,
-            key='index.html',
-            content=args.get("index_content"),
-            content_type='text/html',
-            opts=ResourceOptions(parent=bucket))
-
-        # Create a public access block for the bucket
-        bucket_public_access_block = s3.BucketPublicAccessBlock(
-            f'{name}-public-access-block',
-            bucket=bucket.id,
-            block_public_acls=False,
-            opts=ResourceOptions(parent=bucket))
-
-        # Set the access policy for the bucket so all objects are readable.
-        s3.BucketPolicy(
-            f'{name}-bucket-policy',
-            bucket=bucket.bucket,
-            policy=bucket.bucket.apply(_allow_getobject_policy),
-            opts=ResourceOptions(parent=bucket, depends_on=[bucket_public_access_block]))
-
-        self.endpoint = bucket_website.website_endpoint
-
-        # By registering the outputs on which the component depends, we ensure
-        # that the Pulumi CLI will wait for all the outputs to be created before
-        # considering the component itself to have been created.
-        self.register_outputs({
-            'endpoint': bucket_website.website_endpoint
-        })
-
-
-def _allow_getobject_policy(bucket_name: str) -> str:
-    return json.dumps({
-        'Version': '2012-10-17',
-        'Statement': [
-            {
-                'Effect': 'Allow',
-                'Principal': '*',
-                'Action': ['s3:GetObject'],
-                'Resource': [
-                    f'arn:aws:s3:::{bucket_name}/*',  # policy refers to bucket name explicitly
-                ],
-            },
-        ],
-    })
-```
+{{< example-program path="sample-components" languages="python:static_page.py:14-59" >}}
 
 {{% /choosable %}}
 
 {{% choosable language go %}}
 Now we can implement the component itself. Component structs should include `pulumi.ResourceState` and define the consumable outputs, which follow the same general rules as inputs. All the work for building our component happens in the `NewStaticPage` constructor.
 
-***Example:** `staticpage.go` the Component implementation*
+***Example:** `static_page.go` the Component implementation*
 
-```go
-type StaticPage struct {
-	pulumi.ResourceState
-	Endpoint pulumi.StringOutput `pulumi:"endpoint"`
-}
-
-func NewStaticPage(ctx *pulumi.Context, name string, args *StaticPageArgs, opts ...pulumi.ResourceOption) (*StaticPage, error) {
-	comp := &StaticPage{}
-	err := ctx.RegisterComponentResource("static-page-component:index:StaticPage", name, comp, opts...)
-	if err != nil {
-		return nil, err
-	}
-
-	// Create a bucket
-	bucket, err := s3.NewBucket(ctx, fmt.Sprintf("%s-bucket", name), &s3.BucketArgs{},
-		pulumi.Parent(comp))
-	if err != nil {
-		return nil, err
-	}
-
-	// Configure bucket website
-	bucketWebsite, err := s3.NewBucketWebsiteConfiguration(ctx, fmt.Sprintf("%s-website", name),
-		&s3.BucketWebsiteConfigurationArgs{
-			Bucket: bucket.Bucket,
-			IndexDocument: s3.BucketWebsiteConfigurationIndexDocumentArgs{
-				Suffix: pulumi.String("index.html"),
-			},
-		},
-		pulumi.Parent(bucket))
-	if err != nil {
-		return nil, err
-	}
-
-	// Create bucket object for index document
-	_, err = s3.NewBucketObject(ctx, fmt.Sprintf("%s-index-object", name), &s3.BucketObjectArgs{
-		Bucket:      bucket.Bucket,
-		Key:         pulumi.String("index.html"),
-		Content:     args.IndexContent,
-		ContentType: pulumi.String("text/html"),
-	}, pulumi.Parent(bucket))
-	if err != nil {
-		return nil, err
-	}
-
-	// Create public access block
-	publicAccessBlock, err := s3.NewBucketPublicAccessBlock(ctx, fmt.Sprintf("%s-public-access-block", name),
-		&s3.BucketPublicAccessBlockArgs{
-			Bucket:          bucket.ID(),
-			BlockPublicAcls: pulumi.Bool(false),
-		}, pulumi.Parent(bucket))
-	if err != nil {
-		return nil, err
-	}
-
-	// Create bucket policy
-	allowGetObjectPolicy := func(bucketName string) (string, error) {
-		policy := map[string]interface{}{
-			"Version": "2012-10-17",
-			"Statement": []map[string]interface{}{
-				{
-					"Effect":    "Allow",
-					"Principal": "*",
-					"Action":    []string{"s3:GetObject"},
-					"Resource":  []string{fmt.Sprintf("arn:aws:s3:::%s/*", bucketName)},
-				},
-			},
-		}
-		policyJSON, err := json.Marshal(policy)
-		if err != nil {
-			return "", err
-		}
-		return string(policyJSON), nil
-	}
-
-	_, err = s3.NewBucketPolicy(ctx, fmt.Sprintf("%s-bucket-policy", name), &s3.BucketPolicyArgs{
-		Bucket: bucket.ID(),
-		Policy: bucket.Bucket.ApplyT(func(bucketName string) (string, error) {
-			return allowGetObjectPolicy(bucketName)
-		}).(pulumi.StringOutput),
-	}, pulumi.Parent(bucket), pulumi.DependsOn([]pulumi.Resource{publicAccessBlock}))
-	if err != nil {
-		return nil, err
-	}
-
-	// Set outputs
-	comp.Endpoint = bucketWebsite.WebsiteEndpoint
-
-	return comp, nil
-}
-```
+{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:15-96" >}}
 
 {{% /choosable %}}
 
@@ -996,70 +666,7 @@ Now we can implement the component itself. Components should inherit from `Pulum
 
 ***Example:** `StaticPage.cs` the Component implementation*
 
-```csharp
-class StaticPage : ComponentResource {
-    [Output("endpoint")]
-    public Output<string> endpoint { get; set; }
-
-    public StaticPage(string name, StaticPageArgs args, ComponentResourceOptions? opts = null)
-        : base("static-page-component:index:StaticPage", name, args, opts)
-    {
-        // Create a bucket
-        var bucket = new Bucket($"{name}-bucket", new() { }, new() { Parent = this });
-
-        // Configure the bucket website
-        var bucketWebsite = new BucketWebsiteConfiguration($"{name}-website", new() {
-            Bucket = bucket.Bucket,
-            IndexDocument = new BucketWebsiteConfigurationIndexDocumentArgs { Suffix = "index.html" },
-        }, new() { Parent = bucket });
-
-        // Create a bucket object for the index document
-        var bucketObject = new BucketObject($"{name}-index-object", new BucketObjectArgs {
-            Bucket = bucket.Bucket,
-            Key = "index.html",
-            Content = args.IndexContent,
-            ContentType = "text/html",
-        }, new() { Parent = bucket });
-
-        // Create a public access block for the bucket
-        var publicAccessBlock = new BucketPublicAccessBlock($"{name}-public-access-block", new() {
-            Bucket = bucket.Bucket,
-            BlockPublicAcls = false,
-        }, new() { Parent = bucket });
-
-        // Set the access policy for the bucket so all objects are readable
-        var bucketPolicy = new BucketPolicy($"{name}-bucket-policy", new() {
-            Bucket = bucket.Bucket,
-            Policy = bucket.Id.Apply(this.AllowGetObjectPolicy),
-        }, new() { Parent = bucket, DependsOn = publicAccessBlock });
-
-        this.endpoint = bucketWebsite.WebsiteEndpoint;
-
-        // By registering the outputs on which the component depends, we ensure
-        // that the Pulumi CLI will wait for all the outputs to be created before
-        // considering the component itself to have been created.
-        this.RegisterOutputs(new Dictionary<string, object?> {
-            ["endpoint"] = bucketWebsite.WebsiteEndpoint
-        });
-    }
-
-    private string AllowGetObjectPolicy(string bucketName) {
-        return JsonConvert.SerializeObject(new {
-            Version = "2012-10-17",
-            Statement = new[] { new {
-                Effect = "Allow",
-                Principal = "*",
-                Action = new[] {
-                    "s3:GetObject"
-                },
-                Resource = new[] {
-                    $"arn:aws:s3:::{bucketName}/*"
-                }
-            }}
-        });
-    }
-}
-```
+{{< example-program path="sample-components" languages="csharp:StaticPage.cs:15-68" >}}
 
 {{% /choosable %}}
 
@@ -1069,101 +676,7 @@ Now we can implement the component itself. Components should inherit from `Pulum
 
 ***Example:** `StaticPage.java` the Component implementation*
 
-```java
-class StaticPage extends ComponentResource {
-    @Export(name = "endpoint", refs = { String.class }, tree = "[0]")
-    public final Output<String> endpoint;
-
-    public StaticPage(String name, StaticPageArgs args, ComponentResourceOptions opts) {
-        super("static-page-component:index:StaticPage", name, null, opts);
-
-        // Create a bucket
-        var bucket = new Bucket(
-                String.format("%s-bucket", name),
-                null,
-                CustomResourceOptions.builder()
-                        .parent(this)
-                        .build());
-
-        // Configure the bucket website
-        var bucketWebsite = new BucketWebsiteConfiguration(
-                String.format("%s-website", name),
-                BucketWebsiteConfigurationArgs.builder()
-                        .bucket(bucket.id())
-                        .indexDocument(
-                                BucketWebsiteConfigurationIndexDocumentArgs.builder()
-                                        .suffix("index.html")
-                                        .build())
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .build());
-
-        // Create a bucket object for the index document
-        var bucketObject = new BucketObject(
-                String.format("%s-index-object", name),
-                BucketObjectArgs.builder()
-                        .bucket(bucket.bucket())
-                        .key("index.html")
-                        .content(args.indexContent())
-                        .contentType("text/html")
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .build());
-
-        // Create a public access block for the bucket
-        var publicAccessBlock = new BucketPublicAccessBlock(
-                String.format("%s-public-access-block", name),
-                BucketPublicAccessBlockArgs.builder()
-                        .bucket(bucket.id())
-                        .blockPublicAcls(false)
-                        .blockPublicPolicy(false)
-                        .ignorePublicAcls(false)
-                        .restrictPublicBuckets(false)
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .build());
-
-        // Set the access policy for the bucket so all objects are readable
-        var policyJson = bucket.arn().applyValue(bucketArn ->
-            "{\n" +
-            "  \"Version\": \"2012-10-17\",\n" +
-            "  \"Statement\": [\n" +
-            "    {\n" +
-            "      \"Sid\": \"PublicReadGetObject\",\n" +
-            "      \"Effect\": \"Allow\",\n" +
-            "      \"Principal\": \"*\",\n" +
-            "      \"Action\": \"s3:GetObject\",\n" +
-            "      \"Resource\": \"" + bucketArn + "/*\"\n" +
-            "    }\n" +
-            "  ]\n" +
-            "}"
-        );
-
-        var bucketPolicy = new BucketPolicy(
-                String.format("%s-bucket-policy", name),
-                BucketPolicyArgs.builder()
-                        .bucket(bucket.id())
-                        .policy(policyJson.applyValue(Either::ofLeft))
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .dependsOn(publicAccessBlock)
-                        .build());
-
-        this.endpoint = bucketWebsite.websiteEndpoint();
-
-        // By registering the outputs on which the component depends, we ensure
-        // that the Pulumi CLI will wait for all the outputs to be created before
-        // considering the component itself to have been created.
-        this.registerOutputs(Map.of(
-                "endpoint", bucketWebsite.websiteEndpoint()));
-    }
-
-}
-```
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:42-125" >}}
 
 {{% /choosable %}}
 
@@ -1184,71 +697,7 @@ Here's the full code for our `StaticPage` component:
 
 ***Example:** `PulumiPlugin.yaml` the Component implementation*
 
-```yaml {hl_lines=["3-60"]}
-runtime: yaml
-name: static-page-component
-components:
-  StaticPage:
-    inputs:
-      indexContent:
-        type: string
-    resources:
-      bucket:
-        type: aws:s3:Bucket
-        properties: {}
-
-      bucketWebsite:
-        type: aws:s3:BucketWebsiteConfiguration
-        properties:
-          bucket: ${bucket.bucket}
-          indexDocument:
-            suffix: index.html
-        options:
-          parent: ${bucket}
-
-      bucketObject:
-        type: aws:s3/bucketObject:BucketObject
-        properties:
-          bucket: ${bucket.bucket}
-          key: index.html
-          content: ${indexContent}
-          contentType: text/html
-        options:
-          parent: ${bucket}
-
-      publicAccessBlock:
-        type: aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock
-        properties:
-          bucket: ${bucket.id}
-          blockPublicAcls: false
-          blockPublicPolicy: false
-          ignorePublicAcls: false
-          restrictPublicBuckets: false
-        options:
-          parent: ${bucket}
-
-      bucketPolicy:
-        type: aws:s3/bucketPolicy:BucketPolicy
-        properties:
-          bucket: ${bucket.id}
-          policy:
-            fn::toJSON:
-              Version: "2012-10-17"
-              Statement:
-                - Effect: Allow
-                  Principal: "*"
-                  Action:
-                    - s3:GetObject
-                  Resource:
-                    - arn:aws:s3:::${bucket.bucket}/*
-        options:
-          parent: ${bucket}
-          dependsOn:
-            - ${publicAccessBlock}
-
-    outputs:
-      endpoint: ${bucketWebsite.websiteEndpoint}
-```
+{{< example-program path="sample-components" languages="yaml:sample-components/PulumiPlugin.yaml:3-56" >}}
 
 {{% /choosable %}}
 
@@ -1264,34 +713,19 @@ Let's dissect this component implementation piece-by-piece:
 
 #### Inheriting from the base class
 
-```typescript
-export class StaticPage extends pulumi.ComponentResource {
-    // ...
-}
-```
+{{< example-program path="sample-components" languages="typescript:StaticPage.ts:8-8" >}}
 
 Inheriting from `pulumi.ComponentResource` gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine and within its host provider. It also allows the underlying library to find and infer the schema of the component.
 
 #### Outputs as class properties
 
-```typescript
-export class StaticPage extends pulumi.ComponentResource {
-    // The URL of the static website
-    public readonly endpoint: pulumi.Output<string>;
-// ...
-}
-```
+{{< example-program path="sample-components" languages="typescript:StaticPage.ts:9-9" >}}
 
 We use a class property to store the output value. Note that it's using `pulumi.Output<string>` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
 
 #### The Component constructor
 
-```typescript
-// ...
-    constructor(name: string, args: StaticPageArgs, opts?: pulumi.ComponentResourceOptions) {
-        super("static-page-component:index:StaticPage", name, args, opts);
-// ...
-```
+{{< example-program path="sample-components" languages="typescript:StaticPage.ts:11-12" >}}
 
 The constructor has a few standard arguments:
 
@@ -1305,38 +739,7 @@ Since we're inheriting, we also need to call the base class constructor `super(.
 
 Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
-```typescript
-// ...
-        // Create a bucket
-        const bucket = new aws.s3.Bucket(`${name}-bucket`, {}, { parent: this });
-
-        // Configure the bucket website
-        const bucketWebsite = new aws.s3.BucketWebsiteConfiguration(`${name}-website`, {
-            bucket: bucket.bucket,
-            indexDocument: { suffix: "index.html" },
-        }, { parent: bucket });
-
-        // Create a bucket object for the index document.
-        const bucketObject = new aws.s3.BucketObject(`${name}-index-object`, {
-            bucket: bucket.bucket,
-            key: 'index.html',
-            content: args.indexContent,
-            contentType: 'text/html',
-        }, { parent: bucket });
-
-        // Create a public access block for the bucket
-        const publicAccessBlock = new aws.s3.BucketPublicAccessBlock(`${name}-public-access-block`, {
-            bucket: bucket.id,
-            blockPublicAcls: false,
-        }, { parent: bucket });
-
-        // Set the access policy for the bucket so all objects are readable
-        const bucketPolicy = new aws.s3.BucketPolicy(`${name}-bucket-policy`, {
-            bucket: bucket.id, // refer to the bucket created earlier
-            policy: bucket.bucket.apply(this.allowGetObjectPolicy),
-        }, { parent: bucket, dependsOn: publicAccessBlock });
-// ...
-```
+{{< example-program path="sample-components" languages="typescript:StaticPage.ts:14-45" >}}
 
 ##### The Bucket sub-resource
 
@@ -1372,44 +775,15 @@ The last part of the constructor handles output values. First we set the `endpoi
 
 Finally, calling `this.registerOutputs` signals Pulumi that the component creation process has completed.
 
-```typescript
-// ...
-        this.endpoint = bucketWebsite.websiteEndpoint;
-
-        // By registering the outputs on which the component depends, we ensure
-        // that the Pulumi CLI will wait for all the outputs to be created before
-        // considering the component itself to have been created.
-        this.registerOutputs({
-            endpoint: bucketWebsite.websiteEndpoint,
-        });
-// ...
-```
+{{< example-program path="sample-components" languages="typescript:StaticPage.ts:47-52" >}}
 
 #### Helper functions
 
 In addition to the constructor logic, we also have a helper function `allowGetObjectPolicy`:
 
-***Example:** `staticpage.ts` a helper function*
+***Example:** `StaticPage.ts` a helper function*
 
-```typescript
-// ...
-    allowGetObjectPolicy(bucketName: string) {
-        return JSON.stringify({
-            Version: "2012-10-17",
-            Statement: [{
-                Effect: "Allow",
-                Principal: "*",
-                Action: [
-                    "s3:GetObject"
-                ],
-                Resource: [
-                    `arn:aws:s3:::${bucketName}/*`
-                ]
-            }]
-        });
-    }
-// ...
-```
+{{< example-program path="sample-components" languages="typescript:StaticPage.ts:54-66" >}}
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `apply(...)`. That means that the `bucketName`, which is normally a `pulumi.Output<str>` value, can be materialized as a normal TypeScript string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. The `JSON.stringify(...)` function takes the object as input and returns it as a JSON formatted string.
 
@@ -1419,35 +793,19 @@ This function is used to create a S3 policy document, allowing public access to 
 
 #### Inheriting from the base class
 
-```python
-class StaticPage(pulumi.ComponentResource):
-# ...
-```
+{{< example-program path="sample-components" languages="python:static_page.py:14-14" >}}
 
 Inheriting from `pulumi.ComponentResource` gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine. It also allows the underlying library to find and infer the schema of the component.
 
 #### Outputs as class properties
 
-```python
-class StaticPage(pulumi.ComponentResource):
-    endpoint: pulumi.Output[str]
-# ...
-```
+{{< example-program path="sample-components" languages="python:static_page.py:15-16" >}}
 
 We use a class property to store the output value. Note that it's using `pulumi.Output[str]` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
 
 #### The Component constructor
 
-```python
-# ...
-    def __init__(self,
-                 name: str,
-                 args: StaticPageArgs,
-                 opts: Optional[ResourceOptions] = None) -> None:
-
-        super().__init__('static-page-component:index:StaticPage', name, {}, opts)
-# ...
-```
+{{< example-program path="sample-components" languages="python:static_page.py:18-23" >}}
 
 The constructor has a few standard arguments:
 
@@ -1461,44 +819,7 @@ Since we're inheriting, we also need to call the base class constructor `super()
 
 Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
-```python
-# ...
-        # Create a bucket
-        bucket = s3.Bucket(
-            f'{name}-bucket',
-            opts=ResourceOptions(parent=self))
-
-        # Configure the bucket website
-        bucket_website = s3.BucketWebsiteConfiguration(
-            f'{name}-website',
-            bucket=bucket.bucket,
-            index_document={"suffix": "index.html"},
-            opts=ResourceOptions(parent=bucket))
-
-        # Create a bucket object for the index document
-        s3.BucketObject(
-            f'{name}-index-object',
-            bucket=bucket.bucket,
-            key='index.html',
-            content=args.get("index_content"),
-            content_type='text/html',
-            opts=ResourceOptions(parent=bucket))
-
-        # Create a public access block for the bucket
-        bucket_public_access_block = s3.BucketPublicAccessBlock(
-            f'{name}-public-access-block',
-            bucket=bucket.id,
-            block_public_acls=False,
-            opts=ResourceOptions(parent=bucket))
-
-        # Set the access policy for the bucket so all objects are readable.
-        s3.BucketPolicy(
-            f'{name}-bucket-policy',
-            bucket=bucket.bucket,
-            policy=bucket.bucket.apply(_allow_getobject_policy),
-            opts=ResourceOptions(parent=bucket, depends_on=[bucket_public_access_block]))
-# ...
-```
+{{< example-program path="sample-components" languages="python:static_page.py:25-53" >}}
 
 ##### The Bucket sub-resource
 
@@ -1534,44 +855,15 @@ The last part of the constructor handles output values. First we set the `endpoi
 
 Finally, calling `self.register_outputs` signals Pulumi that the component creation process has completed.
 
-```python
-# ...
-        self.endpoint = bucket_website.website_endpoint
-
-        # By registering the outputs on which the component depends, we ensure
-        # that the Pulumi CLI will wait for all the outputs to be created before
-        # considering the component itself to have been created.
-        self.register_outputs({
-            'endpoint': bucket_website.website_endpoint
-        })
-
-# ...
-```
+{{< example-program path="sample-components" languages="python:static_page.py:55-59" >}}
 
 #### Helper functions
 
 In addition to the constructor logic, we also have a helper function `_allow_getobject_policy`:
 
-***Example:** `staticpage.py` a helper function*
+***Example:** `static_page.py` a helper function*
 
-```python
-# ...
-def _allow_getobject_policy(bucket_name: str) -> str:
-    return json.dumps({
-        'Version': '2012-10-17',
-        'Statement': [
-            {
-                'Effect': 'Allow',
-                'Principal': '*',
-                'Action': ['s3:GetObject'],
-                'Resource': [
-                    f'arn:aws:s3:::{bucket_name}/*',  # policy refers to bucket name explicitly
-                ],
-            },
-        ],
-    })
-# ...
-```
+{{< example-program path="sample-components" languages="python:static_page.py:62-75" >}}
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `apply(...)`. That means that the `bucket_name`, which is normally a `pulumi.Output[str]` value, can be materialized as a normal Python string, and is passed into this function that way. Note that you can't modify the value of `bucket_name`, but you can *read* the value and use it to construct the policy document. The `json.dumps(...)` function takes the dictionary as input and returns it as a JSON formatted string.
 
@@ -1581,38 +873,19 @@ This function is used to create a S3 policy document, allowing public access to 
 
 #### Defining the struct
 
-```go
-type StaticPage struct {
-	pulumi.ResourceState
-    // ...
-}
-```
+{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:15-18" >}}
 
 The struct must embed the `pulumi.ResourceState` struct. This gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine and within its host provider. It also allows the underlying library to find and infer the schema of the component.
 
 #### Outputs as struct fields
 
-```go {hl_lines=[3]}
-type StaticPage struct {
-	pulumi.ResourceState
-	Endpoint pulumi.StringOutput `pulumi:"endpoint"`
-}
-```
+{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:17-17" >}}
 
 We use a struct field to store the output value. Note that it's using `pulumi.StringOutput` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program. The `pulumi:"endpoint"` tag defines the name of the property and allows for reflection to generate schema.
 
 #### The Component constructor
 
-```go
-// ...
-func NewStaticPage(ctx *pulumi.Context, name string, args *StaticPageArgs, opts ...pulumi.ResourceOption) (*StaticPage, error) {
-	comp := &StaticPage{}
-	err := ctx.RegisterComponentResource("static-page-component:index:StaticPage", name, comp, opts...)
-	if err != nil {
-		return nil, err
-	}
-// ...
-```
+{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:20-25" >}}
 
 The constructor has a few standard arguments:
 
@@ -1627,80 +900,7 @@ The next step is to register our new component instance with Pulumi via the `ctx
 
 Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
-```go
-// ...
-	// Create a bucket
-	bucket, err := s3.NewBucket(ctx, fmt.Sprintf("%s-bucket", name), &s3.BucketArgs{},
-		pulumi.Parent(comp))
-	if err != nil {
-		return nil, err
-	}
-
-	// Configure bucket website
-	bucketWebsite, err := s3.NewBucketWebsiteConfiguration(ctx, fmt.Sprintf("%s-website", name),
-		&s3.BucketWebsiteConfigurationArgs{
-			Bucket: bucket.Bucket,
-			IndexDocument: s3.BucketWebsiteConfigurationIndexDocumentArgs{
-				Suffix: pulumi.String("index.html"),
-			},
-		},
-		pulumi.Parent(bucket))
-	if err != nil {
-		return nil, err
-	}
-
-	// Create bucket object for index document
-	_, err = s3.NewBucketObject(ctx, fmt.Sprintf("%s-index-object", name), &s3.BucketObjectArgs{
-		Bucket:      bucket.Bucket,
-		Key:         pulumi.String("index.html"),
-		Content:     args.IndexContent,
-		ContentType: pulumi.String("text/html"),
-	}, pulumi.Parent(bucket))
-	if err != nil {
-		return nil, err
-	}
-
-	// Create public access block
-	publicAccessBlock, err := s3.NewBucketPublicAccessBlock(ctx, fmt.Sprintf("%s-public-access-block", name),
-		&s3.BucketPublicAccessBlockArgs{
-			Bucket:          bucket.ID(),
-			BlockPublicAcls: pulumi.Bool(false),
-		}, pulumi.Parent(bucket))
-	if err != nil {
-		return nil, err
-	}
-
-	// Create bucket policy
-	allowGetObjectPolicy := func(bucketName string) (string, error) {
-		policy := map[string]interface{}{
-			"Version": "2012-10-17",
-			"Statement": []map[string]interface{}{
-				{
-					"Effect":    "Allow",
-					"Principal": "*",
-					"Action":    []string{"s3:GetObject"},
-					"Resource":  []string{fmt.Sprintf("arn:aws:s3:::%s/*", bucketName)},
-				},
-			},
-		}
-		policyJSON, err := json.Marshal(policy)
-		if err != nil {
-			return "", err
-		}
-		return string(policyJSON), nil
-	}
-
-	_, err = s3.NewBucketPolicy(ctx, fmt.Sprintf("%s-bucket-policy", name), &s3.BucketPolicyArgs{
-		Bucket: bucket.ID(),
-		Policy: bucket.Bucket.ApplyT(func(bucketName string) (string, error) {
-			return allowGetObjectPolicy(bucketName)
-		}).(pulumi.StringOutput),
-	}, pulumi.Parent(bucket), pulumi.DependsOn([]pulumi.Resource{publicAccessBlock}))
-	if err != nil {
-		return nil, err
-	}
-// ...
-```
+{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:27-91" >}}
 
 ##### The Bucket sub-resource
 
@@ -1736,42 +936,15 @@ The last part of the constructor handles output values. First we set the `Endpoi
 
 Finally, return the component instance.
 
-```go
-// ...
-	comp.Endpoint = bucketWebsite.WebsiteEndpoint
-
-	return comp, nil
-// ...
-```
+{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:93-96" >}}
 
 #### Helper functions
 
 In addition to the resource constructor logic, we also had this inline helper function `allowGetObjectPolicy`:
 
-***Example:** `staticpage.go` a helper function*
+***Example:** `static_page.go` a helper function*
 
-```go
-// ...
-	allowGetObjectPolicy := func(bucketName string) (string, error) {
-		policy := map[string]interface{}{
-			"Version": "2012-10-17",
-			"Statement": []map[string]interface{}{
-				{
-					"Effect":    "Allow",
-					"Principal": "*",
-					"Action":    []string{"s3:GetObject"},
-					"Resource":  []string{fmt.Sprintf("arn:aws:s3:::%s/*", bucketName)},
-				},
-			},
-		}
-		policyJSON, err := json.Marshal(policy)
-		if err != nil {
-			return "", err
-		}
-		return string(policyJSON), nil
-	}
-// ...
-```
+{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:64-81" >}}
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `ApplyT(...)`. That means that the `bucketName`, which is normally an asynchronous `pulumi.StringOutput` value, can be materialized as a normal Go string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. The `json.Marshal(...)` function takes the map as input and returns it as a JSON formatted string.
 
@@ -1781,36 +954,19 @@ This function is used to create a S3 policy document, allowing public access to 
 
 #### Inheriting from the base class
 
-```csharp
-class StaticPage : ComponentResource {
-    // ...
-}
-```
+{{< example-program path="sample-components" languages="csharp:StaticPage.cs:15-15" >}}
 
 Inheriting from `Pulumi.ComponentResource` gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine and within its host provider. It also allows the underlying library to find and infer the schema of the component.
 
 #### Outputs as class properties
 
-```csharp
-class StaticPage : ComponentResource {
-    // The URL of the static website
-    [Output("endpoint")]
-    public Output<string> endpoint { get; set; }
-    // ...
-}
-```
+{{< example-program path="sample-components" languages="csharp:StaticPage.cs:16-17" >}}
 
 We use a class property to store the output value. Note that it's using `Pulumi.Output<string>` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
 
 #### The Component constructor
 
-```csharp
-// ...
-    public StaticPage(string name, StaticPageArgs args, ComponentResourceOptions? opts = null)
-        : base("static-page-component:index:StaticPage", name, args, opts)
-
-// ...
-```
+{{< example-program path="sample-components" languages="csharp:StaticPage.cs:19-21" >}}
 
 The constructor has a few standard arguments:
 
@@ -1824,38 +980,7 @@ Since we're inheriting, we also need to call the base class constructor `base(..
 
 Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
-```csharp
-// ...
-        // Create a bucket
-        var bucket = new Bucket($"{name}-bucket", new() { }, new() { Parent = this });
-
-        // Configure the bucket website
-        var bucketWebsite = new BucketWebsiteConfiguration($"{name}-website", new() {
-            Bucket = bucket.Bucket,
-            IndexDocument = new BucketWebsiteConfigurationIndexDocumentArgs { Suffix = "index.html" },
-        }, new() { Parent = bucket });
-
-        // Create a bucket object for the index document
-        var bucketObject = new BucketObject($"{name}-index-object", new BucketObjectArgs {
-            Bucket = bucket.Bucket,
-            Key = "index.html",
-            Content = args.IndexContent,
-            ContentType = "text/html",
-        }, new() { Parent = bucket });
-
-        // Create a public access block for the bucket
-        var publicAccessBlock = new BucketPublicAccessBlock($"{name}-public-access-block", new() {
-            Bucket = bucket.Bucket,
-            BlockPublicAcls = false,
-        }, new() { Parent = bucket });
-
-        // Set the access policy for the bucket so all objects are readable
-        var bucketPolicy = new BucketPolicy($"{name}-bucket-policy", new() {
-            Bucket = bucket.Bucket,
-            Policy = bucket.Id.Apply(this.AllowGetObjectPolicy),
-        }, new() { Parent = bucket, DependsOn = publicAccessBlock });
-// ...
-```
+{{< example-program path="sample-components" languages="csharp:StaticPage.cs:22-44" >}}
 
 ##### The Bucket sub-resource
 
@@ -1891,18 +1016,7 @@ The last part of the constructor handles output values. First we set the `endpoi
 
 Finally, calling `this.RegisterOutputs` signals Pulumi that the component creation process has completed.
 
-```csharp
-// ...
-        this.endpoint = bucketWebsite.WebsiteEndpoint;
-
-        // By registering the outputs on which the component depends, we ensure
-        // that the Pulumi CLI will wait for all the outputs to be created before
-        // considering the component itself to have been created.
-        this.RegisterOutputs(new Dictionary<string, object?> {
-            ["endpoint"] = bucketWebsite.WebsiteEndpoint
-        });
-// ...
-```
+{{< example-program path="sample-components" languages="csharp:StaticPage.cs:46-51" >}}
 
 #### Helper functions
 
@@ -1910,25 +1024,7 @@ In addition to the constructor logic, we also have a helper function `AllowGetOb
 
 ***Example:** `StaticPage.cs` a helper function*
 
-```csharp
-// ...
-    private string AllowGetObjectPolicy(string bucketName) {
-        return JsonConvert.SerializeObject(new {
-            Version = "2012-10-17",
-            Statement = new[] { new {
-                Effect = "Allow",
-                Principal = "*",
-                Action = new[] {
-                    "s3:GetObject"
-                },
-                Resource = new[] {
-                    $"arn:aws:s3:::{bucketName}/*"
-                }
-            }}
-        });
-    }
-// ...
-```
+{{< example-program path="sample-components" languages="csharp:StaticPage.cs:53-67" >}}
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `Apply(...)`. That means that the `bucketName`, which is normally a `Pulumi.Output<string>` value, can be materialized as a regular .NET string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. The `JsonConvert.SerializeObject(...)` function takes the object as input and returns it as a JSON formatted string.
 
@@ -1938,24 +1034,13 @@ This function is used to create a S3 policy document, allowing public access to 
 
 #### Inheriting from the base class
 
-```java
-class StaticPage extends ComponentResource {
-    // ...
-}
-```
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:42-42" >}}
 
 Inheriting from `com.pulumi.resources.ComponentResource` gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine and within its host provider. It also allows the underlying library to find and infer the schema of the component.
 
 #### Outputs as class properties
 
-```java
-class StaticPage extends ComponentResource {
-    // The URL of the static website
-    @Export(name = "endpoint", refs = { String.class }, tree = "[0]")
-    public final Output<String> endpoint;
-    // ...
-}
-```
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:43-44" >}}
 
 We use a class property to store the output value. Note that it's using `com.pulumi.core.Output<String>` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
 
@@ -1963,12 +1048,7 @@ The `@Export` decorator marks this as an exported output, and allows us to set a
 
 #### The Component constructor
 
-```java
-// ...
-    public StaticPage(String name, StaticPageArgs args, ComponentResourceOptions opts) {
-        super("static-page-component:index:StaticPage", name, null, opts);
-// ...
-```
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:46-47" >}}
 
 The constructor has a few standard arguments:
 
@@ -1982,85 +1062,7 @@ Since we're inheriting, we also need to call the base class constructor `super(.
 
 Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
-```java
-// ...
-        // Create a bucket
-        var bucket = new Bucket(
-                String.format("%s-bucket", name),
-                null,
-                CustomResourceOptions.builder()
-                        .parent(this)
-                        .build());
-
-        // Configure the bucket website
-        var bucketWebsite = new BucketWebsiteConfiguration(
-                String.format("%s-website", name),
-                BucketWebsiteConfigurationArgs.builder()
-                        .bucket(bucket.id())
-                        .indexDocument(
-                                BucketWebsiteConfigurationIndexDocumentArgs.builder()
-                                        .suffix("index.html")
-                                        .build())
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .build());
-
-        // Create a bucket object for the index document
-        var bucketObject = new BucketObject(
-                String.format("%s-index-object", name),
-                BucketObjectArgs.builder()
-                        .bucket(bucket.bucket())
-                        .key("index.html")
-                        .content(args.indexContent())
-                        .contentType("text/html")
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .build());
-
-        // Create a public access block for the bucket
-        var publicAccessBlock = new BucketPublicAccessBlock(
-                String.format("%s-public-access-block", name),
-                BucketPublicAccessBlockArgs.builder()
-                        .bucket(bucket.id())
-                        .blockPublicAcls(false)
-                        .blockPublicPolicy(false)
-                        .ignorePublicAcls(false)
-                        .restrictPublicBuckets(false)
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .build());
-
-        // Set the access policy for the bucket so all objects are readable
-        var policyDocument = bucket.arn().applyValue(bucketArn ->
-            IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
-                .statements(GetPolicyDocumentStatementArgs.builder()
-                    .sid("PublicReadGetObject")
-                    .effect("Allow")
-                    .principals(GetPolicyDocumentStatementPrincipalArgs.builder()
-                        .type("*")
-                        .identifiers("*")
-                        .build())
-                    .actions("s3:GetObject")
-                    .resources(bucketArn + "/*")
-                    .build())
-                .build())
-        );
-
-        var bucketPolicy = new BucketPolicy(
-                String.format("%s-bucket-policy", name),
-                BucketPolicyArgs.builder()
-                        .bucket(bucket.id())
-                        .policy(policyDocument.applyValue(doc -> doc.json()))
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .dependsOn(publicAccessBlock)
-                        .build());
-// ...
-```
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:49-118" >}}
 
 ##### The Bucket sub-resource
 
@@ -2096,17 +1098,7 @@ The last part of the constructor handles output values. First we set the `endpoi
 
 Finally, calling `this.registerOutputs` signals Pulumi that the component creation process has completed.
 
-```java
-// ...
-        this.endpoint = bucketWebsite.websiteEndpoint();
-
-        // By registering the outputs on which the component depends, we ensure
-        // that the Pulumi CLI will wait for all the outputs to be created before
-        // considering the component itself to have been created.
-        this.registerOutputs(Map.of(
-                "endpoint", bucketWebsite.websiteEndpoint()));
-// ...
-```
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:120-124" >}}
 
 #### Policy Creation
 
@@ -2120,36 +1112,17 @@ The policy JSON is created within the `applyValue(...)` context, where the `buck
 
 #### Naming the component
 
-```yaml {hl_lines=[4]}
-runtime: yaml
-name: static-page-component
-components:
-  StaticPage:
-# ...
-```
+{{< example-program path="sample-components" languages="yaml:sample-components/PulumiPlugin.yaml:2-4" >}}
 
 YAML components rely on built-in behind-the-scenes behavior that allows the component state to be tracked and run within a host provider. The Pulumi SDK will scan the definitions and infer the schema of the component. All we need to provide is a unique name for the resource type. Later consumers of the component can reference it by the package name and component type like this:
 
-```yaml
-resources:
-  my-static-page:
-    type: static-page-component:StaticPage
-#...
-```
+{{< example-program path="sample-components" languages="yaml:sample-components/PulumiPlugin.yaml:2-4" >}}
 
 It follows the schema of `<package_name>:<component_resource_name>`.
 
 #### Output properties
 
-```yaml
-runtime: yaml
-name: static-page-component
-components:
-  StaticPage:
-    # ...
-    outputs:
-      endpoint: ${bucketWebsite.websiteEndpoint}
-```
+{{< example-program path="sample-components" languages="yaml:sample-components/PulumiPlugin.yaml:55-56" >}}
 
 The `outputs` section defines the outputs that will be shared to the consumer of the component. These will appear in consumer languages as `pulumi.Output<T>` equivalents, instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
 
@@ -2157,63 +1130,7 @@ The `outputs` section defines the outputs that will be shared to the consumer of
 
 Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources. Defining sub-resources in a YAML component works exactly the same as defining them in a YAML Pulumi program.
 
-```yaml
-# ...
-    resources:
-      bucket:
-        type: aws:s3:Bucket
-        properties: {}
-
-      bucketWebsite:
-        type: aws:s3:BucketWebsiteConfiguration
-        properties:
-          bucket: ${bucket.bucket}
-          indexDocument:
-            suffix: index.html
-        options:
-          parent: ${bucket}
-
-      bucketObject:
-        type: aws:s3/bucketObject:BucketObject
-        properties:
-          bucket: ${bucket.bucket}
-          key: index.html
-          content: ${indexContent}
-          contentType: text/html
-        options:
-          parent: ${bucket}
-
-      publicAccessBlock:
-        type: aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock
-        properties:
-          bucket: ${bucket.id}
-          blockPublicAcls: false
-          blockPublicPolicy: false
-          ignorePublicAcls: false
-          restrictPublicBuckets: false
-        options:
-          parent: ${bucket}
-
-      bucketPolicy:
-        type: aws:s3/bucketPolicy:BucketPolicy
-        properties:
-          bucket: ${bucket.id}
-          policy:
-            fn::toJSON:
-              Version: "2012-10-17"
-              Statement:
-                - Effect: Allow
-                  Principal: "*"
-                  Action:
-                    - s3:GetObject
-                  Resource:
-                    - arn:aws:s3:::${bucket.bucket}/*
-        options:
-          parent: ${bucket}
-          dependsOn:
-            - ${publicAccessBlock}
-# ...
-```
+{{< example-program path="sample-components" languages="yaml:sample-components/PulumiPlugin.yaml:8-53" >}}
 
 ##### The Bucket sub-resource
 
@@ -2247,11 +1164,7 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 The last part of the component definition handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfiguration` class. This uses standard string interopolation and automatically handles asynchronous value resolution, waiting to assign the `endpoint` output until `bucketWebsite.websiteEndpoint` has completed completion and the value is available.
 
-```yaml
-# ...
-    outputs:
-      endpoint: ${bucketWebsite.websiteEndpoint}
-```
+{{< example-program path="sample-components" languages="yaml:sample-components/PulumiPlugin.yaml:55-56" >}}
 
 #### Helper functions
 
@@ -2259,20 +1172,7 @@ In addition to the component definitions, we are also using a helper function `f
 
 ***Example:** YAML helper function*
 
-```yaml
-# ...
-          policy:
-            fn::toJSON:
-              Version: "2012-10-17"
-              Statement:
-                - Effect: Allow
-                  Principal: "*"
-                  Action:
-                    - s3:GetObject
-                  Resource:
-                    - arn:aws:s3:::${bucket.bucket}/*
-# ...
-```
+{{< example-program path="sample-components" languages="yaml:sample-components/PulumiPlugin.yaml:41-53" >}}
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked only when the interpolated value `${bucket.bucket}` is available as a standard string. We construct a YAML object which is then serialized to a JSON formatted string and assigned to the `policy` property.
 
@@ -2299,19 +1199,14 @@ $ mkdir use-static-page-component
 
 ***Example:** A `Pulumi.yaml` file for a Pulumi project written in TypeScript*
 
-```yaml
-name: use-static-page-component
-description: A minimal TypeScript Pulumi program that uses the custom Static Page component
-runtime:
-  name: nodejs
-```
+{{< example-program path="sample-components" languages="typescript:Pulumi.yaml:" >}}
 
 #### Generate the SDK
 
 In order to use our Pulumi component from source, we'll need to generate a TypeScript-specific SDK to use in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
 
 ```bash
-pulumi package add ../static-page-component
+pulumi package add ../sample-components
 ```
 
 This creates a new subdirectory called `sdks/` that contains the generated SDK.
@@ -2322,18 +1217,7 @@ Now lets create our `package.json` and `tsconfig.json`. We'll need the standard 
 
 ***Example:** `package.json`*
 
-```json
-{
-    "name": "use-static-page-component",
-    "devDependencies": {
-        "@types/node": "^24.0.0"
-    },
-    "dependencies": {
-        "@pulumi/pulumi": "^3.191.0",
-        "@pulumi/static-page-component": "file:sdks/static-page-component"
-    }
-}
-```
+{{< example-program path="sample-components" languages="typescript:package.json:" >}}
 
 Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever language you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
@@ -2341,27 +1225,7 @@ The TypeScript config is the same as any standard Pulumi program.
 
 ***Example:** `tsconfig.json` for a Pulumi program*
 
-```json
-{
-    "compilerOptions": {
-        "outDir": "bin",
-        "target": "es2016",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "experimentalDecorators": true,
-        "pretty": true,
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitAny": true,
-        "noImplicitReturns": true,
-        "forceConsistentCasingInFileNames": true,
-        "strictNullChecks": true
-    },
-    "files": [
-        "index.ts"
-    ]
-}
-```
+{{< example-program path="sample-components" languages="typescript:tsconfig.json:" >}}
 
 #### Install dependencies
 
@@ -2375,19 +1239,7 @@ pulumi install
 
 ***Example:** `index.ts` that uses the Static Page component*
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import { StaticPage } from "@pulumi/static-page-component";
-
-const pageHTML = "<h1>I love Pulumi!</h1>";
-
-const page = new StaticPage('my-static-page', {
-    indexContent: pageHTML
-});
-
-// Export the URL to the index page
-export const websiteURL = pulumi.interpolate`http://${page.endpoint}`;
-```
+{{< example-program path="sample-components" languages="typescript" >}}
 
 {{% /choosable %}}
 
@@ -2395,22 +1247,14 @@ export const websiteURL = pulumi.interpolate`http://${page.endpoint}`;
 
 ***Example:** A `Pulumi.yaml` file for a Pulumi project written in Python*
 
-```yaml
-name: use-static-page-component
-description: A minimal Python Pulumi program that uses the custom Static Page component
-runtime:
-  name: python
-  options:
-    toolchain: pip
-    virtualenv: venv
-```
+{{< example-program path="sample-components" languages="python:Pulumi.yaml:" >}}
 
 #### Generate the SDK
 
 In order to use our Pulumi component from source, we'll need to generate a Python-specific SDK to use in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
 
 ```bash
-pulumi package add ../static-page-component
+pulumi package add ../sample-components
 ```
 
 This creates a new subdirectory called `sdks/` that contains the generated SDK.
@@ -2419,25 +1263,13 @@ This creates a new subdirectory called `sdks/` that contains the generated SDK.
 
 You need to manually add the packages section to your `Pulumi.yaml`:
 
-```yaml
-name: use-static-page-component
-description: A minimal Python Pulumi program that uses the custom Static Page component
-runtime:
-  name: python
-  options:
-    toolchain: pip
-    virtualenv: venv
-packages:
-  static-page-component: ../static-page-component@0.0.0
-```
+{{< example-program path="sample-components" languages="python:Pulumi.yaml:" >}}
 
 #### Add the package dependencies
 
 Now lets create our `requirements.txt`. We'll need the standard `pulumi` SDK:
 
-```txt
-pulumi>=3.191.0,<4.0
-```
+{{< example-program path="sample-components" languages="python:requirements.txt:" >}}
 
 Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever language you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
@@ -2455,17 +1287,7 @@ $ pulumi install
 
 ***Example:** `__main__.py` that uses the Static Page component*
 
-```python
-import pulumi
-from pulumi_static_page_component import StaticPage
-
-page_html = "<h1>I love Pulumi!</h1>"
-page = StaticPage('my-static-page', index_content=page_html)
-
-# Export the URL to the index page
-website_url = page.endpoint.apply(lambda v: f"http://{v}")
-pulumi.export('websiteURL', website_url)
-```
+{{< example-program path="sample-components" languages="python" >}}
 
 {{% /choosable %}}
 
@@ -2473,12 +1295,7 @@ pulumi.export('websiteURL', website_url)
 
 ***Example:** A `Pulumi.yaml` file for a Pulumi project written in Go*
 
-```yaml
-name: use-static-page-component
-description: A minimal Go Pulumi program that uses the custom Static Page component
-runtime:
-  name: go
-```
+{{< example-program path="sample-components" languages="go:Pulumi.yaml:" >}}
 
 #### Add the Go project file
 
@@ -2486,18 +1303,7 @@ Now lets create our `go.mod`. We'll need the standard `pulumi` SDK and our custo
 
 ***Example:** `go.mod` for our Pulumi project*
 
-```go
-module use-static-page-component
-
-go 1.25
-
-require (
-    github.com/pulumi/pulumi/sdk/v3 v3.191.0
-    github.com/static-page-component v0.0.0
-)
-
-replace github.com/static-page-component => ../static-page-component
-```
+{{< example-program path="sample-components" languages="go:go.mod:" >}}
 
 Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project. The `replace` directive tells Go to use our local component instead of trying to fetch it from a remote repository.
 
@@ -2513,32 +1319,7 @@ go mod tidy
 
 ***Example:** `main.go` that uses the Static Page component*
 
-```go
-package main
-
-import (
-	"github.com/static-page-component/staticpagecomponent"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		page, err := staticpagecomponent.NewStaticPage(ctx, "my-static-page", &staticpagecomponent.StaticPageArgs{
-			IndexContent: pulumi.String("<h1>I love Pulumi!</h1>"),
-		})
-		if err != nil {
-			return err
-		}
-
-		url := page.Endpoint.ApplyT(func(endpoint string) string {
-			return "http://" + endpoint
-		}).(pulumi.StringOutput)
-
-		ctx.Export("websiteURL", url)
-		return nil
-	})
-}
-```
+{{< example-program path="sample-components" languages="go" >}}
 
 {{% /choosable %}}
 
@@ -2546,19 +1327,14 @@ func main() {
 
 ***Example:** A `Pulumi.yaml` file for a Pulumi project written in C#*
 
-```yaml
-name: use-static-page-component
-description: A minimal C# Pulumi program that uses the custom Static Page component
-runtime:
-  name: dotnet
-```
+{{< example-program path="sample-components" languages="csharp:Pulumi.yaml:" >}}
 
 #### Generate the SDK
 
 In order to use our Pulumi component from source, we'll need to generate a .NET-specific SDK to use in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
 
 ```bash
-pulumi package add ../static-page-component
+pulumi package add ../sample-components
 ```
 
 This creates a new subdirectory called `sdks/` that contains the generated SDK.
@@ -2567,14 +1343,7 @@ This creates a new subdirectory called `sdks/` that contains the generated SDK.
 
 You need to manually add the packages section to your `Pulumi.yaml`:
 
-```yaml
-name: use-static-page-component
-description: A minimal C# Pulumi program that uses the custom Static Page component
-runtime:
-  name: dotnet
-packages:
-  static-page-component: ../static-page-component@0.0.0
-```
+{{< example-program path="sample-components" languages="csharp:Pulumi.yaml:" >}}
 
 #### Add the .NET project file
 
@@ -2582,26 +1351,7 @@ Now lets create our `.csproj`. We'll need the standard `pulumi` SDK and our cust
 
 ***Example:** `use-static-page-component.csproj`*
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <AssemblyName>use-static-page-component</AssemblyName>
-    <DefaultItemExcludes>$(DefaultItemExcludes);sdks/**/*.cs</DefaultItemExcludes>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Pulumi" Version="3.87.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="sdks\static-page-component\Pulumi.StaticPageComponent.csproj" />
-  </ItemGroup>
-</Project>
-```
+{{< example-program path="sample-components" languages="csharp:sample-components-csharp.csproj:" >}}
 
 Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever language you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
@@ -2617,26 +1367,7 @@ pulumi install
 
 ***Example:** `Program.cs` that uses the Static Page component*
 
-```csharp
-using Pulumi;
-using Pulumi.StaticPageComponent;
-using System.Collections.Generic;
-
-return await Deployment.RunAsync(() =>
-{
-    var pageHTML = "<h1>I love Pulumi!</h1>";
-
-    var page = new StaticPage("my-static-page", new() {
-        IndexContent = pageHTML
-    });
-
-   // Export the URL of the page
-   return new Dictionary<string, object?>
-   {
-      ["websiteURL"] = Output.Format($"http://{page.Endpoint}")
-   };
-});
-```
+{{< example-program path="sample-components" languages="csharp" >}}
 
 {{% /choosable %}}
 
@@ -2644,19 +1375,14 @@ return await Deployment.RunAsync(() =>
 
 ***Example:** A `Pulumi.yaml` file for a Pulumi project written in Java*
 
-```yaml
-name: use-static-page-component
-description: A minimal Java Pulumi program that uses the custom Static Page component
-runtime:
-  name: java
-```
+{{< example-program path="sample-components" languages="java:Pulumi.yaml:" >}}
 
 #### Generate the SDK
 
 In order to use our Pulumi component from source, we'll need to generate a Java-specific SDK to use in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
 
 ```bash
-pulumi package add ../static-page-component
+pulumi package add ../sample-components
 ```
 
 This creates a new subdirectory called `sdks/` that contains the generated SDK.
@@ -2669,132 +1395,7 @@ We'll need to add the sources from the generated SDK output into the build sourc
 
 ***Example:** `pom.xml`*
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.pulumi</groupId>
-    <artifactId>use-static-page-component</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <properties>
-        <encoding>UTF-8</encoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <maven.compiler.release>11</maven.compiler.release>
-        <mainClass>myproject.App</mainClass>
-        <mainArgs />
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.pulumi</groupId>
-            <artifactId>pulumi</artifactId>
-            <version>1.16.1</version>
-        </dependency>
-        <!-- Add the SDK's dependencies, based on the output from the `pulumi package add` command -->
-        <dependency>
-            <groupId>com.google.code.findbugs</groupId>
-            <artifactId>jsr305</artifactId>
-            <version>3.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.13.1</version>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <!-- Change the root directory that Maven uses to look for sources -->
-        <sourceDirectory>.</sourceDirectory>
-        <!-- Configure resource directories to include SDK resources -->
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
-            <resource>
-                <directory>sdks/static-page-component/src/main/resources</directory>
-            </resource>
-        </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.2</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>${mainClass}</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>${mainClass}</mainClass>
-                        </manifest>
-                    </archive>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>make-my-jar-with-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <mainClass>${mainClass}</mainClass>
-                    <commandlineArgs>${mainArgs}</commandlineArgs>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-wrapper-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <mavenVersion>3.8.5</mavenVersion>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>11</source>
-                    <target>11</target>
-
-                    <!-- Add path glob specs for our two source locations -->
-                    <includes>
-                        <include>src/main/**/*.java</include>
-                        <include>sdks/static-page-component/src/main/**/*.java</include>
-                    </includes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-</project>
-```
+{{< example-program path="sample-components" languages="java:pom.xml:" >}}
 
 Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever language you implemented it in. We just need to carry a reference to the component SDK, and add its dependencies, which will provide us access to the component via RPC, which is running inside of its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
@@ -2812,29 +1413,7 @@ Make a new subdirectory called `src/main/java/myproject` and in it, create a fil
 
 ***Example:** `App.java` that uses the Static Page component*
 
-```java
-package myproject;
-
-import com.pulumi.Pulumi;
-import com.pulumi.staticpagecomponent.StaticPage;
-import com.pulumi.staticpagecomponent.StaticPageArgs;
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(ctx -> {
-            final var pageHTML = "<h1>I love Pulumi!</h1>";
-
-            var page = new StaticPage("my-bucket", StaticPageArgs.builder()
-                .indexContent(pageHTML).build()
-            );
-
-            ctx.export("websiteURL", page.endpoint().applyValue(endpoint ->
-                endpoint.map(url -> "http://" + url).orElse("http://no-endpoint")
-            ));
-        });
-    }
-}
-```
+{{< example-program path="sample-components" languages="java" >}}
 
 {{% /choosable %}}
 
@@ -2842,22 +1421,13 @@ public class App {
 
 ***Example:** A `Pulumi.yaml` file for a Pulumi project written in YAML*
 
-```yaml
-name: use-static-page-component
-description: A minimal YAML Pulumi program that uses the custom Static Page component
-runtime:
-  name: yaml
-```
+{{< example-program path="sample-components" languages="yaml:1-4" >}}
 
 #### Add the component reference in `Pulumi.yaml`
 
 Now, in your `Pulumi.yaml` file add the following section to load the component from source:
 
-```yaml
-packages:
-  static-page-component: ../static-page-component
-  aws: "7.6.0"
-```
+{{< example-program path="sample-components" languages="yaml:5-6" >}}
 
 The `aws: "7.6.0"` entry ensures we use the latest AWS provider v7.x with all the most recent features and improvements.
 
@@ -2867,15 +1437,7 @@ Now we can define our Static Page component resource in the `Pulumi.yaml` file. 
 
 ***Example:** `Pulumi.yaml` that uses the Static Page component*
 
-```yaml
-resources:
-  my-static-page:
-    type: static-page-component:StaticPage
-    properties:
-      indexContent: "<h1>I love Pulumi!</h1>"
-outputs:
-  websiteURL: http://${my-static-page.endpoint}
-```
+{{< example-program path="sample-components" languages="yaml:7-13" >}}
 
 {{% /choosable %}}
 
@@ -2888,7 +1450,7 @@ $ pulumi up
 ...
      Type                                          Name                                Status
  +   pulumi:pulumi:Stack                           use-static-page-component-dev       created (8s)
- +   └─ static-page-component:index:StaticPage     my-static-page                      created (5s)
+ +   └─ sample-components:index:StaticPage     my-static-page                      created (5s)
  +      └─ aws:s3:Bucket                         my-static-page-bucket               created (2s)
  +         ├─ aws:s3:BucketPublicAccessBlock       my-static-page-public-access-block  created (0.84s)
  +         ├─ aws:s3:BucketWebsiteConfiguration  my-static-page-website              created (0.91s)
