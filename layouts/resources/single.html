@@ -61,19 +61,27 @@
                         {{ $areaLabel := index $labels.solution_areas . | default (replace . "-" " " | title) }}
                         {{ $areaPage := $.Site.GetPage (printf "/resources/%s" .) }}
                         {{ if $areaPage }}
-                            <a href="{{ $areaPage.RelPermalink }}" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-50 text-purple-700 border border-purple-200 hover:bg-purple-100 transition-colors">
+                            <a href="{{ $areaPage.RelPermalink }}" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-700 border border-purple-300 hover:bg-purple-200 transition-colors">
                                 {{ $areaLabel }}
                             </a>
                         {{ else }}
-                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-50 text-purple-700 border border-purple-200">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-700 border border-purple-300">
                                 {{ $areaLabel }}
                             </span>
                         {{ end }}
                     {{ end }}
                     {{ range .Params.capabilities }}
-                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-50 text-purple-700 border border-purple-200">
-                            {{ index $labels.capabilities . | default (replace . "-" " " | title) }}
-                        </span>
+                        {{ $topicLabel := index $labels.topics . | default (index $labels.capabilities .) | default (replace . "-" " " | title) }}
+                        {{ $topicPage := $.Site.GetPage (printf "/resources/topics/%s" .) }}
+                        {{ if $topicPage }}
+                            <a href="{{ $topicPage.RelPermalink }}" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200 transition-colors">
+                                {{ $topicLabel }}
+                            </a>
+                        {{ else }}
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-600 border border-gray-200">
+                                {{ $topicLabel }}
+                            </span>
+                        {{ end }}
                     {{ end }}
                 </div>
             </div>

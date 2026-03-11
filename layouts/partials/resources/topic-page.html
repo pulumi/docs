@@ -1,0 +1,122 @@
+{{ $labels := $.Site.Data.resources.labels }}
+
+{{/* Topic slug from the page (e.g. secrets-management) */}}
+{{ $topicSlug := .File.ContentBaseName }}
+
+{{/* Query articles by frontmatter capabilities */}}
+{{ $allResources := where (where $.Site.Pages "Type" "resources") "Kind" "page" }}
+{{ $articles := where $allResources ".Params.capabilities" "intersect" (slice $topicSlug) }}
+
+<div class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+
+        {{/* Breadcrumb */}}
+        <nav class="flex items-center flex-wrap text-sm mb-8">
+            <a href="/" class="text-gray-500 hover:text-purple-600 transition-colors">Home</a>
+            <svg class="w-4 h-4 mx-2 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <a href="{{ relref . "/resources" }}" class="text-gray-500 hover:text-purple-600 transition-colors">Resource Library</a>
+            <svg class="w-4 h-4 mx-2 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            {{ with .Parent }}
+                <a href="{{ .RelPermalink }}" class="text-gray-500 hover:text-purple-600 transition-colors">Topics</a>
+                <svg class="w-4 h-4 mx-2 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            {{ end }}
+            <span class="text-gray-700 font-medium">{{ .Title }}</span>
+        </nav>
+
+        {{/* Header */}}
+        <div class="mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
+            {{ with .Params.tagline }}
+                <p class="text-xl text-gray-600 leading-relaxed">{{ . }}</p>
+            {{ end }}
+        </div>
+
+        {{/* Cluster content */}}
+        {{ with .Content }}
+            <div class="bg-white rounded-lg shadow-sm p-6 md:p-8 mb-10 prose prose-lg max-w-none">
+                {{ . }}
+            </div>
+        {{ end }}
+
+        {{/* Article grid */}}
+        {{ if $articles }}
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Guides in this topic</h2>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {{ range sort $articles ".Params.featured_weight" "desc" }}
+                        {{ partial "resources/resource-card.html" (dict "Page" . "Labels" $labels) }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+
+        {{/* Part of (solution areas these articles belong to) */}}
+        {{ $areaSlugs := slice }}
+        {{ range $articles }}
+            {{ range .Params.solution_areas }}
+                {{ $areaSlugs = $areaSlugs | append . }}
+            {{ end }}
+        {{ end }}
+        {{ $areaSlugs = $areaSlugs | sort | uniq }}
+        {{ if $areaSlugs }}
+            <div class="bg-white rounded-lg shadow-sm p-6 md:p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Part of</h2>
+                <div class="flex flex-wrap gap-2">
+                    {{ range $areaSlugs }}
+                        {{ $areaLabel := index $labels.solution_areas . | default (replace . "-" " " | title) }}
+                        {{ $areaPage := $.Site.GetPage (printf "/resources/%s" .) }}
+                        {{ if $areaPage }}
+                            <a href="{{ $areaPage.RelPermalink }}" class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-purple-100 text-purple-700 border border-purple-300 hover:bg-purple-200 transition-colors">
+                                {{ $areaLabel }}
+                            </a>
+                        {{ else }}
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-600 border border-gray-200">
+                                {{ $areaLabel }}
+                            </span>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+
+        {{/* FAQ */}}
+        {{ with .Params.faq }}
+            <div class="bg-white rounded-lg shadow-sm p-6 md:p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
+                {{ range . }}
+                    {{ if and .question .answer }}
+                        <div class="mb-6 last:mb-0">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ .question }}</h3>
+                            <p class="text-gray-600 leading-relaxed">{{ .answer | markdownify }}</p>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            </div>
+        {{ end }}
+
+        {{/* CTA */}}
+        {{ with .Params.cta }}
+            <div class="p-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl shadow-xl text-white">
+                <h3 class="text-2xl font-bold mb-2 text-white">Ready to get started?</h3>
+                <p class="text-purple-100 mb-4">See how Pulumi can help your team.</p>
+                <a href="{{ .url }}" class="inline-flex items-center px-6 py-3 bg-white text-purple-700 font-semibold rounded-lg hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl">
+                    {{ .text }}
+                </a>
+            </div>
+        {{ else }}
+            <div class="p-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl shadow-xl text-white">
+                <h3 class="text-2xl font-bold mb-2 text-white">Ready to get started?</h3>
+                <p class="text-purple-100 mb-4">Sign up for Pulumi Cloud and start building.</p>
+                <a href="https://app.pulumi.com/signup" class="inline-flex items-center px-6 py-3 bg-white text-purple-700 font-semibold rounded-lg hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl">
+                    Create free account
+                </a>
+            </div>
+        {{ end }}
+    </div>
+</div>

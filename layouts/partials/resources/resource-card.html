@@ -18,7 +18,7 @@
     {{ $labels = $page.Site.Data.resources.labels }}
 {{ end }}
 
-<a href="{{ $page.RelPermalink }}" class="group block bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg hover:border-purple-300 transition-all">
+<div class="group block bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg hover:border-purple-300 transition-all">
     {{ with $page.Params.content_type }}
         {{ $badgeColor := "bg-violet-100 text-violet-700" }}
         {{ if eq . "comparison-guide" }}
@@ -30,26 +30,42 @@
             {{ index $labels.content_types . | default (replace . "-" " " | title) }}
         </span>
     {{ end }}
-    <h3 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors mb-3">
-        {{ $page.Title }}
-    </h3>
-    <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-        {{ $page.Params.meta_desc }}
-    </p>
+    <a href="{{ $page.RelPermalink }}" class="block">
+        <h3 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors mb-3">
+            {{ $page.Title }}
+        </h3>
+        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+            {{ $page.Params.meta_desc }}
+        </p>
+    </a>
     <div class="flex flex-wrap gap-2">
         {{ range $page.Params.solution_areas }}
             {{ if ne . $hideParentArea }}
                 {{ $areaLabel := index $labels.solution_areas . | default (replace . "-" " " | title) }}
-                <span class="text-xs px-2 py-1 rounded-full bg-purple-50 text-purple-700">
-                    {{ $areaLabel }}
-                </span>
+                {{ $areaPage := $page.Site.GetPage (printf "/resources/%s" .) }}
+                {{ if $areaPage }}
+                    <a href="{{ $areaPage.RelPermalink }}" class="text-xs px-2 py-1 rounded-full bg-purple-100 text-purple-700 border border-purple-300 hover:bg-purple-200 transition-colors">
+                        {{ $areaLabel }}
+                    </a>
+                {{ else }}
+                    <span class="text-xs px-2 py-1 rounded-full bg-purple-100 text-purple-700 border border-purple-300">
+                        {{ $areaLabel }}
+                    </span>
+                {{ end }}
             {{ end }}
         {{ end }}
         {{ range $page.Params.capabilities }}
-            {{ $capLabel := index $labels.capabilities . | default (replace . "-" " " | title) }}
-            <span class="text-xs px-2 py-1 rounded-full bg-purple-50 text-purple-700">
-                {{ $capLabel }}
-            </span>
+            {{ $capLabel := index $labels.topics . | default (index $labels.capabilities .) | default (replace . "-" " " | title) }}
+            {{ $topicPage := $page.Site.GetPage (printf "/resources/topics/%s" .) }}
+            {{ if $topicPage }}
+                <a href="{{ $topicPage.RelPermalink }}" class="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200 transition-colors">
+                    {{ $capLabel }}
+                </a>
+            {{ else }}
+                <span class="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-600 border border-gray-200">
+                    {{ $capLabel }}
+                </span>
+            {{ end }}
         {{ end }}
     </div>
-</a>
+</div>

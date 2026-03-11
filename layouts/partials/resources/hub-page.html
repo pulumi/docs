@@ -29,6 +29,26 @@
             </div>
         {{ end }}
 
+        {{/* Browse by Topic (collect topic subsections that exist) */}}
+        {{ $topicPages := slice }}
+        {{ range .Sections }}
+            {{ if and .File (eq .File.ContentBaseName "topics") }}
+                {{ range .Sections }}
+                    {{ $topicPages = $topicPages | append . }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        {{ if $topicPages }}
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by topic</h2>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-{{ if ge (len $topicPages) 3 }}3{{ else }}2{{ end }}">
+                    {{ range $topicPages }}
+                        {{ partial "resources/topic-card.html" (dict "Page" . "Labels" $labels) }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+
         {{/* Featured Articles */}}
         {{ $featured := where $allResources ".Params.featured" true }}
         {{ if $featured }}

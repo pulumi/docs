@@ -7,6 +7,8 @@
 {{ define "main" }}
     {{ if and .Parent .Parent.IsHome }}
         {{ partial "resources/hub-page.html" . }}
+    {{ else if and .Parent .Parent.File (eq .Parent.File.ContentBaseName "topics") }}
+        {{ partial "resources/topic-page.html" . }}
     {{ else }}
         {{ partial "resources/category-page.html" . }}
     {{ end }}

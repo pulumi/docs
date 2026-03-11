@@ -76,9 +76,17 @@
                         <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Related topics</h3>
                         <div class="flex flex-wrap gap-2">
                             {{ range . }}
-                                <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-purple-50 text-purple-700 border border-purple-200">
-                                    {{ index $labels.capabilities . | default (replace . "-" " " | title) }}
-                                </span>
+                                {{ $topicLabel := index $labels.topics . | default (index $labels.capabilities .) | default (replace . "-" " " | title) }}
+                                {{ $topicPage := $.Site.GetPage (printf "/resources/topics/%s" .) }}
+                                {{ if $topicPage }}
+                                    <a href="{{ $topicPage.RelPermalink }}" class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200 transition-colors">
+                                        {{ $topicLabel }}
+                                    </a>
+                                {{ else }}
+                                    <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-600 border border-gray-200">
+                                        {{ $topicLabel }}
+                                    </span>
+                                {{ end }}
                             {{ end }}
                         </div>
                     </div>
