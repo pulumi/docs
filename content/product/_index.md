@@ -82,7 +82,7 @@ key_features:
                     Connect to any secrets store. One interface for all your secrets. No more juggling multiple vaults.
               - title: Dynamic Credentials
                 description: |
-                    Generate just-in-time, short-lived credentials via OIDC. Automatically revoke access when leases expire.
+                    Generate just-in-time, short-lived credentials via OIDC. Automatically revoke when leases expire.
               - title: Works Everywhere
                 description: |
                     CLI, API, SDKs, Kubernetes operators. Use with any CI/CD platform, any application, any workflow.

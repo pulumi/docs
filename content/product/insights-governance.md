@@ -123,7 +123,7 @@ governance:
 customer_quotes:
   spear:
     text: |
-      "We gave our auditors access to our policy packs because it's far easier to understand and prove controls in code than in docs and diagrams. With Pulumi's Policy as Code approach, that manual review process has gone away. We've reduced our Authority to Operate (ATO) timeline from a year and a half to expecting approval in three months."
+      “We gave our auditors access to our policy packs because it's far easier to understand and prove controls in code than in docs and diagrams. With Pulumi's Policy as Code approach, that manual review process has gone away. We've reduced our Authority to Operate (ATO) timeline from a year and a half to expecting approval in three months.”
     author: Michael Hunter, CEO, Spear AI
     logo: spearAI
 
@@ -148,7 +148,7 @@ learn:
           description: |
             Get instant visibility into all your cloud resources. Add governance policies and optimize with AI-powered insights.
           buttons:
-            - link: /signup
+            - link: /docs/insights/get-started/
               type: primary
               action: Get Started with Pulumi Insights
             - link: /contact/?form=request-a-demo
@@ -158,10 +158,10 @@ learn:
           description: |
             Start with audit scans to understand your compliance posture. Add AI-powered remediation to eliminate issue backlogs. Deploy preventive policies to maintain compliance automatically.
           buttons:
-            - link: /docs/pulumi-cloud/
+            - link: /docs/insights/policy/get-started/ 
               type: primary
               action: Get Started with Pulumi Policies
-            - link: /signup
+            - link: https://app.pulumi.com/signup
               type: secondary
               action: Try Pulumi Cloud for Free
 ---
