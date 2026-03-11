@@ -38,11 +38,7 @@ Custom roles are only available to organizations using Pulumi Enterprise Edition
 To assign custom roles to **individual users**, the **Assign custom roles to users** setting must be enabled for your organization (**Settings** > **Access Management**). When your organization has custom roles, you can also set an **organization default role** — a custom role that serves as the baseline for all members who have the Member organization role and have not been given an explicit custom role. The default role is set from **Settings** > **Roles** (not from the Access Management page).
 {{% /notes %}}
 
-You can create and manage custom roles to define more granular access controls for your organization. Custom roles can include:
-
-1. **Global permission sets** — Organization-wide permissions (e.g. membership, billing, audit logs).
-1. **Entity-specific permission sets** — Permission sets applied to specific stacks, environments, or insights accounts (you select the entities when defining the role).
-1. **Tag-based (ABAC) rules** — When resource tags match the rule's conditions, the role grants a chosen permission set on that resource. Entity types for tag rules are stacks, environments, and insights accounts. See [Tag-based (ABAC) rules](#tag-based-abac-rules) below.
+You can create and manage custom roles to define more granular access controls for your organization. Custom roles combine entity access rules (direct, global, or tag-based) with an organization access level.
 
 ### Creating custom roles
 
@@ -54,23 +50,47 @@ Visit the **Roles** page under **Settings** to see your organization roles
 
 To create a new role, click **Create custom role**. Provide a unique name and, optionally, a description to contextualize the role's purpose.
 
-When creating or editing a custom role, you can configure two types of access:
+A custom role can include any combination of the following entity access rule types, plus an organization access level.
 
-**Entity access rules** grant a permission set on specific entities or all entities of a given type. For each rule, choose the entity type (stack, environment, or insights account) and whether the rule applies to specific entities, all entities, or entities matching tag conditions (ABAC). Select a permission set to grant when the rule matches.
+#### Rule types
 
-To add a rule for specific stacks, select **Stacks** as the entity type, choose **Select specific stacks**, then click **Choose stacks**.
+##### Direct entity access
+
+Direct rules grant a permission set to individually selected entities. Choose the entity type (stack, environment, or insights account), select **Select specific [type]**, then click **Choose [type]** to open a searchable list.
 
 ![Configuring an entity access rule for stacks](/docs/administration/access-identity/rbac/2-create-role.png).
 
-A dialog lists the stacks in your organization. You can search by name to filter the list.
+A dialog lists the entities in your organization. You can search by name to filter the list.
 
 ![Browsing available stacks in the rule criteria dialog](/docs/administration/access-identity/rbac/3-create-role.png).
 
-Check the stacks to include in the rule, then click **Confirm selection**.
+Check the entities to include in the rule, then click **Confirm selection**.
 
 ![Selecting stacks to include in the rule](/docs/administration/access-identity/rbac/4-create-role.png).
 
 After confirming, click **Save rule**. The **Entity Access** section displays a table of all configured rules, and you can add more with **Add rule**.
+
+##### Global entity access
+
+Global rules apply a permission set to all entities of a given type within the organization. Choose the entity type and select **Apply to all [type]** to grant the chosen permission set across all current and future entities of that type.
+
+##### Tag-based rules (ABAC) {#tag-based-abac-rules}
+
+Tag-based rules (also called ABAC — attribute-based access control) grant a permission set when a resource's tags match defined conditions. Each rule has:
+
+- **Entity type** — Stack, environment, or insights account.
+- **Tag conditions** — One or more conditions on resource tags (e.g. tag `env` equals `production`, or tag `team` exists).
+- **Permission set** — The permission set to grant when the conditions match a resource.
+
+**Why use them:** Grant access to many resources at once by tag (e.g. all stacks with `team=platform`) without listing each resource individually. Useful for large organizations.
+
+**How it works:** When evaluating access, Pulumi Cloud checks the user's roles (and the roles of the teams they belong to). For each tag rule in those roles, it evaluates the resource's tags against the rule's conditions. If they match, the rule's permission set is applied to that resource.
+
+To configure a tag-based rule, choose the entity type and select **Set conditions**, then enter one or more tag key/value conditions and choose a permission set.
+
+![Configuring a tag-based (ABAC) rule with entity type Stacks, tag condition sensitivity=critical, and Stack Admin permission](/docs/administration/access-identity/rbac/1-abac-rule.png).
+
+In the Pulumi Cloud UI and API, these rules may be labeled "tag rules" or "tag-based access control rules"; ABAC (attribute-based access control) is the general industry term.
 
 **Organization access** sets the permission level for organization-level operations (e.g. creating stacks, managing billing, audit logs). This applies to the organization as a whole and is separate from the entity-based rules above.
 
@@ -83,24 +103,6 @@ You can now assign this role to principals in your organization.
 ### Managing custom roles
 
 To update or delete a custom role, simply click on the ellipsis icon next to the role on the Roles page.
-
-## Tag-based (ABAC) rules
-
-Tag-based rules (also called tag-based access control or ABAC — attribute-based access control) are part of a **custom role**. Each rule has:
-
-- **Entity type** — Stack, environment, or insights account.
-- **Tag conditions** — One or more conditions on resource tags (e.g. tag `env` equals `production`, or tag `team` exists).
-- **Permission set** — When the conditions match a resource, the role grants that permission set on that resource.
-
-**Why use them:** Grant access to many resources at once by tag (e.g. all stacks with `team=platform`) without listing each resource. Useful for large organizations.
-
-**How it works:** When evaluating access, Pulumi Cloud checks the user's roles (and the roles of the teams they belong to). For each tag rule in those roles, it evaluates the resource's tags against the rule's conditions. If they match, the rule's permission set is applied to that resource.
-
-To configure a tag-based rule, select **Set conditions** as the scope when adding an entity access rule, then enter one or more tag key/value conditions and choose a permission set.
-
-![Configuring a tag-based (ABAC) rule with entity type Stacks, tag condition sensitivity=critical, and Stack Admin permission](/docs/administration/access-identity/rbac/1-abac-rule.png).
-
-In the Pulumi Cloud UI and API, these rules may be labeled "tag rules" or "tag-based access control rules"; ABAC (attribute-based access control) is the general industry term.
 
 ## Role assignment
 
