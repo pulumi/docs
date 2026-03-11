@@ -24,7 +24,7 @@ Here are a few links to help you get started if you are new to Pulumi:
 - [Getting Started](https://www.pulumi.com/docs/iac/get-started/azure/) - A guided walkthrough for creating your first project
 - [Setup & Install](https://www.pulumi.com/registry/packages/azure/installation-configuration/) - Instructions on installing the Azure Classic provider
 - [How-to guides](https://www.pulumi.com/registry/packages/azure/how-to-guides/) - Learn how to use the Azure Classic provider to provision specific resources
-- [Pulumi AI](https://www.pulumi.com/ai) - Ask Pulumi AI to create a new project
+- [Pulumi Neo](https://www.pulumi.com/neo) - Ask Pulumi Neo to create a new project
 
 ## Looking Back
 

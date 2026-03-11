@@ -206,7 +206,7 @@ Part of the DevEx strategy is to retain talent. Companies that invest in DevEx d
 
 ### DevEx is not about implementing AI and cool tools
 
-Technology impacts developer experience, [a robust generative AI tool can help create code faster](https://www.pulumi.com/ai), and internal developer platforms can help reduce cognitive load on developers. But again, tooling is only one aspect of it. Tools can't fix culture or replace processes. Many DevEx considerations should be considered to ensure that when the development teams adopt a tool, it addresses their pain points and enables developers.
+Technology impacts developer experience, [a robust generative AI tool can help create code faster](https://www.pulumi.com/neo), and internal developer platforms can help reduce cognitive load on developers. But again, tooling is only one aspect of it. Tools can't fix culture or replace processes. Many DevEx considerations should be considered to ensure that when the development teams adopt a tool, it addresses their pain points and enables developers.
 
 ### DevEx is not a one-person decision
 

@@ -26,7 +26,7 @@ Pulumi’s community has grown to hundreds of thousands of practitioners worldwi
 
 Perfect for smaller teams or getting started. Access community support through GitHub [Discussions](https://github.com/pulumi/pulumi/discussions) and [Issues](https://github.com/pulumi/pulumi/issues), [Community Slack](https://slack.pulumi.com), and free workshops.
 
-You can also make use of the [Pulumi AI](https://www.pulumi.com/ai), detailed documentation in the [Pulumi Registry](https://www.pulumi.com/registry/), and the [examples repo](https://github.com/pulumi/examples) to help you get started.
+You can also make use of the [Pulumi Neo](https://www.pulumi.com/neo), detailed documentation in the [Pulumi Registry](https://www.pulumi.com/registry/), and the [examples repo](https://github.com/pulumi/examples) to help you get started.
 
 ### Enterprise and Business Critical tiers
 

@@ -20,9 +20,9 @@ Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn 
 There are new intelligent cloud management capabilities available in [**Pulumi Copilot**](/blog/pulumi-copilot).
 {{% /notes %}}
 
-We recently released [Pulumi AI](/ai/), a purpose-built AI Assistant that can create cloud infrastructure using Pulumi. It builds on the power of Large Language Models (LLMs) and GPT to dramatically reduce the time it takes to discover, learn and use new cloud infrastructure APIs.
+We recently released [Pulumi Neo](/neo/), a purpose-built AI Assistant that can create cloud infrastructure using Pulumi. It builds on the power of Large Language Models (LLMs) and GPT to dramatically reduce the time it takes to discover, learn and use new cloud infrastructure APIs.
 
-We’ve seen amazing engagement and stories from Pulumi users about the impact this tool has had for them over the past few weeks. In this post, we’ll dive deeper into this new technology, and share why we and so many other Pulumi users are so excited about [Pulumi AI](https://www.pulumi.com/ai/).
+We’ve seen amazing engagement and stories from Pulumi users about the impact this tool has had for them over the past few weeks. In this post, we’ll dive deeper into this new technology, and share why we and so many other Pulumi users are so excited about [Pulumi Neo](https://www.pulumi.com/neo/).
 
 <!--more-->
 
@@ -99,7 +99,7 @@ All of these are important, and each of them represents a direction of our inves
 
 Pulumi AI is already offering practical value for thousands of users. We have an incredible number of opportunities to extend and apply this technology to many aspects of cloud engineering. The impact is profound today and will be even more so in the future.
 
-We’re just getting started and hope you join us on our journey!  Experience [Pulumi AI](/ai) today and join us for one of these upcoming events to learn more:
+We’re just getting started and hope you join us on our journey!  Experience [Pulumi Neo](/neo) today and join us for one of these upcoming events to learn more:
 
 * [Workshop: Getting Started with Pulumi Insights](/events/getting-started-with-pulumi-insights/)
 * [Reddit AMA: Pulumi Insights](https://www.reddit.com/r/pulumi/comments/130b4rn/ama_with_luke_hoban_cto_on_pulumi_insightsai_at/)

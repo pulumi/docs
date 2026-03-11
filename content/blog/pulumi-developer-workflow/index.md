@@ -179,11 +179,11 @@ Focusing on something fun, let's deploy Minecraft as the app for our Kubernetes 
 Don't just take my word for it. The big brains of Pulumi's AI Engineering team have delivered a brilliant Pulumi AI. Your Pulumi IaC developer sidekick makes learning and developing Pulumi just that much easier.
 
 > Q: What can Pulumi AI do?
-> A: Today's AI is all experimental. As an industry, we are only just beginning to discover the possibilities, but you are invited to try it yourself with the [Pulumi AI WebUI](https://www.pulumi.com/ai/) or with the `pulumi new` cli as demonstrated below.
+> A: Today's AI is all experimental. As an industry, we are only just beginning to discover the possibilities, but you are invited to try it yourself with the [Pulumi Neo WebUI](https://www.pulumi.com/neo/) or with the `pulumi new` cli as demonstrated below.
 
 #### `~$ pulumi new --ai`
 
-[Pulumi AI](https://pulumi.com/ai) is available via WebUI much like the ChatGPT console. Besides the familiar browser-based interface, Pulumi AI is also built into the `pulumi new` CLI too! Now you can prompt Pulumi AI interactively from the convenience of the command line tools you will already be using, conveniently configured in your new Codespaces IDE.
+[Pulumi Neo](https://pulumi.com/neo) is available via WebUI much like the ChatGPT console. Besides the familiar browser-based interface, Pulumi AI is also built into the `pulumi new` CLI too! Now you can prompt Pulumi AI interactively from the convenience of the command line tools you will already be using, conveniently configured in your new Codespaces IDE.
 
 Let's try it! (Reminder: Perform all these steps from within the Codespaces IDE.)
 
@@ -256,7 +256,7 @@ Let's check on the status of our deployment.
 kubectl get po
 ```
 
-With any luck, our [Pulumi AI](https://pulumi.com/ai) gave you a working program right out of the gate. For references on Kubernetes Pulumi package resources to expand your infrastructure from here head to the [Pulumi Registry Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes/) page for more.
+With any luck, our [Pulumi Neo](https://pulumi.com/neo) gave you a working program right out of the gate. For references on Kubernetes Pulumi package resources to expand your infrastructure from here head to the [Pulumi Registry Kubernetes Provider](https://www.pulumi.com/registry/packages/kubernetes/) page for more.
 
 Sharing Pulumi with people is a genuine passion found among Pulumians all around the globe but we all know evidence reigns king among engineers who, like any good practitioner, expect proof. Evolving your developer workflow with Pulumi gets even better than just easy, it's remarkably powerful and ready for you to adopt in your daily workflows right away too.
 

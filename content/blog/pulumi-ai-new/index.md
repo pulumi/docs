@@ -20,7 +20,7 @@ Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn 
 There are new intelligent cloud management capabilities available in **Pulumi Copilot**. [Learn More](/blog/pulumi-copilot)
 {{% /notes %}}
 
-Earlier this year we launched [Pulumi AI](/ai), a purpose-built AI assistant that can create [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/) from natural language prompts using Pulumi.  Since launch, we’ve seen incredible adoption of Pulumi AI, with over 200,000 questions asked so far and growing fast.  Pulumi AI is popular with users new to Pulumi and/or new to the Cloud, but also heavily used by many of the most advanced IaC users and organizations to quickly discover solutions to new problems they need to solve. Over the last few months, we’ve driven major improvements to Pulumi AI through the recently launched Pulumi AI Answers pages with thousands of AI generated answers to common questions, improvements to code generation correctness and performance, and expansion of the languages supported by Pulumi AI.
+Earlier this year we launched [Pulumi Neo](/neo), a purpose-built AI assistant that can create [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/) from natural language prompts using Pulumi.  Since launch, we’ve seen incredible adoption of Pulumi AI, with over 200,000 questions asked so far and growing fast.  Pulumi AI is popular with users new to Pulumi and/or new to the Cloud, but also heavily used by many of the most advanced IaC users and organizations to quickly discover solutions to new problems they need to solve. Over the last few months, we’ve driven major improvements to Pulumi AI through the recently launched Pulumi AI Answers pages with thousands of AI generated answers to common questions, improvements to code generation correctness and performance, and expansion of the languages supported by Pulumi AI.
 
 Today, we are taking the next big step, introducing support for __deploying cloud infrastructure directly from Pulumi AI__.  Going from idea to running cloud infrastructure is just a natural language prompt away!
 
@@ -31,7 +31,7 @@ This is accomplished through two new features:
 * The `pulumi new` command now offers the option to provide a Pulumi AI prompt instead of selecting a template.  It then generates a template from your prompt, and lets you iterate on this before choosing to create a project and deploy it to the cloud.
 * Every Pulumi AI and Pulumi AI Answers page now has a [Deploy with Pulumi](/docs/pulumi-cloud/pulumi-button/) button on it, which lets you click through a few prompts to deploy the given infrastructure into your cloud account using Pulumi Deployments and Pulumi ESC in Pulumi Cloud or the `pulumi new` command.
 
-Check out [Pulumi AI](/ai) or `pulumi new` in the CLI today.
+Check out [Pulumi Neo](/neo) or `pulumi new` in the CLI today.
 
 ## Hope Pulumi AI Works with `pulumi new`
 
@@ -111,4 +111,4 @@ Join the [Pulumi Community Slack](https://slack.pulumi.com/) or join the [GitHub
 
 Pulumi AI has already transformed how cloud engineers discover and solve their cloud infrastructure development problems.  And yet, we still see incredible opportunity ahead of us.  We’ve made rapid strides on improving the accuracy of AI answers, and continue to invest in further improvements.  We’ve made it significantly faster to go from idea to deployed infrastructure with the `pulumi new` and Deploy with Pulumi button integrations, but we also see the opportunity to make these experiences even more interactive going forward.  And of course, we continue to integrate Pulumi AI even more broadly throughout our product experiences, lighting up AI assistance across the cloud engineering journey.
 
-Try it out yourself today at [pulumi.com/ai](/ai)!
+Try it out yourself today at [pulumi.com/neo](/neo)!

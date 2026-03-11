@@ -31,7 +31,7 @@ Drift detection isn’t limited to Pulumi Deployments, you can integrate it into
 
 ## Provision infrastructure
 
-Let’s begin by using the Pulumi CLI to create a web server environment on AWS using a [Pulumi template](/templates/). In this example, you will select a template that provisions an EC2 instance within a VPC with a public subnet, an internet gateway, and a security group allowing HTTP traffic. You can also use [Pulumi AI](https://www.pulumi.com/ai) to create a scenario based on your cloud and language of choice.
+Let’s begin by using the Pulumi CLI to create a web server environment on AWS using a [Pulumi template](/templates/). In this example, you will select a template that provisions an EC2 instance within a VPC with a public subnet, an internet gateway, and a security group allowing HTTP traffic. You can also use [Pulumi Neo](https://www.pulumi.com/neo) to create a scenario based on your cloud and language of choice.
 
 Initialize a new Pulumi project and pick your programming language of choice:
 

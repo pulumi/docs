@@ -50,7 +50,7 @@ main:
     description: |
         Imagine the power of creating Infrastructure as Code effortlessly. With Pulumi AI, you use natural-language prompts to generate infrastructure as code (IaC) programs in the language of your choice, such as TypeScript, Python, Go, C#., Java, or Yaml. Pulumi AI will create all the necessary parts, from the instance itself to the security groups that will allow access. 
         
-        🤖 [Try Pulumi AI now](https://www.pulumi.com/ai/) and see the magic unfold!
+        🤖 [Try Pulumi Neo now](https://www.pulumi.com/neo/) and see the magic unfold!
         
         Prompt used in the video: “Please create a Linux instance I can ssh to”  But that's not all - you can iterate on the cloud infrastructure with the AI assistant, adding new features, fixing bugs, and clarifying requirements. With Pulumi AI, the possibilities are endless.  their online store.
 

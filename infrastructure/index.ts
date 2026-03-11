@@ -4,7 +4,7 @@ import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
-import { getAIAnswersRewriteAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
+import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 
 const stackConfig = new pulumi.Config();
 
@@ -30,10 +30,6 @@ const config = {
     // doEdgeRedirects is whether to perform redirects at the CloudFront layer.
     // Setting this true will add a Lambda@Edge function that handles that redirect logic.
     doEdgeRedirects: stackConfig.getBoolean("doEdgeRedirects") || false,
-    // doAIAnswersRewrites indicates whether to rewrite HTTP status for AI Answers pages that 404
-    // (e.g., due to unpublishing) as HTTP 410 (Gone). Setting this true will add a Lambda@Edge
-    // function that handles this logic.
-    doAIAnswersRewrites: stackConfig.getBoolean("doAIAnswersRewrites") || false,
     // makeFallbackBucket toggles whether to configure a bucket for serving the website
     // directly out of S3 --- for example, when CloudFront is unavailable. In order to
     // comply with AWS configuration rules, the bucket will be named to match the
@@ -73,7 +69,6 @@ const config = {
 };
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
-const aiAppDomain = aiAppStack.requireOutput('aiAppDistributionDomain');
 const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
 
 // Reference to the Astro stack for data warehouse access (only if enabled)
@@ -611,18 +606,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             },
         },
         {
-            originId: aiAppDomain,
-            domainName: aiAppDomain,
-            customOriginConfig: {
-                originProtocolPolicy: "https-only",
-                httpPort: 80,
-                httpsPort: 443,
-                originSslProtocols: ["TLSv1.2"],
-                originReadTimeout: 60,
-                originKeepaliveTimeout: 60,
-            },
-        },
-        {
             originId: cloudAiAppDomain,
             domainName: cloudAiAppDomain,
             customOriginConfig: {
@@ -769,40 +752,16 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             maxTtl: 0,
         },
 
-        // AI app with caching handled by the app
+        // /ai -> /neo redirect, /ai/* -> 410 Gone
         {
             ...baseCacheBehavior,
-            // allow all methods
-            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
-            cachedMethods: [
-                "GET", "HEAD", "OPTIONS",
-            ],
-            targetOriginId: aiAppDomain,
             pathPattern: '/ai',
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            lambdaFunctionAssociations: [],
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
-            defaultTtl: 0,
-            maxTtl: 0,
+            lambdaFunctionAssociations: [getAIRedirectAndGoneAssociation()],
         },
         {
             ...baseCacheBehavior,
-            // allow all methods
-            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
-            cachedMethods: [
-                "GET", "HEAD", "OPTIONS",
-            ],
-            targetOriginId: aiAppDomain,
             pathPattern: '/ai/*',
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            lambdaFunctionAssociations: config.doAIAnswersRewrites ? [getAIAnswersRewriteAssociation()] : [],
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
-            defaultTtl: 0,
-            maxTtl: 0,
+            lambdaFunctionAssociations: [getAIRedirectAndGoneAssociation()],
         },
 
         // Copilot app

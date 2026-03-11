@@ -23,7 +23,7 @@ Here are a few links to help you get started if you are new to Pulumi:
 
 - [EKS Setup & Installation](https://www.pulumi.com/registry/packages/eks/installation-configuration/) - Instructions on installing and configuring the Pulumi EKS provider
 - [EKS How-to Guides](https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/eks/) - Learn how to use the EKS provider to provision and manage Kubernetes clusters on AWS
-- [Pulumi AI](https://www.pulumi.com/ai) - Ask Pulumi AI to help you create a new EKS project
+- [Pulumi Neo](https://www.pulumi.com/neo) - Ask Pulumi Neo to help you create a new EKS project
 
 ## Key Highlights of EKS V3
 
