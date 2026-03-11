@@ -46,7 +46,7 @@ The `pulumi convert` command is designed to address a variety of migration and c
 
 ### Additional conversion tools and resources
 
-In addition to the converter plugins, Pulumi offers the following standalone tools for converting code from other IaC tools to Pulumi:
+In addition to the converter plugins, Pulumi offers the following tools and resources:
 
-* [Kubernetes CustomResources to Pulumi](/blog/introducing-crd2pulumi/)
-* [CloudFormation to Pulumi](/cf2pulumi/)
+* [Generate typed Pulumi SDKs for Kubernetes CustomResources](/docs/iac/clouds/kubernetes/crd2pulumi/)
+* [Migrate from AWS CloudFormation to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-aws/)

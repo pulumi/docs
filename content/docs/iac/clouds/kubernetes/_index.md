@@ -48,7 +48,7 @@ convert:
   description: Convert or generate Kubernetes YAML manifests in the language of your choice with Pulumi's tools.
   tools:
   - display_name: Convert Kubernetes YAML manifests to Pulumi
-    url: /kube2pulumi/
+    url: /docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/
   - display_name: Generate types in Pulumi for Custom Resources
     url: /docs/iac/clouds/kubernetes/crd2pulumi/
 templates:
