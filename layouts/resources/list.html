@@ -1,11 +1,11 @@
 {{ define "hero" }}
-    {{ if .Parent.IsHome }}
+    {{ if and .Parent .Parent.IsHome }}
         {{ partial "hero" (dict "title" .Params.title) }}
     {{ end }}
 {{ end }}
 
 {{ define "main" }}
-    {{ if .Parent.IsHome }}
+    {{ if and .Parent .Parent.IsHome }}
         {{ partial "resources/hub-page.html" . }}
     {{ else }}
         {{ partial "resources/category-page.html" . }}

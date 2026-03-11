@@ -9,13 +9,11 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
                 <a href="{{ relref . "/resources" }}" class="text-gray-500 hover:text-purple-600 transition-colors">Resource Library</a>
-                {{ with .Parent }}
-                    {{ if not .Parent.IsHome }}
-                        <svg class="w-4 h-4 mx-2 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                        <a href="{{ .RelPermalink }}" class="text-gray-500 hover:text-purple-600 transition-colors">{{ .Title }}</a>
-                    {{ end }}
+                {{ if and .Parent (not .Parent.IsHome) }}
+                    <svg class="w-4 h-4 mx-2 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <a href="{{ .Parent.RelPermalink }}" class="text-gray-500 hover:text-purple-600 transition-colors">{{ .Parent.Title }}</a>
                 {{ end }}
                 <svg class="w-4 h-4 mx-2 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -190,12 +188,10 @@
                                     {{ end }}
                                 </div>
                                 {{/* Link to parent category page */}}
-                                {{ with $.Parent }}
-                                    {{ if not .Parent.IsHome }}
-                                        <a href="{{ .RelPermalink }}" class="block text-sm text-purple-600 hover:text-purple-800 font-medium mt-4 pt-3 border-t border-purple-200">
-                                            More in {{ .Title }} &rarr;
-                                        </a>
-                                    {{ end }}
+                                {{ if and $.Parent (not $.Parent.IsHome) }}
+                                    <a href="{{ $.Parent.RelPermalink }}" class="block text-sm text-purple-600 hover:text-purple-800 font-medium mt-4 pt-3 border-t border-purple-200">
+                                        More in {{ $.Parent.Title }} &rarr;
+                                    </a>
                                 {{ end }}
                             </div>
                         {{ end }}

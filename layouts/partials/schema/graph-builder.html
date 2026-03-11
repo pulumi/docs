@@ -172,7 +172,7 @@
 {{ end }}
 
 {{/* Add CollectionPage schema for resource library category pages */}}
-{{ if and (eq .Type "resources") (not .IsPage) (not .IsHome) (not .Parent.IsHome) }}
+{{ if and (eq .Type "resources") (not .IsPage) (not .IsHome) .Parent (not .Parent.IsHome) }}
   {{ $categorySlug := index (split (strings.TrimSuffix "/" .RelPermalink) "/") (sub (len (split (strings.TrimSuffix "/" .RelPermalink) "/")) 1) }}
   {{ $allResources := where (where $.Site.Pages "Type" "resources") "Kind" "page" }}
   {{ $articles := where $allResources ".Params.solution_areas" "intersect" (slice $categorySlug) }}
