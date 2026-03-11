@@ -1,9 +1,10 @@
 ---
 title: "Humanitec Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: "Developer self-service without a proprietary abstraction layer. Open source IaC engine, reusable components, real programming languages."
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-humanitec
+hide_platform_details: true
 
 heading: "Humanitec Alternative"
 subheading: |
@@ -11,9 +12,14 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 overview:
-    title: Infrastructure as Code<br/>in any Programming Language
-    description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Humanitec alternative</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+    title: "Developer Self-Service<br/>Without Proprietary Abstractions."
+    description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">a Humanitec alternative</span>? Humanitec requires learning Score, a proprietary workload specification. Pulumi uses standard programming languages. Your platform engineers define components in real code. Developers consume them in any language. Open source, no vendor lock-in.'
+
+customer_quote:
+    text: "Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies for logging, permissions, resource tagging, and security."
+    author: "Igor Shapiro, Principal Engineer, Lemonade"
+    logo: lemonade
+    link: /case-studies/lemonade
 
 key_features_above:
     items:
@@ -164,19 +170,18 @@ key_features:
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
-    title: Open source. Enterprise ready.
+    title: "Trusted by thousands of companies"
     description: |
-        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
-        by an active community. We maintain a public roadmap and welcome feedback and contributions.
+        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "10,000s"
-        description: of community members
+        number: "350,000+"
+        description: "Community members"
     company:
-        number: "1,000s"
-        description: of companies
+        number: "3,700+"
+        description: "Companies in production"
     integration:
         number: "170+"
-        description: Cloud and service integrations
+        description: "Cloud and service integrations"
 
 key_features_below:
     items:
