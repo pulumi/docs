@@ -1,6 +1,6 @@
 ---
 title: "Firefly Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: Fix drift by design, not by cleanup. Full IaC platform with policy, state management, and preview. Python, TypeScript, Go, or C#. Free tier.
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-firefly

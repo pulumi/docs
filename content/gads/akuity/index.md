@@ -1,6 +1,6 @@
 ---
 title: "Akuity Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: IaC plus GitOps in one platform. Manage cloud and Kubernetes infrastructure end-to-end. Python, TypeScript, Go, or C#. 170+ providers.
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-akuity

@@ -1,6 +1,6 @@
 ---
 title: "Azure Infrastructure"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: Azure infrastructure as code in C#, Python, TypeScript, or Go. Native Azure provider, full API coverage. Multi-cloud ready. Free tier.
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-azure

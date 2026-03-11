@@ -1,6 +1,6 @@
 ---
 title: "System Initiative Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: Production-ready IaC today. Python, TypeScript, Go, or C# with 170+ cloud providers. Trusted by BMW and Snowflake. Free tier.
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-system-initiative

@@ -1,6 +1,6 @@
 ---
 title: "Azure Resource Manager Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: Move beyond ARM templates and Bicep. Write Azure infrastructure in C#, Python, TypeScript, or Go. Multi-cloud ready with 170+ providers.
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-azure-resource-manager

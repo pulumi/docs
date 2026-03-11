@@ -43,11 +43,10 @@ key_features_above:
                     a complete and consistent SDK interface.
                 icon: global
                 color: yellow
-              - title: Preview and test changes
+              - title: AI-powered infrastructure
                 description: |
-                    Test and validate infrastructure with standard unit test frameworks and
-                    integration tests. Preview changes before deploying.
-                icon: eye
+                    Generate Pulumi code from natural language or convert existing Terraform with Pulumi AI and Neo.
+                icon: lightning
                 color: yellow
         
 key_features:

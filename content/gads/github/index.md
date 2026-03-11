@@ -1,6 +1,6 @@
 ---
 title: "Infrastructure Automation for GitHub | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: Infrastructure automation that integrates with GitHub. IaC in Python, TypeScript, Go, or C# with GitOps workflows and 170+ cloud providers.
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-github

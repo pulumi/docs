@@ -1,6 +1,6 @@
 ---
 title: "Chkk Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: Go beyond reliability checks. Full IaC with policy as code, secrets, compliance, and 170+ cloud providers. Open source. Free tier.
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-chkk

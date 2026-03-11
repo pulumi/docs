@@ -1,6 +1,6 @@
 ---
 title: "Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: Infrastructure as Code in Python, TypeScript, Go, or C#. 170+ cloud providers, policy as code, secrets management. Open source. Free tier.
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-template
