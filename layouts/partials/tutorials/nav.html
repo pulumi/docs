@@ -24,14 +24,14 @@
                     {{ if or (eq $currentPath "/tutorials/") (eq .Kind "term") }}
 
                         {{ $clouds := slice }}
-                        {{ range .site.Data.tutorials.collections }}
+                        {{ range site.Data.tutorials.collections }}
                             {{ if and (.featured) (eq .type "provider") }}
                                 {{ $clouds = $clouds | append (dict "id" .id "label" .name "href" (printf "/docs/clouds/%s/get-started/" .id) ) }}
                             {{ end }}
                         {{ end }}
 
                         {{ $providers := slice }}
-                        {{ range .site.Data.tutorials.collections }}
+                        {{ range site.Data.tutorials.collections }}
                             {{ if and (.featured) (eq .type "provider") (ne (index $.Site.Taxonomies.collections .id) nil) }}
                                 {{ $collectionPath := (printf "/tutorials/%s/" .id) }}
                                 {{ $providers = $providers | append (dict "id" .id "label" .name "href" $collectionPath "active" (eq $collectionPath $currentPath)) }}
@@ -39,7 +39,7 @@
                         {{ end }}
 
                         {{ $collections := slice }}
-                        {{ range .site.Data.tutorials.collections }}
+                        {{ range site.Data.tutorials.collections }}
                             {{ if and (ne .type "provider") (ne (index $.Site.Taxonomies.collections .id) nil) }}
                                 {{ $collectionPath := (printf "/tutorials/%s/" .id) }}
                                 {{ $collections = $collections | append (dict "id" .id "label" .name "href" $collectionPath "active" (eq $collectionPath $currentPath) ) }}

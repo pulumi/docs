@@ -6,7 +6,7 @@
             </div>
 
             <div class="lg:w-7/12">
-                {{ $authorData := index $.site.Data.team.team .Data.Term }}
+                {{ $authorData := index site.Data.team.team .Data.Term }}
                 {{ $blogPosts := where .Data.Pages "Section" "blog" }}
                 {{ $paginator := .Paginate $blogPosts.ByDate.Reverse }}
 

@@ -28,7 +28,7 @@
                     <ul class="flex flex-col lg:flex-row lg:flex-wrap list-none p-0">
                         {{ $perRow := 2 }}
                         {{ range $index, $id := (slice "aws" "azure" "gcp" "kubernetes") }}
-                            {{ $provider := index (and ((where $.site.Data.tutorials.collections "type" "provider")) ((where $.site.Data.tutorials.collections "id" $id))) 0 }}
+                            {{ $provider := index (and ((where site.Data.tutorials.collections "type" "provider")) ((where site.Data.tutorials.collections "id" $id))) 0 }}
 
                             <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
                                 <div class="p-6 border border-gray-300 w-full gradient-card shadow-xl rounded-md h-full">
@@ -63,7 +63,7 @@
                             {{ $ordinal := 0 }}
                             {{ $perRow = 3 }}
                             {{ range $taxonomy, $terms := .Site.Taxonomies.collections }}
-                                {{ $collection := index (where $.site.Data.tutorials.collections "id" $taxonomy) 0 }}
+                                {{ $collection := index (where site.Data.tutorials.collections "id" $taxonomy) 0 }}
 
                                 {{ if and (ne $collection.type nil) (ne $collection.type "provider") }}
                                     {{ $ordinal = add $ordinal 1}}

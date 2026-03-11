@@ -23,7 +23,7 @@
                     {{ .Content }}
                 </section>
 
-                {{ $terms := sort $.site.Data.learn.glossary.entries "term" }}
+                {{ $terms := sort site.Data.learn.glossary.entries "term" }}
                 {{ $page := . }}
 
                 <ul>

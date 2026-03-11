@@ -23,7 +23,7 @@
             <div class="my-4">
                 <!-- Get series data for prefix -->
                 {{ $seriesData := false }}
-                {{ with .site.Data.blog_series }}
+                {{ with site.Data.blog_series }}
                     {{ range .series }}
                         {{ if eq .slug $currentSeries }}
                             {{ $seriesData = . }}

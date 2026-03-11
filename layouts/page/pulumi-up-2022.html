@@ -74,7 +74,7 @@
 
             <div class="flex flex-wrap justify-center items-stretch">
                 {{ $registrationData := .Params.registration.main }}
-                {{ $people := .site.Data.team.team }}
+                {{ $people := site.Data.team.team }}
                 {{ range .Params.sessions }}
                     <div class="w-full lg:w-1/2 p-3">
                         <div class="card h-full bg-white overflow-hidden">

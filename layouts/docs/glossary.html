@@ -1,4 +1,4 @@
-{{ range sort $.site.Data.glossary.entries "term" }}
+{{ range sort site.Data.glossary.entries "term" }}
     <div>
         <ul>
             <li><a href="#{{ lower .term }}" class="">{{ .term }}</a></li>
@@ -6,7 +6,7 @@
     </div>
 {{ end }}
 
-{{ range sort $.site.Data.glossary.entries "term" }}
+{{ range sort site.Data.glossary.entries "term" }}
     <div class="flex-1 mt-8">
         <h2 class="mt-2 mb-0">{{ .term }}</h2>
         <p>{{ .description }}</p>

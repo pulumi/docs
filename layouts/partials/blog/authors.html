@@ -1,7 +1,7 @@
 <span class="flex items-center">
     {{ range $id := $.authors }}
         {{ $authorPage := $.context.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
-        {{ $authorData := index $.context.site.Data.team.team $id }}
+        {{ $authorData := index $.contextsite.Data.team.team $id }}
 
 
         <span class="flex items-center">
