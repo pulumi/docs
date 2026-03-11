@@ -1,6 +1,6 @@
 ---
-title: "Now Available: Previous Version Docs in Pulumi Registry"
-date: 2026-03-10
+title: "New: Previous Provider Version Docs in Pulumi Registry"
+date: 2026-03-11
 draft: false
 meta_desc: "The Pulumi Registry now includes documentation for previous provider versions, making it easier to find the right docs for the version you're using."
 meta_image: meta.png
@@ -13,7 +13,7 @@ tags:
 schema_type: auto
 ---
 
-The [Pulumi Registry](/registry/) now supports browsing documentation for previous versions of first-party Pulumi providers. If you've ever needed to look up the API docs for an older provider version, you no longer have to dig through Git history or guess at changes — the docs are right there in the Registry.
+The [Pulumi Registry](/registry/) now supports browsing documentation for previous versions of first-party Pulumi providers. If you've ever needed to look up the API docs for an older provider version, you no longer have to dig through Git history or guess at changes — the docs are right there in the Registry. These docs also help [Pulumi Neo](/docs/ai) and other agents more accurately assist you with your Pulumi code and operations.
 
 <!--more-->
 
