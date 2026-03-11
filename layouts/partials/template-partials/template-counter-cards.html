@@ -14,7 +14,7 @@
 {{ $anchor := .anchor }}
 
 <section class="template-counter-cards"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-16">
         {{ range $cards }}
         <div class="counter-card text-center">
             {{ if .number }}

@@ -18,7 +18,7 @@ Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, .
 {{ $anchor := .anchor }}
 
 <section class="template-product-two-column" {{ if $anchor }} id="{{ $anchor }}" {{ end }}>
-    <div class="flex flex-col xl:flex-row gap-12 xl:gap-20 items-start">
+    <div class="flex flex-col xl:flex-row gap-8 md:gap-10 xl:gap-20 items-start">
         <div class="xl:w-2/5 flex-shrink-0">
             {{ if $heading }}
             <h2 class="product-two-column-heading">{{ $heading }}</h2>
@@ -33,7 +33,7 @@ Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, .
         </div>
     </div>
     {{ if $cards }}
-    <div class="product-two-column-cards grid grid-cols-1 md:grid-cols-3 gap-36 mt-36 w-full">
+    <div class="product-two-column-cards grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-36 mt-12 md:mt-16 lg:mt-36 w-full">
         {{ range $cards }}
         <div class="product-feature-mini-card">
             {{ if .icon }}
