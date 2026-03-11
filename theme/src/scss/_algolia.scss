@@ -2,6 +2,8 @@
 
 // CSS variables exposed by the Autocomplete classic theme.
 // https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic
+// TODO: Replace hardcoded RGB values below with references to theme color tokens
+// once Tailwind v4's theme() function supports extracting RGB channels.
 :root {
     --aa-base-unit: 14;
     --aa-primary-color-rgb: 148,157,232; // blue-400 (#949de8)
