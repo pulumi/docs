@@ -32,14 +32,14 @@
     </section>
 
     {{ with .Params.case_studies.items }}
-    <section class="container mx-auto text-center overflow-hidden px-3 mt-8 mb-4">
+    <section class="container mx-auto text-center px-3 mt-8 mb-4">
         <h6 class="text-center text-gray-500 text-sm mb-2">Trusted by innovative companies</h6>
-        <div class="mb-2">
-            {{ $logos := slice }}
+        <div class="flex flex-wrap justify-center items-center py-4">
             {{ range . }}
-                {{ $logos = $logos | append (dict "name" .logo) }}
+                <div class="w-28 h-12 mx-6 my-2 flex items-center justify-center">
+                    {{ partial "customer-logo.html" (dict "logo" .logo) }}
+                </div>
             {{ end }}
-            {{ partial "stacked-carousel.html" (dict "logos" $logos "single_row" true) }}
         </div>
     </section>
     {{ end }}
