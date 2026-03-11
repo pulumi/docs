@@ -202,24 +202,23 @@ Create your first policy pack:
 
 {{% choosable language opa %}}
 
-{{% notes type="info" %}}
-There is no `pulumi policy new` template for OPA. Create the policy pack files manually as shown below.
-{{% /notes %}}
-
 1. Create a directory for your policy pack and navigate to it.
 
     ```sh
     $ mkdir policypack && cd policypack
     ```
 
-1. Create a `PulumiPolicy.yaml` file with the OPA runtime:
+1. Create a new OPA project:
 
-    ```yaml
-    description: My AWS Security Policies
-    runtime: opa
+    ```sh
+    $ pulumi policy new aws-opa
     ```
 
-1. Create a Rego policy file (e.g., `s3_security.rego`) with `deny` rules. Each resource is passed as `input` with metadata fields like `__name` (logical name), `__urn`, and `type`, plus all resource properties at the top level.
+    This creates a `PulumiPolicy.yaml` (with `runtime: opa`) and a starter `policy.rego` file. Templates are available for AWS (`aws-opa`), Azure (`azure-opa`), GCP (`gcp-opa`), and Kubernetes (`kubernetes-opa`).
+
+1. Replace the generated policy in `policy.rego` with this example, which demonstrates metadata annotations and multiple rules:
+
+    Each resource is passed as `input` with metadata fields like `__name` (logical name), `__urn`, and `type`, plus all resource properties at the top level.
 
     Use [OPA metadata annotations](https://www.openpolicyagent.org/docs/latest/annotations/) (`# METADATA` comment blocks) to provide a `title`, `description`, and remediation guidance (`custom.message`) for each rule. The analyzer extracts these annotations and reports them to Pulumi:
 
