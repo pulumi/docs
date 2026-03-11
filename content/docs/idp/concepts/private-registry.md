@@ -42,6 +42,20 @@ Both package list views display usage columns for each package: how many stacks 
 
 Each package page also includes a "Used by" tab showing which stacks use that package, including the stack name, project, version in use, and last update timestamp. This helps you assess the impact of changes before updating versions and identify stacks that may need upgrading.
 
+#### How usage tracking works
+
+Pulumi Cloud determines package usage by inspecting the resources in each stack's state. Specifically, it looks for `pulumi:providers:<package-name>` resources — these are the provider resources that Pulumi creates when a component runs as a [remote component](/docs/iac/concepts/components/#consumption).
+
+These provider resources are created automatically when a component is consumed via `pulumi package add` (or through a generated SDK with the component configured as a remote plugin). When Pulumi launches a remote component, it starts a separate plugin process and creates a corresponding provider resource in the stack state.
+
+{{% notes type="warning" %}}
+If you consume a component via a direct language-level dependency — for example, using `npm install`, `npm link`, a local file path symlink, or importing the component class directly into your program — the component runs **in-process** in the same language runtime. No separate provider resource is created, and the stack **will not** appear on the package's "Used by" page.
+
+If a stack uses a registry component but doesn't appear in "Used by", verify that the component is consumed via `pulumi package add` rather than a direct dependency, then re-run `pulumi up` so the provider resource is recorded in the stack state.
+{{% /notes %}}
+
+For more details on the difference between in-process and remote component consumption, see [In-process vs. remote components](/docs/iac/concepts/components/#in-process-vs-remote-components).
+
 ## Component Publishing
 
 [Pulumi Components](/docs/iac/concepts/resources/components/) are a way to encapsulate resources in a reusable manner. Components are also a powerful way for platform teams to integrate security, compliance, and operational requirements into golden paths so that developers don't need to worry about it. Once a component is pushed to GitHub or GitLab, it is published to an organization's private registry using the `publish` CLI command. Pulumi automatically introspects the component schema and generates API docs, which are displayed in the registry.

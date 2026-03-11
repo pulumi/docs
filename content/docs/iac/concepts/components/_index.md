@@ -899,6 +899,18 @@ pulumi package add /path/to/local/secure-s3-component
 
 Pulumi will identify the folder as a Pulumi component project, generate a local SDK, and make it available for import in your program—even if your consumer program is in a different language.
 
+#### In-process vs. remote components {#in-process-vs-remote-components}
+
+{{< notes type="info" >}}
+**How you consume a component affects how it runs — and whether it's tracked in Pulumi Cloud.**
+
+- **Remote component** (`pulumi package add`): Pulumi launches a separate plugin process and communicates with it via gRPC. This creates a `pulumi:providers:<package-name>` resource in your stack state. Remote components are tracked on the [IDP Private Registry](/docs/idp/concepts/private-registry/) "Used by" page.
+
+- **In-process component** (direct import via `npm install`, local symlink, or language package manager): The component runs in the same language runtime as your program. No separate provider resource is created, and the stack **will not** appear on the registry's "Used by" page.
+
+If IDP usage visibility matters for your organization, consume published components via `pulumi package add`.
+{{< /notes >}}
+
 ## The Spectrum of Pulumi Components You Can Build
 
 You can use Pulumi Components with more flexibility and control depending on your use case. This table shows the variety of use cases:
