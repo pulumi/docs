@@ -59,7 +59,7 @@ counter_cards:
       label: engineers building with Pulumi
     - number: "3,700+"
       label: companies in production
-    - number: "1,000s"
+    - number: "1,000+"
       label: of cloud and service providers
 
 testimonial:

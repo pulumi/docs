@@ -70,7 +70,7 @@ $violet-primary: #673EAC;
 @mixin section-hint-small {
     @apply font-semibold leading-normal font-body;
     font-feature-settings: 'salt' on;
-    color: #757576;
+    color: #404041;
     font-size: 20px;
 }
 
@@ -229,17 +229,15 @@ $violet-primary: #673EAC;
     }
 
     .three-column-item-title {
-        color: #000;
         font-feature-settings: 'salt' on;
         font-family: Inter, sans-serif;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 120%;
         letter-spacing: -0.84px;
+        @apply text-black font-semibold;
+        font-size: 28px;
+        line-height: 120%;
 
         i {
-            flex-shrink: 0;
+            @apply flex-shrink-0;
         }
     }
 
@@ -254,29 +252,22 @@ $violet-primary: #673EAC;
 
 // Shared feature card (icon above title + description) — used by template-product-two-column and template-three-column (icon_layout: above)
 .template-feature-card-icon {
-    @apply text-black flex items-center justify-center;
-    width: 48px;
-    height: 48px;
-    font-size: 24px;
-    border-radius: 8px;
+    @apply text-black flex items-center justify-center w-12 h-12 text-2xl rounded-lg mb-12;
     border: 0.5px solid #CECECE;
-    margin-bottom: 48px;
 
     i {
-        flex-shrink: 0;
+        @apply flex-shrink-0;
     }
 }
 
 .template-feature-card-title {
+    @apply font-body text-black leading-tight m-0 font-semibold mb-6;
     font-size: 28px;
-    font-weight: 600;
-    @apply font-body text-black leading-tight m-0;
-    margin-bottom: 24px;
 }
 
 .template-feature-card-description {
     @include section-body-medium();
-    font-size: 16px;
+    @apply text-base;
 }
 
 .template-testimonial {
@@ -301,9 +292,8 @@ $violet-primary: #673EAC;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 
     .template-testimonial-product-quote {
-        @apply text-white leading-relaxed text-left border-0;
+        @apply text-white leading-relaxed text-left border-0 font-semibold;
         font-size: 28px;
-        font-weight: 600;
 
         p {
             @apply m-0;
@@ -311,9 +301,7 @@ $violet-primary: #673EAC;
     }
 
     .template-testimonial-product-logo img {
-        @apply block;
-        height: 28px;
-        width: auto;
+        @apply block w-auto h-7;
         max-width: 120px;
         filter: invert(1);
     }
@@ -365,6 +353,15 @@ $violet-primary: #673EAC;
 .template-product-hero {
     .product-hero-heading {
         @include product-hero-heading();
+        font-size: 40px;
+
+        @screen sm {
+            font-size: 52px;
+        }
+
+        @screen md {
+            font-size: 64px;
+        }
     }
 
     .product-hero-title-primary {
@@ -381,6 +378,15 @@ $violet-primary: #673EAC;
 
     .product-hero-title {
         @include product-hero-heading();
+        font-size: 40px;
+
+        @screen sm {
+            font-size: 52px;
+        }
+
+        @screen md {
+            font-size: 64px;
+        }
     }
 
     .product-hero-description {
@@ -391,24 +397,19 @@ $violet-primary: #673EAC;
 
 .template-section-header {
     .section-header-image-above-img {
-        width: auto;
-        max-width: 120px;
-        height: auto;
+        @apply w-auto h-auto;
+        max-width: 350px;
     }
 
     .section-header-tag-line {
         color: var(--gray-primary, #404041);
-        text-align: center;
         font-family: Inter, sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 150%;
         letter-spacing: -0.2px;
+        @apply text-center text-xl font-normal font-semibold leading-normal;
     }
 
     .section-header-tag-wrap {
-        margin-bottom: 0.5rem;
+        @apply mb-2;
     }
 
     .section-header-title {
@@ -417,40 +418,26 @@ $violet-primary: #673EAC;
 
     .section-header-description {
         @include section-description();
-        font-size: 16px;
-        max-width: 36rem;
-        margin-left: auto;
-        margin-right: auto;
+        @apply text-base max-w-xl mx-auto;
 
         a {
             color: inherit;
-            text-decoration: none;
-            pointer-events: none;
+            @apply no-underline pointer-events-none;
         }
     }
 }
 
 .template-section-header-with-code {
     .template-section-header-with-code-inner {
-        @apply gap-12;
-
-        @screen xl {
-            gap: 96px;
-        }
+        @apply gap-12 xl:gap-24;
     }
 
     .template-section-header-with-code-content {
-        @screen xl {
-            flex: 1 1 0%;
-            min-width: 0;
-        }
+        @apply xl:flex-1 xl:min-w-0;
     }
 
     .template-section-header-with-code-image {
-        @screen xl {
-            flex: 1 1 0%;
-            min-width: 0;
-        }
+        @apply xl:flex-1 xl:min-w-0;
     }
 
     .section-header-with-code-tag {
@@ -467,11 +454,7 @@ $violet-primary: #673EAC;
         color: var(--gray-tertiary, #757576);
         font-feature-settings: 'salt' on;
         font-family: Inter, sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%;
-        @apply text-left font-body;
+        @apply text-left font-body text-base font-normal leading-normal;
 
         p {
             @apply m-0;
@@ -510,18 +493,12 @@ $violet-primary: #673EAC;
 
 .template-icon-grid {
     .icon-grid-tag-line {
-        color: var(--gray-primary, #404041);
-        text-align: center;
-        font-family: Inter, sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 150%;
-        letter-spacing: -0.2px;
+        @include section-hint-small();
+        @apply m-0;
     }
 
     .icon-grid-tag-wrap {
-        margin-bottom: 0.5rem;
+        @apply mb-2;
     }
 
     .icon-grid-title {
@@ -540,12 +517,10 @@ $violet-primary: #673EAC;
 
     .product-two-column-description {
         @include section-description();
-        font-size: 24px;
+        @apply text-2xl;
 
         p:first-of-type {
-            color: #000;
-            font-weight: 600;
-            margin-top: 0;
+            @apply text-black font-semibold mt-0;
         }
 
         p+p {

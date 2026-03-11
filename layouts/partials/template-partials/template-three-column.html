@@ -40,7 +40,7 @@ Note: icon should be Font Awesome icon class (e.g., "fa-shield", "fa-rocket")
     </div>
     {{ end }}
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-36 {{ if or $tagLine $title $subtitle }}mt-20{{ end }}">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-16 lg:gap-36 {{ if or $tagLine $title $subtitle }}mt-12 md:mt-12 lg:mt-20{{ end }}">
         {{ range $columns }}
         <div class="three-column-item text-left flex flex-col justify-start">
             {{ if and .icon (eq $iconLayout "above") }}

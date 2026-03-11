@@ -1,18 +1,18 @@
 {{/*
-    Template Section Header With Code Partial
+Template Section Header With Code Partial
 
-    Two-column layout for product sections: left = tag line, two-line title,
-    description, and purple CTA link; right = code editor image/placeholder.
+Two-column layout for product sections: left = tag line, two-line title,
+description, and purple CTA link; right = code editor image/placeholder.
 
-    Parameters:
-    - tag_line: Small grey label (e.g. "Infrastructure building blocks")
-    - title: Main title (markdown supported; use two trailing spaces for a line break)
-    - description: Body paragraph (supports markdown)
-    - cta_text: Link text (e.g. "Explore the registry")
-    - cta_link: Link URL
-    - image: Optional code editor/image path (right column)
-    - image_alt: Alt text for image
-    - anchor: Optional anchor for section id
+Parameters:
+- tag_line: Small grey label (e.g. "Infrastructure building blocks")
+- title: Main title (markdown supported; use two trailing spaces for a line break)
+- description: Body paragraph (supports markdown)
+- cta_text: Link text (e.g. "Explore the registry")
+- cta_link: Link URL
+- image: Optional code editor/image path (right column)
+- image_alt: Alt text for image
+- anchor: Optional anchor for section id
 */}}
 
 {{ $tagLine := .tag_line }}
@@ -24,14 +24,14 @@
 {{ $imageAlt := .image_alt | default "" }}
 {{ $anchor := .anchor }}
 
-<section class="template-section-header-with-code"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+<section class="template-section-header-with-code" {{ if $anchor }} id="{{ $anchor }}" {{ end }}>
     <div class="template-section-header-with-code-inner flex flex-col xl:flex-row items-start">
         <div class="template-section-header-with-code-content flex-1 xl:flex-1 xl:min-w-0">
             {{ if $tagLine }}
             <p class="section-header-with-code-tag mb-3">{{ $tagLine }}</p>
             {{ end }}
             {{ if $title }}
-            <h2 class="section-header-with-code-title mb-4">{{ $title | markdownify }}</h2>
+            <h2 class="section-header-with-code-title mb-4 mt-0">{{ $title | markdownify }}</h2>
             {{ end }}
             {{ if $description }}
             <div class="section-header-with-code-description mb-6">
