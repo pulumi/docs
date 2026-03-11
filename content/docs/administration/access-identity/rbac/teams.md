@@ -27,15 +27,14 @@ The Pulumi Cloud offers role-based access control (RBAC) using teams. Teams allo
 
 By default, all organization admins can create new teams.
 
+{{% notes "info" %}}
+To allow all organization members to create teams, navigate to **Settings** > **Access Management** and enable the **Allow organization members to create teams** toggle.
+{{% /notes %}}
+
 To create a team:
 
 1. Navigate to **Settings** > **Teams**.
 1. Select **Create team**.
-
-To give members permission to create teams:
-
-1. Navigate to **Settings** > **Access Management**.
-1. Use the toggle to turn on the **Allow organization members to create teams** setting.
 
 ## Team Access Types
 
@@ -69,15 +68,8 @@ permissions and role assignments granted to team members is managed in the Pulum
 
 ## Team Entity Access Grants
 
-By default only organization admins can create teams.
+Team entity access grants allow team admins to manage their team's access to specific stacks, environments, and insights accounts directly, without requiring org-level role management permissions. This makes it possible for teams to self-manage their own entity access while keeping broader role administration centralized.
 
-To allow all members to create teams:
-
-1. Navigate to **Settings** > **Access Management**.
-1. Use the toggle to turn on the Allow organization members to create teams setting.
-
-### Granting Access to Stacks within Teams
-
-Teams can be granted access to stacks, which grants all team members access to those stack based on the selected permission level.
+Teams can be granted direct access to stacks, environments, and insights accounts. All team members receive access to those entities at the selected permission level.
 
 ![Editing team stacks and permissions](/images/docs/reference/service/editing-stack-permissions.png)
