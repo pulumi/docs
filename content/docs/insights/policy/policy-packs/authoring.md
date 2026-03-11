@@ -219,27 +219,37 @@ There is no `pulumi policy new` template for OPA. Create the policy pack files m
     runtime: opa
     ```
 
-1. Create a Rego policy file (e.g., `s3_security.rego`) with `deny` rules. Each resource is passed as `input` with metadata fields like `__name` (logical name), `__urn`, and `type`, plus all resource properties at the top level:
+1. Create a Rego policy file (e.g., `s3_security.rego`) with `deny` rules. Each resource is passed as `input` with metadata fields like `__name` (logical name), `__urn`, and `type`, plus all resource properties at the top level.
+
+    Use [OPA metadata annotations](https://www.openpolicyagent.org/docs/latest/annotations/) (`# METADATA` comment blocks) to provide a `title`, `description`, and remediation guidance (`custom.message`) for each rule. The analyzer extracts these annotations and reports them to Pulumi:
 
     ```rego
     package aws
 
-    # Deny public S3 buckets
-    deny[msg] {
+    # METADATA
+    # title: No Public S3 Buckets
+    # description: S3 buckets must not use public-read ACLs.
+    # custom:
+    #   message: Set the ACL to 'private' or remove it entirely.
+    deny_public_buckets[msg] {
         input.type == "aws:s3/bucket:Bucket"
         input.acl == "public-read"
         msg := sprintf("S3 bucket '%s' must not have public-read ACL", [input.__name])
     }
 
-    # Require encryption
-    deny[msg] {
+    # METADATA
+    # title: Require S3 Encryption
+    # description: All S3 buckets must have server-side encryption configured.
+    # custom:
+    #   message: Add a serverSideEncryptionConfiguration block to the bucket.
+    deny_encryption[msg] {
         input.type == "aws:s3/bucket:Bucket"
         not input.serverSideEncryptionConfiguration
         msg := sprintf("S3 bucket '%s' must have encryption enabled", [input.__name])
     }
     ```
 
-    Each policy must define a `deny` rule that evaluates to a set of violation message strings. An empty set means the resource is compliant. Resource properties are available directly on `input` (e.g., `input.acl`), not nested under a `props` key.
+    Each rule must use a recognized name prefix that determines its enforcement level: `deny` (or `violation`) for mandatory rules that block deployments, and `warn` for advisory rules. Rules can include a descriptive suffix (e.g., `deny_public_buckets`). An empty result set means the resource is compliant.
 
 {{% /choosable %}}
 
@@ -284,8 +294,8 @@ OPA policies can be tested using the standard `opa test` command from the [OPA C
 ```rego
 package aws
 
-test_deny_public_bucket {
-    count(deny) > 0 with input as {
+test_deny_public_buckets {
+    count(deny_public_buckets) > 0 with input as {
         "type": "aws:s3/bucket:Bucket",
         "__name": "my-bucket",
         "acl": "public-read"
@@ -293,11 +303,17 @@ test_deny_public_bucket {
 }
 
 test_allow_private_bucket {
-    count(deny) == 0 with input as {
+    count(deny_public_buckets) == 0 with input as {
         "type": "aws:s3/bucket:Bucket",
         "__name": "my-bucket",
-        "acl": "private",
-        "serverSideEncryptionConfiguration": {}
+        "acl": "private"
+    }
+}
+
+test_deny_missing_encryption {
+    count(deny_encryption) > 0 with input as {
+        "type": "aws:s3/bucket:Bucket",
+        "__name": "my-bucket"
     }
 }
 ```
