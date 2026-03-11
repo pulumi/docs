@@ -90,7 +90,7 @@ For more information on dev containers, see the [VS Code Dev Containers document
 
 * **Examples**: Many of the examples we include in our documentation are maintained as full Pulumi programs and tested daily. You'll find them all at `./static/programs`.
 
-* **Infrastructure**: We deploy the website as a statically built artifact to a unique Amazon S3 bucket on every commit to the base branch of this repo. The Pulumi program that handles this is located in `./infrastructure`. This is also where you'll find the CloudFront configuration that handles proxying [Pulumi Neo](https://pulumi.com/neo) and the [Pulumi Registry](https://pulumi.com/registry).
+* **Infrastructure**: We deploy the website as a statically built artifact to a unique Amazon S3 bucket on every commit to the base branch of this repo. The Pulumi program that handles this is located in `./infrastructure`. This is also where you'll find the CloudFront configuration that handles proxying [Pulumi Neo](https://pulumi.com/product/neo/) and the [Pulumi Registry](https://pulumi.com/registry).
 
 ### Using the Makefile
 
@@ -274,7 +274,7 @@ Delve deeper into Pulumi with additional resources:
 * [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Deploy a simple application in AWS, Azure, Google Cloud, or Kubernetes using Pulumi.
 * [Registry](https://www.pulumi.com/registry/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Search for packages and learn about the supported resources you need. Install the package directly into your project, browse the API documentation, and start building.
 * [Pulumi Blog](https://www.pulumi.com/blog/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Stay in the loop with our latest tech announcements, insightful articles, and updates.
-* [Try Pulumi Neo](https://www.pulumi.com/neo/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Use natural-language prompts to generate Pulumi infrastructure-as-code programs in any language.
+* [Try Pulumi Neo](https://www.pulumi.com/product/neo/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Use natural-language prompts to generate Pulumi infrastructure-as-code programs in any language.
 
 ## Pulumi roadmap
 

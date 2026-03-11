@@ -25,7 +25,7 @@ Here are a few links to help you get started if you are new to Pulumi:
 - [Setup & Install](https://www.pulumi.com/registry/packages/gcp/installation-configuration/) - Instructions on installing the Google Cloud provider
 - [How-to guides](https://www.pulumi.com/registry/packages/gcp/how-to-guides/) - Learn how to use the Google Cloud provider to provision specific resources
 - [Templates](https://www.pulumi.com/templates/serverless-application/gcp/) - Use a quickstart template to create a new project
-- [Pulumi Neo](https://www.pulumi.com/neo) - Ask Pulumi Neo to create a new project
+- [Pulumi Neo](https://www.pulumi.com/product/neo/) - Ask Pulumi Neo to create a new project
 
 ## Looking Back
 

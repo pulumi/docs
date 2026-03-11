@@ -68,9 +68,6 @@ const config = {
     cdnLogDeliverySourceName: stackConfig.get("cdnLogDeliverySourceName") || undefined,
 };
 
-const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
-const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
-
 // Reference to the Astro stack for data warehouse access (only if enabled)
 let astroAwsRoleArn: pulumi.Output<any> | undefined;
 if (config.enableDataWarehouseAccess) {
@@ -461,8 +458,6 @@ function newSecurityHeadersPolicy(name: string, frameOption: string) {
 
 // Most of the site
 const SecurityHeadersPolicy = newSecurityHeadersPolicy('security-headers', config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN');
-// Copilot lives in an iframe
-const CopilotSecurityHeadersPolicy = newSecurityHeadersPolicy('copilot-security-headers', 'SAMEORIGIN');
 
 const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
@@ -605,18 +600,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 originSslProtocols: ["TLSv1.2"],
             },
         },
-        {
-            originId: cloudAiAppDomain,
-            domainName: cloudAiAppDomain,
-            customOriginConfig: {
-                originProtocolPolicy: "https-only",
-                httpPort: 80,
-                httpsPort: 443,
-                originSslProtocols: ["TLSv1.2"],
-                originReadTimeout: 60,
-                originKeepaliveTimeout: 60,
-            },
-        },
         ...registryOrigins,
         ...guidesOrigins,
         ...answersOrigins,
@@ -752,7 +735,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             maxTtl: 0,
         },
 
-        // /ai -> /neo redirect, /ai/* -> 410 Gone
+        // /ai -> /product/neo/ redirect, /ai/* -> 410 Gone
         {
             ...baseCacheBehavior,
             pathPattern: '/ai',
@@ -764,43 +747,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             lambdaFunctionAssociations: [getAIRedirectAndGoneAssociation()],
         },
 
-        // Copilot app
-        {
-            ...baseCacheBehavior,
-            // allow all methods
-            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
-            cachedMethods: [
-                "GET", "HEAD", "OPTIONS",
-            ],
-            targetOriginId: cloudAiAppDomain,
-            pathPattern: '/pulumi-ai/copilot',
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            lambdaFunctionAssociations: [],
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-            responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
-            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
-            defaultTtl: 0,
-            maxTtl: 0,
-        },
-        {
-            ...baseCacheBehavior,
-            // allow all methods
-            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
-            cachedMethods: [
-                "GET", "HEAD", "OPTIONS",
-            ],
-            targetOriginId: cloudAiAppDomain,
-            pathPattern: '/pulumi-ai/copilot/*',
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            lambdaFunctionAssociations: [],
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-            responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
-            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
-            defaultTtl: 0,
-            maxTtl: 0,
-        }
     ],
 
     // "All" is the most broad distribution, and also the most expensive.

@@ -115,7 +115,7 @@ Keep in mind that monitoring LLM performance is important to ensure you can rely
 
 ### Accelerating Development with AI-Powered Tools
 
-AI-powered tools are revolutionizing the development process, enabling DevOps teams to access intelligent recommendations and improve code quality or obtain suggestions on new ways to accomplish goals. An example is the usage of [Pulumi Neo](https://www.pulumi.com/neo).
+AI-powered tools are revolutionizing the development process, enabling DevOps teams to access intelligent recommendations and improve code quality or obtain suggestions on new ways to accomplish goals. An example is the usage of [Pulumi Neo](https://www.pulumi.com/product/neo/).
 
 Tools like LangChain, Amazon CodeGuru, and Pulumi AI provide actionable insights for efficient resource utilization while enforcing policy and compliance best practices. An [IaC that leverages AI empowers teams](https://www.pulumi.com/blog/pulumi-insights-ai-cli/) to automate and more effectively manage infrastructure.
 

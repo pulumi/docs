@@ -28,12 +28,12 @@ export function getEdgeRedirectAssociation(): aws.types.input.cloudfront.Distrib
     };
 }
 
-export function getAIRedirectAndGoneAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
-    const aiRedirectAndGoneLambda = new LambdaEdge("ai-redirect-gone", {
-        func: getAIRedirectAndGoneLambdaCallback(),
-        funcDescription: "Lambda function that redirects /ai to /neo and returns 410 Gone for /ai/* subpaths.",
-    }, { provider: usEast1Provider });
+const aiRedirectAndGoneLambda = new LambdaEdge("ai-redirect-gone", {
+    func: getAIRedirectAndGoneLambdaCallback(),
+    funcDescription: "Lambda function that redirects /ai to /product/neo/ and returns 410 Gone for /ai/* subpaths.",
+}, { provider: usEast1Provider });
 
+export function getAIRedirectAndGoneAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
     return {
         includeBody: false,
         lambdaArn: aiRedirectAndGoneLambda.getLambdaEdgeArn(),
@@ -83,13 +83,13 @@ function getAIRedirectAndGoneLambdaCallback(): aws.lambda.Callback<CloudFrontReq
         const request = event.Records[0].cf.request;
         const uri = request.uri;
 
-        // Redirect /ai or /ai/ to /neo.
+        // Redirect /ai or /ai/ to /product/neo/.
         if (uri === "/ai" || uri === "/ai/") {
             callback(null, {
                 status: "301",
                 statusDescription: "Moved Permanently",
                 headers: {
-                    "location": [{ key: "Location", value: "/neo" }],
+                    "location": [{ key: "Location", value: "/product/neo/" }],
                     "cache-control": [{ key: "Cache-Control", value: "max-age=604800" }],
                 },
             });
