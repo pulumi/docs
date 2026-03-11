@@ -16,7 +16,7 @@
                     {{ if in .RelPermalink "/gads/neo" }}
                     <a data-track="header-signup" href="https://app.pulumi.com/pulumi/neo?prefer_signup=true" class="btn-primary">Try Neo for FREE</a>
                     {{ else }}
-                    {{ partial "cta-get-started" (dict "class" "btn-primary") }}
+                    {{ partial "cta-get-started" (dict "class" "btn-primary" "utm_source" (.Params.utm_source | default "")) }}
                     {{ end }}
                 </div>
             </div>

@@ -1,8 +1,9 @@
 ---
 title: "CDK Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: "Like AWS CDK but without CloudFormation. Direct cloud deployment, multi-cloud, real testing. No transpilation bottleneck."
 layout: gads-template
 block_external_search_index: true
+hide_platform_details: true
 utm_source: gads-cdk
 aliases:
     - /gads/gads-template
@@ -12,10 +13,15 @@ subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
 
+customer_quote:
+    text: "Pulumi helped us go from weeks to hours for infrastructure changes."
+    author: "Starburst Engineering"
+    logo: starburst
+    link: /case-studies/starburst
+
 overview:
-    title: Infrastructure as Code<br/>in any Programming Language
-    description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a CDK alternative</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+    title: "Like CDK, But Without CloudFormation."
+    description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">a CDK alternative</span>? Pulumi uses real programming languages like CDK, but deploys directly to cloud providers without compiling to CloudFormation templates. Multi-cloud from day one, with real testing, clear errors, and no 500-resource limits.'
 
 key_features_above:
     items:
@@ -166,19 +172,18 @@ key_features:
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
-    title: Open source. Enterprise ready.
+    title: "Trusted by thousands of companies"
     description: |
-        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
-        by an active community. We maintain a public roadmap and welcome feedback and contributions.
+        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "10,000s"
-        description: of community members
+        number: "150,000+"
+        description: "Community members"
     company:
-        number: "1,000s"
-        description: of companies
+        number: "3,000+"
+        description: "Companies"
     integration:
         number: "170+"
-        description: Cloud and service integrations
+        description: "Cloud and service integrations"
 
 key_features_below:
     items:

@@ -163,19 +163,18 @@ key_features:
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
-    title: Open source. Enterprise ready.
+    title: "Trusted by thousands of companies"
     description: |
-        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
-        by an active community. We maintain a public roadmap and welcome feedback and contributions.
+        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "10,000s"
-        description: of community members
+        number: "150,000+"
+        description: "Community members"
     company:
-        number: "1,000s"
-        description: of companies
+        number: "3,000+"
+        description: "Companies"
     integration:
         number: "170+"
-        description: Cloud and service integrations
+        description: "Cloud and service integrations"
 
 key_features_below:
     items:

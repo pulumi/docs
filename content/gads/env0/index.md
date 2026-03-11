@@ -1,9 +1,10 @@
 ---
 title: "Env0 Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: "Why add a management layer when the platform includes it? IaC, deployments, policies, secrets, cost visibility. One platform."
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-env0
+hide_platform_details: true
 aliases:
     - /gads/gads-template
 
@@ -13,9 +14,14 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 overview:
-    title: Infrastructure as Code<br/>in any Programming Language
-    description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">an Env0 alternative</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+    title: "Why Add a Management Layer<br/>When the Platform Includes It?"
+    description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">an Env0 alternative</span>? env0 wraps Terraform with deployment workflows and cost controls. Pulumi Cloud provides the IaC engine, deployments, policies, secrets management, cost visibility, and AI in a single integrated platform. No extra vendor for management.'
+
+customer_quote:
+    text: "100,000+ builds per day serving over 11,000 engineers."
+    author: "BMW Group Engineering"
+    logo: bmw
+    link: /case-studies/bmw
 
 key_features_above:
     items:
@@ -166,19 +172,18 @@ key_features:
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
-    title: Open source. Enterprise ready.
+    title: "Trusted by thousands of companies"
     description: |
-        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
-        by an active community. We maintain a public roadmap and welcome feedback and contributions.
+        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "10,000s"
-        description: of community members
+        number: "150,000+"
+        description: "Community members"
     company:
-        number: "1,000s"
-        description: of companies
+        number: "3,000+"
+        description: "Companies"
     integration:
         number: "170+"
-        description: Cloud and service integrations
+        description: "Cloud and service integrations"
 
 key_features_below:
     items:

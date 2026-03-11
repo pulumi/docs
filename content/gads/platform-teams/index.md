@@ -1,6 +1,6 @@
 ---
 title: "Platform Engineering | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: "Build internal developer platforms that let engineers provision infrastructure safely. Policies, guardrails, templates, and full auditability built in."
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-platform-teams
@@ -9,6 +9,14 @@ heading: "Platform engineering"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
+
+hide_platform_details: true
+
+customer_quote:
+    text: "We standardized infrastructure architectures with reusable components."
+    author: "Lemonade Engineering"
+    logo: lemonade
+    link: /case-studies/lemonade
 
 overview:
     title: Enable self-service infrastructure<br/>without scaling your platform team

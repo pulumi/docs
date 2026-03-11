@@ -31,6 +31,25 @@
         </div>
     </section>
 
+    {{ with .Params.case_studies.items }}
+    <section class="container mx-auto text-center overflow-hidden px-3 mt-8 mb-4">
+        <h6 class="text-center text-gray-500 text-sm mb-2">Trusted by innovative companies</h6>
+        <div class="mb-2">
+            {{ $logos := slice }}
+            {{ range . }}
+                {{ $logos = $logos | append (dict "name" .logo) }}
+            {{ end }}
+            {{ partial "stacked-carousel.html" (dict "logos" $logos "single_row" true "gray_hover" true) }}
+        </div>
+    </section>
+    {{ end }}
+
+    {{ with .Params.customer_quote }}
+    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-4 mb-8 px-6">
+        {{ partial "home/quote.html" (dict "quote" .) }}
+    </section>
+    {{ end }}
+
     <section id="key-features-above">
         {{ range $index, $feature := .Params.key_features_above.items }}
             <div class="mb-16 pt-8 relative">
@@ -208,6 +227,7 @@
         </div>
     </section>
 
+    {{ if not (eq .Params.hide_platform_details true) }}
     <section id="key-features-below">
         {{ range $item := .Params.key_features_below.items }}
             <div class="container mx-auto text-center pt-20 w-11/12 sm:w-9/12">
@@ -253,6 +273,7 @@
             </div>
         {{ end }}
     </section>
+    {{ end }}
 
     <section id="case-studies" class="relative px-6 mt-28">
         <div class="container mx-auto">

@@ -1,6 +1,6 @@
 ---
 title: "Infrastructure as Code | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: "Infrastructure as Code in Python, TypeScript, Go, or C#. Ship infrastructure 3-5x faster with real programming languages, full IDE support, and testing. Free tier."
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-infrastructure-engineers
@@ -9,6 +9,14 @@ heading: "Infrastructure as Code"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
+
+hide_platform_details: true
+
+customer_quote:
+    text: "100,000+ builds per day serving over 11,000 engineers."
+    author: "BMW Group Engineering"
+    logo: bmw
+    link: /case-studies/bmw
 
 overview:
     title: Ship infrastructure 3-5x faster<br/>with real programming languages

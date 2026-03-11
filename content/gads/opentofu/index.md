@@ -1,8 +1,9 @@
 ---
 title: "OpenTofu Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: "You chose open source for the license. Now choose real languages over HCL. Pulumi is Apache 2.0, no resource caps, 170+ providers."
 layout: gads-template
 block_external_search_index: true
+hide_platform_details: true
 utm_source: gads-opentofu
 aliases:
     - /gads/gads-template
@@ -12,10 +13,15 @@ subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
 
+customer_quote:
+    text: "We went from 50,000 lines of YAML to 500 lines of Python."
+    author: "Snowflake Engineering"
+    logo: snowflake
+    link: /case-studies/snowflake
+
 overview:
-    title: Infrastructure as Code<br/>in any Programming Language
-    description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">an OpenTofu alternative</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+    title: "You Left HCL's License.<br/>Now Leave Its Limits."
+    description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">an OpenTofu alternative</span>? OpenTofu solved the licensing problem but you still write HCL. Pulumi is also Apache 2.0 open source, but uses Python, TypeScript, Go, or C# with real testing, IDE support, and 170+ providers. Pulumi Cloud manages OpenTofu state directly.'
 
 key_features_above:
     items:
@@ -166,19 +172,18 @@ key_features:
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
-    title: Open source. Enterprise ready.
+    title: "Trusted by thousands of companies"
     description: |
-        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
-        by an active community. We maintain a public roadmap and welcome feedback and contributions.
+        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "10,000s"
-        description: of community members
+        number: "150,000+"
+        description: "Community members"
     company:
-        number: "1,000s"
-        description: of companies
+        number: "3,000+"
+        description: "Companies"
     integration:
         number: "170+"
-        description: Cloud and service integrations
+        description: "Cloud and service integrations"
 
 key_features_below:
     items:
