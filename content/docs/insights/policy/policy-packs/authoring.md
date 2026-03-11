@@ -21,7 +21,7 @@ aliases:
 
 If Pulumi's pre-built policy packs don't meet your requirements, you can write custom policy packs. Custom policies let you enforce any compliance, security, or operational rule.
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/insights/policy/#languages).
+Policies can be written in TypeScript/JavaScript (Node.js), Python, or OPA (Rego) and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/insights/policy/#languages).
 
 ### Creating a Policy Pack with Neo
 
@@ -42,6 +42,7 @@ Before authoring your first policy pack, ensure you have:
 - [Pulumi CLI installed](/docs/install/).
 - For TypeScript/JavaScript policies: [Node.js installed](https://nodejs.org/en/download/).
 - For Python policies: [Python installed](https://python.org/downloads/).
+- For OPA policies: Install the OPA analyzer plugin with `pulumi plugin install analyzer policy-opa`.
 - (Optional) Access to Pulumi Cloud if you want to publish and centrally manage policy packs. Not required for local policy pack usage with open source Pulumi.
 - An understanding of [Policy as Code core concepts](/docs/insights/policy/).
 
@@ -49,7 +50,7 @@ Before authoring your first policy pack, ensure you have:
 
 Create your first policy pack:
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -197,6 +198,43 @@ Create your first policy pack:
 
 {{% /choosable %}}
 
+{{% choosable language opa %}}
+
+<a id="opa"></a>
+
+{{% notes type="info" %}}
+There is no `pulumi policy new` template for OPA. Create the policy pack files manually as shown below.
+{{% /notes %}}
+
+1. Create a directory for your policy pack and navigate to it.
+
+    ```sh
+    $ mkdir policypack && cd policypack
+    ```
+
+1. Create a `PulumiPolicy.yaml` file with the OPA runtime:
+
+    ```yaml
+    runtime: opa
+    ```
+
+1. Create a Rego policy file (e.g., `s3_bucket_prefix.rego`) with a `deny` rule. The policy receives each resource as `input` and returns a set of violation messages:
+
+    ```rego
+    package s3_bucket_prefix
+
+    deny[msg] {
+        input.type == "aws:s3/bucket:Bucket"
+        prefix := object.get(input.props, "bucketPrefix", "")
+        not startswith(prefix, "mycompany-")
+        msg := sprintf("S3 bucket must use 'mycompany-' prefix. Current prefix: '%s'", [prefix])
+    }
+    ```
+
+    Each policy must define a `deny` rule that evaluates to a set of violation message strings. An empty set means the resource is compliant.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 You can find more example policy packs in the [Pulumi examples repository](https://github.com/pulumi/examples/tree/master/policy-packs).
@@ -205,7 +243,7 @@ You can find more example policy packs in the [Pulumi examples repository](https
 
 Write unit tests to verify your policies work correctly before publishing.
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -228,6 +266,36 @@ Here's a simple test example using pytest:
 ```
 
 For a complete example including additional test cases, see the [unit test policy example on GitHub](https://github.com/pulumi/docs/tree/master/static/programs/unit-test-policy-python).
+
+{{% /choosable %}}
+
+{{% choosable language opa %}}
+
+OPA policies can be tested using the standard `opa test` command from the [OPA CLI](https://www.openpolicyagent.org/docs/latest/#running-opa). Create a test file (e.g., `s3_bucket_prefix_test.rego`) alongside your policy:
+
+```rego
+package s3_bucket_prefix
+
+test_deny_wrong_prefix {
+    count(deny) > 0 with input as {
+        "type": "aws:s3/bucket:Bucket",
+        "props": {"bucketPrefix": "wrongprefix-"}
+    }
+}
+
+test_allow_correct_prefix {
+    count(deny) == 0 with input as {
+        "type": "aws:s3/bucket:Bucket",
+        "props": {"bucketPrefix": "mycompany-prod"}
+    }
+}
+```
+
+Run the tests:
+
+```sh
+$ opa test .
+```
 
 {{% /choosable %}}
 
@@ -441,7 +509,7 @@ When writing policies for dynamic providers:
 
 Test your policy pack locally before publishing.
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -561,6 +629,29 @@ Test your policy pack locally before publishing.
             [mandatory]  aws-python v0.0.1  s3-bucket-prefix (my-bucket: aws:s3/bucket:Bucket)
             Ensures S3 buckets use the required naming prefix.
             S3 bucket must use 'mycompany-' prefix. Current prefix: 'wrongprefix-'
+
+{{% /choosable %}}
+
+{{% choosable language opa %}}
+
+1. Use the `--policy-pack` flag to specify your OPA policy pack directory:
+
+    If you need a test program, create one with `pulumi new aws-typescript` or `pulumi new aws-python`. This creates an S3 bucket to test the policy.
+
+    ```sh
+    $ mkdir test-program && cd test-program
+    $ pulumi new aws-typescript
+    ```
+
+    > For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
+
+1. In the Pulumi program's directory, run:
+
+    ```sh
+    $ pulumi preview --policy-pack <path-to-opa-policy-pack-directory>
+    ```
+
+    The `--policy-pack` flag works the same way for OPA packs as it does for TypeScript and Python packs.
 
 {{% /choosable %}}
 
@@ -788,6 +879,7 @@ Policy pack versions are managed differently by language:
 
 - **TypeScript/JavaScript**: Set the `version` field in `package.json`
 - **Python**: Set the `version` field in `PulumiPolicy.yaml`
+- **OPA**: Set the `version` field in `PulumiPolicy.yaml`
 
 Each version can only be published once.
 
@@ -796,6 +888,7 @@ Each version can only be published once.
 1. Update the version number:
    - TypeScript: Edit `package.json`: `"version": "0.0.2"`
    - Python: Edit `PulumiPolicy.yaml`: `version: 0.0.2`
+   - OPA: Edit `PulumiPolicy.yaml`: `version: 0.0.2`
 
 1. Publish:
 

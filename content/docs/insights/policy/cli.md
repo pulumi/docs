@@ -60,7 +60,8 @@ When using `--policy-pack`, the policy pack must be present on disk. Pulumi Clou
 ### Create and test a policy pack
 
 ```bash
-# Create a new policy pack from a template
+# Create a new policy pack from a template (TypeScript/Python only;
+# for OPA packs, create the files manually — see the authoring guide)
 pulumi policy new aws-typescript
 
 # Test policies locally during preview
