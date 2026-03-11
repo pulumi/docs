@@ -13,7 +13,7 @@ check_version() {
     color_yellow=$(echo -e "\033[0;33m")
     color_end=$(echo -e "\033[0m")
 
-    details="See the README at https://github.com/pulumi/docs for a list of required tools and versions."
+    details="Run 'mise install' to install the correct versions (see mise.toml), or see the README at https://github.com/pulumi/docs."
 
     if ! command -v "$executable" &> /dev/null; then
         echo -e "${color_red}error${color_end} This project requires $1, but the '$2' executable is either not installed or not on your PATH."
