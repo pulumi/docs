@@ -502,6 +502,8 @@ First create a file called `StaticPage.ts`, and add the imports we will need:
 
 {{< example-program path="sample-components" languages="typescript:StaticPage.ts:1-2" >}}
 
+The `@pulumi/pulumi` package is the core Pulumi SDK, which provides the base classes and types needed to define components and resources. The `@pulumi/aws` package is the Pulumi AWS provider, which gives us the resource types we need to create AWS infrastructure.
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -511,6 +513,8 @@ First create a file called `static_page.py`, and add the imports we will need:
 ***Example:** `static_page.py` required dependencies*
 
 {{< example-program path="sample-components" languages="python:static_page.py:1-6" >}}
+
+The `pulumi` package is the core Pulumi SDK, which provides the base classes and types needed to define components and resources. The `pulumi_aws` package is the Pulumi AWS provider, which gives us the resource types we need to create AWS infrastructure.
 
 {{% /choosable %}}
 
@@ -522,6 +526,8 @@ First create a directory called `staticpagecomponent` and create a file called `
 
 {{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:1-9" >}}
 
+The `github.com/pulumi/pulumi/sdk/v3/go/pulumi` package is the core Pulumi SDK, which provides the base types needed to define components and resources. The `github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3` package is the Pulumi AWS provider's S3 module, which gives us the resource types we need to create AWS infrastructure.
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -532,6 +538,8 @@ First create a file called `StaticPage.cs`, and add the imports we will need:
 
 {{< example-program path="sample-components" languages="csharp:StaticPage.cs:1-8" >}}
 
+The `Pulumi` namespace is the core Pulumi SDK, which provides the base classes and types needed to define components and resources. The `Pulumi.Aws.S3` namespace is from the Pulumi AWS provider, which gives us the resource types we need to create AWS infrastructure.
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
@@ -541,6 +549,8 @@ First create a file called `StaticPage.java`, and add the imports we will need:
 ***Example:** `StaticPage.java` required imports*
 
 {{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:1-24" >}}
+
+The `com.pulumi.resources` and `com.pulumi.core` packages are from the core Pulumi SDK, which provide the base classes and types needed to define components and resources. The `com.pulumi.aws.s3` package is from the Pulumi AWS provider, which gives us the resource types we need to create AWS infrastructure.
 
 {{% /choosable %}}
 
@@ -633,7 +643,7 @@ Inputs can be any basic type (e.g. `boolean`, `integer`, `string`) or an `array`
 
 {{% choosable language typescript %}}
 
-Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
+Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `StaticPage.ts` the Component implementation*
 
@@ -643,7 +653,7 @@ Now we can implement the component itself. Components should inherit from `pulum
 
 {{% choosable language python %}}
 
-Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.register_outputs` signals Pulumi that the process of creating the component resource has completed.
+Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.register_outputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `static_page.py` the Component implementation*
 
@@ -662,7 +672,7 @@ Now we can implement the component itself. Component structs should include `pul
 
 {{% choosable language csharp %}}
 
-Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.RegisterOutputs` signals Pulumi that the process of creating the component resource has completed.
+Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.RegisterOutputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `StaticPage.cs` the Component implementation*
 
@@ -672,7 +682,7 @@ Now we can implement the component itself. Components should inherit from `Pulum
 
 {{% choosable language java %}}
 
-Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
+Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `StaticPage.java` the Component implementation*
 
@@ -721,7 +731,7 @@ Inheriting from `pulumi.ComponentResource` gives us some built-in behind-the-sce
 
 {{< example-program path="sample-components" languages="typescript:StaticPage.ts:9-9" >}}
 
-We use a class property to store the output value. Note that it's using `pulumi.Output<string>` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
+We use a class property to store the output value. Component outputs should always use `pulumi.Output<T>` rather than plain types. This ensures that outputs can be passed directly to other Pulumi resource inputs, which also accept `pulumi.Output<T>`, without any additional unwrapping or conversion.
 
 #### The Component constructor
 
@@ -730,10 +740,14 @@ We use a class property to store the output value. Note that it's using `pulumi.
 The constructor has a few standard arguments:
 
 - `name`: The name given to an instance of this component. When writing a Pulumi program, resources are named by the end-user. Later on in the implementation we will use this base component name to uniquely name the resources it contains.
-- `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
-- `opts`: This is an *optional* set of common resource configuration values. The [`ResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
+- `args`: This is an instance of the argument class we defined earlier, containing the inputs for our component.
+- `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
 
 Since we're inheriting, we also need to call the base class constructor `super(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implementation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
+
+{{< notes type="warning" >}}
+Changing the resource type name after a component has been deployed will cause all existing resources of that type to be recreated. Change the type name with extreme caution.
+{{< /notes >}}
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
@@ -752,8 +766,6 @@ Another important implementation detail here is the `opts` value being passed to
 ##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
 The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
-
-Notice that this time we pass the `Bucket` instance in as the `parent` to the `ResourceOptions` instances for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
@@ -801,7 +813,7 @@ Inheriting from `pulumi.ComponentResource` gives us some built-in behind-the-sce
 
 {{< example-program path="sample-components" languages="python:static_page.py:15-16" >}}
 
-We use a class property to store the output value. Note that it's using `pulumi.Output[str]` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
+We use a class property to store the output value. Component outputs should always use `pulumi.Output[T]` rather than plain types. This ensures that outputs can be passed directly to other Pulumi resource inputs, which also accept `pulumi.Output[T]`, without any additional unwrapping or conversion.
 
 #### The Component constructor
 
@@ -810,10 +822,14 @@ We use a class property to store the output value. Note that it's using `pulumi.
 The constructor has a few standard arguments:
 
 - `name`: The name given to an instance of this component. When writing a Pulumi program, resources are named by the end-user. Later on in the implementation we will use this base component name to uniquely name the resources it contains.
-- `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
-- `opts`: This is an *optional* set of common resource configuration values. The [`ResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
+- `args`: This is an instance of the argument class we defined earlier, containing the inputs for our component.
+- `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
 
 Since we're inheriting, we also need to call the base class constructor `super().__init__`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implementation detail. Otherwise, we pass the `name` value into the base constructor, as well as the `opts` value, and an empty object for the `args` value.
+
+{{< notes type="warning" >}}
+Changing the resource type name after a component has been deployed will cause all existing resources of that type to be recreated. Change the type name with extreme caution.
+{{< /notes >}}
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
@@ -832,8 +848,6 @@ Another important implementation detail here is the `opts` value being passed to
 ##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
 The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
-
-Notice that this time we pass the `Bucket` instance in as the `parent` to the `ResourceOptions` instances for these sub-resources, as opposed to `self` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
@@ -881,7 +895,7 @@ The struct must embed the `pulumi.ResourceState` struct. This gives us some buil
 
 {{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:17-17" >}}
 
-We use a struct field to store the output value. Note that it's using `pulumi.StringOutput` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program. The `pulumi:"endpoint"` tag defines the name of the property and allows for reflection to generate schema.
+We use a struct field to store the output value. Component outputs should always use a `pulumi.*Output` type (such as `pulumi.StringOutput`) rather than plain types. This ensures that outputs can be passed directly to other Pulumi resource inputs, which also accept these output types, without any additional unwrapping or conversion. The `pulumi:"endpoint"` tag defines the name of the property and allows for reflection to generate schema.
 
 #### The Component constructor
 
@@ -891,10 +905,14 @@ The constructor has a few standard arguments:
 
 - `ctx`: The Pulumi context, which allows for interaction w/ the Pulumi engine
 - `name`: The name given to an instance of this component. When writing a Pulumi program, resources are named by the end-user. Later on in the implementation we will use this base component name to uniquely name the resources it contains.
-- `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
-- `opts`: This is an *optional* set of common resource configuration values. The [`ResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
+- `args`: This is an instance of the argument class we defined earlier, containing the inputs for our component.
+- `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
 
 The next step is to register our new component instance with Pulumi via the `ctx` instance. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implementation detail. Otherwise, we pass the `name` value, our component instance, as well as the `opts` values.
+
+{{< notes type="warning" >}}
+Changing the resource type name after a component has been deployed will cause all existing resources of that type to be recreated. Change the type name with extreme caution.
+{{< /notes >}}
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
@@ -913,8 +931,6 @@ Another important implementation detail here is the `opts` value being passed to
 ##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
 The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
-
-Notice that this time we pass the `Bucket` instance as the parent of these sub-resources, via `pulumi.Parent(bucket)`, as opposed to `comp` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
@@ -962,7 +978,7 @@ Inheriting from `Pulumi.ComponentResource` gives us some built-in behind-the-sce
 
 {{< example-program path="sample-components" languages="csharp:StaticPage.cs:16-17" >}}
 
-We use a class property to store the output value. Note that it's using `Pulumi.Output<string>` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
+We use a class property to store the output value. Component outputs should always use `Pulumi.Output<T>` rather than plain types. This ensures that outputs can be passed directly to other Pulumi resource inputs, which also accept `Pulumi.Output<T>`, without any additional unwrapping or conversion.
 
 #### The Component constructor
 
@@ -971,10 +987,14 @@ We use a class property to store the output value. Note that it's using `Pulumi.
 The constructor has a few standard arguments:
 
 - `name`: The name given to an instance of this component. When writing a Pulumi program, resources are named by the end-user. Later on in the implementation we will use this base component name to uniquely name the resources it contains.
-- `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
+- `args`: This is an instance of the argument class we defined earlier, containing the inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
 
 Since we're inheriting, we also need to call the base class constructor `base(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:<module>:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The module portion of this type name is always `index` and is a required implementation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
+
+{{< notes type="warning" >}}
+Changing the resource type name after a component has been deployed will cause all existing resources of that type to be recreated. Change the type name with extreme caution.
+{{< /notes >}}
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
@@ -993,8 +1013,6 @@ Another important implementation detail here is the `opts` value being passed to
 ##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
 The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
-
-Notice that this time we pass the `Bucket` instance in as the `Parent` in the `opts` for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
@@ -1042,7 +1060,7 @@ Inheriting from `com.pulumi.resources.ComponentResource` gives us some built-in 
 
 {{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:43-44" >}}
 
-We use a class property to store the output value. Note that it's using `com.pulumi.core.Output<String>` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
+We use a class property to store the output value. Component outputs should always use `com.pulumi.core.Output<T>` rather than plain types. This ensures that outputs can be passed directly to other Pulumi resource inputs, which also accept `Output<T>`, without any additional unwrapping or conversion.
 
 The `@Export` decorator marks this as an exported output, and allows us to set a specific name for the output value.
 
@@ -1053,10 +1071,14 @@ The `@Export` decorator marks this as an exported output, and allows us to set a
 The constructor has a few standard arguments:
 
 - `name`: The name given to an instance of this component. When writing a Pulumi program, resources are named by the end-user. Later on in the implementation we will use this base component name to uniquely name the resources it contains.
-- `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
+- `args`: This is an instance of the argument class we defined earlier, containing the inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
 
 Since we're inheriting, we also need to call the base class constructor `super(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:<module>:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The module portion of this type name is always `index` and is a required implementation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
+
+{{< notes type="warning" >}}
+Changing the resource type name after a component has been deployed will cause all existing resources of that type to be recreated. Change the type name with extreme caution.
+{{< /notes >}}
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
@@ -1075,8 +1097,6 @@ Another important implementation detail here is the `opts` value being passed to
 ##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
 The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
-
-Notice that this time we pass the `Bucket` instance in as the `parent` in the `opts` for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
@@ -1143,8 +1163,6 @@ Another important implementation detail here is the `options` section. By defaul
 ##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
 The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
-
-Notice that this time we pass the `Bucket` instance in as the `parent` in the `options` for these sub-resources. This is an essential step to tie the sub-resources into the dependency graph. That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
