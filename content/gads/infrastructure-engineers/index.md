@@ -13,7 +13,7 @@ subheading: |
 hide_platform_details: true
 
 customer_quote:
-    text: "When we did it with Terraform, it took two weeks. Now we do it in about three hours. That's how much of an improvement Pulumi gave us."
+    text: "When we did it with Terraform, it took two weeks to do infrastructure deployments. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
     author: "Matt Stephenson, Senior Principal Software Engineer, Starburst"
     logo: starburst
     link: /case-studies/starburst

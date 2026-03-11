@@ -13,7 +13,7 @@ subheading: |
 hide_platform_details: true
 
 customer_quote:
-    text: "Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies."
+    text: "Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies for logging, permissions, resource tagging, and security."
     author: "Igor Shapiro, Principal Engineer, Lemonade"
     logo: lemonade
     link: /case-studies/lemonade

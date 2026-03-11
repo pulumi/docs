@@ -14,7 +14,7 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 customer_quote:
-    text: "Pulumi let us build and automate cloud infrastructure projects at a scale that simply wasn't imaginable using prior-generation infrastructure as code technologies."
+    text: "When we did it with Terraform, it took two weeks to do infrastructure deployments. Now we do it in about three hours a day."
     author: "Matt Stephenson, Senior Principal Software Engineer, Starburst"
     logo: starburst
     link: /case-studies/starburst

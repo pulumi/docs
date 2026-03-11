@@ -18,7 +18,7 @@ overview:
     description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">an Env0 alternative</span>? env0 wraps Terraform with deployment workflows and cost controls. Pulumi Cloud provides the IaC engine, deployments, policies, secrets management, cost visibility, and AI in a single integrated platform. No extra vendor for management.'
 
 customer_quote:
-    text: "With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With Pulumi, it's Python. It's five lines of code."
+    text: "With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With Pulumi, it's Python. It's five lines of code. If you want to add a new database, add one line, and you're good to go."
     author: "Mike Corsaro, Senior Software Engineer, Atlassian"
     logo: atlassian
     link: /case-studies/atlassian

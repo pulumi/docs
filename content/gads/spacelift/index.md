@@ -18,7 +18,7 @@ overview:
     description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">a Spacelift alternative</span>? Spacelift adds a management layer on top of Terraform. Pulumi Cloud is the IaC engine and the management platform: state, secrets, policies, deployments, and AI, all integrated. No wrapper tools, no extra vendors.'
 
 customer_quote:
-    text: "With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With Pulumi, it's Python. It's five lines of code."
+    text: "With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With Pulumi, it's Python. It's five lines of code. If you want to add a new database, add one line, and you're good to go."
     author: "Mike Corsaro, Senior Software Engineer, Atlassian"
     logo: atlassian
     link: /case-studies/atlassian

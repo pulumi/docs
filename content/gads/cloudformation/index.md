@@ -14,7 +14,7 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 customer_quote:
-    text: "Our developers needed a fast, modular, and testable platform for managing cloud infrastructure. Nothing is better than having standard programming languages for building and managing infrastructure."
+    text: "Our developers needed a robust platform for managing our complex infrastructure, and it needed to be fast, modular, and testable. Nothing is better than having standard programming languages for building and managing infrastructure."
     author: "Austin Byers, Principal Platform Engineer, Panther Labs"
     logo: panther-labs
     link: /case-studies/panther-labs

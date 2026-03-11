@@ -14,8 +14,8 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 customer_quote:
-    text: "Pulumi helped our team to ship a new product faster. We needed one tool to setup and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively."
-    author: "Justin Fitzhugh, VP of Cloud Platform Engineering, Snowflake"
+    text: "What used to take a week and a half now, with Pulumi, took under a day."
+    author: "Raman Hariharan, Director of Cloud Platform Engineering, Snowflake"
     logo: snowflake
     link: /case-studies/snowflake
 

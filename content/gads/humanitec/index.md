@@ -16,7 +16,7 @@ overview:
     description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">a Humanitec alternative</span>? Humanitec requires learning Score, a proprietary workload specification. Pulumi uses standard programming languages. Your platform engineers define components in real code. Developers consume them in any language. Open source, no vendor lock-in.'
 
 customer_quote:
-    text: "Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies."
+    text: "Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies for logging, permissions, resource tagging, and security."
     author: "Igor Shapiro, Principal Engineer, Lemonade"
     logo: lemonade
     link: /case-studies/lemonade
