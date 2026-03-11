@@ -1,5 +1,5 @@
 ---
-title: "Secrets Management Tools: The Complete 2025 Guide"
+title: "Secrets Management Tools: The Complete 2026 Guide"
 date: 2025-07-24
 draft: false
 meta_desc: "Compare secrets management tools and find the best solution for your infrastructure with expert analysis and recommendations."
@@ -16,7 +16,7 @@ tags:
 aliases:
     - /blog/secrets-management-tools-guide/
 solution_areas:
-    - security-and-compliance
+    - security-compliance
 content_type: ecosystem-overview
 capabilities:
     - secrets-management

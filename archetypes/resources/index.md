@@ -11,8 +11,8 @@ title_tag: ""
 # Resource library taxonomy
 solution_areas:
     # - infrastructure-unification
-    # - security-and-compliance
-    # - infrastructure-at-scale
+    # - security-compliance
+    # - ai-ready-infrastructure
 
 content_type: ""
     # ecosystem-overview | comparison-guide | solution-guide

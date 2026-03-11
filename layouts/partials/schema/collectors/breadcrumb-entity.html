@@ -129,6 +129,28 @@
     {{/* End of IaC Clouds section additional nesting */}}
     {{ end }}
 
+{{ else if eq .Type "resources" }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Resource Library"
+    "item" "https://www.pulumi.com/resources/"
+  ) }}
+
+  {{/* Add category level for articles nested in a solution area */}}
+  {{ with .Parent }}
+    {{ if not .Parent.IsHome }}
+      {{ $position = add $position 1 }}
+      {{ $breadcrumbs = $breadcrumbs | append (dict
+        "@type" "ListItem"
+        "position" $position
+        "name" .Title
+        "item" .Permalink
+      ) }}
+    {{ end }}
+  {{ end }}
+
 {{ else if eq .Section "product" }}
   {{ $position = add $position 1 }}
   {{ $breadcrumbs = $breadcrumbs | append (dict

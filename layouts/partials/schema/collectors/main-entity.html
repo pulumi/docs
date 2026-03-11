@@ -65,8 +65,8 @@
       {{/* Product pages get SoftwareApplication schema */}}
       {{ $entity = partial "schema/collectors/product-entity.html" . }}
 
-    {{ else if eq .Type "resources" }}
-      {{/* Resource library pages get Article schema */}}
+    {{ else if and (eq .Type "resources") .IsPage }}
+      {{/* Resource library article pages get Article schema */}}
       {{ $entity = partial "schema/collectors/resource-entity.html" . }}
 
     {{ else if eq .Section "case-studies" }}

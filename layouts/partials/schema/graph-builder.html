@@ -171,8 +171,37 @@
   {{ $graph = $graph | append $software }}
 {{ end }}
 
-{{/* Add FAQPage schema for resource library pages with frontmatter faq */}}
-{{ if and (eq .Type "resources") .IsPage .Params.faq }}
+{{/* Add CollectionPage schema for resource library category pages */}}
+{{ if and (eq .Type "resources") (not .IsPage) (not .IsHome) (not .Parent.IsHome) }}
+  {{ $categorySlug := index (split (strings.TrimSuffix "/" .RelPermalink) "/") (sub (len (split (strings.TrimSuffix "/" .RelPermalink) "/")) 1) }}
+  {{ $allResources := where (where $.Site.Pages "Type" "resources") "Kind" "page" }}
+  {{ $articles := where $allResources ".Params.solution_areas" "intersect" (slice $categorySlug) }}
+
+  {{ $collectionItems := slice }}
+  {{ range $articles }}
+    {{ $collectionItems = $collectionItems | append (dict
+      "@type" "ListItem"
+      "url" .Permalink
+      "name" .Title
+    ) }}
+  {{ end }}
+
+  {{ $collectionSchema := dict
+    "@type" "CollectionPage"
+    "@id" "#collection"
+    "name" .Title
+    "url" .Permalink
+    "description" (or .Params.meta_desc .Title)
+    "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+  }}
+  {{ if $collectionItems }}
+    {{ $collectionSchema = merge $collectionSchema (dict "hasPart" $collectionItems) }}
+  {{ end }}
+  {{ $graph = $graph | append $collectionSchema }}
+{{ end }}
+
+{{/* Add FAQPage schema for resource library pages with frontmatter faq (articles AND category pages) */}}
+{{ if and (eq .Type "resources") .Params.faq }}
   {{ $faqQuestions := slice }}
   {{ range .Params.faq }}
     {{ if and .question .answer }}

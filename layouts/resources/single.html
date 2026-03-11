@@ -1,24 +1,23 @@
 {{ define "hero" }}
-    {{ $labels := dict
-        "ai-and-automation" "AI and Automation"
-        "policy-as-code" "Policy as Code"
-        "secrets-management" "Secrets Management"
-        "multi-cloud" "Multi-Cloud"
-        "kubernetes" "Kubernetes"
-        "infrastructure-unification" "Infrastructure Unification"
-        "security-and-compliance" "Security & Compliance"
-        "infrastructure-at-scale" "Infrastructure at Scale"
-    }}
+    {{ $labels := $.Site.Data.resources.labels }}
     <div class="relative bg-white border-b border-gray-200">
         <div class="container mx-auto px-4 py-8 max-w-7xl">
             <!-- Breadcrumb -->
-            <nav class="flex items-center text-sm mb-6">
+            <nav class="flex items-center flex-wrap text-sm mb-6">
                 <a href="/" class="text-gray-500 hover:text-purple-600 transition-colors">Home</a>
-                <svg class="w-4 h-4 mx-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 mx-2 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
                 <a href="{{ relref . "/resources" }}" class="text-gray-500 hover:text-purple-600 transition-colors">Resource Library</a>
-                <svg class="w-4 h-4 mx-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {{ with .Parent }}
+                    {{ if not .Parent.IsHome }}
+                        <svg class="w-4 h-4 mx-2 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <a href="{{ .RelPermalink }}" class="text-gray-500 hover:text-purple-600 transition-colors">{{ .Title }}</a>
+                    {{ end }}
+                {{ end }}
+                <svg class="w-4 h-4 mx-2 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
                 <span class="text-gray-700">{{ .Title }}</span>
@@ -61,13 +60,21 @@
                 <!-- Tags -->
                 <div class="flex flex-wrap gap-2">
                     {{ range .Params.solution_areas }}
-                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-50 text-purple-700 border border-purple-200">
-                            {{ index $labels . | default (replace . "-" " " | title) }}
-                        </span>
+                        {{ $areaLabel := index $labels.solution_areas . | default (replace . "-" " " | title) }}
+                        {{ $areaPage := $.Site.GetPage (printf "/resources/%s" .) }}
+                        {{ if $areaPage }}
+                            <a href="{{ $areaPage.RelPermalink }}" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-50 text-purple-700 border border-purple-200 hover:bg-purple-100 transition-colors">
+                                {{ $areaLabel }}
+                            </a>
+                        {{ else }}
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-50 text-purple-700 border border-purple-200">
+                                {{ $areaLabel }}
+                            </span>
+                        {{ end }}
                     {{ end }}
                     {{ range .Params.capabilities }}
                         <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-50 text-purple-700 border border-purple-200">
-                            {{ index $labels . | default (replace . "-" " " | title) }}
+                            {{ index $labels.capabilities . | default (replace . "-" " " | title) }}
                         </span>
                     {{ end }}
                 </div>
@@ -138,14 +145,40 @@
                             </div>
                         </div>
 
-                        <!-- Relevant resources -->
+                        <!-- Relevant resources (category-aware) -->
+                        {{ $currentAreas := .Params.solution_areas | default slice }}
+                        {{ $currentCaps := .Params.capabilities | default slice }}
                         {{ $allResources := where (where $.Site.Pages "Type" "resources") "Kind" "page" }}
+                        {{ $others := where $allResources ".RelPermalink" "ne" $.RelPermalink }}
+
+                        {{/* Prioritize: same solution area, then shared capabilities */}}
+                        {{ $sameArea := slice }}
+                        {{ if $currentAreas }}
+                            {{ $sameArea = where $others ".Params.solution_areas" "intersect" $currentAreas }}
+                        {{ end }}
+                        {{ $remaining := slice }}
+                        {{ range $others }}
+                            {{ $found := false }}
+                            {{ range $sameArea }}
+                                {{ if eq .RelPermalink $.RelPermalink }}{{ $found = true }}{{ end }}
+                            {{ end }}
+                            {{ if not $found }}
+                                {{ $remaining = $remaining | append . }}
+                            {{ end }}
+                        {{ end }}
+
                         {{ $related := slice }}
-                        {{ range $allResources }}
-                            {{ if ne .RelPermalink $.RelPermalink }}
+                        {{ range $sameArea }}
+                            {{ if lt (len $related) 5 }}
                                 {{ $related = $related | append . }}
                             {{ end }}
                         {{ end }}
+                        {{ range $remaining }}
+                            {{ if lt (len $related) 5 }}
+                                {{ $related = $related | append . }}
+                            {{ end }}
+                        {{ end }}
+
                         {{ if $related }}
                             <div class="bg-purple-50 rounded-xl shadow-sm border border-purple-100 p-6">
                                 <h4 class="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-4 pb-2 border-b border-gray-200">Relevant resources</h4>
@@ -156,6 +189,14 @@
                                         </a>
                                     {{ end }}
                                 </div>
+                                {{/* Link to parent category page */}}
+                                {{ with $.Parent }}
+                                    {{ if not .Parent.IsHome }}
+                                        <a href="{{ .RelPermalink }}" class="block text-sm text-purple-600 hover:text-purple-800 font-medium mt-4 pt-3 border-t border-purple-200">
+                                            More in {{ .Title }} &rarr;
+                                        </a>
+                                    {{ end }}
+                                {{ end }}
                             </div>
                         {{ end }}
                     </div>

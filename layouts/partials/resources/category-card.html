@@ -1,0 +1,25 @@
+{{ $page := .Page }}
+{{ $labels := .Labels }}
+
+{{/* Count articles in this category */}}
+{{ $parts := split (strings.TrimSuffix "/" $page.RelPermalink) "/" }}
+{{ $categorySlug := index $parts (sub (len $parts) 1) }}
+{{ $allResources := where (where $.Page.Site.Pages "Type" "resources") "Kind" "page" }}
+{{ $articles := where $allResources ".Params.solution_areas" "intersect" (slice $categorySlug) }}
+{{ $count := len $articles }}
+
+<a href="{{ $page.RelPermalink }}" class="group block bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg hover:border-purple-300 transition-all">
+    <div class="flex items-start justify-between mb-3">
+        <h3 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
+            {{ $page.Title }}
+        </h3>
+        {{ if $count }}
+            <span class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded-full bg-purple-100 text-purple-700 ml-3 flex-shrink-0">
+                {{ $count }} {{ if eq $count 1 }}guide{{ else }}guides{{ end }}
+            </span>
+        {{ end }}
+    </div>
+    {{ with $page.Params.tagline }}
+        <p class="text-gray-600 text-sm mb-0">{{ . }}</p>
+    {{ end }}
+</a>

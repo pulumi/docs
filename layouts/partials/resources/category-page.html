@@ -1,0 +1,120 @@
+{{ $labels := $.Site.Data.resources.labels }}
+
+{{/* Extract the category slug from the URL path */}}
+{{ $parts := split (strings.TrimSuffix "/" .RelPermalink) "/" }}
+{{ $categorySlug := index $parts (sub (len $parts) 1) }}
+
+{{/* Query articles by frontmatter solution_areas (not just directory children) */}}
+{{ $allResources := where (where $.Site.Pages "Type" "resources") "Kind" "page" }}
+{{ $articles := where $allResources ".Params.solution_areas" "intersect" (slice $categorySlug) }}
+
+<div class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+
+        {{/* Breadcrumb */}}
+        <nav class="flex items-center text-sm mb-8">
+            <a href="/" class="text-gray-500 hover:text-purple-600 transition-colors">Home</a>
+            <svg class="w-4 h-4 mx-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <a href="{{ relref . "/resources" }}" class="text-gray-500 hover:text-purple-600 transition-colors">Resource Library</a>
+            <svg class="w-4 h-4 mx-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span class="text-gray-700 font-medium">{{ .Title }}</span>
+        </nav>
+
+        {{/* Header */}}
+        <div class="mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
+            {{ with .Params.tagline }}
+                <p class="text-xl text-gray-600 leading-relaxed">{{ . }}</p>
+            {{ end }}
+        </div>
+
+        {{/* Pillar content */}}
+        {{ with .Content }}
+            <div class="bg-white rounded-lg shadow-sm p-6 md:p-8 mb-10 prose prose-lg max-w-none">
+                {{ . }}
+            </div>
+        {{ end }}
+
+        {{/* Article grid */}}
+        {{ if $articles }}
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Guides in this area</h2>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {{ range sort $articles ".Params.featured_weight" "desc" }}
+                        {{ partial "resources/resource-card.html" (dict "Page" . "Labels" $labels "HideParentArea" $categorySlug) }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+
+        {{/* FAQ */}}
+        {{ with .Params.faq }}
+            <div class="bg-white rounded-lg shadow-sm p-6 md:p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
+                {{ range . }}
+                    {{ if and .question .answer }}
+                        <div class="mb-6 last:mb-0">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ .question }}</h3>
+                            <p class="text-gray-600 leading-relaxed">{{ .answer | markdownify }}</p>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            </div>
+        {{ end }}
+
+        {{/* Explore more */}}
+        <div class="bg-white rounded-lg shadow-sm p-6 md:p-8 mb-10">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Explore more</h2>
+            <div class="grid gap-8 md:grid-cols-2">
+                {{/* Related capabilities */}}
+                {{ with .Params.related_capabilities }}
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Related topics</h3>
+                        <div class="flex flex-wrap gap-2">
+                            {{ range . }}
+                                <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-purple-50 text-purple-700 border border-purple-200">
+                                    {{ index $labels.capabilities . | default (replace . "-" " " | title) }}
+                                </span>
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ end }}
+
+                {{/* Related solution areas */}}
+                {{ with $.Params.related_areas }}
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Other solution areas</h3>
+                        <div class="flex flex-col gap-2">
+                            {{ range . }}
+                                {{ $areaLabel := index $labels.solution_areas . | default (replace . "-" " " | title) }}
+                                {{ $areaPage := $.Site.GetPage (printf "/resources/%s" .) }}
+                                {{ if $areaPage }}
+                                    <a href="{{ $areaPage.RelPermalink }}" class="text-purple-600 hover:text-purple-800 font-medium transition-colors">
+                                        {{ $areaLabel }}
+                                    </a>
+                                {{ else }}
+                                    <span class="text-gray-500">{{ $areaLabel }}</span>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+
+        {{/* CTA */}}
+        {{ with .Params.cta }}
+            <div class="p-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl shadow-xl text-white">
+                <h3 class="text-2xl font-bold mb-2 text-white">Ready to get started?</h3>
+                <p class="text-purple-100 mb-4">See how Pulumi can help your team.</p>
+                <a href="{{ .url }}" class="inline-flex items-center px-6 py-3 bg-white text-purple-700 font-semibold rounded-lg hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl">
+                    {{ .text }}
+                </a>
+            </div>
+        {{ end }}
+    </div>
+</div>

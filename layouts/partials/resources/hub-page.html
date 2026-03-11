@@ -1,0 +1,57 @@
+{{ $labels := $.Site.Data.resources.labels }}
+{{ $allResources := where (where $.Site.Pages "Type" "resources") "Kind" "page" }}
+
+<div class="bg-gray-50 py-8">
+    <div class="container mx-auto px-4 max-w-6xl">
+        {{ with .Content }}
+            <div class="bg-white rounded-lg shadow-sm p-6 md:p-8 mb-8 prose prose-lg max-w-none">
+                {{ . }}
+            </div>
+        {{ end }}
+
+        {{/* Browse by Solution Area */}}
+        {{ $activeSections := slice }}
+        {{ range .Sections }}
+            {{ $childPages := where .Pages "Kind" "page" }}
+            {{ if $childPages }}
+                {{ $activeSections = $activeSections | append . }}
+            {{ end }}
+        {{ end }}
+
+        {{ if $activeSections }}
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by solution area</h2>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-{{ len $activeSections }}">
+                    {{ range $activeSections }}
+                        {{ partial "resources/category-card.html" (dict "Page" . "Labels" $labels) }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+
+        {{/* Featured Articles */}}
+        {{ $featured := where $allResources ".Params.featured" true }}
+        {{ if $featured }}
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Featured guides</h2>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {{ range sort $featured ".Params.featured_weight" "desc" }}
+                        {{ partial "resources/resource-card.html" (dict "Page" . "Labels" $labels) }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+
+        {{/* All Articles */}}
+        {{ if $allResources }}
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">All guides</h2>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {{ range sort $allResources ".Date" "desc" }}
+                        {{ partial "resources/resource-card.html" (dict "Page" . "Labels" $labels) }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+    </div>
+</div>

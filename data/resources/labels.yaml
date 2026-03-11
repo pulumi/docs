@@ -1,0 +1,19 @@
+solution_areas:
+  infrastructure-unification: "Infrastructure Unification"
+  security-compliance: "Security & Compliance"
+  ai-ready-infrastructure: "AI-Ready Infrastructure"
+
+capabilities:
+  ai-and-automation: "AI and Automation"
+  policy-as-code: "Policy as Code"
+  secrets-management: "Secrets Management"
+  multi-cloud: "Multi-Cloud"
+  kubernetes: "Kubernetes"
+  internal-developer-platforms: "Internal Developer Platforms"
+  drift-detection: "Drift Detection"
+  compliance: "Compliance"
+
+content_types:
+  ecosystem-overview: "Ecosystem Overview"
+  comparison-guide: "Comparison Guide"
+  solution-guide: "Solution Guide"
