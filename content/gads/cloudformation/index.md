@@ -14,8 +14,8 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 customer_quote:
-    text: "We replaced 13,000 lines of CloudFormation with Pulumi and saw 10x faster deployments."
-    author: "Panther Labs Engineering"
+    text: "Our developers needed a fast, modular, and testable platform for managing cloud infrastructure. Nothing is better than having standard programming languages for building and managing infrastructure."
+    author: "Austin Byers, Principal Platform Engineer, Panther Labs"
     logo: panther-labs
     link: /case-studies/panther-labs
 
@@ -176,11 +176,11 @@ stats:
     description: |
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "150,000+"
+        number: "350,000+"
         description: "Community members"
     company:
-        number: "3,000+"
-        description: "Companies"
+        number: "3,700+"
+        description: "Companies in production"
     integration:
         number: "170+"
         description: "Cloud and service integrations"

@@ -16,8 +16,8 @@ overview:
     description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">a Port alternative</span>? Port provides the portal layer but still needs external tools for provisioning. Pulumi IDP includes the IaC engine, templates, catalogs, policies, secrets, and deployment automation. One platform for developer self-service.'
 
 customer_quote:
-    text: "Standardized infrastructure architectures with reusable components."
-    author: "Lemonade Engineering"
+    text: "Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies."
+    author: "Igor Shapiro, Principal Engineer, Lemonade"
     logo: lemonade
     link: /case-studies/lemonade
 
@@ -174,11 +174,11 @@ stats:
     description: |
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "150,000+"
+        number: "350,000+"
         description: "Community members"
     company:
-        number: "3,000+"
-        description: "Companies"
+        number: "3,700+"
+        description: "Companies in production"
     integration:
         number: "170+"
         description: "Cloud and service integrations"

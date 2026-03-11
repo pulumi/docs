@@ -14,8 +14,8 @@ subheading: |
     and works with your existing Terraform. Migrate at your pace.
 
 customer_quote:
-    text: "We went from 50,000 lines of YAML to 500 lines of Python."
-    author: "Snowflake Engineering"
+    text: "Pulumi helped our team to ship a new product faster. We needed one tool to setup and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively."
+    author: "Justin Fitzhugh, VP of Cloud Platform Engineering"
     logo: snowflake
     link: /case-studies/snowflake
 
@@ -193,11 +193,11 @@ stats:
     description: |
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "150,000+"
+        number: "350,000+"
         description: "Community members"
     company:
-        number: "3,000+"
-        description: "Companies"
+        number: "3,700+"
+        description: "Companies in production"
     integration:
         number: "170+"
         description: "Cloud and service integrations"

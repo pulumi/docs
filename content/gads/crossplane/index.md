@@ -14,8 +14,8 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 customer_quote:
-    text: "We went from 50,000 lines of YAML to 500 lines of Python, managing multi-cloud Kubernetes."
-    author: "Snowflake Engineering"
+    text: "If Kubernetes is AC power, Pulumi is like the universal travel adapter that lets us plug into all these resources and abstract away the complexities of each individual platform."
+    author: "Raman Hariharan, Director of Cloud Platform Engineering, Snowflake"
     logo: snowflake
     link: /case-studies/snowflake
 
@@ -176,11 +176,11 @@ stats:
     description: |
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "150,000+"
+        number: "350,000+"
         description: "Community members"
     company:
-        number: "3,000+"
-        description: "Companies"
+        number: "3,700+"
+        description: "Companies in production"
     integration:
         number: "170+"
         description: "Cloud and service integrations"

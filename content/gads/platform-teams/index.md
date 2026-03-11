@@ -13,8 +13,8 @@ subheading: |
 hide_platform_details: true
 
 customer_quote:
-    text: "We standardized infrastructure architectures with reusable components."
-    author: "Lemonade Engineering"
+    text: "Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies."
+    author: "Igor Shapiro, Principal Engineer, Lemonade"
     logo: lemonade
     link: /case-studies/lemonade
 
@@ -175,10 +175,10 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
         by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "150,000+"
+        number: "350,000+"
         description: developers
     company:
-        number: "3,000+"
+        number: "3,700+"
         description: organizations
     integration:
         number: "170+"

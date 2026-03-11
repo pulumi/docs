@@ -39,7 +39,7 @@
             {{ range . }}
                 {{ $logos = $logos | append (dict "name" .logo) }}
             {{ end }}
-            {{ partial "stacked-carousel.html" (dict "logos" $logos "single_row" true "gray_hover" true) }}
+            {{ partial "stacked-carousel.html" (dict "logos" $logos "single_row" true) }}
         </div>
     </section>
     {{ end }}

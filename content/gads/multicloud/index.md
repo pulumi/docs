@@ -13,8 +13,8 @@ subheading: |
 hide_platform_details: true
 
 customer_quote:
-    text: "We manage 16 regions and 80,000 resources, up from a single region."
-    author: "Supabase Engineering"
+    text: "The infrastructure team acts as groundkeepers of our Pulumi practices, not gatekeepers, but promoters for the entire org."
+    author: "Paul Cioanca, Platform Engineer, Supabase"
     logo: supabase
     link: /case-studies/supabase
 
@@ -175,10 +175,10 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
         by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "150,000+"
+        number: "350,000+"
         description: developers
     company:
-        number: "3,000+"
+        number: "3,700+"
         description: organizations
     integration:
         number: "170+"

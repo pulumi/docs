@@ -13,10 +13,10 @@ subheading: |
 hide_platform_details: true
 
 customer_quote:
-    text: "100,000+ builds per day serving over 11,000 engineers."
-    author: "BMW Group Engineering"
-    logo: bmw
-    link: /case-studies/bmw
+    text: "When we did it with Terraform, it took two weeks. Now we do it in about three hours. That's how much of an improvement Pulumi gave us."
+    author: "Matt Stephenson, Senior Principal Software Engineer, Starburst"
+    logo: starburst
+    link: /case-studies/starburst
 
 overview:
     title: Ship infrastructure 3-5x faster<br/>with real programming languages
@@ -175,10 +175,10 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
         by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "150,000+"
+        number: "350,000+"
         description: developers
     company:
-        number: "3,000+"
+        number: "3,700+"
         description: organizations
     integration:
         number: "170+"

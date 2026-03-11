@@ -18,10 +18,10 @@ overview:
     description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">an Env0 alternative</span>? env0 wraps Terraform with deployment workflows and cost controls. Pulumi Cloud provides the IaC engine, deployments, policies, secrets management, cost visibility, and AI in a single integrated platform. No extra vendor for management.'
 
 customer_quote:
-    text: "100,000+ builds per day serving over 11,000 engineers."
-    author: "BMW Group Engineering"
-    logo: bmw
-    link: /case-studies/bmw
+    text: "With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With Pulumi, it's Python. It's five lines of code."
+    author: "Mike Corsaro, Senior Software Engineer, Atlassian"
+    logo: atlassian
+    link: /case-studies/atlassian
 
 key_features_above:
     items:
@@ -176,11 +176,11 @@ stats:
     description: |
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "150,000+"
+        number: "350,000+"
         description: "Community members"
     company:
-        number: "3,000+"
-        description: "Companies"
+        number: "3,700+"
+        description: "Companies in production"
     integration:
         number: "170+"
         description: "Cloud and service integrations"

@@ -16,8 +16,8 @@ overview:
     description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terragrunt alternative</span>? Pulumi Cloud provides native support for managing infrastructure at scale using programming languages you know and love, without needing wrapper tools or complex configuration management. Built-in stacks, reusable components, and multi-environment support.'
 
 customer_quote:
-    text: "Pulumi helped us go from weeks to hours for infrastructure changes."
-    author: "Starburst Engineering"
+    text: "Pulumi let us build and automate cloud infrastructure projects at a scale that simply wasn't imaginable using prior-generation infrastructure as code technologies."
+    author: "Matt Stephenson, Senior Principal Software Engineer, Starburst"
     logo: starburst
     link: /case-studies/starburst
 
@@ -335,11 +335,11 @@ stats:
     description: |
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "150,000+"
+        number: "350,000+"
         description: "Community members"
     company:
-        number: "3,000+"
-        description: "Companies"
+        number: "3,700+"
+        description: "Companies in production"
     integration:
         number: "170+"
         description: "Cloud and service integrations"
