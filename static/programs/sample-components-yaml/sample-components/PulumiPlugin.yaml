@@ -1,0 +1,56 @@
+runtime: yaml
+name: sample-components
+components:
+  StaticPage:
+    inputs:
+      indexContent:
+        type: string
+    resources:
+      bucket:
+        type: aws:s3:Bucket
+        properties: {}
+
+      bucketWebsite:
+        type: aws:s3:BucketWebsiteConfiguration
+        properties:
+          bucket: ${bucket.bucket}
+          indexDocument:
+            suffix: index.html
+
+      bucketObject:
+        type: aws:s3/bucketObject:BucketObject
+        properties:
+          bucket: ${bucket.bucket}
+          key: index.html
+          content: ${indexContent}
+          contentType: text/html
+
+      publicAccessBlock:
+        type: aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock
+        properties:
+          bucket: ${bucket.id}
+          blockPublicAcls: false
+          blockPublicPolicy: false
+          ignorePublicAcls: false
+          restrictPublicBuckets: false
+
+      bucketPolicy:
+        type: aws:s3/bucketPolicy:BucketPolicy
+        properties:
+          bucket: ${bucket.id}
+          policy:
+            fn::toJSON:
+              Version: "2012-10-17"
+              Statement:
+                - Effect: Allow
+                  Principal: "*"
+                  Action:
+                    - s3:GetObject
+                  Resource:
+                    - arn:aws:s3:::${bucket.bucket}/*
+        options:
+          dependsOn:
+            - ${publicAccessBlock}
+
+    outputs:
+      endpoint: ${bucketWebsite.websiteEndpoint}

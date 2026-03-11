@@ -1,0 +1,8 @@
+name: sample-components-java
+description: A Pulumi Java program that builds and uses a static page component
+runtime:
+  name: java
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-java

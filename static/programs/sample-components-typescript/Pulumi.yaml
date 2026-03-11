@@ -1,0 +1,7 @@
+name: sample-components-typescript
+description: A Pulumi TypeScript program that builds and uses a static page component
+runtime: nodejs
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript
