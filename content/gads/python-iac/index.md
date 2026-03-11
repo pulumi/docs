@@ -1,11 +1,11 @@
 ---
-title: "Infrastructure as Code | Pulumi"
-meta_desc: "Infrastructure as Code in Python, TypeScript, Go, or C#. Ship infrastructure 3-5x faster with real programming languages, full IDE support, and testing. Free tier."
+title: "Infrastructure as Code in Python | Pulumi"
+meta_desc: "Infrastructure as Code in Python. Define AWS, Azure, GCP resources with type checking, testing, and full IDE support. 170+ providers. Free tier."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-infrastructure-engineers
+utm_source: gads-python-iac
 
-heading: "Infrastructure as Code"
+heading: "Infrastructure as Code in Python"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
@@ -13,38 +13,37 @@ subheading: |
 hide_platform_details: true
 
 customer_quote:
-    text: "When we did it with Terraform, it took two weeks to do infrastructure deployments. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
-    author: "Matt Stephenson, Senior Principal Software Engineer, Starburst"
-    logo: starburst
-    link: /case-studies/starburst
+    text: "Since it's just another programming language with control structures and external packages, it makes for a good transition from application code to infrastructure as code."
+    author: "Paul Cioanca, Platform Engineer, Supabase"
+    logo: supabase
+    link: /case-studies/supabase/
 
 overview:
-    title: Ship infrastructure 3-5x faster<br/>with real programming languages
+    title: Write Cloud Infrastructure in Python.<br/>Not YAML. Not HCL.
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a robust IaC solution</span>? Stop wrestling with YAML and proprietary DSLs. Use TypeScript, Python, Go, or C# to build, test, and deploy cloud infrastructure the way you write application code.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">infrastructure as code python</span>? Define AWS, Azure, GCP, and Kubernetes resources in Python with full IDE support, type checking, and testing. 170+ cloud providers. Free tier.
 
 key_features_above:
     items:
         - title: "Write infrastructure like software"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
-          image: "/images/product/pulumi-iac-code.png"
+            Author infrastructure as code (IaC) using Python and the ecosystem you already know. Use pip, pytest, and mypy. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
           features:
-              - title: AI-powered infrastructure
+              - title: Python ecosystem
                 description: |
-                    Generate Pulumi code from natural language or convert existing Terraform with Neo AI
+                    Use pip packages, pytest for testing, and mypy for type checking. No new toolchain.
+                icon: code
+                color: yellow
+              - title: Full IDE support
+                description: |
+                    Autocomplete, type checking, refactoring, and debugging in VS Code, PyCharm, and your favorite editor.
+                icon: eye
+                color: yellow
+              - title: AI code generation
+                description: |
+                    Pulumi AI understands Python natively. Generate and refine infrastructure code from natural language.
                 icon: lightning
-                color: yellow
-              - title: Deploy to any cloud in minutes
-                description: |
-                    170+ providers including AWS, Azure, GCP, Kubernetes, and every major SaaS platform
-                icon: cloud
-                color: yellow
-              - title: Catch errors before deployment
-                description: |
-                    Type-checking, unit tests, and policy validation prevent misconfigurations from reaching production
-                icon: shield
                 color: yellow
 
 key_features:
@@ -55,16 +54,6 @@ key_features:
           description: |
             Build and reuse higher-level abstractions for cloud architectures with multi-language Pulumi Packages. Distribute the packages through repositories or package managers so your team members can reuse them.
           ide:
-            - title: index.ts
-              language: typescript
-              code: |
-                import * as eks from "@pulumi/eks";
-
-                // Create an EKS cluster with the default configuration.
-                const cluster = new eks.Cluster("eks-cluster");
-
-                // Export the cluster's kubeconfig.
-                export const kubeconfig = cluster.kubeconfig;
             - title: __main__.py
               language: python
               code: |
@@ -76,72 +65,16 @@ key_features:
 
                 # Export the cluster's kubeconfig.
                 pulumi.export("kubeconfig", cluster.kubeconfig)
-            - title: main.go
-              language: go
+            - title: index.ts
+              language: typescript
               code: |
-                    package main
+                import * as eks from "@pulumi/eks";
 
-                    import (
-                      "github.com/pulumi/pulumi-eks/sdk/go/eks"
-                      "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-                    )
+                // Create an EKS cluster with the default configuration.
+                const cluster = new eks.Cluster("eks-cluster");
 
-                    func main() {
-                      pulumi.Run(func(ctx *pulumi.Context) error {
-                        // Create an EKS cluster with default settings.
-                        cluster, err := eks.NewCluster(ctx, "eks-cluster", nil)
-                        if err != nil {
-                          return err
-                        }
-
-                        // Export the cluster's kubeconfig.
-                        ctx.Export("kubeconfig", cluster.Kubeconfig)
-                        return nil
-                      })
-                    }
-            - title: MyStack.cs
-              language: csharp
-              code: |
-                using System.Collections.Generic;
-                using Pulumi;
-                using Pulumi.Eks;
-
-                await Deployment.RunAsync(() =>
-                {
-                  // Create an EKS cluster with default settings.
-                  var cluster = new Cluster("eks-cluster");
-
-                  // Export the cluster's kubeconfig.
-                  return new Dictionary<string, object?>
-                  {
-                    ["kubeconfig"] = cluster.Kubeconfig
-                  };
-                });
-            - title: Main.Java
-              language: java
-              code: |
-                import com.pulumi.Context;
-                import com.pulumi.Pulumi;
-                import com.pulumi.eks.Cluster;
-
-                public class App {
-                    public static void main(String[] args) {
-                        Pulumi.run(App::stack);
-                    }
-
-                    private static void stack(Context ctx) {
-                    final var cluster = new Cluster("eks-cluster");
-                    ctx.export("kubeconfig", cluster.kubeconfig());
-                  }
-                }
-            - title: Pulumi.yaml
-              language: yaml
-              code: |
-                resources:
-                  eks-cluster:
-                    type: eks:Cluster
-                outputs:
-                  kubeconfig: ${cluster.kubeconfig}
+                // Export the cluster's kubeconfig.
+                export const kubeconfig = cluster.kubeconfig;
           features:
               - title: Native cloud providers
                 description: |
@@ -223,6 +156,12 @@ key_features_below:
 case_studies:
     title: Customers innovating with Pulumi Cloud
     items:
+        - name: Supabase
+          link: /case-studies/supabase/
+          logo: supabase
+          description: |
+            Infrastructure contributors grew from 1-2 people to over 40 active engineers. 80,000+ resources across 16 regions.
+
         - name: Atlassian
           link: /case-studies/atlassian/
           logo: atlassian
@@ -246,12 +185,6 @@ case_studies:
           logo: bmw
           description: |
             Enabled developers to deploy across hybrid cloud environments.
-
-        - name: Lemonade
-          link: /case-studies/lemonade/
-          logo: lemonade
-          description: |
-            Standardized infrastructure architectures with reusable components.
 
         - name: Snowflake
           link: /case-studies/snowflake/

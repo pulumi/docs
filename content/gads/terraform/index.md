@@ -1,21 +1,28 @@
 ---
-title: "Terraform Free Tier Ending | Switch to Pulumi"
-meta_desc: HCP Terraform legacy Free plan ends March 31, 2026. Pulumi is free with no resource caps. Migrate from HCL to Python, TypeScript, Go, or C#.
+title: "Terraform Alternative | Pulumi"
+meta_desc: "Use Python, TypeScript, Go, or C# instead of HCL. Free migration tools, no resource caps on the free tier, 170+ cloud providers."
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-terraform
+hide_platform_details: true
 aliases:
     - /gads/gads-template
 
-heading: "Terraform Free Tier Ends Mar 31"
+heading: "Terraform Alternative"
 subheading: |
-    HCP Terraform's legacy Free plan ends March 31, 2026. Pulumi is free, open source,
-    and has no resource caps. Switch to real programming languages for your infrastructure.
+    Use the programming languages your team already knows. Pulumi is free, open source,
+    and works with your existing Terraform. Migrate at your pace.
+
+customer_quote:
+    text: "What used to take a week and a half now, with Pulumi, took under a day."
+    author: "Raman Hariharan, Director of Cloud Platform Engineering, Snowflake"
+    logo: snowflake
+    link: /case-studies/snowflake
 
 overview:
-    title: Switch to Real Code.<br/>No Resource Limits.
+    title: Real Languages. No Resource Caps.<br/>Migrate at Your Pace.
     description: |
-        HashiCorp is ending the legacy HCP Terraform Free plan on March 31, 2026. The new Free tier caps you at <span style="font-weight: bold;">500 managed resources</span>. Pulumi has <span style="font-weight: bold;">no resource caps</span> on the free tier. Write infrastructure in Python, TypeScript, Go, or C# with full IDE support, testing, and 170+ cloud providers. Free migration tools included.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform alternative</span>? HCP Terraform's free tier caps you at 500 managed resources. Pulumi Cloud has no resource caps. Write infrastructure in Python, TypeScript, Go, or C# with full IDE support, testing, and 170+ cloud providers. Free tf2pulumi migration tool included.
 
 key_features_above:
     items:
@@ -36,11 +43,10 @@ key_features_above:
                     a complete and consistent SDK interface.
                 icon: global
                 color: yellow
-              - title: Preview and test changes
+              - title: AI-powered infrastructure
                 description: |
-                    Test and validate infrastructure with standard unit test frameworks and
-                    integration tests. Preview changes before deploying.
-                icon: eye
+                    Generate Pulumi code from natural language or convert existing Terraform with Pulumi AI and Neo.
+                icon: lightning
                 color: yellow
         
 key_features:
@@ -182,19 +188,18 @@ key_features:
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
-    title: Open source. Enterprise ready.
+    title: "Trusted by thousands of companies"
     description: |
-        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
-        by an active community. We maintain a public roadmap and welcome feedback and contributions.
+        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "10,000s"
-        description: of community members
+        number: "350,000+"
+        description: "Community members"
     company:
-        number: "1,000s"
-        description: of companies
+        number: "3,700+"
+        description: "Companies in production"
     integration:
         number: "170+"
-        description: Cloud and service integrations
+        description: "Cloud and service integrations"
 
 key_features_below:
     items:

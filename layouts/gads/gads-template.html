@@ -31,6 +31,29 @@
         </div>
     </section>
 
+    {{ with .Params.case_studies.items }}
+    <section class="container mx-auto text-center px-3 mt-8 mb-4">
+        <h6 class="text-center text-gray-500 text-sm mb-2">Trusted by innovative companies</h6>
+        <div class="flex flex-wrap justify-center items-center py-4">
+            {{ range . }}
+                <div class="w-28 h-12 mx-6 my-2 flex items-center justify-center">
+                    {{ partial "customer-logo.html" (dict "logo" .logo) }}
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    {{ with .Params.customer_quote }}
+    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-4 mb-8 px-6">
+        <div class="container text-center mx-auto">
+            <p class="text-lg text-gray-700 italic">&ldquo;{{ .text }}&rdquo;</p>
+            <p class="text-base text-gray-600 font-semibold mt-2">{{ .author }}</p>
+            <div class="h-16 mt-4">{{ partial "customer-logo.html" (dict "logo" .logo) }}</div>
+        </div>
+    </section>
+    {{ end }}
+
     <section id="key-features-above">
         {{ range $index, $feature := .Params.key_features_above.items }}
             <div class="mb-16 pt-8 relative">
@@ -45,18 +68,25 @@
                             <div class="w-full lg:w-1/2 block lg:flex lg:justify-center lg:align-center">
                                 <div class="card bg-white shadow-xl p-6 block">
                                     {{ if $feature.ide }}
-                                        {{ $langOptions := slice }}
-                                        {{ range $index, $lang := $feature.ide }}
-                                            {{ $langOptions = $langOptions | append $lang.language }}
-                                        {{ end }}
-                                        {{ $langList := delimit $langOptions "," }}
-                                        <pulumi-chooser type="language" options="{{ $langList }}">
+                                        {{ $langCount := len $feature.ide }}
+                                        {{ if eq $langCount 1 }}
                                             {{ range $lang := $feature.ide }}
-                                                <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
-                                                    {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
-                                                </pulumi-choosable>
+                                                {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
                                             {{ end }}
-                                        </pulumi-chooser>
+                                        {{ else }}
+                                            {{ $langOptions := slice }}
+                                            {{ range $index, $lang := $feature.ide }}
+                                                {{ $langOptions = $langOptions | append $lang.language }}
+                                            {{ end }}
+                                            {{ $langList := delimit $langOptions "," }}
+                                            <pulumi-chooser type="language" options="{{ $langList }}">
+                                                {{ range $lang := $feature.ide }}
+                                                    <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
+                                                        {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
+                                                    </pulumi-choosable>
+                                                {{ end }}
+                                            </pulumi-chooser>
+                                        {{ end }}
                                     {{ else }}
                                         <div>
                                             <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
@@ -148,18 +178,25 @@
                 {{ end }}
                 {{ if not (eq $item.ide nil) }}
                     <div class="max-w-4xl container text-left card bg-white p-6 mx-auto">
-                        {{ $langOptions := slice }}
-                        {{ range $index, $lang := $item.ide }}
-                            {{ $langOptions = $langOptions | append $lang.language }}
-                        {{ end }}
-                        {{ $langList := delimit $langOptions "," }}
-                        <pulumi-chooser type="language" options="{{ $langList }}">
+                        {{ $langCount := len $item.ide }}
+                        {{ if eq $langCount 1 }}
                             {{ range $lang := $item.ide }}
-                                <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
-                                    {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
-                                </pulumi-choosable>
+                                {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
                             {{ end }}
-                        </pulumi-chooser>
+                        {{ else }}
+                            {{ $langOptions := slice }}
+                            {{ range $index, $lang := $item.ide }}
+                                {{ $langOptions = $langOptions | append $lang.language }}
+                            {{ end }}
+                            {{ $langList := delimit $langOptions "," }}
+                            <pulumi-chooser type="language" options="{{ $langList }}">
+                                {{ range $lang := $item.ide }}
+                                    <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
+                                        {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
+                                    </pulumi-choosable>
+                                {{ end }}
+                            </pulumi-chooser>
+                        {{ end }}
                     </div>
                 {{ end }}
                 <div class="mb-8 my-24">
@@ -208,6 +245,7 @@
         </div>
     </section>
 
+    {{ if not (eq .Params.hide_platform_details true) }}
     <section id="key-features-below">
         {{ range $item := .Params.key_features_below.items }}
             <div class="container mx-auto text-center pt-20 w-11/12 sm:w-9/12">
@@ -223,18 +261,25 @@
                 {{ end }}
                 {{ if not (eq $item.ide nil) }}
                     <div class="max-w-4xl container text-left card bg-white p-6 mx-auto">
-                        {{ $langOptions := slice }}
-                        {{ range $index, $lang := $item.ide }}
-                            {{ $langOptions = $langOptions | append $lang.language }}
-                        {{ end }}
-                        {{ $langList := delimit $langOptions "," }}
-                        <pulumi-chooser type="language" options="{{ $langList }}">
+                        {{ $langCount := len $item.ide }}
+                        {{ if eq $langCount 1 }}
                             {{ range $lang := $item.ide }}
-                                <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
-                                    {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
-                                </pulumi-choosable>
+                                {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
                             {{ end }}
-                        </pulumi-chooser>
+                        {{ else }}
+                            {{ $langOptions := slice }}
+                            {{ range $index, $lang := $item.ide }}
+                                {{ $langOptions = $langOptions | append $lang.language }}
+                            {{ end }}
+                            {{ $langList := delimit $langOptions "," }}
+                            <pulumi-chooser type="language" options="{{ $langList }}">
+                                {{ range $lang := $item.ide }}
+                                    <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
+                                        {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
+                                    </pulumi-choosable>
+                                {{ end }}
+                            </pulumi-chooser>
+                        {{ end }}
                     </div>
                 {{ end }}
                 <div class="mb-8 my-24">
@@ -253,6 +298,7 @@
             </div>
         {{ end }}
     </section>
+    {{ end }}
 
     <section id="case-studies" class="relative px-6 mt-28">
         <div class="container mx-auto">

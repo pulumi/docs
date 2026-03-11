@@ -1,6 +1,6 @@
 ---
 title: "Azure Infrastructure"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: Azure infrastructure as code in C#, Python, TypeScript, or Go. Native Azure provider, full API coverage. Multi-cloud ready. Free tier.
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-azure
@@ -15,7 +15,7 @@ subheading: |
 overview:
     title: Infrastructure as Code<br/>in any Programming Language
     description: |
-        Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">Azure infrastructure as code</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
 
 key_features_above:
     items:
@@ -178,19 +178,18 @@ key_features:
                     [Integrate your CI/CD provider](/docs/iac/packages-and-automation/continuous-delivery/) with Pulumi or use GitOps to [manage Kubernetes clusters](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/).
 
 stats:
-    title: Open source. Enterprise-ready.
+    title: "Trusted by thousands of companies"
     description: |
-        Pulumi's Infrastructure as Code CLI and SDK is an [open-source project](https://github.com/pulumi/) that's supported
-        by an active community. We maintain a [public roadmap](https://github.com/orgs/pulumi/projects/44) and welcome feedback and contributions.
+        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
         number: "350,000+"
-        description: engineers building with Pulumi
+        description: "Community members"
     company:
         number: "3,700+"
-        description: companies in production
+        description: "Companies in production"
     integration:
-        number: "1,000s"
-        description: of cloud and service providers
+        number: "170+"
+        description: "Cloud and service integrations"
 
 key_features_below:
     items:

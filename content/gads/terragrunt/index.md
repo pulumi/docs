@@ -1,9 +1,10 @@
 ---
 title: "Terragrunt Alternative | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Manage infrastructure at scale without the complexity of wrapper tools.
+meta_desc: "Native modularity without wrapper tools. Built-in stacks, components, and multi-environment support. Python, TypeScript, Go, or C#."
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-terragrunt
+hide_platform_details: true
 
 heading: "Terragrunt Alternative"
 subheading: |
@@ -11,9 +12,14 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 overview:
-    title: Infrastructure as Code<br/>in any Programming Language
-    description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terragrunt alternative</span>? Pulumi Cloud provides native support for managing infrastructure at scale using programming languages you know and love, without needing wrapper tools or complex configuration management.
+    title: "Native Modularity.<br/>No Wrapper Tools."
+    description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terragrunt alternative</span>? Pulumi Cloud provides native support for managing infrastructure at scale using programming languages you know and love, without needing wrapper tools or complex configuration management. Built-in stacks, reusable components, and multi-environment support.'
+
+customer_quote:
+    text: "When we did it with Terraform, it took two weeks to do infrastructure deployments. Now we do it in about three hours a day."
+    author: "Matt Stephenson, Senior Principal Software Engineer, Starburst"
+    logo: starburst
+    link: /case-studies/starburst
 
 key_features_above:
     items:
@@ -325,19 +331,18 @@ key_features:
                     Catch configuration errors at compile time with strongly-typed infrastructure code.
 
 stats:
-    title: Open source. Enterprise ready.
+    title: "Trusted by thousands of companies"
     description: |
-        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
-        by an active community. We maintain a public roadmap and welcome feedback and contributions.
+        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "10,000s"
-        description: of community members
+        number: "350,000+"
+        description: "Community members"
     company:
-        number: "1,000s"
-        description: of companies
+        number: "3,700+"
+        description: "Companies in production"
     integration:
         number: "170+"
-        description: Cloud and service integrations
+        description: "Cloud and service integrations"
 
 key_features_below:
     items:
