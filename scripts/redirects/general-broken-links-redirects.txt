@@ -54,3 +54,11 @@ docs/clouds/aws/aws-guides/kinesis/index.html|/docs/iac/clouds/aws/guides/
 docs/clouds/aws/aws-guides/s3/index.html|/docs/iac/clouds/aws/guides/
 docs/clouds/aws/aws-guides/sns/index.html|/docs/iac/clouds/aws/guides/
 docs/clouds/aws/aws-guides/sqs/index.html|/docs/iac/clouds/aws/guides/
+docs/deployments/deployments/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
+docs/pulumi-cloud/deployments/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
+docs/platform/deployments/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
+docs/intro/console/extensions/index.html|/docs/deployments/deployments/
+docs/intro/console/extensions/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
+docs/intro/console/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
+docs/intro/pulumi-service/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
+docs/intro/pulumi-cloud/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
