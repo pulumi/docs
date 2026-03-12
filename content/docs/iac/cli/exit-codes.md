@@ -14,7 +14,9 @@ meta_image: /images/docs/meta-images/docs-meta.png
 
 The Pulumi CLI returns numeric exit codes that indicate the result of a command. Scripts, CI/CD systems, and tools can use these codes to distinguish between different kinds of failures.
 
-> The global CLI exit code mapping described here was introduced in Pulumi CLI **v3.226.1**. Earlier versions may behave differently and do not guarantee the same mapping.
+{{% notes type="info" %}}
+The global CLI exit code mapping described here was introduced in Pulumi CLI **v3.226.1**. Earlier versions may behave differently and do not guarantee the same mapping.
+{{% /notes %}}
 
 This page explains how Pulumi exit codes work and how to consume them safely in automation. A zero exit code means the operation was **successful**, and any other code means **failure**.
 
