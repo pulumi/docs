@@ -1,8 +1,8 @@
 ---
-title_tag: "Using AWS VPC | Crosswalk"
+title_tag: "Using AWS VPC"
 title: VPC
 h1: AWS Virtual Private Cloud (VPC)
-meta_desc: Pulumi Crosswalk for AWS provides simple, out of the box VPC functionality that follows widely accepted best
+meta_desc: The AWSx VPC component provides simple, out of the box VPC functionality that follows widely accepted best
            practices.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
@@ -18,8 +18,6 @@ aliases:
 - /docs/clouds/aws/guides/vpc/
 ---
 
-{{< crosswalk-header >}}
-
 [Amazon Virtual Private Cloud (Amazon VPC)](https://aws.amazon.com/vpc) lets you provision a logically isolated section
 of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control
 over your virtual networking environment, including selection of your own IP address range, creation of subnets, and
@@ -29,12 +27,12 @@ access control lists, to limit network access to and from resources.
 
 ## Overview
 
-Pulumi Crosswalk for AWS provides simple, out of the box VPC functionality that follows widely accepted best
+The AWSx VPC component provides simple, out of the box VPC functionality that follows widely accepted best
 practices. This ensures you can provision and evolve your VPCs across many environments productively and safely,
 without needing to recreate the same VPC templates for every new project you tackle.
 
 Using these capabilities, you can control the entire virtual network and restrict access to just those network
-endpoints that require it. These network resources are essential to configuring many of the other Crosswalk AWS
+endpoints that require it. These network resources are essential to configuring many of the other AWS
 components, including ECS and EKS clusters, API gateways, and various network load balancing options.
 
 Each account has a default regional network and VPC to make it easy to get up and running. Most production
@@ -303,7 +301,7 @@ For additional details about configuring security group rules, See the
 
 ## How to use your VPC, Security Group, and EC2 instance
 
-This example shows how to deploy an EC2 instance using a VPC and security group provisioned with the Crosswalk for AWS component:
+This example shows how to deploy an EC2 instance using a VPC and security group provisioned with the AWSx VPC component:
 
 {{< example-program path="awsx-vpc-sg-ec2" >}}
 
