@@ -29,6 +29,10 @@ aliases:
 Currently, the functionality described in this topic is only supported for programs written in JavaScript or TypeScript. Function Serialization is only available in Node.js and while it is still a supported feature, it is not an active area of development in the Pulumi product.
 {{% /notes %}}
 
+{{% notes type="warning" %}}
+Function serialization is not supported when using the Bun runtime (`runtime: bun`). Bun does not fully implement the Node.js v8/inspector APIs that function serialization depends on. Use `runtime: nodejs` if your program requires function serialization.
+{{% /notes %}}
+
 ## Overview
 
 There are many cases where a small piece of runtime functionality must be defined as part of a cloud application and it makes sense to define that runtime functionality directly inline as part of the Pulumi program. This can augment, or even replace, using runtime code and binaries defined outside of Pulumi in Lambda ZIPs, Docker images, VM images, etc.
