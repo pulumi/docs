@@ -178,7 +178,6 @@ The docs site integrates with several other Pulumi repositories:
 
 - **pulumi/registry**: Package registry UI (external repository, served via CloudFront origin routing at /registry path)
 - **pulumi/answers**: AI answers feature (embedded at /answers)
-- **pulumi/pulumi-ai-app-infra**: AI application backend
 - **pulumi/guides**: Interactive guides (embedded at /guides)
 
 These are integrated via CloudFront origin routing and Pulumi stack references.
@@ -1403,7 +1402,6 @@ The docs infrastructure integrates with other Pulumi projects via stack referenc
 ```typescript
 const registryStack = new pulumi.StackReference('pulumi/registry/production');
 const answersStack = new pulumi.StackReference('pulumi/answers/production');
-const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const guidesStack = new pulumi.StackReference('pulumi/guides/production');
 ```
 
