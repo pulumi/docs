@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-syntax-builtin-functions
     identifier: esc-syntax-fn-final
-    weight: 11
+    weight: 2
 ---
 
 The `fn::final` built-in function marks a value as final, preventing child environments from overriding it. If a child environment attempts to override a final value, the value is not overridden and a validation warning is raised.
