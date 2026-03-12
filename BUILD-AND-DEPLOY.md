@@ -178,6 +178,7 @@ The docs site integrates with several other Pulumi repositories:
 
 - **pulumi/registry**: Package registry UI (external repository, served via CloudFront origin routing at /registry path)
 - **pulumi/answers**: AI answers feature (embedded at /answers)
+- **pulumi/pulumi-ai-app-infra**: AI application backend
 - **pulumi/guides**: Interactive guides (embedded at /guides)
 
 These are integrated via CloudFront origin routing and Pulumi stack references.
@@ -1402,6 +1403,7 @@ The docs infrastructure integrates with other Pulumi projects via stack referenc
 ```typescript
 const registryStack = new pulumi.StackReference('pulumi/registry/production');
 const answersStack = new pulumi.StackReference('pulumi/answers/production');
+const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const guidesStack = new pulumi.StackReference('pulumi/guides/production');
 ```
 
@@ -1504,7 +1506,11 @@ Delivery: CloudWatch Logs infrastructure v2
    - Path: /answers
    - ALB from stack reference
 
-5. **Guides Origin** - From pulumi/guides stack
+5. **AI App Origin** - From pulumi-ai-app-infra stack
+   - Path: /ai, /pulumi-ai
+   - Domain from stack reference
+
+6. **Guides Origin** - From pulumi/guides stack
    - Path: /guides
    - ALB from stack reference
 
@@ -1517,8 +1523,7 @@ Delivery: CloudWatch Logs infrastructure v2
 | /js/*.js | S3 Main | 1 year | Versioned assets |
 | /registry/* | Registry | None | Dynamic content |
 | /guides/* | Guides | None | Dynamic content |
-| /ai | S3 Main | 5 min | 301 redirect to /product/neo/ (Lambda@Edge) |
-| /ai/* | S3 Main | 5 min | 410 Gone (Lambda@Edge) |
+| /ai/* | AI App | None | Dynamic content |
 | /uploads/* | Uploads | 1 hour | User uploads |
 | /fonts/* | S3 Main | 1 hour | Web fonts |
 | /icons/* | S3 Main | 1 hour | Icons |
@@ -1562,15 +1567,15 @@ const edgeRedirects = new aws.lambda.Function("edge-redirects", {
 });
 ```
 
-**2. AI Redirect and Gone**
+**2. AI Answers Rewrites**
 
-**Event Type:** origin-request
+**Event Type:** origin-response
 
-**Purpose:** Redirect `/ai` to `/product/neo/` (301) and return 410 Gone for `/ai/*` subpaths
+**Purpose:** Rewrite 404 responses to 410 (Gone) for unpublished AI answers
 
-**Applied To:** `/ai` and `/ai/*` paths
+**Applied To:** `/ai/answers/*` paths
 
-**Why:** The /ai page has been replaced by /product/neo/; subpaths are permanently removed
+**Why:** Informs search engines that AI answers are intentionally unpublished
 
 #### Route53 DNS
 
@@ -1899,29 +1904,21 @@ Lambda function intercepts requests at CloudFront edge:
 ```javascript
 exports.handler = async (event) => {
     const request = event.Records[0].cf.request;
-    const uri = request.uri;
 
-    // Redirect /ai or /ai/ to /product/neo/.
-    if (uri === '/ai' || uri === '/ai/') {
+    if (request.uri.startsWith('/ai')) {
         return {
             status: '301',
             statusDescription: 'Moved Permanently',
             headers: {
-                location: [{ key: 'Location', value: '/product/neo/' }],
-                'cache-control': [{ key: 'Cache-Control', value: 'max-age=604800' }],
-            },
+                location: [{
+                    key: 'Location',
+                    value: '/answers'
+                }]
+            }
         };
     }
 
-    // All other /ai/* subpaths return 410 Gone.
-    return {
-        status: '410',
-        statusDescription: 'Gone',
-        headers: {
-            'cache-control': [{ key: 'Cache-Control', value: 'max-age=604800' }],
-            'content-type': [{ key: 'Content-Type', value: 'text/plain' }],
-        },
-    };
+    return request;
 };
 ```
 
@@ -1955,7 +1952,7 @@ Production CloudFront distribution applies security headers via response headers
 **Headers Applied:**
 
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains`
-- `X-Frame-Options: DENY` (production) or `SAMEORIGIN` (testing)
+- `X-Frame-Options: DENY` (production) or `SAMEORIGIN` (testing/Copilot)
 - `Content-Security-Policy: frame-ancestors 'self' *.learnworlds.com`
 - `X-XSS-Protection: 1; mode=block`
 - `X-Content-Type-Options: nosniff`
@@ -1972,6 +1969,7 @@ config:
   aws:region: us-west-2
   www.pulumi.com:addSecurityHeaders: "true"
   www.pulumi.com:doEdgeRedirects: "true"
+  www.pulumi.com:doAIAnswersRewrites: "true"
   www.pulumi.com:websiteDomain: www.pulumi.com
   www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-website-logs
   www.pulumi.com:hostedZone: www.pulumi.com
@@ -1992,6 +1990,7 @@ config:
   aws:region: us-west-2
   www.pulumi.com:addSecurityHeaders: "true"
   www.pulumi.com:doEdgeRedirects: "true"
+  www.pulumi.com:doAIAnswersRewrites: "true"
   www.pulumi.com:websiteDomain: www.pulumi-test.io
   www.pulumi.com:websiteLogsBucketName: pulumi-test-io-website-logs
   www.pulumi.com:hostedZone: www.pulumi-test.io

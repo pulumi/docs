@@ -27,7 +27,7 @@
   Our marketing styles diverge a bit from the other parts of the website so we load
   in a different bundle on our marketing pages.
 -->
-{{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "tutorials" "providers" "collections" "templates" "authors" "tags" "legal" }}
+{{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "tutorials" "providers" "collections" "templates" "ai" "authors" "tags" "legal" }}
 {{ if not (in $nonMarketingSections .Section) }}
     {{ template "css-link" (dict "source" "css/marketing.css" "name" "marketing") }}
 {{ end }}

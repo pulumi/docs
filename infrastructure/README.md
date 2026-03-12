@@ -14,6 +14,9 @@ This README documents the infrastructure for the Pulumi Website which encompasse
 - Answers
   - URL: [pulumi.com/answers](https://www.pulumi.com/answers)
   - Repo: [github.com/pulumi/answers](https://github.com/pulumi/answers)
+- AI
+  - URL: [pulumi.com/ai](https://ai.pulumi.com)
+  - Repo: [github.com/pulumi/pulumi.ai](https://github.com/pulumi/pulumi.ai)
 
 
 ## Infrastructure
