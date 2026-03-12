@@ -2,7 +2,7 @@
 title: Self-Hosted Pulumi Cloud
 layout: self-hosted
 
-meta_desc: Learn how to operate Pulumi Cloud in your own cloud account or datacenter
+meta_desc: Learn how to operate Pulumi Cloud in your own cloud account or data center.
 
 overview:
     title: Try Self-Hosted Pulumi
