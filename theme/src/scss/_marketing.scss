@@ -152,7 +152,7 @@
             @include transition;
 
             &.disabled {
-                opacity: 0.3rem;
+                opacity: 0.3;
             }
 
             &:hover {
@@ -175,7 +175,7 @@
             @include transition;
 
             &.disabled {
-                opacity: 0.3rem;
+                opacity: 0.3;
             }
 
             &:hover {

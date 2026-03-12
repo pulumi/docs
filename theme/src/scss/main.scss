@@ -502,7 +502,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
             @include transition;
 
             &.disabled {
-                opacity: 0.3rem;
+                opacity: 0.3;
             }
 
             &:hover {
