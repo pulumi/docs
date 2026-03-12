@@ -10,7 +10,7 @@ menu:
   esc:
     parent: esc-syntax-builtin-functions
     identifier: esc-syntax-fn-split
-    weight: 5
+    weight: 9
 ---
 
 The `fn::split` built-in function splits a string into a list of strings using a given delimiter. If any input to `fn::split` is a secret, the result is also a secret.

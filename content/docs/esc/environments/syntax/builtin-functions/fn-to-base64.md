@@ -10,7 +10,7 @@ menu:
   esc:
     parent: esc-syntax-builtin-functions
     identifier: esc-syntax-fn-toBase64
-    weight: 8
+    weight: 10
 ---
 
 The `fn::toBase64` built-in function encodes a binary value using Base64. If the input to `fn::toBase64` is a secret, the encoded value is also a secret.
