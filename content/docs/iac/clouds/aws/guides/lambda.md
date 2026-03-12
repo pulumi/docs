@@ -1,8 +1,8 @@
 ---
-title_tag: "Using AWS Lambda & Serverless Events | Crosswalk"
+title_tag: "Using AWS Lambda & Serverless Events"
 title: Lambda
 h1: AWS Lambda & Serverless Events
-meta_desc: Pulumi Crosswalk for AWS brings a more natural, and easier to use, way of building serverless applications using AWS Lambda.
+meta_desc: Pulumi provides a natural, easy-to-use way of building serverless applications using AWS Lambda.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -35,7 +35,7 @@ search:
         - aws.lambda.Function
         - aws.lambda.LayerVersion
         - codePathOptions
-        - magic functions
+        - function serialization
         - lambda layers
         - tsconfig paths baseUrl
 aliases:
@@ -43,8 +43,6 @@ aliases:
 - /docs/guides/crosswalk/aws/lambda/
 - /docs/clouds/aws/guides/lambda/
 ---
-
-{{< crosswalk-header >}}
 
 [AWS Lambda](https://aws.amazon.com/lambda/) lets you run code without provisioning or managing servers. You pay only
 for the compute time you consume and there is no charge when your code is not running. With Lambda, you can run code
@@ -58,13 +56,13 @@ The features described on this page are extensions of the [AWS provider](/regist
 
 ## Overview
 
-Pulumi Crosswalk for AWS brings a more natural, and easier to use, way of building serverless applications using
-AWS Lambda. Pulumi lets you express Lambda functions using real code, and handles packaging, versioning, and
-configuration of the associated AWS resources for you. This lets you focus on your application logic without needing to
-worry about boilerplate, and with confidence that the resulting infrastructure automatically uses AWS best practices.
+Pulumi provides a natural, easy-to-use way of building serverless applications using AWS Lambda. Pulumi lets you
+express Lambda functions using real code, and handles packaging, versioning, and configuration of the associated AWS
+resources for you. This lets you focus on your application logic without needing to worry about boilerplate, and with
+confidence that the resulting infrastructure automatically uses AWS best practices.
 
-With Pulumi Crosswalk for AWS, event sources are available on all native resource types, including AWS S3, SQS,
-DynamoDB, CloudWatch, Kinesis, and more, in addition to full support for [API Gateway](/docs/clouds/aws/guides/api-gateway/).
+With Pulumi, event sources are available on all native resource types, including AWS S3, SQS, DynamoDB, CloudWatch,
+Kinesis, and more, in addition to full support for [API Gateway](/docs/clouds/aws/guides/api-gateway/).
 This improves discoverability of event sources in addition to adding strong typing to the event handler
 inputs and outputs that AWS Lambda will deliver to your code.
 
@@ -113,7 +111,7 @@ tbody tr td:first-child {
 | SQS         | [aws.sqs.Queue.onEvent](https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts) | fire SQS Queue events when new messages are enqueued (or on DLQ events, etc) |
 
 {{< notes >}}
-The resources above belong to the [AWS provider](/registry/packages/aws/), but they aren't yet included in the provider's API documentation. Issue [pulumi/pulumi#13231](https://github.com/pulumi/pulumi/issues/13231) tracks adding these resources to the Pulumi Registry. In the meantime, links to their source code are provided for reference.
+The resources above belong to the [AWS provider](/registry/packages/aws/), but they aren't yet included in the provider's API documentation. Issue [pulumi/pulumi#16829](https://github.com/pulumi/pulumi/issues/16829) tracks adding function serialization documentation to the Pulumi Registry. In the meantime, links to their source code are provided for reference.
 {{< /notes >}}
 
 There are multiple approaches to creating a Lambda function. The examples below trigger a Lambda
@@ -136,9 +134,9 @@ code, run `pulumi up`, and Pulumi will diff and compute the minimal set of chang
 without any downtime required. This is as easy to do by hand as it is in
 [CI/CD](/docs/using-pulumi/continuous-delivery/).
 
-### Using magic Lambda functions
+### Using function serialization
 
-One way to author a Lambda Function is to write it inline, within your Pulumi program. The Pulumi compiler and runtime work in tandem to extract your function, package it up along with its dependencies, upload the package to AWS Lambda, and configure the resulting AWS Lambda resources automatically.
+One way to author a Lambda Function is to write it inline, within your Pulumi program using [function serialization](/docs/iac/concepts/functions/function-serialization/). The Pulumi compiler and runtime work in tandem to extract your function, package it up along with its dependencies, upload the package to AWS Lambda, and configure the resulting AWS Lambda resources automatically.
 
 For example, this code creates an S3 bucket and executes an AWS Lambda anytime a new object is created within it:
 
@@ -148,7 +146,7 @@ import * as aws from "@pulumi/aws";
 // Create an S3 bucket.
 const docsBucket = new aws.s3.Bucket("docs");
 
-// Create an AWS Lambda event handler on the bucket using a magic function.
+// Create an AWS Lambda event handler on the bucket using function serialization.
 docsBucket.onObjectCreated("docsHandler", (event: aws.s3.BucketEvent) => {
     // Your Lambda code here.
 });
@@ -158,6 +156,8 @@ The `onObjectCreated` function blurs the line between infrastructure and applica
 on what you want your code to do, rather than how it does it. This code looks like a typical event-driven program,
 but is fully serverless so that it scales dynamically and you only pay for what you use.
 
+For more information on how Pulumi serializes inline functions, see [Function serialization](/docs/iac/concepts/functions/function-serialization/).
+
 {{< notes >}}
 If the idea of mixing application and infrastructure logic like this is unappealing to you, don't worry --- there are
 other approaches, including [provisioning AWS Lambda function resources explicitly](#register-an-event-handler-by-creating-a-lambda-function-resource)
@@ -165,13 +165,13 @@ and [reusing existing Lambda functions](#register-an-event-handler-by-reusing-an
 {{< /notes >}}
 
 Nearly any code can go inside the body of that function. The JavaScript arrow function may capture references to other
-variables in the surrounding code, including other resources and even imported modules. The Pulumi compiler figures
-out [how to serialize the resulting closure](/docs/iac/concepts/functions/function-serialization/) as it uploads and configures the AWS Lambda. This works even if you
-are composing multiple functions together. Just write code like usual --- that's why these are called _magic functions_.
+variables in the surrounding code, including other resources and even imported modules. The Pulumi compiler uses
+[function serialization](/docs/iac/concepts/functions/function-serialization/) to serialize the resulting closure as
+it uploads and configures the AWS Lambda. This works even if you are composing multiple functions together.
 
 ### Using Lambda function resources
 
-In addition to declaring your serverless event handlers inline with magic functions, you can also create and register them by allocating [`aws.lambda.Function`](/registry/packages/aws/api-docs/lambda/function/) objects explicitly. This gives you full control over how the Lambda function is configured, and allows you to provision
+In addition to declaring your serverless event handlers inline using function serialization, you can also create and register them by allocating [`aws.lambda.Function`](/registry/packages/aws/api-docs/lambda/function/) objects explicitly. This gives you full control over how the Lambda function is configured, and allows you to provision
 functions that run code in a language different from the one your Pulumi program is authored in. Even if the languages
 are the same, this lets you keep your application and infrastructure code distinct from one another.
 
@@ -205,7 +205,7 @@ new aws.iam.RolePolicyAttachment("zipTpsReportsFuncRoleAttach", {
 
 // Next, create the Lambda function itself.
 const docsHandlerFunc = new aws.lambda.Function("docsHandlerFunc", {
-    runtime: "nodejs18.x",
+    runtime: "nodejs22.x",
     role: docsHandlerRole.arn,
     handler: "index.handler",
 
@@ -285,7 +285,7 @@ import * as aws from "@pulumi/aws";
 // Look up an S3 bucket that already exists in your account.
 const docsBucket = aws.s3.Bucket.get("docs", "docs-4f64efc");
 
-// Create an AWS Lambda event handler on the bucket using a magic function.
+// Create an AWS Lambda event handler on the bucket using function serialization.
 docsBucket.onObjectCreated("docsHandler", (event: aws.s3.BucketEvent) => {
     // Your Lambda code here.
 });
@@ -365,8 +365,8 @@ const api = new apigateway.RestAPI("api", {
 
 ## Customizing Lambda function attributes
 
-The Lambdas created by magic functions use reasonable defaults for CPU, memory, IAM, logging, and other configuration.
-Should you need to customize these settings, the [`aws.lambda.CallbackFunction`](https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts) class offers all of the underlying settings, while also letting you use the magic function style of expressing the callback itself.
+The Lambdas created using function serialization use reasonable defaults for CPU, memory, IAM, logging, and other configuration.
+Should you need to customize these settings, the [`aws.lambda.CallbackFunction`](https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts) class offers all of the underlying settings, while also letting you express the callback inline using function serialization.
 
 For example, to increase the RAM available to your function from 128MB to 256MB:
 
@@ -376,7 +376,7 @@ import * as aws from "@pulumi/aws";
 // Create an S3 bucket.
 const docsBucket = new aws.s3.Bucket("docs");
 
-// Create an AWS Lambda event handler on the bucket using a magic function.
+// Create an AWS Lambda event handler on the bucket using function serialization.
 docsBucket.onObjectCreated("docsHandler", new aws.lambda.CallbackFunction("docsHandlerFunc", {
     callback: (event: aws.s3.BucketEvent) => {
         // ...
@@ -514,7 +514,7 @@ Aliasing the module in this way allows you to take full advantage of TypeScript 
 
 ## Structuring your serverless codebase
 
-A nice middle ground between magic and manually defined functions is to use your language's module system to structure your
+A nice middle ground between function serialization and manually defined functions is to use your language's module system to structure your
 project. This is similar to how you might structure a typical application: route definitions over here, business logic
 over there, markup over here, etc. Pulumi can figure out the diffs regardless of how you've structured your code,
 so updates are always based only on the code that's changed.
@@ -564,7 +564,7 @@ import * as aws from "@pulumi/aws";
 // Create an S3 bucket.
 const docsBucket = new aws.s3.Bucket("docs");
 
-// Create an AWS Lambda event handler on the bucket using a magic function.
+// Create an AWS Lambda event handler on the bucket using function serialization.
 docsBucket.onObjectCreated("docsHandler", (event: aws.s3.BucketEvent) => {
     for (const rec of event.Records || []) {
         const [ buck, key ] = [ rec.s3.bucket.name, rec.s3.object.key ];
