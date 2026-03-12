@@ -95,7 +95,7 @@ products:
               more_info: |
                 Work with existing tools like IDEs, test frameworks, and package managers.
 
-                Integrate your [source control system](/docs/platform/deployments/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
+                Integrate your source control system so teams can trace changes back to commits and pull requests.
 
                 Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/iac/packages-and-automation/continuous-delivery/).
 

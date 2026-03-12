@@ -32,10 +32,6 @@ and GitHub. This includes previewing, validating, and collaborating on proposed
 deployments in the context of Pull Requests, and triggering deployments or promotions
 between different environments by merging or directly committing changes.
 
-{{% notes type="info" %}}
-Users in organizations can use the [CI/CD Integration Assistant](/docs/deployments/deployments/ci-cd-integration-assistant/) with GitHub Actions.
-{{% /notes %}}
-
 ## Prerequisites
 
 Before proceeding, you'll need to [Sign Up for Pulumi](https://app.pulumi.com/) (if you
