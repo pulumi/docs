@@ -756,11 +756,15 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: '/ai',
+            defaultTtl: oneWeek,
+            maxTtl: oneWeek,
             lambdaFunctionAssociations: [getAIRedirectAndGoneAssociation()],
         },
         {
             ...baseCacheBehavior,
             pathPattern: '/ai/*',
+            defaultTtl: oneWeek,
+            maxTtl: oneWeek,
             lambdaFunctionAssociations: [getAIRedirectAndGoneAssociation()],
         },
 

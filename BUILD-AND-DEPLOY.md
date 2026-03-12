@@ -1519,8 +1519,8 @@ Delivery: CloudWatch Logs infrastructure v2
 | /js/*.js | S3 Main | 1 year | Versioned assets |
 | /registry/* | Registry | None | Dynamic content |
 | /guides/* | Guides | None | Dynamic content |
-| /ai | S3 Main | 5 min | 301 redirect to /product/neo/ (Lambda@Edge) |
-| /ai/* | S3 Main | 5 min | 410 Gone (Lambda@Edge) |
+| /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |
+| /ai/* | S3 Main | 1 week | 410 Gone (Lambda@Edge) |
 | /uploads/* | Uploads | 1 hour | User uploads |
 | /fonts/* | S3 Main | 1 hour | Web fonts |
 | /icons/* | S3 Main | 1 hour | Icons |
