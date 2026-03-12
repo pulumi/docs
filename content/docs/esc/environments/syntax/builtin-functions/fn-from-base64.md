@@ -10,7 +10,7 @@ menu:
   esc:
     parent: esc-syntax-builtin-functions
     identifier: esc-syntax-fn-from-base64
-    weight: 2
+    weight: 3
 ---
 
 The `fn::fromBase64` built-in function decodes its input into a binary value. This can be used to realize binary values that are stored as Base64-encoded (often for use with the [`files` reserved property](/docs/esc/environments/syntax/reserved-properties/files). If the input to `fn::fromBase64` is a secret, the decoded value is also a secret.

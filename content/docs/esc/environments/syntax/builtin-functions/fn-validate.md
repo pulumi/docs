@@ -9,7 +9,7 @@ menu:
   esc:
     parent: esc-syntax-builtin-functions
     identifier: esc-syntax-fn-validate
-    weight: 2
+    weight: 13
 ---
 
 The `fn::validate` built-in function validates a value against a JSON Schema. If the value does not conform to the schema, a validation error is raised and the environment cannot be saved until the issues are resolved.
