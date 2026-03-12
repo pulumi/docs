@@ -123,7 +123,7 @@ Create your first policy pack:
     $ pulumi policy new aws-python
     ```
 
-    > **Virtual environment configuration**: Python policy packs use a virtual environment specified in `PulumiPolicy.yaml`. The default name is `venv`. If you use a different name (like `.venv`), update `PulumiPolicy.yaml`:
+    > **Virtual environment configuration**: Python policy packs use a virtual environment specified in `PulumiPolicy.yaml`. The default name is `venv`. If you use a different name (like `.venv`), update `PulumiPolicy.yaml`. See the [project file reference](/docs/insights/policy/policy-packs/project-file/) for all available settings.
     >
     > ```yaml
     > runtime:
@@ -894,9 +894,11 @@ Pulumi Cloud versions policy packs, enabling updates, rollbacks, and gradual rol
 
 Policy pack versions are managed differently by language:
 
-- **TypeScript/JavaScript**: Set the `version` field in `package.json`
+- **TypeScript/JavaScript**: Set the `version` field in `package.json`. You can also set `version` in `PulumiPolicy.yaml` to override it.
 - **Python**: Set the `version` field in `PulumiPolicy.yaml`
 - **OPA**: Set the `version` field in `PulumiPolicy.yaml`
+
+For a complete list of `PulumiPolicy.yaml` fields, see the [project file reference](/docs/insights/policy/policy-packs/project-file/).
 
 Each version can only be published once.
 
