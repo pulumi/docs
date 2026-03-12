@@ -3,7 +3,7 @@ description: Self-hosted llama-server (llama.cpp) with Open WebUI and Tailscale
 runtime:
   name: python
   options:
-    toolchain: uv
+    toolchain: pip
 config:
   pulumi:tags:
     value:

@@ -141,6 +141,7 @@ Before you start, make sure you have:
   ```bash
   curl -fsSL https://get.pulumi.com | sh
   ```
+
 - A [Tailscale account](https://login.tailscale.com/start) (free tier works)
 
 ## The Pulumi program
@@ -280,8 +281,8 @@ k8s.core.v1.ContainerArgs(
 Any device on your tailnet can reach the chat interface at `http://<hostname>:30000` without exposing anything to the public internet.
 
 Configure the Tailscale provider:
-* Generate an API key from [Settings > Keys](https://login.tailscale.com/admin/settings/keys)
-* Find your tailnet name under [Settings > General](https://login.tailscale.com/admin/settings/general)
+- Generate an API key from [Settings > Keys](https://login.tailscale.com/admin/settings/keys)
+- Find your tailnet name under [Settings > General](https://login.tailscale.com/admin/settings/general)
 
 ```bash
 pulumi config set tailscale:apiKey tskey-api-XXXXX --secret
