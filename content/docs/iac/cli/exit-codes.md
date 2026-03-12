@@ -18,7 +18,7 @@ The Pulumi CLI returns numeric exit codes that indicate the result of a command.
 
 This page explains how Pulumi exit codes work and how to consume them safely in automation. A zero exit code means the operation was **successful**, and any other code means **failure**.
 
-## Error categories
+## Error Categories
 
 The exact non-zero value of a failing exit code gives us some information about what went wrong.
 
