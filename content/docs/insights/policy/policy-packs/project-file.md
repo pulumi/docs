@@ -134,6 +134,22 @@ runtime: opa
 
 ### `inputFormat`
 
+{{< chooser language "typescript,python,opa" >}}
+
+{{% choosable language typescript %}}
+
+This field is not applicable to Node.js policy packs.
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+This field is not applicable to Python policy packs.
+
+{{% /choosable %}}
+
+{{% choosable language opa %}}
+
 The `inputFormat` field is specific to OPA policy packs. The only supported value is `kubernetes-admission`, which wraps Kubernetes resources in the [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) AdmissionReview structure before evaluation. This lets you reuse existing Gatekeeper constraint templates (`.rego` files) with Pulumi without modification.
 
 When `inputFormat: kubernetes-admission` is set:
@@ -145,6 +161,10 @@ When `inputFormat: kubernetes-admission` is set:
 - Both the Gatekeeper `violation[{"msg": ...}]` map format and the standard string-based rule format are supported.
 
 For more details, see the [Pulumi OPA Policy Bridge documentation](https://github.com/pulumi/pulumi-policy-opa).
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ### Version handling
 
