@@ -86,17 +86,14 @@ body {
     }
 
     .btn-primary-template-variant {
-        @apply relative text-white bg-violet-600 border-violet-600 border-2 rounded-lg cursor-pointer z-auto;
-        background-color: #673eac;
-        &:hover {
-            background-color: #805ac3;
-        }
+        @apply relative text-white text-lg bg-violet-600 border-violet-600 border-2 rounded-lg cursor-pointer z-auto;
+        @apply hover:bg-violet-700 hover:border-violet-700;
     }
 
     .btn-secondary-template-variant {
-        @apply relative rounded-lg cursor-pointer z-auto;
+        @apply relative rounded-lg text-lg cursor-pointer z-auto;
         background-color: white;
-        border: 0.5px solid #5B5B5B;
+        border: 0.5px solid #b4b4b4;
         color: #2B2B2C;
         padding: calc(0.75rem + 1.5px) calc(2rem + 1.5px) !important;
         &:hover {
