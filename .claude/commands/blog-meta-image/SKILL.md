@@ -57,7 +57,7 @@ Ask questions **progressively** (one at a time) using `AskUserQuestion`. Skip an
 
 ```
 header: "Feature Image Source"
-question: "Do you have a custom feature image, or use a built-in template? (Reach out in #marketing Slack to get a custom image. If you can't get one fast enough, continue with templates.)"
+question: "Provide a custom feature image, or use a built-in template? (Reach out in #marketing Slack to get a custom image. If you can't get one fast enough, continue with templates.)"
 options:
   - label: "I have a custom image"
     description: "Provide a path to your own feature image file"
@@ -65,7 +65,15 @@ options:
     description: "Choose from the built-in Pulumi feature image templates"
 ```
 
-If **I have a custom image** is selected, ask for the file path and skip straight to the meta render step.
+If **I have a custom image** is selected:
+1. First, check whether `feature.png` already exists in the blog post's directory.
+   - If it does, use that file as the custom image without asking — skip straight to the meta render step.
+   - If it does not exist, ask the user for the file path.
+2. If a path was provided (i.e., the file is not already `feature.png` in the blog directory), copy it into the blog post directory and rename it to `feature.png`:
+   ```bash
+   cp "<provided-path>" "<blog-dir>/feature.png"
+   ```
+3. Use `<blog-dir>/feature.png` as the `feature_image` in the meta config, then skip straight to the meta render step.
 
 ---
 

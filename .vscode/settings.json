@@ -2,5 +2,8 @@
   "[markdown]": {
     "editor.formatOnSave": false,
     "editor.defaultFormatter": null
+  },
+  "chat.tools.terminal.autoApprove": {
+    "uv": true
   }
 }

@@ -4,6 +4,7 @@ date: 2026-03-02T00:06:00-07:00
 draft: false
 meta_desc: "Run Pulumi Insights discovery scans and policy evaluations on your own infrastructure with customer-managed workflow runners."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - levi-blackstone
 tags:
