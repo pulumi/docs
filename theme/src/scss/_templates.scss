@@ -32,9 +32,8 @@ $violet-primary: #673EAC;
     font-feature-settings: 'salt' on;
     font-family: Inter, sans-serif;
     font-style: normal;
-    line-height: 95%;
     letter-spacing: -0.64px;
-    @apply font-bold text-heading-l;
+    @apply font-bold text-heading-l leading-tight !important;
 }
 
 @mixin section-description {
@@ -239,7 +238,7 @@ $violet-primary: #673EAC;
 
 // Shared feature card (icon above title + description) — used by template-product-two-column and template-three-column (icon_layout: above)
 .template-feature-card-icon {
-    @apply text-black flex items-center justify-center w-12 h-12 text-body-xl rounded-lg mb-12;
+    @apply text-black flex items-center justify-center w-12 h-12 text-body-xl rounded-lg mb-6;
     border: 0.5px solid #CECECE;
 
     i {
@@ -248,7 +247,7 @@ $violet-primary: #673EAC;
 }
 
 .template-feature-card-title {
-    @apply font-body text-black leading-tight m-0 font-semibold mb-6 text-heading-xs;
+    @apply font-body text-black leading-tight m-0 !important font-semibold mb-6 text-heading-xs;
 }
 
 .template-feature-card-description {
@@ -361,6 +360,12 @@ $violet-primary: #673EAC;
         @include section-description();
         @apply text-body-xl;
     }
+
+    .product-hero-visual {
+        @media (max-width: 768px) {
+            width: 200vw;
+        }
+    }
 }
 
 .template-section-header {
@@ -391,6 +396,13 @@ $violet-primary: #673EAC;
         a {
             color: inherit;
             @apply no-underline pointer-events-none;
+        }
+    }
+
+    .section-header-image {
+        @media (max-width: 768px) {
+            width: 200vw;
+            margin-left:-25%;
         }
     }
 }
@@ -444,8 +456,8 @@ $violet-primary: #673EAC;
 
 .template-counter-cards {
     .counter-card-number {
-        @include section-header();
-        @apply mb-2;
+        @include page-header();
+        @apply mb-2 font-semibold;
         background: linear-gradient(to bottom, #6C6C6C, #1B1B1B);
         -webkit-background-clip: text;
         background-clip: text;
@@ -471,6 +483,7 @@ $violet-primary: #673EAC;
 
     .icon-grid-title {
         @include section-header();
+        @apply m-0 !important;
     }
 
     .icon-grid-description {

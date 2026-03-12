@@ -20,8 +20,9 @@
 {{ $logo := .logo }}
 {{ $anchor := .anchor }}
 
-<section class="template-testimonial-product rounded-2xl px-10 py-16 md:px-16 md:py-20"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
+<section class="template-testimonial-product relative overflow-hidden rounded-2xl px-10 py-16 md:px-16 md:py-20"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <img class="absolute inset-0 w-full h-full object-cover pointer-events-none" src="/images/template-testimonial-bg.svg" alt="" aria-hidden="true" />
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
         <div class="flex-1 lg:max-w-[65%]">
             {{ if $quote }}
             <blockquote class="template-testimonial-product-quote text-left m-0">
