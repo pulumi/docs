@@ -1,6 +1,6 @@
 ---
-title: Pulumi CLI exit codes
-h1: Pulumi CLI exit codes
+title: Pulumi CLI Exit Codes
+h1: Pulumi CLI Exit Codes
 meta_desc: Learn how the Pulumi CLI maps internal failures to stable exit codes you can use in CI/CD pipelines, tools, and automations.
 menu:
   iac:
@@ -9,13 +9,14 @@ menu:
     weight: 70
 aliases:
   - /docs/iac/cli/error-codes/
+meta_image: /images/docs/meta-images/docs-meta.png
 ---
 
-The Pulumi CLI surfaces the result of a command using numeric exit codes. Scripts, CI/CD systems, and tools can use these codes to distinguish between different kinds of failures.
+The Pulumi CLI returns numeric exit codes that indicate the result of a command. Scripts, CI/CD systems, and tools can use these codes to distinguish between different kinds of failures.
 
 > The global CLI exit code mapping described here was introduced in Pulumi CLI **v3.226.1**. Earlier versions may behave differently and do not guarantee the same mapping.
 
-This page explains how Pulumi exit codes work and how to consume them safely in automation. In the simplest terms, a zero exit code means the operation was **successful**, and any other code means **failure**.
+This page explains how Pulumi exit codes work and how to consume them safely in automation. A zero exit code means the operation was **successful**, and any other code means **failure**.
 
 ## Error categories
 
