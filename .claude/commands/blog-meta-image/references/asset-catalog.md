@@ -11,16 +11,16 @@ Located in `templates/`. Two sets of PNGs:
 
 ### Feature Templates (1884×1256)
 
-| Filename | Type | Description |
-|----------|------|-------------|
-| feature-neo.png | mascot | Neo / AI-focused Pulumipus design |
-| feature-platform.png | mascot | Platform engineering design |
-| feature-rocket.png | mascot | Rocket / deployment and automation design |
-| feature-shield.png | mascot | Shield / security and compliance design |
-| feature-tutorial.png | mascot | Tutorial / learning and education design |
-| feature-logo-1.png | 1-logo | Single large circular logo placeholder |
-| feature-logo-2.png | 2-logo | Two circular logo placeholders |
-| feature-logo-3.png | 3-logo | Three circular logo placeholders |
+| Filename | Description |
+|----------|--------------|
+| feature-platform.png | Default, platform engineering, DevOps, Pulumi news and events |
+| feature-neo.png  | For usage on Neo specific posts only |
+| feature-rocket.png | Releases, new features, and announcements |
+| feature-shield.png | Security, secrets, compliance, and policy |
+| feature-lightbulb.png | Tutorials, how-tos, best practices, and guest posts |
+| feature-logo-1.png | Single large circular logo placeholder |
+| feature-logo-2.png | Two circular logo placeholders |
+| feature-logo-3.png | Three circular logo placeholders |
 
 ### Meta Assets (1200×628)
 
@@ -95,14 +95,14 @@ From `catalog.yaml` (applied to the meta image only):
 
 | Topic / Signal | Recommended Feature Template |
 |---------------|------------------------------|
-| **AI / ML / LLM** | neo |
-| **Platform engineering / IDP** | platform |
-| **Deployment / automation / CI/CD** | rocket |
-| **Security / compliance / policy** | shield |
-| **Tutorial / how-to / learning** | tutorial |
-| **Cloud provider specific** | logo variant with provider logo(s) |
-| **Multi-technology** | logo variant with 2-3 relevant logos |
-| **Abstract / conceptual** | wireframe mascot |
+| **AI / ML / LLM / Pulumi Neo** | neo |
+| **Platform engineering / IDP / DevOps / Pulumi events** | platform |
+| **Releases / new features / announcements** | rocket |
+| **Security / secrets / ESC / policy** | shield |
+| **Tutorials / how-tos / best practices / guest posts** | lightbulb |
+| **Cloud provider specific (AWS, Azure, GCP…)** | logo variant with provider logo(s) |
+| **Multi-technology integration** | logo variant with 2–3 relevant logos |
+| **Abstract / conceptual** | lightbulb or platform |
 
 ## Composition Rules
 

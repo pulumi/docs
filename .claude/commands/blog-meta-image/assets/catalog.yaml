@@ -25,27 +25,27 @@ templates:
   - filename: feature-neo.png
     mode: feature
     type: mascot
-    description: "Neo / AI-focused Pulumipus design"
+    description: "AI, machine learning, Pulumi Neo (tags: ai, pulumi-neo)"
 
   - filename: feature-platform.png
     mode: feature
     type: mascot
-    description: "Platform engineering design"
+    description: "Platform engineering, DevOps, Pulumi news and events (tags: platform-engineering, cloud-engineering, devops, pulumi-news, pulumi-events, community)"
 
   - filename: feature-rocket.png
     mode: feature
     type: mascot
-    description: "Rocket / deployment and automation design"
+    description: "Releases, new features, and announcements (tags: pulumi-releases, releases, release-notes, features)"
 
   - filename: feature-shield.png
     mode: feature
     type: mascot
-    description: "Shield / security and compliance design"
+    description: "Security, secrets, compliance, and policy (tags: security, secrets, esc, policy-as-code)"
 
-  - filename: feature-tutorial.png
+  - filename: feature-lightbulb.png
     mode: feature
     type: mascot
-    description: "Tutorial / learning and education design"
+    description: "Tutorials, how-tos, best practices, and guest posts (tags: aws, kubernetes, infrastructure-as-code, serverless, best-practices, continuous-delivery, containers, guest-post)"
 
   # -- Feature logo variants (1884x1256, logos composited onto circles) --
   - filename: feature-logo-1.png

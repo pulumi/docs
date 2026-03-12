@@ -1,6 +1,6 @@
 ---
 name: blog-meta-image
-description: "Generate a feature image (1884x1256) and OpenGraph meta image (1200x628) for a blog post. Reads the blog post title, selects a feature template (neo, platform, rocket, shield, tutorial, or logo variant), renders feature.png, then composites it with title text onto meta.png. Use when the user types /blog-meta-image or asks to create, generate, or regenerate a blog post's feature image, meta image, social card, or Open Graph image. Accepts optional arguments like feature template name or logo names."
+description: "Generate a feature image (1884x1256) and OpenGraph meta image (1200x628) for a blog post. Reads the blog post title, selects a feature template (neo, platform, rocket, shield, lightbulb, or logo variant), renders feature.png, then composites it with title text onto meta.png. Use when the user types /blog-meta-image or asks to create, generate, or regenerate a blog post's feature image, meta image, social card, or Open Graph image. Accepts optional arguments like feature template name or logo names."
 ---
 
 # `/blog-meta-image` — Generate Blog Feature & Meta Images
@@ -28,7 +28,7 @@ Read the full blog post file (frontmatter + body).
 - **Topics**: scan the body for key signals — cloud providers (AWS, Azure, GCP), languages (Go, Python, TypeScript), technologies (Kubernetes, Terraform, Docker), features (ESC, secrets, OIDC, policy), concepts (AI, ML, platform engineering, IDP)
 
 ### From `$ARGUMENTS`, parse user preferences:
-- **Feature template**: name of a feature template (e.g., "neo", "platform", "rocket", "shield", "tutorial") or logo names like "aws kubernetes"
+- **Feature template**: name of a feature template (e.g., "neo", "platform", "rocket", "shield", "lightbulb") or logo names like "aws kubernetes"
 - **Title override**: if the user explicitly provides different text in quotes, use that instead of the blog title
 
 ### Fast-path: existing feature image with no frontmatter declaration
@@ -75,18 +75,18 @@ If **I have a custom image** is selected, ask for the file path and skip straigh
 header: "Feature Image"
 question: "Choose a feature template for this blog post:"
 options:
-  - label: "Neo"
-    description: "Neo / AI-focused Pulumipus design"
   - label: "Platform"
-    description: "Platform engineering design"
+    description: "Default, platform engineering, DevOps, Pulumi news and events (tags: platform-engineering, cloud-engineering, devops, pulumi-news, pulumi-events, community)"
+  - label: "Neo"
+    description: "For usage on Neo specific posts only (tags: pulumi-neo)"
   - label: "Rocket"
-    description: "Rocket / deployment and automation design"
+    description: "Releases, new features, and announcements (tags: pulumi-releases, releases, release-notes, features)"
   - label: "Shield"
-    description: "Shield / security and compliance design"
-  - label: "Tutorial"
-    description: "Tutorial / learning and education design"
+    description: "Security, secrets, compliance, and policy (tags: security, secrets, esc, policy-as-code)"
+  - label: "Lightbulb"
+    description: "Tutorials, how-tos, best practices, and guest posts (tags: aws, kubernetes, infrastructure-as-code, serverless, best-practices, continuous-delivery, containers, guest-post)"
   - label: "Logo variant (1-3 logos)"
-    description: "Product/technology logo SVGs placed in circular placeholders"
+    description: "Cloud provider or technology-specific content — places provider/tech logos in circular placeholders"
 ```
 
 If **Logo variant** is selected, ask which logos (Question 3):
@@ -120,9 +120,9 @@ header: "Logo Tint Style"
 question: "How should the tint color be applied to the logos?"
 options:
   - label: "Overlay (default)"
-    description: "Replace all logo colors with a flat #B59CDF tint — best for single-color cutout logos"
+    description: "Replace all logo colors with a flat tint — best for single-color cutout logos"
   - label: "Colorize"
-    description: "Preserve internal contrast: bright areas stay bright, dark areas stay dark, all tinted toward #B59CDF — better for multi-color or detailed logos"
+    description: "Preserve internal contrast: bright areas stay bright, dark areas stay dark, all tinted — better for multi-color logos"
 ```
 
 Set `logo_tint_mode` in the feature config to `"overlay"` or `"colorize"` accordingly. Default is `"overlay"`.
@@ -145,7 +145,7 @@ Set `logo_tint_mode` in the feature config to `"overlay"` or `"colorize"` accord
 | Platform | `templates/feature-platform.png` |
 | Rocket | `templates/feature-rocket.png` |
 | Shield | `templates/feature-shield.png` |
-| Tutorial | `templates/feature-tutorial.png` |
+| Lightbulb | `templates/feature-lightbulb.png` |
 | 1 logo | `templates/feature-logo-1.png` |
 | 2 logos | `templates/feature-logo-2.png` |
 | 3 logos | `templates/feature-logo-3.png` |
