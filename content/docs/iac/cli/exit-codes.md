@@ -5,7 +5,7 @@ meta_desc: Learn how the Pulumi CLI maps internal failures to stable exit codes 
 menu:
   iac:
     parent: iac-cli
-    identifier: iac-cli-error-codes
+    identifier: iac-cli-exit-codes
     weight: 70
 aliases:
   - /docs/iac/cli/error-codes/
