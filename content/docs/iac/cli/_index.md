@@ -60,4 +60,4 @@ For a list of environment variables that you can use to work with the Pulumi CLI
 
 ## Error and exit codes
 
-To learn how Pulumi maps internal errors to stable CLI exit codes you can use in automation, see [Pulumi CLI error codes](/docs/iac/cli/error-codes/).
+To learn how Pulumi maps internal errors to stable CLI exit codes you can use in automation, see [Pulumi CLI exit codes](/docs/iac/cli/exit-codes/).

@@ -1,12 +1,14 @@
 ---
-title: Pulumi CLI error codes
-h1: Pulumi CLI error codes
-meta_desc: Learn how the Pulumi CLI maps internal errors to stable exit codes you can use in CI/CD pipelines, tools, and automations.
+title: Pulumi CLI exit codes
+h1: Pulumi CLI exit codes
+meta_desc: Learn how the Pulumi CLI maps internal failures to stable exit codes you can use in CI/CD pipelines, tools, and automations.
 menu:
   iac:
     parent: iac-cli
     identifier: iac-cli-error-codes
     weight: 70
+aliases:
+  - /docs/iac/cli/error-codes/
 ---
 
 The Pulumi CLI surfaces the result of a command using numeric exit codes. Scripts, CI/CD systems, and tools can use these codes to distinguish between different kinds of failures.
