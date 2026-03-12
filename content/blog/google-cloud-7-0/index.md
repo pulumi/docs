@@ -28,7 +28,7 @@ If you are new to Pulumi and would like to get started with the Google Cloud pro
 - [Setup & Install](https://www.pulumi.com/registry/packages/gcp/installation-configuration/) - Instructions on installing the Google Cloud provider
 - [How-to guides](https://www.pulumi.com/registry/packages/gcp/how-to-guides/) - Learn how to use the Google Cloud provider to provision specific resources
 - [Templates](https://www.pulumi.com/templates/serverless-application/gcp/) - Use a quickstart template to create a new project
-- [Pulumi AI](https://www.pulumi.com/ai) - Ask Pulumi AI to create a new project
+- [Pulumi Neo](https://www.pulumi.com/product/neo/) - Ask Pulumi Neo to create a new project
 
 ## Looking back
 
@@ -68,7 +68,7 @@ Version 6.0 of the Google Cloud provider introduced support for several new modu
 - [VMware Engine](https://www.pulumi.com/registry/packages/gcp/api-docs/vmwareengine/)
 - [Workstations](https://www.pulumi.com/registry/packages/gcp/api-docs/workstations/)
 
-If you haven't used these modules yet, now is a great time to try them out! Check out the [Pulumi Registry](https://www.pulumi.com/registry/packages/gcp/) for more information on how to get started or ask [Pulumi AI](https://www.pulumi.com/ai) to create a new project for you.
+If you haven't used these modules yet, now is a great time to try them out! Check out the [Pulumi Registry](https://www.pulumi.com/registry/packages/gcp/) for more information on how to get started or ask [Pulumi Neo](https://www.pulumi.com/product/neo/) to create a new project for you.
 
 ## What's New in 7.0
 
