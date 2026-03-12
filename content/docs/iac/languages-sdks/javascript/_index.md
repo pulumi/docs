@@ -25,7 +25,7 @@ aliases:
 
 <img src="/logos/tech/logo-nodejs.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports writing your infrastructure as code using TypeScript and JavaScript on the Node.js runtime. Using a general-purpose language for infrastructure as code provides several key advantages:
+Pulumi supports writing your infrastructure as code using TypeScript and JavaScript on the Node.js or Bun runtimes. Using a general-purpose language for infrastructure as code provides several key advantages:
 
 - **Familiar syntax**: Write infrastructure code using the same languages and patterns you already know
 - **Rich ecosystem**: Leverage the vast npm package ecosystem in your infrastructure code
@@ -38,6 +38,26 @@ Pulumi supports writing your infrastructure as code using TypeScript and JavaScr
 
 Pulumi supports Node.js [Current, Active, and Maintenance LTS versions](https://nodejs.org/en/about/previous-releases). We recommend using the latest LTS version for the best experience.
 
+To use the Node.js runtime, set `runtime: nodejs` in your `Pulumi.yaml`:
+
+```yaml
+runtime: nodejs
+```
+
+### Bun runtime
+
+Bun is also supported as a first-class runtime. To use Bun, set `runtime: bun` in your `Pulumi.yaml`:
+
+```yaml
+runtime: bun
+```
+
+No additional runtime options are available for the Bun runtime. Bun supports TypeScript natively, so no additional TypeScript configuration is required.
+
+{{< notes type="warning" >}}
+Function serialization and dynamic providers are not supported when using the Bun runtime, as they depend on Node.js v8/inspector APIs that Bun does not fully implement.
+{{< /notes >}}
+
 ### Package managers
 
 Pulumi supports the following package managers:
@@ -45,7 +65,7 @@ Pulumi supports the following package managers:
 - **npm**: Fully supported (default)
 - **Yarn 1 (Classic)**: Fully supported
 - **pnpm**: Fully supported
-- **Bun**: Supported as a package manager only (not as a runtime)
+- **Bun**: Fully supported (as both a runtime and package manager)
 
 {{< notes type="info" >}}
 Dynamic providers may not work correctly with all package managers. If you encounter issues with dynamic providers, try using npm or Yarn 1.

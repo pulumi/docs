@@ -138,6 +138,10 @@ without any downtime required. This is as easy to do by hand as it is in
 
 ### Using magic Lambda functions
 
+{{< notes type="warning" >}}
+Magic Lambda functions are not supported when using the Bun runtime (`runtime: bun`), as they rely on [function serialization](/docs/iac/concepts/functions/function-serialization/), which requires Node.js v8/inspector APIs that Bun does not fully implement. Use `runtime: nodejs` if your program uses magic Lambda functions.
+{{< /notes >}}
+
 One way to author a Lambda Function is to write it inline, within your Pulumi program. The Pulumi compiler and runtime work in tandem to extract your function, package it up along with its dependencies, upload the package to AWS Lambda, and configure the resulting AWS Lambda resources automatically.
 
 For example, this code creates an S3 bucket and executes an AWS Lambda anytime a new object is created within it:
