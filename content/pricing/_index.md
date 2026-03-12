@@ -148,12 +148,6 @@ comparison_table:
                       tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
                     - content: Customized for you
                     - content: Customized for you
-                - title: CI/CD Assistant
-                  items:
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                    - content: _check
                 - title: Drift detection
                   link: /docs/platform/deployments/drift/
                   items:
