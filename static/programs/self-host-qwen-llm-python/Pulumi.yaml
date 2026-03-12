@@ -1,0 +1,63 @@
+name: self-host-qwen-llm
+description: Self-hosted llama-server (llama.cpp) with Open WebUI and Tailscale
+runtime:
+  name: python
+  options:
+    toolchain: uv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: python
+  model:
+    type: string
+    default: unsloth/Qwen3.5-35B-A3B-GGUF
+    description: HuggingFace model repository
+  modelFile:
+    type: string
+    description: GGUF filename to download from the model repo (required)
+  gpuVendor:
+    type: string
+    default: nvidia
+    description: GPU vendor ("nvidia" or "amd")
+  gpuCount:
+    type: integer
+    default: 1
+    description: Number of GPUs to allocate
+  contextSize:
+    type: integer
+    default: 16384
+    description: Context window size in tokens
+  fitTarget:
+    type: integer
+    default: 2048
+    description: VRAM fit target in MB for llama.cpp layer placement
+  threads:
+    type: integer
+    default: 5
+    description: Number of CPU threads for inference
+  jinja:
+    type: boolean
+    default: true
+    description: Enable Jinja template processing for chat templates
+  parallel:
+    type: integer
+    default: 1
+    description: Number of parallel request slots
+  mmproj:
+    type: string
+    description: Multimodal projection filename for vision support (optional)
+  llmPort:
+    type: integer
+    default: 8080
+    description: LLM service port
+  llmNodePort:
+    type: integer
+    description: NodePort for external LLM access (optional)
+  webuiPort:
+    type: integer
+    default: 30000
+    description: Open WebUI NodePort
+  hostname:
+    type: string
+    default: llm-server
+    description: Tailscale hostname
