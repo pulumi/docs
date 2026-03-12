@@ -1,8 +1,9 @@
 ---
-title_tag: "Using AWS Elastic Load Balancing (ELB)"
+title_tag: "Using AWS Elastic Load Balancing (ELB) | Crosswalk"
 title: ELB
 h1: AWS Elastic Load Balancing (ELB)
-meta_desc: The AWSx ELB component provides easy provisioning of Application and Network Load Balancers, and easily integrates with other AWS services.
+meta_desc: Pulumi Crosswalk for AWS ELB provides easy provisioning Application and Network Load Balancers, and easily
+           integrates with functionality of AWS other services.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -17,6 +18,8 @@ aliases:
 - /docs/clouds/aws/guides/elb/
 ---
 
+{{< crosswalk-header >}}
+
 [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/) (ELB) automatically distributes incoming
 application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda
 Functions. It can handle the varying load of your application traffic in a single Availability Zone or across multiple
@@ -24,7 +27,7 @@ Availability Zones.
 
 ## Overview
 
-The AWSx ELB component provides easy APIs for provisioning Application and Network Load Balancers, and
+Pulumi Crosswalk for AWS ELB provides easy APIs for provisioning Application and Network Load Balancers, and
 integrates with functionality for other services, including [API Gateway](/docs/clouds/aws/guides/api-gateway/),
 [Elastic Container Service (ECS)](/docs/clouds/aws/guides/ecs), [Lambda](/docs/clouds/aws/guides/lambda/), and [VPC](/docs/clouds/aws/guides/vpc/), to provide
 configurable network accessibility to the different kinds of compute you will run inside of AWS.
@@ -128,7 +131,7 @@ with your load balancer, pass the listener in your task definition's `portMappin
 
 {{< example-program path="awsx-load-balanced-fargate-nginx" >}}
 
-> [The AWSx ECS component](/docs/clouds/aws/guides/ecs/) -- those classes in the `awsx.ecs` package -- will automatically create the
+> [Pulumi Crosswalk for AWS ECS](/docs/clouds/aws/guides/ecs/) -- those classes in the `awsx.ecs` package -- will automatically create the
 > right ingress and egress rules. If you are using raw `aws.ecs`, you will need to manually manage the security group
 > ingress and egress rules, much like the [EC2 Instance](#load-balancing-ec2-instances) example earlier.
 
@@ -179,7 +182,7 @@ property of the load balancer to associate it with the VPC's public or private s
 
 {{< example-program path="awsx-elb-vpc" >}}
 
-For more information on creating and configuring VPCs, refer to [the AWSx VPC component guide](/docs/clouds/aws/guides/vpc/).
+For more information on creating and configuring VPCs, refer to [Pulumi Crosswalk for AWS VPC](/docs/clouds/aws/guides/vpc/).
 
 ## Advanced Load Balancer Listener and Target Group Configuration
 
@@ -299,3 +302,8 @@ You can also create a target group manually, either by defining a `defaultTarget
 
 For more extensive information on ELB target groups, [refer to the AWS documentation](
 https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html).
+
+## Additional ELB Resources
+
+For detailed reference documentation, visit the [API docs](
+/docs/reference/pkg/nodejs/pulumi/awsx/lb).
