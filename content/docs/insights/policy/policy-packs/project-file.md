@@ -1,12 +1,12 @@
 ---
 title_tag: Policy Pack Project File Reference
 meta_desc: Documentation of the settings available in the PulumiPolicy.yaml policy pack project file.
-title: Policy pack project file
-h1: Policy pack project file reference
+title: Policy Pack Project File
+h1: Policy Pack Project File Reference
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
-    name: Project file reference
+    name: Project File Reference
     parent: policy-packs
     weight: 25
 aliases:
