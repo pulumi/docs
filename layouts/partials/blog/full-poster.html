@@ -1,0 +1,17 @@
+{{/* If a general image is associated with the post, display it full-width at the top. */}}
+{{ if .Params.feature_image }}
+    {{ $resource := .Resources.GetMatch .Params.feature_image }}
+    {{ if $resource }}
+        {{ $sm := $resource.Fit "640x427" }}
+        {{ $md := $resource.Fit "942x628" }}
+        {{ $lg := $resource.Fit "1280x854" }}
+        <img
+            class="rounded-lg w-full mb-8"
+            src="{{ $md.RelPermalink }}"
+            srcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 942w, {{ $lg.RelPermalink }} 1280w"
+            sizes="100vw"
+            alt="{{ .Title }}"
+            width="{{ $md.Width }}" height="{{ $md.Height }}"
+        />
+    {{ end }}
+{{ end }}
