@@ -29,9 +29,9 @@ aliases:
 Currently, the functionality described in this topic is only supported for programs written in JavaScript or TypeScript. Function Serialization is only available in Node.js and while it is still a supported feature, it is not an active area of development in the Pulumi product.
 {{% /notes %}}
 
-{{< notes type="warning" >}}
+{{% notes type="warning" %}}
 Function serialization is not supported when using the Bun runtime (`runtime: bun`). Bun does not fully implement the Node.js v8/inspector APIs that function serialization depends on. Use `runtime: nodejs` if your program requires function serialization.
-{{< /notes >}}
+{{% /notes %}}
 
 ## Overview
 

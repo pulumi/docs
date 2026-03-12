@@ -46,7 +46,7 @@ runtime: nodejs
 
 ### Bun runtime
 
-Bun is also supported as a first-class runtime. To use Bun, set `runtime: bun` in your `Pulumi.yaml`:
+[Bun](https://bun.sh) is also supported as a first-class runtime. To use Bun, set `runtime: bun` in your `Pulumi.yaml`:
 
 ```yaml
 runtime: bun
