@@ -76,15 +76,15 @@ header: "Feature Image"
 question: "Choose a feature template for this blog post:"
 options:
   - label: "Platform"
-    description: "Default, platform engineering, DevOps, Pulumi news and events (tags: platform-engineering, cloud-engineering, devops, pulumi-news, pulumi-events, community)"
+    description: "Default, platform engineering, DevOps, Pulumi news and events"
   - label: "Neo"
-    description: "For usage on Neo specific posts only (tags: pulumi-neo)"
+    description: "For usage on Neo specific posts only"
   - label: "Rocket"
-    description: "Releases, new features, and announcements (tags: pulumi-releases, releases, release-notes, features)"
+    description: "Releases, new features, and announcements"
   - label: "Shield"
-    description: "Security, secrets, compliance, and policy (tags: security, secrets, esc, policy-as-code)"
+    description: "Security, secrets, compliance, and policy"
   - label: "Lightbulb"
-    description: "Tutorials, how-tos, best practices, and guest posts (tags: aws, kubernetes, infrastructure-as-code, serverless, best-practices, continuous-delivery, containers, guest-post)"
+    description: "Tutorials, how-tos, best practices, and guest posts"
   - label: "Logo variant (1-3 logos)"
     description: "Cloud provider or technology-specific content — places provider/tech logos in circular placeholders"
 ```
@@ -193,8 +193,8 @@ Build **two** JSON configs: one for `feature.png` (1884×1256) and one for `meta
 ```
 
 **Font size guidelines:**
-- Short titles (1-3 words): `font_size: 104`
-- Medium titles (4-8 words): `font_size: 88`
+- Short titles (1-3 words): `font_size: 96`
+- Medium titles (4-8 words): `font_size: 84`
 - Long titles (9+ words): `font_size: 72`
 - Very long titles (15+ words): `font_size: 60`
 

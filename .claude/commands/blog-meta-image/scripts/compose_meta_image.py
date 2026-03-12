@@ -316,7 +316,7 @@ def compose(config: dict, output_path: str, assets_dir: Path) -> str:
         feature_img = feature_img.resize((new_fw, canvas_h), Image.LANCZOS)
         # Default: right-aligned, ~160px overflow off right edge
         x_offset = config.get("feature_image_x", canvas_w -
-                              new_fw + int(canvas_w * 0.05) + 100)
+                              new_fw + int(canvas_w * 0.05) + 175)
         canvas.paste(feature_img, (x_offset, 0), feature_img)
 
     # 3. Composite overlay (meta mode)
