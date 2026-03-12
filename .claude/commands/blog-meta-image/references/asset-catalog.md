@@ -6,7 +6,7 @@ All assets live in `.claude/commands/blog-meta-image/assets/`. Paths in the feat
 
 Located in `templates/`. Two sets of PNGs:
 
-- **Feature templates** — 1884×1256px. Used as the blog post's visual feature image. Mascot/static variants are used as-is; logo variants get SVG logos composited onto circular placeholders.
+- **Feature templates** — 1884×1256px. Used as the blog post's visual feature image. Static variants are used as-is; logo variants get SVG logos composited onto circular placeholders.
 - **Meta template** — 1200×628px (`meta.png`). Used as the OpenGraph image. The chosen feature image is scaled and composited offset-right behind the title text.
 
 ### Feature Templates (1884×1256)
@@ -30,8 +30,6 @@ The meta image is built from scratch (solid `#20054E` background) rather than fr
 |----------|------|-------------|
 | meta-overlay.png | overlay | Full-bleed gradient/vignette composited over the feature image |
 | meta-logo.png | logo | Pulumi wordmark (175×44), placed bottom-left at x=90, 40px from bottom |
-
-`meta.png` is no longer used and kept only for reference.
 
 ### Logo Placeholder Positions (feature logo templates)
 
@@ -95,19 +93,17 @@ From `catalog.yaml` (applied to the meta image only):
 
 | Topic / Signal | Recommended Feature Template |
 |---------------|------------------------------|
-| **AI / ML / LLM / Pulumi Neo** | neo |
-| **Platform engineering / IDP / DevOps / Pulumi events** | platform |
-| **Releases / new features / announcements** | rocket |
-| **Security / secrets / ESC / policy** | shield |
-| **Tutorials / how-tos / best practices / guest posts** | lightbulb |
-| **Cloud provider specific (AWS, Azure, GCP…)** | logo variant with provider logo(s) |
-| **Multi-technology integration** | logo variant with 2–3 relevant logos |
-| **Abstract / conceptual** | lightbulb or platform |
+| **For usage on Neo specific posts only** | neo |
+| **Default, platform engineering, DevOps, Pulumi news and events** | platform |
+| **Releases, new features, and announcements** | rocket |
+| **Security, secrets, compliance, and policy** | shield |
+| **Tutorials, how-tos, best practices, and guest posts** | lightbulb |
+| **Cloud provider or technology-specific content** | logo variant with provider/tech logos |
 
 ## Composition Rules
 
 1. **Text is always white** — all templates have dark-enough backgrounds for white text readability
-2. **Text stays on the left** — max_width of 700px prevents text from overlapping the right-side mascot/logos
+2. **Text stays on the left** — max_width of 700px prevents text from overlapping the right-side imagery/logos
 3. **Logos go on white placeholders** — the compose script centers logos within the measured placeholder bounds
 4. **1-3 logos max** — template determines slot count; select the template matching logo count
 5. **Font size scales with title length** — shorter titles get larger fonts for visual impact

@@ -163,7 +163,7 @@ Set `logo_tint_mode` in the feature config to `"overlay"` or `"colorize"` accord
 
 Build **two** JSON configs: one for `feature.png` (1884×1256) and one for `meta.png` (1200×628).
 
-**Feature config** — for mascot/static templates (no text, no logos):
+**Feature config** — for static templates (no text, no logos):
 
 ```json
 {

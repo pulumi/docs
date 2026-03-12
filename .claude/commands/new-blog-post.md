@@ -171,7 +171,7 @@ After creating the files, tell the user:
    - If information was auto-detected, remind user to review it for accuracy
 3. **Next steps**:
    - **If date was set to 2099-01-01**: Update the publication date in frontmatter before publishing! The current placeholder date will prevent the post from appearing on the live site.
-   - Replace the placeholder `meta.png` and `feature.png` with your own images. Run `/blog-meta-image` to generate them automatically, or create them manually (feature image: 1884×1256px, meta image: 1200×628px). Figma templates are available for internal use, ask in `#marketing` for a link.
+   - Replace the placeholder `meta.png` and `feature.png` with your own images. Ask in `#marketing` for a custom feature image to be designed for you. You can also run `/blog-meta-image` to generate them automatically, or create them manually (feature image: 1884×1256px, meta image: 1200×628px).
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
    - **Optional but recommended**: Run `/add-borders` on the blog post to add 1px grey borders to PNG images for better visual presentation
