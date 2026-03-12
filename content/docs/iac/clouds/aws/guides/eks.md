@@ -1,8 +1,8 @@
 ---
-title_tag: "Using AWS Elastic Kubernetes Service (EKS) | Crosswalk"
+title_tag: "Using AWS Elastic Kubernetes Service (EKS) | AWS Guides"
 title: EKS
 h1: AWS Elastic Kubernetes Service (EKS)
-meta_desc: Pulumi Crosswalk for AWS simplifies the creation, configuration, and management of EKS clusters
+meta_desc: Pulumi simplifies the creation, configuration, and management of EKS clusters,
            offering a single programming model and deployment workflow.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
@@ -19,8 +19,6 @@ aliases:
  - /docs/clouds/aws/guides/eks/
 ---
 
-{{< crosswalk-header >}}
-
 [Amazon Elastic Kubernetes Service (Amazon EKS)](https://aws.amazon.com/eks) makes it easy to deploy,
 manage, and scale containerized applications using Kubernetes on AWS. Amazon EKS runs the Kubernetes management
 infrastructure for you across multiple AWS availability zones to eliminate a single point of failure. Amazon EKS is
@@ -30,22 +28,14 @@ to Amazon EKS.
 
 ## Overview
 
-Pulumi Crosswalk for AWS simplifies the creation, configuration, and management of EKS clusters, in addition to
-offering a single programming model and deployment workflow that works for your Kubernetes application configuration,
-in addition to infrastructure. This support ensures your EKS resources are fully integrated properly with the
-related AWS services. This includes
-
-* [ECR](/docs/clouds/aws/guides/ecr/) for private container images
-* [ELB](/docs/clouds/aws/guides/elb/) for load balancing
-* [IAM](/docs/clouds/aws/guides/iam/) for security
-* [VPC](/docs/clouds/aws/guides/vpc/) for network isolation
+Pulumi's EKS component simplifies the creation, configuration, and management of EKS clusters. When used in combination with the [Pulumi Kubernetes Provider](/registry/packages/kubernetes/), [AWS Provider](/registry/packages/aws/), and [AWSx component package](/registry/packages/awsx/), you can use a single tool to manage your Kubernetes application configuration as well as your cluster and associated infrastructure.
 
 Amazon EKS runs up-to-date versions of the open-source Kubernetes software, so you can use all the existing plugins and
 tooling from the Kubernetes community, including Pulumi's support for deploying Helm charts. Applications running on
 Amazon EKS are fully compatible with applications running on any standard Kubernetes environment, whether running in
 on-premises data centers or public clouds, easing porting from other Kubernetes environments to EKS.
 
-Expressing your infrastructure and Kubernetes configuration in code using Pulumi Crosswalk for AWS ensures your
+Expressing your infrastructure and Kubernetes configuration in code using Pulumi ensures your
 resulting system is ready for production using built-in best practices.
 
 ## Prerequisites
@@ -195,7 +185,7 @@ $ pulumi up
 Updating (dev):
 
      Type                       Name                            Status
- +   pulumi:pulumi:Stack        crosswalk-aws-dev               created
+ +   pulumi:pulumi:Stack        eks-cluster-dev                 created
  +   └─ eks:index:Cluster       my-cluster                      created
      ... dozens of resources omitted ...
 
@@ -423,10 +413,10 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-eks/sdk/go/eks"
-	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"
-	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1"
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
-	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes"
+	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/apps/v1"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/meta/v1"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -1005,7 +995,7 @@ For a full list of options that you may set on your cluster, see the [API docume
 
 By default, your EKS cluster is put into your region's default VPC. This is a reasonable default, however this is
 configurable if you want specific network isolation or to place your cluster work nodes on private subnets. This works
-in conjunction with [Pulumi Crosswalk for AWS VPC](/docs/clouds/aws/guides/vpc/) which makes configuring VPCs easier.
+in conjunction with [the Pulumi VPC guide](/docs/clouds/aws/guides/vpc/), which makes configuring VPCs easier.
 
 This example creates a new VPC with private subnets only and creates our EKS cluster inside of it:
 
@@ -1902,9 +1892,9 @@ pulumi.export("url", my_service.status.load_balancer.ingress[0].hostname)
 package main
 
 import (
-	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1"
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
-	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
+	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/apps/v1"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/meta/v1"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -2215,7 +2205,7 @@ Running `pulumi up` deploys these Kubernetes objects, providing rich status upda
 Updating (dev):
 
      Type                           Name               Status
-     pulumi:pulumi:Stack            crosswalk-aws-dev
+     pulumi:pulumi:Stack            eks-cluster-dev
  +   ├─ kubernetes:core:Service     my-app-svc         created
  +   └─ kubernetes:apps:Deployment  my-app-dep         created
 
@@ -2653,8 +2643,8 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-eks/sdk/go/eks"
-	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"
-	helmv3 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes"
+	helmv3 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/helm/v3"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -2900,7 +2890,7 @@ resources:
 
 ## Using an ECR Container Image from an EKS Kubernetes Deployment
 
-[Pulumi Crosswalk for AWS ECR](/docs/clouds/aws/guides/ecr/) enables you to build, publish, and consume private Docker
+[The Pulumi ECR component](/docs/clouds/aws/guides/ecr/) enables you to build, publish, and consume private Docker
 images easily using Amazon's Elastic Container Registry (ECR). In the following example, creating an `Image` resource will
 build an image from the "./app" directory (relative to the project and containing Dockerfile), and publish it to the
 provisioned ECR repository.
@@ -2915,7 +2905,7 @@ accomplishes this with a single `pulumi up` command:
 
 {{< example-program path="awsx-ecr-eks-deployment-service" >}}
 
-For more information about ECR, see [the Pulumi Crosswalk for AWS ECR documentation](/docs/clouds/aws/guides/ecr/).
+For more information about ECR, see [the Pulumi ECR documentation](/docs/clouds/aws/guides/ecr/).
 
 ## Additional EKS Resources
 

@@ -46,7 +46,7 @@ Pulumi Insights is available for all Pulumi Cloud users today.
 
 The scale of Cloud APIs is often intimidating for new and even seasoned cloud engineers. At Pulumi, we provide access to hundreds of clouds, tens-of-thousands of resources and hundreds-of-thousands of resource properties. Pulumi has many thousands of examples showing how to solve specific problems, and yet developers still sometimes struggle to find the perfect code snippet that addresses their exact set of requirements.
 
-Our new [Pulumi AI](/ai) is an assistant purpose-built for creating cloud infrastructure using Pulumi. It builds on the power of Large Language Models and GPT to dramatically reduce the time it takes to discover, learn and use new cloud infrastructure APIs. Because Pulumi uses popular programming languages that GPT has already been trained on, Pulumi AI understands how to solve complex Cloud Infrastructure problems.
+Our new [Pulumi Neo](/product/neo/) is an assistant purpose-built for creating cloud infrastructure using Pulumi. It builds on the power of Large Language Models and GPT to dramatically reduce the time it takes to discover, learn and use new cloud infrastructure APIs. Because Pulumi uses popular programming languages that GPT has already been trained on, Pulumi AI understands how to solve complex Cloud Infrastructure problems.
 
 Using natural language, you can ask to accomplish a specific Cloud Infrastructure goal, and receive a Pulumi program in your favorite language. In addition, Pulumi AI supports iterating on your cloud infrastructure allowing the addition of new features, improving security and performance, fixing correctness issues and clarifying requirements.
 
@@ -58,7 +58,7 @@ The open source [`pulumi-ai`](https://github.com/pulumi/pulumi-ai) CLI takes the
 
 Pulumi AI will enhance your team's ability to go from concept to product. This demo shows Pulumi AI taking natural language input and deploying cloud infrastructure and services which are exposed live on the internet, constantly updating as you refine your request.
 
-Check out Pulumi AI today at [pulumi.com/ai](/ai).
+Check out Pulumi Neo today at [pulumi.com/neo](/product/neo/).
 
 ## Search - Find Anything in Any Cloud
 
@@ -116,7 +116,7 @@ We'd like to express our thanks to the entire community that helped us design, d
 To get started with Pulumi Insights today:
 
 * Sign up or log in to [Pulumi Cloud](https://app.pulumi.com)
-* Try out [Pulumi AI](/ai)
+* Try out [Pulumi Neo](/product/neo/)
 * Watch the videos for [Pulumi Insights](https://www.youtube.com/watch?v=MTHGyed3Ef8), [Pulumi AI](https://youtu.be/xdTUEStC8I0) and [Pulumi Search](https://youtu.be/e1u-P9bnEA4)
 * Check out the [Pulumi Insights Documentation](/docs/pulumi-cloud/insights/)
 * Join the [Pulumi Community Slack](https://slack.pulumi.com/)

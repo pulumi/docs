@@ -1,0 +1,7 @@
+name: sample-components-go
+description: A Pulumi Go program that builds and uses a static page component
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-go
