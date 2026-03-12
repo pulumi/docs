@@ -65,9 +65,9 @@ make clean                # Remove build artifacts and dependencies
 **Required Tools:**
 
 - Node.js 24.x
-- Hugo 0.154.5
+- Hugo 0.157.0
 - Yarn 1.22.x (not strictly enforced in CI)
-- Go 1.25.x (for documentation generation)
+- Go 1.26.x (for documentation generation)
 - Python 3.9 (for testing workflows) and 3.13 (for SDK documentation generation)
 - Pulumi CLI (for infrastructure deployments)
 
@@ -213,17 +213,17 @@ nvm use 24
 # Yarn
 npm install -g yarn@1.22
 
-# Hugo 0.154.5
+# Hugo 0.157.0
 # macOS:
-brew install hugo@0.154.5
-# Linux: Download from https://github.com/gohugoio/hugo/releases/tag/v0.154.5
+brew install hugo@0.157.0
+# Linux: Download from https://github.com/gohugoio/hugo/releases/tag/v0.157.0
 
 # Pulumi CLI
 curl -fsSL https://get.pulumi.com | sh
 
-# Go 1.25+
+# Go 1.26+
 # macOS:
-brew install go@1.25
+brew install go@1.26
 # Linux: https://go.dev/doc/install
 
 # Python 3.13+
@@ -481,7 +481,7 @@ Installs and verifies all required dependencies.
 
 1. Checks for required tools:
    - Node.js 24.x
-   - Hugo 0.154.5
+   - Hugo 0.157.0
    - Yarn 1.22.x
 
 2. Installs dependencies for:
@@ -939,7 +939,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 1. **buildSite**
    - Checkout code
    - Fetch secrets from Pulumi ESC
-   - Setup: Node.js 24, Go 1.25, Hugo 0.154.5
+   - Setup: Node.js 24, Go 1.26, Hugo 0.157.0
    - Configure AWS credentials via OIDC (role: ContinuousDelivery, 2-hour session)
    - Install Pulumi CLI
    - Run `make ci_push`:
@@ -1137,12 +1137,12 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Setup:**
 
 - Multi-language runtimes:
-  - Go 1.25
+  - Go 1.26
   - Node.js 20
   - Python 3.9
   - .NET 8.0
   - Java 11
-- Hugo 0.154.5
+- Hugo 0.157.0
 - Latest Pulumi CLI
 - Kubernetes KinD cluster
 
@@ -2569,7 +2569,7 @@ Common issues and their solutions.
 # Check Hugo version
 hugo version
 
-# Should be: hugo v0.154.5
+# Should be: hugo v0.157.0
 
 # Update if different
 # macOS:
@@ -3129,10 +3129,10 @@ git commit -m "Update Node.js dependencies"
 
 ```bash
 # Update Hugo version in all workflow files
-find .github/workflows -name "*.yml" -exec sed -i 's/hugo-version: 0.154.5/hugo-version: 0.155.0/g' {} +
+find .github/workflows -name "*.yml" -exec sed -i 's/hugo-version: 0.157.0/hugo-version: 0.155.0/g' {} +
 
 # Update ensure.sh
-sed -i 's/0.154.5/0.155.0/g' scripts/ensure.sh
+sed -i 's/0.157.0/0.155.0/g' scripts/ensure.sh
 
 # Test locally
 make clean
@@ -3916,9 +3916,9 @@ Complete reference of all build and deployment scripts.
 | Dependency | Version | Purpose |
 |------------|---------|---------|
 | **Node.js** | 24.x | Runtime for build tools |
-| **Hugo** | 0.154.5 | Static site generator |
+| **Hugo** | 0.157.0 | Static site generator |
 | **Yarn** | 1.22.x | Package manager |
-| **Go** | 1.25+ | Doc generation |
+| **Go** | 1.26+ | Doc generation |
 | **Python** | 3.13+ | Doc generation |
 | **Pulumi CLI** | Latest | Infrastructure deployment |
 | **TypeDoc** | 0.28.15 | Node.js doc generation |

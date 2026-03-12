@@ -19,7 +19,7 @@
             <!-- Hide the list initially, in order to avoid any visual flicker when shuffled. -->
             <ul class="invisible inline-flex flex-wrap list-none justify-center p-0" data-shuffle="true">
                 {{ $thisPage := . }}
-                {{ range $.Site.Data.team.team }}
+                {{ range site.Data.team.team }}
                 {{ if (and (eq .status "guest") (eq .role "puluminary")) }}
                 <li class="text-center w-48 mx-4 mb-8">
                     <img class="rounded mb-4 shadow-md mx-auto"
@@ -44,7 +44,7 @@
             <!-- Hide the list initially, in order to avoid any visual flicker when shuffled. -->
             <ul class="invisible inline-flex flex-wrap list-none justify-center p-0" data-shuffle="true">
                 {{ $thisPage := . }}
-                {{ range $.Site.Data.team.team }}
+                {{ range site.Data.team.team }}
                 {{ if (and (eq .status "guest") (eq .role "alumni-puluminary")) }}
                 <li class="text-center w-48 mx-4 mb-8">
                     <img class="rounded mb-4 shadow-md mx-auto"

@@ -9,10 +9,10 @@
 			"version": "lts"
 		},
 		"ghcr.io/devcontainers/features/go:1": {
-			"version": "1.25"
+			"version": "1.26"
 		},
 		"ghcr.io/devcontainers/features/hugo:1": {
-			"version": "0.154.5"
+			"version": "0.157.0"
 		},
 		"ghcr.io/devcontainers/features/python:1": {
 			"installTools": true,
@@ -26,9 +26,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"pulumi.pulumi-lsp-client",
-				"blackmist.LinkCheckMD",
-				"DavidAnson.vscode-markdownlint",
+				"pulumi.pulumi",
+				"davidanson.vscode-markdownlint",
 				"redhat.vscode-yaml",
 				"github.vscode-pull-request-github"
 			]

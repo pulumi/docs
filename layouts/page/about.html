@@ -195,7 +195,7 @@
         <div class="container mx-auto mb-10 text-center">
             <h2 class="font-medium text-6xl mt-10 mb-8">Our awards &amp; recognition</h2>
             <ul class="list-none block p-0 inline-flex flex-wrap justify-center">
-                {{ range first 4 (where $.Site.Data.awards.awards "featured" true) }}
+                {{ range first 4 (where site.Data.awards.awards "featured" true) }}
                     <li class="mx-4 award flex items-center justify-center">
                         <a data-track="award-{{ .url | urlize }}" href="{{ .url }}" class="flex items-center justify-center">
                             <img class="inline-block" src="{{ .img }}" title="{{ .title }}" />
@@ -218,7 +218,7 @@
             <div class="md:w/1-2 md:px-8">
                 <h3 class="text-center md:text-left font-medium text-6xl">Press Releases</h3>
                 <ul class="list-none mt-8 p-0">
-                    {{ range first 2 $.Site.Data.newsroom.releases }}
+                    {{ range first 2 site.Data.newsroom.releases }}
                         <li class="pb-4">
                             <div class="text-sm text-gray-700">{{ .date }}</div>
                             <h5 class="mt-2 mb-0">{{ .title }}</h5>
@@ -231,7 +231,7 @@
             <div class="md:w/1-2 md:px-8">
                 <h3 class="text-center md:text-left font-medium text-6xl">Recent News</h3>
                 <ul class="list-none mt-8 p-0">
-                    {{ range first 2 $.Site.Data.newsroom.coverage }}
+                    {{ range first 2 site.Data.newsroom.coverage }}
                         <li class="pb-4">
                             <div class="text-sm text-gray-700">{{ .date }}</div>
                             <img class="mt-4 h-5" src="{{ .img }}" />
