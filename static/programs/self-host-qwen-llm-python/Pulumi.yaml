@@ -1,4 +1,4 @@
-name: self-host-qwen-llm
+name: self-host-qwen-llm-python
 description: Self-hosted llama-server (llama.cpp) with Open WebUI and Tailscale
 runtime:
   name: python
