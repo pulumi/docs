@@ -43,7 +43,7 @@ We've had a busy last few months at Pulumi. From shipping a brand new product of
 
 ### Deploy with Pulumi within Pulumi AI
 
-Pulumi AI's new feature enables [deploying cloud infrastructure using AI prompts](/blog/pulumi-ai-new). Users can rapidly generate and deploy templates through natural language inputs in 'pulumi new' CLI command and new project wizard, significantly streamlining the cloud setup process. Additionally, you now have the option to deploy the Pulumi AI generated Pulumi programs from within [Pulumi AI](https://www.pulumi.com/ai) and in the New Project Wizard in the Pulumi Cloud console.
+Pulumi AI's new feature enables [deploying cloud infrastructure using AI prompts](/blog/pulumi-ai-new). Users can rapidly generate and deploy templates through natural language inputs in 'pulumi new' CLI command and new project wizard, significantly streamlining the cloud setup process. Additionally, you now have the option to deploy the Pulumi AI generated Pulumi programs from within [Pulumi Neo](https://www.pulumi.com/product/neo/) and in the New Project Wizard in the Pulumi Cloud console.
 
 {{< video title="Pulumi new AI and deploy" src="https://www.pulumi.com/uploads/pulumi-new-ai.mp4" controls="false" autoplay="true" loop="true" >}}
 

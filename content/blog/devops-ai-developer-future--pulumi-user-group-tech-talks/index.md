@@ -92,7 +92,7 @@ Generative AI, powered by LLMs, can help developers and DevOps engineers quickly
 
 {{< figure alt="Pulumi AI response to Run metabase in Azure, using TypeScript" src="https://www.pulumi.com/blog/pulumi-ai/run-metabase-in-azure.png" width=90%  caption="Pulumi AI response to Run metabase in Azure, using TypeScript" >}}
 
-You can see it in practice [using Pulumi AI](https://www.pulumi.com/blog/pulumi-ai/). You can use natural language to ask for a specific cloud infrastructure goal and obtain a corresponding Pulumi program in your preferred programming language. Moreover, Pulumi AI facilitates the iterative refinement of your cloud infrastructure, incorporating new features, enhancements to security and performance, resolution of correctness issues, and clarification of requirements. [Try Pulumi AI](https://www.pulumi.com/ai).
+You can see it in practice [using Pulumi AI](https://www.pulumi.com/blog/pulumi-ai/). You can use natural language to ask for a specific cloud infrastructure goal and obtain a corresponding Pulumi program in your preferred programming language. Moreover, Pulumi AI facilitates the iterative refinement of your cloud infrastructure, incorporating new features, enhancements to security and performance, resolution of correctness issues, and clarification of requirements. [Try Pulumi Neo](https://www.pulumi.com/product/neo/).
 
 ### Intelligent Resource Management
 
