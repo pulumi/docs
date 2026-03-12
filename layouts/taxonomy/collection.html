@@ -1,6 +1,6 @@
 {{ define "main" }}
     {{ $id := .Path | path.Base }}
-    {{ $collection := index (where .Site.Data.tutorials.collections "id" $id) 0 }}
+    {{ $collection := index (where site.Data.tutorials.collections "id" $id) 0 }}
     {{ .Store.Set "collectionTitle" $collection.name }}
     <div class="docs-list-main">
         <div class="docs-main-nav-toggle-wrapper">

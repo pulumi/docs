@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ $personData := index $.Site.Data.team.team .Params.id }}
+    {{ $personData := index site.Data.team.team .Params.id }}
     <section class="max-w-5xl container mx-auto my-8 px-4 text-lg">
         <div class="my-8 flex flex-col md:flex-row">
             <div class="md:w-1/3">

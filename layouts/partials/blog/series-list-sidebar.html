@@ -7,7 +7,7 @@
 
 <!-- Check if current tag is a series tag -->
 {{ $currentTag = .Data.Term }}
-{{ with .Site.Data.blog_series }}
+{{ with site.Data.blog_series }}
     {{ range .series }}
         {{ if eq .slug $currentTag }}
             {{ $isSeriesTag = true }}
@@ -37,7 +37,7 @@
             <h5 class="no-anchor text-lg font-semibold mb-4">All Blog Series</h5>
             
             <ul class="list-none p-0 space-y-2">
-                {{ with .Site.Data.blog_series }}
+                {{ with site.Data.blog_series }}
                     {{ range .series }}
                         <li class="leading-snug">
                             {{ if eq .slug $currentTag }}

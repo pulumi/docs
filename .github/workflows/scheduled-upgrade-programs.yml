@@ -31,7 +31,7 @@ jobs:
         platform:
           - ubuntu-latest
         go-version:
-          - 1.25.x
+          - 1.26.x
         node-version:
           - 24.x
         python-version:
@@ -86,7 +86,7 @@ jobs:
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.154.5"
+          hugo-version: "0.157.0"
           extended: true
 
       - name: Install Pulumi

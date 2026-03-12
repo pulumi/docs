@@ -7,7 +7,7 @@
 {{ $cloudServicesFromAggregator := $aggregatedContent.cloudServices }}
 
 {{/* Load cloud resources configuration from data file */}}
-{{ $cloudResources := .Site.Data.cloud_resources.resources }}
+{{ $cloudResources := site.Data.cloud_resources.resources }}
 
 {{/* Performance optimization: limit content scanning */}}
 {{ $maxLength := .Site.Params.schema.max_content_scan_length | default 5000 }}
