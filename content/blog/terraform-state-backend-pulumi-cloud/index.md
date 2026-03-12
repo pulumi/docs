@@ -5,6 +5,7 @@ allow_long_title: true
 draft: false
 meta_desc: "Pulumi Cloud now serves as a Terraform state backend with encrypted state, audit policies, and unified resource visibility — no workflow changes required."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - claire-gaestel
 tags:
