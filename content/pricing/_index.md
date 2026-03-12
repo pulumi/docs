@@ -149,7 +149,6 @@ comparison_table:
                     - content: Customized for you
                     - content: Customized for you
                 - title: CI/CD Assistant
-                  link: /docs/platform/deployments/ci-cd-integration-assistant/
                   items:
                     - content: _blank
                     - content: _check
