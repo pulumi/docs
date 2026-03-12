@@ -54,10 +54,10 @@ Below is the complete documentation for all available commands:
 
 {{< pulumi-command >}}
 
-## Environment variables
+## Environment Variables
 
 For a list of environment variables that you can use to work with the Pulumi CLI, see [Environment variables](/docs/cli/environment-variables/).
 
-## Error and exit codes
+## Error and Exit Codes
 
 To learn how Pulumi maps internal errors to stable CLI exit codes you can use in automation, see [Pulumi CLI exit codes](/docs/iac/cli/exit-codes/).
