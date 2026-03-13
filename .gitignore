@@ -33,9 +33,10 @@ venv/
 Pipfile.lock
 .python-version
 
-# Ignore the Stencil component bundle.
+# Ignore the Stencil component bundle and auto-generated type declarations.
 /static/js/components.js
 /static/js/components/
+theme/stencil/src/components.d.ts
 
 # Ignore bundled CSS and JS files, which we write to the Hugo static
 # directory in development in order to be able to use livereload.

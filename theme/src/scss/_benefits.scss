@@ -5,7 +5,7 @@
         @apply w-full p-8 m-4 flex flex-col;
         height: 24rem;
 
-        @screen lg {
+        @include screen-lg {
             @apply w-5/12;
         }
 
@@ -21,7 +21,7 @@
     .benefits-item-auto-h {
         @apply w-full p-8 m-4 flex flex-col h-auto;
 
-        @screen lg {
+        @include screen-lg {
             @apply w-5/12;
         }
 

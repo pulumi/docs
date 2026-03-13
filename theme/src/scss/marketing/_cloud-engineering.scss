@@ -1,7 +1,7 @@
 .cloud-engineering-build-card {
     @apply p-6 max-w-md mx-auto bg-white mb-16;
 
-    @screen lg {
+    @include screen-lg {
         @apply p-16 absolute mx-0 mb-0;
         left: 2rem;
         top: -12rem;
@@ -22,7 +22,7 @@
         @apply border-none;
     }
 
-    @screen lg {
+    @include screen-lg {
         :nth-child(1) {
             @apply border-b-2;
         }

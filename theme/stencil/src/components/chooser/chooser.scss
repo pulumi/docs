@@ -6,12 +6,7 @@ pulumi-chooser {
         }
     }
 
-    // Immediate descendents inherit the display property to allow them to be rendered
-    // inline as well.
-    > * {
-        display: inherit;
-    }
-
+    // Choosable children inherit display from the parent chooser element.
     pulumi-choosable {
         display: inherit;
     }
