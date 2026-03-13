@@ -17,9 +17,13 @@ Every Pulumi policy pack has a project file, `PulumiPolicy.yaml`, that specifies
 
 When you create a new policy pack with `pulumi policy new`, the CLI generates this file automatically.
 
-## Attributes
+Select your policy pack runtime to see the relevant attributes and examples:
 
 {{< chooser language "typescript,python,opa" >}}
+
+{{< /chooser >}}
+
+## Attributes
 
 {{% choosable language typescript %}}
 
@@ -62,11 +66,7 @@ When you create a new policy pack with `pulumi policy new`, the CLI generates th
 
 {{% /choosable %}}
 
-{{< /chooser >}}
-
 ### `runtime` options
-
-{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -130,25 +130,9 @@ runtime: opa
 
 {{% /choosable %}}
 
-{{< /chooser >}}
+{{% choosable language opa %}}
 
 ### `inputFormat`
-
-{{< chooser language "typescript,python,opa" >}}
-
-{{% choosable language typescript %}}
-
-This field is not applicable to Node.js policy packs.
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-This field is not applicable to Python policy packs.
-
-{{% /choosable %}}
-
-{{% choosable language opa %}}
 
 The `inputFormat` field is specific to OPA policy packs. The only supported value is `kubernetes-admission`, which wraps Kubernetes resources in the [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) AdmissionReview structure before evaluation. This lets you reuse existing Gatekeeper constraint templates (`.rego` files) with Pulumi without modification.
 
@@ -164,11 +148,7 @@ For more details, see the [Pulumi OPA Policy Bridge documentation](https://githu
 
 {{% /choosable %}}
 
-{{< /chooser >}}
-
 ### Version handling
-
-{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -194,11 +174,7 @@ Each version can only be published once. When you publish a new version, update 
 
 {{% /choosable %}}
 
-{{< /chooser >}}
-
 ## Examples
-
-{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -269,5 +245,3 @@ inputFormat: kubernetes-admission
 ```
 
 {{% /choosable %}}
-
-{{< /chooser >}}
