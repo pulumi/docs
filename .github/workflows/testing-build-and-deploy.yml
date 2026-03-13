@@ -33,11 +33,11 @@ jobs:
 
       - uses: actions/setup-go@v6
         with:
-          go-version: 1.25.x
+          go-version: 1.26.x
 
       - uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.154.5'
+          hugo-version: '0.157.0'
           extended: true
 
       - name: Configure AWS Credentials
