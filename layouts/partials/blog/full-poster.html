@@ -9,7 +9,7 @@
             class="rounded-lg w-full mb-8"
             src="{{ $md.RelPermalink }}"
             srcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 942w, {{ $lg.RelPermalink }} 1280w"
-            sizes="100vw"
+            sizes="(min-width: 1024px) 75vw, 100vw"
             alt="{{ .Title }}"
             width="{{ $md.Width }}" height="{{ $md.Height }}"
         />

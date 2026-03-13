@@ -203,6 +203,12 @@ def _word_wrap(text: str, font: ImageFont.FreeTypeFont, max_width: float) -> lis
     return lines
 
 
+def hex_to_rgba(hex_color: str) -> tuple[int, int, int, int]:
+    """Convert a hex color string like #20054E to an RGBA tuple."""
+    h = hex_color.lstrip("#")
+    return int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16), 255
+
+
 def tint_image(img: Image.Image, hex_color: str, mode: str = "overlay") -> Image.Image:
     """Apply a color tint to an image, preserving its alpha.
 
@@ -272,12 +278,6 @@ def place_logos(
         img.paste(logo_img, (offset_x, offset_y), logo_img)
 
     return img
-
-
-def hex_to_rgba(hex_color: str) -> tuple[int, int, int, int]:
-    """Convert a hex color string like #20054E to an RGBA tuple."""
-    h = hex_color.lstrip("#")
-    return int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16), 255
 
 
 def compose(config: dict, output_path: str, assets_dir: Path) -> str:
@@ -377,7 +377,7 @@ def compose(config: dict, output_path: str, assets_dir: Path) -> str:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Compose a meta image from a template PNG")
+        description="Compose a feature image or meta image from a template PNG")
     parser.add_argument("--config", required=True,
                         help="JSON config file path")
     parser.add_argument("--output", required=True, help="Output PNG path")

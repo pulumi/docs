@@ -1,4 +1,6 @@
-{{/* If a general image is associated with the post, display it in-line. */}}
+{{/* If a general image is associated with the post, display it in-line.
+     Intentionally only checks feature_image. Posts without a feature_image will
+     not show a listing thumbnail — this is by design for visual consistency. */}}
 {{ if .Params.feature_image }}
     {{ $resource := .Resources.GetMatch .Params.feature_image }}
     {{ if $resource }}

@@ -167,7 +167,7 @@ If you're in a hurry you can use the same Claude Code command to generate both i
 | Field           | Recommended Size | Aspect Ratio | Format | Background               |
 | --------------- | ---------------- | ------------ | ------ | ------------------------ |
 | `feature_image` | 1884×1256        | 3:2          | PNG    | Opaque (No Transparency) |
-| `meta_image`    | 1200×628         | ~2:1         | PNG    | Opaque (No Transparency) |
+| `meta_image`    | 1200×628         | ~1.91:1      | PNG    | Opaque (No Transparency) |
 
 Remember to replace both placeholder images (or remove the properties and delete the placeholder files) before submitting your post.
 
