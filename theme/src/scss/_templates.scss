@@ -413,11 +413,23 @@ $violet-primary: #673EAC;
     }
 
     .template-section-header-with-code-content {
-        @apply xl:flex-1 xl:min-w-0;
+        @apply xl:min-w-0;
+        flex: 1.25 1 0%;
+        margin-top:5rem;
     }
 
     .template-section-header-with-code-image {
-        @apply xl:flex-1 xl:min-w-0;
+        @apply xl:min-w-0;
+        flex: 1 1 0%;
+
+        pulumi-chooser {
+            display: block;
+            width: 100%;
+
+            > ul {
+                width: 100%;
+            }
+        }
     }
 
     .section-header-with-code-tag {
@@ -451,6 +463,11 @@ $violet-primary: #673EAC;
         &:hover {
             @apply underline;
         }
+    }
+
+    pulumi-chooser > ul li.active {
+        border-image-source: none;
+        border-color: #805ac3;
     }
 }
 

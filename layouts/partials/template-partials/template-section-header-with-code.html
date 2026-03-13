@@ -10,8 +10,10 @@ Parameters:
 - description: Body paragraph (supports markdown)
 - cta_text: Link text (e.g. "Explore the registry")
 - cta_link: Link URL
-- image: Optional code editor/image path (right column)
+- image: Optional static code editor/image path (right column)
 - image_alt: Alt text for image
+- code_images: Optional list of per-language images for pulumi-chooser (supersedes image).
+    Each item: { language: "typescript", image: "/path/to/img.svg", alt: "Alt text" }
 - anchor: Optional anchor for section id
 */}}
 
@@ -22,6 +24,7 @@ Parameters:
 {{ $ctaLink := .cta_link }}
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default "" }}
+{{ $codeImages := .code_images }}
 {{ $anchor := .anchor }}
 
 <section class="template-section-header-with-code" {{ if $anchor }} id="{{ $anchor }}" {{ end }}>
@@ -45,7 +48,17 @@ Parameters:
             </a>
             {{ end }}
         </div>
-        {{ if $image }}
+        {{ if $codeImages }}
+        <div class="template-section-header-with-code-image w-full xl:flex-shrink-0 flex justify-center xl:justify-end">
+            <pulumi-chooser type="language" options="{{ range $i, $item := $codeImages }}{{ if $i }},{{ end }}{{ $item.language }}{{ end }}">
+                {{ range $item := $codeImages }}
+                <pulumi-choosable type="language" class="highlight" value="{{ $item.language }}">
+                    <img class="mx-auto w-full" src="{{ $item.image }}" alt="{{ $item.alt | default "" }}" />
+                </pulumi-choosable>
+                {{ end }}
+            </pulumi-chooser>
+        </div>
+        {{ else if $image }}
         <div class="template-section-header-with-code-image w-full xl:flex-shrink-0 flex justify-center xl:justify-end">
             <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full max-w-full rounded-lg">
         </div>
