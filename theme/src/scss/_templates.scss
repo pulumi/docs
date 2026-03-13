@@ -33,7 +33,8 @@ $violet-primary: #673EAC;
     font-family: Inter, sans-serif;
     font-style: normal;
     letter-spacing: -0.64px;
-    @apply font-bold text-heading-l leading-tight !important;
+    @apply font-bold text-heading-l;
+    line-height: 1.25 !important; /* leading-tight */
 }
 
 @mixin section-description {
@@ -247,7 +248,8 @@ $violet-primary: #673EAC;
 }
 
 .template-feature-card-title {
-    @apply font-body text-black leading-tight m-0 !important font-semibold mb-6 text-heading-xs;
+    @apply font-body text-black leading-tight font-semibold mb-6 text-heading-xs;
+    margin: 0 !important;
 }
 
 .template-feature-card-description {
@@ -336,7 +338,13 @@ $violet-primary: #673EAC;
 .template-product-hero {
     .product-hero-heading {
         @include product-hero-heading();
-        @apply text-heading-s sm:text-heading-m md:text-heading-l;
+        @apply text-heading-s;
+        @include screen-sm {
+            @apply text-heading-m;
+        }
+        @include screen-md {
+            @apply text-heading-l;
+        }
     }
 
     .product-hero-title-primary {
@@ -353,7 +361,13 @@ $violet-primary: #673EAC;
 
     .product-hero-title {
         @include product-hero-heading();
-        @apply text-heading-s sm:text-heading-m md:text-heading-l;
+        @apply text-heading-s;
+        @include screen-sm {
+            @apply text-heading-m;
+        }
+        @include screen-md {
+            @apply text-heading-l;
+        }
     }
 
     .product-hero-description {
@@ -365,6 +379,10 @@ $violet-primary: #673EAC;
         @media (max-width: 768px) {
             width: 200vw;
         }
+    }
+
+    .product-hero-visual-img {
+        max-width: 800px;
     }
 }
 
@@ -413,11 +431,23 @@ $violet-primary: #673EAC;
     }
 
     .template-section-header-with-code-content {
-        @apply xl:flex-1 xl:min-w-0;
+        @apply xl:min-w-0;
+        flex: 1.25 1 0%;
+        margin-top:5rem;
     }
 
     .template-section-header-with-code-image {
-        @apply xl:flex-1 xl:min-w-0;
+        @apply xl:min-w-0;
+        flex: 1 1 0%;
+
+        pulumi-chooser {
+            display: block;
+            width: 100%;
+
+            > ul {
+                width: 100%;
+            }
+        }
     }
 
     .section-header-with-code-tag {
@@ -452,6 +482,11 @@ $violet-primary: #673EAC;
             @apply underline;
         }
     }
+
+    pulumi-chooser > ul li.active {
+        border-image-source: none;
+        border-color: #805ac3;
+    }
 }
 
 .template-counter-cards {
@@ -483,7 +518,7 @@ $violet-primary: #673EAC;
 
     .icon-grid-title {
         @include section-header();
-        @apply m-0 !important;
+        margin: 0 !important;
     }
 
     .icon-grid-description {

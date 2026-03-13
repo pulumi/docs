@@ -78,8 +78,25 @@ section_header_with_code:
     Stop copy-pasting and create reusable infrastructure components that can be used in any language. Package common patterns once, use everywhere. Share via Pulumi's registry, npm, PyPI, NuGet, or any package manager.
   cta_text: Explore the registry
   cta_link: /registry/
-  image: /images/product/iac/iac-code-block.svg
-  image_alt: Pulumi code example
+  code_images:
+    - language: typescript
+      image: /images/product/iac/typescript.svg
+      alt: Pulumi code example in TypeScript
+    - language: python
+      image: /images/product/iac/python.svg
+      alt: Pulumi code example in Python
+    - language: go
+      image: /images/product/iac/go.svg
+      alt: Pulumi code example in Go
+    - language: csharp
+      image: /images/product/iac/csharp.svg
+      alt: Pulumi code example in C#
+    - language: java
+      image: /images/product/iac/java.svg
+      alt: Pulumi code example in Java
+    - language: yaml
+      image: /images/product/iac/yaml.svg
+      alt: Pulumi code example in YAML
   anchor: packages
 
 three_column:

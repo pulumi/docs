@@ -9,18 +9,6 @@
 const { global } = require("./tokens.json");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
-// Map typography tokens to Tailwind fontSize (use with font-bold / font-semibold for headings)
-const headingFontSizes = Object.keys(global.typography.headings).reduce((acc, key) => {
-    if (key === "type") return acc;
-    acc[`heading-${key}`] = global.typography.headings[key].fontSize;
-    return acc;
-}, {});
-
-const bodyFontSizes = Object.keys(global.typography.body).reduce((acc, key) => {
-    if (key === "type") return acc;
-    acc[`body-${key}`] = global.typography.body[key].fontSize;
-    return acc;
-}, {});
 const brand = {
     yellow: global.colors.brand.yellow.value,
     salmon: global.colors.brand.salmon.value,
@@ -163,10 +151,6 @@ module.exports = {
                 display: [global.typography.fontFamilies.display.value, ...defaultTheme.fontFamily.sans],
                 body: [global.typography.fontFamilies.body.value, ...defaultTheme.fontFamily.sans],
                 mono: [global.typography.fontFamilies.mono.value, ...defaultTheme.fontFamily.mono],
-            },
-            fontSize: {
-                ...headingFontSizes,
-                ...bodyFontSizes,
             },
             boxShadow: {
                 "3xl": "0 35px 70px -20px rgba(0, 0, 0, 0.5)",
