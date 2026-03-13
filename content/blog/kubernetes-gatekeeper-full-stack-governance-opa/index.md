@@ -26,7 +26,7 @@ Pulumi's [OPA (Open Policy Agent)](https://www.openpolicyagent.org/) support is 
 
 ## What's in the stable release
 
-OPA/Rego is now a first-class policy language for [Pulumi Insights](/docs/insights/policy/), with the same capabilities as the TypeScript and Python SDKs:
+OPA/Rego is now fully supported as a policy language for [Pulumi Insights](/docs/insights/policy/), with the same capabilities as the TypeScript and Python SDKs:
 
 - **Resource and stack-level policies**: Validate individual resources with `deny` and `warn` rules, or evaluate your entire stack at once with `stack_deny` and `stack_warn` for cross-resource checks like relationship validation and resource count limits.
 - **Enforcement levels**: Control how violations are handled. `mandatory` blocks deployments, `advisory` surfaces warnings, and `disabled` turns rules off without removing them. Enforcement levels can be overridden per policy without modifying Rego source.
@@ -89,20 +89,24 @@ OPA policy support is part of the broader [Pulumi Insights](/docs/insights/) gov
 - **Self-hosted execution** lets you [run policy evaluations on your own infrastructure](/blog/self-hosted-insights/) using customer-managed workflow runners, keeping credentials and data within your network.
 - **Pre-built compliance packs** for CIS, NIST, PCI DSS, and other frameworks are available alongside your custom OPA policies in the same [policy groups](/docs/insights/policy/policy-groups/).
 
-Whether you're enforcing policy at deployment time, scanning existing infrastructure for drift, or running continuous compliance checks, OPA policies are a first-class participant.
+Whether you're enforcing policy at deployment time, scanning existing infrastructure for drift, or running continuous compliance checks, OPA policies are a native participant.
 
 ## Frequently asked questions
 
-**Do I need to modify my existing Gatekeeper `.rego` files?**
+### Do I need to modify my existing Gatekeeper `.rego` files?
+
 No. Set `inputFormat: kubernetes-admission` in your `PulumiPolicy.yaml` and your existing Gatekeeper constraint template rules work as-is. Pulumi handles the AdmissionReview wrapping automatically.
 
-**What happens with non-Kubernetes resources?**
+### What happens with non-Kubernetes resources?
+
 When using `inputFormat: kubernetes-admission`, non-Kubernetes resources are silently skipped during evaluation. Your Gatekeeper rules only run against Kubernetes resources.
 
-**Do I need OPA installed locally?**
+### Do I need OPA installed locally?
+
 No. The `pulumi-policy-opa` analyzer plugin embeds the OPA evaluation engine and is installed automatically by the Pulumi CLI (v3.227.0+). The standalone OPA CLI is only needed if you want to run `opa test` against your policies independently.
 
-**When should I use OPA vs. TypeScript or Python for policies?**
+### When should I use OPA vs. TypeScript or Python for policies?
+
 If your team already writes Rego for other tools like Gatekeeper, writing Pulumi policies in Rego keeps your policy language consistent. If your team is more comfortable with general-purpose languages or needs auto-remediation, use the TypeScript or Python SDKs.
 
 Gatekeeper constraint templates can be reused directly via the `kubernetes-admission` input format, but other OPA integrations use different input structures, so those policies would need to be adapted to Pulumi's resource model. All three languages work together in the same policy groups.
@@ -126,5 +130,7 @@ Gatekeeper constraint templates can be reused directly via the `kubernetes-admis
     ```
 
 For more details, see the [policy authoring guide](/docs/insights/policy/policy-packs/authoring/) and the [Policy as Code overview](/docs/insights/policy/).
+
+{{< blog/cta-button "Get started with OPA policies" "/docs/insights/policy/" >}}
 
 {{< github-card repo="pulumi/pulumi-policy-opa" >}}
