@@ -37,10 +37,6 @@ Pulumi makes this easy by enabling you to create libraries and components that a
 
 The following example shows how you can create an AWS Lambda function or an Azure function by providing a JavaScript callback that serves as its implementation.
 
-{{< chooser language "typescript" >}}
-
-{{% choosable language typescript %}}
-
 ```typescript
 let bucket = new aws.s3.Bucket("mybucket");
 bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
@@ -48,10 +44,6 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
     console.log(JSON.stringify(ev));
 });
 ```
-
-{{% /choosable%}}
-
-{{< /chooser >}}
 
 Libraries that use JavaScript callbacks as inputs that are provided as source text to resource construction, such as in the previous example, are built on top of the [`pulumi.runtime.serializeFunction`](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#serializeFunction) API. This API takes a JavaScript `Function` object as input and returns a `Promise` that contains the serialized form of that function.
 
