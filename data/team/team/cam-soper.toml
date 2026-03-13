@@ -1,0 +1,10 @@
+id = "cam-soper"
+name = "Cam Soper"
+title = "Senior Technical Content Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "CamSoper"
+linkedin = "camthegeek"

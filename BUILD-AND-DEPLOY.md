@@ -65,9 +65,9 @@ make clean                # Remove build artifacts and dependencies
 **Required Tools:**
 
 - Node.js 24.x
-- Hugo 0.154.5
+- Hugo 0.157.0
 - Yarn 1.22.x (not strictly enforced in CI)
-- Go 1.25.x (for documentation generation)
+- Go 1.26.x (for documentation generation)
 - Python 3.9 (for testing workflows) and 3.13 (for SDK documentation generation)
 - Pulumi CLI (for infrastructure deployments)
 
@@ -178,7 +178,7 @@ The docs site integrates with several other Pulumi repositories:
 
 - **pulumi/registry**: Package registry UI (external repository, served via CloudFront origin routing at /registry path)
 - **pulumi/answers**: AI answers feature (embedded at /answers)
-- **pulumi/pulumi-ai-app-infra**: AI application backend
+- **pulumi/pulumi-ai-app-infra**: AI application backend (Copilot)
 - **pulumi/guides**: Interactive guides (embedded at /guides)
 
 These are integrated via CloudFront origin routing and Pulumi stack references.
@@ -213,17 +213,17 @@ nvm use 24
 # Yarn
 npm install -g yarn@1.22
 
-# Hugo 0.154.5
+# Hugo 0.157.0
 # macOS:
-brew install hugo@0.154.5
-# Linux: Download from https://github.com/gohugoio/hugo/releases/tag/v0.154.5
+brew install hugo@0.157.0
+# Linux: Download from https://github.com/gohugoio/hugo/releases/tag/v0.157.0
 
 # Pulumi CLI
 curl -fsSL https://get.pulumi.com | sh
 
-# Go 1.25+
+# Go 1.26+
 # macOS:
-brew install go@1.25
+brew install go@1.26
 # Linux: https://go.dev/doc/install
 
 # Python 3.13+
@@ -481,7 +481,7 @@ Installs and verifies all required dependencies.
 
 1. Checks for required tools:
    - Node.js 24.x
-   - Hugo 0.154.5
+   - Hugo 0.157.0
    - Yarn 1.22.x
 
 2. Installs dependencies for:
@@ -942,7 +942,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 1. **buildSite**
    - Checkout code
    - Fetch secrets from Pulumi ESC
-   - Setup: Node.js 24, Go 1.25, Hugo 0.154.5
+   - Setup: Node.js 24, Go 1.26, Hugo 0.157.0
    - Configure AWS credentials via OIDC (role: ContinuousDelivery, 2-hour session)
    - Install Pulumi CLI
    - Run `make ci_push`:
@@ -1140,12 +1140,12 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 **Setup:**
 
 - Multi-language runtimes:
-  - Go 1.25
+  - Go 1.26
   - Node.js 20
   - Python 3.9
   - .NET 8.0
   - Java 11
-- Hugo 0.154.5
+- Hugo 0.157.0
 - Latest Pulumi CLI
 - Kubernetes KinD cluster
 
@@ -1509,11 +1509,7 @@ Delivery: CloudWatch Logs infrastructure v2
    - Path: /answers
    - ALB from stack reference
 
-5. **AI App Origin** - From pulumi-ai-app-infra stack
-   - Path: /ai, /pulumi-ai
-   - Domain from stack reference
-
-6. **Guides Origin** - From pulumi/guides stack
+5. **Guides Origin** - From pulumi/guides stack
    - Path: /guides
    - ALB from stack reference
 
@@ -1526,7 +1522,8 @@ Delivery: CloudWatch Logs infrastructure v2
 | /js/*.js | S3 Main | 1 year | Versioned assets |
 | /registry/* | Registry | None | Dynamic content |
 | /guides/* | Guides | None | Dynamic content |
-| /ai/* | AI App | None | Dynamic content |
+| /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |
+| /ai/* | S3 Main | 1 week | 410 Gone (Lambda@Edge) |
 | /uploads/* | Uploads | 1 hour | User uploads |
 | /fonts/* | S3 Main | 1 hour | Web fonts |
 | /icons/* | S3 Main | 1 hour | Icons |
@@ -1570,15 +1567,15 @@ const edgeRedirects = new aws.lambda.Function("edge-redirects", {
 });
 ```
 
-**2. AI Answers Rewrites**
+**2. AI Redirect and Gone**
 
-**Event Type:** origin-response
+**Event Type:** origin-request
 
-**Purpose:** Rewrite 404 responses to 410 (Gone) for unpublished AI answers
+**Purpose:** Redirect `/ai` to `/product/neo/` (301) and return 410 Gone for `/ai/*` subpaths
 
-**Applied To:** `/ai/answers/*` paths
+**Applied To:** `/ai` and `/ai/*` paths
 
-**Why:** Informs search engines that AI answers are intentionally unpublished
+**Why:** The /ai page has been replaced by /product/neo/; subpaths are permanently removed
 
 #### Route53 DNS
 
@@ -1907,21 +1904,29 @@ Lambda function intercepts requests at CloudFront edge:
 ```javascript
 exports.handler = async (event) => {
     const request = event.Records[0].cf.request;
+    const uri = request.uri;
 
-    if (request.uri.startsWith('/ai')) {
+    // Redirect /ai or /ai/ to /product/neo/.
+    if (uri === '/ai' || uri === '/ai/') {
         return {
             status: '301',
             statusDescription: 'Moved Permanently',
             headers: {
-                location: [{
-                    key: 'Location',
-                    value: '/answers'
-                }]
-            }
+                location: [{ key: 'Location', value: '/product/neo/' }],
+                'cache-control': [{ key: 'Cache-Control', value: 'max-age=604800' }],
+            },
         };
     }
 
-    return request;
+    // All other /ai/* subpaths return 410 Gone.
+    return {
+        status: '410',
+        statusDescription: 'Gone',
+        headers: {
+            'cache-control': [{ key: 'Cache-Control', value: 'max-age=604800' }],
+            'content-type': [{ key: 'Content-Type', value: 'text/plain' }],
+        },
+    };
 };
 ```
 
@@ -1972,7 +1977,6 @@ config:
   aws:region: us-west-2
   www.pulumi.com:addSecurityHeaders: "true"
   www.pulumi.com:doEdgeRedirects: "true"
-  www.pulumi.com:doAIAnswersRewrites: "true"
   www.pulumi.com:websiteDomain: www.pulumi.com
   www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-website-logs
   www.pulumi.com:hostedZone: www.pulumi.com
@@ -1993,7 +1997,6 @@ config:
   aws:region: us-west-2
   www.pulumi.com:addSecurityHeaders: "true"
   www.pulumi.com:doEdgeRedirects: "true"
-  www.pulumi.com:doAIAnswersRewrites: "true"
   www.pulumi.com:websiteDomain: www.pulumi-test.io
   www.pulumi.com:websiteLogsBucketName: pulumi-test-io-website-logs
   www.pulumi.com:hostedZone: www.pulumi-test.io
@@ -2569,7 +2572,7 @@ Common issues and their solutions.
 # Check Hugo version
 hugo version
 
-# Should be: hugo v0.154.5
+# Should be: hugo v0.157.0
 
 # Update if different
 # macOS:
@@ -3129,10 +3132,10 @@ git commit -m "Update Node.js dependencies"
 
 ```bash
 # Update Hugo version in all workflow files
-find .github/workflows -name "*.yml" -exec sed -i 's/hugo-version: 0.154.5/hugo-version: 0.155.0/g' {} +
+find .github/workflows -name "*.yml" -exec sed -i 's/hugo-version: 0.157.0/hugo-version: 0.155.0/g' {} +
 
 # Update ensure.sh
-sed -i 's/0.154.5/0.155.0/g' scripts/ensure.sh
+sed -i 's/0.157.0/0.155.0/g' scripts/ensure.sh
 
 # Test locally
 make clean
@@ -3917,9 +3920,9 @@ Complete reference of all build and deployment scripts.
 | Dependency | Version | Purpose |
 |------------|---------|---------|
 | **Node.js** | 24.x | Runtime for build tools |
-| **Hugo** | 0.154.5 | Static site generator |
+| **Hugo** | 0.157.0 | Static site generator |
 | **Yarn** | 1.22.x | Package manager |
-| **Go** | 1.25+ | Doc generation |
+| **Go** | 1.26+ | Doc generation |
 | **Python** | 3.13+ | Doc generation |
 | **Pulumi CLI** | Latest | Infrastructure deployment |
 | **TypeDoc** | 0.28.15 | Node.js doc generation |

@@ -93,7 +93,7 @@ sections:
   - emoji: 🤖
     heading: AI Integration
     description: Integrate AI assistants with Pulumi infrastructure.
-    link: /docs/iac/guides/ai-integration/
+    link: /docs/ai/
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>

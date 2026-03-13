@@ -6,7 +6,6 @@ import {
     CloudFrontRequest,
     CloudFrontRequestEvent,
     CloudFrontResponse,
-    CloudFrontResponseEvent,
 } from "aws-lambda";
 import { LambdaEdge } from "./lambdaEdge";
 import { getResources } from "@pulumi/aws/resourcegroupstaggingapi/getResources";
@@ -29,16 +28,16 @@ export function getEdgeRedirectAssociation(): aws.types.input.cloudfront.Distrib
     };
 }
 
-export function getAIAnswersRewriteAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
-    const aiAnswersRewritesLambda = new LambdaEdge("answers-rewrites", {
-        func: getAIAnswersRewritesLambdaCallback(),
-        funcDescription: "Lambda function that rewrites HTTP 404s from Pulumi AI Answers as 410s.",
-    }, { provider: usEast1Provider });
+const aiRedirectAndGoneLambda = new LambdaEdge("ai-redirect-gone", {
+    func: getAIRedirectAndGoneLambdaCallback(),
+    funcDescription: "Lambda function that redirects /ai to /product/neo/ and returns 410 Gone for /ai/* subpaths.",
+}, { provider: usEast1Provider });
 
-     return {
+export function getAIRedirectAndGoneAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
+    return {
         includeBody: false,
-        lambdaArn: aiAnswersRewritesLambda.getLambdaEdgeArn(),
-        eventType: "origin-response",
+        lambdaArn: aiRedirectAndGoneLambda.getLambdaEdgeArn(),
+        eventType: "origin-request",
     };
 }
 
@@ -79,25 +78,33 @@ function getEdgeRedirectsLambdaCallback(): aws.lambda.Callback<CloudFrontRequest
     };
 }
 
-function getAIAnswersRewritesLambdaCallback(): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
-    return (event: CloudFrontResponseEvent, context, callback) => {
+function getAIRedirectAndGoneLambdaCallback(): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
+    return (event: CloudFrontRequestEvent, context, callback) => {
         const request = event.Records[0].cf.request;
-        const response = event.Records[0].cf.response;
+        const uri = request.uri;
 
-        // When requests for an AI Answers page return 404, either the page doesn't exist or we've explicitly unpublished it.
-        // For the latter case, it'd be great if the AI App could 410 (Gone), but unfortunately Next.js doesn't support this.
-        // So we use this function to rewrite the responses for these pages on the way out.
-        // https://github.com/vercel/next.js/discussions/53225
-        if (request.uri.match(/\/ai\/answers\//) && response.status === "404") {
+        // Redirect /ai or /ai/ to /product/neo/.
+        if (uri === "/ai" || uri === "/ai/") {
             callback(null, {
-                ...response,
-                status: "410",
-                statusDescription: "Gone",
+                status: "301",
+                statusDescription: "Moved Permanently",
+                headers: {
+                    "location": [{ key: "Location", value: "/product/neo/" }],
+                    "cache-control": [{ key: "Cache-Control", value: "max-age=604800" }],
+                },
             });
+            return;
         }
 
-        callback(null, response);
-        return;
+        // All other /ai/* subpaths return 410 Gone.
+        callback(null, {
+            status: "410",
+            statusDescription: "Gone",
+            headers: {
+                "cache-control": [{ key: "Cache-Control", value: "max-age=604800" }],
+                "content-type": [{ key: "Content-Type", value: "text/plain" }],
+            },
+        });
     };
 }
 

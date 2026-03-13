@@ -75,12 +75,18 @@ between the API and the database. The API also supports [exporting OpenTelemetry
 | PULUMI_DATABASE_NAME     | The name of the database on the database server.                                                                                             |
 | PULUMI_API_DOMAIN        | The internet or network-local domain using which the API service can be reached, e.g. `pulumiapi.acmecorp.com`. Default is `localhost:8080`. |
 | PULUMI_CONSOLE_DOMAIN    | The internet or network-local domain using which the Console can be reached, e.g. `pulumiconsole.acmecorp.com`. Default is `localhost:3000`. |
+| PULUMI_ENGINE_EVENTS_SCHEMA_V2 | Set this environment variable to `true` for fresh installs. **If you have an existing installation and the environment variable is currently not set or set to `false`, contact [Pulumi support](/support/) before setting it to `true`.** |
+| PULUMI_ENGINE_EVENTS_LEGACY_WRITE | Set this environment variable to `false` for fresh installs. **If you have an existing installation and the environment variable is currently not set or set to `true` in your installation, contact [Pulumi support](/support/) before setting it to `false`.** |
 
 ## Object storage
 
 The service saves the state of every stack, that uses it as the backend, to a persistent object storage. If your org uses policy
 packs, then anytime a user publishes a policy pack, it gets uploaded to the same object storage service as well. Both the
 state (checkpoint) and the policy pack must use different buckets on the same object storage service.
+
+{{% notes type="warning" %}}
+**S3-compatible storage providers**: The Pulumi API service stores objects using gzip compression. Your S3-compatible object storage provider and any intermediary (such as a reverse proxy or ingress controller) must correctly preserve the `Content-Encoding: gzip` header on responses. If this header is stripped or missing, clients will receive garbled content instead of valid data.
+{{% /notes %}}
 
 ### Local storage
 

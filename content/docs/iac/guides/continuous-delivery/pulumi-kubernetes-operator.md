@@ -165,7 +165,7 @@ See ["States & Backends"][states-backends] for more information.
 
 [Pulumi ESC (Environments, Secrets, and Configuration)][pulumi-esc] provides centralized management of secrets and configuration. You can attach ESC environments to Stack objects to access shared configuration and secrets across multiple stacks.
 
-Use the `spec.envs` field to specify one or more ESC environment names:
+Use the `spec.environment` field to specify one or more ESC environment names:
 
 ```yaml
 apiVersion: pulumi.com/v1
@@ -177,7 +177,7 @@ spec:
   stack: my-org/my-app/prod
   projectRepo: https://github.com/example/app
   branch: main
-  envs:
+  environment:
     - prod-shared-config
     - aws-credentials
   envRefs:

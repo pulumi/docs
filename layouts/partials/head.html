@@ -92,7 +92,7 @@
         <meta name="twitter:creator" content="{{ .Params.meta_twitter_creator }}" />
     {{ else if .Params.authors }}
         {{ range $idx, $authorName := .Params.authors }}
-            {{ $authorData := index $.Site.Data.team.team $authorName }}
+            {{ $authorData := index site.Data.team.team $authorName }}
             {{ with $authorData.social }}
                 {{ with .twitter }}
                     <meta name="twitter:creator" content="@{{ . }}" />
@@ -426,7 +426,7 @@
             {{ errorf "Blog posts require authors: %s" .File.Path }}
         {{ else }}
             {{ range $authorID := .Params.authors }}
-                {{ if not (index $.Site.Data.team.team $authorID) }}
+                {{ if not (index site.Data.team.team $authorID) }}
                     {{ errorf "Blog posts author (%s) not found: %s" $authorID $.Page.File.Path }}
                 {{ end }}
             {{ end }}

@@ -17,7 +17,7 @@ This guide describes how to start using Pulumi Deployments with a new Pulumi IaC
 
 ## Prerequisites
 
-Before you start, see the GitHub app [installation instructions](/docs/integrations/github-app/#installation-and-configuration) to configure your Pulumi organization to work seamlessly with Deployments.
+Before you start, configure a [version control integration](/docs/version-control/) for your Pulumi organization. Deployments works with [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/).
 
 ## New Project Wizard
 
@@ -26,7 +26,7 @@ It's possible to create a new Pulumi project, commit its code, and deploy it ent
 Navigate to the "New Project" tab.
 Select "Use a template" if you'd like to create a fully featured project, or select "Use a starter" if you want to create a bare-bones project with only the minimal necessary boilerplate.
 
-In order to use templates you will need to authorize Pulumi with GitHub so that it can clone private repositories as template sources and commit new code for your projects.
+In order to use templates you will need to authorize Pulumi with your VCS provider so that it can clone private repositories as template sources and commit new code for your projects.
 Click the button and accept the required permissions if you would like to use templates.
 
 {{% notes "info" %}}
@@ -37,7 +37,7 @@ If you select "Use a template" but your organization doesn't have custom templat
 On the next screen, select "Pulumi Deployments" as your deployment method.
 
 {{% notes "info" %}}
-You may need to [install the Pulumi GitHub app](/docs/deployments/deployments/reference/#github-app-installation) if you haven't already.
+You may need to configure a [version control integration](/docs/version-control/) if you haven't already.
 {{% /notes %}}
 
 You'll now be prompted to enter some information about the project you're about to create.
@@ -65,12 +65,12 @@ This enables the resulting stack to use a bundle of pre-configured secrets and c
 Here you can configure the repository and optional subdirectory to use when committing your new project code.
 
 {{% notes "info" %}}
-If you granted the Pulumi GitHub app access to _all_ repositories, the New Project Wizard will allow users to create projects with Deployments enabled in new repositories.
+If you granted the VCS integration access to _all_ repositories, the New Project Wizard will allow users to create projects with Deployments enabled in new repositories.
 
-If the app only has access to _some_ repositories, users will only be able to create new projects with Deployments enabled in _existing_ repositories.
+If the integration only has access to _some_ repositories, users will only be able to create new projects with Deployments enabled in _existing_ repositories.
 {{% /notes %}}
 
-The GitHub owner is not configurable, as that must match the Pulumi GitHub app's owner in order to work with Deployments.
+The repository owner is not configurable, as that must match the VCS integration's configured owner in order to work with Deployments.
 
 ### Deployment settings
 
@@ -83,5 +83,5 @@ After you've configured everything, you should see a new Deployment of your proj
 In summary, after going through this wizard you will have:
 
 * A new Pulumi project and stack, created from a project template or starter.
-* Code committed and pushed into a new or existing GitHub repository.
+* Code committed and pushed into a new or existing repository.
 * Pulumi Deployments configured on your new stack, and a preview Deployment in progress.

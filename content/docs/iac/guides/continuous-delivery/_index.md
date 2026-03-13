@@ -104,7 +104,7 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
     </a>
 </div>
 
-> Looking for Pulumi-maintained VCS integrations? See [Integrations](/docs/integrations/) for the GitHub App, Azure DevOps Task Extension, and GitLab integrations.
+> Looking for Pulumi-maintained VCS integrations? See [Version Control](/docs/version-control/) for the GitHub App, Azure DevOps, and GitLab integrations.
 
 ### Configuration and Secrets
 
@@ -129,5 +129,5 @@ to use one branch-per-[stack](/docs/concepts/stack/). This allows you to control
 using your usual commit, code review, and approval process, such as GitHub pull requests.
 
 If you are using GitHub pull requests to trigger updates, you will likely want to use the
-[Pulumi GitHub App](/docs/integrations/github-app/). This gives you interactive infrastructure change previews
+[Pulumi GitHub App](/docs/version-control/github-app/). This gives you interactive infrastructure change previews
 inside of your Pull Request, making it easier to see, review, and comment on any changes before a deployment occurs.

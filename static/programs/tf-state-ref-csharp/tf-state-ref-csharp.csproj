@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pulumi" Version="3.82.1" />
+    <PackageReference Include="Pulumi.Eks" Version="3.9.1" />
+    <PackageReference Include="Pulumi.Terraform" Version="6.0.1" />
+  </ItemGroup>
+
+</Project>

@@ -46,7 +46,7 @@ options:
         - icon: git-merged
           icon_color: purple
           title: Git Push to Deploy
-          description: Deploy infrastructure with each [push to a GitHub branch](/docs/platform/deployments/reference/#github-push-to-deploy), using pull requests to review changes in ephemeral [Review Stacks](/docs/platform/deployments/review-stacks/) before deploying them.
+          description: Deploy infrastructure with each push to a branch using your [version control integration](/docs/version-control/), using pull requests to review changes in ephemeral [Review Stacks](/docs/deployments/deployments/review-stacks/) before deploying them.
         - icon: upload-to-cloud
           icon_color: salmon
           title: Click to Deploy

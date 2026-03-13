@@ -1,16 +1,17 @@
 ---
-title_tag: "Pulumi GitHub App | Integrations"
+title_tag: "Pulumi GitHub App | Version Control"
 meta_desc: Pulumi's GitHub app integrates the results of Pulumi stack updates. It
            will show you any potential infrastructure changes on Pull Requests and commit Checks.
 title: Pulumi GitHub App
 h1: Pulumi GitHub App
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    integrations:
+    version-control:
         name: GitHub App
-        parent: integrations-home
+        parent: version-control-home
         weight: 1
 aliases:
+- /docs/integrations/github-app/
 - /docs/iac/integrations/github-app/
 - /docs/iac/guides/continuous-delivery/github-app/
 - /docs/iac/using-pulumi/continuous-delivery/github-app/

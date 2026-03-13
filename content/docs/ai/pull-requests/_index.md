@@ -25,11 +25,9 @@ Pull requests are the bridge between Neo's AI capabilities and your production i
 
 ## Prerequisites
 
-At this time, Neo only supports reading code from and creating pull requests in GitHub.
+### VCS integration
 
-### GitHub App Installation
-
-Neo requires the [Pulumi GitHub App](/docs/integrations/github-app/) to be installed to create pull requests. Additionally, without the Pulumi GitHub App, Neo will not be able to view the IaC code backing a stack. Neo can still propose code changes, but they will not be fully contextualized to your IaC code.
+Neo requires a [version control integration](/docs/version-control/) to read code from and create pull requests. Pulumi supports [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/). Without a VCS integration, Neo will not be able to view the IaC code backing a stack. Neo can still propose code changes, but they will not be fully contextualized to your IaC code.
 
 ### Code Access
 
@@ -51,8 +49,8 @@ Neo will offer to open a pull request after a preview is run. You can also ask N
 
 When reviewing Neo's pull requests, you can ask for modifications through follow-up prompting. Neo understands context from both the PR and your conversation history.
 
-### GitHub Actions Integration
+### CI/CD integration
 
-If you use GitHub Actions for CI/CD, Neo's pull requests can automatically trigger your existing workflows. When configured, your Pulumi previews, security scans, policy checks, and tests will run automatically on Neo's PRs, just like any other pull request. If a workflow fails, you can ask Neo to address the specific issue, and it will push fixes to the same PR.
+Neo's pull requests can automatically trigger your existing CI/CD workflows. When configured, your Pulumi previews, security scans, policy checks, and tests will run automatically on Neo's PRs, just like any other pull request. If a workflow fails, you can ask Neo to address the specific issue, and it will push fixes to the same PR.
 
-To set up GitHub Actions with Pulumi, see the [GitHub Actions documentation](/docs/iac/using-pulumi/continuous-delivery/github-actions/).
+To set up CI/CD with Pulumi, see the documentation for [GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/), [Azure DevOps Pipelines](/docs/iac/using-pulumi/continuous-delivery/azure-devops/), or [GitLab CI](/docs/iac/using-pulumi/continuous-delivery/gitlab-ci/).

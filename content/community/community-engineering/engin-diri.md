@@ -8,6 +8,14 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "SCaLE 23x"
+  title: "Building AI Platforms Without Losing Your Engineering Principles"
+  url: "https://www.socallinuxexpo.org/scale/23x/presentations/building-ai-platforms-without-losing-your-engineering-principles"
+  date: 2026-03-08T11:45:00.000-07:00
+- event: "DevOpsDays LA 2026"
+  title: "The Ralph Wiggum Loop: How Autonomous AI Loops Built My Serverless SaaS While I Slept"
+  url: "https://devopsdays.org/events/2026-los-angeles/program/engin-diri"
+  date: 2026-03-06T13:45:00.000-07:00
 - event: "CfgMgmtCamp 2026 Ghent"
   title: "Building AI-Assisted Operations: Agentic AI Workshop"
   url: "https://cfp.cfgmgmtcamp.org/ghent2026/talk/DCRWVC/"

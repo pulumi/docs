@@ -1,6 +1,6 @@
 ---
 title: "Multicloud | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: "One codebase, any cloud. Manage AWS, Azure, GCP, and Kubernetes infrastructure with Python, TypeScript, Go, or C#. 170+ providers."
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-multicloud
@@ -9,6 +9,14 @@ heading: "Multicloud infrastructure"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
+
+hide_platform_details: true
+
+customer_quote:
+    text: "The infrastructure team acts as groundkeepers of our Pulumi practices, not gatekeepers, but promoters for the entire org."
+    author: "Paul Cioanca, Platform Engineer, Supabase"
+    logo: supabase
+    link: /case-studies/supabase
 
 overview:
     title: One platform for AWS, Azure, GCP,<br/>and 170+ providers
@@ -167,10 +175,10 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
         by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "150,000+"
+        number: "350,000+"
         description: developers
     company:
-        number: "3,000+"
+        number: "3,700+"
         description: organizations
     integration:
         number: "170+"

@@ -1,15 +1,16 @@
 ---
-title_tag: "GitLab | Integrations"
+title_tag: "GitLab | Version Control"
 meta_desc: Pulumi integrates with GitLab for merge request previews, CI/CD pipelines, OIDC authentication, template sources, and automated deployments.
 title: GitLab
 h1: GitLab
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    integrations:
+    version-control:
         name: GitLab
-        parent: integrations-home
+        parent: version-control-home
         weight: 2
 aliases:
+- /docs/integrations/gitlab/
 - /docs/iac/integrations/gitlab-app/
 - /docs/iac/guides/continuous-delivery/gitlab-app/
 - /docs/iac/using-pulumi/continuous-delivery/gitlab-app/
@@ -130,4 +131,4 @@ Use GitLab repositories as template sources for [Pulumi IDP](/docs/idp/concepts/
 
 ## Pulumi Deployments
 
-Trigger [Pulumi Deployments](/docs/deployments/deployments/) from GitLab CI by calling the [Deployments REST API](https://www.pulumi.com/docs/deployments/api/) from your GitLab CI job. Native push-to-deploy from GitLab repositories is not currently supported; that feature requires the [Pulumi GitHub App](/docs/integrations/github-app/).
+Trigger [Pulumi Deployments](/docs/deployments/deployments/) from GitLab CI by calling the [Deployments REST API](/docs/reference/cloud-rest-api/deployments/) from your GitLab CI job. Native push-to-deploy from GitLab repositories is not currently supported; that feature requires the [Pulumi GitHub App](/docs/version-control/github-app/).

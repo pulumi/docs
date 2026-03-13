@@ -50,7 +50,7 @@ Policy plugins are installed automatically with the Pulumi CLI.
 
 ### Converter plugins
 
-Converter plugins transform existing infrastructure-as-code from other tools (like Terraform, Kubernetes YAML, or CloudFormation) into Pulumi programs. Learn more about [conversion tools](/docs/iac/guides/migration/converters/).
+Converter plugins transform existing infrastructure-as-code from other tools (like Terraform, Kubernetes YAML, or CloudFormation) into Pulumi programs. Learn more about [converters](/docs/iac/concepts/converters/).
 
 Converter plugins are installed automatically with the Pulumi CLI when you run the [`pulumi convert`](/docs/iac/cli/commands/pulumi_convert) command.
 
@@ -98,13 +98,13 @@ You can manage your local plugin cache using the following CLI commands:
 Plugins are deployed through two approaches:
 
 - **Executables** following the naming convention `pulumi-<kind>-<name>` (e.g., `pulumi-resource-aws`)
-- **Directory-based plugins** containing a `PulumiPlugin.yaml` configuration file, where the engine uses the specified runtime to execute the plugin through the language plugin's interface
+- **Source-based plugins** containing a [`PulumiPlugin.yaml`](/docs/iac/concepts/plugins/#pulumipluginyaml-reference) configuration file, where the engine uses the specified runtime to execute the plugin through the language plugin's interface
 
 For more details about Pulumi plugin architecture and how to contribute to plugin development, see the [Pulumi Developer Documentation](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/plugins.html).
 
 ## PulumiPlugin.yaml reference
 
-Directory-based plugins use a `PulumiPlugin.yaml` file to configure how the plugin runs. This file is similar to [`Pulumi.yaml`](/docs/iac/concepts/projects/project-file/) but is specifically for plugin configuration rather than program configuration. The filename is case-sensitive: it must be exactly `PulumiPlugin.yaml` or `PulumiPlugin.yml`.
+Source-based plugins use a `PulumiPlugin.yaml` file to configure how the plugin runs. The filename is case-sensitive: it must be exactly `PulumiPlugin.yaml` or `PulumiPlugin.yml`.
 
 Use this configuration file when developing custom components or providers to distribute as plugins. Most Pulumi users working with standard programs will not need to create or modify a `PulumiPlugin.yaml` file.
 

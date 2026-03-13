@@ -49,8 +49,8 @@ See also:
 
 We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
 
-* [Hugo](https://gohugo.io/installation/) (>= 0.154.5)
-  * Hugo 0.154.5 is highly recommended. This is the version we use in our deployment pipelines.
+* [Hugo](https://gohugo.io/installation/) (>= 0.157.0)
+  * Hugo 0.157.0 is highly recommended. This is the version we use in our deployment pipelines.
 * [Node.js](https://nodejs.org/en/download/package-manager) (>= 24)
 * [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
 
@@ -90,7 +90,7 @@ For more information on dev containers, see the [VS Code Dev Containers document
 
 * **Examples**: Many of the examples we include in our documentation are maintained as full Pulumi programs and tested daily. You'll find them all at `./static/programs`.
 
-* **Infrastructure**: We deploy the website as a statically built artifact to a unique Amazon S3 bucket on every commit to the base branch of this repo. The Pulumi program that handles this is located in `./infrastructure`. This is also where you'll find the CloudFront configuration that handles proxying [Pulumi AI](https://pulumi.com/ai) and the [Pulumi Registry](https://pulumi.com/registry).
+* **Infrastructure**: We deploy the website as a statically built artifact to a unique Amazon S3 bucket on every commit to the base branch of this repo. The Pulumi program that handles this is located in `./infrastructure`. This is also where you'll find the CloudFront configuration that handles proxying [Pulumi Neo](https://pulumi.com/product/neo/) and the [Pulumi Registry](https://pulumi.com/registry).
 
 ### Using the Makefile
 
@@ -274,7 +274,7 @@ Delve deeper into Pulumi with additional resources:
 * [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Deploy a simple application in AWS, Azure, Google Cloud, or Kubernetes using Pulumi.
 * [Registry](https://www.pulumi.com/registry/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Search for packages and learn about the supported resources you need. Install the package directly into your project, browse the API documentation, and start building.
 * [Pulumi Blog](https://www.pulumi.com/blog/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Stay in the loop with our latest tech announcements, insightful articles, and updates.
-* [Try Pulumi AI](https://www.pulumi.com/ai/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Use natural-language prompts to generate Pulumi infrastructure-as-code programs in any language.
+* [Try Pulumi Neo](https://www.pulumi.com/product/neo/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Use natural-language prompts to generate Pulumi infrastructure-as-code programs in any language.
 
 ## Pulumi roadmap
 

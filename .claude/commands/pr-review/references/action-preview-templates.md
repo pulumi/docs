@@ -21,7 +21,7 @@ description: Preview formats and confirmation flows for PR actions
 
 **Note**: Not available for bot PRs (excluded from bot menus)
 
-**Flow**: Ask user for changes, then display preview:
+**Flow**: Use AskUserQuestion to ask user what changes to make, then display preview:
 
 ```
 ## Preview: Changes and Approval
@@ -60,7 +60,7 @@ Use AskUserQuestion with these options:
 
 ### Edit comment
 
-1. Ask user for revised comment text
+1. Use AskUserQuestion to ask user for revised comment text (open-ended)
 2. Show updated preview with new text
 3. Ask for confirmation again (repeat confirmation question)
 4. Loop until user chooses "Yes, proceed" or "Cancel"

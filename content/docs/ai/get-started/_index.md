@@ -24,17 +24,17 @@ Neo is in public preview and currently free to use. Users will receive ample war
 
 Neo is enabled by default. To disable Neo for your organization, navigate to the [Access Management page](/docs/pulumi-cloud/access-management/), under the Settings section. AI features can be enabled or disabled in the Pulumi Copilot section. If Copilot was previously disabled, it will need to be enabled to use Neo.
 
-## GitHub App Installation
+## VCS integration
 
-Installing the [Pulumi GitHub App](/docs/integrations/github-app/) significantly enhances Neo's capabilities, though it is not required. The Pulumi GitHub App:
+Connecting a [version control integration](/docs/version-control/) significantly enhances Neo's capabilities, though it is not required. Pulumi supports [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/). A VCS integration:
 
 - Allows Neo to read repository content for better context
 - Enables pull request creation
 - Streamlines the code change workflow
 
-Neo can still provide code change suggestions without the GitHub App, but you'll need to apply the changes and open PRs manually.
+Neo can still provide code change suggestions without a VCS integration, but you'll need to apply the changes and open PRs manually.
 
-To install the GitHub App, see the [GitHub integration guide](/docs/integrations/github-app/).
+To set up a VCS integration, see the [version control docs](/docs/version-control/).
 
 ## Neo's Permission Model
 
@@ -86,7 +86,6 @@ Let's run a simple infrastructure [task](/docs/ai/tasks/) to see Neo in action
 
 ## Considerations and Limitations
 
-- GitHub Only - Neo only works with GitHub repositories. GitLab, Bitbucket, and other platforms are not supported yet.
 - Code Changes Only - Neo can only modify infrastructure through code. It cannot perform API or UI actions like configure deployments, updating stack configurations, or managing environments in Pulumi Cloud.
-- Cannot Create GitHub Repos - Neo cannot create new GitHub repositories or initialize new Git repos. It only works within existing repositories.
+- Cannot Create Repos - Neo cannot create new repositories or initialize new Git repos. It only works within existing repositories.
 - Cannot Create New Projects - Neo cannot initialize new Pulumi projects. It can only work within existing projects that are already set up.

@@ -1,6 +1,6 @@
 ---
 title: "Infrastructure as Code | Pulumi"
-meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
+meta_desc: "Infrastructure as Code in Python, TypeScript, Go, or C#. Ship infrastructure 3-5x faster with real programming languages, full IDE support, and testing. Free tier."
 layout: gads-template
 block_external_search_index: true
 utm_source: gads-infrastructure-engineers
@@ -9,6 +9,14 @@ heading: "Infrastructure as Code"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
+
+hide_platform_details: true
+
+customer_quote:
+    text: "When we did it with Terraform, it took two weeks to do infrastructure deployments. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
+    author: "Matt Stephenson, Senior Principal Software Engineer, Starburst"
+    logo: starburst
+    link: /case-studies/starburst
 
 overview:
     title: Ship infrastructure 3-5x faster<br/>with real programming languages
@@ -167,10 +175,10 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
         by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "150,000+"
+        number: "350,000+"
         description: developers
     company:
-        number: "3,000+"
+        number: "3,700+"
         description: organizations
     integration:
         number: "170+"

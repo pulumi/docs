@@ -10,7 +10,7 @@ menu:
   esc:
     parent: esc-syntax-builtin-functions
     identifier: esc-syntax-fn-join
-    weight: 4
+    weight: 5
 ---
 
 The `fn::join` built-in function joins the elements of a list of strings using a given delimiter. If any input to `fn::join` is a secret, the result is also a secret.

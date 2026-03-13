@@ -10,7 +10,7 @@ menu:
   esc:
     parent: esc-syntax-builtin-functions
     identifier: esc-syntax-fn-open
-    weight: 5
+    weight: 6
 ---
 
 The `fn::open` built-in function invokes a [provider](/docs/esc/environments/syntax/providers/) to fetch values from outside of ESC.

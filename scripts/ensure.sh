@@ -13,7 +13,7 @@ check_version() {
     color_yellow=$(echo -e "\033[0;33m")
     color_end=$(echo -e "\033[0m")
 
-    details="See the README at https://github.com/pulumi/docs for a list of required tools and versions."
+    details="Run 'mise install' to install the correct versions (see mise.toml), or see the README at https://github.com/pulumi/docs."
 
     if ! command -v "$executable" &> /dev/null; then
         echo -e "${color_red}error${color_end} This project requires $1, but the '$2' executable is either not installed or not on your PATH."
@@ -27,7 +27,7 @@ check_version() {
     fi
 }
 check_version "Node.js"  "node"  "node -v | sed 's/v\([0-9\.]*\).*$/\1/'"            "24"
-check_version "Hugo"     "hugo"  "hugo version | sed 's/hugo v\([0-9\.]*\).*$/\1/'"  "0.154.5"
+check_version "Hugo"     "hugo"  "hugo version | sed 's/hugo v\([0-9\.]*\).*$/\1/'"  "0.157.0"
 check_version "Yarn"     "yarn"  "yarn -v | sed 's/v\([0-9\.]*\).*$/\1/'"            "1.22"
 
 # Install the Node dependencies for the website and the infrastructure.
