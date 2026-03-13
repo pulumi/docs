@@ -177,45 +177,38 @@ func main() {
 
 ```csharp
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 using Pulumi;
 using CloudFormation = Pulumi.Aws.CloudFormation;
 using Sqs = Pulumi.Aws.Sqs;
 
-class Program
+return await Deployment.RunAsync(async () =>
 {
-    static Task<int> Main()
-    {
-        return Deployment.RunAsync(async () =>
+    var serverlessStack = await CloudFormation.GetStack.InvokeAsync(
+        new CloudFormation.GetStackArgs
         {
-            var serverlessStack = await CloudFormation.GetStack.InvokeAsync(
-                new CloudFormation.GetStackArgs
-                {
-                    Name = "my-api-dev",
-                }
-            );
+            Name = "my-api-dev",
+        }
+    );
 
-            var apiEndpoint = serverlessStack.Outputs["ServiceEndpoint"];
-            var processOrderArn = serverlessStack.Outputs["ProcessOrderLambdaFunctionQualifiedArn"];
+    var apiEndpoint = serverlessStack.Outputs["ServiceEndpoint"];
+    var processOrderArn = serverlessStack.Outputs["ProcessOrderLambdaFunctionQualifiedArn"];
 
-            var queue = new Sqs.Queue("new-queue");
+    var queue = new Sqs.Queue("new-queue");
 
-            return new Dictionary<string, object?>
-            {
-                { "endpoint", apiEndpoint },
-                { "orderFunctionArn", processOrderArn },
-            };
-        });
-    }
-}
+    return new Dictionary<string, object?>
+    {
+        { "endpoint", apiEndpoint },
+        { "orderFunctionArn", processOrderArn },
+    };
+});
 ```
 
 {{% /choosable %}}
 
 {{< /chooser >}}
 
-All we need to do is run `pulumi up` and the Pulumi runtime will query the CloudFormation stack and retrieve its output values. The Serverless Framework stack is treated as read-only, and Pulumi will never attempt to modify it or any resources managed by it.
+Run `pulumi up` and the Pulumi runtime queries the CloudFormation stack and retrieves its output values. The Serverless Framework stack is treated as read-only, and Pulumi will not attempt to modify it or any resources managed by it.
 
 ## Resource mapping
 
@@ -240,7 +233,7 @@ The following table maps common `serverless.yml` configuration to the equivalent
 
 ## Migration example
 
-Below is a typical `serverless.yml` excerpt and its equivalent Pulumi program. This example defines a Lambda function with an HTTP API endpoint and a DynamoDB table.
+The following example shows a typical `serverless.yml` excerpt and its equivalent Pulumi program. This example defines a Lambda function with an HTTP API endpoint and a DynamoDB table.
 
 ### Serverless Framework (`serverless.yml`)
 
