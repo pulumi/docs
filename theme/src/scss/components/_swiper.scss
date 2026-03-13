@@ -40,6 +40,8 @@
 .swiper-button-prev,
 .swiper-button-next {
     position: absolute;
+    top: var(--swiper-navigation-top-offset, 50%);
+    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
     width: var(--swiper-navigation-size);
     height: var(--swiper-navigation-size);
     z-index: 10;
@@ -69,12 +71,6 @@
         fill: currentColor;
         pointer-events: none;
     }
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    top: var(--swiper-navigation-top-offset, 50%);
-    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
 }
 
 .swiper-button-prev {
