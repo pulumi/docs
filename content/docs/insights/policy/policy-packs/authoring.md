@@ -117,7 +117,7 @@ Create your first policy pack:
     $ mkdir policypack && cd policypack
     ```
 
-2. Create a new Python project:
+1. Create a new Python project:
 
     ```sh
     $ pulumi policy new aws-python
@@ -143,7 +143,7 @@ Create your first policy pack:
     >
     > This keeps your published policy pack size small and ensures only the necessary policy code is distributed.
 
-3. Replace the generated policy in `__main__.py` with this example, which demonstrates a clearer pattern for organizational policy enforcement:
+1. Replace the generated policy in `__main__.py` with this example, which demonstrates a clearer pattern for organizational policy enforcement:
 
     Each policy must have:
     - A unique name, description, and validation function
@@ -954,7 +954,7 @@ This format helps users understand which resource failed and why.
 
 - [Policy examples repository](https://github.com/pulumi/examples/tree/master/policy-packs) - Example policy packs demonstrating various implementation patterns
 - [Policy as Code overview](/docs/insights/policy/)
-- [Policy Metadata fields](/docs/insights/policy/metadata.md)
+- [Policy Metadata fields](/docs/insights/policy/metadata/)
 
 ## Next steps
 
