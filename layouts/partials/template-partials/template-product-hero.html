@@ -1,0 +1,73 @@
+{{/*
+    Template Product Hero Partial
+
+    Centered hero for product pages: heading (single title or two-part with primary in purple/larger
+    and secondary in black/smaller), description, dual CTAs. Optionally includes a code visual below.
+
+    Parameters:
+    - title: Hero title (used when title_primary/title_secondary not set)
+    - title_primary: First part of heading, purple and larger (e.g. "Infrastructure as Code")
+    - title_secondary: Second part of heading, black and smaller (e.g. "in any language.")
+    - description: Hero description
+    - cta_primary_text: Primary CTA button text
+    - cta_primary_link: Primary CTA button link
+    - cta_secondary_text: Secondary CTA button text (optional)
+    - cta_secondary_link: Secondary CTA button link (optional)
+    - image: Optional hero image/code visual path (displayed below content, slightly left of center)
+    - image_alt: Alt text for image (optional)
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $title := .title }}
+{{ $titlePrimary := .title_primary }}
+{{ $titleSecondary := .title_secondary }}
+{{ $description := .description }}
+{{ $ctaPrimaryText := .cta_primary_text }}
+{{ $ctaPrimaryLink := .cta_primary_link }}
+{{ $ctaSecondaryText := .cta_secondary_text }}
+{{ $ctaSecondaryLink := .cta_secondary_link }}
+{{ $image := .image }}
+{{ $imageAlt := .image_alt | default $title | default (printf "%s %s" $titlePrimary $titleSecondary) }}
+{{ $anchor := .anchor }}
+
+<section class="template-product-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="flex flex-col items-center gap-12">
+        <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
+            {{ if or $titlePrimary $title }}
+            <h1 class="product-hero-heading mb-6">
+                {{ if and $titlePrimary $titleSecondary }}
+                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
+                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
+                {{ else if $titlePrimary }}
+                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
+                {{ else }}
+                <span class="product-hero-title">{{ $title }}</span>
+                {{ end }}
+            </h1>
+            {{ end }}
+            {{ if $description }}
+            <p class="product-hero-description mb-10">{{ $description | markdownify }}</p>
+            {{ end }}
+            {{ if or $ctaPrimaryText $ctaSecondaryText }}
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                {{ if $ctaPrimaryText }}
+                <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center">
+                    <span>{{ $ctaPrimaryText }}</span>
+                    <span>→</span>
+                </a>
+                {{ end }}
+                {{ if $ctaSecondaryText }}
+                <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center">
+                    <span>{{ $ctaSecondaryText }}</span>
+                </a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        {{ if $image }}
+        <div class="product-hero-visual w-full flex justify-center xl:justify-start xl:pl-[10%]">
+            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto max-w-[600px] rounded-lg">
+        </div>
+        {{ end }}
+    </div>
+</section>

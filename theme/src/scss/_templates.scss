@@ -2,71 +2,71 @@
 // Styles for reusable template partials (template-hero, template-logo-banner, etc.)
 
 $violet-primary: #673EAC;
+
 @mixin page-header {
-    @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 48px;
+    @apply font-bold leading-extra-tight text-black font-body text-heading-m;
 }
 
 @mixin section-header {
-    @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 40px;
+    @apply font-bold leading-extra-tight text-black font-body text-heading-s;
 }
 
 @mixin section-header-small {
     font-feature-settings: 'salt' on;
-    @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 40px;
+    @apply font-bold leading-extra-tight text-black font-body text-heading-s;
 }
 
 @mixin section-header-extra-small {
     font-feature-settings: 'salt' on;
-    @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 24px;
+    @apply font-semibold leading-extra-tight text-black font-body text-heading-2xs;
 }
 
 @mixin section-header-extra-extra-small {
     font-feature-settings: 'salt' on;
-    @apply font-bold leading-extra-tight text-black font-body;
-    font-size: 20px;
+    @apply font-semibold leading-extra-tight text-black font-body text-heading-2xsSmall;
 }
 
+@mixin product-hero-heading {
+    color: #000;
+    text-align: center;
+    font-feature-settings: 'salt' on;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    letter-spacing: -0.64px;
+    @apply font-bold text-heading-l leading-tight !important;
+}
 
 @mixin section-description {
-    @apply font-normal leading-normal font-body;
+    @apply font-normal leading-normal font-body text-body-l;
     font-feature-settings: 'salt' on;
     color: #5b5b5b;
-    font-size: 20px;
 }
 
 @mixin section-subheader-bold {
-    @apply font-semibold leading-normal text-black text-2xl font-body;
+    @apply font-semibold leading-normal text-black font-body text-body-xl;
     font-feature-settings: 'salt' on;
 }
 
 @mixin section-hint {
-    @apply font-semibold leading-normal font-body;
+    @apply font-semibold leading-normal font-body text-body-l;
     color: #1e1e1e;
-    font-size: 20px;
 }
 
 @mixin section-hint-accent {
-    @apply font-semibold leading-normal font-body;
+    @apply font-semibold leading-normal font-body text-body-l;
     color: $violet-primary;
-    font-size: 20px;
 }
 
 @mixin section-hint-small {
-    @apply font-semibold leading-normal font-body;
+    @apply font-semibold leading-normal font-body text-body-l;
     font-feature-settings: 'salt' on;
-    color: #757576;
-    font-size: 20px;
+    color: #404041;
 }
 
 @mixin section-body-medium {
-    @apply font-normal leading-normal text-lg font-body;
+    @apply font-normal leading-normal font-body text-body-m;
     font-feature-settings: 'salt' on;
     color: #5b5b5b;
-    font-size: 18px;
 }
 
 .template-hero {
@@ -75,16 +75,17 @@ $violet-primary: #673EAC;
     }
 
     .hero-event-details {
-        @apply flex flex-wrap items-center font-semibold leading-normal font-body;
+        @apply flex flex-wrap items-center font-semibold leading-normal font-body text-body-m;
         font-feature-settings: 'salt' on;
         color: #5b5b5b;
-        font-size: 18px;
     }
 
     .hero-date-and-location {
         @apply font-semibold;
 
-        a, a:hover, a:visited {
+        a,
+        a:hover,
+        a:visited {
             color: inherit;
         }
     }
@@ -215,11 +216,19 @@ $violet-primary: #673EAC;
     }
 
     .three-column-item-title {
-        @include section-header-extra-extra-small();
+        font-feature-settings: 'salt' on;
+        font-family: Inter, sans-serif;
+        letter-spacing: -0.84px;
+        line-height: 120%;
+        @apply text-black font-semibold text-heading-xs;
 
         i {
-            flex-shrink: 0;
+            @apply flex-shrink-0;
         }
+    }
+
+    &.icons-black .three-column-item-title i {
+        @apply text-black;
     }
 
     .three-column-item-description {
@@ -227,17 +236,69 @@ $violet-primary: #673EAC;
     }
 }
 
+// Shared feature card (icon above title + description) — used by template-product-two-column and template-three-column (icon_layout: above)
+.template-feature-card-icon {
+    @apply text-black flex items-center justify-center w-12 h-12 text-body-xl rounded-lg mb-6;
+    border: 0.5px solid #CECECE;
+
+    i {
+        @apply flex-shrink-0;
+    }
+}
+
+.template-feature-card-title {
+    @apply font-body text-black leading-tight m-0 !important font-semibold mb-6 text-heading-xs;
+}
+
+.template-feature-card-description {
+    @include section-body-medium();
+    @apply text-body-s;
+}
+
 .template-testimonial {
     .template-testimonial-quote {
-        @apply text-white font-body font-semibold leading-normal;
-        font-size: 24px;
+        @apply text-white font-body font-semibold leading-normal text-body-xl;
+
         @screen sm {
-            font-size: 36px;
+            @apply text-heading-m;
         }
     }
 
     .template-testimonial-credit {
-        @apply text-white opacity-70 font-body text-2xl font-normal leading-normal;
+        @apply text-white opacity-70 font-body text-body-xl font-normal leading-normal;
+    }
+}
+
+.template-testimonial-product {
+    @apply font-body;
+    background-color: #2d2d2d;
+    border: 1px solid #404040;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+
+    .template-testimonial-product-quote {
+        @apply text-white leading-relaxed text-left border-0 font-semibold text-heading-xs;
+
+        p {
+            @apply m-0;
+        }
+    }
+
+    .template-testimonial-product-logo img {
+        @apply block w-auto h-7;
+        max-width: 120px;
+        filter: invert(1);
+    }
+
+    .template-testimonial-product-credit {
+        @apply text-right;
+    }
+
+    .template-testimonial-product-author {
+        @apply text-white font-bold font-body text-body-m;
+    }
+
+    .template-testimonial-product-title {
+        @apply text-gray-300 font-normal font-body text-body-s;
     }
 }
 
@@ -269,4 +330,183 @@ $violet-primary: #673EAC;
     .template-footer-title {
         @include section-header-small();
     }
+}
+
+// Product page widgets
+.template-product-hero {
+    .product-hero-heading {
+        @include product-hero-heading();
+        @apply text-heading-s sm:text-heading-m md:text-heading-l;
+    }
+
+    .product-hero-title-primary {
+        @apply block;
+        background: linear-gradient(to right, #7842D4, #A374F1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .product-hero-title-secondary {
+        @apply block text-black;
+    }
+
+    .product-hero-title {
+        @include product-hero-heading();
+        @apply text-heading-s sm:text-heading-m md:text-heading-l;
+    }
+
+    .product-hero-description {
+        @include section-description();
+        @apply text-body-xl;
+    }
+
+    .product-hero-visual {
+        @media (max-width: 768px) {
+            width: 200vw;
+        }
+    }
+}
+
+.template-section-header {
+    .section-header-image-above-img {
+        @apply w-auto h-auto;
+        max-width: 350px;
+    }
+
+    .section-header-tag-line {
+        color: var(--gray-primary, #404041);
+        font-family: Inter, sans-serif;
+        letter-spacing: -0.2px;
+        @apply text-center text-body-l font-normal font-semibold leading-normal;
+    }
+
+    .section-header-tag-wrap {
+        @apply mb-2;
+    }
+
+    .section-header-title {
+        @include section-header();
+    }
+
+    .section-header-description {
+        @include section-description();
+        @apply text-body-s max-w-xl mx-auto;
+
+        a {
+            color: inherit;
+            @apply no-underline pointer-events-none;
+        }
+    }
+
+    .section-header-image {
+        @media (max-width: 768px) {
+            width: 200vw;
+            margin-left:-25%;
+        }
+    }
+}
+
+.template-section-header-with-code {
+    .template-section-header-with-code-inner {
+        @apply gap-12 xl:gap-24;
+    }
+
+    .template-section-header-with-code-content {
+        @apply xl:flex-1 xl:min-w-0;
+    }
+
+    .template-section-header-with-code-image {
+        @apply xl:flex-1 xl:min-w-0;
+    }
+
+    .section-header-with-code-tag {
+        @include section-hint-small();
+        @apply m-0;
+    }
+
+    .section-header-with-code-title {
+        @include section-header();
+        @apply text-black text-left;
+    }
+
+    .section-header-with-code-description {
+        color: var(--gray-tertiary, #757576);
+        font-feature-settings: 'salt' on;
+        font-family: Inter, sans-serif;
+        @apply text-left font-body text-body-s font-normal leading-normal;
+
+        p {
+            @apply m-0;
+        }
+
+        p+p {
+            @apply mt-4;
+        }
+    }
+
+    .section-header-with-code-cta {
+        @apply text-violet-600 font-semibold font-body no-underline;
+
+        &:hover {
+            @apply underline;
+        }
+    }
+}
+
+.template-counter-cards {
+    .counter-card-number {
+        @include page-header();
+        @apply mb-2 font-semibold;
+        background: linear-gradient(to bottom, #6C6C6C, #1B1B1B);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    .counter-card-label {
+        @include section-body-medium();
+        @apply m-0;
+    }
+}
+
+.template-icon-grid {
+    .icon-grid-tag-line {
+        @include section-hint-small();
+        @apply m-0;
+    }
+
+    .icon-grid-tag-wrap {
+        @apply mb-2;
+    }
+
+    .icon-grid-title {
+        @include section-header();
+        @apply m-0 !important;
+    }
+
+    .icon-grid-description {
+        @include section-description();
+    }
+}
+
+.template-product-two-column {
+    .product-two-column-heading {
+        @include section-header();
+    }
+
+    .product-two-column-description {
+        @include section-description();
+        @apply text-body-xl;
+
+        p:first-of-type {
+            @apply text-black font-semibold mt-0;
+        }
+
+        p+p {
+            @apply mt-4;
+        }
+    }
+
 }

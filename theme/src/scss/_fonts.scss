@@ -52,6 +52,13 @@
 
 @font-face {
     font-family: "Inter";
+    font-weight: 500;
+    font-style: normal;
+    src: url("/fonts/inter-medium.woff2") format("woff2"), url("/fonts/inter-medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Inter";
     font-weight: 600;
     font-style: normal;
     src: url("/fonts/inter-semibold.woff2") format("woff2"), url("/fonts/inter-semibold.woff") format("woff");
