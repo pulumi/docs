@@ -1112,233 +1112,67 @@ declare namespace LocalJSX {
         "selectClass"?: string;
         "sessions"?: string;
     }
-
-    interface CopilotSidebarAttributes {
-        "atlasUrl": string;
-    }
-    interface EventSessionRegistrationModalAttributes {
-        "buttonClass": string;
-        "buttonText": string;
-        "modalTitle": string;
-        "eventSessions": string;
-        "redirectUrl": string;
-    }
-    interface HeaderCtaAttributes {
-        "buttonClass": string;
-        "href": string;
-        "label": string;
-    }
-    interface HomeSlotsAttributes {
-        "leftItems": string;
-        "centerItems": string;
-        "rightItems": string;
-        "imageClass": string;
-    }
-    interface PricingCtaAttributes {
-        "buttonClass": string;
-        "signedInText": string;
-        "signedOutText": string;
-    }
-    interface PulumiApiDocFilterableNavAttributes {
-        "baseDirectory": string;
-        "packageName": string;
-    }
-    interface PulumiApiDocNavNodeAttributes {
-        "href": string;
-        "depth": number;
-        "isExpanded": boolean;
-    }
-    interface PulumiApiDocNavTreeAttributes {
-        "baseDirectory": string;
-    }
-    interface PulumiAudioAttributes {
-        "url": string;
-        "playingText": string;
-        "pausedText": string;
-    }
-    interface PulumiBannerAttributes {
-        "name": string;
-        "dismissible": boolean;
-        "visible": boolean;
-    }
-    interface PulumiChoosableAttributes {
-        "type": ChooserType;
-        "value": ChooserKey;
-        "values": ChooserKey;
-        "mode": ChooserMode;
-        "selection": ChooserKey;
-    }
-    interface PulumiChooserAttributes {
-        "type": ChooserType;
-        "options": string;
-        "selection": ChooserKey;
-        "optionStyle": ChooserOptionStyle;
-        "mode": ChooserMode;
-    }
-    interface PulumiContactUsFormAttributes {
-        "items": string;
-        "selectClass": string;
-        "labelClass": string;
-    }
-    interface PulumiConvertAttributes {
-        "from": SourceKind;
-        "endpoint": string;
-        "examples": string;
-        "theme": string;
-    }
-    interface PulumiDateCountdownAttributes {
-        "dateString": string;
-        "textClass": string;
-        "containerClass": string;
-        "valueLabelClass": string;
-        "countdownOverText": string;
-    }
-    interface PulumiDateCountdownCirclesAttributes {
-        "dateString": string;
-        "containerClass": string;
-        "valueLabelClass": string;
-    }
-    interface PulumiDatetimeAttributes {
-        "class": string;
-        "timeonly": boolean;
-        "date": string;
-    }
-    interface PulumiDeveloperQuotesAttributes {
-        "quotes": string;
-    }
-    interface PulumiDocsNavAttributes {
-        "expandedMenuIDs": string;
-    }
-    interface PulumiFilterSelectOptionAttributes {
-        "label": string;
-        "value": string;
-        "selected": boolean;
-    }
-    interface PulumiFilterSelectOptionGroupAttributes {
-        "name": string;
-        "expanded": boolean;
-    }
-    interface PulumiHubspotFormAttributes {
-        "formId": string;
-        "salesforceCampaignId": string;
-        "goToWebinarKey": string;
-        "class": string;
-    }
-    interface PulumiInstallAttributes {
-        "os": OSKey;
-    }
-    interface PulumiLlmMenuAttributes {
-        "pageUrl": string;
-        "pageTitle": string;
-    }
-    interface PulumiMultiSelectFormAttributes {
-        "selectClass": string;
-        "labelClass": string;
-        "labelText": string;
-        "defaultFormId": string;
-    }
-    interface PulumiResourceLinksAttributes {
-        "packageName": string;
-        "moduleName": string;
-        "resourceName": string;
-    }
-    interface PulumiSlotMachineAttributes {
-        "imageClass": string;
-        "leftImages": string;
-        "centerImages": string;
-        "rightImages": string;
-    }
-    interface PulumiSwiperAttributes {
-        "speed": number;
-        "loop": boolean;
-        "autoplay": boolean;
-        "autoplayDelay": number;
-        "navControls": boolean;
-        "slides": number;
-        "centeredSlides": boolean;
-        "initialSlide": number;
-        "direction": "vertical" | "horizontal";
-        "enableMouseEvents": boolean;
-        "spaceBetween": number;
-    }
-    interface PulumiTabAttributes {
-        "label": string;
-        "active": boolean;
-    }
-    interface PulumiTertiaryNavAttributes {
-        "items": string;
-        "selection": string;
-    }
-    interface PulumiUserToggleAttributes {
-        "userId": string;
-    }
-    interface PulumiWebinarFormSelectAttributes {
-        "sessions": string;
-        "selectClass": string;
-        "labelClass": string;
-    }
-
     interface IntrinsicElements {
-        "copilot-sidebar": Omit<CopilotSidebar, keyof CopilotSidebarAttributes> & { [K in keyof CopilotSidebar & keyof CopilotSidebarAttributes]?: CopilotSidebar[K] } & { [K in keyof CopilotSidebar & keyof CopilotSidebarAttributes as `attr:${K}`]?: CopilotSidebarAttributes[K] } & { [K in keyof CopilotSidebar & keyof CopilotSidebarAttributes as `prop:${K}`]?: CopilotSidebar[K] };
-        "event-session-registration-modal": Omit<EventSessionRegistrationModal, keyof EventSessionRegistrationModalAttributes> & { [K in keyof EventSessionRegistrationModal & keyof EventSessionRegistrationModalAttributes]?: EventSessionRegistrationModal[K] } & { [K in keyof EventSessionRegistrationModal & keyof EventSessionRegistrationModalAttributes as `attr:${K}`]?: EventSessionRegistrationModalAttributes[K] } & { [K in keyof EventSessionRegistrationModal & keyof EventSessionRegistrationModalAttributes as `prop:${K}`]?: EventSessionRegistrationModal[K] };
-        "header-cta": Omit<HeaderCta, keyof HeaderCtaAttributes> & { [K in keyof HeaderCta & keyof HeaderCtaAttributes]?: HeaderCta[K] } & { [K in keyof HeaderCta & keyof HeaderCtaAttributes as `attr:${K}`]?: HeaderCtaAttributes[K] } & { [K in keyof HeaderCta & keyof HeaderCtaAttributes as `prop:${K}`]?: HeaderCta[K] };
-        "home-slots": Omit<HomeSlots, keyof HomeSlotsAttributes> & { [K in keyof HomeSlots & keyof HomeSlotsAttributes]?: HomeSlots[K] } & { [K in keyof HomeSlots & keyof HomeSlotsAttributes as `attr:${K}`]?: HomeSlotsAttributes[K] } & { [K in keyof HomeSlots & keyof HomeSlotsAttributes as `prop:${K}`]?: HomeSlots[K] };
-        "pricing-cta": Omit<PricingCta, keyof PricingCtaAttributes> & { [K in keyof PricingCta & keyof PricingCtaAttributes]?: PricingCta[K] } & { [K in keyof PricingCta & keyof PricingCtaAttributes as `attr:${K}`]?: PricingCtaAttributes[K] } & { [K in keyof PricingCta & keyof PricingCtaAttributes as `prop:${K}`]?: PricingCta[K] };
-        "pulumi-api-doc-filterable-nav": Omit<PulumiApiDocFilterableNav, keyof PulumiApiDocFilterableNavAttributes> & { [K in keyof PulumiApiDocFilterableNav & keyof PulumiApiDocFilterableNavAttributes]?: PulumiApiDocFilterableNav[K] } & { [K in keyof PulumiApiDocFilterableNav & keyof PulumiApiDocFilterableNavAttributes as `attr:${K}`]?: PulumiApiDocFilterableNavAttributes[K] } & { [K in keyof PulumiApiDocFilterableNav & keyof PulumiApiDocFilterableNavAttributes as `prop:${K}`]?: PulumiApiDocFilterableNav[K] };
-        "pulumi-api-doc-nav-node": Omit<PulumiApiDocNavNode, keyof PulumiApiDocNavNodeAttributes> & { [K in keyof PulumiApiDocNavNode & keyof PulumiApiDocNavNodeAttributes]?: PulumiApiDocNavNode[K] } & { [K in keyof PulumiApiDocNavNode & keyof PulumiApiDocNavNodeAttributes as `attr:${K}`]?: PulumiApiDocNavNodeAttributes[K] } & { [K in keyof PulumiApiDocNavNode & keyof PulumiApiDocNavNodeAttributes as `prop:${K}`]?: PulumiApiDocNavNode[K] };
-        "pulumi-api-doc-nav-tree": Omit<PulumiApiDocNavTree, keyof PulumiApiDocNavTreeAttributes> & { [K in keyof PulumiApiDocNavTree & keyof PulumiApiDocNavTreeAttributes]?: PulumiApiDocNavTree[K] } & { [K in keyof PulumiApiDocNavTree & keyof PulumiApiDocNavTreeAttributes as `attr:${K}`]?: PulumiApiDocNavTreeAttributes[K] } & { [K in keyof PulumiApiDocNavTree & keyof PulumiApiDocNavTreeAttributes as `prop:${K}`]?: PulumiApiDocNavTree[K] };
-        "pulumi-audio": Omit<PulumiAudio, keyof PulumiAudioAttributes> & { [K in keyof PulumiAudio & keyof PulumiAudioAttributes]?: PulumiAudio[K] } & { [K in keyof PulumiAudio & keyof PulumiAudioAttributes as `attr:${K}`]?: PulumiAudioAttributes[K] } & { [K in keyof PulumiAudio & keyof PulumiAudioAttributes as `prop:${K}`]?: PulumiAudio[K] };
-        "pulumi-banner": Omit<PulumiBanner, keyof PulumiBannerAttributes> & { [K in keyof PulumiBanner & keyof PulumiBannerAttributes]?: PulumiBanner[K] } & { [K in keyof PulumiBanner & keyof PulumiBannerAttributes as `attr:${K}`]?: PulumiBannerAttributes[K] } & { [K in keyof PulumiBanner & keyof PulumiBannerAttributes as `prop:${K}`]?: PulumiBanner[K] };
-        "pulumi-choosable": Omit<PulumiChoosable, keyof PulumiChoosableAttributes> & { [K in keyof PulumiChoosable & keyof PulumiChoosableAttributes]?: PulumiChoosable[K] } & { [K in keyof PulumiChoosable & keyof PulumiChoosableAttributes as `attr:${K}`]?: PulumiChoosableAttributes[K] } & { [K in keyof PulumiChoosable & keyof PulumiChoosableAttributes as `prop:${K}`]?: PulumiChoosable[K] };
-        "pulumi-chooser": Omit<PulumiChooser, keyof PulumiChooserAttributes> & { [K in keyof PulumiChooser & keyof PulumiChooserAttributes]?: PulumiChooser[K] } & { [K in keyof PulumiChooser & keyof PulumiChooserAttributes as `attr:${K}`]?: PulumiChooserAttributes[K] } & { [K in keyof PulumiChooser & keyof PulumiChooserAttributes as `prop:${K}`]?: PulumiChooser[K] };
-        "pulumi-contact-us-form": Omit<PulumiContactUsForm, keyof PulumiContactUsFormAttributes> & { [K in keyof PulumiContactUsForm & keyof PulumiContactUsFormAttributes]?: PulumiContactUsForm[K] } & { [K in keyof PulumiContactUsForm & keyof PulumiContactUsFormAttributes as `attr:${K}`]?: PulumiContactUsFormAttributes[K] } & { [K in keyof PulumiContactUsForm & keyof PulumiContactUsFormAttributes as `prop:${K}`]?: PulumiContactUsForm[K] };
-        "pulumi-convert": Omit<PulumiConvert, keyof PulumiConvertAttributes> & { [K in keyof PulumiConvert & keyof PulumiConvertAttributes]?: PulumiConvert[K] } & { [K in keyof PulumiConvert & keyof PulumiConvertAttributes as `attr:${K}`]?: PulumiConvertAttributes[K] } & { [K in keyof PulumiConvert & keyof PulumiConvertAttributes as `prop:${K}`]?: PulumiConvert[K] };
-        "pulumi-date-countdown": Omit<PulumiDateCountdown, keyof PulumiDateCountdownAttributes> & { [K in keyof PulumiDateCountdown & keyof PulumiDateCountdownAttributes]?: PulumiDateCountdown[K] } & { [K in keyof PulumiDateCountdown & keyof PulumiDateCountdownAttributes as `attr:${K}`]?: PulumiDateCountdownAttributes[K] } & { [K in keyof PulumiDateCountdown & keyof PulumiDateCountdownAttributes as `prop:${K}`]?: PulumiDateCountdown[K] };
-        "pulumi-date-countdown-circles": Omit<PulumiDateCountdownCircles, keyof PulumiDateCountdownCirclesAttributes> & { [K in keyof PulumiDateCountdownCircles & keyof PulumiDateCountdownCirclesAttributes]?: PulumiDateCountdownCircles[K] } & { [K in keyof PulumiDateCountdownCircles & keyof PulumiDateCountdownCirclesAttributes as `attr:${K}`]?: PulumiDateCountdownCirclesAttributes[K] } & { [K in keyof PulumiDateCountdownCircles & keyof PulumiDateCountdownCirclesAttributes as `prop:${K}`]?: PulumiDateCountdownCircles[K] };
-        "pulumi-datetime": Omit<PulumiDatetime, keyof PulumiDatetimeAttributes> & { [K in keyof PulumiDatetime & keyof PulumiDatetimeAttributes]?: PulumiDatetime[K] } & { [K in keyof PulumiDatetime & keyof PulumiDatetimeAttributes as `attr:${K}`]?: PulumiDatetimeAttributes[K] } & { [K in keyof PulumiDatetime & keyof PulumiDatetimeAttributes as `prop:${K}`]?: PulumiDatetime[K] };
-        "pulumi-developer-quotes": Omit<PulumiDeveloperQuotes, keyof PulumiDeveloperQuotesAttributes> & { [K in keyof PulumiDeveloperQuotes & keyof PulumiDeveloperQuotesAttributes]?: PulumiDeveloperQuotes[K] } & { [K in keyof PulumiDeveloperQuotes & keyof PulumiDeveloperQuotesAttributes as `attr:${K}`]?: PulumiDeveloperQuotesAttributes[K] } & { [K in keyof PulumiDeveloperQuotes & keyof PulumiDeveloperQuotesAttributes as `prop:${K}`]?: PulumiDeveloperQuotes[K] };
-        "pulumi-docs-nav": Omit<PulumiDocsNav, keyof PulumiDocsNavAttributes> & { [K in keyof PulumiDocsNav & keyof PulumiDocsNavAttributes]?: PulumiDocsNav[K] } & { [K in keyof PulumiDocsNav & keyof PulumiDocsNavAttributes as `attr:${K}`]?: PulumiDocsNavAttributes[K] } & { [K in keyof PulumiDocsNav & keyof PulumiDocsNavAttributes as `prop:${K}`]?: PulumiDocsNav[K] };
+        "copilot-sidebar": CopilotSidebar;
+        "event-session-registration-modal": EventSessionRegistrationModal;
+        "header-cta": HeaderCta;
+        "home-slots": HomeSlots;
+        "pricing-cta": PricingCta;
+        "pulumi-api-doc-filterable-nav": PulumiApiDocFilterableNav;
+        "pulumi-api-doc-nav-node": PulumiApiDocNavNode;
+        "pulumi-api-doc-nav-tree": PulumiApiDocNavTree;
+        "pulumi-audio": PulumiAudio;
+        "pulumi-banner": PulumiBanner;
+        "pulumi-choosable": PulumiChoosable;
+        "pulumi-chooser": PulumiChooser;
+        "pulumi-contact-us-form": PulumiContactUsForm;
+        "pulumi-convert": PulumiConvert;
+        "pulumi-date-countdown": PulumiDateCountdown;
+        "pulumi-date-countdown-circles": PulumiDateCountdownCircles;
+        "pulumi-datetime": PulumiDatetime;
+        "pulumi-developer-quotes": PulumiDeveloperQuotes;
+        "pulumi-docs-nav": PulumiDocsNav;
         "pulumi-example": PulumiExample;
         "pulumi-examples": PulumiExamples;
         "pulumi-filter-select": PulumiFilterSelect;
-        "pulumi-filter-select-option": Omit<PulumiFilterSelectOption, keyof PulumiFilterSelectOptionAttributes> & { [K in keyof PulumiFilterSelectOption & keyof PulumiFilterSelectOptionAttributes]?: PulumiFilterSelectOption[K] } & { [K in keyof PulumiFilterSelectOption & keyof PulumiFilterSelectOptionAttributes as `attr:${K}`]?: PulumiFilterSelectOptionAttributes[K] } & { [K in keyof PulumiFilterSelectOption & keyof PulumiFilterSelectOptionAttributes as `prop:${K}`]?: PulumiFilterSelectOption[K] };
-        "pulumi-filter-select-option-group": Omit<PulumiFilterSelectOptionGroup, keyof PulumiFilterSelectOptionGroupAttributes> & { [K in keyof PulumiFilterSelectOptionGroup & keyof PulumiFilterSelectOptionGroupAttributes]?: PulumiFilterSelectOptionGroup[K] } & { [K in keyof PulumiFilterSelectOptionGroup & keyof PulumiFilterSelectOptionGroupAttributes as `attr:${K}`]?: PulumiFilterSelectOptionGroupAttributes[K] } & { [K in keyof PulumiFilterSelectOptionGroup & keyof PulumiFilterSelectOptionGroupAttributes as `prop:${K}`]?: PulumiFilterSelectOptionGroup[K] };
+        "pulumi-filter-select-option": PulumiFilterSelectOption;
+        "pulumi-filter-select-option-group": PulumiFilterSelectOptionGroup;
         "pulumi-greenhouse-jobs-list": PulumiGreenhouseJobsList;
-        "pulumi-hubspot-form": Omit<PulumiHubspotForm, keyof PulumiHubspotFormAttributes> & { [K in keyof PulumiHubspotForm & keyof PulumiHubspotFormAttributes]?: PulumiHubspotForm[K] } & { [K in keyof PulumiHubspotForm & keyof PulumiHubspotFormAttributes as `attr:${K}`]?: PulumiHubspotFormAttributes[K] } & { [K in keyof PulumiHubspotForm & keyof PulumiHubspotFormAttributes as `prop:${K}`]?: PulumiHubspotForm[K] };
-        "pulumi-install": Omit<PulumiInstall, keyof PulumiInstallAttributes> & { [K in keyof PulumiInstall & keyof PulumiInstallAttributes]?: PulumiInstall[K] } & { [K in keyof PulumiInstall & keyof PulumiInstallAttributes as `attr:${K}`]?: PulumiInstallAttributes[K] } & { [K in keyof PulumiInstall & keyof PulumiInstallAttributes as `prop:${K}`]?: PulumiInstall[K] };
-        "pulumi-llm-menu": Omit<PulumiLlmMenu, keyof PulumiLlmMenuAttributes> & { [K in keyof PulumiLlmMenu & keyof PulumiLlmMenuAttributes]?: PulumiLlmMenu[K] } & { [K in keyof PulumiLlmMenu & keyof PulumiLlmMenuAttributes as `attr:${K}`]?: PulumiLlmMenuAttributes[K] } & { [K in keyof PulumiLlmMenu & keyof PulumiLlmMenuAttributes as `prop:${K}`]?: PulumiLlmMenu[K] };
-        "pulumi-multi-select-form": Omit<PulumiMultiSelectForm, keyof PulumiMultiSelectFormAttributes> & { [K in keyof PulumiMultiSelectForm & keyof PulumiMultiSelectFormAttributes]?: PulumiMultiSelectForm[K] } & { [K in keyof PulumiMultiSelectForm & keyof PulumiMultiSelectFormAttributes as `attr:${K}`]?: PulumiMultiSelectFormAttributes[K] } & { [K in keyof PulumiMultiSelectForm & keyof PulumiMultiSelectFormAttributes as `prop:${K}`]?: PulumiMultiSelectForm[K] };
+        "pulumi-hubspot-form": PulumiHubspotForm;
+        "pulumi-install": PulumiInstall;
+        "pulumi-llm-menu": PulumiLlmMenu;
+        "pulumi-multi-select-form": PulumiMultiSelectForm;
         "pulumi-pricing-calculator": PulumiPricingCalculator;
         "pulumi-registry-list-search": PulumiRegistryListSearch;
-        "pulumi-resource-links": Omit<PulumiResourceLinks, keyof PulumiResourceLinksAttributes> & { [K in keyof PulumiResourceLinks & keyof PulumiResourceLinksAttributes]?: PulumiResourceLinks[K] } & { [K in keyof PulumiResourceLinks & keyof PulumiResourceLinksAttributes as `attr:${K}`]?: PulumiResourceLinksAttributes[K] } & { [K in keyof PulumiResourceLinks & keyof PulumiResourceLinksAttributes as `prop:${K}`]?: PulumiResourceLinks[K] };
+        "pulumi-resource-links": PulumiResourceLinks;
         "pulumi-root": PulumiRoot;
-        "pulumi-slot-machine": Omit<PulumiSlotMachine, keyof PulumiSlotMachineAttributes> & { [K in keyof PulumiSlotMachine & keyof PulumiSlotMachineAttributes]?: PulumiSlotMachine[K] } & { [K in keyof PulumiSlotMachine & keyof PulumiSlotMachineAttributes as `attr:${K}`]?: PulumiSlotMachineAttributes[K] } & { [K in keyof PulumiSlotMachine & keyof PulumiSlotMachineAttributes as `prop:${K}`]?: PulumiSlotMachine[K] };
+        "pulumi-slot-machine": PulumiSlotMachine;
         "pulumi-swipeable": PulumiSwipeable;
-        "pulumi-swiper": Omit<PulumiSwiper, keyof PulumiSwiperAttributes> & { [K in keyof PulumiSwiper & keyof PulumiSwiperAttributes]?: PulumiSwiper[K] } & { [K in keyof PulumiSwiper & keyof PulumiSwiperAttributes as `attr:${K}`]?: PulumiSwiperAttributes[K] } & { [K in keyof PulumiSwiper & keyof PulumiSwiperAttributes as `prop:${K}`]?: PulumiSwiper[K] };
-        "pulumi-tab": Omit<PulumiTab, keyof PulumiTabAttributes> & { [K in keyof PulumiTab & keyof PulumiTabAttributes]?: PulumiTab[K] } & { [K in keyof PulumiTab & keyof PulumiTabAttributes as `attr:${K}`]?: PulumiTabAttributes[K] } & { [K in keyof PulumiTab & keyof PulumiTabAttributes as `prop:${K}`]?: PulumiTab[K] };
+        "pulumi-swiper": PulumiSwiper;
+        "pulumi-tab": PulumiTab;
         "pulumi-tabs": PulumiTabs;
-        "pulumi-tertiary-nav": Omit<PulumiTertiaryNav, keyof PulumiTertiaryNavAttributes> & { [K in keyof PulumiTertiaryNav & keyof PulumiTertiaryNavAttributes]?: PulumiTertiaryNav[K] } & { [K in keyof PulumiTertiaryNav & keyof PulumiTertiaryNavAttributes as `attr:${K}`]?: PulumiTertiaryNavAttributes[K] } & { [K in keyof PulumiTertiaryNav & keyof PulumiTertiaryNavAttributes as `prop:${K}`]?: PulumiTertiaryNav[K] };
+        "pulumi-tertiary-nav": PulumiTertiaryNav;
         "pulumi-tooltip": PulumiTooltip;
         "pulumi-top-button": PulumiTopButton;
-        "pulumi-user-toggle": Omit<PulumiUserToggle, keyof PulumiUserToggleAttributes> & { [K in keyof PulumiUserToggle & keyof PulumiUserToggleAttributes]?: PulumiUserToggle[K] } & { [K in keyof PulumiUserToggle & keyof PulumiUserToggleAttributes as `attr:${K}`]?: PulumiUserToggleAttributes[K] } & { [K in keyof PulumiUserToggle & keyof PulumiUserToggleAttributes as `prop:${K}`]?: PulumiUserToggle[K] };
+        "pulumi-user-toggle": PulumiUserToggle;
         "pulumi-value-calculator": PulumiValueCalculator;
-        "pulumi-webinar-form-select": Omit<PulumiWebinarFormSelect, keyof PulumiWebinarFormSelectAttributes> & { [K in keyof PulumiWebinarFormSelect & keyof PulumiWebinarFormSelectAttributes]?: PulumiWebinarFormSelect[K] } & { [K in keyof PulumiWebinarFormSelect & keyof PulumiWebinarFormSelectAttributes as `attr:${K}`]?: PulumiWebinarFormSelectAttributes[K] } & { [K in keyof PulumiWebinarFormSelect & keyof PulumiWebinarFormSelectAttributes as `prop:${K}`]?: PulumiWebinarFormSelect[K] };
+        "pulumi-webinar-form-select": PulumiWebinarFormSelect;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "copilot-sidebar": LocalJSX.IntrinsicElements["copilot-sidebar"] & JSXBase.HTMLAttributes<HTMLCopilotSidebarElement>;
-            "event-session-registration-modal": LocalJSX.IntrinsicElements["event-session-registration-modal"] & JSXBase.HTMLAttributes<HTMLEventSessionRegistrationModalElement>;
-            "header-cta": LocalJSX.IntrinsicElements["header-cta"] & JSXBase.HTMLAttributes<HTMLHeaderCtaElement>;
-            "home-slots": LocalJSX.IntrinsicElements["home-slots"] & JSXBase.HTMLAttributes<HTMLHomeSlotsElement>;
-            "pricing-cta": LocalJSX.IntrinsicElements["pricing-cta"] & JSXBase.HTMLAttributes<HTMLPricingCtaElement>;
-            "pulumi-api-doc-filterable-nav": LocalJSX.IntrinsicElements["pulumi-api-doc-filterable-nav"] & JSXBase.HTMLAttributes<HTMLPulumiApiDocFilterableNavElement>;
-            "pulumi-api-doc-nav-node": LocalJSX.IntrinsicElements["pulumi-api-doc-nav-node"] & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavNodeElement>;
-            "pulumi-api-doc-nav-tree": LocalJSX.IntrinsicElements["pulumi-api-doc-nav-tree"] & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavTreeElement>;
-            "pulumi-audio": LocalJSX.IntrinsicElements["pulumi-audio"] & JSXBase.HTMLAttributes<HTMLPulumiAudioElement>;
-            "pulumi-banner": LocalJSX.IntrinsicElements["pulumi-banner"] & JSXBase.HTMLAttributes<HTMLPulumiBannerElement>;
+            "copilot-sidebar": LocalJSX.CopilotSidebar & JSXBase.HTMLAttributes<HTMLCopilotSidebarElement>;
+            "event-session-registration-modal": LocalJSX.EventSessionRegistrationModal & JSXBase.HTMLAttributes<HTMLEventSessionRegistrationModalElement>;
+            "header-cta": LocalJSX.HeaderCta & JSXBase.HTMLAttributes<HTMLHeaderCtaElement>;
+            "home-slots": LocalJSX.HomeSlots & JSXBase.HTMLAttributes<HTMLHomeSlotsElement>;
+            "pricing-cta": LocalJSX.PricingCta & JSXBase.HTMLAttributes<HTMLPricingCtaElement>;
+            "pulumi-api-doc-filterable-nav": LocalJSX.PulumiApiDocFilterableNav & JSXBase.HTMLAttributes<HTMLPulumiApiDocFilterableNavElement>;
+            "pulumi-api-doc-nav-node": LocalJSX.PulumiApiDocNavNode & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavNodeElement>;
+            "pulumi-api-doc-nav-tree": LocalJSX.PulumiApiDocNavTree & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavTreeElement>;
+            "pulumi-audio": LocalJSX.PulumiAudio & JSXBase.HTMLAttributes<HTMLPulumiAudioElement>;
+            "pulumi-banner": LocalJSX.PulumiBanner & JSXBase.HTMLAttributes<HTMLPulumiBannerElement>;
             /**
              * The Choosable component is useful for showing or hiding information based on the
              * currently selected ChooserType and value. For example, a component defined as:
@@ -1348,7 +1182,7 @@ declare module "@stencil/core" {
              * ...would display "I <3 TypeScript" only when the user's currently (or most recently)
              * selected language choice is TypeScript.
              */
-            "pulumi-choosable": LocalJSX.IntrinsicElements["pulumi-choosable"] & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
+            "pulumi-choosable": LocalJSX.PulumiChoosable & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
             /**
              * The Chooser component renders a set of selectable tabs based on the type and options
              * properties provided. For example, this definition:
@@ -1364,34 +1198,34 @@ declare module "@stencil/core" {
              *         <pulumi choosable type="language" value="javascript">Some JavaScript</pulumi-choosable>
              *     </pulumi-chooser>
              */
-            "pulumi-chooser": LocalJSX.IntrinsicElements["pulumi-chooser"] & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
-            "pulumi-contact-us-form": LocalJSX.IntrinsicElements["pulumi-contact-us-form"] & JSXBase.HTMLAttributes<HTMLPulumiContactUsFormElement>;
-            "pulumi-convert": LocalJSX.IntrinsicElements["pulumi-convert"] & JSXBase.HTMLAttributes<HTMLPulumiConvertElement>;
-            "pulumi-date-countdown": LocalJSX.IntrinsicElements["pulumi-date-countdown"] & JSXBase.HTMLAttributes<HTMLPulumiDateCountdownElement>;
-            "pulumi-date-countdown-circles": LocalJSX.IntrinsicElements["pulumi-date-countdown-circles"] & JSXBase.HTMLAttributes<HTMLPulumiDateCountdownCirclesElement>;
-            "pulumi-datetime": LocalJSX.IntrinsicElements["pulumi-datetime"] & JSXBase.HTMLAttributes<HTMLPulumiDatetimeElement>;
-            "pulumi-developer-quotes": LocalJSX.IntrinsicElements["pulumi-developer-quotes"] & JSXBase.HTMLAttributes<HTMLPulumiDeveloperQuotesElement>;
-            "pulumi-docs-nav": LocalJSX.IntrinsicElements["pulumi-docs-nav"] & JSXBase.HTMLAttributes<HTMLPulumiDocsNavElement>;
-            "pulumi-example": LocalJSX.IntrinsicElements["pulumi-example"] & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
-            "pulumi-examples": LocalJSX.IntrinsicElements["pulumi-examples"] & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
-            "pulumi-filter-select": LocalJSX.IntrinsicElements["pulumi-filter-select"] & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectElement>;
-            "pulumi-filter-select-option": LocalJSX.IntrinsicElements["pulumi-filter-select-option"] & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectOptionElement>;
-            "pulumi-filter-select-option-group": LocalJSX.IntrinsicElements["pulumi-filter-select-option-group"] & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectOptionGroupElement>;
-            "pulumi-greenhouse-jobs-list": LocalJSX.IntrinsicElements["pulumi-greenhouse-jobs-list"] & JSXBase.HTMLAttributes<HTMLPulumiGreenhouseJobsListElement>;
-            "pulumi-hubspot-form": LocalJSX.IntrinsicElements["pulumi-hubspot-form"] & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
-            "pulumi-install": LocalJSX.IntrinsicElements["pulumi-install"] & JSXBase.HTMLAttributes<HTMLPulumiInstallElement>;
-            "pulumi-llm-menu": LocalJSX.IntrinsicElements["pulumi-llm-menu"] & JSXBase.HTMLAttributes<HTMLPulumiLlmMenuElement>;
-            "pulumi-multi-select-form": LocalJSX.IntrinsicElements["pulumi-multi-select-form"] & JSXBase.HTMLAttributes<HTMLPulumiMultiSelectFormElement>;
-            "pulumi-pricing-calculator": LocalJSX.IntrinsicElements["pulumi-pricing-calculator"] & JSXBase.HTMLAttributes<HTMLPulumiPricingCalculatorElement>;
-            "pulumi-registry-list-search": LocalJSX.IntrinsicElements["pulumi-registry-list-search"] & JSXBase.HTMLAttributes<HTMLPulumiRegistryListSearchElement>;
-            "pulumi-resource-links": LocalJSX.IntrinsicElements["pulumi-resource-links"] & JSXBase.HTMLAttributes<HTMLPulumiResourceLinksElement>;
-            "pulumi-root": LocalJSX.IntrinsicElements["pulumi-root"] & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
-            "pulumi-slot-machine": LocalJSX.IntrinsicElements["pulumi-slot-machine"] & JSXBase.HTMLAttributes<HTMLPulumiSlotMachineElement>;
-            "pulumi-swipeable": LocalJSX.IntrinsicElements["pulumi-swipeable"] & JSXBase.HTMLAttributes<HTMLPulumiSwipeableElement>;
-            "pulumi-swiper": LocalJSX.IntrinsicElements["pulumi-swiper"] & JSXBase.HTMLAttributes<HTMLPulumiSwiperElement>;
-            "pulumi-tab": LocalJSX.IntrinsicElements["pulumi-tab"] & JSXBase.HTMLAttributes<HTMLPulumiTabElement>;
-            "pulumi-tabs": LocalJSX.IntrinsicElements["pulumi-tabs"] & JSXBase.HTMLAttributes<HTMLPulumiTabsElement>;
-            "pulumi-tertiary-nav": LocalJSX.IntrinsicElements["pulumi-tertiary-nav"] & JSXBase.HTMLAttributes<HTMLPulumiTertiaryNavElement>;
+            "pulumi-chooser": LocalJSX.PulumiChooser & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
+            "pulumi-contact-us-form": LocalJSX.PulumiContactUsForm & JSXBase.HTMLAttributes<HTMLPulumiContactUsFormElement>;
+            "pulumi-convert": LocalJSX.PulumiConvert & JSXBase.HTMLAttributes<HTMLPulumiConvertElement>;
+            "pulumi-date-countdown": LocalJSX.PulumiDateCountdown & JSXBase.HTMLAttributes<HTMLPulumiDateCountdownElement>;
+            "pulumi-date-countdown-circles": LocalJSX.PulumiDateCountdownCircles & JSXBase.HTMLAttributes<HTMLPulumiDateCountdownCirclesElement>;
+            "pulumi-datetime": LocalJSX.PulumiDatetime & JSXBase.HTMLAttributes<HTMLPulumiDatetimeElement>;
+            "pulumi-developer-quotes": LocalJSX.PulumiDeveloperQuotes & JSXBase.HTMLAttributes<HTMLPulumiDeveloperQuotesElement>;
+            "pulumi-docs-nav": LocalJSX.PulumiDocsNav & JSXBase.HTMLAttributes<HTMLPulumiDocsNavElement>;
+            "pulumi-example": LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
+            "pulumi-examples": LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
+            "pulumi-filter-select": LocalJSX.PulumiFilterSelect & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectElement>;
+            "pulumi-filter-select-option": LocalJSX.PulumiFilterSelectOption & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectOptionElement>;
+            "pulumi-filter-select-option-group": LocalJSX.PulumiFilterSelectOptionGroup & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectOptionGroupElement>;
+            "pulumi-greenhouse-jobs-list": LocalJSX.PulumiGreenhouseJobsList & JSXBase.HTMLAttributes<HTMLPulumiGreenhouseJobsListElement>;
+            "pulumi-hubspot-form": LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
+            "pulumi-install": LocalJSX.PulumiInstall & JSXBase.HTMLAttributes<HTMLPulumiInstallElement>;
+            "pulumi-llm-menu": LocalJSX.PulumiLlmMenu & JSXBase.HTMLAttributes<HTMLPulumiLlmMenuElement>;
+            "pulumi-multi-select-form": LocalJSX.PulumiMultiSelectForm & JSXBase.HTMLAttributes<HTMLPulumiMultiSelectFormElement>;
+            "pulumi-pricing-calculator": LocalJSX.PulumiPricingCalculator & JSXBase.HTMLAttributes<HTMLPulumiPricingCalculatorElement>;
+            "pulumi-registry-list-search": LocalJSX.PulumiRegistryListSearch & JSXBase.HTMLAttributes<HTMLPulumiRegistryListSearchElement>;
+            "pulumi-resource-links": LocalJSX.PulumiResourceLinks & JSXBase.HTMLAttributes<HTMLPulumiResourceLinksElement>;
+            "pulumi-root": LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
+            "pulumi-slot-machine": LocalJSX.PulumiSlotMachine & JSXBase.HTMLAttributes<HTMLPulumiSlotMachineElement>;
+            "pulumi-swipeable": LocalJSX.PulumiSwipeable & JSXBase.HTMLAttributes<HTMLPulumiSwipeableElement>;
+            "pulumi-swiper": LocalJSX.PulumiSwiper & JSXBase.HTMLAttributes<HTMLPulumiSwiperElement>;
+            "pulumi-tab": LocalJSX.PulumiTab & JSXBase.HTMLAttributes<HTMLPulumiTabElement>;
+            "pulumi-tabs": LocalJSX.PulumiTabs & JSXBase.HTMLAttributes<HTMLPulumiTabsElement>;
+            "pulumi-tertiary-nav": LocalJSX.PulumiTertiaryNav & JSXBase.HTMLAttributes<HTMLPulumiTertiaryNavElement>;
             /**
              * The ToolTip component shows a tooltip bubble above another element when you hover over
              * (or, on mobile tap on) it. Use the named `content` slot for supplying the markup to
@@ -1404,11 +1238,11 @@ declare module "@stencil/core" {
              *     </span>
              * </pulumi-tooltip>
              */
-            "pulumi-tooltip": LocalJSX.IntrinsicElements["pulumi-tooltip"] & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
-            "pulumi-top-button": LocalJSX.IntrinsicElements["pulumi-top-button"] & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
-            "pulumi-user-toggle": LocalJSX.IntrinsicElements["pulumi-user-toggle"] & JSXBase.HTMLAttributes<HTMLPulumiUserToggleElement>;
-            "pulumi-value-calculator": LocalJSX.IntrinsicElements["pulumi-value-calculator"] & JSXBase.HTMLAttributes<HTMLPulumiValueCalculatorElement>;
-            "pulumi-webinar-form-select": LocalJSX.IntrinsicElements["pulumi-webinar-form-select"] & JSXBase.HTMLAttributes<HTMLPulumiWebinarFormSelectElement>;
+            "pulumi-tooltip": LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
+            "pulumi-top-button": LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
+            "pulumi-user-toggle": LocalJSX.PulumiUserToggle & JSXBase.HTMLAttributes<HTMLPulumiUserToggleElement>;
+            "pulumi-value-calculator": LocalJSX.PulumiValueCalculator & JSXBase.HTMLAttributes<HTMLPulumiValueCalculatorElement>;
+            "pulumi-webinar-form-select": LocalJSX.PulumiWebinarFormSelect & JSXBase.HTMLAttributes<HTMLPulumiWebinarFormSelectElement>;
         }
     }
 }
