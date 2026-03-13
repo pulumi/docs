@@ -81,6 +81,8 @@ For OPA Policy Packs, the version is also specified in the `PulumiPolicy.yaml` f
 
 A version can only be used one time and once published the version can never be used by that Policy Pack again.
 
+For a complete list of all `PulumiPolicy.yaml` fields, see the [policy pack project file reference](/docs/insights/policy/policy-packs/project-file/).
+
 ## How are secrets handled in policies?
 
 Encrypted [secrets](/docs/concepts/secrets#secrets) are decrypted during previews and updates. Any policy that is run against a stack can access the values in plaintext. It is up to you to treat these values sensitively and only run policies that you trust.
@@ -89,7 +91,7 @@ Encrypted [secrets](/docs/concepts/secrets#secrets) are decrypted during preview
 
 As of Pulumi 2.4.0, new Python Policy Packs created with `pulumi policy new` will have a virtual environment created in a `venv` directory with required dependencies from `requirements.txt` installed in it, and Pulumi will automatically use this virtual environment when running the program.
 
-This behavior is controlled by the following `virtualenv` `runtime` option in `PulumiPolicy.yaml`:
+This behavior is controlled by the following `virtualenv` `runtime` option in `PulumiPolicy.yaml` (see the [project file reference](/docs/insights/policy/policy-packs/project-file/) for all available settings):
 
 ```yaml
 runtime:
