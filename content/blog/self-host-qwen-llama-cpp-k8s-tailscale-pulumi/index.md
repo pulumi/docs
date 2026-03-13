@@ -32,7 +32,7 @@ Many open-weight models now run well on consumer GPUs. Once the model is on your
 
 This post walks through a Kubernetes deployment on a Linux home server. It was tested on a Ryzen 9 5950x with 32 GB DDR4 and an RTX 3080 10 GB, which is high-end 2020 consumer hardware comparable to a mid-range build today. If your rig is in the same ballpark, this setup will likely work for you. If you are on a Mac with an M-series chip, you can run the same model locally with [mlx-lm](https://github.com/ml-explore/mlx-lm) instead.
 
-[Qwen 3.5](https://qwen.ai/blog?id=qwen3.5) is an Apache 2.0-licensed model family from Alibaba. The 35B-A3B variant uses a Mixture-of-Experts (MoE) architecture that activates only 3 billion parameters per token. Thanks to [quantized GGUF models](https://huggingface.co/unsloth/Qwen3.5-35B-A3B-GGUF), models that would normally require datacenter hardware fit on consumer GPUs with acceptable quality loss.
+[Qwen 3.5](https://qwen.ai/blog?id=qwen3.5) is an Apache 2.0-licensed model family from Alibaba. The 35B-A3B variant uses a Mixture-of-Experts (MoE) architecture that activates only 3 billion parameters per token. Thanks to quantized [GGUF](https://huggingface.co/docs/hub/en/gguf) models, models that would normally require datacenter hardware fit on consumer GPUs with acceptable quality loss.
 
 The full 35B-parameter model fits in around 22 GB at Q4_K_M precision, and llama.cpp can split layers between GPU VRAM and system RAM so you do not need all of that in VRAM.
 
@@ -206,7 +206,7 @@ All llama.cpp flags are assembled from config values passed to the constructor, 
 ```python
 config = pulumi.Config()
 model = config.get("model") or "unsloth/Qwen3.5-35B-A3B-GGUF"
-model_file = config.require("modelFile")
+model_file = config.get("modelFile") or "Qwen3.5-35B-A3B-Q4_K_M.gguf"
 context_size = config.get_int("contextSize") or 65536
 
 llm = LlmServer(
@@ -297,10 +297,10 @@ If you are using an AMD GPU, set the vendor before deploying:
 pulumi config set gpuVendor amd
 ```
 
-Set the required model file config:
+The program defaults to `Qwen3.5-35B-A3B-Q4_K_M.gguf`. To use a different quantization, for example:
 
 ```bash
-pulumi config set modelFile Qwen3.5-35B-A3B-Q4_K_M.gguf
+pulumi config set modelFile Qwen3.5-35B-A3B-Q6_K.gguf
 ```
 
 Run the deployment:
