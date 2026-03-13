@@ -1,7 +1,7 @@
 .tiles {
     @apply items-center;
 
-    @screen md {
+    @include screen-md {
         @apply flex;
     }
 

@@ -1,6 +1,9 @@
 @import "colors";
 @import "mixins";
 
+// NOTE: @utility declarations for btn/btn-lg/btn-orange are in main.scss (top-level)
+// because @utility cannot be nested inside @layer.
+
 .btn {
     @include transition;
 
@@ -79,10 +82,8 @@
 .btn-download {
     display: flex;
     align-items: center;
-    --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgba(77, 91, 217, var(--tw-text-opacity));
+    background-color: #fff;
+    color: rgba(77, 91, 217, 1);
     padding-left: 0 !important;
 }
 
@@ -92,7 +93,6 @@
 }
 
 .btn-download:hover {
-    --tw-text-opacity: 1;
     color: #3e49ae;
 }
 

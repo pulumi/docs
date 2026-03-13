@@ -11,7 +11,7 @@
 .product-carousel-items {
     @apply w-full;
 
-    @screen lg {
+    @include screen-lg {
         @apply w-1/2;
     }
 
@@ -61,7 +61,7 @@
                 @apply border-gray-500;
             }
 
-            @screen md {
+            @include screen-md {
                 @apply text-base;
             }
 
@@ -72,11 +72,11 @@
                     @apply hidden;
                 }
 
-                @screen md {
+                @include screen-md {
                     @apply pt-4 pb-3 px-6;
                 }
 
-                @screen xl {
+                @include screen-xl {
                     span {
                         @apply inline;
                     }

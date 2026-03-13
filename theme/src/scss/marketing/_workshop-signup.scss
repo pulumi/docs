@@ -17,7 +17,7 @@ body.section-workshop-signup {
         @include gradient-button;
         @apply py-3 px-6;
 
-        @screen xl {
+        @include screen-xl {
             @apply text-lg;
         }
         content: "Try Pulumi"

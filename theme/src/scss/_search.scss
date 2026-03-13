@@ -23,12 +23,12 @@
     .docs-search {
         @apply mt-2 mb-4 px-4;
 
-        @screen md {
+        @include screen-md {
             @apply w-60 px-0;
         }
     }
 
-    @screen md {
+    @include screen-md {
         @apply flex-row items-center py-0 px-4;
         border-top: 1px solid map-get($gray, 150);
         background: map-get($gray, 112);
@@ -67,11 +67,11 @@
 .search-header {
     @apply justify-center bg-gray-100;
 
-    @screen md {
+    @include screen-md {
         @apply justify-between;
     }
 
-    @screen lg {
+    @include screen-lg {
         @apply mx-auto justify-start;
     }
 }

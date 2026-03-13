@@ -2,7 +2,7 @@
     @apply w-full h-full absolute top-0 left-0 overflow-visible pointer-events-none hidden;
     z-index: -1;
 
-    @screen lg {
+    @include screen-lg {
         @apply block;
     }
 
