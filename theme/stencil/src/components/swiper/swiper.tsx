@@ -1,6 +1,6 @@
 import { Component, Element, h, Prop, State, Method } from "@stencil/core";
 import SwiperCore from "swiper";
-import { Autoplay, Manipulation, Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import type { AutoplayOptions, NavigationOptions } from "swiper/types";
 
 @Component({
@@ -65,7 +65,7 @@ export class Swiper {
     }
 
     componentDidLoad() {
-        const modules = [Manipulation];
+        const modules = [];
         if (this.autoplay) modules.push(Autoplay);
         if (this.navControls) modules.push(Navigation);
 
