@@ -7,9 +7,6 @@ pulumi-chooser {
     }
 
     // Choosable children inherit display from the parent chooser element.
-    // We target pulumi-choosable specifically (not > *) so the ul tab bar
-    // can keep its own flex display set in _chooser.scss.
-    > pulumi-choosable,
     pulumi-choosable {
         display: inherit;
     }
