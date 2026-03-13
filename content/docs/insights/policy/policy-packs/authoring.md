@@ -117,13 +117,13 @@ Create your first policy pack:
     $ mkdir policypack && cd policypack
     ```
 
-2. Create a new Python project:
+1. Create a new Python project:
 
     ```sh
     $ pulumi policy new aws-python
     ```
 
-    > **Virtual environment configuration**: Python policy packs use a virtual environment specified in `PulumiPolicy.yaml`. The default name is `venv`. If you use a different name (like `.venv`), update `PulumiPolicy.yaml`:
+    > **Virtual environment configuration**: Python policy packs use a virtual environment specified in `PulumiPolicy.yaml`. The default name is `venv`. If you use a different name (like `.venv`), update `PulumiPolicy.yaml`. See the [project file reference](/docs/insights/policy/policy-packs/project-file/) for all available settings.
     >
     > ```yaml
     > runtime:
@@ -143,7 +143,7 @@ Create your first policy pack:
     >
     > This keeps your published policy pack size small and ensures only the necessary policy code is distributed.
 
-3. Replace the generated policy in `__main__.py` with this example, which demonstrates a clearer pattern for organizational policy enforcement:
+1. Replace the generated policy in `__main__.py` with this example, which demonstrates a clearer pattern for organizational policy enforcement:
 
     Each policy must have:
     - A unique name, description, and validation function
@@ -894,9 +894,11 @@ Pulumi Cloud versions policy packs, enabling updates, rollbacks, and gradual rol
 
 Policy pack versions are managed differently by language:
 
-- **TypeScript/JavaScript**: Set the `version` field in `package.json`
+- **TypeScript/JavaScript**: Set the `version` field in `package.json`. You can also set `version` in `PulumiPolicy.yaml` to override it.
 - **Python**: Set the `version` field in `PulumiPolicy.yaml`
 - **OPA**: Set the `version` field in `PulumiPolicy.yaml`
+
+For a complete list of `PulumiPolicy.yaml` fields, see the [project file reference](/docs/insights/policy/policy-packs/project-file/).
 
 Each version can only be published once.
 
@@ -952,7 +954,7 @@ This format helps users understand which resource failed and why.
 
 - [Policy examples repository](https://github.com/pulumi/examples/tree/master/policy-packs) - Example policy packs demonstrating various implementation patterns
 - [Policy as Code overview](/docs/insights/policy/)
-- [Policy Metadata fields](/docs/insights/policy/metadata.md)
+- [Policy Metadata fields](/docs/insights/policy/metadata/)
 
 ## Next steps
 
