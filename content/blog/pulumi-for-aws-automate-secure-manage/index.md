@@ -40,7 +40,7 @@ One of the first innovations made for AWS was [Pulumi Crosswalk for AWS](/docs/i
 
 Crosswalk for AWS also supports “day two and beyond” tasks, such as scaling your workload, securing and integrating it with your existing infrastructure, and going to production in multiple complex environments. This includes Amazon Virtual Private Cloud (VPC) for network isolation, AWS Auto Scaling for dynamic scaling, and AWS Identity and Access Management (IAM) for securing your infrastructure.
 
-Earlier this month at KubeCon 2024, we launched the Pulumi Elastic Kubernetes Service (EKS) Provider v3.0.0, which is one of the Crosswalk libraries that makes Kubernetes management on AWS even easier. This release simplifies multi-cluster deployments, improves resource handling, and offers enhanced compatibility with the latest AWS EKS features.
+We recently launched the Pulumi Elastic Kubernetes Service (EKS) Provider v3.0.0, which is one of the Crosswalk libraries that makes Kubernetes management on AWS even easier. This release simplifies multi-cluster deployments, improves resource handling, and offers enhanced compatibility with the latest AWS EKS features.
 
 [Read more about the Pulumi EKS Provider 3.0.0](/blog/eks-v3-release/)
 
