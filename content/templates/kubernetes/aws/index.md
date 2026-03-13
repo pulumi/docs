@@ -89,6 +89,6 @@ $ pulumi destroy
 Congratulations! You're now well on your way to managing a production-grade Kubernetes cluster on AWS with Pulumi infrastructure as code --- and there's lots more you can do from here:
 
 * Discover more architecture templates in [Templates &rarr;](/templates)
-* Dive into the API docs to explore the [Amazon EKS package](/registry/packages/eks/) or [AWSx (Crosswalk) package](/registry/packages/awsx)
+* Dive into the API docs to explore the [Amazon EKS package](/registry/packages/eks/) or [AWSx package](/registry/packages/awsx)
 * Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn)
 * Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/tag/kubernetes)

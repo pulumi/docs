@@ -79,9 +79,9 @@ key_features:
               - title: Native cloud providers
                 description: |
                     Full API coverage for AWS, Azure, Google Cloud, and Kubernetes with same-day updates.
-              - title: Crosswalk for AWS
+              - title: AWSx
                 description: |
-                    Adopt well-architected best practices for your infrastructure easily with the Crosswalk library.
+                    Adopt well-architected best practices for your infrastructure easily with the AWSx library.
               - title: Cloud Native support
                 description: |
                     Use a single workflow to manage both Kubernetes resources and infrastructure.
