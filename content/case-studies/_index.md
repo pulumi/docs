@@ -51,5 +51,6 @@ customer_logos:
     - name: tivityhealth
     - name: linktree
     - name: spearAI
+    - name: compostable-ai
 
 ---
