@@ -680,9 +680,9 @@ Example comment when using GitHub Actions directly:
 
 ## Stack outputs
 
-When Pulumi updates a stack, any values your program exports as [stack outputs](/docs/iac/concepts/stacks/#outputs) become available for use in subsequent steps of your workflow. This is useful when downstream jobs or steps need information produced by your infrastructure (such as a service endpoint, a storage bucket name, or a database connection string) without needing to re-query the cloud provider.
+When Pulumi updates a stack, any values your program exports as [stack outputs](/docs/iac/concepts/stacks/#outputs) become available for use in subsequent steps of your workflow. This is useful when downstream jobs or steps need information produced by your infrastructure, such as a service endpoint, a storage bucket name, or a database connection string, without needing to re-query the cloud provider.
 
-### Using the pulumi/actions GitHub Action
+### Using the `pulumi/actions` GitHub Action
 
 The `pulumi/actions` action exposes each stack output as a named step output. To access a stack output, give the Pulumi step an `id` and then reference `steps.<id>.outputs.<output-name>` in subsequent steps.
 
@@ -693,8 +693,6 @@ For example, if your Pulumi program exports an output named `url`:
 {{% choosable language typescript %}}
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
-
 // ... resource definitions ...
 
 export const url = myResource.endpoint;
@@ -776,7 +774,7 @@ To retrieve a single output value:
   run: echo "Deployed to ${{ steps.stack.outputs.url }}"
 ```
 
-To retrieve all outputs as a JSON object:
+To retrieve all outputs as a JSON object and access individual values from it:
 
 ```yaml
 - name: Get all stack outputs
@@ -785,6 +783,8 @@ To retrieve all outputs as a JSON object:
   working-directory: infra
   env:
     PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+- name: Use a value from the JSON outputs
+  run: echo "Deployed to ${{ fromJSON(steps.stack.outputs.outputs).url }}"
 ```
 
 {{% notes type="warning" %}}
