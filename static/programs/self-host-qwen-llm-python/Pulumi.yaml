@@ -14,7 +14,8 @@ config:
     description: HuggingFace model repository
   modelFile:
     type: string
-    description: GGUF filename to download from the model repo (required)
+    default: Qwen3.5-35B-A3B-Q4_K_M.gguf
+    description: GGUF filename to download from the model repo
   gpuVendor:
     type: string
     default: nvidia
@@ -25,7 +26,7 @@ config:
     description: Number of GPUs to allocate
   contextSize:
     type: integer
-    default: 16384
+    default: 65536
     description: Context window size in tokens
   fitTarget:
     type: integer
@@ -43,16 +44,14 @@ config:
     type: integer
     default: 1
     description: Number of parallel request slots
-  mmproj:
-    type: string
-    description: Multimodal projection filename for vision support (optional)
   llmPort:
     type: integer
     default: 8080
     description: LLM service port
   llmNodePort:
     type: integer
-    description: NodePort for external LLM access (optional)
+    default: 30080
+    description: NodePort for external LLM access
   webuiPort:
     type: integer
     default: 30000
