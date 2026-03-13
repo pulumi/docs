@@ -1,4 +1,4 @@
-import { Component, Element, Host, h, Listen, Prop, State } from "@stencil/core";
+import { Component, Element, Host, h, Listen, Prop, State, forceUpdate } from "@stencil/core";
 import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd, setPythonToolchain } from "../../store/actions/preferences";
@@ -233,6 +233,10 @@ export class Chooser {
                     return {};
             }
         });
+
+        // Force a re-render to ensure the selection from mapStateToProps is applied
+        // immediately, which triggers componentDidRender → applyChoice (#17951).
+        forceUpdate(this.el);
     }
 
     render() {
