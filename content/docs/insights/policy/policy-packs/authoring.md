@@ -21,7 +21,7 @@ aliases:
 
 If Pulumi's pre-built policy packs don't meet your requirements, you can write custom policy packs. Custom policies let you enforce any compliance, security, or operational rule.
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/insights/policy/#languages).
+Policies can be written in TypeScript/JavaScript (Node.js), Python, or OPA (Rego) and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/insights/policy/#languages).
 
 ### Creating a Policy Pack with Neo
 
@@ -42,6 +42,7 @@ Before authoring your first policy pack, ensure you have:
 - [Pulumi CLI installed](/docs/install/).
 - For TypeScript/JavaScript policies: [Node.js installed](https://nodejs.org/en/download/).
 - For Python policies: [Python installed](https://python.org/downloads/).
+- For OPA policies: Install the OPA analyzer plugin with `pulumi plugin install analyzer policy-opa`.
 - (Optional) Access to Pulumi Cloud if you want to publish and centrally manage policy packs. Not required for local policy pack usage with open source Pulumi.
 - An understanding of [Policy as Code core concepts](/docs/insights/policy/).
 
@@ -49,7 +50,7 @@ Before authoring your first policy pack, ensure you have:
 
 Create your first policy pack:
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -197,6 +198,60 @@ Create your first policy pack:
 
 {{% /choosable %}}
 
+<a id="opa"></a>
+
+{{% choosable language opa %}}
+
+1. Create a directory for your policy pack and navigate to it.
+
+    ```sh
+    $ mkdir policypack && cd policypack
+    ```
+
+1. Create a new OPA project:
+
+    ```sh
+    $ pulumi policy new aws-opa
+    ```
+
+    This creates a `PulumiPolicy.yaml` (with `runtime: opa`) and a starter `policy.rego` file. Templates are available for AWS (`aws-opa`), Azure (`azure-opa`), GCP (`gcp-opa`), and Kubernetes (`kubernetes-opa`).
+
+1. Replace the generated policy in `policy.rego` with this example, which demonstrates metadata annotations and multiple rules:
+
+    Each resource is passed as `input` with metadata fields like `__name` (logical name), `__urn`, and `type`, plus all resource properties at the top level.
+
+    Use [OPA metadata annotations](https://www.openpolicyagent.org/docs/latest/annotations/) (`# METADATA` comment blocks) to provide a `title`, `description`, and remediation guidance (`custom.message`) for each rule. The analyzer extracts these annotations and reports them to Pulumi:
+
+    ```rego
+    package aws
+
+    # METADATA
+    # title: No Public S3 Buckets
+    # description: S3 buckets must not use public-read ACLs.
+    # custom:
+    #   message: Set the ACL to 'private' or remove it entirely.
+    deny_public_buckets[msg] {
+        input.type == "aws:s3/bucket:Bucket"
+        input.acl == "public-read"
+        msg := sprintf("S3 bucket '%s' must not have public-read ACL", [input.__name])
+    }
+
+    # METADATA
+    # title: Require S3 Encryption
+    # description: All S3 buckets must have server-side encryption configured.
+    # custom:
+    #   message: Add a serverSideEncryptionConfiguration block to the bucket.
+    deny_encryption[msg] {
+        input.type == "aws:s3/bucket:Bucket"
+        not input.serverSideEncryptionConfiguration
+        msg := sprintf("S3 bucket '%s' must have encryption enabled", [input.__name])
+    }
+    ```
+
+    Each rule must use a recognized name prefix that determines its enforcement level: `deny` (or `violation`) for mandatory rules that block deployments, and `warn` for advisory rules. Rules can include a descriptive suffix (e.g., `deny_public_buckets`). An empty result set means the resource is compliant.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 You can find more example policy packs in the [Pulumi examples repository](https://github.com/pulumi/examples/tree/master/policy-packs).
@@ -205,7 +260,7 @@ You can find more example policy packs in the [Pulumi examples repository](https
 
 Write unit tests to verify your policies work correctly before publishing.
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -228,6 +283,45 @@ Here's a simple test example using pytest:
 ```
 
 For a complete example including additional test cases, see the [unit test policy example on GitHub](https://github.com/pulumi/docs/tree/master/static/programs/unit-test-policy-python).
+
+{{% /choosable %}}
+
+{{% choosable language opa %}}
+
+OPA policies can be tested using the standard `opa test` command from the [OPA CLI](https://www.openpolicyagent.org/docs/latest/#running-opa). Create a test file (e.g., `s3_security_test.rego`) alongside your policy:
+
+```rego
+package aws
+
+test_deny_public_buckets {
+    count(deny_public_buckets) > 0 with input as {
+        "type": "aws:s3/bucket:Bucket",
+        "__name": "my-bucket",
+        "acl": "public-read"
+    }
+}
+
+test_allow_private_bucket {
+    count(deny_public_buckets) == 0 with input as {
+        "type": "aws:s3/bucket:Bucket",
+        "__name": "my-bucket",
+        "acl": "private"
+    }
+}
+
+test_deny_missing_encryption {
+    count(deny_encryption) > 0 with input as {
+        "type": "aws:s3/bucket:Bucket",
+        "__name": "my-bucket"
+    }
+}
+```
+
+Run the tests:
+
+```sh
+$ opa test .
+```
 
 {{% /choosable %}}
 
@@ -441,7 +535,7 @@ When writing policies for dynamic providers:
 
 Test your policy pack locally before publishing.
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -561,6 +655,20 @@ Test your policy pack locally before publishing.
             [mandatory]  aws-python v0.0.1  s3-bucket-prefix (my-bucket: aws:s3/bucket:Bucket)
             Ensures S3 buckets use the required naming prefix.
             S3 bucket must use 'mycompany-' prefix. Current prefix: 'wrongprefix-'
+
+{{% /choosable %}}
+
+{{% choosable language opa %}}
+
+Running OPA policy packs locally works the same way as TypeScript and Python packs. If you need a test program, create one with `pulumi new aws-typescript` or `pulumi new aws-python`.
+
+> For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
+
+In the Pulumi program's directory, run:
+
+```sh
+$ pulumi preview --policy-pack <path-to-opa-policy-pack-directory>
+```
 
 {{% /choosable %}}
 
@@ -788,6 +896,7 @@ Policy pack versions are managed differently by language:
 
 - **TypeScript/JavaScript**: Set the `version` field in `package.json`
 - **Python**: Set the `version` field in `PulumiPolicy.yaml`
+- **OPA**: Set the `version` field in `PulumiPolicy.yaml`
 
 Each version can only be published once.
 
@@ -796,6 +905,7 @@ Each version can only be published once.
 1. Update the version number:
    - TypeScript: Edit `package.json`: `"version": "0.0.2"`
    - Python: Edit `PulumiPolicy.yaml`: `version: 0.0.2`
+   - OPA: Edit `PulumiPolicy.yaml`: `version: 0.0.2`
 
 1. Publish:
 

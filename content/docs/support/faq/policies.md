@@ -77,6 +77,8 @@ For Python Policy Packs, the version is specified in the `PulumiPolicy.yaml` fil
 version: 0.1.0
 ```
 
+For OPA Policy Packs, the version is also specified in the `PulumiPolicy.yaml` file, using the same format as Python packs.
+
 A version can only be used one time and once published the version can never be used by that Policy Pack again.
 
 ## How are secrets handled in policies?

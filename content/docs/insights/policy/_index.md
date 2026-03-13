@@ -52,7 +52,7 @@ Policy as Code is implemented via [analyzer plugins](/docs/iac/concepts/plugins/
 Pulumi Policies uses a hierarchy of components to enforce compliance rules:
 
 1. **Policies** are individual rules that validate infrastructure configuration (e.g., "S3 buckets must be private" or "VMs must use approved instance types").
-1. **Policy packs** are versioned collections of related policies that you publish and manage together. You can use [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, PCI DSS, SOC 2) or [write custom packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, or Python.
+1. **Policy packs** are versioned collections of related policies that you publish and manage together. You can use [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, PCI DSS, SOC 2) or [write custom packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, Python, or [OPA (Rego)](/docs/insights/policy/policy-packs/authoring/#opa).
 1. **Policy groups** apply policy packs to specific stacks or cloud accounts. This lets you enforce stricter policies in production and more permissive policies in development environments. Learn more about [policy groups](/docs/insights/policy/policy-groups/).
 
 ### Enforcement modes
@@ -102,11 +102,11 @@ For more information about Pulumi plans and pricing, see the [Pricing page](/pri
 
 ## Languages
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language.
+Policies can be written in TypeScript/JavaScript (Node.js), Python, or OPA (Rego) and can be applied to Pulumi stacks written in any language.
 
 - **[TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/policy/)** - Stable
 - **[Python](/docs/reference/pkg/python/pulumi_policy/)** - Stable
-- **[Open Policy Agent (OPA)](/blog/opa-support-for-crossguard)** - Experimental
+- **[Open Policy Agent (OPA)](/docs/insights/policy/policy-packs/authoring/#opa)** - Stable
 - **.NET** - [Future](https://github.com/pulumi/pulumi-policy/issues/229)
 - **Go** - [Future](https://github.com/pulumi/pulumi-policy/issues/230)
 
@@ -116,7 +116,7 @@ Choose your path based on your needs:
 
 - **New to Pulumi Policies?** Start with the [Get Started guide](/docs/insights/policy/get-started/) to configure your first policy group and apply policies to stacks or cloud accounts.
 - **Want ready-made compliance rules?** Browse [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for CIS, PCI DSS, HITRUST, NIST, and other frameworks. Enable them directly from Pulumi Cloud with no code required.
-- **Need custom policies?** Learn to [write custom policy packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, or Python. Create organization-specific rules tailored to your requirements.
+- **Need custom policies?** Learn to [write custom policy packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, Python, or OPA (Rego). Create organization-specific rules tailored to your requirements.
 - **Managing compliance?** View violations and track remediation progress in [Policy Findings](/docs/insights/policy/policy-findings/). Triage issues, assign owners, and monitor compliance trends across your organization.
 - **Configuring discovered resources?** Visit the [Insights Get Started tutorial](/docs/insights/discovery/get-started/) for a detailed guide on audit policies for cloud resources discovered outside Pulumi.
 - **Using the CLI?** See the [CLI reference](/docs/insights/policy/cli/) for `pulumi policy` commands to create, publish, and manage policy packs from the command line.
