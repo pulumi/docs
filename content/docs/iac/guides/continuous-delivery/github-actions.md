@@ -678,6 +678,119 @@ Example comment when using GitHub Actions directly:
 
 ![Comment from GitHub Actions](/images/docs/github-actions/pr-comment-actions.png)
 
+## Stack outputs
+
+When Pulumi updates a stack, any values your program exports as [stack outputs](/docs/iac/concepts/stacks/#outputs) become available for use in subsequent steps of your workflow. This is useful when downstream jobs or steps need information produced by your infrastructure, such as a service endpoint, a storage bucket name, or a database connection string, without needing to re-query the cloud provider.
+
+### Using the `pulumi/actions` GitHub Action
+
+The `pulumi/actions` action exposes each stack output as a named step output. To access a stack output, give the Pulumi step an `id` and then reference `steps.<id>.outputs.<output-name>` in subsequent steps.
+
+For example, if your Pulumi program exports an output named `url`:
+
+{{< chooser language "typescript,python,go,csharp" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+// ... resource definitions ...
+
+export const url = myResource.endpoint;
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+
+# ... resource definitions ...
+
+pulumi.export("url", my_resource.endpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+ctx.Export("url", myResource.Endpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+return new Dictionary<string, object?>
+{
+    ["url"] = myResource.Endpoint,
+};
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+You can capture and use that value in your workflow as follows:
+
+```yaml
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy infrastructure
+        id: pulumi
+        uses: pulumi/actions@v6
+        with:
+          command: up
+          stack-name: org-name/stack-name
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+      - name: Use the stack output
+        run: echo "Deployed to ${{ steps.pulumi.outputs.url }}"
+```
+
+The `id` field on the Pulumi step is what makes the output available as `steps.pulumi.outputs.<output-name>`. Output names map directly to the keys your program passes to `ctx.Export` (Go), `pulumi.export` (Python), `export const` (TypeScript), or the returned dictionary (C#).
+
+If a stack output name contains characters that are not valid in GitHub Actions expression syntax (such as hyphens), GitHub Actions still makes them available; refer to the [GitHub Actions documentation](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/passing-information-between-jobs) for how to reference outputs with special characters.
+
+### Using the Pulumi CLI directly
+
+If you are not using the `pulumi/actions` action for a particular step, you can retrieve stack outputs using the Pulumi CLI and write them to the `$GITHUB_OUTPUT` environment file, which is the standard GitHub Actions mechanism for passing values between steps.
+
+To retrieve a single output value:
+
+```yaml
+- name: Get stack output
+  run: echo "url=$(pulumi stack output url)" >> "$GITHUB_OUTPUT"
+  id: stack
+  working-directory: infra
+  env:
+    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+- name: Use the output
+  run: echo "Deployed to ${{ steps.stack.outputs.url }}"
+```
+
+To retrieve all outputs as a JSON object and access individual values from it:
+
+```yaml
+- name: Get all stack outputs
+  run: echo "outputs=$(pulumi stack output --json)" >> "$GITHUB_OUTPUT"
+  id: stack
+  working-directory: infra
+  env:
+    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+- name: Use a value from the JSON outputs
+  run: echo "Deployed to ${{ fromJSON(steps.stack.outputs.outputs).url }}"
+```
+
+{{% notes type="warning" %}}
+Stack outputs may include sensitive values such as passwords or private keys. Avoid logging output values directly in workflow run logs, and use [GitHub Encrypted Secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) to store and pass sensitive data rather than stack outputs when appropriate. You can also set `suppress-outputs: true` on the `pulumi/actions` step to prevent output values from appearing in GitHub Actions logs.
+{{% /notes %}}
+
 ## Configuration
 
 You can configure how Pulumi's GitHub Actions work to have more control about which stacks get updated, and when.
