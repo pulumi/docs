@@ -10,7 +10,7 @@ aliases:
 hero:
   title: Code Your Infrastructure. Automated by agents. Secured by policy.
   description: |
-    As Google Cloud environments grow and AI workloads move into production, coordinating infrastructure, security, and change becomes harder. See how Pulumi combines infrastructure as code, policy enforcement, and infra agents to operate GCP with more control, stronger security, and less manual work.
+    Manage Google Cloud with TypeScript, Python, or Go. Deploy in minutes, enforce policies automatically, and let AI handle the repetitive work. Also, arcade games and prizes.
   date_and_location: April 22-24, 2026, Mandalay Bay, Las Vegas
   booth: Booth 3624
   cta_text: Book your demo
@@ -39,32 +39,32 @@ logos:
     alt: Deloitte
 
 features:
-  title: Operate GCP at AI-speed without losing control
+  title: Do Google Cloud smarter
   subtitle: |
-    As GCP environments scale and AI accelerates change, visibility drops, security drifts, and waste increases without a consistent operational model. Give us a few minutes, and we'll show you how Pulumi can help.
+    Managing Google Cloud at scale can mean juggling Terraform, secret sprawl, compliance checks, and cloud costs across disconnected tools. Give us a few minutes, and we'll show you how Pulumi can help.
   image: /images/google-next/code-google-next-2026.svg
   image_alt: Pulumi code example for Google Cloud
   anchor: features
   features:
     - icon: fa-code
-      title: Infrastructure as code for core GCP services
+      title: Infrastructure as code for core Google Cloud services
       description: |
-        Define and manage GKE, Cloud Run, Cloud SQL, IAM, networking, BigQuery, Pub/Sub, and supporting infrastructure using code. Changes are previewed, reviewed, versioned, and applied consistently across environments. TypeScript and Python demos shown. Terraform and HCL are supported when preferred.
+        Manage Google Cloud infrastructure in TypeScript, Python, or Go. Define GKE clusters, Cloud Run services, BigQuery datasets, and IAM policies in code. Changes are previewed, reviewed, and versioned before deployment.
     - icon: fa-robot
       title: Agent-driven automation with Pulumi Neo
       description: |
-        Neo, our infra agent, can generate infrastructure, enforce policy, diagnose failures, and automate changes with human approval. Agents assist day-2 operations by reducing manual steps while keeping review, control, and accountability in the workflow.
-    - icon: fa-shield-alt
-      title: Policy enforced before changes reach production
+        Our AI agent Neo handles the work platform teams do with Google Cloud. Provision GKE clusters, migrate Terraform configs, diagnose Cloud Run failures, and enforce IAM policies across your fleet, with human review at every step.
+    - icon: fa-cloud
+      title: Many clouds, one platform
       description: |
-        Security and compliance controls are defined as code and evaluated automatically. Policies govern identity, network exposure, and storage configuration. Secrets and configuration are managed centrally with integration into GCP IAM and Secret Manager.
+        Provision and manage Google Cloud infrastructure alongside AWS, Azure, and on-prem—all with a single, unified platform. One workflow, one set of policies, no vendor lock-in.
 
 two_column_anchor: demo-workshop
 two_column:
   - label: Talk to an expert
     title: Book a technical discussion
     description: |
-      Schedule a demo with one of our solutions architects to share your specific Google Cloud challenges. The session is tailored to your environment and can include reviewing your current setup, digging into workflow, governance, or scale concerns, and exploring solutions that fit your needs. The focus is on what you want to solve, not a generic walkthrough.
+      Schedule some booth time with a solution architect to talk through your specific Google Cloud challenges. We'll come prepared to dig into whatever you're facing, from scaling issues and complex deployments to finding ways to improve your workflows and operational efficiency.
     cta_text: Book your demo
     cta_link: https://calendly.com/pulumi-meetings/google-cloud-next-booth-demo-2026
   - label: Attend a workshop
