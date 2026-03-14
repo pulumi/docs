@@ -8,7 +8,7 @@ menu:
   administration:
         name: Changelog
         parent: administration-self-hosting
-        weight: 5
+        weight: 7
         identifier: administration-security-compliance-self-hosted-changelog
 aliases:
   - /docs/pulumi-cloud/self-hosted/changelog/

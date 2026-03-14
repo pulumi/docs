@@ -63,8 +63,16 @@ Although these containers require networking access by default, self-hosted Pulu
 - download.docker.com
 - production.cloudflare.docker.com
 
+### Destination - OpenSearch / Elasticsearch
+
+- *9200*: OpenSearch or Elasticsearch HTTP API (used for resource search)
+
 ### Destination - Additional outbound targets
 
 These depend on what services you are using:
 
 - Login/Auth services if SAML is configured
+
+## Operations guide
+
+For VPC architecture, multi-AZ networking, load balancing, auto-scaling, and DNS configuration best practices, see the [Networking operations guide](/docs/administration/self-hosting/operations/networking/).
