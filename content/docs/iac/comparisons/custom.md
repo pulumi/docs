@@ -43,3 +43,7 @@ Finally, Pulumi is [open source](https://github.com/pulumi/pulumi) and community
 are custom needs, it is possible to make those customizations required, just like it would be with home-grown solutions.
 For most customers, Pulumi replaces their custom solutions without any customizations necessary, but knowing that this
 is an option should help know that Pulumi will be available in the long-term, and can evolve to meet your growing needs.
+
+## Integrating existing scripts with Pulumi
+
+If you have existing Bash, Python, or other scripts for provisioning or configuration tasks, you don't have to abandon them entirely. Pulumi's [Command provider](/registry/packages/command/) lets you run local or remote commands as part of your Pulumi program. This means you can gradually migrate to Pulumi while still leveraging scripts that work well for your team.
