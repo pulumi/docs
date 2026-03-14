@@ -76,3 +76,11 @@ Note that creating, listing, or restoring environments are organization-level op
 | `environment_webhook:delete` | Remove an existing environment webhook. This permanently deletes the webhook configuration.<br><br>**Granted by default permission set**: `Environment Write` |
 | `environment_webhook:read` | View environment webhook configurations. This includes access to webhook settings and event triggers.<br><br>**Granted by default permission set**: `Environment Write` |
 | `environment_webhook:update` | Modify an existing environment webhook. This allows updating webhook settings and event triggers.<br><br>**Granted by default permission set**: `Environment Write` |
+
+## Environment change requests (approvals)
+
+| Value | Description |
+|-------|-------------|
+| `change_gate:create` | Create approval rules (change gates) for this environment. This requires approval before deployments or changes proceed.<br><br>**Granted by default permission set**: `Environment Write` |
+| `change_gate:update` | Modify approval rules for this environment.<br><br>**Granted by default permission set**: `Environment Write` |
+| `change_gate:delete` | Remove approval rules (change gates) for this environment.<br><br>**Granted by default permission set**: `Environment Write` |

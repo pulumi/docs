@@ -20,14 +20,13 @@ aliases:
 - /docs/pulumi-cloud/access-management/access-tokens/
 ---
 
-Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usage of the Pulumi Cloud using the REST API. Learn more about the REST API in the [Pulumi Cloud REST API docs](/docs/pulumi-cloud/cloud-rest-api/).
+Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usage of the Pulumi Cloud using the REST API. Learn more about the REST API in the [Pulumi Cloud REST API docs](/docs/reference/cloud-rest-api/).
 
 Pulumi offers three types of access tokens:
 
 1. Personal tokens, which map to the permissions of an individual user. Personal tokens are available to all Pulumi Cloud users.
 1. Organization tokens, which map to the permissions of either a regular organization member or an organization admin, depending on the scope of the token. Organization tokens are only available to Enterprise and Business Critical customers.
-1. Team tokens, which map to the permissions of a team within an organization. For more information on using teams within your Pulumi Cloud organization, see [Teams & Role-based access control (RBAC)
-](/docs/administration/organizations-teams/teams/). Team tokens are only available to Enterprise and Business Critical customers.
+1. Team tokens, which map to the permissions of a team within an organization. For more information on using teams within your Pulumi Cloud organization, see [Teams & Role-based access control (RBAC)](/docs/administration/access-identity/rbac/teams/). Team tokens are only available to Enterprise and Business Critical customers.
 
 When using tokens, be mindful of the following security best practices:
 

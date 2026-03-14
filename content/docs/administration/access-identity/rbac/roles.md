@@ -26,21 +26,19 @@ Pulumi Cloud provides several default roles that you can use to quickly get star
 
 | <div style="width: 200px;">Role</div>| Description |
 |------|-------------|
-| `Admin` | Full access to all organization resources and settings. Can manage members, roles, and organization-wide configurations.</div> |
-| `Member` | Basic access to view organization resources and participate in stack operations. Cannot modify organization settings. Default access for members to organization entities can be controlled via the **Access management** page under **Settings**.</div> |
-| `Billing Manager` | Access to view and manage billing information. Cannot modify other organization settings or resources.</div> |
+| `Admin` | Full access to all organization resources and settings. Can manage members, roles, and organization-wide configurations. |
+| `Member` | Basic access to view organization resources and participate in stack operations. Cannot modify organization settings. When your organization has custom roles, you can set an **organization default role** — a custom role that applies to all members who have the Member organization role and have not been given an explicit custom role. To set the default role, navigate to **Settings** > **Roles**, open a custom role, and choose **Set as default role**. |
+| `Billing Manager` | Access to view and manage billing information. Cannot modify other organization settings or resources. |
 
 ## Custom roles
 
 {{% notes "info" %}}
-Custom roles are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.
-To learn more about editions visit the [pricing page](/pricing/).
+Custom roles are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition. To learn more about editions, visit the [pricing page](/pricing/).
+
+To assign custom roles to **individual users**, the **Assign custom roles to users** setting must be enabled for your organization (**Settings** > **Access Management**). When your organization has custom roles, you can also set an **organization default role** — a custom role that serves as the baseline for all members who have the Member organization role and have not been given an explicit custom role. The default role is set from **Settings** > **Roles** (not from the Access Management page).
 {{% /notes %}}
 
-You can create and manage custom roles to define more granular access controls for your organization. Custom roles allow you to:
-
-- Bundle specific permission sets for different resource types
-- Control access to like resources or groups of resources
+You can create and manage custom roles to define more granular access controls for your organization. Custom roles combine entity access rules (direct, global, or tag-based) with an organization access level.
 
 ### Creating custom roles
 
@@ -50,27 +48,55 @@ Visit the **Roles** page under **Settings** to see your organization roles
 
 ![View all organization roles](/docs/administration/access-identity/rbac/1-create-role.png).
 
-To create a new role, click **Create custom role**
+To create a new role, click **Create custom role**. Provide a unique name and, optionally, a description to contextualize the role's purpose.
 
-![Create a role page](/docs/administration/access-identity/rbac/2-create-role.png).
+A custom role can include any combination of the following entity access rule types, plus an organization access level.
 
-You will need to provide a unique name for the role. Optionally, but recommended, you can provide a description to contextualize the role and its purpose.
+#### Rule types
 
-![Providing a name and description for the role](/docs/administration/access-identity/rbac/3-create-role.png).
+##### Direct entity access
 
-You can assign permission sets to the role to be applied globally across all RBAC entities of a specific type, or to individual entities (specific stacks, environments, or insights accounts).
+Direct rules grant a permission set to individually selected entities. Choose the entity type (stack, environment, or insights account), select **Select specific [type]**, then click **Choose [type]** to open a searchable list.
 
-You'll first see the option to assign permission sets to entities globally within the org:
+![Configuring an entity access rule for stacks](/docs/administration/access-identity/rbac/2-create-role.png).
 
-![Assigning a global permission set to the role](/docs/administration/access-identity/rbac/4-create-role.png).
+A dialog lists the entities in your organization. You can search by name to filter the list.
 
-You can also select **Add Pulumi entities** to assign permission sets to specific entities. You'll be able to search for stacks, environments, or insights accounts within your org and assign existing permission sets of their entity type to the entity.
+![Browsing available stacks in the rule criteria dialog](/docs/administration/access-identity/rbac/3-create-role.png).
 
-![Assigning permission sets to two stacks](/docs/administration/access-identity/rbac/5-create-role.png).
+Check the entities to include in the rule, then click **Confirm selection**.
 
-When done, click **Create role**. You should be taken back to the Roles page, where you will see your new role:
+![Selecting stacks to include in the rule](/docs/administration/access-identity/rbac/4-create-role.png).
 
-![Your role has been created, visible here on the Roles page](/docs/administration/access-identity/rbac/6-create-role.png).
+After confirming, click **Save rule**. The **Entity Access** section displays a table of all configured rules, and you can add more with **Add rule**.
+
+##### Global entity access
+
+Global rules apply a permission set to all entities of a given type within the organization. Choose the entity type and select **Apply to all [type]** to grant the chosen permission set across all current and future entities of that type.
+
+##### Tag-based rules (ABAC) {#tag-based-abac-rules}
+
+Tag-based rules (also called ABAC — attribute-based access control) grant a permission set when a resource's tags match defined conditions. Each rule has:
+
+- **Entity type** — Stack, environment, or insights account.
+- **Tag conditions** — One or more conditions on resource tags (e.g. tag `env` equals `production`, or tag `team` exists).
+- **Permission set** — The permission set to grant when the conditions match a resource.
+
+**Why use them:** Grant access to many resources at once by tag (e.g. all stacks with `team=platform`) without listing each resource individually. Useful for large organizations.
+
+**How it works:** When evaluating access, Pulumi Cloud checks the user's roles (and the roles of the teams they belong to). For each tag rule in those roles, it evaluates the resource's tags against the rule's conditions. If they match, the rule's permission set is applied to that resource.
+
+To configure a tag-based rule, choose the entity type and select **Set conditions**, then enter one or more tag key/value conditions and choose a permission set.
+
+![Configuring a tag-based (ABAC) rule with entity type Stacks, tag condition sensitivity=critical, and Stack Admin permission](/docs/administration/access-identity/rbac/1-abac-rule.png).
+
+In the Pulumi Cloud UI and API, these rules may be labeled "tag rules" or "tag-based access control rules"; ABAC (attribute-based access control) is the general industry term.
+
+**Organization access** sets the permission level for organization-level operations (e.g. creating stacks, managing billing, audit logs). This applies to the organization as a whole and is separate from the entity-based rules above.
+
+![Entity access rules and organization access configured, ready to create the role](/docs/administration/access-identity/rbac/5-create-role.png).
+
+When done, click **Create role**.
 
 You can now assign this role to principals in your organization.
 
@@ -80,30 +106,39 @@ To update or delete a custom role, simply click on the ellipsis icon next to the
 
 ## Role assignment
 
-Currently, roles can be assigned to organization tokens. When early access has ended for this feature, you will be able to assign roles to teams or individual users in your organization.
+Roles can be assigned to organization access tokens, users, and teams. Effective permissions are the **union** of the user's organization role and all roles assigned to the teams they belong to (composability).
 
-### Assigning a role to an organization token
+### Organization access tokens
 
-[Organization tokens](/docs/administration/access-identity/access-tokens/#organization-access-tokens) can be assigned both default and custom roles to narrow their scope within your organization.
+[Organization access tokens](/docs/administration/access-identity/access-tokens/#organization-access-tokens) can be assigned one role (default or custom) that defines the token's permissions across the organization.
 
 Follow the process to [create an organization token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token).
 
 ![Create an organization access token, a role field is available](/docs/administration/access-identity/rbac/1-create-token-role.png).
 
-Note that you will have the ability to provide a role. Choose a default or custom role to assign to it.
+Choose a default or custom role to assign to the token.
 
 ![Assign a role to your organization token](/docs/administration/access-identity/rbac/2-create-token-role.png).
 
-Proceed with creating the token. The access token you have created will be narrowed in scope according to the permissions of the role within your organization.
+The token's access is limited to the permissions of that role within your organization.
+
+### Users
+
+Each organization member has one **organization role** (Admin, Member, Billing Manager, or a custom role). When your organization has custom roles and **Assign custom roles to users** is enabled (in **Settings** > **Access Management**), admins can assign any custom role to individual members. Members who have the Member organization role and have not been given an explicit custom role use the **organization default role** if one is set; otherwise they use the built-in Member role.
+
+### Teams
+
+When your organization has custom roles enabled, [teams can have role assignments](/docs/administration/access-identity/rbac/teams#team-role-assignments): one or more roles (default or custom). Team members receive the **union** of their own user role and all roles assigned to the teams they belong to. So team role assignments add on top of each member's baseline role.
 
 ## Best practices
 
 When working with roles in Pulumi Cloud, consider these best practices:
 
-1. **Principle of Least Privilege**: Assign only the scopes necessary for users to perform their tasks.
-2. **Role Reusability**: Design custom roles and permission sets in a way that maps to real-world concepts within your org, allowing for easy reuse.
-3. **Regular Review**: Periodically schedule reviews of role assignments and scopes.
-4. **Documentation**: Document the purpose and scopes of custom roles both internally and within the role's metadata.
+1. **Principle of least privilege**: Assign only the scopes necessary for users to perform their tasks.
+1. **Role reusability**: Design custom roles and permission sets in a way that maps to real-world concepts within your org, allowing for easy reuse.
+1. **Tag-based rules**: Use tag-based rules to grant access to many resources by tag (e.g. `team=platform`) without listing each resource.
+1. **Regular review**: Periodically schedule reviews of role assignments and scopes.
+1. **Documentation**: Document the purpose and scopes of custom roles both internally and within the role's metadata.
 
 ## Related resources
 
