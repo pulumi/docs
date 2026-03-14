@@ -90,6 +90,6 @@ $ pulumi destroy
 Congratulations! You're now well on your way to managing a production-grade container service on AWS with Pulumi --- and there's lots more you can do from here:
 
 * Discover more architecture templates in [Templates &rarr;](/templates)
-* Dive into the API docs for the [AWS](/registry/packages/aws/) and [AWSx (Crosswalk)](/registry/packages/awsx) packages
+* Dive into the API docs for the [AWS](/registry/packages/aws/) and [AWSx](/registry/packages/awsx) packages
 * Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn)
 * Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/tag/containers)
