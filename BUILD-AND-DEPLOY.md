@@ -205,13 +205,10 @@ code .
 
 **Install Required Tools:**
 
-```bash
-# Node.js 24 (via nvm)
-nvm install 24
-nvm use 24
+This project uses [mise](https://mise.jdx.dev/installing-mise.html) to manage tool versions for local development. Install mise first, then run the following to install all mise-managed tools (see `mise.toml`):
 
-# Yarn
-npm install -g yarn@1.22
+```bash
+mise install
 
 # Hugo 0.157.0
 # macOS:
@@ -220,11 +217,6 @@ brew install hugo@0.157.0
 
 # Pulumi CLI
 curl -fsSL https://get.pulumi.com | sh
-
-# Go 1.26+
-# macOS:
-brew install go@1.26
-# Linux: https://go.dev/doc/install
 
 # Python 3.13+
 # macOS:
