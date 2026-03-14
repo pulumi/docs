@@ -206,9 +206,9 @@ code .
 **Install Required Tools:**
 
 ```bash
-# Node.js 24 (via nvm)
-nvm install 24
-nvm use 24
+# Node.js 24 (via mise)
+mise install node@24
+mise use node@24
 
 # Yarn
 npm install -g yarn@1.22
