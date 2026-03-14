@@ -368,10 +368,10 @@ tags:
     - 2022-03-10-hierarchical-config
 
   ai:
-    - codegen-learnings
-    - pulumi-copilot-rest
-    - copilot-lessons
-    - future-cloud-infrastructure-10-trends-shaping-2024-and-beyond
+    - run-deepseek-on-aws-ec2-using-pulumi
+    - policy-next-gen
+    - low-code-llm-apps-with-local-ai-flowise-and-pulumi
+    - easy-ai-apps-with-langserve-and-pulumi
 
   ml:
     - devops-ai-developer-future--pulumi-user-group-tech-talks
@@ -1265,6 +1265,11 @@ fargate-vs-ec2:
   - pulumi-for-aws-automate-secure-manage
   - easy-ai-apps-with-langserve-and-pulumi
   - advanced-aws-networking-part-2
+
+self-host-qwen-llama-cpp-k8s-tailscale-pulumi:
+  - deploy-openclaw-aws-hetzner
+  - low-code-llm-apps-with-local-ai-flowise-and-pulumi
+  - mlops-huggingface-llm-aws-sagemaker-python
 
 when-to-use-azure-cosmos-db:
   - azure-deployment-environments

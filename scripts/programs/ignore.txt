@@ -33,6 +33,7 @@ awsx-apigateway-custom-domain-.*
 kubernetes-.*
 k8s-.*
 helm-.*
+self-host-qwen-llm-python
 
 # Skip broken programs to get back to green
 # https://github.com/pulumi/docs/issues/14505
