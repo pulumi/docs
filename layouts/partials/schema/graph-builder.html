@@ -171,6 +171,63 @@
   {{ $graph = $graph | append $software }}
 {{ end }}
 
+{{/* Add CollectionPage schema for resource library category pages */}}
+{{ if and (eq .Type "resources") (not .IsPage) (not .IsHome) .Parent (not .Parent.IsHome) }}
+  {{ $categorySlug := index (split (strings.TrimSuffix "/" .RelPermalink) "/") (sub (len (split (strings.TrimSuffix "/" .RelPermalink) "/")) 1) }}
+  {{ $allResources := where (where $.Site.Pages "Type" "resources") "Kind" "page" }}
+  {{ $articles := where $allResources ".Params.solution_areas" "intersect" (slice $categorySlug) }}
+
+  {{ $collectionItems := slice }}
+  {{ range $articles }}
+    {{ $collectionItems = $collectionItems | append (dict
+      "@type" "ListItem"
+      "url" .Permalink
+      "name" .Title
+    ) }}
+  {{ end }}
+
+  {{ $collectionSchema := dict
+    "@type" "CollectionPage"
+    "@id" "#collection"
+    "name" .Title
+    "url" .Permalink
+    "description" (or .Params.meta_desc .Title)
+    "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+  }}
+  {{ if $collectionItems }}
+    {{ $collectionSchema = merge $collectionSchema (dict "hasPart" $collectionItems) }}
+  {{ end }}
+  {{ $graph = $graph | append $collectionSchema }}
+{{ end }}
+
+{{/* Add FAQPage schema for resource library pages with frontmatter faq (articles AND category pages) */}}
+{{ if and (eq .Type "resources") .Params.faq }}
+  {{ $faqQuestions := slice }}
+  {{ range .Params.faq }}
+    {{ if and .question .answer }}
+      {{ $qa := dict
+        "@type" "Question"
+        "name" .question
+        "acceptedAnswer" (dict
+          "@type" "Answer"
+          "text" .answer
+        )
+      }}
+      {{ $faqQuestions = $faqQuestions | append $qa }}
+    {{ end }}
+  {{ end }}
+  {{ if $faqQuestions }}
+    {{ $faqSchema := dict
+      "@type" "FAQPage"
+      "mainEntity" $faqQuestions
+      "url" .Permalink
+      "name" (printf "%s - FAQ" .Title)
+      "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+    }}
+    {{ $graph = $graph | append $faqSchema }}
+  {{ end }}
+{{ end }}
+
 {{/* Add video schema if page contains YouTube videos */}}
 {{ if not .IsHome }}
   {{ $videoEntity := partial "schema/collectors/video-entity.html" . }}
