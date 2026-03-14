@@ -152,6 +152,7 @@ Here is a summary of more granular comparisons between Pulumi and Terraform:
 | [Cloud Native Support](#cloud-native) | Richly typed across 100% of K8s API<br>Includes CRDs & in-cluster operator support for GitOps delivery | Core API typed<br>Generic support for CRD |
 | [Custom Resource Providers](#dynamic-providers) | Yes | No |
 | [Modular Resource Components](#reuse) | Flexible<br>Reuse functions, classes, packages, and Pulumi components | Constrained<br>Can only reuse Terraform modules |
+| [Parent and Child Resources](#parent-child) | Yes<br>Explicit parent/child relationships with lifecycle inheritance | No<br>No native parent/child resource model |
 | [Execution Modes](#modes) | Run CLI commands<br>Remote execution via SaaS<br>Programmatically via Automation API | Run CLI commands<br>Remote execution via SaaS |
 | [Embed IaC Execution in Application Code](#embedding) | Yes | No |
 | [Import Code from other IaC Tools](#converting) | Yes | No |
@@ -245,6 +246,16 @@ Pulumi IaC provides dynamic providers that allow you to extend your system by cr
 Pulumi IaC promotes creating reusable and modular components which allows standard and well-architected infrastructure building blocks to be templatized and easily reused. With Pulumi IaC, you can reuse functions, classes, and packages. Pulumi IaC also has a built-in component model that lets you abstract and encapsulate complexity with higher-level abstractions. These components have a trackable state, appear in diffs, and use a logical name that tracks the resource identity across deployments. Pulumi IaC also provides Pulumi Packages which allows you to author components in one language and make the component accessible in all the other languages that Pulumi IaC supports. Terraform uses HCL which requires you to build proprietary modules and Go-based providers in order to build modular and reusable infrastructure. For more information about how to author reusable components, see [Component Resources](/docs/concepts/resources/#components).
 
 Pulumi IaC also provides the [Pulumi Registry](/registry/) which is a searchable collection of Pulumi Packages published by Pulumi and our partners. With Pulumi Registry, you can easily find the package with the resources you need, install that package directly into your project, and start building.
+
+### Parent and Child Resources {#parent-child}
+
+Pulumi IaC supports an explicit parent/child resource model through the `parent` resource option. When you assign a parent to a resource, the child inherits certain resource options from its parent—such as providers, protections, and transformations—and the Pulumi CLI renders the relationship as a visual hierarchy in its output, making it immediately clear which resources belong together.
+
+This model is most commonly used when authoring [Component Resources](/docs/iac/concepts/components/), where every resource instantiated inside a component is explicitly parented to that component. This ensures the resources share a coherent lifecycle: if the component is deleted, all of its children are deleted with it, and `pulumi up` output groups them visually beneath their parent. You can create multiple levels of nesting within a single component to reflect the logical structure of your infrastructure.
+
+Terraform has no direct equivalent to this parent/child resource model. Terraform modules allow you to organize and encapsulate related resources into reusable units, but modules are a static code-organization construct rather than a runtime relationship. When you instantiate a Terraform module, the resources it contains exist as peers in the state file and in plan output, without any explicit runtime parent/child linkage. There is no way to express that one resource is a logical child of another resource, and Terraform's CLI output does not reflect any hierarchy among resources within a module.
+
+Pulumi's parent/child resource model is a meaningful structural advantage: it lets you reason about your infrastructure hierarchically, visualize component boundaries in plan output, and express lifecycle and configuration inheritance between resources—none of which are natively available in Terraform. To learn more, see [parent](/docs/iac/concepts/resources/options/parent/) in the Resource Options documentation.
 
 ### Execution Modes {#modes}
 
