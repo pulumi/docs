@@ -1,5 +1,7 @@
-pulumi-choosable {
+pulumi-choosable:defined {
     // Immediate descendents are hidden by default, visible when active.
+    // The :defined pseudo-class ensures content stays visible until the custom element
+    // is registered, preventing a flash of invisible content in Safari (#17951).
     > * {
         display: none;
 

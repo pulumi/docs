@@ -1,4 +1,4 @@
-import { Component, Element, h, Listen, Prop, Watch } from "@stencil/core";
+import { Component, Element, h, Listen, Prop, Watch, forceUpdate } from "@stencil/core";
 import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { ChooserType, ChooserKey, ChooserMode } from "../chooser/chooser";
@@ -71,6 +71,14 @@ export class Choosable {
         // This avoids waiting for the "rendered" event when possible.
         if (store.getStore()) {
             this.subscribeToStore();
+        } else {
+            // Fallback: if the "rendered" event was missed (e.g., due to Safari lifecycle
+            // ordering), retry once after a short delay (#17951).
+            setTimeout(() => {
+                if (!this.storeUnsubscribe && this.mode === "global" && store.getStore()) {
+                    this.subscribeToStore();
+                }
+            }, 100);
         }
     }
 
@@ -107,6 +115,10 @@ export class Choosable {
                         return { selection: pythontoolchain };
                 }
             });
+
+            // Force a re-render to ensure the selection from mapStateToProps is applied
+            // immediately, closing the race window where content stays hidden (#17951).
+            forceUpdate(this.el);
         }
     }
 
