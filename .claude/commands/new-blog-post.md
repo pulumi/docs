@@ -105,7 +105,9 @@ Inform the user if author information was auto-populated and give them a chance 
 
 1. **Generate slug**: Convert title to lowercase, replace spaces with hyphens, keep only alphanumeric characters and hyphens (remove all other special characters)
 2. **Create directory**: `content/blog/{slug}/`
-3. **Copy placeholder meta.png**: Use Bash to copy `.claude/commands/_common/images/blog-post-meta-placeholder.png` to `content/blog/{slug}/meta.png`
+3. **Copy placeholder images**: Use Bash to copy both placeholders:
+   - `.claude/commands/_common/images/blog-post-meta-placeholder.png` → `content/blog/{slug}/meta.png`
+   - `.claude/commands/_common/images/blog-post-feature-placeholder.png` → `content/blog/{slug}/feature.png`
 4. **Create index.md** with this structure:
 
 ```markdown
@@ -117,6 +119,7 @@ date: YYYY-MM-DD  # Use 2099-01-01 if "I don't know yet" was selected, otherwise
 draft: false
 meta_desc: "The one-sentence summary provided by user"
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - author-id-1
     - author-id-2  # Include all authors gathered during setup
@@ -150,7 +153,7 @@ Before finishing:
 - Verify all author files exist and are valid TOML
 - Verify all author IDs in the frontmatter match the author IDs that were created/found (prevent typos)
 - Verify the blog post directory was created
-- Verify meta.png was copied to the blog post directory
+- Verify meta.png and feature.png were copied to the blog post directory
 - Verify index.md has valid YAML frontmatter
 - Verify the user is not committing to `master` directly (if so, warn them)
 - Check that all required fields are present (especially meta_desc, authors, tags)
@@ -168,7 +171,7 @@ After creating the files, tell the user:
    - If information was auto-detected, remind user to review it for accuracy
 3. **Next steps**:
    - **If date was set to 2099-01-01**: Update the publication date in frontmatter before publishing! The current placeholder date will prevent the post from appearing on the live site.
-   - Replace the placeholder `meta.png` with your own image (recommended size: 1200×630 pixels, optimal for social media previews). Figma templates are available for internal use, ask in `#docs` for a link.
+   - Replace the placeholder `meta.png` and `feature.png` with your own images. Ask in `#marketing` for a custom feature image to be designed for you. You can also run `/blog-meta-image` to generate them automatically, or create them manually (feature image: 1884×1256px, meta image: 1200×628px).
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
    - **Optional but recommended**: Run `/add-borders` on the blog post to add 1px grey borders to PNG images for better visual presentation

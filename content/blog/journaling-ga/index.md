@@ -5,6 +5,7 @@ date: 2026-03-05
 draft: false
 meta_desc: "A major performance enhancement is now on by default for all Pulumi Cloud organizations. Faster operations, less network traffic, no opt-in required."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - thomas-gummerer
     - pat-gavlin

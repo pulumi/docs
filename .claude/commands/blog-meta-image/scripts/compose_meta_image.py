@@ -144,7 +144,8 @@ def draw_text(
 
             is_code = word in code_words
             active_font = code_font if is_code else font
-            word_w = sum(active_font.getlength(c) + letter_spacing_px for c in word)
+            word_w = sum(active_font.getlength(c) +
+                         letter_spacing_px for c in word)
 
             if is_code:
                 # Pill starts at current x so the full inter-word space is preserved;
@@ -153,7 +154,8 @@ def draw_text(
                 # visual margin is equal on top and bottom regardless of ascender/
                 # descender space in the font's line box.
                 pad_x, pad_y = 14, 6
-                glyph_bbox = active_font.getbbox(word)  # (l, top, r, bottom) rel. to y
+                # (l, top, r, bottom) rel. to y
+                glyph_bbox = active_font.getbbox(word)
                 glyph_top = y + glyph_bbox[1]
                 glyph_bottom = y + glyph_bbox[3]
                 pill_end = x + 2 * pad_x + word_w - letter_spacing_px
@@ -201,13 +203,51 @@ def _word_wrap(text: str, font: ImageFont.FreeTypeFont, max_width: float) -> lis
     return lines
 
 
+def hex_to_rgba(hex_color: str) -> tuple[int, int, int, int]:
+    """Convert a hex color string like #20054E to an RGBA tuple."""
+    h = hex_color.lstrip("#")
+    return int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16), 255
+
+
+def tint_image(img: Image.Image, hex_color: str, mode: str = "overlay") -> Image.Image:
+    """Apply a color tint to an image, preserving its alpha.
+
+    mode="overlay" (default): replaces all pixel colors with a flat tint while
+    keeping the original alpha mask — opaque areas become a solid shape of the
+    tint color. Best for logos that are already single-color cutouts.
+
+    mode="colorize": converts to grayscale first, then scales each channel by
+    the tint color so luminance is preserved. Bright pixels become bright tint,
+    dark pixels become dark tint — logos with internal colors or gradients
+    retain structural contrast rather than collapsing to a flat shape.
+    """
+    r, g, b, _ = hex_to_rgba(hex_color)
+    img = img.convert("RGBA")
+    _, _, _, alpha = img.split()
+    if mode == "colorize":
+        gray = img.convert("L")
+        result = Image.merge("RGBA", [
+            gray.point(lambda p: p * r // 255),
+            gray.point(lambda p: p * g // 255),
+            gray.point(lambda p: p * b // 255),
+            alpha,
+        ])
+    else:
+        tint = Image.new("RGBA", img.size, (r, g, b, 255))
+        tint.putalpha(alpha)
+        result = tint
+    return result
+
+
 def place_logos(
     canvas: Image.Image,
     logo_paths: list[str],
     placeholders: list[dict],
     assets_dir: Path,
+    logo_tint: str | None = None,
+    logo_tint_mode: str = "overlay",
 ) -> Image.Image:
-    """Place logo SVGs centered on white placeholder regions."""
+    """Place logo SVGs centered on placeholder regions, with optional color tint."""
     img = canvas.copy()
 
     for i, logo_path in enumerate(logo_paths):
@@ -227,6 +267,9 @@ def place_logos(
         svg_path = str((assets_dir / logo_path).resolve())
         logo_img = svg_to_png(svg_path, target_w, target_h)
 
+        if logo_tint:
+            logo_img = tint_image(logo_img, logo_tint, mode=logo_tint_mode)
+
         # Center logo within the placeholder
         lw, lh = logo_img.size
         offset_x = ph_x + (ph_w - lw) // 2
@@ -238,30 +281,77 @@ def place_logos(
 
 
 def compose(config: dict, output_path: str, assets_dir: Path) -> str:
-    """Full composition pipeline: Template PNG -> Logos -> Text -> Save."""
+    """Full composition pipeline.
+
+    Feature mode (``template`` key present):
+      Template PNG → logos on placeholders → save
+
+    Meta mode (no ``template``, ``background_color`` present):
+      Solid bg → feature image (offset right) → overlay → logos on placeholders
+      → meta logo → text → save
+    """
     catalog = load_catalog(assets_dir)
     fonts_dir = assets_dir.parents[3] / "static" / "fonts"
-    canvas_w = catalog["canvas"]["width"]
-    canvas_h = catalog["canvas"]["height"]
 
-    # 1. Load template PNG
-    template_path = assets_dir / config["template"]
-    canvas = Image.open(str(template_path)).convert("RGBA")
-    canvas = canvas.resize((canvas_w, canvas_h), Image.LANCZOS)
+    # 1. Create canvas
+    if "template" in config:
+        # Feature mode: load the template PNG at its natural size
+        template_path = assets_dir / config["template"]
+        canvas = Image.open(str(template_path)).convert("RGBA")
+        canvas_w, canvas_h = canvas.size
+    else:
+        # Meta mode: solid background using catalog meta_canvas dimensions
+        mc = catalog["meta_canvas"]
+        canvas_w, canvas_h = mc["width"], mc["height"]
+        bg = config.get("background_color", "#20054E")
+        canvas = Image.new("RGBA", (canvas_w, canvas_h), hex_to_rgba(bg))
 
-    # 2. Place logos if any
+    # 2. Composite feature image (meta mode)
+    feature_image_path = config.get("feature_image")
+    if feature_image_path:
+        feature_img = Image.open(feature_image_path).convert("RGBA")
+        fw, fh = feature_img.size
+        scale = canvas_h / fh
+        new_fw = int(fw * scale)
+        feature_img = feature_img.resize((new_fw, canvas_h), Image.LANCZOS)
+        # Default: right-aligned, ~160px overflow off right edge
+        x_offset = config.get("feature_image_x", canvas_w -
+                              new_fw + int(canvas_w * 0.05) + 175)
+        canvas.paste(feature_img, (x_offset, 0), feature_img)
+
+    # 3. Composite overlay (meta mode)
+    overlay_path = config.get("overlay")
+    if overlay_path:
+        overlay = Image.open(str(assets_dir / overlay_path)).convert("RGBA")
+        if overlay.size != (canvas_w, canvas_h):
+            overlay = overlay.resize((canvas_w, canvas_h), Image.LANCZOS)
+        canvas = Image.alpha_composite(canvas, overlay)
+
+    # 4. Place logos on placeholders (feature logo variants)
     logos = config.get("logos", [])
     if logos:
-        template_filename = Path(config["template"]).name
+        template_filename = Path(config.get("template", "")).name
         template_entry = find_template(catalog, template_filename)
         if template_entry and "placeholders" in template_entry:
-            canvas = place_logos(canvas, logos, template_entry["placeholders"], assets_dir)
+            canvas = place_logos(
+                canvas, logos, template_entry["placeholders"], assets_dir,
+                logo_tint=config.get("logo_tint", "#B59CDF"),
+                logo_tint_mode=config.get("logo_tint_mode", "overlay"),
+            )
 
-    # 3. Draw text
+    # 5. Composite meta logo (meta mode)
+    meta_logo_path = config.get("logo")
+    if meta_logo_path:
+        logo_img = Image.open(str(assets_dir / meta_logo_path)).convert("RGBA")
+        lw, lh = logo_img.size
+        lx = config.get("logo_x", 90)
+        ly = config.get("logo_y", canvas_h - lh - 40)
+        canvas.paste(logo_img, (lx, ly), logo_img)
+
+    # 6. Draw text
     if config.get("text"):
         t = config["text"]
         font_size = t.get("font_size", 71)
-        # Allow config to override catalog text defaults (e.g. max_width)
         text_config = {**catalog["text"]}
         for key in ("max_width", "x", "y", "color"):
             if key in t:
@@ -274,7 +364,7 @@ def compose(config: dict, output_path: str, assets_dir: Path) -> str:
             font_size=font_size,
         )
 
-    # 4. Save as PNG
+    # 7. Save as PNG
     output = Path(output_path)
     output.parent.mkdir(parents=True, exist_ok=True)
 
@@ -286,8 +376,10 @@ def compose(config: dict, output_path: str, assets_dir: Path) -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Compose a meta image from a template PNG")
-    parser.add_argument("--config", required=True, help="JSON config file path")
+    parser = argparse.ArgumentParser(
+        description="Compose a feature image or meta image from a template PNG")
+    parser.add_argument("--config", required=True,
+                        help="JSON config file path")
     parser.add_argument("--output", required=True, help="Output PNG path")
     parser.add_argument(
         "--assets-dir",

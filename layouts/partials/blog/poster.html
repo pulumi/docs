@@ -1,9 +1,19 @@
-{{/* If a general image is associated with the post, display it in-line. */}}
-{{ if .Params.meta_image }}
-    <a href="{{ .RelPermalink }}"
-        ><img
-            class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100"
-            src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}"
-            alt="{{ .Title }}"
-    /></a>
+{{/* If a general image is associated with the post, display it in-line.
+     Intentionally only checks feature_image. Posts without a feature_image will
+     not show a listing thumbnail — this is by design for visual consistency. */}}
+{{ if .Params.feature_image }}
+    {{ $resource := .Resources.GetMatch .Params.feature_image }}
+    {{ if $resource }}
+        {{ $sm := $resource.Fit "640x427" }}
+        {{ $lg := $resource.Fit "942x628" }}
+        <a href="{{ .RelPermalink }}"
+            ><img
+                class="rounded-lg md:m-2 md:mt-0 w-full md:max-w-xs md:float-right my-8 border-2 border-gray-100"
+                src="{{ $sm.RelPermalink }}"
+                srcset="{{ $sm.RelPermalink }} 640w, {{ $lg.RelPermalink }} 942w"
+                sizes="(min-width: 768px) 320px, 100vw"
+                alt="{{ .Title }}"
+                width="{{ $sm.Width }}" height="{{ $sm.Height }}"
+        /></a>
+    {{ end }}
 {{ end }}
