@@ -24,11 +24,11 @@ For component configuration details, see [Components](/docs/administration/self-
 
 | Service | CPU | Memory | Notes |
 | :-- | :-- | :-- | :-- |
-| API | 2048m (2 vCPU) | 1024 Mi (1 GB) | Scale horizontally for HA |
+| API | 2048m (2 vCPU) | 4096 Mi (4 GB) | Scale horizontally for HA |
 | Console | 512m (0.5 vCPU) | 512 Mi | Static web UI, low resource usage |
 | Migrations | 128m | 128 Mi | Runs once per upgrade before service rollout |
 
-For production, 2 vCPU / 1 GB RAM per API instance is a good starting point. Scale horizontally (more instances) rather than vertically for the API service, since it is stateless and benefits from running behind a load balancer across multiple AZs.
+For production, 2 vCPU / 4 GB RAM per API instance is a good starting point. Scale horizontally (more instances) rather than vertically for the API service, since it is stateless and benefits from running behind a load balancer across multiple AZs.
 
 {{% notes type="info" %}}
 The ECS installer exposes `apiTaskCpu` and `apiTaskMemory` Pulumi config options for customizing API service resources. Other installers can adjust resource requests/limits directly in the Kubernetes manifests.
@@ -48,11 +48,3 @@ The ECS installer exposes `apiTaskCpu` and `apiTaskMemory` Pulumi config options
 | DNS | Two A records: `api.{domain}` and `app.{domain}` |
 | TLS | Certificates for both API and console domains |
 
-### Development and evaluation
-
-| Component | Specification |
-| :-- | :-- |
-| Database | MySQL 8.0, single instance, 20 GB SSD |
-| Object storage | S3-compatible, 50 GB |
-| Compute | Single instance, 2 vCPU / 4 GB RAM |
-| DNS | Two DNS records (or use self-signed certificates with local hosts entries) |
