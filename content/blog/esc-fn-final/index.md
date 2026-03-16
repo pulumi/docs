@@ -39,6 +39,7 @@ values:
 ```
 
 This evaluates to:
+
 ```json
 {
   "aws-region": "us-east-1"
