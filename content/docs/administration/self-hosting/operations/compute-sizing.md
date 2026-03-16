@@ -47,4 +47,3 @@ The ECS installer exposes `apiTaskCpu` and `apiTaskMemory` Pulumi config options
 | Network | VPC with public and private subnets in 2+ AZs |
 | DNS | Two A records: `api.{domain}` and `app.{domain}` |
 | TLS | Certificates for both API and console domains |
-
