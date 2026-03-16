@@ -38,6 +38,20 @@ Enabling verbose logging may reveal sensitive information (tokens, credentials..
 $ pulumi up --logtostderr --logflow -v=9 2> out.txt
 ```
 
+### Logging in a pipeline
+
+If you are running your `pulumi up` command in a pipeline and are not able to alter the command to add the arguments mentioned above, you can use some of the `PULUMI_OPTIONS_*` environment variables instead. The following is the equivalent of the command above:
+
+```
+PULUMI_OPTION_LOGFLOW=true
+PULUMI_OPTION_LOGTOSTDERR=true
+PULUMI_OPTION_VERBOSE=9
+```
+
+You can find more information on the rest of the `PULUMI_OPTIONS_*` environment variables in the [CLI environment variables](https://www.pulumi.com/docs/iac/cli/environment-variables/#setting-cli-arguments-with-environment-variables) section of our documentation.
+
+## Provider Diagnostic Logging
+
 Diagnostic logging can also be controlled with flags and environment variables of the resource providers. For example, Pulumi providers that use a bridged Terraform provider can make use of the [`TF_LOG`](https://www.terraform.io/docs/internals/debugging.html) environment variable (set to `TRACE`, `DEBUG`, `INFO`, `WARN` or `ERROR`) in order to provide additional diagnostic information.
 
 ```bash
