@@ -40,15 +40,15 @@ $ pulumi up --logtostderr --logflow -v=9 2> out.txt
 
 ### Logging in a pipeline
 
-If you are running your `pulumi up` command in a pipeline and are not able to alter the command to add the arguments mentioned above, you can use some of the `PULUMI_OPTIONS_*` environment variables instead. The following is the equivalent of the command above:
+If you are running your `pulumi up` command in a pipeline and are not able to alter the command to add the arguments mentioned above, you can use some of the `PULUMI_OPTION_*` environment variables instead. The following is the equivalent of the command above:
 
-```
+```bash
 PULUMI_OPTION_LOGFLOW=true
 PULUMI_OPTION_LOGTOSTDERR=true
 PULUMI_OPTION_VERBOSE=9
 ```
 
-You can find more information on the rest of the `PULUMI_OPTIONS_*` environment variables in the [CLI environment variables](https://www.pulumi.com/docs/iac/cli/environment-variables/#setting-cli-arguments-with-environment-variables) section of our documentation.
+You can find more information on the rest of the `PULUMI_OPTION_*` environment variables in the [CLI environment variables](/docs/iac/cli/environment-variables/#setting-cli-arguments-with-environment-variables) section of our documentation.
 
 ## Provider Diagnostic Logging
 
