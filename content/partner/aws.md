@@ -94,15 +94,15 @@ automation_api:
     cta: Learn More About Automation API
     link: /blog/automation-api/
 
-crosswalk: 
+crosswalk:
     header: Use Well-Architected Practices
-    body: Pulumi Crosswalk for AWS is a collection of libraries that use automatic well-architected best practices to make common infrastructure-as-code tasks in AWS easier and more secure. Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
+    body: Pulumi AWSx is a collection of libraries that use automatic well-architected best practices to make common infrastructure-as-code tasks in AWS easier and more secure. Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
     points:
         - header: Deploy CDK Constructs with Pulumi
           body: You can deploy any AWS CDK construct from within a Pulumi deployment. If you're already using AWS CDK, you can now use Pulumi to orchestrate deployments instead of CloudFormation. This gives you [improved deployment speed](/case-studies/panther-labs/#proving-pulumis-advantages/) and integration with all features of Pulumi (like [Policy as Code](/docs/insights/policy/), [Audit Logs](/docs/pulumi-cloud/audit-logs/), Secrets, and much more).
         - header: Application and Infrastructure Together
-          body: Crosswalk enables you to blur the lines between application and infrastructure code enabling you to author an entire full-stack application in one program. With support for inline Lambda functions and ease-of-use helper functions, building robust applications on AWS has never been easier.
-    cta: Learn More About Crosswalk
+          body: AWSx enables you to blur the lines between application and infrastructure code enabling you to author an entire full-stack application in one program. With support for inline Lambda functions and ease-of-use helper functions, building robust applications on AWS has never been easier.
+    cta: Learn More About AWSx
     link: /docs/iac/clouds/aws/guides/
 
 awsx:
