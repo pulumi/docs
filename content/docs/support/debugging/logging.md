@@ -38,7 +38,7 @@ Enabling verbose logging may reveal sensitive information (tokens, credentials..
 $ pulumi up --logtostderr --logflow -v=9 2> out.txt
 ```
 
-### Logging in a pipeline
+### Enabling logs in a pipeline
 
 If you are running your `pulumi up` command in a pipeline and are not able to alter the command to add the arguments mentioned above, you can use some of the `PULUMI_OPTION_*` environment variables instead. The following is the equivalent of the command above:
 
