@@ -59,9 +59,9 @@ main:
         - Understand the lifecycle of Kubernetes infrastructure on Google Cloud
     # The webinar presenters
     presenters:
-        - name: Engin Diri
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/engin-diri.jpg
+        - name: Adam Gordon Bell
+          role: Community Engineer, Pulumi
+          photo: /images/team/adam-gordon-bell.jpg
 
     # case-sensitive
     tags:
