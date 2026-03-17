@@ -13,7 +13,7 @@ tags:
 schema_type: auto
 ---
 
-[Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/)'s environment hierarchy makes it straightforward to share configuration across teams, but it also means a child environment can silently override a value set by a parent. When that value is a security policy or a compliance setting, an accidental override can cause real problems. With the new [fn::final](/docs/esc/environments/syntax/builtin-functions/fn-final/) built-in function, you can mark values as final, preventing child environments from overriding them. If a child environment tries to override a final value, ESC raises a warning and preserves the original value.
+[Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) allows you to compose environments by importing configuration and secrets from other environments, but this also means a child environment can silently override a value set by a parent. When that value is a security policy or a compliance setting, an accidental override can cause real problems. With the new [fn::final](/docs/esc/environments/syntax/builtin-functions/fn-final/) built-in function, you can mark values as final, preventing child environments from overriding them. If a child environment tries to override a final value, ESC raises a warning and preserves the original value.
 
 <!--more-->
 
@@ -48,7 +48,7 @@ This evaluates to:
 
 In this scenario, the ESC environment is still valid, but the final value remains unchanged.
 
-## When to use `fn::final`
+## When to use fn::final
 
 Use `fn::final` for:
 
