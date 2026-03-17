@@ -643,7 +643,7 @@ assets/css/marketing.css
 
 - TypeScript: `ts-loader`
 - Sass: `sass-loader` → `css-loader`
-- PostCSS: Tailwind CSS, Autoprefixer
+- PostCSS: @tailwindcss/postcss (Tailwind v4), Autoprefixer
 
 **Plugins:**
 
@@ -654,10 +654,13 @@ assets/css/marketing.css
 
 Multi-stage CSS optimization pipeline:
 
-1. **Tailwind CSS Compilation**
-   - Processes utility classes
-   - Applies theme configuration
-   - Generates responsive variants
+1. **Tailwind CSS v4 Compilation**
+   - Entry points: `theme/src/scss/main.scss` (docs) and `theme/src/scss/_marketing.scss` (marketing pages)
+   - Uses `@import "tailwindcss"` (v4 CSS-first config) instead of `@tailwind` directives
+   - Theme tokens (colors, fonts, breakpoints) defined via `@theme {}` blocks in CSS
+   - Content sources specified via `@source` directives (replaces JS `content` array)
+   - Responsive breakpoints use `@include screen-*` SCSS mixins (which emit `@media screen(...)`, replacing the removed `@screen` directive)
+   - PostCSS plugin: `@tailwindcss/postcss` (replaces the old `tailwindcss` PostCSS plugin)
 
 2. **PostCSS Processing**
    - Autoprefixer for browser compatibility
@@ -3475,6 +3478,7 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 **Tailwindcss Major Versions:**
 
 - Ignored in root and theme `dependabot.yml`
+- Currently on v4.x (migrated from v2)
 - Reason: Breaking changes require manual migration
 - Revisit: During planned design system updates
 
@@ -3924,7 +3928,8 @@ Complete reference of all build and deployment scripts.
 | **TypeDoc** | 0.28.15 | Node.js doc generation |
 | **Sphinx** | Latest | Python doc generation |
 | **Webpack** | 5.x | Asset bundling |
-| **Tailwind CSS** | 3.x | CSS framework |
+| **Tailwind CSS** | 4.x | CSS framework (CSS-first config via `@import "tailwindcss"`) |
+| **@tailwindcss/postcss** | 4.x | PostCSS plugin for Tailwind v4 |
 | **PostCSS** | 8.x | CSS processing |
 | **Cypress** | Latest | Browser testing |
 | **AWS CLI** | 2.x | AWS operations |

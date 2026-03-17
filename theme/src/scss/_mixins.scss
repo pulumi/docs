@@ -1,3 +1,11 @@
+// Breakpoint mixins replacing Tailwind's removed @screen directive.
+// Breakpoint values match theme/tailwind.config.js screens.
+@mixin screen-sm { @media (min-width: 640px) { @content; } }
+@mixin screen-md { @media (min-width: 768px) { @content; } }
+@mixin screen-lg { @media (min-width: 1024px) { @content; } }
+@mixin screen-xl { @media (min-width: 1280px) { @content; } }
+@mixin screen-xxl { @media (min-width: 1536px) { @content; } }
+
 @mixin transition($scope: all, $duration: 120ms, $fn: linear) {
     transition: $scope $duration $fn;
 }
@@ -37,11 +45,10 @@
     // trickery. For elements that support it, we position a gradient-colored background behind the element's
     // solid background, and then on hover, hide the solid to reveal the gradient.
     &:not(input) {
-        @apply bg-opacity-100 border-opacity-100;
         @include transition;
 
         &::before {
-            @apply absolute rounded-lg bg-opacity-100 border-opacity-100;
+            @apply absolute rounded-lg;
             @include gradient-background;
             border-image-width: 2px;
             content: "";
@@ -53,7 +60,7 @@
         }
 
         &:hover {
-            @apply border-opacity-0;
+            @apply border-transparent;
             @include gradient-background;
         }
     }

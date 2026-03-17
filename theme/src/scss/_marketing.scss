@@ -1,221 +1,265 @@
-@tailwind base;
-@tailwind components;
+@import "tailwindcss";
+
+@source "../../../layouts/**/*.html";
+@source "../../../content/**/*.{html,md}";
+@source "../../../assets/js/**/*.js";
+@source "../../stencil/src/**/*.tsx";
+@source "../**/*.{js,ts}";
+
+@import "theme";
 
 @import "colors";
 @import "mixins";
 
-body {
-    @apply overflow-x-hidden;
-
-    h1 {
-        @apply text-5xl;
-    }
-    h2 {
-        @apply text-4xl;
-    }
-    h3 {
-        @apply text-3xl;
-    }
-    h4 {
-        @apply text-2xl;
-    }
-    h5 {
-        @apply text-xl;
-    }
-    h6 {
-        @apply text-base;
+@layer base {
+    // Tailwind v2 preflight set default border-color to gray-200. v4 defaults to
+    // currentColor, which makes `.border` dividers render too dark. Restore the old default.
+    *,
+    ::before,
+    ::after {
+        border-color: var(--color-gray-200);
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        // Tailwind v2 makes some changes to line-heights, one of which is that headings
-        // now get line-heights of 1. This is generally a good thing, but it makes the
-        // headings in our marketing pages lose some intentional vertical spacing. So we
-        // override it here to avoid having to sprinkle `leading-*` utilities everywhere.
-        @apply leading-snug #{!important};
+    // Custom elements default to display: inline in browsers. Tailwind v4 preflight
+    // does not reset them to block, so we do it here for all Pulumi web components.
+    pulumi-chooser,
+    pulumi-choosable,
+    pulumi-tabs,
+    pulumi-tab-panel,
+    pulumi-install,
+    pulumi-banner,
+    pulumi-examples,
+    pulumi-convert,
+    pulumi-tooltip,
+    pulumi-audio,
+    pulumi-slot-machine,
+    pulumi-tertiary-nav,
+    pulumi-greenhouse-jobs-list,
+    pulumi-resource-links,
+    pulumi-filter-select,
+    pulumi-user-toggle,
+    pulumi-hubspot-form,
+    pulumi-copilot {
+        display: block;
     }
+}
 
-    p {
-        @apply text-gray-700;
-    }
+// v4 layer placement: custom styles must be in @layer so Tailwind utilities can override them.
+@layer components {
+    body {
+        @apply overflow-x-hidden;
 
-    .large-container {
-        max-width: 1680px;
-    }
-
-    .description a,
-    a.link {
-        @apply text-black font-semibold;
-
-        &:hover {
-            @apply underline;
-        }
-
-        &.btn-primary, &.btn-primary-template-variant {
-            @apply text-white;
-        }
-    }
-
-    // Buttons
-    a[class^="btn-"],
-    a[class*=" btn-"] {
-        @apply py-3 px-8 rounded-lg;
-
-        &:hover {
-            @apply no-underline;
-        }
-
-        &.disabled {
-            @apply cursor-default pointer-events-none;
-        }
-    }
-
-    .btn-primary,
-    .btn-secondary,
-    .btn-primary-template-variant,
-    .btn-secondary-template-variant {
-        @apply whitespace-normal;
-    }
-
-    .btn-primary {
-        @include gradient-button;
-    }
-
-    .btn-primary-template-variant {
-        @apply relative text-white bg-violet-600 border-violet-600 border-2 rounded-lg cursor-pointer z-auto;
-        background-color: #673eac;
-        &:hover {
-            background-color: #805ac3;
-        }
-    }
-
-    .btn-secondary-template-variant {
-        @apply relative rounded-lg cursor-pointer z-auto;
-        background-color: white;
-        border: 0.5px solid #5B5B5B;
-        color: #2B2B2C;
-        padding: calc(0.75rem + 1.5px) calc(2rem + 1.5px) !important;
-        &:hover {
-            background-color: #faf9fd;
-        }
-    }
-
-    .btn-secondary {
-        @apply bg-white text-violet-600 border-2 border-violet-600;
-        @include transition;
-
-        &.disabled {
-            opacity: 0.3rem;
-        }
-
-        &:hover {
-            @apply bg-violet-600 text-white;
-        }
-
-        &:focus {
-            @apply bg-violet-700 text-white;
-        }
-    }
-
-    // Make the borders transparent when the button is over a background of the same color.
-    .bg-violet-600 .btn-secondary {
-        @apply border-transparent;
-    }
-
-    // white secondary button for violet-600 background
-    .btn-secondary-home-action {
-        @apply bg-violet-600 text-white border-2 border-white whitespace-normal;
-        @include transition;
-
-        &.disabled {
-            opacity: 0.3rem;
-        }
-
-        &:hover {
-            @apply bg-violet-500;
-        }
-
-        &:focus {
-            @apply bg-violet-400;
-        }
-    }
-
-    @screen md {
         h1 {
-            @apply text-7xl;
-
-            &.small-title {
-                @apply text-5xl;
-            }
-        }
-        h2 {
             @apply text-5xl;
         }
-        h3 {
+        h2 {
             @apply text-4xl;
         }
-        h4 {
+        h3 {
             @apply text-3xl;
         }
-        h5 {
+        h4 {
             @apply text-2xl;
         }
+        h5 {
+            @apply text-xl;
+        }
         h6 {
-            @apply text-lg;
+            @apply text-base;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            // Tailwind v2 makes some changes to line-heights, one of which is that headings
+            // now get line-heights of 1. This is generally a good thing, but it makes the
+            // headings in our marketing pages lose some intentional vertical spacing. So we
+            // override it here to avoid having to sprinkle `leading-*` utilities everywhere.
+            line-height: 1.375 !important; /* leading-snug */
+        }
+
+        p {
+            @apply text-gray-700;
+        }
+
+        .large-container {
+            width: 100%;
+            max-width: 1680px;
+        }
+
+        .description a,
+        a.link {
+            @apply text-black font-semibold;
+
+            &:hover {
+                @apply underline;
+            }
+
+            &.btn-primary, &.btn-primary-template-variant {
+                @apply text-white;
+            }
+        }
+
+        // Buttons
+        a[class^="btn-"],
+        a[class*=" btn-"] {
+            @apply py-3 px-8 rounded-lg;
+
+            &:hover {
+                @apply no-underline;
+            }
+
+            &.disabled {
+                @apply cursor-default pointer-events-none;
+            }
+        }
+
+        .btn-primary,
+        .btn-secondary,
+        .btn-primary-template-variant,
+        .btn-secondary-template-variant {
+            @apply whitespace-normal;
+        }
+
+        .btn-primary {
+            @include gradient-button;
+        }
+
+        .btn-primary-template-variant {
+            @apply relative text-white bg-violet-600 border-violet-600 border-2 rounded-lg cursor-pointer z-auto;
+            background-color: #673eac;
+            &:hover {
+                background-color: #805ac3;
+            }
+        }
+
+        .btn-secondary-template-variant {
+            @apply relative rounded-lg cursor-pointer z-auto;
+            background-color: white;
+            border: 0.5px solid #5B5B5B;
+            color: #2B2B2C;
+            padding: calc(0.75rem + 1.5px) calc(2rem + 1.5px) !important;
+            &:hover {
+                background-color: #faf9fd;
+            }
+        }
+
+        .btn-secondary {
+            @apply bg-white text-violet-600 border-2 border-violet-600;
+            @include transition;
+
+            &.disabled {
+                opacity: 0.3;
+            }
+
+            &:hover {
+                @apply bg-violet-600 text-white;
+            }
+
+            &:focus {
+                @apply bg-violet-700 text-white;
+            }
+        }
+
+        // Make the borders transparent when the button is over a background of the same color.
+        .bg-violet-600 .btn-secondary {
+            @apply border-transparent;
+        }
+
+        // white secondary button for violet-600 background
+        .btn-secondary-home-action {
+            @apply bg-violet-600 text-white border-2 border-white whitespace-normal;
+            @include transition;
+
+            &.disabled {
+                opacity: 0.3;
+            }
+
+            &:hover {
+                @apply bg-violet-500;
+            }
+
+            &:focus {
+                @apply bg-violet-400;
+            }
+        }
+
+        @include screen-md {
+            h1 {
+                @apply text-7xl;
+
+                &.small-title {
+                    @apply text-5xl;
+                }
+            }
+            h2 {
+                @apply text-5xl;
+            }
+            h3 {
+                @apply text-4xl;
+            }
+            h4 {
+                @apply text-3xl;
+            }
+            h5 {
+                @apply text-2xl;
+            }
+            h6 {
+                @apply text-lg;
+            }
         }
     }
-}
 
-.home-page-build-section-background {
-    @apply w-full h-full overflow-hidden absolute top-0 left-0 border-gray-300;
-    .home-page-build-section-image {
-        @apply w-full h-full;
-        opacity: 0.5;
+    .home-page-build-section-background {
+        @apply w-full h-full overflow-hidden absolute top-0 left-0 border-gray-300;
+        .home-page-build-section-image {
+            @apply w-full h-full;
+            opacity: 0.5;
+        }
     }
-}
 
-.home-page-manage-section-background {
-    @apply w-full h-full overflow-hidden absolute top-0 left-0 border-gray-300;
+    .home-page-manage-section-background {
+        @apply w-full h-full overflow-hidden absolute top-0 left-0 border-gray-300;
 
-    .home-page-manage-section-image {
-        @apply w-full h-full;
-        opacity: 0.5;
+        .home-page-manage-section-image {
+            @apply w-full h-full;
+            opacity: 0.5;
+        }
     }
-}
 
-.home-page-cloud-section-background {
-    @apply w-full h-full overflow-hidden absolute top-0 left-0 border-gray-300;
+    .home-page-cloud-section-background {
+        @apply w-full h-full overflow-hidden absolute top-0 left-0 border-gray-300;
 
-    .home-page-cloud-section-image {
-        @apply w-full h-full;
-        opacity: 0.6;
+        .home-page-cloud-section-image {
+            @apply w-full h-full;
+            opacity: 0.6;
+        }
     }
-}
 
-.home-page-science-section-background {
-    @apply w-full h-full overflow-hidden absolute top-0 left-0 border-gray-300;
+    .home-page-science-section-background {
+        @apply w-full h-full overflow-hidden absolute top-0 left-0 border-gray-300;
 
-    .home-page-science-section-image {
-        @apply w-full h-full;
-        opacity: 0.2;
+        .home-page-science-section-image {
+            @apply w-full h-full;
+            opacity: 0.2;
+        }
     }
-}
 
-.section-partner {
-    .btn-primary:hover {
-        background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
+    .section-partner {
+        .btn-primary:hover {
+            background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
+        }
     }
-}
 
-// This hides Copilot on the home page, where we have a "Neo takeover" experience.
-// The section classes are generated based on the folder the page is located in, and our home page exists outside
-// a folder, hence "section-".
-.section- {
-    pulumi-copilot {
-        display: none;
+    // This hides Copilot on the home page, where we have a "Neo takeover" experience.
+    // The section classes are generated based on the folder the page is located in, and our home page exists outside
+    // a folder, hence "section-".
+    .section- {
+        pulumi-copilot {
+            display: none;
+        }
     }
 }

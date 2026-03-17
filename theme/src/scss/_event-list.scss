@@ -10,7 +10,7 @@
             }
         }
 
-        @screen xl {
+        @include screen-xl {
             @apply hidden;
         }
     }
@@ -20,7 +20,7 @@
 
         list-style: none !important;
 
-        @screen md {
+        @include screen-md {
             @apply text-base py-0;
         }
 
@@ -36,7 +36,7 @@
             > a {
                 @apply block py-2 px-4 font-normal text-lg text-center text-gray-700 no-underline;
 
-                @screen md {
+                @include screen-md {
                     @apply py-4;
                 }
             }
@@ -69,7 +69,7 @@
             .toggle {
                 @apply pl-2 pr-6 py-1 rounded bg-white border border-gray-300 transition-all;
     
-                @screen md {
+                @include screen-md {
                     @apply w-32;
                 }
     
@@ -82,7 +82,7 @@
             .options {
                 @apply bg-white py-2 pl-1 pr-4 rounded shadow mt-1 border border-gray-300 leading-loose z-50;
     
-                @screen md {
+                @include screen-md {
                     @apply pr-8;
                 }
             }

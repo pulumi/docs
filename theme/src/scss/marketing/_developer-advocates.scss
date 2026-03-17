@@ -115,7 +115,7 @@
     img {
         width: 100px;
 
-        @screen sm {
+        @include screen-sm {
             width: 150px;
         }
     }
@@ -133,7 +133,7 @@
         .hs-lastname {
             @apply mt-4;
 
-            @screen sm {
+            @include screen-sm {
                 @apply mt-0;
             }
         }

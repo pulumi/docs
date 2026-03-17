@@ -7,7 +7,7 @@
 module.exports = {
     plugins: [
         // TailwindCSS
-        require("tailwindcss")("./tailwind.config.js"),
+        require("@tailwindcss/postcss"),
 
         // Apply vendor prefixes for CSS features that aren't
         // fully supported yet.

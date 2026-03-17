@@ -1,7 +1,7 @@
 .top-nav-bar {
     @apply text-sm;
 
-    @screen lg {
+    @include screen-lg {
         @apply pt-6 pb-3 px-4;
     }
 
@@ -12,7 +12,7 @@
     .top-nav-container {
         @apply flex flex-col mx-auto;
 
-        @screen lg {
+        @include screen-lg {
             @apply flex-row;
         }
 
@@ -23,7 +23,7 @@
         .top-nav-banner-container {
             @apply w-full text-right;
 
-            @screen lg {
+            @include screen-lg {
                 @apply flex-grow justify-start mt-0 text-left mr-4;
             }
 
@@ -32,7 +32,7 @@
             .top-nav-banner {
                 @apply px-3 py-2 text-left;
 
-                @screen lg {
+                @include screen-lg {
                     @apply rounded inline-block;
                 }
 
@@ -58,7 +58,7 @@
         &.is-pinned {
             box-shadow: 0 1px 12px 0 rgba(0,0,0,.06),0 1px 4px 0 rgba(0,0,0,.04);
 
-            @screen md {
+            @include screen-md {
                 @apply shadow-none;
             }
         }
@@ -72,11 +72,11 @@
             @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
             top: 44px; // Height of the nav bar at screens below large.
 
-            @screen md {
+            @include screen-md {
                 @apply w-auto absolute rounded rounded-t-none pb-2 ml-0 pt-0;
             }
 
-            @screen lg {
+            @include screen-lg {
                 top: 53px; // Height of the nav bar at screens large+.
             }
 
@@ -96,7 +96,7 @@
         .get-started-header-button {
             @apply hidden;
 
-            @screen lg {
+            @include screen-lg {
                 @apply flex items-center justify-center;
                 margin-left: 30px;
                 width: 136px;
@@ -131,7 +131,7 @@
     @apply z-40 bg-white py-0 ;
     top: -1px;
 
-    @screen lg {
+    @include screen-lg {
         @apply py-0 mt-0;
     }
 
@@ -143,7 +143,7 @@
     .logo-container {
         @apply px-3;
 
-        @screen lg {
+        @include screen-lg {
             @apply px-0 flex items-center justify-start pl-0;
         }
     }
@@ -151,7 +151,7 @@
     .cta-container {
         @apply hidden z-10;
 
-        @screen lg {
+        @include screen-lg {
             @apply flex items-center justify-end;
         }
 
@@ -164,7 +164,7 @@
     .desktop-menu {
         @apply hidden;
 
-        @screen lg {
+        @include screen-lg {
             @apply flex items-center flex-grow justify-evenly mx-4;
 
             li {
@@ -183,12 +183,12 @@
                 .dropdown-title {
                     @apply pl-4 pr-8 text-base;
                     
-                    @screen lg {
+                    @include screen-lg {
                         @apply text-sm pl-2;
                     }
                 }
                 
-                @screen xl {
+                @include screen-xl {
                     .dropdown-title {
                         @apply text-base pl-4;
                     }
@@ -294,7 +294,7 @@
                     .product {
                         min-width: 70ch;
                         @apply -left-24;
-                        @screen xl {
+                        @include screen-xl {
                             @apply left-0;
                         }
                     }
@@ -331,7 +331,7 @@
             }
         }
         
-        @screen xl {
+        @include screen-xl {
             @apply mx-8;
         }
     }
@@ -355,7 +355,7 @@
         // the CTA button does not get cut off.
         @apply hidden w-full h-screen pb-16;
 
-        @screen lg {
+        @include screen-lg {
             @apply hidden;
         }
 
@@ -488,7 +488,7 @@
     .mobile-menu-toggle:checked + .mobile-menu-icon + .mobile-menu {
         @apply block;
 
-        @screen lg {
+        @include screen-lg {
             @apply hidden;
         }
     }
@@ -502,7 +502,7 @@
             }
 
         }
-        @screen lg {
+        @include screen-lg {
             @apply hidden;
         }
     }
@@ -510,7 +510,7 @@
     .mobile-menu-icon {
         @apply absolute right-4;
 
-        @screen lg {
+        @include screen-lg {
             @apply hidden;
         }
 
@@ -531,15 +531,15 @@
     }
 
     .header-hero-title {
-        @screen md {
+        @include screen-md {
             @apply items-center;
         }
 
         .title-icon,
         .title-text-content {
-            @apply text-lg text-gray-800 bg-white bg-opacity-70;
+            @apply text-lg text-gray-800 bg-white/70;
 
-            @screen md {
+            @include screen-md {
                 @apply text-2xl;
             }
         }
