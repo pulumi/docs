@@ -112,11 +112,11 @@ From there, select the transfer destination and tick any stacks you'd like to tr
 
 To learn more about this process, see [Transferring Stacks](/docs/deployments/projects-and-stacks#transferring-stacks).
 
-### How can I delete a Pulumi Organization?
+### How can I delete a Pulumi organization?
 
 Organization deletion is a permanent action and can only be performed by an organization admin.
 
-In [Pulumi Cloud](https://app.pulumi.com), open your organization, go to **Settings**, and use the **Delete organization** option.
+In [Pulumi Cloud](https://app.pulumi.com), open your organization, navigate to **Settings**, and use the **Delete organization** option.
 
 If you don't see this option, confirm you're an organization admin.
 
@@ -124,9 +124,10 @@ If you don't see this option, confirm you're an organization admin.
 
 To join your company's organization, you must sign in with the identity provider that organization is backed by (for example, GitHub, GitLab, SAML/SSO, or email).
 
-If you already have a Pulumi account, go to your profile in [Pulumi Cloud](https://app.pulumi.com) and connect that identity provider, then accept the organization invite.
+If you already have a Pulumi account, navigate to your profile in [Pulumi Cloud](https://app.pulumi.com) and connect that identity provider, then accept the organization invite.
 
 If this fails, delete your account, then accept the organization invite.
+Note that deleting your account will remove access to any stacks and environments still under the account. Transfer any stacks you want to keep before proceeding.
 
 ## Account
 
