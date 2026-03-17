@@ -186,23 +186,7 @@ Gatekeeper constraint templates can be reused directly via the `kubernetes-admis
 
 ## Get started
 
-1. Create a new OPA policy pack from a template:
-
-    ```bash
-    pulumi policy new kubernetes-opa
-    ```
-
-    Templates are also available for `aws-opa`, `azure-opa`, and `gcp-opa`.
-
-1. Write your Rego rules (or drop in existing Gatekeeper constraint templates with `inputFormat: kubernetes-admission`).
-
-1. Publish the policy pack to Pulumi Cloud and add it to a [policy group](/docs/insights/policy/policy-groups/) to enforce it across your stacks automatically:
-
-    ```bash
-    pulumi policy publish
-    ```
-
-For more details, see the [policy authoring guide](/docs/insights/policy/policy-packs/authoring/) and the [Policy as Code overview](/docs/insights/policy/).
+Templates are available for `kubernetes-opa`, `aws-opa`, `azure-opa`, and `gcp-opa` via `pulumi policy new`. For more details, see the [policy authoring guide](/docs/insights/policy/policy-packs/authoring/) and the [Policy as Code overview](/docs/insights/policy/).
 
 {{< blog/cta-button "Get started with OPA policies" "/docs/insights/policy/" >}}
 
