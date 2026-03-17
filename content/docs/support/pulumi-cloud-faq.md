@@ -116,26 +116,25 @@ To learn more about this process, see [Transferring Stacks](/docs/deployments/pr
 
 Organization deletion is a permanent action and can only be performed by an organization admin.
 
-In the Pulumi Cloud, open your organization in <https://app.pulumi.com>, go to **Settings**, and use the **Delete organization** option.
+In [Pulumi Cloud](https://app.pulumi.com), open your organization, go to **Settings**, and use the **Delete organization** option.
 
-If you don't see this option, confirm you're an org admin.
+If you don't see this option, confirm you're an organization admin.
 
-### I created my Pulumi account before receiving an invite from my company's Pulumi org? How do I link my account to their org?
+### How do I link an existing Pulumi account to my company's organization?
 
 To join your company's organization, you must sign in with the identity provider that organization is backed by (for example, GitHub, GitLab, SAML/SSO, or email).
 
-If you already have a Pulumi account, go to your profile in <https://app.pulumi.com> and connect that identity provider, then accept the organization invite.
+If you already have a Pulumi account, go to your profile in [Pulumi Cloud](https://app.pulumi.com) and connect that identity provider, then accept the organization invite.
 
 If this fails, delete your account, then accept the organization invite.
 
 ## Account
 
-### How can I delete my Pulumi Account?
+### How can I delete my Pulumi account?
 
-You can delete your personal account from your account settings in <https://app.pulumi.com>.
+You can delete your personal account from your account settings in [Pulumi Cloud](https://app.pulumi.com).
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
-
 
 ## Pricing
 
@@ -207,10 +206,9 @@ Pulumi Team, Enterprise and Business Critical editions, refer to the [pricing pa
 
 ### How can I update my payment information?
 
-Self-serve organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in <https://app.pulumi.com> under **Payment methods**.
+Self-serve organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com) under **Payment methods**.
 
 If you need to delegate billing-only access, see [Billing Managers](/docs/administration/organizations-teams/billing-managers/).
-
 
 ## GitLab Support
 
