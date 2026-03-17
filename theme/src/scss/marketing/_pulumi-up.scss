@@ -252,7 +252,7 @@ body.section-pulumi-up {
 //                 font-family: "StarWars", "sans-serif";
 //                 letter-spacing: 6px;
 
-//                 @screen lg {
+//                 @include screen-lg {
 //                     animation: title-fade 46s ease-out;
 //                 }
 //             }
@@ -262,7 +262,7 @@ body.section-pulumi-up {
 //                 color: white;
 //                 letter-spacing: 6px;
 
-//                 @screen lg {
+//                 @include screen-lg {
 //                     animation: move-byline 48s linear;
 //                 }
 //             }
@@ -309,7 +309,7 @@ body.section-pulumi-up {
 //         transform-origin: 50% 100%;
 //         animation: crawl 60s linear;
 
-//         @screen lg {
+//         @include screen-lg {
 //             @apply block;
 //         }
 //     }
@@ -429,7 +429,7 @@ $orange900: theme("colors.orange.900");
 .blue-neon-sign-xl {
     @include neon-sign($blue400, $blue700, $blue900, 3rem, "blue-neon-sign-xl-pulse");
 
-    @screen lg {
+    @include screen-lg {
         @include neon-sign($blue400, $blue700, $blue900, 9rem, "blue-neon-sign-xl-pulse");
     }
 }
@@ -437,7 +437,7 @@ $orange900: theme("colors.orange.900");
 .green-neon-sign-xl {
     @include neon-sign($green400, $green700, $green900, 3rem, "green-neon-sign-xl-pulse", true, true, 4s);
 
-    @screen lg {
+    @include screen-lg {
         @include neon-sign($green400, $green700, $green900, 9rem, "green-neon-sign-xl-pulse", true, true, 4s);
     }
 }
@@ -481,7 +481,7 @@ $orange900: theme("colors.orange.900");
 
     .pulumiup-video {
         @apply w-full;
-        @screen lg {
+        @include screen-lg {
             margin-top: -10%;
         }
     }
@@ -489,7 +489,7 @@ $orange900: theme("colors.orange.900");
     .pulumiup-title {
         @apply w-full absolute top-0;
 
-        @screen lg {
+        @include screen-lg {
             @apply w-auto;
             left: 25%;
         }

@@ -10,14 +10,14 @@
             @apply mr-4;
         }
 
-        @screen md {
+        @include screen-md {
             width: calc(33% - 1rem);
             &:not(:nth-child(3n)) {
                 @apply mr-4;
             }
         }
 
-        @screen xl {
+        @include screen-xl {
             width: calc(25% - 1rem);
             &:not(:nth-child(4n)) {
                 @apply mr-4;

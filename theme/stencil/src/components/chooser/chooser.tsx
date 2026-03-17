@@ -3,7 +3,7 @@ import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd, setPythonToolchain } from "../../store/actions/preferences";
 
-export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml";
+export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml" | "opa";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
 export type OSKey = "macos" | "linux" | "windows";
 export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes" | "digitalocean" | "oci" | "docker";
@@ -477,6 +477,12 @@ export class Chooser {
             key: "yaml",
             name: "YAML",
             extension: "yaml",
+            preview: false,
+        },
+        {
+            key: "opa",
+            name: "OPA",
+            extension: "rego",
             preview: false,
         },
     ];

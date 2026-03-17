@@ -9,7 +9,7 @@
         }
     }
 
-    @screen lg {
+    @include screen-lg {
         @each $filter-type in "self-service" "saas" "workflow" "tooling" {
             ##{$filter-type}:target {
                 ~ .automation-scenarios-carousel-headers li[data-product-carousel-type="#{$filter-type}"] {
@@ -41,7 +41,7 @@
     .automation-scenarios-carousel-headers {
         @apply hidden;
 
-        @screen lg {
+        @include screen-lg {
             @apply flex items-center justify-center list-none w-full mb-4 px-2;
         }
 
@@ -53,7 +53,7 @@
                 @apply border-gray-500;
             }
 
-            @screen md {
+            @include screen-md {
                 @apply text-base;
             }
 
@@ -64,11 +64,11 @@
                     @apply hidden;
                 }
 
-                @screen md {
+                @include screen-md {
                     @apply pt-4 pb-3 px-6;
                 }
 
-                @screen xl {
+                @include screen-xl {
                     span {
                         @apply inline;
                     }

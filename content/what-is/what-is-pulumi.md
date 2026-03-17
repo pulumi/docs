@@ -66,9 +66,9 @@ The registry extends far beyond traditional cloud providers to include specializ
 
 The registry combines official packages maintained by Pulumi with a growing ecosystem of community contributions. Popular packages include Kubernetes operators, Docker configurations, and specialized industry solutions. Each package is automatically generated for all supported programming languages, meaning a single package definition provides TypeScript, Python, Go, C#, and Java bindings.
 
-### Crosswalk collections
+### AWSx components
 
-Pulumi Crosswalk collections represent opinionated, well-architected patterns for common cloud scenarios. These collections encapsulate cloud provider best practices into higher-level abstractions, enabling teams to deploy production-ready architectures with minimal code. For example, Crosswalk for AWS provides secure, scalable patterns for containers, serverless applications, and data processing pipelines.
+Pulumi AWSx components represent opinionated, well-architected patterns for common cloud scenarios. These components encapsulate cloud provider best practices into higher-level abstractions, enabling teams to deploy production-ready architectures with minimal code. For example, AWSx provides secure, scalable patterns for containers, serverless applications, and data processing pipelines.
 
 ## The power of real programming languages
 

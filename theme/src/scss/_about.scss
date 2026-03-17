@@ -171,7 +171,7 @@
 .value-card {
     height: 600px;   
 
-    @screen xl {
+    @include screen-xl {
         height: 465px;
     }
     border: double 2px transparent;
@@ -186,19 +186,19 @@
     width: 90%;
     height: auto;
 
-    @screen md {
+    @include screen-md {
         height: 505px;
     }
 
     h4 {
         @apply text-3xl;
 
-        @screen md {
+        @include screen-md {
             @apply text-2xl;
         }
     }
 
-    @screen md {
+    @include screen-md {
         width: 365px;
 
         p {

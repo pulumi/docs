@@ -10,7 +10,7 @@ menu:
   esc:
     parent: esc-syntax-builtin-functions
     identifier: esc-syntax-fn-toJSON
-    weight: 9
+    weight: 11
 ---
 
 The `fn::toJSON` built-in function encodes a value as its JSON representation. This can be used to encode values for use in positions that only accept strings. If any input to `fn::toJSON` is a secret, the encoded values is also a secret.

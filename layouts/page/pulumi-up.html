@@ -38,7 +38,7 @@
                         <div class="flex flex-wrap">
                             {{ range $id := .Params.speakers }}
                                 {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
-                                {{ $authorData := index $.Site.Data.team.team $id }}
+                                {{ $authorData := index site.Data.team.team $id }}
 
 
                                 <div class="flex flex-col md:flex-row w-full md:w-1/2 items-center text-center md:text-left md:items-start mt-4 pr-4">

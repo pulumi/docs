@@ -34,7 +34,7 @@ You can enable pre-built packs directly from Pulumi Cloud with no code required.
 
 ### Custom policy packs
 
-Write your own policies in TypeScript or Python to enforce organization-specific requirements. Custom policies can validate individual resources or entire stack configurations, with support for:
+Write your own policies in TypeScript, Python, or [OPA (Rego)](/docs/insights/policy/policy-packs/authoring/#opa) to enforce organization-specific requirements. Custom policies can validate individual resources or entire stack configurations, with support for:
 
 - Configurable enforcement levels (advisory, mandatory, disabled)
 - Custom configuration schemas for flexible policy behavior
@@ -47,5 +47,6 @@ Write your own policies in TypeScript or Python to enforce organization-specific
 
 - [Browse pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/)
 - [Write custom policy packs](/docs/insights/policy/policy-packs/authoring/)
+- [PulumiPolicy.yaml project file reference](/docs/insights/policy/policy-packs/project-file/)
 - [Configure policy groups](/docs/insights/policy/policy-groups/)
 - [View policy findings](/docs/insights/policy/policy-findings/)

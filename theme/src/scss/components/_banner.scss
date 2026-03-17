@@ -11,7 +11,7 @@ pulumi-banner {
         top: 1.5rem;
         right: 0.4rem;
 
-        @screen md {
+        @include screen-md {
             top: 50%;
             transform: translateY(-50%);
         }
@@ -30,7 +30,7 @@ pulumi-banner {
     .content {
         @apply flex flex-col items-center justify-center;
 
-        @screen md {
+        @include screen-md {
             @apply flex-row;
         }
     }
@@ -38,7 +38,7 @@ pulumi-banner {
     .summary {
         @apply mx-4 font-bold;
 
-        @screen md {
+        @include screen-md {
             @apply mr-1;
         }
     }
@@ -56,7 +56,7 @@ pulumi-banner {
             @apply font-body;
         }
 
-        @screen md {
+        @include screen-md {
             @apply my-0 w-auto;
         }
 

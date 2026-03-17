@@ -8,7 +8,7 @@
             <div class="md:w/1-2 md:px-8">
                 <h3 class="text-center md:text-left font-medium text-6xl">Press Releases</h3>
                 <ul class="list-none mt-8 p-0">
-                    {{ range $.Site.Data.newsroom.releases }}
+                    {{ range site.Data.newsroom.releases }}
                         <li class="pb-4">
                             <div class="text-sm text-gray-700">{{ .date }}</div>
                             <h5 class="mt-2 mb-0">{{ .title }}</h5>
@@ -20,7 +20,7 @@
             <div class="md:w/1-2 md:px-8">
                 <h3 class="text-center md:text-left font-medium text-6xl">Recent News</h3>
                 <ul class="list-none mt-8 p-0">
-                    {{ range $.Site.Data.newsroom.coverage }}
+                    {{ range site.Data.newsroom.coverage }}
                         <li class="pb-4">
                             <div class="text-sm text-gray-700">{{ .date }}</div>
                             <img class="mt-4 h-5" src="{{ .img }}" />

@@ -11,7 +11,7 @@ pulumi-install {
         p {
             @apply text-xl m-0 font-mono text-left;
 
-            @screen md {
+            @include screen-md {
                 @apply text-2xl;
             }
 

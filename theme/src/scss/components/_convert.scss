@@ -2,7 +2,7 @@ pulumi-convert {
     #editors {
         @apply flex flex-col;
 
-        @screen xl {
+        @include screen-xl {
             @apply flex-row;
 
             .CodeMirror {
@@ -33,7 +33,7 @@ pulumi-convert {
                 @apply cursor-default bg-blue-800 border-blue-800 text-gray-400;
             }
 
-           @screen xl {
+           @include screen-xl {
                 @apply w-auto justify-start;
             }
         }
@@ -41,7 +41,7 @@ pulumi-convert {
         .editor {
             @apply mb-8;
 
-            @screen xl {
+            @include screen-xl {
                 @apply p-2 mb-0 w-1/2;
             }
 
@@ -51,14 +51,14 @@ pulumi-convert {
                 h3 {
                     @apply m-0 text-center text-3xl;
 
-                    @screen xl {
+                    @include screen-xl {
                         @apply text-left;
                     }
 
                     .editor-step {
                         @apply text-lg mx-auto w-12 h-12 my-4 border-2 border-blue-500 rounded-full bg-blue-500 text-white font-body flex items-center justify-center;
 
-                        @screen xl {
+                        @include screen-xl {
                             @apply absolute -mx-12 w-8 h-8 mt-1;
                         }
                     }
@@ -116,7 +116,7 @@ pulumi-convert {
                     .indicator {
                         @apply ml-1 mr-2 rounded-full h-2 w-2 bg-transparent;
 
-                        @screen xl {
+                        @include screen-xl {
                             @apply block;
                         }
                     }

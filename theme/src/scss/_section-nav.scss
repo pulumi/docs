@@ -5,7 +5,7 @@ nav {
         ul {
             @apply flex list-none justify-evenly items-center flex-wrap text-base py-2 p-0;
 
-            @screen md {
+            @include screen-md {
                 @apply text-base py-0;
             }
 
@@ -13,7 +13,7 @@ nav {
                 > a {
                     @apply block py-2 px-4 text-black font-normal text-base text-center;
 
-                    @screen md {
+                    @include screen-md {
                         @apply py-4;
                     }
 

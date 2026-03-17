@@ -2,7 +2,7 @@
 title: API & SDK Reference
 title_tag: "API & SDK Reference | Pulumi Policies"
 h1: Policy API & SDK Reference
-meta_desc: Reference documentation for the Pulumi Policy SDK (TypeScript, Python) and the Pulumi Cloud REST API endpoints for managing policy packs, groups, and results.
+meta_desc: Reference documentation for the Pulumi Policy SDK (TypeScript, Python, OPA) and the Pulumi Cloud REST API for managing policy packs, groups, and results.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
@@ -11,7 +11,7 @@ menu:
     weight: 65
 ---
 
-Pulumi provides SDKs for authoring policy packs in TypeScript/JavaScript and Python, and REST API endpoints for managing policies programmatically through Pulumi Cloud.
+Pulumi provides SDKs for authoring policy packs in TypeScript/JavaScript and Python, plus support for OPA (Rego), and REST API endpoints for managing policies programmatically through Pulumi Cloud.
 
 ## Policy SDK
 
@@ -21,6 +21,7 @@ The Policy SDK lets you define and validate policies in code. Use it to [write c
 | --- | --- | --- |
 | TypeScript/JavaScript | [`@pulumi/policy`](/docs/reference/pkg/nodejs/pulumi/policy/) | Stable |
 | Python | [`pulumi_policy`](/docs/reference/pkg/python/pulumi_policy/) | Stable |
+| OPA (Rego) | [`pulumi-policy-opa`](https://github.com/pulumi/pulumi-policy-opa) | Stable |
 
 ### Getting started with the SDK
 
