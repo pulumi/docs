@@ -4,6 +4,7 @@ date: 2026-02-11
 draft: false
 meta_desc: "How Pulumi built an AI-powered analytics assistant that lets any employee query data using natural language."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - pablo-seibelt
     - lucas-crespo

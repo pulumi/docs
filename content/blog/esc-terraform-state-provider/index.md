@@ -4,6 +4,7 @@ date: 2026-02-13T00:00:00Z
 draft: false
 meta_desc: "The terraform-state provider for Pulumi ESC lets you read outputs from Terraform state files directly into your ESC environments."
 meta_image: meta.png
+feature_image: feature.png
 authors: ["claire-gaestel"]
 tags: ["esc", "terraform"]
 ---

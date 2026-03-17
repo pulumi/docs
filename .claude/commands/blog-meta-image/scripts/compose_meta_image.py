@@ -335,7 +335,7 @@ def compose(config: dict, output_path: str, assets_dir: Path) -> str:
         if template_entry and "placeholders" in template_entry:
             canvas = place_logos(
                 canvas, logos, template_entry["placeholders"], assets_dir,
-                logo_tint=config.get("logo_tint", "#B59CDF"),
+                logo_tint=config.get("logo_tint", "#A68ECF"),
                 logo_tint_mode=config.get("logo_tint_mode", "overlay"),
             )
 
