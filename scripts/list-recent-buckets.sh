@@ -150,7 +150,7 @@ maybe_echo
 maybe_echo "---"
 maybe_echo
 maybe_echo "✅ To run browser tests on one of these buckets, run:"
-maybe_echo "   nvm use && make ensure && ./scripts/run-browser-tests.sh \"<bucket-url>\""
+maybe_echo "   make ensure && ./scripts/run-browser-tests.sh \"<bucket-url>\""
 maybe_echo
 maybe_echo "📌 To pin the website to one of these buckets, run:"
 maybe_echo "   pulumi -C infrastructure config set originBucketNameOverride \"<bucket-name>\""
