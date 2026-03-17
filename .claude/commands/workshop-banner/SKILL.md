@@ -99,7 +99,7 @@ Always use the Pulumi logo at `static/logos/brand/logo-on-black.png`. Convert to
 
 ---
 
-### Question 4: Partner logos (optional)
+### Question 3: Partner logos (optional)
 
 Only ask this if `main.tags.clouds` or `main.tags.topics` suggest a partner context (e.g., clouds contains `"AWS"`, `"Azure"`, `"Google Cloud"`).
 
@@ -119,6 +119,8 @@ If the user selects "Add logos", ask for:
 3. Whether logos go before or after the text
 
 Suggest relevant logos based on tags — e.g., if `clouds: ["AWS"]`, mention the user could provide an AWS logo.
+
+**Logo variant rule**: Partner logos render on a light (`#F9F9F9`) background. Always use the dark/color version of a logo — avoid files with `white`, `_white`, or `-white` in the name (e.g., use `aws.svg` not `logo-aws_white.png`). When searching `static/logos/tech/`, check the filename and prefer the variant without a white/light suffix.
 
 ---
 
@@ -159,18 +161,19 @@ Read the output PNG to show the result to the user.
 ## [Step 4/4] Confirm & update frontmatter
 
 1. Verify the PNG was created successfully at the expected path.
-2. Check the event's frontmatter for `meta_image:` — if missing or set to something else, update it:
+2. Check the event's frontmatter for `meta_image:` and `meta_image_square:` — add or update both:
    ```yaml
    meta_image: /events/<event-slug>/meta.png
+   meta_image_square: /events/<event-slug>/meta-square.png
    ```
-   This is the Hugo site-root-relative path (no `content/` prefix).
+   These are Hugo site-root-relative paths (no `content/` prefix).
 3. Report to the user:
    - Which event was used (path and title)
    - Which presenter was featured
    - What config was applied (event type, CTA, logos)
-   - Where `meta.png` was saved
-   - That `meta_image` was updated in frontmatter
-   - Remind them to preview the image to make sure it looks good
+   - Where `meta.png` and `meta-square.png` were saved
+   - That `meta_image` and `meta_image_square` were updated in frontmatter
+   - Remind them to preview the images to make sure they look good
 4. Ask if any adjustments are needed (text, layout, speaker choice, etc.).
 
 ## Layout reference

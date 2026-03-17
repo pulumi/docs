@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Designing Reusable Infrastructure as Code
 meta_desc: "Master Pulumi Components: Learn to create reusable infrastructure code across languages, enabling DRY principles and powerful cross-team infrastructure sharing."
-meta_image:
+meta_image: /events/designing-reusable-infrastructure-as-code/meta.png
+meta_image_square: /events/designing-reusable-infrastructure-as-code/meta-square.png
 
 # A featured webinar will display first in the list.
 featured: false
