@@ -7,18 +7,18 @@ layout: pricing-oss
 hero:
     title: Pulumi Team Edition for Open Source
     description: |
-        As a company, we are deeply committed to being a good steward of the Pulumi
+        We are deeply committed to being a good steward of the Pulumi
         open source project. As a way to give back to the community, the Pulumi Team
         Edition for Open Source gives maintainers of open source projects access to tools that
-        help them to innovate and scale faster.
+        help them innovate and scale faster.
 
     cta_text: Apply
 
 features:
     title: Features
     description: |
-        The Pulumi Team Edition for Open Source provides the [Team Edition](/pricing) of the Pulumi Service at no cost
-        to qualifying projects that want a Pulumi managed service with features such as dashboards,
+        The Pulumi Team Edition for Open Source provides the [Team Edition](/pricing) of Pulumi Cloud at no cost
+        to qualifying projects that want a managed service with features such as dashboards,
         CI/CD integrations, role based access controls, and Webhooks. Projects get
         10 team members and unlimited project stacks.
 
@@ -38,12 +38,12 @@ requirements:
 contact:
     title: Application Process
     description: |
-        Submit an issue to [pulumi/team-edition-for-open-source](https://github.com/pulumi/team-edition-for-open-source#how-to-apply) with our "OSS Project" template. You can expect an initial response within
+        To apply, [contact us](/contact/) and let us know about your project. You can expect an initial response within
         2 - 5 business days, at which time we may ask you to provide some additional information
-        about your company or project.
+        about your organization or project.
 
         If your application is accepted, we will work with you to enroll your account into the program. Your application must be renewed annually to make sure that your project still meets
-        the Team Edition for Open Source requirements, which may change from year to year. If you no longer qualify
+        the program requirements, which may change from year to year. If you no longer qualify
         for renewal, we will work with you to make any needed transition as smooth as possible.
 
     form:
