@@ -115,7 +115,7 @@ options:
 
 If the user selects "Add logos", ask for:
 1. Paths to logo files (absolute paths)
-2. Optional `partner_text` (e.g., `"powered by"`)
+2. Optional `partner_text` (e.g., `"Powered by"`)
 3. Whether logos go before or after the text
 
 Suggest relevant logos based on tags — e.g., if `clouds: ["AWS"]`, mention the user could provide an AWS logo.
@@ -178,21 +178,23 @@ Read the output PNG to show the result to the user.
 
 ## Layout reference
 
-- **Left white card** (~52% width): badge (top-left), title (vertically centered), CTA button (bottom-left)
-- **Right purple panel** (~48% width): company logo (top-right), circular speaker photo with glow ring (center), speaker name/title (below photo), partner logos (bottom-right)
-- **Accent shapes**: coral/pink diagonal stripes at top-left and bottom corners
+- **Left panel** (~65% width, `#F9F9F9` background): event type badge (top-left), title (vertically centered), partner logos + label (above CTA), CTA button (bottom-left)
+- **Right dark panel** (~35% width, `#20054E`): company logo (top-center), circular speaker photo with decorative rings (center), speaker name / title / company (below photo)
+- **Background decoration**: subtle gray curved lines (`#DFDFDF`) in the top-right and bottom-right corners of the left panel
 
 ## Notes
 
-- The HTML renderer uses Google Fonts (Outfit, DM Sans) and CSS gradients/shadows for a polished look.
-- Title auto-sizes based on text length.
-- Speaker photo is displayed in a circle with a glowing ring effect; a placeholder icon shows when no photo is provided.
+- The HTML renderer uses Google Fonts (Inter) for all text.
+- Title auto-sizes based on character count — two separate scales for landscape and square.
+- Speaker photo is displayed in a circle with a decorative ring; a placeholder silhouette shows when no photo is provided.
 - Images are embedded as base64 data URIs — all paths must be absolute filesystem paths.
+- Partner logos render on the light `#F9F9F9` background; always use dark/color variants.
 - Requires `playwright` Python package (`pip install playwright && playwright install chromium`).
+- Two PNGs are produced per run: `meta.png` (1200×628 landscape) and `meta-square.png` (628×628 square).
 
 ## Error handling
 
 - If `render_banner_html.py` fails, read the error output and try to fix the config (common issues: invalid photo path, missing file).
 - If a presenter has no `photo` field, the renderer will show a placeholder silhouette — this is fine.
 - If the event has no presenters at all, skip the speaker fields entirely (the banner will show a placeholder).
-- If the frontmatter title is very long (>80 characters), mention to the user that they can provide a shorter override for better visual results.
+- If the frontmatter title is very long (>65 characters), mention to the user that they can provide a shorter override for better visual results — at that length the font drops to its smallest size.

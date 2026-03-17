@@ -290,6 +290,7 @@ def image_to_data_uri(path):
 def build_html(config):
     """Build the HTML string from config."""
     badge_text = html.escape(config.get("event_type", "workshop").capitalize())
+    title_len = len(config.get("title", ""))
     title = html.escape(config.get("title", ""))
     cta_text = html.escape(config.get("cta_text", "Register"))
     speaker_name = html.escape(config.get("speaker_name", ""))
@@ -297,7 +298,6 @@ def build_html(config):
     speaker_company = html.escape(config.get("speaker_company", ""))
 
     # Title size: scale down for longer titles (calibrated for 1200x628 at max-width 692px)
-    title_len = len(title)
     if title_len <= 15:
         title_size = 80
     elif title_len <= 28:
@@ -345,7 +345,7 @@ def build_html(config):
     partner_logos += list(config.get("partner_logos_after_text", []))
     partner_text = config.get("partner_text", "")
     if partner_text:
-        partner_text = html.escape(partner_text.strip().capitalize())
+        partner_text = html.escape(partner_text.strip())
 
     partner_html = ""
     if partner_logos or partner_text:
@@ -362,7 +362,7 @@ def build_html(config):
             if uri:
                 logo_imgs.append(f'<img src="{uri}" alt="Partner">')
         logos_row = (
-            f'<div class="partner-logos-row">{"" .join(logo_imgs)}</div>'
+            f'<div class="partner-logos-row">{"".join(logo_imgs)}</div>'
             if logo_imgs
             else ""
         )
@@ -550,6 +550,7 @@ HTML_TEMPLATE_SQUARE = """<!DOCTYPE html>
 def build_html_square(config):
     """Build the HTML string for the 628x628 square variant."""
     badge_text = html.escape(config.get("event_type", "workshop").capitalize())
+    title_len = len(config.get("title", ""))
     title = html.escape(config.get("title", ""))
     cta_text = html.escape(config.get("cta_text", "Register"))
 
@@ -581,7 +582,7 @@ def build_html_square(config):
     partner_logos += list(config.get("partner_logos_after_text", []))
     partner_text = config.get("partner_text", "")
     if partner_text:
-        partner_text = html.escape(partner_text.strip().capitalize())
+        partner_text = html.escape(partner_text.strip())
 
     partner_html = ""
     if partner_logos or partner_text:
@@ -600,7 +601,7 @@ def build_html_square(config):
             if uri:
                 logo_imgs.append(f'<img src="{uri}" alt="Partner">')
         logos_row = (
-            f'<div class="sq-partner-logos-row">{chr(0).join(logo_imgs).replace(chr(0), "")}</div>'
+            f'<div class="sq-partner-logos-row">{"" .join(logo_imgs)}</div>'
             if logo_imgs
             else ""
         )
