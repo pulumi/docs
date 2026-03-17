@@ -1,7 +1,7 @@
 ---
 title: "From Kubernetes Gatekeeper to Full-Stack Governance with OPA"
 allow_long_title: true
-date: 2026-03-13
+date: 2026-03-19
 draft: false
 meta_desc: "OPA/Rego is now a stable, first-class policy language for Pulumi with Kubernetes Gatekeeper compatibility and full feature parity."
 meta_image: meta.png
@@ -81,6 +81,77 @@ These rules are identical to what you'd write for Gatekeeper. Both rule head for
 
 This shifts policy enforcement left. Instead of waiting for the Kubernetes API server to reject a resource at admission time, you catch the violation during `pulumi preview`, before anything is deployed.
 
+## Walkthrough: Reusing policies from the gatekeeper-library
+
+The [OPA Gatekeeper Library](https://github.com/open-policy-agent/gatekeeper-library) is a community-maintained collection of constraint templates covering common Kubernetes guardrails like pod security, image provenance, and resource limits. You can use these policies directly with Pulumi. Here's an end-to-end example using the [`allowedrepos`](https://github.com/open-policy-agent/gatekeeper-library/tree/master/library/general/allowedrepos) policy to restrict which container image registries your deployments can use.
+
+1. Create a new Kubernetes OPA policy pack:
+
+    ```bash
+    pulumi policy new kubernetes-opa
+    ```
+
+1. Copy the Rego source from [gatekeeper-library](https://github.com/open-policy-agent/gatekeeper-library/blob/master/library/general/allowedrepos/template.yaml) into your policy pack as `allowedrepos.rego`. No modifications are needed:
+
+    ```rego
+    package k8sallowedrepos
+
+    violation[{"msg": msg}] {
+        container := input.review.object.spec.containers[_]
+        not strings.any_prefix_match(container.image, input.parameters.repos)
+        msg := sprintf("container <%v> has an invalid image repo <%v>, allowed repos are %v",
+            [container.name, container.image, input.parameters.repos])
+    }
+
+    violation[{"msg": msg}] {
+        container := input.review.object.spec.initContainers[_]
+        not strings.any_prefix_match(container.image, input.parameters.repos)
+        msg := sprintf("initContainer <%v> has an invalid image repo <%v>, allowed repos are %v",
+            [container.name, container.image, input.parameters.repos])
+    }
+
+    violation[{"msg": msg}] {
+        container := input.review.object.spec.ephemeralContainers[_]
+        not strings.any_prefix_match(container.image, input.parameters.repos)
+        msg := sprintf("ephemeralContainer <%v> has an invalid image repo <%v>, allowed repos are %v",
+            [container.name, container.image, input.parameters.repos])
+    }
+    ```
+
+1. Verify that your `PulumiPolicy.yaml` has Gatekeeper compatibility enabled:
+
+    ```yaml
+    description: Kubernetes Gatekeeper Policy Pack
+    runtime: opa
+    inputFormat: kubernetes-admission
+    ```
+
+1. Configure the allowed registries. Create a `policy-config.json` file to pass the `repos` parameter:
+
+    ```json
+    {
+        "k8sallowedrepos": {
+            "repos": ["gcr.io/my-company/", "docker.io/library/"]
+        }
+    }
+    ```
+
+1. Test the policy locally against a stack:
+
+    ```bash
+    pulumi preview --policy-pack . --policy-pack-config policy-config.json
+    ```
+
+    Any Kubernetes deployment using an image outside the allowed registries will produce a violation at preview time, before it reaches the cluster.
+
+1. Publish the pack and add it to a [policy group](/docs/insights/policy/policy-groups/) to enforce it across your organization:
+
+    ```bash
+    pulumi policy publish
+    ```
+
+The same approach works for any policy in the gatekeeper-library: [`containerlimits`](https://github.com/open-policy-agent/gatekeeper-library/tree/master/library/general/containerlimits), [`requiredlabels`](https://github.com/open-policy-agent/gatekeeper-library/tree/master/library/general/requiredlabels), [`disallowedtags`](https://github.com/open-policy-agent/gatekeeper-library/tree/master/library/general/disallowedtags), and others. Copy the Rego, configure parameters, and publish.
+
 ## Part of the Pulumi Insights governance story
 
 OPA policy support is part of the broader [Pulumi Insights](/docs/insights/) governance platform. Insights gives you visibility and compliance across your entire cloud footprint, and OPA policies plug directly into that:
@@ -90,6 +161,8 @@ OPA policy support is part of the broader [Pulumi Insights](/docs/insights/) gov
 - **Pre-built compliance packs** for CIS, NIST, PCI DSS, and other frameworks are available alongside your custom OPA policies in the same [policy groups](/docs/insights/policy/policy-groups/).
 
 Whether you're enforcing policy at deployment time, scanning existing infrastructure for drift, or running continuous compliance checks, OPA policies are a native participant.
+
+![Policy Findings dashboard in Pulumi Cloud showing compliance scores and per-stack policy evaluation results](policy-findings.png)
 
 ## Frequently asked questions
 
