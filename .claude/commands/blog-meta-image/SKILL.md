@@ -57,7 +57,7 @@ Ask questions **progressively** (one at a time) using `AskUserQuestion`. Skip an
 
 ```
 header: "Feature Image Source"
-question: "Provide a custom feature image, or use a built-in template? (Reach out in #marketing Slack to get a custom image. If you can't get one fast enough, continue with templates.)"
+question: "Provide a custom feature image, or use a built-in template? (To request a custom image from the design team, label your PR with `needs-design`. If you can't get one fast enough, continue with templates.)"
 options:
   - label: "I have a custom image"
     description: "Provide a path to your own feature image file"

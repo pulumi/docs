@@ -160,7 +160,7 @@ When you generate a new post, placeholder images are included for two types of b
 
 Both are optional but strongly recommended.
 
-Please reach out in the #marketing Slack channel to get a feature image generated for you. You can then use the `/blog-meta-image` command in Claude Code to generate a meta image that matches the feature image.
+To request a custom feature image from the design team, label your PR with `needs-design`. You can then use the `/blog-meta-image` command in Claude Code to generate a meta image that matches the feature image.
 
 If you're in a hurry you can use the same Claude Code command to generate both images automatically from a curated set of branded templates.
 
