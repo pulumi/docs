@@ -1,6 +1,6 @@
 ---
 title_tag: "Using Pulumi GitHub Actions | CI/CD"
-meta_desc: Pulumi's Github Actions help you deploy apps and infrastructure to your cloud of
+meta_desc: Pulumi's GitHub Actions help you deploy apps and infrastructure to your cloud of
            choice, using nothing but code in your favorite language and GitHub.
 title: GitHub Actions
 h1: GitHub Actions for Pulumi
@@ -354,7 +354,7 @@ to your repo's **Settings** tab, where you'll find the new **Secrets** area:
 ![Secrets](/images/docs/reference/gh-actions-secrets.png)
 
 First, [create a new Pulumi Access Token](https://app.pulumi.com/account/tokens), then
-submit that token as a new secret named named `PULUMI_ACCESS_TOKEN`. This enables your
+submit that token as a new secret named `PULUMI_ACCESS_TOKEN`. This enables your
 GitHub Action to communicate with Pulumi Cloud on your behalf.
 
 Next, add secrets for your cloud credentials, just as you did `PULUMI_ACCESS_TOKEN` above,
