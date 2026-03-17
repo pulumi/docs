@@ -89,6 +89,34 @@ To switch to a different organization:
 | Member | Members are able to view and edit stacks they have access to and view members and teams. |
 | Billing Manager | Billing Managers are able to adjust billing information and view other Billing Managers. They do not have read or write access to stacks, teams, or policies. |
 
+## Updating billing information
+
+Organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com) under **Payment methods**.
+
+To update billing information:
+
+1. Navigate to **Settings** > **Billing & usage**.
+1. Under **Payment methods**, select **Update**.
+
+If you need to delegate billing-only access to a team member without granting full admin rights, see [Billing Managers](/docs/administration/organizations-teams/billing-managers/).
+
+## Deleting an organization
+
+Organization deletion is a permanent action and can only be performed by an organization admin.
+
+To delete an organization:
+
+1. Navigate to **Settings**.
+1. Use the **Delete organization** option.
+
+Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization or individual account.
+
+## Deleting your account
+
+You can delete your personal Pulumi account from your account settings in [Pulumi Cloud](https://app.pulumi.com).
+
+Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
+
 ## Organization identity providers
 
 A Pulumi organization can use the Pulumi identity provider or a third-party identity provider.
