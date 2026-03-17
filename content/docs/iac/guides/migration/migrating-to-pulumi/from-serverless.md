@@ -15,7 +15,7 @@ aliases:
 
 If your team has already provisioned infrastructure using the Serverless Framework, and you'd like to adopt Pulumi, you have several strategies you can take:
 
-* **[Neo](/product/neo/) (Recommended)**: Since Serverless Framework deploys via CloudFormation, Neo can automatically convert your stacks and import existing resources with zero downtime
+* **[Neo](/product/neo/) (Recommended)**: Since Serverless Framework deploys via CloudFormation, Neo can automatically convert your stacks and import existing resources with zero downtime.
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by the Serverless Framework by referencing CloudFormation stack outputs.
 * [**Import**](#importing-existing-resources) existing resources into Pulumi.
 * [**Rewrite**](#resource-mapping) your `serverless.yml` definitions as Pulumi code and incrementally migrate resources.
@@ -280,7 +280,6 @@ resources:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const config = new pulumi.Config();
 const stage = pulumi.getStack();
 
 // DynamoDB table
@@ -796,7 +795,13 @@ After the import completes and `pulumi preview` shows no changes, remove the `im
 
 ### Step 3: Remove resources from CloudFormation
 
-Before deleting your Serverless Framework CloudFormation stack, update the resources to use a `DeletionPolicy` of `Retain` so that AWS doesn't delete them when the stack is removed. You can do this by adding the policy to your `serverless.yml`:
+After importing your resources into Pulumi, remove them from CloudFormation management to avoid dual management. This step is not a prerequisite for import — Pulumi import works at the AWS resource level regardless of CloudFormation — but you should complete it to prevent conflicting updates.
+
+Before deleting the CloudFormation stack, set a `DeletionPolicy` of `Retain` on every resource so that AWS preserves them when the stack is removed.
+
+#### User-defined resources
+
+For resources you defined in the `resources.Resources` section of `serverless.yml`, add the policy directly:
 
 ```yaml
 resources:
@@ -808,7 +813,42 @@ resources:
         # ... existing properties
 ```
 
-Deploy the change with `sls deploy`, then remove the Serverless Framework stack with `sls remove`. The resources will remain in AWS, now managed entirely by Pulumi.
+Deploy the change with `sls deploy` to apply the retention policy.
+
+#### Auto-generated resources
+
+The Serverless Framework auto-generates resources (Lambda functions, IAM roles, API Gateway, CloudWatch log groups) that cannot have `DeletionPolicy` set via `serverless.yml`. To retain these resources, update the compiled CloudFormation template directly:
+
+1. Generate the template:
+
+    ```bash
+    sls package --stage dev
+    ```
+
+1. Add `DeletionPolicy: Retain` to every resource in the compiled template using `jq`:
+
+    ```bash
+    jq '.Resources |= with_entries(.value += {"DeletionPolicy": "Retain"})' \
+        .serverless/cloudformation-template-update-stack.json > retained-template.json
+    ```
+
+1. Update the CloudFormation stack with the modified template:
+
+    ```bash
+    aws cloudformation update-stack \
+        --stack-name my-api-dev \
+        --template-body file://retained-template.json \
+        --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
+    ```
+
+1. Wait for the update to complete, then remove the stack:
+
+    ```bash
+    aws cloudformation wait stack-update-complete --stack-name my-api-dev
+    sls remove --stage dev
+    ```
+
+All resources will remain in AWS, now managed entirely by Pulumi.
 
 For detailed AWS import ID formats and troubleshooting, see [AWS import IDs and special cases](/docs/iac/guides/migration/aws-import-ids/).
 
