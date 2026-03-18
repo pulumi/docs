@@ -11,7 +11,7 @@ public class App {
         Pulumi.run(ctx -> {
             var cert = new Certificate("cert",
                 CertificateArgs.builder()
-                    .domainName("example")
+                    .domainName("example.com")
                     .validationMethod("DNS")
                     .build());
         });
