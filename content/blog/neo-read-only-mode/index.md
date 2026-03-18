@@ -36,8 +36,6 @@ When you create a Neo task, you now choose between two permission levels:
 | **Use my permissions** | Full access (current default behavior) | All tiers |
 | **Read-only** | Read, preview, and create PRs. No infrastructure mutations. | All tiers |
 
-Read-only mode is available to all tiers, not just enterprise customers.
-
 Read-only mode takes your existing permissions and removes the ability to make changes. Neo never gets more access than you have, only less. If you can view a stack but not a particular environment, Neo in read-only mode also cannot see that environment.
 
 ## What Neo can do in read-only mode
@@ -53,8 +51,6 @@ Read-only mode pairs well with auto-approve. Because Neo cannot perform write op
 ## Set defaults and enforce guardrails
 
 You can configure your default permission level in your user settings so you do not have to choose every time you create a task. If you prefer to always start in read-only mode, set it once and override on a per-task basis when needed.
-
-Organization admins can also set an org-wide ceiling on Neo's permissions. For example, an admin can enforce that Neo always runs in read-only mode across the entire organization, regardless of what individual users select. This gives security and platform teams confidence that Neo operates within boundaries they define.
 
 ## Getting started
 
