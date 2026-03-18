@@ -11,11 +11,6 @@
 #
 
 
-# Java examples of LoadBalancedFargateService erroneously complain about missing container declarations.
-# https://github.com/pulumi/pulumi-awsx/issues/820
-awsx-vpc-fargate-service-java
-awsx-load-balanced-fargate-ecr-java
-awsx-load-balanced-fargate-nginx-java
 
 # API Gateway authorizer parameter `providerArns` is mistyped.
 # https://github.com/pulumi/pulumi-aws-apigateway/issues/121
