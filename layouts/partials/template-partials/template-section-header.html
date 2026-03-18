@@ -12,6 +12,9 @@
     - image: Optional image path (e.g. dashboard placeholder), below text unless image_above is true
     - image_alt: Alt text for image
     - image_above: Optional true to display image above the title
+    - image_visible_from: Optional Tailwind breakpoint (sm, md, lg, xl, 2xl) at which the image
+      becomes visible. When set, the image is hidden by default and shown from that breakpoint up.
+      When unset, the image is always visible.
     - anchor: Optional anchor for section id
 */}}
 
@@ -22,12 +25,19 @@
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default "" }}
 {{ $imageAbove := .image_above }}
+{{ $imageVisibleFrom := .image_visible_from }}
 {{ $anchor := .anchor }}
+
+{{/* Build responsive visibility classes for the image container. */}}
+{{ $imageDisplayClass := "flex" }}
+{{ if $imageVisibleFrom }}
+    {{ $imageDisplayClass = printf "hidden %s:flex" $imageVisibleFrom }}
+{{ end }}
 
 <section class="template-section-header"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="text-center max-w-4xl mx-auto">
         {{ if and $image $imageAbove }}
-        <div class="section-header-image section-header-image-above mb-6 w-full flex justify-center">
+        <div class="section-header-image section-header-image-above mb-6 w-full {{ $imageDisplayClass }} justify-center">
             <img src="{{ $image }}" alt="{{ $imageAlt }}" class="section-header-image-above-img rounded-lg">
         </div>
         {{ end }}
@@ -51,7 +61,7 @@
         {{ end }}
     </div>
     {{ if and $image (not $imageAbove) }}
-    <div class="section-header-image mt-10 w-full flex justify-center">
+    <div class="section-header-image mt-10 w-full {{ $imageDisplayClass }} justify-center">
         <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full rounded-lg">
     </div>
     {{ end }}

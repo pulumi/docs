@@ -147,6 +147,7 @@ section_header_scale:
     Encrypted state storage, secrets management, and collaboration built in. When you scale, enterprise features like RBAC, policy enforcement, and SSO are ready. All powered by our open source engine.
   image: /images/product/iac/iac-stack-example.svg
   image_alt: Pulumi Cloud dashboard
+  image_visible_from: md
   anchor: scale
 
 three_column_cloud:
