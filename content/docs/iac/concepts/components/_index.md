@@ -588,19 +588,23 @@ class MyComponent extends ComponentResource {
 
 The call to `registerOutputs` typically happens at the very end of the component resource's constructor.
 
-### What RegisterOutputs Does
+### What registerOutputs does
 
-The `registerOutputs` call serves two critical functions:
+The `registerOutputs` call serves two purposes:
 
 1. **Marks the component as fully constructed**: It signals to the Pulumi engine that the component resource has finished registering all its child resources and should be considered complete.
-1. **Saves outputs to state**: It registers the component's outputs with the Pulumi engine so they are properly saved to the state file and can be referenced by other resources or exported from the stack.
+1. **Saves outputs to state**: It saves the component's output properties to the state file so they appear in the Pulumi Console and CLI.
 
-{{% notes type="warning" %}}
-Failing to call `registerOutputs` could cause serious issues with your component resource:
+{{% notes type="info" %}}
+Calling `registerOutputs` is strongly recommended, even when you have no outputs to register (pass an empty object). Without this call:
 
-- The component will appear as "creating..." indefinitely in the Pulumi Console
-- Outputs will not be saved to the state file, potentially causing data loss
-- The component lifecycle will not complete properly, which may affect dependency tracking and updates
+- The component will appear as "creating..." in the CLI and Pulumi Console until the entire deployment completes, rather than when the component itself finishes.
+- The component's output properties will not be saved to the state file. (Child resource state is unaffected.)
+- Resource [hooks](/docs/iac/concepts/resources/options/hooks/) such as `afterCreate` will not fire on the component.
+{{% /notes %}}
+
+{{% notes type="info" %}}
+**.NET**: Since `pulumi-dotnet` 3.59.0, calling `RegisterOutputs()` without arguments automatically registers all properties decorated with `[Output]`.
 {{% /notes %}}
 
 ## Inheriting Resource Providers
