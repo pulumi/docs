@@ -128,16 +128,16 @@ header: "Logo Tint Style"
 question: "How should the tint color be applied to the logos?"
 options:
   - label: "Overlay (default)"
-    description: "Replace all logo colors with a flat tint — best for single-color cutout logos"
-  - label: "Colorize"
-    description: "Preserve internal contrast: bright areas stay bright, dark areas stay dark, all tinted — better for multi-color logos"
+    description: "Replace all logo colors with a flat tint — best for single-color cutout logos."
+  - label: "Color"
+    description: "Attempts to recolor the logo in light-purple while preserving internal brightness contrast."
 ```
 
-Set `logo_tint_mode` in the feature config to `"overlay"` or `"colorize"` accordingly. Default is `"overlay"`.
+Set `logo_tint_mode` in the feature config to `"overlay"` or `"color"` accordingly. Default is `"overlay"`.
 
 ---
 
-**Logo lookup**: Check `assets/logos/` first. If a needed logo isn't found locally:
+**Logo lookup**: Check `assets/logos/` first. If tint style is `Overlay` and there is a version of the logo suffixed with `monochrome`, use that. If a needed logo isn't found locally:
 1. Try [simple-icons](https://github.com/simple-icons/simple-icons/tree/develop/icons) first — clean vector SVGs for 3000+ brands. Download from `https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/{slug}.svg` and add a `fill` attribute with the brand color to `<path>` elements.
 2. Otherwise use `WebSearch` to find the official SVG (`"<technology> logo SVG site:github.com"`)
 3. Use `WebFetch` to download the SVG content

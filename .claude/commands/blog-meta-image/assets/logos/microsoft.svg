@@ -1,1 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23"><path fill="#f3f3f3" d="M0 0h23v23H0z"/><path fill="#f35325" d="M1 1h10v10H1z"/><path fill="#81bc06" d="M12 1h10v10H12z"/><path fill="#05a6f0" d="M1 12h10v10H1z"/><path fill="#ffba08" d="M12 12h10v10H12z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 23 23">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #81bc06;
+      }
+
+      .st1 {
+        fill: #05a6f0;
+      }
+
+      .st2 {
+        fill: #ffba08;
+      }
+
+      .st3 {
+        fill: #f35325;
+      }
+    </style>
+  </defs>
+  <path class="st3" d="M1,1h10v10H1V1Z"/>
+  <path class="st0" d="M12,1h10v10h-10V1Z"/>
+  <path class="st1" d="M1,12h10v10H1v-10Z"/>
+  <path class="st2" d="M12,12h10v10h-10v-10Z"/>
+</svg>

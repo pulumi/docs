@@ -68,7 +68,7 @@ templates:
     type: logo
     logo_slots: 3
     placeholders:
-      - { x: 720, y: 234, width: 390, height: 390 }
+      - { x: 747, y: 234, width: 390, height: 390 }
       - { x: 499, y: 630, width: 390, height: 390 }
       - { x: 993, y: 630, width: 390, height: 390 }
 

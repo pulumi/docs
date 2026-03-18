@@ -3,6 +3,7 @@
 # requires-python = ">=3.11"
 # dependencies = [
 #     "cairosvg>=2.8.2",
+#     "numpy>=1.24",
 #     "pillow>=12.1.1",
 #     "pyyaml>=6.0",
 # ]
@@ -13,6 +14,7 @@ Pipeline: Load template PNG -> Place logos on placeholders -> Draw text -> Save
 """
 
 import argparse
+import colorsys
 import json
 import re
 import subprocess
@@ -20,6 +22,7 @@ from io import BytesIO
 from pathlib import Path
 
 import cairosvg
+import numpy as np
 import yaml
 from PIL import Image, ImageDraw, ImageFont
 
@@ -209,6 +212,67 @@ def hex_to_rgba(hex_color: str) -> tuple[int, int, int, int]:
     return int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16), 255
 
 
+def _rgb_to_hls_np(arr: np.ndarray) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Vectorized RGB → HLS matching Python colorsys conventions.
+
+    arr: shape (H, W, 3), float32 in [0, 1].
+    Returns (h, l, s) each shape (H, W), float32 in [0, 1].
+    """
+    r, g, b = arr[:, :, 0], arr[:, :, 1], arr[:, :, 2]
+    cmax = arr.max(axis=2)
+    cmin = arr.min(axis=2)
+    delta = cmax - cmin
+    l = (cmax + cmin) / 2.0
+
+    denom_low = np.maximum(cmax + cmin, 1e-10)
+    denom_high = np.maximum(2.0 - cmax - cmin, 1e-10)
+    s = np.where(
+        delta < 1e-10,
+        0.0,
+        np.where(l <= 0.5, delta / denom_low, delta / denom_high),
+    )
+
+    safe_delta = np.where(delta < 1e-10, 1.0, delta)
+    rc = (cmax - r) / safe_delta
+    gc = (cmax - g) / safe_delta
+    bc = (cmax - b) / safe_delta
+    h = np.where(
+        cmax == r, bc - gc,
+        np.where(cmax == g, 2.0 + rc - bc, 4.0 + gc - rc),
+    )
+    h = np.where(delta < 1e-10, 0.0, (h / 6.0) % 1.0)
+    return h, l, s
+
+
+def _hls_to_rgb_np(h: np.ndarray, l: np.ndarray, s: np.ndarray) -> np.ndarray:
+    """Vectorized HLS → RGB matching Python colorsys conventions.
+
+    h, l, s: shape (H, W), float32 in [0, 1].
+    Returns arr shape (H, W, 3), float32 in [0, 1].
+    """
+    m2 = np.where(l <= 0.5, l * (1.0 + s), l + s - l * s)
+    m1 = 2.0 * l - m2
+
+    def _v(hue: np.ndarray) -> np.ndarray:
+        hue = hue % 1.0
+        return np.where(
+            hue < 1.0 / 6.0, m1 + (m2 - m1) * hue * 6.0,
+            np.where(
+                hue < 0.5, m2,
+                np.where(
+                    hue < 2.0 / 3.0, m1 + (m2 - m1) * (2.0 / 3.0 - hue) * 6.0,
+                    m1,
+                ),
+            ),
+        )
+
+    achromatic = s < 1e-10
+    r_out = np.where(achromatic, l, _v(h + 1.0 / 3.0))
+    g_out = np.where(achromatic, l, _v(h))
+    b_out = np.where(achromatic, l, _v(h - 1.0 / 3.0))
+    return np.clip(np.stack([r_out, g_out, b_out], axis=2), 0.0, 1.0)
+
+
 def tint_image(img: Image.Image, hex_color: str, mode: str = "overlay") -> Image.Image:
     """Apply a color tint to an image, preserving its alpha.
 
@@ -216,22 +280,31 @@ def tint_image(img: Image.Image, hex_color: str, mode: str = "overlay") -> Image
     keeping the original alpha mask — opaque areas become a solid shape of the
     tint color. Best for logos that are already single-color cutouts.
 
-    mode="colorize": converts to grayscale first, then scales each channel by
-    the tint color so luminance is preserved. Bright pixels become bright tint,
-    dark pixels become dark tint — logos with internal colors or gradients
-    retain structural contrast rather than collapsing to a flat shape.
+    mode="color": CSS color blend — takes H and S from the tint color and the
+    Lightness from each logo pixel. Every pixel is recolored to the tint hue
+    and saturation while preserving the logo's internal brightness distribution.
+    Use with #A68ECF to shift logos into Pulumi's light-purple palette while
+    keeping internal contrast.
     """
     r, g, b, _ = hex_to_rgba(hex_color)
     img = img.convert("RGBA")
     _, _, _, alpha = img.split()
-    if mode == "colorize":
-        gray = img.convert("L")
-        result = Image.merge("RGBA", [
-            gray.point(lambda p: p * r // 255),
-            gray.point(lambda p: p * g // 255),
-            gray.point(lambda p: p * b // 255),
-            alpha,
-        ])
+    if mode == "color":
+        blend_h, _, blend_s = colorsys.rgb_to_hls(
+            r / 255, g / 255, b / 255)
+        # Scale saturation down so darker logo pixels don't appear more vivid
+        # than the tint color itself (which sits at lightness ~0.68).
+        blend_s *= 0.7
+        arr = np.array(img.convert("RGB"), dtype=np.float32) / 255.0
+        h_px, l_px, s_px = _rgb_to_hls_np(arr)
+        out = _hls_to_rgb_np(
+            np.full_like(h_px, blend_h),
+            l_px,
+            np.full_like(s_px, blend_s),
+        )
+        result = Image.fromarray(
+            (out * 255).astype(np.uint8), "RGB").convert("RGBA")
+        result.putalpha(alpha)
     else:
         tint = Image.new("RGBA", img.size, (r, g, b, 255))
         tint.putalpha(alpha)
