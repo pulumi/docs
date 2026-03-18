@@ -6,7 +6,7 @@ return await Deployment.RunAsync(() =>
 {
     var cert = new Certificate("cert", new CertificateArgs
     {
-        DomainName = "example",
+        DomainName = "example.com",
         ValidationMethod = "DNS",
     });
 });
