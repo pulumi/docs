@@ -15,7 +15,7 @@ func main() {
         
         serviceAcctEmailSuffix := fmt.Sprintf("@%s.iam.gserviceaccount.com", projectId)
         serviceAcctDisplayName := "pulumi-tutorial-service-account" // REPLACE
-        serviceAcctEmailPrefix := "pulumi-tutorial-service-accoun" // REPLACE
+        serviceAcctEmailPrefix := "pulumi-tutorial-service-account" // REPLACE
 
         _, err := serviceaccount.NewAccount(ctx, "imported-tutorial-service-account", 
             &serviceaccount.AccountArgs{

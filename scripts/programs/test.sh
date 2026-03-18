@@ -147,7 +147,7 @@ pushd "$programs_dir"
         pulumi -C "$project" config set resourceGroupName pulumi-tutorials || true
         pulumi -C "$project" config set gcp:region us-central1 || true
         pulumi -C "$project" config set gcp:zone us-central1-a || true
-        pulumi -C "$project" config set gcp:project pulumi-devrel || true
+        pulumi -C "$project" config set gcp:project pulumi-ci-gcp-provider || true
 
         # Preview or deploy.
         if [[ "$mode" == "update" ]]; then
@@ -176,7 +176,13 @@ pushd "$programs_dir"
         fi
 
         # Destroy and remove.
-        pulumi -C "$project" destroy --yes --remove
+        if [[ "$project" == *-import-* ]]; then
+            # Import examples: remove from state only, leave the cloud resource
+            # intact so it can be re-imported on the next run.
+            pulumi -C "$project" stack rm $fqsn --force --yes
+        else
+            pulumi -C "$project" destroy --yes --remove
+        fi
 
         passing_projects+=("$project")
         
