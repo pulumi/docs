@@ -28,7 +28,7 @@ The implicit `pulumi:pulumi:Stack` resource is itself a component resource that 
 
 ## Authoring a New Component Resource
 
-To author a new component, either in a program or for a reusable library, create a subclass of [`ComponentResource`](/docs/reference/pkg/python/pulumi/#pulumi.ComponentResource). Inside of its constructor, chain to the base constructor, passing its type string, name, arguments, and options. Also inside of its constructor, allocate any child resources, passing the [`parent`](/docs/concepts/options/parent) option as appropriate to ensure component resource children are parented correctly.
+To author a new component, either in a program or for a reusable library, create a subclass of [`ComponentResource`](/docs/reference/pkg/python/pulumi/#pulumi.ComponentResource). Inside of its constructor, chain to the base constructor, passing its type string, name, arguments, and options. Also inside of its constructor, allocate any child resources, passing the component resource itself as the [`parent`](/docs/concepts/options/parent) option. Setting `parent` correctly ensures that child resources appear under the component in the resource graph, inherit provider configuration, and are tracked as dependencies of the component.
 
 Here's a simple component example:
 
@@ -438,6 +438,14 @@ class MyComponent extends ComponentResource {
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+{{% notes type="warning" %}}
+Always set `parent` when creating resources inside a component. Omitting it causes the following problems:
+
+- **Resource graph**: Child resources won't appear under the component in `pulumi preview` and the Pulumi Console, making the resource hierarchy unclear.
+- **Provider inheritance**: Child resources won't automatically inherit provider configuration (such as region or credentials) passed to the component via the `providers` option.
+- **Dependency tracking**: Other resources that depend on the component won't automatically wait for un-parented resources to finish creating, which can cause race conditions or incomplete deployments.
+{{% /notes %}}
 
 ## Registering Component Outputs
 
