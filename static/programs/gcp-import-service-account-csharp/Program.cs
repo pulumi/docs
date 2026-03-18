@@ -7,7 +7,7 @@ return await Deployment.RunAsync(() =>
     var projectId = gcpConfig.Require("project");
     var serviceAcctEmailSuffix = $"@{projectId}.iam.gserviceaccount.com";
     var serviceAcctDisplayName = "pulumi-tutorial-service-account"; // REPLACE
-    var serviceAcctEmailPrefix = "pulumi-tutorial-service-accoun"; // REPLACE
+    var serviceAcctEmailPrefix = "pulumi-tutorial-service-account"; // REPLACE
 
     var importedTutorialServiceAccount = new Account("imported-tutorial-service-account", new AccountArgs
     {
