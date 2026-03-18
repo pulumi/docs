@@ -4,7 +4,7 @@ from pulumi_gcp import serviceaccount, config
 project_id = config.project
 service_acct_email_suffix = f"@{project_id}.iam.gserviceaccount.com"
 service_acct_display_name = "pulumi-tutorial-service-account" # REPLACE
-service_acct_email_prefix = "pulumi-tutorial-service-accoun" # REPLACE
+service_acct_email_prefix = "pulumi-tutorial-service-account" # REPLACE
 
 imported_tutorial_service_account = serviceaccount.Account("imported-tutorial-service-account",
     account_id=service_acct_email_prefix,

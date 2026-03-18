@@ -5,7 +5,7 @@ runtime: yaml
 variables:
   serviceAcctEmailSuffix: "@${gcp:project}.iam.gserviceaccount.com"
   serviceAcctDisplayName: pulumi-tutorial-service-account # REPLACE
-  serviceAcctEmailPrefix: pulumi-tutorial-service-accoun # REPLACE
+  serviceAcctEmailPrefix: pulumi-tutorial-service-account # REPLACE
 
 resources:
   imported-tutorial-service-account:
