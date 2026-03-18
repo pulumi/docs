@@ -61,7 +61,7 @@ export const group = new aws.ec2.SecurityGroup("web-secgrp", {
     ],
 });
 
-const userData = `#!/bin/bash echo "Hello, World!" > index.html nohup python -m SimpleHTTPServer 80 &`;
+const userData = `#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &`;
 
 export const server = new aws.ec2.Instance("web-server-www", {
     instanceType: "t2.micro",
@@ -85,7 +85,7 @@ group = ec2.SecurityGroup('web-secgrp', ingress=[
     { "protocol": "tcp", "from_port": 80, "to_port": 80, "cidr_blocks": ["0.0.0.0/0"] },
 ])
 
-user_data = '#!/bin/bash echo "Hello, World!" > index.html nohup python -m SimpleHTTPServer 80 &'
+user_data = '#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &'
 
 server = ec2.Instance('web-server-www;',
     instance_type="t2.micro",
@@ -133,7 +133,7 @@ func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
 		return nil, err
 	}
 
-	const userData = `#!/bin/bash echo "Hello, World!" > index.html nohup python -m SimpleHTTPServer 80 &`
+	const userData = `#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &`
 
 	server, err := ec2.NewInstance(ctx, "web-server-www", &ec2.InstanceArgs{
 		InstanceType:   pulumi.String("t2-micro"),
@@ -175,7 +175,7 @@ public class WebserverStack : Stack
             }
         });
 
-        var userData = "#!/bin/bash echo \"Hello, World!\" > index.html nohup python -m SimpleHTTPServer 80 &";
+        var userData = "#!/bin/bash echo \"Hello, World!\" > index.html nohup python3 -m http.server 80 &";
 
         var server = new Instance("web-server-www", new InstanceArgs
         {
@@ -220,7 +220,7 @@ public class App {
                     .build())
             .build());
 
-        var userData = "#!/bin/bash echo \"Hello, World!\" > index.html nohup python -m SimpleHTTPServer 80 &";
+        var userData = "#!/bin/bash echo \"Hello, World!\" > index.html nohup python3 -m http.server 80 &";
 
         var server = new Instance("web-server-www", InstanceArgs.builder()
             .instanceType("t2.micro")
@@ -260,7 +260,7 @@ resources:
       securityGroups:
         - ${web-secgrp.name}
       ami: ami-c55673a0
-      userData: "#!/bin/bash echo \"Hello, World!\" > index.html nohup python -m SimpleHTTPServer 80 &"
+      userData: "#!/bin/bash echo \"Hello, World!\" > index.html nohup python3 -m http.server 80 &"
 ```
 
 {{% /choosable %}}
@@ -1397,7 +1397,7 @@ X InstanceHasNameTag [387ms]
 
 X InstanceMustNotUseInlineUserData [17ms]
   Error Message:
-   Expected tags to be <null>, but found "#!/bin/bash echo "Hello, World!" > index.html nohup python -m SimpleHTTPServer 80 &".
+   Expected tags to be <null>, but found "#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &".
 
 X SecurityGroupMustNotHaveSshPortsOpenToInternet [11ms]
   Error Message:

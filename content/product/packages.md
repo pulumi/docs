@@ -236,7 +236,7 @@ details:
                         final var userData =
                                 "#!/bin/bash\n" +
                                         "echo \"Hello, World!\" > index.html\n" +
-                                        "nohup python -m SimpleHTTPServer 80 &";
+                                        "nohup python3 -m http.server 80 &";
 
                         final var server = new Instance("web-server-www", InstanceArgs.builder()
                                 .tags(Map.of("Name", "web-server-www"))
@@ -290,7 +290,7 @@ details:
                         userData: |-
                             #!/bin/bash
                             echo 'Hello, World from ${WebSecGrp.arn}!' > index.html
-                            nohup python -m SimpleHTTPServer 80 &
+                            nohup python3 -m http.server 80 &
                         vpcSecurityGroupIds:
                             - ${WebSecGrp}
                 outputs:
