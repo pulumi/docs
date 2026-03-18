@@ -57,7 +57,7 @@ export = async () => {
   const userData = `#!/bin/bash
 echo "Hello, World!" > index.html
 echo '{"ok": true}' > health.json
-nohup python -m SimpleHTTPServer 80 &`
+nohup python3 -m http.server 80 &`
 
   // Define a resource hook that will run after create and update and not return
   // until the health check passes.
@@ -142,7 +142,7 @@ from pulumi_aws import ec2
 user_data = """#!/bin/bash
 echo "Hello, World!" > index.html
 echo '{"ok": true}' > health.json
-nohup python -m SimpleHTTPServer 80 &"""
+nohup python3 -m http.server 80 &"""
 
 
 # Define a resource hook that will run after create and update and not return
@@ -285,7 +285,7 @@ func main() {
 		userData := `#!/bin/bash
 echo "Hello, World!" > index.html
 echo '{"ok": true}' > health.json
-nohup python -m SimpleHTTPServer 80 &`
+nohup python3 -m http.server 80 &`
 
 		instanceType := "t2.micro"
 
@@ -380,7 +380,7 @@ class MyStack : Stack
         var userData = @"#!/bin/bash
 echo ""Hello, World!"" > index.html
 echo '{""ok"": true}' > health.json
-nohup python -m SimpleHTTPServer 80 &";
+nohup python3 -m http.server 80 &";
 
         // Define a resource hook that will run after create and update and not return
         // until the health check passes.

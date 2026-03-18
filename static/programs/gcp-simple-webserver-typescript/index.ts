@@ -7,7 +7,7 @@ const project = "pulumi-devrel"; // REPLACE
 
 const startupScript = `#!/bin/bash
 echo "Hello, World!" > index.html
-nohup python -m SimpleHTTPServer 80 &`;
+nohup python3 -m http.server 80 &`;
 
 // Create a VPC network.
 const vpcNetwork = new gcp.compute.Network("vpc-network", {
@@ -27,13 +27,13 @@ const ipAddress = new gcp.compute.Address("ip-address", {
 
 // [1] Create a compute instance.
 const computeInstance = new gcp.compute.Instance("webserver-instance", {
-    machineType: "f1-micro",
+    machineType: "e2-micro",
     project: project,
     zone: zone,
     metadataStartupScript: startupScript,
     bootDisk: {
         initializeParams: {
-            image: "debian-cloud/debian-9-stretch-v20181210",
+            image: "debian-cloud/debian-12",
         },
     },
     networkInterfaces: [

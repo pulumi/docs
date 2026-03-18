@@ -14,7 +14,7 @@ func main() {
 
 		startupScript := `#!/bin/bash
 		echo "Hello, World!" > index.html
-		nohup python -m SimpleHTTPServer 80 &`
+		nohup python3 -m http.server 80 &`
 
 		// Create a VPC network.
 		vpcNetwork, err := compute.NewNetwork(ctx, "vpc-network", &compute.NetworkArgs{
@@ -42,11 +42,11 @@ func main() {
 		_, err = compute.NewInstance(ctx, "webserver-instance", &compute.InstanceArgs{
 			Project: pulumi.String(project),
 			Zone: pulumi.String(zone),
-			MachineType: pulumi.String("f1-micro"),
+			MachineType: pulumi.String("e2-micro"),
 			MetadataStartupScript: pulumi.String(startupScript),
 			BootDisk: &compute.InstanceBootDiskArgs{
 				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
-					Image: pulumi.String("debian-cloud/debian-9-stretch-v20181210"),
+					Image: pulumi.String("debian-cloud/debian-12"),
 				},
 			},
 			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
