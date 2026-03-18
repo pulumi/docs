@@ -624,7 +624,7 @@ When designing component arguments:
 
 ## Creating child resources
 
-Component resources often contain child resources. The names of child resources are often derived from the component resource's name to ensure uniqueness. For example, you might use the component resource's name as a prefix. Also, when constructing a resource, children must be registered as such. To do this, pass the component resource itself as the `parent` option.
+Component resources contain child resources. Child resource names must include the component resource's name as part of their names (e.g., as a prefix). This ensures uniqueness across multiple instances of the component and ensures that if the component is renamed, the child resources are renamed as well. Also, when constructing a resource, children must be registered as such. To do this, pass the component resource itself as the `parent` option.
 
 This example demonstrates both the naming convention and how to designate the component resource as the parent:
 
