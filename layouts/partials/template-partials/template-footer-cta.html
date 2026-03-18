@@ -22,14 +22,14 @@
         {{ if $title }}
         <h2 class="template-footer-title my-0">{{ $title }}</h2>
         {{ end }}
-        <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <div class="flex flex-col lg:flex-row gap-4 items-center justify-center">
             {{ if $ctaPrimaryText }}
-            <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant text-center md:w-1/2 w-full lg:w-auto" data-role="cta-get-started">
+            <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant text-center w-full lg:w-auto" data-role="cta-get-started">
                 <span class="whitespace-nowrap">{{ $ctaPrimaryText }}</span>
             </a>
             {{ end }}
             {{ if $ctaSecondaryText }}
-            <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant text-center md:w-1/2 w-full lg:w-auto">
+            <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant text-center w-full lg:w-auto">
                 <span class="whitespace-nowrap">{{ $ctaSecondaryText }}</span>
             </a>
             {{ end }}
