@@ -1,5 +1,5 @@
 ---
-title: "Infrastructure as Code in Any Language – Pulumi IaC"
+title: "Infrastructure as code in Any Language – Pulumi IaC"
 meta_desc: Write infrastructure code using TypeScript, Python, Go, .NET, Java, or YAML. Deploy to any cloud with built-in previews and testing.
 meta_image: /images/product/iac/matrix-cards.png
 type: page
@@ -9,13 +9,13 @@ aliases:
   - /product/pulumi-iac
 
 hero:
-  title_primary: Infrastructure as Code
+  title_primary: Infrastructure as code
   title_secondary: in any language.
   description: |
     Use the programming languages you already know to build infrastructure on AWS, Azure, Google Cloud, Kubernetes, and thousands of providers.
   cta_primary_text: Get started
   cta_primary_link: /docs/iac/get-started/
-  cta_secondary_text: Book a demo
+  cta_secondary_text: Contact us
   cta_secondary_link: /contact/?form=request-a-demo
   image: /images/product/iac/matrix-cards.png
   image_alt: Pulumi infrastructure as code in any language
@@ -196,10 +196,10 @@ three_column_cloud:
         Every action logged. Who changed what, when, and why. Export to SIEM. Compliance reports at your fingertips.
 
 footer_cta:
-  title: The Infrastructure-as-Code platform for any cloud.
-  cta_primary_text: Try Pulumi for free
-  cta_primary_link: /signup
-  cta_secondary_text: Contact sales
+  title: The infrastructure-as-code platform for any cloud.
+  cta_primary_text: Get started
+  cta_primary_link: /docs/iac/get-started
+  cta_secondary_text: Contact us
   cta_secondary_link: /contact
   anchor: get-started
 ---

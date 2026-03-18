@@ -376,13 +376,11 @@ $violet-primary: #673EAC;
     }
 
     .product-hero-visual {
+        width: 100%;
+
         @media (max-width: 768px) {
             width: 200vw;
         }
-    }
-
-    .product-hero-visual-img {
-        max-width: 800px;
     }
 }
 
