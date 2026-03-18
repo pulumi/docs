@@ -27,13 +27,10 @@ $violet-primary: #673EAC;
 }
 
 @mixin product-hero-heading {
-    color: #000;
-    text-align: center;
+    @apply text-black text-center not-italic font-bold text-heading-l;
     font-feature-settings: 'salt' on;
     font-family: Inter, sans-serif;
-    font-style: normal;
     letter-spacing: -0.64px;
-    @apply font-bold text-heading-l;
     line-height: 1.25 !important; /* leading-tight */
 }
 
@@ -119,12 +116,12 @@ $violet-primary: #673EAC;
         img {
             height: 54px;
             max-height: 54px;
-            width: auto;
+            @apply w-auto;
         }
     }
 
     .logo-grid {
-        gap: 48px;
+        @apply gap-12;
     }
 }
 
@@ -146,7 +143,7 @@ $violet-primary: #673EAC;
         @apply flex flex-row items-center;
 
         i {
-            flex-shrink: 0;
+            @apply flex-shrink-0;
         }
     }
 
@@ -286,9 +283,8 @@ $violet-primary: #673EAC;
     }
 
     .template-testimonial-product-logo img {
-        @apply block w-auto h-7;
+        @apply block w-auto h-7 invert;
         max-width: 120px;
-        filter: invert(1);
     }
 
     .template-testimonial-product-credit {
@@ -410,8 +406,7 @@ $violet-primary: #673EAC;
         @apply text-body-s max-w-xl mx-auto;
 
         a {
-            color: inherit;
-            @apply no-underline pointer-events-none;
+            @apply text-inherit no-underline pointer-events-none;
         }
     }
 
@@ -429,21 +424,18 @@ $violet-primary: #673EAC;
     }
 
     .template-section-header-with-code-content {
-        @apply xl:min-w-0;
+        @apply xl:min-w-0 mt-20;
         flex: 1.25 1 0%;
-        margin-top:5rem;
     }
 
     .template-section-header-with-code-image {
-        @apply xl:min-w-0;
-        flex: 1 1 0%;
+        @apply xl:min-w-0 flex-1;
 
         pulumi-chooser {
-            display: block;
-            width: 100%;
+            @apply block w-full;
 
             > ul {
-                width: 100%;
+                @apply w-full;
             }
         }
     }
@@ -495,7 +487,7 @@ $violet-primary: #673EAC;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        color: transparent;
+        @apply text-transparent;
     }
 
     .counter-card-label {
