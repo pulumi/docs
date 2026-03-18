@@ -81,11 +81,44 @@
 }
 
 .pricing-faq {
+    // Default state: Pricing tab active. All default styling must live in the same
+    // @layer (components) as the :target overrides below. Tailwind v4 places utility
+    // classes in @layer utilities, which always beats @layer components, so inline
+    // utility classes (e.g., lg:hidden, border-b-4) would prevent :target from
+    // toggling styles.
+    ul[data-faq-type]:not([data-faq-type="faq-pricing"]) {
+        @include screen-lg {
+            display: none;
+        }
+    }
+
+    // Use explicit CSS properties for borders instead of @apply. Tailwind v4's
+    // @apply border-b-4 emits a longhand (border-bottom-style: var(--tw-border-style))
+    // that conflicts with the shorthand reset from @apply border-none, causing
+    // specificity issues between rules in the same @layer.
+    #faq-headers {
+        li {
+            border-bottom: 4px solid transparent;
+
+            a {
+                @apply text-gray-500;
+            }
+        }
+
+        li[data-faq-label="pricing"] {
+            border-bottom-color: var(--color-blue-600);
+
+            a {
+                @apply text-black;
+            }
+        }
+    }
+
     @each $filter-type in "product" "billing" "pricing" {
         #faq-#{$filter-type}:target {
             ~ #faq-headers {
                 li {
-                    @apply border-none;
+                    border-bottom-color: transparent;
 
                     a {
                         @apply text-gray-500;
@@ -93,32 +126,22 @@
                 }
 
                 li[data-faq-label="#{$filter-type}"] {
-                    @apply border-b-4 border-solid border-blue-600;
+                    border-bottom-color: var(--color-blue-600);
 
                     a {
                         @apply text-black;
-                    }
-                }
-
-                @if $filter-type != "pricing" {
-                    li[data-faq-label="pricing"] {
-                        @apply border-none;
-
-                        a {
-                            @apply text-gray-500;
-                        }
                     }
                 }
             }
 
             @if $filter-type != "pricing" {
                 ~ ul[data-faq-type="faq-pricing"] {
-                    @apply hidden;
+                    display: none;
                 }
             }
 
             ~ ul[data-faq-type="faq-#{$filter-type}"] {
-                @apply block;
+                display: block;
             }
         }
     }
