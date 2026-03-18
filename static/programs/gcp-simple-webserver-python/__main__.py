@@ -7,7 +7,7 @@ project = "pulumi-devrel" # REPLACE
 
 startup_script = """#!/bin/bash
 echo "Hello, World!" > index.html
-nohup python -m SimpleHTTPServer 80 &"""
+nohup python3 -m http.server 80 &"""
 
 # Create a VPC network.
 vpc_network = compute.Network("vpc-network",
@@ -28,13 +28,13 @@ ip_address = compute.address.Address("ip-address",
 # [1] Create a compute instance.
 compute_instance = compute.Instance(
     "webserver-instance",
-    machine_type="f1-micro",
+    machine_type="e2-micro",
     project=project,
     zone=zone,
     metadata_startup_script=startup_script,
     boot_disk=compute.InstanceBootDiskArgs(
         initialize_params=compute.InstanceBootDiskInitializeParamsArgs(
-            image="debian-cloud/debian-9-stretch-v20181210"
+            image="debian-cloud/debian-12"
         )
     ),
     network_interfaces=[compute.InstanceNetworkInterfaceArgs(
