@@ -218,6 +218,40 @@ Updating (dev)
 
 **Rationale:** Fenced code blocks are explicit, easy to identify, and support syntax highlighting. Indented blocks can be confused with nested lists or quotes, especially when editing.
 
+### Line highlighting
+
+Use the `hl_lines` parameter on fenced code blocks to highlight specific lines with a purple background. This draws attention to the most important lines in a code sample, such as newly added or changed lines.
+
+**Single lines and ranges:**
+
+````markdown
+```typescript {hl_lines=[3]}
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as vpc from "@pulumi/vpc"; // this line is highlighted
+```
+````
+
+````markdown
+```python {hl_lines=["3-5"]}
+import pulumi
+import pulumi_aws as aws
+# lines 3 through 5
+# are all
+# highlighted
+```
+````
+
+**Combined with line numbers:**
+
+````markdown
+```typescript {.line-numbers hl_lines=[5,"14-19"]}
+// code here
+```
+````
+
+Use line highlighting when a code block is long but only a few lines are new or noteworthy. Do not highlight every line — if the entire block matters equally, no highlighting is needed.
+
 ---
 
 ## Blockquotes
