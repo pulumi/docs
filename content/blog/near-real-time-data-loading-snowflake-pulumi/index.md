@@ -4,6 +4,7 @@ date: 2026-02-23
 draft: false
 meta_desc: "Learn how we load data into Snowflake in seconds using Firehose direct streaming and reusable Pulumi ComponentResources."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - pablo-seibelt
     - lucas-crespo

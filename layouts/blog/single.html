@@ -18,18 +18,22 @@
                             <h1 class="no-anchor">{{ .Title }}</h1>
                         {{ end }}
 
-
-                        {{ if .Params.updated }}
-                            <p>Updated on <time>{{ (time .Params.updated).Format "Monday, January 2, 2006" }}</time></p>
-                        {{ else }}
-                            <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time></p>
-                        {{ end }}
-
-                        <div class="flex items-center">
-                            <span class="text-sm text-gray-700">
+                        <div class="flex flex-wrap items-center my-4 text-sm text-gray-700">
+                            <span>
                                 {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
                             </span>
                         </div>
+
+                        <div class="text-sm text-gray-700 mb-4">
+                            {{ if .Params.updated }}
+                                <span>Updated on <time>{{ (time .Params.updated).Format "Monday, January 2, 2006" }}</time></span>
+                            {{ else }}
+                                <span>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time></span>
+                            {{ end }}
+                        </div>
+
+                        {{ partial "blog/full-poster.html" . }}
+
                         <section>
                             {{ .Content }}
                         </section>

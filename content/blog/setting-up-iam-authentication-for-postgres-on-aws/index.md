@@ -3,7 +3,8 @@ title: "Passwordless PostgreSQL: IAM Authentication with Pulumi"
 date: 2026-02-13
 draft: false
 meta_desc: "Secure your PostgreSQL databases with IAM authentication. Eliminate password rotation, simplify access control, and build reusable infrastructure."
-meta_image: iam-for-postgres.png
+meta_image: meta.png
+feature_image: feature.png
 authors:
     - elisabeth-lichtie
 tags:
