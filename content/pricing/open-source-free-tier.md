@@ -7,8 +7,8 @@ layout: pricing-oss
 hero:
     title: Pulumi Cloud for Open Source
     description: |
-        Open source maintainers who use Pulumi can get free access to
-        [Pulumi Cloud Team Edition](/pricing/) — giving your project
+        Open-source maintainers who use Pulumi can get free access to
+        <a class="text-blue-600" href="/pricing/">Pulumi Cloud Team Edition</a>, giving your project
         collaboration features, visibility into deployments, and the tools
         you need to manage infrastructure across contributors.
 
