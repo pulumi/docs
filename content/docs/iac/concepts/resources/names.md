@@ -448,4 +448,4 @@ Any change to the URN of a resource causes the old and new resources to be treat
 
 Both of these operations will lead to a different URN, and thus require the `create` and `delete` operations instead of an `update` or `replace` operation that you would use for an existing resource.
 
-Resources constructed as children of a component resource must include the component resource's name as part of their names (e.g., as a prefix). This ensures uniqueness across multiple instances of the component resource and ensures that if the component is renamed, the child resources are renamed as well. In general, the name of the component resource instance itself (the `name` parameter passed into the component resource constructor) should be used as part of the name of the child resources.
+Resources constructed as children of a component resource must include the component resource's name as part of their names (e.g., as a prefix). This ensures uniqueness across multiple instances of the component resource and ensures that if the component is renamed, the child resources are renamed as well.
