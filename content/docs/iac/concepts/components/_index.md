@@ -308,7 +308,7 @@ Notice that components are instantiated exactly like any other Pulumi resource: 
 
 When you run `pulumi up`, components appear as a resource tree in the CLI output. Child resources are displayed nested under their parent component, giving you visibility into everything the component created on your behalf:
 
-```plain
+```output
 Updating (dev):
      Type                            Name              Status
  +   pulumi:pulumi:Stack             my-stack          created
@@ -624,7 +624,7 @@ When designing component arguments:
 
 ## Creating child resources
 
-Component resources often contain child resources. The names of child resources are often derived from the component resources's name to ensure uniqueness. For example, you might use the component resource's name as a prefix. Also, when constructing a resource, children must be registered as such. To do this, pass the component resource itself as the `parent` option.
+Component resources often contain child resources. The names of child resources are often derived from the component resource's name to ensure uniqueness. For example, you might use the component resource's name as a prefix. Also, when constructing a resource, children must be registered as such. To do this, pass the component resource itself as the `parent` option.
 
 This example demonstrates both the naming convention and how to designate the component resource as the parent:
 
