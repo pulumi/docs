@@ -4,6 +4,7 @@ date: 2026-03-10
 draft: false
 meta_desc: "Pulumi Cloud now supports Google as an identity provider, letting you sign in, sign up, and link your Google account alongside GitHub, GitLab, and Atlassian."
 meta_image: meta.png
+feature_image: feature.png
 authors:
   - pablo-seibelt
   - casey-huang

@@ -32,7 +32,8 @@ Front matter is defined as a YAML block at the top of a Markdown document that d
 - `h1`: If specified, the `<h1>` at the top of the page will use this value instead of the value in the `title` attribute.
 - `menu`: Specifies where a page appears in the document navigation tree.
 - `meta_desc`: Required (unless `redirect_to` is set), at least 50 characters, no longer than 160 characters. This displays as the description of the page in web search results.
-- `meta_image`: Blog posts only. Relative path to an image to display on the blog post list page and for social media previews. The image must be a PNG file for compatibility.
+- `meta_image`: Blog posts only. Relative path to an OpenGraph image (1200×628) for social media previews and the blog home page. The image must be a PNG file for compatibility.
+- `feature_image`: Blog posts only. Relative path to a high-resolution hero image (1884×1256) displayed at the top of the blog post page.
 - `meta_title`: If specified, the meta title (for OpenGraph) will use this value instead of the value in the `title` attribute.
 - `redirect_to`: The relative or absolute URL of a permanent redirect.
 - `title`: Required (unless `redirect_to` is set), 60 characters or less. This controls the default value for the `<title>` tag as well at the top level `<h1>` in the document.

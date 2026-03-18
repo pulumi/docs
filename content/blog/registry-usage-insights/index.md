@@ -5,6 +5,7 @@ date: 2026-02-12
 draft: false
 meta_desc: "See which stacks use which package versions at a glance. Filter by adoption status and track version sprawl across your organization."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - idp-team
 tags:

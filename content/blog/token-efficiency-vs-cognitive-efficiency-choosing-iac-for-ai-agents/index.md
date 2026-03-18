@@ -5,6 +5,7 @@ date: 2026-03-03
 draft: false
 meta_desc: "We benchmarked Terraform HCL and Pulumi TypeScript across two LLMs. HCL uses fewer tokens, but Pulumi's total pipeline cost is 41% lower."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - engin-diri
 tags:

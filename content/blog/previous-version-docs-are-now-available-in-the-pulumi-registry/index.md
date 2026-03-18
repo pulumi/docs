@@ -4,6 +4,7 @@ date: 2026-03-11
 draft: false
 meta_desc: "The Pulumi Registry now includes documentation for previous provider versions, making it easier to find the right docs for the version you're using."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - cam-soper
     - fausto-nunez-alberro
