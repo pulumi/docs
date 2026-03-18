@@ -36,7 +36,7 @@ return await Deployment.RunAsync(() =>
         .Apply(policy =>
         {
             // Empty the policy's Statements list.
-            policy["Statement"] = Output.Create(new List<Dictionary<string, object?>> { });
+            policy["Statement"] = new List<object?>();
             return policy;
         });
 
