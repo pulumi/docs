@@ -72,8 +72,8 @@ section_header_with_code:
   title: "Ship faster with  \nreusable components"
   description: |
     Create reusable infrastructure components that can be used in any language. Package common patterns once and use them everywhere. Publish your components to the Pulumi Registry, npm, PyPI, NuGet, or any package manager.
-  cta_text: Explore the registry
-  cta_link: /registry/
+  cta_text: Learn more about Pulumi components
+  cta_link: /docs/iac/concepts/components
   code_images:
     - language: typescript
       image: /images/product/iac/typescript.svg

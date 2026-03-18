@@ -22,7 +22,7 @@ Note: icon should be Font Awesome icon class (e.g., "fa-shield", "fa-rocket")
 {{ $iconStyle := .icon_style }}
 {{ $iconLayout := .icon_layout }}
 
-<section class="template-three-column {{ if eq $iconStyle " black" }}icons-black{{ end }} {{ if eq $iconLayout "above"
+<section class="template-three-column {{ if eq $iconStyle "black" }}icons-black{{ end }} {{ if eq $iconLayout "above"
     }}icon-layout-above{{ end }}"{{ if $anchor }} id="{{ $anchor }}" {{ end }}>
     {{ if or $tagLine $title $subtitle }}
     <div class="text-left sm:text-center">
@@ -49,7 +49,7 @@ Note: icon should be Font Awesome icon class (e.g., "fa-shield", "fa-rocket")
             </div>
             {{ end }}
             {{ if .title }}
-            <h4 class="three-column-item-title {{ if eq $iconLayout " above" }}template-feature-card-title{{ end }} mb-3
+            <h4 class="three-column-item-title {{ if eq $iconLayout "above" }}template-feature-card-title{{ end }} mb-3
                 {{ if and .icon (ne $iconLayout "above" ) }}flex items-center{{ end }}">
                 {{ if and .icon (ne $iconLayout "above") }}
                 <i class="fa {{ .icon }} mr-3"></i>
@@ -58,7 +58,7 @@ Note: icon should be Font Awesome icon class (e.g., "fa-shield", "fa-rocket")
             </h4>
             {{ end }}
             {{ if .description }}
-            <p class="three-column-item-description {{ if eq $iconLayout " above" }}template-feature-card-description{{
+            <p class="three-column-item-description {{ if eq $iconLayout "above" }}template-feature-card-description{{
                 end }} mb-6">{{ .description | markdownify }}</p>
             {{ end }}
             {{ if .cta_text }}

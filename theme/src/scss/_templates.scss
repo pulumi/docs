@@ -390,7 +390,7 @@ $violet-primary: #673EAC;
         color: var(--gray-primary, #404041);
         font-family: Inter, sans-serif;
         letter-spacing: -0.2px;
-        @apply text-center text-body-l font-normal font-semibold leading-normal;
+        @apply text-center text-body-l font-semibold leading-normal;
     }
 
     .section-header-tag-wrap {
@@ -406,14 +406,7 @@ $violet-primary: #673EAC;
         @apply text-body-s max-w-xl mx-auto;
 
         a {
-            @apply text-inherit no-underline pointer-events-none;
-        }
-    }
-
-    .section-header-image {
-        @media (max-width: 768px) {
-            width: 200vw;
-            margin-left:-25%;
+            @apply text-inherit no-underline;
         }
     }
 }
