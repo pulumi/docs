@@ -1,7 +1,7 @@
 ---
 title: "Use Your GPU For Your Agents: Self-Host Qwen 3.5 with Pulumi and Tailscale"
 allow_long_title: true
-date: 2026-03-13
+date: 2026-03-20
 draft: false
 meta_desc: |
     Self-host Qwen 3.5 on your GPU with Pulumi, llama.cpp, and Tailscale. One pulumi up gives you a private OpenAI-compatible API on your tailnet.
@@ -32,9 +32,9 @@ Many open-weight models now run well on consumer GPUs. Once the model is on your
 
 This post walks through a Kubernetes deployment on a Linux home server. It was tested on a Ryzen 9 5950x with 32 GB DDR4 and an RTX 3080 10 GB, which is high-end 2020 consumer hardware comparable to a mid-range build today. If your rig is in the same ballpark, this setup will likely work for you. If you are on a Mac with an M-series chip, you can run the same model locally with [mlx-lm](https://github.com/ml-explore/mlx-lm) instead.
 
-[Qwen 3.5](https://qwen.ai/blog?id=qwen3.5) is an Apache 2.0-licensed model family from Alibaba. The 35B-A3B variant uses a Mixture-of-Experts (MoE) architecture that activates only 3 billion parameters per token. Thanks to quantized [GGUF](https://huggingface.co/docs/hub/en/gguf) models, models that would normally require datacenter hardware fit on consumer GPUs with acceptable quality loss.
+[Qwen 3.5](https://qwen.ai/blog?id=qwen3.5) is an Apache 2.0-licensed model family from Alibaba. The 35B-A3B variant uses a Mixture-of-Experts (MoE) architecture that activates only 3 billion parameters per token. Thanks to quantized models distributed in the [GGUF](https://huggingface.co/docs/hub/en/gguf) format, models that would normally require datacenter hardware fit on consumer GPUs with acceptable quality loss. GGUF is the file format; quantization (e.g., Q4_K_M) is the compression that shrinks the model by reducing numerical precision.
 
-The full 35B-parameter model fits in around 22 GB at Q4_K_M precision, and llama.cpp can split layers between GPU VRAM and system RAM so you do not need all of that in VRAM.
+The full 35B-parameter model fits in around 22 GB at Q4_K_M quantization, and llama.cpp can split layers between GPU VRAM and system RAM so you do not need all of that in VRAM.
 
 In this post we will set up a complete self-hosted inference stack with a single `pulumi up`: [llama.cpp](https://github.com/ggerganov/llama.cpp) serving an OpenAI-compatible API, [Open WebUI](https://github.com/open-webui/open-webui) for a browser chat interface, and [Tailscale](https://tailscale.com/) for secure access from any device on your tailnet, all orchestrated on a local [k3s](https://k3s.io/) Kubernetes cluster.
 
@@ -79,6 +79,10 @@ llmfit
 ```
 
 ## Prerequisites
+
+{{< notes type="info" >}}
+If this is your first time setting up GPU drivers and k3s, budget around 15 minutes for the prerequisites below. The Pulumi program itself deploys in under 5 minutes.
+{{< /notes >}}
 
 Before you start, make sure you have:
 
@@ -145,6 +149,10 @@ Before you start, make sure you have:
 - A [Tailscale account](https://login.tailscale.com/start) (free tier works)
 
 ## The Pulumi program
+
+{{< notes type="tip" >}}
+You could deploy these manifests with `kubectl apply`, but Pulumi buys you a few things: the Tailscale ACL, Kubernetes resources, and config all live in one stack so `pulumi destroy` cleans up everything. The `ComponentResource` lets you swap models or GPU vendors by changing config instead of editing YAML. And the Tailscale auth key is encrypted in state, not sitting in a plaintext file.
+{{< /notes >}}
 
 Create a new project:
 
@@ -248,6 +256,10 @@ ts_acl = tailscale.Acl(
 
 Without these options, destroy+up cycles would fail with a "precondition failed" 412 error.
 
+{{< notes type="info" >}}
+This ACL grants all tailnet members (`autogroup:member`) access to all devices on all ports (`*:*`). This is fine if you are the only user on your tailnet. If you share your tailnet with other people, scope the `dst` field to specific tags and ports (e.g., `tag:llm-server:30000`). Also note that `import_` will **replace your existing tailnet ACL** on first deploy, so export your current rules first if you have custom ones.
+{{< /notes >}}
+
 #### Open WebUI and Tailscale networking
 
 Open WebUI connects to the LLM server via its cluster-internal URL and disables authentication since it is only reachable through the tailnet.
@@ -279,6 +291,15 @@ k8s.core.v1.ContainerArgs(
 ```
 
 Any device on your tailnet can reach the chat interface at `http://<hostname>:30000` without exposing anything to the public internet.
+
+{{< notes type="warning" >}}
+By default, k3s NodePort services bind to `0.0.0.0`, which means devices on your LAN can also reach port 30000. To restrict access to Tailscale only, add the following to `/etc/rancher/k3s/config.yaml` and restart k3s with `sudo systemctl restart k3s`:
+
+```yaml
+nodeport-addresses: "100.64.0.0/10"
+```
+
+{{< /notes >}}
 
 Configure the Tailscale provider:
 - Generate an API key from [Settings > Keys](https://login.tailscale.com/admin/settings/keys)
@@ -358,9 +379,11 @@ After following this guide you have:
 
 - An OpenAI-compatible API running on your own GPU via llama.cpp
 - A browser-based chat UI accessible from any device on your tailnet
-- Tailscale ACLs which allow only you to access the service
+- Tailscale ACLs scoping access to your tailnet members
 - Persistent model storage that survives pod restarts
 - Everything running on a local Kubernetes cluster you control
+
+To swap in a new model or quantization, change the `model` and `modelFile` config values and run `pulumi up`. The pod restarts and pulls the new GGUF file.
 
 If you outgrow your local GPU, the same Pulumi program can be adapted to target a cloud Kubernetes cluster. Swap your kubeconfig for a managed K8s service with GPU nodes and `pulumi up` again.
 
