@@ -376,12 +376,10 @@ $violet-primary: #673EAC;
     }
 
     .product-hero-visual {
-        width: 100%;
+        @apply w-full;
 
-        @media (max-width: 768px) {
-            img {
-                min-width: 700px;
-            }
+        img {
+            @apply min-w-5xl;
         }
     }
 }
