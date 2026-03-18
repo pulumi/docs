@@ -33,8 +33,6 @@ helm-.*
 # https://github.com/pulumi/docs/issues/14505
 aws-iampolicy-jsonparse-csharp
 aws-acm-certificate-csharp
-aws-s3bucket-bucketobject-interpolate-csharp
-aws-s3bucket-bucketpolicy-csharp
 deepseek-ollama-csharp
 gcp-simple-webserver-yaml
 
