@@ -1,6 +1,6 @@
 ---
 title: Pulumi Cloud for Open Source
-meta_desc: Free access to Pulumi Cloud Team Edition for community-driven open source projects — including dashboards, CI/CD integrations, RBAC, and more.
+meta_desc: Free access to Pulumi Cloud Team Edition for community-driven open source projects — including dashboards, CI/CD integrations, and more.
 type: page
 layout: pricing-oss
 
