@@ -10,7 +10,7 @@ return await Deployment.RunAsync(() =>
     var project = "pulumi-devrel"; // REPLACE
     var startupScript = @"#!/bin/bash
     echo ""Hello, World!"" > index.html
-    nohup python -m SimpleHTTPServer 80 &";
+    nohup python3 -m http.server 80 &";
     // Create a VPC network.
     var vpcNetwork = new Gcp.Compute.Network("vpc-network", new()
     {
@@ -28,7 +28,7 @@ return await Deployment.RunAsync(() =>
     // [1] Create a compute instance.
     var computeInstance = new Gcp.Compute.Instance("webserver-instance", new()
     {
-        MachineType ="f1-micro",
+        MachineType ="e2-micro",
         Project = project,
         Zone=zone,
         MetadataStartupScript=startupScript,
@@ -36,7 +36,7 @@ return await Deployment.RunAsync(() =>
         {
             InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
             {
-                Image="debian-cloud/debian-9-stretch-v20181210"
+                Image="debian-cloud/debian-12"
             }
         },
         NetworkInterfaces= new[]

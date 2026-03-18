@@ -61,7 +61,7 @@ $ open $(pulumi stack output url)
 Projects created with the Virtual Machine template expose the following [configuration](/docs/concepts/config) settings:
 
 machineType
-: The Compute Engine machine type to use for the VM. Defaults to `f1-micro`.
+: The Compute Engine machine type to use for the VM. Defaults to `e2-micro`.
 
 osImage
 : The OS image type to use for the VM. Defaults to `debian-11`.

@@ -47,5 +47,6 @@ Write your own policies in TypeScript, Python, or [OPA (Rego)](/docs/insights/po
 
 - [Browse pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/)
 - [Write custom policy packs](/docs/insights/policy/policy-packs/authoring/)
+- [PulumiPolicy.yaml project file reference](/docs/insights/policy/policy-packs/project-file/)
 - [Configure policy groups](/docs/insights/policy/policy-groups/)
 - [View policy findings](/docs/insights/policy/policy-findings/)

@@ -11,11 +11,6 @@
 #
 
 
-# Java examples of LoadBalancedFargateService erroneously complain about missing container declarations.
-# https://github.com/pulumi/pulumi-awsx/issues/820
-awsx-vpc-fargate-service-java
-awsx-load-balanced-fargate-ecr-java
-awsx-load-balanced-fargate-nginx-java
 
 # API Gateway authorizer parameter `providerArns` is mistyped.
 # https://github.com/pulumi/pulumi-aws-apigateway/issues/121
@@ -43,15 +38,12 @@ gcp-import-service-account-python
 aws-iampolicy-jsonparse-csharp
 azure-native-import-resource-group-python
 aws-acm-certificate-csharp
-aws-simulated-dbserver-database-csharp
 aws-s3bucket-bucketobject-interpolate-csharp
 gcp-import-service-account-go
-aws-s3websitebucket-oai-bucketpolicy-csharp
 azure-native-import-resource-group-go
 gcp-import-service-account-typescript
 aws-s3bucket-bucketpolicy-csharp
 deepseek-ollama-csharp
-gcp-simple-webserver-yaml
 azure-native-import-resource-group-csharp
 
 # Terraform reference projects are not Pulumi programs.

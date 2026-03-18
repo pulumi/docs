@@ -24,6 +24,10 @@ meta_desc:
 # ratio has been provided for you.
 meta_image: meta.png
 
+# The feature_image is a high-resolution hero image (1884x1256) displayed at
+# the top of the blog post page. Generate both images with /blog-meta-image.
+feature_image: feature.png
+
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.

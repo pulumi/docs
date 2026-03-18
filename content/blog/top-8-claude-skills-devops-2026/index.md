@@ -4,6 +4,7 @@ date: 2026-02-09
 draft: false
 meta_desc: "Skills teach AI agents how to work like experienced practitioners. In this post, we share several skills that can improve how you build cloud infrastructure."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - engin-diri
 tags:

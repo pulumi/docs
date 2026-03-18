@@ -1,50 +1,51 @@
 # Asset Catalog Reference
 
-All assets live in `.claude/commands/blog-meta-image/assets/`. Paths in the JSON config are relative to the `--assets-dir` directory.
+All assets live in `.claude/commands/blog-meta-image/assets/`. Paths in the feature JSON config are relative to the `--assets-dir` directory. The `feature_image` path in the meta JSON config must be an absolute path.
 
 ## Templates
 
-Located in `templates/`. Pre-composed 1200x628 PNGs with Pulumi logo, background gradient, and grid lines baked in.
+Located in `templates/`. Two sets of PNGs:
 
-### Dark Theme (deep purple gradient)
+- **Feature templates** — 1884×1256px. Used as the blog post's visual feature image. Static variants are used as-is; logo variants get SVG logos composited onto circular placeholders.
+- **Meta template** — 1200×628px (`meta.png`). Used as the OpenGraph image. The chosen feature image is scaled and composited offset-right behind the title text.
+
+### Feature Templates (1884×1256)
+
+| Filename | Description |
+|----------|--------------|
+| feature-platform.png | Default, platform engineering, DevOps, Pulumi news and events |
+| feature-neo.png  | For usage on Neo specific posts only |
+| feature-rocket.png | Releases, new features, and announcements |
+| feature-shield.png | Security, secrets, compliance, and policy |
+| feature-lightbulb.png | Tutorials, how-tos, best practices, and guest posts |
+| feature-logo-1.png | Single large circular logo placeholder |
+| feature-logo-2.png | Two circular logo placeholders |
+| feature-logo-3.png | Three circular logo placeholders |
+
+### Meta Assets (1200×628)
+
+The meta image is built from scratch (solid `#20054E` background) rather than from a template PNG. Two overlay assets are composited on top of the feature image:
 
 | Filename | Type | Description |
 |----------|------|-------------|
-| dark-flying.png | mascot | 3D Pulumipus flying with wings spread and sunglasses |
-| dark-closeup.png | mascot | 3D teal Pulumipus head closeup with big sunglasses |
-| dark-wireframe.png | mascot | Purple line-art wireframe outline of Pulumipus |
-| dark-shield.png | mascot | 3D Pulumipus holding a shield with sunglasses |
-| dark-logo-1.png | 1-logo | Large half-pill white placeholder on right |
-| dark-logo-2.png | 2-logo | Two stacked rounded-square white placeholders |
-| dark-logo-3.png | 3-logo | Three staggered rounded-square white placeholders |
+| meta-overlay.png | overlay | Full-bleed gradient/vignette composited over the feature image |
+| meta-logo.png | logo | Pulumi wordmark (175×44), placed bottom-left at x=90, 40px from bottom |
 
-### Light Theme (lighter purple gradient)
-
-| Filename | Type | Description |
-|----------|------|-------------|
-| light-flying.png | mascot | 3D Pulumipus flying (lighter bg) |
-| light-closeup.png | mascot | 3D Pulumipus closeup (lighter bg) |
-| light-wireframe.png | mascot | Wireframe Pulumipus (lighter bg) |
-| light-shield.png | mascot | 3D Pulumipus with shield (lighter bg) |
-| light-logo-1.png | 1-logo | Large half-pill placeholder (lighter bg) |
-| light-logo-2.png | 2-logo | Two stacked placeholders (lighter bg) |
-| light-logo-3.png | 3-logo | Three staggered placeholders (lighter bg) |
-
-### Logo Placeholder Positions (measured from PNGs)
+### Logo Placeholder Positions (feature logo templates)
 
 These positions are stored in `catalog.yaml` and used by the compose script automatically.
 
-**1-logo templates** (dark-logo-1, light-logo-1):
-- Placeholder: x=678, y=72, 522x476px (large half-pill shape)
+**feature-logo-1** (1 circle, ⌀680):
+- Placeholder: x=602, y=288, 680×680px (circle center at 942,628 — image center)
 
-**2-logo templates** (dark-logo-2, light-logo-2):
-- Top: x=900, y=88, 200x182px
-- Bottom: x=900, y=349, 200x181px
+**feature-logo-2** (2 circles, ⌀390):
+- Left: x=499, y=432, 390×390px (center 694,627)
+- Right: x=992, y=432, 390×390px (center 1187,627)
 
-**3-logo templates** (dark-logo-3, light-logo-3):
-- Top-left: x=822, y=116, 145x173px
-- Mid-right: x=998, y=202, 145x173px
-- Bottom-left: x=822, y=329, 145x173px
+**feature-logo-3** (3 circles, ⌀390):
+- Top: x=720, y=234, 390×390px (center 915,429)
+- Bottom-left: x=499, y=630, 390×390px (center 694,825)
+- Bottom-right: x=993, y=630, 390×390px (center 1188,825)
 
 ## Logos
 
@@ -78,7 +79,7 @@ Located in `logos/`. SVG product/technology logos placed on top of white placeho
 
 ## Text Defaults
 
-From `catalog.yaml`:
+From `catalog.yaml` (applied to the meta image only):
 
 - **Font**: inter-bold.woff (static bold, always white #FFFFFF)
 - **Letter-spacing**: -0.025em (tighter tracking)
@@ -88,22 +89,21 @@ From `catalog.yaml`:
 - **Max width**: 700px (text area on left half)
 - **Font size**: variable (60-104px depending on title length)
 
-## Template Selection Guide
+## Feature Template Selection Guide
 
-| Topic / Signal | Recommended Style |
-|---------------|-------------------|
-| **General blog post** | flying or closeup mascot |
-| **Security / compliance** | shield mascot |
-| **Technical / code-focused** | wireframe mascot |
-| **Cloud provider specific** | logo template with provider logo(s) |
-| **Multi-technology** | logo template with 2-3 relevant logos |
-| **Fun / casual** | flying or closeup mascot |
-| **Abstract / conceptual** | wireframe mascot |
+| Topic / Signal | Recommended Feature Template |
+|---------------|------------------------------|
+| **For usage on Neo specific posts only** | neo |
+| **Default, platform engineering, DevOps, Pulumi news and events** | platform |
+| **Releases, new features, and announcements** | rocket |
+| **Security, secrets, compliance, and policy** | shield |
+| **Tutorials, how-tos, best practices, and guest posts** | lightbulb |
+| **Cloud provider or technology-specific content** | logo variant with provider/tech logos |
 
 ## Composition Rules
 
 1. **Text is always white** — all templates have dark-enough backgrounds for white text readability
-2. **Text stays on the left** — max_width of 700px prevents text from overlapping the right-side mascot/logos
+2. **Text stays on the left** — max_width of 700px prevents text from overlapping the right-side imagery/logos
 3. **Logos go on white placeholders** — the compose script centers logos within the measured placeholder bounds
 4. **1-3 logos max** — template determines slot count; select the template matching logo count
 5. **Font size scales with title length** — shorter titles get larger fonts for visual impact
