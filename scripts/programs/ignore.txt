@@ -38,7 +38,6 @@ gcp-import-service-account-python
 aws-iampolicy-jsonparse-csharp
 azure-native-import-resource-group-python
 aws-acm-certificate-csharp
-aws-s3bucket-bucketobject-interpolate-csharp
 gcp-import-service-account-go
 azure-native-import-resource-group-go
 gcp-import-service-account-typescript
