@@ -71,7 +71,7 @@ section_header_with_code:
   tag_line: Infrastructure building blocks
   title: "Ship faster with  \nreusable components"
   description: |
-    Stop copy-pasting and create reusable infrastructure components that can be used in any language. Package common patterns once, use everywhere. Share via Pulumi's registry, npm, PyPI, NuGet, or any package manager.
+    Create reusable infrastructure components that can be used in any language. Package common patterns once and use them everywhere. Publish your components to the Pulumi Registry, npm, PyPI, NuGet, or any package manager.
   cta_text: Explore the registry
   cta_link: /registry/
   code_images:
