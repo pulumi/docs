@@ -13,10 +13,6 @@ hero:
   title_secondary: in any language.
   description: |
     Use the programming languages you already know to build infrastructure on AWS, Azure, Google Cloud, Kubernetes, and thousands of providers.
-  cta_primary_text: Get started
-  cta_primary_link: /docs/iac/get-started/
-  cta_secondary_text: Contact us
-  cta_secondary_link: /contact/?form=request-a-demo
   image: /images/product/iac/matrix-cards.png
   image_alt: Pulumi infrastructure as code in any language
   anchor: hero
@@ -57,7 +53,7 @@ counter_cards:
   cards:
     - number: "350,000+"
       label: engineers building with Pulumi
-    - number: "3,700+"
+    - number: "4,000+"
       label: companies in production
     - number: "1,000+"
       label: of cloud and service providers
@@ -197,9 +193,5 @@ three_column_cloud:
 
 footer_cta:
   title: The infrastructure-as-code platform for any cloud.
-  cta_primary_text: Get started
-  cta_primary_link: /docs/iac/get-started
-  cta_secondary_text: Contact us
-  cta_secondary_link: /contact
   anchor: get-started
 ---
