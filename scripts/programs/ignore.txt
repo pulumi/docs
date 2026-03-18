@@ -42,7 +42,6 @@ aws-s3bucket-bucketobject-interpolate-csharp
 gcp-import-service-account-go
 azure-native-import-resource-group-go
 gcp-import-service-account-typescript
-aws-s3bucket-bucketpolicy-csharp
 gcp-simple-webserver-yaml
 azure-native-import-resource-group-csharp
 
