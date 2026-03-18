@@ -12,7 +12,7 @@ hero:
   title_primary: Infrastructure as code
   title_secondary: in any language.
   description: |
-    Use the programming languages you already know to build infrastructure on AWS, Azure, Google Cloud, Kubernetes, and thousands of providers.
+    Use the programming languages you already know to build infrastructure on AWS, Azure, Google Cloud, Kubernetes, and hundreds more providers.
   image: /images/product/iac/matrix-cards.png
   image_alt: Pulumi infrastructure as code in any language
   anchor: hero
