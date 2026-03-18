@@ -95,8 +95,6 @@ The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, ra
 ***Example:** `PulumiPlugin.yaml` for TypeScript*
 
 ```yaml
-name: sample-components
-version: 0.1.0
 runtime: nodejs
 ```
 
@@ -176,8 +174,6 @@ This compiles the TypeScript files and generates the JavaScript output in the `b
 ***Example:** `PulumiPlugin.yaml` for Python*
 
 ```yaml
-name: sample-components
-version: 0.1.0
 runtime: python
 ```
 
@@ -200,8 +196,6 @@ The `pulumi` SDK contains everything we need for making a component. The `pulumi
 ***Example:** `PulumiPlugin.yaml` for Go*
 
 ```yaml
-name: sample-components
-version: 0.1.0
 runtime: go
 ```
 
@@ -231,8 +225,6 @@ The `pulumi` SDK contains everything we need for making a component. The `pulumi
 ***Example:** `PulumiPlugin.yaml` for C#*
 
 ```yaml
-name: sample-components
-version: 0.1.0
 runtime: dotnet
 ```
 
@@ -271,8 +263,6 @@ Note that the `AssemblyName` specifies the name of the component package. This n
 ***Example:** `PulumiPlugin.yaml` for Java*
 
 ```yaml
-name: sample-components
-version: 0.1.0
 runtime: java
 ```
 
