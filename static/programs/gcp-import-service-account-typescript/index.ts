@@ -6,7 +6,7 @@ const projectId = config.require("project");
 
 const serviceAcctEmailSuffix = `@${projectId}.iam.gserviceaccount.com`;
 const serviceAcctDisplayName = "pulumi-tutorial-service-account"; // REPLACE
-const serviceAcctEmailPrefix = "pulumi-tutorial-service-accoun"; // REPLACE
+const serviceAcctEmailPrefix = "pulumi-tutorial-service-account"; // REPLACE
 
 const importedTutorialServiceAccount = new gcp.serviceaccount.Account(
     "imported-tutorial-service-account",
