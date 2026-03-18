@@ -297,6 +297,10 @@ def tint_image(img: Image.Image, hex_color: str, mode: str = "overlay") -> Image
         blend_s *= 0.7
         arr = np.array(img.convert("RGB"), dtype=np.float32) / 255.0
         h_px, l_px, s_px = _rgb_to_hls_np(arr)
+        # Remap lightness so dark pixels are pushed up to a visible floor.
+        # Maps L=0 → l_floor and L=1 → 1.0, preserving relative contrast.
+        l_floor = 0.45
+        l_px = l_floor + l_px * (1.0 - l_floor)
         out = _hls_to_rgb_np(
             np.full_like(h_px, blend_h),
             l_px,
