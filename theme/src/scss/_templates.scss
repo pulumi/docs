@@ -379,7 +379,9 @@ $violet-primary: #673EAC;
         width: 100%;
 
         @media (max-width: 768px) {
-            width: 200vw;
+            img {
+                min-width: 700px;
+            }
         }
     }
 }
