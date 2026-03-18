@@ -36,6 +36,7 @@ aws-acm-certificate-csharp
 aws-s3bucket-bucketobject-interpolate-csharp
 aws-s3bucket-bucketpolicy-csharp
 deepseek-ollama-csharp
+gcp-simple-webserver-yaml
 
 # GCP import tests: service account doesn't exist yet and GCP project
 # configuration needs to be sorted out. See #14505.
