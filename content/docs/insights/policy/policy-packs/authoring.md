@@ -427,8 +427,9 @@ package aws
 # description: Limits the number of S3 buckets per stack.
 stack_deny_too_many_buckets[msg] {
     buckets := [r | r := input.resources[_]; r.type == "aws:s3/bucket:Bucket"]
-    count(buckets) > 3
-    msg := sprintf("Stack has %d S3 buckets, maximum allowed is 3", [count(buckets)])
+    n := count(buckets)
+    n > 3
+    msg := sprintf("Stack has %d S3 buckets, maximum allowed is 3", [n])
 }
 ```
 
@@ -951,7 +952,7 @@ deny_large_instances[msg] {
 }
 ```
 
-Pass configuration values using the standard Pulumi policy configuration. Each rule's `properties` are injected as `data.config.<rule_name>`:
+Pass configuration values using the standard Pulumi policy configuration. The values inside the `"properties"` object are injected as `data.config.<rule_name>`. The `"properties"` wrapper key is required in the configuration JSON:
 
 ```json
 {
