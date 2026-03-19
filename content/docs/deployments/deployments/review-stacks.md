@@ -29,7 +29,7 @@ Configuring review stacks is a three-step process:
 
 You can use an existing stack as a review stack template, as long as it has Deployment Settings configured. This will result in review stacks being deployed into the same cloud account. If you want to separate the cloud resources in your production stack from the resources created via review stacks then you can create a separate stack and template that references a different cloud account (AWS, Azure, GCP, etc.).
 
-Review stacks and Deployment Settings can be configured via the Pulumi Cloud console, the Pulumi Cloud REST API, or within a Pulumi Program using the Pulumi Cloud Resource Provider.
+Review stacks and Deployment Settings can be configured via the Pulumi Cloud console, the Pulumi Cloud REST API, or within a Pulumi program using the Pulumi Cloud resource provider.
 
 ### Pulumi Cloud UI
 
@@ -77,7 +77,7 @@ const deploymentSettings = new pulumiservice.DeploymentSettings("deploymentSetti
 
 ## Common patterns
 
-Review stacks are powered by Pulumi IaC, and as a result offer a high degree of flexibility by way of configuration, and even multiple Pulumi Programs. The following sections outline common patterns.
+Review stacks are powered by Pulumi IaC, and as a result offer a high degree of flexibility by way of configuration, and even multiple Pulumi programs. The following sections outline common patterns.
 
 ### Utilizing config
 
@@ -107,7 +107,7 @@ config:
 
 You can use review stack config in other creative ways, for instance to configure stacks to utilize shared development resources such as VPCs or databases rather than having a dedicated database per review stack. This can be useful to both optimize costs, and speed up deployment times.
 
-### Single Stack
+### Single stack
 
 You can configure a single stack with `git push` to deploy, pull request previews, and review stacks. This is the simplest, lowest configuration approach, but results in your review stacks getting created in the same cloud account as your primary or production stack. It also means that the same configuration will be used for your production and review stacks, meaning that patterns like downsizing review stacks won't be possible.
 
@@ -188,13 +188,13 @@ const prSettings = new pulumiservice.DeploymentSettings("prSettings", {
 
 ```
 
-### Customizing behavior with multiple Pulumi Programs
+### Customizing behavior with multiple Pulumi programs
 
-Sometimes you want your review stack to differ substantially from the stack that gets deployed to production. You might want to use multi-tenant development infrastructure for review stacks to both reduce the cost of development infrastructure, and also speed up review stack deployment times. Sometimes this can be accomplished with config alone, but occasionally it can be useful to write separate Pulumi Programs for the review stack. One common pattern for this is:
+Sometimes you want your review stack to differ substantially from the stack that gets deployed to production. You might want to use multi-tenant development infrastructure for review stacks to both reduce the cost of development infrastructure, and also speed up review stack deployment times. Sometimes this can be accomplished with config alone, but occasionally it can be useful to write separate Pulumi programs for the review stack. One common pattern for this is:
 
-- Production program and stack: the Pulumi Program that defines your complete, stand-alone production (and often dev/test/staging) environment.
-- Shared Kubernetes stack: a Pulumi Program that deploys a Kubernetes cluster, designed to be shared by all review stacks.
-- Review stack: a Pulumi Program that builds containers, and deploys Kubernetes resources (pods, deployments, etc.) to the shared cluster.
+- Production program and stack: the Pulumi program that defines your complete, stand-alone production (and often dev/test/staging) environment.
+- Shared Kubernetes stack: a Pulumi program that deploys a Kubernetes cluster, designed to be shared by all review stacks.
+- Review stack: a Pulumi program that builds containers, and deploys Kubernetes resources (pods, deployments, etc.) to the shared cluster.
 
 The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
 
@@ -256,7 +256,7 @@ const prSettings = new pulumiservice.DeploymentSettings("prSettings", {
 
 ### Customizing behavior with path filters
 
-Sometimes you want to vary the behavior of a review stack based on what kind of code changed. For instance, changes to the `migrations` folder should trigger a migrations container to be built and run, but otherwise we want to skip this step as it adds a few extra minutes to our deployment times. This can be accomplished by using path filters in combination with multiple review stack templates. When the pull request is opened, Pulumi Deployments will evaluate the code changes and select which template to use based on matches against the path filters. This allows you to customize Deployment Settings, config, or Pulumi Program, based on what code changes were made.
+Sometimes you want to vary the behavior of a review stack based on what kind of code changed. For instance, changes to the `migrations` folder should trigger a migrations container to be built and run, but otherwise we want to skip this step as it adds a few extra minutes to our deployment times. This can be accomplished by using path filters in combination with multiple review stack templates. When the pull request is opened, Pulumi Deployments will evaluate the code changes and select which template to use based on matches against the path filters. This allows you to customize Deployment Settings, config, or Pulumi program, based on what code changes were made.
 
 The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
 
