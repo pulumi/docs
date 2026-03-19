@@ -55,22 +55,6 @@ Parameters:
         {{ end }}
     </div>
     {{ if $cards }}
-    <div class="product-two-column-cards grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-36 mt-12 md:mt-16 lg:mt-20 w-full">
-        {{ range $cards }}
-        <div class="product-feature-mini-card">
-            {{ if .icon }}
-            <div class="template-feature-card-icon">
-                <i class="fa {{ .icon }}"></i>
-            </div>
-            {{ end }}
-            {{ if .title }}
-            <h4 class="template-feature-card-title">{{ .title }}</h4>
-            {{ end }}
-            {{ if .description }}
-            <p class="template-feature-card-description">{{ .description | markdownify }}</p>
-            {{ end }}
-        </div>
-        {{ end }}
-    </div>
+    {{ partial "template-partials/template-mini-cards.html" $cards }}
     {{ end }}
 </section>

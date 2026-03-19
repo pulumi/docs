@@ -1,5 +1,5 @@
 ---
-title: "Unified Platform for Infrastructure Teams – Pulumi"
+title: Unified Platform for Infrastructure Teams – Pulumi
 meta_desc: Build, deploy, and manage cloud infrastructure faster. Write code in any language, automate with AI, and enforce governance at scale.
 type: page
 layout: product-page
@@ -38,7 +38,7 @@ product_two_column:
 
 neo_section:
   tag_line: Infrastructure AI
-  title: "Meet Neo, your AI  \nplatform engineer"
+  title: "Meet Neo, your AI<br>platform engineer"
   description: |
     The industry's first AI agent built for infrastructure. Neo automates complex tasks end-to-end, debugs deployments instantly, and generates infrastructure code — all while respecting your policies and requiring appropriate approvals.
   cta_text: Meet Pulumi Neo
@@ -112,7 +112,7 @@ idp_section:
   tag_line: Internal developer platform
   title: Enable self-service infrastructure at scale
   description: |
-    Encrypted state storage, secrets management, and collaboration built in. When you scale, enterprise features like RBAC, policy enforcement, and SSO are ready. All powered by our open source engine.
+    Give engineers self-service infrastructure through templates, components, and developer portals. Platform teams maintain control through policies and governance. Ship golden paths that engineers actually want to use.
   cta_text: Explore Platform Engineering
   cta_link: /product/internal-developer-platforms/
   image: /images/product/overview/overview-idp.png
