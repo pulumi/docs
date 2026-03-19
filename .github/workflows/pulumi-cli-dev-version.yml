@@ -23,6 +23,7 @@ jobs:
       - name: checkout docs repo
         uses: actions/checkout@v6
       - name: pull-request
+        id: create-pr
         uses: repo-sync/pull-request@v2
         with:
           source_branch: "pulumi/${{ github.run_id }}-${{ github.run_number }}"
@@ -31,6 +32,11 @@ jobs:
           pr_body: "Automated PR"
           pr_label: "automation/pulumi-cli-docs,automation/merge"
           github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Enable auto-merge
+        if: steps.create-pr.outputs.pr_created == 'true'
+        run: gh pr merge ${{ steps.create-pr.outputs.pr_number }} --auto --squash
+        env:
+          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
   update-latest-dev-version:
     runs-on: ubuntu-latest
     steps:
