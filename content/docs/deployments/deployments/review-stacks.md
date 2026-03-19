@@ -15,37 +15,29 @@ menu:
     identifier: deployments-deployments-review-stacks
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VvQcx51YL4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+Review stacks are dedicated cloud environments powered by Pulumi Deployments. They are created automatically when a pull request is opened, updated on each new commit, and destroyed when the pull request is merged or closed. They work with [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/). When a pull request is opened, Pulumi Deployments stands up a stack with your changes and adds a comment to the PR with the outputs from your deployment.
 
-Review stacks are dedicated cloud environments that get created automatically every time a pull request is opened, all powered by Pulumi Deployments. They work with [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/). Open a pull request, and Pulumi Deployments will stand up a stack with your changes and add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources. It has never been simpler to pick up an unfamiliar codebase, make changes to both application and infrastructure code, and share a live environment for review with your teammates.
+## Configuring review stacks
 
-![Review Stack Pull Request Comment](../comment.png)
+Review stacks require that your stacks are configured with [Deployment Settings](/docs/deployments/deployments/reference/#deployment-settings). They are configured at the branch level. If you utilize multiple branches for your development and release process, you will need to configure a review stack template for each one.
 
-Review stacks enable you to iterate on both application code changes and infrastructure code changes at the same time. Just open a pull request and you can start testing changes against everything from simple static websites to API servers, microservices, data pipelines, Kubernetes clusters, and any other piece of infrastructure across Pulumi’s 100+ cloud providers. Review Stacks manage the full lifecycle of your cloud development environment including creating it when the PR is opened, updating it every time a new commit is pushed, and destroying and cleaning up all cloud resources when the pull request is merged or closed.
-
-## Configuring Review Stacks
-
-Review Stacks are powered by Pulumi Deployments, and require that your stacks are configured with [Deployment Settings](/docs/deployments/deployments/reference/#deployment-settings). Review Stacks are configured at the branch level. If you utilize multiple branches for your development and release process, you will need to configure a Review Stack template for each one.
-
-Configuring Review Stacks is a simple three-step process:
+Configuring review stacks is a three-step process:
 
 1. Create a new stack, by convention named `pr`, and corresponding `Pulumi.pr.yaml` configuration file - this config will be copied into every review stack that gets created, and can even be modified within a PR.
 2. Configure [Deployment Settings](/docs/deployments/deployments/reference/#deployment-settings) for the stack - this specifies how to acquire source code, cloud credentials and more when deploying via Pulumi Deployments.
-3. Set the `pullRequestTemplate` Deployment Setting to true - this indicates that all pull requests against this stack’s branch should reference this stack as a Review Stack template.
+3. Set the `pullRequestTemplate` Deployment Setting to true - this indicates that all pull requests against this stack’s branch should reference this stack as a review stack template.
 
-You can use an existing stack as a Review Stack template, as long as it has Deployment Settings configured. This will result in Review Stacks being deployed into the same cloud account. If you want to separate the cloud resources in your production stack from the resources created via Review Stacks then you can create a separate stack and template that references a different cloud account (AWS, Azure, GCP, etc).
+You can use an existing stack as a review stack template, as long as it has Deployment Settings configured. This will result in review stacks being deployed into the same cloud account. If you want to separate the cloud resources in your production stack from the resources created via review stacks then you can create a separate stack and template that references a different cloud account (AWS, Azure, GCP, etc.).
 
-Review Stacks and Deployment Settings can be configured via the Pulumi Cloud console, the Pulumi Cloud REST API, or within a Pulumi Program using the Pulumi Cloud Resource Provider.
+Review stacks and Deployment Settings can be configured via the Pulumi Cloud console, the Pulumi Cloud REST API, or within a Pulumi Program using the Pulumi Cloud Resource Provider.
 
 ### Pulumi Cloud UI
 
-It is just one click to turn on Review Stacks via the Pulumi Cloud console.
-
-![Deployment Settings for Review Stacks](../pr-settings.gif)
+Enable review stacks for a stack in the deployment settings section of the Pulumi Cloud console.
 
 ### REST API
 
-You can programmatically configure Review Stacks and Deployment Settings at scale across thousands of projects using the [Deployments REST API](/docs/deployments/deployments/api/#patch-settings).
+You can programmatically configure review stacks and Deployment Settings at scale across thousands of projects using the [Deployments REST API](/docs/deployments/deployments/api/#patch-settings).
 
 ```
 curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
@@ -59,7 +51,7 @@ curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PUL
 
 ### Pulumi Cloud Service provider
 
-You can use Pulumi to manage and code review Deployment Settings and Review Stacks with the [Pulumi Cloud Service provider](/registry/packages/pulumiservice).
+You can use Pulumi to manage and code review Deployment Settings and review stacks with the [Pulumi Cloud Service provider](/registry/packages/pulumiservice).
 
 ```typescript
 import * as pulumiservice from "@pulumi/pulumiservice";
@@ -83,15 +75,15 @@ const deploymentSettings = new pulumiservice.DeploymentSettings("deploymentSetti
 });
 ```
 
-## Common Patterns
+## Common patterns
 
-Review Stacks are powered by Pulumi IaC, and as a result offer a high degree of flexibility by way of configuration, and even multiple Pulumi Programs. Here we outline a few common patterns.
+Review stacks are powered by Pulumi IaC, and as a result offer a high degree of flexibility by way of configuration, and even multiple Pulumi Programs. The following sections outline common patterns.
 
-### Utilizing Config
+### Utilizing config
 
-Each pull request template stack has a corresponding Pulumi config file that can be checked into source control. By convention this file is called `Pulumi.pr.yaml` and you can even modify these configuration values as a part of your pull request and the new configuration will be used to deploy your Review Stack.
+Each pull request template stack has a corresponding Pulumi config file that can be checked into source control. By convention this file is called `Pulumi.pr.yaml`. You can modify review stack configuration values as part of your pull request, and the new configuration will be used to deploy your review stack.
 
-Review Stack config can be used to customize your deployment environment. For instance, you may want to downsize the size of VMs and number of containers deployed to your review stack.
+Review stack config can be used to customize your deployment environment. For instance, you may want to downsize the size of VMs and number of containers deployed to your review stack.
 
 Your production (`Pulumi.production.yaml`) stack might have the following config:
 
@@ -103,7 +95,7 @@ config:
   webserver:clusterNumInstances: "16"
 ```
 
-And you may choose to downsize your corresponding Review Stack config (`Pulumi.pr.yaml`) to reduce cloud spend for development environments:
+And you may choose to downsize your corresponding review stack config (`Pulumi.pr.yaml`) to reduce cloud spend for development environments:
 
 ```yaml
 config:
@@ -113,11 +105,13 @@ config:
   webserver:clusterNumInstances: "1"
 ```
 
-You can use Review Stack config in other creative ways, for instance to configure stacks to utilize shared development resources such as VPCs or databases rather than having a dedicated database per Review Stack. This can be useful to both optimize costs, and speed up deployment times.
+You can use review stack config in other creative ways, for instance to configure stacks to utilize shared development resources such as VPCs or databases rather than having a dedicated database per review stack. This can be useful to both optimize costs, and speed up deployment times.
 
 ### Single Stack
 
-You can configure a single stack with `git push` to Deploy, pull request previews, and Review Stacks. This is the simplest, lowest configuration approach, but results in your Review Stacks getting created in the same cloud account as your primary or production stack. It also means that the same configuration will be used for your production and review stacks, meaning that patterns like downsizing Review Stacks won't be possible.
+You can configure a single stack with `git push` to deploy, pull request previews, and review stacks. This is the simplest, lowest configuration approach, but results in your review stacks getting created in the same cloud account as your primary or production stack. It also means that the same configuration will be used for your production and review stacks, meaning that patterns like downsizing review stacks won't be possible.
+
+The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
 
 ```ts
 const deploymentSettings = new pulumiservice.DeploymentSettings("deploymentSettings", {
@@ -141,11 +135,13 @@ const deploymentSettings = new pulumiservice.DeploymentSettings("deploymentSetti
 });
 ```
 
-### Separate Stacks
+### Separate stacks
 
-If you need your Review Stacks to differ from your production stack in either configuration or Deployment Settings, creating a separate stack and template is necessary. This enables you to configure your Review Stacks for instance to deploy into a separate cloud account.
+If you need your review stacks to differ from your production stack in either configuration or Deployment Settings, you will need to create a separate stack and template. This enables you to configure your review stacks for instance to deploy into a separate cloud account.
 
-First you will need to `pulumi stack init` to create a `pr` stack, set any necessary config values, and commit this file to source control.
+First you will need to run `pulumi stack init` to create a `pr` stack, set any necessary config values, and commit this file to source control.
+
+The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
 
 ```ts
 const productionSettings = new pulumiservice.DeploymentSettings("productionSettings", {
@@ -192,13 +188,15 @@ const prSettings = new pulumiservice.DeploymentSettings("prSettings", {
 
 ```
 
-### Customizing Behavior with Multiple Pulumi Programs
+### Customizing behavior with multiple Pulumi Programs
 
-Sometimes you want your Review Stack to differ substantially from the stack that gets deployed to production. You might want to use multi-tenant development infrastructure for Review Stacks to both reduce the cost of development infrastructure, and also speed up Review Stack deployment times. Sometimes this can be accomplished with config alone, but occasionally it can be useful to write separate Pulumi Programs for the review stack. One common pattern for this is:
+Sometimes you want your review stack to differ substantially from the stack that gets deployed to production. You might want to use multi-tenant development infrastructure for review stacks to both reduce the cost of development infrastructure, and also speed up review stack deployment times. Sometimes this can be accomplished with config alone, but occasionally it can be useful to write separate Pulumi Programs for the review stack. One common pattern for this is:
 
-- Production Program and Stack: the Pulumi Program that defines your complete, stand alone production (and often dev/test/staging) environment.
-- Shared Kubernetes Stack: a Pulumi Program that deploys a Kubernetes cluster, designed to be shared by all Review Stacks.
-- Review Stack: a Pulumi Program that builds containers, and deploys Kubernetes resources (pods, deployments, etc) to the shared cluster.
+- Production program and stack: the Pulumi Program that defines your complete, stand-alone production (and often dev/test/staging) environment.
+- Shared Kubernetes stack: a Pulumi Program that deploys a Kubernetes cluster, designed to be shared by all review stacks.
+- Review stack: a Pulumi Program that builds containers, and deploys Kubernetes resources (pods, deployments, etc.) to the shared cluster.
+
+The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
 
 ```ts
 const productionSettings = new pulumiservice.DeploymentSettings("productionSettings", {
@@ -256,9 +254,11 @@ const prSettings = new pulumiservice.DeploymentSettings("prSettings", {
 
 ```
 
-### Customizing Behavior with Path Filters
+### Customizing behavior with path filters
 
-Sometimes you want to vary the behavior of a Review Stack based on what kind of code changed. For instance, changes to the `migrations` folder should trigger a migrations container to be built and run, but otherwise we want to skip this step as it adds a few extra minutes to our deployment times. This can be accomplished by using path filters in combination with multiple Review Stack templates. When the pull request is opened, Pulumi Deployments will evaluate the code changes and select which template to use based on matches against the path filters. This allows you to customize Deployment Settings, config, or Pulumi Program, based on what code changes were made.
+Sometimes you want to vary the behavior of a review stack based on what kind of code changed. For instance, changes to the `migrations` folder should trigger a migrations container to be built and run, but otherwise we want to skip this step as it adds a few extra minutes to our deployment times. This can be accomplished by using path filters in combination with multiple review stack templates. When the pull request is opened, Pulumi Deployments will evaluate the code changes and select which template to use based on matches against the path filters. This allows you to customize Deployment Settings, config, or Pulumi Program, based on what code changes were made.
+
+The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
 
 ```ts
 const productionSettings = new pulumiservice.DeploymentSettings("productionSettings", {
