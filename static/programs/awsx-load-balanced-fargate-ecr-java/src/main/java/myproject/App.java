@@ -14,6 +14,7 @@ import com.pulumi.awsx.ecs.FargateServiceArgs;
 import com.pulumi.awsx.ecs.inputs.FargateServiceTaskDefinitionArgs;
 import com.pulumi.awsx.ecs.inputs.TaskDefinitionContainerDefinitionArgs;
 import com.pulumi.awsx.ecs.inputs.TaskDefinitionPortMappingArgs;
+import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
@@ -39,7 +40,7 @@ public class App {
             .cluster(cluster.arn())
             .assignPublicIp(true)
             .taskDefinitionArgs(FargateServiceTaskDefinitionArgs.builder()
-                .container(TaskDefinitionContainerDefinitionArgs.builder()
+                .containers(Map.of("my-service", TaskDefinitionContainerDefinitionArgs.builder()
                     .name("my-service")
                     .image(image.imageUri())
                     .cpu(128)
@@ -49,7 +50,7 @@ public class App {
                         .containerPort(80)
                         .targetGroup(lb.defaultTargetGroup())
                         .build())
-                    .build())
+                    .build()))
                 .build())
             .build());
 
