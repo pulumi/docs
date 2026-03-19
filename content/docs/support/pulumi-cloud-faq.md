@@ -131,6 +131,7 @@ To join your company's organization, you must sign in with the identity provider
 If you already have a Pulumi account, navigate to your profile in [Pulumi Cloud](https://app.pulumi.com) and connect that identity provider, then accept the organization invite.
 
 If this fails, delete your account, then accept the organization invite.
+
 {{% notes type="warning" %}}
 Note that deleting your account will remove access to any stacks and environments still under the account. Transfer any stacks you want to keep before proceeding.
 {{% /notes %}}
