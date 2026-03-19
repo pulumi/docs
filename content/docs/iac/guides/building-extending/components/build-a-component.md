@@ -564,7 +564,7 @@ Next, we will implement the arguments class. In our example here, we will pass t
 
 {{< example-program path="sample-components" languages="typescript:StaticPage.ts:4-6" >}}
 
-Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. Certain types like union types (e.g., `string | number`) and functions are not supported due to schema inference limitations. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
+Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. Certain types like union types (e.g., `string | number`) and functions are not supported due to schema inference limitations. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
 {{% /choosable %}}
 
@@ -574,7 +574,7 @@ Note that argument classes must be *serializable* and use `pulumi.Input` types, 
 
 {{< example-program path="sample-components" languages="python:static_page.py:9-11" >}}
 
-Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. This means certain types like union types and functions are not supported. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
+Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. This means certain types like union types and functions are not supported. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
 Python class properties are typically written in lowercase with words separated by underscores, known as [`snake_case`](https://en.wikipedia.org/wiki/Snake_case), however properties in the [Pulumi package schema](https://www.pulumi.com/docs/iac/using-pulumi/extending-pulumi/schema/) are usually written in [`camelCase`](https://en.wikipedia.org/wiki/Camel_case), where capital letters are used to separate words. To follow these conventions, the inferred schema for a component will have translated property names. In our example `index_content` will become `indexContent` in the schema. When using a component, the property names will follow the conventions of that language, for example if we use our component from TypeScript, we would refer to `indexContent`, but if we use it from Python, we would use `index_content`.
 
@@ -585,7 +585,7 @@ Python class properties are typically written in lowercase with words separated 
 
 {{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:11-13" >}}
 
-Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
+Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
 Go struct fields are typically written in title case, with the first letter capitalized and capital letters used to separate words, however properties in the [Pulumi package schema](https://www.pulumi.com/docs/iac/using-pulumi/extending-pulumi/schema/) are usually written in [`camelCase`](https://en.wikipedia.org/wiki/Camel_case), with the first letter in lowercase and capital letters used to separate words. To follow these conventions, the inferred schema for a component will have translated property names. In our example `IndexContent` will become `indexContent` in the schema. When using a component, the property names will follow the conventions of that language, for example if we use our component from TypeScript, we would refer to `indexContent`, but if we use it from Go, we would use `IndexContent`.
 
@@ -597,7 +597,7 @@ Go struct fields are typically written in title case, with the first letter capi
 
 {{< example-program path="sample-components" languages="csharp:StaticPage.cs:10-13" >}}
 
-Note that argument classes must be *serializable* and use `Pulumi.Input` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
+Note that argument classes must be *serializable* and use `Pulumi.Input` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
 {{% /choosable %}}
 
@@ -607,7 +607,7 @@ Note that argument classes must be *serializable* and use `Pulumi.Input` types, 
 
 {{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:26-40" >}}
 
-Note that argument classes must be *serializable* and use `com.pulumi.core.Output<T>` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
+Note that argument classes must be *serializable* and use `com.pulumi.core.Output<T>` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
 The `@Import` decorator marks this as a *required* input and allows use to give a name for the input that could be different from the implementation here.
 
