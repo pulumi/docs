@@ -3,23 +3,24 @@
 
 {{ with .Params.authors }}
   {{ range . }}
-    {{ with index site.Data.team.team . }}
+    {{ $slug := . }}
+    {{ with index site.Data.team.team $slug }}
       {{/* Build author entity with comprehensive knowledge graph properties */}}
       {{ $author := dict "@type" "Person" }}
       {{ $author = merge $author (dict "@id" (printf "https://www.pulumi.com/authors/%s/#person" .id)) }}
       {{ $author = merge $author (dict "name" .name) }}
-      
+
       {{/* Add job title and organization */}}
       {{ with .title }}
         {{ $author = merge $author (dict "jobTitle" .) }}
       {{ end }}
-      
+
       {{ $author = merge $author (dict "worksFor" (dict
         "@type" "Organization"
         "@id" "https://www.pulumi.com/#organization"
         "name" "Pulumi"
       )) }}
-      
+
       {{/* Add social profiles for entity disambiguation */}}
       {{ $sameAs := slice }}
       {{ with .social }}
@@ -36,23 +37,23 @@
           {{ $sameAs = $sameAs | append (printf "https://linkedin.com/in/%s" .) }}
         {{ end }}
       {{ end }}
-      
+
       {{ if $sameAs }}
         {{ $author = merge $author (dict "sameAs" $sameAs) }}
       {{ end }}
-      
+
       {{/* Add URL to author page */}}
       {{ $author = merge $author (dict "url" (printf "https://www.pulumi.com/authors/%s/" .id)) }}
-      
+
       {{/* Add image if available */}}
       {{ with .image }}
         {{ $author = merge $author (dict "image" (printf "https://www.pulumi.com%s" .)) }}
       {{ end }}
-      
+
       {{/* Add expertise based on title */}}
       {{ $knowsAbout := slice "Infrastructure as Code" "Cloud Computing" "DevOps" }}
       {{ $titleLower := lower (or .title "") }}
-      
+
       {{ if in $titleLower "engineer" }}
         {{ $knowsAbout = $knowsAbout | append "Software Engineering" }}
       {{ end }}
@@ -83,9 +84,9 @@
       {{ if or (in $titleLower "ceo") (in $titleLower "cto") (in $titleLower "vp") }}
         {{ $knowsAbout = $knowsAbout | append "Leadership" "Strategy" }}
       {{ end }}
-      
+
       {{ $author = merge $author (dict "knowsAbout" $knowsAbout) }}
-      
+
       {{/* Mark as founder if applicable */}}
       {{ if or (eq .id "joe-duffy") (eq .id "eric-rudder") (eq .id "luke-hoban") }}
         {{ $author = merge $author (dict "founder" (dict
@@ -93,15 +94,24 @@
           "@id" "https://www.pulumi.com/#organization"
         )) }}
       {{ end }}
-      
+
       {{/* Add affiliation */}}
       {{ $author = merge $author (dict "affiliation" (dict
         "@type" "Organization"
         "@id" "https://www.pulumi.com/#organization"
         "name" "Pulumi"
       )) }}
-      
+
       {{ $authors = $authors | append $author }}
+    {{ else }}
+      {{/* Author not in team data — build a minimal Person from the slug */}}
+      {{ $authors = $authors | append (dict
+        "@type" "Person"
+        "@id" (printf "https://www.pulumi.com/authors/%s/#person" ($slug | urlize))
+        "name" (replace $slug "-" " " | title)
+        "url" (printf "https://www.pulumi.com/authors/%s/" ($slug | urlize))
+        "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+      ) }}
     {{ end }}
   {{ end }}
 {{ end }}
