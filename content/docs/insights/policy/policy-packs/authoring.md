@@ -356,6 +356,87 @@ Use stack validation policies when you need to:
 
 Most policies are resource validation policies. Stack validation policies are useful for more complex scenarios that require understanding the full context of your infrastructure.
 
+The following example limits the number of S3 buckets in a stack:
+
+{{< chooser language "typescript,python,opa" >}}
+
+{{% choosable language typescript %}}
+
+In TypeScript, use the `validateStack` callback to access all resources in the stack:
+
+```typescript
+import { PolicyPack } from "@pulumi/policy";
+
+new PolicyPack("stack-policies", {
+    policies: [{
+        name: "maximum-s3-bucket-count",
+        description: "Limits the number of S3 buckets per stack.",
+        enforcementLevel: "mandatory",
+        validateStack: (args, reportViolation) => {
+            const buckets = args.resources.filter(
+                r => r.type === "aws:s3/bucket:Bucket"
+            );
+            if (buckets.length > 3) {
+                reportViolation(
+                    `Stack has ${buckets.length} S3 buckets, maximum allowed is 3.`);
+            }
+        },
+    }],
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+In Python, use `StackValidationPolicy` to access all resources in the stack:
+
+```python
+from pulumi_policy import EnforcementLevel, PolicyPack, StackValidationPolicy
+
+def max_bucket_count(args, report_violation):
+    buckets = [r for r in args.resources if r.resource_type == "aws:s3/bucket:Bucket"]
+    if len(buckets) > 3:
+        report_violation(
+            f"Stack has {len(buckets)} S3 buckets, maximum allowed is 3.")
+
+PolicyPack(
+    "stack-policies",
+    policies=[
+        StackValidationPolicy(
+            name="maximum-s3-bucket-count",
+            description="Limits the number of S3 buckets per stack.",
+            enforcement_level=EnforcementLevel.MANDATORY,
+            validate=max_bucket_count,
+        ),
+    ],
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language opa %}}
+
+In OPA, the rule name prefix determines the validation scope. Use `stack_deny` or `stack_warn` prefixes for stack-level rules. These rules receive all resources in the stack via `input.resources`:
+
+```rego
+package aws
+
+# METADATA
+# title: Maximum S3 Bucket Count
+# description: Limits the number of S3 buckets per stack.
+stack_deny_too_many_buckets[msg] {
+    buckets := [r | r := input.resources[_]; r.type == "aws:s3/bucket:Bucket"]
+    n := count(buckets)
+    n > 3
+    msg := sprintf("Stack has %d S3 buckets, maximum allowed is 3", [n])
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ### Using stack tags in policies
 
 Stack validation policies can access tags assigned to the stack via `args.stackTags` (TypeScript) or `args.stack_tags` (Python). This lets you enforce tagging standards, like requiring every stack to declare an environment or owning team, as a governance gate.
@@ -439,6 +520,10 @@ Stack tags are available on both `StackValidationArgs` and `ResourceValidationAr
 You can assign tags to a stack using the CLI ([`pulumi stack tag set`](/docs/iac/cli/commands/pulumi_stack_tag_set/)), the [`pulumi:tags` config](/docs/iac/concepts/config/#pulumitags) in your `Pulumi.yaml` or `Pulumi.<stack>.yaml` file, the [`StackTag`](/registry/packages/pulumiservice/api-docs/stacktag/) resource from the [Pulumi Cloud provider](/registry/packages/pulumiservice/), the Pulumi Cloud console, or the [Stack Tags REST API](/docs/reference/cloud-rest-api/stack-tags/). To learn how to apply policy packs to groups of stacks, see [policy groups](/docs/insights/policy/policy-groups/).
 {{% /notes %}}
 
+{{% notes type="info" %}}
+Stack tags are not currently accessible in OPA policies. OPA stack-level policies can validate the full set of resources using `input.resources` (see [Creating a policy pack](#opa) for rule prefix conventions), but they cannot read stack tag metadata. Use TypeScript or Python policies if you need to enforce stack tag requirements.
+{{% /notes %}}
+
 ## Writing policies for dynamic providers
 
 [Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) allow you to create custom resource types directly in your Pulumi programs. When writing policies for dynamic providers, you need to account for a key constraint: **all dynamic resources share the same resource type** (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python).
@@ -449,7 +534,7 @@ Since you cannot rely on the resource type alone to identify which dynamic provi
 
 This example shows how to write a policy that validates resources from a specific dynamic provider by checking for a unique property:
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -517,6 +602,31 @@ PolicyPack(
 
 {{% /choosable %}}
 
+{{% choosable language opa %}}
+
+OPA policies can validate dynamic resources using the same `input.type` field. Dynamic resources use `pulumi-nodejs:dynamic:Resource` (TypeScript/JavaScript) or `pulumi-python:dynamic:Resource` (Python) as their resource type:
+
+```rego
+package dynamic
+
+# METADATA
+# title: Environment Name Validation
+# description: Dynamic environment resources must use the correct name.
+# custom:
+#   message: Set the environmentName property to 'myTestEnv'.
+# This rule only fires for dynamic resources that have an environmentName
+# property. Other dynamic resources are silently skipped.
+deny_environment_name[msg] {
+    input.type == "pulumi-nodejs:dynamic:Resource"
+    input.environmentName
+    input.environmentName != "myTestEnv"
+    msg := sprintf("Environment name must be 'myTestEnv'. Current value: '%s'",
+                   [input.environmentName])
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ### Best practices for dynamic provider policies
@@ -541,7 +651,7 @@ Test your policy pack locally before publishing.
 
 1. Use the `--policy-pack` flag to specify your policy pack directory:
 
-    If you need a test program, create one with `pulumi new aws-typescript`. This creates an S3 bucket to test the policy.
+    If you need a test program, create one with `pulumi new aws-typescript`. This scaffolds a Pulumi program that provisions an S3 bucket you can test the policy against.
 
     ```sh
     $ mkdir test-program && cd test-program
@@ -603,7 +713,7 @@ Test your policy pack locally before publishing.
 
 1. Use the `--policy-pack` flag to specify your policy pack directory:
 
-    If you need a test program, create one with `pulumi new aws-python`. This creates an S3 bucket to test the policy.
+    If you need a test program, create one with `pulumi new aws-python`. This scaffolds a Pulumi program that provisions an S3 bucket you can test the policy against.
 
     ```sh
     $ mkdir test-program && cd test-program
@@ -660,15 +770,64 @@ Test your policy pack locally before publishing.
 
 {{% choosable language opa %}}
 
-Running OPA policy packs locally works the same way as TypeScript and Python packs. If you need a test program, create one with `pulumi new aws-typescript` or `pulumi new aws-python`.
+1. Use the `--policy-pack` flag to specify your policy pack directory:
 
-> For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
+    If you need a test program, create one with `pulumi new aws-typescript` or `pulumi new aws-python`. This scaffolds a Pulumi program that provisions an S3 bucket you can test the policy against.
 
-In the Pulumi program's directory, run:
+    ```sh
+    $ mkdir test-program && cd test-program
+    $ pulumi new aws-typescript
+    ```
 
-```sh
-$ pulumi preview --policy-pack <path-to-opa-policy-pack-directory>
-```
+    > For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
+
+1. In the Pulumi program's directory, run:
+
+    ```sh
+    $ pulumi preview --policy-pack <path-to-opa-policy-pack-directory>
+    ```
+
+    If the stack is compliant, the output shows which policy packs ran.
+
+    ```output
+    Previewing update (dev):
+            Type                 Name          Plan
+        +   pulumi:pulumi:Stack  test-dev      create
+        +   └─ aws:s3:Bucket     my-bucket     create
+
+    Resources:
+        + 2 to create
+
+    Policy Packs run:
+        Name                                                    Version
+        aws-opa-policies (/Users/user/path/to/policy-pack)      (local)
+    ```
+
+1. Edit the stack code to set the bucket ACL to `public-read`:
+
+    ```typescript
+    const bucket = new aws.s3.Bucket("my-bucket", {
+        acl: "public-read",
+    });
+    ```
+
+1. Run `pulumi preview` again. This time, the policy violation blocks the preview:
+
+    ```output
+    Previewing update (dev):
+            Type                 Name          Plan       Info
+        +   pulumi:pulumi:Stack  test-dev      create     1 error
+        +   └─ aws:s3:Bucket     my-bucket     create
+
+    Diagnostics:
+        pulumi:pulumi:Stack (test-dev):
+        error: preview failed
+
+    Policy Violations:
+        [mandatory]  No Public S3 Buckets  deny_public_buckets (my-bucket: aws:s3/bucket:Bucket)
+        S3 buckets must not use public-read ACLs.
+        S3 bucket 'my-bucket' must not have public-read ACL
+    ```
 
 {{% /choosable %}}
 
@@ -718,7 +877,7 @@ Policy authors define configuration schemas using JSON Schema, enabling administ
 
 **Example: Optional configuration with defaults**
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -770,13 +929,50 @@ example_policy = ResourceValidationPolicy(
 
 {{% /choosable %}}
 
+{{% choosable language opa %}}
+
+OPA policies access configuration values through `data.config.<rule_name>.<key>`. Access the configuration in your Rego rule like any other data reference:
+
+```rego
+package aws
+
+# METADATA
+# title: Restrict EC2 Instance Size
+# description: EC2 instances must not exceed the configured maximum size.
+# custom:
+#   message: Use an instance type at or below the configured maxInstanceSize.
+deny_large_instances[msg] {
+    input.type == "aws:ec2/instance:Instance"
+    max_size := data.config.deny_large_instances.maxInstanceSize
+    sizes := {"t3.micro": 1, "t3.small": 2, "t3.medium": 3, "t3.large": 4,
+              "t3.xlarge": 5, "m5.xlarge": 6, "m5.2xlarge": 7, "m5.4xlarge": 8}
+    sizes[input.instanceType] > sizes[max_size]
+    msg := sprintf("Instance '%s' type '%s' exceeds maximum allowed size '%s'",
+                   [input.__name, input.instanceType, max_size])
+}
+```
+
+Pass configuration values using the standard Pulumi policy configuration. The values inside the `"properties"` object are injected as `data.config.<rule_name>`. The `"properties"` wrapper key is required in the configuration JSON:
+
+```json
+{
+    "deny_large_instances": {
+        "properties": {
+            "maxInstanceSize": "m5.xlarge"
+        }
+    }
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 **Example: Required configuration**
 
 To require configuration values, add them to the `required` list:
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,opa" >}}
 
 {{% choosable language typescript %}}
 
@@ -808,6 +1004,28 @@ config_schema=PolicyConfigSchema(
     required=["message"]
 )
 ```
+
+{{% /choosable %}}
+
+{{% choosable language opa %}}
+
+For OPA policies, declare a configuration schema in a `config-schema.json` file alongside your Rego files. Pulumi validates configuration against this schema before evaluation:
+
+```json
+{
+    "deny_large_instances": {
+        "properties": {
+            "maxInstanceSize": {
+                "type": "string",
+                "default": "m5.xlarge"
+            }
+        },
+        "required": ["maxInstanceSize"]
+    }
+}
+```
+
+If a rule declares a config schema but no configuration is provided, the analyzer emits a warning because rules that reference `data.config` will silently not fire without configuration.
 
 {{% /choosable %}}
 
