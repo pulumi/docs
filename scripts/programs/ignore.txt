@@ -12,6 +12,11 @@
 
 
 
+# AWSX Java SDK: "Exactly one of [container] or [containers] must be provided"
+# validation fails despite correct usage. Pre-existing issue exposed by
+# fixing the Pulumi.yaml project name typo in #18066.
+awsx-load-balanced-fargate-nginx-java
+
 # API Gateway authorizer parameter `providerArns` is mistyped.
 # https://github.com/pulumi/pulumi-aws-apigateway/issues/121
 awsx-apigateway-auth-cognito-java
