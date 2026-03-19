@@ -42,7 +42,7 @@ Before authoring your first policy pack, ensure you have:
 - [Pulumi CLI installed](/docs/install/).
 - For TypeScript/JavaScript policies: [Node.js installed](https://nodejs.org/en/download/).
 - For Python policies: [Python installed](https://python.org/downloads/).
-- For OPA policies: Install the OPA analyzer plugin with `pulumi plugin install analyzer policy-opa`.
+- For OPA policies: Pulumi CLI v3.227.0+ automatically installs the OPA analyzer plugin on first use. No manual installation is needed.
 - (Optional) Access to Pulumi Cloud if you want to publish and centrally manage policy packs. Not required for local policy pack usage with open source Pulumi.
 - An understanding of [Policy as Code core concepts](/docs/insights/policy/).
 
