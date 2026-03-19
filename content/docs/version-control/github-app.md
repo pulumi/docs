@@ -1,7 +1,7 @@
 ---
 title_tag: "Pulumi GitHub App | Version Control"
 meta_desc: Pulumi's GitHub app integrates the results of Pulumi stack updates. It
-           will show you any potential infrastructure changes on Pull Requests and commit Checks.
+           will show you any potential infrastructure changes on pull requests and commit checks.
 title: Pulumi GitHub App
 h1: Pulumi GitHub App
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -22,139 +22,73 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/github-app/
 ---
 
-Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/deployments/deployments/). Once installed and
-configured, it will show you any potential infrastructure changes on Pull Requests and commit checks. You can also configure `git push` to deploy workflows that update your stacks whenever a pull request is merged.
+Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/deployments/deployments/). Once installed and configured, it will show any potential infrastructure changes on pull requests and commit checks. You can also configure workflows to update your stacks whenever a commit is pushed to a configured branch.
 
-## Features
-
-The Pulumi GitHub app will automatically add comments to Pull Requests with the results of any
-stack changes. This includes a summary of how many resources were created, updated, and/or deleted.
-This allows you to quickly see the changes caused by your Pulumi program without needing to leave
-GitHub's Pull Request view, with a link to the richer details available on the
-[Pulumi Cloud](https://app.pulumi.com).
-
-![Comment on Pull Request](/images/docs/github-app/pr-comment.png)
-
-Beyond Pull Request comments, the GitHub application also integrates with GitHub's [Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/).
-This provides even more detail about any resource changes, including the full update log.
-
-![Results on GitHub Check](/images/docs/github-app/checks-detail.png)
-
-## Installation and Configuration
-
-{{% notes type="warning" %}}
-While the app can be installed via GitHub, it **must be installed through Pulumi Cloud** using the steps below to ensure correct setup. Installing through Pulumi Cloud ensures we have a connection from Pulumi to your GitHub user or organization.
-{{% /notes %}}
+## Installation and configuration
 
 {{% notes type="info" %}}
-To install the GitHub App, you must have admin permissions in **both** the target GitHub organization and the Pulumi organization. This is required to establish the correct connection between the two platforms.
+To install the GitHub app, you must have admin permissions in **both** the target GitHub organization and the Pulumi organization. This is required to establish the correct connection between the two platforms.
 {{% /notes %}}
 
 1. [Sign in to your Pulumi account.](https://app.pulumi.com/signin)
-2. Ensure you have selected the Pulumi organization you wish to use with the GitHub app by choosing it in the Organization drop-down.
-3. Navigate to Settings > Integrations.
-4. Select the "Install the Pulumi GitHub App" button.
+1. Select the Pulumi organization you wish to use from the Organization drop-down.
+1. Navigate to **Management** > **Version Control**.
+1. Select **Add account** and choose **GitHub**, then follow the prompts.
 
-    ![Install the Pulumi GitHub App](/images/docs/github-app/gha-install.png)
+### Multiple GitHub organizations
 
-    If this page says you already have the app installed, you can stop here. If the page asks you to accept additional permissions for the app, please accept the permissions and stop here.
+Multiple GitHub organizations can be connected to a single Pulumi organization. You can add each one via **Management** > **Version Control** > **Add account**.
 
-5. After selecting "Install" you will be directed to GitHub. Select the GitHub organization you wish to use.
-6. Select which repos (or all repos) that the Pulumi GitHub App can have access to, and then select Install.
-7. You will be redirected to app.pulumi.com. Return to the Settings > Integrations tab and confirm the GitHub App is installed on your desired organization.
+{{% notes type="info" %}}
+Mapping a single GitHub organization to multiple Pulumi organizations requires contacting [Pulumi support](https://www.pulumi.com/support/). This option is only available for Enterprise and Business Critical customers.
+{{% /notes %}}
 
-![Turn on Pull Request Comments with Pulumi GitHub App](/images/docs/github-app/gha-installed.png)
+### GitHub Enterprise Server support
 
-If you installed the GitHub app in the past and the steps above aren't showing it as installed for your desired organization, please try the following:
+GitHub Enterprise Server is supported for [Pulumi Business Critical Edition](https://www.pulumi.com/enterprise/). Only one GitHub Enterprise Server integration is supported per Pulumi organization.
 
-1. Ensure you're a GitHub admin of the GitHub organization where you're installing the app.
-2. Uninstall the app (via github.com) and re-install it following the steps above. **Note:** Uninstalling the app will delete any push-to-deploy configurations you may have already set up.
+## Capabilities
 
-### Limitations
+### Pull request comments
 
-- The GitHub app may only be installed by a user who is both a GitHub admin and a Pulumi admin.
-- By default, there is a 1:1 mapping between GitHub organizations and Pulumi organizations. If you need to map a single GitHub organization to multiple Pulumi organizations, please contact [Pulumi support](https://www.pulumi.com/support/) to request this configuration. This option is only available for Enterprise and Business Critical customers.
-- Multiple GitHub organizations mapping to a single Pulumi organization is not currently supported.
-
-### Configure Git Push-to-Deploy with Pulumi Deployments
-
-To set up a `git push`-to-deploy workflow using Pulumi Deployments, consult the [Pulumi Deployments documentation](/docs/deployments/deployments/) after installing the Pulumi GitHub App.
-
-## CI Integration
-
-The Pulumi GitHub application will work with any CI/CD system. See our
-[Continuous Delivery](/docs/using-pulumi/continuous-delivery/) guide for information on how to
-integration Pulumi with whatever system you currently use.
-
-Once installed in your organization, any `pulumi preview` or `pulumi up` that is run in your CI
-system will have its results reported back to GitHub.
-
-### How PR comments work
+The Pulumi GitHub app automatically adds comments to pull requests with the results of any stack changes. This includes a summary of how many resources were created, updated, and/or deleted. This allows you to quickly see the changes caused by your Pulumi program without needing to leave GitHub's pull request view, with a link to the richer details available on [Pulumi Cloud](https://app.pulumi.com).
 
 When you run `pulumi preview` or `pulumi up`, the Pulumi CLI examines the closest `.git` directory to extract commit metadata (such as the commit SHA, branch name, and repository information). This metadata is included with the update and sent to Pulumi Cloud, which uses it to identify the associated pull request and post comments.
 
-#### Troubleshooting PR comments
+### Checks
+
+Beyond pull request comments, the GitHub app also integrates with GitHub's [Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/). This provides even more detail about any resource changes, including the full update log.
+
+All Pulumi stack updates are reported to the GitHub Checks API. You can see the results of each commit check by going to the **Code** tab's **Commits** page, and then clicking the ✅ or ❌ icon. For pull requests, you can see the checks on the **Checks** tab as well.
+
+### Push-to-deploy
+
+Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the main branch. See the [push-to-deploy documentation](/docs/deployments/deployments/using/triggers/#push-to-deploy) for setup instructions.
+
+### Review stacks
+
+[Review stacks](/docs/deployments/deployments/review-stacks/) are dedicated cloud environments that get created automatically every time a pull request is opened, powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
+
+## CI integration
+
+The Pulumi GitHub app posts results back to GitHub regardless of which CI/CD system triggers the run — GitHub Actions, CircleCI, Jenkins, or any other. See the [Continuous Delivery](/docs/using-pulumi/continuous-delivery/) guide for integration instructions.
+
+Once installed in your organization, any `pulumi preview` or `pulumi up` run in CI will have its results reported back to GitHub.
+
+## Troubleshooting
+
+### App not appearing as installed
+
+If you previously installed the GitHub app but Pulumi Cloud does not show it as connected to your desired organization, try the following:
+
+1. Ensure you're a GitHub admin of the GitHub organization where you're installing the app.
+1. Uninstall the app (via github.com) and re-install it following the steps above. **Note:** Uninstalling the app will delete any push-to-deploy configurations you may have already set up.
+
+### PR comments not appearing
 
 If comments aren't appearing on your pull requests, verify that:
 
-1. The `.git` folder is present in your Pulumi project directory during CI runs
-1. If you copy your Pulumi code into a container, you also include the `.git` folder
-1. The commit being built matches a commit in an open pull request
-1. The GitHub app has access to the repository (check **Settings** > **Integrations** in Pulumi Cloud)
-
-## GitHub UI
-
-There are two places that Pulumi update results will be displayed: Pull Requests or commit Check.
-
-All Pulumi stack updates are reported to the GitHub Checks API. You can see the results of each
-commit check by "Code" tab's "Commits" page, and then clicking the ✅ or ❌ icon.
-
-For Pull Requests, you can see the checks on the "Checks" tab as well.
-
-![GitHub Checks Tab](/images/docs/github-app/checks.png)
-
-Every stack that was impacted by the CI job is then listed in the left.
-
-![GitHub Check Result](/images/docs/github-app/checks-detail.png)
-
-If the CI build originated from a pull request, e.g. the Travis CI job had type `pull_request`,
-then the results will be placed as a comment on the Pull Request as well.
-
-![Comment on Pull Request](/images/docs/github-app/pr-comment.png)
-
-## GitHub Enterprise Server support
-
-GitHub Enterprise Server is supported for [Pulumi Business Critical Edition](https://www.pulumi.com/enterprise/), for it to work, Pulumi has to provision the GitHub application into your GitHub instance.
-
-### Installation
-
-1. [Sign in to your Pulumi account.](https://app.pulumi.com/signin)
-2. Ensure you have selected the Pulumi organization you wish to use with the GitHub app by choosing it in the Organization drop-down.
-3. Navigate to Settings > Integrations.
-4. Select the "GitHub Enterprise Server App" button.
-
-    ![Install the Pulumi GitHub Enterprise Server App](/images/docs/github-app/gha-enterprise-server-install.png)
-
-    If this page says you already have the app installed, you can stop here. If the page asks you to accept additional permissions for the app, please accept the permissions and stop here.
-
-5. A dialog will pop-up requesting information about your GitHub installation.
-
-    Complete your installation hostname and the type of account where you want to provision the App.
-
-    ![GitHub Enterprise Server App Installation Dialog](/images/docs/github-app/gh-enterprise-installation-dialog.png)
-
-    For Personal accounts, no extra information is required, click on the install button to continue.
-
-    ![GitHub Enterprise Server App Installation Dialog for personal account](/images/docs/github-app/gh-enterprise-installation-dialog-personal.png)
-
-    For Organization accounts, the organization name is required to continue.
-
-    ![GitHub Enterprise Server App Installation Dialog for organization account](/images/docs/github-app/gh-enterprise-installation-dialog-organization.png)
-
-6. After selecting "Install" you will be directed to GitHub where you will have to complete the Application name.
-
-    ![GitHub App provisioning](/images/docs/github-app/gh-enterprise-installation-app-name.png)
-
-7. The last step will be to select where do you want to install the application
-
-    ![GitHub App installation](/images/docs/github-app/gh-enterprise-installation-selection.png)
+1. The `.git` folder is present in your Pulumi project directory during CI runs.
+1. If you copy your Pulumi code into a container, you also include the `.git` folder.
+1. The commit being built matches a commit in an open pull request.
+1. The GitHub app has access to the repository — navigate to **Management** > **Version Control**, select your GitHub organization, and check the **Repositories** tab. If the repository is not listed, select **Configure repository access** to update the app's permissions in GitHub.
