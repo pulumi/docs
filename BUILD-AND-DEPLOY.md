@@ -1329,8 +1329,8 @@ The repository includes 9 additional utility workflows for automation and projec
 
 **Automation and Auto-merge:**
 
-- **automerge-workflow.yml**: Auto-merge approved PRs from trusted sources
-- **auto-approve-for-auto-merge.yml**: Auto-approve PRs that meet auto-merge criteria (trusted bots, dependency updates)
+- **Native auto-merge**: Bot PR workflows (`pulumi-cli.yml`, `pulumi-cli-dev-version.yml`, `esc-cli.yml`, `customer-managed-workflow-agent-cli.yml`) enable GitHub's native auto-merge via `gh pr merge --auto --squash` after creating the PR. This replaces the former polling-based `automerge-workflow.yml`.
+- **auto-approve-for-auto-merge.yml**: Auto-approve PRs that meet auto-merge criteria (trusted bots, dependency updates). Uses the `automation/merge` label to gate approval — note that this label now drives auto-*approval* only; auto-merge is handled natively by GitHub.
 
 **AI-Assisted Development:**
 
