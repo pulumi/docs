@@ -58,6 +58,8 @@ For example, to become a member of a Pulumi organization backed by a GitLab Grou
 you must associate a GitLab identity with your Pulumi account, and also
 be a member of that GitLab group.
 
+For more information, see [How do I link an existing Pulumi account to my company's organization?](/docs/support/pulumi-cloud-faq/#how-do-i-link-an-existing-pulumi-account-to-my-companys-organization)
+
 ## Inviting members to an organization
 
 Pulumi organization administrators can invite new members to an organization.
@@ -111,11 +113,15 @@ To delete an organization:
 
 Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization or individual account.
 
+For more information, see [How can I delete a Pulumi organization?](/docs/support/pulumi-cloud-faq/#how-can-i-delete-a-pulumi-organization)
+
 ## Deleting your account
 
 You can delete your personal Pulumi account from your account settings in [Pulumi Cloud](https://app.pulumi.com).
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
+
+For more information, see [How can I delete my Pulumi account?](/docs/support/pulumi-cloud-faq/#how-can-i-delete-my-pulumi-account)
 
 ## Organization identity providers
 

@@ -93,6 +93,8 @@ or managed manually. Organization owners and administrators can manage
 access to the organization's projects with security and administrative
 features.
 
+For more information, see [Organizations](/docs/administration/organizations-teams/organizations/).
+
 ### How do I create a stack inside an Organization instead of my User account?
 
 To create a stack in a different Pulumi organization, prefix the stack's
@@ -116,9 +118,11 @@ To learn more about this process, see [Transferring Stacks](/docs/deployments/pr
 
 Organization deletion is a permanent action and can only be performed by an organization admin.
 
-In [Pulumi Cloud](https://app.pulumi.com), open your organization, navigate to **Settings**, and use the **Delete organization** option.
+In [Pulumi Cloud](https://app.pulumi.com), open your organization, navigate to **Settings**, and select the **Delete organization** option.
 
 If you don't see this option, confirm you're an organization admin.
+
+For detailed steps, see [Deleting an organization](/docs/administration/organizations-teams/organizations/#deleting-an-organization).
 
 ### How do I link an existing Pulumi account to my company's organization?
 
@@ -127,7 +131,11 @@ To join your company's organization, you must sign in with the identity provider
 If you already have a Pulumi account, navigate to your profile in [Pulumi Cloud](https://app.pulumi.com) and connect that identity provider, then accept the organization invite.
 
 If this fails, delete your account, then accept the organization invite.
-Note that deleting your account will remove access to any stacks and environments still under the account. Transfer any stacks you want to keep before proceeding.
+{{% notes type="warning" %}}
+Note that deleting your account will remove access to any stacks and environments still under the account. Transfer any stacks you want to keep before proceeding. 
+{{% /notes %}}
+
+For more about joining organizations, see [Joining an organization](/docs/administration/organizations-teams/organizations/#joining-an-organization).
 
 ## Account
 
@@ -136,6 +144,8 @@ Note that deleting your account will remove access to any stacks and environment
 You can delete your personal account from your account settings in [Pulumi Cloud](https://app.pulumi.com).
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
+
+For more information, see [Deleting your account](/docs/administration/organizations-teams/organizations/#deleting-your-account).
 
 ## Pricing
 
