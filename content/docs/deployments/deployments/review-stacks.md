@@ -39,7 +39,7 @@ Enable review stacks for a stack in the deployment settings section of the Pulum
 
 You can programmatically configure review stacks and Deployment Settings at scale across thousands of projects using the [Deployments REST API](/docs/deployments/deployments/api/#patch-settings).
 
-```
+```bash
 curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
 --location "https://api.pulumi.com/api/stacks/org/project/stack/deployments/settings" \
 -d '{
