@@ -109,7 +109,7 @@ Organization deletion is a permanent action and can only be performed by an orga
 To delete an organization:
 
 1. Navigate to **Settings**.
-1. Use the **Delete organization** option.
+1. Select **Delete organization**.
 
 Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization or individual account.
 
