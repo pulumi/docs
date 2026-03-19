@@ -33,7 +33,7 @@ Dynamic providers in TypeScript are incompatible with projects using pnpm as a p
 {{% /notes %}}
 
 {{% notes type="warning" %}}
-Dynamic providers in TypeScript are not supported when using the Bun runtime (`runtime: bun`), as they depend on [function serialization](/docs/iac/concepts/functions/function-serialization/), which requires Node.js v8/inspector APIs that Bun does not fully implement. Use `runtime: nodejs` if your program requires dynamic providers.
+Dynamic providers in TypeScript are not supported when using the Bun runtime (`runtime: bun`), as they depend on [function serialization](/docs/iac/concepts/functions/function-serialization/), which requires Node.js v8/inspector APIs that Bun [does not fully implement yet](https://bun.com/docs/runtime/nodejs-compat#nodeinspector). Use `runtime: nodejs` if your program requires dynamic providers.
 {{% /notes %}}
 
 There are several reasons why you might want to write a dynamic resource provider. Here are some of them:

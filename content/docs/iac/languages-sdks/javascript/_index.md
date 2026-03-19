@@ -34,7 +34,7 @@ Pulumi supports writing your infrastructure as code using TypeScript and JavaScr
 
 ## Installation requirements
 
-### Runtime
+### Node.js Runtime
 
 Pulumi supports Node.js [Current, Active, and Maintenance LTS versions](https://nodejs.org/en/about/previous-releases). We recommend using the latest LTS version for the best experience.
 
@@ -46,7 +46,7 @@ runtime: nodejs
 
 ### Bun runtime
 
-[Bun](https://bun.sh) is also supported as a first-class runtime. To use Bun, set `runtime: bun` in your `Pulumi.yaml`:
+As of Pulumi 3.227.0 [Bun](https://bun.sh) is also supported as a first-class runtime. To use Bun, set `runtime: bun` in your `Pulumi.yaml`:
 
 ```yaml
 runtime: bun
@@ -55,7 +55,7 @@ runtime: bun
 No additional runtime options are available for the Bun runtime. Bun supports TypeScript natively, so no additional TypeScript configuration is required.
 
 {{< notes type="warning" >}}
-Function serialization and dynamic providers are not supported when using the Bun runtime, as they depend on Node.js v8/inspector APIs that Bun does not fully implement.
+Function serialization and dynamic providers are not supported when using the Bun runtime, as they depend on Node.js v8/inspector APIs that Bun does [not fully implement yet](https://bun.com/docs/runtime/nodejs-compat#nodeinspector).
 {{< /notes >}}
 
 ### Package managers
