@@ -34,6 +34,7 @@ authors:
 tags:
     - typescript
     - package-manager
+    - bun
 
 ---
 
