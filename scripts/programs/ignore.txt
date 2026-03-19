@@ -12,13 +12,6 @@
 
 
 
-# Pulumi Java SDK serialization bug: FargateService taskDefinitionArgs
-# with only resolved Outputs fails validation. ECR variant works because
-# image.imageUri() introduces an unresolved Output. Needs upstream fix
-# in pulumi-java. See pulumi/docs#18066.
-awsx-load-balanced-fargate-nginx-java
-awsx-vpc-fargate-service-java
-
 # API Gateway authorizer parameter `providerArns` is mistyped.
 # https://github.com/pulumi/pulumi-aws-apigateway/issues/121
 awsx-apigateway-auth-cognito-java

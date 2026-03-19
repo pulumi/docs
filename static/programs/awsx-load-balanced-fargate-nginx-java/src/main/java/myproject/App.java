@@ -27,7 +27,7 @@ public class App {
             .taskDefinitionArgs(FargateServiceTaskDefinitionArgs.builder()
                 .containers(Map.of("my-service", TaskDefinitionContainerDefinitionArgs.builder()
                     .name("my-service")
-                    .image("nginx:latest")
+                    .image(Output.of("nginx:latest"))
                     .cpu(128)
                     .memory(512)
                     .essential(true)
