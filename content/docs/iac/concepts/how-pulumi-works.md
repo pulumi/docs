@@ -1,12 +1,12 @@
 ---
-title_tag: How Pulumi Works
-meta_desc: This page provides an overview of how Pulumi works and interacts with different Cloud Providers like AWS, Azure, Kubernetes, and more.
-title: How Pulumi works
-h1: How Pulumi works
+title_tag: Pulumi Architecture
+meta_desc: "An in-depth look at Pulumi's internal architecture: the language host, deployment engine, and resource providers, and how they interact when you run pulumi up."
+title: Pulumi architecture
+h1: Pulumi architecture
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: How Pulumi works
+        name: Pulumi architecture
         weight: 10
         parent: iac-concepts
     concepts:
@@ -22,15 +22,13 @@ aliases:
     - /docs/concepts/how-pulumi-works/
 ---
 
-Pulumi uses a desired state (declarative) model for orchestrating and managing infrastructure with the flexibility to author your infrastructure code using programming languages you know such as TypeScript, Javascript, Python, Go, C#, and Java. This model provides the advantages of programming structures like loops, conditionals and functions as well as your IDE with autocomplete, type checking, and documentation. When you author a Pulumi program the end result will be the state you declare, regardless of the current state of your infrastructure.
+{{< notes >}}
+Most Pulumi users don't need to understand these internals. The key concept is that Pulumi uses a **declarative model**: you describe the desired state of your infrastructure in code, and Pulumi figures out what changes to make. This page covers advanced architecture details useful for troubleshooting or deeper understanding.
+{{< /notes >}}
 
-A Pulumi program is executed by a _language host_ to compute a desired state for a stack's infrastructure. The _deployment engine_ compares this desired state with the stack's current state and determines what resources need to be created, updated or deleted. The engine uses a set of _resource providers_ (such as [AWS](/docs/clouds/aws/get-started/), [Azure](/docs/clouds/azure/get-started/), [Kubernetes](/docs/iac/get-started/kubernetes/), and [+150 more](/registry/)) in order to manage the individual resources.  As it operates, the engine updates the _state_ of your infrastructure with information about all resources that have been provisioned as well as any pending operations.
-
-The following diagram illustrates the interaction between these parts of the system:
+Pulumi's three main components work together when you run `pulumi up`: a _language host_, a _deployment engine_, and [resource providers](/docs/iac/concepts/providers/). The following diagram illustrates how they interact:
 
 <img src="/images/docs/reference/engine-block-diagram.png" alt="Pulumi IaC system architecture, the Pulumi engine and providers" width="600">
-
-In the next section, we will describe each of these components and see how they all fit together during an invocation of `pulumi up`.
 
 ## Language hosts
 
@@ -41,7 +39,7 @@ The _language host_ is responsible for running a Pulumi program and setting up a
 
 ## Deployment engine
 
-The _deployment engine_ is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program. When a _resource registration_ is received from the language host, the engine consults the existing state to determine if that resource has been created before. If it has not, the engine uses a _resource provider_ to create it. If it already exists, the engine works with the resource provider to determine what, if anything, has changed by comparing the old state of the resource with the new desired state of the resource as expressed by the program. If there are changes, the engine determines if it can _update_ the resource in place or if it must _replace_ it by _creating_ a new version and _deleting_ the old version. The decision depends on what properties of the resource are changing and the type of the resource itself. When the language host communicates to the engine that it has completed the execution of the Pulumi program, the engine looks for any existing resources that it did not see a new resource registration and schedules these resources for deletion.
+The _deployment engine_ is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program. When a _resource registration_ is received from the language host, the engine consults the existing [state](/docs/iac/concepts/state-and-backends/) to determine if that resource has been created before. If it has not, the engine uses a _resource provider_ to create it. If it already exists, the engine works with the resource provider to determine what, if anything, has changed by comparing the old state of the resource with the new desired state of the resource as expressed by the program. If there are changes, the engine determines if it can _update_ the resource in place or if it must _replace_ it by _creating_ a new version and _deleting_ the old version. The decision depends on what properties of the resource are changing and the type of the resource itself. When the language host communicates to the engine that it has completed the execution of the Pulumi program, the engine looks for any existing resources that it did not see a new resource registration and schedules these resources for deletion.
 
 The deployment engine is embedded in the `pulumi` CLI itself.
 
@@ -157,7 +155,7 @@ resources:
 
 {{< /chooser >}}
 
-Now, we run `pulumi stack init mystack`. Since `mystack` is a new stack, the "last deployed state" has no resources.
+Now, we run `pulumi stack init mystack`. Since `mystack` is a new [stack](/docs/iac/concepts/stacks/), the "last deployed state" has no resources.
 
 Next, we run `pulumi up`. Since this program is written in {{% pulumi-language %}}, the Pulumi CLI launches the {{% pulumi-host %}} language host and requests that it execute the program. When the first {{% pulumi-bucket %}} object is constructed, the language host sends a _resource registration_ request to the deployment engine and then continues executing the program. This is subtle, but important: _When the call to_ {{% pulumi-new-bucket %}} _returns, it does not mean that the actual S3 bucket has been created in AWS_, it just means the language host has expressed that this bucket is part of the desired state of your infrastructure.  The language host continues to execute your program concurrently with the engine processing this request.
 
@@ -467,13 +465,3 @@ By default, Pulumi creates the replacement before deleting the original to minim
 Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources. If an [output](/docs/concepts/inputs-outputs/) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations. This list can also be augmented by using the [dependsOn](/docs/concepts/resources#dependson) resource option.
 
 By default, if a resource must be replaced, Pulumi will attempt to create a new copy of the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace](/docs/concepts/resources#deletebeforereplace) option. If you have disabled [auto-naming](/docs/concepts/resources/names/#autonaming) using configuration or by providing a specific name for a resource, it will be treated as if it was marked as `deleteBeforeReplace` automatically (otherwise the create operation for the new version would fail since the name is in use).
-
-## Declarative and imperative approach
-
-With Pulumi, you author your infrastructure in your preferred programming language. When you run `pulumi up`, the Pulumi CLI starts both language host for your selected programming language as well as the required providers (via the Pulumi engine). The providers, coordinated by the Pulumi engine, are the ones that perform the actual creation, modification, or deletion of your infrastructure. The separation of language support from the engine is what makes Pulumi so powerful, providing the best of both imperative and declarative approaches for your infrastructure as code solutions.
-
-Here is a breakdown of each component of Pulumi's architecture:
-
-* Language host: `imperative` (JavaScript/TypeScript, Go, Python, C#/F#/.NET, Java) and declarative (YAML)
-* Pulumi engine: `declarative`
-* Providers: `imperative`
