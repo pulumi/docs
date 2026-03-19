@@ -3,33 +3,33 @@
 
     Parameters:
     - title: Section title
-    - cta_primary_text: Primary CTA button text
-    - cta_primary_link: Primary CTA button link
-    - cta_secondary_text: Secondary CTA button text
-    - cta_secondary_link: Secondary CTA button link
+    - cta_primary_text: Primary CTA button text (defaults to site.Params.cta.primary.label)
+    - cta_primary_link: Primary CTA button link (defaults to site.Params.cta.primary.href)
+    - cta_secondary_text: Secondary CTA button text (defaults to site.Params.cta.secondary.label)
+    - cta_secondary_link: Secondary CTA button link (defaults to site.Params.cta.secondary.href)
     - anchor: Optional anchor for section id
 */}}
 
 {{ $title := .title }}
-{{ $ctaPrimaryText := .cta_primary_text }}
-{{ $ctaPrimaryLink := .cta_primary_link }}
-{{ $ctaSecondaryText := .cta_secondary_text }}
-{{ $ctaSecondaryLink := .cta_secondary_link }}
+{{ $ctaPrimaryText := .cta_primary_text | default site.Params.cta.primary.label }}
+{{ $ctaPrimaryLink := .cta_primary_link | default site.Params.cta.primary.href }}
+{{ $ctaSecondaryText := .cta_secondary_text | default site.Params.cta.secondary.label }}
+{{ $ctaSecondaryLink := .cta_secondary_link | default site.Params.cta.secondary.href }}
 {{ $anchor := .anchor }}
 
 <section class="template-footer"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="flex flex-col xxl:flex-row justify-center lg:justify-between gap-6">
+    <div class="flex flex-col items-center text-center gap-6">
         {{ if $title }}
-        <h2 class="template-footer-title text-left md:text-center my-0 w-full max-w-xl xl:max-w-none mx-auto">{{ $title }}</h2>
+        <h2 class="template-footer-title my-0">{{ $title }}</h2>
         {{ end }}
-        <div class="flex flex-col lg:flex-row w-full xl:w-auto gap-4 items-center md:justify-center">
+        <div class="flex flex-col lg:flex-row gap-4 items-center justify-center w-full">
             {{ if $ctaPrimaryText }}
-            <a href="{{ $ctaPrimaryLink }}" class="btn-primary text-center md:w-1/2 w-full lg:w-auto">
+            <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant text-center w-full lg:w-auto" data-role="cta-get-started">
                 <span class="whitespace-nowrap">{{ $ctaPrimaryText }}</span>
             </a>
             {{ end }}
             {{ if $ctaSecondaryText }}
-            <a href="{{ $ctaSecondaryLink }}" class="btn-secondary text-center md:w-1/2 w-full lg:w-auto">
+            <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant text-center w-full lg:w-auto">
                 <span class="whitespace-nowrap">{{ $ctaSecondaryText }}</span>
             </a>
             {{ end }}

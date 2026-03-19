@@ -33,6 +33,20 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @apply bg-orange-500 border-orange-600;
 }
 
+// Typography token utilities (from tokens.json headings/body font sizes).
+@utility text-heading-2xl { font-size: 80px; }
+@utility text-heading-xl { font-size: 72px; }
+@utility text-heading-l { font-size: 64px; }
+@utility text-heading-m { font-size: 48px; }
+@utility text-heading-s { font-size: 40px; }
+@utility text-heading-xs { font-size: 28px; }
+@utility text-heading-2xs { font-size: 24px; }
+@utility text-heading-2xsSmall { font-size: 20px; }
+@utility text-body-xl { font-size: 24px; }
+@utility text-body-l { font-size: 20px; }
+@utility text-body-m { font-size: 18px; }
+@utility text-body-s { font-size: 16px; }
+
 // v4 layer placement: base styles go in @layer base so Tailwind utilities can override them.
 // Component styles go in @layer components for the same reason.
 // In v2, utilities came last in the stylesheet and won via cascade order.
