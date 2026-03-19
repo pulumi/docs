@@ -650,7 +650,7 @@ Test your policy pack locally before publishing.
 
 1. Use the `--policy-pack` flag to specify your policy pack directory:
 
-    If you need a test program, create one with `pulumi new aws-typescript`. This creates an S3 bucket to test the policy.
+    If you need a test program, create one with `pulumi new aws-typescript`. This scaffolds a Pulumi program that provisions an S3 bucket you can test the policy against.
 
     ```sh
     $ mkdir test-program && cd test-program
@@ -712,7 +712,7 @@ Test your policy pack locally before publishing.
 
 1. Use the `--policy-pack` flag to specify your policy pack directory:
 
-    If you need a test program, create one with `pulumi new aws-python`. This creates an S3 bucket to test the policy.
+    If you need a test program, create one with `pulumi new aws-python`. This scaffolds a Pulumi program that provisions an S3 bucket you can test the policy against.
 
     ```sh
     $ mkdir test-program && cd test-program
