@@ -726,7 +726,6 @@ class GithubLabelProvider(ResourceProvider):
         self.auth = req.config.require("githubToken")
 
     def create(self, props):
-        auto_secret = True
         g = Github(self.auth)
         l = g.get_user(props["owner"]).get_repo(props["repo"]).create_label(
             name=props["name"],
@@ -734,7 +733,6 @@ class GithubLabelProvider(ResourceProvider):
             description=props.get("description", GithubObject.NotSet))
         return CreateResult(l.name, {**props, **l.raw_data})
     def update(self, id, _olds, props):
-        auto_secret = True
         g = Github(self.auth)
         l = g.get_user(props["owner"]).get_repo(props["repo"]).get_label(id)
         l.edit(name=props["name"],
