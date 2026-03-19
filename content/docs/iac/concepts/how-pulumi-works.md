@@ -1,12 +1,12 @@
 ---
 title_tag: Pulumi Architecture
 meta_desc: "An in-depth look at Pulumi's internal architecture: the language host, deployment engine, and resource providers, and how they interact when you run pulumi up."
-title: Pulumi architecture
-h1: Pulumi architecture
+title: Pulumi Architecture
+h1: Pulumi Architecture
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Pulumi architecture
+        name: Pulumi Architecture
         weight: 10
         parent: iac-concepts
     concepts:
@@ -245,7 +245,7 @@ return await Deployment.RunAsync(() =>
         {
             { "owner", "media-team" },
         },
-    }););
+    });
     var contentBucket = new Aws.S3.Bucket("content-bucket");
 });
 ```
@@ -369,7 +369,7 @@ return await Deployment.RunAsync(() =>
         {
             { "owner", "media-team" },
         },
-    }););
+    });
     var appBucket = new Aws.S3.Bucket("app-bucket");
 });
 ```
