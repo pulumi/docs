@@ -1,12 +1,14 @@
 {{/*
 Template Product Two Column Partial
 
-Left: heading. Right: description + 3 horizontal mini feature cards.
+Left: heading. Right: description + optional CTA link + 3 horizontal mini feature cards.
 Used for "Write infrastructure code in your favorite language" sections.
 
 Parameters:
 - heading: Left column heading
 - description: Right column description (supports markdown)
+- cta_text: Optional CTA link text (e.g. "Explore Infrastructure as Code")
+- cta_link: Optional CTA link URL
 - cards: Array of mini feature cards
 Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, ...]
 - anchor: Optional anchor for section id
@@ -14,6 +16,8 @@ Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, .
 
 {{ $heading := .heading }}
 {{ $description := .description }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
 {{ $cards := .cards }}
 {{ $anchor := .anchor }}
 
@@ -29,6 +33,12 @@ Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, .
             <div class="product-two-column-description">
                 {{ $description | markdownify }}
             </div>
+            {{ end }}
+            {{ if $ctaText }}
+            <a href="{{ $ctaLink }}" class="cta inline-flex items-center gap-1 mt-6">
+                <span>{{ $ctaText }}</span>
+                <span>→</span>
+            </a>
             {{ end }}
         </div>
     </div>

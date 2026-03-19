@@ -8,6 +8,8 @@
     - description: Card description (supports markdown)
     - cta_text: CTA button text
     - cta_link: CTA button link
+    - cta_primary_text: Optional primary CTA button text (renders alongside cta_text)
+    - cta_primary_link: Optional primary CTA button link
     - anchor: Optional anchor for section id
 */}}
 
@@ -17,6 +19,8 @@
 {{ $description := .description }}
 {{ $ctaText := .cta_text }}
 {{ $ctaLink := .cta_link }}
+{{ $ctaPrimaryText := .cta_primary_text }}
+{{ $ctaPrimaryLink := .cta_primary_link }}
 {{ $anchor := .anchor }}
 
 <div class="template-card"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
@@ -41,8 +45,17 @@
         </div>
         {{ end }}
 
-        {{ if $ctaText }}
-        <a href="{{ $ctaLink }}" class="btn-secondary-template-variant block text-center w-full xl:w-auto">{{ $ctaText }}</a>
+        {{ if or $ctaPrimaryText $ctaText }}
+        <div class="flex flex-col sm:flex-row gap-4">
+            {{ if $ctaPrimaryText }}
+            <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant text-center" data-role="cta-get-started">
+                <span class="whitespace-nowrap">{{ $ctaPrimaryText }}</span>
+            </a>
+            {{ end }}
+            {{ if $ctaText }}
+            <a href="{{ $ctaLink }}" class="btn-secondary-template-variant text-center">{{ $ctaText }}</a>
+            {{ end }}
+        </div>
         {{ end }}
     </div>
 </div>

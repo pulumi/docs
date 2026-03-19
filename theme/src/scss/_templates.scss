@@ -380,7 +380,19 @@ $violet-primary: #673EAC;
     }
 }
 
+[class*="template-section"],
+[class*="template-product"] {
+    .cta {
+        @apply text-violet-600 font-semibold font-body no-underline;
+
+        &:hover {
+            @apply underline;
+        }
+    }
+}
+
 .template-section-header {
+
     .section-header-image-above-img {
         @apply w-auto h-auto;
         max-width: 350px;
@@ -411,17 +423,18 @@ $violet-primary: #673EAC;
     }
 }
 
-.template-section-header-with-code {
-    .template-section-header-with-code-inner {
+.template-section-header-with-code,
+.template-section-header-with-image {
+    .section-header-split-inner {
         @apply gap-12 xl:gap-24;
     }
 
-    .template-section-header-with-code-content {
+    .section-header-split-content {
         @apply xl:min-w-0 mt-20;
         flex: 1.25 1 0%;
     }
 
-    .template-section-header-with-code-image {
+    .section-header-split-image {
         @apply xl:min-w-0 flex-1;
 
         pulumi-chooser {
@@ -433,17 +446,17 @@ $violet-primary: #673EAC;
         }
     }
 
-    .section-header-with-code-tag {
+    .section-header-split-tag {
         @include section-hint-small();
         @apply m-0;
     }
 
-    .section-header-with-code-title {
+    .section-header-split-title {
         @include section-header();
         @apply text-black text-left;
     }
 
-    .section-header-with-code-description {
+    .section-header-split-description {
         color: var(--gray-tertiary, #757576);
         font-feature-settings: 'salt' on;
         font-family: Inter, sans-serif;
@@ -458,18 +471,11 @@ $violet-primary: #673EAC;
         }
     }
 
-    .section-header-with-code-cta {
-        @apply text-violet-600 font-semibold font-body no-underline;
-
-        &:hover {
-            @apply underline;
-        }
-    }
-
     pulumi-chooser > ul li.active {
         border-image-source: none;
         border-color: #805ac3;
     }
+
 }
 
 .template-counter-cards {
