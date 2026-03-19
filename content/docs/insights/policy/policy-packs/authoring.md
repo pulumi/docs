@@ -356,7 +356,68 @@ Use stack validation policies when you need to:
 
 Most policies are resource validation policies. Stack validation policies are useful for more complex scenarios that require understanding the full context of your infrastructure.
 
-In TypeScript and Python, resource vs stack validation is determined by which callback you implement (`validateResource` vs `validateStack`). In OPA, the distinction is determined by the rule name prefix: `deny`/`warn` rules are resource-level, while `stack_deny`/`stack_warn` rules are stack-level. Stack-level OPA rules receive all resources in the stack via `input.resources`:
+The following example limits the number of S3 buckets in a stack:
+
+{{< chooser language "typescript,python,opa" >}}
+
+{{% choosable language typescript %}}
+
+In TypeScript, use the `validateStack` callback to access all resources in the stack:
+
+```typescript
+import { PolicyPack } from "@pulumi/policy";
+
+new PolicyPack("stack-policies", {
+    policies: [{
+        name: "maximum-s3-bucket-count",
+        description: "Limits the number of S3 buckets per stack.",
+        enforcementLevel: "mandatory",
+        validateStack: (args, reportViolation) => {
+            const buckets = args.resources.filter(
+                r => r.type === "aws:s3/bucket:Bucket"
+            );
+            if (buckets.length > 3) {
+                reportViolation(
+                    `Stack has ${buckets.length} S3 buckets, maximum allowed is 3.`);
+            }
+        },
+    }],
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+In Python, use `StackValidationPolicy` to access all resources in the stack:
+
+```python
+from pulumi_policy import EnforcementLevel, PolicyPack, StackValidationPolicy
+
+def max_bucket_count(args, report_violation):
+    buckets = [r for r in args.resources if r.resource_type == "aws:s3/bucket:Bucket"]
+    if len(buckets) > 3:
+        report_violation(
+            f"Stack has {len(buckets)} S3 buckets, maximum allowed is 3.")
+
+PolicyPack(
+    "stack-policies",
+    policies=[
+        StackValidationPolicy(
+            name="maximum-s3-bucket-count",
+            description="Limits the number of S3 buckets per stack.",
+            enforcement_level=EnforcementLevel.MANDATORY,
+            validate=max_bucket_count,
+        ),
+    ],
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language opa %}}
+
+In OPA, the rule name prefix determines the validation scope. Use `stack_deny` or `stack_warn` prefixes for stack-level rules. These rules receive all resources in the stack via `input.resources`:
 
 ```rego
 package aws
@@ -370,6 +431,10 @@ stack_deny_too_many_buckets[msg] {
     msg := sprintf("Stack has %d S3 buckets, maximum allowed is 3", [count(buckets)])
 }
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ### Using stack tags in policies
 
@@ -548,6 +613,8 @@ package dynamic
 # description: Dynamic environment resources must use the correct name.
 # custom:
 #   message: Set the environmentName property to 'myTestEnv'.
+# This rule only fires for dynamic resources that have an environmentName
+# property. Other dynamic resources are silently skipped.
 deny_environment_name[msg] {
     input.type == "pulumi-nodejs:dynamic:Resource"
     input.environmentName
@@ -704,7 +771,7 @@ Test your policy pack locally before publishing.
 
 1. Use the `--policy-pack` flag to specify your policy pack directory:
 
-    If you need a test program, create one with `pulumi new aws-typescript` or `pulumi new aws-python`. This creates an S3 bucket to test the policy.
+    If you need a test program, create one with `pulumi new aws-typescript` or `pulumi new aws-python`. This scaffolds a Pulumi program that provisions an S3 bucket you can test the policy against.
 
     ```sh
     $ mkdir test-program && cd test-program
@@ -876,8 +943,9 @@ package aws
 deny_large_instances[msg] {
     input.type == "aws:ec2/instance:Instance"
     max_size := data.config.deny_large_instances.maxInstanceSize
-    blocked := {"m5.2xlarge", "m5.4xlarge", "m5.8xlarge", "m5.12xlarge", "m5.16xlarge", "m5.24xlarge"}
-    blocked[input.instanceType]
+    sizes := {"t3.micro": 1, "t3.small": 2, "t3.medium": 3, "t3.large": 4,
+              "t3.xlarge": 5, "m5.xlarge": 6, "m5.2xlarge": 7, "m5.4xlarge": 8}
+    sizes[input.instanceType] > sizes[max_size]
     msg := sprintf("Instance '%s' type '%s' exceeds maximum allowed size '%s'",
                    [input.__name, input.instanceType, max_size])
 }
