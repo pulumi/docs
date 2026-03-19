@@ -32,3 +32,5 @@ Where Serverless Framework treats each function as a configurable entity, Pulumi
 program. This means in practice that most Serverless Framework solutions also need to involve other solutions -- like
 AWS CloudFormation -- and that you as a user are left orchestrating changes in multiple systems.
 This often leads to the very "pile of bash scripts" problems that you had sought to solve in the first place.
+
+To learn how to migrate your existing Serverless Framework applications to Pulumi, including step-by-step instructions for importing resources and translating your `serverless.yml` definitions, see the [Serverless Framework migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-serverless/).

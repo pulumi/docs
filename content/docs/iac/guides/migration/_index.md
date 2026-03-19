@@ -28,6 +28,7 @@ Below we will review some basic concepts, but feel free to jump straight to a sp
 * [**From AWS CloudFormation**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/): coexist with, deploy, or convert your templates and stacks
 * [**From Azure Resource Manager (ARM)**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/): coexist with, deploy, or convert your templates and deployments
 * [**From Kubernetes YAML or Helm**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/): coexist with, deploy, or convert your configuration
+* [**From Serverless Framework**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-serverless/): coexist with, import, or rewrite your Serverless Framework applications
 
 ## Concepts
 
@@ -41,6 +42,7 @@ Support for these techniques differs based on how your existing infrastructure w
 | [AWS CloudFormation](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/) | ✅      | ✅     | ✅       |
 | [Azure ARM](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/)          | ✅      | ✅     | ✅      |
 | [Kubernetes YAML](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/)    | ✅      | ✅     | ✅      |
+| [Serverless Framework](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-serverless/) | ✅      | ✅     | ✅      |
 | Other              | ✅      | ✅     |         |
 
 ### Coexistence
