@@ -1,5 +1,3 @@
-import * as clipboard from "clipboard-polyfill";
-
 ("use strict");
 
 function normalizeText(lang, text) {
@@ -126,7 +124,7 @@ function addCopyButton(container: HTMLElement) {
 
         var normalized = normalizeText(lang, text);
         if (normalized && normalized.length > 0) {
-            clipboard.writeText(normalized);
+            navigator.clipboard.writeText(normalized);
         }
 
         btn.blur();
