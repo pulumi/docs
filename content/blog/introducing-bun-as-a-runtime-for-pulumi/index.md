@@ -97,7 +97,9 @@ After:
 runtime: bun
 ```
 
+{{% notes type="info" %}}
 When the runtime is set to `bun`, Bun is also used as the package manager — there's no need to configure a separate `packagemanager` option.
+{{% /notes %}}
 
 ### 2. Update `tsconfig.json`
 
