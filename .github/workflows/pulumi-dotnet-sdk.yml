@@ -64,6 +64,7 @@ jobs:
           repository: pulumi/pulumi-dotnet
           path: pulumi-dotnet
           ref: ${{ github.event.inputs.version || github.event.client_payload.ref }}
+          submodules: recursive
       - name: Install dotnet
         uses: actions/setup-dotnet@v5
         with:
