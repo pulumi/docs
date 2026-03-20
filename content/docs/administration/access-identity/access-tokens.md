@@ -24,78 +24,51 @@ Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usa
 
 Pulumi offers three types of access tokens:
 
-1. Personal tokens, which map to the permissions of an individual user. Personal tokens are available to all Pulumi Cloud users.
-1. Organization tokens, which map to the permissions of either a regular organization member or an organization admin, depending on the scope of the token. Organization tokens are only available to Enterprise and Business Critical customers.
-1. Team tokens, which map to the permissions of a team within an organization. For more information on using teams within your Pulumi Cloud organization, see [Teams & Role-based access control (RBAC)](/docs/administration/access-identity/rbac/teams/). Team tokens are only available to Enterprise and Business Critical customers.
+1. **Personal tokens**, which carry the permissions of the individual user who created them. Personal tokens are available to all Pulumi Cloud users.
+1. **Organization tokens**, which are machine tokens owned by the organization rather than any individual user. Organization tokens are only available to Enterprise and Business Critical customers.
+1. **Team tokens**, which are machine tokens scoped to the permissions of a specific team within an organization. Team tokens are only available to Enterprise and Business Critical customers.
 
 When using tokens, be mindful of the following security best practices:
 
 * Organization and team access tokens are machine tokens that are not connected to a user account, and therefore should only be used in scenarios like CI/CD pipelines, where the Pulumi actions are not being performed directly by a particular user.
 * Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture.
-* All access tokens can create stacks. The stack creator will automatically become its owner and will have all stack permissions, including deletion.
+* Access tokens can create stacks if the organization's access management settings permit all members to do so, or if the token's assigned role includes the `stack:create` scope. Admin tokens always have this capability. The stack creator will automatically become its owner and will have all stack permissions, including deletion. See [RBAC](/docs/administration/access-identity/rbac/) for more on how org-wide settings and role scopes interact.
 
 ## Access token permissions
 
-Personal access tokens map to the permissions of a user, organization access tokens map to the permissions of an organization member, and team access tokens map to the permissions of a team member.
+### Personal tokens
 
-Both organization and team token activities produce audit log events which are accessible from the **Audit Logs** page. All audit log events surface the token’s unique name, and in the event of audit log export, the token’s UUID as well.
+Personal access tokens carry the same permissions as the user who created them. This includes all organization memberships, team memberships, and role assignments that apply to the user across every organization they belong to.
 
-| Action                                | Personal     | Team     | Organization     | Admin     |
-|---------------------------------------|--------------|----------|------------------|-----------|
-| **Stacks**                            | **Personal** | **Team** | **Organization** | **Admin** |
-| List stacks                           | ✅            | ✅        | ✅                | ✅         |
-| Get stack                             | ✅            | ✅        | ✅                | ✅         |
-| Get stack state                       | ✅            | ✅        | ✅                | ✅         |
-| Transfer stack                        |              |          |                  | ✅         |
-| Delete stack                          | ✅            | ✅        | ✅                | ✅         |
-| List webhooks                         |              | ✅        | ✅                | ✅         |
-| Create webhook                        |              | ✅        | ✅                | ✅         |
-| Get webhook                           |              | ✅        | ✅                | ✅         |
-| Ping webhook                          |              | ✅        | ✅                | ✅         |
-| List webhook deliveries               |              | ✅        | ✅                | ✅         |
-| **Stack tags**                        | **Personal** | **Team** | **Organization** | **Admin** |
-| Get stack tags                        | ✅            | ✅        | ✅                | ✅         |
-| Set stack tag                         | ✅            | ✅        | ✅                | ✅         |
-| Delete stack tag                      | ✅            | ✅        | ✅                | ✅         |
-| **Stack updates**                     | **Personal** | **Team** | **Organization** | **Admin** |
-| List stack updates                    | ✅            | ✅        | ✅                | ✅         |
-| Get update status                     | ✅            | ✅        | ✅                | ✅         |
-| List update events                    | ✅            | ✅        | ✅                | ✅         |
-| List previews                         | ✅            | ✅        | ✅                | ✅         |
-| **Organizations**                     | **Personal** | **Team** | **Organization** | **Admin** |
-| List users                            |              | ✅        | ✅                | ✅         |
-| Add user to organization              |              |          |                  | ✅         |
-| Remove user from organization         |              |          |                  | ✅         |
-| List teams                            |              | ✅        | ✅                | ✅         |
-| Create team                           |              |          | ✅                | ✅         |
-| Delete team                           |              |          | ✅                | ✅         |
-| Update team membership                |              |          |                  | ✅         |
-| Grant stack access to team            |              |          |                  | ✅         |
-| Remove stack access from team         |              |          |                  | ✅         |
-| Create team token                     |              |          |                  | ✅         |
-| Delete team token                     |              |          |                  | ✅         |
-| Update member role                    |              |          |                  | ✅         |
-| List access tokens                    |              |          |                  | ✅         |
-| Create access token                   |              |          |                  |           |
-| Delete access token                   |              |          |                  |           |
-| **Webhooks**                          | **Personal** | **Team** | **Organization** | **Admin** |
-| List stack webhooks                   | ✅            | ✅        | ✅                | ✅         |
-| Create stack webhook                  | ✅            | ✅        | ✅                | ✅         |
-| Get stack webhook                     | ✅            | ✅        | ✅                | ✅         |
-| Ping stack webhook                    | ✅            | ✅        | ✅                | ✅         |
-| List stack webhooks deliveries        | ✅            | ✅        | ✅                | ✅         |
-| List organization webhooks            |              |          |                  | ✅         |
-| Create organization webhook           |              |          |                  | ✅         |
-| Get organization webhook              |              |          |                  | ✅         |
-| Ping organization webhook             |              |          |                  | ✅         |
-| List organization webhooks deliveries |              |          |                  | ✅         |
-| **Audit logs**                        | **Personal** | **Team** | **Organization** | **Admin** |
-| Get audit log events (JSON)           |              |          |                  | ✅         |
-| Export audit log events (CSV or CEF)  |              |          |                  | ✅         |
+### Organization tokens
+
+Organization tokens act on behalf of the organization itself. Rather than mapping to a fixed set of capabilities, organization tokens derive their permissions from the [RBAC role](/docs/administration/access-identity/rbac/roles/) assigned to them at creation time. This means you can tailor the exact level of access an organization token has—from read-only access to a subset of stacks, to full administrative control—by assigning the appropriate role.
+
+Organization tokens that are assigned no explicit role receive the organization's [default member role](/docs/administration/access-identity/rbac/roles/). The token's access is automatically limited to the single organization it was created in, unlike a personal token which spans all of a user's organizations.
+
+#### Admin organization tokens
+
+{{% notes type="warning" %}}
+Admin organization access tokens have elevated permissions; please use them with caution.
+{{% /notes %}}
+
+Admin organization tokens are a legacy token type that grant full, administrator-level privileges within the organization. They predate the RBAC system and are equivalent to a token assigned the built-in Admin role. Admin tokens allow automated processes to perform any operation supported for organization administrators **except** creating or deleting other organization tokens.
+
+For new automation, prefer assigning a specific [custom role](/docs/administration/access-identity/rbac/roles/) to an organization token rather than using the admin flag. Custom roles let you follow the principle of least privilege by granting only the scopes your automation actually needs.
+
+Both organization and team token activities produce audit log events which are accessible from the **Audit Logs** page. All audit log events surface the token's unique name, and in the event of audit log export, the token's UUID as well.
+
+### Team tokens
+
+Team tokens act on behalf of a specific team within the organization. A team token's effective permissions are determined by the [roles assigned to that team](/docs/administration/access-identity/rbac/teams/) at the time each request is evaluated. If a team's role assignments change, those changes are immediately reflected in what the team token can do.
+
+Team tokens are useful for CI/CD pipelines that should be scoped to only the resources a particular team manages, without requiring a personal token from any individual team member.
+
+For a detailed reference on how permissions are structured and evaluated, see [Role-Based Access Control (RBAC)](/docs/administration/access-identity/rbac/).
 
 ## Personal access tokens
 
-These access tokens have the same permission as your user.
+These access tokens have the same permissions as your user.
 
 ### Creating Personal Access Tokens
 
@@ -104,7 +77,7 @@ To create an access token:
 1. Select **Personal access tokens** from the user menu.
 1. Select **Create token**, which will open a dialog.
 1. Optionally, you may assign a description for additional context.
-1. Choose an expiration period up of up to two years. You may also choose that the token does not expire.
+1. Choose an expiration period of up to two years. You may also choose that the token does not expire.
 1. Select **Create token** in the dialog to create the token.
 
 It is strongly recommended that you choose an expiration period for all access tokens you create.
@@ -122,50 +95,29 @@ To delete an access token:
 Please note that this functionality is available only in the [Enterprise and Business Critical editions](https://www.pulumi.com/pricing/) of Pulumi.
 {{< /notes >}}
 
-Organization access tokens provide the following benefits:
+Organization tokens are machine tokens owned by the organization itself rather than any individual user. They are well-suited for CI/CD pipelines and automation that needs to act on behalf of the organization without being tied to a specific person's account.
 
-* Organization access tokens belong to the organization. Any organization admin can view, create, and delete organization tokens. If a member of your organization leaves, you don't have to worry about losing access to core CI/CD tokens attached to their personal account.
-* Promotes less privileged access, as an Organization Access Token, unlike a Personal Access Token, is granted privileges only to the organization in which it was created, rather than to all organizations a single user belongs to.
-* Audit logs and update history are attributed to the organization, rather than an individual user.
+### What organization tokens can do
 
-### Creating an organization access token
+An organization token can do anything its assigned [RBAC role](/docs/administration/access-identity/rbac/roles/) permits. By assigning different roles, you can scope a token to exactly the operations your automation needs — for example, a token that can only read stack state, or one that can deploy updates to a specific set of stacks. If no role is assigned at creation time, the token receives the organization's default member role.
 
-Navigate to your organization and then:
+Actions taken by organization tokens appear in audit logs attributed to the organization rather than an individual user, with the token's unique name surfaced in every event.
 
-1. Navigate to **Settings** > **Access Tokens**.
-1. Select **Create token**, which will open a dialog.
-1. Provide a unique name for this token across your organization. It can be up to 40 characters.
-1. Optionally, you may assign a description for additional context.
-1. Choose an expiration period up of up to two years. You may also choose that the token does not expire.
-1. Select **Create token** in the dialog to create the token.
-
-The token must have a name that is unique among all organization and team access tokens in the organization., including deleted tokens. This allows tokens taking operations on behalf of your organization to be identifiable in the event that one is compromised. Any other organization admin can delete this token; it is not owned by the admin which created it. Creation of organization access tokens is logged as an audit log event.
-
-It is strongly recommended that you choose an expiration period for all access tokens you create.
-
-#### Admin organization access tokens
+#### Admin organization tokens
 
 {{% notes type="warning" %}}
-Admin organization access tokens have elevated permissions, please use them with caution.
+Admin organization access tokens have elevated permissions; please use them with caution.
 {{% /notes %}}
-Admin organization access tokens (or admin tokens) are organization tokens with elevated, administrator-level privileges. Admin tokens allow automated processes to perform any operation supported for organization administrators except for the creation or deletion of other organization tokens.
 
-To create an admin organization access token, select the `Admin` option when creating an organization token, following the steps above.
+Admin organization tokens are a legacy token type that grant full, administrator-level privileges within the organization — equivalent to a token assigned the built-in Admin role. They predate the RBAC system and can perform any operation an organization administrator can perform, **except** creating or deleting other organization tokens.
 
-Exercise caution and limit the use of admin organization access tokens to scenarios where they are absolutely necessary. Avoid unnecessary sharing and adhere to the principle of least privilege. Admin tokens can be deleted from the **Access Tokens** page within your organization settings following the process below.
+For new automation, prefer assigning a specific [custom role](/docs/administration/access-identity/rbac/roles/) rather than using the admin option. Custom roles let you follow the principle of least privilege by granting only the scopes your automation actually needs.
 
-### Viewing organization access tokens
+### Who can manage organization tokens
 
-Organization access tokens are viewed navigating to **Access tokens** from the organization settings.
+Any organization admin can create, view, and delete organization tokens via **Settings** > **Access Tokens**. Tokens are not owned by the admin who created them — if that person leaves the organization, other admins retain full access. Each token's name must be unique across all organization and team tokens in the organization, including deleted tokens, so that tokens can be reliably identified in audit logs and incident response.
 
-### Deleting organization access tokens
-
-Organization access tokens can be deleted by any organization admin at any time.
-
-1. Navigate to **Settings** > **Access Tokens**.
-1. Choose **Delete token** from the action menu. You will be prompted in a dialog to confirm your choice.
-
-If you choose to delete a token, its access will immediately be revoked and all further operations using it will fail as unauthorized. The token name will remain reserved for your organization after deletion.
+Deleting a token immediately revokes its access; all further operations using it will fail as unauthorized. The token name remains reserved after deletion.
 
 ## Team access tokens
 
@@ -173,49 +125,19 @@ If you choose to delete a token, its access will immediately be revoked and all 
 Please note that this functionality is available only in the [Enterprise and Business Critical editions](https://www.pulumi.com/pricing/) of Pulumi.
 {{< /notes >}}
 
-Team access tokens provide the following benefits:
+Team tokens are machine tokens scoped to the resources and permissions of a specific team. They are useful for CI/CD pipelines that should only be able to access the infrastructure a particular team owns, without needing a personal token from any individual team member.
 
-* Managed by organization and team admins, allowing more users in your organization to leverage machine tokens.
-* Support user-independent usage in your CI integrations while having less privileged scope to other stacks in your organization.
+### What team tokens can do
 
-### Creating team access tokens
+A team token's effective permissions are the union of all [roles assigned to that team](/docs/administration/access-identity/rbac/teams/), evaluated at the time of each request. If the team's role assignments change — for example, the team is granted access to a new set of stacks — the token's capabilities update automatically without any token recreation. This makes team tokens a good fit for long-lived automation where access needs may evolve over time.
 
-Navigate to your Pulumi Organization, then:
+As with organization tokens, team token activity is recorded in audit logs with the token's name, keeping actions traceable without exposing individual users.
 
-1. Select **Teams**.
-1. Select the Pulumi Team you would like to attach the token to.
-1. Scroll to **Access Tokens**.
-1. Select **Create token**, which will open a dialog.
-1. Provide a unique name for this token across your organization. It can be up to 40 characters.
-1. Optionally, you may assign a description for additional context.
-1. Choose an expiration period up of up to two years. You may also choose that the token does not expire.
-1. Select **Create token** in the dialog to create the token.
+### Who can manage team tokens
 
-The token must have a name that is unique among all organization and team access tokens in the organization., including deleted tokens. This allows tokens taking operations on behalf of your organization to be identifiable in the event that one is compromised. Any other organization admin can delete this token; it is not owned by the admin which created it. Creation of organization access tokens is logged as an audit log event.
+Organization admins and team admins can create and delete team tokens. Tokens are found under the team's page (**Teams** > select a team > **Access Tokens**) and are not owned by the admin who created them. Each token name must be unique across all organization and team tokens in the organization, including deleted tokens.
 
-It is strongly recommended that you choose an expiration period for all access tokens you create.
-
-### Viewing team access tokens
-
-To view team access tokens:
-
-1. Select **Teams**.
-1. Select a team.
-1. Scroll to the **Team Access Tokens** card.
-
-### Deleting team access tokens
-
-Team access tokens can be deleted by any Organization or Team admin.
-
-To delete a team access token:
-
-1. Select **Teams**.
-1. Select a team.
-1. Scroll to the **Team Access Tokens** card.
-1. Select the ellipsis button.
-1. Choose **Delete token**. You will be prompted in a dialog to confirm your choice.
-
-If you choose to delete a token, its access will immediately be revoked and all further operations using it will fail as unauthorized. The token name will remain reserved for your organization after deletion.
+Deleting a token immediately revokes its access. The token name remains reserved after deletion.
 
 ## OIDC issued tokens
 
