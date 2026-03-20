@@ -46,8 +46,6 @@ Organization tokens act on behalf of the organization itself. Rather than mappin
 
 Organization tokens that are assigned no explicit role receive the organization's [default member role](/docs/administration/access-identity/rbac/roles/). The token's access is automatically limited to the single organization it was created in, unlike a personal token which spans all of a user's organizations.
 
-For details on admin organization tokens and the legacy permission levels that predate role assignment, see [Legacy organization token types](#legacy-organization-token-types) below.
-
 ### Team tokens
 
 Team tokens act on behalf of a specific team within the organization. A team token's effective permissions are determined by the [roles assigned to that team](/docs/administration/access-identity/rbac/teams/) at the time each request is evaluated. If a team's role assignments change, those changes are immediately reflected in what the team token can do.
@@ -93,16 +91,6 @@ An organization token can do anything its assigned [RBAC role](/docs/administrat
 
 Actions taken by organization tokens appear in audit logs attributed to the organization rather than an individual user, with the token's unique name surfaced in every event.
 
-#### Admin organization tokens
-
-{{% notes type="warning" %}}
-Admin organization access tokens have elevated permissions; please use them with caution.
-{{% /notes %}}
-
-Admin organization tokens are a pre-RBAC token type that grant full, administrator-level privileges within the organization — equivalent to assigning the built-in Admin role to an organization token. They can perform any operation an organization administrator can perform, **except** creating or deleting other organization tokens.
-
-For new automation, prefer assigning a specific [custom role](/docs/administration/access-identity/rbac/roles/) rather than using the admin option. Custom roles let you follow the principle of least privilege by granting only the scopes your automation actually needs. See [Legacy organization token types](#legacy-organization-token-types) for background on how the admin and standard token types relate to the current RBAC model.
-
 ### Who can manage organization tokens
 
 Any organization admin can create, view, and delete organization tokens via **Settings** > **Access Tokens**. Tokens are not owned by the admin who created them — if that person leaves the organization, other admins retain full access. Each token's name must be unique across all organization and team tokens in the organization, including deleted tokens, so that tokens can be reliably identified in audit logs and incident response.
@@ -137,7 +125,11 @@ Before role assignment was available for organization tokens, organization token
 
 * **Admin organization tokens** had full administrator-level permissions — they could perform any operation an organization administrator can perform, except creating or deleting other organization tokens. This is equivalent to assigning the built-in Admin role to an organization token today.
 
-Both token types continue to work. The admin/standard distinction maps directly onto the built-in Admin and Member roles in the current RBAC system. When creating new organization tokens, you can reproduce these permission levels by assigning the corresponding built-in role, or use a [custom role](/docs/administration/access-identity/rbac/roles/) for more precise control.
+{{% notes type="warning" %}}
+Admin organization tokens have elevated permissions; please use them with caution.
+{{% /notes %}}
+
+Both token types continue to work. The admin/standard distinction maps directly onto the built-in Admin and Member roles in the current RBAC system. When creating new organization tokens, you can reproduce these permission levels by assigning the corresponding built-in role. For new automation, prefer assigning a [custom role](/docs/administration/access-identity/rbac/roles/) instead — custom roles let you follow the principle of least privilege by granting only the scopes your automation actually needs.
 
 ## OIDC issued tokens
 
