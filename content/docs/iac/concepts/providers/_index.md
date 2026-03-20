@@ -32,7 +32,7 @@ Providers are a specific type of [plugin](/docs/iac/concepts/plugins/) called a 
 There are two methods for installing a provider and using it in your Pulumi program:
 
 1. **Adding a reference to a provider's SDK using a package manager** in the language of your Pulumi program (e.g., npm in Node.js). This method is more common and is used for nearly all packages in the [Pulumi Registry](/registry).
-1. **Using the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command**. This method is most commonly used for [parameterized providers](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/providers/parameterized.html), such as the [Any Terraform Provider](/registry/packages/terraform-provider). The `pulumi package add` command generates a local SDK on disk (as opposed to downloading a pre-generated SDK from a package feed like npm) and allows you to consume any provider in the OpenTofu registry in you Pulumi program, even if there is no corresponding provider in the Pulumi Registry.
+1. **Using the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command**. This method is most commonly used for [parameterized providers](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/providers/parameterized.html), such as the [Any Terraform Provider](/registry/packages/terraform-provider). The `pulumi package add` command generates a local SDK on disk (as opposed to downloading a pre-generated SDK from a package feed like npm) and allows you to consume any provider in the OpenTofu registry in your Pulumi program, even if there is no corresponding provider in the Pulumi Registry.
 
 ### Installing a Provider via a Package Manager
 
