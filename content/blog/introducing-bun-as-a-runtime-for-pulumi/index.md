@@ -130,31 +130,43 @@ Key differences from a typical Node.js `tsconfig.json`:
 - **[`module: "Preserve"`](https://www.typescriptlang.org/tsconfig/#module)** and **[`moduleResolution: "bundler"`](https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/#moduleresolution-bundler)**: Let Bun handle module resolution instead of compiling to CommonJS. The `bundler` resolution strategy allows extensionless imports while still respecting `package.json` exports, matching how Bun resolves modules in practice.
 - **[`verbatimModuleSyntax: true`](https://www.typescriptlang.org/tsconfig/#verbatimModuleSyntax)**: Enforces consistent use of ESM `import`/`export` syntax. TypeScript will flag any remaining CommonJS patterns like `require()` at compile time.
 
-### 3. Use ESM syntax
+### 3. Switch to ESM
 
-With the Bun runtime, your code should use [ECMAScript module (ESM)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) syntax. ESM uses `import` and `export` statements instead of CommonJS's `require()` and `module.exports`:
+Bun makes it easy to go full ESM and it's the [recommended module format](https://bun.sh/docs/runtime/module-resolution) for Bun projects. Add `"type": "module"` to your `package.json`:
+
+```json
+{
+    "type": "module"
+}
+```
+
+With [ECMAScript module (ESM)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) syntax, one place that needs updating is the [program entrypoint](/docs/iac/languages-sdks/javascript/#enabling-async-support). In CommonJS TypeScript projects, async programs are written using `export =`. In ESM, you use a standard `export default` instead:
 
 ```typescript
 // CommonJS (Node.js default)
-const pulumi = require("@pulumi/pulumi");
-const aws = require("@pulumi/aws");
+export = async () => {
+    const bucket = new aws.s3.BucketV2("my-bucket");
+    return { bucketName: bucket.id };
+};
 
 // ESM (used with Bun)
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
+export default async () => {
+    const bucket = new aws.s3.BucketV2("my-bucket");
+    return { bucketName: bucket.id };
+};
 ```
 
-For stack outputs, use `export const` instead of assigning to `module.exports`:
+That said, the main reason to use an async entrypoint function in CommonJS is to be able to `await` data sources and other async calls before declaring resources. In ESM — including Bun — [top-level `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) just works, so you can skip the wrapper function entirely and `await` directly at the module level:
 
 ```typescript
-// CommonJS
-module.exports = { bucketName: bucket.id };
+import * as aws from "@pulumi/aws";
 
-// ESM
-export const bucketName = bucket.id;
+const azs = await aws.getAvailabilityZones({ state: "available" });
+
+const buckets = azs.names.map(az => new aws.s3.BucketV2(`my-bucket-${az}`));
+
+export const bucketNames = buckets.map(b => b.id);
 ```
-
-If your project already uses TypeScript `import`/`export` statements (as most Pulumi TypeScript templates do), you may not need to change anything here.
 
 ### 4. Update the Pulumi SDK
 
