@@ -56,7 +56,7 @@ For a detailed reference on how permissions are structured and evaluated, see [R
 
 ## Personal access tokens
 
-These access tokens have the same permissions as your user.
+Personal access tokens have the same permissions as your Pulumi Cloud user. This includes your respective permissions for all Pulumi Cloud organizations in which your user is a member.
 
 ### Creating Personal Access Tokens
 
