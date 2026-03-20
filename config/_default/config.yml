@@ -104,6 +104,10 @@ params:
         Pulumi's open source infrastructure as code SDK enables you to create, deploy,
         and manage infrastructure on any cloud, using your favorite languages.
 
+    # GrowthBook A/B testing
+    growthbook:
+        enabled: false
+
     # Schema.org configuration
     schema:
         # Pulumi CLI version - dynamically updated by CI/CD
