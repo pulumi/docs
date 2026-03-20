@@ -8,11 +8,6 @@ menu:
         weight: 2
 messages:
     -
-      message: "Without a doubt the most approachable tool in the IaaC space is \n@PulumiCorp\n.\n\nSomewhat enjoying provisioning a scheduled run of a Lambda."
-      author: "@Vetium"
-      link: https://twitter.com/Vetium/status/1589452885149900800
-      source: twitter
-    -
       message: "Why is \n@PulumiCorp\n so good, absolute minimum you can replicate everything you can do with other tools but that's just the start. If your #IaC is proper code you can use other sdks to fill gaps and it can be seamless. Used sdk to get secrets to pass to Pulumi, just worked 😍"
       author: "@ShahidDev"
       link: https://twitter.com/ShahidDev/status/1582965131629428736
