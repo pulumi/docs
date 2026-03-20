@@ -5,9 +5,9 @@ meta_desc: Pulumi provides a cloud native programming model for containers, Lamb
 aliases:
     - /why-pulumi/point-of-view
 sections:
-    - label: Transforming to Cloud Native
+    - label: Transforming to cloud native
       anchor: transforming-to-cloud-native
-    - label: A Programming Model for the Cloud
+    - label: A programming model for the cloud
       anchor: a-programming-model-for-the-cloud
     - label: Spin up with Pulumi
       anchor: spin-up-with-pulumi
@@ -19,7 +19,7 @@ This radical democratization is thanks to containers, serverless (lambda) comput
 
 However, cloud developers lack a consistent programming model to provide the productivity gains for application development harnessing these capabilities. Pulumi aims to provide that programming model.
 
-### Transforming to Cloud Native
+### Transforming to cloud native
 
 The set of capabilities, and cloud native architecture, derived from containers, lambda, and data services are promising the delivery of new applications at high velocity, that are delivered on-demand at any scale and freed from the constraints of traditional data center infrastructure.
 
@@ -33,11 +33,11 @@ To put this transition into perspective, until just recently "getting code to th
 
 Because of the nature of lift and shift, however, the tools developers use to create and manage cloud software have progressed slowly.  One of the benefits of containers has been giving developers simpler tools and workflows to package up their code to deploy into the cloud.  But operating such programs at scale and in production -- and architecting these programs in a truly cloud native way -- is still the domain of cutting edge experts.  And containers, while a powerful abstraction, say nothing about serverless computing or opinionated cloud services.
 
-### A Programming Model for the Cloud
+### A programming model for the cloud
 
 We now have an opportunity to reimagine what the next generation of cloud native software development will look like.  This software will leverage the increasingly sophisticated public cloud capabilities: AI, machine learning, large scale data storage and science, and reimagined SaaS product architectures.  Such software will not use the cloud as an afterthought.  The winners will be those who enable new, compelling experiences, at dramatically lower cost structures, by using the core capabilities of the cloud in fundamental and intrinsic ways.  The cloud will become an ever-present part of the application design, not an entirely separable layer, authored using a different suite of tools and techniques, managed by a distinct operations team operating at an arm's length.
 
-#### Emerging cloud-native architectures
+#### Emerging cloud native architectures
 
 In developing for the cloud, the question is not one of traditional infrastructure versus containers versus serverless versus hosted services.  We believe in using the best tool for the job.  Serverless functions can infinitely and rapidly scale event-driven systems with a low cost and ease of programming, while containers are great for bringing stateful apps to the cloud and scaling them out using your favorite container scheduler.  The key is in getting all of these technologies to seamlessly interoperate with one another in harmony, using consistent programming models and management practices.
 

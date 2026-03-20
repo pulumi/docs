@@ -356,7 +356,7 @@ $violet-primary: #673EAC;
 }
 
 .template-sidebar-nav {
-    @apply rounded-xl p-5 pb-4;
+    @apply rounded-xl p-5 pb-3;
     border: 0.5px solid #AAA;
 
     ul {
@@ -374,7 +374,11 @@ $violet-primary: #673EAC;
 
 .whitepaper-content {
     h2, h3, h4, h5, h6 {
-        @apply font-body;
+        @apply font-body scroll-mt-22;
+
+        @include screen-lg {
+            @apply font-body scroll-mt-28;
+        }
     }
 }
 
