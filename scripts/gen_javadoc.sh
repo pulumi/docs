@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
-REPO=~/pulumi-java
+REPO="${JAVA_REPO:-$HOME/pulumi-java}"
 SRC=$REPO/sdk/java/pulumi/build/docs/javadoc
 DEST=./static-prebuilt/docs/reference/pkg/java
 
