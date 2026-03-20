@@ -99,10 +99,12 @@ if (!fs.existsSync("public/css")) {
 Promise.all([
     minifyCSS("public/css/bundle.*.css", `bundle.${cssBundleId}.css`),
     minifyCSS("public/css/marketing.*.css", `marketing.${cssBundleId}.css`),
+    minifyCSS("public/css/homepage.*.css", `homepage.${cssBundleId}.css`),
 ]).then(() => {
     console.log("CSS bundles minified successfully!");
     console.log(`  - bundle.${cssBundleId}.css`);
     console.log(`  - marketing.${cssBundleId}.css`);
+    console.log(`  - homepage.${cssBundleId}.css`);
 });
 
 // Exit non-zero when something goes wrong in the promise chain.
