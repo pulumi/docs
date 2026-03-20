@@ -697,8 +697,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/fonts/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
         },
         {
             ...baseCacheBehavior,
