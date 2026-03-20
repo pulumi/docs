@@ -32,7 +32,7 @@ When using tokens, be mindful of the following security best practices:
 
 * Organization and team access tokens are machine tokens that are not connected to a user account, and therefore should only be used in scenarios like CI/CD pipelines, where the Pulumi actions are not being performed directly by a particular user.
 * Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture.
-* Access tokens can create stacks if the organization's access management settings permit all members to do so, or if the token's assigned role includes the `stack:create` scope. Admin tokens always have this capability. The stack creator will automatically become its owner and will have all stack permissions, including deletion. See [RBAC](/docs/administration/access-identity/rbac/) for more on how org-wide settings and role scopes interact.
+* Access tokens can create stacks if the organization's access management settings permit all members to do so, or if the token's assigned role includes the `stack:create` scope. Admin organization tokens always have this capability. The stack creator will automatically become its owner and will have all stack permissions, including deletion. See [RBAC](/docs/administration/access-identity/rbac/) for more on how org-wide settings and role scopes interact.
 
 ## Access token permissions
 
@@ -46,17 +46,7 @@ Organization tokens act on behalf of the organization itself. Rather than mappin
 
 Organization tokens that are assigned no explicit role receive the organization's [default member role](/docs/administration/access-identity/rbac/roles/). The token's access is automatically limited to the single organization it was created in, unlike a personal token which spans all of a user's organizations.
 
-#### Admin organization tokens
-
-{{% notes type="warning" %}}
-Admin organization access tokens have elevated permissions; please use them with caution.
-{{% /notes %}}
-
-Admin organization tokens are a legacy token type that grant full, administrator-level privileges within the organization. They predate the RBAC system and are equivalent to a token assigned the built-in Admin role. Admin tokens allow automated processes to perform any operation supported for organization administrators **except** creating or deleting other organization tokens.
-
-For new automation, prefer assigning a specific [custom role](/docs/administration/access-identity/rbac/roles/) to an organization token rather than using the admin flag. Custom roles let you follow the principle of least privilege by granting only the scopes your automation actually needs.
-
-Both organization and team token activities produce audit log events which are accessible from the **Audit Logs** page. All audit log events surface the token's unique name, and in the event of audit log export, the token's UUID as well.
+For details on admin organization tokens and the legacy permission levels that predate role assignment, see [Legacy organization token types](#legacy-organization-token-types) below.
 
 ### Team tokens
 
@@ -89,7 +79,7 @@ To delete an access token:
 1. Select **Personal access tokens** from the user menu.
 2. Select **Delete token** from the 3-dot menu at the end of the table row.
 
-## Organization access tokens
+## Organization access tokens {#creating-an-organization-access-token}
 
 {{< notes type="info" >}}
 Please note that this functionality is available only in the [Enterprise and Business Critical editions](https://www.pulumi.com/pricing/) of Pulumi.
@@ -109,9 +99,9 @@ Actions taken by organization tokens appear in audit logs attributed to the orga
 Admin organization access tokens have elevated permissions; please use them with caution.
 {{% /notes %}}
 
-Admin organization tokens are a legacy token type that grant full, administrator-level privileges within the organization — equivalent to a token assigned the built-in Admin role. They predate the RBAC system and can perform any operation an organization administrator can perform, **except** creating or deleting other organization tokens.
+Admin organization tokens are a pre-RBAC token type that grant full, administrator-level privileges within the organization — equivalent to assigning the built-in Admin role to an organization token. They can perform any operation an organization administrator can perform, **except** creating or deleting other organization tokens.
 
-For new automation, prefer assigning a specific [custom role](/docs/administration/access-identity/rbac/roles/) rather than using the admin option. Custom roles let you follow the principle of least privilege by granting only the scopes your automation actually needs.
+For new automation, prefer assigning a specific [custom role](/docs/administration/access-identity/rbac/roles/) rather than using the admin option. Custom roles let you follow the principle of least privilege by granting only the scopes your automation actually needs. See [Legacy organization token types](#legacy-organization-token-types) for background on how the admin and standard token types relate to the current RBAC model.
 
 ### Who can manage organization tokens
 
@@ -138,6 +128,16 @@ As with organization tokens, team token activity is recorded in audit logs with 
 Organization admins and team admins can create and delete team tokens. Tokens are found under the team's page (**Teams** > select a team > **Access Tokens**) and are not owned by the admin who created them. Each token name must be unique across all organization and team tokens in the organization, including deleted tokens.
 
 Deleting a token immediately revokes its access. The token name remains reserved after deletion.
+
+## Legacy organization token types
+
+Before role assignment was available for organization tokens, organization tokens were created with one of two fixed permission levels:
+
+- **Standard organization tokens** had member-level permissions — they could perform read and write operations within the organization but could not manage members, modify organization settings, or perform other administrative actions. This is equivalent to assigning the built-in Member role to an organization token today.
+
+- **Admin organization tokens** had full administrator-level permissions — they could perform any operation an organization administrator can perform, except creating or deleting other organization tokens. This is equivalent to assigning the built-in Admin role to an organization token today.
+
+Both token types continue to work. The admin/standard distinction maps directly onto the built-in Admin and Member roles in the current RBAC system. When creating new organization tokens, you can reproduce these permission levels by assigning the corresponding built-in role, or use a [custom role](/docs/administration/access-identity/rbac/roles/) for more precise control.
 
 ## OIDC issued tokens
 
