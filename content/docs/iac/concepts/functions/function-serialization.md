@@ -30,7 +30,7 @@ Currently, the functionality described in this topic is only supported for progr
 {{% /notes %}}
 
 {{% notes type="warning" %}}
-Function serialization is not supported when using the Bun runtime (`runtime: bun`). Bun does not fully implement the Node.js v8/inspector APIs that function serialization depends on. Use `runtime: nodejs` if your program requires function serialization.
+Function serialization is not supported when using the Bun runtime (`runtime: bun`). The Node.js v8/inspector APIs that function serialization depends on are [not fully implement yet](https://bun.com/docs/runtime/nodejs-compat#nodeinspector) in Bun. Use `runtime: nodejs` if your program requires function serialization.
 {{% /notes %}}
 
 ## Overview
