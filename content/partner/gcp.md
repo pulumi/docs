@@ -321,20 +321,21 @@ native:
     package main
 
     import (
-      storage "github.com/pulumi/pulumi-google-native/sdk/go/google/storage/v1"
+      "github.com/pulumi/pulumi-gcp/sdk/v7/go/gcp/storage"
       "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+      "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
     )
 
     func main() {
-      const bucketName = "pulumi-goog-native-bucket-go-01"
       pulumi.Run(func(ctx *pulumi.Context) error {
-        conf := config.New(ctx, "google-native")
+        conf := config.New(ctx, "")
         project := conf.Require("project")
+        bucketName := "pulumi-gcp-bucket-go-01"
         // Create a Google Cloud resource (Storage Bucket)
         bucket, err := storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
-          Name:    pulumi.StringPtr(bucketName),
-          Bucket:  pulumi.String(project),
-          Project: project,
+          Name:     pulumi.String(bucketName),
+          Project:  pulumi.String(project),
+          Location: pulumi.String("US"),
         })
         if err != nil {
           return err
