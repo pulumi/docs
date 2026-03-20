@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
-
 @font-face {
     font-family: "Iosevka";
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
     src: url("/fonts/iosevka-fixed-extended.woff2") format("woff2");
 }
 
@@ -11,6 +10,7 @@
     font-family: "Iosevka";
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
     src: url("/fonts/iosevka-fixed-extendedmedium.woff2") format("woff2");
 }
 
@@ -18,6 +18,7 @@
     font-family: "Iosevka";
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
     src: url("/fonts/iosevka-fixed-extendedbold.woff2") format("woff2");
 }
 
@@ -26,6 +27,7 @@
     font-family: "Gilroy";
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
     src: url("/fonts/gilroy-medium.woff2") format("woff2"), url("/fonts/gilroy-medium.woff") format("woff");
 }
 
@@ -33,6 +35,7 @@
     font-family: "Gilroy";
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
     src: url("/fonts/gilroy-semibold.woff2") format("woff2"), url("/fonts/gilroy-semibold.woff") format("woff");
 }
 
@@ -40,6 +43,7 @@
     font-family: "Gilroy";
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
     src: url("/fonts/gilroy-bold.woff2") format("woff2"), url("/fonts/gilroy-bold.woff") format("woff");
 }
 
@@ -47,6 +51,7 @@
     font-family: "Inter";
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
     src: url("/fonts/inter-regular.woff2") format("woff2"), url("/fonts/inter-regular.woff") format("woff");
 }
 
@@ -54,6 +59,7 @@
     font-family: "Inter";
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
     src: url("/fonts/inter-medium.woff2") format("woff2"), url("/fonts/inter-medium.woff") format("woff");
 }
 
@@ -61,6 +67,7 @@
     font-family: "Inter";
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
     src: url("/fonts/inter-semibold.woff2") format("woff2"), url("/fonts/inter-semibold.woff") format("woff");
 }
 
@@ -68,6 +75,7 @@
     font-family: "Inter";
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
     src: url("/fonts/inter-bold.woff2") format("woff2"), url("/fonts/inter-bold.woff") format("woff");
 }
 
@@ -75,6 +83,7 @@
     font-family: "Inter";
     font-weight: 400;
     font-style: italic;
+    font-display: swap;
     src: url("/fonts/inter-italic.woff2") format("woff2"), url("/fonts/inter-italic.woff") format("woff");
 }
 
@@ -82,6 +91,7 @@
     font-family: "Inter";
     font-weight: 600;
     font-style: italic;
+    font-display: swap;
     src: url("/fonts/inter-semibold-italic.woff2") format("woff2"), url("/fonts/inter-semibold-italic.woff") format("woff");
 }
 
@@ -89,5 +99,6 @@
     font-family: "Inter";
     font-weight: 700;
     font-style: italic;
+    font-display: swap;
     src: url("/fonts/inter-bold-italic.woff2") format("woff2"), url("/fonts/inter-bold-italic.woff") format("woff");
 }

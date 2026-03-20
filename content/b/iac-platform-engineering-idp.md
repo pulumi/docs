@@ -143,113 +143,82 @@ get_started:
     -
       source: twitter
       username: "@BryanMigliorisi"
-      avatar: https://pbs.twimg.com/profile_images/752334791782039552/BsVNGBaV_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/752334791782039552/BsVNGBaV_200x200.jpg
       link: https://twitter.com/BryanMigliorisi/status/1450123026901651460
       text: |
         There is no way around the fact that devops is complicated but @PulumiCorp is a game changer for me.  Blows away CloudForamtion, TerraForm, CDK, etc.
     -
       source: twitter
       username: "@krangarajan"
-      avatar: https://pbs.twimg.com/profile_images/837774934805925888/I51_kI-H_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/837774934805925888/I51_kI-H_200x200.jpg
       link: https://twitter.com/krangarajan/status/1580618068203479040
       text: |
         Continuing on my thread about @PulumiCorp from a while ago: holy shit I am a convert. I needed to setup a staging environment that was mostly identical to prod, and once I trued up our Pulumi stack with AWS, it took *minutes* to do this. How have I lived without this until now?
     -
       source: twitter
-      username: "@Vetium"
-      avatar: https://pbs.twimg.com/profile_images/1197754531335016449/etr4hfpJ_400x400.jpg
-      link: https://twitter.com/Vetium/status/1589452885149900800
-      text: |
-        Without a doubt the most approachable tool in the IaaC space is
-        @PulumiCorp.
-
-        Somewhat enjoying provisioning a scheduled run of a Lambda.
-    -
-      source: twitter
       username: "@justedagain"
-      avatar: https://pbs.twimg.com/profile_images/1576905831626440706/wigR9_hF_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/1576905831626440706/wigR9_hF_200x200.jpg
       link: https://twitter.com/justedagain/status/1583063827524251649
       text: |
         The developer experience of Pulumi is just sublime. As a prior Terraform user, the grass is substantially greener on this side. I'm so glad I made the switch two years back. Using Terraform for my current use case would be a massive downgrade.
     -
       source: twitter
       username: "@hossambarakat_"
-      avatar: https://pbs.twimg.com/profile_images/1578466430739271681/FZnNwxcA_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/1578466430739271681/FZnNwxcA_200x200.jpg
       link: https://twitter.com/hossambarakat_/status/1357640859018162176
       text: |
         Give Pulumi a shot and you will never look back @PulumiCorp
     -
       source: twitter
-      username: "@matticala"
-      avatar: https://pbs.twimg.com/profile_images/1289826906024693766/LOdbjWdW_400x400.jpg
-      link: https://twitter.com/matticala/status/1369038327341531140
-      text: |
-        With @PulumiCorp I said goodbye to #YAML and JSON supersets.
-        I went back to what I love: #code.
-        Code. End to end. Functional, even.
-        #Kubernetes is pleasant again.
-    -
-      source: twitter
       username: "@ddoomen"
-      avatar: https://pbs.twimg.com/profile_images/1591057460940480517/d0xy4n3b_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/1591057460940480517/d0xy4n3b_200x200.jpg
       link: https://twitter.com/ddoomen/status/1644343201459740673
       text: |
         Deploying cloud resources using @PulumiCorp is just amazing. Why would anybody bother with JSON, YAML or some other DSL?
     -
       source: twitter
       username: "@Meliora245"
-      avatar: https://pbs.twimg.com/profile_images/1536753333972525056/WN2SVAmq_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/1536753333972525056/WN2SVAmq_200x200.jpg
       link: https://twitter.com/Meliora245/status/1633110529420976130
       text: |
         Been using Pulumi with Typescript for a IaaC managing k8s and stateful databases. Don't see myself going back to using terraform after this.
     -
       source: twitter
       username: "@rybavery"
-      avatar: https://pbs.twimg.com/profile_images/1146562967317520385/wuPwKFUZ_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/1146562967317520385/wuPwKFUZ_200x200.jpg
       link: https://twitter.com/rybavery/status/1576987704189128704
       text: |
         our team at @devseed is now gravitating toward using https://pulumi.com/docs/iac/comparisons/terraform/ instead of terraform because it's all in python so it is easier to onboard new people to the tool and makes it easier to manage the same infra definition in different test, staging, and deploy envs.
     -
       source: twitter
       username: "@SparkyCodes"
-      avatar: https://pbs.twimg.com/profile_images/1564710917014802433/k0QzTysD_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/1564710917014802433/k0QzTysD_200x200.jpg
       link: https://twitter.com/SparkyCodes/status/1572999315919978502
       text: |
         It wouldn't have been possible to build Sparky without @PulumiCorp. Shout out to the team and community for helping us get up and running!
     -
       source: twitter
       username: "@0xksure"
-      avatar: https://pbs.twimg.com/profile_images/1560526743865360384/QBkajFhq_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/1560526743865360384/QBkajFhq_200x200.jpg
       link: https://twitter.com/0xksure/status/1570769681434415104
       text: |
         ok so pulumi is awesome. almost no clicking, just scripting go and up
     -
       source: twitter
       username: "@krangarajan"
-      avatar: https://pbs.twimg.com/profile_images/837774934805925888/I51_kI-H_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/837774934805925888/I51_kI-H_200x200.jpg
       link: https://twitter.com/krangarajan/status/1564712184717881344
       text: |
         New gig uses @PulumiCorp to manage AWS infra. Initially I was skeptical and was tempted to go back to Terraform, but after using pulumi imports and discovering the ability to write tests easily, I'm a convert. (1/4)
     -
       source: twitter
       username: "@swarupdonepudi"
-      avatar: https://pbs.twimg.com/profile_images/1581098587034771457/9HrxXWw4_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/1581098587034771457/9HrxXWw4_200x200.jpg
       link: https://twitter.com/swarupdonepudi/status/1644820071167201280
       text: |
         I love @PulumiCorp so much because it is like 50% of the reason why we dared to build https://planton.cloud.
 
         An equivalent of 50K lines of declarative infra code has been put behind APIs to support the features on the platform with https://www.pulumi.com/docs/using-pulumi/automation-api/
-    -
-      source: twitter
-      username: "@iamjmoa"
-      avatar: https://pbs.twimg.com/profile_images/1529025993893195777/Wo8EXvLO_400x400.jpg
-      link: https://twitter.com/iamjmoa/status/1624702662456352768
-      text: |
-        Today is a good day.
-
-        Finished no-code website builder.
-
-        Managed to automate deploying a website created with said builder with @PulumiCorp
 
   title: Built by engineers for engineers. Open source.
   description: "[Join us](/community) in the community, and let’s build together."
