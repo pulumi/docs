@@ -285,7 +285,7 @@
                                 <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">
                                     <!-- If the browser fails to load the Twitter avatar, just hide it. -->
                                     <div class="rounded-full border-none w-12 h-12 mr-4 overflow-hidden">
-                                        <img src="{{ $tweet.avatar }}" onerror="$(this).hide();" />
+                                        <img src="{{ $tweet.avatar }}" onerror="this.style.display='none';" />
                                     </div>
                                 </a>
                                 <a href="{{ $tweet.link }}"
