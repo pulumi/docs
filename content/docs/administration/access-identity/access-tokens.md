@@ -133,9 +133,9 @@ Deleting a token immediately revokes its access. The token name remains reserved
 
 Before role assignment was available for organization tokens, organization tokens were created with one of two fixed permission levels:
 
-- **Standard organization tokens** had member-level permissions — they could perform read and write operations within the organization but could not manage members, modify organization settings, or perform other administrative actions. This is equivalent to assigning the built-in Member role to an organization token today.
+* **Standard organization tokens** had member-level permissions — they could perform read and write operations within the organization but could not manage members, modify organization settings, or perform other administrative actions. This is equivalent to assigning the built-in Member role to an organization token today.
 
-- **Admin organization tokens** had full administrator-level permissions — they could perform any operation an organization administrator can perform, except creating or deleting other organization tokens. This is equivalent to assigning the built-in Admin role to an organization token today.
+* **Admin organization tokens** had full administrator-level permissions — they could perform any operation an organization administrator can perform, except creating or deleting other organization tokens. This is equivalent to assigning the built-in Admin role to an organization token today.
 
 Both token types continue to work. The admin/standard distinction maps directly onto the built-in Admin and Member roles in the current RBAC system. When creating new organization tokens, you can reproduce these permission levels by assigning the corresponding built-in role, or use a [custom role](/docs/administration/access-identity/rbac/roles/) for more precise control.
 
