@@ -99,27 +99,28 @@ function bindToggles(selector: string) {
 }
 
 export function generateOnThisPage() {
-    const toc = document.querySelector(".table-of-contents") as HTMLElement;
-    if (toc) {
-        toc.style.display = "none";
-    }
+    const tocs = document.querySelectorAll<HTMLElement>(".table-of-contents");
+    tocs.forEach(toc => toc.style.display = "none");
 
-    const ul = document.querySelector(".table-of-contents .content ul.table-of-contents-list");
-    if (ul) {
-        let found = false;
-        const headings = [];
+    const uls = document.querySelectorAll(".table-of-contents .content ul.table-of-contents-list");
+    if (uls.length === 0) return;
 
-        document.querySelectorAll("h2, h3").forEach((el: HTMLElement) => {
-            if (el.closest('.hidden')) {
-                return;
-            }
-            const id = el.getAttribute("id");
-            const text = el.textContent;
-            const linkTitle = el.dataset.linkTitle;
-            const tag = el.tagName.toLowerCase();
+    let found = false;
+    const headingItems: { element: HTMLElement, listItems: HTMLElement[] }[] = [];
 
-            if (id && text) {
-                found = true;
+    document.querySelectorAll("h2, h3").forEach((el: HTMLElement) => {
+        if (el.closest('.hidden')) {
+            return;
+        }
+        const id = el.getAttribute("id");
+        const text = el.textContent;
+        const linkTitle = el.dataset.linkTitle;
+        const tag = el.tagName.toLowerCase();
+
+        if (id && text) {
+            found = true;
+            const listItems: HTMLElement[] = [];
+            uls.forEach(ul => {
                 const li = document.createElement("li");
                 li.className = tag;
                 const a = document.createElement("a");
@@ -127,30 +128,28 @@ export function generateOnThisPage() {
                 a.textContent = linkTitle || text;
                 li.appendChild(a);
                 ul.appendChild(li);
+                listItems.push(li);
+            });
 
-                headings.push({
-                    element: el,
-                    listItem: li,
-                });
-            }
-        });
-
-        if (found) {
-            toc.style.display = "";
-
-            const setActiveItem = () => {
-                let active = null;
-                for (const heading of headings) {
-                    if (!active && heading.element.offsetTop >= window.scrollY) {
-                        active = heading;
-                    }
-                    heading.listItem.classList.toggle("active", heading === active);
-                }
-            };
-
-            window.addEventListener("scroll", setActiveItem);
-            setActiveItem();
+            headingItems.push({ element: el, listItems });
         }
+    });
+
+    if (found) {
+        tocs.forEach(toc => toc.style.display = "");
+
+        const setActiveItem = () => {
+            let active = null;
+            for (const heading of headingItems) {
+                if (!active && heading.element.offsetTop >= window.scrollY) {
+                    active = heading;
+                }
+                heading.listItems.forEach(li => li.classList.toggle("active", heading === active));
+            }
+        };
+
+        window.addEventListener("scroll", setActiveItem);
+        setActiveItem();
     }
 }
 

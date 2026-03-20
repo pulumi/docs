@@ -7,7 +7,7 @@ const filterResourceItems = (filters) => {
 
     if (filters.length > 0) {
         events.forEach(event => {
-            const tags = event.getAttribute("data-filters").split(" ");
+            const tags = (event.getAttribute("data-filters") || "").split(" ");
             const dateLabel = event.getAttribute("data-month-label");
 
             if (!tags.includes(location.hash.slice(1))) {
@@ -30,7 +30,7 @@ const filterResourceItems = (filters) => {
         });
     } else {
         events.forEach(event => {
-            const tags = event.getAttribute("data-filters").split(" ");
+            const tags = (event.getAttribute("data-filters") || "").split(" ");
             const dateLabel = event.getAttribute("data-month-label");
 
             if (!tags.includes(location.hash.slice(1))) {
