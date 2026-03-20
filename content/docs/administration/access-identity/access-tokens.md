@@ -58,7 +58,7 @@ For a detailed reference on how permissions are structured and evaluated, see [R
 
 Personal access tokens have the same permissions as your Pulumi Cloud user. This includes your respective permissions for all Pulumi Cloud organizations in which your user is a member.
 
-### Creating Personal Access Tokens
+### Creating personal access tokens
 
 To create an access token:
 
@@ -70,18 +70,18 @@ To create an access token:
 
 It is strongly recommended that you choose an expiration period for all access tokens you create.
 
-### Deleting Personal Access Tokens
+### Deleting personal access tokens
 
 To delete an access token:
 
 1. Select **Personal access tokens** from the user menu.
-2. Select **Delete token** from the 3-dot menu at the end of the table row.
+1. Select **Delete token** from the 3-dot menu at the end of the table row.
 
 ## Organization access tokens {#creating-an-organization-access-token}
 
-{{< notes type="info" >}}
+{{% notes type="info" %}}
 Please note that this functionality is available only in the [Enterprise and Business Critical editions](https://www.pulumi.com/pricing/) of Pulumi.
-{{< /notes >}}
+{{% /notes %}}
 
 Organization tokens are machine tokens owned by the organization itself rather than any individual user. They are well-suited for CI/CD pipelines and automation that needs to act on behalf of the organization without being tied to a specific person's account.
 
@@ -99,9 +99,9 @@ Deleting a token immediately revokes its access; all further operations using it
 
 ## Team access tokens
 
-{{< notes type="info" >}}
+{{% notes type="info" %}}
 Please note that this functionality is available only in the [Enterprise and Business Critical editions](https://www.pulumi.com/pricing/) of Pulumi.
-{{< /notes >}}
+{{% /notes %}}
 
 Team tokens are machine tokens scoped to the resources and permissions of a specific team. They are useful for automated processes (like CI/CD pipelines) that should only be able to access the infrastructure a particular team owns. This avoids the need to use a personal token from any individual team member.
 
