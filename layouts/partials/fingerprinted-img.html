@@ -3,4 +3,4 @@
     {{ $img = $img.Process "webp q80" }}
 {{ end }}
 {{ $img = $img | fingerprint }}
-<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with .alt }}alt="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} />
+<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with .alt }}alt="{{ . }}"{{ end }} {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} />

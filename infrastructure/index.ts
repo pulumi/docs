@@ -184,11 +184,9 @@ const uploadsBucketAcl = new aws.s3.BucketAcl("uploads-bucket-acl", {
 });
 
 // Bucket for tracking social media post state (idempotency).
-const socialStateBucket = new aws.s3.Bucket("social-post-state", {
-    bucket: "pulumi-social-post-state",
-});
+const socialStateBucket = new aws.s3.Bucket("social-post-state", {});
 
-new aws.s3.BucketVersioningV2("social-post-state-versioning", {
+new aws.s3.BucketVersioning("social-post-state-versioning", {
     bucket: socialStateBucket.id,
     versioningConfiguration: { status: "Enabled" },
 });
@@ -981,6 +979,7 @@ async function createAliasRecord(
 [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
 export const uploadsBucketName = uploadsBucket.bucket;
+export const socialStateBucketName = socialStateBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
