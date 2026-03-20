@@ -127,7 +127,11 @@
             </div>
         </div>
         <div class="w-full lg:w-1/2 {{ $order }}">
-            <img class="mx-auto" src="{{ $block.graphic }}" />
+            {{ if hasPrefix $block.graphic "/" }}
+                <img class="mx-auto" src="{{ $block.graphic }}" />
+            {{ else }}
+                {{ partial "fingerprinted-img.html" (dict "src" $block.graphic "class" "mx-auto") }}
+            {{ end }}
         </div>
     </div>
     {{ end }}

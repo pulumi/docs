@@ -57,7 +57,7 @@ building_blocks:
         - "**Components**: Reusable infrastructure building blocks in any language. Package your well-architected patterns."
         - "**Templates**: Scaffold entire projects with one command. Applications, microservices, clusters – all standardized."
         - "**Policies**: Enforce security and compliance automatically. Block non-compliant infrastructure before it ships."
-      graphic: /images/product/idp-services-home.jpg
+      graphic: images/product/idp-services-home.jpg
     - header: Self-service infrastructure, multiple interfaces
       subheader: "Engineers provision infrastructure using their preferred approach:"
       body:
