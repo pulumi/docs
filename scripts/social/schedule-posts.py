@@ -2,6 +2,7 @@
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
+#     "boto3",
 #     "python-frontmatter",
 #     "requests",
 # ]
@@ -10,9 +11,17 @@
 """
 Schedule social media posts for new blog content via upload-post.com.
 
-Runs as part of the build-and-deploy workflow after the site deploys.
-Detects new or updated blog posts, extracts social copy from frontmatter,
-and schedules posts to X (Twitter), LinkedIn, and Bluesky.
+Runs via a separate workflow (schedule-social.yml) triggered after
+successful builds. Detects new or updated blog posts by diffing from the
+last-processed commit SHA (stored in S3 state), extracts social copy from
+frontmatter, and schedules posts to X, LinkedIn, and Bluesky.
+
+Platform strategy:
+  - X: Text post with URL in body. X auto-crawls the URL and generates
+    a link card with og:image. Uses upload_text endpoint.
+  - LinkedIn/Bluesky: Photo post with the blog's meta image attached.
+    These platforms don't auto-crawl URLs posted via API, so we send the
+    image explicitly. Uses upload_photos endpoint.
 
 Scheduling logic:
   - Uses the Hugo post's frontmatter date to determine when to post.
@@ -20,32 +29,68 @@ Scheduling logic:
     (default: 10am Eastern).
   - Posts dated today or earlier are posted immediately.
   - Posts older than MAX_AGE_DAYS (2) are skipped entirely.
-  - If a post is already scheduled, it is updated (not duplicated).
-  - If a post has already been published, it is skipped.
+
+Idempotency:
+  - State is tracked in an S3 JSON file (SOCIAL_STATE_BUCKET/posted.json).
+  - The state file stores both posted URL+platform combos and the last
+    processed commit SHA, making the script self-contained.
+  - Before posting, the script checks whether a URL+platform combo has
+    already been posted. After a successful post, the entry is recorded.
+  - Fails closed: if state cannot be loaded, the script aborts rather
+    than risk double-posting.
 
 Required environment variables:
   UPLOAD_POST_API_KEY       - API key from upload-post.com
-  UPLOAD_POST_USER          - Profile username in upload-post.com
-  UPLOAD_POST_LINKEDIN_PAGE_ID - LinkedIn organization page ID (optional)
+  SOCIAL_STATE_BUCKET       - S3 bucket for tracking posted state
 
 Optional:
   DRY_RUN                   - Set to "true" to log without posting
   SOCIAL_POSTING_HOUR       - Hour to schedule posts (default: 10, i.e. 10am)
   SOCIAL_POSTING_TZ         - Timezone (default: America/New_York)
+
+TODO:
+  1. Once upload-post.com fixes link card crawling, we can switch LinkedIn
+     and Bluesky back to upload_text with link_url instead of upload_photos.
+  2. Flip PROD_MODE = True and connect official Pulumi accounts.
 """
 
+import json
 import os
 import subprocess
 import sys
-from datetime import datetime, date, timedelta
+import time
+from datetime import datetime, date, timedelta, timezone
+from pathlib import Path
 
+import boto3
 import frontmatter
 import requests
 
 API_KEY = os.environ.get("UPLOAD_POST_API_KEY", "")
-USER = os.environ.get("UPLOAD_POST_USER", "")
-LINKEDIN_PAGE_ID = os.environ.get("UPLOAD_POST_LINKEDIN_PAGE_ID", "")
 DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
+STATE_BUCKET = os.environ.get("SOCIAL_STATE_BUCKET", "")
+STATE_KEY = "posted.json"
+
+# --- Configuration ---
+# Flip to True when ready to post to official Pulumi accounts.
+PROD_MODE = False
+
+if PROD_MODE:
+    USER = "pulumi"
+    LINKEDIN_PAGE_ID = "18103664"
+else:
+    USER = "pulumi-test"
+    LINKEDIN_PAGE_ID = "113012346"
+
+X_ENABLED = True
+LINKEDIN_ENABLED = True
+BLUESKY_ENABLED = True
+
+PLATFORM_ENABLED = {
+    "x": X_ENABLED,
+    "linkedin": LINKEDIN_ENABLED,
+    "bluesky": BLUESKY_ENABLED,
+}
 
 API_BASE = "https://api.upload-post.com"
 SITE_URL = "https://www.pulumi.com"
@@ -55,14 +100,129 @@ POSTING_TZ = os.environ.get("SOCIAL_POSTING_TZ", "America/New_York")
 # Posts with dates older than this many days are skipped
 MAX_AGE_DAYS = 2
 
+# Platform character limits.
+CHAR_LIMITS = {
+    "x": 280,
+    "bluesky": 300,
+    "linkedin": 3000,
+}
 
-def get_changed_blog_posts():
-    """Find blog posts added or modified in this push."""
+
+# --- S3 state management ---
+
+def load_state():
+    """Load posted state from S3. Aborts on errors to prevent double-posting."""
+    if not STATE_BUCKET:
+        if DRY_RUN:
+            print("  DRY RUN: no state bucket, using empty state")
+            return {"posts": {}}
+        print("Error: SOCIAL_STATE_BUCKET must be set.")
+        sys.exit(1)
+    try:
+        s3 = boto3.client("s3")
+        resp = s3.get_object(Bucket=STATE_BUCKET, Key=STATE_KEY)
+        return json.loads(resp["Body"].read())
+    except s3.exceptions.NoSuchKey:
+        return {"posts": {}}
+    except Exception as e:
+        if DRY_RUN:
+            print(f"  DRY RUN: could not load state ({e}), using empty state")
+            return {"posts": {}}
+        print(f"Error: could not load state from S3: {e}")
+        print("Aborting to prevent duplicate posts. Will retry on next deploy.")
+        sys.exit(1)
+
+
+def save_state(state):
+    """Save posted state to S3. Fails hard to prevent duplicate posts on next run."""
+    if not STATE_BUCKET:
+        return
+    try:
+        s3 = boto3.client("s3")
+        s3.put_object(
+            Bucket=STATE_BUCKET,
+            Key=STATE_KEY,
+            Body=json.dumps(state, indent=2),
+            ContentType="application/json",
+        )
+        print(f"  State saved to s3://{STATE_BUCKET}/{STATE_KEY}")
+    except Exception as e:
+        print(f"Error: could not save state to S3: {e}")
+        print("Posts were sent but state was NOT saved. Fix manually to prevent duplicates.")
+        sys.exit(1)
+
+
+MAX_RETRIES = 3
+
+
+def is_posted(state, slug, platform):
+    """Check if a URL+platform combo has already been posted."""
+    return platform in state.get("posts", {}).get(slug, {})
+
+
+def is_abandoned(state, slug):
+    """Check if a post has exceeded the retry limit."""
+    return state.get("posts", {}).get(slug, {}).get("_failures", 0) >= MAX_RETRIES
+
+
+def record_posted(state, slug, platform):
+    """Record that a URL+platform combo has been posted."""
+    if slug not in state["posts"]:
+        state["posts"][slug] = {}
+    state["posts"][slug][platform] = datetime.now(timezone.utc).isoformat()
+
+
+def record_failure(state, slug):
+    """Increment the failure count for a post."""
+    if slug not in state["posts"]:
+        state["posts"][slug] = {}
+    state["posts"][slug]["_failures"] = state["posts"][slug].get("_failures", 0) + 1
+
+
+def slug_from_path(filepath):
+    """content/blog/my-post/index.md -> /blog/my-post/"""
+    slug = filepath.replace("content/blog/", "").replace("/index.md", "")
+    return f"/blog/{slug}/"
+
+
+# --- Blog post detection ---
+
+def get_head_sha():
+    """Get the current HEAD commit SHA."""
     result = subprocess.run(
-        ["git", "diff", "--name-only", "HEAD~1", "HEAD", "--", "content/blog/*/index.md"],
+        ["git", "rev-parse", "HEAD"],
         capture_output=True,
         text=True,
     )
+    return result.stdout.strip() if result.returncode == 0 else None
+
+
+def get_changed_blog_posts(state):
+    """Find blog posts added or modified since the last processed commit.
+
+    Uses last_sha from the S3 state file to diff against HEAD. This makes the
+    script self-contained — it doesn't depend on the push event context, so it
+    works with workflow_run, workflow_dispatch, or cron triggers.
+
+    Falls back to HEAD~20 if no last_sha is stored (first run). The 2-day
+    age check limits what actually gets posted.
+    """
+    base = state.get("last_sha", "HEAD~20")
+    result = subprocess.run(
+        ["git", "diff", "--name-only", base, "HEAD", "--", "content/blog/*/index.md"],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        print(f"Warning: git diff from {base} failed, falling back to HEAD~20")
+        result = subprocess.run(
+            ["git", "diff", "--name-only", "HEAD~20", "HEAD", "--", "content/blog/*/index.md"],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            print(f"Error: git diff failed: {result.stderr.strip()}")
+            return None
     return [f for f in result.stdout.strip().split("\n") if f]
 
 
@@ -77,6 +237,16 @@ def post_url_from_path(filepath):
     return f"{SITE_URL}/blog/{slug}/"
 
 
+def meta_image_path(filepath):
+    """Find the meta image for a blog post. Returns path or None."""
+    blog_dir = Path(filepath).parent
+    for name in ["meta.png", "meta.jpg"]:
+        img = blog_dir / name
+        if img.exists():
+            return str(img)
+    return None
+
+
 def normalize_date(post_date):
     """Convert a frontmatter date value to a date object."""
     if isinstance(post_date, datetime):
@@ -84,7 +254,6 @@ def normalize_date(post_date):
     if isinstance(post_date, date):
         return post_date
     if isinstance(post_date, str):
-        # Handle "2025-12-09" or "2025-12-09T00:00:00-07:00"
         return datetime.fromisoformat(post_date.replace("Z", "+00:00")).date()
     return None
 
@@ -99,98 +268,91 @@ def is_recent_or_future(post_date):
 
 
 def scheduled_date_from_post(post_date):
-    """Build a scheduled_date ISO string, or None to post immediately.
-
-    Returns None if the post date is today or in the past (post now).
-    Returns a future date string if the post date is in the future.
-    """
+    """Build a scheduled_date ISO string, or None to post immediately."""
     d = normalize_date(post_date)
+    if d is None:
+        return None
     today = date.today()
     if d <= today:
         return None
     return f"{d}T{POSTING_HOUR:02d}:00:00"
 
 
-def find_scheduled(url):
-    """Check if posts with this URL are already scheduled.
+# --- upload-post.com API ---
 
-    Returns a dict mapping platform -> job_id for matching entries.
-    """
-    scheduled = {}
-    try:
-        resp = requests.get(
-            f"{API_BASE}/api/uploadposts/schedule",
-            headers={"Authorization": f"Apikey {API_KEY}"},
-            params={"limit": 50},
-        )
-        if resp.ok:
-            entries = resp.json().get("scheduled_posts", [])
-            for entry in entries:
-                title = entry.get("title", "") or ""
-                if url in title:
-                    job_id = entry.get("job_id")
-                    for platform in entry.get("platforms", []):
-                        if job_id:
-                            scheduled[platform] = job_id
-    except Exception as e:
-        print(f"  Warning: could not check schedule: {e}")
-    return scheduled
-
-
-def already_published(url):
-    """Check if a post with this URL has already been published."""
-    try:
-        resp = requests.get(
-            f"{API_BASE}/api/uploadposts/history",
-            headers={"Authorization": f"Apikey {API_KEY}"},
-        )
-        if resp.ok:
-            for entry in resp.json().get("history", []):
-                title = entry.get("post_title", "") or ""
-                if url in title:
-                    return True
-    except Exception as e:
-        print(f"  Warning: could not check history: {e}")
-    return False
+def _poll_for_result(request_id, platform, retries=4, delay=3):
+    """Poll the status/history API to find the post URL after publishing."""
+    # Try the status endpoint first (works for upload_photos async responses)
+    for _ in range(retries):
+        time.sleep(delay)
+        try:
+            resp = requests.get(
+                f"{API_BASE}/api/uploadposts/status",
+                headers={"Authorization": f"Apikey {API_KEY}"},
+                params={"request_id": request_id},
+                timeout=30,
+            )
+            if resp.ok:
+                data = resp.json()
+                for result in data.get("results", []):
+                    if result.get("platform") == platform and result.get("url"):
+                        return result["url"]
+        except Exception:
+            pass
+        # Fall back to history
+        try:
+            resp = requests.get(
+                f"{API_BASE}/api/uploadposts/history",
+                headers={"Authorization": f"Apikey {API_KEY}"},
+                timeout=30,
+            )
+            if resp.ok:
+                for entry in resp.json().get("history", []):
+                    if entry.get("request_id") == request_id and entry.get("platform") == platform:
+                        url = entry.get("post_url")
+                        if url:
+                            return url
+        except Exception:
+            pass
+    return None
 
 
-def schedule_post(platform, title, url, scheduled_date):
-    """Schedule a text post via upload-post.com API.
+def _print_result(platform, request_id, scheduled_date):
+    """Print the result of a successful post. Returns the post URL if available."""
+    if scheduled_date:
+        print(f"  ✓ {platform}: scheduled for {scheduled_date} {POSTING_TZ}")
+        return None
+    post_url = _poll_for_result(request_id, platform)
+    if post_url:
+        print(f"  ✓ {platform}: {post_url}")
+    else:
+        print(f"  ✓ {platform}: posted (request_id={request_id})")
+    return post_url
 
-    X/Twitter: URL is appended to text (needed for card unfurling).
-    LinkedIn/Bluesky: URL is sent via link_url for a rich preview card.
-    """
+
+def _copy_with_url(copy, url):
+    """Append URL to copy, unless the copy already contains it."""
+    if url in copy:
+        return copy
+    return f"{copy}\n\n{url}"
+
+
+def post_text(platform, copy, url, scheduled_date):
+    """Post via upload_text. Used for X where the platform auto-crawls URLs."""
+    text_with_url = _copy_with_url(copy, url)
     data = {
         "user": USER,
         "platform[]": platform,
-        "title": f"{title} {url}",
+        "title": text_with_url,
+        "x_title": text_with_url,
     }
     if scheduled_date:
         data["scheduled_date"] = scheduled_date
         data["timezone"] = POSTING_TZ
 
-    if platform == "twitter":
-        text_with_url = f"{title}\n\n{url}"
-        data["title"] = text_with_url
-        data["x_title"] = text_with_url
-    elif platform == "linkedin":
-        data["linkedin_title"] = title
-        data["linkedin_link_url"] = url
-        if LINKEDIN_PAGE_ID:
-            data["target_linkedin_page_id"] = LINKEDIN_PAGE_ID
-    elif platform == "bluesky":
-        data["bluesky_title"] = title
-        data["bluesky_link_url"] = url
-
     if DRY_RUN:
-        display = data.get("x_title") or data.get("linkedin_title") or data.get("bluesky_title") or title
-        link = data.get("linkedin_link_url") or data.get("bluesky_link_url") or ""
-        print(f"  [DRY RUN] Would post to {platform}:")
-        print(f"    ---")
-        print(f"    {display}")
-        if link:
-            print(f"    link card: {link}")
-        print(f"    ---")
+        print(f"  [DRY RUN] Would post text to {platform}:")
+        print(f"    {text_with_url[:100]}...")
         print(f"    scheduled: {scheduled_date or 'immediately'}")
         return True
 
@@ -198,69 +360,134 @@ def schedule_post(platform, title, url, scheduled_date):
         f"{API_BASE}/api/upload_text",
         headers={"Authorization": f"Apikey {API_KEY}"},
         data=data,
+        timeout=30,
     )
 
     if resp.ok:
-        result = resp.json()
-        print(f"  Scheduled on {platform}: request_id={result.get('request_id', 'ok')}")
-        return True
+        post_url = _print_result(platform, resp.json().get("request_id", ""), scheduled_date)
+        return post_url or "posted"
     else:
         print(f"  FAILED on {platform}: {resp.status_code} {resp.text}")
-        return False
+        return None
 
 
-def update_scheduled_post(job_id, platform, copy, url, scheduled_date):
-    """Update an existing scheduled post via PATCH."""
-    data = {"title": f"{copy} {url}"}
+def post_photo(platform, copy, url, image_path, scheduled_date):
+    """Post via upload_photos. Used for LinkedIn/Bluesky where we send the meta image."""
+    text_with_url = _copy_with_url(copy, url)
+    data = {
+        "user": USER,
+        "platform[]": platform,
+        "title": text_with_url,
+    }
+    if platform == "linkedin":
+        data["linkedin_description"] = f"{copy}\n\n{url}"
+        if LINKEDIN_PAGE_ID:
+            data["target_linkedin_page_id"] = LINKEDIN_PAGE_ID
+    elif platform == "bluesky":
+        data["bluesky_title"] = text_with_url
+
     if scheduled_date:
         data["scheduled_date"] = scheduled_date
         data["timezone"] = POSTING_TZ
-    if platform == "twitter":
-        text_with_url = f"{copy}\n\n{url}"
-        data["title"] = text_with_url
-        data["x_title"] = text_with_url
-    elif platform == "linkedin":
-        data["linkedin_title"] = copy
-    elif platform == "bluesky":
-        data["bluesky_title"] = copy
 
-    resp = requests.patch(
-        f"{API_BASE}/api/uploadposts/schedule/{job_id}",
-        headers={"Authorization": f"Apikey {API_KEY}", "Content-Type": "application/json"},
-        json=data,
-    )
-    if resp.ok:
-        print(f"  Updated scheduled post (job_id={job_id})")
+    if DRY_RUN:
+        print(f"  [DRY RUN] Would post photo to {platform}:")
+        print(f"    image: {image_path}")
+        print(f"    {copy[:80]}...")
+        print(f"    scheduled: {scheduled_date or 'immediately'}")
         return True
-    else:
-        print(f"  FAILED to update (job_id={job_id}): {resp.status_code} {resp.text}")
-        return False
 
+    if not image_path:
+        print(f"  Warning: no meta image found, falling back to text post for {platform}")
+        return post_text(platform, copy, url, scheduled_date)
+
+    mime = "image/jpeg" if image_path.endswith(".jpg") else "image/png"
+    with open(image_path, "rb") as f:
+        resp = requests.post(
+            f"{API_BASE}/api/upload_photos",
+            headers={"Authorization": f"Apikey {API_KEY}"},
+            data=data,
+            files={"photos[]": (os.path.basename(image_path), f, mime)},
+            timeout=60,
+        )
+
+    if resp.ok:
+        result = resp.json()
+        request_id = result.get("request_id", "")
+        # upload_photos may return results directly or async
+        platform_result = result.get("results", {}).get(platform, {})
+        direct_url = platform_result.get("url")
+        if direct_url:
+            if scheduled_date:
+                print(f"  ✓ {platform}: scheduled for {scheduled_date} {POSTING_TZ}")
+            else:
+                print(f"  ✓ {platform}: {direct_url}")
+            return direct_url or "posted"
+        else:
+            post_url = _print_result(platform, request_id, scheduled_date)
+            return post_url or "posted"
+    else:
+        print(f"  FAILED on {platform}: {resp.status_code} {resp.text}")
+        return None
+
+
+def schedule_post(platform, copy, url, image_path, scheduled_date):
+    """Route to the right posting method per platform. Returns post URL or None."""
+    if platform == "x":
+        return post_text(platform, copy, url, scheduled_date)
+    else:
+        return post_photo(platform, copy, url, image_path, scheduled_date)
+
+
+# --- Main ---
 
 def main():
-    if not API_KEY or not USER:
+    if not API_KEY:
         if DRY_RUN:
-            print("DRY RUN: API key/user not set, will show what would be posted.")
+            print("DRY RUN: API key not set, will show what would be posted.")
         else:
-            print("Error: UPLOAD_POST_API_KEY and UPLOAD_POST_USER must be set.")
+            print("Error: UPLOAD_POST_API_KEY must be set.")
             sys.exit(1)
 
-    changed = get_changed_blog_posts()
+    state = load_state()
+
+    changed = get_changed_blog_posts(state)
+    if changed is None:
+        print("Error: could not determine changed blog posts. Aborting.")
+        sys.exit(1)
     if not changed:
         print("No blog post changes detected.")
+        # Still update last_sha so we don't re-diff the same range next time
+        head = get_head_sha()
+        if head and head != state.get("last_sha"):
+            state["last_sha"] = head
+            save_state(state)
         return
 
     failures = False
+    posted_urls = []  # (blog_url, platform, post_url) for summary
 
     for filepath in changed:
+        if not Path(filepath).exists():
+            print(f"\nSkipping deleted file: {filepath}")
+            continue
+
+        slug = slug_from_path(filepath)
+
+        # Check abandonment before parsing (avoids crash on broken frontmatter)
+        if is_abandoned(state, slug):
+            print(f"\nSkipping {filepath}: exceeded {MAX_RETRIES} retries")
+            continue
+
         print(f"\nProcessing: {filepath}")
         meta = parse_post(filepath)
         url = post_url_from_path(filepath)
         post_date = meta.get("date")
         social = meta.get("social") or {}
-        twitter_copy = (social.get("twitter") or "").strip()
-        linkedin_copy = (social.get("linkedin") or "").strip()
-        bluesky_copy = (social.get("bluesky") or "").strip()
+        # Frontmatter uses "twitter" key for familiarity, but API platform is "x"
+        x_copy = str(social.get("twitter") or "").strip()
+        linkedin_copy = str(social.get("linkedin") or "").strip()
+        bluesky_copy = str(social.get("bluesky") or "").strip()
 
         # Skip old posts
         if not post_date or not is_recent_or_future(post_date):
@@ -268,48 +495,101 @@ def main():
             continue
 
         # Skip TODOs and empty values
-        if twitter_copy.upper() == "TODO":
-            twitter_copy = ""
+        if x_copy.upper() == "TODO":
+            x_copy = ""
         if linkedin_copy.upper() == "TODO":
             linkedin_copy = ""
         if bluesky_copy.upper() == "TODO":
             bluesky_copy = ""
 
-        if not twitter_copy and not linkedin_copy and not bluesky_copy:
+        if not x_copy and not linkedin_copy and not bluesky_copy:
             print(f"  Warning: no social copy in frontmatter for {filepath}")
             continue
 
-        # Skip if already published
-        if not DRY_RUN and already_published(url):
-            print(f"  Skipping: already published {url}")
-            continue
-
-        # Check which platforms already have scheduled posts
-        existing = {} if DRY_RUN else find_scheduled(url)
-        if existing:
-            print(f"  Found existing scheduled posts: {existing}")
+        image_path = meta_image_path(filepath)
 
         scheduled = scheduled_date_from_post(post_date)
         print(f"  URL: {url}")
+        if image_path:
+            print(f"  Image: {image_path}")
         if scheduled:
             print(f"  Scheduled for: {scheduled} {POSTING_TZ}")
         else:
             print(f"  Posting immediately (date is today or past)")
 
-        for platform, copy in [("twitter", twitter_copy), ("linkedin", linkedin_copy), ("bluesky", bluesky_copy)]:
+        post_had_failure = False
+        for platform, copy in [("x", x_copy), ("linkedin", linkedin_copy), ("bluesky", bluesky_copy)]:
             if not copy:
                 continue
-            job_id = existing.get(platform)
-            if job_id:
-                if not update_scheduled_post(job_id, platform, copy, url, scheduled):
-                    failures = True
+            if not PLATFORM_ENABLED.get(platform):
+                continue
+
+            # Validate character limits
+            limit = CHAR_LIMITS.get(platform)
+            has_url = url in copy
+            if platform == "x":
+                # t.co wraps URLs to 23 chars regardless of actual length
+                text_len = len(copy) if has_url else len(copy) + 2 + 23
             else:
-                if not schedule_post(platform, copy, url, scheduled):
-                    failures = True
+                # LinkedIn/Bluesky: URL is in the text body for photo posts
+                text_len = len(copy) if has_url else len(copy) + 2 + len(url)
+            if limit and text_len > limit:
+                print(f"  SKIPPING {platform}: copy is {text_len} chars, limit is {limit}")
+                failures = True
+                continue
+
+            # Primary idempotency check: S3 state
+            if is_posted(state, slug, platform):
+                print(f"  Skipping {platform}: already posted (per state file)")
+                continue
+
+            post_url = schedule_post(platform, copy, url, image_path, scheduled)
+            if post_url:
+                record_posted(state, slug, platform)
+                save_state(state)
+                posted_urls.append((url, platform, post_url))
+            else:
+                post_had_failure = True
+
+        # Record one failure per post per run (not per platform)
+        if post_had_failure:
+            record_failure(state, slug)
+            save_state(state)
+            if is_abandoned(state, slug):
+                print(f"  Giving up on {slug} after {MAX_RETRIES} failed runs")
+            else:
+                failures = True
+
+    # Write summary
+    if posted_urls:
+        print("\n--- Posted ---")
+        for blog_url, platform, post_url in posted_urls:
+            print(f"  {platform}: {post_url}")
+
+        # Write GitHub Actions job summary if available
+        summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+        if summary_path:
+            with open(summary_path, "a") as f:
+                f.write("## Social media posts\n\n")
+                f.write("| Blog post | Platform | Post |\n")
+                f.write("|---|---|---|\n")
+                for blog_url, platform, post_url in posted_urls:
+                    slug = blog_url.replace(SITE_URL, "")
+                    if post_url.startswith("http"):
+                        f.write(f"| {slug} | {platform} | [link]({post_url}) |\n")
+                    else:
+                        f.write(f"| {slug} | {platform} | {post_url} |\n")
 
     if failures:
-        print("\nSome posts failed to schedule. Check output above.")
+        print("\nSome posts failed to schedule. Not advancing last_sha so they are retried.")
+        print("Successfully posted platforms are recorded and won't be duplicated.")
         sys.exit(1)
+
+    # Only advance last_sha when everything succeeded
+    head = get_head_sha()
+    if head:
+        state["last_sha"] = head
+        save_state(state)
 
     print("\nDone.")
 
