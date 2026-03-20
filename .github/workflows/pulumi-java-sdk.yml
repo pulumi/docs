@@ -11,6 +11,11 @@ on:
   repository_dispatch:
     types:
       - pulumi-java-sdk
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "pulumi-java version (e.g. v0.10.0)"
+        required: true
 jobs:
   pull-request:
     runs-on: ubuntu-latest
@@ -23,7 +28,7 @@ jobs:
         uses: actions/checkout@v6
       - name: set the java sdk version
         run: |
-          echo "JAVA_SDK_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
+          echo "JAVA_SDK_VERSION=${{ github.event.inputs.version || github.event.client_payload.ref }}" >> $GITHUB_ENV
       - name: pull-request
         id: create-pr
         uses: repo-sync/pull-request@v2
@@ -47,7 +52,7 @@ jobs:
         uses: pulumi/esc-action@v1
       - name: set the java sdk version
         run: |
-          echo "JAVA_SDK_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
+          echo "JAVA_SDK_VERSION=${{ github.event.inputs.version || github.event.client_payload.ref }}" >> $GITHUB_ENV
       - name: checkout docs repo
         uses: actions/checkout@v6
         with:
@@ -57,7 +62,7 @@ jobs:
         with:
           repository: pulumi/pulumi-java
           path: pulumi-java
-          ref: ${{ github.event.client_payload.ref }}
+          ref: ${{ github.event.inputs.version || github.event.client_payload.ref }}
       - name: Install Java
         uses: actions/setup-java@v4
         with:
