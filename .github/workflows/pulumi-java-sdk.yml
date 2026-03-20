@@ -62,7 +62,7 @@ jobs:
         with:
           repository: pulumi/pulumi-java
           path: pulumi-java
-          ref: ${{ github.event.client_payload.ref }}
+          ref: ${{ github.event.inputs.version || github.event.client_payload.ref }}
       - name: Install Java
         uses: actions/setup-java@v4
         with:
