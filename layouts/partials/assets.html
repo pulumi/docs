@@ -7,6 +7,12 @@
 {{ $js := resources.Get "js/bundle.js" | fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>
 
+{{ $searchSections := slice "docs" "registry" "blog" "tutorials" "learn" }}
+{{ if in $searchSections .Section }}
+    {{ $algolia := resources.Get "js/algolia.js" | fingerprint }}
+    <script src="{{ $algolia.RelPermalink }}" defer></script>
+{{ end }}
+
 {{/* Inline template for CSS links: uses fingerprinted bundle in dev, post-processed bundle in prod */}}
 {{ define "css-link" }}
     {{- $css := resources.Get .source | fingerprint -}}
