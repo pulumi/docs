@@ -87,8 +87,7 @@
                     {{ if hasPrefix $block.graphic "/" }}
                         <img class="mx-auto rounded-xl {{ $shadowClass }}" src="{{ $block.graphic }}" />
                     {{ else }}
-                        {{ $img := resources.Get (printf "fingerprinted/%s" $block.graphic) | fingerprint }}
-                        <img class="mx-auto rounded-xl {{ $shadowClass }}" src="{{ $img.RelPermalink }}" />
+                        {{ partial "fingerprinted-img.html" (dict "src" $block.graphic "class" (printf "mx-auto rounded-xl %s" $shadowClass)) }}
                     {{ end }}
                 </div>
             </div>

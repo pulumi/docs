@@ -742,6 +742,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: "/fingerprinted/*",
             defaultTtl: oneYear,
             maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
 
         // Web-component loaders must not be cached, because the names of the files they

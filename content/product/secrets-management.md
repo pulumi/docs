@@ -3,7 +3,7 @@ title: "Centralized Configuration & Secrets Management – Pulumi ESC"
 layout: secrets-management
 
 meta_desc: Centralize secrets and configurations with Pulumi ESC. Connect any vault, eliminate secrets sprawl, secure every environment.
-meta_image: "/images/product/esc-screenshot-2.png"
+meta_image: "/images/product/esc-octopus-diagram.png"
 aliases:
     - /esc
     - /product/esc
