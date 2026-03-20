@@ -10,12 +10,12 @@
     - anchor: Optional anchor for section id
 */}}
 
-{{ $title := .title }}
+{{ $title := .title | default "The infrastructure-as-code platform for any cloud." }}
 {{ $ctaPrimaryText := .cta_primary_text | default site.Params.cta.primary.label }}
 {{ $ctaPrimaryLink := .cta_primary_link | default site.Params.cta.primary.href }}
 {{ $ctaSecondaryText := .cta_secondary_text | default site.Params.cta.secondary.label }}
 {{ $ctaSecondaryLink := .cta_secondary_link | default site.Params.cta.secondary.href }}
-{{ $anchor := .anchor }}
+{{ $anchor := .anchor | default "get-started" }}
 
 <section class="template-footer"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col items-center text-center gap-6">

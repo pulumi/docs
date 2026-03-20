@@ -49,7 +49,7 @@
     </section>
 
     {{/* Footer CTA */}}
-    {{ partial "template-partials/template-footer-cta.html" (dict "title" "The infrastructure-as-code platform for any cloud." "anchor" "get-started") }}
+    {{ partial "template-partials/template-footer-cta.html" (.Params.footer_cta | default dict) }}
 
 </div>
 {{ end }}
