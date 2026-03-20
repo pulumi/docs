@@ -1,36 +1,21 @@
-$(function () {
-    // If the button is selected from any entry point, open the dialog.
-    $("#pricingStartTrial").on("click", function () {
-        $("#pricingTrialOptionsDialog").removeClass("hidden");
+document.addEventListener("DOMContentLoaded", function () {
+    const dialogId = "pricingTrialOptionsDialog";
+
+    ["pricingStartTrial", "pricingStartTrialBottomCTA", "businessCriticalStartTrialButton", "enterpriseStartTrialButton", "teamStartTrialButton"].forEach(id => {
+        document.getElementById(id)?.addEventListener("click", function () {
+            document.getElementById(dialogId)?.classList.remove("hidden");
+        });
     });
 
-    $("#pricingStartTrialBottomCTA").on("click", function () {
-        $("#pricingTrialOptionsDialog").removeClass("hidden");
+    document.getElementById("closePricingTrialOptionsDialog")?.addEventListener("click", function () {
+        document.getElementById(dialogId)?.classList.add("hidden");
     });
 
-    $("#businessCriticalStartTrialButton").on("click", function () {
-        $("#pricingTrialOptionsDialog").removeClass("hidden");
+    document.getElementById("startServiceTrial")?.addEventListener("click", function () {
+        document.getElementById(dialogId)?.classList.add("hidden");
     });
 
-    $("#enterpriseStartTrialButton").on("click", function () {
-        $("#pricingTrialOptionsDialog").removeClass("hidden");
-    });
-
-    $("#teamStartTrialButton").on("click", function () {
-        $("#pricingTrialOptionsDialog").removeClass("hidden");
-    });
-
-    // If the close button in the dialog is selected, hide the dialog.
-    $("#closePricingTrialOptionsDialog").on("click", function () {
-        $("#pricingTrialOptionsDialog").addClass("hidden");
-    });
-
-    // If either link in the dialog is followed, hide the dialog.
-    $("#startServiceTrial").on("click", function () {
-        $("#pricingTrialOptionsDialog").addClass("hidden");
-    });
-
-    $("#startSelfHostedTrial").on("click", function () {
-        $("#pricingTrialOptionsDialog").addClass("hidden");
+    document.getElementById("startSelfHostedTrial")?.addEventListener("click", function () {
+        document.getElementById(dialogId)?.classList.add("hidden");
     });
 });
