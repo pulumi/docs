@@ -63,6 +63,7 @@ jobs:
           repository: pulumi/pulumi-java
           path: pulumi-java
           ref: ${{ github.event.inputs.version || github.event.client_payload.ref }}
+          submodules: recursive
       - name: Install Java
         uses: actions/setup-java@v4
         with:
