@@ -105,6 +105,26 @@ $violet-primary: #673EAC;
     .description {
         @include section-description();
     }
+
+    // Centered variant for non-event, non-product pages (e.g. whitepapers)
+    &--centered {
+        .title {
+            @include page-header();
+            @apply text-center text-heading-s leading-tight tracking-tight;
+
+            @include screen-sm {
+                @apply text-heading-m;
+            }
+            @include screen-md {
+                @apply text-heading-l;
+            }
+        }
+
+        .description {
+            @include section-description();
+            @apply text-body-xl;
+        }
+    }
 }
 
 .template-logo-banner {
@@ -327,29 +347,6 @@ $violet-primary: #673EAC;
 .template-footer {
     .template-footer-title {
         @include section-header-small();
-    }
-}
-
-// Centered hero — generic centered heading + description for non-product pages
-.template-hero-centered {
-    .hero-centered-heading {
-        @apply text-black text-center not-italic font-bold text-heading-s;
-        font-feature-settings: 'salt' on;
-        font-family: Inter, sans-serif;
-        letter-spacing: -0.64px;
-        line-height: 1.25 !important;
-
-        @include screen-sm {
-            @apply text-heading-m;
-        }
-        @include screen-md {
-            @apply text-heading-l;
-        }
-    }
-
-    .hero-centered-description {
-        @include section-description();
-        @apply text-body-xl;
     }
 }
 
