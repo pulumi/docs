@@ -124,7 +124,7 @@ function addCopyButton(container: HTMLElement) {
 
         var normalized = normalizeText(lang, text);
         if (normalized && normalized.length > 0) {
-            navigator.clipboard.writeText(normalized);
+            navigator.clipboard.writeText(normalized).catch(() => {});
         }
 
         btn.blur();
