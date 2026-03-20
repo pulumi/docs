@@ -1,7 +1,4 @@
-(function ($) {
-    // The home-page carousel. Items cycle every four seconds. Clicking a label stops the
-    // cycling and shows the selected item.
-
+(function () {
     var carouselItem = 1;
 
     var carouselInterval = window.setInterval(function () {
@@ -15,42 +12,44 @@
 
     showCarouselItem(0);
 
-    $(".carousel-item-label").click(function () {
-        clearInterval(carouselInterval);
-
-        var i = $(".carousel-item-label").index(this);
-        showCarouselItem(i);
+    document.querySelectorAll(".carousel-item-label").forEach((label, index) => {
+        label.addEventListener("click", function () {
+            clearInterval(carouselInterval);
+            showCarouselItem(index);
+        });
     });
 
     function showCarouselItem(i) {
-        // On some pages we might want to show all the carousel animations at
-        // once, so if this element is available we show everything and return.
-        if ($(".carousel-always-visible").length) {
+        if (document.querySelector(".carousel-always-visible")) {
             showIDE();
             showCLI();
             showConsole();
             return;
         }
 
-        if ($(".carousel-always-visible-cli-only").length) {
+        if (document.querySelector(".carousel-always-visible-cli-only")) {
             showCLIOnly();
             return;
         }
 
-        $(".carousel-item").css("opacity", 0).css("pointer-events", "none").eq(i).css("opacity", 1).css("pointer-events", "auto");
+        document.querySelectorAll<HTMLElement>(".carousel-item").forEach((el, idx) => {
+            el.style.opacity = idx === i ? "1" : "0";
+            el.style.pointerEvents = idx === i ? "auto" : "none";
+        });
 
-        $(".carousel-item-description").css("opacity", 0).css("pointer-events", "none").eq(i).css("opacity", 1).css("pointer-events", "auto");
+        document.querySelectorAll<HTMLElement>(".carousel-item-description").forEach((el, idx) => {
+            el.style.opacity = idx === i ? "1" : "0";
+            el.style.pointerEvents = idx === i ? "auto" : "none";
+        });
 
-        $(".carousel-item-label")
-            .removeClass("border-purple-700")
-            .removeClass("text-purple-700")
-            .removeClass("hover:text-purple-700")
-            .addClass("text-purple-200")
-            .addClass("hover:text-purple-300")
-            .eq(i)
-            .addClass("border-purple-700")
-            .addClass("text-purple-700")
-            .addClass("hover:text-purple-700");
+        document.querySelectorAll(".carousel-item-label").forEach((el, idx) => {
+            el.classList.remove("border-purple-700", "text-purple-700", "hover:text-purple-700");
+            el.classList.add("text-purple-200", "hover:text-purple-300");
+            if (idx === i) {
+                el.classList.add("border-purple-700", "text-purple-700", "hover:text-purple-700");
+                el.classList.remove("text-purple-200", "hover:text-purple-300");
+            }
+        });
 
         if (i === 0) {
             showIDE();
@@ -62,26 +61,28 @@
     }
 
     function showIDE() {
-        // Hide the windows.
-        $(".menu").css("opacity", 0);
+        document.querySelectorAll<HTMLElement>(".menu").forEach(el => el.style.opacity = "0");
+        const menus = document.querySelectorAll<HTMLElement>(".menu");
+        menus.forEach(el => {
+            el.querySelectorAll(".row").forEach(row => row.classList.remove("bg-gray-600"));
+            const firstRow = el.querySelector(".row");
+            if (firstRow) firstRow.classList.add("bg-gray-600");
+        });
 
-        // Restore the selection state of the first menu.
-        $(".menu").find(".row").removeClass("bg-gray-600").eq(0).addClass("bg-gray-600");
-
-        // Start typing. On completion, show the menus.
         startTyping(0, function () {
-            $(".menu").each(function (i, el) {
-                var delay = parseInt($(el).attr("data-delay")) || 0;
+            menus.forEach((el, idx) => {
+                var delay = parseInt(el.getAttribute("data-delay")) || 0;
 
-                // Animate the selection indicator of the first menu when it's shown.
-                if (i === 0) {
+                if (idx === 0) {
                     setTimeout(function () {
-                        $(el).find(".row").removeClass("bg-gray-600").eq(1).addClass("bg-gray-600");
+                        el.querySelectorAll(".row").forEach(row => row.classList.remove("bg-gray-600"));
+                        const secondRow = el.querySelectorAll(".row")[1];
+                        if (secondRow) secondRow.classList.add("bg-gray-600");
                     }, 600);
                 }
 
                 setTimeout(function () {
-                    $(el).css("opacity", 1);
+                    el.style.opacity = "1";
                 }, delay);
             });
         });
@@ -98,59 +99,51 @@
     }
 
     function showConsole() {
-        var tabs = $("#carousel-console .tab");
+        const tabs = document.querySelectorAll<HTMLElement>("#carousel-console .tab");
 
-        tabs.css("opacity", 0).eq(0).css("opacity", 1);
+        tabs.forEach(tab => tab.style.opacity = "0");
+        if (tabs[0]) tabs[0].style.opacity = "1";
 
         setTimeout(function () {
-            tabs.eq(0).css("opacity", 0);
-            tabs.eq(1).css("opacity", 1);
+            if (tabs[0]) tabs[0].style.opacity = "0";
+            if (tabs[1]) tabs[1].style.opacity = "1";
         }, 5000);
     }
 
     function startTyping(i, onComplete?) {
-        var spans = $(".carousel-item").eq(i).find(".line.typed span");
-        var offset = 500; /* ms */
-        var delay = 75; /* ms */
+        const carouselItems = document.querySelectorAll(".carousel-item");
+        const item = carouselItems[i];
+        if (!item) return;
 
-        // Wrap every character in a span to make it individually selectable.
-        spans.each(function (i, span) {
+        const spans = item.querySelectorAll(".line.typed span");
+        var offset = 500;
+        var delay = 75;
+
+        spans.forEach(span => {
             var chars = span.textContent.split("");
-
-            $(span)
-                .addClass("typing")
-                .html(
-                    chars
-                        .map(char => {
-                            return "<span class='char'>" + char + "</span>";
-                        })
-                        .join("")
-                        .toString(),
-                );
+            span.classList.add("typing");
+            span.innerHTML = chars.map(char => "<span class='char'>" + char + "</span>").join("");
         });
 
-        // Create an element to represent the cursor.
-        var cursor = $("<span class='cursor'></span>");
+        var cursor = document.createElement("span");
+        cursor.className = "cursor";
 
-        var chars = $(".carousel-item").eq(i).find(".char");
-        chars.map(function (j, el) {
+        const charEls = item.querySelectorAll<HTMLElement>(".char");
+        charEls.forEach((el, j) => {
             offset += Math.ceil(Math.random() * delay);
 
-            // Position the cursor in relation to the character. If a line break is
-            // encountered, show the cursor before the line break (as we pause for
-            // line breaks); otherwise, show it after the character.
             setTimeout(function () {
                 if (el.textContent === "\n") {
-                    $(el).css("opacity", 1).prepend(cursor);
+                    el.style.opacity = "1";
+                    el.insertBefore(cursor, el.firstChild);
                 } else {
-                    $(el).css("opacity", 1).append(cursor);
+                    el.style.opacity = "1";
+                    el.appendChild(cursor);
                 }
 
-                // If we've reached end of the input in the current view, remove the cursor.
-                if (j === chars.length - 1) {
+                if (j === charEls.length - 1) {
                     setTimeout(function () {
                         cursor.remove();
-
                         if (typeof onComplete === "function") {
                             onComplete();
                         }
@@ -158,27 +151,29 @@
                 }
             }, offset);
 
-            // Wait a bit at the end of each line, just to give the viewer a moment to note
-            // what was expressed.
             if (el.textContent === "\n" || el.textContent === ";") {
-                offset += 1000 /* ms */;
+                offset += 1000;
             }
         });
     }
 
     function showLines(i) {
-        var lines = $(".carousel-item").eq(i).find(".line.full");
-        lines.css("opacity", 0);
-        var offset = 2000; /* ms */
-        var delay = 75; /* ms */
+        const carouselItems = document.querySelectorAll(".carousel-item");
+        const item = carouselItems[i];
+        if (!item) return;
 
-        lines.each(function (i, el) {
-            var d = parseInt($(el).attr("data-delay")) || delay;
+        const lines = item.querySelectorAll<HTMLElement>(".line.full");
+        lines.forEach(el => el.style.opacity = "0");
+        var offset = 2000;
+        var delay = 75;
+
+        lines.forEach(el => {
+            var d = parseInt(el.getAttribute("data-delay")) || delay;
             offset += Math.ceil(Math.random() * d);
 
             setTimeout(function () {
-                $(el).css("opacity", 1);
+                el.style.opacity = "1";
             }, offset);
         });
     }
-})(jQuery);
+})();

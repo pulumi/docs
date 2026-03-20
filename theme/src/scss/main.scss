@@ -291,12 +291,12 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "components/resource-links";
     @import "components/examples";
     @import "components/audio";
+    @import "components/llm-menu";
     @import "components/swiper";
     @import "components/slot-machine";
     @import "components/pulumi-tertiary-nav";
     @import "components/user-toggle";
     @import "components/tabs";
-    @import "components/llm-menu";
     @import "templates";
     @import "neo-mode";
 

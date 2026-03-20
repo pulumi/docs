@@ -10,6 +10,7 @@ module.exports = function (env, { mode }) {
             bundle: "./src/ts/main.ts",
             marketing: "./src/ts/marketing.ts",
             homepage: "./src/ts/homepage.ts",
+            algolia: "./src/ts/algolia-entry.ts",
         },
         output: {
             filename: "[name].js",
