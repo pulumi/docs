@@ -183,6 +183,24 @@ const uploadsBucketAcl = new aws.s3.BucketAcl("uploads-bucket-acl", {
     dependsOn: [uploadsBucketPublicAccessBlock, uploadsBucketOwnershipControls],
 });
 
+// Bucket for tracking social media post state (idempotency).
+const socialStateBucket = new aws.s3.Bucket("social-post-state", {
+    bucket: "pulumi-social-post-state",
+});
+
+new aws.s3.BucketVersioningV2("social-post-state-versioning", {
+    bucket: socialStateBucket.id,
+    versioningConfiguration: { status: "Enabled" },
+});
+
+new aws.s3.BucketPublicAccessBlock("social-post-state-public-access-block", {
+    bucket: socialStateBucket.id,
+    blockPublicAcls: true,
+    blockPublicPolicy: true,
+    ignorePublicAcls: true,
+    restrictPublicBuckets: true,
+});
+
 const bundlesBucket = new aws.s3.Bucket("bundles-bucket", {
     forceDestroy: true,
 });
