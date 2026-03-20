@@ -39,7 +39,7 @@ Let's examine how it creates reusable components for building out resources. Fir
 
 In the networking service, [`vpc.ts`](https://github.com/pulumi/examples/blob/master/aws-ts-stackreference-architecture/networking/src/vpc.ts) creates a TypeScript class that extends Pulumi [ComponentResource](/docs/concepts/resources/). A ComponentResource abstracts one or more children that do not require custom create, read, update, and delete operations for provisioning. We can add the related resources to the correct parent to build out the class.
 
-```ts
+```typescript
 export class Vpc extends ComponentResource {
     vpc: aws.ec2.Vpc;
     privateZone: aws.route53.Zone;
@@ -58,7 +58,7 @@ export class Vpc extends ComponentResource {
 
 The resource needs an interface to set the name and parameters for our new VPC class.
 
-```ts
+```typescript
 export interface VpcArgs {
     description: string;
     baseTags: aws.Tags;
@@ -76,7 +76,7 @@ export interface VpcArgs {
 
 Finally, we need to be able to peer VPCs so that the services can communicate with each other. We can take advantage of TypeScript's [member function](https://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers) to implement peering.
 
-```ts
+```typescript
 public configurePeering(args: PeerToArgs) {
 
   // …

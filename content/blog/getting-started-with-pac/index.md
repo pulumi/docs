@@ -32,7 +32,7 @@ $ pulumi new aws-typescript
 
  Running `pulumi new` creates the project files as well as the code to create a single S3 bucket. We’ll use an S3 ACL to make the bucket public by setting it to the [canned ACL `public-read`](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl).
 
-```ts
+```typescript
 const bucket = new aws.s3.Bucket("my-bucket", {
     acl: "public-read",
 });
@@ -52,7 +52,7 @@ $ pulumi policy new aws-typescript
 
 By default, this creates a policy that checks to see if the ACL sets the bucket to be publically accessible.
 
-```ts
+```typescript
 new PolicyPack("aws-typescript", {
     policies: [{
         name: "s3-no-public-read",
@@ -103,7 +103,7 @@ $ pulumi new aws-typescript
 
 Replace `index.ts` with the following to deploy Elasticsearch:
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
@@ -130,7 +130,7 @@ $ pulumi policy new awsguard-typescript
 
 The default policy enforcement level is `advisory,` but given the frequency of misconfigured Elasticsearch deployments, we’ll set to `mandatory`.
 
-```ts
+```typescript
 new AwsGuard({ all: "mandatory" });
 ```
 

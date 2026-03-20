@@ -39,7 +39,7 @@ Deployments can be configured at a stack level via Deployment Settings in three 
 2. **[The Pulumi Service Provider](https://github.com/pulumi/pulumi-pulumiservice)** lets you define deployment configuration as Pulumi code in you language of choice, reviewed and managed in source control.
 3. **The Deployment Settings REST API** provides programmatic access to configure Deployments and CI/CD dynamically, without needing to generate or check in YAML.
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as service from "@pulumi/pulumiservice";
 

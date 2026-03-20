@@ -39,7 +39,7 @@ Together, these make it easy to reference existing infrastructure regardless of 
 
 For adopting existing resources, Pulumi offers the [`import`](/registry/packages/azure/api-docs/core/subscriptiontemplatedeployment#look-up) resource option to request that a resource defined in your Pulumi program adopt an existing resource in the cloud provider instead of creating a new one.  In keeping with its focus on infrastructure as *code*, Pulumi lets you specify this `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in some manual workflow.  In its simplest form, it looks like this:
 
-```ts
+```typescript
 const myVpc = new aws.ec2.Vpc("my-vpc", {
     cidrBlock: "10.11.0.0/16",
 }, { import: "vpc-02cd0cd2d807f340c"});
@@ -95,7 +95,7 @@ $ tf2pulumi
 
 We now have a Pulumi program in `index.ts` that describes the same infrastructure:
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
@@ -143,7 +143,7 @@ As we saw earlier, to import existing resources, we simply add `import: <id>` to
 
 We can try this for one resource first.  We can look in our `terraform.tfstate` file or in the Azure Portal and see that the id of the Resource Group is `/subscriptions/0282681f-7a9e-424b-80b2-96babd57a8a1/resourceGroups/tfvmex-resources`.  So let's use that:
 
-```ts
+```typescript
 const mainResourceGroup = new azure.core.ResourceGroup("main", {
     location: "West US 2",
     name: `${prefix}-resources`,

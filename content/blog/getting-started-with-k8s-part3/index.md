@@ -36,7 +36,7 @@ We’ll use the [Sock Shop](https://github.com/pulumi/examples/tree/master/kuber
 
 Let’s look at the Orders microservice, which is made up of a service worker and MongoDB for a backing service. Note that the code is organized by microservice with a separate Deployment and Service for each service and backing resource. The ordersDb configuration is straightforward, of note are the options in the container spec where we set [securityContext](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) and a [emptyDir volume](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) for storage. An emptyDir volume persists even if the container crashes, and the data in the volume is available if the container is restarted. The service definition for ordersDbService is also simple and opens `port:27017` and ties the service back to the Deployment by the *orders-db* label.
 
-```ts
+```typescript
 const sockShopNs = new k8s.core.v1.Namespace("sock-shop", { metadata: { name: "sock-shop" } });
 
 // --------------------------------------------------------------------------
@@ -123,7 +123,7 @@ const ordersDbService = new k8s.core.v1.Service("orders-db", {
 
 The orders Deployment is similar to the ordersDb Deployment, but it includes environmental variables, such as `JAVA_OPTS` to set heap memory size and garbage collection intervals, for the containerized application. The container runs as a non-root user and drops all capabilities that can run as a non-root user, except for `NET_BIND_SERVICE`, which lets the container bind to any port.
 
-```ts
+```typescript
 const orders = new k8s.apps.v1.Deployment("orders", {
     metadata: {
         name: "orders",
@@ -226,7 +226,7 @@ The Kubernetes [GuestBook](https://kubernetes.io/docs/tutorials/stateless-applic
 
 When you examine *index.ts*, the main program, you’ll notice that it imports the *k8sjs* module. Note that each service is instantiated by calling the *ServiceDeployment* class and passing arguments such as the image, ports, and replicas. As you can see, this is a more efficient way to deploy services than coding individual Deployments and Services.
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as k8sjs from "./k8sjs";
 
@@ -261,7 +261,7 @@ The ServiceDeployment class is defined in the *k8sjs* module using ComponentReso
 
 ServiceDeploymentArgs is the interface for the arguments used to initialize the method. Next, we instantiate the container using the container image property from the ServiceDeploymentArgs and configure resources, environmental variables, and ports. The deployment is instantiated with the properties you typically see in a deployment such labels, selectors, containers, and replicas. The same goes for Services. Finally, based on whether Kubernetes is running on cluster or Minikube, the ServiceDeployment class returns the clusterIP if it runs on Minikube or instantiates a load balancer if it is a cluster.
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 import * as k8stypes from "@pulumi/kubernetes/types/input";
 import * as pulumi from "@pulumi/pulumi";
@@ -337,7 +337,7 @@ Helm is described as the package manager for Kubernetes. Applications are packag
 
 The code below is from the [Kubernetes Typescript Helm Chart](https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress) example. Deploying a Helm chart is uncomplicated; all you need to do is instantiate a Helm Chart object and provide a name and the appropriate properties.
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 

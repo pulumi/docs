@@ -102,7 +102,7 @@ The resource `KubeEnvironment` defines a cluster that can host multiple Containe
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as web from "@pulumi/azure-native/web/v20210301";
 
 const env = new web.KubeEnvironment("env", {
@@ -157,7 +157,7 @@ We can build the Docker image and publish it to a new Azure Container Registry (
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as docker from "@pulumi/docker";
 import * as containerregistry from "@pulumi/azure-native/containerregistry";
 
@@ -322,7 +322,7 @@ Finally, we can define the Container App itself. We point the App to the environ
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 const containerApp = new web.ContainerApp("app", {
    resourceGroupName: resourceGroup.name,
    kubeEnvironmentId: env.id,

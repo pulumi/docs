@@ -23,7 +23,7 @@ For instance, let's say your infrastructure team has provisioned your network in
 
 Instead, you can look up that stack by name and use one of its output values. The following example reads an AWS CDK stack named `my-network-stack` and then uses the exported `SubnetId` value to provision a brand new EC2 instance that runs in that subnet:
 
-```ts
+```typescript
 import * as aws from "@pulumi/aws";
 
 const network = aws.cloudformation.getStackOutput({
@@ -49,7 +49,7 @@ Let's say you want to migrate from AWS CDK to Pulumi and that simply co-existing
 
 Using the below example as a starting point, we will convert this CDK application to use Pulumi CDK.
 
-```ts
+```typescript
 import * as cdk from 'aws-cdk-lib/core';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
@@ -85,7 +85,7 @@ npm install @pulumi/aws @pulumi/aws-native @pulumi/docker-build @pulumi/pulumi @
 
 Replace the CDK `Stack` and `App` classes with Pulumi CDK `Stack` and `App` classes.
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 
@@ -126,7 +126,7 @@ You can also control termination protection at the resource level in Pulumi inst
 
 Consider a common scenario of creating your stateful resources (e.g. an RDS database) in one stack and your non-stateful resources (e.g. a Lambda Function) in a separate stack.
 
-```ts
+```typescript
 import * as cdk from 'aws-cdk-lib/core';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
@@ -167,7 +167,7 @@ new AppStack(app, 'app-stack', {
 
 To convert this to a Pulumi CDK app, you would combine the two stacks into a single stack and then use `transforms` to set `protect: true` on the `DbCluster`.
 
-```ts
+```typescript
 import * as pulumi from '@pulumi/pulumi';
 import * as pulumicdk from '@pulumi/cdk';
 import * as s3 from 'aws-cdk-lib/aws-s3';
@@ -211,7 +211,7 @@ You would convert each individual CDK stack to a Pulumi CDK stack.
 
 For example, this:
 
-```ts
+```typescript
 import * as cdk from 'aws-cdk-lib/core';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
@@ -243,7 +243,7 @@ new StackEast2(app, 'east2-stack');
 
 Would be converted to this:
 
-```ts
+```typescript
 import * as ccapi from '@pulumi/aws-native';
 import * as aws from '@pulumi/aws';
 import * as pulumicdk from '@pulumi/cdk';
@@ -292,7 +292,7 @@ An AWS CDK [Stage](https://docs.aws.amazon.com/cdk/v2/guide/stages.html) represe
 For example, taking the example from above where we deploy a `StatefulStack` and an `AppStack`,
 we would use stages to deploy these to different environments.
 
-```ts
+```typescript
 import * as cdk from 'aws-cdk-lib/core';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
@@ -375,7 +375,7 @@ When we convert the AWS CDK application we will:
 * Remove the use of CDK stages
 * Read the instance type from the [Pulumi configuration](/docs/iac/concepts/config/).
 
-```ts
+```typescript
 import * as pulumi from '@pulumi/pulumi';
 import * as pulumicdk from '@pulumi/cdk';
 import * as s3 from 'aws-cdk-lib/aws-s3';

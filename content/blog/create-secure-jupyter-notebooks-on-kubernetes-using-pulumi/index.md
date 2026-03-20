@@ -195,7 +195,7 @@ cluster. We use this secret as the TLS password to access the Jupyter notebook i
 accessible from the domain name defined in the host section of the ingress declaration. The
 annotations in the ingress declarations are required to enable this behavior on the ingress object.
 
-```javascript
+```typescript
  * STEP 5: Create a secret to enable "basic-auth" for your Jupyter
  * notebook ingress and add it to the ingress declaration in the
  * GKE cluster

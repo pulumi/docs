@@ -167,7 +167,7 @@ Despite the many advantages of serverless, one of the challenges of serverless i
 
 Deploying infrastructure with code lets you implement these [strategies](/blog/aws-lambda-provisioned-concurrency-no-cold-starts/) based on your application requirements. The code snippet below is an example of provisioned concurrency; a fully [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
 
-```ts
+```typescript
 // Read the config of whether to provision fixed concurrency for Lambda
 const config = new pulumi.Config();
 const provisionedConcurrentExecutions = config.getNumber("provisionedConcurrency");

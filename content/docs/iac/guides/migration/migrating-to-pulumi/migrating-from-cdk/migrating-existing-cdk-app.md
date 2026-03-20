@@ -105,7 +105,7 @@ For example, a `StatefulStack` (RDS) and `AppStack` (Lambda) in CDK can be combi
 
 Consider a common scenario of creating your stateful resources (e.g. an RDS database) in one stack and your non-stateful resources (e.g. a Lambda Function) in a separate Stack.
 
-```ts
+```typescript
 import * as cdk from 'aws-cdk-lib/core';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
@@ -152,7 +152,7 @@ AWS CDK Stages represent a group of stacks deployed to an environment (dev, prod
 
 In AWS CDK applications differences in configuration between environments are typically configured through input parameters on the stage. In the example below, the `DatabaseCluster` uses a different `InstanceType` between the `dev` and `prod` environments. When we convert this application to Pulumi, we will move this configuration from the stage input properties to [stack configuration](/docs/iac/concepts/config/).
 
-```ts
+```typescript
 import * as cdk from 'aws-cdk-lib/core';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
@@ -225,7 +225,7 @@ When we convert the AWS CDK application we will:
 * Combining the stacks like we did in the [Consolidate multiple CDK stacks](#consolidate-multiple-cdk-stacks) example
 * Read the instance type from the [Pulumi configuration](/docs/iac/concepts/config/).
 
-```ts
+```typescript
 import * as pulumi from '@pulumi/pulumi';
 
 const config = new pulumi.Config();
@@ -302,7 +302,7 @@ After converting the code, if you choose to organize into Pulumi components you 
 
 This is the simpler approach. Import resources flat, then reorganize. After importing resources using the approaches above, create a component class and move resources inside it. Add aliases to indicate the resources used to be at the root level:
 
-```ts
+```typescript
 
 class MyVpc extends pulumi.ComponentResource {
     public vpc: aws.ec2.Vpc;

@@ -30,7 +30,7 @@ Follow the instructions in the [README](https://github.com/pulumi/examples/tree/
 
 The following part defines a security group that allows us to ssh via port 22 and receive requests on port 80.
 
-```ts
+```typescript
 // Create a new security group that permits SSH and web access.
 const secgrp = new aws.ec2.SecurityGroup("secgrp", {
     description: "Foo",
@@ -43,7 +43,7 @@ const secgrp = new aws.ec2.SecurityGroup("secgrp", {
 
 Note that the security group only allows ingress, if we want to update the VM or add software via a package manager such as yum, we need to define egress.
 
-```ts
+```typescript
 // Create a new security group that permits SSH and http/https access.
 const secgrp = new aws.ec2.SecurityGroup("secgrp", {
    description: "Foo",
@@ -61,7 +61,7 @@ const secgrp = new aws.ec2.SecurityGroup("secgrp", {
 
 The code block below selects the AWS AMI and creates an EC2 instance with the OpenSSH keypair and security group with ingress and egress rules configured.
 
-```ts
+```typescript
 // Get the AMI.
 const amiId = aws.getAmi({
    owners: ["amazon"],
@@ -90,7 +90,7 @@ const server = new aws.ec2.Instance("server", {
 
 Next, let's add storage to our virtual machine using AWS Elastic Block Storage and attach it to our EC2 instance. Add the following code after the virtual machine is created. The code creates a 10 GB volume and attaches it to our virtual machine via the `instanceId` property.
 
-```ts
+```typescript
 // Add EBS storage.
 const ebsvolume = new aws.ebs.Volume("vm", {
    availabilityZone: "us-west-2a",
@@ -118,7 +118,7 @@ This where you can use Pulumi’s [dynamic provider](/docs/concepts/resources#dy
 
 Let's look at the code which creates a dynamic provisioner. In the code below, if Pulumi doesn't find the resource, it creates the resource. However, if you run `pulumi up` again and the resource is already running, Pulumi uses the diff method to replace the resource.
 
-```ts
+```typescript
 // Provisioner lets a custom action run the first time a resource has been created. It takes as input
 // a dependent property. Anytime its value changes, the resource is replaced and will re-run its logic.
 export class Provisioner<T, U> extends pulumi.dynamic.Resource {
@@ -223,7 +223,7 @@ sudo service postgresql start
 
 To provision the EC2 instance we'll use the provisioner interface to copy the `./postgres` directory to the instance. Next, we'll make postgres_install.sh executable then run the script to install postgres and start it up.
 
-```ts
+```typescript
 // Copy a config file to our server.
 const cpConf = new provisioners.CopyFile("postgres_conf", {
    conn,

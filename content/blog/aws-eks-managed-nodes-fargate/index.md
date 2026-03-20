@@ -68,7 +68,7 @@ export const kubeconfig = cluster.kubeconfig;
 
 [This program](https://github.com/pulumi/examples/tree/master/aws-ts-eks), when deployed with `pulumi up`, will provision an entire EKS cluster, all of its related infrastructure and internal Kubernetes resources, and then print out the `kubeconfig` that can be used to access the cluster afterwards:
 
-```
+```console
 $ pulumi up
 Updating (dev):
 

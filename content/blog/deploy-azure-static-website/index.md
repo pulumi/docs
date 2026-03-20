@@ -97,7 +97,7 @@ const site = new website.Website("site", {
    withCDN: true,
 });
 
-export const { cdnURL } = site;
+export const cdnURL = site;
 ```
 
 {{% /choosable %}}

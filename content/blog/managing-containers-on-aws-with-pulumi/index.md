@@ -49,7 +49,7 @@ ECS is designed to work with other AWS services and provides more straightforwar
 
 You can create either an ECS or EKS cluster using Pulumi. If you wish to use ECS, @pulumi/aws provides all the primitives needed to build infrastructure on AWS.
 
-```ts
+```typescript
 import * as awsx from "@pulumi/aws";
 
 // Create an ECS cluster explicitly, and give it a name tag.
@@ -62,7 +62,7 @@ const cluster = new aws.ecs.Cluster("custom", {
 
 If you wish to use EKS, use the Pulumi EKS library (@pulumi/eks) for Kubernetes primitives on AWS.
 
-```ts
+```typescript
 import * as eks from "@pulumi/eks";
 
 // Create an EKS cluster with the default configuration.
@@ -78,7 +78,7 @@ Fargate is an AWS service that runs containers. It is suited to running small wo
 
 In this example, we create a load balancer open on port 80, spin up two instances of our container, and publish the endpoint URL.
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 
 const lb = new awsx.lb.ApplicationLoadBalancer("nginx");
@@ -109,7 +109,7 @@ export const appURL = pulumi.interpolate`http://${loadbalancer.loadBalancer.dnsN
 
 With Kubernetes, we create a deployment for the application and a service to make the application accessible via port 80. We publish both application endpoint to make it accessible and cluster config for use with `kubectl` CLI.
 
-```ts
+```typescript
 // Deploy a small canary service (NGINX), to test that the cluster is working.
 const appName = "my-app";
 const appLabels = { appClass: appName };
@@ -283,7 +283,7 @@ $ node install “@plulumi/kubernetes”
 
 Like the ECS example, the EKS example builds the application image locally and pushes it into our custom repository. The application deployment has two replicas in the configuration. The service uses the EKS cluster, `my-cluster`, we declared to create a load balancer with port 80 open.
 
-```ts
+```typescript
 import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 import * as k8s from "@pulumi/kubernetes";

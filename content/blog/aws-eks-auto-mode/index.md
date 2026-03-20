@@ -792,7 +792,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		
+
 		ctx.Export("url", ingress.Status.ApplyT(func(status networkingv1.IngressStatus) (*string, error) {
 			return &status.LoadBalancer.Ingress[0].Hostname, nil
 		}).(pulumi.StringPtrOutput))
@@ -1434,8 +1434,6 @@ const statefulWorkload = new k8s.apps.v1.Deployment("stateful-workload", {
 });
 
 export const url = ingress.status.loadBalancer.ingress[0].hostname.apply(h => `http://${h}:80`);
-
-
 ```
 
 {{% /choosable %}}

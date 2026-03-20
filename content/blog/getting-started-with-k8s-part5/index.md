@@ -31,7 +31,7 @@ A Pod is a logical host, and each Pod is assigned a network namespace, which is 
 
 What does this look like in code?
 
-```ts
+```typescript
 // Create the frontend Pod.
 const pod = new k8s.core.v1.Pod("frontend", {
     spec: {
@@ -92,7 +92,7 @@ We’ve reviewed how packets are routed between Pods and Services, but how does 
 
 Below is an example of how to create a service with code.
 
-```ts
+```typescript
 const frontendLabels = { app: "frontend" };
 const frontendDeployment = new k8s.apps.v1.Deployment("frontend", {
     spec: {
@@ -160,7 +160,7 @@ Within an AWS environment, the ALB Ingress Controller provides Kubernetes Ingres
 
 Building on the previous example, we can expose the frontend by adding the following.
 
-```ts
+```typescript
 export const frontendIp: pulumi.Output<string>;
 frontendIp = frontend.status.loadBalancer.ingress[0].ip;
 ```

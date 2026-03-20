@@ -530,7 +530,7 @@ $ kubectl apply -f pvc.yaml
 
 {{< choosable k8s-language typescript >}}
 
-```ts
+```typescript
 import * as k8s from "@pulumi/k8s";
 
 // Create the premium StorageClass.
@@ -551,7 +551,7 @@ persistent volumes in the cluster.
 
 Create the persistent volume with a persistent volume claim and Pulumi.
 
-```ts
+```typescript
 import * as k8s from "@pulumi/k8s";
 
 // Create a Persistent Volume Claim on the StorageClass.
@@ -630,7 +630,7 @@ $ kubectl apply -f pvc.yaml
 
 {{< choosable k8s-language typescript >}}
 
-```ts
+```typescript
 import * as k8s from "@pulumi/k8s";
 
 // Create the standard StorageClass.
@@ -651,7 +651,7 @@ persistent volumes in the cluster.
 
 Create the persistent volume with a persistent volume claim and Pulumi.
 
-```ts
+```typescript
 import * as k8s from "@pulumi/k8s";
 
 // Create a Persistent Volume Claim on the StorageClass.
@@ -731,7 +731,7 @@ general best-practices and recommendations to configure in the cluster.
 * Set [Node Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) to identify nodes by attributes
 * Enable Log Analytics using the `omsAgent` setting
 
-    ```ts
+    ```typescript
     import * as azure from "@pulumi/azure";
 
     const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {

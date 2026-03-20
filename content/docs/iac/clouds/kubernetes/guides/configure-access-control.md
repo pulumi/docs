@@ -89,7 +89,7 @@ workloads in the `apps` namespace (created in  [cluster defaults][crosswalk-conf
 
 Assume the `admin` user.
 
-```ts
+```typescript
 $ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```

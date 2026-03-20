@@ -33,7 +33,7 @@ To create a cluster for Kubernetes on a cloud provider, we need to create a VPC 
 
 We declare a VPC to host our Kubernetes cluster and specify a public subnet, which is the gateway for the Kube-APIServer. We create the Kubernetes cluster with the VPC we declared and the VPC's default public subnets. The `desiredCapacity` parameter sets the desired number of EC2 `t2.medium` nodes. We also export the [*kubeconfig*](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) file which we can use with *kubectl* to communicate with our Kubernetes cluster.
 
-```ts
+```typescript
 import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 
@@ -73,7 +73,7 @@ We retrieve the values with `config.ts` for use in our main program.
 
 config.ts
 
-```ts
+```typescript
 import * as azure from "@pulumi/azure";
 import * as pulumi from "@pulumi/pulumi";
 
@@ -91,7 +91,7 @@ In Azure, we have to create a *service principal*, which is an identity for acce
 
 cluster.ts
 
-```ts
+```typescript
 import * as azure from "@pulumi/azure";
 import * as azuread from "@pulumi/azuread";
 import * as k8s from "@pulumi/kubernetes";
@@ -154,7 +154,7 @@ We retrieve the values with `config.ts` for use in our main program.
 
 config.ts
 
-```ts
+```typescript
 import * as gcp from "@pulumi/gcp";
 import { Config } from "@pulumi/pulumi";
 import * as random from "@pulumi/random";
@@ -184,7 +184,7 @@ export const masterVersion = config.get("masterVersion") ||
 
 We create the Kubernetes cluster using the variables we set in the configuration file. Note that for the nodes, we specify the *oauthScopes*, which are the Google API scopes available to all of the node VMs under the "default" service account. Because GKE uses gcloud to authenticate to the service, we have to create a [*kubeconfig*](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) file that uses gcloud. The kubeconfig file lets us communicate with our Kubernetes cluster.
 
-```ts
+```typescript
 import * as gcp from "@pulumi/gcp";
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";

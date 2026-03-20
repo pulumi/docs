@@ -35,7 +35,7 @@ Constructing an instance of this `pulumicdk.Stack` from within your Pulumi progr
 
 For example, the following program deploys two AWS CDK Constructs using Pulumi.
 
-```ts
+```typescript
 import * as fs from 'fs';
 import * as events from 'aws-cdk-lib/aws-events';
 import * as events_targets from 'aws-cdk-lib/aws-events-targets';
@@ -111,7 +111,7 @@ We can also combine the best of AWS CDK with the best of Pulumi, by using both P
 
 The following example shows creating an AWS Lambda Function with the Pulumi AWS SDK, and then using an output of that Function (the `arn`) as an input to an AWS Events Rule CDK Construct.  An output from the AWS CDK Construct is then converted to a Pulumi Output value which can be used in the rest of the Pulumi program - and in particular as a Pulumi Stack Output.
 
-```ts
+```typescript
 import * as events from 'aws-cdk-lib/aws-events';
 import * as events_targets from 'aws-cdk-lib/aws-events-targets';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
@@ -164,7 +164,7 @@ The new AWS CDK on Pulumi builds upon AWS Native by converting the CloudFormatio
 
 For example, to provide a mapping for the `AWS::Lambda::Permission` resource type, define a function like the following:
 
-```ts
+```typescript
 export function remapCloudControlResource(
    element: CfnElement,
    logicalId: string,
@@ -199,7 +199,7 @@ AWS CDK offers a mix of relatively low level (unopinionated) constructs, as well
 
 For example, to deploy a load balanced and auto-scaled Fargate service to a dedicated VPC, we can use the following program:
 
-```ts
+```typescript
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as pulumi from '@pulumi/pulumi';
 import * as pulumicdk from '@pulumi/cdk';
@@ -249,7 +249,7 @@ export const loadBalancerURL = stack.loadBalancerDNS;
 
 Deploying this with `pulumi up` builds a few dozen AWS resources to construct the various building blocks necessary to capture this in raw AWS infrastructure:
 
-```
+```console
 > pulumi up
 
 Updating (dev)

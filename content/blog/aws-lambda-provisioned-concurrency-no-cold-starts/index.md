@@ -55,7 +55,7 @@ At re:Invent 2019, AWS introduced Lambda **Provisioned Concurrency**---a feature
 
 Here is an example of configuring the provisioned concurrency with Pulumi in TypeScript:
 
-```ts
+```typescript
 const lambda = new aws.lambda.Function("mylambda", {
     code: new pulumi.asset.FileArchive("./app"),
     handler: "handler",
@@ -82,7 +82,7 @@ However, many workloads fluctuate a lot. Extreme elasticity and lack of configur
 
 Instead of choosing a permanently fixed value, you can configure provisioned concurrency to autoscale. The first required component is the [autoscaling](/what-is/what-is-cloud-infrastructure-autoscaling/) target:
 
-```ts
+```typescript
 const resourceId = pulumi.interpolate`function:${lambda.name}:${lambda.version}`;
 const target = new aws.appautoscaling.Target("target", {
     resourceId,
@@ -103,7 +103,7 @@ Quite often, increases in request rates are partially predictable. For example, 
 
 The following snippet sets two scheduled rules that switch between two levels of provisioned concurrency every day.
 
-```ts
+```typescript
 function scheduledConcurrency(name: string, cron: string, capacity: number) {
     return new aws.appautoscaling.ScheduledAction(`schedule-${name}`, {
         resourceId,
@@ -131,7 +131,7 @@ If your workload pattern is less predictable, you can configure autoscaling for 
 
 Here is a basic example of a dynamic scaling policy.
 
-```ts
+```typescript
 const scaledConcurrency = new aws.appautoscaling.Policy("autoscaling", {
     resourceId,
     serviceNamespace: "lambda",

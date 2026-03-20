@@ -194,7 +194,7 @@ const instance = new os.compute.Instance("test", {
     imageName: "Ubuntu 16.04",
 });
 
-exports.instanceIP = instance.accessIpV4;
+export const instanceIP = instance.accessIpV4;
 ```
 
 Check out the [API documentation](/registry/packages/openstack/api-docs/)

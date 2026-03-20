@@ -38,7 +38,7 @@ The amount of an AWS monthly bill has become a cliché in the tech industry. Fro
 
 The example below shows how the policy finds all the instances and validates the aggregate cost against the maximum monthly amount allowed. It does this by finding the monthly on-demand price and aggregating all the costs.
 
-```ts
+```typescript
 import * as aws from "@pulumi/aws";
 import { PolicyPack, validateStackResourcesOfType } from "@pulumi/policy";
 import { getMonthlyOnDemandPrice, formatAmount } from "./utils";
@@ -70,13 +70,13 @@ Setting the maximum amount and calculating the monthly on-demand price for all `
 
 config.ts
 
-```ts
+```typescript
 export const maxMonthlyCost = 500;
 ```
 
 utils.ts
 
-```ts
+```typescript
 import * as fs from "fs";
 import * as zlib from "zlib";
 
@@ -133,7 +133,7 @@ The breadth and depth of services provided by cloud providers are vast. Beyond i
 
 Azure Cloud Computing Services provides a list of services such as blockchain, mixed reality, Internet of Things. A best security practice is not to let unknown devices attach to your network. The policy below prohibits the use of IoT services because the endpoints are potentially untrusted and could be an entry point for bad actors.
 
-```ts
+```typescript
 import * as azure from "@pulumi/azure";
 import * as pulumi from "@pulumi/pulumi";
 import { PolicyPack, ReportViolation, ResourceValidationArgs, } from "@pulumi/policy";
@@ -160,7 +160,7 @@ Access control to resources is a fundamental part of infrastructure security. Wh
 
 It’s a best practice to control ingress and egress of resources and not expose them on the Internet unless needed. The policy below issues a warning if a compute instance, or virtual machine has a public IP address, and it prohibits ingress from the public internet. When we run `pulumi up` or `pulumi preview`, the resource graph will show if either condition is met, and the deployment can be revised to follow the policies.
 
-```ts
+```typescript
 import * as gcp from "@pulumi/gcp";
 import { validateResourceofType, PolicyPack, } from "@pulumi/policy";
 
@@ -201,7 +201,7 @@ Immutability was one of the fundamental concepts behind containers. All applicat
 
 During development, an application may use containers tagged `latest`. Given the complexity of modern applications, these containers may pass testing and go into production. It isn’t until the application is in production and a new pod spins up to replace a failing pod that the containers tagged `latest` break a dependency. The new pod with the `latest` tags would cause the application to fail. The policy example below would prevent deploying pods from using containers tagged `latest`.
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
 
