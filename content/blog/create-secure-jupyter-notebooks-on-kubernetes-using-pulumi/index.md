@@ -196,6 +196,7 @@ accessible from the domain name defined in the host section of the ingress decla
 annotations in the ingress declarations are required to enable this behavior on the ingress object.
 
 ```typescript
+/*
  * STEP 5: Create a secret to enable "basic-auth" for your Jupyter
  * notebook ingress and add it to the ingress declaration in the
  * GKE cluster

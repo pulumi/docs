@@ -236,7 +236,7 @@ variable -- in this case, we just happen to have exported the IP address
 using a variable `frontendIp`. The code to do this export looks like
 this (at the bottom of index.ts):
 
-```javascript
+```typescript
 export const frontendIp = frontend.status.apply(
     status => status.loadBalancer.ingress[0].ip);
 ```
