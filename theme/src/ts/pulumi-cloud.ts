@@ -1,35 +1,33 @@
-$(function () {
+document.addEventListener("DOMContentLoaded", function () {
     const productTabs = ["iac-select", "esc-select", "insights-select"];
     const capabilityTabs = ["crossguard-select", "deployments-select", "copilot-select", "management-select"];
 
     productTabs.forEach(tab => {
-        $(`#${tab}`).on("click", function () {
-            // hide all others
+        document.getElementById(tab)?.addEventListener("click", function () {
             productTabs.forEach(id => {
                 if (id !== tab) {
-                    $(`#${id}-content`).addClass("hidden");
-                    $(`#${id}`).removeClass("border-blue-600");
-                    $(`#${id}-text`).removeClass("rainbow-text");
+                    document.getElementById(id + "-content")?.classList.add("hidden");
+                    document.getElementById(id)?.classList.remove("border-blue-600");
+                    document.getElementById(id + "-text")?.classList.remove("rainbow-text");
                 }
             });
-            $(`#${tab}`).addClass("border-blue-600");
-            $(`#${tab}-text`).addClass("rainbow-text")
-            $(`#${tab}-content`).removeClass("hidden")
+            document.getElementById(tab)?.classList.add("border-blue-600");
+            document.getElementById(tab + "-text")?.classList.add("rainbow-text");
+            document.getElementById(tab + "-content")?.classList.remove("hidden");
         });
     });
     capabilityTabs.forEach(tab => {
-        $(`#${tab}`).on("click", function () {
-            // hide all others
+        document.getElementById(tab)?.addEventListener("click", function () {
             capabilityTabs.forEach(id => {
                 if (id !== tab) {
-                    $(`#${id}-content`).addClass("hidden");
-                    $(`#${id}`).removeClass("border-blue-600");
-                    $(`#${id}-text`).removeClass("rainbow-text");
+                    document.getElementById(id + "-content")?.classList.add("hidden");
+                    document.getElementById(id)?.classList.remove("border-blue-600");
+                    document.getElementById(id + "-text")?.classList.remove("rainbow-text");
                 }
             });
-            $(`#${tab}`).addClass("border-blue-600");
-            $(`#${tab}-text`).addClass("rainbow-text")
-            $(`#${tab}-content`).removeClass("hidden")
+            document.getElementById(tab)?.classList.add("border-blue-600");
+            document.getElementById(tab + "-text")?.classList.add("rainbow-text");
+            document.getElementById(tab + "-content")?.classList.remove("hidden");
         });
     });
 });

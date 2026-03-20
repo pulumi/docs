@@ -21,7 +21,8 @@ import "./developer-advocates";
 import "./toc";
 import "./docs-main";
 import "./redirects";
-import "./algolia/autocomplete";
+// Algolia is built as a separate entry point (algolia-entry.ts) and loaded
+// only on pages with a #search element. See assets.html.
 import "./external-links";
 import "./neo-mode";
 
