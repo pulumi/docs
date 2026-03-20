@@ -64,6 +64,7 @@ secrets:
 idp:
   title: Internal Developer Platforms That Scale
   image: images/product/idp-services-home.jpg
+  alt: Pulumi internal developer platform with self-service infrastructure templates
   description: |
     Build self-service platforms that engineers actually use. Create templates, expose approved infrastructure through APIs and portals, and define golden paths. Let engineers ship faster while platform teams maintain control.
 
