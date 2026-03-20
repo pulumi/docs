@@ -5,14 +5,12 @@
 <div class="font-body container mx-auto mb-16 mt-16 px-12 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24 overflow-hidden">
 
     {{/* Hero */}}
-    <section class="template-product-hero" id="hero">
+    <section class="template-hero-centered" id="hero">
         <div class="flex flex-col items-center gap-12">
             <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
-                <h1 class="product-hero-heading mb-6">
-                    <span class="product-hero-title">{{ .Title }}</span>
-                </h1>
+                <h1 class="hero-centered-heading mb-6">{{ .Title }}</h1>
                 {{ with .Params.description }}
-                <p class="product-hero-description mb-10">{{ . | markdownify }}</p>
+                <p class="hero-centered-description mb-10">{{ . | markdownify }}</p>
                 {{ end }}
             </div>
         </div>

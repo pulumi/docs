@@ -330,6 +330,29 @@ $violet-primary: #673EAC;
     }
 }
 
+// Centered hero — generic centered heading + description for non-product pages
+.template-hero-centered {
+    .hero-centered-heading {
+        @apply text-black text-center not-italic font-bold text-heading-s;
+        font-feature-settings: 'salt' on;
+        font-family: Inter, sans-serif;
+        letter-spacing: -0.64px;
+        line-height: 1.25 !important;
+
+        @include screen-sm {
+            @apply text-heading-m;
+        }
+        @include screen-md {
+            @apply text-heading-l;
+        }
+    }
+
+    .hero-centered-description {
+        @include section-description();
+        @apply text-body-xl;
+    }
+}
+
 // Product page widgets
 .template-product-hero {
     .product-hero-heading {
