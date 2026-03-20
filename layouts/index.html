@@ -98,37 +98,7 @@
                 <div
                     class="w-full lg:w-7/12 xl:w-6/12 xxl:w-5/12 card bg-white shadow-xl p-6 block order-1 lg:order-3 mb-8 lg:mb-0">
                     <div>
-                        <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                            <pulumi-choosable type="language" class="highlight" value="typescript">
-                                <img class="mx-auto w-full" src="/images/home/typescript.svg"
-                                    alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="python">
-                                <img class="mx-auto w-full" src="/images/home/python.svg"
-                                    alt="Pulumi code being written in Python showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="go">
-                                <img class="mx-auto w-full" src="/images/home/go.svg"
-                                    alt="Pulumi code being written in GO showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="csharp">
-                                <img class="mx-auto w-full" src="/images/home/c-sharp.svg"
-                                    alt="Pulumi code being written in C# showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="java">
-                                <img class="mx-auto w-full" src="/images/home/java.svg"
-                                    alt="Pulumi code being written in Java showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="yaml">
-                                <img class="mx-auto w-full" src="/images/home/yaml.svg"
-                                    alt="Pulumi code being written in YAML showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-                        </pulumi-chooser>
+                        {{ partial "language-chooser-svgs.html" (dict) }}
                     </div>
                 </div>
             </div>
@@ -146,7 +116,7 @@
         <div class="container mx-auto z-10">
             <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
                 <div class="flex items-center justify-center mb-8 lg:mb-0 w-full lg:w-1/2 order-1">
-                    <img src="{{ .Params.neo.image }}" alt="{{ .Params.neo.alt }}" />
+                    {{ partial "fingerprinted-img.html" (dict "src" .Params.neo.image "alt" .Params.neo.alt) }}
                 </div>
 
                 <div class="w-full lg:w-1/2 z-10 px-8 order-2">
@@ -182,7 +152,7 @@
                 </div>
 
                 <div class="flex items-center justify-center mb-8 lg:mb-0 w-full lg:w-1/2 order-1 lg:order-2">
-                    <img src="{{ .Params.secrets.image }}" alt="{{ .Params.secrets.alt }}" />
+                    {{ partial "fingerprinted-img.html" (dict "src" .Params.secrets.image "alt" .Params.secrets.alt) }}
                 </div>
             </div>
         </div>
@@ -195,7 +165,7 @@
             <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
                 <div class="flex items-center justify-center mb-8 lg:mb-0 px-8 w-full lg:w-7/12 order-1">
                     <div class="p-6">
-                        <img src="{{ .Params.insights.image }}" alt="{{ .Params.insights.alt }}" />
+                        {{ partial "fingerprinted-img.html" (dict "src" .Params.insights.image "alt" .Params.insights.alt) }}
                     </div>
                 </div>
                 <div class="w-full lg:w-5/12 z-10 px-8 order-2">
@@ -226,7 +196,7 @@
                     </div>
                 </div>
                 <div class="flex items-center justify-center mb-8 lg:mb-0 w-full lg:w-1/2 order-1 lg:order-2">
-                    <img class="h-96" src="{{ .Params.idp.image }}" />
+                    {{ partial "fingerprinted-img.html" (dict "src" .Params.idp.image "class" "h-96") }}
                 </div>
             </div>
         </div>
@@ -347,7 +317,7 @@
     <!-- Left side: Icon and text -->
     <div class="neo-icon-text-group">
         <div class="neo-icon-container">
-            <img src="/icons/pdi-neo-purple.svg" alt="Pulumi Neo">
+            {{ partial "fingerprinted-img.html" (dict "src" "icons/pdi-neo-purple.svg" "alt" "Pulumi Neo") }}
         </div>
         <div class="neo-text-container text-violet-600">
             <div class="text-medium font-semibold">Neo mode</div>
@@ -356,8 +326,8 @@
 
     <!-- Right side: Icon (visible on hover) -->
     <div class="neo-hover-icon">
-        <img class="toggle-on" src="/icons/toggle-on.svg" alt="toggle on">
-        <img class="toggle-off" src="/icons/toggle-off.svg" alt="toggle off">
+        {{ partial "fingerprinted-img.html" (dict "src" "icons/toggle-on.svg" "alt" "toggle on" "class" "toggle-on") }}
+        {{ partial "fingerprinted-img.html" (dict "src" "icons/toggle-off.svg" "alt" "toggle off" "class" "toggle-off") }}
     </div>
 </div>
 

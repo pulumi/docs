@@ -7,6 +7,10 @@
   {{ $wordCount = 500 }}
 {{ end }}
 
+{{/* Calculate reading time */}}
+{{ $readTime := div $wordCount 200 }}
+{{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
+
 {{/* Build BlogPosting entity */}}
 {{ $schema := dict
   "@type" "BlogPosting"
@@ -14,8 +18,10 @@
   "headline" .Title
   "url" .Permalink
   "wordCount" $wordCount
+  "timeRequired" (printf "PT%dM" $readTime)
   "inLanguage" "en-US"
   "articleSection" "Engineering Blog"
+  "isPartOf" (dict "@id" "https://www.pulumi.com/#website")
 }}
 
 {{/* Add dates with proper fallback handling */}}
@@ -49,10 +55,9 @@
   {{ $schema = merge $schema (dict "description" .) }}
 {{ end }}
 
-{{/* Add image */}}
+{{/* Add image - use blog-specific fallback, not docs fallback */}}
 {{ $image := "" }}
 {{ if .Params.meta_image }}
-  {{/* Fix URL concatenation to avoid double slashes */}}
   {{ $baseURL := .Permalink }}
   {{ if not (strings.HasSuffix $baseURL "/") }}
     {{ $baseURL = printf "%s/" $baseURL }}
@@ -63,7 +68,7 @@
   {{ end }}
   {{ $image = printf "%s%s" $baseURL $imagePath }}
 {{ else }}
-  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
+  {{ $image = "https://www.pulumi.com/logos/brand/og-default.png" }}
 {{ end }}
 {{ $schema = merge $schema (dict "image" $image) }}
 
@@ -73,42 +78,40 @@
   {{ $schema = merge $schema (dict "keywords" $keywords) }}
 {{ end }}
 
-{{/* Add author */}}
-{{ $authors := slice }}
-{{ with .Params.authors }}
-  {{ range . }}
-    {{ $authorName := . }}
-    {{ $authorEntity := dict
-      "@type" "Person"
-      "@id" (printf "https://www.pulumi.com/authors/%s/#person" (. | urlize))
-      "name" $authorName
-      "url" (printf "https://www.pulumi.com/authors/%s/" (. | urlize))
-      "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
-    }}
-    {{ $authors = $authors | append $authorEntity }}
+{{/* Add author using enhanced author entities from team data */}}
+{{ $authors := partial "schema/utils/author-entities.html" . }}
+{{ if not $authors }}
+  {{/* Fallback: build basic author entities from frontmatter names */}}
+  {{ $authors = slice }}
+  {{ with .Params.authors }}
+    {{ range . }}
+      {{ $authorData := index site.Data.team.team . }}
+      {{ $displayName := . }}
+      {{ if $authorData }}
+        {{ $displayName = $authorData.name }}
+      {{ end }}
+      {{ $authors = $authors | append (dict
+        "@type" "Person"
+        "@id" (printf "https://www.pulumi.com/authors/%s/#person" (. | urlize))
+        "name" $displayName
+        "url" (printf "https://www.pulumi.com/authors/%s/" (. | urlize))
+        "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+      ) }}
+    {{ end }}
   {{ end }}
-{{ else }}
-  {{ $authors = $authors | append (dict
-    "@type" "Person"
-    "name" "Pulumi Team"
-    "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+{{ end }}
+{{ if not $authors }}
+  {{ $authors = slice (dict
+    "@type" "Organization"
+    "@id" "https://www.pulumi.com/#organization"
   ) }}
 {{ end }}
-{{ if $authors }}
-  {{ $schema = merge $schema (dict "author" $authors) }}
-{{ end }}
+{{ $schema = merge $schema (dict "author" $authors) }}
 
 {{/* Add publisher reference */}}
 {{ $schema = merge $schema (dict
   "publisher" (dict "@id" "https://www.pulumi.com/#organization")
 ) }}
-
-{{/* Note: Removed speakable schema - not needed for developer tools */}}
-{{/* Note: Removed generic about field - was incorrectly claiming all blog posts are about Pulumi CLI */}}
-
-{{/* Add article body (truncated for schema) */}}
-{{ $articleBody := $content | truncate 5000 }}
-{{ $schema = merge $schema (dict "articleBody" $articleBody) }}
 
 {{/* Add mainEntityOfPage reference */}}
 {{ $schema = merge $schema (dict

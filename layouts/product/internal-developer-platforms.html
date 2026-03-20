@@ -81,10 +81,14 @@
                 </div>
                 <div class="w-full lg:w-1/2 {{ $order }}">
                     {{ $shadowClass := "" }}
-                    {{ if eq $block.graphic "/images/product/idp-services-home.jpg" }}
+                    {{ if strings.HasSuffix $block.graphic "idp-services-home.jpg" }}
                         {{ $shadowClass = "shadow-2xl" }}
                     {{ end }}
-                    <img class="mx-auto rounded-xl {{ $shadowClass }}" src="{{ $block.graphic }}" />
+                    {{ if hasPrefix $block.graphic "/" }}
+                        <img class="mx-auto rounded-xl {{ $shadowClass }}" src="{{ $block.graphic }}" />
+                    {{ else }}
+                        {{ partial "fingerprinted-img.html" (dict "src" $block.graphic "class" (printf "mx-auto rounded-xl %s" $shadowClass)) }}
+                    {{ end }}
                 </div>
             </div>
         {{ end }}
