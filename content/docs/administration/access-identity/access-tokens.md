@@ -103,7 +103,7 @@ Deleting a token immediately revokes its access; all further operations using it
 Please note that this functionality is available only in the [Enterprise and Business Critical editions](https://www.pulumi.com/pricing/) of Pulumi.
 {{< /notes >}}
 
-Team tokens are machine tokens scoped to the resources and permissions of a specific team. They are useful for CI/CD pipelines that should only be able to access the infrastructure a particular team owns, without needing a personal token from any individual team member.
+Team tokens are machine tokens scoped to the resources and permissions of a specific team. They are useful for automated processes (like CI/CD pipelines) that should only be able to access the infrastructure a particular team owns. This avoids the need to use a personal token from any individual team member.
 
 ### What team tokens can do
 
