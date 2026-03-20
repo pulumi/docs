@@ -20,7 +20,7 @@ function minifyCSS(filePath, outputFilename) {
         // PurgeCSS removes unused CSS by analyzing the files of the built website.
         // https://purgecss.com/
         purgeCSSPlugin({
-            content: [ "public/**/*.html", "public/js/bundle.*.js" ],
+            content: [ "public/**/*.html", "public/js/bundle.*.js", "public/js/algolia.*.js" ],
             // PurgeCSS looks through all the built files but, making an exception here
             // to skip the files in the azure-native-v2 package because it is causing
             // out of memory errors with all the new files added from the package. This
