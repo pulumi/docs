@@ -167,7 +167,7 @@ To export values from a stack, use the following definition in the top-level of 
 {{% choosable language typescript %}}
 
 ```typescript
-export let url = resource.url;
+export const url = resource.url;
 ```
 
 {{% /choosable %}}
@@ -241,8 +241,8 @@ For example, the following statements:
 {{% choosable language typescript %}}
 
 ```typescript
-export let x = "hello";
-export let o = {num: 42};
+export const x = "hello";
+export const o = {num: 42};
 ```
 
 {{% /choosable %}}

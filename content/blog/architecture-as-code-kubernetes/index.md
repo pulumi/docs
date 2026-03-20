@@ -76,7 +76,7 @@ interface AppUrl {
     name: string;
     url: pulumi.Output<string>;
 }
-export let appUrls: AppUrl[] = [];
+export const appUrls: AppUrl[] = [];
 
 const kuardImageTag = "blue";
 

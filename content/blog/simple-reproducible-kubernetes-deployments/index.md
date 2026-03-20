@@ -237,7 +237,7 @@ using a variable `frontendIp`. The code to do this export looks like
 this (at the bottom of index.ts):
 
 ```javascript
-export let frontendIp = frontend.status.apply(
+export const frontendIp = frontend.status.apply(
     status => status.loadBalancer.ingress[0].ip);
 ```
 

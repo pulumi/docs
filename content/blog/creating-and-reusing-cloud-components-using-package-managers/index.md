@@ -121,7 +121,7 @@ const website  = new StaticWebsite ("browserhack", {
     custom404Path:"/404.html",
 });
 
-export let cloudfrontDomain  = website .cdn .domainName ;
+export const cloudfrontDomain  = website .cdn .domainName ;
 ```
 
 As soon as we have our program, we can stand it up with a single

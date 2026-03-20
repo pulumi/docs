@@ -223,7 +223,7 @@ const provider = new k8s.Provider("provider", {kubeconfig: config.kubeconfig});
 
 // Create a new CloudWatch Log group for fluentd-cloudwatch.
 const fluentdCloudWatchLogGroup = new aws.cloudwatch.LogGroup(name);
-export let fluentdCloudWatchLogGroupName = fluentdCloudWatchLogGroup.name;
+export const fluentdCloudWatchLogGroupName = fluentdCloudWatchLogGroup.name;
 
 // Deploy fluentd-cloudwatch using the Helm chart.
 const fluentdCloudwatch = new k8s.helm.v3.Chart(name,

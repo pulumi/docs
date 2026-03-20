@@ -161,7 +161,7 @@ Within an AWS environment, the ALB Ingress Controller provides Kubernetes Ingres
 Building on the previous example, we can expose the frontend by adding the following.
 
 ```ts
-export let frontendIp: pulumi.Output<string>;
+export const frontendIp: pulumi.Output<string>;
 frontendIp = frontend.status.loadBalancer.ingress[0].ip;
 ```
 
