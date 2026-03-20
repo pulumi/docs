@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Ensure node/npx are available (Homebrew, nvm, etc.)
+export PATH="/opt/homebrew/bin:$HOME/.nvm/versions/node/$(ls -1 "$HOME/.nvm/versions/node/" 2>/dev/null | tail -1)/bin:/usr/local/bin:$PATH"
+
 echo "Running pre-commit checks..."
 
 # Run linters only on staged files (very fast)
