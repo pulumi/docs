@@ -1,0 +1,2 @@
+{{ $img := resources.Get (printf "fingerprinted/%s" .src) | fingerprint }}
+<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with .alt }}alt="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} />

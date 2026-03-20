@@ -81,10 +81,15 @@
                 </div>
                 <div class="w-full lg:w-1/2 {{ $order }}">
                     {{ $shadowClass := "" }}
-                    {{ if eq $block.graphic "/images/product/idp-services-home.jpg" }}
+                    {{ if strings.HasSuffix $block.graphic "idp-services-home.jpg" }}
                         {{ $shadowClass = "shadow-2xl" }}
                     {{ end }}
-                    <img class="mx-auto rounded-xl {{ $shadowClass }}" src="{{ $block.graphic }}" />
+                    {{ if hasPrefix $block.graphic "/" }}
+                        <img class="mx-auto rounded-xl {{ $shadowClass }}" src="{{ $block.graphic }}" />
+                    {{ else }}
+                        {{ $img := resources.Get (printf "fingerprinted/%s" $block.graphic) | fingerprint }}
+                        <img class="mx-auto rounded-xl {{ $shadowClass }}" src="{{ $img.RelPermalink }}" />
+                    {{ end }}
                 </div>
             </div>
         {{ end }}

@@ -714,9 +714,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             ...baseCacheBehavior,
-            pathPattern: "/images/home/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
+            pathPattern: "/fingerprinted/*",
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
         },
 
         // Web-component loaders must not be cached, because the names of the files they
