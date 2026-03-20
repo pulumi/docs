@@ -93,6 +93,8 @@ or managed manually. Organization owners and administrators can manage
 access to the organization's projects with security and administrative
 features.
 
+For more information, see [Organizations](/docs/administration/organizations-teams/organizations/).
+
 ### How do I create a stack inside an Organization instead of my User account?
 
 To create a stack in a different Pulumi organization, prefix the stack's
@@ -111,6 +113,40 @@ To transfer a stack from your individual account to an organization, navigate to
 From there, select the transfer destination and tick any stacks you'd like to transfer.
 
 To learn more about this process, see [Transferring Stacks](/docs/deployments/projects-and-stacks#transferring-stacks).
+
+### How can I delete a Pulumi organization?
+
+Organization deletion is a permanent action and can only be performed by an organization admin.
+
+In [Pulumi Cloud](https://app.pulumi.com), open your organization, navigate to **Settings**, and select the **Delete organization** option.
+
+If you don't see this option, confirm you're an organization admin.
+
+For detailed steps, see [Deleting an organization](/docs/administration/organizations-teams/organizations/#deleting-an-organization).
+
+### How do I link an existing Pulumi account to my company's organization?
+
+To join your company's organization, you must sign in with the identity provider that organization is backed by (for example, GitHub, GitLab, SAML/SSO, or email).
+
+If you already have a Pulumi account, navigate to your profile in [Pulumi Cloud](https://app.pulumi.com) and connect that identity provider, then accept the organization invite.
+
+If this fails, delete your account, then accept the organization invite.
+
+{{% notes type="warning" %}}
+Note that deleting your account will remove access to any stacks and environments still under the account. Transfer any stacks you want to keep before proceeding.
+{{% /notes %}}
+
+For more about joining organizations, see [Joining an organization](/docs/administration/organizations-teams/organizations/#joining-an-organization).
+
+## Account
+
+### How can I delete my Pulumi account?
+
+You can delete your personal account from your account settings in [Pulumi Cloud](https://app.pulumi.com).
+
+Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
+
+For more information, see [Deleting your account](/docs/administration/organizations-teams/organizations/#deleting-your-account).
 
 ## Pricing
 
@@ -179,6 +215,12 @@ The following editions are also available as upgrade options:
 
 For more information about the specific differences and capabilities offered for the
 Pulumi Team, Enterprise and Business Critical editions, refer to the [pricing page](/pricing/).
+
+### How can I update my payment information?
+
+Self-serve organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com) under **Payment methods**.
+
+If you need to delegate billing-only access, see [Billing Managers](/docs/administration/organizations-teams/billing-managers/).
 
 ## GitLab Support
 
