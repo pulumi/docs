@@ -423,46 +423,66 @@ const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
 const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
 
-function newSecurityHeadersPolicy(name: string, frameOption: string) {
-    return new aws.cloudfront.ResponseHeadersPolicy(name, {
-        securityHeadersConfig: {
-            frameOptions: {
-                frameOption,
-                override: false,
-            },
-            contentSecurityPolicy: {
-                // Allow embedding from LearnWorlds (LMS). X-Frame-Options is ignored by modern
-                // browsers when frame-ancestors is present in CSP.
-                contentSecurityPolicy: "frame-ancestors 'self' *.learnworlds.com",
-                override: false,
-            },
-            // These remaining options are derived from:
-            // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
-            // "SecurityHeadersPolicy" with ID "67f7725c-6f97-4210-82d7-5512b31e9d03"
-            referrerPolicy: {
-                referrerPolicy: 'strict-origin-when-cross-origin',
-                override: false,
-            },
-            contentTypeOptions: {
-                override: true,
-            },
-            strictTransportSecurity: {
-                accessControlMaxAgeSec: 31536000,
-                override: false,
-            },
-            xssProtection: {
-                protection: true,
-                modeBlock: true,
-                override: false,
-            }
-        }
-    });
-}
+const baseSecurityHeadersConfig = {
+    frameOptions: {
+        frameOption: config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN',
+        override: false,
+    },
+    contentSecurityPolicy: {
+        contentSecurityPolicy: "frame-ancestors 'self'",
+        override: false,
+    },
+    // These remaining options are derived from:
+    // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
+    // "SecurityHeadersPolicy" with ID "67f7725c-6f97-4210-82d7-5512b31e9d03"
+    referrerPolicy: {
+        referrerPolicy: 'strict-origin-when-cross-origin' as const,
+        override: false,
+    },
+    contentTypeOptions: {
+        override: true,
+    },
+    strictTransportSecurity: {
+        accessControlMaxAgeSec: 31536000,
+        override: false,
+    },
+    xssProtection: {
+        protection: true,
+        modeBlock: true,
+        override: false,
+    }
+};
 
 // Most of the site
-const SecurityHeadersPolicy = newSecurityHeadersPolicy('security-headers', config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN');
+const SecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('security-headers', {
+    securityHeadersConfig: baseSecurityHeadersConfig,
+});
+
 // Copilot lives in an iframe
-const CopilotSecurityHeadersPolicy = newSecurityHeadersPolicy('copilot-security-headers', 'SAMEORIGIN');
+const CopilotSecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('copilot-security-headers', {
+    securityHeadersConfig: {
+        ...baseSecurityHeadersConfig,
+        frameOptions: {
+            frameOption: 'SAMEORIGIN',
+            override: false,
+        },
+    },
+});
+
+// Fingerprinted/hashed assets get immutable browser caching (1 year).
+// This is separate from CloudFront edge TTLs (defaultTtl/maxTtl) which only
+// control CDN-level caching. Without this policy, browsers see no Cache-Control
+// header and fall back to heuristic caching with 304 revalidation round-trips.
+const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable-cache-headers', {
+    securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [{
+            header: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+            override: true,
+        }],
+    },
+});
 
 const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
@@ -675,30 +695,35 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: "/css/bundle.*.css",
             defaultTtl: oneYear,
             maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/css/marketing.*.css",
             defaultTtl: oneYear,
             maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
-            pathPattern: "/js/bundle.min.*.js",
+            pathPattern: "/js/bundle.*.js",
             defaultTtl: oneYear,
             maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
-            pathPattern: "/js/search.min.*.js",
+            pathPattern: "/js/search.*.js",
             defaultTtl: oneYear,
             maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/fonts/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
@@ -714,9 +739,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             ...baseCacheBehavior,
-            pathPattern: "/images/home/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
+            pathPattern: "/fingerprinted/*",
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
 
         // Web-component loaders must not be cached, because the names of the files they

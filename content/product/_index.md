@@ -44,7 +44,7 @@ key_features_above:
           sub_title: "Automate Infrastructure with Built-in Governance"
           description:
             The industry's first AI agent built for infrastructure. Neo automates complex tasks end-to-end, debugs deployments instantly, and generates infrastructure code - all while respecting your policies and requiring appropriate approvals.
-          image: "/images/product/pulumi-neo-tasks.png"
+          image: "images/product/pulumi-neo-tasks.png"
           button:
             text: "Meet Pulumi Neo"
             link: "/product/neo/"
@@ -72,7 +72,7 @@ key_features:
           sub_title: "One Interface for All Your Secrets"
           description: |
             Pulumi ESC centralizes secrets from every vault and cloud provider. Connect HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, 1Password, and more. Dynamic credentials via OIDC. Works with or without Pulumi IaC.
-          image: "/images/product/esc-octopus-diagram.png"
+          image: "images/product/esc-octopus-diagram.png"
           button:
             text: "Explore Secrets Management"
             link: "/product/secrets-management/"
@@ -91,7 +91,7 @@ key_features:
           sub_title: "See Everything, Control Everything"
           description: |
             Search across all clouds from a single pane of glass. Enforce policies automatically. Track compliance. Get AI-powered insights. Know exactly what's running where and why.
-          image: "/images/product/insights-resource-search.png"
+          image: "images/product/insights-resource-search.png"
           button:
             text: "Explore Insights & Governance"
             link: "/product/pulumi-insights/"
@@ -110,7 +110,7 @@ key_features:
           sub_title: "Enable Self-Service Infrastructure at Scale"
           description: |
             Give engineers self-service infrastructure through templates, components, and developer portals. Platform teams maintain control through policies and governance. Ship golden paths that engineers actually want to use.
-          image: "/images/product/idp-services-home.jpg"
+          image: "images/product/idp-services-home.jpg"
           button:
             text: "Explore Platform Engineering"
             link: "/product/internal-developer-platforms/"

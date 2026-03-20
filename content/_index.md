@@ -49,27 +49,27 @@ infrastructure_as_code:
 
 neo:
   title: Meet Neo, Your AI Platform Engineer
-  image: /images/product/pulumi-neo-tasks.png
+  image: images/product/pulumi-neo-tasks.png
   alt: Pulumi Neo AI platform engineer automating infrastructure tasks.
   description: |
     The industry's first AI agent built for infrastructure. Neo understands your entire infrastructure context, respects your policies, and executes complex tasks end-to-end. Werner Enterprises reduced provisioning time from 3 days to 4 hours.
 
 secrets:
   title: Centralized Secrets & Configuration
-  image: /images/product/esc-octopus-diagram.png
+  image: images/product/esc-octopus-diagram.png
   alt: Pulumi ESC centralizing secrets from multiple providers
   description: |
     Stop juggling multiple vaults and config files. Pulumi ESC provides one interface for all your secrets—connect HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and more. Generate dynamic credentials with OIDC. Works everywhere, with or without Pulumi IaC.
 
 idp:
   title: Internal Developer Platforms That Scale
-  image: /images/product/idp-services-home.jpg
+  image: images/product/idp-services-home.jpg
   description: |
     Build self-service platforms that engineers actually use. Create templates, expose approved infrastructure through APIs and portals, and define golden paths. Let engineers ship faster while platform teams maintain control.
 
 insights:
   title: See and Control Everything
-  image: /images/product/insights-resource-search.png
+  image: images/product/insights-resource-search.png
   alt: Pulumi Insights multi-cloud visibility and governance
   description: |
     One pane of glass for all your clouds. Search infrastructure with natural language. Enforce policies automatically. Track compliance in real-time. Find vulnerabilities before they become incidents.
