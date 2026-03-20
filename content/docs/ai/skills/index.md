@@ -2,7 +2,7 @@
 title: Agent Skills
 title_tag: Pulumi Agent Skills
 h1: Pulumi Agent Skills
-meta_desc: Learn how to use Pulumi Agent Skills to teach AI coding assistants like Claude Code, Cursor, and GitHub Copilot how to work with Pulumi.
+meta_desc: Learn how to use Pulumi Agent Skills to teach AI coding assistants like Claude Code, Cursor, GitHub Copilot, and JetBrains Junie how to work with Pulumi.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
@@ -24,6 +24,7 @@ Agent Skills are reusable knowledge packages that teach AI coding assistants dom
 - [Cursor](https://cursor.sh)
 - [GitHub Copilot](https://docs.github.com/en/copilot)
 - [Google Gemini](https://geminicli.com/)
+- [JetBrains Junie](https://www.jetbrains.com/junie/)
 
 ## Available Skills
 
@@ -78,7 +79,7 @@ npx skills add pulumi/agent-skills/migration --skill '*'     # 4 migration skill
 npx skills add pulumi/agent-skills/authoring --skill '*'     # 4 authoring skills
 ```
 
-This works with Claude Code, Cursor, Copilot, Codex, and other agent tools.
+This works with Claude Code, Cursor, Copilot, Codex, Junie, and other agent tools.
 
 ## Usage Examples
 
