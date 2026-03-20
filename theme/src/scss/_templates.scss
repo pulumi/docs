@@ -347,6 +347,34 @@ $violet-primary: #673EAC;
 .template-footer {
     .template-footer-title {
         @include section-header-small();
+        @apply text-heading-xs;
+
+        @include screen-sm {
+            @apply text-heading-s;
+        }
+    }
+}
+
+.template-sidebar-nav {
+    @apply rounded-xl p-5 pb-4;
+    border: 0.5px solid #AAA;
+
+    ul {
+        @apply list-none p-0 m-0;
+    }
+
+    li:last-child a {
+        @apply pb-0;
+    }
+
+    li a {
+        font-feature-settings: 'salt' on;
+    }
+}
+
+.whitepaper-content {
+    h2, h3, h4, h5, h6 {
+        @apply font-body;
     }
 }
 

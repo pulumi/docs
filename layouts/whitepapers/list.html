@@ -23,14 +23,14 @@
             <div class="template-card">
                 <div class="flex flex-col h-full w-full">
                     <div class="flex flex-col gap-4 mb-8">
-                        <h3 class="card-title m-0">{{ .Title }}</h3>
+                        <h3 class="card-title m-0"><a href="{{ .RelPermalink }}" class="text-black hover:text-black no-underline">{{ .Title }}</a></h3>
                     </div>
                     {{ with .Description }}
                     <div class="card-description mb-6">
                         {{ . | markdownify }}
                     </div>
                     {{ end }}
-                    <a href="{{ .RelPermalink }}" class="btn-secondary-template-variant block text-center w-full xl:w-auto mt-auto">Read the whitepaper</a>
+                    <a href="{{ .RelPermalink }}" class="text-violet-600 hover:text-violet-700 font-medium mt-auto inline-flex items-center gap-1">Read the whitepaper &rarr;</a>
                 </div>
             </div>
             {{ end }}

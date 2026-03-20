@@ -2,7 +2,7 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="font-body container mx-auto mb-16 mt-16 px-12 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24 overflow-hidden">
+<div class="font-body container mx-auto mb-16 mt-16 px-12 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24">
 
     {{/* Hero */}}
     <section class="template-hero template-hero--centered" id="hero">
@@ -16,37 +16,44 @@
         </div>
     </section>
 
-    {{/* Sticky nav */}}
+    {{/* Mobile sidebar nav (visible below lg) */}}
     {{ with .Params.sections }}
-    <nav class="nav-section-sticky shadow">
-        <div class="container mx-auto">
-            <ul>
-                {{ range . }}
-                <li><a href="#{{ .anchor }}">{{ .label }}</a></li>
-                {{ end }}
-            </ul>
-        </div>
-    </nav>
+    <div class="lg:hidden">
+        {{ partial "template-partials/template-sidebar-nav.html" (dict "sections" .) }}
+    </div>
     {{ end }}
 
-    {{/* Executive summary */}}
-    {{ with .Params.exec_summary }}
-    <section id="executive-summary">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="section-header mb-6">Executive summary</h2>
-            <div class="section-description">
-                {{ . | markdownify }}
-            </div>
-        </div>
-    </section>
-    {{ end }}
+    {{/* Executive summary + content with optional sidebar */}}
+    <div class="flex flex-row gap-12 max-w-6xl mx-auto w-full">
+        {{/* Main content column */}}
+        <div class="flex-1 min-w-0 flex flex-col gap-16 md:gap-20 lg:gap-24">
+            {{/* Executive summary */}}
+            {{ with .Params.exec_summary }}
+            <section id="executive-summary">
+                <div class="max-w-4xl">
+                    <h2 class="section-header mb-6">Executive summary</h2>
+                    <div class="section-description">
+                        {{ . | markdownify }}
+                    </div>
+                </div>
+            </section>
+            {{ end }}
 
-    {{/* Main content */}}
-    <section>
-        <div class="max-w-4xl mx-auto whitepaper-content">
-            {{ .Content }}
+            {{/* Main content */}}
+            <section>
+                <div class="max-w-4xl whitepaper-content">
+                    {{ .Content }}
+                </div>
+            </section>
         </div>
-    </section>
+
+        {{/* Sidebar nav (visible at lg+) */}}
+        {{ with .Params.sections }}
+        <div class="hidden lg:block w-64 flex-shrink-0 self-start sticky top-36">
+                {{ partial "template-partials/template-sidebar-nav.html" (dict "sections" .) }}
+        </div>
+        {{ end }}
+    </div>
 
     {{/* Footer CTA */}}
     {{ partial "template-partials/template-footer-cta.html" (.Params.footer_cta | default dict) }}

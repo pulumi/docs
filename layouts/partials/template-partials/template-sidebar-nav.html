@@ -1,0 +1,25 @@
+{{/*
+    Template Sidebar Nav
+
+    A sticky right-side navigation card for long-form content pages.
+    On tablet+ it sticks to the right column; on mobile it collapses
+    into a horizontal stack of anchor links above the content.
+
+    Parameters:
+    - sections: Array of objects with "label" and "anchor" fields
+*/}}
+
+{{ $sections := .sections }}
+
+{{ with $sections }}
+<nav class="template-sidebar-nav">
+    <div class="font-semibold text-sm text-black mb-2">On this page</div>
+    <ul class="flex flex-col gap-0">
+        {{ range . }}
+        <li>
+            <a href="#{{ .anchor }}" class="block py-0.5 text-sm text-gray-600 hover:text-violet-600 transition-colors">{{ .label }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>
+{{ end }}
