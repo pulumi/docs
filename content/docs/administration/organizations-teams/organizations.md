@@ -44,7 +44,7 @@ Learn more about the edition features on the [Pricing Page](/pricing/).
 
 To create an organization:
 
-1. Select the create organization button at the top of the  navigation.
+1. Select the create organization button at the top of the navigation.
 1. Provide an organization name, and agree to the terms of service and privacy policy.
 1. Select **Start free trial**.
 
@@ -58,6 +58,8 @@ For example, to become a member of a Pulumi organization backed by a GitLab Grou
 you must associate a GitLab identity with your Pulumi account, and also
 be a member of that GitLab group.
 
+For more information, see [How do I link an existing Pulumi account to my company's organization?](/docs/support/pulumi-cloud-faq/#how-do-i-link-an-existing-pulumi-account-to-my-companys-organization)
+
 ## Inviting members to an organization
 
 Pulumi organization administrators can invite new members to an organization.
@@ -65,8 +67,8 @@ Pulumi organization administrators can invite new members to an organization.
 To invite a new member:
 
 1. Navigate to **Settings** > **Members**.
-2. To invite a new member using their email address, select **Invite members**. After the new member is invited, they will receive an email allowing them to accept the invite.
-3. To invite a new member by sharing a link, select **Copy new invite link**. This will copy a link to your clipboard that you can share directly.
+1. To invite a new member using their email address, select **Invite members**. After the new member is invited, they will receive an email allowing them to accept the invite.
+1. To invite a new member by sharing a link, select **Copy new invite link**. This will copy a link to your clipboard that you can share directly.
 
 New member invitation links never expire and may only be used one time.
 
@@ -85,9 +87,41 @@ To switch to a different organization:
 
 | Role | Description |
 |--------|--------|
-| Admin | Administrators have full access to the organization including: inviting members, creating teams and policies, managing stack permissions and [role-based access control, adjusting billing information, and controlling the organization settings. |
+| Admin | Administrators have full access to the organization including: inviting members, creating teams and policies, managing stack permissions and role-based access control, adjusting billing information, and controlling the organization settings. |
 | Member | Members are able to view and edit stacks they have access to and view members and teams. |
 | Billing Manager | Billing Managers are able to adjust billing information and view other Billing Managers. They do not have read or write access to stacks, teams, or policies. |
+
+## Updating billing information
+
+Organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com) under **Payment methods**.
+
+To update billing information:
+
+1. Navigate to **Settings** > **Billing & usage**.
+1. Under **Payment methods**, select **Update**.
+
+If you need to delegate billing-only access to a team member without granting full admin rights, see [Billing Managers](/docs/administration/organizations-teams/billing-managers/).
+
+## Deleting an organization
+
+Organization deletion is a permanent action and can only be performed by an organization admin.
+
+To delete an organization:
+
+1. Navigate to **Settings**.
+1. Select **Delete organization**.
+
+Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization or individual account.
+
+For more information, see [How can I delete a Pulumi organization?](/docs/support/pulumi-cloud-faq/#how-can-i-delete-a-pulumi-organization)
+
+## Deleting your account
+
+You can delete your personal Pulumi account from your account settings in [Pulumi Cloud](https://app.pulumi.com).
+
+Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
+
+For more information, see [How can I delete my Pulumi account?](/docs/support/pulumi-cloud-faq/#how-can-i-delete-my-pulumi-account)
 
 ## Organization identity providers
 
@@ -119,7 +153,7 @@ To change an organization's identity provider:
 
 ### Disconnecting identity providers
 
-In order to disconnect an identity provider you need to select another identity provider. This is also true for SAML SSO. To remove SAML SSO configuration, selected a new identity provider.
+In order to disconnect an identity provider you need to select another identity provider. This is also true for SAML SSO. To remove SAML SSO configuration, select a new identity provider.
 
 Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
 

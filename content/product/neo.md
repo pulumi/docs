@@ -54,7 +54,7 @@ building_blocks:
         - "**End-to-End Execution**: Neo understands dependencies, executes changes, monitors outcomes, and maintains compliance."
         - "**Human-in-the-Loop Controls**: Configurable approval workflows - you decide how much autonomy Neo has."
         - "**Complete Audit Trail**: Every action is previewed, logged, and reversible with full history."
-      graphic: /images/product/pulumi-neo-tasks.png
+      graphic: images/product/pulumi-neo-tasks.png
     - header: Get Instant Cloud Insights
       subheader: "Ask questions about your infrastructure and get actionable answers:"
       body:
