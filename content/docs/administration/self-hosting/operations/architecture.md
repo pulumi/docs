@@ -25,7 +25,7 @@ This page describes the high-level architecture of a self-hosted Pulumi Cloud de
 | API service | Go-based REST API that handles CLI requests, state management, and all backend operations |
 | Console | Web UI served as a static Angular application |
 | Database | MySQL 8.0.x for metadata, stack state references, and user/organization data |
-| Workflow runners | Docker hosts or Kubernetes cluster that runs the workflow runners for Pulumi Deployments |
+| Workflow runners | Docker hosts or Kubernetes cluster that runs the workflow runners for Pulumi Deployments and Insights scanning (Optional) |
 
 ## Supporting infrastructure
 
