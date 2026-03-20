@@ -44,7 +44,7 @@ Learn more about the edition features on the [Pricing Page](/pricing/).
 
 To create an organization:
 
-1. Select the create organization button at the top of the  navigation.
+1. Select the create organization button at the top of the navigation.
 1. Provide an organization name, and agree to the terms of service and privacy policy.
 1. Select **Start free trial**.
 
@@ -67,8 +67,8 @@ Pulumi organization administrators can invite new members to an organization.
 To invite a new member:
 
 1. Navigate to **Settings** > **Members**.
-2. To invite a new member using their email address, select **Invite members**. After the new member is invited, they will receive an email allowing them to accept the invite.
-3. To invite a new member by sharing a link, select **Copy new invite link**. This will copy a link to your clipboard that you can share directly.
+1. To invite a new member using their email address, select **Invite members**. After the new member is invited, they will receive an email allowing them to accept the invite.
+1. To invite a new member by sharing a link, select **Copy new invite link**. This will copy a link to your clipboard that you can share directly.
 
 New member invitation links never expire and may only be used one time.
 
@@ -87,7 +87,7 @@ To switch to a different organization:
 
 | Role | Description |
 |--------|--------|
-| Admin | Administrators have full access to the organization including: inviting members, creating teams and policies, managing stack permissions and [role-based access control, adjusting billing information, and controlling the organization settings. |
+| Admin | Administrators have full access to the organization including: inviting members, creating teams and policies, managing stack permissions and role-based access control, adjusting billing information, and controlling the organization settings. |
 | Member | Members are able to view and edit stacks they have access to and view members and teams. |
 | Billing Manager | Billing Managers are able to adjust billing information and view other Billing Managers. They do not have read or write access to stacks, teams, or policies. |
 
@@ -153,7 +153,7 @@ To change an organization's identity provider:
 
 ### Disconnecting identity providers
 
-In order to disconnect an identity provider you need to select another identity provider. This is also true for SAML SSO. To remove SAML SSO configuration, selected a new identity provider.
+In order to disconnect an identity provider you need to select another identity provider. This is also true for SAML SSO. To remove SAML SSO configuration, select a new identity provider.
 
 Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
 
