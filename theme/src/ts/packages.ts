@@ -1,34 +1,31 @@
 const filterByTextAndTags = (filters, filterText) => {
-    // We custom match these so that if someone searches "amazon" they also get all
-    // the "aws" results and vice versa, same for Google Cloud.
     const AMAZON_STRING: string = "amazon";
     const AWS_STRING: string = "aws";
     const GOOGLE_CLOUD_STRING: string = "gcp";
     const GCP_STRING: string = "google cloud";
     const GOOGLE_STRING: string = "google";
 
-    const packages = $(".all-packages").find(".package");
+    const packages = document.querySelectorAll<HTMLElement>(".all-packages .package");
 
     const noSelectedType = filters.find(f => f.group === "type") === undefined;
     const noSelectedCategory = filters.find(f => f.group === "category") === undefined;
 
-    // Even if we have 0 filters or no filter text, if the other still exists, we
-    // still need to show a filtered list of results.
     if (filters.length > 0 || filterText) {
-        $(packages).addClass("hidden");
+        packages.forEach(pkg => pkg.classList.add("hidden"));
 
-        $(packages).each((i, package) => {
-            const el = $(package).find("[data-category]");
+        packages.forEach(pkg => {
+            const el = pkg.querySelector("[data-category]") as HTMLElement;
+            if (!el) return;
 
-            const packageType = el.attr("data-type");
-            const packageCategory = el.attr("data-category");
+            const packageType = el.getAttribute("data-type");
+            const packageCategory = el.getAttribute("data-category");
             const packageIsNative = packageType === "native-provider";
 
             const packageHasSelectedType =
                 !!filters.find(f => f.group === "type" && f.value === packageType) || (filters.find(f => f.group === "type" && f.value === "provider") && packageIsNative);
             const packageHasSelectedCategory = !!filters.find(f => f.group === "category" && f.value === packageCategory);
 
-            const packageTitle = el.attr("data-title");
+            const packageTitle = el.getAttribute("data-title");
             const downcasedPackageTitle = packageTitle.toLowerCase();
             const downcasedFilterText = filterText?.trim().toLowerCase();
 
@@ -42,158 +39,123 @@ const filterByTextAndTags = (filters, filterText) => {
                 packageIsAMatch = downcasedPackageTitle.includes(downcasedFilterText);
             }
 
-            /**
-                Show the package if it matches any of the selected filters. For example:
-
-                * If type Component and type Provider are selected, show packages that are
-                  tagged as either "component" OR "provider", since those two filters belong
-                  to the same option group.
-
-                * If type Component and use-case Cloud are selected, show packages that
-                  are tagged as both "component" AND "cloud", since those two filters
-                  belong to different option groups.
-
-                * If nothing is selected from a given group, assume the intent is to see
-                  everything in that group (so don't apply any of the filters within it).
-
-                * If there is text to filter on, only show packages that meet the above criteria
-                  AND match the filter text.  If there is no text, show the full matching package list.
-             */
             if ((packageHasSelectedType || noSelectedType) && (packageHasSelectedCategory || noSelectedCategory) && (!filterText || packageIsAMatch)) {
-                $(package).removeClass("hidden");
+                pkg.classList.remove("hidden");
             }
         });
     } else {
-        $(packages).removeClass("hidden");
+        packages.forEach(pkg => pkg.classList.remove("hidden"));
     }
 }
 
-$(".section-registry").on("filterSelect", event => {
+document.querySelector(".section-registry")?.addEventListener("filterSelect", (event: CustomEvent) => {
     const source: any = event.target;
-    const detail: unknown = event.detail;
-    const filters = detail as any[];
+    const filters = event.detail as any[];
 
-
-    // We need to cross reference the search input when filter change, so that
-    // users get the combined results of the two mechanisms.
-    const searchElement = $("pulumi-registry-list-search").get(0) as any;
-    const inputElement = $(searchElement).find('.registry-filter-input');
-    const filterText = inputElement.val() as string;
+    const searchElement = document.querySelector("pulumi-registry-list-search") as any;
+    const inputElement = searchElement?.querySelector('.registry-filter-input') as HTMLInputElement;
+    const filterText = inputElement?.value || "";
 
     filterByTextAndTags(filters, filterText);
 
-    // Update the list of active filters.
-    const activeTags = $("ul.active-tags");
-    activeTags.empty();
+    const activeTags = document.querySelector("ul.active-tags");
+    if (activeTags) {
+        activeTags.innerHTML = "";
 
-    filters.forEach(filter => {
-        const tag = $($("#active-tag-template").html());
-        tag.appendTo(activeTags);
-        tag.attr("data-filter-group", filter.group).attr("data-filter-value", filter.value);
-        tag.find("span").text(filter.label);
-        tag.find("button").on("click", () => source.deselect(filter));
+        filters.forEach(filter => {
+            const template = document.getElementById("active-tag-template") as HTMLTemplateElement;
+            if (!template) return;
+            const wrapper = document.createElement("div");
+            wrapper.innerHTML = template.innerHTML;
+            const tag = wrapper.firstElementChild as HTMLElement;
+            activeTags.appendChild(tag);
+            tag.setAttribute("data-filter-group", filter.group);
+            tag.setAttribute("data-filter-value", filter.value);
+            const span = tag.querySelector("span");
+            if (span) span.textContent = filter.label;
+            const btn = tag.querySelector("button");
+            if (btn) btn.addEventListener("click", () => source.deselect(filter));
+        });
+    }
+
+    const selectedTypes = filters.filter(f => f.group === "type").map(t => t.value).join(",");
+    const selectedCategories = filters.filter(f => f.group === "category").map(t => t.value).join(",");
+
+    document.querySelectorAll(".packages, .active-tags").forEach(el => {
+        el.setAttribute("data-selected-types", selectedTypes);
+        el.setAttribute("data-selected-categories", selectedCategories);
     });
 
-    // Apply selections on the DOM, so cards and tags can use them as well.
-    $(".packages, .active-tags")
-        .attr(
-            "data-selected-types",
-            filters
-                .filter(f => f.group === "type")
-                .map(t => t.value)
-                .join(","),
-        )
-        .attr(
-            "data-selected-categories",
-            filters
-                .filter(f => f.group === "category")
-                .map(t => t.value)
-                .join(","),
-        );
+    const allCount = document.querySelectorAll(".all-packages .package:not(.hidden)").length;
+    document.querySelectorAll(".all-count").forEach(el => el.textContent = String(allCount));
 
-    // Update the count-badge value.
-    const allCount = $(".all-packages .package:not(.hidden)").length;
-    $(".all-count").text(allCount);
-
-    // Close the menu.
-    $("pulumi-filter-select-option-group").each((i, el: any) => el.close());
+    document.querySelectorAll("pulumi-filter-select-option-group").forEach((el: any) => el.close());
 });
 
-$(".section-registry .no-results .reset").on("click", event => {
+document.querySelector(".section-registry .no-results .reset")?.addEventListener("click", event => {
     event.stopPropagation();
 
-    const search = $("pulumi-registry-list-search").get(0) as any;
-    search.reset();
+    const search = document.querySelector("pulumi-registry-list-search") as any;
+    search?.reset();
 
-    const fs = $("pulumi-filter-select").get(0) as any;
-    fs.reset();
+    const fs = document.querySelector("pulumi-filter-select") as any;
+    fs?.reset();
 
     filterByTextAndTags([], "");
 
-    // Update the count-badge value.
-    const allCount = $(".all-packages .package:not(.hidden)").length;
-    $(".all-count").text(allCount);
+    const allCount = document.querySelectorAll(".all-packages .package:not(.hidden)").length;
+    document.querySelectorAll(".all-count").forEach(el => el.textContent = String(allCount));
 });
 
-$(".section-registry").on("packageSearch", event => {
+document.querySelector(".section-registry")?.addEventListener("packageSearch", (event: CustomEvent) => {
     const filterText = event.detail as any;
-   
-    // We need to cross reference the filter tags when search changes, so that
-    // users get the combined results of the two mechanisms.
+
     const filters = [];
-    const activeTags = $("ul.active-tags").find("li");
+    const activeTags = document.querySelectorAll("ul.active-tags li");
 
-    if (activeTags.length > 0){
-        activeTags.each((i, tag) => {
-            const el = $(tag);
-            const tagCategory = el.attr("data-filter-group");
-            const tagValue = el.attr("data-filter-value");
-            const tagLabel = el.attr("data-filter-label");
+    activeTags.forEach(tag => {
+        const tagCategory = tag.getAttribute("data-filter-group");
+        const tagValue = tag.getAttribute("data-filter-value");
+        const tagLabel = tag.getAttribute("data-filter-label");
 
-            filters.push({group: tagCategory, value: tagValue, label: tagLabel})
-        })
-    };
+        filters.push({group: tagCategory, value: tagValue, label: tagLabel});
+    });
 
     filterByTextAndTags(filters, filterText);
 
-    // Update the count-badge value.
-    const allCount = $(".all-packages .package:not(.hidden)").length;
-    $(".all-count").text(allCount);
+    const allCount = document.querySelectorAll(".all-packages .package:not(.hidden)").length;
+    document.querySelectorAll(".all-count").forEach(el => el.textContent = String(allCount));
 });
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const logoNavMenuButton = $(".logo-nav-button");
-    const bgMask = $(".logo-nav-bg-mask");
-    const logoNavMenu = $("#logo-nav-menu");
+    const logoNavMenuButton = document.querySelector(".logo-nav-button") as HTMLElement;
+    const bgMask = document.querySelector(".logo-nav-bg-mask") as HTMLElement;
+    const logoNavMenu = document.getElementById("logo-nav-menu");
+
+    if (!logoNavMenuButton || !logoNavMenu) return;
 
     function toggleMenu() {
-        logoNavMenu.toggleClass("hidden");
-        const navMenuVisible = logoNavMenu.is(":visible");
-        logoNavMenuButton.attr("aria-expanded", `${navMenuVisible}`);
-        $(".logo-nav-button .mobile-menu-toggle-icon").toggleClass("hidden");
-        bgMask.toggleClass("hidden");
+        logoNavMenu.classList.toggle("hidden");
+        const navMenuVisible = !logoNavMenu.classList.contains("hidden");
+        logoNavMenuButton.setAttribute("aria-expanded", `${navMenuVisible}`);
+        document.querySelectorAll(".logo-nav-button .mobile-menu-toggle-icon").forEach(el => el.classList.toggle("hidden"));
+        bgMask?.classList.toggle("hidden");
     }
 
-    logoNavMenuButton.on("click", toggleMenu);
-    // This handles closing the menu when selecting outside for Registry.
-    bgMask.on("click", toggleMenu);
+    logoNavMenuButton.addEventListener("click", toggleMenu);
+    bgMask?.addEventListener("click", toggleMenu);
 
-    // This handles closing the menu when selecting outside for non-Registry.
-    $(document).on("click", function (event) {
-        if ($(event.target).closest(logoNavMenuButton).length === 0 &&
-            $(event.target).closest(logoNavMenu).length === 0 &&
-            logoNavMenu.is(":visible")) {
+    document.addEventListener("click", function (event) {
+        const target = event.target as HTMLElement;
+        if (!target.closest(".logo-nav-button") && !target.closest("#logo-nav-menu") && !logoNavMenu.classList.contains("hidden")) {
             toggleMenu();
         }
     });
 
-    // Close the menu when the page is scrolled past point where the
-    // practitioner nav is replaced with the sticky search nav.
-    $(document).on("scroll", function () {
+    document.addEventListener("scroll", function () {
         const PRACTITIONER_NAV_HEIGHT = 53;
-        const scrollY = window.scrollY;
-        if (scrollY > PRACTITIONER_NAV_HEIGHT && logoNavMenu.is(":visible")) {
+        if (window.scrollY > PRACTITIONER_NAV_HEIGHT && !logoNavMenu.classList.contains("hidden")) {
             toggleMenu();
         }
     });

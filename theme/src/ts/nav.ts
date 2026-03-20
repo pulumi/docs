@@ -1,82 +1,77 @@
 import {LocalStorageService} from "./state";
 
-(function (document, $) {
-    // The main navigation bar. Binds handlers for showing and hiding
-    // the big purple submenu on non-touch devices.
-
+(function (document) {
     var isTouchDevice = "ontouchstart" in document;
 
     if (!isTouchDevice) {
-        $(".nav-header-items li a").mouseenter(function (event) {
-            var item = $(event.target).data("submenu");
-            $(".submenu-item").hide();
-            $(".submenu-item-" + item).show();
+        document.querySelectorAll(".nav-header-items li a").forEach(a => {
+            a.addEventListener("mouseenter", function (event) {
+                var item = (event.target as HTMLElement).dataset.submenu;
+                document.querySelectorAll<HTMLElement>(".submenu-item").forEach(el => el.style.display = "none");
+                document.querySelectorAll<HTMLElement>(".submenu-item-" + item).forEach(el => el.style.display = "");
+            });
         });
 
-        $(".submenu").mouseleave(function (event) {
-            // Only hide the submenu if the mouse moves to an element that
-            // isn't the main menu.
-            if (event.relatedTarget !== $("nav.nav-main").get(0)) {
-                $(".submenu-item").hide();
-            }
+        document.querySelectorAll(".submenu").forEach(submenu => {
+            submenu.addEventListener("mouseleave", function (event: MouseEvent) {
+                if (event.relatedTarget !== document.querySelector("nav.nav-main")) {
+                    document.querySelectorAll<HTMLElement>(".submenu-item").forEach(el => el.style.display = "none");
+                }
+            });
         });
     }
 
-    // Handlers for mobile navigation menus.
     (function () {
         let whyPulumiOpened = false;
         let learnOpened = false;
 
-        $("#why-pulumi-menu-label").click(function() {
-            $("#mobile-dropdown").scroll();
+        document.getElementById("why-pulumi-menu-label")?.addEventListener("click", function() {
+            const dropdown = document.getElementById("mobile-dropdown");
             if (whyPulumiOpened) {
-                $("#mobile-dropdown").animate({
-                    scrollTop: top
-                }, 300);
+                dropdown.scrollTo({ top: 0, behavior: "smooth" });
             } else {
-                $("#mobile-dropdown").animate({
-                    scrollTop: $("#why-pulumi-mobile-menu").position().top - 115
-                }, 300);
+                const menu = document.getElementById("why-pulumi-mobile-menu");
+                if (menu && dropdown) {
+                    dropdown.scrollTo({ top: (menu as HTMLElement).offsetTop - 115, behavior: "smooth" });
+                }
             }
             whyPulumiOpened = !whyPulumiOpened;
         });
-    
-        $("#learn-menu-label").click(function() {
-            $("#mobile-dropdown").scroll();
+
+        document.getElementById("learn-menu-label")?.addEventListener("click", function() {
+            const dropdown = document.getElementById("mobile-dropdown");
             if (learnOpened) {
-                $("#mobile-dropdown").animate({
-                    scrollTop: top
-                }, 300);
+                dropdown.scrollTo({ top: 0, behavior: "smooth" });
             } else {
-                $("#mobile-dropdown").animate({
-                    scrollTop: $("#learn-mobile-menu").position().top - 115
-                }, 300);
+                const menu = document.getElementById("learn-mobile-menu");
+                if (menu && dropdown) {
+                    dropdown.scrollTo({ top: (menu as HTMLElement).offsetTop - 115, behavior: "smooth" });
+                }
             }
             learnOpened = !learnOpened;
         });
     })();
 
-    // track banner state in local storage.
     const bannerState = new LocalStorageService("banner-state");
-    const banner = $("#dismissable-banner");
+    const banner = document.getElementById("dismissable-banner");
     loadBannerState();
 
-    // load saved state of the banner from local storage.
     function loadBannerState() {
-        if (bannerState.getKey("dismissed") !== "true") {
-            $(banner).css({"display": "block"});
-        } else {
-            $(banner).css({"display": "none"});
+        if (banner) {
+            if (bannerState.getKey("dismissed") !== "true") {
+                banner.style.display = "block";
+            } else {
+                banner.style.display = "none";
+            }
         }
     }
 
-    // click handler for banner dismiss button.
-    $("#dismiss-banner").on("click", function (e) {
-        // intercept href event, so we don't navigate to the link.
+    document.getElementById("dismiss-banner")?.addEventListener("click", function (e) {
         e.preventDefault();
-        
-        $(banner).css({"display": "none"});
+        if (banner) {
+            banner.style.display = "none";
+        }
         bannerState.updateKey("dismissed", "true");
-    })
+    });
 
-})(document, jQuery);
+})(document);

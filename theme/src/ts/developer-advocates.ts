@@ -1,20 +1,17 @@
-$(function () {
-    $("#upcoming-talks-select").on("click", function () {
-        $("#upcoming-talks").removeClass("hidden");
-        $("#past-talks").addClass("hidden");
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("upcoming-talks-select")?.addEventListener("click", function () {
+        document.getElementById("upcoming-talks")?.classList.remove("hidden");
+        document.getElementById("past-talks")?.classList.add("hidden");
 
-        $("#upcoming-talks-select").addClass("is-selected");
-
-        $("#past-talks-select").removeClass("is-selected");
+        document.getElementById("upcoming-talks-select")?.classList.add("is-selected");
+        document.getElementById("past-talks-select")?.classList.remove("is-selected");
     });
 
-    $("#past-talks-select").on("click", function () {
-        $("#upcoming-talks").addClass("hidden");
-        $("#past-talks").removeClass("hidden");
+    document.getElementById("past-talks-select")?.addEventListener("click", function () {
+        document.getElementById("upcoming-talks")?.classList.add("hidden");
+        document.getElementById("past-talks")?.classList.remove("hidden");
 
-        $("#upcoming-talks-select").removeClass("is-selected");
-
-        $("#past-talks-select").addClass("is-selected");
+        document.getElementById("upcoming-talks-select")?.classList.remove("is-selected");
+        document.getElementById("past-talks-select")?.classList.add("is-selected");
     });
-
 });

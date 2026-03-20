@@ -4,11 +4,6 @@
   JS components.
 -->
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"></script>
-
 {{ $js := resources.Get "js/bundle.js" | fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>
 

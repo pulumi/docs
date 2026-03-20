@@ -1,30 +1,15 @@
-/*
- * Function for registering tracking to a link. To add tracking to a link you
- * need to have an "id" attritube on the <a> element and the "track-click" attribute.
- *
- *   - ex. <a data-track="get-started-no-yaml" class="btn" href="/docs/quickstart">GET STARTED</a>
- */
-$(document).ready(function () {
-    // Check if the analytics object and track function are available. If they are
-    // not we do not even want to attempt to track anything.
+document.addEventListener("DOMContentLoaded", function () {
     if (window && window["analytics"] && typeof window["analytics"].track === "function") {
-        // Find all the links with a "data-track" attribute.
-        const links = $("a");
-
-        // Get the current date/time so we can track time from page load to user click.
+        const links = document.querySelectorAll("a");
         const now = new Date().getTime();
 
-        function registerTracker(element, i) {
-            const elem = $(element);
-
-            // If jQuery doesn't find the element return.
-            if (!elem) {
+        function registerTracker(element: HTMLAnchorElement, i: number) {
+            if (!element) {
                 return;
             }
 
-            // Get the tracking id.
-            const dataTrack = elem.attr("data-track");
-            const href = (elem.attr("href") || "").replace(/https?:\/\//g, "");
+            const dataTrack = element.getAttribute("data-track");
+            const href = (element.getAttribute("href") || "").replace(/https?:\/\//g, "");
             const trackingDescription = dataTrack ? dataTrack : href.replace(/^#/, "anchor-").replace(/^\//, "").split("/").join("-");
 
             const currentPath = window.location.pathname === "/" ? "home" : window.location.pathname;
@@ -37,42 +22,25 @@ $(document).ready(function () {
                     return segment;
                 });
 
-            const trackingId = path.concat(trackingDescription, i).join("-");
+            const trackingId = path.concat(trackingDescription, String(i)).join("-");
 
-            // Create the tracking object.
             const trackingData = {
-                // The id of the element.
                 element_id: trackingId,
-                // The destination url of the link.
-                destinationPath: elem.attr("href"),
-                // The current path.
+                destinationPath: element.getAttribute("href"),
                 url: window.location.pathname,
-                // The Google Analytic Event Values. These values are pushed into GA
-                // specifically. More info: https://support.google.com/analytics/answer/1033068#Anatomy
                 category: "User Interaction",
                 label: trackingId,
                 value: undefined,
             };
 
-            // Register a listener to the link to send data to Segment
-            // when it has been clicked.
-            elem.on("click", function (e) {
-                // The value is the time in seconds from page load to user action.
+            element.addEventListener("click", function () {
                 trackingData.value = (new Date().getTime() - now) / 1000;
                 window["analytics"].track("link-click", trackingData);
             });
         }
 
-        // Loop over the array of elements to register the click listeners.
         for (var i = 0; i < links.length; i++) {
             registerTracker(links[i], i);
         }
-
-        // Remove the event listeners when we navigate to a new page.
-        $(window).on("unload", function () {
-            for (var i = 0; i < links.length; i++) {
-                $(links[i]).off("click");
-            }
-        });
     }
 });
