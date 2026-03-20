@@ -725,6 +725,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: "/css/homepage.*.css",
             defaultTtl: oneYear,
             maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
