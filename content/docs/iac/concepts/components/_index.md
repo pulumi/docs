@@ -16,6 +16,23 @@ aliases:
 - /docs/iac/concepts/resources/components/
 ---
 
+<script>
+    // The following list maps the headings that previously appeared on this page to their new locations.
+    // We use this list to determine whether we can redirect visitors from the old content to the new.
+    var redirects = {
+        "#authoring-a-new-component-resource": "/docs/iac/guides/building-extending/components/build-a-component/",
+        "#component-arguments-and-type-requirements": "/docs/iac/guides/building-extending/components/build-a-component/#component-arguments-and-type-requirements",
+        "#creating-child-resources": "/docs/iac/guides/building-extending/components/build-a-component/#creating-child-resources",
+        "#registering-component-outputs": "/docs/iac/guides/building-extending/components/build-a-component/#registering-component-outputs",
+        "#inheriting-resource-providers": "/docs/iac/guides/building-extending/components/build-a-component/#inheriting-resource-providers",
+    };
+
+    var redirect = redirects[location.hash];
+    if (redirect) {
+        location.href = redirect;
+    }
+</script>
+
 A component is a logical grouping of Pulumi resources that is exposed as a single Pulumi resource. Components encapsulate related resources and their configuration, letting consumers create complex infrastructure through a simple, well-defined interface—without needing to know the implementation details.
 
 Components are part of [packages](/docs/iac/concepts/packages/), which are the distributable unit. A single package can contain multiple components alongside other resources and utilities.
