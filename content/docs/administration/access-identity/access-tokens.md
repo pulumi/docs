@@ -38,7 +38,7 @@ When using tokens, be mindful of the following security best practices:
 
 ### Personal tokens
 
-Personal access tokens carry the same permissions as the user who created them. This includes all organization memberships, team memberships, and role assignments that apply to the user across every organization they belong to.
+Personal access tokens carry the same permissions as the user who created them. This includes all organization memberships, team memberships, and role assignments that apply to the user across every Pulumi Cloud organization they belong to.
 
 ### Organization tokens
 
