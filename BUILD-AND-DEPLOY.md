@@ -3691,6 +3691,24 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
    - Enable gzip and brotli
    - Reduces transfer size by 70-80%
 
+#### Asset fingerprinting
+
+Static assets (images, icons) used on the homepage and product pages can be fingerprinted for long-term caching. Hugo's `fingerprint` pipe appends a content hash to the filename, allowing a 1-year CloudFront TTL with `Cache-Control: immutable` headers.
+
+**How it works:**
+
+1. Place source assets in `assets/fingerprinted/` (e.g., `assets/fingerprinted/images/product/neo-tasks.png`).
+1. Use the `fingerprinted-img.html` partial in templates:
+   ```html
+   {{ partial "fingerprinted-img.html" (dict "src" "images/product/neo-tasks.png" "alt" "Alt text") }}
+   ```
+1. Hugo hashes the file, converts non-SVG images to WebP, and outputs to `/fingerprinted/<hash>.webp`.
+1. CloudFront serves these with a 1-year TTL and immutable cache headers via the `/fingerprinted/*` cache behavior.
+
+**Partial parameters:** `src` (required), `alt`, `class`, `style`.
+
+**Important:** `meta_image` frontmatter must point to a stable path in `static/`, not a fingerprinted asset, since social media crawlers need a predictable URL.
+
 ### Security Updates
 
 #### Dependabot Configuration

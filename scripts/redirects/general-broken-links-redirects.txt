@@ -62,3 +62,16 @@ docs/intro/console/extensions/ci-cd-integration-assistant/index.html|/docs/deplo
 docs/intro/console/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
 docs/intro/pulumi-service/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
 docs/intro/pulumi-cloud/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
+images/logo/avatar-on-black.svg|/logos/brand/avatar-on-black.svg
+images/logo/avatar-on-white.svg|/logos/brand/avatar-on-white.svg
+images/logo/logo-black-normal.svg|/logos/brand/logo-black-normal.svg
+images/logo/logo-inv.svg|/logos/brand/logo-inv.svg
+images/logo/logo-on-black.svg|/logos/brand/logo-on-black.svg
+images/logo/logo-on-white-box.svg|/logos/brand/logo-on-white-box.svg
+images/logo/logo-on-white.svg|/logos/brand/logo-on-white.svg
+images/logo/logo-symbol-inv.svg|/logos/brand/logo-symbol-inv.svg
+images/logo/logo-symbol.svg|/logos/brand/logo-symbol.svg
+images/logo/logo-white-white.svg|/logos/brand/logo-white-white.svg
+images/logo/logo-white.svg|/logos/brand/logo-white.svg
+images/logo/logo.svg|/logos/brand/logo.svg
+images/logo/pulumi_mark_on_light.svg|/logos/brand/pulumi_mark_on_light.svg
