@@ -5,7 +5,8 @@ REPO="${JAVA_REPO:-$HOME/pulumi-java}"
 SRC=$REPO/sdk/java/pulumi/build/docs/javadoc
 DEST=./static-prebuilt/docs/reference/pkg/java
 
-(cd "$REPO/sdk/java" && gradle javadoc)
+VERSION="${JAVA_SDK_VERSION#v}"
+(cd "$REPO/sdk/java" && gradle javadoc -Pversion="$VERSION")
 rm -rf "$DEST"
 cp -r "$SRC" "$DEST"
 
