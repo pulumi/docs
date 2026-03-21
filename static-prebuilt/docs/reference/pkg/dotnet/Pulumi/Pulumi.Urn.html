@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class Urn
- </title>
+      <title>Struct Urn </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class Urn
- ">
+      <meta name="title" content="Struct Urn ">
     
+    <meta name="description" content="An automatically generated logical URN, used to stably identify resources. These are created automatically by Pulumi to identify resources.  They cannot be manually constructed.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,51 +67,67 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.Urn">
 
 
-  <h1 id="Pulumi_Urn" data-uid="Pulumi.Urn" class="text-break">Class Urn
-</h1>
+  <h1 id="Pulumi_Urn" data-uid="Pulumi.Urn" class="text-break">Struct Urn</h1>
   <div class="markdown level0 summary"><p>An automatically generated logical URN, used to stably identify resources. These are created
 automatically by Pulumi to identify resources.  They cannot be manually constructed.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">Urn</span></div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Pulumi.Urn.html">Urn</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_Urn_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Urn</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly struct Urn : IEquatable&lt;Urn&gt;</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Urn.cs/#L16">View Source</a>
+  </span>
+  <a id="Pulumi_Urn__ctor_" data-uid="Pulumi.Urn.#ctor*"></a>
+  <h4 id="Pulumi_Urn__ctor_System_String_" data-uid="Pulumi.Urn.#ctor(System.String)">Urn(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Urn(string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Urn.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Urn.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Urn_Create_" data-uid="Pulumi.Urn.Create*"></a>
   <h4 id="Pulumi_Urn_Create_Pulumi_Input_System_String__Pulumi_Input_System_String__Pulumi_Resource_Pulumi_Input_System_String__Pulumi_Input_System_String__Pulumi_Input_System_String__" data-uid="Pulumi.Urn.Create(Pulumi.Input{System.String},Pulumi.Input{System.String},Pulumi.Resource,Pulumi.Input{System.String},Pulumi.Input{System.String},Pulumi.Input{System.String})">Create(Input&lt;string&gt;, Input&lt;string&gt;, Resource?, Input&lt;string&gt;?, Input&lt;string&gt;?, Input&lt;string&gt;?)</h4>
@@ -122,7 +137,7 @@ optional project and optional stack.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;string&gt; Create(Input&lt;string&gt; name, Input&lt;string&gt; type, Resource? parent = null, Input&lt;string&gt;? parentUrn = null, Input&lt;string&gt;? project = null, Input&lt;string&gt;? stack = null)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;string&gt; Create(Input&lt;string&gt; name, Input&lt;string&gt; type, Resource? parent = null, Input&lt;string&gt;? parentUrn = null, Input&lt;string&gt;? project = null, Input&lt;string&gt;? stack = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,6 +196,302 @@ optional project and optional stack.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Urn.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_Urn_Equals_" data-uid="Pulumi.Urn.Equals*"></a>
+  <h4 id="Pulumi_Urn_Equals_Pulumi_Urn_" data-uid="Pulumi.Urn.Equals(Pulumi.Urn)">Equals(Urn)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified URN is equal to the current URN.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool Equals(Urn other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Urn.html">Urn</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Urn.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_Urn_Equals_" data-uid="Pulumi.Urn.Equals*"></a>
+  <h4 id="Pulumi_Urn_Equals_System_Object_" data-uid="Pulumi.Urn.Equals(System.Object)">Equals(object?)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current URN.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a></div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Urn.cs/#L51">View Source</a>
+  </span>
+  <a id="Pulumi_Urn_GetHashCode_" data-uid="Pulumi.Urn.GetHashCode*"></a>
+  <h4 id="Pulumi_Urn_GetHashCode" data-uid="Pulumi.Urn.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns a hash code for this URN.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a></div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Urn.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_Urn_ToString_" data-uid="Pulumi.Urn.ToString*"></a>
+  <h4 id="Pulumi_Urn_ToString" data-uid="Pulumi.Urn.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns the string representation of this URN.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a></div>
+  <h3 id="operators">Operators
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Urn.cs/#L58">View Source</a>
+  </span>
+  <a id="Pulumi_Urn_op_Equality_" data-uid="Pulumi.Urn.op_Equality*"></a>
+  <h4 id="Pulumi_Urn_op_Equality_Pulumi_Urn_Pulumi_Urn_" data-uid="Pulumi.Urn.op_Equality(Pulumi.Urn,Pulumi.Urn)">operator ==(Urn, Urn)</h4>
+  <div class="markdown level1 summary"><p>Determines whether two URN values are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static bool operator ==(Urn left, Urn right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Urn.html">Urn</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Urn.html">Urn</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Urn.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_Urn_op_Implicit_" data-uid="Pulumi.Urn.op_Implicit*"></a>
+  <h4 id="Pulumi_Urn_op_Implicit_Pulumi_Urn__System_String" data-uid="Pulumi.Urn.op_Implicit(Pulumi.Urn)~System.String">implicit operator string(Urn)</h4>
+  <div class="markdown level1 summary"><p>Implicitly converts a URN to a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static implicit operator string(Urn value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Urn.html">Urn</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Urn.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_Urn_op_Inequality_" data-uid="Pulumi.Urn.op_Inequality*"></a>
+  <h4 id="Pulumi_Urn_op_Inequality_Pulumi_Urn_Pulumi_Urn_" data-uid="Pulumi.Urn.op_Inequality(Pulumi.Urn,Pulumi.Urn)">operator !=(Urn, Urn)</h4>
+  <div class="markdown level1 summary"><p>Determines whether two URN values are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static bool operator !=(Urn left, Urn right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Urn.html">Urn</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Urn.html">Urn</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
 
 </article>
           </div>
@@ -189,7 +500,7 @@ optional project and optional stack.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Urn.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Urn.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

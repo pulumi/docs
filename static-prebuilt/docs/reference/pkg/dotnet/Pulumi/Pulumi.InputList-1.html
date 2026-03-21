@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class InputList&lt;T&gt;
- </title>
+      <title>Class InputList&lt;T&gt; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class InputList&lt;T&gt;
- ">
+      <meta name="title" content="Class InputList&lt;T&gt; ">
     
+    <meta name="description" content="A list of values that can be passed in as the arguments to a . The individual values are themselves s.  i.e. the individual values can be concrete values or s.   differs from a normal  in that it is itself an .  For example, a  that accepts an  will accept not just a list but an  of a list.  This is important for cases where the  list from some  needs to be passed into another .  Or for cases where creating the list invariably produces an  because its resultant value is dependent on other s.  This benefit of  is also a limitation.  Because it represents a list of values that may eventually be created, there is no way to simply iterate over, or access the elements of the list synchronously.   is designed to be easily used in object and collection initializers.  For example, a resource that accepts a list of inputs can be written in either of these forms:  new SomeResource(&quot;name&quot;, new SomeResourceArgs {     ListProperty = { Value1, Value2, Value3 }, });  or new SomeResource(&quot;name&quot;, new SomeResourceArgs {     ListProperty = new [] { Value1, Value2, Value3 }, });">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.InputList`1">
 
 
-  <h1 id="Pulumi_InputList_1" data-uid="Pulumi.InputList`1" class="text-break">Class InputList&lt;T&gt;
-</h1>
+  <h1 id="Pulumi_InputList_1" data-uid="Pulumi.InputList`1" class="text-break">Class InputList&lt;T&gt;</h1>
   <div class="markdown level0 summary"><p>A list of values that can be passed in as the arguments to a <a class="xref" href="Pulumi.Resource.html">Resource</a>.
 The individual values are themselves <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s.  i.e. the individual values
 can be concrete values or <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
@@ -79,22 +77,22 @@ an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>.  For example, 
 of a list.  This is important for cases where the <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
 list from some <a class="xref" href="Pulumi.Resource.html">Resource</a> needs to be passed into another <a class="xref" href="Pulumi.Resource.html">Resource</a>.  Or for cases where creating the list invariably produces an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> because its resultant value is dependent on other <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.
 <p></p>
-This benefit of <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> is also a limitation.  Because it represents a
+<p>This benefit of <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> is also a limitation.  Because it represents a
 list of values that may eventually be created, there is no way to simply iterate over, or
-access the elements of the list synchronously.
+access the elements of the list synchronously.</p>
 <p></p>
 <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> is designed to be easily used in object and collection
 initializers.  For example, a resource that accepts a list of inputs can be written in
 either of these forms:
 <p></p>
-<pre><code>    new SomeResource(&quot;name&quot;, new SomeResourceArgs {
-        ListProperty = { Value1, Value2, Value3 },
-    });</code></pre>
+<pre><code class="lang-csharp">new SomeResource("name", new SomeResourceArgs {
+    ListProperty = { Value1, Value2, Value3 },
+});</code></pre>
 <p></p>
-or
-<pre><code>    new SomeResource(&quot;name&quot;, new SomeResourceArgs {
-        ListProperty = new [] { Value1, Value2, Value3 },
-    });</code></pre>
+<p>or</p>
+<pre><code class="lang-csharp">new SomeResource("name", new SomeResourceArgs {
+    ListProperty = new [] { Value1, Value2, Value3 },
+});</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -153,7 +151,7 @@ or
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_InputList_1__ctor_" data-uid="Pulumi.InputList`1.#ctor*"></a>
   <h4 id="Pulumi_InputList_1__ctor" data-uid="Pulumi.InputList`1.#ctor">InputList()</h4>
@@ -161,12 +159,41 @@ or
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList()</code></pre>
+    <pre><code class="lang- hljs">public InputList()</code></pre>
   </div>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_InputList_1_Add_" data-uid="Pulumi.InputList`1.Add*"></a>
+  <h4 id="Pulumi_InputList_1_Add_Pulumi_InputList__0__" data-uid="Pulumi.InputList`1.Add(Pulumi.InputList{`0})">Add(InputList&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Note: this is non-standard convenience for use with collection initializers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public void Add(InputList&lt;T&gt; inputs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
+        <td><span class="parametername">inputs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_Add_" data-uid="Pulumi.InputList`1.Add*"></a>
   <h4 id="Pulumi_InputList_1_Add_Pulumi_Input__0____" data-uid="Pulumi.InputList`1.Add(Pulumi.Input{`0}[])">Add(params Input&lt;T&gt;[])</h4>
@@ -174,7 +201,7 @@ or
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Add(params Input&lt;T&gt;[] inputs)</code></pre>
+    <pre><code class="lang- hljs">public void Add(params Input&lt;T&gt;[] inputs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,36 +221,7 @@ or
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L66">View Source</a>
-  </span>
-  <a id="Pulumi_InputList_1_Add_" data-uid="Pulumi.InputList`1.Add*"></a>
-  <h4 id="Pulumi_InputList_1_Add_Pulumi_InputList__0__" data-uid="Pulumi.InputList`1.Add(Pulumi.InputList{`0})">Add(InputList&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Note: this is non-standard convenience for use with collection initializers.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Add(InputList&lt;T&gt; inputs)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
-        <td><span class="parametername">inputs</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_AddRange_" data-uid="Pulumi.InputList`1.AddRange*"></a>
   <h4 id="Pulumi_InputList_1_AddRange_Pulumi_InputList__0__" data-uid="Pulumi.InputList`1.AddRange(Pulumi.InputList{`0})">AddRange(InputList&lt;T&gt;)</h4>
@@ -231,7 +229,7 @@ or
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddRange(InputList&lt;T&gt; inputs)</code></pre>
+    <pre><code class="lang- hljs">public void AddRange(InputList&lt;T&gt; inputs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -251,17 +249,17 @@ or
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_Concat_" data-uid="Pulumi.InputList`1.Concat*"></a>
   <h4 id="Pulumi_InputList_1_Concat_Pulumi_InputList__0__" data-uid="Pulumi.InputList`1.Concat(Pulumi.InputList{`0})">Concat(InputList&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Concatenates the values in this list with the values in <code data-dev-comment-type="paramref" class="paramref">other</code>,
+  <div class="markdown level1 summary"><p>Concatenates the values in this list with the values in <code class="paramref">other</code>,
 returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;T&gt; Concat(InputList&lt;T&gt; other)</code></pre>
+    <pre><code class="lang- hljs">public InputList&lt;T&gt; Concat(InputList&lt;T&gt; other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -296,15 +294,16 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_GetAsyncEnumerator_" data-uid="Pulumi.InputList`1.GetAsyncEnumerator*"></a>
   <h4 id="Pulumi_InputList_1_GetAsyncEnumerator_System_Threading_CancellationToken_" data-uid="Pulumi.InputList`1.GetAsyncEnumerator(System.Threading.CancellationToken)">GetAsyncEnumerator(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates asynchronously through the collection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerator&lt;Input&lt;T&gt;&gt; GetAsyncEnumerator(CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang- hljs">public IAsyncEnumerator&lt;Input&lt;T&gt;&gt; GetAsyncEnumerator(CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -319,7 +318,8 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> that may be used to cancel the asynchronous iteration.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -334,100 +334,15 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerator-1">IAsyncEnumerator</a>&lt;<a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;T&gt;&gt;</td>
-        <td></td>
+        <td><p>An enumerator that can be used to iterate asynchronously through the collection.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="operators">Operators
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L88">View Source</a>
-  </span>
-  <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
-  <h4 id="Pulumi_InputList_1_op_Implicit__0__Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(`0)~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(T)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(T value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L101">View Source</a>
-  </span>
-  <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
-  <h4 id="Pulumi_InputList_1_op_Implicit__0____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(`0[])~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(T[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(T[] values)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>T[]</td>
-        <td><span class="parametername">values</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputList_1_op_Implicit_Pulumi_Input__0___Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(Pulumi.Input{`0})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(Input&lt;T&gt;)</h4>
@@ -435,7 +350,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(Input&lt;T&gt; value)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(Input&lt;T&gt; value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -470,7 +385,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputList_1_op_Implicit_Pulumi_Input__0_____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(Pulumi.Input{`0}[])~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(Input&lt;T&gt;[])</h4>
@@ -478,7 +393,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(Input&lt;T&gt;[] values)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(Input&lt;T&gt;[] values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -513,136 +428,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L140">View Source</a>
-  </span>
-  <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
-  <h4 id="Pulumi_InputList_1_op_Implicit_Pulumi_Output__0_____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0[]})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(Output&lt;T[]&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;T[]&gt; values)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T[]&gt;</td>
-        <td><span class="parametername">values</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L91">View Source</a>
-  </span>
-  <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
-  <h4 id="Pulumi_InputList_1_op_Implicit_Pulumi_Output__0___Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(Output&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;T&gt; value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T&gt;</td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L104">View Source</a>
-  </span>
-  <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
-  <h4 id="Pulumi_InputList_1_op_Implicit_Pulumi_Output__0_____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0}[])~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(Output&lt;T&gt;[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;T&gt;[] values)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T&gt;[]</td>
-        <td><span class="parametername">values</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputList_1_op_Implicit_Pulumi_Output_System_Collections_Generic_IEnumerable__0____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Generic.IEnumerable{`0}})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(Output&lt;IEnumerable&lt;T&gt;&gt;)</h4>
@@ -650,7 +436,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;IEnumerable&lt;T&gt;&gt; values)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;IEnumerable&lt;T&gt;&gt; values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -685,7 +471,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputList_1_op_Implicit_Pulumi_Output_System_Collections_Generic_List__0____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Generic.List{`0}})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(Output&lt;List&lt;T&gt;&gt;)</h4>
@@ -693,7 +479,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;List&lt;T&gt;&gt; values)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;List&lt;T&gt;&gt; values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -728,7 +514,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputList_1_op_Implicit_Pulumi_Output_System_Collections_Immutable_ImmutableArray__0____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(Pulumi.Output{System.Collections.Immutable.ImmutableArray{`0}})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(Output&lt;ImmutableArray&lt;T&gt;&gt;)</h4>
@@ -736,7 +522,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;ImmutableArray&lt;T&gt;&gt; values)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;ImmutableArray&lt;T&gt;&gt; values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -771,15 +557,15 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
-  <h4 id="Pulumi_InputList_1_op_Implicit_System_Collections_Generic_List__0___Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{`0})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(List&lt;T&gt;)</h4>
+  <h4 id="Pulumi_InputList_1_op_Implicit_Pulumi_Output__0_____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0[]})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(Output&lt;T[]&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(List&lt;T&gt; values)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;T[]&gt; values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -792,7 +578,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T[]&gt;</td>
         <td><span class="parametername">values</span></td>
         <td></td>
       </tr>
@@ -814,7 +600,93 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
+  <h4 id="Pulumi_InputList_1_op_Implicit_Pulumi_Output__0___Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(Output&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;T&gt; value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L136">View Source</a>
+  </span>
+  <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
+  <h4 id="Pulumi_InputList_1_op_Implicit_Pulumi_Output__0_____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(Pulumi.Output{`0}[])~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(Output&lt;T&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(Output&lt;T&gt;[] values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T&gt;[]</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputList_1_op_Implicit_System_Collections_Generic_List_Pulumi_Input__0____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{Pulumi.Input{`0}})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(List&lt;Input&lt;T&gt;&gt;)</h4>
@@ -822,7 +694,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(List&lt;Input&lt;T&gt;&gt; values)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(List&lt;Input&lt;T&gt;&gt; values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -857,7 +729,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputList_1_op_Implicit_System_Collections_Generic_List_Pulumi_Output__0____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{Pulumi.Output{`0}})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(List&lt;Output&lt;T&gt;&gt;)</h4>
@@ -865,7 +737,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(List&lt;Output&lt;T&gt;&gt; values)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(List&lt;Output&lt;T&gt;&gt; values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -900,15 +772,15 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
-  <h4 id="Pulumi_InputList_1_op_Implicit_System_Collections_Immutable_ImmutableArray__0___Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{`0})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(ImmutableArray&lt;T&gt;)</h4>
+  <h4 id="Pulumi_InputList_1_op_Implicit_System_Collections_Generic_List__0___Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(System.Collections.Generic.List{`0})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(List&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(ImmutableArray&lt;T&gt; values)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(List&lt;T&gt; values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -921,7 +793,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</td>
         <td><span class="parametername">values</span></td>
         <td></td>
       </tr>
@@ -943,7 +815,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputList_1_op_Implicit_System_Collections_Immutable_ImmutableArray_Pulumi_Input__0____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{Pulumi.Input{`0}})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(ImmutableArray&lt;Input&lt;T&gt;&gt;)</h4>
@@ -951,7 +823,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(ImmutableArray&lt;Input&lt;T&gt;&gt; values)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(ImmutableArray&lt;Input&lt;T&gt;&gt; values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -986,7 +858,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputList_1_op_Implicit_System_Collections_Immutable_ImmutableArray_Pulumi_Output__0____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{Pulumi.Output{`0}})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(ImmutableArray&lt;Output&lt;T&gt;&gt;)</h4>
@@ -994,7 +866,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputList&lt;T&gt;(ImmutableArray&lt;Output&lt;T&gt;&gt; values)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(ImmutableArray&lt;Output&lt;T&gt;&gt; values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1028,6 +900,135 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L159">View Source</a>
+  </span>
+  <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
+  <h4 id="Pulumi_InputList_1_op_Implicit_System_Collections_Immutable_ImmutableArray__0___Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(System.Collections.Immutable.ImmutableArray{`0})~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(ImmutableArray&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(ImmutableArray&lt;T&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray</a>&lt;T&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
+  <h4 id="Pulumi_InputList_1_op_Implicit__0__Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(`0)~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L133">View Source</a>
+  </span>
+  <a id="Pulumi_InputList_1_op_Implicit_" data-uid="Pulumi.InputList`1.op_Implicit*"></a>
+  <h4 id="Pulumi_InputList_1_op_Implicit__0____Pulumi_InputList__0_" data-uid="Pulumi.InputList`1.op_Implicit(`0[])~Pulumi.InputList{`0}">implicit operator InputList&lt;T&gt;(T[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static implicit operator InputList&lt;T&gt;(T[] values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputList-1.html">InputList</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a>
@@ -1037,16 +1038,16 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, U&gt;)</a>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Input___1___">InputExtensions.Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, Input&lt;TResult&gt;?&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Input___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, Input&lt;U&gt;?&gt;)</a>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Output___1___">InputExtensions.Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, Output&lt;TResult&gt;?&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Output___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, Output&lt;U&gt;?&gt;)</a>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_System_Threading_Tasks_Task___1___">InputExtensions.Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, Task&lt;TResult&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_System_Threading_Tasks_Task___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, Task&lt;U&gt;&gt;)</a>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__">InputExtensions.Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
       <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_ToOutput__1_Pulumi_Input___0__">InputExtensions.ToOutput&lt;T&gt;(Input&lt;T&gt;?)</a>
@@ -1059,7 +1060,7 @@ returning the concatenated sequence in a new <a class="xref" href="Pulumi.InputL
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/InputList.cs/#L47" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/InputList.cs/#L49" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

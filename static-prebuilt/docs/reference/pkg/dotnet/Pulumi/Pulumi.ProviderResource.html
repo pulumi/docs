@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class ProviderResource
- </title>
+      <title>Class ProviderResource </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class ProviderResource
- ">
+      <meta name="title" content="Class ProviderResource ">
     
+    <meta name="description" content="is a  that implements CRUD operations for other custom resources. These resources are managed similarly to other resources, including the usual diffing and update semantics.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.ProviderResource">
 
 
-  <h1 id="Pulumi_ProviderResource" data-uid="Pulumi.ProviderResource" class="text-break">Class ProviderResource
-</h1>
+  <h1 id="Pulumi_ProviderResource" data-uid="Pulumi.ProviderResource" class="text-break">Class ProviderResource</h1>
   <div class="markdown level0 summary"><p><a class="xref" href="Pulumi.ProviderResource.html">ProviderResource</a> is a <a class="xref" href="Pulumi.Resource.html">Resource</a> that implements CRUD operations
 for other custom resources. These resources are managed similarly to other resources,
 including the usual diffing and update semantics.</p>
@@ -127,7 +125,7 @@ including the usual diffing and update semantics.</p>
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Resources/ProviderResource.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Resources/ProviderResource.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_ProviderResource__ctor_" data-uid="Pulumi.ProviderResource.#ctor*"></a>
   <h4 id="Pulumi_ProviderResource__ctor_System_String_System_String_Pulumi_ResourceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.ProviderResource.#ctor(System.String,System.String,Pulumi.ResourceArgs,Pulumi.CustomResourceOptions)">ProviderResource(string, string, ResourceArgs, CustomResourceOptions?)</h4>
@@ -136,7 +134,7 @@ including the usual diffing and update semantics.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProviderResource(string package, string name, ResourceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang- hljs">public ProviderResource(string package, string name, ResourceArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,6 +172,60 @@ including the usual diffing and update semantics.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Resources/ProviderResource.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_ProviderResource__ctor_" data-uid="Pulumi.ProviderResource.#ctor*"></a>
+  <h4 id="Pulumi_ProviderResource__ctor_System_String_System_String_Pulumi_ResourceArgs_Pulumi_CustomResourceOptions_Pulumi_RegisterPackageRequest_" data-uid="Pulumi.ProviderResource.#ctor(System.String,System.String,Pulumi.ResourceArgs,Pulumi.CustomResourceOptions,Pulumi.RegisterPackageRequest)">ProviderResource(string, string, ResourceArgs, CustomResourceOptions?, RegisterPackageRequest?)</h4>
+  <div class="markdown level1 summary"><p>Creates and registers a new provider resource for a particular package.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ProviderResource(string package, string name, ResourceArgs args, CustomResourceOptions? options = null, RegisterPackageRequest? registerPackageRequest = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">package</span></td>
+        <td><p>The package associated with this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.ResourceArgs.html">ResourceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The configuration to use for this provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this provider's behavior.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.RegisterPackageRequest.html">RegisterPackageRequest</a></td>
+        <td><span class="parametername">registerPackageRequest</span></td>
+        <td><p>Options for package parameterization.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 
 </article>
           </div>
@@ -182,7 +234,7 @@ including the usual diffing and update semantics.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Resources/ProviderResource.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Resources/ProviderResource.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

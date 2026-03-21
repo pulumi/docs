@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class Deployment
- </title>
+      <title>Class Deployment </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class Deployment
- ">
+      <meta name="title" content="Class Deployment ">
     
+    <meta name="description" content="is the entry-point to a Pulumi application. .NET applications should perform all startup logic they need in their Main method and then end with:   static Task&amp;lt;int&amp;gt; Main(string[] args) {     // program initialization code ... return Deployment.Run(async () =&amp;gt; {     // Code that creates resources. });  }   Importantly: Cloud resources cannot be created outside of the lambda passed to any of the  overloads.  Because cloud Resource construction is inherently asynchronous, the result of this function is a  which should then be returned or awaited.  This will ensure that any problems that are encountered during the running of the program are properly reported.  Failure to do this may lead to the program ending early before all resources are properly registered.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,12 +67,12 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.Deployment">
 
 
-  <h1 id="Pulumi_Deployment" data-uid="Pulumi.Deployment" class="text-break">Class Deployment
-</h1>
+  <h1 id="Pulumi_Deployment" data-uid="Pulumi.Deployment" class="text-break">Class Deployment</h1>
   <div class="markdown level0 summary"><p><a class="xref" href="Pulumi.Deployment.html">Deployment</a> is the entry-point to a Pulumi application. .NET applications
 should perform all startup logic they need in their <code>Main</code> method and then end with:</p>
 <p>
-<code>static Task&lt;int> Main(string[] args)
+<code>
+static Task&lt;int&gt; Main(string[] args)
 {
     // program initialization code ...
 <pre><code>return Deployment.Run(async () =&gt;
@@ -81,14 +80,15 @@ should perform all startup logic they need in their <code>Main</code> method and
     // Code that creates resources.
 });
 </code></pre>
-<p>}</p></code></p>
+<p>}
+</p></code></p>
 
-Importantly: Cloud resources cannot be created outside of the lambda passed to any of the
+<p>Importantly: Cloud resources cannot be created outside of the lambda passed to any of the
 <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Action_">RunAsync(Action)</a> overloads.  Because cloud Resource construction is
 inherently asynchronous, the result of this function is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> which should
 then be returned or awaited.  This will ensure that any problems that are encountered during
 the running of the program are properly reported.  Failure to do this may lead to the
-program ending early before all resources are properly registered.
+program ending early before all resources are properly registered.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -126,7 +126,7 @@ program ending early before all resources are properly registered.
   <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Deployment_Instance_" data-uid="Pulumi.Deployment.Instance*"></a>
   <h4 id="Pulumi_Deployment_Instance" data-uid="Pulumi.Deployment.Instance">Instance</h4>
@@ -136,7 +136,7 @@ passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsyn
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DeploymentInstance Instance { get; }</code></pre>
+    <pre><code class="lang- hljs">public static DeploymentInstance Instance { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,7 +156,160 @@ passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsyn
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment.cs/#L367">View Source</a>
+  </span>
+  <a id="Pulumi_Deployment_AwaitPendingRegistrations_" data-uid="Pulumi.Deployment.AwaitPendingRegistrations*"></a>
+  <h4 id="Pulumi_Deployment_AwaitPendingRegistrations" data-uid="Pulumi.Deployment.AwaitPendingRegistrations">AwaitPendingRegistrations()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task AwaitPendingRegistrations()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment.cs/#L312">View Source</a>
+  </span>
+  <a id="Pulumi_Deployment_MonitorSupportsInvokeTransforms_" data-uid="Pulumi.Deployment.MonitorSupportsInvokeTransforms*"></a>
+  <h4 id="Pulumi_Deployment_MonitorSupportsInvokeTransforms" data-uid="Pulumi.Deployment.MonitorSupportsInvokeTransforms">MonitorSupportsInvokeTransforms()</h4>
+  <div class="markdown level1 summary"><p>Returns whether the resource monitor we are connected to supports the &quot;invokeTransforms&quot; feature across the RPC interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;bool&gt; MonitorSupportsInvokeTransforms()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment.cs/#L321">View Source</a>
+  </span>
+  <a id="Pulumi_Deployment_MonitorSupportsResourceHooks_" data-uid="Pulumi.Deployment.MonitorSupportsResourceHooks*"></a>
+  <h4 id="Pulumi_Deployment_MonitorSupportsResourceHooks" data-uid="Pulumi.Deployment.MonitorSupportsResourceHooks">MonitorSupportsResourceHooks()</h4>
+  <div class="markdown level1 summary"><p>Returns whether the resource monitor we are connected to supports the &quot;resourceHooks&quot; feature across the RPC
+interface. Resource hooks support running arbitrary code at various points in the resource lifecycle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;bool&gt; MonitorSupportsResourceHooks()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment.cs/#L326">View Source</a>
+  </span>
+  <a id="Pulumi_Deployment_RegisterInvokeTransform_" data-uid="Pulumi.Deployment.RegisterInvokeTransform*"></a>
+  <h4 id="Pulumi_Deployment_RegisterInvokeTransform_Pulumi_InvokeTransform_" data-uid="Pulumi.Deployment.RegisterInvokeTransform(Pulumi.InvokeTransform)">RegisterInvokeTransform(InvokeTransform)</h4>
+  <div class="markdown level1 summary"><p>Register an invoke transform to run when invoke calls are made.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public void RegisterInvokeTransform(InvokeTransform transform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InvokeTransform.html">InvokeTransform</a></td>
+        <td><span class="parametername">transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_RequirePulumiVersion.cs/#L24">View Source</a>
+  </span>
+  <a id="Pulumi_Deployment_RequirePulumiVersionAsync_" data-uid="Pulumi.Deployment.RequirePulumiVersionAsync*"></a>
+  <h4 id="Pulumi_Deployment_RequirePulumiVersionAsync_System_String_" data-uid="Pulumi.Deployment.RequirePulumiVersionAsync(System.String)">RequirePulumiVersionAsync(string)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static Task RequirePulumiVersionAsync(string pulumiVersionRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">pulumiVersionRange</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Deployment_RunAsync_" data-uid="Pulumi.Deployment.RunAsync*"></a>
   <h4 id="Pulumi_Deployment_RunAsync_System_Action_" data-uid="Pulumi.Deployment.RunAsync(System.Action)">RunAsync(Action)</h4>
@@ -165,7 +318,7 @@ passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsyn
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; RunAsync(Action action)</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;int&gt; RunAsync(Action action)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,7 +354,7 @@ passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsyn
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Deployment_RunAsync_" data-uid="Pulumi.Deployment.RunAsync*"></a>
   <h4 id="Pulumi_Deployment_RunAsync_System_Func_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Pulumi.Deployment.RunAsync(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object}})">RunAsync(Func&lt;IDictionary&lt;string, object?&gt;&gt;)</h4>
@@ -210,7 +363,7 @@ passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsyn
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; RunAsync(Func&lt;IDictionary&lt;string, object?&gt;&gt; func)</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;int&gt; RunAsync(Func&lt;IDictionary&lt;string, object?&gt;&gt; func)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,7 +400,7 @@ passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsyn
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Deployment_RunAsync_" data-uid="Pulumi.Deployment.RunAsync*"></a>
   <h4 id="Pulumi_Deployment_RunAsync_System_Func_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object____Pulumi_StackOptions_" data-uid="Pulumi.Deployment.RunAsync(System.Func{System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}}},Pulumi.StackOptions)">RunAsync(Func&lt;Task&lt;IDictionary&lt;string, object?&gt;&gt;&gt;, StackOptions?)</h4>
@@ -255,7 +408,8 @@ passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsyn
 entry-point to a Pulumi application. .NET applications should perform all startup logic
 they need in their <code>Main</code> method and then end with:</p>
 <p>
-<code>static Task&lt;int> Main(string[] args)
+<code>
+static Task&lt;int&gt; Main(string[] args)
 {
     // program initialization code ...
 <pre><code>return Deployment.Run(async () =&gt;
@@ -263,23 +417,24 @@ they need in their <code>Main</code> method and then end with:</p>
     // Code that creates resources.
 });
 </code></pre>
-<p>}</p></code></p>
+<p>}
+</p></code></p>
 
-Importantly: Cloud resources cannot be created outside of the lambda passed to any of the
+<p>Importantly: Cloud resources cannot be created outside of the lambda passed to any of the
 <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Action_">RunAsync(Action)</a> overloads.  Because cloud Resource construction is
 inherently asynchronous, the result of this function is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> which should
 then be returned or awaited.  This will ensure that any problems that are encountered during
 the running of the program are properly reported.  Failure to do this may lead to the
-program ending early before all resources are properly registered.
+program ending early before all resources are properly registered.</p>
 <p></p>
-The function passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Func_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object____Pulumi_StackOptions_">RunAsync(Func&lt;Task&lt;IDictionary&lt;string, object?&gt;&gt;&gt;, StackOptions?)</a>
+<p>The function passed to <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Func_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object____Pulumi_StackOptions_">RunAsync(Func&lt;Task&lt;IDictionary&lt;string, object?&gt;&gt;&gt;, StackOptions?)</a>
 can optionally return an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a>.  The keys and values
-in this dictionary will become the outputs for the Pulumi Stack that is created.
+in this dictionary will become the outputs for the Pulumi Stack that is created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; RunAsync(Func&lt;Task&lt;IDictionary&lt;string, object?&gt;&gt;&gt; func, StackOptions? options = null)</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;int&gt; RunAsync(Func&lt;Task&lt;IDictionary&lt;string, object?&gt;&gt;&gt; func, StackOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -321,7 +476,7 @@ in this dictionary will become the outputs for the Pulumi Stack that is created.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Deployment_RunAsync_" data-uid="Pulumi.Deployment.RunAsync*"></a>
   <h4 id="Pulumi_Deployment_RunAsync_System_Func_System_Threading_Tasks_Task__" data-uid="Pulumi.Deployment.RunAsync(System.Func{System.Threading.Tasks.Task})">RunAsync(Func&lt;Task&gt;)</h4>
@@ -330,7 +485,7 @@ in this dictionary will become the outputs for the Pulumi Stack that is created.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; RunAsync(Func&lt;Task&gt; func)</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;int&gt; RunAsync(Func&lt;Task&gt; func)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -366,7 +521,7 @@ in this dictionary will become the outputs for the Pulumi Stack that is created.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Deployment_RunAsync_" data-uid="Pulumi.Deployment.RunAsync*"></a>
   <h4 id="Pulumi_Deployment_RunAsync__1" data-uid="Pulumi.Deployment.RunAsync``1">RunAsync&lt;TStack&gt;()</h4>
@@ -374,11 +529,13 @@ in this dictionary will become the outputs for the Pulumi Stack that is created.
 application. .NET applications should perform all startup logic they
 need in their <code>Main</code> method and then end with:</p>
 <p>
-<code>static Task&lt;int> Main(string[] args) {// program
+<code>
+static Task&lt;int&gt; Main(string[] args) {// program
 initialization code ...
-<pre><code>return Deployment.Run&amp;lt;MyStack&gt;();}&lt;/code&gt;
+<pre><code>return Deployment.Run&lt;MyStack&gt;();}
 </code></pre>
-</code></p>
+</code>
+</p>
 <p>
 Deployment will instantiate a new stack instance based on the type
 passed as TStack type parameter. Importantly, cloud resources cannot
@@ -396,7 +553,7 @@ resources are properly registered.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; RunAsync&lt;TStack&gt;() where TStack : Stack, new()</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;int&gt; RunAsync&lt;TStack&gt;() where TStack : Stack, new()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -429,7 +586,7 @@ resources are properly registered.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Deployment_RunAsync_" data-uid="Pulumi.Deployment.RunAsync*"></a>
   <h4 id="Pulumi_Deployment_RunAsync__1_System_IServiceProvider_" data-uid="Pulumi.Deployment.RunAsync``1(System.IServiceProvider)">RunAsync&lt;TStack&gt;(IServiceProvider)</h4>
@@ -437,11 +594,13 @@ resources are properly registered.
 application. .NET applications should perform all startup logic they
 need in their <code>Main</code> method and then end with:</p>
 <p>
-<code>static Task&lt;int> Main(string[] args) {// program
+<code>
+static Task&lt;int&gt; Main(string[] args) {// program
 initialization code ...
-<pre><code>return Deployment.Run&amp;lt;MyStack&gt;(serviceProvider);}&lt;/code&gt;
+<pre><code>return Deployment.Run&lt;MyStack&gt;(serviceProvider);}
 </code></pre>
-</code></p>
+</code>
+</p>
 <p>
 Deployment will instantiate a new stack instance based on the type
 passed as TStack type parameter using the serviceProvider.
@@ -460,7 +619,7 @@ resources are properly registered.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; RunAsync&lt;TStack&gt;(IServiceProvider serviceProvider) where TStack : Stack</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;int&gt; RunAsync&lt;TStack&gt;(IServiceProvider serviceProvider) where TStack : Stack</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -510,7 +669,7 @@ resources are properly registered.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L278">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L278">View Source</a>
   </span>
   <a id="Pulumi_Deployment_TestAsync_" data-uid="Pulumi.Deployment.TestAsync*"></a>
   <h4 id="Pulumi_Deployment_TestAsync_Pulumi_Testing_IMocks_Pulumi_Testing_TestOptions_System_Action_" data-uid="Pulumi.Deployment.TestAsync(Pulumi.Testing.IMocks,Pulumi.Testing.TestOptions,System.Action)">TestAsync(IMocks, TestOptions, Action)</h4>
@@ -522,7 +681,7 @@ must run serially; parallel execution is not supported.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;ImmutableArray&lt;Resource&gt;&gt; TestAsync(IMocks testMocks, TestOptions testOptions, Action createResources)</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;ImmutableArray&lt;Resource&gt;&gt; TestAsync(IMocks testMocks, TestOptions testOptions, Action createResources)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -571,7 +730,7 @@ must run serially; parallel execution is not supported.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L232">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_Deployment_TestAsync_" data-uid="Pulumi.Deployment.TestAsync*"></a>
   <h4 id="Pulumi_Deployment_TestAsync_Pulumi_Testing_IMocks_Pulumi_Testing_TestOptions_System_Func_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Pulumi.Deployment.TestAsync(Pulumi.Testing.IMocks,Pulumi.Testing.TestOptions,System.Func{System.Collections.Generic.IDictionary{System.String,System.Object}})">TestAsync(IMocks, TestOptions, Func&lt;IDictionary&lt;string, object?&gt;&gt;)</h4>
@@ -583,7 +742,7 @@ must run serially; parallel execution is not supported.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(ImmutableArray&lt;Resource&gt; Resources, IDictionary&lt;string, object?&gt; Outputs)&gt; TestAsync(IMocks testMocks, TestOptions testOptions, Func&lt;IDictionary&lt;string, object?&gt;&gt; createResources)</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;(ImmutableArray&lt;Resource&gt; Resources, IDictionary&lt;string, object?&gt; Outputs)&gt; TestAsync(IMocks testMocks, TestOptions testOptions, Func&lt;IDictionary&lt;string, object?&gt;&gt; createResources)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -632,7 +791,7 @@ must run serially; parallel execution is not supported.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Deployment_TestAsync_" data-uid="Pulumi.Deployment.TestAsync*"></a>
   <h4 id="Pulumi_Deployment_TestAsync_Pulumi_Testing_IMocks_Pulumi_Testing_TestOptions_System_Func_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object____" data-uid="Pulumi.Deployment.TestAsync(Pulumi.Testing.IMocks,Pulumi.Testing.TestOptions,System.Func{System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}}})">TestAsync(IMocks, TestOptions, Func&lt;Task&lt;IDictionary&lt;string, object?&gt;&gt;&gt;)</h4>
@@ -644,7 +803,7 @@ must run serially; parallel execution is not supported.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;(ImmutableArray&lt;Resource&gt; Resources, IDictionary&lt;string, object?&gt; Outputs)&gt; TestAsync(IMocks testMocks, TestOptions testOptions, Func&lt;Task&lt;IDictionary&lt;string, object?&gt;&gt;&gt; createResources)</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;(ImmutableArray&lt;Resource&gt; Resources, IDictionary&lt;string, object?&gt; Outputs)&gt; TestAsync(IMocks testMocks, TestOptions testOptions, Func&lt;Task&lt;IDictionary&lt;string, object?&gt;&gt;&gt; createResources)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -693,7 +852,7 @@ must run serially; parallel execution is not supported.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L255">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Deployment_TestAsync_" data-uid="Pulumi.Deployment.TestAsync*"></a>
   <h4 id="Pulumi_Deployment_TestAsync_Pulumi_Testing_IMocks_Pulumi_Testing_TestOptions_System_Func_System_Threading_Tasks_Task__" data-uid="Pulumi.Deployment.TestAsync(Pulumi.Testing.IMocks,Pulumi.Testing.TestOptions,System.Func{System.Threading.Tasks.Task})">TestAsync(IMocks, TestOptions, Func&lt;Task&gt;)</h4>
@@ -705,7 +864,7 @@ must run serially; parallel execution is not supported.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;ImmutableArray&lt;Resource&gt;&gt; TestAsync(IMocks testMocks, TestOptions testOptions, Func&lt;Task&gt; createResources)</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;ImmutableArray&lt;Resource&gt;&gt; TestAsync(IMocks testMocks, TestOptions testOptions, Func&lt;Task&gt; createResources)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -754,7 +913,7 @@ must run serially; parallel execution is not supported.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Deployment_TestAsync_" data-uid="Pulumi.Deployment.TestAsync*"></a>
   <h4 id="Pulumi_Deployment_TestAsync__1_Pulumi_Testing_IMocks_Pulumi_Testing_TestOptions_" data-uid="Pulumi.Deployment.TestAsync``1(Pulumi.Testing.IMocks,Pulumi.Testing.TestOptions)">TestAsync&lt;TStack&gt;(IMocks, TestOptions?)</h4>
@@ -767,7 +926,7 @@ must run serially; parallel execution is not supported.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;ImmutableArray&lt;Resource&gt;&gt; TestAsync&lt;TStack&gt;(IMocks mocks, TestOptions? options = null) where TStack : Stack, new()</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;ImmutableArray&lt;Resource&gt;&gt; TestAsync&lt;TStack&gt;(IMocks mocks, TestOptions? options = null) where TStack : Stack, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -826,7 +985,7 @@ must run serially; parallel execution is not supported.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Run.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_Run.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Deployment_TestWithServiceProviderAsync_" data-uid="Pulumi.Deployment.TestWithServiceProviderAsync*"></a>
   <h4 id="Pulumi_Deployment_TestWithServiceProviderAsync__1_Pulumi_Testing_IMocks_System_IServiceProvider_Pulumi_Testing_TestOptions_" data-uid="Pulumi.Deployment.TestWithServiceProviderAsync``1(Pulumi.Testing.IMocks,System.IServiceProvider,Pulumi.Testing.TestOptions)">TestWithServiceProviderAsync&lt;TStack&gt;(IMocks, IServiceProvider, TestOptions?)</h4>
@@ -841,7 +1000,7 @@ must run serially; parallel execution is not supported.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;ImmutableArray&lt;Resource&gt;&gt; TestWithServiceProviderAsync&lt;TStack&gt;(IMocks mocks, IServiceProvider serviceProvider, TestOptions? options = null) where TStack : Stack</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;ImmutableArray&lt;Resource&gt;&gt; TestWithServiceProviderAsync&lt;TStack&gt;(IMocks mocks, IServiceProvider serviceProvider, TestOptions? options = null) where TStack : Stack</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -912,7 +1071,7 @@ must run serially; parallel execution is not supported.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Deployment/Deployment_Serialization.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Deployment/Deployment_SignalAndWaitForShutdown.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

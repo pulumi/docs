@@ -1,15 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class InputExtensions
- </title>
+      <title>Class InputExtensions </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class InputExtensions
- ">
+      <meta name="title" content="Class InputExtensions ">
+    
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.InputExtensions">
 
 
-  <h1 id="Pulumi_InputExtensions" data-uid="Pulumi.InputExtensions" class="text-break">Class InputExtensions
-</h1>
+  <h1 id="Pulumi_InputExtensions" data-uid="Pulumi.InputExtensions" class="text-break">Class InputExtensions</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -110,16 +108,16 @@
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Input.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Input.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_InputExtensions_Apply_" data-uid="Pulumi.InputExtensions.Apply*"></a>
-  <h4 id="Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__" data-uid="Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,``1})">Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, U&gt;)</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;?&gt;)</a> for more details.</p>
+  <h4 id="Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Input___1___" data-uid="Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Input{``1}})">Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, Input&lt;TResult&gt;?&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;TResult&gt;(Func&lt;T, Output&lt;TResult&gt;?&gt;)</a> for more details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;U&gt; Apply&lt;T, U&gt;(this Input&lt;T&gt;? input, Func&lt;T, U&gt; func)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;TResult&gt; Apply&lt;T, TResult&gt;(this Input&lt;T&gt;? input, Func&lt;T, Input&lt;TResult&gt;?&gt; func)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,7 +135,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, U&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;TResult&gt;&gt;</td>
         <td><span class="parametername">func</span></td>
         <td></td>
       </tr>
@@ -153,7 +151,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;U&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;TResult&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -172,22 +170,22 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="parametername">U</span></td>
+        <td><span class="parametername">TResult</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Input.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Input.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_InputExtensions_Apply_" data-uid="Pulumi.InputExtensions.Apply*"></a>
-  <h4 id="Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Input___1___" data-uid="Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Input{``1}})">Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, Input&lt;U&gt;?&gt;)</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;?&gt;)</a> for more details.</p>
+  <h4 id="Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Output___1___" data-uid="Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Output{``1}})">Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, Output&lt;TResult&gt;?&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;TResult&gt;(Func&lt;T, Output&lt;TResult&gt;?&gt;)</a> for more details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;U&gt; Apply&lt;T, U&gt;(this Input&lt;T&gt;? input, Func&lt;T, Input&lt;U&gt;?&gt; func)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;TResult&gt; Apply&lt;T, TResult&gt;(this Input&lt;T&gt;? input, Func&lt;T, Output&lt;TResult&gt;?&gt; func)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +203,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;U&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;TResult&gt;&gt;</td>
         <td><span class="parametername">func</span></td>
         <td></td>
       </tr>
@@ -221,7 +219,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;U&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;TResult&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -240,22 +238,22 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="parametername">U</span></td>
+        <td><span class="parametername">TResult</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Input.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Input.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_InputExtensions_Apply_" data-uid="Pulumi.InputExtensions.Apply*"></a>
-  <h4 id="Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Output___1___" data-uid="Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,Pulumi.Output{``1}})">Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, Output&lt;U&gt;?&gt;)</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;?&gt;)</a> for more details.</p>
+  <h4 id="Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_System_Threading_Tasks_Task___1___" data-uid="Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,System.Threading.Tasks.Task{``1}})">Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, Task&lt;TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;TResult&gt;(Func&lt;T, Output&lt;TResult&gt;?&gt;)</a> for more details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;U&gt; Apply&lt;T, U&gt;(this Input&lt;T&gt;? input, Func&lt;T, Output&lt;U&gt;?&gt; func)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;TResult&gt; Apply&lt;T, TResult&gt;(this Input&lt;T&gt;? input, Func&lt;T, Task&lt;TResult&gt;&gt; func)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -273,7 +271,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;U&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TResult&gt;&gt;</td>
         <td><span class="parametername">func</span></td>
         <td></td>
       </tr>
@@ -289,7 +287,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;U&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;TResult&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -308,22 +306,22 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="parametername">U</span></td>
+        <td><span class="parametername">TResult</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Input.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Input.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_InputExtensions_Apply_" data-uid="Pulumi.InputExtensions.Apply*"></a>
-  <h4 id="Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_System_Threading_Tasks_Task___1___" data-uid="Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,System.Threading.Tasks.Task{``1}})">Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, Task&lt;U&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;?&gt;)</a> for more details.</p>
+  <h4 id="Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__" data-uid="Pulumi.InputExtensions.Apply``2(Pulumi.Input{``0},System.Func{``0,``1})">Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;TResult&gt;(Func&lt;T, Output&lt;TResult&gt;?&gt;)</a> for more details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;U&gt; Apply&lt;T, U&gt;(this Input&lt;T&gt;? input, Func&lt;T, Task&lt;U&gt;&gt; func)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;TResult&gt; Apply&lt;T, TResult&gt;(this Input&lt;T&gt;? input, Func&lt;T, TResult&gt; func)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -341,7 +339,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;U&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;</td>
         <td><span class="parametername">func</span></td>
         <td></td>
       </tr>
@@ -357,7 +355,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;U&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;TResult&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -376,13 +374,13 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="parametername">U</span></td>
+        <td><span class="parametername">TResult</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Input.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Input.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_InputExtensions_ToOutput_" data-uid="Pulumi.InputExtensions.ToOutput*"></a>
   <h4 id="Pulumi_InputExtensions_ToOutput__1_Pulumi_Input___0__" data-uid="Pulumi.InputExtensions.ToOutput``1(Pulumi.Input{``0})">ToOutput&lt;T&gt;(Input&lt;T&gt;?)</h4>
@@ -390,7 +388,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;T&gt; ToOutput&lt;T&gt;(this Input&lt;T&gt;? input)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;T&gt; ToOutput&lt;T&gt;(this Input&lt;T&gt;? input)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -447,7 +445,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Input.cs/#L49" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/fix/sdk-docs-hugo-install/sdk/Pulumi/Core/Input.cs/#L49" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
