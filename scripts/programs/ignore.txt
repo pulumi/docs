@@ -12,6 +12,11 @@
 
 
 
+# Java SDK serialization bug: FargateService container/containers inputs
+# not received by AWSX provider. https://github.com/pulumi/pulumi-java/issues/2090
+awsx-load-balanced-fargate-nginx-java
+awsx-vpc-fargate-service-java
+
 # API Gateway authorizer parameter `providerArns` is mistyped.
 # https://github.com/pulumi/pulumi-aws-apigateway/issues/121
 awsx-apigateway-auth-cognito-java
