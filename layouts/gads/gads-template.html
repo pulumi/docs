@@ -315,11 +315,11 @@
         'gcp':'GCP','gke':'GKE'
       };
 
-      var words = formattedKeyword.split(/\s+/).map(function(word, i){
+      var words = formattedKeyword.split(/\s+/).map(function(word){
         var lower = word.toLowerCase();
         if (acronyms[lower]) return acronyms[lower];
-        if (i === 0 && word === lower && word.length) {
-          return word.charAt(0).toUpperCase() + word.slice(1);
+        if (word.length) {
+          return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
         }
         return word;
       });
