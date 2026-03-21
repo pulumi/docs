@@ -2496,7 +2496,6 @@ Critical environment variables used across all environments:
 |----------|---------|--------|
 | `ALGOLIA_APP_ID` | Search app ID | Pulumi ESC |
 | `ALGOLIA_APP_ADMIN_KEY` | Search admin key | Pulumi ESC |
-| `SENTRY_AUTH_TOKEN` | Error monitoring | Pulumi ESC |
 | `SLACK_WEBHOOK_URL` | Notifications | Pulumi ESC |
 | `GITHUB_TOKEN` | GitHub API | GitHub Actions |
 
@@ -2539,7 +2538,6 @@ All secrets and config for:
 - AWS credentials (via OIDC)
 - Pulumi tokens
 - Algolia keys
-- Sentry tokens
 - Slack webhooks
 - GCP credentials
 - Azure credentials
@@ -3755,7 +3753,6 @@ All secrets managed via Pulumi ESC with automatic rotation capabilities.
 - AWS IAM roles (refresh OIDC trust)
 - Algolia keys
 - Slack webhooks
-- Sentry tokens
 
 #### IAM Role Reviews
 
@@ -3874,7 +3871,6 @@ Complete reference of all build and deployment scripts.
 | **PULUMI_STACK_NAME** | Stack name | `www-production` | Workflow |
 | **ALGOLIA_APP_ID** | Search app | `OCCYMHQD` | Pulumi ESC |
 | **ALGOLIA_APP_ADMIN_KEY** | Search admin key | (secret) | Pulumi ESC |
-| **SENTRY_AUTH_TOKEN** | Error monitoring | (secret) | Pulumi ESC |
 | **SLACK_WEBHOOK_URL** | Notifications | (secret) | Pulumi ESC |
 | **GITHUB_TOKEN** | GitHub API | (auto) | GitHub Actions |
 | **NOBUILD** | Skip rebuilds | `1` | User |
