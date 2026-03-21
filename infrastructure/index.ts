@@ -427,6 +427,7 @@ const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
 });
 
 const fiveMinutes = 60 * 5;
+const thirtyMinutes = fiveMinutes * 6;
 const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
@@ -518,8 +519,8 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
     },
 
     minTtl: 0,
-    defaultTtl: fiveMinutes,
-    maxTtl: fiveMinutes,
+    defaultTtl: thirtyMinutes,
+    maxTtl: thirtyMinutes,
     lambdaFunctionAssociations: config.doEdgeRedirects ? [getEdgeRedirectAssociation()] : [],
     responseHeadersPolicyId: SecurityHeadersPolicy.id,
 };
@@ -554,12 +555,9 @@ if (config.registryStack) {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
             pathPattern: "/registry/*",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            defaultTtl: thirtyMinutes,
+            maxTtl: thirtyMinutes,
             originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         },
     )
 }
@@ -585,12 +583,9 @@ if (config.guidesStack) {
             ...baseCacheBehavior,
             targetOriginId: guidesCDN,
             pathPattern: "/guides/*",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            defaultTtl: thirtyMinutes,
+            maxTtl: thirtyMinutes,
             originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         },
     )
 }
@@ -990,6 +985,7 @@ export const socialStateBucketName = socialStateBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
+export const cloudFrontDistributionId = cdn.id;
 export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
 export const readme = fs.readFileSync("./README.md").toString();
