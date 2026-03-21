@@ -79,7 +79,11 @@ npx skills add pulumi/agent-skills/migration --skill '*'     # 4 migration skill
 npx skills add pulumi/agent-skills/authoring --skill '*'     # 4 authoring skills
 ```
 
-This works with Claude Code, Cursor, Copilot, Codex, Junie, and other agent tools.
+This works with Claude Code, Cursor, Copilot, Codex, Junie, and other agent tools. To install for a specific agent, use the `--agent` flag:
+
+```bash
+npx skills add pulumi/agent-skills --skill '*' --agent junie
+```
 
 ## Usage Examples
 
