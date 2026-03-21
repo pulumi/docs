@@ -26,25 +26,10 @@
     {{/* Executive summary + content with optional sidebar */}}
     <div class="flex flex-row gap-12 max-w-6xl mx-auto w-full">
         {{/* Main content column */}}
-        <div class="flex-1 min-w-0 flex flex-col gap-16 md:gap-20 lg:gap-24">
-            {{/* Executive summary */}}
-            {{ with .Params.exec_summary }}
-            <section id="executive-summary">
-                <div class="max-w-4xl">
-                    <h2 class="section-header mb-6 scroll-mt-22 lg:scroll-mt-28">Executive summary</h2>
-                    <div class="section-description">
-                        {{ . | markdownify }}
-                    </div>
-                </div>
-            </section>
-            {{ end }}
-
-            {{/* Main content */}}
-            <section>
-                <div class="max-w-4xl whitepaper-content">
-                    {{ .Content }}
-                </div>
-            </section>
+        <div class="flex-1 min-w-0">
+            <div class="max-w-4xl whitepaper-content">
+                {{ .Content }}
+            </div>
         </div>
 
         {{/* Sidebar nav (visible at lg+) */}}

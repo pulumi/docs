@@ -8,11 +8,6 @@ customer_name: Enterprise Whitepaper
 customer_logo:
 customer_url:
 
-exec_summary: |
-    Enterprises are facing an unprecedented challenge of delivering business innovation and customer value more quickly and at high scale. They must tame complexity across hybrid clouds and increase reliability and security across the organization in order to accelerate release velocity and match the scale of customer demand. Enterprises are faced with managing disparate teams across infrastructure, development, and compliance using countless technologies and tools to deliver and manage infrastructure critical for business innovation. Cloud engineering is the practice of applying software engineering to tame the complexity of delivering and managing modern cloud applications.
-
-    In this whitepaper, we will look at the implications of cloud engineering and present solutions for adopting cloud engineering to fully maximize the benefits of the modern cloud and capitalize on software engineering as a lever for digital transformation.
-
 sections:
     - label: Executive summary
       anchor: executive-summary
@@ -27,6 +22,12 @@ sections:
     - label: Conclusion
       anchor: conclusion
 ---
+
+## Executive summary
+
+Enterprises are facing an unprecedented challenge of delivering business innovation and customer value more quickly and at high scale. They must tame complexity across hybrid clouds and increase reliability and security across the organization in order to accelerate release velocity and match the scale of customer demand. Enterprises are faced with managing disparate teams across infrastructure, development, and compliance using countless technologies and tools to deliver and manage infrastructure critical for business innovation. Cloud engineering is the practice of applying software engineering to tame the complexity of delivering and managing modern cloud applications.
+
+In this whitepaper, we will look at the implications of cloud engineering and present solutions for adopting cloud engineering to fully maximize the benefits of the modern cloud and capitalize on software engineering as a lever for digital transformation.
 
 ## Introduction to cloud engineering
 
