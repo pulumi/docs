@@ -8,7 +8,9 @@
         {{ $img = $img.Process "webp q90" }}
     {{ end }}
     {{/* Generate srcset for responsive images at 400, 600, 800px if image is large enough */}}
+    {{/* Skip srcset for small images (maxWidth < 400) — src already covers 1x, 400px srcset covers 2x */}}
     {{ $srcset := slice }}
+    {{ if ge $maxWidth 400 }}
     {{ $sizes := slice 400 600 800 }}
     {{ $origImg := resources.Get (printf "fingerprinted/%s" .src) }}
     {{ range $sizes }}
@@ -16,6 +18,7 @@
             {{ $resized := $origImg.Process (printf "resize %dx webp q90" .) | fingerprint }}
             {{ $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) }}
         {{ end }}
+    {{ end }}
     {{ end }}
     {{ $img = $img | fingerprint }}
 <img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with $.alt }}alt="{{ . }}"{{ end }} {{ with $.width }}width="{{ . }}"{{ end }} {{ with $.height }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}" />
