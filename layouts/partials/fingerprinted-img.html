@@ -3,9 +3,9 @@
     {{ $maxWidth := .maxWidth | default 800 }}
     {{/* Resize if wider than maxWidth, preserving aspect ratio */}}
     {{ if gt $img.Width $maxWidth }}
-        {{ $img = $img.Process (printf "resize %dx webp q80" $maxWidth) }}
+        {{ $img = $img.Process (printf "resize %dx webp q90" $maxWidth) }}
     {{ else }}
-        {{ $img = $img.Process "webp q80" }}
+        {{ $img = $img.Process "webp q90" }}
     {{ end }}
     {{/* Generate srcset for responsive images at 400, 600, 800px if image is large enough */}}
     {{ $srcset := slice }}
@@ -13,7 +13,7 @@
     {{ $origImg := resources.Get (printf "fingerprinted/%s" .src) }}
     {{ range $sizes }}
         {{ if ge $origImg.Width . }}
-            {{ $resized := $origImg.Process (printf "resize %dx webp q80" .) | fingerprint }}
+            {{ $resized := $origImg.Process (printf "resize %dx webp q90" .) | fingerprint }}
             {{ $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) }}
         {{ end }}
     {{ end }}
