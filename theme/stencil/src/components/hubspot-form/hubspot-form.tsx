@@ -118,6 +118,9 @@ export class HubspotForm {
                 utmMediumInput.value = utmData.medium;
             }
 
+            // Ensure all visible inputs have associated labels for accessibility.
+            this.addMissingLabels();
+
             // Set the internal ad id.
             this.setInternalAdId();
         }
@@ -150,6 +153,46 @@ export class HubspotForm {
             };
             analytics.track("form-submission", submissionData);
         }
+    }
+
+    // Add labels to any visible form inputs that don't already have one.
+    private addMissingLabels() {
+        const inputs = this.el.querySelectorAll("input:not([type='hidden']):not([type='submit']), select, textarea");
+        inputs.forEach((input: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement) => {
+            const id = input.id || input.name;
+            if (!id) {
+                return;
+            }
+
+            // Check if a label already exists for this input.
+            const existingLabel = this.el.querySelector(`label[for="${id}"]`);
+            if (existingLabel) {
+                return;
+            }
+
+            // Derive a human-readable label from the placeholder or input name.
+            const labelText = input.placeholder || input.name?.replace(/_/g, " ") || "Input";
+
+            // If the input has no id, set one so the label's `for` attribute works.
+            if (!input.id) {
+                input.id = `${this.hubspotFormTargetId}_${input.name}`;
+            }
+
+            const label = document.createElement("label");
+            label.setAttribute("for", input.id);
+            label.textContent = labelText;
+            // Visually hide the label but keep it accessible to screen readers.
+            label.style.position = "absolute";
+            label.style.width = "1px";
+            label.style.height = "1px";
+            label.style.padding = "0";
+            label.style.margin = "-1px";
+            label.style.overflow = "hidden";
+            label.style.clip = "rect(0, 0, 0, 0)";
+            label.style.whiteSpace = "nowrap";
+            label.style.border = "0";
+            input.parentElement?.insertBefore(label, input);
+        });
     }
 
     // Get the Internal Ad ID query param and update the corresponding form field.
