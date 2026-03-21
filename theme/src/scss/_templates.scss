@@ -359,16 +359,25 @@ $violet-primary: #673EAC;
     @apply rounded-xl p-5 pb-3;
     border: 0.5px solid #AAA;
 
+    .sidebar-nav-heading {
+        @apply font-semibold text-sm text-black mb-2;
+    }
+
     ul {
-        @apply list-none p-0 m-0;
+        @apply flex flex-col gap-0 list-none p-0 m-0;
     }
 
-    li:last-child a {
-        @apply pb-0;
-    }
-
-    li a {
+    .sidebar-nav-link {
+        @apply block py-0.5 text-sm text-gray-600 transition-colors;
         font-feature-settings: 'salt' on;
+
+        &:hover {
+            @apply text-violet-600;
+        }
+    }
+
+    li:last-child .sidebar-nav-link {
+        @apply pb-0;
     }
 }
 

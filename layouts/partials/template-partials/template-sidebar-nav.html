@@ -13,11 +13,11 @@
 
 {{ with $sections }}
 <nav class="template-sidebar-nav">
-    <div class="font-semibold text-sm text-black mb-2">On this page</div>
-    <ul class="flex flex-col gap-0">
+    <div class="sidebar-nav-heading">On this page</div>
+    <ul>
         {{ range . }}
         <li>
-            <a href="#{{ .anchor }}" class="block py-0.5 text-md text-gray-600 hover:text-violet-600 transition-colors">{{ .label }}</a>
+            <a href="#{{ .anchor }}" class="sidebar-nav-link">{{ .label }}</a>
         </li>
         {{ end }}
     </ul>
