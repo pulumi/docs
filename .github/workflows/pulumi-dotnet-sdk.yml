@@ -64,28 +64,12 @@ jobs:
           repository: pulumi/pulumi-dotnet
           path: pulumi-dotnet
           ref: ${{ github.event.inputs.version || github.event.client_payload.ref }}
-          submodules: recursive
       - name: Install dotnet
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: "8.x"
       - name: Install docfx
         run: dotnet tool install -g docfx
-      - name: Install Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.157.0'
-          extended: true
-      - name: Install node
-        uses: actions/setup-node@v6
-        with:
-          node-version: '24.x'
-          cache: 'yarn'
-          cache-dependency-path: |
-            docs/yarn.lock
-            docs/infrastructure/yarn.lock
-            docs/theme/yarn.lock
-            docs/theme/stencil/yarn.lock
       - run: make ensure
         working-directory: docs
       - name: Generate .NET SDK docs

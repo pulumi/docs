@@ -63,7 +63,6 @@ jobs:
           repository: pulumi/pulumi-java
           path: pulumi-java
           ref: ${{ github.event.inputs.version || github.event.client_payload.ref }}
-          submodules: recursive
       - name: Install Java
         uses: actions/setup-java@v4
         with:
@@ -77,7 +76,7 @@ jobs:
       - name: Install node
         uses: actions/setup-node@v6
         with:
-          node-version: '24.x'
+          node-version: ${{matrix.nodeversion}}
           cache: 'yarn'
           cache-dependency-path: |
             docs/yarn.lock
@@ -103,6 +102,10 @@ jobs:
           git commit -m "Regenerating Java SDK docs for pulumi-java@${{ env.JAVA_SDK_VERSION }}"
           git push origin pulumi-java/${{ github.run_id }}-${{ github.run_number }}
         working-directory: docs
+    strategy:
+      matrix:
+        nodeversion:
+          - "24.x"
   notify:
     if: failure()
     name: Send slack notification
