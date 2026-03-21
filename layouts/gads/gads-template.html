@@ -292,24 +292,39 @@
         </div>
     </section>
 
-    <!-- Google Ads Dynamic Keyword Insertion Script -->
-    <!-- This script will be enhanced/replaced by GTM Custom HTML tag -->
+    <!-- Google Ads Dynamic Keyword Insertion -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // This is a template for GTM implementation
-            console.log('DKI template loaded - ready for GTM integration');
-            
-            // Debug: Log current page elements for GTM testing
-            var descElement = document.getElementById("dynamic-description");
-            if (descElement) {
-                console.log('Description element found:', descElement.textContent);
-                console.log('Default description:', descElement.textContent.trim());
-            }
-            
-            // GTM will replace this with:
-            // Target: document.getElementById("dynamic-description")
-            // Format: "Looking for {Keyword}? Pulumi Cloud is the smartest and easiest way..."
-            // Fallback: Current description text
-        });
+    (function() {
+      var keyword = (function(){
+        try {
+          var params = new URLSearchParams(window.location.search || "");
+          var term = params.get('utm_term');
+          return term ? decodeURIComponent(term.replace(/\+/g, ' ')) : '';
+        } catch(e) { return ''; }
+      })();
+
+      var placeholder = document.getElementById('dki-placeholder');
+      if (!placeholder || !keyword) return;
+
+      var formattedKeyword = keyword.replace(/[-_]/g, ' ').trim();
+
+      var acronyms = {
+        'aws': 'AWS','cdk':'CDK','iac':'IaC','ci':'CI','cd':'CD',
+        'api':'API','sdk':'SDK','cli':'CLI','iam':'IAM','vpc':'VPC',
+        's3':'S3','ec2':'EC2','rds':'RDS','ecs':'ECS','eks':'EKS',
+        'gcp':'GCP','gke':'GKE'
+      };
+
+      var words = formattedKeyword.split(/\s+/).map(function(word, i){
+        var lower = word.toLowerCase();
+        if (acronyms[lower]) return acronyms[lower];
+        if (i === 0 && word === lower && word.length) {
+          return word.charAt(0).toUpperCase() + word.slice(1);
+        }
+        return word;
+      });
+
+      placeholder.innerText = words.join(' ');
+    })();
     </script>
 {{ end }}
