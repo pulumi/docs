@@ -115,7 +115,12 @@ export class Choosable {
         const isActive = this.selection && (this.selection === this.value || values.includes(this.selection));
 
         return (
-            <div class={isActive ? "active" : ""}>
+            <div
+                class={isActive ? "active" : ""}
+                role="tabpanel"
+                id={`${this.type}-panel-${this.value}`}
+                aria-labelledby={`${this.type}-tab-${this.value}`}
+            >
                 <slot></slot>
             </div>
         );

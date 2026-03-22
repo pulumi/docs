@@ -235,19 +235,63 @@ export class Chooser {
         });
     }
 
+    private handleTabKeyDown(event: KeyboardEvent, currentIndex: number) {
+        const count = this.currentOptions.length;
+        let newIndex: number | undefined;
+
+        switch (event.key) {
+            case "ArrowRight":
+                newIndex = (currentIndex + 1) % count;
+                break;
+            case "ArrowLeft":
+                newIndex = (currentIndex - 1 + count) % count;
+                break;
+            case "Home":
+                newIndex = 0;
+                break;
+            case "End":
+                newIndex = count - 1;
+                break;
+            default:
+                return;
+        }
+
+        event.preventDefault();
+        const opt = this.currentOptions[newIndex];
+        this.setChoice(this.type, opt);
+
+        const tabId = `${this.type}-tab-${opt.key}`;
+        const tab = this.el.querySelector(`#${tabId}`) as HTMLElement;
+        if (tab) {
+            tab.focus();
+        }
+    }
+
     render() {
         return (
             <Host selection={this.selection}>
-                <ul>
+                <ul role="tablist">
                     {
                         // Render the current set of options, marking the selected one active.
-                        this.currentOptions.map(opt => (
-                            <li class={this.selection === opt.key ? "active" : ""}>
-                                <a href="#" onClick={event => { event.preventDefault(); this.makeChoice(event, this.type, opt); }}>
-                                    {opt.name} {opt.preview ? <span>PREVIEW</span> : ""}
-                                </a>
-                            </li>
-                        ))
+                        this.currentOptions.map((opt, index) => {
+                            const isSelected = this.selection === opt.key;
+                            return (
+                                <li class={isSelected ? "active" : ""} role="presentation">
+                                    <a
+                                        href="#"
+                                        id={`${this.type}-tab-${opt.key}`}
+                                        role="tab"
+                                        aria-selected={isSelected ? "true" : "false"}
+                                        aria-controls={`${this.type}-panel-${opt.key}`}
+                                        tabindex={isSelected ? 0 : -1}
+                                        onClick={event => { event.preventDefault(); this.makeChoice(event, this.type, opt); }}
+                                        onKeyDown={event => this.handleTabKeyDown(event, index)}
+                                    >
+                                        {opt.name} {opt.preview ? <span>PREVIEW</span> : ""}
+                                    </a>
+                                </li>
+                            );
+                        })
                     }
                 </ul>
                 <slot></slot>
