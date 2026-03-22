@@ -243,7 +243,7 @@ export class Chooser {
                         // Render the current set of options, marking the selected one active.
                         this.currentOptions.map(opt => (
                             <li class={this.selection === opt.key ? "active" : ""}>
-                                <a onClick={event => this.makeChoice(event, this.type, opt)}>
+                                <a href="#" role="tab" onClick={event => { event.preventDefault(); this.makeChoice(event, this.type, opt); }}>
                                     {opt.name} {opt.preview ? <span>PREVIEW</span> : ""}
                                 </a>
                             </li>
