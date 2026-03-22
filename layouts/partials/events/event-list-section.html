@@ -1,0 +1,258 @@
+{{/*
+    Event List Section Partial
+
+    Renders the full event list with tab navigation, filters, and event cards.
+    Uses the template design system for consistent styling.
+
+    Expected context: Page context (the events list page)
+*/}}
+
+{{ $pageContext := . }}
+{{ $nowUnix := now.UnixMilli }}
+
+{{ $webinars := (where $.Site.Pages "Type" "webinars") }}
+{{ $events := (where $.Site.Pages "Type" "events") }}
+
+{{ $upcomingEvents := slice }}
+{{ $onDemandRecordings := slice }}
+{{ $filterTopics := slice }}
+{{ $filterLangs := slice }}
+{{ $filterClouds := slice }}
+
+{{ range $webinars }}
+    {{ if eq .Params.unlisted false }}
+        {{ $eventDateUnix := (add (.Params.main.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
+        {{ $listed := false }}
+        {{ if lt $nowUnix $eventDateUnix }}
+            {{ $listed = true }}
+            {{ $upcomingEvents = $upcomingEvents | append (dict "date" .Params.main.sortable_date "data" .) }}
+        {{ else if (or .Params.main.youtube_url .Params.main.external) }}
+            {{ $listed = true }}
+            {{ $onDemandRecordings = $onDemandRecordings | append (dict "date" .Params.main.sortable_date "data" .) }}
+        {{ end }}
+
+        {{ if and .Params.main.tags $listed }}
+            {{ if .Params.main.tags.topics }}
+                {{ range $topic := .Params.main.tags.topics }}
+                    {{ $filterTopics = $filterTopics | append $topic }}
+                {{ end }}
+            {{ end }}
+            {{ if .Params.main.tags.languages }}
+                {{ range $lang := .Params.main.tags.languages }}
+                    {{ $filterLangs = $filterLangs | append $lang }}
+                {{ end }}
+            {{ end }}
+            {{ if .Params.main.tags.clouds }}
+                {{ range $cloud := .Params.main.tags.clouds }}
+                    {{ $filterClouds = $filterClouds | append $cloud }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        {{ $filterTopics = sort ($filterTopics | uniq) }}
+        {{ $filterLangs = sort ($filterLangs | uniq) }}
+        {{ $filterClouds = sort ($filterClouds | uniq) }}
+    {{ end }}
+{{ end }}
+
+{{ range $events }}
+    {{ if eq .Params.unlisted false }}
+        {{ $eventDateUnix := (add (.Params.main.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
+        {{ if lt $nowUnix $eventDateUnix }}
+            {{ $upcomingEvents = $upcomingEvents | append (dict "date" .Params.main.sortable_date "data" .) }}
+        {{ else if (or .Params.main.youtube_url .Params.main.external) }}
+            {{ $onDemandRecordings = $onDemandRecordings | append (dict "date" .Params.main.sortable_date "data" .) }}
+        {{ end }}
+
+        {{ if .Params.main.tags }}
+            {{ if .Params.main.tags.topics }}
+                {{ range $topic := .Params.main.tags.topics }}
+                    {{ $filterTopics = $filterTopics | append $topic }}
+                {{ end }}
+            {{ end }}
+            {{ if .Params.main.tags.languages }}
+                {{ range $lang := .Params.main.tags.languages }}
+                    {{ $filterLangs = $filterLangs | append $lang }}
+                {{ end }}
+            {{ end }}
+            {{ if .Params.main.tags.clouds }}
+                {{ range $cloud := .Params.main.tags.clouds }}
+                    {{ $filterClouds = $filterClouds | append $cloud }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        {{ $filterTopics = sort ($filterTopics | uniq) }}
+        {{ $filterLangs = sort ($filterLangs | uniq) }}
+        {{ $filterClouds = sort ($filterClouds | uniq) }}
+    {{ end }}
+{{ end }}
+
+<section class="template-event-list" id="events">
+    <span id="upcoming" class="hidden"></span>
+    <span id="on-demand" class="hidden"></span>
+
+    <div class="pulumi-event-list-container event-list-filter flex flex-col-reverse lg:flex-row flex-wrap justify-between border-b border-gray-200 pb-0 mb-8">
+        <div class="w-2/3 sm:w-1/2 md:w-auto">
+            <div class="scroll-container hidden lg:flex items-center">
+                <button id="slideBackwards"><i class="text-gray-400 text-2xl fas fa-angle-left"></i></button>
+            </div>
+            <ul id="event-list-filter-nav" class="flex flex-col md:flex-row px-4 lg:px-0">
+                {{ range $item := .Params.sections }}
+                    <li data-filter-name="{{ $item.anchor }}" class="mb-0">
+                        <a class="whitespace-nowrap" href="#{{ $item.anchor }}">
+                            <span>{{ $item.label }}</span>
+                        </a>
+                    </li>
+                {{ end }}
+            </ul>
+            <div class="scroll-container hidden lg:flex items-center">
+                <button id="slideForward"><i class="text-gray-400 text-2xl fas fa-angle-right"></i></button>
+            </div>
+        </div>
+        <pulumi-filter-select class="flex justify-self-end w-full md:w-1/2">
+            <pulumi-filter-select-option-group name="level" class="items-center">
+                <div class="toggle" slot="toggle">Skill Level</div>
+                <div class="options">
+                    <pulumi-filter-select-option value="beginner" label="Beginner">Beginner</pulumi-filter-select-option>
+                    <pulumi-filter-select-option value="intermediate" label="Intermediate">Intermediate</pulumi-filter-select-option>
+                    <pulumi-filter-select-option value="advanced" label="Advanced">Advanced</pulumi-filter-select-option>
+                </div>
+            </pulumi-filter-select-option-group>
+
+            <pulumi-filter-select-option-group name="cloud" class="mx-1 items-center">
+                <div class="toggle" slot="toggle">Cloud</div>
+                <div class="options">
+                    {{ range $cloud := $filterClouds }}
+                        {{ $id := (lower (replace $cloud " " "-")) }}
+                        <pulumi-filter-select-option value="{{ $id }}" label="{{ $cloud }}">{{ $cloud }}</pulumi-filter-select-option>
+                    {{ end }}
+                </div>
+            </pulumi-filter-select-option-group>
+
+            <pulumi-filter-select-option-group name="topic" class="mx-1 items-center">
+                <div class="toggle" slot="toggle">Topic</div>
+                <div class="options">
+                    {{ range $topic := $filterTopics }}
+                        {{ $id := (lower (replace $topic " " "-")) }}
+                        <pulumi-filter-select-option value="{{ $id }}" label="{{ $topic }}">{{ $topic }}</pulumi-filter-select-option>
+                    {{ end }}
+                </div>
+            </pulumi-filter-select-option-group>
+
+            <pulumi-filter-select-option-group name="language" class="mx-1 items-center">
+                <div class="toggle" slot="toggle">Language</div>
+                <div class="options">
+                    {{ range $lang := $filterLangs }}
+                        {{ $id := (lower (replace $lang " " "-")) }}
+                        <pulumi-filter-select-option value="{{ $id }}" label="{{ $lang }}">{{ $lang }}</pulumi-filter-select-option>
+                    {{ end }}
+                </div>
+            </pulumi-filter-select-option-group>
+        </pulumi-filter-select>
+    </div>
+
+    {{ $upcomingMonthHeader := "" }}
+    {{ $ondemandMonthHeader := "" }}
+    <ul class="event-list flex flex-wrap list-none p-0 mb-8 resource-list gap-4 lg:gap-6">
+        {{ range sort $upcomingEvents "date" "asc" }}
+            {{ $data := .data }}
+            {{ $datetime := "" }}
+            {{ $link := "" }}
+            {{ $external := false }}
+            {{ $filters := slice }}
+            {{ $tags := $data.Params.main.tags }}
+            {{ $displayDate := dateFormat "January 2, 2006" .date }}
+
+            {{ if eq $data.Type "webinars" }}
+                {{ if or $data.Params.external $data.Params.internal_landing_page }}
+                    {{ $link = $data.Params.url_slug }}
+                    {{ $external = true }}
+                {{ else }}
+                    {{ $link = printf "/events/%s" $data.Params.url_slug }}
+                {{ end }}
+
+                {{ if $data.Params.featured }}
+                    {{ $filters = $filters | append "featured" }}
+                {{ end }}
+
+                {{ if $tags }}
+                    {{ $filters = $filters | append (lower $tags.level) }}
+                    {{ range $topic := $tags.topics }}
+                        {{ $filters = $filters | append (lower (replace $topic " " "-")) }}
+                    {{ end }}
+                    {{ range $lang := $tags.languages }}
+                        {{ $filters = $filters | append (lower (replace $lang " " "-")) }}
+                    {{ end }}
+                    {{ range $cloud := $tags.clouds }}
+                        {{ $filters = $filters | append (lower (replace $cloud " " "-")) }}
+                    {{ end }}
+                {{ end }}
+
+                {{ $filters = $filters | append "upcoming" }}
+                {{ if ne $upcomingMonthHeader (.date | time.Format "January 2006") }}
+                    {{ $upcomingMonthHeader = (.date | time.Format "January 2006") }}
+                    {{ $filterMonth := (.date | time.Format "Jan-06") }}
+                    <li class="w-full m-0 py-4 lg:w-full group month-label {{ $filterMonth | lower }}" data-filters="upcoming">
+                        <h3 class="event-list-month-header">
+                            <i class="far fa-calendar mr-3"></i>{{ $upcomingMonthHeader }}
+                        </h3>
+                    </li>
+                {{ end }}
+            {{ end }}
+
+            {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "upcoming" "true" "link" $link "datetime" .date "displayDate" $displayDate "data" $data) }}
+            {{ partial "template-partials/template-event-card.html" $tileOptions }}
+        {{ end }}
+
+        {{ range sort $onDemandRecordings "date" "desc" }}
+            {{ $data := .data }}
+            {{ $datetime := "" }}
+            {{ $displayDate := "" }}
+            {{ $link := "" }}
+            {{ $external := false }}
+            {{ $filters := slice }}
+            {{ $tags := $data.Params.main.tags }}
+            {{ $displayDate = dateFormat "January 2, 2006" .date }}
+
+            {{ if eq $data.Type "webinars" }}
+                {{ if or $data.Params.external $data.Params.internal_landing_page }}
+                    {{ $link = $data.Params.url_slug }}
+                    {{ $external = true }}
+                {{ else }}
+                    {{ $link = printf "/events/%s" $data.Params.url_slug }}
+                {{ end }}
+
+                {{ if $data.Params.featured }}
+                    {{ $filters = $filters | append "featured" }}
+                {{ end }}
+
+                {{ if $tags }}
+                    {{ $filters = $filters | append (lower $tags.level) }}
+                    {{ range $topic := $tags.topics }}
+                        {{ $filters = $filters | append (lower (replace $topic " " "-")) }}
+                    {{ end }}
+                    {{ range $lang := $tags.languages }}
+                        {{ $filters = $filters | append (lower (replace $lang " " "-")) }}
+                    {{ end }}
+                    {{ range $cloud := $tags.clouds }}
+                        {{ $filters = $filters | append (lower (replace $cloud " " "-")) }}
+                    {{ end }}
+                {{ end }}
+
+                {{ $filters = $filters | append "on-demand" }}
+                {{ if ne $ondemandMonthHeader (.date | time.Format "January 2006") }}
+                    {{ $ondemandMonthHeader = (.date | time.Format "January 2006") }}
+                    {{ $filterMonth := (.date | time.Format "Jan-06") }}
+                    <li class="w-full m-0 py-4 lg:w-full group month-label {{ $filterMonth | lower }}" data-filters="on-demand">
+                        <h3 class="event-list-month-header">
+                            <i class="fa fa-video mr-3"></i>{{ $ondemandMonthHeader }}
+                        </h3>
+                    </li>
+                {{ end }}
+            {{ end }}
+
+            {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "upcoming" "false" "link" $link "datetime" .date "displayDate" $displayDate "data" $data) }}
+            {{ partial "template-partials/template-event-card.html" $tileOptions }}
+        {{ end }}
+    </ul>
+    <div class="no-results text-center text-body-l mb-8 hidden" style="color: #5b5b5b;">No events match the selected filters.</div>
+</section>

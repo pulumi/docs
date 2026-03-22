@@ -570,6 +570,107 @@ $violet-primary: #673EAC;
     }
 }
 
+// Event list and card styles
+.template-event-list {
+    .event-list-month-header {
+        @include section-header-extra-small();
+        @apply m-0;
+        color: #404041;
+    }
+}
+
+.template-event-card {
+    border: 0.5px solid #CECECE;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+        border-color: #999;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .event-card-type {
+        @apply font-semibold font-body text-body-s uppercase;
+        font-feature-settings: 'salt' on;
+        color: $violet-primary;
+        letter-spacing: 0.5px;
+        font-size: 0.7rem;
+    }
+
+    .event-card-location {
+        @apply font-body text-body-s;
+        font-feature-settings: 'salt' on;
+        color: #757576;
+        font-size: 0.8rem;
+    }
+
+    .event-card-title {
+        @include section-header-extra-extra-small();
+        @apply m-0 leading-snug;
+        transition: color 0.15s ease;
+    }
+
+    &:hover .event-card-title {
+        color: $violet-primary;
+    }
+
+    .event-card-date {
+        @apply flex flex-col items-center justify-center rounded-lg overflow-hidden flex-shrink-0;
+        width: 56px;
+        height: 56px;
+        border: 0.5px solid #CECECE;
+    }
+
+    .event-card-date-day {
+        @apply text-center font-semibold text-gray-900 font-body;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .event-card-date-month {
+        @apply text-center font-body font-medium;
+        font-size: 0.65rem;
+        letter-spacing: 0.5px;
+        color: #757576;
+    }
+
+    .event-card-description {
+        @include section-body-medium();
+        @apply m-0 text-body-s;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .event-card-tag {
+        @apply inline-block font-body text-gray-700 rounded-md;
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        background-color: #F4F0FA;
+        border: 0.5px solid #E8E0F4;
+    }
+
+    .event-card-cta {
+        @apply font-semibold font-body whitespace-nowrap flex-shrink-0;
+        font-feature-settings: 'salt' on;
+        color: $violet-primary;
+        font-size: 0.875rem;
+
+        i {
+            transition: transform 0.15s ease;
+        }
+    }
+
+    &:hover .event-card-cta i {
+        transform: translateX(3px);
+    }
+}
+
 .template-product-two-column {
     .product-two-column-heading {
         @include section-header();
