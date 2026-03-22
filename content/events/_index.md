@@ -7,10 +7,6 @@ hero:
   title: Events & Workshops
   description: |
     Connect with the Pulumi community through live workshops, technical demos, and on-demand recordings. Learn how teams ship infrastructure faster with real programming languages.
-  cta_primary_text: Browse upcoming events
-  cta_primary_link: "#upcoming"
-  cta_secondary_text: Watch on-demand
-  cta_secondary_link: "#on-demand"
 
 footer_cta:
   title: The infrastructure-as-code platform for any cloud.
