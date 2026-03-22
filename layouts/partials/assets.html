@@ -4,11 +4,12 @@
   JS components.
 -->
 
-<script src="/js/bundle.js" defer></script>
+{{ $jsManifest := $.Site.Data.js_manifest }}
+<script src="/js/{{ index $jsManifest "bundle" }}" defer></script>
 
 {{ $searchSections := slice "docs" "registry" "blog" "tutorials" "learn" }}
 {{ if in $searchSections .Section }}
-    <script src="/js/algolia.js" defer></script>
+    <script src="/js/{{ index $jsManifest "algolia" }}" defer></script>
 {{ end }}
 
 {{/* Inline template for CSS links: uses fingerprinted bundle in dev, post-processed bundle in prod */}}

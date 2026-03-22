@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const WebpackShellPluginNext = require("webpack-shell-plugin-next");
@@ -13,7 +15,7 @@ module.exports = function (env, { mode }) {
             algolia: "./src/ts/algolia-entry.ts",
         },
         output: {
-            filename: "[name].js",
+            filename: "[name].[contenthash:8].js",
             chunkFilename: "chunk-[contenthash:8].js",
             path: `${process.cwd()}/../static/js`,
             publicPath: "/js/",
@@ -79,6 +81,20 @@ module.exports = function (env, { mode }) {
                     scripts: ["yarn --cwd stencil run build"],
                 },
             }),
+            {
+                apply(compiler) {
+                    compiler.hooks.done.tap("JsManifestPlugin", (stats) => {
+                        const manifest = {};
+                        for (const [name, { assets }] of Object.entries(stats.toJson().entrypoints)) {
+                            const jsFile = assets.find((a) => a.name.endsWith(".js"));
+                            if (jsFile) manifest[name] = jsFile.name;
+                        }
+                        const outDir = path.resolve(compiler.outputPath, "../../data");
+                        fs.mkdirSync(outDir, { recursive: true });
+                        fs.writeFileSync(path.join(outDir, "js_manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
+                    });
+                },
+            },
         ],
         optimization: {
             minimize: true,

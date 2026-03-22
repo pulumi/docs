@@ -617,19 +617,29 @@ Location: `theme/webpack.config.js`
 
 ```javascript
 {
-  bundle: './src/ts/main.ts',      // Main site JavaScript
-  marketing: './src/ts/marketing.ts' // Marketing pages
+  bundle: './src/ts/main.ts',        // Main site JavaScript
+  marketing: './src/ts/marketing.ts', // Marketing pages
+  homepage: './src/ts/homepage.ts',   // Homepage-specific JS
+  algolia: './src/ts/algolia-entry.ts' // Search (Algolia)
 }
 ```
 
 **Output:**
 
+Entry bundles use content hashing for cache busting: `[name].[contenthash:8].js`.
+Async chunks use a similar pattern: `chunk-[contenthash:8].js`.
+
 ```
-assets/js/bundle.js
-assets/js/marketing.js
+static/js/bundle.<hash>.js
+static/js/marketing.<hash>.js
+static/js/homepage.<hash>.js
+static/js/algolia.<hash>.js
+static/js/chunk-<hash>.js
 assets/css/bundle.css
 assets/css/marketing.css
 ```
+
+A manifest is written to `data/js_manifest.json` mapping entry names to hashed filenames so Hugo can emit the correct `<script>` tags.
 
 **Loaders:**
 
@@ -640,7 +650,8 @@ assets/css/marketing.css
 **Plugins:**
 
 - `MiniCssExtractPlugin`: Extract CSS to separate files
-- `webpack.ProvidePlugin`: Make jQuery available globally
+- `WebpackShellPluginNext`: Runs Stencil build before webpack
+- Custom `JsManifestPlugin`: Writes `data/js_manifest.json` after each build
 
 #### CSS Processing
 

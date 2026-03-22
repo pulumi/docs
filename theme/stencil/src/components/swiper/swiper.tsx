@@ -47,6 +47,7 @@ export class Swiper {
     private slideCount = 0;
     private cloneCount = 0;
     private autoplayTimer: ReturnType<typeof setInterval>;
+    private resizeObserver: ResizeObserver;
     private isTransitioning = false;
     private dragStartX = 0;
     private currentTranslate = 0;
@@ -83,6 +84,12 @@ export class Swiper {
         this.container.style.touchAction = "pan-y";
         this.container.addEventListener("pointerdown", this.onPointerDown);
 
+        this.resizeObserver = new ResizeObserver(() => {
+            this.applySlideWidths();
+            this.jumpTo(this.currentIndex);
+        });
+        this.resizeObserver.observe(this.container);
+
         if (this.autoplay) {
             this.startAutoplay();
             if (this.enableMouseEvents) {
@@ -94,6 +101,11 @@ export class Swiper {
 
     disconnectedCallback() {
         this.clearAutoplay();
+        this.resizeObserver?.disconnect();
+        this.wrapper?.removeEventListener("transitionend", this.onTransitionEnd);
+        this.container?.removeEventListener("pointerdown", this.onPointerDown);
+        this.container?.removeEventListener("mouseenter", this.onMouseEnter);
+        this.container?.removeEventListener("mouseleave", this.onMouseLeave);
         document.removeEventListener("pointermove", this.onPointerMove);
         document.removeEventListener("pointerup", this.onPointerUp);
     }
