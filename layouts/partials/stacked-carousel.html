@@ -26,7 +26,7 @@ optional flags:
         <div class="carousel-left-primary">
             {{ range .logos }}
                 {{ if .link }}
-                    <a href="{{ .link }}">
+                    <a href="{{ .link }}" aria-label="{{ .name | humanize | title }} case study">
                         <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
                     </a>
                 {{ else }}
@@ -34,10 +34,10 @@ optional flags:
                 {{ end }}
             {{ end }}
         </div>
-        <div class="carousel-left-primary carousel-left-secondary">
+        <div class="carousel-left-primary carousel-left-secondary" aria-hidden="true">
             {{ range .logos }}
                 {{ if .link }}
-                    <a href="{{ .link }}">
+                    <a href="{{ .link }}" tabindex="-1">
                         <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
                     </a>
                 {{ else }}
@@ -50,7 +50,7 @@ optional flags:
         <div class="carousel-left-primary-mobile">
             {{ range .logos }}
                 {{ if .link }}
-                    <a href="{{ .link }}">
+                    <a href="{{ .link }}" aria-label="{{ .name | humanize | title }} case study">
                         <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
                     </a>
                 {{ else }}
@@ -58,10 +58,10 @@ optional flags:
                 {{ end }}
             {{ end }}
         </div>
-        <div class="carousel-left-primary-mobile carousel-left-secondary-mobile">
+        <div class="carousel-left-primary-mobile carousel-left-secondary-mobile" aria-hidden="true">
             {{ range .logos }}
                 {{ if .link }}
-                    <a href="{{ .link }}">
+                    <a href="{{ .link }}" tabindex="-1">
                         <div class="w-24 h-12 m-4">{{ partial "customer-logo.html" (dict "logo" .name "hoverable" true) }}</div>
                     </a>
                 {{ else }}
