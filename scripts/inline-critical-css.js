@@ -8,13 +8,14 @@ async function inlineCriticalCSS() {
         path: "public/",
         preload: "swap",
         reduceInlineStyles: true,
+        // Keep original CSS files intact; the full stylesheet is still loaded
+        // async so uncovered rules still apply after page load.
         pruneSource: false,
     });
 
     for (const page of pages) {
         if (!fs.existsSync(page)) {
-            console.warn(`Skipping ${page} (not found)`);
-            continue;
+            throw new Error(`Expected ${page} to exist after Hugo build`);
         }
 
         const html = fs.readFileSync(page, "utf-8");
