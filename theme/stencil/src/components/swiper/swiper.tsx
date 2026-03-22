@@ -179,8 +179,9 @@ export class Swiper {
 
     private onPointerDown = (e: PointerEvent) => {
         if (e.button !== 0) return;
-        if ((e.target as HTMLElement).closest(".swiper-button-prev, .swiper-button-next")) return;
+        if ((e.target as HTMLElement).closest("a, button, .swiper-button-prev, .swiper-button-next")) return;
         this.isDragging = true;
+        this.isTransitioning = false;
         this.dragStartX = e.clientX;
         this.clearAutoplay();
         this.wrapper.style.transitionDuration = "0ms";
