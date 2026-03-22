@@ -29,6 +29,8 @@ const bundles = [
             /^resources-properties/,
             /^tabular/,
         ],
+        // Skip azure-native-v1 because it causes out-of-memory errors during
+        // PurgeCSS content scanning. No unique CSS classes originate from it.
         skippedContentGlobs: ["public/registry/packages/azure-native-v1/**/*"],
     },
     {
@@ -38,7 +40,9 @@ const bundles = [
         safelist: [...sharedSafelist],
     },
     {
-        // Homepage-specific marketing CSS, purged against only the homepage HTML.
+        // Homepage-specific marketing CSS: same source as marketing but purged
+        // against only the homepage HTML for a smaller bundle. The webpack entry
+        // produces assets/css/marketing-homepage.css for Hugo dev mode.
         name: "marketing-homepage",
         input: "public/css/marketing.*.css",
         content: ["public/index.html", "public/js/bundle.*.js"],
@@ -62,6 +66,8 @@ function minifyCSS(config) {
     const css = fs.readFileSync(bundlePath);
     const outputPath = `public/css/${config.name}.${cssBundleId}.css`;
 
+    // PurgeCSS removes unused CSS by analyzing the built site files.
+    // https://purgecss.com/
     return postcss([
         purgeCSSPlugin({
             content: config.content,
