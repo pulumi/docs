@@ -577,6 +577,17 @@ $violet-primary: #673EAC;
         @apply m-0;
         color: #404041;
     }
+
+    .event-card-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        @screen lg {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+    }
 }
 
 .template-event-card {

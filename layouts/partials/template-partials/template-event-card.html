@@ -14,8 +14,7 @@
     - data: The event page data
 */}}
 
-{{ $dataMonth := (lower (.datetime | time.Format "Jan-06")) }}
-<li data-display-date="{{ .displayDate }}" class="flex event-card w-full m-0 p-0 lg:w-1/2" data-filters="{{ delimit .filters " " }}" data-month-label="{{ $dataMonth }}">
+<li data-display-date="{{ .displayDate }}" class="m-0 p-0" data-filters="{{ delimit .filters " " }}">
     {{ $href := .link }}
     {{ $relref := "noopener noreferrer" }}
     {{ $target := "_blank" }}
@@ -26,7 +25,7 @@
         {{ $target = "" }}
     {{ end }}
 
-    <article class="template-event-card flex flex-col w-full rounded-2xl p-6 md:p-8">
+    <article class="template-event-card flex flex-col rounded-2xl p-6 md:p-8">
         <a href="{{ $href }}" rel="{{ $relref }}" target="{{ $target }}" class="flex flex-col h-full no-underline group">
             <div class="flex-1">
                 <div class="flex items-start justify-between gap-4 mb-4">

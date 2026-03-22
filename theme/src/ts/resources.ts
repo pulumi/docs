@@ -1,47 +1,44 @@
 const filterResourceItems = (filters) => {
-    const events = document.querySelectorAll<HTMLElement>(".event-list .event-card");
-    const monthLabels = document.querySelectorAll<HTMLElement>(".event-list .month-label");
-    monthLabels.forEach(el => el.style.display = "none");
+    const monthGroups = document.querySelectorAll<HTMLElement>(".event-list .month-label");
     const noResultsMessage = document.querySelector(".pulumi-event-list-container .no-results");
     noResultsMessage?.classList.remove("hidden");
 
-    if (filters.length > 0) {
-        events.forEach(event => {
-            const tags = (event.getAttribute("data-filters") || "").split(" ");
-            const dateLabel = event.getAttribute("data-month-label");
+    const activeTab = location.hash.slice(1);
 
-            if (!tags.includes(location.hash.slice(1))) {
-                event.style.display = "none";
-            } else {
-                let matches = 0;
-                tags.forEach(tag => {
-                    if (filters.includes(tag)) {
-                        matches++;
-                    }
-                });
-                if (matches > 0) {
-                    noResultsMessage?.classList.add("hidden");
-                    event.style.display = "block";
-                    document.querySelectorAll<HTMLElement>(`.month-label.${dateLabel}`).forEach(el => el.style.display = "block");
+    monthGroups.forEach(group => {
+        const groupFilters = (group.getAttribute("data-filters") || "").split(" ");
+
+        // Hide groups not matching the active tab.
+        if (!groupFilters.includes(activeTab)) {
+            group.style.display = "none";
+            return;
+        }
+
+        const cards = group.querySelectorAll<HTMLElement>(".event-card");
+        let visibleCards = 0;
+
+        cards.forEach(card => {
+            const tags = (card.getAttribute("data-filters") || "").split(" ");
+
+            if (filters.length > 0) {
+                const matches = filters.some(f => tags.includes(f));
+                if (matches) {
+                    card.style.display = "flex";
+                    visibleCards++;
                 } else {
-                    event.style.display = "none";
+                    card.style.display = "none";
                 }
-            }
-        });
-    } else {
-        events.forEach(event => {
-            const tags = (event.getAttribute("data-filters") || "").split(" ");
-            const dateLabel = event.getAttribute("data-month-label");
-
-            if (!tags.includes(location.hash.slice(1))) {
-                event.style.display = "none";
             } else {
-                noResultsMessage?.classList.add("hidden");
-                event.style.display = "block";
-                document.querySelectorAll<HTMLElement>(`.month-label.${dateLabel}`).forEach(el => el.style.display = "block");
+                card.style.display = "flex";
+                visibleCards++;
             }
         });
-    }
+
+        group.style.display = visibleCards > 0 ? "block" : "none";
+        if (visibleCards > 0) {
+            noResultsMessage?.classList.add("hidden");
+        }
+    });
 }
 
 document.querySelector(".pulumi-event-list-container")?.addEventListener("filterSelect", (event: CustomEvent) => {
