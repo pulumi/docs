@@ -17,7 +17,7 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
+type: events
 
 # External resources will link to an external page
 # instead of a resource landing/registration page.

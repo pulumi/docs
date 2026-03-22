@@ -15,7 +15,7 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
+type: events
 
 external: false
 block_external_search_index: false

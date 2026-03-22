@@ -10,8 +10,7 @@
 {{ $pageContext := . }}
 {{ $nowUnix := now.UnixMilli }}
 
-{{ $webinars := (where $.Site.Pages "Type" "webinars") }}
-{{ $events := (where $.Site.Pages "Type" "events") }}
+{{ $allEvents := (where $.Site.Pages "Type" "events") }}
 
 {{ $upcomingEvents := slice }}
 {{ $onDemandRecordings := slice }}
@@ -19,7 +18,7 @@
 {{ $filterLangs := slice }}
 {{ $filterClouds := slice }}
 
-{{ range $webinars }}
+{{ range $allEvents }}
     {{ if eq .Params.unlisted false }}
         {{ $eventDateUnix := (add (.Params.main.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
         {{ $listed := false }}
@@ -32,38 +31,6 @@
         {{ end }}
 
         {{ if and .Params.main.tags $listed }}
-            {{ if .Params.main.tags.topics }}
-                {{ range $topic := .Params.main.tags.topics }}
-                    {{ $filterTopics = $filterTopics | append $topic }}
-                {{ end }}
-            {{ end }}
-            {{ if .Params.main.tags.languages }}
-                {{ range $lang := .Params.main.tags.languages }}
-                    {{ $filterLangs = $filterLangs | append $lang }}
-                {{ end }}
-            {{ end }}
-            {{ if .Params.main.tags.clouds }}
-                {{ range $cloud := .Params.main.tags.clouds }}
-                    {{ $filterClouds = $filterClouds | append $cloud }}
-                {{ end }}
-            {{ end }}
-        {{ end }}
-        {{ $filterTopics = sort ($filterTopics | uniq) }}
-        {{ $filterLangs = sort ($filterLangs | uniq) }}
-        {{ $filterClouds = sort ($filterClouds | uniq) }}
-    {{ end }}
-{{ end }}
-
-{{ range $events }}
-    {{ if eq .Params.unlisted false }}
-        {{ $eventDateUnix := (add (.Params.main.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
-        {{ if lt $nowUnix $eventDateUnix }}
-            {{ $upcomingEvents = $upcomingEvents | append (dict "date" .Params.main.sortable_date "data" .) }}
-        {{ else if (or .Params.main.youtube_url .Params.main.external) }}
-            {{ $onDemandRecordings = $onDemandRecordings | append (dict "date" .Params.main.sortable_date "data" .) }}
-        {{ end }}
-
-        {{ if .Params.main.tags }}
             {{ if .Params.main.tags.topics }}
                 {{ range $topic := .Params.main.tags.topics }}
                     {{ $filterTopics = $filterTopics | append $topic }}
@@ -155,48 +122,45 @@
     <ul class="event-list flex flex-wrap list-none p-0 mb-8 resource-list gap-4 lg:gap-6">
         {{ range sort $upcomingEvents "date" "asc" }}
             {{ $data := .data }}
-            {{ $datetime := "" }}
             {{ $link := "" }}
             {{ $external := false }}
             {{ $filters := slice }}
             {{ $tags := $data.Params.main.tags }}
             {{ $displayDate := dateFormat "January 2, 2006" .date }}
 
-            {{ if eq $data.Type "webinars" }}
-                {{ if or $data.Params.external $data.Params.internal_landing_page }}
-                    {{ $link = $data.Params.url_slug }}
-                    {{ $external = true }}
-                {{ else }}
-                    {{ $link = printf "/events/%s" $data.Params.url_slug }}
-                {{ end }}
+            {{ if or $data.Params.external $data.Params.internal_landing_page }}
+                {{ $link = $data.Params.url_slug }}
+                {{ $external = true }}
+            {{ else }}
+                {{ $link = printf "/events/%s" $data.Params.url_slug }}
+            {{ end }}
 
-                {{ if $data.Params.featured }}
-                    {{ $filters = $filters | append "featured" }}
-                {{ end }}
+            {{ if $data.Params.featured }}
+                {{ $filters = $filters | append "featured" }}
+            {{ end }}
 
-                {{ if $tags }}
-                    {{ $filters = $filters | append (lower $tags.level) }}
-                    {{ range $topic := $tags.topics }}
-                        {{ $filters = $filters | append (lower (replace $topic " " "-")) }}
-                    {{ end }}
-                    {{ range $lang := $tags.languages }}
-                        {{ $filters = $filters | append (lower (replace $lang " " "-")) }}
-                    {{ end }}
-                    {{ range $cloud := $tags.clouds }}
-                        {{ $filters = $filters | append (lower (replace $cloud " " "-")) }}
-                    {{ end }}
+            {{ if $tags }}
+                {{ $filters = $filters | append (lower $tags.level) }}
+                {{ range $topic := $tags.topics }}
+                    {{ $filters = $filters | append (lower (replace $topic " " "-")) }}
                 {{ end }}
+                {{ range $lang := $tags.languages }}
+                    {{ $filters = $filters | append (lower (replace $lang " " "-")) }}
+                {{ end }}
+                {{ range $cloud := $tags.clouds }}
+                    {{ $filters = $filters | append (lower (replace $cloud " " "-")) }}
+                {{ end }}
+            {{ end }}
 
-                {{ $filters = $filters | append "upcoming" }}
-                {{ if ne $upcomingMonthHeader (.date | time.Format "January 2006") }}
-                    {{ $upcomingMonthHeader = (.date | time.Format "January 2006") }}
-                    {{ $filterMonth := (.date | time.Format "Jan-06") }}
-                    <li class="w-full m-0 py-4 lg:w-full group month-label {{ $filterMonth | lower }}" data-filters="upcoming">
-                        <h3 class="event-list-month-header">
-                            <i class="far fa-calendar mr-3"></i>{{ $upcomingMonthHeader }}
-                        </h3>
-                    </li>
-                {{ end }}
+            {{ $filters = $filters | append "upcoming" }}
+            {{ if ne $upcomingMonthHeader (.date | time.Format "January 2006") }}
+                {{ $upcomingMonthHeader = (.date | time.Format "January 2006") }}
+                {{ $filterMonth := (.date | time.Format "Jan-06") }}
+                <li class="w-full m-0 py-4 lg:w-full group month-label {{ $filterMonth | lower }}" data-filters="upcoming">
+                    <h3 class="event-list-month-header">
+                        <i class="far fa-calendar mr-3"></i>{{ $upcomingMonthHeader }}
+                    </h3>
+                </li>
             {{ end }}
 
             {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "upcoming" "true" "link" $link "datetime" .date "displayDate" $displayDate "data" $data) }}
@@ -205,49 +169,45 @@
 
         {{ range sort $onDemandRecordings "date" "desc" }}
             {{ $data := .data }}
-            {{ $datetime := "" }}
-            {{ $displayDate := "" }}
             {{ $link := "" }}
             {{ $external := false }}
             {{ $filters := slice }}
             {{ $tags := $data.Params.main.tags }}
-            {{ $displayDate = dateFormat "January 2, 2006" .date }}
+            {{ $displayDate := dateFormat "January 2, 2006" .date }}
 
-            {{ if eq $data.Type "webinars" }}
-                {{ if or $data.Params.external $data.Params.internal_landing_page }}
-                    {{ $link = $data.Params.url_slug }}
-                    {{ $external = true }}
-                {{ else }}
-                    {{ $link = printf "/events/%s" $data.Params.url_slug }}
-                {{ end }}
+            {{ if or $data.Params.external $data.Params.internal_landing_page }}
+                {{ $link = $data.Params.url_slug }}
+                {{ $external = true }}
+            {{ else }}
+                {{ $link = printf "/events/%s" $data.Params.url_slug }}
+            {{ end }}
 
-                {{ if $data.Params.featured }}
-                    {{ $filters = $filters | append "featured" }}
-                {{ end }}
+            {{ if $data.Params.featured }}
+                {{ $filters = $filters | append "featured" }}
+            {{ end }}
 
-                {{ if $tags }}
-                    {{ $filters = $filters | append (lower $tags.level) }}
-                    {{ range $topic := $tags.topics }}
-                        {{ $filters = $filters | append (lower (replace $topic " " "-")) }}
-                    {{ end }}
-                    {{ range $lang := $tags.languages }}
-                        {{ $filters = $filters | append (lower (replace $lang " " "-")) }}
-                    {{ end }}
-                    {{ range $cloud := $tags.clouds }}
-                        {{ $filters = $filters | append (lower (replace $cloud " " "-")) }}
-                    {{ end }}
+            {{ if $tags }}
+                {{ $filters = $filters | append (lower $tags.level) }}
+                {{ range $topic := $tags.topics }}
+                    {{ $filters = $filters | append (lower (replace $topic " " "-")) }}
                 {{ end }}
+                {{ range $lang := $tags.languages }}
+                    {{ $filters = $filters | append (lower (replace $lang " " "-")) }}
+                {{ end }}
+                {{ range $cloud := $tags.clouds }}
+                    {{ $filters = $filters | append (lower (replace $cloud " " "-")) }}
+                {{ end }}
+            {{ end }}
 
-                {{ $filters = $filters | append "on-demand" }}
-                {{ if ne $ondemandMonthHeader (.date | time.Format "January 2006") }}
-                    {{ $ondemandMonthHeader = (.date | time.Format "January 2006") }}
-                    {{ $filterMonth := (.date | time.Format "Jan-06") }}
-                    <li class="w-full m-0 py-4 lg:w-full group month-label {{ $filterMonth | lower }}" data-filters="on-demand">
-                        <h3 class="event-list-month-header">
-                            <i class="fa fa-video mr-3"></i>{{ $ondemandMonthHeader }}
-                        </h3>
-                    </li>
-                {{ end }}
+            {{ $filters = $filters | append "on-demand" }}
+            {{ if ne $ondemandMonthHeader (.date | time.Format "January 2006") }}
+                {{ $ondemandMonthHeader = (.date | time.Format "January 2006") }}
+                {{ $filterMonth := (.date | time.Format "Jan-06") }}
+                <li class="w-full m-0 py-4 lg:w-full group month-label {{ $filterMonth | lower }}" data-filters="on-demand">
+                    <h3 class="event-list-month-header">
+                        <i class="fa fa-video mr-3"></i>{{ $ondemandMonthHeader }}
+                    </h3>
+                </li>
             {{ end }}
 
             {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "upcoming" "false" "link" $link "datetime" .date "displayDate" $displayDate "data" $data) }}

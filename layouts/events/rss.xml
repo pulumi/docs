@@ -1,8 +1,5 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
-{{ $allResources := .Data.Pages }}
-
-{{/* Assume all resources that aren't AI Answers are events. */}}
-{{ $events := where $allResources "Type" "not in" "ai-answers" }}
+{{ $events := .Data.Pages }}
 
 <rss version="2.0">
     <channel>

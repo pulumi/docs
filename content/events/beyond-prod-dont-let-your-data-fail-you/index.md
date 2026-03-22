@@ -23,7 +23,7 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
+type: events
 layout: cloud-engineering-summit-replay
 
 # External webinars will link to an external page instead of a webinar
