@@ -16,9 +16,6 @@ unlisted: false
 # and the user will need to fill out the form before viewing.
 gated: false
 
-# The layout of the landing page.
-type: events
-
 # External resources will link to an external page
 # instead of a resource landing/registration page.
 # If the resource is external

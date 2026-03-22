@@ -14,9 +14,6 @@ unlisted: false
 # and the user will need to fill out the form before viewing.
 gated: false
 
-# The layout of the landing page.
-type: events
-
 external: false
 block_external_search_index: false
 

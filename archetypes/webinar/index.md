@@ -23,9 +23,6 @@ unlisted: false
 # and the user will need to fill out the form before viewing.
 gated: false
 
-# The layout of the landing page.
-type: events
-
 # Schema type for structured data (SEO). Options: auto, faq, article, blog, howto, product, event, none
 # Webinars typically use 'event' schema. Leave as 'auto' (or omit) for intelligent detection.
 # See SCHEMA.md for details.
