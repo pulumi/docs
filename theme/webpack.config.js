@@ -1,7 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const WebpackShellPluginNext = require("webpack-shell-plugin-next");
-const webpack = require("webpack");
 
 module.exports = function (env, { mode }) {
     return {
@@ -15,8 +14,9 @@ module.exports = function (env, { mode }) {
         },
         output: {
             filename: "[name].js",
-            chunkFilename: "chunk-[id].js",
-            path: `${process.cwd()}/../assets/js`,
+            chunkFilename: "chunk-[contenthash:8].js",
+            path: `${process.cwd()}/../static/js`,
+            publicPath: "/js/",
         },
         resolve: {
             extensions: [".ts", ".js"],
@@ -70,10 +70,7 @@ module.exports = function (env, { mode }) {
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: "../css/[name].css",
-            }),
-            new webpack.optimize.LimitChunkCountPlugin({
-                maxChunks: 1,
+                filename: "../../assets/css/[name].css",
             }),
             new WebpackShellPluginNext({
                 onBuildStart: {
