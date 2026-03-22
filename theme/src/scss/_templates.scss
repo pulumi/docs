@@ -671,6 +671,149 @@ $violet-primary: #673EAC;
     }
 }
 
+// Single event page styles
+.event-single-back-link {
+    @apply font-body font-semibold no-underline text-body-s;
+    color: $violet-primary;
+
+    &:hover {
+        @apply underline;
+    }
+
+    i {
+        transition: transform 0.15s ease;
+    }
+
+    &:hover i {
+        transform: translateX(-3px);
+    }
+}
+
+.template-event-single-header {
+    .event-single-type {
+        @apply font-semibold font-body uppercase;
+        font-feature-settings: 'salt' on;
+        color: $violet-primary;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .event-single-status {
+        @apply font-body;
+        font-feature-settings: 'salt' on;
+        color: #757576;
+        font-size: 0.875rem;
+    }
+
+    .event-single-title {
+        @include page-header();
+        @apply m-0;
+    }
+}
+
+.template-timing-info {
+    .timing-info-item {
+        @apply rounded-xl p-4;
+        border: 0.5px solid #CECECE;
+    }
+
+    .timing-info-label {
+        @apply font-body font-medium text-body-s pb-2 mb-2 border-b;
+        font-feature-settings: 'salt' on;
+        color: #757576;
+        border-color: #E8E8E8;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .timing-info-value {
+        @apply font-body font-semibold text-body-s text-gray-900;
+        font-feature-settings: 'salt' on;
+    }
+}
+
+.template-event-summary {
+    .event-summary-cloud-notice {
+        @apply font-body text-body-s rounded-xl p-4 mb-6;
+        background-color: #F4F0FA;
+        border: 0.5px solid #E8E0F4;
+        color: #404041;
+
+        a {
+            color: $violet-primary;
+            @apply font-semibold;
+        }
+    }
+
+    .event-summary-description {
+        @include section-body-medium();
+        @apply text-body-m;
+
+        p + p {
+            @apply mt-4;
+        }
+    }
+
+    .event-summary-learn {
+        @apply mt-8;
+    }
+
+    .event-summary-learn-title {
+        @include section-header-extra-extra-small();
+        @apply mb-4;
+    }
+
+    .event-summary-learn-list {
+        @apply list-none p-0 m-0 flex flex-col gap-3;
+
+        li {
+            @apply flex items-start font-body text-body-s m-0;
+            color: #5b5b5b;
+
+            i {
+                color: $violet-primary;
+                @apply mt-0.5 flex-shrink-0;
+            }
+        }
+    }
+}
+
+.event-single-registration {
+    border: 0.5px solid #CECECE;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    .event-single-registration-title {
+        @include section-header-extra-small();
+        @apply mb-4;
+    }
+}
+
+.template-event-speakers {
+    background-color: #F9F9FA;
+    border: 0.5px solid #E8E8E8;
+
+    .event-speakers-label {
+        @include section-header-extra-extra-small();
+    }
+
+    .event-speaker-photo {
+        @apply rounded-full object-cover;
+        width: 64px;
+        height: 64px;
+    }
+
+    .event-speaker-name {
+        @apply font-body font-semibold text-body-m text-gray-900;
+        font-feature-settings: 'salt' on;
+    }
+
+    .event-speaker-role {
+        @apply font-body font-normal text-body-s;
+        color: #757576;
+    }
+}
+
 .template-product-two-column {
     .product-two-column-heading {
         @include section-header();
