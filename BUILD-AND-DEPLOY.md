@@ -3655,22 +3655,28 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
 **Cache Headers:**
 
 ```yaml
-# Long cache for versioned assets
-/css/*.css: 1 year
-/js/*.js: 1 year
+# Long cache for fingerprinted assets
+/css/bundle.*.css: 1 year
+/js/bundle.*.js: 1 year
+/fingerprinted/*: 1 year
 
-# Short cache for HTML
-/*.html: 5 minutes
-
-# No cache for dynamic content
-/registry/*: no cache
+# Standard cache for HTML (invalidated on deploy)
+/*.html: 30 minutes
+/registry/*: 30 minutes
+/guides/*: 30 minutes
 ```
+
+**Post-deploy invalidation:**
+
+After each deploy, CloudFront cache is automatically invalidated for HTML content paths
+(see `scripts/run-pulumi.sh`). Fingerprinted assets are excluded since their URLs change
+with content. This allows aggressive TTLs without stale content after deploys.
 
 **Optimization:**
 
 1. **Increase TTL for static assets**
-   - Versioned assets can cache forever
-   - Use bundle IDs for cache busting
+   - Fingerprinted assets can cache forever
+   - Use content-hash URLs for cache busting
 
 2. **Cache Patterns**
 
