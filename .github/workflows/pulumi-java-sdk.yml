@@ -37,16 +37,13 @@ jobs:
           destination_branch: "master"
           pr_title: "Regen Java SDK docs pulumi-java@${{ env.JAVA_SDK_VERSION }}"
           pr_body: "Automated PR"
-          # TODO: Re-enable automerge before merging this branch.
-          # pr_label: "automation/java-sdk-docs,automation/merge"
-          pr_label: "automation/java-sdk-docs"
+          pr_label: "automation/java-sdk-docs,automation/merge"
           github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-      # TODO: Re-enable automerge before merging this branch.
-      # - name: Enable auto-merge
-      #   if: steps.create-pr.outputs.pr_created == 'true'
-      #   run: gh pr merge ${{ steps.create-pr.outputs.pr_number }} --auto --squash
-      #   env:
-      #     GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Enable auto-merge
+        if: steps.create-pr.outputs.pr_created == 'true'
+        run: gh pr merge ${{ steps.create-pr.outputs.pr_number }} --auto --squash
+        env:
+          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
   build-java-sdk-docs:
     runs-on: ubuntu-latest
     steps:
