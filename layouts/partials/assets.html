@@ -34,5 +34,6 @@
 
 {{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "tutorials" "providers" "collections" "templates" "ai" "authors" "tags" "legal" }}
 {{ if not (in $nonMarketingSections .Section) }}
-    {{ template "css-link" (dict "source" "css/marketing.css" "name" "marketing") }}
+    {{ $marketingBundle := cond (eq $cssBundle "homepage") "marketing-homepage" "marketing" }}
+    {{ template "css-link" (dict "source" (printf "css/%s.css" $marketingBundle) "name" $marketingBundle) }}
 {{ end }}
