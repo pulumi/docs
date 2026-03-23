@@ -440,6 +440,20 @@ const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
 const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
 
+// Custom cache policy for origin-proxied behaviors (registry, guides) that need
+// an originRequestPolicy. CloudFront requires a cachePolicyId (not legacy
+// forwardedValues) when an origin request policy is attached.
+const thirtyMinuteCachePolicy = new aws.cloudfront.CachePolicy("thirty-minute-cache", {
+    defaultTtl: thirtyMinutes,
+    maxTtl: thirtyMinutes,
+    minTtl: 0,
+    parametersInCacheKeyAndForwardedToOrigin: {
+        cookiesConfig: { cookieBehavior: "none" },
+        headersConfig: { headerBehavior: "none" },
+        queryStringsConfig: { queryStringBehavior: "none" },
+    },
+});
+
 const baseSecurityHeadersConfig = {
     frameOptions: {
         frameOption: config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN',
@@ -555,9 +569,9 @@ if (config.registryStack) {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
             pathPattern: "/registry/*",
-            defaultTtl: thirtyMinutes,
-            maxTtl: thirtyMinutes,
+            cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
+            forwardedValues: undefined,
         },
     )
 }
@@ -583,9 +597,9 @@ if (config.guidesStack) {
             ...baseCacheBehavior,
             targetOriginId: guidesCDN,
             pathPattern: "/guides/*",
-            defaultTtl: thirtyMinutes,
-            maxTtl: thirtyMinutes,
+            cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
+            forwardedValues: undefined,
         },
     )
 }
