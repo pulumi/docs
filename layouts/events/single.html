@@ -37,7 +37,7 @@
                 {{ if .youtube_url }}
                     <span class="event-single-status">On-demand</span>
                 {{ else }}
-                    <span class="event-single-status">{{ .location }}</span>
+                    <span class="event-single-status">{{ .location | title }}</span>
                 {{ end }}
             </div>
             <h1 class="event-single-title">{{ $page.Params.title }}</h1>

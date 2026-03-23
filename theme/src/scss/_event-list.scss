@@ -16,7 +16,7 @@
     }
 
     #event-list-filter-nav {
-        @apply flex text-base py-2 p-0;
+        @apply flex font-body text-base py-2 p-0;
 
         list-style: none !important;
 
@@ -64,7 +64,7 @@
         @apply items-end pb-4;
 
         pulumi-filter-select-option-group {
-            @apply font-display text-base;
+            @apply font-body text-base;
     
             .toggle {
                 @apply pl-2 pr-6 py-1 rounded bg-white border border-gray-300 transition-all;

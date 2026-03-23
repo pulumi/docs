@@ -36,7 +36,7 @@
                             {{ if .data.Params.main.youtube_url }}
                                 <span class="event-card-location">On-demand</span>
                             {{ else }}
-                                <span class="event-card-location">{{ .data.Params.main.location }}</span>
+                                <span class="event-card-location">{{ .data.Params.main.location | title }}</span>
                             {{ end }}
                         </div>
                         <h3 class="event-card-title">
