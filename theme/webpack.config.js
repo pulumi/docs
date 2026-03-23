@@ -9,6 +9,7 @@ module.exports = function (env, { mode }) {
         entry: {
             bundle: "./src/ts/main.ts",
             marketing: "./src/ts/marketing.ts",
+            "marketing-homepage": "./src/ts/marketingHomepage.ts",
             homepage: "./src/ts/homepage.ts",
             algolia: "./src/ts/algolia-entry.ts",
         },
