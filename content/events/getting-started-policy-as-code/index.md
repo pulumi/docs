@@ -27,48 +27,43 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: getting-started-policy-as-code
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Policy as Code on AWS
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/H_LwaEoAL3M?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/H_LwaEoAL3M?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-02-14T09:00:00.000-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-02-14T09:00:00.000-08:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Poorly configured cloud infrastructure can be an unwelcome source of security, reliability, and cost issues. In this session, the Pulumi team will show you how to enforce best practices by creating policies that scale from a single infrastructure stack to your entire organization. And you can do all of this in TypeScript and/or Python!
 
-    # Description of the webinar.
-    description: |
-        Poorly configured cloud infrastructure can be an unwelcome source of security, reliability, and cost issues. In this session, the Pulumi team will show you how to enforce best practices by creating policies that scale from a single infrastructure stack to your entire organization. And you can do all of this in TypeScript and/or Python!
+learn:
+    - How to create policies for resource level validation.
+    - How to create Policy Packs for organizing organization wide policies.
 
-    learn:
-        - How to create policies for resource level validation.
-        - How to create Policy Packs for organizing organization wide policies.
+# The webinar presenters
+presenters:
+    - name: Josh Kodroff
+      role: Sr. Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Marina Novikova
+      role: Sr. Partner Solutions Architect, AWS
+      photo: /images/team/marina-novikova.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Sr. Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Marina Novikova
-          role: Sr. Partner Solutions Architect, AWS
-          photo: /images/team/marina-novikova.jpg
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: []
-        languages: ["TypeScript", "Python"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: []
+    languages: ["TypeScript", "Python"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

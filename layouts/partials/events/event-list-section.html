@@ -20,38 +20,39 @@
 
 {{ range $allEvents }}
     {{ if eq .Params.unlisted false }}
-        {{ $eventDateUnix := (add (.Params.main.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
+        {{ $eventDateUnix := (add (.Params.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
         {{ $listed := false }}
         {{ if lt $nowUnix $eventDateUnix }}
             {{ $listed = true }}
-            {{ $upcomingEvents = $upcomingEvents | append (dict "date" .Params.main.sortable_date "data" .) }}
-        {{ else if (or .Params.main.youtube_url .Params.main.external) }}
+            {{ $upcomingEvents = $upcomingEvents | append (dict "date" .Params.sortable_date "data" .) }}
+        {{ else if (or .Params.youtube_url .Params.external) }}
             {{ $listed = true }}
-            {{ $onDemandRecordings = $onDemandRecordings | append (dict "date" .Params.main.sortable_date "data" .) }}
+            {{ $onDemandRecordings = $onDemandRecordings | append (dict "date" .Params.sortable_date "data" .) }}
         {{ end }}
 
-        {{ if and .Params.main.tags $listed }}
-            {{ if .Params.main.tags.topics }}
-                {{ range $topic := .Params.main.tags.topics }}
+        {{ if and .Params.tags $listed }}
+            {{ if .Params.tags.topics }}
+                {{ range $topic := .Params.tags.topics }}
                     {{ $filterTopics = $filterTopics | append $topic }}
                 {{ end }}
             {{ end }}
-            {{ if .Params.main.tags.languages }}
-                {{ range $lang := .Params.main.tags.languages }}
+            {{ if .Params.tags.languages }}
+                {{ range $lang := .Params.tags.languages }}
                     {{ $filterLangs = $filterLangs | append $lang }}
                 {{ end }}
             {{ end }}
-            {{ if .Params.main.tags.clouds }}
-                {{ range $cloud := .Params.main.tags.clouds }}
+            {{ if .Params.tags.clouds }}
+                {{ range $cloud := .Params.tags.clouds }}
                     {{ $filterClouds = $filterClouds | append $cloud }}
                 {{ end }}
             {{ end }}
         {{ end }}
-        {{ $filterTopics = sort ($filterTopics | uniq) }}
-        {{ $filterLangs = sort ($filterLangs | uniq) }}
-        {{ $filterClouds = sort ($filterClouds | uniq) }}
     {{ end }}
 {{ end }}
+
+{{ $filterTopics = sort ($filterTopics | uniq) }}
+{{ $filterLangs = sort ($filterLangs | uniq) }}
+{{ $filterClouds = sort ($filterClouds | uniq) }}
 
 <section class="template-event-list" id="events">
     <span id="upcoming" class="hidden"></span>
@@ -178,7 +179,7 @@
                         {{ $link := "" }}
                         {{ $external := false }}
                         {{ $filters := slice }}
-                        {{ $tags := $data.Params.main.tags }}
+                        {{ $tags := $data.Params.tags }}
                         {{ $displayDate := dateFormat "January 2, 2006" .date }}
 
                         {{ if or $data.Params.external $data.Params.internal_landing_page }}

@@ -27,47 +27,43 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: deployment-guardrails
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "Deployment Guardrails with Policy as Code"
-    event_type: workshop # workshop | event
+event_type: workshop # workshop | event
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+# URL for embedding a URL for ungated webinars.
+youtube_url: 
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-08-13T12:00:00-04:00
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-08-13T12:00:00-04:00
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# Duration of the webinar.
+duration: 60 minutes
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Description of the webinar.
-    description: |
-        Effective Internal Developer Platforms provide guardrails, not gates—enabling developer autonomy while automatically enforcing security, compliance, and operational standards. This workshop demonstrates how to implement comprehensive policy as code using Pulumi Policies. You'll learn to create policies that prevent misconfigurations, enforce tagging standards, and ensure compliance requirements are met automatically, turning your IDP into a secure-by-default platform.
-    learn:
-        - How to implement security and compliance policies that run automatically in CI/CD
-        - Strategies for creating policies that guide rather than block developer productivity
-        - Real-world policy examples for common governance requirements (tagging, security groups, encryption)
+# Description of the webinar.
+description: |
+    Effective Internal Developer Platforms provide guardrails, not gates—enabling developer autonomy while automatically enforcing security, compliance, and operational standards. This workshop demonstrates how to implement comprehensive policy as code using Pulumi Policies. You'll learn to create policies that prevent misconfigurations, enforce tagging standards, and ensure compliance requirements are met automatically, turning your IDP into a secure-by-default platform.
+learn:
+    - How to implement security and compliance policies that run automatically in CI/CD
+    - Strategies for creating policies that guide rather than block developer productivity
+    - Real-world policy examples for common governance requirements (tagging, security groups, encryption)
 
-    # The webinar presenters
-    presenters:
-        - name: Adam Bell
-          role: Community Engineer, Pulumi
-          photo: /images/team/adam-gordon-bell.jpg
-        - name: Josh Kodroff
-          role: Principal Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
+# The webinar presenters
+presenters:
+    - name: Adam Bell
+      role: Community Engineer, Pulumi
+      photo: /images/team/adam-gordon-bell.jpg
+    - name: Josh Kodroff
+      role: Principal Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
 
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics:  ["Security", "Policy as Code", "Governance"]
-        languages: ["TypeScript"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics:  ["Security", "Policy as Code", "Governance"]
+    languages: ["TypeScript"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:
@@ -75,11 +71,4 @@ form:
     hubspot_form_id: 541113c9-3795-4537-ab07-5485e85362a3
     salesforce_campaign_id: 701PQ00000ZYMhuYAH
 
-event_data:
-  name: "Deployment Guardrails with Policy as Code"
-  start_date: 2025-08-13T12:00:00-04:00
-  end_date: 2025-08-13T13:00:00-04:00
-  url: "https://www.pulumi.com/resources/deployment-guardrails/"
-  description: |
-    Effective Internal Developer Platforms provide guardrails, not gates—enabling developer autonomy while automatically enforcing security, compliance, and operational standards. This workshop demonstrates how to implement comprehensive policy as code using Pulumi Policies. You'll learn to create policies that prevent misconfigurations, enforce tagging standards, and ensure compliance requirements are met automatically, turning your IDP into a secure-by-default platform.
 --- 

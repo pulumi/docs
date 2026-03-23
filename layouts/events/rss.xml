@@ -12,8 +12,8 @@
             <item>
                 {{ $eventLink := printf "%s%s" .Site.Params.canonicalURL .RelPermalink }}
                 <!--
-                    When the workshop is external, the `url_slug` property is set to the external link
-                    in the workshop template.
+                    When the event is external, the `url_slug` property is set to the external link
+                    in the event template.
                 -->
                 {{ if .Params.external }}
                     {{ $eventLink = .Params.url_slug }}
@@ -21,7 +21,7 @@
                 <guid>{{ $eventLink }}</guid>
                 <title>{{ .Params.title }}</title>
                 <description>{{ .Params.meta_desc }}</description>
-                <pubDate>{{ .Params.main.sortable_date }}</pubDate>
+                <pubDate>{{ .Params.sortable_date }}</pubDate>
                 <link>{{ $eventLink }}</link>
             </item>
         {{ end }}

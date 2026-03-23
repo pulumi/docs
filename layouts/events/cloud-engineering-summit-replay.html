@@ -13,7 +13,7 @@
     {{ $cesDeploy := slice }}
     {{ $cesManage := slice }}
 
-    {{ range sort $events ".Params.main.sortable_date" "asc" }}
+    {{ range sort $events ".Params.sortable_date" "asc" }}
         {{ if isset .Params "cloud_engineering_summit" }}
             {{ if eq .Params.cloud_engineering_summit.track "keynote" }}
                 {{ $cesKeynotes = $cesKeynotes | append . }}
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="card bg-white w-3/4 mx-auto" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
-            <iframe src="{{ .Params.main.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
+            <iframe src="{{ .Params.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
         </div>
     </section>
 
@@ -130,11 +130,11 @@
                         <h4>Session Information</h4>
 
                         <div class="mb-8">
-                            <p>{{ .Params.main.description | markdownify }}</p>
+                            <p>{{ .Params.description | markdownify }}</p>
 
                             <h5>Presenters</h5>
                             <ul class="list-none p-0">
-                                {{ range .Params.main.presenters }}
+                                {{ range .Params.presenters }}
                                     <li class="mb-4">
                                         <div class="text-purple">{{ .name }}</div>
                                         <div class="text-sm">{{ .role }}</div>

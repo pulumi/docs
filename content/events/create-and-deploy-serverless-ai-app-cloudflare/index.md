@@ -27,46 +27,41 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: create-and-deploy-serverless-ai-app-cloudflare
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "GitOps in Action: Deploy a Serverless AI app with Cloudflare"
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-08-07T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-08-07T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Develop and deploy a Serverless AI application using Cloudflare Workers and Pulumi. Throughout this workshop, you'll be guided in deploying cloud resources using a GitOps approach. Specifically, you'll utilize GitHub for version control and Pulumi as your Infrastructure as Code solution to manage your Cloudflare resources effectively.
 
-    # Description of the webinar.
-    description: |
-        Develop and deploy a Serverless AI application using Cloudflare Workers and Pulumi. Throughout this workshop, you'll be guided in deploying cloud resources using a GitOps approach. Specifically, you'll utilize GitHub for version control and Pulumi as your Infrastructure as Code solution to manage your Cloudflare resources effectively.
+learn:
+    - Build a Serverless AI app with Cloudflare Workers
+    - Develop Infrastructure as Code with Pulumi in TypeScript
+    - Implement GitOps best practices
 
-    learn:
-        - Build a Serverless AI app with Cloudflare Workers
-        - Develop Infrastructure as Code with Pulumi in TypeScript
-        - Implement GitOps best practices
+# The webinar presenters
+presenters:
+    - name: Lizzie Siegle
+      role: Developer Advocate, Cloudflare
+      photo: /images/people/lizzie-siegle.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Lizzie Siegle
-          role: Developer Advocate, Cloudflare
-          photo: /images/people/lizzie-siegle.jpg
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["GitOps"]
-        languages: ["TypeScript"]
-        clouds: ["Cloudflare"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["GitOps"]
+    languages: ["TypeScript"]
+    clouds: ["Cloudflare"]
 
 # The right hand side form section.
 form:

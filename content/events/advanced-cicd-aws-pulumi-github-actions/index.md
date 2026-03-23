@@ -27,52 +27,47 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: advanced-cicd-aws-pulumi-github-actions
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Advanced CI/CD for AWS using Pulumi and GitHub Actions
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/F3zU0K0eV88
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/F3zU0K0eV88
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-08-14T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-08-14T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this workshop, you will learn advanced topics that make up a robust infrastructure CI/CD pipeline through guided exercises. You will use Pulumi tooling to take your cloud infrastructure pipeline one step closer to production.
 
-    # Description of the webinar.
-    description: |
-        In this workshop, you will learn advanced topics that make up a robust infrastructure CI/CD pipeline through guided exercises. You will use Pulumi tooling to take your cloud infrastructure pipeline one step closer to production.
+    This workshop introduces users to advanced DevOps best practices. You will add compliance checks via policies, drift detection, and isolated test environments to an existing GitHub Actions pipeline. Accelerate your AWS projects with the [code examples provided](https://github.com/pulumi/workshops/tree/main/github-aws-cicd-advanced).
 
-        This workshop introduces users to advanced DevOps best practices. You will add compliance checks via policies, drift detection, and isolated test environments to an existing GitHub Actions pipeline. Accelerate your AWS projects with the [code examples provided](https://github.com/pulumi/workshops/tree/main/github-aws-cicd-advanced).
+    Did you miss Part 1 of the DevOps workshop series? Start with [Get started with CI/CD for AWS using Pulumi & GitHub Actions before diving into advanced techniques.](/events/cicd-for-aws-with-pulumi-and-github-actions/)
 
-        Did you miss Part 1 of the DevOps workshop series? Start with [Get started with CI/CD for AWS using Pulumi & GitHub Actions before diving into advanced techniques.](/events/cicd-for-aws-with-pulumi-and-github-actions/)
+learn:
+    - How to build an advanced CI pipeline to enforce compliance and correct drift
+    - How to add dynamic credentials to your stack by configuring Pulumi ESC
+    - How to add policy checks to test your infrastructure before each deployment
+    - How to add a cron job to the pipeline to check for changes periodically (drift)
+    - How to configure a dedicated cloud environment with Review Stacks
 
-    learn:
-        - How to build an advanced CI pipeline to enforce compliance and correct drift
-        - How to add dynamic credentials to your stack by configuring Pulumi ESC
-        - How to add policy checks to test your infrastructure before each deployment
-        - How to add a cron job to the pipeline to check for changes periodically (drift)
-        - How to configure a dedicated cloud environment with Review Stacks
+# The webinar presenters
+presenters:
+    - name: Ben De St Paer-Gotch
+      role: Staff Product Manager, GitHub
+      photo: /images/people/ben-de-st-paer-gotch.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Ben De St Paer-Gotch
-          role: Staff Product Manager, GitHub
-          photo: /images/people/ben-de-st-paer-gotch.jpg
-
-    # case-sensitive
-    tags:
-        level: Advanced # Beginner, Intermediate, Advanced
-        topics: ["GitHub Actions","DevOps", "CI/CD"]
-        languages: []
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Advanced # Beginner, Intermediate, Advanced
+    topics: ["GitHub Actions","DevOps", "CI/CD"]
+    languages: []
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

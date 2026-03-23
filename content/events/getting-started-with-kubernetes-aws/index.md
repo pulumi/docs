@@ -27,49 +27,44 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: getting-started-with-kubernetes-aws
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Getting Started with Kubernetes on AWS using Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: 
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-09-11T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-09-11T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Duration of the webinar.
-    duration: 90 minutes
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this session, you will learn the fundamentals of building and deploying containerized workloads and get an introduction to Pulumi’s IaC platform and deployment on AWS.
 
-    # Description of the webinar.
-    description: |
-        In this session, you will learn the fundamentals of building and deploying containerized workloads and get an introduction to Pulumi’s IaC platform and deployment on AWS.
+    We’ll guide you through setting up an Amazon EKS cluster on AWS and deploying a containerized workload to the cluster.
 
-        We’ll guide you through setting up an Amazon EKS cluster on AWS and deploying a containerized workload to the cluster.
+    This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy Kubernetes clusters and workloads on AWS. We will guide you through the Pulumi platform with diagrams and a series of examples to help accelerate your cloud projects.
 
-        This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy Kubernetes clusters and workloads on AWS. We will guide you through the Pulumi platform with diagrams and a series of examples to help accelerate your cloud projects.
+learn:
+    - The basics of writing Pulumi programs to manage infrastructure using real programming languages
+    - How to create and manage EKS clusters in AWS with Pulumi
+    - Deploying new workloads to your cluster
 
-    learn:
-        - The basics of writing Pulumi programs to manage infrastructure using real programming languages
-        - How to create and manage EKS clusters in AWS with Pulumi
-        - Deploying new workloads to your cluster
+# The webinar presenters
+presenters:
+    - name: Marina Novikova
+      role: Sr. Partner Solution Architect, AWS
+      photo: /images/team/marina-novikova.jpg        
 
-    # The webinar presenters
-    presenters:
-        - name: Marina Novikova
-          role: Sr. Partner Solution Architect, AWS
-          photo: /images/team/marina-novikova.jpg        
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
-        languages: []
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Kubernetes"]
+    languages: []
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

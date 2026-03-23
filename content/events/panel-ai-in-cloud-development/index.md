@@ -27,54 +27,49 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: panel-ai-in-cloud-development
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: AI in Cloud Development
+event_type: event # workshop | event
 
-    event_type: event # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/eiVTfB3Qrqo
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/eiVTfB3Qrqo
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-09-18T09:00:00-00:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-09-18T09:00:00-00:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    The panel discussed the role that AI is playing in the present and (near) future of cloud development across infrastructure and applications. Software development has seen some of the richest applications of novel generative AI-based experiences, and these tools continue to expand their scope from coding assistants to task planning to agents.
 
-    # Description of the webinar.
-    description: |
-        The panel discussed the role that AI is playing in the present and (near) future of cloud development across infrastructure and applications. Software development has seen some of the richest applications of novel generative AI-based experiences, and these tools continue to expand their scope from coding assistants to task planning to agents.
+    Cloud development, in particular, has seen these benefits extended across the lifecycle, with exciting applications to IaC, policy, observability, and more. Hear from some of the industry experts at the forefront of applying modern AI approaches to all these areas of cloud development—what they see working well already at scale and what they are excited about for the future.
 
-        Cloud development, in particular, has seen these benefits extended across the lifecycle, with exciting applications to IaC, policy, observability, and more. Hear from some of the industry experts at the forefront of applying modern AI approaches to all these areas of cloud development—what they see working well already at scale and what they are excited about for the future.
+# The webinar presenters
+presenters:
+    - name: Luke Hoban
+      role: CTO, Pulumi
+      photo: /images/team/luke-hoban.jpg
+    - name: Meagan Cojocar
+      role: Principal Product Manager, Pulumi
+      photo: /images/team/meagan-cojocar.jpg
+    - name: Giri Sreenivas
+      photo: /images/pulumiup-2023/2024-speakers/giri-sreenivas.jpg
+      role: Chief Product Officer, Docker
+    - name: Phillip Carter
+      photo: /images/pulumiup-2023/2024-speakers/phillip-carter.jpg
+      role: Principal Product Manager, HoneyComb.io
+    - name: Clare Liguori
+      photo: /images/pulumiup-2023/2024-speakers/clare-liguori.jpg
+      role: Sr. Principal Software Engineer, AWS
 
-    # The webinar presenters
-    presenters:
-        - name: Luke Hoban
-          role: CTO, Pulumi
-          photo: /images/team/luke-hoban.jpg
-        - name: Meagan Cojocar
-          role: Principal Product Manager, Pulumi
-          photo: /images/team/meagan-cojocar.jpg
-        - name: Giri Sreenivas
-          photo: /images/pulumiup-2023/2024-speakers/giri-sreenivas.jpg
-          role: Chief Product Officer, Docker
-        - name: Phillip Carter
-          photo: /images/pulumiup-2023/2024-speakers/phillip-carter.jpg
-          role: Principal Product Manager, HoneyComb.io
-        - name: Clare Liguori
-          photo: /images/pulumiup-2023/2024-speakers/clare-liguori.jpg
-          role: Sr. Principal Software Engineer, AWS
-
-    # case-sensitive
-    tags:
-        level: # Beginner, Intermediate, Advanced
-        topics: ["AI", "Automation", "Observability"]
-        languages: []
+# case-sensitive
+tags:
+    level: # Beginner, Intermediate, Advanced
+    topics: ["AI", "Automation", "Observability"]
+    languages: []
 
 # The right hand side form section.
 form:

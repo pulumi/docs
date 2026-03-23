@@ -27,51 +27,47 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: self-service-enabling-developer-productivity
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "Self-Service & AI Agents for Developer Productivity"
-    event_type: workshop # workshop | event
+event_type: workshop # workshop | event
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/gK1N88I0GQ8?si=T17pPuYgupJUL2ON
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/gK1N88I0GQ8?si=T17pPuYgupJUL2ON
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-11-06T12:00:00-05:00
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-11-06T12:00:00-05:00
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# Duration of the webinar.
+duration: 60 minutes
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Description of the webinar.
-    description: |
-        This hands-on workshop with Pulumi Cloud shows how AI agents and self-service platforms help teams automate infrastructure creation and standardize deployments.
+# Description of the webinar.
+description: |
+    This hands-on workshop with Pulumi Cloud shows how AI agents and self-service platforms help teams automate infrastructure creation and standardize deployments.
 
-        You’ll work with Pulumi Neo, our AI agent for infrastructure and platform engineering, to build a self-service developer platform using templates, guided deployments, and reusable infrastructure patterns. Throughout the session, you’ll create templates, deploy real workloads, and build Kubernetes components, seeing how intelligent agents simplify provisioning, configuration, and GitOps workflows while preserving governance and consistency.
-        
-    learn:
-        - How to build and publish Pulumi templates that power self-service infrastructure provisioning
-        - How to deploy a monitored DigitalOcean cluster through an AI-assisted, wizard-style workflow
-        - How to create reusable Kubernetes components, like Argo CD, with Pulumi TypeScript and ESC environments
-        - How intelligent agents enforce best practices and scale developer autonomy safely
+    You’ll work with Pulumi Neo, our AI agent for infrastructure and platform engineering, to build a self-service developer platform using templates, guided deployments, and reusable infrastructure patterns. Throughout the session, you’ll create templates, deploy real workloads, and build Kubernetes components, seeing how intelligent agents simplify provisioning, configuration, and GitOps workflows while preserving governance and consistency.
+    
+learn:
+    - How to build and publish Pulumi templates that power self-service infrastructure provisioning
+    - How to deploy a monitored DigitalOcean cluster through an AI-assisted, wizard-style workflow
+    - How to create reusable Kubernetes components, like Argo CD, with Pulumi TypeScript and ESC environments
+    - How intelligent agents enforce best practices and scale developer autonomy safely
 
-    # The webinar presenters
-    presenters:
-        - name: Engin Diri
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/engin-diri.jpg
-        - name: Adam Bell
-          role: Community Engineer, Pulumi
-          photo: /images/team/adam-gordon-bell.jpg
+# The webinar presenters
+presenters:
+    - name: Engin Diri
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/engin-diri.jpg
+    - name: Adam Bell
+      role: Community Engineer, Pulumi
+      photo: /images/team/adam-gordon-bell.jpg
 
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["Platform Engineering", "Argo CD", "Kubernetes", "Pulumi Neo", "AI"]
-        languages: []
-        clouds: ["AWS", "DigitalOcean"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics:  ["Platform Engineering", "Argo CD", "Kubernetes", "Pulumi Neo", "AI"]
+    languages: []
+    clouds: ["AWS", "DigitalOcean"]
 
 # The right hand side form section.
 form:
@@ -79,11 +75,4 @@ form:
     hubspot_form_id: 01bea8e9-71fa-430d-953f-2077d3958d15
     salesforce_campaign_id: 701PQ00000edwmiYAA
 
-event_data:
-  name: "Self-Service & AI Agents for Developer Productivity"
-  start_date: 2025-11-06T12:00:00-05:00
-  end_date: 2025-11-06T13:00:00-05:00
-  url: "https://www.pulumi.com/resources/self-service-enabling-developer-productivity/"
-  description: |
-    Teams building Internal Developer Platforms are betting that standardization and self-service will bring improved productivity to their engineering organization. In this session, we'll explore how agents can help teams launch platforms faster by simplifying the process of creating reusable abstractions and templates that standardize self-service deployments.
 ---

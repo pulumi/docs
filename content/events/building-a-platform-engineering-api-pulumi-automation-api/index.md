@@ -27,45 +27,40 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: building-a-platform-engineering-api-pulumi-automation-api
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Build a Platform using Pulumi Automation API
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-06-06T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-06-06T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 60 minutes
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Nowadays, everything is or should be accessible via an API, and infrastructure is no exception. Join us in this webinar to learn how to build your own Platform Engineering API using Pulumi's Automation API, with a practical example in TypeScript and Express.js. Whether you're a developer or a DevOps engineer, this session will equip you with the knowledge and tools to elevate your platform engineering skills.
 
-    # Description of the webinar.
-    description: |
-        Nowadays, everything is or should be accessible via an API, and infrastructure is no exception. Join us in this webinar to learn how to build your own Platform Engineering API using Pulumi's Automation API, with a practical example in TypeScript and Express.js. Whether you're a developer or a DevOps engineer, this session will equip you with the knowledge and tools to elevate your platform engineering skills.
+learn:
+    - The fundamentals of Pulumi's Automation API and its benefits for infrastructure management.
+    - How to set up and configure your environment for using Pulumi's Automation API.
+    - Practical example in Typescript of building and deploying infrastructure using the Automation API.
 
-    learn:
-        - The fundamentals of Pulumi's Automation API and its benefits for infrastructure management.
-        - How to set up and configure your environment for using Pulumi's Automation API.
-        - Practical example in Typescript of building and deploying infrastructure using the Automation API.
+# The webinar presenters
+presenters:
+    - name: Engin Diri
+      role: Senior Community Engineer, Pulumi
+      photo: /images/team/engin-diri.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Engin Diri
-          role: Senior Community Engineer, Pulumi
-          photo: /images/team/engin-diri.jpg
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Automation API"]
-        languages: ["TypeScript"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Automation API"]
+    languages: ["TypeScript"]
 
 # The right hand side form section.
 form:

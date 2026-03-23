@@ -26,50 +26,45 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: platform-with-aws-proton-and-pulumi
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Platform Engineering with AWS Proton and Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/OtSreMyaow0?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/OtSreMyaow0?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-10-12T09:00:00-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-10-12T09:00:00-07:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this workshop, you will learn how to enable self-service infrastructure for your organization using AWS Proton and Pulumi. The workshop will include a brief introduction to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud managed service for self-service infrastructure templates.
 
-    # Description of the webinar.
-    description: |
-        In this workshop, you will learn how to enable self-service infrastructure for your organization using AWS Proton and Pulumi. The workshop will include a brief introduction to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud managed service for self-service infrastructure templates.
-    
-        This 200-level workshop is designed to help users who have basic familiarity with Pulumi effectively handle real-world use cases. We will guide you through using AWS Proton and Pulumi with diagrams and a series of labs to help accelerate your organization's platform engineering efforts.
+    This 200-level workshop is designed to help users who have basic familiarity with Pulumi effectively handle real-world use cases. We will guide you through using AWS Proton and Pulumi with diagrams and a series of labs to help accelerate your organization's platform engineering efforts.
 
-    learn:
-        - How to use Pulumi to manage AWS infrastructure
-        - How to use Pulumi with AWS Proton to create and manage reusable templates to ensure self-service compliant and production-ready infrastructure for application teams
+learn:
+    - How to use Pulumi to manage AWS infrastructure
+    - How to use Pulumi with AWS Proton to create and manage reusable templates to ensure self-service compliant and production-ready infrastructure for application teams
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Marina Novikova
-          role: Sr Solutions Architect, AWS
-          photo: /images/team/marina-novikova.jpg
+# The webinar presenters
+presenters:
+    - name: Josh Kodroff
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Marina Novikova
+      role: Sr Solutions Architect, AWS
+      photo: /images/team/marina-novikova.jpg
 
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["AWS Proton"]
-        languages: []
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["AWS Proton"]
+    languages: []
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

@@ -27,48 +27,43 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: building-virtual-networks-with-pulumi-and-tailscale
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Building Virtual Networks with Pulumi and Tailscale
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/6JejC_bx8Yg?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/6JejC_bx8Yg?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-01-11T09:00:00-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-01-11T09:00:00-08:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    This workshop will demonstrate how to securely connect end-user devices and cloud resources using modern infrastructure as code written in real programming languages. Using the Pulumi Tailscale provider, we’ll create virtual machines in AWS and securely connect them without needing to create and manage firewall rules. Join us and learn how to use Pulumi with Tailscale to seamlessly and securely connect your devices and cloud resources using a modern, zero-trust model!
 
-    # Description of the webinar.
-    description: |
-        This workshop will demonstrate how to securely connect end-user devices and cloud resources using modern infrastructure as code written in real programming languages. Using the Pulumi Tailscale provider, we’ll create virtual machines in AWS and securely connect them without needing to create and manage firewall rules. Join us and learn how to use Pulumi with Tailscale to seamlessly and securely connect your devices and cloud resources using a modern, zero-trust model!
+learn:
+    - How to create secure, performant connections between your devices and servers without needing to poke holes in firewalls.
+    - How to use modern programming languages to ship infrastructure faster.
+    - How to use the Tailscale Pulumi provider to automate provisioning your VPNs in TypeScript.
 
-    learn:
-        - How to create secure, performant connections between your devices and servers without needing to poke holes in firewalls.
-        - How to use modern programming languages to ship infrastructure faster.
-        - How to use the Tailscale Pulumi provider to automate provisioning your VPNs in TypeScript.
+# The webinar presenters
+presenters:
+  - name: Josh Kodroff
+    role: Sr. Solutions Architect, Pulumi
+    photo: /images/team/josh-kodroff.jpg
+  - name: Xe Iaso
+    role: Archmage of Infrastructure, Tailscale
 
-    # The webinar presenters
-    presenters:
-      - name: Josh Kodroff
-        role: Sr. Solutions Architect, Pulumi
-        photo: /images/team/josh-kodroff.jpg
-      - name: Xe Iaso
-        role: Archmage of Infrastructure, Tailscale
-
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Tailscale"]
-        languages: ["TypeScript"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["Tailscale"]
+    languages: ["TypeScript"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

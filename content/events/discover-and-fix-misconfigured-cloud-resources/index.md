@@ -27,48 +27,44 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: discover-and-fix-misconfigured-cloud-resources
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Discover and Fix Misconfigured Cloud Resources with Pulumi
-    event_type: workshop # workshop | event
+event_type: workshop # workshop | event
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+# URL for embedding a URL for ungated webinars.
+youtube_url: 
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-05-28T12:00:00-04:00
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-05-28T12:00:00-04:00
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# Duration of the webinar.
+duration: 60 minutes
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Description of the webinar.
-    description: |
-        In today's complex cloud environments, platform engineers face significant challenges in managing diverse and sprawling cloud infrastructure. This workshop introduces Pulumi Insights, a powerful solution designed to transform how organizations understand, control, and optimize their cloud estate across multiple deployment tools and platforms.
+# Description of the webinar.
+description: |
+    In today's complex cloud environments, platform engineers face significant challenges in managing diverse and sprawling cloud infrastructure. This workshop introduces Pulumi Insights, a powerful solution designed to transform how organizations understand, control, and optimize their cloud estate across multiple deployment tools and platforms.
 
-        Whether you're managing a small development environment or a large multi-cloud estate, this workshop will equip you with practical strategies and tools to bring clarity, control, and efficiency to your cloud infrastructure management.
+    Whether you're managing a small development environment or a large multi-cloud estate, this workshop will equip you with practical strategies and tools to bring clarity, control, and efficiency to your cloud infrastructure management.
 
-    learn:
-        - How to discover and manage legacy cloud resources deployed outside of Pulumi.
-        - How to identify and remediate misconfigured resources with policy as code
-        - How to implement a unified approach to cloud resource management that transcends traditional tool-specific limitations
+learn:
+    - How to discover and manage legacy cloud resources deployed outside of Pulumi.
+    - How to identify and remediate misconfigured resources with policy as code
+    - How to implement a unified approach to cloud resource management that transcends traditional tool-specific limitations
 
 
-    # The webinar presenters
-    presenters:
-        - name: Mitch Gerdisch
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/mitch-gerdisch.jpg
+# The webinar presenters
+presenters:
+    - name: Mitch Gerdisch
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/mitch-gerdisch.jpg
 
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics:  ["Pulumi Insights"]
-        languages: ["TypeScript"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics:  ["Pulumi Insights"]
+    languages: ["TypeScript"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:
@@ -76,13 +72,5 @@ form:
     hubspot_form_id: 74dcae05-5647-47d0-aed4-20af46811dde
     salesforce_campaign_id: 701PQ00000VDUo1YAH
 
-event_data:
-  name: Discover and Fix Misconfigured Cloud Resources with Pulumi
-  start_date: 2025-05-28T12:00:00-04:00
-  end_date: 2025-05-28T13:00:00-04:00
-  url: "https://www.pulumi.com/resources/discover-and-fix-misconfigured-cloud-resources/"
-  description: |
-    In today's complex cloud environments, platform engineers face significant challenges in managing diverse and sprawling cloud infrastructure. This workshop introduces Pulumi Insights, a powerful solution designed to transform how organizations understand, control, and optimize their cloud estate across multiple deployment tools and platforms.
 
-    Whether you're managing a small development environment or a large multi-cloud estate, this workshop will equip you with practical strategies and tools to bring clarity, control, and efficiency to your cloud infrastructure management.
 ---

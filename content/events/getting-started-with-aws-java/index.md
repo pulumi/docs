@@ -27,48 +27,43 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: getting-started-with-aws-java
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Getting Started with AWS for Java Developers
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: 
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-02-12T09:00:00-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-02-12T09:00:00-08:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this workshop, you'll discover how Pulumi empowers Java development teams to confidently manage cloud infrastructure while maintaining enterprise-grade security and control. As organizations face increasing complexity in cloud operations, Pulumi's Cloud Engineering platform offers a natural path forward by allowing your developers to use familiar Java skills to manage cloud resources - eliminating the need to learn new domain-specific languages.
 
-    # Description of the webinar.
-    description: |
-        In this workshop, you'll discover how Pulumi empowers Java development teams to confidently manage cloud infrastructure while maintaining enterprise-grade security and control. As organizations face increasing complexity in cloud operations, Pulumi's Cloud Engineering platform offers a natural path forward by allowing your developers to use familiar Java skills to manage cloud resources - eliminating the need to learn new domain-specific languages.
-    
-        This session is designed for engineering leaders and developers looking to modernize their cloud infrastructure practices. Through practical demonstrations and real-world examples, you'll see how Pulumi's enterprise platform streamlines cloud operations by unifying infrastructure management, security controls, and secrets management in a single dashboard. We'll also explore proven strategies for adopting Pulumi within your organization, including practical approaches for transitioning from existing tools like Terraform while maintaining business continuity.
+    This session is designed for engineering leaders and developers looking to modernize their cloud infrastructure practices. Through practical demonstrations and real-world examples, you'll see how Pulumi's enterprise platform streamlines cloud operations by unifying infrastructure management, security controls, and secrets management in a single dashboard. We'll also explore proven strategies for adopting Pulumi within your organization, including practical approaches for transitioning from existing tools like Terraform while maintaining business continuity.
 
-    learn:
-        - How to write your first cloud infrastructure code in Java - perfect for Java developers looking to manage cloud resources using familiar tools and syntax
-        - How Pulumi's complete platform strengthens your cloud operations - from infrastructure deployment to built-in security controls, with modern secrets management to prevent secrets sprawl, all unified in a single dashboard
-        - Real-world strategies for bringing Pulumi to your organization, including approaches for transitioning from Terraform and other existing tools while maintaining business continuity
+learn:
+    - How to write your first cloud infrastructure code in Java - perfect for Java developers looking to manage cloud resources using familiar tools and syntax
+    - How Pulumi's complete platform strengthens your cloud operations - from infrastructure deployment to built-in security controls, with modern secrets management to prevent secrets sprawl, all unified in a single dashboard
+    - Real-world strategies for bringing Pulumi to your organization, including approaches for transitioning from Terraform and other existing tools while maintaining business continuity
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff 
-          role: Principal Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
+# The webinar presenters
+presenters:
+    - name: Josh Kodroff 
+      role: Principal Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
 
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Infrastructure as Code"]
-        languages: ["Java"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Infrastructure as Code"]
+    languages: ["Java"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:
@@ -76,13 +71,4 @@ form:
     hubspot_form_id: 60fc5939-0493-4e0c-9157-799e2ca73d7a
     salesforce_campaign_id: 701PQ00000QinAwYAJ
 
-event_data:
-  name: Getting Started with AWS for Java Developers
-  start_date: 2025-02-12T09:00:00-08:00
-  end_date: 2025-02-12T10:30:00-08:00
-  url: "https://www.pulumi.com/resources/getting-started-with-aws-java/"
-  description: |
-    In this workshop, you'll discover how Pulumi empowers Java development teams to confidently manage cloud infrastructure while maintaining enterprise-grade security and control. As organizations face increasing complexity in cloud operations, Pulumi's Cloud Engineering platform offers a natural path forward by allowing your developers to use familiar Java skills to manage cloud resources - eliminating the need to learn new domain-specific languages.
-    
-    This session is designed for engineering leaders and developers looking to modernize their cloud infrastructure practices. Through practical demonstrations and real-world examples, you'll see how Pulumi's enterprise platform streamlines cloud operations by unifying infrastructure management, security controls, and secrets management in a single dashboard. We'll also explore proven strategies for adopting Pulumi within your organization, including practical approaches for transitioning from existing tools like Terraform while maintaining business continuity.
 ---

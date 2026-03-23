@@ -27,45 +27,40 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: automating-docker-image-builds-using-pulumi
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Automate Image Builds using Pulumi and Docker Build Cloud
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-06-25T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-06-25T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this workshop, you will learn how to automate your Docker build process by leveraging the Pulumi Docker Build provider and Docker Build Cloud. You will use TypeScript to define your infrastructure as code (IaC), including the configuration of Docker builds. Additionally, you will set up a Docker Build Cloud to use external caching to reduce the time required for builds significantly.
 
-    # Description of the webinar.
-    description: |
-        In this workshop, you will learn how to automate your Docker build process by leveraging the Pulumi Docker Build provider and Docker Build Cloud. You will use TypeScript to define your infrastructure as code (IaC), including the configuration of Docker builds. Additionally, you will set up a Docker Build Cloud to use external caching to reduce the time required for builds significantly.
+learn:
+    - How to create and configure a Docker Build Cloud (DBC) builder
+    - How to create a Pulumi program in Typescript to define IaC
+    - How to build NGINX Dockerfile in Pulumi and DBC
 
-    learn:
-        - How to create and configure a Docker Build Cloud (DBC) builder
-        - How to create a Pulumi program in Typescript to define IaC
-        - How to build NGINX Dockerfile in Pulumi and DBC
+# The webinar presenters
+presenters:
+    - name: Michael Irwin
+      role: Senior Manager, Developer Relations, Docker
+      photo: /images/people/michael-irwin.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Michael Irwin
-          role: Senior Manager, Developer Relations, Docker
-          photo: /images/people/michael-irwin.jpg
-
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Docker"]
-        languages: ["TypeScript"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["Docker"]
+    languages: ["TypeScript"]
 
 # The right hand side form section.
 form:

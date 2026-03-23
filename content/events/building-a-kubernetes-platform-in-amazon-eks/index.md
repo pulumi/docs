@@ -27,50 +27,45 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: building-a-kubernetes-platform-in-amazon-eks
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Building a Kubernetes Platform in AWS EKS with Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+#youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    #youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-03-25T09:00:00-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-03-25T09:00:00-07:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this workshop, we’ll examine how Pulumi interacts with Kubernetes, and show real-world examples of managing Amazon EKS clusters. We’ll focus on building a user-friendly Kubernetes platform, installing software that makes Kubernetes easy to use for application developers.
 
-    # Description of the webinar.
-    description: |
-        In this workshop, we’ll examine how Pulumi interacts with Kubernetes, and show real-world examples of managing Amazon EKS clusters. We’ll focus on building a user-friendly Kubernetes platform, installing software that makes Kubernetes easy to use for application developers.
+    Attendees will be guided through the process of provisioning an Amazon EKS cluster and installing platform friendly software such as cert-manager and external-dns.
 
-        Attendees will be guided through the process of provisioning an Amazon EKS cluster and installing platform friendly software such as cert-manager and external-dns.
+learn:
+    - How-to provision a production-ready Amazon EKS cluster with key features enabled using Pulumi
+    - Provisioning the aws-load-balancer-controller to automate ingress creation
+    - Install an example application to show the end-to-end user experience for users.
 
-    learn:
-        - How-to provision a production-ready Amazon EKS cluster with key features enabled using Pulumi
-        - Provisioning the aws-load-balancer-controller to automate ingress creation
-        - Install an example application to show the end-to-end user experience for users.
+# The webinar presenters
+presenters:
+  - name: Josh Kodroff
+    role: Sr. Solutions Architect, Pulumi
+    photo: /images/team/josh-kodroff.jpg
+  - name: Carlos Santana
+    role: Cloud Solutions Architect, AWS
 
-    # The webinar presenters
-    presenters:
-      - name: Josh Kodroff
-        role: Sr. Solutions Architect, Pulumi
-        photo: /images/team/josh-kodroff.jpg
-      - name: Carlos Santana
-        role: Cloud Solutions Architect, AWS
-
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
-        languages: []
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["Kubernetes"]
+    languages: []
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

@@ -8,11 +8,7 @@ cloud_engineering_days:
 # A featured webinar will display first in the list.
 featured: false
 
-# If the video is pre-recorded or live.
-pre_recorded: true
 
-# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
-pulumi_tv: false
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -40,25 +36,21 @@ hero:
     # The title text in the hero. This also serves as the pages H1.
     title: "Automation API Under the Hood"
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "Automation API Under the Hood"
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/8nAbrJg6KFM?rel=0"
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-11-02T11:20:00-07:00
-    # Duration of the webinar.
-    duration: "17 minutes"
-    # Description of the webinar.
-    description: |
-        Evan Boyle and Casey Huang give you a guided tour of the Pulumi Automation API and Pulumi Deployments.
-        Pulumi's Automation API allows you to embed Pulumi within your application code, making it easy to create custom experiences on top of Pulumi that are tailored to your use case, domain, and team. 
+# URL for embedding a URL for ungated webinars.
+youtube_url: "https://www.youtube.com/embed/8nAbrJg6KFM?rel=0"
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2022-11-02T11:20:00-07:00
+# Duration of the webinar.
+duration: "17 minutes"
+# Description of the webinar.
+description: |
+    Evan Boyle and Casey Huang give you a guided tour of the Pulumi Automation API and Pulumi Deployments.
+    Pulumi's Automation API allows you to embed Pulumi within your application code, making it easy to create custom experiences on top of Pulumi that are tailored to your use case, domain, and team. 
 
-    # The webinar presenters
-    presenters:
-        - name: Casey Huang
-          role: Software Engineer, Pulumi
-        - name: Evan Boyle
-          role: Software Engineer, Pulumi
+# The webinar presenters
+presenters:
+    - name: Casey Huang
+      role: Software Engineer, Pulumi
+    - name: Evan Boyle
+      role: Software Engineer, Pulumi
 ---

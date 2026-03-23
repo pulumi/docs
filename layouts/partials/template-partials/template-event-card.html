@@ -31,12 +31,12 @@
                 <div class="flex items-start justify-between gap-4 mb-4">
                     <div class="flex-1">
                         <div class="flex items-center gap-2 mb-3">
-                            <span class="event-card-type">{{ .data.Params.main.event_type }}</span>
+                            <span class="event-card-type">{{ .data.Params.event_type }}</span>
                             <span class="text-gray-300">·</span>
-                            {{ if .data.Params.main.youtube_url }}
+                            {{ if .data.Params.youtube_url }}
                                 <span class="event-card-location">On-demand</span>
                             {{ else }}
-                                <span class="event-card-location">{{ .data.Params.main.location | title }}</span>
+                                <span class="event-card-location">{{ .data.Params.location | title }}</span>
                             {{ end }}
                         </div>
                         <h3 class="event-card-title">
@@ -59,29 +59,29 @@
             </div>
             <div class="flex items-end justify-between mt-4 pt-4 border-t border-gray-100">
                 <div class="flex flex-row flex-wrap gap-1.5">
-                    {{ if .data.Params.main.tags }}
-                        {{ if .data.Params.main.tags.level }}
-                            <span class="event-card-tag">{{ .data.Params.main.tags.level }}</span>
+                    {{ if .data.Params.tags }}
+                        {{ if .data.Params.tags.level }}
+                            <span class="event-card-tag">{{ .data.Params.tags.level }}</span>
                         {{ end }}
-                        {{ if .data.Params.main.tags.clouds }}
-                            {{ range $cloud := .data.Params.main.tags.clouds }}
+                        {{ if .data.Params.tags.clouds }}
+                            {{ range $cloud := .data.Params.tags.clouds }}
                                 <span class="event-card-tag">{{ $cloud }}</span>
                             {{ end }}
                         {{ end }}
-                        {{ if .data.Params.main.tags.topics }}
-                            {{ range $topic := .data.Params.main.tags.topics }}
+                        {{ if .data.Params.tags.topics }}
+                            {{ range $topic := .data.Params.tags.topics }}
                                 <span class="event-card-tag">{{ $topic }}</span>
                             {{ end }}
                         {{ end }}
-                        {{ if .data.Params.main.tags.languages }}
-                            {{ range $language := .data.Params.main.tags.languages }}
+                        {{ if .data.Params.tags.languages }}
+                            {{ range $language := .data.Params.tags.languages }}
                                 <span class="event-card-tag">{{ $language }}</span>
                             {{ end }}
                         {{ end }}
                     {{ end }}
                 </div>
                 <span class="event-card-cta">
-                    {{ if .data.Params.main.youtube_url }}
+                    {{ if .data.Params.youtube_url }}
                         Watch <span class="hidden sm:inline">on-demand</span> <i class="fa fa-arrow-right ml-1"></i>
                     {{ else if .upcoming }}
                         Register <i class="fa fa-arrow-right ml-1"></i>

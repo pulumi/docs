@@ -27,37 +27,32 @@ block_external_search_index: true
 # webinar, use the external URL as the value here.
 url_slug: https://www.pulumi.com/kubecon
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: KubeCon + CloudNativeCon Europe 2026
+event_type: event # workshop | event
 
-    event_type: event # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2026-03-23T09:00:00+00:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2026-03-23T09:00:00+00:00
+# Duration of the webinar.
+duration: 4 days
 
-    # Duration of the webinar.
-    duration: 4 days
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: Amsterdam
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: Amsterdam
+# Description of the webinar.
+description: |
+    Meet the Pulumi team at KubeCon Europe 2026 to see how teams manage Kubernetes with code, reduce YAML complexity, and deploy across AWS, Azure, and GCP.
 
-    # Description of the webinar.
-    description: |
-        Meet the Pulumi team at KubeCon Europe 2026 to see how teams manage Kubernetes with code, reduce YAML complexity, and deploy across AWS, Azure, and GCP.
+# The webinar presenters
+presenters:
 
-    # The webinar presenters
-    presenters:
-
-    # case-sensitive
-    tags:
-        level: # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
-        languages: []
+# case-sensitive
+tags:
+    level: # Beginner, Intermediate, Advanced
+    topics: ["Kubernetes"]
+    languages: []
 
 # The right hand side form section.
 form:

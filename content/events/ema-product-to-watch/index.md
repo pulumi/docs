@@ -5,20 +5,12 @@ meta_desc: "Pulumi has been named an EMA Product to Watch in 2022/23 for the Inf
 
 meta_image: /images/resources/ema-meta-image.png
 
-# Set the whitepaper flag.
-whitepaper: true
 
 # A featured webinar will display first in the list.
 featured: false
 
-# If the video is pre-recorded or live.
-pre_recorded: false
 
-# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
-pulumi_tv: false
 
-# The preview image will be shown on the list page.
-preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: true
@@ -53,34 +45,30 @@ hero:
 #     hubspot_form_id: ""
 #     gotowebinar_key: ""
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "EMA Product to Watch"
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-05-05T10:00:00-07:00
-    # Duration of the webinar.
-    duration: "8 pages"
-    # Datetime of the webinar.
-    datetime: ""
-    # Description of the webinar.
-    description: |
-        Pulumi created a cloud engineering platform that allows developers, operators, and security staff to apply standard software engineering principles to creating infrastructure code and policies alongside application code. This brings the ultimate degree of consistency, compliance, and efficiency to software development, deployment, and day-2 management.
+# URL for embedding a URL for ungated webinars.
+youtube_url: ""
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2022-05-05T10:00:00-07:00
+# Duration of the webinar.
+duration: "8 pages"
+# Datetime of the webinar.
+datetime: ""
+# Description of the webinar.
+description: |
+    Pulumi created a cloud engineering platform that allows developers, operators, and security staff to apply standard software engineering principles to creating infrastructure code and policies alongside application code. This brings the ultimate degree of consistency, compliance, and efficiency to software development, deployment, and day-2 management.
 
-        <img src="/images/resources/ema-pie-charts.png" alt="EMA Report" />
+    <img src="/images/resources/ema-pie-charts.png" alt="EMA Report" />
 
-        Submit the form to read the full report.
+    Submit the form to read the full report.
 
-    # The webinar presenters
-    presenters:
-        - name: Torsten Volk
-          role: Managing Research Director for Cloud-Native, DevOps, Machine Learning, and AI
+# The webinar presenters
+presenters:
+    - name: Torsten Volk
+      role: Managing Research Director for Cloud-Native, DevOps, Machine Learning, and AI
 
-    # A bullet point list containing what the user will learn during the webinar.
-    learn:
-        - Learn why Pulumi is a product to watch in 2022/2023
+# A bullet point list containing what the user will learn during the webinar.
+learn:
+    - Learn why Pulumi is a product to watch in 2022/2023
 
 # The right hand side form section.
 form:

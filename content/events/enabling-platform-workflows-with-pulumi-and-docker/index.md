@@ -27,50 +27,46 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: enabling-platform-workflows-with-pulumi-and-docker
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Enabling Platform Workflows with Pulumi and Docker
-    event_type: workshop # workshop | event
+event_type: workshop # workshop | event
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+# URL for embedding a URL for ungated webinars.
+youtube_url: 
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-05-21T12:00:00-04:00
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-05-21T12:00:00-04:00
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# Duration of the webinar.
+duration: 60 minutes
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Description of the webinar.
-    description: |
-        Modern workloads require frequent container builds and deployments, but traditional build processes can be slow and resource-intensive, creating bottlenecks in your delivery pipeline. Docker Build Cloud offers distributed, cached builds that can dramatically reduce build times, while Pulumi provides the orchestration layer to automate your entire deployment workflow using familiar programming languages.
+# Description of the webinar.
+description: |
+    Modern workloads require frequent container builds and deployments, but traditional build processes can be slow and resource-intensive, creating bottlenecks in your delivery pipeline. Docker Build Cloud offers distributed, cached builds that can dramatically reduce build times, while Pulumi provides the orchestration layer to automate your entire deployment workflow using familiar programming languages.
 
-        In this hands-on workshop, you'll learn how to integrate Docker Build Cloud with Pulumi to create a streamlined container build and deployment pipeline. We'll demonstrate how to leverage Docker Build Cloud's distributed architecture and layer caching to accelerate builds, while using Pulumi to automate the end-to-end process from foundational infrastructure to container build to production deployment.
+    In this hands-on workshop, you'll learn how to integrate Docker Build Cloud with Pulumi to create a streamlined container build and deployment pipeline. We'll demonstrate how to leverage Docker Build Cloud's distributed architecture and layer caching to accelerate builds, while using Pulumi to automate the end-to-end process from foundational infrastructure to container build to production deployment.
 
-    learn:
-        - How to configure Docker Build Cloud and integrate it with your existing container build pipeline.
-        - Techniques for optimizing container builds with intelligent caching and distributed processing.
-        - Best practices for automating container deployments using Pulumi's infrastructure as code.
+learn:
+    - How to configure Docker Build Cloud and integrate it with your existing container build pipeline.
+    - Techniques for optimizing container builds with intelligent caching and distributed processing.
+    - Best practices for automating container deployments using Pulumi's infrastructure as code.
 
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Principal Customer Success Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Nelson Espinal
-          role: Global Solutions Engineer - Strategic Alliances, Docker
+# The webinar presenters
+presenters:
+    - name: Josh Kodroff
+      role: Principal Customer Success Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Nelson Espinal
+      role: Global Solutions Engineer - Strategic Alliances, Docker
 
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics:  ["Docker", "Containers", "Platform Engineering"]
-        languages: ["TypeScript"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics:  ["Docker", "Containers", "Platform Engineering"]
+    languages: ["TypeScript"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:
@@ -78,13 +74,5 @@ form:
     hubspot_form_id: f1a54d48-f0d7-4bda-ab85-61781d55dfb2
     salesforce_campaign_id: 701PQ00000VDMc0YAH
 
-event_data:
-  name: Enabling Platform Workflows with Pulumi and Docker
-  start_date: 2025-05-21T12:00:00-04:00
-  end_date: 2025-05-21T13:00:00-04:00
-  url: "https://www.pulumi.com/resources/enabling-platform-workflows-with-pulumi-and-docker/"
-  description: |
-    Modern workloads require frequent container builds and deployments, but traditional build processes can be slow and resource-intensive, creating bottlenecks in your delivery pipeline. Docker Build Cloud offers distributed, cached builds that can dramatically reduce build times, while Pulumi provides the orchestration layer to automate your entire deployment workflow using familiar programming languages.
 
-    In this hands-on workshop, you'll learn how to integrate Docker Build Cloud with Pulumi to create a streamlined container build and deployment pipeline. We'll demonstrate how to leverage Docker Build Cloud's distributed architecture and layer caching to accelerate builds, while using Pulumi to automate the end-to-end process from foundational infrastructure to container build to production deployment.
 ---

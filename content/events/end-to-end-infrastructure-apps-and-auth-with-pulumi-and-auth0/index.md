@@ -27,49 +27,44 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: end-to-end-infrastructure-apps-and-auth-with-pulumi-and-auth0
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: End-To-End Infrastructure, Apps, and Auth with Auth0
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2022-06-07T16:00:00-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-06-07T16:00:00-07:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this session, we’ll walk you through the process of building a three-tier web app: a single-page app built with React, a back end consisting of a REST API managed with Express and MongoDB. We’ll also show you how to enable authentication to restrict access to your app.
 
-    # Description of the webinar.
-    description: |
-        In this session, we’ll walk you through the process of building a three-tier web app: a single-page app built with React, a back end consisting of a REST API managed with Express and MongoDB. We’ll also show you how to enable authentication to restrict access to your app.
+    Everything will be configured and deployed to the cloud using Pulumi.
 
-        Everything will be configured and deployed to the cloud using Pulumi.
+learn:
+    - How to provision Auth0 alongside cloud resources using JavaScript and Pulumi
+    - How to deploy a basic web app with authentication enabled.
+    - Common-sense policies for avoiding mistakes in production.
 
-    learn:
-        - How to provision Auth0 alongside cloud resources using JavaScript and Pulumi
-        - How to deploy a basic web app with authentication enabled.
-        - Common-sense policies for avoiding mistakes in production.
+# The webinar presenters
+presenters:
+    - name: Matt Stratton
+      role: Staff Developer Advocate, Pulumi
+      photo: /images/team/matt-stratton.jpg
+    - name: Ben Dechrai
+      role: Senior Developer Advocate, Auth0
 
-    # The webinar presenters
-    presenters:
-        - name: Matt Stratton
-          role: Staff Developer Advocate, Pulumi
-          photo: /images/team/matt-stratton.jpg
-        - name: Ben Dechrai
-          role: Senior Developer Advocate, Auth0
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Auth0", "React"]
-        languages: ["JavaScript"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Auth0", "React"]
+    languages: ["JavaScript"]
 
 # The right hand side form section.
 form:

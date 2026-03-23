@@ -28,50 +28,45 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: cloud-compliance-policy-as-code
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "Automate Cloud Compliance with Policy as Code"
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: 
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-02-19T09:00:00-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-02-19T09:00:00-08:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+   As organizations scale their cloud infrastructure, maintaining security and compliance becomes increasingly complex. This workshop explores how Policy as Code (PaC) transforms traditional manual compliance processes into automated, version-controlled, and programmatically enforced guardrails
+   
+   Participants will learn how to implement effective cloud governance strategies using modern PaC approaches, including writing custom policies, integrating them into CI/CD pipelines, and establishing automated enforcement mechanisms. Through practical demonstrations using Pulumi Policies, you'll discover how to bridge the gap between security requirements and infrastructure deployment while maintaining development velocity.
+   
+   Whether you're dealing with cost management, security compliance, or architectural standards, you'll leave with actionable insights to implement PaC in your organization.
 
-    # Description of the webinar.
-    description: |
-       As organizations scale their cloud infrastructure, maintaining security and compliance becomes increasingly complex. This workshop explores how Policy as Code (PaC) transforms traditional manual compliance processes into automated, version-controlled, and programmatically enforced guardrails
-       
-       Participants will learn how to implement effective cloud governance strategies using modern PaC approaches, including writing custom policies, integrating them into CI/CD pipelines, and establishing automated enforcement mechanisms. Through practical demonstrations using Pulumi Policies, you'll discover how to bridge the gap between security requirements and infrastructure deployment while maintaining development velocity.
-       
-       Whether you're dealing with cost management, security compliance, or architectural standards, you'll leave with actionable insights to implement PaC in your organization.
+learn:
+    - How to transform compliance requirements into programmatic rules that can be version-controlled and automatically enforced
+    - How to integrate policy enforcement into developer workflows and CI/CD pipelines to catch violations early in the development lifecycle and ensure your cloud environments stay in compliance
+    - How to manage evolving security and compliance requirements against infrastructure at scale
 
-    learn:
-        - How to transform compliance requirements into programmatic rules that can be version-controlled and automatically enforced
-        - How to integrate policy enforcement into developer workflows and CI/CD pipelines to catch violations early in the development lifecycle and ensure your cloud environments stay in compliance
-        - How to manage evolving security and compliance requirements against infrastructure at scale
+# The webinar presenters
+presenters:
+    - name: James Connell
+      role: Sr Solutions Architect, Pulumi
+      photo: /images/team/James-Connell.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: James Connell
-          role: Sr Solutions Architect, Pulumi
-          photo: /images/team/James-Connell.jpg
-
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Platform Engineering"]
-        languages: ["TypeScript"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["Platform Engineering"]
+    languages: ["TypeScript"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:
@@ -79,15 +74,4 @@ form:
     hubspot_form_id: 37582977-ca15-467e-9238-900a45939faf
     salesforce_campaign_id: 701PQ00000ObegbYAB
 
-event_data:
-  name: "Automate Cloud Compliance with Policy as Code"
-  start_date: 2025-02-19T09:00:00-08:00
-  end_date: 2025-02-19T10:00:00-08:00
-  url: "https://www.pulumi.com/resources/cloud-compliance-policy-as-code/"
-  description: |
-    As organizations scale their cloud infrastructure, maintaining security and compliance becomes increasingly complex. This workshop explores how Policy as Code (PaC) transforms traditional manual compliance processes into automated, version-controlled, and programmatically enforced guardrails.
-    
-    Participants will learn how to implement effective cloud governance strategies using modern PaC approaches, including writing custom policies, integrating them into CI/CD pipelines, and establishing automated enforcement mechanisms. Through practical demonstrations using Pulumi Policies, you'll discover how to bridge the gap between security requirements and infrastructure deployment while maintaining development velocity.
-    
-    Whether you're dealing with cost management, security compliance, or architectural standards, you'll leave with actionable insights to implement PaC in your organization.
 ---

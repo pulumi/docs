@@ -27,42 +27,38 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: self-service-ai-application-platforms
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "Self-Service AI Application Platforms"
-    event_type: workshop # workshop | event
+event_type: workshop # workshop | event
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+# URL for embedding a URL for ungated webinars.
+youtube_url: 
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-09-09T12:00:00-04:00
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-09-09T12:00:00-04:00
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# Duration of the webinar.
+duration: 60 minutes
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Description of the webinar.
-    description: |
-        The rise of LLM applications creates new infrastructure challenges related to GPU resources, model serving, and cost management. This cutting-edge workshop demonstrates how to extend your IDP to support AI application teams with self-service infrastructure for AI-powered applications and agents. You'll learn to create templates for model serving, implement cost controls for GPU resources, and provide integration patterns for common use cases.
-    learn:
-        - How to create self-service templates for LLM application infrastructure and GPU resources
-        - Security patterns for handling sensitive data in AI-powered applications and API key management.
+# Description of the webinar.
+description: |
+    The rise of LLM applications creates new infrastructure challenges related to GPU resources, model serving, and cost management. This cutting-edge workshop demonstrates how to extend your IDP to support AI application teams with self-service infrastructure for AI-powered applications and agents. You'll learn to create templates for model serving, implement cost controls for GPU resources, and provide integration patterns for common use cases.
+learn:
+    - How to create self-service templates for LLM application infrastructure and GPU resources
+    - Security patterns for handling sensitive data in AI-powered applications and API key management.
 
-    # The webinar presenters
-    presenters:
-        - name: Engin Diri
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/engin-diri.jpg
+# The webinar presenters
+presenters:
+    - name: Engin Diri
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/engin-diri.jpg
 
-    # case-sensitive
-    tags:
-        level: Advanced # Beginner, Intermediate, Advanced
-        topics:  ["AI", "LLM", "GPU Infrastructure"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Advanced # Beginner, Intermediate, Advanced
+    topics:  ["AI", "LLM", "GPU Infrastructure"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:
@@ -70,11 +66,4 @@ form:
     hubspot_form_id: 80baf260-52f7-481b-a085-5b8575eac389
     salesforce_campaign_id: 701PQ00000ZY23IYAT
 
-event_data:
-  name: "Self-Service AI Application Platforms"
-  start_date: 2025-09-09T12:00:00-04:00
-  end_date: 2025-09-09T13:00:00-04:00
-  url: "https://www.pulumi.com/resources/self-service-ai-application-platforms/"
-  description: |
-        The rise of LLM applications creates new infrastructure challenges related to GPU resources, model serving, and cost management. This cutting-edge workshop demonstrates how to extend your IDP to support AI application teams with self-service infrastructure for AI-powered applications and agents. You'll learn to create templates for model serving, implement cost controls for GPU resources, and provide integration patterns for common use cases.
 --- 

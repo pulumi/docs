@@ -27,47 +27,42 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: intro-to-infrastructure-as-code-with-yaml
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Intro to Infrastructure as Code with YAML
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/_A4hSJ_h6FQ?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/_A4hSJ_h6FQ?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2022-12-15T18:00:00.000Z
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-12-15T18:00:00.000Z
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
-
-    # Description of the webinar.
-    description: |
-        In this workshop, we’re going to learn more about cloud computing and Infrastructure as Code by exploring how to use Pulumi to build, configure, and deploy a real-life, modern application using Docker. We will create a frontend, a backend, and a database to deploy the Pulumipus Boba Tea Shop, and along the way, learn more about how Pulumi works to make managing all of these different moving pieces a little bit less painful!
+# Description of the webinar.
+description: |
+    In this workshop, we’re going to learn more about cloud computing and Infrastructure as Code by exploring how to use Pulumi to build, configure, and deploy a real-life, modern application using Docker. We will create a frontend, a backend, and a database to deploy the Pulumipus Boba Tea Shop, and along the way, learn more about how Pulumi works to make managing all of these different moving pieces a little bit less painful!
 
 
-        If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/) and [the Pulumi CLI](https://www.pulumi.com/docs/install/).
+    If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/) and [the Pulumi CLI](https://www.pulumi.com/docs/install/).
 
-    learn:
-        - How to use YAML with Pulumi.
-        - How to provision Docker containers with Pulumi.
+learn:
+    - How to use YAML with Pulumi.
+    - How to provision Docker containers with Pulumi.
 
-    # The webinar presenters
-    presenters:
-        - name: Scott Lowe
-          role: Sr. Technical Content Engineer, Pulumi
-          photo: /images/team/scott-lowe.jpg
+# The webinar presenters
+presenters:
+    - name: Scott Lowe
+      role: Sr. Technical Content Engineer, Pulumi
+      photo: /images/team/scott-lowe.jpg
 
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Docker"]
-        languages: ["YAML"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Docker"]
+    languages: ["YAML"]
 
 # The right hand side form section.
 form:

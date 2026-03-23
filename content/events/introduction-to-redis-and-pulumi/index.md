@@ -27,49 +27,44 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: introduction-to-redis-and-pulumi
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Introduction to Redis Cloud and Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/4DNFtD42bYE?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/4DNFtD42bYE?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-07-13T06:00:00-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-07-13T06:00:00-07:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Redis Cloud makes apps faster by providing an in-memory database that enables teams to create a real-time data platform. Join the Pulumi and Redis team to learn how to provision Redis Cloud alongside other cloud resources on AWS, Azure and Google Cloud - all using your favorite programming languages and the new Redis Cloud provider for Pulumi.
 
-    # Description of the webinar.
-    description: |
-        Redis Cloud makes apps faster by providing an in-memory database that enables teams to create a real-time data platform. Join the Pulumi and Redis team to learn how to provision Redis Cloud alongside other cloud resources on AWS, Azure and Google Cloud - all using your favorite programming languages and the new Redis Cloud provider for Pulumi.
+learn:
+    - How to get started with NoSQL using Redis Cloud.
+    - Defining and deploying Redis Cloud resources using popular programming languages 
+    - How to use Pulumi and Redis together.
 
-    learn:
-        - How to get started with NoSQL using Redis Cloud.
-        - Defining and deploying Redis Cloud resources using popular programming languages 
-        - How to use Pulumi and Redis together.
+# The webinar presenters
+presenters:
+    - name: Josh Kodroff
+      role: Sr Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Noam Stern
+      role: Product Manager, Redis
+    - name: Greg Georges
+      role: Sr Enablement Architect
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Sr Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Noam Stern
-          role: Product Manager, Redis
-        - name: Greg Georges
-          role: Sr Enablement Architect
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Redis"]
-        languages: []
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Redis"]
+    languages: []
 
 # The right hand side form section.
 form:

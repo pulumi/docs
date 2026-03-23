@@ -27,50 +27,45 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: scaling-ai-apps
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Scaling AI Apps
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/D0cOJNf0pCQ?si=fWOK5IXu-sG3-C6A?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/D0cOJNf0pCQ?si=fWOK5IXu-sG3-C6A?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-01-24T09:00:00.000-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-01-24T09:00:00.000-08:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    What does it take to go from an idea in a notebook to an application handling real-world traffic? In this workshop, the Pinecone and Pulumi teams will explore the infrastructure and service architecture you need to scale AI apps in production. 
 
-    # Description of the webinar.
-    description: |
-        What does it take to go from an idea in a notebook to an application handling real-world traffic? In this workshop, the Pinecone and Pulumi teams will explore the infrastructure and service architecture you need to scale AI apps in production. 
+    This workshop is designed to help AI developers and engineers build and scale AI infrastructure. We will guide you through the Pulumi platform with diagrams and a series of labs to help accelerate your AI app
 
-        This workshop is designed to help AI developers and engineers build and scale AI infrastructure. We will guide you through the Pulumi platform with diagrams and a series of labs to help accelerate your AI app
+learn:
+    - The basics of infrastructure as code and the Pulumi programming model
+    - How to provision, update, and destroy AWS resources
+    - How to create and manage Pinecone indexes
 
-    learn:
-        - The basics of infrastructure as code and the Pulumi programming model
-        - How to provision, update, and destroy AWS resources
-        - How to create and manage Pinecone indexes
+# The webinar presenters
+presenters:
+    - name: Engin Diri
+      role: Sr. Community Engineer, Pulumi
+      photo: /images/team/engin-diri.jpg
+    - name: Zack Proser
+      role: Staff Developer Advocate, Pinecone
 
-    # The webinar presenters
-    presenters:
-        - name: Engin Diri
-          role: Sr. Community Engineer, Pulumi
-          photo: /images/team/engin-diri.jpg
-        - name: Zack Proser
-          role: Staff Developer Advocate, Pinecone
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["AI", "Pinecone"]
-        languages:
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["AI", "Pinecone"]
+    languages:
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

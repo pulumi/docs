@@ -27,47 +27,42 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: getting-started-with-kubernetes-google-cloud
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Getting Started with Kubernetes on Google Cloud
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2026-05-13T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2026-05-13T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 60 minutes
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Getting started with Kubernetes on Google Cloud doesn’t have to be complex. This workshop introduces the fundamentals of running Kubernetes using Google Kubernetes Engine (GKE) and shows how Pulumi can be used to define and manage Kubernetes and cloud infrastructure in code.
 
-    # Description of the webinar.
-    description: |
-        Getting started with Kubernetes on Google Cloud doesn’t have to be complex. This workshop introduces the fundamentals of running Kubernetes using Google Kubernetes Engine (GKE) and shows how Pulumi can be used to define and manage Kubernetes and cloud infrastructure in code.
+    You’ll be guided through creating a GKE cluster and deploying a containerized application, using diagrams and hands-on exercises to reinforce core Kubernetes concepts. The focus is on practical, beginner-friendly workflows that help you understand how Kubernetes works on Google Cloud before moving on to more advanced topics.
+learn:
+    - Create a Google Kubernetes Engine (GKE) cluster using Pulumi
+    - Build reusable infrastructure components for GKE
+    - Deploy and update containerized applications to GKE using safe, repeatable workflows
+    - Understand the lifecycle of Kubernetes infrastructure on Google Cloud
+# The webinar presenters
+presenters:
+    - name: Adam Gordon Bell
+      role: Community Engineer, Pulumi
+      photo: /images/team/adam-gordon-bell.jpg
 
-        You’ll be guided through creating a GKE cluster and deploying a containerized application, using diagrams and hands-on exercises to reinforce core Kubernetes concepts. The focus is on practical, beginner-friendly workflows that help you understand how Kubernetes works on Google Cloud before moving on to more advanced topics.
-    learn:
-        - Create a Google Kubernetes Engine (GKE) cluster using Pulumi
-        - Build reusable infrastructure components for GKE
-        - Deploy and update containerized applications to GKE using safe, repeatable workflows
-        - Understand the lifecycle of Kubernetes infrastructure on Google Cloud
-    # The webinar presenters
-    presenters:
-        - name: Adam Gordon Bell
-          role: Community Engineer, Pulumi
-          photo: /images/team/adam-gordon-bell.jpg
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes", "Google Kubernetes Engine (GKE)", "Automation"]
-        languages: []
-        clouds: ["Google Cloud"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Kubernetes", "Google Kubernetes Engine (GKE)", "Automation"]
+    languages: []
+    clouds: ["Google Cloud"]
 
 # The right hand side form section.
 form:
@@ -75,11 +70,4 @@ form:
     hubspot_form_id: aeff7912-e56d-4d8d-96ff-d3a88538e524
     salesforce_campaign_id: 701PQ00000qEJ3KYAW
 
-event_data:
-  name: "Getting Started with Kubernetes on Google Cloud"
-  start_date: 2026-05-13T09:00:00.000-07:00
-  end_date: 2026-05-13T10:00:00.000-07:00
-  url: "https://www.pulumi.com/events/getting-started-with-kubernetes-google-cloud/"
-  description: |
-    Getting started with Kubernetes on Google Cloud doesn’t have to be complex. This workshop introduces the fundamentals of running Kubernetes using Google Kubernetes Engine (GKE) and shows how Pulumi can be used to define and manage Kubernetes and cloud infrastructure in code.
 ---

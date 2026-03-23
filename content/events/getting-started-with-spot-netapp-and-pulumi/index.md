@@ -27,46 +27,41 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: getting-started-with-spot-netapp-and-pulumi
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Getting started with Spot by NetApp with Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-03-11T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-03-11T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this workshop, we learn about the synergy of Pulumi and Spot by NetApp. Learn to architect and automate resilient, cost-efficient cloud infrastructures using Pulumi's infrastructure-as-code capabilities in tandem with Spot's cloud optimization solutions. This session offers practical, hands-on experience in leveraging these powerful tools to minimize costs while maximizing performance across your cloud environments. Whether you're just starting out or are an experienced cloud professional, this workshop is designed to equip you with the knowledge and skills to effectively integrate Pulumi and Spot into your cloud strategy.
 
-    # Description of the webinar.
-    description: |
-        In this workshop, we learn about the synergy of Pulumi and Spot by NetApp. Learn to architect and automate resilient, cost-efficient cloud infrastructures using Pulumi's infrastructure-as-code capabilities in tandem with Spot's cloud optimization solutions. This session offers practical, hands-on experience in leveraging these powerful tools to minimize costs while maximizing performance across your cloud environments. Whether you're just starting out or are an experienced cloud professional, this workshop is designed to equip you with the knowledge and skills to effectively integrate Pulumi and Spot into your cloud strategy.
+learn:
+    - How to minimize costs and maximize performance across cloud environments
+    - How to architect and automate cost-efficient cloud infrastructure
 
-    learn:
-        - How to minimize costs and maximize performance across cloud environments
-        - How to architect and automate cost-efficient cloud infrastructure
+# The webinar presenters
+presenters:
+    - name: Shon Harris
+      role: Developer Relations Lead, NetApp
+    - name: Engin Diri
+      role: Sr. Community Engineer, Pulumi
+      photo: /images/team/engin-diri.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Shon Harris
-          role: Developer Relations Lead, NetApp
-        - name: Engin Diri
-          role: Sr. Community Engineer, Pulumi
-          photo: /images/team/engin-diri.jpg
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Spot"]
-        languages: []
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Spot"]
+    languages: []
 
 # The right hand side form section.
 form:

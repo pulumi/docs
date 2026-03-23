@@ -27,47 +27,42 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: getting-started-with-infrastructure-as-code-aws
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Getting Started with Infrastructure as Code on AWS
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-04-18T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-04-18T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
 
-    # Description of the webinar.
-    description: |
-        In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
+    This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi.
 
-        This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi.
+learn:
+    - How to use Python with Pulumi
+    - The basics of the Pulumi Programming Model
+    - How to provision, update, and destroy AWS resources
 
-    learn:
-        - How to use Python with Pulumi
-        - The basics of the Pulumi Programming Model
-        - How to provision, update, and destroy AWS resources
+# The webinar presenters
+presenters:
+    - name: TBD
+      role: TBD
 
-    # The webinar presenters
-    presenters:
-        - name: TBD
-          role: TBD
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: []
-        languages: ["Python"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: []
+    languages: ["Python"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

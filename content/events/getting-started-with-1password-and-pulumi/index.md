@@ -27,48 +27,43 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: getting-started-with-1password-and-pulumi
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Getting Started with 1Password and Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/K_02cyfA5gE?si=QksmdY81T6Qjb2vO?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/K_02cyfA5gE?si=QksmdY81T6Qjb2vO?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-09-12T08:00:00-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-09-12T08:00:00-07:00
+# Duration of the webinar.
+duration: 30 minutes
 
-    # Duration of the webinar.
-    duration: 30 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Software developers need to secure their workflows to prevent the accidental exposure of API keys and other secrets. 1Password is known as a capable password manager, but [1Password Developer Tools](https://developer.1password.com/) also provide a set of capabilities to secure secrets throughout the software development lifecycle.
 
-    # Description of the webinar.
-    description: |
-        Software developers need to secure their workflows to prevent the accidental exposure of API keys and other secrets. 1Password is known as a capable password manager, but [1Password Developer Tools](https://developer.1password.com/) also provide a set of capabilities to secure secrets throughout the software development lifecycle.
+    In this session, Sr. Software Engineer Jillian Morgan digs into how to use the 1Password CLI to manage secrets in a Pulumi workflow. Join Pulumi and 1Password for a short walkthrough of this powerful new feature and get your questions answered by the experts.
 
-        In this session, Sr. Software Engineer Jillian Morgan digs into how to use the 1Password CLI to manage secrets in a Pulumi workflow. Join Pulumi and 1Password for a short walkthrough of this powerful new feature and get your questions answered by the experts.
+learn:
+    - How to create policies for resource level validation.
+    - How to create Policy Packs for organizing organization wide policies.
 
-    learn:
-        - How to create policies for resource level validation.
-        - How to create Policy Packs for organizing organization wide policies.
+# The webinar presenters
+presenters:
+    - name: Ringo De Smet
+      role: Customer Experience Architect, Pulumi
+      photo: /images/team/ringo-de-smet.jpg
+    - name: Jillian Morgan
+      role: Senior Software Engineer, 1Password
 
-    # The webinar presenters
-    presenters:
-        - name: Ringo De Smet
-          role: Customer Experience Architect, Pulumi
-          photo: /images/team/ringo-de-smet.jpg
-        - name: Jillian Morgan
-          role: Senior Software Engineer, 1Password
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["1Password"]
-        languages: []
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["1Password"]
+    languages: []
 
 # The right hand side form section.
 form:

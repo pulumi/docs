@@ -6,14 +6,8 @@ meta_desc: Dive into Generative AI, Apps, and DevOps through Lighting Talks and 
 # A featured webinar will display first in the list.
 featured: false
 
-# If the video is pre-recorded or live.
-pre_recorded: false
 
-# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
-pulumi_tv: false
 
-# The preview image will be shown on the list page.
-preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: true
@@ -48,29 +42,25 @@ hero:
 #     hubspot_form_id: ""
 #     gotowebinar_key: ""
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: ""
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-10-19T17:00:00-07:00
-    # Duration of the webinar.
-    duration: "1 day"
-    # Datetime of the webinar.
-    datetime: ""
-    # Description of the webinar.
-    description: ""
+# URL for embedding a URL for ungated webinars.
+youtube_url: ""
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-10-19T17:00:00-07:00
+# Duration of the webinar.
+duration: "1 day"
+# Datetime of the webinar.
+datetime: ""
+# Description of the webinar.
+description: ""
 
-    # The webinar presenters
-    presenters:
-        - name: ""
-          role: ""
+# The webinar presenters
+presenters:
+    - name: ""
+      role: ""
 
-    # A bullet point list containing what the user will learn during the webinar.
-    learn:
-        - ""
+# A bullet point list containing what the user will learn during the webinar.
+learn:
+    - ""
 
 # The right hand side form section.
 form:

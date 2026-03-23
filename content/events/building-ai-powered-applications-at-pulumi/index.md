@@ -27,46 +27,41 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: building-ai-powered-applications-at-pulumi
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Building AI-powered Applications at Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-07-10T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-07-10T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Developers, DevOps, and Platform Engineering teams are increasingly charged with helping their organizations to deliver product innovation using AI capabilities. For the past 18 months, Pulumi has built and shipped a variety a AI-powered capabilities for customers using Pulumi Cloud to manage underlying AI infrastructure.
 
-    # Description of the webinar.
-    description: |
-        Developers, DevOps, and Platform Engineering teams are increasingly charged with helping their organizations to deliver product innovation using AI capabilities. For the past 18 months, Pulumi has built and shipped a variety a AI-powered capabilities for customers using Pulumi Cloud to manage underlying AI infrastructure.
+    In this session, you'll hear from Pulumi Engineering Manager, Aaron Friel about the lessons learned building applications with Large Language Models at Pulumi.
 
-        In this session, you'll hear from Pulumi Engineering Manager, Aaron Friel about the lessons learned building applications with Large Language Models at Pulumi.
+learn:
+    - Best practices for experimenting with AI in product development
+    - Architecture and cost considerations when managing AI infrastructure at scale
 
-    learn:
-        - Best practices for experimenting with AI in product development
-        - Architecture and cost considerations when managing AI infrastructure at scale
+# The webinar presenters
+presenters:
+    - name: Aaron Friel
+      role: Engineering Manager, Pulumi
+      photo: /images/team/aaron-friel.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Aaron Friel
-          role: Engineering Manager, Pulumi
-          photo: /images/team/aaron-friel.jpg
-
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["AI"]
-        languages: []
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["AI"]
+    languages: []
 
 # The right hand side form section.
 form:

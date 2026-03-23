@@ -103,7 +103,7 @@
     
 }
 
-@each $filter-name in "upcoming" "on-demand" "ai-answers"{
+@each $filter-name in "upcoming" "on-demand"{
     ##{$filter-name}:target {
         @if $filter-name != "upcoming" {
             ~ .event-list-filter li[data-filter-name="upcoming"] {
