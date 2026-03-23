@@ -25,7 +25,7 @@
         {{ if lt $nowUnix $eventDateUnix }}
             {{ $listed = true }}
             {{ $upcomingEvents = $upcomingEvents | append (dict "date" .Params.sortable_date "data" .) }}
-        {{ else if (or .Params.youtube_url .Params.external) }}
+        {{ else if .Params.youtube_url }}
             {{ $listed = true }}
             {{ $onDemandRecordings = $onDemandRecordings | append (dict "date" .Params.sortable_date "data" .) }}
         {{ end }}
