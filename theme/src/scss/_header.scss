@@ -1,3 +1,14 @@
+// Pre-hydration CLS fixes for the top nav bar.
+// Hide the signed-in slot before Stencil hydrates so only "Sign In" shows.
+pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
+    display: none;
+}
+
+// Hide the raw "Star" anchor before buttons.github.io replaces it with an iframe.
+.github-widget > a.github-button {
+    visibility: hidden;
+}
+
 .top-nav-bar {
     @apply text-sm;
 
@@ -128,7 +139,7 @@
 }
 
 .header-container {
-    @apply z-40 bg-white py-0 ;
+    @apply z-40 bg-white py-0 sticky;
     top: -1px;
 
     @include screen-lg {
@@ -136,7 +147,6 @@
     }
 
     &.is-pinned {
-        @apply sticky;
         box-shadow: 0 1px 12px 0 rgba(0,0,0,.06),0 1px 4px 0 rgba(0,0,0,.04);
     }
 
