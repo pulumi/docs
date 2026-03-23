@@ -683,7 +683,7 @@ public/css/bundle.{CSS_BUNDLE_ID}.css
 public/css/marketing.{CSS_BUNDLE_ID}.css
 ```
 
-5. **Critical CSS inlining** (Production Only)
+5. **Critical CSS inlining**
    - Uses [beasties](https://github.com/danielroe/beasties) to extract above-the-fold CSS and inline it into the HTML
    - Runs after minification so it operates on final stylesheets
    - Currently applied to the homepage only (`public/index.html`)
