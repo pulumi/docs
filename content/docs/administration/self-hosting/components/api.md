@@ -506,3 +506,7 @@ In order to enable the [Pulumi IDP Registry](/docs/idp/concepts/private-registry
 |-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | PULUMI_REGISTRY_PUBLIC_BLOB_STORAGE_ENDPOINT  | The storage endpoint for persisting public registry artifacts. The value takes the format: `azblob://<blob-container>`.                                                                                                    |
 | PULUMI_REGISTRY_PRIVATE_BLOB_STORAGE_ENDPOINT  | The storage endpoint for persisting private registry artifacts. The value takes the format: `azblob://<blob-container>`.                                                                                                    |
+
+## Operations guide
+
+For production deployment best practices including compute sizing, high-availability configuration, monitoring, backup and recovery, and security hardening, see the [Self-hosted operations guide](/docs/administration/self-hosting/operations/).

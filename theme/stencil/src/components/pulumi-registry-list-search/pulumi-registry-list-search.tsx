@@ -1,5 +1,5 @@
 import { Component, h, State, EventEmitter, Event } from "@stencil/core";
-import { debounce } from "lodash";
+import debounce from "lodash-es/debounce";
 
 @Component({
     tag: "pulumi-registry-list-search",

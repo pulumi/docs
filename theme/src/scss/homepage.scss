@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+// Scan only the homepage template and shared partials for Tailwind class usage.
+@source "../../../layouts/index.html";
+@source "../../../layouts/partials/head.html";
+@source "../../../layouts/partials/assets.html";
+@source "../../../layouts/partials/header.html";
+@source "../../../layouts/partials/footer.html";
+@source "../../../layouts/partials/home/**/*.html";
+@source "../../../layouts/partials/stacked-carousel.html";
+@source "../../../layouts/partials/customer-logo.html";
+@source "../../../layouts/partials/color-icon.html";
+@source "../../../layouts/partials/chrome.html";
+@source "../../../layouts/_default/baseof.html";
+@source "../../../content/_index.md";
+@source "../../stencil/src/**/*.tsx";
+@source "../**/*.{js,ts}";
+
+@import "theme";
+
+@import "colors";
+@import "mixins";
+
+$sitenav-height: 90px;
+$sitenav-offset: calc($sitenav-height + 16px);
+
+@utility btn {
+    transition: all 120ms linear;
+    @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded inline-block;
+    @apply bg-blue-600 border border-blue-600 text-white text-center;
+}
+
+@utility btn-lg {
+    @apply py-3 px-5;
+}
+
+@utility btn-orange {
+    @apply bg-orange-500 border-orange-600;
+}
+
+@utility text-heading-2xl { font-size: 80px; }
+@utility text-heading-xl { font-size: 72px; }
+@utility text-heading-l { font-size: 64px; }
+@utility text-heading-m { font-size: 48px; }
+@utility text-heading-s { font-size: 40px; }
+@utility text-heading-xs { font-size: 28px; }
+@utility text-heading-2xs { font-size: 24px; }
+@utility text-heading-2xsSmall { font-size: 20px; }
+@utility text-body-xl { font-size: 24px; }
+@utility text-body-l { font-size: 20px; }
+@utility text-body-m { font-size: 18px; }
+@utility text-body-s { font-size: 16px; }
+
+@layer base {
+    *,
+    ::before,
+    ::after {
+        border-color: var(--color-gray-200);
+    }
+
+    pulumi-chooser,
+    pulumi-choosable,
+    pulumi-swiper,
+    pulumi-hubspot-form,
+    pulumi-banner {
+        display: block;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-display text-gray-800 mb-2;
+
+        &:not(:first-child) {
+            &:not([class*="mt-"]):not([class*="m-"]) {
+                @apply mt-8;
+            }
+        }
+    }
+
+    h1 { @apply text-4xl; }
+    h2 { font-size: 32px; }
+    h3 { @apply text-2xl; }
+    h4 { @apply text-xl; }
+    h5 { @apply text-lg; }
+    h6 { @apply text-sm; }
+
+    p {
+        @apply leading-normal my-4;
+    }
+
+    body {
+        @apply font-body text-gray-800;
+    }
+
+    main {
+        @apply text-gray-800;
+
+        p,
+        li,
+        blockquote,
+        table {
+            a {
+                @apply text-blue-600 break-words;
+
+                &:hover {
+                    @apply text-blue-700;
+                }
+            }
+
+            strong {
+                @apply font-semibold;
+            }
+        }
+
+        ul,
+        ol {
+            @apply pl-5;
+        }
+
+        ul {
+            @apply list-disc;
+        }
+
+        ol {
+            @apply list-decimal;
+        }
+
+        li {
+            @apply my-2 leading-normal;
+        }
+    }
+}
+
+@layer components {
+    @import "badges";
+    @import "buttons";
+    @import "card";
+    @import "customer-logo";
+    @import "fonts";
+    @import "footer";
+    @import "header";
+    @import "hero";
+    @import "hubspot";
+    @import "icons";
+    @import "marketing/pricing";
+    @import "marketing/stacked-carousel";
+    @import "neo-mode";
+    @import "toggle";
+
+    @import "components/banner";
+    @import "components/chooser";
+    @import "components/choosable";
+    @import "components/swiper";
+
+    .nav-main {
+        a {
+            @include transition;
+        }
+    }
+
+    .rainbow-text {
+        background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        text-shadow: none;
+    }
+
+    .github-widget {
+        > span {
+            @apply flex;
+        }
+    }
+}
+
+#segment-consent-manager:empty {
+    @apply hidden;
+}
+#segment-consent-manager {
+    @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
+    z-index: 99999;
+
+    @include screen-lg {
+        @apply w-1/3 right-auto m-4 overflow-hidden;
+    }
+
+    div {
+       @apply bg-white;
+    }
+
+    p {
+        @apply text-black text-left text-sm pr-2;
+
+        a {
+            text-decoration: none;
+            color: map-get($blue, 600);
+        }
+    }
+
+    button {
+        @apply font-bold no-underline;
+    }
+
+    button[aria-label="Close"] {
+        @apply text-violet-800 mt-4 top-0 right-0 text-lg;
+    }
+
+    .manage-cookies-btn {
+        @apply mt-2 bg-violet-600 text-white font-bold border-2 border-violet-600 no-underline p-3 rounded-md text-center;
+        @include transition;
+
+        &.disabled {
+            opacity: 0.3;
+        }
+
+        &:hover {
+            @apply bg-violet-100 text-violet-700;
+        }
+
+        &:focus {
+            @apply bg-violet-100 text-violet-200;
+        }
+    }
+}

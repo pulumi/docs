@@ -4,13 +4,14 @@
   JS components.
 -->
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"></script>
-
 {{ $js := resources.Get "js/bundle.js" | fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>
+
+{{ $searchSections := slice "docs" "registry" "blog" "tutorials" "learn" }}
+{{ if in $searchSections .Section }}
+    {{ $algolia := resources.Get "js/algolia.js" | fingerprint }}
+    <script src="{{ $algolia.RelPermalink }}" defer></script>
+{{ end }}
 
 {{/* Inline template for CSS links: uses fingerprinted bundle in dev, post-processed bundle in prod */}}
 {{ define "css-link" }}
@@ -24,12 +25,14 @@
 {{ end }}
 
 <!--
-  Our marketing styles diverge a bit from the other parts of the website so we load
-  in a different bundle on our marketing pages.
+  CSS bundle selection. Pages can set css_bundle in frontmatter to use a
+  page-specific bundle (e.g., "homepage"). Pages without css_bundle get the
+  default full bundle. Marketing pages also get the marketing stylesheet.
 -->
+{{ $cssBundle := .Params.css_bundle | default "bundle" }}
+{{ template "css-link" (dict "source" (printf "css/%s.css" $cssBundle) "name" $cssBundle) }}
+
 {{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "tutorials" "providers" "collections" "templates" "ai" "authors" "tags" "legal" }}
 {{ if not (in $nonMarketingSections .Section) }}
     {{ template "css-link" (dict "source" "css/marketing.css" "name" "marketing") }}
 {{ end }}
-
-{{ template "css-link" (dict "source" "css/bundle.css" "name" "bundle") }}

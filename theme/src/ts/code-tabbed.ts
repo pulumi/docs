@@ -1,4 +1,4 @@
-(function ($) {
+(function () {
     var languageItem = 1;
 
     var languageInterval = window.setInterval(function () {
@@ -12,18 +12,25 @@
 
     showLanguageItem(0);
 
-    $(".code-tabbed-tab").click(function () {
-        clearInterval(languageInterval);
-
-        var i = $(".code-tabbed-tab").index(this);
-        showLanguageItem(i);
+    document.querySelectorAll(".code-tabbed-tab").forEach((tab, index) => {
+        tab.addEventListener("click", function () {
+            clearInterval(languageInterval);
+            showLanguageItem(index);
+        });
     });
 
     function showLanguageItem(i) {
-        $(".code-tabbed-content").scrollTop(0).scrollLeft(0);
+        document.querySelectorAll(".code-tabbed-content").forEach((el: HTMLElement) => {
+            el.scrollTop = 0;
+            el.scrollLeft = 0;
+        });
 
-        $(".code-tabbed-tab").removeClass("active").eq(i).addClass("active");
+        document.querySelectorAll(".code-tabbed-tab").forEach((el, idx) => {
+            el.classList.toggle("active", idx === i);
+        });
 
-        $(".code-tabbed-content-item").removeClass("active").eq(i).addClass("active");
+        document.querySelectorAll(".code-tabbed-content-item").forEach((el, idx) => {
+            el.classList.toggle("active", idx === i);
+        });
     }
-})(jQuery);
+})();

@@ -35,6 +35,7 @@ Resource constructors accept the following resource options:
 - [protect](/docs/concepts/options/protect/): prevent accidental deletion of a resource by marking it as protected.
 - [provider](/docs/concepts/options/provider/): pass an [explicitly configured provider](/docs/concepts/resources/providers/#explicit-provider-configuration), instead of using the default global provider.
 - [providers](/docs/concepts/options/providers/): pass a set of [explicitly configured providers](/docs/concepts/resources/providers/#explicit-provider-configuration). These are used if provider is not given, and are passed to child resources.
+- [replacementTrigger](/docs/concepts/options/replacementtrigger/): forces a replacement operation on a resource whenever a specified trigger value changes.
 - [replaceOnChanges](/docs/concepts/options/replaceonchanges/): declare that changes to certain properties should be treated as forcing a replacement.
 - [retainOnDelete](/docs/concepts/options/retainondelete/): if true the resource will be retained in the backing cloud provider during a Pulumi delete operation.
 - [transformations](/docs/concepts/options/transformations/): dynamically transform a resource's properties on the fly. Prefer `transforms` if possible. `transformations` will be deprecated in the future in favor of `transforms`.
@@ -62,6 +63,7 @@ Not all resource options apply to [component resources](/docs/iac/concepts/compo
 | [protect](/docs/concepts/options/protect/) | Yes | Protects the component from deletion |
 | [provider](/docs/concepts/options/provider/) | No | Use `providers` instead for component resources |
 | [providers](/docs/concepts/options/providers/) | Yes | Pass providers to use for child resources |
+| [replacementTrigger](/docs/concepts/options/replacementtrigger/) | Yes | Components can be replaced by triggers |
 | [replaceOnChanges](/docs/concepts/options/replaceonchanges/) | No | Components are not replaced by providers |
 | [replaceWith](/docs/concepts/options/replacewith/) | No | Components are not replaced by providers |
 | [retainOnDelete](/docs/concepts/options/retainondelete/) | No | Components don't have cloud resources to retain |

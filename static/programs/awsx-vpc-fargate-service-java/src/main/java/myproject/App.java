@@ -3,8 +3,6 @@ package myproject;
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
-import com.pulumi.awsx.ecr.Repository;
-import com.pulumi.awsx.ecr.RepositoryArgs;
 import com.pulumi.aws.ecs.Cluster;
 import com.pulumi.awsx.lb.ApplicationLoadBalancer;
 import com.pulumi.awsx.ecs.FargateService;
@@ -12,6 +10,7 @@ import com.pulumi.awsx.ecs.FargateServiceArgs;
 import com.pulumi.awsx.ecs.inputs.FargateServiceTaskDefinitionArgs;
 import com.pulumi.awsx.ecs.inputs.TaskDefinitionContainerDefinitionArgs;
 import com.pulumi.awsx.ecs.inputs.TaskDefinitionPortMappingArgs;
+import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
@@ -28,7 +27,7 @@ public class App {
             .assignPublicIp(true)
             .desiredCount(2)
             .taskDefinitionArgs(FargateServiceTaskDefinitionArgs.builder()
-                .container(TaskDefinitionContainerDefinitionArgs.builder()
+                .containers(Map.of("my-service", TaskDefinitionContainerDefinitionArgs.builder()
                     .name("my-service")
                     .image("nginx:latest")
                     .cpu(512)
@@ -37,7 +36,7 @@ public class App {
                     .portMappings(TaskDefinitionPortMappingArgs.builder()
                         .targetGroup(lb.defaultTargetGroup())
                         .build())
-                    .build())
+                    .build()))
                 .build())
             .build());
 

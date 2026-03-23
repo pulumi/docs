@@ -57,7 +57,7 @@ sections:
       color: blue
       subtitle: Gain full auditability and visibility into all your environments to tame complexity and put security first
       description: Manage cloud infrastructure with dashboards that provide visibility into your infrastructure and any changes, [role-based access controls](/docs/pulumi-cloud/admin/organizations/#organization-roles), and [Policy as Code](/docs/insights/policy/) enforcement across your organization.
-      image: /images/product/insights-resource-search.png
+      image: images/product/insights-resource-search.png
       points:
         - header: Converse about your infrastructure
           body: |

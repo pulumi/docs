@@ -1,5 +1,4 @@
-$(function () {
-    // Make the prompt inside command line code snippets unselectable.
+document.addEventListener("DOMContentLoaded", function () {
     function noselect(langs, pattern) {
         var replaceWith = '<span class="no-select">$1</span>';
         var selector = langs
@@ -8,9 +7,8 @@ $(function () {
             })
             .join(", ");
 
-        $(selector).each(function () {
-            var $el = $(this);
-            $el.html($el.html().replace(pattern, replaceWith));
+        document.querySelectorAll(selector).forEach(el => {
+            el.innerHTML = el.innerHTML.replace(pattern, replaceWith);
         });
     }
 

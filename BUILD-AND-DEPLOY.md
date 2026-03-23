@@ -2496,7 +2496,6 @@ Critical environment variables used across all environments:
 |----------|---------|--------|
 | `ALGOLIA_APP_ID` | Search app ID | Pulumi ESC |
 | `ALGOLIA_APP_ADMIN_KEY` | Search admin key | Pulumi ESC |
-| `SENTRY_AUTH_TOKEN` | Error monitoring | Pulumi ESC |
 | `SLACK_WEBHOOK_URL` | Notifications | Pulumi ESC |
 | `GITHUB_TOKEN` | GitHub API | GitHub Actions |
 
@@ -2539,7 +2538,6 @@ All secrets and config for:
 - AWS credentials (via OIDC)
 - Pulumi tokens
 - Algolia keys
-- Sentry tokens
 - Slack webhooks
 - GCP credentials
 - Azure credentials
@@ -3691,6 +3689,24 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
    - Enable gzip and brotli
    - Reduces transfer size by 70-80%
 
+#### Asset fingerprinting
+
+Static assets (images, icons) used on the homepage and product pages can be fingerprinted for long-term caching. Hugo's `fingerprint` pipe appends a content hash to the filename, allowing a 1-year CloudFront TTL with `Cache-Control: immutable` headers.
+
+**How it works:**
+
+1. Place source assets in `assets/fingerprinted/` (e.g., `assets/fingerprinted/images/product/neo-tasks.png`).
+1. Use the `fingerprinted-img.html` partial in templates:
+   ```html
+   {{ partial "fingerprinted-img.html" (dict "src" "images/product/neo-tasks.png" "alt" "Alt text") }}
+   ```
+1. Hugo hashes the file, converts non-SVG images to WebP, and outputs to `/fingerprinted/<hash>.webp`.
+1. CloudFront serves these with a 1-year TTL and immutable cache headers via the `/fingerprinted/*` cache behavior.
+
+**Partial parameters:** `src` (required), `alt`, `class`, `style`.
+
+**Important:** `meta_image` frontmatter must point to a stable path in `static/`, not a fingerprinted asset, since social media crawlers need a predictable URL.
+
 ### Security Updates
 
 #### Dependabot Configuration
@@ -3737,7 +3753,6 @@ All secrets managed via Pulumi ESC with automatic rotation capabilities.
 - AWS IAM roles (refresh OIDC trust)
 - Algolia keys
 - Slack webhooks
-- Sentry tokens
 
 #### IAM Role Reviews
 
@@ -3856,7 +3871,6 @@ Complete reference of all build and deployment scripts.
 | **PULUMI_STACK_NAME** | Stack name | `www-production` | Workflow |
 | **ALGOLIA_APP_ID** | Search app | `OCCYMHQD` | Pulumi ESC |
 | **ALGOLIA_APP_ADMIN_KEY** | Search admin key | (secret) | Pulumi ESC |
-| **SENTRY_AUTH_TOKEN** | Error monitoring | (secret) | Pulumi ESC |
 | **SLACK_WEBHOOK_URL** | Notifications | (secret) | Pulumi ESC |
 | **GITHUB_TOKEN** | GitHub API | (auto) | GitHub Actions |
 | **NOBUILD** | Skip rebuilds | `1` | User |

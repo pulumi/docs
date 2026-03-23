@@ -20,7 +20,7 @@ function minifyCSS(filePath, outputFilename) {
         // PurgeCSS removes unused CSS by analyzing the files of the built website.
         // https://purgecss.com/
         purgeCSSPlugin({
-            content: [ "public/**/*.html", "public/js/bundle.*.js" ],
+            content: [ "public/**/*.html", "public/js/bundle.*.js", "public/js/algolia.*.js" ],
             // PurgeCSS looks through all the built files but, making an exception here
             // to skip the files in the azure-native-v2 package because it is causing
             // out of memory errors with all the new files added from the package. This
@@ -99,10 +99,12 @@ if (!fs.existsSync("public/css")) {
 Promise.all([
     minifyCSS("public/css/bundle.*.css", `bundle.${cssBundleId}.css`),
     minifyCSS("public/css/marketing.*.css", `marketing.${cssBundleId}.css`),
+    minifyCSS("public/css/homepage.*.css", `homepage.${cssBundleId}.css`),
 ]).then(() => {
     console.log("CSS bundles minified successfully!");
     console.log(`  - bundle.${cssBundleId}.css`);
     console.log(`  - marketing.${cssBundleId}.css`);
+    console.log(`  - homepage.${cssBundleId}.css`);
 });
 
 // Exit non-zero when something goes wrong in the promise chain.

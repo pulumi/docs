@@ -2,13 +2,6 @@ import { gb } from "../../../stencil/src/util/util";
 import { generateOnThisPage } from "../misc";
 import { getQueryVariable } from "../util";
 
- // Add type declarations for global functions we'll use
-declare global {
-    interface Window {
-        jQuery: any;
-    }
-}
-
 function runTerraformExperiment() {
 
     // Elements for both variants
@@ -28,7 +21,8 @@ function runTerraformExperiment() {
     });
 
     // Clear and regenerate the "On This Page" navigation
-    window.jQuery(".table-of-contents .content ul.table-of-contents-list").empty();
+    const tocList = document.querySelector(".table-of-contents .content ul.table-of-contents-list");
+    if (tocList) tocList.innerHTML = "";
     generateOnThisPage();
 }
 

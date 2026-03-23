@@ -1,26 +1,13 @@
-import * as clipboard from "clipboard-polyfill";
-
 ("use strict");
 
-// Used to "normalize" code snippet text that will be written to the clipboard.
 function normalizeText(lang, text) {
     if (!text) {
         return "";
     }
 
-    // Replace all "\r\n" with "\n" to ensure consistent newlines.
     text = text.replace("\r\n", "\n");
-
-    // Trim whitespace.
     text = text.trim();
 
-    // For command line code snippets:
-    //   1. Strip the prompt from any lines that are prefixed with it
-    //   2. Discard subsequent lines that don't start with the prompt (i.e. output),
-    //      making sure to respect line continuation characters.
-    //   3. Combine multiple lines that start with a prompt into a single line, e.g.
-    //      "$ mkdir mydir && mydir\n$ pulumi new typescript" =>
-    //      "mkdir mydir && mydir && pulumi new typescript"
     var prompt;
     var comment;
     var trailingCommentRE;
@@ -65,25 +52,18 @@ function normalizeText(lang, text) {
         for (var i = 0; i < lines.length; i++) {
             var line = lines[i].trim();
 
-            // If the first line doesn't start with a prompt, break out of the loop to avoid any
-            // further processing, so the whole thing is returned.
             if (i === 0 && !line.startsWith(prompt)) {
                 break;
             }
 
-            // Skip empty lines and comments.
             if (line.length === 0 || line.startsWith(comment)) {
                 priorLineContinued = false;
                 continue;
             }
 
-            // Include all initial lines that start with a prompt and discard subsequent lines after
-            // a line is reached that doesn't start with a prompt.
             if (line.startsWith(prompt) || priorLineContinued) {
-                // Removing trailing comments.
                 line = line.replace(trailingCommentRE, "");
 
-                // Remember and remove line continuations.
                 var wasContinued = priorLineContinued;
                 if (line.endsWith(trailingContinuationChar)) {
                     priorLineContinued = true;
@@ -92,7 +72,6 @@ function normalizeText(lang, text) {
                     priorLineContinued = false;
                 }
 
-                // Continue the prior line, or add a new one, as appropriate.
                 if (wasContinued) {
                     results.push(results.pop() + line);
                 } else {
@@ -103,13 +82,11 @@ function normalizeText(lang, text) {
             }
         }
 
-        // If we have results, combine into a single line, with commands separated by the combinator.
         if (results.length > 0) {
             text = results.join(combinator);
         }
     }
 
-    // If on Windows, ensure the appropriate line endings are applied.
     if (navigator.appVersion.indexOf("Win") !== -1) {
         text = text.replace("\n", "\r\n");
     }
@@ -117,7 +94,7 @@ function normalizeText(lang, text) {
     return text;
 }
 
-function addCopyButton(e) {
+function addCopyButton(container: HTMLElement) {
     var tooltipText = "Copy";
     var buttonHtml =
         '<div class="copy-button-container">' +
@@ -129,51 +106,61 @@ function addCopyButton(e) {
         "    </pulumi-tooltip>" +
         "</div>";
 
-    e.append(buttonHtml).on("click", "button.copy-button", function () {
-        var $b = $(this);
-        var $code = $b.parent().parent().parent().siblings("pre").children("code");
+    container.insertAdjacentHTML("beforeend", buttonHtml);
+    container.addEventListener("click", function (event) {
+        const target = event.target as HTMLElement;
+        const btn = target.closest("button.copy-button") as HTMLElement;
+        if (!btn) return;
 
-        // Get the lang and code.
-        var lang = $code.attr("data-lang");
-        var text = $code.text();
+        const tooltipEl = btn.closest("pulumi-tooltip") as any;
+        const copyButtonContainer = tooltipEl?.closest(".copy-button-container");
+        const pre = copyButtonContainer?.parentElement?.querySelector("pre");
+        const code = pre?.querySelector("code");
 
-        // Write the text to the clipboard.
+        if (!code) return;
+
+        var lang = code.getAttribute("data-lang");
+        var text = code.textContent;
+
         var normalized = normalizeText(lang, text);
         if (normalized && normalized.length > 0) {
-            clipboard.writeText(normalized);
+            navigator.clipboard.writeText(normalized).catch(() => {});
         }
 
-        // Remove focus from the button.
-        $b.blur();
+        btn.blur();
 
-        // Show a "Copied!" tooltip for a second.
-        var $tooltip = $b.closest("pulumi-tooltip");
-        var $tooltipContent = $tooltip.find("[slot='content']");
-        var tooltipEl = $tooltip.get(0);
+        var tooltipContent = tooltipEl?.querySelector("[slot='content']");
 
-        $tooltipContent.text("Copied!");
-        tooltipEl.show().then(() => {
-            setTimeout(function () {
-                tooltipEl.hide().then(() => $tooltipContent.text(tooltipText));
-            }, 1000);
-        });
+        if (tooltipContent) {
+            tooltipContent.textContent = "Copied!";
+        }
+        if (tooltipEl?.show) {
+            tooltipEl.show().then(() => {
+                setTimeout(function () {
+                    if (tooltipEl?.hide) {
+                        tooltipEl.hide().then(() => {
+                            if (tooltipContent) tooltipContent.textContent = tooltipText;
+                        });
+                    }
+                }, 1000);
+            });
+        }
 
-        // Track analytics if data-track is present
         const analytics = (window as any).analytics;
         const analyticsAvailable = analytics && analytics.track && typeof analytics.track === "function";
-        var codeBlockName = $code.attr("data-track");
+        var codeBlockName = code.getAttribute("data-track");
 
-        if (analyticsAvailable && codeBlockName) { // Don't track empty email addresses
+        if (analyticsAvailable && codeBlockName) {
             const trackData = {
                 codeBlockName: codeBlockName
             };
             analytics.track("copy-code-block", trackData);
         }
-
     });
 }
 
-// When the DOM is ready, add copy buttons to code snippets.
-$(function () {
-    addCopyButton($(":not(.no-copy) > div.highlight"));
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll<HTMLElement>(":not(.no-copy) > div.highlight").forEach(el => {
+        addCopyButton(el);
+    });
 });
