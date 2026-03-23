@@ -1,9 +1,9 @@
 const filterResourceItems = (filters) => {
     const monthGroups = document.querySelectorAll<HTMLElement>(".event-list .month-label");
-    const noResultsMessage = document.querySelector(".pulumi-event-list-container .no-results");
+    const noResultsMessage = document.querySelector(".template-event-list .no-results");
     noResultsMessage?.classList.remove("hidden");
 
-    const activeTab = location.hash.slice(1);
+    const activeTab = location.hash.slice(1) || "upcoming";
 
     monthGroups.forEach(group => {
         const groupFilters = (group.getAttribute("data-filters") || "").split(" ");
@@ -14,7 +14,7 @@ const filterResourceItems = (filters) => {
             return;
         }
 
-        const cards = group.querySelectorAll<HTMLElement>(".event-card");
+        const cards = group.querySelectorAll<HTMLElement>("li[data-filters]");
         let visibleCards = 0;
 
         cards.forEach(card => {
@@ -23,13 +23,13 @@ const filterResourceItems = (filters) => {
             if (filters.length > 0) {
                 const matches = filters.some(f => tags.includes(f));
                 if (matches) {
-                    card.style.display = "flex";
+                    card.style.display = "";
                     visibleCards++;
                 } else {
                     card.style.display = "none";
                 }
             } else {
-                card.style.display = "flex";
+                card.style.display = "";
                 visibleCards++;
             }
         });

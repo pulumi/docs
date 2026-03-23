@@ -2,5 +2,29 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ partial "list-page-content.html" (dict "page" . "list_content" "events/event-list-section.html") }}
+<div class="font-body container mx-auto mb-16 mt-16 px-12 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24">
+
+    {{/* Hero */}}
+    <section class="template-hero template-hero--centered" id="hero">
+        <div class="flex flex-col items-center gap-12">
+            <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
+                {{ with .Params.hero }}
+                <h1 class="title mb-6">{{ .title }}</h1>
+                {{ with .description }}
+                <p class="description mb-10">{{ . | markdownify }}</p>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    {{/* Event list */}}
+    {{ partial "events/event-list-section.html" . }}
+
+    {{/* Footer CTA */}}
+    {{ with .Params.footer_cta }}
+    {{ partial "template-partials/template-footer-cta.html" . }}
+    {{ end }}
+
+</div>
 {{ end }}
