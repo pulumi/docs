@@ -8,27 +8,28 @@ customer_name: Enterprise Whitepaper
 customer_logo:
 customer_url:
 
-exec_summary: |
-    Enterprises are facing an unprecedented challenge of delivering business innovation and customer value more quickly and at high scale. They must tame complexity across hybrid clouds and increase reliability and security across the organization in order to accelerate release velocity and match the scale of customer demand. Enterprises are faced with managing disparate teams across infrastructure, development, and compliance using countless technologies and tools to deliver and manage infrastructure critical for business innovation. Cloud engineering is the practice of applying software engineering to tame the complexity of delivering and managing modern cloud applications.
-
-    In this whitepaper, we will look at the implications of cloud engineering and present solutions for adopting cloud engineering to fully maximize the benefits of the modern cloud and capitalize on software engineering as a lever for digital transformation.
-
 sections:
-    - label: Executive Summary
+    - label: Executive summary
       anchor: executive-summary
-    - label: Introduction to Cloud Engineering
+    - label: Introduction to cloud engineering
       anchor: introduction-to-cloud-engineering
-    - label: Accelerating Innovation through Cloud Engineering
+    - label: Accelerating innovation through cloud engineering
       anchor: accelerating-innovation-through-cloud-engineering
-    - label: The Cloud Engineering Journey
+    - label: The cloud engineering journey
       anchor: the-cloud-engineering-journey
-    - label: Success Stories
+    - label: Success stories
       anchor: success-stories
     - label: Conclusion
       anchor: conclusion
 ---
 
-## Introduction to Cloud Engineering
+## Executive summary
+
+Enterprises are facing an unprecedented challenge of delivering business innovation and customer value more quickly and at high scale. They must tame complexity across hybrid clouds and increase reliability and security across the organization in order to accelerate release velocity and match the scale of customer demand. Enterprises are faced with managing disparate teams across infrastructure, development, and compliance using countless technologies and tools to deliver and manage infrastructure critical for business innovation. Cloud engineering is the practice of applying software engineering to tame the complexity of delivering and managing modern cloud applications.
+
+In this whitepaper, we will look at the implications of cloud engineering and present solutions for adopting cloud engineering to fully maximize the benefits of the modern cloud and capitalize on software engineering as a lever for digital transformation.
+
+## Introduction to cloud engineering
 
 Since the early 2010s, enterprises have embarked on a migration from on-premises data centers to the cloud. This shift was driven by 1/ the business needs of increasing innovation and reducing costs, 2/ satisfying increased customer needs for access to their products or services, and 3/ the inability to scale to compete with other businesses who had more resources. The cloud provided on-demand infrastructure that allowed near-infinite scalability, reduction of upfront infrastructure capital expenditures, increased availability and uptime of infrastructure, and global geographic reach. The practice of DevOps and tools like Infrastructure as Code were employed to automate the complexity of VM-centric deployments and infrastructure.
 
@@ -54,7 +55,7 @@ Cloud engineering teams manage and secure their cloud infrastructure and applica
 
 Cloud engineering is a practice that provides a blueprint on the processes to employ in order to use software engineering across infrastructure, development, and compliance teams to transform the way infrastructure is managed. The next section discusses the tools needed to make it easier to adopt the practices.
 
-## Accelerating Innovation through Cloud Engineering
+## Accelerating innovation through cloud engineering
 
 Pulumi is a cloud engineering platform that enables enterprises to use an unified software engineering process to deliver infrastructure and applications together and faster. It brings together infrastructure, development, and compliance teams through the entire cloud engineering lifecycle. Pulumi provides developer-first infrastructure as code that allows organizations to build, deploy, and manage cloud infrastructure with popular programming languages including Python, JavaScript, TypeScript, Go, .NET/C#, and Java, and markup languages like YAML. Organizations can deploy cloud infrastructure and applications together using a unified delivery process and automation with fine-grained visibility and controls. Pulumi provides advanced security and compliance features, premium support, and self-hosting options to support the most sophisticated production workloads in the modern cloud.
 
@@ -72,11 +73,11 @@ The new order of problems that come with the adoption of the modern cloud—mult
 
 Pulumi accelerates innovation for enterprises because it allows enterprises to fully maximize the benefits of the modern cloud and capitalize on software engineering as a lever for digital transformation. The next section discusses the steps that should be taken to employ cloud engineering.
 
-## The Cloud Engineering Journey
+## The cloud engineering journey
 
 There are three stages to adopting cloud engineering successfully. Each stage comes with certain process and organizational mindsets/objective changes. Different components of the Pulumi platform support different parts of the journey. While not every stage needs to be implemented to be successful with cloud engineering, progressing further through each stage maximizes the benefits—reduction of complexity and risk, increased reliability and security, and acceleration of development velocity—received through cloud engineering.
 
-### Stage 1:  Infrastructure and Policy as Code
+### Stage 1: Infrastructure and policy as code
 
 The foundation of cloud engineering is infrastructure and policy as code. This foundation involves the process of provisioning and managing infrastructure and enforcing policy through programmatic code stored in version control systems. Infrastructure as code provides automation to provision infrastructure and increases delivery velocity by removing the risk of human errors. Policy as code sets guardrails to enforce compliance for every provisioned resource in the organization.
 
@@ -102,7 +103,7 @@ Implementing infrastructure as code also means managing secrets (e.g., database 
 
 Empowering developers to provision infrastructure requires proper authentication and access controls. Enterprises can leverage their existing SAML 2.0 and Single Sign-On (SSO) solutions and use the System for Cross-domain Identity Management (SCIM) protocol for automatic identity synchronization with systems like Microsoft Active Directory, Google Workspace, and Okta. They can also control access to sensitive data and infrastructure management operations through fine-grained roles across the entire organization and for specific projects. Pulumi automatically records all activity and exports the logs to security and compliance tools.
 
-### Stage 2:  Infrastructure CI/CD
+### Stage 2: Infrastructure CI/CD
 
 [Infrastructure CI/CD](/solutions/infrastructure-ci-cd) is the process of automating the testing, provisioning, and management of infrastructure through a software delivery pipeline. Infrastructure CI/CD further automates infrastructure provisioning and management from Stage 1 by building the entire IaC process into a CI/CD pipeline. In Stage 2, all infrastructure updates run through a standard set of unit and integration tests, allowing reduced mean time to resolution, increased reliability, and increased delivery velocity.
 
@@ -120,7 +121,7 @@ Providing granular access controls for infrastructure delivery is the next step 
 
 Enterprises require end-to-end visibility into infrastructure changes in order to maintain security and compliance. Pulumi keeps track of which user changed what and when by associating source code changes with cloud resource changes all the way to the actual modifications made to cloud environments. By using Pulumi SSO capabilities at all stages in the delivery pipeline—from source to deployment—enterprises have visibility and control into all production infrastructure changes, assisting with live-site debugging, change control, auditing, and more.
 
-### Stage 3:  Shared Services Platforms
+### Stage 3: Shared services platforms
 
 Stage 3 builds upon the foundations of Stages 1 and 2 by taking automated pipelines for deploying infrastructure managed by code and building a platform with shared resources, self-service components, and automated deployments. [Shared Services Platforms (SSPs)](/solutions/shared-services-platforms) are an internal company service that allows application developers to request and manage infrastructure environments by themselves. SSPs are the best practice to share common infrastructure and automate the provisioning of infrastructure for development teams. They abstract away the complexity of the cloud for developers, reduce deployment risks through automation, and increase reliability and security through building blocks with centrally enforced policies.
 
@@ -148,7 +149,7 @@ SSPs have a control and data plane. The control plane exposes the interface that
 
 Pulumi provides a platform that supports all stages of the cloud engineering journey with each stage progressively unlocking greater benefits of the modern cloud. Enterprises rely on Pulumi as a trusted advisor and partner through this entire journey.
 
-## Success Stories
+## Success stories
 
 Organizations of all sizes, from startups to the Global 2000, have chosen Pulumi for their cloud engineering and modernization needs. Below is a list of customers and their transformational stories.
 

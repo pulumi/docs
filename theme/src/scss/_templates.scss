@@ -105,6 +105,26 @@ $violet-primary: #673EAC;
     .description {
         @include section-description();
     }
+
+    // Centered variant for non-event, non-product pages (e.g. whitepapers)
+    &--centered {
+        .title {
+            @include page-header();
+            @apply text-center text-heading-s leading-tight tracking-tight;
+
+            @include screen-sm {
+                @apply text-heading-m;
+            }
+            @include screen-md {
+                @apply text-heading-l;
+            }
+        }
+
+        .description {
+            @include section-description();
+            @apply text-body-xl;
+        }
+    }
 }
 
 .template-logo-banner {
@@ -327,6 +347,47 @@ $violet-primary: #673EAC;
 .template-footer {
     .template-footer-title {
         @include section-header-small();
+        @apply text-heading-xs;
+
+        @include screen-sm {
+            @apply text-heading-s;
+        }
+    }
+}
+
+.template-sidebar-nav {
+    @apply rounded-xl p-5 pb-3;
+    border: 0.5px solid #AAA;
+
+    .sidebar-nav-heading {
+        @apply font-semibold text-sm text-black mb-2;
+    }
+
+    ul {
+        @apply flex flex-col gap-0 list-none p-0 m-0;
+    }
+
+    .sidebar-nav-link {
+        @apply block py-0.5 text-sm text-gray-600 transition-colors;
+        font-feature-settings: 'salt' on;
+
+        &:hover {
+            @apply text-violet-600;
+        }
+    }
+
+    li:last-child .sidebar-nav-link {
+        @apply pb-0;
+    }
+}
+
+.whitepaper-content {
+    h2, h3, h4, h5, h6 {
+        @apply font-body scroll-mt-22;
+
+        @include screen-lg {
+            @apply font-body scroll-mt-28;
+        }
     }
 }
 
