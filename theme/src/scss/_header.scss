@@ -157,7 +157,7 @@
 
         .header-btn-primary {
             @include gradient-button;
-            @apply py-3 px-6;
+            @apply py-3 px-6 whitespace-nowrap;
         }
     }
 
@@ -182,12 +182,12 @@
 
                 .dropdown-title {
                     @apply pl-4 pr-8 text-base;
-                    
+
                     @include screen-lg {
                         @apply text-sm pl-2;
                     }
                 }
-                
+
                 @include screen-xl {
                     .dropdown-title {
                         @apply text-base pl-4;
@@ -330,7 +330,7 @@
                 }
             }
         }
-        
+
         @include screen-xl {
             @apply mx-8;
         }
