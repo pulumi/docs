@@ -32,7 +32,7 @@ Providers are a specific type of [plugin](/docs/iac/concepts/plugins/) called a 
 There are two methods for installing a provider and using it in your Pulumi program:
 
 1. **Adding a reference to a provider's SDK using a package manager** in the language of your Pulumi program (e.g., npm in Node.js). This method is more common and is used for nearly all packages in the [Pulumi Registry](/registry).
-1. **Using the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command**. This method is most commonly used for [parameterized providers](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/providers/parameterized.html), such as the [Any Terraform Provider](/registry/packages/terraform-provider). The `pulumi package add` command generates a local SDK on disk (as opposed to downloading a pre-generated SDK from a package feed like npm) and allows you to consume any provider in the OpenTofu registry in you Pulumi program, even if there is no corresponding provider in the Pulumi Registry.
+1. **Using the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command**. This method is most commonly used for [parameterized providers](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/providers/parameterized.html), such as the [Any Terraform Provider](/registry/packages/terraform-provider). The `pulumi package add` command generates a local SDK on disk (as opposed to downloading a pre-generated SDK from a package feed like npm) and allows you to consume any provider in the OpenTofu registry in your Pulumi program, even if there is no corresponding provider in the Pulumi Registry.
 
 ### Installing a Provider via a Package Manager
 
@@ -155,7 +155,7 @@ pulumi config set aws:region us-west-2
 
 Then, you deploy the following Pulumi program:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -210,6 +210,18 @@ var instance = new Instance("myInstance",
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  myInstance:
+    type: aws:ec2:Instance
+    properties:
+      instanceType: t2.micro
+      ami: myAMI
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -225,7 +237,7 @@ While the default provider configuration may be appropriate for the majority of 
 **Note:** This example for AWS does not apply to Azure which provides access to all regions regardless of the default region defined in your Pulumi program. That means you don't need to explicitly create and configure providers for each region when working with Azure. You can simply specify the region in the resource definition itself.
 {{% /notes %}}
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -389,6 +401,38 @@ var listener = new Listener("listener",
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  # Create an AWS provider for the us-east-1 region.
+  useast1:
+    type: pulumi:providers:aws
+    properties:
+      region: us-east-1
+  # Create an ACM certificate in us-east-1.
+  cert:
+    type: aws:acm:Certificate
+    properties:
+      domainName: foo.com
+      validationMethod: EMAIL
+    options:
+      provider: ${useast1}
+  # Create an ALB listener in the default region that references the ACM certificate created above.
+  listener:
+    type: aws:lb:Listener
+    properties:
+      loadBalancerArn: ${loadBalancerArn}
+      port: 443
+      protocol: HTTPS
+      sslPolicy: ELBSecurityPolicy-2016-08
+      certificateArn: ${cert.arn}
+      defaultActions:
+        - targetGroupArn: ${targetGroupArn}
+          type: forward
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -398,7 +442,7 @@ pulumi config set aws:region us-west-2
 
 Component resources also accept a set of providers to use with their child resources. For example, the EC2 instance parented to `myResource` in the program below is created in `us-east-1`, and the Kubernetes pod parented to myResource is created in the cluster targeted by the `test-ci` context.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -505,6 +549,33 @@ final var myresource = new MyResource("myResource",
     ComponentResourceOptions.builder()
         .providers(usEast1, myk8s)
         .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  useast1:
+    type: pulumi:providers:aws
+    properties:
+      region: us-east-1
+  myk8s:
+    type: pulumi:providers:kubernetes
+    properties:
+      context: test-ci
+  instance:
+    type: aws:ec2:Instance
+    properties:
+      # instance properties...
+    options:
+      provider: ${useast1}
+  pod:
+    type: kubernetes:core/v1:Pod
+    properties:
+      # pod properties...
+    options:
+      provider: ${myk8s}
 ```
 
 {{% /choosable %}}
