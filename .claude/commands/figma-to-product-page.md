@@ -176,7 +176,7 @@ For CTA link styling, the shared selector covers all template section and produc
 ```scss
 [class*="template-section"],
 [class*="template-product"] {
-    .cta { @apply text-violet-600 font-semibold font-body no-underline; }
+    .cta { @apply text-violet-800 font-semibold font-body no-underline; }
 }
 ```
 
