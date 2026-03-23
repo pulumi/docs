@@ -1,1 +1,17 @@
-> This content is best viewed on the web. See: [{{ .Page.Title }}](https://www.pulumi.com{{ .Page.RelPermalink }})
+<!-- chooser: language -->
+<!-- option: javascript -->
+`undefined`
+<!-- /option -->
+<!-- option: typescript -->
+`undefined`
+<!-- /option -->
+<!-- option: python -->
+`None`
+<!-- /option -->
+<!-- option: go -->
+`nil`
+<!-- /option -->
+<!-- option: csharp -->
+`null`
+<!-- /option -->
+<!-- /chooser -->

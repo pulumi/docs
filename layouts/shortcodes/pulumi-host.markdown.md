@@ -1,1 +1,23 @@
-> This content is best viewed on the web. See: [{{ .Page.Title }}](https://www.pulumi.com{{ .Page.RelPermalink }})
+<!-- chooser: language -->
+<!-- option: javascript -->
+Node
+<!-- /option -->
+<!-- option: typescript -->
+Node
+<!-- /option -->
+<!-- option: python -->
+Python
+<!-- /option -->
+<!-- option: go -->
+Go
+<!-- /option -->
+<!-- option: csharp -->
+.NET
+<!-- /option -->
+<!-- option: java -->
+JVM
+<!-- /option -->
+<!-- option: yaml -->
+YAML
+<!-- /option -->
+<!-- /chooser -->
