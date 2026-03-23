@@ -11,8 +11,10 @@ com.pulumi.core.annotations
 com.pulumi.deployment
 com.pulumi.exceptions
 com.pulumi.provider.internal
+com.pulumi.provider.internal.infer
 com.pulumi.provider.internal.models
 com.pulumi.provider.internal.properties
+com.pulumi.provider.internal.schema
 com.pulumi.resources
 com.pulumi.test
 com.pulumi.test.internal
