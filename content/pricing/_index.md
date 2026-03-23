@@ -691,7 +691,7 @@ faq:
         - question: Is Pulumi SOC 2 compliant?
           answer: Yes, Pulumi has completed the SOC 2 Type 2 compliance process. Pulumi is committed to operational excellence for our customers.
         - question: Can I host Pulumi Cloud in my cloud or datacenter?
-          answer: Yes, we offer a self-hosted Pulumi Cloud for companies that have specific data control requirements and want to maintain complete control over hosting Pulumi Cloud. This option is available in Business Critical Edition. You can get started with a [30-day free trial here](/product/self-hosted/#self-hosted-trial).
+          answer: Yes, we offer a self-hosted Pulumi Cloud for companies that have specific data control requirements and want to maintain complete control over hosting Pulumi Cloud. This option is available in Business Critical Edition. You can [request a Proof of Concept (PoC)](/product/self-hosted/#self-hosted-trial) to get started.
         - question: How do I convince my boss?
           answer: |
             Do you want to use Pulumi in your organization, but aren't sure how to bring it up with your boss? We've created a sample email to help you explain its benefits. Feel free to use the full letter or pieces of it. We are always happy to meet to learn more about your needs and explain these benefits in person — just [contact us](/contact/?form=sales).

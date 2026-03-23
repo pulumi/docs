@@ -19,7 +19,7 @@ aliases:
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, [request a Proof of Concept (PoC)](/product/self-hosted/#self-hosted-trial) or [contact us](/contact/).
 {{% /notes %}}
 
 Self-hosted Pulumi Cloud comprises [three containers](/docs/administration/self-hosting/components): the API, Console, and Migrations. These containers require several kinds of incoming and outgoing network access as well as access to various services depending on where you're deploying it to.

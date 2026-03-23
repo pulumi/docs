@@ -13,7 +13,7 @@ menu:
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, [request a Proof of Concept (PoC)](/product/self-hosted/#self-hosted-trial) or [contact us](/contact/).
 {{% /notes %}}
 
 Effective monitoring is critical for maintaining a reliable self-hosted Pulumi Cloud deployment. This page covers a recommended alerting strategy and the key metrics to watch.
