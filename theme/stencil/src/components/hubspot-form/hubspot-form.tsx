@@ -51,6 +51,8 @@ export class HubspotForm {
     // The handler for HubSpot window messages.
     messageHandler: (event: MessageEvent) => void;
 
+    private observer: IntersectionObserver;
+
     componentWillLoad() {
         if (!this.formId) {
             throw new Error("The required attribute `form-id` was not provided.");
@@ -60,22 +62,27 @@ export class HubspotForm {
     }
 
     componentDidLoad() {
-        // Check for an existing HubSpot global. If there isn't one already, load
-        // the HubSpot form script dynamically.
-        const hubspotGlobal = window["hbspt"];
-        if (hubspotGlobal) {
-            this.createForm(hubspotGlobal);
-        } else {
-            this.loadHubSpotFormsScript();
-        }
-
-        // Register for window messages from HubSpot.
         this.messageHandler = this.onMessage.bind(this);
         window.addEventListener("message", this.messageHandler);
+
+        // Lazy-load HubSpot script when the form scrolls into view.
+        this.observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                this.observer.disconnect();
+                const hubspotGlobal = window["hbspt"];
+                if (hubspotGlobal) {
+                    this.createForm(hubspotGlobal);
+                } else {
+                    this.loadHubSpotFormsScript();
+                }
+            }
+        }, { rootMargin: "200px" });
+        this.observer.observe(this.el);
     }
 
     disconnectedCallback() {
         window.removeEventListener("message", this.messageHandler);
+        this.observer?.disconnect();
     }
 
     // HubSpot form events are dispatched as window message events.
