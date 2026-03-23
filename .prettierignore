@@ -29,6 +29,7 @@ static/programs/*/obj/*
 
 # Ignore Python virtual environments
 **/.venv/**
+**/venv/**
 
 static/registry/
 static-prebuilt
