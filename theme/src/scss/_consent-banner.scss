@@ -40,10 +40,6 @@
         @apply font-bold no-underline;
     }
 
-    button[aria-label="Close"] {
-        @apply text-violet-800 mt-4 top-0 right-0 text-lg;
-    }
-
     .consent-actions {
         @apply flex gap-2 w-full pb-4;
 
@@ -55,7 +51,7 @@
         .consent-btn-accept {
             @apply bg-violet-600 text-white border-2 border-violet-600;
 
-            &:hover {
+            &:hover, &:focus-visible {
                 @apply bg-violet-700 border-violet-700;
             }
         }
@@ -63,7 +59,7 @@
         .consent-btn-secondary {
             @apply bg-white text-violet-600 border-2 border-violet-600;
 
-            &:hover {
+            &:hover, &:focus-visible {
                 @apply bg-violet-600 text-white;
             }
         }
