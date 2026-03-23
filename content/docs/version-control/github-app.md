@@ -32,12 +32,12 @@ To install the GitHub app, you must have admin permissions in **both** the targe
 
 1. [Sign in to your Pulumi account.](https://app.pulumi.com/signin)
 1. Select the Pulumi organization you wish to use from the Organization drop-down.
-1. Navigate to **Management** > **Version Control**.
+1. Navigate to **Management** > **Version control**.
 1. Select **Add account** and choose **GitHub**, then follow the prompts.
 
 ### Multiple GitHub organizations
 
-Multiple GitHub organizations can be connected to a single Pulumi organization. You can add each one via **Management** > **Version Control** > **Add account**.
+Multiple GitHub organizations can be connected to a single Pulumi organization. You can add each one via **Management** > **Version control** > **Add account**.
 
 {{% notes type="info" %}}
 Mapping a single GitHub organization to multiple Pulumi organizations requires contacting [Pulumi support](https://www.pulumi.com/support/). This option is only available for Enterprise and Business Critical customers.
@@ -91,4 +91,4 @@ If comments aren't appearing on your pull requests, verify that:
 1. The `.git` folder is present in your Pulumi project directory during CI runs.
 1. If you copy your Pulumi code into a container, you also include the `.git` folder.
 1. The commit being built matches a commit in an open pull request.
-1. The GitHub app has access to the repository — navigate to **Management** > **Version Control**, select your GitHub organization, and check the **Repositories** tab. If the repository is not listed, select **Configure repository access** to update the app's permissions in GitHub.
+1. The GitHub app has access to the repository — navigate to **Management** > **Version control**, select your GitHub organization, and check the **Repositories** tab. If the repository is not listed, select **Configure repository access** to update the app's permissions in GitHub.

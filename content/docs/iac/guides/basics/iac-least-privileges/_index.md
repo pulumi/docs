@@ -85,8 +85,8 @@ Choose one of these secure deployment approaches in your sensitive environments:
 **Setup steps for GitHub integration:**
 
 1. **Install the Pulumi GitHub App:**
-   - Navigate to Pulumi Cloud Console → `Settings > Integrations`.
-   - Install the app and authorize it for your GitHub repository.
+   - Navigate to Pulumi Cloud Console → **Management** > **Version control**.
+   - Select **Add account**, choose **GitHub**, and authorize it for your GitHub repository.
 
 2. **Configure deployment triggers:**
    - Navigate to your stack in Pulumi Cloud Console → `Stack Settings > Deploy`.
