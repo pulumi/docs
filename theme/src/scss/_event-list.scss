@@ -52,7 +52,7 @@
 
         // On initial load without a target in the url, the upcoming tab should be active.
         li[data-filter-name="upcoming"] {
-            @include gradient-border;
+            border-bottom: 2px solid #805ac3;
 
             > a {
                 @apply font-semibold text-black;
@@ -108,7 +108,6 @@
         @if $filter-name != "upcoming" {
             ~ .event-list-filter li[data-filter-name="upcoming"] {
                 @apply flex-grow border-solid border-b-2 border-transparent;
-                border-image-source: none;
 
                 > a {
                     @apply font-normal text-gray-600;
@@ -125,7 +124,7 @@
         }
 
         ~ .event-list-filter li[data-filter-name="#{$filter-name}"] {
-            @include gradient-border;
+            border-bottom: 2px solid #805ac3;
 
             > a {
                 @apply font-semibold text-black;
