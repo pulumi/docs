@@ -15,6 +15,7 @@
     - cta_secondary_link: Secondary CTA button link (defaults to site.Params.cta.secondary.href)
     - image: Optional hero image/code visual path (displayed below content, slightly left of center)
     - image_alt: Alt text for image (optional)
+    - image_max_width: Optional max width for the image (e.g. "800px", "60rem"). Defaults to full width.
     - anchor: Optional anchor for section id
 */}}
 
@@ -28,6 +29,8 @@
 {{ $ctaSecondaryLink := .cta_secondary_link | default site.Params.cta.secondary.href }}
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default $title | default (printf "%s %s" $titlePrimary $titleSecondary) }}
+{{ $imageMaxWidth := .image_max_width }}
+{{ $imageStyle := "" }}{{ if $imageMaxWidth }}{{ $imageStyle = printf "max-width: %s;" $imageMaxWidth }}{{ end }}
 {{ $anchor := .anchor }}
 
 <section class="template-product-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
@@ -66,7 +69,7 @@
         </div>
         {{ if $image }}
         <div class="product-hero-visual flex justify-center">
-            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto rounded-lg">
+            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto rounded-lg"{{ with $imageStyle }} style="{{ . | safeCSS }}"{{ end }}>
         </div>
         {{ end }}
     </div>

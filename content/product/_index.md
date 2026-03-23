@@ -11,6 +11,7 @@ hero:
     Built for the AI Era of Infrastructure. Modern infrastructure demands modern tools. Pulumi unifies infrastructure as code, secrets management, policy governance, and AI automation into a single platform. Start with our Apache 2.0 open source core, scale with enterprise features when you need them.
   image: /images/product/overview/overview-diagram.svg
   image_alt: Pulumi platform overview diagram
+  image_max_width: 780px
   anchor: hero
 
 product_two_column:
@@ -91,7 +92,7 @@ insights_section:
     Search across all clouds from a single pane of glass. Enforce policies automatically. Track compliance. Get AI-powered insights. Know exactly what's running where and why.
   cta_text: "Explore Insights & Governance"
   cta_link: /product/pulumi-insights/
-  image: /images/product/overview/overview-governance.png
+  image: /images/product/overview/overview-governance.svg
   image_alt: Pulumi Insights resource search across clouds
   cards:
     - icon: fa-server
@@ -115,7 +116,7 @@ idp_section:
     Give engineers self-service infrastructure through templates, components, and developer portals. Platform teams maintain control through policies and governance. Ship golden paths that engineers actually want to use.
   cta_text: Explore Platform Engineering
   cta_link: /product/internal-developer-platforms/
-  image: /images/product/overview/overview-idp.png
+  image: /images/product/overview/overview-idp.svg
   image_alt: Internal developer platform dashboard
   anchor: idp
 

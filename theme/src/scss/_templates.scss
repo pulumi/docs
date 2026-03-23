@@ -1,19 +1,23 @@
 // Template Components Stylesheet
 // Styles for reusable template partials (template-hero, template-logo-banner, etc.)
 
-$violet-primary: #673EAC;
-
 @mixin page-header {
-    @apply font-bold leading-extra-tight text-black font-body text-heading-m;
+    @apply font-semibold text-black font-body text-heading-m;
+    line-height: 1.375;
+    letter-spacing: -2px;
 }
 
 @mixin section-header {
-    @apply font-bold leading-extra-tight text-black font-body text-heading-s;
+    @apply font-semibold text-black font-body text-heading-s;
+    line-height: 55px;
+    letter-spacing: -2px;
 }
 
 @mixin section-header-small {
     font-feature-settings: 'salt' on;
-    @apply font-bold leading-extra-tight text-black font-body text-heading-s;
+    @apply font-semibold text-black font-body text-heading-s;
+    line-height: 55px;
+    letter-spacing: -2px;
 }
 
 @mixin section-header-extra-small {
@@ -27,17 +31,17 @@ $violet-primary: #673EAC;
 }
 
 @mixin product-hero-heading {
-    @apply text-black text-center not-italic font-bold text-heading-l;
+    @apply text-black text-center not-italic font-semibold text-heading-l;
     font-feature-settings: 'salt' on;
     font-family: Inter, sans-serif;
-    letter-spacing: -0.64px;
-    line-height: 1.25 !important; /* leading-tight */
+    letter-spacing: -3.2px;
+    line-height: 1.25 !important;
 }
 
 @mixin section-description {
     @apply font-normal leading-normal font-body text-body-l;
     font-feature-settings: 'salt' on;
-    color: #5b5b5b;
+    color: #2f3032;
 }
 
 @mixin section-subheader-bold {
@@ -51,20 +55,29 @@ $violet-primary: #673EAC;
 }
 
 @mixin section-hint-accent {
-    @apply font-semibold leading-normal font-body text-body-l;
-    color: $violet-primary;
+    font-family: "Monaspace Neon Var", monospace;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    color: #404041;
 }
 
 @mixin section-hint-small {
-    @apply font-semibold leading-normal font-body text-body-l;
-    font-feature-settings: 'salt' on;
+    font-family: "Monaspace Neon Var", monospace;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
     color: #404041;
 }
 
 @mixin section-body-medium {
     @apply font-normal leading-normal font-body text-body-m;
     font-feature-settings: 'salt' on;
-    color: #5b5b5b;
+    color: #2f3032;
 }
 
 .template-hero {
@@ -89,8 +102,8 @@ $violet-primary: #673EAC;
     }
 
     .hero-booth-number {
-        @apply font-semibold;
-        color: $violet-primary;
+        @apply font-semibold text-violet-800;
+;
     }
 
     .hero-bullet {
@@ -165,8 +178,7 @@ $violet-primary: #673EAC;
 }
 
 .template-card {
-    @apply flex flex-1 items-start rounded-2xl p-8;
-    border: 0.5px solid #AAA;
+    @apply flex flex-1 items-start rounded-2xl p-8 border border-violet-300;
 
     .card-label {
         @include section-hint-accent();
@@ -199,7 +211,7 @@ $violet-primary: #673EAC;
 
     .promo-banner-cta {
         @include section-hint();
-        color: #C19BFF;
+        @apply text-violet-500;
         font-feature-settings: 'salt' on;
     }
 }
@@ -216,8 +228,8 @@ $violet-primary: #673EAC;
     .three-column-item-title {
         font-feature-settings: 'salt' on;
         font-family: Inter, sans-serif;
-        letter-spacing: -0.84px;
-        line-height: 120%;
+        letter-spacing: -1.4px;
+        line-height: 38.5px;
         @apply text-black font-semibold text-heading-xs;
 
         i {
@@ -245,7 +257,9 @@ $violet-primary: #673EAC;
 }
 
 .template-feature-card-title {
-    @apply font-body text-black leading-tight font-semibold mb-6 text-heading-xs;
+    @apply font-body text-black font-semibold mb-6 text-heading-xs;
+    line-height: 38.5px;
+    letter-spacing: -1.4px;
     margin: 0 !important;
 }
 
@@ -345,10 +359,7 @@ $violet-primary: #673EAC;
 
     .product-hero-title-primary {
         @apply block;
-        background: linear-gradient(to right, #7842D4, #A374F1);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--color-violet-800);
     }
 
     .product-hero-title-secondary {
@@ -383,7 +394,7 @@ $violet-primary: #673EAC;
 [class*="template-section"],
 [class*="template-product"] {
     .cta {
-        @apply text-violet-600 font-semibold font-body no-underline;
+        @apply text-violet-800 font-semibold font-body no-underline;
 
         &:hover {
             @apply underline;
@@ -399,10 +410,14 @@ $violet-primary: #673EAC;
     }
 
     .section-header-tag-line {
-        color: var(--gray-primary, #404041);
-        font-family: Inter, sans-serif;
-        letter-spacing: -0.2px;
-        @apply text-center text-body-l font-semibold leading-normal;
+        font-family: "Monaspace Neon Var", monospace;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        color: #404041;
+        @apply text-center;
     }
 
     .section-header-tag-wrap {
@@ -457,7 +472,7 @@ $violet-primary: #673EAC;
     }
 
     .section-header-split-description {
-        color: var(--gray-tertiary, #757576);
+        color: #2f3032;
         font-feature-settings: 'salt' on;
         font-family: Inter, sans-serif;
         @apply text-left font-body text-body-s font-normal leading-normal;
@@ -473,7 +488,7 @@ $violet-primary: #673EAC;
 
     pulumi-chooser > ul li.active {
         border-image-source: none;
-        border-color: #805ac3;
+        border-color: var(--color-violet-800);
     }
 
 }
@@ -482,11 +497,7 @@ $violet-primary: #673EAC;
     .counter-card-number {
         @include page-header();
         @apply mb-2 font-semibold;
-        background: linear-gradient(to bottom, #6C6C6C, #1B1B1B);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        @apply text-transparent;
+        color: #1b1b1b;
     }
 
     .counter-card-label {

@@ -13,8 +13,9 @@ hero:
   title_secondary: in any language.
   description: |
     Use the programming languages you already know to build infrastructure on AWS, Azure, Google Cloud, Kubernetes, and hundreds more providers.
-  image: /images/product/iac/matrix-cards.png
+  image: /images/product/iac/matrix-cards.svg
   image_alt: Pulumi infrastructure as code in any language
+  image_max_width: 1200px
   anchor: hero
 
 product_two_column:
