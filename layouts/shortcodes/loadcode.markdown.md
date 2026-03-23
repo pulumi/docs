@@ -1,1 +1,1 @@
-> This content is best viewed on the web. See: [{{ .Page.Title }}](https://www.pulumi.com{{ .Page.RelPermalink }})
+{{ (.Page.Resources.GetMatch (.Get 0)).Content | htmlUnescape | safeHTML }}

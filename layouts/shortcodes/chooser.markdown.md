@@ -1,2 +1,9 @@
-{{- with .Inner }}{{ end -}}
-> This content is best viewed on the web. See: [{{ .Page.Title }}](https://www.pulumi.com{{ .Page.RelPermalink }})
+{{- $type := .Get 0 -}}
+{{- $options := .Get 1 -}}
+{{- if eq $options "nodejs" -}}
+    {{- $options = "javascript,typescript" -}}
+{{- end -}}
+
+<!-- chooser: {{ $type }} -->
+{{ .Inner }}
+<!-- /chooser -->

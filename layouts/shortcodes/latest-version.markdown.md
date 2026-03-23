@@ -1,1 +1,6 @@
-> This content is best viewed on the web. See: [{{ .Page.Title }}](https://www.pulumi.com{{ .Page.RelPermalink }})
+{{- $latestVersionFile := "/static/latest-version" -}}
+{{- $latestVersion := readFile $latestVersionFile -}}
+{{- if gt (len (findRE "\\s" $latestVersion)) 0 -}}
+    {{- errorf "%q must not contain whitespace or newlines" $latestVersionFile -}}
+{{- end -}}
+{{- $latestVersion -}}
