@@ -189,12 +189,16 @@ $sitenav-offset: calc($sitenav-height + 16px);
         @apply w-1/3 right-auto m-4 overflow-hidden;
     }
 
+    [class^="css-"] {
+        flex-wrap: wrap;
+    }
+
     div {
        @apply bg-white;
     }
 
     p {
-        @apply text-black text-left text-sm pr-2;
+        @apply text-black text-center text-sm;
 
         a {
             text-decoration: none;
@@ -210,20 +214,28 @@ $sitenav-offset: calc($sitenav-height + 16px);
         @apply text-violet-800 mt-4 top-0 right-0 text-lg;
     }
 
-    .manage-cookies-btn {
-        @apply mt-2 bg-violet-600 text-white font-bold border-2 border-violet-600 no-underline p-3 rounded-md text-center;
-        @include transition;
+    .consent-actions {
+        @apply flex gap-2 w-full pb-4;
 
-        &.disabled {
-            opacity: 0.3;
+        .consent-btn {
+            @apply flex-1 font-bold no-underline p-3 rounded-md text-center text-sm cursor-pointer;
+            @include transition;
         }
 
-        &:hover {
-            @apply bg-violet-100 text-violet-700;
+        .consent-btn-accept {
+            @apply bg-violet-600 text-white border-2 border-violet-600;
+
+            &:hover {
+                @apply bg-violet-700 border-violet-700;
+            }
         }
 
-        &:focus {
-            @apply bg-violet-100 text-violet-200;
+        .consent-btn-secondary {
+            @apply bg-white text-violet-600 border-2 border-violet-600;
+
+            &:hover {
+                @apply bg-violet-600 text-white;
+            }
         }
     }
 }

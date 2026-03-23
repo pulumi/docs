@@ -253,7 +253,6 @@
                     analytics._writeKey = segmentWriteKey;
                     analytics._cdn = "https://evs.analytics.pulumi.com";
                     analytics.SNIPPET_VERSION = "5.2.0";
-                    analytics.load(segmentWriteKey);
                     analytics.page();
                 }
         })();
@@ -277,12 +276,7 @@
                 ),
                 '.'
             )
-            var bannerSubContent = React.createElement(
-                'div',
-                { class: "manage-cookies-btn" },
-                'Manage cookies'
-            )
-            //var bannerSubContent = 'You can change your preferences at any time.'
+            var bannerSubContent = ''
             var preferencesDialogTitle = 'Website Data Collection Preferences'
             var preferencesDialogContent =
                 'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'
@@ -290,17 +284,39 @@
             var cancelDialogContent =
                 'Your preferences have not been saved. By continuing to use our website, you are agreeing to our Website Data Collection Policy.'
 
+            var bannerActionsBlock = function(props) {
+                return React.createElement('div', { class: 'consent-actions' },
+                    React.createElement('button', {
+                        type: 'button',
+                        class: 'consent-btn consent-btn-secondary',
+                        onClick: props.changePreferences
+                    }, 'Manage cookies'),
+                    React.createElement('button', {
+                        type: 'button',
+                        class: 'consent-btn consent-btn-secondary',
+                        onClick: props.denyAll
+                    }, 'Reject All'),
+                    React.createElement('button', {
+                        type: 'button',
+                        class: 'consent-btn consent-btn-accept',
+                        onClick: props.acceptAll
+                    }, 'Accept All')
+                );
+            }
+
             return {
                 container: '#segment-consent-manager',
                 writeKey: segmentWriteKey,
                 bannerContent: bannerContent,
                 bannerSubContent: bannerSubContent,
+                bannerActionsBlock: bannerActionsBlock,
                 preferencesDialogTitle: preferencesDialogTitle,
                 preferencesDialogContent: preferencesDialogContent,
                 cancelDialogTitle: cancelDialogTitle,
                 cancelDialogContent: cancelDialogContent,
-                shouldRequireConsent: exports.inEU,
-                closeBehavior: exports.inEU() ? "dismiss" : "accept",
+                shouldRequireConsent: function() { return true; },
+                closeBehavior: "dismiss",
+                bannerHideCloseButton: true,
                 bannerTextColor: "black",
                 cdnHost: "evs.analytics.pulumi.com",
                 shouldReload: false
