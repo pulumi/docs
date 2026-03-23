@@ -63,7 +63,7 @@ Not all resource options apply to [component resources](/docs/iac/concepts/compo
 | [protect](/docs/concepts/options/protect/) | Yes | Protects the component from deletion |
 | [provider](/docs/concepts/options/provider/) | No | Use `providers` instead for component resources |
 | [providers](/docs/concepts/options/providers/) | Yes | Pass providers to use for child resources |
-| [replacementTrigger](/docs/concepts/options/replacementtrigger/) | No | Components can be replaced by triggers |
+| [replacementTrigger](/docs/concepts/options/replacementtrigger/) | Yes | Components can be replaced by triggers |
 | [replaceOnChanges](/docs/concepts/options/replaceonchanges/) | No | Components are not replaced by providers |
 | [replaceWith](/docs/concepts/options/replacewith/) | No | Components are not replaced by providers |
 | [retainOnDelete](/docs/concepts/options/retainondelete/) | No | Components don't have cloud resources to retain |
