@@ -4,41 +4,50 @@ title: {{ .Title }}
 {{ end }}url: {{ .RelPermalink }}
 ---
 {{- $content := .RenderShortcodes -}}
-{{- /* Convert Chroma syntax-highlighted HTML to fenced code blocks */ -}}
+{{- /* Phase 1: Convert Chroma syntax-highlighted HTML to fenced code blocks */ -}}
 {{- $content = replaceRE `<div[^>]*>\s*<pre[^>]*><code class="language-([^"]*)"[^>]*>` "```$1\n" $content -}}
 {{- $content = replaceRE `</code></pre>\s*</div>` "\n```" $content -}}
-{{- /* Convert bare pre/code blocks (no language class) to fenced code blocks */ -}}
 {{- $content = replaceRE `<pre[^>]*><code>` "```\n" $content -}}
 {{- $content = replaceRE `</code></pre>` "\n```" $content -}}
-{{- /* Strip span tags (Chroma highlighting) */ -}}
+{{- /* Phase 2: Strip all block-level and decorative tags */ -}}
 {{- $content = replaceRE `</?span[^>]*>` "" $content -}}
-{{- /* Strip icon tags and other decorative elements (before heading conversion) */ -}}
 {{- $content = replaceRE `<i[^>]*></i>` "" $content -}}
 {{- $content = replaceRE `<input[^>]*>` "" $content -}}
+{{- $content = replaceRE `</?div[^>]*>` "" $content -}}
+{{- $content = replaceRE `</?p>` "" $content -}}
+{{- $content = replaceRE `</?blockquote>` "" $content -}}
+{{- $content = replaceRE `</?ol>` "" $content -}}
+{{- $content = replaceRE `</?ul>` "" $content -}}
+{{- $content = replaceRE `</?li>` "" $content -}}
+{{- $content = replaceRE `</?pre[^>]*>` "" $content -}}
+{{- $content = replaceRE `</?section[^>]*>` "" $content -}}
+{{- $content = replaceRE `</?table[^>]*>` "" $content -}}
+{{- $content = replaceRE `</?thead>` "" $content -}}
+{{- $content = replaceRE `</?tbody>` "" $content -}}
+{{- $content = replaceRE `</?tr>` "" $content -}}
+{{- $content = replaceRE `</?td[^>]*>` "" $content -}}
+{{- $content = replaceRE `</?th[^>]*>` "" $content -}}
+{{- $content = replaceRE `</?details>` "" $content -}}
+{{- $content = replaceRE `</?summary>` "" $content -}}
+{{- $content = replaceRE `<!--\s*markdownlint[^>]*-->` "" $content -}}
+{{- /* Phase 3: Normalize whitespace so inline conversions can match cleanly */ -}}
+{{- $content = replaceRE `(?m)^[ \t]+` "" $content -}}
+{{- $content = replaceRE `\n{3,}` "\n\n" $content -}}
+{{- /* Phase 4: Convert inline HTML to markdown */ -}}
 {{- $content = replaceRE `<label[^>]*>([^<]*)</label>` "$1" $content -}}
-{{- /* Convert HTML links to markdown links */ -}}
 {{- $content = replaceRE `<a[^>]*href="([^"]*)"[^>]*>([^<]*)</a>` "[$2]($1)" $content -}}
-{{- /* Convert common inline HTML to markdown */ -}}
 {{- $content = replaceRE `<code>([^<]*)</code>` "`$1`" $content -}}
 {{- $content = replaceRE `<strong>([^<]*)</strong>` "**$1**" $content -}}
 {{- $content = replaceRE `<em>([^<]*)</em>` "*$1*" $content -}}
-{{- /* Convert heading tags to markdown headings */ -}}
+{{- /* Phase 5: Convert heading tags to markdown headings */ -}}
 {{- $content = replaceRE `<h1[^>]*>([^<]*)</h1>` "\n# $1\n" $content -}}
 {{- $content = replaceRE `<h2[^>]*>([^<]*)</h2>` "\n## $1\n" $content -}}
 {{- $content = replaceRE `<h3[^>]*>([^<]*)</h3>` "\n### $1\n" $content -}}
 {{- $content = replaceRE `<h4[^>]*>([^<]*)</h4>` "\n#### $1\n" $content -}}
 {{- $content = replaceRE `<h5[^>]*>([^<]*)</h5>` "\n##### $1\n" $content -}}
 {{- $content = replaceRE `<h6[^>]*>([^<]*)</h6>` "\n###### $1\n" $content -}}
-{{- /* Strip remaining block-level tags */ -}}
-{{- $content = replaceRE `</?div[^>]*>` "" $content -}}
-{{- $content = replaceRE `</?p>` "" $content -}}
-{{- $content = replaceRE `</?blockquote>` "" $content -}}
-{{- $content = replaceRE `</?ol>` "" $content -}}
-{{- $content = replaceRE `</?li>` "" $content -}}
-{{- $content = replaceRE `</?pre[^>]*>` "" $content -}}
-{{- /* Strip HTML comments that aren't chooser delimiters */ -}}
-{{- $content = replaceRE `<!--\s*markdownlint[^>]*-->` "" $content -}}
-{{- /* Decode HTML entities */ -}}
+{{- /* Phase 6: Decode HTML entities and final cleanup */ -}}
 {{- $content = $content | htmlUnescape -}}
+{{- $content = replaceRE `\n{3,}` "\n\n" $content -}}
 
 {{ $content }}
