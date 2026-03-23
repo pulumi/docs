@@ -40,8 +40,8 @@ If you are a Premium or Ultimate GitLab customer, you have access to GitLab Grou
 
 #### In Pulumi Cloud
 
-1. Navigate to **Settings** > **Integrations** in the Pulumi Cloud dashboard.
-1. In the GitLab integration card, select **Authorize GitLab**.
+1. Navigate to **Management** > **Version control**.
+1. Select **Add account** and choose **GitLab**, then follow the prompts to authorize.
 
 #### In GitLab
 

@@ -30,7 +30,7 @@ An org admin must set up the integration before users can connect ADO repos.
 
 ### Step 1: Navigate to integrations
 
-Navigate to **Settings** > **Version control** in your Pulumi Cloud organization.
+Navigate to **Management** > **Version control** in your Pulumi Cloud organization.
 
 ### Step 2: Authorize with Azure
 
