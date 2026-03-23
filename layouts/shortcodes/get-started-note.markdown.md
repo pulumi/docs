@@ -1,0 +1,1 @@
+> **Note:** Pulumi supports many clouds using the same languages, CLI, and deployment workflow. For a streamlined Pulumi walkthrough, including language runtime installation and cloud configuration, see the [Get Started](/docs/get-started) guides.

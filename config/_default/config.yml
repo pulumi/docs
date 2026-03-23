@@ -39,6 +39,11 @@ outputFormats:
     baseName: "llms"
     isPlainText: true
     permalinkable: false
+  markdown:
+    mediaType: "text/markdown"
+    baseName: "index"
+    isPlainText: true
+    notAlternative: true
 
 # We set the outputs explicitly to just "HTML" as otherwise they default to both
 # "HTML" and "RSS", and we only want to generate RSS for the blog section -- not
@@ -52,6 +57,10 @@ outputs:
     - txtfull
   section:
     - HTML
+    - markdown
+  page:
+    - HTML
+    - markdown
 
 taxonomies:
   tag: tags
