@@ -20,68 +20,19 @@
 This file provides a curated guide to Pulumi's documentation, organized by product area. Each section includes nested pages with descriptions to help you navigate topics from high-level concepts to detailed reference material. For a complete list of all pages, see sitemap.xml.
 {{- /*
   DOCS SECTIONS
-  Mirror the structure from layouts/partials/docs/menu.html
-  This ensures llms.txt stays in sync with the sidebar navigation
+  Driven by data/docs-menu-sections.yml (single source of truth for section list).
 
   Each section walks its menu recursively, respecting:
   - Menu hierarchy and weights
   - llms_exclude frontmatter flag
   - Empty title filtering
 */ -}}{{ "\n" }}
-## Getting Started
-{{- with index site.Menus "get-started" }}
+{{- range site.Data.docs_menu_sections }}
+## {{ .label }}
+{{- with index site.Menus .menu }}
   {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
 {{- end }}
-
-## Infrastructure as Code
-{{- with index site.Menus "iac" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Deployments & Workflows
-{{- with index site.Menus "deployments" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Version Control
-{{- with index site.Menus "version-control" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Secrets & Configuration (ESC)
-{{- with index site.Menus "esc" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Insights & Governance
-{{- with index site.Menus "insights" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Internal Developer Platform
-{{- with index site.Menus "idp" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Infrastructure AI
-{{- with index site.Menus "ai" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Administration
-{{- with index site.Menus "administration" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Reference
-{{- with index site.Menus "reference" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Support
-{{- with index site.Menus "support" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
+{{ end }}
 
 {{- /*
   ADDITIONAL SECTIONS

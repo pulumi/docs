@@ -1,0 +1,22 @@
+{{- $result := slice -}}
+{{- range .menuEntries -}}
+  {{- $menuItem := . -}}
+  {{- with .Page -}}
+    {{- if and (not .Params.llms_exclude) (ne .Title "") -}}
+      {{- $children := slice -}}
+      {{- with $menuItem.Children -}}
+        {{- $children = partial "cli-sitemap-walk.json" (dict "menuEntries" .) -}}
+      {{- end -}}
+      {{- $result = $result | append (dict "title" .Title "path" .RelPermalink "children" $children) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not .Page -}}
+    {{- with $menuItem.Children -}}
+      {{- $nested := partial "cli-sitemap-walk.json" (dict "menuEntries" .) -}}
+      {{- range $nested -}}
+        {{- $result = $result | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $result -}}
