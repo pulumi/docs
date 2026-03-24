@@ -1,0 +1,67 @@
+@import "colors";
+@import "mixins";
+
+// Cookie consent banner styles must be OUTSIDE @layer components.
+// The Segment consent manager (static/js/consent-manager.js) injects its own
+// Emotion CSS without any @layer. In Tailwind v4, @layer components has lower
+// specificity than unlayered styles, so our overrides were being lost.
+#segment-consent-manager:empty {
+    @apply hidden;
+}
+#segment-consent-manager {
+
+    @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
+    z-index: 99999;
+
+    @include screen-lg {
+        @apply w-1/3 right-auto m-4 overflow-hidden;
+    }
+
+    // Force the Emotion-styled banner wrapper to wrap so the
+    // actions block flows below the content column.
+    [class^="css-"] {
+        flex-wrap: wrap;
+    }
+
+    div {
+       @apply bg-white;
+    }
+
+    p {
+        @apply text-black text-center text-sm;
+
+        a {
+            text-decoration: none;
+            color: map-get($blue, 600);
+        }
+    }
+
+    button {
+        @apply font-bold no-underline;
+    }
+
+    .consent-actions {
+        @apply flex gap-2 w-full pb-4;
+
+        .consent-btn {
+            @apply flex-1 font-bold no-underline p-3 rounded-md text-center text-sm cursor-pointer;
+            @include transition;
+        }
+
+        .consent-btn-accept {
+            @apply bg-violet-600 text-white border-2 border-violet-600;
+
+            &:hover, &:focus-visible {
+                @apply bg-violet-700 border-violet-700;
+            }
+        }
+
+        .consent-btn-secondary {
+            @apply bg-white text-violet-600 border-2 border-violet-600;
+
+            &:hover, &:focus-visible {
+                @apply bg-violet-600 text-white;
+            }
+        }
+    }
+}
