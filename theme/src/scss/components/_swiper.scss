@@ -88,8 +88,7 @@
 
 pulumi-swiper {
     .swiper {
-        @apply w-full h-full overflow-visible;
-        overflow: visible !important;
+        @apply w-full h-full;
     }
 
     .swiper-slide {

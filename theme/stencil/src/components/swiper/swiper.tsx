@@ -86,6 +86,7 @@ export class Swiper {
 
         this.resizeObserver = new ResizeObserver(() => {
             this.applySlideWidths();
+            this.isTransitioning = false;
             this.jumpTo(this.currentIndex);
         });
         this.resizeObserver.observe(this.container);
