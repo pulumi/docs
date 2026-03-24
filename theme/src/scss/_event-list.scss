@@ -37,11 +37,7 @@
 
     pulumi-filter-select {
         pulumi-filter-select-option-group {
-            @apply font-body text-sm relative;
-
-            @include screen-md {
-                @apply text-base;
-            }
+            @apply font-body text-base relative;
 
             .toggle {
                 @apply pl-2 pr-5 py-1 rounded bg-white border border-gray-300 transition-all whitespace-nowrap;
