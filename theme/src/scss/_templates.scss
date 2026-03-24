@@ -199,7 +199,7 @@
 .template-card {
     @apply flex flex-1 items-start rounded-2xl p-8 border border-violet-300;
 
-    &:first-child {
+    &.template-card--highlight {
         @apply bg-violet-100;
     }
 

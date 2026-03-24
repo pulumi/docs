@@ -5,15 +5,17 @@
     - columns: Array of column objects
       Example: [{"label": "Label", "title": "Title", "description": "Description", "cta_text": "CTA", "cta_link": "/link"}]
     - anchor: Optional anchor for section id
+    - highlight_first_card: Optional boolean. When true, applies a violet background to the first card. Default: false.
 */}}
 
 {{ $columns := .columns }}
 {{ $anchor := .anchor }}
+{{ $highlightFirstCard := .highlight_first_card | default false }}
 
 <section class="template-two-column"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col lg:flex-row gap-8 items-stretch">
-        {{ range $columns }}
-        {{ partial "template-partials/template-card.html" . }}
+        {{ range $i, $col := $columns }}
+        {{ partial "template-partials/template-card.html" (merge $col (dict "highlight" (and $highlightFirstCard (eq $i 0)))) }}
         {{ end }}
     </div>
 </section>

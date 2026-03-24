@@ -21,9 +21,10 @@
 {{ $ctaLink := .cta_link }}
 {{ $ctaPrimaryText := .cta_primary_text }}
 {{ $ctaPrimaryLink := .cta_primary_link }}
+{{ $highlight := .highlight | default false }}
 {{ $anchor := .anchor }}
 
-<div class="template-card"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+<div class="template-card{{ if $highlight }} template-card--highlight{{ end }}"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col h-full w-full">
         <div class="flex flex-col gap-4 mb-8">
             {{ if $label }}
