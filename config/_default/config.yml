@@ -57,10 +57,8 @@ outputs:
     - txtfull
   section:
     - HTML
-    - markdown
   page:
     - HTML
-    - markdown
 
 taxonomies:
   tag: tags

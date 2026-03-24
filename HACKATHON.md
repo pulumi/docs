@@ -12,7 +12,7 @@ Make Pulumi docs serve clean markdown for AI agents and terminal users. Add a Hu
 
 ### Hugo custom output format
 
-Each shortcode gets a `.markdown.html` template variant. Hugo selects the variant based on the output format being rendered. The base page templates (`layouts/docs/single.md`, `layouts/docs/list.md`) emit raw markdown content.
+Each shortcode gets a `.markdown.md` template variant (naming convention: `{name}.{formatName}.{mediaTypeSuffix}`). Hugo selects the variant based on the output format being rendered. The base page templates (`layouts/docs/single.md`, `layouts/docs/list.md`) use `{{ .RenderShortcodes }}` to emit raw markdown with shortcodes resolved, then apply a 6-phase regex pipeline to convert any remaining HTML to markdown.
 
 Config adds a `markdown` output format:
 
@@ -61,22 +61,31 @@ Shortcodes that include files (`example-program`, `loadcode`, `langfile`, `compf
 | Session | Scope | Status |
 |---------|-------|--------|
 | 1 | Shortcode audit (see `SHORTCODE-AUDIT.md`) | Complete |
-| 2 | Scaffold output format, base templates, fallback stubs | Not started |
-| 3 | `chooser`, `choosable`, `choosable-inline` templates | Not started |
-| 4 | High-priority shortcodes: `notes`, `get-started-stepper`, `example-program`, `langfile`, `cleanup`, etc. | Not started |
-| 5 | `pulumi docs` CLI command (pulumi/pulumi repo, parallel) | Not started |
+| 2 | Scaffold output format, base templates, 28 real shortcode templates, dead code cleanup | Complete |
+| 3 | Chooser/choosable family with HTML comment delimiters | Complete |
+| 4 | Remaining shortcodes, HTML-to-markdown pipeline, LLM menu rewrite | Complete |
+| 5 | `pulumi docs` CLI command (pulumi/pulumi repo) | Not started |
 
-## Key gotchas
+## Discoveries
 
-- **No single fallback**: Hugo requires a `.markdown.html` file per shortcode — Session 2 must generate stubs for all 108.
-- **Extensionless shortcodes**: `langcode` and `langname` have no `.html` extension. Verify Hugo handles output format variants for these.
-- **Hardcoded chooser markup**: ~40 shortcodes (`pulumi-*`, `policy-*`, `langfile`, `compfile`, etc.) embed `<pulumi-chooser>` HTML directly rather than nesting `{{< chooser >}}`. Their markdown variants must emit comment delimiters independently.
-- **Prior work**: Joe Duffy's PR [#16998](https://github.com/pulumi/docs/pull/16998) added then removed a markdown output format. Commits `de3e8a22e7` (add) and `0d83a565d2` (remove) are useful reference for Session 2.
+- **Shortcode template naming**: Hugo uses `{name}.{formatName}.{mediaTypeSuffix}` — for `text/markdown` that's `.markdown.md`, not `.markdown.html`.
+- **Dead shortcodes**: 41 shortcodes had zero usage across all content and were deleted.
+- **`.RenderShortcodes`**: Hugo 0.117+ method that renders shortcodes through their output format-specific templates without running goldmark on the surrounding markdown. This is the key to clean output.
+- **Markdown output scoping**: Output format must be enabled per-section via `cascade` in `content/docs/_index.md`, not globally — otherwise Hugo warns about missing layout files for marketing/blog pages.
+- **LLM menu**: Replaced client-side TurndownService (~250 lines of DOM conversion) with `fetch()` to server-side `index.md`.
+
+## Current state
+
+- **760 markdown files** generated under `public/docs/`
+- **13 pages** still have "best viewed on web" fallback (card grids, glossary, data-driven content)
+- **69 live shortcodes** with `.markdown.md` templates (41 dead ones deleted)
+- Separate PR for duplicate menu fix: [#18192](https://github.com/pulumi/docs/pull/18192)
 
 ## Key files
 
 - `SHORTCODE-AUDIT.md` — full shortcode inventory with tiers, usage counts, session assignments
-- `config/_default/config.yml` (lines 34–54) — existing output format config
-- `layouts/index.txtfull.txt` — existing non-HTML output format (pattern reference)
-- `layouts/shortcodes/` — all 108 shortcode templates
-- `layouts/docs/single.html` / `list.html` — current HTML page templates
+- `config/_default/config.yml` (lines 34–46) — output format config
+- `content/docs/_index.md` — cascade enabling markdown output for docs section
+- `layouts/docs/single.md` / `list.md` — markdown base templates with HTML-to-markdown pipeline
+- `layouts/shortcodes/*.markdown.md` — 69 shortcode markdown templates
+- `theme/stencil/src/components/llm-menu/llm-menu.tsx` — rewritten LLM menu component

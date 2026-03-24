@@ -11,8 +11,14 @@ docs_home: true
 nobreadcrumb: true
 h1: Pulumi Docs
 description: <p>Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> platform for building, deploying, and managing cloud infrastructure using your favorite <a href="/docs/iac/languages-sdks/">programming languages</a>. Manage infrastructure, secrets, and configuration with a unified workflow across any cloud.</p>
+outputs:
+- HTML
+- markdown
 cascade:
   meta_image: /images/docs/meta-images/docs-meta.png
+  outputs:
+  - HTML
+  - markdown
 link_buttons:
   primary:
     label: Get Started
