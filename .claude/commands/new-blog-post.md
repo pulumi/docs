@@ -128,10 +128,12 @@ tags:
     - tag2
 schema_type: auto
 
-# Optional: Social media promotional copy (for reference only, does not auto-post)
+# Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
+# Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter:
     linkedin:
+    bluesky:
 ---
 
 Introduction paragraph. This will appear on the blog index page.

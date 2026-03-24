@@ -43,9 +43,10 @@ tags:
 # Specify explicitly to override auto-detection. See SCHEMA.md for details.
 schema_type: auto
 
-# The social copy used to promote this post on Twitter and Linkedin. These
-# properties do not actually create the post and have no effect on the
-# generated blog page. They are here strictly for reference.
+# Social media copy. When this post merges to master, these are automatically
+# posted to X, LinkedIn, and Bluesky via scripts/social/schedule-posts.py.
+# Character limits: X ~280, Bluesky 300, LinkedIn 3000.
+# Leave blank to skip a platform.
 
 # Here are some examples of posts we have made in the past for inspiration:
 # https://www.linkedin.com/feed/update/urn:li:activity:7171191945841561601
@@ -58,6 +59,7 @@ schema_type: auto
 social:
     twitter:
     linkedin:
+    bluesky:
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
