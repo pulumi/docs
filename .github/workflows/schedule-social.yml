@@ -1,0 +1,81 @@
+name: Schedule social media posts
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: schedule-social
+  cancel-in-progress: false
+
+jobs:
+  schedule-social:
+    name: Schedule social media posts
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
+
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: social-scheduling
+          aws-region: us-west-2
+
+      - uses: pulumi/actions@v6
+
+      - name: Get social state bucket name
+        id: bucket
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          set -eo pipefail
+          BUCKET=$(pulumi -C infrastructure stack output socialStateBucketName --stack ${{ vars.PULUMI_STACK_NAME }})
+          echo "name=$BUCKET" >> "$GITHUB_OUTPUT"
+
+      - uses: astral-sh/setup-uv@v4
+
+      - name: Schedule social posts for new blog content
+        env:
+          UPLOAD_POST_API_KEY: ${{ steps.esc-secrets.outputs.UPLOAD_POST_API_KEY }}
+          SOCIAL_STATE_BUCKET: ${{ steps.bucket.outputs.name }}
+        run: uv run scripts/social/schedule-posts.py
+
+  notify:
+    if: failure()
+    name: Send slack notification
+    runs-on: ubuntu-latest
+    environment: production
+    needs: [schedule-social]
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
+      - name: Slack Notification
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops
+          SLACK_COLOR: "#F54242"
+          SLACK_MESSAGE: "social media scheduling failure in pulumi/docs repo :meow_sad:"
+          SLACK_USERNAME: docsbot
+          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
