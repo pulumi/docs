@@ -16,6 +16,7 @@
     - image: Optional hero image/code visual path (displayed below content, slightly left of center)
     - image_alt: Alt text for image (optional)
     - image_max_width: Optional max width for the image (e.g. "800px", "60rem"). Defaults to full width.
+    - image_min_width: Optional min width for the image (e.g. "400px", "30rem").
     - anchor: Optional anchor for section id
 */}}
 
@@ -30,7 +31,8 @@
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default $title | default (printf "%s %s" $titlePrimary $titleSecondary) }}
 {{ $imageMaxWidth := .image_max_width }}
-{{ $imageStyle := "" }}{{ if $imageMaxWidth }}{{ $imageStyle = printf "max-width: %s;" $imageMaxWidth }}{{ end }}
+{{ $imageMinWidth := .image_min_width }}
+{{ $imageStyle := "" }}{{ if $imageMaxWidth }}{{ $imageStyle = printf "%smax-width: %s;" $imageStyle $imageMaxWidth }}{{ end }}{{ if $imageMinWidth }}{{ $imageStyle = printf "%smin-width: %s;" $imageStyle $imageMinWidth }}{{ end }}
 {{ $anchor := .anchor }}
 
 <section class="template-product-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>

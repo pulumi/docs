@@ -56,7 +56,7 @@
 
 @mixin section-hint-accent {
     font-family: "Monaspace Neon Var", monospace;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.7px;
@@ -65,17 +65,17 @@
 }
 
 @mixin section-hint-small {
-    font-family: "Monaspace Neon Var", monospace;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.5;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    color: #404041;
+    @include section-hint-accent();
 }
 
 @mixin section-body-medium {
     @apply font-normal leading-normal font-body text-body-m;
+    font-feature-settings: 'salt' on;
+    color: #2f3032;
+}
+
+@mixin section-body-small {
+    @apply font-normal leading-normal font-body text-body-s;
     font-feature-settings: 'salt' on;
     color: #2f3032;
 }
@@ -103,7 +103,6 @@
 
     .hero-booth-number {
         @apply font-semibold text-violet-800;
-;
     }
 
     .hero-bullet {
@@ -200,6 +199,10 @@
 .template-card {
     @apply flex flex-1 items-start rounded-2xl p-8 border border-violet-300;
 
+    &:first-child {
+        @apply bg-violet-100;
+    }
+
     .card-label {
         @include section-hint-accent();
     }
@@ -262,7 +265,7 @@
     }
 
     .three-column-item-description {
-        @include section-body-medium();
+        @include section-body-small();
     }
 }
 
@@ -284,8 +287,7 @@
 }
 
 .template-feature-card-description {
-    @include section-body-medium();
-    @apply text-body-s;
+    @include section-body-small();
 }
 
 .template-testimonial {
@@ -303,13 +305,10 @@
 }
 
 .template-testimonial-product {
-    @apply font-body;
-    background-color: #2d2d2d;
-    border: 1px solid #404040;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    @apply font-body bg-violet-100;
 
     .template-testimonial-product-quote {
-        @apply text-white leading-relaxed text-left border-0 font-semibold text-heading-xs;
+        @apply text-black leading-relaxed text-left border-0 font-semibold text-heading-xs;
 
         p {
             @apply m-0;
@@ -317,7 +316,7 @@
     }
 
     .template-testimonial-product-logo img {
-        @apply block w-auto h-7 invert;
+        @apply block w-auto h-7;
         max-width: 120px;
     }
 
@@ -326,11 +325,11 @@
     }
 
     .template-testimonial-product-author {
-        @apply text-white font-bold font-body text-body-m;
+        @apply text-black font-bold font-body text-body-m;
     }
 
     .template-testimonial-product-title {
-        @apply text-gray-300 font-normal font-body text-body-s;
+        @apply text-black font-normal font-body text-body-s;
     }
 }
 
@@ -446,9 +445,6 @@
     .product-hero-visual {
         @apply w-full;
 
-        img {
-            @apply min-w-5xl;
-        }
     }
 }
 
@@ -472,7 +468,7 @@
 
     .section-header-tag-line {
         font-family: "Monaspace Neon Var", monospace;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 14px;
         line-height: 1.5;
         letter-spacing: 0.7px;

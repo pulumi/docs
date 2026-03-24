@@ -12,7 +12,7 @@ hero:
     Built for the AI Era of Infrastructure. Modern infrastructure demands modern tools. Pulumi unifies infrastructure as code, secrets management, policy governance, and AI automation into a single platform. Start with our Apache 2.0 open source core, scale with enterprise features when you need them.
   image: /images/product/overview/overview-diagram.svg
   image_alt: Pulumi platform overview diagram
-  image_max_width: 780px
+  image_max_width: 800px
   anchor: hero
 
 product_two_column:
@@ -119,13 +119,7 @@ idp_section:
   cta_link: /product/internal-developer-platforms/
   image: /images/product/overview/overview-idp.svg
   image_alt: Internal developer platform dashboard
-  anchor: idp
-
-three_column_idp:
-  anchor: idp-features
-  icon_style: black
-  icon_layout: above
-  columns:
+  cards:
     - icon: fa-cubes
       title: Golden paths
       description: |
@@ -138,6 +132,7 @@ three_column_idp:
       title: Day 2 operations
       description: |
         Drift detection, dependency management, enterprise RBAC. Handle the full infrastructure lifecycle.
+  anchor: idp
 
 split_cta:
   anchor: get-started

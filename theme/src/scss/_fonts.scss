@@ -2,7 +2,8 @@
     font-family: "Monaspace Neon Var";
     font-weight: 100 900;
     font-style: normal;
-    src: url("/fonts/monaspace-neon-var.ttf") format("truetype");
+    font-display: swap;
+    src: url("/fonts/monaspace-neon-var.woff2") format("woff2");
 }
 
 @font-face {

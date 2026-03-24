@@ -16,6 +16,7 @@ hero:
   image: /images/product/iac/matrix-cards.svg
   image_alt: Pulumi infrastructure as code in any language
   image_max_width: 1200px
+  image_min_width: 1024px
   anchor: hero
 
 product_two_column:

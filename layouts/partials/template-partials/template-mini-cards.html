@@ -4,15 +4,27 @@
     Renders a 3-column grid of mini feature cards (icon, title, description).
     Used by section-header partials to display feature highlights below the main content.
 
-    Parameters (passed directly as the cards slice):
-    - Array of card objects, each with:
-      - icon: Font Awesome icon class (e.g. "fa-code")
-      - title: Card title
-      - description: Card description (markdown supported)
+    Accepts either:
+    - A plain slice of card objects (legacy callers), OR
+    - A dict with:
+      - cards: slice of card objects
+      - lg_top_class: (optional) Tailwind large-breakpoint top-margin class (default: "lg:mt-20")
+
+    Each card object:
+    - icon: Font Awesome icon class (e.g. "fa-code")
+    - title: Card title
+    - description: Card description (markdown supported)
 */}}
 
-<div class="product-two-column-cards grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-36 mt-12 md:mt-16 lg:mt-20 w-full">
-    {{ range . }}
+{{ $cards := . }}
+{{ $lgTopClass := "lg:mt-20" }}
+{{ if reflect.IsMap . }}
+    {{ $cards = .cards }}
+    {{ with .lg_top_class }}{{ $lgTopClass = . }}{{ end }}
+{{ end }}
+
+<div class="product-two-column-cards grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-36 mt-12 md:mt-16 {{ $lgTopClass }} w-full">
+    {{ range $cards }}
     <div class="product-feature-mini-card">
         {{ if .icon }}
         <div class="template-feature-card-icon">
