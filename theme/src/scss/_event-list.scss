@@ -7,6 +7,7 @@
 
         li {
             @apply border-solid border-b-2 border-transparent;
+            margin-bottom: -1px;
 
             > a {
                 @apply block py-3 px-4 font-normal text-base text-center text-gray-700 no-underline whitespace-nowrap;
@@ -36,8 +37,16 @@
     }
 
     pulumi-filter-select {
+        @include screen-md {
+            @apply pb-3;
+        }
+
         pulumi-filter-select-option-group {
-            @apply font-body text-base relative;
+            @apply font-body text-sm relative;
+
+            @include screen-md {
+                @apply text-base;
+            }
 
             .toggle {
                 @apply pl-2 pr-5 py-1 rounded bg-white border border-gray-300 transition-all whitespace-nowrap;
