@@ -1,11 +1,11 @@
 .customer-logo {
-    svg {
-        @apply w-full h-full;
+    svg, img {
+        @apply w-full h-full object-contain;
     }
 
     &-black {
-        svg {
-            @apply w-full h-full;
+        svg, img {
+            @apply w-full h-full object-contain;
         }
 
          path {
@@ -14,8 +14,8 @@
     }
 
     &-hoverable {
-        svg {
-            @apply w-full h-full;
+        svg, img {
+            @apply w-full h-full object-contain;
         }
     }
 
