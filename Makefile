@@ -55,6 +55,13 @@ build:
 	$(MAKE) build-assets
 	./scripts/build-site.sh
 
+.PHONY: lint-markdown
+lint-markdown:
+	@echo -e "\033[0;32mLINT MARKDOWN OUTPUT:\033[0m"
+	cp .markdownlint-cli2-markdown-output.jsonc public/.markdownlint-cli2.jsonc
+	cd public && npx markdownlint-cli2 --fix "docs/**/index.md" || true
+	cd public && npx markdownlint-cli2 "docs/**/index.md"
+
 .PHONY: check_links
 check_links:
 	$(MAKE) banner

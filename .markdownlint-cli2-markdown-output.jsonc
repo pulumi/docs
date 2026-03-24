@@ -1,0 +1,40 @@
+{
+  // Config for auto-fixing generated markdown output files.
+  // Only rules that markdownlint can auto-fix are left enabled.
+  // Rules that report but can't fix are disabled to keep output clean.
+  "config": {
+    // Disabled: can't auto-fix, and prose line length is intentional
+    "MD013": false,
+    // Disabled: can't auto-fix, inline HTML is expected (chooser comments, edge cases)
+    "MD033": false,
+    // Disabled: can't auto-fix, generated content may lack language specifiers
+    "MD040": false,
+    // Disabled: can't auto-fix, duplicate headings are valid across chooser options
+    "MD024": false,
+    // Disabled: can't auto-fix, heading increments may skip in generated content
+    "MD001": false,
+    // Disabled: can't auto-fix, emphasis-as-heading is a style choice
+    "MD036": false,
+    // Disabled: can't auto-fix, alt text on images
+    "MD045": false,
+    // Disabled: can't auto-fix, link fragment validation
+    "MD051": false,
+    // Disabled: can't auto-fix, descriptive link text
+    "MD059": false,
+    // Disabled: can't auto-fix, reference links
+    "MD052": false,
+    // Disabled: can't auto-fix, table column count mismatches
+    "MD056": false,
+    // Disabled: first line heading not applicable (frontmatter is the title)
+    "MD041": false,
+    // Disabled: consecutive blockquotes (separate notes) are intentional
+    "MD028": false,
+    // Disabled: list boundary issues from source content (mixed list types without blank lines)
+    "MD032": false,
+    // Disabled: extra blank lines from shortcode template whitespace
+    "MD012": false,
+    // Disabled: table formatting in generated content is inconsistent
+    "MD055": false,
+    "MD060": false
+  }
+}
