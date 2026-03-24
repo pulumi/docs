@@ -6,6 +6,7 @@ h1: "Migrating from Serverless Framework to Pulumi"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
+        identifier: iac-migration-serverless
         name: Serverless Framework
         parent: iac-guides-migration-from
         weight: 6
