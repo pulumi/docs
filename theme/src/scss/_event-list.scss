@@ -1,43 +1,18 @@
 .pulumi-event-list-container {
-    .scroll-container {
-        width: 110px;
-
-        button {
-            width: 110px;
-
-            i:hover {
-                @apply text-black;
-            }
-        }
-
-        @include screen-xl {
-            @apply hidden;
-        }
-    }
 
     #event-list-filter-nav {
-        @apply flex font-body text-base py-2 p-0;
+        @apply flex font-body text-base py-0;
 
         list-style: none !important;
 
-        @include screen-md {
-            @apply text-base py-0;
-        }
-
-        overflow-x: scroll;
-        // Don't show a scrollbar, because we have our own custom implementation with buttons.
-        &::-webkit-scrollbar {
-            display: none;
-        }
-
         li {
-            @apply flex-grow border-solid border-b-2 border-transparent mx-3;
+            @apply border-solid border-b-2 border-transparent;
 
             > a {
-                @apply block py-2 px-4 font-normal text-lg text-center text-gray-700 no-underline;
+                @apply block py-3 px-4 font-normal text-base text-center text-gray-700 no-underline whitespace-nowrap;
 
                 @include screen-md {
-                    @apply py-4;
+                    @apply py-4 text-lg;
                 }
             }
 
@@ -61,38 +36,42 @@
     }
 
     pulumi-filter-select {
-        @apply items-end pb-4;
-
         pulumi-filter-select-option-group {
-            @apply font-body text-base;
-    
+            @apply font-body text-sm relative;
+
+            @include screen-md {
+                @apply text-base;
+            }
+
             .toggle {
-                @apply pl-2 pr-6 py-1 rounded bg-white border border-gray-300 transition-all;
-    
+                @apply pl-2 pr-5 py-1 rounded bg-white border border-gray-300 transition-all whitespace-nowrap;
+
                 @include screen-md {
-                    @apply w-32;
+                    @apply pr-6 w-32;
                 }
-    
+
                 &:hover {
                     @apply text-black;
                     background-color: #e8e8ec;
                 }
             }
-    
+
             .options {
-                @apply bg-white py-2 pl-1 pr-4 rounded shadow mt-1 border border-gray-300 leading-loose z-50;
-    
+                @apply absolute bg-white py-2 pl-1 pr-4 rounded shadow mt-1 border border-gray-300 leading-loose z-50;
+                max-width: calc(100vw - 2rem);
+
                 @include screen-md {
                     @apply pr-8;
+                    max-width: none;
                 }
             }
-    
+
             &:hover,
             &[expanded] {
                 &::part(toggle) {
                     @apply text-black;
                 }
-    
+
                 .toggle {
                     @apply text-black;
                     background-color: #e8e8ec;
@@ -100,14 +79,14 @@
             }
         }
     }
-    
+
 }
 
 @each $filter-name in "upcoming" "on-demand"{
     ##{$filter-name}:target {
         @if $filter-name != "upcoming" {
             ~ .event-list-filter li[data-filter-name="upcoming"] {
-                @apply flex-grow border-solid border-b-2 border-transparent;
+                @apply border-solid border-b-2 border-transparent;
 
                 > a {
                     @apply font-normal text-gray-600;
@@ -131,11 +110,6 @@
             }
         }
 
-        // When the page is loaded without a hash in the URL (a selected filter) we load
-        // all the elements in the list and mark the 'all' filter as active. Because in this
-        // case all the elements are visible and are not rendered with a 'hidden' class, we need
-        // to apply the 'hidden' class to all the elements in the list. Then we will apply the
-        // 'block' class to the elements containing the selected filter.
         ~ ul li {
             @apply hidden;
         }
@@ -143,11 +117,6 @@
         ~ ul li[data-filters~="#{$filter-name}"] {
             @apply block;
         }
-    }
-
-    // Sort AI answers to the bottom of the list so they don't push dated events down the list.
-    li[data-filters~="ai-answers"]  {
-        @apply order-last;
     }
 }
 

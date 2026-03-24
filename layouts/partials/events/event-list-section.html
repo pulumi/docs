@@ -58,27 +58,19 @@
     <span id="upcoming" class="hidden"></span>
     <span id="on-demand" class="hidden"></span>
 
-    <div class="pulumi-event-list-container event-list-filter flex flex-col-reverse lg:flex-row flex-wrap justify-between border-b border-gray-200 pb-0 mb-8">
-        <div class="w-2/3 sm:w-1/2 md:w-auto">
-            <div class="scroll-container hidden lg:flex items-center">
-                <button id="slideBackwards"><i class="text-gray-400 text-2xl fas fa-angle-left"></i></button>
-            </div>
-            <ul id="event-list-filter-nav" class="flex flex-col md:flex-row px-4 lg:px-0">
-                {{ range $item := .Params.sections }}
-                    <li data-filter-name="{{ $item.anchor }}" class="mb-0">
-                        <a class="whitespace-nowrap" href="#{{ $item.anchor }}">
-                            <span>{{ $item.label }}</span>
-                        </a>
-                    </li>
-                {{ end }}
-            </ul>
-            <div class="scroll-container hidden lg:flex items-center">
-                <button id="slideForward"><i class="text-gray-400 text-2xl fas fa-angle-right"></i></button>
-            </div>
-        </div>
-        <pulumi-filter-select class="flex justify-self-end w-full md:w-1/2">
+    <div class="pulumi-event-list-container event-list-filter flex flex-col-reverse md:flex-row md:items-end justify-between border-b border-gray-200 pb-0 mb-8 overflow-x-clip md:overflow-x-visible">
+        <ul id="event-list-filter-nav" class="flex p-0 m-0">
+            {{ range $item := .Params.sections }}
+                <li data-filter-name="{{ $item.anchor }}" class="mb-0">
+                    <a class="whitespace-nowrap" href="#{{ $item.anchor }}">
+                        <span>{{ $item.label }}</span>
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+        <pulumi-filter-select class="flex pb-3 md:pb-0">
             <pulumi-filter-select-option-group name="level" class="items-center">
-                <div class="toggle" slot="toggle">Skill Level</div>
+                <div class="toggle" slot="toggle">Level</div>
                 <div class="options">
                     <pulumi-filter-select-option value="beginner" label="Beginner">Beginner</pulumi-filter-select-option>
                     <pulumi-filter-select-option value="intermediate" label="Intermediate">Intermediate</pulumi-filter-select-option>
