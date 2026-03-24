@@ -76,10 +76,6 @@ To prevent a range of security attacks, Pulumi stores the provider's TLS certifi
 
 ### Configure the authorization policies
 
-{{< notes type="info" >}}
-The max amount of policies is limited to 40 policies per OIDC Issuer.
-{{< /notes >}}
-
 When a new OIDC issuer is registered, a default authorization policy is provisioned denying any token exchange. Explicitly configuring **allow** policies is required.
 
 When configuring a policy, it is required to explicitly state what kind of token can be requested and what team or user the token should be scoped to.

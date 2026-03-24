@@ -479,58 +479,5 @@ $sitenav-offset: calc($sitenav-height + 16px);
     }
 }
 
-// Cookie consent banner styles must be OUTSIDE @layer components.
-// The Segment consent manager (static/js/consent-manager.js) injects its own
-// Emotion CSS without any @layer. In Tailwind v4, @layer components has lower
-// specificity than unlayered styles, so our overrides were being lost.
-#segment-consent-manager:empty {
-    @apply hidden;
-}
-#segment-consent-manager {
-
-    @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
-    z-index: 99999;
-
-    @include screen-lg {
-        @apply w-1/3 right-auto m-4 overflow-hidden;
-    }
-
-    div {
-       @apply bg-white;
-    }
-
-    p {
-        @apply text-black text-left text-sm pr-2;
-
-        a {
-            text-decoration: none;
-            color: map-get($blue, 600);
-        }
-    }
-
-    button {
-        @apply font-bold no-underline;
-    }
-
-    button[aria-label="Close"] {
-        @apply text-violet-800 mt-4 top-0 right-0 text-lg;
-    }
-
-    .manage-cookies-btn {
-        @apply mt-2 bg-violet-600 text-white font-bold border-2 border-violet-600 no-underline p-3 rounded-md text-center;
-        @include transition;
-
-        &.disabled {
-            opacity: 0.3;
-        }
-
-        &:hover {
-            @apply bg-violet-100 text-violet-700;
-        }
-
-        &:focus {
-            @apply bg-violet-100 text-violet-200;
-        }
-    }
-}
+@import "consent-banner";
 

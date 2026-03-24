@@ -427,6 +427,7 @@ const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
 });
 
 const fiveMinutes = 60 * 5;
+const thirtyMinutes = fiveMinutes * 6;
 const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
@@ -438,6 +439,20 @@ const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 // CachingDisabled sets min, max, and default cache TTLs to 0.
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
 const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
+
+// Custom cache policy for origin-proxied behaviors (registry, guides) that need
+// an originRequestPolicy. CloudFront requires a cachePolicyId (not legacy
+// forwardedValues) when an origin request policy is attached.
+const thirtyMinuteCachePolicy = new aws.cloudfront.CachePolicy("thirty-minute-cache", {
+    defaultTtl: thirtyMinutes,
+    maxTtl: thirtyMinutes,
+    minTtl: 0,
+    parametersInCacheKeyAndForwardedToOrigin: {
+        cookiesConfig: { cookieBehavior: "none" },
+        headersConfig: { headerBehavior: "none" },
+        queryStringsConfig: { queryStringBehavior: "none" },
+    },
+});
 
 const baseSecurityHeadersConfig = {
     frameOptions: {
@@ -518,8 +533,8 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
     },
 
     minTtl: 0,
-    defaultTtl: fiveMinutes,
-    maxTtl: fiveMinutes,
+    defaultTtl: thirtyMinutes,
+    maxTtl: thirtyMinutes,
     lambdaFunctionAssociations: config.doEdgeRedirects ? [getEdgeRedirectAssociation()] : [],
     responseHeadersPolicyId: SecurityHeadersPolicy.id,
 };
@@ -554,12 +569,9 @@ if (config.registryStack) {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
             pathPattern: "/registry/*",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            forwardedValues: undefined,
         },
     )
 }
@@ -585,12 +597,9 @@ if (config.guidesStack) {
             ...baseCacheBehavior,
             targetOriginId: guidesCDN,
             pathPattern: "/guides/*",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            forwardedValues: undefined,
         },
     )
 }
@@ -990,6 +999,7 @@ export const socialStateBucketName = socialStateBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
+export const cloudFrontDistributionId = cdn.id;
 export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
 export const readme = fs.readFileSync("./README.md").toString();

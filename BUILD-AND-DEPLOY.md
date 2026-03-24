@@ -683,6 +683,14 @@ public/css/bundle.{CSS_BUNDLE_ID}.css
 public/css/marketing.{CSS_BUNDLE_ID}.css
 ```
 
+5. **Critical CSS inlining**
+   - Uses [beasties](https://github.com/danielroe/beasties) to extract above-the-fold CSS and inline it into the HTML
+   - Runs after minification so it operates on final stylesheets
+   - Currently applied to the homepage only (`public/index.html`)
+   - Original CSS files are preserved (`pruneSource: false`); the full stylesheet is still loaded async
+
+**Script:** `scripts/inline-critical-css.js`
+
 #### JavaScript Bundling
 
 **Dependencies:**
@@ -1323,6 +1331,40 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 **Why It Matters:** Keeps private documentation fork synchronized with public repository.
 
+### Social Media Automation
+
+#### schedule-social.yml
+
+**Purpose:** Automatically schedule social media posts (X, LinkedIn, Bluesky) for new blog content.
+
+**Triggers:**
+
+- Push to `master` branch
+- Manual: `workflow_dispatch`
+
+**Environment:** Production (AWS Account: 388588623842)
+
+**How It Works:**
+
+1. Detects blog posts changed since the last processed commit (tracked in S3 state)
+1. Reads `social.twitter`, `social.linkedin`, `social.bluesky` from frontmatter
+1. Posts dated today or in the past are posted immediately; future-dated posts are scheduled for 10 AM Eastern
+1. Posts older than 2 days are skipped
+1. State is tracked in S3 (`posted.json`) for idempotency — if state can't be loaded, the script aborts rather than risk double-posting
+
+**Required Secrets (from ESC):**
+
+- `UPLOAD_POST_API_KEY` — API key for upload-post.com
+- `PULUMI_ACCESS_TOKEN` — For reading the `socialStateBucketName` Pulumi stack output
+
+**Required Infrastructure:**
+
+- S3 bucket for state tracking (name read from Pulumi stack output `socialStateBucketName`)
+
+**Rollout Status:** Currently in test mode (`PROD_MODE = False`), posting to test accounts. Flip to prod once validated.
+
+**Typical Duration:** < 1 minute
+
 ### Other Workflows
 
 The repository includes 9 additional utility workflows for automation and project management:
@@ -1373,8 +1415,9 @@ These workflows support repository maintenance, automation, and developer experi
 | check-search-urls | Daily 3 PM UTC | N/A | 2-5 min | Validate search index |
 | check-lighthouse | Daily 3 PM UTC | N/A | 3-8 min | Performance monitoring |
 | update-search-index | Hourly | Production | 2-5 min | Update Algolia |
+| schedule-social | Push to master, Manual | Production | < 1 min | Social media scheduling |
 
-> **Note:** The table above shows the 14 core deployment and testing workflows. An additional 10 utility workflows (automation, AI review, project management, secret management, dev versions) are listed in the "Other Workflows" section, bringing the total to 24 workflows.
+> **Note:** The table above shows the 15 core deployment and testing workflows. An additional 10 utility workflows (automation, AI review, project management, secret management, dev versions) are listed in the "Other Workflows" section, bringing the total to 25 workflows.
 
 ---
 
@@ -3655,22 +3698,28 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
 **Cache Headers:**
 
 ```yaml
-# Long cache for versioned assets
-/css/*.css: 1 year
-/js/*.js: 1 year
+# Long cache for fingerprinted assets
+/css/bundle.*.css: 1 year
+/js/bundle.*.js: 1 year
+/fingerprinted/*: 1 year
 
-# Short cache for HTML
-/*.html: 5 minutes
-
-# No cache for dynamic content
-/registry/*: no cache
+# Standard cache for HTML (invalidated on deploy)
+/*.html: 30 minutes
+/registry/*: 30 minutes
+/guides/*: 30 minutes
 ```
+
+**Post-deploy invalidation:**
+
+After each deploy, CloudFront cache is automatically invalidated for HTML content paths
+(see `scripts/run-pulumi.sh`). Fingerprinted assets are excluded since their URLs change
+with content. This allows aggressive TTLs without stale content after deploys.
 
 **Optimization:**
 
 1. **Increase TTL for static assets**
-   - Versioned assets can cache forever
-   - Use bundle IDs for cache busting
+   - Fingerprinted assets can cache forever
+   - Use content-hash URLs for cache busting
 
 2. **Cache Patterns**
 
