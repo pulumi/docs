@@ -36,6 +36,9 @@ title: {{ .Title }}
 {{- /* Phase 4: Convert inline HTML to markdown */ -}}
 {{- $content = replaceRE `<label[^>]*>([^<]*)</label>` "$1" $content -}}
 {{- $content = replaceRE `<a[^>]*href="([^"]*)"[^>]*>([^<]*)</a>` "[$2]($1)" $content -}}
+{{- /* Collapse whitespace inside markdown link brackets (from multi-line <a> tags) */ -}}
+{{- $content = replaceRE `\[\s+` "[" $content -}}
+{{- $content = replaceRE `\s+\]\(` "](" $content -}}
 {{- $content = replaceRE `<code>([^<]*)</code>` "`$1`" $content -}}
 {{- $content = replaceRE `<strong>([^<]*)</strong>` "**$1**" $content -}}
 {{- $content = replaceRE `<em>([^<]*)</em>` "*$1*" $content -}}
