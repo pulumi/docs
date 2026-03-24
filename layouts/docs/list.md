@@ -32,7 +32,6 @@ title: {{ .Title }}
 {{- $content = replaceRE `</?summary>` "" $content -}}
 {{- $content = replaceRE `<!--\s*markdownlint[^>]*-->` "" $content -}}
 {{- /* Phase 3: Normalize whitespace so inline conversions can match cleanly */ -}}
-{{- $content = replaceRE `(?m)^[ \t]+` "" $content -}}
 {{- $content = replaceRE `\n{3,}` "\n\n" $content -}}
 {{- /* Phase 4: Convert inline HTML to markdown */ -}}
 {{- $content = replaceRE `<a[^>]*href="([^"]*)"[^>]*>([^<]*)</a>` "[$2]($1)" $content -}}

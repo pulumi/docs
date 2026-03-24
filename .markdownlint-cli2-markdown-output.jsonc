@@ -35,6 +35,8 @@
     "MD012": false,
     // Disabled: table formatting in generated content is inconsistent
     "MD055": false,
-    "MD060": false
+    "MD060": false,
+    // Disabled: indented code blocks from residual HTML indentation
+    "MD046": false
   }
 }
