@@ -13,6 +13,7 @@ title: {{ .Title }}
 {{- $content = replaceRE `</?span[^>]*>` "" $content -}}
 {{- $content = replaceRE `<i[^>]*></i>` "" $content -}}
 {{- $content = replaceRE `<input[^>]*>` "" $content -}}
+{{- $content = replaceRE `</?label[^>]*>` "" $content -}}
 {{- $content = replaceRE `</?div[^>]*>` "" $content -}}
 {{- $content = replaceRE `</?p>` "" $content -}}
 {{- $content = replaceRE `</?blockquote>` "" $content -}}
@@ -34,7 +35,6 @@ title: {{ .Title }}
 {{- $content = replaceRE `(?m)^[ \t]+` "" $content -}}
 {{- $content = replaceRE `\n{3,}` "\n\n" $content -}}
 {{- /* Phase 4: Convert inline HTML to markdown */ -}}
-{{- $content = replaceRE `<label[^>]*>([^<]*)</label>` "$1" $content -}}
 {{- $content = replaceRE `<a[^>]*href="([^"]*)"[^>]*>([^<]*)</a>` "[$2]($1)" $content -}}
 {{- /* Collapse whitespace inside markdown link brackets (from multi-line <a> tags) */ -}}
 {{- $content = replaceRE `\[\s+` "[" $content -}}
@@ -49,6 +49,10 @@ title: {{ .Title }}
 {{- $content = replaceRE `<h4[^>]*>([^<]*)</h4>` "\n#### $1\n" $content -}}
 {{- $content = replaceRE `<h5[^>]*>([^<]*)</h5>` "\n##### $1\n" $content -}}
 {{- $content = replaceRE `<h6[^>]*>([^<]*)</h6>` "\n###### $1\n" $content -}}
+{{- /* Strip any remaining HTML tags not yet handled */ -}}
+{{- $content = replaceRE `</?a[^>]*>` "" $content -}}
+{{- /* Strip lone +/- lines left from accordion toggle spans */ -}}
+{{- $content = replaceRE `(?m)^[+\-]\n` "" $content -}}
 {{- /* Phase 6: Decode HTML entities and final cleanup */ -}}
 {{- $content = $content | htmlUnescape -}}
 {{- $content = replaceRE `\n{3,}` "\n\n" $content -}}
