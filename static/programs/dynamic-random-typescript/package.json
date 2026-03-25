@@ -1,0 +1,10 @@
+{
+    "name": "dynamic-random-typescript",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0"
+    }
+}
