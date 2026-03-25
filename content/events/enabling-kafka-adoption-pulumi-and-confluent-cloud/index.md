@@ -28,6 +28,7 @@ layout: cloud-engineering-days-replay
 external: false
 block_external_search_index: false
 
+event_type: talk
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
 url_slug: "enabling-kafka-adoption-pulumi-and-confluent-cloud"

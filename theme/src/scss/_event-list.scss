@@ -26,8 +26,8 @@
             }
         }
 
-        // On initial load without a target in the url, the upcoming tab should be active.
-        li[data-filter-name="upcoming"] {
+        // On initial load without a hash, the "All" tab should be active.
+        li[data-filter-name="all"] {
             border-bottom: 2px solid #805ac3;
 
             > a {
@@ -92,40 +92,34 @@
 
 }
 
-@each $filter-name in "upcoming" "on-demand"{
+// Tab styling via :target — only controls the active tab underline.
+// Visibility of event groups is handled by resources.ts.
+@each $filter-name in "all" "upcoming" "on-demand" {
     ##{$filter-name}:target {
-        @if $filter-name != "upcoming" {
-            ~ .event-list-filter li[data-filter-name="upcoming"] {
-                @apply border-solid border-b-2 border-transparent;
+        // Reset the default "all" tab styling when any hash is set.
+        ~ .event-list-filter li[data-filter-name="all"] {
+            @apply border-solid border-b-2 border-transparent;
+
+            > a {
+                @apply font-normal text-gray-600;
+            }
+
+            &:hover {
+                @apply border-gray-600;
 
                 > a {
-                    @apply font-normal text-gray-600;
-                }
-
-                &:hover {
-                    @apply border-gray-600;
-
-                    > a {
-                        @apply text-black;
-                    }
+                    @apply text-black;
                 }
             }
         }
 
+        // Highlight the active tab.
         ~ .event-list-filter li[data-filter-name="#{$filter-name}"] {
             border-bottom: 2px solid #805ac3;
 
             > a {
                 @apply font-semibold text-black;
             }
-        }
-
-        ~ ul li {
-            @apply hidden;
-        }
-
-        ~ ul li[data-filters~="#{$filter-name}"] {
-            @apply block;
         }
     }
 }

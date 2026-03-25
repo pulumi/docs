@@ -1,15 +1,16 @@
 const filterResourceItems = (filters) => {
     const monthGroups = document.querySelectorAll<HTMLElement>(".event-list .month-label");
+    const separator = document.querySelector<HTMLElement>(".event-list .event-list-separator");
     const noResultsMessage = document.querySelector(".template-event-list .no-results");
     noResultsMessage?.classList.remove("hidden");
 
-    const activeTab = location.hash.slice(1) || "upcoming";
+    const activeTab = location.hash.slice(1) || "all";
 
     monthGroups.forEach(group => {
         const groupFilters = (group.getAttribute("data-filters") || "").split(" ");
 
-        // Hide groups not matching the active tab.
-        if (!groupFilters.includes(activeTab)) {
+        // For the "all" tab, show all groups. Otherwise, only show matching tab.
+        if (activeTab !== "all" && !groupFilters.includes(activeTab)) {
             group.style.display = "none";
             return;
         }
@@ -39,6 +40,11 @@ const filterResourceItems = (filters) => {
             noResultsMessage?.classList.add("hidden");
         }
     });
+
+    // Show separator only on "all" tab when no filters are active.
+    if (separator) {
+        separator.style.display = (activeTab === "all" && filters.length === 0) ? "" : "none";
+    }
 }
 
 document.querySelector(".pulumi-event-list-container")?.addEventListener("filterSelect", (event: CustomEvent) => {
@@ -65,3 +71,7 @@ window.addEventListener('hashchange', function() {
     filterResourceItems(selectedFilters);
 });
 
+// Apply initial filter state on page load.
+if (document.querySelector(".template-event-list")) {
+    filterResourceItems([]);
+}

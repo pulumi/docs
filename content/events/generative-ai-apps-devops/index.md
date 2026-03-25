@@ -25,6 +25,7 @@ gated: false
 external: true
 block_external_search_index: true
 
+event_type: talk
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
 url_slug: "https://info.pulumi.com/generative-ai-apps-devops"

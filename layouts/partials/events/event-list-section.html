@@ -55,6 +55,7 @@
 {{ $filterClouds = sort ($filterClouds | uniq) }}
 
 <section class="template-event-list" id="events">
+    <span id="all" class="hidden"></span>
     <span id="upcoming" class="hidden"></span>
     <span id="on-demand" class="hidden"></span>
 
@@ -156,11 +157,15 @@
         {{ range $upcomingGroups }}
             {{ $allGroups = $allGroups | append . }}
         {{ end }}
+        {{ $allGroups = $allGroups | append (dict "separator" true) }}
         {{ range $ondemandGroups }}
             {{ $allGroups = $allGroups | append . }}
         {{ end }}
 
         {{ range $group := $allGroups }}
+            {{ if $group.separator }}
+                <div class="event-list-separator border-t border-gray-300 mt-12 mb-8" data-filters="all"></div>
+            {{ else }}
             <div class="month-label {{ $group.monthKey }} mb-6" data-filters="{{ $group.tab }}">
                 <h3 class="event-list-month-header py-4 m-0">
                     <i class="{{ $group.icon }} mr-3"></i>{{ $group.month }}
@@ -210,6 +215,7 @@
                     {{ end }}
                 </ul>
             </div>
+            {{ end }}
         {{ end }}
     </div>
     <div class="no-results text-center text-body-l mb-8 hidden" style="color: #5b5b5b;">No events match the selected filters.</div>
