@@ -1,5 +1,5 @@
 ---
-title_tag: Kubernetes Managed Infrastructure Services | Crosswalk
+title_tag: Kubernetes Managed Infrastructure Services
 meta_desc: This page provides an overview of Managed Infrastructure services that
            support and complement Kubernetes clusters and workloads.
 title: Infra services
@@ -100,7 +100,7 @@ We'll configure and deploy:
 
 {{% choosable cloud aws %}}
 
-In [Crosswalk for AWS][crosswalk-aws] we showcase how to define networking:
+In the [AWS guides][crosswalk-aws] we showcase how to define networking:
 
 * [VPCs][vpc]
 * [Availability Zones][vpc-azs]
@@ -291,11 +291,11 @@ needs of your complete architecture.
 
 ### Amazon Simple Storage Service (S3)
 
-See [Crosswalk AWS S3][pulumi-s3] and the [AWS S3 docs][aws-s3] for more details.
+See the [AWS S3 guide][pulumi-s3] and the [AWS S3 docs][aws-s3] for more details.
 
 ### Elastic Container Registry (ECR)
 
-See [Crosswalk AWS ECR][crosswalk-ecr] and the [AWS ECR docs][aws-ecr] for more details.
+See the [AWS ECR guide][crosswalk-ecr] and the [AWS ECR docs][aws-ecr] for more details.
 
 ### Amazon Elastic File System (EFS)
 
