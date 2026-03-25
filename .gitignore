@@ -42,6 +42,12 @@ theme/stencil/src/components.d.ts
 # directory in development in order to be able to use livereload.
 static/css/styles.*.css
 static/js/bundle.min.*.js
+static/js/bundle.*.js
+static/js/chunk-*.js
+static/js/algolia.*.js
+static/js/homepage.*.js
+static/js/marketing.*.js
+data/js_manifest.json
 
 # Ignore webpack-generated assets from the build process.
 /assets/css/
