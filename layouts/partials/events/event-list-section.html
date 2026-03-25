@@ -58,7 +58,7 @@
     <span id="upcoming" class="hidden"></span>
     <span id="on-demand" class="hidden"></span>
 
-    <div class="pulumi-event-list-container event-list-filter flex flex-col-reverse md:flex-row md:items-end justify-between border-b border-gray-200 pb-0 md:gap-4 mb-8 overflow-x-clip md:overflow-x-visible">
+    <div class="pulumi-event-list-container event-list-filter flex flex-col-reverse lg:flex-row lg:items-end justify-between border-b border-gray-200 pb-0 lg:gap-4 mb-8 overflow-x-clip lg:overflow-x-visible">
         <ul id="event-list-filter-nav" class="flex p-0 m-0">
             {{ range $item := .Params.sections }}
                 <li data-filter-name="{{ $item.anchor }}" class="mb-0">
@@ -68,7 +68,7 @@
                 </li>
             {{ end }}
         </ul>
-        <pulumi-filter-select class="flex md:pb-0 mb-3">
+        <pulumi-filter-select class="flex gap-1 lg:gap-2 self-start lg:self-auto lg:pb-0 mb-3">
             <pulumi-filter-select-option-group name="level" class="items-center">
                 <div class="toggle" slot="toggle">Level</div>
                 <div class="options">
@@ -78,7 +78,7 @@
                 </div>
             </pulumi-filter-select-option-group>
 
-            <pulumi-filter-select-option-group name="cloud" class="mx-1 items-center">
+            <pulumi-filter-select-option-group name="cloud" class="items-center">
                 <div class="toggle" slot="toggle">Cloud</div>
                 <div class="options">
                     {{ range $cloud := $filterClouds }}
@@ -88,7 +88,7 @@
                 </div>
             </pulumi-filter-select-option-group>
 
-            <pulumi-filter-select-option-group name="topic" class="mx-1 items-center">
+            <pulumi-filter-select-option-group name="topic" class="items-center">
                 <div class="toggle" slot="toggle">Topic</div>
                 <div class="options">
                     {{ range $topic := $filterTopics }}
@@ -98,7 +98,7 @@
                 </div>
             </pulumi-filter-select-option-group>
 
-            <pulumi-filter-select-option-group name="language" class="mx-1 items-center">
+            <pulumi-filter-select-option-group name="language" class="items-center">
                 <div class="toggle" slot="toggle">Language</div>
                 <div class="options">
                     {{ range $lang := $filterLangs }}
@@ -165,7 +165,7 @@
                 <h3 class="event-list-month-header py-4 m-0">
                     <i class="{{ $group.icon }} mr-3"></i>{{ $group.month }}
                 </h3>
-                <ul class="list-none p-0 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <ul class="list-none p-0 grid grid-cols-1 lg:grid-cols-2 gap-4">
                     {{ range $group.events }}
                         {{ $data := .data }}
                         {{ $link := "" }}
