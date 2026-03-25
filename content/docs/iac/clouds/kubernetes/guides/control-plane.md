@@ -1,6 +1,6 @@
 ---
 title_tag: Create a Kubernetes Control Plane
-meta_desc: This page will walk you through how to create on a Kubernetes Control Pane
+meta_desc: This page will walk you through how to create a Kubernetes Control Plane
            on AWS, Azure, and Google Cloud.
 title: Control Plane
 h1: Kubernetes Control Plane
