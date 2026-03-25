@@ -1,32 +1,25 @@
-﻿using Pulumi;
+﻿using System.Collections.Generic;
+using Pulumi;
 using Awsx = Pulumi.Awsx;
 using Eks = Pulumi.Eks;
-using System.Collections.Generic;
 
 return await Deployment.RunAsync(() =>
 {
-    // Create a VPC for the Kubernetes cluster.
-    var eksVpc = new Awsx.Ec2.Vpc("eks-vpc", new()
-    {
-        EnableDnsHostnames = true,
-        CidrBlock = "10.0.0.0/16",
-    });
+    // Create a VPC for our cluster.
+    var vpc = new Awsx.Ec2.Vpc("vpc");
 
-    // Create the EKS cluster itself.
-    var eksCluster = new Eks.Cluster("eks-cluster", new()
+    // Create an EKS cluster inside of the VPC.
+    var cluster = new Eks.Cluster("cluster", new()
     {
-        VpcId = eksVpc.VpcId,
-        PublicSubnetIds = eksVpc.PublicSubnetIds,
-        PrivateSubnetIds = eksVpc.PrivateSubnetIds,
-        InstanceType = "t3.medium",
-        DesiredCapacity = 3,
-        MinSize = 3,
-        MaxSize = 6,
+        VpcId = vpc.VpcId,
+        PublicSubnetIds = vpc.PublicSubnetIds,
+        PrivateSubnetIds = vpc.PrivateSubnetIds,
+        NodeAssociatePublicIpAddress = false,
     });
 
     // Export the cluster's kubeconfig.
     return new Dictionary<string, object?>
     {
-        ["kubeconfig"] = eksCluster.Kubeconfig,
+        ["kubeconfig"] = cluster.Kubeconfig,
     };
 });

@@ -1,0 +1,3 @@
+name: aws-eks-cluster-node-groups-typescript
+runtime: nodejs
+description: An example that creates an EKS cluster with custom node groups.

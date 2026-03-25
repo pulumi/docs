@@ -1,0 +1,3 @@
+name: aws-eks-helm-wordpress-go
+runtime: go
+description: An example that deploys a WordPress Helm chart to an EKS cluster.

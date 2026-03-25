@@ -1,31 +1,34 @@
-package myproject;
-
+import com.pulumi.Context;
 import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
 import com.pulumi.awsx.ec2.Vpc;
-import com.pulumi.awsx.ec2.VpcArgs;
 import com.pulumi.eks.Cluster;
 import com.pulumi.eks.ClusterArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
-        Pulumi.run(ctx -> {
-            // Create a VPC for the Kubernetes cluster
-            var vpc = new Vpc("eks-vpc", VpcArgs.builder()
-                .enableDnsHostnames(true)
-                .cidrBlock("10.0.0.0/16")
-                .build());
+        Pulumi.run(App::stack);
+    }
 
-            // Create the EKS Cluster
-            var cluster = new Cluster("eks-cluster", ClusterArgs.builder()
-                .vpcId(vpc.vpcId())
-                .instanceType("t3.medium")
-                .desiredCapacity(3)
-                .minSize(3)
-                .maxSize(6)
-                .build());
+    public static void stack(Context ctx) {
+        // Create a VPC for our cluster.
+        var vpc = new Vpc("vpc");
 
-            // Export the cluster's kubeconfig
-            ctx.export("kubeconfig", cluster.kubeconfig());
-        });
+        // Create an EKS cluster inside of the VPC.
+        var cluster = new Cluster("cluster", ClusterArgs.builder()
+            .vpcId(vpc.vpcId())
+            .publicSubnetIds(vpc.publicSubnetIds())
+            .privateSubnetIds(vpc.privateSubnetIds())
+            .nodeAssociatePublicIpAddress(false)
+            .build());
+
+        // Export the cluster's kubeconfig.
+        ctx.export("kubeconfig", cluster.kubeconfig());
     }
 }

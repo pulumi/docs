@@ -39,7 +39,16 @@ For all content files (docs, blogs, tutorials, etc.):
 - **Headings**:  
   - H1 = Title Case  
   - H2+ = Sentence case
-- **TypeScript/JavaScript**: Must follow `tsconfig.json` settings. No comments unless explicitly requested.  
+- **TypeScript/JavaScript**: Must follow `tsconfig.json` settings. No comments unless explicitly requested.
+- **TypeScript program files** (`static/programs/`): Use hand-written constructor style — resource name and opening `{` on the same line, `}, {` inline when an opts argument follows:
+  ```typescript
+  const r = new SomeResource("name", {
+      prop: value,
+  }, { 
+      provider: p,
+  });
+  ```
+  Do NOT use Prettier's multi-arg style where name, props, and opts are each on separate indented lines.
 - **File Placement**:  
   - Docs go under `content/docs/...`
   - Blog posts go under `content/blog/...`
