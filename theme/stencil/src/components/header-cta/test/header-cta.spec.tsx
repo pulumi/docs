@@ -9,9 +9,7 @@ describe('header-cta', () => {
     });
     expect(page.root).toEqualHtml(`
       <header-cta>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
+        <a class="" data-track="header-signup" data-role="cta-get-started" href="https://app.pulumi.com/signup?utm_source=header-button" title="Sign Up">Sign Up</a>
       </header-cta>
     `);
   });
