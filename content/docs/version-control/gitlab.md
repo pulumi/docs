@@ -89,7 +89,7 @@ You can use path filters to limit deployments to commits that change files match
 
 ### Review stacks
 
-[Review stacks](/docs/deployments/deployments/review-stacks/) are ephemeral cloud environments created automatically every time a merge request is opened, powered by Pulumi Deployments. Open a merge request, and Pulumi Deployments stands up a stack with your changes and posts an MR comment with the outputs. Merge or close the MR, and Pulumi Deployments destroys the stack and frees the associated resources.
+[Review stacks](/docs/deployments/deployments/review-stacks/) are ephemeral cloud environments created automatically every time a merge request is opened, powered by Pulumi Deployments. Open a merge request, and Pulumi Deployments stands up a stack with your changes and posts an merge request comment with the outputs. Merge or close the merge request, and Pulumi Deployments destroys the stack and frees the associated resources.
 
 Review stacks follow the naming convention `pr-{group}-{project}-{mr-iid}` (for example, group `acme/infra` with MR #42 produces stack `pr-acme-infra-42`). Configuration is copied from the template stack via `pulumi config cp`, and stacks are automatically deleted after the destroy completes.
 
