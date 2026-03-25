@@ -504,6 +504,17 @@ const CopilotSecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('c
 // This is separate from CloudFront edge TTLs (defaultTtl/maxTtl) which only
 // control CDN-level caching. Without this policy, browsers see no Cache-Control
 // header and fall back to heuristic caching with 304 revalidation round-trips.
+const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-logo-cache-headers', {
+    securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [{
+            header: "Cache-Control",
+            value: "public, max-age=1800",
+            override: true,
+        }],
+    },
+});
+
 const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
@@ -762,6 +773,14 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: "/icons/*",
             defaultTtl: oneHour,
             maxTtl: oneHour,
+            responseHeadersPolicyId: BrandLogoCachePolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/logos/brand/*",
+            defaultTtl: thirtyMinutes,
+            maxTtl: thirtyMinutes,
+            responseHeadersPolicyId: BrandLogoCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
