@@ -557,42 +557,19 @@ Implementing this example requires that we have a provider and resource type:
 {{% choosable language typescript %}}
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as crypto from "crypto";
-
-const randomprovider: pulumi.dynamic.ResourceProvider = {
-    async create(inputs) {
-        return { id: crypto.randomBytes(16).toString('hex'), outs: {}};
-    },
-}
-
-export class Random extends pulumi.dynamic.Resource {
-    constructor(name: string, opts?: pulumi.CustomResourceOptions) {
-        super(randomprovider, name, {}, opts);
-    }
-}
+{{< example-program-snippet path="dynamic-random" language="typescript" >}}
 ```
 
 {{% /choosable %}}
+
 {{% choosable language python %}}
 
 ```python
-from pulumi import ResourceOptions
-from pulumi.dynamic import Resource, ResourceProvider, CreateResult
-from typing import Optional
-import binascii
-import os
-
-class RandomProvider(ResourceProvider):
-    def create(self, inputs):
-        return CreateResult(id_=binascii.b2a_hex(os.urandom(16)), outs={})
-
-class Random(Resource):
-    def __init__(self, name: str, opts: Optional[ResourceOptions] = None):
-         super().__init__(RandomProvider(), name, {}, opts)
+{{< example-program-snippet path="dynamic-random" language="python" >}}
 ```
 
 {{% /choosable %}}
+
 {{% choosable language go %}}
 
 ```go
@@ -608,6 +585,7 @@ class Random(Resource):
 ```
 
 {{% /choosable %}}
+
 {{% choosable language java %}}
 
 ```java
@@ -615,6 +593,7 @@ class Random(Resource):
 ```
 
 {{% /choosable %}}
+
 {{% choosable language yaml %}}
 
 ```yaml
@@ -640,130 +619,19 @@ Because the resource provider method implementations will be serialized and used
 {{% choosable language typescript %}}
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
-import { Octokit } from "@octokit/rest";
-
-export interface LabelResourceInputs {
-    owner: pulumi.Input<string>;
-    repo: pulumi.Input<string>;
-    name: pulumi.Input<string>;
-    color: pulumi.Input<string>;
-    description?: pulumi.Input<string>;
-}
-
-interface LabelInputs {
-    owner: string;
-    repo: string;
-    name: string;
-    color: string;
-    description?: string;
-}
-
-class githubLabelProvider implements pulumi.dynamic.ResourceProvider {
-    private auth: string = ""
-
-    async configure(req: pulumi.dynamic.ConfigureRequest): Promise<void> {
-        // Set a stack config variable named githubToken (e.g. pulumi config set githubToken <VALUE> --secret)
-        this.auth = req.config.require("githubToken")
-    }
-    async create(inputs: LabelInputs) {
-        const octokit = new Octokit({this.auth});
-        const label = await octokit.issues.createLabel({
-            owner: inputs.owner,
-            repo: inputs.repo,
-            name: inputs.name,
-            color: inputs.color
-        });
-        return { id: label.data.id.toString(), outs: label.data };
-    }
-    async update(id: string, olds: LabelInputs, news: LabelInputs) {
-        const octokit = new Octokit({this.auth});
-        const label = await octokit.issues.updateLabel({
-            owner: news.owner,
-            repo: news.repo,
-            current_name: olds.name,
-            name: news.name,
-            color: news.color
-        });
-        return {outs: label.data};
-    }
-    async delete(id: string, props: LabelInputs) {
-        const octokit = new Octokit({this.auth});
-        await octokit.issues.deleteLabel({owner: props.owner, repo: props.repo, name: props.name});
-    }
-}
-
-export class Label extends pulumi.dynamic.Resource {
-    constructor(name: string, args: LabelResourceInputs, opts?: pulumi.CustomResourceOptions) {
-        super(new githubLabelProvider, name, args, opts);
-    }
-}
+{{< example-program-snippet path="dynamic-github-labels" language="typescript" >}}
 ```
 
 {{% /choosable %}}
+
 {{% choosable language python %}}
 
 ```python
-import pulumi
-from pulumi import ComponentResource, export, Input, Output
-from pulumi.dynamic import Resource, ResourceProvider, CreateResult, UpdateResult, ConfigureRequest
-from typing import Optional
-from github import Github, GithubObject
-
-class GithubLabelArgs(object):
-    owner: Input[str]
-    repo: Input[str]
-    name: Input[str]
-    color: Input[str]
-    description: Optional[Input[str]]
-    def __init__(self, owner, repo, name, color, description=None):
-        self.owner = owner
-        self.repo = repo
-        self.name = name
-        self.color = color
-        self.description = description
-
-class GithubLabelProvider(ResourceProvider):
-    auth: str
-    def configure(self, req: ConfigureRequest):
-        # Set a stack config variable named githubToken (e.g. pulumi config set githubToken <VALUE> --secret)
-        self.auth = req.config.require("githubToken")
-
-    def create(self, props):
-        g = Github(self.auth)
-        l = g.get_user(props["owner"]).get_repo(props["repo"]).create_label(
-            name=props["name"],
-            color=props["color"],
-            description=props.get("description", GithubObject.NotSet))
-        return CreateResult(l.name, {**props, **l.raw_data})
-    def update(self, id, _olds, props):
-        g = Github(self.auth)
-        l = g.get_user(props["owner"]).get_repo(props["repo"]).get_label(id)
-        l.edit(name=props["name"],
-               color=props["color"],
-               description=props.get("description", GithubObject.NotSet))
-        return UpdateResult({**props, **l.raw_data})
-    def delete(self, id, props):
-        g = Github(self.auth)
-        l = g.get_user(props["owner"]).get_repo(props["repo"]).get_label(id)
-        l.delete()
-
-class GithubLabel(Resource):
-    name: Output[str]
-    color: Output[str]
-    url: Output[str]
-    description: Output[str]
-    def __init__(self, name, args: GithubLabelArgs, opts = None):
-        full_args = {'url':None, 'description':None, 'name':None, 'color':None, **vars(args)}
-        super().__init__(GithubLabelProvider(), name, full_args, opts)
-
-label = GithubLabel("foo", GithubLabelArgs("lukehoban", "todo", "mylabel", "d94f0b"))
-
-export("label_color", label.color)
-export("label_url", label.url)
+{{< example-program-snippet path="dynamic-github-labels" language="python" >}}
 ```
 
 {{% /choosable %}}
+
 {{% choosable language go %}}
 
 ```go
@@ -771,17 +639,11 @@ export("label_url", label.url)
 ```
 
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
 // Dynamic Providers are currently not supported in .NET.
-```
-
-{{% /choosable %}}
-{{% choosable language yaml %}}
-
-```yaml
-# Dynamic Providers are not supported in YAML.
 ```
 
 {{% /choosable %}}
@@ -793,6 +655,15 @@ export("label_url", label.url)
 ```
 
 {{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+# Dynamic Providers are not supported in YAML.
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ### Example: Pulumi Cloud REST API (Creds via Environment Variables)
@@ -808,154 +679,19 @@ Because the resource provider method implementations will be serialized and used
 {{% choosable language typescript %}}
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
-import { Input, Output } from "@pulumi/pulumi";
-import { CreateResult } from "@pulumi/pulumi/dynamic";
-import axios from 'axios'
-import { AxiosResponse, AxiosError } from 'axios'
-
-export interface PulumiEnvironmentArgs {
-  orgName: string;
-  environmentName: string;
-}
-
-export interface PulumiEnvironmentProviderArgs {
-  orgName: string
-  environmentName: string;
-}
-
-// Use user-specified API URL if provided. Otherwise, use default Pulumi cloud URL.
-const basePulumiApiUrl= process.env.PULUMI_CLOUD_API_URL || "https://api.pulumi.com"
-
-// NOTE: When Pulumi Environments is GAed, the API path will no longer include "preview".
-const basePulumiEnvApiUrl= `${basePulumiApiUrl}/api/preview/environments`
-
-const PulumiEnvironmentProvider: pulumi.dynamic.ResourceProvider = {
-
-  //*** CREATE ***//
-  async create(inputs: PulumiEnvironmentProviderArgs): Promise<CreateResult> {
-  
-    // Use environment variable for authentication.
-    // This keeps the actual PULUMI_ACCESS_TOKEN value out of state and instead only the env variable reference is kept in state.
-    // Therefore, if the token is changed between the create and the destroy, the destroy will use the new creds.
-    const headers = {
-      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
-      'Content-Type': 'application/json'
-    }
-
-    const createEnvUrl = `${basePulumiEnvApiUrl}/${inputs.orgName}/${inputs.environmentName}`
-
-    let envId:string = "unassigned"
-    await axios.post(createEnvUrl, {},
-      {
-          headers: headers
-      }).then((response: AxiosResponse) => {
-        // Pulumi Cloud does not return a unique ID for an environment. So create one using the org and environment name.
-        envId = `${inputs.orgName}/${inputs.environmentName}`
-      }).catch((reason: AxiosError) => {
-        console.log("ERROR: ", `${reason.status} - ${reason.response?.statusText}`)
-        process.exit(10)
-      })
-
-      const envOuts = {id: envId, envName: inputs.environmentName, orgName: inputs.orgName}
-      return { id: envId, outs: envOuts }
-  },
-
-  //*** DELETE ***//
-  async delete(id, props) {
-    // Use environment variable for authentication.
-    // This keeps the actual PULUMI_ACCESS_TOKEN value out of state and instead only the env variable reference is kept in state.
-    // Therefore, if the token is changed between the create and the destroy, the destroy will use the new creds.
-    const headers = {
-      'Authorization': `token ${process.env.PULUMI_ACCESS_TOKEN}`,
-      'Content-Type': 'application/json'
-    }
-
-    const deleteEnvUrl = `${basePulumiEnvApiUrl}/${id}`
-    await axios.delete(deleteEnvUrl, {
-          headers: headers
-    })
-    .then((response: AxiosResponse) => {
-    })
-    .catch((reason: AxiosError) => {
-      console.log("ERROR: ", `${reason.response?.status} - ${reason.response?.statusText}`)
-      process.exit(20)
-    })
-  }
-}
-
-export class PulumiEnvironment extends pulumi.dynamic.Resource {
-
-  constructor(name: string, args: PulumiEnvironmentArgs, opts?: pulumi.CustomResourceOptions) {
-    super(PulumiEnvironmentProvider, name, args, opts);
-  }
-}
+{{< example-program-snippet path="dynamic-pulumi-cloud-env" language="typescript" >}}
 ```
 
 {{% /choosable %}}
+
 {{% choosable language python %}}
 
 ```python
-import pulumi
-from pulumi import Input, Output
-from pulumi.dynamic import ResourceProvider, CreateResult, Resource
-import requests
-import os
-
-class PulumiEnvironmentArgs:
-    def __init__(self, org_name: str, environment_name: str):
-        self.org_name = org_name
-        self.environment_name = environment_name
-
-class PulumiEnvironmentProviderArgs:
-    def __init__(self, org_name: str, environment_name: str):
-        self.org_name = org_name
-        self.environment_name = environment_name
-
-# Use user-specified API URL if provided. Otherwise, use default Pulumi cloud URL.
-base_pulumi_api_url = os.getenv("PULUMI_CLOUD_API_URL", "https://api.pulumi.com")
-
-# NOTE: When Pulumi Environments is GAed, the API path will no longer include "preview".
-base_pulumi_env_api_url = f"{base_pulumi_api_url}/api/preview/environments"
-
-# Set up the headers using the environment variable.
-headers = {
-    'Authorization': f"token {os.getenv('PULUMI_ACCESS_TOKEN')}",
-    'Content-Type': 'application/json'
-}
-
-class PulumiEnvironmentProvider(ResourceProvider):
-    def create(self, inputs: PulumiEnvironmentProviderArgs) -> CreateResult:
-
-        create_env_url = f"{base_pulumi_env_api_url}/{inputs['org_name']}/{inputs['environment_name']}"
-
-        env_id = "unassigned"
-        response = requests.post(create_env_url, headers=headers)
-        if response.status_code == 200 or response.status_code == 201:
-            env_id = f"{inputs['org_name']}/{inputs['environment_name']}"
-        else:
-            print(f"ERROR: {response.status_code} - {response.text}")
-            os._exit(10)
-
-        env_outs = {"id": env_id, "envName": inputs['environment_name'], "orgName": inputs['org_name']}
-        return CreateResult(id_=env_id, outs=env_outs)
-
-    def delete(self, id: str, props):
-
-        # The id provides the "org/environment-name" path for the environment
-        delete_env_url = f"{base_pulumi_env_api_url}/{id}"
-
-        response = requests.delete(delete_env_url, headers=headers)
-        if response.status_code != 200:
-            print(f"ERROR: {response.status_code} - {response.text}")
-            os._exit(20)
-
-class PulumiEnvironment(Resource):
-    def __init__(self, name, args: PulumiEnvironmentArgs, opts=None):
-        super().__init__(PulumiEnvironmentProvider(), name, vars(args), opts)
+{{< example-program-snippet path="dynamic-pulumi-cloud-env" language="python" >}}
 ```
 
 {{% /choosable %}}
+
 {{% choosable language go %}}
 
 ```go
@@ -963,17 +699,11 @@ class PulumiEnvironment(Resource):
 ```
 
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
 // Dynamic Providers are currently not supported in .NET.
-```
-
-{{% /choosable %}}
-{{% choosable language yaml %}}
-
-```yaml
-# Dynamic Providers are not supported in YAML.
 ```
 
 {{% /choosable %}}
@@ -985,6 +715,15 @@ class PulumiEnvironment(Resource):
 ```
 
 {{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+# Dynamic Providers are not supported in YAML.
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ### Additional Examples
