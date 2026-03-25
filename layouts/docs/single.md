@@ -6,9 +6,9 @@ title: {{ .Title }}
 {{- $content := .RenderShortcodes -}}
 {{- /* Phase 1: Convert Chroma syntax-highlighted HTML to fenced code blocks */ -}}
 {{- $content = replaceRE `<div[^>]*>\s*<pre[^>]*><code class="language-([^"]*)"[^>]*>` "```$1\n" $content -}}
-{{- $content = replaceRE `</code></pre>\s*</div>` "\n```" $content -}}
+{{- $content = replaceRE `</code></pre>\s*</div>` "\n```\n\n" $content -}}
 {{- $content = replaceRE `<pre[^>]*><code>` "```\n" $content -}}
-{{- $content = replaceRE `</code></pre>` "\n```" $content -}}
+{{- $content = replaceRE `</code></pre>` "\n```\n\n" $content -}}
 {{- /* Phase 2: Strip all block-level and decorative tags */ -}}
 {{- $content = replaceRE `</?span[^>]*>` "" $content -}}
 {{- $content = replaceRE `<i[^>]*></i>` "" $content -}}

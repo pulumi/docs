@@ -6,9 +6,9 @@ title: {{ .Title }}
 {{- $content := .RenderShortcodes -}}
 {{- /* Phase 1: Convert Chroma syntax-highlighted HTML to fenced code blocks */ -}}
 {{- $content = replaceRE `<div[^>]*>\s*<pre[^>]*><code class="language-([^"]*)"[^>]*>` "```$1\n" $content -}}
-{{- $content = replaceRE `</code></pre>\s*</div>` "\n```" $content -}}
+{{- $content = replaceRE `</code></pre>\s*</div>` "\n```\n\n" $content -}}
 {{- $content = replaceRE `<pre[^>]*><code>` "```\n" $content -}}
-{{- $content = replaceRE `</code></pre>` "\n```" $content -}}
+{{- $content = replaceRE `</code></pre>` "\n```\n\n" $content -}}
 {{- /* Phase 2: Strip all block-level and decorative tags */ -}}
 {{- $content = replaceRE `</?span[^>]*>` "" $content -}}
 {{- $content = replaceRE `<i[^>]*></i>` "" $content -}}
@@ -57,3 +57,28 @@ title: {{ .Title }}
 {{- $content = replaceRE `\n{3,}` "\n\n" $content -}}
 
 {{ $content }}
+{{- if .Params.docs_home -}}
+{{- with .Params.h1 }}
+# {{ . }}
+{{ end -}}
+{{- with .Params.description }}
+{{ replaceRE `<[^>]+>` "" (replaceRE `<a[^>]*href="([^"]*)"[^>]*>([^<]*)</a>` "[$2]($1)" .) }}
+{{ end -}}
+{{- with .Params.link_buttons -}}
+{{- with .primary }}
+[{{ .label }}]({{ .link }})
+{{ end -}}
+{{- end -}}
+{{- range .Params.sections }}
+{{- if .heading }}
+
+## {{ .heading }}
+{{ end -}}
+{{- with .description }}
+{{ replaceRE `<[^>]+>` "" (replaceRE `<a[^>]*href="([^"]*)"[^>]*>([^<]*)</a>` "[$2]($1)" .) }}
+{{ end -}}
+{{- range .cards }}
+- [{{ with .heading }}{{ . }}{{ else }}{{ .label }}{{ end }}]({{ .link }}){{ with .description }} — {{ . }}{{ end }}
+{{- end }}
+{{ end -}}
+{{- end -}}

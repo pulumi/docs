@@ -73,12 +73,15 @@ Shortcodes that include files (`example-program`, `loadcode`, `langfile`, `compf
 - **`.RenderShortcodes`**: Hugo 0.117+ method that renders shortcodes through their output format-specific templates without running goldmark on the surrounding markdown. This is the key to clean output.
 - **Markdown output scoping**: Output format must be enabled per-section via `cascade` in `content/docs/_index.md`, not globally — otherwise Hugo warns about missing layout files for marketing/blog pages.
 - **LLM menu**: Replaced client-side TurndownService (~250 lines of DOM conversion) with `fetch()` to server-side `index.md`.
+- **CLI sitemap hierarchy**: Navigation-only container nodes (no `_index.md`) must be preserved in `cli-sitemap.json` — derive parent path from first child's URL.
 
 ## Current state
 
 - **760 markdown files** generated under `public/docs/`
 - **13 pages** still have "best viewed on web" fallback (card grids, glossary, data-driven content)
 - **69 live shortcodes** with `.markdown.md` templates (41 dead ones deleted)
+- **CLI sitemap** (`cli-sitemap.json`) preserves full navigation hierarchy including container-only nodes
+- **Section home pages** (`docs_home`) render frontmatter-driven content (heading, description, card grids) as markdown
 - Separate PR for duplicate menu fix: [#18192](https://github.com/pulumi/docs/pull/18192)
 
 ## Key files
@@ -89,3 +92,5 @@ Shortcodes that include files (`example-program`, `loadcode`, `langfile`, `compf
 - `layouts/docs/single.md` / `list.md` — markdown base templates with HTML-to-markdown pipeline
 - `layouts/shortcodes/*.markdown.md` — 69 shortcode markdown templates
 - `theme/stencil/src/components/llm-menu/llm-menu.tsx` — rewritten LLM menu component
+- `layouts/partials/cli-sitemap-walk.json` — recursive menu-to-JSON walker (preserves container nodes)
+- `scripts/join-markdown-lines.js` — post-build lint step: joins split markdown lines

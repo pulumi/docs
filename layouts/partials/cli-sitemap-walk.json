@@ -7,15 +7,33 @@
       {{- with $menuItem.Children -}}
         {{- $children = partial "cli-sitemap-walk.json" (dict "menuEntries" .) -}}
       {{- end -}}
-      {{- $result = $result | append (dict "title" .Title "path" .RelPermalink "children" $children) -}}
+      {{- $entry := dict "title" .Title "path" .RelPermalink "children" $children -}}
+      {{- if $children -}}
+        {{- $selfLabel := "Introduction" -}}
+        {{- if .Params.docs_home -}}
+          {{- $selfLabel = "Overview" -}}
+        {{- end -}}
+        {{- $entry = merge $entry (dict "selfLabel" $selfLabel) -}}
+      {{- end -}}
+      {{- $result = $result | append $entry -}}
     {{- end -}}
   {{- end -}}
   {{- if not .Page -}}
+    {{- $children := slice -}}
     {{- with $menuItem.Children -}}
-      {{- $nested := partial "cli-sitemap-walk.json" (dict "menuEntries" .) -}}
-      {{- range $nested -}}
-        {{- $result = $result | append . -}}
+      {{- $children = partial "cli-sitemap-walk.json" (dict "menuEntries" .) -}}
+    {{- end -}}
+    {{- if $children -}}
+      {{- $path := "" -}}
+      {{- with index $children 0 -}}
+        {{- $childPath := .path -}}
+        {{- $trimmed := strings.TrimRight "/" $childPath -}}
+        {{- $path = printf "%s/" (path.Dir $trimmed) -}}
       {{- end -}}
+      {{- $entry := dict "title" $menuItem.Name "path" $path "children" $children -}}
+      {{- $result = $result | append $entry -}}
+    {{- else if $menuItem.URL -}}
+      {{- $result = $result | append (dict "title" $menuItem.Name "path" $menuItem.URL) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}

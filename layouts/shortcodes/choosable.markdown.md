@@ -6,7 +6,7 @@
 {{- $inner := .Inner -}}
 {{- /* Convert Chroma syntax-highlighted HTML back to fenced code blocks */ -}}
 {{- $inner = replaceRE `<div class="highlight"><pre[^>]*><code class="language-([^"]*)"[^>]*>` "```$1\n" $inner -}}
-{{- $inner = replaceRE `</code></pre></div>` "\n```" $inner -}}
+{{- $inner = replaceRE `</code></pre></div>` "\n```\n\n" $inner -}}
 {{- /* Strip remaining span tags from Chroma highlighting */ -}}
 {{- $inner = replaceRE `</?span[^>]*>` "" $inner -}}
 {{- /* Strip <p> tags */ -}}
