@@ -52,8 +52,11 @@ class githubLabelProvider implements pulumi.dynamic.ResourceProvider {
 }
 
 export class Label extends pulumi.dynamic.Resource {
+    declare readonly color: pulumi.Output<string>;
+    declare readonly url: pulumi.Output<string>;
+
     constructor(name: string, args: LabelResourceInputs, opts?: pulumi.CustomResourceOptions) {
-        super(new githubLabelProvider(), name, args, opts);
+        super(new githubLabelProvider(), name, { color: undefined, url: undefined, ...args }, opts);
     }
 }
 
