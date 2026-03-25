@@ -1,0 +1,6 @@
+name: dynamic-pulumi-cloud-env-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: A dynamic provider that manages Pulumi Cloud environments via the REST API.
