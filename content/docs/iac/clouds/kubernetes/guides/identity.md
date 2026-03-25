@@ -1,5 +1,5 @@
 ---
-title_tag: Kubernetes Identity & Access Management | Crosswalk
+title_tag: Kubernetes Identity & Access Management
 meta_desc: An overview of cloud identity and access management providers when using Kubernetes.
 title: IAM
 h1: Kubernetes identity and access management (IAM)
@@ -26,7 +26,7 @@ allocated baseline permissions using [IAM Policies][policies].
 
 AWS workloads (e.g., AWS Lambdas) can also be granted permissions temporarily, without the need for usernames and passwords, using [IAM Roles][roles].
 
-In [Crosswalk for AWS][crosswalk-aws] we showcase how to define IAM:
+In the [AWS guides][crosswalk-aws] we showcase how to define IAM:
 
 - [Users][iam-users]
 - [Groups][iam-groups]
