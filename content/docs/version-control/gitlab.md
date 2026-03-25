@@ -77,10 +77,6 @@ For [review stacks](#review-stacks), comments show the review stack status and o
 
 Pulumi posts commit status checks to GitLab on every deployment, for both push and merge request events. Statuses map to GitLab's `pending`, `running`, `success`, and `failed` states and include a link back to the deployment in Pulumi Cloud.
 
-{{% notes type="info" %}}
-This feature is not compatible with GitLab's [pipelines for merged results](https://docs.gitlab.com/ee/ci/pipelines/merged_results_pipelines.html). See the [GitLab issue](https://gitlab.com/gitlab-org/gitlab/-/issues/350086) for details.
-{{% /notes %}}
-
 ### Push-to-deploy
 
 Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the default branch. Enable this under **Stack** > **Settings** > **Deploy** by toggling **Deploy on push**. See the [push-to-deploy documentation](/docs/deployments/deployments/using/triggers/#push-to-deploy) for setup instructions.
