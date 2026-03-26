@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,45 +27,41 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: governance-enterprise-guardrails-for-agent-driven-operations
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "Enterprise Guardrails for Agent-driven Operations"
-    event_type: workshop # workshop | event
+event_type: workshop # workshop | event
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/-P3aBpE0CYE?si=6mjMdwfSGkDUmiyg
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/-P3aBpE0CYE?si=6mjMdwfSGkDUmiyg
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-10-23T12:00:00-04:00
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-10-23T12:00:00-04:00
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# Duration of the webinar.
+duration: 60 minutes
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Description of the webinar.
-    description: |
-        Platform Engineers must often balance enabling team velocity without losing control of security and compliance for their infrastructure. In this session, we'll demonstrate how to augment infrastructure agents, enabling faster time to market with common-sense policy controls that balance speed and safety.
-    learn:
-        - Designing governance frameworks for AI agents
-        - Policy as code
-        - Role-based access controls for agentic workflows
-        - Audit trails and compliance in autonomous operations
+# Description of the webinar.
+description: |
+    Platform Engineers must often balance enabling team velocity without losing control of security and compliance for their infrastructure. In this session, we'll demonstrate how to augment infrastructure agents, enabling faster time to market with common-sense policy controls that balance speed and safety.
+learn:
+    - Designing governance frameworks for AI agents
+    - Policy as code
+    - Role-based access controls for agentic workflows
+    - Audit trails and compliance in autonomous operations
 
-    # The webinar presenters
-    presenters:
-        - name: Engin Diri
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/engin-diri.jpg
+# The webinar presenters
+presenters:
+    - name: Engin Diri
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/engin-diri.jpg
 
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["AI", "Pulumi Neo", "Policy as Code", "Platform Engineering"]
-        languages: []
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics:  ["AI", "Pulumi Neo", "Policy as Code", "Platform Engineering"]
+    languages: []
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:
@@ -74,11 +69,4 @@ form:
     hubspot_form_id: 62287ceb-34f7-499b-9bd3-ebb5db5ef947
     salesforce_campaign_id: 701PQ00000edymuYAA
 
-event_data:
-  name: "Governance - Enterprise Guardrails for Agent-driven Operations"
-  start_date: 2025-10-23T12:00:00-04:00
-  end_date: 2025-10-23T13:30:00-04:00
-  url: "https://www.pulumi.com/resources/governance-enterprise-guardrails-for-agent-driven-operations/"
-  description: |
-    Platform Engineers must often balance enabling team velocity without losing control of security and compliance for their infrastructure. In this session, we'll demonstrate how to augment infrastructure agents, enabling faster time to market with common-sense policy controls that balance speed and safety.
 ---

@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,45 +27,40 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: advanced-infrastructure-as-code-workshop-with-luke-hoban
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Advanced Infrastructure as Code - Workshop with Luke 
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/YHol6Vb2rD4
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/YHol6Vb2rD4
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2020-04-17T02:45:22Z
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-17T02:45:22Z
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this workshop, Pulumi experts cover advanced infrastructure as code topics including authoring components, multi-stack architectures, and testing. You'll also learn how to apply infrastructure as code to Kubernetes - both for provisioning managed Kubernetes clusters and deploying Kubernetes applications and services on top of existing clusters.  [Get started](https://pulumi.com/start)
 
-    # Description of the webinar.
-    description: |
-        In this workshop, Pulumi experts cover advanced infrastructure as code topics including authoring components, multi-stack architectures, and testing. You'll also learn how to apply infrastructure as code to Kubernetes - both for provisioning managed Kubernetes clusters and deploying Kubernetes applications and services on top of existing clusters.  [Get started](https://pulumi.com/start)
+learn:
+    - The basics of infrastructure as code and the Pulumi programming model
+    - How to provision, update, and destroy AWS resources
+    - How to create and manage Pinecone indexes
 
-    learn:
-        - The basics of infrastructure as code and the Pulumi programming model
-        - How to provision, update, and destroy AWS resources
-        - How to create and manage Pinecone indexes
+# The webinar presenters
+presenters:
+    - name: Luke Hoban
+      role: CTO, Pulumi
+      photo: /images/team/luke-hoban.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Luke Hoban
-          role: CTO, Pulumi
-          photo: /images/team/luke-hoban.jpg
-
-    # case-sensitive
-    tags:
-        level: Advanced # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
-        languages:
+# case-sensitive
+tags:
+    level: Advanced # Beginner, Intermediate, Advanced
+    topics: ["Kubernetes"]
+    languages:
 
 # The right hand side form section.
 form:

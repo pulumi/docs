@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,36 +27,31 @@ block_external_search_index: true
 # webinar, use the external URL as the value here.
 url_slug: https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-on-demand-webinar-production-ready-kubernetes-for-python-developers/
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Production-ready Kubernetes for Python Developers
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-05-18T12:00:00-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-05-18T12:00:00-08:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description:
 
-    # Description of the webinar.
-    description:
+# The webinar presenters
+presenters:
 
-    # The webinar presenters
-    presenters:
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
-        languages: ["Python"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Kubernetes"]
+    languages: ["Python"]
 
 # The right hand side form section.
 form:

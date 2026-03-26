@@ -583,6 +583,247 @@
     }
 }
 
+// Event list and card styles
+.template-event-list {
+    .event-list-month-header {
+        @include section-header-extra-small();
+        @apply m-0;
+        color: #404041;
+    }
+
+    .event-card-grid {
+        @apply grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6;
+    }
+}
+
+.template-event-card {
+    border: 0.5px solid #CECECE;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+        border-color: #999;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    a {
+        @apply text-current no-underline;
+    }
+
+    .event-card-type {
+        @apply font-semibold font-body text-body-s uppercase;
+        font-feature-settings: 'salt' on;
+        color: $violet-primary;
+        letter-spacing: 0.5px;
+        font-size: 0.7rem;
+    }
+
+    .event-card-location {
+        @apply font-body text-body-s;
+        font-feature-settings: 'salt' on;
+        color: #757576;
+        font-size: 0.8rem;
+    }
+
+    .event-card-title {
+        @include section-header-extra-extra-small();
+        @apply m-0 leading-snug;
+        transition: color 0.15s ease;
+    }
+
+    &:hover .event-card-title {
+        color: $violet-primary;
+    }
+
+    .event-card-date {
+        @apply flex flex-col items-center justify-center rounded-lg overflow-hidden flex-shrink-0;
+        width: 56px;
+        height: 56px;
+        border: 0.5px solid #CECECE;
+    }
+
+    .event-card-date-day {
+        @apply text-center font-semibold text-gray-900 font-body;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .event-card-date-month {
+        @apply text-center font-body font-medium;
+        font-size: 0.65rem;
+        letter-spacing: 0.5px;
+        color: #757576;
+    }
+
+    .event-card-description {
+        @include section-body-medium();
+        @apply m-0 text-body-s line-clamp-3;
+    }
+
+    .event-card-tag {
+        @apply inline-block font-body text-gray-700 rounded-md;
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        background-color: #FAF9FD;
+        border: 0.5px solid #D7CDEA;
+    }
+
+    .event-card-cta {
+        @apply font-semibold font-body whitespace-nowrap flex-shrink-0;
+        font-feature-settings: 'salt' on;
+        color: $violet-primary;
+        font-size: 0.875rem;
+
+        i {
+            transition: transform 0.15s ease;
+        }
+    }
+
+    &:hover .event-card-cta i {
+        transform: translateX(3px);
+    }
+}
+
+// Single event page styles
+.event-single-back-link {
+    @apply font-body font-semibold no-underline text-body-s;
+    color: $violet-primary;
+
+    &:hover {
+        @apply underline;
+    }
+
+    i {
+        transition: transform 0.15s ease;
+    }
+
+    &:hover i {
+        transform: translateX(-3px);
+    }
+}
+
+.template-event-single-header {
+    .event-single-type {
+        @apply font-semibold font-body uppercase;
+        font-feature-settings: 'salt' on;
+        color: $violet-primary;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .event-single-status {
+        @apply font-body;
+        font-feature-settings: 'salt' on;
+        color: #757576;
+        font-size: 0.875rem;
+    }
+
+    .event-single-title {
+        @include page-header();
+        @apply m-0;
+    }
+}
+
+.template-timing-info {
+    .timing-info-item {
+        @apply rounded-xl p-4;
+        border: 0.5px solid #CECECE;
+    }
+
+    .timing-info-label {
+        @apply font-body font-medium text-body-s pb-2 mb-2 border-b uppercase tracking-wide;
+        font-feature-settings: 'salt' on;
+        color: #757576;
+        border-color: #E8E8E8;
+        font-size: 0.75rem;
+    }
+
+    .timing-info-value {
+        @apply font-body font-semibold text-body-s text-gray-900;
+        font-feature-settings: 'salt' on;
+    }
+}
+
+.template-event-summary {
+    .event-summary-cloud-notice {
+        @apply font-body text-body-s rounded-xl p-4 mb-6;
+        background-color: #F4F0FA;
+        border: 0.5px solid #E8E0F4;
+        color: #404041;
+
+        a {
+            color: $violet-primary;
+            @apply font-semibold;
+        }
+    }
+
+    .event-summary-description {
+        @include section-body-medium();
+        @apply text-body-m;
+
+        p + p {
+            @apply mt-4;
+        }
+    }
+
+    .event-summary-learn {
+        @apply mt-8;
+    }
+
+    .event-summary-learn-title {
+        @include section-header-extra-extra-small();
+        @apply mb-4;
+    }
+
+    .event-summary-learn-list {
+        @apply list-none p-0 m-0 flex flex-col gap-3;
+
+        li {
+            @apply flex items-start font-body text-body-s m-0;
+            color: #5b5b5b;
+
+            i {
+                color: $violet-primary;
+                @apply mt-0.5 flex-shrink-0;
+            }
+        }
+    }
+}
+
+.event-single-registration {
+    border: 0.5px solid #CECECE;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    .event-single-registration-title {
+        @include section-header-extra-small();
+        @apply mb-4;
+    }
+}
+
+.template-event-speakers {
+    @apply bg-gray-100;
+    border: 0.5px solid #E8E8E8;
+
+    .event-speakers-label {
+        @include section-header-extra-extra-small();
+    }
+
+    .event-speaker-photo {
+        @apply rounded-full object-cover;
+        width: 64px;
+        height: 64px;
+    }
+
+    .event-speaker-name {
+        @apply font-body font-semibold text-body-m text-gray-900;
+        font-feature-settings: 'salt' on;
+    }
+
+    .event-speaker-role {
+        @apply font-body font-normal text-body-s;
+        color: #757576;
+    }
+}
+
 .template-product-two-column {
     .product-two-column-heading {
         @include section-header();

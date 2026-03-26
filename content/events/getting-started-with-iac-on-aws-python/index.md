@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,49 +27,44 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: getting-started-with-iac-on-aws-python
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Getting started on AWS with Python
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/_FR-YT0Ymm4?si=OY7AkqwqLoceJGUV
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/_FR-YT0Ymm4?si=OY7AkqwqLoceJGUV
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2026-01-22T09:00:00.000-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2026-01-22T09:00:00.000-08:00
+# Duration of the webinar.
+duration: 60 minutes
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    This workshop offers a hands-on exploration of how modern infrastructure management can be streamlined using familiar programming languages. In this workshop, you'll discover how Pulumi empowers developers and operations teams to define cloud infrastructure using Python - eliminating the need to learn domain-specific languages while unlocking the full power of software engineering practices for infrastructure code.
 
-    # Description of the webinar.
-    description: |
-        This workshop offers a hands-on exploration of how modern infrastructure management can be streamlined using familiar programming languages. In this workshop, you'll discover how Pulumi empowers developers and operations teams to define cloud infrastructure using Python - eliminating the need to learn domain-specific languages while unlocking the full power of software engineering practices for infrastructure code.
-
-        Participants will experience firsthand how Pulumi's approach bridges the gap between application and infrastructure development, allowing teams to manage AWS resources with the same tools, practices, and languages they already use for application development. This workshop demonstrates how this unified approach not only accelerates productivity but enables organizations to build more reliable, scalable, and secure cloud architectures.
+    Participants will experience firsthand how Pulumi's approach bridges the gap between application and infrastructure development, allowing teams to manage AWS resources with the same tools, practices, and languages they already use for application development. This workshop demonstrates how this unified approach not only accelerates productivity but enables organizations to build more reliable, scalable, and secure cloud architectures.
 
 
-    learn:
-        - How to use Python with Pulumi to provision AWS resources, bringing modern software development practices to your infrastructure management.
-        - How Pulumi's intuitive programming model can help you deploy cloud architecture on AWS with greater confidence and control.
-        - How Pulumi's ecosystem supports your infrastructure needs across different environments.
+learn:
+    - How to use Python with Pulumi to provision AWS resources, bringing modern software development practices to your infrastructure management.
+    - How Pulumi's intuitive programming model can help you deploy cloud architecture on AWS with greater confidence and control.
+    - How Pulumi's ecosystem supports your infrastructure needs across different environments.
 
-    # The webinar presenters
-    presenters:
-        - name: Engin Diri
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/engin-diri.jpg
+# The webinar presenters
+presenters:
+    - name: Engin Diri
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/engin-diri.jpg
 
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: [Infrastructure as Code]
-        languages: ["Python"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: [Infrastructure as Code]
+    languages: ["Python"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:
@@ -78,13 +72,5 @@ form:
     hubspot_form_id: 411af2a9-9133-4621-b3b3-afd2446feac9
     salesforce_campaign_id: 701PQ00000TEJoWYAX
 
-event_data:
-  name: "Getting started on AWS with Python"
-  start_date: 2026-01-22T09:00:00-08:00
-  end_date: 2026-01-22T10:00:00-08:00
-  url: "https://www.pulumi.com/events/getting-started-with-iac-on-aws-python/"
-  description: |
-    This workshop offers a hands-on exploration of how modern infrastructure management can be streamlined using familiar programming languages. In this workshop, you'll discover how Pulumi empowers developers and operations teams to define cloud infrastructure using Python - eliminating the need to learn domain-specific languages while unlocking the full power of software engineering practices for infrastructure code.
 
-    Participants will experience firsthand how Pulumi's approach bridges the gap between application and infrastructure development, allowing teams to manage AWS resources with the same tools, practices, and languages they already use for application development. This workshop demonstrates how this unified approach not only accelerates productivity but enables organizations to build more reliable, scalable, and secure cloud architectures.
 ---

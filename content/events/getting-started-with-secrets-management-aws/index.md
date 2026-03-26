@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,52 +27,47 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: getting-started-with-secrets-management-aws
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Getting Started with Secrets Management on AWS
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/mrVFr_uVz9s?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/mrVFr_uVz9s?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-12-13T09:00:00.000-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-12-13T09:00:00.000-08:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    [Pulumi ESC](/product/esc) is a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments. Pulumi ESC is a new category of configuration-as-code product that enables teams to aggregate secrets and configurations from many sources, manage hierarchical collections of configurations and secrets (“environments”), and consume those configurations and secrets from a variety of different infrastructure and application services.
 
-    # Description of the webinar.
-    description: |
-        [Pulumi ESC](/product/esc) is a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments. Pulumi ESC is a new category of configuration-as-code product that enables teams to aggregate secrets and configurations from many sources, manage hierarchical collections of configurations and secrets (“environments”), and consume those configurations and secrets from a variety of different infrastructure and application services.
+learn:
+    - Defining environments, which contain collections of secrets and configuration
+    - Retrieving secrets from AWS Secrets Manager and other third-party sources
+    - Building Pulumi ESC into your cloud provisioning workflows
 
-    learn:
-        - Defining environments, which contain collections of secrets and configuration
-        - Retrieving secrets from AWS Secrets Manager and other third-party sources
-        - Building Pulumi ESC into your cloud provisioning workflows
+# The webinar presenters
+presenters:
+    - name: Josh Kodroff
+      role: Sr. Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Ringo De Smet
+      role: Customer Success Architect, Pulumi
+      photo: /images/team/ringo-de-smet.jpg
+    - name: Cleve Littlefield
+      role: Engineering Manager, Pulumi
+      photo: /images/team/cleve-littlefield.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Sr. Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Ringo De Smet
-          role: Customer Success Architect, Pulumi
-          photo: /images/team/ringo-de-smet.jpg
-        - name: Cleve Littlefield
-          role: Engineering Manager, Pulumi
-          photo: /images/team/cleve-littlefield.jpg
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Pulumi ESC"]
-        languages: []
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Pulumi ESC"]
+    languages: []
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

@@ -15,7 +15,6 @@ unlisted: false
 gated: true
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,49 +27,44 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: deploying-llms-google-cloud-run-pulumi
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Deploy and Manage LLMs on Google Cloud Run GPUs with Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: 
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-10-17T09:00:00-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-10-17T09:00:00-07:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    If you've ever wanted to inference with an LLM in under a minute while paying only for what you consume, then Google Cloud Run GPUs are for you! In this hands-on workshop, we will demonstrate how Pulumi can seamlessly stand up an environment for deploying your LLMs and custom models on Google Cloud Run GPUs. Participants will learn how to create scalable, cost-efficient infrastructure that allows for rapid LLM inference, leveraging the power of Pulumi to automate and manage their deployments. Whether you're deploying pre-trained LLMs or custom models, this workshop will provide the tools and knowledge you need to optimize your AI workloads on the cloud.
 
-    # Description of the webinar.
-    description: |
-        If you've ever wanted to inference with an LLM in under a minute while paying only for what you consume, then Google Cloud Run GPUs are for you! In this hands-on workshop, we will demonstrate how Pulumi can seamlessly stand up an environment for deploying your LLMs and custom models on Google Cloud Run GPUs. Participants will learn how to create scalable, cost-efficient infrastructure that allows for rapid LLM inference, leveraging the power of Pulumi to automate and manage their deployments. Whether you're deploying pre-trained LLMs or custom models, this workshop will provide the tools and knowledge you need to optimize your AI workloads on the cloud.
+learn:
+    - How to efficiently deploy and manage LLMs and custom models on Google Cloud Run GPUs.
+    - Best practices for setting up scalable and cost-effective infrastructure for fast LLM inference.
+    - How to automate cloud infrastructure and streamline AI workload management using Pulumi.
 
-    learn:
-        - How to efficiently deploy and manage LLMs and custom models on Google Cloud Run GPUs.
-        - Best practices for setting up scalable and cost-effective infrastructure for fast LLM inference.
-        - How to automate cloud infrastructure and streamline AI workload management using Pulumi.
+# The webinar presenters
+presenters:
+    - name: Jay Smith
+      role: Sr. Cloud Customer Engineer, Google
+      photo: /images/team/jay-smith-google-jpeg.jpg
+    - name: Mitch Gerdisch
+      role: Solutions Architect, Pulumi
+      photo: /images/team/mitch-gerdisch.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Jay Smith
-          role: Sr. Cloud Customer Engineer, Google
-          photo: /images/team/jay-smith-google-jpeg.jpg
-        - name: Mitch Gerdisch
-          role: Solutions Architect, Pulumi
-          photo: /images/team/mitch-gerdisch.jpg
-
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["AI"]
-        languages: ["Python"]
-        clouds: ["Google Cloud"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["AI"]
+    languages: ["Python"]
+    clouds: ["Google Cloud"]
 
 # The right hand side form section.
 form:

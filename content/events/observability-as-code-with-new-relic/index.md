@@ -14,7 +14,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -27,47 +26,42 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: observability-as-code-with-new-relic
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Observability as Code with Pulumi and New Relic
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/0f7Pp1uDtbQ?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/0f7Pp1uDtbQ?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-02-14T09:00:00-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-02-14T09:00:00-08:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Getting your infrastructure and application deployed on AWS is an important first step but how do you make sure that your new capabilities are running reliably in production? Observability is a key component of any site reliability strategy and New Relic and Pulumi make it easier than ever to define metrics, alerts, and dashboards using popular programming languages.
 
-    # Description of the webinar.
-    description: |
-        Getting your infrastructure and application deployed on AWS is an important first step but how do you make sure that your new capabilities are running reliably in production? Observability is a key component of any site reliability strategy and New Relic and Pulumi make it easier than ever to define metrics, alerts, and dashboards using popular programming languages.
+learn:
+    - Defining and managing observability capabilities using JavaScript/TypeScript
+    - Creating cloud resources using infrastructure as code and deploying an example app
+    - How to define metrics and alerts to ensure your app and infrastructure are healthy
 
-    learn:
-        - Defining and managing observability capabilities using JavaScript/TypeScript
-        - Creating cloud resources using infrastructure as code and deploying an example app
-        - How to define metrics and alerts to ensure your app and infrastructure are healthy
+# The webinar presenters
+presenters:
+    - name: Josh Kodroff
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Ptah Dunbar
+      role: Solutions Consultant, New Relic
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Ptah Dunbar
-          role: Solutions Consultant, New Relic
-
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["New Relic", "Observability"]
-        languages: []
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["New Relic", "Observability"]
+    languages: []
 
 # The right hand side form section.
 form:
