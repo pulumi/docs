@@ -4,44 +4,43 @@ title: "Zero to Production in Kubernetes"
 meta_desc: Deploy Kubernetes with GitOps, IaC, and AI-powered workflows using Pulumi. Go from zero to production with modern, scalable cloud infrastructure.
 meta_image: /events/from-zero-to-production-in-kubernetes/zero-to-production-k8s.png
 
-# A featured webinar will display first in the list.
+# A featured event will display first in the list.
 featured: false
 
-# Webinars with unlisted as true will not be shown on the webinar list
+# Events with unlisted as true will not be shown on the event list
 unlisted: false
 
-# Gated webinars will have a registration form and the user will need
+# Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: true
 
-# The layout of the landing page.
-
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
+# External events will link to an external page instead of an event
+# landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
+# the event page created.
 external: false
 block_external_search_index: false
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
+# The url slug for the event landing page. If this is an external
+# event, use the external URL as the value here.
 url_slug: from-zero-to-production-in-kubernetes
 
-event_type: workshop # workshop | event
+# The event type (workshop, webinar, talk).
+event_type: workshop
 
-# URL for embedding a URL for ungated webinars.
+# URL for embedding a URL for ungated events.
 youtube_url:
 
-# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+# Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2026-03-31T09:00:00-04:00
 
-# Duration of the webinar.
+# Duration of the event.
 duration: 60 minutes
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: virtual
 
-# Description of the webinar.
+# Description of the event.
 description: |
     According to the **CNCF Annual Survey, 93% of organizations** are using, piloting, or evaluating Kubernetes as their core platform for modern cloud infrastructure. Engineering teams adopt Kubernetes for its consistency, scalability, and cloud-agnostic flexibility, making it the standard for building and operating developer platforms.
     
@@ -51,7 +50,7 @@ learn:
     - Manage Kubernetes fleets using GitOps workflows
     - Improve cluster and workload observability across environments
 
-# The webinar presenters
+# The event presenters
 presenters:
     - name: Engin Diri
       role: Senior Solutions Architect, Pulumi

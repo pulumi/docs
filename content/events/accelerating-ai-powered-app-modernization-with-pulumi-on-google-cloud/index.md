@@ -4,44 +4,43 @@ title: "AI-Powered App Modernization with Pulumi on Google Cloud"
 meta_desc: Learn how to accelerate app modernization using Pulumi's developer-first Infrastructure as Code with Google Cloud's AI services.
 meta_image:
 
-# A featured webinar will display first in the list.
+# A featured event will display first in the list.
 featured: false
 
-# Webinars with unlisted as true will not be shown on the webinar list
+# Events with unlisted as true will not be shown on the event list
 unlisted: false
 
-# Gated webinars will have a registration form and the user will need
+# Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: true
 
-# The layout of the landing page.
-
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
+# External events will link to an external page instead of an event
+# landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
+# the event page created.
 external: true
 block_external_search_index: false
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
+# The url slug for the event landing page. If this is an external
+# event, use the external URL as the value here.
 url_slug: https://rsvp.withgoogle.com/events/accelerating-ai-powered-app-modernization-with-pulumi-on-google-cloud
 
-event_type: workshop # workshop | event
+# The event type (workshop, webinar, talk).
+event_type: workshop
 
-# URL for embedding a URL for ungated webinars.
+# URL for embedding a URL for ungated events.
 youtube_url: 
 
-# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+# Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2025-12-17T10:00:00-08:00
 
-# Duration of the webinar.
+# Duration of the event.
 duration: 60 minutes
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: virtual
 
-# Description of the webinar.
+# Description of the event.
 description: |
     As enterprises race to modernize their applications for the AI era, the complexity of managing cloud infrastructure has become a critical bottleneck. This hands-on workshop demonstrates how Google Cloud customers can accelerate their app modernization journey by leveraging Pulumi's developer-first Infrastructure as Code approach alongside Google Cloud's cutting-edge AI services.
 
@@ -55,7 +54,7 @@ learn:
     - Implement CI/CD pipelines that treat infrastructure as first-class application code
     - Create self-service platforms that eliminate developer-operator bottlenecks
 
-# The webinar presenters
+# The event presenters
 presenters:
     - name: Jay Smith
       role: Sr. Cloud Customer Engineer, GCP

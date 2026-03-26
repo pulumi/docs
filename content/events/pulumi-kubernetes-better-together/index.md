@@ -4,44 +4,43 @@ title: Pulumi and Kubernetes - Better Together
 meta_desc: Learn how to use Pulumi's integrations with Kubernetes to ensure that your clusters and containerized workloads are managed with maximum ease and efficiency!
 meta_image:
 
-# A featured webinar will display first in the list.
+# A featured event will display first in the list.
 featured: false
 
-# Webinars with unlisted as true will not be shown on the webinar list
+# Events with unlisted as true will not be shown on the event list
 unlisted: false
 
-# Gated webinars will have a registration form and the user will need
+# Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: true
 
-# The layout of the landing page.
-
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
+# External events will link to an external page instead of an event
+# landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
+# the event page created.
 external: false
 block_external_search_index: false
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
+# The url slug for the event landing page. If this is an external
+# event, use the external URL as the value here.
 url_slug: pulumi-kubernetes-better-together
 
-event_type: workshop # workshop | event
+# The event type (workshop, webinar, talk).
+event_type: workshop
 
-# URL for embedding a URL for ungated webinars.
+# URL for embedding a URL for ungated events.
 youtube_url:
 
-# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+# Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2024-11-18T13:00:00-04:00
 
-# Duration of the webinar.
+# Duration of the event.
 duration: 60 minutes
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: virtual
 
-# Description of the webinar.
+# Description of the event.
 description: |
     Explore the powerful combination of Kubernetes and Pulumi for modern cloud-native application deployment and management.
     
@@ -55,7 +54,7 @@ learn:
     - How to use the Pulumi Kubernetes provider and the Pulumi Docker provider to build and run containerized workloads all with a single tool.
     - How the Pulumi Kubernetes provider can integrate seamlessly with your existing Kubernetes resources, whether plan YAML manifests or Helm charts.
     - How to use the Pulumi Kubernetes Operator to enable Pulumi IaC programs to run in a GitOps fashion.
-# The webinar presenters
+# The event presenters
 presenters:
     - name: Josh Kodroff
       role: Sr Solutions Architect, Pulumi

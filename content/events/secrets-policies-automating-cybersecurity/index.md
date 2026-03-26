@@ -4,44 +4,43 @@ title: Secrets and Policies - Automating Cybersecurity
 meta_desc: Discover how to balance security with agility, automate defenses, manage secrets & secure the software supply chain in today’s evolving cybersecurity landscape.
 meta_image:
 
-# A featured webinar will display first in the list.
+# A featured event will display first in the list.
 featured: false
 
-# Webinars with unlisted as true will not be shown on the webinar list
+# Events with unlisted as true will not be shown on the event list
 unlisted: false
 
-# Gated webinars will have a registration form and the user will need
+# Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: false
 
-# The layout of the landing page.
-
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
+# External events will link to an external page instead of an event
+# landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
+# the event page created.
 external: false
 block_external_search_index: false
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
+# The url slug for the event landing page. If this is an external
+# event, use the external URL as the value here.
 url_slug: secrets-policies-automating-cybersecurity
 
-event_type: event # workshop | event
+# The event type (workshop, webinar, talk).
+event_type: event
 
-# URL for embedding a URL for ungated webinars.
+# URL for embedding a URL for ungated events.
 youtube_url: https://www.youtube.com/embed/NJBSbZ2wpXw
 
-# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+# Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2024-09-18T09:00:00-00:00
 
-# Duration of the webinar.
+# Duration of the event.
 duration: 1 hour
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: virtual
 
-# Description of the webinar.
+# Description of the event.
 description: |
     In an era where digital threats are becoming more sophisticated, the need for advanced cybersecurity strategies has never been more critical. Our expert panel explored the intersection of innovation and security, offering insights into how AI is reshaping the threat landscape and how organizations can stay ahead. Discover how to balance security with business agility, implement best practices for secrets management, and leverage automation to safeguard your operations. We’ll also delve into securing the software supply chain and predicting future trends in cybersecurity. Join us for an in-depth discussion on protecting your organization in today's dynamic digital environment.
 
@@ -52,7 +51,7 @@ description: |
     - Building a Secure Software Supply Chain: Approaches for detecting and mitigating supply chain attacks, evaluating third-party risks, and establishing best practices for secure software development and deployment.
     - The Future of Cybersecurity: Insights into emerging trends, including advancements in cloud security, the evolving role of AI and machine learning in threat detection and response, and the importance of adopting a proactive, forward-looking security strategy.
 
-# The webinar presenters
+# The event presenters
 presenters:
     - name: Arun Loganathan
       role: Sr. Product Manager, Pulumi

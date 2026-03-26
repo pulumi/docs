@@ -1,6 +1,5 @@
 ---
 
-
 #################################
 
 # Name of the event, <= 60 characters
@@ -8,44 +7,43 @@ title: Taking AI Apps to Production
 meta_desc: The Pinecone and Pulumi teams will explore the infrastructure and service architecture you need to scale AI apps in production.
 meta_image: /images/resources/taking-ai-apps-to-production-scott.png
 
-# A featured webinar will display first in the list.
+# A featured event will display first in the list.
 featured: false
 
-# Webinars with unlisted as true will not be shown on the webinar list
+# Events with unlisted as true will not be shown on the event list
 unlisted: false
 
-# Gated webinars will have a registration form and the user will need
+# Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: false
 
-# The layout of the landing page.
-
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
+# External events will link to an external page instead of an event
+# landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
+# the event page created.
 external: false
 block_external_search_index: false
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
+# The url slug for the event landing page. If this is an external
+# event, use the external URL as the value here.
 url_slug: ai-apps-to-production
 
-event_type: workshop # workshop | event
+# The event type (workshop, webinar, talk).
+event_type: workshop
 
-# URL for embedding a URL for ungated webinars.
+# URL for embedding a URL for ungated events.
 youtube_url: 
 
-# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+# Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2023-12-14T09:00:00.000-08:00
 
-# Duration of the webinar.
+# Duration of the event.
 duration: 60 minutes
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: virtual
 
-# Description of the webinar.
+# Description of the event.
 description: |
     What does it take to go from an idea in a notebook to an application handling real-world traffic? In this workshop, the Pinecone and Pulumi teams will explore the infrastructure and service architecture you need to scale AI apps in production. We will delve into deploying high-volume AI systems through scalable microservices, efficient data processing, and seamless synchronization between user interfaces and databases. We will examine the nuances of containerization for enhanced portability and Infrastructure as Code (IaC) for streamlined cloud deployments. The workshop will also discuss industry best practices in scalability and security for production-grade AI systems in a cloud-native landscape.
 
@@ -56,7 +54,7 @@ learn:
     - How to provision, update, and destroy AWS resources (Amazon ECS clusters, networking infrastructure, messaging queues, and Amazon RDS Postgres databases)
     - How to create and manage Pinecone indexes
    
-# The webinar presenters
+# The event presenters
 presenters:
     - name: Scott Lowe
       role: Principal Community Engineer, Pulumi

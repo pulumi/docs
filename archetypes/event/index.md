@@ -20,8 +20,8 @@ block_external_search_index: false
 # URL slug for internal events, or external URL when external: true.
 url_slug: "{{ .Name }}"
 
-# "workshop" shows a cloud-signup notice; "event" does not.
-event_type: workshop # workshop | event
+# The event type (workshop, webinar, talk).
+event_type: workshop
 
 # YouTube embed URL. When set, the event appears in "On-demand recordings".
 # When empty, it appears in "Upcoming events".

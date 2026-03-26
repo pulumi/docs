@@ -1,0 +1,88 @@
+{{/*
+    Event Type Content Partial
+
+    Renders the main content area for all event types. Layout varies based on
+    whether the event has a video recording or a registration form:
+
+    With video (on-demand):
+        [video — full width]
+        [description] [speakers]
+
+    With form (upcoming):
+        [timing info]
+        [description] [form]
+        [speakers — full width]
+
+    Parameters: page context (.)
+*/}}
+
+{{ $nowUnix := now.UnixMilli }}
+{{ $eventDateUnix := (add (.Params.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
+{{ $timePassed := gt $nowUnix $eventDateUnix }}
+{{ $showCloud := eq .Params.event_type "workshop" }}
+
+{{ if .Params.youtube_url }}
+
+    {{/* On-demand layout: full-width video, then description + learn side by side, speakers below */}}
+    <div class="rounded-lg overflow-hidden shadow-lg" style="position: relative; padding-bottom: 56.25%; height: 0;">
+        <iframe src="{{ .Params.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+        <div class="w-full {{ if or .Params.learn $showCloud }}lg:w-1/2{{ end }}">
+            {{ partial "events/summary-template.html" (dict "description" .Params.description) }}
+        </div>
+
+        {{ if or .Params.learn $showCloud }}
+            <div class="w-full lg:w-1/2 flex flex-col gap-8">
+                {{ partial "events/learn-template.html" (dict "learn" .Params.learn) }}
+                {{ if $showCloud }}
+                    <div class="event-summary-cloud-notice">
+                        This workshop uses Pulumi Cloud. <a href="https://app.pulumi.com/signup/">Sign up</a> to follow along.
+                    </div>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+
+    {{ if .Params.presenters }}
+        {{ partial "events/speakers-template.html" (dict "presenters" .Params.presenters) }}
+    {{ end }}
+
+{{ else }}
+
+    {{/* Upcoming/gated layout: two-column with details left, form right */}}
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+        <div class="w-full lg:w-1/2 flex flex-col gap-8">
+            {{ partial "events/timing-info-template.html" (dict "datetime" .Params.sortable_date "duration" .Params.duration) }}
+            {{ partial "events/summary-template.html" (dict "description" .Params.description) }}
+            {{ partial "events/learn-template.html" (dict "learn" .Params.learn) }}
+            {{ if $showCloud }}
+                <div class="event-summary-cloud-notice">
+                    This workshop uses Pulumi Cloud. <a href="https://app.pulumi.com/signup/">Sign up</a> to follow along.
+                </div>
+            {{ end }}
+        </div>
+
+        <div class="w-full lg:w-1/2">
+            {{ if and .Params.gated (not $timePassed) }}
+                <div class="event-single-registration rounded-lg p-8">
+                    <h3 class="event-single-registration-title">Register today</h3>
+                    <pulumi-hubspot-form
+                        form-id="{{ .Params.form.hubspot_form_id }}"
+                        salesforce-campaign-id="{{ .Params.form.salesforce_campaign_id }}"
+                    ></pulumi-hubspot-form>
+                </div>
+            {{ else if $timePassed }}
+                <div class="rounded-lg p-8 bg-gray-100 text-center">
+                    <p class="text-gray-600 font-body text-lg mb-0">This event has passed. Check out our <a href="/events/#on-demand">on-demand recordings</a> for more content.</p>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+
+    {{ if .Params.presenters }}
+        {{ partial "events/speakers-template.html" (dict "presenters" .Params.presenters) }}
+    {{ end }}
+
+{{ end }}
