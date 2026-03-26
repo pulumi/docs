@@ -45,10 +45,6 @@ Pulumi supports two authentication methods depending on your GitLab plan:
 
 If the selected group does not support Group Access Tokens, Pulumi Cloud prompts you to use your personal GitLab account for organization authentication instead.
 
-{{% notes type="info" %}}
-When using a Group Access Token integration, you can optionally disassociate your personal GitLab identity after setup. Select your identity in the top-right corner of the integration card, then select **Remove Identity**. This does not affect the integration. Repo creation and webhook operations continue using the group access token.
-{{% /notes %}}
-
 ### Individual user setup
 
 Separately from the org-level integration, individual users can complete a 3-step OAuth flow under **Management** > **Version control** to grant Pulumi access to their GitLab account. This is used for features like Neo Agent repository creation on the user's behalf and does not create webhooks.
