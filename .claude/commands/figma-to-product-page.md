@@ -101,7 +101,22 @@ The site uses **Font Awesome 5.8.1 Free**. For every `icon:` value in the frontm
 
 ## Step 5 — Export images
 
-### 5a. Find exportable layers
+### 5a. Find the video poster image (if a video embed section exists)
+
+If the design contains a YouTube video embed section, look for a sibling frame in Figma that acts as the video poster/thumbnail — typically a dark-background card showing the video title and a "Watch Now" play button. It's name usually contains something like `-poster-image`, `video-poster`, or similar.
+
+Export it as PNG at 2x scale and place it in the same subdirectory as the other page images. Then add `poster_image` and `poster_alt` to the `video_embed` section frontmatter:
+
+```yaml
+- type: video_embed
+  youtube_id: YOUTUBE_ID
+  title: Video title
+  poster_image: /images/product/DIRNAME/poster.png
+  poster_alt: Descriptive alt text for the poster
+  anchor: demo
+```
+
+### 5b. Find exportable layers
 
 Exportable layers are typically named with an `-image` suffix. Walk the Figma node tree to collect their IDs:
 
@@ -111,7 +126,7 @@ grep -o 'id="[^"]*" name="[^-"]*-image[^"]*"' <metadata-file>
 
 **Important:** Node names can change between when you read the metadata and when you call the API. Always resolve node IDs fresh — do not assume a name from metadata matches the API response name.
 
-### 5b. Read export settings
+### 5c. Read export settings
 
 Fetch the export settings for each node via the Figma REST API before exporting. This determines format and scale:
 
@@ -136,7 +151,7 @@ find(data['nodes']['ROOT_NODE_ID']['document'])
 EOF
 ```
 
-### 5c. Determine format
+### 5d. Determine format
 
 | Export setting | Format to request |
 |---|---|
@@ -145,7 +160,7 @@ EOF
 | No export setting | Default to SVG for vector/diagram layers |
 | `png` or `svg` in layer name | Use that as the hint |
 
-### 5d. Download images
+### 5e. Download images
 
 Request export URLs then download:
 
@@ -163,7 +178,7 @@ Place all images in a new subdirectory under `static/images/product/`.
 
 **Reusing existing logos:** Before exporting a logo from Figma, check if it already exists under `static/logos/`. Only reuse it if the file is an SVG — PNGs will be distorted at non-native sizes. If the existing logo is a PNG, export the SVG from Figma instead.
 
-### 5e. Fix SVG preserveAspectRatio
+### 5f. Fix SVG preserveAspectRatio
 
 Figma often exports SVGs with `preserveAspectRatio="none" width="100%" height="100%"`, which causes distortion when displayed at a constrained size. After downloading any SVG, check the opening tag and replace it with the intrinsic dimensions from the `viewBox`:
 
