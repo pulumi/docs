@@ -32,27 +32,6 @@
 
     .consent-actions {
         @apply flex gap-2 w-full pb-4;
-
-        .consent-btn {
-            @apply flex-1 font-bold no-underline p-3 rounded-md text-center text-sm cursor-pointer;
-            @include transition;
-        }
-
-        .consent-btn-accept {
-            @apply bg-violet-600 text-white border-2 border-violet-600;
-
-            &:hover, &:focus-visible {
-                @apply bg-violet-700 border-violet-700;
-            }
-        }
-
-        .consent-btn-secondary {
-            @apply bg-white text-violet-600 border-2 border-violet-600;
-
-            &:hover, &:focus-visible {
-                @apply bg-violet-600 text-white;
-            }
-        }
     }
 }
 
@@ -146,25 +125,30 @@
 // Dialog action buttons
 .consent-dialog-buttons {
     @apply flex gap-2 justify-end;
+}
 
-    .consent-btn {
-        @apply font-bold no-underline py-2 px-5 rounded-md text-center text-sm cursor-pointer;
-        @include transition;
+// Shared consent button styles
+.consent-btn {
+    @apply font-bold no-underline py-2 px-5 rounded-md text-center text-sm cursor-pointer;
+    @include transition;
+
+    .consent-actions & {
+        @apply flex-1 p-3;
     }
+}
 
-    .consent-btn-accept {
-        @apply bg-violet-600 text-white border-2 border-violet-600;
+.consent-btn-accept {
+    @apply bg-violet-600 text-white border-2 border-violet-600;
 
-        &:hover, &:focus-visible {
-            @apply bg-violet-700 border-violet-700;
-        }
+    &:hover, &:focus-visible {
+        @apply bg-violet-700 border-violet-700;
     }
+}
 
-    .consent-btn-secondary {
-        @apply bg-white text-violet-600 border-2 border-violet-600;
+.consent-btn-secondary {
+    @apply bg-white text-violet-600 border-2 border-violet-600;
 
-        &:hover, &:focus-visible {
-            @apply bg-violet-600 text-white;
-        }
+    &:hover, &:focus-visible {
+        @apply bg-violet-600 text-white;
     }
 }

@@ -617,8 +617,12 @@ Location: `theme/webpack.config.js`
 
 ```javascript
 {
-  bundle: './src/ts/main.ts',      // Main site JavaScript
-  marketing: './src/ts/marketing.ts' // Marketing pages
+  bundle: './src/ts/main.ts',                    // Main site JavaScript
+  marketing: './src/ts/marketing.ts',            // Marketing pages
+  'marketing-homepage': './src/ts/marketingHomepage.ts', // Marketing homepage
+  homepage: './src/ts/homepage.ts',              // Homepage
+  algolia: './src/ts/algolia-entry.ts',          // Algolia search
+  'consent-manager': './src/ts/consent-manager/index.ts', // Cookie consent (vanilla TS)
 }
 ```
 
@@ -627,6 +631,10 @@ Location: `theme/webpack.config.js`
 ```
 assets/js/bundle.js
 assets/js/marketing.js
+assets/js/marketing-homepage.js
+assets/js/homepage.js
+assets/js/algolia.js
+assets/js/consent-manager.js
 assets/css/bundle.css
 assets/css/marketing.css
 ```
@@ -640,7 +648,8 @@ assets/css/marketing.css
 **Plugins:**
 
 - `MiniCssExtractPlugin`: Extract CSS to separate files
-- `webpack.ProvidePlugin`: Make jQuery available globally
+- `LimitChunkCountPlugin`: Keep each entry point as a single chunk
+- `WebpackShellPluginNext`: Build Stencil components before webpack compilation
 
 #### CSS Processing
 

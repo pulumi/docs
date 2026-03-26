@@ -38,10 +38,10 @@ function showPreferences() {
         current,
         (prefs) => {
             saveAndLoad(prefs);
-            document.body.removeChild(dialog);
+            if (dialog.parentNode) dialog.parentNode.removeChild(dialog);
         },
         () => {
-            document.body.removeChild(dialog);
+            if (dialog.parentNode) dialog.parentNode.removeChild(dialog);
         },
     );
     document.body.appendChild(dialog);

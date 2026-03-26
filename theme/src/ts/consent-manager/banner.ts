@@ -69,6 +69,9 @@ export function renderPreferencesDialog(
 
     const overlay = document.createElement("div");
     overlay.className = "consent-dialog-overlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-label", config.preferencesDialogTitle);
 
     const dialog = document.createElement("div");
     dialog.className = "consent-dialog";
@@ -81,6 +84,7 @@ export function renderPreferencesDialog(
     closeBtn.type = "button";
     closeBtn.className = "consent-dialog-close";
     closeBtn.textContent = "\u00d7";
+    closeBtn.setAttribute("aria-label", "Close");
     closeBtn.addEventListener("click", onCancel);
     header.appendChild(title);
     header.appendChild(closeBtn);
@@ -198,6 +202,35 @@ export function renderPreferencesDialog(
     overlay.appendChild(dialog);
     overlay.addEventListener("click", (e) => {
         if (e.target === overlay) onCancel();
+    });
+
+    overlay.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            onCancel();
+            return;
+        }
+        if (e.key === "Tab") {
+            const focusable = dialog.querySelectorAll<HTMLElement>(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+            );
+            if (focusable.length === 0) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        }
+    });
+
+    requestAnimationFrame(() => {
+        const firstFocusable = dialog.querySelector<HTMLElement>(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        );
+        firstFocusable?.focus();
     });
 
     return overlay;

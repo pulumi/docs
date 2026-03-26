@@ -6,7 +6,7 @@ export function fetchDestinations(cdnHost: string, writeKey: string): Promise<De
             if (!res.ok) throw new Error(`Failed to fetch integrations: HTTP ${res.status}`);
             return res.json();
         })
-        .then((integrations: any[]) => {
+        .then((integrations: { name: string; creationName: string; category?: string }[]) => {
             return integrations
                 .map((i) => ({
                     id: i.name === "Fullstory" ? i.name : i.creationName,

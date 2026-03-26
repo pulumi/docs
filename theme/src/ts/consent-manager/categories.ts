@@ -8,8 +8,8 @@ export interface Category {
     toggleable: boolean;
 }
 
-const MARKETING_IDS = ["HubSpot", "AWS S3", "Google Analytics 4 Web"];
-const ADVERTISING_IDS = ["LinkedIn Insight Tag", "Google Ads (Gtag)"];
+const MARKETING_NAMES = ["HubSpot", "AWS S3", "Google Analytics 4 Web"];
+const ADVERTISING_NAMES = ["LinkedIn Insight Tag", "Google Ads (Gtag)"];
 
 export function categorizeDestinations(destinations: Destination[]): Category[] {
     const marketing: Destination[] = [];
@@ -17,9 +17,9 @@ export function categorizeDestinations(destinations: Destination[]): Category[] 
     const other: Destination[] = [];
 
     for (const dest of destinations) {
-        if (MARKETING_IDS.includes(dest.name)) {
+        if (MARKETING_NAMES.includes(dest.name)) {
             marketing.push(dest);
-        } else if (ADVERTISING_IDS.includes(dest.name)) {
+        } else if (ADVERTISING_NAMES.includes(dest.name)) {
             advertising.push(dest);
         } else {
             other.push(dest);
