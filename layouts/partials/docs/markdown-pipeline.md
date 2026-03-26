@@ -37,9 +37,12 @@
        by the chooser template, so any typed option tags remaining here are standalone and
        need grouping. We wrap consecutive same-type blocks per type, then normalize. */ -}}
 {{- range (slice "language" "os" "cloud") -}}
-  {{- $content = replaceRE (printf `(?s)(<!-- option-%s: \w+ -->.*?<!-- /option-%s -->(?:\s*<!-- option-%s: \w+ -->.*?<!-- /option-%s -->)*)` . . . .) (printf "<!-- chooser: %s -->\n$1\n<!-- /chooser -->" .) $content -}}
-  {{- $content = replaceRE (printf `<!-- option-%s: (\w+) -->` .) "<!-- option: $1 -->" $content -}}
-  {{- $content = replaceRE (printf `<!-- /option-%s -->` .) "<!-- /option -->" $content -}}
+  {{- $type := . -}}
+  {{- if in $content (printf "<!-- option-%s:" $type) -}}
+    {{- $content = replaceRE (printf `(?s)(<!-- option-%s: \w+ -->.*?<!-- /option-%s -->(?:\s*<!-- option-%s: \w+ -->.*?<!-- /option-%s -->)*)` $type $type $type $type) (printf "<!-- chooser: %s -->\n$1\n<!-- /chooser -->" $type) $content -}}
+    {{- $content = replaceRE (printf `<!-- option-%s: (\w+) -->` $type) "<!-- option: $1 -->" $content -}}
+    {{- $content = replaceRE (printf `<!-- /option-%s -->` $type) "<!-- /option -->" $content -}}
+  {{- end -}}
 {{- end -}}
 {{- /* Phase 7: Decode HTML entities and final cleanup */ -}}
 {{- $content = $content | htmlUnescape -}}
