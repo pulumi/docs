@@ -429,7 +429,8 @@ const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
 const fiveMinutes = 60 * 5;
 const thirtyMinutes = fiveMinutes * 6;
 const oneHour = fiveMinutes * 12;
-const oneWeek = oneHour * 24 * 7;
+const oneDay = oneHour * 24;
+const oneWeek = oneDay * 7;
 const oneYear = oneWeek * 52;
 
 // AllViewerExceptHostHeader passes all cookies, querystrings, and headers except the Host header.
@@ -484,9 +485,19 @@ const baseSecurityHeadersConfig = {
     }
 };
 
-// Most of the site
+// Most of the site — includes a short browser cache with revalidation so
+// browsers don't refetch every navigation.  The 10-minute max-age keeps
+// content reasonably fresh while eliminating the "no cache lifetime" flag
+// from PageSpeed Insights.
 const SecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('security-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [{
+            header: "Cache-Control",
+            value: "public, max-age=600, stale-while-revalidate=86400",
+            override: false,
+        }],
+    },
 });
 
 // Copilot lives in an iframe
@@ -738,6 +749,13 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             ...baseCacheBehavior,
+            pathPattern: "/css/marketing-homepage.*.css",
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
             pathPattern: "/js/bundle.*.js",
             defaultTtl: oneYear,
             maxTtl: oneYear,
@@ -760,14 +778,14 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/icons/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
+            defaultTtl: oneDay,
+            maxTtl: oneDay,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/logos/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
+            defaultTtl: oneDay,
+            maxTtl: oneDay,
         },
         {
             ...baseCacheBehavior,
@@ -775,6 +793,16 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             defaultTtl: oneYear,
             maxTtl: oneYear,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
+
+        // consent-manager.js is not fingerprinted but changes infrequently.
+        // Cache at the edge for 1 day; browsers will get the default Cache-Control
+        // from SecurityHeadersPolicy (10 min + stale-while-revalidate).
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/js/consent-manager.js",
+            defaultTtl: oneDay,
+            maxTtl: oneDay,
         },
 
         // Web-component loaders must not be cached, because the names of the files they
