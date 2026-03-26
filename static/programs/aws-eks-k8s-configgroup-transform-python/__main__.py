@@ -1,10 +1,14 @@
 import pulumi
 import pulumi_eks as eks
+import pulumi_kubernetes as kubernetes
 from pulumi_kubernetes.yaml.v2 import ConfigGroup
 
 # Create an EKS cluster.
 cluster = eks.Cluster("my-cluster")
-eks_provider = cluster.provider
+
+# Create a Kubernetes provider using the new cluster's kubeconfig.
+eks_provider = kubernetes.Provider("eks-provider", kubeconfig=cluster.kubeconfig_json)
+
 namespace_name = "guestbook"
 
 def xform(args):
@@ -24,7 +28,7 @@ def xform(args):
 guestbook = ConfigGroup("guestbook",
     files=["yaml/*.yaml"],
     opts=pulumi.ResourceOptions(
-        provider=cluster.provider,
+        provider=eks_provider,
         transforms=[xform],
     )
 )

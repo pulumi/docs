@@ -5,7 +5,6 @@ import (
 
 	"github.com/pulumi/pulumi-eks/sdk/v4/go/eks"
 	k8s "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes"
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"
 	k8syaml "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/yaml/v2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -34,14 +33,15 @@ func main() {
 		}
 
 		// Create resources from standard Kubernetes guestbook YAML example.
-		guestbook, err := k8syaml.NewConfigGroup(ctx, "guestbook", &k8syaml.ConfigGroupArgs{
+		_, err = k8syaml.NewConfigGroup(ctx, "guestbook", &k8syaml.ConfigGroupArgs{
 			Files: pulumi.StringArray{pulumi.String("yaml/*.yaml")},
 		}, pulumi.Provider(prov))
-
-		// Export the (cluster-private) IP address of the Guestbook frontend.
-		if frontend := guestbook.GetResource("v1/Service", "frontend", ""); frontend != nil {
-			ctx.Export("frontendIp", frontend.(*corev1.Service).Spec.ClusterIP())
+		if err != nil {
+			return err
 		}
+
+		// Export the cluster's kubeconfig.
+		ctx.Export("kubeconfig", cluster.Kubeconfig)
 		return nil
 	})
 }

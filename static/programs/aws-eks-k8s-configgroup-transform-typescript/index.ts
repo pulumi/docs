@@ -7,7 +7,7 @@ const cluster = new eks.Cluster("my-cluster");
 const eksProvider = cluster.provider;
 const namespaceName = "guestbook";
 
-const guestbook = new k8s.yaml.v2.ConfigGroup("guestbook", { files: "yaml/*.yaml" }, {
+const guestbook = new k8s.yaml.v2.ConfigGroup("guestbook", { files: ["yaml/*.yaml"] }, {
     provider: eksProvider,
     transforms: [
         async args => {

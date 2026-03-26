@@ -6,7 +6,7 @@ import com.pulumi.kubernetes.Provider;
 import com.pulumi.kubernetes.ProviderArgs;
 import com.pulumi.kubernetes.yaml.v2.ConfigGroup;
 import com.pulumi.kubernetes.yaml.v2.ConfigGroupArgs;
-import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.resources.ComponentResourceOptions;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
@@ -28,7 +28,7 @@ public class App {
 
         var guestbook = new ConfigGroup("guestbook", ConfigGroupArgs.builder()
             .files("yaml/*.yaml")
-            .build(), CustomResourceOptions.builder()
+            .build(), ComponentResourceOptions.builder()
                 .provider(eksProvider)
                 .build());
 

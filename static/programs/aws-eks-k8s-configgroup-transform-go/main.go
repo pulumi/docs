@@ -7,7 +7,6 @@ import (
 	k8s "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes"
 	k8syaml "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/yaml/v2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
 )
 
 func main() {
@@ -28,32 +27,29 @@ func main() {
 			return err
 		}
 
-		guestbook, err := k8syaml.NewConfigGroup(ctx, "guestbook", &k8syaml.ConfigGroupArgs{
+		_, err = k8syaml.NewConfigGroup(ctx, "guestbook", &k8syaml.ConfigGroupArgs{
 			Files: pulumi.StringArray{pulumi.String("yaml/*.yaml")},
 		}, pulumi.Provider(prov), pulumi.Transforms([]pulumi.ResourceTransform{
-			func(ctx context.Context, args *pulumi.ResourceTransformArgs) *pulumi.ResourceTransformResult {
-				props := args.Props.ObjectValue()
+			func(_ context.Context, args *pulumi.ResourceTransformArgs) *pulumi.ResourceTransformResult {
+				props := args.Props
 				// Make every service private to the cluster.
 				if args.Type == "kubernetes:core/v1:Service" {
-					if spec, ok := props["spec"]; ok {
-						specMap := spec.ObjectValue()
-						if specMap["type"].StringValue() == "LoadBalancer" {
-							specMap["type"] = resource.NewStringProperty("ClusterIP")
-							props["spec"] = resource.NewObjectProperty(specMap)
+					if spec, ok := props["spec"].(map[string]interface{}); ok {
+						if t, ok := spec["type"].(string); ok && t == "LoadBalancer" {
+							spec["type"] = "ClusterIP"
 						}
 					}
 				}
 				// Put every resource in the created namespace.
-				meta := props["metadata"].ObjectValue()
-				meta["namespace"] = resource.NewStringProperty(namespaceName)
-				props["metadata"] = resource.NewObjectProperty(meta)
+				if meta, ok := props["metadata"].(map[string]interface{}); ok {
+					meta["namespace"] = namespaceName
+				}
 				return &pulumi.ResourceTransformResult{
-					Props: resource.NewObjectProperty(props),
+					Props: props,
 					Opts:  args.Opts,
 				}
 			},
 		}))
-		_ = guestbook
 		return err
 	})
 }
