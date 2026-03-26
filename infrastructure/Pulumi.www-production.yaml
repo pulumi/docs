@@ -16,4 +16,6 @@ config:
   www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-website-logs
   www.pulumi.com:answersStack: "pulumi/answers/production"
   www.pulumi.com:cdnLogDeliverySourceName: "CreatedByCloudFront-E3PRSXO1BZJEEY"
+  www.pulumi.com:enableWaf: "true"
+  www.pulumi.com:wafRateLimit: "500"
   www.pulumi.com:enableDataWarehouseAccess: "true"
