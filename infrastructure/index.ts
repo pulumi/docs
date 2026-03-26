@@ -66,6 +66,12 @@ const config = {
     // cdnLogDeliverySourceName is the name of the CloudFront-created log delivery source.
     // If not set, CDN log delivery configuration will be skipped.
     cdnLogDeliverySourceName: stackConfig.get("cdnLogDeliverySourceName") || undefined,
+
+    // enableWaf toggles whether to create and associate a WAF WebACL with the CloudFront distribution.
+    enableWaf: stackConfig.getBoolean("enableWaf") || false,
+
+    // wafRateLimit is the maximum number of requests per 5-minute window per IP before WAF blocks.
+    wafRateLimit: stackConfig.getNumber("wafRateLimit") || 500,
 };
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
@@ -76,6 +82,42 @@ let astroAwsRoleArn: pulumi.Output<any> | undefined;
 if (config.enableDataWarehouseAccess) {
     const astroStack = new pulumi.StackReference('pulumi/dwh-workflows-astro/production');
     astroAwsRoleArn = astroStack.getOutput('astroAwsRoleArn');
+}
+
+// WAF WebACL for rate limiting. WebACLs for CloudFront must be in us-east-1.
+let webAcl: aws.wafv2.WebAcl | undefined;
+
+if (config.enableWaf) {
+    const usEast1 = new aws.Provider("us-east-1-waf", {
+        region: aws.Region.USEast1,
+    });
+
+    webAcl = new aws.wafv2.WebAcl("cdn-waf", {
+        scope: "CLOUDFRONT",
+        description: `Rate limiting for ${config.websiteDomain}`,
+        defaultAction: { allow: {} },
+        rules: [{
+            name: "rate-limit-per-ip",
+            priority: 1,
+            action: { block: {} },
+            statement: {
+                rateBasedStatement: {
+                    limit: config.wafRateLimit,
+                    aggregateKeyType: "IP",
+                },
+            },
+            visibilityConfig: {
+                cloudwatchMetricsEnabled: true,
+                metricName: "cdn-waf-rate-limit",
+                sampledRequestsEnabled: true,
+            },
+        }],
+        visibilityConfig: {
+            cloudwatchMetricsEnabled: true,
+            metricName: "cdn-waf",
+            sampledRequestsEnabled: true,
+        },
+    }, { provider: usEast1 });
 }
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
@@ -921,6 +963,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         sslSupportMethod: "sni-only",
         minimumProtocolVersion: "TLSv1.2_2021",
     },
+
+    webAclId: webAcl?.arn,
 };
 
 // cdn is the CloudFront distribution that serves the content of the website.
@@ -1021,4 +1065,5 @@ export const cloudFrontDomain = cdn.domainName;
 export const cloudFrontDistributionId = cdn.id;
 export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
+export const wafWebAclArn = webAcl?.arn;
 export const readme = fs.readFileSync("./README.md").toString();
