@@ -59,8 +59,18 @@ function handleResize() {
     setMainNavHeight();
 }
 
+let scrollRafPending = false;
+function onScroll() {
+    if (scrollRafPending) return;
+    scrollRafPending = true;
+    requestAnimationFrame(() => {
+        scrollRafPending = false;
+        setDocsMainNavPosition();
+    });
+}
+
 window.addEventListener("resize", handleResize);
-window.addEventListener("scroll", setDocsMainNavPosition);
+window.addEventListener("scroll", onScroll, { passive: true });
 window.addEventListener("load", handleResize);
 handleResize();
 
