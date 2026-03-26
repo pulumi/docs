@@ -30,12 +30,14 @@ This llms.txt covers www.pulumi.com, which includes:
 - [Product](https://www.pulumi.com/product/): Pulumi Cloud platform overview and capabilities
 - [Pricing](https://www.pulumi.com/pricing/): Plans and pricing for Pulumi Cloud (Individual, Team, Enterprise, Business Critical)
 - [Pulumi Registry](https://www.pulumi.com/registry/): Documentation for 150+ cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
+- [Registry sitemap (JSON)](https://www.pulumi.com/registry/cli-sitemap.json): Machine-readable index of all registry packages; per-package sitemaps at `/registry/packages/<name>/cli-sitemap.json`
 - [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts
 - [Tutorials](https://www.pulumi.com/tutorials/): Hands-on tutorials for building cloud infrastructure with Pulumi
 - [What is...](https://www.pulumi.com/what-is/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless)
 - [Case Studies](https://www.pulumi.com/case-studies/): Customer stories and use cases
 - [Templates](https://www.pulumi.com/templates/): Ready-to-use project templates across clouds and languages
 - [Docs](https://www.pulumi.com/docs/): Technical documentation (detailed sections below)
+- [Docs sitemap (JSON)](https://www.pulumi.com/docs/cli-sitemap.json): Machine-readable hierarchical sitemap of all documentation pages with titles and nesting
 {{ range site.Data.docs_menu_sections }}
 {{- $entries := slice }}
 {{- with index site.Menus .menu }}

@@ -1,3 +1,4 @@
+{{- $type := .Get 0 -}}
 {{- $values := .Get 1 -}}
 {{- if eq $values "nodejs" -}}
     {{- $values = "javascript,typescript" -}}
@@ -14,6 +15,6 @@
 {{- /* Decode HTML entities */ -}}
 {{- $inner = $inner | htmlUnescape -}}
 
-<!-- option: {{ $label }} -->
+<!-- option-{{ $type }}: {{ $label }} -->
 {{ $inner }}
-<!-- /option -->
+<!-- /option-{{ $type }} -->
