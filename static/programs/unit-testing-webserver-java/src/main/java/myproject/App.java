@@ -1,5 +1,7 @@
 package myproject;
 
+import java.util.List;
+
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.aws.ec2.Instance;
@@ -28,7 +30,7 @@ public class App {
 
         var server = new Instance("web-server-www", InstanceArgs.builder()
             .instanceType("t2.micro")
-            .securityGroups(group.name())  // reference the group object above
+            .securityGroups(group.name().applyValue(List::of))  // reference the group object above
             .ami("ami-c55673a0")           // AMI for us-east-2 (Ohio)
             .userData(userData)            // start a simple web server
             .build());
