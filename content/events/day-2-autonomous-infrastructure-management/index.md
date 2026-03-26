@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,47 +27,43 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: day-2-autonomous-infrastructure-management
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "Day-2 Autonomous Infrastructure Management"
-    event_type: workshop # workshop | event
+event_type: workshop # workshop | event
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/nx6oJvX2JNE?si=w8flxuKSSsnpKtJo
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/nx6oJvX2JNE?si=w8flxuKSSsnpKtJo
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-12-09T12:00:00-05:00
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-12-09T12:00:00-05:00
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# Duration of the webinar.
+duration: 60 minutes
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Description of the webinar.
-    description: |
-        Getting infrastructure deployed is just one piece of the automation puzzle. The next question is: how do teams maintain a growing inventory of infrastructure in the long term? Infrastructure can drift from the latest standards due to manual intervention or the adoption of new, more stringent requirements. In this session, we'll dive into day 2 operations to show you how to simplify and automate maintenance - even as the number of resources you manage is expanding.
-    learn:
-        - Monitoring and remediation workflows
-        - Proactive optimization and cost management
-        - Security incident response automation
+# Description of the webinar.
+description: |
+    Getting infrastructure deployed is just one piece of the automation puzzle. The next question is: how do teams maintain a growing inventory of infrastructure in the long term? Infrastructure can drift from the latest standards due to manual intervention or the adoption of new, more stringent requirements. In this session, we'll dive into day 2 operations to show you how to simplify and automate maintenance - even as the number of resources you manage is expanding.
+learn:
+    - Monitoring and remediation workflows
+    - Proactive optimization and cost management
+    - Security incident response automation
 
-    # The webinar presenters
-    presenters:
-        - name: Engin Diri
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/engin-diri.jpg
-        - name: Adam Bell
-          role: Community Engineer, Pulumi
-          photo: /images/team/adam-gordon-bell.jpg
-    
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["Policy as Code", "Pulumi Neo", "DevSecOps", "PagerDuty"]
-        languages: []
-        clouds: ["AWS"]
+# The webinar presenters
+presenters:
+    - name: Engin Diri
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/engin-diri.jpg
+    - name: Adam Bell
+      role: Community Engineer, Pulumi
+      photo: /images/team/adam-gordon-bell.jpg
+
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics:  ["Policy as Code", "Pulumi Neo", "DevSecOps", "PagerDuty"]
+    languages: []
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:
@@ -76,11 +71,4 @@ form:
     hubspot_form_id: 8e503c5b-2262-42a4-adad-350392be99e7
     salesforce_campaign_id: 701PQ00000eeXB8YAM
 
-event_data:
-  name: "Day-2 Autonomous Infrastructure Management"
-  start_date: 2025-12-09T12:00:00-05:00
-  end_date: 2025-12-09T13:00:00-05:00
-  url: "https://www.pulumi.com/resources/day-2-autonomous-infrastructure-management/"
-  description: |
-    Getting infrastructure deployed is just one piece of the automation puzzle. The next question is: how do teams maintain a growing inventory of infrastructure in the long term? Infrastructure can drift from the latest standards due to manual intervention or the adoption of new, more stringent requirements. In this session, we'll dive into day 2 operations to show you how to simplify and automate maintenance - even as the number of resources you manage is expanding.
 ---

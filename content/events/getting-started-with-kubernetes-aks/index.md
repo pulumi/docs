@@ -14,7 +14,6 @@ unlisted: false
 gated: true
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -27,43 +26,38 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: getting-started-with-kubernetes-aks
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Getting started with Kubernetes on AKS with Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-03-26T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-03-26T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Getting started with Kubernetes doesn't have to be complex! Pulumi's infrastructure-as-code (IaC) platform can help remove the complexity and enable even beginner developers to use any programming language to provision modern infrastructure. In this session, you will learn the fundamentals of building and deploying containerized workloads and get an introduction to Pulumi's IaC platform and deployment on Azure.
 
-    # Description of the webinar.
-    description: |
-        Getting started with Kubernetes doesn't have to be complex! Pulumi's infrastructure-as-code (IaC) platform can help remove the complexity and enable even beginner developers to use any programming language to provision modern infrastructure. In this session, you will learn the fundamentals of building and deploying containerized workloads and get an introduction to Pulumi's IaC platform and deployment on Azure.
+    We’ll guide you through setting up an Azure AKS cluster and deploying a containerized workload to the cluster. This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy Kubernetes clusters and workloads on Azure. We will guide you through the Pulumi platform with diagrams and a series of examples to help accelerate your cloud projects.
 
-        We’ll guide you through setting up an Azure AKS cluster and deploying a containerized workload to the cluster. This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy Kubernetes clusters and workloads on Azure. We will guide you through the Pulumi platform with diagrams and a series of examples to help accelerate your cloud projects.
+# The webinar presenters
+presenters:
+    - name: Engin Diri
+      role: Sr. Community Engineer, Pulumi
+      photo: /images/team/engin-diri.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Engin Diri
-          role: Sr. Community Engineer, Pulumi
-          photo: /images/team/engin-diri.jpg
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
-        languages: []
-        clouds: ["Azure"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Kubernetes"]
+    languages: []
+    clouds: ["Azure"]
 
 # The right hand side form section.
 form:

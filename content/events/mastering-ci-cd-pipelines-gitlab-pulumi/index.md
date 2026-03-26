@@ -15,7 +15,6 @@ unlisted: false
 gated: true
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,48 +27,43 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: mastering-ci-cd-pipelines-gitlab-pulumi
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Mastering CI/CD Pipelines with Pulumi and GitLab
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-04-03T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-04-03T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In the ever-evolving landscape of DevOps and platform engineering, platform engineers are always seeking efficient and flexible tools to manage their cloud resources, especially when it comes to continuous integration/continuous delivery (CI/CD) pipelines.
 
-    # Description of the webinar.
-    description: |
-        In the ever-evolving landscape of DevOps and platform engineering, platform engineers are always seeking efficient and flexible tools to manage their cloud resources, especially when it comes to continuous integration/continuous delivery (CI/CD) pipelines.
+    In this workshop, you'll learn how to use Pulumi's deep integration with GitLab to create and manage CI/CD pipelines for your infrastructure in a declarative function to empower your application and infrastructure teams to deliver safely, reproducibly, and quickly.
 
-        In this workshop, you'll learn how to use Pulumi's deep integration with GitLab to create and manage CI/CD pipelines for your infrastructure in a declarative function to empower your application and infrastructure teams to deliver safely, reproducibly, and quickly.
+learn:
 
-    learn:
+# The webinar presenters
+presenters:
+    - name: Josh Kodroff
+      role: Sr. Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Matt Genelin
+      role: Solutions Architect, GitLab
+      photo: /images/people/matt-genelin.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Sr. Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Matt Genelin
-          role: Solutions Architect, GitLab
-          photo: /images/people/matt-genelin.jpg
-
-    # case-sensitive
-    tags:
-        level:  # Beginner, Intermediate, Advanced
-        topics: ["CI/CD", "DevOps", "GitLab"]
-        languages: ["TypeScript"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level:  # Beginner, Intermediate, Advanced
+    topics: ["CI/CD", "DevOps", "GitLab"]
+    languages: ["TypeScript"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

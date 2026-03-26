@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,45 +27,40 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: build-infrastructure-as-code-just-60-seconds-modern-infrastructure
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Build Infrastructure as Code in Just 60 Seconds
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/J7qzeLTaem4?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/J7qzeLTaem4?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-08-09T14:00:12Z
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-08-09T14:00:12Z
+# Duration of the webinar.
+duration: 2 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Duration of the webinar.
-    duration: 2 minutes
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Imagine the power of creating Infrastructure as Code effortlessly. With Pulumi AI, you use natural-language prompts to generate infrastructure as code (IaC) programs in the language of your choice, such as TypeScript, Python, Go, C#., Java, or Yaml. Pulumi AI will create all the necessary parts, from the instance itself to the security groups that will allow access. 
+    
+    🤖 [Try Pulumi Neo now](https://www.pulumi.com/product/neo/) and see the magic unfold!
+    
+    Prompt used in the video: “Please create a Linux instance I can ssh to”  But that's not all - you can iterate on the cloud infrastructure with the AI assistant, adding new features, fixing bugs, and clarifying requirements. With Pulumi AI, the possibilities are endless.  their online store.
 
-    # Description of the webinar.
-    description: |
-        Imagine the power of creating Infrastructure as Code effortlessly. With Pulumi AI, you use natural-language prompts to generate infrastructure as code (IaC) programs in the language of your choice, such as TypeScript, Python, Go, C#., Java, or Yaml. Pulumi AI will create all the necessary parts, from the instance itself to the security groups that will allow access. 
-        
-        🤖 [Try Pulumi Neo now](https://www.pulumi.com/product/neo/) and see the magic unfold!
-        
-        Prompt used in the video: “Please create a Linux instance I can ssh to”  But that's not all - you can iterate on the cloud infrastructure with the AI assistant, adding new features, fixing bugs, and clarifying requirements. With Pulumi AI, the possibilities are endless.  their online store.
+learn:
 
-    learn:
+# The webinar presenters
+presenters:
+    - name: Carl Holzboog
+      role: Solutions Engineer, Pulumi
+      photo:
 
-    # The webinar presenters
-    presenters:
-        - name: Carl Holzboog
-          role: Solutions Engineer, Pulumi
-          photo:
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Pulumi AI"]
-        languages: []
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Pulumi AI"]
+    languages: []
 
 # The right hand side form section.
 form:

@@ -9,11 +9,7 @@ cloud_engineering_days:
 # A featured webinar will display first in the list.
 featured: false
 
-# If the video is pre-recorded or live.
-pre_recorded: true
 
-# If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
-pulumi_tv: false
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -23,7 +19,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 layout: cloud-engineering-days-replay
 
 # External webinars will link to an external page instead of a webinar
@@ -33,6 +28,7 @@ layout: cloud-engineering-days-replay
 external: false
 block_external_search_index: false
 
+event_type: talk
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
 url_slug: "building-a-global-data-platform-at-scale"
@@ -42,22 +38,18 @@ hero:
     # The title text in the hero. This also serves as the pages H1.
     title: "Building a Global Data Platform at Scale"
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "Building a Global Data Platform at Scale"
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/NQpDNm9pH7s?rel=0"
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-11-02T10:20:00-07:00
-    # Duration of the webinar.
-    duration: "28 minutes"
-    # Description of the webinar.
-    description: |
-        At Fauna, availability is a top priority. It informs how we build everything, including our infrastructure. I'll discuss how we balance complexity and safety in our infrastructure as code to build, maintain, and scale FaunaDB. They use AWS and Python but soon will use the multi-cloud ability.
+# URL for embedding a URL for ungated webinars.
+youtube_url: "https://www.youtube.com/embed/NQpDNm9pH7s?rel=0"
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2022-11-02T10:20:00-07:00
+# Duration of the webinar.
+duration: "28 minutes"
+# Description of the webinar.
+description: |
+    At Fauna, availability is a top priority. It informs how we build everything, including our infrastructure. I'll discuss how we balance complexity and safety in our infrastructure as code to build, maintain, and scale FaunaDB. They use AWS and Python but soon will use the multi-cloud ability.
 
-    # The webinar presenters
-    presenters:
-        - name: Jeff Smick
-          role: Sr. Staff Engineer, Fauna
+# The webinar presenters
+presenters:
+    - name: Jeff Smick
+      role: Sr. Staff Engineer, Fauna
 ---

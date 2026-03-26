@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,45 +27,40 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: build-web-scale-cloud-app-golang-iac
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Building Web-Scale Cloud Applications with Go and IaC
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/kOqzJFeTkto?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/kOqzJFeTkto?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-10-16T07:00:00-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-10-16T07:00:00-07:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+  In the modern era of cloud computing, building scalable and reliable applications is a necessity. Join us in this hands-on workshop as we dive deep into the world of Infrastructure as Code (IaC) using Pulumi and Go. Tailored for Go developers new to Pulumi, this workshop will guide you through the foundational concepts of IaC, showcasing how Go can be leveraged to design robust cloud applications ready for web-scale.
 
-    # Description of the webinar.
-    description: |
-      In the modern era of cloud computing, building scalable and reliable applications is a necessity. Join us in this hands-on workshop as we dive deep into the world of Infrastructure as Code (IaC) using Pulumi and Go. Tailored for Go developers new to Pulumi, this workshop will guide you through the foundational concepts of IaC, showcasing how Go can be leveraged to design robust cloud applications ready for web-scale.
+learn:
+  - Basics of Infrastructure as Code with Pulumi.
+  - Using Go with Pulumi for cloud resource management.
+  - Best practices for scalable cloud applications with Go and Pulumi.
 
-    learn:
-      - Basics of Infrastructure as Code with Pulumi.
-      - Using Go with Pulumi for cloud resource management.
-      - Best practices for scalable cloud applications with Go and Pulumi.
+# The webinar presenters
+presenters:
+    - name: Engin Diri
+      role: Customer Experience Architect, Pulumi
+      photo: /images/team/engin-diri.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Engin Diri
-          role: Customer Experience Architect, Pulumi
-          photo: /images/team/engin-diri.jpg
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: []
-        languages: ["Golang"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: []
+    languages: ["Golang"]
 
 # The right hand side form section.
 form:

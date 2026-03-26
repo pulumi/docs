@@ -14,7 +14,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -27,47 +26,42 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: whats-new-pulumi-cloud
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: What's New in Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/xLcSUdpgtvg?si=Q5KYcL6khAVg6RwT?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/xLcSUdpgtvg?si=Q5KYcL6khAVg6RwT?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-02-29T09:00:00.000-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-02-29T09:00:00.000-08:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Join our 'What's New in Pulumi' workshop to explore the latest features and updates in Pulumi. Learn how these enhancements can streamline your cloud infrastructure management, with practical demonstrations and insights into advanced deployment techniques. Ideal for developers looking to leverage Pulumi's cutting-edge tools for efficient cloud solutions.
 
-    # Description of the webinar.
-    description: |
-        Join our 'What's New in Pulumi' workshop to explore the latest features and updates in Pulumi. Learn how these enhancements can streamline your cloud infrastructure management, with practical demonstrations and insights into advanced deployment techniques. Ideal for developers looking to leverage Pulumi's cutting-edge tools for efficient cloud solutions.
+learn:
+    - What's new; recent features and updates to Pulumi Cloud
+    - How to leverage new solutions to support advanced deployment techniques
 
-    learn:
-        - What's new; recent features and updates to Pulumi Cloud
-        - How to leverage new solutions to support advanced deployment techniques
+# The webinar presenters
+presenters:
+    - name: Meagan Cojocar
+      role: Principal Product Manager, Pulumi
+      photo: /images/team/meagan-cojocar.jpg
+    - name: Arun Loganathan
+      role: Senior Product Manager, Pulumi
+      photo: /images/team/arun-loganathan.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Meagan Cojocar
-          role: Principal Product Manager, Pulumi
-          photo: /images/team/meagan-cojocar.jpg
-        - name: Arun Loganathan
-          role: Senior Product Manager, Pulumi
-          photo: /images/team/arun-loganathan.jpg
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Pulumi Features"]
-        languages: []
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Pulumi Features"]
+    languages: []
 
 # The right hand side form section.
 form:

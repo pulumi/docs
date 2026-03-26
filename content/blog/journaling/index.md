@@ -16,6 +16,7 @@ tags:
     - journaling
     - performance
     - data-integrity
+    - features
 
 social:
     twitter: |
