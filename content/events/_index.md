@@ -1,11 +1,25 @@
 ---
-title: Events
+title: Pulumi Events & Workshops
 meta_desc: |
-    Resources about modern cloud native topics to connect, collaborate, and learn new techniques and best practices.
+    Join Pulumi events and workshops to connect with cloud engineers, learn infrastructure as code best practices, and see live demos of Pulumi's platform.
+
+hero:
+  title: Events & Workshops
+  description: |
+    Connect with the Pulumi community through live workshops, technical demos, and on-demand recordings.
+
+footer_cta:
+  title: The infrastructure-as-code platform for any cloud.
+  cta_primary_text: Try Pulumi for free
+  cta_primary_link: /signup/
+  cta_secondary_text: Contact sales
+  cta_secondary_link: /contact/
+  anchor: get-started
 
 aliases:
   - /webinar
   - /webinars
+  - /resources
 
   # stale events urls redirect to the list to prevent 404s
   - /events/advanced-infrastructure-as-code-2020-04-08
@@ -188,9 +202,11 @@ aliases:
   - /events/workshop-redmond-2020-03-12
 
 sections:
-    - label: Upcoming events
+    - label: All events
+      anchor: all
+    - label: Upcoming
       anchor: upcoming
-    - label: On-demand recordings
+    - label: On-demand
       anchor: on-demand
 
 outputs: ["html", "rss"]

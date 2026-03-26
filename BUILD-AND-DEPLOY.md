@@ -1575,6 +1575,23 @@ Delivery: CloudWatch Logs infrastructure v2
 
 **Geo Restrictions:** None
 
+#### WAF WebACL
+
+**Purpose:** Rate limiting to protect CloudFront from bot/scraper abuse
+
+**Toggle:** `enableWaf` stack config (boolean, default `false`)
+
+**Rate limit:** `wafRateLimit` stack config (integer, default `500`). Maximum requests per 5-minute window per IP before WAF blocks the IP. Must be at least 100 (AWS minimum).
+
+**Region:** us-east-1 (required for CloudFront-scoped WebACLs)
+
+**CloudWatch metrics:**
+
+- `cdn-waf` - overall WebACL metrics
+- `cdn-waf-rate-limit` - rate-based rule metrics
+
+**Stack export:** `wafWebAclArn` - ARN of the WAF WebACL (undefined when WAF is disabled)
+
 #### Lambda@Edge Functions
 
 **1. Edge Redirects**
@@ -2019,6 +2036,8 @@ config:
   www.pulumi.com:guidesStack: pulumi/guides/production
   www.pulumi.com:answersStack: pulumi/answers/production
   www.pulumi.com:cdnLogDeliverySourceName: CreatedByCloudFront-E3PRSXO1BZJEEY
+  www.pulumi.com:enableWaf: "true"
+  www.pulumi.com:wafRateLimit: "500"
   www.pulumi.com:enableDataWarehouseAccess: "true"
   www.pulumi.com:certificateArn: arn:aws:acm:us-east-1:388588623842:certificate/...
 ```
@@ -3020,7 +3039,7 @@ Lambda@Edge failures are often caused by bundling problems that aren't caught un
 
 **Deployment Risks:**
 
-- **High risk** (affects all users immediately): Lambda@Edge, CloudFront, DNS changes
+- **High risk** (affects all users immediately): Lambda@Edge, CloudFront, WAF, DNS changes
 - **Medium risk** (affects next deployment): Build system, dependency updates
 - **Low risk** (limited scope): Documentation, scripts
 
@@ -3935,6 +3954,7 @@ Complete reference of all build and deployment scripts.
 | **S3 Logs Bucket** | `{domain}-website-logs` | `www-prod.pulumi.com-website-logs` |
 | **CloudFront Distribution** | Manual (persistent) | `E3PRSXO1BZJEEY` |
 | **Lambda@Edge Function** | `edge-{purpose}` | `edge-redirects` |
+| **WAF WebACL** | `cdn-waf` | `cdn-waf` |
 | **IAM Role** | `ContinuousDelivery` | `ContinuousDelivery` |
 | **Pulumi Stack** | `www-{environment}` | `www-production` |
 

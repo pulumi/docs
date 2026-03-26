@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,57 +27,52 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: from-infrastructure-engineering-to-platform-engineering
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: From Infrastructure Engineering to Platform Engineering
+event_type: event # workshop | event
 
-    event_type: event # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/ek22Sm3CAlM?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/ek22Sm3CAlM?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-05-05T08:59:00-00:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-05-05T08:59:00-00:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Platform Engineering is transforming how teams build and manage infrastructure at scale. In this panel, leaders from Clear, Modivcare, and Sokkel share how they evolved from traditional infrastructure practices to modern [internal developer platforms (IDPs)](/product/internal-developer-platforms/)—with real-world lessons on scaling self-service, improving developer experience, and maintaining governance.
 
-    # Description of the webinar.
-    description: |
-        Platform Engineering is transforming how teams build and manage infrastructure at scale. In this panel, leaders from Clear, Modivcare, and Sokkel share how they evolved from traditional infrastructure practices to modern [internal developer platforms (IDPs)](/product/internal-developer-platforms/)—with real-world lessons on scaling self-service, improving developer experience, and maintaining governance.
-    
-    learn:
-        - How organizations move from DevOps tooling to full platform teams
-        - The role of Infrastructure as Code (IaC) and Pulumi in platform maturity
-        - Strategies for enabling self-service and golden paths for developers
-        - Real examples of managing compliance, scalability, and platform adoption
-        - How AI, policy as code, and developer portals fit into modern platforms
-        - What roles and structures make a platform team successful
+learn:
+    - How organizations move from DevOps tooling to full platform teams
+    - The role of Infrastructure as Code (IaC) and Pulumi in platform maturity
+    - Strategies for enabling self-service and golden paths for developers
+    - Real examples of managing compliance, scalability, and platform adoption
+    - How AI, policy as code, and developer portals fit into modern platforms
+    - What roles and structures make a platform team successful
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Principal Customer Success Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Zachary Cook
-          role: Sr. Manager DevOps, Modivcare
-          photo: /images/people/zachary-cook.jpg
-        - name: James Forcier
-          role: Staff Software Engineer, CLEAR
-          photo: /images/people/james-forcier.jpg
-        - name: Simen A. W. Olsen
-          role: CEO, Sokkel
-          photo: /images/team/simen-a-w-olsen.jpg
+# The webinar presenters
+presenters:
+    - name: Josh Kodroff
+      role: Principal Customer Success Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Zachary Cook
+      role: Sr. Manager DevOps, Modivcare
+      photo: /images/people/zachary-cook.jpg
+    - name: James Forcier
+      role: Staff Software Engineer, CLEAR
+      photo: /images/people/james-forcier.jpg
+    - name: Simen A. W. Olsen
+      role: CEO, Sokkel
+      photo: /images/team/simen-a-w-olsen.jpg
 
-    # case-sensitive
-    tags:
-        level: # Beginner, Intermediate, Advanced
-        topics: ["DevOps", "Security", "Platform Engineering", "Automation"]
-        languages: []
+# case-sensitive
+tags:
+    level: # Beginner, Intermediate, Advanced
+    topics: ["DevOps", "Security", "Platform Engineering", "Automation"]
+    languages: []
 
 # The right hand side form section.
 form:

@@ -14,7 +14,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -27,48 +26,43 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: serverless-apps-with-google-cloud-run-and-pulumi
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Serverless Apps with Google Cloud Run and Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/ozR86AApTyE?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/ozR86AApTyE?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-11-30T09:00:00.000-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-11-30T09:00:00.000-08:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    Developers who need to deploy their applications often find it tough to ship quickly with many options available for running containerized apps. Cloud Run helps abstract away the complexities of container services and orchestration so you can package and deploy apps while making it easy to scale to meet customer demand.
 
-    # Description of the webinar.
-    description: |
-        Developers who need to deploy their applications often find it tough to ship quickly with many options available for running containerized apps. Cloud Run helps abstract away the complexities of container services and orchestration so you can package and deploy apps while making it easy to scale to meet customer demand.
+learn:
+    - How to package your app as a Docker container
+    - Defining resources in Google Cloud using Python with Pulumi
+    - Running and scaling your application on Cloud Run
 
-    learn:
-        - How to package your app as a Docker container
-        - Defining resources in Google Cloud using Python with Pulumi
-        - Running and scaling your application on Cloud Run
+# The webinar presenters
+presenters:
+    - name: Monica Rodriguez
+      role: Sr Product Manager, Pulumi
+      photo: /images/team/monica-rodriguez.jpg
+    - name: Jason Smith
+      role: Sr Cloud Customer Engineer, Google
 
-    # The webinar presenters
-    presenters:
-        - name: Monica Rodriguez
-          role: Sr Product Manager, Pulumi
-          photo: /images/team/monica-rodriguez.jpg
-        - name: Jason Smith
-          role: Sr Cloud Customer Engineer, Google
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Docker"]
-        languages: ["Python"]
-        clouds: ["Google Cloud"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Docker"]
+    languages: ["Python"]
+    clouds: ["Google Cloud"]
 
 # The right hand side form section.
 form:

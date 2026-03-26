@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -29,37 +28,32 @@ block_external_search_index: true
 # webinar, use the external URL as the value here.
 url_slug: /pulumi-up
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: PulumiUP 2025 - Europe & Americas Edition
+event_type: event # workshop | event
 
-    event_type: event # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-05-06T14:00:00+00:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-05-06T14:00:00+00:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description:
 
-    # Description of the webinar.
-    description:
+# The webinar presenters
+presenters:
 
-    # The webinar presenters
-    presenters:
-
-    # case-sensitive
-    tags:
-        level: # Beginner, Intermediate, Advanced
-        topics: ["DevOps", "Platform Engineering", "DevSecOps", "Automation"]
-        languages: []
-        clouds: ["AWS", "Azure"]
+# case-sensitive
+tags:
+    level: # Beginner, Intermediate, Advanced
+    topics: ["DevOps", "Platform Engineering", "DevSecOps", "Automation"]
+    languages: []
+    clouds: ["AWS", "Azure"]
 
 # The right hand side form section.
 form:
@@ -67,11 +61,4 @@ form:
     hubspot_form_id:
     salesforce_campaign_id:
 
-event_data:
-  name: PulumiUP 2025 - Europe & Americas Edition
-  start_date: 2025-05-06T14:00:00+00:00
-  end_date: 2025-05-06T15:30:00+00:00
-  url: "https://www.pulumi.com/pulumi-up/"
-  description: |
-    Join our flagship virtual event to explore enterprise platform engineering stories, demos, and expert insights on automating infrastructure with Pulumi.
 ---

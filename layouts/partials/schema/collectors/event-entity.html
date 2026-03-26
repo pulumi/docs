@@ -4,28 +4,28 @@
 {{ $schema := dict
   "@type" "Event"
   "@id" "#main-content"
-  "name" (or .Params.main.title .Title)
+  "name" (or .Params.title .Title)
   "url" .Permalink
   "inLanguage" "en-US"
 }}
 
 {{/* Add description */}}
-{{ with (or .Params.main.description .Params.meta_desc .Summary) }}
+{{ with (or .Params.description .Params.meta_desc .Summary) }}
   {{ $schema = merge $schema (dict "description" .) }}
 {{ end }}
 
 {{/* Add event dates if available */}}
-{{ with .Params.main.sortable_date }}
+{{ with .Params.sortable_date }}
   {{ $schema = merge $schema (dict "startDate" .) }}
 {{ end }}
 
 {{/* Add duration if available */}}
-{{ with .Params.main.duration }}
+{{ with .Params.duration }}
   {{ $schema = merge $schema (dict "duration" .) }}
 {{ end }}
 
 {{/* Add location */}}
-{{ $location := .Params.main.location }}
+{{ $location := .Params.location }}
 {{ if $location }}
   {{ if eq $location "virtual" }}
     {{/* Virtual event */}}
@@ -77,7 +77,7 @@
 {{ end }}
 
 {{/* Add presenter/performer if available */}}
-{{ with .Params.main.presenters }}
+{{ with .Params.presenters }}
   {{ $performers := slice }}
   {{ range . }}
     {{ $presenter := . }}
