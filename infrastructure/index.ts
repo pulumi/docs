@@ -5,6 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
+import { getMarkdownNegotiationFunctionAssociation } from "./cloudfrontFunctions";
 
 const stackConfig = new pulumi.Config();
 
@@ -500,6 +501,19 @@ const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable
     },
 });
 
+// Docs pages add Vary: Accept so downstream caches (browsers, proxies) know the
+// response may differ based on the Accept header (HTML vs markdown).
+const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs-response-headers', {
+    securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [{
+            header: "Vary",
+            value: "Accept",
+            override: false,
+        }],
+    },
+});
+
 const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
     compress: true,
@@ -670,6 +684,15 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...registryBehaviors,
         ...guidesBehaviors,
         ...answersBehaviors,
+
+        // Docs pages support Accept: text/markdown content negotiation.
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/docs/*",
+            functionAssociations: [getMarkdownNegotiationFunctionAssociation()],
+            responseHeadersPolicyId: DocsResponseHeadersPolicy.id,
+        },
+
         {
             ...baseCacheBehavior,
             targetOriginId: uploadsBucket.arn,
