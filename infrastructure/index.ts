@@ -469,6 +469,7 @@ const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
 });
 
 const fiveMinutes = 60 * 5;
+const tenMinutes = fiveMinutes * 2;
 const thirtyMinutes = fiveMinutes * 6;
 const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
@@ -526,11 +527,6 @@ const baseSecurityHeadersConfig = {
     }
 };
 
-// Most of the site
-const SecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('security-headers', {
-    securityHeadersConfig: baseSecurityHeadersConfig,
-});
-
 // Copilot lives in an iframe
 const CopilotSecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('copilot-security-headers', {
     securityHeadersConfig: {
@@ -552,6 +548,28 @@ const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-log
         items: [{
             header: "Cache-Control",
             value: "public, max-age=1800",
+            override: true,
+        }],
+    },
+});
+
+const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cache-headers', {
+    securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [{
+            header: "Cache-Control",
+            value: "max-age=60, stale-while-revalidate=300",
+            override: true,
+        }],
+    },
+});
+
+const OneHourCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('one-hour-cache-headers', {
+    securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [{
+            header: "Cache-Control",
+            value: "public, max-age=3600",
             override: true,
         }],
     },
@@ -586,10 +604,10 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
     },
 
     minTtl: 0,
-    defaultTtl: thirtyMinutes,
-    maxTtl: thirtyMinutes,
+    defaultTtl: tenMinutes,
+    maxTtl: tenMinutes,
     lambdaFunctionAssociations: config.doEdgeRedirects ? [getEdgeRedirectAssociation()] : [],
-    responseHeadersPolicyId: SecurityHeadersPolicy.id,
+    responseHeadersPolicyId: DefaultCachePolicy.id,
 };
 
 const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
@@ -754,8 +772,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ...baseCacheBehavior,
             targetOriginId: originBucket.arn,
             pathPattern: "/*/rss.xml",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
+            defaultTtl: tenMinutes,
+            maxTtl: tenMinutes,
             forwardedValues: {
                 cookies: {
                     forward: "none",
@@ -785,6 +803,13 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/css/homepage.*.css",
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/css/marketing-homepage.*.css",
             defaultTtl: oneYear,
             maxTtl: oneYear,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
@@ -829,6 +854,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: "/logos/*",
             defaultTtl: oneHour,
             maxTtl: oneHour,
+            responseHeadersPolicyId: OneHourCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
