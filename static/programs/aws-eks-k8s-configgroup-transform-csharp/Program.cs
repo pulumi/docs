@@ -1,10 +1,8 @@
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using K8s = Pulumi.Kubernetes;
-using K8sYaml = Pulumi.Kubernetes.Yaml.V2;
-using Newtonsoft.Json;
 using Pulumi;
 using Pulumi.Eks;
+using Newtonsoft.Json;
+using K8s = Pulumi.Kubernetes;
+using K8sYaml = Pulumi.Kubernetes.Yaml.V2;
 
 return await Deployment.RunAsync(() =>
 {
@@ -17,8 +15,6 @@ return await Deployment.RunAsync(() =>
         KubeConfig = cluster.Kubeconfig.Apply(JsonConvert.SerializeObject),
     });
 
-    var namespaceName = "guestbook";
-
     var guestbook = new K8sYaml.ConfigGroup("guestbook", new()
     {
         Files = new[] { "yaml/*.yaml" },
@@ -29,25 +25,16 @@ return await Deployment.RunAsync(() =>
         {
             (args) =>
             {
-                var props = args.Args as ImmutableDictionary<string, object>
-                    ?? ImmutableDictionary<string, object>.Empty;
                 // Make every service private to the cluster.
                 if (args.Resource.GetResourceType() == "kubernetes:core/v1:Service")
                 {
-                    var spec = props.GetValueOrDefault("spec")
-                        as ImmutableDictionary<string, object>
-                        ?? ImmutableDictionary<string, object>.Empty;
-                    if (spec.TryGetValue("type", out var t) && (string)t == "LoadBalancer")
+                    dynamic dynArgs = args.Args;
+                    dynArgs.Spec = new K8s.Types.Inputs.Core.V1.ServiceSpecArgs
                     {
-                        props = props.SetItem("spec", spec.SetItem("type", "ClusterIP"));
-                    }
+                        Type = "ClusterIP",
+                    };
                 }
-                // Put every resource in the created namespace.
-                var meta = props.GetValueOrDefault("metadata")
-                    as ImmutableDictionary<string, object>
-                    ?? ImmutableDictionary<string, object>.Empty;
-                props = props.SetItem("metadata", meta.SetItem("namespace", namespaceName));
-                return new ResourceTransformationResult(props, args.Options);
+                return new ResourceTransformationResult(args.Args, args.Options);
             },
         },
     });

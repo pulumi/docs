@@ -34,15 +34,17 @@ func main() {
 				props := args.Props
 				// Make every service private to the cluster.
 				if args.Type == "kubernetes:core/v1:Service" {
-					if spec, ok := props["spec"].(map[string]interface{}); ok {
-						if t, ok := spec["type"].(string); ok && t == "LoadBalancer" {
-							spec["type"] = "ClusterIP"
+					if spec, ok := props["spec"].(pulumi.Map); ok {
+						if t, ok := spec["type"].(pulumi.String); ok && string(t) == "LoadBalancer" {
+							spec["type"] = pulumi.String("ClusterIP")
 						}
 					}
 				}
 				// Put every resource in the created namespace.
-				if meta, ok := props["metadata"].(map[string]interface{}); ok {
-					meta["namespace"] = namespaceName
+				if meta, ok := props["metadata"].(pulumi.Map); ok {
+					meta["namespace"] = pulumi.String(namespaceName)
+				} else {
+					props["metadata"] = pulumi.Map{"namespace": pulumi.String(namespaceName)}
 				}
 				return &pulumi.ResourceTransformResult{
 					Props: props,
