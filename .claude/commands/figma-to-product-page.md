@@ -79,6 +79,8 @@ The orchestrator partial is `layouts/partials/product-page-content.html`. It loo
 
 Rewrite the target markdown file's frontmatter to use `layout: product-page` and add a `sections:` array where each item has a `type:` field plus the fields required by that partial.
 
+> **Required:** The frontmatter must include `type: page` or Hugo will not render the page with the product-page layout. Always include it alongside `layout: product-page`.
+
 The `sections:` array controls render order — items appear on the page in the order they are listed.
 
 Follow the structure in `infrastructure-as-code.md` exactly — the `sections:` array, YAML indentation (2 spaces per level, section items indented 2 from `sections:`), and field names must match what the partials expect.

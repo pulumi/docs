@@ -47,7 +47,7 @@
         {{ end }}
 
         {{ if or $ctaPrimaryText $ctaText }}
-        <div class="flex flex-col sm:flex-row gap-4">
+        <div class="flex flex-col md:flex-row gap-4 mt-auto flex-wrap">
             {{ if $ctaPrimaryText }}
             <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant text-center" data-role="cta-get-started">
                 <span class="whitespace-nowrap">{{ $ctaPrimaryText }}</span>

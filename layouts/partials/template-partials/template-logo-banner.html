@@ -6,13 +6,15 @@
       Example: [{"src": "/logos/customers/company.svg", "alt": "Company Name"}]
     - text: Optional text to display above logos
     - anchor: Optional anchor for section id
+    - bordered: Optional boolean; when true, renders each logo in a square bordered tile
 */}}
 
 {{ $logos := .logos }}
 {{ $text := .text }}
 {{ $anchor := .anchor }}
+{{ $bordered := .bordered }}
 
-<section class="template-logo-banner"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+<section class="template-logo-banner{{ if $bordered }} template-logo-banner--bordered{{ end }}"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
         {{ if $text }}
         <div class="text-center mb-8">
             <p class="logo-banner-text">{{ $text }}</p>

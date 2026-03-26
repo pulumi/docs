@@ -10,8 +10,9 @@ Parameters:
 - description: Body paragraph (supports markdown)
 - cta_text: Optional CTA link text
 - cta_link: Optional CTA link URL
-- image: Image path (right column)
+- image: Image path (right column by default, left column when flip is true)
 - image_alt: Alt text for image
+- flip: Optional boolean. When true, image appears on the left and text on the right.
 - cards: Optional array of mini feature cards rendered below the two-column section.
     Each item: { icon: "fa-code", title: "Title", description: "..." }
 - anchor: Optional anchor for section id
@@ -24,12 +25,13 @@ Parameters:
 {{ $ctaLink := .cta_link }}
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default "" }}
+{{ $flip := .flip | default false }}
 {{ $cards := .cards }}
 {{ $anchor := .anchor }}
 
 <section class="template-section-header-with-image" {{ if $anchor }} id="{{ $anchor }}" {{ end }}>
-    <div class="section-header-split-inner flex flex-col xl:flex-row items-start">
-        <div class="section-header-split-content xl:min-w-0">
+    <div class="section-header-split-inner flex flex-col {{ if $flip }}xl:flex-row-reverse{{ else }}xl:flex-row{{ end }} items-start gap-16">
+        <div class="section-header-split-content">
             {{ if $tagLine }}
             <p class="section-header-split-tag mb-3">{{ $tagLine }}</p>
             {{ end }}
@@ -49,7 +51,7 @@ Parameters:
             {{ end }}
         </div>
         {{ if $image }}
-        <div class="section-header-split-image w-full flex justify-center xl:justify-end">
+        <div class="section-header-split-image flex justify-center xl:justify-end">
             <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full max-w-full rounded-lg">
         </div>
         {{ end }}
