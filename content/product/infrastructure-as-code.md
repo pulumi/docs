@@ -1,7 +1,7 @@
 ---
 title: "Infrastructure as code in Any Language – Pulumi IaC"
 meta_desc: Write infrastructure code using TypeScript, Python, Go, .NET, Java, or YAML. Deploy to any cloud with built-in previews and testing.
-meta_image: /images/product/iac/iac-meta.png
+meta_image: /images/product/infrastructure-as-code/iac-meta.png
 type: page
 layout: product-page
 aliases:
@@ -14,7 +14,7 @@ sections:
     title_secondary: in any language.
     description: |
       Use the programming languages you already know to build infrastructure on AWS, Azure, Google Cloud, Kubernetes, and hundreds more providers.
-    image: /images/product/iac/matrix-cards.svg
+    image: /images/product/infrastructure-as-code/matrix-cards.svg
     image_alt: Pulumi infrastructure as code in any language
     image_max_width: 1200px
     image_min_width: 1024px
@@ -46,7 +46,7 @@ sections:
     title_line_2: Pulumi Cloud built-in.
     description: |
       Get started with Pulumi Cloud for free, state management and secrets included. Our [open source engine](https://github.com/pulumi/pulumi) powers everything underneath. Scale to enterprise features when you need them, or self-host if required.
-    image: /images/product/iac/pulumi-concentric-circles.svg
+    image: /images/product/infrastructure-as-code/pulumi-concentric-circles.svg
     image_alt: Open source core and Pulumi Cloud
     image_above: true
     anchor: open-source
@@ -79,22 +79,22 @@ sections:
     cta_link: /docs/iac/concepts/components
     code_images:
       - language: typescript
-        image: /images/product/iac/typescript.svg
+        image: /images/product/infrastructure-as-code/typescript.svg
         alt: Pulumi code example in TypeScript
       - language: python
-        image: /images/product/iac/python.svg
+        image: /images/product/infrastructure-as-code/python.svg
         alt: Pulumi code example in Python
       - language: go
-        image: /images/product/iac/go.svg
+        image: /images/product/infrastructure-as-code/go.svg
         alt: Pulumi code example in Go
       - language: csharp
-        image: /images/product/iac/csharp.svg
+        image: /images/product/infrastructure-as-code/csharp.svg
         alt: Pulumi code example in C#
       - language: java
-        image: /images/product/iac/java.svg
+        image: /images/product/infrastructure-as-code/java.svg
         alt: Pulumi code example in Java
       - language: yaml
-        image: /images/product/iac/yaml.svg
+        image: /images/product/infrastructure-as-code/yaml.svg
         alt: Pulumi code example in YAML
     anchor: packages
 
@@ -122,7 +122,7 @@ sections:
     title_line_2: like software
     description: |
       Infrastructure as code means infrastructure in Git. Review changes in pull requests. Run tests in CI. Ship through GitHub Actions, GitLab, Jenkins, or any CI/CD system.
-    image: /images/product/iac/iac-logos.svg
+    image: /images/product/infrastructure-as-code/iac-logos.svg
     image_alt: GitOps and CI/CD tools
     anchor: gitops
 
@@ -148,7 +148,7 @@ sections:
     title: Scale confidently with Pulumi Cloud
     description: |
       Encrypted state storage, secrets management, and collaboration built in. When you scale, enterprise features like RBAC, policy enforcement, and SSO are ready. All powered by our open source engine.
-    image: /images/product/iac/iac-stack-example.svg
+    image: /images/product/infrastructure-as-code/iac-stack-example.svg
     image_alt: Pulumi Cloud dashboard
     image_visible_from: md
     anchor: scale

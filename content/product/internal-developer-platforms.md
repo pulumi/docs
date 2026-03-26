@@ -4,7 +4,7 @@ type: page
 layout: product-page
 
 meta_desc: Build your internal developer platform with Pulumi. Enable self-service infrastructure with enterprise governance.
-meta_image: /images/product/idp-meta.png
+meta_image: /images/product/internal-developer-platforms/idp-meta.png
 
 aliases:
   - /solutions/platforms/
@@ -21,7 +21,7 @@ sections:
     cta_primary_link: https://app.pulumi.com/
     cta_secondary_text: Contact Us
     cta_secondary_link: /contact/
-    image: /images/product/idp/idp-hero-image.svg
+    image: /images/product/internal-developer-platforms/idp-hero-image.svg
     image_alt: Pulumi internal developer platform services dashboard
     anchor: hero
 
@@ -49,7 +49,7 @@ sections:
   - type: video_embed
     youtube_id: 3gZmKaAeppc
     title: Pulumi IDP in 3 minutes
-    poster_image: /images/product/idp/idp-poster.png
+    poster_image: /images/product/internal-developer-platforms/idp-poster.png
     poster_alt: Pulumi IDP in 3 minutes – watch the demo
     anchor: demo
 
@@ -64,7 +64,7 @@ sections:
       - **Templates**: Scaffold entire projects with one command. Applications, microservices, clusters – all standardized.
 
       - **Policies**: Enforce security and compliance automatically. Block non-compliant infrastructure before it ships.
-    image: /images/product/idp/idp-golden-paths.svg
+    image: /images/product/internal-developer-platforms/idp-golden-paths.svg
     image_alt: Golden paths with reusable components and templates
     anchor: golden-paths
 
@@ -82,7 +82,7 @@ sections:
       - **No-Code**: Deploy through Pulumi's project wizard or integrate with Backstage. Click to provision.
 
       - **REST API**: Programmatic access for custom tools and workflows. Build your own interfaces.
-    image: /images/product/idp/idp-self-service.svg
+    image: /images/product/internal-developer-platforms/idp-self-service.svg
     image_alt: Self-service infrastructure with multiple interfaces
     anchor: self-service
 
@@ -99,7 +99,7 @@ sections:
       - **Dependency Management**: Track component usage across teams. Safely deprecate old versions.
 
       - **Enterprise RBAC**: Fine-grained permissions, SAML/SSO, audit logs. Control who can change what.
-    image: /images/product/idp/idp-day2.svg
+    image: /images/product/internal-developer-platforms/idp-day2.svg
     image_alt: Day 2 operations with drift detection and dependency management
     anchor: day2
 

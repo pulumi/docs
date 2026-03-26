@@ -1,7 +1,7 @@
 ---
 title: "Centralized Configuration & Secrets Management – Pulumi ESC"
 meta_desc: Centralize secrets and configurations with Pulumi ESC. Connect any vault, eliminate secrets sprawl, secure every environment.
-meta_image: "/images/product/esc-octopus-diagram.png"
+meta_image: /images/product/secrets-management/esc-meta.png
 type: page
 layout: product-page
 aliases:
@@ -19,7 +19,7 @@ sections:
     cta_primary_link: https://app.pulumi.com/signup
     cta_secondary_text: Contact Us
     cta_secondary_link: /contact/
-    image: /images/product/esc/esc-hero-image.png
+    image: /images/product/secrets-management/esc-hero-image.png
     image_alt: Pulumi ESC secrets management — connect any secrets store
     anchor: hero
 
@@ -47,7 +47,7 @@ sections:
   - type: video_embed
     youtube_id: JY3Cm1UUIYE
     title: Pulumi ESC overview
-    poster_image: /images/product/esc/esc-poster.png
+    poster_image: /images/product/secrets-management/esc-poster.png
     poster_alt: Pulumi ESC overview — Watch Now
     anchor: esc-overview
 
@@ -65,7 +65,7 @@ sections:
     title: Centrally manage every environment
     description: |
       Manage secrets across every environment and service from a single control plane
-    image: /images/product/esc/esc-screenshot-code.png
+    image: /images/product/secrets-management/esc-screenshot-code.png
     image_alt: Pulumi ESC environment management and code
     anchor: environments
 
