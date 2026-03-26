@@ -24,7 +24,7 @@ sections:
     cta_primary_link: https://app.pulumi.com/signup
     cta_secondary_text: Contact Us
     cta_secondary_link: /contact/
-    image: /images/product/neo/neo-diagram.png
+    image: /images/product/neo/neo-hero.svg
     image_alt: Neo AI infrastructure agent diagram showing Kubernetes cluster upgrade automation
     image_max_width: 1076px
     anchor: hero

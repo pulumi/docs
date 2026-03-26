@@ -19,7 +19,7 @@ sections:
     cta_primary_link: https://app.pulumi.com/signup
     cta_secondary_text: Contact Us
     cta_secondary_link: /contact/
-    image: /images/product/secrets-management/esc-hero-image.png
+    image: /images/product/secrets-management/esc-hero.svg
     image_alt: Pulumi ESC secrets management — connect any secrets store
     anchor: hero
 

@@ -21,7 +21,7 @@ sections:
     cta_primary_link: https://app.pulumi.com/signup
     cta_secondary_text: Contact Us
     cta_secondary_link: /contact/
-    image: /images/product/insights-governance/ig-hero.png
+    image: /images/product/insights-governance/ig-hero.svg
     image_alt: Pulumi Insights & Governance dashboard showing cloud resource compliance
     anchor: hero
 
