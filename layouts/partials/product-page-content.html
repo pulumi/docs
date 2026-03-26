@@ -67,6 +67,30 @@
 {{ partial "template-partials/template-three-column.html" . }}
 {{ end }}
 
+{{ with .Params.neo_section }}
+{{ partial "template-partials/template-section-header-with-image.html" . }}
+{{ end }}
+
+{{ with .Params.secrets_section }}
+{{ partial "template-partials/template-section-header.html" . }}
+{{ end }}
+
+{{ with .Params.insights_section }}
+{{ partial "template-partials/template-section-header-with-image.html" . }}
+{{ end }}
+
+{{ with .Params.idp_section }}
+{{ partial "template-partials/template-section-header.html" . }}
+{{ end }}
+
+{{ with .Params.three_column_idp }}
+{{ partial "template-partials/template-three-column.html" . }}
+{{ end }}
+
+{{ with .Params.split_cta }}
+{{ partial "template-partials/template-two-column.html" (dict "columns" .columns "anchor" .anchor "highlight_first_card" true) }}
+{{ end }}
+
 {{ with .Params.two_column }}
 {{ partial "template-partials/template-two-column.html" (dict "columns" . "anchor" $.Params.two_column_anchor) }}
 {{ end }}
