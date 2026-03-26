@@ -32,7 +32,9 @@ To set up the GitLab integration, you must be an org admin in Pulumi Cloud and h
 1. Select **Add account** and choose **GitLab**, then follow the prompts to authorize with GitLab.
 1. Select the GitLab group you want to integrate with and configure your [integration settings](#integration-settings).
 
-Pulumi automatically registers a group-level webhook on your GitLab group that listens for push and merge request events. The webhook points to `https://api.pulumi.com/workflow/gitlab` with SSL verification enabled. No manual webhook or pipeline configuration is required.
+If your GitLab plan supports Group Access Tokens (Premium or Ultimate), Pulumi automatically registers a group-level webhook on your GitLab group. No manual webhook or pipeline configuration is required.
+
+If you are on the Free plan (using User OAuth Token auth), you must [configure the webhook manually](#manual-webhook-setup).
 
 ### Authentication methods
 
@@ -85,7 +87,7 @@ You can use path filters to limit deployments to commits that change files match
 
 ### Review stacks
 
-[Review stacks](/docs/deployments/deployments/review-stacks/) are ephemeral cloud environments created automatically every time a merge request is opened, powered by Pulumi Deployments. Open a merge request, and Pulumi Deployments stands up a stack with your changes and posts an merge request comment with the outputs. Merge or close the merge request, and Pulumi Deployments destroys the stack and frees the associated resources.
+[Review stacks](/docs/deployments/deployments/review-stacks/) are ephemeral cloud environments created automatically every time a merge request is opened, powered by Pulumi Deployments. Open a merge request, and Pulumi Deployments stands up a stack with your changes and posts a merge request comment with the outputs. Merge or close the merge request, and Pulumi Deployments destroys the stack and frees the associated resources.
 
 Review stacks follow the naming convention `pr-{group}-{project}-{mr-iid}` (for example, group `acme/infra` with MR #42 produces stack `pr-acme-infra-42`). Configuration is copied from the template stack via `pulumi config cp`, and stacks are automatically deleted after the destroy completes.
 
@@ -124,6 +126,25 @@ Use GitLab CI's built-in OIDC tokens to authenticate with Pulumi Cloud without s
 ## Template sources
 
 Use GitLab repositories as template sources for [Pulumi IDP](/docs/idp/concepts/organization-templates/). Your teams can reference GitLab-hosted Pulumi templates when creating new projects through the developer portal. For details on registering template repositories, see [New project wizard](#new-project-wizard).
+
+## Manual webhook setup
+
+{{% notes type="warning" %}}
+This section is only required for GitLab Free plan users. If you are on a Premium or Ultimate plan, Pulumi configures webhooks automatically during [installation](#installation-and-configuration).
+{{% /notes %}}
+
+To receive merge request previews and deployment triggers on the Free plan, you must manually configure a webhook on your GitLab group or project.
+
+1. [Create a Pulumi access token](/docs/administration/access-identity/access-tokens/) for the account you want merge request comments posted as.
+1. In GitLab, navigate to your group or project's **Settings** > **Webhooks**.
+1. Fill out the form:
+    - **URL**: `https://api.pulumi.com/workflow/gitlab`
+    - **Secret Token**: The Pulumi access token you created above
+    - Under **Trigger**, check only **Push events** and **Merge request events**
+1. Ensure **SSL verification** is enabled.
+1. Select **Add webhook**.
+
+You can configure the webhook at the group level (applies to all projects in the group) or at the project level.
 
 ## Troubleshooting
 
