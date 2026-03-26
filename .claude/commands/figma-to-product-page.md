@@ -50,19 +50,23 @@ From the metadata, identify:
 
 Use **only** the partials in `layouts/partials/template-partials/` and the layout `layouts/page/product-page.html`.
 
-The orchestrator partial is `layouts/partials/product-page-content.html`. Add new section keys there to wire up sections. When adding a new key, add it after the existing keys to minimise diff noise.
+The orchestrator partial is `layouts/partials/product-page-content.html`. It loops through the `sections` array and resolves each partial by converting the `type` value: underscores become hyphens, then the result is used as `template-{type}.html`. **No changes to the orchestrator are needed** when adding new section types — just create the partial and use the correct `type` name.
+
+**Type naming convention:** the `type` value must equal the partial filename stem (without the `template-` prefix and `.html` suffix), with hyphens replaced by underscores.
 
 **Partial selection guide:**
 
-| Design pattern | Partial to use |
-|---|---|
-| Large hero with CTA buttons | `template-product-hero` |
-| Two-column: heading left, description + cards right | `template-product-two-column` |
-| Two-column: text left, **code/language-switcher** right | `template-section-header-with-code` |
-| Two-column: text left, **static image** right | `template-section-header-with-image` |
-| Centered section intro (optional image below) | `template-section-header` |
-| Three equal-width feature columns | `template-three-column` |
-| Two side-by-side cards | `template-two-column` |
+| Design pattern | `type:` value | Partial |
+|---|---|---|
+| Large hero with CTA buttons | `product_hero` | `template-product-hero` |
+| Two-column: heading left, description + cards right | `product_two_column` | `template-product-two-column` |
+| Two-column: text left, **code/language-switcher** right | `section_header_with_code` | `template-section-header-with-code` |
+| Two-column: text left, **static image** right | `section_header_with_image` | `template-section-header-with-image` |
+| Centered section intro (optional image below) | `section_header` | `template-section-header` |
+| Three equal-width feature columns | `three_column` | `template-three-column` |
+| Two side-by-side cards | `two_column` | `template-two-column` |
+| Customer quote | `testimonial_product` | `template-testimonial-product` |
+| Stat counters | `counter_cards` | `template-counter-cards` |
 
 **Extension rules:**
 - Extend existing partials with optional parameters rather than creating new ones.
@@ -73,9 +77,11 @@ The orchestrator partial is `layouts/partials/product-page-content.html`. Add ne
 
 ## Step 3 — Implement the frontmatter
 
-Rewrite the target markdown file's frontmatter to use `layout: product-page` and populate all section keys required by the partials chosen in Step 2.
+Rewrite the target markdown file's frontmatter to use `layout: product-page` and add a `sections:` array where each item has a `type:` field plus the fields required by that partial.
 
-Follow the structure in `infrastructure-as-code.md` exactly — YAML key names, nesting depth, and field names must match what the partials expect.
+The `sections:` array controls render order — items appear on the page in the order they are listed.
+
+Follow the structure in `infrastructure-as-code.md` exactly — the `sections:` array, YAML indentation (2 spaces per level, section items indented 2 from `sections:`), and field names must match what the partials expect.
 
 ---
 
