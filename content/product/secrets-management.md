@@ -103,7 +103,7 @@ sections:
     background: 2
     quote: |
       Pulumi ESC has been a lifesaver for us. It's nice to throw everything behind an ESC environment and eliminate one-off granting IAM permissions and other issues related to static credentials.
-    author: JK Jensen
+    author: Jk Jensen
     title: Software Engineering Team Lead
     company: Mysten Labs
     logo: /logos/tech/mysten-labs.svg

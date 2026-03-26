@@ -17,6 +17,8 @@ sections:
     title_primary: "Continuous compliance,"
     title_secondary: "by construction."
     description: See everything. Control everything. Ship with confidence.
+    cta_primary_text: Get Started
+    cta_primary_link: https://app.pulumi.com/signup
     cta_secondary_text: Contact Us
     cta_secondary_link: /contact/
     image: /images/product/insights-governance/ig-hero.png

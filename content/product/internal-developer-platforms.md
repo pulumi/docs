@@ -44,7 +44,7 @@ sections:
         title: Day 2 ready
         description: |
           Handle provisioning, updates, drift detection, and compliance from day one.
-    anchor: languages
+    anchor: overview
 
   - type: video_embed
     youtube_id: 3gZmKaAeppc
@@ -104,10 +104,11 @@ sections:
     anchor: day2
 
   - type: two_column
+    highlight_first_card: true
     columns:
       - title: Start building your platform today
         description: Build your internal developer platform with Pulumi Cloud. Start with our free tier and scale when you need enterprise features.
-        cta_primary_text: Get Started with Pulumi Insights
+        cta_primary_text: Get Started with Pulumi
         cta_primary_link: https://app.pulumi.com/
         cta_text: Book a Demo
         cta_link: /contact/?form=request-a-demo
