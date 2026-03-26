@@ -56,8 +56,8 @@ After creating an integration, you can configure merge request behavior. Toggle 
 | Setting | Default | Description |
 |---|---|---|
 | Pull request comments | Enabled | Post deployment status and resource changes as comments on GitLab merge requests |
-| Neo summaries for pull request comments | Enabled | Include AI-generated summaries of infrastructure changes in MR comments (requires [AI Agents](/docs/ai/) to be enabled for your organization) |
-| Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in MR comments |
+| Neo summaries for pull request comments | Enabled | Include AI-generated summaries of infrastructure changes in merge request comments (requires [AI Agents](/docs/ai/) to be enabled for your organization) |
+| Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in merge request comments |
 
 To delete an integration, select **Delete Integration** on the integration card. This removes the webhook from your GitLab group and disconnects all stacks using that integration.
 
@@ -85,9 +85,9 @@ You can use path filters to limit deployments to commits that change files match
 
 [Review stacks](/docs/deployments/deployments/review-stacks/) are ephemeral cloud environments created automatically every time a merge request is opened, powered by Pulumi Deployments. Open a merge request, and Pulumi Deployments stands up a stack with your changes and posts a merge request comment with the outputs. Merge or close the merge request, and Pulumi Deployments destroys the stack and frees the associated resources.
 
-Review stacks follow the naming convention `pr-{group}-{project}-{mr-iid}` (for example, group `acme/infra` with MR #42 produces stack `pr-acme-infra-42`). Configuration is copied from the template stack via `pulumi config cp`, and stacks are automatically deleted after the destroy completes.
+Review stacks follow the naming convention `pr-{group}-{project}-{mr-iid}` (for example, group `acme/infra` with merge request #42 produces stack `pr-acme-infra-42`). Configuration is copied from the template stack via `pulumi config cp`, and stacks are automatically deleted after the destroy completes.
 
-To enable review stacks, toggle **MR template** under **Stack** > **Settings** > **Deploy** on the stack you want to use as a template.
+To enable review stacks, toggle **Pull request template** under **Stack** > **Settings** > **Deploy** on the stack you want to use as a template.
 
 ### Environment variables
 
@@ -95,9 +95,9 @@ Pulumi injects the following environment variables during GitLab-triggered deplo
 
 | Variable | Set when | Value |
 |---|---|---|
-| `PULUMI_CI_BRANCH_NAME` | Push and MR events | Branch name |
-| `PULUMI_PR_NUMBER` | MR events | MR IID (number) |
-| `PULUMI_CI_PULL_REQUEST_SHA` | MR events | Full commit SHA |
+| `PULUMI_CI_BRANCH_NAME` | Push and merge request events | Branch name |
+| `PULUMI_PR_NUMBER` | Merge request events | Merge request IID (number) |
+| `PULUMI_CI_PULL_REQUEST_SHA` | Merge request events | Full commit SHA |
 
 ## New project wizard
 
@@ -107,7 +107,7 @@ The [New Project Wizard](/docs/idp/concepts/new-project-wizard/) supports GitLab
 - Select an existing GitLab repository and branch
 - Choose any deployment method: CLI, Pulumi Deployments (no-code), or Pulumi Deployments (VCS-backed)
 
-When using the VCS-backed deployment method, the wizard configures deploy-on-push, MR previews, and review stacks automatically. If a template URL contains `gitlab.com`, GitLab is auto-selected as the VCS provider.
+When using the VCS-backed deployment method, the wizard configures deploy-on-push, merge request previews, and review stacks automatically. If a template URL contains `gitlab.com`, GitLab is auto-selected as the VCS provider.
 
 Organizations can register GitLab repositories as template sources. Pulumi scans registered repositories for subdirectories containing a `Pulumi.yaml` file, and each subdirectory becomes a selectable template. Private repositories are authenticated automatically via the integration's token.
 
@@ -144,7 +144,7 @@ You can configure the webhook at the group level (applies to all projects in the
 
 ## Troubleshooting
 
-### MR comments not appearing
+### Merge request comments not appearing
 
 If comments aren't appearing on your merge requests, verify that:
 
@@ -158,7 +158,7 @@ If the integration card shows an invalid or disconnected status, [delete the int
 
 ### Deployments not triggering
 
-If deployments aren't triggering on push or MR events:
+If deployments aren't triggering on push or merge request events:
 
 1. Verify deployment settings are enabled under **Stack** > **Settings** > **Deploy**.
 1. Check that the branch matches your configured deployment branch.
