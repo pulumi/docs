@@ -9,7 +9,7 @@ hero:
   title_primary: The unified platform
   title_secondary: for infrastructure teams.
   description: |
-    Built for the AI Era of Infrastructure. Modern infrastructure demands modern tools. Pulumi unifies infrastructure as code, secrets management, policy governance, and AI automation into a single platform. Start with our Apache 2.0 open source core, scale with enterprise features when you need them.
+    Infrastructure as code with modern languages, centralized secrets and governance, and AI built for infrastructure — all in one platform. Everything teams need to move fast and scale with confidence.
   image: /images/product/overview/overview-diagram.svg
   image_alt: Pulumi platform overview diagram
   image_max_width: 800px
@@ -18,31 +18,31 @@ hero:
 product_two_column:
   heading: Open source foundation, enterprise scale
   description: |
-    Stop wrestling with DSLs.
+    Build infrastructure like you build software.
 
-    Write infrastructure in TypeScript, Python, Go, C#, Java, or YAML. Deploy to AWS, Azure, Google Cloud, Kubernetes, and thousands of providers. Our Apache 2.0 open source engine powers everything.
-  cta_text: Explore Infrastructure as Code
+    Compose your infrastructure code with the languages and tools your team already uses — TypeScript, Python, Go, C#, or Java. Our Apache 2.0-licensed engine gives you a foundation to scale from small project to large organization.
+  cta_text: Explore Pulumi IaC
   cta_link: /product/infrastructure-as-code/
   cards:
     - icon: fa-code
       title: Real programming languages
       description: |
-        Use loops, conditionals, functions, and classes. Catch errors at compile time. Reuse code across projects.
+        Use loops, conditionals, functions, and classes, catch errors at compile time, reuse code across projects, and refactor with confidence.
     - icon: fa-th-large
-      title: Thousands of providers
+      title: Hundreds of providers
       description: |
-        Full API coverage for AWS, Azure, Google Cloud, plus Cloudflare, Datadog, GitHub, and thousands more.
+        Full API coverage for all major clouds: AWS, Azure, Google Cloud, and Kubernetes — plus service providers like Cloudflare, Datadog, GitHub.
     - icon: fa-eye
       title: Test before you ship
       description: |
-        Write unit tests for infrastructure. Run integration tests against ephemeral environments. Ship with confidence.
+        Write unit tests for your infra code, integration tests for pre-prod environments, smoke tests for releases — all with industry standard tools.
   anchor: languages
 
 neo_section:
   tag_line: Infrastructure AI
-  title: "Meet Neo, your AI<br>platform engineer"
+  title: Meet Neo, your AI platform engineer
   description: |
-    The industry's first AI agent built for infrastructure. Neo automates complex tasks end-to-end, debugs deployments instantly, and generates infrastructure code — all while respecting your policies and requiring appropriate approvals.
+    The industry's first AI agent purpose-built for infrastructure. Neo handles complex tasks, debugs deployments, and generates code for new and existing cloud resources.
   cta_text: Meet Pulumi Neo
   cta_link: /product/neo/
   image: /images/product/overview/overview-neo.svg
@@ -51,23 +51,23 @@ neo_section:
     - icon: fa-cogs
       title: End-to-end automation
       description: |
-        Delegate complex tasks in plain English. Neo handles dependencies, executes changes, and maintains compliance.
+        Describe what you need in plain English. Neo breaks it into steps, makes a plan, executes the changes, and keeps everything compliant.
     - icon: fa-lightbulb
       title: Instant cloud insights
       description: |
-        Ask questions, get answers. Find cost savings, debug failures, check compliance — Neo knows your infrastructure.
+        Ask questions, get answers. Identify cost savings, failure patterns, and compliance violations with an AI agent that understands your infrastructure.
     - icon: fa-shield-alt
       title: Enterprise controls
       description: |
-        Human-in-the-loop approvals. Respects all RBAC and policies. Complete audit trail for every action.
+        Neo respects your RBAC roles and policies, and human-in-the-loop approvals keep you in control — with full audit trails from prompt to deployment.
   anchor: neo
 
 secrets_section:
-  tag_line: "Centralized secrets & configuration"
-  title: One interface for all your secrets
+  tag_line: Centralized secrets & configuration
+  title: One interface for all your secrets and config
   description: |
-    Pulumi ESC centralizes secrets from every vault and cloud provider. Connect HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, 1Password, and more. Dynamic credentials via OIDC. Works with or without Pulumi IaC.
-  cta_text: Explore Secrets Management
+    Pulumi ESC brings secrets and configuration from every major vault and cloud provider into a single interface. Use it with Pulumi IaC or on its own.
+  cta_text: Explore Pulumi ESC
   cta_link: /product/secrets-management/
   image: /images/product/overview/overview-esc.svg
   image_alt: Pulumi ESC centralizing secrets from multiple providers
@@ -75,23 +75,23 @@ secrets_section:
     - icon: fa-key
       title: Eliminate secrets sprawl
       description: |
-        Connect to any secrets store. One interface for all your secrets. No more juggling multiple vaults.
+        Fetch secret values from any supported store with a single Pulumi Cloud access token. No more juggling multiple credentials manually.
     - icon: fa-hourglass-half
       title: Dynamic credentials
       description: |
-        Generate just-in-time, short-lived credentials via OIDC. Automatically revoke when leases expire.
+        Generate short-lived credentials with OpenID Connect (OIDC). Credentials are automatically revoked when their leases expire.
     - icon: fa-globe
-      title: Works everywhere
+      title: Meets you where you are
       description: |
-        CLI, API, SDKs, Kubernetes operators. Use with any CI/CD platform, any application, any workflow.
+        Use it at the command line, in app code, or in CI/CD pipelines. Our CLI, APIs, SDKs, and Kubernetes operator ensure your config is always accessible.
   anchor: secrets
 
 insights_section:
-  tag_line: "Insights & governance"
+  tag_line: Insights & governance
   title: See everything, control everything
   description: |
-    Search across all clouds from a single pane of glass. Enforce policies automatically. Track compliance. Get AI-powered insights. Know exactly what's running where and why.
-  cta_text: "Explore Insights & Governance"
+    Search across all clouds from a single pane of glass in Pulumi Cloud. Enforce policies automatically, track compliance, and get AI-powered insights. Know exactly what's running where and why.
+  cta_text: Explore Pulumi Insights & Governance
   cta_link: /product/pulumi-insights/
   image: /images/product/overview/overview-governance.svg
   image_alt: Pulumi Insights resource search across clouds
@@ -99,23 +99,23 @@ insights_section:
     - icon: fa-server
       title: Multi-cloud visibility
       description: |
-        Search resources across AWS, Azure, and GCP with AI-powered insights. Find anything in seconds.
+        Run resource queries across AWS, Azure, and Google Cloud with AI-powered insights. Find what you're looking for in seconds.
     - icon: fa-gavel
       title: Policy as code
       description: |
-        Enforce security and compliance automatically. 150+ built-in policies or write your own.
+        Enforce security and compliance rules automatically with over 150 built-in policies — or write your own in your language of choice.
     - icon: fa-file-alt
       title: Complete audit trail
       description: |
-        Track every change, every user, every action. Export to SIEM. Compliance reports at your fingertips.
+        Track every change, every action, and every user. Export to security and event management systems (SIEMs) for compliance reports.
   anchor: insights
 
 idp_section:
   tag_line: Internal developer platform
   title: Enable self-service infrastructure at scale
   description: |
-    Give engineers self-service infrastructure through templates, components, and developer portals. Platform teams maintain control through policies and governance. Ship golden paths that engineers actually want to use.
-  cta_text: Explore Platform Engineering
+    Give your engineers the ability to provision infrastructure through templates, components, and developer portals, while platform teams maintain control through guardrails and governance.
+  cta_text: Explore Pulumi IDP
   cta_link: /product/internal-developer-platforms/
   image: /images/product/overview/overview-idp.svg
   image_alt: Internal developer platform dashboard
@@ -123,15 +123,15 @@ idp_section:
     - icon: fa-cubes
       title: Golden paths
       description: |
-        Create reusable components and templates. Platform engineers define patterns once, engineers use everywhere.
+        Platform engineers define reusable components and templates once, and every team gets proven, compliant patterns out of the box.
     - icon: fa-sliders-h
       title: Self-service options
       description: |
-        Code, low-code YAML, or no-code portals. Engineers work how they prefer with consistent governance.
+        Code, low-code YAML, or no-code portals. Engineers can work the way they prefer with consistent governance.
     - icon: fa-sitemap
-      title: Day 2 operations
+      title: Day-two operations
       description: |
-        Drift detection, dependency management, enterprise RBAC. Handle the full infrastructure lifecycle.
+        Drift detection, dependency management, and enterprise RBAC give you visibility and control across the full infrastructure lifecycle.
   anchor: idp
 
 split_cta:
@@ -144,11 +144,11 @@ split_cta:
       cta_primary_link: https://app.pulumi.com/signup
       cta_text: Book a Demo
       cta_link: /contact/?form=request-a-demo
-    - title: Migrating from Terraform?
+    - title: Migrating to Pulumi?
       description: |
-        Keep using both or migrate completely. Import existing infrastructure, convert HCL to real code, migrate state.
-      cta_primary_text: Migration Guide
+        Our tools can help you migrate your code and resource state from Terraform, AWS CloudFormation, Azure Resource Manager, and others to Pulumi. Use Neo to make the process even easier.
+      cta_primary_text: Migrate from Terraform
       cta_primary_link: /docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/
-      cta_text: Try Converters
+      cta_text: Explore Converters
       cta_link: /docs/iac/adopting-pulumi/converters/
 ---
