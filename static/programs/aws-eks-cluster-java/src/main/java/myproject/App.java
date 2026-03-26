@@ -1,3 +1,5 @@
+package myproject;
+
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;

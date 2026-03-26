@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/iam"
 	"github.com/pulumi/pulumi-eks/sdk/v4/go/eks"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -76,8 +76,8 @@ func main() {
 			MinSize:         pulumi.Int(1),
 			MaxSize:         pulumi.Int(3),
 			SpotPrice:       pulumi.String("1"),
-			Labels: map[string]string{
-				"ondemand": "true",
+			Labels: pulumi.StringMap{
+				"ondemand": pulumi.String("true"),
 			},
 			InstanceProfile: instanceProfile1,
 		})
@@ -90,8 +90,8 @@ func main() {
 			DesiredCapacity: pulumi.Int(1),
 			MinSize:         pulumi.Int(1),
 			MaxSize:         pulumi.Int(2),
-			Labels: map[string]string{
-				"preemptible": "true",
+			Labels: pulumi.StringMap{
+				"preemptible": pulumi.String("true"),
 			},
 			InstanceProfile: instanceProfile2,
 		})

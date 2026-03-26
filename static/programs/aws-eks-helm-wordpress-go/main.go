@@ -24,8 +24,8 @@ func main() {
 				Repo: pulumi.String("https://charts.bitnami.com/bitnami"),
 			},
 			Chart: pulumi.String("wordpress"),
-			Values: pulumi.AnyMap{
-				"wordpressBlogName": pulumi.Any("My Cool Kubernetes Blog!"),
+			Values: pulumi.Map{
+				"wordpressBlogName": pulumi.String("My Cool Kubernetes Blog!"),
 			},
 		}, pulumi.Provider(eksProvider))
 		if err != nil {
