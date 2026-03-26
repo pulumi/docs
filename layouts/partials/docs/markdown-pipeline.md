@@ -8,6 +8,19 @@
 {{- $content = replaceRE `</?(?:span|label|div|p|blockquote|ol|ul|li|pre|section|table|thead|tbody|tr|td|th|dl|dt|dd|details|summary)[^>]*>` "" $content -}}
 {{- $content = replaceRE `(?:<i[^>]*></i>|<input[^>]*>)` "" $content -}}
 {{- $content = replaceRE `<!--\s*markdownlint[^>]*-->` "" $content -}}
+{{- /* Phase 2b: Strip deep leading whitespace left by HTML tag removal, preserving
+       indentation inside fenced code blocks. Split on ``` boundaries: even-indexed
+       segments are prose (strip 4+ leading spaces), odd-indexed are code (keep). */ -}}
+{{- $segments := split $content "```" -}}
+{{- $cleaned := "" -}}
+{{- range $i, $seg := $segments -}}
+  {{- if eq (mod $i 2) 0 -}}
+    {{- $cleaned = printf "%s%s" $cleaned (replaceRE `(?m)^[ \t]{4,}` "" $seg) -}}
+  {{- else -}}
+    {{- $cleaned = printf "%s```%s```" $cleaned $seg -}}
+  {{- end -}}
+{{- end -}}
+{{- $content = $cleaned -}}
 {{- /* Phase 3: Normalize whitespace so inline conversions can match cleanly */ -}}
 {{- $content = replaceRE `\n{3,}` "\n\n" $content -}}
 {{- /* Phase 4: Convert inline HTML to markdown */ -}}
