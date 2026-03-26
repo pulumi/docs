@@ -37,7 +37,7 @@ export function conditionallyLoadAnalytics(
             integrations[dest.id] = allowed;
         }
 
-        if (hasConsented) {
+        if (hasConsented && !analytics.initialized) {
             analytics.addSourceMiddleware((args) => {
                 args.payload.obj.context.consent = {
                     defaultDestinationBehavior: "disable",

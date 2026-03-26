@@ -1,4 +1,4 @@
-import { ConsentManagerConfig, Destination } from "./types";
+import { ConsentManagerConfig } from "./types";
 import { categorizeDestinations } from "./categories";
 
 export function renderBanner(

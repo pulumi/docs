@@ -22,7 +22,10 @@ const EU_COUNTRY_CODES: Record<string, string> = {
 function isInEUTimezone(): boolean {
     try {
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        return !!tz && tz.indexOf("Europe") >= 0;
+        if (!tz) return false;
+        if (tz.indexOf("Europe") >= 0) return true;
+        const EU_NON_EUROPE_TIMEZONES = ["Atlantic/Canary", "Africa/Ceuta", "Atlantic/Madeira"];
+        return EU_NON_EUROPE_TIMEZONES.indexOf(tz) >= 0;
     } catch {
         return false;
     }

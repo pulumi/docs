@@ -8,9 +8,9 @@ function getTopDomain(): string {
     if (parts.length <= 1) return "";
     for (let i = parts.length - 2; i >= 0; i--) {
         const domain = "." + parts.slice(i).join(".");
-        document.cookie = `__tld__=1;domain=${domain};path=/`;
+        document.cookie = `__tld__=1;domain=${domain};path=/;SameSite=Lax;Secure`;
         if (document.cookie.indexOf("__tld__") >= 0) {
-            document.cookie = `__tld__=;domain=${domain};path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+            document.cookie = `__tld__=;domain=${domain};path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT;SameSite=Lax;Secure`;
             return domain;
         }
     }
@@ -53,5 +53,6 @@ export function savePreferences(
     if (domain) {
         cookieStr += `;domain=${domain}`;
     }
+    cookieStr += ";SameSite=Lax;Secure";
     document.cookie = cookieStr;
 }

@@ -59,18 +59,18 @@ function saveAndLoad(destinationPreferences: Record<string, boolean>) {
     savePreferences(destinationPreferences);
     clearContainer();
 
-    if (window.analytics) {
-        window.analytics.identify({
-            destinationTrackingPreferences: destinationPreferences,
-        });
-    }
-
     conditionallyLoadAnalytics(
         config.writeKey,
         destinations,
         destinationPreferences,
         isConsentRequired,
     );
+
+    if (window.analytics) {
+        window.analytics.identify({
+            destinationTrackingPreferences: destinationPreferences,
+        });
+    }
 }
 
 function openConsentManager() {
