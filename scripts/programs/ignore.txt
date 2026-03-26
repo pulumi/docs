@@ -52,6 +52,11 @@ gcp-import-service-account-typescript
 # Terraform reference projects are not Pulumi programs.
 tf-state-ref-terraform
 
+# ConfigGroup examples need yaml input files that aren't included, and have
+# API incompatibilities across multiple languages (v2 ConfigGroup).
+aws-eks-k8s-configgroup-.*
+aws-eks-k8s-configgroup-transform-.*
+
 # All JS examples were removed from static programs.
 # TODO: See if this line can be removed once the code has been merged to master
 and the tests have been run. 

@@ -37,7 +37,7 @@ public class App {
                 jsonProperty("Statement", jsonArray(jsonObject(
                     jsonProperty("Action", "sts:AssumeRole"),
                     jsonProperty("Effect", "Allow"),
-                    jsonProperty("Sid", null),
+                    jsonProperty("Sid", ""),
                     jsonProperty("Principal", jsonObject(
                         jsonProperty("Service", "ec2.amazonaws.com")
                     ))

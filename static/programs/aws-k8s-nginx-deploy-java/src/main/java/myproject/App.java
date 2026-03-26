@@ -70,8 +70,13 @@ public class App {
             .build());
 
         // Export the URL for the load balanced service.
-        ctx.export("url", myService.status()
-            .applyValue(status -> status.orElseThrow().loadBalancer().orElseThrow())
-            .applyValue(status -> status.ingress().get(0).hostname().orElseThrow()));
+        ctx.export("url", myService.status().applyValue(status -> {
+            return status
+                .flatMap(s -> s.loadBalancer())
+                .map(lb -> lb.ingress())
+                .filter(ingress -> !ingress.isEmpty())
+                .flatMap(ingress -> ingress.get(0).hostname())
+                .orElse("");
+        }));
     }
 }

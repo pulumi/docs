@@ -73,7 +73,11 @@ func main() {
 		}
 		// Export the URL for the load balanced service.
 		ctx.Export("url", myService.Status.ApplyT(func(status interface{}) (string, error) {
-			return *status.(*corev1.ServiceStatus).LoadBalancer.Ingress[0].Hostname, nil
+			s := status.(*corev1.ServiceStatus)
+			if s.LoadBalancer == nil || len(s.LoadBalancer.Ingress) == 0 || s.LoadBalancer.Ingress[0].Hostname == nil {
+				return "", nil
+			}
+			return *s.LoadBalancer.Ingress[0].Hostname, nil
 		}).(pulumi.StringOutput))
 		return nil
 	})
