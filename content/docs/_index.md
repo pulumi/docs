@@ -15,6 +15,7 @@ outputs:
 - HTML
 - markdown
 - clisitemap
+- cliconfig
 cascade:
   meta_image: /images/docs/meta-images/docs-meta.png
   outputs:
