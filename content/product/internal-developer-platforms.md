@@ -1,99 +1,121 @@
 ---
 title: "Internal Developer Platform for Self-Service – Pulumi IDP"
-layout: internal-developer-platforms
+type: page
+layout: product-page
 
 meta_desc: Build your internal developer platform with Pulumi. Enable self-service infrastructure with enterprise governance.
 meta_image: /images/product/idp-meta.png
 
-heading: Internal Developer Platform
-subheading: |
-    Everything platform engineers need to build an IDP
-
 aliases:
-    - /solutions/platforms/
-    - /product/idp
-    - /product/pulumi-idp
+  - /solutions/platforms/
+  - /product/idp
+  - /product/pulumi-idp
 
-overview:
-  title: Everything platform engineers need to build an IDP
-  description: Create golden paths with reusable components and templates. Enable self-service infrastructure through code, YAML, or developer portals. Enforce standards automatically with policies. Ship infrastructure faster while maintaining control.
-  cta: Start Building Your IDP
-  link: /docs/idp/concepts/
-  cta_secondary: Get a Demo
-  link_secondary: /contact/?form=request-a-demo
+sections:
+  - type: product_hero
+    title_secondary: Self-service infrastructure
+    title_primary: at any scale.
+    title_reversed: true
+    description: Everything platform engineers need to build an IDP
+    cta_primary_text: Get Started
+    cta_primary_link: https://app.pulumi.com/
+    cta_secondary_text: Contact Us
+    cta_secondary_link: /contact/
+    image: /images/product/idp/idp-hero-image.svg
+    image_alt: Pulumi internal developer platform services dashboard
+    anchor: hero
 
-why_idp:
-  title: Why engineers choose Pulumi for platform engineering
-  description: Build your IDP on infrastructure as code in any programming language. Create golden paths that engineers actually want to use. Enforce standards without slowing teams down.
-  benefits:
-    - title: Ship Faster
-      description: Golden paths and reusable components get engineers from idea to production in minutes.
-      icon: rocketship
-      color: salmon
-    - title: Automatic Governance
-      description: Policy as code enforces security, compliance, and operational standards without manual reviews.
-      icon: shield
-      color: blue
-    - title: Engineer-Friendly
-      description: Engineers work how they prefer – code, YAML, UI, or APIs – all with consistent governance.
-      icon: nodes-and-rays
-      color: yellow
-    - title: Day 2 Ready
-      description: Handle provisioning, updates, drift detection, and compliance from day one.
-      icon: cycle
-      color: fuchsia
+  - type: product_two_column
+    heading: The platform engineers choose to build their Internal Developer Platform.
+    description: |
+      Golden paths and guardrails, without the slowdown.
 
-demo_video:
-    title: See Platform Engineering in Action
-    subtitle: Watch how teams build internal developer platforms with Pulumi
-    image: https://www.youtube.com/watch?v=3gZmKaAeppc
+      Create golden paths with reusable components and templates. Enable self-service infrastructure through code, YAML, or developer portals. Enforce standards automatically with policies. Ship infrastructure faster while maintaining control.
+    cards:
+      - icon: fa-rocket
+        title: Ship faster
+        description: |
+          Golden paths and reusable components get engineers from idea to production in minutes.
+      - icon: fa-shield-alt
+        title: Engineer-friendly governance
+        description: |
+          Policy as code enforces standards automatically — while engineers work how they prefer, in code, YAML, UI, or API.
+      - icon: fa-eye
+        title: Day 2 ready
+        description: |
+          Handle provisioning, updates, drift detection, and compliance from day one.
+    anchor: languages
 
-building_blocks:
-  title: "Core building blocks for your IDP"
-  items:
-    - header: "Create golden paths with components and templates"
-      subheader: "Platform engineers define infrastructure patterns once, engineers use them everywhere:"
-      body:
-        - "**Components**: Reusable infrastructure building blocks in any language. Package your well-architected patterns."
-        - "**Templates**: Scaffold entire projects with one command. Applications, microservices, clusters – all standardized."
-        - "**Policies**: Enforce security and compliance automatically. Block non-compliant infrastructure before it ships."
-      graphic: images/product/idp-services-home.jpg
-    - header: Self-service infrastructure, multiple interfaces
-      subheader: "Engineers provision infrastructure using their preferred approach:"
-      body:
-        - "**Code**: Write infrastructure in TypeScript, Python, Go, .NET, or Java. Full programming power."
-        - "**Low-Code**: Simple YAML for standard patterns. Platform teams create the templates, engineers fill in the values."
-        - "**No-Code**: Deploy through Pulumi's project wizard or integrate with Backstage. Click to provision."
-        - "**REST API**: Programmatic access for custom tools and workflows. Build your own interfaces."
-      graphic: /images/product/idp-flexible-interfaces.png
-    - header: Built for Day 2 operations
-      subheader: Platform engineering doesn't stop at provisioning. Handle the full infrastructure lifecycle.
-      body:
-        - "**Drift Detection**: Know when infrastructure diverges from code. Fix drift automatically or alert the team."
-        - "**Import Existing Resources**: Bring unmanaged infrastructure under control. Generate code from existing resources."
-        - "**Dependency Management**: Track component usage across teams. Safely deprecate old versions."
-        - "**Enterprise RBAC**: Fine-grained permissions, SAML/SSO, audit logs. Control who can change what."
-      graphic: /images/product/idp-day-two.png
+  - type: video_embed
+    youtube_id: 3gZmKaAeppc
+    title: Pulumi IDP in 3 minutes
+    poster_image: /images/product/idp/idp-poster.png
+    poster_alt: Pulumi IDP in 3 minutes – watch the demo
+    anchor: demo
 
-learn:
-    title: Start building your IDP
-    items:
-        - title: Start building your platform today
-          description: Build your internal developer platform with Pulumi Cloud. Start with our free tier and scale when you need enterprise features.
-          buttons:
-            - link: https://app.pulumi.com/
-              type: primary
-              action: Start Free
-            - link: /contact/?form=request-a-demo
-              type: secondary
-              action: Book a Demo
-        - title: Platform engineering guide
-          description: Learn how to build an IDP with components, templates, policies, and self-service patterns.
-          buttons:
-            - link: /docs/idp/concepts/
-              type: primary
-              action: Read the Docs
-            - link: https://info.pulumi.com/whitepaper/accelerating-business-value-at-every-stage-of-idp-maturity
-              type: secondary
-              action: Get the Whitepaper
+  - type: section_header_with_image
+    tag_line: Golden Paths
+    title: Create golden paths with components and templates
+    description: |
+      Platform engineers define infrastructure patterns once, engineers use them everywhere:
+
+      - **Components**: Reusable infrastructure building blocks in any language. Package your well-architected patterns.
+
+      - **Templates**: Scaffold entire projects with one command. Applications, microservices, clusters – all standardized.
+
+      - **Policies**: Enforce security and compliance automatically. Block non-compliant infrastructure before it ships.
+    image: /images/product/idp/idp-golden-paths.svg
+    image_alt: Golden paths with reusable components and templates
+    anchor: golden-paths
+
+  - type: section_header_with_image
+    flip: true
+    tag_line: Self-Service
+    title: "Self-service infrastructure,  \nmultiple interfaces"
+    description: |
+      Engineers provision infrastructure using their preferred approach:
+
+      - **Code**: Write infrastructure in TypeScript, Python, Go, .NET, or Java. Full programming power.
+
+      - **Low-Code**: Simple YAML for standard patterns. Platform teams create the templates, engineers fill in the values.
+
+      - **No-Code**: Deploy through Pulumi's project wizard or integrate with Backstage. Click to provision.
+
+      - **REST API**: Programmatic access for custom tools and workflows. Build your own interfaces.
+    image: /images/product/idp/idp-self-service.svg
+    image_alt: Self-service infrastructure with multiple interfaces
+    anchor: self-service
+
+  - type: section_header_with_image
+    tag_line: Day 2 Ready
+    title: Built for Day 2 operations
+    description: |
+      Platform engineering doesn't stop at provisioning. Handle the full infrastructure lifecycle.
+
+      - **Drift Detection**: Know when infrastructure diverges from code. Fix drift automatically or alert the team.
+
+      - **Import Existing Resources**: Bring unmanaged infrastructure under control. Generate code from existing resources.
+
+      - **Dependency Management**: Track component usage across teams. Safely deprecate old versions.
+
+      - **Enterprise RBAC**: Fine-grained permissions, SAML/SSO, audit logs. Control who can change what.
+    image: /images/product/idp/idp-day2.svg
+    image_alt: Day 2 operations with drift detection and dependency management
+    anchor: day2
+
+  - type: two_column
+    columns:
+      - title: Start building your platform today
+        description: Build your internal developer platform with Pulumi Cloud. Start with our free tier and scale when you need enterprise features.
+        cta_primary_text: Get Started with Pulumi Insights
+        cta_primary_link: https://app.pulumi.com/
+        cta_text: Book a Demo
+        cta_link: /contact/?form=request-a-demo
+      - title: Platform engineering guide
+        description: Learn how to build an IDP with components, templates, policies, and self-service patterns.
+        cta_primary_text: See Neo in Action
+        cta_primary_link: /product/neo/
+        cta_text: Read the Docs
+        cta_link: /docs/idp/concepts/
+    anchor: get-started
 ---
