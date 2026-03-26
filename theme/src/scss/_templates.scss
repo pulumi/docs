@@ -306,6 +306,17 @@
 
 .template-testimonial-product {
     @apply font-body bg-violet-100;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.template-testimonial-product-bg-1 {
+        background-image: url('/images/template-testimonial-bg-1.svg');
+    }
+
+    &.template-testimonial-product-bg-2 {
+        background-image: url('/images/template-testimonial-bg-2.svg');
+    }
 
     .template-testimonial-product-quote {
         @apply text-black leading-relaxed text-left border-0 font-semibold text-heading-xs;
@@ -316,8 +327,8 @@
     }
 
     .template-testimonial-product-logo img {
-        @apply block w-auto h-7;
-        max-width: 120px;
+        height: 28px;
+        width: auto;
     }
 
     .template-testimonial-product-credit {
@@ -842,4 +853,8 @@
         }
     }
 
+}
+
+.template-video-embed {
+    @apply w-full;
 }

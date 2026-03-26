@@ -30,7 +30,7 @@ If no token is provided, proceed with the design context step using the Figma MC
 
 **2. Reference example**
 
-Read `content/product/infrastructure-as-code.md` and its rendered partials as the canonical example of a correctly implemented product page. Use it to understand layout structure, frontmatter keys, and partial invocation patterns.
+Read `content/product/infrastructure-as-code.md` and `content/product/_index.html` and their rendered partials as canonical examples of a correctly implemented product page. Use it to understand layout structure, frontmatter keys, and partial invocation patterns.
 
 ---
 
@@ -161,11 +161,26 @@ curl -s "S3_URL" -o static/images/product/DIRNAME/FILENAME.svg
 
 Place all images in a new subdirectory under `static/images/product/`.
 
+**Reusing existing logos:** Before exporting a logo from Figma, check if it already exists under `static/logos/`. Only reuse it if the file is an SVG — PNGs will be distorted at non-native sizes. If the existing logo is a PNG, export the SVG from Figma instead.
+
+### 5e. Fix SVG preserveAspectRatio
+
+Figma often exports SVGs with `preserveAspectRatio="none" width="100%" height="100%"`, which causes distortion when displayed at a constrained size. After downloading any SVG, check the opening tag and replace it with the intrinsic dimensions from the `viewBox`:
+
+```bash
+head -1 static/path/to/file.svg
+# If it has preserveAspectRatio="none" width="100%" height="100%"
+# and viewBox="0 0 W H", replace with:
+# <svg width="W" height="H" viewBox="0 0 W H" ...>
+```
+
+This is most important for logos displayed at a fixed height.
+
 ---
 
 ## Step 6 — SCSS
 
-If a new partial is added, add its styles to `theme/src/scss/_templates.scss`.
+If a new partial is added, add its styles to `theme/src/scss/_templates.scss`. Also update the comment block at the top of `layouts/partials/product-page-content.html` to document the new `type` value and its fields.
 
 Use neutral class names for inner elements shared across partials (e.g. `section-header-split-inner`, not `section-header-with-code-inner`) so a single SCSS block can cover multiple parent selectors:
 
