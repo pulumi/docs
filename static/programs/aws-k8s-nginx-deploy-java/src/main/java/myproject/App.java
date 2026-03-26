@@ -30,7 +30,7 @@ public class App {
 
     public static void stack(Context ctx) {
         // Create an NGINX Deployment and load balanced Service.
-        var myDeployment = new Deployment("myDeployment", DeploymentArgs.builder()
+        var myDeployment = new Deployment("my-deployment", DeploymentArgs.builder()
             .metadata(ObjectMetaArgs.builder()
                 .labels(Map.of("appClass", "my-deployment"))
                 .build())
@@ -57,7 +57,7 @@ public class App {
                 .build())
             .build());
 
-        var myService = new Service("myService", ServiceArgs.builder()
+        var myService = new Service("my-service", ServiceArgs.builder()
             .metadata(ObjectMetaArgs.builder()
                 .labels(Map.of("appClass", "my-deployment"))
                 .build())
