@@ -612,7 +612,7 @@
     .event-card-type {
         @apply font-semibold font-body text-body-s uppercase;
         font-feature-settings: 'salt' on;
-        color: $violet-primary;
+        color: var(--color-violet-800);
         letter-spacing: 0.5px;
         font-size: 0.7rem;
     }
@@ -631,7 +631,7 @@
     }
 
     &:hover .event-card-title {
-        color: $violet-primary;
+        color: var(--color-violet-800);
     }
 
     .event-card-date {
@@ -670,7 +670,7 @@
     .event-card-cta {
         @apply font-semibold font-body whitespace-nowrap flex-shrink-0;
         font-feature-settings: 'salt' on;
-        color: $violet-primary;
+        color: var(--color-violet-800);
         font-size: 0.875rem;
 
         i {
@@ -686,7 +686,7 @@
 // Single event page styles
 .event-single-back-link {
     @apply font-body font-semibold no-underline text-body-s;
-    color: $violet-primary;
+    color: var(--color-violet-800);
 
     &:hover {
         @apply underline;
@@ -705,7 +705,7 @@
     .event-single-type {
         @apply font-semibold font-body uppercase;
         font-feature-settings: 'salt' on;
-        color: $violet-primary;
+        color: var(--color-violet-800);
         font-size: 0.8rem;
         letter-spacing: 0.5px;
     }
@@ -751,7 +751,7 @@
         color: #404041;
 
         a {
-            color: $violet-primary;
+            color: var(--color-violet-800);
             @apply font-semibold;
         }
     }
@@ -782,7 +782,7 @@
             color: #5b5b5b;
 
             i {
-                color: $violet-primary;
+                color: var(--color-violet-800);
                 @apply mt-0.5 flex-shrink-0;
             }
         }
