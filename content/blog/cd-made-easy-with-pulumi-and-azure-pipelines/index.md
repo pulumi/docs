@@ -17,7 +17,7 @@ infrastructure is just a few steps away for you and your teams.
 To make it easy to use Pulumi with Azure, we are announcing an
 open-source task extension for Azure Pipelines! The task extension will
 manage the installation of the Pulumi CLI, and run the [Pulumi
-commands](/docs/cli/commands/) you specify against
+commands](/docs/iac/cli/commands/) you specify against
 your stack.
 
 You can install the task extension directly from the [Visual Studio

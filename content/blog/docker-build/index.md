@@ -510,7 +510,7 @@ The new Docker Build provider matches the Docker CLI behavior. Thus, it does **n
 
 {{% notes %}}
 
-The new Docker Build provider builds images by default during [previews](https://www.pulumi.com/docs/cli/commands/pulumi_preview/) to reduce the risk of merging broken images as part of CI pipelines. You can change the default behavior by specifying a [`buildOnPreview`](https://www.pulumi.com/registry/packages/docker-build/api-docs/image/#buildonpreview_nodejs) flag.
+The new Docker Build provider builds images by default during [previews](https://www.pulumi.com/docs/iac/cli/commands/pulumi_preview/) to reduce the risk of merging broken images as part of CI pipelines. You can change the default behavior by specifying a [`buildOnPreview`](https://www.pulumi.com/registry/packages/docker-build/api-docs/image/#buildonpreview_nodejs) flag.
 
 {{% /notes %}}
 

@@ -237,9 +237,9 @@ to sign-in.
 Yes. Signing-in with a GitLab account will create a new account. That
 means, your stacks and activity will stay with the other account. You
 can migrate them by performing a
-[`pulumi stack export`](/docs/cli/commands/pulumi_stack_export)
+[`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export)
 from your source stack and then importing it using
-[`pulumi stack import`](/docs/cli/commands/pulumi_stack_import)
+[`pulumi stack import`](/docs/iac/cli/commands/pulumi_stack_import)
 in a new stack in your GitLab-based account.
 
 If you would like to add your GitLab identity to your _existing_ Pulumi account, you can

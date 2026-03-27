@@ -52,7 +52,7 @@ purposes only. You may choose a different name that best suits your use case.
 
 * Depending on your use-case, you may want to create the Pulumi Stack ahead of time.
 * You can create a new stack in the [Pulumi Cloud](https://app.pulumi.com/site/new-project).
-* Alternatively, you can also run `pulumi new [template]` to create a [template project](/docs/cli/commands/pulumi_new/)
+* Alternatively, you can also run `pulumi new [template]` to create a [template project](/docs/iac/cli/commands/pulumi_new/)
 on your machine and push it to your Version Control System (VCS) repository.
 
 The source code used as an [example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx) in this guide

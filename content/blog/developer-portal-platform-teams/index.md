@@ -27,7 +27,7 @@ __Developer Portals__:  Every platform team we work with is looking to expose re
 
 * 🆕 Organization Templates and New Project Wizard:  Pulumi Cloud now supports registering your own custom templates for your organization, and enabling developers in your organization to provision them entirely via point-and-click in Pulumi Cloud with the new New Project Wizard.  This offers a great out-of-the box developer portal experience for any team using Pulumi Cloud.
 * 🆕 Pulumi Backstage Plugin:  For teams using Backstage, they can now integrate Pulumi directly within their Backstage instance, via support for a new Pulumi plugin as well as new Pulumi scaffolder actions.
-* 🆕 `pulumi new` support for private templates: By default, `pulumi new` provides a number of templates provided by Pulumi, but it can also use your own [private templates](/docs/cli/commands/pulumi_new/).
+* 🆕 `pulumi new` support for private templates: By default, `pulumi new` provides a number of templates provided by Pulumi, but it can also use your own [private templates](/docs/iac/cli/commands/pulumi_new/).
 
 __Policy and Compliance__: Platform teams need robust and flexible solutions for establishing policy and compliance guardrails for their cloud infrastructure. Pulumi’s existing CrossGuard policy-as-code framework provides the richest option for defining and enforcing policy across all infrastructure in an organization, using the full capabilities of your favorite languages.  Today, we are extending that support with two important new features for platform teams:
 

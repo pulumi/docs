@@ -182,7 +182,7 @@ const demoTravisCIPusher = new CredentialPusher(
 
 ### Demo
 
-To demonstrate the access keys rotation, we can examine the log files generated from AWS Lambda. These can be accessed from the command-line using the [`pulumi logs`](/docs/cli/commands/pulumi_logs) command.
+To demonstrate the access keys rotation, we can examine the log files generated from AWS Lambda. These can be accessed from the command-line using the [`pulumi logs`](/docs/iac/cli/commands/pulumi_logs) command.
 
 Here's a summary of the output for clarity:
 

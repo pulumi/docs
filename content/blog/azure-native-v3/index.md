@@ -108,7 +108,7 @@ Use the Pulumi CLI to add just the packages and versions you need:
 pulumi package add azure-native storage v20240101
 ```
 
-For more details on the `package add` command, see the [CLI documentation](/docs/cli/commands/pulumi_package_add/).
+For more details on the `package add` command, see the [CLI documentation](/docs/iac/cli/commands/pulumi_package_add/).
 
 Step 2: Import and use the versioned package
 

@@ -103,7 +103,7 @@ The Java Pulumi SDK is available to Go/Java developers in source form on [GitHub
 
 ### Plugin Acquisition
 
-Pulumi will try to auto-detect which [plugins](/docs/cli/commands/pulumi_plugin/?language=java) your program is using by analyzing your Java project dependencies and then auto-install them. For example, if a program references `com.pulumi.aws` it will automatically issue the equivalent of `$ pulumi plugin install resource aws`.
+Pulumi will try to auto-detect which [plugins](/docs/iac/cli/commands/pulumi_plugin/?language=java) your program is using by analyzing your Java project dependencies and then auto-install them. For example, if a program references `com.pulumi.aws` it will automatically issue the equivalent of `$ pulumi plugin install resource aws`.
 
 ### Running Pulumi with Maven and Gradle
 

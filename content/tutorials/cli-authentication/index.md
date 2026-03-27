@@ -24,7 +24,7 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    The [`pulumi login`](/docs/cli/commands/pulumi_login/) command is used to login to the Pulumi Cloud from the [Pulumi CLI](/docs/cli/). Logging in to the Pulumi Cloud enables you to manage your state, resources, and secrets in a secure way. In this tutorial, we'll demonstrate how to authenticate to the Pulumi Cloud using the Pulumi CLI.
+    The [`pulumi login`](/docs/iac/cli/commands/pulumi_login/) command is used to login to the Pulumi Cloud from the [Pulumi CLI](/docs/cli/). Logging in to the Pulumi Cloud enables you to manage your state, resources, and secrets in a secure way. In this tutorial, we'll demonstrate how to authenticate to the Pulumi Cloud using the Pulumi CLI.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
@@ -84,7 +84,7 @@ In both the browser and the CLI, you will receive a message to indicate that you
 
 ## Logging out of the CLI
 
-When you want to logout of the Pulumi CLI, run the [pulumi logout](/docs/cli/commands/pulumi_logout/) command. You will receive the following output that indicates you were logged out successfully:
+When you want to logout of the Pulumi CLI, run the [pulumi logout](/docs/iac/cli/commands/pulumi_logout/) command. You will receive the following output that indicates you were logged out successfully:
 
 ```bash
 $ pulumi logout
@@ -95,7 +95,7 @@ Logged out of https://api.pulumi.com
 
 In this tutorial, you learned how to authenticate to the Pulumi CLI using the browser and using a Pulumi access token. To learn more about using the CLI to create and manage resources in Pulumi, take a look at the following resources:
 
-- Learn more about the available CLI commands in the [Pulumi CLI documentation](/docs/cli/commands/).
+- Learn more about the available CLI commands in the [Pulumi CLI documentation](/docs/iac/cli/commands/).
 - Learn more about configuring Pulumi providers to work with Pulumi in the following resources:
   - [AWS Configuration](/docs/iac/get-started/aws/begin/#configure-pulumi-to-access-your-aws-account)
   - [Azure Configuration](/docs/iac/get-started/azure/begin/#configure-pulumi-to-access-your-microsoft-azure-account)

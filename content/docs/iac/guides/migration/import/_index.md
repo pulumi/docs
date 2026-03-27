@@ -26,7 +26,7 @@ The first scenario is sometimes called _coexistence_, and you can learn more abo
 
 There are two ways to import an existing cloud resource into a Pulumi project:
 
-1. With the [`pulumi import`](/docs/cli/commands/pulumi_import) CLI command. This command imports the resource into the currently selected [stack](/docs/concepts/stack/) and generates code describing the resource's current configuration for you to add to your Pulumi program.
+1. With the [`pulumi import`](/docs/iac/cli/commands/pulumi_import) CLI command. This command imports the resource into the currently selected [stack](/docs/concepts/stack/) and generates code describing the resource's current configuration for you to add to your Pulumi program.
 
 1. In code, with the [`import` resource option](/docs/concepts/options/import/). This option is expressed as an additional property on a resource declaration that you write into your Pulumi program yourself.
 
@@ -68,11 +68,11 @@ $ pulumi import <type> <name> <id>
 
 * The third argument, `id`, is the value to use for the resource lookup in the cloud provider. This value should correspond to the designated lookup property specified in the Import section of the resource's API documentation in the Registry.
 
-For help identifying a resource's type token and lookup property, see [Where to find the type token and lookup property](#where-to-find) above. To learn more about the additional options available on the `pulumi import` command, see the [`import` command documentation](/docs/cli/commands/pulumi_import/).
+For help identifying a resource's type token and lookup property, see [Where to find the type token and lookup property](#where-to-find) above. To learn more about the additional options available on the `pulumi import` command, see the [`import` command documentation](/docs/iac/cli/commands/pulumi_import/).
 
 ### Example
 
-In this example, a previously provisioned Amazon S3 bucket named `company-infra-logs` is imported into a Pulumi stack named `dev` (the currently [selected](/docs/cli/commands/pulumi_stack_select/) stack) and given a resource name of `infra-logs`:
+In this example, a previously provisioned Amazon S3 bucket named `company-infra-logs` is imported into a Pulumi stack named `dev` (the currently [selected](/docs/iac/cli/commands/pulumi_stack_select/) stack) and given a resource name of `infra-logs`:
 
 ```bash
 $ pulumi import aws:s3/bucket:Bucket infra-logs company-infra-logs

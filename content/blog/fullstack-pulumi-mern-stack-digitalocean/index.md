@@ -505,7 +505,7 @@ Quickly, to recap, here's what we've done so far:
 * We mapped the tiers of that app to their corresponding App Platform components.
 * We wrote a Pulumi program to codify that mapping as an App Platform spec and a managed MongoDB cluster to go along with it.
 
-When you deploy this app in a moment with [`pulumi up`](/docs/cli/commands/pulumi_up), Pulumi will provision a new MongoDB cluster (which usually takes a few minutes), and then once that's available, DigitalOcean will take our spec and use it to fetch the components of the app from GitHub at the specified branch and build them. From that point forward, any commit you make to that branch will trigger DigitalOcean to fetch, rebuild, and redeploy the app automatically.
+When you deploy this app in a moment with [`pulumi up`](/docs/iac/cli/commands/pulumi_up), Pulumi will provision a new MongoDB cluster (which usually takes a few minutes), and then once that's available, DigitalOcean will take our spec and use it to fetch the components of the app from GitHub at the specified branch and build them. From that point forward, any commit you make to that branch will trigger DigitalOcean to fetch, rebuild, and redeploy the app automatically.
 
 Make sure you've installed the DigitalOcean GitHub app as described above---you should see it listed at <https://github.com/settings/installations>:
 
@@ -643,7 +643,7 @@ Resources:
 Duration: 1m27s
 ```
 
-And when you're finished experimenting, you can tear everything down in just a few seconds with a [`pulumi destroy`](/docs/cli/commands/pulumi_destroy):
+And when you're finished experimenting, you can tear everything down in just a few seconds with a [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy):
 
 ```bash
 $ pulumi destroy
@@ -671,7 +671,7 @@ From here, you might think about:
 
 * Adding a [`digitalocean.DnsRecord`](/registry/packages/digitalocean/api-docs/dnsrecord) to give your app a [custom domain name](https://docs.digitalocean.com/products/networking/dns/).
 
-* Creating a second stack with [`pulumi stack init`](/docs/cli/commands/pulumi_stack_init) and adjusting the program to make the source `branch` configurable---a `production` stack, say, designed to deploy in response to commits to a `release` branch.
+* Creating a second stack with [`pulumi stack init`](/docs/iac/cli/commands/pulumi_stack_init) and adjusting the program to make the source `branch` configurable---a `production` stack, say, designed to deploy in response to commits to a `release` branch.
 
 * Using Pulumi's [GitHub Action](/docs/iac/packages-and-automation/continuous-delivery/github-actions/) to run previews and updates as part of a pull-request based workflow.
 

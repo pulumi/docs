@@ -314,7 +314,7 @@ As you can see, creating a template is both simple and powerful, and I hope this
 * [Pulumi Templates](/templates/)
 * The [pulumi/templates repository](https://github.com/pulumi/templates) on GitHub
 * [Pulumi project file reference](/docs/reference/pulumi-yaml)
-* [`pulumi new` reference](/docs/cli/commands/pulumi_new/)
+* [`pulumi new` reference](/docs/iac/cli/commands/pulumi_new/)
 * [Deploy with Pulumi button reference](/docs/pulumi-cloud/pulumi-button/)
 
 And as always, be sure to stop by [Pulumi Community Slack](https://slack.pulumi.com/) to let us know know how it goes.

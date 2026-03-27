@@ -45,7 +45,7 @@ The rest of the community agreed too, as this is one of our top customer product
 
 The Pulumi Service Provider builds on top of the [Pulumi Service REST API](/docs/pulumi-cloud/cloud-rest-api/) which is another feature available to our customers to programmatically configuring the Pulumi Service. The Pulumi Service REST API is includes functionality to interact with and manipulate any kind of metadata managed by Pulumi. That includes Projects and Stacks, Previews and Updates, Organizations and Audit Logs. We have already seen Cloud Engineering teams using the Pulumi REST API to build all sorts of custom functionality. These new capabilities are especially powerful when used in combination with the [Automation API](/automation/).
 
-The [Pulumi Service Provider](/registry/packages/pulumiservice/) can be used in any Pulumi language, TypeScript, Python, Go, .NET, Java and YAML. It supports configuration of [Teams](/docs/pulumi-cloud/access-management/teams/), [Access Tokens](/docs/pulumi-cloud/accounts/), [Stack Tags](/docs/cli/commands/pulumi_stack_tag/) and [Webhooks](/docs/pulumi-cloud/webhooks/) using infrastructure as code.
+The [Pulumi Service Provider](/registry/packages/pulumiservice/) can be used in any Pulumi language, TypeScript, Python, Go, .NET, Java and YAML. It supports configuration of [Teams](/docs/pulumi-cloud/access-management/teams/), [Access Tokens](/docs/pulumi-cloud/accounts/), [Stack Tags](/docs/iac/cli/commands/pulumi_stack_tag/) and [Webhooks](/docs/pulumi-cloud/webhooks/) using infrastructure as code.
 
 ## What resources are available?
 
@@ -53,7 +53,7 @@ Based on feedback from customers, we've picked the following resources to suppor
 
 * [Webhooks](/docs/pulumi-cloud/webhooks/)
 * [Teams](/docs/pulumi-cloud/access-management/teams/)
-* [StackTags](/docs/cli/commands/pulumi_stack_tag/)
+* [StackTags](/docs/iac/cli/commands/pulumi_stack_tag/)
 * [AccessTokens](/docs/pulumi-cloud/accounts/)
 
 ## How do I get started?
