@@ -95,7 +95,7 @@ Actions taken by organization tokens appear in audit logs attributed to the orga
 
 Any organization admin can create, view, and delete organization tokens via **Settings** > **Access Tokens**. Tokens are not owned by the admin who created them — if that person leaves the organization, other admins retain full access. Each token's name must be unique across all organization and team tokens in the organization, including deleted tokens, so that tokens can be reliably identified in audit logs and incident response.
 
-Deleting a token immediately revokes its access; all further operations using it will fail as unauthorized. The token name remains reserved after deletion.
+Deleting a token immediately revokes its access; all further operations using it will fail as unauthorized. The token name is permanently reserved after deletion to preserve audit log integrity.
 
 ## Team access tokens
 
@@ -115,7 +115,7 @@ As with organization tokens, team token activity is recorded in audit logs with 
 
 Organization admins and team admins can create and delete team tokens. Tokens are found under the team's page (**Teams** > select a team > **Access Tokens**) and are not owned by the admin who created them. Each token name must be unique across all organization and team tokens in the organization, including deleted tokens.
 
-Deleting a token immediately revokes its access. The token name remains reserved after deletion.
+Deleting a token immediately revokes its access. The token name is permanently reserved after deletion to preserve audit log integrity.
 
 ## Legacy organization token types
 
