@@ -17,11 +17,12 @@ last-processed commit SHA (stored in S3 state), extracts social copy from
 frontmatter, and schedules posts to X, LinkedIn, and Bluesky.
 
 Platform strategy:
-  - X: Text post with URL in body. X auto-crawls the URL and generates
-    a link card with og:image. Uses upload_text endpoint.
-  - LinkedIn/Bluesky: Photo post with the blog's meta image attached.
-    These platforms don't auto-crawl URLs posted via API, so we send the
-    image explicitly. Uses upload_photos endpoint.
+  - X/Bluesky: Text post with link_url for card crawling. The platform
+    crawls the URL and renders a link card with og:image. No URL needed
+    in the post body. Uses upload_text endpoint.
+  - LinkedIn: Photo post with the blog's meta image attached and URL in
+    body. LinkedIn doesn't render link cards via upload-post.com's
+    link_url, so we send the image explicitly. Uses upload_photos endpoint.
 
 Scheduling logic:
   - Uses the Hugo post's frontmatter date to determine when to post.
@@ -49,8 +50,8 @@ Optional:
   SOCIAL_POSTING_TZ         - Timezone (default: America/New_York)
 
 TODO:
-  1. Once upload-post.com fixes link card crawling, we can switch LinkedIn
-     and Bluesky back to upload_text with link_url instead of upload_photos.
+  1. Once upload-post.com fixes LinkedIn link card crawling, switch
+     LinkedIn to upload_text with link_url (like X/Bluesky).
   2. Flip PROD_MODE = True and connect official Pulumi accounts.
 """
 
@@ -330,29 +331,27 @@ def _print_result(platform, request_id, scheduled_date):
     return post_url
 
 
-def _copy_with_url(copy, url):
-    """Append URL to copy, unless the copy already contains it."""
-    if url in copy:
-        return copy
-    return f"{copy}\n\n{url}"
-
 
 def post_text(platform, copy, url, scheduled_date):
-    """Post via upload_text. Used for X where the platform auto-crawls URLs."""
-    text_with_url = _copy_with_url(copy, url)
+    """Post via upload_text. link_url generates a card with og:image — no URL needed in body."""
     data = {
         "user": USER,
         "platform[]": platform,
-        "title": text_with_url,
-        "x_title": text_with_url,
+        "title": copy,
+        "link_url": url,
     }
+    if platform == "x":
+        data["x_title"] = copy
+    elif platform == "bluesky":
+        data["bluesky_title"] = copy
     if scheduled_date:
         data["scheduled_date"] = scheduled_date
         data["timezone"] = POSTING_TZ
 
     if DRY_RUN:
         print(f"  [DRY RUN] Would post text to {platform}:")
-        print(f"    {text_with_url[:100]}...")
+        print(f"    {copy[:100]}...")
+        print(f"    link_url: {url}")
         print(f"    scheduled: {scheduled_date or 'immediately'}")
         return True
 
@@ -372,19 +371,17 @@ def post_text(platform, copy, url, scheduled_date):
 
 
 def post_photo(platform, copy, url, image_path, scheduled_date):
-    """Post via upload_photos. Used for LinkedIn/Bluesky where we send the meta image."""
-    text_with_url = _copy_with_url(copy, url)
+    """Post via upload_photos with image attached. Used for LinkedIn where link_url cards don't work."""
+    text_with_url = f"{copy}\n\n{url}" if url not in copy else copy
     data = {
         "user": USER,
         "platform[]": platform,
         "title": text_with_url,
     }
     if platform == "linkedin":
-        data["linkedin_description"] = f"{copy}\n\n{url}"
+        data["linkedin_description"] = text_with_url
         if LINKEDIN_PAGE_ID:
             data["target_linkedin_page_id"] = LINKEDIN_PAGE_ID
-    elif platform == "bluesky":
-        data["bluesky_title"] = text_with_url
 
     if scheduled_date:
         data["scheduled_date"] = scheduled_date
@@ -398,8 +395,8 @@ def post_photo(platform, copy, url, image_path, scheduled_date):
         return True
 
     if not image_path:
-        print(f"  Warning: no meta image found, falling back to text post for {platform}")
-        return post_text(platform, copy, url, scheduled_date)
+        print(f"  Warning: no meta image found, skipping {platform}")
+        return None
 
     mime = "image/jpeg" if image_path.endswith(".jpg") else "image/png"
     with open(image_path, "rb") as f:
@@ -414,7 +411,6 @@ def post_photo(platform, copy, url, image_path, scheduled_date):
     if resp.ok:
         result = resp.json()
         request_id = result.get("request_id", "")
-        # upload_photos may return results directly or async
         platform_result = result.get("results", {}).get(platform, {})
         direct_url = platform_result.get("url")
         if direct_url:
@@ -433,10 +429,9 @@ def post_photo(platform, copy, url, image_path, scheduled_date):
 
 def schedule_post(platform, copy, url, image_path, scheduled_date):
     """Route to the right posting method per platform. Returns post URL or None."""
-    if platform == "x":
-        return post_text(platform, copy, url, scheduled_date)
-    else:
+    if platform == "linkedin":
         return post_photo(platform, copy, url, image_path, scheduled_date)
+    return post_text(platform, copy, url, scheduled_date)
 
 
 # --- Main ---
@@ -506,12 +501,11 @@ def main():
             print(f"  Warning: no social copy in frontmatter for {filepath}")
             continue
 
-        image_path = meta_image_path(filepath)
 
+
+        image_path = meta_image_path(filepath)
         scheduled = scheduled_date_from_post(post_date)
         print(f"  URL: {url}")
-        if image_path:
-            print(f"  Image: {image_path}")
         if scheduled:
             print(f"  Scheduled for: {scheduled} {POSTING_TZ}")
         else:
@@ -525,14 +519,12 @@ def main():
                 continue
 
             # Validate character limits
+            # LinkedIn includes URL in body (photo post); X/Bluesky use link_url
             limit = CHAR_LIMITS.get(platform)
-            has_url = url in copy
-            if platform == "x":
-                # t.co wraps URLs to 23 chars regardless of actual length
-                text_len = len(copy) if has_url else len(copy) + 2 + 23
+            if platform == "linkedin":
+                text_len = len(copy) if url in copy else len(copy) + 2 + len(url)
             else:
-                # LinkedIn/Bluesky: URL is in the text body for photo posts
-                text_len = len(copy) if has_url else len(copy) + 2 + len(url)
+                text_len = len(copy)
             if limit and text_len > limit:
                 print(f"  SKIPPING {platform}: copy is {text_len} chars, limit is {limit}")
                 failures = True
