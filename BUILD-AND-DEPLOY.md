@@ -619,8 +619,10 @@ Location: `theme/webpack.config.js`
 {
   bundle: './src/ts/main.ts',        // Main site JavaScript
   marketing: './src/ts/marketing.ts', // Marketing pages
+  'marketing-homepage': './src/ts/marketingHomepage.ts', // Marketing homepage
   homepage: './src/ts/homepage.ts',   // Homepage-specific JS
-  algolia: './src/ts/algolia-entry.ts' // Search (Algolia)
+  algolia: './src/ts/algolia-entry.ts', // Search (Algolia)
+  'consent-manager': './src/ts/consent-manager/index.ts', // Cookie consent (vanilla TS)
 }
 ```
 
@@ -632,8 +634,10 @@ Async chunks use a similar pattern: `chunk-[contenthash:8].js`.
 ```
 static/js/bundle.<hash>.js
 static/js/marketing.<hash>.js
+static/js/marketing-homepage.<hash>.js
 static/js/homepage.<hash>.js
 static/js/algolia.<hash>.js
+static/js/consent-manager.<hash>.js
 static/js/chunk-<hash>.js
 assets/css/bundle.css
 assets/css/marketing.css
@@ -650,6 +654,7 @@ A manifest is written to `data/js_manifest.json` mapping entry names to hashed f
 **Plugins:**
 
 - `MiniCssExtractPlugin`: Extract CSS to separate files
+- `LimitChunkCountPlugin`: Keep each entry point as a single chunk
 - `WebpackShellPluginNext`: Runs Stencil build before webpack
 - Custom `JsManifestPlugin`: Writes `data/js_manifest.json` after each build
 

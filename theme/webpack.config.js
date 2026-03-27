@@ -13,6 +13,7 @@ module.exports = function (env, { mode }) {
             "marketing-homepage": "./src/ts/marketingHomepage.ts",
             homepage: "./src/ts/homepage.ts",
             algolia: "./src/ts/algolia-entry.ts",
+            "consent-manager": "./src/ts/consent-manager/index.ts",
         },
         output: {
             filename: "[name].[contenthash:8].js",
