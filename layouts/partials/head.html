@@ -280,11 +280,11 @@
         };
     </script>
 
-    {{ $consentManager := resources.Get "js/consent-manager.js" | fingerprint }}
+    {{ $jsManifest := $.Site.Data.js_manifest }}
     <script>
         window.addEventListener('load', function() {
             var s = document.createElement('script');
-            s.src = '{{ $consentManager.RelPermalink }}';
+            s.src = '/js/{{ index $jsManifest "consent-manager" }}';
             document.body.appendChild(s);
         });
     </script>
