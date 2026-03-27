@@ -1,6 +1,6 @@
 ---
 title: {{ .Title }}
-{{ with .Description }}description: {{ . }}
+{{ with .Description }}description: {{ replaceRE `<[^>]+>` "" . }}
 {{ end }}url: {{ .RelPermalink }}
 ---
 {{- $content := .RenderShortcodes -}}

@@ -4,6 +4,10 @@
 {{- $content = replaceRE `</code></pre>\s*</div>` "\n```\n\n" $content -}}
 {{- $content = replaceRE `<pre[^>]*><code>` "```\n" $content -}}
 {{- $content = replaceRE `</code></pre>` "\n```\n\n" $content -}}
+{{- /* Phase 1b: Strip script, style, and iframe elements (content and all) */ -}}
+{{- $content = replaceRE `(?s)<script[^>]*>.*?</script>` "" $content -}}
+{{- $content = replaceRE `(?s)<style[^>]*>.*?</style>` "" $content -}}
+{{- $content = replaceRE `<iframe[^>]*/?>` "" $content -}}
 {{- /* Phase 2: Strip all block-level and decorative tags in consolidated passes */ -}}
 {{- $content = replaceRE `</?(?:span|label|div|p|blockquote|ol|ul|li|pre|section|table|thead|tbody|tr|td|th|dl|dt|dd|details|summary)[^>]*>` "" $content -}}
 {{- $content = replaceRE `(?:<i[^>]*></i>|<input[^>]*>)` "" $content -}}
@@ -28,9 +32,12 @@
 {{- /* Collapse whitespace inside markdown link brackets (from multi-line <a> tags) */ -}}
 {{- $content = replaceRE `\[\s+` "[" $content -}}
 {{- $content = replaceRE `\s+\]\(` "](" $content -}}
-{{- $content = replaceRE `<code>([^<]*)</code>` "`$1`" $content -}}
+{{- $content = replaceRE `<code[^>]*>([^<]*)</code>` "`$1`" $content -}}
 {{- $content = replaceRE `<strong>([^<]*)</strong>` "**$1**" $content -}}
 {{- $content = replaceRE `<em>([^<]*)</em>` "*$1*" $content -}}
+{{- $content = replaceRE `<img[^>]*src="([^"]*)"[^>]*alt="([^"]*)"[^>]*/?>` "![$2]($1)" $content -}}
+{{- $content = replaceRE `<img[^>]*alt="([^"]*)"[^>]*src="([^"]*)"[^>]*/?>` "![$1]($2)" $content -}}
+{{- $content = replaceRE `<img[^>]*/?>` "" $content -}}
 {{- /* Phase 6: Convert heading tags to markdown headings */ -}}
 {{- $content = replaceRE `<h1[^>]*>([^<]*)</h1>` "\n# $1\n" $content -}}
 {{- $content = replaceRE `<h2[^>]*>([^<]*)</h2>` "\n## $1\n" $content -}}
