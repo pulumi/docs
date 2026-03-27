@@ -47,7 +47,11 @@ If the selected group does not support Group Access Tokens, Pulumi Cloud prompts
 
 ### Individual user setup
 
-Separately from the org-level integration, individual users can complete a 3-step OAuth flow under **Management** > **Version control** to grant Pulumi access to their GitLab account. This is used for features like Neo Agent repository creation on the user's behalf and does not create webhooks. To remove your individual identity, select your identity on the integration card and choose **Remove Identity**.
+Separately from the org-level integration, individual users can complete a 3-step OAuth flow under **Management** > **Version control** to grant Pulumi access to their GitLab account. This is used for features like Neo Agent repository creation on the user's behalf and does not create webhooks.
+
+{{% notes type="info" %}}
+To remove your individual identity, select your identity on the integration card and choose **Remove Identity**.
+{{% /notes %}}
 
 ## Integration settings
 
