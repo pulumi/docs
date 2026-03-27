@@ -8,7 +8,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.CommandException.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.CommandException.html",
+          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.commandexception.html",
           "hash": "2fQmApkzXtaJBCBPahRe/czbAru+XnRp1f/WW9+y8kE="
         }
       },
@@ -19,7 +19,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.ConcurrentUpdateException.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.ConcurrentUpdateException.html",
+          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.concurrentupdateexception.html",
           "hash": "2DjNhlSs4VMIEI9oK2y54/nKEALQGrq71LPewPq08EM="
         }
       },
@@ -30,7 +30,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackAlreadyExistsException.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackAlreadyExistsException.html",
+          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.stackalreadyexistsexception.html",
           "hash": "/9cqPsa4ln3UU/xl8+G3JjFB5/GZIiYzZ4Y2ZUrcCpg="
         }
       },
@@ -41,7 +41,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackNotFoundException.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackNotFoundException.html",
+          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.stacknotfoundexception.html",
           "hash": "0PaYqHDM48vRiRIp0UO5zT/+JZG9gi7DZISISBBb8Rs="
         }
       },
@@ -52,7 +52,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.html",
           "hash": "UfZ8JwwFROVizRNV3a6caqFyY05R8Lem/maCyoTPjgA="
         }
       },
@@ -63,7 +63,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ConfigValue.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.ConfigValue.html",
+          "relative_path": "pulumi.automation/pulumi.automation.configvalue.html",
           "hash": "G1QMmQG1C6FFYx5f/wIwH8NHk731aV2HSTFyKTwyw0E="
         }
       },
@@ -74,7 +74,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.DestroyOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.DestroyOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.destroyoptions.html",
           "hash": "9gd8vZnk1OXod6wi3MT252s79yUQiIjodH05rZIHRyA="
         }
       },
@@ -85,7 +85,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.EnvironmentVariableValue.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.EnvironmentVariableValue.html",
+          "relative_path": "pulumi.automation/pulumi.automation.environmentvariablevalue.html",
           "hash": "W3OIHe+UBdSJk8fMYk+i6ESQrVNVy7bdqNwoWVEfn0A="
         }
       },
@@ -96,7 +96,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.CancelEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.CancelEvent.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.cancelevent.html",
           "hash": "pnLQIFL/21usgt6cK810d9zUzsUzxdVMPmp/2Lwd5vQ="
         }
       },
@@ -107,7 +107,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.DiagnosticEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.DiagnosticEvent.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.diagnosticevent.html",
           "hash": "QBYkGXgU3MnWOhY0Gco6mc2FKGv90aKju6fiVem1huo="
         }
       },
@@ -118,7 +118,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.DiffKind.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.DiffKind.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.diffkind.html",
           "hash": "MtGf4EAbMf+llE7nO1AfFgLZ4lPm3FzoN9eDfLovQy4="
         }
       },
@@ -129,7 +129,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.EngineEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.EngineEvent.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.engineevent.html",
           "hash": "4inzoCTJt9IFS1uwTh8lXzwd65YnCCuMG1Z0Af1C14Y="
         }
       },
@@ -140,7 +140,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.PolicyEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.PolicyEvent.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.policyevent.html",
           "hash": "Uj4x2s5EzT8EaF+XZyClinmguQpcE2AvPqj9Q65NLHk="
         }
       },
@@ -151,7 +151,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.PreludeEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.PreludeEvent.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.preludeevent.html",
           "hash": "YFKC8y1NYpBSq3cp7Aoo4Qcaj5G7xyh+NNWda/oo1pU="
         }
       },
@@ -162,7 +162,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.PropertyDiff.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.PropertyDiff.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.propertydiff.html",
           "hash": "dNzqyBM7T1n0Jkr3H6lPpXLv9p0eixD5aQejqtoakFM="
         }
       },
@@ -173,7 +173,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourceOperationFailedEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.ResourceOperationFailedEvent.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.resourceoperationfailedevent.html",
           "hash": "36Mu6z6Gj8JGgNDMAPhs0LIMt2Ro6JamxIZ+ZA/rSek="
         }
       },
@@ -184,7 +184,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourceOutputsEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.ResourceOutputsEvent.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.resourceoutputsevent.html",
           "hash": "CejxKsKpX8+t6E7d3WliGx5ofgRszoo4J+1KHOGgMLQ="
         }
       },
@@ -195,7 +195,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourcePreEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.ResourcePreEvent.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.resourcepreevent.html",
           "hash": "HPa10lipD3H2PFU1WjSBfjytEMpvZje0uP3vb2Aqc9c="
         }
       },
@@ -206,7 +206,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.StandardOutputEngineEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.StandardOutputEngineEvent.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.standardoutputengineevent.html",
           "hash": "zKTK7FVQw+Ugflsi/K0NZqvQ1EPR2CDU1J7oiPLm+uM="
         }
       },
@@ -217,7 +217,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.StepEventMetadata.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.StepEventMetadata.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.stepeventmetadata.html",
           "hash": "8+00JLJCXEAREbiiUxsmzQNNOW+X+9lugRYYW1ZdfZc="
         }
       },
@@ -228,7 +228,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.StepEventStateMetadata.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.StepEventStateMetadata.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.stepeventstatemetadata.html",
           "hash": "HLrlHIqPLntXOFey0x9/arDjMVh8Ng0W8xLcX9KQMfA="
         }
       },
@@ -239,7 +239,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.SummaryEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.SummaryEvent.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.summaryevent.html",
           "hash": "4uFupVO2lCOucyTdP3w+JBxThsy2RrlrmVSOq+ELvMo="
         }
       },
@@ -250,7 +250,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.html",
+          "relative_path": "pulumi.automation/pulumi.automation.events.html",
           "hash": "1qNuT5PRLu2n7WzzXRrZJ3cHHx8Lh+rS27qTSvOoYpI="
         }
       },
@@ -261,7 +261,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.MissingExpectedEventException.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.MissingExpectedEventException.html",
+          "relative_path": "pulumi.automation/pulumi.automation.exceptions.missingexpectedeventexception.html",
           "hash": "5bg9dCWKyhyd+VDdtZ5yvzBLAP5r9PRF5WqB/DzSgKU="
         }
       },
@@ -272,7 +272,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.NoSummaryEventException.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.NoSummaryEventException.html",
+          "relative_path": "pulumi.automation/pulumi.automation.exceptions.nosummaryeventexception.html",
           "hash": "SGZqy5X7v+DZmGQREsU9Dh3s0HA5mIR1eGUm0+oASRo="
         }
       },
@@ -283,7 +283,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.ProjectSettingsConflictException.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.ProjectSettingsConflictException.html",
+          "relative_path": "pulumi.automation/pulumi.automation.exceptions.projectsettingsconflictexception.html",
           "hash": "dTMFrlCPlEWmMi1A4um55mQfmjFLMDXp0paRUaukJjk="
         }
       },
@@ -294,7 +294,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.exceptions.html",
           "hash": "aeXHK5IEzTFPdkcEvbhL9Jqe3zGIi1KlgIa5Rjsr2Rw="
         }
       },
@@ -305,7 +305,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.HistoryOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.HistoryOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.historyoptions.html",
           "hash": "rKH6NRI75sSSOGLi9K0+yJ9Wi/6OsqVFPL+k6hKNxWA="
         }
       },
@@ -316,7 +316,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.InlineProgramArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.InlineProgramArgs.html",
+          "relative_path": "pulumi.automation/pulumi.automation.inlineprogramargs.html",
           "hash": "5mhJglkCnC7WyHu7e+nm1k3AkvjYkbGazpQslX1g4UU="
         }
       },
@@ -327,7 +327,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.LocalProgramArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.LocalProgramArgs.html",
+          "relative_path": "pulumi.automation/pulumi.automation.localprogramargs.html",
           "hash": "NYknDmflIaZHi4HOiNY5GLO40ZF+bo5Tw7eJZ5sgTEg="
         }
       },
@@ -338,7 +338,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.LocalWorkspace.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.LocalWorkspace.html",
+          "relative_path": "pulumi.automation/pulumi.automation.localworkspace.html",
           "hash": "H7l+Uy++JlJYrC+wOHd+TdSCglTtjujfnjBhOSMpdzI="
         }
       },
@@ -349,7 +349,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.LocalWorkspaceOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.LocalWorkspaceOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.localworkspaceoptions.html",
           "hash": "P73X6wpIM/+zTeW2pxrwnMn8rDzrr75lsEGiXlm9rAI="
         }
       },
@@ -360,7 +360,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.OperationType.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.OperationType.html",
+          "relative_path": "pulumi.automation/pulumi.automation.operationtype.html",
           "hash": "NSaRx/+Tvbe/KMWW4mRp4z6X8JPFiuUsdzGzFPuiQNg="
         }
       },
@@ -371,7 +371,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.OutputValue.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.OutputValue.html",
+          "relative_path": "pulumi.automation/pulumi.automation.outputvalue.html",
           "hash": "hYPDyRYlVD8oUlOboC/xXoS5q5e0ntCj7uyNTRKmftA="
         }
       },
@@ -382,7 +382,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PluginInfo.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.PluginInfo.html",
+          "relative_path": "pulumi.automation/pulumi.automation.plugininfo.html",
           "hash": "ZtzxzCuT1KjmwG5nShanEIT4ziuir/JNvldR26EzKxU="
         }
       },
@@ -393,7 +393,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PluginInstallOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.PluginInstallOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.plugininstalloptions.html",
           "hash": "zyXo+XVHPPh25Db4D5n5BRlaCZRWj8wK5wv0H4Y08qQ="
         }
       },
@@ -404,7 +404,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PluginKind.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.PluginKind.html",
+          "relative_path": "pulumi.automation/pulumi.automation.pluginkind.html",
           "hash": "i7wyUXGB6qqkbpePvT7IzVJgBIzNQ85iEjs8r3K/rs8="
         }
       },
@@ -415,7 +415,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PreviewOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.PreviewOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.previewoptions.html",
           "hash": "lDpRxri50395ycvGFDqSSRl2U982p8a+Ojdl+PkPONw="
         }
       },
@@ -426,7 +426,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PreviewResult.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.PreviewResult.html",
+          "relative_path": "pulumi.automation/pulumi.automation.previewresult.html",
           "hash": "PLP8kM23w8jO5X8wdczJmgAohPz0IN2zMsJ6/MdFylc="
         }
       },
@@ -437,7 +437,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectBackend.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectBackend.html",
+          "relative_path": "pulumi.automation/pulumi.automation.projectbackend.html",
           "hash": "07/PwIgxOSnPbSmRYsvRltd7yMRV2+FnJJikL5gvNIM="
         }
       },
@@ -448,7 +448,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntime.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectRuntime.html",
+          "relative_path": "pulumi.automation/pulumi.automation.projectruntime.html",
           "hash": "oU1Ql/CmEJzOiF/gAFIimbBgot4jHimlJEXGzn142W4="
         }
       },
@@ -459,7 +459,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntimeName.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectRuntimeName.html",
+          "relative_path": "pulumi.automation/pulumi.automation.projectruntimename.html",
           "hash": "wRxcy4BfaA3m/x3DgvBg5jkTYDYPeR/eFrEoyu2EzNE="
         }
       },
@@ -470,7 +470,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntimeOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectRuntimeOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.projectruntimeoptions.html",
           "hash": "1tE6ZAePkNFxvMTF6Lgjr2Rp25ux0JyAU0a3+h3sfjk="
         }
       },
@@ -481,7 +481,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectSettings.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectSettings.html",
+          "relative_path": "pulumi.automation/pulumi.automation.projectsettings.html",
           "hash": "WWLnh5qajGmEf3IyA3Q3Tt0ngUISN/WV47zOCMVUykQ="
         }
       },
@@ -492,7 +492,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectTemplate.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectTemplate.html",
+          "relative_path": "pulumi.automation/pulumi.automation.projecttemplate.html",
           "hash": "4YnXYqDrS2lUnVsi2ZlaZzaxMLNw1tsk2mxfOnqtlo4="
         }
       },
@@ -503,7 +503,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectTemplateConfigValue.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectTemplateConfigValue.html",
+          "relative_path": "pulumi.automation/pulumi.automation.projecttemplateconfigvalue.html",
           "hash": "hH0/P6t4qa4QGsNLIeeZIugS8Ko/yiE+igFbL1oH7O4="
         }
       },
@@ -514,7 +514,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PulumiFn.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.PulumiFn.html",
+          "relative_path": "pulumi.automation/pulumi.automation.pulumifn.html",
           "hash": "wyGFRzjI9VT3BXtbbxJb7yMf7gy6UQzOXUmlP+6nPog="
         }
       },
@@ -525,7 +525,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RefreshOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.RefreshOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.refreshoptions.html",
           "hash": "Aix7HxGYz+D3ECQvndOt+ps7Xqb4ITigaqDsEj4riEM="
         }
       },
@@ -536,7 +536,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteDestroyOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteDestroyOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.remotedestroyoptions.html",
           "hash": "4RVj2Z457vGtRYYmXksXvm+N7NoDem3v+kYDoYSAObc="
         }
       },
@@ -547,7 +547,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteGitAuthArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteGitAuthArgs.html",
+          "relative_path": "pulumi.automation/pulumi.automation.remotegitauthargs.html",
           "hash": "jpNnSjcpT/ro8rfyw7vaAnS3WPh+Hopu4a3r4VgpPKI="
         }
       },
@@ -558,7 +558,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteGitProgramArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteGitProgramArgs.html",
+          "relative_path": "pulumi.automation/pulumi.automation.remotegitprogramargs.html",
           "hash": "RZs0PrUUjo/krIVFO6VIwhwUQmd6GGIh5eboc1ocEVw="
         }
       },
@@ -569,7 +569,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemotePreviewOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.RemotePreviewOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.remotepreviewoptions.html",
           "hash": "jNcH85BY31DjC1i6haNxFLxKMWUwakUOQ32QgapyO7g="
         }
       },
@@ -580,7 +580,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteRefreshOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteRefreshOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.remoterefreshoptions.html",
           "hash": "bIvuorvLXAjWJUitEaKSQTT2mvBOuslffwiPL0b0aOQ="
         }
       },
@@ -591,7 +591,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteUpOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteUpOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.remoteupoptions.html",
           "hash": "/tYDa8qmR+9taPEgQY+MWHIc0yvn7LH28nfBpOKN9eQ="
         }
       },
@@ -602,7 +602,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteUpdateOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteUpdateOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.remoteupdateoptions.html",
           "hash": "ke7GI8IRA0jlRGZiMW89x5p+ZkMrZyXOYiZihnty9SQ="
         }
       },
@@ -613,7 +613,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteWorkspace.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteWorkspace.html",
+          "relative_path": "pulumi.automation/pulumi.automation.remoteworkspace.html",
           "hash": "K1DUZ/OWpv2XrsjahojKQ/CSl3/m+uEqPWRbLnTHb7w="
         }
       },
@@ -624,7 +624,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteWorkspaceOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteWorkspaceOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.remoteworkspaceoptions.html",
           "hash": "we50MBc48qteiHJAdyCRUifbIfssFx/EAgoeQs5VR9Y="
         }
       },
@@ -635,7 +635,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteWorkspaceStack.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteWorkspaceStack.html",
+          "relative_path": "pulumi.automation/pulumi.automation.remoteworkspacestack.html",
           "hash": "8NmNhu0SicQ0WoeIryZimPks4poTxEQLqlfQR7FYs0s="
         }
       },
@@ -646,7 +646,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Serialization.LocalSerializer.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Serialization.LocalSerializer.html",
+          "relative_path": "pulumi.automation/pulumi.automation.serialization.localserializer.html",
           "hash": "KMQeBh2LpA2xmBI/BLHsZ3MdP5q4Ulvu4fquUUWVxOs="
         }
       },
@@ -657,7 +657,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Serialization.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Serialization.html",
+          "relative_path": "pulumi.automation/pulumi.automation.serialization.html",
           "hash": "LDCI/OJxVE8nE9PG9DzSzfTdGev2N9IrRHDHgCo1kzQ="
         }
       },
@@ -668,7 +668,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackDeployment.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.StackDeployment.html",
+          "relative_path": "pulumi.automation/pulumi.automation.stackdeployment.html",
           "hash": "GBGW/aMqiOyOrADN25Awqf/lbtCDByodusssPowzASg="
         }
       },
@@ -679,7 +679,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackSettings.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.StackSettings.html",
+          "relative_path": "pulumi.automation/pulumi.automation.stacksettings.html",
           "hash": "6YH93l++jOurJmeGdmoNQ0D9tjvoxPTn0hCKgohxuSE="
         }
       },
@@ -690,7 +690,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackSettingsConfigValue.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.StackSettingsConfigValue.html",
+          "relative_path": "pulumi.automation/pulumi.automation.stacksettingsconfigvalue.html",
           "hash": "u/VYcjo7b//Yvlhuv+2yQVTEUiMnyN5p127tDyScniM="
         }
       },
@@ -701,7 +701,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackSummary.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.StackSummary.html",
+          "relative_path": "pulumi.automation/pulumi.automation.stacksummary.html",
           "hash": "byVof/czMRu4VaMozoMNYq+s5KmcgYDoQQPPBU9oVCc="
         }
       },
@@ -712,7 +712,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.upoptions.html",
           "hash": "zx1VDV1H1P8H12zz9WGxUW73PBN6LzfAmJYa2ZVat1Q="
         }
       },
@@ -723,7 +723,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpResult.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpResult.html",
+          "relative_path": "pulumi.automation/pulumi.automation.upresult.html",
           "hash": "UWG/y/V27x4e1PLklEoCGe2sf/IlddrErH85bjLd5o4="
         }
       },
@@ -734,7 +734,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateKind.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateKind.html",
+          "relative_path": "pulumi.automation/pulumi.automation.updatekind.html",
           "hash": "9qzdGFwO8enqGbEi1nxiagDWdNJMZFIzFZcdg1A3vQo="
         }
       },
@@ -745,7 +745,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateOptions.html",
+          "relative_path": "pulumi.automation/pulumi.automation.updateoptions.html",
           "hash": "Qg4Ny3DzalDkhvOm31aM98GqA0bDvyACplehwdJZm8A="
         }
       },
@@ -756,7 +756,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateResult.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateResult.html",
+          "relative_path": "pulumi.automation/pulumi.automation.updateresult.html",
           "hash": "xxGtdj9GbNTa4UIuapTrgPxsc/QBgvFZTG0WF4WGJdk="
         }
       },
@@ -767,7 +767,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateState.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateState.html",
+          "relative_path": "pulumi.automation/pulumi.automation.updatestate.html",
           "hash": "CMX/bsFzb4k8JiFj6ma45gRU2QTK67Uko5XYpRRecaY="
         }
       },
@@ -778,7 +778,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateSummary.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateSummary.html",
+          "relative_path": "pulumi.automation/pulumi.automation.updatesummary.html",
           "hash": "dVyVDwvXsbWoeTgIWCJ/kDMT5VO6sMiSox7eXG87TGk="
         }
       },
@@ -789,7 +789,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.WhoAmIResult.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.WhoAmIResult.html",
+          "relative_path": "pulumi.automation/pulumi.automation.whoamiresult.html",
           "hash": "pIGe/ppsh3O9zWx+7G0/7qZb7pm0Rbjo8xKaXd7yoHg="
         }
       },
@@ -800,7 +800,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Workspace.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.Workspace.html",
+          "relative_path": "pulumi.automation/pulumi.automation.workspace.html",
           "hash": "MSZ+T1Wnesc1EgAxhalejScIGT1AESeFQ5ekAMKf3OM="
         }
       },
@@ -811,7 +811,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.WorkspaceStack.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html",
+          "relative_path": "pulumi.automation/pulumi.automation.workspacestack.html",
           "hash": "qsLFQd5tkXfRgir0+Kd6hw2TMktyY2lSBhpfIaLrzZw="
         }
       },
@@ -822,7 +822,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.WorkspaceStackState.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.WorkspaceStackState.html",
+          "relative_path": "pulumi.automation/pulumi.automation.workspacestackstate.html",
           "hash": "ODYy53nJerAd6qdf1bypECFpPmEcvgtceuGvkjcwxdw="
         }
       },
@@ -833,7 +833,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/Pulumi.Automation.html",
+          "relative_path": "pulumi.automation/pulumi.automation.html",
           "hash": "IFfaGNphBKJencsSo3XgCtko0MZv7fg60cZUO0S7A4w="
         }
       },
@@ -844,7 +844,7 @@
       "source_relative_path": "metadata/Pulumi.Automation/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi.Automation/toc.html",
+          "relative_path": "pulumi.automation/toc.html",
           "hash": "rJPrnzSns47f9HCTyFK/hD5cXZYdD38VPm+0NZAnMtU="
         }
       },
@@ -855,7 +855,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Alias.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Alias.html",
+          "relative_path": "pulumi/pulumi.alias.html",
           "hash": "ScU/Z+tpzGrzg2hWAFvnitRqiAA9xCJvBUYhc48nzyo="
         }
       },
@@ -866,7 +866,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Archive.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Archive.html",
+          "relative_path": "pulumi/pulumi.archive.html",
           "hash": "3tX6XmmBxFkC8Leybc8yzcdaqw+12UCnMLGvFwEZbSs="
         }
       },
@@ -877,7 +877,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Asset.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Asset.html",
+          "relative_path": "pulumi/pulumi.asset.html",
           "hash": "JqnppqkBKRqZ/xRWSBqb5urhwvasegQfrV4hThs6OUo="
         }
       },
@@ -888,7 +888,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.AssetArchive.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.AssetArchive.html",
+          "relative_path": "pulumi/pulumi.assetarchive.html",
           "hash": "lERIiii6bgkFtDgx7LREO2SGVZ8LVmo4gSeQocFwWHc="
         }
       },
@@ -899,7 +899,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.AssetOrArchive.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.AssetOrArchive.html",
+          "relative_path": "pulumi/pulumi.assetorarchive.html",
           "hash": "yGNiyp4lvLIFH0i60xRTB7U0glS59rmc0SUnDq+lHqE="
         }
       },
@@ -910,7 +910,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.CallArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.CallArgs.html",
+          "relative_path": "pulumi/pulumi.callargs.html",
           "hash": "SvT1kYF6PnD9x27x6bAVAgLqpxo+zujbJuRz6oR0W1s="
         }
       },
@@ -921,7 +921,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.CallOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.CallOptions.html",
+          "relative_path": "pulumi/pulumi.calloptions.html",
           "hash": "teIlWlQUegzzacJQNgqYts5rIEtoTVBXQWxMkUi9LAo="
         }
       },
@@ -932,7 +932,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.ComponentResource.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.ComponentResource.html",
+          "relative_path": "pulumi/pulumi.componentresource.html",
           "hash": "DX0PeDgS8Fb6PCCMXKlNo3lm0dNzTJZRxp4wbduVsp4="
         }
       },
@@ -943,7 +943,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.ComponentResourceOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.ComponentResourceOptions.html",
+          "relative_path": "pulumi/pulumi.componentresourceoptions.html",
           "hash": "qREB7YvvOj/GBw0fh1F5TsF31zfiD75rxud/a256ZrE="
         }
       },
@@ -954,7 +954,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Config.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Config.html",
+          "relative_path": "pulumi/pulumi.config.html",
           "hash": "z/reHdYQerZk3zmDXsCjBihwYak5tIYHLw1qYKweXFw="
         }
       },
@@ -965,7 +965,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.CustomResource.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.CustomResource.html",
+          "relative_path": "pulumi/pulumi.customresource.html",
           "hash": "zfKJQ9BuF51YCtBv6dIDt/TlbBKQVzcZ2yVPJDgKUdo="
         }
       },
@@ -976,7 +976,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.CustomResourceOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.CustomResourceOptions.html",
+          "relative_path": "pulumi/pulumi.customresourceoptions.html",
           "hash": "10gdcwjhmEHgnn9uperm6COc3NKHgO70txmvXuIdimM="
         }
       },
@@ -987,7 +987,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.CustomTimeouts.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.CustomTimeouts.html",
+          "relative_path": "pulumi/pulumi.customtimeouts.html",
           "hash": "chPShoJRTpAWnaIlTWoqxQI4/Lk8RKdwZvwIXuwCKQs="
         }
       },
@@ -998,7 +998,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Deployment.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Deployment.html",
+          "relative_path": "pulumi/pulumi.deployment.html",
           "hash": "ZdYzWU2OrMI+zGG8BrSFnBXnBnNxUADKgiuyqf4Es/s="
         }
       },
@@ -1009,7 +1009,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.DeploymentInstance.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.DeploymentInstance.html",
+          "relative_path": "pulumi/pulumi.deploymentinstance.html",
           "hash": "k8RTPXKaD+vH9+kbNMxmpgeGqom5atshnA84kvsU5E4="
         }
       },
@@ -1020,7 +1020,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.DictionaryInvokeArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.DictionaryInvokeArgs.html",
+          "relative_path": "pulumi/pulumi.dictionaryinvokeargs.html",
           "hash": "YnAfqXLL2zUulEAC0WIZBgQ0LH0uZVETW/VtDhw6ebo="
         }
       },
@@ -1031,7 +1031,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.DictionaryResourceArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.DictionaryResourceArgs.html",
+          "relative_path": "pulumi/pulumi.dictionaryresourceargs.html",
           "hash": "aJwfAJUBcm7nyOcTg2ynaM8FeTu+wBOEsSOX2zVpMmA="
         }
       },
@@ -1042,7 +1042,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.EnumTypeAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.EnumTypeAttribute.html",
+          "relative_path": "pulumi/pulumi.enumtypeattribute.html",
           "hash": "7sQ4wlfrsVtcmMa2nmtcdnNEQzHY/arIA8agLcIb/64="
         }
       },
@@ -1053,7 +1053,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CheckFailure.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.CheckFailure.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.checkfailure.html",
           "hash": "fW1IqZxVaa1tT5d8eyRyf5D4qY4oXVNk7Z60djW8Vi4="
         }
       },
@@ -1064,7 +1064,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CheckRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.CheckRequest.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.checkrequest.html",
           "hash": "FPTLdxCYwm9EaNjqFVie1uLvC+nZagJZHSyJZlaecUU="
         }
       },
@@ -1075,7 +1075,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CheckResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.CheckResponse.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.checkresponse.html",
           "hash": "zlRfFteFpkP6teZq95Ow3KBuRJd0uxyI6+6Y8plgy+s="
         }
       },
@@ -1086,7 +1086,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ConfigureRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.ConfigureRequest.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.configurerequest.html",
           "hash": "nkzfSlJ/dqyJBkJxOGTR3ynCA9JKycccEdVD/YqaaH8="
         }
       },
@@ -1097,7 +1097,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ConfigureResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.ConfigureResponse.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.configureresponse.html",
           "hash": "GWoG1O29DirZ76LVeFCT2Q5FToYlgpl12QdUJrp9wVM="
         }
       },
@@ -1108,7 +1108,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CreateRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.CreateRequest.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.createrequest.html",
           "hash": "/NK2O/XY5KBtJQF2JfSj5Nj5aspXTkCfRfnkDija87A="
         }
       },
@@ -1119,7 +1119,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CreateResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.CreateResponse.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.createresponse.html",
           "hash": "qg9NC0onyJcbXSUg/dFBHUnlTLLlsMZXhhID9wnNMtA="
         }
       },
@@ -1130,7 +1130,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.DeleteRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.DeleteRequest.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.deleterequest.html",
           "hash": "URb1JUUAs8LUwyh6e21Aw3FxTCEaNt/M0BsNYzK3rzk="
         }
       },
@@ -1141,7 +1141,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.DiffRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.DiffRequest.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.diffrequest.html",
           "hash": "kFAyIkM1cAHKapHtGB3hRnr/Np0mJCg3HdnKAU77v64="
         }
       },
@@ -1152,7 +1152,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.DiffResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.DiffResponse.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.diffresponse.html",
           "hash": "UjcOH/C5XMTarbmOl2jkiu1OoRnkpOsLKEGNqmaBPEo="
         }
       },
@@ -1163,7 +1163,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.GetSchemaRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.GetSchemaRequest.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.getschemarequest.html",
           "hash": "pR/5Qtc8wyYMfvcP00b5JyWqsuuPzuDEpEHaD57HEFc="
         }
       },
@@ -1174,7 +1174,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.GetSchemaResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.GetSchemaResponse.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.getschemaresponse.html",
           "hash": "Hm6IJZrD/vWeGxpdcKvQiD0+f1mplBWU/8820lSrRKQ="
         }
       },
@@ -1185,7 +1185,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.IHost.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.IHost.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.ihost.html",
           "hash": "uCY7Dlwa8FGzfd4C5Z1StnBOZEcdJEtiW3JIhOShqj0="
         }
       },
@@ -1196,7 +1196,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.InvokeRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.InvokeRequest.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.invokerequest.html",
           "hash": "zXuwjeZmWEPzc11W8pVVCHcCdv82erTrRE88nQyRBsA="
         }
       },
@@ -1207,7 +1207,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.InvokeResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.InvokeResponse.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.invokeresponse.html",
           "hash": "7YaEL7O8pH8Wv4128ZOVB/5o4eS3QgH1SvttY63wC+g="
         }
       },
@@ -1218,7 +1218,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.LogMessage.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.LogMessage.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.logmessage.html",
           "hash": "rzq4X+gK20cuvmF1DGTdBDoeJNoHZmQN+OQiLev+f6k="
         }
       },
@@ -1229,7 +1229,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.LogSeverity.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.LogSeverity.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.logseverity.html",
           "hash": "jSN/zms7ycjD7z+xWc0aUoPSCUf0F3ihy+Pqt0xZThQ="
         }
       },
@@ -1240,7 +1240,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.OutputReference.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.OutputReference.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.outputreference.html",
           "hash": "nDvIZQFjQoUQLY4Xl4D5mUr1aniYfiaiEgGxcb3cNNM="
         }
       },
@@ -1251,7 +1251,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyDiff.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.PropertyDiff.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.propertydiff.html",
           "hash": "XRBvqda9RiNhdz+ziu1TfuqU1w/5vrRWhOYI0w+HYRU="
         }
       },
@@ -1262,7 +1262,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyDiffKind.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.PropertyDiffKind.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.propertydiffkind.html",
           "hash": "izTkuZXcZtMlgZYX9dQhWoCtfRODaDGJvKq8cNzxulc="
         }
       },
@@ -1273,7 +1273,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyValue.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.PropertyValue.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.propertyvalue.html",
           "hash": "qZ3ehB+nuWRNpN7mHjbDSqrOxwXwf+efJzZKkRjQ1Po="
         }
       },
@@ -1284,7 +1284,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyValueType.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.PropertyValueType.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.propertyvaluetype.html",
           "hash": "+LDYBUFJLCp2qLCiihvSbHGEnqJwX4kTfRtcdxWMleA="
         }
       },
@@ -1295,7 +1295,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.Provider.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.Provider.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.provider.html",
           "hash": "eapBxm13/f7M5tHTs79VMspVr8FZKQVG86hvGe6sIfA="
         }
       },
@@ -1306,7 +1306,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ReadRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.ReadRequest.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.readrequest.html",
           "hash": "sGUUsGx9KUtJNTOcQO+M2+qgezCkiNB52tt7S1K72mU="
         }
       },
@@ -1317,7 +1317,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ReadResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.ReadResponse.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.readresponse.html",
           "hash": "YBpp5xsC82YOT73tBywCd5fPrUSMJ7+Z+3g0r9P8+E4="
         }
       },
@@ -1328,7 +1328,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ResourceReference.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.ResourceReference.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.resourcereference.html",
           "hash": "y5XwKQGBupfTm/dNefDkahpnyIBOEZTIutUcXN4Kdc8="
         }
       },
@@ -1339,7 +1339,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.UpdateRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.UpdateRequest.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.updaterequest.html",
           "hash": "bnuA1MLMKSYZKskZFatAqPZgZKSDWA/parsfmvj5ILA="
         }
       },
@@ -1350,7 +1350,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.UpdateResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.UpdateResponse.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.updateresponse.html",
           "hash": "N4zUtIIv7fTn2+PWnvsK0lej+fjJWjaTKjdVJ+NPRXM="
         }
       },
@@ -1361,7 +1361,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Experimental.Provider.html",
+          "relative_path": "pulumi/pulumi.experimental.provider.html",
           "hash": "UKfGzfn0ATxixjdMJKjZLqP5QAhBBIttj2AOW+C52mI="
         }
       },
@@ -1372,7 +1372,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.FileArchive.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.FileArchive.html",
+          "relative_path": "pulumi/pulumi.filearchive.html",
           "hash": "NqzcdnBJdNgqpLiM3oX4NgyAMSQWPb9SazfSOWtCNjw="
         }
       },
@@ -1383,7 +1383,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.FileAsset.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.FileAsset.html",
+          "relative_path": "pulumi/pulumi.fileasset.html",
           "hash": "/6hL7lZHlAKgfzBmyCf51bbUY1qsSJidVZwFNz1CPps="
         }
       },
@@ -1394,7 +1394,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Input-1.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Input-1.html",
+          "relative_path": "pulumi/pulumi.input-1.html",
           "hash": "lTU4ThS/98fbhLu0RG4MhOUU3k1T92+mnjJI/YfQ+6E="
         }
       },
@@ -1405,7 +1405,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.InputArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.InputArgs.html",
+          "relative_path": "pulumi/pulumi.inputargs.html",
           "hash": "vAA3TM2ho3fm+/cYVImHTlwJoz5AqG/YWcJthQV3Mls="
         }
       },
@@ -1416,7 +1416,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.InputAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.InputAttribute.html",
+          "relative_path": "pulumi/pulumi.inputattribute.html",
           "hash": "ZrXd2pMI0eNj3+eMP+0FLBdIMIhBO4EtbRhCantPFrI="
         }
       },
@@ -1427,7 +1427,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.InputExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.InputExtensions.html",
+          "relative_path": "pulumi/pulumi.inputextensions.html",
           "hash": "8p1A+UXloEjB8HQRFkJzPzaUDtT2hz+Rni+x2phKwyc="
         }
       },
@@ -1438,7 +1438,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.InputJson.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.InputJson.html",
+          "relative_path": "pulumi/pulumi.inputjson.html",
           "hash": "Nl2fYmcDvQ6O9lBQTFQ6sJ0KrxZhajmza/FAiuwj3dg="
         }
       },
@@ -1449,7 +1449,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.InputList-1.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.InputList-1.html",
+          "relative_path": "pulumi/pulumi.inputlist-1.html",
           "hash": "QejJR1rRHaFMH1yLVP7w9rv1/aPu8/YTRRebgTFKAeY="
         }
       },
@@ -1460,7 +1460,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.InputListExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.InputListExtensions.html",
+          "relative_path": "pulumi/pulumi.inputlistextensions.html",
           "hash": "vZgaj2nu/HJTuoO3DuO5/mcLsKjo20wkoIg5UcIn938="
         }
       },
@@ -1471,7 +1471,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.InputMap-1.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.InputMap-1.html",
+          "relative_path": "pulumi/pulumi.inputmap-1.html",
           "hash": "yu5KkD5fVWeoR2xrJuzRwuk+P0z6Im+gRce6rQa5pYI="
         }
       },
@@ -1482,7 +1482,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.InputMapExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.InputMapExtensions.html",
+          "relative_path": "pulumi/pulumi.inputmapextensions.html",
           "hash": "T5dpCrynRZEgWw11P7oIR67zDnJZ439/cWX+pnz9Y4o="
         }
       },
@@ -1493,7 +1493,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.InputUnion-2.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.InputUnion-2.html",
+          "relative_path": "pulumi/pulumi.inputunion-2.html",
           "hash": "OGl8itoYGvtQSMp5WweDNn20RCPQ9eE0Et0ZgtvWxho="
         }
       },
@@ -1504,7 +1504,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.InvokeArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.InvokeArgs.html",
+          "relative_path": "pulumi/pulumi.invokeargs.html",
           "hash": "eZgr24PPcOxBSYzTcZHJD12dSqg5EvJTG7mEqBmsopk="
         }
       },
@@ -1515,7 +1515,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.InvokeOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.InvokeOptions.html",
+          "relative_path": "pulumi/pulumi.invokeoptions.html",
           "hash": "TW6xXFdVdW4CNaZAE2mq1MI5QdwHVMiru9CfNJRnMKk="
         }
       },
@@ -1526,7 +1526,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Log.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Log.html",
+          "relative_path": "pulumi/pulumi.log.html",
           "hash": "RmFcgwV4LaU4TrxRdi7E0RaLgsDKOiZuh6El/2qAXlM="
         }
       },
@@ -1537,7 +1537,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.LogException.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.LogException.html",
+          "relative_path": "pulumi/pulumi.logexception.html",
           "hash": "Dlxx2dNtESbatafjCOlxUngOHnWGz/mZb6B9tx+5yd8="
         }
       },
@@ -1548,7 +1548,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Output-1.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Output-1.html",
+          "relative_path": "pulumi/pulumi.output-1.html",
           "hash": "zWgKjmxrizlLwKvAWa9/8YSs3u66+3+dUVeQ5uf5umA="
         }
       },
@@ -1559,7 +1559,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Output.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Output.html",
+          "relative_path": "pulumi/pulumi.output.html",
           "hash": "MdlC2MRJlXwuGqGiM1+h7zvI7e2Ayxt6iGxi+0DqQxc="
         }
       },
@@ -1570,7 +1570,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.OutputAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.OutputAttribute.html",
+          "relative_path": "pulumi/pulumi.outputattribute.html",
           "hash": "PMBjmdXLE0RdwC2JSEWno0uBpjcQUqsqmsJYsP6xjfU="
         }
       },
@@ -1581,7 +1581,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.OutputConstructorAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.OutputConstructorAttribute.html",
+          "relative_path": "pulumi/pulumi.outputconstructorattribute.html",
           "hash": "oXsGoGCkkFAkqVKA91avZGDWB2l8eHsh1hGtaasc0Ys="
         }
       },
@@ -1592,7 +1592,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.OutputExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.OutputExtensions.html",
+          "relative_path": "pulumi/pulumi.outputextensions.html",
           "hash": "tKeofm4CypaIoOaGB6SJgk5jAETv8m8M6f2DMzoUJ9w="
         }
       },
@@ -1603,7 +1603,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.OutputTypeAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.OutputTypeAttribute.html",
+          "relative_path": "pulumi/pulumi.outputtypeattribute.html",
           "hash": "enEsL/YoskLJvb8UVsnEEiIJZ2DLNNxZiQuWoyatORs="
         }
       },
@@ -1614,7 +1614,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.ProviderResource.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.ProviderResource.html",
+          "relative_path": "pulumi/pulumi.providerresource.html",
           "hash": "GYjcKdURL+KtsgQVbbaxPbmCB/TN7Ks/k6VReAkLjLs="
         }
       },
@@ -1625,7 +1625,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.RemoteArchive.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.RemoteArchive.html",
+          "relative_path": "pulumi/pulumi.remotearchive.html",
           "hash": "UzTj+xg9PcZfBQyQZqBEuicamDNZJgRLLjQWA1mgF/E="
         }
       },
@@ -1636,7 +1636,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.RemoteAsset.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.RemoteAsset.html",
+          "relative_path": "pulumi/pulumi.remoteasset.html",
           "hash": "0VETyFk9nKty+uQNP+uqEyVjrwPUC90dm6TP3n8Vjoc="
         }
       },
@@ -1647,7 +1647,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Resource.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Resource.html",
+          "relative_path": "pulumi/pulumi.resource.html",
           "hash": "7Y1gbTrThXMWx/Q2FtRbvaR0TXhG/CnfbGrjtKRq6gA="
         }
       },
@@ -1658,7 +1658,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.ResourceArgs.html",
+          "relative_path": "pulumi/pulumi.resourceargs.html",
           "hash": "3rw9ahht0GE+bCRMlVFgP0q9FtlB0+8VVGRs1bkxtHQ="
         }
       },
@@ -1669,7 +1669,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceException.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.ResourceException.html",
+          "relative_path": "pulumi/pulumi.resourceexception.html",
           "hash": "ZVVVBx8DTsyrBs/pQmNxu+7G2LAVbvMdoBIHLKcZHgc="
         }
       },
@@ -1680,7 +1680,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.ResourceOptions.html",
+          "relative_path": "pulumi/pulumi.resourceoptions.html",
           "hash": "wfB13yrHRIOuPYJb43St5GAdgzIlLbgljm8RYiftLVY="
         }
       },
@@ -1691,7 +1691,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransformation.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.ResourceTransformation.html",
+          "relative_path": "pulumi/pulumi.resourcetransformation.html",
           "hash": "xOdPy/Kj8ia4iqjQHq553F8/x+Ld9cntERXZ+LNLJzk="
         }
       },
@@ -1702,7 +1702,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransformationArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.ResourceTransformationArgs.html",
+          "relative_path": "pulumi/pulumi.resourcetransformationargs.html",
           "hash": "cSu9bOeDEE9jSbjq5XeoRbfzADrF9BentXog0fe+Yss="
         }
       },
@@ -1713,7 +1713,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransformationResult.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.ResourceTransformationResult.html",
+          "relative_path": "pulumi/pulumi.resourcetransformationresult.html",
           "hash": "t1Fj2Mw7HwN1MGJYvrv/aLS0z4DUmbeUrAVh1TGmP3M="
         }
       },
@@ -1724,7 +1724,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTypeAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.ResourceTypeAttribute.html",
+          "relative_path": "pulumi/pulumi.resourcetypeattribute.html",
           "hash": "Aq+faQXeNRG5sblFp5KzevYwwltBFiG+1jCew8lSghk="
         }
       },
@@ -1735,7 +1735,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Stack.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Stack.html",
+          "relative_path": "pulumi/pulumi.stack.html",
           "hash": "uahag4FC34kpAiWrHGbM+0xLPw/WQSZ4vz3oTx2677k="
         }
       },
@@ -1746,7 +1746,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.StackOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.StackOptions.html",
+          "relative_path": "pulumi/pulumi.stackoptions.html",
           "hash": "XoTBOBN87jUXmncm8ri6fc5i44m3ugW7Aoq4TcAccjI="
         }
       },
@@ -1757,7 +1757,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.StackReference.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.StackReference.html",
+          "relative_path": "pulumi/pulumi.stackreference.html",
           "hash": "R8zW5syYGHJ9rff+zQH815+1K5+MvKC1xeapG7b59NM="
         }
       },
@@ -1768,7 +1768,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.StackReferenceArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.StackReferenceArgs.html",
+          "relative_path": "pulumi/pulumi.stackreferenceargs.html",
           "hash": "Cnkigp7P4h8k0q3OwMfQpacTjDeX29CVr7Z+QabXp5E="
         }
       },
@@ -1779,7 +1779,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.StackReferenceOutputDetails.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.StackReferenceOutputDetails.html",
+          "relative_path": "pulumi/pulumi.stackreferenceoutputdetails.html",
           "hash": "Y9C9E/4oSKdWEt6lC9ykgoaqqhLbap8kR+FJ5hiVImk="
         }
       },
@@ -1790,7 +1790,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.StringAsset.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.StringAsset.html",
+          "relative_path": "pulumi/pulumi.stringasset.html",
           "hash": "Kxv9uH1pXgtAOL/u5xYZagENHcTzGRy5Lqa3ihHxavk="
         }
       },
@@ -1801,7 +1801,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Testing.IMocks.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Testing.IMocks.html",
+          "relative_path": "pulumi/pulumi.testing.imocks.html",
           "hash": "e2pc/c+xEdxZG8rhJTB1mwAZcthVJxXsbNenlXdNpp8="
         }
       },
@@ -1812,7 +1812,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Testing.MockCallArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Testing.MockCallArgs.html",
+          "relative_path": "pulumi/pulumi.testing.mockcallargs.html",
           "hash": "zBzgorMJFbINP8SajAQx3xWDNDsM+1EnX7xtl3eDFdY="
         }
       },
@@ -1823,7 +1823,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Testing.MockResourceArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Testing.MockResourceArgs.html",
+          "relative_path": "pulumi/pulumi.testing.mockresourceargs.html",
           "hash": "WGIFdh4hGC+xhoi7YQ+pXjCAU3VMD80zC6LPXUA8CSw="
         }
       },
@@ -1834,7 +1834,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Testing.TestOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Testing.TestOptions.html",
+          "relative_path": "pulumi/pulumi.testing.testoptions.html",
           "hash": "WRMQ4qtBECvhOyXNTyucZVLHTpOSzybXZKz8kQ74NiE="
         }
       },
@@ -1845,7 +1845,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Testing.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Testing.html",
+          "relative_path": "pulumi/pulumi.testing.html",
           "hash": "hpoUOumJupsKGTIRZ2qyMm9znHNR3KMWNwudHWGmC2U="
         }
       },
@@ -1856,7 +1856,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Union-2.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Union-2.html",
+          "relative_path": "pulumi/pulumi.union-2.html",
           "hash": "ZQANang4iSBE4TxO/Xkgp/fr1R+bD+hGoDFnSsdz7WI="
         }
       },
@@ -1867,7 +1867,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Urn.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.Urn.html",
+          "relative_path": "pulumi/pulumi.urn.html",
           "hash": "ox3M5UeQ5cUsB8R646Jk75W2st7FaQJ1hL+tPV2pWxQ="
         }
       },
@@ -1878,7 +1878,7 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/Pulumi.html",
+          "relative_path": "pulumi/pulumi.html",
           "hash": "y6cp89I1WcTYOvi8qzHnGsOYj5Ro4GkPaoINnZEvZtE="
         }
       },
@@ -1889,7 +1889,7 @@
       "source_relative_path": "metadata/Pulumi/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "Pulumi/toc.html",
+          "relative_path": "pulumi/toc.html",
           "hash": "E+9VxSAx+naFcJY29mGd0VcB9itSl6/9Xvkj5iQsNYA="
         }
       },

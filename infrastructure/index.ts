@@ -74,6 +74,19 @@ const config = {
     wafRateLimit: stackConfig.getNumber("wafRateLimit") || 500,
 };
 
+// CloudFront Function to lowercase URIs for .NET SDK docs so that
+// case-insensitive requests resolve to the lowercase S3 keys.
+const dotnetLowercaseFunction = new aws.cloudfront.Function("dotnet-lowercase-uri", {
+    runtime: "cloudfront-js-2.0",
+    comment: "Lowercases URI path for .NET SDK doc requests",
+    code: `function handler(event) {
+    var request = event.request;
+    request.uri = request.uri.toLowerCase();
+    return request;
+}`,
+    publish: true,
+});
+
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
 
@@ -750,6 +763,14 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...registryBehaviors,
         ...guidesBehaviors,
         ...answersBehaviors,
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/docs/reference/pkg/dotnet/*",
+            functionAssociations: [{
+                eventType: "viewer-request",
+                functionArn: dotnetLowercaseFunction.arn,
+            }],
+        },
         {
             ...baseCacheBehavior,
             targetOriginId: uploadsBucket.arn,
