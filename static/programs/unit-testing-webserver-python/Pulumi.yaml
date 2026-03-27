@@ -1,0 +1,6 @@
+name: unit-testing-webserver-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: A sample Pulumi program used in the unit testing guide.
