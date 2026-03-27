@@ -1,6 +1,6 @@
 ---
 date: 2025-01-01
-url: https://www.pulumi.com/blog/pulumi-neo-now-supports-agentsmd/
+link_url: https://www.pulumi.com/blog/pulumi-neo-now-supports-agentsmd/
 social:
     twitter: "Test 1: Text with URL link card. Ignore this test post."
     linkedin: "Test 1: Text with URL link card. Ignore this test post."

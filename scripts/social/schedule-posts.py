@@ -21,7 +21,7 @@ Post sources:
   - Blog posts: content/blog/*/index.md with a social: block in frontmatter.
     URL is derived from the file path. Meta image used for LinkedIn.
   - Standalone posts: content/social/*.md with frontmatter. Optional
-    url and per-platform media. Each platform entry can be a string (text
+    link_url and per-platform media. Each platform entry can be a string (text
     only) or an object with text and media fields.
 
 Platform strategy:
@@ -842,7 +842,7 @@ def build_social_entries(changed_files):
 
         meta = frontmatter.load(filepath).metadata
         social = meta.get("social") or {}
-        url = meta.get("url")
+        url = meta.get("link_url")
         base_dir = Path(filepath).parent
 
         platforms = {}
