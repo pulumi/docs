@@ -1,0 +1,24 @@
+name: unit-testing-webserver-yaml
+runtime: yaml
+description: A sample Pulumi program used in the unit testing guide.
+resources:
+  web-secgrp:
+    type: aws:ec2:SecurityGroup
+    properties:
+      ingress:
+        - protocol: tcp
+          fromPort: 22
+          toPort: 22
+          cidrBlocks: ["0.0.0.0/0"]
+        - protocol: tcp
+          fromPort: 80
+          toPort: 80
+          cidrBlocks: ["0.0.0.0/0"]
+  web-server-www:
+    type: aws:ec2:Instance
+    properties:
+      instanceType: t2.micro
+      securityGroups:
+        - ${web-secgrp.name}
+      ami: ami-c55673a0
+      userData: '#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &'

@@ -1,0 +1,12 @@
+{
+    "name": "aws-eks-k8s-configgroup-transform-typescript",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0",
+        "@pulumi/eks": "^2.0.0",
+        "@pulumi/kubernetes": "^4.0.0"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "aws-eks-cluster-default-typescript",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0",
+        "@pulumi/eks": "^2.0.0"
+    }
+}

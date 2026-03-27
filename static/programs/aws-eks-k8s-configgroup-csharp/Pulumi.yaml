@@ -1,0 +1,3 @@
+name: aws-eks-k8s-configgroup-csharp
+runtime: dotnet
+description: An example that deploys Kubernetes YAML resources to an EKS cluster.

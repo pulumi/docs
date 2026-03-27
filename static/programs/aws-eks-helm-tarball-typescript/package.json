@@ -1,0 +1,11 @@
+{
+    "name": "aws-eks-helm-tarball-typescript",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0",
+        "@pulumi/kubernetes": "^4.0.0"
+    }
+}

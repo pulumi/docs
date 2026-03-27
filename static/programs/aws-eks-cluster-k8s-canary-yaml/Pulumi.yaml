@@ -1,0 +1,56 @@
+name: aws-eks-cluster-k8s-canary-yaml
+runtime: yaml
+description: An example that deploys an EKS cluster and a canary NGINX service.
+resources:
+  # Create an EKS cluster with the default configuration.
+  cluster:
+    type: eks:Cluster
+  eks-provider:
+    type: pulumi:providers:kubernetes
+    properties:
+      kubeconfig: ${cluster.kubeconfigJson}
+  # Deploy a small canary service (NGINX), to test that the cluster is working.
+  my-deployment:
+    type: kubernetes:apps/v1:Deployment
+    properties:
+      metadata:
+        labels:
+          appClass: my-deployment
+      spec:
+        replicas: 2
+        selector:
+          matchLabels:
+            appClass: my-deployment
+        template:
+          metadata:
+            labels:
+              appClass: my-deployment
+          spec:
+            containers:
+              - name: my-deployment
+                image: nginx
+                ports:
+                  - name: http
+                    containerPort: 80
+    options:
+      provider: ${eks-provider}
+  my-service:
+    type: kubernetes:core/v1:Service
+    properties:
+      metadata:
+        labels:
+          appClass: my-deployment
+      spec:
+        type: LoadBalancer
+        ports:
+          - port: 80
+            targetPort: http
+        selector:
+          appClass: my-deployment
+    options:
+      provider: ${eks-provider}
+outputs:
+  # Export the cluster's kubeconfig.
+  kubeconfig: ${cluster.kubeconfig}
+  # Export the URL for the load balanced service.
+  url: ${my-service.status.loadBalancer.ingress[0].hostname}

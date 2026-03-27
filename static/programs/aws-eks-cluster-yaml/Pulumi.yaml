@@ -2,25 +2,17 @@ name: aws-eks-cluster-yaml
 runtime: yaml
 description: An example that deploys a Kubernetes cluster on AWS.
 resources:
-  # Create a VPC for the Kubernetes cluster.
-  eks-vpc:
+  # Create a VPC for our cluster.
+  vpc:
     type: awsx:ec2:Vpc
-    properties:
-      enableDnsHostnames: true
-      cidrBlock: 10.0.0.0/16
-
-  # Create the EKS cluster itself.
-  eks-cluster:
+  # Create an EKS cluster within the VPC.
+  cluster:
     type: eks:Cluster
     properties:
-      vpcId: ${eks-vpc.vpcId}
-      publicSubnetIds: ${eks-vpc.publicSubnetIds}
-      privateSubnetIds: ${eks-vpc.privateSubnetIds}
-      instanceType: t3.medium
-      desiredCapacity: 3
-      minSize: 3
-      maxSize: 6
-
+      vpcId: ${vpc.vpcId}
+      publicSubnetIds: ${vpc.publicSubnetIds}
+      privateSubnetIds: ${vpc.privateSubnetIds}
+      nodeAssociatePublicIpAddress: false
 outputs:
   # Export the cluster's kubeconfig.
-  kubeconfig: ${eks-cluster.kubeconfig}
+  kubeconfig: ${cluster.kubeconfig}
