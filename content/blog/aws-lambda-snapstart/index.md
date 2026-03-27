@@ -202,7 +202,7 @@ pulumi up -y
 
 As the command completes, you’ll see output like the following:
 
-```text
+```console
 Updating (dev)
 
 View Live: https://app.pulumi.com/jkodroff/blog-lambda-snapshots-springboot-snapstart/dev/updates/9

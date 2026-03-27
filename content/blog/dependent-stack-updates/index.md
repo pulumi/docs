@@ -46,7 +46,7 @@ Pulumi Webhooks allow you to pick one or more event types on a stack (i.e. `upda
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pulumiservice from "@pulumi/pulumiservice";
 
@@ -240,7 +240,7 @@ We’ve also shipped a new Pulumi package called [`Pulumi Auto Deploy`](/registr
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as autodeploy from "@pulumi/auto-deploy";
 import * as pulumi from "@pulumi/pulumi";
 

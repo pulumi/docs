@@ -32,7 +32,7 @@ let greeting = new gcp.cloudfunctions.HttpCallbackFunction("greeting", (req, res
     res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
 });
 
-export let url = greeting.httpsTriggerUrl;
+export const url = greeting.httpsTriggerUrl;
 ```
 
 Thanks to Pulumi's language heritage, we know how to take that
@@ -203,15 +203,15 @@ in the program:
          └─ gcp:cloudfunctions:CallbackFunction     mentionbot
      +-     ├─ gcp:storage:BucketObject             mentionbot                  replaced     [diff: ~name,source]
      ~      └─ gcp:cloudfunctions:Function          mentionbot                  updated      [diff: ~sourceArchiveObject]
-     
+
     Outputs:
         url: "https://***.cloudfunctions.net/mentionbot"
-     
+
     Resources:
         ~ 2 updated
         +-3 replaced
         2 changes. 5 unchanged
-     
+
     Duration: 52s
 
 One command later, and your entire stack is updated properly!

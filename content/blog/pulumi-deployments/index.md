@@ -78,7 +78,7 @@ Manual edits within the AWS console can wreak havoc on your infrastructure if th
 
 You can build drift detection into your platform and get automated alerts on unexpected infrastructure changes.
 
-```ts
+```typescript
 aws.cloudwatch.onSchedule("drift-lambda", "cron(0/5 * * * ? *)", async() => {
     const outstandingDeployments = [];
     for(let s of stacks) {

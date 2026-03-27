@@ -78,7 +78,7 @@ A key part of serverless architecture is an API Gateway that provides logical ro
 
 The following example illustrates how to deploy two functions using TypeScript, one written in Python and the other written in Go. You can find the [full example](https://github.com/pulumi/examples/tree/master/gcp-ts-serverless-raw) in the Pulumi GitHub repository.
 
-```ts
+```typescript
 import * as gcp from "@pulumi/gcp";
 import { asset } from "@pulumi/pulumi";
 
@@ -140,7 +140,7 @@ Kubernetes is a container orchestration system for deploying, scaling, and manag
 
 The following example is based on the [Kubernetes Guestbook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) example. The difference between this implementation and the original application is that instead of using YAML to declare the infrastructure, it uses a component written in TypeScript to create the service deployment which is implemented as `k8sjs`.
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 import * as k8stypes from "@pulumi/kubernetes/types/input";
 import * as pulumi from "@pulumi/pulumi";
@@ -209,7 +209,7 @@ export interface ServiceDeploymentArgs {
 
 The main program deploys an instance of Redis and the guestbook application using containers pulled from the Google Container Registry.
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as k8sjs from "./k8sjs";
 
@@ -233,7 +233,7 @@ const frontend = new k8sjs.ServiceDeployment("frontend", {
     isMinikube: config.getBoolean("isMinikube"),
 });
 
-export let frontendIp = frontend.ipAddress;
+export const frontendIp = frontend.ipAddress;
 ```
 
 The [original example](https://github.com/kubernetes/examples/tree/master/guestbook) defines the Service and Deployment in YAML. In the example above, the YAML is abstracted in a reusable component written in a modern programming language. The [complete example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook) is available on GitHub. As you can see, the ability to reuse components gets us closer to implementing architecture as code.
@@ -250,7 +250,7 @@ Microservices are based on the idea that components encapsulate a business capab
 
 In addition to Kubernetes, there are other platforms for deploying container-based applications. AWS Elastic Container Service, Google Cloud Run, and Azure Container Service provide alternatives to Kubernetes for container orchestration. The following code snippet demonstrates deploying a container with a Ruby application in Google Cloud Run. Note that the image is built using a local Docker engine and pushed to the Google Cloud Repository. The code shows that you can also set memory limits and concurrency for the container. The [full example](https://github.com/pulumi/examples/tree/master/gcp-ts-cloudrun) is available on GitHub.
 
-```ts
+```typescript
 import * as docker from "@pulumi/docker";
 import * as gcp from "@pulumi/gcp";
 import * as pulumi from "@pulumi/pulumi";

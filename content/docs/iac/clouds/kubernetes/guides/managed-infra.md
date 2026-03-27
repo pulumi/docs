@@ -411,7 +411,7 @@ export const gcrLocation = debian.imageUrl;
 
 Fetch the project's registry and display its GCR location.
 
-```ts
+```typescript
 import * as gcp from "@pulumi/gcp";
 
 const registry = gcp.container.getRegistryRepository();
@@ -420,7 +420,7 @@ export const gcrLocation = registry.repositoryUrl;
 
 Build a local Docker image with a given Dockerfile context, and push it to the registry.
 
-```ts
+```typescript
 import * as docker from "@pulumi/docker";
 
 const customImage = "node-app";

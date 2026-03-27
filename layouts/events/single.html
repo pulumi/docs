@@ -11,82 +11,34 @@
 
 {{ define "main" }}
 {{ if .Params.sortable_date }}
-    {{ $nowUnix := now.UnixMilli }}
-    {{ $eventDateUnix := (add (.Params.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
-    {{ $timePassed := gt $nowUnix $eventDateUnix }}
+    <div class="font-body container mx-auto mb-16 mt-16 px-8 flex flex-col gap-12 max-w-6xl">
 
-    <div class="font-body container mx-auto mb-16 mt-16 px-8 flex flex-col gap-12 md:gap-16 max-w-6xl">
-
-        {{/* Back navigation */}}
-        <div>
-            {{ if .Params.youtube_url }}
-                <a href="/events/#on-demand" class="event-single-back-link">
-                    <i class="fa fa-arrow-left mr-2"></i>All on-demand recordings
-                </a>
-            {{ else }}
-                <a href="/events/#upcoming" class="event-single-back-link">
-                    <i class="fa fa-arrow-left mr-2"></i>All upcoming events
-                </a>
-            {{ end }}
-        </div>
-
-        {{/* Event header */}}
-        <section class="template-event-single-header">
-            <div class="flex items-center gap-2 mb-4">
-                <span class="event-single-type">{{ .Params.event_type }}</span>
-                <span class="text-gray-300">·</span>
+        {{/* Breadcrumb + header */}}
+        <div class="flex flex-col gap-4">
+            <nav class="event-breadcrumb">
+                <a href="/events/">Events and Workshops</a>
+                <span class="event-breadcrumb-separator">/</span>
                 {{ if .Params.youtube_url }}
-                    <span class="event-single-status">On-demand</span>
+                    <a href="/events/#on-demand">On-demand</a>
                 {{ else }}
-                    <span class="event-single-status">{{ .Params.location | title }}</span>
+                    <a href="/events/#upcoming">Upcoming</a>
                 {{ end }}
-            </div>
-            <h1 class="event-single-title">{{ .Params.title }}</h1>
-        </section>
+                <span class="event-breadcrumb-separator">/</span>
+                <span class="event-breadcrumb-current">{{ .Params.title }}</span>
+            </nav>
+
+            <section class="template-event-single-header">
+                <h1 class="event-single-title">{{ .Params.title }}</h1>
+                <div class="flex items-center gap-2">
+                    <span class="event-single-type">{{ .Params.event_type }}</span>
+                    <span class="event-single-date-separator">·</span>
+                    <span class="event-single-date">{{ .Params.sortable_date | time.Format "January 2006" }}</span>
+                </div>
+            </section>
+        </div>
 
         {{/* Main content area */}}
-        <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-
-            {{/* Left column: details */}}
-            <div class="w-full lg:w-1/2 flex flex-col gap-8">
-                {{ if not .Params.youtube_url }}
-                    {{ partial "events/timing-info-template.html" (dict "datetime" .Params.sortable_date "duration" .Params.duration) }}
-                {{ end }}
-
-                {{ $show_cloud := true }}
-                {{ if eq .Params.event_type "event" }}
-                    {{ $show_cloud = false }}
-                {{ end }}
-                {{ partial "events/summary-template.html" (dict "description" .Params.description "learn" .Params.learn "show_cloud" $show_cloud) }}
-            </div>
-
-            {{/* Right column: video or registration */}}
-            <div class="w-full lg:w-1/2">
-                {{ if .Params.youtube_url }}
-                    <div class="rounded-2xl overflow-hidden shadow-lg" style="position: relative; padding-bottom: 56.25%; height: 0;">
-                        <iframe src="{{ .Params.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
-                    </div>
-                {{ else if and .Params.gated (not $timePassed) }}
-                    <div class="event-single-registration rounded-2xl p-8">
-                        <h3 class="event-single-registration-title">Register today</h3>
-                        <pulumi-hubspot-form
-                            form-id="{{ .Params.form.hubspot_form_id }}"
-                            salesforce-campaign-id="{{ .Params.form.salesforce_campaign_id }}"
-                            linkedin-conversion-id="24927140"
-                        ></pulumi-hubspot-form>
-                    </div>
-                {{ else if $timePassed }}
-                    <div class="rounded-2xl p-8 bg-gray-100 text-center">
-                        <p class="text-gray-600 font-body text-lg mb-0">This event has passed. Check out our <a href="/events/#on-demand">on-demand recordings</a> for more content.</p>
-                    </div>
-                {{ end }}
-            </div>
-        </div>
-
-        {{/* Speakers */}}
-        {{ if .Params.presenters }}
-            {{ partial "events/event-speakers-template.html" (dict "presenters" .Params.presenters) }}
-        {{ end }}
+        {{ partial "events/type-content.html" . }}
 
         {{/* Footer CTA */}}
         {{ partial "template-partials/template-footer-cta.html" (dict

@@ -176,7 +176,7 @@ let frontend = new k8sjs.ServiceDeployment("frontend", {
     loadBalancer: true,
 });
 
-export let frontendIp = frontend.ipAddress;
+export const frontendIp = frontend.ipAddress;
 ```
 
 The end result of having three Deployments, three Services, the frontend
@@ -496,7 +496,7 @@ const canary = new k8s.apps.v1beta1.Deployment("canary", {
 }, { provider: k8sProvider });
 
 // Export the Kubeconfig so that clients can easily access our cluster.
-export let kubeConfig = k8sConfig;
+export const kubeConfig = k8sConfig;
 ```
 
 The incredible thing about this example is that, with it, we simply run

@@ -81,17 +81,17 @@ will it proceed (with a full audit history):
 
     $ pulumi update
     Previewing update (luke):
-     
+
          Type                     Name                     Plan        Info
          pulumi:pulumi:Stack      gcp-instance-nginx-luke
      ~   ├─ gcp:compute:Firewall  firewall                 update      [diff: ~allows]
      +-  └─ gcp:compute:Instance  poc                      replace     [diff: ~bootDisk,name]
-     
+
     Resources:
         ~ 1 to update
         +-1 to replace
         2 changes. 3 unchanged
-     
+
     Do you want to perform this update? Yes
     ...
 
@@ -180,7 +180,7 @@ let greeting = new gcp.cloudfunctions.HttpCallbackFunction("greeting", (req, res
     res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
 });
 
-export let url = greeting.httpsTriggerUrl;
+export const url = greeting.httpsTriggerUrl;
 ```
 
 Or perhaps a pubsub topic that runs some custom code on every message
@@ -203,7 +203,7 @@ unified stream:
 
     $ pulumi logs
     Collecting logs for stack dev since 2019-04-08T12:02:48.000-07:00.
-     
+
      2019-04-08T12:37:34.000-07:00[            newMessage-9d41c7a] Function execution started
      2019-04-08T12:37:34.000-07:00[            newMessage-9d41c7a] {"hello": "world"}
      2019-04-08T12:37:34.000-07:00[            newMessage-9d41c7a] Function execution took 70 ms, finished with status: 'ok'

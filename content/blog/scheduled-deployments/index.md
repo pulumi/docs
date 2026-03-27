@@ -95,7 +95,7 @@ The Pulumi Service provider allows you to set up a raw schedule for operations l
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pulumiservice from "@pulumi/pulumiservice";
 

@@ -42,7 +42,7 @@ Let’s take a look at an [example](https://github.com/pulumi/examples/tree/mast
 
 Putting it all together, deploying our many cloud architecture looks like this:
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 import * as aks from "./aks";
@@ -76,7 +76,7 @@ interface AppUrl {
     name: string;
     url: pulumi.Output<string>;
 }
-export let appUrls: AppUrl[] = [];
+export const appUrls: AppUrl[] = [];
 
 const kuardImageTag = "blue";
 

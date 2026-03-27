@@ -32,7 +32,7 @@ To follow along, create a new Pulumi project with the [Get Started with Google C
 
 As with any other service of Google Cloud, you need to enable it for the target project before the first deployment. You can do so with the `gcp.projects.Service` resource:
 
-```ts
+```typescript
 const enableCloudRun = new gcp.projects.Service("EnableCloudRun", {
     service: "run.googleapis.com",
 });
@@ -52,7 +52,7 @@ pulumi config set gcp:region <region>
 
 Then, the program can read the value and reuse it for all resources:
 
-```ts
+```typescript
 // Location to deploy Cloud Run services
 const location = gcp.config.region || "us-central1";
 ```
@@ -61,7 +61,7 @@ const location = gcp.config.region || "us-central1";
 
 Google provides a pre-deployed "Hello Cloud Run" image at `gcr.io/cloudrun/hello`. The following resource deploys that image to your GCP project with the default settings.
 
-```ts
+```typescript
 const helloService = new gcp.cloudrun.Service("hello", {
     location,
     template: {
@@ -78,7 +78,7 @@ const helloService = new gcp.cloudrun.Service("hello", {
 
 By default, Google does not expose HTTP endpoints of a Cloud Run service to the Internet. To make it publicly available, you should grant the `roles/run.invoker` role to `allUsers`.
 
-```ts
+```typescript
 const iamHello = new gcp.cloudrun.IamMember("hello-everyone", {
     service: helloService.name,
     location,
@@ -93,7 +93,7 @@ Note that the Contributor role is required for the user who executes Pulumi depl
 
 Each Cloud Run service automatically gets a run.app subdomain. You can export the exact URL as a Pulumi output.
 
-```ts
+```typescript
 // Export the URL
 export const helloUrl = helloService.status.url;
 ```
@@ -165,7 +165,7 @@ Run `gcloud auth configure-docker` in your command line to configure your local 
 
 Run `npm i @pulumi/docker` to install the Pulumi Docker SDK. Then, add the `docker.Image` resource to the Pulumi program.
 
-```ts
+```typescript
 const myImage = new docker.Image("ruby-image", {
     imageName: pulumi.interpolate`gcr.io/${gcp.config.project}/my-ruby-app:v1.0.0`,
     build: {
@@ -180,7 +180,7 @@ Pulumi takes care of building the image in the `app` folder and uploading it to 
 
 Now, you can deploy another Cloud Run service and point it to the custom image.
 
-```ts
+```typescript
 const rubyService = new gcp.cloudrun.Service("ruby", {
     location,
     template: {
@@ -205,7 +205,7 @@ Currently, it’s not possible to use partial vCPU or multiple vCPUs per instanc
 
 Finally, don't forget to enable unrestricted access and export the public URL.
 
-```ts
+```typescript
 const iamRuby = new gcp.cloudrun.IamMember("ruby-everyone", {
     service: rubyService.name,
     location,

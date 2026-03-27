@@ -72,7 +72,7 @@ The Pulumi Service provider allows you to create Pulumi Cloud resources via Pulu
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import { Webhook, WebhookFormat, WebhookFilters } from "@pulumi/pulumiservice";
 

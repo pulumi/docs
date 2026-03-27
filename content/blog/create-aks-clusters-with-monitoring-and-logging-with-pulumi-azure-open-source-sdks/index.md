@@ -66,7 +66,7 @@ the successful creation of the AKS cluster. If you see that the Service
 Principal Id was not found: "Service principal clientID: xxxxx not
 found", simply re-run `pulumi update`to proceed.
 
-```javascript
+```typescript
 // Step 2: Create the AD service principal for the k8s cluster.
 const adApp = new azuread.Application("aks");
 const adSp = new azuread.ServicePrincipal("aksSp", { applicationId: adApp.applicationId });
@@ -82,7 +82,7 @@ const adSpPassword = new azuread.ServicePrincipalPassword("aksSpPassword", {
 Now let's add the logic to create the AKS cluster with the Service
 principal.
 
-```javascript
+```typescript
 // Step 3: This step creates an AKS cluster.
 const k8sCluster = new azure.containerservice.KubernetesCluster("aksCluster", {
     resourceGroupName: resourceGroup.name,
@@ -130,7 +130,7 @@ query to specify the data you want.
 We will now enable monitoring and logging by default for the cluster and
 run `pulumi up`
 
-```javascript
+```typescript
 // Step 4: Enables the Monitoring Diagonostic control plane component logs and AllMetrics
 const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting("aks", {
     logAnalyticsWorkspaceId: loganalytics.id,

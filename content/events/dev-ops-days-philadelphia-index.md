@@ -14,7 +14,6 @@ unlisted: false
 # to fill out the form before viewing.
 gated: false
 
-# The layout of the landing page.
 type: events
 
 # External webinars will link to an external page instead of a webinar

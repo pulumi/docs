@@ -73,7 +73,7 @@ Our recently released [Container Service on AWS](https://www.pulumi.com/template
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
@@ -391,7 +391,7 @@ Our recently released [Kubernetes Cluster on AWS](https://www.pulumi.com/templat
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
@@ -439,7 +439,7 @@ export const vpcId = eksVpc.vpcId;
 
 {{% choosable language python %}}
 
-```py
+```python
 import pulumi
 import pulumi_awsx as awsx
 import pulumi_eks as eks
@@ -693,7 +693,7 @@ Our recently released [AWS Serverles Application](https://www.pulumi.com/templat
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as apigateway from "@pulumi/aws-apigateway";

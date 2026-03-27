@@ -113,7 +113,7 @@ for (let i = 0; i < 3; i++) {
             `nohup python -m SimpleHTTPServer 80 &n`,
     }));
 }
-export let publicHostnames = webServers.map(s => s.publicDns);
+export const publicHostnames = webServers.map(s => s.publicDns);
 ```
 
 This provisions three web servers, each of which runs a simple Python
@@ -188,7 +188,7 @@ let webServers = [];
 for (let i = 0; i < 3; i++) {
     webServers.push(new WebServer(`web-server-${i}`));
 }
-export let publicHostnames = webServers.map(s => s.vm.publicDns);
+export const publicHostnames = webServers.map(s => s.vm.publicDns);
 ```
 
 Not only is the result simpler, but we now have a way to divvy up
@@ -257,7 +257,7 @@ let client = new slack.WebClient(config.slackToken);
         console.log(`Posted SQS message ${rec.messageId} to ${config.slackChannel}`);
     }
 });
-export let queueURL = queue.id;
+export const queueURL = queue.id;
 ```
 
 The code and instructions for running this example are available
@@ -305,8 +305,8 @@ using the --secret flag. To do so, first let's create a config module:
 import * as pulumi from "@pulumi/pulumi";
 let config = new pulumi.Config(pulumi.getProject());
 
-export let slackChannel = config.get("slackChannel") || "#general",
-export let slackToken: config.require("slackToken");
+export const slackChannel = config.get("slackChannel") || "#general",
+export const slackToken: config.require("slackToken");
 ```
 
 And now let's go back to our above program, and use the config module
@@ -335,7 +335,7 @@ serverless.queue.subscribe("mySlackPoster", queue, async (e) => {
         console.log(`Posted SQS message ${rec.messageId} to ${config.slackChannel}`);
     }
 });
-export let queueURL = queue.id;
+export const queueURL = queue.id;
 ```
 
 We often call this "capture by serialization" because, of course, the
@@ -452,7 +452,7 @@ app.static("/", "www");
 // Serve a simple REST API on `GET /hello` (using AWS Lambda):
 app.get("/hello", (req, res) => res.json({ hello: "World!" }));
 // Export the public URL for the HTTP service:
-export let url = app.publish().url;
+export const url = app.publish().url;
 ```
 
 All of the usual verbs are available -- `post`,
@@ -499,7 +499,7 @@ import * as routes from "./app/routes";
 let app = new cloud.API("my-app");
 app.get("/hello", routes.hello);
 
-export let url = app.publish().url;
+export const url = app.publish().url;
 ```
 
 For now, Pulumi only offers an AWS implementation of these APIs, but
@@ -541,7 +541,7 @@ let nginx = new cloud.Service("nginx", {
     replicas: 2,
 });
 
-export let url = nginx.defaultEndpoint;
+export const url = nginx.defaultEndpoint;
 ```
 
 This is all you need to run Nginx with 2 load balanced replicas
@@ -575,7 +575,7 @@ let nginx = new cloud.Service("nginx", {
     replicas: 2,
 });
 
-export let url = nginx.defaultEndpoint;
+export const url = nginx.defaultEndpoint;
 ```
 
 **Dockerfile**:
@@ -636,7 +636,7 @@ let www = new cloud.Service("www", {
     replicas: 2,
 });
 
-export let url = www.defaultEndpoint;
+export const url = www.defaultEndpoint;
 ```
 
 This code defines a load balanced service, backed by a container that
@@ -844,7 +844,7 @@ for (let i = 0; i < webServersCount; i++) {
     webServers.push(new WebServer(`web-server-${i}`));
 }
 
-export let publicHostnames = webServers.map(s => s.vm.publicDns);
+export const publicHostnames = webServers.map(s => s.vm.publicDns);
 ```
 
 Given this specific program, we can easily change the number of servers
@@ -1018,7 +1018,7 @@ endpoint.post("/url", async (req, res) => {
     }
 });
 
-export let url = endpoint.publish().url;
+export const url = endpoint.publish().url;
 ```
 
 Notice that we can capture and use our `Cache`

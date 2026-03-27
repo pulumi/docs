@@ -139,7 +139,7 @@ $ pulumi config set locations WestUS,WestEurope,SouthEastAsia,SouthBrazil,Austra
 
 This value can be loaded and parsed into a JavaScript array:
 
-```ts
+```typescript
 const locations = new pulumi.Config().require("locations").split(",");
 ```
 
@@ -153,7 +153,7 @@ We define a factory function to create the infrastructure in each location. Its 
 
 Here is the function:
 
-```ts
+```typescript
 function buildProductApp({ cosmosAccount }: GlobalContext) {
     return ({ location }: RegionalContext) => {
         const app = new azure.appservice.ArchiveFunctionApp("function-app", {
@@ -178,7 +178,7 @@ function buildProductApp({ cosmosAccount }: GlobalContext) {
 
 Finally, we use the `buildProductApp` factory function to create the geo-distributed application:
 
-```ts
+```typescript
 const products = new CosmosApp("products", {
     resourceGroup,
     locations,
@@ -196,7 +196,7 @@ The Shopping Cart team will have to follow the same steps but define their compu
 
 A significant difference to the Functions-based example is the fact that the Container-based application needs some infrastructure to be shared across regions. The top block of the factory function defines an instance of Azure Container Registry, builds a Docker image, and puts that image into the Registry:
 
-```ts
+```typescript
 function buildShoppingCartApp({ cosmosAccount, database, container }: GlobalContext) {
 
     const registry = new azure.containerservice.Registry("global", {
@@ -225,7 +225,7 @@ function buildShoppingCartApp({ cosmosAccount, database, container }: GlobalCont
 
 Now, the factory function that builds per-region infrastructure can directly reference the Registry and the image to deploy an Azure Container Instances group. Note how `registry` and `dockerImage` are used as any other TypeScript variable inside the closure factory function:
 
-```ts
+```typescript
 function buildShoppingCartApp({ cosmosAccount, database, container }: GlobalContext) {
 
     const registry = new azure.containerservice.Registry(/* ... */);
@@ -273,7 +273,7 @@ function buildShoppingCartApp({ cosmosAccount, database, container }: GlobalCont
 
 Finally, a `CosmosApp` is defined:
 
-```ts
+```typescript
 const aci = new CosmosApp("aci", {
     resourceGroup,
     locations,
@@ -292,7 +292,7 @@ Shopping Cart workload expects both reads and writes from the end-users, so the 
 
 The Pricing Engine team has to go through the same steps but employ IaaS-based infrastructure to run application code. The factory function creates a dozen resources related to virtual machines, load balancing, networking, and auto-scaling. You may define as many resources as needed in the code, as long as it returns a pointer to the proper resource to link the endpoint.
 
-```ts
+```typescript
 function buildVMScaleSetApp({ cosmosAccount, database }: GlobalContext) {
 
     // Build a VM image here...
