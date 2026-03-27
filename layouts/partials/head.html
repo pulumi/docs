@@ -267,73 +267,24 @@
 
     <!-- Segment Consent Manager -->
     <script>
-        window.consentManagerConfig = function(exports) {
-            var React = exports.React;
-            var inEU = exports.inEU;
-
-            var bannerContent = React.createElement(
-                'span',
-                null,
-                'We use cookies (and other similar technologies) to collect data to improve your experience on our site. By using our website, you՚re agreeing to the collection of data as described in our',
-                ' ',
-                React.createElement(
-                    'a',
-                    { href: '/privacy/', target: '_blank' },
-                    'Privacy Policy'
-                ),
-                '.'
-            )
-            var bannerSubContent = ''
-            var preferencesDialogTitle = 'Website Data Collection Preferences'
-            var preferencesDialogContent =
-                'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'
-            var cancelDialogTitle = 'Are you sure you want to cancel?'
-            var cancelDialogContent =
-                'Your preferences have not been saved. By continuing to use our website, you are agreeing to our Website Data Collection Policy.'
-
-            var bannerActionsBlock = function(props) {
-                return React.createElement('div', { class: 'consent-actions' },
-                    React.createElement('button', {
-                        type: 'button',
-                        class: 'consent-btn consent-btn-secondary',
-                        onClick: props.changePreferences
-                    }, 'Manage cookies'),
-                    React.createElement('button', {
-                        type: 'button',
-                        class: 'consent-btn consent-btn-secondary',
-                        onClick: props.denyAll
-                    }, 'Reject All'),
-                    React.createElement('button', {
-                        type: 'button',
-                        class: 'consent-btn consent-btn-accept',
-                        onClick: props.acceptAll
-                    }, 'Accept All')
-                );
-            }
-
-            return {
-                container: '#segment-consent-manager',
-                writeKey: segmentWriteKey,
-                bannerContent: bannerContent,
-                bannerSubContent: bannerSubContent,
-                bannerActionsBlock: bannerActionsBlock,
-                preferencesDialogTitle: preferencesDialogTitle,
-                preferencesDialogContent: preferencesDialogContent,
-                cancelDialogTitle: cancelDialogTitle,
-                cancelDialogContent: cancelDialogContent,
-                shouldRequireConsent: exports.inEU,
-                bannerHideCloseButton: true,
-                bannerTextColor: "black",
-                cdnHost: "evs.analytics.pulumi.com",
-                shouldReload: false
-            }
-        }
+        window.consentManagerConfig = {
+            writeKey: segmentWriteKey,
+            cdnHost: "evs.analytics.pulumi.com",
+            container: "#segment-consent-manager",
+            privacyPolicyUrl: "/privacy/",
+            bannerText: "We use cookies (and other similar technologies) to collect data to improve your experience on our site. By using our website, you\u02BCre agreeing to the collection of data as described in our",
+            preferencesDialogTitle: "Website Data Collection Preferences",
+            preferencesDialogContent: "We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.",
+            cancelDialogTitle: "Are you sure you want to cancel?",
+            cancelDialogContent: "Your preferences have not been saved. By continuing to use our website, you are agreeing to our Website Data Collection Policy."
+        };
     </script>
 
+    {{ $jsManifest := $.Site.Data.js_manifest }}
     <script>
         window.addEventListener('load', function() {
             var s = document.createElement('script');
-            s.src = '/js/consent-manager.js';
+            s.src = '/js/{{ index $jsManifest "consent-manager" }}';
             document.body.appendChild(s);
         });
     </script>

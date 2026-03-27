@@ -1,10 +1,6 @@
 @import "colors";
 @import "mixins";
 
-// Cookie consent banner styles must be OUTSIDE @layer components.
-// The Segment consent manager (static/js/consent-manager.js) injects its own
-// Emotion CSS without any @layer. In Tailwind v4, @layer components has lower
-// specificity than unlayered styles, so our overrides were being lost.
 #segment-consent-manager:empty {
     @apply hidden;
 }
@@ -15,12 +11,6 @@
 
     @include screen-lg {
         @apply w-1/3 right-auto m-4 overflow-hidden;
-    }
-
-    // Force the Emotion-styled banner wrapper to wrap so the
-    // actions block flows below the content column.
-    [class^="css-"] {
-        flex-wrap: wrap;
     }
 
     div {
@@ -42,26 +32,123 @@
 
     .consent-actions {
         @apply flex gap-2 w-full pb-4;
+    }
+}
 
-        .consent-btn {
-            @apply flex-1 font-bold no-underline p-3 rounded-md text-center text-sm cursor-pointer;
-            @include transition;
-        }
+// Preferences dialog overlay
+.consent-dialog-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
 
-        .consent-btn-accept {
-            @apply bg-violet-600 text-white border-2 border-violet-600;
+.consent-dialog {
+    @apply bg-white rounded-lg shadow-lg;
+    max-width: 800px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
 
-            &:hover, &:focus-visible {
-                @apply bg-violet-700 border-violet-700;
-            }
-        }
+.consent-dialog-header {
+    @apply flex items-start justify-between mb-2;
 
-        .consent-btn-secondary {
-            @apply bg-white text-violet-600 border-2 border-violet-600;
+    h2 {
+        @apply text-lg font-bold m-0;
+    }
+}
 
-            &:hover, &:focus-visible {
-                @apply bg-violet-600 text-white;
-            }
-        }
+.consent-dialog-close {
+    @apply text-2xl leading-none text-gray-400 cursor-pointer bg-transparent border-0 p-0 ml-4;
+
+    &:hover {
+        @apply text-gray-600;
+    }
+}
+
+.consent-dialog-desc {
+    @apply text-sm text-gray-600 mb-4;
+    text-align: left !important;
+}
+
+// Category table
+.consent-dialog-table {
+    @apply w-full text-sm mb-4;
+    border-collapse: collapse;
+
+    th {
+        @apply text-left text-xs font-semibold text-gray-500 uppercase border-b border-gray-200 pb-2 px-3;
+    }
+
+    td {
+        @apply border-b border-gray-100 px-3 py-3 align-top;
+    }
+}
+
+.consent-table-allow {
+    @apply whitespace-nowrap;
+    min-width: 60px;
+
+    label {
+        @apply flex items-center gap-1 text-xs cursor-pointer;
+    }
+
+    input[type="radio"] {
+        accent-color: map-get($violet, 600);
+    }
+}
+
+.consent-table-na {
+    @apply text-xs text-gray-400;
+}
+
+.consent-table-category {
+    @apply font-semibold whitespace-nowrap;
+    min-width: 100px;
+}
+
+.consent-table-purpose {
+    @apply text-gray-600;
+}
+
+.consent-table-tools {
+    @apply text-gray-500;
+    min-width: 120px;
+}
+
+// Dialog action buttons
+.consent-dialog-buttons {
+    @apply flex gap-2 justify-end;
+}
+
+// Shared consent button styles
+.consent-btn {
+    @apply font-bold no-underline py-2 px-5 rounded-md text-center text-sm cursor-pointer;
+    @include transition;
+
+    .consent-actions & {
+        @apply flex-1 p-3;
+    }
+}
+
+.consent-btn-accept {
+    @apply bg-violet-600 text-white border-2 border-violet-600;
+
+    &:hover, &:focus-visible {
+        @apply bg-violet-700 border-violet-700;
+    }
+}
+
+.consent-btn-secondary {
+    @apply bg-white text-violet-600 border-2 border-violet-600;
+
+    &:hover, &:focus-visible {
+        @apply bg-violet-600 text-white;
     }
 }
