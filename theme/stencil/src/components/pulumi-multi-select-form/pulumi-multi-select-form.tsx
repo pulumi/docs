@@ -86,6 +86,11 @@ export class PulumiMultiSelectForm {
     // Set the formSubmitted to true when the form has been submitted.
     private handleFormSubmit() {
         this.formSubmitted = true;
+
+        // Fire LinkedIn conversion tracking for contact form submissions.
+        if (typeof (window as any).lintrk === "function") {
+            (window as any).lintrk("track", { conversion_id: 24927132 });
+        }
     }
 
     // When the select input changes we need to update the state accordingly.

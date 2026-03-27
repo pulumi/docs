@@ -34,6 +34,10 @@ export class HubspotForm {
     @Prop()
     class?: string;
 
+    // Optional LinkedIn conversion ID to fire on form submission.
+    @Prop()
+    linkedinConversionId?: number;
+
     // Whether the HubSpot form is loading.
     @State()
     isLoading: boolean = true;
@@ -133,6 +137,11 @@ export class HubspotForm {
         if (eventName === "onFormSubmit") {
             const emailAddress: HTMLInputElement = this.el.querySelector(`input[name="email"]`);
             this.notifySegment(emailAddress.value, utmData);
+
+            // Fire LinkedIn conversion tracking if a conversion ID is set.
+            if (this.linkedinConversionId && typeof (window as any).lintrk === "function") {
+                (window as any).lintrk("track", { conversion_id: this.linkedinConversionId });
+            }
         }
 
         // When there are problems loading the form, show a failure message.
