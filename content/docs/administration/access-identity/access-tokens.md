@@ -83,7 +83,14 @@ To delete an access token:
 Please note that this functionality is available only in the [Enterprise and Business Critical editions](https://www.pulumi.com/pricing/) of Pulumi.
 {{% /notes %}}
 
-Organization tokens are machine tokens owned by the organization itself rather than any individual user. They are well-suited for CI/CD pipelines and automation that needs to act on behalf of the organization without being tied to a specific person's account.
+Organization tokens authenticate as the organization itself rather than any individual user. They are the recommended token type for any automated or non-interactive workflow, including:
+
+* **CI/CD pipelines** — deploying infrastructure updates without tying operations to an individual's account.
+* **Drift detection** — monitoring stacks across the organization for configuration drift.
+* **Policy enforcement** — running compliance checks or applying policy packs programmatically.
+* **Org-level reporting** — querying stack state or resource data for dashboards and auditing.
+
+Unlike personal tokens, organization tokens are scoped to a single organization and are not affected when team members join or leave. By assigning a [custom role](/docs/administration/access-identity/rbac/roles/) with only the scopes your automation needs, you can follow the principle of least privilege and limit the blast radius of any single token.
 
 ### What organization tokens can do
 
