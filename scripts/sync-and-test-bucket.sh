@@ -60,11 +60,14 @@ fi
 # Make the bucket an S3 website.
 aws s3 website $destination_bucket_uri --index-document index.html --error-document 404.html --region "$(aws_region)"
 
-# Sync the local build directory to the bucket. Note that we do pass the --delete option
-# here, since in most cases, we'll be continually updating a bucket associated with a PR;
-# passing this option keeps the destination bucket clean.
+# Sync the local build directory to the bucket using s5cmd for massively parallel uploads.
+# s5cmd uses hundreds of concurrent goroutines vs aws cli's ~10-16 concurrent requests,
+# resulting in 10-50x faster uploads for large file counts.
+# The --delete flag removes destination objects not present locally, keeping the bucket clean
+# for PR preview buckets that get reused across commits.
 echo "Synchronizing to $destination_bucket_uri..."
-aws s3 sync "$build_dir" "$destination_bucket_uri" --acl public-read --delete --quiet --region "$(aws_region)"
+s5cmd --log error sync --delete --acl public-read \
+    "$build_dir/" "$destination_bucket_uri/"
 
 echo "Sync complete."
 s3_website_url="http://${destination_bucket}.s3-website.$(aws_region).amazonaws.com"
