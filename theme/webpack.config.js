@@ -1,7 +1,8 @@
+const fs = require("fs");
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const WebpackShellPluginNext = require("webpack-shell-plugin-next");
-const webpack = require("webpack");
 
 module.exports = function (env, { mode }) {
     return {
@@ -14,9 +15,10 @@ module.exports = function (env, { mode }) {
             algolia: "./src/ts/algolia-entry.ts",
         },
         output: {
-            filename: "[name].js",
-            chunkFilename: "chunk-[id].js",
-            path: `${process.cwd()}/../assets/js`,
+            filename: "[name].[contenthash:8].js",
+            chunkFilename: "chunk-[contenthash:8].js",
+            path: `${process.cwd()}/../static/js`,
+            publicPath: "/js/",
         },
         resolve: {
             extensions: [".ts", ".js"],
@@ -70,10 +72,7 @@ module.exports = function (env, { mode }) {
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: "../css/[name].css",
-            }),
-            new webpack.optimize.LimitChunkCountPlugin({
-                maxChunks: 1,
+                filename: "../../assets/css/[name].css",
             }),
             new WebpackShellPluginNext({
                 onBuildStart: {
@@ -82,6 +81,20 @@ module.exports = function (env, { mode }) {
                     scripts: ["yarn --cwd stencil run build"],
                 },
             }),
+            {
+                apply(compiler) {
+                    compiler.hooks.done.tap("JsManifestPlugin", (stats) => {
+                        const manifest = {};
+                        for (const [name, { assets }] of Object.entries(stats.toJson().entrypoints)) {
+                            const jsFile = assets.find((a) => a.name.endsWith(".js"));
+                            if (jsFile) manifest[name] = jsFile.name;
+                        }
+                        const outDir = path.resolve(compiler.outputPath, "../../data");
+                        fs.mkdirSync(outDir, { recursive: true });
+                        fs.writeFileSync(path.join(outDir, "js_manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
+                    });
+                },
+            },
         ],
         optimization: {
             minimize: true,

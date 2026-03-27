@@ -38,6 +38,16 @@ Pipfile.lock
 /static/js/components/
 theme/stencil/src/components.d.ts
 
+# Ignore webpack-generated JS entry bundles and chunks in static/js/.
+/static/js/bundle.*.js
+/static/js/algolia.*.js
+/static/js/marketing.*.js
+/static/js/homepage.*.js
+/static/js/chunk-*.js
+
+# Ignore webpack-generated JS manifest for Hugo.
+/data/js_manifest.json
+
 # Ignore bundled CSS and JS files, which we write to the Hugo static
 # directory in development in order to be able to use livereload.
 static/css/styles.*.css

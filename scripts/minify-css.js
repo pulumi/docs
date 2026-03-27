@@ -14,6 +14,7 @@ const sharedSafelist = [
     /^carousel/,
     /^st-/,
     /^pulumi-/,
+    /^swiper/,
 ];
 
 // Per-bundle PurgeCSS configuration.
