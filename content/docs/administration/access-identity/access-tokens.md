@@ -25,8 +25,8 @@ Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usa
 Pulumi offers three types of access tokens:
 
 1. **Personal tokens**, which carry the permissions of the individual user who created them. Personal tokens are available to all Pulumi Cloud users.
-1. **Organization tokens**, which are machine tokens owned by the organization rather than any individual user. Organization tokens are only available to Enterprise and Business Critical customers.
-1. **Team tokens**, which are machine tokens scoped to the permissions of a specific team within an organization. Team tokens are only available to Enterprise and Business Critical customers.
+1. **Organization tokens**, which authenticate as the organization itself rather than any individual user. Actions taken with organization tokens appear in audit logs attributed to the organization. Organization tokens are only available to Enterprise and Business Critical customers.
+1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens appear in audit logs attributed to the team. Team tokens are only available to Enterprise and Business Critical customers.
 
 When using tokens, be mindful of the following security best practices:
 
