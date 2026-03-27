@@ -15,6 +15,7 @@ concurrency:
 
 jobs:
   schedule-social:
+    if: github.repository == 'pulumi/docs'
     name: Schedule social media posts
     runs-on: ubuntu-latest
     environment: production
@@ -54,7 +55,7 @@ jobs:
         run: uv run scripts/social/schedule-posts.py
 
   notify:
-    if: failure()
+    if: failure() && github.repository == 'pulumi/docs'
     name: Send slack notification
     runs-on: ubuntu-latest
     environment: production
