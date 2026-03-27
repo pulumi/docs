@@ -42,6 +42,10 @@ export class PulumiMultiSelectForm {
     @Prop()
     defaultFormId: string = "";
 
+    // Optional LinkedIn conversion ID to fire on form submission.
+    @Prop()
+    linkedinConversionId?: number;
+
     // The currently selected item.
     @State()
     selectedItem: MultiSelectFormItem;
@@ -86,6 +90,11 @@ export class PulumiMultiSelectForm {
     // Set the formSubmitted to true when the form has been submitted.
     private handleFormSubmit() {
         this.formSubmitted = true;
+
+        // Fire LinkedIn conversion tracking if a conversion ID is set.
+        if (this.linkedinConversionId && typeof (window as any).lintrk === "function") {
+            (window as any).lintrk("track", { conversion_id: this.linkedinConversionId });
+        }
     }
 
     // When the select input changes we need to update the state accordingly.
