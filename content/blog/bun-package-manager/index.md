@@ -47,7 +47,7 @@ If you've spent time around the JavaScript ecosystem, then you've probably heard
 
 {{% notes type="warning" %}}
 
-1. Pulumi uses Bun solely as a package manager. You cannot use Bun to write Automation API-based applications, nor do we have a language plugin for Bun.  
+1. Pulumi uses Bun solely as a package manager. You cannot use Bun to write Automation API-based applications, nor do we have a language plugin for Bun.
 2. This requires Bun version 1.2 or greater due to the text-based lockfile introduced in this version.
 
 {{% /notes %}}
@@ -165,7 +165,7 @@ Since we're still using the Pulumi NodeJS runtime, that's all we need Bun for ri
 
 The rest is business as usual, so the `index.ts` file looks like:
 
-```ts
+```typescript
 import * as random from "@pulumi/random";
 
 const password = new random.RandomPassword("password", {

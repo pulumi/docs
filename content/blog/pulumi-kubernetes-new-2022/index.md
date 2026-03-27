@@ -235,7 +235,7 @@ In addition to Flux integration with the Pulumi Kubernetes Operator, we've also 
 
 The Flux provider can be used along with the Kubernetes provider and GitHub provider to stand up and manage a complete E2E GitOps solution from within a single deployment - no need for manual bash, Helm, or runbooks - just simple reliable Infrastructure as Code.
 
-```ts
+```typescript
 import * as kubernetes from "@pulumi/kubernetes";
 import * as flux from "@worawat/flux";
 

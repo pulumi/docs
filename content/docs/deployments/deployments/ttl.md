@@ -63,7 +63,7 @@ The Pulumi Service Provider allows you to set up and manage Time-to-Live Stacks 
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pulumiservice from "@pulumi/pulumiservice";
 

@@ -74,7 +74,7 @@ The full code for this app stack is on [GitHub][gh-aws-deploy-stack].
 
 {{< choosable k8s-language typescript >}}
 
-```ts
+```typescript
 import * as awsx from "@pulumi/awsx";
 import * as k8s from "@pulumi/kubernetes";
 
@@ -123,7 +123,7 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 
 {{< kubernetesx-deprecated >}}
 
-```ts
+```typescript
 import * as awsx from "@pulumi/awsx";
 import * as k8s from "@pulumi/kubernetes";
 import * as kx from "@pulumi/kubernetesx";
@@ -176,7 +176,7 @@ The full code for this app stack is on [GitHub][gh-azure-deploy-stack].
 
 {{< choosable k8s-language typescript >}}
 
-```ts
+```typescript
 import * as azure from "@pulumi/azure";
 import * as docker from "@pulumi/docker";
 import * as k8s from "@pulumi/kubernetes";
@@ -239,7 +239,7 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 
 {{< kubernetesx-deprecated >}}
 
-```ts
+```typescript
 import * as azure from "@pulumi/azure";
 import * as k8s from "@pulumi/kubernetes";
 import * as kx from "@pulumi/kubernetesx";
@@ -309,7 +309,7 @@ The full code for this app stack is on [GitHub][gh-gcp-deploy-stack].
 
 {{< choosable k8s-language typescript >}}
 
-```ts
+```typescript
 import * as docker from "@pulumi/docker";
 import * as gcp from "@pulumi/gcp";
 import * as k8s from "@pulumi/kubernetes";
@@ -363,7 +363,7 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 
 {{< kubernetesx-deprecated >}}
 
-```ts
+```typescript
 import * as docker from "@pulumi/docker";
 import * as gcp from "@pulumi/gcp";
 import * as k8s from "@pulumi/kubernetes";
@@ -423,7 +423,7 @@ The full code for this app stack is on [GitHub][gh-wp-stack].
 Create a NGINX Pod with a Debian sidecar that prints to a file in a shared
 volume of the Pod.
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 
 // Create an example Pod with a Sidecar.
@@ -512,7 +512,7 @@ The full code for this app stack is on [GitHub][gh-deploy-wp-stack].
 [gh-deploy-wp-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/wordpress
 <!-- markdownlint-enable url -->
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 
 const wordpress = new k8s.apps.v1.Deployment("wordpress", {
@@ -582,7 +582,7 @@ The full code for this app stack is on [GitHub][gh-deploy-secret-stack].
 
 {{% choosable k8s-language typescript %}}
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 
 // Create a Secret with the database credentials.
@@ -644,7 +644,7 @@ const nginx = new k8s.apps.v1.Deployment(appName, {
 
 {{< kubernetesx-deprecated >}}
 
-```ts
+```typescript
 import * as kx from "@pulumi/kubernetesx";
 
 // Create a KX Secret with the database credentials.
@@ -700,7 +700,7 @@ The full code for this app stack is on [GitHub][gh-job-stack].
 
 {{% choosable k8s-language typescript %}}
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 
 // Create an example Job.
@@ -728,7 +728,7 @@ const exampleJob = new k8s.batch.v1.Job("example-job", {
 
 {{< kubernetesx-deprecated >}}
 
-```ts
+```typescript
 import * as kx from "@pulumi/kubernetesx";
 
 // Create the PodBuilder for the Job.
@@ -762,7 +762,7 @@ The full code for this app stack is on [GitHub][gh-ds-stack].
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 <!-- markdownlint-enable url -->
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 
 // Create a DaemonSet that deploys nginx to each worker node.
@@ -800,7 +800,7 @@ The full code for this app stack is on [GitHub][gh-cronjob-stack].
 [k8s-cj]: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
 <!-- markdownlint-enable url -->
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 
 // Create an example CronJob.
@@ -839,7 +839,7 @@ The full code for this app stack is on [GitHub][gh-ss-stack].
 [mariadb]: https://mariadb.org/
 <!-- markdownlint-enable url -->
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 
 // Deploy MariaDB as a StatefulSet.

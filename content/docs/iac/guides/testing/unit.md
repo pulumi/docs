@@ -130,7 +130,7 @@ Let's add the following code to mock the external calls to the Pulumi CLI.
 
 ec2tests.ts:
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 
 pulumi.runtime.setMocks({
@@ -357,7 +357,7 @@ If your program uses [StackReference](/docs/concepts/stacks/#stackreferences) to
 
 {{% choosable language "typescript" %}}
 
-```ts
+```typescript
 pulumi.runtime.setMocks({
     newResource: function(args: pulumi.runtime.MockResourceArgs): {id: string, state: any} {
         // Handle StackReference resources
@@ -389,7 +389,7 @@ pulumi.runtime.setMocks({
 
 In your test, you can then verify that values from the stack reference are used correctly:
 
-```ts
+```typescript
 // Example: Program that reads from a StackReference
 const networkStack = new pulumi.StackReference("organization/network/prod");
 const vpcId = networkStack.getOutput("vpcId");

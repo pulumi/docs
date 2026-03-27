@@ -113,7 +113,7 @@ You can configure a single stack with `git push` to deploy, pull request preview
 
 The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
 
-```ts
+```typescript
 const deploymentSettings = new pulumiservice.DeploymentSettings("deploymentSettings", {
 	organization: pulumi.getOrganization(),
 	project: "your project",
@@ -143,7 +143,7 @@ First you will need to run `pulumi stack init` to create a `pr` stack, set any n
 
 The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
 
-```ts
+```typescript
 const productionSettings = new pulumiservice.DeploymentSettings("productionSettings", {
 	organization: pulumi.getOrganization(),
 	project: "your project",
@@ -198,7 +198,7 @@ Sometimes you want your review stack to differ substantially from the stack that
 
 The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
 
-```ts
+```typescript
 const productionSettings = new pulumiservice.DeploymentSettings("productionSettings", {
 	organization: pulumi.getOrganization(),
 	project: "your project",
@@ -260,7 +260,7 @@ Sometimes you want to vary the behavior of a review stack based on what kind of 
 
 The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
 
-```ts
+```typescript
 const productionSettings = new pulumiservice.DeploymentSettings("productionSettings", {
 	organization: pulumi.getOrganization(),
 	project: "your project",

@@ -341,7 +341,7 @@ const clientsideService = new awsx.ecs.FargateService("client-side-service", {
 To make our PERN stack application available on the Internet, we export the clientside listener's address. We can open a browser window with the URL and port to view our application.
 
 ```typescript
-export let URL = clientsideListener.endpoint.hostname;
+export const URL = clientsideListener.endpoint.hostname;
 ```
 
 In this example, I explained the basic principles behind PERN stack applications and showed how to create the infrastructure to deploy them on ECS. A flexible and optimized tool, Pulumi Crosswalk supports rapidly prototyping applications, scaling workloads, securing and integrating applications in existing infrastructure, and going to production in multiple complex environments.

@@ -223,7 +223,7 @@ const provider = new k8s.Provider("provider", {kubeconfig: config.kubeconfig});
 
 // Create a new CloudWatch Log group for fluentd-cloudwatch.
 const fluentdCloudWatchLogGroup = new aws.cloudwatch.LogGroup(name);
-export let fluentdCloudWatchLogGroupName = fluentdCloudWatchLogGroup.name;
+export const fluentdCloudWatchLogGroupName = fluentdCloudWatchLogGroup.name;
 
 // Deploy fluentd-cloudwatch using the Helm chart.
 const fluentdCloudwatch = new k8s.helm.v3.Chart(name,
@@ -311,7 +311,7 @@ and [analyze its Azure Monitor][azure-monitor-analyze] information in the Monito
 Enable the Log Analytics agent on the AKS cluster in the
 [Cluster Configuration][crosswalk-k8s-cluster] stack.
 
-```ts
+```typescript
 import * as azure from "@pulumi/azure";
 
 // Create the AKS cluster with LogAnalytics enabled in the given workspace.
@@ -330,7 +330,7 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 Enable logging for the control plane, and monitoring of all metrics in the
 [Cluster Services][crosswalk-aks-cluster-svcs] stack.
 
-```ts
+```typescript
 import * as azure from "@pulumi/azure";
 
 // Enable the Monitoring Diagnostic control plane component logs and AllMetrics
@@ -358,7 +358,7 @@ To get the Worker kubelet logs you need to SSH into the nodes.
 Use the node admin username and SSH key used in the
 [Cluster Configuration][crosswalk-k8s-cluster] stack.
 
-```ts
+```typescript
 import * as azure from "@pulumi/azure";
 
 // Create the AKS cluster with LogAnalytics enabled in the given workspace.
@@ -411,7 +411,7 @@ clusters, and it comes automatically enabled for all clusters starting with vers
 Enable the cluster's Node Pool with the proper logging and monitoring
 permission in the [Cluster Configuration][crosswalk-k8s-cluster] stack.
 
-```ts
+```typescript
 import * as gcp from "@pulumi/gcp";
 
 // Create a GKE cluster.
@@ -534,7 +534,7 @@ The full code for this app stack is on [GitHub][gh-dd-stack].
 [gh-dd-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/general-cluster-services/datadog-daemonset
 <!-- markdownlint-enable url -->
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 
 const appName = "datadog";

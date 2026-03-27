@@ -78,7 +78,7 @@ In this example, we’ll deploy Nginx. We’ll skip the cluster creation, which 
 
 The *spec* section of a Deployment specifies the desired state; in this example, we want one Replica, and the selector must match *appLabel*. The Deployment spec includes the application container and claims port 80 on the Pod. To make our deployment available outside the cluster, we create a LoadBalancer service that routes requests to the container. As with the Deployment, we add the Labels and Namespace to the metadata. The Service spec sets the *type* to LoadBalance and opens port 80 externally. Note that the selector uses appLabels to acquire the Pods from our Deployment.
 
-```ts
+```typescript
 ...
 const name = "helloworld";
 
@@ -178,7 +178,7 @@ In this example, we’ll deploy Nginx. We’ll skip the cluster creation which w
 
 The *spec* section of a Deployment specifies the desired state; in this example, we want one Replica, and the selector must match the *appLabel*. The Deployment spec includes the application container and claims port:80 on the Pod. To make our deployment available outside the cluster, we create a LoadBalancer service that routes requests to the container. As with the Deployment, we add the Labels and Namespace to the metadata. The Service spec sets the *type* to LoadBalance and opens port 80 externally. Note that the selector uses appLabels to acquire the Pods from our Deployment.
 
-```ts
+```typescript
 ...
 const name = "helloworld";
 
@@ -276,7 +276,7 @@ In this example, we’ll deploy Nginx. We’ll skip the cluster creation, which 
 
 The *spec* section of a Deployment specifies the desired state; in this example, we want one Replica and the selector must match the *appLabel*. The Deployment spec includes the application container and claims port:80 on the Pod. To make our deployment available outside the cluster, we create a LoadBalancer service that routes requests to the container. As with the Deployment, we add the Labels and Namespace to the metadata. The Service spec sets the *type* to LoadBalance and opens port 80 externally. Note that the selector uses appLabels to acquire the Pods from our Deployment.
 
-```ts
+```typescript
 ...
 const name = "helloworld";
 

@@ -112,7 +112,7 @@ Today, we are making a large collection of new policies available for CrossGuard
 
 These policies are offered as a library, from which Platform Teams can enable the subset they want to apply.  For example:
 
-```ts
+```typescript
 import { PolicyPack } from "@pulumi/policy";
 import { policyManager } from "@pulumi/compliance-policy-manager";
 

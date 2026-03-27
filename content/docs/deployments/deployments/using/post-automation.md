@@ -32,7 +32,7 @@ Either method requires that your stacks are configured with [Deployment Settings
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pulumiservice from "@pulumi/pulumiservice";
 
@@ -230,7 +230,7 @@ The Pulumi Auto Deploy package is currently in preview.
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as autodeploy from "@pulumi/auto-deploy";
 import * as pulumi from "@pulumi/pulumi";
 
