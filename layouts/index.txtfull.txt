@@ -1,124 +1,66 @@
-{{- define "inline/llms/walk" }}
-  {{- $depth := .depth }}
-  {{- $indent := strings.Repeat $depth "  " }}
-  {{- range .menuEntries }}
-    {{- with .Page }}
-      {{- if and (not .Params.llms_exclude) (ne .Title "") }}
-{{ $indent }}- [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
-      {{- end }}
-    {{- end }}
-    {{- with .Children }}
-      {{- template "inline/llms/walk" (dict "menuEntries" . "depth" (add $depth 1)) }}
-    {{- end }}
-  {{- end }}
-{{- end }}
-
 # Pulumi
 
-> Infrastructure as code using real programming languages. Build, deploy, and manage cloud infrastructure on AWS, Azure, GCP, Kubernetes, and 150+ providers with TypeScript, Python, Go, C#, Java, or YAML.
+> Infrastructure as code in real programming languages. Define, deploy, and manage cloud infrastructure on AWS, Azure, Google Cloud, Kubernetes, and 150+ providers using TypeScript, Python, Go, C#, Java, or YAML.
 
-This file provides a curated guide to Pulumi's documentation, organized by product area. Each section includes nested pages with descriptions to help you navigate topics from high-level concepts to detailed reference material. For a complete list of all pages, see sitemap.xml.
-{{- /*
-  DOCS SECTIONS
-  Mirror the structure from layouts/partials/docs/menu.html
-  This ensures llms.txt stays in sync with the sidebar navigation
+Pulumi is an open source infrastructure as code platform that lets you use familiar programming languages and tools to build, deploy, and manage cloud infrastructure. Pulumi Cloud provides state management, secrets, deployments, and governance for teams.
 
-  Each section walks its menu recursively, respecting:
-  - Menu hierarchy and weights
-  - llms_exclude frontmatter flag
-  - Empty title filtering
-*/ -}}{{ "\n" }}
-## Getting Started
-{{- with index site.Menus "get-started" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
+## Accessing documentation as markdown
+
+Documentation pages under /docs/ support content negotiation. Request `Accept: text/markdown` to receive clean markdown instead of HTML:
+
+    curl -H "Accept: text/markdown" https://www.pulumi.com/docs/iac/concepts/resources/
+
+## Using the Pulumi CLI for docs
+
+The `pulumi docs` command provides terminal-based access to documentation, useful for agentic and CLI-driven workflows:
+
+- `pulumi docs read <path>` - Read a specific page (e.g., `pulumi docs read iac/concepts/stacks`)
+- `pulumi docs read <path>#<section>` - Jump to a section (e.g., `pulumi docs read iac/concepts/stacks#stack-tags`)
+- `pulumi docs search <query>` - Search docs by keyword (e.g., `pulumi docs search stack references`)
+- `pulumi docs browse [path]` - Interactively browse documentation
+- `pulumi docs registry <package>` - Read provider docs (e.g., `pulumi docs registry aws`)
+- `pulumi docs registry <package> api [module]` - Read API docs for a specific module
+
+Use `--language <lang>` to filter code examples (typescript, python, go, csharp, java, yaml).
+
+## Site overview
+
+This llms.txt covers www.pulumi.com, which includes:
+
+- [Product](https://www.pulumi.com/product/): Pulumi Cloud platform overview and capabilities
+- [Pricing](https://www.pulumi.com/pricing/): Plans and pricing for Pulumi Cloud (Individual, Team, Enterprise, Business Critical)
+- [Pulumi Registry](https://www.pulumi.com/registry/): Documentation for 150+ cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
+- [Registry sitemap (JSON)](https://www.pulumi.com/registry/cli-sitemap.json): Machine-readable index of all registry packages; per-package sitemaps at `/registry/packages/<name>/cli-sitemap.json`
+- [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts
+- [Tutorials](https://www.pulumi.com/tutorials/): Hands-on tutorials for building cloud infrastructure with Pulumi
+- [What is...](https://www.pulumi.com/what-is/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless)
+- [Case Studies](https://www.pulumi.com/case-studies/): Customer stories and use cases
+- [Templates](https://www.pulumi.com/templates/): Ready-to-use project templates across clouds and languages
+- [Docs](https://www.pulumi.com/docs/): Technical documentation (detailed sections below)
+- [Docs sitemap (JSON)](https://www.pulumi.com/docs/cli-sitemap.json): Machine-readable hierarchical sitemap of all documentation pages with titles and nesting
+{{ range site.Data.docs_menu_sections }}
+{{- $entries := slice }}
+{{- with index site.Menus .menu }}
+{{- range . }}
+{{- with .Page }}
+{{- if and (not .Params.llms_exclude) (ne .Title "") }}
+{{- $entries = $entries | append . }}
 {{- end }}
-
-## Infrastructure as Code
-{{- with index site.Menus "iac" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
 {{- end }}
-
-## Deployments & Workflows
-{{- with index site.Menus "deployments" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
 {{- end }}
-
-## Version Control
-{{- with index site.Menus "version-control" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
 {{- end }}
-
-## Secrets & Configuration (ESC)
-{{- with index site.Menus "esc" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Insights & Governance
-{{- with index site.Menus "insights" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Internal Developer Platform
-{{- with index site.Menus "idp" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Infrastructure AI
-{{- with index site.Menus "ai" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Administration
-{{- with index site.Menus "administration" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Reference
-{{- with index site.Menus "reference" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-## Support
-{{- with index site.Menus "support" }}
-  {{- template "inline/llms/walk" (dict "menuEntries" . "depth" 0) }}
-{{- end }}
-
-{{- /*
-  ADDITIONAL SECTIONS
-  These sections are not part of the docs menu system
-  but are important for LLM understanding
-*/ -}}{{ "\n" }}
-## Tutorials
-{{ $tutorials := where $.Site.Pages "Section" "tutorials" }}
-{{- range $tutorials }}
-  {{- if and (not .Params.llms_exclude) (ne .Title "") }}
+{{- if $entries }}
+## {{ .label }}
+{{- range $entries }}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
-  {{- end }}
 {{- end }}
-
-## Resources
-
-### Recent Blog Posts
+{{- end }}
+{{ end }}
+## Optional
 {{- $blogPages := where $.Site.Pages "Section" "blog" }}
-{{- $recentBlogs := first 25 ($blogPages.ByDate.Reverse) }}
+{{- $recentBlogs := first 10 ($blogPages.ByDate.Reverse) }}
 {{- range $recentBlogs }}
-  {{- if and (not .Params.llms_exclude) (ne .Title "") }}
+{{- if and (not .Params.llms_exclude) (ne .Title "") }}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
-  {{- end }}
 {{- end }}
-
-### Templates & Examples
-{{- $templates := where $.Site.Pages "Section" "templates" }}
-{{- range $templates }}
-  {{- if and (not .Params.llms_exclude) (ne .Title "") }}
-- [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
-  {{- end }}
-{{- end }}
-
-### Case Studies
-{{- $caseStudies := (where $.Site.Pages "Section" "case-studies").ByDate.Reverse }}
-{{- range $caseStudies }}
-  {{- if and (not .Params.llms_exclude) (ne .Title "") }}
-- [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
-  {{- end }}
 {{- end }}

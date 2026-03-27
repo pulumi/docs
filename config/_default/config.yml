@@ -39,6 +39,21 @@ outputFormats:
     baseName: "llms"
     isPlainText: true
     permalinkable: false
+  markdown:
+    mediaType: "text/markdown"
+    baseName: "index"
+    isPlainText: true
+    notAlternative: true
+  clisitemap:
+    mediaType: "application/json"
+    baseName: "cli-sitemap"
+    isPlainText: true
+    notAlternative: true
+  cliconfig:
+    mediaType: "application/json"
+    baseName: "cli-config"
+    isPlainText: true
+    notAlternative: true
 
 # We set the outputs explicitly to just "HTML" as otherwise they default to both
 # "HTML" and "RSS", and we only want to generate RSS for the blog section -- not
@@ -51,6 +66,8 @@ outputs:
     - JSON
     - txtfull
   section:
+    - HTML
+  page:
     - HTML
 
 taxonomies:
