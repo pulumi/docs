@@ -13,6 +13,14 @@ docfx
 
 # Post-process DocFX output: lowercase all paths for case-insensitive URL serving.
 # Requires GNU sed (\L...\E syntax) — available on Ubuntu GitHub Actions runners.
+# This script is intended to run only in CI. If you need to run it locally on macOS,
+# install GNU sed first: brew install gnu-sed && export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
+if ! sed --version 2>/dev/null | grep -q 'GNU sed'; then
+    echo "Error: GNU sed is required for post-processing (.NET SDK docs lowercase step)." >&2
+    echo "On macOS: brew install gnu-sed && export PATH=\"\$(brew --prefix)/opt/gnu-sed/libexec/gnubin:\$PATH\"" >&2
+    exit 1
+fi
+
 DOTNET_OUT="../static-prebuilt/docs/reference/pkg/dotnet"
 
 echo "Post-processing DocFX output: lowercasing filenames and rewriting hrefs..."

@@ -1573,6 +1573,7 @@ Delivery: CloudWatch Logs infrastructure v2
 | /js/*.js | S3 Main | 1 year | Versioned assets |
 | /registry/* | Registry | None | Dynamic content |
 | /guides/* | Guides | None | Dynamic content |
+| /docs/reference/pkg/dotnet/* | S3 Main | Default | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
 | /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |
 | /ai/* | S3 Main | 1 week | 410 Gone (Lambda@Edge) |
 | /uploads/* | Uploads | 1 hour | User uploads |
@@ -1644,6 +1645,20 @@ const edgeRedirects = new aws.lambda.Function("edge-redirects", {
 **Applied To:** `/ai` and `/ai/*` paths
 
 **Why:** The /ai page has been replaced by /product/neo/; subpaths are permanently removed
+
+#### CloudFront Functions
+
+**dotnet-lowercase-uri**
+
+**Event Type:** viewer-request
+
+**Purpose:** Normalize incoming URIs for `.NET SDK` docs by lowercasing the path, so that requests with mixed-case paths (e.g., `/docs/reference/pkg/dotnet/Pulumi.Automation/`) resolve to the lowercase S3 keys.
+
+**Applied To:** `/docs/reference/pkg/dotnet/*` (ordered cache behavior)
+
+**Why:** DocFX generates PascalCase filenames by default. The build post-processing step (`scripts/run_docfx.sh`) lowercases all output filenames and internal hrefs. The CloudFront Function ensures that any externally-linked URLs with the original casing still resolve correctly, without maintaining mixed-case files in S3.
+
+**Execution order:** CloudFront Functions run at viewer-request before Lambda@Edge origin-request functions. The URI is lowercased before `dotnetSDKRedirect` in the Lambda@Edge redirect handler evaluates it, which is why that function's regex uses lowercase patterns.
 
 #### Route53 DNS
 
