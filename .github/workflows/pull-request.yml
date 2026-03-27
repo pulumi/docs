@@ -46,11 +46,14 @@ jobs:
           role-duration-seconds: 7200
           aws-region: us-west-2
 
-      - name: Install s5cmd for fast S3 uploads
+      - name: Install s5cmd v2.3.0 for fast S3 uploads
         run: |
           S5CMD_VERSION="2.3.0"
-          curl -fsSL "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz" | \
-            sudo tar -xz -C /usr/local/bin s5cmd
+          S5CMD_SHA256="de0fdbfa3aceae55e069ba81a0fc17b2026567637603734a387b2fca06c299b4"
+          curl -fsSL -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
+          echo "${S5CMD_SHA256}  /tmp/s5cmd.tar.gz" | sha256sum -c -
+          sudo tar -xz -C /usr/local/bin s5cmd -f /tmp/s5cmd.tar.gz
+          rm /tmp/s5cmd.tar.gz
 
       - name: Install Pulumi CLI
         uses: pulumi/actions@v6

@@ -20,7 +20,7 @@
     {{ partial "inline/menu/collecturls" (dict "menuName" $menuName "menuEntries" $menuEntries "page" $page) }}
 {{ end }}
 
-{{/* Detect current section for auto-expansion (driven by data/docs-menu-sections.yml) */}}
+{{/* Detect current section for auto-expansion (driven by data/docs_menu_sections.yml) */}}
 {{ $currentSection := "home" }}
 {{ if eq $page.Path "/docs/" }}
     {{ $currentSection = "home" }}
@@ -74,7 +74,7 @@
                 </ul>
             </li>
 
-            {{/* Menu sections driven by data/docs-menu-sections.yml */}}
+            {{/* Menu sections driven by data/docs_menu_sections.yml */}}
             {{- range site.Data.docs_menu_sections }}
             {{- $menuName := .menu }}
             {{- $label := .label }}

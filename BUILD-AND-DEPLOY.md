@@ -818,7 +818,7 @@ Hugo generates:
 - CLI sitemap JSON (`clisitemap`) — hierarchical JSON index of docs navigation
 - CLI config JSON (`cliconfig`) — configuration endpoint (Algolia search keys)
 
-**Markdown output format:** Hugo generates clean markdown versions of documentation pages alongside HTML. These are served via CloudFront content negotiation when clients send `Accept: text/markdown`. The conversion is handled by a 7-phase pipeline in `layouts/partials/docs/markdown-pipeline.md` that converts rendered HTML back to markdown (Chroma → fenced code blocks, HTML tags → markdown syntax, choosable options → chooser comment blocks, etc.).
+**Markdown output format:** Hugo generates clean markdown versions of documentation pages alongside HTML. These are served via CloudFront content negotiation when clients send `Accept: text/markdown`. The conversion is handled by an 8-phase pipeline in `layouts/partials/docs/markdown-pipeline.md` that converts rendered HTML back to markdown (Chroma → fenced code blocks, HTML tags → markdown syntax, choosable options → chooser comment blocks, etc.).
 
 **Layout files:**
 
