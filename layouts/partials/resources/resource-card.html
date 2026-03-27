@@ -1,0 +1,71 @@
+{{ $page := . }}
+{{ $labels := dict }}
+{{ $hideParentArea := "" }}
+
+{{/* Support both direct page context and dict context with Labels/HideParentArea */}}
+{{ if reflect.IsMap . }}
+    {{ $page = .Page }}
+    {{ with .Labels }}
+        {{ $labels = . }}
+    {{ end }}
+    {{ with .HideParentArea }}
+        {{ $hideParentArea = . }}
+    {{ end }}
+{{ end }}
+
+{{/* Fall back to site data if no labels passed */}}
+{{ if not $labels.solution_areas }}
+    {{ $labels = $page.Site.Data.resources.labels }}
+{{ end }}
+
+<div class="group block bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg hover:border-purple-300 transition-all">
+    {{ with $page.Params.content_type }}
+        {{ $badgeColor := "bg-violet-100 text-violet-700" }}
+        {{ if eq . "comparison-guide" }}
+            {{ $badgeColor = "bg-blue-100 text-blue-700" }}
+        {{ else if eq . "solution-guide" }}
+            {{ $badgeColor = "bg-green-100 text-green-700" }}
+        {{ end }}
+        <span class="inline-block px-2.5 py-0.5 text-xs font-medium rounded-full {{ $badgeColor }} mb-3">
+            {{ index $labels.content_types . | default (replace . "-" " " | title) }}
+        </span>
+    {{ end }}
+    <a href="{{ $page.RelPermalink }}" class="block">
+        <h3 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors mb-3">
+            {{ $page.Title }}
+        </h3>
+        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+            {{ $page.Params.meta_desc }}
+        </p>
+    </a>
+    <div class="flex flex-wrap gap-2">
+        {{ range $page.Params.solution_areas }}
+            {{ if ne . $hideParentArea }}
+                {{ $areaLabel := index $labels.solution_areas . | default (replace . "-" " " | title) }}
+                {{ $areaPage := $page.Site.GetPage (printf "/resources/%s" .) }}
+                {{ if $areaPage }}
+                    <a href="{{ $areaPage.RelPermalink }}" class="text-xs px-2 py-1 rounded-full bg-purple-100 text-purple-700 border border-purple-300 hover:bg-purple-200 transition-colors">
+                        {{ $areaLabel }}
+                    </a>
+                {{ else }}
+                    <span class="text-xs px-2 py-1 rounded-full bg-purple-100 text-purple-700 border border-purple-300">
+                        {{ $areaLabel }}
+                    </span>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        {{ range $page.Params.capabilities }}
+            {{ $capLabel := index $labels.topics . | default (index $labels.capabilities .) | default (replace . "-" " " | title) }}
+            {{ $topicPage := $page.Site.GetPage (printf "/resources/topics/%s" .) }}
+            {{ if $topicPage }}
+                <a href="{{ $topicPage.RelPermalink }}" class="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200 transition-colors">
+                    {{ $capLabel }}
+                </a>
+            {{ else }}
+                <span class="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-600 border border-gray-200">
+                    {{ $capLabel }}
+                </span>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>

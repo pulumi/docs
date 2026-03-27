@@ -96,7 +96,27 @@ This file provides a curated guide to Pulumi's documentation, organized by produ
   {{- end }}
 {{- end }}
 
-## Resources
+## Resource Library
+{{ $resourceSections := where (where $.Site.Pages "Section" "resources") "Kind" "section" }}
+{{- range $resourceSections }}
+  {{- if ne .Title "Resource Library" }}
+    {{- $categorySlug := index (split (strings.TrimSuffix "/" .RelPermalink) "/") (sub (len (split (strings.TrimSuffix "/" .RelPermalink) "/")) 1) }}
+    {{- $allResources := where (where $.Site.Pages "Type" "resources") "Kind" "page" }}
+    {{- $articles := where $allResources ".Params.solution_areas" "intersect" (slice $categorySlug) }}
+    {{- if $articles }}
+
+### {{ .Title }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
+      {{- range $articles }}
+        {{- if and (not .Params.llms_exclude) (ne .Title "") }}
+  - [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+## Blog & Media
 
 ### Recent Blog Posts
 {{- $blogPages := where $.Site.Pages "Section" "blog" }}
