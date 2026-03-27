@@ -41,7 +41,7 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 You must supply an existing project ID to deploy the cluster. You can input the project ID through the new-project wizard. No additional configuration is required.
 
-Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/cli/commands/pulumi_up):
+Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/iac/cli/commands/pulumi_up):
 
 ```bash
 $ pulumi up
@@ -79,7 +79,7 @@ gcp:region
 nodesPerZone
 : The desired number of nodes per zone in the nodepool. Defaults to `1`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/cli/commands/pulumi_config_set) as shown below:
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) as shown below:
 
 ```bash
 $ pulumi config set someProp ../some/value
@@ -88,7 +88,7 @@ $ pulumi up
 
 ## Tidying up
 
-You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/cli/commands/pulumi_destroy):
+You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy):
 
 ```bash
 $ pulumi destroy

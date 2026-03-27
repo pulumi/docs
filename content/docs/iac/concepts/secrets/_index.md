@@ -557,14 +557,14 @@ $ pulumi stack init my-stack \
 
 ### Changing the secrets provider for a stack
 
-To change the secrets provider for an existing stack use the [`pulumi stack change-secrets-provider`](/docs/cli/commands/pulumi_stack_change-secrets-provider) command.
+To change the secrets provider for an existing stack use the [`pulumi stack change-secrets-provider`](/docs/iac/cli/commands/pulumi_stack_change-secrets-provider) command.
 
 ```bash
 $ pulumi stack change-secrets-provider "<secrets-provider>"
 ```
 
 This will change the encrypted secrets in the provider configuration and the stack's state file to use the new secrets provider.
-The [supported secrets providers](/docs/cli/commands/pulumi_stack_init/) are:
+The [supported secrets providers](/docs/iac/cli/commands/pulumi_stack_init/) are:
 
 - `default`
 - `passphrase`
@@ -589,7 +589,7 @@ config:
 
 Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/deployments/projects-and-stacks/#stack-permissions) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
 
-It's therefore considered safe and good practice to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can easily rebuild them, using the most recently deployed configuration, with [`pulumi config refresh`](/docs/cli/commands/pulumi_config_refresh/).
+It's therefore considered safe and good practice to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can easily rebuild them, using the most recently deployed configuration, with [`pulumi config refresh`](/docs/iac/cli/commands/pulumi_config_refresh/).
 
 ## Managing secrets with Pulumi ESC environments
 

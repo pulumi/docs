@@ -20,7 +20,7 @@ The `protect` resource option marks a resource as protected. A protected resourc
 To delete a protected resource, it must first be *unprotected*. There are two ways to unprotect a resource:
 
 * Set `protect: false` and then run `pulumi up`
-* Use the [`pulumi state unprotect`](/docs/cli/commands/pulumi_state_unprotect) command
+* Use the [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect) command
 
 Once the resource is unprotected, it can be deleted as part of a following update.
 

@@ -33,7 +33,7 @@ Follow the prompts to complete the new-project wizard. When it’s done, you’l
 
 ## Deploying the project
 
-The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/cli/commands/pulumi_up):
+The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/iac/cli/commands/pulumi_up):
 
 ```bash
 $ pulumi up
@@ -62,7 +62,7 @@ None of these settings is required; by default, the AWS Serverless template is s
 
 If you already have a website you'd like to deploy, you can do so by replacing contents of the `www` folder and redeploying with `pulumi up`.
 
-Alternatively, you can configure the stack to deploy from another folder on your machine by using [`pulumi config set`](/docs/cli/commands/pulumi_config_set) to change the value of the `path` setting:
+Alternatively, you can configure the stack to deploy from another folder on your machine by using [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) to change the value of the `path` setting:
 
 ```bash
 $ pulumi config set path ../my-website/dist
@@ -75,7 +75,7 @@ You can customize the placeholder website's functionality by editing the Lambda 
 
 ## Tidying up
 
-You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/cli/commands/pulumi_destroy):
+You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy):
 
 ```bash
 $ pulumi destroy

@@ -81,7 +81,7 @@ The VPC test is slightly more complex. For the most part, it is simply checking 
 `cluster.core.vpcId` property and ensuring it doesn't equal the default VPC ID, which
 we fetch with `aws.ec2.getVpc`. However, because we might be creating the custom VPC in the
 program itself, it's possible we won't know the ID during previews. (A [preview](
-/docs/cli/commands/pulumi_preview) is when
+/docs/iac/cli/commands/pulumi_preview) is when
 Pulumi shows you a dry-run of your deployment without actually doing it yet.) That's why
 we check `pulumi.runtime.isDryRun` and let things slide, with a little warning message.
 We could always be conservative and fail the test, but in this case, we'll actually permit the

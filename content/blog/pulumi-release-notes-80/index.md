@@ -99,7 +99,7 @@ Automation API now supports parallel execution of NodeJS inline programs in addi
 
 ### New --remove flag for `pulumi destroy`
 
-A [`pulumi destroy`](/docs/cli/commands/pulumi_destroy) operation destroys all existing resources in the stack, but not the stack itself. If you then wanted to delete the stack itself, once all the resources were destroyed, you would run a [`pulumi stack rm`]. A community member, [mrod-io](https://github.com/mrod-io) added a flag for `pulumi destroy` for when you want to remove the stack after its resources are destroyed: `pulumi destroy --remove`.
+A [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy) operation destroys all existing resources in the stack, but not the stack itself. If you then wanted to delete the stack itself, once all the resources were destroyed, you would run a [`pulumi stack rm`]. A community member, [mrod-io](https://github.com/mrod-io) added a flag for `pulumi destroy` for when you want to remove the stack after its resources are destroyed: `pulumi destroy --remove`.
 
 **See it in action below:**
 

@@ -31,7 +31,7 @@ Let’s get started!
 
 The first thing we'll cover is the [Pulumi stack tags](/docs/concepts/stack#stack-tags) feature. Stack tags are key/value pairs that are associated with your Pulumi stack. You can use them for any number of purposes, from keeping things organized to even flagging whether or not it's okay for a script to reclaim the stack's resources.
 
-While you can create, edit, and remove stack tags using the Pulumi CLI (see [`pulumi stack tag`](/docs/cli/commands/pulumi_stack_tag)), you can also do so in the Pulumi Console:
+While you can create, edit, and remove stack tags using the Pulumi CLI (see [`pulumi stack tag`](/docs/iac/cli/commands/pulumi_stack_tag)), you can also do so in the Pulumi Console:
 
 ![Adding and removing stack tags in the Service ](https://user-images.githubusercontent.com/274700/150612443-b0b187e1-6329-42ca-816f-01de1bc5d4ff.gif)
 

@@ -23,7 +23,7 @@ aliases:
 - A working installation of Octopus or a hosted instance from [https://octopus.com](https://octopus.com).
 - An account in the [Pulumi Cloud](https://app.pulumi.com).
 - The [latest version of Pulumi](/docs/install/).
-- Setup a new project and [stack](/docs/concepts/stack/) using one of our [Get Started](/docs/get-started/) guides or by running [`pulumi new`](/docs/cli/commands/pulumi_new)
+- Setup a new project and [stack](/docs/concepts/stack/) using one of our [Get Started](/docs/get-started/) guides or by running [`pulumi new`](/docs/iac/cli/commands/pulumi_new)
 and choosing one of the many templates that are available.
 - Optionally, also create a CI pipeline from a source control repository of your choice to be the source of packages. You will learn more about packages and how to create them later in this guide.
 
@@ -34,7 +34,7 @@ For the sake of this walkthrough, we will try to deploy an [AWS example](https:/
 ## Stack and Branch Mappings
 
 The steps below act on a hypothetical stack: `my-org/my-project/aws-ts-hello-fargate`.
-You can create a new stack by running [`pulumi stack init`](/docs/cli/commands/pulumi_stack_init) from the folder containing the `Pulumi.yaml` file.
+You can create a new stack by running [`pulumi stack init`](/docs/iac/cli/commands/pulumi_stack_init) from the folder containing the `Pulumi.yaml` file.
 
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.

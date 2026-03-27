@@ -255,7 +255,7 @@ resources:
 
 ### Outputs and Stack References
 
-The value of [`outputs`](https://www.pulumi.com/docs/concepts/stack/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi stack (via [`pulumi stack output`](https://www.pulumi.com/docs/cli/commands/pulumi_stack_output/)), and whose values are potentially computed expressions that resolve to the values of the desired outputs.
+The value of [`outputs`](https://www.pulumi.com/docs/concepts/stack/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi stack (via [`pulumi stack output`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_stack_output/)), and whose values are potentially computed expressions that resolve to the values of the desired outputs.
 
 ```yaml
 outputs:

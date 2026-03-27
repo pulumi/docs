@@ -72,4 +72,4 @@ With these new CLI commands, Pulumi Insights is available at your fingertips in 
 
 * [Pulumi Insights](/docs/pulumi-cloud/insights/)
 * [Pulumi AI](/ai)
-* [Pulumi CLI](/docs/cli/commands/)
+* [Pulumi CLI](/docs/iac/cli/commands/)

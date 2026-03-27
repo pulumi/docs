@@ -31,7 +31,7 @@ We've also added support for core Pulumi features, including [aliases](/docs/con
 
 [CrossGuard, our Policy as Code framework](/docs/using-pulumi/crossguard/), is now ready to take for a serious test drive. CrossGuard lets you to write policies in real code and enforce them during updates. Policies can check for anything; however, common checks include security, compliance, cost management, and general and team best practices. You can write your policy packages or use off-the-shelf policy packs like our [AWSGuard](/docs/using-pulumi/crossguard/awsguard/) package.
 
-CrossGuard is open source and the functionality is behind [the new `pulumi policy` command](/docs/cli/commands/pulumi_policy), as well as [the new `--policy-pack` flag](/docs/cli/commands/pulumi_up#options) for the `preview` and `up` commands. You can use these features with any edition of Pulumi, without restriction, including the offline backends.
+CrossGuard is open source and the functionality is behind [the new `pulumi policy` command](/docs/iac/cli/commands/pulumi_policy), as well as [the new `--policy-pack` flag](/docs/iac/cli/commands/pulumi_up#options) for the `preview` and `up` commands. You can use these features with any edition of Pulumi, without restriction, including the offline backends.
 
 If you choose to use CrossGuard with the Enterprise Edition of Pulumi, however, you'll get some added functionality. This includes server-side enforcement of policies and organizational policies, including "policy groups" which let you group and apply many policies together to your stacks, such as applying different policies to production than development environments.
 
@@ -53,7 +53,7 @@ The remaining areas of focus between now and launch include:
 
 In addition to the major areas above, we've continued to ship many other improvements. Here are some of our favorite ones:
 
-* [Stack export for the CLI and in the service](/docs/cli/commands/pulumi_stack_export/), enabling you to export any past version of a stack's state file. This helps you debug, restore, or roll back changes, or even just for historical reporting purposes.
+* [Stack export for the CLI and in the service](/docs/iac/cli/commands/pulumi_stack_export/), enabling you to export any past version of a stack's state file. This helps you debug, restore, or roll back changes, or even just for historical reporting purposes.
 
 * [Many quality-of-life improvements in the Pulumi SaaS Console](/blog/pulumi-service-improvements_02-2020/), including stack tagging, grouping, and sorting; deep linking into CI/CD systems; infrastructure configuration pretty-printing; reverse stack membership lookups; performance improvements; and more.
 

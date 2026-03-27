@@ -18,7 +18,7 @@ In this post, we showcase what's new!
 
 Pulumi has had support for [stack tags](/docs/concepts/stack#stack-tags) for a while, enabling
 you to add attributes to your stacks with custom data such as the `account-id` or `environment`. But previously the data was
-only available on the command-line, via the `pulumi stack tag` command ([documentation](/docs/cli/commands/pulumi_stack_tag/).
+only available on the command-line, via the `pulumi stack tag` command ([documentation](/docs/iac/cli/commands/pulumi_stack_tag/).
 
 We've added first-class support for stack tags in the Pulumi Service as well. You can create, update, and delete tags from within the console.
 
@@ -58,7 +58,7 @@ While in most cases your [stack's checkpoint data](/docs/iac/concepts/state-and-
 you don't need to worry about; in some advanced scenarios, you may need to inspect or edit it manually.
 
 You can now download a stack’s checkpoint file directly from the Pulumi Service. You can get the
-same data from the command-line, using `pulumi stack export` ([documentation](/docs/cli/commands/pulumi_stack_export/),
+same data from the command-line, using `pulumi stack export` ([documentation](/docs/iac/cli/commands/pulumi_stack_export/),
 which now supports a `--version` flag to export older checkpoint files too.
 
 {{< figure alt="Download stack checkpoints from the Pulumi Service" src="./download-checkpoint-file.png" class="md:max-w-lg" >}}

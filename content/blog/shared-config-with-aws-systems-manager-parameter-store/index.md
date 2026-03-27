@@ -56,7 +56,7 @@ $ cd shared-config
 $ pulumi new aws-yaml
 ```
 
-When the new-project wizard completes, add two new settings for the `dev` stack with [`pulumi config set`](/docs/cli/commands/pulumi_config_set):
+When the new-project wizard completes, add two new settings for the `dev` stack with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 
 ```bash
 $ pulumi config set motd 'Hello from Pulumi!'

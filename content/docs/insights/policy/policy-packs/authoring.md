@@ -220,7 +220,7 @@ Create your first policy pack:
 
     Each resource is passed as `input` with metadata fields like `__name` (logical name), `__urn`, and `type`, plus all resource properties at the top level.
 
-    Use [OPA metadata annotations](https://www.openpolicyagent.org/docs/latest/annotations/) (`# METADATA` comment blocks) to provide a `title`, `description`, and remediation guidance (`custom.message`) for each rule. The analyzer extracts these annotations and reports them to Pulumi:
+    Use [OPA metadata annotations](https://www.openpolicyagent.org/docs/latest/policy-reference/#annotations) (`# METADATA` comment blocks) to provide a `title`, `description`, and remediation guidance (`custom.message`) for each rule. The analyzer extracts these annotations and reports them to Pulumi:
 
     ```rego
     package aws
