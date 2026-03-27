@@ -148,6 +148,7 @@ pushd "$programs_dir"
         pulumi -C "$project" config set gcp:region us-central1 || true
         pulumi -C "$project" config set gcp:zone us-central1-a || true
         pulumi -C "$project" config set gcp:project pulumi-ci-gcp-provider || true
+        pulumi -C "$project" config set githubToken "test-token" || true
 
         # Create prerequisite cloud resources for import examples.
         if [[ "$project" == azure-native-import-resource-group-* ]]; then

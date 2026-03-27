@@ -17,7 +17,7 @@ So, let's get started by deploying our DigitalOcean droplet.
 
 The first thing we're going to do is generate an SSH key for the machine.
 
-```ts
+```typescript
 const sshKey = new tls.PrivateKey("sshKey", {
   algorithm: "RSA",
   rsaBits: 4096,
@@ -34,7 +34,7 @@ const doSshkey = new digitalocean.SshKey("sshKey", {
 
 Then we'll want to create a cloud-init configuration to pass to the droplet as user-data.
 
-```ts
+```typescript
 const cloudConfig = cloudinit.getConfig({
   gzip: false,
   base64Encode: false,
@@ -72,7 +72,7 @@ curl -sfL https://get.k3s.io | sh -s - --bind-address ${PUBLIC_IP}
 
 Now that we have some user-data, we can create a droplet and pass it through.
 
-```ts
+```typescript
 const k3sVm = new digitalocean.Droplet(
   "k3s",
   {
@@ -91,7 +91,7 @@ const k3sVm = new digitalocean.Droplet(
 
 Now, for the fun bit. Previously, there'd be no way to get the kubeconfig from the VM. Meaning that we'd need to use static manifests to deploy our workloads to k3s. This would usually be done by adding more and more scripts to the user-data and rendering them with cloud-init. This approach is not bad, but we lose the rich interface that Pulumi provides for authoring our Kubernetes resources. With the Command package, we can now execute a command on our VM and pull down that kubeconfig to be used to create our provider.
 
-```ts
+```typescript
 const fetchKubeconfig = new command.remote.Command("fetch-kubeconfig", {
   connection: {
     host: k3sVm.ipv4Address,
@@ -107,7 +107,7 @@ const fetchKubeconfig = new command.remote.Command("fetch-kubeconfig", {
 
 The Command package makes the `stdout` of the command we run available in our program, so creating the Kubernetes provider is as simple as:
 
-```ts
+```typescript
 const kubernetesProvider = new kubernetes.Provider("k3s", {
   kubeconfig: fetchKubeconfig.stdout,
 });
@@ -115,7 +115,7 @@ const kubernetesProvider = new kubernetes.Provider("k3s", {
 
 Now, for the final step - deploying nginx.
 
-```ts
+```typescript
 const nginx = new kubernetes.apps.v1.Deployment(
   "nginx",
   {

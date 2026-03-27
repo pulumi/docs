@@ -112,7 +112,7 @@ The following snippet is the core part of the credential rotator app. We define 
 named `lambda`. Finally, the `triggerSchedule` resource invokes our lambda on a fixed schedule, thereby ensuring that the key rotation process goes on indefinitely. You can see the full code
 [here](https://github.com/chrsmith/pulumi-aws-travis-cicd-demo/blob/master/infrastructure/key-rotator/iam-key-rotator.ts).
 
-```ts
+```typescript
 async function rotateIAMUserKeys(iamUser: aws.iam.User, onNewCredentials: (key: string, secret: string) => Promise<void>) {
     ...
 }
@@ -139,7 +139,7 @@ When writing reusable infrastructure components in Pulumi however, it is helpful
 
 For example, we can bundle together the AWS Lambda, CloudWatcn schedule, and the associated IAM policies into a single conceptual resource `AccessKeyRotator`. Bundling resources allows for the code reuse.
 
-```ts
+```typescript
 const rotator = new AccessKeyRotator("rotator", {
     interval: config.require("rate"),
     user: user,
@@ -156,7 +156,7 @@ The following snippet shows how the `CredentialPusher` is configured in the key 
 [Pulumi stack's configuration](https://www.pulumi.com/docs/concepts/config/), and hard-code the specific set of projects and encrypted environment variables to
 store the new access key.
 
-```ts
+```typescript
 // A "credential pusher" is the component that pushes new AWS IAM credentials out to 3rd parties
 // as the older ones get rotated. For demonstration purposes, this updates the Travis CI settings
 // for the chrsmith/pulumi-aws-travis-cicd-demo repo. But you can imagine another implementation

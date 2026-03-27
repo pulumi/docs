@@ -87,7 +87,7 @@ To use this new package, head on over to a Pulumi program, or
 (for instance, with `pulumi new aws-typescript`).
 Then just add a reference like any other dependency:
 
-```
+```bash
 $ npm install static-website-aws
 ```
 
@@ -95,14 +95,14 @@ At that point, we can import our `StaticWebsite` class from the
 `static-website-aws` package like usual in Node.js programs, either
 using require
 
-```
+```typescript
 let swa = require("static-website-aws");
 ```
 
 or using the new ES6 module import syntax, supported by TypeScript and
 modern JavaScript
 
-```
+```typescript
 import { StaticWebsite } from "static-website-aws";
 ```
 
@@ -113,7 +113,7 @@ case, let's just pass a path to the content on disk (which will
 automatically get uploaded into S3 objects during a `pulumi up`) in
 addition to a path to a custom 404 HTML page:
 
-```javascript
+```typescript
 import  { StaticWebsite } from "static-website-aws";
 
 const website  = new StaticWebsite ("browserhack", {
@@ -121,7 +121,7 @@ const website  = new StaticWebsite ("browserhack", {
     custom404Path:"/404.html",
 });
 
-export let cloudfrontDomain  = website .cdn .domainName ;
+export const cloudfrontDomain = website .cdn .domainName ;
 ```
 
 As soon as we have our program, we can stand it up with a single
@@ -188,7 +188,7 @@ specify its logical parent resource. Every child resource created is
 passed `defaultResourceOptions`, which sets the parent property to this
 (the instance of StaticWebsite ).
 
-```javascript
+```typescript
 // Default resource options for this component's child resources.
 const defaultResourceOptions: pulumi.ResourceOptions = { parent:this };
 

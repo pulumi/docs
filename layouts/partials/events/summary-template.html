@@ -1,0 +1,12 @@
+{{/*
+    Summary Template Partial
+
+    Displays event description in the template design system.
+
+    Parameters:
+    - description: Markdown event description
+*/}}
+
+<div class="template-event-summary">
+    <div class="event-summary-description">{{ .description | markdownify }}</div>
+</div>

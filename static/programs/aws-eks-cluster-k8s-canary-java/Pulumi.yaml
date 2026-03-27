@@ -1,0 +1,3 @@
+name: aws-eks-cluster-k8s-canary-java
+runtime: java
+description: An example that deploys an EKS cluster and a canary NGINX service.

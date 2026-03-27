@@ -30,7 +30,7 @@ All the code is [available on Github](https://github.com/cumundi/pulumi-refactor
 
 Every Pulumi project starts empty, so ours is no exception. This is how our main Pulumi code file looks for now.
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 
 const config = new pulumi.Config('gitlab')
@@ -44,7 +44,7 @@ Applying the above code does nothing, which you can see in the *Resources* tab o
 
 We create a separate repository for each of our customers:
 
-```ts
+```typescript
 const config = new pulumi.Config('gitlab')
 
 const gitlabNamespace = config.getNumber('namespace')
@@ -77,7 +77,7 @@ We wrote the code in the simplest way to get the job done. After `pulumi up`, th
 
 For our second customer, I just duplicated the creation of the Gitlab repository and created a Google Cloud project and service account.
 
-```ts
+```typescript
 const secondCustomer = new gitlab.Project("SecondCustomer",
     {
         ... // properties here
@@ -133,7 +133,7 @@ We can pass [`CustomResourceOptions`](https://www.pulumi.com/docs/reference/pkg/
 
 To link the key to the service account, we set the `parent` property to the service account resource. If you run `pulumi preview`,  Pulumi wants to recreate the key. It wants to do this because it searches for the key as a child resource of the service account. In your last applied Pulumi state, that is not the case.
 
-```ts
+```typescript
 const serviceAccountSecondCustomerKey = new gcp.serviceAccount.Key("ServiceAccountSecondCustomerKey",
     {
         serviceAccountId: serviceAccountSecondCustomer.email
@@ -148,7 +148,7 @@ How can we tell Pulumi that the existing key resource fulfills the expectation i
 
 If you want to rename resources in a Pulumi state or change the parent-child relationships, then the `aliases` property is your friend. Let's indicate in our code that the existing key resource, linked to the `Stack`, is the key of interest.
 
-```ts
+```typescript
 const serviceAccountSecondCustomerKey = new gcp.serviceAccount.Key("ServiceAccountSecondCustomerKey",
     {
         serviceAccountId: serviceAccountSecondCustomer.email
@@ -172,7 +172,7 @@ In the previous step, I copied the code for the Gitlab repository from our first
 
 I introduced a `ComponentResource` subclass, which encapsulates moving the code for the individual resources into the customer resource class. As we set up Google Cloud resources for other customers, we create a Google Cloud project and related resources only when required. We can use a regular Typescript `if` conditional for this.
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 import * as gitlab from "@pulumi/gitlab";
@@ -223,7 +223,7 @@ export class Project extends pulumi.ComponentResource {
 
 Now that I have our custom resource, I can use it for our existing customers. Our refactored main Pulumi file looks like this:
 
-```ts
+```typescript
 const firstCustomer = new customer.Project("FirstCustomer",
     {
         customer: 'First Customer',
@@ -253,7 +253,7 @@ We have a representation of a customer project in our Pulumi state graph, but we
 
 The same trick with `parent` and `aliases` is used to *re-parent* our resources. Our resources are created within the constructor of our `Project` class. In Typescript, the language used in this example, we can use the keyword `this` to point to the `Project` instance.
 
-```ts
+```typescript
 export class Project extends pulumi.ComponentResource {
     constructor(name: string, args: ProjectArgs, opts: pulumi.CustomResourceOptions = {}) {
         super('customer:Project', name, {}, opts);

@@ -106,7 +106,7 @@ func main() {
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as eks from "@pulumi/eks";
 
 const cluster = new eks.Cluster("my-cluster");

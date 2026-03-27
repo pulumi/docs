@@ -4,71 +4,64 @@ title: Deploying and Managing Kafka with Pulumi and Confluent
 meta_desc: Want to learn the easy way to set up Apache Kafka to manage your real-time data feeds? Pulumi and Confluent will show you how easy it can be.
 meta_image:
 
-# A featured webinar will display first in the list.
+# A featured event will display first in the list.
 featured: false
 
-# Webinars with unlisted as true will not be shown on the webinar list
+# Events with unlisted as true will not be shown on the event list
 unlisted: false
 
-# Gated webinars will have a registration form and the user will need
+# Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: false
 
-# The layout of the landing page.
-type: webinars
-
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
+# External events will link to an external page instead of an event
+# landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
+# the event page created.
 external: false
 block_external_search_index: false
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
+# The url slug for the event landing page. If this is an external
+# event, use the external URL as the value here.
 url_slug: deploying-and-managing-kafka-with-pulumi-and-confluent
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Deploying and Managing Kafka with Pulumi and Confluent
+# The event type (workshop, webinar, talk).
+event_type: workshop
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated events.
+youtube_url: # missing
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: # missing
+# Sortable date. The datetime Hugo will use to sort the events in date order.
+sortable_date: 2022-12-06T09:00:00-08:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-12-06T09:00:00-08:00
+# Duration of the event.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the event.
+description: |
+    Standing up production-ready infrastructure to store and analyze your real-time data feeds used to be a major undertaking. Now, with a few lines of code you can spin up all the resources you need in the cloud. In this session, we’ll introduce you to Apache Kafka—a community distributed event streaming platform capable of handling trillions of events a day. We’ll show you how to quickly provision and connect Kafka clusters using Confluent Cloud - a fully-managed cloud-native platform built by the original creators of Kafka. With the Pulumi Conflent Provider, you’ll learn how to easily provision Kafka and a complete data streaming platform using your favorite programming languages.
 
-    # Description of the webinar.
-    description: |
-        Standing up production-ready infrastructure to store and analyze your real-time data feeds used to be a major undertaking. Now, with a few lines of code you can spin up all the resources you need in the cloud. In this session, we’ll introduce you to Apache Kafka—a community distributed event streaming platform capable of handling trillions of events a day. We’ll show you how to quickly provision and connect Kafka clusters using Confluent Cloud - a fully-managed cloud-native platform built by the original creators of Kafka. With the Pulumi Conflent Provider, you’ll learn how to easily provision Kafka and a complete data streaming platform using your favorite programming languages.
+learn:
+    - How to provision a data streaming platform using modern programming languages
+    - Securing your platform with Role Based Access Control (RBAC)
+    - Using Connectors and other common features.
 
-    learn:
-        - How to provision a data streaming platform using modern programming languages
-        - Securing your platform with Role Based Access Control (RBAC)
-        - Using Connectors and other common features.
+# The event presenters
+presenters:
+    - name: Josh Kodroff
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Spencer Shumway
+      role: Senior Product Manager, Confluent
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Spencer Shumway
-          role: Senior Product Manager, Confluent
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Kafka", "Confluent Cloud"]
-        languages: []
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Kafka", "Confluent Cloud"]
+    languages: []
 
 # The right hand side form section.
 form:

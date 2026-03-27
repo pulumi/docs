@@ -1,0 +1,18 @@
+name: aws-eks-cluster-settings-yaml
+runtime: yaml
+description: An example that creates an EKS cluster with modified settings.
+resources:
+  # Create an EKS cluster with a modified configuration.
+  cluster:
+    type: eks:Cluster
+    properties:
+      desiredCapacity: 5
+      minSize: 3
+      maxSize: 5
+      enabledClusterLogTypes:
+        - api
+        - audit
+        - authenticator
+outputs:
+  # Export the cluster's kubeconfig.
+  kubeconfig: ${cluster.kubeconfig}

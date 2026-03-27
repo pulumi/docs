@@ -1,0 +1,50 @@
+{{/*
+    Single Event Page Layout
+
+    Renders individual event landing pages with the template design system.
+    Pages with redirect_to or missing sortable_date are handled by Hugo's
+    redirect mechanism and skip this template.
+*/}}
+
+{{ define "hero" }}
+{{ end }}
+
+{{ define "main" }}
+{{ if .Params.sortable_date }}
+    <div class="font-body container mx-auto mb-16 mt-16 px-8 flex flex-col gap-12 max-w-6xl">
+
+        {{/* Breadcrumb + header */}}
+        <div class="flex flex-col gap-4">
+            <nav class="event-breadcrumb">
+                <a href="/events/">Events and Workshops</a>
+                <span class="event-breadcrumb-separator">/</span>
+                {{ if .Params.youtube_url }}
+                    <a href="/events/#on-demand">On-demand</a>
+                {{ else }}
+                    <a href="/events/#upcoming">Upcoming</a>
+                {{ end }}
+                <span class="event-breadcrumb-separator">/</span>
+                <span class="event-breadcrumb-current">{{ .Params.title }}</span>
+            </nav>
+
+            <section class="template-event-single-header">
+                <h1 class="event-single-title">{{ .Params.title }}</h1>
+                <div class="flex items-center gap-2">
+                    <span class="event-single-type">{{ .Params.event_type }}</span>
+                    <span class="event-single-date-separator">·</span>
+                    <span class="event-single-date">{{ .Params.sortable_date | time.Format "January 2006" }}</span>
+                </div>
+            </section>
+        </div>
+
+        {{/* Main content area */}}
+        {{ partial "events/type-content.html" . }}
+
+        {{/* Footer CTA */}}
+        {{ partial "template-partials/template-footer-cta.html" (dict
+            "title" "The infrastructure-as-code platform for any cloud."
+            "anchor" "get-started"
+        ) }}
+    </div>
+{{ end }}
+{{ end }}

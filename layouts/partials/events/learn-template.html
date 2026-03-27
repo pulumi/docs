@@ -1,0 +1,22 @@
+{{/*
+    Event Learn Template Partial
+
+    Displays "What you'll learn" outcomes list.
+
+    Parameters:
+    - learn: Array of learning outcome strings
+*/}}
+
+{{ if .learn }}
+    <div class="event-summary-learn">
+        <h4 class="event-summary-learn-title">What you'll learn</h4>
+        <ul class="event-summary-learn-list">
+            {{ range $item := .learn }}
+                <li>
+                    <i class="fas fa-check-circle mr-2"></i>
+                    <span>{{ $item }}</span>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+{{ end }}

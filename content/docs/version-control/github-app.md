@@ -7,7 +7,7 @@ h1: Pulumi GitHub App
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     version-control:
-        name: GitHub App
+        name: GitHub
         parent: version-control-home
         weight: 1
 aliases:

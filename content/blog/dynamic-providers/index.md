@@ -63,7 +63,7 @@ The Azure resource provider does not support enabling the [static website](https
 
 [Here's](https://github.com/pulumi/examples/blob/5bcf9de17a660f17172ca05d4ca3f061456a99c5/azure-ts-static-website/staticWebsite.ts) the source for this example. The following is an excerpt from the [example](https://github.com/pulumi/examples/blob/e990699e03ff31af95bd62b08f31f8fb99b11ccb/azure-ts-static-website/index.ts) where the dynamic provider is actually used. Note that the Azure Storage Account is created before using this dynamic provider.
 
-```ts
+```typescript
 ...
 ...
 // Create a Storage Account for our static website
@@ -87,7 +87,7 @@ Along with adding a custom domain to the CDN endpoint, this dynamic provider als
 
 As before, details such as the creation of the CDN profile and its endpoint are omitted for clarity. You can check out the full example [here](https://github.com/pulumi/examples/tree/846811de2c7faa4694454c64edc9bbcdb31d533e/classic-azure-ts-dynamicresource).
 
-```ts
+```typescript
 ...
 ...
 const cdnEndpoint = new azure.cdn.Endpoint("cdnEndpoint", {
@@ -151,7 +151,7 @@ Scripts provided through the `userData` parameter can be configured to run every
 
 This snippet of the code shows how, the dynamic resources for copying a file and executing it, are used:
 
-```ts
+```typescript
 ...
 ...
 const conn = {

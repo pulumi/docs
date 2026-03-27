@@ -1,5 +1,5 @@
 ---
-title_tag: Deploy Kubernetes App Services | Crosswalk
+title_tag: Deploy Kubernetes App Services
 meta_desc: This page provides an overview of how to deploy Kubernetes App services to different
            cloud providers.
 title: App services
@@ -198,7 +198,7 @@ Create a MongoDB database instance in [Azure CosmosDB][azure-cosmosdb], and stor
 connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
 to and consume.
 
-```ts
+```typescript
 import * as azure from "@pulumi/azure";
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
@@ -253,7 +253,7 @@ Create a Postgres database instance in [CloudSQL][gcp-cloudsql], and store its
 connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
 to and consume.
 
-```ts
+```typescript
 import * as gcp from "@pulumi/gcp";
 import * as k8s from "@pulumi/kubernetes";
 import * as random from "@pulumi/random";
@@ -309,7 +309,7 @@ Create a Redis datastore instance in [Google Cloud MemoryStore][gcp-redis], and 
 connection information in a Kubernetes [ConfigMap][k8s-cm] for apps to refer
 to and consume.
 
-```ts
+```typescript
 import * as gcp from "@pulumi/gcp";
 import * as k8s from "@pulumi/kubernetes";
 

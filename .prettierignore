@@ -27,8 +27,12 @@ scripts
 static/programs/*/bin/*
 static/programs/*/obj/*
 
+# Program files use hand-written style conventions, not Prettier
+static/programs/**/*.ts
+
 # Ignore Python virtual environments
 **/.venv/**
+**/venv/**
 
 static/registry/
 static-prebuilt

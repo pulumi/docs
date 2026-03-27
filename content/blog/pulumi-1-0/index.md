@@ -73,7 +73,7 @@ Because of higher level components, even creating a new Kubernetes cluster is th
 
 ```typescript
 let cluster = new eks.Cluster("my-cluster");
-export let kubeconfig = cluster.kubeconfig;
+export const kubeconfig = cluster.kubeconfig;
 ```
 
 The `pulumi up` CLI command runs this program using Pulumi's multi-language engine, and presents a plan for review &mdash; including an overview of the resources to create, update, and/or delete. After you choose to apply those changes, the Pulumi engine coordinates those API calls in parallel to accomplish your deployment.

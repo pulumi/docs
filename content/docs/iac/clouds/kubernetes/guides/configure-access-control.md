@@ -1,5 +1,5 @@
 ---
-title_tag: Configure Kubernetes Access Control | Crosswalk
+title_tag: Configure Kubernetes Access Control
 meta_desc: This page will walk you through how to configure Kubernetes
            access control on AWS, Azure, and Google Cloud.
 title: Access control
@@ -89,7 +89,7 @@ workloads in the `apps` namespace (created in  [cluster defaults][crosswalk-conf
 
 Assume the `admin` user.
 
-```ts
+```typescript
 $ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```

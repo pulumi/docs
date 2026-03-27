@@ -66,7 +66,7 @@ Refer to the [Pulumi Deployments REST API documentation](/docs/deployments/deplo
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pulumiservice from "@pulumi/pulumiservice";
 

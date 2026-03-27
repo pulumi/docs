@@ -60,7 +60,7 @@ pipelines. (Sometimes referred to as a "robot account.")
 The following code snippet shows how to create a new AWS IAM User using Pulumi. (The code is in TypeScript,
 but you could another language like Python, C#, or Go as well.)
 
-```ts
+```typescript
 const user = new aws.iam.User("cicdUser", {
     name: "cicd-bot",
     tags: {
@@ -73,7 +73,7 @@ By default, that IAM User doesn't have permissions to do anything. The recommend
 is to [use groups to assign permissions to IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#use-groups-for-permissions).
 So next, we will create a "Pulumi Stack updaters" IAM Group, and add our robot account as a member.
 
-```ts
+```typescript
 const group = new aws.iam.Group("pulumiStackUpdaters", {
     name: "PulumiStackUpdaters",
 });
@@ -99,7 +99,7 @@ User to gain temporary credentials that have a different set of permissions asso
 We'll go into more detail about the exact difference between an IAM User and an IAM Role in the next
 post in the series since it isn't entirely obvious why one would be more secure than the other.
 
-```ts
+```typescript
 const currentAwsIdentity = aws.getCallerIdentity();
 
 const groupPolicy = new aws.iam.GroupPolicy("pulumiStackUpdatersPolicy", {

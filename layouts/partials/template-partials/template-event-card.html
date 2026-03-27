@@ -1,0 +1,93 @@
+{{/*
+    Template Event Card Partial
+
+    Modernized event card following the template design system.
+
+    Parameters:
+    - pageContext: Page context for relref resolution
+    - external: Whether the event links to an external URL
+    - filters: Array of filter strings for CSS filtering
+    - upcoming: Whether this is an upcoming event
+    - link: Event URL
+    - datetime: Event date string
+    - displayDate: Formatted display date
+    - data: The event page data
+*/}}
+
+<li data-display-date="{{ .displayDate }}" class="m-0 p-0" data-filters="{{ delimit .filters " " }}">
+    {{ $href := .link }}
+    {{ $relref := "noopener noreferrer" }}
+    {{ $target := "_blank" }}
+
+    {{ if eq .external false }}
+        {{ $href = (relref .pageContext .link) }}
+        {{ $relref = "" }}
+        {{ $target = "" }}
+    {{ end }}
+
+    <article class="template-event-card flex flex-col h-full rounded-2xl p-6 md:p-8">
+        <a href="{{ $href }}" rel="{{ $relref }}" target="{{ $target }}" class="flex flex-col h-full no-underline group">
+            <div class="flex-1">
+                <div class="flex items-start justify-between gap-4 mb-4">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="event-card-type">{{ .data.Params.event_type }}</span>
+                            <span class="text-gray-300">·</span>
+                            {{ if .data.Params.youtube_url }}
+                                <span class="event-card-location">On-demand</span>
+                            {{ else }}
+                                <span class="event-card-location">{{ .data.Params.location | title }}</span>
+                            {{ end }}
+                        </div>
+                        <h3 class="event-card-title">
+                            {{ .data.Params.title }}
+                            {{ if .external }}<i class="text-xs ml-1 fas fa-external-link-alt opacity-50"></i>{{ end }}
+                        </h3>
+                    </div>
+                    <div class="event-card-date flex-shrink-0">
+                        <div class="event-card-date-day">
+                            {{ .datetime | time.Format "2" }}
+                        </div>
+                        <div class="event-card-date-month">
+                            {{ upper (.datetime | time.Format "Jan") }}
+                        </div>
+                    </div>
+                </div>
+                <p class="event-card-description">
+                    {{ .data.Params.meta_desc }}
+                </p>
+            </div>
+            <div class="flex items-end justify-between mt-4 pt-4 border-t border-gray-100">
+                <div class="flex flex-row flex-wrap gap-1.5">
+                    {{ if .data.Params.tags }}
+                        {{ if .data.Params.tags.level }}
+                            <span class="event-card-tag">{{ .data.Params.tags.level }}</span>
+                        {{ end }}
+                        {{ if .data.Params.tags.clouds }}
+                            {{ range $cloud := .data.Params.tags.clouds }}
+                                <span class="event-card-tag">{{ $cloud }}</span>
+                            {{ end }}
+                        {{ end }}
+                        {{ if .data.Params.tags.topics }}
+                            {{ range $topic := .data.Params.tags.topics }}
+                                <span class="event-card-tag">{{ $topic }}</span>
+                            {{ end }}
+                        {{ end }}
+                        {{ if .data.Params.tags.languages }}
+                            {{ range $language := .data.Params.tags.languages }}
+                                <span class="event-card-tag">{{ $language }}</span>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </div>
+                <span class="event-card-cta">
+                    {{ if .data.Params.youtube_url }}
+                        Watch <span class="hidden sm:inline">on-demand</span> <i class="fa fa-arrow-right ml-1"></i>
+                    {{ else if .upcoming }}
+                        Register <i class="fa fa-arrow-right ml-1"></i>
+                    {{ end }}
+                </span>
+            </div>
+        </a>
+    </article>
+</li>

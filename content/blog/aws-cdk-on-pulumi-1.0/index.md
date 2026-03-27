@@ -210,7 +210,7 @@ The 1.0 version of pulumi-cdk adds support for key CDK features such as: assets,
 
 Pulumi CDK now supports CDK aspects. For example, you can add the [cdk-nag](https://github.com/cdklabs/cdk-nag) aspect to your stack to enforce best practices:
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { AwsSolutionsChecks } from 'cdk-nag';
@@ -234,7 +234,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App): pulumicdk.AppOutput
 
 CDK's assets make it easy to bundle code and other files your application needs into an S3 bucket or a Docker container, eliminating extra steps from your build pipeline. For example you can use Docker container asset to deploy a Fargate service from local directory. CDK will build the container image and push to ECR on `pulumi up`.
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws from '@pulumi/aws';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';

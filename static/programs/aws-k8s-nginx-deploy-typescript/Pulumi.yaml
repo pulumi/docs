@@ -1,0 +1,3 @@
+name: aws-k8s-nginx-deploy-typescript
+runtime: nodejs
+description: An example that deploys an NGINX service to Kubernetes.

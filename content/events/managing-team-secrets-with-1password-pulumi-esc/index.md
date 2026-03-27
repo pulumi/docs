@@ -4,70 +4,62 @@ title: Managing team secrets with 1Password & Pulumi ESC
 meta_desc: Learn Pulumi ESC + 1Password for secure, automated secret management in multi-cloud setups. Store & fetch secrets easily in our workshop
 meta_image: "/images/resources/1password-pulumi-esc-platform-engineering.png"
 
-# A featured webinar will display first in the list.
+# A featured event will display first in the list.
 featured: false
 
-# Webinars with unlisted as true will not be shown on the webinar list
+# Events with unlisted as true will not be shown on the event list
 unlisted: false
 
-# Gated webinars will have a registration form and the user will need
+# Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: true
 
-# The layout of the landing page.
-type: webinars
-
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
+# External events will link to an external page instead of an event
+# landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
+# the event page created.
 external: false
 block_external_search_index: false
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
+# The url slug for the event landing page. If this is an external
+# event, use the external URL as the value here.
 url_slug: managing-team-secrets-with-1password-pulumi-esc
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Managing team secrets with 1Password & Pulumi ESC
+# The event type (workshop, webinar, talk).
+event_type: workshop
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated events.
+youtube_url:
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url:
+# Sortable date. The datetime Hugo will use to sort the events in date order.
+sortable_date: 2024-09-25T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-09-25T09:00:00.000-07:00
+# Duration of the event.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the event.
+description: |
+    Platform engineering teams need to be able to fetch secrets at runtime, especially when managing multi-cloud and multi-service deployments with Pulumi. In this workshop, we’ll show you how Pulumi ESC works with 1Password to ensure secrets are securely made available to approved team members and deployments.
 
-    # Description of the webinar.
-    description: |
-        Platform engineering teams need to be able to fetch secrets at runtime, especially when managing multi-cloud and multi-service deployments with Pulumi. In this workshop, we’ll show you how Pulumi ESC works with 1Password to ensure secrets are securely made available to approved team members and deployments.
+learn:
+    - How to store secrets in 1Password
+    - Configuring Pulumi ESC to work with 1Password and controlling access for approved team members
+    - Retrieving secrets automatically at runtime from your Infrastructure as Code deployments.
 
+# The event presenters
+presenters:
+    - name: Phil Johnston
+      role: Developer Relations Manager
+      photo: /images/team/phil-johnston.jpg
 
-    learn:
-        - How to store secrets in 1Password
-        - Configuring Pulumi ESC to work with 1Password and controlling access for approved team members
-        - Retrieving secrets automatically at runtime from your Infrastructure as Code deployments.
-
-    # The webinar presenters
-    presenters:
-        - name: Phil Johnston
-          role: Developer Relations Manager
-          photo: /images/team/phil-johnston.jpg
-
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Secrets Management", "Platform Engineering"]
-        languages: ["Golang"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["Secrets Management", "Platform Engineering"]
+    languages: ["Golang"]
 
 # The right hand side form section.
 form:

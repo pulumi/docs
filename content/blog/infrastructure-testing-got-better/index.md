@@ -49,7 +49,7 @@ Continuously testing resource definitions is a best practice and it’s incredib
 
 **test-setup**.**ts**
 
-```ts
+```typescript
 /**
  * Create the mock resource
  */
@@ -78,7 +78,7 @@ pulumi.runtime.setMocks({
 
 **infra**.**ts**
 
-```ts
+```typescript
 export const attachment = new aws.iam.RolePolicyAttachment(
    "role-policy-attachment",
    {
@@ -90,7 +90,7 @@ export const attachment = new aws.iam.RolePolicyAttachment(
 
 **infra**.**spec**.**ts**
 
-```ts
+```typescript
 /**
  * Returns a resource output's value, even if it's undefined.
  */
@@ -121,7 +121,7 @@ In addition to resource testing with mocks, we can test the entire stack with po
 
 **infra**.**ts**
 
-```ts
+```typescript
 import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 
@@ -143,7 +143,7 @@ const cluster = new eks.Cluster("my-cluster", {
 
 **policy**.**test**
 
-```ts
+```typescript
 const stackPolicy: policy.StackValidationPolicy = {
     name: "eks-test",
     description: "EKS integration tests.",

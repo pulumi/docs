@@ -48,7 +48,7 @@ $ npm install @aws-cdk/aws-apprunner-alpha
 
 Then update the `index.ts` file with the following code:
 
-```ts
+```typescript
 import * as pulumi from '@pulumi/pulumi';
 import * as pulumicdk from '@pulumi/cdk';
 import { Service, Source } from '@aws-cdk/aws-apprunner-alpha';
@@ -134,7 +134,7 @@ to a Pulumi Output value.
 
 ### CDK to Pulumi Example
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws from '@pulumi/aws';
 import * as s3ObjectLambda from 'aws-cdk-lib/aws-s3objectlambda';
@@ -175,7 +175,7 @@ combination with CDK `fromXXX` methods.
 
 **Example**
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws from '@pulumi/aws';
 import * as aws_route53 from 'aws-cdk-lib/aws-route53';
@@ -217,7 +217,7 @@ outputs. You can do this in one of two ways.
 
 Any `CfnOutput` that you create automatically gets added to the `App outputs`.
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 
@@ -233,7 +233,7 @@ export const bucketName = app.outputs['BucketName'];
 
 **AppOutputs**
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 
@@ -260,7 +260,7 @@ Currently Pulumi CDK utilizes three Pulumi providers.
 If you want to customize any of these providers you can create your own and pass
 them to the `AppResourceOptions`
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws from '@pulumi/aws';
 import * as ccapi from '@pulumi/aws-native';
@@ -294,7 +294,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App) => {
 It is also possible to customize the Providers at the Stack level. This can be
 useful in cases where you need to deploy resources to different AWS regions.
 
-```ts
+```typescript
 import * as aws from '@pulumi/aws';
 import * as ccapi from '@pulumi/aws-native';
 import * as pulumicdk from '@pulumi/cdk';
@@ -348,7 +348,7 @@ Instead of using CDK Lookups you can use Pulumi functions along with CDK
 
 **Example**
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws from '@pulumi/aws';
 
@@ -387,7 +387,7 @@ Pulumi twice (the first execution will fail).
 
 **Example**
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws_route53 from 'aws-cdk-lib/aws-route53';
 
@@ -433,7 +433,7 @@ For more information, see [Policy Packs](/docs/insights/policy/policy-packs/).
 
 Pulumi CDK supports CDK Aspects, including aspects like [cdk-nag](https://github.com/cdklabs/cdk-nag)
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { AwsSolutionsChecks } from 'cdk-nag';
@@ -457,7 +457,7 @@ const app = new pulumicdk.App('app', (scope: pulumicdk.App): pulumicdk.AppOutput
 
 Pulumi CDK also supports [CDK Policy Validation Plugins](https://docs.aws.amazon.com/cdk/v2/guide/policy-validation-synthesis.html).
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import { CfnGuardValidator } from '@cdklabs/cdk-validator-cfnguard';
 import * as s3 from 'aws-cdk-lib/aws-s3';
@@ -528,7 +528,7 @@ these cases it is possible to manually map the CloudFormation resource to an [AW
 In this example we are manually mapping any CloudFormation resources with the
 `AWS::ApiGatewayV2::Stage` type to the [AWS ApiGatewayV2 Stage](https://www.pulumi.com/registry/packages/aws/api-docs/apigatewayv2/stage/) resource.
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws from '@pulumi/aws';
 
@@ -560,7 +560,7 @@ Sometimes a single CloudFormation resource maps to multiple AWS Provider
 resources. In these cases you should return the `logicalId` of the resource
 along with the resource itself.
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws from '@pulumi/aws';
 
@@ -600,7 +600,7 @@ In order to use Docker assets with Pulumi CDK you must provide the `assetName` w
 creating the asset. This is because Pulumi CDK will automatically create a ECR
 Repository per image asset.
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as aws from '@pulumi/aws';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
@@ -638,7 +638,7 @@ You can set Pulumi resource options for CDK resources by using [Transforms](http
 For example, if you wanted to set `protect` on database resources you could use
 a transform like this.
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 
 const app = new pulumicdk.App('app', (scope: pulumicdk.App): pulumicdk.AppOutputs => {
@@ -667,7 +667,7 @@ provisioning the required resources (see [Bootstrapping](#bootstrapping)) and up
 In order to customize the settings, you can pass in a `PulumiSynthesizer` that
 you create.
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 
@@ -718,7 +718,7 @@ not configuring your own `aws-native` provider then this feature is enabled by
 default. If you _are_ configuring your own `aws-native` provider then you will
 have to enable this.
 
-```ts
+```typescript
 import * as pulumicdk from '@pulumi/cdk';
 import * as ccapi from '@pulumi/aws-native';
 

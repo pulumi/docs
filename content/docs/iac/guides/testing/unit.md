@@ -43,227 +43,7 @@ Throughout this guide, we are testing a program that creates a simple AWS EC2-ba
 Choose a language below to adjust the contents of this guide. Your choice is applied throughout the guide.
 {{< /notes >}}
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
-
-<div></div>
-
-{{% choosable language "typescript" %}}
-
-index.ts:
-
-```typescript
-import * as aws from "@pulumi/aws";
-
-export const group = new aws.ec2.SecurityGroup("web-secgrp", {
-    ingress: [
-        { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-        { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-    ],
-});
-
-const userData = `#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &`;
-
-export const server = new aws.ec2.Instance("web-server-www", {
-    instanceType: "t2.micro",
-    securityGroups: [ group.name ], // reference the group object above
-    ami: "ami-c55673a0",            // AMI for us-east-2 (Ohio)
-    userData: userData,             // start a simple webserver
-});
-```
-
-{{% /choosable %}}
-{{% choosable language "python" %}}
-
-infra.py:
-
-```python
-import pulumi
-from pulumi_aws import ec2
-
-group = ec2.SecurityGroup('web-secgrp', ingress=[
-    { "protocol": "tcp", "from_port": 22, "to_port": 22, "cidr_blocks": ["0.0.0.0/0"] },
-    { "protocol": "tcp", "from_port": 80, "to_port": 80, "cidr_blocks": ["0.0.0.0/0"] },
-])
-
-user_data = '#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &'
-
-server = ec2.Instance('web-server-www;',
-    instance_type="t2.micro",
-    security_groups=[ group.name ], # reference the group object above
-    ami="ami-c55673a0",             # AMI for us-east-2 (Ohio)
-    user_data=user_data)            # start a simple web server
-```
-
-{{% /choosable %}}
-{{% choosable language "go" %}}
-
-main.go:
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-type infrastructure struct {
-	group  *ec2.SecurityGroup
-	server *ec2.Instance
-}
-
-func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
-	group, err := ec2.NewSecurityGroup(ctx, "web-secgrp", &ec2.SecurityGroupArgs{
-		Ingress: ec2.SecurityGroupIngressArray{
-			ec2.SecurityGroupIngressArgs{
-				Protocol:   pulumi.String("tcp"),
-				FromPort:   pulumi.Int(22),
-				ToPort:     pulumi.Int(22),
-				CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-			},
-			ec2.SecurityGroupIngressArgs{
-				Protocol:   pulumi.String("tcp"),
-				FromPort:   pulumi.Int(80),
-				ToPort:     pulumi.Int(80),
-				CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-			},
-		},
-	})
-	if err != nil {
-		return nil, err
-	}
-
-	const userData = `#!/bin/bash echo "Hello, World!" > index.html nohup python3 -m http.server 80 &`
-
-	server, err := ec2.NewInstance(ctx, "web-server-www", &ec2.InstanceArgs{
-		InstanceType:   pulumi.String("t2-micro"),
-		SecurityGroups: pulumi.StringArray{group.ID()}, // reference the group object above
-		Ami:            pulumi.String("ami-c55673a0"),  // AMI for us-east-2 (Ohio)
-		UserData:       pulumi.String(userData),        // start a simple web server
-	})
-	if err != nil {
-		return nil, err
-	}
-
-	return &infrastructure{
-		group:  group,
-		server: server,
-	}, nil
-}
-```
-
-{{% /choosable %}}
-{{% choosable language "csharp" %}}
-
-WebserverStack.cs:
-
-``` csharp
-using Pulumi;
-using Pulumi.Aws.Ec2;
-using Pulumi.Aws.Ec2.Inputs;
-
-public class WebserverStack : Stack
-{
-    public WebserverStack()
-    {
-        var group = new SecurityGroup("web-secgrp", new SecurityGroupArgs
-        {
-            Ingress =
-            {
-                new SecurityGroupIngressArgs { Protocol = "tcp", FromPort = 22, ToPort = 22, CidrBlocks = { "0.0.0.0/0" } },
-                new SecurityGroupIngressArgs { Protocol = "tcp", FromPort = 80, ToPort = 80, CidrBlocks = { "0.0.0.0/0" } }
-            }
-        });
-
-        var userData = "#!/bin/bash echo \"Hello, World!\" > index.html nohup python3 -m http.server 80 &";
-
-        var server = new Instance("web-server-www", new InstanceArgs
-        {
-            InstanceType = "t2.micro",
-            SecurityGroups = { group.Name }, // reference the group object above
-            Ami = "ami-c55673a0",            // AMI for us-east-2 (Ohio)
-            UserData = userData              // start a simple webserver
-        });
-    }
-}
-```
-
-{{% /choosable %}}
-{{% choosable language "java" %}}
-
-App.java:
-
-```java
-package myproject;
-
-import com.pulumi.Context;
-import com.pulumi.Pulumi;
-import com.pulumi.aws.ec2.Instance;
-import com.pulumi.aws.ec2.InstanceArgs;
-import com.pulumi.aws.ec2.SecurityGroup;
-import com.pulumi.aws.ec2.SecurityGroupArgs;
-import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    public static void stack(Context ctx) {
-        var group = new SecurityGroup("web-secgrp", SecurityGroupArgs.builder()
-            .ingress(
-                SecurityGroupIngressArgs.builder()
-                    .protocol("tcp").fromPort(22).toPort(22).cidrBlocks("0.0.0.0/0")
-                    .build(),
-                SecurityGroupIngressArgs.builder()
-                    .protocol("tcp").fromPort(80).toPort(80).cidrBlocks("0.0.0.0/0")
-                    .build())
-            .build());
-
-        var userData = "#!/bin/bash echo \"Hello, World!\" > index.html nohup python3 -m http.server 80 &";
-
-        var server = new Instance("web-server-www", InstanceArgs.builder()
-            .instanceType("t2.micro")
-            .securityGroups(group.name())  // reference the group object above
-            .ami("ami-c55673a0")           // AMI for us-east-2 (Ohio)
-            .userData(userData)            // start a simple web server
-            .build());
-    }
-}
-```
-
-{{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-Pulumi.yaml:
-
-```yaml
-name: webserver
-runtime: yaml
-resources:
-  web-secgrp:
-    type: aws:ec2:SecurityGroup
-    properties:
-      ingress:
-        - protocol: tcp
-          fromPort: 22
-          toPort: 22
-          cidrBlocks: ["0.0.0.0/0"]
-        - protocol: tcp
-          fromPort: 80
-          toPort: 80
-          cidrBlocks: ["0.0.0.0/0"]
-  web-server-www:
-    type: aws:ec2:Instance
-    properties:
-      instanceType: t2.micro
-      securityGroups:
-        - ${web-secgrp.name}
-      ami: ami-c55673a0
-      userData: "#!/bin/bash echo \"Hello, World!\" > index.html nohup python3 -m http.server 80 &"
-```
-
-{{% /choosable %}}
+{{< example-program path="unit-testing-webserver" >}}
 
 This basic Pulumi program allocates a security group and an instance. Notice, however, that we are violating all three of the rules stated above&mdash;let's write some tests!
 
@@ -350,7 +130,7 @@ Let's add the following code to mock the external calls to the Pulumi CLI.
 
 ec2tests.ts:
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 
 pulumi.runtime.setMocks({
@@ -577,7 +357,7 @@ If your program uses [StackReference](/docs/concepts/stacks/#stackreferences) to
 
 {{% choosable language "typescript" %}}
 
-```ts
+```typescript
 pulumi.runtime.setMocks({
     newResource: function(args: pulumi.runtime.MockResourceArgs): {id: string, state: any} {
         // Handle StackReference resources
@@ -609,7 +389,7 @@ pulumi.runtime.setMocks({
 
 In your test, you can then verify that values from the stack reference are used correctly:
 
-```ts
+```typescript
 // Example: Program that reads from a StackReference
 const networkStack = new pulumi.StackReference("organization/network/prod");
 const vpcId = networkStack.getOutput("vpcId");

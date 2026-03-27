@@ -88,8 +88,17 @@
         {{ partial $path }}
     </span>
 {{ else }}
-    <span class="{{ $logoClass }} w-full h-full flex m-auto justify-center">
-        {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}
-        {{ partial $path }}
-    </span>
+    {{ $svgPath := printf "logos/customers/%s.svg" .logo }}
+    {{ $fingerprintedSvg := resources.Get (printf "fingerprinted/%s" $svgPath) }}
+    {{ if $fingerprintedSvg }}
+        <span class="{{ $logoClass }} w-full h-full flex m-auto justify-center">
+            {{ $fingerprintedSvg = $fingerprintedSvg | fingerprint }}
+            <img src="{{ $fingerprintedSvg.RelPermalink }}" alt="{{ .logo }} logo" loading="lazy" />
+        </span>
+    {{ else }}
+        <span class="{{ $logoClass }} w-full h-full flex m-auto justify-center">
+            {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}
+            {{ partial $path }}
+        </span>
+    {{ end }}
 {{ end }}

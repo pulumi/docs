@@ -6,7 +6,7 @@ h1: "Azure DevOps Integration"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     version-control:
-        name: Azure DevOps Integration
+        name: Azure DevOps
         parent: version-control-home
         weight: 4
 aliases:

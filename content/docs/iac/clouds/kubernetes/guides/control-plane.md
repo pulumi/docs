@@ -1,6 +1,6 @@
 ---
-title_tag: Create a Kubernetes Control Plane | Crosswalk
-meta_desc: This page will walk you through how to create on a Kubernetes Control Pane
+title_tag: Create a Kubernetes Control Plane
+meta_desc: This page will walk you through how to create a Kubernetes Control Plane
            on AWS, Azure, and Google Cloud.
 title: Control Plane
 h1: Kubernetes Control Plane
@@ -530,7 +530,7 @@ $ kubectl apply -f pvc.yaml
 
 {{< choosable k8s-language typescript >}}
 
-```ts
+```typescript
 import * as k8s from "@pulumi/k8s";
 
 // Create the premium StorageClass.
@@ -551,7 +551,7 @@ persistent volumes in the cluster.
 
 Create the persistent volume with a persistent volume claim and Pulumi.
 
-```ts
+```typescript
 import * as k8s from "@pulumi/k8s";
 
 // Create a Persistent Volume Claim on the StorageClass.
@@ -630,7 +630,7 @@ $ kubectl apply -f pvc.yaml
 
 {{< choosable k8s-language typescript >}}
 
-```ts
+```typescript
 import * as k8s from "@pulumi/k8s";
 
 // Create the standard StorageClass.
@@ -651,7 +651,7 @@ persistent volumes in the cluster.
 
 Create the persistent volume with a persistent volume claim and Pulumi.
 
-```ts
+```typescript
 import * as k8s from "@pulumi/k8s";
 
 // Create a Persistent Volume Claim on the StorageClass.
@@ -705,7 +705,7 @@ general best-practices and recommendations to configure in the cluster.
 
     // Create an EKS cluster with recommended settings.
     const cluster = new eks.Cluster(`${projectName}`, {
-            version: "1.14",
+            version: "1.29",
             tags: {
                 "Project": "k8s-aws-cluster",
                 "Org": "pulumi",
@@ -727,17 +727,16 @@ general best-practices and recommendations to configure in the cluster.
 
 **AKS:**
 
-* Enable [PodSecurityPolicies](https://kubernetes.io/docs/concepts/policy/pod-security-policy/) using `enablePodSecurityPolicy: true`
 * Set [Node Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) to identify nodes by attributes
 * Enable Log Analytics using the `omsAgent` setting
+* Use [Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/) to enforce pod security standards (PodSecurityPolicy was removed in Kubernetes 1.25)
 
-    ```ts
+    ```typescript
     import * as azure from "@pulumi/azure";
 
     const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
             ...
-            enablePodSecurityPolicy: true,
-            kubernetesVersion: "1.14.8",
+            kubernetesVersion: "1.29",
             addonProfile: {
                 omsAgent: {
                     enabled: true,
@@ -753,12 +752,12 @@ general best-practices and recommendations to configure in the cluster.
 
 **GKE:**
 
-* Enable [PodSecurityPolicies](https://kubernetes.io/docs/concepts/policy/pod-security-policy/) using `podSecurityPolicyConfig: { enabled: true }`
 * Skip enabling the default node group in favor of managing them separately from
   the control plane, as demonstrated in [Create the Worker Nodes](/docs/clouds/kubernetes/guides/worker-nodes/).
 * [Disable legacy metadata APIs](https://cloud.google.com/kubernetes-engine/docs/how-to/protecting-cluster-metadata#disable-legacy-apis) that are not v1 and do not enforce internal Google Cloud metadata headers
 * Enable control plane logging and monitoring through `oauthScopes` to have diagnostics of the control
   plane's actions, and for use in debugging and auditing.
+* Use [Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/) to enforce pod security standards (PodSecurityPolicy was removed in Kubernetes 1.25)
 * (Optional) Configure private accessibility of the control plane /
   API Server endpoint to prevent it from being publicly exposed on the
   Internet. To enable this feature, [additional networking](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters) is required,
@@ -770,8 +769,7 @@ general best-practices and recommendations to configure in the cluster.
 
     const cluster = new gcp.container.Cluster("cluster", {
             ...
-            minMasterVersion: "1.14.7-gke.10",
-            podSecurityPolicyConfig: { enabled: true },
+            minMasterVersion: "1.29",
             nodeConfig: {
                 // We can't create a cluster without a node pool defined, but we want to
                 // only use separately managed node pools. So we create the smallest

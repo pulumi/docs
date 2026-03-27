@@ -1,32 +1,64 @@
 ---
-# Name of the event.
-title: "Name of the Event"
+# Event title, <= 60 characters.
+title: "{{ replace .Name "-" " " | title }}"
+meta_desc: ""
 
-# Events with unlisted as true will not be shown on the event list
+# A featured event displays first in the list.
+featured: false
+
+# Hide from the event list.
 unlisted: false
 
-# Events with external registrations should not be indexed
-# and have redirect to the external registration page.
-block_external_search_index: true
-redirect_to: "/"
+# Show a registration form. Requires form.hubspot_form_id.
+gated: false
 
-# Schema type for structured data (SEO). Options: auto, faq, article, blog, howto, product, event, none
-# Events typically use 'event' schema. Leave as 'auto' (or omit) for intelligent detection.
-# See SCHEMA.md for details.
-schema_type: auto
+# Link to an external page instead of rendering the event page.
+# Set block_external_search_index to true when using this.
+external: false
+block_external_search_index: false
 
-# Event information
-event:
-    # The type of activities we will be doing at the event.
-    type: ["talk", "booth"]
-    # The event address
-    location: "123 Main St Jacksonville, FL"
-    # The start date of an event. Format YYYY-MM-DD
-    start_date: "2020-01-01"
-    # The end date of an event. Format YYYY-MM-DD
-    end_date: "2020-01-01"
-    # The event description shown on the event list page.
-    description: "This the event description."
-    # The external registration url for the event list page.
-    registration_url: "/"
+# URL slug for internal events, or external URL when external: true.
+url_slug: "{{ .Name }}"
+
+# The event type (workshop, webinar, talk).
+event_type: workshop
+
+# YouTube embed URL. When set, the event appears in "On-demand recordings".
+# When empty, it appears in "Upcoming events".
+youtube_url:
+
+# ISO 8601 datetime used for sorting and display.
+sortable_date: {{ now.Format "2006-01-02T15:04:05-07:00" }}
+
+# Human-readable duration.
+duration: "60 minutes"
+
+# "virtual" or a city/state (e.g., "Seattle, WA").
+location: virtual
+
+# Markdown description.
+description: |
+    Event description.
+
+# What attendees will learn (rendered as a checklist).
+learn:
+    - ""
+
+# Speakers.
+presenters:
+    - name: ""
+      role: ""
+      photo: ""
+
+# Used for filtering on the event list page.
+tags:
+    level: Beginner # Beginner | Intermediate | Advanced
+    topics: []
+    languages: []
+    clouds: []
+
+# Registration form (only rendered when gated: true).
+form:
+    hubspot_form_id: ""
+    salesforce_campaign_id: ""
 ---

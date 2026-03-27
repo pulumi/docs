@@ -1,5 +1,5 @@
 ---
-title_tag: Access Created Kubernetes Cluster | Crosswalk
+title_tag: Access Created Kubernetes Cluster
 meta_desc: This page provides a guide on how to try out a newly created Kubernetes cluster.
 title: Access clusters
 h1: Accessing Kubernetes clusters
@@ -364,7 +364,7 @@ $ kubectl delete pod/nginx svc/nginx
 
 Declaratively deploy a NGINX Pod and public load-balanced service:
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 
 // Expose a k8s provider instance of the cluster.
@@ -401,7 +401,7 @@ const service = new k8s.core.v1.Service(name,
 
 {{< choosable cloud aws >}}
 
-```ts
+```typescript
 // Export the Service name and public LoadBalancer Endpoint
 export const serviceName = service.metadata.name;
 export const serviceHostname = service.status.loadBalancer.ingress[0].hostname;
@@ -417,7 +417,7 @@ $ curl `pulumi stack output serviceHostname`
 
 {{< choosable cloud azure >}}
 
-```ts
+```typescript
 // Export the Service name and public LoadBalancer Endpoint
 export const serviceName = service.metadata.name;
 export const serviceIp = service.status.loadBalancer.ingress[0].ip;
@@ -433,7 +433,7 @@ $ curl `pulumi stack output serviceIp`
 
 {{< choosable cloud gcp >}}
 
-```ts
+```typescript
 // Export the Service name and public LoadBalancer Endpoint
 export const serviceName = service.metadata.name;
 export const serviceIp = service.status.loadBalancer.ingress[0].ip;

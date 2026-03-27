@@ -1,5 +1,5 @@
 ---
-title_tag: Configure Kubernetes Cluster Defaults | Crosswalk
+title_tag: Configure Kubernetes Cluster Defaults
 meta_desc: This page will walk you through how to configure Kubernetes Cluster Defaults
            on AWS, Azure, and Google Cloud.
 title: Cluster defaults

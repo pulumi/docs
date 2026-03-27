@@ -22,6 +22,7 @@ tags:
     - arm
     - migration
     - ai
+    - features
 
 schema_type: auto
 

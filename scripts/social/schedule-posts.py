@@ -17,11 +17,12 @@ last-processed commit SHA (stored in S3 state), extracts social copy from
 frontmatter, and schedules posts to X, LinkedIn, and Bluesky.
 
 Platform strategy:
-  - X: Text post with URL in body. X auto-crawls the URL and generates
-    a link card with og:image. Uses upload_text endpoint.
-  - LinkedIn/Bluesky: Photo post with the blog's meta image attached.
-    These platforms don't auto-crawl URLs posted via API, so we send the
-    image explicitly. Uses upload_photos endpoint.
+  - X/Bluesky: Text post with link_url for card crawling. The platform
+    crawls the URL and renders a link card with og:image. No URL needed
+    in the post body. Uses upload_text endpoint.
+  - LinkedIn: Photo post with the blog's meta image attached and URL in
+    body. LinkedIn doesn't render link cards via upload-post.com's
+    link_url, so we send the image explicitly. Uses upload_photos endpoint.
 
 Scheduling logic:
   - Uses the Hugo post's frontmatter date to determine when to post.
@@ -49,16 +50,18 @@ Optional:
   SOCIAL_POSTING_TZ         - Timezone (default: America/New_York)
 
 TODO:
-  1. Once upload-post.com fixes link card crawling, we can switch LinkedIn
-     and Bluesky back to upload_text with link_url instead of upload_photos.
+  1. Once upload-post.com fixes LinkedIn link card crawling, switch
+     LinkedIn to upload_text with link_url (like X/Bluesky).
   2. Flip PROD_MODE = True and connect official Pulumi accounts.
 """
 
 import json
 import os
+import re
 import subprocess
 import sys
 import time
+from collections import defaultdict
 from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 
@@ -93,6 +96,8 @@ PLATFORM_ENABLED = {
 }
 
 API_BASE = "https://api.upload-post.com"
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+GITHUB_REPO = os.environ.get("GITHUB_REPOSITORY", "pulumi/docs")
 SITE_URL = "https://www.pulumi.com"
 POSTING_HOUR = int(os.environ.get("SOCIAL_POSTING_HOUR", "10"))
 POSTING_TZ = os.environ.get("SOCIAL_POSTING_TZ", "America/New_York")
@@ -247,6 +252,59 @@ def meta_image_path(filepath):
     return None
 
 
+def find_pr_number(filepath, since_sha=None):
+    """Find the PR number that introduced a blog post file.
+
+    Scopes the search to commits between since_sha and HEAD when available,
+    so we find the PR that triggered this run rather than an older one.
+    Falls back to the most recent commit touching the file.
+    """
+    if since_sha:
+        result = subprocess.run(
+            ["git", "log", f"{since_sha}..HEAD", "--pretty=format:%s", "--", filepath],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode == 0 and result.stdout:
+            # Check each commit in the range for a PR number
+            for line in result.stdout.strip().split("\n"):
+                match = re.search(r"\(#(\d+)\)", line)
+                if match:
+                    return int(match.group(1))
+
+    # Fall back to most recent commit touching the file
+    result = subprocess.run(
+        ["git", "log", "--pretty=format:%s", "-1", "--", filepath],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode == 0 and result.stdout:
+        match = re.search(r"\(#(\d+)\)", result.stdout)
+        if match:
+            return int(match.group(1))
+    return None
+
+
+def comment_on_pr(pr_number, body):
+    """Post a comment on a GitHub PR."""
+    if not GITHUB_TOKEN:
+        print(f"  No GITHUB_TOKEN, skipping PR comment on #{pr_number}")
+        return
+    resp = requests.post(
+        f"https://api.github.com/repos/{GITHUB_REPO}/issues/{pr_number}/comments",
+        headers={
+            "Authorization": f"token {GITHUB_TOKEN}",
+            "Accept": "application/vnd.github+json",
+        },
+        json={"body": body},
+        timeout=30,
+    )
+    if resp.ok:
+        print(f"  Commented on PR #{pr_number}")
+    else:
+        print(f"  Warning: failed to comment on PR #{pr_number}: {resp.status_code}")
+
+
 def normalize_date(post_date):
     """Convert a frontmatter date value to a date object."""
     if isinstance(post_date, datetime):
@@ -330,29 +388,27 @@ def _print_result(platform, request_id, scheduled_date):
     return post_url
 
 
-def _copy_with_url(copy, url):
-    """Append URL to copy, unless the copy already contains it."""
-    if url in copy:
-        return copy
-    return f"{copy}\n\n{url}"
-
 
 def post_text(platform, copy, url, scheduled_date):
-    """Post via upload_text. Used for X where the platform auto-crawls URLs."""
-    text_with_url = _copy_with_url(copy, url)
+    """Post via upload_text. link_url generates a card with og:image — no URL needed in body."""
     data = {
         "user": USER,
         "platform[]": platform,
-        "title": text_with_url,
-        "x_title": text_with_url,
+        "title": copy,
+        "link_url": url,
     }
+    if platform == "x":
+        data["x_title"] = copy
+    elif platform == "bluesky":
+        data["bluesky_title"] = copy
     if scheduled_date:
         data["scheduled_date"] = scheduled_date
         data["timezone"] = POSTING_TZ
 
     if DRY_RUN:
         print(f"  [DRY RUN] Would post text to {platform}:")
-        print(f"    {text_with_url[:100]}...")
+        print(f"    {copy[:100]}...")
+        print(f"    link_url: {url}")
         print(f"    scheduled: {scheduled_date or 'immediately'}")
         return True
 
@@ -372,19 +428,17 @@ def post_text(platform, copy, url, scheduled_date):
 
 
 def post_photo(platform, copy, url, image_path, scheduled_date):
-    """Post via upload_photos. Used for LinkedIn/Bluesky where we send the meta image."""
-    text_with_url = _copy_with_url(copy, url)
+    """Post via upload_photos with image attached. Used for LinkedIn where link_url cards don't work."""
+    text_with_url = f"{copy}\n\n{url}" if url not in copy else copy
     data = {
         "user": USER,
         "platform[]": platform,
         "title": text_with_url,
     }
     if platform == "linkedin":
-        data["linkedin_description"] = f"{copy}\n\n{url}"
+        data["linkedin_description"] = text_with_url
         if LINKEDIN_PAGE_ID:
             data["target_linkedin_page_id"] = LINKEDIN_PAGE_ID
-    elif platform == "bluesky":
-        data["bluesky_title"] = text_with_url
 
     if scheduled_date:
         data["scheduled_date"] = scheduled_date
@@ -398,8 +452,8 @@ def post_photo(platform, copy, url, image_path, scheduled_date):
         return True
 
     if not image_path:
-        print(f"  Warning: no meta image found, falling back to text post for {platform}")
-        return post_text(platform, copy, url, scheduled_date)
+        print(f"  Warning: no meta image found, skipping {platform}")
+        return None
 
     mime = "image/jpeg" if image_path.endswith(".jpg") else "image/png"
     with open(image_path, "rb") as f:
@@ -414,7 +468,6 @@ def post_photo(platform, copy, url, image_path, scheduled_date):
     if resp.ok:
         result = resp.json()
         request_id = result.get("request_id", "")
-        # upload_photos may return results directly or async
         platform_result = result.get("results", {}).get(platform, {})
         direct_url = platform_result.get("url")
         if direct_url:
@@ -433,10 +486,9 @@ def post_photo(platform, copy, url, image_path, scheduled_date):
 
 def schedule_post(platform, copy, url, image_path, scheduled_date):
     """Route to the right posting method per platform. Returns post URL or None."""
-    if platform == "x":
-        return post_text(platform, copy, url, scheduled_date)
-    else:
+    if platform == "linkedin":
         return post_photo(platform, copy, url, image_path, scheduled_date)
+    return post_text(platform, copy, url, scheduled_date)
 
 
 # --- Main ---
@@ -466,6 +518,7 @@ def main():
 
     failures = False
     posted_urls = []  # (blog_url, platform, post_url) for summary
+    posts_by_file = defaultdict(list)  # filepath -> [(platform, post_url)]
 
     for filepath in changed:
         if not Path(filepath).exists():
@@ -506,12 +559,11 @@ def main():
             print(f"  Warning: no social copy in frontmatter for {filepath}")
             continue
 
-        image_path = meta_image_path(filepath)
 
+
+        image_path = meta_image_path(filepath)
         scheduled = scheduled_date_from_post(post_date)
         print(f"  URL: {url}")
-        if image_path:
-            print(f"  Image: {image_path}")
         if scheduled:
             print(f"  Scheduled for: {scheduled} {POSTING_TZ}")
         else:
@@ -525,14 +577,12 @@ def main():
                 continue
 
             # Validate character limits
+            # LinkedIn includes URL in body (photo post); X/Bluesky use link_url
             limit = CHAR_LIMITS.get(platform)
-            has_url = url in copy
-            if platform == "x":
-                # t.co wraps URLs to 23 chars regardless of actual length
-                text_len = len(copy) if has_url else len(copy) + 2 + 23
+            if platform == "linkedin":
+                text_len = len(copy) if url in copy else len(copy) + 2 + len(url)
             else:
-                # LinkedIn/Bluesky: URL is in the text body for photo posts
-                text_len = len(copy) if has_url else len(copy) + 2 + len(url)
+                text_len = len(copy)
             if limit and text_len > limit:
                 print(f"  SKIPPING {platform}: copy is {text_len} chars, limit is {limit}")
                 failures = True
@@ -548,6 +598,7 @@ def main():
                 record_posted(state, slug, platform)
                 save_state(state)
                 posted_urls.append((url, platform, post_url))
+                posts_by_file[filepath].append((platform, post_url))
             else:
                 post_had_failure = True
 
@@ -579,6 +630,20 @@ def main():
                         f.write(f"| {slug} | {platform} | [link]({post_url}) |\n")
                     else:
                         f.write(f"| {slug} | {platform} | {post_url} |\n")
+
+        # Comment on the PRs that introduced these blog posts
+        for filepath, results in posts_by_file.items():
+            pr_number = find_pr_number(filepath, since_sha=state.get("last_sha"))
+            if not pr_number:
+                print(f"  Could not find PR for {filepath}, skipping comment")
+                continue
+            lines = [f"📣 Social media posts are live for this blog post:\n"]
+            for platform, post_url in results:
+                if isinstance(post_url, str) and post_url.startswith("http"):
+                    lines.append(f"- **{platform}**: {post_url}")
+                else:
+                    lines.append(f"- **{platform}**: posted")
+            comment_on_pr(pr_number, "\n".join(lines))
 
     if failures:
         print("\nSome posts failed to schedule. Not advancing last_sha so they are retried.")

@@ -1,0 +1,8 @@
+name: aws-eks-helm-tarball-yaml
+runtime: yaml
+description: An example that deploys a Helm chart from a tarball URL.
+resources:
+  helm:
+    type: kubernetes:helm.sh/v3:Release
+    properties:
+      chart: https://charts.bitnami.com/bitnami/wordpress-15.2.17.tgz

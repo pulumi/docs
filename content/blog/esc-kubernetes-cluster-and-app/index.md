@@ -36,7 +36,7 @@ First, we create a Kubernetes cluster using the [pulumi-eks](/registry/packages/
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as eks from "@pulumi/eks";
 
@@ -314,7 +314,7 @@ the underlying infrastructure. To achieve this goal, we create a new application
 
 {{% choosable language typescript %}}
 
-```ts
+```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as kubernetes from "@pulumi/kubernetes";
 

@@ -88,7 +88,7 @@ $ pulumi new kubernetes-typescript
 
 This will create a project that deploys a single Kubernetes `Deployment` (but without our required labels!).
 
-```ts
+```typescript
 import * as k8s from "@pulumi/kubernetes";
 import * as kx from "@pulumi/kubernetesx";
 

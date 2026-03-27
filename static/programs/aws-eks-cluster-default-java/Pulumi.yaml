@@ -1,0 +1,3 @@
+name: aws-eks-cluster-default-java
+runtime: java
+description: An example that creates an EKS cluster with default configuration.

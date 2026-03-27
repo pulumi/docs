@@ -227,14 +227,14 @@
                 <pulumi-swipeable>
                     <div class="w-full px-4">
                         <div class="flex flex-col card p-6 bg-white">
-                            <p class="text-left mt-0 overflow-hidden">{{ $tweet.text }}</p>
+                            <p class="text-left mt-0 line-clamp-5">{{ $tweet.text }}</p>
                             <div class="flex flex-grow items-end">
                                 <div>
                                     <img class="rounded-full w-12 h-12" src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" />
                                 </div>
                                 <p class="ml-4 text-gray-600">{{ $tweet.username }}</p>
                                 <div class="flex-grow flex justify-end my-4">
-                                    <img class="h-6" src="/logos/tech/x.svg" alt="X" />
+                                    <img class="h-6" src="/logos/tech/x.svg" alt="X" width="24" height="24" />
                                 </div>
                             </div>
                         </div>
@@ -250,8 +250,8 @@
                 <pulumi-swipeable>
                     <div class="w-full px-4 text-left">
                         <div class="flex flex-col card p-6 bg-white h-60">
-                            <p class="flex-grow mt-0">{{ $tweet.text }}</p>
-                            <div class="flex items-center w-full pb-1">
+                            <p class="mt-0 line-clamp-5">{{ $tweet.text }}</p>
+                            <div class="flex flex-grow items-end w-full pb-1">
                                 <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">
                                     <!-- If the browser fails to load the Twitter avatar, just hide it. -->
                                     <div class="rounded-full border-none w-12 h-12 mr-4 overflow-hidden">
@@ -265,15 +265,15 @@
                                 </a>
 
                                 {{ if eq $tweet.source "twitter" }}
-                                <img class="w-8 h-8" src="/logos/tech/x.svg" alt="Twitter" />
+                                <img class="w-8 h-8" src="/logos/tech/x.svg" alt="Twitter" width="32" height="32" />
                                 {{ end }}
 
                                 {{ if eq $tweet.source "reddit" }}
-                                <img class="w-8 h-8" src="/logos/tech/reddit.svg" alt="Reddit" />
+                                <img class="w-8 h-8" src="/logos/tech/reddit.svg" alt="Reddit" width="32" height="32" />
                                 {{ end }}
 
                                 {{ if eq $tweet.source "linkedin" }}
-                                <img class="w-8 h-8" src="/logos/tech/linkedin.svg" alt="LinkedIn" />
+                                <img class="w-8 h-8" src="/logos/tech/linkedin.svg" alt="LinkedIn" width="32" height="32" />
                                 {{ end }}
 
                                 {{ if eq $tweet.source "blog" }}

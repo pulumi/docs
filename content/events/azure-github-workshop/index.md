@@ -4,72 +4,65 @@ title: Getting Started with Azure IaC and Pulumi Deployments
 meta_desc: Explore the new Azure Native v2 provider and learn how Pulumi Deployments make it easier to validate both infrastructure and app code before release.
 meta_image: /images/resources/azure-deployments2.png
 
-# A featured webinar will display first in the list.
+# A featured event will display first in the list.
 featured: false
 
-# Webinars with unlisted as true will not be shown on the webinar list
+# Events with unlisted as true will not be shown on the event list
 unlisted: false
 
-# Gated webinars will have a registration form and the user will need
+# Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: false
 
-# The layout of the landing page.
-type: webinars
-
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
+# External events will link to an external page instead of an event
+# landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
+# the event page created.
 external: false
 block_external_search_index: false
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
+# The url slug for the event landing page. If this is an external
+# event, use the external URL as the value here.
 url_slug: azure-github-workshop
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Getting Started with Azure IaC and Pulumi Deployments
+# The event type (workshop, webinar, talk).
+event_type: workshop
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated events.
+youtube_url: https://www.youtube.com/embed/iGNCBGWfOV0?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/iGNCBGWfOV0?rel=0
+# Sortable date. The datetime Hugo will use to sort the events in date order.
+sortable_date: 2023-10-25T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-10-25T09:00:00.000-07:00
+# Duration of the event.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the event.
+description: |
+    When managing cloud infrastructure, it’s important to establish a build-test-release process for your team. In this session, you will learn how to use Pulumi’s [Azure Native v2 provider](/blog/introducing-azure-native-v2/) and your favorite programming languages to stand up new projects on Azure quickly. Then, we’ll show you how Pulumi Deployments make it easier than ever to validate both infrastructure and app code before release.
 
-    # Description of the webinar.
-    description: |
-        When managing cloud infrastructure, it’s important to establish a build-test-release process for your team. In this session, you will learn how to use Pulumi’s [Azure Native v2 provider](/blog/introducing-azure-native-v2/) and your favorite programming languages to stand up new projects on Azure quickly. Then, we’ll show you how Pulumi Deployments make it easier than ever to validate both infrastructure and app code before release.
+learn:
+    - Infrastructure as Code on Azure
+    - Serverless architectures
+    - Setting up Pulumi Deployments
 
-    learn:
-        - Infrastructure as Code on Azure
-        - Serverless architectures
-        - Setting up Pulumi Deployments
+# The event presenters
+presenters:
+    - name: Josh Kodroff
+      role: Sr. Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Brian Benz
+      role: Senior Cloud Advocate, Microsoft Azure
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Sr. Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Brian Benz
-          role: Senior Cloud Advocate, Microsoft Azure
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Pulumi Deployments"]
-        languages:
-        clouds: ["Azure"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Pulumi Deployments"]
+    languages:
+    clouds: ["Azure"]
 
 # The right hand side form section.
 form:

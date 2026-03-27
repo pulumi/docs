@@ -110,7 +110,7 @@ You can find the full Dockerfile [here](https://github.com/pulumi/examples/blob/
 
 Now, let's start composing our Pulumi program in TypeScript. The first step is to define an S3 bucket.
 
-```ts
+```typescript
 import * as aws from "@pulumi/aws";
 
 // A bucket to store videos and thumbnails.
@@ -121,7 +121,7 @@ const bucket = new aws.s3.Bucket("bucket");
 
 We can use [Pulumi Crosswalk for AWS](https://www.pulumi.com/docs/iac/clouds/aws/guides/) to build the Docker image and publish it to a new ECR repository with just three lines of code.
 
-```ts
+```typescript
 import * as awsx from "@pulumi/awsx";
 
 const repo = new awsx.ecr.Repository("repo", {
@@ -140,7 +140,7 @@ The local `app` folder contains the application files (`Dockerfile` and `index.j
 
 Next, we define an IAM role and a policy attachment to grant AWS Lambda access to S3 and CloudWatch.
 
-```ts
+```typescript
 const role = new aws.iam.Role("thumbnailerRole", {
     assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: "lambda.amazonaws.com" }),
 });
@@ -155,7 +155,7 @@ new aws.iam.RolePolicyAttachment("lambdaFullAccess", {
 
 It's time to define the AWS Lambda function itself! It's as simple as giving it a name and pointing to the image URI returned from the ECR. Also, we assign the role and increase the timeout to 15 minutes, as video processing may take a while.
 
-```ts
+```typescript
 const thumbnailer = new aws.lambda.Function("thumbnailer", {
     packageType: "Image",
     imageUri: image.imageUri,
@@ -168,7 +168,7 @@ const thumbnailer = new aws.lambda.Function("thumbnailer", {
 
 Finally, we can assign a trigger to the function using the `bucket.onObjectCreated` helper method. We want to limit the function to only process `mp4` files.
 
-```ts
+```typescript
 // When a new video is uploaded, run the FFMPEG task on the video file.
 bucket.onObjectCreated("onNewVideo", thumbnailer, { filterSuffix: ".mp4" });
 ```

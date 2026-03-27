@@ -194,7 +194,7 @@ const instance = new os.compute.Instance("test", {
     imageName: "Ubuntu 16.04",
 });
 
-exports.instanceIP = instance.accessIpV4;
+export const instanceIP = instance.accessIpV4;
 ```
 
 Check out the [API documentation](/registry/packages/openstack/api-docs/)
@@ -224,7 +224,7 @@ serverless.storage.onBlobEvent("newImage", storageAccount, (context, blob) => {
     context.done();
 }, { containerName: "folder", filterSuffix: ".png" });
 
-export let storageAccountName = storageAccount.name;
+export const storageAccountName = storageAccount.name;
 ```
 
 On Google Cloud, the new `gcp.serverless.Function` provides an easy way
@@ -239,7 +239,7 @@ let f = new gcp.serverless.Function("f", {}, (req, res) => {
     res.send(`Hello ${req.body.name || 'World'}!`);
 });
 
-export let url = f.function.httpsTriggerUrl;
+export const url = f.function.httpsTriggerUrl;
 ```
 
 ## GitHub App for CI/CD Integration

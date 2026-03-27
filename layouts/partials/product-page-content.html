@@ -1,77 +1,30 @@
 {{/*
     Product Page Content Partial
 
-    Renders all product page widgets in order, pulling data from the context passed in.
-    Follows the same pattern as event-page-content.html with gap-36 spacing between sections.
+    Renders product page sections in order by looping through the `sections` array in
+    frontmatter. Each item must have a `type` field that maps to a template partial.
 
-    Expected context: Page context with .Params containing widget data
+    Valid type values (each maps to template-partials/template-{type}.html with _ replaced by -):
+      product_hero            — template-product-hero.html
+      logo_banner             — template-logo-banner.html (fields: logos, text, anchor)
+      product_two_column      — template-product-two-column.html
+      section_header          — template-section-header.html
+      section_header_with_image — template-section-header-with-image.html
+      section_header_with_code  — template-section-header-with-code.html
+      counter_cards           — template-counter-cards.html
+      testimonial_product     — template-testimonial-product.html
+      three_column            — template-three-column.html
+      two_column              — template-two-column.html (fields: columns, anchor, highlight_first_card)
+      icon_grid               — template-icon-grid.html
+      features                — template-features.html
+      footer_cta              — template-footer-cta.html
 
     Usage in layouts:
     {{ partial "product-page-content.html" . }}
 */}}
 
 <div class="font-body container mx-auto mb-16 mt-16 px-12 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24 overflow-hidden">
-{{ with .Params.hero }}
-{{ partial "template-partials/template-product-hero.html" . }}
-{{ end }}
-
-{{ with .Params.logos }}
-{{ partial "template-partials/template-logo-banner.html" (dict "logos" . "text" $.Params.logos_text "anchor" $.Params.logos_anchor) }}
-{{ end }}
-
-{{ with .Params.product_two_column }}
-{{ partial "template-partials/template-product-two-column.html" . }}
-{{ end }}
-
-{{ with .Params.section_header }}
-{{ partial "template-partials/template-section-header.html" . }}
-{{ end }}
-
-{{ with .Params.counter_cards }}
-{{ partial "template-partials/template-counter-cards.html" . }}
-{{ end }}
-
-{{ with .Params.testimonial }}
-{{ partial "template-partials/template-testimonial-product.html" . }}
-{{ end }}
-
-{{ with .Params.section_header_with_code }}
-{{ partial "template-partials/template-section-header-with-code.html" . }}
-{{ end }}
-
-{{ with .Params.section_header_secondary }}
-{{ partial "template-partials/template-section-header.html" . }}
-{{ end }}
-
-{{ with .Params.features }}
-{{ partial "template-partials/template-features.html" . }}
-{{ end }}
-
-{{ with .Params.three_column }}
-{{ partial "template-partials/template-three-column.html" . }}
-{{ end }}
-
-{{ with .Params.icon_grid }}
-{{ partial "template-partials/template-icon-grid.html" . }}
-{{ end }}
-
-{{ with .Params.three_column_cicd }}
-{{ partial "template-partials/template-three-column.html" . }}
-{{ end }}
-
-{{ with .Params.section_header_scale }}
-{{ partial "template-partials/template-section-header.html" . }}
-{{ end }}
-
-{{ with .Params.three_column_cloud }}
-{{ partial "template-partials/template-three-column.html" . }}
-{{ end }}
-
-{{ with .Params.two_column }}
-{{ partial "template-partials/template-two-column.html" (dict "columns" . "anchor" $.Params.two_column_anchor) }}
-{{ end }}
-
-{{ with .Params.footer_cta }}
-{{ partial "template-partials/template-footer-cta.html" . }}
+{{ range .Params.sections }}
+  {{ partial (printf "template-partials/template-%s.html" (replace .type "_" "-")) . }}
 {{ end }}
 </div>

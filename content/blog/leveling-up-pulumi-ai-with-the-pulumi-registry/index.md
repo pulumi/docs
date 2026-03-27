@@ -82,7 +82,7 @@ Pulumi AI now offers a more succinct solution for common queries such as "a stat
 >
 > Here's a Pulumi TypeScript program to deploy a static website on Azure using the `azure-static-website.Website` resource.
 >
-> ```ts
+> ```typescript
 > import * as pulumi from "@pulumi/pulumi";
 > import * as azure from "@pulumi/azure";
 > import * as staticWebsites from "@pulumi/azure-static-website";
