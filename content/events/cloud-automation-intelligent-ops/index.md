@@ -4,44 +4,43 @@ title: "Cloud Automation: AWS and Pulumi’s Path to Intelligent Ops"
 meta_desc: Join Pulumi and AWS for a discussion on how next-generation AI capabilities are transforming infrastructure operations.
 meta_image: /events/cloud-automation-intelligent-ops/aws-webinar-big-aligned.png
 
-# A featured webinar will display first in the list.
+# A featured event will display first in the list.
 featured: false
 
-# Webinars with unlisted as true will not be shown on the webinar list
+# Events with unlisted as true will not be shown on the event list
 unlisted: false
 
-# Gated webinars will have a registration form and the user will need
+# Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: false
 
-# The layout of the landing page.
-
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
+# External events will link to an external page instead of an event
+# landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
+# the event page created.
 external: false
 block_external_search_index: false
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
+# The url slug for the event landing page. If this is an external
+# event, use the external URL as the value here.
 url_slug: cloud-automation-intelligent-ops
 
-event_type: workshop # workshop | event
+# The event type (workshop, webinar, talk).
+event_type: workshop
 
-# URL for embedding a URL for ungated webinars.
+# URL for embedding a URL for ungated events.
 youtube_url: https://www.youtube.com/embed/89CYZ5XTbXg?si=dao9Y47h6qBEb4Jh
 
-# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+# Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2025-10-09T12:00:00-04:00
 
-# Duration of the webinar.
+# Duration of the event.
 duration: 60 minutes
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: virtual
 
-# Description of the webinar.
+# Description of the event.
 description: |
     Join Pulumi and [AWS](https://www.pulumi.com/aws#video) for an exclusive discussion on how next-generation AI capabilities are transforming infrastructure operations through intelligent automation. Discover how platform engineering teams can harness [Pulumi Neo](https://www.pulumi.com/product/neo/) and other autonomous assistants that understand context, execute complex cloud operations, and adapt to your organization's unique requirements — all while maintaining enterprise-grade governance and security controls. Learn how Neo's AI-powered infrastructure assistant is revolutionizing the way teams build, manage, and optimize cloud infrastructure through natural language interactions.
 learn:
@@ -50,7 +49,7 @@ learn:
     - Strategies for incremental adoption of AI-powered infrastructure management
     - How to prepare your organization for the next wave of infrastructure automation
     
-# The webinar presenters
+# The event presenters
 presenters:
     - name: Meagan Cojocar
       role: Vice President and GM, IaC, Pulumi

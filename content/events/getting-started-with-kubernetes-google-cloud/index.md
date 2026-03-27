@@ -4,44 +4,43 @@ title: Getting Started with Kubernetes on Google Cloud
 meta_desc: Learn how Kubernetes runs on Google Cloud using GKE. Create clusters, deploy applications, and manage Kubernetes infrastructure with Pulumi.
 meta_image: /events/getting-started-with-kubernetes-google-cloud/intro-google-cloud-gke-adam.png
 
-# A featured webinar will display first in the list.
+# A featured event will display first in the list.
 featured: false
 
-# Webinars with unlisted as true will not be shown on the webinar list
+# Events with unlisted as true will not be shown on the event list
 unlisted: false
 
-# Gated webinars will have a registration form and the user will need
+# Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: true
 
-# The layout of the landing page.
-
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
+# External events will link to an external page instead of an event
+# landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
+# the event page created.
 external: false
 block_external_search_index: false
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
+# The url slug for the event landing page. If this is an external
+# event, use the external URL as the value here.
 url_slug: getting-started-with-kubernetes-google-cloud
 
-event_type: workshop # workshop | event
+# The event type (workshop, webinar, talk).
+event_type: workshop
 
-# URL for embedding a URL for ungated webinars.
+# URL for embedding a URL for ungated events.
 youtube_url:
 
-# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+# Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2026-05-13T09:00:00.000-07:00
 
-# Duration of the webinar.
+# Duration of the event.
 duration: 60 minutes
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: virtual
 
-# Description of the webinar.
+# Description of the event.
 description: |
     Getting started with Kubernetes on Google Cloud doesn’t have to be complex. This workshop introduces the fundamentals of running Kubernetes using Google Kubernetes Engine (GKE) and shows how Pulumi can be used to define and manage Kubernetes and cloud infrastructure in code.
 
@@ -51,7 +50,7 @@ learn:
     - Build reusable infrastructure components for GKE
     - Deploy and update containerized applications to GKE using safe, repeatable workflows
     - Understand the lifecycle of Kubernetes infrastructure on Google Cloud
-# The webinar presenters
+# The event presenters
 presenters:
     - name: Adam Gordon Bell
       role: Community Engineer, Pulumi

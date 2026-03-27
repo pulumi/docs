@@ -4,48 +4,47 @@ title: DevOps Days Los Angeles 2026
 meta_desc: Join Pulumi in sunny Los Angeles at DevOps Days
 meta_image:
 
-# A featured webinar will display first in the list.
+# A featured event will display first in the list.
 featured: false
 
-# Webinars with unlisted as true will not be shown on the webinar list
+# Events with unlisted as true will not be shown on the event list
 unlisted: false
 
-# Gated webinars will have a registration form and the user will need
+# Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: false
 
-# The layout of the landing page.
-
-# External webinars will link to an external page instead of a webinar
-# landing/registration page. If the webinar is external you will need
+# External events will link to an external page instead of an event
+# landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
-# the webinar page created.
+# the event page created.
 external: true
 block_external_search_index: true
 
-# The url slug for the webinar landing page. If this is an external
-# webinar, use the external URL as the value here.
+# The url slug for the event landing page. If this is an external
+# event, use the external URL as the value here.
 url_slug: https://devopsdays.org/events/2026-los-angeles/welcome/
 
-event_type: event # workshop | event
+# The event type (workshop, webinar, talk).
+event_type: event
 
-# URL for embedding a URL for ungated webinars.
+# URL for embedding a URL for ungated events.
 youtube_url:
 
-# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+# Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2026-03-06T09:00:00-08:00
 
-# Duration of the webinar.
+# Duration of the event.
 duration: 1 day
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: Los Angeles, CA
 
-# Description of the webinar.
+# Description of the event.
 description: |
     Join Pulumi in sunny Los Angeles
 
-# The webinar presenters
+# The event presenters
 presenters:
 
 # case-sensitive
