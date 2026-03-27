@@ -54,7 +54,7 @@ The commands found in this tutorial can be run against any projects or stacks th
 
 {{< /notes >}}
 
-To start, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/iac/get-started/aws/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/iac/get-started/aws/create-project/) and replace the default program code with the following:
+To start, login to the [Pulumi CLI](/docs/iac/cli/commands/pulumi_login/) and ensure it is [configured to use your AWS account](/docs/iac/get-started/aws/begin/#configure-pulumi-to-access-your-aws-account). Next, [create a new project](/docs/iac/get-started/aws/create-project/) and replace the default program code with the following:
 
 {{< example-program path="aws-s3bucket-bucketpolicy" >}}
 
@@ -74,7 +74,7 @@ In this section, you will run a number of commands in the Pulumi CLI that will e
 
 ### pulumi stack
 
-The [pulumi stack](/docs/cli/commands/pulumi_stack/) command is used to provide a quick overview of the current stack's status and configuration. Running this command will list the management details, resources, and [output](/docs/concepts/inputs-outputs/#outputs) names and values of the current stack.
+The [pulumi stack](/docs/iac/cli/commands/pulumi_stack/) command is used to provide a quick overview of the current stack's status and configuration. Running this command will list the management details, resources, and [output](/docs/concepts/inputs-outputs/#outputs) names and values of the current stack.
 
 Run the `pulumi stack` command as shown below:
 
@@ -82,7 +82,7 @@ Run the `pulumi stack` command as shown below:
 
 ### pulumi stack graph
 
-The [pulumi stack graph <filename>](/docs/cli/commands/pulumi_stack_graph/) command is used to visualize the dependency graph of a Pulumi stack. This graphical representation can help users to understand the relationships and dependencies between resources in their infrastructure.
+The [pulumi stack graph <filename>](/docs/iac/cli/commands/pulumi_stack_graph/) command is used to visualize the dependency graph of a Pulumi stack. This graphical representation can help users to understand the relationships and dependencies between resources in their infrastructure.
 
 Run the `pulumi stack graph <filename>` command as shown below, making sure to replace `<filename>` with the name of the file that you want the graph to be exported to:
 
@@ -96,7 +96,7 @@ The output of the file will be in [Graphviz DOT format](https://graphviz.org/doc
 
 ### pulumi stack output
 
-The [pulumi stack output](/docs/cli/commands/pulumi_stack_output/) command is used to list all output names and values that are exported from a stack. This command helps to facilitate automation workflows and integration with other tools and scripts by providing easy access to important output values.
+The [pulumi stack output](/docs/iac/cli/commands/pulumi_stack_output/) command is used to list all output names and values that are exported from a stack. This command helps to facilitate automation workflows and integration with other tools and scripts by providing easy access to important output values.
 
 Run the `pulumi stack output` command as shown below:
 
@@ -108,7 +108,7 @@ You can return the value of just a single output by adding the name of the desir
 
 ### pulumi stack export
 
-The [pulumi stack export](/docs/cli/commands/pulumi_stack_export/) command is used to export the current state of a stack in JSON format to standard out. This state definition contains all the information about the resources, their states, and the configuration of the stack. The exported state can be used for things like backup, migration, or debugging purposes.
+The [pulumi stack export](/docs/iac/cli/commands/pulumi_stack_export/) command is used to export the current state of a stack in JSON format to standard out. This state definition contains all the information about the resources, their states, and the configuration of the stack. The exported state can be used for things like backup, migration, or debugging purposes.
 
 Run the `pulumi stack export` command as shown below:
 
@@ -116,7 +116,7 @@ Run the `pulumi stack export` command as shown below:
 
 ### pulumi preview
 
-The [pulumi preview](/docs/cli/commands/pulumi_preview/) command is an important tool for understanding the changes that will be made to your infrastructure before actually applying them. It does a dry run of the update, showing a detailed preview of the resources that will be created, updated, or deleted without making any actual changes to your cloud resources.
+The [pulumi preview](/docs/iac/cli/commands/pulumi_preview/) command is an important tool for understanding the changes that will be made to your infrastructure before actually applying them. It does a dry run of the update, showing a detailed preview of the resources that will be created, updated, or deleted without making any actual changes to your cloud resources.
 
 Before running this command, you will need to make a change to your Pulumi program. Change the name of your S3 bucket resource and then save your file.
 
@@ -128,7 +128,7 @@ Now run the `pulumi preview` command to display a preview of the updates that wi
 
 ### pulumi console
 
-The [pulumi console](/docs/cli/commands/pulumi_console/) command opens the current stack in the Pulumi Console, providing a graphical user interface to view and manage your Pulumi stack and resources. From there, you can view detailed information about the stack such as its resources, outputs, and configuration values.
+The [pulumi console](/docs/iac/cli/commands/pulumi_console/) command opens the current stack in the Pulumi Console, providing a graphical user interface to view and manage your Pulumi stack and resources. From there, you can view detailed information about the stack such as its resources, outputs, and configuration values.
 
 {{< video title="Running the pulumi console command" src="https://www.pulumi.com/uploads/aws-cli-pulumi-console.mp4" autoplay="true" loop="true" >}}
 
@@ -140,5 +140,5 @@ The [pulumi console](/docs/cli/commands/pulumi_console/) command opens the curre
 
 In this tutorial, you used a variety of Pulumi CLI commands to view more details about your infrastructure. To learn more about creating and managing resources in Pulumi, take a look at the following resources:
 
-- Learn more about the available CLI commands in the [Pulumi CLI documentation](/docs/cli/commands/).
+- Learn more about the available CLI commands in the [Pulumi CLI documentation](/docs/iac/cli/commands/).
 - Learn more about stack outputs and references in the [Stack Outputs and References](/tutorials/stack-outputs-and-references/) tutorial.

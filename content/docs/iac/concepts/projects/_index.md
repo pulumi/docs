@@ -22,7 +22,7 @@ aliases:
 - /docs/concepts/projects/
 ---
 
-A Pulumi project is any folder that contains a `Pulumi.yaml` project file. At runtime, the nearest parent folder containing a `Pulumi.yaml` file determines the current project. Projects are created with the [`pulumi new`](/docs/cli/commands/pulumi_new/) command.
+A Pulumi project is any folder that contains a `Pulumi.yaml` project file. At runtime, the nearest parent folder containing a `Pulumi.yaml` file determines the current project. Projects are created with the [`pulumi new`](/docs/iac/cli/commands/pulumi_new/) command.
 
 ## The project file (Pulumi.yaml) {#pulumi-yaml}
 

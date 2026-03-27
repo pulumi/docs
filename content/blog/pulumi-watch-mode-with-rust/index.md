@@ -147,5 +147,5 @@ infrastructure as code. Implementing watch mode in Rust applied that principle t
 maintaining performance, moving the feature to a well-maintained footing, and expanding support to
 every platform Pulumi supports.
 
-Give [`pulumi watch`](/docs/cli/commands/pulumi_watch) a try with our
+Give [`pulumi watch`](/docs/iac/cli/commands/pulumi_watch) a try with our
 [getting started guide](/docs/get-started/)!

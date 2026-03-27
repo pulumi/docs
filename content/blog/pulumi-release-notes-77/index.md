@@ -116,7 +116,7 @@ We also made a handful of improvements to `pulumi convert`. See the [v0.5.5 rele
 
 ### Allow `pulumi refresh` to resolve pending creates
 
-[`pulumi refresh`](/docs/cli/commands/pulumi_refresh) can be used to bring Pulumi state back inline with external state. If something is changed in the actual state and Pulumi is not made aware of it or if Pulumi is terminated mid-operation you could end up with pending operations. Now when running `pulumi refresh` interactively, it will provide you with new options to deal with the pending operations. These new interactive options are as follows:
+[`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh) can be used to bring Pulumi state back inline with external state. If something is changed in the actual state and Pulumi is not made aware of it or if Pulumi is terminated mid-operation you could end up with pending operations. Now when running `pulumi refresh` interactively, it will provide you with new options to deal with the pending operations. These new interactive options are as follows:
 
 - **import**: the flag `--import-pending-creates` has been added to allow scripting to resolve pending creates via `pulumi refresh`. It takes a list of URN IDs to be imported.
 - **clear**: to assist with the use case of removing all pending creates, the flag `--clear-pending-creates` has been added.
@@ -163,7 +163,7 @@ Learn more in the [Add options to configure logging and tracing merge request](h
 
 ### Use `pulumi destroy -s <stack>` outside a Pulumi project dir
 
-You can now specify a stack when using [`pulumi destroy`](/docs/cli/commands/pulumi_destroy) while outside of the project directory.
+You can now specify a stack when using [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy) while outside of the project directory.
 
 Learn more in the [`pulumi destroy -s <stack>` GitHub issue](https://github.com/pulumi/pulumi/issues/2440).
 
@@ -205,7 +205,7 @@ Look for the star icon next to any stack name and select it to start building yo
 
 ### Pulumi Service Provider improvements
 
-The Pulumi Service Provider builds on top of the Pulumi Service REST API which is another feature available to our customers to programmatically configuring the Pulumi Service. At launch, the Pulumi Service Provider had resource support for Teams, Webhooks, StackTags and AccessTokens. We have recently also added support for [TeamStackPermissions](/docs/cli/commands/pulumi_destroy/), enabling users to add stacks to Teams and [Provider](/docs/cli/commands/pulumi_destroy/) to control Provider resources.
+The Pulumi Service Provider builds on top of the Pulumi Service REST API which is another feature available to our customers to programmatically configuring the Pulumi Service. At launch, the Pulumi Service Provider had resource support for Teams, Webhooks, StackTags and AccessTokens. We have recently also added support for [TeamStackPermissions](/docs/iac/cli/commands/pulumi_destroy/), enabling users to add stacks to Teams and [Provider](/docs/iac/cli/commands/pulumi_destroy/) to control Provider resources.
 
 As always, please feel free to submit feature requests and bug reports to [Pulumi Service Provider GitHub Repo](https://github.com/pulumi/pulumi-pulumiservice/issues). We look forward to seeing what you build with the Pulumi Service Provider!
 

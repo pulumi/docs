@@ -58,7 +58,7 @@ Cloud engineering applies software testing principles to infrastructure where we
 
 ### Static tests
 
-Infrastructure templating languages such as YAML or JSON have limited static validation capabilities; primarily, they are limited to linting: validating and formatting the code. Pulumi's approach of deploying infrastructure with programming languages lets you use built-in tools in IDEs that perform static tests, highlight errors in your code, and offer other features such as code completion, enumerations, and syntax checking. [Pulumi's preview](/docs/cli/commands/pulumi_preview) also performs static checking before deploying a resource.
+Infrastructure templating languages such as YAML or JSON have limited static validation capabilities; primarily, they are limited to linting: validating and formatting the code. Pulumi's approach of deploying infrastructure with programming languages lets you use built-in tools in IDEs that perform static tests, highlight errors in your code, and offer other features such as code completion, enumerations, and syntax checking. [Pulumi's preview](/docs/iac/cli/commands/pulumi_preview) also performs static checking before deploying a resource.
 
 ### Unit tests
 

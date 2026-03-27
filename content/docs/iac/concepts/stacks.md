@@ -57,7 +57,7 @@ dev
 In some contexts, stack names will be presented in their fully-qualified format (`orgName/projectName/stackName`) even if provided using shorthand (`stackName` or `orgName/stackName`) as input.
 
 {{% notes type="info" %}}
-While stacks with applied configuration settings will often be accompanied by `Pulumi.<stack-name>.yaml` files, these files are not created by `pulumi stack init`. They are created and managed with [`pulumi config`](/docs/cli/commands/pulumi_config/). For information on how to populate your stack configuration files, see [Configuration](/docs/concepts/config/).
+While stacks with applied configuration settings will often be accompanied by `Pulumi.<stack-name>.yaml` files, these files are not created by `pulumi stack init`. They are created and managed with [`pulumi config`](/docs/iac/cli/commands/pulumi_config/). For information on how to populate your stack configuration files, see [Configuration](/docs/concepts/config/).
 {{% /notes %}}
 
 ## Listing stacks
@@ -144,17 +144,17 @@ Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 
 ## Stack tags
 
-Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`](/docs/cli/commands/pulumi_stack_tag_ls).
+Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`](/docs/iac/cli/commands/pulumi_stack_tag_ls).
 
 {{% notes "info" %}}
 Stack tags are only supported with the [Pulumi Cloud backend](/docs/concepts/state/).
 {{% /notes %}}
 
-Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`](/docs/cli/commands/pulumi_stack_tag_set) and can be used to customize the grouping of stacks in the [Pulumi Cloud](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in Pulumi Cloud.
+Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`](/docs/iac/cli/commands/pulumi_stack_tag_set) and can be used to customize the grouping of stacks in the [Pulumi Cloud](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in Pulumi Cloud.
 
 As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
 
-Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/cli/commands/pulumi_stack_tag_rm).
+Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/iac/cli/commands/pulumi_stack_tag_rm).
 
 ## Stack outputs {#outputs}
 
@@ -228,7 +228,7 @@ outputs:
 
 {{< /chooser >}}
 
-From the CLI, you can then use [`pulumi stack output url`](/docs/cli/commands/pulumi_stack_output) to get the value and incorporate into other scripts or tools.
+From the CLI, you can then use [`pulumi stack output url`](/docs/iac/cli/commands/pulumi_stack_output) to get the value and incorporate into other scripts or tools.
 
 The value of a stack export can be a regular value, an [Output](/docs/concepts/inputs-outputs/), or a `Promise` (effectively, the same as an [Input](/docs/concepts/inputs-outputs/)). The actual values are resolved after `pulumi up` completes.
 

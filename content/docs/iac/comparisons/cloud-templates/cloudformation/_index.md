@@ -180,7 +180,7 @@ For more information on managing secrets with Pulumi, see [Secrets](/docs/concep
 
 ### Drift Detection and Correction {#drift-detection}
 
-Both Pulumi and CloudFormation support _drift detection_, which allows you to detect and correct configuration changes that occur outside of the IaC-managed workflow --- for example, as a result of a change made manually in the AWS Console or with the AWS CLI. Whereas CloudFormation's drift detection happens within the CloudFormation service, in Pulumi, it's built into the Pulumi CLI, and can be performed either on demand with `pulumi refresh` or as part of the normal deployment workflow by passing the `--refresh` option. For more information, see [`pulumi up`](/docs/cli/commands/pulumi_up) and [`pulumi refresh`](/docs/cli/commands/pulumi_refresh).
+Both Pulumi and CloudFormation support _drift detection_, which allows you to detect and correct configuration changes that occur outside of the IaC-managed workflow --- for example, as a result of a change made manually in the AWS Console or with the AWS CLI. Whereas CloudFormation's drift detection happens within the CloudFormation service, in Pulumi, it's built into the Pulumi CLI, and can be performed either on demand with `pulumi refresh` or as part of the normal deployment workflow by passing the `--refresh` option. For more information, see [`pulumi up`](/docs/iac/cli/commands/pulumi_up) and [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh).
 
 ### Stack Configuration and Deployment Environments {#configuration}
 

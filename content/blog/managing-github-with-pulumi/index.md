@@ -87,7 +87,7 @@ $ export GITHUB_OWNER=pulumi
 
 Now, Pulumi is _great_ at creating new infrastructure from scratch via code. But this wasn’t a from-scratch situation. We had to migrate existing resources---GitHub teams---to Pulumi, without disrupting anyone’s access.
 
-Enter [Pulumi Import](/docs/cli/commands/pulumi_import/).
+Enter [Pulumi Import](/docs/iac/cli/commands/pulumi_import/).
 
 What Pulumi Import does, in a nutshell, is find existing infrastructure by unique ID (in the GitHub provider’s case, the team ID), and add them to a Pulumi Stack. You can find the specific import instructions on the registry documentation for each resource. In this case we want the [GitHub import instructions](/registry/packages/github/api-docs/team#import).
 
@@ -160,7 +160,7 @@ Resources:
 
 Since `pulumi preview` shows no changes, we now know that our code reflects the existing infrastructure. It’s a bit funny to think about your program working well when it does nothing, but this was a huge first step in preserving existing infrastructure and ensuring all of our coworkers could continue their daily work uninterrupted!
 
-To finish up, we [unprotect the resource](/docs/cli/commands/pulumi_state_unprotect/):
+To finish up, we [unprotect the resource](/docs/iac/cli/commands/pulumi_state_unprotect/):
 
 ```bash
 $ pulumi state unprotect 'urn:pulumi:prod::team-mgmt::github:index/team:Team::animals'
@@ -479,7 +479,7 @@ jobs:
          stack-name: pulumi/prod
 ```
 
-Note that we are calling `refresh: true` in both Workflows, which uses [Pulumi Refresh](/docs/cli/commands/pulumi_refresh/) to make sure that the existing GitHub resources are aligned with the resource state in our Stack.
+Note that we are calling `refresh: true` in both Workflows, which uses [Pulumi Refresh](/docs/iac/cli/commands/pulumi_refresh/) to make sure that the existing GitHub resources are aligned with the resource state in our Stack.
 
 Now, anyone with access to the GitHub management repo can:
 

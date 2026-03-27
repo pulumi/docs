@@ -39,7 +39,7 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 ## Deploying the project
 
-The template requires no additional configuration. By default, it will install an Nginx ingress controller with Helm. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/cli/commands/pulumi_up):
+The template requires no additional configuration. By default, it will install an Nginx ingress controller with Helm. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/iac/cli/commands/pulumi_up):
 
 ```bash
 $ pulumi up
@@ -59,7 +59,7 @@ Projects created with the Helm Chart template expose the following [configuratio
 k8sNamespace
 : The name of the namespace to be created in your existing cluster. Defaults to `nginx-ingress`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/cli/commands/pulumi_config_set) as shown below.
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) as shown below.
 
 ```bash
 $ pulumi config set someProp ../some/value
@@ -70,7 +70,7 @@ You can customize the Helm chart by passing values to it in your Pulumi code. An
 
 ## Tidying up
 
-You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/cli/commands/pulumi_destroy):
+You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy):
 
 ```bash
 $ pulumi destroy

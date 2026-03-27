@@ -45,7 +45,7 @@ estimated_time: 10
 
 ## Create a new project
 
-To start, login to the [Pulumi CLI](/docs/cli/commands/pulumi_login/). Next, create a new project by running the `pulumi new <language>` command, making sure to replace `<language>` with the supported language of your choice:
+To start, login to the [Pulumi CLI](/docs/iac/cli/commands/pulumi_login/). Next, create a new project by running the `pulumi new <language>` command, making sure to replace `<language>` with the supported language of your choice:
 
 ```bash
 # example using python

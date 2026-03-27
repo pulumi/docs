@@ -749,7 +749,7 @@ nginx   3/3     3            3           103s
 ```
 
 {{% notes type="info" %}}
-ESC environments can be used with the `pulumi` CLI using the [pulumi env](/docs/cli/commands/pulumi_env/) command, or with
+ESC environments can be used with the `pulumi` CLI using the [pulumi env](/docs/iac/cli/commands/pulumi_env/) command, or with
 the new standalone [esc CLI](/docs/esc-cli).
 {{% /notes %}}
 

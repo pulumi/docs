@@ -75,7 +75,7 @@ So, the search began, and soon enough, we discovered Pulumi. And as it turned ou
 
 - different options when it comes to storing cloud infrastructure state files: a managed SaaS ([pulumi.com](https://app.pulumi.com/signin)) with a console and self-hosted, (for example [Amazon S3](https://aws.amazon.com/s3/))
 - ability to deploy cloud infrastructure into multiple environments using its concept of [stacks](/docs/concepts/stack/)
-- advanced features like [Policy as Code](/docs/using-pulumi/crossguard/get-started/) and [watch mode](/docs/cli/commands/pulumi_watch/)
+- advanced features like [Policy as Code](/docs/using-pulumi/crossguard/get-started/) and [watch mode](/docs/iac/cli/commands/pulumi_watch/)
 - great documentation
 - a vibrant community of developers and a responsive team behind the product
 

@@ -1,3 +1,3 @@
 ---
-redirect_to: /docs/cli/commands/pulumi_stack_history/
+redirect_to: /docs/iac/cli/commands/pulumi_stack_history/
 ---
