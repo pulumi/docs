@@ -8,6 +8,7 @@ on:
 permissions:
   id-token: write
   contents: read
+  pull-requests: write
 
 concurrency:
   group: schedule-social
@@ -52,6 +53,7 @@ jobs:
         env:
           UPLOAD_POST_API_KEY: ${{ steps.esc-secrets.outputs.UPLOAD_POST_API_KEY }}
           SOCIAL_STATE_BUCKET: ${{ steps.bucket.outputs.name }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: uv run scripts/social/schedule-posts.py
 
   notify:
