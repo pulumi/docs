@@ -133,10 +133,12 @@ export class HubspotForm {
             this.setInternalAdId();
         }
 
-        // When the form is submitted, notify Segment.
+        // When the form is submitted, notify Segment and fire any conversion tracking.
         if (eventName === "onFormSubmit") {
             const emailAddress: HTMLInputElement = this.el.querySelector(`input[name="email"]`);
-            this.notifySegment(emailAddress.value, utmData);
+            if (emailAddress) {
+                this.notifySegment(emailAddress.value, utmData);
+            }
 
             // Fire LinkedIn conversion tracking if a conversion ID is set.
             if (this.linkedinConversionId && typeof (window as any).lintrk === "function") {
