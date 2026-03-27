@@ -830,6 +830,13 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             ...baseCacheBehavior,
+            pathPattern: "/js/chunk-*.js",
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
             pathPattern: "/fonts/*",
             defaultTtl: oneYear,
             maxTtl: oneYear,
