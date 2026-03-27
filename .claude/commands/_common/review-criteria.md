@@ -44,6 +44,7 @@ Always provide relevant line numbers for any issues you identify.
 - **Front matter**:
   - Verify required front matter fields (title, description, etc.).
   - Check meta descriptions are present and appropriate length.
+  - For blog posts: check that `social:` block is present with `twitter`, `linkedin`, and `bluesky` keys. These auto-post to social media when merged. Character limits: X ~280, Bluesky 300, LinkedIn 3000.
 - **Cross-references and consistency**:
   - Check that related pages are cross-linked appropriately.
   - Verify terminology is consistent with other docs.
@@ -159,6 +160,7 @@ Review for:
 - [ ] No animated GIFs used as `meta_image`
 - [ ] Images have alt text; screenshots have 1px gray borders
 - [ ] Title ≤60 chars or `allow_long_title: true` set
+- [ ] `social:` block present with copy for `twitter`, `linkedin`, `bluesky` (auto-posts on merge)
 
 ## Additional Instructions
 

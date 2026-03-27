@@ -1,5 +1,5 @@
 ---
-title_tag: Deploy Kubernetes App Services | Crosswalk
+title_tag: Deploy Kubernetes App Services
 meta_desc: This page provides an overview of how to deploy Kubernetes App services to different
            cloud providers.
 title: App services

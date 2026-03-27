@@ -15,7 +15,6 @@ unlisted: false
 gated: true
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,36 +27,32 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: https://honeycomb.io/go/honeycomb-aws-pulumi-ai-agents-workshop
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "AI Agents That Reason Over Your Infrastructure"
-    event_type: workshop # workshop | event
+event_type: workshop # workshop | event
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+# URL for embedding a URL for ungated webinars.
+youtube_url: 
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2026-01-14T10:00:00-08:00
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2026-01-14T10:00:00-08:00
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# Duration of the webinar.
+duration: 90 minutes
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Description of the webinar.
-    description: |
-        What if your observability data could act? Discover how AI agents use Honeycomb telemetry to detect AWS issues and propose intelligent fixes with Pulumi Neo.
-    learn:
-    # The webinar presenters
-    presenters:
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics:  ["AI agents", "observability", "Infrastructure as Code", "DevOps"]
-        languages: []
-        clouds: ["AWS"]
+# Description of the webinar.
+description: |
+    What if your observability data could act? Discover how AI agents use Honeycomb telemetry to detect AWS issues and propose intelligent fixes with Pulumi Neo.
+learn:
+# The webinar presenters
+presenters:
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics:  ["AI agents", "observability", "Infrastructure as Code", "DevOps"]
+    languages: []
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

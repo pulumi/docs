@@ -15,6 +15,10 @@
     - image_visible_from: Optional Tailwind breakpoint (sm, md, lg, xl, 2xl) at which the image
       becomes visible. When set, the image is hidden by default and shown from that breakpoint up.
       When unset, the image is always visible.
+    - cta_text: Optional CTA link text (renders below description)
+    - cta_link: Optional CTA link URL
+    - cards: Optional array of mini feature cards rendered below the image.
+      Each item: { icon: "fa-code", title: "Title", description: "..." }
     - anchor: Optional anchor for section id
 */}}
 
@@ -26,6 +30,9 @@
 {{ $imageAlt := .image_alt | default "" }}
 {{ $imageAbove := .image_above }}
 {{ $imageVisibleFrom := .image_visible_from }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
+{{ $cards := .cards }}
 {{ $anchor := .anchor }}
 
 {{/* Build responsive visibility classes for the image container. */}}
@@ -59,10 +66,19 @@
         {{ if $description }}
         <p class="section-header-description">{{ $description | markdownify }}</p>
         {{ end }}
+        {{ if $ctaText }}
+        <a href="{{ $ctaLink }}" class="cta inline-flex items-center gap-1 mt-6 justify-center">
+            <span>{{ $ctaText }}</span>
+            <span>→</span>
+        </a>
+        {{ end }}
     </div>
     {{ if and $image (not $imageAbove) }}
     <div class="section-header-image mt-10 w-full {{ $imageDisplayClass }} justify-center">
         <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full rounded-lg">
     </div>
+    {{ end }}
+    {{ if $cards }}
+    {{ partial "template-partials/template-mini-cards.html" $cards }}
     {{ end }}
 </section>

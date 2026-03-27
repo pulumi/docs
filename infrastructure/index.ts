@@ -67,6 +67,12 @@ const config = {
     // cdnLogDeliverySourceName is the name of the CloudFront-created log delivery source.
     // If not set, CDN log delivery configuration will be skipped.
     cdnLogDeliverySourceName: stackConfig.get("cdnLogDeliverySourceName") || undefined,
+
+    // enableWaf toggles whether to create and associate a WAF WebACL with the CloudFront distribution.
+    enableWaf: stackConfig.getBoolean("enableWaf") || false,
+
+    // wafRateLimit is the maximum number of requests per 5-minute window per IP before WAF blocks.
+    wafRateLimit: stackConfig.getNumber("wafRateLimit") || 500,
 };
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
@@ -77,6 +83,42 @@ let astroAwsRoleArn: pulumi.Output<any> | undefined;
 if (config.enableDataWarehouseAccess) {
     const astroStack = new pulumi.StackReference('pulumi/dwh-workflows-astro/production');
     astroAwsRoleArn = astroStack.getOutput('astroAwsRoleArn');
+}
+
+// WAF WebACL for rate limiting. WebACLs for CloudFront must be in us-east-1.
+let webAcl: aws.wafv2.WebAcl | undefined;
+
+if (config.enableWaf) {
+    const usEast1 = new aws.Provider("us-east-1-waf", {
+        region: aws.Region.USEast1,
+    });
+
+    webAcl = new aws.wafv2.WebAcl("cdn-waf", {
+        scope: "CLOUDFRONT",
+        description: `Rate limiting for ${config.websiteDomain}`,
+        defaultAction: { allow: {} },
+        rules: [{
+            name: "rate-limit-per-ip",
+            priority: 1,
+            action: { block: {} },
+            statement: {
+                rateBasedStatement: {
+                    limit: config.wafRateLimit,
+                    aggregateKeyType: "IP",
+                },
+            },
+            visibilityConfig: {
+                cloudwatchMetricsEnabled: true,
+                metricName: "cdn-waf-rate-limit",
+                sampledRequestsEnabled: true,
+            },
+        }],
+        visibilityConfig: {
+            cloudwatchMetricsEnabled: true,
+            metricName: "cdn-waf",
+            sampledRequestsEnabled: true,
+        },
+    }, { provider: usEast1 });
 }
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
@@ -428,6 +470,7 @@ const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
 });
 
 const fiveMinutes = 60 * 5;
+const thirtyMinutes = fiveMinutes * 6;
 const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
@@ -439,6 +482,20 @@ const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 // CachingDisabled sets min, max, and default cache TTLs to 0.
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
 const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
+
+// Custom cache policy for origin-proxied behaviors (registry, guides) that need
+// an originRequestPolicy. CloudFront requires a cachePolicyId (not legacy
+// forwardedValues) when an origin request policy is attached.
+const thirtyMinuteCachePolicy = new aws.cloudfront.CachePolicy("thirty-minute-cache", {
+    defaultTtl: thirtyMinutes,
+    maxTtl: thirtyMinutes,
+    minTtl: 0,
+    parametersInCacheKeyAndForwardedToOrigin: {
+        cookiesConfig: { cookieBehavior: "none" },
+        headersConfig: { headerBehavior: "none" },
+        queryStringsConfig: { queryStringBehavior: "none" },
+    },
+});
 
 const baseSecurityHeadersConfig = {
     frameOptions: {
@@ -490,6 +547,17 @@ const CopilotSecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('c
 // This is separate from CloudFront edge TTLs (defaultTtl/maxTtl) which only
 // control CDN-level caching. Without this policy, browsers see no Cache-Control
 // header and fall back to heuristic caching with 304 revalidation round-trips.
+const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-logo-cache-headers', {
+    securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [{
+            header: "Cache-Control",
+            value: "public, max-age=1800",
+            override: true,
+        }],
+    },
+});
+
 const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
@@ -532,8 +600,8 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
     },
 
     minTtl: 0,
-    defaultTtl: fiveMinutes,
-    maxTtl: fiveMinutes,
+    defaultTtl: thirtyMinutes,
+    maxTtl: thirtyMinutes,
     lambdaFunctionAssociations: config.doEdgeRedirects ? [getEdgeRedirectAssociation()] : [],
     responseHeadersPolicyId: SecurityHeadersPolicy.id,
 };
@@ -568,12 +636,9 @@ if (config.registryStack) {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
             pathPattern: "/registry/*",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            forwardedValues: undefined,
         },
     )
 }
@@ -599,12 +664,9 @@ if (config.guidesStack) {
             ...baseCacheBehavior,
             targetOriginId: guidesCDN,
             pathPattern: "/guides/*",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
+            forwardedValues: undefined,
         },
     )
 }
@@ -776,6 +838,14 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: "/icons/*",
             defaultTtl: oneHour,
             maxTtl: oneHour,
+            responseHeadersPolicyId: BrandLogoCachePolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/logos/brand/*",
+            defaultTtl: thirtyMinutes,
+            maxTtl: thirtyMinutes,
+            responseHeadersPolicyId: BrandLogoCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
@@ -916,6 +986,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         sslSupportMethod: "sni-only",
         minimumProtocolVersion: "TLSv1.2_2021",
     },
+
+    webAclId: webAcl?.arn,
 };
 
 // cdn is the CloudFront distribution that serves the content of the website.
@@ -1013,6 +1085,8 @@ export const socialStateBucketName = socialStateBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
+export const cloudFrontDistributionId = cdn.id;
 export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
+export const wafWebAclArn = webAcl?.arn;
 export const readme = fs.readFileSync("./README.md").toString();

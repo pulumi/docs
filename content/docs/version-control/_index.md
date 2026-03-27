@@ -34,7 +34,7 @@ sections:
     link: /docs/version-control/github-app/
   - image: /logos/tech/gitlab.svg
     heading: GitLab
-    description: Add Pulumi previews to merge requests, run Pulumi in GitLab CI, and use GitLab repos as IDP template sources.
+    description: Surface Pulumi previews on merge requests, deploy on push, create review stacks, and use GitLab repos as template sources.
     link: /docs/version-control/gitlab/
   - image: /logos/tech/ci-cd/azure-devops.svg
     heading: Azure DevOps Integration

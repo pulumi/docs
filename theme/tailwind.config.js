@@ -102,7 +102,7 @@ const violet = {
     300: global.colors.violet["300"].value,
     400: global.colors.violet["400"].value,
     500: global.colors.violet["500"].value,
-    600: brand.violet,
+    600: global.colors.violet["600"].value,
     700: global.colors.violet["700"].value,
     800: global.colors.violet["800"].value,
     900: global.colors.violet["900"].value,

@@ -15,7 +15,6 @@ unlisted: false
 gated: true
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,47 +27,43 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: idp-strategy
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "IDP Strategy: Planning Self-Service Infrastructure"
-    event_type: workshop # workshop | event
+event_type: workshop # workshop | event
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+# URL for embedding a URL for ungated webinars.
+youtube_url: 
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-07-30T12:00:00-04:00
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-07-30T12:00:00-04:00
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# Duration of the webinar.
+duration: 60 minutes
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Description of the webinar.
-    description: |
-        Building an Internal Developer Platform requires more than just tools—it demands a strategic approach that balances developer velocity with operational governance. This foundational workshop explores the essential planning, organizational alignment, and architectural decisions needed to create successful self-service infrastructure. You'll learn how to assess your current state, plan golden paths, and create an IDP strategy that scales with your organization while maintaining security and compliance standards.
-    learn:
-        - How to assess organizational readiness and define IDP success metrics
-        - Strategic framework for balancing developer autonomy with operational control
-        - Best practices for stakeholder alignment and change management in platform engineering
+# Description of the webinar.
+description: |
+    Building an Internal Developer Platform requires more than just tools—it demands a strategic approach that balances developer velocity with operational governance. This foundational workshop explores the essential planning, organizational alignment, and architectural decisions needed to create successful self-service infrastructure. You'll learn how to assess your current state, plan golden paths, and create an IDP strategy that scales with your organization while maintaining security and compliance standards.
+learn:
+    - How to assess organizational readiness and define IDP success metrics
+    - Strategic framework for balancing developer autonomy with operational control
+    - Best practices for stakeholder alignment and change management in platform engineering
 
 
-    # The webinar presenters
-    presenters:
-        - name: Mitch Gerdisch
-          role: Principal Solutions Architect, Pulumi
-          photo: /images/team/mitch-gerdisch.jpg
-        - name: Engin Diri
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/engin-diri.jpg
+# The webinar presenters
+presenters:
+    - name: Mitch Gerdisch
+      role: Principal Solutions Architect, Pulumi
+      photo: /images/team/mitch-gerdisch.jpg
+    - name: Engin Diri
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/engin-diri.jpg
 
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics:  ["Platform Engineering", "Infrastructure as Code", "DevOps"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics:  ["Platform Engineering", "Infrastructure as Code", "DevOps"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:
@@ -76,11 +71,4 @@ form:
     hubspot_form_id: dd71b8fd-4896-445c-b5ae-50a6ed95f4b7
     salesforce_campaign_id: 701PQ00000Z0DKUYA3
 
-event_data:
-  name: "IDP Strategy: Planning Self-Service Infrastructure"
-  start_date: 2025-07-30T12:00:00-04:00
-  end_date: 2025-07-30T13:00:00-04:00
-  url: "https://www.pulumi.com/resources/idp-strategy/"
-  description: |
-      Building an Internal Developer Platform requires more than just tools—it demands a strategic approach that balances developer velocity with operational governance. This foundational workshop explores the essential planning, organizational alignment, and architectural decisions needed to create successful self-service infrastructure. You'll learn how to assess your current state, plan golden paths, and create an IDP strategy that scales with your organization while maintaining security and compliance standards.
 --- 

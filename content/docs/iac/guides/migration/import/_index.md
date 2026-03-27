@@ -620,27 +620,25 @@ Be aware this applies to `destroy` operations also. Once an imported resource ha
 
 ### Mismatched state
 
-An important part of importing resources using the `import` resource option is that the resulting Pulumi program, after the import is complete, will faithfully generate the same desired state as your existing infrastructure's actual state. After the import, you may edit your program to generate and apply new desired states to update your infrastructure.
+When importing resources using the `import` resource option, the Pulumi engine compares the properties specified in your program with the actual state of the existing cloud resource. If there are differences, the engine will still perform the import and then issue an update step to reconcile the differences between the imported state and your program's desired state.
 
-Because of this, all properties need to be fully specified. If you forget to specify a property, or that property's value is incorrect, you'll first receive a warning during preview, and then an error during the actual import update.
+For instance, keeping with the example above, if you'd specified the wrong `ingress` rule by choosing port `22` instead of port `80`, you'd see a diff during preview showing both the import and a subsequent update:
 
-For instance, keeping with the example above, if you'd specified the wrong `ingress` rule by choosing port `22` instead of port `80`, you'd see a warning:
-
-```
+```plain
 $ pulumi preview
 Previewing update (dev):
      Type                      Name        Plan       Info
      pulumi:pulumi:Stack       dev
- =   └─ aws:ec2:SecurityGroup  my-sg       import     [diff: ~ingress]; 1 warning
+ =   └─ aws:ec2:SecurityGroup  my-sg       import     [diff: ~ingress]
+ ~   └─ aws:ec2:SecurityGroup  my-sg       update     [diff: ~ingress]
 
-Diagnostics:
-  aws:ec2:SecurityGroup (my-sg):
-    warning: imported resource sg-04aeda9a214730248's property 'ingress'
-             does not match the existing value; importing this resource
-             will fail
+Resources:
+    = 1 to import
+    ~ 1 to update
+    1 unchanged
 ```
 
-To see details on what specifically didn't match, you can select the `details` option:
+To see details on what specifically doesn't match, you can select the `details` option:
 
 ```
 + pulumi:pulumi:Stack: (create)
@@ -663,18 +661,8 @@ To see details on what specifically didn't match, you can select the `details` o
         ]
 ```
 
-Attempting to proceed will fail completely with an error:
-
-```
-Diagnostics:
-  pulumi:pulumi:Stack (dev):
-    error: update failed
-
-  aws:ec2:SecurityGroup (my-sg):
-    error: imported resource sg-04aeda9a214730248's property 'ingress'
-           does not match the existing value
-```
+After the import completes, Pulumi applies the update to bring the resource's configuration into alignment with your program's desired state. If you want the program to match the existing resource exactly without any updates, correct the mismatched properties in your code before running `pulumi up`.
 
 {{% notes type="info" %}}
-Because of [auto-naming](/docs/concepts/resources/#autonaming), it's easy to get into a situation where names don't match. For example, in the earlier example, if you'd left off the security group's `name`, `my-sg-62a569b`, Pulumi would auto-name the resource by default, leading to an error: `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify the names of all resources explicitly, using [Pulumi configuration](/docs/concepts/config/) where necessary to handle naming conflicts across multiple stacks.
+Because of [auto-naming](/docs/concepts/resources/#autonaming), it's easy to get into a situation where names don't match. For example, in the earlier example, if you'd left off the security group's `name`, `my-sg-62a569b`, Pulumi would auto-name the resource by default. This would result in a name mismatch being resolved via an update step after the import. To avoid this, make sure to specify the names of all resources explicitly, using [Pulumi configuration](/docs/concepts/config/) where necessary to handle naming conflicts across multiple stacks.
 {{% /notes %}}

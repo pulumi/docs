@@ -1,0 +1,6 @@
+name: dynamic-github-labels-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: A dynamic provider that manages GitHub labels using the GitHub REST API.

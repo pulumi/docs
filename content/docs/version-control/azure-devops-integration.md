@@ -6,7 +6,7 @@ h1: "Azure DevOps Integration"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     version-control:
-        name: Azure DevOps Integration
+        name: Azure DevOps
         parent: version-control-home
         weight: 4
 aliases:
@@ -30,7 +30,7 @@ An org admin must set up the integration before users can connect ADO repos.
 
 ### Step 1: Navigate to integrations
 
-Navigate to **Settings** > **Version control** in your Pulumi Cloud organization.
+Navigate to **Management** > **Version control** in your Pulumi Cloud organization.
 
 ### Step 2: Authorize with Azure
 

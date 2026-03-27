@@ -1,4 +1,20 @@
 @font-face {
+    font-family: "Roboto Mono";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/roboto-mono-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Monaspace Neon Var";
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/monaspace-neon-var.woff2") format("woff2");
+}
+
+@font-face {
     font-family: "Iosevka";
     font-weight: 400;
     font-style: normal;

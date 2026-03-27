@@ -196,7 +196,7 @@
                     </div>
                 </div>
                 <div class="flex items-center justify-center mb-8 lg:mb-0 w-full lg:w-1/2 order-1 lg:order-2">
-                    {{ partial "fingerprinted-img.html" (dict "src" .Params.idp.image "alt" .Params.idp.alt "class" "h-96" "width" "1728" "height" "1572") }}
+                    {{ partial "fingerprinted-img.html" (dict "src" .Params.idp.image "alt" .Params.idp.alt "class" "h-96 w-auto" "width" "1728" "height" "1572") }}
                 </div>
             </div>
         </div>
@@ -234,7 +234,7 @@
                                 </div>
                                 <p class="ml-4 text-gray-600">{{ $tweet.username }}</p>
                                 <div class="flex-grow flex justify-end my-4">
-                                    <img class="h-6" src="/logos/tech/x.svg" alt="X" />
+                                    <img class="h-6" src="/logos/tech/x.svg" alt="X" width="24" height="24" />
                                 </div>
                             </div>
                         </div>
@@ -265,15 +265,15 @@
                                 </a>
 
                                 {{ if eq $tweet.source "twitter" }}
-                                <img class="w-8 h-8" src="/logos/tech/x.svg" alt="Twitter" />
+                                <img class="w-8 h-8" src="/logos/tech/x.svg" alt="Twitter" width="32" height="32" />
                                 {{ end }}
 
                                 {{ if eq $tweet.source "reddit" }}
-                                <img class="w-8 h-8" src="/logos/tech/reddit.svg" alt="Reddit" />
+                                <img class="w-8 h-8" src="/logos/tech/reddit.svg" alt="Reddit" width="32" height="32" />
                                 {{ end }}
 
                                 {{ if eq $tweet.source "linkedin" }}
-                                <img class="w-8 h-8" src="/logos/tech/linkedin.svg" alt="LinkedIn" />
+                                <img class="w-8 h-8" src="/logos/tech/linkedin.svg" alt="LinkedIn" width="32" height="32" />
                                 {{ end }}
 
                                 {{ if eq $tweet.source "blog" }}

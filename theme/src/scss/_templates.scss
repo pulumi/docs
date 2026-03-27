@@ -1,19 +1,23 @@
 // Template Components Stylesheet
 // Styles for reusable template partials (template-hero, template-logo-banner, etc.)
 
-$violet-primary: #673EAC;
-
 @mixin page-header {
-    @apply font-bold leading-extra-tight text-black font-body text-heading-m;
+    @apply font-semibold text-black font-body text-heading-m;
+    line-height: 1.375;
+    letter-spacing: -2px;
 }
 
 @mixin section-header {
-    @apply font-bold leading-extra-tight text-black font-body text-heading-s;
+    @apply font-semibold text-black font-body text-heading-s;
+    line-height: 55px;
+    letter-spacing: -2px;
 }
 
 @mixin section-header-small {
     font-feature-settings: 'salt' on;
-    @apply font-bold leading-extra-tight text-black font-body text-heading-s;
+    @apply font-semibold text-black font-body text-heading-s;
+    line-height: 55px;
+    letter-spacing: -2px;
 }
 
 @mixin section-header-extra-small {
@@ -27,17 +31,17 @@ $violet-primary: #673EAC;
 }
 
 @mixin product-hero-heading {
-    @apply text-black text-center not-italic font-bold text-heading-l;
+    @apply text-black text-center not-italic font-semibold text-heading-l;
     font-feature-settings: 'salt' on;
     font-family: Inter, sans-serif;
-    letter-spacing: -0.64px;
-    line-height: 1.25 !important; /* leading-tight */
+    letter-spacing: -3.2px;
+    line-height: 1.25 !important;
 }
 
 @mixin section-description {
     @apply font-normal leading-normal font-body text-body-l;
     font-feature-settings: 'salt' on;
-    color: #5b5b5b;
+    color: #2f3032;
 }
 
 @mixin section-subheader-bold {
@@ -51,20 +55,29 @@ $violet-primary: #673EAC;
 }
 
 @mixin section-hint-accent {
-    @apply font-semibold leading-normal font-body text-body-l;
-    color: $violet-primary;
+    font-family: "Monaspace Neon Var", monospace;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    color: #404041;
 }
 
 @mixin section-hint-small {
-    @apply font-semibold leading-normal font-body text-body-l;
-    font-feature-settings: 'salt' on;
-    color: #404041;
+    @include section-hint-accent();
 }
 
 @mixin section-body-medium {
     @apply font-normal leading-normal font-body text-body-m;
     font-feature-settings: 'salt' on;
-    color: #5b5b5b;
+    color: #2f3032;
+}
+
+@mixin section-body-small {
+    @apply font-normal leading-normal font-body text-body-s;
+    font-feature-settings: 'salt' on;
+    color: #2f3032;
 }
 
 .template-hero {
@@ -89,8 +102,7 @@ $violet-primary: #673EAC;
     }
 
     .hero-booth-number {
-        @apply font-semibold;
-        color: $violet-primary;
+        @apply font-semibold text-violet-800;
     }
 
     .hero-bullet {
@@ -185,8 +197,11 @@ $violet-primary: #673EAC;
 }
 
 .template-card {
-    @apply flex flex-1 items-start rounded-2xl p-8;
-    border: 0.5px solid #AAA;
+    @apply flex flex-1 items-start rounded-2xl p-8 border border-violet-300;
+
+    &.template-card--highlight {
+        @apply bg-violet-100;
+    }
 
     .card-label {
         @include section-hint-accent();
@@ -219,7 +234,7 @@ $violet-primary: #673EAC;
 
     .promo-banner-cta {
         @include section-hint();
-        color: #C19BFF;
+        @apply text-violet-500;
         font-feature-settings: 'salt' on;
     }
 }
@@ -236,8 +251,8 @@ $violet-primary: #673EAC;
     .three-column-item-title {
         font-feature-settings: 'salt' on;
         font-family: Inter, sans-serif;
-        letter-spacing: -0.84px;
-        line-height: 120%;
+        letter-spacing: -1.4px;
+        line-height: 38.5px;
         @apply text-black font-semibold text-heading-xs;
 
         i {
@@ -250,7 +265,7 @@ $violet-primary: #673EAC;
     }
 
     .three-column-item-description {
-        @include section-body-medium();
+        @include section-body-small();
     }
 }
 
@@ -265,13 +280,14 @@ $violet-primary: #673EAC;
 }
 
 .template-feature-card-title {
-    @apply font-body text-black leading-tight font-semibold mb-6 text-heading-xs;
+    @apply font-body text-black font-semibold mb-6 text-heading-xs;
+    line-height: 38.5px;
+    letter-spacing: -1.4px;
     margin: 0 !important;
 }
 
 .template-feature-card-description {
-    @include section-body-medium();
-    @apply text-body-s;
+    @include section-body-small();
 }
 
 .template-testimonial {
@@ -289,13 +305,10 @@ $violet-primary: #673EAC;
 }
 
 .template-testimonial-product {
-    @apply font-body;
-    background-color: #2d2d2d;
-    border: 1px solid #404040;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    @apply font-body bg-violet-100;
 
     .template-testimonial-product-quote {
-        @apply text-white leading-relaxed text-left border-0 font-semibold text-heading-xs;
+        @apply text-black leading-relaxed text-left border-0 font-semibold text-heading-xs;
 
         p {
             @apply m-0;
@@ -303,7 +316,7 @@ $violet-primary: #673EAC;
     }
 
     .template-testimonial-product-logo img {
-        @apply block w-auto h-7 invert;
+        @apply block w-auto h-7;
         max-width: 120px;
     }
 
@@ -312,11 +325,11 @@ $violet-primary: #673EAC;
     }
 
     .template-testimonial-product-author {
-        @apply text-white font-bold font-body text-body-m;
+        @apply text-black font-bold font-body text-body-m;
     }
 
     .template-testimonial-product-title {
-        @apply text-gray-300 font-normal font-body text-body-s;
+        @apply text-black font-normal font-body text-body-s;
     }
 }
 
@@ -372,7 +385,7 @@ $violet-primary: #673EAC;
         font-feature-settings: 'salt' on;
 
         &:hover {
-            @apply text-violet-600;
+            @apply text-violet-800;
         }
     }
 
@@ -406,10 +419,7 @@ $violet-primary: #673EAC;
 
     .product-hero-title-primary {
         @apply block;
-        background: linear-gradient(to right, #7842D4, #A374F1);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--color-violet-800);
     }
 
     .product-hero-title-secondary {
@@ -435,23 +445,36 @@ $violet-primary: #673EAC;
     .product-hero-visual {
         @apply w-full;
 
-        img {
-            @apply min-w-5xl;
+    }
+}
+
+[class*="template-section"],
+[class*="template-product"] {
+    .cta {
+        @apply text-violet-800 font-semibold font-body no-underline;
+
+        &:hover {
+            @apply underline;
         }
     }
 }
 
 .template-section-header {
+
     .section-header-image-above-img {
         @apply w-auto h-auto;
         max-width: 350px;
     }
 
     .section-header-tag-line {
-        color: var(--gray-primary, #404041);
-        font-family: Inter, sans-serif;
-        letter-spacing: -0.2px;
-        @apply text-center text-body-l font-semibold leading-normal;
+        font-family: "Monaspace Neon Var", monospace;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        color: #404041;
+        @apply text-center;
     }
 
     .section-header-tag-wrap {
@@ -472,17 +495,18 @@ $violet-primary: #673EAC;
     }
 }
 
-.template-section-header-with-code {
-    .template-section-header-with-code-inner {
+.template-section-header-with-code,
+.template-section-header-with-image {
+    .section-header-split-inner {
         @apply gap-12 xl:gap-24;
     }
 
-    .template-section-header-with-code-content {
+    .section-header-split-content {
         @apply xl:min-w-0 mt-20;
         flex: 1.25 1 0%;
     }
 
-    .template-section-header-with-code-image {
+    .section-header-split-image {
         @apply xl:min-w-0 flex-1;
 
         pulumi-chooser {
@@ -494,18 +518,18 @@ $violet-primary: #673EAC;
         }
     }
 
-    .section-header-with-code-tag {
+    .section-header-split-tag {
         @include section-hint-small();
         @apply m-0;
     }
 
-    .section-header-with-code-title {
+    .section-header-split-title {
         @include section-header();
         @apply text-black text-left;
     }
 
-    .section-header-with-code-description {
-        color: var(--gray-tertiary, #757576);
+    .section-header-split-description {
+        color: #2f3032;
         font-feature-settings: 'salt' on;
         font-family: Inter, sans-serif;
         @apply text-left font-body text-body-s font-normal leading-normal;
@@ -519,29 +543,18 @@ $violet-primary: #673EAC;
         }
     }
 
-    .section-header-with-code-cta {
-        @apply text-violet-600 font-semibold font-body no-underline;
-
-        &:hover {
-            @apply underline;
-        }
-    }
-
     pulumi-chooser > ul li.active {
         border-image-source: none;
-        border-color: #805ac3;
+        border-color: var(--color-violet-800);
     }
+
 }
 
 .template-counter-cards {
     .counter-card-number {
         @include page-header();
         @apply mb-2 font-semibold;
-        background: linear-gradient(to bottom, #6C6C6C, #1B1B1B);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        @apply text-transparent;
+        color: #1b1b1b;
     }
 
     .counter-card-label {
@@ -567,6 +580,247 @@ $violet-primary: #673EAC;
 
     .icon-grid-description {
         @include section-description();
+    }
+}
+
+// Event list and card styles
+.template-event-list {
+    .event-list-month-header {
+        @include section-header-extra-small();
+        @apply m-0;
+        color: #404041;
+    }
+
+    .event-card-grid {
+        @apply grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6;
+    }
+}
+
+.template-event-card {
+    border: 0.5px solid #CECECE;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+        border-color: #999;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    a {
+        @apply text-current no-underline;
+    }
+
+    .event-card-type {
+        @apply font-semibold font-body text-body-s uppercase;
+        font-feature-settings: 'salt' on;
+        color: var(--color-violet-800);
+        letter-spacing: 0.5px;
+        font-size: 0.7rem;
+    }
+
+    .event-card-location {
+        @apply font-body text-body-s;
+        font-feature-settings: 'salt' on;
+        color: #757576;
+        font-size: 0.8rem;
+    }
+
+    .event-card-title {
+        @include section-header-extra-extra-small();
+        @apply m-0 leading-snug;
+        transition: color 0.15s ease;
+    }
+
+    &:hover .event-card-title {
+        color: var(--color-violet-800);
+    }
+
+    .event-card-date {
+        @apply flex flex-col items-center justify-center rounded-lg overflow-hidden flex-shrink-0;
+        width: 56px;
+        height: 56px;
+        border: 0.5px solid #CECECE;
+    }
+
+    .event-card-date-day {
+        @apply text-center font-semibold text-gray-900 font-body;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .event-card-date-month {
+        @apply text-center font-body font-medium;
+        font-size: 0.65rem;
+        letter-spacing: 0.5px;
+        color: #757576;
+    }
+
+    .event-card-description {
+        @include section-body-medium();
+        @apply m-0 text-body-s line-clamp-3;
+    }
+
+    .event-card-tag {
+        @apply inline-block font-body text-gray-700 rounded-md;
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        background-color: #FAF9FD;
+        border: 0.5px solid #D7CDEA;
+    }
+
+    .event-card-cta {
+        @apply font-semibold font-body whitespace-nowrap flex-shrink-0;
+        font-feature-settings: 'salt' on;
+        color: var(--color-violet-800);
+        font-size: 0.875rem;
+
+        i {
+            transition: transform 0.15s ease;
+        }
+    }
+
+    &:hover .event-card-cta i {
+        transform: translateX(3px);
+    }
+}
+
+// Single event page styles
+.event-single-back-link {
+    @apply font-body font-semibold no-underline text-body-s;
+    color: var(--color-violet-800);
+
+    &:hover {
+        @apply underline;
+    }
+
+    i {
+        transition: transform 0.15s ease;
+    }
+
+    &:hover i {
+        transform: translateX(-3px);
+    }
+}
+
+.template-event-single-header {
+    .event-single-type {
+        @apply font-semibold font-body uppercase;
+        font-feature-settings: 'salt' on;
+        color: var(--color-violet-800);
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .event-single-status {
+        @apply font-body;
+        font-feature-settings: 'salt' on;
+        color: #757576;
+        font-size: 0.875rem;
+    }
+
+    .event-single-title {
+        @include page-header();
+        @apply m-0;
+    }
+}
+
+.template-timing-info {
+    .timing-info-item {
+        @apply rounded-xl p-4;
+        border: 0.5px solid #CECECE;
+    }
+
+    .timing-info-label {
+        @apply font-body font-medium text-body-s pb-2 mb-2 border-b uppercase tracking-wide;
+        font-feature-settings: 'salt' on;
+        color: #757576;
+        border-color: #E8E8E8;
+        font-size: 0.75rem;
+    }
+
+    .timing-info-value {
+        @apply font-body font-semibold text-body-s text-gray-900;
+        font-feature-settings: 'salt' on;
+    }
+}
+
+.template-event-summary {
+    .event-summary-cloud-notice {
+        @apply font-body text-body-s rounded-xl p-4 mb-6;
+        background-color: #F4F0FA;
+        border: 0.5px solid #E8E0F4;
+        color: #404041;
+
+        a {
+            color: var(--color-violet-800);
+            @apply font-semibold;
+        }
+    }
+
+    .event-summary-description {
+        @include section-body-medium();
+        @apply text-body-m;
+
+        p + p {
+            @apply mt-4;
+        }
+    }
+
+    .event-summary-learn {
+        @apply mt-8;
+    }
+
+    .event-summary-learn-title {
+        @include section-header-extra-extra-small();
+        @apply mb-4;
+    }
+
+    .event-summary-learn-list {
+        @apply list-none p-0 m-0 flex flex-col gap-3;
+
+        li {
+            @apply flex items-start font-body text-body-s m-0;
+            color: #5b5b5b;
+
+            i {
+                color: var(--color-violet-800);
+                @apply mt-0.5 flex-shrink-0;
+            }
+        }
+    }
+}
+
+.event-single-registration {
+    border: 0.5px solid #CECECE;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    .event-single-registration-title {
+        @include section-header-extra-small();
+        @apply mb-4;
+    }
+}
+
+.template-event-speakers {
+    @apply bg-gray-100;
+    border: 0.5px solid #E8E8E8;
+
+    .event-speakers-label {
+        @include section-header-extra-extra-small();
+    }
+
+    .event-speaker-photo {
+        @apply rounded-full object-cover;
+        width: 64px;
+        height: 64px;
+    }
+
+    .event-speaker-name {
+        @apply font-body font-semibold text-body-m text-gray-900;
+        font-feature-settings: 'salt' on;
+    }
+
+    .event-speaker-role {
+        @apply font-body font-normal text-body-s;
+        color: #757576;
     }
 }
 

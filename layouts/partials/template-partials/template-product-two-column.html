@@ -1,12 +1,14 @@
 {{/*
 Template Product Two Column Partial
 
-Left: heading. Right: description + 3 horizontal mini feature cards.
+Left: heading. Right: description + optional CTA link + 3 horizontal mini feature cards.
 Used for "Write infrastructure code in your favorite language" sections.
 
 Parameters:
 - heading: Left column heading
 - description: Right column description (supports markdown)
+- cta_text: Optional CTA link text (e.g. "Explore Infrastructure as Code")
+- cta_link: Optional CTA link URL
 - cards: Array of mini feature cards
 Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, ...]
 - anchor: Optional anchor for section id
@@ -14,6 +16,8 @@ Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, .
 
 {{ $heading := .heading }}
 {{ $description := .description }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
 {{ $cards := .cards }}
 {{ $anchor := .anchor }}
 
@@ -30,25 +34,17 @@ Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, .
                 {{ $description | markdownify }}
             </div>
             {{ end }}
+            {{ if $ctaText }}
+            <a href="{{ $ctaLink }}" class="cta inline-flex items-center gap-1 mt-6">
+                <span>{{ $ctaText }}</span>
+                <span>→</span>
+            </a>
+            {{ end }}
         </div>
     </div>
     {{ if $cards }}
-    <div class="product-two-column-cards grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-36 mt-12 md:mt-16 lg:mt-36 w-full">
-        {{ range $cards }}
-        <div class="product-feature-mini-card">
-            {{ if .icon }}
-            <div class="template-feature-card-icon">
-                <i class="fa {{ .icon }}"></i>
-            </div>
-            {{ end }}
-            {{ if .title }}
-            <h4 class="template-feature-card-title">{{ .title }}</h4>
-            {{ end }}
-            {{ if .description }}
-            <p class="template-feature-card-description">{{ .description | markdownify }}</p>
-            {{ end }}
-        </div>
-        {{ end }}
-    </div>
+    {{- /* lg:mt-36 is intentionally larger than the default lg:mt-20 in template-mini-cards.html
+         to provide extra breathing room in the two-column layout. */ -}}
+    {{ partial "template-partials/template-mini-cards.html" (dict "cards" $cards "lg_top_class" "lg:mt-36") }}
     {{ end }}
 </section>
