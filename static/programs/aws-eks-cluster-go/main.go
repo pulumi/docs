@@ -8,32 +8,25 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-
-		// Create a VPC for the Kubernetes cluster.
-		eksVpc, err := ec2.NewVpc(ctx, "eks-vpc", &ec2.VpcArgs{
-			EnableDnsHostnames: pulumi.Bool(true),
-			CidrBlock:          pulumi.StringRef("10.0.0.0/16"),
-		})
+		// Create a VPC for our cluster.
+		vpc, err := ec2.NewVpc(ctx, "vpc", nil)
 		if err != nil {
 			return err
 		}
 
-		// Create the EKS cluster itself.
-		eksCluster, err := eks.NewCluster(ctx, "eks-cluster", &eks.ClusterArgs{
-			VpcId:            eksVpc.VpcId,
-			PublicSubnetIds:  eksVpc.PublicSubnetIds,
-			PrivateSubnetIds: eksVpc.PrivateSubnetIds,
-			InstanceType:     pulumi.String("t3.medium"),
-			DesiredCapacity:  pulumi.Int(3),
-			MinSize:          pulumi.Int(3),
-			MaxSize:          pulumi.Int(6),
+		// Create an EKS cluster inside of the VPC.
+		cluster, err := eks.NewCluster(ctx, "cluster", &eks.ClusterArgs{
+			VpcId:                        vpc.VpcId,
+			PublicSubnetIds:              vpc.PublicSubnetIds,
+			PrivateSubnetIds:             vpc.PrivateSubnetIds,
+			NodeAssociatePublicIpAddress: pulumi.BoolRef(false),
 		})
 		if err != nil {
 			return err
 		}
 
 		// Export the cluster's kubeconfig.
-		ctx.Export("kubeconfig", eksCluster.Kubeconfig)
+		ctx.Export("kubeconfig", cluster.Kubeconfig)
 		return nil
 	})
 }

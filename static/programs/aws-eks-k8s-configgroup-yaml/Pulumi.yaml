@@ -1,0 +1,19 @@
+name: aws-eks-k8s-configgroup-yaml
+runtime: yaml
+description: An example that deploys Kubernetes YAML resources to an EKS cluster.
+resources:
+  eks-provider:
+    type: pulumi:providers:kubernetes
+    properties:
+      kubeconfig: ${cluster.kubeconfigJson}
+  cluster:
+    type: eks:Cluster
+  guestbook:
+    type: kubernetes:yaml/v2:ConfigGroup
+    properties:
+      files:
+        - "yaml/*.yaml"
+    options:
+      provider: ${eks-provider}
+outputs:
+  kubeconfig: ${cluster.kubeconfig}
