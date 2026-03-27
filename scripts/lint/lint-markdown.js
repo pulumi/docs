@@ -115,8 +115,8 @@ function searchForMarkdown(paths) {
         const fileParts = file.split(".");
         const fileSuffix = fileParts[fileParts.length - 1];
 
-        // Ignore auto generated docs and registry pages (handled in the registry repo).
-        if (file.indexOf("/content/docs/reference/pkg") > -1 || file.indexOf("/content/registry") > -1) {
+        // Ignore auto generated docs, registry pages, and social media posts.
+        if (file.indexOf("/content/docs/reference/pkg") > -1 || file.indexOf("/content/registry") > -1 || file.indexOf("/content/social") > -1) {
             continue;
         }
 

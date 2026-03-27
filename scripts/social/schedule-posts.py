@@ -9,23 +9,32 @@
 # ///
 
 """
-Schedule social media posts for new blog content via upload-post.com.
+Schedule social media posts for blog content and standalone posts via upload-post.com.
 
 Runs via a separate workflow (schedule-social.yml) triggered after
-successful builds. Detects new or updated blog posts by diffing from the
-last-processed commit SHA (stored in S3 state), extracts social copy from
-frontmatter, and schedules posts to X, LinkedIn, and Bluesky.
+successful builds. Detects new or updated blog posts and standalone social
+posts by diffing from the last-processed commit SHA (stored in S3 state),
+extracts social copy from frontmatter, and schedules posts to X, LinkedIn,
+and Bluesky.
+
+Post sources:
+  - Blog posts: content/blog/*/index.md with a social: block in frontmatter.
+    URL is derived from the file path. Meta image used for LinkedIn.
+  - Standalone posts: content/social/*.md with frontmatter. Optional
+    url and per-platform media. Each platform entry can be a string (text
+    only) or an object with text and media fields.
 
 Platform strategy:
   - X/Bluesky: Text post with link_url for card crawling. The platform
     crawls the URL and renders a link card with og:image. No URL needed
-    in the post body. Uses upload_text endpoint.
+    in the post body. Uses upload_text endpoint. If media is provided,
+    uses upload_photos (images) or /upload (video) instead.
   - LinkedIn: Photo post with the blog's meta image attached and URL in
     body. LinkedIn doesn't render link cards via upload-post.com's
     link_url, so we send the image explicitly. Uses upload_photos endpoint.
 
 Scheduling logic:
-  - Uses the Hugo post's frontmatter date to determine when to post.
+  - Uses the frontmatter date to determine when to post.
   - Future-dated posts are scheduled for that date at SOCIAL_POSTING_HOUR
     (default: 10am Eastern).
   - Posts dated today or earlier are posted immediately.
@@ -33,9 +42,9 @@ Scheduling logic:
 
 Idempotency:
   - State is tracked in an S3 JSON file (SOCIAL_STATE_BUCKET/posted.json).
-  - The state file stores both posted URL+platform combos and the last
+  - The state file stores both posted slug+platform combos and the last
     processed commit SHA, making the script self-contained.
-  - Before posting, the script checks whether a URL+platform combo has
+  - Before posting, the script checks whether a slug+platform combo has
     already been posted. After a successful post, the entry is recorded.
   - Fails closed: if state cannot be loaded, the script aborts rather
     than risk double-posting.
@@ -55,6 +64,7 @@ TODO:
   2. Flip PROD_MODE = True and connect official Pulumi accounts.
 """
 
+import argparse
 import json
 import os
 import re
@@ -161,7 +171,7 @@ MAX_RETRIES = 3
 
 
 def is_posted(state, slug, platform):
-    """Check if a URL+platform combo has already been posted."""
+    """Check if a slug+platform combo has already been posted."""
     return platform in state.get("posts", {}).get(slug, {})
 
 
@@ -171,7 +181,7 @@ def is_abandoned(state, slug):
 
 
 def record_posted(state, slug, platform):
-    """Record that a URL+platform combo has been posted."""
+    """Record that a slug+platform combo has been posted."""
     if slug not in state["posts"]:
         state["posts"][slug] = {}
     state["posts"][slug][platform] = datetime.now(timezone.utc).isoformat()
@@ -184,10 +194,67 @@ def record_failure(state, slug):
     state["posts"][slug]["_failures"] = state["posts"][slug].get("_failures", 0) + 1
 
 
+SOCIAL_POSTS_DIR = "content/social/"
+
+# Frontmatter uses "twitter" for familiarity, but the API platform is "x".
+PLATFORM_KEYS = {"twitter": "x", "linkedin": "linkedin", "bluesky": "bluesky"}
+
+
 def slug_from_path(filepath):
-    """content/blog/my-post/index.md -> /blog/my-post/"""
-    slug = filepath.replace("content/blog/", "").replace("/index.md", "")
-    return f"/blog/{slug}/"
+    """Derive a state key from a file path.
+
+    Blog: content/blog/my-post/index.md -> /blog/my-post/
+    Standalone: content/social/kubecon-eu.md -> social/kubecon-eu
+    """
+    # Normalize absolute paths to relative
+    filepath = str(filepath)
+    for prefix in ["content/blog/", SOCIAL_POSTS_DIR]:
+        idx = filepath.find(prefix)
+        if idx >= 0:
+            filepath = filepath[idx:]
+            break
+
+    if filepath.startswith("content/blog/"):
+        slug = filepath.replace("content/blog/", "").replace("/index.md", "")
+        return f"/blog/{slug}/"
+    if filepath.startswith(SOCIAL_POSTS_DIR):
+        return f"social/{Path(filepath).stem}"
+    return filepath
+
+
+def parse_social_entry(entry):
+    """Normalize a social entry to (text, media_list).
+
+    Entry can be:
+      - A string: "Check out this thing" -> ("Check out this thing", [])
+      - An object: {text: "...", media: ["img.png"]} -> ("...", ["img.png"])
+    """
+    if isinstance(entry, str):
+        return entry.strip(), []
+    if isinstance(entry, dict):
+        text = str(entry.get("text") or "").strip()
+        media = entry.get("media") or []
+        if isinstance(media, str):
+            media = [media]
+        return text, media
+    return "", []
+
+
+def resolve_media_paths(media_list, base_dir):
+    """Resolve relative media paths against a base directory."""
+    resolved = []
+    for m in media_list:
+        p = Path(base_dir) / m
+        if p.exists():
+            resolved.append(str(p))
+        else:
+            print(f"  Warning: media file not found: {p}")
+    return resolved
+
+
+def is_video(filepath):
+    """Check if a file is a video based on extension."""
+    return Path(filepath).suffix.lower() in {".mp4", ".mov", ".avi", ".webm", ".mkv"}
 
 
 # --- Blog post detection ---
@@ -229,6 +296,28 @@ def get_changed_blog_posts(state):
             print(f"Error: git diff failed: {result.stderr.strip()}")
             return None
     return [f for f in result.stdout.strip().split("\n") if f]
+
+
+def get_changed_social_posts(state):
+    """Find standalone social posts added or modified since the last processed commit."""
+    base = state.get("last_sha", "HEAD~20")
+    result = subprocess.run(
+        ["git", "diff", "--name-only", base, "HEAD", "--", f"{SOCIAL_POSTS_DIR}*.md"],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        print(f"Warning: git diff for social posts from {base} failed, falling back to HEAD~20")
+        result = subprocess.run(
+            ["git", "diff", "--name-only", "HEAD~20", "HEAD", "--", f"{SOCIAL_POSTS_DIR}*.md"],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            return []
+    files = [f for f in result.stdout.strip().split("\n") if f]
+    # Exclude _index.md (Hugo section file, not a social post)
+    return [f for f in files if not f.endswith("_index.md")]
 
 
 def parse_post(filepath):
@@ -390,15 +479,22 @@ def _print_result(platform, request_id, scheduled_date):
 
 
 def post_text(platform, copy, url, scheduled_date):
-    """Post via upload_text. link_url generates a card with og:image — no URL needed in body."""
+    """Post via upload_text with link_url for card crawling.
+
+    X needs the URL in the body text to generate a card (it doesn't use link_url).
+    Bluesky uses link_url and doesn't need the URL in the body.
+    """
+    x_needs_url = platform == "x" and url and url not in copy
+    body = f"{copy}\n\n{url}" if x_needs_url else copy
     data = {
         "user": USER,
         "platform[]": platform,
         "title": copy,
-        "link_url": url,
     }
+    if url:
+        data["link_url"] = url
     if platform == "x":
-        data["x_title"] = copy
+        data["x_title"] = body
     elif platform == "bluesky":
         data["bluesky_title"] = copy
     if scheduled_date:
@@ -408,7 +504,8 @@ def post_text(platform, copy, url, scheduled_date):
     if DRY_RUN:
         print(f"  [DRY RUN] Would post text to {platform}:")
         print(f"    {copy[:100]}...")
-        print(f"    link_url: {url}")
+        if url:
+            print(f"    link_url: {url}")
         print(f"    scheduled: {scheduled_date or 'immediately'}")
         return True
 
@@ -427,43 +524,60 @@ def post_text(platform, copy, url, scheduled_date):
         return None
 
 
-def post_photo(platform, copy, url, image_path, scheduled_date):
-    """Post via upload_photos with image attached. Used for LinkedIn where link_url cards don't work."""
-    text_with_url = f"{copy}\n\n{url}" if url not in copy else copy
+def post_photos(platform, copy, url, media_paths, scheduled_date):
+    """Post via upload_photos with one or more images attached."""
+    text_with_url = f"{copy}\n\n{url}" if url and url not in copy else copy
     data = {
         "user": USER,
         "platform[]": platform,
         "title": text_with_url,
     }
-    if platform == "linkedin":
+    if platform == "x":
+        data["x_title"] = text_with_url
+    elif platform == "linkedin":
         data["linkedin_description"] = text_with_url
         if LINKEDIN_PAGE_ID:
             data["target_linkedin_page_id"] = LINKEDIN_PAGE_ID
+    elif platform == "bluesky":
+        data["bluesky_title"] = text_with_url
 
     if scheduled_date:
         data["scheduled_date"] = scheduled_date
         data["timezone"] = POSTING_TZ
 
     if DRY_RUN:
-        print(f"  [DRY RUN] Would post photo to {platform}:")
-        print(f"    image: {image_path}")
+        print(f"  [DRY RUN] Would post photos to {platform}:")
+        for p in media_paths:
+            print(f"    image: {p}")
         print(f"    {copy[:80]}...")
         print(f"    scheduled: {scheduled_date or 'immediately'}")
         return True
 
-    if not image_path:
-        print(f"  Warning: no meta image found, skipping {platform}")
+    if not media_paths:
+        print(f"  Warning: no images found, skipping {platform}")
         return None
 
-    mime = "image/jpeg" if image_path.endswith(".jpg") else "image/png"
-    with open(image_path, "rb") as f:
+    mime_types = {"png": "image/png", "jpg": "image/jpeg", "jpeg": "image/jpeg", "gif": "image/gif", "webp": "image/webp"}
+    files = []
+    opened = []
+    for p in media_paths:
+        ext = Path(p).suffix.lstrip(".").lower()
+        mime = mime_types.get(ext, "image/png")
+        f = open(p, "rb")
+        opened.append(f)
+        files.append(("photos[]", (os.path.basename(p), f, mime)))
+
+    try:
         resp = requests.post(
             f"{API_BASE}/api/upload_photos",
             headers={"Authorization": f"Apikey {API_KEY}"},
             data=data,
-            files={"photos[]": (os.path.basename(image_path), f, mime)},
+            files=files,
             timeout=60,
         )
+    finally:
+        for f in opened:
+            f.close()
 
     if resp.ok:
         result = resp.json()
@@ -484,103 +598,168 @@ def post_photo(platform, copy, url, image_path, scheduled_date):
         return None
 
 
-def schedule_post(platform, copy, url, image_path, scheduled_date):
-    """Route to the right posting method per platform. Returns post URL or None."""
-    if platform == "linkedin":
-        return post_photo(platform, copy, url, image_path, scheduled_date)
+def post_video(platform, copy, url, video_path, scheduled_date):
+    """Post via /upload with a video file."""
+    text_with_url = f"{copy}\n\n{url}" if url and url not in copy else copy
+    data = {
+        "user": USER,
+        "platform[]": platform,
+        "title": text_with_url,
+    }
+    if platform == "x":
+        data["x_title"] = text_with_url
+    elif platform == "linkedin":
+        data["linkedin_description"] = text_with_url
+        if LINKEDIN_PAGE_ID:
+            data["target_linkedin_page_id"] = LINKEDIN_PAGE_ID
+    elif platform == "bluesky":
+        data["bluesky_title"] = text_with_url
+
+    if scheduled_date:
+        data["scheduled_date"] = scheduled_date
+        data["timezone"] = POSTING_TZ
+
+    if DRY_RUN:
+        print(f"  [DRY RUN] Would post video to {platform}:")
+        print(f"    video: {video_path}")
+        print(f"    {copy[:80]}...")
+        print(f"    scheduled: {scheduled_date or 'immediately'}")
+        return True
+
+    with open(video_path, "rb") as f:
+        resp = requests.post(
+            f"{API_BASE}/api/upload",
+            headers={"Authorization": f"Apikey {API_KEY}"},
+            data=data,
+            files={"video": (os.path.basename(video_path), f)},
+            timeout=120,
+        )
+
+    if resp.ok:
+        post_url = _print_result(platform, resp.json().get("request_id", ""), scheduled_date)
+        return post_url or "posted"
+    else:
+        print(f"  FAILED on {platform}: {resp.status_code} {resp.text}")
+        return None
+
+
+def schedule_post(platform, copy, url, media_paths, scheduled_date):
+    """Route to the right posting method per platform. Returns post URL or None.
+
+    Routing logic:
+      - Has media with video -> post_video (first video file)
+      - Has media with images -> post_photos
+      - LinkedIn with URL, no media -> upload_text with URL in body + linkedin_description
+      - X with URL, no media -> upload_text with URL in body + link_url
+      - Bluesky with URL, no media -> upload_text with link_url (no URL in body)
+      - No URL, no media -> plain text post
+    """
+    if media_paths:
+        videos = [p for p in media_paths if is_video(p)]
+        images = [p for p in media_paths if not is_video(p)]
+        if videos:
+            return post_video(platform, copy, url, videos[0], scheduled_date)
+        if images:
+            return post_photos(platform, copy, url, images, scheduled_date)
+
+    # No explicit media — LinkedIn needs special handling for blog posts
+    if platform == "linkedin" and url:
+        # Fall through to text post with URL in body (no image available)
+        text_with_url = f"{copy}\n\n{url}" if url not in copy else copy
+        data = {
+            "user": USER,
+            "platform[]": platform,
+            "title": text_with_url,
+            "linkedin_description": text_with_url,
+        }
+        if LINKEDIN_PAGE_ID:
+            data["target_linkedin_page_id"] = LINKEDIN_PAGE_ID
+        if scheduled_date:
+            data["scheduled_date"] = scheduled_date
+            data["timezone"] = POSTING_TZ
+        if DRY_RUN:
+            print(f"  [DRY RUN] Would post text to {platform}:")
+            print(f"    {text_with_url[:100]}...")
+            print(f"    scheduled: {scheduled_date or 'immediately'}")
+            return True
+        resp = requests.post(
+            f"{API_BASE}/api/upload_text",
+            headers={"Authorization": f"Apikey {API_KEY}"},
+            data=data,
+            timeout=30,
+        )
+        if resp.ok:
+            post_url = _print_result(platform, resp.json().get("request_id", ""), scheduled_date)
+            return post_url or "posted"
+        else:
+            print(f"  FAILED on {platform}: {resp.status_code} {resp.text}")
+            return None
+
     return post_text(platform, copy, url, scheduled_date)
 
 
 # --- Main ---
 
-def main():
-    if not API_KEY:
-        if DRY_RUN:
-            print("DRY RUN: API key not set, will show what would be posted.")
-        else:
-            print("Error: UPLOAD_POST_API_KEY must be set.")
-            sys.exit(1)
+def process_posts(entries, state, posted_urls, posts_by_file):
+    """Process a list of post entries and send them to social platforms.
 
-    state = load_state()
+    Each entry is a dict with:
+      - filepath: source file path (for PR comments and state)
+      - slug: state key for idempotency
+      - url: link URL (optional)
+      - date: post date
+      - platforms: dict of platform -> (copy, media_paths)
 
-    changed = get_changed_blog_posts(state)
-    if changed is None:
-        print("Error: could not determine changed blog posts. Aborting.")
-        sys.exit(1)
-    if not changed:
-        print("No blog post changes detected.")
-        # Still update last_sha so we don't re-diff the same range next time
-        head = get_head_sha()
-        if head and head != state.get("last_sha"):
-            state["last_sha"] = head
-            save_state(state)
-        return
-
+    Returns True if any posts failed.
+    """
     failures = False
-    posted_urls = []  # (blog_url, platform, post_url) for summary
-    posts_by_file = defaultdict(list)  # filepath -> [(platform, post_url)]
 
-    for filepath in changed:
-        if not Path(filepath).exists():
-            print(f"\nSkipping deleted file: {filepath}")
-            continue
+    for entry in entries:
+        filepath = entry["filepath"]
+        slug = entry["slug"]
+        url = entry.get("url")
+        post_date = entry["date"]
+        platforms = entry["platforms"]
 
-        slug = slug_from_path(filepath)
-
-        # Check abandonment before parsing (avoids crash on broken frontmatter)
+        # Check abandonment before posting
         if is_abandoned(state, slug):
             print(f"\nSkipping {filepath}: exceeded {MAX_RETRIES} retries")
             continue
-
-        print(f"\nProcessing: {filepath}")
-        meta = parse_post(filepath)
-        url = post_url_from_path(filepath)
-        post_date = meta.get("date")
-        social = meta.get("social") or {}
-        # Frontmatter uses "twitter" key for familiarity, but API platform is "x"
-        x_copy = str(social.get("twitter") or "").strip()
-        linkedin_copy = str(social.get("linkedin") or "").strip()
-        bluesky_copy = str(social.get("bluesky") or "").strip()
 
         # Skip old posts
         if not post_date or not is_recent_or_future(post_date):
             print(f"  Skipping: date {post_date} is not recent or future")
             continue
 
-        # Skip TODOs and empty values
-        if x_copy.upper() == "TODO":
-            x_copy = ""
-        if linkedin_copy.upper() == "TODO":
-            linkedin_copy = ""
-        if bluesky_copy.upper() == "TODO":
-            bluesky_copy = ""
-
-        if not x_copy and not linkedin_copy and not bluesky_copy:
-            print(f"  Warning: no social copy in frontmatter for {filepath}")
-            continue
-
-
-
-        image_path = meta_image_path(filepath)
         scheduled = scheduled_date_from_post(post_date)
-        print(f"  URL: {url}")
+        print(f"\nProcessing: {filepath}")
+        if url:
+            print(f"  URL: {url}")
         if scheduled:
             print(f"  Scheduled for: {scheduled} {POSTING_TZ}")
         else:
             print(f"  Posting immediately (date is today or past)")
 
         post_had_failure = False
-        for platform, copy in [("x", x_copy), ("linkedin", linkedin_copy), ("bluesky", bluesky_copy)]:
+        for platform, (copy, media_paths) in platforms.items():
             if not copy:
                 continue
             if not PLATFORM_ENABLED.get(platform):
                 continue
 
             # Validate character limits
-            # LinkedIn includes URL in body (photo post); X/Bluesky use link_url
+            # X appends URL to body (text posts). LinkedIn appends URL for
+            # non-media posts. Photo/video posts append URL to body on all
+            # platforms. Bluesky text posts use link_url (no body URL).
             limit = CHAR_LIMITS.get(platform)
-            if platform == "linkedin":
-                text_len = len(copy) if url in copy else len(copy) + 2 + len(url)
+            appends_url = url and url not in copy and (
+                platform == "x"  # X puts URL in body for card generation
+                or (platform == "linkedin" and not media_paths)  # LinkedIn text posts
+                or bool(media_paths)  # photo/video posts include URL in body
+            )
+            if appends_url:
+                url_len = 23 if platform == "x" else len(url)
+                text_len = len(copy) + 2 + url_len
             else:
                 text_len = len(copy)
             if limit and text_len > limit:
@@ -593,16 +772,16 @@ def main():
                 print(f"  Skipping {platform}: already posted (per state file)")
                 continue
 
-            post_url = schedule_post(platform, copy, url, image_path, scheduled)
+            post_url = schedule_post(platform, copy, url, media_paths, scheduled)
             if post_url:
                 record_posted(state, slug, platform)
                 save_state(state)
-                posted_urls.append((url, platform, post_url))
+                display_url = url or slug
+                posted_urls.append((display_url, platform, post_url))
                 posts_by_file[filepath].append((platform, post_url))
             else:
                 post_had_failure = True
 
-        # Record one failure per post per run (not per platform)
         if post_had_failure:
             record_failure(state, slug)
             save_state(state)
@@ -611,10 +790,130 @@ def main():
             else:
                 failures = True
 
+    return failures
+
+
+def build_blog_entries(changed_files):
+    """Build post entries from blog post files."""
+    entries = []
+    for filepath in changed_files:
+        if not Path(filepath).exists():
+            print(f"\nSkipping deleted file: {filepath}")
+            continue
+
+        meta = parse_post(filepath)
+        social = meta.get("social") or {}
+        url = post_url_from_path(filepath)
+        image_path = meta_image_path(filepath)
+
+        platforms = {}
+        for fm_key, platform in PLATFORM_KEYS.items():
+            copy = str(social.get(fm_key) or "").strip()
+            if copy.upper() == "TODO":
+                copy = ""
+            if copy:
+                # Blog posts: LinkedIn gets meta image, others get no media
+                if platform == "linkedin" and image_path:
+                    platforms[platform] = (copy, [image_path])
+                else:
+                    platforms[platform] = (copy, [])
+
+        if not platforms:
+            print(f"  Warning: no social copy in frontmatter for {filepath}")
+            continue
+
+        entries.append({
+            "filepath": filepath,
+            "slug": slug_from_path(filepath),
+            "url": url,
+            "date": meta.get("date"),
+            "platforms": platforms,
+        })
+    return entries
+
+
+def build_social_entries(changed_files):
+    """Build post entries from standalone social post files."""
+    entries = []
+    for filepath in changed_files:
+        if not Path(filepath).exists():
+            print(f"\nSkipping deleted file: {filepath}")
+            continue
+
+        meta = frontmatter.load(filepath).metadata
+        social = meta.get("social") or {}
+        url = meta.get("url")
+        base_dir = Path(filepath).parent
+
+        platforms = {}
+        for fm_key, platform in PLATFORM_KEYS.items():
+            entry = social.get(fm_key)
+            if not entry:
+                continue
+            copy, media = parse_social_entry(entry)
+            if copy.upper() == "TODO":
+                copy = ""
+            if copy:
+                resolved = resolve_media_paths(media, base_dir) if media else []
+                platforms[platform] = (copy, resolved)
+
+        if not platforms:
+            print(f"  Warning: no social copy in frontmatter for {filepath}")
+            continue
+
+        entries.append({
+            "filepath": filepath,
+            "slug": slug_from_path(filepath),
+            "url": url,
+            "date": meta.get("date"),
+            "platforms": platforms,
+        })
+    return entries
+
+
+def main():
+    if not API_KEY:
+        if DRY_RUN:
+            print("DRY RUN: API key not set, will show what would be posted.")
+        else:
+            print("Error: UPLOAD_POST_API_KEY must be set.")
+            sys.exit(1)
+
+    state = load_state()
+
+    # Detect changed files
+    changed_blogs = get_changed_blog_posts(state)
+    if changed_blogs is None:
+        print("Error: could not determine changed blog posts. Aborting.")
+        sys.exit(1)
+    changed_social = get_changed_social_posts(state)
+
+    if not changed_blogs and not changed_social:
+        print("No blog post or social post changes detected.")
+        head = get_head_sha()
+        if head and head != state.get("last_sha"):
+            state["last_sha"] = head
+            save_state(state)
+        return
+
+    # Build unified entry list
+    entries = build_blog_entries(changed_blogs) + build_social_entries(changed_social)
+    if not entries:
+        print("No posts with social copy found.")
+        head = get_head_sha()
+        if head and head != state.get("last_sha"):
+            state["last_sha"] = head
+            save_state(state)
+        return
+
+    posted_urls = []
+    posts_by_file = defaultdict(list)
+    failures = process_posts(entries, state, posted_urls, posts_by_file)
+
     # Write summary
     if posted_urls:
         print("\n--- Posted ---")
-        for blog_url, platform, post_url in posted_urls:
+        for display_url, platform, post_url in posted_urls:
             print(f"  {platform}: {post_url}")
 
         # Write GitHub Actions job summary if available
@@ -622,22 +921,22 @@ def main():
         if summary_path:
             with open(summary_path, "a") as f:
                 f.write("## Social media posts\n\n")
-                f.write("| Blog post | Platform | Post |\n")
+                f.write("| Source | Platform | Post |\n")
                 f.write("|---|---|---|\n")
-                for blog_url, platform, post_url in posted_urls:
-                    slug = blog_url.replace(SITE_URL, "")
-                    if post_url.startswith("http"):
-                        f.write(f"| {slug} | {platform} | [link]({post_url}) |\n")
+                for display_url, platform, post_url in posted_urls:
+                    label = display_url.replace(SITE_URL, "") if SITE_URL in str(display_url) else display_url
+                    if isinstance(post_url, str) and post_url.startswith("http"):
+                        f.write(f"| {label} | {platform} | [link]({post_url}) |\n")
                     else:
-                        f.write(f"| {slug} | {platform} | {post_url} |\n")
+                        f.write(f"| {label} | {platform} | {post_url} |\n")
 
-        # Comment on the PRs that introduced these blog posts
+        # Comment on the PRs that introduced these posts
         for filepath, results in posts_by_file.items():
             pr_number = find_pr_number(filepath, since_sha=state.get("last_sha"))
             if not pr_number:
                 print(f"  Could not find PR for {filepath}, skipping comment")
                 continue
-            lines = [f"📣 Social media posts are live for this blog post:\n"]
+            lines = ["📣 Social media posts are live:\n"]
             for platform, post_url in results:
                 if isinstance(post_url, str) and post_url.startswith("http"):
                     lines.append(f"- **{platform}**: {post_url}")
@@ -659,5 +958,74 @@ def main():
     print("\nDone.")
 
 
+def post_file(filepath, platforms_filter=None):
+    """Post a single file directly, bypassing git diff and state.
+
+    Used for testing and one-off posts. No state tracking or PR comments.
+    """
+    if not API_KEY:
+        if DRY_RUN:
+            print("DRY RUN: API key not set, will show what would be posted.")
+        else:
+            print("Error: UPLOAD_POST_API_KEY must be set.")
+            sys.exit(1)
+
+    filepath = str(filepath)
+    if not Path(filepath).exists():
+        print(f"Error: file not found: {filepath}")
+        sys.exit(1)
+
+    # Determine if blog post or standalone
+    if "content/blog/" in filepath:
+        entries = build_blog_entries([filepath])
+    else:
+        entries = build_social_entries([filepath])
+
+    if not entries:
+        print("No social copy found in file.")
+        sys.exit(1)
+
+    entry = entries[0]
+
+    # Filter to specific platforms if requested
+    if platforms_filter:
+        entry["platforms"] = {
+            p: v for p, v in entry["platforms"].items() if p in platforms_filter
+        }
+
+    print(f"Posting: {filepath}")
+    if entry.get("url"):
+        print(f"  URL: {entry['url']}")
+    for platform, (copy, media) in entry["platforms"].items():
+        print(f"  {platform}: {copy[:80]}...")
+        if media:
+            for m in media:
+                print(f"    media: {m}")
+
+    posted_urls = []
+    posts_by_file = defaultdict(list)
+    state = {"posts": {}}
+    process_posts([entry], state, posted_urls, posts_by_file)
+
+    if posted_urls:
+        print("\n--- Posted ---")
+        for display_url, platform, post_url in posted_urls:
+            print(f"  {platform}: {post_url}")
+
+
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Schedule social media posts")
+    parser.add_argument(
+        "--post", metavar="FILE",
+        help="Post a single file directly (bypasses git diff and state)",
+    )
+    parser.add_argument(
+        "--platform", action="append", choices=["x", "linkedin", "bluesky"],
+        help="Limit to specific platform(s) (can be repeated)",
+    )
+    args = parser.parse_args()
+
+    if args.post:
+        post_file(args.post, platforms_filter=args.platform)
+    else:
+        main()
