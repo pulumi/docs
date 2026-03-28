@@ -28,10 +28,11 @@ const taglineArts: string[] = [
 // Y = yellow (#f7bf2a), P = pink (#f26e7e), V = purple (#a855f7)
 const cubeStyleCodes = "YPYVPYVPYVPVPVPVPVPVPVPVPVPV";
 
+const S = "font-family:monospace;font-weight:bold;color:";
 const styleMap: Record<string, string> = {
-    Y: "color:#f7bf2a;font-weight:bold",
-    P: "color:#f26e7e;font-weight:bold",
-    V: "color:#a855f7;font-weight:bold",
+    Y: S + "#f7bf2a",
+    P: S + "#f26e7e",
+    V: S + "#a855f7",
 };
 
 // prettier-ignore
@@ -52,11 +53,11 @@ const linksText = [
 const allArts = [
     {
         format: cubeColorFormat + "\n\n%c" + linksText,
-        styles: [...cubeColorStyles, "color: #f7bf2a;"],
+        styles: [...cubeColorStyles, S + "#f7bf2a"],
     },
     ...taglineArts.map((a) => ({
         format: `%c${a}\n\n%c` + linksText,
-        styles: ["color: #8b5cf6; font-weight: bold;", "color: #f7bf2a;"],
+        styles: [S + "#8b5cf6", S + "#f7bf2a"],
     })),
 ];
 
