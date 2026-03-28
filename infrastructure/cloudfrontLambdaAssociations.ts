@@ -262,20 +262,19 @@ function pythonSDKRedirect(uri: string): string | undefined {
 }
 
 function dotnetSDKRedirect(uri: string): string | undefined {
-    const regex = /^\/docs\/reference\/pkg\/dotnet\/Pulumi\.([^\/]+)\/Pulumi\.\1(?:\.([^\/\.]+))?.*\.html/;
+    // URI is pre-lowercased by the CloudFront Function on the dotnet/* path.
+    const regex = /^\/docs\/reference\/pkg\/dotnet\/pulumi\.([^\/]+)\/pulumi\.\1(?:\.([^\/\.]+))?.*\.html/;
     const match = uri.match(regex);
     const exceptions = [
-        "Automation",
-        "FSharp",
+        "automation",
+        "fsharp",
     ];
 
     if (match && match[1] && !exceptions.includes(match[1])) {
-        if (match[2] && !match[2].match(/Types|Config/)) {
-            // tslint:disable-next-line:max-line-length
-            return `/docs/reference/pkg/${match[1].toLowerCase()}/${match[2].toLowerCase()}/?language=csharp`;
+        if (match[2] && !match[2].match(/types|config/)) {
+            return `/docs/reference/pkg/${match[1]}/${match[2]}/?language=csharp`;
         }
-        return `/docs/reference/pkg/${match[1].toLowerCase()}/?language=csharp`;
-
+        return `/docs/reference/pkg/${match[1]}/?language=csharp`;
     }
 
     return undefined;
