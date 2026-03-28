@@ -141,7 +141,7 @@ export class LlmMenu {
             <Host>
                 <div class="llm-menu-container">
                     <button class="llm-menu-trigger text-gray-600 hover:text-gray-700 text-xs" onClick={() => (this.isOpen = !this.isOpen)}>
-                        <i class="fas fa-copy"></i>
+                        <i class="fas fa-copy mr-2" style={{ width: "14px" }}></i>
                         Copy Page
                         <i class={`fas fa-chevron-${this.isOpen ? "up" : "down"}`}></i>
                     </button>
