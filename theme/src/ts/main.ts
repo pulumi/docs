@@ -25,6 +25,7 @@ import "./redirects";
 // only on pages with a #search element. See assets.html.
 import "./external-links";
 import "./neo-mode";
+import "./console-banner";
 
 // Register all Stencil components.
 defineCustomElements();
