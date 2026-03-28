@@ -49,7 +49,7 @@ done
 #    but NOT the fragment (after #). Fragment anchors must stay PascalCase
 #    because they must match id= attributes in the HTML.
 find "$DOTNET_OUT" -type f -name '*.html' -exec sed -i -E \
-    's/href="([^"#]+)(#[^"]*)?"/href="\L\1\E\2"/g' {} +
+    's/href="([^"#:]+)(#[^"]*)?"/href="\L\1\E\2"/g' {} +
 
 # 4. Rewrite xrefmap.yml: lowercase the path portion of href values (before #).
 sed -i -E 's/^(  href: )([^#]+)(#.*)?$/\1\L\2\E\3/' "$DOTNET_OUT/xrefmap.yml"
