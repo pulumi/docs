@@ -119,6 +119,17 @@ export class LlmMenu {
             </svg>
         );
 
+        const markdownIcon = (
+            <svg class="llm-menu-icon" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"
+                />
+                <path
+                    d="M9.146 8.146a.5.5 0 0 1 .708 0L11.5 9.793l1.646-1.647a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 0-.708zM11.5 5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 1 .5-.5zM3.56 11V5.01h1.44L6.5 7.98 8 5.01h1.44V11H8.2V6.57L6.5 9.56l-1.7-2.99V11H3.56z"
+                />
+            </svg>
+        );
+
         const chatGptLogo = (
             <svg class="llm-menu-icon" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -141,7 +152,7 @@ export class LlmMenu {
             <Host>
                 <div class="llm-menu-container">
                     <button class="llm-menu-trigger text-gray-600 hover:text-gray-700 text-xs" onClick={() => (this.isOpen = !this.isOpen)}>
-                        <i class="fas fa-copy"></i>
+                        <i class="fas fa-copy mr-2" style={{ width: "14px" }}></i>
                         Copy Page
                         <i class={`fas fa-chevron-${this.isOpen ? "up" : "down"}`}></i>
                     </button>
@@ -164,7 +175,7 @@ export class LlmMenu {
                                     </div>
                                 </button>
                                 <button class="llm-menu-item" onClick={() => this.viewMarkdown()}>
-                                    <i class="fab fa-markdown llm-menu-icon"></i>
+                                    {markdownIcon}
                                     <div class="llm-menu-text">
                                         <div class="llm-menu-title">View as Markdown</div>
                                         <div class="llm-menu-subtitle">Open Markdown in new tab</div>
