@@ -23,9 +23,30 @@ Pulumi offers a flexible, code-first alternative to Azure ARM templates using C#
 If your team has already provisioned Azure infrastructure using ARM (Azure Resource Manager) templates and is looking for a more productive approach, Pulumi provides several paths to move forward:
 
 * **[Neo](/product/neo/) (Recommended)**: Use Neo to automatically convert your ARM templates and import existing resources with zero downtime
-* [**Coexist**](#referencing-stack-outputs) with resources provisioned by ARM by referencing deployment outputs.
+* [**Coexist**](#coexist-with-arm) with resources provisioned by ARM by referencing deployment outputs.
 * [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing Azure resources into Pulumi in the usual way.
-* [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
+* [**Convert**](#convert-arm-templates-to-pulumi) your deployments to use Pulumi and then incrementally migrate resources.
+
+## Why Move Beyond ARM
+
+ARM templates were Azure's original infrastructure as code solution. But they fall short for today's engineering teams:
+
+| Feature           | ARM Templates        | Pulumi                        |
+|-------------------|----------------------|-------------------------------|
+| Language          | JSON                 | Code Native, e.g. C#, Python, TS |
+| Cloud             | Azure only           | Agnostic + on-prem            |
+| Reuse             | Limited (copy/paste) | Functions, classes, modules   |
+| Logic & Loops     | Complex expressions  | if / for / switch             |
+| Type Safety       | None                 | Compile-time type checking    |
+| Tooling           | Basic validation     | Full IDE & IntelliSense       |
+| Testing           | Manual or none       | xUnit, NUnit, etc.            |
+| Code Sharing      | Hard                 | NuGet packages & projects     |
+| Debugging         | Deploy & troubleshoot| Step-through in IDE           |
+| Refactoring       | Tedious manual edits | IDE-assisted refactors        |
+| Modularity        | Nested templates     | Real modules & components     |
+| State Files       | No state files       | Encrypted                     |
+
+While Bicep addresses some of the shortcomings of ARM templates, it remains bound to the same Azure-only deployment model and limitations inherent to the ARM engine. Pulumi lets you manage Azure infrastructure using your favorite language, with built-in support for CI/CD, reusable components, and testability. For .NET teams especially, Pulumi's support for C# provides a superior experience over static JSON.
 
 ## Choosing an ARM migration path
 
@@ -71,38 +92,7 @@ While Neo handles most ARM templates automatically, you might need manual migrat
 
 Continue reading below for manual migration approaches if Neo doesn't fit your specific needs.
 
-### Alternative migration paths
-
-If Neo doesn't support your specific use case, or if you prefer manual control over the migration process, the options below provide flexibility to coexist with or migrate from ARM templates at your own pace.
-
-## Why Move Beyond ARM
-
-ARM templates were Azure’s original infrastructure as code solution. But they fall short for today’s engineering teams:
-
-| Feature           | ARM Templates        | Pulumi                        |
-|-------------------|----------------------|-------------------------------|
-| Language          | JSON                 | Code Native, e.g. C#, Python, TS |
-| Cloud             | Azure only           | Agnostic + on-prem            |
-| Reuse             | Limited (copy/paste) | Functions, classes, modules   |
-| Logic & Loops     | Complex expressions  | if / for / switch             |
-| Type Safety       | None                 | Compile-time type checking    |
-| Tooling           | Basic validation     | Full IDE & IntelliSense       |
-| Testing           | Manual or none       | xUnit, NUnit, etc.            |
-| Code Sharing      | Hard                 | NuGet packages & projects     |
-| Debugging         | Deploy & troubleshoot| Step-through in IDE           |
-| Refactoring       | Tedious manual edits | IDE-assisted refactors        |
-| Modularity        | Nested templates     | Real modules & components     |
-| State Files       | No state files       | Encrypted                     |
-
-While Bicep addresses some of the shortcomings of ARM templates, it remains bound to the same Azure-only deployment model and limitations inherent to the ARM engine. Pulumi lets you manage Azure infrastructure using your favorite language, with built-in support for CI/CD, reusable components, and testability. For .NET teams especially, Pulumi’s support for C# provides a superior experience over static JSON.
-
-Continue reading to learn how to:
-
-* [Reference ARM outputs in Pulumi programs](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#reference-arm-outputs-in-pulumi-programs)
-* [Convert ARM templates to Pulumi code with pulumi convert](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#convert-arm-templates-to-pulumi-code-with-pulumi-convert)
-* [Import existing Azure resources into Pulumi](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#import-existing-azure-resources-into-pulumi)
-
-## Reference ARM Outputs in Pulumi Programs
+### Coexist with ARM
 
 It is possible to reference existing Azure Resource Manager (ARM) template deployments from your program. It doesn't matter how these templates and deployments were created. This lets you read properties of a deployment for use within your Pulumi program. This includes output values computed from resources provisioned that stack.
 
@@ -268,15 +258,13 @@ Notice that the ID is of the format: `/subscriptions/<YOUR-SUBSCRIPTION-ID>/reso
 
 > Although we've hard-coded the ARM deployment ID here, it's common to dynamically compute a name using unique per-stack information, like the stack name, subscription ID, or other configuration variables.
 
-## Converting Stacks and Resources
+### Convert ARM Templates to Pulumi
 
 Let's say you want to migrate from ARM to Pulumi, and that simply co-existing side-by-side as shown above isn't sufficient.
 
 Let's see how to actually migrate your ARM-managed resources fully to Pulumi. This requires rewriting the ARM template JSON as your favorite programming language code, either entirely, or one resource at a time. Because you can query deployment outputs and provide parameters in code, you can more easily intermingle ARM-managed resources alongside Pulumi ones. Cyclic dependencies, of course, cannot be expressed, since the entire ARM deployment is seen as one opaque resource to Pulumi.
 
-Our example below will result in a Pulumi program that creates a Storage Account equivalent to the above ARM template example. The example will also use [import](/docs/using-pulumi/adopting-pulumi/import/) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
-
-### Convert ARM templates to Pulumi code with pulumi convert
+Our example below will result in a Pulumi program that creates a Storage Account equivalent to the below ARM template. The example will also use [import](/docs/using-pulumi/adopting-pulumi/import/) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
 
 You can convert ARM templates into Pulumi program code using `pulumi convert --from arm`. Simply provide your ARM template and get back a Pulumi program in C#, TypeScript, Python, Go, Java, or YAML.
 
