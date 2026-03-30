@@ -141,7 +141,19 @@ Bun makes it easy to go full ESM and it's the [recommended module format](https:
 }
 ```
 
-With [ECMAScript module (ESM)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) syntax, one place that needs updating is the [program entrypoint](/docs/iac/languages-sdks/javascript/#enabling-async-support). In CommonJS TypeScript projects, async programs are written using `export =`. In ESM, you use a standard `export default` instead:
+With [ECMAScript module (ESM)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) syntax, one thing that gets easier is working with async code. In a CommonJS Pulumi program, if you need to await a data source or other async call before declaring resources, the program must be wrapped in an [async entrypoint function](https://github.com/docs/iac/languages-sdks/javascript/#enabling-async-support). With ESM and Bun, [top-level await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) just works, so you can skip the wrapper function entirely and `await` directly at the module level:
+
+```typescript
+import * as aws from "@pulumi/aws";
+
+const azs = await aws.getAvailabilityZones({ state: "available" });
+
+const buckets = azs.names.map(az => new aws.s3.BucketV2(`my-bucket-${az}`));
+
+export const bucketNames = buckets.map(b => b.id);
+```
+
+If your existing program does use an async entrypoint with `export =`, just replace it with the ESM-standard `export default`:
 
 ```typescript
 // CommonJS (Node.js default)
@@ -155,18 +167,6 @@ export default async () => {
     const bucket = new aws.s3.BucketV2("my-bucket");
     return { bucketName: bucket.id };
 };
-```
-
-That said, the main reason to use an async entrypoint function in CommonJS is to be able to `await` data sources and other async calls before declaring resources. In ESM — including Bun — [top-level `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) just works, so you can skip the wrapper function entirely and `await` directly at the module level:
-
-```typescript
-import * as aws from "@pulumi/aws";
-
-const azs = await aws.getAvailabilityZones({ state: "available" });
-
-const buckets = azs.names.map(az => new aws.s3.BucketV2(`my-bucket-${az}`));
-
-export const bucketNames = buckets.map(b => b.id);
 ```
 
 ### 4. Update the Pulumi SDK
