@@ -194,13 +194,6 @@ get_started:
         It wouldn't have been possible to build Sparky without @PulumiCorp. Shout out to the team and community for helping us get up and running!
     -
       source: twitter
-      username: "@0xksure"
-      avatar: https://pbs.twimg.com/profile_images/1560526743865360384/QBkajFhq_200x200.jpg
-      link: https://twitter.com/0xksure/status/1570769681434415104
-      text: |
-        ok so pulumi is awesome. almost no clicking, just scripting go and up
-    -
-      source: twitter
       username: "@krangarajan"
       avatar: https://pbs.twimg.com/profile_images/837774934805925888/I51_kI-H_200x200.jpg
       link: https://twitter.com/krangarajan/status/1564712184717881344

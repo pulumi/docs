@@ -3803,6 +3803,8 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
 # Long cache for fingerprinted assets
 /css/bundle.*.css: 1 year
 /js/bundle.*.js: 1 year
+/js/search.*.js: 1 year
+/js/chunk-*.js: 1 year
 /fingerprinted/*: 1 year
 
 # Standard cache for HTML (invalidated on deploy)

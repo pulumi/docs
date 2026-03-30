@@ -23,7 +23,7 @@ const bundles = [
     {
         name: "bundle",
         input: "public/css/bundle.*.css",
-        content: ["public/**/*.html", "public/js/bundle.*.js", "public/js/algolia.*.js"],
+        content: ["public/**/*.html", "public/js/bundle.*.js", "public/js/algolia.*.js", "public/js/consent-manager.*.js"],
         safelist: [
             ...sharedSafelist,
             /^icon-/,
@@ -47,13 +47,13 @@ const bundles = [
         // produces assets/css/marketing-homepage.css for Hugo dev mode.
         name: "marketing-homepage",
         input: "public/css/marketing.*.css",
-        content: ["public/index.html", "public/js/bundle.*.js"],
+        content: ["public/index.html", "public/js/bundle.*.js", "public/js/consent-manager.*.js"],
         safelist: [...sharedSafelist],
     },
     {
         name: "homepage",
         input: "public/css/homepage.*.css",
-        content: ["public/index.html", "public/js/bundle.*.js"],
+        content: ["public/index.html", "public/js/bundle.*.js", "public/js/consent-manager.*.js"],
         safelist: [...sharedSafelist],
     },
 ];
