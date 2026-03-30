@@ -233,7 +233,7 @@ For a complete guide and examples for each language, see [Using output helpers](
 - [TypeScript (Node.js)](/docs/reference/pkg/nodejs/pulumi/pulumi/)
 - [Python](/docs/reference/pkg/python/pulumi/)
 - [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi)
-- [.NET](/docs/reference/pkg/dotnet/Pulumi/Pulumi.html)
+- [.NET](/docs/reference/pkg/dotnet/pulumi/pulumi.html)
 - [Java](/docs/reference/pkg/java/)
 - [YAML](/docs/iac/languages-sdks/yaml/yaml-language-reference/#expressions)
 

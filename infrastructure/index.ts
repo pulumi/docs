@@ -778,14 +778,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...guidesBehaviors,
         ...answersBehaviors,
 
-        // Docs pages support Accept: text/markdown content negotiation.
-        {
-            ...baseCacheBehavior,
-            pathPattern: "/docs/*",
-            functionAssociations: [getMarkdownNegotiationFunctionAssociation()],
-            responseHeadersPolicyId: DocsResponseHeadersPolicy.id,
-        },
-
+        // Dotnet SDK docs: lowercase URIs so case-insensitive requests resolve.
+        // Must come BEFORE /docs/* so the more specific pattern matches first.
         {
             ...baseCacheBehavior,
             pathPattern: "/docs/reference/pkg/dotnet/*",
@@ -793,6 +787,14 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 eventType: "viewer-request",
                 functionArn: dotnetLowercaseFunction.arn,
             }],
+        },
+
+        // Docs pages support Accept: text/markdown content negotiation.
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/docs/*",
+            functionAssociations: [getMarkdownNegotiationFunctionAssociation()],
+            responseHeadersPolicyId: DocsResponseHeadersPolicy.id,
         },
         {
             ...baseCacheBehavior,
