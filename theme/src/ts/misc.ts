@@ -138,6 +138,7 @@ export function generateOnThisPage() {
     if (found) {
         tocs.forEach(toc => toc.style.display = "");
 
+        let tocRafPending = false;
         const setActiveItem = () => {
             let active = null;
             for (const heading of headingItems) {
@@ -147,8 +148,16 @@ export function generateOnThisPage() {
                 heading.listItems.forEach(li => li.classList.toggle("active", heading === active));
             }
         };
+        const onScrollToc = () => {
+            if (tocRafPending) return;
+            tocRafPending = true;
+            requestAnimationFrame(() => {
+                tocRafPending = false;
+                setActiveItem();
+            });
+        };
 
-        window.addEventListener("scroll", setActiveItem);
+        window.addEventListener("scroll", onScrollToc, { passive: true });
         setActiveItem();
     }
 }
