@@ -1,0 +1,9 @@
+id = "kathy-lalama"
+name = "Kathy Lalama"
+title = "General Manager, Customer Engineering"
+weight = 7
+
+status = "active"
+
+[social]
+linkedin = "kathyhoranlalama"
