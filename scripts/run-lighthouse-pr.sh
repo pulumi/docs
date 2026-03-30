@@ -25,9 +25,6 @@ fi
 
 echo "Running Lighthouse audits against ${base_url}..."
 
-# Install Lighthouse CLI.
-npm install -g lighthouse --silent 2>/dev/null
-
 chrome_flags="--headless --no-sandbox"
 tmp_dir="$(mktemp -d)"
 
@@ -62,19 +59,22 @@ for i in "${!page_paths[@]}"; do
 
         echo "Auditing ${page_names[$i]} (${device}): ${url}"
 
-        preset_flag=""
+        lh_args=(
+            "$url"
+            --chrome-flags="$chrome_flags"
+            --output json
+            --output-path "$output_file"
+            --only-categories=performance
+            --quiet
+        )
+
         if [[ "$device" == "desktop" ]]; then
-            preset_flag="--preset=desktop"
+            lh_args+=(--preset=desktop)
         fi
 
-        lighthouse "$url" \
-            $preset_flag \
-            --chrome-flags="$chrome_flags" \
-            --output json \
-            --output-path "$output_file" \
-            --only-categories=performance \
-            --quiet \
-            || true
+        if ! npx lighthouse "${lh_args[@]}"; then
+            echo "Lighthouse failed for ${page_names[$i]} (${device}), continuing..."
+        fi
     done
 done
 
@@ -82,6 +82,8 @@ done
 comment_body=""
 add_line() { comment_body+="$1"$'\n'; }
 
+# Marker for finding/updating this comment on subsequent pushes.
+add_line "<!-- lighthouse-report -->"
 add_line "## Lighthouse Performance Report"
 add_line ""
 add_line "Commit: \`${commit_sha}\`"
@@ -93,7 +95,12 @@ for i in "${!page_paths[@]}"; do
     for device in mobile desktop; do
         json_file="${tmp_dir}/${i}-${device}.json"
         page_name="${page_names[$i]}"
-        device_label="$(echo "$device" | sed 's/^./\U&/')"
+
+        if [[ "$device" == "mobile" ]]; then
+            device_label="Mobile"
+        else
+            device_label="Desktop"
+        fi
 
         if [[ ! -f "$json_file" ]]; then
             add_line "| ${page_name} | ${device_label} | Error | - | - | - | - | - |"
@@ -119,20 +126,38 @@ for i in "${!page_paths[@]}"; do
     done
 done
 
-# Post the comment to the PR.
+# Post or update the comment on the PR.
 if [[ -n "$GITHUB_EVENT_PATH" ]]; then
     pr_comment_api_url="$(jq -r '.pull_request._links.comments.href' "$GITHUB_EVENT_PATH" 2>/dev/null)"
 
     if [[ -n "$pr_comment_api_url" && "$pr_comment_api_url" != "null" ]]; then
-        echo "Posting Lighthouse results to PR..."
         json_payload=$(jq -n --arg body "$comment_body" '{"body": $body}')
 
-        curl -s \
-            -X POST \
+        # Look for an existing Lighthouse comment to update instead of posting a new one.
+        existing_comment_id=$(curl -s \
             -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
-            -H "Content-Type: application/json" \
-            -d "$json_payload" \
-            "$pr_comment_api_url" > /dev/null
+            "$pr_comment_api_url" \
+            | jq -r '.[] | select(.body | contains("<!-- lighthouse-report -->")) | .id' \
+            | head -n 1)
+
+        if [[ -n "$existing_comment_id" ]]; then
+            echo "Updating existing Lighthouse comment (${existing_comment_id})..."
+            repo_api_url="$(jq -r '.pull_request.base.repo.url' "$GITHUB_EVENT_PATH")"
+            curl -s \
+                -X PATCH \
+                -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
+                -H "Content-Type: application/json" \
+                -d "$json_payload" \
+                "${repo_api_url}/issues/comments/${existing_comment_id}" > /dev/null
+        else
+            echo "Posting Lighthouse results to PR..."
+            curl -s \
+                -X POST \
+                -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
+                -H "Content-Type: application/json" \
+                -d "$json_payload" \
+                "$pr_comment_api_url" > /dev/null
+        fi
 
         echo "Lighthouse comment posted."
     else
