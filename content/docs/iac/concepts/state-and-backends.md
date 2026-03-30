@@ -249,10 +249,14 @@ To use the [Azure Blob Storage](https://azure.microsoft.com/en-us/services/stora
 $ pulumi login azblob://<container-path>
 ```
 
-To tell Pulumi what Azure storage account to use, set the `AZURE_STORAGE_ACCOUNT` environment variable. Also, set either `AZURE_STORAGE_KEY` or `AZURE_STORAGE_SAS_TOKEN` to authorize access. For additional configuration options, see [Azure Setup](/registry/packages/azure/installation-configuration/). If you're new to Azure Blob Storage, see [the Azure documentation](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli).
+Set the `AZURE_STORAGE_ACCOUNT` environment variable to specify which Azure storage account to use. For authentication, you may set `AZURE_STORAGE_KEY` (a storage account access key) or `AZURE_STORAGE_SAS_TOKEN` (a shared access signature token). If neither is provided, the backend authenticates using [Azure SDK for Go's `DefaultAzureCredential`](https://learn.microsoft.com/en-us/azure/developer/go/azure-sdk-authentication), which attempts a series of methods in order, including managed identity, workload identity federation, service principal credentials (`AZURE_TENANT_ID`, `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`), and the Azure CLI. If you're new to Azure Blob Storage, see [the Azure documentation](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli).
+
+{{% notes type="info" %}}
+This backend authenticates using [Azure SDK for Go](https://learn.microsoft.com/en-us/azure/developer/go/azure-sdk-authentication), not the Pulumi Azure provider's authentication mechanism. The Azure provider's environment variables — such as `ARM_TENANT_ID`, `ARM_CLIENT_ID`, and `ARM_USE_OIDC` — are not supported. Use the Azure SDK's own environment variables (`AZURE_TENANT_ID`, `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`) for service principal authentication.
+{{% /notes %}}
 
 {{% notes type="info"%}}
-As of Pulumi CLI v3.41.1, instead of the environment variables above, Azure CLI authentication may be used by specifying the storage account in the URL like so after using `az login`:
+As of Pulumi CLI v3.41.1, you can also specify the storage account directly in the backend URL after authenticating with `az login`:
 
 ```sh
 $ pulumi login azblob://<container-path>?storage_account=account_name
