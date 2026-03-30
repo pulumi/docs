@@ -111,6 +111,25 @@ if (config.enableWaf) {
         description: `Rate limiting for ${config.websiteDomain}`,
         defaultAction: { allow: {} },
         rules: [{
+            name: "allow-link-checker",
+            priority: 0,
+            action: { allow: {} },
+            statement: {
+                byteMatchStatement: {
+                    searchString: "pulumi+blc/0.1",
+                    fieldToMatch: {
+                        singleHeader: { name: "user-agent" },
+                    },
+                    positionalConstraint: "EXACTLY",
+                    textTransformations: [{ priority: 0, type: "NONE" }],
+                },
+            },
+            visibilityConfig: {
+                cloudwatchMetricsEnabled: true,
+                metricName: "cdn-waf-allow-link-checker",
+                sampledRequestsEnabled: true,
+            },
+        }, {
             name: "rate-limit-per-ip",
             priority: 1,
             action: { block: {} },
