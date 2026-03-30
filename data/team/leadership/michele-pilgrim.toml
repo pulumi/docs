@@ -1,0 +1,9 @@
+id = "michele-pilgrim"
+name = "Michele Pilgrim"
+title = "Chief Marketing Officer"
+weight = 3
+
+status = "active"
+
+[social]
+linkedin = "michelepilgrim"
