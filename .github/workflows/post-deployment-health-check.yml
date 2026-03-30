@@ -121,7 +121,7 @@ jobs:
           check_endpoint "/registry" "Registry landing"
           check_endpoint "/docs/reference/pkg/nodejs/pulumi/pulumi/" "Node.js SDK"
           check_endpoint "/docs/reference/pkg/python/pulumi/" "Python SDK"
-          check_endpoint "/docs/reference/pkg/dotnet/Pulumi/Pulumi.html" ".NET SDK"
+          check_endpoint "/docs/reference/pkg/dotnet/pulumi/pulumi.html" ".NET SDK"
           check_endpoint "/docs/reference/pkg/java/" "Java SDK"
           check_endpoint "/docs/iac/get-started/" "Getting started"
           check_endpoint "/docs/cli/commands/" "CLI reference"

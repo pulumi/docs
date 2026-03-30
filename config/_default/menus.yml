@@ -57,7 +57,7 @@ iac:
     identifier: iac-languages-go-sdk
   - name: SDK docs ↗
     parent: iac-languages-dotnet
-    url: /docs/reference/pkg/dotnet/Pulumi/Pulumi.html
+    url: /docs/reference/pkg/dotnet/pulumi/pulumi.html
     weight: 1
     identifier: iac-languages-dotnet-sdk
   - name: SDK docs ↗
@@ -322,7 +322,7 @@ reference:
     identifier: reference-sdks-go
   - name: .NET ↗
     parent: reference-sdks
-    url: /docs/reference/pkg/dotnet/Pulumi/Pulumi.html
+    url: /docs/reference/pkg/dotnet/pulumi/pulumi.html
     weight: 4
     identifier: reference-sdks-dotnet
   - name: Java ↗

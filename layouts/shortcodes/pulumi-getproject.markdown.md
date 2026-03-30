@@ -12,7 +12,7 @@
 [`context.Project`](https://godoc.org/github.com/pulumi/pulumi/sdk/v3/go/pulumi#Context.Project)
 <!-- /option -->
 <!-- option: csharp -->
-[`Deployment.Instance.ProjectName`](/docs/reference/pkg/dotnet/Pulumi/Pulumi.DeploymentInstance.html#Pulumi_DeploymentInstance_ProjectName)
+[`Deployment.Instance.ProjectName`](/docs/reference/pkg/dotnet/pulumi/pulumi.deploymentinstance.html#Pulumi_DeploymentInstance_ProjectName)
 <!-- /option -->
 <!-- option: java -->
 `context.projectName()`

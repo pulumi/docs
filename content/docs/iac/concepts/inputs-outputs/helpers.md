@@ -61,7 +61,7 @@ For more details, see the [Go SDK documentation](https://pkg.go.dev/github.com/p
 
 - **`Output.Format()`** — Works like C#'s interpolated string syntax. Pass a C# interpolated string containing `Output<T>` values, and `Output.Format` returns a single `Output<string>`.
 
-For more details, see the [.NET SDK documentation](/docs/reference/pkg/dotnet/Pulumi/Pulumi.Output.html).
+For more details, see the [.NET SDK documentation](/docs/reference/pkg/dotnet/pulumi/pulumi.output.html).
 
 {{% /choosable %}}
 
@@ -126,7 +126,7 @@ For more details, see the [Go SDK documentation](https://pkg.go.dev/github.com/p
 
 - **`Output.JsonSerialize()`** — Accepts an `Output<T>` and returns an `Output<string>` of its JSON representation using `System.Text.Json`.
 
-For more details, see the [.NET SDK documentation](/docs/reference/pkg/dotnet/Pulumi/Pulumi.Output.html).
+For more details, see the [.NET SDK documentation](/docs/reference/pkg/dotnet/pulumi/pulumi.output.html).
 
 {{% /choosable %}}
 
@@ -170,7 +170,7 @@ For more details, see the [Go SDK documentation](https://pkg.go.dev/github.com/p
 
 - **`Output.JsonDeserialize<T>()`** — Accepts an `Output<string>` containing JSON and returns an `Output<T>` of the deserialized value using `System.Text.Json`.
 
-For more details, see the [.NET SDK documentation](/docs/reference/pkg/dotnet/Pulumi/Pulumi.Output.html).
+For more details, see the [.NET SDK documentation](/docs/reference/pkg/dotnet/pulumi/pulumi.output.html).
 
 {{% /choosable %}}
 

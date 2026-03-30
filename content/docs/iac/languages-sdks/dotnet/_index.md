@@ -229,7 +229,7 @@ Pulumi. [Concepts](/docs/intro/concepts) describes these concepts
 with examples available in Python. These concepts are made available to you in the Pulumi SDK.
 
 The Pulumi SDK is available to .NET developers as a Nuget package. To learn more,
-[refer to the Pulumi SDK Reference Guide](/docs/reference/pkg/dotnet/Pulumi/Pulumi.html).
+[refer to the Pulumi SDK Reference Guide](/docs/reference/pkg/dotnet/pulumi/pulumi.html).
 
 The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with .NET and Pulumi, and the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
 
@@ -265,11 +265,11 @@ In addition to the standard packages the [Pulumi Registry](/registry/) houses 10
 
 <dl class="tabular">
     <dt>Pulumi SDK</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.html">Pulumi</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/pulumi/pulumi.html">Pulumi</a></dd>
     <dt>Pulumi FSharp SDK</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.FSharp/Pulumi.FSharp.html">Pulumi.FSharp</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/pulumi.fsharp/pulumi.fsharp.html">Pulumi.FSharp</a></dd>
     <dt>Pulumi Automation API</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.html">Pulumi.Automation</a></dd>
+    <dd><a href="/docs/reference/pkg/dotnet/pulumi.automation/pulumi.automation.html">Pulumi.Automation</a></dd>
 </dl>
 
 ### Dev Versions

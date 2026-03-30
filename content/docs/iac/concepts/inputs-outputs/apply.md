@@ -721,7 +721,7 @@ For more details [view the Go documentation](https://pkg.go.dev/github.com/pulum
 
 {{% choosable language csharp %}}
 
-For more details [view the .NET documentation](/docs/reference/pkg/dotnet/Pulumi/Pulumi.Output.html).
+For more details [view the .NET documentation](/docs/reference/pkg/dotnet/pulumi/pulumi.output.html).
 
 {{% /choosable %}}
 

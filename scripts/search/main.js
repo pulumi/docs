@@ -79,7 +79,7 @@ const additionalObjects = [
         "section": "Docs",
         "title": "Pulumi .NET SDK Documentation (C#, VB, F#)",
         "description": "Documentation for the Pulumi .NET SDK.",
-        "href": "/docs/reference/pkg/dotnet/Pulumi/Pulumi.html",
+        "href": "/docs/reference/pkg/dotnet/pulumi/pulumi.html",
         "keywords": [
             "Pulumi.Pulumi",
             ".net sdk",
