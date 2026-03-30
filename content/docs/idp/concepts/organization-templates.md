@@ -38,6 +38,14 @@ Registry-backed templates, or Private Registry templates, are published directly
 - Simple publishing: Single CLI command to publish templates
 - Version control: Track and manage template versions independently
 
+Once published, registry-backed templates are referenced using a [registry URL](/docs/reference/registry-urls/):
+
+```
+registry://templates/{source}/{publisher}/{name}[@{version}]
+```
+
+For example: `registry://templates/pulumi/my-org/aws-vpc@1.0.0`
+
 ### VCS-backed templates
 
 VCS-backed templates are sourced from GitHub or GitLab repositories that you configure as template sources. This approach:
