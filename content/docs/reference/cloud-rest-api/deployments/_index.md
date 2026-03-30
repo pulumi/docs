@@ -970,8 +970,35 @@ The source context contains information about where the source code for your pro
 
 #### Template
 
-Using templates as the source for the deployment enables deploying Pulumi programs without having to manage the underlying IaC code.
-Leverage [Stack Config](/docs/reference/cloud-rest-api/stack-config/) to manage configuration settings for these template based stacks, including environment settings and secrets management configuration.
+Using templates as the source for the deployment enables deploying Pulumi programs without having to manage the underlying IaC code. Leverage [Stack Config](/docs/reference/cloud-rest-api/stack-config/) to manage configuration settings for these template-based stacks, including environment settings and secrets management configuration.
+
+The `sourceUrl` field supports two formats:
+
+##### Registry URLs
+
+Reference templates from the Pulumi Registry using [registry URLs](/docs/reference/registry-urls/):
+
+```json
+{
+  "template": {
+    "sourceUrl": "registry://templates/pulumi/community/aws-static-website@1.0.0"
+  }
+}
+```
+
+Omit the version to use the latest:
+
+```json
+{
+  "template": {
+    "sourceUrl": "registry://templates/pulumi/official/kubernetes-cluster"
+  }
+}
+```
+
+##### Direct git URLs
+
+Reference templates directly from a git repository:
 
 ```json
 {
@@ -981,10 +1008,12 @@ Leverage [Stack Config](/docs/reference/cloud-rest-api/stack-config/) to manage 
 }
 ```
 
-| Name                    | Type   | Description                                                                 |
-|-------------------------|--------|-----------------------------------------------------------------------------|
-| `template.sourceURL`    | string | URL of the template.                                                        |
-| `template.gitAuth`      | object | **Optional.** Authentication information for templates hosted in git repos. |
+##### Properties
+
+| Name                 | Type   | Description                                                                 |
+|----------------------|--------|-----------------------------------------------------------------------------|
+| `template.sourceUrl` | string | **Required.** URL of the template. Supports `registry://` or direct git URLs. |
+| `template.gitAuth`   | object | **Optional.** Authentication for private VCS-backed templates. Uses the same schema as `git.gitAuth`. |
 
 ### OperationContext
 
