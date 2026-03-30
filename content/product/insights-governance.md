@@ -9,6 +9,7 @@ aliases:
 - /insights
 - /pulumi-policies
 - /product/pulumi-insights
+- /product/pulumi-insights/
 - /product/crossguard
 - /crossguard
 
@@ -16,11 +17,7 @@ sections:
   - type: product_hero
     title_primary: "Continuous compliance,"
     title_secondary: "by construction."
-    description: See everything. Control everything. Ship with confidence.
-    cta_primary_text: Get Started
-    cta_primary_link: https://app.pulumi.com/signup
-    cta_secondary_text: Contact Us
-    cta_secondary_link: /contact/
+    description: Audit, remediate, and enforce compliance policies across all your cloud infrastructure automatically.
     image: /images/product/insights-governance/ig-hero.svg
     image_alt: Pulumi Insights & Governance dashboard showing cloud resource compliance
     anchor: hero
@@ -30,7 +27,8 @@ sections:
     description: |
       Govern your cloud automatically.
 
-      Pulumi Insights & Governance provides a complete lifecycle for auditing existing infrastructure, fixing violations with AI-powered remediation, and preventing future infrastructure issues using policy-as-code guardrails. Pulumi Policies and Neo close the loop from detection to remediation, ensuring your infrastructure stays secure, compliant, and well-governed automatically.
+      Pulumi Insights & Governance gives you a complete lifecycle for cloud compliance: audit existing infrastructure, fix violations with AI-powered remediation, and prevent future issues with policy as code. Neo closes the loop to keep your infrastructure secure and well-governed automatically.
+
     cards:
       - icon: fa-sync-alt
         title: Compliance without friction
@@ -43,7 +41,7 @@ sections:
       - icon: fa-eye
         title: Full cloud visibility
         description: |
-          Search and govern every resource across all your clouds, including shadow IT, with natural language queries and full configuration history.
+          Search and govern every resource across all your cloud, including unmanaged resources, with natural language queries and full configuration history.
     anchor: overview
 
   - type: video_embed
@@ -57,7 +55,7 @@ sections:
     tag_line: Always-On Auditing
     title: Audit existing infrastructure against compliance standards
     description: |
-      Works with ANY infrastructure—Pulumi, Terraform, CloudFormation, or manual deployments.
+      Works with any infrastructure, whether provisioned with Pulumi, Terraform, CloudFormation, or manual processes.
 
       Continuous audit scans evaluate your entire infrastructure against industry frameworks without disrupting deployment pipelines. Non-blocking compliance checks provide instant visibility into your security posture across CIS Controls, NIST SP 800-53, HITRUST CSF, and PCI DSS standards.
 
@@ -74,7 +72,7 @@ sections:
     tag_line: AI-Powered Remediation
     title: Automatically generate fixes for policy violations
     description: |
-      Pulumi Neo analyzes policy issues and automatically generates infrastructure-as-code remediation. For resources created outside your control (shadow IT, manual console changes), Neo discovers them, imports them into Pulumi, and fixes compliance violations in a single workflow, eliminating surprise audit findings and cost overruns. Transform hours of manual work into simple review-and-merge processes.
+      Pulumi Neo identifies policy issues and fixes them automatically. For resources created outside your control (manual console changes, unmanaged deployments), Neo finds and fixes compliance violations in a single workflow, eliminating surprise audit findings and cost overruns. Transform hours of manual work into simple review-and-merge processes.
 
       - AI-generated infrastructure-as-code fixes
       - Import and remediate unmanaged resources
@@ -197,17 +195,17 @@ sections:
     columns:
       - title: Start with complete visibility
         description: |
-          Get instant visibility into all your cloud resources. Add governance policies and optimize with AI-powered insights.
-        cta_primary_text: Get Started with Pulumi Insights
+          Get instant visibility into all your cloud resources. Add governance policies and AI-powered remediation to maintain compliance automatically.
+        cta_primary_text: Get Started with Insights
         cta_primary_link: /docs/insights/get-started/
         cta_text: Book a Demo
         cta_link: /contact/?form=request-a-demo
-      - title: Transform Governance from Bottleneck to Competitive Advantage
+      - title: Enforce compliance with policy as code
         description: |
-          Start with audit scans to understand your compliance posture. Add AI-powered remediation to eliminate issue backlogs. Deploy preventive policies to maintain compliance automatically.
-        cta_primary_text: Get Started with Pulumi Policies
+          Deploy pre-built compliance packs for CIS, NIST, HITRUST, and PCI DSS, or write custom policies in TypeScript and Python.
+        cta_primary_text: Get Started with Policies
         cta_primary_link: /docs/insights/policy/get-started/
-        cta_text: Try Pulumi Cloud for Free
-        cta_link: https://app.pulumi.com/signup
+        cta_text: Learn More
+        cta_link: /docs/insights/policy/
     anchor: get-started
 ---

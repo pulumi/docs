@@ -13,20 +13,15 @@ aliases:
 
 sections:
   - type: product_hero
-    title_secondary: Self-service infrastructure
-    title_primary: at any scale.
-    title_reversed: true
-    description: Everything platform engineers need to build an IDP
-    cta_primary_text: Get Started
-    cta_primary_link: https://app.pulumi.com/
-    cta_secondary_text: Contact Us
-    cta_secondary_link: /contact/
+    title_primary: Self-service infrastructure
+    title_secondary: at any scale.
+    description: Build golden paths with reusable components and templates. Enable self-service provisioning through code, YAML, or developer portals — with governance built in.
     image: /images/product/internal-developer-platforms/idp-hero-image.svg
     image_alt: Pulumi internal developer platform services dashboard
     anchor: hero
 
   - type: product_two_column
-    heading: The platform engineers choose to build their Internal Developer Platform.
+    heading: Everything you need to build your internal developer platform.
     description: |
       Golden paths and guardrails, without the slowdown.
 
@@ -39,11 +34,11 @@ sections:
       - icon: fa-shield-alt
         title: Engineer-friendly governance
         description: |
-          Policy as code enforces standards automatically — while engineers work how they prefer, in code, YAML, UI, or API.
+          Engineers work how they prefer — in code, YAML, UI, or APIs – all with consistent governance.
       - icon: fa-eye
-        title: Day 2 ready
+        title: Day 2-ready
         description: |
-          Handle provisioning, updates, drift detection, and compliance from day one.
+          Handle provisioning, updates, drift detection, and compliance beyond initial provisioning.
     anchor: overview
 
   - type: video_embed
@@ -79,7 +74,7 @@ sections:
 
       - **Low-Code**: Simple YAML for standard patterns. Platform teams create the templates, engineers fill in the values.
 
-      - **No-Code**: Deploy through Pulumi's project wizard or integrate with Backstage. Click to provision.
+      - **No-Code**: Deploy through Pulumi's project wizard or integrate with [Backstage](/docs/idp/concepts/backstage-plugin/). Click to provision.
 
       - **REST API**: Programmatic access for custom tools and workflows. Build your own interfaces.
     image: /images/product/internal-developer-platforms/idp-self-service.svg
@@ -114,9 +109,9 @@ sections:
         cta_link: /contact/?form=request-a-demo
       - title: Platform engineering guide
         description: Learn how to build an IDP with components, templates, policies, and self-service patterns.
-        cta_primary_text: See Neo in Action
-        cta_primary_link: /product/neo/
-        cta_text: Read the Docs
-        cta_link: /docs/idp/concepts/
+        cta_primary_text: Read the Docs
+        cta_primary_link: /docs/idp/concepts/
+        cta_text: Explore Templates
+        cta_link: /docs/idp/concepts/organization-templates/
     anchor: get-started
 ---

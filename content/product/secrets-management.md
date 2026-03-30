@@ -11,24 +11,20 @@ aliases:
 
 sections:
   - type: product_hero
-    title_primary: "Zero sprawl."
-    title_secondary: "One place for every secret."
-    title_reversed: true
-    description: Manage all your secrets and configuration at scale with Pulumi ESC.
-    cta_primary_text: Get Started
-    cta_primary_link: https://app.pulumi.com/signup
-    cta_secondary_text: Contact Us
-    cta_secondary_link: /contact/
+    title_primary: Centralized configuration,
+    title_secondary: "zero sprawl."
+    title_reversed: false
+    description: Compose, manage, and share configuration and secrets across environments with Pulumi ESC.
     image: /images/product/secrets-management/esc-hero.svg
     image_alt: Pulumi ESC secrets management — connect any secrets store
     anchor: hero
 
   - type: product_two_column
-    heading: One interface for all your secrets
+    heading: One interface for all your secrets and configuration
     description: |
       **Connect any secrets store and control everything centrally.**
 
-      Pulumi ESC (Environments, Secrets, Configuration) centralizes secrets from every vault and cloud provider. No more juggling AWS Secrets Manager, HashiCorp Vault, and Azure Key Vault separately. Connect them all, manage them centrally, access them anywhere.
+      Pulumi ESC (Environments, Secrets, Configuration) centralizes secrets from every vault and cloud provider. Supports AWS Secrets Manager, HashiCorp Vault, Azure Key Vault, 1Password, and more, and connects them all into a single control plane with consistent access, RBAC, and audit logging across every provider.
     cards:
       - icon: fa-code
         title: Eliminate secrets sprawl
@@ -78,7 +74,7 @@ sections:
         description: |
           Generate just-in-time, short-lived credentials via OIDC. Automatically revoke access when leases expire.
       - icon: fa-cubes
-        title: Environment composition
+        title: Composable environments
         description: |
           Build complex configurations from simple, reusable components. Inherit common settings while overriding specific values.
       - icon: fa-shield-alt

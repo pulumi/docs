@@ -19,11 +19,7 @@ meta_image: /images/product/neo/neo-meta.png
 sections:
   - type: product_hero
     title: "Meet Neo, your new AI infrastructure agent."
-    description: Ship infrastructure faster, safely.
-    cta_primary_text: Get Started
-    cta_primary_link: https://app.pulumi.com/signup
-    cta_secondary_text: Contact Us
-    cta_secondary_link: /contact/
+    description: Neo provisions, governs, and optimizes your cloud infrastructure — with enterprise controls built in.
     image: /images/product/neo/neo-hero.svg
     image_alt: Neo AI infrastructure agent diagram showing Kubernetes cluster upgrade automation
     image_max_width: 1076px
@@ -37,14 +33,14 @@ sections:
       Neo is the industry's first AI agent built from the ground up to execute, govern, and optimize complex cloud automation at enterprise scale. Unlike generic AI tools, Neo understands infrastructure dependencies, respects your policies, and works within your existing Pulumi governance.
     cards:
       - icon: fa-code
-        title: 18x faster provisioning
-        description: Werner Enterprises reduced provisioning time from 3 days to 4 hours. Automate complex multi-cloud deployments in minutes.
+        title: Faster provisioning
+        description: Automate complex multi-cloud deployments in minutes. Werner Enterprises reduced provisioning time from 3 days to 4 hours.
       - icon: fa-shield-alt
-        title: 90% fewer policy violations
+        title: Fewer policy violations
         description: Neo enforces your governance policies automatically. RBAC, compliance rules, and security standards built into every action.
       - icon: fa-cogs
         title: End-to-end automation
-        description: From provisioning to updates to debugging. Neo handles the full infrastructure lifecycle, not just code generation.
+        description: From provisioning to updates to debugging, Neo handles the full infrastructure lifecycle, not just code generation.
     anchor: why-neo
 
   - type: video_embed
@@ -66,7 +62,7 @@ sections:
   - type: section_header
     tag_line: Agentic infrastructure AI
     title: What Neo can do for you
-    description: Neo automates your infrastructure, from cloud tasks and cost insights to code generation, so your team moves faster with full control and confidence.
+    description: Neo automates your infrastructure, from cloud tasks and cost insights to code generation, so your team can move faster with full control and confidence.
     image: /images/product/neo/neo-screenshot.png
     image_alt: Neo AI infrastructure agent interface screenshot
     anchor: capabilities
@@ -92,13 +88,13 @@ sections:
         description: Ask why a deployment failed or what's misconfigured. Neo investigates and explains in seconds.
       - icon: fa-check-double
         title: Compliance checks
-        description: Scan for misconfigurations and policy violations across your infrastructure with a single question.
+        description: Neo can scan for misconfigurations and policy violations across your infrastructure with a single question.
       - icon: fa-network-wired
         title: Multi-cloud visibility
-        description: Unified view across AWS, Azure, Google Cloud, and 160+ providers, all in one place.
+        description: Neo has visibility across AWS, Azure, Google Cloud, and hundreds of other providers, all in one place.
       - icon: fa-code
         title: Generate infrastructure code
-        description: Create Pulumi programs in TypeScript, Python, Go, and more from a simple prompt, following production best practices.
+        description: Neo can create Pulumi programs in TypeScript, Python, Go, and more from a simple prompt, following Pulumi best practices.
       - icon: fa-laptop-code
         title: IDE integration
         description: Neo works inside VS Code, Cursor, Claude Code, and Windsurf via MCP server, right where you already code.

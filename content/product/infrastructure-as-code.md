@@ -25,7 +25,7 @@ sections:
     description: |
       TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Get autocomplete, type checking, and all your favorite IDE features.
 
-      Build on AWS, Azure, Google Cloud, Kubernetes, and thousands of providers. Our open source engine is Apache 2.0 licensed and will always remain free.
+      Build on AWS, Azure, Google Cloud, Kubernetes, and hundreds of other providers. Our open source engine is Apache 2.0 licensed and will always be free.
     cards:
       - icon: fa-code
         title: Use real code, not DSLs
@@ -34,7 +34,7 @@ sections:
       - icon: fa-cloud
         title: Build on any cloud
         description: |
-          Access AWS, Azure, Google Cloud, Kubernetes, and thousands of providers through a unified, consistent API. Same-day updates for new cloud features.
+          Access AWS, Azure, Google Cloud, Kubernetes, and hundreds of providers through a unified, consistent API. Same-day updates for new cloud features.
       - icon: fa-check
         title: Test before you ship
         description: |
@@ -58,8 +58,8 @@ sections:
         label: engineers building with Pulumi
       - number: "4,000+"
         label: companies in production
-      - number: "1,000+"
-        label: of cloud and service providers
+      - number: "300+"
+        label: cloud and service providers
 
   - type: testimonial_product
     quote: |
@@ -108,9 +108,9 @@ sections:
         description: |
           Ship EKS clusters, serverless apps, or entire platforms with one line of code using well-architected components.
       - icon: fa-th-large
-        title: Thousands of providers
+        title: Hundreds of providers
         description: |
-          Full API coverage for AWS, Azure, Google Cloud, Kubernetes, plus Cloudflare, Datadog, GitHub, and thousands more.
+          Full API coverage for AWS, Azure, Google Cloud, Kubernetes, plus Cloudflare, Datadog, GitHub, and hundreds more.
       - icon: fa-rocket
         title: From VMs to Kubernetes
         description: |
@@ -163,7 +163,7 @@ sections:
         description: |
           Never lose state again. Automatic versioning and encryption at rest. Pulumi Cloud handles it all, or self-host with S3/Azure Blob.
       - icon: fa-key
-        title: Secrets that actually work
+        title: Built-in secrets management
         description: |
           No more secrets in plaintext. Automatic encryption for sensitive values. Integrate with AWS Secrets Manager, Azure Key Vault, or use [Pulumi ESC](/product/secrets-management/) for centralized secrets.
       - icon: fa-check-circle
@@ -173,7 +173,7 @@ sections:
       - icon: fa-globe
         title: See everything, everywhere
         description: |
-          Single pane of glass for all your clouds. Search across AWS, Azure, and GCP. Find that rogue EC2 instance in seconds.
+          Unified view across all your clouds. Search across AWS, Azure, and GCP. Find that rogue EC2 instance in seconds.
       - icon: fa-plug
         title: Automation API
         description: |
