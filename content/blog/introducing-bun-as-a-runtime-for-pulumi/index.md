@@ -19,7 +19,7 @@ social:
     linkedin:
 ---
 
-Last year we added support for [Bun as a package manager](/blog/bun-package-manager/) for Pulumi TypeScript projects. Today we're taking the next step: Bun is now a fully supported runtime for Pulumi programs. Set `runtime: bun` in your `Pulumi.yaml` and Bun will execute your entire Pulumi program, with no Node.js required. This was one of our [most requested features](https://github.com/pulumi/pulumi/issues/13904).
+Last year we added support for [Bun as a package manager](/blog/bun-package-manager/) for Pulumi TypeScript projects. Today we're taking the next step: Bun is now a fully supported runtime for Pulumi programs. Set `runtime: bun` in your `Pulumi.yaml` and Bun will execute your entire Pulumi program, with no Node.js required. Since Bun's 1.0 release, this has been one of our [most requested features](https://github.com/pulumi/pulumi/issues/13904).
 
 <!--more-->
 
