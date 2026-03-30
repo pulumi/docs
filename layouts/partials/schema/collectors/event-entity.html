@@ -24,28 +24,26 @@
   {{ $schema = merge $schema (dict "duration" .) }}
 {{ end }}
 
-{{/* Add location */}}
-{{ $location := .Params.location }}
-{{ if $location }}
-  {{ if eq $location "virtual" }}
-    {{/* Virtual event */}}
-    {{ $schema = merge $schema (dict
-      "eventAttendanceMode" "https://schema.org/OnlineEventAttendanceMode"
-      "location" (dict
-        "@type" "VirtualLocation"
-        "url" .Permalink
-      )
-    ) }}
-  {{ else }}
-    {{/* Physical location */}}
-    {{ $schema = merge $schema (dict
-      "eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode"
-      "location" (dict
-        "@type" "Place"
-        "name" $location
-      )
-    ) }}
-  {{ end }}
+{{/* Add location — default to virtual when not specified, since Google requires location for Event schema */}}
+{{ $location := .Params.location | default "virtual" }}
+{{ if eq $location "virtual" }}
+  {{/* Virtual event */}}
+  {{ $schema = merge $schema (dict
+    "eventAttendanceMode" "https://schema.org/OnlineEventAttendanceMode"
+    "location" (dict
+      "@type" "VirtualLocation"
+      "url" .Permalink
+    )
+  ) }}
+{{ else }}
+  {{/* Physical location */}}
+  {{ $schema = merge $schema (dict
+    "eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode"
+    "location" (dict
+      "@type" "Place"
+      "name" $location
+    )
+  ) }}
 {{ end }}
 
 {{/* Add event status - if external and block_external_search_index is true, might be past */}}
