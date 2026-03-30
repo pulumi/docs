@@ -35,7 +35,7 @@
         <h4 class="template-feature-card-title">{{ .title }}</h4>
         {{ end }}
         {{ if .description }}
-        <p class="template-feature-card-description">{{ .description | markdownify }}</p>
+        <div class="template-feature-card-description">{{ .description | markdownify }}</div>
         {{ end }}
     </div>
     {{ end }}
