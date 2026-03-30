@@ -32,9 +32,7 @@ To set up the GitLab integration, you must be an org admin in Pulumi Cloud and h
 1. Select **Add account** and choose **GitLab**, then follow the prompts to authorize with GitLab.
 1. Select the GitLab group you want to integrate with and configure your [integration settings](#integration-settings).
 
-If your GitLab plan supports Group Access Tokens (Premium or Ultimate), Pulumi automatically registers a group-level webhook on your GitLab group. No manual webhook or pipeline configuration is required.
-
-If you are on the Free plan (using User OAuth Token auth), you must [configure the webhook manually](#manual-webhook-setup).
+Pulumi automatically registers a group-level webhook on your GitLab group. No manual webhook or pipeline configuration is required.
 
 ### Authentication methods
 
@@ -126,25 +124,6 @@ Use GitLab CI's built-in OIDC tokens to authenticate with Pulumi Cloud without s
 ## Template sources
 
 Use GitLab repositories as template sources for [Pulumi IDP](/docs/idp/concepts/organization-templates/). Your teams can reference GitLab-hosted Pulumi templates when creating new projects through the developer portal. For details on registering template repositories, see [New project wizard](#new-project-wizard).
-
-## Manual webhook setup
-
-{{% notes type="warning" %}}
-This section is only required for GitLab Free plan users. If you are on a Premium or Ultimate plan, Pulumi configures webhooks automatically during [installation](#installation-and-configuration).
-{{% /notes %}}
-
-To receive merge request previews and deployment triggers on the Free plan, you must manually configure a webhook on your GitLab group or project.
-
-1. [Create a Pulumi access token](/docs/administration/access-identity/access-tokens/) for the account you want merge request comments posted as.
-1. In GitLab, navigate to your group or project's **Settings** > **Webhooks**.
-1. Fill out the form:
-    - **URL**: `https://api.pulumi.com/workflow/gitlab`
-    - **Secret Token**: The Pulumi access token you created above
-    - Under **Trigger**, check only **Push events** and **Merge request events**
-1. Ensure **SSL verification** is enabled.
-1. Select **Add webhook**.
-
-You can configure the webhook at the group level (applies to all projects in the group) or at the project level.
 
 ## Troubleshooting
 
