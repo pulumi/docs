@@ -49,7 +49,7 @@ sections:
   - emoji: 💠
     heading: .NET (C#, F#, VB) ↗
     description: API reference for the .NET SDK.
-    link: /docs/reference/pkg/dotnet/Pulumi/Pulumi.html
+    link: /docs/reference/pkg/dotnet/pulumi/pulumi.html
 
   - emoji: ☕
     heading: Java ↗
