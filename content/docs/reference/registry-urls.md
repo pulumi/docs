@@ -7,6 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     reference:
         name: Registry URLs
+        parent: reference-home
         weight: 5
 ---
 
