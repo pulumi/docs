@@ -78,7 +78,28 @@ env:
   SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 ```
 
-After the migration, workflows use OIDC to fetch everything dynamically:
+After the migration, an [ESC environment](/docs/esc/environments/) handles credential fetching via OIDC. Here is what the environment definition looks like:
+
+```yaml
+values:
+  aws:
+    login:
+      fn::open::aws-login:
+        oidc:
+          duration: 1h
+          roleArn: arn:aws:iam::123456789012:role/pulumi-esc-role
+          sessionName: esc-${context.pulumi.user.login}
+          policyArns:
+            - arn:aws:iam::123456789012:policy/ci-build-minimal
+  environmentVariables:
+    AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
+    AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
+    AWS_SESSION_TOKEN: ${aws.login.sessionToken}
+```
+
+Notice the [`policyArns` option](/docs/esc/integrations/dynamic-login-credentials/aws-login/): a single ESC environment can contain multiple login providers, each assuming a different IAM role, and `policyArns` lets you scope each provider's session credentials down even further. This means you can enforce least privilege at the login provider level — one provider for S3 artifact uploads, another for EC2 test infrastructure — all within the same environment.
+
+The workflow itself becomes minimal — a single step that authenticates via OIDC and injects the credentials:
 
 ```yaml
 permissions:
@@ -87,18 +108,9 @@ permissions:
 
 steps:
   - name: Fetch secrets from ESC
-    id: esc-secrets
     uses: pulumi/esc-action@v1
-    env:
-      ESC_ACTION_OIDC_AUTH: "true"
-      ESC_ACTION_OIDC_ORGANIZATION: pulumi
-      ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
-
-  - name: Configure AWS Credentials
-    uses: aws-actions/configure-aws-credentials@v4
     with:
-      aws-access-key-id: ${{ steps.esc-secrets.outputs.AWS_ACCESS_KEY_ID }}
-      aws-secret-access-key: ${{ steps.esc-secrets.outputs.AWS_SECRET_ACCESS_KEY }}
+      environment: '<your-organization>/<your-esc-env>'
 ```
 
 The static `secrets.*` references are gone entirely. Every credential is fetched at runtime through ESC.
