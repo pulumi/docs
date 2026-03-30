@@ -73,10 +73,10 @@ Before this migration, our workflows referenced static secrets stored in GitHub:
 
 ```yaml
 env:
-  AWS_ACCESS_KEY_ID: ${{"{{"}} secrets.AWS_ACCESS_KEY_ID {{"}}"}}
-  AWS_SECRET_ACCESS_KEY: ${{"{{"}} secrets.AWS_SECRET_ACCESS_KEY {{"}}"}}
-  PULUMI_BOT_TOKEN: ${{"{{"}} secrets.PULUMI_BOT_TOKEN {{"}}"}}
-  SLACK_WEBHOOK_URL: ${{"{{"}} secrets.SLACK_WEBHOOK_URL {{"}}"}}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  PULUMI_BOT_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 ```
 
 After the migration, workflows use OIDC to fetch everything dynamically:
@@ -94,13 +94,12 @@ steps:
       ESC_ACTION_OIDC_AUTH: "true"
       ESC_ACTION_OIDC_ORGANIZATION: pulumi
       ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
-      ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-pulumi-aws
 
   - name: Configure AWS Credentials
     uses: aws-actions/configure-aws-credentials@v4
     with:
-      aws-access-key-id: ${{"{{"}} steps.esc-secrets.outputs.AWS_ACCESS_KEY_ID {{"}}"}}
-      aws-secret-access-key: ${{"{{"}} steps.esc-secrets.outputs.AWS_SECRET_ACCESS_KEY {{"}}"}}
+      aws-access-key-id: ${{ steps.esc-secrets.outputs.AWS_ACCESS_KEY_ID }}
+      aws-secret-access-key: ${{ steps.esc-secrets.outputs.AWS_SECRET_ACCESS_KEY }}
 ```
 
 The static `secrets.*` references are gone entirely. Every credential is fetched at runtime through ESC.
@@ -112,7 +111,7 @@ We did not do this for one or two flagship repos. We rolled this out across **ev
 The pattern is the same everywhere:
 
 - Each repo has a corresponding ESC environment under a `github-secrets/` project.
-- All workflow-level `${{"{{"}} secrets.* {{"}}"}}` references have been removed.
+- All workflow-level `${{ secrets.* }}` references have been removed.
 - The `pulumi/esc-action` step with OIDC auth is the single entry point for all credentials.
 
 This consistency matters. When every repo follows the same pattern, security posture is verifiable and auditable — not a patchwork of manual configurations.
@@ -121,7 +120,7 @@ This consistency matters. When every repo follows the same pattern, security pos
 
 Beyond eliminating static secrets, this migration gave us centralized visibility and control that GitHub Secrets simply cannot provide:
 
-- **Audit logging.** ESC records which credentials were accessed, when, and by which workflow. This is a meaningful improvement over GitHub's binary "secret was used" signal.
+- **[Audit logging](/docs/esc/administration/audit-logs/).** ESC records which credentials were accessed, when, and by which workflow. This is a meaningful improvement over GitHub's binary "secret was used" signal.
 - **Centralized access policies.** Access rules are defined once in ESC, not scattered across individual repository settings pages.
 - **Single-point rotation.** When a credential needs to change, we update it in one ESC environment. All 70+ repos pick up the change on their next run — no coordinated repo-by-repo updates.
 - **Dynamic credentials by default.** For cloud providers like AWS, Azure, and GCP, ESC fetches credentials via OIDC at open time. There is nothing to rotate because nothing is stored.
