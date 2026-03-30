@@ -47,7 +47,13 @@
                     <article class="pb-16 mb-16 border-b border-gray-300 md:flex items-start">
                         <div class="mb-8 md:mb-0 md:pt-2 px-8 md:w-1/3">
                             <a href="{{ .RelPermalink }}">
-                                <img class="md:block w-40 md:w-48 mx-auto" src="{{ .Params.customer_logo }}" alt="{{ .Params.customer_name }} logo" />
+                                {{ $fpSrc := strings.TrimPrefix "/" .Params.customer_logo }}
+                                {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+                                {{ if $fpAsset }}
+                                    {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" (printf "%s logo" .Params.customer_name) "class" "md:block w-40 md:w-48 mx-auto") }}
+                                {{ else }}
+                                    <img class="md:block w-40 md:w-48 mx-auto" src="{{ .Params.customer_logo }}" alt="{{ .Params.customer_name }} logo" />
+                                {{ end }}
                             </a>
                         </div>
                         <div class="md:w-2/3">

@@ -234,7 +234,7 @@
                                 </div>
                                 <p class="ml-4 text-gray-600">{{ $tweet.username }}</p>
                                 <div class="flex-grow flex justify-end my-4">
-                                    <img class="h-6" src="/logos/tech/x.svg" alt="X" width="24" height="24" />
+                                    {{ partial "fingerprinted-img.html" (dict "src" "logos/tech/x.svg" "alt" "X" "class" "h-6" "width" "24" "height" "24") }}
                                 </div>
                             </div>
                         </div>
@@ -265,7 +265,7 @@
                                 </a>
 
                                 {{ if eq $tweet.source "twitter" }}
-                                <img class="w-8 h-8" src="/logos/tech/x.svg" alt="Twitter" width="32" height="32" />
+                                {{ partial "fingerprinted-img.html" (dict "src" "logos/tech/x.svg" "alt" "Twitter" "class" "w-8 h-8" "width" "32" "height" "32") }}
                                 {{ end }}
 
                                 {{ if eq $tweet.source "reddit" }}
@@ -273,7 +273,7 @@
                                 {{ end }}
 
                                 {{ if eq $tweet.source "linkedin" }}
-                                <img class="w-8 h-8" src="/logos/tech/linkedin.svg" alt="LinkedIn" width="32" height="32" />
+                                {{ partial "fingerprinted-img.html" (dict "src" "logos/tech/linkedin.svg" "alt" "LinkedIn" "class" "w-8 h-8" "width" "32" "height" "32") }}
                                 {{ end }}
 
                                 {{ if eq $tweet.source "blog" }}

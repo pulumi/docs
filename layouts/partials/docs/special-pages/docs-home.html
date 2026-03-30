@@ -74,7 +74,13 @@
                                         {{ .heading }}
                                     {{ else if .image }}
                                         <span class="flex items-center gap-2">
-                                            <img src="{{ .image }}" alt="" class="h-6 w-6 object-contain flex-shrink-0">
+                                            {{ $fpSrc := strings.TrimPrefix "/" .image }}
+                                            {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+                                            {{ if $fpAsset }}
+                                                {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" "" "class" "h-6 w-6 object-contain flex-shrink-0") }}
+                                            {{ else }}
+                                                <img src="{{ .image }}" alt="" class="h-6 w-6 object-contain flex-shrink-0">
+                                            {{ end }}
                                             <span>{{ .heading }}</span>
                                         </span>
                                     {{ else }}

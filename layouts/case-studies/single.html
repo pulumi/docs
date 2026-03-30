@@ -9,7 +9,13 @@
                 <div class="w-full md:w-1/2 px-24 py-8 text-center justify-center align-middle bg-purple-100 flex rounded-tl-xl rounded-bl-xl">
                     <div class="pb-4 my-auto w-full flex flex-col items-center">
                         <div class="w-40">
-                            <img src="{{ .Params.customer_logo }}" alt=".Params.customer_name" />
+                            {{ $fpSrc := strings.TrimPrefix "/" .Params.customer_logo }}
+                            {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+                            {{ if $fpAsset }}
+                                {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" .Params.customer_name) }}
+                            {{ else }}
+                                <img src="{{ .Params.customer_logo }}" alt="{{ .Params.customer_name }}" />
+                            {{ end }}
                         </div>
                         {{ if .Params.quote_block.quote }}
                             <p class="text-lg">
@@ -61,12 +67,22 @@
                     {{ $image_classes = "inline-block md:float-right max-w-xs w-48 pb-2 md:pb-0 " }}
                 {{ end }}
                 {{ $image_title := print (or .Params.customer_name "Customer") " logo" }}
+                {{ $fpSrc := strings.TrimPrefix "/" .Params.customer_logo }}
+                {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
                 {{ if .Params.customer_url }}
                     <a href="{{ .Params.customer_url }}" class="{{ $image_classes }}">
-                        <img src="{{ .Params.customer_logo }}" class="{{ $image_classes }}" alt="{{ $image_title }}" />
+                        {{ if $fpAsset }}
+                            {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" $image_title "class" $image_classes) }}
+                        {{ else }}
+                            <img src="{{ .Params.customer_logo }}" class="{{ $image_classes }}" alt="{{ $image_title }}" />
+                        {{ end }}
                     </a>
                 {{ else }}
-                    <img src="{{ .Params.customer_logo }}" class="{{ $image_classes }}" alt="{{ $image_title }}" />
+                    {{ if $fpAsset }}
+                        {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" $image_title "class" $image_classes) }}
+                    {{ else }}
+                        <img src="{{ .Params.customer_logo }}" class="{{ $image_classes }}" alt="{{ $image_title }}" />
+                    {{ end }}
                 {{ end }}
             {{ end }}
             {{ .Content }}
