@@ -174,6 +174,9 @@ pushd "$programs_dir"
                     -H "Content-Type: application/json" \
                     -d '{"location": "eastus"}' > /dev/null || true
             fi
+
+            # Set the subscription ID config for YAML programs that need it.
+            pulumi -C "$project" config set subscriptionId "${ARM_SUBSCRIPTION_ID}" || true
         fi
 
         # Preview or deploy.
