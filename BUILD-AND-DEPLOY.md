@@ -1598,9 +1598,9 @@ Delivery: CloudWatch Logs infrastructure v2
 | /ai/* | S3 Main | 1 week | 410 Gone (Lambda@Edge) |
 | /uploads/* | Uploads | 1 hour | User uploads |
 | /fonts/* | S3 Main | 1 hour | Web fonts |
-| /icons/* | S3 Main | 30 days | Icons |
-| /logos/brand/* | S3 Main | 30 days | Brand logos |
-| /logos/* | S3 Main | 30 days | Logos |
+| /icons/* | S3 Main | 1 hour | Icons |
+| /logos/brand/* | S3 Main | 30 minutes | Brand logos |
+| /logos/* | S3 Main | 1 hour | Logos |
 | /fingerprinted/* | S3 Main | 1 year (immutable) | Content-hashed assets |
 | *.woff,*.woff2 | S3 Main | 1 year | Font files |
 
