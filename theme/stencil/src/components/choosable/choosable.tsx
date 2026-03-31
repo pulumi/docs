@@ -65,7 +65,11 @@ export class Choosable {
 
     componentWillLoad() {
         // By default, mode is global, until told otherwise by some parental chooser.
-        this.mode = "global";
+        // Only set the default if the mode hasn't already been set (e.g., by a parent
+        // chooser that called setAttribute("mode", "local") before this element upgraded).
+        if (!this.mode) {
+            this.mode = "global";
+        }
 
         // Try to subscribe immediately if the store is ready.
         // This avoids waiting for the "rendered" event when possible.
