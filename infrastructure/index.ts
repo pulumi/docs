@@ -505,9 +505,7 @@ const fiveMinutes = 60 * 5;
 const tenMinutes = fiveMinutes * 2;
 const thirtyMinutes = fiveMinutes * 6;
 const oneHour = fiveMinutes * 12;
-const oneDay = oneHour * 24;
-const thirtyDays = oneDay * 30;
-const oneWeek = oneDay * 7;
+const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
 
 // AllViewerExceptHostHeader passes all cookies, querystrings, and headers except the Host header.
@@ -573,15 +571,16 @@ const CopilotSecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('c
     },
 });
 
-// Static assets (icons, logos, SVGs) get 30-day browser caching to meet
-// Google's minimum cacheable-resource threshold. CloudFront edge TTLs are
-// set separately via defaultTtl/maxTtl on each cache behavior.
-const StaticAssetCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('static-asset-cache-headers', {
+// Fingerprinted/hashed assets get immutable browser caching (1 year).
+// This is separate from CloudFront edge TTLs (defaultTtl/maxTtl) which only
+// control CDN-level caching. Without this policy, browsers see no Cache-Control
+// header and fall back to heuristic caching with 304 revalidation round-trips.
+const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-logo-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
         items: [{
             header: "Cache-Control",
-            value: "public, max-age=2592000",
+            value: "public, max-age=1800",
             override: true,
         }],
     },
@@ -593,6 +592,17 @@ const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cac
         items: [{
             header: "Cache-Control",
             value: "max-age=60, stale-while-revalidate=300",
+            override: true,
+        }],
+    },
+});
+
+const OneHourCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('one-hour-cache-headers', {
+    securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [{
+            header: "Cache-Control",
+            value: "public, max-age=3600",
             override: true,
         }],
     },
@@ -900,23 +910,23 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/icons/*",
-            defaultTtl: thirtyDays,
-            maxTtl: thirtyDays,
-            responseHeadersPolicyId: StaticAssetCachePolicy.id,
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            responseHeadersPolicyId: BrandLogoCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/logos/brand/*",
-            defaultTtl: thirtyDays,
-            maxTtl: thirtyDays,
-            responseHeadersPolicyId: StaticAssetCachePolicy.id,
+            defaultTtl: thirtyMinutes,
+            maxTtl: thirtyMinutes,
+            responseHeadersPolicyId: BrandLogoCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/logos/*",
-            defaultTtl: thirtyDays,
-            maxTtl: thirtyDays,
-            responseHeadersPolicyId: StaticAssetCachePolicy.id,
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            responseHeadersPolicyId: OneHourCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
