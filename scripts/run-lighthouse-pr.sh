@@ -27,6 +27,7 @@ echo "Running Lighthouse audits against ${base_url}..."
 
 chrome_flags="--headless --no-sandbox"
 tmp_dir="$(mktemp -d)"
+trap 'rm -rf "$tmp_dir"' EXIT
 
 score_indicator() {
     local score=$1
@@ -72,7 +73,7 @@ for i in "${!page_paths[@]}"; do
             lh_args+=(--preset=desktop)
         fi
 
-        if ! npx --yes lighthouse "${lh_args[@]}"; then
+        if ! npx lighthouse "${lh_args[@]}"; then
             echo "Lighthouse failed for ${page_names[$i]} (${device}), continuing..."
         fi
     done
@@ -143,10 +144,10 @@ if [[ -n "$GITHUB_EVENT_PATH" ]]; then
         existing_id=$(echo "$existing" | jq -r '.id // empty')
 
         if [[ -n "$existing_id" ]]; then
-            # Replace any old Lighthouse section (everything from the first ---) with fresh results.
+            # Replace any old Lighthouse section (everything from the results marker onward).
             existing_body=$(echo "$existing" | jq -r '.body')
-            preview_section="${existing_body%%---*}"
-            combined="${preview_section}${comment_body}"
+            preview_section="${existing_body%%<!-- lighthouse-results -->*}"
+            combined="${preview_section}<!-- lighthouse-results -->"$'\n'"${comment_body}"
             json_payload=$(jq -n --arg body "$combined" '{"body": $body}')
 
             echo "Updating preview comment (${existing_id}) with Lighthouse results..."
@@ -179,8 +180,5 @@ else
     echo "Not running in GitHub Actions. Printing results to stdout:"
     echo "$comment_body"
 fi
-
-# Cleanup.
-rm -rf "$tmp_dir"
 
 echo "Lighthouse audits complete."

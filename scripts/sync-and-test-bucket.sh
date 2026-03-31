@@ -119,7 +119,7 @@ aws s3api put-bucket-cors --bucket "$destination_bucket" --cors-configuration "f
 if [[ "$1" == "preview" ]]; then
     pr_comment_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")"
     repo_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request.base.repo.url")"
-    preview_body="<!-- lighthouse-report -->"$'\n'"Your site preview for commit $(git_sha_short) is ready! :tada:"$'\n\n'"${s3_website_url}"
+    preview_body="<!-- lighthouse-report -->"$'\n'"Your site preview for commit $(git_sha_short) is ready! :tada:"$'\n\n'"${s3_website_url}"$'\n'"<!-- lighthouse-results -->"
     preview_payload=$(jq -n --arg body "$preview_body" '{"body": $body}')
 
     # Look for an existing preview comment to update (handles CI re-runs).
