@@ -56,7 +56,7 @@ sequenceDiagram
     participant Cloud as Cloud Provider (AWS/Azure/GCP)
 
     Runner->>GH: Request OIDC token (scoped to workflow run)
-    GH-->>Runner: Short-lived JWT (~5 min)
+    GH-->>Runner: Short-lived JWT
     Runner->>PC: Exchange JWT for Pulumi access token
     PC-->>Runner: Short-lived access token
     Runner->>ESC: Open environment with access token
@@ -74,8 +74,6 @@ Before this migration, our workflows referenced static secrets stored in GitHub:
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  PULUMI_BOT_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
-  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 ```
 
 After the migration, an [ESC environment](/docs/esc/environments/) handles credential fetching via OIDC. Here is what the environment definition looks like:
@@ -95,7 +93,6 @@ values:
   environmentVariables:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
     AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
-    AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
 The `roleArn` and optional [`policyArns`](/docs/esc/integrations/dynamic-login-credentials/aws-login/) make least-privilege straightforward: each login provider assumes a specific role, and `policyArns` can scope the session down further. You can use multiple login providers in one environment or separate environments per workflow to match permissions to each job's needs.
@@ -134,7 +131,7 @@ Beyond eliminating static secrets, this migration gave us centralized visibility
 
 - **[Audit logging](/docs/esc/administration/audit-logs/).** ESC records which credentials were accessed, when, and by which workflow. This is a meaningful improvement over GitHub's binary "secret was used" signal.
 - **Centralized access policies.** Access rules are defined once in ESC rather than scattered across individual repository settings pages.
-- **Single-point rotation.** When a credential needs to change, we update it in one ESC environment, and all 70+ repos pick up the change on their next run, no coordinated repo-by-repo updates necessary.
+- **Single-point rotation.** Because ESC environments can [import other environments](/docs/esc/environments/imports/), shared credentials live in a common base that all 70+ repo environments compose of. Update it once, and every repo picks up the change on its next run.
 - **Dynamic credentials by default.** For cloud providers like AWS, Azure, and GCP, ESC fetches credentials via OIDC at open time. There is nothing to rotate because nothing is stored.
 
 ## What happens if a GitHub Action is compromised
@@ -154,7 +151,8 @@ The goal is not to prevent every possible attack. It is to make the blast radius
 
 If you want to adopt the same pattern in your own CI pipelines:
 
-- [**Pulumi ESC GitHub Action**](/blog/announcing-pulumi-esc-github-action/) — How the action works and how to set it up.
+- [**Tutorial: Using ESC with GitHub Actions**](/tutorials/esc-github/) — Step-by-step setup guide.
+- [**Announcing the Pulumi ESC GitHub Action**](/blog/announcing-pulumi-esc-github-action/) — Full feature overview and capabilities.
 - [**Configuring OIDC for ESC**](/docs/esc/guides/configuring-oidc/) — Set up OIDC trust between ESC and your cloud providers.
 - [**Pulumi ESC documentation**](/docs/esc/) — Full documentation for environments, secrets, and configuration.
 
