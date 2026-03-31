@@ -10,6 +10,7 @@
     - title: Author title/role (e.g. "Principal Platform Engineer")
     - company: Company name (for logo alt)
     - logo: Logo path (displayed in right column)
+    - background: Optional background variant — 1 or 2 (defaults to 1)
     - anchor: Optional anchor for section id
 */}}
 
@@ -18,16 +19,10 @@
 {{ $title := .title }}
 {{ $company := .company }}
 {{ $logo := .logo }}
+{{ $bg := .background | default 1 }}
 {{ $anchor := .anchor }}
 
-<section class="template-testimonial-product relative overflow-hidden rounded-2xl px-10 py-16 md:px-16 md:py-20"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    {{ $bg := resources.Get "fingerprinted/images/template-testimonial-bg-1.svg" }}
-    {{ if $bg }}
-        {{ $bg = $bg | fingerprint }}
-        <img class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0" src="{{ $bg.RelPermalink }}" alt="" aria-hidden="true" />
-    {{ else }}
-        <img class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0" src="/images/template-testimonial-bg-1.svg" alt="" aria-hidden="true" />
-    {{ end }}
+<section class="template-testimonial-product template-testimonial-product-bg-{{ $bg }} relative overflow-hidden rounded-2xl px-10 py-16 md:px-16 md:py-20"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center relative z-10">
         <div class="flex-1 lg:max-w-[75%]">
             {{ if $quote }}

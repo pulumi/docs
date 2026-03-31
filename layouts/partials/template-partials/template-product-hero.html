@@ -17,12 +17,14 @@
     - image_alt: Alt text for image (optional)
     - image_max_width: Optional max width for the image (e.g. "800px", "60rem"). Defaults to full width.
     - image_min_width: Optional min width for the image (e.g. "400px", "30rem").
+    - title_reversed: Optional boolean. When true, renders title_secondary (black) above title_primary (purple).
     - anchor: Optional anchor for section id
 */}}
 
 {{ $title := .title }}
 {{ $titlePrimary := .title_primary }}
 {{ $titleSecondary := .title_secondary }}
+{{ $titleReversed := .title_reversed | default false }}
 {{ $description := .description }}
 {{ $ctaPrimaryText := .cta_primary_text | default site.Params.cta.primary.label }}
 {{ $ctaPrimaryLink := .cta_primary_link | default site.Params.cta.primary.href }}
@@ -41,8 +43,13 @@
             {{ if or $titlePrimary $title }}
             <h1 class="product-hero-heading mb-6">
                 {{ if and $titlePrimary $titleSecondary }}
+                {{ if $titleReversed }}
+                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
+                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
+                {{ else }}
                 <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
                 <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
+                {{ end }}
                 {{ else if $titlePrimary }}
                 <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
                 {{ else }}
