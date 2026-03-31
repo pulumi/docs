@@ -134,7 +134,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Enables Copilot help and links in the CLI output, regardless of the Copilot settings for the given Pulumi organization.
+            Enables Neo help and links in the CLI output, regardless of the Neo settings for the given Pulumi organization.
         </p>
         <pre><code class="text-xs">PULUMI_COPILOT=true</code></pre>
     </dd>
@@ -536,7 +536,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Suppresses showing the 'explainFailure' link to Copilot in the CLI output, regardless of the Copilot settings for the given Pulumi organization.
+            Suppresses showing the 'explainFailure' link to Neo in the CLI output, regardless of the Neo settings for the given Pulumi organization.
         </p>
         <pre><code class="text-xs">PULUMI_SUPPRESS_COPILOT_LINK=true</code></pre>
     </dd>
