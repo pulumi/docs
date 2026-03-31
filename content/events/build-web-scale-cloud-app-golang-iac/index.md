@@ -52,7 +52,7 @@ learn:
 # The event presenters
 presenters:
     - name: Engin Diri
-      role: Customer Experience Architect, Pulumi
+      role: Senior Solutions Architect, Pulumi
       photo: /images/team/engin-diri.jpg
 
 # case-sensitive
