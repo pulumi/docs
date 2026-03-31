@@ -542,11 +542,12 @@ Builds and deploys PR preview environments.
 **Steps:**
 
 1. Check for AWS/Pulumi credentials (skip for forks)
-2. Build site: `./scripts/build-site.sh preview`
-3. Sync to preview bucket: `./scripts/sync-and-test-bucket.sh preview`
-4. Generate search index for preview
-5. Pulumi preview (non-destructive): `./scripts/run-pulumi.sh`
-6. Generate S3 redirects
+1. Build site: `./scripts/build-site.sh preview`
+1. Sync to preview bucket: `./scripts/sync-and-test-bucket.sh preview`
+1. Generate search index for preview
+1. Pulumi preview (non-destructive): `./scripts/run-pulumi.sh`
+1. Generate S3 redirects
+1. Run Lighthouse audits (Mobile + Desktop) on preview and post metrics to PR comment: `./scripts/run-lighthouse-pr.sh`
 
 **Usage:**
 
@@ -1059,6 +1060,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
      http://www-testing-pulumi-docs-origin-pr-123-abc1234.s3-website.us-west-2.amazonaws.com
      ```
 
+   - Run Lighthouse performance audits (Mobile + Desktop) and append results to the preview comment
    - Archive test results and metadata
 
 2. **notify**

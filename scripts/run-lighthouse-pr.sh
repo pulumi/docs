@@ -72,7 +72,7 @@ for i in "${!page_paths[@]}"; do
             lh_args+=(--preset=desktop)
         fi
 
-        if ! npx lighthouse "${lh_args[@]}"; then
+        if ! npx --yes lighthouse "${lh_args[@]}"; then
             echo "Lighthouse failed for ${page_names[$i]} (${device}), continuing..."
         fi
     done
@@ -86,9 +86,9 @@ add_line "---"
 add_line ""
 add_line "## Lighthouse Performance Report"
 add_line ""
-add_line "Commit: \`${commit_sha}\`"
+add_line "Commit: \`${commit_sha}\` | [Metric definitions](https://web.dev/articles/vitals)"
 add_line ""
-add_line "| Page | Device | Score | FCP | LCP | TBT | CLS | SI |"
+add_line "| Page | Device | Score | [FCP](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint) | [LCP](https://web.dev/articles/lcp) | [TBT](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time) | [CLS](https://web.dev/articles/cls) | [SI](https://developer.chrome.com/docs/lighthouse/performance/speed-index) |"
 add_line "|------|--------|-------|-----|-----|-----|-----|----|"
 
 for i in "${!page_paths[@]}"; do
