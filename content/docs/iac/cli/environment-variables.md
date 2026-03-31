@@ -129,17 +129,6 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
-            PULUMI_COPILOT
-        </span>
-    </dt>
-    <dd>
-        <p>
-            Enables Copilot help and links in the CLI output, regardless of the Copilot settings for the given Pulumi organization.
-        </p>
-        <pre><code class="text-xs">PULUMI_COPILOT=true</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
             PULUMI_DEBUG_COMMANDS
         </span>
     </dt>
@@ -528,17 +517,6 @@ aliases:
             you may skip the Pulumi version update check by setting this environment variable.
         </p>
         <pre><code class="text-xs">PULUMI_SKIP_UPDATE_CHECK=true</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
-            PULUMI_SUPPRESS_COPILOT_LINK
-        </span>
-    </dt>
-    <dd>
-        <p>
-            Suppresses showing the 'explainFailure' link to Copilot in the CLI output, regardless of the Copilot settings for the given Pulumi organization.
-        </p>
-        <pre><code class="text-xs">PULUMI_SUPPRESS_COPILOT_LINK=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">

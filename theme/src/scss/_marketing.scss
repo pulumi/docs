@@ -38,8 +38,7 @@
     pulumi-resource-links,
     pulumi-filter-select,
     pulumi-user-toggle,
-    pulumi-hubspot-form,
-    pulumi-copilot {
+    pulumi-hubspot-form {
         display: block;
     }
 }
@@ -251,12 +250,4 @@
         }
     }
 
-    // This hides Copilot on the home page, where we have a "Neo takeover" experience.
-    // The section classes are generated based on the folder the page is located in, and our home page exists outside
-    // a folder, hence "section-".
-    .section- {
-        pulumi-copilot {
-            display: none;
-        }
-    }
 }
