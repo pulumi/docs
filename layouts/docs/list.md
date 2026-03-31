@@ -50,7 +50,7 @@ title: {{ .Title }}
 {{- range .Params.providers.provider_list -}}
 ### {{ .display_name }}
 {{ range .content_links -}}
-- [{{ .display_name }}]({{ .url }})
+- [{{ .display_name }}](/registry/packages/{{ .url }})
 {{ end }}
 {{ end -}}
 
@@ -80,7 +80,7 @@ title: {{ .Title }}
 
 ## Policy
 
-[Pulumi CrossGuard]({{ .url }}) — {{ .description }}
+[Pulumi CrossGuard](/docs/insights/{{ .url }}) — {{ .description }}
 {{ end -}}
 {{- range .Params.convert -}}
 
