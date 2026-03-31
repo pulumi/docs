@@ -11,18 +11,22 @@ tags:
     - pulumi-esc
     - azure
 schema_type: auto
+social:
+    twitter: "Automate Azure app secret rotation with Pulumi ESC — never worry about expired credentials again."
+    linkedin: "Automate Azure app secret rotation with Pulumi ESC — never worry about expired credentials again."
+    bluesky: "Automate Azure app secret rotation with Pulumi ESC — never worry about expired credentials again."
 ---
 
-If you manage Azure app registrations, keeping track of client secrets is a constant hassle. Forgetting to rotate them before they expire can lead to broken authentication and unexpected outages. With Pulumi ESC's new `azure-app-secret` rotator, you can automate client secret rotation for your Azure apps, so you never have to worry about expired credentials again!
+If you manage Azure app registrations, keeping track of client secrets is a constant hassle. Forgetting to rotate them before they expire can lead to broken authentication and unexpected outages. With [Pulumi ESC](/docs/esc)'s `azure-app-secret` rotator, you can automate client secret rotation for your Azure apps, so you never have to worry about expired credentials again!
 
 <!--more-->
 
 ## Setup
 
 Prerequisites:
-* An Azure App Registration
-* An [azure-login](/docs/esc/integrations/dynamic-login-credentials/azure-login/) environment
-  * Note for OIDC users: Since Azure does not support wildcard subject matches, you will need to add a federated credential for the azure-login environment as well as each environment that imports it.
+- An Azure App Registration
+- An [azure-login](/docs/esc/integrations/dynamic-login-credentials/azure-login/) environment
+  - Note for OIDC users: Since Azure does not support wildcard subject matches, you will need to add a federated credential for the azure-login environment as well as each environment that imports it.
 
 {{< notes type="info" >}}
 The Azure identity used for rotation must have the `Application.ReadWrite.All` Graph API permission, or the identity must be added as an Owner of the specific app registration whose secrets will be rotated.
