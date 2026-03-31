@@ -95,6 +95,8 @@ for i in "${!page_paths[@]}"; do
     for device in mobile desktop; do
         json_file="${tmp_dir}/${i}-${device}.json"
         page_name="${page_names[$i]}"
+        page_url="${base_url}${page_paths[$i]}"
+        page_link="[${page_name}](${page_url})"
 
         if [[ "$device" == "mobile" ]]; then
             device_label="Mobile"
@@ -103,13 +105,13 @@ for i in "${!page_paths[@]}"; do
         fi
 
         if [[ ! -f "$json_file" ]]; then
-            add_line "| ${page_name} | ${device_label} | Error | - | - | - | - | - |"
+            add_line "| ${page_link} | ${device_label} | Error | - | - | - | - | - |"
             continue
         fi
 
         score_raw=$(jq -r '.categories.performance.score // empty' "$json_file" 2>/dev/null)
         if [[ -z "$score_raw" ]]; then
-            add_line "| ${page_name} | ${device_label} | Error | - | - | - | - | - |"
+            add_line "| ${page_link} | ${device_label} | Error | - | - | - | - | - |"
             continue
         fi
 
@@ -122,7 +124,7 @@ for i in "${!page_paths[@]}"; do
         cls=$(jq -r '.audits["cumulative-layout-shift"].numericValue // 0' "$json_file")
         si=$(jq -r '.audits["speed-index"].numericValue // 0' "$json_file")
 
-        add_line "| ${page_name} | ${device_label} | ${indicator} ${score} | $(format_time_s "$fcp") | $(format_time_s "$lcp") | $(format_tbt "$tbt") | $(format_cls "$cls") | $(format_time_s "$si") |"
+        add_line "| ${page_link} | ${device_label} | ${indicator} ${score} | $(format_time_s "$fcp") | $(format_time_s "$lcp") | $(format_tbt "$tbt") | $(format_cls "$cls") | $(format_time_s "$si") |"
     done
 done
 
