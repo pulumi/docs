@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Cloud Native Rejekts EU 2026"
+  title: "The Ralph Wiggum Loop: How Autonomous AI Loops Built My Serverless SaaS While I Slept"
+  url: "https://cloud-native-rejekts-eu-2026.sessionize.com/schedule/day/20260321"
+  date: 2026-03-21T10:00:00.000+01:00
 - event: "SCaLE 23x"
   title: "Building AI Platforms Without Losing Your Engineering Principles"
   url: "https://www.socallinuxexpo.org/scale/23x/presentations/building-ai-platforms-without-losing-your-engineering-principles"
