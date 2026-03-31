@@ -31,4 +31,69 @@ title: {{ .Title }}
 - [{{ with .heading }}{{ . }}{{ else }}{{ .label }}{{ end }}]({{ .link }}){{ with .description }} — {{ . }}{{ end }}
 {{- end }}
 {{ end -}}
+{{- else if .Params.cloud_overview -}}
+{{- with .Params.h1 }}
+# {{ . }}
+{{ end -}}
+{{- with .Params.description }}
+{{ . }}
+{{ end -}}
+{{- with .Params.get_started_guide }}
+[Get started]({{ .link }})
+{{ end -}}
+
+## Providers
+
+{{ with .Params.providers.description }}{{ . }}
+
+{{ end -}}
+{{- range .Params.providers.provider_list -}}
+### {{ .display_name }}
+{{ range .content_links -}}
+- [{{ .display_name }}]({{ .url }})
+{{ end }}
+{{ end -}}
+
+## Templates
+
+{{- range .Params.templates }}
+- [{{ .display_name }}](/templates/{{ .url }})
+{{- end }}
+
+## Components
+
+{{- range .Params.components }}
+- [{{ .display_name }}](/registry/packages/{{ .url }})
+{{- end }}
+{{ with .Params.guides }}
+
+## Guides
+
+{{ with .description }}{{ . }}
+
+{{ end -}}
+{{- range .guides_list -}}
+- [{{ .display_name }}]({{ .url }})
+{{ end -}}
+{{- end -}}
+{{- with .Params.policy }}
+
+## Policy
+
+[Pulumi CrossGuard]({{ .url }}) — {{ .description }}
+{{ end -}}
+{{- range .Params.convert -}}
+
+## {{ .heading }}
+
+{{ with .description }}{{ . }}
+
+{{ end -}}
+{{- if .url -}}
+[{{ .heading }}]({{ .url }})
+{{ end -}}
+{{- range .tools -}}
+- [{{ .display_name }}]({{ .url }})
+{{ end -}}
+{{- end -}}
 {{- end -}}
