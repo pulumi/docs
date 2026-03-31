@@ -598,17 +598,6 @@ const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cac
     },
 });
 
-const OneHourCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('one-hour-cache-headers', {
-    securityHeadersConfig: baseSecurityHeadersConfig,
-    customHeadersConfig: {
-        items: [{
-            header: "Cache-Control",
-            value: "public, max-age=3600",
-            override: true,
-        }],
-    },
-});
-
 const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
