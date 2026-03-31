@@ -89,6 +89,7 @@ values:
           duration: 1h
           roleArn: arn:aws:iam::123456789012:role/pulumi-esc-role
           sessionName: esc-${context.pulumi.user.login}
+          # Optional: scope down the session beyond what the role allows
           policyArns:
             - arn:aws:iam::123456789012:policy/ci-build-minimal
   environmentVariables:
@@ -97,7 +98,7 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-Notice the [`policyArns` option](/docs/esc/integrations/dynamic-login-credentials/aws-login/): a single ESC environment can contain multiple login providers, each assuming a different IAM role, and `policyArns` lets you scope each provider's session credentials down even further. This means you can enforce least privilege at the login provider level — one provider for S3 artifact uploads, another for EC2 test infrastructure — all within the same environment.
+The `roleArn` and optional [`policyArns`](/docs/esc/integrations/dynamic-login-credentials/aws-login/) make least-privilege straightforward: each login provider assumes a specific role, and `policyArns` can scope the session down further. You can use multiple login providers in one environment or separate environments per workflow to match permissions to each job's needs.
 
 The workflow itself becomes minimal — a single step that authenticates via OIDC and injects the credentials:
 
