@@ -313,7 +313,7 @@
                                         {{ end }}
 
                                         {{ if eq $tweet.source "linkedin" }}
-                                            <img class="w-8 h-8" src="/logos/tech/linkedin.svg" alt="LinkedIn" />
+                                            {{ partial "fingerprinted-img.html" (dict "src" "logos/tech/linkedin.svg" "alt" "LinkedIn" "class" "w-8 h-8") }}
                                         {{ end }}
 
                                         {{ if eq $tweet.source "blog" }}

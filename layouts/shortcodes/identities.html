@@ -4,7 +4,7 @@
         <p>Atlassian</p>
     </a>
     <a class="block rounded hover:bg-gray-200 transition-all my-2 text-center md:mx-2 py-4 px-6" href="https://github.com/login" target="_blank">
-        <img class="inline-block h-8 w-auto" src="/logos/tech/github.svg" alt="GitHub" />
+        {{ partial "fingerprinted-img.html" (dict "src" "logos/tech/github.svg" "alt" "GitHub" "class" "inline-block h-8 w-auto") }}
         <p>GitHub</p>
     </a>
     <a class="block rounded hover:bg-gray-200 transition-all my-2 text-center md:mx-2 py-4 px-6" href="https://gitlab.com/users/sign_in" target="_blank">
