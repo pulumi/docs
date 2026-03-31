@@ -37,12 +37,12 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 ## AI
 
 {{% notes "info" %}}
-These scopes control access to Pulumi's AI features, including [Pulumi Neo](/docs/ai/).
+These scopes control access to the legacy Pulumi Copilot conversation API, currently used only by the Pulumi Copilot VS Code extension. For Pulumi's current AI capabilities, see [Pulumi Neo](/docs/ai/).
 {{% /notes %}}
 
 | Value | Description |
 |-------|-------------|
-| `ai_conversations:create` | Create a new Copilot conversation session for interacting with Copilot, Pulumi's AI assistant. This allows users to start new conversations and get help with their infrastructure code.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `ai_conversations:create` | Create a new Copilot conversation session. This allows users to start new conversations via the VS Code Copilot extension.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `ai_conversations:list_all` | View all Copilot conversations across the organization. This provides administrators with visibility into all AI assistant interactions.<br><br>**Granted by default roles**: `Admin` |
 | `ai_conversations:read` | Access and view the content of Copilot conversations. This allows users to read their own conversations and continue previous interactions.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `ai_conversations:update` | Modify and continue existing Copilot conversations. This enables users to update their conversations with new questions or context.<br><br>**Granted by default roles**: `Member`, `Admin` |

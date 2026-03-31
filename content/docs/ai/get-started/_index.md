@@ -22,7 +22,7 @@ Neo is in public preview and currently free to use. Users will receive ample war
 
 ## Enabling and Disabling Neo
 
-Neo is enabled by default. To disable Neo for your organization, navigate to the [Access Management page](/docs/pulumi-cloud/access-management/), under the Settings section. AI features can be enabled or disabled in the Pulumi Copilot section. If Copilot was previously disabled, it will need to be enabled to use Neo.
+Neo is enabled by default. To disable Neo for your organization, navigate to **Settings > Neo Settings > General** in the Pulumi Cloud console.
 
 ## VCS integration
 
@@ -52,7 +52,7 @@ Neo is automatically enabled for eligible organizations. To access Neo:
 1. Navigate to [Pulumi Cloud](https://app.pulumi.com)
 2. Click on **Agent Tasks** within the **Neo** section in the left navigation menu
 
-> If Neo doesn't appear in your navigation, verify that AI features have not been disabled for your organization. AI controls are located on the [Access Management page](/docs/pulumi-cloud/access-management/), in the Pulumi Copilot section.
+> If Neo doesn't appear in your navigation, verify that AI features have not been disabled for your organization. AI controls are located in **Settings > Neo Settings > General**.
 
 ### Create Your First Task
 

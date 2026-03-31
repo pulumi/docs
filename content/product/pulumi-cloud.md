@@ -230,7 +230,7 @@ products:
 
                 Offload your local Automation API deployment workloads to Pulumi Cloud via the [Remote Automation API feature](/docs/platform/deployments/#deployment-triggers).
         - header: Pulumi Neo
-          tabid: copilot-select
+          tabid: neo-select
           subheader: AI-powered infrastructure management
           link: /product/neo/
           image: /images/product/neo-prompt.png

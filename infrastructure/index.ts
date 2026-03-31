@@ -512,10 +512,6 @@ const oneYear = oneWeek * 52;
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html
 const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 
-// CachingDisabled sets min, max, and default cache TTLs to 0.
-// https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
-const cachingDisabledId = "4135ea2d-6df8-44a3-9df3-4b5a84be39ad";
-
 // Custom cache policy for origin-proxied behaviors (registry, guides) that need
 // an originRequestPolicy. CloudFront requires a cachePolicyId (not legacy
 // forwardedValues) when an origin request policy is attached.
@@ -559,17 +555,6 @@ const baseSecurityHeadersConfig = {
         override: false,
     }
 };
-
-// Copilot lives in an iframe
-const CopilotSecurityHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('copilot-security-headers', {
-    securityHeadersConfig: {
-        ...baseSecurityHeadersConfig,
-        frameOptions: {
-            frameOption: 'SAMEORIGIN',
-            override: false,
-        },
-    },
-});
 
 // Fingerprinted/hashed assets get immutable browser caching (1 year).
 // This is separate from CloudFront edge TTLs (defaultTtl/maxTtl) which only
@@ -985,43 +970,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             lambdaFunctionAssociations: [getAIRedirectAndGoneAssociation()],
         },
 
-        // Copilot app
-        {
-            ...baseCacheBehavior,
-            // allow all methods
-            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
-            cachedMethods: [
-                "GET", "HEAD", "OPTIONS",
-            ],
-            targetOriginId: cloudAiAppDomain,
-            pathPattern: '/pulumi-ai/copilot',
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            lambdaFunctionAssociations: [],
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-            responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
-            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
-            defaultTtl: 0,
-            maxTtl: 0,
-        },
-        {
-            ...baseCacheBehavior,
-            // allow all methods
-            allowedMethods: ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"],
-            cachedMethods: [
-                "GET", "HEAD", "OPTIONS",
-            ],
-            targetOriginId: cloudAiAppDomain,
-            pathPattern: '/pulumi-ai/copilot/*',
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            lambdaFunctionAssociations: [],
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-            responseHeadersPolicyId: CopilotSecurityHeadersPolicy.id,
-            // Set defaultTtl and maxTtl to 0 to match what the caching-disabled policy enforces.
-            defaultTtl: 0,
-            maxTtl: 0,
-        }
     ],
 
     // "All" is the most broad distribution, and also the most expensive.

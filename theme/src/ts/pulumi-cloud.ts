@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const productTabs = ["iac-select", "esc-select", "insights-select"];
-    const capabilityTabs = ["crossguard-select", "deployments-select", "copilot-select", "management-select"];
+    const capabilityTabs = ["crossguard-select", "deployments-select", "neo-select", "management-select"];
 
     productTabs.forEach(tab => {
         document.getElementById(tab)?.addEventListener("click", function () {

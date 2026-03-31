@@ -80,8 +80,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     pulumi-resource-links,
     pulumi-filter-select,
     pulumi-user-toggle,
-    pulumi-hubspot-form,
-    pulumi-copilot {
+    pulumi-hubspot-form {
         display: block;
     }
 
@@ -230,7 +229,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "marketing/dismissable-banner";
     @import "code";
     @import "container";
-    @import "copilot";
     @import "copy-button";
     @import "docs/cloud-overview";
     @import "docs/continuous-delivery";

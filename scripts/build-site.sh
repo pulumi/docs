@@ -8,13 +8,6 @@ source ./scripts/common.sh
 export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production-www url)}"
 export PULUMI_AI_WS_URL=${PULUMI_AI_WS_URL:-$(pulumi stack output --stack pulumi/pulumigpt-api/corp websocketUri)}
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-INFRA_PATH="$SCRIPT_DIR/../infrastructure"
-# Read Copilot ("atlas") API URL from Pulumi config, ignoring any errors.
-# If the config value is not set Copilot will not be available.
-export PULUMI_ATLAS_URL=${PULUMI_ATLAS_URL:-$(pulumi --cwd "$INFRA_PATH" config get atlasUrl 2>/dev/null || echo "")}
-printf "Atlas URL: $PULUMI_ATLAS_URL\n"
-
 printf "Compiling theme JavaScript and CSS...\n\n"
 export ASSET_BUNDLE_ID="$(build_identifier)"
 export CSS_BUNDLE_ID="${ASSET_BUNDLE_ID}"

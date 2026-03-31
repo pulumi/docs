@@ -178,7 +178,6 @@ The docs site integrates with several other Pulumi repositories:
 
 - **pulumi/registry**: Package registry UI (external repository, served via CloudFront origin routing at /registry path)
 - **pulumi/answers**: AI answers feature (embedded at /answers)
-- **pulumi/pulumi-ai-app-infra**: AI application backend (Copilot)
 - **pulumi/guides**: Interactive guides (embedded at /guides)
 
 These are integrated via CloudFront origin routing and Pulumi stack references.
@@ -2065,7 +2064,7 @@ Production CloudFront distribution applies security headers via response headers
 **Headers Applied:**
 
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains`
-- `X-Frame-Options: DENY` (production) or `SAMEORIGIN` (testing/Copilot)
+- `X-Frame-Options: DENY`
 - `Content-Security-Policy: frame-ancestors 'self' *.learnworlds.com`
 - `X-XSS-Protection: 1; mode=block`
 - `X-Content-Type-Options: nosniff`
