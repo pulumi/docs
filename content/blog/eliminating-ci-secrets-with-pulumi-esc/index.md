@@ -1,6 +1,6 @@
 ---
 title: "How We Eliminated Long-Lived CI Secrets Across 70+ Repos"
-date: "2026-03-30"
+date: "2026-03-31"
 meta_desc: "Learn how Pulumi eliminated static CI secrets across 70+ repos using Pulumi ESC and OIDC, reducing supply chain attack risk with short-lived credentials."
 meta_image: "meta.png"
 feature_image: "feature.png"
