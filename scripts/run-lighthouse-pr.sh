@@ -143,9 +143,10 @@ if [[ -n "$GITHUB_EVENT_PATH" ]]; then
         existing_id=$(echo "$existing" | jq -r '.id // empty')
 
         if [[ -n "$existing_id" ]]; then
-            # Append Lighthouse results to the existing preview comment.
+            # Replace any old Lighthouse section (everything from the first ---) with fresh results.
             existing_body=$(echo "$existing" | jq -r '.body')
-            combined="${existing_body}"$'\n\n'"${comment_body}"
+            preview_section="${existing_body%%---*}"
+            combined="${preview_section}${comment_body}"
             json_payload=$(jq -n --arg body "$combined" '{"body": $body}')
 
             echo "Updating preview comment (${existing_id}) with Lighthouse results..."
