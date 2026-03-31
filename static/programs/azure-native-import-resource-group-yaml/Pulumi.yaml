@@ -2,11 +2,14 @@ name: azure-native-import-resource-group-yaml
 description: An example that provides the code to import an existing resource group from Azure.
 runtime: yaml
 
-config:
-  subscriptionId:
-    type: string
-  resourceGroupName:
-    type: string
+variables:
+  resourceGroupName: pulumi-tutorials # REPLACE
+
+  clientConfig:
+    fn::invoke:
+      function: azure-native:authorization:getClientConfig
+
+  importPath: /subscriptions/${clientConfig.subscriptionId}/resourceGroups/${resourceGroupName}
 
 resources:
   importedResourceGroup:
@@ -14,4 +17,4 @@ resources:
     properties:
       location: eastus
     options:
-      import: /subscriptions/${subscriptionId}/resourceGroups/${resourceGroupName}
+      import: ${importPath}
