@@ -131,7 +131,7 @@ Beyond eliminating static secrets, this migration gave us centralized visibility
 
 - **[Audit logging](/docs/esc/administration/audit-logs/).** ESC records which credentials were accessed, when, and by which workflow. This is a meaningful improvement over GitHub's binary "secret was used" signal.
 - **Centralized access policies.** Access rules are defined once in ESC rather than scattered across individual repository settings pages.
-- **Single-point rotation.** Because ESC environments can [import other environments](/docs/esc/environments/imports/), shared credentials live in a common base that all 70+ repo environments compose of. Update it once, and every repo picks up the change on its next run.
+- **Single-point rotation.** Because ESC environments can [import other environments](/docs/esc/environments/imports/), shared credentials live in a common base that all 70+ repo environments are composed of. Update it once, and every repo picks up the change on its next run.
 - **Dynamic credentials by default.** For cloud providers like AWS, Azure, and GCP, ESC fetches credentials via OIDC at open time. There is nothing to rotate because nothing is stored.
 
 ## What happens if a GitHub Action is compromised
