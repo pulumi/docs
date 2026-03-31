@@ -24,7 +24,7 @@
                     <a data-track="header-registry" href="/registry/"><i class="fas fa-archive mr-1"></i>Registry</a>
                 </li>
                 <li class="mr-8">
-                    <a class="flex items-center" data-track="header-ai" href="/neo"><img src="/icons/pdi-neo.svg" alt="" class="inline" />Pulumi Neo</a>
+                    <a class="flex items-center" data-track="header-ai" href="/neo">{{ partial "fingerprinted-img.html" (dict "src" "icons/pdi-neo.svg" "alt" "" "class" "inline") }}Pulumi Neo</a>
                 </li>
                 <li class="mr-8">
                     <a data-track="header-contact" href="/contact"><i class="fas fa-comment mr-1"></i>Contact Us</a>
@@ -43,8 +43,8 @@
             <div class="flex flex-col lg:flex-row">
                 <div class="logo-container min-w-32 lg:min-w-40 flex-shrink-0">
                     <a data-track="header-pulumi-logo" class="block" href="/">
-                        <img class="normal-logo h-8" src="/logos/brand/logo-on-white.svg" alt="Pulumi logo" />
-                        <img class="dark-logo hidden h-8" src="/logos/brand/logo-on-black.svg" alt="Pulumi logo" />
+                        {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo" "class" "normal-logo h-8") }}
+                        {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-black.svg" "alt" "Pulumi logo" "class" "dark-logo hidden h-8") }}
                     </a>
                 </div>
                 <ul class="desktop-menu">
@@ -88,7 +88,7 @@
                                         <div class="list-title">
                                             <a href="/product/neo/">
                                                 <span>
-                                                    <img src="/icons/pdi-neo.svg" alt="" class="inline" />
+                                                    {{ partial "fingerprinted-img.html" (dict "src" "icons/pdi-neo.svg" "alt" "" "class" "inline") }}
                                                 </span>
                                                 Agentic Infrastructure
                                                 <div class="list-sub-title">Meet Neo, our AI-powered infrastructure
@@ -111,7 +111,7 @@
                                         <div class="list-title">
                                             <a href="/product/insights-governance/">
                                                 <span class="mr-2">
-                                                    <img src="/icons/magnifying-glass.svg" class="inline opacity-90" />
+                                                    {{ partial "fingerprinted-img.html" (dict "src" "icons/magnifying-glass.svg" "alt" "" "class" "inline opacity-90") }}
                                                 </span>
                                                 Insights & Governance
                                                 <div class="list-sub-title">Asset management, compliance remediation,
@@ -176,7 +176,7 @@
                                         <div class="list-title">
                                             <a href="/templates/">
                                                 <span>
-                                                    <img src="/icons/square-foot.svg" class="inline opacity-90" />
+                                                    {{ partial "fingerprinted-img.html" (dict "src" "icons/square-foot.svg" "alt" "" "class" "inline opacity-90") }}
                                                 </span>
                                                 Templates
                                                 <div class="list-sub-title">Deploy common architectures on any cloud
@@ -188,7 +188,7 @@
                                         <div class="list-title">
                                             <a href="/learn/">
                                                 <span class="mr-0.5">
-                                                    <img src="/icons/graduation-cap.svg" class="inline opacity-90" />
+                                                    {{ partial "fingerprinted-img.html" (dict "src" "icons/graduation-cap.svg" "alt" "" "class" "inline opacity-90") }}
                                                 </span>
                                                 Tutorials
                                                 <div class="list-sub-title">Get hands-on with Pulumi concepts</div>
@@ -385,8 +385,7 @@
                                     <div>Key Capabilities</div>
                                 </div>
                                 <li>
-                                    <a href="/product/neo/"> <span class="ml-1.5 mr-1"><img src="/icons/pdi-neo.svg"
-                                                class="inline opacity-90 h-5" /> </span>Infrastructure AI </a>
+                                    <a href="/product/neo/"> <span class="ml-1.5 mr-1">{{ partial "fingerprinted-img.html" (dict "src" "icons/pdi-neo.svg" "alt" "" "class" "inline opacity-90 h-5") }} </span>Infrastructure AI </a>
                                 </li>
                                 <li>
                                     <a href="/product/secrets-management/"> <i class="fas fa-key fa-fw"></i> Secrets &
@@ -394,7 +393,7 @@
                                 </li>
                                 <li>
                                     <a href="/product/insights-governance/"> <span class="ml-1.5 mr-1">
-                                            <img src="/icons/magnifying-glass.svg" class="inline opacity-90 h-5" />
+                                            {{ partial "fingerprinted-img.html" (dict "src" "icons/magnifying-glass.svg" "alt" "" "class" "inline opacity-90 h-5") }}
                                         </span>Insights & Governance</a>
                                 </li>
 
@@ -421,13 +420,12 @@
                                     <a href="/registry/"> <i class="fas fa-archive fa-fw"></i> Registry </a>
                                 </li>
                                 <li>
-                                    <a href="/templates/"><span> <img src="/icons/square-foot.svg"
-                                                class="inline h-8 opacity-90" /> </span>Templates
+                                    <a href="/templates/"><span> {{ partial "fingerprinted-img.html" (dict "src" "icons/square-foot.svg" "alt" "" "class" "inline h-8 opacity-90") }} </span>Templates
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/learn/"> <span class="ml-1 mr-1">
-                                            <img src="/icons/graduation-cap.svg" class="inline opacity-90 h-5" />
+                                            {{ partial "fingerprinted-img.html" (dict "src" "icons/graduation-cap.svg" "alt" "" "class" "inline opacity-90 h-5") }}
                                         </span> Tutorials </a>
                                 </li>
                                 <li>

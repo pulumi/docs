@@ -6,8 +6,8 @@
                 <!-- Keep only the logo -->
                 <div class="logo-container">
                     <a data-track="header-pulumi-logo" class="block" href="/">
-                        <img class="normal-logo h-8" src="/logos/brand/logo-on-white.svg" alt="Pulumi logo" width="128" height="32" />
-                        <img class="dark-logo hidden h-8" src="/logos/brand/logo-on-black.svg" alt="Pulumi logo" width="128" height="32" />
+                        {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo" "class" "normal-logo h-8" "width" "128" "height" "32") }}
+                        {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-black.svg" "alt" "Pulumi logo" "class" "dark-logo hidden h-8" "width" "128" "height" "32") }}
                     </a>
                 </div>
                 

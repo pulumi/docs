@@ -34,7 +34,13 @@
         <div class="flex flex-col items-start lg:items-end lg:w-[25%] lg:min-w-[280px] flex-shrink-0 template-testimonial-product-credit">
             {{ if $logo }}
             <div class="template-testimonial-product-logo mb-6">
-                <img src="{{ $logo }}" alt="{{ $company }}" />
+                {{ $fpSrc := strings.TrimPrefix "/" $logo }}
+                {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+                {{ if $fpAsset }}
+                    {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" $company) }}
+                {{ else }}
+                    <img src="{{ $logo }}" alt="{{ $company }}" />
+                {{ end }}
             </div>
             {{ end }}
             {{ if $author }}

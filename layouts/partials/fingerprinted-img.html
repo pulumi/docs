@@ -1,3 +1,4 @@
+{{/* IMPORTANT: The referenced asset must exist in assets/fingerprinted/. Missing assets cause a build panic. */}}
 {{ $img := resources.Get (printf "fingerprinted/%s" .src) }}
 {{ if ne $img.MediaType.SubType "svg" }}
     {{ $maxWidth := .maxWidth | default 800 }}
