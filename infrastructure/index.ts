@@ -1034,7 +1034,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             errorCode: 404,
             responseCode: 404,
-            errorCachingMinTtl: fiveMinutes,
+            errorCachingMinTtl: 10,
             responsePagePath: "/404.html",
         },
         // Map 403 Forbidden errors to 404 Not Found.
@@ -1044,7 +1044,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             errorCode: 403,
             responseCode: 404,
-            errorCachingMinTtl: fiveMinutes,
+            errorCachingMinTtl: 10,
             responsePagePath: "/404.html",
         },
     ],
