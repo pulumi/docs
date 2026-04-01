@@ -53,7 +53,7 @@ This metadata is called [*state*](/docs/iac/concepts/state-and-backends/)
 and it is stored in a *backend* of your choosing:
 **Service** or **DIY**.
 
-The **Service** backend is hosted at [`app.pulumi.com`](https://app.pulumi.com)
+The **Service** backend is hosted at [`app.pulumi.com`](https://app.pulumi.com/signin)
 or [on your own server](https://www.pulumi.com/product/self-hosted/).
 It provides the best combination of usability, safety, and security for most users.
 

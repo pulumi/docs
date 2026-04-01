@@ -86,7 +86,7 @@ The Secret Store CSI Driver is a daemonset that lets all kublets communicate wit
 
 Before we start, make sure you have the following prerequisites:
 
-- A [Pulumi Cloud](https://app.pulumi.com/) account. If you don't have one, you can create one for free.
+- A [Pulumi Cloud](https://app.pulumi.com/signup) account. If you don't have one, you can create one for free.
 - A Kubernetes cluster (I will be using a local [KinD](https://kind.sigs.k8s.io/) cluster, but you can use any
   Kubernetes cluster)
 - [Pulumi CLI](/docs/iac/download-install/) installed. You can also use the

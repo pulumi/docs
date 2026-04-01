@@ -624,7 +624,7 @@ If you want to remove the stack completely, run 'pulumi stack rm dev'.
 ```
 
 That's it! That last comment you see in the output notes that the stack and all of the configuration and history will stay
-in your dashboard in Pulumi Cloud ([app.pulumi.com](https://app.pulumi.com/)). For now, that's okay. We'll talk
+in your dashboard in Pulumi Cloud ([app.pulumi.com](https://app.pulumi.com/signin)). For now, that's okay. We'll talk
 more about removing the project from your history in another tutorial.
 
 ---

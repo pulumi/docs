@@ -28,7 +28,7 @@ This tutorial is all about using ESC with Pulumi Service Provider (PSP). However
 
 ## Log into Pulumi Cloud
 
-Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi.com/). Once you've done so, you can log in with Pulumi CLI and be prompted to :
+Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi.com/signin). Once you've done so, you can log in with Pulumi CLI and be prompted to :
 
 ```bash
 $ pulumi login

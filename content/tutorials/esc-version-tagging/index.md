@@ -29,7 +29,7 @@ The examples in this tutorial use `esc`, the standalone Pulumi ESC CLI. However,
 
 ## Log into Pulumi Cloud
 
-Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi.com/) with an account that has access to a Pulumi organization with an [Enterprise edition](https://pulumi.com/pricing) subscription. Once you've done so, you can log in with the ESC CLI and be prompted to :
+Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi.com/signin) with an account that has access to a Pulumi organization with an [Enterprise edition](https://pulumi.com/pricing) subscription. Once you've done so, you can log in with the ESC CLI and be prompted to :
 
 ```bash
 $ esc login

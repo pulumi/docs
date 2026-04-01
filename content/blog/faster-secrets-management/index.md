@@ -18,7 +18,7 @@ social:
     linkedin: "Pulumi Infrastructure as Code now processes stack secrets more efficiently, reducing deployment times while maintaining robust security. Our latest update optimizes encryption and decryption operations through intelligent batching and smart change detection, eliminating unnecessary processing during updates. For stacks with many secrets, these improvements can save up to 10 seconds per operation, which adds up to significant time savings across your deployment pipeline. Update to version 3.155.0 today to experience these performance improvements without any configuration changes required."
 ---
 
-Pulumi now handles [secrets](https://www.pulumi.com/docs/concepts/secrets/) more efficiently through optimized encryption and decryption processes, reducing deployment times while maintaining security standards. Users of [Pulumi Cloud](https://app.pulumi.com) for state management will notice the most improvement due to new batch API capabilities.
+Pulumi now handles [secrets](https://www.pulumi.com/docs/concepts/secrets/) more efficiently through optimized encryption and decryption processes, reducing deployment times while maintaining security standards. Users of [Pulumi Cloud](https://app.pulumi.com/signin) for state management will notice the most improvement due to new batch API capabilities.
 
 <!--more-->
 
@@ -30,7 +30,7 @@ Beyond simple encryption, Pulumi tracks the transitive use of secrets to prevent
 
 - Within the stack state
 - In CLI output
-- In the [Pulumi Cloud console](https://app.pulumi.com/)
+- In the [Pulumi Cloud console](https://app.pulumi.com/signin)
 
 When using Pulumi Cloud as your secrets provider, all encryption and decryption operations happen server-side without transmitting the encryption key to the Pulumi program. Combined with Pulumi Cloud's robust user authorization and SSO integration, this creates a comprehensive security framework that ensures only authorized team members can access sensitive information.
 

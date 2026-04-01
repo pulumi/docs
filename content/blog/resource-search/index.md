@@ -109,4 +109,4 @@ Customers who use [Pulumi Teams](/docs/pulumi-cloud/access-management/teams) for
 
 Resource Search is available to all Pulumi users for free, making it even easier to manage your cloud resources and gain valuable insights into your infrastructure. It's just one of the many ways Pulumi continues to innovate and support organizations in their journey to the cloud. Try Resource Search today and see the difference it can make in helping you explore and find resources in your organization.
 
-[Login to Pulumi Cloud](https://app.pulumi.com)
+[Login to Pulumi Cloud](https://app.pulumi.com/signin)

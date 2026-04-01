@@ -58,9 +58,9 @@ This service can dynamically generate credentials on your behalf whenever you in
 
 ### Step 3: Create a new Pulumi ESC environment
 
-Once you have OIDC configured between Pulumi and AWS, the next step is to create a new environment in [Pulumi Cloud](https://app.pulumi.com/).
+Once you have OIDC configured between Pulumi and AWS, the next step is to create a new environment in [Pulumi Cloud](https://app.pulumi.com/signin).
 
-- Navigate to your [Pulumi Cloud](https://app.pulumi.com/) home page.
+- Navigate to your [Pulumi Cloud](https://app.pulumi.com/signin) home page.
 - Select the correct organization in the left-hand navigation menu.
 - Click the **Environments** link.
 - Click the **Create environment** button.

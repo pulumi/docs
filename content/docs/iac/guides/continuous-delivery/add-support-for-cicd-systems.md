@@ -37,7 +37,7 @@ The detection of metadata in a CI environment depends on some key environment va
 - PR Number
 - Commit Message
 
-The metadata about your CI environment is displayed in the [Pulumi Cloud](https://app.pulumi.com) stack activity log. The metadata from your CI environment and the information about your Git repository allow Pulumi to provide links to pull requests and commits.
+The metadata about your CI environment is displayed in the [Pulumi Cloud](https://app.pulumi.com/signin) stack activity log. The metadata from your CI environment and the information about your Git repository allow Pulumi to provide links to pull requests and commits.
 
 ![Stack update entry](/images/docs/reference/supporting-new-ci/stack-update.png)
 

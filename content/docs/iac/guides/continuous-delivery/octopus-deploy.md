@@ -21,7 +21,7 @@ aliases:
 ## Prerequisites
 
 - A working installation of Octopus or a hosted instance from [https://octopus.com](https://octopus.com).
-- An account in the [Pulumi Cloud](https://app.pulumi.com).
+- An account in the [Pulumi Cloud](https://app.pulumi.com/signup).
 - The [latest version of Pulumi](/docs/install/).
 - Setup a new project and [stack](/docs/concepts/stack/) using one of our [Get Started](/docs/get-started/) guides or by running [`pulumi new`](/docs/iac/cli/commands/pulumi_new)
 and choosing one of the many templates that are available.

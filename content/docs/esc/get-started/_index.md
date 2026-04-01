@@ -20,7 +20,7 @@ Pulumi ESC (Environments, Secrets, and Configuration) is a centralized secrets a
 
 ## Prerequisites
 
-1. **Create a Pulumi account** at [app.pulumi.com](https://app.pulumi.com)
+1. **Create a Pulumi account** at [app.pulumi.com](https://app.pulumi.com/signup)
 1. **Install the ESC CLI**
 
 {{< chooser os "macos,windows,linux" >}}
@@ -70,7 +70,7 @@ You'll be prompted to log in via your browser or with an access token. Follow th
 
 1. **Create an environment** in the Pulumi Cloud console:
   
-    1. Open [Pulumi Cloud](https://app.pulumi.com) and log in
+    1. Open [Pulumi Cloud](https://app.pulumi.com/signin) and log in
     1. Select **Environments** in the left navigation
     1. Select **+ Create Environment**
     1. Choose **New Environment**

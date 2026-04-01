@@ -28,7 +28,7 @@ sections:
   description_md: |
     Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 
-    The self-hosted version provides all the same capabilities as the SaaS offering at [app.pulumi.com](https://app.pulumi.com). You manage data backups, keep the service running, and maintain updates, while gaining full control over the deployment environment.
+    The self-hosted version provides all the same capabilities as the SaaS offering at [app.pulumi.com](https://app.pulumi.com/signin). You manage data backups, keep the service running, and maintain updates, while gaining full control over the deployment environment.
 
     Pulumi can be deployed in any on-premise or cloud environment and integrated with your preferred identity provider: GitHub Enterprise, GitLab Enterprise, SAML SSO, or email/password authentication.
 

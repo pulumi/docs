@@ -116,7 +116,7 @@ After creating your role, make sure to make a note of your role’s ARN value as
 
 ### Step 3: Create a new environment
 
-Now that we’ve created all the necessary AWS resources, let’s move over to the Pulumi side of things. You’ll first want to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then click the **Environments** link, and click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
+Now that we’ve created all the necessary AWS resources, let’s move over to the Pulumi side of things. You’ll first want to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. Then click the **Environments** link, and click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
 
 {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
 

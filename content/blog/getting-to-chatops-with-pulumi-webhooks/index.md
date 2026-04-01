@@ -8,7 +8,7 @@ tags: ["continuous-delivery", "features"]
 ---
 
 Today we are delighted to announce the availability of Webhooks on
-[Pulumi](https://app.pulumi.com). Webhooks are a very common mechanism
+[Pulumi](https://app.pulumi.com/signin). Webhooks are a very common mechanism
 to enable teams to be notified or react to events. In Pulumi's case,
 this means: notifications of infrastructure changes (be it on
 Kubernetes, AWS, or any other cloud); responding to those changes as
@@ -152,7 +152,7 @@ There are three kinds of webhook events.
 
 ## Tell us what you think
 
-Get started with Pulumi Webhooks on the [Pulumi app](https://app.pulumi.com), and let us know how you're using them so
+Get started with Pulumi Webhooks on the [Pulumi app](https://app.pulumi.com/signin), and let us know how you're using them so
 we can continue to extend their capabilities. We'd love to hear your
 ideas, as well as any feedback you have on the
 [Pulumi Community Slack](https://slack.pulumi.com).

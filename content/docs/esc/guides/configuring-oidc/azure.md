@@ -73,7 +73,7 @@ To provide Pulumi services the ability to deploy, manage, and interact with Azur
 
 ## Configure ESC for OIDC
 
-To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Console](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
+To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Console](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
 
 1. Click the **Environments** link.
 2. Click the **Create environment** button.

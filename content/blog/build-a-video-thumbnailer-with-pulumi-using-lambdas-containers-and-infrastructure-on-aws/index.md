@@ -34,7 +34,7 @@ code.
 ## Setup
 
 If this is your first time using Pulumi, go
-to [https://app.pulumi.com](https://app.pulumi.com/) and sign in with
+to [https://app.pulumi.com](https://app.pulumi.com/signup) and sign in with
 GitHub.
 
 Then, run the following command to install the Pulumi CLI:

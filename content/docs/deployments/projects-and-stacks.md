@@ -196,7 +196,7 @@ An example of a README file, `Pulumi.README.md`, the template Stack README file 
 3. [Cloudwatch Logs](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logStream:group=${outputs.cloudwatchLogGroup}): Search across service logs
 ```
 
-Here is how it looks rendered in the [Pulumi Cloud UI](https://app.pulumi.com):
+Here is how it looks rendered in the [Pulumi Cloud UI](https://app.pulumi.com/signin):
 
 ![Stack READMEs](/images/docs/reference/service/stack-readme.png)
 
