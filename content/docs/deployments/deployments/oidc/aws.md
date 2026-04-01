@@ -33,23 +33,23 @@ This document outlines the steps required to configure Pulumi Deployments to use
   {{< video title="Starting the Create Identity Provider wizard" src="https://www.pulumi.com/uploads/create-idp-start.mp4" autoplay="true" loop="true" >}}
 2. In the **Provider type** section, click the radio button next to **OpenID Connect**.
 3. For the **Provider URL**, provide the following URL: `https://api.pulumi.com/oidc`
-4. For the **Audience** field, enter the name of your Pulumi organization. Then click **Add provider**.
+4. For the **Audience** field, enter the name of your Pulumi organization. Then select **Add provider**.
 
 ## Configure the IAM role and trust policy
 
 Once you have created the identity provider, you will see a notification at the top of your screen prompting you to assign an IAM role.
 
-1. Click the **Assign role** button.
-2. Select the **Create a new role** option, then click **Next**.
+1. Select the **Assign role** button.
+2. Select the **Create a new role** option, then select **Next**.
   {{< video title="Prompt for assigning IAM role" src="https://www.pulumi.com/uploads/assign-iam-role-prompt.mp4" autoplay="true" loop="true" >}}
 3. On the IAM **Create role** page, ensure the **Web identity** radio button is selected.
 4. In the **Web identity** section:
     * Select `api.pulumi.com/oidc` under **Identity provider**.
-    * Select the name of your Pulumi organization under **Audience**. Then click **Next**.
+    * Select the name of your Pulumi organization under **Audience**. Then select **Next**.
   {{< video title="Create IAM role wizard" src="https://www.pulumi.com/uploads/create-role-wizard.mp4" autoplay="true" loop="true" >}}
-5. On the **Add permissions** page, select the permissions that you want to grant to your Pulumi deployments. Then click **Next**.
+5. On the **Add permissions** page, select the permissions that you want to grant to your Pulumi deployments. Then select **Next**.
 
-    {{% notes "info" %}}
+    {{% notes type="info" %}}
 Many Pulumi programs create IAM roles, policies, or instance profiles (e.g., for Lambda, ECS, or EKS), which require IAM permissions. While `AdministratorAccess` is the simplest policy that covers all services including IAM, it is broader than most workloads need. For better security, consider one of these alternatives:
 
 * **PowerUserAccess + IAMFullAccess** — provides broad service access with IAM permissions but excludes AWS Organizations management.
@@ -60,7 +60,7 @@ You can also further constrain the assumed role session using the **Policy ARNs*
     {{% /notes %}}
 
   {{< video title="Adding S3 permissions to IAM role" src="https://www.pulumi.com/uploads/create-role-add-perms.mp4" autoplay="true" loop="true" >}}
-6. Provide a name and optional description for the IAM role. Then click **Create role**.
+6. Provide a name and optional description for the IAM role. Then select **Create role**.
   {{< video title="Adding name and description to role then creating it" src="https://www.pulumi.com/uploads/create-role.mp4" autoplay="true" loop="true" >}}
 
 Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your deployment.
@@ -84,7 +84,7 @@ The following IAM policy snippet for role assumption restricts role assumption t
 
 ## Configure OIDC via the Pulumi console
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/deployments/deployments/api/#patchsettings).
 {{% /notes %}}
 
@@ -96,6 +96,6 @@ In addition to the Pulumi Console, deployment settings including OIDC can be con
 6. Enter a name for the assumed role session in the "Session Name" field.
 7. If you would like to use additional policies to further constrain the session's capabilities, enter the policies' ARNs separated by commas in the "Policy ARNs" field.
 8. If you would like to constrain the duration of the assumed role session, enter a duration in the form "XhYmZs" in the "Session Duration" field.
-9. Click the "Save deployment configuration" button.
+9. Select the "Save deployment configuration" button.
 
 With this configuration, each deployment of this stack will attempt to exchange the deployment's OIDC token for AWS credentials using the specified IAM role prior to running any pre-commands or Pulumi operations. The fetched credentials are published in the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` environment variables. The raw OIDC token is also available for advanced scenarios in the `PULUMI_OIDC_TOKEN` environment variable and the `/mnt/pulumi/pulumi.oidc` file.
