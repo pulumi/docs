@@ -1,6 +1,6 @@
 ---
 title: "Introducing Read-Only Mode for Pulumi Neo"
-date: 2026-03-18
+date: 2026-04-01
 draft: false
 meta_desc: "Run Neo with confidence using read-only mode. Preview changes and create PRs without unwanted modifications to your infrastructure."
 meta_image: meta.png
@@ -16,9 +16,10 @@ schema_type: auto
 social:
     twitter: "Pulumi Neo now has read-only mode. Run Neo with confidence knowing it can preview changes and create PRs without modifying your infrastructure."
     linkedin: "Introducing read-only mode for Pulumi Neo. Run Neo with confidence knowing it can analyze your infrastructure, run previews, and open pull requests without making unwanted modifications. Control how much autonomy Neo has on a per-task basis."
+    bluesky: "Pulumi Neo now has read-only mode. Preview changes and create PRs without modifying your infrastructure."
 ---
 
-Platform teams want control over how much autonomy Neo has. With read-only mode, Neo does the heavy lifting and hands off a pull request. Your CI/CD pipeline takes it from there.
+Platform teams want control over how much autonomy [Neo](/docs/ai/) has. With read-only mode, Neo does the heavy lifting and hands off a pull request. Your CI/CD pipeline takes it from there.
 
 <!--more-->
 
@@ -41,7 +42,7 @@ Read-only mode takes your existing permissions and removes the ability to make c
 
 ## What Neo can do in read-only mode
 
-Read-only mode does not mean Neo becomes passive. Neo can still read your infrastructure state, run previews, write and refactor code, create branches, and open pull requests. It does the same work it always does, and hands off the result to your regular deployment process. The only difference is that Neo cannot trigger deployments or other write operations in Pulumi Cloud directly.
+Neo remains fully active in read-only mode. It can still read your infrastructure state, run previews, write and refactor code, create branches, and open pull requests. It does the same work it always does, and hands off the result to your regular deployment process. The only difference is that Neo cannot trigger deployments or other write operations in Pulumi Cloud directly.
 
 ## Read-only mode and auto-approve
 
