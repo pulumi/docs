@@ -4,6 +4,7 @@ date: 2026-03-18
 draft: false
 meta_desc: "Run Neo with confidence using read-only mode. Preview changes and create PRs without unwanted modifications to your infrastructure."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - florian-stadler
 tags:
@@ -13,11 +14,11 @@ tags:
 schema_type: auto
 
 social:
-    twitter:
-    linkedin:
+    twitter: "Pulumi Neo now has read-only mode. Let Neo analyze your infrastructure, run previews, and open PRs without the risk of unwanted changes."
+    linkedin: "Introducing read-only mode for Pulumi Neo. Teams told us they wanted Neo's analysis and recommendations without the risk of unintended infrastructure changes. Now when creating a Neo task, you can choose read-only mode to cap permissions. Neo can still read state, run previews, write code, and open PRs, but it cannot deploy, update, or destroy resources."
 ---
 
-One of the most common questions we hear from teams evaluating Neo is: "How do I let Neo help without worrying about unintended changes?" Today, we're introducing read-only mode for Pulumi Neo, giving you a way to get value from Neo while keeping full control over what it can and cannot do.
+Platform teams want control over how much autonomy Neo has. With read-only mode, Neo does the heavy lifting and hands off a pull request. Your CI/CD pipeline takes it from there.
 
 <!--more-->
 
@@ -44,13 +45,9 @@ Read-only mode does not mean Neo becomes passive. Neo can still read your infras
 
 ## Read-only mode and auto-approve
 
-Neo's [operating modes](/docs/ai/) let you choose how much oversight you want: review mode for full approval at each step, balanced mode for approving only mutating operations, and auto mode for hands-off execution.
+Neo's [operating modes](/docs/ai/tasks/#task-modes) let you choose how much oversight you want: review mode for full approval at each step, balanced mode for approving only mutating operations, and auto mode for hands-off execution.
 
 Read-only mode pairs well with auto-approve. Because Neo cannot perform write operations like deployments or destroys, you can let it run autonomously and trust that the output is a pull request, not a production change. Kick off a task, let Neo work in the background, and come back to a ready-to-review PR.
-
-## Set defaults and enforce guardrails
-
-You can configure your default permission level in your user settings so you do not have to choose every time you create a task. If you prefer to always start in read-only mode, set it once and override on a per-task basis when needed.
 
 ## Getting started
 

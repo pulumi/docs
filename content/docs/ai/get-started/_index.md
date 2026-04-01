@@ -36,12 +36,25 @@ Neo can still provide code change suggestions without a VCS integration, but you
 
 To set up a VCS integration, see the [version control docs](/docs/version-control/).
 
-## Neo's Permission Model
+## Neo's permission model
 
 Neo operates within the conversing user's [RBAC entitlements](/docs/pulumi-cloud/access-management/rbac/) and cannot perform actions that the user couldn't perform themselves. This means:
 
 - There's no privilege escalation risk or special administrative access required
 - Each user's Neo conversations are isolated from other users
+
+### Read-only mode
+
+When you create a Neo task, you can choose between two permission levels:
+
+| Option | What Neo can do |
+| :--- | :--- |
+| **Use my permissions** | Full access (default behavior) |
+| **Read-only** | Read, preview, and create PRs. No infrastructure mutations. |
+
+Read-only mode takes your existing permissions and removes the ability to make changes. Neo never gets more access than you have, only less. If you can view a stack but not a particular environment, Neo in read-only mode also cannot see that environment.
+
+In read-only mode, Neo can still read your infrastructure state, run previews, write and refactor code, create branches, and open pull requests. The only difference is that Neo cannot trigger deployments or other write operations in Pulumi Cloud directly.
 
 ## Quick Start Guide
 
