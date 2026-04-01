@@ -23,6 +23,8 @@ social:
 
 Amsterdam in late March still has that sharp North Sea wind, but inside the RAI Convention Centre, 13,350 people generated enough energy to heat the building twice over. KubeCon + CloudNativeCon EU 2026 was the biggest European edition yet, and the shift from previous years was impossible to miss. AI was the main event. Not a side track, not a buzzword sprinkled into keynotes. The main event.
 
+![The KubeCon EU 2026 show floor at the RAI Convention Centre in Amsterdam](showroom.jpg)
+
 I spent most of the conference at the Pulumi booth, and that turned out to be the best vantage point. Hundreds of visitors stopped by over four days, and I kept asking the same question: what are you actually running in production with AI on Kubernetes? The answers shaped this post more than any keynote did. Almost everyone had a proof of concept. Almost nobody had a production story they were happy with.
 
 ![The Pulumi crew at our booth at KubeCon EU 2026 in Amsterdam](pulumi-booth.jpg)
