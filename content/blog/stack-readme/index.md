@@ -38,7 +38,7 @@ draft: false
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-Starting today, users can create [Stack READMEs](https://www.pulumi.com/docs/pulumi-cloud/projects-and-stacks/#stack-readme) in the [Pulumi Service](https://app.pulumi.com) that dynamically update based on [Stack Outputs](https://www.pulumi.com/learn/building-with-pulumi/stack-outputs).
+Starting today, users can create [Stack READMEs](https://www.pulumi.com/docs/pulumi-cloud/projects-and-stacks/#stack-readme) in the [Pulumi Service](https://app.pulumi.com/signin) that dynamically update based on [Stack Outputs](https://www.pulumi.com/learn/building-with-pulumi/stack-outputs).
 
 Each Pulumi Stack you deploy manages a key set of cloud infrastructure for your organization. The Pulumi Console includes a variety of features for exposing key information about your stack for other users within your organization - configuration, outputs, resources under management, links to cloud providers, and a graph of all resources. However, it's often useful to allow the author of a Pulumi Stack to describe in their own words the key elements of a stack, so future viewers can quickly understand the components and cloud resources that are managed.
 

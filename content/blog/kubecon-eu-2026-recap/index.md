@@ -14,18 +14,18 @@ tags:
     - platform-engineering
     - cloud-native
 social:
-    twitter: "82% of orgs run AI on Kubernetes. Only 7% deploy daily. That gap defined every conversation I had at KubeCon EU 2026. I wrote up what's actually changing: llm-d, agent identity with SPIFFE, inference gateways, and why platform teams can't ignore this."
+    twitter: "66% of orgs run AI on Kubernetes. Only 7% deploy daily. That gap defined every conversation I had at KubeCon EU 2026. I wrote up what's actually changing: llm-d, agent identity with SPIFFE, inference gateways, and why platform teams can't ignore this."
     linkedin: |
         I spent four days at KubeCon EU 2026 in Amsterdam asking people at our booth the same question: what are you actually running in production with AI on Kubernetes?
 
-        Almost everyone had a proof of concept. Almost nobody had a production story they were happy with. And the stats back that up — 82% adoption, 7% daily deployment.
+        Almost everyone had a proof of concept. Almost nobody had a production story they were happy with. And the stats back that up — 66% adoption, 7% daily deployment.
 
         Wrote up the projects and trends that stuck with me: llm-d splitting inference across pods, kagenti giving agents cryptographic identity via SPIFFE, a whole new generation of AI-aware gateways, and why GPU multi-tenancy is still unsolved.
 
         13,350 attendees, and the community is building fast. But the gap between what exists and what production demands is still wide.
 ---
 
-Amsterdam in late March still has that sharp North Sea wind, but inside the RAI Convention Centre, 13,350 people generated enough energy to heat the building twice over. [KubeCon + CloudNativeCon EU 2026](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe-2026/) was the biggest European edition yet, and the shift from previous years was impossible to miss. AI was the main event. Not a side track, not a buzzword sprinkled into keynotes. The main event.
+Amsterdam in late March still has that sharp North Sea wind, but inside the RAI Convention Centre, 13,350 people generated enough energy to heat the building twice over. [KubeCon + CloudNativeCon EU 2026](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe-2026/) was the biggest European edition yet, and the shift from previous years was impossible to miss. AI dominated the conference.
 
 <!--more-->
 
@@ -33,19 +33,21 @@ I spent most of the conference at the Pulumi booth, and that turned out to be th
 
 ![The Pulumi crew at our booth at KubeCon EU 2026 in Amsterdam](pulumi-booth.jpg)
 
-Here is the stat that framed the entire conference for me: 82% of organizations have adopted Kubernetes for AI workloads, but only 7% deploy to production daily. That gap between experimentation and actual production use matched what I was hearing at the booth. The CNCF's own survey now counts 19.9 million cloud native developers worldwide, 7.3 million of them building AI workloads. The tooling and the infrastructure need to catch up.
+Here is the stat that framed the entire conference for me: [66% of organizations use Kubernetes to host generative AI workloads, but only 7% deploy to production daily](https://www.cncf.io/reports/the-cncf-annual-cloud-native-survey/). That gap between experimentation and actual production use matched what I was hearing at the booth. The CNCF's own survey now counts [19.9 million cloud native developers worldwide, 7.3 million of them building AI workloads](https://www.cncf.io/reports/state-of-cloud-native-development-q1-2026/). The tooling and the infrastructure need to catch up.
 
-My takeaway after four days on the ground: 2026 is the year of ROI. The prototypes are done. Teams are figuring out how to run inference at scale, how to secure agentic AI, how to make GPU infrastructure work like any other production system. Here is what I saw.
+My takeaway after four days on the ground: lots of working demos, very few production setups people trust. Teams are trying to scale inference, put guardrails around agents, and make GPU infrastructure behave like anything else they run.
+
+Here is what I saw.
 
 ## From training to inference: the big pivot
 
-The numbers tell the story. Sixty-seven percent of AI compute now goes to inference, not training. The inference market is projected to hit $255 billion by 2030. Training gets the headlines, but inference is where the money and the operational complexity actually live.
+About [67% of AI compute now goes to inference](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/compute-power-ai.html), not training. The inference market is projected to hit [$255 billion by 2030](https://www.marketsandmarkets.com/Market-Reports/ai-inference-market-189921964.html). It's also where most of the operational complexity lives.
 
-NVIDIA leaned into this hard. Their open-source stack around [NeMo](https://github.com/NVIDIA-NeMo/NeMo) and [Dynamo](https://github.com/ai-dynamo/dynamo) got significant stage time, but the bigger move was donating three projects to the CNCF: the [DRA driver](https://github.com/NVIDIA/k8s-dra-driver-gpu) for fractional GPU allocation, the [KAI Scheduler](https://github.com/kai-scheduler/KAI-Scheduler) for GPU-aware scheduling, and [Grove](https://github.com/ai-dynamo/grove). Moving these to community governance signals that GPU infrastructure is no longer a proprietary play. It is becoming part of the standard Kubernetes toolkit.
+NVIDIA leaned into this hard. Their open-source stack around [NeMo](https://github.com/NVIDIA-NeMo/NeMo) and [Dynamo](https://github.com/ai-dynamo/dynamo) got significant stage time, but the bigger move was donating three projects to the CNCF: the [DRA driver](https://github.com/NVIDIA/k8s-dra-driver-gpu) for fractional GPU allocation, the [KAI Scheduler](https://github.com/kai-scheduler/KAI-Scheduler) for GPU-aware scheduling, and [Grove](https://github.com/ai-dynamo/grove). Moving these to community governance signals that GPU infra is becoming part of the standard Kubernetes toolkit.
 
 ## The CNCF donations that will reshape AI on Kubernetes
 
-Every KubeCon has its crop of new CNCF projects, but this year's batch felt different. These are not incremental improvements. They are the building blocks of an AI runtime for Kubernetes.
+Every KubeCon has its crop of new CNCF projects, but this year's batch felt different. We are starting to see the building blocks of an AI runtime for Kubernetes.
 
 [**llm-d**](https://github.com/llm-d/llm-d) was the headline donation. Created by IBM Research, Red Hat, and Google Cloud, it splits inference workloads by separating prefill and decode phases across different pods. The collaborator list reads like an industry consortium: NVIDIA, CoreWeave, AMD, Cisco, Hugging Face, Intel, Lambda, Mistral AI, UC Berkeley, and UChicago. When that many organizations agree on a single approach to distributed inference, pay attention.
 
@@ -77,17 +79,17 @@ David Soria Parra from Anthropic gave a talk on [MCP evolving beyond simple tool
 
 Gateway infrastructure had its own mini-conference within KubeCon. The [Gateway API Inference Extension](https://github.com/kubernetes-sigs/gateway-api-inference-extension) from the Kubernetes SIG introduces model-aware routing and load balancing at the gateway level. Instead of routing by URL path, your gateway routes by model name, version, and capacity. That changes how inference traffic flows through a cluster in a fundamental way.
 
-[**Envoy AI Gateway**](https://github.com/envoyproxy/ai-gateway) builds on Envoy's existing proxy capabilities with token-aware rate limiting and provider failover. If your primary inference provider is saturated, traffic shifts to a secondary automatically. Rate limiting by token count rather than request count makes much more sense for LLM workloads, where a single request can consume vastly different amounts of compute.
+[**Envoy AI Gateway**](https://github.com/envoyproxy/ai-gateway) builds on [Envoy](https://github.com/envoyproxy/envoy)'s existing proxy capabilities with token-aware rate limiting and provider failover. If your primary inference provider is saturated, traffic shifts to a secondary automatically. Rate limiting by token count rather than request count makes much more sense for LLM workloads, where a single request can consume vastly different amounts of compute.
 
-I want to call out [**Agentgateway**](https://github.com/agentgateway/agentgateway) specifically. Written in Rust, it proxies LLM traffic, MCP connections, and agent-to-agent communication, with Cedar and CEL policy engines for fine-grained access control. Rust's performance characteristics matter here because inference gateway latency adds directly to user-perceived response time.
+I want to call out [**Agentgateway**](https://github.com/agentgateway/agentgateway) specifically. Written in Rust, it proxies LLM traffic, MCP connections, and agent-to-agent communication, with [Cedar](https://github.com/cedar-policy/cedar) and [CEL](https://github.com/google/cel-spec) policy engines for fine-grained access control. Rust's performance characteristics matter here because inference gateway latency adds directly to user-perceived response time.
 
 [**Kuadrant**](https://github.com/Kuadrant/kuadrant-operator), now in CNCF Sandbox, layers policy on top of gateway infrastructure and includes MCP server aggregation. Gateways are evolving from dumb traffic proxies into intelligent control planes for AI workloads, and these four projects are driving that shift.
 
 ## Platform engineering absorbs LLMOps
 
-The observability and platform engineering vendors showed up in force. The message was consistent: LLMOps is not a separate discipline. It is platform engineering with new requirements.
+The observability and platform engineering vendors showed up in force. The message was consistent: LLMOps is just platform engineering with new requirements.
 
-**Chronosphere** demonstrated parallel AI investigation, with multiple agents analyzing different aspects of an incident simultaneously and combining their findings. **SUSE Liz** takes a domain-specialized approach, deploying different AI agents for different operational domains rather than one general-purpose assistant. **groundcover** combines eBPF with OpenTelemetry to give coding agents rich runtime context about the systems they are modifying. That last one is subtle but important: if an AI agent is writing code that touches a service, it should understand that service's actual runtime behavior, not just its source code.
+**Chronosphere** demonstrated parallel AI investigation, with multiple agents analyzing different aspects of an incident simultaneously and combining their findings. **SUSE Liz** takes a domain-specialized approach, deploying different AI agents for different operational domains rather than one general-purpose assistant. **groundcover** combines eBPF with [OpenTelemetry](https://opentelemetry.io/) to give coding agents rich runtime context about the systems they are modifying. That last one is subtle but important: if an AI agent is writing code that touches a service, it should understand that service's actual runtime behavior, not just its source code.
 
 **Dynatrace** and **DevCycle** partnered to make feature flags observable primitives via [OpenFeature](https://github.com/open-feature/spec). Rolling out AI features behind feature flags is table stakes, but having those flags show up in your observability pipeline as first-class signals closes a real gap.
 
@@ -97,7 +99,7 @@ GPU multi-tenancy remains genuinely unsolved. Scheduling, workload isolation, co
 
 ## Sovereignty shapes infrastructure architecture
 
-The European context was impossible to ignore. The EU Cyber Resilience Act is driving compliance requirements deep into software supply chains, and every European organization I spoke with is feeling the pressure. This is not abstract regulation. It changes how you build, deploy, and operate software.
+Regulation came up in almost every conversation. The EU Cyber Resilience Act is driving compliance requirements deep into software supply chains, and every European organization I spoke with is feeling the pressure. Teams are already changing how they build and deploy software.
 
 Sovereign Kubernetes is a platform architecture requirement now, not something you can defer to next quarter. Organizations need Kubernetes distributions and cloud regions that guarantee data residency, and they need the tooling to enforce those guarantees programmatically. Self-hosted models are proliferating partly because of capability and cost, but data sovereignty is the accelerant. If your data cannot leave a jurisdiction, neither can your model.
 

@@ -284,7 +284,7 @@ You just need to add the `--secret` flag.
 pulumi config set api-key "hunter2" --secret
 ```
 
-For stacks hosted on the [Pulumi Service](https://app.pulumi.com), the default is that your configuration
+For stacks hosted on the [Pulumi Service](https://app.pulumi.com/signin), the default is that your configuration
 data is encrypted using a key specific to your stack. (So the ciphertext stored in the `Pulumi.yaml` file
 is safe to check into your source tree, since it cannot be copied/decrypted for another stack.)
 

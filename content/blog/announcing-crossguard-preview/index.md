@@ -92,7 +92,7 @@ While this is a simple demonstration of what you can do with Policy as Code, the
 
 ## Try it Today
 
-Pulumi CrossGuard empowers everyone to build better, safer applications and infrastructure. Today, Pulumi CrossGuard is available to preview for all Pulumi users. For Enterprise organizations, administrators can opt-in to the preview via the "Policies" tab in the [Pulumi Service](https://app.pulumi.com/). To get started with CrossGuard today, here are some resources:
+Pulumi CrossGuard empowers everyone to build better, safer applications and infrastructure. Today, Pulumi CrossGuard is available to preview for all Pulumi users. For Enterprise organizations, administrators can opt-in to the preview via the "Policies" tab in the [Pulumi Service](https://app.pulumi.com/signin). To get started with CrossGuard today, here are some resources:
 
 * If haven't played around with Pulumi yet, here is [Pulumi's Getting Started tutorial](/docs/get-started).
 * [Policy as Code Getting Started tutorial](/docs/using-pulumi/crossguard/get-started/)

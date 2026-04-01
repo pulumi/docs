@@ -112,7 +112,7 @@ Pulumi is designed to be entirely code-centric, including the way in which confi
 Configuration values and secrets are stored safely inside of `Pulumi.yaml` files, which you will commit.
 The source is effectively everything that Pulumi needs to for deployment, with minimal external dependencies.
 
-Secret configuration values are encrypted on [app.pulumi.com](https://app.pulumi.com) and are safe to check into your
+Secret configuration values are encrypted on [app.pulumi.com](https://app.pulumi.com/signin) and are safe to check into your
 source code repository. But you can use your own secrets provider, ensuring that only you have access to your
 sensitive information. See [Managing Secrets with Pulumi](/blog/managing-secrets-with-pulumi/) for more information.
 

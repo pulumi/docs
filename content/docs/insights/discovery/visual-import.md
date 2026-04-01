@@ -31,7 +31,7 @@ Before you start, ensure you have at least one [Pulumi Insights account](/docs/i
 
 ## Accessing visual import
 
-1. Log in to [Pulumi Cloud Console](https://app.pulumi.com/)
+1. Log in to [Pulumi Cloud Console](https://app.pulumi.com/signin)
 2. From the left navigation bar, select **IaC / Import**
 
 This opens the Visual Import workflow.

@@ -44,7 +44,7 @@ our toolchain.
 ## Infrastructure
 
 Our backend infrastructure that supports
-<https://app.pulumi.com> and the Pulumi CLI is fairly
+[app.pulumi.com](https://app.pulumi.com/signin) and the Pulumi CLI is fairly
 typical of a cloud service/application building on AWS. Those who have
 done this before will be familiar with the combination of AWS VPC, EC2,
 ASG, ALB, ECS, S3, Aurora, CloudFront and Route53 that powers the core
@@ -181,7 +181,7 @@ It combines AWS S3, CloudFront and Route53.
 ![image-7](./image-7.png)
 
 This infrastructure is deployed and managed using the Pulumi Service at
-[app.pulumi.com](https://app.pulumi.com/), allowing us to track the
+[app.pulumi.com](https://app.pulumi.com/signin), allowing us to track the
 history of deployments and changes to the infrastructure and quickly
 jump in to the resources defined by this stack in the AWS console.
 

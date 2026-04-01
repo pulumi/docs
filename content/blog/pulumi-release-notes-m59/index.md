@@ -87,6 +87,6 @@ Subtypes now correctly propagate through a call to `Output[T]`. For example, if 
 
 ### Get started with Pulumi, directly from the Pulumi Service
 
-We're always looking for ways to make it easier for people who are new to Pulumi to get started successfully. This release, we've added a new dashboard card to your individual user dashboard on the Pulumi Service that helps you set up the Pulumi CLI and deploy your first stack of cloud infrastructure. Look for the "Get Started" card on your dashboard on the [Pulumi Service](https://app.pulumi.com/).
+We're always looking for ways to make it easier for people who are new to Pulumi to get started successfully. This release, we've added a new dashboard card to your individual user dashboard on the Pulumi Service that helps you set up the Pulumi CLI and deploy your first stack of cloud infrastructure. Look for the "Get Started" card on your dashboard on the [Pulumi Service](https://app.pulumi.com/signin).
 
 ![Screenshot of Get Started card from the Pulumi Service](get-started-card.png)

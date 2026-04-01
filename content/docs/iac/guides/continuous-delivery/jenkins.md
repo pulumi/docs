@@ -30,7 +30,7 @@ altered to fit into any existing type of deployment setup.
 ## Prerequisites
 
 - A working installation of a recent version of Jenkins.
-- An account in the [Pulumi Cloud](https://app.pulumi.com).
+- An account in the [Pulumi Cloud](https://app.pulumi.com/signup).
 - The [latest version of Pulumi](/docs/install/).
 - Setup a new project and [stack](/docs/concepts/) using one of our [Get Started](/docs/get-started/) guides or by running [`pulumi new`](/docs/iac/cli/commands/pulumi_new)
 and choosing one of the many templates that are available.

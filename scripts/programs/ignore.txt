@@ -41,6 +41,10 @@ aws-acm-certificate-csharp
 deepseek-ollama-csharp
 gcp-simple-webserver-yaml
 
+# Azure YAML import test: the engine requires import to be a literal
+# string, but the YAML program needs interpolation for the resource ID.
+azure-native-import-resource-group-yaml
+
 # GCP import tests: service account doesn't exist yet and GCP project
 # configuration needs to be sorted out. See #14505.
 gcp-import-service-account-yaml

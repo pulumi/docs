@@ -15,7 +15,7 @@ This page covers the fundamental requirements for using the Pulumi Cloud REST AP
 
 ## Endpoint URL
 
-For the Managed Pulumi Cloud (i.e. [app.pulumi.com](https://app.pulumi.com/)), API endpoints are prefixed with the following url:
+For the Managed Pulumi Cloud (i.e. [app.pulumi.com](https://app.pulumi.com/signin)), API endpoints are prefixed with the following url:
 
 ```plain
 https://api.pulumi.com

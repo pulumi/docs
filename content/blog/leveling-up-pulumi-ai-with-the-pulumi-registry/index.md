@@ -144,7 +144,7 @@ When asked for modern resources such as [Google AlloyDB](https://cloud.google.co
 
 ## Getting Started with the Enhanced Pulumi AI
 
-Our enhancements to Pulumi AI have made it an even more useful tool for generating accurate and relevant cloud infrastructure solutions. We're excited about the future of Pulumi AI as we continue to integrate it into [Pulumi Cloud](https://app.pulumi.com) and empower everyone to become a cloud engineer.
+Our enhancements to Pulumi AI have made it an even more useful tool for generating accurate and relevant cloud infrastructure solutions. We're excited about the future of Pulumi AI as we continue to integrate it into [Pulumi Cloud](https://app.pulumi.com/signin) and empower everyone to become a cloud engineer.
 
 We've also added new ways to reach Pulumi AI. In the Pulumi Registry, "Explore with Pulumi AI" links provide interactive documentation. And after you've had a conversation with Pulumi AI, you can share it via a "Share conversation" link in the bottom right corner of the message box:
 
