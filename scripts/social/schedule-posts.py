@@ -265,12 +265,43 @@ def meta_image_path(filepath: str) -> str | None:
 
 
 def find_pr_number(filepath: str, since_sha: str | None = None) -> int | None:
-    """Find the PR number that introduced a blog post file.
+    """Find the PR number that introduced a file.
 
-    Scopes the search to commits between since_sha and HEAD when available,
-    so we find the PR that triggered this run rather than an older one.
-    Falls back to the most recent commit touching the file.
+    Uses the GitHub API to find the most recent commit that touched the file,
+    then looks up which PR that commit belongs to. This works reliably on
+    reruns (unlike git log parsing, which depends on the SHA range).
+
+    Falls back to git log commit message parsing if the API is unavailable.
     """
+    if GITHUB_TOKEN:
+        try:
+            # Find the most recent commit that touched this file
+            resp = requests.get(
+                f"https://api.github.com/repos/{GITHUB_REPO}/commits",
+                headers={
+                    "Authorization": f"token {GITHUB_TOKEN}",
+                    "Accept": "application/vnd.github+json",
+                },
+                params={"path": filepath, "per_page": 1},
+                timeout=10,
+            )
+            if resp.ok and resp.json():
+                sha = resp.json()[0]["sha"]
+                # Find PRs associated with this commit
+                pr_resp = requests.get(
+                    f"https://api.github.com/repos/{GITHUB_REPO}/commits/{sha}/pulls",
+                    headers={
+                        "Authorization": f"token {GITHUB_TOKEN}",
+                        "Accept": "application/vnd.github+json",
+                    },
+                    timeout=10,
+                )
+                if pr_resp.ok and pr_resp.json():
+                    return pr_resp.json()[0]["number"]
+        except Exception as e:
+            print(f"  Warning: GitHub API PR lookup failed ({e}), falling back to git log")
+
+    # Fallback: parse commit messages for (#NNN)
     if since_sha:
         result = subprocess.run(
             ["git", "log", f"{since_sha}..HEAD", "--pretty=format:%s", "--", filepath],
@@ -413,7 +444,7 @@ def _print_result(platform: Platform, request_id: str, scheduled_date: str | Non
     """
     if scheduled_date:
         print(f"  ✓ {platform}: scheduled for {scheduled_date} {POSTING_TZ}")
-        return None
+        return "scheduled"
     try:
         post_url = _poll_for_result(request_id, platform)
     except PostFailed as e:
@@ -432,10 +463,12 @@ def build_payload(platform: Platform, copy: str, url: str, media_paths: list[str
     URL handling per platform:
       - X: URL in body text (X crawls it for a card). Do NOT also send link_url
         or upload-post.com creates a thread.
-      - Bluesky: link_url only (not in body text)
+      - Bluesky (no media): link_url only (not in body text) — renders a card
+      - Bluesky (with media): URL in body text (link_url not supported with media)
       - LinkedIn: URL appended to body text (link_url cards don't work)
     """
-    if url and url not in copy and platform != "bluesky":
+    bluesky_text_only = platform == "bluesky" and not media_paths
+    if url and url not in copy and not bluesky_text_only:
         body = f"{copy}\n\n{url}"
     else:
         body = copy
@@ -446,7 +479,7 @@ def build_payload(platform: Platform, copy: str, url: str, media_paths: list[str
         "title": body,
     }
 
-    if url and not media_paths and platform == "bluesky":
+    if url and bluesky_text_only:
         data["link_url"] = url
 
     if platform == "x":
@@ -634,9 +667,8 @@ def main() -> None:
                 continue
 
             # Validate character limits.
-            # X appends URL to body text. LinkedIn appends URL for non-media posts.
-            # Photo posts append URL to body on all platforms. Bluesky text posts
-            # use link_url (no body URL).
+            # X always appends URL to body text. Media posts on any platform
+            # append URL to body. Bluesky text-only posts use link_url instead.
             limit = CHAR_LIMITS.get(platform)
             appends_url = url and url not in copy and (
                 platform == "x"
@@ -773,7 +805,6 @@ def post_file(filepath: str, platforms_filter: list[Platform] | None = None) -> 
 
     state: State = {"posts": {}}
     posted_urls: list[tuple[str, Platform, PostResult]] = []
-    posts_by_file: defaultdict[str, list[tuple[Platform, PostResult]]] = defaultdict(list)
 
     for platform, (copy, media_paths) in platforms.items():
         if not PLATFORM_ENABLED.get(platform):
