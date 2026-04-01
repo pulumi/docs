@@ -21,7 +21,7 @@ hero:
   tag_line: "Join us at KubeCon Europe 2026"
   anchor: hero
 
-logos_text: Trusted by over 3,700 innovative companies
+logos_text: Trusted by over 4,000 innovative companies
 logos_anchor: customers
 logos:
   - src: /logos/customers/deloitte.svg

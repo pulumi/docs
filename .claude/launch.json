@@ -1,0 +1,23 @@
+{
+    "version": "0.0.1",
+    "configurations": [
+        {
+            "name": "Hugo Dev Server",
+            "runtimeExecutable": "make",
+            "runtimeArgs": ["serve"],
+            "port": 1313
+        },
+        {
+            "name": "Hugo + Asset Rebuilds",
+            "runtimeExecutable": "make",
+            "runtimeArgs": ["serve-all"],
+            "port": 1313
+        },
+        {
+            "name": "Static File Server",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": ["run", "http-server", "public"],
+            "port": 8080
+        }
+    ]
+}
