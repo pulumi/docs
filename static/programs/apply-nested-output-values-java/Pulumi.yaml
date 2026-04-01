@@ -1,0 +1,7 @@
+name: apply-nested-output-values-java
+runtime: java
+description: Demonstrates accessing nested output values using apply and lifting
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-java

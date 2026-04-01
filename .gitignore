@@ -108,3 +108,6 @@ scripts/alias-verification/historical-aliases-correct.txt
 scripts/alias-verification/historical-aliases-missing.txt
 scripts/alias-verification/historical-aliases-report.txt
 scripts/alias-verification/historical-fixes.json
+
+# Ignore compiled Go binaries in static programs.
+static/programs/*-go/*-go
