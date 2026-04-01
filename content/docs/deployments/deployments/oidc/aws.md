@@ -47,7 +47,18 @@ Once you have created the identity provider, you will see a notification at the 
     * Select `api.pulumi.com/oidc` under **Identity provider**.
     * Select the name of your Pulumi organization under **Audience**. Then click **Next**.
   {{< video title="Create IAM role wizard" src="https://www.pulumi.com/uploads/create-role-wizard.mp4" autoplay="true" loop="true" >}}
-5. On the **Add permissions** page, select the permissions that you want to grant to your Pulumi deployments. `AdministratorAccess` will be required most of the time as most AWS workloads require creating IAM resources, which in turn require full admin access. Then click **Next**.
+5. On the **Add permissions** page, select the permissions that you want to grant to your Pulumi deployments. Then click **Next**.
+
+    {{% notes "info" %}}
+Many Pulumi programs create IAM roles, policies, or instance profiles (e.g., for Lambda, ECS, or EKS), which require IAM permissions. While `AdministratorAccess` is the simplest policy that covers all services including IAM, it is broader than most workloads need. For better security, consider one of these alternatives:
+
+* **PowerUserAccess + IAMFullAccess** — provides broad service access with IAM permissions but excludes AWS Organizations management.
+* **Custom least-privilege policy** — scoped to only the AWS services and IAM actions your Pulumi program uses (e.g., `ec2:*`, `s3:*`, `iam:CreateRole`, `iam:AttachRolePolicy`, `iam:PassRole`).
+* **Permissions boundary** — use a broader role policy but attach an [IAM permissions boundary](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html) to cap the privileges of any IAM entities that Pulumi creates, preventing privilege escalation.
+
+You can also further constrain the assumed role session using the **Policy ARNs** field in the Pulumi Deployments OIDC configuration.
+    {{% /notes %}}
+
   {{< video title="Adding S3 permissions to IAM role" src="https://www.pulumi.com/uploads/create-role-add-perms.mp4" autoplay="true" loop="true" >}}
 6. Provide a name and optional description for the IAM role. Then click **Create role**.
   {{< video title="Adding name and description to role then creating it" src="https://www.pulumi.com/uploads/create-role.mp4" autoplay="true" loop="true" >}}
