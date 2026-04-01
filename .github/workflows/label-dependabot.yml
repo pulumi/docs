@@ -49,7 +49,7 @@ jobs:
 
             // Dependency categorization by risk tier
             const highRiskDeps = [
-              '@algolia/', 'algoliasearch', '@growthbook/', 'marked',
+              '@algolia/', 'algoliasearch', 'marked',
               'clipboard-polyfill', 'search-insights', '@stencil/',
               'swiper', 'uuid', 'markdown-it', 'js-yaml', 'cheerio', 'gray-matter'
             ];

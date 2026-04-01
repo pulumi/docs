@@ -3420,7 +3420,6 @@ All Dependabot PRs automatically receive:
 **Packages:**
 
 - **Search:** `@algolia/*`, `algoliasearch`, `search-insights`
-- **A/B Testing:** `@growthbook/*`
 - **Content Parsing:** `marked`, `markdown-it`, `js-yaml`, `cheerio`, `gray-matter`
 - **Browser APIs:** `clipboard-polyfill`
 - **Web Components:** `@stencil/*`, `swiper`
@@ -3435,7 +3434,6 @@ All Dependabot PRs automatically receive:
 1. Check browser console for errors
 1. Verify markdown rendering on multiple pages
 1. Test interactive components (code copy, tabs, etc.)
-1. Check A/B testing integration (GrowthBook)
 
 #### MEDIUM RISK - Build tools/infrastructure dependencies
 
