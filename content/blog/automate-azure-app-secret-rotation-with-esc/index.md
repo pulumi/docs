@@ -17,7 +17,9 @@ social:
     bluesky: "Automate Azure app secret rotation with Pulumi ESC — never worry about expired credentials again."
 ---
 
-If you manage Azure app registrations, keeping track of client secrets is a constant hassle. Forgetting to rotate them before they expire can lead to broken authentication and unexpected outages. With [Pulumi ESC](/docs/esc)'s `azure-app-secret` rotator, you can automate client secret rotation for your Azure apps, so you never have to worry about expired credentials again!
+Any time your application needs to authenticate with Azure Active Directory, you need an app registration with a client secret. But those secrets expire, and if you don't rotate them in time, your app loses access.
+
+If you or your team manages Azure app registrations, you know that keeping track of client secrets is a constant hassle. Forgetting to rotate them before they expire can lead to broken authentication and unexpected outages. With [Pulumi ESC](/docs/esc)'s `azure-app-secret` rotator, you can automate client secret rotation for your Azure apps, so you never have to worry about expired credentials again!
 
 <!--more-->
 
@@ -58,7 +60,7 @@ values:
       inputs:
         login: ${environments.logins.production.azure.login}
         clientId: <target-app-client-id>
-        lifetimeInDays: 180
+        lifetimeInDays: 180 # How long each new secret is valid (max 730 days)
       state:
         current:
           secretId: <secret-id>
@@ -66,7 +68,9 @@ values:
             fn::secret: <secret-value>
 ```
 
-Once this is set up, you're ready to go! After setting a secret rotation [schedule](/docs/esc/environments/rotation/#schedule), you never need to worry about your client secrets expiring, and you will always have the latest credentials in your ESC Environment.
+The `lifetimeInDays` field controls how long each generated secret remains valid before it expires. Azure allows a maximum of 730 days (two years), but shorter lifetimes are recommended for better security. Make sure to set a rotation [schedule](/docs/esc/environments/rotation/#schedule) that runs before the lifetime expires so your credentials are always fresh.
+
+Once this is set up, you're ready to go! You never need to worry about your client secrets expiring, and you will always have the latest credentials in your ESC Environment.
 
 ## Learn more
 
