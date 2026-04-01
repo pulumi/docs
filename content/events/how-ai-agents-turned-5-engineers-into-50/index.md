@@ -42,15 +42,15 @@ location: virtual
 
 # Description of the event.
 description: |
-    Most teams are trying to "add AI" to their existing workflow.
+    Most teams try to force AI into their existing workflow. Output goes up, but review, control, and ownership don't keep up.
 
-    That approach breaks down quickly.
+    At Compostable AI, the problem was harder to ignore. They deploy single-tenant systems across fleets of AWS accounts, with strict isolation and no room for drift. The usual approach didn't scale.
 
-    At Compostable AI, the shift was more fundamental: instead of adapting AI to their process, they rebuilt the process around AI. Software development became a system that continuously generates, evaluates, and deploys code — including infrastructure — with minimal human involvement.
+    So they changed how software gets made. Agents generate, evaluate, and deploy code, including infrastructure, in a continuous loop, with humans setting the constraints.
 
-    The result: a five-person team operating at the output of a much larger organization, without scaling headcount.
+    That shift changes the economics of a team. Instead of adding people to handle growth, they focus on increasing what a small team can carry. Five engineers support a growing set of clients and systems without hitting the limits that used to force new hires.
 
-    In this live conversation, CTO Ewan Dawson walks through what actually changed: the move toward a "software factory," why infrastructure had to become real, typed code, and what it takes to safely run a system where most of the work is done by agents.
+    In this conversation, CTO Ewan Dawson explains what changed, why infrastructure had to become typed code, and how they keep this system from breaking under real-world constraints.
 
 # The event presenters
 presenters:
