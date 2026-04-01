@@ -354,7 +354,7 @@ provides complex coordination between these different steps.
 
 Once you have deployed your Amazon EKS cluster and Kubernetes resources
 to AWS, you can manage the deployment on
-[app.pulumi.com](https://app.pulumi.com/), including deep links into the
+[app.pulumi.com](https://app.pulumi.com/signin), including deep links into the
 AWS console and Kubernetes dashboard to get real-time insights on your
 cluster.
 
@@ -368,7 +368,7 @@ shared with other users in your organization.
 
 [Additional management features](/product/), including
 RBAC, CI/CD integrations, and rich resource graph visualization, are
-also available via the [Pulumi app](https://app.pulumi.com),
+also available via the [Pulumi app](https://app.pulumi.com/signin),
 including Team and Enterprise Editions for production teams of all
 sizes.
 

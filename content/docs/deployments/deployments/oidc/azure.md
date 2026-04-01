@@ -95,7 +95,7 @@ To provide Pulumi services the ability to deploy, manage, and interact with Azur
 In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/deployments/deployments/api/#patchsettings).
 {{% /notes %}}
 
-1. Navigate to your stack in the [Pulumi Console](https://app.pulumi.com/).
+1. Navigate to your stack in the [Pulumi Console](https://app.pulumi.com/signin).
 2. Open the stack's **Settings** tab.
 3. Choose the **Deploy** panel.
 4. Under the **OpenID Connect** header, toggle **Enable Azure Integration**.

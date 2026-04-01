@@ -27,7 +27,7 @@ However, I'll show you that finding the proverbial easy street is easier than yo
 
 <!--more-->
 
-This is a "bring your own [GitHub](https://github.com) login" event, so refresh that login. You will want to grab a [Pulumi Cloud](https://app.pulumi.com) login as well. With credentials in hand, you are set with everything that you need to start. Let's go!
+This is a "bring your own [GitHub](https://github.com) login" event, so refresh that login. You will want to grab a [Pulumi Cloud](https://app.pulumi.com/signup) login as well. With credentials in hand, you are set with everything that you need to start. Let's go!
 
 ## Index
 

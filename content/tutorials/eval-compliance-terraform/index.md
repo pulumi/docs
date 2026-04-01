@@ -124,7 +124,7 @@ Then run the `terraform apply` command to have the following resources deployed 
 
 ## Scan Terraform resources
 
-Now that you have deployed your resources, you will run a Pulumi Insights scan to retrieve a list of the resources in your account. To do so, navigate to the **Accounts** page in the [Pulumi Console](https://app.pulumi.com/) and click on your Pulumi Insights account. For the purposes of this tutorial, we have created an account named `pulumi-tutorials-insights`.
+Now that you have deployed your resources, you will run a Pulumi Insights scan to retrieve a list of the resources in your account. To do so, navigate to the **Accounts** page in the [Pulumi Console](https://app.pulumi.com/signin) and click on your Pulumi Insights account. For the purposes of this tutorial, we have created an account named `pulumi-tutorials-insights`.
 
 {{< video title="Navigating to Pulumi Insights accounts page" src="/tutorials/eval-compliance-terraform/assets/insights-nav-to-accounts.mp4" autoplay="true" loop="true" >}}
 

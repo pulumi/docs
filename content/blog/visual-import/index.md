@@ -89,4 +89,4 @@ Once resources are in code, you can take full advantage of Pulumi Cloud's full s
 
 Visual Import is now available in the Pulumi Cloud Console for Team, Enterprise and Business Critical users. If you're ready to modernize your infrastructure and empower your teams with a fast path to Infrastructure as Code, there's no better place to start.
 
-[Log in to Pulumi Cloud](https://app.pulumi.com/) and select **IaC / Import** to get started.
+[Log in to Pulumi Cloud](https://app.pulumi.com/signin) and select **IaC / Import** to get started.

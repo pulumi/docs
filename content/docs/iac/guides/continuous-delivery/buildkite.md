@@ -17,7 +17,7 @@ menu:
 
 ## Prerequisites
 
-- Sign up for a [Pulumi account](https://app.pulumi.com)
+- Sign up for a [Pulumi account](https://app.pulumi.com/signup)
 - Create a [Pulumi Access Token](https://app.pulumi.com/account/tokens)
   - Save this token as a [pipeline secret](https://buildkite.com/docs/pipelines/security/secrets/buildkite-secrets)
 named `PULUMI_ACCESS_TOKEN`.

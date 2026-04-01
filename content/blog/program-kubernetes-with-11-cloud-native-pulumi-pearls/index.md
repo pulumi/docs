@@ -581,7 +581,7 @@ pipeline is too. In fact, each Pulumi program really is a deployment
 workflow expressed in code. The Pulumi CLI is responsible for evaluating
 programs, producing goal states, diffing states to produce plans, and
 carrying them out. The Pulumi hosted service at
-[https://app.pulumi.com](https://app.pulumi.com) is used for robust concurrency
+[https://app.pulumi.com](https://app.pulumi.com/signin) is used for robust concurrency
 and state management so that deployments can be done continuously in a
 team environment, with perfect auditability of who changed what and
 when, and so that deployments are repeatable and failures recoverable.

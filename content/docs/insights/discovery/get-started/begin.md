@@ -22,7 +22,7 @@ First, let's run through a few prerequisites and quick steps to ensure you ready
 - Verify you have permissions to create credentials in the provider account you want to scan.
 - You're using Pulumi's **Team**, **Enterprise**, or **Business Critical** edition.
 
-If you're new to Pulumi you can click here to [start a free trial](https://app.pulumi.com/?create-organization).
+If you're new to Pulumi you can click here to [start a free trial](https://app.pulumi.com/signup?create-organization).
 
 ## Create an ESC environment
 
@@ -32,7 +32,7 @@ Pulumi Insights Account Discovery requires read-only access to your cloud accoun
 Account Discovery leverages Pulumi ESC to securely manage the credentials required to discover and read infrastructure resources, aligning with enterprise best practices for managing application secrets.
 {{% /notes %}}
 
-To create an environment, [sign into the Pulumi cloud](https://app.pulumi.com/) console and navigate to **Pulumi ESC** and select **Environments** in the left-hand menu.
+To create an environment, [sign into the Pulumi cloud](https://app.pulumi.com/signin) console and navigate to **Pulumi ESC** and select **Environments** in the left-hand menu.
 
 Next, click **Create Environment** and enter a name for the project and environment, such as `insights-discovery-project` and `insights-environment` and then click **Create**.
 

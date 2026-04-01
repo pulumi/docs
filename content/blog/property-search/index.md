@@ -267,6 +267,6 @@ System.out.println(response.toString());
 
 We are excited to be extending Pulumi Resource Search with access to search over every property of your resources. We can’t wait to see what new capabilities it unlocks for your organization. As always, submit any feedback on the feature in the [Pulumi Cloud Requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new?assignees=&labels=kind%2Fenhancement&projects=&template=feature-request.md) repository.
 
-[Login to Pulumi Cloud](https://app.pulumi.com)
+[Login to Pulumi Cloud](https://app.pulumi.com/signin)
 
 Happy searching!

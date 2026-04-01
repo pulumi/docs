@@ -49,7 +49,7 @@ Neo operates within the conversing user's [RBAC entitlements](/docs/pulumi-cloud
 
 Neo is automatically enabled for eligible organizations. To access Neo:
 
-1. Navigate to [Pulumi Cloud](https://app.pulumi.com)
+1. Navigate to [Pulumi Cloud](https://app.pulumi.com/signin)
 2. Click on **Agent Tasks** within the **Neo** section in the left navigation menu
 
 > If Neo doesn't appear in your navigation, verify that AI features have not been disabled for your organization. AI controls are located in **Settings > Neo Settings > General**.

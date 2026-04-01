@@ -30,7 +30,7 @@ Deployments can be triggered through multiple methods: using the [REST API](/doc
 
 ## Set up a new Pulumi Deployment
 
-First sign in to Pulumi Cloud via the [Pulumi sign in page](https://app.pulumi.com).
+First sign in to Pulumi Cloud via the [Pulumi sign in page](https://app.pulumi.com/signin).
 
 ## Install and configure the GitHub App
 

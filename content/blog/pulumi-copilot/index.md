@@ -51,7 +51,7 @@ Pulumi Copilot is Enterprise-Ready on day one - it adheres to all the same ident
 
 Pulumi Copilot is available now in public beta, and is free while in beta for all organizations in Pulumi Cloud. Organization administrators can turn on Pulumi Copilot for their organization by going to __Settings > Access Management > Pulumi Copilot__ within the Pulumi Cloud console.
 
-Try Pulumi Copilot now at [https://app.pulumi.com/](https://app.pulumi.com).
+Try Pulumi Copilot now at [https://app.pulumi.com/](https://app.pulumi.com/signin).
 
 {{< youtube "m4kb2k_chyM" >}}
 
@@ -150,4 +150,4 @@ We’re excited to introduce Pulumi Copilot, the first conversational AI for gen
 
 Pulumi Copilot is available now in public beta, and is free while in beta for all organizations in Pulumi Cloud. Organization administrators can turn on Pulumi Copilot for their organization by going to __Settings > Access Management > Pulumi Copilot__ within the Pulumi Cloud console.
 
-Get started with Pulumi Copilot in [Pulumi Cloud](https://app.pulumi.com/).
+Get started with Pulumi Copilot in [Pulumi Cloud](https://app.pulumi.com/signin).

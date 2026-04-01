@@ -92,7 +92,7 @@ Now that your base environment is created, you'll securely store the necessary s
 
 {{< video title="Animation of how to edit a new environment in Pulumi ESC via the Pulumi Cloud" src="./esc-k8.mp4" autoplay="true" loop="true" >}}
 
-1. Open your browser and log in to [Pulumi Cloud](https://app.pulumi.com/).
+1. Open your browser and log in to [Pulumi Cloud](https://app.pulumi.com/signin).
 2. Select **Environments** from the ESC section of the console.
 3. Find and select the `db` environment under the `project: esc-k8-tutorial`.
 

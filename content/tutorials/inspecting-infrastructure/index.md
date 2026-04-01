@@ -32,7 +32,7 @@ youll_learn:
 
 # A list of tutorial prerequisites. Markdown is fine. Keep it simple; no need to be exhaustive here.
 prereqs:
-    - A [Pulumi account](https://app.pulumi.com) and [access token](/docs/pulumi-cloud/access-management/access-tokens/)
+    - A [Pulumi account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/access-management/access-tokens/)
     - The [Pulumi CLI](https://www.pulumi.com/docs/install/)
     - An [Amazon Web Services](https://aws.amazon.com/) account
     - The [AWS CLI](https://aws.amazon.com/cli/)

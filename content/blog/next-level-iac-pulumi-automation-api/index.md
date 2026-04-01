@@ -386,7 +386,7 @@ Result: succeeded
 INFO:     127.0.0.1:49220 - "POST / HTTP/1.1" 200 OK
 ```
 
-You should see the URL of the created infrastructure in the response from the FastAPI server. If you head over to the [Pulumi console](https://app.pulumi.com/), you should see the created stack and the resources that were created and also that [Pulumi Deployments](/docs/pulumi-cloud/deployments/) were used to deploy the stack to the specified AWS region.
+You should see the URL of the created infrastructure in the response from the FastAPI server. If you head over to the [Pulumi console](https://app.pulumi.com/signin), you should see the created stack and the resources that were created and also that [Pulumi Deployments](/docs/pulumi-cloud/deployments/) were used to deploy the stack to the specified AWS region.
 
 ![Pulumi Console](pulumi-console.png)
 

@@ -60,7 +60,7 @@ This encrypts the value before storing it.
 
 ### Via the Pulumi Cloud console
 
-1. Navigate to [Pulumi Cloud](https://app.pulumi.com)
+1. Navigate to [Pulumi Cloud](https://app.pulumi.com/signin)
 1. Select **Environments** in the left navigation
 1. Select your environment
 1. In the editor, add your secret using the `fn::secret` function:

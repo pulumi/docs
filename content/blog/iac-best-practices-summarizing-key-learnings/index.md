@@ -93,6 +93,6 @@ In each of these repositories, there are different branches that reflect the sta
 
 ## Wrapping up
 
-This series has used the story of a fictional company, Zephyr Archaeotech Emporium, to discuss some recommendations around how to best utilize Pulumi for solving their infrastructure as code needs. While this company is fictional, the benefits of Pulumi and infrastructure as code are real. We invite you to try for yourself---sign up for [a free Pulumi Cloud account](https://app.pulumi.com/) today!
+This series has used the story of a fictional company, Zephyr Archaeotech Emporium, to discuss some recommendations around how to best utilize Pulumi for solving their infrastructure as code needs. While this company is fictional, the benefits of Pulumi and infrastructure as code are real. We invite you to try for yourself---sign up for [a free Pulumi Cloud account](https://app.pulumi.com/signup) today!
 
 {{< related-posts >}}

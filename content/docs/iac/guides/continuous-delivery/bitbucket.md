@@ -19,7 +19,7 @@ This guide provides examples for integrating Bitbucket Pipelines with a [Pulumi 
 
 ## Prerequisites
 
-- Sign up for a [Pulumi account](https://app.pulumi.com)
+- Sign up for a [Pulumi account](https://app.pulumi.com/signup)
 - Create a [Pulumi Access Token](https://app.pulumi.com/account/tokens)
 - Install the [latest Pulumi CLI](/docs/install/)
 - Create a [Bitbucket account](https://bitbucket.org) with Pipelines enabled

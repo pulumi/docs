@@ -46,7 +46,7 @@ Pulumi supports two classes of state backends for storing your infrastructure st
 
 Pulumi's SDK works great with all backends, although some details differ between them.
 
-Pulumi Cloud, hosted at <a href="https://app.pulumi.com">`app.pulumi.com`</a>, is the default backend, as it provides the best combination of usability, safety, and security for most users. Important features include:
+Pulumi Cloud, hosted at <a href="https://app.pulumi.com/signin">`app.pulumi.com`</a>, is the default backend, as it provides the best combination of usability, safety, and security for most users. Important features include:
 
 - Robust state management, with transactional checkpointing for fault tolerance and recovery
 - Concurrent state locking to prevent corrupting your infrastructure state in a team environment

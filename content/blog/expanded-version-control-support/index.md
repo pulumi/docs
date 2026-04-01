@@ -80,4 +80,4 @@ The new project wizard discovers your organizations, repositories, and branches 
 
 For setup details, see the docs for [GitHub](/docs/version-control/github-app/), [GitHub Enterprise Server](/docs/version-control/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/).
 
-{{< blog/cta-button "Connect your VCS" "https://app.pulumi.com" "_blank" >}}
+{{< blog/cta-button "Connect your VCS" "https://app.pulumi.com/signin" "_blank" >}}

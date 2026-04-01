@@ -379,7 +379,7 @@ The API costs were reasonable for what I got. For a complete infrastructure proj
 If you want to experiment with Ralph Wiggum and Pulumi:
 
 1. Install Claude Code and the Ralph Wiggum plugin
-1. Set up your [Pulumi account](https://app.pulumi.com/) and AWS credentials
+1. Set up your [Pulumi account](https://app.pulumi.com/signup) and AWS credentials
 1. Write a detailed `PROMPT.md` with clear success criteria
 1. Start with a small project and low iteration limits
 1. Review the git history when it finishes

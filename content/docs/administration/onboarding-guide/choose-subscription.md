@@ -95,10 +95,10 @@ If you are using a self-hosted installation of the Pulumi platform, the URLs use
 
 ### Create your account
 
-Sign up using your email address and password, or connect with your GitHub, GitLab, or Atlassian identity at [app.pulumi.com/signup](http://app.pulumi.com/signup). After signup, you can configure SAML/SSO for team onboarding. Learn more about [account management](https://www.pulumi.com/docs/administration/organizations-teams/teams/).
+Sign up using your email address and password, or connect with your GitHub, GitLab, or Atlassian identity at [app.pulumi.com/signup](https://app.pulumi.com/signup). After signup, you can configure SAML/SSO for team onboarding. Learn more about [account management](https://www.pulumi.com/docs/administration/organizations-teams/teams/).
 
 ### Explore the console
 
-Access the Pulumi Cloud console through the "Sign In" link at [pulumi.com](http://pulumi.com) or go directly to [app.pulumi.com](http://app.pulumi.com). The dashboard provides useful content and links, while the left navigation gives you access to stacks, resources, and settings. Use the search function to find specific resources, and click the sparkle icon to access Pulumi Neo, your AI agent.
+Access the Pulumi Cloud console through the "Sign In" link at [pulumi.com](https://pulumi.com) or go directly to [app.pulumi.com](https://app.pulumi.com/signin). The dashboard provides useful content and links, while the left navigation gives you access to stacks, resources, and settings. Use the search function to find specific resources, and click the sparkle icon to access Pulumi Neo, your AI agent.
 
 {{< get-started-stepper >}}

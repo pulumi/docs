@@ -67,7 +67,7 @@ To delete an integration, select **Delete Integration** on the integration card.
 
 ### Merge request comments
 
-Pulumi automatically posts comments on merge requests with the results of any stack changes. This includes a summary of how many resources were created, updated, or deleted, with a link to the full details in [Pulumi Cloud](https://app.pulumi.com). When enabled, comments also include a collapsible detailed diff and an AI-generated explanation from Neo.
+Pulumi automatically posts comments on merge requests with the results of any stack changes. This includes a summary of how many resources were created, updated, or deleted, with a link to the full details in [Pulumi Cloud](https://app.pulumi.com/signin). When enabled, comments also include a collapsible detailed diff and an AI-generated explanation from Neo.
 
 Comments are idempotent: updates to the same stack edit the existing comment rather than creating a new one. Draft and WIP merge requests are treated identically to regular merge requests.
 
