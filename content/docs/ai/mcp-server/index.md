@@ -84,11 +84,32 @@ Launch Claude Code, enter the `/mcp` slash-command, select "pulumi" and connect 
 
 ### Claude Desktop
 
-For Claude Desktop, add the MCP server to your configuration file:
+Add the Pulumi MCP server to Claude Desktop by editing your configuration file. The file location depends on your operating system:
 
-<p align="center">
-  <img src="claude-desktop-setup.png" alt="Claude Desktop setup" width="50%">
-</p>
+- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+
+Add the following to your configuration file, creating it if it does not already exist:
+
+```json
+{
+  "mcpServers": {
+    "pulumi": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.ai.pulumi.com/mcp"]
+    }
+  }
+}
+```
+
+> [!INFO]
+> This configuration uses the [mcp-remote](https://www.npmjs.com/package/mcp-remote) package to connect Claude Desktop to the remote Pulumi MCP server. Node.js must be installed on your system for `npx` to work.
+
+On Windows, if Claude Desktop is installed with the bundled Claude Code CLI, you can add the server from a terminal instead:
+
+```cmd
+"%APPDATA%\Claude\claude-code\claude.exe" mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp
+```
 
 After adding the configuration:
 
