@@ -14,11 +14,15 @@ tags:
     - platform-engineering
     - cloud-native
 social:
-    twitter: "KubeCon EU 2026 just wrapped in Amsterdam. AI moved from demos to production Kubernetes, and inference is the new battleground. Here's what I saw on the ground."
+    twitter: "82% of orgs run AI on Kubernetes. Only 7% deploy daily. That gap defined every conversation I had at KubeCon EU 2026. I wrote up what's actually changing: llm-d, agent identity with SPIFFE, inference gateways, and why platform teams can't ignore this."
     linkedin: |
-        Just back from KubeCon EU 2026 in Amsterdam. 13,350 attendees, and one clear message: AI on Kubernetes has shifted from experimentation to production.
+        I spent four days at KubeCon EU 2026 in Amsterdam asking people at our booth the same question: what are you actually running in production with AI on Kubernetes?
 
-        I wrote up the biggest themes — inference infrastructure, agentic AI identity, gateway routing, sovereignty — and what they mean for platform teams right now.
+        Almost everyone had a proof of concept. Almost nobody had a production story they were happy with. And the stats back that up — 82% adoption, 7% daily deployment.
+
+        Wrote up the projects and trends that stuck with me: llm-d splitting inference across pods, kagenti giving agents cryptographic identity via SPIFFE, a whole new generation of AI-aware gateways, and why GPU multi-tenancy is still unsolved.
+
+        13,350 attendees, and the community is building fast. But the gap between what exists and what production demands is still wide.
 ---
 
 Amsterdam in late March still has that sharp North Sea wind, but inside the RAI Convention Centre, 13,350 people generated enough energy to heat the building twice over. [KubeCon + CloudNativeCon EU 2026](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe-2026/) was the biggest European edition yet, and the shift from previous years was impossible to miss. AI was the main event. Not a side track, not a buzzword sprinkled into keynotes. The main event.
