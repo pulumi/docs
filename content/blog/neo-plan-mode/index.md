@@ -20,11 +20,11 @@ social:
     linkedin: |
         **Neo Plan Mode: Iterate Before You Execute**
 
-        Infrastructure work ranges from simple updates to complex multi-stack operations. For straightforward tasks, jumping straight to execution works fine. But complex tasks benefit from deliberate planning: understanding what exists, identifying dependencies, and agreeing on an approach before anything changes.
+        For straightforward infrastructure tasks, jumping straight to execution works fine. But complex operations benefit from deliberate planning, understanding what exists, identifying dependencies, and agreeing on an approach before anything changes.
 
-        Neo's new Plan Mode creates a dedicated space for this. Neo investigates your infrastructure, synthesizes what it finds into a grounded plan, and iterates with you until you approve. Execution begins only when you say so.
+        Neo's new Plan Mode creates a dedicated space for exactly this kind of upfront thinking. When you enable it, Neo investigates your actual infrastructure and synthesizes what it finds into a grounded plan that you refine together through conversation. Execution begins only when you approve.
 
-        Plan Mode works with any autonomy level. Use it with Auto Mode for confident autonomous execution backed by a reviewed plan, or with Review Mode for maximum oversight at every step.
+        Because Plan Mode works with any autonomy level, you can review the approach thoroughly up front and then let Neo execute without stopping, or keep full oversight at every step. The planning phase and execution phase have independent controls.
 
         Available now in Pulumi Cloud.
 ---
