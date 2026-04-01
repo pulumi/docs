@@ -15,9 +15,7 @@ social:
     linkedin: "Pulumi now includes `pulumi policy analyze`, a new command for running local policy packs against existing stack state without running your Pulumi program. It is useful for policy authoring, regression testing, and automation workflows, including agent-driven checks."
 ---
 
-We just merged a new Pulumi CLI command: [`pulumi policy analyze`](https://github.com/pulumi/pulumi/pull/22250).
-
-This command analyzes an existing stack snapshot against one or more local policy packs, without running your Pulumi program and without making provider calls.
+You can now run policy packs against your existing stack state without running your Pulumi program or making provider calls. The new `pulumi policy analyze` command evaluates your current infrastructure against local policy packs directly, turning policy validation into a fast, repeatable check.
 
 <!--more-->
 
@@ -83,13 +81,9 @@ Because `pulumi policy analyze` can emit JSON and a clear process exit code, age
 1. Suggest policy fixes, config adjustments, or targeted infrastructure changes.
 1. Re-run analysis until mandatory violations are resolved.
 
-A few practical reasons this works well for agents:
+For example, an agent tasked with fixing a policy violation can run pulumi policy analyze --json to get a structured list of violations, identify which resources are non-compliant, generate targeted infrastructure changes, then re-run analysis to confirm the violations are resolved — all without triggering a full preview on each iteration. The same loop works for policy authoring: an agent can propose a new policy rule, test it against several representative stacks, and surface unintended violations before the rule is published.
 
-1. It does not require executing the Pulumi program for each check.
-1. It does not make provider calls, reducing side effects and runtime variance.
-1. It gives machine-readable output and a fail/success contract for automation.
-
-In short, this command helps both humans and agents treat policy validation as a fast, repeatable, test-like step.
+This works well for automation because the command doesn't execute your Pulumi program or make provider calls, so there are no side effects or runtime variance between runs. The JSON output and non-zero exit code on failure give agents a clear pass/fail contract to build on.
 
 ## Try it out
 
