@@ -81,7 +81,7 @@ Because `pulumi policy analyze` can emit JSON and a clear process exit code, age
 1. Suggest policy fixes, config adjustments, or targeted infrastructure changes.
 1. Re-run analysis until mandatory violations are resolved.
 
-For example, an agent tasked with fixing a policy violation can run pulumi policy analyze --json to get a structured list of violations, identify which resources are non-compliant, generate targeted infrastructure changes, then re-run analysis to confirm the violations are resolved — all without triggering a full preview on each iteration. The same loop works for policy authoring: an agent can propose a new policy rule, test it against several representative stacks, and surface unintended violations before the rule is published.
+For example, an agent tasked with fixing a policy violation can run `pulumi policy analyze --json` to get a structured list of violations, identify which resources are non-compliant, generate targeted infrastructure changes, then re-run analysis to confirm the violations are resolved, all without triggering a full preview on each iteration. The same loop works for policy authoring: an agent can propose a new policy rule, test it against several representative stacks, and surface unintended violations before the rule is published.
 
 This works well for automation because the command doesn't execute your Pulumi program or make provider calls, so there are no side effects or runtime variance between runs. The JSON output and non-zero exit code on failure give agents a clear pass/fail contract to build on.
 
