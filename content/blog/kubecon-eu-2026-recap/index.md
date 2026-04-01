@@ -21,9 +21,7 @@ social:
         I wrote up the biggest themes — inference infrastructure, agentic AI identity, gateway routing, sovereignty — and what they mean for platform teams right now.
 ---
 
-Amsterdam in late March still has that sharp North Sea wind, but inside the RAI Convention Centre, 13,350 people generated enough energy to heat the building twice over. KubeCon + CloudNativeCon EU 2026 was the biggest European edition yet, and the shift from previous years was impossible to miss. AI was the main event. Not a side track, not a buzzword sprinkled into keynotes. The main event.
-
-![The KubeCon EU 2026 show floor at the RAI Convention Centre in Amsterdam](showroom.jpg)
+Amsterdam in late March still has that sharp North Sea wind, but inside the RAI Convention Centre, 13,350 people generated enough energy to heat the building twice over. [KubeCon + CloudNativeCon EU 2026](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe-2026/) was the biggest European edition yet, and the shift from previous years was impossible to miss. AI was the main event. Not a side track, not a buzzword sprinkled into keynotes. The main event.
 
 I spent most of the conference at the Pulumi booth, and that turned out to be the best vantage point. Hundreds of visitors stopped by over four days, and I kept asking the same question: what are you actually running in production with AI on Kubernetes? The answers shaped this post more than any keynote did. Almost everyone had a proof of concept. Almost nobody had a production story they were happy with.
 
@@ -102,6 +100,8 @@ Sovereign Kubernetes is a platform architecture requirement now, not something y
 Runtime isolation is expanding beyond containers. Several talks covered KVM-based isolation for AI workloads, which is heavier than containers but necessary when the threat model includes side-channel attacks on shared GPU memory. The sandboxing conversation has gotten more sophisticated since last year.
 
 These constraints are not uniquely European. Any organization operating across jurisdictions faces similar pressures, and the regulatory direction globally is toward more data sovereignty requirements, not fewer.
+
+![The KubeCon EU 2026 show floor at the RAI Convention Centre in Amsterdam](showroom.jpg)
 
 ## What this means for your team
 
