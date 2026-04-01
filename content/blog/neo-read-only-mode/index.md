@@ -19,7 +19,7 @@ social:
     bluesky: "Pulumi Neo now has read-only mode. Preview changes and create PRs without modifying your infrastructure."
 ---
 
-Platform teams want control over how much autonomy [Neo](/docs/ai/) has. With read-only mode, Neo does the heavy lifting and hands off a pull request. Your CI/CD pipeline takes it from there.
+A platform engineer with broad access might want Neo to analyze infrastructure and suggest changes, but include guarantees it won't actually apply them. Read-only mode makes that possible: Neo does the heavy lifting and hands off a pull request for your existing deployment process to pick up.
 
 <!--more-->
 
@@ -38,11 +38,8 @@ When you create a Neo task, you now choose between two permission levels:
 | **Use my permissions** | Full access (current default behavior) | All tiers |
 | **Read-only** | Read, preview, and create PRs. No infrastructure mutations. | All tiers |
 
-Read-only mode takes your existing permissions and removes the ability to make changes. Neo never gets more access than you have, only less. If you can view a stack but not a particular environment, Neo in read-only mode also cannot see that environment.
+Read-only mode takes your existing permissions and removes the ability to make changes. Neo remains fully active, meaning it can still read your infrastructure state, run previews, write and refactor code, create branches, and open pull requests. If Neo encounters an operation it can't perform in read-only mode, the operation fails and Neo reports what it would have done. The only difference is that Neo cannot trigger deployments or other write operations in Pulumi Cloud directly.
 
-## What Neo can do in read-only mode
-
-Neo remains fully active in read-only mode. It can still read your infrastructure state, run previews, write and refactor code, create branches, and open pull requests. It does the same work it always does, and hands off the result to your regular deployment process. The only difference is that Neo cannot trigger deployments or other write operations in Pulumi Cloud directly.
 
 ## Read-only mode and auto-approve
 
