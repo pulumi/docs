@@ -3806,6 +3806,11 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
 /js/bundle.*.js: 1 year
 /js/search.*.js: 1 year
 /js/chunk-*.js: 1 year
+/js/consent-manager.*.js: 1 year
+/js/algolia.*.js: 1 year
+/js/homepage.*.js: 1 year
+/js/marketing-homepage.*.js: 1 year
+/js/marketing.*.js: 1 year
 /fingerprinted/*: 1 year
 
 # Standard cache for HTML (invalidated on deploy)
