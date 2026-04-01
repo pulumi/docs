@@ -95,4 +95,4 @@ Pulumi Cloud is an enterprise-ready solution that comes with less risk and less 
 
 Pulumi Cloud gives you the platform to automate, secure, and manage your modern infrastructure platform so your company can choose to focus on innovation and growth.
 
-[Try Pulumi Cloud for free](https://app.pulumi.com/) and see how it can accelerate your infrastructure automation. Sign up today and start building with Pulumi Cloud.
+[Try Pulumi Cloud for free](https://app.pulumi.com/signup) and see how it can accelerate your infrastructure automation. Sign up today and start building with Pulumi Cloud.

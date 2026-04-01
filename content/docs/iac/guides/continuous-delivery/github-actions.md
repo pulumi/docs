@@ -34,7 +34,7 @@ between different environments by merging or directly committing changes.
 
 ## Prerequisites
 
-Before proceeding, you'll need to [Sign Up for Pulumi](https://app.pulumi.com/) (if you
+Before proceeding, you'll need to [Sign Up for Pulumi](https://app.pulumi.com/signup) (if you
 haven't already). This guide also assumes you've reviewed the [GitHub Actions
 documentation](https://help.github.com/en/categories/automating-your-workflow-with-github-actions)
 and are generally familiar with its concepts and syntax.

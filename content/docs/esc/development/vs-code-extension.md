@@ -16,7 +16,7 @@ The [Pulumi Tools extension for VS Code](https://marketplace.visualstudio.com/it
 Before you begin, ensure you have the following installed:
 
 - [Pulumi Tools extension for VS Code](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools)
-- A [Pulumi Cloud account](https://app.pulumi.com)
+- A [Pulumi Cloud account](https://app.pulumi.com/signup)
 
 ## Getting Started with Pulumi ESC in VS Code
 

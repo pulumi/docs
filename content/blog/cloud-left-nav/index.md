@@ -100,6 +100,6 @@ This update is another step toward our mission: enabling teams everywhere to bui
 
 ## Try It Out
 
-The new navigation is available today for all Pulumi Cloud users. Sign in to [Pulumi Cloud](https://app.pulumi.com) and experience the streamlined workflow for yourself. For more details, check out the [docs](https://www.pulumi.com/docs/).  
+The new navigation is available today for all Pulumi Cloud users. Sign in to [Pulumi Cloud](https://app.pulumi.com/signin) and experience the streamlined workflow for yourself. For more details, check out the [docs](https://www.pulumi.com/docs/).  
 
 We’d love your feedback as we continue to make Pulumi Cloud the best platform for modern infrastructure as code.

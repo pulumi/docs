@@ -83,4 +83,4 @@ For more information on how dependency caching works with Pulumi Cloud Deploymen
 
 We’re continually working to enhance Pulumi Deployments and optimize the developer experience. Dependency caching is just one of the many ways we’re committed to improving this experience, and we’re excited to hear [your feedback](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose). Give it a try, and let us know how it improves your deployments!
 
-Ready to get started? [Sign in to Pulumi Cloud](https://app.pulumi.com) and experience faster deployments today!
+Ready to get started? [Sign in to Pulumi Cloud](https://app.pulumi.com/signin) and experience faster deployments today!

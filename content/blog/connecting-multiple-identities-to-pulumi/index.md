@@ -23,7 +23,7 @@ collaborate with other GitHub users. With multiple identities, you can
 now also connect your Pulumi account to a GitLab identity too!
 
 To connect an identity, first sign-in as usual on
-[https://app.pulumi.com](https://app.pulumi.com), then go to your Profile page as shown below.
+[https://app.pulumi.com](https://app.pulumi.com/signin), then go to your Profile page as shown below.
 
 ![multi-id](./multi-id.gif)
 
@@ -44,5 +44,5 @@ Connecting multiple identities to Pulumi has advantages:
 
 However, you don't have to associate multiple identities with the same
 Pulumi account. Whenever you sign-in with a new identity for the first
-time on <https://app.pulumi.com>, a new Pulumi account is created. You
+time on <https://app.pulumi.com/signup>, a new Pulumi account is created. You
 can then choose to add additional identities at a later time.

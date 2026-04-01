@@ -8,7 +8,7 @@ tags: ["features", "pulumi-enterprise", "audit-logs"]
 ---
 
 We are excited to announce the release of Audit Logs on
-[Pulumi](https://app.pulumi.com) for Enterprise organizations.
+[Pulumi](https://app.pulumi.com/signin) for Enterprise organizations.
 Audit logs enable you to track the activity of users within an
 organization. They attempt to answer what a user did, when
 they did it and where. They help answer these questions
@@ -38,4 +38,4 @@ also filter logs by a particular user by clicking on the user's avatar. Doing so
 filter out the events performed by the user you selected.
 
 We are excited to make this feature available to our users.
-Get started with audit logs on [Pulumi](https://app.pulumi.com) today.
+Get started with audit logs on [Pulumi](https://app.pulumi.com/signin) today.

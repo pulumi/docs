@@ -98,7 +98,7 @@ The full sequence of steps is available in our [GitHub Actions Getting
 Started Guide](/docs/iac/packages-and-automation/continuous-delivery/github-actions).
 
 In summary, using GitHub Actions with Pulumi is as easy as [signing up
-for Pulumi](https://app.pulumi.com/) (if you haven't already), creating
+for Pulumi](https://app.pulumi.com/signup) (if you haven't already), creating
 one or more workflow files in your repo ([see here](https://github.com/pulumi/actions#example-workflows) for examples),
 configuring secrets, and adding a Pulumi program. Afterwards, you can
 simply Commit and Pull Request away to deploy All The Things! GitHub

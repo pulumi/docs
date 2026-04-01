@@ -84,4 +84,4 @@ Unified resources are available now for all Pulumi Cloud users. Ready to see uni
 
 We'd love to hear your feedback as you explore unified resources. Share your thoughts in the [Pulumi Community Slack](https://slack.pulumi.com/) or connect with your customer success team.
 
-Start exploring your unified resource inventory today in [Pulumi Cloud](https://app.pulumi.com/).
+Start exploring your unified resource inventory today in [Pulumi Cloud](https://app.pulumi.com/signin).

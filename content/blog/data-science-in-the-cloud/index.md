@@ -93,7 +93,7 @@ You can view the resources that the function created in two ways. The standard m
 
 ![AWS Console](aws_console.png)
 
-You can also view them with the [Pulumi Service](https://app.pulumi.com) as a resource graph.
+You can also view them with the [Pulumi Service](https://app.pulumi.com/signin) as a resource graph.
 
 ![Pulumi resource graph](pulumi_resource_graph.png)
 

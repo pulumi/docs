@@ -20,7 +20,7 @@ Pulumi doesn't require any particular arrangement of stacks or workflow to work 
 
 ## Prerequisites
 
-- An account on [https://app.pulumi.com](https://app.pulumi.com)
+- An account on [https://app.pulumi.com](https://app.pulumi.com/signup)
 - The latest [Pulumi CLI](/docs/install/)
 - A Harness account and access to Harness CI/CD
 - A git repository connected to your Harness project

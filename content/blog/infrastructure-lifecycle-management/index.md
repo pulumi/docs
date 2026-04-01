@@ -43,6 +43,6 @@ Next up, we often want to deploy on a Git commit, which Pulumi Deployments alrea
 
 Finally, we want everyone to be able to kick the tires with all of the above, no commitments needed. That’s why we’re also announcing today that all users – individuals, teams, and enterprises alike – get an allotment of free monthly deployment minutes to use all of this.
 
-Get started now for free at [app.pulumi.com](https://app.pulumi.com). We can’t wait to hear what you think!
+Get started now for free at [app.pulumi.com](https://app.pulumi.com/signup). We can’t wait to hear what you think!
 
 Happy cloud spelunking.

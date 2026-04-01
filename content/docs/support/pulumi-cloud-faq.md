@@ -106,7 +106,7 @@ $ pulumi stack init acme-corp/widget-server
 
 ### How do I migrate stacks from an individual account to an organization account?
 
-The [Pulumi Cloud](https://app.pulumi.com/) allows you to transfer stacks from your individual account to any organization account you belong to as an administrator.
+The [Pulumi Cloud](https://app.pulumi.com/signin) allows you to transfer stacks from your individual account to any organization account you belong to as an administrator.
 
 To transfer a stack from your individual account to an organization, navigate to the Stacks page and select **Transfer stacks**.
 
@@ -118,7 +118,7 @@ To learn more about this process, see [Transferring Stacks](/docs/deployments/pr
 
 Organization deletion is a permanent action and can only be performed by an organization admin.
 
-In [Pulumi Cloud](https://app.pulumi.com), open your organization, navigate to **Settings**, and select the **Delete organization** option.
+In [Pulumi Cloud](https://app.pulumi.com/signin), open your organization, navigate to **Settings**, and select the **Delete organization** option.
 
 If you don't see this option, confirm you're an organization admin.
 
@@ -128,7 +128,7 @@ For detailed steps, see [Deleting an organization](/docs/administration/organiza
 
 To join your company's organization, you must sign in with the identity provider that organization is backed by (for example, GitHub, GitLab, SAML/SSO, or email).
 
-If you already have a Pulumi account, navigate to your profile in [Pulumi Cloud](https://app.pulumi.com) and connect that identity provider, then accept the organization invite.
+If you already have a Pulumi account, navigate to your profile in [Pulumi Cloud](https://app.pulumi.com/signin) and connect that identity provider, then accept the organization invite.
 
 If this fails, delete your account, then accept the organization invite.
 
@@ -142,7 +142,7 @@ For more about joining organizations, see [Joining an organization](/docs/admini
 
 ### How can I delete my Pulumi account?
 
-You can delete your personal account from your account settings in [Pulumi Cloud](https://app.pulumi.com).
+You can delete your personal account from your account settings in [Pulumi Cloud](https://app.pulumi.com/signin).
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
 
@@ -218,7 +218,7 @@ Pulumi Team, Enterprise and Business Critical editions, refer to the [pricing pa
 
 ### How can I update my payment information?
 
-Self-serve organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com) under **Payment methods**.
+Self-serve organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin) under **Payment methods**.
 
 If you need to delegate billing-only access, see [Billing Managers](/docs/administration/organizations-teams/billing-managers/).
 

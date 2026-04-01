@@ -45,7 +45,7 @@ export class HeaderCta {
 
         if (this.isLoggedIn) {
             return(
-                <a class={this.buttonClass} href="https://app.pulumi.com/?utm_source=header-button" title="Dashboard">Dashboard</a>
+                <a class={this.buttonClass} href="https://app.pulumi.com/signin?utm_source=header-button" title="Dashboard">Dashboard</a>
             );
         }
 

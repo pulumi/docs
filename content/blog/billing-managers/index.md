@@ -17,7 +17,7 @@ tags:
     - pulumi-service
 ---
 
-We are excited to announce that starting today Pulumi customers can create a Billing Manager role for their organization on the [Pulumi Service](https://app.pulumi.com). We have heard from our customers that having a Billing Manager would solve internal process challenges and are aiming to solve these pain points with the new Billing Manager role.
+We are excited to announce that starting today Pulumi customers can create a Billing Manager role for their organization on the [Pulumi Service](https://app.pulumi.com/signin). We have heard from our customers that having a Billing Manager would solve internal process challenges and are aiming to solve these pain points with the new Billing Manager role.
 
 <!--more-->
 
@@ -58,7 +58,7 @@ Enterprise and Business Critical Editions can have unlimited Billing Managers in
 
 To add a Billing Manager, make sure you are an Organization Administrator and then follow these steps:
 
-1. Log in to the [Pulumi Service](https://app.pulumi.com)
+1. Log in to the [Pulumi Service](https://app.pulumi.com/signin)
 2. Navigate to the *Billing and Usage* page under *Organization Settings*
 3. In the 'Billing Managers' section either invite a Billing Manager by entering their email or copy the Billing Manager invite link and send it to them directly
 4. Once signed up, the Billing Manager will be able to see usage metrics on the *Dashboard* and navigate to the *Billing and Usage* page to perform actions and view billing information

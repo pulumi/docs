@@ -136,7 +136,7 @@ Before using OIDC token exchange with the Pulumi CLI, you need to:
 Native OIDC token exchange is available now in the latest version of the Pulumi CLI. To get started:
 
 1. Update to the latest Pulumi CLI version
-1. Configure your OIDC provider and authorization policies in [Pulumi Cloud](https://app.pulumi.com/)
+1. Configure your OIDC provider and authorization policies in [Pulumi Cloud](https://app.pulumi.com/signin)
 1. Update your CI/CD workflows to use `pulumi login --oidc-token`
 
 For complete documentation, including setup guides for specific identity providers, see:

@@ -17,7 +17,7 @@ Pulumi libraries for [Azure](https://github.com/pulumi/pulumi-azure) and
 
 ## Prerequisites
 
-- An account on [https://app.pulumi.com](https://app.pulumi.com/) with
+- An account on [https://app.pulumi.com](https://app.pulumi.com/signup) with
   an organization.
 - The latest `pulumi` CLI. Installation instructions are [here](/docs/install/).
 - A bare repository. Set the remote URL to be your GitLab project.
@@ -62,7 +62,7 @@ please refer to our [organizaing documentation](/docs/using-pulumi/organizing-pr
     tags.
 - You can assign custom tags to stacks (when logged into the
   [Pulumi Service backend](/docs/iac/concepts/state-and-backends/) to customize how
-  stacks are listed in the [Pulumi Service](https://app.pulumi.com/).
+  stacks are listed in the [Pulumi Service](https://app.pulumi.com/signup).
     - In our example below we have two environments _prod_ and _dev_.
     - To group stacks by environment we assign custom tags
         `environment: prod` and `environment: dev` to the respective
@@ -106,7 +106,7 @@ Let's now work through our example with GitLab Pipelines.
 4. To use Pulumi within GitLab CI, there are a few environment
     variables you'll need to set for each build.
     - The first is `PULUMI_ACCESS_TOKEN`, which is required to
-        authenticate with [**pulumi.com**](https://app.pulumi.com) in order
+        authenticate with [**pulumi.com**](https://app.pulumi.com/signup) in order
         to perform the preview or update. You can create a new Pulumi
         access token specifically for your CI/CD job on your
         [Pulumi Account page](https://app.pulumi.com/account/tokens).

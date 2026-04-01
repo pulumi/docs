@@ -93,7 +93,7 @@ To switch to a different organization:
 
 ## Updating billing information
 
-Organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com) under **Payment methods**.
+Organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin) under **Payment methods**.
 
 To update billing information:
 
@@ -117,7 +117,7 @@ For more information, see [How can I delete a Pulumi organization?](/docs/suppor
 
 ## Deleting your account
 
-You can delete your personal Pulumi account from your account settings in [Pulumi Cloud](https://app.pulumi.com).
+You can delete your personal Pulumi account from your account settings in [Pulumi Cloud](https://app.pulumi.com/signin).
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
 

@@ -66,7 +66,7 @@ If you also want to support pushing existing Okta groups, the steps in [Enabling
 
 3. Unique identifier field for users: Set to `userName`.
 4. Authentication Mode: `HTTP Header`
-5. For the **HTTP Header**, you will use a token from the [Pulumi Cloud](https://app.pulumi.com).
+5. For the **HTTP Header**, you will use a token from the [Pulumi Cloud](https://app.pulumi.com/signin).
 
     To generate a token, navigate to your org in the Pulumi Cloud, click on the **Settings** tab, and then click **Access Management**. Scroll down to the **SCIM** section and generate a new token if you have never generated one for your org, or regenerate it if you have already done so in the past.
 

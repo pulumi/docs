@@ -11,7 +11,7 @@ aliases:
     - /learn/building-with-pulumi/stack-outputs/
 ---
 
-Now let's explore _stack outputs_. Stack outputs are values exported by a given stack. These values are shown during an update, can be retrieved with the Pulumi CLI, and are displayed in [Pulumi Cloud](https://app.pulumi.com) once you've exported them. Examples include resource IDs, computed IP addresses, and DNS names. They're useful in many ways, such as when you want to run CLI commands that reference those values.
+Now let's explore _stack outputs_. Stack outputs are values exported by a given stack. These values are shown during an update, can be retrieved with the Pulumi CLI, and are displayed in [Pulumi Cloud](https://app.pulumi.com/signin) once you've exported them. Examples include resource IDs, computed IP addresses, and DNS names. They're useful in many ways, such as when you want to run CLI commands that reference those values.
 
 To illustrate how stack outputs work, let's set one programmatically. At the end of {{< langfile >}} in `my-first-app`, add the following line:
 
