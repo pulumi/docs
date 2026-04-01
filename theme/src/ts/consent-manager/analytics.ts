@@ -46,12 +46,22 @@ export function conditionallyLoadAnalytics(
                 };
                 args.next(args.payload);
             });
-            analytics.load(writeKey, { integrations });
+            const load = () => analytics.load(writeKey, { integrations });
+            if ("requestIdleCallback" in window) {
+                requestIdleCallback(load);
+            } else {
+                load();
+            }
         }
     } else {
         if (isConsentRequired) return;
         if (!analytics.initialized) {
-            analytics.load(writeKey);
+            const load = () => analytics.load(writeKey);
+            if ("requestIdleCallback" in window) {
+                requestIdleCallback(load);
+            } else {
+                load();
+            }
         }
     }
 }
