@@ -49,6 +49,24 @@ jobs:
 
       - uses: astral-sh/setup-uv@v4
 
+      - name: Validate upload-post.com API key
+        env:
+          UPLOAD_POST_API_KEY: ${{ steps.esc-secrets.outputs.UPLOAD_POST_API_KEY }}
+        run: |
+          if [ -z "$UPLOAD_POST_API_KEY" ]; then
+            echo "::error::UPLOAD_POST_API_KEY is empty — check ESC environment"
+            exit 1
+          fi
+          STATUS=$(curl -s -o /tmp/api-check.txt -w "%{http_code}" \
+            -H "Authorization: Apikey $UPLOAD_POST_API_KEY" \
+            "https://api.upload-post.com/api/uploadposts/history")
+          if [ "$STATUS" != "200" ]; then
+            echo "::error::upload-post.com API key validation failed (HTTP $STATUS)"
+            cat /tmp/api-check.txt
+            exit 1
+          fi
+          echo "API key valid (HTTP 200)"
+
       - name: Schedule social posts for new blog content
         env:
           UPLOAD_POST_API_KEY: ${{ steps.esc-secrets.outputs.UPLOAD_POST_API_KEY }}

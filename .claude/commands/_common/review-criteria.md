@@ -44,7 +44,7 @@ Always provide relevant line numbers for any issues you identify.
 - **Front matter**:
   - Verify required front matter fields (title, description, etc.).
   - Check meta descriptions are present and appropriate length.
-  - For blog posts: check that `social:` block is present with `twitter`, `linkedin`, and `bluesky` keys. These auto-post to social media when merged. Character limits: X ~280, Bluesky 300, LinkedIn 3000.
+  - For blog posts: check that `social:` block is present with all three keys: `twitter`, `linkedin`, and `bluesky`. **This is a merge blocker** — posts auto-publish to social media on merge, and missing keys mean missing platforms. Character limits: X ~280, Bluesky 300, LinkedIn 3000. Also verify `meta_image` is not empty (0 bytes) — LinkedIn uses it as the post image.
 - **Cross-references and consistency**:
   - Check that related pages are cross-linked appropriately.
   - Verify terminology is consistent with other docs.
@@ -149,18 +149,18 @@ Review for:
 - Image file format matches its actual content (no WebP files saved as .png)
 - Animated GIFs: max 1200px wide, 3 MB
 
-**End-of-review publishing readiness checklist** — summarize as a checklist at the end of every blog review:
+**End-of-review publishing readiness checklist** — summarize as a checklist at the end of every blog review. **Social media items are merge blockers** — flag them prominently if they fail:
 
-- [ ] `<!--more-->` break present after intro
-- [ ] `meta_image` set and not the default placeholder
+- [ ] `social:` block has all three keys: `twitter`, `linkedin`, `bluesky` — **MERGE BLOCKER if missing** (auto-posts on merge)
+- [ ] `meta_image` set, not empty (0 bytes), and not the default placeholder — **MERGE BLOCKER if empty** (used by LinkedIn + social cards)
 - [ ] `meta_image` uses current Pulumi logos
+- [ ] `<!--more-->` break present after intro
 - [ ] Author profile exists with avatar
 - [ ] All links resolve
 - [ ] Code examples correct with language specifiers
 - [ ] No animated GIFs used as `meta_image`
 - [ ] Images have alt text; screenshots have 1px gray borders
 - [ ] Title ≤60 chars or `allow_long_title: true` set
-- [ ] `social:` block present with copy for `twitter`, `linkedin`, `bluesky` (auto-posts on merge)
 
 ## Additional Instructions
 
