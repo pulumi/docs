@@ -65,7 +65,7 @@ If inference was this year's production story, agentic AI was the architecture s
 
 [**agentregistry**](https://github.com/agentregistry-dev/agentregistry) showed up as a centralized discovery service for MCP servers and agents. As agents and tool servers multiply, you need a registry to find and manage them, the same way container registries became necessary for images.
 
-David Soria Parra from Anthropic gave a talk on MCP evolving beyond simple tool-calling into richer interaction patterns. Google announced the [**Kubernetes Agent Sandbox**](https://github.com/kubernetes-sigs/agent-sandbox) for running agentic AI workloads in secure, isolated environments.
+David Soria Parra from Anthropic gave a talk on [MCP evolving beyond simple tool-calling](https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/) into richer interaction patterns ([sched](https://colocatedeventseu2026.sched.com/event/2E7Db/agentics-day-mcp-+-agents-mcp-in-2026-context-is-all-you-need-david-soria-parra-anthropic)). Google announced the [**Kubernetes Agent Sandbox**](https://github.com/kubernetes-sigs/agent-sandbox) for running agentic AI workloads in secure, isolated environments.
 
 ## AI gateways and inference routing
 
