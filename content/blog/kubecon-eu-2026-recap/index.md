@@ -14,11 +14,11 @@ tags:
     - platform-engineering
     - cloud-native
 social:
-    twitter: "82% of orgs run AI on Kubernetes. Only 7% deploy daily. That gap defined every conversation I had at KubeCon EU 2026. I wrote up what's actually changing: llm-d, agent identity with SPIFFE, inference gateways, and why platform teams can't ignore this."
+    twitter: "66% of orgs run AI on Kubernetes. Only 7% deploy daily. That gap defined every conversation I had at KubeCon EU 2026. I wrote up what's actually changing: llm-d, agent identity with SPIFFE, inference gateways, and why platform teams can't ignore this."
     linkedin: |
         I spent four days at KubeCon EU 2026 in Amsterdam asking people at our booth the same question: what are you actually running in production with AI on Kubernetes?
 
-        Almost everyone had a proof of concept. Almost nobody had a production story they were happy with. And the stats back that up — 82% adoption, 7% daily deployment.
+        Almost everyone had a proof of concept. Almost nobody had a production story they were happy with. And the stats back that up — 66% adoption, 7% daily deployment.
 
         Wrote up the projects and trends that stuck with me: llm-d splitting inference across pods, kagenti giving agents cryptographic identity via SPIFFE, a whole new generation of AI-aware gateways, and why GPU multi-tenancy is still unsolved.
 
@@ -33,7 +33,7 @@ I spent most of the conference at the Pulumi booth, and that turned out to be th
 
 ![The Pulumi crew at our booth at KubeCon EU 2026 in Amsterdam](pulumi-booth.jpg)
 
-Here is the stat that framed the entire conference for me: 82% of organizations have adopted Kubernetes for AI workloads, but only 7% deploy to production daily. That gap between experimentation and actual production use matched what I was hearing at the booth. The CNCF's own survey now counts 19.9 million cloud native developers worldwide, 7.3 million of them building AI workloads. The tooling and the infrastructure need to catch up.
+Here is the stat that framed the entire conference for me: [66% of organizations use Kubernetes to host generative AI workloads, but only 7% deploy to production daily](https://www.cncf.io/reports/cncf-annual-survey-2025/). That gap between experimentation and actual production use matched what I was hearing at the booth. The CNCF's own survey now counts [19.9 million cloud native developers worldwide, 7.3 million of them building AI workloads](https://www.cncf.io/reports/state-of-cloud-native-development-q1-2026/). The tooling and the infrastructure need to catch up.
 
 My takeaway after four days on the ground: lots of working demos, very few production setups people trust. Teams are trying to scale inference, put guardrails around agents, and make GPU infrastructure behave like anything else they run.
 
@@ -41,7 +41,7 @@ Here is what I saw.
 
 ## From training to inference: the big pivot
 
-About 67% of AI compute now goes to inference, not training. The inference market is projected to hit $255 billion by 2030. It's also where most of the operational complexity lives.
+About [67% of AI compute now goes to inference](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/compute-power-ai.html), not training. The inference market is projected to hit [$255 billion by 2030](https://www.marketsandmarkets.com/Market-Reports/ai-inference-market-189921964.html). It's also where most of the operational complexity lives.
 
 NVIDIA leaned into this hard. Their open-source stack around [NeMo](https://github.com/NVIDIA-NeMo/NeMo) and [Dynamo](https://github.com/ai-dynamo/dynamo) got significant stage time, but the bigger move was donating three projects to the CNCF: the [DRA driver](https://github.com/NVIDIA/k8s-dra-driver-gpu) for fractional GPU allocation, the [KAI Scheduler](https://github.com/kai-scheduler/KAI-Scheduler) for GPU-aware scheduling, and [Grove](https://github.com/ai-dynamo/grove). Moving these to community governance signals that GPU infra is becoming part of the standard Kubernetes toolkit.
 
