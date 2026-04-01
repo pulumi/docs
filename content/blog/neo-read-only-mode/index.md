@@ -23,11 +23,9 @@ A platform engineer with broad access might want Neo to analyze infrastructure a
 
 <!--more-->
 
-## Why read-only mode matters
+## Control what Neo can change
 
-Neo currently runs with the full permissions of the user who creates a task. That works well when you trust the outcome, but it can make teams hesitant to delegate work in sensitive environments. A platform engineer with broad access might want Neo to analyze infrastructure and suggest changes, but not actually apply them.
-
-Read-only mode solves this by letting you cap Neo's permissions at task creation time. Neo can still read your infrastructure, run previews, and open pull requests, but it cannot deploy, update, or destroy resources. You get Neo's analysis and recommendations without the risk of unwanted modifications.
+Neo runs with the permissions of the user who creates a task, but you often want a tighter boundary. Read-only mode solves this by letting you cap Neo's permissions at task creation time. Neo can still read your infrastructure, run previews, and open pull requests, but it cannot deploy, update, or destroy resources.
 
 ## How it works
 
@@ -39,7 +37,6 @@ When you create a Neo task, you now choose between two permission levels:
 | **Read-only** | Read, preview, and create PRs. No infrastructure mutations. | All tiers |
 
 Read-only mode takes your existing permissions and removes the ability to make changes. Neo remains fully active, meaning it can still read your infrastructure state, run previews, write and refactor code, create branches, and open pull requests. If Neo encounters an operation it can't perform in read-only mode, the operation fails and Neo reports what it would have done. The only difference is that Neo cannot trigger deployments or other write operations in Pulumi Cloud directly.
-
 
 ## Read-only mode and auto-approve
 
