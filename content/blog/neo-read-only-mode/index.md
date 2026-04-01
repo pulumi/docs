@@ -14,8 +14,8 @@ tags:
 schema_type: auto
 
 social:
-    twitter: "Pulumi Neo now has read-only mode. Let Neo analyze your infrastructure, run previews, and open PRs without the risk of unwanted changes."
-    linkedin: "Introducing read-only mode for Pulumi Neo. Teams told us they wanted Neo's analysis and recommendations without the risk of unintended infrastructure changes. Now when creating a Neo task, you can choose read-only mode to cap permissions. Neo can still read state, run previews, write code, and open PRs, but it cannot deploy, update, or destroy resources."
+    twitter: "Pulumi Neo now has read-only mode. Run Neo with confidence knowing it can preview changes and create PRs without modifying your infrastructure."
+    linkedin: "Introducing read-only mode for Pulumi Neo. Run Neo with confidence knowing it can analyze your infrastructure, run previews, and open pull requests without making unwanted modifications. Control how much autonomy Neo has on a per-task basis."
 ---
 
 Platform teams want control over how much autonomy Neo has. With read-only mode, Neo does the heavy lifting and hands off a pull request. Your CI/CD pipeline takes it from there.
