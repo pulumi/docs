@@ -9,7 +9,6 @@
         "@algolia/autocomplete-plugin-tags": "^1.19.6",
         "@algolia/autocomplete-theme-classic": "^1.19.6",
         "@algolia/client-search": "^5.49.1",
-        "@growthbook/growthbook": "^1.6.5",
         "@types/marked": "^4.0.8",
         "algoliasearch": "^5.49.1",
         "clipboard-polyfill": "^3.0.3",

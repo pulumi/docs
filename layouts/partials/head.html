@@ -3,25 +3,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 
-    <!-- GrowthBook / Segment keys -->
+    <!-- Segment keys -->
     <script>
         {{- if eq hugo.Environment "production" }}
             var segmentWriteKey = "UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u";
             var snippetName = "C8Y429BDEy/06ujkUhzfL.min.js";
-            window.growthbook_sdk_key="sdk-psPofGr6jFV2ja9O";
-            window.growthbook_decrypt_key="9NsAVMNWaDS+Oky3rhLQ+A==";
-            window.growthbook_dev_mode=false;
         {{- else }}
             var segmentWriteKey = "bATvhu6XKpwi7Cs258MGsELkDpVOzvdY";
             var snippetName = "C8Y429BDEy/hpBKpR8Nx1yVCjKPB2nJWg.min.js";
-            window.growthbook_sdk_key="sdk-BwIkZCqXQ9pZyp0P";
-            window.growthbook_decrypt_key=undefined;
-            window.growthbook_dev_mode=true;
         {{- end }}
     </script>
-
-    <!-- Preconnect to third-party origins. -->
-    <link rel="preconnect" href="https://cdn.growthbook.io" crossorigin />
 
     <!-- Preload critical fonts. -->
     <link rel="preload" href="/fonts/roboto-mono-regular.woff2" as="font" type="font/woff2" crossorigin />
