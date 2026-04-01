@@ -65,7 +65,7 @@ jobs:
           ref: ${{ github.event.inputs.version || github.event.client_payload.ref }}
           submodules: recursive
       - name: Install Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '17'
           distribution: temurin
