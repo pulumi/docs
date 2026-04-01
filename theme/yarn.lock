@@ -234,13 +234,6 @@
   dependencies:
     purgecss "^4.1.3"
 
-"@growthbook/growthbook@^1.6.5":
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/@growthbook/growthbook/-/growthbook-1.6.5.tgz#c9e2119187ee3288525a77a7c64353276f5ba91b"
-  integrity sha512-mUaMsgeUTpRIUOTn33EUXHRK6j7pxBjwqH4WpQyq+pukjd1AIzWlEa6w7i6bInJUcweGgP2beXZmaP6b6UPn7A==
-  dependencies:
-    dom-mutator "^0.6.0"
-
 "@jridgewell/gen-mapping@^0.3.5":
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz#6342a19f44347518c93e43b1ac69deb3c4656a1f"
