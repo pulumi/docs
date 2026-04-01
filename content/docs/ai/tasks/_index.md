@@ -42,19 +42,34 @@ Neo utilizes modes to determine the level of autonomy for a given task. At any t
 
 ![The modes Neo can operate in.](neo-operating-modes.png)
 
-### Task Plans
+### Task plans
 
 When you give Neo a complex request, it creates a task plan outlining the steps it will take to accomplish your goal. This plan provides transparency into Neo's approach and gives you the opportunity to adjust the strategy before execution begins.
 
-#### Example Plan
+#### Example plan
 
 The following is a representative plan in response to a user requesting to locate and update outdated Lambda functions:
 
 1. Identify all Lambda functions using Node.js
-2. Determine the appropriate target runtime for each
-3. Create code changes to update the runtime versions
-4. Run a preview to validate all changes
-5. Create a pull request with the updates
+1. Determine the appropriate target runtime for each
+1. Create code changes to update the runtime versions
+1. Run a preview to validate all changes
+1. Create a pull request with the updates
+
+### Plan Mode
+
+For complex tasks, you can enable Plan Mode to collaborate with Neo on a thorough plan before any execution begins. Plan Mode creates a dedicated pre-execution phase where Neo focuses entirely on discovery and synthesis rather than moving toward execution.
+
+When Plan Mode is enabled, Neo:
+
+1. **Investigates your environment** by examining existing infrastructure, reading relevant code, checking dependencies, and researching patterns, showing you what it finds in real time
+1. **Synthesizes a narrative plan** explaining what it will do and why, referencing specific things it discovered like stack configurations and dependencies
+1. **Iterates with you** through normal conversation so you can challenge assumptions, ask for alternatives, or request more detail
+1. **Waits for your explicit approval** before any execution begins
+
+Plan Mode is independent of [task modes](#task-modes). Task modes control what approvals Neo requires during execution, while Plan Mode controls what happens before execution. You can combine them: for example, use Plan Mode with Auto Mode to review the approach thoroughly up front, then let Neo execute without stopping.
+
+Plan Mode is opt-in. Use it when the task is complex enough that upfront thinking pays off, such as multi-stack operations, unfamiliar infrastructure, or tasks you plan to run autonomously. For simple tasks where you already know the approach, skip it.
 
 ### Approvals
 

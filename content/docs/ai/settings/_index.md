@@ -210,3 +210,7 @@ Organization administrators can set the default task mode. The available modes d
 
 - Start with the most restrictive mode -- it's best for most organizations
 - Remember, users can override the default for individual tasks when needed
+
+{{% notes type="info" %}}
+Task modes control approvals during execution. [Plan Mode](/docs/ai/tasks/#plan-mode) is a separate, opt-in feature that controls what happens before execution. You can use Plan Mode with any task mode.
+{{% /notes %}}
