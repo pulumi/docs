@@ -248,7 +248,7 @@ And because Pulumi works with both Google Cloud and Kubernetes resources
 at the same time, it's just as easy to deep link into resources in the
 Kubernetes console as well!
 
-You can check out the Pulumi Service at <https://app.pulumi.com/signin> and
+You can check out the Pulumi Service at [app.pulumi.com](https://app.pulumi.com/signin) and
 create your first Pulumi GCP project with just a few clicks, with an
 array of New Project options to get you up and running quickly.
 

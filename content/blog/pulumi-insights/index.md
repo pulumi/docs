@@ -89,7 +89,7 @@ While all resources managed by Pulumi are part of the resource supergraph, you c
 
 ![Cloud Import](search-cloudimport.png)
 
-Login to the [Pulumi Cloud](https://app.pulumi.com/signup) to start using Resource Search today!
+Login to the [Pulumi Cloud](https://app.pulumi.com/signin) to start using Resource Search today!
 
 ## Analytics - Deeper Insights for Cloud Infrastructure
 

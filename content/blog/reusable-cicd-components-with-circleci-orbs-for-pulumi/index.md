@@ -70,7 +70,7 @@ Of course Pulumi's integration with CircleCI doesn't end with orbs.
 
 Newer versions of the Pulumi command-line client will start associating
 CircleCI build metadata with stack updates, so you you will soon see
-links from <https://app.pulumi.com/signin> to any stack updates or previews
+links from [app.pulumi.com](https://app.pulumi.com/signin) to any stack updates or previews
 that happened during a CircleCI workflow.
 
 Also, if you are using CircleCI with GitHub, you can consider installing

@@ -44,5 +44,5 @@ Connecting multiple identities to Pulumi has advantages:
 
 However, you don't have to associate multiple identities with the same
 Pulumi account. Whenever you sign-in with a new identity for the first
-time on <https://app.pulumi.com/signup>, a new Pulumi account is created. You
+time on [app.pulumi.com](https://app.pulumi.com/signup), a new Pulumi account is created. You
 can then choose to add additional identities at a later time.

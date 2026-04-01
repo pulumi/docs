@@ -209,7 +209,7 @@ passwords or access credentials.
 You might be wondering how these values are actually encrypted. We use
 the same encryption that we have always used for our configuration
 system. This means when storing state with
-[Pulumi Cloud](https://app.pulumi.com/signin), we use a key managed by the <https://app.pulumi.com/signin> service, specific to your stack, to
+[Pulumi Cloud](https://app.pulumi.com/signin), we use a key managed by the [app.pulumi.com](https://app.pulumi.com/signin) service, specific to your stack, to
 encrypt everything. Some users have asked for more control over what key
 is used (and the ability to use a key not managed by Pulumi at all!)
 
