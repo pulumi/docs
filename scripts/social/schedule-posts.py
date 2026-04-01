@@ -231,14 +231,16 @@ def get_changed_blog_posts(state: State) -> list[str] | None:
         text=True,
     )
     if result.returncode != 0:
-        print(f"Warning: git diff from {base} failed, falling back to HEAD~20")
+        # Fallback: list all blog post files instead of diffing against a potentially
+        # invalid ref (e.g., shallow clone with <20 commits).
+        print(f"Warning: git diff from {base} failed, listing all blog posts")
         result = subprocess.run(
-            ["git", "diff", "--name-only", "HEAD~20", "HEAD", "--", "content/blog/*/index.md"],
+            ["git", "ls-files", "--", "content/blog/*/index.md"],
             capture_output=True,
             text=True,
         )
         if result.returncode != 0:
-            print(f"Error: git diff failed: {result.stderr.strip()}")
+            print(f"Error: git ls-files failed: {result.stderr.strip()}")
             return None
     return [f for f in result.stdout.strip().split("\n") if f]
 
@@ -249,7 +251,14 @@ def parse_post(filepath: str) -> dict[str, Any]:
 
 
 def post_url_from_path(filepath: str) -> str:
-    """content/blog/my-post/index.md -> https://www.pulumi.com/blog/my-post/"""
+    """content/blog/my-post/index.md -> https://www.pulumi.com/blog/my-post/
+
+    Handles both relative and absolute paths by finding 'content/blog/' in the path.
+    """
+    filepath = str(filepath)
+    idx = filepath.find("content/blog/")
+    if idx >= 0:
+        filepath = filepath[idx:]
     slug = filepath.replace("content/blog/", "").replace("/index.md", "")
     return f"{SITE_URL}/blog/{slug}/"
 
@@ -353,7 +362,10 @@ def normalize_date(post_date: date | datetime | str | None) -> date | None:
     if isinstance(post_date, date):
         return post_date
     if isinstance(post_date, str):
-        return datetime.fromisoformat(post_date.replace("Z", "+00:00")).date()
+        try:
+            return datetime.fromisoformat(post_date.replace("Z", "+00:00")).date()
+        except ValueError:
+            return None
     return None
 
 
@@ -559,7 +571,11 @@ def send_post(platform: Platform, data: dict[str, str], media_paths: list[str], 
         print(f"  FAILED on {platform}: {resp.status_code} {resp.text}")
         return None
 
-    result = resp.json()
+    try:
+        result = resp.json()
+    except (ValueError, requests.exceptions.JSONDecodeError):
+        print(f"  Warning: non-JSON response from {platform}, assuming success")
+        return "posted"
     request_id = result.get("request_id", "")
 
     direct_url = result.get("results", {}).get(platform, {}).get("url")
@@ -809,6 +825,19 @@ def post_file(filepath: str, platforms_filter: list[Platform] | None = None) -> 
     for platform, (copy, media_paths) in platforms.items():
         if not PLATFORM_ENABLED.get(platform):
             continue
+
+        limit = CHAR_LIMITS.get(platform)
+        bluesky_text_only = platform == "bluesky" and not media_paths
+        appends_url = url and url not in copy and not bluesky_text_only
+        if appends_url:
+            url_len = 23 if platform == "x" else len(url)
+            text_len = len(copy) + 2 + url_len
+        else:
+            text_len = len(copy)
+        if limit and text_len > limit:
+            print(f"  SKIPPING {platform}: copy is {text_len} chars, limit is {limit}")
+            continue
+
         post_url = schedule_post(platform, copy, url, media_paths, scheduled)
         if post_url:
             posted_urls.append((url, platform, post_url))
