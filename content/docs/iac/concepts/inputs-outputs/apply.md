@@ -20,7 +20,7 @@ The `apply` method is used to access the plain value of a single [output](/docs/
 
 The `apply` method is typically used for:
 
-- [Printing output values](#accessing-single-output-values) for debugging Pulumi programs
+- [Printing output values](#printing-output-values) for debugging Pulumi programs
 - [Accessing nested values](#accessing-nested-output-values) in complex types (outputs that are objects or dictionaries)
 - [Transforming an output](#creating-new-output-values) by referencing its plain value
 - [Converting inputs to outputs](#converting-inputs-to-outputs) to call `apply` on a value typed as `Input<T>`
@@ -41,7 +41,7 @@ If you need to create a resource that depends on an output value, pass the outpu
 You cannot create [stack outputs](/docs/iac/concepts/stacks/#outputs) (using `export` in TypeScript/JavaScript, `pulumi.export()` in Python, `ctx.Export()` in Go, etc.) inside an `apply`. Stack outputs must be created at the top level of your Pulumi program. If you need to export a value that depends on an output, you can export the output directly—Pulumi will automatically handle resolving the value when the stack output is accessed.
 {{% /notes %}}
 
-## Accessing single output values { search.keywords="pulumi.apply" }
+## Printing output values { search.keywords="pulumi.apply" }
 
 Suppose you want to print the ID of a resource you've created. These kinds of values are outputs - values that cannot be known until after a resource is provisioned. You might try logging the value like you would any other string:
 
@@ -315,7 +315,55 @@ Diagnostics:
 
 Sometimes a resource has an output property that is an array or a more complex object multiple levels of nested values. For example, if you created an [AWS Certificate Manager certificate resource](/registry/packages/aws/api-docs/acm/certificate/) as shown below:
 
-{{< example-program path="aws-acm-certificate" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+{{< example-program-snippet path="apply-nested-output-values" language="typescript" from="1" to="10" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+{{< example-program-snippet path="apply-nested-output-values" language="python" from="1" to="10" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+{{< example-program-snippet path="apply-nested-output-values" language="go" from="1" to="24" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+{{< example-program-snippet path="apply-nested-output-values" language="csharp" from="1" to="16" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+{{< example-program-snippet path="apply-nested-output-values" language="java" from="1" to="24" >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+{{< example-program-snippet path="apply-nested-output-values" language="yaml" from="1" to="14" >}}
+```
+
+{{% /choosable %}}
 
 This resource will have outputs that resemble the following:
 
@@ -347,14 +395,7 @@ Suppose you want to validate your certificate by creating an [Amazon Route 53 re
 {{% choosable language typescript %}}
 
 ```typescript
-let certValidation = new aws.route53.Record("cert_validation", {
-    records: [
-        // Need to pass along a deep subproperty of this Output
-        certCertificate.domainValidationOptions.apply(
-            domainValidationOptions => domainValidationOptions[0].resourceRecordValue),
-    ],
-    ...
-});
+{{< example-program-snippet path="apply-nested-output-values" language="typescript" from="12" to="24" >}}
 ```
 
 {{% /choosable %}}
@@ -362,15 +403,7 @@ let certValidation = new aws.route53.Record("cert_validation", {
 {{% choosable language python %}}
 
 ```python
-record = aws.route53.Record('validation',
-    records=[
-        # Need to pass along a deep subproperty of this Output
-        certificate.domain_validation_options.apply(
-            lambda domain_validation_options: domain_validation_options[0]['resourceRecordValue']
-        )
-    ],
-    ...
-)
+{{< example-program-snippet path="apply-nested-output-values" language="python" from="12" to="27" >}}
 ```
 
 {{% /choosable %}}
@@ -378,17 +411,7 @@ record = aws.route53.Record('validation',
 {{% choosable language go %}}
 
 ```go
-record, err := route53.NewRecord(ctx, "validation", &route53.RecordArgs{
-    Records: pulumi.StringArray{
-        cert.DomainValidationOptions.ApplyT(func(opts []acm.CertificateDomainValidationOption) string {
-            return *opts[0].ResourceRecordValue
-        }).(pulumi.StringOutput),
-    },
-    ...
-})
-if err != nil {
-    return err
-}
+{{< example-program-snippet path="apply-nested-output-values" language="go" from="26" to="44" >}}
 ```
 
 {{% /choosable %}}
@@ -396,13 +419,7 @@ if err != nil {
 {{% choosable language csharp %}}
 
 ```csharp
-var record = new Record("validation", new RecordArgs
-{
-    Records = {
-        cert.DomainValidationOptions.Apply(opts => opts[0].ResourceRecordValue!)
-    },
-    ...
-});
+{{< example-program-snippet path="apply-nested-output-values" language="csharp" from="18" to="26" >}}
 ```
 
 {{% /choosable %}}
@@ -410,14 +427,7 @@ var record = new Record("validation", new RecordArgs
 {{% choosable language java %}}
 
 ```java
-var record = new Record("validation",
-    RecordArgs.builder()
-        .records(
-            cert.domainValidationOptions()
-            .applyValue(opts -> opts.get(0).resourceRecordValue().get())
-            .applyValue(String::valueOf)
-            .applyValue(List::of))
-        .build());
+{{< example-program-snippet path="apply-nested-output-values" language="java" from="26" to="39" >}}
 ```
 
 {{% /choosable %}}
@@ -449,14 +459,7 @@ Returning to the certificate validation example from the previous section, you c
 {{% choosable language typescript %}}
 
 ```typescript
-let certValidation = new aws.route53.Record("cert_validation", {
-    records: [
-        // Lifting: Access nested property directly, without apply
-        // Type: certCertificate.domainValidationOptions is Output<Array>
-        // Result: certCertificate.domainValidationOptions[0].resourceRecordValue is Output<string>
-        certCertificate.domainValidationOptions[0].resourceRecordValue
-    ],
-...
+{{< example-program-snippet path="apply-nested-output-values" language="typescript" from="26" to="35" >}}
 ```
 
 {{% /choosable %}}
@@ -464,14 +467,7 @@ let certValidation = new aws.route53.Record("cert_validation", {
 {{% choosable language python %}}
 
 ```python
-record = aws.route53.Record('validation',
-    records=[
-        # Lifting: Access nested property directly, without apply
-        # Type: certificate.domain_validation_options is Output[List]
-        # Result: certificate.domain_validation_options[0].resource_record_value is Output[str]
-        certificate.domain_validation_options[0].resource_record_value
-    ],
-...
+{{< example-program-snippet path="apply-nested-output-values" language="python" from="29" to="38" >}}
 ```
 
 {{< notes type="warning" >}}
@@ -483,23 +479,7 @@ record = aws.route53.Record('validation',
 {{% choosable language go %}}
 
 ```go
-record, err := route53.NewRecord(ctx, "validation", &route53.RecordArgs{
-    Records: pulumi.StringArray{
-        // Lifting: Access nested property through helper methods
-        // Type: cert.DomainValidationOptions is pulumi.ArrayOutput
-        // Operations:
-        // * `Index` looks up an index in an `ArrayOutput` and returns a new `Output`.
-        // * `ResourceRecordValue` is an accessor method that looks up a property of a
-        //   custom struct `Output` and returns a new `Output`.
-        // * `Elem` dereferences a `PtrOutput` to an `Output`, equivalent to `*`.
-        // Result: pulumi.StringOutput
-        cert.DomainValidationOptions.Index(pulumi.Int(0)).ResourceRecordValue().Elem(),
-    },
-    ...
-})
-if err != nil {
-    return err
-}
+{{< example-program-snippet path="apply-nested-output-values" language="go" from="46" to="58" >}}
 ```
 
 {{% /choosable %}}
@@ -507,16 +487,7 @@ if err != nil {
 {{% choosable language csharp %}}
 
 ```csharp
-var record = new Record("validation", new RecordArgs
-{
-    // Lifting: Partial support in C#
-    // Type: cert.DomainValidationOptions is Output<ImmutableArray<T>>
-    // Operations:
-    // * `GetAt` looks up an index in an `Output<ImmutableArray<T>>` and returns a new `Output<T>`
-    // * There are not yet accessor methods for referencing properties like `ResourceRecordValue`
-    //   on an `Output<T>` directly, so `Apply` is still needed for the property access.
-    Records = cert.DomainValidationOptions.GetAt(0).Apply(opt => opt.ResourceRecordValue!),
-});
+{{< example-program-snippet path="apply-nested-output-values" language="csharp" from="28" to="36" >}}
 ```
 
 {{% /choosable %}}
@@ -533,20 +504,7 @@ var record = new Record("validation", new RecordArgs
 {{% choosable language yaml %}}
 
 ```yaml
-resources:
-  cert:
-    type: aws:acm:Certificate
-    properties:
-      domainName: example
-      validationMethod: DNS
-  record:
-    type: aws:route53:Record
-    properties:
-      records:
-        # YAML handles inputs and outputs transparently.
-        # Type: cert.domainValidationOptions is an array output
-        # Result: A string output that resolves to the resource record value
-        - ${cert.domainValidationOptions[0].resourceRecordValue}
+{{< example-program-snippet path="apply-nested-output-values" language="yaml" from="16" to="25" >}}
 ```
 
 {{% /choosable %}}
@@ -555,7 +513,7 @@ resources:
 
 ## Creating new output values
 
-### Outputs and Strings
+### Outputs and strings
 
 Outputs that return to the engine as strings cannot be used directly in operations such as string concatenation until the output value has returned to Pulumi. In these scenarios, you'll need to wait for the value to return using [`apply`](/docs/concepts/inputs-outputs/apply/).
 
@@ -565,7 +523,7 @@ For the common case of building a string from output values, Pulumi's [output he
 
 For example, the following code creates an HTTPS URL from the DNS name (the plain value) of a virtual machine (in this case an EC2 instance):
 
-{{< chooser language "typescript,python,go,csharp,java,yaml,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
