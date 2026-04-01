@@ -37,8 +37,6 @@ The numbers tell the story. Sixty-seven percent of AI compute now goes to infere
 
 NVIDIA leaned into this hard. Their open-source stack around [NeMo](https://github.com/NVIDIA-NeMo/NeMo) and [Dynamo](https://github.com/ai-dynamo/dynamo) got significant stage time, but the bigger move was donating three projects to the CNCF: the [DRA driver](https://github.com/NVIDIA/k8s-dra-driver-gpu) for fractional GPU allocation, the [KAI Scheduler](https://github.com/kai-scheduler/KAI-Scheduler) for GPU-aware scheduling, and [Grove](https://github.com/ai-dynamo/grove). Moving these to community governance signals that GPU infrastructure is no longer a proprietary play. It is becoming part of the standard Kubernetes toolkit.
 
-The SUSE, NVIDIA, and Vultr partnership caught my attention too. SUSE is positioning Rancher as an AI platform, well beyond its roots as a Kubernetes management tool. Combined with NVIDIA's inference stack and Vultr's GPU cloud, the pitch is a full enterprise inference pipeline that you can run on-premises or in the cloud. Whether that coheres into a real product remains to be seen, but the direction is clear: inference infrastructure is a first-class concern for platform teams now.
-
 ## The CNCF donations that will reshape AI on Kubernetes
 
 Every KubeCon has its crop of new CNCF projects, but this year's batch felt different. These are not incremental improvements. They are the building blocks of an AI runtime for Kubernetes.
