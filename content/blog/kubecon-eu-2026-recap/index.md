@@ -39,8 +39,6 @@ NVIDIA leaned into this hard. Their open-source stack around [NeMo](https://gith
 
 The SUSE, NVIDIA, and Vultr partnership caught my attention too. SUSE is positioning Rancher as an AI platform, well beyond its roots as a Kubernetes management tool. Combined with NVIDIA's inference stack and Vultr's GPU cloud, the pitch is a full enterprise inference pipeline that you can run on-premises or in the cloud. Whether that coheres into a real product remains to be seen, but the direction is clear: inference infrastructure is a first-class concern for platform teams now.
 
-For Pulumi users, this shift matters directly. Multi-region inference deployments need declarative infrastructure management. You cannot hand-roll Terraform scripts for GPU node pools across three clouds and keep your sanity. [Pulumi's Kubernetes provider](/registry/packages/kubernetes/) and multi-cloud resource management make this the kind of problem IaC was built to solve. Define your inference topology once, deploy it everywhere, and let policy enforcement handle the guardrails.
-
 ## The CNCF donations that will reshape AI on Kubernetes
 
 Every KubeCon has its crop of new CNCF projects, but this year's batch felt different. These are not incremental improvements. They are the building blocks of an AI runtime for Kubernetes.
@@ -57,8 +55,6 @@ NVIDIA's [**DRA driver**](https://github.com/NVIDIA/k8s-dra-driver-gpu) enables 
 
 The **Kubernetes AI Conformance Program** is growing fast, with certifications nearly doubled and three new requirements proposed for Kubernetes 1.36. Conformance programs are boring until they are not. This one will determine which distributions can credibly claim AI readiness.
 
-For platform teams running Pulumi, every one of these projects introduces new CRDs and infrastructure components. [Pulumi's Kubernetes provider](/registry/packages/kubernetes/) handles CRD management natively, so you can adopt llm-d or KAI Scheduler without leaving your existing IaC workflow.
-
 ## Agentic AI gets an identity layer
 
 If inference was this year's production story, agentic AI was the architecture story. Agents are proliferating, and nobody has quite figured out how to manage and secure them inside Kubernetes yet.
@@ -73,8 +69,6 @@ If inference was this year's production story, agentic AI was the architecture s
 
 David Soria Parra from Anthropic gave a talk on MCP evolving beyond simple tool-calling into richer interaction patterns. Google announced the [**Kubernetes Agent Sandbox**](https://github.com/kubernetes-sigs/agent-sandbox) for running agentic AI workloads in secure, isolated environments.
 
-Pulumi fits into this picture in two ways. The [Kubernetes Operator](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) can manage the CRDs that kagent and kagenti introduce. And [Pulumi ESC](/docs/esc/) handles agent credentials, SPIFFE trust bundles, and the secrets that agents need to authenticate against external services.
-
 ## AI gateways and inference routing
 
 Gateway infrastructure had its own mini-conference within KubeCon. The [Gateway API Inference Extension](https://github.com/kubernetes-sigs/gateway-api-inference-extension) from the Kubernetes SIG introduces model-aware routing and load balancing at the gateway level. Instead of routing by URL path, your gateway routes by model name, version, and capacity. That changes how inference traffic flows through a cluster in a fundamental way.
@@ -84,8 +78,6 @@ Gateway infrastructure had its own mini-conference within KubeCon. The [Gateway 
 I want to call out [**Agentgateway**](https://github.com/agentgateway/agentgateway) specifically. Written in Rust, it proxies LLM traffic, MCP connections, and agent-to-agent communication, with Cedar and CEL policy engines for fine-grained access control. Rust's performance characteristics matter here because inference gateway latency adds directly to user-perceived response time.
 
 [**Kuadrant**](https://github.com/Kuadrant/kuadrant-operator), now in CNCF Sandbox, layers policy on top of gateway infrastructure and includes MCP server aggregation. Gateways are evolving from dumb traffic proxies into intelligent control planes for AI workloads, and these four projects are driving that shift.
-
-For governance, [Pulumi CrossGuard](/docs/iac/using-pulumi/crossguard/) can enforce policy-as-code on gateway configurations. Rate limits, failover rules, and routing policies get validated against your organization's standards before they reach production.
 
 ## Platform engineering absorbs LLMOps
 
@@ -99,8 +91,6 @@ Shadow AI governance emerged as its own theme. **CAST AI's Kimchi** can route re
 
 GPU multi-tenancy remains genuinely unsolved. Scheduling, workload isolation, cost attribution across shared GPUs — all of it breaks down at scale. Multiple talks addressed pieces of this, but nobody had a complete answer.
 
-Pulumi addresses several of these concerns. [Self-service infrastructure](/docs/pulumi-cloud/developer-portals/) lets platform teams offer pre-approved AI infrastructure templates. The [Automation API](/docs/iac/using-pulumi/automation-api/) enables programmatic infrastructure provisioning that plugs into your existing developer portals. CrossGuard policies can enforce guardrails on AI infrastructure before resources are provisioned: GPU quotas, approved model lists, data residency requirements.
-
 ## Sovereignty shapes infrastructure architecture
 
 The European context was impossible to ignore. The EU Cyber Resilience Act is driving compliance requirements deep into software supply chains, and every European organization I spoke with is feeling the pressure. This is not abstract regulation. It changes how you build, deploy, and operate software.
@@ -110,8 +100,6 @@ Sovereign Kubernetes is a platform architecture requirement now, not something y
 Runtime isolation is expanding beyond containers. Several talks covered KVM-based isolation for AI workloads, which is heavier than containers but necessary when the threat model includes side-channel attacks on shared GPU memory. The sandboxing conversation has gotten more sophisticated since last year.
 
 These constraints are not uniquely European. Any organization operating across jurisdictions faces similar pressures, and the regulatory direction globally is toward more data sovereignty requirements, not fewer.
-
-Pulumi's multi-cloud and multi-region deployment capabilities handle the infrastructure side of sovereignty. [Pulumi ESC](/docs/esc/) provides credential isolation across environments and regions. CrossGuard policies can enforce data residency at the infrastructure level, blocking deployments to non-compliant regions before they happen rather than catching them in an audit.
 
 ## What this means for your team
 
@@ -128,5 +116,3 @@ Four days in Amsterdam distilled into five things I would act on now:
 1. **Sovereignty and GPU multi-tenancy are universal.** Even if you are not subject to the EU Cyber Resilience Act today, data residency requirements are spreading globally. GPU multi-tenancy will affect every organization running inference at scale.
 
 Kubernetes spent the past decade proving it could orchestrate containers. The next decade will test whether it can orchestrate intelligence. Based on what I saw in Amsterdam, the community is building the right pieces, but the gap between what exists and what production demands is still wide. That gap is where the interesting work happens.
-
-If you want more context on how Pulumi fits into the cloud native ecosystem, check out my earlier post on [Pulumi in a cloud native world](/blog/pulumi-in-a-cloud-native-world/).
