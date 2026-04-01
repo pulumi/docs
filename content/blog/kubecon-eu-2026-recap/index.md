@@ -27,6 +27,8 @@ social:
 
 Amsterdam in late March still has that sharp North Sea wind, but inside the RAI Convention Centre, 13,350 people generated enough energy to heat the building twice over. [KubeCon + CloudNativeCon EU 2026](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe-2026/) was the biggest European edition yet, and the shift from previous years was impossible to miss. AI was the main event. Not a side track, not a buzzword sprinkled into keynotes. The main event.
 
+<!--more-->
+
 I spent most of the conference at the Pulumi booth, and that turned out to be the best vantage point. Hundreds of visitors stopped by over four days, and I kept asking the same question: what are you actually running in production with AI on Kubernetes? The answers shaped this post more than any keynote did. Almost everyone had a proof of concept. Almost nobody had a production story they were happy with.
 
 ![The Pulumi crew at our booth at KubeCon EU 2026 in Amsterdam](pulumi-booth.jpg)
@@ -34,8 +36,6 @@ I spent most of the conference at the Pulumi booth, and that turned out to be th
 Here is the stat that framed the entire conference for me: 82% of organizations have adopted Kubernetes for AI workloads, but only 7% deploy to production daily. That gap between experimentation and actual production use matched what I was hearing at the booth. The CNCF's own survey now counts 19.9 million cloud native developers worldwide, 7.3 million of them building AI workloads. The tooling and the infrastructure need to catch up.
 
 My takeaway after four days on the ground: 2026 is the year of ROI. The prototypes are done. Teams are figuring out how to run inference at scale, how to secure agentic AI, how to make GPU infrastructure work like any other production system. Here is what I saw.
-
-<!--more-->
 
 ## From training to inference: the big pivot
 
