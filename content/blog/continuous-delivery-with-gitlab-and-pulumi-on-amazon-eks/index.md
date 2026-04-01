@@ -17,7 +17,7 @@ Pulumi libraries for [Azure](https://github.com/pulumi/pulumi-azure) and
 
 ## Prerequisites
 
-- An account on [https://app.pulumi.com](https://app.pulumi.com/signup) with
+- An account on [https://app.pulumi.com](https://app.pulumi.com/signin) with
   an organization.
 - The latest `pulumi` CLI. Installation instructions are [here](/docs/install/).
 - A bare repository. Set the remote URL to be your GitLab project.

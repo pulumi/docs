@@ -115,7 +115,7 @@ We'd like to express our thanks to the entire community that helped us design, d
 
 To get started with Pulumi Insights today:
 
-* Sign up or log in to [Pulumi Cloud](https://app.pulumi.com/signup)
+* Sign up or log in to [Pulumi Cloud](https://app.pulumi.com/signin)
 * Try out [Pulumi Neo](/product/neo/)
 * Watch the videos for [Pulumi Insights](https://www.youtube.com/watch?v=MTHGyed3Ef8), [Pulumi AI](https://youtu.be/xdTUEStC8I0) and [Pulumi Search](https://youtu.be/e1u-P9bnEA4)
 * Check out the [Pulumi Insights Documentation](/docs/pulumi-cloud/insights/)
