@@ -155,6 +155,12 @@ export class Chooser {
         // This avoids waiting for the "rendered" event when possible.
         if (store.getStore()) {
             this.subscribeToStore();
+            // Apply the current selection to children immediately so that choosables
+            // can read the correct `selection` attribute before they upgrade. Without
+            // this, choosables that start in local mode (because the globally-preferred
+            // language isn't one of this chooser's options) would render with no
+            // selection on their first pass and briefly show empty content.
+            this.applyChoice();
         }
     }
 
