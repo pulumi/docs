@@ -80,7 +80,7 @@ title: {{ .Title }}
 
 ## Policy
 
-[Pulumi CrossGuard](/docs/insights/{{ .url }}) — {{ .description }}
+[Policies](/docs/insights/{{ .url }}) — {{ .description }}
 {{ end -}}
 {{- range .Params.convert -}}
 
@@ -93,6 +93,31 @@ title: {{ .Title }}
 [{{ .heading }}]({{ .url }})
 {{ end -}}
 {{- range .tools -}}
+- [{{ .display_name }}]({{ .url }})
+{{ end -}}
+{{- end -}}
+{{- with .Params.kubernetes_cluster_management }}
+
+## {{ .heading }}
+
+{{ with .description }}{{ . }}
+
+{{ end -}}
+{{- range .links -}}
+- [{{ .display_name }}]({{ .url }})
+{{ end -}}
+{{- end -}}
+{{- with .Params.kubernetes_operator }}
+
+## {{ .heading }}
+
+{{ with .description_1 }}{{ . }}
+
+{{ end -}}
+{{- with .description_2 }}{{ . }}
+
+{{ end -}}
+{{- range .links -}}
 - [{{ .display_name }}]({{ .url }})
 {{ end -}}
 {{- end -}}
