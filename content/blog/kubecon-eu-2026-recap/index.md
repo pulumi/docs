@@ -33,7 +33,7 @@ I spent most of the conference at the Pulumi booth, and that turned out to be th
 
 ![The Pulumi crew at our booth at KubeCon EU 2026 in Amsterdam](pulumi-booth.jpg)
 
-Here is the stat that framed the entire conference for me: [66% of organizations use Kubernetes to host generative AI workloads, but only 7% deploy to production daily](https://www.cncf.io/reports/cncf-annual-survey-2025/). That gap between experimentation and actual production use matched what I was hearing at the booth. The CNCF's own survey now counts [19.9 million cloud native developers worldwide, 7.3 million of them building AI workloads](https://www.cncf.io/reports/state-of-cloud-native-development-q1-2026/). The tooling and the infrastructure need to catch up.
+Here is the stat that framed the entire conference for me: [66% of organizations use Kubernetes to host generative AI workloads, but only 7% deploy to production daily](https://www.cncf.io/reports/the-cncf-annual-cloud-native-survey/). That gap between experimentation and actual production use matched what I was hearing at the booth. The CNCF's own survey now counts [19.9 million cloud native developers worldwide, 7.3 million of them building AI workloads](https://www.cncf.io/reports/state-of-cloud-native-development-q1-2026/). The tooling and the infrastructure need to catch up.
 
 My takeaway after four days on the ground: lots of working demos, very few production setups people trust. Teams are trying to scale inference, put guardrails around agents, and make GPU infrastructure behave like anything else they run.
 
