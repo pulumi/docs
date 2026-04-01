@@ -1,3 +1,0 @@
-name: aws-lambda-container-thumbnailer-typescript
-runtime: nodejs
-description: An example that deploys a Lambda function and container task to extract a video thumbnail.

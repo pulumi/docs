@@ -1,3 +1,0 @@
-name: aws-iam-strongly-typed-typescript
-runtime: nodejs
-description: An example that deploys an IAM policy document, role, and instance profile on AWS.
