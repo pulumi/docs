@@ -47,7 +47,7 @@ jobs:
           BUCKET=$(pulumi -C infrastructure stack output socialStateBucketName --stack ${{ vars.PULUMI_STACK_NAME }})
           echo "name=$BUCKET" >> "$GITHUB_OUTPUT"
 
-      - uses: astral-sh/setup-uv@v4
+      - uses: astral-sh/setup-uv@v7
 
       - name: Validate upload-post.com API key
         env:
