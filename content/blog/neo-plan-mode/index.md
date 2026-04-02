@@ -45,7 +45,7 @@ Enter Plan Mode by clicking the plan button when starting a task. Neo shifts its
 
 1. **Discovery**: Neo starts by investigating your environment. It examines existing infrastructure, reads relevant code, checks dependencies, and researches patterns, showing you what it's finding in real time so you can steer early.
 1. **Synthesis**: From that research, Neo produces a narrative plan explaining what it will do and why. A plan references specific things Neo discovered, like a particular stack configuration or dependency, rather than generic steps that could apply to any similar task.
-1. **Refinement**: You refine the plan through normal conversation, challenging assumptions, asking for an alternative approach, or requesting more detail on a specific area. 
+1. **Refinement**: You refine the plan through normal conversation, challenging assumptions, asking for an alternative approach, or requesting more detail on a specific area.
 1. **Approval**: Once you're satisfied, you approve the plan and execution begins. Neo carries forward everything it learned during discovery, so the transition from planning to execution is seamless.
 
 ## When to use it
