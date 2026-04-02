@@ -971,14 +971,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             maxTtl: oneHour,
             responseHeadersPolicyId: OneHourCachePolicy.id,
         },
-        {
-            ...baseCacheBehavior,
-            pathPattern: "/fingerprinted/*",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
-            responseHeadersPolicyId: ImmutableCachePolicy.id,
-        },
-
         // Web-component loaders must not be cached, because the names of the files they
         // load will change between builds.
         {
