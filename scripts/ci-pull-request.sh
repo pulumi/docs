@@ -23,3 +23,6 @@ source ./scripts/ci-login.sh
 
 # Temporarily disable 404 detection (too many false positives)
 # ./scripts/detect-new-404s.sh
+
+# Run Lighthouse performance audit on the preview deployment.
+./scripts/run-lighthouse-pr.sh || true
