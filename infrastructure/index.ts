@@ -526,6 +526,17 @@ const thirtyMinuteCachePolicy = new aws.cloudfront.CachePolicy("thirty-minute-ca
     },
 });
 
+const oneYearCachePolicy = new aws.cloudfront.CachePolicy("one-year-cache", {
+    defaultTtl: oneYear,
+    maxTtl: oneYear,
+    minTtl: 0,
+    parametersInCacheKeyAndForwardedToOrigin: {
+        cookiesConfig: { cookieBehavior: "none" },
+        headersConfig: { headerBehavior: "none" },
+        queryStringsConfig: { queryStringBehavior: "none" },
+    },
+});
+
 const baseSecurityHeadersConfig = {
     frameOptions: {
         frameOption: config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN',
@@ -682,8 +693,7 @@ if (config.registryStack) {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
             pathPattern: "/fingerprinted/*",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
             forwardedValues: undefined,
