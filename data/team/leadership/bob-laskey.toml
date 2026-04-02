@@ -1,9 +1,0 @@
-id = "bob-laskey"
-name = "Bob Laskey"
-title = "Chief Revenue Officer"
-weight = 3
-
-status = "active"
-
-[social]
-linkedin = "boblaskey"
