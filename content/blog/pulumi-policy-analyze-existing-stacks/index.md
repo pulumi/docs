@@ -1,5 +1,5 @@
 ---
-title: "Introducing `pulumi policy analyze` for existing stacks"
+title: "Introducing pulumi policy analyze for existing stacks"
 date: 2026-03-28
 draft: false
 meta_desc: "Use the new `pulumi policy analyze` command to run local policy packs against existing stack state, with workflows for developers and AI agents."
