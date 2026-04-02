@@ -14,6 +14,7 @@ tags:
     - ai
 social:
     twitter: "New in Pulumi CLI: `pulumi policy analyze` runs policy packs against existing stack state, making policy testing faster for developers and automation workflows."
+    bluesky: "New in Pulumi CLI: `pulumi policy analyze` runs policy packs against existing stack state, making policy testing faster for developers and automation workflows."
     linkedin: "Pulumi now includes `pulumi policy analyze`, a new command for running local policy packs against existing stack state without running your Pulumi program. It is useful for policy authoring, regression testing, and automation workflows, including agent-driven checks."
 ---
 
