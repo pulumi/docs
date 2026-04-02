@@ -26,7 +26,7 @@ Tracing is an important part of our CLI observability story. So far we've relied
 
 ## Background
 
-We introduced tracing using [OpenTracing](https://opentracing.io) [all the way back in 2017](https://github.com/pulumi/pulumi/pull/521), before [OpenTelemetry](https://opentelemetry.io/) was a thing. This served us well over the years, but as OpenTracing was deprecated, and OTel emerged as the new and maintained thing, it got harder and harder to justify further investing in a tracing infrastructure that was deprecated. Last year we started focusing more on performance, and it became more and more clear that we'd either have to make further investments into OpenTracing, or do the work to switch to OTel.
+We introduced tracing using [OpenTracing](https://opentracing.io) [all the way back in 2017](https://github.com/pulumi/pulumi/pull/521), before [OpenTelemetry](https://opentelemetry.io/) was a thing. This served us well over the years, but as OpenTracing was deprecated, and OTel emerged as the new and maintained thing, it got harder and harder to justify further investment in a tracing infrastructure that was deprecated. Last year we started focusing more on performance, and it became more and more clear that we'd either have to enhance our current OpenTracing setup, or do the work to switch to OTel.
 
 In the end it was a relatively easy decision to move to the more modern and fully supported OTel, especially as more and more tooling around it starts emerging.
 
