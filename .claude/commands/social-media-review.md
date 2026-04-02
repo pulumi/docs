@@ -95,6 +95,10 @@ Decision: PASS
 Guidance:
 - <optional 1–2 short notes about structure or platform norms>
 
+## CI context
+
+When running in CI, post your review as a comment on the pull request using `gh pr comment`. The PR number will be provided in the workflow prompt. Title your comment `## Social Media Review`.
+
 ## Constraints
 
 - Only list the most important issues (max 3)
