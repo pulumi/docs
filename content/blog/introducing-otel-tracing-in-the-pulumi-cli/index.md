@@ -20,7 +20,7 @@ social:
     bluesky: Introducing OTel Tracing in the Pulumi CLI
 ---
 
-Tracing is an important part of our CLI observability story. So far we've relied on the (now deprecated) [OpenTracing](https://opentracing.io/) for this. We have now added OTel tracing to the CLI, which is more future-proof, and should in most cases give you a better view over what the CLI is doing.
+Tracing is an important part of our CLI observability story. So far we've relied on (the now deprecated) [OpenTracing](https://opentracing.io/) for this. We have now added OTel tracing to the CLI, which is more future-proof, and should in most cases give you a better view over what the CLI is doing.
 
 <!--more-->
 
