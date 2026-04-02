@@ -27,9 +27,11 @@ social:
         Because Plan Mode works with any autonomy level, you can review the approach thoroughly up front and then let Neo execute without stopping, or keep full oversight at every step. The planning phase and execution phase have independent controls.
 
         Available now in Pulumi Cloud.
+    bluesky: |
+        Neo now has Plan Mode. For complex tasks, collaborate with Neo on a detailed plan before anything executes. It researches your infrastructure, you iterate together, and execution starts only when you approve.
 ---
 
-Infrastructure work ranges from simple updates to complex multi-stack operations. For straightforward tasks, jumping straight to execution is often ok. But complex tasks benefit from deliberate upfront thinking: understanding what exists, identifying dependencies, and agreeing on an approach before anything changes. Today we're launching Plan Mode, a dedicated experience for collaborating with Neo on a detailed plan before execution begins.
+Infrastructure work ranges from simple updates to complex multi-stack operations. For straightforward tasks, jumping straight to execution is often fine. But complex tasks benefit from deliberate upfront thinking: understanding what exists, identifying dependencies, and agreeing on an approach before anything changes. Today we're launching Plan Mode, a dedicated experience for collaborating with Neo on a detailed plan before execution begins.
 
 <!--more-->
 
