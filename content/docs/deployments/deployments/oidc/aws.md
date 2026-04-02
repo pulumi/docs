@@ -67,9 +67,20 @@ Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your 
 
 ### Restricting role assumption to Pulumi Cloud scopes
 
-For more granular access control, edit the trust policy of your IAM role with [Token claims](/docs/deployments/deployments/oidc/#custom-claims). The subject (`sub`) claim can be customized to allow a role to be assumed via OIDC only for specific projects or stacks.
+The examples below use `contoso` as the organization name — replace it with your own. The following restricts to any deployment in the `contoso` organization:
 
-The following IAM policy snippet for role assumption restricts role assumption to any stack within the `Core` project of the `contoso` organization:
+```json
+"Condition": {
+  "StringEquals": {
+    "api.pulumi.com/oidc:aud": "contoso"
+  },
+  "StringLike": {
+    "api.pulumi.com/oidc:sub": "pulumi:deploy:org:contoso:*"
+  }
+}
+```
+
+The following restricts to any stack within the `Core` project:
 
 ```json
 "Condition": {
@@ -81,6 +92,8 @@ The following IAM policy snippet for role assumption restricts role assumption t
   }
 }
 ```
+
+The subject claim also includes the stack name and operation, so you can restrict further. See the [full subject format and custom claims](/docs/deployments/deployments/oidc/#custom-claims) for details.
 
 ## Configure OIDC via the Pulumi console
 

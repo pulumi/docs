@@ -92,15 +92,20 @@ For more advanced use cases see [Vault documentation](https://developer.hashicor
 
 ### Create Vault JWT role
 
-To create a [role](https://developer.hashicorp.com/vault/api-docs/auth/jwt#create-update-role) using the CLI:
+To create a [role](https://developer.hashicorp.com/vault/api-docs/auth/jwt#create-update-role), use `bound_claims_type: "glob"` with a wildcard `sub` claim to restrict access to all ESC environments in your organization:
 
 ```shell
-vault write auth/jwt/role/<role-name> \
-  bound_audiences="<org-name>"
-  user_claim="sub" \
-  token_policies="<policy-name>" \
-  allowed_redirect_uris="<vault-url>/jwt/callback" \
-  role_type="jwt"
+$ vault write auth/jwt/role/<role-name> -<<EOF
+{
+  "user_claim": "sub",
+  "bound_audiences": "<org-name>",
+  "role_type": "jwt",
+  "token_policies": "<policy-name>",
+  "bound_claims_type": "glob",
+  "bound_claims": { "sub": "pulumi:environments:org:<org-name>:env:*" },
+  "allowed_redirect_uris": ["<vault-url>/jwt/callback"]
+}
+EOF
 ```
 
 {{% notes "warning" %}}
@@ -114,7 +119,7 @@ Replace:
 * `<org-name>` with your Pulumi Cloud organization name (or your username if you are not part of an organization)
 * `<vault-url>` with your Vault URL (Pulumi Cloud must be able to access this URL)
 
-If you want to use `bound_claims` you'll need to specify the role configuration [as JSON](https://developer.hashicorp.com/vault/docs/auth/jwt#oidc-configuration-troubleshooting):
+For environment-specific restrictions, use the `env` claim [as JSON](https://developer.hashicorp.com/vault/docs/auth/jwt#oidc-configuration-troubleshooting):
 
 ```shell
 $ vault write auth/jwt/role/<role-name> -<<EOF
@@ -122,7 +127,7 @@ $ vault write auth/jwt/role/<role-name> -<<EOF
   "user_claim": "sub",
   "bound_audiences": "<org-name>",
   "role_type": "jwt",
-  "policies": "<policy-name>",
+  "token_policies": "<policy-name>",
   "bound_claims": { "env": ["<project-name>/<environment-name>","<project-name>/<another-environment-name>"] },
   "allowed_redirect_uris": ["<vault-url>/jwt/callback"]
 }
