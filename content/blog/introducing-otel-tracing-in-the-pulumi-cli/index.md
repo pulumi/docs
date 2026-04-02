@@ -16,7 +16,10 @@ schema_type: auto
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: Introducing OTel Tracing in the Pulumi CLI
-    linkedin:
+    linkedin: |
+    Introducing OTel Tracing in the Pulumi CLI
+
+    We've recently introduced OTel tracing in the pulumi CLI, to replace our current OpenTelemetry setup. Read the blog post to find out how we did it, and how you can use it.
     bluesky: Introducing OTel Tracing in the Pulumi CLI
 ---
 
@@ -41,5 +44,9 @@ For plugins we always request both OpenTracing and OTel traces. If both are requ
 ## Try it out
 
 Currently the OTel exporter supports both exporting the traces directly via gRPC to a collector, or to a file, where the traces are JSON encoded. This file can then be shared and imported into a trace viewer at a later time. To do this, you can use the `--otel-traces <file://<filename>|grpc://<exporter-address>>` flag, using pulumi version v3.226 or newer. For further documentation see [our performance tracing docs](https://www.pulumi.com/docs/support/debugging/performance-tracing/#opentelemetry-tracing).
+
+To view the traces, you can use one of the various exporters that exist. Popular options include [Jaeger](https://www.jaegertracing.io/), [OTel Desktop Viewer](https://github.com/CtrlSpice/otel-desktop-viewer), or [OTel TUI](https://github.com/ymtdzzz/otel-tui) if you prefer not leaving your terminal. Once you've ingested the logs there either by uploading the trace file, or sending them directly by giving pulumi the exporter address, look for the `pulumi-cli: pulumi` root span.
+
+All further spans will be parented to that root span, and you should thus be able to see a nice flow diagram in the viewer of your choice.
 
 As always, we would love any feedback either in the [Community Slack](https://slack.pulumi.com/), or through a [GitHub issue](https://github.com/pulumi/pulumi/issues).
