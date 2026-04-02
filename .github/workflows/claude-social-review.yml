@@ -6,6 +6,10 @@ on:
     paths:
       - 'content/blog/*/index.md'
 
+concurrency:
+  group: social-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
   social-review:
     if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login != 'pulumi-bot' && github.event.pull_request.user.login != 'dependabot[bot]'
@@ -48,7 +52,7 @@ jobs:
           BUCKET=$(pulumi -C infrastructure stack output socialStateBucketName --stack ${{ vars.PULUMI_STACK_NAME }})
           echo "name=$BUCKET" >> "$GITHUB_OUTPUT"
 
-      - uses: astral-sh/setup-uv@v4
+      - uses: astral-sh/setup-uv@v7
 
       - name: Check which posts need social review
         id: check
