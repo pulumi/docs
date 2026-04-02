@@ -97,7 +97,11 @@ Guidance:
 
 ## CI context
 
-When running in CI, post your review as a comment on the pull request using `gh pr comment`. The PR number will be provided in the workflow prompt. Title your comment `## Social Media Review`.
+When running in CI:
+
+1. Read `.social-check-output.txt` for the list of posts to review and their social copy
+2. Review each post using the rules above
+3. Post your findings as a single PR comment using `gh pr comment <PR_NUMBER> --body "<your review>"`. The PR number is provided in the workflow prompt. Title the comment `## Social Media Review`
 
 ## Constraints
 
