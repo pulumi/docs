@@ -32,7 +32,10 @@ if [[ "$TEST_MODE" == "pull_request" ]]; then
     # If there are programs to test, add them to the dirs_to_test array.
     if [[ -n "$programs" ]]; then
         while IFS= read -r line; do
-            dirs_to_test+=("$line")
+            # Skip programs whose directories were deleted in this PR.
+            if [[ -d "${programs_dir}/${line}" ]]; then
+                dirs_to_test+=("$line")
+            fi
         done <<< "$programs"
     fi
 
