@@ -1,82 +1,77 @@
 {{ define "hero" }}
-    {{ partial "hero.html" (dict "title" .Title "subtitle" .Description) }}
 {{ end }}
 
 {{ define "main" }}
-    <div class="mb-12">
-        {{ partial "stacked-carousel.html" (dict "logos" .Params.customer_logos.logos "static" true ) }}
-    </div>
+<div class="font-body container mx-auto mb-16 mt-16 px-12 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24 overflow-hidden">
 
-    <div class="container mx-auto text-center pb-8">
-        <h3 id="customer-stories">Customer Stories</h4>
-    </div>
-
-    <div class="container mx-auto max-w-7xl px-8 pb-16 md:px-0 text-center justify-center align-middle">
-        <div class="card ready-cta w-full rounded-xl p-0.5 gradient flex flex-col md:flex-row">
-            <div class="w-full md:w-1/2 px-24 py-8 text-center justify-center align-middle bg-purple-100 flex rounded-tl-xl rounded-bl-xl">
-                <div class="pb-4 my-auto w-full flex flex-col items-center">
-                    <div class="w-56">
-                        {{ partial "customer-logo.html" (dict "logo" .Params.featured_customer.name) }}
-                    </div>
-                    <p class="text-xl">
-                        {{ .Params.featured_customer.quote }}
-                    </p>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 bg-violet-600 p-8 flex rounded-tr-xl rounded-br-xl">
-                <div class="my-auto w-full">
-                    {{ if .Params.featured_customer.headline_stat }}
-                        <div class="text-6xl text-white font-extrabold my-auto pb-4">{{ .Params.featured_customer.headline_stat }}</div>
-                    {{ end }}
-                    {{ if .Params.featured_customer.headline }}
-                        <div class="text-xl text-white my-auto pb-8">{{ .Params.featured_customer.headline }}</div>
-                    {{ end }}
-                    <a class="btn-secondary" href="{{ .Params.featured_customer.name }}">
-                        Read the Story
-                    </a>
-                </div>
+    {{/* Hero */}}
+    <section class="template-hero template-hero--centered" id="hero">
+        <div class="flex flex-col items-center gap-12">
+            <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
+                <h1 class="title mb-6 text-violet-800">{{ .Title }}</h1>
+                {{ with .Params.description }}
+                <p class="description mb-10">{{ . | markdownify }}</p>
+                {{ end }}
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container mx-auto max-w-xl md:max-w-4xl px-8 md:px-0">
-        <ul class="list-none p-0">
+    {{/* Featured customer */}}
+    {{ with .Params.featured_customer }}
+    {{ $featuredPage := $.Site.GetPage (printf "/case-studies/%s" .name) }}
+    {{ partial "template-partials/template-case-study-hero.html" (dict
+        "customer_logo" $featuredPage.Params.customer_logo
+        "customer_name" $featuredPage.Params.customer_name
+        "quote" $.Params.featured_customer.quote
+        "headline_stat" $.Params.featured_customer.headline_stat
+        "headline" $.Params.featured_customer.headline
+        "link" $featuredPage.RelPermalink
+    ) }}
+    {{ end }}
+
+    {{/* Case study cards */}}
+    <section id="customer-stories">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {{ $items := where (where .Site.Pages "Type" "case-studies") "Kind" "eq" "page" }}
-            {{ range $index, $item := sort $items ".Params.customer_name" }}
-                <li class="m-0 p-0">
-                    <article class="pb-16 mb-16 border-b border-gray-300 md:flex items-start">
-                        <div class="mb-8 md:mb-0 md:pt-2 px-8 md:w-1/3">
-                            <a href="{{ .RelPermalink }}">
-                                {{ $fpSrc := strings.TrimPrefix "/" .Params.customer_logo }}
-                                {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
-                                {{ if $fpAsset }}
-                                    {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" (printf "%s logo" .Params.customer_name) "class" "md:block w-40 md:w-48 mx-auto") }}
-                                {{ else }}
-                                    <img class="md:block w-40 md:w-48 mx-auto" src="{{ .Params.customer_logo }}" alt="{{ .Params.customer_name }} logo" />
-                                {{ end }}
-                            </a>
+            {{ range sort $items ".Params.customer_name" }}
+            <div class="template-card">
+                <div class="flex flex-col h-full w-full">
+                    <div class="flex flex-col gap-4 mb-8">
+                        {{ with .Params.customer_logo }}
+                        <div class="h-10 flex items-center">
+                            {{ $fpSrc := strings.TrimPrefix "/" . }}
+                            {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+                            {{ if $fpAsset }}
+                                {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" (printf "%s logo" $.Params.customer_name) "class" "h-8 w-auto") }}
+                            {{ else }}
+                                <img src="{{ . }}" alt="{{ $.Params.customer_name }} logo" class="h-8 w-auto" />
+                            {{ end }}
                         </div>
-                        <div class="md:w-2/3">
-                            <h5 class="leading-none">
-                                {{ if (isset .Params "redirect_to") }}
-                                    <a class="link" href="{{ .Params.redirect_to }}">
-                                        {{ .Params.customer_name }}
-                                    </a>
-                                {{ else }}
-                                    <a class="link" href="{{ .RelPermalink }}">
-                                        {{ .Params.customer_name }}
-                                    </a>
-                                {{ end }}
-                            </h5>
-                            <p class="mb-0">
-                                {{ $item.Description }}
-                            </p>
-                        </div>
-                    </article>
-                </li>
+                        {{ end }}
+                        <h3 class="card-title m-0">
+                            {{ if (isset .Params "redirect_to") }}
+                                <a href="{{ .Params.redirect_to }}" class="text-black hover:text-black no-underline">{{ .Params.customer_name }}</a>
+                            {{ else }}
+                                <a href="{{ .RelPermalink }}" class="text-black hover:text-black no-underline">{{ .Params.customer_name }}</a>
+                            {{ end }}
+                        </h3>
+                    </div>
+                    <div class="card-description mb-6">
+                        {{ .Description | markdownify }}
+                    </div>
+                    {{ if (isset .Params "redirect_to") }}
+                    <a href="{{ .Params.redirect_to }}" class="text-violet-800 hover:text-violet-600 font-medium mt-auto inline-flex items-center gap-1 cursor-pointer">Read the story &rarr;</a>
+                    {{ else }}
+                    <a href="{{ .RelPermalink }}" class="text-violet-800 hover:text-violet-600 font-medium mt-auto inline-flex items-center gap-1 cursor-pointer">Read the story &rarr;</a>
+                    {{ end }}
+                </div>
+            </div>
             {{ end }}
-        </ul>
-    </div>
+        </div>
+    </section>
 
-    {{ partial "learnmore-contactus.html" . }}
+    {{/* Footer CTA */}}
+    {{ partial "template-partials/template-footer-cta.html" dict }}
+
+</div>
 {{ end }}

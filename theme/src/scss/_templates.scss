@@ -444,6 +444,46 @@
     }
 }
 
+// Case study hero card
+.template-case-study-hero {
+    .case-study-hero-stat {
+        @apply font-body font-bold text-black mb-2;
+        font-size: 1.5rem;
+        line-height: 1.375;
+    }
+
+    .case-study-hero-headline {
+        @include section-description();
+    }
+
+    .case-study-hero-quote {
+        @include section-description();
+        @apply m-0;
+    }
+
+    .case-study-hero-attrib {
+        @apply font-body mt-4 mb-0;
+        font-feature-settings: 'salt' on;
+        font-size: 0.875rem;
+        color: #757576;
+    }
+}
+
+// Case study content
+.case-study-content {
+    h2, h3, h4, h5, h6 {
+        @apply font-body scroll-mt-22;
+
+        @include screen-lg {
+            @apply font-body scroll-mt-28;
+        }
+    }
+
+    .description {
+        @include section-description();
+    }
+}
+
 // Product page widgets
 .template-product-hero {
     .product-hero-heading {
