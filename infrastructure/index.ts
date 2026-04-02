@@ -675,6 +675,19 @@ if (config.registryStack) {
             originRequestPolicyId: allViewerExceptHostHeaderId,
             forwardedValues: undefined,
         },
+        // Fingerprinted assets (e.g. /fingerprinted/logos/pkg/aws.<hash>.svg)
+        // are served from the registry origin with year-long immutable caching.
+        // See pulumi/registry#10488 for context.
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryCDN,
+            pathPattern: "/fingerprinted/*",
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+            forwardedValues: undefined,
+        },
     )
 }
 
