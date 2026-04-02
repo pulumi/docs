@@ -87,6 +87,14 @@ This works well for automation because the command doesn't execute your Pulumi p
 
 ## Try it out
 
+`pulumi policy analyze` is available in [Pulumi v3.229.0](https://github.com/pulumi/pulumi/releases/tag/v3.229.0). Upgrade with:
+
+```bash
+brew upgrade pulumi
+# or
+pulumi self-update
+```
+
 If you are authoring or tuning policy packs, start by running this command against a known stack in your environment. It is a quick way to validate policy behavior before rollout.
 
 For implementation details, see the merged PR: [pulumi/pulumi#22250](https://github.com/pulumi/pulumi/pull/22250).
