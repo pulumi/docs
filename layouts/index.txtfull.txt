@@ -10,19 +10,6 @@ Documentation pages under /docs/ support content negotiation. Request `Accept: t
 
     curl -H "Accept: text/markdown" https://www.pulumi.com/docs/iac/concepts/resources/
 
-## Using the Pulumi CLI for docs
-
-The `pulumi docs` command provides terminal-based access to documentation, useful for agentic and CLI-driven workflows:
-
-- `pulumi docs read <path>` - Read a specific page (e.g., `pulumi docs read iac/concepts/stacks`)
-- `pulumi docs read <path>#<section>` - Jump to a section (e.g., `pulumi docs read iac/concepts/stacks#stack-tags`)
-- `pulumi docs search <query>` - Search docs by keyword (e.g., `pulumi docs search stack references`)
-- `pulumi docs browse [path]` - Interactively browse documentation
-- `pulumi docs registry <package>` - Read provider docs (e.g., `pulumi docs registry aws`)
-- `pulumi docs registry <package> api [module]` - Read API docs for a specific module
-
-Use `--language <lang>` to filter code examples (typescript, python, go, csharp, java, yaml).
-
 ## Site overview
 
 This llms.txt covers www.pulumi.com, which includes:
