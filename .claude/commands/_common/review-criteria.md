@@ -149,10 +149,10 @@ Review for:
 - Image file format matches its actual content (no WebP files saved as .png)
 - Animated GIFs: max 1200px wide, 3 MB
 
-**End-of-review publishing readiness checklist** — summarize as a checklist at the end of every blog review. **Social media items are merge blockers** — flag them prominently if they fail:
+**End-of-review publishing readiness checklist** — summarize as a checklist at the end of every blog review:
 
-- [ ] `social:` block has all three keys: `twitter`, `linkedin`, `bluesky` — **MERGE BLOCKER if missing** (auto-posts on merge)
-- [ ] `meta_image` set, not empty (0 bytes), and not the default placeholder — **MERGE BLOCKER if empty** (used by LinkedIn + social cards)
+- [ ] `social:` block present with copy for `twitter`, `linkedin`, `bluesky` (optional — without it, the post won't be promoted on social media)
+- [ ] `meta_image` set, not empty (0 bytes), and not the default placeholder (used by LinkedIn + social cards)
 - [ ] `meta_image` uses current Pulumi logos
 - [ ] `<!--more-->` break present after intro
 - [ ] Author profile exists with avatar
@@ -161,7 +161,6 @@ Review for:
 - [ ] No animated GIFs used as `meta_image`
 - [ ] Images have alt text; screenshots have 1px gray borders
 - [ ] Title ≤60 chars or `allow_long_title: true` set
-- [ ] `social:` block present with copy for `twitter`, `linkedin`, `bluesky` (optional — without it, the post won't be promoted on social media)
 
 ## Additional Instructions
 
