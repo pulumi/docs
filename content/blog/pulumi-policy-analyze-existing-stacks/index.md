@@ -18,7 +18,7 @@ social:
     linkedin: "Pulumi now includes `pulumi policy analyze`, a new command for running local policy packs against existing stack state without running your Pulumi program. It is useful for policy authoring, regression testing, and automation workflows, including agent-driven checks."
 ---
 
-You can now run policy packs against your existing stack state without running your Pulumi program or making provider calls. The new `pulumi policy analyze` command evaluates your current infrastructure against local policy packs directly, turning policy validation into a fast, repeatable check.
+You can now run [policy packs](/docs/insights/policy/policy-packs/) against your existing stack state without running your Pulumi program or making provider calls. The new `pulumi policy analyze` command evaluates your current infrastructure against local policy packs directly, turning policy validation into a fast, repeatable check.
 
 <!--more-->
 
@@ -31,7 +31,7 @@ Policy authoring and policy updates usually involve an iteration loop:
 1. Inspect violations or remediations.
 1. Repeat until the policy behavior matches intent.
 
-Before this command, that loop often depended on `pulumi preview` or `pulumi up`, which can be heavier than you need when your goal is validating policy logic against known state.
+Before this command, that loop often depended on [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) or [`pulumi up`](/docs/iac/cli/commands/pulumi_up/), which can be heavier than you need when your goal is validating policy logic against known state.
 
 With `pulumi policy analyze`, you can evaluate your current stack state directly and quickly.
 
