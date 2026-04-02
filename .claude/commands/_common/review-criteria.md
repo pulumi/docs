@@ -44,7 +44,7 @@ Always provide relevant line numbers for any issues you identify.
 - **Front matter**:
   - Verify required front matter fields (title, description, etc.).
   - Check meta descriptions are present and appropriate length.
-  - For blog posts: check that `social:` block is present with all three keys: `twitter`, `linkedin`, and `bluesky`. **This is a merge blocker** — posts auto-publish to social media on merge, and missing keys mean missing platforms. Character limits: X ~280, Bluesky 300, LinkedIn 3000. Also verify `meta_image` is not empty (0 bytes) — LinkedIn uses it as the post image.
+  - For blog posts: note whether a `social:` block is present with `twitter`, `linkedin`, and `bluesky` keys. If missing, and new blog post, warn that post won't be promoted on social media.
 - **Cross-references and consistency**:
   - Check that related pages are cross-linked appropriately.
   - Verify terminology is consistent with other docs.
@@ -161,6 +161,7 @@ Review for:
 - [ ] No animated GIFs used as `meta_image`
 - [ ] Images have alt text; screenshots have 1px gray borders
 - [ ] Title ≤60 chars or `allow_long_title: true` set
+- [ ] `social:` block present with copy for `twitter`, `linkedin`, `bluesky` (optional — without it, the post won't be promoted on social media)
 
 ## Additional Instructions
 
