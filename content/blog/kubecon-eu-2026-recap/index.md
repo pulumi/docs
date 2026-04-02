@@ -5,6 +5,7 @@ date: 2026-04-01T00:00:00-07:00
 draft: false
 meta_desc: "Recap of KubeCon EU 2026 in Amsterdam: AI in production on Kubernetes, agentic AI identity, inference routing, and platform engineering."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - engin-diri
 tags:
