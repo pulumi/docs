@@ -161,19 +161,57 @@ When working with locally generated SDKs, you need to decide whether to commit t
 
 ## Updating local packages
 
-As underlying providers evolve with new features or bug fixes, you'll need to update your local packages to take advantage of these improvements. To update a local package:
+As underlying providers evolve with new features or bug fixes, you'll need to update your local packages to take advantage of these improvements.
 
-```bash
-pulumi package add <provider|schema|path> [provider-parameter...] [flags]
+### How local package versions are tracked
+
+When you run `pulumi package add`, the command registers the package and its version in your project's `Pulumi.yaml` file. For example, after adding a Terraform provider:
+
+```yaml
+packages:
+  random:
+    source: terraform-provider
+    version: 0.10.0
+    parameters:
+      - hashicorp/random
+      - 3.7.1
 ```
 
-1. Re-run the `pulumi package add` command with the updated source.
-1. This will regenerate the SDK with the latest schema.
-1. Update your imports and code as needed if there are breaking changes.
+You should commit `Pulumi.yaml` to source control so that your teammates can reproduce the same environment. When a collaborator clones your repository, they run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all packages defined in `Pulumi.yaml`, including generating any local SDKs.
 
-For packages from Git repositories, specify a version tag or commit hash to control which version is used.
+### Upgrading a local package
 
-After regenerating the SDK, run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all dependencies, including the updated local package.
+To upgrade a local package, re-run the `pulumi package add` command with the updated source or version:
+
+```bash
+# Upgrade a Terraform provider to a new version
+pulumi package add terraform-provider hashicorp/random 3.7.1
+
+# Upgrade a component from a git repository to a new tag
+pulumi package add example.com/org/repo.git/path@v2.0.0
+
+# Regenerate from an updated local schema file
+pulumi package add ./my/schema.json
+```
+
+This will:
+
+1. Regenerate the SDK with the latest schema.
+1. Update the package entry in your `Pulumi.yaml` file.
+
+After regenerating the SDK, run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all dependencies, including the updated local package. Update your imports and code as needed if there are breaking changes.
+
+### Checking your current version
+
+To see which version of a local package your project is using, inspect the `packages` section of your `Pulumi.yaml` file. You can also run [`pulumi package info <package-name>`](/docs/iac/cli/commands/pulumi_package_info/) to view details about an installed package.
+
+### Team workflow
+
+A typical workflow for teams using local packages:
+
+1. A developer upgrades a package by running `pulumi package add` with the new version.
+1. The developer commits the updated `Pulumi.yaml` to source control. (If the team has chosen to [check in the generated SDK](#option-2-check-in-the-generated-sdk), the updated SDK should also be committed.)
+1. Other team members pull the changes and run `pulumi install` to regenerate the SDK and install dependencies locally.
 
 ## Versioning considerations
 
