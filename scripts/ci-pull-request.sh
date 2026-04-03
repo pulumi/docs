@@ -24,5 +24,31 @@ source ./scripts/ci-login.sh
 # Temporarily disable 404 detection (too many false positives)
 # ./scripts/detect-new-404s.sh
 
-# Run Lighthouse performance audit on the preview deployment.
-./scripts/run-lighthouse-pr.sh || true
+# Run Lighthouse performance audit on the preview deployment, but only when the
+# PR contains changes that could meaningfully affect performance scores (layouts,
+# CSS/JS bundles, Hugo config, etc.). Content-only changes are skipped.
+performance_paths=(
+    "^layouts/"
+    "^theme/"
+    "^assets/"
+    "^static/js/"
+    "^static/css/"
+    "^static/fonts/"
+    "^static/icons/"
+    "^static/images/"
+    "^static/logos/"
+    "^config/"
+    "^hugo\."
+)
+performance_pattern="$(IFS="|"; echo "${performance_paths[*]}")"
+# Fetch just enough of master to compare. The default shallow checkout in CI
+# doesn't include origin/master, so the original three-dot diff silently failed.
+git fetch origin master:refs/remotes/origin/master --depth=1 2>/dev/null || true
+changed_files="$(git diff --name-only origin/master...HEAD 2>/dev/null || true)"
+
+if echo "$changed_files" | grep -qE "$performance_pattern"; then
+    echo "Performance-relevant files changed. Running Lighthouse audit..."
+    ./scripts/run-lighthouse-pr.sh || true
+else
+    echo "No performance-relevant file changes detected. Skipping Lighthouse audit."
+fi
