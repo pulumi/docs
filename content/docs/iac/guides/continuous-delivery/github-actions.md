@@ -1316,3 +1316,49 @@ If your workflow uses multiple language runtimes or has specific versioning requ
 {{% /notes %}}
 
 For additional examples, see the sample workflows available in our [Actions repository](https://github.com/pulumi/actions/tree/master/.github/workflows).
+
+### Configuring workflow concurrency
+
+GitHub Actions workflows for Pulumi can accumulate unnecessary runs when multiple pull requests are open simultaneously or when commits arrive faster than the previous workflow completes. Configuring [concurrency groups](https://docs.github.com/en/actions/using-jobs/using-concurrency) lets you control how many workflow runs can execute at the same time, which reduces wasted compute and prevents conflicting deployments.
+
+**For pull request preview workflows**, use a concurrency group keyed to the pull request number and set `cancel-in-progress: true`. This cancels any in-flight preview runs for the same PR when a new commit is pushed, so that reviewers always see the result of the latest code:
+
+```yaml
+concurrency:
+  group: pr-infra-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+```
+
+**For push-to-main deployment workflows**, use a shared concurrency group without `cancel-in-progress`. This queues deployments instead of canceling them, ensuring every commit to your main branch is eventually applied. Setting `cancel-in-progress: true` on a deployment workflow would silently drop intermediate deployments, which is rarely desirable:
+
+```yaml
+concurrency:
+  group: deploy-infra
+```
+
+The `concurrency` key is a top-level workflow field placed at the same level as `on` and `jobs`. For example, a complete pull request workflow with concurrency configured looks like this:
+
+```yaml
+name: Pulumi
+on:
+  - pull_request
+concurrency:
+  group: pr-infra-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  preview:
+    name: Preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: org-name/stack-name
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% notes type="info" %}}
+You can also scope concurrency to the job level rather than the workflow level by placing the `concurrency` key inside the job definition. Job-level concurrency is useful when a single workflow file contains multiple jobs with different concurrency requirements.
+{{% /notes %}}

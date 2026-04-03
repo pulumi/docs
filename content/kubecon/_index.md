@@ -116,8 +116,7 @@ testimonial:
   quote: |
     We manage over 20,000 resources across multiple clouds with Pulumi. It solved our Terraform
     coordination overhead and gave us the velocity we needed.
-  author: " — Platform Engineering Team, BMW"
-  title: ""
+  author: Platform Engineering Team, BMW
   company: BMW
   logo: /logos/customers/bmw-shortened.svg
   bg_image: /images/kubecon/bmw-background.png
