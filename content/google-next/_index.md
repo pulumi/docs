@@ -6,6 +6,7 @@ type: page
 layout: event-page
 aliases:
   - /google-next-2025
+  - /google-cloud-next
 
 hero:
   title: Let's talk Google Cloud infrastructure
