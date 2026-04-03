@@ -125,7 +125,7 @@ if [[ "$1" == "preview" ]]; then
     existing_comment_id=$(curl -s \
         -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
         "$pr_comment_api_url" \
-        | jq -r '[.[] | select(.body | contains("<!-- preview-link -->"))] | last | .id // empty')
+        | jq -r '[.[] | select(.user.login == "pulumi-bot" and (.body | contains("<!-- preview-link -->")))] | last | .id // empty')
 
     if [[ -n "$existing_comment_id" ]]; then
         curl -s \

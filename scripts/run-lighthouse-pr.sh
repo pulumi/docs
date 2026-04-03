@@ -142,7 +142,7 @@ if [[ -n "$GITHUB_EVENT_PATH" ]]; then
         existing_comment_id=$(curl -s \
             -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
             "$pr_comment_api_url" \
-            | jq -r '[.[] | select(.body | contains("<!-- lighthouse-report -->"))] | last | .id // empty')
+            | jq -r '[.[] | select(.user.login == "pulumi-bot" and (.body | contains("<!-- lighthouse-report -->")))] | last | .id // empty')
 
         if [[ -n "$existing_comment_id" ]]; then
             echo "Updating Lighthouse comment (${existing_comment_id})..."
