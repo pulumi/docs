@@ -60,6 +60,10 @@ pulumi package add example.com/org/repo.git/path@version
 
 After adding a local package, run `pulumi install` to complete the installation.
 
+{{% notes type="info" %}}
+Running `pulumi package add` registers the package in your `Pulumi.yaml` file. You should commit this file to source control so that your teammates can run `pulumi install` to install the same packages after cloning the repository.
+{{% /notes %}}
+
 Some common use cases for local packages include:
 
 1. Using the [Any Terraform provider](/registry/packages/terraform-provider/) to generate a local SDK for a Terraform provider. (This feature allows you to consume any Terraform provider in a Pulumi program.)
@@ -78,6 +82,66 @@ In order to consume a Pulumi package, there may be additional runtime requiremen
 {{% notes type="info" %}}
 Packages in the Pulumi Registry are typically written in Go and are compiled, and therefore do not require a runtime. This includes all packages for popular cloud and SaaS providers.
 {{% /notes %}}
+
+## Upgrading packages
+
+How you upgrade a Pulumi package depends on whether the package has published SDKs or uses locally generated SDKs.
+
+### Upgrading published SDK packages
+
+For packages with published SDKs (most packages in the [Pulumi Registry](/registry/)), use your language's standard package manager to upgrade:
+
+{{< chooser language "typescript,python,go,csharp" >}}
+{{% choosable language typescript %}}
+
+```bash
+npm install @pulumi/aws@latest
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```bash
+pip install --upgrade pulumi-aws
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```bash
+# Replace v7 with the major version used in your go.mod
+go get github.com/pulumi/pulumi-aws/sdk/v7@latest
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```bash
+dotnet add package Pulumi.Aws
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
+Check each package's page in the [Pulumi Registry](/registry/) for the latest version and any upgrade notes.
+
+### Upgrading local packages
+
+For [local packages](/docs/iac/guides/building-extending/packages/local-packages/) (packages added with `pulumi package add`), re-run the `pulumi package add` command with the desired version:
+
+```bash
+# Upgrade a Terraform provider to a specific version
+pulumi package add terraform-provider hashicorp/random 3.7.1
+
+# Upgrade a component from a git repository to a new tag
+pulumi package add example.com/org/repo.git/path@v2.0.0
+```
+
+This regenerates the SDK and updates the package entry in your `Pulumi.yaml` file. After upgrading, run `pulumi install` to install the updated dependencies.
+
+To check which versions of local packages your project currently uses, inspect the `packages` section of your `Pulumi.yaml` file.
+
+For more details, see [Updating local packages](/docs/iac/guides/building-extending/packages/local-packages/#updating-local-packages).
 
 ## The Pulumi Registry
 
