@@ -4,6 +4,7 @@ date: 2026-04-01
 draft: false
 meta_desc: "Neo's Plan Mode lets you collaborate on a detailed plan before execution begins, with thorough discovery, conversational refinement, and explicit approval."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - neo-team
 tags:
@@ -37,14 +38,14 @@ Infrastructure work ranges from simple updates to complex multi-stack operations
 
 ## Plan Mode
 
-Without dedicated planning, Neo balances planning with progress toward execution. That works well for many tasks, but complex operations benefit from more thorough upfront discovery to understand what exists, surface dependencies, and align on an approach before executing on the task. Plan Mode makes upfront deliberation a first-class workflow. Instead of moving toward execution, Neo focuses entirely on discovery and synthesis until you explicitly approve the plan.
+Without dedicated planning, Neo balances planning with progress toward execution. That works well for many tasks, but complex operations benefit from more thorough upfront discovery. Plan Mode now makes upfront deliberation a first-class workflow, where instead of focusing on getting to execution, Neo focuses entirely on discovery and synthesis until you explicitly approve the plan.
 
 ## How it works
 
-Enter Plan Mode by clicking the plan button when starting a task. Neo shifts its behavior:
+Enter Plan Mode by selecting the plan button when starting a task. Neo shifts its behavior:
 
-1. **Discovery**: Neo starts by investigating your environment. It examines existing infrastructure, reads relevant code, checks dependencies, and researches patterns, showing you what it's finding in real time so you can steer early.
-1. **Synthesis**: From that research, Neo produces a narrative plan explaining what it will do and why. A plan references specific things Neo discovered, like a particular stack configuration or dependency, rather than generic steps that could apply to any similar task.
+1. **Discovery**: Neo starts by investigating your environment by examining existing infrastructure, reading relevant code, checking dependencies, and researching patterns.
+1. **Synthesis**: From that research, Neo produces a plan explaining what it will do and why. The plan references specific things Neo discovered, like a particular stack configuration or dependency.
 1. **Refinement**: You refine the plan through normal conversation, challenging assumptions, asking for an alternative approach, or requesting more detail on a specific area.
 1. **Approval**: Once you're satisfied, you approve the plan and execution begins. Neo carries forward everything it learned during discovery, so the transition from planning to execution is seamless.
 
@@ -58,7 +59,6 @@ Plan Mode is opt-in. You choose it when you want to work through an approach bef
 
 ## Get started
 
-Plan Mode is available now for all Pulumi Cloud organizations.
+Plan Mode is available now for all Pulumi Cloud organizations. It works with any [task mode](/docs/ai/tasks/#task-modes), so you can pair thorough upfront planning with whatever level of execution autonomy fits the situation.
 
-- [Sign in to Pulumi Cloud](https://app.pulumi.com/signin) and start a Neo task with Plan Mode
-- [Read the Neo documentation](/docs/ai/) for detailed guides
+To try it, [open Neo in Pulumi Cloud](https://app.pulumi.com/neo). For more details, see the [Plan Mode documentation](/docs/ai/tasks/#plan-mode).
