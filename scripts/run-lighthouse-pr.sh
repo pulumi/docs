@@ -16,7 +16,7 @@ if [[ ! -f "$metadata_file" ]]; then
 fi
 
 base_url="$(jq -r '.url' "$metadata_file")"
-commit_sha="$(jq -r '.commit' "$metadata_file" | cut -c1-8)"
+commit_sha="$(jq -r '.commit' "$metadata_file" | cut -c1-7)"
 
 if [[ -z "$base_url" || "$base_url" == "null" ]]; then
     echo "No preview URL found in metadata. Skipping Lighthouse."
@@ -82,9 +82,6 @@ done
 # Build the markdown comment.
 comment_body=""
 add_line() { comment_body+="$1"$'\n'; }
-
-add_line "---"
-add_line ""
 add_line "## Lighthouse Performance Report"
 add_line ""
 add_line "Commit: \`${commit_sha}\` | [Metric definitions](https://web.dev/articles/vitals)"
@@ -129,39 +126,30 @@ for i in "${!page_paths[@]}"; do
     done
 done
 
-# Update the existing preview comment (posted by sync-and-test-bucket.sh) to append Lighthouse results.
+# Post (or update) a standalone Lighthouse comment on the PR.
 if [[ -n "$GITHUB_EVENT_PATH" ]]; then
     pr_comment_api_url="$(jq -r '.pull_request._links.comments.href' "$GITHUB_EVENT_PATH" 2>/dev/null)"
     repo_api_url="$(jq -r '.pull_request.base.repo.url' "$GITHUB_EVENT_PATH")"
 
     if [[ -n "$pr_comment_api_url" && "$pr_comment_api_url" != "null" ]]; then
-        # Find the preview comment by its marker.
-        existing=$(curl -s \
+        lighthouse_body="<!-- lighthouse-report -->"$'\n'"${comment_body}"
+        json_payload=$(jq -n --arg body "$lighthouse_body" '{"body": $body}')
+
+        # Look for an existing Lighthouse comment to update.
+        existing_comment_id=$(curl -s \
             -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
             "$pr_comment_api_url" \
-            | jq -r '[.[] | select(.body | contains("<!-- lighthouse-report -->"))] | last')
+            | jq -r '[.[] | select(.user.login == "pulumi-bot" and (.body | contains("<!-- lighthouse-report -->")))] | last | .id // empty')
 
-        existing_id=$(echo "$existing" | jq -r '.id // empty')
-
-        if [[ -n "$existing_id" ]]; then
-            # Replace any old Lighthouse section (everything from the results marker onward).
-            existing_body=$(echo "$existing" | jq -r '.body')
-            preview_section="${existing_body%%<!-- lighthouse-results -->*}"
-            combined="${preview_section}<!-- lighthouse-results -->"$'\n'"${comment_body}"
-            json_payload=$(jq -n --arg body "$combined" '{"body": $body}')
-
-            echo "Updating preview comment (${existing_id}) with Lighthouse results..."
+        if [[ -n "$existing_comment_id" ]]; then
+            echo "Updating Lighthouse comment (${existing_comment_id})..."
             curl -s \
                 -X PATCH \
                 -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
                 -H "Content-Type: application/json" \
                 -d "$json_payload" \
-                "${repo_api_url}/issues/comments/${existing_id}" > /dev/null
+                "${repo_api_url}/issues/comments/${existing_comment_id}" > /dev/null
         else
-            # No preview comment found; post standalone.
-            standalone="<!-- lighthouse-report -->"$'\n'"${comment_body}"
-            json_payload=$(jq -n --arg body "$standalone" '{"body": $body}')
-
             echo "Posting Lighthouse results as new comment..."
             curl -s \
                 -X POST \
