@@ -67,28 +67,28 @@ Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your 
 
 ### Restricting role assumption to Pulumi Cloud scopes
 
-The examples below use `contoso` as the organization name — replace it with your own. The following restricts to any deployment in the `contoso` organization:
+The following restricts to any deployment in your organization:
 
 ```json
 "Condition": {
   "StringEquals": {
-    "api.pulumi.com/oidc:aud": "contoso"
+    "api.pulumi.com/oidc:aud": "<your-org-name>"
   },
   "StringLike": {
-    "api.pulumi.com/oidc:sub": "pulumi:deploy:org:contoso:*"
+    "api.pulumi.com/oidc:sub": "pulumi:deploy:org:<your-org-name>:*"
   }
 }
 ```
 
-The following restricts to any stack within the `Core` project:
+The following restricts to any stack within a specific project:
 
 ```json
 "Condition": {
   "StringEquals": {
-    "api.pulumi.com/oidc:aud": "contoso"
+    "api.pulumi.com/oidc:aud": "<your-org-name>"
   },
   "StringLike": {
-    "api.pulumi.com/oidc:sub": "pulumi:deploy:org:contoso:project:Core:*"
+    "api.pulumi.com/oidc:sub": "pulumi:deploy:org:<your-org-name>:project:<your-project-name>:*"
   }
 }
 ```
