@@ -1060,7 +1060,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
      http://www-testing-pulumi-docs-origin-pr-123-abc1234.s3-website.us-west-2.amazonaws.com
      ```
 
-   - Run Lighthouse performance audits (Mobile + Desktop) and append results to the preview comment (skipped for content-only PRs; only runs when UI-related files are changed)
+   - Run Lighthouse performance audits (Mobile + Desktop) and post results as a separate PR comment (skipped for content-only PRs; only runs when UI-related files are changed)
    - Archive test results and metadata
 
 2. **notify**

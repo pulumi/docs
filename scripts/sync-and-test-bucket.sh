@@ -115,18 +115,17 @@ aws s3 cp "$metadata_file" "${destination_bucket_uri}/metadata.json" --region "$
 aws s3api put-bucket-cors --bucket "$destination_bucket" --cors-configuration "file://scripts/cors/cors.json" --region "$(aws_region)"
 
 # Finally, if it's a preview, post (or update) a comment on the PR with the resulting bucket URL.
-# The <!-- lighthouse-report --> marker lets run-lighthouse-pr.sh find and update this comment later.
 if [[ "$1" == "preview" ]]; then
     pr_comment_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")"
     repo_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request.base.repo.url")"
-    preview_body="<!-- lighthouse-report -->"$'\n'"Your site preview for commit $(git_sha_short) is ready! :tada:"$'\n\n'"${s3_website_url}"$'\n'"<!-- lighthouse-results -->"
+    preview_body="<!-- preview-link -->"$'\n'"Your site preview for commit $(git_sha_short) is ready! :tada:"$'\n\n'"${s3_website_url}"
     preview_payload=$(jq -n --arg body "$preview_body" '{"body": $body}')
 
     # Look for an existing preview comment to update (handles CI re-runs).
     existing_comment_id=$(curl -s \
         -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
         "$pr_comment_api_url" \
-        | jq -r '[.[] | select(.body | contains("<!-- lighthouse-report -->"))] | last | .id // empty')
+        | jq -r '[.[] | select(.user.login == "pulumi-bot" and (.body | contains("<!-- preview-link -->")))] | last | .id // empty')
 
     if [[ -n "$existing_comment_id" ]]; then
         curl -s \
