@@ -82,9 +82,6 @@ done
 # Build the markdown comment.
 comment_body=""
 add_line() { comment_body+="$1"$'\n'; }
-
-add_line "---"
-add_line ""
 add_line "## Lighthouse Performance Report"
 add_line ""
 add_line "Commit: \`${commit_sha}\` | [Metric definitions](https://web.dev/articles/vitals)"
