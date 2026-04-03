@@ -194,16 +194,25 @@ These can be overridden or extended by configuring custom environment variables:
 
 Environment variables can be persisted between pre-run commands and the final pulumi deployment by appending them to the file on the file system named `PULUMI_ENV`.
 
-By default, this file is `/PULUMI_ENV`. If you configure a [custom executor root path](#custom-executor-root-path), Deployments sets `PULUMI_ENV_FILE` to `<executorRootPath>/PULUMI_ENV` and uses that file instead.
+By default, persisted environment variables are read from `/PULUMI_ENV`. If `executorContext.executorRootPath` is set to `/tmp`, persisted environment variables are read from `/tmp/PULUMI_ENV` instead.
 
-Example Usage:
+When writing variables from pre-run commands, append to that explicit absolute path. Relative `PULUMI_ENV` writes are not the contract for pre-run commands; use the explicit absolute path instead.
+
+Default root path (`/`):
 
 ```bash
 export GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token)
-echo GOOGLE_OAUTH_ACCESS_TOKEN=$GOOGLE_OAUTH_ACCESS_TOKEN >> "${PULUMI_ENV_FILE:-/PULUMI_ENV}"
+echo GOOGLE_OAUTH_ACCESS_TOKEN=$GOOGLE_OAUTH_ACCESS_TOKEN >> /PULUMI_ENV
+```
+
+Custom root path (`/tmp`):
+
+```bash
+export GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token)
+echo GOOGLE_OAUTH_ACCESS_TOKEN=$GOOGLE_OAUTH_ACCESS_TOKEN >> /tmp/PULUMI_ENV
 ```
 
 Running `env` in a subsequent pre-run command will show the environment variable and it should be usable by scripts or your pulumi program.
 {{% notes type="info" %}}
-If persisting variables does not work, look for this log message to confirm the path being used: `Loading PULUMI_ENV from`.
+If persisting variables does not work, check the `Loading PULUMI_ENV from` log line to confirm the active path.
 {{% /notes %}}
