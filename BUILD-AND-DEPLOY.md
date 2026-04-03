@@ -547,7 +547,7 @@ Builds and deploys PR preview environments.
 4. Generate search index for preview
 5. Pulumi preview (non-destructive): `./scripts/run-pulumi.sh`
 6. Generate S3 redirects
-7. Run Lighthouse audits (Mobile + Desktop) on preview and post metrics to PR comment: `./scripts/run-lighthouse-pr.sh`
+7. Run Lighthouse audits (Mobile + Desktop) on preview and post metrics to PR comment (only when the PR includes UI-related changes — e.g., layouts, theme, assets, static resources, or Hugo config): `./scripts/run-lighthouse-pr.sh`
 
 **Usage:**
 
@@ -1060,7 +1060,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
      http://www-testing-pulumi-docs-origin-pr-123-abc1234.s3-website.us-west-2.amazonaws.com
      ```
 
-   - Run Lighthouse performance audits (Mobile + Desktop) and append results to the preview comment
+   - Run Lighthouse performance audits (Mobile + Desktop) and append results to the preview comment (skipped for content-only PRs; only runs when UI-related files are changed)
    - Archive test results and metadata
 
 2. **notify**
