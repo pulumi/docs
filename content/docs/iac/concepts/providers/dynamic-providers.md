@@ -39,9 +39,9 @@ Dynamic providers in TypeScript are not supported when using the Bun runtime (`r
 There are several reasons why you might want to write a dynamic resource provider. Here are some of them:
 
 - You want to create some new custom resource types.
-- You want to use a cloud provider that Pulumi doesn’t support.
+- You want to use a cloud provider that Pulumi doesn't support.
 
-All dynamic providers must conform to certain interface requirements. You must at least implement the `create` function but, in practice, you will probably also want to implement the `read`, `update`, and `delete` functions as well.
+All dynamic providers must conform to certain interface requirements. You must at least implement the `create` function but, in practice, you will probably also want to implement the `update` and `delete` functions as well. Note that `read` is not currently functional for dynamic providers; see the [`read` section](#readid-props) below for details.
 
 For example, if creating a dynamic resource provider for WordPress, you would probably want to create new blogs, update existing blogs, and destroy them. The mechanics of how these operations happen would be essentially the same as if you used one of the standard resource providers. The difference is that the calls that would've been made on the standard resource provider by the Pulumi engine would now be made on your dynamic resource provider and it, in turn, would make the API calls to WordPress.
 
@@ -170,13 +170,13 @@ Specifically:
 1. If a replacement is needed, Pulumi will call create for the new resource and then call delete for the old resource.
 1. If no replacement is needed, Pulumi will call update.
 1. In all cases, Pulumi first calls the check method with the resource arguments to give the provider a chance to verify that the arguments are valid.
-1. If Pulumi needs to read an existing resource without managing it directly, it will call read.
+1. If Pulumi needs to read an existing resource without managing it directly, it will call read. (Note: `read` is not currently implemented for dynamic providers.)
 
 See below for details on each of these functions.
 
 ## How Dynamic Providers Work
 
-Dynamic providers are a flexible and low-level mechanism that allow you to include arbitrary code directly into the deployment process. While most code in a Pulumi program runs while the desired state of the resources is constructed (in other words, as the resource graph is built), the code inside a dynamic provider’s implementation, such as `create` or `update`, runs during resource provisioning, while the resource graph is being turned into a set of CRUD operations scheduled against the cloud provider.
+Dynamic providers are a flexible and low-level mechanism that allow you to include arbitrary code directly into the deployment process. While most code in a Pulumi program runs while the desired state of the resources is constructed (in other words, as the resource graph is built), the code inside a dynamic provider's implementation, such as `create` or `update`, runs during resource provisioning, while the resource graph is being turned into a set of CRUD operations scheduled against the cloud provider.
 
 These two phases of execution run in separate processes. The construction of a `new MyResource` happens inside the language-specific process running in your Pulumi program. In contrast, your implementations of create or update are executed by a special resource provider binary called, e.g., `pulumi-resource-pulumi-nodejs`. This binary is what actually implements the Pulumi resource provider gRPC interface and it speaks directly to the Pulumi engine.
 
@@ -196,7 +196,7 @@ If you need to force an update after changing your provider code, you have sever
 
 Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementing a subset of the methods listed further down in this section. Each of these methods can be asynchronous, and most implementations of these methods will perform network I/O to provision resources in a backing cloud provider or other resource model. There are several important contracts between a dynamic provider and the Pulumi CLI that inform when these methods are called and with what data.
 
-Though the input properties passed to a `pulumi.dynamic.Resource` instance will usually be [Input values](/docs/concepts/inputs-outputs/), the dynamic provider’s functions are invoked with the fully resolved input values in order to compose well with Pulumi resources. Strong typing for the inputs to your provider’s functions can help clarify this. You can achieve this by creating a second interface with the same properties as your resource’s inputs, but with fully unwrapped types.
+Though the input properties passed to a `pulumi.dynamic.Resource` instance will usually be [Input values](/docs/concepts/inputs-outputs/), the dynamic provider's functions are invoked with the fully resolved input values in order to compose well with Pulumi resources. Strong typing for the inputs to your provider's functions can help clarify this. You can achieve this by creating a second interface with the same properties as your resource's inputs, but with fully unwrapped types.
 
 {{% notes type="warning" %}}
 There are nuances to how data is passed between the core Pulumi program and your dynamic provider. Learn more here: https://github.com/pulumi/pulumi/issues/16582.
@@ -355,7 +355,11 @@ The `delete` operation is invoked if the URN exists in the previous state but no
 
 ### read(id, props)
 
-The `read` method is invoked in three scenarios:
+{{% notes type="warning" %}}
+The `read` method is not currently functional for dynamic providers. Attempting to invoke it — for example, by running `pulumi import` or using the static `get` method on a dynamic resource — will result in an unimplemented exception. This is a known limitation tracked in [pulumi/pulumi#16175](https://github.com/pulumi/pulumi/issues/16175). If your use case requires importing existing resources, consider implementing a [component resource](/docs/iac/concepts/components/) backed by a [native provider](/docs/iac/concepts/providers/) instead.
+{{% /notes %}}
+
+When `read` is implemented, it is intended to be invoked in three scenarios:
 
 1. When using the static [`get` method](/docs/iac/concepts/resources/get/) to read an existing resource that is not managed by Pulumi.
 1. When using [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) to import an existing resource into Pulumi management.
@@ -363,13 +367,9 @@ The `read` method is invoked in three scenarios:
 
 The method is passed the `id` of the resource, as tracked in the cloud provider, and an optional bag of additional properties that can be used to disambiguate the request, if needed. The `read` method looks up the requested resource, and returns the canonical `id` and output properties of this resource if found. If an error occurs, an exception can be thrown from the `read` method to return this error to the user.
 
-{{% notes type="info" %}}
-If you implement a `read` method for your dynamic provider, make sure it accurately reflects the current state of the resource in the backing provider. This is especially important when using `pulumi refresh`, as the returned values will update the state file.
-{{% /notes %}}
-
 ## Dynamic Resource Inputs
 
-The inputs to your `pulumi.dynamic.ResourceProvider`’s functions come from subclasses of `pulumi.dynamic.Resource`. These inputs include any values in the input arguments passed to the `pulumi.dynamic.Resource` constructor. This is just a map of key/value pairs however, in statically typed languages, you can declare types for these input shapes.
+The inputs to your `pulumi.dynamic.ResourceProvider`'s functions come from subclasses of `pulumi.dynamic.Resource`. These inputs include any values in the input arguments passed to the `pulumi.dynamic.Resource` constructor. This is just a map of key/value pairs however, in statically typed languages, you can declare types for these input shapes.
 
 For example, `props`, in the `MyResource` class shown below, defines the inputs to the resource provider functions:
 
