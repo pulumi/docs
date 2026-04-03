@@ -80,6 +80,15 @@
     color: #2f3032;
 }
 
+// Offset anchored sections within event pages to account for the fixed nav.
+.event-page-content section[id] {
+    @apply scroll-mt-22;
+
+    @include screen-lg {
+        @apply scroll-mt-28;
+    }
+}
+
 .template-hero {
     .hero-tag-line {
         @include section-hint-accent();
