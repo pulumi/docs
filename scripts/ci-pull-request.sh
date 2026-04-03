@@ -41,10 +41,8 @@ performance_paths=(
     "^hugo\."
 )
 performance_pattern="$(IFS="|"; echo "${performance_paths[*]}")"
-# Fetch just enough of master to compare. The default shallow checkout in CI
-# doesn't include origin/master, so the original three-dot diff silently failed.
-git fetch origin master:refs/remotes/origin/master --depth=1 2>/dev/null || true
-changed_files="$(git diff --name-only origin/master...HEAD 2>/dev/null || true)"
+pr_number="$(jq -r '.pull_request.number' "$GITHUB_EVENT_PATH")"
+changed_files="$(gh pr diff "$pr_number" --name-only 2>/dev/null || true)"
 
 if echo "$changed_files" | grep -qE "$performance_pattern"; then
     echo "Performance-relevant files changed. Running Lighthouse audit..."
