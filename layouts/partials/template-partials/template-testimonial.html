@@ -32,8 +32,7 @@
         {{ end }}
         {{ if or $author $title $company }}
         <div class="template-testimonial-credit">
-            {{ if $author }}<span class="">{{ $author }}</span>{{ end }}
-            {{ if $title }}{{ if $author }}, {{ end }}<span>{{ $title }}</span>{{ end }}
+            {{ if $author }}<span class="">— {{ $author }}</span>{{ end }}{{ if $title }}, {{ if $author }} {{ end }}<span>{{ $title }}</span>{{ end }}
         </div>
         {{ end }}
 </section>
