@@ -686,13 +686,16 @@ if (config.registryStack) {
             originRequestPolicyId: allViewerExceptHostHeaderId,
             forwardedValues: undefined,
         },
-        // Fingerprinted assets (e.g. /fingerprinted/logos/pkg/aws.<hash>.svg)
+        // Registry package logos (e.g. /fingerprinted/logos/pkg/aws.<hash>.svg)
         // are served from the registry origin with year-long immutable caching.
+        // Use /fingerprinted/logos/pkg/* (not /fingerprinted/*) so docs-site
+        // fingerprinted assets (icons, brand logos, customer logos, product
+        // images) fall through to the default docs origin.
         // See pulumi/registry#10488 for context.
         {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
-            pathPattern: "/fingerprinted/*",
+            pathPattern: "/fingerprinted/logos/pkg/*",
             cachePolicyId: oneYearCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
@@ -946,6 +949,16 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/fonts/*",
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
+        // Docs-site fingerprinted assets (icons, brand logos, customer logos,
+        // product images) use content-hashed filenames and are served with
+        // immutable 1-year caching from the default docs origin.
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/fingerprinted/*",
             defaultTtl: oneYear,
             maxTtl: oneYear,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
