@@ -16,7 +16,7 @@ if [[ ! -f "$metadata_file" ]]; then
 fi
 
 base_url="$(jq -r '.url' "$metadata_file")"
-commit_sha="$(jq -r '.commit' "$metadata_file" | cut -c1-8)"
+commit_sha="$(jq -r '.commit' "$metadata_file" | cut -c1-7)"
 
 if [[ -z "$base_url" || "$base_url" == "null" ]]; then
     echo "No preview URL found in metadata. Skipping Lighthouse."
