@@ -24,6 +24,7 @@ node_modules/.cache/prettier/
 # yarn's yarn.lock file. We ignore package-lock.json to prevent
 # it from being added mistakenly.
 /package-lock.json
+/theme/package-lock.json
 
 # Python virtual env dirs.
 venv/
