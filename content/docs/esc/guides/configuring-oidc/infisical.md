@@ -50,7 +50,7 @@ Authentication section:
 4. Fill in the remaining form fields as follows:
     * **OIDC Discovery URL:** `https://api.pulumi.com/oidc`
     * **Issuer:** `https://api.pulumi.com/oidc`
-    * **Subject:** This can be left empty. If it's empty, all ESC Environments of your organization would be able to assume this identity. We recommend configuring the subject claim for finer permission. (see examples at the end of this section).
+    * **Subject:** Set this to `pulumi:environments:org:<your-pulumi-org>:env:*` to allow any environment in your org (Infisical supports glob pattern matching). For tighter access control, use an exact subject (see examples at the end of this section).
     * **Audiences:** This is different between Pulumi deployments and ESC. For Deployments this is only the name of your Pulumi organization. For ESC this is the name of your Pulumi organization prefixed with `infisical:` (e.g. `infisical:{org}`).
 {{< notes type="info" >}}
 For environments in the `default` project the audience will use just the Pulumi organization name. This is to
