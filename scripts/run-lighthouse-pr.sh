@@ -84,7 +84,7 @@ comment_body=""
 add_line() { comment_body+="$1"$'\n'; }
 add_line "## Lighthouse Performance Report"
 add_line ""
-add_line "Commit: \`${commit_sha}\` | [Metric definitions](https://web.dev/articles/vitals)"
+add_line "Commit: ${commit_sha} | [Metric definitions](https://web.dev/articles/vitals)"
 add_line ""
 add_line "| Page | Device | Score | [FCP](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint) | [LCP](https://web.dev/articles/lcp) | [TBT](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time) | [CLS](https://web.dev/articles/cls) | [SI](https://developer.chrome.com/docs/lighthouse/performance/speed-index) |"
 add_line "|------|--------|-------|-----|-----|-----|-----|----|"
