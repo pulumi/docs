@@ -97,9 +97,4 @@
   "publisher" (dict "@id" "https://www.pulumi.com/#organization")
 ) }}
 
-{{/* Add breadcrumb reference if it exists */}}
-{{ $schema = merge $schema (dict
-  "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink))
-) }}
-
 {{ return $schema }}
