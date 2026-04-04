@@ -92,9 +92,4 @@
   {{ end }}
 {{ end }}
 
-{{/* Add publisher reference */}}
-{{ $schema = merge $schema (dict
-  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
-) }}
-
 {{ return $schema }}
