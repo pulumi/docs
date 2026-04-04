@@ -1,6 +1,6 @@
 ---
-title: Customer Stories
-description: Pulumi Cloud is trusted by 3,000+ innovators
+title: Case Studies
+description: Discover why thousands of innovative companies, from startups to global enterprises, use Pulumi to build and manage their cloud infrastructure.
 meta_desc: |
     See how our customers are using Pulumi to simplify cloud management, improve operations,
     reduce costs and scale their services.

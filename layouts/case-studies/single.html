@@ -8,6 +8,7 @@
     <section class="template-hero template-hero--centered" id="hero">
         <div class="flex flex-col items-center gap-12">
             <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
+                <a href="/case-studies/" class="hero-tag-line no-underline hover:no-underline">Case Study</a>
                 <h1 class="title mb-6">{{ .Title }}</h1>
                 {{ with .Description }}
                 <p class="description mb-10">{{ . | markdownify }}</p>
@@ -18,14 +19,16 @@
 
     {{/* Quote block */}}
     {{ with .Params.quote_block }}
-    {{ partial "template-partials/template-case-study-hero.html" (dict
-        "customer_logo" $.Params.customer_logo
-        "customer_name" $.Params.customer_name
-        "quote" .quote
-        "quote_attrib" .quote_attrib
-        "headline_stat" .headline_stat
-        "headline" .headline
-    ) }}
+    <div class="max-w-6xl mx-auto w-full">
+        {{ partial "template-partials/template-case-study-hero.html" (dict
+            "customer_logo" $.Params.customer_logo
+            "customer_name" $.Params.customer_name
+            "quote" .quote
+            "quote_attrib" .quote_attrib
+            "headline_stat" .headline_stat
+            "headline" .headline
+        ) }}
+    </div>
     {{ end }}
 
     {{/* Mobile sidebar nav (visible below lg) */}}
@@ -39,7 +42,7 @@
     <div class="flex flex-row gap-12 max-w-6xl mx-auto w-full">
         {{/* Main content column */}}
         <div class="flex-1 min-w-0">
-            <div class="max-w-4xl case-study-content">
+            <div class="max-w-4xl template-sidebar-content">
                 {{ if .Params.exec_summary }}
                 <section id="executive-summary" class="pb-8 mb-8 border-b border-gray-300">
                     <h2>Executive summary</h2>

@@ -434,12 +434,41 @@
     }
 }
 
-.whitepaper-content {
-    h2, h3, h4, h5, h6 {
-        @apply font-body scroll-mt-22;
+// Shared content styles for sidebar-nav pages (whitepapers, case studies, etc.)
+.template-sidebar-content {
+    h2 {
+        @apply font-body font-semibold text-heading-xs leading-extra-tight scroll-mt-22;
 
         @include screen-lg {
-            @apply font-body scroll-mt-28;
+            @apply scroll-mt-28;
+        }
+    }
+
+    h3 {
+        @apply font-body font-semibold text-heading-2xs leading-tight scroll-mt-22;
+
+        @include screen-lg {
+            @apply scroll-mt-28;
+        }
+    }
+
+    h4, h5, h6 {
+        @apply font-body font-semibold text-body-xl leading-tight scroll-mt-22;
+
+        @include screen-lg {
+            @apply scroll-mt-28;
+        }
+    }
+
+    .description {
+        @include section-description();
+    }
+
+    p a, li a, .description a {
+        @apply text-violet-800;
+
+        &:hover {
+            @apply text-violet-600;
         }
     }
 }
@@ -447,42 +476,33 @@
 // Case study hero card
 .template-case-study-hero {
     .case-study-hero-stat {
-        @apply font-body font-bold text-black mb-2;
-        font-size: 1.5rem;
-        line-height: 1.375;
+        @apply font-body font-bold text-black mb-2 text-heading-xs leading-relaxed;
     }
 
     .case-study-hero-headline {
         @include section-description();
+        @apply text-gray-600;
     }
 
     .case-study-hero-quote {
         @include section-description();
-        @apply m-0;
+        @apply m-0 text-black;
     }
 
     .case-study-hero-attrib {
-        @apply font-body mt-4 mb-0;
+        @apply font-body mt-4 mb-0 text-gray-600;
         font-feature-settings: 'salt' on;
-        font-size: 0.875rem;
-        color: #757576;
     }
-}
 
-// Case study content
-.case-study-content {
-    h2, h3, h4, h5, h6 {
-        @apply font-body scroll-mt-22;
+    .case-study-hero-stat-panel {
+        @apply flex-1 border-t border-gray-300 mt-8 pt-8;
 
-        @include screen-lg {
-            @apply font-body scroll-mt-28;
+        @include screen-md {
+            @apply border-t-0 mt-0 pt-0 border-l border-gray-300 pl-12 flex flex-col justify-center;
         }
     }
-
-    .description {
-        @include section-description();
-    }
 }
+
 
 // Product page widgets
 .template-product-hero {
