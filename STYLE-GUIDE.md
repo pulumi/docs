@@ -304,6 +304,17 @@ The [Pulumi glossary](/docs/iac/concepts/glossary/) defines common terms and con
 - To add or update glossary terms, edit `data/glossary.toml`.
 - Link to specific glossary terms using anchor links: `/docs/iac/concepts/glossary/#term-name`
 
+### Preferred terminology
+
+The following terms have precise meanings in Pulumi documentation. Use them consistently and prefer them over informal or ambiguous alternatives:
+
+| Term | Definition |
+| ---- | ---------- |
+| **Native language package** | A component published to a language-specific registry (npm, PyPI, NuGet, Maven, etc.) without a Pulumi plugin. Consumable only in the language in which it was authored. |
+| **Pulumi package** | A component or provider packaged with a Pulumi plugin so Pulumi can generate SDKs for any supported language. Consumable in all Pulumi languages. |
+
+Use **"Pulumi package"** (not "cross-language package") when referring to components or providers distributed with a Pulumi plugin. Use **"native language package"** (not "single-language package" or "language-native package") when referring to components distributed as standard language packages without a Pulumi plugin.
+
 ---
 
 ## References to Commands or UI

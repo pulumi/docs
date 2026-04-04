@@ -62,9 +62,9 @@ How you consume a component depends on how it has been distributed.
 
 Components that live in the same repository as your Pulumi program are consumed by importing or referencing the class using your language's standard import mechanism—no additional installation steps are needed.
 
-### Single-language packages
+### Native language packages
 
-Some components are distributed as standard language packages without cross-language support. Add them to your project via your native package manager:
+Some components are distributed as native language packages—standard packages published to a language registry (npm, PyPI, NuGet, Maven, etc.) without a Pulumi plugin. Because they have no cross-language support, they can only be consumed in the language in which they were authored. Add them to your project via your native package manager:
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
@@ -110,7 +110,7 @@ dotnet add package MyOrg.MyComponent
 
 {{< /chooser >}}
 
-### Cross-language packages without pre-published SDKs
+### Pulumi packages without pre-published SDKs
 
 Components distributed as Pulumi packages can be consumed in any language using the `pulumi package add` command. Pulumi generates an SDK for your language on-the-fly and wires it into your project:
 
@@ -120,9 +120,13 @@ pulumi package add github.com/my-org/my-component@v1.0.0
 
 This pattern is common for components your organization publishes for internal consumption via a Git repository or the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/).
 
-### Cross-language packages with pre-published SDKs
+{{% notes type="info" %}}
+**Runtime requirements:** because Pulumi generates the SDK from a live plugin, the plugin must be executable on your machine. If the component is authored in TypeScript or JavaScript, Node.js must be installed. If it is authored in Python, Python must be installed. Components authored in Go or .NET are compiled to a self-contained binary and have no additional runtime requirement.
+{{% /notes %}}
 
-Some packages with components have pre-generated SDKs published for each language, allowing consumers to install them directly via their native package manager without running `pulumi package add`. Pulumi-published packages such as [AWSx](/registry/packages/awsx/) are distributed this way. Your organization may also opt to publish SDKs for each language.
+### Pulumi packages with pre-published SDKs
+
+Some Pulumi packages have pre-generated SDKs published for each language, allowing consumers to install them directly via their native package manager without running `pulumi package add`. Because the SDK is already compiled and published, no additional runtime is required beyond your own language toolchain. Pulumi-published packages such as [AWSx](/registry/packages/awsx/) are distributed this way. Your organization may also opt to publish SDKs for each language.
 
 Add the package to your project using your native package manager:
 
@@ -351,18 +355,18 @@ Resource options passed to a component resource do not always behave the same as
 
 For a complete guide to writing a component—including how to define the component class, structure arguments, create child resources, register outputs, and configure provider inheritance—see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/).
 
-## Cross-language components
+## Pulumi packages
 
-By default, components are authored and consumed in the same programming language by extending the `ComponentResource` class. However, components can also be made available to programs written in other languages. When configured for cross-language support, Pulumi can introspect your component class and automatically generate SDKs for consumption in any Pulumi language.
+By default, components are authored and consumed in the same programming language by extending the `ComponentResource` class. To make a component consumable in every Pulumi-supported language, package it as a Pulumi package. Pulumi packages include a plugin (source-based or compiled) that lets Pulumi introspect the component and automatically generate SDKs for any target language.
 
-For detailed information on setting up and using cross-language components, including how to configure `PulumiPlugin.yaml`, define entry points, publish, and consume components, see [Cross-language Components](/docs/iac/concepts/components/cross-language-components/).
+For detailed information on setting up and using Pulumi packages for components—including how to configure `PulumiPlugin.yaml`, define entry points, publish, and consume components—see [Cross-language Components](/docs/iac/concepts/components/cross-language-components/).
 
-For a comparison of all component packaging approaches (single-language, cross-language, and provider-based), see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/).
+For a comparison of all component packaging approaches (native language packages, Pulumi packages, and provider-based), see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/).
 
 ## Additional resources
 
 - [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/) — Step-by-step guide to authoring a component from scratch, including setup, implementation, and publishing.
 - [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) — How to package and distribute components for use by others.
 - [Testing Components](/docs/iac/guides/building-extending/components/testing-components/) — How to write tests for your component resources.
-- [Cross-language Components](/docs/iac/concepts/components/cross-language-components/) — How to make your component consumable in any Pulumi language.
+- [Cross-language Components](/docs/iac/concepts/components/cross-language-components/) — How to package a component as a Pulumi package so it is consumable in any Pulumi language.
 - [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/) — How to publish and discover components within your organization.
