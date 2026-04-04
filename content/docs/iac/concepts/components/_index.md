@@ -357,7 +357,7 @@ For a complete guide to writing a component—including how to define the compon
 
 ## Pulumi packages
 
-By default, components are authored and consumed in the same programming language by extending the `ComponentResource` class. To make a component consumable in every Pulumi-supported language, package it as a Pulumi package. Pulumi packages include a plugin (source-based or compiled) that lets Pulumi introspect the component and automatically generate SDKs for any target language.
+By default, components are authored and consumed in the same programming language by extending the `ComponentResource` class. To make a component consumable in every Pulumi-supported language, distribute it as a Pulumi package. Pulumi packages include a plugin (source-based or compiled) that lets Pulumi introspect the component and automatically generate SDKs for any target language.
 
 For detailed information on setting up and using Pulumi packages for components—including how to configure `PulumiPlugin.yaml`, define entry points, publish, and consume components—see [Cross-language Components](/docs/iac/concepts/components/cross-language-components/).
 
