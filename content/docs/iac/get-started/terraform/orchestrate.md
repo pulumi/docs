@@ -108,10 +108,10 @@ jobs:
       working-directory: ./pulumi
 
     - name: Install Pulumi CLI
-      uses: pulumi/actions@v4
+      uses: pulumi/actions@v6
 
     - name: Deploy Pulumi stack
-      uses: pulumi/actions@v4
+      uses: pulumi/actions@v6
       with:
         command: up
         stack-name: production

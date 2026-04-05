@@ -678,6 +678,29 @@ Example comment when using GitHub Actions directly:
 
 ![Comment from GitHub Actions](/images/docs/github-actions/pr-comment-actions.png)
 
+### GitHub step summary
+
+In addition to (or instead of) Pull Request comments, you can publish the results of a
+Pulumi operation to the [GitHub Actions step summary](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions#adding-a-job-summary).
+The step summary is visible on the workflow run page and persists even after the run
+completes, making it useful for push-triggered deployments that do not have a Pull Request
+to comment on.
+
+To enable this, add `comment-on-summary: true` to your action inputs:
+
+```yaml
+- uses: pulumi/actions@v6
+  with:
+    command: up
+    stack-name: org-name/stack-name
+    comment-on-summary: true
+  env:
+    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+`comment-on-summary` can be combined with `comment-on-pr: true` to publish results in
+both places simultaneously.
+
 ## Stack outputs
 
 When Pulumi updates a stack, any values your program exports as [stack outputs](/docs/iac/concepts/stacks/#outputs) become available for use in subsequent steps of your workflow. This is useful when downstream jobs or steps need information produced by your infrastructure, such as a service endpoint, a storage bucket name, or a database connection string, without needing to re-query the cloud provider.
@@ -1116,6 +1139,32 @@ jobs:
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+### Refreshing state before operations
+
+The `refresh` input causes `pulumi up` and `pulumi preview` to reconcile Pulumi's state
+with the actual state of your cloud resources before performing any changes. This is
+equivalent to passing the `--refresh` flag to the Pulumi CLI directly.
+
+```yaml
+- uses: pulumi/actions@v6
+  with:
+    command: up
+    stack-name: org-name/stack-name
+    refresh: true
+  env:
+    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% notes type="warning" %}}
+The behavior of `refresh: true` changed in v6. In v5 and earlier, the action ran
+`pulumi refresh` as a separate step before the requested command. In v6, the `--refresh`
+flag is passed directly to `pulumi up` or `pulumi preview`, which is more efficient but
+produces a single combined operation rather than two distinct steps. If your workflow
+logic depended on a standalone `pulumi refresh` step completing independently (for
+example, to capture its exit code separately), you may need to add an explicit
+`pulumi refresh` step to your workflow instead of using this input.
+{{% /notes %}}
 
 ### Caching plugins and policy packs
 
