@@ -976,6 +976,10 @@ if __name__ == "__main__":
         "--platform", action="append", choices=["x", "linkedin", "bluesky"],
         help="Limit to specific platform(s) (can be repeated)",
     )
+    parser.add_argument(
+        "--check", action="store_true",
+        help="Check mode: validate pending posts without publishing",
+    )
     args = parser.parse_args()
 
     if args.post:
