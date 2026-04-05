@@ -80,7 +80,6 @@ State = dict[str, Any]
 
 API_KEY = os.environ.get("UPLOAD_POST_API_KEY", "")
 DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
-CHECK_MODE = "--check" in sys.argv
 STATE_BUCKET = os.environ.get("SOCIAL_STATE_BUCKET", "")
 STATE_KEY = "posted.json"
 
@@ -718,10 +717,6 @@ def check_mode():
 
 
 def main() -> None:
-    if CHECK_MODE:
-        check_mode()
-        return
-
     if not API_KEY:
         if DRY_RUN:
             print("DRY RUN: API key not set, will show what would be posted.")
@@ -968,21 +963,24 @@ def post_file(filepath: str, platforms_filter: list[Platform] | None = None) -> 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Schedule social media posts for blog content")
-    parser.add_argument(
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
         "--post", metavar="FILE",
         help="Post a single file directly (bypasses git diff and state)",
+    )
+    mode.add_argument(
+        "--check", action="store_true",
+        help="Check mode: validate pending posts without publishing",
     )
     parser.add_argument(
         "--platform", action="append", choices=["x", "linkedin", "bluesky"],
         help="Limit to specific platform(s) (can be repeated)",
     )
-    parser.add_argument(
-        "--check", action="store_true",
-        help="Check mode: validate pending posts without publishing",
-    )
     args = parser.parse_args()
 
-    if args.post:
+    if args.check:
+        check_mode()
+    elif args.post:
         post_file(args.post, platforms_filter=args.platform)
     else:
         main()

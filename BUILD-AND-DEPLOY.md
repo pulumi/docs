@@ -1404,7 +1404,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 ### Other Workflows
 
-The repository includes 9 additional utility workflows for automation and project management:
+The repository includes 10 additional utility workflows for automation and project management:
 
 **Automation and Auto-merge:**
 
@@ -1417,7 +1417,7 @@ The repository includes 9 additional utility workflows for automation and projec
 - **claude-code-review.yml**: AI-powered code review automation for pull requests
 - **claude-social-review.yml**: AI-powered review of social media post copy generated for blog post PRs
 
-All three workflows include a permission check step that verifies the triggering user has write access to the repository before running Claude. Users without write access will see the workflow skip Claude execution.
+The first two workflows include a permission check step that verifies the triggering user has write access to the repository before running Claude. Users without write access will see the workflow skip Claude execution. The social review workflow runs only on internal PRs from non-bot authors.
 
 **Project Management:**
 
