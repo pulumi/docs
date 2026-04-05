@@ -603,6 +603,119 @@ def schedule_post(platform: Platform, copy: str, url: str, media_paths: list[str
 
 # --- Main ---
 
+def get_changed_blog_posts_vs_base(base_ref):
+    """Find blog posts changed in this PR relative to the base branch."""
+    result = subprocess.run(
+        ["git", "diff", "--name-only", base_ref, "HEAD", "--", "content/blog/*/index.md"],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        print(f"Error: git diff against {base_ref} failed: {result.stderr.strip()}")
+        return None
+    return [f for f in result.stdout.strip().split("\n") if f]
+
+
+def load_state_safe():
+    """Load state from S3, returning empty state on failure instead of exiting."""
+    if not STATE_BUCKET:
+        return {"posts": {}}
+    try:
+        s3 = boto3.client("s3")
+        resp = s3.get_object(Bucket=STATE_BUCKET, Key=STATE_KEY)
+        return json.loads(resp["Body"].read())
+    except Exception as e:
+        print(f"Warning: could not load S3 state ({e}), reviewing all posts", file=sys.stderr)
+        return {"posts": {}}
+
+
+def check_mode():
+    """Check mode: output which blog posts need social media review.
+
+    Uses S3 state to skip already-posted slugs. Outputs a summary for each
+    post that would be posted when merged, so a reviewer (human or AI) can
+    evaluate the social copy.
+    """
+    base_ref = os.environ.get("BASE_REF", "origin/master")
+    state = load_state_safe()
+
+    changed = get_changed_blog_posts_vs_base(base_ref)
+    if changed is None:
+        sys.exit(1)
+    if not changed:
+        return
+
+    needs_review = []
+
+    for filepath in changed:
+        if not Path(filepath).exists():
+            continue
+
+        slug = slug_from_path(filepath)
+
+        # Skip already-posted
+        all_posted = all(is_posted(state, slug, p) for p in ["x", "linkedin", "bluesky"])
+        if all_posted:
+            continue
+
+        meta = parse_post(filepath)
+        post_date = meta.get("date")
+
+        # Skip old or undated posts — same filter as posting mode
+        if not post_date or not is_recent_or_future(post_date):
+            continue
+
+        social = meta.get("social") or {}
+        x_copy = str(social.get("twitter") or "").strip()
+        linkedin_copy = str(social.get("linkedin") or "").strip()
+        bluesky_copy = str(social.get("bluesky") or "").strip()
+
+        # Skip TODOs
+        if x_copy.upper() == "TODO":
+            x_copy = ""
+        if linkedin_copy.upper() == "TODO":
+            linkedin_copy = ""
+        if bluesky_copy.upper() == "TODO":
+            bluesky_copy = ""
+
+        # Build per-platform info
+        platforms = {}
+        for name, copy, limit in [("x", x_copy, 280), ("linkedin", linkedin_copy, 3000), ("bluesky", bluesky_copy, 300)]:
+            if is_posted(state, slug, name):
+                platforms[name] = {"status": "already posted", "copy": None}
+            elif not copy:
+                platforms[name] = {"status": "missing", "copy": None}
+            else:
+                over = f" OVER LIMIT: {len(copy)}/{limit}" if len(copy) > limit else ""
+                platforms[name] = {"status": f"{len(copy)} chars{over}", "copy": copy}
+
+        needs_review.append({
+            "file": filepath,
+            "title": meta.get("title", ""),
+            "date": str(post_date) if post_date else "no date",
+            "platforms": platforms,
+            "has_social_block": bool(social),
+        })
+
+    if not needs_review:
+        return
+
+    # Output as structured text for the Claude prompt
+    for item in needs_review:
+        print(f"\n## {item['file']} (date: {item['date']})")
+        if item["title"]:
+            print(f"Title: {item['title']}")
+        if not item["has_social_block"]:
+            print("NO social: block in frontmatter — this post will NOT be promoted on social media.")
+        else:
+            for platform, info in item["platforms"].items():
+                if info["copy"]:
+                    print(f"\n### {platform} ({info['status']})")
+                    print(info["copy"])
+                else:
+                    print(f"\n### {platform}: {info['status']}")
+
+
 def main() -> None:
     if not API_KEY:
         if DRY_RUN:
@@ -850,9 +963,14 @@ def post_file(filepath: str, platforms_filter: list[Platform] | None = None) -> 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Schedule social media posts for blog content")
-    parser.add_argument(
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
         "--post", metavar="FILE",
         help="Post a single file directly (bypasses git diff and state)",
+    )
+    mode.add_argument(
+        "--check", action="store_true",
+        help="Check mode: validate pending posts without publishing",
     )
     parser.add_argument(
         "--platform", action="append", choices=["x", "linkedin", "bluesky"],
@@ -860,7 +978,9 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    if args.post:
+    if args.check:
+        check_mode()
+    elif args.post:
         post_file(args.post, platforms_filter=args.platform)
     else:
         main()
