@@ -1142,9 +1142,9 @@ jobs:
 
 ### Refreshing state before operations
 
-The `refresh` input causes `pulumi up` and `pulumi preview` to reconcile Pulumi's state
-with the actual state of your cloud resources before performing any changes. This is
-equivalent to passing the `--refresh` flag to the Pulumi CLI directly.
+The `refresh` input tells Pulumi to reconcile its state with the actual state of your
+cloud resources before performing any changes. In v6, this is equivalent to passing the
+`--refresh` flag to the Pulumi CLI directly.
 
 ```yaml
 - uses: pulumi/actions@v6
