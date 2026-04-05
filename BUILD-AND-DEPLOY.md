@@ -1404,7 +1404,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 ### Other Workflows
 
-The repository includes 9 additional utility workflows for automation and project management:
+The repository includes 10 additional utility workflows for automation and project management:
 
 **Automation and Auto-merge:**
 
@@ -1415,8 +1415,9 @@ The repository includes 9 additional utility workflows for automation and projec
 
 - **claude.yml**: AI-assisted code analysis and suggestions (triggered by @claude mentions in issues/PRs)
 - **claude-code-review.yml**: AI-powered code review automation for pull requests
+- **claude-social-review.yml**: AI-powered review of social media post copy generated for blog post PRs
 
-Both workflows include a permission check step that verifies the triggering user has write access to the repository before running Claude. Users without write access will see the workflow skip Claude execution.
+The first two workflows include a permission check step that verifies the triggering user has write access to the repository before running Claude. Users without write access will see the workflow skip Claude execution. The social review workflow runs only on internal PRs from non-bot authors.
 
 **Project Management:**
 
@@ -1454,7 +1455,7 @@ These workflows support repository maintenance, automation, and developer experi
 | update-search-index | Hourly | Production | 2-5 min | Update Algolia |
 | schedule-social | Push to master, Manual | Production | < 1 min | Social media scheduling |
 
-> **Note:** The table above shows the 15 core deployment and testing workflows. An additional 10 utility workflows (automation, AI review, project management, secret management, dev versions) are listed in the "Other Workflows" section, bringing the total to 25 workflows.
+> **Note:** The table above shows the 15 core deployment and testing workflows. An additional 11 utility workflows (automation, AI review, project management, secret management, dev versions) are listed in the "Other Workflows" section, bringing the total to 26 workflows.
 
 ---
 
