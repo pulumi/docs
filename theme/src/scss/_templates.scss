@@ -329,56 +329,22 @@
 }
 
 .template-testimonial {
-    .template-testimonial-quote {
-        @apply text-white font-body font-semibold leading-normal text-body-xl;
-
-        @include screen-sm {
-            @apply text-heading-m;
-        }
-    }
-
-    .template-testimonial-credit {
-        @apply text-white opacity-70 font-body text-body-xl font-normal leading-normal;
-    }
-}
-
-.template-testimonial-product {
     @apply font-body bg-violet-100;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    &.template-testimonial-product-bg-1 {
+    &.template-testimonial-bg-1 {
         background-image: url('/images/template-testimonial-bg-1.svg');
     }
 
-    &.template-testimonial-product-bg-2 {
+    &.template-testimonial-bg-2 {
         background-image: url('/images/template-testimonial-bg-2.svg');
     }
 
-    .template-testimonial-product-quote {
-        @apply text-black leading-relaxed text-left border-0 font-semibold text-heading-xs;
-
-        p {
-            @apply m-0;
-        }
-    }
-
-    .template-testimonial-product-logo img {
+    .template-testimonial-logo img {
         height: 28px;
         width: auto;
-    }
-
-    .template-testimonial-product-credit {
-        @apply text-right;
-    }
-
-    .template-testimonial-product-author {
-        @apply text-black font-bold font-body text-body-m;
-    }
-
-    .template-testimonial-product-title {
-        @apply text-black font-normal font-body text-body-s;
     }
 }
 

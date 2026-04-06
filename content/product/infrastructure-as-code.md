@@ -61,7 +61,7 @@ sections:
       - number: "300+"
         label: cloud and service providers
 
-  - type: testimonial_product
+  - type: testimonial
     quote: |
       Our developers needed a fast, modular, and testable platform for managing cloud infrastructure. Nothing is better than having standard programming languages for building and managing infrastructure.
     author: Austin Byers
