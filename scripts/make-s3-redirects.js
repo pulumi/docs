@@ -6,8 +6,20 @@ const redirectsFile = process.argv[3] || "./public/redirects.txt";
 const region = process.argv[4] || "us-west-2"
 
 async function doRedirects(bucket, region) {
-    const redirects = fs.readFileSync(redirectsFile, "utf-8").trim().split("\n");
-    console.log(`Processing ${redirects.length} redirects...`);
+    let redirects = fs.readFileSync(redirectsFile, "utf-8").trim().split("\n");
+
+    // For docs pages that have the markdown output format enabled, also create
+    // redirect entries for .md URLs so the CLI gets proper 301s instead of 404s.
+    const mdRedirects = [];
+    for (const line of redirects) {
+        const [key] = line.split("|");
+        if (key.startsWith("docs/") && key.endsWith(".html")) {
+            mdRedirects.push(line.replace(key, key.replace(/\.html$/, ".md")));
+        }
+    }
+    redirects = redirects.concat(mdRedirects);
+
+    console.log(`Processing ${redirects.length} redirects (${mdRedirects.length} .md duplicates)...`);
 
     const client = new S3Client({ region, endpoint: `https://s3.${region}.amazonaws.com` });
 
