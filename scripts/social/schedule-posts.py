@@ -679,15 +679,25 @@ def check_mode():
             bluesky_copy = ""
 
         # Build per-platform info
+        url = post_url_from_path(filepath)
+        copies = {"x": x_copy, "linkedin": linkedin_copy, "bluesky": bluesky_copy}
         platforms = {}
-        for name, copy, limit in [("x", x_copy, 280), ("linkedin", linkedin_copy, 3000), ("bluesky", bluesky_copy, 300)]:
-            if is_posted(state, slug, name):
-                platforms[name] = {"status": "already posted", "copy": None}
+        for platform in PLATFORM_KEYS.values():
+            copy = copies.get(platform, "")
+            limit = CHAR_LIMITS.get(platform)
+            if is_posted(state, slug, platform):
+                platforms[platform] = {"status": "already posted", "copy": None}
             elif not copy:
-                platforms[name] = {"status": "missing", "copy": None}
+                platforms[platform] = {"status": "missing", "copy": None}
             else:
-                over = f" OVER LIMIT: {len(copy)}/{limit}" if len(copy) > limit else ""
-                platforms[name] = {"status": f"{len(copy)} chars{over}", "copy": copy}
+                text_len = effective_text_len(platform, copy, url, None)
+                if limit and text_len > limit:
+                    status = f"OVER LIMIT: {char_limit_detail(text_len, limit, len(copy))}"
+                    is_over = True
+                else:
+                    status = f"{text_len} chars"
+                    is_over = False
+                platforms[platform] = {"status": status, "copy": copy, "over_limit": is_over}
 
         needs_review.append({
             "file": filepath,
@@ -699,6 +709,8 @@ def check_mode():
 
     if not needs_review:
         return
+
+    over_limit = False
 
     # Output as structured text for the Claude prompt
     for item in needs_review:
@@ -712,8 +724,37 @@ def check_mode():
                 if info["copy"]:
                     print(f"\n### {platform} ({info['status']})")
                     print(info["copy"])
+                    if info.get("over_limit"):
+                        over_limit = True
                 else:
                     print(f"\n### {platform}: {info['status']}")
+
+    if over_limit:
+        print("\nERROR: Some platforms have copy that exceeds character limits. Fix before merging.")
+        sys.exit(1)
+
+
+def effective_text_len(platform: Platform, copy: str, url: str | None, media_paths: list[str] | None) -> int:
+    """Return the effective character count for a post, including any appended URL.
+
+    X always appends the URL. LinkedIn appends if text-only. Any platform with
+    media appends. Bluesky text-only posts use link_url instead of appending.
+    """
+    bluesky_text_only = platform == "bluesky" and not media_paths
+    appends_url = bool(url and url not in copy and not bluesky_text_only)
+    if appends_url:
+        url_len = 23 if platform == "x" else len(url or "")
+        return len(copy) + 2 + url_len
+    return len(copy)
+
+
+def char_limit_detail(text_len: int, limit: int, body_len: int) -> str:
+    """Return a human-readable explanation of why a post exceeds the character limit."""
+    over = text_len - limit
+    overhead = text_len - body_len
+    if overhead > 0:
+        return f"{text_len} chars ({body_len} body + {overhead} auto-appended URL), {over} over the {limit} limit"
+    return f"{text_len} chars, {over} over the {limit} limit"
 
 
 def main() -> None:
@@ -739,6 +780,8 @@ def main() -> None:
         return
 
     failures = False
+    char_limit_failures: defaultdict[str, list[tuple[Platform, int, int, int]]] = defaultdict(list)  # filepath → [(platform, actual, limit, body_len)]
+    api_failures_by_file: defaultdict[str, list[Platform]] = defaultdict(list)
     posted_urls: list[tuple[str, Platform, PostResult]] = []
     posts_by_file: defaultdict[str, list[tuple[Platform, PostResult]]] = defaultdict(list)
 
@@ -796,21 +839,11 @@ def main() -> None:
                 continue
 
             # Validate character limits.
-            # X always appends URL to body text. Media posts on any platform
-            # append URL to body. Bluesky text-only posts use link_url instead.
             limit = CHAR_LIMITS.get(platform)
-            appends_url = url and url not in copy and (
-                platform == "x"
-                or (platform == "linkedin" and not media_paths)
-                or bool(media_paths)
-            )
-            if appends_url:
-                url_len = 23 if platform == "x" else len(url)
-                text_len = len(copy) + 2 + url_len
-            else:
-                text_len = len(copy)
+            text_len = effective_text_len(platform, copy, url, media_paths)
             if limit and text_len > limit:
-                print(f"  SKIPPING {platform}: copy is {text_len} chars, limit is {limit}")
+                print(f"  SKIPPING {platform}: {char_limit_detail(text_len, limit, len(copy))}")
+                char_limit_failures[filepath].append((platform, text_len, limit, len(copy)))
                 failures = True
                 continue
 
@@ -826,6 +859,7 @@ def main() -> None:
                 posts_by_file[filepath].append((platform, post_url))
             else:
                 post_had_failure = True
+                api_failures_by_file[filepath].append(platform)
 
         if post_had_failure:
             record_failure(state, slug)
@@ -835,7 +869,7 @@ def main() -> None:
             else:
                 failures = True
 
-    # Write summary
+    # Write step summary and PR comments
     if posted_urls:
         print("\n--- Posted ---")
         for blog_url, platform, post_url in posted_urls:
@@ -854,22 +888,57 @@ def main() -> None:
                     else:
                         f.write(f"| {slug} | {platform} | {post_url} |\n")
 
-        for filepath, results in posts_by_file.items():
-            pr_number = find_pr_number(filepath, since_sha=state.get("last_sha"))
-            if not pr_number:
-                print(f"  Could not find PR for {filepath}, skipping comment")
-                continue
-            lines = ["📣 Social media posts are live for this blog post:\n"]
-            for platform, post_url in results:
-                if isinstance(post_url, str) and post_url.startswith("http"):
-                    lines.append(f"- **{platform}**: {post_url}")
-                else:
-                    lines.append(f"- **{platform}**: posted (link not available)")
-            comment_on_pr(pr_number, "\n".join(lines))
+    # Post PR comments for all files that had any activity (posted or skipped)
+    all_files = set(posts_by_file.keys()) | set(char_limit_failures.keys()) | set(api_failures_by_file.keys())
+    for filepath in all_files:
+        pr_number = find_pr_number(filepath, since_sha=state.get("last_sha"))
+        if not pr_number:
+            print(f"  Could not find PR for {filepath}, skipping comment")
+            continue
+        comment_lines = ["📣 Social media post results for this blog post:\n"]
+        for platform, post_url in posts_by_file.get(filepath, []):
+            if isinstance(post_url, str) and post_url.startswith("http"):
+                comment_lines.append(f"- ✅ **{platform}**: {post_url}")
+            else:
+                comment_lines.append(f"- ✅ **{platform}**: posted (link not available)")
+        for plat, actual, lim, body_len in char_limit_failures.get(filepath, []):
+            comment_lines.append(f"- ❌ **{plat}**: {char_limit_detail(actual, lim, body_len)} — edit the `social:` block in frontmatter to fix")
+        for plat in api_failures_by_file.get(filepath, []):
+            comment_lines.append(f"- ❌ **{plat}**: posting failed — will retry on next merge to master")
+        comment_on_pr(pr_number, "\n".join(comment_lines))
 
     if failures:
         print("\nSome posts failed to schedule. Not advancing last_sha so they are retried.")
         print("Successfully posted platforms are recorded and won't be duplicated.")
+        summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+        if summary_path:
+            with open(summary_path, "a") as f:
+                f.write("## Social media posts — failures\n\n")
+                if char_limit_failures:
+                    f.write("**Character limit failures** — edit the `social:` block in frontmatter to fix:\n\n")
+                    f.write("| File | Platform | Length | Limit | Over by |\n")
+                    f.write("|---|---|---|---|---|\n")
+                    for fp, entries in char_limit_failures.items():
+                        for plat, actual, lim, body_len in entries:
+                            f.write(f"| `{fp}` | {plat} | {actual} | {lim} | {actual - lim} |\n")
+                if api_failures_by_file:
+                    f.write("\n**API failures** — will retry on next merge to master:\n\n")
+                    for fp, platforms in api_failures_by_file.items():
+                        f.write(f"- `{fp}`: {', '.join(platforms)}\n")
+        failure_summary_path = os.environ.get("FAILURE_SUMMARY_FILE")
+        if failure_summary_path:
+            parts = [
+                f"{plat} copy in {Path(fp).parent.name} is {actual - lim} chars over the {lim} limit"
+                for fp, entries in char_limit_failures.items()
+                for plat, actual, lim, body_len in entries
+            ] + [
+                f"{plat} posting failed in {Path(fp).parent.name}"
+                for fp, platforms in api_failures_by_file.items()
+                for plat in platforms
+            ]
+            if parts:
+                with open(failure_summary_path, "w") as f:
+                    f.write("; ".join(parts))
         sys.exit(1)
 
     # Only advance last_sha when everything succeeded
@@ -932,23 +1001,18 @@ def post_file(filepath: str, platforms_filter: list[Platform] | None = None) -> 
             for m in media_paths:
                 print(f"    media: {m}")
 
-    state: State = {"posts": {}}
     posted_urls: list[tuple[str, Platform, PostResult]] = []
 
+    over_limit = False
     for platform, (copy, media_paths) in platforms.items():
         if not PLATFORM_ENABLED.get(platform):
             continue
 
         limit = CHAR_LIMITS.get(platform)
-        bluesky_text_only = platform == "bluesky" and not media_paths
-        appends_url = url and url not in copy and not bluesky_text_only
-        if appends_url:
-            url_len = 23 if platform == "x" else len(url)
-            text_len = len(copy) + 2 + url_len
-        else:
-            text_len = len(copy)
+        text_len = effective_text_len(platform, copy, url, media_paths)
         if limit and text_len > limit:
-            print(f"  SKIPPING {platform}: copy is {text_len} chars, limit is {limit}")
+            print(f"  SKIPPING {platform}: {char_limit_detail(text_len, limit, len(copy))}")
+            over_limit = True
             continue
 
         post_url = schedule_post(platform, copy, url, media_paths, scheduled)
@@ -959,6 +1023,9 @@ def post_file(filepath: str, platforms_filter: list[Platform] | None = None) -> 
         print("\n--- Posted ---")
         for blog_url, platform, post_url in posted_urls:
             print(f"  {platform}: {post_url}")
+
+    if over_limit:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
