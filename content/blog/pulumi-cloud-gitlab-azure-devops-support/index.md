@@ -1,8 +1,9 @@
 ---
-title: "Expanded Version Control Support in Pulumi Cloud"
+title: "Pulumi Cloud Now Supports GitLab, Azure DevOps, and Neo-Powered Summaries"
 date: 2026-03-09
 draft: false
-meta_desc: "Deploy on every push, preview infrastructure on pull requests, and let Neo explain changes, all from Pulumi Cloud, regardless of where your code lives."
+allow_long_title: true
+meta_desc: "Pulumi Cloud now supports GitLab and Azure DevOps alongside GitHub. Deploy on push, get PR previews, and let Neo explain your infrastructure changes."
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -22,6 +23,7 @@ social:
 aliases:
     - /blog/pulumi-now-supports-azure-devops-in-the-new-project-wizard/
     - /blog/pulumi-now-supports-azure-devops-and-gitlab/
+    - /blog/expanded-version-control-support/
 ---
 
 Your version control provider shouldn't limit your infrastructure workflows. Pulumi Cloud now works with [GitHub](/docs/version-control/github-app/), [GitHub Enterprise Server](/docs/version-control/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/). Every team gets the same [deployment pipelines](/docs/deployments/deployments/), [PR previews](/docs/deployments/deployments/review-stacks/), and [AI-powered change summaries](/docs/ai/) regardless of where their code lives.
@@ -30,7 +32,7 @@ Your version control provider shouldn't limit your infrastructure workflows. Pul
 
 ![Add account screen showing GitHub, GitLab, and Azure DevOps as VCS options](VCS.png)
 
-## Connect multiple providers and accounts
+## Connect GitLab, Azure DevOps, and GitHub in one place
 
 You can connect multiple VCS providers to a single Pulumi organization simultaneously, like GitHub, GitLab, and Azure DevOps all at once. You can also connect multiple accounts of the same provider, such as two separate GitHub organizations or two GitLab groups. This means teams that work across different repositories, providers, or organizational boundaries can manage everything from one place.
 
