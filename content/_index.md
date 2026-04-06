@@ -77,7 +77,7 @@ insights:
     One pane of glass for all your clouds. Search infrastructure with natural language. Enforce policies automatically. Track compliance in real-time. Find vulnerabilities before they become incidents.
 
 customer_logos:
-  title: Trusted by over 3,700 innovative companies
+  title: Trusted by over 4,000 innovative companies
   logos:
     - name: bmw
       link: /case-studies/

@@ -178,7 +178,7 @@ stats:
         number: "350,000+"
         description: developers
     company:
-        number: "3,700+"
+        number: "4,000+"
         description: organizations
     integration:
         number: "170+"
