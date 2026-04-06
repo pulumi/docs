@@ -248,7 +248,7 @@ export class PulumiApiDocFilterableNav {
     getLoadingState() {
         return (
             <div class="loading">
-                <i class="loading-icon fas fa-spinner"></i>
+                <i class="loading-icon ph ph-spinner ph-spin"></i>
                 <span class="loading-text">Loading...</span>
             </div>
         );

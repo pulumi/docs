@@ -152,13 +152,13 @@ export class PulumiPricingCalculator {
 
               <div class={this.deploymentsExpanded ? "deployments" : "deployments collapsed" }>
                   <div class="default">
-                      <i class="fas fa-rocket"></i>
+                      <i class="ph ph-rocket"></i>
                       <div class="details">
                           <div class="title">Add on Pulumi Deployments</div>
                           <div class="subtitle">Run deployments remotely with a button, Git push, or REST API</div>
                       </div>
                       <button onClick={()=> this.updateDeploymentsExpanded()}><i class={this.deploymentsExpanded
-                              ? "fas fa-minus" : "fas fa-plus" }></i></button>
+                              ? "ph ph-minus" : "ph ph-plus" }></i></button>
                   </div>
 
 

@@ -26,66 +26,76 @@ link_buttons:
     label: Get Started
     link: /docs/get-started/
 sections:
-- type: button-cards
+- type: quick-starts
+  heading: Common tasks
+  cards:
+  - icon: rocket
+    label: Deploy your first app
+    link: /docs/get-started/
+  - icon: arrows-clockwise
+    label: Migrate from Terraform
+    link: /docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/
+  - icon: robot
+    label: Use Pulumi AI
+    link: /docs/ai/
+- type: capability-cards
   heading: Capabilities
   cards:
-  - emoji: 🏗️
+  - icon: code
     heading: Infrastructure as Code
     description: Define and manage cloud infrastructure using TypeScript, Python, Go, .NET, Java, and YAML.
     link: /docs/iac/
-  - emoji: 🚀
+    featured: true
+  - icon: cloud-arrow-up
     heading: Deployments & Workflows
     description: Cloud-hosted deployments, drift detection, state management, and automation.
     link: /docs/deployments/
-  - emoji: 🔐
+  - icon: lock-key
     heading: Secrets & Configuration
     description: Centralized secrets and configuration management with environments.
     link: /docs/esc/
-  - emoji: 🛡️
+  - icon: shield-check
     heading: Insights & Governance
     description: Search, compliance, and policy enforcement across your cloud infrastructure.
     link: /docs/insights/
-  - emoji: 🔗
+  - icon: git-branch
     heading: Version Control
     description: Connect Pulumi with GitHub, GitLab, and Azure DevOps using Pulumi-maintained version control integrations.
     link: /docs/version-control/
-  - emoji: 🎯
+  - icon: layout
     heading: Internal Developer Platform
     description: Self-service infrastructure with templates, guardrails, and developer portals.
     link: /docs/idp/
-  - emoji: 🤖
+  - icon: robot
     heading: Infrastructure AI
     description: Infrastructure automation with Pulumi Neo and natural language assistance.
     link: /docs/ai/
-- type: button-cards
-  heading: Learning Resources
+- type: link-cards
+  heading: More
   cards:
-  - emoji: 🎓
-    heading: Tutorials ↗
-    description: Step-by-step guides for building real-world infrastructure with Pulumi.
+  - icon: graduation-cap
+    heading: Tutorials
+    description: Step-by-step guides for building real-world infrastructure.
     link: /tutorials/
-- type: button-cards
-  heading: More Documentation
-  cards:
-  - emoji: 🏢
+  - icon: buildings
     heading: Administration
     description: Manage organizations, access, security, and self-hosting.
     link: /docs/administration/
-  - emoji: 📦
-    heading: Registry ↗
-    description: Browse and search Pulumi packages for 150+ cloud providers and services.
+  - icon: package
+    heading: Registry
+    description: Browse 150+ cloud providers and services.
     link: /registry/
-  - emoji: 📚
+  - icon: book-open-text
     heading: Reference
     description: CLI, SDK, and API reference documentation.
     link: /docs/reference/
-  - emoji: 🔄
+  - icon: arrows-clockwise
     heading: Migration
     description: Migrate from Terraform, CloudFormation, and other tools.
     link: /docs/iac/guides/migration/
-  - emoji: 🆘
+  - icon: lifebuoy
     heading: Support
-    description: Get help through troubleshooting guides, FAQs, and community resources.
+    description: Troubleshooting guides, FAQs, and community resources.
     link: /docs/support/
 
 ---

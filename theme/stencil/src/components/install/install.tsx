@@ -68,7 +68,7 @@ export class Install {
                 <div class="copy-button">
                     <pulumi-tooltip>
                         <button onClick={this.copyToClipboard.bind(this)}>
-                            <i class="far fa-copy"></i>
+                            <i class="ph ph-copy"></i>
                         </button>
                         <span slot="content">{this.tooltipContent}</span>
                     </pulumi-tooltip>

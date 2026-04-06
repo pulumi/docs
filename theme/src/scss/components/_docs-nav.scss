@@ -21,6 +21,11 @@
                     button {
                         @apply hidden absolute text-center p-0 m-0 left-0;
                         width: 1.2rem;
+
+                        > i {
+                            display: inline-block;
+                            transition: transform 0.1s;
+                        }
                     }
 
                     span {
@@ -47,8 +52,7 @@
 
                         > button {
                             > i {
-                                rotate: 90deg;
-                                transition: rotate .1s;
+                                transform: rotate(90deg);
                             }
                         }
 

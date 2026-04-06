@@ -19,9 +19,9 @@ export class DeveloperQuotes {
                 case "reddit":
                     return <img class="w-6" src="/logos/tech/reddit.svg"></img>
                 case "email":
-                    return <i class="fas fa-envelope text-gray-500 text-xl"></i>
+                    return <i class="ph ph-envelope text-gray-500 text-xl"></i>
                 case "blog":
-                    return <i class="fas fa-blog text-gray-500 text-xl"></i>
+                    return <i class="ph ph-article text-gray-500 text-xl"></i>
                 case "slack":
                     return <img class="w-6" src="/logos/tech/slack.svg"></img>
                 case "linkedin":

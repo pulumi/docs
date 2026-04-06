@@ -232,7 +232,7 @@ export class HubspotForm {
     private renderIsLoadingForm() {
         return (
             <p>
-                <i class="fa fa-spinner fa-spin mr-2"></i>
+                <i class="ph ph-spinner ph-spin mr-2"></i>
             </p>
         );
     }

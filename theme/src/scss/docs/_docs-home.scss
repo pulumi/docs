@@ -1,7 +1,7 @@
 section.docs-home {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
 
     h1, h2, h3, p {
         margin: 0 !important;
@@ -9,24 +9,40 @@ section.docs-home {
     }
 
     h2 {
-        margin-bottom: 12px;
+        font-family: 'Inter';
+        font-weight: 600;
+        font-size: 20px;
+        color: map-get($gray, 950);
+        letter-spacing: -0.02em;
+        margin-bottom: 4px !important;
     }
 
     h3 {
         font-family: 'Inter';
-        font-weight: 500;
-        font-size: 21px;
+        font-weight: 600;
+        font-size: 16px;
         color: map-get($gray, 950);
     }
 
+    // Hero banner
     div.header {
-        @apply flex flex-col gap-4 p-6 rounded bg-no-repeat bg-right-bottom;
+        @apply flex flex-col gap-4 p-8 rounded-2xl bg-no-repeat bg-right-bottom;
         min-height: 200px;
+        background-color: map-get($violet, 100);
+        border: 1px solid map-get($violet, 200);
 
         background-image: url("/images/docs/docs-home-header-background-mobile.svg");
 
+        h1 {
+            font-size: 28px;
+            letter-spacing: -0.02em;
+        }
+
         p {
             @apply max-w-2xl;
+            color: map-get($gray, 700);
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         @include screen-md {
@@ -57,14 +73,15 @@ section.docs-home {
             gap: 8px;
 
             a {
-                padding: 5px 16px;
-                border-radius: 4px;
+                padding: 8px 20px;
+                border-radius: 8px;
                 border: 1px map-get($brand, "blue") solid;
                 background: $white;
                 font-family: 'Inter';
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 14px;
                 color: $white;
+                transition: all 0.15s ease;
 
                 &.docs-primary-link-btn {
                     background: map-get($brand, "blue");
@@ -72,6 +89,7 @@ section.docs-home {
 
                     &:hover {
                         background: map-get($brand, "blue-darker");
+                        transform: translateY(-1px);
                     }
                 }
 
@@ -86,26 +104,208 @@ section.docs-home {
         }
     }
 
-    h2 {
-        font-family: 'Inter';
-        font-weight: 500;
-        font-size: 24px;
-        color: map-get($gray, 950);
+    // Quick start row
+    .quick-starts-section {
+        h2 {
+            margin-bottom: 8px !important;
+        }
     }
 
+    .quick-starts-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: center;
+        gap: 8px;
+
+        .quick-start-card {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            border-radius: 8px;
+            border: 1px solid map-get($gray, 150);
+            background: $white;
+            font-family: 'Inter';
+            font-weight: 500;
+            font-size: 14px;
+            color: map-get($gray, 800);
+            transition: all 0.15s ease;
+            text-decoration: none;
+
+            i {
+                font-size: 16px;
+                color: map-get($violet, 500);
+            }
+
+            .quick-start-arrow {
+                font-size: 12px;
+                color: map-get($gray, 400);
+                transition: transform 0.15s ease;
+            }
+
+            &:hover {
+                border-color: map-get($violet, 300);
+                background: map-get($violet, 100);
+                color: map-get($gray, 950);
+
+                .quick-start-arrow {
+                    transform: translateX(2px);
+                }
+            }
+        }
+    }
+
+    // Capability cards grid
+    .capability-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+        @media (min-width: 640px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .capability-card {
+            display: flex;
+            gap: 16px;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid map-get($gray, 150);
+            background: $white;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            align-items: flex-start;
+
+            &:hover {
+                border-color: map-get($violet, 300);
+                box-shadow: 0 4px 16px rgba(103, 62, 172, 0.08);
+                transform: translateY(-1px);
+            }
+
+            &.featured {
+                grid-column: 1 / -1;
+                background: linear-gradient(135deg, map-get($violet, 100) 0%, $white 100%);
+                border-color: map-get($violet, 200);
+
+                .capability-card-icon i {
+                    color: map-get($violet, 600);
+                }
+
+                &:hover {
+                    border-color: map-get($violet, 400);
+                    box-shadow: 0 4px 20px rgba(103, 62, 172, 0.12);
+                }
+            }
+
+            .capability-card-icon {
+                flex-shrink: 0;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                background: map-get($gray, 100);
+
+                i {
+                    font-size: 20px;
+                    color: map-get($gray, 600);
+                }
+            }
+
+            .capability-card-content {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                min-width: 0;
+
+                h3 {
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: map-get($gray, 950);
+                }
+
+                p {
+                    font-size: 13px;
+                    line-height: 1.5;
+                    color: map-get($gray, 600);
+                }
+            }
+        }
+    }
+
+    // Link cards (compact grid for secondary items)
+    .link-cards-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+
+        @media (min-width: 640px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 1px solid map-get($gray, 150);
+            background: $white;
+            text-decoration: none;
+            transition: all 0.15s ease;
+
+            > i {
+                flex-shrink: 0;
+                font-size: 18px;
+                color: map-get($gray, 500);
+            }
+
+            .link-card-content {
+                min-width: 0;
+
+                h3 {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: map-get($gray, 900);
+                }
+
+                p {
+                    font-size: 13px;
+                    line-height: 1.4;
+                    color: map-get($gray, 500);
+                }
+            }
+
+            &:hover {
+                border-color: map-get($gray, 300);
+                background: map-get($gray, 100);
+
+                > i {
+                    color: map-get($violet, 500);
+                }
+            }
+        }
+    }
+
+    // Section spacing
     div.docs-home-section {
         display: flex;
         flex-direction: column;
         gap: 12px;
     }
 
+    // Legacy card types (preserved for backwards compatibility)
     div.blue-sparkle {
         padding: 24px;
         display: flex;
         flex-direction: column;
         gap: 0;
         background: map-get($blue, 100);
-        border-radius: 4px;
+        border-radius: 16px;
 
         .heading {
             display: flex;
@@ -128,7 +328,7 @@ section.docs-home {
         background: $white;
         border: 1px solid map-get($gray, 150);
         box-shadow: 0px 2px 24px rgba(95, 96, 101, 0.14);
-        border-radius: 4px;
+        border-radius: 12px;
 
         div.icon-heading {
             display: flex;
@@ -168,11 +368,11 @@ section.docs-home {
 
         &.secrets-integrations a {
             flex-basis: 100%;
-            
+
             div.label {
                 padding: 12px;
             }
-            
+
             @media (min-width: 768px) {
                 max-width: 49%;
             }
@@ -196,13 +396,12 @@ section.docs-home {
         a {
             flex: 1;
             border: 1px solid #E5E5E9;
-            filter: drop-shadow(0px 2px 24px rgba(95, 96, 101, 0.14));
-            border-radius: 4px;
+            border-radius: 12px;
 
             div.card-icon {
                 background: map-get($gray, 100);
                 border-bottom: 1px solid map-get($gray, 150);
-                border-radius: 4px 4px 0px 0px;
+                border-radius: 12px 12px 0px 0px;
                 display: flex;
                 justify-content: center;
                 padding: 24px 0px;
@@ -210,7 +409,7 @@ section.docs-home {
 
             div.label {
                 background: $white;
-                border-radius: 0px 0px 4px 4px;
+                border-radius: 0px 0px 12px 12px;
                 font-family: 'Inter';
                 font-weight: 400;
                 font-size: 18px;
@@ -227,4 +426,3 @@ section.docs-home {
         margin-bottom: 12px !important;
     }
 }
-

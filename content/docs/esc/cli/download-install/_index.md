@@ -26,13 +26,13 @@ aliases:
 
 {{% choosable os macos %}}
 
-<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Homebrew Package Manager</h3>
+<h3 class="no-anchor pt-4"><i class="ph ph-package pr-2"></i>Homebrew Package Manager</h3>
 
 <div class="highlight">
     <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-macos">$ brew update && brew install pulumi/tap/esc</code></pre>
 </div>
 
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>macOS Binary Download</h3>
+<h3 class="no-anchor pt-4"><i class="ph ph-download-simple pr-2"></i>macOS Binary Download</h3>
 
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-darwin-x64.tar.gz">amd64</a>
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-darwin-arm64.tar.gz">arm64</a></p>
@@ -49,7 +49,7 @@ The latest version of Pulumi ESC is {{< latest-version-esc >}}.
 
 <div class="mb-6 border-solid border-b-2 border-gray-200">
 <div class="w-full md:w-3/4">
-<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Install Script</h3>
+<h3 class="no-anchor pt-4"><i class="ph ph-package pr-2"></i>Install Script</h3>
 
 <div class="highlight">
     <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-esc-linux">$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh</code></pre>
@@ -57,7 +57,7 @@ The latest version of Pulumi ESC is {{< latest-version-esc >}}.
 
 </div>
 <div class="w-full">
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Linux Binary Download</h3>
+<h3 class="no-anchor pt-4"><i class="ph ph-download-simple pr-2"></i>Linux Binary Download</h3>
 <p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-linux-x64.tar.gz">amd64</a></p>
 </div>
 </div>
@@ -72,7 +72,7 @@ The latest version of Pulumi ESC is {{< latest-version-esc >}}.
 
 <div class="mb-6 border-solid border-b-2 border-gray-200">
 <div class="w-full">
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Windows Binary Download</h3>
+<h3 class="no-anchor pt-4"><i class="ph ph-download-simple pr-2"></i>Windows Binary Download</h3>
 <p>
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-windows-x64.zip">amd64</a>
 </p>

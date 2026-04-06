@@ -3,7 +3,7 @@
 
 
 <section class="content docs-home">
-    <div id="docs-home-banner" class="header bg-blue-100 bg-right">
+    <div id="docs-home-banner" class="header">
         <h1><strong>{{ .Params.h1 }}</strong></h1>
         <div class="w-full md:w-2/3">
             {{ .Params.description | safeHTML }}
@@ -19,7 +19,40 @@
     </div>
 
     {{ range .Params.sections }}
-        {{ if eq .type "cards-logo-label-link" }}
+        {{ if eq .type "quick-starts" }}
+            <div class="docs-home-section quick-starts-section">
+                <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                <div class="quick-starts-grid">
+                    {{ range .cards }}
+                        <a class="quick-start-card" href="{{ .link }}">
+                            {{ if .icon }}<i class="ph ph-{{ .icon }}"></i>{{ end }}
+                            <span>{{ .label }}</span>
+                            <i class="ph ph-arrow-right quick-start-arrow"></i>
+                        </a>
+                    {{ end }}
+                </div>
+            </div>
+        {{ else if eq .type "capability-cards" }}
+            <div class="docs-home-section">
+                <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                {{ if .description }}
+                    {{ .description | safeHTML }}
+                {{ end }}
+                <div class="capability-grid">
+                    {{ range .cards }}
+                        <a class="capability-card{{ if .featured }} featured{{ end }}" href="{{ .link }}">
+                            <div class="capability-card-icon">
+                                {{ if .icon }}<i class="ph ph-{{ .icon }}"></i>{{ end }}
+                            </div>
+                            <div class="capability-card-content">
+                                <h3 id="{{ anchorize .heading }}">{{ .heading }}</h3>
+                                <p>{{ .description }}</p>
+                            </div>
+                        </a>
+                    {{ end }}
+                </div>
+            </div>
+        {{ else if eq .type "cards-logo-label-link" }}
             <div class="docs-home-section">
                 <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
                 {{ if .description }}
@@ -104,6 +137,21 @@
                         </div>
                     </div>
                 </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ else if eq .type "link-cards" }}
+        <div class="docs-home-section">
+            <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+            <div class="link-cards-grid">
+                {{ range .cards }}
+                    <a class="link-card" href="{{ .link }}">
+                        {{ if .icon }}<i class="ph ph-{{ .icon }}"></i>{{ end }}
+                        <div class="link-card-content">
+                            <h3>{{ .heading }}</h3>
+                            <p>{{ .description }}</p>
+                        </div>
+                    </a>
                 {{ end }}
             </div>
         </div>

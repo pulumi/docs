@@ -20,7 +20,7 @@ export class TopButton {
     }
 
     render() {
-        let buttonClass = `btn-scroll-top fas fa-chevron-up ${this.visible}`;
+        let buttonClass = `btn-scroll-top ph ph-caret-up ${this.visible}`;
         return <a class={buttonClass} title="Scroll to top" href="#"></a>;
     }
 

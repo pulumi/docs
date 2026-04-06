@@ -45,7 +45,7 @@ export class PulumiRegistryListSearch {
     render() {
         return (
             <div class="input-container">
-                <i class="search-icon fas fa-filter"></i>
+                <i class="search-icon ph ph-funnel"></i>
                 <input
                     class="registry-filter-input"
                     placeholder="Filter by package name..."
@@ -56,7 +56,7 @@ export class PulumiRegistryListSearch {
                 {this.filterContent && (
                     <div class="clear-container">
                         <button onClick={this.onClearFilter.bind(this)} class="clear-filter-button">
-                            <i class="fas fa-times"></i>
+                            <i class="ph ph-x"></i>
                         </button>
                     </div>
                 )}

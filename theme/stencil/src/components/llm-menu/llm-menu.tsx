@@ -152,9 +152,9 @@ export class LlmMenu {
             <Host>
                 <div class="llm-menu-container">
                     <button class="llm-menu-trigger text-gray-600 hover:text-gray-700 text-xs" onClick={() => (this.isOpen = !this.isOpen)}>
-                        <i class="fas fa-copy mr-2" style={{ width: "14px" }}></i>
+                        <i class="ph ph-copy mr-2" style={{ width: "14px" }}></i>
                         Copy Page
-                        <i class={`fas fa-chevron-${this.isOpen ? "up" : "down"}`}></i>
+                        <i class={`ph ph-caret-{this.isOpen ? "up" : "down"}`}></i>
                     </button>
 
                     {this.isOpen && (
@@ -168,7 +168,7 @@ export class LlmMenu {
                                     </div>
                                 </button>
                                 <button class="llm-menu-item" onClick={() => this.copyPage()}>
-                                    <i class="fas fa-copy llm-menu-icon"></i>
+                                    <i class="ph ph-copy llm-menu-icon"></i>
                                     <div class="llm-menu-text">
                                         <div class="llm-menu-title">{this.copied === "page" ? "Copied!" : "Copy as Markdown"}</div>
                                         <div class="llm-menu-subtitle">Copy page for LLMs</div>
@@ -180,7 +180,7 @@ export class LlmMenu {
                                         <div class="llm-menu-title">View as Markdown</div>
                                         <div class="llm-menu-subtitle">Open Markdown in new tab</div>
                                     </div>
-                                    <i class="fas fa-external-link-alt llm-menu-external"></i>
+                                    <i class="ph ph-arrow-square-out llm-menu-external"></i>
                                 </button>
                                 <hr />
                                 <button class="llm-menu-item" onClick={() => this.openInChatGPT()}>
@@ -189,7 +189,7 @@ export class LlmMenu {
                                         <div class="llm-menu-title">Open in ChatGPT</div>
                                         <div class="llm-menu-subtitle">Ask ChatGPT about this page</div>
                                     </div>
-                                    <i class="fas fa-external-link-alt llm-menu-external"></i>
+                                    <i class="ph ph-arrow-square-out llm-menu-external"></i>
                                 </button>
                                 <button class="llm-menu-item" onClick={() => this.openInClaude()}>
                                     {claudeLogo}
@@ -197,7 +197,7 @@ export class LlmMenu {
                                         <div class="llm-menu-title">Open in Claude</div>
                                         <div class="llm-menu-subtitle">Ask Claude about this page</div>
                                     </div>
-                                    <i class="fas fa-external-link-alt llm-menu-external"></i>
+                                    <i class="ph ph-arrow-square-out llm-menu-external"></i>
                                 </button>
                             </div>
                         </div>
