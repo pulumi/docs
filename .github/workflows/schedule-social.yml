@@ -20,6 +20,10 @@ jobs:
     name: Schedule social media posts
     runs-on: ubuntu-latest
     environment: production
+    env:
+      FAILURE_SUMMARY_FILE: /tmp/social-failure-summary.txt
+    outputs:
+      failure_summary: ${{ steps.failure-summary.outputs.summary }}
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
@@ -69,11 +73,29 @@ jobs:
           echo "API key valid (HTTP 200)"
 
       - name: Schedule social posts for new blog content
+        id: post
+        continue-on-error: true
         env:
           UPLOAD_POST_API_KEY: ${{ steps.esc-secrets.outputs.UPLOAD_POST_API_KEY }}
           SOCIAL_STATE_BUCKET: ${{ steps.bucket.outputs.name }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: uv run scripts/social/schedule-posts.py
+
+      - name: Capture failure summary
+        id: failure-summary
+        if: steps.post.outcome == 'failure'
+        run: |
+          if [ -f "$FAILURE_SUMMARY_FILE" ]; then
+            {
+              echo "summary<<EOF"
+              cat "$FAILURE_SUMMARY_FILE"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fail if posting step failed
+        if: steps.post.outcome == 'failure'
+        run: exit 1
 
   notify:
     if: failure() && github.repository == 'pulumi/docs'
@@ -90,7 +112,7 @@ jobs:
         env:
           SLACK_CHANNEL: docs-ops
           SLACK_COLOR: "#F54242"
-          SLACK_MESSAGE: "social media scheduling failure in pulumi/docs repo :meow_sad:"
+          SLACK_MESSAGE: "social media scheduling failure in pulumi/docs repo :meow_sad: ${{ needs.schedule-social.outputs.failure_summary && format('({0}) ', needs.schedule-social.outputs.failure_summary) || '' }}${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           SLACK_USERNAME: docsbot
           SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
           SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
