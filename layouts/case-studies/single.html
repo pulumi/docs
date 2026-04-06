@@ -1,108 +1,71 @@
 {{ define "hero" }}
-    {{ partial "hero.html" (dict "title" .Title) }}
 {{ end }}
 
 {{ define "main" }}
-    {{ if .Params.quote_block }}
-        <div class="container mx-auto max-w-7xl px-8 pb-16 md:px-0 text-center justify-center align-middle">
-            <div class="card ready-cta w-full rounded-xl p-0.5 gradient flex flex-col md:flex-row">
-                <div class="w-full md:w-1/2 px-24 py-8 text-center justify-center align-middle bg-purple-100 flex rounded-tl-xl rounded-bl-xl">
-                    <div class="pb-4 my-auto w-full flex flex-col items-center">
-                        <div class="w-40">
-                            {{ $fpSrc := strings.TrimPrefix "/" .Params.customer_logo }}
-                            {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
-                            {{ if $fpAsset }}
-                                {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" .Params.customer_name) }}
-                            {{ else }}
-                                <img src="{{ .Params.customer_logo }}" alt="{{ .Params.customer_name }}" />
-                            {{ end }}
-                        </div>
-                        {{ if .Params.quote_block.quote }}
-                            <p class="text-lg">
-                                {{ .Params.quote_block.quote }}
-                            </p>
-                        {{ end }}
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 bg-violet-600 p-8 flex rounded-tr-xl rounded-br-xl">
-                    <div class="my-auto w-full">
-                        {{ if .Params.quote_block.headline_stat }}
-                            <div class="text-6xl text-white font-extrabold my-auto pb-4">{{ .Params.quote_block.headline_stat }}</div>
-                        {{ end }}
-                        {{ if .Params.quote_block.headline }}
-                            <div class="text-xl text-white my-auto pb-8">{{ .Params.quote_block.headline }}</div>
-                        {{ end }}
-                    </div>
-                </div>
+<div class="font-body container mx-auto mb-16 mt-16 px-12 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24">
+
+    {{/* Hero */}}
+    <section class="template-hero template-hero--centered" id="hero">
+        <div class="flex flex-col items-center gap-12">
+            <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
+                <a href="/case-studies/" class="hero-tag-line no-underline hover:no-underline">Case Study</a>
+                <h1 class="title mb-6">{{ .Title }}</h1>
+                {{ with .Description }}
+                <p class="description mb-10">{{ . | markdownify }}</p>
+                {{ end }}
             </div>
-        </div>
-    {{ end }}
-
-    <nav class="nav-section-sticky shadow">
-        <div class="container mx-auto">
-            <ul>
-                {{ range .Params.sections }}
-                    <li><a href="#{{ .anchor }}">{{ .label }}</a></li>
-                {{ end }}
-            </ul>
-        </div>
-    </nav>
-
-    {{ if .Params.exec_summary }}
-        <section id="executive-summary" class="mt-8 py-8 px-4 md:px-0">
-            <div class="container mx-auto max-w-4xl py-8 border-b border-gray-300">
-                <h2>Executive Summary</h2>
-                <p class="description">
-                    {{ .Params.exec_summary | markdownify }}
-                </p>
-            </div>
-        </section>
-    {{ end }}
-
-    <section class="px-4 md:px-0">
-        <div class="container mx-auto max-w-4xl mb-4 description">
-            {{ if .Params.customer_logo }}
-                {{ $image_classes := "inline-block md:float-right max-w-xs md:pl-8 pb-2"}}
-                {{ if or (eq .Params.customer_name "Starburst Data") (eq .Params.customer_name "Panther Labs") }}
-                    {{ $image_classes = "inline-block md:float-right max-w-xs w-48 pb-2 md:pb-0 " }}
-                {{ end }}
-                {{ $image_title := print (or .Params.customer_name "Customer") " logo" }}
-                {{ $fpSrc := strings.TrimPrefix "/" .Params.customer_logo }}
-                {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
-                {{ if .Params.customer_url }}
-                    <a href="{{ .Params.customer_url }}" class="{{ $image_classes }}">
-                        {{ if $fpAsset }}
-                            {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" $image_title "class" $image_classes) }}
-                        {{ else }}
-                            <img src="{{ .Params.customer_logo }}" class="{{ $image_classes }}" alt="{{ $image_title }}" />
-                        {{ end }}
-                    </a>
-                {{ else }}
-                    {{ if $fpAsset }}
-                        {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" $image_title "class" $image_classes) }}
-                    {{ else }}
-                        <img src="{{ .Params.customer_logo }}" class="{{ $image_classes }}" alt="{{ $image_title }}" />
-                    {{ end }}
-                {{ end }}
-            {{ end }}
-            {{ .Content }}
         </div>
     </section>
 
-    {{ if not .Params.hide_pulumi_footer }}
-        <section class="mt-8 pb-8 px-4 md:px-0">
-            <div class="container mx-auto max-w-4xl py-8 border-t border-gray-300">
-                <h3>Pulumi Corporation</h3>
-                <p>
-                    Pulumi's cloud engineering platform brings infrastructure, developer, and security teams together through a unified software engineering process that tames cloud
-                    complexity and accelerates innovation. Using the Pulumi platform, teams can build, deploy, and manage modern cloud applications faster and with more confidence,
-                    using any language, any architecture and any cloud. Pulumi lets teams build Universal Infrastructure as Code using popular programming languages (Python,
-                    JavaScript, TypeScript, Go, .NET/C#, Java) and markup languages (YAML, JSON, CUE). It enables deploying infrastructure and applications together through a unified
-                    delivery process. Finally, teams can manage cloud applications with Policy as Code, better visibility, and controls.
-                </p>
-            </div>
-        </section>
+    {{/* Quote block */}}
+    {{ with .Params.quote_block }}
+    <div class="max-w-6xl mx-auto w-full">
+        {{ partial "template-partials/template-case-study-hero.html" (dict
+            "customer_logo" $.Params.customer_logo
+            "customer_name" $.Params.customer_name
+            "quote" .quote
+            "quote_attrib" .quote_attrib
+            "headline_stat" .headline_stat
+            "headline" .headline
+        ) }}
+    </div>
     {{ end }}
 
-    {{ partial "learnmore-contactus.html" . }}
+    {{/* Mobile sidebar nav (visible below lg) */}}
+    {{ with .Params.sections }}
+    <div class="lg:hidden">
+        {{ partial "template-partials/template-sidebar-nav.html" (dict "sections" .) }}
+    </div>
+    {{ end }}
+
+    {{/* Executive summary + content with optional sidebar */}}
+    <div class="flex flex-row gap-12 max-w-6xl mx-auto w-full">
+        {{/* Main content column */}}
+        <div class="flex-1 min-w-0">
+            <div class="max-w-4xl template-sidebar-content">
+                {{ if .Params.exec_summary }}
+                <section id="executive-summary" class="pb-8 mb-8 border-b border-gray-300">
+                    <h2>Executive summary</h2>
+                    <p class="description">
+                        {{ .Params.exec_summary | markdownify }}
+                    </p>
+                </section>
+                {{ end }}
+
+                {{ .Content }}
+            </div>
+        </div>
+
+        {{/* Sidebar nav (visible at lg+) */}}
+        {{ with .Params.sections }}
+        <div class="hidden lg:block w-64 flex-shrink-0 self-start sticky top-36">
+            {{ partial "template-partials/template-sidebar-nav.html" (dict "sections" .) }}
+        </div>
+        {{ end }}
+    </div>
+
+    {{/* Footer CTA */}}
+    {{ partial "template-partials/template-footer-cta.html" dict }}
+
+</div>
 {{ end }}

@@ -1,0 +1,61 @@
+{{/*
+    Template Case Study Hero Partial
+
+    A single-panel card for featuring a customer quote and headline stat.
+    Used on the case-studies single page (quote block).
+
+    Parameters:
+    - customer_logo: Path to customer logo image
+    - customer_name: Customer company name
+    - quote: Customer quote text
+    - quote_attrib: Quote attribution (optional)
+    - headline_stat: Large stat number/text (optional)
+    - headline: Stat description text (optional)
+    - link: Link to case study page (optional, renders a CTA button)
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $customerLogo := .customer_logo }}
+{{ $customerName := .customer_name }}
+{{ $quote := .quote }}
+{{ $quoteAttrib := .quote_attrib }}
+{{ $headlineStat := .headline_stat }}
+{{ $headline := .headline }}
+{{ $link := .link }}
+{{ $anchor := .anchor }}
+
+<div class="template-case-study-hero rounded-2xl border border-violet-300 bg-violet-100 p-8 md:p-12"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="flex flex-col md:flex-row md:gap-12">
+        {{/* Left: quote */}}
+        <div class="flex-1">
+            {{ if $quote }}
+            <p class="case-study-hero-quote">{{ $quote | markdownify }}</p>
+            {{ end }}
+
+            {{ if $quoteAttrib }}
+            <p class="case-study-hero-attrib">— {{ $quoteAttrib }}</p>
+            {{ end }}
+
+            {{ if $link }}
+            <div class="flex flex-row gap-4 mt-8">
+                <a href="{{ $link }}" class="btn-primary-template-variant inline-flex items-center gap-2">
+                    <span>Read the story</span>
+                    <span>&rarr;</span>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+
+        {{/* Right: stat */}}
+        {{ if or $headlineStat $headline }}
+        <div class="case-study-hero-stat-panel">
+            {{ if $headlineStat }}
+            <div class="case-study-hero-stat">{{ $headlineStat }}</div>
+            {{ end }}
+            {{ if $headline }}
+            <div class="case-study-hero-headline">{{ $headline | markdownify }}</div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</div>
