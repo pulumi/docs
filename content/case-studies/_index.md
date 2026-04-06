@@ -1,9 +1,8 @@
 ---
 title: Case Studies
-description: Discover why thousands of innovative companies, from startups to global enterprises, use Pulumi to build and manage their cloud infrastructure.
+description: See how our customers are using Pulumi to solve complex, real-world infrastructure challenges at scale.
 meta_desc: |
-    See how our customers are using Pulumi to simplify cloud management, improve operations,
-    reduce costs and scale their services.
+    See how our customers are using Pulumi to solve complex, real-world infrastructure challenges at scale.
 meta_image: "/images/case-studies/case-studies-logos.png"
 
 aliases:
