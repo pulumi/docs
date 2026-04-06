@@ -120,7 +120,6 @@ testimonial:
   title: former Head of Engineering, Cloud Platform
   company: Snowflake
   logo: /logos/customers/snowflake-logo.svg
-  bg_image: /images/google-next/snowflake-background.png
   anchor: testimonial
 
 location:

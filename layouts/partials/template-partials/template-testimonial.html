@@ -1,8 +1,8 @@
 {{/*
-    Template Testimonial Product Partial
+    Template Testimonial Partial
 
-    Product-page variant: dark grey card, two-column layout (quote left, logo and
-    attribution right). No purple; white text on dark grey with subtle border and shadow.
+    Two-column layout: quote left, logo and attribution right.
+    Renders on a violet-100 background with a decorative SVG.
 
     Parameters:
     - quote: Testimonial quote (supports markdown)
@@ -23,7 +23,7 @@
 {{ $anchor := .anchor }}
 
 <section class="template-testimonial template-testimonial-bg-{{ $bg }} relative overflow-hidden rounded-2xl px-4 py-8 md:px-16 md:py-20"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class=" flex flex-col lg:flex-row gap-8 lg:gap-16 lg:items-center relative z-10">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 lg:items-center relative z-10">
         <div class="flex-1 lg:max-w-[75%]">
             {{ if $quote }}
             <blockquote class="text-xl md:text-3xl text-left border-0 font-semibold m-0">
