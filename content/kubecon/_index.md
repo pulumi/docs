@@ -119,7 +119,6 @@ testimonial:
   author: Platform Engineering Team, BMW
   company: BMW
   logo: /logos/customers/bmw-shortened.svg
-  bg_image: /images/kubecon/bmw-background.png
   anchor: testimonial
 
 location:

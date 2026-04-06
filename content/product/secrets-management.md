@@ -47,7 +47,7 @@ sections:
     poster_alt: Pulumi ESC overview — Watch Now
     anchor: esc-overview
 
-  - type: testimonial_product
+  - type: testimonial
     quote: |
       With Pulumi ESC, our developers get dynamic AWS and Azure credentials on-demand. Onboarding new developers is quick and secure, with no more manually filling in .env templates.
     author: Liam White
@@ -95,7 +95,7 @@ sections:
           Support for custom secret stores through our plugin architecture. Integrate with any system.
     anchor: features
 
-  - type: testimonial_product
+  - type: testimonial
     background: 2
     quote: |
       Pulumi ESC has been a lifesaver for us. It's nice to throw everything behind an ESC environment and eliminate one-off granting IAM permissions and other issues related to static credentials.

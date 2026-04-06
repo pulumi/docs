@@ -1,13 +1,16 @@
 {{/*
     Template Testimonial Partial
 
+    Two-column layout: quote left, logo and attribution right.
+    Renders on a violet-100 background with a decorative SVG.
+
     Parameters:
-    - quote: Testimonial quote
-    - author: Author name
-    - title: Author title
-    - company: Company name
-    - logo: Logo path
-    - bg_image: Optional background image path
+    - quote: Testimonial quote (supports markdown)
+    - author: Author name (e.g. "Austin Byers")
+    - title: Author title/role (e.g. "Principal Platform Engineer")
+    - company: Company name (for logo alt)
+    - logo: Logo path (displayed in right column)
+    - background: Optional background variant — 1 or 2 (defaults to 1)
     - anchor: Optional anchor for section id
 */}}
 
@@ -16,23 +19,36 @@
 {{ $title := .title }}
 {{ $company := .company }}
 {{ $logo := .logo }}
-{{ $bgImage := .bg_image }}
+{{ $bg := .background | default 1 }}
 {{ $anchor := .anchor }}
 
-<section class="rounded-2xl template-testimonial px-12 py-24 {{ if not $bgImage }}bg-violet-700{{ end }}"{{ if $anchor }} id="{{ $anchor }}"{{ end }} {{ if $bgImage }}style="background-image: url('{{ $bgImage }}'); background-size: cover; background-position: center;"{{ end }}>
-        {{ if $logo }}
-        <div class="mb-8">
-            <img src="{{ $logo }}" alt="{{ $company }}" class="h-16 w-auto" />
+<section class="template-testimonial template-testimonial-bg-{{ $bg }} relative overflow-hidden rounded-2xl px-4 py-8 md:px-16 md:py-20"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 lg:items-center relative z-10">
+        <div class="flex-1 lg:max-w-[75%]">
+            {{ if $quote }}
+            <blockquote class="text-xl md:text-3xl text-left border-0 font-semibold m-0">
+                "{{ $quote | markdownify }}"
+            </blockquote>
+            {{ end }}
         </div>
-        {{ end }}
-        {{ if $quote }}
-        <p class="template-testimonial-quote w-full md:w-3/4">
-            "{{ $quote }}"
-        </p>
-        {{ end }}
-        {{ if or $author $title $company }}
-        <div class="template-testimonial-credit">
-            {{ if $author }}<span class="">— {{ $author }}</span>{{ end }}{{ if $title }}, {{ if $author }} {{ end }}<span>{{ $title }}</span>{{ end }}
+        <div class="flex flex-col items-start lg:items-end lg:w-[25%] lg:min-w-[280px] flex-shrink-0">
+            {{ if $logo }}
+            <div class="template-testimonial-logo mb-6">
+                {{ $fpSrc := strings.TrimPrefix "/" $logo }}
+                {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+                {{ if $fpAsset }}
+                    {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" $company) }}
+                {{ else }}
+                    <img src="{{ $logo }}" alt="{{ $company }}" />
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ if $author }}
+            <p class="text-black font-bold m-0 mb-1 text-xl">{{ $author }}</p>
+            {{ end }}
+            {{ if $title }}
+            <p class="text-black m-0">{{ $title }}</p>
+            {{ end }}
         </div>
-        {{ end }}
+    </div>
 </section>

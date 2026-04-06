@@ -50,7 +50,7 @@ sections:
     poster_alt: Meet Neo – Your Newest Platform Engineer
     anchor: demo
 
-  - type: testimonial_product
+  - type: testimonial
     quote: |
       Our goal has always been to minimize the time it takes an engineer to go from an idea to an experiment in production. We're excited to see Pulumi pushing automation further.
     author: Jk Jensen
