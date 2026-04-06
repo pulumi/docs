@@ -19,9 +19,21 @@
   {{ $schema = merge $schema (dict "startDate" .) }}
 {{ end }}
 
-{{/* Add duration if available */}}
+{{/* Add duration in ISO 8601 format (required by Schema.org) */}}
 {{ with .Params.duration }}
-  {{ $schema = merge $schema (dict "duration" .) }}
+  {{ $raw := . | strings.TrimLeft "\"" | strings.TrimRight "\"" }}
+  {{ $iso := "" }}
+  {{/* Parse "N minutes", "N hour(s)", "N day(s)" into ISO 8601 durations */}}
+  {{ if findRE `^\d+\s*minutes?$` $raw }}
+    {{ $iso = printf "PT%sM" (index (findRE `\d+` $raw) 0) }}
+  {{ else if findRE `^\d+\s*hours?$` $raw }}
+    {{ $iso = printf "PT%sH" (index (findRE `\d+` $raw) 0) }}
+  {{ else if findRE `^\d+\s*days?$` $raw }}
+    {{ $iso = printf "P%sD" (index (findRE `\d+` $raw) 0) }}
+  {{ end }}
+  {{ with $iso }}
+    {{ $schema = merge $schema (dict "duration" .) }}
+  {{ end }}
 {{ end }}
 
 {{/* Add location — default to virtual when not specified, since Google requires location for Event schema */}}
@@ -63,15 +75,18 @@
   )
 ) }}
 
-{{/* Add image if available */}}
+{{/* Add image — use meta_image if set, otherwise fall back to default OG image (required by Google for Event rich results) */}}
+{{ $imageURL := "" }}
 {{ with .Params.meta_image }}
-  {{ $imageURL := . }}
+  {{ $imageURL = . }}
   {{ if not (hasPrefix . "http") }}
     {{ $imageURL = printf "%s%s" $.Permalink . }}
   {{ end }}
-  {{ $schema = merge $schema (dict
-    "image" $imageURL
-  ) }}
+{{ else }}
+  {{ $imageURL = printf "%s%s" "https://www.pulumi.com" "/logos/brand/og-default.png" }}
+{{ end }}
+{{ with $imageURL }}
+  {{ $schema = merge $schema (dict "image" .) }}
 {{ end }}
 
 {{/* Add presenter/performer if available */}}
