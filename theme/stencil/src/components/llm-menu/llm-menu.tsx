@@ -154,7 +154,7 @@ export class LlmMenu {
                     <button class="llm-menu-trigger text-gray-600 hover:text-gray-700 text-xs" onClick={() => (this.isOpen = !this.isOpen)}>
                         <i class="ph ph-copy mr-2" style={{ width: "14px" }}></i>
                         Copy Page
-                        <i class={`ph ph-caret-{this.isOpen ? "up" : "down"}`}></i>
+                        <i class={`ph ph-caret-${this.isOpen ? "up" : "down"}`}></i>
                     </button>
 
                     {this.isOpen && (
