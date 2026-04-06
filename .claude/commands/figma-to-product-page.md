@@ -65,7 +65,7 @@ The orchestrator partial is `layouts/partials/product-page-content.html`. It loo
 | Centered section intro (optional image below) | `section_header` | `template-section-header` |
 | Three equal-width feature columns | `three_column` | `template-three-column` |
 | Two side-by-side cards | `two_column` | `template-two-column` |
-| Customer quote | `testimonial_product` | `template-testimonial-product` |
+| Customer quote | `testimonial` | `template-testimonial` |
 | Stat counters | `counter_cards` | `template-counter-cards` |
 
 **Extension rules:**

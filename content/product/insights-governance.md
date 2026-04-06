@@ -83,7 +83,7 @@ sections:
     image_alt: AI-powered remediation workflow in Pulumi Neo
     anchor: remediate
 
-  - type: testimonial_product
+  - type: testimonial
     quote: |
       We gave our auditors access to our policy packs because it's far easier to understand and prove controls in code than in docs and diagrams. With Pulumi's Policy as Code approach, that manual review process has gone away. We've reduced our Authority to Operate (ATO) timeline from a year and a half to expecting approval in three months.
     author: Michael Hunter
