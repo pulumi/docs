@@ -16,9 +16,66 @@ menu:
         identifier: ai-tasks
 ---
 
-Tasks are Neo's primary unit of work. Each task represents a distinct conversation where you describe what you want to accomplish, and Neo plans and executes the necessary infrastructure changes. Tasks provide structure, context, and boundaries for Neo's operations.
+Tasks are Neo's primary unit of work. Each task is a conversation where you describe what you want to accomplish, and Neo handles the infrastructure changes.
 
-## Key Characteristics
+## How tasks work
+
+When you start a task, Neo outlines the steps it intends to take so you can see its approach before it begins. For example, if you ask Neo to update outdated Lambda functions, it might outline:
+
+1. Identify all Lambda functions using Node.js
+1. Determine the appropriate target runtime for each
+1. Create code changes to update the runtime versions
+1. Run a preview to validate all changes
+1. Create a pull request with the updates
+
+From there, Neo moves to execution, working through each step and seeking approvals based on the active [task mode](#task-modes).
+
+## Plan Mode
+
+For complex tasks, you can enable Plan Mode for thorough upfront discovery before Neo starts executing. Without Plan Mode, Neo outlines its approach and moves forward. With Plan Mode, Neo shifts into a dedicated research-and-planning phase where it investigates your environment in depth, synthesizes what it finds, and iterates with you before anything changes.
+
+When Plan Mode is enabled, Neo:
+
+1. **Investigates your environment** by examining existing infrastructure, reading relevant code, checking dependencies, and researching patterns, showing you what it finds in real time
+1. **Synthesizes a grounded plan** explaining what it will do and why, referencing specific things it discovered like stack configurations and dependencies
+1. **Iterates with you** through normal conversation so you can challenge assumptions, ask for alternatives, or request more detail
+1. **Waits for your explicit approval** before any execution begins
+
+To enable Plan Mode, select the plan button when starting a task.
+
+### When to use Plan Mode
+
+If your task is straightforward and you could describe the outcome in a sentence, skip Plan Mode and let Neo work directly. Use Plan Mode when the task is complex enough that upfront research changes the outcome:
+
+- **Complex multi-stack operations** where understanding dependencies matters
+- **Unfamiliar infrastructure** where discovery reduces churn
+- **Autonomous execution** where plan approval is your key control point before Neo runs without step-by-step oversight
+
+## Task modes
+
+Task modes control how much autonomy Neo has during execution. At any time during a task, the operating mode can be set to:
+
+- **Review mode** (default): Running `pulumi preview`, running `pulumi up`, and opening a PR all require approval.
+- **Balanced mode**: Neo will only request approval before running `pulumi up`.
+- **Auto mode**: Neo will not request any approvals.
+
+Task modes are independent of Plan Mode. Task modes control what approvals Neo requires during execution, while Plan Mode controls what happens before execution. You can combine them: for example, use Plan Mode with Auto Mode to review the approach thoroughly up front, then let Neo execute without stopping.
+
+## Approvals and previews
+
+Depending on the task mode, Neo seeks approval before taking certain actions like running `pulumi up` or opening a PR.
+
+At any time, you can ask Neo to run a [pulumi preview](/docs/iac/cli/commands/pulumi_preview/). If Neo proposes code changes as part of a task, it will also request to run a preview to validate the changes. [Learn more](/docs/ai/running-previews/) about Neo and previews.
+
+## Pull requests
+
+If a task results in code modifications, Neo will offer to open a [pull request](/docs/ai/pull-requests/) once you are satisfied with the implementation. PRs can also be modified after they have been opened.
+
+## Context, sharing, and history
+
+### Setting entity context
+
+You can set the [stack](/docs/iac/concepts/stacks/) and [repository](/docs/iac/concepts/projects/) context when initiating a task. This helps Neo understand exactly where to focus its operations.
 
 ### Ownership and sharing
 
@@ -30,54 +87,10 @@ Sharing preserves security boundaries:
 - Links to stacks or resources within the shared task still enforce the viewer's existing [RBAC](/docs/pulumi-cloud/access-management/rbac/) permissions
 - The original task owner retains full control
 
-This design enables collaboration without creating opportunities for privilege escalation.
+### Interruptions and resuming
 
-### Task Modes
+Tasks continue running even if you close your browser or navigate away. Neo will keep working until it finishes the task or encounters a situation that needs your approval. When you return, it will show you any progress made while you were away.
 
-Neo utilizes modes to determine the level of autonomy for a given task. At any time during a task lifecycle, the operating mode can be set to:
+### Task history
 
-- Review mode (default): The proposed task plan, running `pulumi preview`, running `pulumi up`, and opening a PR all require approval.
-- Balanced mode: Neo will only request approval before running `pulumi up`.
-- Auto mode: Neo will not request any approvals.
-
-![The modes Neo can operate in.](neo-operating-modes.png)
-
-### Task Plans
-
-When you give Neo a complex request, it creates a task plan outlining the steps it will take to accomplish your goal. This plan provides transparency into Neo's approach and gives you the opportunity to adjust the strategy before execution begins.
-
-#### Example Plan
-
-The following is a representative plan in response to a user requesting to locate and update outdated Lambda functions:
-
-1. Identify all Lambda functions using Node.js
-2. Determine the appropriate target runtime for each
-3. Create code changes to update the runtime versions
-4. Run a preview to validate all changes
-5. Create a pull request with the updates
-
-### Approvals
-
-Neo will seek approval before opening a PR or running a preview.
-
-### Pulumi Previews
-
-At any time, you can explicitly ask Neo to run a [pulumi preview](/docs/iac/cli/commands/pulumi_preview/). As well, if Neo proposes code changes as part of a task, it will request to run a preview to help obtain feedback on the changes. [Learn more](/docs/ai/running-previews/) about Neo and previews.
-
-### Pull Requests
-
-If a task results in Neo proposing code modifications, it will offer to open a [pull request](/docs/ai/pull-requests/) once the user is satisfied with the implementation. PRs can also be modified after they've been opened.
-
-## Setting the Entity Context
-
-You can explicitly set the [stack](/docs/iac/concepts/stacks/) and [repository](/docs/iac/concepts/projects/) context when initiating a task. This helps Neo understand exactly where to focus its operations.
-
-![Neo asking to run a preview](entity-context.png)
-
-## Interruptions and Resuming
-
-Tasks continue running even if you close your browser or navigate away. When you return to the task later, Neo will have continued working and will show you any progress made while you were away. You can pick up the conversation exactly where you left off, with full context preserved.
-
-## Task History
-
-Neo tasks are saved and accessible through the Agent Tasks page in Pulumi Cloud. Though the entire task history is available at any time, the task cache may be lost if the agent idles for an hour or more.
+Neo tasks are saved and accessible through the Agent Tasks page in Pulumi Cloud. The entire task history is available at any time, though the task cache may be lost if the agent idles for an hour or more.
