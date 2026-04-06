@@ -1,8 +1,8 @@
 .note {
     display: flex;
     flex-direction: row;
-    border-radius: 4px;
-    padding: 10px 12px 12px 12px;
+    border-radius: 16px;
+    padding: 16px;
     align-items: flex-start;
     gap: 12px;
     margin: 12px 0;
@@ -28,8 +28,8 @@
     }
 
     i {
-        font-size: 15px;
-        margin-top: 2px;
+        font-size: 20px;
+        margin-top: 0;
     }
 
     div.icon-and-line {
@@ -44,8 +44,8 @@
         border-radius: 100px;
         margin-top: 4px;
         position: absolute;
-        top: 28px;
-        height: calc(100% - 46px);
+        top: 34px;
+        height: calc(100% - 52px);
     }
 
     div.content {

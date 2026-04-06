@@ -1,12 +1,13 @@
 .docs-list-main .docs-main-content,
 body.section-registry {
     h1 {
-        font-family: Gilroy;
+        font-family: 'Inter';
         line-height: 1.5;
         font-weight: 600;
         font-size: 30px;
         color: map-get($gray, 950);
         margin: 24px 0 16px;
+        letter-spacing: -0.02em;
     }
 
     div.special-h1 {
@@ -24,7 +25,7 @@ body.section-registry {
 
     section.docs-content {
         h1, h2, h3, h4, h5, h6 {
-            font-family: Gilroy;
+            font-family: 'Inter';
             line-height: 1.5;
             scroll-margin-top: 60px;
         }
@@ -46,6 +47,7 @@ body.section-registry {
             font-size: 30px;
             color: map-get($gray, 950);
             margin: 24px 0 16px;
+            letter-spacing: -0.02em;
         }
 
         h2 {
@@ -53,6 +55,7 @@ body.section-registry {
             font-size: 24px;
             color: map-get($gray, 950);
             margin: 32px 0 12px;
+            letter-spacing: -0.02em;
         }
 
         h3 {
@@ -60,6 +63,7 @@ body.section-registry {
             font-size: 20px;
             color: map-get($gray, 950);
             margin: 24px 0 8px;
+            letter-spacing: -0.02em;
         }
 
         h4 {
@@ -124,7 +128,7 @@ body.section-registry {
         div.highlight pre,
         code,
         .font-mono {
-            font-family: 'Iosevka';
+            font-family: 'Monaspace Neon Var';
             font-weight: 400;
         }
     }
@@ -727,7 +731,7 @@ body.section-registry {
             flex-direction: column;
             gap: 24px;
             ul li.active {
-                border-left: 2px solid #805ac3;
+                border-left: 2px solid #673EAC;
                 padding-left: 8px;
 
                 a {
