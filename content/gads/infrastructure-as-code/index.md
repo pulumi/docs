@@ -213,7 +213,7 @@ stats:
         number: "350,000+"
         description: "Community members"
     company:
-        number: "3,700+"
+        number: "4,000+"
         description: "Companies in production"
     integration:
         number: "170+"

@@ -44,7 +44,7 @@ Displays a horizontal banner of company/partner logos with optional text above.
 
 **Frontmatter:**
 ```yaml
-logos_text: "Trusted by over 3,700 innovative companies."  # optional
+logos_text: "Trusted by over 4,000 innovative companies."  # optional
 logos:
   - src: "/logos/customers/company1.svg"
     alt: "Company 1"
