@@ -19,7 +19,7 @@ social:
 
 Any time your application needs to authenticate with Azure Active Directory, you need an app registration with a client secret. But those secrets expire, and if you don't rotate them in time, your app loses access.
 
-If you or your team manages Azure app registrations, you know that keeping track of client secrets is a constant hassle. Forgetting to rotate them before they expire can lead to broken authentication and unexpected outages. With [Pulumi ESC](/docs/esc)'s `azure-app-secret` rotator, you can automate client secret rotation for your Azure apps, so you never have to worry about expired credentials again!
+If you or your team manages Azure app registrations, you know that keeping track of client secrets is a constant hassle. Forgetting to rotate them before they expire can lead to broken authentication and unexpected outages. With [Pulumi ESC](/docs/esc)'s `azure-app-secret` rotator, you can automate client secret rotation for your Azure apps, so you never have to worry about expired credentials again.
 
 <!--more-->
 
