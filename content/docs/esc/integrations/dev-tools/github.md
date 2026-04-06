@@ -2,7 +2,7 @@
 title_tag: GitHub Integration | Pulumi ESC
 title: GitHub
 h1: "Pulumi ESC GitHub Action"
-meta_desc: This page provides an overview of how to use Pulumi ESC with GitHub.
+meta_desc: This page provides an overview of how to use Pulumi ESC with GitHub Actions, including how to authenticate using OIDC or a Pulumi access token.
 weight: 3
 menu:
   esc:
@@ -18,11 +18,50 @@ The [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action
 - Optionally, if an `environment` is passed in as an input, the action will inject all environment variables (specifically the keys under `values.environmentVariables` and projected files under `values.files`) from the environment into the current action/workflow environment.
 - If specific keys are passed in using the `keys` input - only those keys will be injected into the GitHub Workflow.
 
-### Example
+## Authentication
+
+Before using the Pulumi ESC GitHub Action, your workflow must authenticate with Pulumi Cloud. There are two supported approaches.
+
+### OIDC (recommended)
+
+The recommended approach uses OpenID Connect (OIDC) with the [`pulumi/auth-actions`](https://github.com/marketplace/actions/pulumi-auth-action) GitHub Action. Rather than storing a long-lived Pulumi access token as a repository secret, OIDC allows GitHub Actions to exchange a short-lived identity token for a scoped Pulumi access token at runtime.
+
+Before you can use OIDC, you must configure Pulumi Cloud to trust GitHub Actions as an OIDC issuer. Follow the [Configuring OpenID Connect for GitHub](/docs/administration/access-identity/oidc-client/github/) guide to complete this one-time setup in your Pulumi organization.
+
+Once that trust relationship is established, add the following permissions block to your workflow so that GitHub can issue OIDC tokens:
+
+```yaml
+permissions:
+  id-token: write
+  contents: read
+```
+
+Then include a `pulumi/auth-actions` step before any ESC action steps:
+
+```yaml
+- name: Authenticate with Pulumi Cloud
+  uses: pulumi/auth-actions@v1
+  with:
+    organization: your-org
+    requested-token-type: urn:pulumi:token-type:access_token:organization
+```
+
+The `id-token: write` permission is required for GitHub Actions to issue OIDC tokens to your workflow. The `requested-token-type` value determines the scope of the resulting Pulumi token; see [token types](/docs/administration/access-identity/oidc-client/#token-types-by-edition) for details on which types are available for your Pulumi edition.
+
+### Access token
+
+As an alternative to OIDC, you can authenticate with a long-lived [Pulumi access token](/docs/pulumi-cloud/access-management/access-tokens/). Store the token as a repository secret and set it as the `PULUMI_ACCESS_TOKEN` environment variable in your workflow:
+
+```yaml
+env:
+  PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+Long-lived access tokens are simpler to set up but require you to manage token rotation and ensure the token has appropriate permissions for your workflow.
+
+## Example
 
 This example shows how to inject all environment variables from the `tinyco/someProject/myEnv` environment into the GitHub Workflow from where it is called.
-
-It is recommended to use the [pulumi/auth-actions](https://github.com/marketplace/actions/pulumi-auth-action) GitHub Action to authenticate with Pulumi Cloud to avoid having to use a long-lived access token in your workflow. The `pulumi/auth-actions` action will authenticate with Pulumi Cloud and generate a short-lived token and set it as the `PULUMI_ACCESS_TOKEN` environment variable.
 
 ```yaml
 on:
@@ -55,7 +94,7 @@ jobs:
           echo "TEST_ENV=$TEST_ENV"
 ```
 
-### Use Cases
+## Use cases
 
 - **Injecting secrets into GitHub Actions**: The GitHub Action can be used to inject secrets into GitHub Actions workflows, allowing you to dynamically access your secrets from ESC as they are needed, rather than storing them in GitHub Secrets as long-lived static secrets. This allows you to leverage many of ESC's key features, such as automatic secret rotation and short-lived dynamic credentials and secrets and prevents secret sprawl.
 - **Running ESC commands in GitHub Actions**: The GitHub Action can be used to run any arbitrary ESC commands in GitHub Actions workflows, beyond just injecting secrets. This allows you to use ESC as part of your CI/CD pipeline and create, update, or open environments automatically as part of your workflow.
