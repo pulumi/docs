@@ -1,6 +1,6 @@
 <ul class="p-0 list-none text-gray-700  text-sm">
     <li>
-        <i class="fas fa-book text-center w-6 text-gray-500"></i>
+        <i class="ph ph-book-open-text text-center w-6 text-gray-500"></i>
         {{ $topicCount := len (.module.CurrentSection.Pages) }}
         {{ $topicCount }}
         topic{{ if ne $topicCount 1 }}s{{ end }}
@@ -10,7 +10,7 @@
         {{ range .module.CurrentSection.Pages }}
             {{ $timeToComplete = (add $timeToComplete .Params.estimated_time) }}
         {{ end }}
-        <i class="fas fa-stopwatch text-center w-6 text-gray-500"></i>
+        <i class="ph ph-timer text-center w-6 text-gray-500"></i>
         About {{ $timeToComplete }} minutes
     </li>
 </ul>

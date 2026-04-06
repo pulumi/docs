@@ -27,15 +27,15 @@ sections:
 
       Build on AWS, Azure, Google Cloud, Kubernetes, and hundreds of other providers. Our open source engine is Apache 2.0 licensed and will always be free.
     cards:
-      - icon: fa-code
+      - icon: ph-code
         title: Use real code, not DSLs
         description: |
           Write infrastructure with loops, conditionals, functions, and classes. Reuse code, catch errors at compile time, and refactor with confidence.
-      - icon: fa-cloud
+      - icon: ph-cloud
         title: Build on any cloud
         description: |
           Access AWS, Azure, Google Cloud, Kubernetes, and hundreds of providers through a unified, consistent API. Same-day updates for new cloud features.
-      - icon: fa-check
+      - icon: ph-check
         title: Test before you ship
         description: |
           Preview changes before deploying them. Write unit tests for your infrastructure. Run integration tests against ephemeral environments.
@@ -103,15 +103,15 @@ sections:
     icon_style: black
     icon_layout: above
     columns:
-      - icon: fa-check-square
+      - icon: ph-check-square
         title: Production-ready patterns
         description: |
           Ship EKS clusters, serverless apps, or entire platforms with one line of code using well-architected components.
-      - icon: fa-th-large
+      - icon: ph-squares-four
         title: Hundreds of providers
         description: |
           Full API coverage for AWS, Azure, Google Cloud, Kubernetes, plus Cloudflare, Datadog, GitHub, and hundreds more.
-      - icon: fa-rocket
+      - icon: ph-rocket
         title: From VMs to Kubernetes
         description: |
           Manage traditional infrastructure, containers, serverless, and Kubernetes with one tool, one workflow.
@@ -131,15 +131,15 @@ sections:
     icon_style: black
     icon_layout: above
     columns:
-      - icon: fa-code-branch
+      - icon: ph-git-branch
         title: Git-native workflow
         description: |
           Every infrastructure change is a pull request. Review, comment, approve. Full audit trail built in.
-      - icon: fa-bug
+      - icon: ph-bug
         title: Catch bugs before production
         description: |
           Run [unit tests](/docs/iac/guides/testing/unit/) in milliseconds. Spin up ephemeral environments for [integration tests](/docs/iac/guides/testing/integration/). Fail fast, fix fast.
-      - icon: fa-cogs
+      - icon: ph-gear-six
         title: Works with your CI/CD
         description: |
           Integrates with [any CI/CD system](/docs/iac/packages-and-automation/continuous-delivery/). GitHub Actions, GitLab, Jenkins, CircleCI – your choice. Or use the [Kubernetes operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/) for GitOps.
@@ -158,39 +158,39 @@ sections:
     icon_style: black
     icon_layout: above
     columns:
-      - icon: fa-lock
+      - icon: ph-lock
         title: Encrypted state management
         description: |
           Never lose state again. Automatic versioning and encryption at rest. Pulumi Cloud handles it all, or self-host with S3/Azure Blob.
-      - icon: fa-key
+      - icon: ph-key
         title: Built-in secrets management
         description: |
           No more secrets in plaintext. Automatic encryption for sensitive values. Integrate with AWS Secrets Manager, Azure Key Vault, or use [Pulumi ESC](/product/secrets-management/) for centralized secrets.
-      - icon: fa-check-circle
+      - icon: ph-check-circle
         title: Ship with confidence
         description: |
           Review every change before it ships. Full history and audit logs. Roll back to any previous state when needed.
-      - icon: fa-globe
+      - icon: ph-globe
         title: See everything, everywhere
         description: |
           Unified view across all your clouds. Search across AWS, Azure, and GCP. Find that rogue EC2 instance in seconds.
-      - icon: fa-plug
+      - icon: ph-plug
         title: Automation API
         description: |
           Infrastructure as code as a library. Embed Pulumi in your app. Build custom CLIs, portals, or platforms. Full programmatic control.
-      - icon: fa-users
+      - icon: ph-users-three
         title: Self-service infrastructure
         description: |
           Let engineers provision their own infrastructure safely. Templates, guardrails, and approval workflows. Works with Backstage or build your own.
-      - icon: fa-shield-alt
+      - icon: ph-shield
         title: Enterprise SSO & RBAC
         description: |
           SAML, SCIM, GitHub, GitLab, Atlassian. Fine-grained permissions. Temporary access tokens. SOC 2 Type II compliant.
-      - icon: fa-gavel
+      - icon: ph-gavel
         title: Policy as code
         description: |
           Enforce security and compliance automatically. Hundreds of built-in policies or write your own. Block non-compliant infrastructure before it ships.
-      - icon: fa-history
+      - icon: ph-clock-counter-clockwise
         title: Complete audit trail
         description: |
           Every action logged. Who changed what, when, and why. Export to SIEM. Compliance reports at your fingertips.

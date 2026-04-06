@@ -17,15 +17,15 @@ pulumi-convert {
 
             .icon {
                 @apply ml-2;
-                @extend .fas;
-                @extend .fa-arrow-circle-right;
+                @extend .ph;
+                @extend .ph-arrow-circle-right;
             }
 
             &.converting {
                 .icon {
-                    @extend .fa;
-                    @extend .fa-cog;
-                    @extend .fa-spin;
+                    @extend .ph;
+                    @extend .ph-gear;
+                    @extend .ph-spin;
                 }
             }
 
@@ -155,13 +155,13 @@ pulumi-convert {
                     }
 
                     .btn-download {
-                        @extend .fas;
-                        @extend .fa-download;
+                        @extend .ph;
+                        @extend .ph-download-simple;
                     }
 
                     .btn-copy {
-                        @extend .fas;
-                        @extend .fa-copy;
+                        @extend .ph;
+                        @extend .ph-copy;
                     }
                 }
             }
@@ -180,17 +180,17 @@ pulumi-convert {
                 &.converting {
                     .icon {
                         @apply text-blue-200;
-                        @extend .fa;
-                        @extend .fa-cog;
-                        @extend .fa-spin;
+                        @extend .ph;
+                        @extend .ph-gear;
+                        @extend .ph-spin;
                     }
                 }
 
                 &.success {
                     .icon {
                         @apply text-green-300;
-                        @extend .fas;
-                        @extend .fa-check-circle;
+                        @extend .ph;
+                        @extend .ph-check-circle;
                     }
                 }
 
@@ -211,8 +211,8 @@ pulumi-convert {
 
                         .icon {
                             @apply mr-0 text-gray-700 transition-colors;
-                            @extend .fas;
-                            @extend .fa-times;
+                            @extend .ph;
+                            @extend .ph-x;
 
                             &:hover {
                                 @apply text-gray-800;
@@ -227,8 +227,8 @@ pulumi-convert {
 
                 &.error {
                     .icon {
-                        @extend .fas;
-                        @extend .fa-times;
+                        @extend .ph;
+                        @extend .ph-x;
                     }
 
                     .alert-error {
@@ -239,8 +239,8 @@ pulumi-convert {
                 &.warn {
                     .icon {
                         @apply text-yellow-300;
-                        @extend .fas;
-                        @extend .fa-exclamation-triangle;
+                        @extend .ph;
+                        @extend .ph-warning;
                     }
 
                     .alert-warn {
@@ -261,10 +261,10 @@ pulumi-convert {
             &.editor-output {
                 .editor-spinner {
                     @apply text-gray-700 absolute z-10 m-6 hidden;
-                    @extend .fa;
-                    @extend .fa-cog;
-                    @extend .fa-spin;
-                    @extend .fa-2x;
+                    @extend .ph;
+                    @extend .ph-gear;
+                    @extend .ph-spin;
+                    @extend .ph-2x;
                 }
 
                 &.converting {

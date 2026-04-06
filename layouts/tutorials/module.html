@@ -36,7 +36,7 @@
                         <ul class="list-none p-0">
                             {{ range .Params.youll_learn }}
                                 <li>
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <i class="ph ph-check text-green-500 mr-2"></i>
                                     <span>{{ . }}</span>
                                 </li>
                             {{ end }}
@@ -49,7 +49,7 @@
                         <ul class="list-none p-0">
                             {{ range .Params.prereqs }}
                                 <li>
-                                    <i class="far fa-circle text-gray-600 mr-2"></i>
+                                    <i class="ph ph-circle text-gray-600 mr-2"></i>
                                     <span>{{ . | markdownify }}</span>
                                 </li>
                             {{ end }}
@@ -76,12 +76,12 @@
                                     <a href="{{ .RelPermalink }}">{{ $page.Title }}</a>
                                 </span>
                                 <span class="text-sm text-gray-600 whitespace-nowrap md:mx-12">
-                                    <i class="far fa-clock md:text-center w-4 md:w-6 text-gray-500"></i>
+                                    <i class="ph ph-clock md:text-center w-4 md:w-6 text-gray-500"></i>
                                     {{ $page.Params.estimated_time }} minutes
                                 </span>
                                 <span class="hidden md:block ">
                                     <a href="{{ .RelPermalink }}">
-                                        <i class="fas fa-chevron-circle-right text-blue-600 p-2"></i>
+                                        <i class="ph-fill ph-caret-circle-right text-blue-600 p-2"></i>
                                     </a>
                                 </span>
                             </li>

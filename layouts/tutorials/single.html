@@ -45,7 +45,7 @@
                             <ul class="list-none p-0">
                                 {{ range .Params.youll_learn }}
                                     <li>
-                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        <i class="ph ph-check text-green-500 mr-2"></i>
                                         <span>{{ . }}</span>
                                     </li>
                                 {{ end }}
@@ -60,7 +60,7 @@
                             <ul class="list-none p-0">
                                 {{ range .Params.prereqs }}
                                     <li>
-                                        <i class="far fa-circle text-gray-600 mr-2"></i>
+                                        <i class="ph ph-circle text-gray-600 mr-2"></i>
                                         <span>{{ . | markdownify }}</span>
                                     </li>
                                 {{ end }}

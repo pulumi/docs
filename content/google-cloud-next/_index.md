@@ -47,15 +47,15 @@ features:
   image_alt: Pulumi code example for Google Cloud
   anchor: features
   features:
-    - icon: fa-code
+    - icon: ph-code
       title: Google Cloud infrastructure as code
       description: |
         See how teams use languages like TypeScript, Python, C#, and Go to provision GKE clusters, Cloud Run services, BigQuery datasets, and more, with changes previewed and tested before deployment.
-    - icon: fa-robot
+    - icon: ph-robot
       title: AI-managed infrastructure with Pulumi Neo
       description: |
         Watch Neo stand up new services, diagnose and fix failures, enforce policies, and migrate cloud resources managed from tools like Terraform — with human review at every step.
-    - icon: fa-cloud
+    - icon: ph-cloud
       title: Many clouds, one platform and workflow
       description: |
         See how teams manage Google Cloud alongside AWS, Azure, on-prem Kubernetes, and hundreds more cloud service providers with a single, unified platform and programming model.
@@ -94,19 +94,19 @@ three_column:
   title: How platform teams are using Pulumi
   anchor: why-pulumi
   columns:
-    - icon: fa-code
+    - icon: ph-code
       title: Infrastructure as real code
       description: |
         Manage Kubernetes clusters, container services, access policies and more in TypeScript, Python, Go, Java — with full IDE support, abstractions, tests, and components shareable as packages.
       cta_text: Learn more about IaC
       cta_link: /docs/iac/
-    - icon: fa-server
+    - icon: ph-hard-drives
       title: Zero operational toil
       description: |
         Handle state management, encrypted secrets, access control, deployment history, and more with Pulumi Cloud, so your team can focus on building and shipping your product.
       cta_text: Explore Pulumi Cloud
       cta_link: /docs/deployments/
-    - icon: fa-robot
+    - icon: ph-robot
       title: Self-service with guardrails
       description: |
         Give developers self-service infrastructure with approved patterns and policies enforced on every deployment. Use Neo to query your environments, diagnose failures, and handle routine tasks.

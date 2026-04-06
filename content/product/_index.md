@@ -25,15 +25,15 @@ sections:
     cta_text: Explore Pulumi IaC
     cta_link: /product/infrastructure-as-code/
     cards:
-      - icon: fa-code
+      - icon: ph-code
         title: Real programming languages
         description: |
           Use loops, conditionals, functions, and classes, catch errors at compile time, reuse code across projects, and refactor with confidence.
-      - icon: fa-th-large
+      - icon: ph-squares-four
         title: Hundreds of providers
         description: |
           Full API coverage for all major clouds: AWS, Azure, Google Cloud, and Kubernetes — plus service providers like Cloudflare, Datadog, GitHub.
-      - icon: fa-eye
+      - icon: ph-eye
         title: Test before you ship
         description: |
           Write unit tests for your infra code, integration tests for pre-prod environments, smoke tests for releases — all with industry standard tools.
@@ -49,15 +49,15 @@ sections:
     image: /images/product/overview/overview-neo.svg
     image_alt: Pulumi Neo AI assistant
     cards:
-      - icon: fa-cogs
+      - icon: ph-gear-six
         title: End-to-end automation
         description: |
           Describe what you need in plain English. Neo breaks it into steps, makes a plan, executes the changes, and keeps everything compliant.
-      - icon: fa-lightbulb
+      - icon: ph-lightbulb
         title: Instant cloud insights
         description: |
           Ask questions, get answers. Identify cost savings, failure patterns, and compliance violations with an AI agent that understands your infrastructure.
-      - icon: fa-shield-alt
+      - icon: ph-shield
         title: Enterprise controls
         description: |
           Neo respects your RBAC roles and policies, and human-in-the-loop approvals keep you in control — with full audit trails from prompt to deployment.
@@ -73,15 +73,15 @@ sections:
     image: /images/product/overview/overview-esc.svg
     image_alt: Pulumi ESC centralizing secrets from multiple providers
     cards:
-      - icon: fa-key
+      - icon: ph-key
         title: Eliminate secrets sprawl
         description: |
           Fetch secret values from any supported store with a single Pulumi Cloud access token. No more juggling multiple credentials manually.
-      - icon: fa-hourglass-half
+      - icon: ph-hourglass
         title: Dynamic credentials
         description: |
           Generate short-lived credentials with OpenID Connect (OIDC). Credentials are automatically revoked when their leases expire.
-      - icon: fa-globe
+      - icon: ph-globe
         title: Meets you where you are
         description: |
           Use it at the command line, in app code, or in CI/CD pipelines. Our CLI, APIs, SDKs, and Kubernetes operator ensure your config is always accessible.
@@ -97,15 +97,15 @@ sections:
     image: /images/product/overview/overview-governance.svg
     image_alt: Pulumi Insights resource search across clouds
     cards:
-      - icon: fa-server
+      - icon: ph-hard-drives
         title: Multi-cloud visibility
         description: |
           Run resource queries across AWS, Azure, and Google Cloud with AI-powered insights. Find what you're looking for in seconds.
-      - icon: fa-gavel
+      - icon: ph-gavel
         title: Policy as code
         description: |
           Enforce security and compliance rules automatically with over 150 built-in policies — or write your own in your language of choice.
-      - icon: fa-file-alt
+      - icon: ph-file-text
         title: Complete audit trail
         description: |
           Track every change, every action, and every user. Export to security and event management systems (SIEMs) for compliance reports.
@@ -121,15 +121,15 @@ sections:
     image: /images/product/overview/overview-idp.svg
     image_alt: Internal developer platform dashboard
     cards:
-      - icon: fa-cubes
+      - icon: ph-cube
         title: Golden paths
         description: |
           Platform engineers define reusable components and templates once, and every team gets proven, compliant patterns out of the box.
-      - icon: fa-sliders-h
+      - icon: ph-sliders-horizontal
         title: Self-service options
         description: |
           Code, low-code YAML, or no-code portals. Engineers can work the way they prefer with consistent governance.
-      - icon: fa-sitemap
+      - icon: ph-tree-structure
         title: Day-two operations
         description: |
           Drift detection, dependency management, and enterprise RBAC give you visibility and control across the full infrastructure lifecycle.

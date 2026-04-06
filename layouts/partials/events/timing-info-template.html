@@ -11,19 +11,19 @@
 <div class="template-timing-info flex flex-row flex-wrap gap-3">
     <div class="timing-info-item flex-1 min-w-0">
         <div class="timing-info-label">
-            <i class="far fa-calendar mr-2"></i>Date
+            <i class="ph ph-calendar-blank mr-2"></i>Date
         </div>
         <div class="timing-info-value">{{ .datetime | time.Format ":date_medium" }}</div>
     </div>
     <div class="timing-info-item flex-1 min-w-0">
         <div class="timing-info-label">
-            <i class="far fa-clock mr-2"></i>Time
+            <i class="ph ph-clock mr-2"></i>Time
         </div>
         <div class="timing-info-value"><pulumi-datetime date="{{ .datetime }}" timeonly></pulumi-datetime></div>
     </div>
     <div class="timing-info-item flex-1 min-w-0">
         <div class="timing-info-label">
-            <i class="far fa-hourglass mr-2"></i>Duration
+            <i class="ph ph-hourglass mr-2"></i>Duration
         </div>
         <div class="timing-info-value">{{ .duration }}</div>
     </div>

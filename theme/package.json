@@ -9,6 +9,7 @@
         "@algolia/autocomplete-plugin-tags": "^1.19.8",
         "@algolia/autocomplete-theme-classic": "^1.19.8",
         "@algolia/client-search": "^5.50.0",
+        "@phosphor-icons/web": "^2.1.1",
         "@types/marked": "^4.0.8",
         "algoliasearch": "^5.50.0",
         "clipboard-polyfill": "^3.0.3",

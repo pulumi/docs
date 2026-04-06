@@ -171,7 +171,7 @@
                                             {{ if $row.tooltip }}
                                                 <span>
                                                     <pulumi-tooltip>
-                                                        <i class="w-8 ml-2 fas fa-info-circle text-blue-600"></i>
+                                                        <i class="w-8 ml-2 ph ph-info text-blue-600"></i>
                                                         <span slot="content">{{ $row.tooltip }}</span>
                                                     </pulumi-tooltip>
                                                 </span>
@@ -180,7 +180,7 @@
                                         {{ range $item := $row.items }}
                                             <div class="compare-plans-table-row-item">
                                                 {{ if eq $item.content "_check" }}
-                                                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                                                    <span><i class="ph ph-check pricing-checkmark mr-2"></i></span>
                                                 {{ else if eq $item.content "_blank" }}
                                                     <span></span>
                                                 {{ else }}
@@ -189,7 +189,7 @@
                                                 {{ if $item.tooltip }}
                                                     <span>
                                                         <pulumi-tooltip>
-                                                            <i class="w-8 ml-2 fas fa-info-circle text-blue-600"></i>
+                                                            <i class="w-8 ml-2 ph ph-info text-blue-600"></i>
                                                             <span slot="content">{{ $item.tooltip }}</span>
                                                         </pulumi-tooltip>
                                                     </span>

@@ -1,9 +1,26 @@
-$fa-font-path: "/fonts/fontawesome";
+@import "phosphor/regular";
+@import "phosphor/bold";
+@import "phosphor/fill";
 
-@import "fontawesome/fontawesome.scss";
-@import "fontawesome/fa-solid.scss";
-@import "fontawesome/fa-regular.scss";
-@import "fontawesome/fa-brands.scss";
+// Utilities replacing FA helpers
+.ph-fw {
+    width: 1.25em;
+    text-align: center;
+    display: inline-block;
+}
+
+.ph-spin {
+    animation: ph-spin 2s infinite linear;
+}
+
+.ph-2x {
+    font-size: 2em;
+}
+
+@keyframes ph-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 @each $icon
     in "team"

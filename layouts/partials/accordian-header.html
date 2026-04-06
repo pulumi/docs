@@ -13,8 +13,8 @@
     {{ end }}
     <div class="flex flex-grow justify-end items-center">
         {{ if eq .arrow_open true }}
-            <span class="closed-accordion"><i class="fas fa-angle-down"></i></span>
-            <span class="open-accordion hidden"><i class="fas fa-angle-up"></i></span>
+            <span class="closed-accordion"><i class="ph ph-caret-down"></i></span>
+            <span class="open-accordion hidden"><i class="ph ph-caret-up"></i></span>
         {{ else }}
             <span class="closed-accordion">{{ partial "icons/accordion-closed" }}</span>
             <span class="open-accordion hidden">{{ partial "icons/accordion-open" }}</span>

@@ -26,15 +26,15 @@ sections:
 
       Pulumi ESC (Environments, Secrets, Configuration) centralizes secrets from every vault and cloud provider. Supports AWS Secrets Manager, HashiCorp Vault, Azure Key Vault, 1Password, and more, and connects them all into a single control plane with consistent access, RBAC, and audit logging across every provider.
     cards:
-      - icon: fa-code
+      - icon: ph-code
         title: Eliminate secrets sprawl
         description: |
           Connect to HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, 1Password, and more, with full RBAC, versioning, and audit logging built in.
-      - icon: fa-shield-alt
+      - icon: ph-shield
         title: Secure by default
         description: |
           Dynamic, short-lived credentials via OIDC. No plaintext secrets, anywhere, ever.
-      - icon: fa-cogs
+      - icon: ph-gear-six
         title: Flexible access, anywhere
         description: |
           CLI, API, SDKs, Kubernetes operators, and native Pulumi IaC integration. Or use standalone with any workflow.
@@ -69,27 +69,27 @@ sections:
     icon_style: black
     icon_layout: above
     columns:
-      - icon: fa-hourglass-end
+      - icon: ph-hourglass-simple-high
         title: Dynamic credentials
         description: |
           Generate just-in-time, short-lived credentials via OIDC. Automatically revoke access when leases expire.
-      - icon: fa-cubes
+      - icon: ph-cube
         title: Composable environments
         description: |
           Build complex configurations from simple, reusable components. Inherit common settings while overriding specific values.
-      - icon: fa-shield-alt
+      - icon: ph-shield
         title: Full audit trail
         description: |
           Track every access, every change, every user. Complete visibility into who's using what secrets and when.
-      - icon: fa-code-branch
+      - icon: ph-git-branch
         title: Version control
         description: |
           Every environment change is versioned. Roll back instantly or access previous configurations when needed.
-      - icon: fa-users
+      - icon: ph-users-three
         title: RBAC & teams
         description: |
           Fine-grained access controls integrated with your identity provider. SAML/SCIM support for enterprise SSO.
-      - icon: fa-puzzle-piece
+      - icon: ph-puzzle-piece
         title: Extensible plugin model
         description: |
           Support for custom secret stores through our plugin architecture. Integrate with any system.

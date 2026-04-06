@@ -12,7 +12,7 @@
         {{ if (index $socialIdentities $platform) }}
         <li class="{{ if lt $idx (sub (len $platforms) 1) }}mr-3{{ end }}">
             <a data-track="{{ $platform | urlize }}" href="{{ index $platformUrlPrefixes $idx }}/{{ index $socialIdentities $platform }}">
-                <i class="fab fa-{{ if eq $platform "x" }}x-twitter{{ else }}{{ $platform }}{{ end }}"></i>
+                <i class="ph ph-{{ if eq $platform "x" }}x-logo{{ else if eq $platform "twitter" }}x-logo{{ else if eq $platform "github" }}github-logo{{ else if eq $platform "linkedin" }}linkedin-logo{{ else if eq $platform "bluesky" }}butterfly{{ else }}{{ $platform }}{{ end }}"></i>
             </a>
         </li>
         {{ end }}
