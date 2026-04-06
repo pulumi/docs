@@ -50,7 +50,7 @@ The `id-token: write` permission is required for GitHub Actions to issue OIDC to
 
 ### Access token
 
-As an alternative to OIDC, you can authenticate with a long-lived [Pulumi access token](/docs/pulumi-cloud/access-management/access-tokens/). Store the token as a repository secret and set it as the `PULUMI_ACCESS_TOKEN` environment variable in your workflow:
+As an alternative to OIDC, you can authenticate with a long-lived [Pulumi access token](/docs/administration/access-identity/access-tokens/). Store the token as a repository secret and set it as the `PULUMI_ACCESS_TOKEN` environment variable in your workflow:
 
 ```yaml
 env:
