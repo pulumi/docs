@@ -6,8 +6,9 @@ table tr td:not(:first-child) code {
 }
 
 code {
-    background-color: map-get($gray, 125);
-    border-radius: 2px;
+    background-color: map-get($gray, 150);
+    border-radius: 4px;
+    border: 1px solid map-get($gray, 300);
     font-size: 14px;
     padding: 3px 6px;
     overflow-wrap: break-word;
@@ -44,6 +45,7 @@ pre {
 
     > code {
         @apply bg-transparent p-0;
+        border: none;
     }
 
     .code-plain & {

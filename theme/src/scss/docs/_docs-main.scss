@@ -3,10 +3,10 @@ body.section-registry {
     h1 {
         font-family: Gilroy;
         line-height: 1.5;
-        font-weight: 400;
+        font-weight: 600;
         font-size: 30px;
         color: map-get($gray, 950);
-        margin: 16px 0;
+        margin: 24px 0 16px;
     }
 
     div.special-h1 {
@@ -29,10 +29,6 @@ body.section-registry {
             scroll-margin-top: 60px;
         }
 
-        h2, h3, h4, h5, h6 {
-            margin: 18px 0 !important;
-        }
-
         h1 + h2,
         h2 + h2,
         h2 + h3,
@@ -42,45 +38,51 @@ body.section-registry {
         h5 + h6,
         h5 + h5,
         h6 + h6 {
-            margin-top: 0 !important;
+            margin-top: 0;
         }
 
         h1 {
-            font-weight: 400;
+            font-weight: 600;
             font-size: 30px;
             color: map-get($gray, 950);
-            margin: 16px 0;
+            margin: 24px 0 16px;
         }
 
         h2 {
-            font-weight: 400;
+            font-weight: 600;
             font-size: 24px;
             color: map-get($gray, 950);
+            margin: 32px 0 12px;
         }
 
         h3 {
             font-weight: 600;
-            font-size: 21px;
+            font-size: 20px;
             color: map-get($gray, 950);
+            margin: 24px 0 8px;
         }
 
         h4 {
             font-weight: 600;
-            font-size: 18px;
-            color: map-get($gray, 650);
+            font-size: 16px;
+            color: map-get($gray, 700);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 24px 0 8px;
         }
 
         h5 {
-            font-weight: 400;
-            font-size: 18px;
-            color: map-get($gray, 950);
+            font-weight: 600;
+            font-size: 16px;
+            color: map-get($gray, 800);
+            margin: 20px 0 8px;
         }
 
         h6 {
             font-weight: 600;
-            font-size: 16px;
-            color: map-get($gray, 600);
-
+            font-size: 14px;
+            color: map-get($gray, 700);
+            margin: 16px 0 8px;
         }
 
         p {
@@ -88,9 +90,9 @@ body.section-registry {
             font-weight: 400;
             font-size: 16px;
             color: map-get($gray, 950);
-            padding: 0 0 12px 0;
-            margin: 0;
-            line-height: 1.6;
+            padding: 0;
+            margin: 0 0 16px 0;
+            line-height: 1.75;
         }
 
         table {
@@ -98,7 +100,7 @@ body.section-registry {
         }
 
         ul {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         p a:not(.btn-secondary),
@@ -366,21 +368,21 @@ body.section-registry {
             min-width: 0;
             flex-shrink: 1;
             flex-grow: 1;
-            width: 1200px;
-            max-width: 1200px;
+            width: 800px;
+            max-width: 800px;
             min-width: 0;
             margin: 1rem 1.5rem 0 1rem;
             padding-bottom: 24px;
             min-height: 100vh;
 
             @media (min-width: 1024px) {
-                max-width: 1200px;
+                max-width: 800px;
                 flex-direction: column;
             }
 
             @media (min-width: 1024px) {
                 margin-left: 24px;
-                max-width: 1200px;
+                max-width: 800px;
                 min-width: 0;
             }
 
@@ -700,11 +702,12 @@ body.section-registry {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 8px;
 
             li {
                 position: relative;
                 margin: 0;
+                padding-left: 10px;
             }
 
             li a {
@@ -723,20 +726,12 @@ body.section-registry {
             display: flex;
             flex-direction: column;
             gap: 24px;
-            ul li.active a {
-                font-weight: 700;
+            ul li.active {
+                border-left: 2px solid #805ac3;
+                padding-left: 8px;
 
-                &::before {
-                    background-color: #805ac3;
-                    border-radius: 50%;
-                    width: 10px;
-                    height: 10px;
-                    display: inline-block;
-                    margin-right: 8px;
-                    position: absolute;
-                    left: -19px;
-                    top: 7px;
-                    content: "";
+                a {
+                    font-weight: 600;
                 }
             }
         }

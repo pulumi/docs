@@ -77,6 +77,16 @@
             }
         }
 
+        li.nav-separator {
+            @apply my-2;
+            border-top: 1px solid map-get($gray, 300);
+            padding: 0;
+            margin-left: 0;
+            margin-right: 0;
+            list-style: none;
+            height: 0;
+        }
+
         // Hide the root item in the list, as we don't want to show it. (We
         // only want to show the items that belong to that menu.)
         > ul {

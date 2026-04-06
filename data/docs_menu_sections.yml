@@ -1,11 +1,13 @@
 - menu: get-started
   label: Getting Started
+  separator_after: true
 - menu: iac
   label: Infrastructure as Code
 - menu: deployments
   label: Deployments & Workflows
 - menu: version-control
   label: Version Control
+  separator_after: true
 - menu: esc
   label: Secrets & Configuration (ESC)
 - menu: insights
@@ -14,6 +16,7 @@
   label: Internal Developer Platform
 - menu: ai
   label: Infrastructure AI
+  separator_after: true
 - menu: migration
   label: Migration
 - menu: administration
