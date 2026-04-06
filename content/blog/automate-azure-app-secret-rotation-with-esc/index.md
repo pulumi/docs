@@ -31,6 +31,7 @@ If you or your team manages Azure app registrations, you know that keeping track
 ## Setup
 
 ### Prerequisites
+
 - An Azure App Registration
 - An [azure-login](/docs/esc/integrations/dynamic-login-credentials/azure-login/) environment
   - Note for OIDC users: Since Azure does not support wildcard subject matches, you will need to add a [federated credential](/docs/esc/guides/configuring-oidc/azure/#add-federated-credentials) for the azure-login environment as well as each environment that imports it.
