@@ -8,6 +8,7 @@
     <section class="template-hero template-hero--centered" id="hero">
         <div class="flex flex-col items-center gap-12">
             <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
+                <a href="/whitepapers/" class="hero-tag-line no-underline hover:no-underline">Whitepaper</a>
                 <h1 class="title mb-6">{{ .Title }}</h1>
                 {{ with .Description }}
                 <p class="description mb-10">{{ . | markdownify }}</p>
@@ -27,7 +28,7 @@
     <div class="flex flex-row gap-12 max-w-6xl mx-auto w-full">
         {{/* Main content column */}}
         <div class="flex-1 min-w-0">
-            <div class="max-w-4xl whitepaper-content">
+            <div class="max-w-4xl template-sidebar-content">
                 {{ .Content }}
             </div>
         </div>
