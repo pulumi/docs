@@ -12,9 +12,14 @@ tags:
     - azure
 schema_type: auto
 social:
-    twitter: "Automate Azure app secret rotation with Pulumi ESC — never worry about expired credentials again."
-    linkedin: "Automate Azure app secret rotation with Pulumi ESC — never worry about expired credentials again."
-    bluesky: "Automate Azure app secret rotation with Pulumi ESC — never worry about expired credentials again."
+    twitter: |
+        Expired Azure app secrets cause outages. If you've ever scrambled to rotate one before it expires, you know the pain.
+
+        Pulumi ESC's new azure-app-secret rotator handles rotation automatically. Set a lifetime, configure a schedule, and your credentials stay fresh.
+    linkedin: |
+        Expired Azure app registration secrets lead to broken authentication and unexpected outages. If you've ever scrambled to rotate a client secret before it expires, you know the pain.
+
+        Pulumi ESC now has an azure-app-secret rotator that automates this. Set a lifetime, configure a rotation schedule, and ESC handles the rest.
 ---
 
 [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/fundamentals/whatis) (formerly Azure Active Directory) is Azure's identity and access management service. Any time your application needs to authenticate with Entra ID, you create an **app registration** and give it a [client secret](https://learn.microsoft.com/en-us/entra/identity-platform/how-to-add-credentials?tabs=client-secret) that proves its identity. But those secrets expire, and if you don't rotate them in time, your app loses access.
