@@ -834,6 +834,7 @@ def main() -> None:
             print(f"  Posting immediately (date is today or past)")
 
         post_had_failure = False
+        post_had_char_limit_failure = False
         for platform, (copy, media_paths) in platforms.items():
             if not PLATFORM_ENABLED.get(platform):
                 continue
@@ -844,7 +845,7 @@ def main() -> None:
             if limit and text_len > limit:
                 print(f"  SKIPPING {platform}: {char_limit_detail(text_len, limit, len(copy))}")
                 char_limit_failures[filepath].append((platform, text_len, limit, len(copy)))
-                failures = True
+                post_had_char_limit_failure = True
                 continue
 
             if is_posted(state, slug, platform):
@@ -861,7 +862,7 @@ def main() -> None:
                 post_had_failure = True
                 api_failures_by_file[filepath].append(platform)
 
-        if post_had_failure:
+        if post_had_failure or post_had_char_limit_failure:
             record_failure(state, slug)
             save_state(state)
             if is_abandoned(state, slug):
@@ -938,7 +939,7 @@ def main() -> None:
             ]
             if parts:
                 with open(failure_summary_path, "w") as f:
-                    f.write("; ".join(parts))
+                    f.write("; ".join(parts) + "\n")
         sys.exit(1)
 
     # Only advance last_sha when everything succeeded
