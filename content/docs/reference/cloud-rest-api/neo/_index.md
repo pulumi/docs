@@ -1,7 +1,7 @@
 ---
 title: Neo
 title_tag: "Pulumi Cloud REST API: Neo"
-meta_desc: Learn about the Pulumi Cloud REST API endpoints for initiating and fetch tasks.
+meta_desc: Learn about the Pulumi Cloud REST API endpoints for creating, managing, and retrieving agent tasks.
 menu:
     reference:
         parent: cloud-rest-api
@@ -251,7 +251,13 @@ Status: 200 OK
       "entities": [],
       "planMode": true,
       "isShared": false,
-      "permissionMode": "default"
+      "createdBy": {
+        "name": "Jane Doe",
+        "githubLogin": "janedoe",
+        "avatarUrl": "https://api.pulumi.com/static/avatars/J-E91E63.png"
+      },
+      "permissionMode": "default",
+      "runtimePhase": "ready"
     }
   ],
   "continuationToken": "next_page_token"
@@ -273,7 +279,7 @@ Status: 200 OK
 
 ---
 
-## Update a Task
+## Update a task
 
 Updates the settings or metadata of an existing task. Only the user who created the task can modify it.
 
@@ -330,7 +336,30 @@ Status: 200 OK
 
 Returns the updated task object with the same fields as the [Get Task Metadata](#get-task-metadata) response.
 
-### Error Responses
+```json
+{
+  "id": "task_abc123",
+  "name": "New task name",
+  "status": "running",
+  "createdAt": "2025-01-15T00:00:00Z",
+  "approvalMode": "auto",
+  "entities": [],
+  "planMode": false,
+  "isShared": true,
+  "sharedAt": "2025-01-15T10:40:00Z",
+  "createdBy": {
+    "name": "Jane Doe",
+    "githubLogin": "janedoe",
+    "avatarUrl": "https://api.pulumi.com/static/avatars/J-E91E63.png"
+  },
+  "permissionMode": "read-only",
+  "runtimePhase": "ready",
+  "contextUsedTokens": 43272,
+  "contextWindowTokens": 1000000
+}
+```
+
+### Error responses
 
 - `403 Forbidden`: Feature not enabled for organization
 - `404 Not Found`: Task not found or not owned by user
@@ -638,7 +667,7 @@ Represents a policy issue that the agent can analyze and help resolve.
 
 ---
 
-## Approval Modes
+## Approval modes
 
 Approval modes control how much autonomy the agent has during task execution.
 
