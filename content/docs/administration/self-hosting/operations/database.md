@@ -61,7 +61,7 @@ See [Upgrades](/docs/administration/self-hosting/operations/upgrades/) for the f
 
 ## Encrypting connections with TLS
 
-Pulumi Cloud supports TLS-encrypted connections between the API service and MySQL. This ensures data in transit between the service and database is encrypted, which is a requirement for many compliance frameworks.
+Pulumi Cloud supports TLS-encrypted connections between the API service and MySQL. This encrypts data in transit between the service and database, which is a requirement for many compliance frameworks.
 
 ### MySQL server requirements
 
@@ -76,13 +76,12 @@ For managed database services, TLS is typically enabled by default:
 - **Azure Database for MySQL**: TLS is enforced by default. Download the [DigiCert Global Root CA](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/how-to-connect-tls-ssl).
 - **Google Cloud SQL**: TLS is enabled by default. Download the server CA from the Cloud SQL instance's **Connections** tab.
 
-For self-managed MySQL, configure the server with the `--ssl-ca`, `--ssl-cert`, and `--ssl-key` options pointing to your certificate files.
+For self-managed MySQL, configure the server with the `--ssl-ca`, `--ssl-cert`, and `--ssl-key` options pointing to your certificate files. See the [MySQL encrypted connections documentation](https://dev.mysql.com/doc/refman/8.0/en/using-encrypted-connections.html) for details.
 
 ### Hostname verification
 
-The API service verifies that the **hostname** in `PULUMI_DATABASE_ENDPOINT` matches the Common Name (CN) or a Subject Alternative Name (SAN) in the server certificate. If your server certificate does not include the correct hostname:
+The API service verifies that the **hostname** in `PULUMI_DATABASE_ENDPOINT` matches the Common Name (CN) or a Subject Alternative Name (SAN) in the server certificate. If the hostname does not match, the connection will fail with a TLS verification error.
 
-- The connection will fail with a TLS verification error.
 - Ensure the certificate includes the database hostname as a DNS SAN (e.g., `my-db.example.com`) or IP SAN (e.g., `10.0.1.50`).
 - For managed services, the certificate typically already covers the service endpoint hostname.
 
