@@ -323,3 +323,82 @@ const prMigrationSettings = new pulumiservice.DeploymentSettings("prMigrationSet
 });
 
 ```
+
+## Signal gating
+
+By default, review stacks are created for every pull request that targets a template stack's branch. Signal gating allows you to control which pull requests create review stacks by requiring a matching label or commit message signal.
+
+When signal gating is enabled, a pull request must have a label (or commit message token) matching one of the configured prefixes for a review stack to be created. For example, with the prefix `review-stack`:
+
+- A PR labeled `review-stack` creates a review stack with the default auto-generated name
+- A PR labeled `review-stack/feature-123` creates a review stack named `feature-123`
+- A PR with `[review-stack/feature-123]` in its title or body also triggers creation
+- A PR without a matching label or commit signal is skipped — no review stack is created
+
+### Enabling signal gating
+
+Signal gating can be enabled at two levels:
+
+**Organization-wide** — in the Pulumi Cloud console under **Deployments > Settings**, toggle "Require review stack labels". This applies to all stacks in the organization unless overridden at the stack level. You can also configure custom prefixes and delimiters.
+
+**Per-stack** — in your `Pulumi.<stack>.deploy.yaml` file:
+
+```yaml
+gitHub:
+  pullRequestTemplate: true
+  reviewStackPrefixes:
+    - review-stack
+    - deploy
+  reviewStackDelimiters:
+    - ":"
+    - "/"
+```
+
+Per-stack settings override the organization-wide configuration. Set `reviewStackPrefixes: []` (empty list) to explicitly disable gating for a specific stack.
+
+### Signal sources
+
+Signal gating supports two signal sources:
+
+| Source | VCS Providers | How it works |
+|--------|--------------|--------------|
+| **PR labels** | GitHub, GitLab | Labels on the pull request / merge request are matched against configured prefixes |
+| **Commit messages** | All providers | Bracketed tokens in the PR title or body (e.g. `[review-stack/feature-123]`) are matched against prefixes |
+
+Commit message signals are especially useful for providers like Azure DevOps and Bitbucket where label-based webhooks are not available.
+
+### Custom stack names
+
+When a signal includes a name portion after the prefix and delimiter, the review stack is created with that custom name instead of the default `pr-{owner}-{repo}-{number}` pattern:
+
+| Signal | Delimiter | Stack name |
+|--------|-----------|------------|
+| `review-stack` |  | `pr-owner-repo-42` (auto-generated) |
+| `review-stack:staging` | `:` | `staging` |
+| `review-stack/feature-123` | `/` | `feature-123` |
+
+### REST API
+
+Configure signal gating via the Deployments REST API:
+
+```bash
+# Per-stack configuration
+curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/stacks/org/project/stack/deployments/settings" \
+-d '{
+  "gitHub": {
+    "pullRequestTemplate": true,
+    "reviewStackPrefixes": ["review-stack", "deploy"],
+    "reviewStackDelimiters": [":", "/"]
+  }
+}'
+
+# Organization-wide configuration
+curl -i -XPUT -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/orgs/my-org/deployment-settings" \
+-d '{
+  "reviewStackSignalGating": true,
+  "reviewStackPrefixes": ["review-stack"],
+  "reviewStackDelimiters": [":", "/"]
+}'
+```
