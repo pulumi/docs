@@ -450,6 +450,14 @@
 
 // Case study hero card
 .template-case-study-hero {
+    .case-study-hero-logo {
+        @apply h-8 w-auto;
+    }
+
+    .case-study-hero-quote-panel {
+        @apply bg-white flex-[2];
+    }
+
     .case-study-hero-stat {
         @apply font-body font-bold text-black mb-2 text-heading-xs leading-relaxed;
     }
@@ -470,10 +478,10 @@
     }
 
     .case-study-hero-stat-panel {
-        @apply flex-1 border-t border-gray-300 mt-8 pt-8;
+        @apply flex-1 bg-violet-100 border-t border-violet-200 flex flex-col justify-center;
 
         @include screen-md {
-            @apply border-t-0 mt-0 pt-0 border-l border-gray-300 pl-12 flex flex-col justify-center;
+            @apply border-t-0 border-l;
         }
     }
 }

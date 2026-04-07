@@ -24,16 +24,22 @@
 {{ $link := .link }}
 {{ $anchor := .anchor }}
 
-<div class="template-case-study-hero rounded-2xl border border-violet-300 bg-violet-100 p-8 md:p-12"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="flex flex-col md:flex-row md:gap-12">
-        {{/* Left: quote */}}
-        <div class="flex-1">
+<div class="template-case-study-hero rounded-2xl border border-violet-300 overflow-hidden"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="flex flex-col md:flex-row">
+        {{/* Left: logo + quote (white background) */}}
+        <div class="case-study-hero-quote-panel p-8 md:p-12">
+            {{ if $customerLogo }}
+            <div class="mb-6">
+                <img src="{{ $customerLogo }}" alt="{{ $customerName }}" class="case-study-hero-logo" />
+            </div>
+            {{ end }}
+
             {{ if $quote }}
             <p class="case-study-hero-quote">{{ $quote | markdownify }}</p>
             {{ end }}
 
             {{ if $quoteAttrib }}
-            <p class="case-study-hero-attrib">— {{ $quoteAttrib }}</p>
+            <p class="case-study-hero-attrib">— {{ $quoteAttrib }}</p>
             {{ end }}
 
             {{ if $link }}
@@ -46,9 +52,9 @@
             {{ end }}
         </div>
 
-        {{/* Right: stat */}}
+        {{/* Right: stat (colored background) */}}
         {{ if or $headlineStat $headline }}
-        <div class="case-study-hero-stat-panel">
+        <div class="case-study-hero-stat-panel p-8 md:p-12">
             {{ if $headlineStat }}
             <div class="case-study-hero-stat">{{ $headlineStat }}</div>
             {{ end }}
