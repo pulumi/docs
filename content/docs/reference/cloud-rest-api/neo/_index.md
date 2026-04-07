@@ -25,6 +25,7 @@ The API provides endpoints for the following operations:
 - Creating new agent tasks
 - Listing available tasks
 - Getting task details and metadata
+- Updating task settings and metadata
 - Responding to agent requests
 - Retrieving task events
 
@@ -62,11 +63,14 @@ POST /api/preview/agents/{orgName}/tasks
       ],
       "remove": []
     }
-  }
+  },
+  "approvalMode": "balanced",
+  "planMode": true,
+  "permissionMode": "default"
 }
 ```
 
-#### Request Fields
+#### Request fields
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -75,6 +79,9 @@ POST /api/preview/agents/{orgName}/tasks
 | `message.content` | string | Yes | The exact natural language instruction from the user |
 | `message.timestamp` | string (ISO 8601) | Yes | When the event occurred |
 | `message.entity_diff` | object | No | Entities to add or remove from the agent. See [Entity Types](#entity-types) for details. Note: Pull request entities cannot be added via this API. |
+| `approvalMode` | string | No | Approval mode override for this task. If omitted, the organization default is used. See [approval modes](#approval-modes) for valid values. |
+| `planMode` | boolean | No | Whether to enable plan mode for this task. In plan mode, the agent performs detailed research before execution and allows user iteration on the plan. |
+| `permissionMode` | string | No | Controls the permission scope for the task. Valid values: `default` (the agent uses the creating user's full permissions), `read-only`. Defaults to `default` if omitted. |
 
 ### Example
 
@@ -84,7 +91,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
-  --data '{"message":{"type":"user_message","content":"Help me optimize my Pulumi stack","timestamp":"2025-01-15T10:30:00Z"}}' \
+  --data '{"message":{"type":"user_message","content":"Help me optimize my Pulumi stack","timestamp":"2025-01-15T10:30:00Z"},"approvalMode":"balanced","planMode":true}' \
   https://api.pulumi.com/api/preview/agents/my-org/tasks
 ```
 
@@ -151,24 +158,46 @@ Status: 200 OK
   "name": "Task name",
   "status": "running",
   "createdAt": "2025-01-15T00:00:00Z",
+  "approvalMode": "balanced",
   "entities": [
     {
       "type": "stack",
-      "id": "my-stack"
+      "name": "my-stack",
+      "project": "my-project"
     }
-  ]
+  ],
+  "planMode": true,
+  "isShared": false,
+  "createdBy": {
+    "name": "Jane Doe",
+    "githubLogin": "janedoe",
+    "avatarUrl": "https://api.pulumi.com/static/avatars/J-E91E63.png"
+  },
+  "permissionMode": "default",
+  "runtimePhase": "ready",
+  "contextUsedTokens": 43272,
+  "contextWindowTokens": 1000000
 }
 ```
 
-#### Response Fields
+#### Response fields
 
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | string | Unique identifier for the task |
 | `name` | string | Human-readable name for the task |
-| `status` | string | Current status of the task ("running" or "idle") |
+| `status` | string | Current status of the task (`running` or `idle`) |
 | `createdAt` | string (ISO 8601) | When the task was created |
+| `approvalMode` | string | Approval mode for this task. See [approval modes](#approval-modes) for values. |
 | `entities` | array | List of entities associated with the task |
+| `planMode` | boolean | Whether the task is in plan mode |
+| `isShared` | boolean | Whether this task is shared with other organization members |
+| `sharedAt` | string (ISO 8601) | When the task was first shared (null if never shared) |
+| `createdBy` | object | Information about the user who created this task |
+| `permissionMode` | string | The permission scope for the task (`default` or `read-only`) |
+| `runtimePhase` | string | The current runtime phase (`booting`, `ready`, or `running`). Null until the runtime checks in. |
+| `contextUsedTokens` | integer | Total input tokens consumed across all model invocations for this task |
+| `contextWindowTokens` | integer | Maximum context window size in tokens for the primary model used by this task |
 
 ### Error Responses
 
@@ -218,18 +247,22 @@ Status: 200 OK
       "name": "Task name",
       "status": "running",
       "createdAt": "2025-01-15T00:00:00Z",
-      "entities": []
+      "approvalMode": "balanced",
+      "entities": [],
+      "planMode": true,
+      "isShared": false,
+      "permissionMode": "default"
     }
   ],
   "continuationToken": "next_page_token"
 }
 ```
 
-#### Response Fields
+#### Response fields
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `tasks` | array | List of tasks for this page |
+| `tasks` | array | List of tasks for this page. Each task object has the same fields as the [Get Task Metadata](#get-task-metadata) response. |
 | `continuationToken` | string | Token to fetch the next page (null if no more results) |
 
 ### Error Responses
@@ -237,6 +270,70 @@ Status: 200 OK
 - `400 Bad Request`: Invalid pageSize parameter
 - `401 Unauthorized`: Invalid or missing authentication token
 - `403 Forbidden`: Insufficient permissions to list tasks in this organization
+
+---
+
+## Update a Task
+
+Updates the settings or metadata of an existing task. Only the user who created the task can modify it.
+
+```plain
+PATCH /api/preview/agents/{orgName}/tasks/{taskID}
+```
+
+### Parameters
+
+| Parameter | Type | In | Description |
+|-----------|------|----|--------------|
+| `orgName` | string | path | The organization name |
+| `taskID` | string | path | The task identifier |
+
+### Request body
+
+All fields are optional. Omitted fields are left unchanged.
+
+```json
+{
+  "name": "New task name",
+  "isShared": true,
+  "approvalMode": "auto",
+  "permissionMode": "read-only"
+}
+```
+
+#### Request fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `name` | string | No | A new display name for the task. Must be between 1 and 255 characters after trimming whitespace. |
+| `isShared` | boolean | No | Whether to share the task with other organization members. |
+| `approvalMode` | string | No | Approval mode for this task. See [approval modes](#approval-modes) for valid values. |
+| `permissionMode` | string | No | The permission scope for the task. Valid values: `default`, `read-only`. |
+
+### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  --data '{"approvalMode":"auto","isShared":true}' \
+  https://api.pulumi.com/api/preview/agents/my-org/tasks/task_abc123
+```
+
+### Response
+
+```plain
+Status: 200 OK
+```
+
+Returns the updated task object with the same fields as the [Get Task Metadata](#get-task-metadata) response.
+
+### Error Responses
+
+- `403 Forbidden`: Feature not enabled for organization
+- `404 Not Found`: Task not found or not owned by user
 
 ---
 
@@ -538,6 +635,20 @@ Represents a policy issue that the agent can analyze and help resolve.
 |-------|------|----------|-------------|
 | `type` | string | Yes | Must be "policy_issue" |
 | `id` | string | Yes | The unique identifier for the policy issue |
+
+---
+
+## Approval Modes
+
+Approval modes control how much autonomy the agent has during task execution.
+
+| Value | Description |
+|-------|-------------|
+| `manual` | The agent requests approval before running `pulumi preview`, running `pulumi up`, and opening a pull request. This is the most conservative mode. |
+| `balanced` | The agent requests approval only before running `pulumi up`. Previews and pull requests proceed without approval. |
+| `auto` | The agent does not request any approvals and executes the entire task autonomously. |
+
+For more details, see [task modes](/docs/ai/tasks/#task-modes).
 
 ---
 
