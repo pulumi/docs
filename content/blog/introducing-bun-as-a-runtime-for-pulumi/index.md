@@ -128,8 +128,8 @@ Bun handles TypeScript differently from Node.js with `ts-node`. Update your `tsc
 
 Key differences from a typical Node.js `tsconfig.json`:
 
-- **[`module: "Preserve"`](https://www.typescriptlang.org/tsconfig/#module)** and **[`moduleResolution: "bundler"`](https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/#moduleresolution-bundler)**: Let Bun handle module resolution instead of compiling to CommonJS. The `bundler` resolution strategy allows extensionless imports while still respecting `package.json` exports, matching how Bun resolves modules in practice.
-- **[`verbatimModuleSyntax: true`](https://www.typescriptlang.org/tsconfig/#verbatimModuleSyntax)**: Enforces consistent use of ESM `import`/`export` syntax. TypeScript will flag any remaining CommonJS patterns like `require()` at compile time.
+- [`module: "Preserve"`](https://www.typescriptlang.org/tsconfig/#module) and [`moduleResolution: "bundler"`](https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/#moduleresolution-bundler): Let Bun handle module resolution instead of compiling to CommonJS. The `bundler` resolution strategy allows extensionless imports while still respecting `package.json` exports, matching how Bun resolves modules in practice.
+- [`verbatimModuleSyntax: true`](https://www.typescriptlang.org/tsconfig/#verbatimModuleSyntax): Enforces consistent use of ESM `import`/`export` syntax. TypeScript will flag any remaining CommonJS patterns like `require()` at compile time.
 
 ### 3. Switch to ESM
 
