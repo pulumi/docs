@@ -938,7 +938,7 @@ def main() -> None:
             ]
             if parts:
                 with open(failure_summary_path, "w") as f:
-                    f.write("; ".join(parts))
+                    f.write("; ".join(parts) + "\n")
         sys.exit(1)
 
     # Only advance last_sha when everything succeeded
