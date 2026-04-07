@@ -15,7 +15,7 @@ social:
     twitter: |
         Expired Azure app secrets cause outages. If you've ever scrambled to rotate one before it expires, you know the pain.
 
-        Pulumi ESC's new azure-app-secret rotator handles rotation automatically. Set a lifetime, configure a schedule, and your credentials stay fresh.
+        Pulumi ESC's new azure-app-secret rotator handles rotation automatically. Set a lifetime, add a schedule, and credentials stay fresh.
     linkedin: |
         Expired Azure app registration secrets lead to broken authentication and unexpected outages. If you've ever scrambled to rotate a client secret before it expires, you know the pain.
 
