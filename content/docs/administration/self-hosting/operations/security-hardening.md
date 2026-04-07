@@ -51,18 +51,18 @@ graph TB
     end
 
     subgraph Database
-        MySQL[(MySQL 8.0)]
+        MySQL[(MySQL)]
     end
 
-    CLI -->|"HTTPS"| Console
     Browser -->|"HTTPS"| Console
+    CLI -->|"HTTPS"| API
     Console -->|"HTTPS"| API
     API -->|"MySQL over TLS"| MySQL
 ```
 
 ### Hop 1: Clients → Console
 
-The Console serves the web UI and handles authentication callbacks. Configure TLS on the **Console container** (see [Console component reference](/docs/administration/self-hosting/components/console/#tls-environment-variables) for full details):
+The Console serves the web UI. Configure TLS on the **Console container** (see [Console component reference](/docs/administration/self-hosting/components/console/#tls-environment-variables) for full details):
 
 | Variable | Description |
 |---|---|
@@ -72,9 +72,9 @@ The Console serves the web UI and handles authentication callbacks. Configure TL
 
 When set, the Console serves on port `3443` (HTTPS) instead of `3000` (HTTP). The `PORT` environment variable can override either default. If a load balancer terminates TLS in front of the Console, these variables are not needed.
 
-### Hop 2: Console → API
+### Hop 2: Clients and Console → API
 
-The Console's Node backend makes server-side requests to the API (e.g., OAuth callbacks). Configure TLS on the **API container** (see [API component reference — TLS](/docs/administration/self-hosting/components/api/#tls-environment-variables) for full details):
+The Pulumi CLI and automation clients connect directly to the API over HTTPS. The Console's Node backend also makes server-side requests to the API (e.g., OAuth callbacks). Configure TLS on the **API container** (see [API component reference — TLS](/docs/administration/self-hosting/components/api/#tls-environment-variables) for full details):
 
 | Variable | Description |
 |---|---|
@@ -84,67 +84,13 @@ The Console's Node backend makes server-side requests to the API (e.g., OAuth ca
 
 When set, the API serves on port `8443` (HTTPS) instead of `8080` (HTTP). The `PORT` environment variable can override either default.
 
-If the API uses a self-signed or internal CA certificate, the Console must trust that CA. Set the following on the **Console container** (see [Console — Trusting the API service certificate](/docs/administration/self-hosting/components/console/#trusting-the-api-service-certificate)):
-
-| Variable | Description |
-|---|---|
-| `NODE_EXTRA_CA_CERTS` | Path to a PEM file containing the CA certificate(s) that signed the API's TLS certificate |
-
-```yaml
-# Example: Docker Compose
-console:
-  environment:
-    NODE_EXTRA_CA_CERTS: "/etc/pulumi/certs/api-ca.pem"
-  volumes:
-    - ./certs/api-ca.pem:/etc/pulumi/certs/api-ca.pem:ro
-```
+If the API uses a self-signed or internal CA certificate, the Console must trust that CA. Set `NODE_EXTRA_CA_CERTS` on the **Console container** to the path of the CA PEM file (see [Console — Trusting the API service certificate](/docs/administration/self-hosting/components/console/#trusting-the-api-service-certificate)).
 
 ### Hop 3: API → MySQL
 
-The API service verifies the MySQL server's certificate against a trusted CA. Configure on the **API container** (see [API component reference — Database connections](/docs/administration/self-hosting/components/api/#database-connections) for full details):
+Configure TLS between the API service and MySQL by setting `DATABASE_CA_CERTIFICATE` and `DATABASE_MIN_TLS_VERSION` on the **API container**. Both are required to enable TLS.
 
-| Variable | Description |
-|---|---|
-| `DATABASE_CA_CERTIFICATE` | PEM-encoded CA certificate that signed the MySQL server's TLS certificate. Must be the certificate **value**, not a file path |
-| `DATABASE_MIN_TLS_VERSION` | Minimum TLS version (e.g., `1.2` or `1.3`) |
-
-Both variables are required — if either is missing, the API connects to MySQL without TLS.
-
-The hostname in `PULUMI_DATABASE_ENDPOINT` must match the Common Name (CN) or a Subject Alternative Name (SAN) in the MySQL server's certificate, or the connection will fail with a TLS verification error.
-
-**MySQL server configuration:**
-
-The MySQL server must be configured with TLS certificates:
-
-| MySQL option | Description |
-|---|---|
-| `--ssl-ca` | CA certificate |
-| `--ssl-cert` | Server certificate |
-| `--ssl-key` | Server private key |
-
-To require all connections use TLS:
-
-```sql
--- Per-user
-ALTER USER 'pulumi_service'@'%' REQUIRE SSL;
-
--- Or globally (my.cnf)
--- require_secure_transport=ON
-```
-
-For managed database services (Aurora, RDS, Cloud SQL, Azure Database for MySQL), TLS is typically enabled by default. Download the provider's CA certificate bundle and use it as the value for `DATABASE_CA_CERTIFICATE`. See [Database best practices — Encrypting connections with TLS](/docs/administration/self-hosting/operations/database/#encrypting-connections-with-tls) for provider-specific guidance.
-
-### Verifying TLS is active
-
-To confirm that a connection between the API and MySQL is encrypted, query the MySQL server:
-
-```sql
-SHOW STATUS LIKE 'Ssl_cipher';
--- Non-empty value (e.g., TLS_AES_256_GCM_SHA384) confirms TLS is in use
-
-SHOW STATUS LIKE 'Ssl_version';
--- e.g., TLSv1.2, TLSv1.3
-```
+See [Database best practices — Encrypting connections with TLS](/docs/administration/self-hosting/operations/database/#encrypting-connections-with-tls) for full configuration details, including managed service CA certificates, hostname verification, and verification steps.
 
 ## SMTP and email
 
