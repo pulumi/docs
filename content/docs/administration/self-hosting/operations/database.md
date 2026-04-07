@@ -58,3 +58,83 @@ Pulumi Cloud runs database migrations as a separate task before deploying new ap
 - If running migrations manually, ensure they complete before restarting services.
 
 See [Upgrades](/docs/administration/self-hosting/operations/upgrades/) for the full update process.
+
+## Encrypting connections with TLS
+
+Pulumi Cloud supports TLS-encrypted connections between the API service and MySQL. This ensures data in transit between the service and database is encrypted, which is a requirement for many compliance frameworks.
+
+### MySQL server requirements
+
+The MySQL server must be configured with:
+
+- A **server certificate** and **private key** signed by a Certificate Authority (CA).
+- The **CA certificate** used to sign the server certificate. This is what the Pulumi API service uses to verify the server's identity.
+
+For managed database services, TLS is typically enabled by default:
+
+- **Amazon Aurora / RDS**: TLS is enabled by default. Download the [RDS CA certificate bundle](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html) for your region.
+- **Azure Database for MySQL**: TLS is enforced by default. Download the [DigiCert Global Root CA](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/how-to-connect-tls-ssl).
+- **Google Cloud SQL**: TLS is enabled by default. Download the server CA from the Cloud SQL instance's **Connections** tab.
+
+For self-managed MySQL, configure the server with the `--ssl-ca`, `--ssl-cert`, and `--ssl-key` options pointing to your certificate files.
+
+### Hostname verification
+
+The API service verifies that the **hostname** in `PULUMI_DATABASE_ENDPOINT` matches the Common Name (CN) or a Subject Alternative Name (SAN) in the server certificate. If your server certificate does not include the correct hostname:
+
+- The connection will fail with a TLS verification error.
+- Ensure the certificate includes the database hostname as a DNS SAN (e.g., `my-db.example.com`) or IP SAN (e.g., `10.0.1.50`).
+- For managed services, the certificate typically already covers the service endpoint hostname.
+
+### API service configuration
+
+Set the following environment variables on the **API service** container. Both are required to enable TLS — if either is missing, the service connects without TLS.
+
+| Variable Name            | Description                                                                                                                     |
+|--------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| `DATABASE_CA_CERTIFICATE`  | The PEM-encoded CA certificate that signed the MySQL server's TLS certificate. Must be the certificate **value**, not a file path. |
+| `DATABASE_MIN_TLS_VERSION` | The minimum TLS version to accept (e.g., `1.2` or `1.3`).                                                                       |
+
+Example:
+
+```bash
+# Load the CA certificate into the environment variable
+export DATABASE_CA_CERTIFICATE="$(cat /path/to/ca-cert.pem)"
+export DATABASE_MIN_TLS_VERSION="1.2"
+```
+
+{{% notes type="warning" %}}
+`DATABASE_CA_CERTIFICATE` must contain the **full PEM-encoded certificate text** (including the `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` markers), not a file path. This is a common source of misconfiguration.
+{{% /notes %}}
+
+### Migrations container
+
+The database migrations container also supports TLS. Set `DATABASE_CA_CERTIFICATE` on the migrations container with the same CA certificate value. See [API component — Migrations](/docs/administration/self-hosting/components/api/#database-connections) for the full list of migration environment variables.
+
+### Verifying TLS is active
+
+After configuring TLS, verify that connections are encrypted by running the following SQL query against your MySQL server:
+
+```sql
+SHOW STATUS LIKE 'Ssl_cipher';
+```
+
+A non-empty value (e.g., `TLS_AES_256_GCM_SHA384`) confirms the connection is using TLS. An empty value means the connection is unencrypted.
+
+You can also check the TLS version:
+
+```sql
+SHOW STATUS LIKE 'Ssl_version';
+```
+
+### Requiring TLS on the MySQL server
+
+To ensure **all** connections use TLS (not just the Pulumi API), configure MySQL to reject unencrypted connections:
+
+```sql
+-- Require TLS for a specific user
+ALTER USER 'pulumi_service'@'%' REQUIRE SSL;
+
+-- Or require TLS for all connections (MySQL 8.0+)
+-- Set in my.cnf: require_secure_transport=ON
+```
