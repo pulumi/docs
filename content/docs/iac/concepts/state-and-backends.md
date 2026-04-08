@@ -92,7 +92,7 @@ The [`logout` command](/docs/iac/cli/commands/pulumi_logout) logs you out of the
 $ pulumi logout
 ```
 
-This will remove all credentials information from `~/.pulumi/credentials.json` and you will need to log in again before performing any subsequent stack or state operations.
+This will remove the credentials for the current backend from `~/.pulumi/credentials.json` and you will need to log in again before performing any subsequent stack or state operations. To remove credentials for all backends at once, use `pulumi logout --all`.
 
 To change backends, run `pulumi logout` followed by `pulumi login`.
 
