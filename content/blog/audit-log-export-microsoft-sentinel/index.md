@@ -1,8 +1,9 @@
 ---
-title: "Export Pulumi Cloud audit logs to Microsoft Sentinel"
+title: "Export Pulumi Cloud Audit Logs to Microsoft Sentinel"
 date: 2026-04-08
 meta_desc: "Pulumi Cloud now supports exporting audit logs to Microsoft Sentinel, giving security teams real-time visibility into infrastructure activity in their SIEM."
 meta_image: meta.png
+feature_image: feature.png
 authors:
   - lynn-jung
 tags:
@@ -12,7 +13,7 @@ tags:
   - microsoft-sentinel
 ---
 
-Pulumi Cloud audit logs give organization admins a complete record of who did what, when, and from where across their infrastructure. Until now, automated export was limited to AWS S3. Today, we're adding support for exporting audit logs to [Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/overview), bringing Pulumi activity data directly into your SIEM for real-time monitoring and alerting.
+[Pulumi Cloud](/product/pulumi-cloud/) audit logs give organization admins a complete record of who did what, when, and from where across their infrastructure. Until now, automated export was limited to AWS S3. Today, we're adding support for exporting audit logs to [Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/overview), bringing Pulumi activity data directly into your SIEM for real-time monitoring and alerting.
 
 <!--more-->
 
@@ -22,7 +23,7 @@ The connector uses Sentinel's managed [Codeless Connector Framework](https://lea
 
 The connector deploys as a Pulumi program using a template. There are two ways to set it up:
 
-**From the Pulumi Cloud console**: Navigate to the **Stacks** page, select **Create project**, and choose the **Pulumi Audit Log Export to Azure Sentinel** template. Fill in your config values, select Pulumi Deployments as the deployment method, and select **Deploy**. That's it — no CLI needed.
+**From the Pulumi Cloud console**: Navigate to the **Stacks** page, select **Create project**, and choose the **Pulumi Audit Log Export to Azure Sentinel** template. Fill in your config values, select Pulumi Deployments as the deployment method, and select **Deploy**.
 
 **From the CLI**:
 
