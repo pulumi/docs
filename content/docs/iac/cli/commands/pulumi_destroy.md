@@ -41,7 +41,7 @@ pulumi destroy [url] [flags]
   -j, --json                                          Serialize the destroy diffs, operations, and overall output as JSON
   -m, --message string                                Optional message to associate with the destroy operation
       --neo                                           Enable Pulumi Neo's assistance for improved CLI experience and insights (can also be set with PULUMI_NEO environment variable)
-  -p, --parallel int32                                Allow P resource operations to run in parallel at once (1 for no parallelism). (default 16)
+  -p, --parallel int32                                Allow P resource operations to run in parallel at once (1 for no parallelism). (default 4 * number of logical CPUs)
       --preview-only                                  Only show a preview of the destroy, but don't perform the destroy itself
   -r, --refresh string[="true"]                       Refresh the state of the stack's resources before this update
       --remote                                        [EXPERIMENTAL] Run the operation remotely

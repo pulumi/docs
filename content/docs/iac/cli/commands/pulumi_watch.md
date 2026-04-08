@@ -33,7 +33,7 @@ pulumi watch [flags]
   -d, --debug                        Print detailed debugging output during resource operations
   -h, --help                         help for watch
   -m, --message string               Optional message to associate with each update operation
-  -p, --parallel int32               Allow P resource operations to run in parallel at once (1 for no parallelism). (default 16)
+  -p, --parallel int32               Allow P resource operations to run in parallel at once (1 for no parallelism). (default 4 * number of logical CPUs)
       --path stringArray             Specify one or more relative or absolute paths that need to be watched. A path can point to a folder or a file. Defaults to working directory
       --policy-pack strings          Run one or more policy packs as part of each update
       --policy-pack-config strings   Path to JSON file containing the config for the policy pack of the corresponding "--policy-pack" flag
