@@ -112,7 +112,7 @@ Use this configuration file when developing custom components or providers to di
 
 | Name | Required | Description | Options |
 | - | - | - | - |
-| `runtime` | required | Installed language runtime used to run the plugin: `nodejs`, `python`, `go`, `dotnet`, `java` or `yaml`. | [runtime options](#plugin-runtime-options) |
+| `runtime` | required | Installed language runtime used to run the plugin: `nodejs`, `python`, `go`, `dotnet`, `java`, `yaml`, or `bun`. | [runtime options](#plugin-runtime-options) |
 | `packages` | optional | Additional packages to be used in the plugin. | Same as [`Pulumi.yaml` packages](/docs/iac/concepts/projects/project-file/#packages-options) |
 | `requiredPulumiVersion` | optional | The version range of the Pulumi CLI this plugin requires. | Same as [`Pulumi.yaml` requiredPulumiVersion](/docs/iac/concepts/projects/project-file/#requiredpulumiversion-options) |
 
@@ -166,6 +166,10 @@ Go plugins do not support any runtime options.
 | - | - |
 | `binary` | Path to a pre-built executable. |
 | `use-executor` | Override how Java is run. This can be set to build tools like `gradle`, `mvn`, etc. See the [Java executors](https://github.com/pulumi/pulumi-java/blob/main/pkg/internal/executors/executor.go) for available options. |
+
+#### Bun runtime options
+
+Bun plugins do not support any runtime options.
 
 #### YAML runtime options
 

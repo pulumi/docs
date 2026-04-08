@@ -4,50 +4,76 @@ const postcss = require("postcss");
 const { purgeCSSPlugin } = require("@fullhuman/postcss-purgecss");
 const cssnano = require("cssnano");
 
-function minifyCSS(filePath, outputFilename) {
-    const bundlePath = glob.sync(filePath)[0];
+// Shared safelist patterns for classes that are dynamically generated or injected at runtime.
+const sharedSafelist = [
+    /^hs-/,
+    /^highlight$/,
+    /^pagination$/,
+    /^code-/,
+    /^copy-/,
+    /^carousel/,
+    /^st-/,
+    /^pulumi-/,
+];
 
-    // If there is no matching bundle then we will skip minifying things.
+// Per-bundle PurgeCSS configuration.
+const bundles = [
+    {
+        name: "bundle",
+        input: "public/css/bundle.*.css",
+        content: ["public/**/*.html", "public/js/bundle.*.js", "public/js/algolia.*.js"],
+        safelist: [
+            ...sharedSafelist,
+            /^icon-/,
+            /^package-details/,
+            /^resources-properties/,
+            /^tabular/,
+        ],
+        // Skip azure-native-v1 because it causes out-of-memory errors during
+        // PurgeCSS content scanning. No unique CSS classes originate from it.
+        skippedContentGlobs: ["public/registry/packages/azure-native-v1/**/*"],
+    },
+    {
+        name: "marketing",
+        input: "public/css/marketing.*.css",
+        content: ["public/**/*.html", "public/js/bundle.*.js"],
+        safelist: [...sharedSafelist],
+    },
+    {
+        // Homepage-specific marketing CSS: same source as marketing but purged
+        // against only the homepage HTML for a smaller bundle. The webpack entry
+        // produces assets/css/marketing-homepage.css for Hugo dev mode.
+        name: "marketing-homepage",
+        input: "public/css/marketing.*.css",
+        content: ["public/index.html", "public/js/bundle.*.js"],
+        safelist: [...sharedSafelist],
+    },
+    {
+        name: "homepage",
+        input: "public/css/homepage.*.css",
+        content: ["public/index.html", "public/js/bundle.*.js"],
+        safelist: [...sharedSafelist],
+    },
+];
+
+function minifyCSS(config) {
+    const bundlePath = glob.sync(config.input)[0];
+
     if (bundlePath === undefined) {
         return Promise.resolve();
     }
 
     const css = fs.readFileSync(bundlePath);
-    const outputPath = `public/css/${outputFilename}`;
+    const outputPath = `public/css/${config.name}.${cssBundleId}.css`;
 
+    // PurgeCSS removes unused CSS by analyzing the built site files.
+    // https://purgecss.com/
     return postcss([
-
-        // PurgeCSS removes unused CSS by analyzing the files of the built website.
-        // https://purgecss.com/
         purgeCSSPlugin({
-            content: [ "public/**/*.html", "public/js/bundle.*.js" ],
-            // PurgeCSS looks through all the built files but, making an exception here
-            // to skip the files in the azure-native-v2 package because it is causing
-            // out of memory errors with all the new files added from the package. This
-            // should not affect the minified bundle, since there isn't any new css being
-            // used for this package that wouldn't already be in the bundle.
-            skippedContentGlobs: [
-                "public/registry/packages/azure-native-v1/**/*",
-            ],
-            css: [
-                bundlePath,
-            ],
-            safelist: {
-                deep: [
-                    /^hs-/,
-                    /^highlight$/,
-                    /^pagination$/,
-                    /^code-/,
-                    /^copy-/,
-                    /^carousel/,
-                    /^st-/,
-                    /^icon-/,
-                    /^package-details/,
-                    /^resources-properties/,
-                    /^tabular/,
-                    /^pulumi-/,
-                ],
-            },
+            content: config.content,
+            skippedContentGlobs: config.skippedContentGlobs || [],
+            css: [bundlePath],
+            safelist: { deep: config.safelist },
 
             // We need to extract the Tailwind screen size selectors (e.g. sm, md, lg)
             // so that we do not strip them out. As long as a class name appears in the HTML
@@ -78,7 +104,6 @@ function minifyCSS(filePath, outputFilename) {
             throw new Error(`Unexpected PostCSS result: ${css}`);
         }
 
-        // Write to the output file with build ID in the name.
         fs.writeFileSync(outputPath, css);
         console.log(`Minified: ${outputPath}`);
     });
@@ -91,18 +116,13 @@ if (!cssBundleId) {
     process.exit(1);
 }
 
-// Ensure output directory exists
 if (!fs.existsSync("public/css")) {
     fs.mkdirSync("public/css", { recursive: true });
 }
 
-Promise.all([
-    minifyCSS("public/css/bundle.*.css", `bundle.${cssBundleId}.css`),
-    minifyCSS("public/css/marketing.*.css", `marketing.${cssBundleId}.css`),
-]).then(() => {
+Promise.all(bundles.map(b => minifyCSS(b))).then(() => {
     console.log("CSS bundles minified successfully!");
-    console.log(`  - bundle.${cssBundleId}.css`);
-    console.log(`  - marketing.${cssBundleId}.css`);
+    bundles.forEach(b => console.log(`  - ${b.name}.${cssBundleId}.css`));
 });
 
 // Exit non-zero when something goes wrong in the promise chain.

@@ -148,6 +148,33 @@ pushd "$programs_dir"
         pulumi -C "$project" config set gcp:region us-central1 || true
         pulumi -C "$project" config set gcp:zone us-central1-a || true
         pulumi -C "$project" config set gcp:project pulumi-ci-gcp-provider || true
+        pulumi -C "$project" config set githubToken "test-token" || true
+
+        # Create prerequisite cloud resources for import examples.
+        if [[ "$project" == azure-native-import-resource-group-* ]]; then
+            if [[ -z "${ARM_CLIENT_ID:-}" || -z "${ARM_CLIENT_SECRET:-}" || -z "${ARM_TENANT_ID:-}" || -z "${ARM_SUBSCRIPTION_ID:-}" ]]; then
+                echo ""
+                echo "  Skipping $project: Azure import tests require these environment variables:"
+                echo "    ARM_CLIENT_ID, ARM_CLIENT_SECRET, ARM_TENANT_ID, ARM_SUBSCRIPTION_ID"
+                echo "  Set them via Pulumi ESC or your Azure service principal credentials."
+                echo ""
+                continue
+            fi
+
+            # Get an OAuth token and create the resource group via Azure REST API.
+            arm_token=$(curl -sf -X POST \
+                "https://login.microsoftonline.com/${ARM_TENANT_ID}/oauth2/v2.0/token" \
+                -d "grant_type=client_credentials&client_id=${ARM_CLIENT_ID}&client_secret=${ARM_CLIENT_SECRET}&scope=https://management.azure.com/.default" \
+                | jq -r '.access_token') || true
+
+            if [[ -n "$arm_token" && "$arm_token" != "null" ]]; then
+                curl -sf -X PUT \
+                    "https://management.azure.com/subscriptions/${ARM_SUBSCRIPTION_ID}/resourcegroups/pulumi-tutorials?api-version=2021-04-01" \
+                    -H "Authorization: Bearer $arm_token" \
+                    -H "Content-Type: application/json" \
+                    -d '{"location": "eastus"}' > /dev/null || true
+            fi
+        fi
 
         # Preview or deploy.
         if [[ "$mode" == "update" ]]; then
@@ -176,13 +203,7 @@ pushd "$programs_dir"
         fi
 
         # Destroy and remove.
-        if [[ "$project" == *-import-* ]]; then
-            # Import examples: remove from state only, leave the cloud resource
-            # intact so it can be re-imported on the next run.
-            pulumi -C "$project" stack rm $fqsn --force --yes
-        else
-            pulumi -C "$project" destroy --yes --remove
-        fi
+        pulumi -C "$project" destroy --yes --remove
 
         passing_projects+=("$project")
         

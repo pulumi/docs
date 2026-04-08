@@ -86,35 +86,7 @@
                 </div>
                 <div class="card bg-white shadow-xl p-6 block">
                     <div>
-                        <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                            <pulumi-choosable type="language" class="highlight" value="typescript">
-                                <img
-                                    class="mx-auto w-full"
-                                    src="/images/home/typescript.svg"
-                                    alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket"
-                                />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="python">
-                                <img class="mx-auto w-full" src="/images/home/python.svg" alt="Pulumi code being written in Python showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="go">
-                                <img class="mx-auto w-full" src="/images/home/go.svg" alt="Pulumi code being written in GO showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="csharp">
-                                <img class="mx-auto w-full" src="/images/home/c-sharp.svg" alt="Pulumi code being written in C# showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="java">
-                                <img class="mx-auto w-full" src="/images/home/java.svg" alt="Pulumi code being written in Java showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="yaml">
-                                <img class="mx-auto w-full" src="/images/home/yaml.svg" alt="Pulumi code being written in YAML showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-                        </pulumi-chooser>
+                        {{ partial "language-chooser-svgs.html" (dict) }}
                     </div>
                 </div>
             </div>
@@ -325,7 +297,7 @@
                                         <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">
                                             <!-- If the browser fails to load the Twitter avatar, just hide it. -->
                                             <div class="rounded-full border-none w-12 h-12 mr-4 overflow-hidden">
-                                                <img src="{{ $tweet.avatar }}" onerror="$(this).hide();" />
+                                                <img src="{{ $tweet.avatar }}" onerror="this.style.display='none';" />
                                             </div>
                                         </a>
                                         <a href="{{ $tweet.link }}" class="flex-grow text-gray-600 hover:text-gray-600 hover:underline" target="_blank" rel="noopener noreferrer">

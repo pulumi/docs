@@ -6,7 +6,7 @@ meta_desc: "The terraform-state provider for Pulumi ESC lets you read outputs fr
 meta_image: meta.png
 feature_image: feature.png
 authors: ["claire-gaestel"]
-tags: ["esc", "terraform"]
+tags: ["esc", "terraform", "features"]
 ---
 
 Many organizations have years of infrastructure built and managed with Terraform.

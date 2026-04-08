@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 
     <!-- GrowthBook / Segment keys -->
     <script>
@@ -19,6 +19,11 @@
             window.growthbook_dev_mode=true;
         {{- end }}
     </script>
+
+    <!-- Preload critical fonts. -->
+    <link rel="preload" href="/fonts/roboto-mono-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/gilroy-bold.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Our CSS and JS bundles. -->
     {{ partial "assets" . }}
@@ -171,36 +176,19 @@
     <!-- RSS link for the blog. -->
     <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
 
-    <!-- Lazy-load Sentry.  -->
-    <script src="https://js.sentry-cdn.com/02614bf2f18e4615a73218b810563ced.min.js" crossorigin="anonymous"></script>
+
     <script>
-        Sentry.onLoad(function() {
-            Sentry.init({
-                environment: "{{ hugo.Environment }}",
-                {{ if in "preview production" hugo.Environment }}
-                    release: "{{ getenv "ASSET_BUNDLE_ID" }}",
-                {{ end }}
-
-                // Don't send Sentry events for browsers we don't support.
-                beforeSend(event) {
-                    const ua = event.request.headers["User-Agent"];
-
-                    if (ua && ua.match(/Linespider|Yeti/)) {
-                        return null;
-                    }
-
-                    return event;
-                }
-            });
+        window.addEventListener('load', function() {
+            var s = document.createElement('script');
+            s.src = 'https://buttons.github.io/buttons.js';
+            document.body.appendChild(s);
         });
     </script>
-
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <!--Segment tracking-->
     <script>
         // Do not load Segment for these user agents.
-        userAgentBlacklist = [
+        userAgentBlocklist = [
             'Mozilla/5.0 (compatible; SiteAuditBot/0.97; +http://www.semrush.com/bot.html)',
             'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
         ]
@@ -211,7 +199,7 @@
             if (!analytics.initialize)
                 if (analytics.invoked) {
                     window.console && console.error && console.error("Segment snippet included twice.");
-                } else if (userAgentBlacklist.includes(navigator.userAgent)) {
+                } else if (userAgentBlocklist.includes(navigator.userAgent)) {
                     console.log("Segment snippet not loaded for user agent: " + navigator.userAgent);
                 } else {
                     analytics.invoked = !0;
@@ -269,7 +257,6 @@
                     analytics._writeKey = segmentWriteKey;
                     analytics._cdn = "https://evs.analytics.pulumi.com";
                     analytics.SNIPPET_VERSION = "5.2.0";
-                    analytics.load(segmentWriteKey);
                     analytics.page();
                 }
         })();
@@ -293,12 +280,7 @@
                 ),
                 '.'
             )
-            var bannerSubContent = React.createElement(
-                'div',
-                { class: "manage-cookies-btn" },
-                'Manage cookies'
-            )
-            //var bannerSubContent = 'You can change your preferences at any time.'
+            var bannerSubContent = ''
             var preferencesDialogTitle = 'Website Data Collection Preferences'
             var preferencesDialogContent =
                 'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'
@@ -306,17 +288,38 @@
             var cancelDialogContent =
                 'Your preferences have not been saved. By continuing to use our website, you are agreeing to our Website Data Collection Policy.'
 
+            var bannerActionsBlock = function(props) {
+                return React.createElement('div', { class: 'consent-actions' },
+                    React.createElement('button', {
+                        type: 'button',
+                        class: 'consent-btn consent-btn-secondary',
+                        onClick: props.changePreferences
+                    }, 'Manage cookies'),
+                    React.createElement('button', {
+                        type: 'button',
+                        class: 'consent-btn consent-btn-secondary',
+                        onClick: props.denyAll
+                    }, 'Reject All'),
+                    React.createElement('button', {
+                        type: 'button',
+                        class: 'consent-btn consent-btn-accept',
+                        onClick: props.acceptAll
+                    }, 'Accept All')
+                );
+            }
+
             return {
                 container: '#segment-consent-manager',
                 writeKey: segmentWriteKey,
                 bannerContent: bannerContent,
                 bannerSubContent: bannerSubContent,
+                bannerActionsBlock: bannerActionsBlock,
                 preferencesDialogTitle: preferencesDialogTitle,
                 preferencesDialogContent: preferencesDialogContent,
                 cancelDialogTitle: cancelDialogTitle,
                 cancelDialogContent: cancelDialogContent,
                 shouldRequireConsent: exports.inEU,
-                closeBehavior: exports.inEU() ? "dismiss" : "accept",
+                bannerHideCloseButton: true,
                 bannerTextColor: "black",
                 cdnHost: "evs.analytics.pulumi.com",
                 shouldReload: false
@@ -324,15 +327,15 @@
         }
     </script>
 
-    <script
-        src="/js/consent-manager.js"
-        defer
-    ></script>
+    <script>
+        window.addEventListener('load', function() {
+            var s = document.createElement('script');
+            s.src = '/js/consent-manager.js';
+            document.body.appendChild(s);
+        });
+    </script>
 
     {{- if eq hugo.Environment "production" }}
-        <!-- Clearbit snippet -->
-        <script src="https://tag.clearbitscripts.com/v1/pk_54e7d7c428c6d5e79098374d93a7b333/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
-
         <!-- Facebook Domain Verification -->
         <meta name="facebook-domain-verification" content="phlf6qes2bxa9ufzk8zt2es0qivg8j" />
 
@@ -358,19 +361,6 @@
             })();
         </script>
 
-        <!-- RB2B -->
-        <script>
-            !function () {var reb2b = window.reb2b = window.reb2b || [];
-            if (reb2b.invoked) return;reb2b.invoked = true;reb2b.methods = ["identify", "collect"];
-            reb2b.factory = function (method) {return function () {var args = Array.prototype.slice.call(arguments);
-            args.unshift(method);reb2b.push(args);return reb2b;};};
-            for (var i = 0; i < reb2b.methods.length; i++) {var key = reb2b.methods[i];reb2b[key] = reb2b.factory(key);}
-            reb2b.load = function (key) {var script = document.createElement("script");script.type = "text/javascript";script.async = true;
-            script.src = "https://s3-us-west-2.amazonaws.com/b2bjsstore/b/" + key + "/reb2b.js.gz";
-            var first = document.getElementsByTagName("script")[0];
-            first.parentNode.insertBefore(script, first);};
-            reb2b.SNIPPET_VERSION = "1.0.1";reb2b.load("Y4O7Z0HKLKNX");}();
-        </script>
     {{- end }}
 
     <!-- Apply anchor links to headings in the docs, blog and taxonomy pages. -->

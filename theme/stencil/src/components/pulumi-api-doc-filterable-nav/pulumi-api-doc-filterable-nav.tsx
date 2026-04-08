@@ -1,5 +1,5 @@
 import { Component, h, Prop, State } from "@stencil/core";
-import { debounce } from "lodash";
+import debounce from "lodash-es/debounce";
 export interface APINavNode {
     // The below properties come from the JSON data.
     name: string;

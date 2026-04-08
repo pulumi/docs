@@ -17,6 +17,10 @@ aliases:
 
 Scopes are the most granular level of access control in Pulumi Cloud's RBAC system. Each scope represents a specific action that can be performed on a resource, such as reading stack configurations or updating environment settings. Scopes are the building blocks of [permission sets](../permission-sets), which are then bundled into [roles](../roles) to create comprehensive access control configurations.
 
+## Scopes vs. organization-wide settings
+
+Scopes are distinct from the **organization-wide access settings** found at **Settings** > **Access Management** (e.g., "Members can create stacks," "Members can delete stacks," "Members can create teams"). Those are separate on/off toggles that are not part of the RBAC scope system. When an org-wide setting is enabled, that capability is granted to all members unconditionally regardless of their role. When it is disabled, only members whose role includes the corresponding scope retain the capability. See the [RBAC overview](/docs/administration/access-identity/rbac/#organization-wide-settings) for a full explanation of how these two systems interact.
+
 ## How Scopes Work
 
 Scopes follow a consistent naming pattern: `object:action`. For example:

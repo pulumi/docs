@@ -7,7 +7,7 @@
     {{ $pageContext := . }}
 
 
-    <!-- Grab the webinar and event page data. -->
+    <!-- Grab the what-is page data. -->
     {{ $topics := (where (where $.Site.Pages "Type" "what-is") "Title" "ne" "What Is?") }}
 
 

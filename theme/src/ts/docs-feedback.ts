@@ -1,29 +1,25 @@
-$(function () {
-    // Check that the analytics track function is available.
+document.addEventListener("DOMContentLoaded", function () {
     var analyticsAvailable = window["analytics"] && window["analytics"].track && typeof window["analytics"].track === "function";
 
-    // Show the docs feedback container.
-    $("#docsFeedbackContainer").removeClass("hidden");
+    var container = document.getElementById("docsFeedbackContainer");
+    if (container) {
+        container.classList.remove("hidden");
+    }
 
-    // For each of the button ids attach a click handler that shows
-    // the additional comment section.
-    ["#docsFeedbackYes", "#docsFeedbackNo"].forEach(function (key) {
-        var answer = key === "#docsFeedbackYes" ? "Yes" : "No";
-        $(key).on("click", function () {
-            $("#feedbackLongForm").removeClass("hidden");
-
-            // Show the additional comment section.
-            showAdditionalCommentSection(answer);
-        });
+    ["docsFeedbackYes", "docsFeedbackNo"].forEach(function (key) {
+        var answer = key === "docsFeedbackYes" ? "Yes" : "No";
+        var btn = document.getElementById(key);
+        if (btn) {
+            btn.addEventListener("click", function () {
+                var longForm = document.getElementById("feedbackLongForm");
+                if (longForm) {
+                    longForm.classList.remove("hidden");
+                }
+                showAdditionalCommentSection(answer);
+            });
+        }
     });
 
-    /**
-     * Submit the documentation feedback to Segment.
-     *
-     * @param {string} answer The value of the button the user clicked when giving feedback.
-     * @param {string} comments The value of the text area in the comment section. Defaults to an empty string
-     * @param {string} email The value of the email input in the comment section. Defaults to an empty string
-     */
     function sendFeedbackToSegment(answer, comments, email) {
         var trackingObj = {
             answer: answer,
@@ -41,59 +37,51 @@ $(function () {
         }
     }
 
-    /**
-     * Show the additional comments section and inject the user's feedback
-     * answer into the submission click handler and form abandonment handler.
-     *
-     * @param {string} answer The value of the button the user clicked when giving feedback.
-     */
     function showAdditionalCommentSection(answer) {
-        // Temporarily reparent the overlay and dialog (to the end of the body), so it
-        // doesn't have to compete for proper z-index positioning.
-        // TODO: Make a proper dialog component for this.
-        var feedbackLongForm = $("#feedbackLongForm");
-        var feedbackLongFormParent = feedbackLongForm.parent();
-        $("body").append(feedbackLongForm);
+        var feedbackLongForm = document.getElementById("feedbackLongForm");
+        var feedbackLongFormParent = feedbackLongForm?.parentElement;
+        if (feedbackLongForm) {
+            document.body.appendChild(feedbackLongForm);
+        }
 
-        // Add a click handler to the submit button.
-        $("#docsSubmitFeedback").on("click", function () {
-            // Grab the values of the comments and email inputs.
-            var comments = $("#feedbackAdditionalComments").val().toString().trim();
-            var email = $("#feedbackEmail").val().toString().trim();
+        var submitBtn = document.getElementById("docsSubmitFeedback");
+        if (submitBtn) {
+            submitBtn.addEventListener("click", function () {
+                var comments = (document.getElementById("feedbackAdditionalComments") as HTMLTextAreaElement)?.value?.trim() || "";
+                var email = (document.getElementById("feedbackEmail") as HTMLInputElement)?.value?.trim() || "";
 
-            // Send to Segment.
-            sendFeedbackToSegment(answer, comments, email);
+                sendFeedbackToSegment(answer, comments, email);
 
-            // Clear the form
-            $("#feedbackAdditionalComments").val("");
-            $("#feedbackEmail").val("");
+                (document.getElementById("feedbackAdditionalComments") as HTMLTextAreaElement).value = "";
+                (document.getElementById("feedbackEmail") as HTMLInputElement).value = "";
 
-            // Show the thank you section.
-            $("#feedbackButtons").addClass("hidden");
-            $("#feedbackLongForm").addClass("hidden");
-            $("#feedbackThankYou").removeClass("hidden");
-        });
+                document.getElementById("feedbackButtons")?.classList.add("hidden");
+                document.getElementById("feedbackLongForm")?.classList.add("hidden");
+                document.getElementById("feedbackThankYou")?.classList.remove("hidden");
+            });
+        }
 
-        $("#docsCloseFeedbackLongForm").on("click", function () {
-            // Send to Segment.
-            sendFeedbackToSegment(answer, "", "");
+        var closeBtn = document.getElementById("docsCloseFeedbackLongForm");
+        if (closeBtn) {
+            closeBtn.addEventListener("click", function () {
+                sendFeedbackToSegment(answer, "", "");
 
-            // Clear the form
-            $("#feedbackAdditionalComments").val("");
-            $("#feedbackEmail").val("");
+                (document.getElementById("feedbackAdditionalComments") as HTMLTextAreaElement).value = "";
+                (document.getElementById("feedbackEmail") as HTMLInputElement).value = "";
 
-            // Show the thank you section.
-            $("#feedbackButtons").addClass("hidden");
-            $("#feedbackLongForm").addClass("hidden");
-            $("#feedbackThankYou").removeClass("hidden");
+                document.getElementById("feedbackButtons")?.classList.add("hidden");
+                document.getElementById("feedbackLongForm")?.classList.add("hidden");
+                document.getElementById("feedbackThankYou")?.classList.remove("hidden");
 
-            // Return the overlay to its original position.
-            feedbackLongFormParent.append(feedbackLongForm);
-        });
+                if (feedbackLongFormParent && feedbackLongForm) {
+                    feedbackLongFormParent.appendChild(feedbackLongForm);
+                }
+            });
+        }
 
-        $(window).on("beforeunload", function () {
-            // When page unloads send the answer if it has not already been sent.
-            var feedbackSent = $("#feedbackLongForm").hasClass("hidden");
+        window.addEventListener("beforeunload", function () {
+            var longForm = document.getElementById("feedbackLongForm");
+            var feedbackSent = longForm?.classList.contains("hidden");
             if (!feedbackSent) {
                 sendFeedbackToSegment(answer, "", "");
             }

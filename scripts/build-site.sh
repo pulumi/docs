@@ -50,4 +50,7 @@ node scripts/content/generate-docs-content.js
 # Purge unused CSS.
 yarn run minify-css
 
+# Inline critical CSS for the homepage.
+node scripts/inline-critical-css.js
+
 printf "Done!\n\n"

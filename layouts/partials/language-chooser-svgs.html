@@ -1,0 +1,44 @@
+{{ $class := .class | default "mx-auto w-full" }}
+{{ $ts := resources.Get "fingerprinted/images/home/typescript.svg" | fingerprint }}
+{{ $py := resources.Get "fingerprinted/images/home/python.svg" | fingerprint }}
+{{ $go := resources.Get "fingerprinted/images/home/go.svg" | fingerprint }}
+{{ $cs := resources.Get "fingerprinted/images/home/c-sharp.svg" | fingerprint }}
+{{ $java := resources.Get "fingerprinted/images/home/java.svg" | fingerprint }}
+{{ $yaml := resources.Get "fingerprinted/images/home/yaml.svg" | fingerprint }}
+<pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+    <pulumi-choosable type="language" class="highlight" value="typescript">
+        <img class="{{ $class }}" src="{{ $ts.RelPermalink }}"
+            alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket"
+            width="564" height="458" />
+    </pulumi-choosable>
+
+    <pulumi-choosable type="language" class="highlight" value="python">
+        <img class="{{ $class }}" src="{{ $py.RelPermalink }}"
+            alt="Pulumi code being written in Python showing autocomplete for creating a new S3 bucket"
+            width="564" height="458" />
+    </pulumi-choosable>
+
+    <pulumi-choosable type="language" class="highlight" value="go">
+        <img class="{{ $class }}" src="{{ $go.RelPermalink }}"
+            alt="Pulumi code being written in Go showing autocomplete for creating a new S3 bucket"
+            width="564" height="458" />
+    </pulumi-choosable>
+
+    <pulumi-choosable type="language" class="highlight" value="csharp">
+        <img class="{{ $class }}" src="{{ $cs.RelPermalink }}"
+            alt="Pulumi code being written in C# showing autocomplete for creating a new S3 bucket"
+            width="564" height="458" />
+    </pulumi-choosable>
+
+    <pulumi-choosable type="language" class="highlight" value="java">
+        <img class="{{ $class }}" src="{{ $java.RelPermalink }}"
+            alt="Pulumi code being written in Java showing autocomplete for creating a new S3 bucket"
+            width="564" height="458" />
+    </pulumi-choosable>
+
+    <pulumi-choosable type="language" class="highlight" value="yaml">
+        <img class="{{ $class }}" src="{{ $yaml.RelPermalink }}"
+            alt="Pulumi code being written in YAML showing autocomplete for creating a new S3 bucket"
+            width="564" height="458" />
+    </pulumi-choosable>
+</pulumi-chooser>

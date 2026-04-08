@@ -3,6 +3,10 @@ import { Component, h, Element, Prop, Method, Listen } from "@stencil/core";
     tag: "pulumi-filter-select-option-group",
     shadow: true,
     styles: `
+        :host {
+            width: max-content;
+        }
+
         .menu {
             position: relative;
             transition: all 100ms;
@@ -31,7 +35,6 @@ import { Component, h, Element, Prop, Method, Listen } from "@stencil/core";
         .toggle slot {
             position: relative;
             display: block;
-            width: 100%;
         }
 
         :host([expanded]) .menu {

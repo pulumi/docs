@@ -4,179 +4,182 @@ import {LocalStorageService} from "./state";
 const navigationState = new LocalStorageService("navigation-toggle-state");
 loadToggleStates();
 
-function bindToggle(el) {
-    $(".toggleButton", el).click(function () {
-        if ($(this).closest(".toggle, .toggleVisible")[0] != el) {
-            // Only trigger the closest toggle header.
-            return;
-        }
+function bindToggle(el: HTMLElement) {
+    el.querySelectorAll(".toggleButton").forEach(btn => {
+        btn.addEventListener("click", function () {
+            if (this.closest(".toggle, .toggleVisible") !== el) {
+                return;
+            }
 
-        if ($(el).is(".toggle")) {
-            $(el).addClass("toggleVisible").removeClass("toggle");
-        } else {
-            $(el).addClass("toggle").removeClass("toggleVisible");
-        }
+            if (el.classList.contains("toggle")) {
+                el.classList.add("toggleVisible");
+                el.classList.remove("toggle");
+            } else {
+                el.classList.add("toggle");
+                el.classList.remove("toggleVisible");
+            }
+        });
     });
 }
 
 function loadToggleStates() {
-    // checks whether the menu item refers to the current page the
-    // user is on.
-    const isCurrentPage = (el) => {
+    const isCurrentPage = (el: HTMLElement) => {
         const browserUrl = window.location.href;
-        const anchorRef = $(el).find('a').attr('href');
+        const anchor = el.querySelector('a');
+        const anchorRef = anchor ? anchor.getAttribute('href') : '';
         return browserUrl.includes(anchorRef);
     };
 
-    $(".toggle-topLevel, .toggleVisible-topLevel").each(function (i, el) {
+    document.querySelectorAll(".toggle-topLevel, .toggleVisible-topLevel").forEach((el: HTMLElement) => {
         if (navigationState.getKey(el.id) == "expanded" || isCurrentPage(el)) {
-            $(el).addClass("toggleVisible").removeClass("toggle");
+            el.classList.add("toggleVisible");
+            el.classList.remove("toggle");
         } else if (navigationState.getKey(el.id) == "collapsed") {
-            $(el).addClass("toggle").removeClass("toggleVisible");
+            el.classList.add("toggle");
+            el.classList.remove("toggleVisible");
         }
 
-        // Control open/closed folder icons if they exist as a subelement of the parent toggle-able item.
-        $(el).click(function () {
-            const folderOpenIcon = $(el).find(".folder-open");
-            const folderClosedIcon = $(el).find(".folder");
-            if (folderOpenIcon.length > 0) {
-                folderOpenIcon.addClass("folder").removeClass("folder-open")
-            } else if (folderClosedIcon.length > 0) {
-                folderClosedIcon.addClass("folder-open").removeClass("folder")
+        el.addEventListener("click", function () {
+            const folderOpenIcon = el.querySelector(".folder-open");
+            const folderClosedIcon = el.querySelector(".folder");
+            if (folderOpenIcon) {
+                folderOpenIcon.classList.add("folder");
+                folderOpenIcon.classList.remove("folder-open");
+            } else if (folderClosedIcon) {
+                folderClosedIcon.classList.add("folder-open");
+                folderClosedIcon.classList.remove("folder");
             }
         });
     });
 
-    $(".toggleVisible, .toggleVisible-topLevel").each(function (i, el) {
-        // Scroll to active item in list.
+    document.querySelectorAll(".toggleVisible, .toggleVisible-topLevel").forEach((el: HTMLElement) => {
         if (isCurrentPage(el)) {
-            $("#left-nav").animate({
-                scrollTop: $(el).offset().top - 145
-            }, 0);
+            const leftNav = document.getElementById("left-nav");
+            if (leftNav) {
+                leftNav.scrollTop = el.offsetTop - 145;
+            }
         }
     });
 }
 
-function updateToggleState(el, toggleState) {
+function updateToggleState(el: HTMLElement, toggleState: string) {
     navigationState.updateKey(el.id, toggleState)
 }
 
-function bindTopLevelToggle(el) {
-    $(".toggleButton-topLevel", el).click(function () {
-        if ($(this).closest(".toggle-topLevel, .toggleVisible-topLevel")[0] != el) {
-            // Only trigger the closest toggle header.
-            return;
-        }
+function bindTopLevelToggle(el: HTMLElement) {
+    el.querySelectorAll(".toggleButton-topLevel").forEach(btn => {
+        btn.addEventListener("click", function () {
+            if (this.closest(".toggle-topLevel, .toggleVisible-topLevel") !== el) {
+                return;
+            }
 
-        if ($(el).is(".toggle")) {
-            $(el).addClass("toggleVisible").removeClass("toggle");
-            updateToggleState(el, "expanded");
-        } else {
-            $(el).addClass("toggle").removeClass("toggleVisible");
-            updateToggleState(el, "collapsed");
-        }
+            if (el.classList.contains("toggle")) {
+                el.classList.add("toggleVisible");
+                el.classList.remove("toggle");
+                updateToggleState(el, "expanded");
+            } else {
+                el.classList.add("toggle");
+                el.classList.remove("toggleVisible");
+                updateToggleState(el, "collapsed");
+            }
+        });
     });
 }
 
-function bindTopLevelToggles(selector) {
-    $(selector).each(function (i, el) {
+function bindTopLevelToggles(selector: string) {
+    document.querySelectorAll(selector).forEach((el: HTMLElement) => {
         bindTopLevelToggle(el);
     });
 }
 
-function bindToggles(selector) {
-    $(selector).each(function (i, el) {
+function bindToggles(selector: string) {
+    document.querySelectorAll(selector).forEach((el: HTMLElement) => {
         bindToggle(el);
     });
 }
 
 export function generateOnThisPage() {
-    // Hide the table of contents by default. We explicitly decide when to show it
-    // below based on if elements exist to display.
-    $(".table-of-contents").hide();
+    const tocs = document.querySelectorAll<HTMLElement>(".table-of-contents");
+    tocs.forEach(toc => toc.style.display = "none");
 
-    var $ul = $(".table-of-contents .content ul.table-of-contents-list");
-    if ($ul) {
-        var found = false;
-        var headings = [];
+    const uls = document.querySelectorAll(".table-of-contents .content ul.table-of-contents-list");
+    if (uls.length === 0) return;
 
-        $("h2, h3").each(function () {
-            var $el = $(this);
-            // Skip if this heading is inside a hidden element
-            if ($el.closest('.hidden').length > 0) {
-                return;
-            }
-            var id = $el.attr("id");
-            var text = $el.text();
-            var linkTitle = $el.data("link-title");
-            var tag = $el.prop("tagName").toLowerCase();
+    let found = false;
+    const headingItems: { element: HTMLElement, listItems: HTMLElement[] }[] = [];
 
-            if (id && text) {
-                found = true;
-                var li = $("<li class='" + tag + "'><a href='#" + id + "'>" + (linkTitle || text) + "</a></li>");
-                $ul.append(li);
+    document.querySelectorAll("h2, h3").forEach((el: HTMLElement) => {
+        if (el.closest('.hidden')) {
+            return;
+        }
+        const id = el.getAttribute("id");
+        const text = el.textContent;
+        const linkTitle = el.dataset.linkTitle;
+        const tag = el.tagName.toLowerCase();
 
-                // Capture associated heading and list-item elements, so we can mark list
-                // items active when they become visible.
-                headings.push({
-                    element: $el,
-                    listItem: li,
-                });
-            }
-        });
-
-        // It's hidden by default. If we added links to the list, show it.
-        if (found) {
-            $(".table-of-contents").show();
-
-            // Highlight the first heading whose offset from top is greater than the current scroll
-            // position, to best indicate your location within the page hierarchy.
-            const setActiveItem = () => {
-                var active;
-                for (var heading of headings) {
-                    if (!active && heading.element.offset().top >= window.scrollY) {
-                        active = heading;
-                    }
-                    heading.listItem.toggleClass("active", heading === active);
-                }
-            };
-
-            $(window).on("scroll", function () {
-                setActiveItem();
+        if (id && text) {
+            found = true;
+            const listItems: HTMLElement[] = [];
+            uls.forEach(ul => {
+                const li = document.createElement("li");
+                li.className = tag;
+                const a = document.createElement("a");
+                a.href = '#' + id;
+                a.textContent = linkTitle || text;
+                li.appendChild(a);
+                ul.appendChild(li);
+                listItems.push(li);
             });
 
-            setActiveItem();
+            headingItems.push({ element: el, listItems });
         }
+    });
+
+    if (found) {
+        tocs.forEach(toc => toc.style.display = "");
+
+        const setActiveItem = () => {
+            let active = null;
+            for (const heading of headingItems) {
+                if (!active && heading.element.offsetTop >= window.scrollY) {
+                    active = heading;
+                }
+                heading.listItems.forEach(li => li.classList.toggle("active", heading === active));
+            }
+        };
+
+        window.addEventListener("scroll", setActiveItem);
+        setActiveItem();
     }
 }
 
-(function ($) {
+(function () {
     const observer = new IntersectionObserver(
         ([e]) => {
             e.target.classList.toggle("is-pinned", e.intersectionRatio < 1);
-            const pinnedSearchContainerEl = document.querySelector(".header-pinned");
-            const dotOverlay = document.querySelector(".hide-on-pinned");
-            const heroTitle = document.querySelector(".header-hero-title");
+            const pinnedSearchContainerEl = document.querySelector(".header-pinned") as HTMLElement;
+            const dotOverlay = document.querySelector(".hide-on-pinned") as HTMLElement;
+            const heroTitle = document.querySelector(".header-hero-title") as HTMLElement;
 
             if (e.isIntersecting) {
-                $(pinnedSearchContainerEl).addClass("hidden");
-                $(pinnedSearchContainerEl).removeClass("flex");
+                pinnedSearchContainerEl?.classList.add("hidden");
+                pinnedSearchContainerEl?.classList.remove("flex");
 
-                $(dotOverlay).removeClass("hidden");
-                $(dotOverlay).addClass("flex");
+                dotOverlay?.classList.remove("hidden");
+                dotOverlay?.classList.add("flex");
 
-                $(heroTitle).removeClass("hidden");
-                $(heroTitle).addClass("flex");
+                heroTitle?.classList.remove("hidden");
+                heroTitle?.classList.add("flex");
 
             } else {
-                $(pinnedSearchContainerEl).removeClass("hidden");
-                $(pinnedSearchContainerEl).addClass("flex");
+                pinnedSearchContainerEl?.classList.remove("hidden");
+                pinnedSearchContainerEl?.classList.add("flex");
 
-                $(dotOverlay).addClass("hidden");
-                $(dotOverlay).removeClass("flex");
+                dotOverlay?.classList.add("hidden");
+                dotOverlay?.classList.remove("flex");
 
-                $(heroTitle).addClass("hidden");
-                $(heroTitle).removeClass("flex");
+                heroTitle?.classList.add("hidden");
+                heroTitle?.classList.remove("flex");
 
             }
         },
@@ -184,8 +187,6 @@ export function generateOnThisPage() {
     );
 
     const headerContainerEl = document.querySelector(".header-container");
-    // The header-container won't be available in the registry.
-    // If the registry's top nav bar is available attach the observer to that.
     if (!headerContainerEl) {
         const registryNavBar = document.querySelector(".top-nav-bar.registry");
         if (registryNavBar) {
@@ -195,68 +196,79 @@ export function generateOnThisPage() {
         observer.observe(headerContainerEl);
     }
 
-    // Set up toggle functionality.
     bindToggles(".toggle");
     bindToggles(".toggleVisible");
 
     bindTopLevelToggles(".toggle-topLevel");
     bindTopLevelToggles(".toggleVisible-topLevel");
 
-    // Create "On This Page" in the right nav.
     generateOnThisPage();
 
-    // Mobile menu toggles.
-    $(".nav-header-toggle").click(function () {
-        $(".nav-header-items").toggleClass("hidden");
+    document.querySelector(".nav-header-toggle")?.addEventListener("click", () => {
+        document.querySelector(".nav-header-items")?.classList.toggle("hidden");
     });
-    $(".blog-sidebar-toggle").click(function () {
-        $(".blog-sidebar-content").toggleClass("hidden");
+    document.querySelector(".blog-sidebar-toggle")?.addEventListener("click", () => {
+        document.querySelector(".blog-sidebar-content")?.classList.toggle("hidden");
     });
-    $(".docs-sidebar-toggle").click(function () {
-        $(".docs-sidebar-content").toggleClass("hidden");
+    document.querySelector(".docs-sidebar-toggle")?.addEventListener("click", () => {
+        document.querySelector(".docs-sidebar-content")?.classList.toggle("hidden");
     });
 
-    // Shuffle lists that want to be shuffled.
-    $("ul[data-shuffle='true']").each(function (i, list) {
-        var items = $(list).find("> li");
-
-        items.each(function (i, item) {
-            $(item).css("order", Math.ceil(Math.random() * items.length));
+    document.querySelectorAll("ul[data-shuffle='true']").forEach((list: HTMLElement) => {
+        const items = list.querySelectorAll(":scope > li") as NodeListOf<HTMLElement>;
+        items.forEach(item => {
+            item.style.order = String(Math.ceil(Math.random() * items.length));
         });
-
-        $(list).removeClass("invisible");
+        list.classList.remove("invisible");
     });
 
-    $(`#about-nav li[data-filter-name="who-we-are"]`).addClass("active-about-nav-item");
+    const aboutNavItem = document.querySelector(`#about-nav li[data-filter-name="who-we-are"]`);
+    if (aboutNavItem) {
+        aboutNavItem.classList.add("active-about-nav-item");
+    }
 
-    $(function () {
-        $("#about-nav li").click(function () {
+    document.querySelectorAll("#about-nav li").forEach(li => {
+        li.addEventListener("click", function () {
             const activeClassName = "active-about-nav-item";
-            $(this).addClass(activeClassName);
+            this.classList.add(activeClassName);
 
-            const activeLink = $(this).data("filter-name");
-            const allLinks = ["who-we-are", "what-we-believe", "community", "history", "awards", "newsroom", "join-us"]
+            const activeLink = (this as HTMLElement).dataset.filterName;
+            const allLinks = ["who-we-are", "what-we-believe", "community", "history", "awards", "newsroom", "join-us"];
             const inactiveLinks = allLinks.filter(link => link !== activeLink);
 
             inactiveLinks.forEach(link => {
-                $(`#about-nav li[data-filter-name="${link}"]`).removeClass(activeClassName);
-            })
-
+                document.querySelector(`#about-nav li[data-filter-name="${link}"]`)?.classList.remove(activeClassName);
+            });
         });
     });
 
     // Wrap "required" asterisks in tooltips.
-    $("dl.resources-properties dt.property-required.property-replacement")
-        .removeAttr("title")
-        .find(".property-indicator")
-        .replaceWith(' <div class="multi-property-container"> ' + "<pulumi-tooltip>" + '    <span class="property-indicator"></span>' + '    <span slot="content">This property is required.</span>' + "</pulumi-tooltip>" + "</pulumi-tooltip>" + ' <div class="replacement-container"> ' + "<pulumi-tooltip>" + '    <span class="property-indicator-replacement">' + ' <img src="/icons/replacement-property.svg"/>' + '</span>' + '    <span slot="content">Changes to this property will trigger replacement.</span>' + "</pulumi-tooltip>" + "</div>" + "</div>");
-    $("dl.resources-properties dt.property-required:not(.property-replacement)")
-        .removeAttr("title")
-        .find(".property-indicator")
-        .replaceWith("<pulumi-tooltip>" + '    <span class="property-indicator"></span>' + '    <span slot="content">This property is required.</span>' + "</pulumi-tooltip>");
+    document.querySelectorAll("dl.resources-properties dt.property-required.property-replacement").forEach(dt => {
+        dt.removeAttribute("title");
+        const indicator = dt.querySelector(".property-indicator");
+        if (indicator) {
+            const wrapper = document.createElement("div");
+            wrapper.innerHTML = ' <div class="multi-property-container"> ' + "<pulumi-tooltip>" + '    <span class="property-indicator"></span>' + '    <span slot="content">This property is required.</span>' + "</pulumi-tooltip>" + "</pulumi-tooltip>" + ' <div class="replacement-container"> ' + "<pulumi-tooltip>" + '    <span class="property-indicator-replacement">' + ' <img src="/icons/replacement-property.svg"/>' + '</span>' + '    <span slot="content">Changes to this property will trigger replacement.</span>' + "</pulumi-tooltip>" + "</div>" + "</div>";
+            indicator.replaceWith(wrapper.firstElementChild);
+        }
+    });
+    document.querySelectorAll("dl.resources-properties dt.property-required:not(.property-replacement)").forEach(dt => {
+        dt.removeAttribute("title");
+        const indicator = dt.querySelector(".property-indicator");
+        if (indicator) {
+            const wrapper = document.createElement("div");
+            wrapper.innerHTML = "<pulumi-tooltip>" + '    <span class="property-indicator"></span>' + '    <span slot="content">This property is required.</span>' + "</pulumi-tooltip>";
+            indicator.replaceWith(wrapper.firstElementChild);
+        }
+    });
 
-    $("dl.resources-properties dt.property-replacement:not(.property-required)")
-        .removeAttr("title")
-        .find(".property-indicator")
-        .replaceWith("<pulumi-tooltip>" + '    <span class="property-indicator-replacement">' + ' <img src="/icons/replacement-property.svg"/>' + '</span>' + '    <span slot="content">Changes to this property will trigger replacement.</span>' + "</pulumi-tooltip>");
-})(jQuery);
+    document.querySelectorAll("dl.resources-properties dt.property-replacement:not(.property-required)").forEach(dt => {
+        dt.removeAttribute("title");
+        const indicator = dt.querySelector(".property-indicator");
+        if (indicator) {
+            const wrapper = document.createElement("div");
+            wrapper.innerHTML = "<pulumi-tooltip>" + '    <span class="property-indicator-replacement">' + ' <img src="/icons/replacement-property.svg"/>' + '</span>' + '    <span slot="content">Changes to this property will trigger replacement.</span>' + "</pulumi-tooltip>";
+            indicator.replaceWith(wrapper.firstElementChild);
+        }
+    });
+})();

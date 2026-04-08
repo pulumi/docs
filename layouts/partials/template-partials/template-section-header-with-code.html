@@ -1,0 +1,65 @@
+{{/*
+Template Section Header With Code Partial
+
+Two-column layout for product sections: left = tag line, title, description,
+and optional CTA link; right = language-switcher code images via pulumi-chooser.
+
+Parameters:
+- tag_line: Small grey label (e.g. "Infrastructure building blocks")
+- title: Main title (markdown supported)
+- description: Body paragraph (supports markdown)
+- cta_text: Optional CTA link text
+- cta_link: Optional CTA link URL
+- code_images: List of per-language images for pulumi-chooser.
+    Each item: { language: "typescript", image: "/path/to/img.svg", alt: "Alt text" }
+- cards: Optional array of mini feature cards rendered below the two-column section.
+    Each item: { icon: "fa-code", title: "Title", description: "..." }
+- anchor: Optional anchor for section id
+*/}}
+
+{{ $tagLine := .tag_line }}
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
+{{ $codeImages := .code_images }}
+{{ $cards := .cards }}
+{{ $anchor := .anchor }}
+
+<section class="template-section-header-with-code" {{ if $anchor }} id="{{ $anchor }}" {{ end }}>
+    <div class="section-header-split-inner flex flex-col xl:flex-row items-start">
+        <div class="section-header-split-content xl:min-w-0">
+            {{ if $tagLine }}
+            <p class="section-header-split-tag mb-3">{{ $tagLine }}</p>
+            {{ end }}
+            {{ if $title }}
+            <h2 class="section-header-split-title mb-4 mt-0">{{ $title | markdownify }}</h2>
+            {{ end }}
+            {{ if $description }}
+            <div class="section-header-split-description mb-6">
+                {{ $description | markdownify }}
+            </div>
+            {{ end }}
+            {{ if $ctaText }}
+            <a href="{{ $ctaLink }}" class="cta inline-flex items-center gap-1">
+                <span>{{ $ctaText }}</span>
+                <span>→</span>
+            </a>
+            {{ end }}
+        </div>
+        {{ if $codeImages }}
+        <div class="section-header-split-image w-full flex justify-center xl:justify-end">
+            <pulumi-chooser type="language" options="{{ range $i, $item := $codeImages }}{{ if $i }},{{ end }}{{ $item.language }}{{ end }}">
+                {{ range $item := $codeImages }}
+                <pulumi-choosable type="language" class="highlight" value="{{ $item.language }}">
+                    <img class="mx-auto w-full" src="{{ $item.image }}" alt="{{ $item.alt | default "" }}" />
+                </pulumi-choosable>
+                {{ end }}
+            </pulumi-chooser>
+        </div>
+        {{ end }}
+    </div>
+    {{ if $cards }}
+    {{ partial "template-partials/template-mini-cards.html" $cards }}
+    {{ end }}
+</section>

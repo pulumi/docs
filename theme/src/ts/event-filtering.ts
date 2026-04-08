@@ -1,12 +1,6 @@
 import { getQueryVariable } from "./util";
 
-$(function () {
-    /**
-     * This function creates a checkbox from a given text string.
-     * It will set the label and the value to whatever the input string is.
-     *
-     * @param {string} text The label and value of the checkbox
-     */
+document.addEventListener("DOMContentLoaded", function () {
     function createCheckbox(text) {
         var filterValue = getQueryVariable("filter");
 
@@ -19,9 +13,6 @@ $(function () {
         checkbox.className = "mr-2 cursor-pointer";
         checkbox.value = text.toLowerCase();
 
-        // If the filter query parameter is available use it to determine
-        // what checkboxes should initially be checked. If the query param
-        // is not set, check all the boxes.
         if (filterValue !== undefined) {
             var shouldBeChecked = filterValue.toLowerCase().split(",").indexOf(checkbox.value) > -1;
             if (shouldBeChecked) {
@@ -42,31 +33,19 @@ $(function () {
         return container;
     }
 
-    // This function grabs the filter checkboxes, loops through them to
-    // determine what is checked, and then filters the events.
     function getFilterValuesAndFilterList() {
-        var inputs = $("input[type='checkbox']");
+        var inputs = document.querySelectorAll<HTMLInputElement>("input[type='checkbox']");
         var chosenInputs = [];
 
-        for (var i = 0; i < inputs.length; i++) {
-            var input = inputs[i];
-            var isChecked = $(input).prop("checked");
-            if (isChecked) {
-                chosenInputs.push($(input).val());
+        inputs.forEach(input => {
+            if (input.checked) {
+                chosenInputs.push(input.value);
             }
-        }
+        });
 
         filterEventList(chosenInputs);
     }
 
-    /**
-     * This function checks to see if two arrays have any value in common. This
-     * function can return false for arrays of objects becasue the objects
-     * in each array can have different references.
-     *
-     * @param {*[]} arr1 An array of non object values
-     * @param {*[]} arr2 An array of non object values
-     */
     function checkForIntersection(arr1, arr2) {
         for (var i = 0; i < arr1.length; i++) {
             var val = arr1[i];
@@ -77,76 +56,59 @@ $(function () {
         return false;
     }
 
-    /**
-     * This function will fitler the event list and hide/show specific items
-     * based on the select checkboxes. If no checkboxes are selected we will show all
-     * the events.
-     *
-     * @param {string[]} tags An array of tags that should appear in the event list.
-     */
     function filterEventList(tags) {
-        var events = $("#event-list li");
+        var events = document.querySelectorAll("#event-list li");
         var visibleEvents = 0;
 
-        for (var i = 0; i < events.length; i++) {
-            var event = $(events[i]);
-            var dataEventType = event.attr("data-event-type").split(",");
+        events.forEach(event => {
+            var dataEventType = event.getAttribute("data-event-type").split(",");
             var shouldBeVisible = tags.length === 0 ? true : checkForIntersection(tags, dataEventType);
 
             if (shouldBeVisible) {
                 visibleEvents += 1;
-                event.removeClass("hidden");
+                event.classList.remove("hidden");
             } else {
-                event.addClass("hidden");
+                event.classList.add("hidden");
+            }
+        });
+
+        const heading = document.getElementById("event-list-heading");
+        if (heading) {
+            if (visibleEvents === events.length) {
+                heading.textContent = "All Upcoming Events";
+            } else {
+                heading.textContent = visibleEvents + " Upcoming Events";
             }
         }
-        if (visibleEvents === events.length) {
-            $("#event-list-heading").text("All Upcoming Events");
-        } else {
-            $("#event-list-heading").text(visibleEvents + " Upcoming Events");
-        }
     }
 
-    // This is the start of the code that is executed on page load.
-    var eventsElements = $(".event-tags span");
-    var eventFilterParent = $("#eventFilter");
+    var eventsElements = document.querySelectorAll(".event-tags span");
+    var eventFilterParent = document.getElementById("eventFilter");
 
-    // Check to see if the event elements exists.
     if (!eventsElements.length) {
-        // Stop the script as there are no tags to filter.
         return;
     }
-    if (!eventFilterParent.length) {
-        // Stop the script because the event filter element does not exist.
+    if (!eventFilterParent) {
         return;
     }
 
     var tags = [];
 
-    // Loop through the tags and create a unique array of tag names and
-    // append a checkbox to the event filter for each unique tag.
     for (var i = 0; i < eventsElements.length; i++) {
-        var elem = eventsElements[i];
-
-        // Grab the text of the element. We use the .text method because
-        // it will grab the string value of the text.
-        //
-        // See: https://api.jquery.com/text/
-        var text = $(elem).text();
+        var text = eventsElements[i].textContent;
 
         if (tags.indexOf(text) === -1) {
             tags.push(text);
             const input = createCheckbox(text);
-            eventFilterParent.append(input);
+            eventFilterParent.appendChild(input);
         }
     }
 
-    // Filter the events based on the filter query parameter.
     getFilterValuesAndFilterList();
 
-    // This click handler will determine which checkboxes are selected
-    // and then provide them to the filter event function to filter the events.
-    $("#eventFilter input[type='checkbox']").click(function () {
-        getFilterValuesAndFilterList();
+    eventFilterParent.addEventListener("click", function (e) {
+        if ((e.target as HTMLElement).matches("input[type='checkbox']")) {
+            getFilterValuesAndFilterList();
+        }
     });
 });

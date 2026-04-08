@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,51 +27,47 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: cloud-automation-intelligent-ops
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: "Cloud Automation: AWS and Pulumi’s Path to Intelligent Ops"
-    event_type: workshop # workshop | event
+event_type: workshop # workshop | event
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/89CYZ5XTbXg?si=dao9Y47h6qBEb4Jh
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/89CYZ5XTbXg?si=dao9Y47h6qBEb4Jh
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-10-09T12:00:00-04:00
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2025-10-09T12:00:00-04:00
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# Duration of the webinar.
+duration: 60 minutes
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # Description of the webinar.
-    description: |
-        Join Pulumi and [AWS](https://www.pulumi.com/aws#video) for an exclusive discussion on how next-generation AI capabilities are transforming infrastructure operations through intelligent automation. Discover how platform engineering teams can harness [Pulumi Neo](https://www.pulumi.com/product/neo/) and other autonomous assistants that understand context, execute complex cloud operations, and adapt to your organization's unique requirements — all while maintaining enterprise-grade governance and security controls. Learn how Neo's AI-powered infrastructure assistant is revolutionizing the way teams build, manage, and optimize cloud infrastructure through natural language interactions.
-    learn:
-        - What is AIOps and how it impacts your organization's operations
-        - Best practices for balancing automation with human oversight
-        - Strategies for incremental adoption of AI-powered infrastructure management
-        - How to prepare your organization for the next wave of infrastructure automation
-        
-    # The webinar presenters
-    presenters:
-        - name: Meagan Cojocar
-          role: Vice President and GM, IaC, Pulumi
-          photo: /images/team/meagan-cojocar.jpg
-        - name: Marina Novikova
-          role: Sr. Partner Solution Architect, AWS
-          photo: /images/team/marina-novikova.jpg
-        - name: James Bland
-          role: WW Tech Lead Data & AI, AWS
-          photo: /images/team/james-bland.jpg
+# Description of the webinar.
+description: |
+    Join Pulumi and [AWS](https://www.pulumi.com/aws#video) for an exclusive discussion on how next-generation AI capabilities are transforming infrastructure operations through intelligent automation. Discover how platform engineering teams can harness [Pulumi Neo](https://www.pulumi.com/product/neo/) and other autonomous assistants that understand context, execute complex cloud operations, and adapt to your organization's unique requirements — all while maintaining enterprise-grade governance and security controls. Learn how Neo's AI-powered infrastructure assistant is revolutionizing the way teams build, manage, and optimize cloud infrastructure through natural language interactions.
+learn:
+    - What is AIOps and how it impacts your organization's operations
+    - Best practices for balancing automation with human oversight
+    - Strategies for incremental adoption of AI-powered infrastructure management
+    - How to prepare your organization for the next wave of infrastructure automation
+    
+# The webinar presenters
+presenters:
+    - name: Meagan Cojocar
+      role: Vice President and GM, IaC, Pulumi
+      photo: /images/team/meagan-cojocar.jpg
+    - name: Marina Novikova
+      role: Sr. Partner Solution Architect, AWS
+      photo: /images/team/marina-novikova.jpg
+    - name: James Bland
+      role: WW Tech Lead Data & AI, AWS
+      photo: /images/team/james-bland.jpg
 
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["AI", "Automation", "AWS Bedrock", "DevOps"]
-        languages: []
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics:  ["AI", "Automation", "AWS Bedrock", "DevOps"]
+    languages: []
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:
@@ -80,11 +75,4 @@ form:
     hubspot_form_id: 14399b07-857e-47fa-bb31-9f31a1abe5a3
     salesforce_campaign_id: 701PQ00000gCXODYA4
 
-event_data:
-  name: "Cloud Automation: AWS and Pulumi’s Path to Intelligent Ops"
-  start_date: 2025-10-09T12:00:00-04:00
-  end_date: 2025-10-09T13:30:00-04:00
-  url: "https://www.pulumi.com/resources/cloud-automation-intelligent-ops/"
-  description: |
-    Join Pulumi and AWS for an exclusive chat on how next-generation AI capabilities are transforming infrastructure operations through intelligent automation. Discover how platform engineering teams can harness autonomous assistants that understand context, execute complex cloud operations, and adapt to your organization's unique requirements - all while maintaining enterprise-grade governance and security controls.
 ---

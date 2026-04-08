@@ -683,6 +683,14 @@ public/css/bundle.{CSS_BUNDLE_ID}.css
 public/css/marketing.{CSS_BUNDLE_ID}.css
 ```
 
+5. **Critical CSS inlining**
+   - Uses [beasties](https://github.com/danielroe/beasties) to extract above-the-fold CSS and inline it into the HTML
+   - Runs after minification so it operates on final stylesheets
+   - Currently applied to the homepage only (`public/index.html`)
+   - Original CSS files are preserved (`pruneSource: false`); the full stylesheet is still loaded async
+
+**Script:** `scripts/inline-critical-css.js`
+
 #### JavaScript Bundling
 
 **Dependencies:**
@@ -1323,14 +1331,48 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 **Why It Matters:** Keeps private documentation fork synchronized with public repository.
 
+### Social Media Automation
+
+#### schedule-social.yml
+
+**Purpose:** Automatically schedule social media posts (X, LinkedIn, Bluesky) for new blog content.
+
+**Triggers:**
+
+- Push to `master` branch
+- Manual: `workflow_dispatch`
+
+**Environment:** Production (AWS Account: 388588623842)
+
+**How It Works:**
+
+1. Detects blog posts changed since the last processed commit (tracked in S3 state)
+1. Reads `social.twitter`, `social.linkedin`, `social.bluesky` from frontmatter
+1. Posts dated today or in the past are posted immediately; future-dated posts are scheduled for 10 AM Eastern
+1. Posts older than 2 days are skipped
+1. State is tracked in S3 (`posted.json`) for idempotency — if state can't be loaded, the script aborts rather than risk double-posting
+
+**Required Secrets (from ESC):**
+
+- `UPLOAD_POST_API_KEY` — API key for upload-post.com
+- `PULUMI_ACCESS_TOKEN` — For reading the `socialStateBucketName` Pulumi stack output
+
+**Required Infrastructure:**
+
+- S3 bucket for state tracking (name read from Pulumi stack output `socialStateBucketName`)
+
+**Rollout Status:** Currently in test mode (`PROD_MODE = False`), posting to test accounts. Flip to prod once validated.
+
+**Typical Duration:** < 1 minute
+
 ### Other Workflows
 
 The repository includes 9 additional utility workflows for automation and project management:
 
 **Automation and Auto-merge:**
 
-- **automerge-workflow.yml**: Auto-merge approved PRs from trusted sources
-- **auto-approve-for-auto-merge.yml**: Auto-approve PRs that meet auto-merge criteria (trusted bots, dependency updates)
+- **Native auto-merge**: Bot PR workflows (`pulumi-cli.yml`, `pulumi-cli-dev-version.yml`, `esc-cli.yml`, `customer-managed-workflow-agent-cli.yml`) enable GitHub's native auto-merge via `gh pr merge --auto --squash` after creating the PR. This replaces the former polling-based `automerge-workflow.yml`.
+- **auto-approve-for-auto-merge.yml**: Auto-approve PRs that meet auto-merge criteria (trusted bots, dependency updates). Uses the `automation/merge` label to gate approval — note that this label now drives auto-*approval* only; auto-merge is handled natively by GitHub.
 
 **AI-Assisted Development:**
 
@@ -1373,8 +1415,9 @@ These workflows support repository maintenance, automation, and developer experi
 | check-search-urls | Daily 3 PM UTC | N/A | 2-5 min | Validate search index |
 | check-lighthouse | Daily 3 PM UTC | N/A | 3-8 min | Performance monitoring |
 | update-search-index | Hourly | Production | 2-5 min | Update Algolia |
+| schedule-social | Push to master, Manual | Production | < 1 min | Social media scheduling |
 
-> **Note:** The table above shows the 14 core deployment and testing workflows. An additional 10 utility workflows (automation, AI review, project management, secret management, dev versions) are listed in the "Other Workflows" section, bringing the total to 24 workflows.
+> **Note:** The table above shows the 15 core deployment and testing workflows. An additional 10 utility workflows (automation, AI review, project management, secret management, dev versions) are listed in the "Other Workflows" section, bringing the total to 25 workflows.
 
 ---
 
@@ -1531,6 +1574,23 @@ Delivery: CloudWatch Logs infrastructure v2
 - 404 → 404.html
 
 **Geo Restrictions:** None
+
+#### WAF WebACL
+
+**Purpose:** Rate limiting to protect CloudFront from bot/scraper abuse
+
+**Toggle:** `enableWaf` stack config (boolean, default `false`)
+
+**Rate limit:** `wafRateLimit` stack config (integer, default `500`). Maximum requests per 5-minute window per IP before WAF blocks the IP. Must be at least 100 (AWS minimum).
+
+**Region:** us-east-1 (required for CloudFront-scoped WebACLs)
+
+**CloudWatch metrics:**
+
+- `cdn-waf` - overall WebACL metrics
+- `cdn-waf-rate-limit` - rate-based rule metrics
+
+**Stack export:** `wafWebAclArn` - ARN of the WAF WebACL (undefined when WAF is disabled)
 
 #### Lambda@Edge Functions
 
@@ -1976,6 +2036,8 @@ config:
   www.pulumi.com:guidesStack: pulumi/guides/production
   www.pulumi.com:answersStack: pulumi/answers/production
   www.pulumi.com:cdnLogDeliverySourceName: CreatedByCloudFront-E3PRSXO1BZJEEY
+  www.pulumi.com:enableWaf: "true"
+  www.pulumi.com:wafRateLimit: "500"
   www.pulumi.com:enableDataWarehouseAccess: "true"
   www.pulumi.com:certificateArn: arn:aws:acm:us-east-1:388588623842:certificate/...
 ```
@@ -2496,7 +2558,6 @@ Critical environment variables used across all environments:
 |----------|---------|--------|
 | `ALGOLIA_APP_ID` | Search app ID | Pulumi ESC |
 | `ALGOLIA_APP_ADMIN_KEY` | Search admin key | Pulumi ESC |
-| `SENTRY_AUTH_TOKEN` | Error monitoring | Pulumi ESC |
 | `SLACK_WEBHOOK_URL` | Notifications | Pulumi ESC |
 | `GITHUB_TOKEN` | GitHub API | GitHub Actions |
 
@@ -2539,7 +2600,6 @@ All secrets and config for:
 - AWS credentials (via OIDC)
 - Pulumi tokens
 - Algolia keys
-- Sentry tokens
 - Slack webhooks
 - GCP credentials
 - Azure credentials
@@ -2979,7 +3039,7 @@ Lambda@Edge failures are often caused by bundling problems that aren't caught un
 
 **Deployment Risks:**
 
-- **High risk** (affects all users immediately): Lambda@Edge, CloudFront, DNS changes
+- **High risk** (affects all users immediately): Lambda@Edge, CloudFront, WAF, DNS changes
 - **Medium risk** (affects next deployment): Build system, dependency updates
 - **Low risk** (limited scope): Documentation, scripts
 
@@ -3657,22 +3717,28 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
 **Cache Headers:**
 
 ```yaml
-# Long cache for versioned assets
-/css/*.css: 1 year
-/js/*.js: 1 year
+# Long cache for fingerprinted assets
+/css/bundle.*.css: 1 year
+/js/bundle.*.js: 1 year
+/fingerprinted/*: 1 year
 
-# Short cache for HTML
-/*.html: 5 minutes
-
-# No cache for dynamic content
-/registry/*: no cache
+# Standard cache for HTML (invalidated on deploy)
+/*.html: 30 minutes
+/registry/*: 30 minutes
+/guides/*: 30 minutes
 ```
+
+**Post-deploy invalidation:**
+
+After each deploy, CloudFront cache is automatically invalidated for HTML content paths
+(see `scripts/run-pulumi.sh`). Fingerprinted assets are excluded since their URLs change
+with content. This allows aggressive TTLs without stale content after deploys.
 
 **Optimization:**
 
 1. **Increase TTL for static assets**
-   - Versioned assets can cache forever
-   - Use bundle IDs for cache busting
+   - Fingerprinted assets can cache forever
+   - Use content-hash URLs for cache busting
 
 2. **Cache Patterns**
 
@@ -3690,6 +3756,24 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
 3. **Compression**
    - Enable gzip and brotli
    - Reduces transfer size by 70-80%
+
+#### Asset fingerprinting
+
+Static assets (images, icons) used on the homepage and product pages can be fingerprinted for long-term caching. Hugo's `fingerprint` pipe appends a content hash to the filename, allowing a 1-year CloudFront TTL with `Cache-Control: immutable` headers.
+
+**How it works:**
+
+1. Place source assets in `assets/fingerprinted/` (e.g., `assets/fingerprinted/images/product/neo-tasks.png`).
+1. Use the `fingerprinted-img.html` partial in templates:
+   ```html
+   {{ partial "fingerprinted-img.html" (dict "src" "images/product/neo-tasks.png" "alt" "Alt text") }}
+   ```
+1. Hugo hashes the file, converts non-SVG images to WebP, and outputs to `/fingerprinted/<hash>.webp`.
+1. CloudFront serves these with a 1-year TTL and immutable cache headers via the `/fingerprinted/*` cache behavior.
+
+**Partial parameters:** `src` (required), `alt`, `class`, `style`.
+
+**Important:** `meta_image` frontmatter must point to a stable path in `static/`, not a fingerprinted asset, since social media crawlers need a predictable URL.
 
 ### Security Updates
 
@@ -3737,7 +3821,6 @@ All secrets managed via Pulumi ESC with automatic rotation capabilities.
 - AWS IAM roles (refresh OIDC trust)
 - Algolia keys
 - Slack webhooks
-- Sentry tokens
 
 #### IAM Role Reviews
 
@@ -3856,7 +3939,6 @@ Complete reference of all build and deployment scripts.
 | **PULUMI_STACK_NAME** | Stack name | `www-production` | Workflow |
 | **ALGOLIA_APP_ID** | Search app | `OCCYMHQD` | Pulumi ESC |
 | **ALGOLIA_APP_ADMIN_KEY** | Search admin key | (secret) | Pulumi ESC |
-| **SENTRY_AUTH_TOKEN** | Error monitoring | (secret) | Pulumi ESC |
 | **SLACK_WEBHOOK_URL** | Notifications | (secret) | Pulumi ESC |
 | **GITHUB_TOKEN** | GitHub API | (auto) | GitHub Actions |
 | **NOBUILD** | Skip rebuilds | `1` | User |
@@ -3872,6 +3954,7 @@ Complete reference of all build and deployment scripts.
 | **S3 Logs Bucket** | `{domain}-website-logs` | `www-prod.pulumi.com-website-logs` |
 | **CloudFront Distribution** | Manual (persistent) | `E3PRSXO1BZJEEY` |
 | **Lambda@Edge Function** | `edge-{purpose}` | `edge-redirects` |
+| **WAF WebACL** | `cdn-waf` | `cdn-waf` |
 | **IAM Role** | `ContinuousDelivery` | `ContinuousDelivery` |
 | **Pulumi Stack** | `www-{environment}` | `www-production` |
 

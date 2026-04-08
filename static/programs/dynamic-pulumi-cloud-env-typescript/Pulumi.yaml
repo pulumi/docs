@@ -1,0 +1,3 @@
+name: dynamic-pulumi-cloud-env-typescript
+runtime: nodejs
+description: A dynamic provider that manages Pulumi Cloud environments via the REST API.

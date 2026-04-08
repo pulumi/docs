@@ -1,53 +1,54 @@
 const filterResourceItems = (filters) => {
-    const events = $(".event-list").find(".event-card");
-    const monthLabels = $(".event-list").find(".month-label");
-    $(monthLabels).css("display", "none")
-    const noResultsMessage = $(".pulumi-event-list-container").find(".no-results");
-    $(noResultsMessage).removeClass("hidden");
+    const monthGroups = document.querySelectorAll<HTMLElement>(".event-list .month-label");
+    const separator = document.querySelector<HTMLElement>(".event-list .event-list-separator");
+    const noResultsMessage = document.querySelector(".template-event-list .no-results");
+    noResultsMessage?.classList.remove("hidden");
 
-    if (filters.length > 0) {
-        $(events).each((i, event) => {
-            const tags = ($(event).attr("data-filters")).split(" ");
-            const dateLabel = $(event).attr("data-month-label");
+    const activeTab = location.hash.slice(1) || "all";
 
-            if (!tags.includes(location.hash.slice(1))) {
-                $(event).css("display", "none");
-            } else {
-                let matches = 0;
-                tags.forEach(tag => {
-                    if (filters.includes(tag)) {
-                        matches++;
-                    }
-                });
-                if (matches > 0) {
-                    $(noResultsMessage).addClass("hidden");
-                    $(event).css("display", "block");
-                    $(`.month-label.${dateLabel}`).css("display", "block");
+    monthGroups.forEach(group => {
+        const groupFilters = (group.getAttribute("data-filters") || "").split(" ");
+
+        // For the "all" tab, show all groups. Otherwise, only show matching tab.
+        if (activeTab !== "all" && !groupFilters.includes(activeTab)) {
+            group.style.display = "none";
+            return;
+        }
+
+        const cards = group.querySelectorAll<HTMLElement>("li[data-filters]");
+        let visibleCards = 0;
+
+        cards.forEach(card => {
+            const tags = (card.getAttribute("data-filters") || "").split(" ");
+
+            if (filters.length > 0) {
+                const matches = filters.some(f => tags.includes(f));
+                if (matches) {
+                    card.style.display = "";
+                    visibleCards++;
                 } else {
-                    $(event).css("display", "none");
+                    card.style.display = "none";
                 }
-            }
-        });
-    } else {
-        $(events).each((i, event) => {
-            const tags = ($(event).attr("data-filters")).split(" ");
-            const dateLabel = $(event).attr("data-month-label");
-
-            if (!tags.includes(location.hash.slice(1))) {
-                $(event).css("display", "none");
-                const dateLabel = $(event).attr("data-month-label");
             } else {
-                $(noResultsMessage).addClass("hidden");
-                $(event).css("display", "block");
-                $(`.month-label.${dateLabel}`).css("display", "block");
+                card.style.display = "";
+                visibleCards++;
             }
         });
+
+        group.style.display = visibleCards > 0 ? "block" : "none";
+        if (visibleCards > 0) {
+            noResultsMessage?.classList.add("hidden");
+        }
+    });
+
+    // Show separator only on "all" tab when no filters are active.
+    if (separator) {
+        separator.style.display = (activeTab === "all" && filters.length === 0) ? "" : "none";
     }
 }
 
-$(".pulumi-event-list-container").on("filterSelect", event => {
-    const detail: unknown = event.detail;
-    const filters = detail as any[];
+document.querySelector(".pulumi-event-list-container")?.addEventListener("filterSelect", (event: CustomEvent) => {
+    const filters = event.detail as any[];
     const filtersText: string[] = [];
 
     filters.forEach(filter => {
@@ -57,66 +58,20 @@ $(".pulumi-event-list-container").on("filterSelect", event => {
     filterResourceItems(filtersText);
 });
 
-$(window).on('hashchange', function() {
-    const options = $('pulumi-filter-select-option').toArray() as Array<any>;
+window.addEventListener('hashchange', function() {
+    const options = Array.from(document.querySelectorAll('pulumi-filter-select-option')) as any[];
     let selectedFilters = [];
 
     options.forEach((option) => {
         const shadow = option.shadowRoot;
-        if($(shadow).find('.selected').length > 0) {
+        if (shadow?.querySelector('.selected')) {
             selectedFilters.push(option.value);
         }
-    })
+    });
     filterResourceItems(selectedFilters);
 });
 
-$(function () {
-    const resourcesEventListFilterNav = document.getElementById("event-list-filter-nav");
-    if (resourcesEventListFilterNav) {
-        // When the arrows are selected, they scroll the tertiary nav in either direction.
-        $("#slideForward").on("click", function () {
-            // The width of an individual tab, so the scroll brings one additional full tab into view.
-            resourcesEventListFilterNav.scrollLeft += 180;
-        });
-
-        $("#slideBackwards").on("click", function () {
-            // The width of an individual tab, so the scroll moves one full tab into view.
-            resourcesEventListFilterNav.scrollLeft -= 180;
-        });
-
-        // If the last or first items are fully in view (depending on the scroll direction),
-        // the scroll arrow button is hidden from view (since it's no longer possible to scroll).
-        const options = {
-            root: document.getElementById("event-list-filter-nav"),
-            // To count as in view, the tab must be 100% in view.
-            threshold: 1.0,
-        };
-
-        const controlScrollForwardVisibility = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    $("#slideForward").addClass("hidden");
-                } else {
-                    $("#slideForward").removeClass("hidden");
-                }
-            });
-        };
-
-        const scrollForwardObserver = new IntersectionObserver(controlScrollForwardVisibility, options);
-        const lastNavItem = document.querySelector("#event-list-filter-nav li:last-of-type");
-        scrollForwardObserver.observe(lastNavItem);
-
-        const controlScrollBackwardVisibility = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    $("#slideBackwards").addClass("hidden");
-                } else {
-                    $("#slideBackwards").removeClass("hidden");
-                }
-            });
-        };
-        const scrollBackwardObserver = new IntersectionObserver(controlScrollBackwardVisibility, options);
-        const firstNavItem = document.querySelector("#event-list-filter-nav li:first-of-type");
-        scrollBackwardObserver.observe(firstNavItem);
-    }
-});
+// Apply initial filter state on page load.
+if (document.querySelector(".template-event-list")) {
+    filterResourceItems([]);
+}

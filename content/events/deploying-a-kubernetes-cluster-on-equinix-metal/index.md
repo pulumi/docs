@@ -15,7 +15,6 @@ unlisted: false
 gated: false
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,48 +27,43 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: deploying-a-kubernetes-cluster-on-equinix-metal
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Deploying a Kubernetes Cluster on Equinix Metal
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/a5iEQteKgHU?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/a5iEQteKgHU?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2023-09-13T09:00:00-04:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-09-13T09:00:00-04:00
+# Duration of the webinar.
+duration: 1 hour
 
-    # Duration of the webinar.
-    duration: 1 hour
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this code-centric session, you will learn how to manage Equinix Metal resources using Pulumi and the new Equinix Pulumi provider. We'll teach you the basics of how Pulumi works and demonstrate deploying a Kubernetes cluster and workload on Equinix Metal.
 
-    # Description of the webinar.
-    description: |
-        In this code-centric session, you will learn how to manage Equinix Metal resources using Pulumi and the new Equinix Pulumi provider. We'll teach you the basics of how Pulumi works and demonstrate deploying a Kubernetes cluster and workload on Equinix Metal.
+learn:
+    - How to provision a Kubernetes cluster on Equinix Metal
+    - Defining and deploying Equinix resources using popular programming languages
+    - How to use Pulumi and Equinix together
 
-    learn:
-        - How to provision a Kubernetes cluster on Equinix Metal
-        - Defining and deploying Equinix resources using popular programming languages
-        - How to use Pulumi and Equinix together
+# The webinar presenters
+presenters:
+    - name: Josh Kodroff
+      role: Senior Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
+    - name: Oscar Cobles
+      role: Integrations Engineer, Equinix
 
-    # The webinar presenters
-    presenters:
-        - name: Josh Kodroff
-          role: Senior Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-        - name: Oscar Cobles
-          role: Integrations Engineer, Equinix
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
-        languages: []
-        clouds: ["Equinix"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["Kubernetes"]
+    languages: []
+    clouds: ["Equinix"]
 
 # The right hand side form section.
 form:

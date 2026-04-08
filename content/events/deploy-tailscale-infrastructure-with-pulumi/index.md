@@ -15,7 +15,6 @@ unlisted: false
 gated: true
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,49 +27,44 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: deploy-tailscale-infrastructure-with-pulumi
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Deploy Tailscale infrastructure in AWS with Pulumi
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: 
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-10-15T09:00:00-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-10-15T09:00:00-07:00
+# Duration of the webinar.
+duration: 60 minutes
 
-    # Duration of the webinar.
-    duration: 60 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
+# Description of the webinar.
+description: |
+    In this session, you'll learn how to use Pulumi’s expressive infrastructure as code and automation API to quickly spin up a full demo environment showcasing Tailscale’s features. This workshop will walk through a reference architecture featuring Tailscale's Kubernetes operator, AWS VPC access via subnet routers, and secure internet access with exit nodes—all provisioned in minutes using Pulumi. This webinar is ideal for cloud engineers, DevOps practitioners, and IT professionals looking to streamline infrastructure provisioning while leveraging Tailscale and Pulumi.
 
-    # Description of the webinar.
-    description: |
-        In this session, you'll learn how to use Pulumi’s expressive infrastructure as code and automation API to quickly spin up a full demo environment showcasing Tailscale’s features. This workshop will walk through a reference architecture featuring Tailscale's Kubernetes operator, AWS VPC access via subnet routers, and secure internet access with exit nodes—all provisioned in minutes using Pulumi. This webinar is ideal for cloud engineers, DevOps practitioners, and IT professionals looking to streamline infrastructure provisioning while leveraging Tailscale and Pulumi.
+learn:
+    - How to set up AWS infrastructure quickly using Pulumi’s infrastructure as code and automation API.
+    - Key components of Tailscale’s reference architecture, including Kubernetes operators and AWS VPC access.
+    - Best practices for provisioning secure and scalable infrastructure with Tailscale and Pulumi.
 
-    learn:
-        - How to set up AWS infrastructure quickly using Pulumi’s infrastructure as code and automation API.
-        - Key components of Tailscale’s reference architecture, including Kubernetes operators and AWS VPC access.
-        - Best practices for provisioning secure and scalable infrastructure with Tailscale and Pulumi.
+# The webinar presenters
+presenters:
+    - name: Lee Briggs
+      role: Sales Engineering Manager, Tailscale
+      photo: /images/team/lee-briggs.jpg
+    - name: Josh Kodroff 
+      role: Sr Solutions Architect, Pulumi
+      photo: /images/team/josh-kodroff.jpg
 
-    # The webinar presenters
-    presenters:
-        - name: Lee Briggs
-          role: Sales Engineering Manager, Tailscale
-          photo: /images/team/lee-briggs.jpg
-        - name: Josh Kodroff 
-          role: Sr Solutions Architect, Pulumi
-          photo: /images/team/josh-kodroff.jpg
-
-    # case-sensitive
-    tags:
-        level: Beginner # Beginner, Intermediate, Advanced
-        topics: ["AWS", "Tailscale"]
-        languages: ["TypeScript"]
-        clouds: ["AWS"]
+# case-sensitive
+tags:
+    level: Beginner # Beginner, Intermediate, Advanced
+    topics: ["AWS", "Tailscale"]
+    languages: ["TypeScript"]
+    clouds: ["AWS"]
 
 # The right hand side form section.
 form:

@@ -1,0 +1,3 @@
+name: dynamic-random-typescript
+runtime: nodejs
+description: A dynamic provider that generates a random number stored in Pulumi state.

@@ -15,7 +15,6 @@ unlisted: false
 gated: true
 
 # The layout of the landing page.
-type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page. If the webinar is external you will need
@@ -28,46 +27,41 @@ block_external_search_index: false
 # webinar, use the external URL as the value here.
 url_slug: managing-team-secrets-1password-pulumi-esc
 
-# Content for the left hand side section of the page.
-main:
-    # Webinar title.
-    title: Managing team secrets with 1Password & Pulumi ESC
+event_type: workshop # workshop | event
 
-    event_type: workshop # workshop | event
+# URL for embedding a URL for ungated webinars.
+youtube_url: https://www.youtube.com/embed/8AgmP01_qnw?rel=0
 
-    # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/8AgmP01_qnw?rel=0
+# Sortable date. The datetime Hugo will use to sort the webinars in date order.
+sortable_date: 2024-04-23T09:00:00.000-07:00
 
-    # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-04-23T09:00:00.000-07:00
+# Duration of the webinar.
+duration: 90 minutes
 
-    # Duration of the webinar.
-    duration: 90 minutes
+# "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
+location: virtual
 
-    # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: virtual
-
-    # Description of the webinar.
-    description: |
-        Platform engineering teams need to be able to fetch secrets at runtime, especially when managing multi-cloud and multi-service deployments with Pulumi. In this workshop, we’ll show you how Pulumi ESC works with 1Password to ensure secrets are securely made available to approved team members and deployments.
+# Description of the webinar.
+description: |
+    Platform engineering teams need to be able to fetch secrets at runtime, especially when managing multi-cloud and multi-service deployments with Pulumi. In this workshop, we’ll show you how Pulumi ESC works with 1Password to ensure secrets are securely made available to approved team members and deployments.
 
 
-    learn:
-        - How to store secrets in 1Password
-        - Configuring Pulumi ESC to work with 1Password and controlling access for approved team members
-        - Retrieving secrets automatically at runtime from your Infrastructure as Code deployments.
+learn:
+    - How to store secrets in 1Password
+    - Configuring Pulumi ESC to work with 1Password and controlling access for approved team members
+    - Retrieving secrets automatically at runtime from your Infrastructure as Code deployments.
 
-    # The webinar presenters
-    presenters:
-        - name: Simon Barendse
-          role: Team Lead, Engineering - Programmatic Interfaces @ 1Password
-          photo: /images/people/simon-barendse.jpg
+# The webinar presenters
+presenters:
+    - name: Simon Barendse
+      role: Team Lead, Engineering - Programmatic Interfaces @ 1Password
+      photo: /images/people/simon-barendse.jpg
 
-    # case-sensitive
-    tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics: ["Secrets Management", "Platform Engineering"]
-        languages: ["Golang"]
+# case-sensitive
+tags:
+    level: Intermediate # Beginner, Intermediate, Advanced
+    topics: ["Secrets Management", "Platform Engineering"]
+    languages: ["Golang"]
 
 # The right hand side form section.
 form:

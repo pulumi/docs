@@ -10,6 +10,7 @@ authors:
     - pablo-terradillos
 tags:
     - esc
+    - features
 schema_type: auto
 social:
     twitter:

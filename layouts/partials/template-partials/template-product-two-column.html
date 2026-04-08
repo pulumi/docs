@@ -1,0 +1,50 @@
+{{/*
+Template Product Two Column Partial
+
+Left: heading. Right: description + optional CTA link + 3 horizontal mini feature cards.
+Used for "Write infrastructure code in your favorite language" sections.
+
+Parameters:
+- heading: Left column heading
+- description: Right column description (supports markdown)
+- cta_text: Optional CTA link text (e.g. "Explore Infrastructure as Code")
+- cta_link: Optional CTA link URL
+- cards: Array of mini feature cards
+Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, ...]
+- anchor: Optional anchor for section id
+*/}}
+
+{{ $heading := .heading }}
+{{ $description := .description }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
+{{ $cards := .cards }}
+{{ $anchor := .anchor }}
+
+<section class="template-product-two-column" {{ if $anchor }} id="{{ $anchor }}" {{ end }}>
+    <div class="flex flex-col xl:flex-row gap-8 md:gap-10 xl:gap-20 items-start">
+        <div class="xl:w-2/5 flex-shrink-0">
+            {{ if $heading }}
+            <h2 class="product-two-column-heading">{{ $heading }}</h2>
+            {{ end }}
+        </div>
+        <div class="flex-1">
+            {{ if $description }}
+            <div class="product-two-column-description">
+                {{ $description | markdownify }}
+            </div>
+            {{ end }}
+            {{ if $ctaText }}
+            <a href="{{ $ctaLink }}" class="cta inline-flex items-center gap-1 mt-6">
+                <span>{{ $ctaText }}</span>
+                <span>→</span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+    {{ if $cards }}
+    {{- /* lg:mt-36 is intentionally larger than the default lg:mt-20 in template-mini-cards.html
+         to provide extra breathing room in the two-column layout. */ -}}
+    {{ partial "template-partials/template-mini-cards.html" (dict "cards" $cards "lg_top_class" "lg:mt-36") }}
+    {{ end }}
+</section>

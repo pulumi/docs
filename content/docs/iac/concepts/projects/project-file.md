@@ -30,7 +30,7 @@ For Pulumi programs specifically written in Pulumi YAML, the project file not on
 | Name | Required | Description | Options |
 | - | - | - | - |
 | `name` | required | Name of the project containing alphanumeric characters, hyphens, underscores, and periods. | None |
-| `runtime` | required | Installed language runtime of the project: `nodejs`, `python`, `go`, `dotnet`, `java` or `yaml`. | [runtime options](#runtime-options)
+| `runtime` | required | Installed language runtime of the project: `nodejs`, `python`, `go`, `dotnet`, `java`, `yaml`, or `bun`. | [runtime options](#runtime-options)
 | `description` | optional | A brief description of the project. | None |
 | `config` | optional | Project level config (Added in v3.44). | [config options](#config-options) |
 | `packages` | optional | Additional packages to be used in the program (Added in v3.157.0.) | [packages](#packages-options) |
