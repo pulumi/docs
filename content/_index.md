@@ -11,7 +11,7 @@ sections:
     badge_text: "AI for Infrastructure"
     badge_link: /product/neo/
     title_primary: "Next-level"
-    title_secondary: "infrastructure as code for humans and agents."
+    title_secondary: "infrastructure as code \n for humans and agents."
     description: |
       Modern infrastructure as code in languages engineers and agents already know and love.
     image: /images/home/home-hero-image.svg

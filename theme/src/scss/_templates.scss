@@ -952,7 +952,7 @@
     }
 
     .template-social-carousel-header {
-        @apply text-center py-16 px-6;
+        @apply text-center pb-16 px-6;
 
         h2 {
             @include section-header();
