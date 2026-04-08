@@ -66,10 +66,10 @@ The runtime attribute has an additional property called `options` where you can 
 | - | - | - |
 | `typescript` | Only applies to the `nodejs` runtime | Boolean indicating whether to use `ts-node` or not. |
 | `nodeargs` | Only applies to the `nodejs` runtime | Arguments to pass to `node`. |
-| `packagemanager` | Only applies to the `nodejs` runtime | Packagemanager to use for installing dependencies, `npm` (default), `pnpm`, `yarn` or `bun`. |
+| `packagemanager` | Only applies to the `nodejs` runtime | Package manager to use for installing dependencies, `npm`, `pnpm`, `yarn`, or `bun`. When unset, the package manager is auto-detected from lockfiles in the project directory, falling back to `npm` if none are found. |
 | `buildTarget` | Only applies to the `go` runtime | Path to save the compiled go binary to. |
 | `binary` | applies to the `go`, `dotnet`, and `java` runtimes | Path to a pre-built executable. |
-| `toolchain` | Only applies to the `python` runtime | Toolchain to use for managing virtual environments, `pip` (default), `poetry` or `uv` |
+| `toolchain` | Only applies to the `python` runtime | Toolchain to use for managing virtual environments, `pip`, `poetry`, or `uv`. When unset, the toolchain is auto-detected from lockfiles in the project directory (e.g. `uv.lock` or `poetry.lock`), falling back to `pip` if none are found. |
 | `virtualenv` | Only applies to the `python` runtime with the `pip` or `uv` toolchain. | Virtual environment path. |
 | `typechecker` | Only applies to the `python` runtime | Type checker library to use. |
 | `compiler` | Only applies to the `yaml` runtime | Executable and arguments issued to standard out. |
