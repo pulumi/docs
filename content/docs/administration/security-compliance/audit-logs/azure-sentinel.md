@@ -1,14 +1,14 @@
 ---
-title_tag: "Export Audit Logs to Azure Sentinel"
+title_tag: "Export Audit Logs to Microsoft Sentinel"
 meta_desc: Learn how to configure automated export of Pulumi Cloud audit logs to Microsoft Sentinel for SIEM analysis.
-title: "Export to Azure Sentinel"
+title: "Export to Microsoft Sentinel"
 h1: Export audit logs to Microsoft Sentinel
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
-        name: Export to Azure Sentinel
-        parent: administration-security-compliance
-        weight: 5
+        name: Export to Microsoft Sentinel
+        parent: administration-security-compliance-audit-logs
+        weight: 2
 ---
 
 {{% notes "info" %}}
@@ -33,9 +33,9 @@ az monitor log-analytics workspace create -g <resource-group> -n <workspace-name
 az sentinel onboarding-state create -g <resource-group> -w <workspace-name> -n default --customer-managed-key false
 ```
 
-## Setup Option 1: Pulumi Cloud console (recommended)
+## Setup option 1: Pulumi Cloud console (recommended)
 
-1. In Pulumi Cloud, navigate to the **Stacks** page and click **Create project**.
+1. In Pulumi Cloud, navigate to the **Stacks** page and select **Create project**.
 
 1. Select the **Sentinel Azure** template (`sentinel-azure-typescript`). This opens the New Project Wizard.
 
@@ -69,9 +69,9 @@ az sentinel onboarding-state create -g <resource-group> -w <workspace-name> -n d
        ARM_SUBSCRIPTION_ID: ${azure.login.subscriptionId}
    ```
 
-1. Click **Deploy**. Pulumi Deployments runs `pulumi up` server-side.
+1. Select **Deploy**. Pulumi Deployments runs `pulumi up` server-side.
 
-1. Verify: go to **Microsoft Sentinel** > your workspace > **Data connectors** > find "Pulumi Cloud Audit Logs". Wait ~5 minutes for the first poll, then check **Logs**:
+1. Verify: navigate to **Microsoft Sentinel** > your workspace > **Data connectors** > find "Pulumi Cloud Audit Logs". Wait ~5 minutes for the first poll, then check **Logs**:
 
    ```kql
    PulumiAuditLogs_CL
@@ -79,7 +79,7 @@ az sentinel onboarding-state create -g <resource-group> -w <workspace-name> -n d
    | take 10
    ```
 
-## Setup Option 2: CLI
+## Setup option 2: CLI
 
 1. Ensure you have the Azure CLI installed and authenticated (`az login`).
 
@@ -103,7 +103,7 @@ az sentinel onboarding-state create -g <resource-group> -w <workspace-name> -n d
    pulumi up
    ```
 
-1. Verify: go to **Microsoft Sentinel** > your workspace > **Data connectors** > find "Pulumi Cloud Audit Logs". Wait ~5 minutes for the first poll, then check **Logs**:
+1. Verify: navigate to **Microsoft Sentinel** > your workspace > **Data connectors** > find "Pulumi Cloud Audit Logs". Wait ~5 minutes for the first poll, then check **Logs**:
 
    ```kql
    PulumiAuditLogs_CL

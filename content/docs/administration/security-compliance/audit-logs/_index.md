@@ -9,6 +9,7 @@ menu:
         name: Audit Logs
         parent: administration-security-compliance
         weight: 3
+        identifier: administration-security-compliance-audit-logs
 
 aliases:
 - /docs/administration/security-compliance/audit-logs/
@@ -64,9 +65,9 @@ Pulumi Cloud supports continuously exporting audit log events to external destin
 
 Export audit logs to an Amazon S3 bucket. See the [AWS S3 export guide](/docs/administration/security-compliance/audit-logs/aws-s3/) for setup instructions.
 
-### Export to Azure Sentinel
+### Export to Microsoft Sentinel
 
-Export audit logs to Microsoft Sentinel for SIEM analysis. See the [Azure Sentinel export guide](/docs/administration/security-compliance/audit-logs/azure-sentinel/) for setup instructions.
+Export audit logs to Microsoft Sentinel for SIEM analysis. See the [Microsoft Sentinel export guide](/docs/administration/security-compliance/audit-logs/azure-sentinel/) for setup instructions.
 
 ## Manual Export
 
