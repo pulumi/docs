@@ -193,7 +193,7 @@ public class MyStack : Stack
             var options = CustomResourceOptions.Merge(
                 (CustomResourceOptions) args.Options,
                 new CustomResourceOptions { IgnoreChanges = {"tags"} });
-            return new ResourcetransformResult(args.Args, options);
+            return new ResourceTransformResult(args.Args, options);
         }
 
         return null;

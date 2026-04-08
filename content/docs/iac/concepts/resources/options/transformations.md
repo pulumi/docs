@@ -333,7 +333,7 @@ ctx.RegisterStackTransformation(
 
 {{% choosable language csharp %}}
 
-There are two ways of defining stack transforms in C#, depending on which style you're using for your Pulumi program.
+There are two ways of defining stack transformations in C#, depending on which style you're using for your Pulumi program.
 
 The original way, inheriting from the `Stack` class:
 
@@ -375,7 +375,7 @@ return await Deployment.RunAsync(async () =>
     };
 }, new StackOptions
 {
-    ResourceTransforms =
+    ResourceTransformations =
     {
         async (args, _) =>
         {
