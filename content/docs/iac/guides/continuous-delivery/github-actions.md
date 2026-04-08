@@ -47,7 +47,7 @@ for it. There are three ways to do this:
 3. [Download the CLI](/docs/install/) and run `pulumi new` to
    select a template
 
-## Creating a Workflow
+## Creating a workflow
 
 Although the full power of the Pulumi CLI is available to use with GitHub Actions, we
 recommend starting with our standard workflow, which consists of two workflow files, each
@@ -58,7 +58,7 @@ triggered by common GitHub events:
 2. **Pulumi Up** runs `pulumi up` on the target branch, in response to a commit on that
    branch.
 
-### Committing the Workflow Files
+### Committing the workflow files
 
 Let's get started by adding these two new workflow files to the GitHub repository
 containing your Pulumi project.
@@ -346,7 +346,7 @@ to allow the Pulumi CLI to communicate with Pulumi Cloud on your behalf, and
 you'll probably want to provide credentials for communicating with your cloud
 provider as well.
 
-### Configuring Your Secrets
+### Configuring your secrets
 
 With your workflow files committed and pushed to GitHub, head on over
 to your repo's **Settings** tab, where you'll find the new **Secrets** area:
@@ -484,7 +484,7 @@ jobs:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
 
-## Try It Out!
+## Try it out!
 
 To try things out, create a Pull Request or commit, and you will see these new
 actions showing up in the usual GitHub Checks dialog, with a green checkmark if everything
@@ -501,7 +501,7 @@ For even better Pull Request integration, make sure to also [install our GitHub 
 
 ![Action Pull Requests](/images/docs/reference/gh-actions-prs.png)
 
-## Pull Request Flow
+## Pull request flow
 
 If you are using Pulumi's GitHub Actions to preview infrastructure changes from Pull
 Requests, you may want to have Pulumi comment on those PRs so that you don't need to look
@@ -527,7 +527,7 @@ Example comment when using the Pulumi GitHub App:
 
 ![Comment from the Pulumi GitHub App](/images/docs/github-actions/pr-comment-gh-app.png)
 
-### Comments By GitHub Actions
+### Comments by GitHub Actions
 
 If you don't want to use the Pulumi GitHub App, you can configure Pulumi's GitHub Actions
 to copy the output of the `pulumi` invocation on the Pull Request. This option doesn't
@@ -678,6 +678,29 @@ Example comment when using GitHub Actions directly:
 
 ![Comment from GitHub Actions](/images/docs/github-actions/pr-comment-actions.png)
 
+### GitHub step summary
+
+In addition to (or instead of) Pull Request comments, you can publish the results of a
+Pulumi operation to the [GitHub Actions step summary](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions#adding-a-job-summary).
+The step summary is visible on the workflow run page and persists even after the run
+completes, making it useful for push-triggered deployments that do not have a Pull Request
+to comment on.
+
+To enable this, add `comment-on-summary: true` to your action inputs:
+
+```yaml
+- uses: pulumi/actions@v6
+  with:
+    command: up
+    stack-name: org-name/stack-name
+    comment-on-summary: true
+  env:
+    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+`comment-on-summary` can be combined with `comment-on-pr: true` to publish results in
+both places simultaneously.
+
 ## Stack outputs
 
 When Pulumi updates a stack, any values your program exports as [stack outputs](/docs/iac/concepts/stacks/#outputs) become available for use in subsequent steps of your workflow. This is useful when downstream jobs or steps need information produced by your infrastructure, such as a service endpoint, a storage bucket name, or a database connection string, without needing to re-query the cloud provider.
@@ -795,7 +818,7 @@ Stack outputs may include sensitive values such as passwords or private keys. Av
 
 You can configure how Pulumi's GitHub Actions work to have more control about which stacks get updated, and when.
 
-### Using a Different Root Directory
+### Using a different root directory
 
 By default, the Pulumi GitHub Action assumes your Pulumi project is in your repo's root
 directory. If you are using a different root directory for your project, set the
@@ -953,7 +976,7 @@ jobs:
 
 This tells Pulumi that the project can be found underneath the repo's `infra` directory.
 
-### Stack Upsert
+### Stack upsert
 
 Pulumi has a concept of *stacks*, which are isolated environments for your application
 (e.g., production, staging, or even distinct services).
@@ -1116,6 +1139,32 @@ jobs:
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+### Refreshing state before operations
+
+The `refresh` input tells Pulumi to reconcile its state with the actual state of your
+cloud resources before performing any changes. In v6, this is equivalent to passing the
+`--refresh` flag to the Pulumi CLI directly.
+
+```yaml
+- uses: pulumi/actions@v6
+  with:
+    command: up
+    stack-name: org-name/stack-name
+    refresh: true
+  env:
+    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% notes type="warning" %}}
+The behavior of `refresh: true` changed in v6. In v5 and earlier, the action ran
+`pulumi refresh` as a separate step before the requested command. In v6, the `--refresh`
+flag is passed directly to `pulumi up` or `pulumi preview`, which is more efficient but
+produces a single combined operation rather than two distinct steps. If your workflow
+logic depended on a standalone `pulumi refresh` step completing independently (for
+example, to capture its exit code separately), you may need to add an explicit
+`pulumi refresh` step to your workflow instead of using this input.
+{{% /notes %}}
 
 ### Caching plugins and policy packs
 

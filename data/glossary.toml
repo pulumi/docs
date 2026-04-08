@@ -173,3 +173,13 @@ link = "/docs/iac/concepts/state-and-backends/"
 term = "Secrets Encryption"
 description = "The Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using --secret or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored."
 link = "/docs/concepts/secrets/"
+
+[[entries]]
+term = "Native language package"
+description = "A component published to a language-specific package registry (npm, PyPI, NuGet, Maven, etc.) without a Pulumi plugin. A native language package can only be consumed in the programming language in which it was authored; it has no cross-language SDK generation support."
+link = "/docs/iac/concepts/components/"
+
+[[entries]]
+term = "Pulumi package"
+description = "A component or provider packaged with a Pulumi plugin (source-based or executable) that enables Pulumi to generate SDKs for any supported language. Pulumi packages are consumable in all Pulumi-supported languages, either by running `pulumi package add` to generate an SDK on-the-fly or by installing a pre-published SDK from the appropriate package registry."
+link = "/docs/iac/concepts/packages/"
