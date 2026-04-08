@@ -1,6 +1,6 @@
 ---
 title: "Introducing Bun as a Runtime for Pulumi"
-date: 2026-03-23
+date: 2026-04-08
 draft: false
 meta_desc: "Pulumi now supports Bun as a runtime for TypeScript programs, giving you faster startup times and a streamlined developer experience alongside Node.js."
 meta_image: meta.png
