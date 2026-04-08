@@ -333,6 +333,10 @@ ctx.RegisterStackTransformation(
 
 {{% choosable language csharp %}}
 
+There are two ways of defining stack transforms in C#, depending on which style you're using for your Pulumi program.
+
+The original way, inheriting from the `Stack` class:
+
 ```csharp
 public class MyStack : Stack
 {
@@ -355,9 +359,38 @@ public class MyStack : Stack
 }
 ```
 
-{{% notes type="warning" %}}
-It is not currently possible to use stack level transformations in .NET when using a top-level async program. We have an [open issue](https://github.com/pulumi/pulumi-dotnet/issues/202) regarding this feature that you can follow to find out more information.
-{{% /notes %}}
+or the newer, asynchronous way:
+
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+
+return await Deployment.RunAsync(async () =>
+{
+    // register resources here
+
+    return new Dictionary<string, object?>
+    {
+        ["outputKey"] = "outputValue"
+    };
+}, new StackOptions
+{
+    ResourceTransforms =
+    {
+        async (args, _) =>
+        {
+            var tagProperty = args.Args.GetType().GetProperty("Tags");
+            if (tagProperty != null) {
+                var currentResourceTags = (InputMap<string>)tagProperty.GetValue(args.Args, null) ?? new InputMap<string>();
+                currentResourceTags["env"] = "production";
+                tagProperty.SetValue(args.Args, currentResourceTags, null);
+                return new ResourceTransformationResult(args.Args, (CustomResourceOptions)args.Options);
+            }
+            return null;
+        }
+    }
+});
+```
 
 {{% /choosable %}}
 {{% choosable language java %}}
