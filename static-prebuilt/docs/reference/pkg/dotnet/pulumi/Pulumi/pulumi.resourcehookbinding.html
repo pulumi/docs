@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ResourceHookBinding </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ResourceHookBinding ">
+    
+    <meta name="description" content="Binds s to a resource. The resource hooks will be invoked at specific points in the lifecycle of the resource.   Before* hooks that raise an exception will cause the resource operation to fail. After* hooks that raise an exception will log a warning, but do not cause the action or the deployment to fail.   When running pulumi destroy, BeforeDelete and AfterDelete resource hooks require the operation to run with --run-program, to ensure that the program which defines the hooks is available.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.ResourceHookBinding">
+
+
+  <h1 id="Pulumi_ResourceHookBinding" data-uid="Pulumi.ResourceHookBinding" class="text-break">Class ResourceHookBinding</h1>
+  <div class="markdown level0 summary"><p>
+Binds <a class="xref" href="pulumi.resourcehook.html">ResourceHook</a>s to a resource. The resource hooks will be invoked at specific points in the
+lifecycle of the resource.
+</p>
+<p>
+<code>Before*</code> hooks that raise an exception will cause the resource operation to fail. <code>After*</code> hooks that
+raise an exception will log a warning, but do not cause the action or the deployment to fail.
+</p>
+<p>
+When running <code>pulumi destroy</code>, <code>BeforeDelete</code> and <code>AfterDelete</code> resource hooks require the
+operation to run with <code>--run-program</code>, to ensure that the program which defines the hooks is available.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">ResourceHookBinding</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.dll</h6>
+  <h5 id="Pulumi_ResourceHookBinding_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ResourceHookBinding</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/ResourceHook.cs/#L295">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookBinding_AfterCreate_" data-uid="Pulumi.ResourceHookBinding.AfterCreate*"></a>
+  <h4 id="Pulumi_ResourceHookBinding_AfterCreate" data-uid="Pulumi.ResourceHookBinding.AfterCreate">AfterCreate</h4>
+  <div class="markdown level1 summary"><p>Hooks to be invoked after the resource is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;ResourceHook&gt; AfterCreate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.resourcehook.html">ResourceHook</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/ResourceHook.cs/#L339">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookBinding_AfterDelete_" data-uid="Pulumi.ResourceHookBinding.AfterDelete*"></a>
+  <h4 id="Pulumi_ResourceHookBinding_AfterDelete" data-uid="Pulumi.ResourceHookBinding.AfterDelete">AfterDelete</h4>
+  <div class="markdown level1 summary"><p>Hooks to be invoked after the resource is deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;ResourceHook&gt; AfterDelete { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.resourcehook.html">ResourceHook</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/ResourceHook.cs/#L317">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookBinding_AfterUpdate_" data-uid="Pulumi.ResourceHookBinding.AfterUpdate*"></a>
+  <h4 id="Pulumi_ResourceHookBinding_AfterUpdate" data-uid="Pulumi.ResourceHookBinding.AfterUpdate">AfterUpdate</h4>
+  <div class="markdown level1 summary"><p>Hooks to be invoked after the resource is updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;ResourceHook&gt; AfterUpdate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.resourcehook.html">ResourceHook</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/ResourceHook.cs/#L284">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookBinding_BeforeCreate_" data-uid="Pulumi.ResourceHookBinding.BeforeCreate*"></a>
+  <h4 id="Pulumi_ResourceHookBinding_BeforeCreate" data-uid="Pulumi.ResourceHookBinding.BeforeCreate">BeforeCreate</h4>
+  <div class="markdown level1 summary"><p>Hooks to be invoked before the resource is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;ResourceHook&gt; BeforeCreate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.resourcehook.html">ResourceHook</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/ResourceHook.cs/#L328">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookBinding_BeforeDelete_" data-uid="Pulumi.ResourceHookBinding.BeforeDelete*"></a>
+  <h4 id="Pulumi_ResourceHookBinding_BeforeDelete" data-uid="Pulumi.ResourceHookBinding.BeforeDelete">BeforeDelete</h4>
+  <div class="markdown level1 summary"><p>Hooks to be invoked before the resource is deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;ResourceHook&gt; BeforeDelete { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.resourcehook.html">ResourceHook</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/ResourceHook.cs/#L306">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookBinding_BeforeUpdate_" data-uid="Pulumi.ResourceHookBinding.BeforeUpdate*"></a>
+  <h4 id="Pulumi_ResourceHookBinding_BeforeUpdate" data-uid="Pulumi.ResourceHookBinding.BeforeUpdate">BeforeUpdate</h4>
+  <div class="markdown level1 summary"><p>Hooks to be invoked before the resource is updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;ResourceHook&gt; BeforeUpdate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.resourcehook.html">ResourceHook</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/ResourceHook.cs/#L359">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookBinding_IsEmpty_" data-uid="Pulumi.ResourceHookBinding.IsEmpty*"></a>
+  <h4 id="Pulumi_ResourceHookBinding_IsEmpty" data-uid="Pulumi.ResourceHookBinding.IsEmpty">IsEmpty</h4>
+  <div class="markdown level1 summary"><p>IsEmpty is true if and only if no hooks have been bound to any of the lifecycle events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool IsEmpty { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/ResourceHook.cs/#L350">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookBinding_OnError_" data-uid="Pulumi.ResourceHookBinding.OnError*"></a>
+  <h4 id="Pulumi_ResourceHookBinding_OnError" data-uid="Pulumi.ResourceHookBinding.OnError">OnError</h4>
+  <div class="markdown level1 summary"><p>Hooks to be invoked when a resource operation fails. Return true to retry, false to not retry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;ErrorHook&gt; OnError { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.errorhook.html">ErrorHook</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/ResourceHook.cs/#L371">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookBinding_Clone_" data-uid="Pulumi.ResourceHookBinding.Clone*"></a>
+  <h4 id="Pulumi_ResourceHookBinding_Clone" data-uid="Pulumi.ResourceHookBinding.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Creates a deep copy of this <a class="xref" href="pulumi.resourcehookbinding.html">ResourceHookBinding</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ResourceHookBinding Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.resourcehookbinding.html">ResourceHookBinding</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/ResourceHook.cs/#L388">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookBinding_Concat_" data-uid="Pulumi.ResourceHookBinding.Concat*"></a>
+  <h4 id="Pulumi_ResourceHookBinding_Concat_Pulumi_ResourceHookBinding_" data-uid="Pulumi.ResourceHookBinding.Concat(Pulumi.ResourceHookBinding)">Concat(ResourceHookBinding)</h4>
+  <div class="markdown level1 summary"><p>Concatenates this <a class="xref" href="pulumi.resourcehookbinding.html">ResourceHookBinding</a> with another , merging their hooks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ResourceHookBinding Concat(ResourceHookBinding other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.resourcehookbinding.html">ResourceHookBinding</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.resourcehookbinding.html">ResourceHookBinding</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/ResourceHook.cs/#L277" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright 2016-2023, Pulumi Corporation.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

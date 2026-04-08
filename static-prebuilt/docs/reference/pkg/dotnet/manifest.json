@@ -1,851 +1,1290 @@
 {
-  "homepages": [],
-  "source_base_path": "/Users/justin/go/src/github.com/pulumi/docs/docfx",
+  "source_base_path": "/home/runner/work/docs/docs/docs/docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.CommandResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.commandresult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.CommandResult",
+      "Summary": null
+    },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.CommandException.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.commandexception.html",
-          "hash": "2fQmApkzXtaJBCBPahRe/czbAru+XnRp1f/WW9+y8kE="
+          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.commandexception.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.Exceptions.CommandException",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.ConcurrentUpdateException.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.concurrentupdateexception.html",
-          "hash": "2DjNhlSs4VMIEI9oK2y54/nKEALQGrq71LPewPq08EM="
+          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.concurrentupdateexception.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.Exceptions.ConcurrentUpdateException",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackAlreadyExistsException.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.stackalreadyexistsexception.html",
-          "hash": "/9cqPsa4ln3UU/xl8+G3JjFB5/GZIiYzZ4Y2ZUrcCpg="
+          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.stackalreadyexistsexception.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.Exceptions.StackAlreadyExistsException",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackNotFoundException.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.stacknotfoundexception.html",
-          "hash": "0PaYqHDM48vRiRIp0UO5zT/+JZG9gi7DZISISBBb8Rs="
+          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.stacknotfoundexception.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.Exceptions.StackNotFoundException",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.html",
-          "hash": "UfZ8JwwFROVizRNV3a6caqFyY05R8Lem/maCyoTPjgA="
+          "relative_path": "pulumi.automation/pulumi.automation.commands.exceptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.Exceptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.LocalPulumiCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.localpulumicommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.LocalPulumiCommand",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.LocalPulumiCommand.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Pulumi.Automation.Commands.PulumiCommand\" data-throw-if-not-resolved=\"false\"></xref> implementation that uses a locally installed Pulumi CLI.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.LocalPulumiCommandOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.localpulumicommandoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.LocalPulumiCommandOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Commands.LocalPulumiCommandOptions.yml\" sourcestartlinenumber=\"1\">Options to configure a <xref href=\"Pulumi.Automation.Commands.LocalPulumiCommand\" data-throw-if-not-resolved=\"false\"></xref> instance.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.PulumiCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.pulumicommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands.PulumiCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.commands.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Commands",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ConfigValue.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.configvalue.html",
-          "hash": "G1QMmQG1C6FFYx5f/wIwH8NHk731aV2HSTFyKTwyw0E="
+          "relative_path": "pulumi.automation/pulumi.automation.configvalue.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ConfigValue",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.DestroyOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.destroyoptions.html",
-          "hash": "9gd8vZnk1OXod6wi3MT252s79yUQiIjodH05rZIHRyA="
+          "relative_path": "pulumi.automation/pulumi.automation.destroyoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.DestroyOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.DestroyOptions.yml\" sourcestartlinenumber=\"1\">Options controlling the behavior of an <xref href=\"Pulumi.Automation.WorkspaceStack.DestroyAsync(Pulumi.Automation.DestroyOptions%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> operation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.DockerImageCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.dockerimagecredentials.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.DockerImageCredentials",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.DockerImageCredentials.yml\" sourcestartlinenumber=\"1\">Credentials for the remote execution Docker image.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.EnvironmentVariableValue.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.environmentvariablevalue.html",
-          "hash": "W3OIHe+UBdSJk8fMYk+i6ESQrVNVy7bdqNwoWVEfn0A="
+          "relative_path": "pulumi.automation/pulumi.automation.environmentvariablevalue.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.EnvironmentVariableValue",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.CancelEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.cancelevent.html",
-          "hash": "pnLQIFL/21usgt6cK810d9zUzsUzxdVMPmp/2Lwd5vQ="
+          "relative_path": "pulumi.automation/pulumi.automation.events.cancelevent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.CancelEvent",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.CancelEvent.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.CancelEvent\" data-throw-if-not-resolved=\"false\"></xref> is emitted when the user initiates a cancellation of the update in progress, or\nthe update successfully completes.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.DiagnosticEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.diagnosticevent.html",
-          "hash": "QBYkGXgU3MnWOhY0Gco6mc2FKGv90aKju6fiVem1huo="
+          "relative_path": "pulumi.automation/pulumi.automation.events.diagnosticevent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.DiagnosticEvent",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.DiagnosticEvent.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.DiagnosticEvent\" data-throw-if-not-resolved=\"false\"></xref> is emitted whenever a diagnostic message is provided, for example errors from\na cloud resource provider while trying to create or update a resource.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.DiffKind.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.diffkind.html",
-          "hash": "MtGf4EAbMf+llE7nO1AfFgLZ4lPm3FzoN9eDfLovQy4="
+          "relative_path": "pulumi.automation/pulumi.automation.events.diffkind.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.DiffKind",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.DiffKind.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.DiffKind\" data-throw-if-not-resolved=\"false\"></xref> describes the kind of a particular property diff.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.EngineEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.engineevent.html",
-          "hash": "4inzoCTJt9IFS1uwTh8lXzwd65YnCCuMG1Z0Af1C14Y="
+          "relative_path": "pulumi.automation/pulumi.automation.events.engineevent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.EngineEvent",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.EngineEvent.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.EngineEvent\" data-throw-if-not-resolved=\"false\"></xref> describes a Pulumi engine event, such as a change to a resource or diagnostic\nmessage. EngineEvent is a discriminated union of all possible event types, and exactly one\nfield will be non-null.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.PolicyEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.policyevent.html",
-          "hash": "Uj4x2s5EzT8EaF+XZyClinmguQpcE2AvPqj9Q65NLHk="
+          "relative_path": "pulumi.automation/pulumi.automation.events.policyevent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.PolicyEvent",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.PolicyEvent.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.PolicyEvent\" data-throw-if-not-resolved=\"false\"></xref> is emitted whenever there is Policy violation.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.PreludeEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.preludeevent.html",
-          "hash": "YFKC8y1NYpBSq3cp7Aoo4Qcaj5G7xyh+NNWda/oo1pU="
+          "relative_path": "pulumi.automation/pulumi.automation.events.preludeevent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.PreludeEvent",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.PreludeEvent.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.PreludeEvent\" data-throw-if-not-resolved=\"false\"></xref> is emitted at the start of an update.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.PropertyDiff.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.propertydiff.html",
-          "hash": "dNzqyBM7T1n0Jkr3H6lPpXLv9p0eixD5aQejqtoakFM="
+          "relative_path": "pulumi.automation/pulumi.automation.events.propertydiff.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.PropertyDiff",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.PropertyDiff.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.PropertyDiff\" data-throw-if-not-resolved=\"false\"></xref> describes the difference between a single property's old and new values.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourceOperationFailedEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.resourceoperationfailedevent.html",
-          "hash": "36Mu6z6Gj8JGgNDMAPhs0LIMt2Ro6JamxIZ+ZA/rSek="
+          "relative_path": "pulumi.automation/pulumi.automation.events.resourceoperationfailedevent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.ResourceOperationFailedEvent",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourceOperationFailedEvent.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.ResourceOperationFailedEvent\" data-throw-if-not-resolved=\"false\"></xref> is emitted when a resource operation fails. Typically a <xref href=\"Pulumi.Automation.Events.DiagnosticEvent\" data-throw-if-not-resolved=\"false\"></xref> is\nemitted before this event, indiciating what the root cause of the error.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourceOutputsEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.resourceoutputsevent.html",
-          "hash": "CejxKsKpX8+t6E7d3WliGx5ofgRszoo4J+1KHOGgMLQ="
+          "relative_path": "pulumi.automation/pulumi.automation.events.resourceoutputsevent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.ResourceOutputsEvent",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourceOutputsEvent.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.ResourceOutputsEvent\" data-throw-if-not-resolved=\"false\"></xref> is emitted when a resource is finished being provisioned.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourcePreEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.resourcepreevent.html",
-          "hash": "HPa10lipD3H2PFU1WjSBfjytEMpvZje0uP3vb2Aqc9c="
+          "relative_path": "pulumi.automation/pulumi.automation.events.resourcepreevent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.ResourcePreEvent",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.ResourcePreEvent.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.ResourcePreEvent\" data-throw-if-not-resolved=\"false\"></xref> is emitted before a resource is modified.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.StandardOutputEngineEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.standardoutputengineevent.html",
-          "hash": "zKTK7FVQw+Ugflsi/K0NZqvQ1EPR2CDU1J7oiPLm+uM="
+          "relative_path": "pulumi.automation/pulumi.automation.events.standardoutputengineevent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.StandardOutputEngineEvent",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.StandardOutputEngineEvent.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.StandardOutputEngineEvent\" data-throw-if-not-resolved=\"false\"></xref> is emitted whenever a generic message is written, for example warnings\nfrom the pulumi CLI itself. Less common than <xref href=\"Pulumi.Automation.Events.DiagnosticEvent\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.StepEventMetadata.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.stepeventmetadata.html",
-          "hash": "8+00JLJCXEAREbiiUxsmzQNNOW+X+9lugRYYW1ZdfZc="
+          "relative_path": "pulumi.automation/pulumi.automation.events.stepeventmetadata.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.StepEventMetadata",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.StepEventMetadata.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.StepEventMetadata\" data-throw-if-not-resolved=\"false\"></xref> describes a &quot;step&quot; within the Pulumi engine, which is any concrete action\nto migrate a set of cloud resources from one state to another.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.StepEventStateMetadata.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.stepeventstatemetadata.html",
-          "hash": "HLrlHIqPLntXOFey0x9/arDjMVh8Ng0W8xLcX9KQMfA="
+          "relative_path": "pulumi.automation/pulumi.automation.events.stepeventstatemetadata.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.StepEventStateMetadata",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.StepEventStateMetadata.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.StepEventStateMetadata\" data-throw-if-not-resolved=\"false\"></xref> is the more detailed state information for a resource as it relates to\na step(s) being performed.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.SummaryEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.summaryevent.html",
-          "hash": "4uFupVO2lCOucyTdP3w+JBxThsy2RrlrmVSOq+ELvMo="
+          "relative_path": "pulumi.automation/pulumi.automation.events.summaryevent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events.SummaryEvent",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Events.SummaryEvent.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.Events.SummaryEvent\" data-throw-if-not-resolved=\"false\"></xref> is emitted at the end of an update, with a summary of the changes made.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Events.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.events.html",
-          "hash": "1qNuT5PRLu2n7WzzXRrZJ3cHHx8Lh+rS27qTSvOoYpI="
+          "relative_path": "pulumi.automation/pulumi.automation.events.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Events",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.MissingExpectedEventException.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.exceptions.missingexpectedeventexception.html",
-          "hash": "5bg9dCWKyhyd+VDdtZ5yvzBLAP5r9PRF5WqB/DzSgKU="
+          "relative_path": "pulumi.automation/pulumi.automation.exceptions.missingexpectedeventexception.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Exceptions.MissingExpectedEventException",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.NoSummaryEventException.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.exceptions.nosummaryeventexception.html",
-          "hash": "SGZqy5X7v+DZmGQREsU9Dh3s0HA5mIR1eGUm0+oASRo="
+          "relative_path": "pulumi.automation/pulumi.automation.exceptions.nosummaryeventexception.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Exceptions.NoSummaryEventException",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.ProjectSettingsConflictException.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.exceptions.projectsettingsconflictexception.html",
-          "hash": "dTMFrlCPlEWmMi1A4um55mQfmjFLMDXp0paRUaukJjk="
+          "relative_path": "pulumi.automation/pulumi.automation.exceptions.projectsettingsconflictexception.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Exceptions.ProjectSettingsConflictException",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.ProjectSettingsConflictException.yml\" sourcestartlinenumber=\"1\">Thrown when creating a Workspace detects a conflict between\nproject settings found on disk (such as Pulumi.yaml) and a\nProjectSettings object passed to the Create API.</p>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.ProjectSettingsConflictException.yml\" sourcestartlinenumber=\"5\">There are two resolutions:</p>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.ProjectSettingsConflictException.yml\" sourcestartlinenumber=\"7\">(A) to use the ProjectSettings, delete the Pulumi.yaml file\nfrom WorkDir or use a different WorkDir</p>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.ProjectSettingsConflictException.yml\" sourcestartlinenumber=\"10\">(B) to use the exiting Pulumi.yaml from WorkDir, avoid\ncustomizing the ProjectSettings</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Exceptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.exceptions.html",
-          "hash": "aeXHK5IEzTFPdkcEvbhL9Jqe3zGIi1KlgIa5Rjsr2Rw="
+          "relative_path": "pulumi.automation/pulumi.automation.exceptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Exceptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ExecutorImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.executorimage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ExecutorImage",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.ExecutorImage.yml\" sourcestartlinenumber=\"1\">Information about the remote execution image.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.HistoryOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.historyoptions.html",
-          "hash": "rKH6NRI75sSSOGLi9K0+yJ9Wi/6OsqVFPL+k6hKNxWA="
+          "relative_path": "pulumi.automation/pulumi.automation.historyoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.HistoryOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.HistoryOptions.yml\" sourcestartlinenumber=\"1\">Options controlling the behavior of a <xref href=\"Pulumi.Automation.WorkspaceStack.GetHistoryAsync(Pulumi.Automation.HistoryOptions%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> operation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ImportOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.importoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ImportOptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ImportResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.importresource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ImportResource",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ImportResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.importresult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ImportResult",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.InlineProgramArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.inlineprogramargs.html",
-          "hash": "5mhJglkCnC7WyHu7e+nm1k3AkvjYkbGazpQslX1g4UU="
+          "relative_path": "pulumi.automation/pulumi.automation.inlineprogramargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.InlineProgramArgs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.InstallOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.installoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.InstallOptions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.LocalProgramArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.localprogramargs.html",
-          "hash": "NYknDmflIaZHi4HOiNY5GLO40ZF+bo5Tw7eJZ5sgTEg="
+          "relative_path": "pulumi.automation/pulumi.automation.localprogramargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.LocalProgramArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.LocalProgramArgs.yml\" sourcestartlinenumber=\"1\">Description of a stack backed by pre-existing local Pulumi CLI program.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.LocalWorkspace.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.localworkspace.html",
-          "hash": "H7l+Uy++JlJYrC+wOHd+TdSCglTtjujfnjBhOSMpdzI="
+          "relative_path": "pulumi.automation/pulumi.automation.localworkspace.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.LocalWorkspace",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.LocalWorkspace.yml\" sourcestartlinenumber=\"1\">LocalWorkspace is a default implementation of the Workspace interface.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.LocalWorkspace.yml\" sourcestartlinenumber=\"5\">A Workspace is the execution context containing a single Pulumi project, a program,\nand multiple stacks.Workspaces are used to manage the execution environment,\nproviding various utilities such as plugin installation, environment configuration\n($PULUMI_HOME), and creation, deletion, and listing of Stacks.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.LocalWorkspace.yml\" sourcestartlinenumber=\"12\">LocalWorkspace relies on Pulumi.yaml and Pulumi.{stack}.yaml as the intermediate format\nfor Project and Stack settings.Modifying ProjectSettings will\nalter the Workspace Pulumi.yaml file, and setting config on a Stack will modify the Pulumi.{stack}.yaml file.\nThis is identical to the behavior of Pulumi CLI driven workspaces.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.LocalWorkspace.yml\" sourcestartlinenumber=\"19\">If not provided a working directory - causing LocalWorkspace to create a temp directory,\nthan the temp directory will be cleaned up on <xref href=\"Pulumi.Automation.LocalWorkspace.Dispose(System.Boolean)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.LocalWorkspaceOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.localworkspaceoptions.html",
-          "hash": "P73X6wpIM/+zTeW2pxrwnMn8rDzrr75lsEGiXlm9rAI="
+          "relative_path": "pulumi.automation/pulumi.automation.localworkspaceoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.LocalWorkspaceOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.LocalWorkspaceOptions.yml\" sourcestartlinenumber=\"1\">Extensibility options to configure a LocalWorkspace; e.g: settings to seed\nand environment variables to pass through to every command.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.OperationType.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.operationtype.html",
-          "hash": "NSaRx/+Tvbe/KMWW4mRp4z6X8JPFiuUsdzGzFPuiQNg="
+          "relative_path": "pulumi.automation/pulumi.automation.operationtype.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.OperationType",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.OutputValue.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.outputvalue.html",
-          "hash": "hYPDyRYlVD8oUlOboC/xXoS5q5e0ntCj7uyNTRKmftA="
+          "relative_path": "pulumi.automation/pulumi.automation.outputvalue.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.OutputValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PendingCreateValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.pendingcreatevalue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.PendingCreateValue",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.PendingCreateValue.yml\" sourcestartlinenumber=\"1\">Config values for Importing Pending Create operations</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PluginInfo.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.plugininfo.html",
-          "hash": "ZtzxzCuT1KjmwG5nShanEIT4ziuir/JNvldR26EzKxU="
+          "relative_path": "pulumi.automation/pulumi.automation.plugininfo.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.PluginInfo",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PluginInstallOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.plugininstalloptions.html",
-          "hash": "zyXo+XVHPPh25Db4D5n5BRlaCZRWj8wK5wv0H4Y08qQ="
+          "relative_path": "pulumi.automation/pulumi.automation.plugininstalloptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.PluginInstallOptions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PluginKind.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.pluginkind.html",
-          "hash": "i7wyUXGB6qqkbpePvT7IzVJgBIzNQ85iEjs8r3K/rs8="
+          "relative_path": "pulumi.automation/pulumi.automation.pluginkind.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.PluginKind",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PreviewOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.previewoptions.html",
-          "hash": "lDpRxri50395ycvGFDqSSRl2U982p8a+Ojdl+PkPONw="
+          "relative_path": "pulumi.automation/pulumi.automation.previewoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.PreviewOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.PreviewOptions.yml\" sourcestartlinenumber=\"1\">Options controlling the behavior of an <xref href=\"Pulumi.Automation.WorkspaceStack.PreviewAsync(Pulumi.Automation.PreviewOptions%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> operation.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PreviewResult.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.previewresult.html",
-          "hash": "PLP8kM23w8jO5X8wdczJmgAohPz0IN2zMsJ6/MdFylc="
+          "relative_path": "pulumi.automation/pulumi.automation.previewresult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.PreviewResult",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectBackend.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.projectbackend.html",
-          "hash": "07/PwIgxOSnPbSmRYsvRltd7yMRV2+FnJJikL5gvNIM="
+          "relative_path": "pulumi.automation/pulumi.automation.projectbackend.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ProjectBackend",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.ProjectBackend.yml\" sourcestartlinenumber=\"1\">Configuration for the project's Pulumi state storage backend.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntime.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.projectruntime.html",
-          "hash": "oU1Ql/CmEJzOiF/gAFIimbBgot4jHimlJEXGzn142W4="
+          "relative_path": "pulumi.automation/pulumi.automation.projectruntime.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ProjectRuntime",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntime.yml\" sourcestartlinenumber=\"1\">A description of the Project's program runtime and associated metadata.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntimeName.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.projectruntimename.html",
-          "hash": "wRxcy4BfaA3m/x3DgvBg5jkTYDYPeR/eFrEoyu2EzNE="
+          "relative_path": "pulumi.automation/pulumi.automation.projectruntimename.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ProjectRuntimeName",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntimeName.yml\" sourcestartlinenumber=\"1\">Supported Pulumi program language runtimes.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntimeOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.projectruntimeoptions.html",
-          "hash": "1tE6ZAePkNFxvMTF6Lgjr2Rp25ux0JyAU0a3+h3sfjk="
+          "relative_path": "pulumi.automation/pulumi.automation.projectruntimeoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ProjectRuntimeOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.ProjectRuntimeOptions.yml\" sourcestartlinenumber=\"1\">Various configuration options that apply to different language runtimes.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectSettings.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.projectsettings.html",
-          "hash": "WWLnh5qajGmEf3IyA3Q3Tt0ngUISN/WV47zOCMVUykQ="
+          "relative_path": "pulumi.automation/pulumi.automation.projectsettings.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ProjectSettings",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.ProjectSettings.yml\" sourcestartlinenumber=\"1\">A Pulumi project manifest. It describes metadata applying to all sub-stacks created from the project.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectTemplate.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.projecttemplate.html",
-          "hash": "4YnXYqDrS2lUnVsi2ZlaZzaxMLNw1tsk2mxfOnqtlo4="
+          "relative_path": "pulumi.automation/pulumi.automation.projecttemplate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ProjectTemplate",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.ProjectTemplate.yml\" sourcestartlinenumber=\"1\">A template used to seed new stacks created from this project.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.ProjectTemplateConfigValue.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.projecttemplateconfigvalue.html",
-          "hash": "hH0/P6t4qa4QGsNLIeeZIugS8Ko/yiE+igFbL1oH7O4="
+          "relative_path": "pulumi.automation/pulumi.automation.projecttemplateconfigvalue.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.ProjectTemplateConfigValue",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.ProjectTemplateConfigValue.yml\" sourcestartlinenumber=\"1\">A placeholder config value for a project template.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PulumiFn.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.pulumifn.html",
-          "hash": "wyGFRzjI9VT3BXtbbxJb7yMf7gy6UQzOXUmlP+6nPog="
+          "relative_path": "pulumi.automation/pulumi.automation.pulumifn.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.PulumiFn",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.PulumiFn.yml\" sourcestartlinenumber=\"1\">A Pulumi program as an inline function (in process).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.PulumiSdkVersionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.pulumisdkversionattribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.PulumiSdkVersionAttribute",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RefreshOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.refreshoptions.html",
-          "hash": "Aix7HxGYz+D3ECQvndOt+ps7Xqb4ITigaqDsEj4riEM="
+          "relative_path": "pulumi.automation/pulumi.automation.refreshoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.RefreshOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.RefreshOptions.yml\" sourcestartlinenumber=\"1\">Options controlling the behavior of an <xref href=\"Pulumi.Automation.WorkspaceStack.RefreshAsync(Pulumi.Automation.RefreshOptions%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> operation.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteDestroyOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.remotedestroyoptions.html",
-          "hash": "4RVj2Z457vGtRYYmXksXvm+N7NoDem3v+kYDoYSAObc="
+          "relative_path": "pulumi.automation/pulumi.automation.remotedestroyoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.RemoteDestroyOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.RemoteDestroyOptions.yml\" sourcestartlinenumber=\"1\">Options controlling the behavior of an <xref href=\"Pulumi.Automation.RemoteWorkspaceStack.DestroyAsync(Pulumi.Automation.RemoteDestroyOptions%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> operation.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteGitAuthArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.remotegitauthargs.html",
-          "hash": "jpNnSjcpT/ro8rfyw7vaAnS3WPh+Hopu4a3r4VgpPKI="
+          "relative_path": "pulumi.automation/pulumi.automation.remotegitauthargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.RemoteGitAuthArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.RemoteGitAuthArgs.yml\" sourcestartlinenumber=\"1\">Authentication options for the repository that can be specified for a private Git repo.\nThere are three different authentication paths:</p>\n<ul><li>Personal accesstoken</li><li>SSH private key (and its optional password)</li><li>Basic auth username and password</li></ul>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.RemoteGitAuthArgs.yml\" sourcestartlinenumber=\"6\">Only one authentication path is valid.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteGitProgramArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.remotegitprogramargs.html",
-          "hash": "RZs0PrUUjo/krIVFO6VIwhwUQmd6GGIh5eboc1ocEVw="
+          "relative_path": "pulumi.automation/pulumi.automation.remotegitprogramargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.RemoteGitProgramArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.RemoteGitProgramArgs.yml\" sourcestartlinenumber=\"1\">Description of a stack backed by a remote Pulumi program in a Git repository.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemotePreviewOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.remotepreviewoptions.html",
-          "hash": "jNcH85BY31DjC1i6haNxFLxKMWUwakUOQ32QgapyO7g="
+          "relative_path": "pulumi.automation/pulumi.automation.remotepreviewoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.RemotePreviewOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.RemotePreviewOptions.yml\" sourcestartlinenumber=\"1\">Options controlling the behavior of an <xref href=\"Pulumi.Automation.RemoteWorkspaceStack.PreviewAsync(Pulumi.Automation.RemotePreviewOptions%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> operation.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteRefreshOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.remoterefreshoptions.html",
-          "hash": "bIvuorvLXAjWJUitEaKSQTT2mvBOuslffwiPL0b0aOQ="
+          "relative_path": "pulumi.automation/pulumi.automation.remoterefreshoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.RemoteRefreshOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.RemoteRefreshOptions.yml\" sourcestartlinenumber=\"1\">Options controlling the behavior of an <xref href=\"Pulumi.Automation.RemoteWorkspaceStack.RefreshAsync(Pulumi.Automation.RemoteRefreshOptions%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> operation.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteUpOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.remoteupoptions.html",
-          "hash": "/tYDa8qmR+9taPEgQY+MWHIc0yvn7LH28nfBpOKN9eQ="
+          "relative_path": "pulumi.automation/pulumi.automation.remoteupoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.RemoteUpOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.RemoteUpOptions.yml\" sourcestartlinenumber=\"1\">Options controlling the behavior of an <xref href=\"Pulumi.Automation.RemoteWorkspaceStack.UpAsync(Pulumi.Automation.RemoteUpOptions%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> operation.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteUpdateOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.remoteupdateoptions.html",
-          "hash": "ke7GI8IRA0jlRGZiMW89x5p+ZkMrZyXOYiZihnty9SQ="
+          "relative_path": "pulumi.automation/pulumi.automation.remoteupdateoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.RemoteUpdateOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.RemoteUpdateOptions.yml\" sourcestartlinenumber=\"1\">Common options controlling the behavior of update actions taken\nagainst an instance of <xref href=\"Pulumi.Automation.RemoteWorkspaceStack\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteWorkspace.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.remoteworkspace.html",
-          "hash": "K1DUZ/OWpv2XrsjahojKQ/CSl3/m+uEqPWRbLnTHb7w="
+          "relative_path": "pulumi.automation/pulumi.automation.remoteworkspace.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.RemoteWorkspace",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteWorkspaceOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.remoteworkspaceoptions.html",
-          "hash": "we50MBc48qteiHJAdyCRUifbIfssFx/EAgoeQs5VR9Y="
+          "relative_path": "pulumi.automation/pulumi.automation.remoteworkspaceoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.RemoteWorkspaceOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.RemoteWorkspaceOptions.yml\" sourcestartlinenumber=\"1\">Extensibility options to configure a RemoteWorkspace.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.RemoteWorkspaceStack.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.remoteworkspacestack.html",
-          "hash": "8NmNhu0SicQ0WoeIryZimPks4poTxEQLqlfQR7FYs0s="
+          "relative_path": "pulumi.automation/pulumi.automation.remoteworkspacestack.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.RemoteWorkspaceStack",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.SecretsProviderOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.secretsprovideroptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.SecretsProviderOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.SecretsProviderOptions.yml\" sourcestartlinenumber=\"1\">Options to pass into <xref href=\"Pulumi.Automation.WorkspaceStack.ChangeSecretsProviderAsync(System.String%2cPulumi.Automation.SecretsProviderOptions%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Serialization.LocalSerializer.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.serialization.localserializer.html",
-          "hash": "KMQeBh2LpA2xmBI/BLHsZ3MdP5q4Ulvu4fquUUWVxOs="
+          "relative_path": "pulumi.automation/pulumi.automation.serialization.localserializer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Serialization.LocalSerializer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Serialization.UpdateKindConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.automation/pulumi.automation.serialization.updatekindconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Serialization.UpdateKindConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Serialization.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.serialization.html",
-          "hash": "LDCI/OJxVE8nE9PG9DzSzfTdGev2N9IrRHDHgCo1kzQ="
+          "relative_path": "pulumi.automation/pulumi.automation.serialization.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Serialization",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackDeployment.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.stackdeployment.html",
-          "hash": "GBGW/aMqiOyOrADN25Awqf/lbtCDByodusssPowzASg="
+          "relative_path": "pulumi.automation/pulumi.automation.stackdeployment.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.StackDeployment",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.StackDeployment.yml\" sourcestartlinenumber=\"1\">Represents the state of a stack deployment as used by\nExportStackAsync and ImportStackAsync.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.StackDeployment.yml\" sourcestartlinenumber=\"6\">There is no strongly typed model for the contents yet, but you\ncan access the raw representation via the Json property.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.StackDeployment.yml\" sourcestartlinenumber=\"11\">NOTE: instances may contain sensitive data (secrets).</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackSettings.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.stacksettings.html",
-          "hash": "6YH93l++jOurJmeGdmoNQ0D9tjvoxPTn0hCKgohxuSE="
+          "relative_path": "pulumi.automation/pulumi.automation.stacksettings.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.StackSettings",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackSettingsConfigValue.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.stacksettingsconfigvalue.html",
-          "hash": "u/VYcjo7b//Yvlhuv+2yQVTEUiMnyN5p127tDyScniM="
+          "relative_path": "pulumi.automation/pulumi.automation.stacksettingsconfigvalue.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.StackSettingsConfigValue",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackSummary.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.stacksummary.html",
-          "hash": "byVof/czMRu4VaMozoMNYq+s5KmcgYDoQQPPBU9oVCc="
+          "relative_path": "pulumi.automation/pulumi.automation.stacksummary.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.StackSummary",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.upoptions.html",
-          "hash": "zx1VDV1H1P8H12zz9WGxUW73PBN6LzfAmJYa2ZVat1Q="
+          "relative_path": "pulumi.automation/pulumi.automation.upoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.UpOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.UpOptions.yml\" sourcestartlinenumber=\"1\">Options controlling the behavior of an <xref href=\"Pulumi.Automation.WorkspaceStack.UpAsync(Pulumi.Automation.UpOptions%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref> operation.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpResult.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.upresult.html",
-          "hash": "UWG/y/V27x4e1PLklEoCGe2sf/IlddrErH85bjLd5o4="
+          "relative_path": "pulumi.automation/pulumi.automation.upresult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.UpResult",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateKind.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.updatekind.html",
-          "hash": "9qzdGFwO8enqGbEi1nxiagDWdNJMZFIzFZcdg1A3vQo="
+          "relative_path": "pulumi.automation/pulumi.automation.updatekind.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.UpdateKind",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.updateoptions.html",
-          "hash": "Qg4Ny3DzalDkhvOm31aM98GqA0bDvyACplehwdJZm8A="
+          "relative_path": "pulumi.automation/pulumi.automation.updateoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.UpdateOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.UpdateOptions.yml\" sourcestartlinenumber=\"1\">Common options controlling the behavior of update actions taken\nagainst an instance of <xref href=\"Pulumi.Automation.WorkspaceStack\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateResult.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.updateresult.html",
-          "hash": "xxGtdj9GbNTa4UIuapTrgPxsc/QBgvFZTG0WF4WGJdk="
+          "relative_path": "pulumi.automation/pulumi.automation.updateresult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.UpdateResult",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateState.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.updatestate.html",
-          "hash": "CMX/bsFzb4k8JiFj6ma45gRU2QTK67Uko5XYpRRecaY="
+          "relative_path": "pulumi.automation/pulumi.automation.updatestate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.UpdateState",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.UpdateSummary.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.updatesummary.html",
-          "hash": "dVyVDwvXsbWoeTgIWCJ/kDMT5VO6sMiSox7eXG87TGk="
+          "relative_path": "pulumi.automation/pulumi.automation.updatesummary.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.UpdateSummary",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.WhoAmIResult.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.whoamiresult.html",
-          "hash": "pIGe/ppsh3O9zWx+7G0/7qZb7pm0Rbjo8xKaXd7yoHg="
+          "relative_path": "pulumi.automation/pulumi.automation.whoamiresult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.WhoAmIResult",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.Workspace.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.workspace.html",
-          "hash": "MSZ+T1Wnesc1EgAxhalejScIGT1AESeFQ5ekAMKf3OM="
+          "relative_path": "pulumi.automation/pulumi.automation.workspace.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.Workspace",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Workspace.yml\" sourcestartlinenumber=\"1\">Workspace is the execution context containing a single Pulumi project, a program, and multiple stacks.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.Workspace.yml\" sourcestartlinenumber=\"5\">Workspaces are used to manage the execution environment, providing various utilities such as plugin\ninstallation, environment configuration ($PULUMI_HOME), and creation, deletion, and listing of Stacks.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.WorkspaceStack.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.workspacestack.html",
-          "hash": "qsLFQd5tkXfRgir0+Kd6hw2TMktyY2lSBhpfIaLrzZw="
+          "relative_path": "pulumi.automation/pulumi.automation.workspacestack.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.WorkspaceStack",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.WorkspaceStack.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Automation.WorkspaceStack\" data-throw-if-not-resolved=\"false\"></xref> is an isolated, independently configurable instance of a\nPulumi program. <xref href=\"Pulumi.Automation.WorkspaceStack\" data-throw-if-not-resolved=\"false\"></xref> exposes methods for the full pulumi lifecycle\n(up/preview/refresh/destroy), as well as managing configuration.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.WorkspaceStack.yml\" sourcestartlinenumber=\"7\">Multiple stacks are commonly used to denote different phases of development\n(such as development, staging, and production) or feature branches (such as\nfeature-x-dev, jane-feature-x-dev).</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.WorkspaceStack.yml\" sourcestartlinenumber=\"13\">Will dispose the <xref href=\"Pulumi.Automation.WorkspaceStack.Workspace\" data-throw-if-not-resolved=\"false\"></xref> on <xref href=\"Pulumi.Automation.WorkspaceStack.Dispose\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.WorkspaceStackState.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.workspacestackstate.html",
-          "hash": "ODYy53nJerAd6qdf1bypECFpPmEcvgtceuGvkjcwxdw="
+          "relative_path": "pulumi.automation/pulumi.automation.workspacestackstate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation.WorkspaceStackState",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Automation/Pulumi.Automation.WorkspaceStackState.yml\" sourcestartlinenumber=\"1\">Module class for manipulating stack state for a given <xref href=\"Pulumi.Automation.WorkspaceStack\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/pulumi.automation.html",
-          "hash": "IFfaGNphBKJencsSo3XgCtko0MZv7fg60cZUO0S7A4w="
+          "relative_path": "pulumi.automation/pulumi.automation.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Automation",
+      "Summary": null
     },
     {
       "type": "Toc",
       "source_relative_path": "metadata/Pulumi.Automation/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi.automation/toc.html",
-          "hash": "rJPrnzSns47f9HCTyFK/hD5cXZYdD38VPm+0NZAnMtU="
+          "relative_path": "pulumi.automation/toc.html"
+        },
+        ".json": {
+          "relative_path": "pulumi.automation/toc.json"
         }
       },
       "version": ""
@@ -855,1048 +1294,2101 @@
       "source_relative_path": "metadata/Pulumi/Pulumi.Alias.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.alias.html",
-          "hash": "ScU/Z+tpzGrzg2hWAFvnitRqiAA9xCJvBUYhc48nzyo="
+          "relative_path": "pulumi/pulumi.alias.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Alias",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Alias.yml\" sourcestartlinenumber=\"1\">Alias is a description of prior named used for a resource. It can be processed in the\ncontext of a resource creation to determine what the full aliased URN would be.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.Alias.yml\" sourcestartlinenumber=\"6\">Use <xref href=\"Pulumi.Alias.Urn\" data-throw-if-not-resolved=\"false\"></xref> in the case where a prior URN is known and can just be specified in\nfull.  Otherwise, provide some subset of the other properties in this type to generate an\nappropriate urn from the pre-existing values of the <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> with certain\nparts overridden.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.Alias.yml\" sourcestartlinenumber=\"13\">The presence of a property indicates if its value should be used. If absent (i.e.\n<a href=\"https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null\">null</a>), then the value is not used.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.Alias.yml\" sourcestartlinenumber=\"18\">Note: because of the above, there needs to be special handling to indicate that the previous\n<xref href=\"Pulumi.Alias.Parent\" data-throw-if-not-resolved=\"false\"></xref> of a <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> was <a href=\"https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null\">null</a>.  Specifically,\npass in:</p>\n<p></p>\n<code>Aliases = { new Alias { NoParent = true } }</code>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Archive.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.archive.html",
-          "hash": "3tX6XmmBxFkC8Leybc8yzcdaqw+12UCnMLGvFwEZbSs="
+          "relative_path": "pulumi/pulumi.archive.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Archive",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Archive.yml\" sourcestartlinenumber=\"1\">An Archive represents a collection of named assets.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Asset.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.asset.html",
-          "hash": "JqnppqkBKRqZ/xRWSBqb5urhwvasegQfrV4hThs6OUo="
+          "relative_path": "pulumi/pulumi.asset.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Asset",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Asset.yml\" sourcestartlinenumber=\"1\">Asset represents a single blob of text or data that is managed as a first class entity.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.AssetArchive.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.assetarchive.html",
-          "hash": "lERIiii6bgkFtDgx7LREO2SGVZ8LVmo4gSeQocFwWHc="
+          "relative_path": "pulumi/pulumi.assetarchive.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.AssetArchive",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.AssetArchive.yml\" sourcestartlinenumber=\"1\">An AssetArchive is an archive created from an in-memory collection of named assets or other\narchives.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.AssetOrArchive.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.assetorarchive.html",
-          "hash": "yGNiyp4lvLIFH0i60xRTB7U0glS59rmc0SUnDq+lHqE="
+          "relative_path": "pulumi/pulumi.assetorarchive.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.AssetOrArchive",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.AssetOrArchive.yml\" sourcestartlinenumber=\"1\">Base class of <xref href=\"Pulumi.Asset\" data-throw-if-not-resolved=\"false\"></xref>s and <xref href=\"Pulumi.Archive\" data-throw-if-not-resolved=\"false\"></xref>s.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.CallArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.callargs.html",
-          "hash": "SvT1kYF6PnD9x27x6bAVAgLqpxo+zujbJuRz6oR0W1s="
+          "relative_path": "pulumi/pulumi.callargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.CallArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.CallArgs.yml\" sourcestartlinenumber=\"1\">Base type for all call argument classes.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.CallOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.calloptions.html",
-          "hash": "teIlWlQUegzzacJQNgqYts5rIEtoTVBXQWxMkUi9LAo="
+          "relative_path": "pulumi/pulumi.calloptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.CallOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.CallOptions.yml\" sourcestartlinenumber=\"1\">Options to help control the behavior of <xref href=\"Pulumi.Deployment.Call%60%601(System.String%2cPulumi.CallArgs%2cPulumi.Resource%2cPulumi.CallOptions%2cSystem.Boolean%2cPulumi.RegisterPackageRequest)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Codegen.Diagnostic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.codegen.diagnostic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Codegen.Diagnostic",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Codegen.DiagnosticSeverity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.codegen.diagnosticseverity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Codegen.DiagnosticSeverity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Codegen.Position.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.codegen.position.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Codegen.Position",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Codegen.Range.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.codegen.range.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Codegen.Range",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Codegen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.codegen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Codegen",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.ComponentResource.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.componentresource.html",
-          "hash": "DX0PeDgS8Fb6PCCMXKlNo3lm0dNzTJZRxp4wbduVsp4="
+          "relative_path": "pulumi/pulumi.componentresource.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ComponentResource",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ComponentResource.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> that aggregates one or more other child resources into a higher\nlevel abstraction. The component resource itself is a resource, but does not require custom\nCRUD operations for provisioning.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.ComponentResourceOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.componentresourceoptions.html",
-          "hash": "qREB7YvvOj/GBw0fh1F5TsF31zfiD75rxud/a256ZrE="
+          "relative_path": "pulumi/pulumi.componentresourceoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ComponentResourceOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ComponentResourceOptions.yml\" sourcestartlinenumber=\"1\">A bag of optional settings that control a <xref href=\"Pulumi.ComponentResource\" data-throw-if-not-resolved=\"false\"></xref>'s behavior.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Config.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.config.html",
-          "hash": "z/reHdYQerZk3zmDXsCjBihwYak5tIYHLw1qYKweXFw="
+          "relative_path": "pulumi/pulumi.config.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Config",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Config.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Config\" data-throw-if-not-resolved=\"false\"></xref> is a bag of related configuration state.  Each bag contains any number\nof configuration variables, indexed by simple keys, and each has a name that uniquely\nidentifies it; two bags with different names do not share values for variables that\notherwise share the same key.  For example, a bag whose name is <code>pulumi:foo</code>, with keys\n<code>a</code>, <code>b</code>, and <code>c</code>, is entirely separate from a bag whose name is\n<code>pulumi:bar</code> with the same simple key names.  Each key has a fully qualified names,\nsuch as <code>pulumi:foo:a</code>, ..., and <code>pulumi:bar:a</code>, respectively.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.CustomResource.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.customresource.html",
-          "hash": "zfKJQ9BuF51YCtBv6dIDt/TlbBKQVzcZ2yVPJDgKUdo="
+          "relative_path": "pulumi/pulumi.customresource.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.CustomResource",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.CustomResource.yml\" sourcestartlinenumber=\"1\">CustomResource is a resource whose create, read, update, and delete (CRUD) operations are\nmanaged by performing external operations on some physical entity. The engine understands\nhow to diff and perform partial updates of them, and these CRUD operations are implemented\nin a dynamically loaded plugin for the defining package.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.CustomResourceOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.customresourceoptions.html",
-          "hash": "10gdcwjhmEHgnn9uperm6COc3NKHgO70txmvXuIdimM="
+          "relative_path": "pulumi/pulumi.customresourceoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.CustomResourceOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.CustomResourceOptions.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.CustomResourceOptions\" data-throw-if-not-resolved=\"false\"></xref> is a bag of optional settings that control a <xref href=\"Pulumi.CustomResource\" data-throw-if-not-resolved=\"false\"></xref>'s behavior.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.CustomTimeouts.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.customtimeouts.html",
-          "hash": "chPShoJRTpAWnaIlTWoqxQI4/Lk8RKdwZvwIXuwCKQs="
+          "relative_path": "pulumi/pulumi.customtimeouts.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.CustomTimeouts",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.CustomTimeouts.yml\" sourcestartlinenumber=\"1\">Optional timeouts to supply in <xref href=\"Pulumi.ResourceOptions.CustomTimeouts\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.DeferredOutput-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.deferredoutput-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.DeferredOutput<T>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.DeferredOutput-1.yml\" sourcestartlinenumber=\"1\">Represents the producer side of an <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref> value, providing access to the consumer side through\nthe Output property.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Deployment.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.deployment.html",
-          "hash": "ZdYzWU2OrMI+zGG8BrSFnBXnBnNxUADKgiuyqf4Es/s="
+          "relative_path": "pulumi/pulumi.deployment.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Deployment",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Deployment.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Deployment\" data-throw-if-not-resolved=\"false\"></xref> is the entry-point to a Pulumi application. .NET applications\nshould perform all startup logic they need in their <code>Main</code> method and then end with:</p>\n<p>\n<code>\nstatic Task&lt;int&gt; Main(string[] args)\n{\n    // program initialization code ...\n<pre><code sourcefile=\"metadata/Pulumi/Pulumi.Deployment.yml\" sourcestartlinenumber=\"10\">return Deployment.Run(async () =&gt;\n{\n    // Code that creates resources.\n});\n</code></pre>\n<p sourcefile=\"metadata/Pulumi/Pulumi.Deployment.yml\" sourcestartlinenumber=\"14\">}\n</p></code></p>\n\n<p sourcefile=\"metadata/Pulumi/Pulumi.Deployment.yml\" sourcestartlinenumber=\"18\">Importantly: Cloud resources cannot be created outside of the lambda passed to any of the\n<xref href=\"Pulumi.Deployment.RunAsync(System.Action)\" data-throw-if-not-resolved=\"false\"></xref> overloads.  Because cloud Resource construction is\ninherently asynchronous, the result of this function is a <xref href=\"System.Threading.Tasks.Task%601\" data-throw-if-not-resolved=\"false\"></xref> which should\nthen be returned or awaited.  This will ensure that any problems that are encountered during\nthe running of the program are properly reported.  Failure to do this may lead to the\nprogram ending early before all resources are properly registered.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.DeploymentInstance.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.deploymentinstance.html",
-          "hash": "k8RTPXKaD+vH9+kbNMxmpgeGqom5atshnA84kvsU5E4="
+          "relative_path": "pulumi/pulumi.deploymentinstance.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.DeploymentInstance",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.DeploymentInstance.yml\" sourcestartlinenumber=\"1\">Metadata of the deployment that is currently running. Accessible via <xref href=\"Pulumi.Deployment.Instance\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.DictionaryInvokeArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.dictionaryinvokeargs.html",
-          "hash": "YnAfqXLL2zUulEAC0WIZBgQ0LH0uZVETW/VtDhw6ebo="
+          "relative_path": "pulumi/pulumi.dictionaryinvokeargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.DictionaryInvokeArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.DictionaryInvokeArgs.yml\" sourcestartlinenumber=\"1\">A special type of <xref href=\"Pulumi.InvokeArgs\" data-throw-if-not-resolved=\"false\"></xref> with resource inputs represented\nas a loosely-typed dictionary of objects. Normally,\n<xref href=\"Pulumi.DictionaryInvokeArgs\" data-throw-if-not-resolved=\"false\"></xref> should not be used by resource providers\nsince it's too low-level and provides low safety. Its target scenario are\nresources with a very dynamic shape of inputs.\nThe input dictionary may only contain objects that are serializable by\nPulumi, i.e only the following types (or pulumi.Output of those types) are allowed:</p>\n<ul><li>Primitive types: <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"System.Double\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"System.Int32\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref></li><li><xref href=\"Pulumi.Asset\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Pulumi.Archive\" data-throw-if-not-resolved=\"false\"></xref>, or\n<xref href=\"Pulumi.AssetArchive\" data-throw-if-not-resolved=\"false\"></xref></li><li><xref href=\"System.Text.Json.JsonElement\" data-throw-if-not-resolved=\"false\"></xref>\n</li><li>Generic collections of the above:\n<xref href=\"System.Collections.Immutable.ImmutableArray%601\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"System.Collections.Immutable.ImmutableDictionary%602\" data-throw-if-not-resolved=\"false\"></xref>\nwith <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> keys, <xref href=\"Pulumi.Union%602\" data-throw-if-not-resolved=\"false\"></xref></li></ul>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.DictionaryResourceArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.dictionaryresourceargs.html",
-          "hash": "aJwfAJUBcm7nyOcTg2ynaM8FeTu+wBOEsSOX2zVpMmA="
+          "relative_path": "pulumi/pulumi.dictionaryresourceargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.DictionaryResourceArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.DictionaryResourceArgs.yml\" sourcestartlinenumber=\"1\">A special type of <xref href=\"Pulumi.ResourceArgs\" data-throw-if-not-resolved=\"false\"></xref> with resource inputs represented\nas a loosely-typed dictionary of objects. Normally,\n<xref href=\"Pulumi.DictionaryResourceArgs\" data-throw-if-not-resolved=\"false\"></xref> should not be used by resource providers\nsince it's too low-level and provides low safety. Its target scenario are\nresources with a very dynamic shape of inputs.\nThe input dictionary may only contain objects that are serializable by\nPulumi, i.e only the following types (or pulumi.Output of those types) are allowed:</p>\n<ul><li>Primitive types: <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"System.Double\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"System.Int32\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref></li><li><xref href=\"Pulumi.Asset\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Pulumi.Archive\" data-throw-if-not-resolved=\"false\"></xref>, or\n<xref href=\"Pulumi.AssetArchive\" data-throw-if-not-resolved=\"false\"></xref></li><li><xref href=\"System.Text.Json.JsonElement\" data-throw-if-not-resolved=\"false\"></xref>\n</li><li>Generic collections of the above:\n<xref href=\"System.Collections.Immutable.ImmutableArray%601\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"System.Collections.Immutable.ImmutableDictionary%602\" data-throw-if-not-resolved=\"false\"></xref>\nwith <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> keys, <xref href=\"Pulumi.Union%602\" data-throw-if-not-resolved=\"false\"></xref></li></ul>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.EnumTypeAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.enumtypeattribute.html",
-          "hash": "7sQ4wlfrsVtcmMa2nmtcdnNEQzHY/arIA8agLcIb/64="
+          "relative_path": "pulumi/pulumi.enumtypeattribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.EnumTypeAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.EnumTypeAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used by a Pulumi Cloud Provider Package to mark enum types.</p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.EnumTypeAttribute.yml\" sourcestartlinenumber=\"3\">Requirements for a struct-based enum to be (de)serialized are as follows.\nIt must:</p>\n<ul sourcefile=\"metadata/Pulumi/Pulumi.EnumTypeAttribute.yml\" sourcestartlinenumber=\"5\">\n<li sourcefile=\"metadata/Pulumi/Pulumi.EnumTypeAttribute.yml\" sourcestartlinenumber=\"5\">Be a value type (struct) decoratted with EnumTypeAttribute.</li>\n<li sourcefile=\"metadata/Pulumi/Pulumi.EnumTypeAttribute.yml\" sourcestartlinenumber=\"6\">Have a constructor that takes a single parameter of the underlying type.\nThe constructor can be private.</li>\n<li sourcefile=\"metadata/Pulumi/Pulumi.EnumTypeAttribute.yml\" sourcestartlinenumber=\"8\">Have an explicit conversion operator that converts the enum type to the underlying type.</li>\n<li sourcefile=\"metadata/Pulumi/Pulumi.EnumTypeAttribute.yml\" sourcestartlinenumber=\"9\">Have an underlying type of String or Double.</li>\n<li sourcefile=\"metadata/Pulumi/Pulumi.EnumTypeAttribute.yml\" sourcestartlinenumber=\"10\">Implementing IEquatable, adding ==/=! operators and overriding ToString isn't required,\nbut is recommended and is what our codegen does.</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ErrorHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.errorhook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ErrorHook",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ErrorHook.yml\" sourcestartlinenumber=\"1\">An error hook is a callback that can be registered to run when a resource operation fails. The callback can\nreturn true to retry the operation or false to not retry.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ErrorHookArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.errorhookargs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ErrorHookArgs",
+      "Summary": "<p>\nErrorHookArgs represents the arguments passed to an error hook. Depending on the failed operation, only some of\nthe new/old inputs/outputs are set.\n</p>\n<pre><code class=\"lang-csharp\">| Failed Operation | old_inputs | new_inputs | old_outputs |\n| ---------------- | ---------- | ---------- | ----------- |\n| create           |            | ✓          |             |\n| update           | ✓          | ✓          | ✓           |\n| delete           | ✓          |            | ✓           |</code></pre>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ErrorHookCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.errorhookcallback.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ErrorHookCallback",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ErrorHookCallback.yml\" sourcestartlinenumber=\"1\">ErrorHookCallback is a delegate that defines the signature of <xref href=\"Pulumi.ErrorHook\" data-throw-if-not-resolved=\"false\"></xref> callback functions.\nReturns true to retry the operation, false to not retry.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Converter.ConvertProgramRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.converter.convertprogramrequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Converter.ConvertProgramRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Converter.ConvertProgramResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.converter.convertprogramresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Converter.ConvertProgramResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Converter.Converter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.converter.converter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Converter.Converter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Converter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.converter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Converter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.IEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.iengine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.IEngine",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Experimental.IEngine.yml\" sourcestartlinenumber=\"1\">An interface to the engine host running this plugin.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.LogRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.logrequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.LogRequest",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Experimental.LogRequest.yml\" sourcestartlinenumber=\"1\">A log message to be sent to the Pulumi engine.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.LogSeverity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.logseverity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.LogSeverity",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Experimental.LogSeverity.yml\" sourcestartlinenumber=\"1\">LogSeverity is the severity level of a log message.  Errors are fatal; all others are informational.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.PropertyValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.propertyvalue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.PropertyValue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.PropertyValueSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.propertyvalueserializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.PropertyValueSerializer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.PropertyValueType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.propertyvaluetype.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.PropertyValueType",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Experimental.PropertyValueType.yml\" sourcestartlinenumber=\"1\">Property values will be one of these types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.BuiltinTypeSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.builtintypespec.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.BuiltinTypeSpec",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CallRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.callrequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.CallRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CallResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.callresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.CallResponse",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CheckFailure.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.checkfailure.html",
-          "hash": "fW1IqZxVaa1tT5d8eyRyf5D4qY4oXVNk7Z60djW8Vi4="
+          "relative_path": "pulumi/pulumi.experimental.provider.checkfailure.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.CheckFailure",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CheckRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.checkrequest.html",
-          "hash": "FPTLdxCYwm9EaNjqFVie1uLvC+nZagJZHSyJZlaecUU="
+          "relative_path": "pulumi/pulumi.experimental.provider.checkrequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.CheckRequest",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CheckResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.checkresponse.html",
-          "hash": "zlRfFteFpkP6teZq95Ow3KBuRJd0uxyI6+6Y8plgy+s="
+          "relative_path": "pulumi/pulumi.experimental.provider.checkresponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.CheckResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CheckResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.checkresult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.CheckResult",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ComplexTypeSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.complextypespec.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ComplexTypeSpec",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ComponentAnalyzer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.componentanalyzer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ComponentAnalyzer",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Experimental.Provider.ComponentAnalyzer.yml\" sourcestartlinenumber=\"1\">Analyzes component resource types and generates a package schema.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ComponentProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.componentprovider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ComponentProvider",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Experimental.Provider.ComponentProvider.yml\" sourcestartlinenumber=\"1\">A provider that can be used to construct components from a given assembly with automatic schema inference.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ComponentProviderHost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.componentproviderhost.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ComponentProviderHost",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Experimental.Provider.ComponentProviderHost.yml\" sourcestartlinenumber=\"1\">A host to serve the component provider automatically. See <xref href=\"Pulumi.Experimental.Provider.ComponentProviderHost.Serve(System.String%5b%5d%2cSystem.Reflection.Assembly%2cSystem.String)\" data-throw-if-not-resolved=\"false\"></xref> for more details.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ConfigureRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.configurerequest.html",
-          "hash": "nkzfSlJ/dqyJBkJxOGTR3ynCA9JKycccEdVD/YqaaH8="
+          "relative_path": "pulumi/pulumi.experimental.provider.configurerequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ConfigureRequest",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ConfigureResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.configureresponse.html",
-          "hash": "GWoG1O29DirZ76LVeFCT2Q5FToYlgpl12QdUJrp9wVM="
+          "relative_path": "pulumi/pulumi.experimental.provider.configureresponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ConfigureResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ConstructRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.constructrequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ConstructRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ConstructResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.constructresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ConstructResponse",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CreateRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.createrequest.html",
-          "hash": "/NK2O/XY5KBtJQF2JfSj5Nj5aspXTkCfRfnkDija87A="
+          "relative_path": "pulumi/pulumi.experimental.provider.createrequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.CreateRequest",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CreateResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.createresponse.html",
-          "hash": "qg9NC0onyJcbXSUg/dFBHUnlTLLlsMZXhhID9wnNMtA="
+          "relative_path": "pulumi/pulumi.experimental.provider.createresponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.CreateResponse",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.DeleteRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.deleterequest.html",
-          "hash": "URb1JUUAs8LUwyh6e21Aw3FxTCEaNt/M0BsNYzK3rzk="
+          "relative_path": "pulumi/pulumi.experimental.provider.deleterequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.DeleteRequest",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.DiffRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.diffrequest.html",
-          "hash": "kFAyIkM1cAHKapHtGB3hRnr/Np0mJCg3HdnKAU77v64="
+          "relative_path": "pulumi/pulumi.experimental.provider.diffrequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.DiffRequest",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.DiffResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.diffresponse.html",
-          "hash": "UjcOH/C5XMTarbmOl2jkiu1OoRnkpOsLKEGNqmaBPEo="
+          "relative_path": "pulumi/pulumi.experimental.provider.diffresponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.DiffResponse",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.GetSchemaRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.getschemarequest.html",
-          "hash": "pR/5Qtc8wyYMfvcP00b5JyWqsuuPzuDEpEHaD57HEFc="
+          "relative_path": "pulumi/pulumi.experimental.provider.getschemarequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.GetSchemaRequest",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.GetSchemaResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.getschemaresponse.html",
-          "hash": "Hm6IJZrD/vWeGxpdcKvQiD0+f1mplBWU/8820lSrRKQ="
+          "relative_path": "pulumi/pulumi.experimental.provider.getschemaresponse.html"
         }
       },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.IHost.yml",
-      "output": {
-        ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.ihost.html",
-          "hash": "uCY7Dlwa8FGzfd4C5Z1StnBOZEcdJEtiW3JIhOShqj0="
-        }
-      },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.GetSchemaResponse",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.InvokeRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.invokerequest.html",
-          "hash": "zXuwjeZmWEPzc11W8pVVCHcCdv82erTrRE88nQyRBsA="
+          "relative_path": "pulumi/pulumi.experimental.provider.invokerequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.InvokeRequest",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.InvokeResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.invokeresponse.html",
-          "hash": "7YaEL7O8pH8Wv4128ZOVB/5o4eS3QgH1SvttY63wC+g="
+          "relative_path": "pulumi/pulumi.experimental.provider.invokeresponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.InvokeResponse",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.LogMessage.yml",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.Metadata.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.logmessage.html",
-          "hash": "rzq4X+gK20cuvmF1DGTdBDoeJNoHZmQN+OQiLev+f6k="
+          "relative_path": "pulumi/pulumi.experimental.provider.metadata.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.Metadata",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.LogSeverity.yml",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ObjectTypeSpec.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.logseverity.html",
-          "hash": "jSN/zms7ycjD7z+xWc0aUoPSCUf0F3ihy+Pqt0xZThQ="
+          "relative_path": "pulumi/pulumi.experimental.provider.objecttypespec.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ObjectTypeSpec",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.OutputReference.yml",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PackageSpec.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.outputreference.html",
-          "hash": "nDvIZQFjQoUQLY4Xl4D5mUr1aniYfiaiEgGxcb3cNNM="
+          "relative_path": "pulumi/pulumi.experimental.provider.packagespec.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.PackageSpec",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ParameterizeRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.parameterizerequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ParameterizeRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ParameterizeResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.parameterizeresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ParameterizeResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.Parameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.parameters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.Parameters",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ParametersArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.parametersargs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ParametersArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Experimental.Provider.ParametersArgs.yml\" sourcestartlinenumber=\"1\">A parameter value, represented as an array of strings, as might be provided by a command-line invocation, such as\nthat used to generate an SDK.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ParametersValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.parametersvalue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ParametersValue",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Experimental.Provider.ParametersValue.yml\" sourcestartlinenumber=\"1\">A parameter value, represented by an arbitrary array of bytes accompanied by a name and version. This is expected\nto be the format used by parameterized provider SDKs.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyDiff.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.propertydiff.html",
-          "hash": "XRBvqda9RiNhdz+ziu1TfuqU1w/5vrRWhOYI0w+HYRU="
+          "relative_path": "pulumi/pulumi.experimental.provider.propertydiff.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.PropertyDiff",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyDiffKind.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.propertydiffkind.html",
-          "hash": "izTkuZXcZtMlgZYX9dQhWoCtfRODaDGJvKq8cNzxulc="
+          "relative_path": "pulumi/pulumi.experimental.provider.propertydiffkind.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.PropertyDiffKind",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyValue.yml",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertySpec.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.propertyvalue.html",
-          "hash": "qZ3ehB+nuWRNpN7mHjbDSqrOxwXwf+efJzZKkRjQ1Po="
+          "relative_path": "pulumi/pulumi.experimental.provider.propertyspec.html"
         }
       },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyValueType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.propertyvaluetype.html",
-          "hash": "+LDYBUFJLCp2qLCiihvSbHGEnqJwX4kTfRtcdxWMleA="
-        }
-      },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.PropertySpec",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.Provider.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.provider.html",
-          "hash": "eapBxm13/f7M5tHTs79VMspVr8FZKQVG86hvGe6sIfA="
+          "relative_path": "pulumi/pulumi.experimental.provider.provider.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.Provider",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ReadRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.readrequest.html",
-          "hash": "sGUUsGx9KUtJNTOcQO+M2+qgezCkiNB52tt7S1K72mU="
+          "relative_path": "pulumi/pulumi.experimental.provider.readrequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ReadRequest",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ReadResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.readresponse.html",
-          "hash": "YBpp5xsC82YOT73tBywCd5fPrUSMJ7+Z+3g0r9P8+E4="
+          "relative_path": "pulumi/pulumi.experimental.provider.readresponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ReadResponse",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ResourceReference.yml",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ResourceSpec.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.resourcereference.html",
-          "hash": "y5XwKQGBupfTm/dNefDkahpnyIBOEZTIutUcXN4Kdc8="
+          "relative_path": "pulumi/pulumi.experimental.provider.resourcespec.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.ResourceSpec",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.TypeSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.provider.typespec.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.TypeSpec",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.UpdateRequest.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.updaterequest.html",
-          "hash": "bnuA1MLMKSYZKskZFatAqPZgZKSDWA/parsfmvj5ILA="
+          "relative_path": "pulumi/pulumi.experimental.provider.updaterequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.UpdateRequest",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.UpdateResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.updateresponse.html",
-          "hash": "N4zUtIIv7fTn2+PWnvsK0lej+fjJWjaTKjdVJ+NPRXM="
+          "relative_path": "pulumi/pulumi.experimental.provider.updateresponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider.UpdateResponse",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.experimental.provider.html",
-          "hash": "UKfGzfn0ATxixjdMJKjZLqP5QAhBBIttj2AOW+C52mI="
+          "relative_path": "pulumi/pulumi.experimental.provider.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.Provider",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.ResourceReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.resourcereference.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental.ResourceReference",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.experimental.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Experimental",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.FileArchive.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.filearchive.html",
-          "hash": "NqzcdnBJdNgqpLiM3oX4NgyAMSQWPb9SazfSOWtCNjw="
+          "relative_path": "pulumi/pulumi.filearchive.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.FileArchive",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.FileArchive.yml\" sourcestartlinenumber=\"1\">A FileArchive is a file-based archive, or a collection of file-based assets.  This can be a\nraw directory or a single archive file in one of the supported formats(.tar, .tar.gz,\nor.zip).</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.FileAsset.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.fileasset.html",
-          "hash": "/6hL7lZHlAKgfzBmyCf51bbUY1qsSJidVZwFNz1CPps="
+          "relative_path": "pulumi/pulumi.fileasset.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.FileAsset",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.FileAsset.yml\" sourcestartlinenumber=\"1\">FileAsset is a kind of asset produced from a given path to a file on the local filesystem.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Input-1.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.input-1.html",
-          "hash": "lTU4ThS/98fbhLu0RG4MhOUU3k1T92+mnjJI/YfQ+6E="
+          "relative_path": "pulumi/pulumi.input-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Input<T>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Input-1.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref> is a property input for a <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>.  It may be a promptly\navailable T, or the output from a existing <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.InputArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.inputargs.html",
-          "hash": "vAA3TM2ho3fm+/cYVImHTlwJoz5AqG/YWcJthQV3Mls="
+          "relative_path": "pulumi/pulumi.inputargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InputArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InputArgs.yml\" sourcestartlinenumber=\"1\">Base type for all input argument classes.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.InputAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.inputattribute.html",
-          "hash": "ZrXd2pMI0eNj3+eMP+0FLBdIMIhBO4EtbRhCantPFrI="
+          "relative_path": "pulumi/pulumi.inputattribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InputAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InputAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used by a Pulumi Cloud Provider Package to mark <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> input\nfields and properties.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.InputAttribute.yml\" sourcestartlinenumber=\"6\">Note: for simple inputs (i.e. <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref> this should just be placed on the\nproperty itself.  i.e. <code>[Input] Input&lt;string&gt; Acl</code>.</p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.InputAttribute.yml\" sourcestartlinenumber=\"9\">For collection inputs (i.e. <xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> this should be placed on the\nbacking field for the property.  i.e.</p>\n<pre><code class=\"lang-csharp\">[Input] private InputList&lt;string&gt; _acls;\npublic InputList&lt;string&gt; Acls\n{\n    get =&gt; _acls ?? (_acls = new InputList&lt;string&gt;());\n    set =&gt; _acls = value;\n}</code></pre>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.InputExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.inputextensions.html",
-          "hash": "8p1A+UXloEjB8HQRFkJzPzaUDtT2hz+Rni+x2phKwyc="
+          "relative_path": "pulumi/pulumi.inputextensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InputExtensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.InputJson.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.inputjson.html",
-          "hash": "Nl2fYmcDvQ6O9lBQTFQ6sJ0KrxZhajmza/FAiuwj3dg="
+          "relative_path": "pulumi/pulumi.inputjson.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InputJson",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InputJson.yml\" sourcestartlinenumber=\"1\">Represents an <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref> value that wraps a <xref href=\"System.Text.Json.JsonElement\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.InputList-1.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.inputlist-1.html",
-          "hash": "QejJR1rRHaFMH1yLVP7w9rv1/aPu8/YTRRebgTFKAeY="
+          "relative_path": "pulumi/pulumi.inputlist-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InputList<T>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InputList-1.yml\" sourcestartlinenumber=\"1\">A list of values that can be passed in as the arguments to a <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>.\nThe individual values are themselves <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref>s.  i.e. the individual values\ncan be concrete values or <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s.</p>\n<p></p>\n<xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> differs from a normal <xref href=\"System.Collections.Generic.IList%601\" data-throw-if-not-resolved=\"false\"></xref> in that it is itself\nan <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref>.  For example, a <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> that accepts an <xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> will accept not just a list but an <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>\nof a list.  This is important for cases where the <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>\nlist from some <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> needs to be passed into another <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>.  Or for cases where creating the list invariably produces an <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref> because its resultant value is dependent on other <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s.\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.InputList-1.yml\" sourcestartlinenumber=\"13\">This benefit of <xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> is also a limitation.  Because it represents a\nlist of values that may eventually be created, there is no way to simply iterate over, or\naccess the elements of the list synchronously.</p>\n<p></p>\n<xref href=\"Pulumi.InputList%601\" data-throw-if-not-resolved=\"false\"></xref> is designed to be easily used in object and collection\ninitializers.  For example, a resource that accepts a list of inputs can be written in\neither of these forms:\n<p></p>\n<pre><code class=\"lang-csharp\">new SomeResource(\"name\", new SomeResourceArgs {\n    ListProperty = { Value1, Value2, Value3 },\n});</code></pre>\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.InputList-1.yml\" sourcestartlinenumber=\"28\">or</p>\n<pre><code class=\"lang-csharp\">new SomeResource(\"name\", new SomeResourceArgs {\n    ListProperty = new [] { Value1, Value2, Value3 },\n});</code></pre>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.InputListExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.inputlistextensions.html",
-          "hash": "vZgaj2nu/HJTuoO3DuO5/mcLsKjo20wkoIg5UcIn938="
+          "relative_path": "pulumi/pulumi.inputlistextensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InputListExtensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.InputMap-1.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.inputmap-1.html",
-          "hash": "yu5KkD5fVWeoR2xrJuzRwuk+P0z6Im+gRce6rQa5pYI="
+          "relative_path": "pulumi/pulumi.inputmap-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InputMap<TValue>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InputMap-1.yml\" sourcestartlinenumber=\"1\">A mapping of <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref>s to values that can be passed in as the arguments to a\n<xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>. The individual values are themselves <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref>s.  i.e.\nthe individual values can be concrete values or <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s.</p>\n<p></p>\n<xref href=\"Pulumi.InputMap%601\" data-throw-if-not-resolved=\"false\"></xref> differs from a normal <xref href=\"System.Collections.Generic.IDictionary%602\" data-throw-if-not-resolved=\"false\"></xref> in that it is\nitself an <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref>.  For example, a <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> that accepts an\n<xref href=\"Pulumi.InputMap%601\" data-throw-if-not-resolved=\"false\"></xref> will accept not just a dictionary but an <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>\nof a dictionary as well.  This is important for cases where the <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>\nmap from some <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> needs to be passed into another <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>.\nOr for cases where creating the map invariably produces an <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref> because\nits resultant value is dependent on other <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s.\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.InputMap-1.yml\" sourcestartlinenumber=\"16\">This benefit of <xref href=\"Pulumi.InputMap%601\" data-throw-if-not-resolved=\"false\"></xref> is also a limitation.  Because it represents a\nlist of values that may eventually be created, there is no way to simply iterate over, or\naccess the elements of the map synchronously.</p>\n<p></p>\n<xref href=\"Pulumi.InputMap%601\" data-throw-if-not-resolved=\"false\"></xref> is designed to be easily used in object and collection\ninitializers.  For example, a resource that accepts a map of values can be written easily in\nthis form:\n<p></p>\n<pre><code class=\"lang-csharp\">new SomeResource(\"name\", new SomeResourceArgs {\n    MapProperty = {\n        { Key1, Value1 },\n        { Key2, Value2 },\n        { Key3, Value3 },\n    },\n});</code></pre>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.InputMapExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.inputmapextensions.html",
-          "hash": "T5dpCrynRZEgWw11P7oIR67zDnJZ439/cWX+pnz9Y4o="
+          "relative_path": "pulumi/pulumi.inputmapextensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InputMapExtensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.InputUnion-2.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.inputunion-2.html",
-          "hash": "OGl8itoYGvtQSMp5WweDNn20RCPQ9eE0Et0ZgtvWxho="
+          "relative_path": "pulumi/pulumi.inputunion-2.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InputUnion<T0, T1>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InputUnion-2.yml\" sourcestartlinenumber=\"1\">Represents an <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref> value that can be one of two different types. For\nexample, it might potentially be an <xref href=\"System.Int32\" data-throw-if-not-resolved=\"false\"></xref> some of the time or a <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> in other cases.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.InvokeArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.invokeargs.html",
-          "hash": "eZgr24PPcOxBSYzTcZHJD12dSqg5EvJTG7mEqBmsopk="
+          "relative_path": "pulumi/pulumi.invokeargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InvokeArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InvokeArgs.yml\" sourcestartlinenumber=\"1\">Base type for all invoke argument classes.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.InvokeOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.invokeoptions.html",
-          "hash": "TW6xXFdVdW4CNaZAE2mq1MI5QdwHVMiru9CfNJRnMKk="
+          "relative_path": "pulumi/pulumi.invokeoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InvokeOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InvokeOptions.yml\" sourcestartlinenumber=\"1\">Options to help control the behavior of <xref href=\"Pulumi.IDeployment.InvokeAsync%60%601(System.String%2cPulumi.InvokeArgs%2cPulumi.InvokeOptions%2cPulumi.RegisterPackageRequest)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InvokeOutputOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.invokeoutputoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InvokeOutputOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InvokeOutputOptions.yml\" sourcestartlinenumber=\"1\">Options to help control the behavior of <xref href=\"Pulumi.IDeployment.Invoke%60%601(System.String%2cPulumi.InvokeArgs%2cPulumi.InvokeOutputOptions%2cPulumi.RegisterPackageRequest)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InvokeTransform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.invoketransform.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InvokeTransform",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.InvokeTransform.yml\" sourcestartlinenumber=\"1\">The type of an invoke transform.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InvokeTransformArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.invoketransformargs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InvokeTransformArgs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.InvokeTransformResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.invoketransformresult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.InvokeTransformResult",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Log.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.log.html",
-          "hash": "RmFcgwV4LaU4TrxRdi7E0RaLgsDKOiZuh6El/2qAXlM="
+          "relative_path": "pulumi/pulumi.log.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Log",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Log.yml\" sourcestartlinenumber=\"1\">Logging functions that can be called from a .NET application that will be logged to the\n<code>Pulumi</code> log stream.  These events will be printed in the terminal while the Pulumi app\nruns, and will be available from the Web console afterwards.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.LogException.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.logexception.html",
-          "hash": "Dlxx2dNtESbatafjCOlxUngOHnWGz/mZb6B9tx+5yd8="
+          "relative_path": "pulumi/pulumi.logexception.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.LogException",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.LogException.yml\" sourcestartlinenumber=\"1\">Special exception we throw if we had a problem actually logging a message to the engine\nerror rpc endpoint. In this case, we have no choice but to tear ourselves down reporting\nwhatever we can to the console instead.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Output-1.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.output-1.html",
-          "hash": "zWgKjmxrizlLwKvAWa9/8YSs3u66+3+dUVeQ5uf5umA="
+          "relative_path": "pulumi/pulumi.output-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Output<T>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Output-1.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s are a key part of how Pulumi tracks dependencies between <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>s. Because the values of outputs are not available until resources are\ncreated, these are represented using the special <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s type, which\ninternally represents two things: an eventually available value of the output and\nthe dependency on the source(s) of the output value.\nIn fact, <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s is quite similar to <xref href=\"System.Threading.Tasks.Task%601\" data-throw-if-not-resolved=\"false\"></xref>.\nAdditionally, they carry along dependency information.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.Output-1.yml\" sourcestartlinenumber=\"10\">The output properties of all resource objects in Pulumi have type <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Output.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.output.html",
-          "hash": "MdlC2MRJlXwuGqGiM1+h7zvI7e2Ayxt6iGxi+0DqQxc="
+          "relative_path": "pulumi/pulumi.output.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Output",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Output.yml\" sourcestartlinenumber=\"1\">Useful static utility methods for both creating and working with <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>s.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.OutputAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.outputattribute.html",
-          "hash": "PMBjmdXLE0RdwC2JSEWno0uBpjcQUqsqmsJYsP6xjfU="
+          "relative_path": "pulumi/pulumi.outputattribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.OutputAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.OutputAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used by a mark <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> output properties. Use this attribute\nin your Pulumi programs to mark outputs of <xref href=\"Pulumi.ComponentResource\" data-throw-if-not-resolved=\"false\"></xref> and\n<xref href=\"Pulumi.Stack\" data-throw-if-not-resolved=\"false\"></xref> resources.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.OutputConstructorAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.outputconstructorattribute.html",
-          "hash": "oXsGoGCkkFAkqVKA91avZGDWB2l8eHsh1hGtaasc0Ys="
+          "relative_path": "pulumi/pulumi.outputconstructorattribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.OutputConstructorAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.OutputConstructorAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used by a Pulumi Cloud Provider Package to marks the constructor for a complex\nproperty type so that it can be instantiated by the Pulumi runtime.</p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.OutputConstructorAttribute.yml\" sourcestartlinenumber=\"4\">The constructor should contain parameters that map to the resultant <xref href=\"Google.Protobuf.WellKnownTypes.Struct.Fields\" data-throw-if-not-resolved=\"false\"></xref> returned by the engine.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.OutputConstructorParameterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.outputconstructorparameterattribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.OutputConstructorParameterAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.OutputConstructorParameterAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used by a Pulumi Cloud Provider Package to mark\nconstructor parameters with a name override.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.OutputExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.outputextensions.html",
-          "hash": "tKeofm4CypaIoOaGB6SJgk5jAETv8m8M6f2DMzoUJ9w="
+          "relative_path": "pulumi/pulumi.outputextensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.OutputExtensions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.OutputExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for <xref href=\"Pulumi.Output%601\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.OutputTypeAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.outputtypeattribute.html",
-          "hash": "enEsL/YoskLJvb8UVsnEEiIJZ2DLNNxZiQuWoyatORs="
+          "relative_path": "pulumi/pulumi.outputtypeattribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.OutputTypeAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.OutputTypeAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used by a Pulumi Cloud Provider Package to mark complex types used for a Resource\noutput property.  A complex type must have a single constructor in it marked with the\n<xref href=\"Pulumi.OutputConstructorAttribute\" data-throw-if-not-resolved=\"false\"></xref> attribute.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.ProviderResource.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.providerresource.html",
-          "hash": "GYjcKdURL+KtsgQVbbaxPbmCB/TN7Ks/k6VReAkLjLs="
+          "relative_path": "pulumi/pulumi.providerresource.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ProviderResource",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ProviderResource.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.ProviderResource\" data-throw-if-not-resolved=\"false\"></xref> is a <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> that implements CRUD operations\nfor other custom resources. These resources are managed similarly to other resources,\nincluding the usual diffing and update semantics.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.RegisterPackageRequest.PackageParameterization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.registerpackagerequest.packageparameterization.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.RegisterPackageRequest.PackageParameterization",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.RegisterPackageRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.registerpackagerequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.RegisterPackageRequest",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.RemoteArchive.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.remotearchive.html",
-          "hash": "UzTj+xg9PcZfBQyQZqBEuicamDNZJgRLLjQWA1mgF/E="
+          "relative_path": "pulumi/pulumi.remotearchive.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.RemoteArchive",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.RemoteArchive.yml\" sourcestartlinenumber=\"1\">A RemoteArchive is a file-based archive fetched from a remote location.  The URI's scheme\ndictates the protocol for fetching the archive's contents: <code>file://</code> is a local file\n(just like a FileArchive), <code>http://</code> and <code>https://</code> specify HTTP and HTTPS,\nrespectively, and specific providers may recognize custom schemes.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.RemoteAsset.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.remoteasset.html",
-          "hash": "0VETyFk9nKty+uQNP+uqEyVjrwPUC90dm6TP3n8Vjoc="
+          "relative_path": "pulumi/pulumi.remoteasset.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.RemoteAsset",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.RemoteAsset.yml\" sourcestartlinenumber=\"1\">RemoteAsset is a kind of asset produced from a given URI string.  The URI's scheme dictates\nthe protocol for fetching contents: <code>file://</code> specifies a local file, <code>http://</code>\nand <code>https://</code> specify HTTP and HTTPS, respectively.  Note that specific providers may\nrecognize alternative schemes; this is merely the base-most set that all providers support.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Resource.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.resource.html",
-          "hash": "7Y1gbTrThXMWx/Q2FtRbvaR0TXhG/CnfbGrjtKRq6gA="
+          "relative_path": "pulumi/pulumi.resource.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Resource",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Resource.yml\" sourcestartlinenumber=\"1\">Resource represents a class whose CRUD operations are implemented by a provider plugin.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.resourceargs.html",
-          "hash": "3rw9ahht0GE+bCRMlVFgP0q9FtlB0+8VVGRs1bkxtHQ="
+          "relative_path": "pulumi/pulumi.resourceargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ResourceArgs.yml\" sourcestartlinenumber=\"1\">Base type for all resource argument classes.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceException.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.resourceexception.html",
-          "hash": "ZVVVBx8DTsyrBs/pQmNxu+7G2LAVbvMdoBIHLKcZHgc="
+          "relative_path": "pulumi/pulumi.resourceexception.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceException",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ResourceException.yml\" sourcestartlinenumber=\"1\">ResourceException can be used for terminating a program abruptly, specifically associating the\nproblem with a Resource.Depending on the nature of the problem, clients can choose whether\nor not a call stack should be returned as well. This should be very rare, and would only\nindicate no usefulness of presenting that stack to the user.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.resourcehook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceHook",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ResourceHook.yml\" sourcestartlinenumber=\"1\">A resource hook is a callback that can be registered to run at specific points in the resource lifecycle.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceHookArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.resourcehookargs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceHookArgs",
+      "Summary": "<p>\nResourceHookArgs represents the arguments passed to a resource hook. Depending on the hook type, only some of\nthe new/old inputs/outputs are set.\n</p>\n<pre><code class=\"lang-csharp\">| Hook Type     | old_inputs | new_inputs | old_outputs | new_outputs |\n| ------------- | ---------- | ---------- | ----------- | ----------- |\n| before_create |            | ✓          |             |             |\n| after_create  |            | ✓          |             | ✓           |\n| before_update | ✓          | ✓          | ✓           |             |\n| after_update  | ✓          | ✓          | ✓           | ✓           |\n| before_delete | ✓          |            | ✓           |             |\n| after_delete  | ✓          |            | ✓           |             |</code></pre>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceHookBinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.resourcehookbinding.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceHookBinding",
+      "Summary": "<p>\nBinds <xref href=\"Pulumi.ResourceHook\" data-throw-if-not-resolved=\"false\"></xref>s to a resource. The resource hooks will be invoked at specific points in the\nlifecycle of the resource.\n</p>\n<p>\n<code>Before*</code> hooks that raise an exception will cause the resource operation to fail. <code>After*</code> hooks that\nraise an exception will log a warning, but do not cause the action or the deployment to fail.\n</p>\n<p>\nWhen running <code>pulumi destroy</code>, <code>BeforeDelete</code> and <code>AfterDelete</code> resource hooks require the\noperation to run with <code>--run-program</code>, to ensure that the program which defines the hooks is available.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceHookCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.resourcehookcallback.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceHookCallback",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ResourceHookCallback.yml\" sourcestartlinenumber=\"1\">ResourceHookCallback is a delegate that defines the signature of <xref href=\"Pulumi.ResourceHook\" data-throw-if-not-resolved=\"false\"></xref> callback functions.\nCallbacks take a set of <xref href=\"Pulumi.ResourceHookArgs\" data-throw-if-not-resolved=\"false\"></xref> and an optional <xref href=\"System.Threading.CancellationToken\" data-throw-if-not-resolved=\"false\"></xref>.\nCallbacks may raise an error by throwing an exception, which will be propagated to the resource operation that\ntriggered the hook.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceHookOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.resourcehookoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceHookOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ResourceHookOptions.yml\" sourcestartlinenumber=\"1\">Options for registering a <xref href=\"Pulumi.ResourceHook\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.resourceoptions.html",
-          "hash": "wfB13yrHRIOuPYJb43St5GAdgzIlLbgljm8RYiftLVY="
+          "relative_path": "pulumi/pulumi.resourceoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ResourceOptions.yml\" sourcestartlinenumber=\"1\">ResourceOptions is a bag of optional settings that control a resource's behavior.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.resourcetransform.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceTransform",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ResourceTransform.yml\" sourcestartlinenumber=\"1\">ResourceTransform is the callback signature for <xref href=\"Pulumi.ResourceOptions.ResourceTransforms\" data-throw-if-not-resolved=\"false\"></xref>. A\ntransform is passed the same set of inputs provided to the <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> constructor, and can\noptionally return back alternate values for the <code>properties</code> and/or <code>options</code> prior to the resource\nactually being created. The effect will be as though those <code>properties</code> and/or <code>options</code> were passed\nin place of the original call to the <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> constructor. If the transform returns <a href=\"https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null\">null</a>, this indicates that the resource will not be transformed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransformArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.resourcetransformargs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceTransformArgs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransformResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.resourcetransformresult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceTransformResult",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransformation.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.resourcetransformation.html",
-          "hash": "xOdPy/Kj8ia4iqjQHq553F8/x+Ld9cntERXZ+LNLJzk="
+          "relative_path": "pulumi/pulumi.resourcetransformation.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceTransformation",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.ResourceTransformation.yml\" sourcestartlinenumber=\"1\">ResourceTransformation is the callback signature for <xref href=\"Pulumi.ResourceOptions.ResourceTransformations\" data-throw-if-not-resolved=\"false\"></xref>. A transformation is passed the same set of\ninputs provided to the <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> constructor, and can optionally return back\nalternate values for the <code>properties</code> and/or <code>options</code> prior to the resource\nactually being created. The effect will be as though those <code>properties</code> and/or\n<code>options</code> were passed in place of the original call to the <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref>\nconstructor.  If the transformation returns <a href=\"https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null\">null</a>, this indicates that the\nresource will not be transformed.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransformationArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.resourcetransformationargs.html",
-          "hash": "cSu9bOeDEE9jSbjq5XeoRbfzADrF9BentXog0fe+Yss="
+          "relative_path": "pulumi/pulumi.resourcetransformationargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceTransformationArgs",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTransformationResult.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.resourcetransformationresult.html",
-          "hash": "t1Fj2Mw7HwN1MGJYvrv/aLS0z4DUmbeUrAVh1TGmP3M="
+          "relative_path": "pulumi/pulumi.resourcetransformationresult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceTransformationResult",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.ResourceTypeAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.resourcetypeattribute.html",
-          "hash": "Aq+faQXeNRG5sblFp5KzevYwwltBFiG+1jCew8lSghk="
+          "relative_path": "pulumi/pulumi.resourcetypeattribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.ResourceTypeAttribute",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.RunException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.runexception.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.RunException",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.RunException.yml\" sourcestartlinenumber=\"1\">RunException can be used for terminating a program abruptly, but resulting in a clean exit\nrather than the usual verbose unhandled error logic which emits the source program text and\ncomplete stack trace.  This type should be rarely used and not be used by developers.\nThe reason to make it public is for it to be assertable by testing frameworks. Ideally <xref href=\"Pulumi.ResourceException\" data-throw-if-not-resolved=\"false\"></xref> should always be used so that as many errors as possible can be\nassociated with a Resource.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Stack.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.stack.html",
-          "hash": "uahag4FC34kpAiWrHGbM+0xLPw/WQSZ4vz3oTx2677k="
+          "relative_path": "pulumi/pulumi.stack.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Stack",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Stack.yml\" sourcestartlinenumber=\"1\">Stack is the root resource for a Pulumi stack. Derive from this class to create your\nstack definitions.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.StackOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.stackoptions.html",
-          "hash": "XoTBOBN87jUXmncm8ri6fc5i44m3ugW7Aoq4TcAccjI="
+          "relative_path": "pulumi/pulumi.stackoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.StackOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.StackOptions.yml\" sourcestartlinenumber=\"1\"><xref href=\"Pulumi.StackOptions\" data-throw-if-not-resolved=\"false\"></xref> is a bag of optional settings that control a stack's behavior.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.StackReference.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.stackreference.html",
-          "hash": "R8zW5syYGHJ9rff+zQH815+1K5+MvKC1xeapG7b59NM="
+          "relative_path": "pulumi/pulumi.stackreference.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.StackReference",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.StackReference.yml\" sourcestartlinenumber=\"1\">Manages a reference to a Pulumi stack and provides access to the referenced stack's outputs.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.StackReferenceArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.stackreferenceargs.html",
-          "hash": "Cnkigp7P4h8k0q3OwMfQpacTjDeX29CVr7Z+QabXp5E="
+          "relative_path": "pulumi/pulumi.stackreferenceargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.StackReferenceArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.StackReferenceArgs.yml\" sourcestartlinenumber=\"1\">The set of arguments for constructing a StackReference resource.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.StackReferenceOutputDetails.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.stackreferenceoutputdetails.html",
-          "hash": "Y9C9E/4oSKdWEt6lC9ykgoaqqhLbap8kR+FJ5hiVImk="
+          "relative_path": "pulumi/pulumi.stackreferenceoutputdetails.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.StackReferenceOutputDetails",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.StackReferenceOutputDetails.yml\" sourcestartlinenumber=\"1\">Holds a StackReference's output value.\nAt most one of Value and SecretValue will be set.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Stash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.stash.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Stash",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Stash.yml\" sourcestartlinenumber=\"1\">Stash stores an arbitrary value in the state.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.StashArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.stashargs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.StashArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.StashArgs.yml\" sourcestartlinenumber=\"1\">The set of arguments for constructing a <xref href=\"Pulumi.Stash\" data-throw-if-not-resolved=\"false\"></xref> resource.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.StringAsset.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.stringasset.html",
-          "hash": "Kxv9uH1pXgtAOL/u5xYZagENHcTzGRy5Lqa3ihHxavk="
+          "relative_path": "pulumi/pulumi.stringasset.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.StringAsset",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.StringAsset.yml\" sourcestartlinenumber=\"1\">StringAsset is a kind of asset produced from an in-memory UTF8-encoded string.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Testing.EmptyMocks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.testing.emptymocks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Testing.EmptyMocks",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Testing.IMocks.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.testing.imocks.html",
-          "hash": "e2pc/c+xEdxZG8rhJTB1mwAZcthVJxXsbNenlXdNpp8="
+          "relative_path": "pulumi/pulumi.testing.imocks.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Testing.IMocks",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Testing.IMocks.yml\" sourcestartlinenumber=\"1\">Hooks to mock the engine that provide test doubles for offline unit testing of stacks.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Testing.MockCallArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.testing.mockcallargs.html",
-          "hash": "zBzgorMJFbINP8SajAQx3xWDNDsM+1EnX7xtl3eDFdY="
+          "relative_path": "pulumi/pulumi.testing.mockcallargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Testing.MockCallArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Testing.MockCallArgs.yml\" sourcestartlinenumber=\"1\">MockCallArgs for use in CallAsync</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Testing.MockRegisterResourceOutputsRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.testing.mockregisterresourceoutputsrequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Testing.MockRegisterResourceOutputsRequest",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Testing.MockRegisterResourceOutputsRequest.yml\" sourcestartlinenumber=\"1\">MockRegisterResourceOutputsRequest for use in RegisterOutputRequest</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Testing.MockResourceArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.testing.mockresourceargs.html",
-          "hash": "WGIFdh4hGC+xhoi7YQ+pXjCAU3VMD80zC6LPXUA8CSw="
+          "relative_path": "pulumi/pulumi.testing.mockresourceargs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Testing.MockResourceArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Testing.MockResourceArgs.yml\" sourcestartlinenumber=\"1\">MockResourceArgs for use in NewResourceAsync</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Testing.TestOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.testing.testoptions.html",
-          "hash": "WRMQ4qtBECvhOyXNTyucZVLHTpOSzybXZKz8kQ74NiE="
+          "relative_path": "pulumi/pulumi.testing.testoptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Testing.TestOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Testing.TestOptions.yml\" sourcestartlinenumber=\"1\">Optional settings for <xref href=\"Pulumi.Deployment.TestAsync%60%601(Pulumi.Testing.IMocks%2cPulumi.Testing.TestOptions)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Testing.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.testing.html",
-          "hash": "hpoUOumJupsKGTIRZ2qyMm9znHNR3KMWNwudHWGmC2U="
+          "relative_path": "pulumi/pulumi.testing.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Testing",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Union-2.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.union-2.html",
-          "hash": "ZQANang4iSBE4TxO/Xkgp/fr1R+bD+hGoDFnSsdz7WI="
+          "relative_path": "pulumi/pulumi.union-2.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Union<T0, T1>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Union-2.yml\" sourcestartlinenumber=\"1\">Represents a <a href=\"https://en.wikipedia.org/wiki/Tagged_union\">Tagged Union</a>.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.Union-2.yml\" sourcestartlinenumber=\"5\">This is used to hold a value that could take on several different, but fixed, types. Only\none of the types can be in use at any one time. It can be thought of as a type that has\nseveral &quot;cases,&quot; each of which should be handled correctly when that type is manipulated.</p>\n<p></p>\n<p sourcefile=\"metadata/Pulumi/Pulumi.Union-2.yml\" sourcestartlinenumber=\"11\">For example, a <xref href=\"Pulumi.Resource\" data-throw-if-not-resolved=\"false\"></xref> property that could either store a <xref href=\"System.Int32\" data-throw-if-not-resolved=\"false\"></xref>\nor a <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> can be represented as <code>Output&lt;int, string&gt;</code>.  The <xref href=\"Pulumi.Input%601\" data-throw-if-not-resolved=\"false\"></xref> version of this is <xref href=\"Pulumi.InputUnion%602\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.Urn.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.urn.html",
-          "hash": "ox3M5UeQ5cUsB8R646Jk75W2st7FaQJ1hL+tPV2pWxQ="
+          "relative_path": "pulumi/pulumi.urn.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Urn",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.Urn.yml\" sourcestartlinenumber=\"1\">An automatically generated logical URN, used to stably identify resources. These are created\nautomatically by Pulumi to identify resources.  They cannot be manually constructed.</p>\n"
     },
     {
       "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/pulumi.html",
-          "hash": "y6cp89I1WcTYOvi8qzHnGsOYj5Ro4GkPaoINnZEvZtE="
+          "relative_path": "pulumi/pulumi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi",
+      "Summary": null
     },
     {
       "type": "Toc",
       "source_relative_path": "metadata/Pulumi/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "pulumi/toc.html",
-          "hash": "E+9VxSAx+naFcJY29mGd0VcB9itSl6/9Xvkj5iQsNYA="
+          "relative_path": "pulumi/toc.html"
+        },
+        ".json": {
+          "relative_path": "pulumi/toc.json"
         }
       },
       "version": ""
     }
   ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"
