@@ -683,7 +683,6 @@ if (config.registryStack) {
             pathPattern: "/registry/*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
-            forwardedValues: undefined,
         },
         // Registry package logos (e.g. /fingerprinted/logos/pkg/aws.<hash>.svg)
         // are served from the registry origin with year-long immutable caching.
@@ -698,7 +697,6 @@ if (config.registryStack) {
             cachePolicyId: oneYearCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
-            forwardedValues: undefined,
         },
     )
 }
@@ -726,7 +724,6 @@ if (config.guidesStack) {
             pathPattern: "/guides/*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
-            forwardedValues: undefined,
         },
     )
 }
