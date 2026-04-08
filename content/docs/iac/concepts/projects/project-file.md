@@ -135,7 +135,7 @@ Schemas are only valid for project property keys. For setting the value of a pro
 
 | Name | Required | Description |
 | - | - | - |
-| `type` | required | The type of this config property, either `string`, `boolean`, `integer`, or `array`. |
+| `type` | required | The type of this config property, either `string`, `boolean`, `integer`, `array`, or `object`. |
 | `description` | optional | A description for this config property. |
 | `secret` | optional | True if this config property should be a secure secret value. |
 | `default` | optional | The default value for this config property, must match the given type. |
