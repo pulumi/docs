@@ -15,10 +15,12 @@ Convert Pulumi programs from a supported source program into other supported lan
 
 The source program to convert will default to the current working directory.
 
-Valid source languages: yaml, terraform, bicep, arm, kubernetes
+Valid source languages: `yaml, terraform, bicep, arm, kubernetes`
 
-Valid target languages: typescript, python, csharp, go, java, yaml
+Valid target languages: `typescript, python, csharp, go, java, yaml`
+
 Example command usage:
+
     pulumi convert --from yaml --language java --out . 
 
 
