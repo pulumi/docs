@@ -15,8 +15,8 @@ quote_block:
   quote: |
       "Pulumi ESC has been fundamentally game-changing in how we want to bring that apart, not just in solving that disconnected set of Terragrunt files, but also in normalizing a lot of those Terragrunt files."
   quote_attrib: Zachary Cook, Senior Manager, DevOps at Modivcare
-  headline_stat: 25% Cost Savings
-  headline: By eliminating redundant resources
+  headline_stat: 25%
+  headline: cost savings by eliminating redundant resources
 
 exec_summary: |
     [Modivcare](https://www.modivcare.com/) is a technology-enabled healthcare services company that provides a suite of integrated supportive care solutions for public and private payors and their members. Built through strategic acquisitions, Modivcare consolidated multiple healthcare service organizations, each bringing different operational practices and infrastructure approaches. Using Pulumi Insights, Pulumi ESC, and a developer portal integration, Modivcare transformed from disconnected infrastructure implementations into a unified platform supporting their healthcare mission—all without disrupting critical healthcare services.

@@ -15,7 +15,7 @@ quote_block:
       Pulumi was a natural choice based on the background and skills of our people in DevOps."
   quote_attrib: Fernando Carlietti, Lead DevOps Engineer
   headline_stat: 90%
-  headline: Reduction in network configuration code.
+  headline: reduction in network configuration code
 
 exec_summary: |
     Founded in 2015, Credijusto provides asset-backed loans and

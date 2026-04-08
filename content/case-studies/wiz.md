@@ -15,8 +15,8 @@ quote_block:
   quote: |
       "We use Pulumi widely at Wiz. It enabled our product to support multi-cloud and to scale quickly - scaling and driving hundreds of thousands of infrastructure updates every day."
   quote_attrib: Yarin Miran, Senior Software Engineer, Wiz
-  headline_stat: 1M+ Cloud Resources
-  headline: Managed across thousands of Kubernetes clusters
+  headline_stat: 1M+
+  headline: cloud resources managed across thousands of Kubernetes clusters
 
 exec_summary: |
     When [Wiz](https://www.wiz.io/) needed to scale their cloud security platform globally, they faced a challenge that would break most traditional infrastructure approaches: dynamically provisioning and managing Kubernetes clusters across every major cloud provider, in every region where their customers operate – including supporting deployments into customers' cloud accounts where required. Using Pulumi's Automation API and Go SDK, Wiz built a system that now manages thousands of Kubernetes clusters across hundreds of data centers worldwide, handling hundreds of thousands of infrastructure updates daily while maintaining over a million cloud resources and tens of thousands of Kubernetes clusters—infrastructure scale that enables Wiz to onboard enterprise customers 5x faster and expand into new markets within days rather than months.

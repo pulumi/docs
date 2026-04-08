@@ -14,8 +14,8 @@ quote_block:
   quote: |
       "Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all in one stack. It has hugely benefited productivity and our service's reliability. Without Pulumi, we know that scaling and maintaining Materialize would be much harder for the team."
   quote_attrib: Paul Hemberger, Engineering Manager, Materialize
-  headline_stat: 75% more productivity
-  headline: for new engineers; faster release cycles and growth
+  headline_stat: 75%
+  headline: more productivity for new engineers, with faster release cycles
 
 exec_summary: |
     Materialize, a cloud operational data store provider, implemented Pulumi's Infrastructure as Code platform to manage their multi-region Amazon EKS Kubernetes clusters, addressing key challenges in configuration consistency and developer accessibility. The solution enables developers to use familiar programming languages like Python for infrastructure management, while providing a custom CLI for self-service deployments and automated workflows through GitHub Actions. The implementation dramatically improved operational efficiency by reducing developer onboarding time from one month to one week, ensuring standardized cluster configurations across regions, and maintaining robust security governance through centralized control and pre-deployment validation.

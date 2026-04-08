@@ -14,7 +14,7 @@ quote_block:
         "Pulumi is a key component of our strategy to pick the best tools that will help us grow on this agentic journey."
     quote_attrib: Ewan Dawson, CTO, Compostable AI
     headline_stat: 90 minutes
-    headline: to provision a new customer tenant on AWS and deploy the Clarity Platform into production
+    headline: to provision and deploy a new customer tenant to production
 
 exec_summary: |
     Compostable AI's development philosophy centers on AI agents writing all code, including infrastructure. With each client requiring dedicated AWS accounts, the team needed infrastructure-as-code that agents could generate, validate, and iterate on without human review.
