@@ -11,15 +11,16 @@ customer_url: https://www.spear.ai/
 
 quote_block:
   quote: |
-      “We gave our auditors access to our policy packs because it’s far easier to understand and prove controls in code than in docs and diagrams. With Pulumi’s Policy as Code approach, that manual review process has gone away. We’ve reduced our Authority to Operate (ATO) timeline from a year and a half to expecting approval in three months.” Michael Hunter, CEO, Spear AI
+      “We gave our auditors access to our policy packs because it’s far easier to understand and prove controls in code than in docs and diagrams. With Pulumi’s Policy as Code approach, that manual review process has gone away. We’ve reduced our Authority to Operate (ATO) timeline from a year and a half to expecting approval in three months.”
   quote_attrib: Michael Hunter, CEO, Spear AI
-  headline_stat: 6x faster time to achieve ATO
+  headline_stat: 6x
+  headline: faster time to achieve Authority to Operate (ATO)
 
 exec_summary: |
-    Spear AI delivers cutting-edge AI solutions that accelerate mission-critical decision-making for defense operators. By transforming how tactical sensor data is processed and analyzed, Spear AI enhances situational awareness and operational capacity across edge and cloud environments. The company specializes in automated data labeling and intelligent model deployment for complex sensor systems, enabling the US Navy to maintain tactical superiority through faster, more informed decisions in dynamic operational environments. 
-    
-    The Spear AI engineering team faced several challenges in bringing these advanced capabilities to market, including deploying and managing resources at multiple clearance levels, ranging from AWS commercial cloud to GovCloud, air-gapped AWS Top Secret Cloud, and even hardware at sea. They chose Pulumi to help bring their capabilities to market quickly, leveraging its infrastructure as code and policy-enforcement capabilities that work across all these use cases. By adopting Pulumi, the team was able to quickly stand up development environments, deploy services that comply with AWS Secret Cloud restrictions, and achieve Authorization to Operate (ATO) in 3 months – a process that can take up to 24 months to meet stringent defense requirements. 
-    
+    Spear AI delivers cutting-edge AI solutions that accelerate mission-critical decision-making for defense operators. By transforming how tactical sensor data is processed and analyzed, Spear AI enhances situational awareness and operational capacity across edge and cloud environments. The company specializes in automated data labeling and intelligent model deployment for complex sensor systems, enabling the US Navy to maintain tactical superiority through faster, more informed decisions in dynamic operational environments.
+
+    The Spear AI engineering team faced several challenges in bringing these advanced capabilities to market, including deploying and managing resources at multiple clearance levels, ranging from AWS commercial cloud to GovCloud, air-gapped AWS Top Secret Cloud, and even hardware at sea. They chose Pulumi to help bring their capabilities to market quickly, leveraging its infrastructure as code and policy-enforcement capabilities that work across all these use cases. By adopting Pulumi, the team was able to quickly stand up development environments, deploy services that comply with AWS Secret Cloud restrictions, and achieve Authorization to Operate (ATO) in 3 months – a process that can take up to 24 months to meet stringent defense requirements.
+
     By partnering with Pulumi, the Spear AI team is pioneering the future of defense infrastructure: demonstrating how modern platform engineering will transform government technology delivery.
 
 sections:

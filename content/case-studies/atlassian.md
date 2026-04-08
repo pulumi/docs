@@ -16,7 +16,7 @@ quote_block:
       Pulumi, it’s Python. It’s five lines of code. If you want to add a new database, add one line, and you’re good to go."
   quote_attrib: Mike Corsaro, Senior Software Engineer, Atlassian
   headline_stat: 50%
-  headline: Reduction in time spent on maintenance activities.
+  headline: reduction in time spent on maintenance
 
 exec_summary: |
     Atlassian’s Bitbucket DevSpeed team is responsible for improving developer productivity through better workflows

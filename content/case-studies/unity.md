@@ -15,9 +15,7 @@ quote_block:
         An equivalent deployment would take more lines of code while yielding IaC that is less reusable."
     quote_attrib:
     headline_stat: 80%
-    headline: |
-        Reduction in deployment times, from weeks to
-        hours, significantly improving Unity's time to market.
+    headline: reduction in deployment times, from weeks to hours
 
 exec_summary: |
     Unity Technologies' Aura division transformed their infrastructure by leveraging Pulumi's comprehensive Kubernetes support to overcome challenges with their legacy Jenkins service. To enhance performance and developer autonomy, Aura adopted Pulumi's Platform Engineering Capabilities and Automation API. Transitioning from Amazon ECS to Amazon EKS and further replacing Jenkins with GitHub Actions and self-hosted runners, they streamlined infrastructure management, reducing provisioning times and costs. Pulumi's TypeScript support and automation features empowered developers to self-serve cloud infrastructure, improving productivity and ensuring infrastructure integrity. This modernization accelerated development cycles and strengthened Aura's competitive edge in the market.

@@ -13,8 +13,8 @@ quote_block:
   quote: |
       “Pulumi has changed how our team works by giving us deployment superpowers. It’s great to run ‘pulumi up’ and not have to worry about deploying an invalid configuration.”
   quote_attrib: Beyang Liu, CTO, Sourcegraph
-  headline_stat: Eliminates deployment errors
-  headline: that previously meant spending hours debugging
+  headline_stat: Zero
+  headline: deployment errors that previously meant hours of debugging
 
 exec_summary: |
     Sourcegraph selects Pulumi to deploy its latest software on Google Kubernetes Engine --- eliminating deployment headaches and ensuring their team has continuous access to the latest builds.

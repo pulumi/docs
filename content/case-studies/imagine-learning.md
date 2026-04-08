@@ -17,8 +17,8 @@ quote_block:
     quote: |
         "Building new environments takes hours now; it doesn't take weeks or even months."
     quote_attrib: Blake Romano, Senior Software Engineer, Imagine Learning
-    headline_stat: 90% Faster Deployments
-    headline: Compared to legacy platform
+    headline_stat: 90%
+    headline: faster deployments compared to legacy platform
 
 hide_pulumi_footer: true
 
