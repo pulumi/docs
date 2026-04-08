@@ -20,6 +20,7 @@ tiers:
               note: No credit card required
               items: |
                 You get:
+                - 1 user
                 - IaC state management
                 - Unlimited projects, stacks, and environments
                 - Unlimited updates and history
