@@ -16,7 +16,7 @@ quote_block:
         deployment time, up-skilling our team, and accelerating our time to market."
     quote_attrib: Joseph Dolivo, CTO, 4IR Solutions
     headline_stat: $75K
-    headline: Annual savings and deployments in hours instead of days.
+    headline: saved annually, with deployments reduced from days to hours
 
 hide_pulumi_footer: true
 

@@ -19,7 +19,7 @@ quote_block:
         Your biggest chance to not run into troubles and limitations is to use Pulumi. It is the most powerful and versatile tool out there.
   quote_attrib: Alexander Berger, Site Reliability Engineer, Nexxiot
   headline_stat: 100%
-  headline: Infrastructure reliability since adoption
+  headline: infrastructure reliability since adoption
 
 exec_summary: |
    Nexxiot, a Swiss IoT company managing the world's largest network of connected shipping containers and railcars, needed to modernize their infrastructure management to meet growing customer expectations for SaaS reliability. After experiencing limitations with Ansible, Terraform, and AWS CDK, they found Pulumi's programmatic approach transformed their ability to manage cloud infrastructure. By adopting Pulumi, they eliminated custom tooling maintenance - saving the equivalent of two full-time engineers - while achieving zero infrastructure-related outages. With Pulumi's strongly-typed approach and flexible state management, they now manage their multi-region AWS infrastructure efficiently, supporting critical IoT operations.

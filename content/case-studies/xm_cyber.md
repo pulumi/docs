@@ -14,9 +14,7 @@ quote_block:
       "When implementing Pulumi, we noticed also by using the Pulumi Cloud that we can easily see what's going on, we can easily find what resources are up and what are down. We can easily manage our stacks and everything is very, very comfortable."
   quote_attrib: Tech Lead, DevOps Team, XM Cyber
   headline_stat: 100%
-  headline: |
-        Use the entire ecosystem of TypeScript and Python
-  # Note: The transcript doesn't mention specific deployment time metrics
+  headline: full access to the TypeScript and Python ecosystems
 
 exec_summary: |
     XM Cyber, a leading cybersecurity platform specializing in vulnerability management and attack path management, needed to transform their infrastructure management to support complex multi-cloud environments. With a mix of manual and infrastructure-as-code deployments, they faced challenges with resource visibility, reusability, and developer accessibility. After evaluating options, XM Cyber selected Pulumi to manage their diverse cloud environments, including AWS, GCP, and Stack IT. Using Pulumi's Python support, they created reusable infrastructure packages, standardized EKS deployments, and built an internal developer platform. This approach significantly improved infrastructure consistency, reduced resource sprawl, and enabled better collaboration between DevOps and development teams.

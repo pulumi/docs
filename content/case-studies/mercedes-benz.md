@@ -14,8 +14,8 @@ quote_block:
   quote: |
       “What really stands out in Pulumi is the ability to apply program language constructs and best practices to your cloud infrastructure code,”
   quote_attrib: Dinesh Ramamurthy, Engineering Manager, MBRDNA
-  headline_stat: The ideal toolset
-  headline: to tame the complexity of many teams and many clouds
+  headline_stat: Unified toolset
+  headline: taming the complexity of many teams and many clouds
 
 exec_summary: |
     [Mercedes-Benz Research & Development North America](https://mbrdna.com/) (MBRDNA)

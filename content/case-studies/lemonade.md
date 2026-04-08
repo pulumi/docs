@@ -14,8 +14,8 @@ quote_block:
   quote: |
       “Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies for logging, permissions, resource tagging, and security."
   quote_attrib: Igor Shapiro, Principal Engineer, Lemonade
-  headline_stat: Keep costs low
-  headline: maximize reuse of infrastructure code
+  headline_stat: Lower costs
+  headline: by maximizing reuse of infrastructure code
 
 exec_summary: |
     [Lemonade](https://www.lemonade.com/) is a full-stack insurance carrier that uses
