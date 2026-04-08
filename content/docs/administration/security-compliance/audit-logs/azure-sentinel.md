@@ -37,7 +37,7 @@ az sentinel onboarding-state create -g <resource-group> -w <workspace-name> -n d
 
 1. In Pulumi Cloud, navigate to the **Stacks** page and select **Create project**.
 
-1. Select the **Sentinel Azure** template (`sentinel-azure-typescript`). This opens the New Project Wizard.
+1. Select the **Pulumi Audit Log Export to Azure Sentinel** template. This opens the New Project Wizard.
 
 1. Fill in the config values:
    - **orgName**: Your Pulumi Cloud organization name
