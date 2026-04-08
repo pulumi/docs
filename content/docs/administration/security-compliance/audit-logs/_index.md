@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Cloud: Audit Logs"
-meta_desc: Pulumi’s audit logs allow you to account for user activity within your organization. Learn how to view, interpret, and export audit logs here.
+meta_desc: Pulumi's audit logs allow you to account for user activity within your organization. Learn how to view, interpret, and export audit logs here.
 title: "Audit Logs"
 h1: Pulumi Cloud audit logs
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -9,7 +9,7 @@ menu:
         name: Audit Logs
         parent: administration-security-compliance
         weight: 3
-        
+
 aliases:
 - /docs/administration/security-compliance/audit-logs/
 - /docs/intro/console/collaboration/auditing/
@@ -55,32 +55,18 @@ also filter logs by a particular user by selecting their profile picture.
 ## Automated Export
 
 {{% notes "info" %}}
-This feature is only available on the Pulumi Business Critical Edition. If you don't see it in your organization, [contact sales](/contact?form=sales).
+Automated export is only available on the Pulumi Business Critical Edition. If you don't see it in your organization, [contact sales](/contact?form=sales).
 {{% /notes %}}
 
-To configure the export of audit logs to AWS S3 using the console:
+Pulumi Cloud supports continuously exporting audit log events to external destinations.
 
-1. Navigate to the organization's **Settings**.
-1. Navigate to **Audit Logs**.
-1. Use the three dot menu and select **Configure Audit Logs to S3**.
+### Export to AWS S3
 
-<img src="/images/docs/reference/console/ale-menu.png">
+Export audit logs to an Amazon S3 bucket. See the [AWS S3 export guide](/docs/administration/security-compliance/audit-logs/aws-s3/) for setup instructions.
 
-1. Follow the instructions to create an AWS S3 bucket.
-1. Provide bucket name and a filepath where Pulumi audit logs will be exported eg: 'Pulumi-audit-logs'.
-1. Copy the provided policy.
-1. In the AWS console create an IAM role.
-1. Select **Another AWS Account** and check **Require external ID**.
-1. Provide the Account ID and External ID, then attach the policy you created.
-1. Provide the arn of the IAM role.
-1. Test your configuration.
+### Export to Azure Sentinel
 
-<img src="/images/docs/reference/console/test-ale-configuration.png">
-
-1. After a successful test, select **Save and Apply**.
-1. After an hour, verify that logs have successfully started exporting.
-
-<img src="/images/docs/reference/console/ale-success.png">
+Export audit logs to Microsoft Sentinel for SIEM analysis. See the [Azure Sentinel export guide](/docs/administration/security-compliance/audit-logs/azure-sentinel/) for setup instructions.
 
 ## Manual Export
 
