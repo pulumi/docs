@@ -410,7 +410,7 @@ aliases:
     <dd>
         <p>
             Overrides the folder where the Pulumi CLI stores its artifacts: plugins, workspaces, templates, and
-            credentials file. By default, artifacts are stored next to Pulumi binaries in <code>~/.pulumi</code>.
+            credentials file. By default, artifacts are stored in <code>~/.pulumi</code>.
         </p>
         <pre><code class="text-xs">PULUMI_HOME="/path/to/artifacts"</code></pre>
     </dd>
