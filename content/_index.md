@@ -174,17 +174,17 @@ sections:
         size: full
       - slug: supabase
         size: full
-      - slug: nvidia
+      - slug: atlassian
         size: half
-      - slug: moderna
+      - slug: mercedes-benz
         size: half
-      - slug: docker
+      - slug: lemonade
         size: full
       - slug: unity
         size: full
-      - slug: ae-networks
+      - slug: starburst
         size: half
-      - slug: deloitte  
+      - slug: panther-labs
         size: half
     anchor: case-studies
 
