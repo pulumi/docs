@@ -814,6 +814,45 @@ To retrieve all outputs as a JSON object and access individual values from it:
 Stack outputs may include sensitive values such as passwords or private keys. Avoid logging output values directly in workflow run logs, and use [GitHub Encrypted Secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) to store and pass sensitive data rather than stack outputs when appropriate. You can also set `suppress-outputs: true` on the `pulumi/actions` step to prevent output values from appearing in GitHub Actions logs.
 {{% /notes %}}
 
+### Passing stack outputs between jobs
+
+The examples above show how to use stack outputs within steps of the same job. When your workflow separates infrastructure provisioning and application deployment into distinct jobs, you need to propagate the outputs across that boundary.
+
+GitHub Actions provides a `jobs.<job-id>.outputs` map for this purpose. Step outputs can be promoted to job-level outputs and then referenced by any downstream job using `needs.<job-id>.outputs.<output-name>`.
+
+Building on the `pulumi/actions` approach:
+
+```yaml
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    outputs:
+      url: ${{ steps.pulumi.outputs.url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy infrastructure
+        id: pulumi
+        uses: pulumi/actions@v6
+        with:
+          command: up
+          stack-name: org-name/stack-name
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+
+  integration-test:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Run integration tests
+        run: ./run-tests.sh
+        env:
+          SERVICE_URL: ${{ needs.deploy.outputs.url }}
+```
+
+The `outputs` declaration at the job level promotes the step output to something the workflow can route between jobs. Without it, the step output is scoped to its containing job and is not visible elsewhere. The `needs: deploy` declaration in the downstream job ensures it runs after the infrastructure job completes and makes those outputs available for reference.
+
+The same promotion pattern applies when you use the CLI approach. An output written to `$GITHUB_OUTPUT` inside a step becomes a step output, which you can then declare as a job output and consume from downstream jobs in exactly the same way.
+
 ## Configuration
 
 You can configure how Pulumi's GitHub Actions work to have more control about which stacks get updated, and when.
