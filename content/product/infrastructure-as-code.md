@@ -9,7 +9,7 @@ aliases:
   - /product/pulumi-iac
 
 sections:
-  - type: product_hero
+  - type: hero
     title_primary: Infrastructure as code
     title_secondary: in any language.
     description: |
@@ -20,7 +20,7 @@ sections:
     image_min_width: 1024px
     anchor: hero
 
-  - type: product_two_column
+  - type: feature_split
     heading: Write infrastructure code in your favorite language
     description: |
       TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Get autocomplete, type checking, and all your favorite IDE features.

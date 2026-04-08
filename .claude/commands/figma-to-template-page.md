@@ -2,7 +2,7 @@
 description: Convert a Figma design into a templatized product page — maps Figma sections to Hugo template partials, exports images, and wires up frontmatter.
 ---
 
-# figma-to-product-page
+# figma-to-template-page
 
 Convert a Figma design into a templatized Hugo product page.
 
@@ -12,7 +12,7 @@ Convert a Figma design into a templatized Hugo product page.
 
 ## Usage
 
-`/figma-to-product-page <figma-url>`
+`/figma-to-template-page <figma-url>`
 
 The open file in the editor is the target markdown page to convert.
 
@@ -50,7 +50,7 @@ From the metadata, identify:
 
 Use **only** the partials in `layouts/partials/template-partials/` and the layout `layouts/page/product-page.html`.
 
-The orchestrator partial is `layouts/partials/product-page-content.html`. It loops through the `sections` array and resolves each partial by converting the `type` value: underscores become hyphens, then the result is used as `template-{type}.html`. **No changes to the orchestrator are needed** when adding new section types — just create the partial and use the correct `type` name.
+The orchestrator partial is `layouts/partials/template-page-content.html`. It loops through the `sections` array and resolves each partial by converting the `type` value: underscores become hyphens, then the result is used as `template-{type}.html`. **No changes to the orchestrator are needed** when adding new section types — just create the partial and use the correct `type` name.
 
 **Type naming convention:** the `type` value must equal the partial filename stem (without the `template-` prefix and `.html` suffix), with hyphens replaced by underscores.
 
@@ -58,8 +58,8 @@ The orchestrator partial is `layouts/partials/product-page-content.html`. It loo
 
 | Design pattern | `type:` value | Partial |
 |---|---|---|
-| Large hero with CTA buttons | `product_hero` | `template-product-hero` |
-| Two-column: heading left, description + cards right | `product_two_column` | `template-product-two-column` |
+| Large hero with CTA buttons | `hero` | `template-hero` |
+| Two-column: heading left, description + cards right | `feature_split` | `template-feature-split` |
 | Two-column: text left, **code/language-switcher** right | `section_header_with_code` | `template-section-header-with-code` |
 | Two-column: text left, **static image** right | `section_header_with_image` | `template-section-header-with-image` |
 | Centered section intro (optional image below) | `section_header` | `template-section-header` |
@@ -197,7 +197,7 @@ This is most important for logos displayed at a fixed height.
 
 ## Step 6 — SCSS
 
-If a new partial is added, add its styles to `theme/src/scss/_templates.scss`. Also update the comment block at the top of `layouts/partials/product-page-content.html` to document the new `type` value and its fields.
+If a new partial is added, add its styles to `theme/src/scss/_templates.scss`. Also update the comment block at the top of `layouts/partials/template-page-content.html` to document the new `type` value and its fields.
 
 Use neutral class names for inner elements shared across partials (e.g. `section-header-split-inner`, not `section-header-with-code-inner`) so a single SCSS block can cover multiple parent selectors:
 
@@ -210,10 +210,9 @@ Use neutral class names for inner elements shared across partials (e.g. `section
 }
 ```
 
-For CTA link styling, the shared selector covers all template section and product partials:
+For CTA link styling, the shared selector covers all template partials:
 ```scss
-[class*="template-section"],
-[class*="template-product"] {
+[class*="template-"] {
     .cta { @apply text-violet-800 font-semibold font-body no-underline; }
 }
 ```

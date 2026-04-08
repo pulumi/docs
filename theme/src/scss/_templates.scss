@@ -298,7 +298,7 @@
     }
 }
 
-// Shared feature card (icon above title + description) — used by template-product-two-column and template-three-column (icon_layout: above)
+// Shared feature card (icon above title + description) — used by template-feature-split and template-three-column (icon_layout: above)
 .template-feature-card-icon {
     @apply text-black flex items-center justify-center w-12 h-12 text-body-xl rounded-lg mb-6;
     border: 0.5px solid #CECECE;
@@ -343,8 +343,9 @@
     }
 
     .template-testimonial-logo img {
-        height: 28px;
+        height: 48px;
         width: auto;
+        @apply grayscale brightness-0;
     }
 }
 
@@ -488,7 +489,7 @@
 
 
 // Product page widgets
-.template-product-hero {
+.template-hero {
     .product-hero-heading {
         @include product-hero-heading();
         @apply text-heading-s;
@@ -531,8 +532,7 @@
     }
 }
 
-[class*="template-section"],
-[class*="template-product"] {
+[class*="template-"] {
     .cta {
         @apply text-violet-800 font-semibold font-body no-underline;
 
@@ -922,7 +922,7 @@
     }
 }
 
-.template-product-two-column {
+.template-feature-split {
     .product-two-column-heading {
         @include section-header();
     }
@@ -944,4 +944,74 @@
 
 .template-video-embed {
     @apply w-full;
+}
+
+.template-social-carousel {
+    .template-social-carousel-rows {
+        @apply overflow-hidden pb-8;
+    }
+
+    .template-social-carousel-header {
+        @apply text-center py-16 px-6;
+
+        h2 {
+            @include section-header();
+        }
+    }
+
+    .template-social-carousel-row {
+        @apply mb-6;
+    }
+
+    .social-carousel-card {
+        @apply border border-violet-300 rounded-2xl p-4 md:p-8 flex flex-col gap-4;
+        min-height: 200px;
+        width: 100%;
+
+        p {
+            @apply text-gray-900 text-left leading-relaxed m-0 line-clamp-5;
+        }
+
+        .social-carousel-card-author {
+            @apply flex items-center gap-4;
+
+            img {
+                @apply rounded-full w-8 h-8 shrink-0;
+            }
+
+            a {
+                @apply text-gray-700 font-semibold text-sm no-underline;
+                &:hover { @apply underline; }
+            }
+        }
+    }
+}
+
+.template-case-study-cards {
+    h2 {
+        @include section-header();
+    }
+
+    .case-study-cards-description {
+        @include section-description();
+        @apply text-body-xl;
+
+        p { @apply mt-0; }
+    }
+
+    .case-study-card {
+        @apply flex flex-col rounded-2xl border border-violet-300 no-underline text-black;
+
+        &:hover {
+            @apply border-violet-400;
+        }
+
+        &--half {
+            @apply flex-1 items-center justify-center p-8;
+        }
+
+        &--full {
+            @apply p-8 justify-between h-full;
+        }
+    }
 }

@@ -1,13 +1,14 @@
 {{/*
-    Product Page Content Partial
+    Template Page Content Partial
 
-    Renders product page sections in order by looping through the `sections` array in
+    Renders page sections in order by looping through the `sections` array in
     frontmatter. Each item must have a `type` field that maps to a template partial.
 
     Valid type values (each maps to template-partials/template-{type}.html with _ replaced by -):
-      product_hero            — template-product-hero.html
+      hero                    — template-hero.html
       logo_banner             — template-logo-banner.html (fields: logos, text, anchor)
-      product_two_column      — template-product-two-column.html
+      logo_carousel           — template-logo-carousel.html (fields: title, title_link, logos, anchor)
+      feature_split           — template-feature-split.html
       section_header          — template-section-header.html
       section_header_with_image — template-section-header-with-image.html
       section_header_with_code  — template-section-header-with-code.html
@@ -15,13 +16,16 @@
       testimonial            — template-testimonial.html
       three_column            — template-three-column.html
       two_column              — template-two-column.html (fields: columns, anchor, highlight_first_card)
+      card_grid               — template-card-grid.html (fields: large_cards, small_cards, anchor)
       icon_grid               — template-icon-grid.html
       features                — template-features.html
+      social_carousel          — template-social-carousel.html (fields: title, description, cta_text, cta_link, tweets, anchor)
+      case_study_cards        — template-case-study-cards.html (fields: title, description, cta_text, cta_link, cards[{slug, size}], anchor)
       footer_cta              — template-footer-cta.html
       video_embed             — template-video-embed.html (fields: youtube_id, title, poster_image, poster_alt, anchor)
 
     Usage in layouts:
-    {{ partial "product-page-content.html" . }}
+    {{ partial "template-page-content.html" . }}
 */}}
 
 <div class="font-body container mx-auto mb-16 mt-16 px-12 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24 overflow-hidden">
