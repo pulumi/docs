@@ -71,7 +71,7 @@ Pulumi supports the following package managers:
 Dynamic providers may not work correctly with all package managers. If you encounter issues with dynamic providers, try using npm or Yarn 1.
 {{< /notes >}}
 
-Pulumi defaults to using npm. However, if Pulumi detects a `yarn.lock` file in the project root, or the environment variable `PULUMI_PREFER_YARN=true`, Pulumi will use Yarn instead if available. For pnpm, ensure `pnpm-lock.yaml` is present, and for Bun, ensure `bun.lockb` is present.
+Pulumi defaults to using npm. However, if Pulumi detects a `yarn.lock` file in the project root, or the environment variable `PULUMI_PREFER_YARN=true`, Pulumi will use Yarn instead if available. For pnpm, ensure `pnpm-lock.yaml` is present, and for Bun, ensure `bun.lock` (Bun >= 1.2) or `bun.lockb` (older versions) is present.
 
 Pulumi does not support Yarn Plug'n'Play.
 
