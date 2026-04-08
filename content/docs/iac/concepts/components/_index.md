@@ -120,9 +120,9 @@ pulumi package add github.com/my-org/my-component@v1.0.0
 
 This pattern is common for components your organization publishes for internal consumption via a Git repository or the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/).
 
-{{% notes type="info" %}}
+{{< notes type="info" >}}
 **Runtime requirements:** because Pulumi generates the SDK from a live plugin, the plugin must be executable on your machine. If the component is authored in TypeScript or JavaScript, Node.js must be installed. If it is authored in Python, Python must be installed. Components authored in Go or .NET are compiled to a self-contained binary and have no additional runtime requirement.
-{{% /notes %}}
+{{< /notes >}}
 
 ### Pulumi packages with pre-published SDKs
 
