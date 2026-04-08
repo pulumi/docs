@@ -948,7 +948,28 @@
 
 .template-social-carousel {
     .template-social-carousel-rows {
-        @apply overflow-hidden pb-8;
+        @apply overflow-hidden pb-8 relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        &::before {
+            left: 0;
+            background: linear-gradient(to right, white, transparent);
+        }
+
+        &::after {
+            right: 0;
+            background: linear-gradient(to left, white, transparent);
+        }
     }
 
     .template-social-carousel-header {
@@ -999,8 +1020,38 @@
         p { @apply mt-0; }
     }
 
+    .case-study-swiper-wrapper {
+        @apply relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        &::before {
+            left: 0;
+            background: linear-gradient(to right, white, transparent);
+        }
+
+        &::after {
+            right: 0;
+            background: linear-gradient(to left, white, transparent);
+        }
+    }
+
+    pulumi-swiper .swiper-slide {
+        @apply items-stretch;
+        height: 50vh;
+    }
+
     .case-study-card {
-        @apply flex flex-col rounded-2xl border border-violet-300 no-underline text-black;
+        @apply flex flex-col rounded-2xl border border-violet-300 no-underline text-black text-left;
 
         &:hover {
             @apply border-violet-400;
@@ -1011,7 +1062,8 @@
         }
 
         &--full {
-            @apply p-8 justify-between h-full;
+            @apply p-8 justify-between;
+            min-height: 50vh;
         }
     }
 }

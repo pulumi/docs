@@ -174,6 +174,18 @@ sections:
         size: full
       - slug: supabase
         size: full
+      - slug: nvidia
+        size: half
+      - slug: moderna
+        size: half
+      - slug: docker
+        size: full
+      - slug: unity
+        size: full
+      - slug: ae-networks
+        size: half
+      - slug: deloitte  
+        size: half
     anchor: case-studies
 
   - type: social_carousel

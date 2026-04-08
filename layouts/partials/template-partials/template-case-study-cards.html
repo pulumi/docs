@@ -86,39 +86,89 @@
         {{ $groups = $groups | append (dict "type" "pair" "cards" $halfBuffer) }}
     {{ end }}
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch min-h-[50vh]">
-        {{ range $groups }}
-            {{ if eq .type "pair" }}
-            <div class="flex flex-col gap-6 h-full">
-                {{ range .cards }}
-                <a href="{{ .link }}" class="case-study-card case-study-card--half">
-                    {{ if .logo }}
-                    <div class="flex items-center justify-center">
-                        <img src="{{ .logo }}" alt="{{ .name }}" class="max-h-12 w-auto object-contain" />
+    {{/* Mobile / tablet: 1 slide at a time */}}
+    <div class="case-study-swiper-wrapper block lg:hidden min-h-[50vh]">
+        <pulumi-swiper slides="1" loop="true" autoplay="true" autoplay-delay="1000" speed="500" initial-slide="0">
+            {{ range $groups }}
+            <pulumi-swipeable>
+                <div class="px-2 h-full min-h-[50vh]">
+                    {{ if eq .type "pair" }}
+                    <div class="flex flex-col gap-6 h-full">
+                        {{ range .cards }}
+                        <a href="{{ .link }}" class="case-study-card case-study-card--half">
+                            {{ if .logo }}
+                            <div class="flex items-center justify-center">
+                                <img src="{{ .logo }}" alt="{{ .name }}" class="max-h-12 w-auto object-contain" />
+                            </div>
+                            {{ end }}
+                        </a>
+                        {{ end }}
                     </div>
+                    {{ else }}
+                    {{ range .cards }}
+                    <a href="{{ .link }}" class="case-study-card case-study-card--full h-full">
+                        {{ if .logo }}
+                        <div class="flex items-start mb-6">
+                            <img src="{{ .logo }}" alt="{{ .name }}" class="max-h-12 w-auto object-contain" />
+                        </div>
+                        {{ end }}
+                        {{ if .quote }}
+                        <blockquote class="font-semibold text-black border-0 mx-0 px-0 text-xl my-auto">
+                            {{ .quote | markdownify }}
+                        </blockquote>
+                        {{ end }}
+                        {{ if .attrib }}
+                        <p class="text-md font-semibold text-gray-700 m-0 mt-6">{{ .attrib }}</p>
+                        {{ end }}
+                    </a>
                     {{ end }}
-                </a>
-                {{ end }}
-            </div>
-            {{ else }}
-            {{ range .cards }}
-            <a href="{{ .link }}" class="case-study-card case-study-card--full">
-                {{ if .logo }}
-                <div class="flex items-start mb-6">
-                    <img src="{{ .logo }}" alt="{{ .name }}" class="max-h-12 w-auto object-contain" />
+                    {{ end }}
                 </div>
-                {{ end }}
-                {{ if .quote }}
-                <blockquote class="font-semibold text-black border-0 mx-0 px-0 text-xl my-auto">
-                    {{ .quote | markdownify }}
-                </blockquote>
-                {{ end }}
-                {{ if .attrib }}
-                <p class="text-md font-semibold text-gray-700 m-0 mt-6">{{ .attrib }}</p>
-                {{ end }}
-            </a>
+            </pulumi-swipeable>
             {{ end }}
+        </pulumi-swiper>
+    </div>
+
+    {{/* Desktop: 3 slides at a time */}}
+    <div class="case-study-swiper-wrapper hidden lg:block min-h-[50vh]">
+        <pulumi-swiper slides="3" loop="true" autoplay="true" autoplay-delay="5000" speed="500" space-between="24" initial-slide="0">
+            {{ range $groups }}
+            <pulumi-swipeable>
+                <div class="h-full min-h-[50vh]">
+                    {{ if eq .type "pair" }}
+                    <div class="flex flex-col gap-6 h-full">
+                        {{ range .cards }}
+                        <a href="{{ .link }}" class="case-study-card case-study-card--half">
+                            {{ if .logo }}
+                            <div class="flex items-center justify-center">
+                                <img src="{{ .logo }}" alt="{{ .name }}" class="max-h-12 w-auto object-contain" />
+                            </div>
+                            {{ end }}
+                        </a>
+                        {{ end }}
+                    </div>
+                    {{ else }}
+                    {{ range .cards }}
+                    <a href="{{ .link }}" class="case-study-card case-study-card--full h-full">
+                        {{ if .logo }}
+                        <div class="flex items-start mb-6">
+                            <img src="{{ .logo }}" alt="{{ .name }}" class="max-h-12 w-auto object-contain" />
+                        </div>
+                        {{ end }}
+                        {{ if .quote }}
+                        <blockquote class="font-semibold text-black border-0 mx-0 px-0 text-xl my-auto">
+                            {{ .quote | markdownify }}
+                        </blockquote>
+                        {{ end }}
+                        {{ if .attrib }}
+                        <p class="text-md font-semibold text-gray-700 m-0 mt-6">{{ .attrib }}</p>
+                        {{ end }}
+                    </a>
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </pulumi-swipeable>
             {{ end }}
-        {{ end }}
+        </pulumi-swiper>
     </div>
 </section>
