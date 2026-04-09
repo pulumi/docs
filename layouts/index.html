@@ -230,7 +230,7 @@
                             <p class="text-left mt-0 line-clamp-5">{{ $tweet.text }}</p>
                             <div class="flex flex-grow items-end">
                                 <div>
-                                    <img class="rounded-full w-12 h-12" src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" />
+                                    <img class="rounded-full w-12 h-12" src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" width="48" height="48" loading="lazy" decoding="async" />
                                 </div>
                                 <p class="ml-4 text-gray-600">{{ $tweet.username }}</p>
                                 <div class="flex-grow flex justify-end my-4">
@@ -255,7 +255,7 @@
                                 <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">
                                     <!-- If the browser fails to load the Twitter avatar, just hide it. -->
                                     <div class="rounded-full border-none w-12 h-12 mr-4 overflow-hidden">
-                                        <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" onerror="this.style.display='none';" />
+                                        <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" width="48" height="48" loading="lazy" decoding="async" onerror="this.style.display='none';" />
                                     </div>
                                 </a>
                                 <a href="{{ $tweet.link }}"
