@@ -2,7 +2,8 @@
 Template Section Header With Code Partial
 
 Two-column layout for product sections: left = tag line, title, description,
-and optional CTA link; right = language-switcher code images via pulumi-chooser.
+and optional CTA link; right = syntax-highlighted code snippets with language
+dropdown via the template-code-snippets partial.
 
 Parameters:
 - tag_line: Small grey label (e.g. "Infrastructure building blocks")
@@ -10,8 +11,9 @@ Parameters:
 - description: Body paragraph (supports markdown)
 - cta_text: Optional CTA link text
 - cta_link: Optional CTA link URL
-- code_images: List of per-language images for pulumi-chooser.
-    Each item: { language: "typescript", image: "/path/to/img.svg", alt: "Alt text" }
+- code_snippets: List of per-language code snippet objects for the code panel.
+    Each item: { language: "typescript", label: "TypeScript", title: "index.ts", code: "..." }
+- code_title: Optional default filename shown in the code panel title bar.
 - cards: Optional array of mini feature cards rendered below the two-column section.
     Each item: { icon: "fa-code", title: "Title", description: "..." }
 - anchor: Optional anchor for section id
@@ -22,7 +24,8 @@ Parameters:
 {{ $description := .description }}
 {{ $ctaText := .cta_text }}
 {{ $ctaLink := .cta_link }}
-{{ $codeImages := .code_images }}
+{{ $codeSnippets := .code_snippets }}
+{{ $codeTitle := .code_title }}
 {{ $cards := .cards }}
 {{ $anchor := .anchor }}
 
@@ -47,15 +50,9 @@ Parameters:
             </a>
             {{ end }}
         </div>
-        {{ if $codeImages }}
+        {{ if $codeSnippets }}
         <div class="section-header-split-image w-full flex justify-center xl:justify-end">
-            <pulumi-chooser type="language" options="{{ range $i, $item := $codeImages }}{{ if $i }},{{ end }}{{ $item.language }}{{ end }}">
-                {{ range $item := $codeImages }}
-                <pulumi-choosable type="language" class="highlight" value="{{ $item.language }}">
-                    <img class="mx-auto w-full" src="{{ $item.image }}" alt="{{ $item.alt | default "" }}" />
-                </pulumi-choosable>
-                {{ end }}
-            </pulumi-chooser>
+            {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
         </div>
         {{ end }}
     </div>

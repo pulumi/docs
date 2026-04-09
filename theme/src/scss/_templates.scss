@@ -1067,3 +1067,193 @@
         }
     }
 }
+
+// ---------------------------------------------------------------------------
+// Code Snippets — language-dropdown code block component
+// ---------------------------------------------------------------------------
+
+.code-snippets-container {
+    @apply rounded-lg overflow-scroll w-full;
+    border: 1px solid #3d1a6e;
+    background-color: #20054e;
+    height: 350px;
+    position: relative;
+
+    // Hide scrollbars while preserving scroll functionality
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE/Edge
+
+    &::-webkit-scrollbar {
+        display: none; // Chrome/Safari/Opera
+    }
+
+    // Kill the default pre margin/rounding inside container
+    pre {
+        @apply rounded-none m-0;
+
+        // Hide scrollbars on pre too (horizontal overflow)
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .highlight {
+        @apply m-0;
+    }
+
+    // Hide the copy button — not needed in the template code snippet widget
+    // !important needed to override the @media (min-width: 768px) display:flex in _copy-button.scss
+    .copy-button-container {
+        display: none !important;
+    }
+}
+
+.code-snippets-titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #20054e;
+    border-bottom: 1px solid #4c2e7e;
+    padding: 0.5rem 1rem;
+    min-height: 2.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.code-snippets-title {
+    font-family: "Monaspace Neon Var", "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.75rem;
+    color: var(--color-violet-200);
+    letter-spacing: 0.01em;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 0.75rem;
+}
+
+// Dropdown wrapper
+.code-snippets-dropdown {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.code-snippets-dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.375rem;
+    padding: 0.25rem 0.5rem;
+    background: transparent;
+    border: 1px solid var(--color-violet-900);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--color-violet-200);
+    font-family: "Monaspace Neon Var", "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    transition: border-color 0.15s ease, color 0.15s ease;
+    min-width: 9rem;
+
+    &:hover,
+    &:focus {
+        border-color: var(--color-violet-400);
+        color: var(--color-violet-100);
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-violet-400);
+        outline-offset: 2px;
+    }
+}
+
+.code-snippets-dropdown-chevron {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.15s ease;
+
+    .open & {
+        transform: rotate(180deg);
+    }
+}
+
+.code-snippets-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    min-width: 9rem;
+    background-color: #20054e;
+    border: 1px solid var(--color-violet-900);
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    z-index: 50;
+    list-style: none;
+    margin: 0;
+    padding: 0.25rem 0;
+    overflow: hidden;
+
+    &.open {
+        display: block;
+    }
+}
+
+.code-snippets-dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 0.75rem;
+    margin:0;
+    font-family: "Monaspace Neon Var", "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.75rem;
+    color: var(--color-violet-400);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.1s ease, color 0.1s ease;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: transparent;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+        transition: background-color 0.1s ease;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-violet-900);
+        color: var(--color-violet-100);
+        outline: none;
+    }
+
+    &.active {
+        color: var(--color-violet-100);
+
+        &::before {
+            background-color: var(--color-violet-100);
+        }
+    }
+}
+
+// Code panels within the container
+.code-snippets-panels {
+    position: relative;
+}
+
+.code-snippets-panel {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}

@@ -77,25 +77,102 @@ sections:
       Create reusable infrastructure components that can be used in any language. Package common patterns once and use them everywhere. Publish your components to the Pulumi Registry, npm, PyPI, NuGet, or any package manager.
     cta_text: Learn more about Pulumi components
     cta_link: /docs/iac/concepts/components
-    code_images:
+    code_title: "index.ts"
+    code_snippets:
+
       - language: typescript
-        image: /images/product/infrastructure-as-code/typescript.svg
-        alt: Pulumi code example in TypeScript
+        label: TypeScript
+        title: "index.ts"
+        code: |
+          import * as pulumi from "@pulumi/pulumi";
+          import * as aws from "@pulumi/aws";
+          import * as awsx from "@pulumi/awsx";
+
+          const bucket = new aws.s3.Bucket("my-bucket");
+
+          export const bucketName = bucket.id;
       - language: python
-        image: /images/product/infrastructure-as-code/python.svg
-        alt: Pulumi code example in Python
+        label: Python
+        title: "__main__.py"
+        code: |
+          import pulumi
+          from pulumi_aws import s3
+
+          bucket = s3.Bucket("my-bucket")
+
+          pulumi.export("bucketName", bucket.id)
       - language: go
-        image: /images/product/infrastructure-as-code/go.svg
-        alt: Pulumi code example in Go
+        label: Go
+        title: "main.go"
+        code: |
+          package main
+
+          import (
+            "github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+            "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+          )
+
+          func main() {
+            pulumi.Run(func(ctx *pulumi.Context) error {
+              bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
+              if err != nil {
+                return err
+              }
+              ctx.Export("bucketName", bucket.ID())
+              return nil
+            })
+          }
       - language: csharp
-        image: /images/product/infrastructure-as-code/csharp.svg
-        alt: Pulumi code example in C#
+        label: C#
+        title: "MyStack.cs"
+        code: |
+          using Pulumi;
+          using Pulumi.Aws.S3;
+
+          class MyStack : Stack
+          {
+              public MyStack()
+              {
+                  var bucket = new Bucket("my-bucket");
+                  this.BucketName = bucket.Id;
+              }
+
+              [Output]
+              public Output<string> BucketName { get; set; }
+          }
       - language: java
-        image: /images/product/infrastructure-as-code/java.svg
-        alt: Pulumi code example in Java
+        label: Java
+        title: "App.java"
+        code: |
+          package s3ssite;
+
+          import com.pulumi.Context;
+          import com.pulumi.Pulumi;
+          import com.pulumi.core.Output;
+          import com.pulumi.aws.s3.Bucket;
+
+          public class Infra {
+              public static void main(String[] args) {
+                  Pulumi.run(Infra::stack);
+              }
+
+              private static void stack(Context ctx) {
+                  final var myBucket = new Bucket("my-bucket");
+                  ctx.export("endpoint", Output.format("http://%s",
+                      myBucket.bucketDomainName()));
+              }
+          }
       - language: yaml
-        image: /images/product/infrastructure-as-code/yaml.svg
-        alt: Pulumi code example in YAML
+        label: YAML
+        title: "app.yaml"
+        code: |
+          name: my-stack
+          runtime: yaml
+          resources:
+              bucket:
+                  type: aws:s3:Bucket
+          outputs:
+              bucketName: ${bucket.id}
     anchor: packages
 
   - type: three_column
