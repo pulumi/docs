@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Cloud: Audit Logs"
-meta_desc: Pulumi’s audit logs allow you to account for user activity within your organization. Learn how to view, interpret, and export audit logs here.
+meta_desc: Pulumi's audit logs allow you to account for user activity within your organization. Learn how to view, interpret, and export audit logs here.
 title: "Audit Logs"
 h1: Pulumi Cloud audit logs
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -9,7 +9,8 @@ menu:
         name: Audit Logs
         parent: administration-security-compliance
         weight: 3
-        
+        identifier: administration-security-compliance-audit-logs
+
 aliases:
 - /docs/administration/security-compliance/audit-logs/
 - /docs/intro/console/collaboration/auditing/
@@ -38,9 +39,9 @@ The logs capture the UNIX timestamp of the event, the user
 who invoked the action, the event that took place, and the source IP
 of the call the user made.
 
-## View Audit Logs
+## View audit logs
 
-Audit logs are an  Enterprise Edition and Business Critical feature. Only organization admins can view audit logs.
+Audit logs are an Enterprise Edition and Business Critical feature. Only organization admins can view audit logs.
 
 To view audit logs:
 
@@ -50,41 +51,27 @@ To view audit logs:
 This will show the most recent events in descending order. You can
 also filter logs by a particular user by selecting their profile picture.
 
-<img src="/images/docs/guides/self-hosted/auditlogs.png">
+<img src="/images/docs/guides/self-hosted/auditlogs.png" alt="Audit logs view in Pulumi Cloud">
 
-## Automated Export
+## Automated export
 
 {{% notes "info" %}}
-This feature is only available on the Pulumi Business Critical Edition. If you don't see it in your organization, [contact sales](/contact?form=sales).
+Automated export is only available on the Pulumi Business Critical Edition. If you don't see it in your organization, [contact sales](/contact?form=sales).
 {{% /notes %}}
 
-To configure the export of audit logs to AWS S3 using the console:
+Pulumi Cloud supports continuously exporting audit log events to external destinations.
 
-1. Navigate to the organization's **Settings**.
-1. Navigate to **Audit Logs**.
-1. Use the three dot menu and select **Configure Audit Logs to S3**.
+### Export to AWS S3
 
-<img src="/images/docs/reference/console/ale-menu.png">
+Export audit logs to an Amazon S3 bucket. See the [AWS S3 export guide](/docs/administration/security-compliance/audit-logs/aws-s3/) for setup instructions.
 
-1. Follow the instructions to create an AWS S3 bucket.
-1. Provide bucket name and a filepath where Pulumi audit logs will be exported eg: 'Pulumi-audit-logs'.
-1. Copy the provided policy.
-1. In the AWS console create an IAM role.
-1. Select **Another AWS Account** and check **Require external ID**.
-1. Provide the Account ID and External ID, then attach the policy you created.
-1. Provide the arn of the IAM role.
-1. Test your configuration.
+### Export to Microsoft Sentinel
 
-<img src="/images/docs/reference/console/test-ale-configuration.png">
+Export audit logs to Microsoft Sentinel for SIEM analysis. See the [Microsoft Sentinel export guide](/docs/administration/security-compliance/audit-logs/azure-sentinel/) for setup instructions.
 
-1. After a successful test, select **Save and Apply**.
-1. After an hour, verify that logs have successfully started exporting.
+## Manual export
 
-<img src="/images/docs/reference/console/ale-success.png">
-
-## Manual Export
-
-### Export Audit Logs Using the Console
+### Export audit logs using the console
 
 To export audit logs using the console:
 
@@ -92,17 +79,17 @@ To export audit logs using the console:
 1. Navigate to **Audit Logs**.
 1. Select **Download**.
 
-### Exporting Audit Logs Using the API
+### Exporting audit logs using the API
 
 {{% notes "info" %}}
 See [Pulumi Cloud REST API](/docs/reference/service-rest-api#audit-logs) for full details of the API endpoint to export audit log events. This API is rate-limited and only intended for occasional use, see automated export section above if you need frequent export.
 {{% /notes %}}
 
-### Supported Audit Log Formats
+### Supported audit log formats
 
 The Pulumi Cloud REST API supports multiple formats for exporting audit log events.
 
-#### JSON Format
+#### JSON format
 
 The JSON format is composed of the following fields:
 
@@ -114,7 +101,7 @@ The JSON format is composed of the following fields:
 | description | detailed description of the event that occurred |
 | user | details of the user invoking the event (login, name, and avatar URL) |
 
-#### CSV Format
+#### CSV format
 
 The CSV (comma separated values) format is composed of the following fields:
 
@@ -134,7 +121,7 @@ Timestamp, Name, Login, Event, Description, SourceIP, RequireOrgAdmin, RequireSt
 | RequireStackAdmin     | indicates whether the event required stack admin level permissions, the value will either be "true" or "false"          |
 | AuthenticationFailure | indicates whether the event occurred  due to an authentication failure, the value will either be "true" or "false"      |
 
-#### CEF Format
+#### CEF format
 
 CEF (common event format) is an audit and logging event format supported by a wide range of SIEM (security information and event management) systems.
 
@@ -176,7 +163,7 @@ Custom defined keys:
 | requireStackAdmin     | indicates whether the event required stack admin level permissions, the value will either be "true" or "false"          |
 | authenticationFailure | indicates whether the event occurred  due to an authentication failure, the value will either be "true" or "false"      |
 
-## List of Audit Log Events
+## List of audit log events
 
 | Event                                    | Description                                                                                                      |
 |------------------------------------------|------------------------------------------------------------------------------------------------------------------|
