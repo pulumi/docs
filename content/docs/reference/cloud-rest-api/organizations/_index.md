@@ -272,36 +272,6 @@ curl \
   https://api.pulumi.com/api/orgs/{organization}/teams
 ```
 
-### Create Team
-
-Create a new team in an organization.
-
-```plain
-POST /api/orgs/{org}/teams/{teamType}
-```
-
-#### Parameters
-
-| Parameter      | Type   | In   | Description                                                         |
-|----------------|--------|------|---------------------------------------------------------------------|
-| `organization` | string | path | organization name                                                   |
-| `teamType`     | string | path | the type of team to create - valid options are `pulumi` or `github` |
-| `name`         | string | body | team name                                                           |
-| `displayName`  | string | body | **Optional.** team display name                                     |
-| `description`  | string | body | **Optional.** team description                                      |
-
-#### Example
-
-```bash
-curl \
-  -H "Accept: application/vnd.pulumi+8" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  --request POST \
-  --data '{"name":"example-team","displayName":"example display name","description":"example description"}' \
-  https://api.pulumi.com/api/orgs/{org}/teams/pulumi
-```
-
 ### Get Team
 
 Get details about a specific team.
