@@ -272,12 +272,12 @@ curl \
   https://api.pulumi.com/api/orgs/{organization}/teams
 ```
 
-### Create Team
+### Create Pulumi Team
 
-Create a new team in an organization.
+Create a new team in an organization whose membership is managed within Pulumi Cloud.
 
 ```plain
-POST /api/orgs/{org}/teams/{teamType}
+POST /api/orgs/{organization}/teams/pulumi
 ```
 
 #### Parameters
@@ -285,10 +285,9 @@ POST /api/orgs/{org}/teams/{teamType}
 | Parameter      | Type   | In   | Description                                                         |
 |----------------|--------|------|---------------------------------------------------------------------|
 | `organization` | string | path | organization name                                                   |
-| `teamType`     | string | path | the type of team to create - valid options are `pulumi` or `github` |
 | `name`         | string | body | team name                                                           |
-| `displayName`  | string | body | **Optional.** team display name                                     |
-| `description`  | string | body | **Optional.** team description                                      |
+| `displayName`  | string | body | team display name                                                   |
+| `description`  | string | body | team description                                                    |
 
 #### Example
 
@@ -299,7 +298,34 @@ curl \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
   --data '{"name":"example-team","displayName":"example display name","description":"example description"}' \
-  https://api.pulumi.com/api/orgs/{org}/teams/pulumi
+  https://api.pulumi.com/api/orgs/{organization}/teams/pulumi
+```
+
+### Create GitHub Team
+
+Create a new Pulumi team backed by an existing GitHub team. The organization must be backed by GitHub, and the GitHub team must belong to the same GitHub organization. Membership is managed in GitHub while stack permissions are controlled in Pulumi Cloud.
+
+```plain
+POST /api/orgs/{organization}/teams/github
+```
+
+#### Parameters
+
+| Parameter       | Type    | In   | Description                                                                                       |
+|-----------------|---------|------|---------------------------------------------------------------------------------------------------|
+| `organization`  | string  | path | organization name                                                                                 |
+| `githubTeamID`  | integer | body | the GitHub ID of the team to mirror; must be in the same GitHub organization that backs the Pulumi org |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"githubTeamID":1234567}' \
+  https://api.pulumi.com/api/orgs/{organization}/teams/github
 ```
 
 ### Get Team
