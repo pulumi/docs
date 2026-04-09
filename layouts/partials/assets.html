@@ -28,25 +28,14 @@
   page-specific bundle (e.g., "homepage"). Pages without css_bundle get the
   default full bundle. Marketing pages also get the marketing stylesheet.
 
-  The homepage inlines a small critical CSS file so the header and hero can
-  paint without waiting for the full stylesheet download (~367 KB).  The full
-  CSS is still loaded via normal <link> tags — the CI/CD pipeline (beasties)
-  handles converting them to async in production builds.
+  In production, beasties extracts critical CSS from each page's stylesheets
+  and inlines it automatically. Do NOT manually inline CSS here — the full
+  stylesheets use @layer and unlayered inline styles will override them.
 -->
 {{ $cssBundle := .Params.css_bundle | default "bundle" }}
 
 {{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "tutorials" "providers" "collections" "templates" "ai" "authors" "tags" "legal" }}
 {{ $isMarketing := not (in $nonMarketingSections .Section) }}
-{{ $marketingBundle := cond (eq $cssBundle "homepage") "marketing-homepage" "marketing" }}
-
-{{ if eq $cssBundle "homepage" }}
-    {{/* Inline critical CSS for the homepage to unblock first paint.
-         Beasties also extracts critical CSS in production, but its automated
-         extraction misses some above-fold hero styles.  This hand-curated
-         set ensures the header and hero render immediately. */}}
-    {{- $critical := resources.Get "css/critical-homepage.css" | minify -}}
-    <style>{{ $critical.Content | safeCSS }}</style>
-{{ end }}
 
 {{ template "css-link" (dict "source" (printf "css/%s.css" $cssBundle) "name" $cssBundle) }}
 
