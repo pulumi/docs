@@ -34,8 +34,6 @@ POST /api/preview/insights/{organization}/accounts/{accountName}
 
 | Parameter        | Type   | In    | Description                                                                                           |
 |------------------|--------|-------|-------------------------------------------------------------------------------------------------------|
-| `organization`   | string | path  | organization name                                                                                     |
-| `accountName`    | string | path  | The name of the account to create.                                                                    |
 | `provider`       | string | body  | The cloud provider for the account (e.g., `aws`, `azure`, `oci`)                               |
 | `environment`    | string | body  | The environment reference for the account, such as `insights/pulumi-staging@2`                         |
 | `scanSchedule`   | string | body  | The schedule for automated scans. Valid values: `none`, `daily`                    |
@@ -57,7 +55,7 @@ curl \
       "regions": ["us-east-1", "us-east-2", "us-west-2"]
     }
   }' \
-  https://api.pulumi.com/api/preview/insights/{organization}/accounts/{accountName}
+  https://api.pulumi.com/api/preview/insights/pulumi/accounts/FizzBuzz%20AWS%20Staging
 ```
 
 ### Default response
@@ -80,7 +78,6 @@ PATCH /api/preview/insights/{organization}/accounts/{accountName}
 
 | Parameter        | Type   | In    | Description                                                                                           |
 |------------------|--------|-------|-------------------------------------------------------------------------------------------------------|
-| `organization`   | string | path  | organization name                                                                                     |
 | `accountName`    | string | path  | The name of the account to update.                                                                    |
 | `environment`    | string | body  | The environment reference for the account, such as `insights/pulumi-staging@2`                         |
 | `scanSchedule`   | string | body  | The schedule for automated scans. Valid values: `none`, `daily`                    |
@@ -101,7 +98,7 @@ curl \
       "regions": ["us-east-1", "us-west-2"]
     }
   }' \
-  https://api.pulumi.com/api/preview/insights/{organization}/accounts/{accountName}
+  https://api.pulumi.com/api/preview/insights/pulumi/accounts/FizzBuzz%20AWS%20Staging
 ```
 
 ### Default response
@@ -124,7 +121,6 @@ GET /api/preview/insights/{organization}/accounts
 
 | Parameter             | Type   | In    | Description                                                                                          |
 |-----------------------|--------|-------|------------------------------------------------------------------------------------------------------|
-| `organization`        | string | path  | organization name                                                                                    |
 | `count`               | integer| query | **Optional.** the number of results to return (default is 100)                                        |
 | `continuationToken`   | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
 
@@ -135,7 +131,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/preview/insights/{organization}/accounts?count=1000
+  https://api.pulumi.com/api/preview/insights/pulumi/accounts?count=1000
 ```
 
 ### Default response
@@ -193,10 +189,9 @@ GET /api/preview/insights/{organization}/accounts/{accountName}
 
 ### Parameters
 
-| Parameter      | Type   | In    | Description                                            |
-|----------------|--------|-------|--------------------------------------------------------|
-| `organization` | string | path  | organization name                                      |
-| `accountName`  | string | path  | The name of the account to retrieve details for.       |
+| Parameter    | Type   | In    | Description                                            |
+|--------------|--------|-------|--------------------------------------------------------|
+| `accountName`| string | path  | The name of the account to retrieve details for.       |
 
 ### Example
 
@@ -205,7 +200,7 @@ curl \
   -H "Accept: application/vnd.pulumi+6" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/preview/insights/{organization}/accounts/{accountName}
+  https://api.pulumi.com/api/preview/insights/pulumi/accounts/FizzBuzz%20AWS%20Staging
 ```
 
 ### Default response
