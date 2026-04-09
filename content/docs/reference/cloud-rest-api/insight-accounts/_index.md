@@ -27,7 +27,7 @@ The API provides endpoints for the following operations:
 Creates a new account for use with Pulumi Insights.
 
 ```
-POST /api/preview/insights/pulumi/accounts/{accountName}
+POST /api/preview/insights/{organization}/accounts/{accountName}
 ```
 
 ### Parameters
@@ -71,7 +71,7 @@ The operation returns an empty response body. Success is indicated by the `204` 
 Updates an existing Insights account.
 
 ```
-PATCH /api/preview/insights/pulumi/accounts/{accountName}
+PATCH /api/preview/insights/{organization}/accounts/{accountName}
 ```
 
 ### Parameters
@@ -114,7 +114,7 @@ The operation returns an empty response body. Success is indicated by the `204` 
 Lists Insight Accounts available to the authenticated user.
 
 ```
-GET /api/preview/insights/pulumi/accounts
+GET /api/preview/insights/{organization}/accounts
 ```
 
 ### Parameters
@@ -184,7 +184,7 @@ Status: 200 OK
 Gets Insight Account details for the specific account.
 
 ```
-GET /api/preview/insights/pulumi/accounts/{accountName}
+GET /api/preview/insights/{organization}/accounts/{accountName}
 ```
 
 ### Parameters
