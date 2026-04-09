@@ -146,4 +146,8 @@ resources:
 
 {{< /chooser >}}
 
-Note that Pulumi will never attempt to modify the security group in this example. It queries the attributes of the security group from your cloud account and then uses its name as an input for the new EC2 Instance.
+In the example above, Pulumi will never attempt to modify the security group. It queries the attributes of the security group from your cloud account and then uses its name as an input for the new EC2 Instance.
+
+{{% notes type="warning" %}}
+If the resource that you are trying to look up does not exist, Pulumi will throw an exception or error (depending on the language being used) and the program will terminate.
+{{% /notes %}}
