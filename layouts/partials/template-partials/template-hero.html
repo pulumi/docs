@@ -1,28 +1,41 @@
 {{/*
-    Template Product Hero Partial
+    Template Hero Partial
 
-    Centered hero for product pages: heading (single title or two-part with primary in purple/larger
-    and secondary in black/smaller), description, dual CTAs. Optionally includes a code visual below.
+    Hero section supporting two layouts (split and centered) and optionally a
+    code composite visual (live code-snippets block with SVG decorative overlay)
+    or a static image in the right/below slot.
 
-    Parameters:
+    Parameters — hero:
     - title: Hero title (used when title_primary/title_secondary not set)
-    - title_primary: First part of heading, purple and larger (e.g. "Infrastructure as Code")
-    - title_secondary: Second part of heading, black and smaller (e.g. "in any language.")
+    - title_primary: First part of heading, purple/larger
+    - title_secondary: Second part of heading, black/smaller
+    - title_reversed: Optional bool. When true, renders secondary above primary.
     - description: Hero description
     - cta_primary_text: Primary CTA button text (defaults to site.Params.cta.primary.label)
     - cta_primary_link: Primary CTA button link (defaults to site.Params.cta.primary.href)
     - cta_secondary_text: Secondary CTA button text (defaults to site.Params.cta.secondary.label)
     - cta_secondary_link: Secondary CTA button link (defaults to site.Params.cta.secondary.href)
-    - image: Optional hero image/code visual path (displayed below content, slightly left of center)
+    - image: Optional hero image path (used when code_snippets is not set)
     - image_alt: Alt text for image (optional)
     - image_max_width: Optional max width for the image (e.g. "800px", "60rem"). Defaults to full width.
     - image_min_width: Optional min width for the image (e.g. "400px", "30rem").
     - title_reversed: Optional boolean. When true, renders title_secondary (black) above title_primary (purple).
-    - layout: Optional string. "split" renders text left / image right; default is centered.
-    - badge_highlight_text: Optional badge text highlighted in purple (split layout only, should be part of badge_text).
+    - layout: Optional string. "split" renders text left / visual right; default is centered.
+    - badge_highlight_text: Optional badge text highlighted in purple (split layout only).
     - badge_text: Optional pill badge text displayed above the heading (split layout only).
     - badge_link: Optional URL for the badge pill.
     - anchor: Optional anchor for section id
+
+    Parameters — code composite (renders instead of image when code_snippets is set):
+    - code_snippets: Array of {language, label, title, code}
+    - code_title: Optional fallback title shown in the titlebar
+    - code_overlay_image: Path to SVG overlay (rendered on top, pointer-events: none)
+    - code_overlay_alt: Alt text for overlay image (defaults to empty — decorative)
+    - code_aspect_ratio: Aspect ratio of the composite canvas, e.g. "666/513"
+    - code_visual_max_width: Optional max-width for the composite visual, e.g. "860px"
+    - code_offsets: Map of CSS offset values {top, right, bottom, left} applied to the code block.
+                    Setting both top and bottom constrains the block height (required for height: 100%
+                    on the inner code-snippets-container to resolve correctly).
 */}}
 
 {{ $title := .title }}
@@ -44,6 +57,27 @@
 {{ $badgeHighlightText := .badge_highlight_text }}
 {{ $badgeText := .badge_text }}
 {{ $badgeLink := .badge_link }}
+
+{{ $codeSnippets := .code_snippets }}
+{{ $codeTitle := .code_title }}
+{{ $overlayImage := .code_overlay_image }}
+{{ $overlayAlt := .code_overlay_alt | default "" }}
+{{ $codeAspectRatio := .code_aspect_ratio | default "" }}
+{{ $codeVisualMaxWidth := .code_visual_max_width | default "" }}
+{{ $codeOffsets := .code_offsets | default dict }}
+
+{{/* Container style: aspect-ratio locks the canvas to the SVG dimensions */}}
+{{ $visualStyle := "" }}
+{{ if $codeAspectRatio }}{{ $visualStyle = printf "aspect-ratio: %s;" $codeAspectRatio }}{{ end }}
+{{ if $codeVisualMaxWidth }}{{ $visualStyle = printf "%s max-width: %s;" $visualStyle $codeVisualMaxWidth }}{{ end }}
+
+{{/* Block offsets: t/r/b/l applied as inline style from code_offsets frontmatter map */}}
+{{ $blockOffsetParts := slice }}
+{{ with (index $codeOffsets "top") }}{{ $blockOffsetParts = $blockOffsetParts | append (printf "top: %s" .) }}{{ end }}
+{{ with (index $codeOffsets "right") }}{{ $blockOffsetParts = $blockOffsetParts | append (printf "right: %s" .) }}{{ end }}
+{{ with (index $codeOffsets "bottom") }}{{ $blockOffsetParts = $blockOffsetParts | append (printf "bottom: %s" .) }}{{ end }}
+{{ with (index $codeOffsets "left") }}{{ $blockOffsetParts = $blockOffsetParts | append (printf "left: %s" .) }}{{ end }}
+{{ $blockOffsetStyle := delimit $blockOffsetParts "; " }}
 
 {{ if eq $layout "split" }}
 <section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
@@ -92,8 +126,24 @@
             </div>
             {{ end }}
         </div>
-        {{ if $image }}
-        <div class="xl:w-1/2">
+        {{ if $codeSnippets }}
+        <div class="xl:w-1/2 w-full flex justify-end">
+            <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
+                <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
+                    {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
+                </div>
+                {{ if $overlayImage }}
+                <img
+                    src="{{ $overlayImage }}"
+                    alt="{{ $overlayAlt }}"
+                    class="hero-code-overlay"
+                    aria-hidden="true"
+                >
+                {{ end }}
+            </div>
+        </div>
+        {{ else if $image }}
+        <div class="xl:w-1/2 w-full">
             <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto"{{ with $imageStyle }} style="{{ . | safeCSS }}"{{ end }}>
         </div>
         {{ end }}
@@ -139,7 +189,23 @@
             </div>
             {{ end }}
         </div>
-        {{ if $image }}
+        {{ if $codeSnippets }}
+        <div class="product-hero-visual flex justify-center w-full">
+            <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
+                <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
+                    {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
+                </div>
+                {{ if $overlayImage }}
+                <img
+                    src="{{ $overlayImage }}"
+                    alt="{{ $overlayAlt }}"
+                    class="hero-code-overlay"
+                    aria-hidden="true"
+                >
+                {{ end }}
+            </div>
+        </div>
+        {{ else if $image }}
         <div class="product-hero-visual flex justify-center">
             <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto rounded-lg"{{ with $imageStyle }} style="{{ . | safeCSS }}"{{ end }}>
         </div>

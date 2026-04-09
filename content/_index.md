@@ -14,9 +14,108 @@ sections:
     title_secondary: "infrastructure as code \n for humans and agents."
     description: |
       Modern infrastructure as code in languages engineers and agents already know and love.
-    image: /images/home/home-hero-image.svg
-    image_alt: Pulumi infrastructure as code
     anchor: hero
+    code_overlay_image: /images/home/home-hero-code-overlay.svg
+    code_aspect_ratio: "666/513"
+    code_offsets:
+      top: "0%"
+      right: "0%"
+      left: "23%"
+      bottom: "30%"
+    code_title: "index.ts"
+    code_snippets:
+      - language: typescript
+        label: TypeScript
+        title: "index.ts"
+        code: |
+          import * as pulumi from "@pulumi/pulumi";
+          import * as aws from "@pulumi/aws";
+
+          const bucket = new aws.s3.Bucket("my-bucket");
+
+          export const bucketName = bucket.id;
+      - language: python
+        label: Python
+        title: "__main__.py"
+        code: |
+          import pulumi
+          from pulumi_aws import s3
+
+          bucket = s3.Bucket("my-bucket")
+
+          pulumi.export("bucketName", bucket.id)
+      - language: go
+        label: Go
+        title: "main.go"
+        code: |
+          package main
+
+          import (
+            "github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+            "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+          )
+
+          func main() {
+            pulumi.Run(func(ctx *pulumi.Context) error {
+              bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
+              if err != nil {
+                return err
+              }
+              ctx.Export("bucketName", bucket.ID())
+              return nil
+            })
+          }
+      - language: csharp
+        label: C#
+        title: "MyStack.cs"
+        code: |
+          using Pulumi;
+          using Pulumi.Aws.S3;
+
+          class MyStack : Stack
+          {
+              public MyStack()
+              {
+                  var bucket = new Bucket("my-bucket");
+                  this.BucketName = bucket.Id;
+              }
+
+              [Output]
+              public Output<string> BucketName { get; set; }
+          }
+      - language: java
+        label: Java
+        title: "App.java"
+        code: |
+          package s3site;
+
+          import com.pulumi.Context;
+          import com.pulumi.Pulumi;
+          import com.pulumi.core.Output;
+          import com.pulumi.aws.s3.Bucket;
+
+          public class Infra {
+              public static void main(String[] args) {
+                  Pulumi.run(Infra::stack);
+              }
+
+              private static void stack(Context ctx) {
+                  final var myBucket = new Bucket("my-bucket");
+                  ctx.export("bucketName",
+                      myBucket.bucketDomainName());
+              }
+          }
+      - language: yaml
+        label: YAML
+        title: "Pulumi.yaml"
+        code: |
+          name: my-stack
+          runtime: yaml
+          resources:
+              bucket:
+                  type: aws:s3:Bucket
+          outputs:
+              bucketName: ${bucket.id}
 
   - type: logo_carousel
     title: Trusted by over 4,000 innovative companies

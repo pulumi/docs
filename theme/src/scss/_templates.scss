@@ -1069,6 +1069,47 @@
 }
 
 // ---------------------------------------------------------------------------
+// Hero With Code — composite: code block + SVG decorative overlay
+// ---------------------------------------------------------------------------
+
+// Container that holds both the code block and the SVG overlay.
+// The code block drives the height; the overlay is layered on top.
+.hero-code-visual {
+    position: relative;
+    width: 100%;
+}
+
+// The code-snippets block is absolutely positioned within the aspect-ratio canvas
+// so both it and the SVG overlay scale together as one composite unit.
+// All positioning is set via inline style from the code_offsets frontmatter map.
+.hero-code-block {
+    position: absolute;
+    z-index: 0;
+}
+
+// The SVG overlay is positioned to cover the entire visual canvas.
+// pointer-events: none ensures clicks, scroll, and dropdown interactions
+// pass through to the code block underneath. The dropdown menu itself has
+// z-index: 50 so it still renders above the overlay when open.
+.hero-code-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    pointer-events: none;
+    z-index: 1;
+}
+
+// When the code block is absolutely positioned with both top and bottom offsets,
+// the snippets panel fills the computed block height. Requires both top and bottom
+// to be set in code_offsets frontmatter for height to resolve correctly.
+.hero-code-block .code-snippets-container {
+    height: 100%;
+}
+
+// ---------------------------------------------------------------------------
 // Code Snippets — language-dropdown code block component
 // ---------------------------------------------------------------------------
 
