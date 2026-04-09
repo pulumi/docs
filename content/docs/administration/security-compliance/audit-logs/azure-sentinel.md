@@ -35,9 +35,7 @@ az sentinel onboarding-state create -g <resource-group> -w <workspace-name> -n d
 
 ## Setup option 1: Pulumi Cloud console (recommended)
 
-1. In Pulumi Cloud, navigate to the **Stacks** page and select **Create project**.
-
-1. Select the **Pulumi Audit Log Export to Azure Sentinel** template. This opens the New Project Wizard.
+1. Open the [New Project Wizard with the template pre-selected](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-sentinel-audit-logs).
 
 1. Fill in the config values:
    - **orgName**: Your Pulumi Cloud organization name
@@ -46,9 +44,9 @@ az sentinel onboarding-state create -g <resource-group> -w <workspace-name> -n d
    - **resourceGroupName**: Azure resource group containing the workspace
    - **azure-native:location**: Azure region (defaults to `eastus`)
 
-1. Choose **Pulumi Deployments (No-code)** as the deployment method.
+1. Choose **"Pulumi Deployments (No-code)"** as the deployment method.
 
-1. Select an ESC environment with your Azure credentials. The environment needs the standard `ARM_*` environment variables (`ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, `ARM_TENANT_ID`, `ARM_SUBSCRIPTION_ID`). If you already use Azure with Pulumi Deployments, your existing ESC environment will work.
+1. Select an ESC environment with your Azure credentials. The environment needs standard `ARM_*` environment variables (`ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, `ARM_TENANT_ID`, `ARM_SUBSCRIPTION_ID`). If you already use Azure with Pulumi Deployments, your existing ESC environment will work.
 
    If you don't have one, create an ESC environment via **Environments** > **Create new environment** with this YAML:
 
@@ -83,11 +81,11 @@ az sentinel onboarding-state create -g <resource-group> -w <workspace-name> -n d
 
 1. Ensure you have the Azure CLI installed and authenticated (`az login`).
 
-1. Create a new project from the template:
+1. Create a new project from the example:
 
    ```bash
    mkdir sentinel-connector && cd sentinel-connector
-   pulumi new https://github.com/pulumi/sentinel-audit-log-connector
+   pulumi new https://github.com/pulumi/examples/tree/master/azure-ts-sentinel-audit-logs
    ```
 
 1. When prompted, enter the config values:
@@ -142,8 +140,8 @@ The template deploys three analytic rules:
 | `accessToken` | Pulumi access token (stored as encrypted secret) | Yes | -- |
 | `workspaceName` | Log Analytics workspace name | Yes | -- |
 | `resourceGroupName` | Azure resource group containing the workspace | Yes | -- |
+| `enableAnalyticRules` | Deploy pre-built Sentinel analytic rules | No | `true` |
 | `azure-native:location` | Azure region | No | `eastus` |
-| `apiUrl` | Pulumi API URL (for self-hosted instances only) | No | `https://api.pulumi.com` |
 
 ## Sample KQL queries
 
