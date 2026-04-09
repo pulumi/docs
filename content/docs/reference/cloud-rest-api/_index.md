@@ -39,7 +39,6 @@ The Pulumi Cloud REST API is organized into the following resource categories:
 - [Deployment Runners](/docs/reference/cloud-rest-api/deployment-runners/) - Manage deployment runners
 - [Deployments](/docs/reference/cloud-rest-api/deployments/) - Configure and manage Pulumi Deployments
 - [Environments](/docs/reference/cloud-rest-api/environments/) - Manage deployment environments
-- [Insights Accounts](/docs/reference/cloud-rest-api/insight-accounts/) - Work with Insights accounts
 - [Neo](/docs/reference/cloud-rest-api/neo/) - Interact with Pulumi's Agentic AI assistant, Neo
 - [OAuth Token Exchange](/docs/reference/cloud-rest-api/oauth-token-exchange/) - Exchange OAuth tokens
 - [OIDC Issuers](/docs/reference/cloud-rest-api/oidc-issuers/) - Configure OIDC authentication
