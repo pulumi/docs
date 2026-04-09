@@ -23,20 +23,6 @@
     {{- end -}}
 {{ end }}
 
-{{/* Async CSS loading: renders as media="print" and swaps to "all" once loaded.
-     Includes a <noscript> fallback for clients without JS. */}}
-{{ define "css-link-async" }}
-    {{- $css := resources.Get .source | fingerprint -}}
-    {{- $_ := $css.Permalink -}}
-    {{- if hugo.IsServer -}}
-        <link rel="stylesheet" href="{{ $css.RelPermalink }}" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="{{ $css.RelPermalink }}"></noscript>
-    {{- else -}}
-        <link rel="stylesheet" href="/css/{{ .name }}.{{ getenv "CSS_BUNDLE_ID" }}.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="/css/{{ .name }}.{{ getenv "CSS_BUNDLE_ID" }}.css"></noscript>
-    {{- end -}}
-{{ end }}
-
 <!--
   CSS bundle selection. Pages can set css_bundle in frontmatter to use a
   page-specific bundle (e.g., "homepage"). Pages without css_bundle get the
@@ -44,7 +30,8 @@
 
   The homepage inlines a small critical CSS file so the header and hero can
   paint without waiting for the full stylesheet download (~367 KB).  The full
-  CSS is loaded asynchronously via the media="print" swap trick.
+  CSS is still loaded via normal <link> tags — the CI/CD pipeline (beasties)
+  handles converting them to async in production builds.
 -->
 {{ $cssBundle := .Params.css_bundle | default "bundle" }}
 
@@ -53,19 +40,17 @@
 {{ $marketingBundle := cond (eq $cssBundle "homepage") "marketing-homepage" "marketing" }}
 
 {{ if eq $cssBundle "homepage" }}
-    {{/* Inline critical CSS for the homepage to unblock first paint. */}}
+    {{/* Inline critical CSS for the homepage to unblock first paint.
+         Beasties also extracts critical CSS in production, but its automated
+         extraction misses some above-fold hero styles.  This hand-curated
+         set ensures the header and hero render immediately. */}}
     {{- $critical := resources.Get "css/critical-homepage.css" | minify -}}
     <style>{{ $critical.Content | safeCSS }}</style>
+{{ end }}
 
-    {{/* Async-load full stylesheets — they apply once downloaded. */}}
-    {{ template "css-link-async" (dict "source" (printf "css/%s.css" $cssBundle) "name" $cssBundle) }}
-    {{ if $isMarketing }}
-        {{ template "css-link-async" (dict "source" (printf "css/%s.css" $marketingBundle) "name" $marketingBundle) }}
-    {{ end }}
-{{ else }}
-    {{/* Non-homepage pages: load CSS synchronously as before. */}}
-    {{ template "css-link" (dict "source" (printf "css/%s.css" $cssBundle) "name" $cssBundle) }}
-    {{ if $isMarketing }}
-        {{ template "css-link" (dict "source" (printf "css/%s.css" $marketingBundle) "name" $marketingBundle) }}
-    {{ end }}
+{{ template "css-link" (dict "source" (printf "css/%s.css" $cssBundle) "name" $cssBundle) }}
+
+{{ if $isMarketing }}
+    {{ $marketingBundle := cond (eq $cssBundle "homepage") "marketing-homepage" "marketing" }}
+    {{ template "css-link" (dict "source" (printf "css/%s.css" $marketingBundle) "name" $marketingBundle) }}
 {{ end }}
