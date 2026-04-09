@@ -322,9 +322,10 @@ With merge toggle OFF, omit the `gh pr merge` step from Approve and Make changes
 6. Commit with author trailer:
 
    ```
-   Apply review fixes
+   <commit message>
 
-   Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>
+
+   Co-Authored-By: <agent name> <agent email>
    ```
 
 7. Push
