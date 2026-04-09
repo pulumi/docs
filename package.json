@@ -23,7 +23,7 @@
     "@octokit/rest": "^21.1.1",
     "@slack/web-api": "^7.15.0",
     "algoliasearch": "^5.50.0",
-    "axios": "^1.14.0",
+    "axios": "^1.15.0",
     "axios-retry": "^4.5.0",
     "broken-link-checker": "^0.7.8",
     "cheerio": "^1.2.0",
