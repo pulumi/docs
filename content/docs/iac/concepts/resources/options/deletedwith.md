@@ -89,7 +89,7 @@ var dep = new Deployment("res2", new DeploymentArgs(),
 ```yaml
 resources:
   ns:
-    type: kubernetes:apps/v1:Deployment
+    type: kubernetes:core/v1:Namespace
     name: res1
   res2:
     type: kubernetes:apps/v1:Deployment
