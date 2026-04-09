@@ -86,7 +86,7 @@ pulumi import [arg]... [flags]
   -j, --json                                  Serialize the import diffs, operations, and overall output as JSON
   -m, --message string                        Optional message to associate with the update operation
   -o, --out string                            The path to the file that will contain the generated resource declarations
-  -p, --parallel int32                        Allow P resource operations to run in parallel at once (1 for no parallelism). (default 16)
+  -p, --parallel int32                        Allow P resource operations to run in parallel at once (1 for no parallelism). (default 4 * number of logical CPUs)
       --parent string                         The name and URN of the parent resource in the format name=urn, where name is the variable name of the parent resource
       --preview-only                          Only show a preview of the import, but don't perform the import itself
       --properties strings                    The property names to use for the import in the format name1,name2

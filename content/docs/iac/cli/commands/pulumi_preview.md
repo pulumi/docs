@@ -46,7 +46,7 @@ pulumi preview [url] [flags]
   -m, --message string                                Optional message to associate with the preview operation
       --neo                                           Enable Pulumi Neo's assistance for improved CLI experience and insights (can also be set with PULUMI_NEO environment variable)
       --neo-task-on-failure                           Start a Neo task to help debug errors that occur during the operation
-  -p, --parallel int32                                Allow P resource operations to run in parallel at once (1 for no parallelism). (default 16)
+  -p, --parallel int32                                Allow P resource operations to run in parallel at once (1 for no parallelism). (default 4 * number of logical CPUs)
       --policy-pack strings                           Run one or more policy packs as part of this update
       --policy-pack-config strings                    Path to JSON file containing the config for the policy pack of the corresponding "--policy-pack" flag
   -r, --refresh string[="true"]                       Refresh the state of the stack's resources before this update
