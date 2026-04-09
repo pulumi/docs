@@ -34,7 +34,7 @@ func main() {
 			Sli: applicationsignals.ServiceLevelObjectiveSliArgs{
 				SliMetric: applicationsignals.ServiceLevelObjectiveSliMetricArgs{
 					MetricType:    applicationsignals.ServiceLevelObjectiveSliMetricMetricTypeAvailability,
-					OperationName: pulumi.StringRef("GET /api"),
+					OperationName: pulumi.StringPtr("GET /api"),
 					KeyAttributes: pulumi.StringMap{
 						"Type":        pulumi.String("Service"),
 						"Name":        pulumi.String("my-service"),
@@ -42,15 +42,15 @@ func main() {
 					},
 				},
 				ComparisonOperator: applicationsignals.ServiceLevelObjectiveSliComparisonOperatorGreaterThanOrEqualTo,
-				MetricThreshold:    pulumi.Float64Ref(99),
+				MetricThreshold:    pulumi.Float64(99),
 			},
 			Goal: &applicationsignals.ServiceLevelObjectiveGoalArgs{
-				AttainmentGoal:   pulumi.Float64Ref(99),
-				WarningThreshold: pulumi.Float64Ref(99.5),
+				AttainmentGoal:   pulumi.Float64Ptr(99),
+				WarningThreshold: pulumi.Float64Ptr(99.5),
 				Interval: applicationsignals.ServiceLevelObjectiveIntervalArgs{
 					RollingInterval: &applicationsignals.ServiceLevelObjectiveRollingIntervalArgs{
 						DurationUnit: applicationsignals.ServiceLevelObjectiveDurationUnitDay,
-						Duration:     pulumi.IntRef(30),
+						Duration:     pulumi.Int(30),
 					},
 				},
 			},
@@ -62,6 +62,7 @@ func main() {
 		ctx.Export("vpcId", vpc.VpcId)
 		ctx.Export("bucketName", bucket.Bucket)
 		ctx.Export("sloArn", slo.Arn)
+
 		return nil
 	})
 }
