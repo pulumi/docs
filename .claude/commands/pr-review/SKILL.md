@@ -197,12 +197,16 @@ Render in this order, top to bottom:
 
 6. **🔬 Fact-check triage** — tiered view from the fact-check phase (Needs your eyes → Low-confidence verified → collapsed Verified). Skipped if the gate returned skip — show the gate reason instead (one line).
 
-7. **Trivial fixes preview** (only if any candidates) — single collapsed line:
+7. **Trivial fixes preview** (only if any candidates) — itemized so the user can see exactly what will change before Step 8 confirmation:
 
    ```
-   12 trivial fixes available: 4 trailing-ws · 3 EOF newlines · 5 heading-case
-   (will be applied if you pick "Make changes and approve")
+   Trivial fix candidates (3):
+     [1] content/docs/foo.md:12   — heading case: "Deploy To AWS" → "Deploy to AWS"
+     [2] content/docs/foo.md (EOF) — add EOF newline
+     [3] content/docs/bar.md:42   — strip trailing whitespace
    ```
+
+   Each candidate gets a numeric index so the user can veto specific fixes in Step 8. Categories the agent considers: trailing whitespace removal, missing EOF newlines, heading case (only when unambiguous — proper nouns like Pulumi/TypeScript/Azure are preserved), missing aliases on moved files, missing language specifier on fenced code blocks.
 
    Suppressed entirely when AI-suspect, replaced with:
 
@@ -256,14 +260,25 @@ Display the preview showing:
 | OFF | All human-authored PRs (Pulumi convention: authors merge their own PRs) |
 | OFF | Any PR with `AI_SUSPECT=true`, regardless of contributor type |
 
-**Confirmation options** (use AskUserQuestion):
+**Confirmation options** (use AskUserQuestion). The menu is context-adaptive — slot 2 changes depending on whether trivial fixes are pending:
+
+When trivial fixes are pending:
 
 1. **Yes, proceed** — Execute as previewed
-2. **Toggle merge** — Flip the auto-merge toggle and re-preview
-3. **Edit comment** — Modify comment text
+2. **Veto trivial fix(es)** — Drop one or more trivial fixes from the candidate list
+3. **Toggle merge** — Flip the auto-merge toggle
 4. **Cancel** — Exit without changes
 
-Handle each response per `pr-review:references:action-preview-templates`. The toggle and the comment can both be flipped/edited as many times as the user wants without re-running the workflow.
+When no trivial fixes are pending:
+
+1. **Yes, proceed** — Execute as previewed
+2. **Edit comment** — Modify comment text
+3. **Toggle merge** — Flip the auto-merge toggle
+4. **Cancel** — Exit without changes
+
+Edit comment is always reachable via the AskUserQuestion `Other` field even when not in the explicit slot.
+
+Handle each response per `pr-review:references:action-preview-templates`. The trivial-fix list, the toggle, and the comment can all be edited as many times as the user wants without re-running the workflow.
 
 Continue to Step 9 with confirmed action and toggle state.
 
@@ -285,12 +300,7 @@ With merge toggle OFF, omit the `gh pr merge` step from Approve and Make changes
 
 1. Save current branch name
 2. `gh pr checkout {{arg}}`
-3. Run `auto-trivials.sh` on changed files (passes `AI_SUSPECT` so it bails out automatically when set):
-
-   ```bash
-   bash .claude/commands/pr-review/scripts/auto-trivials.sh "$AI_SUSPECT" <changed files>
-   ```
-
+3. Apply trivial fixes that **survived the user's veto in Step 8**, using Edit. The agent applies these directly rather than via a script because several categories (notably heading case) require language understanding to avoid corrupting proper nouns like Pulumi, TypeScript, Azure, Kubernetes, etc. — a regex can't tell "Working With Pulumi" (preserve "Pulumi") from "Deploy To AWS" (lowercase "to"). When in doubt, skip the fix and surface it to the user. Suppressed entirely when `AI_SUSPECT=true`.
 4. Apply contradicted-claim suggested fixes via Edit
 5. Show diff to user
 6. Commit with author trailer:

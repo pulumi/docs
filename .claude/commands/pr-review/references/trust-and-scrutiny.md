@@ -121,7 +121,7 @@ When `CONTENT_SCRUTINY=heightened` (i.e., `AI_SUSPECT=true`), the skill behaves 
 | Step 6 confidence gauge | Prepends `🤖 AI-suspect (<reasons>)` and caps the gauge at MEDIUM. HIGH is impossible when AI-suspect is set. |
 | Step 6 trivial-fix preview | Suppressed entirely, replaced with: `Trivial-fix auto-apply disabled (AI-suspect — manual review required)` |
 | Step 8 merge toggle | Defaults **OFF** regardless of contributor type. |
-| Auto-trivials script | Refuses to run; exits with `SKIP: AI_SUSPECT=true`. |
+| Make-changes-and-approve trivial fixes | Agent skips all trivial-fix application during the make-changes workflow. The AI may have introduced subtly wrong "fixes" that look like typos but aren't (e.g., renaming a real method to a hallucinated one). |
 
 ## Why heightened scrutiny doesn't depend on contributor type
 

@@ -77,16 +77,18 @@ The merge toggle is shown only when the chosen action is `Approve` or `Make chan
 
 **Note**: Not available for bot PRs (excluded from bot menus).
 
-**Flow**: Pull the candidate fixes from two sources, show the preview, confirm, then execute:
+**Flow**: Pull the candidate fixes from two sources, show the preview, confirm (with veto opportunity), then execute:
 
 ```
 ## Preview: Make Changes and Approve
 
 Action: Make changes and approve
-[x] Auto-merge after approval (squash)   ← OFF by default for human PRs
+[ ] Auto-merge after approval (squash)   ← OFF by default for human PRs
 
-Trivial fixes (will be applied):
-  12 trivial fixes: 4 trailing-ws · 3 EOF newlines · 5 heading-case  [show diff]
+Trivial fix candidates (3) — will be applied unless vetoed:
+  [1] content/docs/foo.md:12   — heading case: "Deploy To AWS" → "Deploy to AWS"
+  [2] content/docs/foo.md (EOF) — add EOF newline
+  [3] content/docs/bar.md:42   — strip trailing whitespace
 
 Contradicted-claim fixes (will be applied):
   content/docs/cli/logout.md:42 — "removes credentials for the current backend"
@@ -98,7 +100,7 @@ Comment body that will be posted:
 I will:
 1. Save current branch
 2. Check out PR: gh pr checkout {{arg}}
-3. Run auto-trivials.sh on changed files
+3. Apply each non-vetoed trivial fix via Edit
 4. Apply contradicted-claim suggested fixes via Edit
 5. Show diff
 6. Commit: "Apply review fixes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
@@ -108,28 +110,61 @@ I will:
 10. Return to original branch
 ```
 
-Auto-trivials are skipped entirely when `AI_SUSPECT=true` (see `pr-review:references:trust-and-scrutiny`).
+### Trivial fix candidates
+
+Trivial fixes are **agent-applied**, not script-applied. There is no `auto-trivials.sh` because the categories that matter (notably heading case) require language understanding to avoid corrupting proper nouns like Pulumi, TypeScript, Azure, and Kubernetes — a regex can't distinguish "Working With Pulumi" (preserve "Pulumi") from "Deploy To AWS" (lowercase "to"). The agent applies fixes one-by-one with judgment, and when a fix is genuinely ambiguous it should be skipped and surfaced rather than applied.
+
+Categories the agent considers:
+
+- Trailing whitespace removal
+- Missing EOF newlines
+- Sentence-case headings (only when unambiguous — preserve proper nouns)
+- Missing aliases on moved files
+- Missing language specifier on fenced code blocks (only when unambiguous from context)
+
+Each candidate is itemized in the preview with a numeric index so the user can veto specific fixes.
+
+**Suppressed entirely when `AI_SUSPECT=true`** (see `pr-review:references:trust-and-scrutiny`) — the AI may have introduced subtly wrong "fixes" that look like typos but aren't.
 
 See SKILL.md Step 9 for complete workflow details.
 
 ## Confirmation Question
 
-Use AskUserQuestion with these options:
+Use AskUserQuestion with these options. The menu is **context-adaptive** — slot 2 changes based on whether trivial fixes are pending.
 
 **Question**: "Proceed with this action?"
 
-**Options**:
+**When trivial fixes are pending** (Make changes and approve with at least one trivial fix candidate):
+
 1. **Yes, proceed** - Execute the action as previewed
-2. **Toggle merge** - Flip the auto-merge toggle (no re-preview)
-3. **Edit comment** - Modify the comment text before executing
+2. **Veto trivial fix(es)** - Drop one or more trivial fixes from the candidate list
+3. **Toggle merge** - Flip the auto-merge toggle (no re-preview)
 4. **Cancel** - Exit without making any changes
+
+**When no trivial fixes are pending**:
+
+1. **Yes, proceed** - Execute the action as previewed
+2. **Edit comment** - Modify the comment text before executing
+3. **Toggle merge** - Flip the auto-merge toggle (no re-preview)
+4. **Cancel** - Exit without making any changes
+
+Edit comment is always reachable through the AskUserQuestion `Other` field even when not in the explicit slot.
 
 ## Response Handling
 
 ### Yes, proceed
 
 - Continue to execution step
-- Use exact content from preview, including current toggle state
+- Use exact content from preview, including current toggle state and the surviving trivial-fix candidate list
+
+### Veto trivial fix(es)
+
+1. Use AskUserQuestion with an open-ended `Other` prompt: "Which trivial fixes should we skip? (e.g. `1`, `1,3`, `all heading-case`, `all`)"
+2. Parse the response:
+   - Numeric indices (`1`, `1,3`, `2 4`) → drop those candidates by index
+   - `all` → drop every trivial fix candidate
+   - `all <category>` (`all heading-case`, `all trailing-ws`, `all eof`, `all alias`, `all lang-spec`) → drop every candidate in that category
+3. Re-display **only the updated trivial fix candidates section** (not the full preview), then re-ask the confirmation question. The user can veto more fixes, toggle merge, edit the comment, or proceed.
 
 ### Toggle merge
 
@@ -140,9 +175,8 @@ Use AskUserQuestion with these options:
 ### Edit comment
 
 1. Use AskUserQuestion to ask user for revised comment text (open-ended)
-2. Show updated preview with new text and current toggle state
-3. Ask for confirmation again (repeat confirmation question)
-4. Loop until user chooses "Yes, proceed" or "Cancel"
+2. Print a single-line confirmation: `Comment updated`
+3. Re-ask the confirmation question — do not re-display the full preview.
 
 ### Cancel
 

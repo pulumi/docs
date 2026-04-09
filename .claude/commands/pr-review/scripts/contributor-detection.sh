@@ -99,8 +99,10 @@ FILES_LIST=$(echo "$PR_DATA" | jq -r '.files[].path')
 # Detect infra paths first (they win over size-based tiers)
 INFRA_HIT=$(echo "$FILES_LIST" | grep -E '^(scripts/|\.github/workflows/|Makefile$|infrastructure/|package\.json$|webpack\.config\.js$)' || true)
 
-# Detect new files
-NEW_FILE_COUNT=$(echo "$PR_DATA" | jq -r '[.files[] | select(.additions > 0 and .deletions == 0)] | length')
+# Detect new files via the explicit changeType field (gh's "ADDED" means a brand-new file).
+# Counting "additions > 0 and deletions == 0" would also catch append-only edits to existing
+# files and inflate the risk tier.
+NEW_FILE_COUNT=$(echo "$PR_DATA" | jq -r '[.files[] | select(.changeType == "ADDED")] | length')
 
 # Heuristic for "only prose, no code blocks touched": cheap proxy is "no static/programs/ files
 # and the diff doesn't contain ``` markers". We approximate by checking file paths only here;

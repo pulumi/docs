@@ -91,38 +91,52 @@ if [ ${#REASONS[@]} -eq 0 ]; then
   # Extract added prose lines from .md files only.
   # Filter out:
   #   - diff/file headers
-  #   - frontmatter blocks (between --- markers)
+  #   - frontmatter blocks (between --- markers, only at file start)
   #   - fenced code block contents
+  #
+  # The frontmatter tracker is gated on `seen_content`: it only counts the first
+  # pair of `---` markers, before any other content has been seen for the file.
+  # Otherwise a Markdown horizontal rule (`---`) mid-file would flip the state
+  # and cause us to drop real prose lines.
   ADDED_PROSE=$(echo "$DIFF" | awk '
     /^diff --git/ {
       in_md = ($0 ~ /\.md b\/.*\.md$/)
       in_fence = 0
       in_frontmatter = 0
+      seen_content = 0
       next
     }
     !in_md { next }
     /^@@/ { next }
-    /^\+\+\+/ || /^---/ { next }
+    /^\+\+\+/ || (/^---/ && !/^---[[:space:]]*$/) { next }
 
     # Track fenced code blocks (only on added/context lines)
     /^[+ ]```/ {
       in_fence = !in_fence
+      seen_content = 1
       next
     }
     in_fence { next }
 
-    # Track frontmatter (only triggered at start of file, but we approximate)
+    # Track frontmatter — only the very first --- pair, before any content
     /^[+ ]---[[:space:]]*$/ {
-      in_frontmatter = !in_frontmatter
-      next
+      if (!seen_content) {
+        in_frontmatter = !in_frontmatter
+        if (!in_frontmatter) seen_content = 1
+        next
+      }
     }
     in_frontmatter { next }
 
     # Added prose line
     /^\+/ {
       sub(/^\+/, "")
+      seen_content = 1
       print
     }
+
+    # Mark non-blank context lines as content too
+    /^ [^[:space:]]/ { seen_content = 1 }
   ')
 
   if [ -n "$ADDED_PROSE" ]; then
