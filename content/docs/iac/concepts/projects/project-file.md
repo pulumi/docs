@@ -185,7 +185,7 @@ Use this option to link to local plugin binaries. This option is intended for us
 | Name | Required | Description |
 | - | - | - |
 | `name` | required | Name of the plugin. |
-| `path` | optional | Path to the plugin folder. |
+| `path` | required | Path to the plugin folder. |
 | `version` | optional | Version of the plugin, if not set, will match any version the engine requests. |
 
 ### `requiredPulumiVersion` option
