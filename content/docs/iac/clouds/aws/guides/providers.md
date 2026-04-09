@@ -149,9 +149,9 @@ Reach for the AWS Cloud Control provider when:
   CloudFormation equivalents, with matching property names and structure.
 - A resource type you need is only available through the Cloud Control API.
 
-Because the Cloud Control API itself is still maturing, some resource types have limited operation support. Check the
-[supported types list](https://github.com/pulumi/pulumi-aws-native/blob/master/provider/cmd/pulumi-resource-aws-native/supported-types.txt)
-before designing your stack around a specific resource.
+Because the Cloud Control API itself is still maturing, some resource types have limited operation support. See the
+[AWS Cloud Control provider API docs](/registry/packages/aws-native/api-docs/) for the full list of supported
+resources before designing your stack around a specific resource.
 
 ### When to use component libraries
 
