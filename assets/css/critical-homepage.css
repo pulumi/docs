@@ -7,6 +7,12 @@
  *
  * The full homepage.css and marketing-homepage.css are loaded asynchronously
  * immediately after this block.
+ *
+ * MAINTENANCE: This file duplicates values from several sources. When updating:
+ *   - Theme variables / colors → tailwind.config.ts
+ *   - Font-face declarations  → theme/src/scss/_fonts.scss
+ *   - Utility classes         → Tailwind CSS (regenerated on build)
+ *   - Component classes       → layouts/partials/header.html, layouts/index.html
  */
 
 /* ── Theme variables (subset used above-fold) ─────────────────────────── */
@@ -91,14 +97,14 @@ body {
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/gilroy-bold.woff2") format("woff2");
+  src: url("/fonts/gilroy-bold.woff2") format("woff2"), url("/fonts/gilroy-bold.woff") format("woff");
 }
 @font-face {
   font-family: "Inter";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/inter-regular.woff2") format("woff2");
+  src: url("/fonts/inter-regular.woff2") format("woff2"), url("/fonts/inter-regular.woff") format("woff");
 }
 
 /* ── Top nav bar ──────────────────────────────────────────────────────── */
@@ -169,6 +175,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* !important mirrors homepage.css:2559-2561 — needed to override Tailwind base h1 reset */
 .home-page-hero .home-page-hero-text h1 {
   margin-inline: 0;
   line-height: 3.5rem !important;
