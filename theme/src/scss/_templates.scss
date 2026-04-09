@@ -11,6 +11,9 @@
     @apply font-semibold text-black font-body text-heading-s;
     line-height: 55px;
     letter-spacing: -2px;
+    strong {
+        @apply text-violet-800 font-semibold;
+    }
 }
 
 @mixin section-header-small {
@@ -538,6 +541,14 @@
 
         &:hover {
             @apply underline;
+        }
+
+        &--button {
+            @apply font-normal inline-flex items-center gap-1 px-5 py-3 rounded-lg bg-violet-800 text-white no-underline;
+
+            &:hover {
+                @apply bg-violet-700 no-underline;
+            }
         }
     }
 }

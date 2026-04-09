@@ -9,6 +9,7 @@ Parameters:
 - description: Right column description (supports markdown)
 - cta_text: Optional CTA link text (e.g. "Explore Infrastructure as Code")
 - cta_link: Optional CTA link URL
+- cta_as_button: Optional boolean. When true, renders the CTA as a pill button. Default: false.
 - cards: Array of mini feature cards
 Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, ...]
 - anchor: Optional anchor for section id
@@ -24,17 +25,18 @@ Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, .
 {{ $cards := .cards }}
 {{ $anchor := .anchor }}
 {{ $compact := .compact | default false }}
+{{ $ctaAsButton := .cta_as_button | default false }}
 
 <section class="template-feature-split" {{ if $anchor }} id="{{ $anchor }}" {{ end }}>
     {{ if $compact }}
     {{ if $heading }}
-    <h2 class="product-two-column-heading mb-8">{{ $heading }}</h2>
+    <h2 class="product-two-column-heading mb-8">{{ $heading | markdownify }}</h2>
     {{ end }}
     {{ else }}
     <div class="flex flex-col xl:flex-row gap-8 md:gap-10 xl:gap-20 items-start">
         <div class="xl:w-2/5 flex-shrink-0">
             {{ if $heading }}
-            <h2 class="product-two-column-heading">{{ $heading }}</h2>
+            <h2 class="product-two-column-heading">{{ $heading | markdownify }}</h2>
             {{ end }}
         </div>
         <div class="flex-1">
@@ -44,7 +46,7 @@ Example: [{"icon": "fa-code", "title": "Use real code", "description": "..."}, .
             </div>
             {{ end }}
             {{ if $ctaText }}
-            <a href="{{ $ctaLink }}" class="cta inline-flex items-center gap-1 mt-6">
+            <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}cta cta--button{{ else }}cta{{ end }} inline-flex items-center gap-1 mt-6">
                 <span>{{ $ctaText }}</span>
                 <span>→</span>
             </a>

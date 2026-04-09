@@ -189,11 +189,11 @@ sections:
     anchor: logos
 
   - type: feature_split
-    heading: The complete platform for infrastructure teams
+    heading: The **complete platform** for infrastructure teams
     description: |
       **From open source IaC to AI automation, Pulumi provides everything platform teams need to ship infrastructure faster.**
 
-      One platform that integrates infrastructure as code, secrets management, policy governance, and AI—no more stitching together disconnected tools.
+      One platform that integrates **infrastructure as code, secrets management, policy governance,** and **AI** — no more stitching together disconnected tools.
     cta_text: Explore the platform
     cta_link: /product/
     cards:
