@@ -23,13 +23,13 @@ The connector uses Sentinel's managed [Codeless Connector Framework](https://lea
 
 The connector deploys as a Pulumi program using a template. There are two ways to set it up:
 
-**From the Pulumi Cloud console**: Navigate to the **Stacks** page, select **Create project**, and choose the **Pulumi Audit Log Export to Azure Sentinel** template. Fill in your config values, select Pulumi Deployments as the deployment method, and select **Deploy**.
+**From the Pulumi Cloud console**: Open the [New Project Wizard with the template pre-selected](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-sentinel-audit-logs). Fill in your config values, choose Pulumi Deployments as the deployment method, and select **Deploy**.
 
 **From the CLI**:
 
 ```bash
 mkdir sentinel-connector && cd sentinel-connector
-pulumi new https://github.com/pulumi/sentinel-audit-log-connector
+pulumi new https://github.com/pulumi/examples/tree/master/azure-ts-sentinel-audit-logs
 pulumi up
 ```
 
@@ -50,5 +50,5 @@ PulumiAuditLogs_CL
 Microsoft Sentinel export is available today for organizations on the [Business Critical](/pricing/) edition.
 
 - [Read the setup guide](/docs/administration/security-compliance/audit-logs/azure-sentinel/) to get started
-- [View the connector source](https://github.com/pulumi/sentinel-audit-log-connector) on GitHub
+- [View the connector source](https://github.com/pulumi/examples/tree/master/azure-ts-sentinel-audit-logs) on GitHub
 - [Join the Community Slack](https://slack.pulumi.com/) to share feedback
