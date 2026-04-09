@@ -91,11 +91,11 @@ const dotnetLowercaseFunction = new aws.cloudfront.Function("dotnet-lowercase-ur
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
 
-// Reference to the Astro stack for data warehouse access (only if enabled)
-let astroAwsRoleArn: pulumi.Output<any> | undefined;
+// Reference to the OSS Airflow on EKS stack for data warehouse access (only if enabled)
+let airflowIrsaRoleArn: pulumi.Output<any> | undefined;
 if (config.enableDataWarehouseAccess) {
-    const astroStack = new pulumi.StackReference('pulumi/dwh-workflows-astro/production');
-    astroAwsRoleArn = astroStack.getOutput('astroAwsRoleArn');
+    const airflowStack = new pulumi.StackReference('pulumi/dwh-workflows-orchestrate-airflow/production');
+    airflowIrsaRoleArn = airflowStack.getOutput('irsaRoleArn');
 }
 
 // WAF WebACL for rate limiting. WebACLs for CloudFront must be in us-east-1.
@@ -363,9 +363,9 @@ const logsBucketOwnershipControls = new aws.s3.BucketOwnershipControls("logs-buc
 // https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-infrastructure-V2-S3.html
 const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
     bucket: websiteLogsBucket.id,
-    policy: config.enableDataWarehouseAccess && astroAwsRoleArn
-        ? pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity(), astroAwsRoleArn])
-            .apply(([bucketArn, caller, astroRole]) => {
+    policy: config.enableDataWarehouseAccess && airflowIrsaRoleArn
+        ? pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity(), airflowIrsaRoleArn])
+            .apply(([bucketArn, caller, airflowRole]) => {
                 const statements: any[] = [
                     {
                         Sid: "AWSLogDeliveryWriteObjects",
@@ -402,12 +402,12 @@ const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
                             }
                         }
                     },
-                    // Data warehouse (Astro) read access
+                    // Data warehouse (OSS Airflow on EKS via IRSA) read access
                     {
                         Sid: "DataWarehouseReadObjects",
                         Effect: "Allow",
                         Principal: {
-                            AWS: astroRole
+                            AWS: airflowRole
                         },
                         Action: ["s3:GetObject", "s3:GetObjectVersion"],
                         Resource: `${bucketArn}/*`
@@ -416,7 +416,7 @@ const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
                         Sid: "DataWarehouseListBucket",
                         Effect: "Allow",
                         Principal: {
-                            AWS: astroRole
+                            AWS: airflowRole
                         },
                         Action: ["s3:ListBucket", "s3:GetBucketLocation"],
                         Resource: bucketArn
