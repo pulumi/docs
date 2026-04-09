@@ -24,6 +24,10 @@ aliases:
 
 Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/deployments/deployments/). Once installed and configured, it will show any potential infrastructure changes on pull requests and commit checks. You can also configure workflows to update your stacks whenever a commit is pushed to a configured branch.
 
+{{% notes type="info" %}}
+The GitHub app requires [Pulumi Cloud](https://app.pulumi.com) as your stack's backend. It does not work with [self-managed backends](/docs/concepts/state/#using-a-self-managed-backend).
+{{% /notes %}}
+
 ## Installation and configuration
 
 {{% notes type="info" %}}
@@ -55,6 +59,10 @@ The Pulumi GitHub app automatically adds comments to pull requests with the resu
 
 When you run `pulumi preview` or `pulumi up`, the Pulumi CLI examines the closest `.git` directory to extract commit metadata (such as the commit SHA, branch name, and repository information). This metadata is included with the update and sent to Pulumi Cloud, which uses it to identify the associated pull request and post comments.
 
+{{% notes type="info" %}}
+When pull request comments are disabled in your Pulumi Cloud organization settings, the GitHub app does not post comments on pull requests. However, it still reports check run statuses via [GitHub's Checks API](#checks), so preview results remain accessible in the pull request's **Checks** tab.
+{{% /notes %}}
+
 ### Checks
 
 Beyond pull request comments, the GitHub app also integrates with GitHub's [Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/). This provides even more detail about any resource changes, including the full update log.
@@ -71,9 +79,20 @@ Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a confi
 
 ## CI integration
 
-The Pulumi GitHub app posts results back to GitHub regardless of which CI/CD system triggers the run — GitHub Actions, CircleCI, Jenkins, or any other. See the [Continuous Delivery](/docs/using-pulumi/continuous-delivery/) guide for integration instructions.
+The GitHub app only requires that your code is hosted on GitHub and that you use pull requests to manage changes. It does not require GitHub Actions — any CI/CD system works, including GitHub Actions, CircleCI, Jenkins, Pulumi Deployments, or any other system.
 
-Once installed in your organization, any `pulumi preview` or `pulumi up` run in CI will have its results reported back to GitHub.
+Once installed in your organization, any `pulumi preview` or `pulumi up` run in CI will have its results reported back to GitHub. See the [Continuous Delivery](/docs/using-pulumi/continuous-delivery/) guide for integration instructions.
+
+## Uninstallation
+
+The GitHub app can be uninstalled using either of the following methods:
+
+- **From Pulumi Cloud**: Navigate to **Management** > **Version control**, select your GitHub organization, and select **Uninstall**. This automatically removes the app from GitHub as well.
+- **From GitHub**: Follow [GitHub's instructions for reviewing and modifying installed GitHub Apps](https://docs.github.com/en/apps/using-github-apps/reviewing-and-modifying-installed-github-apps#navigating-to-the-github-app-you-want-to-review-or-modify).
+
+{{% notes type="warning" %}}
+Uninstalling the GitHub app will delete any push-to-deploy and review stack configurations you have set up.
+{{% /notes %}}
 
 ## Troubleshooting
 
@@ -82,7 +101,7 @@ Once installed in your organization, any `pulumi preview` or `pulumi up` run in 
 If you previously installed the GitHub app but Pulumi Cloud does not show it as connected to your desired organization, try the following:
 
 1. Ensure you're a GitHub admin of the GitHub organization where you're installing the app.
-1. Uninstall the app (via github.com) and re-install it following the steps above. **Note:** Uninstalling the app will delete any push-to-deploy configurations you may have already set up.
+1. Uninstall the app and re-install it following the steps above. See [Uninstallation](#uninstallation) for both methods.
 
 ### PR comments not appearing
 
