@@ -1,4 +1,5 @@
 ---
+name: pr-review
 description: Review and approve/merge pull requests as a maintainer (full workflow with approve, request changes, merge, close actions)
 ---
 
@@ -12,11 +13,11 @@ Performs comprehensive review with style, code, and **factual claim verification
 
 ## Usage
 
-`/pr-review <PR_NUMBER> [--ai|--no-ai]`
+`/pr-review [<PR_NUMBER>] [--ai|--no-ai]`
 
 Reviews any pull request and presents action choices for approval, changes, or closure.
 
-**Required**: PR number
+**PR number**: Optional. If omitted, the workflow infers the PR from the current branch via `gh pr view --json number` — useful when you're already checked out on the branch under review. If no PR is open for the current branch, the workflow errors out and asks for an explicit number.
 
 **Optional flags**:
 
@@ -43,10 +44,18 @@ Reviews any pull request and presents action choices for approval, changes, or c
 
 ### Step 1: Detect contributor, trust axes, risk tier, and AI-suspect
 
-Run the contributor detection script with any manual override flag:
+**PR number resolution**: If `{{arg}}` is empty, infer the PR from the current branch first:
 
 ```bash
-bash .claude/commands/pr-review/scripts/contributor-detection.sh {{arg}} [--ai|--no-ai]
+gh pr view --json number --jq '.number'
+```
+
+If this fails (no PR open for the current branch), abort the workflow with a clear error asking for an explicit PR number. Otherwise, use the inferred number as `PR_NUMBER` and substitute it for every `{{arg}}` reference in subsequent steps.
+
+Run the contributor detection script with any manual override flag. The script itself also supports PR inference, but doing the inference at the workflow level lets downstream steps (that have hardcoded `{{arg}}` references) see the resolved number:
+
+```bash
+bash .claude/commands/pr-review/scripts/contributor-detection.sh $PR_NUMBER [--ai|--no-ai]
 ```
 
 The script outputs:
@@ -260,16 +269,23 @@ Display the preview showing:
 | OFF | All human-authored PRs (Pulumi convention: authors merge their own PRs) |
 | OFF | Any PR with `AI_SUSPECT=true`, regardless of contributor type |
 
-**Confirmation options** (use AskUserQuestion). The menu is context-adaptive — slot 2 changes depending on whether trivial fixes are pending:
+**Confirmation options** (use AskUserQuestion). The menu is context-adaptive — slot 2 changes depending on what's in the pending action:
 
-When trivial fixes are pending:
+When trivial fixes are pending (Make changes and approve):
 
 1. **Yes, proceed** — Execute as previewed
 2. **Veto trivial fix(es)** — Drop one or more trivial fixes from the candidate list
 3. **Toggle merge** — Flip the auto-merge toggle
 4. **Cancel** — Exit without changes
 
-When no trivial fixes are pending:
+When approving as-is with suppressable findings (Approve action with at least one PR-introduced finding in the comment body):
+
+1. **Yes, proceed** — Execute as previewed
+2. **Suppress finding(s)** — Drop one or more findings from the approval comment so the author isn't pestered about every nit
+3. **Toggle merge** — Flip the auto-merge toggle
+4. **Cancel** — Exit without changes
+
+When nothing is suppressable:
 
 1. **Yes, proceed** — Execute as previewed
 2. **Edit comment** — Modify comment text
@@ -278,7 +294,7 @@ When no trivial fixes are pending:
 
 Edit comment is always reachable via the AskUserQuestion `Other` field even when not in the explicit slot.
 
-Handle each response per `pr-review:references:action-preview-templates`. The trivial-fix list, the toggle, and the comment can all be edited as many times as the user wants without re-running the workflow.
+Handle each response per `pr-review:references:action-preview-templates`. The trivial-fix list, the suppressed-findings list, the toggle, and the comment can all be edited as many times as the user wants without re-running the workflow. Locked findings (high-confidence contradictions without a suggested fix) cannot be suppressed.
 
 Continue to Step 9 with confirmed action and toggle state.
 

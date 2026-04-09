@@ -128,9 +128,54 @@ Each candidate is itemized in the preview with a numeric index so the user can v
 
 See SKILL.md Step 9 for complete workflow details.
 
+## Approve-as-is Preview (with finding suppression)
+
+**When used**: The user picks **Approve** (or the adaptive menu's "Approve as-is" variant) while findings exist that weren't addressed. Pulumi convention is to let authors merge their own PRs, but not every finding needs to become a comment — sometimes the author knows what they're doing, and listing every nit is just being pedantic.
+
+The preview itemizes every finding that *would* land in the approval comment, and the confirmation menu's slot 2 becomes **Suppress finding(s)** so the user can drop specific items before the comment is posted. Suppressed findings are silently dropped — the author never sees them.
+
+```
+## Preview: Approve
+
+Action: Approve (as-is)
+[ ] Auto-merge after approval (squash)   ← OFF by default for human PRs
+
+Findings that will be mentioned in the approval comment (3):
+  [1] content/docs/foo.md:12   — style: heading could lead with primary search term
+  [2] content/docs/foo.md:45   — fact-check: unverifiable claim "supported in v3.230+"
+  [3] content/blog/bar.md:88   — style: heavy em-dash usage
+
+Comment body that will be posted:
+  LGTM! A few minor things I noticed but didn't flag for changes:
+
+  - `foo.md:12` — heading could lead with the primary search term
+  - `foo.md:45` — couldn't independently verify "supported in v3.230+"
+  - `bar.md:88` — heavy em-dash usage
+
+  Approving as-is.
+```
+
+### Suppression rules
+
+- **Only PR-introduced findings** are candidates. Pre-existing findings are never mentioned in an approval comment — they're the previous author's work and nagging about them is rude.
+- **Contradicted claims with high confidence and no suggested fix** cannot be suppressed. If the review found something that's definitely wrong with no obvious fix, the author needs to hear about it. The menu shows these as `[locked]` and they stay in the comment regardless of suppression requests.
+- **All other findings are suppressable**: style nits, low-confidence contradictions, unverifiable claims, SEO suggestions, formatting observations.
+
+When every suppressable finding is dropped, the comment collapses to a clean "LGTM!" with no laundry list. If only locked findings remain, the comment shows just those.
+
+### Rebuilding the comment after suppression
+
+The comment body is **regenerated** from the surviving findings every time the user suppresses more. This is different from the merge-toggle flow (where the preview is not re-displayed) because the comment body itself is changing and the user needs to see what's actually going to be posted.
+
+After each suppression pass:
+
+1. Rebuild the comment body from the surviving findings using the relevant `pr-review:references:message-templates` template
+2. Re-display **only the updated findings list + updated comment body** (not the full preview header or the action/toggle lines)
+3. Re-ask the confirmation question
+
 ## Confirmation Question
 
-Use AskUserQuestion with these options. The menu is **context-adaptive** — slot 2 changes based on whether trivial fixes are pending.
+Use AskUserQuestion with these options. The menu is **context-adaptive** — slot 2 changes based on what's pending.
 
 **Question**: "Proceed with this action?"
 
@@ -141,14 +186,21 @@ Use AskUserQuestion with these options. The menu is **context-adaptive** — slo
 3. **Toggle merge** - Flip the auto-merge toggle (no re-preview)
 4. **Cancel** - Exit without making any changes
 
-**When no trivial fixes are pending**:
+**When approving as-is with suppressable findings** (Approve action and at least one PR-introduced finding exists in the comment body):
+
+1. **Yes, proceed** - Execute the action as previewed
+2. **Suppress finding(s)** - Drop one or more findings from the approval comment
+3. **Toggle merge** - Flip the auto-merge toggle (no re-preview)
+4. **Cancel** - Exit without making any changes
+
+**When nothing is suppressable**:
 
 1. **Yes, proceed** - Execute the action as previewed
 2. **Edit comment** - Modify the comment text before executing
 3. **Toggle merge** - Flip the auto-merge toggle (no re-preview)
 4. **Cancel** - Exit without making any changes
 
-Edit comment is always reachable through the AskUserQuestion `Other` field even when not in the explicit slot.
+Edit comment is always reachable through the AskUserQuestion `Other` field even when not in the explicit slot. The trivial-fix veto and finding-suppression slots are mutually exclusive (the former only appears for Make changes and approve; the latter only for Approve as-is).
 
 ## Response Handling
 
@@ -165,6 +217,18 @@ Edit comment is always reachable through the AskUserQuestion `Other` field even 
    - `all` → drop every trivial fix candidate
    - `all <category>` (`all heading-case`, `all trailing-ws`, `all eof`, `all alias`, `all lang-spec`) → drop every candidate in that category
 3. Re-display **only the updated trivial fix candidates section** (not the full preview), then re-ask the confirmation question. The user can veto more fixes, toggle merge, edit the comment, or proceed.
+
+### Suppress finding(s)
+
+1. Use AskUserQuestion with an open-ended `Other` prompt: "Which findings should we leave out of the approval comment? (e.g. `1`, `1,3`, `all style`, `all fact-check`, `all`)"
+2. Parse the response:
+   - Numeric indices (`1`, `1,3`, `2 4`) → drop those findings from the comment
+   - `all` → drop every suppressable finding (locked findings stay; see "Suppression rules" above)
+   - `all <category>` (`all style`, `all fact-check`, `all seo`, `all format`, ...) → drop every suppressable finding in that category
+3. **Rebuild the comment body** from the surviving findings using the relevant `pr-review:references:message-templates` template. If no findings survive, collapse to a clean "LGTM!" template with no laundry list.
+4. Re-display **only the updated findings list + updated comment body** (not the full preview header or the action/toggle lines), then re-ask the confirmation question.
+
+Locked findings — high-confidence contradicted claims with no suggested fix — cannot be suppressed. If the user's suppression request would drop a locked finding, print: `Finding [N] is locked and cannot be suppressed: <reason>` and leave it in the comment. The rest of the request is still applied.
 
 ### Toggle merge
 

@@ -16,14 +16,22 @@
 
 set -e
 
+# If no PR number was provided, infer it from the current branch via `gh pr view`.
+# This lets the user run `/pr-review` with no args when they're checked out on a
+# branch that already has an open PR.
 if [ -z "$1" ]; then
-  echo "Error: PR number required"
-  echo "Usage: $0 <PR_NUMBER> [--ai|--no-ai]"
-  exit 1
+  INFERRED_PR=$(gh pr view --json number --jq '.number' 2>/dev/null || echo "")
+  if [ -z "$INFERRED_PR" ]; then
+    echo "Error: PR number required, and no PR found for the current branch."
+    echo "Usage: $0 [<PR_NUMBER>] [--ai|--no-ai]"
+    exit 1
+  fi
+  PR_NUMBER="$INFERRED_PR"
+  MANUAL_AI_OVERRIDE="${2:-}"
+else
+  PR_NUMBER="$1"
+  MANUAL_AI_OVERRIDE="${2:-}"
 fi
-
-PR_NUMBER="$1"
-MANUAL_AI_OVERRIDE="${2:-}"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 

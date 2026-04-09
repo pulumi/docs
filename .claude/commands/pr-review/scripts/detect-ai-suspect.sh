@@ -16,14 +16,20 @@
 
 set -e
 
+# If no PR number was provided, infer it from the current branch.
 if [ -z "$1" ]; then
-  echo "Error: PR number required" >&2
-  echo "Usage: $0 <PR_NUMBER> [--ai|--no-ai]" >&2
-  exit 1
+  INFERRED_PR=$(gh pr view --json number --jq '.number' 2>/dev/null || echo "")
+  if [ -z "$INFERRED_PR" ]; then
+    echo "Error: PR number required, and no PR found for the current branch." >&2
+    echo "Usage: $0 [<PR_NUMBER>] [--ai|--no-ai]" >&2
+    exit 1
+  fi
+  PR_NUMBER="$INFERRED_PR"
+  MANUAL_OVERRIDE="${2:-}"
+else
+  PR_NUMBER="$1"
+  MANUAL_OVERRIDE="${2:-}"
 fi
-
-PR_NUMBER="$1"
-MANUAL_OVERRIDE="${2:-}"
 
 ALLOWLIST_FILE="$HOME/.claude/pr-review/ai-suspect-authors.txt"
 REASONS=()
