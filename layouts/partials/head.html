@@ -14,13 +14,14 @@
         {{- end }}
     </script>
 
-    <!-- Preconnect to third-party origins used on every page. -->
+    <!-- Preconnect to Segment (used on every page). -->
     <link rel="preconnect" href="https://cdn.segment.com" crossorigin />
     {{- if eq hugo.Environment "production" }}
+    <!-- Preconnect to Common Room (production marketing pages only). -->
     <link rel="preconnect" href="https://cdn.cr-relay.com" crossorigin />
     {{- end }}
 
-    <!-- Preload critical fonts (skip monospace on marketing pages — not above-fold). -->
+    <!-- Preload critical fonts (skip monospace on the homepage — not used above the fold). -->
     {{ if not .IsHome }}
     <link rel="preload" href="/fonts/roboto-mono-regular.woff2" as="font" type="font/woff2" crossorigin />
     {{ end }}
