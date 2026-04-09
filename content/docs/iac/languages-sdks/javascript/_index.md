@@ -86,7 +86,7 @@ Pulumi fully supports both TypeScript and JavaScript. You can use either languag
 While Pulumi supports JavaScript and any other language that compiles to JavaScript and runs on Node.js, our documentation examples are maintained exclusively in TypeScript. For the most consistent experience and up-to-date examples, we recommend using TypeScript.
 {{< /notes >}}
 
-Pulumi ships with a bundled version of TypeScript 3.8.3 for backward compatibility. However, Pulumi templates typically include a more recent TypeScript version in their `package.json`, which will take precedence over the bundled version. You can use any TypeScript version from 3.8 onwards, including the latest TypeScript 5 releases.
+Pulumi ships with a bundled version of TypeScript 3.8.3 for backward compatibility. However, Pulumi templates typically include a more recent TypeScript version in their `package.json`, which will take precedence over the bundled version. You can use any TypeScript version from 3.8 onwards, including the latest TypeScript 6 releases.
 
 The Pulumi SDK is available to Node.js developers as an npm package. To learn more, refer to the [Pulumi SDK reference guide](/docs/reference/pkg/nodejs/pulumi/pulumi).
 
@@ -217,7 +217,7 @@ For information on configuring TypeScript, see the [TypeScript documentation for
 
 Pulumi ships with a bundled version of TypeScript 3.8.3 for backwards compatibility. However, when Pulumi runs a TypeScript program, it will first attempt to load the compiler from the local `node_modules` directory, and then fall back to the bundled version. This means that if your `package.json` includes a TypeScript dependency (as Pulumi templates typically do), that version will be used instead.
 
-Pulumi supports all TypeScript versions from 3.8 onwards, including the latest TypeScript 5 releases.
+Pulumi supports all TypeScript versions from 3.8 onwards, including the latest TypeScript 6 releases.
 
 ```json
 {
