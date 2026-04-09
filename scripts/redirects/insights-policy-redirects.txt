@@ -17,5 +17,3 @@ docs/using-pulumi/crossguard/awsguard/index.html|https://github.com/pulumi/pulum
 docs/iac/packages-and-automation/crossguard/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
 docs/iac/using-pulumi/crossguard/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
 docs/insights/policy/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
-docs/reference/cloud-rest-api/insight-accounts/index.html|/docs/reference/cloud-rest-api/
-docs/pulumi-cloud/reference/insight-accounts/index.html|/docs/reference/cloud-rest-api/
