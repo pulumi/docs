@@ -35,7 +35,7 @@ to complement it when you have a specific need.
 | **Go** | `github.com/pulumi/pulumi-aws/sdk/v7` | `github.com/pulumi/pulumi-aws-native/sdk/go/aws` |
 | **.NET** | `Pulumi.Aws` | `Pulumi.AwsNative` |
 | **Java** | `com.pulumi.aws` | `com.pulumi.awsnative` |
-| **Built on** | AWS Terraform provider | AWS Cloud Control API |
+| **Built on** | AWS Terraform provider (via Pulumi TF bridge) | AWS Cloud Control API |
 | **Resource coverage** | Comprehensive (241 service modules) | CloudFormation-backed (Cloud Control API types) |
 | **Naming convention** | Terraform-style (e.g., `aws.s3.BucketV2`) | CloudFormation-style (e.g., `awsnative.s3.Bucket`) |
 | **Best for** | Most AWS infrastructure | Newly launched resources; CloudFormation migration |
@@ -50,7 +50,7 @@ They are not separate providers — they do not have their own state and they do
 |---|---|---|---|
 | **Node.js** | `@pulumi/awsx` | `@pulumi/aws-apigateway` | `@pulumi/eks` |
 | **Python** | `pulumi_awsx` | `pulumi_aws_apigateway` | `pulumi_eks` |
-| **Go** | `github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx` | `github.com/pulumi/pulumi-aws-apigateway/sdk/go/apigateway` | `github.com/pulumi/pulumi-eks/sdk/go/eks` |
+| **Go** | `github.com/pulumi/pulumi-awsx/sdk/v3/go/awsx` | `github.com/pulumi/pulumi-aws-apigateway/sdk/v3/go/apigateway` | `github.com/pulumi/pulumi-eks/sdk/v4/go/eks` |
 | **.NET** | `Pulumi.Awsx` | `Pulumi.AwsApiGateway` | `Pulumi.Eks` |
 | **Java** | `com.pulumi.awsx` | `com.pulumi.aws-apigateway` | `com.pulumi.eks` |
 | **Covers** | VPC, ECS, ECR, ALB, Lambda, CloudTrail | API Gateway REST APIs | EKS clusters |
@@ -58,8 +58,9 @@ They are not separate providers — they do not have their own state and they do
 ## AWS provider
 
 The [AWS provider](/registry/packages/aws/) is the primary and recommended package for managing AWS infrastructure
-with Pulumi. It is built on the AWS Terraform provider and exposes a comprehensive, well-tested interface to AWS
-services refined by a large community over many years.
+with Pulumi. It is built on the AWS Terraform provider via the [Pulumi Terraform bridge](https://github.com/pulumi/pulumi-terraform-bridge),
+which translates the mature HashiCorp AWS provider into native Pulumi resources, exposing a comprehensive,
+well-tested interface to AWS services refined by a large community over many years.
 
 The AWS provider covers 241 service namespaces and supports the full breadth of AWS resources: compute, storage,
 networking, databases, messaging, security, and more. It follows a predictable naming convention where resource types
@@ -83,6 +84,13 @@ Despite broad coverage, not every AWS resource is available through the Cloud Co
 are available have restricted operations (e.g., read-only support). For new projects, Pulumi recommends starting
 with the primary AWS provider and pulling in Cloud Control resources only when a specific resource is not yet
 available there.
+
+{{% notes type="info" %}}
+You may encounter references to the "AWS Native provider" in older blog posts, community discussions, or the
+`@pulumi/aws-native` npm package name. This provider was renamed to the **AWS Cloud Control provider** when it
+reached general availability, reflecting its underlying use of the AWS Cloud Control API. The npm package name
+and registry path remain unchanged to avoid breaking existing users.
+{{% /notes %}}
 
 ## Component libraries
 
@@ -113,10 +121,14 @@ significantly easier to stand up a production-ready EKS cluster.
 ## Pulumi CDK adapter
 
 The [Pulumi CDK adapter](cdk/) allows you to use AWS CDK constructs — including CDK's L2 and L3 constructs —
-directly within a Pulumi program. It is useful when your organization has existing CDK constructs you want to
-leverage, or when a particular CDK construct library provides exactly what you need and you do not yet have a
-Pulumi equivalent. For greenfield Pulumi projects, the native Pulumi providers and component libraries generally
-offer a more idiomatic experience.
+directly within a Pulumi program. The most common scenarios for reaching for it are:
+
+- Your organization has existing CDK constructs you want to reuse during a migration to Pulumi.
+- A specific CDK construct library solves a problem for which there is no equivalent Pulumi component yet, and you
+  want to leverage it without waiting for a native replacement.
+
+For new infrastructure, use the native providers and component libraries. Most organizations that adopt the CDK
+adapter do so as a transitional step rather than a long-term strategy.
 
 See the [Pulumi CDK guide](cdk/) for more detail.
 
@@ -156,7 +168,9 @@ them selectively.
 
 Reach for the Pulumi CDK adapter when your team has existing CDK constructs you want to reuse during a migration to
 Pulumi, or when a specific CDK construct library solves a problem for which there is no equivalent Pulumi component
-yet. For new infrastructure, use the native providers and component libraries.
+yet. It works best as a transitional tool rather than a primary strategy — most teams that use it are working toward
+replacing CDK constructs with native Pulumi components over time. For new infrastructure, use the native providers
+and component libraries.
 
 ## Using multiple packages in a single stack
 
@@ -165,51 +179,14 @@ state, there is no penalty for mixing providers or component libraries. A common
 networking and container infrastructure, the classic AWS provider for the majority of other resources, and the Cloud
 Control provider selectively for newer resource types not yet available elsewhere.
 
-The following TypeScript example demonstrates this pattern:
+The following example demonstrates this pattern, using AWSx for the VPC, the AWS provider for an S3 bucket, and
+the Cloud Control provider for an Amazon Application Signals SLO — a newer resource type available through Cloud
+Control but not yet in the classic provider:
 
-```typescript
-import * as aws from "@pulumi/aws";
-import * as awsnative from "@pulumi/aws-native";
-import * as awsx from "@pulumi/awsx";
-
-// AWSx handles the VPC with well-architected defaults.
-const vpc = new awsx.ec2.Vpc("main", {
-    natGateways: { strategy: "Single" },
-});
-
-// The classic AWS provider manages the majority of resources.
-const bucket = new aws.s3.BucketV2("app-data");
-
-// The Cloud Control provider is used for a resource type not yet
-// available in the classic provider.
-const slo = new awsnative.applicationsignals.ServiceLevelObjective("api-slo", {
-    name: "api-latency-slo",
-    sli: {
-        sliMetric: {
-            metricType: "LATENCY",
-            operationName: "GET /api",
-            metricDataQueries: [],
-        },
-        comparisonOperator: "LessThanOrEqualTo",
-        metricThreshold: 500,
-    },
-    goal: {
-        attainmentGoal: 99,
-        warningThreshold: 99.5,
-        interval: { rollingInterval: { durationUnit: "DAY", duration: 30 } },
-    },
-});
-```
+{{< example-program path="aws-providers-combine" >}}
 
 When you run `pulumi up`, Pulumi's engine coordinates all providers, resolves cross-resource dependencies, and
 records the combined state in your [Pulumi Cloud](https://app.pulumi.com) backend.
-
-## A note on naming: AWS Native and AWS Cloud Control
-
-You may encounter references to the "AWS Native provider" in older blog posts, community discussions, or the
-`@pulumi/aws-native` npm package name. This provider was renamed to the **AWS Cloud Control provider** when it
-reached general availability, reflecting its underlying use of the AWS Cloud Control API. The npm package name
-and registry path remain unchanged to avoid breaking existing users.
 
 ## Next steps
 
