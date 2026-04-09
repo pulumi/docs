@@ -113,7 +113,24 @@ The following environment variables must be configured to enable TLS. The values
 | CONSOLE_TLS_CERTIFICATE | The TLS certificate. The certificate must be supplied in X.509 format and must be PEM encoded.                |
 | CONSOLE_TLS_PRIVATE_KEY | The private key associated with the TLS certificate. The private key must be PEM encoded.                     |
 | CONSOLE_MIN_TLS_VERSION | The minimum version of TLS to allow (must be in \<major>.\<minor> format, e.g. `1.2`). This variable is optional, if not set a minimum version will not be enforced.|
-| ALLOW_INVALID_CERTS | This optional value can be set to allow connections originating from the Console container to the Cloud container to connect without TLS verification. This can be helpful in scenarios like testing or when using self-signed certs for internal traffic. |
+
+#### Trusting the API service certificate
+
+When the API service uses a self-signed or internal CA certificate, the Console's Node backend must trust that CA to verify TLS connections to the API. Set the built-in Node.js environment variable `NODE_EXTRA_CA_CERTS` on the Console container:
+
+| Variable Name       | Description                                                                                                       |
+|---------------------|-------------------------------------------------------------------------------------------------------------------|
+| NODE_EXTRA_CA_CERTS | Path to a PEM file containing one or more CA certificates to trust, in addition to the system default CAs. Set this to the path of the CA certificate that signed the API service's TLS certificate (e.g., `/etc/pulumi/certs/api-ca.pem`). |
+
+For example, in a Docker Compose deployment:
+
+```yaml
+console:
+  environment:
+    NODE_EXTRA_CA_CERTS: "/etc/pulumi/certs/api-ca.pem"
+  volumes:
+    - ./certs/api-ca.pem:/etc/pulumi/certs/api-ca.pem:ro
+```
 
 > Note: Self-signed certificates may be used to configure TLS in the event the need for a trusted entity is not necessary. A self-signed cert and private key may be generated using OpenSSL. The following command uses OpenSSL to generate a self-signed certificate. This example will output two files, the certificate (cert.pem) and the private key (key.pem) used to sign it.
 
