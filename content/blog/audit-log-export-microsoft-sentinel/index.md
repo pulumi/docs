@@ -4,13 +4,15 @@ date: 2026-04-08
 meta_desc: "Pulumi Cloud now supports exporting audit logs to Microsoft Sentinel, giving security teams real-time visibility into infrastructure activity in their SIEM."
 meta_image: meta.png
 feature_image: feature.png
+canonical_url: /docs/administration/security-compliance/audit-logs/azure-sentinel/
 authors:
   - lynn-jung
 tags:
   - pulumi-cloud
+  - features
   - security
-  - audit-logs
-  - microsoft-sentinel
+  - azure
+no_social: true
 ---
 
 [Pulumi Cloud](/product/pulumi-cloud/) audit logs give organization admins a complete record of who did what, when, and from where across their infrastructure. Until now, automated export was limited to AWS S3. Today, we're adding support for exporting audit logs to [Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/overview), bringing Pulumi activity data directly into your SIEM for real-time monitoring and alerting.
