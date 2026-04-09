@@ -217,7 +217,7 @@ For information on configuring TypeScript, see the [TypeScript documentation for
 
 Pulumi ships with a bundled version of TypeScript 3.8.3 for backwards compatibility. However, when Pulumi runs a TypeScript program, it will first attempt to load the compiler from the local `node_modules` directory, and then fall back to the bundled version. This means that if your `package.json` includes a TypeScript dependency (as Pulumi templates typically do), that version will be used instead.
 
-Pulumi supports all TypeScript versions from 3.8 onwards, including the latest TypeScript 5 releases.
+Pulumi supports all TypeScript versions from 3.8 onwards, including TypeScript 5 and TypeScript 6 releases.
 
 ```json
 {
