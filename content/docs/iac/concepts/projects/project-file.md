@@ -65,6 +65,7 @@ The runtime attribute has an additional property called `options` where you can 
 | Name | Use case | Description |
 | - | - | - |
 | `typescript` | Only applies to the `nodejs` runtime | Boolean indicating whether to use `ts-node` or not. |
+| `tsconfig` | Only applies to the `nodejs` runtime | Path to a custom `tsconfig.json` file. |
 | `nodeargs` | Only applies to the `nodejs` runtime | Arguments to pass to `node`. |
 | `packagemanager` | Only applies to the `nodejs` runtime | Package manager to use for installing dependencies, `npm`, `pnpm`, `yarn`, or `bun`. When unset, the package manager is auto-detected from lockfiles in the project directory, falling back to `npm` if none are found. |
 | `buildTarget` | Only applies to the `go` runtime | Path to save the compiled go binary to. |
