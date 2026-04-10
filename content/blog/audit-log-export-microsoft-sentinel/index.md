@@ -39,13 +39,7 @@ Both paths require a Pulumi access token (we recommend an org-scoped service tok
 
 ## What gets ingested
 
-Every audit log event lands in a custom `PulumiAuditLogs_CL` table with typed columns for event metadata, user info, token details, and security flags. You can query it immediately with KQL:
-
-```kql
-PulumiAuditLogs_CL
-| where Event_s == "stack-deleted"
-| project TimeGenerated, UserName_s, Description_s, SourceIP_s
-```
+Every audit log event lands in a custom `PulumiAuditLogs_CL` table with typed columns for event metadata, user info, token details, and security flags. Once the connector is deployed, data will start flowing within a few minutes as the poller begins its first poll cycle.
 
 ## Try it out
 
