@@ -129,6 +129,12 @@ If files under `static/programs/` are changed:
 
 3. Store pass/fail results for the Step 6 unified package.
 
+#### 4e: PR description accuracy
+
+Compare the PR description (from Step 2) against the actual diff. Inaccuracies — files mentioned that weren't changed, changes described that aren't in the diff, significant changes omitted, incorrect characterization of what the changes do — are **trivial-fix candidates**, not style/structure findings. Collect them for the Step 6 trivial-fix preview; do not include them in the style findings or let them influence the assessment.
+
+For each inaccuracy, draft a corrected description that accurately reflects the diff. The corrected description will be applied via `gh pr edit --body` in Step 9 if not vetoed.
+
 **Large diffs (>100 lines)**: Summarize findings by category rather than line-by-line.
 
 **Silent step** — store all findings for Step 6. Do not display anything to the user yet.
@@ -209,13 +215,14 @@ Render in this order, top to bottom:
 7. **Trivial fixes preview** (only if any candidates) — itemized so the user can see exactly what will change before Step 8 confirmation:
 
    ```
-   Trivial fix candidates (3):
+   Trivial fix candidates (4):
      [1] content/docs/foo.md:12   — heading case: "Deploy To AWS" → "Deploy to AWS"
      [2] content/docs/foo.md (EOF) — add EOF newline
      [3] content/docs/bar.md:42   — strip trailing whitespace
+     [4] PR description            — inaccuracy: says "updates bar.md" but bar.md was not changed
    ```
 
-   Each candidate gets a numeric index so the user can veto specific fixes in Step 8. Categories the agent considers: trailing whitespace removal, missing EOF newlines, heading case (only when unambiguous — proper nouns like Pulumi/TypeScript/Azure are preserved), missing aliases on moved files, missing language specifier on fenced code blocks.
+   Each candidate gets a numeric index so the user can veto specific fixes in Step 8. Categories the agent considers: trailing whitespace removal, missing EOF newlines, heading case (only when unambiguous — proper nouns like Pulumi/TypeScript/Azure are preserved), missing aliases on moved files, missing language specifier on fenced code blocks, PR description inaccuracies (description text that misrepresents the diff — corrected via `gh pr edit --body`).
 
    Suppressed entirely when AI-suspect, replaced with:
 
@@ -316,10 +323,11 @@ With merge toggle OFF, omit the `gh pr merge` step from Approve and Make changes
 
 1. Save current branch name
 2. `gh pr checkout {{arg}}`
-3. Apply trivial fixes that **survived the user's veto in Step 8**, using Edit. The agent applies these directly rather than via a script because several categories (notably heading case) require language understanding to avoid corrupting proper nouns like Pulumi, TypeScript, Azure, Kubernetes, etc. — a regex can't tell "Working With Pulumi" (preserve "Pulumi") from "Deploy To AWS" (lowercase "to"). When in doubt, skip the fix and surface it to the user. Suppressed entirely when `AI_SUSPECT=true`.
-4. Apply contradicted-claim suggested fixes via Edit
-5. Show diff to user
-6. Commit with author trailer:
+3. Apply surviving PR description fixes via `gh pr edit {{arg}} --body "$CORRECTED_BODY"` (this doesn't touch the branch, so it goes before file edits)
+4. Apply trivial fixes that **survived the user's veto in Step 8**, using Edit. The agent applies these directly rather than via a script because several categories (notably heading case) require language understanding to avoid corrupting proper nouns like Pulumi, TypeScript, Azure, Kubernetes, etc. — a regex can't tell "Working With Pulumi" (preserve "Pulumi") from "Deploy To AWS" (lowercase "to"). When in doubt, skip the fix and surface it to the user. Suppressed entirely when `AI_SUSPECT=true`.
+5. Apply contradicted-claim suggested fixes via Edit
+6. Show diff to user
+7. Commit with author trailer:
 
    ```
    <commit message>
@@ -328,10 +336,10 @@ With merge toggle OFF, omit the `gh pr merge` step from Approve and Make changes
    Co-Authored-By: <agent name> <agent email>
    ```
 
-7. Push
-8. Approve with comment
-9. If toggle ON: `gh pr merge {{arg}} --auto --squash`
-10. **Always** return to original branch (even on error)
+8. Push
+9. Approve with comment
+10. If toggle ON: `gh pr merge {{arg}} --auto --squash`
+11. **Always** return to original branch (even on error)
 
 Continue to Step 10.
 
