@@ -27,12 +27,19 @@
   CSS bundle selection. Pages can set css_bundle in frontmatter to use a
   page-specific bundle (e.g., "homepage"). Pages without css_bundle get the
   default full bundle. Marketing pages also get the marketing stylesheet.
+
+  In production, beasties extracts critical CSS from each page's stylesheets
+  and inlines it automatically. Do NOT manually inline CSS here — the full
+  stylesheets use @layer and unlayered inline styles will override them.
 -->
 {{ $cssBundle := .Params.css_bundle | default "bundle" }}
-{{ template "css-link" (dict "source" (printf "css/%s.css" $cssBundle) "name" $cssBundle) }}
 
 {{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "tutorials" "providers" "collections" "templates" "ai" "authors" "tags" "legal" }}
-{{ if not (in $nonMarketingSections .Section) }}
+{{ $isMarketing := not (in $nonMarketingSections .Section) }}
+
+{{ template "css-link" (dict "source" (printf "css/%s.css" $cssBundle) "name" $cssBundle) }}
+
+{{ if $isMarketing }}
     {{ $marketingBundle := cond (eq $cssBundle "homepage") "marketing-homepage" "marketing" }}
     {{ template "css-link" (dict "source" (printf "css/%s.css" $marketingBundle) "name" $marketingBundle) }}
 {{ end }}

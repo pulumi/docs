@@ -29,7 +29,7 @@ url_slug: from-zero-to-production-in-kubernetes
 event_type: workshop
 
 # URL for embedding a URL for ungated events.
-youtube_url:
+youtube_url: https://www.youtube.com/embed/KYagnHF0UIs?si=_fp2PugokIkZUKMm
 
 # Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2026-03-31T09:00:00-04:00
@@ -43,7 +43,7 @@ location: virtual
 # Description of the event.
 description: |
     According to the **CNCF Annual Survey, 93% of organizations** are using, piloting, or evaluating Kubernetes as their core platform for modern cloud infrastructure. Engineering teams adopt Kubernetes for its consistency, scalability, and cloud-agnostic flexibility, making it the standard for building and operating developer platforms.
-    
+
     In this **hands-on Kubernetes workshop**, you will learn how to take clusters and workloads from zero to production using infrastructure as code, **GitOps automation**, and modern strategies for visibility and resilience. You will also explore how **agentic workflows** and AI-assisted infrastructure are reshaping the way teams manage Kubernetes at scale.
 learn:
     - Deploy production-ready applications with repeatable automation

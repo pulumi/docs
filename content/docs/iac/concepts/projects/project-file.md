@@ -65,6 +65,7 @@ The runtime attribute has an additional property called `options` where you can 
 | Name | Use case | Description |
 | - | - | - |
 | `typescript` | Only applies to the `nodejs` runtime | Boolean indicating whether to use `ts-node` or not. |
+| `tsconfig` | Only applies to the `nodejs` runtime | Path to a custom `tsconfig.json` file. |
 | `nodeargs` | Only applies to the `nodejs` runtime | Arguments to pass to `node`. |
 | `packagemanager` | Only applies to the `nodejs` runtime | Package manager to use for installing dependencies, `npm`, `pnpm`, `yarn`, or `bun`. When unset, the package manager is auto-detected from lockfiles in the project directory, falling back to `npm` if none are found. |
 | `buildTarget` | Only applies to the `go` runtime | Path to save the compiled go binary to. |
@@ -135,7 +136,7 @@ Schemas are only valid for project property keys. For setting the value of a pro
 
 | Name | Required | Description |
 | - | - | - |
-| `type` | required | The type of this config property, either `string`, `boolean`, `integer`, or `array`. |
+| `type` | required | The type of this config property, either `string`, `boolean`, `integer`, `array`, or `object`. |
 | `description` | optional | A description for this config property. |
 | `secret` | optional | True if this config property should be a secure secret value. |
 | `default` | optional | The default value for this config property, must match the given type. |
@@ -185,7 +186,7 @@ Use this option to link to local plugin binaries. This option is intended for us
 | Name | Required | Description |
 | - | - | - |
 | `name` | required | Name of the plugin. |
-| `path` | optional | Path to the plugin folder. |
+| `path` | required | Path to the plugin folder. |
 | `version` | optional | Version of the plugin, if not set, will match any version the engine requests. |
 
 ### `requiredPulumiVersion` option
