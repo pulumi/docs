@@ -674,7 +674,11 @@ if (config.registryStack) {
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
-            }
+            },
+            originShield: {
+                enabled: true,
+                originShieldRegion: "us-west-2",
+            },
         }
     );
     registryBehaviors.push(
@@ -763,6 +767,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
+            },
+            originShield: {
+                enabled: true,
+                originShieldRegion: "us-west-2",
             },
         },
         {
