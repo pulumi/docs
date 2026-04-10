@@ -508,9 +508,14 @@ const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
 
-// AllViewerExceptHostHeader passes all cookies, querystrings, and headers except the Host header.
+// UserAgentRefererHeaders forwards only User-Agent and Referer to the origin.
+// Used by the chained-CDN behaviors (/registry/*, /guides/*) so the inner CDNs
+// still see useful viewer signals for their own logs/observability, while NOT
+// forwarding Accept-Encoding. Forwarding Accept-Encoding silently disables
+// CloudFront auto-compression at the outer layer (compress: true becomes a
+// no-op), which is what was causing /registry/* responses to ship uncompressed.
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html
-const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
+const userAgentRefererHeadersId = "acba4595-bd28-49b8-b9fe-13317c0390fa";
 
 // Custom cache policy for origin-proxied behaviors (registry, guides) that need
 // an originRequestPolicy. CloudFront requires a cachePolicyId (not legacy
@@ -679,18 +684,18 @@ if (config.registryStack) {
             }
         }
     );
-    // Do NOT attach an originRequestPolicy that forwards Accept-Encoding to
-    // these chained-CDN behaviors. CloudFront silently disables its own
-    // auto-compression whenever Accept-Encoding is forwarded to the origin, so
-    // `compress: true` from baseCacheBehavior becomes a no-op and registry
-    // pages ship uncompressed. Omitting originRequestPolicyId restores
-    // CloudFront's default minimal-headers forwarding and re-enables gzip.
+    // Use UserAgentRefererHeaders (not AllViewerExceptHostHeader) on these
+    // chained-CDN behaviors so the outer CDN doesn't forward Accept-Encoding
+    // to the inner registry CDN. Forwarding Accept-Encoding silently disables
+    // CloudFront auto-compression (compress: true becomes a no-op), which is
+    // why /registry/* responses were shipping uncompressed.
     registryBehaviors.push(
         {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
             pathPattern: "/registry/*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
+            originRequestPolicyId: userAgentRefererHeadersId,
             forwardedValues: undefined,
         },
         // Registry package logos (e.g. /fingerprinted/logos/pkg/aws.<hash>.svg)
@@ -704,6 +709,7 @@ if (config.registryStack) {
             targetOriginId: registryCDN,
             pathPattern: "/fingerprinted/logos/pkg/*",
             cachePolicyId: oneYearCachePolicy.id,
+            originRequestPolicyId: userAgentRefererHeadersId,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
             forwardedValues: undefined,
         },
@@ -726,14 +732,15 @@ if (config.guidesStack) {
             }
         }
     );
-    // See note above on registryBehaviors: no originRequestPolicy here, so
-    // CloudFront auto-compression stays enabled.
+    // See note above on registryBehaviors for why this uses
+    // UserAgentRefererHeaders instead of AllViewerExceptHostHeader.
     guidesBehaviors.push(
         {
             ...baseCacheBehavior,
             targetOriginId: guidesCDN,
             pathPattern: "/guides/*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
+            originRequestPolicyId: userAgentRefererHeadersId,
             forwardedValues: undefined,
         },
     )
