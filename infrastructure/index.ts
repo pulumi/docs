@@ -509,22 +509,30 @@ const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
 
 // UserAgentRefererHeaders forwards only User-Agent and Referer to the origin.
-// Used by the chained-CDN behaviors (/registry/*, /guides/*) so the inner CDNs
-// still see useful viewer signals for their own logs/observability, while NOT
-// forwarding Accept-Encoding. Forwarding Accept-Encoding silently disables
-// CloudFront auto-compression at the outer layer (compress: true becomes a
-// no-op), which is what was causing /registry/* responses to ship uncompressed.
+// Used on the chained-CDN behaviors (/registry/*, /guides/*) so the inner CDNs
+// still see useful viewer signals for their own logs while not having
+// Accept-Encoding forwarded — the outer CDN handles compression itself.
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html
 const userAgentRefererHeadersId = "acba4595-bd28-49b8-b9fe-13317c0390fa";
 
-// Custom cache policy for origin-proxied behaviors (registry, guides) that need
-// an originRequestPolicy. CloudFront requires a cachePolicyId (not legacy
-// forwardedValues) when an origin request policy is attached.
+// Custom cache policy for origin-proxied behaviors (registry, guides) that
+// need an originRequestPolicy. CloudFront requires a cachePolicyId (not
+// legacy forwardedValues) when an origin request policy is attached.
+//
+// IMPORTANT: enableAcceptEncodingGzip/Brotli MUST be true. When a cache
+// behavior uses a CachePolicy (instead of legacy forwardedValues), CloudFront
+// only auto-compresses responses if the cache policy enables Accept-Encoding
+// in the cache key. Without these flags, `compress: true` on the cache
+// behavior is silently a no-op and responses ship uncompressed — which is
+// what was causing every /registry/*, /fingerprinted/logos/pkg/*, and
+// /guides/* response (HTML, JSON, SVG) to be served uncompressed.
 const thirtyMinuteCachePolicy = new aws.cloudfront.CachePolicy("thirty-minute-cache", {
     defaultTtl: thirtyMinutes,
     maxTtl: thirtyMinutes,
     minTtl: 0,
     parametersInCacheKeyAndForwardedToOrigin: {
+        enableAcceptEncodingGzip: true,
+        enableAcceptEncodingBrotli: true,
         cookiesConfig: { cookieBehavior: "none" },
         headersConfig: { headerBehavior: "none" },
         queryStringsConfig: { queryStringBehavior: "none" },
@@ -536,6 +544,10 @@ const oneYearCachePolicy = new aws.cloudfront.CachePolicy("one-year-cache", {
     maxTtl: oneYear,
     minTtl: 0,
     parametersInCacheKeyAndForwardedToOrigin: {
+        // See note above on thirtyMinuteCachePolicy: required for compress: true
+        // to actually do anything when a CachePolicy is in use.
+        enableAcceptEncodingGzip: true,
+        enableAcceptEncodingBrotli: true,
         cookiesConfig: { cookieBehavior: "none" },
         headersConfig: { headerBehavior: "none" },
         queryStringsConfig: { queryStringBehavior: "none" },
@@ -685,10 +697,11 @@ if (config.registryStack) {
         }
     );
     // Use UserAgentRefererHeaders (not AllViewerExceptHostHeader) on these
-    // chained-CDN behaviors so the outer CDN doesn't forward Accept-Encoding
-    // to the inner registry CDN. Forwarding Accept-Encoding silently disables
-    // CloudFront auto-compression (compress: true becomes a no-op), which is
-    // why /registry/* responses were shipping uncompressed.
+    // chained-CDN behaviors so we don't pass Accept-Encoding through to the
+    // inner registry CDN — the outer CDN handles compression itself via
+    // compress: true + thirtyMinuteCachePolicy's enableAcceptEncodingGzip.
+    // See the note on thirtyMinuteCachePolicy for why those flags are
+    // mandatory for auto-compression to work with a CachePolicy.
     registryBehaviors.push(
         {
             ...baseCacheBehavior,
@@ -732,8 +745,9 @@ if (config.guidesStack) {
             }
         }
     );
-    // See note above on registryBehaviors for why this uses
-    // UserAgentRefererHeaders instead of AllViewerExceptHostHeader.
+    // See notes on registryBehaviors and thirtyMinuteCachePolicy for why
+    // this uses UserAgentRefererHeaders and why the cache policy must
+    // enable Accept-Encoding in the cache key.
     guidesBehaviors.push(
         {
             ...baseCacheBehavior,
