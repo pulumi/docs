@@ -59,7 +59,7 @@ return await Deployment.RunAsync(() =>
     return new Dictionary<string, object?>
     {
         ["vpcId"] = vpc.VpcId,
-        ["bucketName"] = bucket.Bucket,
+        ["bucketName"] = bucket.Id,
         ["sloArn"] = slo.Arn,
     };
 });
