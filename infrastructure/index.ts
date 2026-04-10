@@ -718,10 +718,8 @@ if (config.guidesStack) {
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
             },
-            originShield: {
-                enabled: true,
-                originShieldRegion: "us-west-2",
-            },
+            // Origin Shield for guides should be configured in pulumi/guides,
+            // not here, since guides has its own CloudFront distribution.
         }
     );
     guidesBehaviors.push(
