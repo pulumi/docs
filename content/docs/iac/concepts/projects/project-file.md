@@ -116,6 +116,7 @@ Alternatively, a package value can be an object with the following properties:
 | `source` | string | Yes | No | The source of the package. Can be a path to a local plugin, a URL to a Git repository, or a pulumi plugin name. |
 | `version` | string | No | No | The version of the package. |
 | `parameters` | List<string> | No | No | A list of parameters for the `source` package. |
+| `checksums` | Map<string, string> | No | No | A map of `os-arch` keys (e.g., `linux-x64`) to checksums used to validate downloaded plugins. |
 | `pluginDownloadURL` | string | No | No | The server to download the plugin from, if a custom download location is needed. |
 
 ### `config` options
