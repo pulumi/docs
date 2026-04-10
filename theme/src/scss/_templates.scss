@@ -38,7 +38,7 @@
     font-feature-settings: 'salt' on;
     font-family: Inter, sans-serif;
     letter-spacing: -3.2px;
-    line-height: 1.25 !important;
+    line-height: 1.1 !important;
 }
 
 @mixin section-description {
@@ -1307,5 +1307,18 @@
 
     &.active {
         display: block;
+    }
+}
+
+// Responsive font sizes for the code snippet widget
+@media (max-width: 767px) {
+    .code-snippets-container code {
+        font-size: 12px;
+    }
+
+    .code-snippets-title,
+    .code-snippets-dropdown-trigger,
+    .code-snippets-dropdown-item {
+        font-size: 12px;
     }
 }
