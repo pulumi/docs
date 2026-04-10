@@ -517,13 +517,14 @@ const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 // a CachePolicy with enableAcceptEncodingBrotli set. See:
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/ServingCompressedFiles.html
 function cacheKeyPolicy(name: string, ttl: number): aws.cloudfront.CachePolicy {
+    const cachingEnabled = ttl > 0;
     return new aws.cloudfront.CachePolicy(name, {
         defaultTtl: ttl,
         maxTtl: ttl,
         minTtl: 0,
         parametersInCacheKeyAndForwardedToOrigin: {
-            enableAcceptEncodingBrotli: true,
-            enableAcceptEncodingGzip: true,
+            enableAcceptEncodingBrotli: cachingEnabled,
+            enableAcceptEncodingGzip: cachingEnabled,
             cookiesConfig: { cookieBehavior: "none" },
             headersConfig: { headerBehavior: "none" },
             queryStringsConfig: { queryStringBehavior: "none" },
