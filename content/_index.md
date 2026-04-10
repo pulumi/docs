@@ -1,6 +1,6 @@
 ---
-title: Infrastructure as Code Platform with Agentic AI – Pulumi
-meta_desc: Pulumi is an infrastructure management platform to automate through infrastructure as code, secure with secrets management, and manage infrastructure with AI.
+title: The infrastructure as code platform for the AI era – Pulumi
+meta_desc: Pulumi is an open-source infrastructure as code platform that helps humans and agents build and manage cloud infrastructure with real programming languages.
 
 include_organization_schema: true
 
@@ -8,7 +8,7 @@ sections:
   - type: hero
     layout: split
     badge_highlight_text: "Meet Neo: "
-    badge_text: "AI for Infrastructure"
+    badge_text: "AI for infrastructure"
     badge_link: /product/neo/
     title_primary: "Next-level"
     title_secondary: "infrastructure as code \n for humans and agents."
@@ -28,22 +28,38 @@ sections:
         label: TypeScript
         title: "index.ts"
         code: |
-          import * as pulumi from "@pulumi/pulumi";
           import * as aws from "@pulumi/aws";
+          import * as awsx from "@pulumi/awsx";
 
-          const bucket = new aws.s3.Bucket("my-bucket");
+          const vpc = new awsx.ec2.Vpc("vpc");
+          const azs = await aws.getAvailabilityZones({ state: "available" });
 
-          export const bucketName = bucket.id;
+          const subnets = azs.names.map((az, i) =>
+            new aws.ec2.Subnet(`subnet-${i}`, {
+              vpcId: vpc.vpcId,
+              cidrBlock: `10.0.${i}.0/24`,
+              availabilityZone: az,
+            })
+          );
+
+
       - language: python
         label: Python
         title: "__main__.py"
         code: |
-          import pulumi
-          from pulumi_aws import s3
+          import pulumi_aws as aws
+          import pulumi_awsx as awsx
 
-          bucket = s3.Bucket("my-bucket")
+          azs = aws.get_availability_zones(state="available")
+          vpc = awsx.ec2.Vpc("vpc")
 
-          pulumi.export("bucketName", bucket.id)
+          for i, az in enumerate(azs.names):
+              aws.ec2.Subnet(f"subnet-{i}",
+                  vpc_id=vpc.vpc_id,
+                  cidr_block=f"10.0.{i}.0/24",
+                  availability_zone=az,
+              )
+
       - language: go
         label: Go
         title: "main.go"
@@ -51,71 +67,119 @@ sections:
           package main
 
           import (
-            "github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-            "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+              "fmt"
+
+              "github.com/pulumi/pulumi-aws/sdk/v6/go/aws"
+              "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+              awsx "github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/ec2"
+              "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
           )
 
           func main() {
-            pulumi.Run(func(ctx *pulumi.Context) error {
-              bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
-              if err != nil {
-                return err
-              }
-              ctx.Export("bucketName", bucket.ID())
-              return nil
-            })
+              pulumi.Run(func(ctx *pulumi.Context) error {
+                  vpc, _ := awsx.NewVpc(ctx, "vpc", nil)
+                  azs, _ := aws.GetAvailabilityZones(ctx, &aws.GetAvailabilityZonesArgs{State: pulumi.StringRef("available")}, nil)
+
+                  for i, az := range azs.Names {
+                      ec2.NewSubnet(ctx, fmt.Sprintf("subnet-%d", i), &ec2.SubnetArgs{
+                          VpcId:            vpc.VpcId,
+                          CidrBlock:        pulumi.String(fmt.Sprintf("10.0.%d.0/24", i)),
+                          AvailabilityZone: pulumi.String(az),
+                      })
+                  }
+                  return nil
+              })
           }
+
+
       - language: csharp
         label: C#
         title: "MyStack.cs"
         code: |
+          using System.Linq;
           using Pulumi;
-          using Pulumi.Aws.S3;
+          using Pulumi.Aws;
+          using Pulumi.Aws.Ec2;
 
-          class MyStack : Stack
+          return await Deployment.RunAsync(() =>
           {
-              public MyStack()
-              {
-                  var bucket = new Bucket("my-bucket");
-                  this.BucketName = bucket.Id;
-              }
+              var vpc = new Pulumi.Awsx.Ec2.Vpc("vpc");
+              var azs = GetAvailabilityZones.Invoke(new() { State = "available" });
 
-              [Output]
-              public Output<string> BucketName { get; set; }
-          }
+              var subnets = azs.Apply(result =>
+                  result.Names.Select((az, i) =>
+                      new Subnet($"subnet-{i}", new()
+                      {
+                          VpcId = vpc.VpcId,
+                          CidrBlock = $"10.0.{i}.0/24",
+                          AvailabilityZone = az,
+                      })
+                  ).ToList()
+              );
+          });
       - language: java
         label: Java
         title: "App.java"
         code: |
-          package s3site;
+          package myproject;
 
-          import com.pulumi.Context;
           import com.pulumi.Pulumi;
-          import com.pulumi.core.Output;
-          import com.pulumi.aws.s3.Bucket;
+          import com.pulumi.aws.ec2.Vpc;
+          import com.pulumi.aws.ec2.Subnet;
+          import com.pulumi.aws.ec2.SubnetArgs;
+          import com.pulumi.aws.AwsFunctions;
+          import com.pulumi.aws.inputs.GetAvailabilityZonesPlainArgs;
 
-          public class Infra {
+          public class App {
               public static void main(String[] args) {
-                  Pulumi.run(Infra::stack);
-              }
+                  Pulumi.run(ctx -> {
+                      var vpc = new Vpc("vpc");
 
-              private static void stack(Context ctx) {
-                  final var myBucket = new Bucket("my-bucket");
-                  ctx.export("bucketName",
-                      myBucket.bucketDomainName());
+                      var azs = AwsFunctions.getAvailabilityZonesPlain(
+                          GetAvailabilityZonesPlainArgs.builder()
+                              .state("available")
+                              .build()
+                      ).join();
+
+                      var names = azs.names();
+                      for (int i = 0; i < names.size(); i++) {
+                          new Subnet("subnet-" + i, SubnetArgs.builder()
+                              .vpcId(vpc.id())
+                              .cidrBlock("10.0." + i + ".0/24")
+                              .availabilityZone(names.get(i))
+                              .build());
+                      }
+                  });
               }
           }
       - language: yaml
         label: YAML
         title: "Pulumi.yaml"
         code: |
-          name: my-stack
-          runtime: yaml
+          variables:
+            azs:
+              fn::invoke:
+                function: aws:getAvailabilityZones
+                arguments:
+                  state: available
+
           resources:
-              bucket:
-                  type: aws:s3:Bucket
-          outputs:
-              bucketName: ${bucket.id}
+            vpc:
+              type: awsx:ec2:Vpc
+
+            subnet-0:
+              type: aws:ec2:Subnet
+              properties:
+                vpcId: ${vpc.vpcId}
+                cidrBlock: "10.0.0.0/24"
+                availabilityZone: ${azs.names[0]}
+
+            subnet-1:
+              type: aws:ec2:Subnet
+              properties:
+                vpcId: ${vpc.vpcId}
+                cidrBlock: "10.0.1.0/24"
+                availabilityZone: ${azs.names[1]}
 
   - type: logo_carousel
     title: Trusted by over 4,000 innovative companies
@@ -352,6 +416,6 @@ sections:
     anchor: community
 
   - type: footer_cta
-    title: The infrastructure-as-code platform for any cloud.
+    title: The infrastructure as code platform for any cloud.
     anchor: get-started
 ---

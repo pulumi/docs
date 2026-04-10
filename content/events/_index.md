@@ -9,7 +9,7 @@ hero:
     Connect with the Pulumi community through live workshops, technical demos, and on-demand recordings.
 
 footer_cta:
-  title: The infrastructure-as-code platform for any cloud.
+  title: The infrastructure as code platform for any cloud.
   cta_primary_text: Try Pulumi for free
   cta_primary_link: /signup/
   cta_secondary_text: Contact sales
