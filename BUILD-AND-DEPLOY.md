@@ -1611,6 +1611,8 @@ Delivery: CloudWatch Logs infrastructure v2
 
 **Compression:** Enabled (gzip, brotli)
 
+**Origin Shield:** Enabled on docs (S3 main) and guides origins in `us-west-2` to improve cache hit ratio and reduce origin load.
+
 **Price Class:** All (global distribution)
 
 **Custom Error Responses:**

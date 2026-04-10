@@ -675,10 +675,8 @@ if (config.registryStack) {
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
             },
-            originShield: {
-                enabled: true,
-                originShieldRegion: "us-west-2",
-            },
+            // Origin Shield for registry should be configured in pulumi/registry,
+            // not here, since the registry has its own CloudFront distribution.
         }
     );
     registryBehaviors.push(
@@ -719,7 +717,11 @@ if (config.guidesStack) {
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
-            }
+            },
+            originShield: {
+                enabled: true,
+                originShieldRegion: "us-west-2",
+            },
         }
     );
     guidesBehaviors.push(
