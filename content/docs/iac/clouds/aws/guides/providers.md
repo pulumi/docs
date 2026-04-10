@@ -36,8 +36,8 @@ to complement it when you have a specific need.
 | **.NET** | `Pulumi.Aws` | `Pulumi.AwsNative` |
 | **Java** | `com.pulumi.aws` | `com.pulumi.awsnative` |
 | **Built on** | AWS Terraform provider (via Pulumi TF bridge) | AWS Cloud Control API |
-| **Resource coverage** | Comprehensive (241 service modules) | CloudFormation-backed (Cloud Control API types) |
-| **Naming convention** | Terraform-style (e.g., `aws.s3.BucketV2`) | CloudFormation-style (e.g., `awsnative.s3.Bucket`) |
+| **Resource coverage** | Comprehensive (200+ service modules) | CloudFormation-backed (Cloud Control API types) |
+| **Naming convention** | Terraform-style (e.g., `aws.s3.Bucket`) | CloudFormation-style (e.g., `awsnative.s3.Bucket`) |
 | **Best for** | Most AWS infrastructure | Newly launched resources; CloudFormation migration |
 | **Maturity** | Stable | Generally available |
 
@@ -62,9 +62,9 @@ with Pulumi. It is built on the AWS Terraform provider via the [Pulumi Terraform
 which translates the mature HashiCorp AWS provider into native Pulumi resources, exposing a comprehensive,
 well-tested interface to AWS services refined by a large community over many years.
 
-The AWS provider covers 241 service namespaces and supports the full breadth of AWS resources: compute, storage,
+The AWS provider covers 200+ service namespaces and supports the full breadth of AWS resources: compute, storage,
 networking, databases, messaging, security, and more. It follows a predictable naming convention where resource types
-map closely to the underlying Terraform resource names (e.g., `aws.ec2.Instance`, `aws.s3.BucketV2`).
+map closely to the underlying Terraform resource names (e.g., `aws.ec2.Instance`, `aws.s3.Bucket`).
 
 For the vast majority of AWS infrastructure, the AWS provider should be your starting point. Its resources are
 thoroughly documented, support all Pulumi features (including import, state management, and drift detection), and have
@@ -78,7 +78,7 @@ which AWS uses as the programmatic backing for CloudFormation. Because it derive
 CloudFormation resource schemas, it can expose new AWS resource types very quickly after they launch.
 
 Resources in the Cloud Control provider follow CloudFormation naming conventions (PascalCase), so the equivalent of
-`aws.s3.BucketV2` in the Cloud Control provider is `awsnative.s3.Bucket`.
+`aws.s3.Bucket` in the Cloud Control provider is `awsnative.s3.Bucket`.
 
 Despite broad coverage, not every AWS resource is available through the Cloud Control API, and some resources that
 are available have restricted operations (e.g., read-only support). For new projects, Pulumi recommends starting

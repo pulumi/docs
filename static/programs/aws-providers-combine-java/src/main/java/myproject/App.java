@@ -5,7 +5,7 @@ import com.pulumi.awsx.ec2.Vpc;
 import com.pulumi.awsx.ec2.VpcArgs;
 import com.pulumi.awsx.ec2.inputs.NatGatewayConfigurationArgs;
 import com.pulumi.awsx.ec2.enums.NatGatewayStrategy;
-import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.Bucket;
 import com.pulumi.awsnative.applicationsignals.ServiceLevelObjective;
 import com.pulumi.awsnative.applicationsignals.ServiceLevelObjectiveArgs;
 import com.pulumi.awsnative.applicationsignals.inputs.ServiceLevelObjectiveSliArgs;
@@ -31,7 +31,7 @@ public class App {
                 .build());
 
             // The AWS provider manages the majority of resources.
-            var bucket = new BucketV2("app-data");
+            var bucket = new Bucket("app-data");
 
             // The AWS Cloud Control provider is used for a resource available
             // through Cloud Control but not yet in the classic AWS provider.

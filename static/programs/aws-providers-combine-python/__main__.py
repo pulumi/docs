@@ -5,12 +5,12 @@ import pulumi_awsx as awsx
 
 # AWSx provides a VPC with well-architected defaults: subnets, route
 # tables, NAT gateways, and an internet gateway, all pre-configured.
-vpc = awsx.ec2.Vpc("main", nat_gateways=awsx.ec2.VpcNatGatewayArgs(
+vpc = awsx.ec2.Vpc("main", nat_gateways=awsx.ec2.NatGatewayConfigurationArgs(
     strategy=awsx.ec2.NatGatewayStrategy.SINGLE,
 ))
 
 # The AWS provider manages the majority of resources.
-bucket = aws.s3.BucketV2("app-data")
+bucket = aws.s3.Bucket("app-data")
 
 # The AWS Cloud Control provider is used for a resource available
 # through Cloud Control but not yet in the classic AWS provider.

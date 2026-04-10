@@ -18,7 +18,7 @@ return await Deployment.RunAsync(() =>
     });
 
     // The AWS provider manages the majority of resources.
-    var bucket = new Aws.S3.BucketV2("app-data");
+    var bucket = new Aws.S3.Bucket("app-data");
 
     // The AWS Cloud Control provider is used for a resource available
     // through Cloud Control but not yet in the classic AWS provider.

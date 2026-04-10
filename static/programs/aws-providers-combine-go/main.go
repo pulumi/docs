@@ -22,7 +22,7 @@ func main() {
 		}
 
 		// The AWS provider manages the majority of resources.
-		bucket, err := s3.NewBucketV2(ctx, "app-data", nil)
+		bucket, err := s3.NewBucket(ctx, "app-data", nil)
 		if err != nil {
 			return err
 		}

@@ -12,7 +12,7 @@ resources:
 
   # The AWS provider manages the majority of resources.
   app-data:
-    type: aws:s3:BucketV2
+    type: aws:s3:Bucket
 
   # The AWS Cloud Control provider is used for a resource available
   # through Cloud Control but not yet in the classic AWS provider.

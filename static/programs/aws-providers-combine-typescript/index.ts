@@ -9,7 +9,7 @@ const vpc = new awsx.ec2.Vpc("main", {
 });
 
 // The AWS provider manages the majority of resources.
-const bucket = new aws.s3.BucketV2("app-data");
+const bucket = new aws.s3.Bucket("app-data");
 
 // The AWS Cloud Control provider is used for a resource available
 // through Cloud Control but not yet in the classic AWS provider.
