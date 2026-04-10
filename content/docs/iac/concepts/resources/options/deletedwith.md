@@ -40,7 +40,7 @@ let dep = new k8s.apps.v1.Deployment("res2", {/*...*/}, { deletedWith: ns });
 
 import pulumi_kubernetes as k8s
 
-ns = k8s.core.v1.Namespace("res1". {})
+ns = k8s.core.v1.Namespace("res1", {})
 dep = k8s.apps.v1.Deployment("res2", opts=ResourceOptions(deleted_with=ns))
 ```
 
