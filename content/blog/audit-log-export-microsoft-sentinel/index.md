@@ -25,7 +25,7 @@ The connector uses Sentinel's managed [Codeless Connector Framework](https://lea
 
 The connector deploys as a Pulumi program using a template. There are two ways to set it up:
 
-**From the Pulumi Cloud console**: Open the [New Project Wizard with the template pre-selected](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-sentinel-audit-logs). Fill in your config values, choose Pulumi Deployments as the deployment method, and select **Deploy**.
+**From the Pulumi Cloud console**: Navigate to **Audit Logs**, click the gear icon, and select **Configure export to Microsoft Sentinel**. Click **Deploy with Pulumi**, fill in your config values, choose Pulumi Deployments as the deployment method, and select **Deploy**.
 
 **From the CLI**:
 
