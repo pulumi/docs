@@ -3853,6 +3853,19 @@ with content. This allows aggressive TTLs without stale content after deploys.
    Use the `cacheKeyPolicy(name, ttl)` helper in `infrastructure/index.ts` to
    create new cache policies; it enables Brotli + gzip by default.
 
+   > **⚠️ Always use the helper.** CloudFront's automatic compression silently
+   > fails — `compress: true` becomes a no-op, responses ship uncompressed with
+   > no error or warning — if a `CachePolicy` is created without
+   > `enableAcceptEncodingGzip` / `enableAcceptEncodingBrotli`. The helper sets
+   > both. Hand-rolled `aws.cloudfront.CachePolicy` resources will compile,
+   > deploy, and pass review while serving 5–10× more bytes than they should.
+   > This is the bug that affected `/registry/*`, `/guides/*`, and
+   > `/fingerprinted/logos/pkg/*` before this refactor — it took several hours
+   > of investigation to find because every diagnostic signal pointed elsewhere.
+   > Verify with `curl -sD - -o /dev/null -H 'Accept-Encoding: gzip' <url>` (a
+   > GET — `curl -sI` HEAD requests don't always reflect compression state for
+   > cache-policy paths).
+
    ```typescript
    // infrastructure/index.ts
    const imagesCacheKeyPolicy = cacheKeyPolicy("images-cache", oneDay);
