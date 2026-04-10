@@ -679,13 +679,18 @@ if (config.registryStack) {
             }
         }
     );
+    // Do NOT attach an originRequestPolicy that forwards Accept-Encoding to
+    // these chained-CDN behaviors. CloudFront silently disables its own
+    // auto-compression whenever Accept-Encoding is forwarded to the origin, so
+    // `compress: true` from baseCacheBehavior becomes a no-op and registry
+    // pages ship uncompressed. Omitting originRequestPolicyId restores
+    // CloudFront's default minimal-headers forwarding and re-enables gzip.
     registryBehaviors.push(
         {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
             pathPattern: "/registry/*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
             forwardedValues: undefined,
         },
         // Registry package logos (e.g. /fingerprinted/logos/pkg/aws.<hash>.svg)
@@ -699,7 +704,6 @@ if (config.registryStack) {
             targetOriginId: registryCDN,
             pathPattern: "/fingerprinted/logos/pkg/*",
             cachePolicyId: oneYearCachePolicy.id,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
             forwardedValues: undefined,
         },
@@ -722,13 +726,14 @@ if (config.guidesStack) {
             }
         }
     );
+    // See note above on registryBehaviors: no originRequestPolicy here, so
+    // CloudFront auto-compression stays enabled.
     guidesBehaviors.push(
         {
             ...baseCacheBehavior,
             targetOriginId: guidesCDN,
             pathPattern: "/guides/*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
             forwardedValues: undefined,
         },
     )
