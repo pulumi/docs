@@ -14,8 +14,17 @@
         {{- end }}
     </script>
 
-    <!-- Preload critical fonts. -->
+    <!-- Preconnect to Segment (used on every page). -->
+    <link rel="preconnect" href="https://cdn.segment.com" crossorigin />
+    {{- if eq hugo.Environment "production" }}
+    <!-- Preconnect to Common Room (production only). -->
+    <link rel="preconnect" href="https://cdn.cr-relay.com" crossorigin />
+    {{- end }}
+
+    <!-- Preload critical fonts (skip monospace on the homepage — not used above the fold). -->
+    {{ if not .IsHome }}
     <link rel="preload" href="/fonts/roboto-mono-regular.woff2" as="font" type="font/woff2" crossorigin />
+    {{ end }}
     <link rel="preload" href="/fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/gilroy-bold.woff2" as="font" type="font/woff2" crossorigin />
 
@@ -284,10 +293,9 @@
         <!-- Facebook Domain Verification -->
         <meta name="facebook-domain-verification" content="phlf6qes2bxa9ufzk8zt2es0qivg8j" />
 
-        <!-- Common Room-->
+        <!-- Common Room (deferred to window.load to avoid blocking first paint) -->
         <script>
-            (function() {
-                if (typeof window === 'undefined') return;
+            window.addEventListener('load', function() {
                 if (typeof window.signals !== 'undefined') return;
                 var script = document.createElement('script');
                 script.src = 'https://cdn.cr-relay.com/v1/site/a725b5ba-75f1-44dc-b250-11023fc10b9d/signals.js';
@@ -303,7 +311,7 @@
                     }, {})
                 );
                 document.head.appendChild(script);
-            })();
+            });
         </script>
 
     {{- end }}
