@@ -1590,21 +1590,24 @@ Delivery: CloudWatch Logs infrastructure v2
 
 | Path Pattern | Origin | TTL | Notes |
 |--------------|--------|-----|-------|
-| Default | S3 Main | 5 min | General content |
+| Default | S3 Main | 10 min | General content |
 | /css/*.css | S3 Main | 1 year | Versioned assets |
 | /js/*.js | S3 Main | 1 year | Versioned assets |
-| /registry/* | Registry | None | Dynamic content |
-| /guides/* | Guides | None | Dynamic content |
-| /docs/reference/pkg/dotnet/* | S3 Main | Default | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
+| /registry/* | Registry | 30 minutes | Dynamic content, origin-proxied |
+| /guides/* | Guides | 30 minutes | Dynamic content, origin-proxied |
+| /docs/* | S3 Main | 10 min | Content negotiation for Accept: text/markdown |
+| /docs/reference/pkg/dotnet/* | S3 Main | 10 min | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
 | /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |
 | /ai/* | S3 Main | 1 week | 410 Gone (Lambda@Edge) |
-| /uploads/* | Uploads | 1 hour | User uploads |
-| /fonts/* | S3 Main | 1 hour | Web fonts |
+| /uploads/* | Uploads | 1 hour | User uploads (legacy forwardedValues for CORS) |
+| /*/rss.xml | S3 Main | 10 min | Syndication feeds (legacy forwardedValues for CORS) |
+| /fonts/* | S3 Main | 1 year | Web fonts |
 | /icons/* | S3 Main | 1 hour | Icons |
 | /logos/brand/* | S3 Main | 30 minutes | Brand logos |
 | /logos/* | S3 Main | 1 hour | Logos |
 | /fingerprinted/* | S3 Main | 1 year (immutable) | Content-hashed assets |
-| *.woff,*.woff2 | S3 Main | 1 year | Font files |
+| /js/components*.js | S3 Main | 0 (no cache) | Web-component loaders, names change per build |
+| /metadata.json | S3 Main | 0 (no cache) | Build metadata |
 
 **Compression:** Enabled (gzip, brotli)
 
@@ -3802,7 +3805,7 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
 **Cache Headers:**
 
 ```yaml
-# Long cache for fingerprinted assets
+# Long cache for fingerprinted / immutable assets (1 year)
 /css/bundle.*.css: 1 year
 /js/bundle.*.js: 1 year
 /js/search.*.js: 1 year
@@ -3812,12 +3815,18 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
 /js/homepage.*.js: 1 year
 /js/marketing-homepage.*.js: 1 year
 /js/marketing.*.js: 1 year
+/fonts/*: 1 year
 /fingerprinted/*: 1 year
 
-# Standard cache for HTML (invalidated on deploy)
-/*.html: 30 minutes
+# Short cache for HTML (invalidated on deploy)
+Default (HTML): 10 minutes
+/docs/*: 10 minutes
 /registry/*: 30 minutes
 /guides/*: 30 minutes
+
+# No cache for build-specific files
+/js/components*.js: 0
+/metadata.json: 0
 ```
 
 **Post-deploy invalidation:**
@@ -3834,20 +3843,48 @@ with content. This allows aggressive TTLs without stale content after deploys.
 
 2. **Cache Patterns**
 
+   Every cache behavior attaches a `CachePolicy` via `cachePolicyId`. Legacy
+   `forwardedValues`/`minTtl`/`defaultTtl`/`maxTtl` on the behavior is only used
+   for the two CORS-forwarding paths (`/uploads/*`, `/*/rss.xml`) since cache
+   policies can't forward arbitrary CORS request headers to S3 without inflating
+   the cache key. CachePolicy is also required to serve Brotli — see
+   [Serving compressed files](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/ServingCompressedFiles.html).
+
+   Use the `cacheKeyPolicy(name, ttl)` helper in `infrastructure/index.ts` to
+   create new cache policies; it enables Brotli + gzip by default.
+
+   > **⚠️ Always use the helper.** CloudFront's automatic compression silently
+   > fails — `compress: true` becomes a no-op, responses ship uncompressed with
+   > no error or warning — if a `CachePolicy` is created without
+   > `enableAcceptEncodingGzip` / `enableAcceptEncodingBrotli`. The helper sets
+   > both. Hand-rolled `aws.cloudfront.CachePolicy` resources will compile,
+   > deploy, and pass review while serving 5–10× more bytes than they should.
+   > This is the bug that affected `/registry/*`, `/guides/*`, and
+   > `/fingerprinted/logos/pkg/*` before this refactor — it took several hours
+   > of investigation to find because every diagnostic signal pointed elsewhere.
+   > Verify with `curl -sD - -o /dev/null -H 'Accept-Encoding: gzip' <url>` (a
+   > GET — `curl -sI` HEAD requests don't always reflect compression state for
+   > cache-policy paths).
+
    ```typescript
    // infrastructure/index.ts
-   cacheBehaviors: [{
-     pathPattern: "/images/*",
-     targetOriginId: s3Origin.id,
-     minTtl: 3600,
-     defaultTtl: 86400,
-     maxTtl: 31536000
+   const imagesCacheKeyPolicy = cacheKeyPolicy("images-cache", oneDay);
+
+   orderedCacheBehaviors: [{
+       ...baseCacheBehavior,
+       pathPattern: "/images/*",
+       cachePolicyId: imagesCacheKeyPolicy.id,
    }]
    ```
 
 3. **Compression**
-   - Enable gzip and brotli
-   - Reduces transfer size by 70-80%
+   - Brotli and gzip are enabled on every cache policy via
+     `enableAcceptEncodingBrotli` / `enableAcceptEncodingGzip`. CloudFront picks
+     Brotli when the viewer sends `Accept-Encoding: br`, and falls back to gzip
+     otherwise. Brotli is roughly 15-24% smaller than gzip on text assets.
+   - Uncompressed origin responses: CloudFront compresses at the edge for any
+     behavior with `compress: true` plus a cache policy that has the encoding
+     flags set.
 
 #### Asset fingerprinting
 

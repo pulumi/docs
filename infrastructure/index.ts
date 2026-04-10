@@ -512,30 +512,34 @@ const oneYear = oneWeek * 52;
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html
 const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 
-// Custom cache policy for origin-proxied behaviors (registry, guides) that need
-// an originRequestPolicy. CloudFront requires a cachePolicyId (not legacy
-// forwardedValues) when an origin request policy is attached.
-const thirtyMinuteCachePolicy = new aws.cloudfront.CachePolicy("thirty-minute-cache", {
-    defaultTtl: thirtyMinutes,
-    maxTtl: thirtyMinutes,
-    minTtl: 0,
-    parametersInCacheKeyAndForwardedToOrigin: {
-        cookiesConfig: { cookieBehavior: "none" },
-        headersConfig: { headerBehavior: "none" },
-        queryStringsConfig: { queryStringBehavior: "none" },
-    },
-});
+// Cache policies are required to serve Brotli-compressed responses. Legacy
+// forwardedValues configurations only support gzip; enabling Brotli requires
+// a CachePolicy with enableAcceptEncodingBrotli set. See:
+// https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/ServingCompressedFiles.html
+function cacheKeyPolicy(name: string, ttl: number): aws.cloudfront.CachePolicy {
+    return new aws.cloudfront.CachePolicy(name, {
+        defaultTtl: ttl,
+        maxTtl: ttl,
+        minTtl: 0,
+        parametersInCacheKeyAndForwardedToOrigin: {
+            enableAcceptEncodingBrotli: true,
+            enableAcceptEncodingGzip: true,
+            cookiesConfig: { cookieBehavior: "none" },
+            headersConfig: { headerBehavior: "none" },
+            queryStringsConfig: { queryStringBehavior: "none" },
+        },
+    });
+}
 
-const oneYearCachePolicy = new aws.cloudfront.CachePolicy("one-year-cache", {
-    defaultTtl: oneYear,
-    maxTtl: oneYear,
-    minTtl: 0,
-    parametersInCacheKeyAndForwardedToOrigin: {
-        cookiesConfig: { cookieBehavior: "none" },
-        headersConfig: { headerBehavior: "none" },
-        queryStringsConfig: { queryStringBehavior: "none" },
-    },
-});
+// Keys for each TTL bucket used by the distribution's cache behaviors. The
+// "thirty-minute-cache" and "one-year-cache" names are preserved so Pulumi
+// updates them in place (adding the Brotli/Gzip flags) rather than replacing.
+const tenMinuteCacheKeyPolicy = cacheKeyPolicy("ten-minute-cache", tenMinutes);
+const thirtyMinuteCachePolicy = cacheKeyPolicy("thirty-minute-cache", thirtyMinutes);
+const oneHourCacheKeyPolicy = cacheKeyPolicy("one-hour-cache", oneHour);
+const oneWeekCacheKeyPolicy = cacheKeyPolicy("one-week-cache", oneWeek);
+const oneYearCachePolicy = cacheKeyPolicy("one-year-cache", oneYear);
+const noCacheKeyPolicy = cacheKeyPolicy("no-cache", 0);
 
 const baseSecurityHeadersConfig = {
     frameOptions: {
@@ -630,6 +634,10 @@ const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs
     },
 });
 
+// baseCacheBehavior holds the fields shared by every behavior. TTLs and
+// cache-key config are NOT set here: each behavior (default or ordered) must
+// attach its own cachePolicyId, or set forwardedValues + minTtl/defaultTtl/maxTtl
+// if it needs CORS header forwarding that a cache policy can't express.
 const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
     compress: true,
@@ -639,17 +647,6 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
     allowedMethods: ["GET", "HEAD", "OPTIONS"],
     cachedMethods: ["GET", "HEAD", "OPTIONS"],
 
-    // S3 doesn't need take any of these values into account when serving content.
-    forwardedValues: {
-        cookies: {
-            forward: "none",
-        },
-        queryString: false,
-    },
-
-    minTtl: 0,
-    defaultTtl: tenMinutes,
-    maxTtl: tenMinutes,
     lambdaFunctionAssociations: config.doEdgeRedirects ? [getEdgeRedirectAssociation()] : [],
     responseHeadersPolicyId: DefaultCachePolicy.id,
 };
@@ -686,7 +683,6 @@ if (config.registryStack) {
             pathPattern: "/registry/*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
-            forwardedValues: undefined,
         },
         // Registry package logos (e.g. /fingerprinted/logos/pkg/aws.<hash>.svg)
         // are served from the registry origin with year-long immutable caching.
@@ -701,7 +697,6 @@ if (config.registryStack) {
             cachePolicyId: oneYearCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
-            forwardedValues: undefined,
         },
     )
 }
@@ -729,7 +724,6 @@ if (config.guidesStack) {
             pathPattern: "/guides/*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
-            forwardedValues: undefined,
         },
     )
 }
@@ -803,6 +797,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     defaultCacheBehavior: {
         ...baseCacheBehavior,
+        cachePolicyId: tenMinuteCacheKeyPolicy.id,
     },
 
     orderedCacheBehaviors: [
@@ -815,6 +810,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/docs/reference/pkg/dotnet/*",
+            cachePolicyId: tenMinuteCacheKeyPolicy.id,
             functionAssociations: [{
                 eventType: "viewer-request",
                 functionArn: dotnetLowercaseFunction.arn,
@@ -825,13 +821,19 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/docs/*",
+            cachePolicyId: tenMinuteCacheKeyPolicy.id,
             functionAssociations: [getMarkdownNegotiationFunctionAssociation()],
             responseHeadersPolicyId: DocsResponseHeadersPolicy.id,
         },
+        // /uploads/* and /*/rss.xml stay on legacy forwardedValues because they
+        // need to forward CORS request headers to the origin. These payloads
+        // are mostly binary (uploads) or small (rss.xml), so the missed Brotli
+        // opportunity is negligible.
         {
             ...baseCacheBehavior,
             targetOriginId: uploadsBucket.arn,
             pathPattern: "/uploads/*",
+            minTtl: 0,
             defaultTtl: oneHour,
             maxTtl: oneHour,
             forwardedValues: {
@@ -850,6 +852,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             ...baseCacheBehavior,
             targetOriginId: originBucket.arn,
             pathPattern: "/*/rss.xml",
+            minTtl: 0,
             defaultTtl: tenMinutes,
             maxTtl: tenMinutes,
             forwardedValues: {
@@ -867,92 +870,79 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/css/bundle.*.css",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/css/marketing.*.css",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/css/homepage.*.css",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/css/marketing-homepage.*.css",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/bundle.*.js",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/search.*.js",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/chunk-*.js",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/consent-manager.*.js",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/algolia.*.js",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/homepage.*.js",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/marketing-homepage.*.js",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/marketing.*.js",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/fonts/*",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         // Docs-site fingerprinted assets (icons, brand logos, customer logos,
@@ -961,29 +951,25 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/fingerprinted/*",
-            defaultTtl: oneYear,
-            maxTtl: oneYear,
+            cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/icons/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
+            cachePolicyId: oneHourCacheKeyPolicy.id,
             responseHeadersPolicyId: BrandLogoCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/logos/brand/*",
-            defaultTtl: thirtyMinutes,
-            maxTtl: thirtyMinutes,
+            cachePolicyId: thirtyMinuteCachePolicy.id,
             responseHeadersPolicyId: BrandLogoCachePolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/logos/*",
-            defaultTtl: oneHour,
-            maxTtl: oneHour,
+            cachePolicyId: oneHourCacheKeyPolicy.id,
             responseHeadersPolicyId: OneHourCachePolicy.id,
         },
         // Web-component loaders must not be cached, because the names of the files they
@@ -991,47 +977,37 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/js/components.js",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            cachePolicyId: noCacheKeyPolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/components/components.js",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            cachePolicyId: noCacheKeyPolicy.id,
         },
         {
             ...baseCacheBehavior,
             pathPattern: "/js/components/components.esm.js",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            cachePolicyId: noCacheKeyPolicy.id,
         },
 
         // Build-metadata files are never cached.
         {
             ...baseCacheBehavior,
             pathPattern: "/metadata.json",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
+            cachePolicyId: noCacheKeyPolicy.id,
         },
 
         // /ai -> /product/neo/ redirect, /ai/* -> 410 Gone
         {
             ...baseCacheBehavior,
             pathPattern: '/ai',
-            defaultTtl: oneWeek,
-            maxTtl: oneWeek,
+            cachePolicyId: oneWeekCacheKeyPolicy.id,
             lambdaFunctionAssociations: [getAIRedirectAndGoneAssociation()],
         },
         {
             ...baseCacheBehavior,
             pathPattern: '/ai/*',
-            defaultTtl: oneWeek,
-            maxTtl: oneWeek,
+            cachePolicyId: oneWeekCacheKeyPolicy.id,
             lambdaFunctionAssociations: [getAIRedirectAndGoneAssociation()],
         },
 
