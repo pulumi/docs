@@ -1018,6 +1018,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     // "100" is the least broad, and also the least expensive.
     priceClass: "PriceClass_All",
 
+    httpVersion: "http2and3",
+
     // Customize error pages.
     // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/custom-error-pages.html
     customErrorResponses: [
