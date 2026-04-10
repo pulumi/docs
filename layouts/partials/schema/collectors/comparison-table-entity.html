@@ -1,0 +1,90 @@
+{{/* Returns ItemList entity for comparison tables found on /comparisons/ pages */}}
+
+{{ $entity := dict }}
+
+{{ if strings.Contains .RelPermalink "/comparisons/" }}
+
+  {{/* Extract the competitor name — try h1, title_tag, then title */}}
+  {{ $title := or .Params.h1 .Params.title_tag .Title }}
+  {{ $competitorName := "" }}
+  {{ $productName := "Pulumi" }}
+  {{ if strings.Contains $title "Pulumi vs" }}
+    {{ $competitorName = replaceRE `^.*Pulumi vs\.?\s*` "" $title }}
+  {{ else if strings.Contains $title " vs" }}
+    {{ $parts := split $title " vs" }}
+    {{ if ge (len $parts) 2 }}
+      {{ $productName = index $parts 0 | strings.TrimSpace }}
+      {{ $competitorName = index $parts 1 | replaceRE `^\.?\s*` "" | strings.TrimSpace }}
+    {{ end }}
+  {{ end }}
+
+  {{ if and $competitorName (strings.Contains .RawContent "| Feature |") }}
+
+    {{/* Extract from "| Feature |" onward */}}
+    {{ $afterHeader := replaceRE `(?s)^.*?\| Feature \|` "| Feature |" .RawContent }}
+
+    {{/* Extract all table lines */}}
+    {{ $allTableLines := findRE `(?m)^\|.+\|` $afterHeader }}
+
+    {{ if ge (len $allTableLines) 3 }}
+
+      {{ $dataLines := $allTableLines | after 2 }}
+
+      {{/* Use Scratch to accumulate rows inside range */}}
+      {{ $.Scratch.Set "compRows" slice }}
+
+      {{ range $dataLines }}
+        {{ $line := . | strings.TrimSpace }}
+        {{ if not (findRE `^\|[\s\-:|]+\|$` $line) }}
+          {{ $cells := split $line "|" }}
+          {{ if ge (len $cells) 4 }}
+            {{ $feature := index $cells 1 | strings.TrimSpace }}
+            {{ $feature = replaceRE `\[([^\]]+)\]\([^)]+\)` "$1" $feature }}
+            {{ $val1 := index $cells 2 | strings.TrimSpace }}
+            {{ $val2 := index $cells 3 | strings.TrimSpace }}
+            {{ $val1 = replaceRE `<[^>]+>` " " $val1 }}
+            {{ $val2 = replaceRE `<[^>]+>` " " $val2 }}
+            {{ $val1 = replaceRE `\[([^\]]+)\]\([^)]+\)` "$1" $val1 }}
+            {{ $val2 = replaceRE `\[([^\]]+)\]\([^)]+\)` "$1" $val2 }}
+            {{ $existing := $.Scratch.Get "compRows" }}
+            {{ $.Scratch.Set "compRows" ($existing | append (dict "feature" $feature "product" $val1 "competitor" $val2)) }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      {{ $rows := $.Scratch.Get "compRows" }}
+      {{ $.Scratch.Delete "compRows" }}
+
+      {{ if len $rows }}
+
+        {{/* Build ItemList with ListItem entries */}}
+        {{ $.Scratch.Set "compItems" slice }}
+        {{ range $i, $row := $rows }}
+          {{ $position := add $i 1 }}
+          {{ $existing := $.Scratch.Get "compItems" }}
+          {{ $.Scratch.Set "compItems" ($existing | append (dict
+            "@type" "ListItem"
+            "position" $position
+            "name" $row.feature
+            "description" (printf "%s: %s | %s: %s" $productName $row.product $competitorName $row.competitor)
+          )) }}
+        {{ end }}
+
+        {{ $items := $.Scratch.Get "compItems" }}
+        {{ $.Scratch.Delete "compItems" }}
+
+        {{ $entity = dict
+          "@type" "ItemList"
+          "@id" "#comparison-table"
+          "name" (printf "%s vs. %s Feature Comparison" $productName $competitorName)
+          "description" (printf "Side-by-side feature comparison of %s and %s for infrastructure as code" $productName $competitorName)
+          "numberOfItems" (len $items)
+          "itemListElement" $items
+        }}
+
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $entity }}
