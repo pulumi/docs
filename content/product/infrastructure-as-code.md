@@ -177,28 +177,42 @@ sections:
     cta_link: /docs/iac/concepts/components
     code_title: "index.ts"
     code_snippets:
-
       - language: typescript
         label: TypeScript
         title: "index.ts"
         code: |
-          import * as pulumi from "@pulumi/pulumi";
-          import * as aws from "@pulumi/aws";
           import * as awsx from "@pulumi/awsx";
 
-          const bucket = new aws.s3.Bucket("my-bucket");
+          const vpc = new awsx.ec2.Vpc("vpc", {
+              subnetSpecs: [
+                  { type: awsx.ec2.SubnetType.Public, cidrMask: 22 },
+                  { type: awsx.ec2.SubnetType.Private, cidrMask: 20 },
+              ],
+          }, { protect: true });
 
-          export const bucketName = bucket.id;
+          export const vpcId = vpc.vpcId;
+          export const privateSubnetIds = vpc.privateSubnetIds;
+          export const publicSubnetIds = vpc.publicSubnetIds;
       - language: python
         label: Python
         title: "__main__.py"
         code: |
           import pulumi
-          from pulumi_aws import s3
+          import pulumi_awsx as awsx
 
-          bucket = s3.Bucket("my-bucket")
+          vpc = awsx.ec2.Vpc("vpc",
+              awsx.ec2.VpcArgs(
+                  subnet_specs=[
+                      awsx.ec2.SubnetSpecArgs(type=awsx.ec2.SubnetType.PUBLIC, cidr_mask=22),
+                      awsx.ec2.SubnetSpecArgs(type=awsx.ec2.SubnetType.PRIVATE, cidr_mask=20),
+                  ],
+              ),
+              opts=pulumi.ResourceOptions(protect=True),
+          )
 
-          pulumi.export("bucketName", bucket.id)
+          pulumi.export("vpcId", vpc.vpc_id)
+          pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+          pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
       - language: go
         label: Go
         title: "main.go"
@@ -206,71 +220,87 @@ sections:
           package main
 
           import (
-            "github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-            "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+              "github.com/pulumi/pulumi-awsx/sdk/v3/go/awsx/ec2"
+              "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
           )
 
           func main() {
-            pulumi.Run(func(ctx *pulumi.Context) error {
-              bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
-              if err != nil {
-                return err
-              }
-              ctx.Export("bucketName", bucket.ID())
-              return nil
-            })
+              pulumi.Run(func(ctx *pulumi.Context) error {
+                  vpc, err := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{
+                      SubnetSpecs: []ec2.SubnetSpecArgs{
+                          {Type: ec2.SubnetTypePublic, CidrMask: pulumi.IntRef(22)},
+                          {Type: ec2.SubnetTypePrivate, CidrMask: pulumi.IntRef(20)},
+                      },
+                  }, pulumi.Protect(true))
+                  if err != nil {
+                      return err
+                  }
+
+                  ctx.Export("vpcId", vpc.VpcId)
+                  ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+                  ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+                  return nil
+              })
           }
       - language: csharp
         label: C#
-        title: "MyStack.cs"
+        title: "Program.cs"
         code: |
           using Pulumi;
-          using Pulumi.Aws.S3;
+          using System.Collections.Generic;
+          using Pulumi.Awsx.Ec2.Inputs;
+          using Ec2 = Pulumi.Awsx.Ec2;
 
-          class MyStack : Stack
+          return await Deployment.RunAsync(() =>
           {
-              public MyStack()
+              var vpc = new Ec2.Vpc("vpc", new()
               {
-                  var bucket = new Bucket("my-bucket");
-                  this.BucketName = bucket.Id;
-              }
+                  SubnetSpecs =
+                  {
+                      new SubnetSpecArgs { Type = Ec2.SubnetType.Public, CidrMask = 22 },
+                      new SubnetSpecArgs { Type = Ec2.SubnetType.Private, CidrMask = 20 },
+                  },
+              }, new ComponentResourceOptions { Protect = true });
 
-              [Output]
-              public Output<string> BucketName { get; set; }
-          }
+              return new Dictionary<string, object?>
+              {
+                  ["vpcId"] = vpc.VpcId,
+                  ["privateSubnetIds"] = vpc.PrivateSubnetIds,
+                  ["publicSubnetIds"] = vpc.PublicSubnetIds,
+              };
+          });
       - language: java
         label: Java
         title: "App.java"
         code: |
-          package s3ssite;
+          package myproject;
 
-          import com.pulumi.Context;
+          import java.util.Arrays;
           import com.pulumi.Pulumi;
-          import com.pulumi.core.Output;
-          import com.pulumi.aws.s3.Bucket;
+          import com.pulumi.awsx.ec2.Vpc;
+          import com.pulumi.awsx.ec2.VpcArgs;
+          import com.pulumi.awsx.ec2.enums.SubnetType;
+          import com.pulumi.awsx.ec2.inputs.SubnetSpecArgs;
+          import com.pulumi.resources.ComponentResourceOptions;
 
-          public class Infra {
+          public class App {
               public static void main(String[] args) {
-                  Pulumi.run(Infra::stack);
-              }
+                  Pulumi.run(ctx -> {
+                      var vpc = new Vpc("vpc",
+                          VpcArgs.builder()
+                              .subnetSpecs(Arrays.asList(
+                                  SubnetSpecArgs.builder().type(SubnetType.Public).cidrMask(22).build(),
+                                  SubnetSpecArgs.builder().type(SubnetType.Private).cidrMask(20).build()
+                              ))
+                              .build(),
+                          ComponentResourceOptions.builder().protect(true).build());
 
-              private static void stack(Context ctx) {
-                  final var myBucket = new Bucket("my-bucket");
-                  ctx.export("endpoint", Output.format("http://%s",
-                      myBucket.bucketDomainName()));
+                      ctx.export("vpcId", vpc.vpcId());
+                      ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+                      ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+                  });
               }
           }
-      - language: yaml
-        label: YAML
-        title: "app.yaml"
-        code: |
-          name: my-stack
-          runtime: yaml
-          resources:
-              bucket:
-                  type: aws:s3:Bucket
-          outputs:
-              bucketName: ${bucket.id}
     anchor: packages
 
   - type: three_column
