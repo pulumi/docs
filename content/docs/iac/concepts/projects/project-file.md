@@ -103,19 +103,20 @@ This option can be set to `mypy` or `pyright`. (For additional type checkers, fi
 
 `packages` is a map of package names to either `package add` arguments or structured package declarations. It specifies the packages that the program is utilizing. The command `pulumi install` will install these packages and generate the corresponding SDKs for them.
 
-#### Values
+#### String shorthand
 
-| Property | Type | Required | Expression | Description |
-| - | - | - | - | - |
-| `argument` | string | No | No | A string in the same format as it would be when passed to [`package add`](/docs/iac/cli/commands/pulumi_package_add/) |
+Each package value can be a plain string in the same format as the argument to [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/), for example `"aws@6.0.0"`. The string is split on `@` into a source and optional version.
 
-#### Package declarations
+#### Structured declarations
+
+Alternatively, a package value can be an object with the following properties:
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
 | `source` | string | Yes | No | The source of the package. Can be a path to a local plugin, a URL to a Git repository, or a pulumi plugin name. |
 | `version` | string | No | No | The version of the package. |
-| `parameters` | List<string> | No | No | A list of parameters for the `source` package |
+| `parameters` | List<string> | No | No | A list of parameters for the `source` package. |
+| `pluginDownloadURL` | string | No | No | The server to download the plugin from, if a custom download location is needed. |
 
 ### `config` options
 
