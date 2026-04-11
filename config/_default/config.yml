@@ -38,6 +38,11 @@ outputFormats:
     baseName: "llms"
     isPlainText: true
     permalinkable: false
+  llmsfull:
+    mediaType: "text/plain"
+    baseName: "llms-full"
+    isPlainText: true
+    permalinkable: false
   markdown:
     mediaType: "text/markdown"
     baseName: "index"
@@ -64,6 +69,7 @@ outputs:
     - HTML
     - JSON
     - txtfull
+    - llmsfull
   section:
     - HTML
   page:

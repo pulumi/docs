@@ -1,0 +1,59 @@
+{{/*
+  llms-full.txt — curated, LLM-optimized concatenation of Pulumi docs.
+  Targets ~200K tokens. Scope is the conceptual mental model + CLI
+  surface area, not how-tos / language tutorials / cloud-specific guides
+  (those are searchable and repetitive across languages).
+
+  CLI command pages are auto-generated reference; we strip the per-flag
+  Options section and keep the Synopsis + usage pattern only.
+*/}}
+# Pulumi Documentation (Curated Full Content)
+
+> Concatenated markdown source for the most LLM-relevant Pulumi documentation: core concepts (IaC + ESC), CLI reference (synopsis only), Automation API, language SDK overview, AI, IDP, Deployments, and Insights. Excludes how-to guides, language-specific tutorials, cloud-specific walkthroughs, and detailed CLI flag references — those are best fetched on demand from individual pages or via the docs sitemap.
+
+For per-page markdown, request `Accept: text/markdown` against any docs URL. For the full sitemap, see https://www.pulumi.com/docs/cli-sitemap.json.
+
+Each page below is delimited by a line of three dashes.
+
+{{- $includes := slice
+  "docs/iac/concepts"
+  "docs/iac/cli"
+  "docs/iac/automation-api"
+  "docs/iac/languages-sdks"
+  "docs/esc/concepts"
+  "docs/esc/environments"
+  "docs/ai"
+  "docs/idp/concepts"
+  "docs/deployments"
+  "docs/insights"
+}}
+{{- $excludes := slice
+  "docs/deployments/deployments"
+  "docs/deployments/get-started"
+  "docs/insights/policy"
+  "docs/insights/discovery"
+  "docs/insights/self-hosted"
+}}
+{{- range where site.RegularPages "Section" "docs" }}
+{{- $p := . }}
+{{- $path := strings.TrimPrefix "/" $p.RelPermalink }}
+{{- $path = strings.TrimSuffix "/" $path }}
+{{- $match := false }}
+{{- range $includes }}{{ if hasPrefix $path . }}{{ $match = true }}{{ end }}{{ end }}
+{{- range $excludes }}{{ if hasPrefix $path . }}{{ $match = false }}{{ end }}{{ end }}
+{{- if and $match (not $p.Params.llms_exclude) (ne $p.Title "") }}
+
+---
+
+# {{ $p.Title }}
+
+Source: {{ $p.Permalink }}
+
+{{ if hasPrefix $path "docs/iac/cli/commands/" }}
+{{- /* CLI commands: keep synopsis + usage pattern, drop Options/flags. */ -}}
+{{- index (split $p.RawContent "## Options") 0 -}}
+{{ else }}
+{{- $p.RawContent -}}
+{{ end }}
+{{- end }}
+{{- end }}
