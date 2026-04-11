@@ -49,11 +49,15 @@ Each page below is delimited by a line of three dashes.
 
 Source: {{ $p.Permalink }}
 
-{{ if hasPrefix $path "docs/iac/cli/commands/" }}
+{{ $raw := $p.RawContent }}
+{{- if hasPrefix $path "docs/iac/cli/commands/" }}
 {{- /* CLI commands: keep synopsis + usage pattern, drop Options/flags. */ -}}
-{{- index (split $p.RawContent "## Options") 0 -}}
-{{ else }}
-{{- $p.RawContent -}}
-{{ end }}
+{{- $raw = index (split $raw "## Options") 0 -}}
+{{- end }}
+{{- /* Strip raw HTML tags and collapse the resulting blank-line runs. */ -}}
+{{- $raw = replaceRE "<[^>]+>" "" $raw -}}
+{{- $raw = htmlUnescape $raw -}}
+{{- $raw = replaceRE "\n[ \t]*\n[ \t]*(\n[ \t]*)+" "\n\n" $raw -}}
+{{- $raw -}}
 {{- end }}
 {{- end }}
