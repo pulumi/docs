@@ -54,7 +54,8 @@ Source: {{ $p.Permalink }}
 {{- /* CLI commands: keep synopsis + usage pattern, drop Options/flags. */ -}}
 {{- $raw = index (split $raw "## Options") 0 -}}
 {{- end }}
-{{- /* Strip raw HTML tags and collapse the resulting blank-line runs. */ -}}
+{{- /* Strip Hugo shortcode delimiters, raw HTML tags, then collapse blank-line runs. */ -}}
+{{- $raw = replaceRE "\\{\\{[<%][^}]*[%>]\\}\\}" "" $raw -}}
 {{- $raw = replaceRE "<[^>]+>" "" $raw -}}
 {{- $raw = htmlUnescape $raw -}}
 {{- $raw = replaceRE "\n[ \t]*\n[ \t]*(\n[ \t]*)+" "\n\n" $raw -}}
