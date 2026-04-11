@@ -55,9 +55,11 @@
     <!--
         We use taxonomy pages for tags and authors for our blog posts. These
         pages end up cannibalising other pages on our site that rank for key terms.
-        To avoid this, we add the `noidex` tag to tell search engines not index taxonomy pages.
+        To avoid this, we add the `noindex` tag to tell search engines not index taxonomy pages.
+        Tutorial collection pages (/tutorials/*) are excluded as they serve as
+        valuable landing pages.
     -->
-    {{ if .Data.Singular }}
+    {{ if and .Data.Singular (ne .Data.Singular "collection") }}
         <meta name="robots" content="noindex" />
     {{ end }}
 
