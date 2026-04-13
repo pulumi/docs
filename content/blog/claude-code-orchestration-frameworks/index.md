@@ -17,19 +17,19 @@ tags:
     - ai-coding
 social:
     twitter: |
-        AI coding agents break down in predictable ways. Context rot. Tests quietly skipped. Scope that drifts until you're paying for infrastructure nobody asked for.
+        AI coding agents fail in recognizable ways. Context fills up and early instructions fade, tests get skipped, and scope expands past what you asked for. Three separate community teams built frameworks to address these problems, each taking a completely different approach.
 
-        Three community frameworks independently built answers — and they take completely different approaches. We tested all three on real infrastructure workflows to find out which failure mode each one actually fixes.
+        We tested all three on real infrastructure workflows. Which one helps depends on which problem keeps hitting you.
     linkedin: |
-        There's a pattern every team building with AI coding agents eventually hits. First session: impressive. By the third session on a complex project, the agent has forgotten half your requirements, stopped writing tests, and started provisioning resources nobody asked for.
+        There is a pattern that teams building with AI coding agents tend to hit on longer projects. The first session is impressive. By the third, the agent has lost track of earlier requirements and started adding infrastructure nobody asked for.
 
-        The context window doesn't care how well you wrote your prompt. It fills up. Earlier instructions lose weight. Quality degrades — predictably, every time.
+        The context window is the core issue. It fills up, and earlier instructions carry less weight as it does. Writing better prompts helps at the start but does not solve the underlying problem.
 
-        Three community frameworks converged on fixes, and they take completely different approaches. We spent several weeks testing all three on real infrastructure workflows with Pulumi. Which one helps depends entirely on which failure mode keeps hitting you.
+        Three community frameworks tackled this in different ways. We spent a few weeks running all three on real Pulumi infrastructure work. Which one helps most comes down to which problem keeps showing up for you.
     bluesky: |
-        AI coding agents have a window where everything works. After that, context rot, skipped tests, and scope drift are predictable — regardless of which agent you're using.
+        AI coding agents tend to work well at first and then run into the same issues: context rot on long sessions, tests that get quietly skipped, and scope that grows past what you asked for. It happens across every agent, not just one.
 
-        Three community frameworks built different answers to this problem. We tested them on real Pulumi infrastructure workflows. Which one helps depends on what keeps going wrong.
+        Three community frameworks built different approaches to these problems. We tested them on real Pulumi infrastructure workflows. Which one helps depends on where things tend to break down.
 ---
 
 Three community frameworks have emerged that fix the specific ways AI coding agents break down on real projects. [Superpowers](https://github.com/obra/superpowers) enforces test-driven development. [GSD](https://github.com/gsd-build/get-shit-done) prevents context rot. [GSTACK](https://github.com/garrytan/gstack) adds role-based governance. All three started with Claude Code but now work across Cursor, Codex, Windsurf, Gemini CLI, and more.
