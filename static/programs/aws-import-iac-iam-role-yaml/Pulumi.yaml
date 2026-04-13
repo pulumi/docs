@@ -19,3 +19,4 @@ resources:
                 Service: lambda.amazonaws.com
     options:
       import: pulumi-tutorial-iam-role
+# audit-touch: jkodroff/audit-ignore-txt

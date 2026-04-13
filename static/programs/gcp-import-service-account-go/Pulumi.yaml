@@ -5,3 +5,4 @@ config:
   pulumi:tags:
     value:
       pulumi:template: gcp-go
+# audit-touch: jkodroff/audit-ignore-txt

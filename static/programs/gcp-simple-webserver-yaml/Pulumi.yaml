@@ -60,3 +60,4 @@ resources:
 outputs:
   instanceURL:
     value: "http://${ipAddress.address}"
+# audit-touch: jkodroff/audit-ignore-txt

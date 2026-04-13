@@ -18,3 +18,4 @@ resources:
       location: eastus
     options:
       import: ${importPath}
+# audit-touch: jkodroff/audit-ignore-txt

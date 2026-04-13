@@ -8,3 +8,4 @@ config:
   pulumi:tags:
     value:
       pulumi:template: helm-kubernetes-typescript
+# audit-touch: jkodroff/audit-ignore-txt

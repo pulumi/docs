@@ -50,3 +50,4 @@ resources:
 # Export some values for use elsewhere
 outputs:
   name: ${ingresscontroller.name}
+# audit-touch: jkodroff/audit-ignore-txt
