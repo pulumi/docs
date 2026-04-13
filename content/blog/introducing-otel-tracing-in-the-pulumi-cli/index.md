@@ -17,9 +17,9 @@ schema_type: auto
 social:
     twitter: Introducing OTel Tracing in the Pulumi CLI
     linkedin: |
-    Introducing OTel Tracing in the Pulumi CLI
+        Introducing OTel Tracing in the Pulumi CLI
 
-    We've recently introduced OTel tracing in the pulumi CLI, to replace our current OpenTelemetry setup. Read the blog post to find out how we did it, and how you can use it.
+        We've recently introduced OTel tracing in the pulumi CLI, to replace our current OpenTelemetry setup. Read the blog post to find out how we did it, and how you can use it.
     bluesky: Introducing OTel Tracing in the Pulumi CLI
 ---
 
