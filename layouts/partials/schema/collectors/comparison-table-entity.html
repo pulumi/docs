@@ -2,31 +2,22 @@
 
 {{ $entity := dict }}
 
-{{ if strings.Contains .RelPermalink "/comparisons/" }}
+{{ if and (strings.Contains .RelPermalink "/comparisons/") (strings.Contains .RawContent "| Feature |") }}
 
-  {{/* Extract the competitor name — try h1, title_tag, then title */}}
-  {{ $title := or .Params.h1 .Params.title_tag .Title }}
-  {{ $competitorName := "" }}
-  {{ $productName := "Pulumi" }}
-  {{ if strings.Contains $title "Pulumi vs" }}
-    {{ $competitorName = replaceRE `^.*Pulumi vs\.?\s*` "" $title }}
-  {{ else if strings.Contains $title " vs" }}
-    {{ $parts := split $title " vs" }}
-    {{ if ge (len $parts) 2 }}
-      {{ $productName = index $parts 0 | strings.TrimSpace }}
-      {{ $competitorName = index $parts 1 | replaceRE `^\.?\s*` "" | strings.TrimSpace }}
-    {{ end }}
-  {{ end }}
+  {{/* Extract from "| Feature |" onward */}}
+  {{ $afterHeader := replaceRE `(?s)^.*?\| Feature \|` "| Feature |" .RawContent }}
 
-  {{ if and $competitorName (strings.Contains .RawContent "| Feature |") }}
+  {{/* Extract all table lines */}}
+  {{ $allTableLines := findRE `(?m)^\|.+\|` $afterHeader }}
 
-    {{/* Extract from "| Feature |" onward */}}
-    {{ $afterHeader := replaceRE `(?s)^.*?\| Feature \|` "| Feature |" .RawContent }}
+  {{ if ge (len $allTableLines) 3 }}
 
-    {{/* Extract all table lines */}}
-    {{ $allTableLines := findRE `(?m)^\|.+\|` $afterHeader }}
+    {{/* Extract column names from the table header row (always in correct column order) */}}
+    {{ $headerCells := split (index $allTableLines 0) "|" }}
+    {{ $productName := index $headerCells 2 | strings.TrimSpace }}
+    {{ $competitorName := index $headerCells 3 | strings.TrimSpace }}
 
-    {{ if ge (len $allTableLines) 3 }}
+    {{ if $competitorName }}
 
       {{ $dataLines := $allTableLines | after 2 }}
 
