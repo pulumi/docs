@@ -276,7 +276,11 @@ Avoiding these common pitfalls requires a strategic approach to cloud security w
 
 ## Learn more
 
-Cloud security is an evolving discipline that requires ongoing attention as organizations expand their cloud footprints. By implementing consistent security controls and leveraging automation to maintain security posture, organizations can confidently leverage cloud technologies while effectively managing risks.
+Cloud security is an evolving discipline that requires ongoing attention as organizations expand their cloud footprints. Modern approaches increasingly emphasize **zero trust architecture** — the principle of "never trust, always verify" — which assumes that threats can exist both inside and outside the network perimeter. Zero trust requires continuous verification of identity and device posture for every access request, regardless of network location.
+
+Organizations should also consider adopting **dynamic, short-lived credentials** rather than static long-lived secrets. Tools like [Pulumi ESC](/product/esc/) (Environments, Secrets, and Configuration) enable teams to centralize secrets and configuration management, generate dynamic credentials via OIDC, and eliminate the risks associated with long-lived static credentials scattered across environments.
+
+By implementing consistent security controls and leveraging automation to maintain security posture, organizations can confidently leverage cloud technologies while effectively managing risks.
 
 Modern infrastructure as code practices play a critical role in cloud security by enabling teams to define secure configurations, enforce policies, and maintain consistency across environments. While these tools aren't a complete security solution on their own, they provide a strong foundation for implementing security controls at the infrastructure level.
 

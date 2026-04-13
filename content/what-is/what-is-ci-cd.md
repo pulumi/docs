@@ -72,13 +72,15 @@ An effective CI/CD pipeline automates and streamlines software development and d
 
 For a detailed exploration and steps to implement CI/CD and DevOps practices, refer to the following Pulumi tools and resources:
 
-* **Continuous integration and continuous delivery (CI/CD)**: For integrating CI/CD processes with Pulumi, visit our [CI/CD integration documentation](https://www.pulumi.com/docs/guides/continuous-delivery/).
+* **Pulumi Deployments**: Pulumi offers its own managed deployment service, [Pulumi Deployments](/product/pulumi-deployments/), which provides automated infrastructure deployments triggered by Git pushes, API calls, or click-to-deploy actions in the Pulumi Cloud console.
 
-* **Policy as code**: To manage policies using Pulumi Policies, visit the [Pulumi Policies documentation](https://www.pulumi.com/docs/insights/policy/).
+* **Continuous integration and continuous delivery (CI/CD)**: For integrating CI/CD processes with Pulumi, visit our [CI/CD integration documentation](/docs/iac/guides/continuous-delivery/).
+
+* **Policy as code**: To manage policies using Pulumi Policies, visit the [Pulumi Policies documentation](/docs/insights/policy/).
 
 * **[Infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/)**: Start with Infrastructure as Code using Pulumi by accessing our [getting started guide](https://www.pulumi.com/docs/get-started/).
 
-* **Version control**: Learn about version control systems supported by Pulumi in our [version control documentation](https://www.pulumi.com/docs/intro/concepts/state/#backends).
+* **Version control**: Learn about version control systems supported by Pulumi in our [version control documentation](/docs/iac/concepts/state-and-backends/).
 
 ## Learn more
 

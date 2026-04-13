@@ -53,13 +53,19 @@ hobbies:
   - Reading
   - Coding
 languages:
-  python: Expert
+  python:
+    level: Expert
     version: 3.7
-  typescript: Expert
-  go: Expert
-  csharp: Expert
-  java: Expert
-  yaml: Expert
+  typescript:
+    level: Expert
+  go:
+    level: Expert
+  csharp:
+    level: Expert
+  java:
+    level: Expert
+  yaml:
+    level: Expert
 ```
 
 The beginning of a YAML file is usually three dashes (`---`) on the first line. From there, your file is built out of key-value pairs.
@@ -91,13 +97,19 @@ You can even nest these key-value pairs for more granular information:
 
 ```yaml
 languages:
-  python: Expert
+  python:
+    level: Expert
     version: 3.7
-  typescript: Expert
-  go: Expert
-  csharp: Expert
-  java: Expert
-  yaml: Expert
+  typescript:
+    level: Expert
+  go:
+    level: Expert
+  csharp:
+    level: Expert
+  java:
+    level: Expert
+  yaml:
+    level: Expert
 ```
 
 ## The Benefits of YAML With Pulumi
@@ -211,6 +223,6 @@ Finally, we have an output. This is a value handed to you by Pulumi, after the c
 
 Defining infrastructure doesn't get much simpler than that! [Try it yourself](/docs/languages-sdks/yaml/) and get started with any major cloud provider in a snap.
 
-## Pulumi Corporation
+## Learn more
 
-Pulumi lets infrastructure, developer, and security teams deliver infrastructure as code faster, using programming ([Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet/), and [Java](/docs/languages-sdks/java/) and markup ([YAML, JSON, and CUE](/docs/languages-sdks/yaml/) languages they already know. It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/docs/get-started/)
+Pulumi lets infrastructure, developer, and security teams deliver infrastructure as code faster, using programming languages they already know — [Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet/), [Java](/docs/languages-sdks/java/), and [YAML](/docs/languages-sdks/yaml/). It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/docs/get-started/)

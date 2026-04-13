@@ -20,7 +20,7 @@ Some FaaS platforms used in serverless architectures include:
 
 * [AWS Lambda](https://aws.amazon.com/lambda/)
 * [Azure Functions](https://azure.microsoft.com/en-us/products/functions/)
-* [Google Cloud Functions](https://cloud.google.com/functions/)
+* [Google Cloud Run functions](https://cloud.google.com/functions/) (formerly Google Cloud Functions)
 * [Netlify Functions](https://functions.netlify.com/)
 * [Cloudflare Workers](https://workers.cloudflare.com/)
 

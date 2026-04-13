@@ -1,7 +1,7 @@
 ---
 title: Python for DevOps
 meta_desc: |
-     Learn Python for DevOps with Pulumi’s Cloud Engineering Platform to deliver modern cloud applications faster and speed innovation.
+     Learn Python for DevOps with Pulumi to deliver modern cloud applications faster and speed innovation.
 
 type: what-is
 page_title: "Python for DevOps"
@@ -47,7 +47,7 @@ Python is an ideal language for MLOps because it’s popular not just with data 
 
 ## Benefits of Using Python for DevOps
 
-We’ve talked about how well-suited Python is for MLOps but, of course, it’s been very popular with DevOps engineers for years. The IEEE Spectrum's sixth annual interactive ranking of the top programming languages puts Python firmly on top. This popularity is driven in no small part by the vast number of specialized libraries available for it, which makes Python suitable for all sorts of applications. For example, in the domain of artificial intelligence, the Keras library is a top choice among deep-learning developers. Keras provides an interface to the TensorFlow, CNTK, and Theano deep-learning frameworks and tool kits.
+We’ve talked about how well-suited Python is for MLOps but, of course, it’s been very popular with DevOps engineers for years. The IEEE Spectrum’s annual interactive ranking of the top programming languages has consistently placed Python at or near the top. This popularity is driven in no small part by the vast number of specialized libraries available for it, which makes Python suitable for all sorts of applications. For example, in the domain of artificial intelligence, the Keras library is a top choice among deep-learning developers. Keras provides a high-level interface to TensorFlow, JAX, and PyTorch deep-learning frameworks.
 
 Python is also known for its easy-to-remember and direct syntax, which makes it easy for the developer to build fast. Python is a great language for scripting, deployment automation, and web development. This makes it one of the most suitable languages for DevOps. Whether you’re in web development, want to work in data science, or simply want to enhance the backend of an existing app, Python is the language to use.
 
@@ -62,6 +62,6 @@ Whether you’re already an experienced ops practitioner or a data scientist who
 
 The right platform means you don’t need to learn domain-specific languages that are tied to a particular cloud provider. It will help you provision and manage your infrastructure and it will provide features such as state management and concurrency management. That’s where tools like Pulumi come in – allowing you to manage infrastructure with languages and constructs you already know.
 
-## Pulumi Corporation
+## Learn more
 
-Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including Python, Node.js (JavaScript, TypeScript), Go, and .NET (C#, F#, VB). [Get started for free today](/docs/get-started/) or check out our [on-demand workshops](/events#on-demand) and tutorials for getting started with IaC and Python.
+Pulumi unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open source tools help infrastructure teams tame the cloud’s complexity with infrastructure as code using the world’s most popular programming languages and communities, including Python, Node.js (JavaScript, TypeScript), Go, .NET (C#, F#, VB), Java, and YAML. [Get started for free today](/docs/get-started/) or check out our [on-demand workshops](/events#on-demand) and tutorials for getting started with IaC and Python.

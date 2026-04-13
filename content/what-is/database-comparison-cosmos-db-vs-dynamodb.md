@@ -60,8 +60,8 @@ Cosmos DB is best if you need the wider flexibility of more data models, as well
 
 DynamoDB is best if the rest of your infrastructure is already on AWS or your priority is high performance for low cost over flexibility.
 
-Both Cosmos DB and DynamoDB are quick to stand up when using Pulumi. Try [Cosmos DB](/blog/how-to-build-globally-distributed-applications-with-azure-cosmos-db-and-pulumi/) and [DynamoDB](/docs/aws/dynamodb/) for yourself!
+Both Cosmos DB and DynamoDB are quick to stand up when using Pulumi. Try [Cosmos DB](/blog/how-to-build-globally-distributed-applications-with-azure-cosmos-db-and-pulumi/) and [DynamoDB](/registry/packages/aws/api-docs/dynamodb/) for yourself!
 
-## Pulumi Corporation
+## Learn more
 
-Pulumi lets infrastructure, developer, and security teams deliver infrastructure as code faster, using programming ([Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet/), and [Java](/docs/languages-sdks/java/) and markup ([YAML, JSON, and CUE](/docs/languages-sdks/yaml/) languages they already know. It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/docs/get-started/)
+Pulumi lets infrastructure, developer, and security teams deliver infrastructure as code faster, using programming languages they already know — [Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet/), [Java](/docs/languages-sdks/java/), and [YAML](/docs/languages-sdks/yaml/). It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/docs/get-started/)

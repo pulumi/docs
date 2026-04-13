@@ -7,7 +7,7 @@ type: what-is
 page_title: Run 'aws sts get-caller-identity' using Dynamic Credentials
 ---
 
-The [`aws sts get-caller-identity` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sts/get-caller-identity.html) is part of the AWS Command Line Interface (CLI) and is utilized for retrieving the details about the IAM user or role whose credentials are used to call operations in AWS. Amazon Simple Token Service (STS)  enables users to request temporary, limited-privilege credentials for AWS interactions.
+The [`aws sts get-caller-identity` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sts/get-caller-identity.html) is part of the AWS Command Line Interface (CLI) and is utilized for retrieving the details about the IAM user or role whose credentials are used to call operations in AWS. Amazon Security Token Service (STS) enables users to request temporary, limited-privilege credentials for AWS interactions.
 
 Using the `aws sts get-caller-identity` command is key in managing access to AWS, providing an easy way to view the details of the entity that was used to make a specific call to AWS. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials for security. Typically, there are two kinds of credentials used: temporary credentials, offering heightened security but requiring manual updates, and long-term credentials, which are more convenient but pose greater security risks.
 
@@ -58,7 +58,7 @@ This service can dynamically generate credentials on your behalf each time you n
 
 ### Step 3: Create a new Pulumi ESC environment
 
-Once OIDC has been configured between Pulumi and AWS, the next steps is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
+Once OIDC has been configured between Pulumi and AWS, the next step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
 
 {{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
 

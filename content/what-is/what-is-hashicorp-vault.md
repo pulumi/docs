@@ -4,11 +4,13 @@ meta_desc: |
      HashiCorp Vault is a tool for securing, storing, and tightly controlling access to tokens, passwords, certificates, and encryption keys.
 
 type: what-is
-page_title: "What is Hashicorp Vault?"
+page_title: "What is HashiCorp Vault?"
 ---
 ### What is HashiCorp Vault?
 
 HashiCorp Vault is a tool for secure secrets management, essential for storing and safeguarding sensitive data like API keys and passwords. It's one of many options in the ecosystem of secrets and configuration management tools supported by [Pulumi ESC](https://www.pulumi.com/product/esc/). As the complexity of modern cloud infrastructure has grown, so has the need for robust and scalable secrets management solutions. Vault's integration with Pulumi ESC addresses this need by providing a secure, centralized platform for managing sensitive information across multiple cloud environments. By leveraging Vault's capabilities within Pulumi ESC and [Pulumi Cloud](https://www.pulumi.com/product/pulumi-cloud/) infrastructure as code solutions, developers can ensure that their cloud infrastructure is secure and compliant with best practices, even as the underlying systems, complexity and requirements evolve.
+
+In 2023, HashiCorp changed Vault's license from the Mozilla Public License (MPL) to the Business Source License (BSL 1.1), which restricts certain commercial uses. This license change prompted the creation of [OpenBao](https://openbao.org/), a community-driven open source fork of Vault under the Linux Foundation. In 2024, IBM completed its acquisition of HashiCorp, bringing Vault and other HashiCorp products under IBM's ownership.
 
 In this article, we'll cover the key features of [HashiCorp Vault](https://www.hashicorp.com/products/vault), why secret management is important and share the use cases of how Vault integrates into various cloud architectures, enhancing the security and management of sensitive data in complex cloud environments.
 
@@ -24,9 +26,9 @@ In this article, we'll cover the key features of [HashiCorp Vault](https://www.h
 
 ### Creating secrets in Hashicorp Vault
 
-HashiCorp Vault configurations can be managed via the Vault CLI. Before you begin configuring Vault, ensure that you have [Vault installed](https://www.vaultproject.io/downloads). After installation, initialize and start the Vault server.
+HashiCorp Vault configurations can be managed via the Vault CLI. Before you begin configuring Vault, ensure that you have [Vault installed](https://developer.hashicorp.com/vault/install). After installation, initialize and start the Vault server.
 
-Use the `vault kv put` command to create a new secret within a specified mouth path.
+Use the `vault kv put` command to create a new secret within a specified mount path.
 
 ```bash
 # Create a new secret
@@ -37,7 +39,7 @@ Replace `myvalue=s3cr3t` with the key-value pair you wish to store as a secret.
 
 {{< notes type="info" >}}
 
-The commands provided in this article include `<key>=<value>` parameters to pass secrets to Vault directly through the CLI. Be aware that executing these commands can leave sensitive data in your shell's unencrypted history. Consult the [Static Secrets: Key/Value Secrets Engine tutorial](https://www.vaultproject.io/docs/secrets/kv/kv-v2) for best practices in production scenarios.
+The commands provided in this article include `<key>=<value>` parameters to pass secrets to Vault directly through the CLI. Be aware that executing these commands can leave sensitive data in your shell's unencrypted history. Consult the [Static Secrets: Key/Value Secrets Engine tutorial](https://developer.hashicorp.com/vault/docs/secrets/kv/kv-v2) for best practices in production scenarios.
 
 {{< /notes >}}
 

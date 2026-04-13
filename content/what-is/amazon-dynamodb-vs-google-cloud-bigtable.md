@@ -55,7 +55,7 @@ While it can be a very affordable option, predicting the costs accurately can be
 
 Bigtable and DynamoDB have very different pricing models.
 
-With Bigtable, your pricing is determined based on three factors: the type of Bigtable instance, the number of nodes you have (with nodes in some regions being more expensive than others), the amount of storage your tables use, and the amount of network bandwidth consumed. Storage and bandwidth usage are measured in binary gigabytes.
+With Bigtable, your pricing is determined based on four factors: the type of Bigtable instance, the number of nodes you have (with nodes in some regions being more expensive than others), the amount of storage your tables use, and the amount of network bandwidth consumed. Storage and bandwidth usage are measured in binary gigabytes.
 
 DynamoDB offers two different pricing models: on-demand capacity mode, and provisioned capacity mode. Using on-demand capacity mode, you are billed for the amount of data stored as well as the number of reads and writes performed against it, with DynamoDB automatically managing those workloads as they fluctuate. With provisioned capacity mode, you specify the number of reads and writes expected per second. It is possible to utilize auto-scaling to ensure that your application continues to perform well while keeping costs low.
 
@@ -67,8 +67,8 @@ If you have truly large amounts of data that you will require very fast access t
 
 ## Conclusion
 
-Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choce. Try deploying an [AWS Data Service with DynamoDB](/docs/aws/dynamodb/) or get started with [Google Cloud](/docs/iac/get-started/gcp/)
+Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choice. Try deploying [DynamoDB with Pulumi](/registry/packages/aws/api-docs/dynamodb/) or get started with [Google Cloud](/docs/iac/get-started/gcp/).
 
-## Pulumi Corporation
+## Learn more
 
-Pulumi lets infrastructure, developer, and security teams deliver infrastructure as code faster, using programming ([Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet/), and [Java](/docs/languages-sdks/java/) and markup ([YAML, JSON, and CUE](/docs/languages-sdks/yaml/) languages they already know. It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/docs/get-started/)
+Pulumi lets infrastructure, developer, and security teams deliver infrastructure as code faster, using programming languages they already know — [Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet/), [Java](/docs/languages-sdks/java/), and [YAML](/docs/languages-sdks/yaml/). It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/docs/get-started/)

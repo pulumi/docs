@@ -56,7 +56,7 @@ The [Pulumi Registry](/registry/) represents one of Pulumi's most significant ad
 
 ### Native cloud providers
 
-Pulumi maintains native, first-party providers for major cloud platforms that offer same-day support for new services and features. The AWS provider covers over 900 resources, while Azure Native provides access to the full Azure API surface area, and Google Cloud offers comprehensive coverage of GCP services. These native providers are generated directly from cloud provider APIs, ensuring immediate access to new features without waiting for community contributions or manual updates.
+Pulumi maintains native, first-party providers for major cloud platforms that offer same-day support for new services and features. The AWS provider covers over 1,000 resources, while Azure Native provides access to the full Azure API surface area, and Google Cloud offers comprehensive coverage of GCP services. These native providers are generated directly from cloud provider APIs, ensuring immediate access to new features without waiting for community contributions or manual updates.
 
 ### Beyond traditional clouds
 
@@ -90,7 +90,7 @@ The Automation API enables teams to embed infrastructure management directly int
 
 ### Policy as Code with Pulumi Policies
 
-Pulumi Policies provides policy as code capabilities that are both open source and free, unlike competitive offerings. Teams can write policies in Python, JavaScript, or Open Policy Agent (OPA) Rego to enforce security, compliance, and cost controls across their entire infrastructure. These policies run server-side and can provide automated remediation, ensuring that all infrastructure deployments—whether created by humans or AI—meet organizational standards.
+Pulumi Policies provides policy as code capabilities that are open source and free. Teams can write policies in Python, JavaScript, or Open Policy Agent (OPA) Rego to enforce security, compliance, and cost controls across their entire infrastructure. These policies can run during deployments and provide automated remediation, ensuring that all infrastructure deployments — whether created by humans or AI — meet organizational standards. Server-side enforcement is available through Pulumi Cloud for teams needing centralized policy management.
 
 ### Pulumi ESC for secrets and configuration
 
@@ -130,7 +130,7 @@ Organizations across various industries have adopted Pulumi to address diverse i
 
 Snowflake, a leading cloud data platform, used Pulumi to reduce its deployment time from 1.5 weeks to a single day while improving reliability and maintainability. The ability to use familiar programming languages enabled their development teams to contribute directly to infrastructure management, reducing silos between development and operations.
 
-BMW manages infrastructure for over 11,000 developers using Pulumi, leveraging the platform's collaboration features and policy enforcement capabilities to maintain consistency and security across their global development organization. The company particularly benefits from Pulumi's ability to create reusable components that encapsulate their infrastructure best practices.
+BMW manages over 20,000 cloud resources using Pulumi, leveraging the platform's collaboration features and policy enforcement capabilities to maintain consistency and security across their global development organization. The company particularly benefits from Pulumi's ability to create reusable components that encapsulate their infrastructure best practices.
 
 Starburst achieved a 112x improvement in deployment speed, reducing deployment times from two weeks to just three hours. This dramatic improvement was enabled by Pulumi's testing capabilities and the ability to create sophisticated deployment pipelines using familiar programming languages.
 

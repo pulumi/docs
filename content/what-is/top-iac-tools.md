@@ -30,35 +30,41 @@ Multi-cloud solutions prevent vendor lock-in, maintain flexibility, and promote 
 
 Terraform is a multi-cloud Infrastructure as Code (IaC) tool that utilizes the HashiCorp Configuration Language (HCL). HCL is designed to be both human-readable and machine-friendly, striking a balance between simplicity and power. While it lacks some of the advanced programming constructs of general-purpose languages, HCL offers a declarative approach that many find intuitive for infrastructure definition. HCL lacks full programming constructs, which may necessitate workarounds for handling complex logic.
 
+In August 2023, HashiCorp changed Terraform's license from the Mozilla Public License (MPL) to the Business Source License (BSL 1.1), which restricts certain commercial uses of the software. This license change was a significant shift for the Terraform ecosystem and prompted the creation of the OpenTofu fork (see below). In 2024, IBM acquired HashiCorp, bringing Terraform under IBM's ownership.
+
 For state management, Terraform uses a state file to track the current state of your infrastructure. While this approach requires manual configuration, including setting up remote backends and state locking, it does offer fine-grained control over state.
 
-Terraform integrates well with existing development workflows and CI/CD pipelines. A Kubernetes provider exists that supports the Kubernetes Core APIs and offers some support for Custom Resource Definitions (CRDs).  Terraform is popular, with a large ecosystem and also has a wide range of plugins, integrations, and comprehensive documentation.
+Terraform integrates well with existing development workflows and CI/CD pipelines. A Kubernetes provider exists that supports the Kubernetes Core APIs and offers some support for Custom Resource Definitions (CRDs). Terraform is popular, with a large ecosystem and also has a wide range of plugins, integrations, and comprehensive documentation.
 
 - **Flexibility**: Utilizes HCL. Lacks full programming constructs.
 - **Multi-cloud**: Offers support for AWS, Azure, GCP, Oracle cloud and many others.
 - **State**: Provides fine-grained control over state management, but requires manual configuration including remote backends and state locking, which can add complexity to collaboration.
 - **Integration**: Integrates well with existing development workflows and CI/CD pipelines. Provides a Kubernetes provider for basic cluster management.
 - **Ecosystem**: A large and active community. A wide range of plugins and integrations.
+- **Licensing**: BSL 1.1 (changed from MPL in August 2023), which restricts certain commercial uses.
 
 ### [Pulumi](https://www.pulumi.com/)
 
-Pulumi is another popular IaC tool that let's you define infrastructure in your programming language of choice and using real programming constructs, such as loops and functions. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others.
+Pulumi is another popular IaC tool that lets you define infrastructure in your programming language of choice — including TypeScript, Python, Go, C#, Java, and YAML — using real programming constructs such as loops and functions. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others through over 150 providers in the [Pulumi Registry](/registry/).
 
 Pulumi's state management is easy to use as it automatically handles your infrastructure state and stores it in the Pulumi Cloud backend by default. With built-in state locking and encryption, this approach simplifies collaboration and reduces the risk of state corruption, ensuring secure and consistent state management. For those who prefer more control over their state, Pulumi also supports self-managed backends.
+
+Beyond core IaC, Pulumi offers a broader cloud engineering platform that includes [Pulumi ESC](/product/esc/) for centralized secrets and configuration management with dynamic credential generation via OIDC, [Pulumi Deployments](/product/pulumi-deployments/) for managed infrastructure deployments, and AI-powered assistance for generating infrastructure code from natural language.
 
 Pulumi integrates with various CI/CD systems and offers extensive support for cloud-native technologies, particularly Kubernetes, with strongly-typed CustomResourceDefinitions (CRDs), and support for Helm charts. Pulumi's ecosystem is growing rapidly, with many resources and integrations available. Comprehensive documentation and support, including tutorials and an active community forum, further bolster its appeal.
 
 - **Flexibility**: Define infrastructure using your preferred programming language, which can simplify complex logic handling compared to some other IaC tools.
-- **Multi-cloud**: Offers support for AWS, Azure, Google Cloud, Oracle cloud and many others.
+- **Multi-cloud**: Offers support for AWS, Azure, Google Cloud, Oracle cloud and many others through 150+ providers.
 - **State**: Automatically manages infrastructure state, storing it in the Pulumi Cloud with built-in state locking and encryption.
 - **Integration**: Seamlessly integrates with existing development workflows, CI/CD pipelines, and cloud-native technologies like Kubernetes.
 - **Ecosystem**: Growing community and ecosystem. Comprehensive documentation and support, including tutorials and an active community.
+- **Licensing**: Apache 2.0 open source license.
 
 ### [OpenTofu](https://opentofu.org/)
 
-OpenTofu is a recent fork of Terraform 1.6.x. It shares many core functionalities with Terraform, including using HCL to define infrastructure.
+OpenTofu is a community-driven fork of Terraform, created in response to HashiCorp's August 2023 license change from MPL to BSL 1.1. Initially forked from Terraform 1.6.x and hosted under the Linux Foundation, OpenTofu shares many core functionalities with Terraform, including using HCL to define infrastructure.
 
-While OpenTofu aims to maintain compatibility with Terraform, it's expected to develop its own unique features and community-driven improvements over time. The primary difference currently lies in the licensing model, with OpenTofu using the Mozilla Public License 2.0.
+OpenTofu maintains compatibility with Terraform configurations while developing its own features and community-driven improvements. The primary difference lies in the licensing model, with OpenTofu using the Mozilla Public License 2.0, preserving the open source nature of the original Terraform project.
 
 For a more detailed comparison between OpenTofu and other IaC tools, including Terraform and Pulumi, please refer to our in-depth article: [Terraform vs.OpenTofu](/docs/iac/comparisons/terraform/opentofu/).
 
@@ -103,6 +109,8 @@ Azure Resource Manager (ARM) supports JSON-based configuration or using Bicep - 
 ### [Google Cloud Deployment Manager](https://cloud.google.com/deployment-manager/docs)
 
 Google Cloud Deployment Manager (CDM) focuses on managing Google Cloud Platform (GCP) resources using YAML and Python Jinja2 templates. It integrates deeply with Google Cloud, managing state internally like other native cloud tools. CDM supports Google Kubernetes Engine (GKE) for deploying and managing Kubernetes clusters, offering native integration that streamlines cluster management. However, it has limited direct support for managing individual Kubernetes resources within clusters.
+
+Note that Google has placed Deployment Manager in maintenance mode and is no longer actively developing new features for it. Google recommends using Terraform, Config Connector, or other IaC tools for new projects.
 
 Additionally, Google Cloud's Config Connector allows for managing Google Cloud resources using Kubernetes custom resources, providing an alternative for more granular Kubernetes management. Like other provider-specific solutions, CDM is ideal for teams with a strong focus on and investment in the Google Cloud ecosystem.
 
