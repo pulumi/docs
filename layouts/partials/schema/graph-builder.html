@@ -36,7 +36,7 @@
 {{ if .IsHome }}
   {{/* Add Organization entity - only on homepage per Google best practices */}}
   {{ $org := dict
-    "@type" "Corporation"
+    "@type" (slice "Organization" "Corporation")
     "@id" "https://www.pulumi.com/#organization"
     "name" "Pulumi Corporation"
     "legalName" "Pulumi Corporation"
@@ -69,9 +69,15 @@
       "email" "sales@pulumi.com"
       "url" "https://www.pulumi.com/contact"
     )
+    "numberOfEmployees" (dict
+      "@type" "QuantitativeValue"
+      "minValue" 100
+      "maxValue" 200
+    )
     "sameAs" (slice
       "https://github.com/pulumi"
       "https://twitter.com/PulumiCorp"
+      "https://x.com/PulumiCorp"
       "https://www.linkedin.com/company/pulumi"
       "https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw"
       "https://www.wikidata.org/wiki/Q122864080"
@@ -88,14 +94,7 @@
       "Serverless Computing"
       "Multi-Cloud Architecture"
     )
-    "award" (slice
-      (dict
-        "@type" "AwardOrHonor"
-        "name" "SOC 2 Type II Certified"
-        "description" "Successful completion of SOC 2 Type II audit for security, availability, and confidentiality"
-        "url" "https://www.pulumi.com/security/"
-      )
-    )
+    "award" (slice "SOC 2 Type II Certified")
   }}
   {{ $graph = $graph | append $org }}
   {{/* Website schema */}}
