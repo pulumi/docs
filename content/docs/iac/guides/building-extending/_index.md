@@ -48,7 +48,7 @@ Package and distribute your components and providers for use across teams and pr
 
 **[Local Packages](/docs/iac/guides/building-extending/packages/local-packages/)** - Develop and test packages locally before publishing them to registries.
 
-**[Publishing Packages](/docs/iac/guides/building-extending/packages/publishing-packages/)** - Distribute your packages to npm, NuGet, PyPI, and other registries for team and community use.
+**[Publishing Packages](/docs/iac/guides/building-extending/packages/publishing-packages/)** - Publish packages to your organization's private registry or the public Pulumi Registry.
 
 **[Schema](/docs/iac/guides/building-extending/packages/schema/)** - Define package schemas that drive SDK generation and documentation for all supported languages.
 
