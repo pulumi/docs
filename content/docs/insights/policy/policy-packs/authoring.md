@@ -1086,6 +1086,10 @@ Or for a specific policy group:
 pulumi policy enable <org>/<pack-name> <version> --config config.json --policy-group <group-name>
 ```
 
+### Using ESC environments
+
+Policy packs can also receive configuration and secrets from [Pulumi ESC](/docs/esc/) environments. When you attach an ESC environment to a policy pack in a policy group, values defined under the [`policyConfig`](/docs/esc/environments/syntax/reserved-properties/policy-config/) reserved property are available to your policies at runtime. You can also use [`environmentVariables`](/docs/esc/environments/syntax/reserved-properties/environment-variables/) to inject environment variables into the policy runtime.
+
 ## Publishing to your organization
 
 After local validation, publish your policy pack to Pulumi Cloud. Policy enforcement runs automatically during `preview` and `update` for any stack using Pulumi Cloud.

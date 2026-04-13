@@ -86,6 +86,12 @@ Policies within policy groups can have different enforcement levels:
 
 **Organize by risk level**: Group high-risk policies (security, compliance) separately from lower-risk policies (optimization, best practices) to manage exceptions more easily.
 
+## ESC environments
+
+Policy packs in a policy group can reference [Pulumi ESC](/docs/esc/) environments for secrets and configuration. When you attach an ESC environment to a policy pack, values from the environment's [`policyConfig`](/docs/esc/environments/syntax/reserved-properties/policy-config/) and [`environmentVariables`](/docs/esc/environments/syntax/reserved-properties/environment-variables/) are available to the policy pack at runtime.
+
+Environment references support [versioning and tagging](/docs/esc/environments/versioning/). You can pin to a specific revision or tag (e.g., `my-env@stable` or `my-env@v1`) to control when configuration changes take effect.
+
 ## Next steps
 
 - [Create and configure policy groups](/docs/insights/policy/get-started/)
