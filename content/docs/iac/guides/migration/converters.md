@@ -49,4 +49,4 @@ The `pulumi convert` command is designed to address a variety of migration and c
 In addition to the converter plugins, Pulumi offers the following tools and resources:
 
 * [Generate typed Pulumi SDKs for Kubernetes CustomResources](/docs/iac/clouds/kubernetes/crd2pulumi/)
-* [Migrate from AWS CloudFormation to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-aws/)
+* [Migrate from AWS CloudFormation to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/)
