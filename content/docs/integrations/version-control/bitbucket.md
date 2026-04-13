@@ -112,7 +112,7 @@ The [New Project Wizard](/docs/idp/concepts/new-project-wizard/) supports Bitbuc
 When using the VCS-backed deployment method, the wizard configures deploy-on-push, pull request previews, and review stacks automatically.
 
 {{% notes type="info" %}}
-Bitbucket repositories cannot be used as [template sources](/docs/idp/concepts/organization-templates/) at this time. You can still use templates from other configured VCS providers.
+Bitbucket repositories cannot be used as [template sources](/docs/idp/concepts/organization-templates/) at this time. You can still use templates from other configured VCS providers (such as [GitHub](/docs/version-control/github-app/) or [GitLab](/docs/version-control/gitlab/)) or from the [Pulumi private registry](/docs/idp/concepts/organization-templates/#registry-backed-templates).
 {{% /notes %}}
 
 ## CI integration
