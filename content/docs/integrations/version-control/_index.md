@@ -38,7 +38,7 @@ sections:
     heading: GitLab
     description: Surface Pulumi previews on merge requests, deploy on push, create review stacks, and use GitLab repos as template sources.
     link: /docs/integrations/version-control/gitlab/
-  - image: /logos/tech/ci-cd/bitbucket.svg
+  - image: /logos/tech/bitbucket.svg
     heading: Bitbucket
     description: Connect Bitbucket Cloud workspaces to Pulumi Cloud for pull request previews, push-to-deploy, review stacks, and automated deployments.
     link: /docs/integrations/version-control/bitbucket/
