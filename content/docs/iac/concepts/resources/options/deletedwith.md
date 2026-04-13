@@ -15,7 +15,7 @@ aliases:
   - /docs/iac/concepts/options/deletedwith/
 ---
 
-The `deletedWith` resource option allows you to skip resource deletion if a another resource is being deleted as well.
+The `deletedWith` resource option allows you to skip resource deletion if another resource is being deleted as well.
 
 Pulumi will normally call the provider's delete action for every resource during a delete operation. Sometimes, this is redundant if another resource is also deleted, such as a parent container resource, and can cause your delete or destroy operations to take longer than needed.
 
@@ -36,8 +36,6 @@ let dep = new k8s.apps.v1.Deployment("res2", {/*...*/}, { deletedWith: ns });
 {{% choosable language python %}}
 
 ```python
-# IMPORTANT: Python appends an underscore (`import_`) to avoid conflicting with the keyword.
-
 import pulumi_kubernetes as k8s
 
 ns = k8s.core.v1.Namespace("res1", {})
