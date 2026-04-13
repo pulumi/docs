@@ -10,53 +10,10 @@
 # aws-.* will ignore all programs that start with "aws-"
 #
 
-
-
-# Java SDK serialization bug: FargateService container/containers inputs
-# not received by AWSX provider. https://github.com/pulumi/pulumi-java/issues/2090
-awsx-load-balanced-fargate-nginx-java
-awsx-vpc-fargate-service-java
-
-# API Gateway authorizer parameter `providerArns` is mistyped.
-# https://github.com/pulumi/pulumi-aws-apigateway/issues/121
-awsx-apigateway-auth-cognito-java
-
-# Skipping - for now this code is not consumed anywhere and needs some updates.
-aws-import-iac-iam-role-.*
-
-# Custom-domain examples won't work because of the hosted-zone lookup (which will fail unless
-# the credentials can access the specified Route 53 zone).
-awsx-apigateway-custom-domain-.*
-
-# Skipping all kubernetes examples for now as they are expected to fail until we provision
-# a Kubernetes cluster in CI.
-kubernetes-.*
-k8s-.*
-helm-.*
-
-# Skip broken programs to get back to green
-# https://github.com/pulumi/docs/issues/14505
-aws-iampolicy-jsonparse-csharp
-aws-acm-certificate-csharp
-deepseek-ollama-csharp
-gcp-simple-webserver-yaml
-
-# Azure YAML import test: the engine requires import to be a literal
-# string, but the YAML program needs interpolation for the resource ID.
-azure-native-import-resource-group-yaml
-
-# GCP import tests: service account doesn't exist yet and GCP project
-# configuration needs to be sorted out. See #14505.
-gcp-import-service-account-yaml
-gcp-import-service-account-csharp
-gcp-import-service-account-python
-gcp-import-service-account-go
-gcp-import-service-account-typescript
-
-# Terraform reference projects are not Pulumi programs.
+# TEMPORARY: all entries removed for ignore.txt audit (jkodroff/audit-ignore-txt).
+# This branch intentionally empties the ignore list and touches each previously-ignored
+# program directory so PR-mode CI (scheduled-test.yml) runs exactly the ignored set.
+# Before merging, this file will be repopulated with only the programs that still fail,
+# each with a reason and issue link. tf-state-ref-terraform will be restored (not a
+# Pulumi program by design).
 tf-state-ref-terraform
-
-# All JS examples were removed from static programs.
-# TODO: See if this line can be removed once the code has been merged to master
-and the tests have been run. 
-*-javascript
