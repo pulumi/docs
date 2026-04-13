@@ -1,6 +1,7 @@
 ---
-user-invocable: false
+user-invocable: true
 description: Social media review for blog post PRs
+argument: optional file path to a blog post (e.g., content/blog/my-post/index.md)
 ---
 
 # Review Social Post
@@ -114,6 +115,18 @@ When posts fail or are missing, draft replacement copy. Follow this process:
 ```
 To apply these suggestions, comment: `@claude please update the social posts in the frontmatter with the suggested copy from the social media review above`
 ```
+
+## Local context
+
+When run locally via `/social-media-review <path>`:
+
+1. Read the blog post at the given path
+2. Extract the `social:` block from the frontmatter (twitter, linkedin, bluesky)
+3. Review each platform's copy using the rules above
+4. For any FAIL or missing platforms, draft suggested copy following the "Drafting suggested copy" process above, but skip the CTA — just output the suggested copy directly
+5. Print the full review to the conversation (do not post to GitHub)
+
+If no path is given, look for blog posts with uncommitted changes (`git diff --name-only` and `git diff --cached --name-only`) that match `content/blog/*/index.md`.
 
 ## CI context
 
