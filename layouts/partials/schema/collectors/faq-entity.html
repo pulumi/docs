@@ -130,6 +130,32 @@
   {{/* Add mainEntity with questions */}}
   {{ $schema = merge $schema (dict "mainEntity" $questions) }}
 
+  {{/* Add dates with proper fallback handling */}}
+  {{ $publishDate := .PublishDate }}
+  {{ $modifiedDate := .Lastmod }}
+
+  {{/* Fix invalid dates */}}
+  {{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
+    {{ if and .GitInfo .GitInfo.AuthorDate }}
+      {{ $publishDate = .GitInfo.AuthorDate }}
+    {{ else }}
+      {{ $publishDate = now }}
+    {{ end }}
+  {{ end }}
+
+  {{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
+    {{ if and .GitInfo .GitInfo.AuthorDate }}
+      {{ $modifiedDate = .GitInfo.AuthorDate }}
+    {{ else }}
+      {{ $modifiedDate = $publishDate }}
+    {{ end }}
+  {{ end }}
+
+  {{ $schema = merge $schema (dict
+    "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
+  ) }}
+
   {{/* Add publisher reference */}}
   {{ $schema = merge $schema (dict
     "publisher" (dict "@id" "https://www.pulumi.com/#organization")
