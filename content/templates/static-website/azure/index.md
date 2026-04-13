@@ -29,7 +29,7 @@ To use this template to deploy a website of your own, make sure you've [installe
 
 {{< templates/pulumi-new >}}
 
-Follow the prompts to complete the new-project wizard. When it's done, you'll have a finished that's ready to deploy and configured with the most common settings. Feel free to inspect the code in {{< langfile >}} for a closer look.
+Follow the prompts to complete the new-project wizard. When it's done, you'll have a finished project that's ready to deploy and configured with the most common settings. Feel free to inspect the code in {{< langfile >}} for a closer look.
 
 ## Deploying the project
 
