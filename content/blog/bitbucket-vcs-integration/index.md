@@ -11,10 +11,7 @@ tags:
     - bitbucket
     - features
     - pulumi-cloud
-social:
-    twitter: "Bitbucket Cloud is now a first-class VCS integration in Pulumi Cloud. Deploy on push, preview PRs, spin up review stacks, and get AI-powered change summaries — same capabilities as GitHub, GitLab, and Azure DevOps."
-    linkedin: "Bitbucket Cloud is now a first-class VCS integration in Pulumi Cloud — joining GitHub, GitLab, and Azure DevOps with full feature parity. Deploy infrastructure on every push, preview changes on pull requests, create ephemeral review stacks, and let Neo explain your changes with AI-powered summaries."
-    bluesky: "Bitbucket Cloud is now a first-class VCS integration in Pulumi Cloud. Deploy on push, preview PRs, spin up review stacks, and get AI-powered change summaries."
+
 ---
 
 Pulumi Cloud now supports Bitbucket Cloud as a first-class VCS integration, joining [GitHub](/docs/version-control/github-app/), [GitLab](/docs/version-control/gitlab/), and [Azure DevOps](/docs/version-control/azure-devops-integration/). Connect your Bitbucket workspace to deploy infrastructure on every push, preview changes on pull requests, spin up ephemeral review stacks, and get AI-powered change summaries — all without an external CI/CD pipeline.
