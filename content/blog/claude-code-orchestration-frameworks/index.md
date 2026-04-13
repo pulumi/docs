@@ -16,16 +16,22 @@ tags:
     - cursor
     - ai-coding
 social:
-    twitter: "AI coding agents are great for the first 30 minutes. Then context rot kicks in and tests get skipped. I tried three frameworks that fix this: Superpowers (TDD), GSD (context management), GSTACK (role governance). For infrastructure work, GSD matters most."
+    twitter: |
+        AI coding agents are great for the first 30 minutes. Then context rot kicks in and tests get skipped.
+
+        Three frameworks fix this: Superpowers (TDD), GSD (context management), GSTACK (role governance). All work across Claude Code, Cursor, Codex, and more. For infrastructure work, GSD matters most.
     linkedin: |
-        AI coding agents are great for the first 30 minutes. Then context rot kicks in, tests get skipped, and scope drifts. I tried three frameworks that fix this.
+        AI coding agents are great for the first 30 minutes. Then context rot kicks in, tests get skipped, and scope drifts. Three community frameworks have emerged that fix this.
 
         Superpowers (149K GitHub stars) forces TDD on every change. Jesse Vincent used it to ship chardet v7.0.0 with a 41x performance improvement. GSD (51K stars) gives each phase a fresh context window so nothing degrades over long sessions. GSTACK (71K stars) from Garry Tan models a 23-person team where each role only sees what it needs.
 
         For infrastructure work with Pulumi, GSD's context management matters most. Long sessions provisioning dozens of resources are exactly where quality degrades. But Superpowers' test discipline maps well to pulumi preview / pulumi up cycles too.
 
-        Wrote up the tradeoffs, command references, and when to pick which. All three work across Claude Code, Cursor, Codex, Windsurf, and more.
-    bluesky: "Tried three frameworks for keeping AI coding agents from falling apart on long sessions. Superpowers forces TDD. GSD keeps context fresh per phase. GSTACK adds product governance from Garry Tan. For infrastructure work, GSD fits best. Wrote up when to use which."
+        Full comparison with tradeoffs, command references, and when to pick which. All three work across Claude Code, Cursor, Codex, Windsurf, and more.
+    bluesky: |
+        Three frameworks for keeping AI coding agents from falling apart on long sessions. Superpowers forces TDD. GSD keeps context fresh per phase. GSTACK adds product governance from Garry Tan.
+
+        For infrastructure work, GSD fits best. Full comparison with tradeoffs and install commands.
 ---
 
 Three community frameworks have emerged that fix the specific ways AI coding agents break down on real projects. [Superpowers](https://github.com/obra/superpowers) enforces test-driven development. [GSD](https://github.com/gsd-build/get-shit-done) prevents context rot. [GSTACK](https://github.com/garrytan/gstack) adds role-based governance. All three started with Claude Code but now work across Cursor, Codex, Windsurf, Gemini CLI, and more.
