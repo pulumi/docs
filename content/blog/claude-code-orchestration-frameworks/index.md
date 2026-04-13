@@ -17,6 +17,15 @@ tags:
     - ai-coding
 social:
     twitter: "AI coding agents without orchestration is a gamble. Three frameworks fix different failure modes: Superpowers (TDD), GSD (context rot), GSTACK (role governance). They all work across Claude Code, Cursor, Codex, and more. Here's when to use which."
+    linkedin: |
+        I spent a few weeks with three community frameworks that fix how AI coding agents break down on real projects: Superpowers (149K stars), GSD (51K stars), and GSTACK (71K stars).
+
+        Each one attacks a different failure mode. Superpowers enforces TDD so nothing ships without a failing test first. GSD prevents context rot by giving each phase a fresh orchestrator under 50% context capacity. GSTACK models a 23-person team with role-based governance.
+
+        All three started with Claude Code but now work across Cursor, Codex, Windsurf, Gemini CLI, and more. Since Pulumi uses general-purpose languages for infrastructure, every improvement these frameworks bring to TypeScript or Python also improves your IaC code.
+
+        I wrote up when to use which, including command references and how they pair with Pulumi workflows.
+    bluesky: "Three frameworks fix how AI coding agents break down on real projects. Superpowers enforces TDD. GSD prevents context rot. GSTACK adds role governance. All work across Claude Code, Cursor, Codex, and more. Wrote up when to use which."
 ---
 
 Three community frameworks have emerged that fix the specific ways AI coding agents break down on real projects. [Superpowers](https://github.com/obra/superpowers) enforces test-driven development. [GSD](https://github.com/gsd-build/get-shit-done) prevents context rot. [GSTACK](https://github.com/garrytan/gstack) adds role-based governance. All three started with Claude Code but now work across Cursor, Codex, Windsurf, Gemini CLI, and more.
@@ -159,6 +168,12 @@ Superpowers' TDD cycle maps to infrastructure validation. Write a failing test (
 You do not have to pick one framework and commit forever. Try GSD for a long multi-stack project. Try Superpowers for a focused library. See which failure mode bites you most and let that guide your choice.
 
 ## Getting started
+
+{{< github-card repo="obra/superpowers" >}}
+
+{{< github-card repo="gsd-build/get-shit-done" >}}
+
+{{< github-card repo="garrytan/gstack" >}}
 
 All three frameworks support multiple agents. For Claude Code, the install commands are straightforward:
 
