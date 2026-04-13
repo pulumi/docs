@@ -8,4 +8,3 @@ config:
   pulumi:tags:
     value:
       pulumi:template: aws-typescript
-# audit-touch: jkodroff/audit-ignore-txt

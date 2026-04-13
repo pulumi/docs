@@ -1,3 +1,2 @@
 name: awsx-vpc-fargate-service-java
 runtime: java
-# audit-touch: jkodroff/audit-ignore-txt

@@ -5,4 +5,3 @@ config:
   pulumi:tags:
     value:
       pulumi:template: helm-kubernetes-csharp
-# audit-touch: jkodroff/audit-ignore-txt

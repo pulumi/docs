@@ -10,10 +10,38 @@
 # aws-.* will ignore all programs that start with "aws-"
 #
 
-# TEMPORARY: all entries removed for ignore.txt audit (jkodroff/audit-ignore-txt).
-# This branch intentionally empties the ignore list and touches each previously-ignored
-# program directory so PR-mode CI (scheduled-test.yml) runs exactly the ignored set.
-# Before merging, this file will be repopulated with only the programs that still fail,
-# each with a reason and issue link. tf-state-ref-terraform will be restored (not a
-# Pulumi program by design).
+# Java SDK serialization bug: FargateService container/containers inputs
+# not received by AWSX provider. https://github.com/pulumi/pulumi-java/issues/2090
+awsx-load-balanced-fargate-nginx-java
+awsx-vpc-fargate-service-java
+
+# API Gateway authorizer parameter `providerArns` is mistyped.
+# https://github.com/pulumi/pulumi-aws-apigateway/issues/121
+awsx-apigateway-auth-cognito-java
+
+# Import tutorial programs that are not currently consumed by any docs page
+# and require pre-existing IAM resources the CI account does not have.
+aws-import-iac-iam-role-.*
+
+# Custom-domain examples won't work because of the hosted-zone lookup (which will fail unless
+# the credentials can access the specified Route 53 zone).
+awsx-apigateway-custom-domain-.*
+
+# CSI driver examples require a `github-pat` config value to pull a private
+# image/repo; CI does not provide one. The Go variant does not need it and
+# is tested. https://github.com/pulumi/docs/issues/14505
+kubernetes-csi-driver-csharp
+kubernetes-csi-driver-python
+kubernetes-csi-driver-typescript
+
+# Azure YAML import test: the engine requires import to be a literal
+# string, but the YAML program needs interpolation for the resource ID.
+azure-native-import-resource-group-yaml
+
+# GCP import tests: service account doesn't exist yet and GCP project
+# configuration needs to be sorted out. https://github.com/pulumi/docs/issues/14505
+gcp-import-service-account-.*
+
+# Terraform reference project: intentionally not a Pulumi program (used as
+# an external tfstate source by other examples).
 tf-state-ref-terraform

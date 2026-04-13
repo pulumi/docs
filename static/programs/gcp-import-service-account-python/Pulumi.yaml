@@ -9,4 +9,3 @@ config:
   pulumi:tags:
     value:
       pulumi:template: gcp-python
-# audit-touch: jkodroff/audit-ignore-txt

@@ -5,4 +5,3 @@ config:
   pulumi:tags:
     value:
       pulumi:template: kubernetes-java
-# audit-touch: jkodroff/audit-ignore-txt

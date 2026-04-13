@@ -4,4 +4,3 @@ runtime:
   options:
     virtualenv: venv
 description: An example that deploys an API Gateway REST API with a custom domain from Route53.
-# audit-touch: jkodroff/audit-ignore-txt

@@ -16,4 +16,3 @@ resources:
       project: ${gcp:project}
     options:
       import: ${serviceAcctEmailPrefix}${serviceAcctEmailSuffix}
-# audit-touch: jkodroff/audit-ignore-txt

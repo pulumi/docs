@@ -9,4 +9,3 @@ config:
   pulumi:tags:
     value:
       pulumi:template: helm-kubernetes-python
-# audit-touch: jkodroff/audit-ignore-txt
