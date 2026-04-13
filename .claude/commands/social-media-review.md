@@ -38,6 +38,11 @@ If ANY of the following are violated, return FAIL:
 - Violates platform structure:
   - X: must have at least 2 paragraphs with a line break
   - LinkedIn: must have multiple short paragraphs (not a dense block)
+- Exceeds platform character limits (including URL overhead):
+  - X: 255 chars for the copy (X auto-appends the blog URL as a 23-char t.co link + newline/space)
+  - LinkedIn: 2950 chars for the copy (the full blog URL is appended, typically ~47 chars)
+  - Bluesky: 300 chars for the copy (URL is sent separately, not appended to body)
+  - Do not estimate character counts. Use `python3 -c "print(len('''<paste copy here>'''))"` or equivalent to measure exactly
 
 ## Soft Fail Heuristics
 
@@ -107,9 +112,10 @@ When posts fail or are missing, draft replacement copy. Follow this process:
 
 1. Read the blog post to understand its content, angle, and audience.
 2. Write social copy for each platform that needs it. The copy should be a hook that creates curiosity or tension — not a summary of the article. Give the reader a reason to click, not a reason to skip.
-3. Validate your drafts against the rubric by launching a sub-agent (using the Agent tool) with a clean context. Give it the rubric rules from this file and the draft copy only — not the blog post. The sub-agent should evaluate strictly and return PASS/FAIL with reasons.
-4. If the sub-agent returns FAIL, revise and re-validate. Repeat until all platforms pass.
-5. Present the validated copy under a `### Suggested copy` heading.
+3. Verify character counts by running `python3 -c "print(len('''<copy>'''))"` for each post. Compare against the platform limits (X: 255, LinkedIn: 2950, Bluesky: 300). Revise any that exceed the limit before proceeding.
+4. Validate your drafts against the rubric by launching a sub-agent (using the Agent tool) with a clean context. Give it the rubric rules from this file and the draft copy only — not the blog post. The sub-agent should evaluate strictly and return PASS/FAIL with reasons.
+5. If the sub-agent returns FAIL, revise and re-validate. Repeat until all platforms pass.
+6. Present the validated copy under a `### Suggested copy` heading.
 
 ## Local context
 
