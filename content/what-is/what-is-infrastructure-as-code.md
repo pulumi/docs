@@ -73,8 +73,6 @@ Here are steps you can take to get started adopting infrastructure as code.
 
 ### Define "good"
 
-<!-- I'm not sure the link in the next paragraph is useful/relevant -->
-
 The first step, even before you begin to [evaluate tools and approaches](/blog/configuring-your-dev-environment/), is to define what "good" looks like to your company. Achieving that ideal doesn't depend on which technology you use. It depends on understanding your company's requirements and what assumptions will remain true regardless of the tools you use. For many companies those assumptions are:
 
 * The amount of infrastructure is going to be high.
@@ -94,8 +92,6 @@ You probably already have a lot of existing infrastructure. Make sure you can [i
 Assuming your infrastructure code is integrated with your continuous delivery pipeline, you can start instituting the same best practices you use with your application software. For example, to understand your infrastructure's correctness, [you'll need tests](/docs/iac/guides/testing/). Some tests should run before delivering the infrastructure to ensure that the program is logically correct and that it provisions the infrastructure correctly. Other tests should run when you deploy your infrastructure to ensure that the deployment was successful.
 
 ### Think about policies and security
-
-<!-- The blog post provides a good high-level overview of policy as code -->
 
 Next, you'll want to enforce policy for the entire organization. That way, you'll have a standard that applies to everyone who builds infrastructure. [Those policies should run against everything anyone does](/blog/benefits-of-policy-as-code/).
 
