@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Version Control Integrations"
-meta_desc: Connect Pulumi with your version control system using Pulumi-maintained integrations for GitHub, GitLab, and Azure DevOps.
+meta_desc: Connect Pulumi with your version control system using Pulumi-maintained integrations for GitHub, GitLab, Azure DevOps, and Bitbucket.
 title: Version Control
 linktitle: Version Control
 h1: Version Control
@@ -38,6 +38,10 @@ sections:
     heading: GitLab
     description: Surface Pulumi previews on merge requests, deploy on push, create review stacks, and use GitLab repos as template sources.
     link: /docs/integrations/version-control/gitlab/
+  - image: /logos/tech/ci-cd/bitbucket.svg
+    heading: Bitbucket
+    description: Connect Bitbucket Cloud workspaces to Pulumi Cloud for pull request previews, push-to-deploy, review stacks, and automated deployments.
+    link: /docs/integrations/version-control/bitbucket/
   - image: /logos/tech/ci-cd/azure-devops.svg
     heading: Azure DevOps Integration
     description: Connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push, preview pull requests, and post PR summaries.
