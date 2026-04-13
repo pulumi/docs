@@ -22,7 +22,7 @@ weight: 1
 
 [Infrastructure as code](/what-is/what-is-infrastructure-as-code/) is an efficient and repeatable way of building a serverless application with programming languages and deploying the website to your preferred cloud.
 
-Pulumi’s open source, infrastructure as code SDK that lets you build and deploy static websites with TypeScript/JavaScript, Python, Go, Java, .NET, and YAML. The main benefits include:
+Pulumi’s open source, infrastructure as code SDK lets you build and deploy static websites with TypeScript/JavaScript, Python, Go, Java, .NET, and YAML. The main benefits include:
 
 * **Programming Languages:** Define infrastructure as code in your favorite language instead of domain-specific languages or clicking through cloud consoles.
 

@@ -27,7 +27,7 @@ cloud:
 
 The Kubernetes Cluster template creates an infrastructure as code project in your favorite language and deploys a managed Kubernetes cluster to Google Cloud with Pulumi. The architecture includes a [VPC network](/registry/packages/gcp/api-docs/compute/network) with a [subnet](/registry/packages/gcp/api-docs/compute/subnetwork) and deploys a [Google Kubernetes Engine (GKE) cluster](/registry/packages/gcp/api-docs/container/cluster) that provides a managed Kubernetes control plane and a [nodepool](/registry/packages/gcp/api-docs/container/nodepool) for the cluster. Kubernetes worker nodes are deployed with private IP addresses for improved security. The template gives you a working project out of the box that you can customize easily and extend to suit your needs.
 
-![An architecture diagram of the Pulumi Google Cloud Kubernetestemplate](./architecture.png)
+![An architecture diagram of the Pulumi Google Cloud Kubernetes template](./architecture.png)
 
 ## Using this template
 
@@ -59,7 +59,7 @@ clusterName
 : The name of the GKE cluster.
 
 clusterId
-: The unique ID of the GKE cluster
+: The unique ID of the GKE cluster.
 
 kubeconfig
 : The cluster's kubeconfig file which you can use with `kubectl` to access and communicate with your clusters.

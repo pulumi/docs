@@ -83,7 +83,7 @@ $ pulumi destroy
 
 ## Learn more
 
-Congratulations! You're now well on your way to managing  production-grade AWS serverless infrastructure with Pulumi --- and there's lots more you can do from here:
+Congratulations! You're now well on your way to managing production-grade AWS serverless infrastructure with Pulumi --- and there's lots more you can do from here:
 
 * Discover more architecture templates in [Templates &rarr;](/templates)
 * Dive into the AWS package by exploring the [API docs in the Registry &rarr;](/registry/packages/aws)
