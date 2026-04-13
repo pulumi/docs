@@ -109,33 +109,31 @@ When posts fail or are missing, draft replacement copy. Follow this process:
 2. Write social copy for each platform that needs it. The copy should be a hook that creates curiosity or tension — not a summary of the article. Give the reader a reason to click, not a reason to skip.
 3. Validate your drafts against the rubric by launching a sub-agent (using the Agent tool) with a clean context. Give it the rubric rules from this file and the draft copy only — not the blog post. The sub-agent should evaluate strictly and return PASS/FAIL with reasons.
 4. If the sub-agent returns FAIL, revise and re-validate. Repeat until all platforms pass.
-5. Include the validated copy in your comment under a `### Suggested copy` heading.
-6. End the comment with a CTA:
-
-```
-To apply these suggestions, comment: `@claude please update the social posts in the frontmatter with the suggested copy from the social media review above`
-```
+5. Present the validated copy under a `### Suggested copy` heading.
 
 ## Local context
 
 When run locally via `/social-media-review <path>`:
 
-1. Read the blog post at the given path
-2. Extract the `social:` block from the frontmatter (twitter, linkedin, bluesky)
-3. Review each platform's copy using the rules above
-4. For any FAIL or missing platforms, draft suggested copy following the "Drafting suggested copy" process above, but skip the CTA — just output the suggested copy directly
-5. Print the full review to the conversation (do not post to GitHub)
-
-If no path is given, look for blog posts with uncommitted changes (`git diff --name-only` and `git diff --cached --name-only`) that match `content/blog/*/index.md`.
+1. Read the blog post at the given path. If no path is given, look for blog posts with uncommitted changes (`git diff --name-only` and `git diff --cached --name-only`) that match `content/blog/*/index.md`.
+2. Extract the `social:` block from the frontmatter (twitter, linkedin, bluesky).
+3. Review each platform's copy using the rules above.
+4. For any FAIL or missing platforms, draft suggested copy following the "Drafting suggested copy" process above.
+5. Print the full review and any suggested copy directly in the conversation. Do not post to GitHub. Do not include a CTA.
 
 ## CI context
 
 When running in CI:
 
-1. Read `.social-check-output.txt` for the list of posts to review and their social copy
-2. Review each post using the rules above
-3. For any FAIL or missing platforms, draft suggested copy following the "Drafting suggested copy" process above. Use the Agent tool to spawn a sub-agent for the critique validation step
-4. Post your findings as a single PR comment using `gh pr comment <PR_NUMBER> --body "<your review>"`. The PR number is provided in the workflow prompt. Title the comment `## Social Media Review`
+1. Read `.social-check-output.txt` for the list of posts to review and their social copy.
+2. Review each post using the rules above.
+3. For any FAIL or missing platforms, draft suggested copy following the "Drafting suggested copy" process above. Use the Agent tool to spawn a sub-agent for the critique validation step.
+4. Post your findings as a single PR comment using `gh pr comment <PR_NUMBER> --body "<your review>"`. The PR number is provided in the workflow prompt. Title the comment `## Social Media Review`.
+5. End the comment with a CTA:
+
+```
+To apply these suggestions, comment: `@claude please update the social posts in the frontmatter with the suggested copy from the social media review above`
+```
 
 ## Constraints
 
