@@ -113,6 +113,8 @@ When posts fail or are missing, draft replacement copy. Follow this process:
 
 ## Local context
 
+Unless the prompt explicitly says "You are running in a CI environment", you are running locally. Follow this section, not the CI section.
+
 When run locally via `/social-media-review <path>`:
 
 1. Read the blog post at the given path. If no path is given, look for blog posts with uncommitted changes (`git diff --name-only` and `git diff --cached --name-only`) that match `content/blog/*/index.md`.
