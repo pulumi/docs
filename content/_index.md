@@ -14,7 +14,7 @@ sections:
     title_primary: "Next-level"
     title_secondary: "infrastructure as code \n for humans and agents."
     description: |
-      Modern infrastructure as code in languages engineers and agents already know and love.
+      Ship cloud infrastructure at the speed of AI with languages and tools that stay out of your way.
     anchor: hero
     code_overlay_image: /images/home/home-hero-code-overlay.svg
     code_aspect_ratio: "666/513"
@@ -42,7 +42,6 @@ sections:
               availabilityZone: az,
             })
           );
-
 
       - language: python
         label: Python
@@ -91,7 +90,6 @@ sections:
                   return nil
               })
           }
-
 
       - language: csharp
         label: C#
@@ -256,28 +254,28 @@ sections:
   - type: feature_split
     heading: The **complete platform** for infrastructure teams
     description: |
-      **From open source IaC to AI automation, Pulumi provides everything platform teams need to ship infrastructure faster.**
+      **From open source IaC to AI-driven workflows, Pulumi gives platform teams all they need to build and scale cloud infrastructure.**
 
-      One platform that integrates **infrastructure as code, secrets management, policy governance,** and **AI** — no more stitching together disconnected tools.
+      A unified platform for infrastructure as code, configuration and secrets, policy enforcement, cloud insights, developer self-service, and AI-powered automation.
     cta_text: Explore the platform
     cta_link: /product/
     cards:
       - image: /images/home/languages-card-image.svg
         image_alt: Programming language logos
         title: Real languages
-        description: Use TypeScript, Python, Go, C#, or Java. Full IDE support, testing frameworks, and package ecosystems. Infrastructure as software.
+        description: Write infrastructure code in TypeScript, Python, Go, C#, or Java — the same languages your team already uses to build software.
       - image: /images/home/secure-card-image.svg
         image_alt: Security shield illustration
         title: Secure by default
-        description: Encrypted secrets, dynamic credentials, audit trails. SOC 2 Type II certified. Meet compliance requirements without slowing down.
+        description: Meet compliance requirements with encrypted secrets, dynamic credentials, and full audit trails. Pulumi is SOC 2 Type II certified.
       - image: /images/home/ai-card-image.svg
         image_alt: AI for infrastructure illustration
         title: AI for infrastructure
-        description: Generate infrastructure from requirements, reviews PRs, and debugs deployments, with complete organizational context.
+        description: Generate, debug, and refactor your infrastructure code with built-in best practices and full organizational context.
     anchor: platform
 
   - type: testimonial
-    quote: Pulumi helped our team to ship a new product faster. We needed one tool to setup and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively
+    quote: Pulumi helped our team to ship a new product faster. We needed one tool to set up and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively.
     author: Justin Fitzhugh
     title: VP of Cloud Platform Engineering
     company: Snowflake
@@ -286,38 +284,39 @@ sections:
 
   - type: card_grid
     large_cards:
-      - title: Write infrastructure in any language
+      - title: Don't just write IaC — compose it
         description: |
-          Use TypeScript, Python, Go, C#, or Java. Full IDE support, testing frameworks, and package ecosystems. Infrastructure as software.
+          Take advantage of your language of choice to build reusable components and share them with package managers like npm, PyPI, and NuGet. Get all of the benefits of your IDE, including type checking, code navigation, inline docs, testing, and more.
+
         image: /images/home/iac-card-image.svg
         image_alt: Pulumi infrastructure as code editor
         cta_text: Learn more about IaC
         cta_link: /product/infrastructure-as-code/
       - title: Meet Neo, your AI platform engineer
         description: |
-          The industry's first AI agent built for infrastructure. Neo understands your entire infrastructure context, respects your policies, and executes complex tasks end-to-end.
+          The first AI agent built for infrastructure. Pulumi Neo understands your code and organizational context, respects your policies, and executes complex tasks end-to-end — with or without a human in the loop.
         image: /images/home/neo-card-image.svg
         image_alt: Pulumi Neo AI platform engineer
         cta_text: Learn more about Neo
         cta_link: /product/neo/
     small_cards:
-      - title: Centralized secrets & configuration
+      - title: Centralized configuration & secrets
         description: |
-          Stop juggling multiple vaults and config files. Pulumi ESC provides one interface for all your secrets.
+          A single interface across all of your secrets. Pull in Vault, AWS Secrets Manager, Azure Key Vault, and more, plus support for short-lived creds with OIDC.
         image: /images/home/esc-card-image.svg
         image_alt: Pulumi ESC secrets management
         cta_text: Learn more about Pulumi ESC
         cta_link: /product/secrets-management/
       - title: Insights & governance
         description: |
-          Search infrastructure with natural language. Enforce policies automatically. Track compliance in real-time. Find vulnerabilities before they become incidents.
+          Use natural language queries to find managed and unmanaged resources — even across clouds. Enforce policies, track compliance in real-time, and find vulnerabilities before they become incidents.
         image: /images/home/ig-card-image.svg
         image_alt: Pulumi Insights governance dashboard
         cta_text: Learn more about insights & governance
         cta_link: /product/insights-governance/
       - title: Self-service infrastructure
         description: |
-          Create templates, expose approved infrastructure through APIs and define golden paths. Let engineers ship faster while platform teams maintain control.
+          Define golden paths for approved infrastructure with configurable components and customizable templates that enable developers while keeping platform teams in control.
         image: /images/home/idp-card-image.svg
         image_alt: Pulumi internal developer platform
         cta_text: Learn more about IDP
@@ -326,7 +325,7 @@ sections:
 
   - type: case_study_cards
     title: Trusted by 4,000+ innovative companies
-    description: One platform that integrates infrastructure as code, secrets management, policy governance, and AI—no more stitching together disconnected tools.
+    description: See how engineering teams use Pulumi to ship infrastructure faster, improve security, and reduce cloud complexity.
     cta_text: Read our customer stories
     cta_link: /case-studies/
     cards:
