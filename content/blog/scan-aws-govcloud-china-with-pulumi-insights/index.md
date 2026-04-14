@@ -1,5 +1,5 @@
 ---
-title: "Scan AWS GovCloud, China, and Regulated Partitions with Pulumi Insights"
+title: "Scan AWS GovCloud and more partitions with Pulumi Insights"
 date: 2026-04-14T09:00:00-00:00
 draft: false
 meta_desc: Pulumi Insights now scans every AWS partition — GovCloud, China, and the intelligence-community clouds — in addition to Standard commercial.
