@@ -17,19 +17,19 @@ tags:
     - ai-coding
 social:
     twitter: |
-        AI coding agents fail in recognizable ways. Context fills up and early instructions fade, tests get skipped, and scope expands past what you asked for. Three separate community teams built frameworks to address these problems, each taking a completely different approach.
+        We asked a coding agent for a three-subnet VPC. It added a NAT gateway, transit gateway, VPN endpoint, and DNS resolver on its own.
 
-        We tested all three on real infrastructure workflows. Which one helps depends on which problem keeps hitting you.
+        Three frameworks claim to fix this. One produced a 41x speedup. Here's how they compared.
     linkedin: |
-        There is a pattern that teams building with AI coding agents tend to hit on longer projects. The first session is impressive. By the third, the agent has lost track of earlier requirements and started adding infrastructure nobody asked for.
+        We asked a coding agent for a three-subnet VPC. It added a NAT gateway, transit gateway, VPN endpoint, and a DNS resolver. Infrastructure nobody asked for and we would pay for monthly.
 
-        The context window is the core issue. It fills up, and earlier instructions carry less weight as it does. Writing better prompts helps at the start but does not solve the underlying problem.
+        That is scope drift. There are two more failure patterns just as predictable. Three community frameworks each fix a different one.
 
-        Three community frameworks tackled this in different ways. We spent a few weeks running all three on real Pulumi infrastructure work. Which one helps most comes down to which problem keeps showing up for you.
+        We spent a few weeks running all three on real Pulumi infrastructure work. One produced a 41x speedup on a real library rewrite. One we probably would not reach for on pure infrastructure work. Here is where each one actually fits.
     bluesky: |
-        AI coding agents tend to work well at first and then run into the same issues: context rot on long sessions, tests that get quietly skipped, and scope that grows past what you asked for. It happens across every agent, not just one.
+        We asked a coding agent for a three-subnet VPC. It added a NAT gateway, transit gateway, VPN endpoint, and DNS resolver nobody requested.
 
-        Three community frameworks built different approaches to these problems. We tested them on real Pulumi infrastructure workflows. Which one helps depends on where things tend to break down.
+        Three frameworks tackle the patterns that break AI coding agents on longer sessions. One produced a 41x speedup. Here's how they compared.
 ---
 
 Three community frameworks have emerged that fix the specific ways AI coding agents break down on real projects. [Superpowers](https://github.com/obra/superpowers) enforces test-driven development. [GSD](https://github.com/gsd-build/get-shit-done) prevents context rot. [GSTACK](https://github.com/garrytan/gstack) adds role-based governance. All three started with Claude Code but now work across Cursor, Codex, Windsurf, Gemini CLI, and more.
