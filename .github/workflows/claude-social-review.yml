@@ -5,14 +5,24 @@ on:
     types: [opened, reopened, ready_for_review, synchronize]
     paths:
       - 'content/blog/*/index.md'
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to review'
+        required: true
+        type: string
 
 concurrency:
-  group: social-review-${{ github.event.pull_request.number }}
+  group: social-review-${{ github.event.pull_request.number || github.event.inputs.pr_number }}
   cancel-in-progress: true
 
 jobs:
   social-review:
-    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login != 'pulumi-bot' && github.event.pull_request.user.login != 'dependabot[bot]'
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.pull_request.head.repo.full_name == github.repository &&
+       github.event.pull_request.user.login != 'pulumi-bot' &&
+       github.event.pull_request.user.login != 'dependabot[bot]')
 
     runs-on: ubuntu-latest
     environment: production
@@ -22,9 +32,28 @@ jobs:
       id-token: write
 
     steps:
+      - name: Resolve PR info
+        id: pr-info
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            PR_NUMBER="${{ github.event.inputs.pr_number }}"
+            HEAD_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json headRefName -q .headRefName)
+            BASE_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json baseRefName -q .baseRefName)
+          else
+            PR_NUMBER="${{ github.event.pull_request.number }}"
+            HEAD_REF="${{ github.event.pull_request.head.ref }}"
+            BASE_REF="${{ github.event.pull_request.base.ref }}"
+          fi
+          echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "head_ref=$HEAD_REF" >> "$GITHUB_OUTPUT"
+          echo "base_ref=$BASE_REF" >> "$GITHUB_OUTPUT"
+
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
+          ref: ${{ steps.pr-info.outputs.head_ref }}
           fetch-depth: 0
 
       - name: Fetch secrets from ESC
@@ -58,7 +87,7 @@ jobs:
         id: check
         env:
           SOCIAL_STATE_BUCKET: ${{ steps.bucket.outputs.name }}
-          BASE_REF: origin/${{ github.event.pull_request.base.ref }}
+          BASE_REF: origin/${{ steps.pr-info.outputs.base_ref }}
         run: |
           uv run scripts/social/schedule-posts.py --check > .social-check-output.txt; EXIT=$?
           if [ -s .social-check-output.txt ]; then
@@ -82,16 +111,18 @@ jobs:
           prompt: |
             You are running in a CI environment.
 
-            Review the social media copy for pull request #${{ github.event.pull_request.number }}.
+            Review the social media copy for pull request #${{ steps.pr-info.outputs.number }}.
 
             The social copy and status for each blog post is in `.social-check-output.txt`. Read that file — it contains the actual post text for each platform, plus metadata (character counts, already-posted status). Posts that are already posted or too old have been filtered out.
 
             If you want more context about the blog post itself (to judge whether the social copy accurately represents it), the file path is listed in the output — you can read it.
 
-            Review each platform's copy using the rules in `.claude/commands/social-media-review.md`.
+            Review each platform's copy using the rules in `.claude/commands/social-media-review/SKILL.md`.
 
-            Post your review as a single comment titled `## Social Media Review` via `gh pr comment #${{ github.event.pull_request.number }}`.
-          claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr comment:*)"'
+            IMPORTANT: Keep the review short and scannable. Use `#### Platform — PASS` or `#### Platform — FAIL` headings with bullet-pointed reasons. No analysis paragraphs, no rubric citations. A blogger should read it in 30 seconds.
+
+            Post your review as a single comment titled `## Social Media Review` via `gh pr comment #${{ steps.pr-info.outputs.number }}`.
+          claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Glob,Grep,Agent,Bash(python3:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr comment:*)"'
 
       - name: Fail if copy exceeds character limits
         if: steps.check.outputs.has_errors == 'true'
