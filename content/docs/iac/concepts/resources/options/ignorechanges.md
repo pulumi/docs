@@ -372,7 +372,7 @@ public class App {
                 .build())
             .build(),
             CustomResourceOptions.builder()
-                .ignoreChanges("prop")
+                .ignoreChanges("defaultActions[*].forward.targetGroups[*].weight")
                 .build());
 
     }
@@ -414,6 +414,9 @@ resources:
                 weight: 100
               - arn: ${frontEndGreen.arn}
                 weight: 0
+    options:
+      ignoreChanges:
+        - defaultActions[*].forward.targetGroups[*].weight
 ```
 
 {{% /choosable %}}

@@ -54,11 +54,11 @@ Logged in to pulumi.com as …
 
 Pulumi ESC offers you the ability to manually set your credentials as secrets in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
 
-This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, follow the steps in the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/). Make sure that the IAM role you create has sufficient permissions to perform S3 actions.
+This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, follow the steps in the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/). Make sure that the IAM role you create has sufficient permissions to perform EC2 actions.
 
 ### Step 3: Create a new Pulumi ESC environment
 
-Once OIDC has been configured between Pulumi and AWS, the next steps is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
+Once OIDC has been configured between Pulumi and AWS, the next step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
 
 {{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
 

@@ -674,7 +674,9 @@ if (config.registryStack) {
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
-            }
+            },
+            // Origin Shield for registry should be configured in pulumi/registry,
+            // not here, since the registry has its own CloudFront distribution.
         }
     );
     registryBehaviors.push(
@@ -715,7 +717,9 @@ if (config.guidesStack) {
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
-            }
+            },
+            // Origin Shield for guides should be configured in pulumi/guides,
+            // not here, since guides has its own CloudFront distribution.
         }
     );
     guidesBehaviors.push(
@@ -763,6 +767,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
+            },
+            originShield: {
+                enabled: true,
+                originShieldRegion: "us-west-2",
             },
         },
         {
@@ -1017,6 +1025,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     // "All" is the most broad distribution, and also the most expensive.
     // "100" is the least broad, and also the least expensive.
     priceClass: "PriceClass_All",
+
+    httpVersion: "http2and3",
 
     // Customize error pages.
     // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/custom-error-pages.html

@@ -7,7 +7,7 @@ type: what-is
 page_title: Run 'aws s3 cp' using Dynamic Credentials
 ---
 
-The [aws s3 cp command](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html) is part of the AWS Command Line Interface (CLI) and is used to list and navigate the contents of buckets in Amazon Simple Storage Service (Amazon S3). Amazon S3 is a scalable object storage service offered by Amazon Web Services (AWS) and is commonly used for backup and storage, serving content, and hosting static websites.
+The [aws s3 cp command](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html) is part of the AWS Command Line Interface (CLI) and is used to copy files to and from buckets in Amazon Simple Storage Service (Amazon S3). Amazon S3 is a scalable object storage service offered by Amazon Web Services (AWS) and is commonly used for backup and storage, serving content, and hosting static websites.
 
 Copying files to and from S3 buckets is a common use case and operation performed on your terminal via the AWS Command Line Interface (CLI). This task requires careful handling of your AWS credentials, which can be a point of vulnerability if not managed correctly. Traditionally, there are two types of credentials used: temporary credentials, which are safer but require manual refreshing, and long-term credentials, which carry a higher security risk.
 
@@ -58,7 +58,7 @@ This service can dynamically generate credentials on your behalf each time you n
 
 ### Step 3: Create a new Pulumi ESC environment
 
-Once OIDC has been configured between Pulumi and AWS, the next steps is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
+Once OIDC has been configured between Pulumi and AWS, the next step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
 
 {{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
 

@@ -161,9 +161,9 @@ cdn:
 -     defaultTtl: 600
 -     maxTtl: 600
 -     minTtl: 600
-+     defaultTtl: 600
-+     maxTtl: 600
-+     minTtl: 600
++     defaultTtl: 3600
++     maxTtl: 3600
++     minTtl: 3600
 ```
 
 {{% /choosable %}}
@@ -745,7 +745,7 @@ Pulumi supports many third-party DNS providers, all of which are available in th
 * [Akamai](/registry/packages/akamai/)
 * [NS1](/registry/packages/ns1/)
 
-Integration details vary by provider, so we suggest exploring the Pulumi API documentation of your provider of choice to learn more. [See the Registry](/registry/) for a complete list supported providers.
+Integration details vary by provider, so we suggest exploring the Pulumi API documentation of your provider of choice to learn more. [See the Registry](/registry/) for a complete list of supported providers.
 
 ## Tidying up
 
