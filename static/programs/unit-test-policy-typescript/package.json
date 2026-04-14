@@ -11,9 +11,9 @@
         "@types/node": "^10.0.0",
         "mocha": "^11.1.0",
         "rewire": "^7.0.0",
-        "ts-node": "^10.9.2"
+        "tsx": "^4.0.0"
     },
     "scripts": {
-        "test": "npx mocha --require ts-node/register 'test/**/*.spec.ts' --exit"
+        "test": "npx mocha --require tsx 'test/**/*.spec.ts' --exit"
     }
 }

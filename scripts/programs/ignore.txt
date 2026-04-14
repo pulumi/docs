@@ -42,6 +42,15 @@ azure-native-import-resource-group-yaml
 # configuration needs to be sorted out. https://github.com/pulumi/docs/issues/14505
 gcp-import-service-account-.*
 
+# All JS examples were removed from static programs.
+# TODO: See if this line can be removed once the code has been merged to master
+and the tests have been run.
+*-javascript
+
+# Static website programs require Hugo at runtime (subprocess.run), which
+# intermittently crashes (SIGABRT) in CI due to resource contention.
+aws-static-website-with-runtime-logic-.*
+
 # Terraform reference project: intentionally not a Pulumi program (used as
 # an external tfstate source by other examples).
 tf-state-ref-terraform
