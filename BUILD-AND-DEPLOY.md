@@ -1172,10 +1172,11 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 - Pull requests to master
 - Manual: `workflow_dispatch`
 
-**Platform:** Custom Pulumi runner (pulumi-service-ubuntu-24.04-4core)
+**Platform:** GitHub-hosted runner (ubuntu-latest), with [jlumbroso/free-disk-space](https://github.com/jlumbroso/free-disk-space) to reclaim disk space before tests run
 
 **Setup:**
 
+- Disk space reclaimed via `jlumbroso/free-disk-space` (`tool-cache: false`, `dotnet: false` to preserve caches used by later setup steps)
 - Multi-language runtimes:
   - Go 1.26
   - Node.js 20
