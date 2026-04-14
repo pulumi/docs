@@ -31,7 +31,7 @@ The exact non-zero value of a failing exit code gives us some information about 
 | Configuration and validation error | 2         | The CLI cannot run or complete the command because of invalid or missing arguments, configuration, or schema validation, or because required confirmation flags (such as `--yes`) are not provided in non-interactive mode. |
 | Authentication or authorization error | 3         | The CLI cannot authenticate or is not authorized to perform the requested operation, for example when login is required, credentials are missing, or access is forbidden. |
 | Resource or deployment error      | 4         | A resource operation fails during deployment, preview, refresh, destroy, or import. This includes errors returned by resource providers and underlying cloud platforms. |
-| Policy failure                    | 5         | A [policy pack](/docs/iac/policy/policy-as-code/) or organization policy blocks the operation even though the program and providers succeeded. |
+| Policy failure                    | 5         | A [policy pack](/docs/insights/policy/) or organization policy blocks the operation even though the program and providers succeeded. |
 | Stack not found                   | 6         | The requested stack does not exist, cannot be found, or no stack is selected. |
 | No changes                        | 7         | An expectation about changes is not met, such as when `--expect-no-changes` is used but changes are detected. |
 | Canceled run                      | 8         | The operation is canceled before completion, for example due to `pulumi cancel`, a user interrupt (such as Ctrl+C), or cancellation initiated through the Automation API. |
