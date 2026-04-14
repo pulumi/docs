@@ -10,7 +10,7 @@ aliases:
   - /product/pulumi-esc
 
 sections:
-  - type: product_hero
+  - type: hero
     title_primary: Centralized configuration,
     title_secondary: "zero sprawl."
     title_reversed: false
@@ -19,7 +19,7 @@ sections:
     image_alt: Pulumi ESC secrets management — connect any secrets store
     anchor: hero
 
-  - type: product_two_column
+  - type: feature_split
     heading: One interface for all your secrets and configuration
     description: |
       **Connect any secrets store and control everything centrally.**

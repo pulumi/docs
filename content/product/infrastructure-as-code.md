@@ -9,18 +9,116 @@ aliases:
   - /product/pulumi-iac
 
 sections:
-  - type: product_hero
+  - type: hero
     title_primary: Infrastructure as code
     title_secondary: in any language.
     description: |
       Use the programming languages you already know to build infrastructure on AWS, Azure, Google Cloud, Kubernetes, and hundreds more providers.
-    image: /images/product/infrastructure-as-code/iac-hero.svg
-    image_alt: Pulumi infrastructure as code in any language
-    image_max_width: 1200px
-    image_min_width: 1024px
     anchor: hero
+    code_overlay_image: /images/product/infrastructure-as-code/iac-hero-code-overlay.svg
+    code_aspect_ratio: "858/500"
+    code_visual_max_width: 860px
+    code_offsets:
+      top: "0%"
+      right: "28.5%"
+      bottom: "30%"
+      left: "0%"
+    code_title: "index.ts"
+    code_snippets:
+      - language: typescript
+        label: TypeScript
+        title: "index.ts"
+        code: |
+          import * as pulumi from "@pulumi/pulumi";
+          import * as aws from "@pulumi/aws";
 
-  - type: product_two_column
+          const bucket = new aws.s3.Bucket("my-bucket");
+
+          export const bucketName = bucket.id;
+      - language: python
+        label: Python
+        title: "__main__.py"
+        code: |
+          import pulumi
+          from pulumi_aws import s3
+
+          bucket = s3.Bucket("my-bucket")
+
+          pulumi.export("bucketName", bucket.id)
+      - language: go
+        label: Go
+        title: "main.go"
+        code: |
+          package main
+
+          import (
+            "github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+            "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+          )
+
+          func main() {
+            pulumi.Run(func(ctx *pulumi.Context) error {
+              bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
+              if err != nil {
+                return err
+              }
+              ctx.Export("bucketName", bucket.ID())
+              return nil
+            })
+          }
+      - language: csharp
+        label: C#
+        title: "MyStack.cs"
+        code: |
+          using Pulumi;
+          using Pulumi.Aws.S3;
+
+          class MyStack : Stack
+          {
+              public MyStack()
+              {
+                  var bucket = new Bucket("my-bucket");
+                  this.BucketName = bucket.Id;
+              }
+
+              [Output]
+              public Output<string> BucketName { get; set; }
+          }
+      - language: java
+        label: Java
+        title: "App.java"
+        code: |
+          package s3site;
+
+          import com.pulumi.Context;
+          import com.pulumi.Pulumi;
+          import com.pulumi.core.Output;
+          import com.pulumi.aws.s3.Bucket;
+
+          public class Infra {
+              public static void main(String[] args) {
+                  Pulumi.run(Infra::stack);
+              }
+
+              private static void stack(Context ctx) {
+                  final var myBucket = new Bucket("my-bucket");
+                  ctx.export("bucketName",
+                      myBucket.bucketDomainName());
+              }
+          }
+      - language: yaml
+        label: YAML
+        title: "Pulumi.yaml"
+        code: |
+          name: my-stack
+          runtime: yaml
+          resources:
+              bucket:
+                  type: aws:s3:Bucket
+          outputs:
+              bucketName: ${bucket.id}
+
+  - type: feature_split
     heading: Write infrastructure code in your favorite language
     description: |
       TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Get autocomplete, type checking, and all your favorite IDE features.
@@ -77,25 +175,132 @@ sections:
       Create reusable infrastructure components that can be used in any language. Package common patterns once and use them everywhere. Publish your components to the Pulumi Registry, npm, PyPI, NuGet, or any package manager.
     cta_text: Learn more about Pulumi components
     cta_link: /docs/iac/concepts/components
-    code_images:
+    code_title: "index.ts"
+    code_snippets:
       - language: typescript
-        image: /images/product/infrastructure-as-code/typescript.svg
-        alt: Pulumi code example in TypeScript
+        label: TypeScript
+        title: "index.ts"
+        code: |
+          import * as awsx from "@pulumi/awsx";
+
+          const vpc = new awsx.ec2.Vpc("vpc", {
+              subnetSpecs: [
+                  { type: awsx.ec2.SubnetType.Public, cidrMask: 22 },
+                  { type: awsx.ec2.SubnetType.Private, cidrMask: 20 },
+              ],
+          }, { protect: true });
+
+          export const vpcId = vpc.vpcId;
+          export const privateSubnetIds = vpc.privateSubnetIds;
+          export const publicSubnetIds = vpc.publicSubnetIds;
       - language: python
-        image: /images/product/infrastructure-as-code/python.svg
-        alt: Pulumi code example in Python
+        label: Python
+        title: "__main__.py"
+        code: |
+          import pulumi
+          import pulumi_awsx as awsx
+
+          vpc = awsx.ec2.Vpc("vpc",
+              awsx.ec2.VpcArgs(
+                  subnet_specs=[
+                      awsx.ec2.SubnetSpecArgs(type=awsx.ec2.SubnetType.PUBLIC, cidr_mask=22),
+                      awsx.ec2.SubnetSpecArgs(type=awsx.ec2.SubnetType.PRIVATE, cidr_mask=20),
+                  ],
+              ),
+              opts=pulumi.ResourceOptions(protect=True),
+          )
+
+          pulumi.export("vpcId", vpc.vpc_id)
+          pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+          pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
       - language: go
-        image: /images/product/infrastructure-as-code/go.svg
-        alt: Pulumi code example in Go
+        label: Go
+        title: "main.go"
+        code: |
+          package main
+
+          import (
+              "github.com/pulumi/pulumi-awsx/sdk/v3/go/awsx/ec2"
+              "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+          )
+
+          func main() {
+              pulumi.Run(func(ctx *pulumi.Context) error {
+                  vpc, err := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{
+                      SubnetSpecs: []ec2.SubnetSpecArgs{
+                          {Type: ec2.SubnetTypePublic, CidrMask: pulumi.IntRef(22)},
+                          {Type: ec2.SubnetTypePrivate, CidrMask: pulumi.IntRef(20)},
+                      },
+                  }, pulumi.Protect(true))
+                  if err != nil {
+                      return err
+                  }
+
+                  ctx.Export("vpcId", vpc.VpcId)
+                  ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+                  ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+                  return nil
+              })
+          }
       - language: csharp
-        image: /images/product/infrastructure-as-code/csharp.svg
-        alt: Pulumi code example in C#
+        label: C#
+        title: "Program.cs"
+        code: |
+          using Pulumi;
+          using System.Collections.Generic;
+          using Pulumi.Awsx.Ec2.Inputs;
+          using Ec2 = Pulumi.Awsx.Ec2;
+
+          return await Deployment.RunAsync(() =>
+          {
+              var vpc = new Ec2.Vpc("vpc", new()
+              {
+                  SubnetSpecs =
+                  {
+                      new SubnetSpecArgs { Type = Ec2.SubnetType.Public, CidrMask = 22 },
+                      new SubnetSpecArgs { Type = Ec2.SubnetType.Private, CidrMask = 20 },
+                  },
+              }, new ComponentResourceOptions { Protect = true });
+
+              return new Dictionary<string, object?>
+              {
+                  ["vpcId"] = vpc.VpcId,
+                  ["privateSubnetIds"] = vpc.PrivateSubnetIds,
+                  ["publicSubnetIds"] = vpc.PublicSubnetIds,
+              };
+          });
       - language: java
-        image: /images/product/infrastructure-as-code/java.svg
-        alt: Pulumi code example in Java
-      - language: yaml
-        image: /images/product/infrastructure-as-code/yaml.svg
-        alt: Pulumi code example in YAML
+        label: Java
+        title: "App.java"
+        code: |
+          package myproject;
+
+          import java.util.Arrays;
+          import com.pulumi.Pulumi;
+          import com.pulumi.awsx.ec2.Vpc;
+          import com.pulumi.awsx.ec2.VpcArgs;
+          import com.pulumi.awsx.ec2.enums.SubnetType;
+          import com.pulumi.awsx.ec2.inputs.SubnetSpecArgs;
+          import com.pulumi.resources.ComponentResourceOptions;
+
+          public class App {
+              public static void main(String[] args) {
+                  Pulumi.run(ctx -> {
+                      var vpc = new Vpc("vpc",
+                          VpcArgs.builder()
+                              .subnetSpecs(Arrays.asList(
+                                  SubnetSpecArgs.builder().type(SubnetType.Public).cidrMask(22).build(),
+                                  SubnetSpecArgs.builder().type(SubnetType.Private).cidrMask(20).build()
+                              ))
+                              .build(),
+                          ComponentResourceOptions.builder().protect(true).build());
+
+                      ctx.export("vpcId", vpc.vpcId());
+                      ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+                      ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+                  });
+              }
+          }
     anchor: packages
 
   - type: three_column
@@ -196,6 +401,6 @@ sections:
           Every action logged. Who changed what, when, and why. Export to SIEM. Compliance reports at your fingertips.
 
   - type: footer_cta
-    title: The infrastructure-as-code platform for any cloud.
+    title: The infrastructure as code platform for any cloud.
     anchor: get-started
 ---

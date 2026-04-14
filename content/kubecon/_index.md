@@ -135,7 +135,7 @@ location:
   anchor: location
 
 footer_cta:
-  title: The infrastructure-as-code platform for any cloud.
+  title: The infrastructure as code platform for any cloud.
   cta_primary_text: Try Pulumi
   cta_primary_link: /signup
   cta_secondary_text: Contact sales

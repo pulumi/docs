@@ -12,6 +12,8 @@
 
     Each card object:
     - icon: Font Awesome icon class (e.g. "fa-code")
+    - image: Optional image path (renders <img> instead of icon when set)
+    - image_alt: Optional alt text for the image
     - title: Card title
     - description: Card description (markdown supported)
 */}}
@@ -26,7 +28,11 @@
 <div class="product-two-column-cards grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-36 mt-12 md:mt-16 {{ $lgTopClass }} w-full">
     {{ range $cards }}
     <div class="product-feature-mini-card">
-        {{ if .icon }}
+        {{ if .image }}
+        <div class="mb-4">
+            <img src="{{ .image }}" alt="{{ .image_alt | default .title }}" class="w-full h-auto max-h-48 object-contain">
+        </div>
+        {{ else if .icon }}
         <div class="template-feature-card-icon">
             <i class="fa {{ .icon }}"></i>
         </div>

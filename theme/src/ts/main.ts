@@ -13,6 +13,7 @@ import "./docs-feedback";
 import "./event-filtering";
 import "./copybutton";
 import "./code-tabbed";
+import "./code-snippets-dropdown";
 import "./resources";
 import "./packages";
 import "./pricing-trial";

@@ -6,7 +6,7 @@ type: page
 layout: product-page
 
 sections:
-  - type: product_hero
+  - type: hero
     title_primary: The unified platform
     title_secondary: for infrastructure teams.
     description: |
@@ -16,7 +16,7 @@ sections:
     image_max_width: 800px
     anchor: hero
 
-  - type: product_two_column
+  - type: feature_split
     heading: Open source foundation, enterprise scale
     description: |
       Build infrastructure like you build software.
