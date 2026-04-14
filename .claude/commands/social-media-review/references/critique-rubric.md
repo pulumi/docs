@@ -14,7 +14,7 @@ Return PASS or FAIL for each platform with bullet-point reasons.
 If ANY of the following are violated, return FAIL:
 
 - Uses banned phrases: "excited to announce", "read our blog", "our latest post"
-- Uses "I" voice instead of "we" (see Voice section below for nuance)
+- Uses "I" voice instead of "we" (see Voice examples below)
 - Includes a URL in the post copy
 - Uses hashtags
 - Uses markdown formatting (headings, **bold**, *italic*, [links]()). Bullet lists with `-` are OK
@@ -29,96 +29,161 @@ If ANY of the following are violated, return FAIL:
 
 ## Soft Fail Heuristics
 
-If 2 or more are present, return FAIL.
+If 2 or more are present, return FAIL. Each example below is a complete post that passes everything except the one rule being demonstrated.
 
-### Weak or generic opening line
+Summary of heuristics (details and examples follow):
+- Starts with company or product name
+- Weak or generic opening line
+- Lacks specificity (no tools, numbers, or concrete results)
+- Could apply to any company by swapping the name
+- Reads like a product announcement or press release
+- Structure technically valid but still hard to read
+- LLM-characteristic writing patterns
+- Missing pointer — no line that connects the post to the article
+- Curiosity gap closed — post gives away the article's key points
 
-The first line must earn attention. It should stop someone mid-scroll.
+### Voice: "I" instead of "we"
 
-FAIL — generic observation that could start any post:
-> There's a common challenge teams face when testing infrastructure policies. The feedback loop between writing a policy and knowing whether it works is often slower than it should be.
+FAIL:
+> 66% of organizations run AI on Kubernetes. Only 7% deploy to production daily. I spent four days at KubeCon EU asking what's blocking that gap.
+>
+> The answers surprised me. I wrote up what's actually changing.
 
-Nothing specific. "A common challenge teams face" and "slower than it should be" are filler. The reader scrolls past because nothing here is concrete or surprising.
+Good structure, good opening, specific, has a gap and pointer. But uses "I" — hard fail.
 
-PASS — specific frustration the reader recognizes:
-> Every time we changed a policy, we had to run `pulumi preview` against a real stack to find out if it worked. That feedback loop was slow enough that people stopped iterating.
+PASS:
+> 66% of organizations run AI on Kubernetes. Only 7% deploy to production daily. We spent four days at KubeCon EU asking what's blocking that gap.
+>
+> The answers were not what we expected.
 
-Opens with a concrete workflow problem. "People stopped iterating" earns the next sentence.
+### Voice: external company named wrong
+
+When the blog is about a customer or partner, name them. Don't use "we" as if Pulumi did the thing.
+
+FAIL:
+> We moved from AWS CDK to Pulumi because CDK tied us to AWS and debugging CloudFormation was painful.
+>
+> Here's how the switch went.
+
+Sounds like Pulumi migrated away from CDK. It was SST that switched.
+
+PASS:
+> SST powers thousands of serverless apps and they just rebuilt their entire framework on Pulumi, replacing AWS CDK. The reason wasn't what we expected.
+>
+> Here's what drove the switch.
+
+SST is named. "We" appears once as Pulumi observing.
+
+### Voice: not every post needs "we"
+
+Posts can use stats, observations, or the product itself as the subject. "We" is not required. These are all valid:
+
+PASS — stat-first:
+> 66% of organizations run AI on Kubernetes. Only 7% deploy to production daily. That gap showed up in every conversation at KubeCon EU this year.
+>
+> Three trends emerged that nobody predicted. Here's what they were.
+
+PASS — product as subject (with a concrete result, not an announcement):
+> Bun runs Pulumi programs 3x faster than Node on cold starts. It has been the most requested runtime since its 1.0 release.
+>
+> It's now fully supported. Here's what to know before switching.
+
+Both have setup, gap, and pointer. Neither uses "we." Neither reads as an announcement because the setup includes a specific number or observation that earns the reader's attention.
+
+### Voice: naming the blog author
+
+When a single author writes about something they personally did, naming them in third person adds credibility and personality. This is not an "I" voice violation.
+
+PASS — author attended the conference:
+> Engin Diri spent four days at the Pulumi booth at KubeCon EU asking every visitor the same question: what are you running in production with AI on Kubernetes?
+>
+> The answers were not what anyone predicted. Here's his recap.
+
+PASS — author solved a specific problem:
+> Sean Yeh got paged on a Friday night because an Azure app secret expired. Two weeks later a different app broke for the same reason. He automated the rotation.
+>
+> The setup takes 15 minutes. Here's how it works.
+
+Naming the author works when their personal experience IS the story. Don't use it for team efforts or product launches.
 
 ### Starts with company or product name
 
-Leading with "Pulumi..." or "Neo..." reads as an announcement, not a hook.
-
 FAIL:
-> Pulumi Neo now has read-only mode. Run Neo with confidence knowing it can preview changes and create PRs without modifying your infrastructure.
+> Pulumi Neo now lets platform engineers hand off infrastructure analysis without worrying about unintended deployments. The permission model changed.
+>
+> Here's how it works.
+
+Correct voice, has specificity, has a gap and pointer. But leads with "Pulumi Neo."
 
 PASS:
-> We had platform engineers who wanted Neo to analyze their infrastructure but wouldn't turn it on because it could deploy changes. Now they can set it to read-only.
+> Platform engineers wanted Neo to analyze their infrastructure but wouldn't turn it on because it could deploy changes. That changed.
+>
+> Here's how the new permission model works.
 
-The product name appears, but the sentence leads with the problem.
+### Weak or generic opening line
+
+FAIL:
+> There's a common challenge teams face when testing infrastructure policies. We found that the feedback loop was slower than it needed to be.
+>
+> We built a faster way. Here's what changed.
+
+Doesn't start with product name, correct voice, has a pointer. But "there's a common challenge teams face" is generic filler.
+
+PASS:
+> Every time we changed a policy, we had to run `pulumi preview` against a real stack just to find out if it worked. That was slow enough that people stopped iterating.
+>
+> We built a faster way. Here's what changed.
 
 ### Lacks specificity
 
-No tools, no numbers, no concrete scenario. All vibes.
-
 FAIL:
-> Introducing read-only mode for Pulumi Neo. Run Neo with confidence knowing it can analyze your infrastructure, run previews, and open pull requests without making unwanted modifications.
+> We ran into some issues with how our coding agents handled longer projects. The problems were predictable but the solutions took different approaches.
+>
+> We tested a few options and wrote up what we found.
 
-"Run with confidence" is marketing. "Without making unwanted modifications" just restates "read-only." No scenario, no detail.
+Strong opening shape, correct voice, has pointer. But "some issues," "the problems," "a few options" — no concrete detail.
 
 PASS:
-> Some of our platform engineers have broad infrastructure access but didn't want to give Neo the same permissions. The risk of an unintended deployment was enough to keep them from using it at all.
-
-Specific people, specific fear, specific consequence.
+> We asked a coding agent for a three-subnet VPC. It added a NAT gateway, transit gateway, VPN endpoint, and DNS resolver on its own.
+>
+> Three frameworks claim to fix this. One produced a 41x speedup. We tested all three.
 
 ### Could apply to any company by swapping the name
 
-If you can replace "Pulumi" with a competitor and the post still works, it's too generic.
-
 FAIL:
-> Platform engineering is transforming how organizations deliver software. Teams need a way to automate, secure, and manage everything they run in the cloud. We built Pulumi IDP to solve exactly that challenge.
-
-Replace "Pulumi IDP" with any competitor name and this reads identically.
-
-PASS:
-> Most internal developer platforms are built from scratch on top of Kubernetes and Backstage. Teams spend months wiring together the catalog, the templates, the pipeline, and the policy layer. We took a different approach — Pulumi IDP ships with all four connected because they share the same engine.
-
-Names the competition, identifies what's structurally different. Only Pulumi could write this.
-
-### Reads like a product announcement or press release
-
-Announcement tone: "[Product] now supports [feature]. [Benefit]. Available today."
-
-FAIL:
-> Neo now has Plan Mode, letting you preview infrastructure changes before executing them. Review diffs, iterate on your design, and only deploy when you're confident. Available today for all Pulumi Cloud users.
-
-PASS:
-> We kept shipping infrastructure changes we weren't confident about because there was no way to iterate without deploying. Every "let me just check something" was a real deployment to a real environment. We built a way to break that cycle.
-
-Same feature, but the post leads with the problem and withholds the mechanism.
-
-### Structure technically valid but still hard to read
-
-Two paragraphs exist, but the prose is dense or awkward.
-
-FAIL:
-> We just shipped a new CLI command that lets you run policy packs against existing stack state without executing your Pulumi program or making provider calls which means policy validation is now a fast repeatable check that works in CI automation and agent workflows.
+> Platform engineering is changing how teams deliver software. We built a way to automate, secure, and manage everything you run in the cloud.
 >
-> Try it out.
+> We documented the architecture.
 
-One 45-word sentence with no punctuation. Technically two paragraphs but impossible to scan.
+Specific-sounding but swap "we" for any vendor and it reads the same.
 
 PASS:
-> Until now, testing a policy change meant running `pulumi preview` against a live stack. That's slow when all you want to know is whether your policy logic works.
+> Most internal developer platforms start with Kubernetes and Backstage and months of glue code. Pulumi IDP skips that — all four layers share one engine.
 >
-> The new `pulumi policy analyze` command skips the program entirely. Here's what that unlocks.
+> Teams in our preview were live in a day. We documented the setup.
 
-Two short sentences per paragraph. Each makes one point. Scannable.
+### Reads like a product announcement
+
+FAIL:
+> We built a new way to iterate on infrastructure changes before deploying them. Review diffs, refine your approach, and only apply when you're confident. Available today for all Pulumi Cloud users.
+>
+> Here's what it looks like.
+
+Has specificity, correct voice, not product-name-first. But explains what the feature does and says "Available today" — release-note language.
+
+PASS:
+> We kept finding that the first thing Neo changed in a complex task was the thing we would have told it to skip. The fix was not a better prompt.
+>
+> We changed the workflow entirely. Here's what that looks like.
 
 ### LLM-characteristic writing patterns
 
-FAIL — staccato dramatic fragments:
-> Infrastructure secrets. Expired credentials. Friday night pages. The trifecta of operational pain.
+FAIL — staccato fragments:
+> Infrastructure secrets. Expired credentials. Friday night pages. We built a single automation pipeline that handles all three.
+>
+> The setup takes about 15 minutes. We wrote up how it works.
+
+Correct voice, specific, has pointer. But "Infrastructure secrets. Expired credentials. Friday night pages." is the classic generated-text pattern.
 
 FAIL — em dash chains:
 > The problem isn't capability — it's consistency — and three teams built answers — each taking a different approach.
@@ -126,44 +191,10 @@ FAIL — em dash chains:
 FAIL — noun-phrase-list opening:
 > Three frameworks, 270K+ combined GitHub stars, completely different approaches.
 
-PASS — complete sentences, specific details:
-> Last quarter we hit a wall with our Azure secret rotation. One expired credential took down two services on a Friday night, and the manual fix created a second outage two weeks later.
-
-No dramatic construction. The details do the work.
-
-## Voice
-
-These posts go out from Pulumi's corporate accounts. The voice rules depend on who the blog post is about.
-
-### Pulumi is the actor → use "we"
-
-When Pulumi built something, tested something, or observed something, "we" is natural.
-
-> We spent four days at our KubeCon EU booth asking hundreds of visitors the same question: what are you actually running in production with AI on Kubernetes?
-
-### An external company is the actor → name them
-
-When the blog is about a customer or partner's experience, name them. Don't use "we" as if Pulumi did the thing.
-
-FAIL:
-> We moved from AWS CDK to Pulumi because CDK tied us to AWS and debugging CloudFormation was painful.
-
-This sounds like Pulumi migrated away from CDK. It was SST that switched.
-
 PASS:
-> SST powers thousands of serverless apps and they just rebuilt their entire framework on Pulumi, replacing AWS CDK. The reason wasn't what we expected.
-
-SST is named as the actor. "We" appears once as Pulumi observing — that's fine.
-
-### Author wrote in first person → convert to corporate voice
-
-Blog posts by individual authors often use "I." The social copy must convert to "we" or restructure.
-
-FAIL:
-> 66% of orgs run AI on Kubernetes. Only 7% deploy daily. That gap defined every conversation I had at KubeCon EU 2026.
-
-PASS:
-> 66% of organizations run AI on Kubernetes. Only 7% deploy to production daily. We spent four days at KubeCon EU asking what's actually blocking that gap.
+> Last quarter an Azure app secret expired on a Friday night. The on-call engineer rotated it by hand. Two weeks later a second app broke because it shared the same secret.
+>
+> The whole rotation process is automated now. The setup takes 15 minutes.
 
 ## The curiosity gap
 
@@ -174,36 +205,52 @@ This is the most important quality criterion. A social post must create a gap th
 A good post has three parts:
 1. **Setup** — a concrete, specific situation the reader recognizes or finds surprising
 2. **Gap** — something withheld that the reader now wants to know (which one? how? why?)
-3. **Pointer** — a line that acknowledges the answer exists without spelling it out ("Here's how they compared", "Here's what we found")
+3. **Pointer** — a line that acknowledges the answer exists without spelling it out
 
 The pointer should NOT use banned phrases like "read our blog" or "check out our latest post." It should feel like the natural end of a story that continues elsewhere, not a marketing CTA.
 
 ### Gap examples
 
-**FAIL — structurally fine, but gives everything away:**
-> We migrated 200 CloudFormation stacks to Pulumi in three months. The key was automating the conversion and running both systems in parallel during the transition. Total downtime: zero.
+FAIL — everything else is good, but gives it all away:
+> We migrated 200 CloudFormation stacks to Pulumi in three months by automating the conversion and running both systems in parallel. Total downtime: zero.
 >
-> Here's how we structured the migration.
+> We wrote up the full timeline.
 
-The reader already knows the approach (automated + parallel) and the result (zero downtime). The gap is too small.
+Strong opening, correct voice, extremely specific, good structure, natural pointer. But the reader already knows the approach (automated + parallel) and the result (zero downtime). The gap is closed.
 
-**PASS — same topic, withholds the approach:**
-> We had 200 CloudFormation stacks and a mandate to move to Pulumi. The obvious approach was to convert them one by one. We tried something different, and it took three months instead of the eighteen we estimated.
+PASS — same topic, withholds the approach:
+> A team had 200 CloudFormation stacks and a mandate to move to Pulumi. The obvious path was converting them one by one. They tried something different — three months instead of eighteen.
 >
-> Here's what we did and what we'd change.
+> Here's what they did and what they'd change.
 
-The reader knows the outcome but not the approach. "What we'd change" adds a second gap.
+### Missing pointer
+
+The pointer is what connects the social post to the article. Without it, the post is an observation that stands on its own — the reader has no signal that there's more to read. The whole point of the post is to drive clicks. A missing pointer is a soft fail.
+
+FAIL — good setup and gap, but no pointer:
+> We asked a coding agent for a three-subnet VPC. It added a NAT gateway, transit gateway, VPN endpoint, and DNS resolver on its own.
+>
+> Three frameworks claim to fix this. One produced a 41x speedup.
+
+Strong opening, specific, real curiosity gap. But the post just ends. The link card will be there, but the copy doesn't set it up. The reader has no reason to think there's an article with the answer.
+
+PASS — same post, pointer added:
+> We asked a coding agent for a three-subnet VPC. It added a NAT gateway, transit gateway, VPN endpoint, and DNS resolver on its own.
+>
+> Three frameworks claim to fix this. One produced a 41x speedup. Here's how they compared.
+
+"Here's how they compared" tells the reader the article has the answer to the question the post just raised.
 
 ### Soft-fail threshold calibration
 
-**1 soft issue → PASS:**
-> Last quarter we hit a wall with our Azure secret rotation. One expired credential took down two services on a Friday night, and the manual fix created a second outage two weeks later.
+**1 soft issue — PASS:**
+> Last quarter an Azure secret expired and took down two services on a Friday night. The manual fix created a second outage two weeks later.
 >
-> We built an automated setup that handles the edge case that caught us. Here's how it works.
+> We automated the whole rotation process. Here's how it works.
 
 One soft issue: "Here's how it works" is a mildly generic pointer. But the opening is specific enough and the gap is real. One issue alone does not trigger FAIL.
 
-**2 soft issues → FAIL:**
+**2 soft issues — FAIL:**
 > Secret rotation is a problem every team eventually hits. We learned the hard way that doing it manually doesn't scale.
 >
 > We built an automated setup. Here's how it works.
