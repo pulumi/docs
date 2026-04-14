@@ -73,7 +73,7 @@ The workflow breaks down into skills that trigger automatically:
 | `requesting-code-review` | Review | Reviews against plan, blocks progress on critical issues |
 | `finishing-a-development-branch` | Finalize | Verifies tests pass, presents merge/PR/keep/discard options |
 
-The results speak for themselves. Jesse used Superpowers to ship [chardet](https://github.com/chardet/chardet) v7.0.0 with a 41x performance improvement. Not a 41% improvement. 41 times faster. That is what happens when every code change has to pass a test: the agent optimizes aggressively because it has a safety net.
+The results speak for themselves. The [chardet](https://github.com/chardet/chardet) maintainer used Superpowers to rewrite chardet v7.0.0 from scratch, achieving a 41x performance improvement. Not a 41% improvement. 41 times faster. That is what happens when every code change has to pass a test: the agent optimizes aggressively because it has a safety net.
 
 Superpowers works with Claude Code, Cursor, Codex, OpenCode, GitHub Copilot CLI, and Gemini CLI.
 
