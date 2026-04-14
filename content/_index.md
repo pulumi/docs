@@ -256,7 +256,7 @@ sections:
     description: |
       **From open source IaC to AI-driven workflows, Pulumi gives platform teams all they need to build and scale cloud infrastructure.**
 
-      A unified platform for infrastructure as code, configuration and secrets, policy enforcement, cloud insights, developer self-service, and AI-powered automation.
+      A unified platform built on real programming languages that covers the full infrastructure stack, so your team can focus on shipping.
     cta_text: Explore the platform
     cta_link: /product/
     cards:
