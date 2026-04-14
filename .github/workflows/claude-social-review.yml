@@ -5,6 +5,8 @@ on:
     types: [opened, reopened, ready_for_review, synchronize]
     paths:
       - 'content/blog/*/index.md'
+  issue_comment:
+    types: [created]
   workflow_dispatch:
     inputs:
       pr_number:
@@ -13,14 +15,18 @@ on:
         type: string
 
 concurrency:
-  group: social-review-${{ github.event.pull_request.number || github.event.inputs.pr_number }}
+  group: social-review-${{ github.event.pull_request.number || github.event.inputs.pr_number || github.event.issue.number }}
   cancel-in-progress: true
 
 jobs:
   social-review:
     if: >-
       github.event_name == 'workflow_dispatch' ||
-      (github.event.pull_request.head.repo.full_name == github.repository &&
+      (github.event_name == 'issue_comment' &&
+       github.event.issue.pull_request &&
+       contains(github.event.comment.body, '/social-review')) ||
+      (github.event_name == 'pull_request' &&
+       github.event.pull_request.head.repo.full_name == github.repository &&
        github.event.pull_request.user.login != 'pulumi-bot' &&
        github.event.pull_request.user.login != 'dependabot[bot]')
 
@@ -39,12 +45,17 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             PR_NUMBER="${{ github.event.inputs.pr_number }}"
-            HEAD_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json headRefName -q .headRefName)
-            BASE_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json baseRefName -q .baseRefName)
+          elif [ "${{ github.event_name }}" = "issue_comment" ]; then
+            PR_NUMBER="${{ github.event.issue.number }}"
           else
             PR_NUMBER="${{ github.event.pull_request.number }}"
+          fi
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
             HEAD_REF="${{ github.event.pull_request.head.ref }}"
             BASE_REF="${{ github.event.pull_request.base.ref }}"
+          else
+            HEAD_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json headRefName -q .headRefName)
+            BASE_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json baseRefName -q .baseRefName)
           fi
           echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
           echo "head_ref=$HEAD_REF" >> "$GITHUB_OUTPUT"
