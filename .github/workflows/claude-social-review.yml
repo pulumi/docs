@@ -89,7 +89,10 @@ jobs:
           SOCIAL_STATE_BUCKET: ${{ steps.bucket.outputs.name }}
           BASE_REF: origin/${{ steps.pr-info.outputs.base_ref }}
         run: |
-          uv run scripts/social/schedule-posts.py --check > .social-check-output.txt; EXIT=$?
+          set +e
+          uv run scripts/social/schedule-posts.py --check > .social-check-output.txt 2>&1
+          EXIT=$?
+          set -e
           if [ -s .social-check-output.txt ]; then
             cat .social-check-output.txt
             echo "needs_review=true" >> "$GITHUB_OUTPUT"
@@ -104,10 +107,9 @@ jobs:
       - name: Run Claude Social Media Review
         if: steps.check.outputs.needs_review == 'true'
         uses: anthropics/claude-code-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           prompt: |
             You are running in a CI environment.
 
