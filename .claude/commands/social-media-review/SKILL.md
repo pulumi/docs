@@ -23,14 +23,16 @@ These posts are published from Pulumi's corporate accounts, not from individual 
 
 1. **Get the posts** — find the social copy to review (see Local/CI context below)
 2. **Review** — evaluate each platform's copy against the critique rubric in `references/critique-rubric.md`. Return PASS or FAIL per platform with brief reasons (max 3 issues per platform)
-3. **Draft** — for any FAIL or missing platforms, write replacement copy following the writing guide in `references/writing-guide.md`. Read the blog post to understand the content, but the copy should create curiosity, not summarize
-4. **Verify character counts** — run `python3 -c "print(len('''<copy>'''))"` for each draft. Limits: X = 255, LinkedIn = 2950, Bluesky = 300. Revise any that exceed the limit
+3. **Draft** — for any FAIL or missing platforms, write replacement copy following the writing guide in `references/writing-guide.md`. Read the blog post to understand the content, but the copy should create curiosity, not summarize. Before moving on, check every draft has the required paragraph structure (X: 2 paragraphs, LinkedIn: multiple short paragraphs, Bluesky: 2 paragraphs)
+4. **Verify character counts** — run `python3 -c "print(len('''<copy>'''))"` for ALL drafts before submitting to critique. Limits: X = 255, LinkedIn = 2950, Bluesky = 300. Revise any that exceed the limit. Do not skip this step — sending over-limit copy to the critique loop wastes a round
 5. **Critique loop** — launch a sub-agent (Agent tool) to validate drafts. The sub-agent should read `references/critique-rubric.md` and evaluate the draft copy only (not the blog post). If FAIL, revise and re-critique. You may revise up to 2 times (3 total critiques). If the copy still fails after the third critique, present the best version with a note about which issues remain
 6. **Output** — present the review and any suggested copy
 
 ## Output format
 
-For each platform with copy, show the verdict in the heading (`#### Platform — PASS` or `#### Platform — FAIL`). For FAILs, include reasons as bullet points and 1-3 short guidance notes.
+Keep the review short and scannable. A blogger should be able to read it in 30 seconds and know exactly what to fix.
+
+For each platform with copy, show the verdict in the heading (`#### Platform — PASS` or `#### Platform — FAIL`). For FAILs, include reasons as bullet points and 1-3 short guidance notes. Do not add analysis paragraphs, rubric citations, or lengthy explanations. The reasons and guidance should be enough.
 
 Missing platforms are NOT a failure. Do not mark them as FAIL. Note them separately and draft suggested copy so the author can choose to add them.
 
