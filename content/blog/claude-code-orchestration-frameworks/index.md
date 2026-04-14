@@ -16,7 +16,20 @@ tags:
     - cursor
     - ai-coding
 social:
-    twitter: "AI coding agents without orchestration is a gamble. Three frameworks fix different failure modes: Superpowers (TDD), GSD (context rot), GSTACK (role governance). They all work across Claude Code, Cursor, Codex, and more. Here's when to use which."
+    twitter: |
+        AI coding agents fail in recognizable ways. Context fills up and early instructions fade, tests get skipped, and scope expands past what you asked for. Three separate community teams built frameworks to address these problems, each taking a completely different approach.
+
+        We tested all three on real infrastructure workflows. Which one helps depends on which problem keeps hitting you.
+    linkedin: |
+        There is a pattern that teams building with AI coding agents tend to hit on longer projects. The first session is impressive. By the third, the agent has lost track of earlier requirements and started adding infrastructure nobody asked for.
+
+        The context window is the core issue. It fills up, and earlier instructions carry less weight as it does. Writing better prompts helps at the start but does not solve the underlying problem.
+
+        Three community frameworks tackled this in different ways. We spent a few weeks running all three on real Pulumi infrastructure work. Which one helps most comes down to which problem keeps showing up for you.
+    bluesky: |
+        AI coding agents tend to work well at first and then run into the same issues: context rot on long sessions, tests that get quietly skipped, and scope that grows past what you asked for. It happens across every agent, not just one.
+
+        Three community frameworks built different approaches to these problems. We tested them on real Pulumi infrastructure workflows. Which one helps depends on where things tend to break down.
 ---
 
 Three community frameworks have emerged that fix the specific ways AI coding agents break down on real projects. [Superpowers](https://github.com/obra/superpowers) enforces test-driven development. [GSD](https://github.com/gsd-build/get-shit-done) prevents context rot. [GSTACK](https://github.com/garrytan/gstack) adds role-based governance. All three started with Claude Code but now work across Cursor, Codex, Windsurf, Gemini CLI, and more.
@@ -60,7 +73,7 @@ The workflow breaks down into skills that trigger automatically:
 | `requesting-code-review` | Review | Reviews against plan, blocks progress on critical issues |
 | `finishing-a-development-branch` | Finalize | Verifies tests pass, presents merge/PR/keep/discard options |
 
-The results speak for themselves. Jesse used Superpowers to ship [chardet](https://github.com/chardet/chardet) v7.0.0 with a 41x performance improvement. Not a 41% improvement. 41 times faster. That is what happens when every code change has to pass a test: the agent optimizes aggressively because it has a safety net.
+The results speak for themselves. The [chardet](https://github.com/chardet/chardet) maintainer used Superpowers to rewrite chardet v7.0.0 from scratch, achieving a 41x performance improvement. Not a 41% improvement. 41 times faster. That is what happens when every code change has to pass a test: the agent optimizes aggressively because it has a safety net.
 
 Superpowers works with Claude Code, Cursor, Codex, OpenCode, GitHub Copilot CLI, and Gemini CLI.
 
@@ -159,6 +172,12 @@ Superpowers' TDD cycle maps to infrastructure validation. Write a failing test (
 You do not have to pick one framework and commit forever. Try GSD for a long multi-stack project. Try Superpowers for a focused library. See which failure mode bites you most and let that guide your choice.
 
 ## Getting started
+
+{{< github-card repo="obra/superpowers" >}}
+
+{{< github-card repo="gsd-build/get-shit-done" >}}
+
+{{< github-card repo="garrytan/gstack" >}}
 
 All three frameworks support multiple agents. For Claude Code, the install commands are straightforward:
 
