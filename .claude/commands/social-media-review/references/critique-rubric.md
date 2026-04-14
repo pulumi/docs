@@ -17,7 +17,7 @@ If ANY of the following are violated, return FAIL:
 - Uses "I" voice instead of "we" (see Voice examples below)
 - Includes a URL in the post copy
 - Uses hashtags
-- Uses markdown formatting (headings, **bold**, *italic*, [links]()). Bullet lists with `-` are OK
+- Uses markdown formatting (headings, **bold**, *italic*, `code`, [links]()). Bullet lists with `-` are OK
 - Violates platform structure:
   - X: must have at least 2 paragraphs with a line break
   - LinkedIn: must have multiple short paragraphs (not a dense block)
@@ -130,7 +130,7 @@ FAIL:
 Doesn't start with product name, correct voice, has a pointer. But "there's a common challenge teams face" is generic filler.
 
 PASS:
-> Every time we changed a policy, we had to run `pulumi preview` against a real stack just to find out if it worked. That was slow enough that people stopped iterating.
+> Every time we changed a policy, we had to run a full preview against a real stack just to find out if it worked. That was slow enough that people stopped iterating.
 >
 > We built a faster way. Here's what changed.
 

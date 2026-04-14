@@ -27,34 +27,46 @@ Bad:
 "There's a common challenge teams face" earns nothing. The reader has no reason to care.
 
 Good:
-> Every time we changed a policy, we had to run `pulumi preview` against a real stack just to find out if it worked. That was slow enough that people stopped iterating.
+> Fraser Waters kept hearing the same request: let me test a policy without running my whole Pulumi program. So he built a command that runs policy packs against existing stack state.
 >
-> We built a faster way. Here's what changed.
+> Here's what it does and when it matters.
 
-The reader can picture running preview, waiting, running it again. Concrete experience.
+The reader can picture the frustration. A named person and a specific command make it real.
 
-### Gap: what to withhold
+### Gap: what to withhold when you can
 
-- Withhold which tool/approach produced which result
-- Withhold the recommendation or verdict
-- Withhold the surprising mechanism or explanation
-- Withhold the "how" when you've teased the "what"
+Not every post has a natural gap. Product announcements, tutorials, and how-to posts sometimes just need a clear setup and a pointer.
+
+Good — no gap, just a concrete setup and pointer:
+> Bun runs Pulumi programs 3x faster than Node on cold starts. It has been the most requested runtime since its 1.0 release.
+>
+> It is now fully supported. Here is what to know before switching.
+
+No mystery, no withholding. The setup earns attention with a specific number, and the pointer gives the reader a reason to click.
+
+When the article does have a comparison, a surprise, or a non-obvious result, withholding the right detail is what makes the post click-worthy.
+
+Things worth withholding when the article supports it:
+- Which tool/approach produced which result
+- The recommendation or verdict
+- The surprising mechanism or explanation
+- The "how" when you've teased the "what"
 
 You can reveal dramatic outcomes (a performance gain, a bug caught, a tool that failed) as long as you don't reveal which thing maps to which outcome.
 
 Bad — reveals approach and result:
-> We migrated 200 CloudFormation stacks to Pulumi in three months by automating the conversion and running both systems in parallel. Total downtime: zero.
+> We benchmarked AI agents writing Terraform HCL and Pulumi TypeScript. HCL uses fewer tokens but Pulumi deployed clean on the first pass with zero repairs, making Opus + Pulumi 41% cheaper overall.
 >
-> We wrote up the full timeline.
+> Here is the full analysis.
 
-The reader already knows what they did and how it went.
+The reader already knows which language won and why.
 
-Good — reveals outcome, withholds approach:
-> We had 200 CloudFormation stacks and a mandate to move to Pulumi. The obvious path was converting them one by one. We tried something different — three months instead of eighteen.
+Good — reveals outcomes, withholds the mapping:
+> We benchmarked AI agents generating Terraform HCL and Pulumi TypeScript across two models. One language uses fewer tokens. The other costs 41% less to actually deploy.
 >
-> We wrote up what we did and what we'd change.
+> Here is why those are not the same thing.
 
-"Something different" is the gap. "What we'd change" adds a second one.
+Both outcomes are revealed (fewer tokens, 41% cheaper) but the reader does not know which language is which. That is the gap.
 
 ### Pointer: natural endings
 
@@ -94,17 +106,14 @@ These posts go out from Pulumi's corporate accounts.
 
 ### When Pulumi is the actor — use "we"
 
-Bad:
-> 66% of orgs run AI on Kubernetes. Only 7% deploy daily. I spent four days at KubeCon EU asking what's blocking that gap.
->
-> The answers surprised me. I wrote up what's actually changing.
-
-Even when one person wrote the blog, the social copy represents Pulumi.
+Use "we" for team efforts, product launches, and posts where no single person is the story.
 
 Good:
-> 66% of organizations run AI on Kubernetes. Only 7% deploy to production daily. We spent four days at KubeCon EU asking what's blocking that gap.
+> We kept finding that the first thing Neo changed in a complex task was the thing we would have told it to skip. The fix was not a better prompt.
 >
-> The answers were not what we expected.
+> We changed the workflow entirely. Here is what that looks like.
+
+This is a team building a product feature. "We" is the natural voice.
 
 ### When an external company is the actor — name them
 
@@ -141,10 +150,10 @@ Good — names the person who was there:
 >
 > The answers were not what anyone predicted. Here's his recap.
 
-Good — author built the solution:
-> Fraser Waters kept hearing the same request: let me test a policy without running my whole Pulumi program. So he built `pulumi policy analyze`.
+Good — author drove an initiative:
+> Boris Schlosser asked: if a compromised GitHub Action runs in our CI, what can it steal? Across 70+ repos the answer was too much. He replaced every static secret with short-lived credentials.
 >
-> Here's what it does and when it matters.
+> Here is how he built a zero-static-secrets pipeline.
 
 Use "we" instead when the post is a team effort, a product launch, or the author is just the writer rather than the person who did the thing.
 
@@ -162,10 +171,10 @@ Product as subject — works when there's a concrete result, not just an announc
 >
 > It's now fully supported. Here's what to know before switching.
 
-Third-party as subject — for customer stories and community posts:
-> SST started on AWS CDK. It worked until they needed to go beyond AWS. Rebuilding an entire developer framework on a new infrastructure engine is not a small decision.
+Third-party as subject — for guest posts and community stories:
+> Simen Olsen from Bjerk designed what he thought was a future-proof distributed system in 2018. Six months later it had become a constraint rather than an enabler.
 >
-> Here's the full story of why they switched and what broke along the way.
+> His post-mortem is worth reading. Here is what he would do differently.
 
 Named author — when a single author writes about their own experience:
 > Sean Yeh got paged on a Friday night because an Azure app secret expired. Two weeks later a different app broke for the same reason. He automated the rotation.
@@ -225,16 +234,16 @@ Names the competition, identifies a structural difference.
 Product posts are the hardest. The temptation is to announce what the feature does.
 
 Bad:
-> We built a new way to iterate on infrastructure changes before deploying them. Review diffs, refine your approach, and only apply when you're confident. Available today for all Pulumi Cloud users.
+> We built a new way to import existing cloud resources into Pulumi. Discover unmanaged resources, group them into stacks, and generate code in your language of choice. Available now for all Team and Enterprise customers.
 >
 > Here's what it looks like.
 
-Explains what, how, and who. "Available today" is release-note language.
+Explains what, how, and who. "Available now" is release-note language.
 
 Good:
-> We kept finding that the first thing Neo changed in a complex task was the thing we would have told it to skip. The fix was not a better prompt.
+> Most teams trying to adopt infrastructure as code hit the same wall: hundreds of existing cloud resources created by hand or with scripts nobody remembers. Getting them into IaC meant writing boilerplate one resource at a time.
 >
-> We changed the workflow entirely. Here's what that looks like.
+> We built a way to skip that. Here is what it looks like.
 
 Same feature. Leads with the problem, withholds the mechanism.
 
@@ -252,7 +261,7 @@ Staccato noun phrases as dramatic beats. The structure is fine but the writing s
 Good:
 > Last quarter an Azure app secret expired on a Friday night. The on-call engineer rotated it by hand. Two weeks later a second app broke because it shared the same secret.
 >
-> We automated the whole thing. The setup takes 15 minutes.
+> We automated the whole rotation process. Here is how it works.
 
 Same topic, same specificity. Narrative with cause and consequence instead of dramatic fragments.
 
