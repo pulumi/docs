@@ -15,7 +15,8 @@
         "forceConsistentCasingInFileNames": true,
         "strictNullChecks": true,
     },
-    "files": [
-        "index.ts"
+    "include": [
+        "*.ts",
+        "test/**/*.ts"
     ]
 }
