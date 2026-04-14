@@ -138,7 +138,7 @@ Good — no "we" at all:
 
 ### When a single author writes about their own experience
 
-If the blog post is written by one person about something they personally did — attended a conference, ran an experiment, built a feature, got paged — consider naming them. A named person is more vivid than "we" and more credible than an anonymous corporate voice.
+If the blog post is written by one person about something they personally did — attended a conference, ran an experiment, built a feature, got paged — prefer naming them. A named person is more vivid than "we" and more credible than an anonymous corporate voice.
 
 Bad — converts to generic "we":
 > We spent four days at our KubeCon EU booth asking visitors what they're running in production with AI on Kubernetes.
