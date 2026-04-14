@@ -85,10 +85,11 @@ The merge toggle is shown only when the chosen action is `Approve` or `Make chan
 Action: Make changes and approve
 [ ] Auto-merge after approval (squash)   ← OFF by default for human PRs
 
-Trivial fix candidates (3) — will be applied unless vetoed:
+Trivial fix candidates (4) — will be applied unless vetoed:
   [1] content/docs/foo.md:12   — heading case: "Deploy To AWS" → "Deploy to AWS"
   [2] content/docs/foo.md (EOF) — add EOF newline
   [3] content/docs/bar.md:42   — strip trailing whitespace
+  [4] PR description            — inaccuracy: says "updates bar.md" but bar.md was not changed
 
 Contradicted-claim fixes (will be applied):
   content/docs/cli/logout.md:42 — "removes credentials for the current backend"
@@ -100,14 +101,15 @@ Comment body that will be posted:
 I will:
 1. Save current branch
 2. Check out PR: gh pr checkout {{arg}}
-3. Apply each non-vetoed trivial fix via Edit
-4. Apply contradicted-claim suggested fixes via Edit
-5. Show diff
-6. Commit: "Apply review fixes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
-7. Push changes
-8. Approve with comment above
-9. [If toggle ON] gh pr merge {{arg}} --auto --squash
-10. Return to original branch
+3. Apply surviving PR description fixes: gh pr edit {{arg}} --body "$CORRECTED_BODY"
+4. Apply each non-vetoed trivial fix via Edit
+5. Apply contradicted-claim suggested fixes via Edit
+6. Show diff
+7. Commit: "Apply review fixes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
+8. Push changes
+9. Approve with comment above
+10. [If toggle ON] gh pr merge {{arg}} --auto --squash
+11. Return to original branch
 ```
 
 ### Trivial fix candidates
@@ -121,6 +123,7 @@ Categories the agent considers:
 - Sentence-case headings (only when unambiguous — preserve proper nouns)
 - Missing aliases on moved files
 - Missing language specifier on fenced code blocks (only when unambiguous from context)
+- PR description inaccuracies (description text that misrepresents the diff — applied via `gh pr edit --body`, not file edit)
 
 Each candidate is itemized in the preview with a numeric index so the user can veto specific fixes.
 
@@ -215,7 +218,7 @@ Edit comment is always reachable through the AskUserQuestion `Other` field even 
 2. Parse the response:
    - Numeric indices (`1`, `1,3`, `2 4`) → drop those candidates by index
    - `all` → drop every trivial fix candidate
-   - `all <category>` (`all heading-case`, `all trailing-ws`, `all eof`, `all alias`, `all lang-spec`) → drop every candidate in that category
+   - `all <category>` (`all heading-case`, `all trailing-ws`, `all eof`, `all alias`, `all lang-spec`, `all desc-inaccuracy`) → drop every candidate in that category
 3. Re-display **only the updated trivial fix candidates section** (not the full preview), then re-ask the confirmation question. The user can veto more fixes, toggle merge, edit the comment, or proceed.
 
 ### Suppress finding(s)

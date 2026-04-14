@@ -17,7 +17,7 @@ get_started_guide:
   icon: aws
 providers:
   description: |
-    The Amazon Web Services (AWS) provider for Pulumi can provision cloud resources in AWS. It uses the AWS SDK to manage resources and should be your default choice for managing AWS resources. The AWS Cloud Control provider provides coverage of all resources in the AWS Cloud Control API, but not all resources are available yet.
+    The Amazon Web Services (AWS) provider for Pulumi can provision cloud resources in AWS. It uses the AWS SDK to manage resources and should be your default choice for managing AWS resources. The AWS Cloud Control provider provides coverage of all resources in the AWS Cloud Control API, but not all resources are available yet. See the [provider comparison guide](/docs/iac/clouds/aws/guides/providers/) to learn when to use each provider.
 
   provider_list:
   - display_name: AWS
@@ -70,6 +70,8 @@ templates:
 guides:
   description: Learn how to use AWS & Pulumi together.
   guides_list:
+  - display_name: Choosing a Pulumi AWS provider
+    url: guides/providers/
   - display_name: Configuring AWS API Gateway
     url: guides/api-gateway/
   - display_name: Using AWS Elastic Container Registry (ECR)

@@ -10,8 +10,6 @@
 # aws-.* will ignore all programs that start with "aws-"
 #
 
-
-
 # Java SDK serialization bug: FargateService container/containers inputs
 # not received by AWSX provider. https://github.com/pulumi/pulumi-java/issues/2090
 awsx-load-balanced-fargate-nginx-java
@@ -21,40 +19,28 @@ awsx-vpc-fargate-service-java
 # https://github.com/pulumi/pulumi-aws-apigateway/issues/121
 awsx-apigateway-auth-cognito-java
 
-# Skipping - for now this code is not consumed anywhere and needs some updates.
+# Import tutorial programs that are not currently consumed by any docs page
+# and require pre-existing IAM resources the CI account does not have.
 aws-import-iac-iam-role-.*
 
 # Custom-domain examples won't work because of the hosted-zone lookup (which will fail unless
 # the credentials can access the specified Route 53 zone).
 awsx-apigateway-custom-domain-.*
 
-# Skipping all kubernetes examples for now as they are expected to fail until we provision
-# a Kubernetes cluster in CI.
-kubernetes-.*
-k8s-.*
-helm-.*
-
-# Skip broken programs to get back to green
-# https://github.com/pulumi/docs/issues/14505
-aws-iampolicy-jsonparse-csharp
-aws-acm-certificate-csharp
-deepseek-ollama-csharp
-gcp-simple-webserver-yaml
+# CSI driver examples require a `github-pat` config value to pull a private
+# image/repo; CI does not provide one. The Go variant does not need it and
+# is tested. https://github.com/pulumi/docs/issues/14505
+kubernetes-csi-driver-csharp
+kubernetes-csi-driver-python
+kubernetes-csi-driver-typescript
 
 # Azure YAML import test: the engine requires import to be a literal
 # string, but the YAML program needs interpolation for the resource ID.
 azure-native-import-resource-group-yaml
 
 # GCP import tests: service account doesn't exist yet and GCP project
-# configuration needs to be sorted out. See #14505.
-gcp-import-service-account-yaml
-gcp-import-service-account-csharp
-gcp-import-service-account-python
-gcp-import-service-account-go
-gcp-import-service-account-typescript
-
-# Terraform reference projects are not Pulumi programs.
-tf-state-ref-terraform
+# configuration needs to be sorted out. https://github.com/pulumi/docs/issues/14505
+gcp-import-service-account-.*
 
 # All JS examples were removed from static programs.
 # TODO: See if this line can be removed once the code has been merged to master
@@ -64,3 +50,7 @@ and the tests have been run.
 # Static website programs require Hugo at runtime (subprocess.run), which
 # intermittently crashes (SIGABRT) in CI due to resource contention.
 aws-static-website-with-runtime-logic-.*
+
+# Terraform reference project: intentionally not a Pulumi program (used as
+# an external tfstate source by other examples).
+tf-state-ref-terraform
