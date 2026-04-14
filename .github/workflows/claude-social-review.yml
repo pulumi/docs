@@ -5,6 +5,8 @@ on:
     types: [opened, reopened, ready_for_review, synchronize]
     paths:
       - 'content/blog/*/index.md'
+  issue_comment:
+    types: [created]
   workflow_dispatch:
     inputs:
       pr_number:
@@ -13,14 +15,21 @@ on:
         type: string
 
 concurrency:
-  group: social-review-${{ github.event.pull_request.number || github.event.inputs.pr_number }}
+  group: social-review-${{ github.event.pull_request.number || github.event.inputs.pr_number || github.event.issue.number }}
   cancel-in-progress: true
 
 jobs:
   social-review:
     if: >-
       github.event_name == 'workflow_dispatch' ||
-      (github.event.pull_request.head.repo.full_name == github.repository &&
+      (github.event_name == 'issue_comment' &&
+       github.event.issue.pull_request &&
+       contains(github.event.comment.body, '/social-review') &&
+       (github.event.comment.author_association == 'MEMBER' ||
+        github.event.comment.author_association == 'OWNER' ||
+        github.event.comment.author_association == 'COLLABORATOR')) ||
+      (github.event_name == 'pull_request' &&
+       github.event.pull_request.head.repo.full_name == github.repository &&
        github.event.pull_request.user.login != 'pulumi-bot' &&
        github.event.pull_request.user.login != 'dependabot[bot]')
 
@@ -39,12 +48,17 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             PR_NUMBER="${{ github.event.inputs.pr_number }}"
-            HEAD_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json headRefName -q .headRefName)
-            BASE_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json baseRefName -q .baseRefName)
+          elif [ "${{ github.event_name }}" = "issue_comment" ]; then
+            PR_NUMBER="${{ github.event.issue.number }}"
           else
             PR_NUMBER="${{ github.event.pull_request.number }}"
+          fi
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
             HEAD_REF="${{ github.event.pull_request.head.ref }}"
             BASE_REF="${{ github.event.pull_request.base.ref }}"
+          else
+            HEAD_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json headRefName -q .headRefName)
+            BASE_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json baseRefName -q .baseRefName)
           fi
           echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
           echo "head_ref=$HEAD_REF" >> "$GITHUB_OUTPUT"
@@ -89,7 +103,10 @@ jobs:
           SOCIAL_STATE_BUCKET: ${{ steps.bucket.outputs.name }}
           BASE_REF: origin/${{ steps.pr-info.outputs.base_ref }}
         run: |
-          uv run scripts/social/schedule-posts.py --check > .social-check-output.txt; EXIT=$?
+          set +e
+          uv run scripts/social/schedule-posts.py --check > .social-check-output.txt
+          EXIT=$?
+          set -e
           if [ -s .social-check-output.txt ]; then
             cat .social-check-output.txt
             echo "needs_review=true" >> "$GITHUB_OUTPUT"
@@ -104,10 +121,9 @@ jobs:
       - name: Run Claude Social Media Review
         if: steps.check.outputs.needs_review == 'true'
         uses: anthropics/claude-code-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           prompt: |
             You are running in a CI environment.
 

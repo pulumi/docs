@@ -141,4 +141,6 @@ When running in CI:
 
 ```
 To apply these suggestions, comment: `@claude please update the social posts in the frontmatter with the suggested copy from the social media review above`
+
+To re-run the social media review after updates, comment: `/social-review`
 ```
