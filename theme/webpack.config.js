@@ -11,7 +11,6 @@ module.exports = function (env, { mode }) {
             bundle: "./src/ts/main.ts",
             marketing: "./src/ts/marketing.ts",
             "marketing-homepage": "./src/ts/marketingHomepage.ts",
-            homepage: "./src/ts/homepage.ts",
             algolia: "./src/ts/algolia-entry.ts",
             "consent-manager": "./src/ts/consent-manager/index.ts",
         },

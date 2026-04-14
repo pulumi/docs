@@ -1,0 +1,127 @@
+{{/*
+    Template Social Carousel Partial
+
+    Renders a section with a centered heading and two staggered rows of social/community post cards.
+
+    Parameters:
+    - title: Section heading
+    - description: Section description (supports markdown links)
+    - cta_text: Optional CTA link label (e.g. "Join us on Slack")
+    - cta_link: Optional CTA link href
+    - tweets: Array of post objects (source, username, avatar, link, text)
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
+{{ $tweets := .tweets }}
+{{ $anchor := .anchor }}
+{{ $half := div (len $tweets) 2 }}
+{{ $row1 := first $half $tweets }}
+{{ $row2 := last $half $tweets }}
+
+<section class="template-social-carousel"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="template-social-carousel-header">
+        {{ if $title }}<h2>{{ $title }}</h2>{{ end }}
+        {{ if $description }}<p class="text-gray-600 text-xl mt-4">{{ $description | markdownify }}</p>{{ end }}
+        {{ if $ctaText }}<a href="{{ $ctaLink }}" class="inline-block mt-4 text-violet-700 font-semibold no-underline hover:underline">{{ $ctaText }} →</a>{{ end }}
+    </div>
+    {{ if $tweets }}
+    {{/* Mobile: 1 slide at a time */}}
+    <div class="template-social-carousel-rows block md:hidden">
+        <div class="template-social-carousel-row">
+            <pulumi-swiper slides="1" centered-slides="false" loop="true" autoplay="true" autoplay-delay="3000" speed="8000" free-mode="true" allow-touch-move="false">
+                {{ range $tweet := $tweets }}
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="social-carousel-card">
+                            <p>{{ $tweet.text }}</p>
+                            <div class="social-carousel-card-author">
+                                <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" onerror="this.style.display='none';" />
+                                <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">{{ $tweet.username }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+    </div>
+    {{/* Tablet: 2 slides at a time */}}
+    <div class="template-social-carousel-rows hidden md:block lg:hidden">
+        <div class="template-social-carousel-row">
+            <pulumi-swiper slides="2" centered-slides="false" loop="true" autoplay="true" autoplay-delay="3000" speed="8000" free-mode="true" allow-touch-move="false">
+                {{ range $tweet := $row1 }}
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="social-carousel-card">
+                            <p>{{ $tweet.text }}</p>
+                            <div class="social-carousel-card-author">
+                                <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" onerror="this.style.display='none';" />
+                                <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">{{ $tweet.username }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+        <div class="template-social-carousel-row">
+            <pulumi-swiper slides="2" centered-slides="false" loop="true" autoplay="true" autoplay-delay="11000" speed="8000" free-mode="true" allow-touch-move="false" initial-slide="2">
+                {{ range $tweet := $row2 }}
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="social-carousel-card">
+                            <p>{{ $tweet.text }}</p>
+                            <div class="social-carousel-card-author">
+                                <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" onerror="this.style.display='none';" />
+                                <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">{{ $tweet.username }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+    </div>
+    {{/* Desktop: 3 slides at a time */}}
+    <div class="template-social-carousel-rows hidden lg:block">
+        <div class="template-social-carousel-row">
+            <pulumi-swiper slides="3" centered-slides="false" loop="true" autoplay="true" autoplay-delay="3000" speed="8000" free-mode="true" allow-touch-move="false">
+                {{ range $tweet := $row1 }}
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="social-carousel-card">
+                            <p>{{ $tweet.text }}</p>
+                            <div class="social-carousel-card-author">
+                                <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" onerror="this.style.display='none';" />
+                                <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">{{ $tweet.username }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+        <div class="template-social-carousel-row">
+            <pulumi-swiper slides="3" centered-slides="false" loop="true" autoplay="true" autoplay-delay="11000" speed="8000" free-mode="true" allow-touch-move="false" initial-slide="2">
+                {{ range $tweet := $row2 }}
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="social-carousel-card">
+                            <p>{{ $tweet.text }}</p>
+                            <div class="social-carousel-card-author">
+                                <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" onerror="this.style.display='none';" />
+                                <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">{{ $tweet.username }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+    </div>
+    {{ end }}
+</section>

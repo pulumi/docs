@@ -76,7 +76,7 @@
     {{ $twitterCardType := "summary" }}
 
     {{ if .Params.meta_image }}
-        {{ if in "blog templates" .Section }}
+        {{ if or (eq .Section "blog") (eq .Section "templates") }}
             {{ $ogImage = (.Resources.GetMatch .Params.meta_image).RelPermalink }}
         {{ else }}
             {{ $ogImage = .Params.meta_image }}

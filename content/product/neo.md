@@ -17,7 +17,7 @@ meta_desc: "Meet Neo, your AI platform engineer. Automate infrastructure provisi
 meta_image: /images/product/neo/neo-meta.png
 
 sections:
-  - type: product_hero
+  - type: hero
     title: "Meet Neo, your new AI infrastructure agent."
     description: Neo provisions, governs, and optimizes your cloud infrastructure — with enterprise controls built in.
     image: /images/product/neo/neo-hero.svg
@@ -25,7 +25,7 @@ sections:
     image_max_width: 1076px
     anchor: hero
 
-  - type: product_two_column
+  - type: feature_split
     heading: Why infrastructure and platform teams choose Neo
     description: |
       **Enterprise-grade AI for cloud automation.**

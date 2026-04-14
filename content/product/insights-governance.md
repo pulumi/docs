@@ -14,7 +14,7 @@ aliases:
 - /crossguard
 
 sections:
-  - type: product_hero
+  - type: hero
     title_primary: "Continuous compliance,"
     title_secondary: "by construction."
     description: Audit, remediate, and enforce compliance policies across all your cloud infrastructure automatically.
@@ -22,7 +22,7 @@ sections:
     image_alt: Pulumi Insights & Governance dashboard showing cloud resource compliance
     anchor: hero
 
-  - type: product_two_column
+  - type: feature_split
     heading: Stop compliance violations before they become problems.
     description: |
       Govern your cloud automatically.
@@ -163,7 +163,7 @@ sections:
         alt: ISO 27001
     anchor: frameworks-logos
 
-  - type: product_two_column
+  - type: feature_split
     heading: The complete governance lifecycle
     compact: true
     cards:
