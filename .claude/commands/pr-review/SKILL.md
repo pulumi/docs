@@ -265,7 +265,7 @@ Display the preview showing:
 - The chosen action
 - The **`Auto-merge after approval` toggle** with its computed default state (see toggle defaults below)
 - For "Make changes and approve": file-by-file changes (trivial fixes summary + suggested-fix list)
-- The exact comment text that will be posted (using templates from `pr-review:references:message-templates`)
+- The exact comment text that will be posted (using templates from `pr-review:references:message-templates`). The posted comment must obey the voice/length rules at the top of that file: Step 6's rich local package is for the reviewer's eyes, **not** a draft for the public comment. Never disclose scrutiny level, AI-suspect status, or fact-check narration in the posted text, and never tack on a self-merge footer -- the auto-merge toggle handles that silently.
 - The full list of `gh` commands that will run
 
 **Auto-merge toggle defaults**:

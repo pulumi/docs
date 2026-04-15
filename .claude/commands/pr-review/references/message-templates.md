@@ -5,57 +5,108 @@ description: Review comment templates for different contributor types and action
 
 # Message Templates
 
-Select template based on contributor type (from Step 1).
+The posted comment is not a review transcript. It is a short note from a maintainer to a contributor. Everything the local reviewer learned during Steps 4--6 (findings, fact-check results, scrutiny level, AI-suspect status) stays local unless it's a concrete thing the author needs to act on.
 
-**Bot templates**: Professional/technical tone, no emojis
+## Voice and length (read this first)
+
+Hard rules for every approval comment, every contributor type:
+
+- **Length cap.** Internal approvals: 2 sentences max. External approvals: 3 sentences max (the extra sentence is only for first-time-contributor welcome language). Bot approvals: 1 sentence. If you're writing a third sentence for an internal PR, delete something.
+- **Never disclose the review process or scrutiny level.** Do not mention fact-checking, claims verified, files read, scrutiny level, AI-suspect status, flags, trailers, or anything about *how* the review was conducted. The author must not learn that their PR was flagged or reviewed at heightened scrutiny. That is strictly internal. If you catch yourself writing "Reviewed with...", "Spot-checked...", "Verified that...", "Confirmed...", stop and delete it.
+- **Never list what you checked.** Approval itself communicates that everything passed. Naming every file, API surface, ticket, or cross-reference you looked at is noise. Mention a specific thing only when it's a real concern the author must act on -- not to prove you did the work.
+- **Never mention the self-merge convention.** Phrases like "I'll leave the merge to you" or "per our convention" are forbidden. The auto-merge toggle defaults OFF for human PRs; the contributor already knows to merge their own. Saying it out loud just pads the comment.
+- **Never narrate what the merge state is.** "Auto-merge enabled" adds nothing -- GitHub's UI shows that. Same for "CI green" and similar status restatements.
+- **No sycophancy.** Cut "nice catch," "great work," "excellent improvement," "well done," "awesome PR," and every variant. A plain "LGTM" reads warmer than fake praise because it is honest. Thank external contributors once, briefly, and move on.
+- **No LLM tells.** No em-dashes (use `--` or rewrite the sentence), no tricolons ("clean, correct, and concise"), no "Overall, ...", no "I'd note that...", no "That said, ...", no hedged openers, no formulaic structure. Match a terse human maintainer's voice.
+- **Concerns go in one short line, or not at all.** If there is something the author should eyeball before merging, say it in one sentence. No setup, no "one thing to watch for," no bulleted pre-merge checklist. If there is no real concern, do not invent one.
+
+These rules apply even on PRs that triggered heightened scrutiny or AI-suspect. Those signals shape what *you* look at; they never shape what the contributor reads.
 
 ## Template Matrix
 
 | Action | External | Internal | Bot |
 |--------|----------|----------|-----|
-| **Approve** | "Thank you! [≤1 sentence praise if warranted]. Welcome! 🎉" | "LGTM! [feedback/suggestions]" | **Dependabot**: "Security patch approved [testing notes]" (security), "High-risk update reviewed. Checklist: [items]" (high), "Update reviewed for quarterly batch" (med/low)<br>**Other**: "Automated changes approved." |
-| **Approve and merge** | "Thank you! [≤1 sentence praise]. Auto-merge enabled. 🎉" | "LGTM! Auto-merge enabled." | **Dependabot**: "Security patch approved. Auto-merge enabled." (security), "High-risk update tested. Auto-merge enabled." (high), "Update approved. Auto-merge enabled." (med/low)<br>**Other**: "Automated changes approved. Auto-merge enabled." |
-| **Make changes and approve** | "Applied minor style/formatting fixes. Thank you! 🙏" | "Applied style/formatting fixes. LGTM!" | N/A (excluded for bots) |
-| **Request changes** | Opening: "Thank you!"<br>Acknowledge positives (≤1 sentence)<br>Issues with line numbers<br>Suggestion blocks<br>Close: "Mention @claude if you need help" | Professional opening<br>Issues with line numbers<br>Suggestion blocks<br>Clear action items | Technical issue description<br>Line numbers<br>What needs changing<br>No suggestion blocks<br>Close: "This automated PR may need closing and regeneration after fixing source configuration." |
-| **Close PR** | "Thank you for contributing!"<br>Clear, kind closing reason<br>Acknowledge valuable aspects<br>Suggest alternatives<br>"We appreciate your interest in Pulumi!" | Clear closing reason | **Dependabot quarterly**: "Closing to batch with other low/medium-risk updates in quarterly review. See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management)."<br>**Dependabot other**: "Closing this update. [Technical reason: conflicts, superseded, etc.]"<br>**Other bots**: "Closing. [Technical reason]" |
+| **Approve** | `Thanks! LGTM. 🎉` (+ one welcome sentence only if it's a first-time contributor) | `LGTM.` (+ at most one sentence if there's a genuine concern or non-obvious suggestion) | **Dependabot**: `Security patch approved.` (security) / `High-risk update reviewed.` (high) / `Approved for quarterly batch.` (med/low)<br>**Other**: `Approved.` |
+| **Approve and merge** | Same as Approve. Do not add "Auto-merge enabled." | Same as Approve. Do not add "Auto-merge enabled." | **Dependabot**: same as Approve. Do not add merge narration.<br>**Other**: `Approved.` |
+| **Make changes and approve** | `Applied minor style fixes. Thanks! 🙏` | `Applied style fixes. LGTM.` | N/A (excluded for bots) |
+| **Request changes** | Brief thanks, then line-anchored issues with suggestion blocks, then `Mention @claude if you need help.` | Line-anchored issues with suggestion blocks. No filler. | Technical issue description, line numbers, what needs changing. No suggestion blocks. Close with: `This automated PR may need closing and regeneration after fixing source configuration.` |
+| **Close PR** | `Thanks for contributing!` then one-sentence reason, then (if applicable) one-sentence alternative. | One-sentence reason. | **Dependabot quarterly**: `Closing to batch with other quarterly updates. See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management).`<br>**Dependabot other / other bots**: `Closing. [one-sentence technical reason]` |
+
+## Good and bad examples
+
+These contrast a concrete bad comment (the kind this skill used to produce) with the rewrite that follows the rules above.
+
+### Internal approve, clean PR
+
+**Bad** (verbose, narrates process, discloses scrutiny, lists checks, closes with self-merge footer):
+
+> Reviewed with heightened scrutiny (AI-suspect flag triggered by commit trailers). Spot-checked the per-language API surfaces against upstream source -- Python `component_provider_host`, TS `componentProviderHost`, C# `Pulumi.Experimental.Provider.ComponentProviderHost.Serve`, Java `com.pulumi.provider.internal.ComponentProviderHost`, and the Go `pulumi-go-provider` builder chain -- all five match the docs exactly. The referenced tracking issues pulumi/pulumi#22616 and #22617 both exist and describe the claimed behavior. Nice catch on fixing the stale Python signature from the old cross-language-components page (kwargs → positional). Left-nav reorder, alias for the deleted page, and anchor target `#native-language-packages` all check out.
+>
+> One thing to eyeball on the preview before merging: walk the five chooser tabs in the Walkthrough and Per-language authoring sections to make sure nothing's misaligned. Otherwise this is ready -- I'll leave the merge to you per our convention.
+
+**Good**:
+
+> LGTM. Worth walking the five chooser tabs in the Walkthrough and Per-language authoring sections on the preview before merging.
+
+### Internal approve, nothing to flag
+
+**Bad**: any comment longer than `LGTM.`
+
+**Good**:
+
+> LGTM.
+
+### External approve, first-time contributor
+
+**Bad**:
+
+> Thank you so much for your first contribution to Pulumi! I reviewed the changes carefully and everything looks great -- the formatting is clean, the example compiles, and the cross-references all resolve. Welcome to the community, and we look forward to more contributions from you! 🎉
+
+**Good**:
+
+> Thanks! LGTM. Welcome to Pulumi. 🎉
+
+### Internal approve with one real concern
+
+**Bad**:
+
+> Overall this is in good shape. I verified the new command syntax against the CLI source and the examples all parse correctly. That said, I noticed that the `--stack` flag example on line 42 may not behave as described when no stack is selected -- worth double-checking. Otherwise ready to merge when you are.
+
+**Good**:
+
+> LGTM. Double-check the `--stack` example on line 42 -- I don't think it behaves that way when no stack is selected.
+
+## Anti-examples (things to never write)
+
+Every one of these is banned. If you draft a comment and find any of them, delete and rewrite.
+
+- **Process narration**: "Reviewed with...", "Spot-checked...", "Verified that...", "Confirmed that...", "Cross-referenced...", "Ran the fact-check across..."
+- **Scrutiny disclosure**: "Reviewed with heightened scrutiny," "AI-suspect flag triggered," "given the trailers," "extra careful pass because..." -- any mention of scrutiny level or AI-suspect in the posted comment.
+- **Check inventory**: "Checked X, Y, Z -- all match," "The referenced tickets both exist," "All five language examples resolve," any enumeration of what you looked at.
+- **Sycophancy**: "Nice catch," "Great work," "Excellent," "Love this," "Huge improvement," "Really clean PR."
+- **Self-merge footer**: "I'll leave the merge to you," "per our convention," "merge when ready," "ready whenever you are."
+- **Merge-state narration**: "Auto-merge enabled," "CI is green," "This will merge once checks pass."
+- **Padded pre-merge checklist**: "One thing to eyeball before merging: ...," "A few things to watch for: ...," any multi-item list framed as a favor.
+- **LLM tells**: em-dashes as punctuation, tricolons, "Overall, ...", "That said, ...", "I'd note that...", hedged openers like "This looks mostly good, but..."
 
 ## Tone Guidelines
 
-### External Contributors
+### External contributors
 
-Warm and welcoming tone with explicit gratitude, appropriate emojis (🎉, 🙏), and community-building language.
+Warm but brief. One "Thanks!" is the whole warmth budget. Emojis (🎉, 🙏) are fine on first-time contributions, sparing otherwise.
 
-**Example**: "Thank you for your first contribution to Pulumi! This documentation improvement is excellent. Welcome! 🎉"
+### Internal contributors
 
-### Internal Contributors
+Terse and professional. `LGTM.` is the default. Add one sentence only when there's a real thing to say.
 
-Professional and efficient tone. Brief acknowledgments, technical focus, "LGTM" acceptable. Direct and clear.
+### Bot PRs
 
-**Example**: "LGTM! Nice improvements to the error handling section."
+Factual, no emojis, one line. For Dependabot, the risk tier can appear as a single word ("security patch," "high-risk update," "quarterly batch") -- nothing more.
 
-### Bot PRs (All Types)
+## Implementation notes
 
-Technical and factual tone. No emojis. State what was checked/tested, mention risk level for Dependabot.
-
-**Example**: "High-risk update reviewed. Testing checklist completed: ✅ make serve-all passed, ✅ PR deployment verified, ✅ Lambda@Edge functions operating normally."
-
-## Dependabot Template Patterns
-
-| Risk Level | Action | Template Pattern |
-|-----------|--------|------------------|
-| **Security (HIGH)** | Approve | "Security patch approved. Testing completed: [checklist]. Critical security update merged despite high-risk classification." |
-| **Security (HIGH)** | Approve and merge | "Security patch approved. Auto-merge enabled. Testing completed: [checklist]." |
-| **High (Non-Security)** | Approve | "High-risk update reviewed. Testing checklist completed: [checklist]. Safe to merge after additional checks pass." |
-| **High (Non-Security)** | Approve and merge | "High-risk update tested. Auto-merge enabled. Checklist: [checklist]." |
-| **Medium/Low** | Approve | "Update reviewed for quarterly batch. Basic checks passed: [checklist]." |
-| **Medium/Low** | Approve and merge | "Update approved. Auto-merge enabled. Lint checks passed." |
-| **Quarterly Close** | Close PR | "Closing to batch with other quarterly updates. We'll merge accumulated updates after comprehensive testing. See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management)." |
-
-## Implementation Notes
-
-- Always use confirmed/edited content from preview step
-- Base template selection on contributor type detected in Step 1
-- For Dependabot: Check risk tier and labels to select appropriate variation
-- Include specific testing results when approving HIGH risk updates
-- Keep bot messages factual and concise
-- Adjust tone but maintain professionalism across all contributor types
+- Always use the confirmed/edited content from the Step 8 preview.
+- Base template selection on the contributor type from Step 1.
+- For Dependabot, pick the single-word risk descriptor from the table above.
+- Keep bot messages factual and one line.
+- Voice and length rules override any other instinct. If a template cell and the voice rules seem to conflict, the voice rules win.
