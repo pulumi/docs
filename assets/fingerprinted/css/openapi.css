@@ -1,0 +1,478 @@
+/* Long CamelCase schema names (e.g. AgentBackendEventUserApprovalRequestContext)
+   overflow the fixed-width content column of the shared docs layout. Allow them
+   to wrap at any point rather than hunting for word breaks. This file is only
+   loaded on OpenAPI pages, so this doesn't leak site-wide. */
+
+.docs-main-content h1,
+.docs-main-content h2,
+.docs-main-content h3,
+.docs-main-content h4,
+.docs-main-content h5,
+.docs-main-content h6 {
+    overflow-wrap: anywhere;
+}
+
+/* OpenAPI endpoint page styles */
+
+.endpoint-component {
+    margin-bottom: 1rem;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.endpoint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.endpoint-header:hover {
+    background-color: #e9ecef;
+}
+
+.endpoint-header h3 {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 1.25rem;
+}
+
+.endpoint-content {
+    padding: 1rem;
+    border-top: 1px solid #eaeaea;
+}
+
+.collapsed .endpoint-content {
+    display: none;
+}
+
+/* OpenAPI schema page styles */
+
+.schema-components {
+    margin: 2rem 0;
+}
+
+.schema-component {
+    margin-bottom: 1rem;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.schema-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.schema-header:hover {
+    background-color: #e9ecef;
+}
+
+.schema-header h2 {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 1.25rem;
+}
+
+.schema-content {
+    padding: 1rem;
+    border-top: 1px solid #eaeaea;
+}
+
+.schema-component table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.schema-component th,
+.schema-component td {
+    padding: 0.5rem;
+    border: 1px solid #eaeaea;
+    text-align: left;
+}
+
+.schema-component th {
+    background-color: #f8f9fa;
+}
+
+.schema-component pre {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.collapsed .schema-content {
+    display: none;
+}
+
+.schema-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.schema-controls button {
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f8f9fa;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.schema-controls button:hover {
+    background: #e9ecef;
+}
+
+/* Shared styles (endpoints + schemas) */
+
+.toggle-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.enum-values {
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+}
+
+.enum-values ul {
+    margin: 0.25rem 0;
+    padding-left: 1.5rem;
+}
+
+.enum-values li {
+    margin: 0.125rem 0;
+}
+
+/* Editorial intro prose rendered above the generated endpoint list.
+   Sourced from assets/openapi/tag-intros/{slug}.md. */
+
+.openapi-tag-intro {
+    margin: 0 0 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.openapi-tag-intro > :last-child {
+    margin-bottom: 0;
+}
+
+/* Compact endpoint signature: "GET /api/path" above the description.
+   Replaces the heavier "Endpoint" h4 + full-width code block. */
+
+.endpoint-signature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0 0.75rem;
+    flex-wrap: wrap;
+}
+
+.endpoint-method {
+    display: inline-block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    min-width: 3.25rem;
+    text-align: center;
+}
+
+.endpoint-method-get     { background: #1864ab; }
+.endpoint-method-post    { background: #2f9e44; }
+.endpoint-method-put     { background: #e67700; }
+.endpoint-method-patch   { background: #ae3ec9; }
+.endpoint-method-delete  { background: #c92a2a; }
+.endpoint-method-head    { background: #495057; }
+.endpoint-method-options { background: #495057; }
+
+.endpoint-path {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.95rem;
+    background: none;
+    padding: 0;
+    overflow-wrap: anywhere;
+}
+
+/* API parameter / property list layout
+   Replaces 4-5 column tables that cramped descriptions when the content column
+   is constrained by the left nav and right TOC. Each parameter is a stacked
+   block: name + type/in/required badges on line 1, full-width description on
+   line 2. */
+
+.api-params {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    border-top: 1px solid #eaeaea;
+}
+
+.api-param {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.api-param-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.api-param-name {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: none;
+    padding: 0;
+}
+
+.api-param-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    background: #f1f3f5;
+    color: #495057;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    white-space: nowrap;
+}
+
+.api-param-badge a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.api-param-type {
+    background: #e7f5ff;
+    color: #1864ab;
+}
+
+.api-param-in {
+    background: #f3f0ff;
+    color: #5f3dc4;
+    text-transform: lowercase;
+}
+
+.api-param-required {
+    background: #f1f3f5;
+    color: #868e96;
+}
+
+.api-param-required.is-required {
+    background: #fff0f0;
+    color: #c92a2a;
+}
+
+.api-param-description {
+    color: #495057;
+    font-size: 0.925rem;
+    line-height: 1.5;
+    max-width: 100%;
+}
+
+.api-param-description p:last-child {
+    margin-bottom: 0;
+}
+
+.api-param-nested-indicator {
+    color: #adb5bd;
+    font-size: 0.9em;
+    margin-right: 0.1rem;
+}
+
+.api-param-enum {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.api-param-enum ul {
+    margin: 0.25rem 0 0;
+    padding-left: 1.25rem;
+}
+
+/* Schema component index (list of links on /schema/) */
+
+.schema-index {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.25rem 1rem;
+}
+
+.schema-index li {
+    margin: 0;
+    padding: 0.25rem 0;
+}
+
+.schema-index code {
+    background: none;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+/* Response blocks: one per inline-rendered status (2xx, or 4xx/5xx with a
+   schema). Stock errors collapse into .api-response-errors below. */
+
+.api-response {
+    margin: 1rem 0 1.25rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.api-response-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.625rem;
+    margin-bottom: 0.5rem;
+}
+
+.api-response-summary {
+    color: #495057;
+    font-size: 0.925rem;
+}
+
+.api-response-summary p {
+    display: inline;
+    margin: 0;
+}
+
+.api-schema-label {
+    font-size: 0.875rem;
+    color: #495057;
+    margin: 0.25rem 0 0.75rem;
+}
+
+.api-schema-label a {
+    color: #7d5bbe;
+    text-decoration: underline;
+}
+
+.api-schema-label a:hover {
+    color: #5b3fa3;
+}
+
+.api-response .api-params {
+    margin-top: 0.5rem;
+    border-top: none;
+}
+
+.api-response .api-param:first-child {
+    padding-top: 0;
+}
+
+.api-response .api-param:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Status chip: compact pill showing HTTP status code with semantic color. */
+
+.api-status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.api-status-chip .api-status-chip-desc {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 400;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.api-status-2xx { background: #d3f9d8; color: #2b8a3e; }
+.api-status-3xx { background: #e9ecef; color: #495057; }
+.api-status-4xx { background: #fff3bf; color: #8a6d00; }
+.api-status-5xx { background: #ffe3e3; color: #c92a2a; }
+
+/* Compact row listing stock (no-schema) errors at the end of the Responses
+   section. Avoids a second layer of click-to-reveal inside the already-
+   collapsible endpoint. */
+
+.api-response-errors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+    margin: 0.5rem 0 0.25rem;
+    font-size: 0.875rem;
+    border-top: 1px dashed #eaeaea;
+}
+
+.api-response-errors-label {
+    color: #868e96;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+}
+
+/* Deprecation warning */
+
+.deprecated-warning {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    background-color: #fff3cd;
+    color: #856404;
+    font-size: 0.9rem;
+}
+
+/* Nested property rows (recursive $ref expansion) */
+
+.nested-prop {
+    display: inline-flex;
+    align-items: center;
+}
+
+.nested-indicator {
+    color: #999;
+    margin-right: 4px;
+    font-size: 0.85em;
+}
+
+tr[class^="property-depth-"] td {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+tr.property-depth-2 td {
+    background-color: rgba(0, 0, 0, 0.04);
+}

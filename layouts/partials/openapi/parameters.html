@@ -1,0 +1,20 @@
+{{ define "openapi/parameters.html" }}
+{{ if .parameters }}
+    <h4>Request Parameters</h4>
+    <ul class="api-params">
+        {{ range .parameters }}
+            <li class="api-param">
+                <div class="api-param-header">
+                    <code class="api-param-name">{{ .name }}</code>
+                    {{ with .schema }}<span class="api-param-badge api-param-type">{{ .type }}</span>{{ end }}
+                    <span class="api-param-badge api-param-in">{{ .in }}</span>
+                    <span class="api-param-badge api-param-required{{ if .required }} is-required{{ end }}">{{ if .required }}required{{ else }}optional{{ end }}</span>
+                </div>
+                {{ with .description }}
+                    <div class="api-param-description">{{ . | markdownify }}</div>
+                {{ end }}
+            </li>
+        {{ end }}
+    </ul>
+{{ end }}
+{{ end }}

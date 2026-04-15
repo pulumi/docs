@@ -1,0 +1,20 @@
+{{ define "openapi/response-schema.html" }}
+{{ if .schema }}
+    {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" .schema "openapi" .openapi) }}
+    {{ if $resolved.schemaName }}
+        <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-openapi/schema/{{ $resolved.schemaName | urlize }}/">{{ $resolved.schemaName }}</a></div>
+    {{ end }}
+    {{ if $resolved.properties }}
+        <ul class="api-params">
+            {{ partial "openapi/property-rows.html" (dict
+                "properties" $resolved.properties
+                "required" $resolved.required
+                "openapi" .openapi
+                "depth" 0
+                "maxDepth" 1
+            ) }}
+        </ul>
+    {{ end }}
+{{ end }}
+{{ end }}
+

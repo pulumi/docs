@@ -1,0 +1,39 @@
+{{ define "openapi/request-example.html" -}}
+<h4>Example Request</h4>
+{{- $method := upper .method }}
+{{- $url := printf "https://api.pulumi.com%s" .path }}
+
+{{/* Append query parameters to the URL as {name} placeholders. */}}
+{{- $queryParts := slice }}
+{{- with .details.parameters }}
+    {{- range . }}
+        {{- if eq .in "query" }}
+            {{- $queryParts = $queryParts | append (printf "%s={%s}" .name .name) }}
+        {{- end }}
+    {{- end }}
+{{- end }}
+{{- if $queryParts }}
+    {{- $url = printf "%s?%s" $url (delimit $queryParts "&") }}
+{{- end }}
+
+{{/* Build the curl command line by line. */}}
+{{- $lines := slice "curl \\" }}
+{{- $lines = $lines | append "  -H \"Accept: application/vnd.pulumi+8\" \\" }}
+{{- $lines = $lines | append "  -H \"Content-Type: application/json\" \\" }}
+{{- $lines = $lines | append "  -H \"Authorization: token $PULUMI_ACCESS_TOKEN\" \\" }}
+{{- if ne $method "GET" }}
+    {{- $lines = $lines | append (printf "  --request %s \\" $method) }}
+{{- end }}
+{{- with .details.requestBody }}
+    {{- $jsonContent := index .content "application/json" }}
+    {{- with $jsonContent }}
+        {{- $bodyData := "{}" }}
+        {{- if .example }}
+            {{- $bodyData = .example | jsonify }}
+        {{- end }}
+        {{- $lines = $lines | append (printf "  --data '%s' \\" $bodyData) }}
+    {{- end }}
+{{- end }}
+{{- $lines = $lines | append (printf "  %s" $url) }}
+<pre><code>{{ delimit $lines "\n" }}</code></pre>
+{{- end }}

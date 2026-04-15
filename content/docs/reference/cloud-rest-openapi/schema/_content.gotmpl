@@ -1,0 +1,36 @@
+{{/*
+    Content adapter: auto-generates one page per OpenAPI schema component.
+    _index.md is preserved (it renders the component index).
+*/}}
+
+{{ $spec := index site.Data "openapi-spec" }}
+{{ $schemas := $spec.components.schemas }}
+
+{{ $names := slice }}
+{{ range $name, $_ := $schemas }}
+    {{ $names = $names | append $name }}
+{{ end }}
+{{ $names = sort $names }}
+
+{{ range $names }}
+    {{ $name := . }}
+    {{ $slug := $name | urlize }}
+
+    {{ $params := dict
+        "h1" $name
+        "title_tag" (printf "Pulumi Cloud REST API schema: %s" $name)
+        "meta_desc" (printf "Schema reference for the %s component in the Pulumi Cloud REST API." $name)
+        "meta_image" "/images/docs/meta-images/docs-meta.png"
+        "openapi_schema" true
+        "schema_name" $name
+        "notoc" true
+    }}
+
+    {{ $.AddPage (dict
+        "path" $slug
+        "title" $name
+        "kind" "page"
+        "params" $params
+    ) }}
+{{ end }}
+

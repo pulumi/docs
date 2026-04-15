@@ -124,6 +124,15 @@
 {{ range $existingCrumbs }}
     {{ $finalBreadcrumbs = $finalBreadcrumbs | append . }}
 {{ end }}
+
+{{/* Generated OpenAPI schema sub-pages are not in any menu, so inject their
+     ancestor chain manually: Reference → REST API Docs (OpenAPI) → Schema. */}}
+{{ if and $page.Params.openapi_schema (not $existingCrumbs) }}
+    {{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" "Reference" "url" "/docs/reference/") }}
+    {{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" "REST API Docs (OpenAPI)" "url" "/docs/reference/cloud-rest-openapi/") }}
+    {{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" "Schema" "url" "/docs/reference/cloud-rest-openapi/schema/") }}
+{{ end }}
+
 {{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" $page.LinkTitle "url" $page.RelPermalink) }}
 {{ $page.Scratch.Set "breadcrumbs" $finalBreadcrumbs }}
 

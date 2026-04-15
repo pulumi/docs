@@ -1,0 +1,21 @@
+{{ define "openapi/endpoint-group.html" }}
+    {{ $endpointGroups := .endpointGroups }}
+    {{ $openapi := .openapi }}
+    
+    <!-- Sort the groups to ensure consistent ordering -->
+    {{ $sortedGroups := slice }}
+    {{ range $group, $_ := $endpointGroups }}
+        {{ $sortedGroups = $sortedGroups | append $group }}
+    {{ end }}
+    {{ $sortedGroups = sort $sortedGroups }}
+    
+    {{ range $group := $sortedGroups }}
+        {{ $endpoints := index $endpointGroups $group }}
+        {{ if gt (len $endpoints) 0 }}
+            <h2 id="{{ anchorize $group }}">{{ $group }}</h2>
+            {{ range $endpoints }}
+                {{ template "openapi/endpoint.html" (dict "method" .method "path" .path "details" .details "openapi" $openapi) }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }} 

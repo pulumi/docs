@@ -1,0 +1,128 @@
+{{/*
+    Content adapter: auto-generates one page per OpenAPI tag.
+    Fetches the live spec from the Pulumi Cloud API and extracts unique top-level tags.
+    _index.md is preserved (it defines the section) — tag pages are generated here.
+    The schema page lives in its own subdirectory (schema/_index.md) as regular content.
+*/}}
+
+{{/* Read pre-downloaded spec from data/openapi-spec.json (fetched by scripts/fetch-openapi-spec.sh) */}}
+{{ $spec := index site.Data "openapi-spec" }}
+
+{{/* Collect unique top-level tags from all paths, excluding preview-visibility routes. */}}
+{{ $tagSet := dict }}
+{{ range $path, $methods := $spec.paths }}
+    {{ range $method, $details := $methods }}
+        {{/* Skip preview-visibility endpoints */}}
+        {{ $isPreview := false }}
+{{ with $details.pulumiRouteProperty }}
+            {{ if eq (.Visibility | default "") "Preview" }}
+                {{ $isPreview = true }}
+            {{ end }}
+        {{ end }}
+        {{ if not $isPreview }}
+            {{ with $details.tags }}
+                {{ range . }}
+                    {{/* Top-level tag is everything before the first colon. */}}
+                    {{ $top := . }}
+                    {{ if strings.Contains . ":" }}
+                        {{ $top = index (split . ":") 0 | strings.TrimRight " " }}
+                    {{ end }}
+                    {{ $tagSet = merge $tagSet (dict $top true) }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{/* Sort tags alphabetically; move Miscellaneous to the end. */}}
+{{ $tags := slice }}
+{{ $hasMisc := false }}
+{{ range $tag, $_ := $tagSet }}
+    {{ if eq $tag "Miscellaneous" }}
+        {{ $hasMisc = true }}
+    {{ else }}
+        {{ $tags = $tags | append $tag }}
+    {{ end }}
+{{ end }}
+{{ $tags = sort $tags }}
+{{ if $hasMisc }}
+    {{ $tags = $tags | append "Miscellaneous" }}
+{{ end }}
+
+{{/* Helper: insert spaces before uppercase letters preceded by lowercase (CamelCase → display). */}}
+{{ $camelRE := `([a-z])([A-Z])` }}
+
+{{/*
+    Orphan check between tag-intro sidecar files and spec tags.
+    - Intro files live in assets/openapi/tag-intros/<slug>.md where <slug>
+      is the page slug (CamelCase split + urlize).
+    - An intro file with no matching tag is stale (tag was renamed/removed).
+    - A tag with no intro file is a prose gap for docs authors to fill.
+    Warnings go to stderr during `hugo` / `make build`; grep for "openapi:".
+*/}}
+{{ $introDir := "assets/openapi/tag-intros" }}
+{{ $introSlugs := slice }}
+{{ range (os.ReadDir $introDir) }}
+    {{ if and (not .IsDir) (hasSuffix .Name ".md") (ne .Name "README.md") }}
+        {{ $introSlugs = $introSlugs | append (strings.TrimSuffix ".md" .Name) }}
+    {{ end }}
+{{ end }}
+
+{{ $tagSlugs := slice }}
+{{ range $tags }}
+    {{ $display := . }}
+    {{ if not (strings.Contains . " ") }}
+        {{ $display = replaceRE $camelRE "${1} ${2}" . }}
+    {{ end }}
+    {{ $tagSlugs = $tagSlugs | append ($display | urlize) }}
+{{ end }}
+
+{{ range $introSlugs }}
+    {{ if not (in $tagSlugs .) }}
+        {{ warnf "openapi: orphan intro — assets/openapi/tag-intros/%s.md has no matching tag in the spec" . }}
+    {{ end }}
+{{ end }}
+{{ range $tagSlugs }}
+    {{ if not (in $introSlugs .) }}
+        {{ warnf "openapi: missing intro — tag %q has no sidecar at assets/openapi/tag-intros/%s.md" . . }}
+    {{ end }}
+{{ end }}
+
+{{ range $i, $tag := $tags }}
+    {{/* Build display name: "CloudSetup" → "Cloud Setup", "AI Agents" stays as-is. */}}
+    {{ $display := $tag }}
+    {{ if not (strings.Contains $tag " ") }}
+        {{ $display = replaceRE $camelRE "${1} ${2}" $tag }}
+    {{ end }}
+
+    {{ $slug := $display | urlize }}
+    {{ $weight := add $i 1 }}
+    {{ if eq $tag "Miscellaneous" }}
+        {{ $weight = 99 }}
+    {{ end }}
+
+    {{ $params := dict
+        "h1" $display
+        "title_tag" (printf "Pulumi Cloud REST API: %s" $display)
+        "meta_desc" (printf "API reference for %s endpoints in the Pulumi Cloud REST API." $display)
+        "meta_image" "/images/docs/meta-images/docs-meta.png"
+        "openapi_docs" true
+        "filter_tag" $tag
+    }}
+
+    {{ $menus := dict "reference" (dict
+        "name" $display
+        "parent" "reference-cloud-rest-openapi"
+        "weight" $weight
+        "identifier" (printf "reference-cloud-rest-openapi-%s" $slug)
+    ) }}
+
+    {{ $.AddPage (dict
+        "path" $slug
+        "title" (printf "Pulumi Cloud API: %s" $display)
+        "kind" "page"
+        "params" $params
+        "menus" $menus
+    ) }}
+{{ end }}
+

@@ -1,0 +1,132 @@
+{{/* Read pre-downloaded spec from data/openapi-spec.json (fetched by scripts/fetch-openapi-spec.sh) */}}
+{{ $openapi := index site.Data "openapi-spec" }}
+{{ with $openapi }}
+        {{ $css := resources.Get "fingerprinted/css/openapi.css" | fingerprint }}
+        <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+        {{/* Optional editorial intro from assets/openapi/tag-intros/{slug}.md.
+             Slug must match the page slug — tag with CamelCase split then urlize. */}}
+        {{ $filterTag := $.Params.filter_tag }}
+        {{ if $filterTag }}
+            {{ $camelRE := `([a-z])([A-Z])` }}
+            {{ $display := $filterTag }}
+            {{ if not (strings.Contains $filterTag " ") }}
+                {{ $display = replaceRE $camelRE "${1} ${2}" $filterTag }}
+            {{ end }}
+            {{ $introSlug := $display | urlize }}
+            {{ $introPath := printf "assets/openapi/tag-intros/%s.md" $introSlug }}
+            {{ if (fileExists $introPath) }}
+                <div class="openapi-tag-intro">{{ readFile $introPath | markdownify }}</div>
+            {{ end }}
+        {{ end }}
+
+        <div style="display: flex; flex-direction: column; align-items: stretch;" data-openapi-content="true">
+            {{ $endpointGroups := dict }}
+            
+            <!-- Group endpoints by their appropriate category -->
+            {{ range $path, $pathMethods := $openapi.paths }}
+                {{ range $pathMethod, $pathDetails := $pathMethods }}
+                    {{/* Skip preview-visibility endpoints */}}
+                    {{ $isPreview := false }}
+                    {{ with $pathDetails.pulumiRouteProperty }}
+                        {{ if eq (.Visibility | default "") "Preview" }}
+                            {{ $isPreview = true }}
+                        {{ end }}
+                    {{ end }}
+
+                    {{ if eq $isPreview false }}
+                    {{ $endpoint := dict "path" $path "method" $pathMethod "details" $pathDetails }}
+
+                    {{ if $filterTag }}
+                        {{ if $pathDetails.tags }}
+                            {{ range $tag := $pathDetails.tags }}
+                                {{ if eq $tag $filterTag }}
+                                    {{ $currentSlice := index $endpointGroups $tag | default (slice) }}
+                                    {{ $endpointGroups = merge $endpointGroups (dict $tag ($currentSlice | append $endpoint)) }}
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    {{ else }}
+                        {{ if $pathDetails.tags }}
+                            {{ range $tag := $pathDetails.tags }}
+                                {{ $currentSlice := index $endpointGroups $tag | default (slice) }}
+                                {{ $endpointGroups = merge $endpointGroups (dict $tag ($currentSlice | append $endpoint)) }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    {{ end }}{{/* eq $isPreview false */}}
+                {{ end }}
+            {{ end }}
+
+            {{ template "openapi/endpoint-group.html" (dict "endpointGroups" $endpointGroups "openapi" $openapi) }}
+        </div>
+        <!-- Add styles for the endpoint accordion -->
+        <style>
+        .endpoint-component {
+            margin-bottom: 1rem;
+            border: 1px solid #eaeaea;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .endpoint-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .endpoint-header:hover {
+            background-color: #e9ecef;
+        }
+
+        .endpoint-header h3 {
+            margin: 0;
+            padding: 0;
+            border: none;
+            font-size: 1.25rem;
+        }
+
+        .endpoint-content {
+            padding: 1rem;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .toggle-icon {
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .collapsed .endpoint-content {
+            display: none;
+        }
+
+        .collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+        </style>
+
+        <!-- Add script for the endpoint accordion -->
+        <script>
+        // Use event delegation to handle clicks on endpoint headers
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('click', function(event) {
+                const header = event.target.closest('.endpoint-header');
+                if (header) {
+                    const endpointId = header.getAttribute('data-endpoint-id');
+                    const component = document.getElementById('content-' + endpointId);
+                    const parent = component.parentElement;
+                    
+                    if (parent.classList.contains('collapsed')) {
+                        parent.classList.remove('collapsed');
+                    } else {
+                        parent.classList.add('collapsed');
+                    }
+                }
+            });
+        });
+        </script>
+{{ end }}

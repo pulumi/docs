@@ -1,0 +1,107 @@
+{{/*
+  Renders property list items with recursive $ref expansion.
+  Outputs <li class="api-param"> elements inside a caller-provided <ul class="api-params">.
+
+  Input: dict with "properties", "required", "openapi", "depth" (default 0), "maxDepth" (default 2)
+*/}}
+{{ $properties := .properties | default dict }}
+{{ $required := .required | default slice }}
+{{ $openapi := .openapi }}
+{{ $depth := .depth | default 0 }}
+{{ $maxDepth := .maxDepth | default 2 }}
+
+{{ range $propName, $prop := $properties }}
+  {{ $effectiveProp := $prop }}
+  {{ $refSchemaName := "" }}
+  {{ $hasInlineProps := false }}
+
+  {{/* Resolve property-level allOf */}}
+  {{ if isset $prop "allOf" }}
+    {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $prop "openapi" $openapi) }}
+    {{ $effectiveProp = dict "type" "object" "description" ($prop.description | default $resolved.description | default "") "properties" $resolved.properties "required" $resolved.required }}
+    {{ if $resolved.properties }}
+      {{ $hasInlineProps = true }}
+    {{ end }}
+  {{ end }}
+
+  <li class="api-param{{ with $depth }} api-param-depth-{{ . }}{{ end }}"{{ if gt $depth 0 }} style="margin-left: {{ mul $depth 16 }}px"{{ end }}>
+    <div class="api-param-header">
+      {{ if gt $depth 0 }}<span class="api-param-nested-indicator">&#8627;</span>{{ end }}
+      <code class="api-param-name">{{ $propName }}</code>
+      <span class="api-param-badge api-param-type">
+        {{ if isset $effectiveProp "$ref" }}
+          {{ $refPath := index $effectiveProp "$ref" }}
+          {{ $refParts := split $refPath "/" }}
+          {{ $refSchemaName = index $refParts (sub (len $refParts) 1) }}
+          <a href="/docs/reference/cloud-rest-openapi/schema/{{ $refSchemaName | urlize }}/">{{ $refSchemaName }}</a>
+        {{ else if isset $effectiveProp "type" }}
+          {{ if eq $effectiveProp.type "array" }}
+            {{ if and (isset $effectiveProp "items") (isset $effectiveProp.items "$ref") }}
+              {{ $itemRefPath := index $effectiveProp.items "$ref" }}
+              {{ $itemRefParts := split $itemRefPath "/" }}
+              {{ $itemSchemaName := index $itemRefParts (sub (len $itemRefParts) 1) }}
+              {{ $refSchemaName = $itemSchemaName }}
+              array[<a href="/docs/reference/cloud-rest-openapi/schema/{{ $itemSchemaName | urlize }}/">{{ $itemSchemaName }}</a>]
+            {{ else if isset $effectiveProp "items" }}
+              array[{{ $effectiveProp.items.type }}]
+            {{ else }}
+              array
+            {{ end }}
+          {{ else if eq $effectiveProp.type "object" }}
+            {{ if and (isset $effectiveProp "additionalProperties") (isset $effectiveProp.additionalProperties "$ref") }}
+              {{ $objRefPath := index $effectiveProp.additionalProperties "$ref" }}
+              {{ $objRefParts := split $objRefPath "/" }}
+              {{ $objSchemaName := index $objRefParts (sub (len $objRefParts) 1) }}
+              map[string]<a href="/docs/reference/cloud-rest-openapi/schema/{{ $objSchemaName | urlize }}/">{{ $objSchemaName }}</a>
+            {{ else if and (isset $effectiveProp "additionalProperties") (isset $effectiveProp.additionalProperties "type") }}
+              map[string]{{ $effectiveProp.additionalProperties.type }}
+            {{ else }}
+              {{ $effectiveProp.type }}
+            {{ end }}
+          {{ else if isset $effectiveProp "enum" }}
+            enum
+          {{ else }}
+            {{ $effectiveProp.type }}
+          {{ end }}
+        {{ end }}
+      </span>
+      <span class="api-param-badge api-param-required{{ if in $required $propName }} is-required{{ end }}">{{ if in $required $propName }}required{{ else }}optional{{ end }}</span>
+    </div>
+    {{ with $effectiveProp.description }}
+      <div class="api-param-description">{{ . | markdownify }}</div>
+    {{ end }}
+    {{ if isset $effectiveProp "enum" }}
+      <div class="api-param-enum">
+        <strong>Values:</strong>
+        {{ range $i, $v := $effectiveProp.enum }}{{ if $i }}, {{ end }}<code>{{ $v }}</code>{{ end }}
+      </div>
+    {{ end }}
+  </li>
+
+  {{/* Recursively expand referenced schema properties */}}
+  {{ if and (lt $depth $maxDepth) (ne $refSchemaName "") }}
+    {{ with index $openapi.components.schemas $refSchemaName }}
+      {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" . "openapi" $openapi) }}
+      {{ if $resolved.properties }}
+        {{ partial "openapi/property-rows.html" (dict
+          "properties" $resolved.properties
+          "required" $resolved.required
+          "openapi" $openapi
+          "depth" (add $depth 1)
+          "maxDepth" $maxDepth
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Expand inline object properties (e.g., from resolved allOf) */}}
+  {{ if and (lt $depth $maxDepth) $hasInlineProps }}
+    {{ partial "openapi/property-rows.html" (dict
+      "properties" $effectiveProp.properties
+      "required" ($effectiveProp.required | default slice)
+      "openapi" $openapi
+      "depth" (add $depth 1)
+      "maxDepth" $maxDepth
+    ) }}
+  {{ end }}
+{{ end }}
