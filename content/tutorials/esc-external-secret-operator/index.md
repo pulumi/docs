@@ -461,7 +461,7 @@ kind: PushSecret
 metadata:
   name: push-secret-example
 spec:
-  refreshInterval: 10s
+  refreshInterval: 1h
   selector:
     secret:
       name: <NAME_OF_THE_KUBERNETES_SECRET>
@@ -505,7 +505,7 @@ metadata:
   name: pushsecret-example # Customisable
   namespace: default # Same of the SecretStores
 spec:
-  refreshInterval: 10s
+  refreshInterval: 1h
   selector:
     secret:
       name: test-cred
