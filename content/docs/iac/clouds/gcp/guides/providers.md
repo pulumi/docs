@@ -124,22 +124,22 @@ The general migration approach is:
    `@pulumi/google-native` (TypeScript/JavaScript), `pulumi_google_native` (Python), or equivalent packages in
    other languages.
 
-2. **Find the GCP Classic equivalents.** Most resources in the Google Cloud Native provider have a direct
+1. **Find the GCP Classic equivalents.** Most resources in the Google Cloud Native provider have a direct
    counterpart in the GCP Classic provider under the `gcp.*` namespace. For example:
    - `google-native.storage/v1.Bucket` → `gcp.storage.Bucket`
    - `google-native.compute/v1.Instance` → `gcp.compute.Instance`
    - `google-native.container/v1.Cluster` → `gcp.container.Cluster`
 
-3. **Rewrite your resource definitions.** Update your program to use GCP Classic resource types and property
+1. **Rewrite your resource definitions.** Update your program to use GCP Classic resource types and property
    names. Property names and structures will differ in some cases, so consult the
    [GCP Classic API docs](/registry/packages/gcp/api-docs/) for each resource.
 
-4. **Import existing resources.** Use `pulumi import` to bring your existing Google Cloud resources under the
+1. **Import existing resources.** Use `pulumi import` to bring your existing Google Cloud resources under the
    management of the GCP Classic provider, rather than destroying and recreating them. This requires the resource
-   type and its Google Cloud resource ID. See the [import documentation](/docs/iac/adopting-pulumi/import/) for
+   type and its Google Cloud resource ID. See the [import documentation](/docs/iac/guides/migration/import/) for
    full details.
 
-5. **Remove the Google Cloud Native provider** from your project's dependencies once all resources have been
+1. **Remove the Google Cloud Native provider** from your project's dependencies once all resources have been
    migrated.
 
 The migration is resource-by-resource and can be done incrementally — you do not need to migrate an entire stack
@@ -162,4 +162,4 @@ your team.
 - [GCP Classic provider API docs](/registry/packages/gcp/api-docs/)
 - [GCP Classic provider how-to guides](/registry/packages/gcp/how-to-guides/)
 - [Get started with Google Cloud](/docs/iac/get-started/gcp/)
-- [Importing existing infrastructure](/docs/iac/adopting-pulumi/import/)
+- [Importing existing infrastructure](/docs/iac/guides/migration/import/)
