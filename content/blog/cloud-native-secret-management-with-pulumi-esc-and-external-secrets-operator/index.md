@@ -369,7 +369,7 @@ const externalSecretPodInfo = new k8s.apiextensions.CustomResource("external-sec
                 }
             }
         ],
-        refreshInterval: "10s",
+        refreshInterval: "1h",
         secretStoreRef: {
             kind: clusterSecretStore.kind,
             name: clusterSecretStore.metadata.name,
