@@ -1,6 +1,6 @@
 ---
 title_tag: "Publishing Packages"
-meta_desc: "Learn how to create and publish a Pulumi Package to share a custom component, provider, or bridge an existing Terraform provider into the Pulumi ecosystem."
+meta_desc: "Learn how to publish Pulumi packages to your organization's private registry or the public Pulumi Registry."
 title: Publishing packages
 h1: Publishing Pulumi packages
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -21,21 +21,56 @@ aliases:
 - /docs/iac/build-with-pulumi/publishing-packages/
 ---
 
-This guide will take you through the process to create and publish a [Pulumi Package](/docs/iac/concepts/packages) to the [Pulumi Registry](/registry). You can use this guide to publish the following types of Pulumi Packages:
+Pulumi packages can be published to two different registries depending on your use case:
+
+- **Your organization's [Private Registry](/docs/idp/concepts/private-registry/)** in Pulumi Cloud, for components and providers used within your organization.
+- **The public [Pulumi Registry](/registry/)**, for open-source packages shared with the Pulumi community.
+
+## Publish to your organization's private registry
+
+Pulumi Cloud's [Private Registry](/docs/idp/concepts/private-registry/) lets platform teams publish components for discovery and reuse across their organization. Published components appear in a browsable gallery with auto-generated API documentation.
+
+### Before you begin
+
+1. You need a [Pulumi Cloud](https://app.pulumi.com) account on the Enterprise or Business Critical plan.
+1. Your component must be pushed to a GitHub or GitLab repository that Pulumi can access. Private repositories are supported.
+1. If you haven't built a component yet, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/). To choose the right packaging approach for your needs, see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/).
+
+### Publish your component
+
+Use the [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/) command to publish a component to your organization's private registry:
+
+```bash
+pulumi package publish github.com/<org>/<component-name>
+```
+
+To publish a specific version, tag your repository and specify the version:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+pulumi package publish github.com/<org>/<component-name>@1.0.0
+```
+
+### Learn more
+
+For the full details on component versioning, README requirements, API docs annotations, authentication with private repositories, and more, see the [Private Registry](/docs/idp/concepts/private-registry/) documentation.
+
+To set up automated publishing via CI/CD, see [Publishing from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/).
+
+## Publish to the public Pulumi Registry
+
+This section covers how to publish a [Pulumi Package](/docs/iac/concepts/packages) to the public [Pulumi Registry](/registry). You can publish the following types of packages:
 
 - A [component](/docs/iac/concepts/components) or related group of components
 - A custom provider where you define the CRUD operations for each resource type
 - A bridged provider, which wraps an existing Terraform provider and leverages its code to perform the CRUD operations for each resource type
 
 {{% notes type="info" %}}
-This guide is for creating packages for public consumption. If you are a looking for information on how to create and publish components for use within your organization, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component).
-{{% /notes %}}
-
-{{% notes type="info" %}}
 If you are a cloud or SaaS provider interested in publishing a Pulumi provider or component, please [reach out to our partners team](/contact).
 {{% /notes %}}
 
-## Prerequisites
+### Prerequisites
 
 {{% notes type="info" %}}
 This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
@@ -46,13 +81,15 @@ This guide assumes you're using GitHub to host your package's source code and Gi
 - Pulumi Packages are multi-language: you can write your package once in either Go, Python, or TypeScript/JavaScript and then make it available to all Pulumi users, even if they use another language. To develop them, you need to have Git, Go, .NET, Python, and TypeScript installed on your system.
 - To follow the whole guide, you need a GitHub account. However, using GitHub is not a requirement; you may still find this guide useful even if you use another system to store your source code.
 
-## Create a repository and author your package
+### Create a repository and author your package
 
 To get started, create a repository for your Pulumi Package. We recommend hosting your Pulumi Package in a public repository on GitHub. We also recommend following the naming conventions below to help the community find the source code for your packages.
 
-### Select a template
+#### Select a template
 
-We've created some template repositories for you to use as a starting point for your package. Click the link for the boilerplate repository template that you want to use, then click "Use this template" to make a copy of it.
+We've created some template repositories for you to use as a starting point for your package. These templates are for **provider-based packages**. If you are building a cross-language component (recommended for most platform teams), see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) for the recommended approach.
+
+Click the link for the boilerplate repository template that you want to use, then click "Use this template" to make a copy of it.
 
 - Author a custom Pulumi provider: [`pulumi/pulumi-provider-boilerplate`](https://github.com/pulumi/pulumi-provider-boilerplate)
 - Bridge an existing Terraform Provider to use with Pulumi: [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate)
@@ -61,7 +98,7 @@ We've created some template repositories for you to use as a starting point for 
 If you need access to a Terraform provider, but don't need the full customization of a published provider, the ["Any Terraform Provider" Pulumi Provider](/registry/packages/terraform-provider) can provide instant access via locally generating SDKs.
 {{% /notes %}}
 
-### Name your provider and repository
+#### Name your provider and repository
 
 When you publish to the [Pulumi Package Registry](https://www.pulumi.com/registry/), you will need to pick a unique name. This is normally named after the cloud provider or service the provider configures.
 
@@ -70,15 +107,15 @@ Your repository name should start with `pulumi-` followed by the name of your pr
 - If you're bridging a Terraform provider, re-use the Terraform provider's name - replacing `terraform-provider-` with `pulumi-` e.g. use `pulumi-auth0` for bridging `terraform-provider-auth0`.
 - If you're building a component on top of an existing provider, consider using the provider name followed by the component name. For example, if building an API Gateway component using the AWS provider, name your project `pulumi-aws-apigateway`.
 
-## Author your resources or components
+### Author your resources or components
 
 See the instructions in your new repository's `README.md` file for specific instructions on how to author your package. We also have guides you can follow for building [components](/docs/iac/concepts/resources/components/) and [providers](/docs/iac/concepts/providers/) without the template repos.
 
-## Write documentation
+### Write documentation
 
 We recommend writing documentation to help others in the Pulumi community use your package. In your repository, there should be a `docs/` folder containing markdown files (the templates include a few suggested pages). The files should correspond to the various tabs on a package page in Pulumi Registry (like the [Azure Native](/registry/packages/azure-native/) package). Use the guidance in the following sections to author content in these pages.
 
-### Overview, installation, & configuration
+#### Overview, installation, & configuration
 
 Specifically, you should author a few pages:
 
@@ -89,7 +126,7 @@ Specifically, you should author a few pages:
 We recommend keeping the contents of `README.md` and `_index.md` similar or the same, save for the YAML metadata/front-matter that's in `_index.md`.
 {{% /notes %}}
 
-### Package metadata
+#### Package metadata
 
 Metadata for your package is generated from the [`schema.json`](/docs/iac/using-pulumi/extending-pulumi/schema) in your repository. To make sure your package looks great in the Pulumi Registry, don't forget to add metadata like:
 
@@ -107,15 +144,15 @@ Metadata for your package is generated from the [`schema.json`](/docs/iac/using-
 Pulumi will interpolate `${VERSION}`, `${OS}` and `${ARCH}` with their respective values if found in `pluginDownloadURL`.
 {{% /notes %}}
 
-### API docs
+#### API docs
 
 API docs for your package are automatically generated from the `schema.json` in your repository. Many Pulumi users learn to use a Pulumi Package via the API docs, since they appear automatically in many IDEs' auto-complete and inline documentation features, like Visual Studio Code's IntelliSense feature. Investing in API docs for your package is one of the best ways to improve its usability. Check out the [`pulumi-eks` schema](https://github.com/pulumi/pulumi-eks/blob/master/provider/cmd/pulumi-resource-eks/schema.json) to see how it translates to the [Pulumi Registry](/registry/packages/eks/api-docs/) for an example of great API docs.
 
-### How-to guides
+#### How-to guides
 
 You can also create how-to guides for your packages by contributing them to the [`pulumi/examples`](https://github.com/pulumi/examples) repository on GitHub.
 
-## Publish your package
+### Publish your package
 
 Once you've authored and tested your package locally, you can publish it to make it available to the Pulumi community. You must publish several artifacts:
 
@@ -143,7 +180,7 @@ managers (npm, NuGet, Pip, GitHub) host the SDKs, but we need to know where the 
 `pulumi plugin install ${NAME} ${VERSION} --server ${pluginDownloadURL}`. If `pluginDownloadURL` is not supplied, then the Pulumi
 CLI assumes the plugin is hosted at `get.pulumi.com`.
 
-### Support for GitHub releases
+#### Support for GitHub releases
 
 Since [release 3.35.3](https://github.com/pulumi/pulumi/releases/tag/v3.35.3), Pulumi understands a special form of `pluginDownloadURL` to download plugins via GitHub releases
 
@@ -157,7 +194,7 @@ github://${github api host}/{organization}[/{repository}]
 
 For example the [Pulumiverse Astra](https://github.com/pulumiverse/pulumi-astra) package would specify `github://api.github.com/pulumiverse`.
 
-### Support for Gitlab releases
+#### Support for Gitlab releases
 
 Since [release 3.56.0](https://github.com/pulumi/pulumi/releases/tag/v3.56.0), Pulumi understands a special form of `pluginDownloadURL` to download plugins via Gitlab releases
 
@@ -168,7 +205,7 @@ gitlab://${gitlab api host}/{<project_id>}
 - `gitlab api host`: the address of a Gitlab API, for Gitlab SaaS this is `gitlab.com`
 - `project_id`: the Gitlab project ID to use. The project ID can be found right below the project name on the project page.
 
-## Publish the documentation
+### Publish the documentation
 
 All package documentation in the Pulumi Registry is published via the [`pulumi/registry` repository on GitHub](https://github.com/pulumi/registry). To publish your package to the Pulumi Registry:
 
@@ -187,7 +224,3 @@ From there, a Pulumi employee will work with you to get your Pulumi Package publ
 1. Review your pull request and trigger the automation that builds the package listing and the API docs from your schema.
 1. Merge upon approval of your PR
 1. On merging, CI will automatically publish your package listing and API docs to pulumi.com/registry.
-
-## Congratulations
-
-Congratulations on publishing your Pulumi Package!
