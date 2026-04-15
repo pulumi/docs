@@ -1,6 +1,6 @@
 ---
 title_tag: "Packaging Components"
-meta_desc: "Learn how to package and distribute Pulumi components using single-language, cross-language, and provider-based approaches."
+meta_desc: "Learn how to package and distribute Pulumi components via native language packages, source-based plugin packages, or executable-based plugin packages."
 title: Packaging Components
 h1: Packaging Components
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -13,115 +13,101 @@ aliases:
 - /docs/iac/guides/building-extending/components/packaging-a-component/
 ---
 
-Once you've authored a Pulumi component, you will probably want to package and distribute it so others can use it. This guide covers three different approaches to packaging components, each with different trade-offs for distribution, versioning, and discoverability.
+Once you've authored a Pulumi component, you will probably want to package and distribute it so others can use it. This guide covers three ways of packaging a component, each with different trade-offs for distribution, versioning, and discoverability.
 
 ## Choosing a packaging approach
 
-Pulumi offers three ways to package components:
+The three options differ in whether the component ships as a [Pulumi package](/docs/iac/concepts/packages/) and, if so, which kind of [plugin](/docs/iac/concepts/plugins/) carries it:
 
-1. **Single-language components**: Share components as source code with native package managers. Single-language components are a good fit for smaller organizations where all Pulumi code is written in a single language.
-1. **[Cross-language components](/docs/iac/concepts/components/cross-language-components/)**: Support multiple languages with auto-generated SDKs from a single implementation. Cross-language components are a good fit for platform teams who want to create reusable abstractions to consume internally or to provide self-service for application teams.
-1. **Provider-based components**: Build components as Pulumi providers with zero runtime dependencies for consumers. Provider-based components are a good fit for organizations with a high degree of Pulumi expertise who expect to distribute components to a large number of teams across many languages or organizations with specific runtime requirements.
+1. **Native language package** — a plain language-ecosystem package (npm, PyPI, Go module, etc.) containing a component class. Not a Pulumi package; no Pulumi plugin involved. A good fit for smaller organizations where all Pulumi code is written in the same language.
+1. **[Source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/)** — a Pulumi package distributed as source. Pulumi generates per-language SDKs on-the-fly when a consumer adds the package, so the components can be consumed from any Pulumi language. A good fit for platform teams providing reusable abstractions and self-service.
+1. **Executable-based plugin package** — a Pulumi package whose plugin is a pre-built executable (typically a Pulumi [provider](/docs/iac/concepts/providers/)). No consumer runtime dependencies, and the package can mix in custom resources and functions alongside components. A good fit for large organizations distributing to many teams and languages, or components destined for public release in the Pulumi Registry.
 
 {{% notes type="info" %}}
-Most platform teams should consider cross-language components as their default option because they provide multi-language consumption with minimal overhead and also have enhanced support within Pulumi Cloud.
+Most platform teams should choose a source-based plugin package by default: it enables multi-language consumption with minimal authoring overhead and integrates with Pulumi Cloud IDP.
 {{% /notes %}}
 
-## Single-language components
+## Native language packages
 
-Single-language components are written and consumed in the same language and behave just like any other shareable class in your language of choice. You distribute single-language components by publishing packages in the language's package manager (npm, PyPI, etc.). Because single-language components are limited to the language of authorship, they are a good fit for smaller teams or organizations that expect to only ever use Pulumi in a single language.
+A component shipped as a native language package is just a shareable class — you distribute it through the same package manager you'd use for any other library in your language (npm for TypeScript, PyPI for Python, Go modules, NuGet, Maven, etc.). There is no Pulumi plugin, no SDK generation, and no `pulumi package add`.
 
 ### Distribution and consumption
 
-Single-language components are distributed via the native package management tool for the language in which the component is authored: npm for TypeScript, PyPI for Python, Go modules, etc. They are consumed by adding a reference to the package (or importing from a local path on disk), just like any other module or package.
+Publish to the language's package registry and consume via the native package manager, or import directly from a local path on disk. See [Native language packages](/docs/iac/concepts/components/#native-language-packages) on the components concept page for the per-language install commands.
 
 ### Advantages and limitations
 
-When considering single-language components, bear the following tradeoffs in mind:
+- **Lowest overhead**: Components behave like any other class in your language; no SDK generation, no `PulumiPlugin.yaml`.
+- **No argument type limitations**: Arguments can use any type (including union types) — they don't need to be serializable.
+- **Single language only**: Cannot be consumed from other Pulumi languages.
+- **No Pulumi IDP support**: Cannot be published to the Pulumi IDP Private Registry.
 
-- **Lowest overhead**: Components work like any other class in your language and do not require SDKs
-- **No argument type limitations**: Arguments to single-language components can use any type, including union types, as they do not need to be serializable
-- **Single language only**: Cannot be consumed from other Pulumi languages
-- **No Pulumi IDP support**: Cannot be published to Pulumi IDP Private Registry
+## Source-based plugin packages
 
-## Cross-language components
-
-Cross-language components support consumption in any Pulumi language. You implement your components once in your preferred language and Pulumi automatically generates SDKs via [local packages](/docs/iac/guides/building-extending/packages/local-packages/) for other languages when the package is added to a downstream Pulumi program. Cross-language components are [source-based Pulumi plugins](/docs/iac/concepts/plugins/).
-
-For detailed information on packaging and using cross-language components, see [Cross-language Components](/docs/iac/concepts/components/cross-language-components/).
+A source-based plugin package is a [Pulumi package](/docs/iac/concepts/packages/) distributed as source code. Pulumi introspects the package and generates an SDK in the consumer's language when they run `pulumi package add`, so the components are consumable from every Pulumi language — including YAML. For the full authoring workflow, see [Authoring a source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/).
 
 {{% notes type="info" %}}
-Cross-language components written in Go can also include custom resources and functions alongside components, since Go uses a single library — [`pulumi-go-provider`](https://github.com/pulumi/pulumi-go-provider) — for authoring both component and custom resources.
+A source-based plugin package authored in Go can also expose custom resources and functions (invokes) alongside components, since Go uses [`pulumi-go-provider`](https://github.com/pulumi/pulumi-go-provider) for both. Other languages currently support components only. See [Package contents by authoring language](/docs/iac/guides/building-extending/packages/source-based-plugin/#package-contents-by-authoring-language).
 {{% /notes %}}
 
 {{% notes type="info" %}}
-A common usage pattern for cross-language components is for a platform team to author components in a general purpose language (like TypeScript), publish those components in Pulumi Cloud IDP for discoverability and auto-generated documentation, and then allow application teams to consume those components so they can compose the infrastructure for their applications in the language of their choosing (including YAML).
-
-This pattern gives a high degree of self-service to application teams so that they are able to consume infrastructure patterns without needing to know the details about how to create and connect every individual resource. Applications teams are still free to add additional resources to their Pulumi code in cases where the platform team does not have a suitable component published.
+A common usage pattern is for a platform team to author components in a general-purpose language (like TypeScript), publish them to Pulumi Cloud IDP for discoverability and auto-generated documentation, and let application teams consume them in the language of their choosing (including YAML). This gives application teams self-service access to infrastructure patterns without needing to know how every individual resource is wired up. Application teams can still add resources directly in their Pulumi code when no suitable component is published.
 {{% /notes %}}
 
 ### Distribution and consumption
 
-Because cross-language components are distributed as source, they do not need to be explicitly published. Consumers use the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command to install the package, specifying a git URL and revision (or a local path for monorepos or local testing), and Pulumi automatically generates the appropriate language SDK as a [local package](/docs/iac/guides/building-extending/packages/local-packages/).
+Because the package is distributed as source, you don't have to publish anything to use it — consumers run [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) against a Git URL and revision (or a local path for monorepos and local testing), and Pulumi generates the appropriate language SDK as a [local package](/docs/iac/guides/building-extending/packages/local-packages/).
 
-Cross-language components also support [pre-published SDKs](/docs/iac/concepts/components/cross-language-components/#generating-local-sdks-with-pulumi-install). Authors can generate and publish SDKs to native package managers (npm, PyPI, etc.) as part of a CI/CD process, allowing consumers to install via their language's package manager without generating the SDK themselves.
+Source-based plugin packages also support [pre-published SDKs](/docs/iac/guides/building-extending/packages/source-based-plugin/#pre-publishing-language-sdks): authors can generate and publish per-language SDKs to native package registries (npm, PyPI, etc.) as part of CI/CD, letting consumers install via their language's package manager without regenerating the SDK. This is uncommon in practice — for internal packages it typically requires maintaining a **private package feed for every consumer language** (private npm registry, private PyPI index, etc.), which is a large amount of infrastructure to stand up just to avoid local SDK generation. Most teams stick with on-the-fly generation via `pulumi package add`.
 
-Pulumi Cloud customers can explicitly publish versions of components to Pulumi IDP Private Registry using the [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/) command. Publishing a package to Pulumi Cloud gives platform teams the ability to provide self-service to application teams by sharing components in a browsable gallery complete with READMEs and auto-generated SDK documentation in all Pulumi languages.
+Pulumi Cloud customers can publish versions of the package to the Pulumi IDP Private Registry using [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/). Publishing to Pulumi Cloud gives platform teams a browsable gallery complete with READMEs and auto-generated SDK documentation in every Pulumi language.
 
 ### Advantages and limitations
 
-When considering cross-language components, bear the following tradeoffs in mind:
+- **Write and consume in any language**: Components can be authored in any supported Pulumi language and consumed from any other.
+- **Flexible distribution**: Ship via a Git reference (consumed with `pulumi package add`) or as pre-built SDKs published to native package registries.
+- **Pulumi IDP support**: Can be published to Pulumi Cloud for discoverability and automatic API documentation.
+- **SDK regeneration overhead**: Without pre-published SDKs, consumers regenerate the SDK each time the package updates.
+- **Runtime dependencies**: Consumers need the runtime for the language the package was authored in (Node.js, Python, a JVM, a Go toolchain, etc.).
+- **Argument type limitations**: Calls across the plugin boundary are serialized, so some types are not representable. See [Component arguments and type requirements](/docs/iac/guides/building-extending/components/build-a-component/#component-arguments-and-type-requirements).
 
-- **Write and consume in any language**: Cross-language components can be written in and consumed by any supported Pulumi language
-- **Flexible distribution**: Cross-language components can be distributed as source via git references (consumed with `pulumi package add`) or as pre-built SDKs published to native package managers
-- **Pulumi IDP support**: Can be published to Pulumi Cloud for discoverability and automatic API documentation
-- **SDK regeneration overhead**: If SDKs are not pre-published, consumers must regenerate them when the component is updated
-- **Runtime dependencies**: Consumers must have the runtime installed for the language in which the component is written (Node.js, Python, etc.)
-- **Argument type limitations**: Because calls to cross-language components are serialized, there are some limitations on the types that can be included in the component's resources. For more information, see [Component arguments and type requirements](/docs/iac/guides/building-extending/components/build-a-component/#component-arguments-and-type-requirements)
+## Executable-based plugin packages
 
-## Provider-based components
-
-Provider-based components are built as full Pulumi [providers](/docs/iac/concepts/providers/) and are distributed as [executable-based Pulumi plugins](/docs/iac/concepts/plugins/). They compile to native binaries with no runtime dependencies and can include both [component resources and custom resources](/docs/iac/concepts/resources/#resources). Because provider-based components have a higher overhead for CI/CD and publishing, and in most cases are written in Go, they are a fit for very large organizations that have many teams using many different languages, or organizations where the runtime requirements for cross-language components are not suitable.
+An executable-based plugin package is a [Pulumi package](/docs/iac/concepts/packages/) whose plugin is a pre-built executable — typically a Pulumi [provider](/docs/iac/concepts/providers/). The executable has no consumer-side runtime dependencies, and the package can expose [components, custom resources, and functions](/docs/iac/concepts/resources/#resources) together. Because the authoring and CI/CD overhead is higher (and most such packages are written in Go), this approach fits very large organizations distributing to many teams and languages, environments where the source-based runtime dependencies aren't acceptable, or components intended for public release in the Pulumi Registry.
 
 {{% notes type="info" %}}
-If you want to create a component for public consumption and publish it in the [Pulumi Registry](/registry), you should create a provider-based component, author it in Go, and publish SDKs in the public feeds for each language (npmjs.org, etc.).
-
-For more information on submitting packages to the Pulumi Registry, see [Publishing Pulumi packages](/docs/iac/guides/building-extending/packages/publishing-packages/).
+To publish a component for public consumption in the [Pulumi Registry](/registry), author it as an executable-based plugin package in Go and publish per-language SDKs to the public feeds (npmjs.org, PyPI, etc.). See [Publishing Pulumi packages](/docs/iac/guides/building-extending/packages/publishing-packages/).
 {{% /notes %}}
 
 ### Distribution and consumption
 
-Provider-based components are typically distributed as pre-built SDKs published to multiple package managers (one for each language a consumer would use). The provider binary must also be published in an accessible location. Pulumi Cloud customers can also publish provider-based components to Pulumi IDP Private Registry using [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/).
+Executable-based plugin packages are typically distributed as pre-built per-language SDKs published to multiple package managers (one per consumer language), with the plugin executable published to an accessible location. Pulumi Cloud customers can also publish to the Pulumi IDP Private Registry using [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/).
 
-Consumers install the published SDKs (like any other Pulumi provider package). Pulumi will automatically download (and cache) the provider binary when the consuming Pulumi program is first run (just like providers).
+Consumers install the published SDK like any other Pulumi provider package. Pulumi automatically downloads and caches the plugin executable the first time the consuming program runs.
 
-For more information on authoring providers, see [Build a provider](/docs/iac/guides/building-extending/providers/build-a-provider/).
+For the authoring workflow, see [Build a provider](/docs/iac/guides/building-extending/providers/build-a-provider/).
 
 ### Advantages and limitations
 
-When considering provider-based components, bear the following tradeoffs in mind:
-
-- **No runtime dependencies for consumers**: Consumers don't need Node.js, Python, or any other runtime installed because the provider plugin is distributed as a native binary
-- **Full provider capabilities**: In addition to components, provider packages can include custom resources and functions. Note that cross-language components written in Go can also mix in custom resources and functions, since Go has a single library for authoring both component and custom resources.
-- **Go strongly recommended**: Providers are usually written in Go because the Pulumi supported tooling makes maintaining the provider [schema](/docs/iac/guides/building-extending/packages/schema/) significantly easier compared to other languages (see note for details)
-- **CI/CD Overhead**: Provider-based components typically have pre-published SDKs, which requires a more involved CI/CD process (including publishing to a package feed after a release)
-- **Argument type limitations**: Because calls to provider-based components are serialized, there are some limitations on the types that can be included in the component's resources. For more information, see [Component arguments and type requirements](/docs/iac/guides/building-extending/components/build-a-component/#component-arguments-and-type-requirements)
+- **No consumer runtime dependencies**: The plugin ships as a native executable, so consumers don't need Node.js, Python, a JVM, or a Go toolchain.
+- **Full package capabilities**: Can expose custom resources and functions alongside components. (A source-based plugin package in Go can also do this.)
+- **Go strongly recommended**: Providers are usually written in Go because [`pulumi-go-provider`](https://github.com/pulumi/pulumi-go-provider) infers the [schema](/docs/iac/guides/building-extending/packages/schema/) automatically; other languages require hand-authored schemas.
+- **CI/CD overhead**: Pre-publishing SDKs and the plugin executable requires a more involved release pipeline.
+- **Argument type limitations**: Same serialization limits as source-based plugin packages — see [Component arguments and type requirements](/docs/iac/guides/building-extending/components/build-a-component/#component-arguments-and-type-requirements).
 
 {{% notes type="info" %}}
-Providers (and provider-based components) may technically be written in any language if the author is willing to hand-author the schema. Maintaining schemas by hand is labor-intensive and the learning curve maintaining schemas may be prohibitive for many teams. Pulumi provides tooling in the [`pulumi-go-provider`](https://github.com/pulumi/pulumi-go-provider) framework to automatically infer the schema and reduce the need for manually maintained schema files. Pulumi does not provide tooling for inferring schemas in languages other than Go.
+Executable-based plugin packages can technically be written in any language if the author is willing to hand-author the schema, but this is labor-intensive and the learning curve can be prohibitive. Pulumi ships schema inference tooling only for Go (via [`pulumi-go-provider`](https://github.com/pulumi/pulumi-go-provider)).
 
-Consuming providers written in languages other than Go requires consumers to have the runtime of the provider's language installed, similar to Cross-language components.
+Consuming an executable-based plugin package whose plugin is written in a non-Go language requires consumers to have that language's runtime installed — the same situation as a source-based plugin package.
 {{% /notes %}}
 
-## Component packaging summary
+## Packaging summary
 
-The table below summarizes the trade-offs between the three packaging approaches:
-
-| Feature | Single-language components | Cross-language components | Provider-based components |
+| Feature | Native language package | Source-based plugin package | Executable-based plugin package |
 |---------|--------------------------|-------------------------------------------|--------------------------|
-| **Best for** | Smaller organizations using a single language | Platform teams providing reusable abstractions and self-service | Organizations distributing to many teams/languages or with specific runtime requirements, or components designed for public consumption |
-| **Cross-language consumption** | No - limited to original language | Yes - consume in any Pulumi language | Yes - consume in any Pulumi language|
+| **Best for** | Smaller organizations using a single language | Platform teams providing reusable abstractions and self-service | Distribution to many teams/languages, specific runtime constraints, or public Registry release |
+| **Cross-language consumption** | No — limited to the authoring language | Yes — consume in any Pulumi language | Yes — consume in any Pulumi language |
 | **Pulumi Cloud IDP Private Registry support** | No | Yes | Yes |
-| **Packaging complexity** | Minimal - publish a native package | Low - requires PulumiPlugin.yaml and entry points | High - requires schema authoring, SDK generation, and binary publishing |
-| **Distribution** | Source published to package managers (npm, PyPI, etc.) | Git reference (via `pulumi package add`) or pre-built SDKs published to native package managers | Pre-built SDKs published to native package managers |
-| **Runtime dependencies** | n/a | Language runtime for authoring language required | None - distributed as native binary |
+| **Packaging complexity** | Minimal — publish a native package | Low — `PulumiPlugin.yaml` plus an entry file | High — schema authoring, SDK generation, and executable publishing |
+| **Distribution** | Native package managers (npm, PyPI, etc.) | Git reference (via `pulumi package add`) or pre-built SDKs on native package managers | Pre-built SDKs on native package managers plus a published plugin executable |
+| **Consumer runtime dependencies** | n/a | Authoring language's runtime | None — plugin is a native executable |

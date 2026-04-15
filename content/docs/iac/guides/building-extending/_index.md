@@ -28,17 +28,7 @@ Build reusable infrastructure components to encapsulate and share infrastructure
 
 **[Testing Components](/docs/iac/guides/building-extending/components/testing-components/)** - Write automated tests for your components to ensure they work correctly and maintain quality as they evolve.
 
-**[Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/)** - Choose the right packaging approach for your components: single-language, cross-language, or provider-based distribution.
-
-## Providers
-
-Create custom providers to integrate new cloud platforms and services with Pulumi.
-
-**[Build a Provider](/docs/iac/guides/building-extending/providers/build-a-provider/)** - Step-by-step guide to building a Pulumi provider that enables infrastructure management for any API or service.
-
-**[Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/)** - Reference documentation for the SDK used to build native Pulumi providers with full access to the resource model.
-
-**[Debugging Providers](/docs/iac/guides/building-extending/providers/debugging-providers/)** - Techniques and tools for troubleshooting provider development and diagnosing issues.
+**[Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/)** - Choose the right packaging approach for your components: native language package, source-based plugin package, or executable-based plugin package.
 
 ## Packages
 
@@ -51,6 +41,16 @@ Package and distribute your components and providers for use across teams and pr
 **[Publishing Packages](/docs/iac/guides/building-extending/packages/publishing-packages/)** - Distribute your packages to npm, NuGet, PyPI, and other registries for team and community use.
 
 **[Schema](/docs/iac/guides/building-extending/packages/schema/)** - Define package schemas that drive SDK generation and documentation for all supported languages.
+
+## Providers
+
+Create custom providers to integrate new cloud platforms and services with Pulumi.
+
+**[Build a Provider](/docs/iac/guides/building-extending/providers/build-a-provider/)** - Step-by-step guide to building a Pulumi provider that enables infrastructure management for any API or service.
+
+**[Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/)** - Reference documentation for the SDK used to build native Pulumi providers with full access to the resource model.
+
+**[Debugging Providers](/docs/iac/guides/building-extending/providers/debugging-providers/)** - Techniques and tools for troubleshooting provider development and diagnosing issues.
 
 ## Templates
 

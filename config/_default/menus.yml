@@ -14,13 +14,13 @@ iac:
     parent: iac-guides-building-extending
     identifier: iac-guides-components
     weight: 1
-  - name: Providers
-    parent: iac-guides-building-extending
-    identifier: iac-guides-providers
-    weight: 2
   - name: Packages
     parent: iac-guides-building-extending
     identifier: iac-guides-packages
+    weight: 2
+  - name: Providers
+    parent: iac-guides-building-extending
+    identifier: iac-guides-providers
     weight: 3
   - name: Using Existing Tools
     parent: iac-guides-building-extending

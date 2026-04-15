@@ -2133,6 +2133,6 @@ If a component resource is itself a child of another component resource, its set
 
 ## Next steps
 
-Now that you've built a component, you can package and distribute it for reuse. See [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) to learn about single-language, cross-language, and provider-based packaging approaches.
+Now that you've built a component, you can package and distribute it for reuse. See [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) to learn about the native-language, source-based plugin, and executable-based plugin packaging approaches.
 
 For testing strategies, see [Testing Components](/docs/iac/guides/building-extending/components/testing-components/).
