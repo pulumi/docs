@@ -1,7 +1,7 @@
 # OpenAPI Tag Intros
 
 Markdown fragments rendered at the top of each generated tag page under
-`/docs/reference/cloud-rest-openapi/{tag}/`, above the endpoint list.
+`/docs/reference/cloud-rest-api/{tag}/`, above the endpoint list.
 
 ## Convention
 

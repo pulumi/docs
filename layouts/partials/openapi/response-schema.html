@@ -2,7 +2,7 @@
 {{ if .schema }}
     {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" .schema "openapi" .openapi) }}
     {{ if $resolved.schemaName }}
-        <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-openapi/schema/{{ $resolved.schemaName | urlize }}/">{{ $resolved.schemaName }}</a></div>
+        <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-api/schema/{{ $resolved.schemaName | urlize }}/">{{ $resolved.schemaName }}</a></div>
     {{ end }}
     {{ if $resolved.properties }}
         <ul class="api-params">

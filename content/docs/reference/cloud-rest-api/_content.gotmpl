@@ -112,9 +112,9 @@
 
     {{ $menus := dict "reference" (dict
         "name" $display
-        "parent" "reference-cloud-rest-openapi"
+        "parent" "cloud-rest-api"
         "weight" $weight
-        "identifier" (printf "reference-cloud-rest-openapi-%s" $slug)
+        "identifier" (printf "cloud-rest-api-%s" $slug)
     ) }}
 
     {{ $.AddPage (dict

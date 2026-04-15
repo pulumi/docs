@@ -36,7 +36,7 @@
                             {{ $schemaDetails = index $.openapi.components.schemas $schemaName }}
                         {{ end }}
                         {{ if $schemaDetails }}
-                            <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-openapi/schema/{{ $schemaName | urlize }}/">{{ $schemaName }}</a></div>
+                            <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-api/schema/{{ $schemaName | urlize }}/">{{ $schemaName }}</a></div>
                             {{ if $schemaDetails.properties }}
                                 <ul class="api-params">
                                     {{ partial "openapi/property-rows.html" (dict

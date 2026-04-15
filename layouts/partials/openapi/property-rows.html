@@ -33,7 +33,7 @@
           {{ $refPath := index $effectiveProp "$ref" }}
           {{ $refParts := split $refPath "/" }}
           {{ $refSchemaName = index $refParts (sub (len $refParts) 1) }}
-          <a href="/docs/reference/cloud-rest-openapi/schema/{{ $refSchemaName | urlize }}/">{{ $refSchemaName }}</a>
+          <a href="/docs/reference/cloud-rest-api/schema/{{ $refSchemaName | urlize }}/">{{ $refSchemaName }}</a>
         {{ else if isset $effectiveProp "type" }}
           {{ if eq $effectiveProp.type "array" }}
             {{ if and (isset $effectiveProp "items") (isset $effectiveProp.items "$ref") }}
@@ -41,7 +41,7 @@
               {{ $itemRefParts := split $itemRefPath "/" }}
               {{ $itemSchemaName := index $itemRefParts (sub (len $itemRefParts) 1) }}
               {{ $refSchemaName = $itemSchemaName }}
-              array[<a href="/docs/reference/cloud-rest-openapi/schema/{{ $itemSchemaName | urlize }}/">{{ $itemSchemaName }}</a>]
+              array[<a href="/docs/reference/cloud-rest-api/schema/{{ $itemSchemaName | urlize }}/">{{ $itemSchemaName }}</a>]
             {{ else if isset $effectiveProp "items" }}
               array[{{ $effectiveProp.items.type }}]
             {{ else }}
@@ -52,7 +52,7 @@
               {{ $objRefPath := index $effectiveProp.additionalProperties "$ref" }}
               {{ $objRefParts := split $objRefPath "/" }}
               {{ $objSchemaName := index $objRefParts (sub (len $objRefParts) 1) }}
-              map[string]<a href="/docs/reference/cloud-rest-openapi/schema/{{ $objSchemaName | urlize }}/">{{ $objSchemaName }}</a>
+              map[string]<a href="/docs/reference/cloud-rest-api/schema/{{ $objSchemaName | urlize }}/">{{ $objSchemaName }}</a>
             {{ else if and (isset $effectiveProp "additionalProperties") (isset $effectiveProp.additionalProperties "type") }}
               map[string]{{ $effectiveProp.additionalProperties.type }}
             {{ else }}
