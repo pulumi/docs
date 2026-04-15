@@ -16,10 +16,10 @@ get_started_guide:
   link: /docs/iac/get-started/gcp/
   icon: google-cloud
 providers:
-  description: The Google Cloud Classic provider can provision many Google Cloud resources. Use the Google Cloud Native provider for same-day access to Google Cloud resources.
+  description: The Google Cloud Classic provider is the primary, actively maintained provider for Google Cloud. The Google Cloud Native provider is not actively maintained and is not recommended for new projects.
   provider_list:
   - display_name: Google Cloud Classic
-    description: The AWS Classic provider can provision many AWS cloud resources. Use the AWS Native provider for same-day access to all AWS resources.
+    description: The Google Cloud Classic provider can provision many Google Cloud resources. It is the primary, actively maintained provider recommended for all new projects.
     recommended: true
     content_links:
     - display_name: Overview
@@ -35,7 +35,6 @@ providers:
       icon: question-small-black
       url: gcp/how-to-guides/
   - display_name: Google Cloud Native
-    public_preview: true
     content_links:
     - display_name: Overview
       icon: page-small-black
