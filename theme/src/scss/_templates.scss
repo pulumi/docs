@@ -1312,14 +1312,9 @@
 }
 
 // Responsive font sizes for the code snippet widget
-@media (max-width: 767px) {
-    .code-snippets-container code {
-        font-size: 12px;
-    }
-
-    .code-snippets-title,
-    .code-snippets-dropdown-trigger,
-    .code-snippets-dropdown-item {
-        font-size: 12px;
-    }
+.code-snippets-container code,
+.code-snippets-title,
+.code-snippets-dropdown-trigger,
+.code-snippets-dropdown-item {
+    font-size: clamp(10px, 3vw, 12px);
 }
