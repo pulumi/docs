@@ -260,7 +260,7 @@ kind: ExternalSecret
 metadata:
   name: pulumi-operator-secrets
 spec:
-  refreshInterval: 20s
+  refreshInterval: 1h
   secretStoreRef:
     kind: ClusterSecretStore
     name: secret-store

@@ -110,7 +110,7 @@ spec:
   - secretKey: esc-secret
     remoteRef:
       key: hello
-  refreshInterval: 20s
+  refreshInterval: 1h
   secretStoreRef:
     kind: SecretStore
     name: secret-store
@@ -228,7 +228,7 @@ const externalSecret = new kubernetes.apiextensions.CustomResource("external-sec
                 }
             }
         ],
-        refreshInterval: "20s",
+        refreshInterval: "1h",
         secretStoreRef: {
             kind: clusterSecretStore.kind,
             name: clusterSecretStore.metadata.name,
@@ -305,7 +305,7 @@ external_secret = kubernetes.apiextensions.CustomResource(
     metadata=kubernetes.meta.v1.ObjectMetaArgs(name="secret", namespace="default"),
     spec={
         "data": [{"secretKey": "esc-secret", "remoteRef": {"key": "hello"}}],
-        "refreshInterval": "20s",
+        "refreshInterval": "1h",
         "secretStoreRef": {
             "kind": cluster_secret_store.kind,
             "name": cluster_secret_store.metadata.name,
@@ -416,7 +416,7 @@ func main() {
 							},
 						},
 					},
-					"refreshInterval": pulumi.String("20s"),
+					"refreshInterval": pulumi.String("1h"),
 					"secretStoreRef": pulumi.Map{
 						"kind": clusterSecretStore.Kind,
 						"name": clusterSecretStore.Metadata.Name(),
