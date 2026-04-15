@@ -1,7 +1,7 @@
 ---
 title_tag: "Google Cloud Guides | Pulumi IaC"
 title: Guides
-h1: Google Cloud guides
+h1: Google Cloud Guides
 meta_desc: Guides for working with Google Cloud services using Pulumi's GCP provider.
 meta_image: /images/docs/meta-images/docs-clouds-google-cloud-meta-image.png
 menu:

@@ -1,7 +1,7 @@
 ---
 title_tag: "Choosing a Pulumi GCP Provider"
 title: Choosing a Provider
-h1: Choosing a Pulumi GCP provider
+h1: Choosing a Pulumi GCP Provider
 meta_desc: Learn when to use the GCP Classic and Google Cloud Native packages for managing Google Cloud infrastructure with Pulumi, and how to migrate between them.
 meta_image: /images/docs/meta-images/docs-clouds-google-cloud-meta-image.png
 menu:
