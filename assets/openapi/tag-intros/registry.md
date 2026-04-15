@@ -1,6 +1,7 @@
-The Pulumi Registry hosts reusable packages and templates for
-infrastructure deployments. The Registry API allows you to list, retrieve,
-publish, and manage packages and templates in the Pulumi Registry.
+The Pulumi Registry hosts reusable packages, templates, and policy packs
+for infrastructure deployments. The Registry API allows you to list,
+retrieve, publish, and manage packages, templates, and policy packs in the
+Pulumi Registry.
 
 ## Registry identifiers
 
