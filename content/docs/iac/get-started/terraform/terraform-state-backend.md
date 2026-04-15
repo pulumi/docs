@@ -82,18 +82,22 @@ Replace the placeholders:
 | `<stack>` | The Pulumi stack name | `prod` |
 
 {{% notes "info" %}}
-If you are using a [self-hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) instance, replace `api.pulumi.com` with your instance's API URL.
+If you are using a [self-hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) instance, replace `api.pulumi.com` with your instance's API URL in:
+
+- The backend configuration above
+- The `terraform login` command (e.g., `terraform login your-pulumi-host.example.com`)
+- The `TF_TOKEN_*` variable name (e.g., `TF_TOKEN_your_pulumi_host_example_com`)
 {{% /notes %}}
 
-### 3. Set your access token
+### 3. Authenticate with Pulumi Cloud
 
-For security, use an environment variable instead of hardcoding the token in your configuration:
+Run the standard Terraform login command — it opens a browser to generate a token and stores it in `~/.terraform.d/credentials.tfrc.json` for future runs:
 
 ```bash
-export TF_TOKEN_api_pulumi_com="pul-xxxxxxxxxxxx"
+terraform login api.pulumi.com
 ```
 
-The environment variable follows the Terraform convention `TF_TOKEN_<hostname>` where dots in the hostname are replaced with underscores.
+For non-interactive environments like CI/CD, set the `TF_TOKEN_api_pulumi_com` environment variable instead. See [Update CI/CD pipelines](#update-cicd-pipelines) below.
 
 ### 4. Run the migration
 
@@ -292,7 +296,7 @@ Verify your Pulumi access token is correct:
 pulumi whoami
 ```
 
-Check that the `TF_TOKEN_api_pulumi_com` environment variable is set and that your token has permissions for the target organization.
+Make sure you have authenticated with `terraform login api.pulumi.com` (or set `TF_TOKEN_api_pulumi_com`) and that the token has permissions for the target organization.
 
 ### "Migrating state from HCP Terraform to another backend is not yet implemented" error
 
