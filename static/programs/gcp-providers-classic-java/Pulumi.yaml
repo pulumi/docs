@@ -1,0 +1,3 @@
+name: gcp-providers-classic-java
+description: An example that uses the GCP Classic provider to create a Cloud Storage bucket and a Cloud Run service.
+runtime: java
