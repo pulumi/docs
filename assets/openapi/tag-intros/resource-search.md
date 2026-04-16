@@ -1,0 +1,1 @@
+Resource Search provides powerful querying capabilities for resources managed by Pulumi. The Resource Search API allows you to find resources across your organization using various filters and criteria.

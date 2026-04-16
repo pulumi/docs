@@ -1,0 +1,1 @@
+Data Export allows you to download resource data from Pulumi Cloud for offline analysis or integration with other systems. The Data Export API provides endpoints for exporting resource data in various formats.
