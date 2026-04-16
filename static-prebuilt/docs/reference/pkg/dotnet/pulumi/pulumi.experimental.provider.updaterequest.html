@@ -1,15 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class UpdateRequest
- </title>
+      <title>Class UpdateRequest </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class UpdateRequest
- ">
+      <meta name="title" content="Class UpdateRequest ">
+    
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.Experimental.Provider.UpdateRequest">
 
 
-  <h1 id="Pulumi_Experimental_Provider_UpdateRequest" data-uid="Pulumi.Experimental.Provider.UpdateRequest" class="text-break">Class UpdateRequest
-</h1>
+  <h1 id="Pulumi_Experimental_Provider_UpdateRequest" data-uid="Pulumi.Experimental.Provider.UpdateRequest" class="text-break">Class UpdateRequest</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -98,7 +96,7 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<span class="xref">Experimental</span>.<a class="xref" href="pulumi.experimental.provider.html">Provider</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.experimental.html">Experimental</a>.<a class="xref" href="pulumi.experimental.provider.html">Provider</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_Experimental_Provider_UpdateRequest_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -107,15 +105,15 @@
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L236">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L333">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_UpdateRequest__ctor_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.#ctor*"></a>
-  <h4 id="Pulumi_Experimental_Provider_UpdateRequest__ctor_System_String_System_String_System_Collections_Immutable_ImmutableDictionary_System_String_Pulumi_Experimental_Provider_PropertyValue__System_Collections_Immutable_ImmutableDictionary_System_String_Pulumi_Experimental_Provider_PropertyValue__System_TimeSpan_System_Collections_Immutable_ImmutableArray_System_String__System_Boolean_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.#ctor(System.String,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,Pulumi.Experimental.Provider.PropertyValue},System.Collections.Immutable.ImmutableDictionary{System.String,Pulumi.Experimental.Provider.PropertyValue},System.TimeSpan,System.Collections.Immutable.ImmutableArray{System.String},System.Boolean)">UpdateRequest(string, string, ImmutableDictionary&lt;string, PropertyValue&gt;, ImmutableDictionary&lt;string, PropertyValue&gt;, TimeSpan, ImmutableArray&lt;string&gt;, bool)</h4>
+  <h4 id="Pulumi_Experimental_Provider_UpdateRequest__ctor_Pulumi_Urn_System_String_System_Collections_Immutable_ImmutableDictionary_System_String_Pulumi_Experimental_PropertyValue__System_Collections_Immutable_ImmutableDictionary_System_String_Pulumi_Experimental_PropertyValue__System_TimeSpan_System_Collections_Immutable_ImmutableArray_System_String__System_Boolean_System_Collections_Immutable_ImmutableDictionary_System_String_Pulumi_Experimental_PropertyValue__" data-uid="Pulumi.Experimental.Provider.UpdateRequest.#ctor(Pulumi.Urn,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,Pulumi.Experimental.PropertyValue},System.Collections.Immutable.ImmutableDictionary{System.String,Pulumi.Experimental.PropertyValue},System.TimeSpan,System.Collections.Immutable.ImmutableArray{System.String},System.Boolean,System.Collections.Immutable.ImmutableDictionary{System.String,Pulumi.Experimental.PropertyValue})">UpdateRequest(Urn, string, ImmutableDictionary&lt;string, PropertyValue&gt;, ImmutableDictionary&lt;string, PropertyValue&gt;, TimeSpan, ImmutableArray&lt;string&gt;, bool, ImmutableDictionary&lt;string, PropertyValue&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UpdateRequest(string urn, string id, ImmutableDictionary&lt;string, PropertyValue&gt; olds, ImmutableDictionary&lt;string, PropertyValue&gt; news, TimeSpan timeout, ImmutableArray&lt;string&gt; ignoreChanges, bool preview)</code></pre>
+    <pre><code class="lang- hljs">public UpdateRequest(Urn urn, string id, ImmutableDictionary&lt;string, PropertyValue&gt; oldOutputs, ImmutableDictionary&lt;string, PropertyValue&gt; newInputs, TimeSpan timeout, ImmutableArray&lt;string&gt; ignoreChanges, bool preview, ImmutableDictionary&lt;string, PropertyValue&gt; oldInputs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,7 +126,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><a class="xref" href="pulumi.urn.html">Urn</a></td>
         <td><span class="parametername">urn</span></td>
         <td></td>
       </tr>
@@ -138,13 +136,13 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.provider.propertyvalue.html">PropertyValue</a>&gt;</td>
-        <td><span class="parametername">olds</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.propertyvalue.html">PropertyValue</a>&gt;</td>
+        <td><span class="parametername">oldOutputs</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.provider.propertyvalue.html">PropertyValue</a>&gt;</td>
-        <td><span class="parametername">news</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.propertyvalue.html">PropertyValue</a>&gt;</td>
+        <td><span class="parametername">newInputs</span></td>
         <td></td>
       </tr>
       <tr>
@@ -162,21 +160,27 @@
         <td><span class="parametername">preview</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.propertyvalue.html">PropertyValue</a>&gt;</td>
+        <td><span class="parametername">oldInputs</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L227">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L323">View Source</a>
   </span>
+  <a id="Pulumi_Experimental_Provider_UpdateRequest_Id_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Id*"></a>
   <h4 id="Pulumi_Experimental_Provider_UpdateRequest_Id" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Id">Id</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Id</code></pre>
+    <pre><code class="lang- hljs">public string Id { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -192,16 +196,17 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L233">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L329">View Source</a>
   </span>
+  <a id="Pulumi_Experimental_Provider_UpdateRequest_IgnoreChanges_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.IgnoreChanges*"></a>
   <h4 id="Pulumi_Experimental_Provider_UpdateRequest_IgnoreChanges" data-uid="Pulumi.Experimental.Provider.UpdateRequest.IgnoreChanges">IgnoreChanges</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;string&gt; IgnoreChanges</code></pre>
+    <pre><code class="lang- hljs">public ImmutableArray&lt;string&gt; IgnoreChanges { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -217,16 +222,17 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L231">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L325">View Source</a>
   </span>
-  <h4 id="Pulumi_Experimental_Provider_UpdateRequest_News" data-uid="Pulumi.Experimental.Provider.UpdateRequest.News">News</h4>
+  <a id="Pulumi_Experimental_Provider_UpdateRequest_Name_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Name*"></a>
+  <h4 id="Pulumi_Experimental_Provider_UpdateRequest_Name" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, PropertyValue&gt; News</code></pre>
+    <pre><code class="lang- hljs">public string Name { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -236,22 +242,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.provider.propertyvalue.html">PropertyValue</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L230">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L327">View Source</a>
   </span>
-  <h4 id="Pulumi_Experimental_Provider_UpdateRequest_Olds" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Olds">Olds</h4>
+  <a id="Pulumi_Experimental_Provider_UpdateRequest_NewInputs_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.NewInputs*"></a>
+  <h4 id="Pulumi_Experimental_Provider_UpdateRequest_NewInputs" data-uid="Pulumi.Experimental.Provider.UpdateRequest.NewInputs">NewInputs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, PropertyValue&gt; Olds</code></pre>
+    <pre><code class="lang- hljs">public ImmutableDictionary&lt;string, PropertyValue&gt; NewInputs { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -261,22 +268,75 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.provider.propertyvalue.html">PropertyValue</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.propertyvalue.html">PropertyValue</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L331">View Source</a>
   </span>
+  <a id="Pulumi_Experimental_Provider_UpdateRequest_OldInputs_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.OldInputs*"></a>
+  <h4 id="Pulumi_Experimental_Provider_UpdateRequest_OldInputs" data-uid="Pulumi.Experimental.Provider.UpdateRequest.OldInputs">OldInputs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ImmutableDictionary&lt;string, PropertyValue&gt; OldInputs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.propertyvalue.html">PropertyValue</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L326">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_UpdateRequest_OldOutputs_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.OldOutputs*"></a>
+  <h4 id="Pulumi_Experimental_Provider_UpdateRequest_OldOutputs" data-uid="Pulumi.Experimental.Provider.UpdateRequest.OldOutputs">OldOutputs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ImmutableDictionary&lt;string, PropertyValue&gt; OldOutputs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.propertyvalue.html">PropertyValue</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L330">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_UpdateRequest_Preview_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Preview*"></a>
   <h4 id="Pulumi_Experimental_Provider_UpdateRequest_Preview" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Preview">Preview</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool Preview</code></pre>
+    <pre><code class="lang- hljs">public bool Preview { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -292,16 +352,17 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L232">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L328">View Source</a>
   </span>
+  <a id="Pulumi_Experimental_Provider_UpdateRequest_Timeout_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Timeout*"></a>
   <h4 id="Pulumi_Experimental_Provider_UpdateRequest_Timeout" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Timeout">Timeout</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly TimeSpan Timeout</code></pre>
+    <pre><code class="lang- hljs">public TimeSpan Timeout { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -317,60 +378,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L226">View Source</a>
-  </span>
-  <h4 id="Pulumi_Experimental_Provider_UpdateRequest_Urn" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Urn">Urn</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Urn</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-</h3>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L229">View Source</a>
-  </span>
-  <a id="Pulumi_Experimental_Provider_UpdateRequest_Name_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Name*"></a>
-  <h4 id="Pulumi_Experimental_Provider_UpdateRequest_Name" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L324">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_UpdateRequest_Type_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Type*"></a>
   <h4 id="Pulumi_Experimental_Provider_UpdateRequest_Type" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Type">Type</h4>
@@ -378,7 +386,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Type { get; }</code></pre>
+    <pre><code class="lang- hljs">public string Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -391,6 +399,32 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L322">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_UpdateRequest_Urn_" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Urn*"></a>
+  <h4 id="Pulumi_Experimental_Provider_UpdateRequest_Urn" data-uid="Pulumi.Experimental.Provider.UpdateRequest.Urn">Urn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Urn Urn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.urn.html">Urn</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -403,7 +437,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L224" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L320" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

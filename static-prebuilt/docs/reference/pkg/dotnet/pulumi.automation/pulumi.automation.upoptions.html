@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class UpOptions
- </title>
+      <title>Class UpOptions </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class UpOptions
- ">
+      <meta name="title" content="Class UpOptions ">
     
+    <meta name="description" content="Options controlling the behavior of an  operation.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.Automation.UpOptions">
 
 
-  <h1 id="Pulumi_Automation_UpOptions" data-uid="Pulumi.Automation.UpOptions" class="text-break">Class UpOptions
-</h1>
+  <h1 id="Pulumi_Automation_UpOptions" data-uid="Pulumi.Automation.UpOptions" class="text-break">Class UpOptions</h1>
   <div class="markdown level0 summary"><p>Options controlling the behavior of an <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_UpAsync_Pulumi_Automation_UpOptions_System_Threading_CancellationToken_">UpAsync(UpOptions?, CancellationToken)</a> operation.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -89,6 +87,9 @@
     </div>
     <div>
       <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_Target">UpdateOptions.Target</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_Exclude">UpdateOptions.Exclude</a>
     </div>
     <div>
       <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_PolicyPacks">UpdateOptions.PolicyPacks</a>
@@ -127,6 +128,12 @@
       <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_Json">UpdateOptions.Json</a>
     </div>
     <div>
+      <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_ConfigFile">UpdateOptions.ConfigFile</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_Profiling">UpdateOptions.Profiling</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
@@ -145,7 +152,7 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="../pulumi/pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.automation.html">Automation</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.automation.html">Automation</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Automation.dll</h6>
   <h5 id="Pulumi_Automation_UpOptions_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -154,7 +161,34 @@
   <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/upoptions.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_UpOptions_ContinueOnError_" data-uid="Pulumi.Automation.UpOptions.ContinueOnError*"></a>
+  <h4 id="Pulumi_Automation_UpOptions_ContinueOnError" data-uid="Pulumi.Automation.UpOptions.ContinueOnError">ContinueOnError</h4>
+  <div class="markdown level1 summary"><p>Continue to perform the update operation despite the occurrence of errors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? ContinueOnError { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L15">View Source</a>
   </span>
   <a id="Pulumi_Automation_UpOptions_Diff_" data-uid="Pulumi.Automation.UpOptions.Diff*"></a>
   <h4 id="Pulumi_Automation_UpOptions_Diff" data-uid="Pulumi.Automation.UpOptions.Diff">Diff</h4>
@@ -162,7 +196,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? Diff { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public bool? Diff { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,7 +214,33 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/upoptions.cs/#L13">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_UpOptions_ExcludeDependents_" data-uid="Pulumi.Automation.UpOptions.ExcludeDependents*"></a>
+  <h4 id="Pulumi_Automation_UpOptions_ExcludeDependents" data-uid="Pulumi.Automation.UpOptions.ExcludeDependents">ExcludeDependents</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? ExcludeDependents { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L13">View Source</a>
   </span>
   <a id="Pulumi_Automation_UpOptions_ExpectNoChanges_" data-uid="Pulumi.Automation.UpOptions.ExpectNoChanges*"></a>
   <h4 id="Pulumi_Automation_UpOptions_ExpectNoChanges" data-uid="Pulumi.Automation.UpOptions.ExpectNoChanges">ExpectNoChanges</h4>
@@ -188,7 +248,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? ExpectNoChanges { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public bool? ExpectNoChanges { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,7 +266,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/upoptions.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Automation_UpOptions_Logger_" data-uid="Pulumi.Automation.UpOptions.Logger*"></a>
   <h4 id="Pulumi_Automation_UpOptions_Logger" data-uid="Pulumi.Automation.UpOptions.Logger">Logger</h4>
@@ -216,7 +276,7 @@ if <a class="xref" href="pulumi.automation.upoptions.html#Pulumi_Automation_UpOp
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ILogger? Logger { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public ILogger? Logger { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,7 +294,7 @@ if <a class="xref" href="pulumi.automation.upoptions.html#Pulumi_Automation_UpOp
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/upoptions.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Automation_UpOptions_Plan_" data-uid="Pulumi.Automation.UpOptions.Plan*"></a>
   <h4 id="Pulumi_Automation_UpOptions_Plan" data-uid="Pulumi.Automation.UpOptions.Plan">Plan</h4>
@@ -243,7 +303,7 @@ if <a class="xref" href="pulumi.automation.upoptions.html#Pulumi_Automation_UpOp
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Plan { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public string? Plan { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,7 +321,7 @@ if <a class="xref" href="pulumi.automation.upoptions.html#Pulumi_Automation_UpOp
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/upoptions.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Automation_UpOptions_Program_" data-uid="Pulumi.Automation.UpOptions.Program*"></a>
   <h4 id="Pulumi_Automation_UpOptions_Program" data-uid="Pulumi.Automation.UpOptions.Program">Program</h4>
@@ -269,7 +329,7 @@ if <a class="xref" href="pulumi.automation.upoptions.html#Pulumi_Automation_UpOp
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PulumiFn? Program { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public PulumiFn? Program { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -287,42 +347,16 @@ if <a class="xref" href="pulumi.automation.upoptions.html#Pulumi_Automation_UpOp
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/upoptions.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L49">View Source</a>
   </span>
-  <a id="Pulumi_Automation_UpOptions_Replace_" data-uid="Pulumi.Automation.UpOptions.Replace*"></a>
-  <h4 id="Pulumi_Automation_UpOptions_Replace" data-uid="Pulumi.Automation.UpOptions.Replace">Replace</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt;? Replace { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/upoptions.cs/#L31">View Source</a>
-  </span>
-  <a id="Pulumi_Automation_UpOptions_ShowSecrets_" data-uid="Pulumi.Automation.UpOptions.ShowSecrets*"></a>
-  <h4 id="Pulumi_Automation_UpOptions_ShowSecrets" data-uid="Pulumi.Automation.UpOptions.ShowSecrets">ShowSecrets</h4>
-  <div class="markdown level1 summary"><p>Show config secrets when they appear.</p>
+  <a id="Pulumi_Automation_UpOptions_Refresh_" data-uid="Pulumi.Automation.UpOptions.Refresh*"></a>
+  <h4 id="Pulumi_Automation_UpOptions_Refresh" data-uid="Pulumi.Automation.UpOptions.Refresh">Refresh</h4>
+  <div class="markdown level1 summary"><p>Refresh the state of the stack's resources before this update.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? ShowSecrets { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public bool? Refresh { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -340,7 +374,87 @@ if <a class="xref" href="pulumi.automation.upoptions.html#Pulumi_Automation_UpOp
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/upoptions.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L17">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_UpOptions_Replace_" data-uid="Pulumi.Automation.UpOptions.Replace*"></a>
+  <h4 id="Pulumi_Automation_UpOptions_Replace" data-uid="Pulumi.Automation.UpOptions.Replace">Replace</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;string&gt;? Replace { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_UpOptions_ShowReads_" data-uid="Pulumi.Automation.UpOptions.ShowReads*"></a>
+  <h4 id="Pulumi_Automation_UpOptions_ShowReads" data-uid="Pulumi.Automation.UpOptions.ShowReads">ShowReads</h4>
+  <div class="markdown level1 summary"><p>Show resources that are being read in, alongside those being managed directly in the stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? ShowReads { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L33">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_UpOptions_ShowSecrets_" data-uid="Pulumi.Automation.UpOptions.ShowSecrets*"></a>
+  <h4 id="Pulumi_Automation_UpOptions_ShowSecrets" data-uid="Pulumi.Automation.UpOptions.ShowSecrets">ShowSecrets</h4>
+  <div class="markdown level1 summary"><p>Show config secrets when they appear.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? ShowSecrets { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Automation_UpOptions_TargetDependents_" data-uid="Pulumi.Automation.UpOptions.TargetDependents*"></a>
   <h4 id="Pulumi_Automation_UpOptions_TargetDependents" data-uid="Pulumi.Automation.UpOptions.TargetDependents">TargetDependents</h4>
@@ -348,7 +462,7 @@ if <a class="xref" href="pulumi.automation.upoptions.html#Pulumi_Automation_UpOp
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? TargetDependents { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public bool? TargetDependents { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -373,7 +487,7 @@ if <a class="xref" href="pulumi.automation.upoptions.html#Pulumi_Automation_UpOp
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/upoptions.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi.Automation/UpOptions.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
