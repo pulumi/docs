@@ -34,7 +34,7 @@ Pulumi Cloud's [Private Registry](/docs/idp/concepts/private-registry/) lets pla
 
 1. You need a [Pulumi Cloud](https://app.pulumi.com) account on the Enterprise or Business Critical plan.
 1. Your component must be pushed to a GitHub or GitLab repository that Pulumi can access. Private repositories are supported.
-1. If you haven't built a component yet, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/). To choose the right packaging approach for your needs, see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/).
+1. If you haven't built a component yet, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/). To choose the right packaging approach for your needs, see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/). For guidance on how to group multiple components into packages and repositories, see [Repository strategy for Pulumi packages](/docs/iac/guides/building-extending/packages/repository-strategy/).
 
 ### Publish your component
 
