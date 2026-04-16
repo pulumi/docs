@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class Config
- </title>
+      <title>Class Config </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class Config
- ">
+      <meta name="title" content="Class Config ">
     
+    <meta name="description" content="is a bag of related configuration state.  Each bag contains any number of configuration variables, indexed by simple keys, and each has a name that uniquely identifies it; two bags with different names do not share values for variables that otherwise share the same key.  For example, a bag whose name is pulumi:foo, with keys a, b, and c, is entirely separate from a bag whose name is pulumi:bar with the same simple key names.  Each key has a fully qualified names, such as pulumi:foo:a, ..., and pulumi:bar:a, respectively.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.Config">
 
 
-  <h1 id="Pulumi_Config" data-uid="Pulumi.Config" class="text-break">Class Config
-</h1>
+  <h1 id="Pulumi_Config" data-uid="Pulumi.Config" class="text-break">Class Config</h1>
   <div class="markdown level0 summary"><p><a class="xref" href="pulumi.config.html">Config</a> is a bag of related configuration state.  Each bag contains any number
 of configuration variables, indexed by simple keys, and each has a name that uniquely
 identifies it; two bags with different names do not share values for variables that
@@ -114,18 +112,18 @@ such as <code>pulumi:foo:a</code>, ..., and <code>pulumi:bar:a</code>, respectiv
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Config__ctor_" data-uid="Pulumi.Config.#ctor*"></a>
   <h4 id="Pulumi_Config__ctor_System_String_" data-uid="Pulumi.Config.#ctor(System.String)">Config(string?)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="pulumi.config.html">Config</a> instance. <code data-dev-comment-type="paramref" class="paramref">name</code> is the
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="pulumi.config.html">Config</a> instance. <code class="paramref">name</code> is the
 configuration bag's logical name and uniquely identifies it. The default is the name of
 the current project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Config(string? name = null)</code></pre>
+    <pre><code class="lang- hljs">public Config(string? name = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,7 +145,7 @@ the current project.</p>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Config_Get_" data-uid="Pulumi.Config.Get*"></a>
   <h4 id="Pulumi_Config_Get_System_String_" data-uid="Pulumi.Config.Get(System.String)">Get(string)</h4>
@@ -156,7 +154,7 @@ the current project.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Get(string key)</code></pre>
+    <pre><code class="lang- hljs">public string? Get(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,7 +189,7 @@ the current project.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Config_GetBoolean_" data-uid="Pulumi.Config.GetBoolean*"></a>
   <h4 id="Pulumi_Config_GetBoolean_System_String_" data-uid="Pulumi.Config.GetBoolean(System.String)">GetBoolean(string)</h4>
@@ -201,7 +199,7 @@ If the configuration value isn't a legal boolean, this function will throw an er
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? GetBoolean(string key)</code></pre>
+    <pre><code class="lang- hljs">public bool? GetBoolean(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,7 +234,52 @@ If the configuration value isn't a legal boolean, this function will throw an er
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L146">View Source</a>
+  </span>
+  <a id="Pulumi_Config_GetDouble_" data-uid="Pulumi.Config.GetDouble*"></a>
+  <h4 id="Pulumi_Config_GetDouble_System_String_" data-uid="Pulumi.Config.GetDouble(System.String)">GetDouble(string)</h4>
+  <div class="markdown level1 summary"><p>Loads an optional configuration value, as a number, by its key, or null if it doesn't exist.
+If the configuration value isn't a legal number, this function will throw an error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public double? GetDouble(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Config_GetInt32_" data-uid="Pulumi.Config.GetInt32*"></a>
   <h4 id="Pulumi_Config_GetInt32_System_String_" data-uid="Pulumi.Config.GetInt32(System.String)">GetInt32(string)</h4>
@@ -246,7 +289,7 @@ If the configuration value isn't a legal number, this function will throw an err
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? GetInt32(string key)</code></pre>
+    <pre><code class="lang- hljs">public int? GetInt32(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -281,18 +324,18 @@ If the configuration value isn't a legal number, this function will throw an err
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Config_GetObject_" data-uid="Pulumi.Config.GetObject*"></a>
   <h4 id="Pulumi_Config_GetObject__1_System_String_" data-uid="Pulumi.Config.GetObject``1(System.String)">GetObject&lt;T&gt;(string)</h4>
   <div class="markdown level1 summary"><p>Loads an optional configuration value, as an object, by its key, or null if it doesn't
-exist. This works by taking the value associated with <code data-dev-comment-type="paramref" class="paramref">key</code> and passing
+exist. This works by taking the value associated with <code class="paramref">key</code> and passing
 it to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializer.deserialize#system-text-json-jsonserializer-deserialize-1(system-string-system-text-json-jsonserializeroptions)">Deserialize&lt;TValue&gt;(string, JsonSerializerOptions)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T GetObject&lt;T&gt;(string key)</code></pre>
+    <pre><code class="lang- hljs">public T GetObject&lt;T&gt;(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,7 +385,7 @@ it to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.j
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Config_GetSecret_" data-uid="Pulumi.Config.GetSecret*"></a>
   <h4 id="Pulumi_Config_GetSecret_System_String_" data-uid="Pulumi.Config.GetSecret(System.String)">GetSecret(string)</h4>
@@ -351,7 +394,7 @@ it to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.j
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt;? GetSecret(string key)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;string&gt;? GetSecret(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -386,7 +429,7 @@ it to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.j
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Config_GetSecretBoolean_" data-uid="Pulumi.Config.GetSecretBoolean*"></a>
   <h4 id="Pulumi_Config_GetSecretBoolean_System_String_" data-uid="Pulumi.Config.GetSecretBoolean(System.String)">GetSecretBoolean(string)</h4>
@@ -397,7 +440,7 @@ function will throw an error.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt;? GetSecretBoolean(string key)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;bool&gt;? GetSecretBoolean(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -432,7 +475,53 @@ function will throw an error.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L154">View Source</a>
+  </span>
+  <a id="Pulumi_Config_GetSecretDouble_" data-uid="Pulumi.Config.GetSecretDouble*"></a>
+  <h4 id="Pulumi_Config_GetSecretDouble_System_String_" data-uid="Pulumi.Config.GetSecretDouble(System.String)">GetSecretDouble(string)</h4>
+  <div class="markdown level1 summary"><p>Loads an optional configuration value, as a number, by its key, making it as a secret or
+null if it doesn't exist. If the configuration value isn't a legal number, this
+function will throw an error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Output&lt;double&gt;? GetSecretDouble(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Config_GetSecretInt32_" data-uid="Pulumi.Config.GetSecretInt32*"></a>
   <h4 id="Pulumi_Config_GetSecretInt32_System_String_" data-uid="Pulumi.Config.GetSecretInt32(System.String)">GetSecretInt32(string)</h4>
@@ -443,7 +532,7 @@ If the configuration value isn't a legal number, this function will throw an err
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;int&gt;? GetSecretInt32(string key)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;int&gt;? GetSecretInt32(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -478,17 +567,17 @@ If the configuration value isn't a legal number, this function will throw an err
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_Config_GetSecretObject_" data-uid="Pulumi.Config.GetSecretObject*"></a>
   <h4 id="Pulumi_Config_GetSecretObject__1_System_String_" data-uid="Pulumi.Config.GetSecretObject``1(System.String)">GetSecretObject&lt;T&gt;(string)</h4>
   <div class="markdown level1 summary"><p>Loads an optional configuration value, as an object, by its key, marking it as a secret
-or null if it doesn't exist. This works by taking the value associated with <code data-dev-comment-type="paramref" class="paramref">key</code> and passing it to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializer.deserialize#system-text-json-jsonserializer-deserialize-1(system-string-system-text-json-jsonserializeroptions)">Deserialize&lt;TValue&gt;(string, JsonSerializerOptions)</a>.</p>
+or null if it doesn't exist. This works by taking the value associated with <code class="paramref">key</code> and passing it to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializer.deserialize#system-text-json-jsonserializer-deserialize-1(system-string-system-text-json-jsonserializeroptions)">Deserialize&lt;TValue&gt;(string, JsonSerializerOptions)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;T&gt;? GetSecretObject&lt;T&gt;(string key)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;T&gt;? GetSecretObject&lt;T&gt;(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -538,7 +627,7 @@ or null if it doesn't exist. This works by taking the value associated with <cod
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L174">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Config_Require_" data-uid="Pulumi.Config.Require*"></a>
   <h4 id="Pulumi_Config_Require_System_String_" data-uid="Pulumi.Config.Require(System.String)">Require(string)</h4>
@@ -547,7 +636,7 @@ or null if it doesn't exist. This works by taking the value associated with <cod
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Require(string key)</code></pre>
+    <pre><code class="lang- hljs">public string Require(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -582,7 +671,7 @@ or null if it doesn't exist. This works by taking the value associated with <cod
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L217">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireBoolean_" data-uid="Pulumi.Config.RequireBoolean*"></a>
   <h4 id="Pulumi_Config_RequireBoolean_System_String_" data-uid="Pulumi.Config.RequireBoolean(System.String)">RequireBoolean(string)</h4>
@@ -592,7 +681,7 @@ configuration value is not a legal boolean, an error is thrown.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RequireBoolean(string key)</code></pre>
+    <pre><code class="lang- hljs">public bool RequireBoolean(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -627,7 +716,52 @@ configuration value is not a legal boolean, an error is thrown.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L208">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L251">View Source</a>
+  </span>
+  <a id="Pulumi_Config_RequireDouble_" data-uid="Pulumi.Config.RequireDouble*"></a>
+  <h4 id="Pulumi_Config_RequireDouble_System_String_" data-uid="Pulumi.Config.RequireDouble(System.String)">RequireDouble(string)</h4>
+  <div class="markdown level1 summary"><p>Loads a configuration value, as a number, by its given key.  If it doesn't exist, or the
+configuration value is not a legal number, an error is thrown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public double RequireDouble(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireInt32_" data-uid="Pulumi.Config.RequireInt32*"></a>
   <h4 id="Pulumi_Config_RequireInt32_System_String_" data-uid="Pulumi.Config.RequireInt32(System.String)">RequireInt32(string)</h4>
@@ -637,7 +771,7 @@ configuration value is not a legal number, an error is thrown.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int RequireInt32(string key)</code></pre>
+    <pre><code class="lang- hljs">public int RequireInt32(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -672,7 +806,7 @@ configuration value is not a legal number, an error is thrown.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L233">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L276">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireObject_" data-uid="Pulumi.Config.RequireObject*"></a>
   <h4 id="Pulumi_Config_RequireObject__1_System_String_" data-uid="Pulumi.Config.RequireObject``1(System.String)">RequireObject&lt;T&gt;(string)</h4>
@@ -683,7 +817,7 @@ thrown.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T RequireObject&lt;T&gt;(string key)</code></pre>
+    <pre><code class="lang- hljs">public T RequireObject&lt;T&gt;(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -733,7 +867,7 @@ thrown.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireSecret_" data-uid="Pulumi.Config.RequireSecret*"></a>
   <h4 id="Pulumi_Config_RequireSecret_System_String_" data-uid="Pulumi.Config.RequireSecret(System.String)">RequireSecret(string)</h4>
@@ -743,7 +877,7 @@ is thrown.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RequireSecret(string key)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;string&gt; RequireSecret(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -778,7 +912,7 @@ is thrown.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireSecretBoolean_" data-uid="Pulumi.Config.RequireSecretBoolean*"></a>
   <h4 id="Pulumi_Config_RequireSecretBoolean_System_String_" data-uid="Pulumi.Config.RequireSecretBoolean(System.String)">RequireSecretBoolean(string)</h4>
@@ -788,7 +922,7 @@ If it doesn't exist, or the configuration value is not a legal boolean, an error
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; RequireSecretBoolean(string key)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;bool&gt; RequireSecretBoolean(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -823,7 +957,52 @@ If it doesn't exist, or the configuration value is not a legal boolean, an error
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L258">View Source</a>
+  </span>
+  <a id="Pulumi_Config_RequireSecretDouble_" data-uid="Pulumi.Config.RequireSecretDouble*"></a>
+  <h4 id="Pulumi_Config_RequireSecretDouble_System_String_" data-uid="Pulumi.Config.RequireSecretDouble(System.String)">RequireSecretDouble(string)</h4>
+  <div class="markdown level1 summary"><p>Loads a configuration value, as a number, by its given key, marking it as a secret.
+If it doesn't exist, or the configuration value is not a legal number, an error is thrown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Output&lt;double&gt; RequireSecretDouble(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L241">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireSecretInt32_" data-uid="Pulumi.Config.RequireSecretInt32*"></a>
   <h4 id="Pulumi_Config_RequireSecretInt32_System_String_" data-uid="Pulumi.Config.RequireSecretInt32(System.String)">RequireSecretInt32(string)</h4>
@@ -833,7 +1012,7 @@ If it doesn't exist, or the configuration value is not a legal number, an error 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; RequireSecretInt32(string key)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;int&gt; RequireSecretInt32(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -868,7 +1047,7 @@ If it doesn't exist, or the configuration value is not a legal number, an error 
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config.cs/#L242">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config.cs/#L285">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireSecretObject_" data-uid="Pulumi.Config.RequireSecretObject*"></a>
   <h4 id="Pulumi_Config_RequireSecretObject__1_System_String_" data-uid="Pulumi.Config.RequireSecretObject``1(System.String)">RequireSecretObject&lt;T&gt;(string)</h4>
@@ -880,7 +1059,7 @@ an error is thrown.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;T&gt; RequireSecretObject&lt;T&gt;(string key)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;T&gt; RequireSecretObject&lt;T&gt;(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -937,7 +1116,7 @@ an error is thrown.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/config_exceptions.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Config_Exceptions.cs/#L7" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
