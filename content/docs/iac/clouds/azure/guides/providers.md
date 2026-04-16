@@ -214,10 +214,10 @@ dependency graph and state management layered on top.
 
 {{% notes type="warning" %}}
 The `azapi` package is **community-maintained**, not an official Pulumi product. It is published under
-the `@ediri/` package namespace (not `@pulumi/`). The package has historically seen limited
-maintenance activity. For most use cases, the Azure Native provider is the better choice: it is
-Pulumi-maintained, auto-generated from the same ARM specifications, and provides typed, Pulumi-idiomatic
-resources for every ARM resource type.
+the `@ediri/` package namespace (not `@pulumi/`). The source repository was archived in July 2025,
+and its README now recommends using the Azure Native provider instead. For most use cases, the Azure
+Native provider is the better choice: it is Pulumi-maintained, auto-generated from the same ARM
+specifications, and provides typed, Pulumi-idiomatic resources for every ARM resource type.
 {{% /notes %}}
 
 A scenario where `azapi` has historically been useful is accessing a brand-new or preview ARM resource
