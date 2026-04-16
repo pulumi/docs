@@ -1087,6 +1087,15 @@ or with credentials:
 }
 ```
 
+or with a custom root path:
+
+```json
+{
+  "executorImage": "myregistry.azurecr.io/myimage:latest",
+  "executorRootPath": "/tmp"
+}
+```
+
 #### Properties
 
 | Name          | Type           | Description                                      |
@@ -1096,6 +1105,7 @@ or with credentials:
 | `executorImage.credentials` | object | **Optional.** Credentials for private registry. |
 | `executorImage.credentials.username` | string | **Required when credentials are provided.** Username for authentication. |
 | `executorImage.credentials.password` | Secret | **Required when credentials are provided.** Password for authentication. |
+| `executorRootPath` | string | **Optional.** Override the default root path (`/`) used by the deployment executor. Useful when running with non-root users (e.g., set to `/tmp`). When set, the effective `PULUMI_ENV` location becomes `<executorRootPath>/PULUMI_ENV`. |
 
 ### GitHub
 

@@ -130,6 +130,14 @@ Using a custom image may result in slower execution due to time spent pulling th
 Additionally, we only support static credentials in custom executor images.
 {{% /notes %}}
 
+## Custom executor root path {#custom-executor-root-path}
+
+By default, the deployment executor uses `/` as its root working directory. You can override this by setting a custom executor root path, which changes the base directory used by the executor for all file operations during the deployment.
+
+This is primarily useful when running with non-root users in a [custom executor image](#custom-executor-images), where the default `/` directory may not be writable. For example, setting the root path to `/tmp` allows deployments to run under a non-root security context.
+
+The custom executor root path can be configured through the UI under **Advanced Settings**, via the [REST API](/docs/reference/cloud-rest-api/deployments/#executorcontext) (`executorContext.executorRootPath`), or as code with the [Pulumi Cloud provider](/registry/packages/pulumiservice/api-docs/deploymentsettings/) (`executorContext.executorRootPath`).
+
 ## Open ID Connect (OIDC)
 
 Pulumi Deployments supports OIDC for authenticating with cloud providers. This enables your deployments to access your cloud resources without storing static credentials in Pulumi Cloud.
@@ -186,14 +194,25 @@ These can be overridden or extended by configuring custom environment variables:
 
 Environment variables can be persisted between pre-run commands and the final pulumi deployment by appending them to the file on the file system named `PULUMI_ENV`.
 
-Example Usage:
+By default, persisted environment variables are read from `/PULUMI_ENV`. If `executorContext.executorRootPath` is set to `/tmp`, persisted environment variables are read from `/tmp/PULUMI_ENV` instead.
+
+When writing variables from pre-run commands, append to that explicit absolute path. Relative `PULUMI_ENV` writes are not the contract for pre-run commands; use the explicit absolute path instead.
+
+Default root path (`/`):
 
 ```bash
 export GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token)
 echo GOOGLE_OAUTH_ACCESS_TOKEN=$GOOGLE_OAUTH_ACCESS_TOKEN >> /PULUMI_ENV
 ```
 
+Custom root path (`/tmp`):
+
+```bash
+export GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token)
+echo GOOGLE_OAUTH_ACCESS_TOKEN=$GOOGLE_OAUTH_ACCESS_TOKEN >> /tmp/PULUMI_ENV
+```
+
 Running `env` in a subsequent pre-run command will show the environment variable and it should be usable by scripts or your pulumi program.
 {{% notes type="info" %}}
-If `/PULUMI_ENV` does not work, and you are on self hosted, you can look for the following message in the logs to get the location: `Loading PULUMI_ENV from`.
+If persisting variables does not work, check the `Loading PULUMI_ENV from` log line to confirm the active path.
 {{% /notes %}}
