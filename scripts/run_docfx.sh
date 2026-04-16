@@ -45,25 +45,16 @@ find "$DOTNET_OUT" -depth -type d -name '*[A-Z]*' | while read -r dir; do
     fi
 done
 
-# 2. Rename files to lowercase. A pre-existing lowercase target almost
-#    always indicates a real bug (two source files differing only in case),
-#    so fail loudly rather than silently clobbering.
+# 2. Rename files to lowercase. Overwrite is expected here: DocFX writes
+#    PascalCase filenames that may already exist in lowercase from a
+#    previous commit or build.
 find "$DOTNET_OUT" -type f -name '*[A-Z]*' | while read -r file; do
     parent="$(dirname "$file")"
     base="$(basename "$file")"
     lower="$(echo "$base" | tr '[:upper:]' '[:lower:]')"
-    if [ "$base" = "$lower" ]; then
-        continue
+    if [ "$base" != "$lower" ]; then
+        mv "$file" "$parent/$lower"
     fi
-    target="$parent/$lower"
-    if [ -e "$target" ] && [ "$file" -ef "$target" ]; then
-        continue
-    fi
-    if [ -e "$target" ]; then
-        echo "Error: case-only file collision: $file vs $target" >&2
-        exit 1
-    fi
-    mv "$file" "$target"
 done
 
 # 3. Rewrite href attributes in HTML files to lowercase the path portion
