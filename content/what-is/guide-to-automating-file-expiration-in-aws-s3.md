@@ -17,7 +17,7 @@ Here's a step-by-step explanation of what we'll do:
 
 - Define the S3 bucket: We'll create a new S3 bucket or use an existing one where the files are stored.
 - Set up lifecycle rules: We'll define lifecycle rules to specify how files should be managed as they age.
-- Apply the C=configuration: We'll apply the lifecycle configuration to the S3 bucket using Pulumi.
+- Apply the configuration: We'll apply the lifecycle configuration to the S3 bucket using Pulumi.
 
 Now, let's write a Pulumi program in TypeScript that creates an S3 bucket with a lifecycle policy to transition objects to Glacier after 90 days.
 

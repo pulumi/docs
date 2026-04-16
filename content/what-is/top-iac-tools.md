@@ -8,7 +8,7 @@ page_title: "Top Infrastructure as Code Tools"
 
 Infrastructure as Code tools (IaC tools) let you automate the setup of your cloud resources. Instead of manually configuring resources in your cloud web console, you can write a script that specifies what you need, and the cloud provider sets it up for you. It's a great way to make infrastructure setup consistent and repeatable.
 
-But which tool should you use choose? We all have our favorites (and biases 😉), but let's take a look at a combination of modern multi-cloud tools, vendor and cloud-specific solutions, and some lesser-known options to give you the lay of the land.
+But which tool should you choose? We all have our favorites (and biases 😉), but let's take a look at a combination of modern multi-cloud tools, vendor and cloud-specific solutions, and some lesser-known options to give you the lay of the land.
 
 We'll assess each tool based on the following criteria:
 
@@ -42,7 +42,7 @@ Terraform integrates well with existing development workflows and CI/CD pipeline
 
 ### [Pulumi](https://www.pulumi.com/)
 
-Pulumi is another popular IaC tool that let's you define infrastructure in your programming language of choice and using real programming constructs, such as loops and functions. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others.
+Pulumi is another popular IaC tool that lets you define infrastructure in your programming language of choice and using real programming constructs, such as loops and functions. Pulumi excels in multi-cloud support, integrating with major cloud providers such as AWS, Azure, Google Cloud, and many others.
 
 Pulumi's state management is easy to use as it automatically handles your infrastructure state and stores it in the Pulumi Cloud backend by default. With built-in state locking and encryption, this approach simplifies collaboration and reduces the risk of state corruption, ensuring secure and consistent state management. For those who prefer more control over their state, Pulumi also supports self-managed backends.
 
@@ -114,7 +114,7 @@ Additionally, Google Cloud's Config Connector allows for managing Google Cloud r
 
 AWS Cloud Development Kit (CDK) brings some of the power of multi-cloud tools like Pulumi to AWS specific tools. CDK allows you to define cloud infrastructure using familiar programming languages such as TypeScript, Python, Java, or C#. This approach provides a more developer-friendly experience compared to traditional JSON or YAML-based templates.
 
-CDK supports unit testing of infrastructure code, allowing you to validate your configurations before deploymente. Because CDK code will be compiled down to CloudFormation JSON or YAML templates and deployed with CloudFormation, it shares many of the same benefits and limitations as CloudFormation. AWS CDK is an ideal choice for teams deeply invested in the AWS ecosystem who want the benefits of using familiar programming languages for infrastructure definition.
+CDK supports unit testing of infrastructure code, allowing you to validate your configurations before deployment. Because CDK code will be compiled down to CloudFormation JSON or YAML templates and deployed with CloudFormation, it shares many of the same benefits and limitations as CloudFormation. AWS CDK is an ideal choice for teams deeply invested in the AWS ecosystem who want the benefits of using familiar programming languages for infrastructure definition.
 
 - **Flexibility**: Define infrastructure using your preferred programming language.
 - **Integration**: Integrates well with AWS-native CI/CD and supports Amazon EKS for Kubernetes cluster management.
