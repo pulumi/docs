@@ -4,7 +4,13 @@
 
 set -euo pipefail
 
-SPEC_URL="https://api.pulumi.com/api/openapi/pulumi-spec.json"
+# TEMPORARY: pointing at a public gist of openapi_public.json from the
+# pulumi/pulumi-service tag-split PR (pulumi/pulumi-service#41439) so CI can
+# test the new tag pages end-to-end. pulumi/pulumi-service is private, so the
+# gist is the portable way to make the spec reachable from public CI.
+# Revert to the prod URL before merging:
+#   https://api.pulumi.com/api/openapi/pulumi-spec.json
+SPEC_URL="https://gist.githubusercontent.com/djgrove/d2b675b48f819bc08e1dd3009a393d0a/raw/openapi_public.json"
 OUTPUT="data/openapi-spec.json"
 
 mkdir -p "$(dirname "$OUTPUT")"
