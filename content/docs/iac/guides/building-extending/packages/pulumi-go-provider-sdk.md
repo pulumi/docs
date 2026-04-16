@@ -24,7 +24,7 @@ aliases:
 - [Components](/docs/iac/concepts/components/), distributed as either a [source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/) or as a compiled, executable plugin
 - [Functions](/docs/iac/concepts/functions/)
 
-The library uses Go reflection to derive the package's [schema](/docs/iac/guides/building-extending/packages/schema/) from your Go types, so multi-language SDKs can be generated without hand-authoring a JSON schema. Pulumi uses pulumi-go-provider internally for several of its own packages, including [`pulumi-eks`](/registry/packages/eks/).
+The library uses Go reflection to derive the package's [schema](/docs/iac/guides/building-extending/packages/schema/) from your Go types, so multi-language SDKs can be generated without hand-authoring a JSON schema. Pulumi uses pulumi-go-provider internally for several of its own packages, including [`pulumi-command`](/registry/packages/command/).
 
 Useful links:
 
@@ -141,4 +141,4 @@ pulumi-go-provider has a few key building blocks:
 - **Provider**: the main entry point that the Pulumi engine talks to.
 - **Middleware**: handles token dispatch, schema generation, cancellation, and other lifecycle concerns.
 - **infer**: a reflection-based framework for declaring resources, components, and functions from Go types.
-- **resourcex**: helpers for inspecting and manipulating resource property values.
+- **integration**: in-process helpers for testing providers end-to-end without the Pulumi engine.
