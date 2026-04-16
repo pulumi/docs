@@ -1,6 +1,6 @@
 ---
 title_tag: "Google Cloud & Pulumi"
-meta_desc: Pulumi offers full support for Google Cloud, with two providers, 2 components, and multiple templates.
+meta_desc: Pulumi offers full support for Google Cloud, with a dedicated provider and multiple templates.
 title: "Google Cloud"
 meta_image: /images/docs/meta-images/docs-clouds-google-cloud-meta-image.png
 h1: Google Cloud & Pulumi
@@ -16,10 +16,10 @@ get_started_guide:
   link: /docs/iac/get-started/gcp/
   icon: google-cloud
 providers:
-  description: The Google Cloud Classic provider is the primary, actively maintained provider for Google Cloud. The Google Cloud Native provider is not actively maintained and is not recommended for new projects.
+  description: The Google Cloud provider manages Google Cloud resources with Pulumi.
   provider_list:
-  - display_name: Google Cloud Classic
-    description: The Google Cloud Classic provider can provision many Google Cloud resources. It is the primary, actively maintained provider recommended for all new projects.
+  - display_name: Google Cloud
+    description: The Google Cloud provider manages a broad set of Google Cloud resources with Pulumi.
     recommended: true
     content_links:
     - display_name: Overview
@@ -34,24 +34,6 @@ providers:
     - display_name: How-to guides
       icon: question-small-black
       url: gcp/how-to-guides/
-  - display_name: Google Cloud Native
-    content_links:
-    - display_name: Overview
-      icon: page-small-black
-      url: google-native/
-    - display_name: Install & config
-      icon: gear-small-black
-      url: google-native/installation-configuration/
-    - display_name: API docs
-      icon: book-small-black
-      url: google-native/api-docs/
-components:
-- display_name: Google Cloud Global CloudRun
-  url: gcp-global-cloudrun/
-  description:
-- display_name: Google Cloud static website
-  url: google-cloud-static-website
-  description:
 templates:
 - display_name: Container service on Google Cloud
   url: container-service/gcp/
@@ -65,4 +47,8 @@ templates:
   url: kubernetes/gcp/
 aliases:
   - /docs/clouds/gcp/
+  - /docs/clouds/gcp/guides/
+  - /docs/clouds/gcp/guides/providers/
+  - /docs/iac/clouds/gcp/guides/
+  - /docs/iac/clouds/gcp/guides/providers/
 ---

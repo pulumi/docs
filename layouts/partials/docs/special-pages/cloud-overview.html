@@ -140,6 +140,7 @@
             {{ end }}
         </div>
     </section>
+    {{ if .Params.components }}
     <section class="components card-outer card-gradient">
         <div class="card-heading card-heading-1">
             <h2 id="components">Components</h2>
@@ -201,6 +202,7 @@
             {{ end }}
         </div>
     </section>
+    {{ end }}
 
     {{ if .Params.convert }}
         {{ range $convert := .Params.convert }}

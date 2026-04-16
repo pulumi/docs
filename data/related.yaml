@@ -543,7 +543,6 @@ tags:
     - dotnet-custom-providers
     - pulumi-3-0
     - pulumiup-native-providers
-    - pulumiup-google-native-provider
 
   yaml:
     - kubernetes-chart-v4
