@@ -64,7 +64,9 @@
             {{ end }}
         {{ end }}
 
-        {{ template "openapi/request-example.html" (dict "method" .method "path" .path "details" .details) }}
+        {{/* Request/response examples hidden for now — revisit once example
+             quality is validated across the full public spec. */}}
+        {{/* {{ template "openapi/request-example.html" (dict "method" .method "path" .path "details" .details) }} */}}
 
         <h4>Responses</h4>
         {{/* Split responses: inline-rendered (all 2xx + any 4xx/5xx with a JSON schema) vs. stock errors (4xx/5xx with no schema, rendered as compact chip row). */}}
@@ -105,7 +107,7 @@
                     {{ if isset $responseDetails.content "application/json" }}
                         {{ $schema := index $responseDetails.content "application/json" "schema" }}
                         {{ template "openapi/response-schema.html" (dict "schema" $schema "openapi" $.openapi) }}
-                        {{ template "openapi/examples.html" (dict "responseDetails" $responseDetails "responseCode" $responseCode "openapi" $.openapi) }}
+                        {{/* {{ template "openapi/examples.html" (dict "responseDetails" $responseDetails "responseCode" $responseCode "openapi" $.openapi) }} */}}
                     {{ end }}
                 {{ end }}
             </div>
