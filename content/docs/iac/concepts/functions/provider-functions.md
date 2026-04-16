@@ -226,11 +226,11 @@ resources:
 
 {{% /choosable %}}
 
-{{% /chooser %}}
+{{< /chooser >}}
 
 {{% notes type="info" %}}
 Bridged providers, which take a Terraform provider as an underlying dependency, expose Terraform data sources in the upstream Terraform provider as provider functions in the corresponding Pulumi provider.
-{{% / notes %}}
+{{% /notes %}}
 
 ## Direct form and output form
 
@@ -361,4 +361,4 @@ Pulumi recommends you choose the output form of a function unless you have a spe
 1. Syntactically, it's slightly more terse.
 
 Assuming there is no specific reason to choose one or the other, the choice between the two forms is ultimately a preference: there is no significant difference in either performance or code maintainability between the two forms.
-{{% / notes %}}
+{{% /notes %}}
