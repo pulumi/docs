@@ -236,8 +236,53 @@ Bridged providers, which take a Terraform provider as an underlying dependency, 
 
 Provider functions are exposed in each language as regular functions, in two variations:
 
- 1. The **direct form** accepts plain arguments (e.g., `string`, as opposed to `pulumi.Input<string>`) and returns an asynchronous value (e.g., a `Promise` in Node.js, a `Task` in Python, etc.) or blocks until the result is available. These functions are typically named, e.g., `getX()`.
- 1. The **output form** accepts Pulumi Inputs (or plain values) as arguments and returns a Pulumi Output as a result. For more information on these types, see [Inputs and Outputs](/docs/concepts/inputs-outputs/). These functions are typically named, e.g., `getXOutput()`.
+### Direct form
+
+The **direct form** accepts plain arguments (e.g., `string`, as opposed to `pulumi.Input<string>`):
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+The direct form returns a `Promise<T>`. These functions are typically named `getX()`.
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+The direct form returns the result synchronously. These functions are typically named `get_x()`.
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+The direct form returns `(T, error)` synchronously. These functions are typically named `LookupX()`.
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+The direct form returns a `Task<T>`. These functions are typically named `GetX.Invoke()`.
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+The direct form returns a `CompletableFuture<T>`. These functions are typically named `ModuleFunctions.getX()`.
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+The direct form is invoked using `fn::invoke`. The result is resolved synchronously.
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### Output form
+
+The **output form** accepts Pulumi Inputs (or plain values) as arguments and returns a Pulumi Output as a result. For more information on these types, see [Inputs and Outputs](/docs/concepts/inputs-outputs/). These functions are typically named, e.g., `getXOutput()`.
 
 The [Pulumi Registry](/registry) contains authoritative documentation for all provider functions.
 
@@ -266,13 +311,13 @@ While the direct and output forms of a provider function will both return the sa
 
 There are several common scenarios where either direct form or output form must or should be used:
 
-* **If you need a provider function's result to determine whether a resource should be created at all**, you must use the provider function's the direct form. The direct form of a function executes _while_ the Pulumi engine is formulating the dependency graph (that is, determining what resources need to be created, updated, or deleted), so in order to figure out whether a resource belongs in the graph at all, that decision has to always be calculated up front.
-* **If you need resources to be created or updated before the function is invoked**, you should use the provider function's output form. (It is _possible_ to use the direct form in this case, but it requires wrapping the call in an `apply`, which can be awkward from a readability standpoint.) Dependencies in the output form of a function are tracked identically to resources: all inputs to the function must be resolved before the function executes. If you need to specify a dependency that isn't already implied by an input to the function's arguments, you can use the `dependsOn` function option to specify additional dependencies (just like you can with resources).
+* **If you need a provider function's result to determine whether a resource should be created at all, you must use the direct form.** The direct form of a function executes _while_ the Pulumi engine is formulating the dependency graph (that is, determining what resources need to be created, updated, or deleted), so in order to figure out whether a resource belongs in the graph at all, that decision has to always be calculated up front.
+* **If you need resources to be created or updated before the function is invoked, you should use the output form.** (It is _possible_ to use the direct form in this case, but it requires wrapping the call in an `apply`, which can be awkward from a readability standpoint.) Dependencies in the output form of a function are tracked identically to resources: all inputs to the function must be resolved before the function executes. If you need to specify a dependency that isn't already implied by an input to the function's arguments, you can use the `dependsOn` function option to specify additional dependencies (just like you can with resources).
 
 {{% notes type="info" %}}
 Pulumi recommends you choose the output form of a function unless you have a specific need for the direct form. We make this recommendation because:
 
-1. The output form reduces mental overhead in that it allows your program to stick with a single asynchronous programming mental model (Pulumi inputs and outputs) as opposed to also having to worry about Promises (TypeScript), TaskResults (.NET), etc.
+1. The output form reduces mental overhead in that it allows your program to stick with a single programming model (Pulumi Inputs and Outputs) as opposed to also having to manage language-specific return types (e.g., `Promise` in TypeScript, `Task` in .NET, `CompletableFuture` in Java, or synchronous returns in Python and Go).
 1. Syntactically, it's slightly more terse.
 
 Assuming there is no specific reason to choose one or the other, the choice between the two forms is ultimately a preference: there is no significant difference in either performance or code maintainability between the two forms.
