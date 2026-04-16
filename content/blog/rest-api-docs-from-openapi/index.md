@@ -17,15 +17,15 @@ social:
     linkedin: "Our REST API reference docs at /docs/reference/cloud-rest-api/ are now generated from the live OpenAPI spec. Endpoints, parameters, request and response schemas all track the real API, so the docs no longer drift from reality."
 ---
 
-The [Pulumi Cloud REST API reference](/docs/reference/cloud-rest-api/) is now generated directly from the live [OpenAPI spec](https://api.pulumi.com/api/openapi/pulumi-spec.json) at build time. Every endpoint, parameter, request body, and response schema you see on the page comes from the same spec the API itself publishes — so the docs stay in sync with the API automatically.
+The [Pulumi Cloud REST API reference](/docs/reference/cloud-rest-api/) is now generated directly from the live [OpenAPI spec](https://api.pulumi.com/api/openapi/pulumi-spec.json) at build time. Every endpoint, parameter, request body, and response schema you see on the page comes from the same spec the API itself publishes. The docs now stay in sync with the API automatically!
 
 <!--more-->
 
 ## Why this matters
 
-The previous REST API reference was a set of handwritten pages. That meant every new endpoint, renamed parameter, or revised response shape needed a matching docs PR, and in practice the pages drifted. Small inconsistencies added up: missing parameters, outdated request shapes, schemas that no longer matched what the API returned.
+The previous REST API reference was a set of handwritten pages. That meant every new endpoint, renamed parameter, or revised response shape needed a matching docs PR, and in practice the pages drifted. Small inconsistencies added up: missing parameters, outdated request shapes, schemas that no longer matched what the API returned. We've heard feedback in this area, and wanted to respond with a durable solution for docs accuracy that will scale with us.
 
-Generating the reference from the OpenAPI spec closes that gap. When the API ships a change, the docs pick it up on the next site build, with no separate docs PR required.
+Generating the reference from the OpenAPI spec closes that gap. When the API ships a change, the docs pick it up automatically the next time our docs are built.
 
 ## What's new
 
@@ -41,19 +41,6 @@ The reference at `/docs/reference/cloud-rest-api/` now includes:
 The generated docs live at the same URL as the previous reference: `/docs/reference/cloud-rest-api/`. Bookmarks, blog links, and inbound search traffic still land on the right page. Aliases are in place for every old subpage path, so links like `/docs/reference/cloud-rest-api/webhooks/` redirect to the new index.
 
 One caveat: deep anchor links into the old single-page structure (for example `#data-export`) won't scroll to a matching heading anymore, because endpoints now live on per-tag pages. Those links still reach the reference — they just land on the index rather than a specific heading.
-
-## Preview endpoints are filtered out
-
-The OpenAPI spec marks some routes as `Preview` visibility. The generator skips those so the public docs only show endpoints that are generally available. As a route is promoted from preview to GA in the spec, it shows up in the docs on the next build — no manual step.
-
-## Contributing
-
-The OpenAPI spec is the source of truth for endpoint shapes, so changes to endpoints, parameters, or schemas start in the service repo. But the docs site controls a few pieces that benefit from human editing:
-
-1. **Tag intros** at [`assets/openapi/tag-intros/<tag>.md`](https://github.com/pulumi/docs/tree/master/assets/openapi/tag-intros). These are the editorial paragraphs that appear above the endpoint list on each category page. Send a PR if you want to improve the framing or add context.
-1. **Category structure** lives in [`content/docs/reference/cloud-rest-api/_content.gotmpl`](https://github.com/pulumi/docs/blob/master/content/docs/reference/cloud-rest-api/_content.gotmpl), which is the Hugo content adapter that turns spec tags into pages.
-
-The build also emits `warnf` warnings when a tag in the spec has no matching intro file (a prose gap) or when an intro file has no matching tag (a dead file — the tag was renamed or removed). Grep the build output for `openapi:` to see current gaps.
 
 ## Try it out
 
