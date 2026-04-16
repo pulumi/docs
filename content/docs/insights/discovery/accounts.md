@@ -39,7 +39,7 @@ This document outlines the steps required to create and manage a Pulumi Insights
 {{< notes type="info" >}}  
   Pulumi automatically names child accounts using `/`. For more information, see **Account Hierarchies** below.  
 {{< /notes >}}
-6. Add any provider-specific configuration. For AWS, select the [partition](#aws-partitions) the account belongs to (Standard, GovCloud, China, or one of the intelligence-community partitions) and optionally exclude any regions you do not want scanned.
+6. Add any provider-specific configuration. For AWS, select the [partition](#aws-partitions) the account belongs to and optionally exclude any regions you do not want scanned.
 7. Choose whether to enable scheduled scans or run them manually.
 When scheduled scans are enabled, Pulumi automatically scans the account every 24 hours.  
 8. Click `create`. You should see a success notification and arrive on the details page of the account you have created.
@@ -103,12 +103,13 @@ The AWS scanner for Pulumi Cloud requires access to the AWS account you want to 
 Pulumi Insights supports every AWS partition. Select the partition that matches the account you are scanning when you create the Insights account:
 
 * AWS Standard (commercial)
-* AWS GovCloud
+* AWS GovCloud (US)
+* AWS ISO (US)
+* AWS ISOB (US)
+* AWS ISOF (US)
+* AWS ISOE (Europe)
+* AWS European Sovereign Cloud
 * AWS China
-* AWS C2S (Top Secret)
-* AWS SC2S (Secret)
-* AWS EU ISOE
-* AWS HCI IC
 
 The selected partition determines which STS endpoint the scanner uses to exchange credentials and which regions are available for discovery. Within a partition, you can also exclude specific regions from scanning — useful when a region is disabled for your account or out of scope for a given audit.
 

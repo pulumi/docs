@@ -28,7 +28,7 @@ Currently while in public preview, Pulumi Insights Account discovery supports AW
 
 1. Click on the drop-down to select your newly created environment `insights-discovery/insights-discovery-env`, then provide a unique account name, such as `insights-aws-account`.
 
-1. Add any provider-specific configuration. For AWS, select the partition the account belongs to (Standard, GovCloud, China, or one of the intelligence-community partitions) and optionally exclude any regions you do not want scanned.
+1. Add any provider-specific configuration. For AWS, select the partition the account belongs to and optionally exclude any regions you do not want scanned.
 
 1. Finally, you can select whether to enable automatic scans or run them manually. Let's keep the default selection.
 
