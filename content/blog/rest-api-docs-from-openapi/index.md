@@ -57,7 +57,7 @@ The generated docs live at the same URL as the previous reference: `/docs/refere
 
 ## Try it out
 
-Start at the new [REST API reference](/docs/reference/cloud-rest-api/) and browse by category, or jump straight to the [schema reference](/docs/reference/cloud-rest-api/schema/) if you want to drill into request/response objects in one place.
+Start at the new [REST API reference](/docs/reference/cloud-rest-api/) and browse by category. Each page links through to the request and response object schemas it uses.
 
 If you spot anything that looks wrong, the most likely culprit is the OpenAPI spec itself — file an issue in [pulumi/docs](https://github.com/pulumi/docs) and we'll trace it back to the source. For tag intros and structural improvements, PRs to [pulumi/docs](https://github.com/pulumi/docs) are welcome. Questions and feedback are always welcome in the [Pulumi Community Slack](https://slack.pulumi.com).
 
