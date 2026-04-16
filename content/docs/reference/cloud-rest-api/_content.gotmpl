@@ -88,11 +88,34 @@
     {{ end }}
 {{ end }}
 
+{{/*
+    Per-tag display-name overrides for tags whose CamelCase→"Word Word"
+    conversion loses information (e.g. acronyms). Keyed by tag name.
+*/}}
+{{ $displayOverrides := dict
+    "OidcIssuers" "OIDC Issuers"
+}}
+
+{{/*
+    Per-tag alias overrides. Listed URLs are redirected to the generated tag
+    page at build time (Hugo `aliases` frontmatter). Use when the generated
+    slug differs from an older canonical URL that must not 404.
+*/}}
+{{ $aliasOverrides := dict
+    "InsightsAccounts" (slice
+        "/docs/reference/cloud-rest-api/insight-accounts/"
+        "/docs/pulumi-cloud/reference/insight-accounts/"
+    )
+}}
+
 {{ range $i, $tag := $tags }}
     {{/* Build display name: "CloudSetup" → "Cloud Setup", "AI Agents" stays as-is. */}}
     {{ $display := $tag }}
     {{ if not (strings.Contains $tag " ") }}
         {{ $display = replaceRE $camelRE "${1} ${2}" $tag }}
+    {{ end }}
+    {{ with index $displayOverrides $tag }}
+        {{ $display = . }}
     {{ end }}
 
     {{ $slug := $display | urlize }}
@@ -117,10 +140,13 @@
         "identifier" (printf "cloud-rest-api-%s" $slug)
     ) }}
 
+    {{ $aliases := index $aliasOverrides $tag | default slice }}
+
     {{ $.AddPage (dict
         "path" $slug
         "title" (printf "Pulumi Cloud API: %s" $display)
         "kind" "page"
+        "aliases" $aliases
         "params" $params
         "menus" $menus
     ) }}
