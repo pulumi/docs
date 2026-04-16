@@ -1,12 +1,12 @@
 ---
-title_tag: "Provider architecture"
+title_tag: "Provider Architecture"
 meta_desc: "Understand the layered architecture of Pulumi providers and choose the right level of abstraction for your needs."
-title: Provider architecture
-h1: Provider architecture
+title: Provider Architecture
+h1: Provider Architecture
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Provider architecture
+        name: Provider Architecture
         parent: iac-guides-providers
         weight: 20
 ---

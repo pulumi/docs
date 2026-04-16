@@ -1,8 +1,8 @@
 ---
-title_tag: "Implement a provider in Python"
+title_tag: "Implement a Provider in Python"
 meta_desc: "Build a Pulumi provider in Python using the gRPC bindings directly."
-title: Implement a provider in Python
-h1: Implement a provider in Python
+title: Implement a Provider in Python
+h1: Implement a Provider in Python
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
