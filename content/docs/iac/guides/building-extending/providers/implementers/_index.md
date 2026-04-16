@@ -1,12 +1,12 @@
 ---
-title_tag: "Direct provider implementation"
+title_tag: "Direct Provider Implementation"
 meta_desc: "Implement Pulumi providers directly using gRPC bindings, without higher-level SDKs."
-title: Direct provider implementation
-h1: Direct provider implementation
+title: Direct Provider Implementation
+h1: Direct Provider Implementation
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Direct implementation
+        name: Direct Implementation
         identifier: iac-guides-provider-implementers
         parent: iac-guides-providers
         weight: 50

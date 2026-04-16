@@ -60,7 +60,7 @@ Because the package is distributed as source, you don't have to publish anything
 
 Source-based plugin packages also support [pre-published SDKs](/docs/iac/guides/building-extending/packages/source-based-plugin/#pre-publishing-language-sdks): authors can generate and publish per-language SDKs to native package registries (npm, PyPI, etc.) as part of CI/CD, letting consumers install via their language's package manager without regenerating the SDK. This is uncommon in practice — for internal packages it typically requires maintaining a **private package feed for every consumer language** (private npm registry, private PyPI index, etc.), which is a large amount of infrastructure to stand up just to avoid local SDK generation. Most teams stick with on-the-fly generation via `pulumi package add`.
 
-Pulumi Cloud customers can publish versions of the package to the Pulumi IDP Private Registry using [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/). Publishing to Pulumi Cloud gives platform teams a browsable gallery complete with READMEs and auto-generated SDK documentation in every Pulumi language.
+Pulumi Cloud customers can publish versions of the package to the Pulumi IDP Private Registry using [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/). Publishing to Pulumi Cloud gives platform teams a browsable gallery complete with READMEs and auto-generated SDK documentation in every Pulumi language. For guidance on how to group components into packages and repositories so versioning stays meaningful, see [Repository strategy for Pulumi packages](/docs/iac/guides/building-extending/packages/repository-strategy/).
 
 ### Advantages and limitations
 
