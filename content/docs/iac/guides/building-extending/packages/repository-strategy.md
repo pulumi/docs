@@ -1,14 +1,14 @@
 ---
-title: Repository strategy for Pulumi packages
-meta_desc: How to structure git repositories when publishing Pulumi packages — covering versioning, cohesion, and monorepo trade-offs.
+title: Repository Strategy for Pulumi Packages
+meta_desc: How to structure Git repositories when publishing Pulumi packages — covering versioning, cohesion, and monorepo trade-offs.
 menu:
   iac:
-    name: Repository strategy
+    name: Repository Strategy
     parent: iac-guides-packages
     weight: 61
 ---
 
-Effectively developing and managing [Pulumi packages](/docs/iac/concepts/packages/) is key to building your organization's platform with Pulumi. A package is the unit of versioning and distribution; the [components](/docs/iac/concepts/components/) inside it inherit the package's version. This guide describes Pulumi's recommended strategies for structuring the git repositories you use to publish packages. Following these practices improves the reliability, maintainability, and delivery speed of the packages your organization builds and consumes.
+Effectively developing and managing [Pulumi packages](/docs/iac/concepts/packages/) is key to building your organization's platform with Pulumi. A package is the unit of versioning and distribution; the [components](/docs/iac/concepts/components/) inside it inherit the package's version. This guide describes Pulumi's recommended strategies for structuring the Git repositories you use to publish packages. Following these practices improves the reliability, maintainability, and delivery speed of the packages your organization builds and consumes.
 
 ## How Pulumi packages are versioned
 
@@ -16,12 +16,12 @@ Pulumi packages come in two flavors, and each is versioned and released differen
 
 ### Source-based packages
 
-A [source-based plugin package](/docs/iac/guides/building-extending/components/packaging-components/#source-based-plugin-packages) is distributed as source code in a git repository. The package's version is the git tag on that repository. Publishing to the Pulumi IDP [Private Registry](/docs/idp/concepts/private-registry/) is a two-step flow, typically performed by a CI/CD pipeline that runs on tag:
+A [source-based plugin package](/docs/iac/guides/building-extending/components/packaging-components/#source-based-plugin-packages) is distributed as source code in a Git repository. The package's version is the Git tag on that repository. Publishing to the Pulumi IDP [Private Registry](/docs/idp/concepts/private-registry/) is a two-step flow, typically performed by a CI/CD pipeline that runs on tag:
 
-1. Apply a semver git tag (for example, `v1.2.3`) to the repository.
+1. Apply a semver Git tag (for example, `v1.2.3`) to the repository.
 1. Run [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/) to send the package metadata to Pulumi Cloud and place the package in the Private Registry. This step often runs automated tests before publishing.
 
-Semver-tagged releases are only required for publishing to the Private Registry. Source-based packages referenced directly from a `Pulumi.yaml` file can use any git ref (tag, branch, or commit), regardless of whether it is a valid semantic version.
+Semver-tagged releases are only required for publishing to the Private Registry. Source-based packages referenced directly from a `Pulumi.yaml` file can use any Git ref (tag, branch, or commit), regardless of whether it is a valid semantic version.
 
 ### Executable-based packages
 
@@ -45,7 +45,7 @@ To keep package versioning intuitive as your usage of Pulumi grows, we recommend
 
 The importance of these principles grows as your organization's adoption of Pulumi grows.
 
-### What does cohesive mean in practice?
+### What cohesive means in practice
 
 By "cohesive," we mean components that are likely to be used together and therefore likely to change together. A good reference point is the [Amazon EKS package](https://www.pulumi.com/registry/packages/eks/) in the Pulumi Registry: it bundles a managed Kubernetes cluster component along with the supporting components needed to secure and operate it. These components are almost always used together and tend to evolve together, so a shared semantic version makes sense.
 
