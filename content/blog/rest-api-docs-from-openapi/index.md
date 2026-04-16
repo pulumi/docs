@@ -12,9 +12,22 @@ tags:
     - features
     - api
 social:
-    twitter: "The Pulumi Cloud REST API reference is now generated from our live OpenAPI spec. Same URL, always in sync with the API, with full schema docs and cross-linked endpoints."
-    bluesky: "The Pulumi Cloud REST API reference is now generated from our live OpenAPI spec. Same URL, always in sync with the API, with full schema docs and cross-linked endpoints."
-    linkedin: "Our REST API reference docs at /docs/reference/cloud-rest-api/ are now generated from the live OpenAPI spec. Endpoints, parameters, request and response schemas all track the real API, so the docs no longer drift from reality."
+    twitter: |
+        If you called a Pulumi Cloud REST API endpoint and got back a field the docs never mentioned, that was real drift. The reference was hand-maintained and the API kept moving.
+
+        We changed how it's built. Here's what's different.
+    bluesky: |
+        If you called a Pulumi Cloud REST API endpoint and got back a field the docs never mentioned, that was real drift. The reference was hand-maintained and the API kept moving.
+
+        Here's how we fixed it.
+    linkedin: |
+        If you've ever integrated with the Pulumi Cloud REST API and found a parameter the docs never mentioned, or a response field that wasn't in the schema, that was real drift, not your reading.
+
+        The old reference was handwritten. Every endpoint change, renamed parameter, or revised response shape needed a matching docs PR. In practice those PRs didn't always land, and small mismatches compounded over time.
+
+        We changed how the reference is built. The pages at the same URL are now generated from the live OpenAPI spec the API itself publishes.
+
+        We wrote up what's different and what it means for anyone integrating with the API today.
 ---
 
 The [Pulumi Cloud REST API reference](/docs/reference/cloud-rest-api/) is now generated directly from the live [OpenAPI spec](https://api.pulumi.com/api/openapi/pulumi-spec.json) at build time. Every endpoint, parameter, request body, and response schema you see on the page comes from the same spec the API itself publishes. The docs now stay in sync with the API automatically!
