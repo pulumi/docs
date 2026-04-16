@@ -24,6 +24,9 @@
     - badge_highlight_text: Optional badge text highlighted in purple (split layout only).
     - badge_text: Optional pill badge text displayed above the heading (split layout only).
     - badge_link: Optional URL for the badge pill.
+    - tag_line: Optional tag line text displayed in violet above the heading (split layout only).
+    - date_and_location: Optional event date and location string (split layout only).
+    - booth: Optional booth number (split layout only, displayed after date_and_location).
     - anchor: Optional anchor for section id
 
     Parameters — code composite (renders instead of image when code_snippets is set):
@@ -57,6 +60,9 @@
 {{ $badgeHighlightText := .badge_highlight_text }}
 {{ $badgeText := .badge_text }}
 {{ $badgeLink := .badge_link }}
+{{ $tagLine := .tag_line }}
+{{ $dateAndLocation := .date_and_location }}
+{{ $booth := .booth }}
 
 {{ $codeSnippets := .code_snippets }}
 {{ $codeTitle := .code_title }}
@@ -89,6 +95,11 @@
                 <span class="text-gray-900 whitespace-nowrap">{{ $badgeText }} <span class="text-gray-800">&rsaquo;</span></span>
             </a>
             {{ end }}
+            {{ if $tagLine }}
+            <div class="text-left mb-2">
+                <span class="hero-tag-line">{{ $tagLine }}</span>
+            </div>
+            {{ end }}
             {{ if or $titlePrimary $title }}
             <h1 class="product-hero-heading text-left mb-6">
                 {{ if and $titlePrimary $titleSecondary }}
@@ -105,6 +116,18 @@
                 <span class="product-hero-title">{{ $title }}</span>
                 {{ end }}
             </h1>
+            {{ end }}
+            {{ if or $dateAndLocation $booth }}
+            <p class="hero-event-details mb-8">
+                {{ if $dateAndLocation }}
+                <span><i class="far fa-calendar mr-3"></i></span>
+                <span class="hero-date-and-location"><a href="#location">{{ $dateAndLocation }}</a></span>
+                {{ end }}
+                {{ if and $dateAndLocation $booth }}
+                <span class="hero-bullet mx-2">•</span>
+                <span class="hero-booth-number">{{ $booth }}</span>
+                {{ end }}
+            </p>
             {{ end }}
             {{ if $description }}
             <p class="product-hero-description mb-10 text-left">{{ $description | markdownify }}</p>

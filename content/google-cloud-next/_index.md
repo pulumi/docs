@@ -9,13 +9,14 @@ aliases:
   - /google-next
 
 hero:
+  layout: split
   title: Let's talk Google Cloud infrastructure
   description: |
     Join us to learn how teams are managing Google Cloud infrastructure at scale with programming languages, policy as code, and purpose-built AI. Stop by for a conversation, demo, or to play a game or two.
   date_and_location: April 22-24, 2026, Mandalay Bay, Las Vegas
   booth: Booth 3624
-  cta_text: Book a booth demo
-  cta_link: "#demo-workshop"
+  cta_primary_text: Book a booth demo
+  cta_primary_link: "#demo-workshop"
   cta_secondary_text: Attend a workshop
   cta_secondary_link: "#demo-workshop"
   image: /images/google-next/google-next-hero-2026.png
