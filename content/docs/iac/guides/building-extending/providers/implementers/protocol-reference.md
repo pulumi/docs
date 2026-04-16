@@ -1,8 +1,8 @@
 ---
-title_tag: "Provider protocol reference"
+title_tag: "Provider Protocol Reference"
 meta_desc: "Complete reference for the Pulumi provider gRPC protocol, including all RPC methods and their semantics."
-title: Provider protocol reference
-h1: Provider protocol reference
+title: Provider Protocol Reference
+h1: Provider Protocol Reference
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:

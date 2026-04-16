@@ -1,8 +1,8 @@
 ---
-title_tag: "Implement a provider in Go"
+title_tag: "Implement a Provider in Go"
 meta_desc: "Build a Pulumi provider in Go using the gRPC bindings directly, without the higher-level SDK."
-title: Implement a provider in Go
-h1: Implement a provider in Go
+title: Implement a Provider in Go
+h1: Implement a Provider in Go
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
