@@ -62,7 +62,7 @@ If you're experiencing issues with a specific cloud provider or resource (errors
 
 - **AWS** → [pulumi/pulumi-aws](https://github.com/pulumi/pulumi-aws/issues) or [pulumi/pulumi-aws-native](https://github.com/pulumi/pulumi-aws-native/issues)
 - **Azure** → [pulumi/pulumi-azure-native](https://github.com/pulumi/pulumi-azure-native/issues) or [pulumi/pulumi-azure](https://github.com/pulumi/pulumi-azure/issues)
-- **Google Cloud (GCP)** → [pulumi/pulumi-gcp](https://github.com/pulumi/pulumi-gcp/issues) or [pulumi/pulumi-google-native](https://github.com/pulumi/pulumi-google-native/issues)
+- **Google Cloud (GCP)** → [pulumi/pulumi-gcp](https://github.com/pulumi/pulumi-gcp/issues)
 - **Kubernetes** → [pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes/issues)
 
 ### Finding other provider repositories
