@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ResourceHookArgs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ResourceHookArgs ">
+    
+    <meta name="description" content="ResourceHookArgs represents the arguments passed to a resource hook. Depending on the hook type, only some of the new/old inputs/outputs are set.  | Hook Type     | old_inputs | new_inputs | old_outputs | new_outputs | | ------------- | ---------- | ---------- | ----------- | ----------- | | before_create |            | ✓          |             |             | | after_create  |            | ✓          |             | ✓           | | before_update | ✓          | ✓          | ✓           |             | | after_update  | ✓          | ✓          | ✓           | ✓           | | before_delete | ✓          |            | ✓           |             | | after_delete  | ✓          |            | ✓           |             |">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.ResourceHookArgs">
+
+
+  <h1 id="Pulumi_ResourceHookArgs" data-uid="Pulumi.ResourceHookArgs" class="text-break">Class ResourceHookArgs</h1>
+  <div class="markdown level0 summary"><p>
+ResourceHookArgs represents the arguments passed to a resource hook. Depending on the hook type, only some of
+the new/old inputs/outputs are set.
+</p>
+<pre><code class="lang-csharp">| Hook Type     | old_inputs | new_inputs | old_outputs | new_outputs |
+| ------------- | ---------- | ---------- | ----------- | ----------- |
+| before_create |            | ✓          |             |             |
+| after_create  |            | ✓          |             | ✓           |
+| before_update | ✓          | ✓          | ✓           |             |
+| after_update  | ✓          | ✓          | ✓           | ✓           |
+| before_delete | ✓          |            | ✓           |             |
+| after_delete  | ✓          |            | ✓           |             |</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">ResourceHookArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.dll</h6>
+  <h5 id="Pulumi_ResourceHookArgs_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ResourceHookArgs</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/ResourceHook.cs/#L242">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookArgs__ctor_" data-uid="Pulumi.ResourceHookArgs.#ctor*"></a>
+  <h4 id="Pulumi_ResourceHookArgs__ctor_System_String_System_String_System_String_System_String_System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__" data-uid="Pulumi.ResourceHookArgs.#ctor(System.String,System.String,System.String,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.Collections.Immutable.ImmutableDictionary{System.String,System.Object})">ResourceHookArgs(string, string, string, string, ImmutableDictionary&lt;string, object?&gt;?, ImmutableDictionary&lt;string, object?&gt;?, ImmutableDictionary&lt;string, object?&gt;?, ImmutableDictionary&lt;string, object?&gt;?)</h4>
+  <div class="markdown level1 summary"><p>Creates a new set of <a class="xref" href="pulumi.resourcehookargs.html">ResourceHookArgs</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ResourceHookArgs(string urn, string id, string name, string type, ImmutableDictionary&lt;string, object?&gt;? newInputs = null, ImmutableDictionary&lt;string, object?&gt;? oldInputs = null, ImmutableDictionary&lt;string, object?&gt;? newOutputs = null, ImmutableDictionary&lt;string, object?&gt;? oldOutputs = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">urn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td><span class="parametername">newInputs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td><span class="parametername">oldInputs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td><span class="parametername">newOutputs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td><span class="parametername">oldOutputs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/ResourceHook.cs/#L207">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookArgs_Id_" data-uid="Pulumi.ResourceHookArgs.Id*"></a>
+  <h4 id="Pulumi_ResourceHookArgs_Id" data-uid="Pulumi.ResourceHookArgs.Id">Id</h4>
+  <div class="markdown level1 summary"><p>The ID of the resource that triggered the hook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string Id { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/ResourceHook.cs/#L212">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookArgs_Name_" data-uid="Pulumi.ResourceHookArgs.Name*"></a>
+  <h4 id="Pulumi_ResourceHookArgs_Name" data-uid="Pulumi.ResourceHookArgs.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The logical name of the resource that triggered the hook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/ResourceHook.cs/#L222">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookArgs_NewInputs_" data-uid="Pulumi.ResourceHookArgs.NewInputs*"></a>
+  <h4 id="Pulumi_ResourceHookArgs_NewInputs" data-uid="Pulumi.ResourceHookArgs.NewInputs">NewInputs</h4>
+  <div class="markdown level1 summary"><p>The new inputs of the resource that triggered the hook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ImmutableDictionary&lt;string, object?&gt;? NewInputs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/ResourceHook.cs/#L232">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookArgs_NewOutputs_" data-uid="Pulumi.ResourceHookArgs.NewOutputs*"></a>
+  <h4 id="Pulumi_ResourceHookArgs_NewOutputs" data-uid="Pulumi.ResourceHookArgs.NewOutputs">NewOutputs</h4>
+  <div class="markdown level1 summary"><p>The new outputs of the resource that triggered the hook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ImmutableDictionary&lt;string, object?&gt;? NewOutputs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/ResourceHook.cs/#L227">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookArgs_OldInputs_" data-uid="Pulumi.ResourceHookArgs.OldInputs*"></a>
+  <h4 id="Pulumi_ResourceHookArgs_OldInputs" data-uid="Pulumi.ResourceHookArgs.OldInputs">OldInputs</h4>
+  <div class="markdown level1 summary"><p>The old inputs of the resource that triggered the hook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ImmutableDictionary&lt;string, object?&gt;? OldInputs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/ResourceHook.cs/#L237">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookArgs_OldOutputs_" data-uid="Pulumi.ResourceHookArgs.OldOutputs*"></a>
+  <h4 id="Pulumi_ResourceHookArgs_OldOutputs" data-uid="Pulumi.ResourceHookArgs.OldOutputs">OldOutputs</h4>
+  <div class="markdown level1 summary"><p>The old outputs of the resource that triggered the hook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ImmutableDictionary&lt;string, object?&gt;? OldOutputs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/ResourceHook.cs/#L217">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookArgs_Type_" data-uid="Pulumi.ResourceHookArgs.Type*"></a>
+  <h4 id="Pulumi_ResourceHookArgs_Type" data-uid="Pulumi.ResourceHookArgs.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The resource type token of the resource that triggered the hook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/ResourceHook.cs/#L202">View Source</a>
+  </span>
+  <a id="Pulumi_ResourceHookArgs_Urn_" data-uid="Pulumi.ResourceHookArgs.Urn*"></a>
+  <h4 id="Pulumi_ResourceHookArgs_Urn" data-uid="Pulumi.ResourceHookArgs.Urn">Urn</h4>
+  <div class="markdown level1 summary"><p>The URN of the resource that triggered the hook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string Urn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/ResourceHook.cs/#L197" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright 2016-2023, Pulumi Corporation.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

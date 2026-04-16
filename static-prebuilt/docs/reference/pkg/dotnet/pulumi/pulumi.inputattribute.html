@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class InputAttribute
- </title>
+      <title>Class InputAttribute </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class InputAttribute
- ">
+      <meta name="title" content="Class InputAttribute ">
     
+    <meta name="description" content="Attribute used by a Pulumi Cloud Provider Package to mark  input fields and properties.  Note: for simple inputs (i.e.  this should just be placed on the property itself.  i.e. [Input] Input&amp;lt;string&amp;gt; Acl. For collection inputs (i.e.  this should be placed on the backing field for the property.  i.e. [Input] private InputList&amp;lt;string&amp;gt; _acls; public InputList&amp;lt;string&amp;gt; Acls {     get =&amp;gt; _acls ?? (_acls = new InputList&amp;lt;string&amp;gt;());     set =&amp;gt; _acls = value; }">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,21 +67,20 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.InputAttribute">
 
 
-  <h1 id="Pulumi_InputAttribute" data-uid="Pulumi.InputAttribute" class="text-break">Class InputAttribute
-</h1>
+  <h1 id="Pulumi_InputAttribute" data-uid="Pulumi.InputAttribute" class="text-break">Class InputAttribute</h1>
   <div class="markdown level0 summary"><p>Attribute used by a Pulumi Cloud Provider Package to mark <a class="xref" href="pulumi.resource.html">Resource</a> input
 fields and properties.</p>
 <p></p>
-Note: for simple inputs (i.e. <a class="xref" href="pulumi.input-1.html">Input&lt;T&gt;</a> this should just be placed on the
-property itself.  i.e. <code>[Input] Input&lt;string> Acl</code>.
+<p>Note: for simple inputs (i.e. <a class="xref" href="pulumi.input-1.html">Input&lt;T&gt;</a> this should just be placed on the
+property itself.  i.e. <code>[Input] Input&lt;string&gt; Acl</code>.</p>
 <p>For collection inputs (i.e. <a class="xref" href="pulumi.inputlist-1.html">InputList&lt;T&gt;</a> this should be placed on the
 backing field for the property.  i.e.</p>
-<pre><code>    [Input] private InputList&lt;string> _acls;
-    public InputList&lt;string> Acls
-    {
-        get => _acls ?? (_acls = new InputList&lt;string>());
-        set => _acls = value;
-    }</code></pre>
+<pre><code class="lang-csharp">[Input] private InputList&lt;string&gt; _acls;
+public InputList&lt;string&gt; Acls
+{
+    get =&gt; _acls ?? (_acls = new InputList&lt;string&gt;());
+    set =&gt; _acls = value;
+}</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -227,7 +225,7 @@ public sealed class InputAttribute : Attribute</code></pre>
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/serialization/attributes.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Serialization/Attributes.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_InputAttribute__ctor_" data-uid="Pulumi.InputAttribute.#ctor*"></a>
   <h4 id="Pulumi_InputAttribute__ctor_System_String_System_Boolean_System_Boolean_" data-uid="Pulumi.InputAttribute.#ctor(System.String,System.Boolean,System.Boolean)">InputAttribute(string, bool, bool)</h4>
@@ -235,7 +233,7 @@ public sealed class InputAttribute : Attribute</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputAttribute(string name, bool required = false, bool json = false)</code></pre>
+    <pre><code class="lang- hljs">public InputAttribute(string name, bool required = false, bool json = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,7 +270,7 @@ public sealed class InputAttribute : Attribute</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/serialization/attributes.cs/#L43" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Serialization/Attributes.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

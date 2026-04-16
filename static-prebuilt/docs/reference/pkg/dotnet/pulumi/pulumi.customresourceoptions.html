@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class CustomResourceOptions
- </title>
+      <title>Class CustomResourceOptions </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class CustomResourceOptions
- ">
+      <meta name="title" content="Class CustomResourceOptions ">
     
+    <meta name="description" content="is a bag of optional settings that control a &#39;s behavior.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.CustomResourceOptions">
 
 
-  <h1 id="Pulumi_CustomResourceOptions" data-uid="Pulumi.CustomResourceOptions" class="text-break">Class CustomResourceOptions
-</h1>
+  <h1 id="Pulumi_CustomResourceOptions" data-uid="Pulumi.CustomResourceOptions" class="text-break">Class CustomResourceOptions</h1>
   <div class="markdown level0 summary"><p><a class="xref" href="pulumi.customresourceoptions.html">CustomResourceOptions</a> is a bag of optional settings that control a <a class="xref" href="pulumi.customresource.html">CustomResource</a>'s behavior.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -109,6 +107,9 @@
       <a class="xref" href="pulumi.resourceoptions.html#Pulumi_ResourceOptions_ResourceTransformations">ResourceOptions.ResourceTransformations</a>
     </div>
     <div>
+      <a class="xref" href="pulumi.resourceoptions.html#Pulumi_ResourceOptions_ResourceTransforms">ResourceOptions.ResourceTransforms</a>
+    </div>
+    <div>
       <a class="xref" href="pulumi.resourceoptions.html#Pulumi_ResourceOptions_Aliases">ResourceOptions.Aliases</a>
     </div>
     <div>
@@ -125,6 +126,18 @@
     </div>
     <div>
       <a class="xref" href="pulumi.resourceoptions.html#Pulumi_ResourceOptions_DeletedWith">ResourceOptions.DeletedWith</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.resourceoptions.html#Pulumi_ResourceOptions_ReplaceWith">ResourceOptions.ReplaceWith</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.resourceoptions.html#Pulumi_ResourceOptions_Hooks">ResourceOptions.Hooks</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.resourceoptions.html#Pulumi_ResourceOptions_HideDiffs">ResourceOptions.HideDiffs</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.resourceoptions.html#Pulumi_ResourceOptions_ReplacementTrigger">ResourceOptions.ReplacementTrigger</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -154,7 +167,7 @@
   <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/customresourceoptions.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/CustomResourceOptions.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_CustomResourceOptions_AdditionalSecretOutputs_" data-uid="Pulumi.CustomResourceOptions.AdditionalSecretOutputs*"></a>
   <h4 id="Pulumi_CustomResourceOptions_AdditionalSecretOutputs" data-uid="Pulumi.CustomResourceOptions.AdditionalSecretOutputs">AdditionalSecretOutputs</h4>
@@ -166,7 +179,7 @@ basis.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; AdditionalSecretOutputs { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public List&lt;string&gt; AdditionalSecretOutputs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,7 +197,7 @@ basis.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/customresourceoptions.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/CustomResourceOptions.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_CustomResourceOptions_DeleteBeforeReplace_" data-uid="Pulumi.CustomResourceOptions.DeleteBeforeReplace*"></a>
   <h4 id="Pulumi_CustomResourceOptions_DeleteBeforeReplace" data-uid="Pulumi.CustomResourceOptions.DeleteBeforeReplace">DeleteBeforeReplace</h4>
@@ -194,7 +207,7 @@ replacement is created when replacement is necessary.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? DeleteBeforeReplace { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public bool? DeleteBeforeReplace { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -212,7 +225,37 @@ replacement is created when replacement is necessary.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/customresourceoptions.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/CustomResourceOptions.cs/#L49">View Source</a>
+  </span>
+  <a id="Pulumi_CustomResourceOptions_EnvVarMappings_" data-uid="Pulumi.CustomResourceOptions.EnvVarMappings*"></a>
+  <h4 id="Pulumi_CustomResourceOptions_EnvVarMappings" data-uid="Pulumi.CustomResourceOptions.EnvVarMappings">EnvVarMappings</h4>
+  <div class="markdown level1 summary"><p>Environment variable mappings for provider resources. Maps source environment variable names to target
+names. If the source variable exists, the provider will see the target variable set to its value. For
+example, {&quot;MY_VAR&quot;: &quot;PROVIDER_VAR&quot;} means if MY_VAR is set, the provider sees PROVIDER_VAR with MY_VAR's
+value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Dictionary&lt;string, string&gt; EnvVarMappings { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/CustomResourceOptions.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_CustomResourceOptions_ImportId_" data-uid="Pulumi.CustomResourceOptions.ImportId*"></a>
   <h4 id="Pulumi_CustomResourceOptions_ImportId" data-uid="Pulumi.CustomResourceOptions.ImportId">ImportId</h4>
@@ -224,7 +267,7 @@ imported, the import property must be removed from the resource's options.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? ImportId { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public string? ImportId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,31 +287,31 @@ imported, the import property must be removed from the resource's options.</p>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/customresourceoptions.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/CustomResourceOptions.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_CustomResourceOptions_Merge_" data-uid="Pulumi.CustomResourceOptions.Merge*"></a>
   <h4 id="Pulumi_CustomResourceOptions_Merge_Pulumi_CustomResourceOptions_Pulumi_CustomResourceOptions_" data-uid="Pulumi.CustomResourceOptions.Merge(Pulumi.CustomResourceOptions,Pulumi.CustomResourceOptions)">Merge(CustomResourceOptions?, CustomResourceOptions?)</h4>
   <div class="markdown level1 summary"><p>Takes two <a class="xref" href="pulumi.customresourceoptions.html">CustomResourceOptions</a> values and produces a new
 <a class="xref" href="pulumi.customresourceoptions.html">CustomResourceOptions</a> with the respective
-properties of <code data-dev-comment-type="paramref" class="paramref">options2</code> merged over the same properties in <code data-dev-comment-type="paramref" class="paramref">options1</code>. The original options objects will be unchanged.</p>
+properties of <code class="paramref">options2</code> merged over the same properties in <code class="paramref">options1</code>. The original options objects will be unchanged.</p>
 <p></p>
-A new instance will always be returned.
+<p>A new instance will always be returned.</p>
 <p></p>
-Conceptually property merging follows these basic rules:
+<p>Conceptually property merging follows these basic rules:</p>
 <ol><li>
 If the property is a collection, the final value will be a collection containing the
 values from each options object.
 </li><li>
-Simple scalar values from <code data-dev-comment-type="paramref" class="paramref">options2</code> (i.e. <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>s,
-<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>s, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>s) will replace the values of <code data-dev-comment-type="paramref" class="paramref">options1</code>.
+Simple scalar values from <code class="paramref">options2</code> (i.e. <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>s,
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>s, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>s) will replace the values of <code class="paramref">options1</code>.
 </li><li>
-<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> values in <code data-dev-comment-type="paramref" class="paramref">options2</code> will be ignored.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> values in <code class="paramref">options2</code> will be ignored.
 </li></ol>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CustomResourceOptions Merge(CustomResourceOptions? options1, CustomResourceOptions? options2)</code></pre>
+    <pre><code class="lang- hljs">public static CustomResourceOptions Merge(CustomResourceOptions? options1, CustomResourceOptions? options2)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,7 +358,7 @@ Simple scalar values from <code data-dev-comment-type="paramref" class="paramref
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/customresourceoptions.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Resources/CustomResourceOptions.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

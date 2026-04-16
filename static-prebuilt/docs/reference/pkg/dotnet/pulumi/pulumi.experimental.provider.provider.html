@@ -1,15 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class Provider
- </title>
+      <title>Class Provider </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class Provider
- ">
+      <meta name="title" content="Class Provider ">
+    
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -68,14 +67,14 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.Experimental.Provider.Provider">
 
 
-  <h1 id="Pulumi_Experimental_Provider_Provider" data-uid="Pulumi.Experimental.Provider.Provider" class="text-break">Class Provider
-</h1>
+  <h1 id="Pulumi_Experimental_Provider_Provider" data-uid="Pulumi.Experimental.Provider.Provider" class="text-break">Class Provider</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">Provider</span></div>
+      <div class="level2"><a class="xref" href="pulumi.experimental.provider.componentprovider.html">ComponentProvider</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -101,7 +100,7 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<span class="xref">Experimental</span>.<a class="xref" href="pulumi.experimental.provider.html">Provider</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.experimental.html">Experimental</a>.<a class="xref" href="pulumi.experimental.provider.html">Provider</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_Experimental_Provider_Provider_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -110,7 +109,55 @@
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L308">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L517">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_Provider_Call_" data-uid="Pulumi.Experimental.Provider.Provider.Call*"></a>
+  <h4 id="Pulumi_Experimental_Provider_Provider_Call_Pulumi_Experimental_Provider_CallRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Call(Pulumi.Experimental.Provider.CallRequest,System.Threading.CancellationToken)">Call(CallRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public virtual Task&lt;CallResponse&gt; Call(CallRequest request, CancellationToken ct)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.experimental.provider.callrequest.html">CallRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">ct</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.experimental.provider.callresponse.html">CallResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L491">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_Check_" data-uid="Pulumi.Experimental.Provider.Provider.Check*"></a>
   <h4 id="Pulumi_Experimental_Provider_Provider_Check_Pulumi_Experimental_Provider_CheckRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Check(Pulumi.Experimental.Provider.CheckRequest,System.Threading.CancellationToken)">Check(CheckRequest, CancellationToken)</h4>
@@ -118,7 +165,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;CheckResponse&gt; Check(CheckRequest request, CancellationToken ct)</code></pre>
+    <pre><code class="lang- hljs">public virtual Task&lt;CheckResponse&gt; Check(CheckRequest request, CancellationToken ct)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,7 +205,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L278">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L455">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_CheckConfig_" data-uid="Pulumi.Experimental.Provider.Provider.CheckConfig*"></a>
   <h4 id="Pulumi_Experimental_Provider_Provider_CheckConfig_Pulumi_Experimental_Provider_CheckRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.CheckConfig(Pulumi.Experimental.Provider.CheckRequest,System.Threading.CancellationToken)">CheckConfig(CheckRequest, CancellationToken)</h4>
@@ -166,7 +213,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;CheckResponse&gt; CheckConfig(CheckRequest request, CancellationToken ct)</code></pre>
+    <pre><code class="lang- hljs">public virtual Task&lt;CheckResponse&gt; CheckConfig(CheckRequest request, CancellationToken ct)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,7 +253,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L288">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L465">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_Configure_" data-uid="Pulumi.Experimental.Provider.Provider.Configure*"></a>
   <h4 id="Pulumi_Experimental_Provider_Provider_Configure_Pulumi_Experimental_Provider_ConfigureRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Configure(Pulumi.Experimental.Provider.ConfigureRequest,System.Threading.CancellationToken)">Configure(ConfigureRequest, CancellationToken)</h4>
@@ -214,7 +261,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;ConfigureResponse&gt; Configure(ConfigureRequest request, CancellationToken ct)</code></pre>
+    <pre><code class="lang- hljs">public virtual Task&lt;ConfigureResponse&gt; Configure(ConfigureRequest request, CancellationToken ct)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,7 +301,55 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L298">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L511">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_Provider_Construct_" data-uid="Pulumi.Experimental.Provider.Provider.Construct*"></a>
+  <h4 id="Pulumi_Experimental_Provider_Provider_Construct_Pulumi_Experimental_Provider_ConstructRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Construct(Pulumi.Experimental.Provider.ConstructRequest,System.Threading.CancellationToken)">Construct(ConstructRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public virtual Task&lt;ConstructResponse&gt; Construct(ConstructRequest request, CancellationToken ct)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.experimental.provider.constructrequest.html">ConstructRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">ct</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.experimental.provider.constructresponse.html">ConstructResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L481">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_Create_" data-uid="Pulumi.Experimental.Provider.Provider.Create*"></a>
   <h4 id="Pulumi_Experimental_Provider_Provider_Create_Pulumi_Experimental_Provider_CreateRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Create(Pulumi.Experimental.Provider.CreateRequest,System.Threading.CancellationToken)">Create(CreateRequest, CancellationToken)</h4>
@@ -262,7 +357,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;CreateResponse&gt; Create(CreateRequest request, CancellationToken ct)</code></pre>
+    <pre><code class="lang- hljs">public virtual Task&lt;CreateResponse&gt; Create(CreateRequest request, CancellationToken ct)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,7 +397,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L323">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L506">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_Delete_" data-uid="Pulumi.Experimental.Provider.Provider.Delete*"></a>
   <h4 id="Pulumi_Experimental_Provider_Provider_Delete_Pulumi_Experimental_Provider_DeleteRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Delete(Pulumi.Experimental.Provider.DeleteRequest,System.Threading.CancellationToken)">Delete(DeleteRequest, CancellationToken)</h4>
@@ -310,7 +405,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task Delete(DeleteRequest request, CancellationToken ct)</code></pre>
+    <pre><code class="lang- hljs">public virtual Task Delete(DeleteRequest request, CancellationToken ct)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -350,7 +445,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L313">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L496">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_Diff_" data-uid="Pulumi.Experimental.Provider.Provider.Diff*"></a>
   <h4 id="Pulumi_Experimental_Provider_Provider_Diff_Pulumi_Experimental_Provider_DiffRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Diff(Pulumi.Experimental.Provider.DiffRequest,System.Threading.CancellationToken)">Diff(DiffRequest, CancellationToken)</h4>
@@ -358,7 +453,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;DiffResponse&gt; Diff(DiffRequest request, CancellationToken ct)</code></pre>
+    <pre><code class="lang- hljs">public virtual Task&lt;DiffResponse&gt; Diff(DiffRequest request, CancellationToken ct)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -398,7 +493,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L283">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L460">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_DiffConfig_" data-uid="Pulumi.Experimental.Provider.Provider.DiffConfig*"></a>
   <h4 id="Pulumi_Experimental_Provider_Provider_DiffConfig_Pulumi_Experimental_Provider_DiffRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.DiffConfig(Pulumi.Experimental.Provider.DiffRequest,System.Threading.CancellationToken)">DiffConfig(DiffRequest, CancellationToken)</h4>
@@ -406,7 +501,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;DiffResponse&gt; DiffConfig(DiffRequest request, CancellationToken ct)</code></pre>
+    <pre><code class="lang- hljs">public virtual Task&lt;DiffResponse&gt; DiffConfig(DiffRequest request, CancellationToken ct)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -446,7 +541,50 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L273">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L557">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_Provider_GetHostUri_" data-uid="Pulumi.Experimental.Provider.Provider.GetHostUri*"></a>
+  <h4 id="Pulumi_Experimental_Provider_Provider_GetHostUri_Microsoft_Extensions_Hosting_IHost_" data-uid="Pulumi.Experimental.Provider.Provider.GetHostUri(Microsoft.Extensions.Hosting.IHost)">GetHostUri(IHost)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static Uri GetHostUri(IHost host)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihost">IHost</a></td>
+        <td><span class="parametername">host</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L450">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_GetSchema_" data-uid="Pulumi.Experimental.Provider.Provider.GetSchema*"></a>
   <h4 id="Pulumi_Experimental_Provider_Provider_GetSchema_Pulumi_Experimental_Provider_GetSchemaRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.GetSchema(Pulumi.Experimental.Provider.GetSchemaRequest,System.Threading.CancellationToken)">GetSchema(GetSchemaRequest, CancellationToken)</h4>
@@ -454,7 +592,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;GetSchemaResponse&gt; GetSchema(GetSchemaRequest request, CancellationToken ct)</code></pre>
+    <pre><code class="lang- hljs">public virtual Task&lt;GetSchemaResponse&gt; GetSchema(GetSchemaRequest request, CancellationToken ct)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -494,7 +632,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L293">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L476">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_Invoke_" data-uid="Pulumi.Experimental.Provider.Provider.Invoke*"></a>
   <h4 id="Pulumi_Experimental_Provider_Provider_Invoke_Pulumi_Experimental_Provider_InvokeRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Invoke(Pulumi.Experimental.Provider.InvokeRequest,System.Threading.CancellationToken)">Invoke(InvokeRequest, CancellationToken)</h4>
@@ -502,7 +640,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;InvokeResponse&gt; Invoke(InvokeRequest request, CancellationToken ct)</code></pre>
+    <pre><code class="lang- hljs">public virtual Task&lt;InvokeResponse&gt; Invoke(InvokeRequest request, CancellationToken ct)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -542,7 +680,55 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L303">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L445">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_Provider_Parameterize_" data-uid="Pulumi.Experimental.Provider.Provider.Parameterize*"></a>
+  <h4 id="Pulumi_Experimental_Provider_Provider_Parameterize_Pulumi_Experimental_Provider_ParameterizeRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Parameterize(Pulumi.Experimental.Provider.ParameterizeRequest,System.Threading.CancellationToken)">Parameterize(ParameterizeRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public virtual Task&lt;ParameterizeResponse&gt; Parameterize(ParameterizeRequest request, CancellationToken ct)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.experimental.provider.parameterizerequest.html">ParameterizeRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">ct</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.experimental.provider.parameterizeresponse.html">ParameterizeResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L486">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_Read_" data-uid="Pulumi.Experimental.Provider.Provider.Read*"></a>
   <h4 id="Pulumi_Experimental_Provider_Provider_Read_Pulumi_Experimental_Provider_ReadRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Read(Pulumi.Experimental.Provider.ReadRequest,System.Threading.CancellationToken)">Read(ReadRequest, CancellationToken)</h4>
@@ -550,7 +736,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;ReadResponse&gt; Read(ReadRequest request, CancellationToken ct)</code></pre>
+    <pre><code class="lang- hljs">public virtual Task&lt;ReadResponse&gt; Read(ReadRequest request, CancellationToken ct)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -590,15 +776,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L333">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L523">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_Serve_" data-uid="Pulumi.Experimental.Provider.Provider.Serve*"></a>
-  <h4 id="Pulumi_Experimental_Provider_Provider_Serve_System_String___System_String_System_Func_Pulumi_Experimental_Provider_IHost_Pulumi_Experimental_Provider_Provider__System_Threading_CancellationToken_System_IO_TextWriter_" data-uid="Pulumi.Experimental.Provider.Provider.Serve(System.String[],System.String,System.Func{Pulumi.Experimental.Provider.IHost,Pulumi.Experimental.Provider.Provider},System.Threading.CancellationToken,System.IO.TextWriter)">Serve(string[], string?, Func&lt;IHost, Provider&gt;, CancellationToken, TextWriter)</h4>
+  <h4 id="Pulumi_Experimental_Provider_Provider_Serve_System_String___System_String_System_Func_Pulumi_Experimental_IEngine_Pulumi_Experimental_Provider_Provider__System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Serve(System.String[],System.String,System.Func{Pulumi.Experimental.IEngine,Pulumi.Experimental.Provider.Provider},System.Threading.CancellationToken)">Serve(string[], string?, Func&lt;IEngine, Provider&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task Serve(string[] args, string? version, Func&lt;IHost, Provider&gt; factory, CancellationToken cancellationToken, TextWriter stdout)</code></pre>
+    <pre><code class="lang- hljs">public static Task Serve(string[] args, string? version, Func&lt;IEngine, Provider&gt; factory, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -621,70 +807,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="pulumi.experimental.provider.ihost.html">IHost</a>, <a class="xref" href="pulumi.experimental.provider.provider.html">Provider</a>&gt;</td>
-        <td><span class="parametername">factory</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></td>
-        <td><span class="parametername">stdout</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L328">View Source</a>
-  </span>
-  <a id="Pulumi_Experimental_Provider_Provider_Serve_" data-uid="Pulumi.Experimental.Provider.Provider.Serve*"></a>
-  <h4 id="Pulumi_Experimental_Provider_Provider_Serve_System_String___System_String_System_Func_Pulumi_Experimental_Provider_IHost_Pulumi_Experimental_Provider_Provider__System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Serve(System.String[],System.String,System.Func{Pulumi.Experimental.Provider.IHost,Pulumi.Experimental.Provider.Provider},System.Threading.CancellationToken)">Serve(string[], string?, Func&lt;IHost, Provider&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task Serve(string[] args, string? version, Func&lt;IHost, Provider&gt; factory, CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">version</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="pulumi.experimental.provider.ihost.html">IHost</a>, <a class="xref" href="pulumi.experimental.provider.provider.html">Provider</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="pulumi.experimental.iengine.html">IEngine</a>, <a class="xref" href="pulumi.experimental.provider.provider.html">Provider</a>&gt;</td>
         <td><span class="parametername">factory</span></td>
         <td></td>
       </tr>
@@ -711,7 +834,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L501">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_Provider_Update_" data-uid="Pulumi.Experimental.Provider.Provider.Update*"></a>
   <h4 id="Pulumi_Experimental_Provider_Provider_Update_Pulumi_Experimental_Provider_UpdateRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.Provider.Update(Pulumi.Experimental.Provider.UpdateRequest,System.Threading.CancellationToken)">Update(UpdateRequest, CancellationToken)</h4>
@@ -719,7 +842,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;UpdateResponse&gt; Update(UpdateRequest request, CancellationToken ct)</code></pre>
+    <pre><code class="lang- hljs">public virtual Task&lt;UpdateResponse&gt; Update(UpdateRequest request, CancellationToken ct)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -766,7 +889,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L271" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/Provider.cs/#L443" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

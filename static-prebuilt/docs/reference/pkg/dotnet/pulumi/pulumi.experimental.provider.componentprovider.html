@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ComponentProvider </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ComponentProvider ">
+    
+    <meta name="description" content="A provider that can be used to construct components from a given assembly with automatic schema inference.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Experimental.Provider.ComponentProvider">
+
+
+  <h1 id="Pulumi_Experimental_Provider_ComponentProvider" data-uid="Pulumi.Experimental.Provider.ComponentProvider" class="text-break">Class ComponentProvider</h1>
+  <div class="markdown level0 summary"><p>A provider that can be used to construct components from a given assembly with automatic schema inference.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="pulumi.experimental.provider.provider.html">Provider</a></div>
+    <div class="level2"><span class="xref">ComponentProvider</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Parameterize_Pulumi_Experimental_Provider_ParameterizeRequest_System_Threading_CancellationToken_">Provider.Parameterize(ParameterizeRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_CheckConfig_Pulumi_Experimental_Provider_CheckRequest_System_Threading_CancellationToken_">Provider.CheckConfig(CheckRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_DiffConfig_Pulumi_Experimental_Provider_DiffRequest_System_Threading_CancellationToken_">Provider.DiffConfig(DiffRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Configure_Pulumi_Experimental_Provider_ConfigureRequest_System_Threading_CancellationToken_">Provider.Configure(ConfigureRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Invoke_Pulumi_Experimental_Provider_InvokeRequest_System_Threading_CancellationToken_">Provider.Invoke(InvokeRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Create_Pulumi_Experimental_Provider_CreateRequest_System_Threading_CancellationToken_">Provider.Create(CreateRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Read_Pulumi_Experimental_Provider_ReadRequest_System_Threading_CancellationToken_">Provider.Read(ReadRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Check_Pulumi_Experimental_Provider_CheckRequest_System_Threading_CancellationToken_">Provider.Check(CheckRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Diff_Pulumi_Experimental_Provider_DiffRequest_System_Threading_CancellationToken_">Provider.Diff(DiffRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Update_Pulumi_Experimental_Provider_UpdateRequest_System_Threading_CancellationToken_">Provider.Update(UpdateRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Delete_Pulumi_Experimental_Provider_DeleteRequest_System_Threading_CancellationToken_">Provider.Delete(DeleteRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Call_Pulumi_Experimental_Provider_CallRequest_System_Threading_CancellationToken_">Provider.Call(CallRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Serve_System_String___System_String_System_Func_Pulumi_Experimental_IEngine_Pulumi_Experimental_Provider_Provider__System_Threading_CancellationToken_">Provider.Serve(string[], string, Func&lt;IEngine, Provider&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_GetHostUri_Microsoft_Extensions_Hosting_IHost_">Provider.GetHostUri(IHost)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.experimental.html">Experimental</a>.<a class="xref" href="pulumi.experimental.provider.html">Provider</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.dll</h6>
+  <h5 id="Pulumi_Experimental_Provider_ComponentProvider_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ComponentProvider : Provider</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/ComponentProvider.cs/#L33">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_ComponentProvider__ctor_" data-uid="Pulumi.Experimental.Provider.ComponentProvider.#ctor*"></a>
+  <h4 id="Pulumi_Experimental_Provider_ComponentProvider__ctor_System_Reflection_Assembly_Pulumi_Experimental_Provider_Metadata_System_Type___" data-uid="Pulumi.Experimental.Provider.ComponentProvider.#ctor(System.Reflection.Assembly,Pulumi.Experimental.Provider.Metadata,System.Type[])">ComponentProvider(Assembly, Metadata, Type[]?)</h4>
+  <div class="markdown level1 summary"><p>Creates a new component provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ComponentProvider(Assembly componentAssembly, Metadata metadata, Type[]? componentTypes = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></td>
+        <td><span class="parametername">componentAssembly</span></td>
+        <td><p>The assembly containing component types</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.experimental.provider.metadata.html">Metadata</a></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata for the package</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</td>
+        <td><span class="parametername">componentTypes</span></td>
+        <td><p>Optional array of known component types</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/ComponentProvider.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_ComponentProvider_Construct_" data-uid="Pulumi.Experimental.Provider.ComponentProvider.Construct*"></a>
+  <h4 id="Pulumi_Experimental_Provider_ComponentProvider_Construct_Pulumi_Experimental_Provider_ConstructRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.ComponentProvider.Construct(Pulumi.Experimental.Provider.ConstructRequest,System.Threading.CancellationToken)">Construct(ConstructRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Constructs a component resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public override Task&lt;ConstructResponse&gt; Construct(ConstructRequest request, CancellationToken ct)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.experimental.provider.constructrequest.html">ConstructRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request containing the component type and inputs</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">ct</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.experimental.provider.constructresponse.html">ConstructResponse</a>&gt;</td>
+        <td><p>The constructed component resource</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_Construct_Pulumi_Experimental_Provider_ConstructRequest_System_Threading_CancellationToken_">Provider.Construct(ConstructRequest, CancellationToken)</a></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>If the resource type is invalid</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>If the component type is not found or cannot be constructed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/ComponentProvider.cs/#L49">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_ComponentProvider_GetSchema_" data-uid="Pulumi.Experimental.Provider.ComponentProvider.GetSchema*"></a>
+  <h4 id="Pulumi_Experimental_Provider_ComponentProvider_GetSchema_Pulumi_Experimental_Provider_GetSchemaRequest_System_Threading_CancellationToken_" data-uid="Pulumi.Experimental.Provider.ComponentProvider.GetSchema(Pulumi.Experimental.Provider.GetSchemaRequest,System.Threading.CancellationToken)">GetSchema(GetSchemaRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets the schema for the components in the assembly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public override Task&lt;GetSchemaResponse&gt; GetSchema(GetSchemaRequest request, CancellationToken ct)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.experimental.provider.getschemarequest.html">GetSchemaRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request containing the package name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">ct</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.experimental.provider.getschemaresponse.html">GetSchemaResponse</a>&gt;</td>
+        <td><p>The schema for the components in the assembly</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="pulumi.experimental.provider.provider.html#Pulumi_Experimental_Provider_Provider_GetSchema_Pulumi_Experimental_Provider_GetSchemaRequest_System_Threading_CancellationToken_">Provider.GetSchema(GetSchemaRequest, CancellationToken)</a></div>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/CamSoper/fix-dotnet-sdk-uppercase-leftovers/sdk/Pulumi/Provider/ComponentProvider.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright 2016-2023, Pulumi Corporation.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
