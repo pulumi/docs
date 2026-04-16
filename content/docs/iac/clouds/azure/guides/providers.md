@@ -36,8 +36,8 @@ identities and Azure DevOps platform configuration.
 |---|---|---|---|---|
 | **Node.js** | `@pulumi/azure-native` | `@pulumi/azure` | `@pulumi/azuread` | `@pulumi/azuredevops` |
 | **Python** | `pulumi-azure-native` | `pulumi-azure` | `pulumi-azuread` | `pulumi-azuredevops` |
-| **Go** | `github.com/pulumi/pulumi-azure-native-sdk/...` | `github.com/pulumi/pulumi-azure/sdk/v6/go/azure` | `github.com/pulumi/pulumi-azuread/sdk/v4/go/azuread` | `github.com/pulumi/pulumi-azuredevops/sdk/v3/go/azuredevops` |
-| **.NET** | `Pulumi.AzureNative` | `Pulumi.Azure` | `Pulumi.AzureAD` | `Pulumi.Azuredevops` |
+| **Go** | `github.com/pulumi/pulumi-azure-native-sdk/...` | `github.com/pulumi/pulumi-azure/sdk/v6/go/azure` | `github.com/pulumi/pulumi-azuread/sdk/v6/go/azuread` | `github.com/pulumi/pulumi-azuredevops/sdk/v3/go/azuredevops` |
+| **.NET** | `Pulumi.AzureNative` | `Pulumi.Azure` | `Pulumi.AzureAD` | `Pulumi.AzureDevOps` |
 | **Java** | `com.pulumi/azure-native` | `com.pulumi/azure` | `com.pulumi/azuread` | `com.pulumi/azuredevops` |
 | **Built on** | ARM API specs (auto-generated) | Terraform AzureRM (bridged) | Microsoft Graph API | Azure DevOps REST API |
 | **Manages** | All Azure cloud resources | Azure cloud resources (subset) | Entra ID users, groups, apps, SPs | Projects, repos, pipelines |
@@ -214,7 +214,7 @@ dependency graph and state management layered on top.
 
 {{% notes type="warning" %}}
 The `azapi` package is **community-maintained**, not an official Pulumi product. It is published under
-the `@ediri/` package namespace (not `@pulumi/`). As of mid-2024, the package has had little
+the `@ediri/` package namespace (not `@pulumi/`). The package has historically seen limited
 maintenance activity. For most use cases, the Azure Native provider is the better choice: it is
 Pulumi-maintained, auto-generated from the same ARM specifications, and provides typed, Pulumi-idiomatic
 resources for every ARM resource type.
@@ -257,4 +257,3 @@ The following table summarizes which provider to use for common Azure tasks:
 - [Azure Native API reference](/registry/packages/azure-native/api-docs/)
 - [Azure Native installation and configuration](/registry/packages/azure-native/installation-configuration/)
 - [Migrate from Azure Classic to Azure Native](/registry/packages/azure-native/from-classic/)
-

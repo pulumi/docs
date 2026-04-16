@@ -33,4 +33,3 @@ The guides use the following packages:
 
 - [Choosing a provider](providers/)
 - [Get started with Azure](/docs/iac/get-started/azure/)
-
