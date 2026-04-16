@@ -137,7 +137,7 @@ capabilities:
           icon: clipboard
           icon_color: yellow
           description: |
-            Automatically record all activity with the ability to export  logs for integration with other security and compliance partners.
+            Automatically record all activity with the ability to export logs for integration with other security and compliance partners.
 
         - title: Self-Hosting
           icon: buildings

@@ -1,6 +1,6 @@
 ---
 title: Pricing
-meta_desc: Pulumi IaC and Pulumi ESC is available in various editions and is free to individuals
+meta_desc: Pulumi IaC and Pulumi ESC are available in various editions and are free to individuals
 type: page
 layout: pricing
 menu:
@@ -24,7 +24,7 @@ tiers:
                 - IaC state management
                 - Unlimited projects, stacks, and environments
                 - Unlimited updates and history
-                - 500 free deployments minutes
+                - 500 free deployment minutes
             - title: Team
               subtitle: Everything you need to get started.
               price: $40
@@ -654,9 +654,9 @@ faq:
             Secrets include both static secrets and dynamic secrets/credentials. When using the Pulumi ESC Document Editor, each definition of fn::secret:* and fn::open::* (except Pulumi-stacks provider) is counted as a secret. The number of secrets only from the latest environment revision is counted towards your billing.
         - question: How are ESC secrets API calls metered?
           answer: |
-            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/reference/environments/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will billed $0.05.
+            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/reference/environments/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will be billed $0.05.
 
-            API usage include any calls from the [CLI](/docs/esc/cli/), [SDK](/docs/esc/development/languages-sdks/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/reference/environments/) call that hits the ReadOpen API endpoint
+            API usage includes any calls from the [CLI](/docs/esc/cli/), [SDK](/docs/esc/development/languages-sdks/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/reference/environments/) call that hits the ReadOpen API endpoint
         - question: What are workflow minutes?
           answer: |
             Workflow Minutes represent the total time used across both Pulumi Insights and Deployments. All usage draws from a single, shared pool of minutes. For Insights, workflow minutes measure the time spent on discovery and policy execution. Deployments also consume workflow minutes by measuring the duration of each deployment process.
