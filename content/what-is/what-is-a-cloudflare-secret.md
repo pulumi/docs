@@ -27,7 +27,7 @@ You can create secrets via [Wrangler](https://developers.cloudflare.com/workers/
 
 - Install [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
 - Sign up for a free [Cloudflare account](https://dash.cloudflare.com/sign-up/)
-- Create a new project and navigate to it's directory:
+- Create a new project and navigate to its directory:
 
     ```bash
     $ npx wrangler init secrets-demo

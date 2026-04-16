@@ -83,7 +83,7 @@ Credijusto:
 
 > "Once you use a familiar programming language to tackle a problem, you
 > see that you can do way more in less time. Pulumi was a natural choice
-> based on the background and skills of our people in DevOps.""
+> based on the background and skills of our people in DevOps."
 >
 > &mdash; Fernando Carlietti, Lead DevOps Engineer, Credijusto.
 
@@ -145,8 +145,8 @@ updates.
 > &mdash; Fernando Carlietti, Lead DevOps Engineer, Credijusto.
 
 Pulumi also helped Credijusto to accelerate the adoption of EKS across the organization,
-further simplifying their configuration while improving scalability.  Finally, Pulumi
-Pulumi Policies greatly improves their process of reporting and project cost allocation as new
+further simplifying their configuration while improving scalability. Finally, Pulumi
+Policies greatly improve their process of reporting and project cost allocation as new
 updates are deployed.
 
 ## Next Steps

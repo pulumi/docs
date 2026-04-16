@@ -82,7 +82,7 @@ products:
                 Use Pulumi's secrets manager or integrate with AWS KMS, Azure Key Vault, Google KMS, and HashiCorp Vault.
             - title: IaC as a programmatic interface
               description: |
-                With [Automation API](/automation),  you can use the Pulumi engine as a strongly typed SDK in your application code, enabling it to call functions that can provision and configure infrastructure on any cloud.
+                With [Automation API](/automation), you can use the Pulumi engine as a strongly typed SDK in your application code, enabling it to call functions that can provision and configure infrastructure on any cloud.
 
               more_info: |
                 Automation API enables you to build custom cloud interfaces for your technical end users. For example, build self-service developer portals, CLIs, frameworks, and CI/CD workflows.
@@ -126,7 +126,7 @@ products:
               more_info: |
                 Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used for Pulumi IaC to ensure secrets management complies with enterprise security policies.
 
-                Every time secrets or configuration values are accessed or changed with Pulumi ESC, the action is fully logged for auditing. Logs include who accessed what, the action they took, and even a full record of showing which originating environments accessed values are inherited from.
+                Every time secrets or configuration values are accessed or changed with Pulumi ESC, the action is fully logged for auditing. Logs include who accessed what, the action they took, and even a full record showing which originating environments the accessed values are inherited from.
 
             - title: Ditch .env files
               description: |
@@ -310,7 +310,7 @@ products:
                 Integrate SSO and your [identity provider](/docs/administration/access-identity/scim/) with Pulumi, set [user permissions](/docs/administration/organizations-teams/teams/) for each stack, and track user activity with [audit logs](/docs/pulumi-cloud/audit-logs/).
 
               more_info: |
-                Single sign-on with any [SAML 2.0](/docs/administration/access-identity/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
+                Single sign-on with any [SAML 2.0](/docs/administration/access-identity/saml/) identity provider like Azure Active Directory, Google Workspace, Okta, and OneLogin.
 
                 Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/administration/access-identity/scim/).
 

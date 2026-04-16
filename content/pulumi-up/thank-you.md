@@ -131,7 +131,7 @@ templates:
           action: Try it
           link: /templates/serverless-application
         - heading: Kubernetes Application Templates
-          description: Build and deploy applications with programming languages and deploying them to your Kubernetes clusters.
+          description: Build and deploy applications with programming languages and deploy them to your Kubernetes clusters.
           image: /images/kubecon/templates-kubernetes-application.png
           action: Try it
           link: /templates/kubernetes-application
