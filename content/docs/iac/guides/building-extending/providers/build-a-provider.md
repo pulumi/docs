@@ -45,7 +45,7 @@ Pulumi providers are [gRPC](https://grpc.io/) servers that respond to commands f
 
 Beyond the core functions involved with managing resources, there are a number of other aspects to a Pulumi provider. It is necessary to configure the provider, pass secrets, return output values, and store the state of resources. The Pulumi provider interface has built-in facilities for all of those concerns:
 
-- **Configuration and Secrets**: Set via [Pulumi ESC](/docs/esc/) [environments](/docs/esc/environments/) and/or `pulumi config`. Encrypted secrets and configuration values are passed to the provider at runtime.
+- **Configuration and Secrets**: Set via [Pulumi ESC](/docs/esc/) [environments](/docs/esc/environments/) and/or `pulumi config`. Encrypted secrets and configuration values are passed to the provider at runtime. See [Provider configuration](/docs/iac/guides/building-extending/providers/provider-configuration/) for a detailed guide on declaring config keys, secrets, and environment variable defaults.
 - **Outputs**: Providers return outputs from resources, which can be referenced by other resources.
 - **State**: Pulumi maintains resource state to track dependencies and detect changes.
 
