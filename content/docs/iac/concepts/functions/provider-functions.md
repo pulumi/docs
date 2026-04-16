@@ -262,13 +262,13 @@ The direct form returns `(T, error)` synchronously. These functions are typicall
 
 {{% choosable language csharp %}}
 
-The direct form returns a `Task<T>`. These functions are typically named `GetX.Invoke()`.
+The direct form returns a `Task<T>`. These functions are typically named `GetX.InvokeAsync()`.
 
 {{% /choosable %}}
 
 {{% choosable language java %}}
 
-The direct form returns a `CompletableFuture<T>`. These functions are typically named `ModuleFunctions.getX()`.
+The direct form returns a `CompletableFuture<T>`. These functions are typically named `ModuleFunctions.getXPlain()`.
 
 {{% /choosable %}}
 
@@ -282,7 +282,47 @@ The direct form is invoked using `fn::invoke`. The result is resolved synchronou
 
 ### Output form
 
-The **output form** accepts Pulumi Inputs (or plain values) as arguments and returns a Pulumi Output as a result. For more information on these types, see [Inputs and Outputs](/docs/concepts/inputs-outputs/). These functions are typically named, e.g., `getXOutput()`.
+The **output form** accepts Pulumi Inputs (or plain values) as arguments and returns a Pulumi Output as a result. For more information on these types, see [Inputs and Outputs](/docs/concepts/inputs-outputs/).
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+The output form returns an `Output<T>`. These functions are typically named `getXOutput()`.
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+The output form returns an `Output[T]`. These functions are typically named `get_x_output()`.
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+The output form returns a `LookupXResultOutput`. These functions are typically named `LookupXOutput()`.
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+The output form returns an `Output<T>`. These functions are typically named `GetX.Invoke()`.
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+The output form returns an `Output<T>`. These functions are typically named `ModuleFunctions.getX()`.
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+YAML does not distinguish between direct and output forms; both are invoked using `fn::invoke`.
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 The [Pulumi Registry](/registry) contains authoritative documentation for all provider functions.
 
