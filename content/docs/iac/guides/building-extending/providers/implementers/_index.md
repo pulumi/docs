@@ -42,4 +42,4 @@ You'll need gRPC bindings for your language (generated from `provider.proto`), a
 
 - [Provider architecture](/docs/iac/guides/building-extending/providers/provider-architecture/) - Understanding the layers
 - [Schema reference](/docs/iac/guides/building-extending/packages/schema/) - Complete schema documentation
-- [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) - Higher-level Go SDK
+- [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) - Higher-level Go SDK

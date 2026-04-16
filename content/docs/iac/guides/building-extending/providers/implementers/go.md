@@ -11,10 +11,10 @@ menu:
         weight: 30
 ---
 
-This guide shows how to implement a Pulumi provider in Go using the gRPC bindings directly, without the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/). This approach gives you full control over provider behavior and schema definition.
+This guide shows how to implement a Pulumi provider in Go using the gRPC bindings directly, without the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/). This approach gives you full control over provider behavior and schema definition.
 
 {{% notes type="info" %}}
-For most Go providers, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) provides a more ergonomic experience with schema inference and less boilerplate. Use this direct approach when you need precise control over the protocol or want to understand exactly how providers work.
+For most Go providers, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) provides a more ergonomic experience with schema inference and less boilerplate. Use this direct approach when you need precise control over the protocol or want to understand exactly how providers work.
 {{% /notes %}}
 
 ## Prerequisites
@@ -475,7 +475,7 @@ func (f FileInputs) toMap() map[string]any {
 }
 ```
 
-The [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) handles both dispatching and property bag serialization automatically based on Go struct definitions and tags.
+The [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) handles both dispatching and property bag serialization automatically based on Go struct definitions and tags.
 
 ## Advantages of Go
 
