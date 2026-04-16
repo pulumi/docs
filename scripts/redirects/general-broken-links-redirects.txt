@@ -74,3 +74,7 @@ images/logo/logo-white-white.svg|/logos/brand/logo-white-white.svg
 images/logo/logo-white.svg|/logos/brand/logo-white.svg
 images/logo/logo.svg|/logos/brand/logo.svg
 images/logo/pulumi_mark_on_light.svg|/logos/brand/pulumi_mark_on_light.svg
+jobs/index.html|/careers/
+company/jobs/index.html|/careers/
+careers/jobs/index.html|/careers/
+company/pulumi/jobs/index.html|/careers/
