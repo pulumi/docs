@@ -6,7 +6,7 @@ h1: Provider Protocol Reference
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Protocol reference
+        name: Protocol Reference
         parent: iac-guides-provider-implementers
         weight: 10
 ---

@@ -6,7 +6,7 @@ h1: Build a Provider
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Build a provider
+        name: Build a Provider
         parent: iac-guides-providers
         weight: 30
 aliases:

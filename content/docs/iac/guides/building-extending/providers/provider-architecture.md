@@ -6,7 +6,7 @@ h1: Provider Architecture
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Provider architecture
+        name: Provider Architecture
         parent: iac-guides-providers
         weight: 20
 ---

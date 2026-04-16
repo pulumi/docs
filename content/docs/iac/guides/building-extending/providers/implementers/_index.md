@@ -6,7 +6,7 @@ h1: Direct Provider Implementation
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Direct implementation
+        name: Direct Implementation
         identifier: iac-guides-provider-implementers
         parent: iac-guides-providers
         weight: 50
