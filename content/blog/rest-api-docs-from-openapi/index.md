@@ -31,21 +31,21 @@ Generating the reference from the OpenAPI spec closes that gap. When the API shi
 
 The reference at `/docs/reference/cloud-rest-api/` now includes:
 
-1. **One page per API category**, generated from the OpenAPI tags: Stacks, Deployments, Environments, Organizations, Registry, Insights, AI, Workflows, and more. Each page lists every endpoint under that tag with its method, path, parameters, request body, and response schemas.
-1. **A full [schema reference](/docs/reference/cloud-rest-api/schema/)** covering every component in the spec, several hundred in all. Parameter and response types link directly to their schema definitions, so you can follow a `stackReference` field straight to the full object shape.
-1. **Cross-linked schemas.** When an endpoint returns a complex type, the type name is a link, so you can jump straight to the definition instead of scrolling a giant single page.
-1. **Editorial intros per tag.** Each category page has a short, handwritten intro above the endpoint list explaining what the API area is for and when to use it. These live in the repo at [`assets/openapi/tag-intros/`](https://github.com/pulumi/docs/tree/master/assets/openapi/tag-intros); send a PR to improve the framing or add context.
+1. Find what you need faster
+    * Endpoints are grouped by product area — Stacks, Deployments, Environments, Organizations, Registry, Insights, AI, Workflows, and more — so you can jump straight to the part of the API you're working with.
+1. Complete request and response details
+    * Every endpoint documents its parameters, request body, and the exact shape of what it returns, so you know what to send and what to expect back without guessing.
+1. One-click navigation between related types
+    * When a response references another object, the type name is a link. Click through to drill into its full definition if desired instead of scrolling a lengthy API reference page.
 
 ## Same URL, existing links keep working
 
-The generated docs live at the same URL as the previous reference: `/docs/reference/cloud-rest-api/`. Bookmarks, blog links, and inbound search traffic still land on the right page. Aliases are in place for every old subpage path, so links like `/docs/reference/cloud-rest-api/webhooks/` redirect to the new index.
-
-One caveat: deep anchor links into the old single-page structure (for example `#data-export`) won't scroll to a matching heading anymore, because endpoints now live on per-tag pages. Those links still reach the reference — they just land on the index rather than a specific heading.
+The generated docs live at the same URL as the previous reference: `/docs/reference/cloud-rest-api/`. Bookmarks, blog links, and inbound search traffic still land on the right page. Redirects are in place for any API reference docs page that has been tweaked, renamed, or moved.
 
 ## Try it out
 
-Start at the new [REST API reference](/docs/reference/cloud-rest-api/) and browse by category, or jump straight to the [schema reference](/docs/reference/cloud-rest-api/schema/) if you want to see every component in one place.
+Start at the new [REST API reference](/docs/reference/cloud-rest-api/) and browse by category, or jump straight to the [schema reference](/docs/reference/cloud-rest-api/schema/) if you want to drill into request/response objects in one place.
 
-If you spot anything that looks wrong, the most likely culprit is the OpenAPI spec itself — file an issue and we'll trace it back to the source. For tag intros and structural improvements, PRs to [pulumi/docs](https://github.com/pulumi/docs) are welcome. Questions and feedback are always welcome in the [Pulumi Community Slack](https://slack.pulumi.com).
+If you spot anything that looks wrong, the most likely culprit is the OpenAPI spec itself — file an issue in [pulumi/docs](https://github.com/pulumi/docs) and we'll trace it back to the source. For tag intros and structural improvements, PRs to [pulumi/docs](https://github.com/pulumi/docs) are welcome. Questions and feedback are always welcome in the [Pulumi Community Slack](https://slack.pulumi.com).
 
 {{< blog/cta-button "Explore the REST API" "/docs/reference/cloud-rest-api/" >}}
