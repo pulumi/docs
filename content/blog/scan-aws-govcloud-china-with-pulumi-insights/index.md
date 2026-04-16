@@ -2,7 +2,7 @@
 title: "Scan AWS GovCloud and more partitions with Pulumi Insights"
 date: 2026-04-14T09:00:00-00:00
 draft: false
-meta_desc: Pulumi Insights now scans every AWS partition — GovCloud, China, the European Sovereign Cloud, and the ISO intelligence-community clouds — in addition to Standard commercial.
+meta_desc: Pulumi Insights now scans every AWS partition — GovCloud, ISO, European Sovereign, China — alongside Standard commercial.
 meta_image: meta.png
 feature_image: feature.png
 authors:
