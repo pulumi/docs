@@ -36,7 +36,7 @@ The [Pulumi Cloud REST API reference](/docs/reference/cloud-rest-api/) is now ge
 
 ## Why this matters
 
-The previous REST API reference was a set of handwritten pages. That meant every new endpoint, renamed parameter, or revised response shape needed a matching docs PR, and in practice the pages drifted. Small inconsistencies added up: missing parameters, outdated request shapes, schemas that no longer matched what the API returned. We've heard feedback in this area, and wanted to respond with a durable solution for docs accuracy that will scale with us.
+The previous REST API reference was a set of handwritten pages. That meant every new endpoint, renamed parameter, or revised response shape needed a matching docs PR, and in practice the pages drifted. Small inconsistencies added up: missing parameters, outdated request shapes, schemas that no longer matched what the API returned. We wanted a durable fix that keeps the docs in sync as the API grows.
 
 Generating the reference from the OpenAPI spec closes that gap. When the API ships a change, the docs pick it up automatically the next time our docs are built.
 
