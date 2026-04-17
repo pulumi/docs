@@ -1,0 +1,152 @@
+{{ define "openapi/endpoint.html" }}
+<div class="endpoint-component">
+    <div class="endpoint-header" data-endpoint-id="{{ anchorize (printf "%s-%s" .method .path) }}" tabindex="0" role="button" aria-expanded="true">
+        {{/* TODO(pulumi/pulumi-service#41460): Remove this humanization once the Java IDL
+             generates human-friendly summary strings instead of PascalCase identifiers. */}}
+        {{ $displayName := .details.summary | default .details.operationId | default (printf "%s %s" (upper .method) .path) }}
+        {{ $displayName = replaceRE "([a-z])([A-Z])" "$1 $2" $displayName }}
+        {{ $displayName = replaceRE "([A-Z]+)([A-Z][a-z])" "$1 $2" $displayName }}
+        {{ $displayName = replace $displayName "Git Hub" "GitHub" }}
+        {{ $displayName = replace $displayName "Git Lab" "GitLab" }}
+        {{ $displayName = replace $displayName "Dev Ops" "DevOps" }}
+        {{ $displayName = replace $displayName "Oidc" "OIDC" }}
+        <h3 id="{{ anchorize (printf "%s-%s" .method .path) }}">{{ $displayName }}</h3>
+        <span class="toggle-icon" id="toggle-{{ anchorize (printf "%s-%s" .method .path) }}">▼</span>
+    </div>
+    <div class="endpoint-content" id="content-{{ anchorize (printf "%s-%s" .method .path) }}">
+        {{ if .details.deprecated }}
+            <div class="deprecated-warning">
+                <strong>Deprecated.</strong>
+                {{ with .details.pulumiRouteProperty }}
+                    {{ with .SupersededBy }}Use <code>{{ . }}</code> instead.{{ end }}
+                {{ end }}
+            </div>
+        {{ end }}
+        {{ with .details.pulumiRouteProperty }}
+            {{ if eq (.Visibility | default "") "Preview" }}
+                <div class="preview-notice">
+                    <strong>Preview.</strong> This endpoint is in preview and may change without notice.
+                </div>
+            {{ end }}
+        {{ end }}
+        <div class="endpoint-signature">
+            <span class="endpoint-method endpoint-method-{{ lower .method }}">{{ upper .method }}</span>
+            <code class="endpoint-path">{{ .path }}</code>
+        </div>
+        {{ with .details.description }}<p>{{ . | markdownify }}</p>{{ end }}
+
+        {{ template "openapi/parameters.html" (dict "parameters" .details.parameters "openapi" $.openapi) }}
+
+        {{ with .details.requestBody }}
+            {{ $jsonContent := index .content "application/json" }}
+            {{ with $jsonContent }}
+                {{ $schema := .schema }}
+                {{ if $schema }}
+                    <h4>Request Body</h4>
+                    {{ if isset $schema "$ref" }}
+                        {{ $refPath := index $schema "$ref" }}
+                        {{ $refParts := split $refPath "/" }}
+                        {{ $schemaName := index $refParts (sub (len $refParts) 1) }}
+                        {{ $schemaDetails := "" }}
+                        {{ if isset $.openapi.components.schemas $schemaName }}
+                            {{ $schemaDetails = index $.openapi.components.schemas $schemaName }}
+                        {{ end }}
+                        {{ if $schemaDetails }}
+                            <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-api/schema/{{ $schemaName | urlize }}/">{{ $schemaName }}</a></div>
+                            {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schemaDetails "openapi" $.openapi) }}
+                            {{ if $resolved.properties }}
+                                <ul class="api-params">
+                                    {{ partial "openapi/property-rows.html" (dict
+                                        "properties" $resolved.properties
+                                        "required" $resolved.required
+                                        "openapi" $.openapi
+                                        "depth" 0
+                                        "maxDepth" 1
+                                    ) }}
+                                </ul>
+                            {{ end }}
+                        {{ end }}
+                    {{ else }}
+                        {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schema "openapi" $.openapi) }}
+                        {{ if $resolved.properties }}
+                        <ul class="api-params">
+                            {{ partial "openapi/property-rows.html" (dict
+                                "properties" $resolved.properties
+                                "required" ($resolved.required | default slice)
+                                "openapi" $.openapi
+                                "depth" 0
+                                "maxDepth" 1
+                            ) }}
+                        </ul>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+        {{/* Request/response examples hidden for now — revisit once example
+             quality is validated across the full public spec. */}}
+        {{/* {{ template "openapi/request-example.html" (dict "method" .method "path" .path "details" .details) }} */}}
+
+        <h4>Responses</h4>
+        {{/* Split responses: inline-rendered (all 2xx + any 4xx/5xx with a JSON schema) vs. stock errors (4xx/5xx with no schema, rendered as compact chip row). */}}
+        {{ $inlineCodes := slice }}
+        {{ $stockErrorCodes := slice }}
+        {{ range $responseCode, $responseDetails := .details.responses }}
+            {{/* Skip non-numeric keys (e.g. "default", "2XX") — int coercion returns 0, misclassifying them as 2xx. */}}
+            {{ if not (findRE "^\\d{3}$" $responseCode) }}{{ continue }}{{ end }}
+            {{ $hasSchema := false }}
+            {{ if isset $responseDetails "content" }}
+                {{ if isset $responseDetails.content "application/json" }}
+                    {{ if index $responseDetails.content "application/json" "schema" }}
+                        {{ $hasSchema = true }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+            {{ if or (lt (int $responseCode) 400) $hasSchema }}
+                {{ $inlineCodes = $inlineCodes | append $responseCode }}
+            {{ else }}
+                {{ $stockErrorCodes = $stockErrorCodes | append $responseCode }}
+            {{ end }}
+        {{ end }}
+        {{ $inlineCodes = sort $inlineCodes }}
+        {{ $stockErrorCodes = sort $stockErrorCodes }}
+
+        {{ range $responseCode := $inlineCodes }}
+            {{ $responseDetails := index $.details.responses $responseCode }}
+            {{ $codeInt := int $responseCode }}
+            {{ $chipClass := "api-status-2xx" }}
+            {{ if ge $codeInt 500 }}{{ $chipClass = "api-status-5xx" }}
+            {{ else if ge $codeInt 400 }}{{ $chipClass = "api-status-4xx" }}
+            {{ else if ge $codeInt 300 }}{{ $chipClass = "api-status-3xx" }}
+            {{ end }}
+            <div class="api-response">
+                <div class="api-response-header">
+                    <span class="api-status-chip {{ $chipClass }}">{{ $responseCode }}</span>
+                    {{ with $responseDetails.description }}<span class="api-response-summary">{{ . | markdownify }}</span>{{ end }}
+                </div>
+                {{ if isset $responseDetails "content" }}
+                    {{ if isset $responseDetails.content "application/json" }}
+                        {{ $schema := index $responseDetails.content "application/json" "schema" }}
+                        {{ template "openapi/response-schema.html" (dict "schema" $schema "openapi" $.openapi) }}
+                        {{/* {{ template "openapi/examples.html" (dict "responseDetails" $responseDetails "responseCode" $responseCode "openapi" $.openapi) }} */}}
+                    {{ end }}
+                {{ end }}
+            </div>
+        {{ end }}
+
+        {{ if $stockErrorCodes }}
+            <div class="api-response-errors">
+                <span class="api-response-errors-label">Errors:</span>
+                {{ range $responseCode := $stockErrorCodes }}
+                    {{ $responseDetails := index $.details.responses $responseCode }}
+                    {{ $codeInt := int $responseCode }}
+                    {{ $chipClass := "api-status-4xx" }}
+                    {{ if ge $codeInt 500 }}{{ $chipClass = "api-status-5xx" }}{{ end }}
+                    <span class="api-status-chip {{ $chipClass }}"{{ with $responseDetails.description }} title="{{ . | htmlEscape }}"{{ end }}>{{ $responseCode }}{{ with $responseDetails.description }} <span class="api-status-chip-desc">{{ . }}</span>{{ end }}</span>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

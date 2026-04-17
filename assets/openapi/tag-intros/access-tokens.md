@@ -1,0 +1,1 @@
+Access Tokens are credentials used to authenticate with the Pulumi Cloud API. The Access Tokens API covers both personal access tokens (PATs) for individual users and organization-level tokens for team use.

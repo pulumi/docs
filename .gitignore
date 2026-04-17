@@ -60,6 +60,7 @@ static/js/algolia.*.js
 static/js/homepage.*.js
 static/js/marketing.*.js
 data/js_manifest.json
+data/openapi-spec.json
 
 # Ignore webpack-generated assets from the build process.
 /assets/css/
