@@ -22,7 +22,7 @@
 
         <div style="display: flex; flex-direction: column; align-items: stretch;" data-openapi-content="true">
             {{ $endpointGroups := dict }}
-            
+
             <!-- Group endpoints by their appropriate category -->
             {{ $httpMethods := slice "get" "post" "put" "patch" "delete" "head" "options" }}
             {{ range $path, $pathMethods := $openapi.paths }}

@@ -5,7 +5,7 @@ The Pulumi Cloud REST API is used by the Pulumi CLI to query and interact with s
 
 For the Managed Pulumi Cloud (i.e. [app.pulumi.com](https://app.pulumi.com/)), API endpoints are prefixed with the following URL:
 
-```
+```text
 https://api.pulumi.com
 ```
 
@@ -17,7 +17,7 @@ All requests must be authenticated using a token via the `Authorization` HTTP he
 
 The `Authorization` header must be in the form below with the literal string `token`, then a space, then your access token value.
 
-```
+```text
 Authorization: token {token}
 ```
 
@@ -29,7 +29,7 @@ The Pulumi Cloud REST API will return a 401 status code if the token is missing 
 
 The following headers are required for all operations except where explicitly noted:
 
-```
+```text
 Accept: application/vnd.pulumi+8
 Content-Type: application/json
 ```
