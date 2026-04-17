@@ -5,6 +5,9 @@
     {{ $css := resources.Get "fingerprinted/css/openapi.css" | fingerprint }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 {{ end }}
+{{ if not (index $openapi.components.schemas $name) }}
+    <p>Schema <code>{{ $name }}</code> not found in the OpenAPI specification.</p>
+{{ end }}
 {{ with index $openapi.components.schemas $name }}
     {{ $schema := . }}
     {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schema "openapi" $openapi) }}
