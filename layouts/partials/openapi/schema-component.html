@@ -4,45 +4,48 @@
 {{ with $openapi }}
     {{ $css := resources.Get "fingerprinted/css/openapi.css" | fingerprint }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-{{ end }}
-{{ if not (index $openapi.components.schemas $name) }}
-    <p>Schema <code>{{ $name }}</code> not found in the OpenAPI specification.</p>
-{{ end }}
-{{ with index $openapi.components.schemas $name }}
-    {{ $schema := . }}
-    {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schema "openapi" $openapi) }}
 
-    {{ $desc := $schema.description | default $resolved.description | default "" }}
-    {{ if $desc }}
-        <p>{{ $desc | markdownify }}</p>
+    {{ if not (index .components.schemas $name) }}
+        <p>Schema <code>{{ $name }}</code> not found in the OpenAPI specification.</p>
     {{ end }}
+    {{ with index .components.schemas $name }}
+        {{ $schema := . }}
+        {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schema "openapi" $openapi) }}
 
-    {{ if and $schema.type (ne $schema.type "object") (not (isset $schema "enum")) }}
-        <p><strong>Type:</strong> <code>{{ $schema.type }}</code></p>
-    {{ end }}
+        {{ $desc := $schema.description | default $resolved.description | default "" }}
+        {{ if $desc }}
+            <p>{{ $desc | markdownify }}</p>
+        {{ end }}
 
-    {{ if isset $schema "enum" }}
-        <div class="enum-values">
-            <strong>Values:</strong>
-            {{ range $i, $v := $schema.enum }}{{ if $i }}, {{ end }}<code>{{ $v }}</code>{{ end }}
-        </div>
-    {{ end }}
+        {{ if and $schema.type (ne $schema.type "object") (not (isset $schema "enum")) }}
+            <p><strong>Type:</strong> <code>{{ $schema.type }}</code></p>
+        {{ end }}
 
-    {{ if $resolved.properties }}
-        <h2 id="properties">Properties</h2>
-        <ul class="api-params">
-            {{ partial "openapi/property-rows.html" (dict
-                "properties" $resolved.properties
-                "required" $resolved.required
-                "openapi" $openapi
-                "depth" 0
-                "maxDepth" 1
-            ) }}
-        </ul>
-    {{ end }}
+        {{ if isset $schema "enum" }}
+            <div class="enum-values">
+                <strong>Values:</strong>
+                {{ range $i, $v := $schema.enum }}{{ if $i }}, {{ end }}<code>{{ $v }}</code>{{ end }}
+            </div>
+        {{ end }}
 
-    {{ if $schema.example }}
-        <h2 id="example">Example</h2>
-        <pre><code>{{ $schema.example | jsonify (dict "indent" "  ") }}</code></pre>
+        {{ if $resolved.properties }}
+            <h2 id="properties">Properties</h2>
+            <ul class="api-params">
+                {{ partial "openapi/property-rows.html" (dict
+                    "properties" $resolved.properties
+                    "required" $resolved.required
+                    "openapi" $openapi
+                    "depth" 0
+                    "maxDepth" 1
+                ) }}
+            </ul>
+        {{ end }}
+
+        {{ if $schema.example }}
+            <h2 id="example">Example</h2>
+            <pre><code>{{ $schema.example | jsonify (dict "indent" "  ") }}</code></pre>
+        {{ end }}
     {{ end }}
+{{ else }}
+    <p>OpenAPI specification not available. Run <code>make ensure</code> to download it.</p>
 {{ end }}
