@@ -52,7 +52,7 @@ Your organization might publish a package that contains components like:
 Platform teams can use components to codify infrastructure best practices, security policies, and compliance requirements as reusable building blocks. When published to the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/), packages containing components become discoverable across the organization and can be consumed by any team without needing to understand the underlying implementation.
 
 {{< notes type="info" >}}
-Components are analogous to [Terraform modules](https://developer.hashicorp.com/terraform/language/modules) and [AWS CDK Constructs](https://docs.aws.amazon.com/cdk/v2/guide/constructs.html). Pulumi also lets you consume Terraform modules and CDK constructs directly in your Pulumi programs. See [Use a Terraform Module](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) and [Pulumi CDK Adapter](/docs/iac/clouds/aws/guides/cdk/).
+Components are analogous to [Terraform modules](https://developer.hashicorp.com/terraform/language/modules) and [AWS CDK Constructs](https://docs.aws.amazon.com/cdk/v2/guide/constructs.html). Pulumi also lets you consume Terraform modules and CDK constructs directly in your Pulumi programs. See [Use a Terraform Module](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) and [Pulumi CDK Adapter](/docs/iac/guides/clouds/aws/cdk/).
 {{< /notes >}}
 
 ## Consuming components
