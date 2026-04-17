@@ -459,12 +459,12 @@ In addition to its logical name, physical name, and URN, every resource that Pul
 
 Unlike the logical name (which you choose) or the URN (which Pulumi derives), the physical ID is assigned by the provider and is specific to that provider's conventions:
 
-- AWS resources use ARNs (`arn:aws:s3:::my-bucket`) or short identifiers (`i-0abc1234def5678`), depending on the resource type.
+- AWS resources use short identifiers such as bucket names (`my-bucket-d7c3a1f`) or resource-specific IDs (`vpc-0abc1234def5678`, `i-0abc1234def5678`). The ARN is typically a separate `arn` output property, not the `id`.
 - Azure resources use long ARM IDs (`/subscriptions/<sub>/resourceGroups/<rg>/providers/...`).
 - GCP resources use self-link URLs (`https://www.googleapis.com/compute/v1/projects/...`).
 - Generic resources often use simple strings or numeric IDs.
 
-Because `id` is an output, it is wrapped in Pulumi's `Output<T>` type and is not known until the resource has been created or updated. You access it just like any other output — by passing it directly to another resource's input or by using `apply` when you need to transform the value in code.
+Because `id` is an output, it is wrapped in Pulumi's `Output<T>` type and is not known until the resource has been created or updated. You access it just like any other output — by passing it directly to another resource's input or by using `.apply()` when you need to transform the value in code.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -476,9 +476,10 @@ import * as aws from "@pulumi/aws";
 const bucket = new aws.s3.Bucket("my-bucket");
 
 // bucket.id is an Output<string> — the AWS-assigned bucket name.
-const replica = new aws.s3.BucketReplication("replica", {
+const obj = new aws.s3.BucketObject("hello.txt", {
     bucket: bucket.id,   // Pass Output<string> directly — no .apply() needed.
-    // ...
+    content: "Hello, Pulumi!",
+    key: "hello.txt",
 });
 ```
 
@@ -493,9 +494,11 @@ import pulumi_aws as aws
 bucket = aws.s3.Bucket("my-bucket")
 
 # bucket.id is an Output[str] — the AWS-assigned bucket name.
-replica = aws.s3.BucketReplication(
-    "replica",
+obj = aws.s3.BucketObject(
+    "hello.txt",
     bucket=bucket.id,   # Pass Output[str] directly — no apply() needed.
+    content="Hello, Pulumi!",
+    key="hello.txt",
 )
 ```
 
@@ -510,8 +513,10 @@ if err != nil {
 }
 
 // bucket.ID() returns pulumi.IDOutput — the AWS-assigned bucket name.
-_, err = s3.NewBucketReplication(ctx, "replica", &s3.BucketReplicationArgs{
-    Bucket: bucket.ID(), // Pass IDOutput directly.
+_, err = s3.NewBucketObject(ctx, "hello.txt", &s3.BucketObjectArgs{
+    Bucket:  bucket.ID(), // Pass IDOutput directly.
+    Content: pulumi.String("Hello, Pulumi!"),
+    Key:     pulumi.String("hello.txt"),
 })
 ```
 
@@ -523,9 +528,11 @@ _, err = s3.NewBucketReplication(ctx, "replica", &s3.BucketReplicationArgs{
 var bucket = new Aws.S3.Bucket("my-bucket");
 
 // bucket.Id is an Output<string> — the AWS-assigned bucket name.
-var replica = new Aws.S3.BucketReplication("replica", new()
+var obj = new Aws.S3.BucketObject("hello.txt", new()
 {
-    Bucket = bucket.Id,  // Pass Output<string> directly.
+    BucketName = bucket.Id,  // Pass Output<string> directly.
+    Content = "Hello, Pulumi!",
+    Key = "hello.txt",
 });
 ```
 
@@ -537,8 +544,10 @@ var replica = new Aws.S3.BucketReplication("replica", new()
 var bucket = new Bucket("my-bucket");
 
 // bucket.id() returns Output<String> — the AWS-assigned bucket name.
-var replica = new BucketReplication("replica", BucketReplicationArgs.builder()
-    .bucket(bucket.id())
+var obj = new BucketObject("hello.txt", BucketObjectArgs.builder()
+    .bucket(bucket.id())   // Pass Output<String> directly.
+    .content("Hello, Pulumi!")
+    .key("hello.txt")
     .build());
 ```
 
@@ -550,10 +559,12 @@ var replica = new BucketReplication("replica", BucketReplicationArgs.builder()
 resources:
   my-bucket:
     type: aws:s3:Bucket
-  replica:
-    type: aws:s3:BucketReplication
+  hello-txt:
+    type: aws:s3:BucketObject
     properties:
       bucket: ${my-bucket.id}
+      content: "Hello, Pulumi!"
+      key: hello.txt
 ```
 
 {{% /choosable %}}
@@ -577,12 +588,12 @@ Pulumi uses four distinct forms of resource identity, each suited to a different
 |---|---|---|---|
 | **Logical name** | Your code — the first constructor argument | `"my-bucket"` | Passed to the resource constructor. Drives the URN and often the physical name prefix. |
 | **Physical name** | Provider, influenced by your logical name and auto-naming | `"my-bucket-d7c3a1f"` | Used in provider API calls. Read back via provider-specific output properties (e.g., `bucket`, `name`). |
-| **Physical ID** | Provider — returned after the resource is created | `"arn:aws:s3:::my-bucket-d7c3a1f"` or `"my-bucket-d7c3a1f"` | Pass to `import`, `get`, and provider APIs that accept a resource reference by ID. Access via `resource.id`. |
+| **Physical ID** | Provider — returned after the resource is created | `"my-bucket-d7c3a1f"` (S3), `"vpc-0abc1234def5678"` (VPC), `"/subscriptions/.../resourceGroups/..."` (Azure) | Pass to `import`, `get`, and provider APIs that accept a resource reference by ID. Access via `resource.id`. |
 | **URN** | Pulumi — derived from project, stack, type, and logical name | `"urn:pulumi:dev::app::aws:s3/bucket:Bucket::my-bucket"` | Pulumi CLI commands (`pulumi state`, `pulumi import`). Rarely used in program code. Access via `resource.urn`. |
-| **Resource reference** | Your program — the variable holding the resource object | `bucket` (the Python/TS/Go variable) | Pass to [`ResourceOptions`](/docs/iac/concepts/resources/options/) fields (`parent`, `dependsOn`, `provider`, `deletedWith`). Never pass a URN or ID here. |
+| **Resource reference** | Your program — the variable holding the resource object | `bucket` (the Python/TS/Go variable) | Pass to [`ResourceOptions`](/docs/iac/concepts/resources/options/) fields (`parent`, `depends_on`, `provider`, `deleted_with`). Never pass a URN or ID here. |
 
 The most frequent source of confusion is the distinction between the physical ID (`resource.id`) and the URN (`resource.urn`). The physical ID is what cloud provider APIs and the Pulumi import system expect. The URN is Pulumi-internal and is almost never needed in application code.
 
 {{% notes type="info" %}}
-The `dependsOn` option accepts a list of **resource references** (the variable itself), not URNs or IDs. Pass `dependsOn=[bucket]` in Python, not `dependsOn=[bucket.urn]`.
+The `dependsOn` option accepts a list of **resource references** (the variable itself), not URNs or IDs. In Python the field is `depends_on` — pass `depends_on=[bucket]`, not `depends_on=[bucket.urn]`.
 {{% /notes %}}

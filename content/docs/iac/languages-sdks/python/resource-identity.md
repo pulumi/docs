@@ -20,18 +20,7 @@ Pulumi resources carry [four distinct forms of identity](/docs/iac/concepts/reso
 
 ## How resource identity maps to Python
 
-When you construct a resource in Python, you supply the **logical name** as the first positional argument. Everything else — physical name, physical ID, URN — is produced by Pulumi or the cloud provider at deploy time.
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-# "main-vpc" is the logical name. It feeds into the URN and influences
-# the physical name (e.g., "main-vpc-3f8a2b1").
-vpc = aws.ec2.Vpc("main-vpc", cidr_block="10.0.0.0/16")
-```
-
-After the resource is created, you can access the four identity forms as output properties:
+The first positional argument you pass to a resource constructor is the **logical name** — Pulumi uses it for state tracking, URN generation, and as the prefix for the auto-generated physical name. After the resource is created, you can access the remaining identity forms as output properties:
 
 ```python
 # Physical ID: the AWS-assigned VPC ID (e.g., "vpc-0abc123def456789").
@@ -66,10 +55,10 @@ Pulumi automatically resolves `Output[str]` values and establishes the correct c
 
 ### Resource references: ResourceOptions fields
 
-Fields in [`ResourceOptions`](/docs/iac/concepts/resources/options/) — `parent`, `dependsOn`, `provider`, `deletedWith` — accept the **resource object itself**, not a URN or ID:
+Fields in [`ResourceOptions`](/docs/iac/concepts/resources/options/) — `parent`, `depends_on`, `provider`, `deleted_with` — accept the **resource object itself**, not a URN or ID:
 
 ```python
-# CORRECT: pass the resource variable to parent and dependsOn.
+# CORRECT: pass the resource variable to parent and depends_on.
 subnet = aws.ec2.Subnet(
     "main-subnet",
     vpc_id=vpc.id,
@@ -162,7 +151,7 @@ A common over-use of `.apply()` is extracting an ID just to pass it directly to 
 # UNNECESSARY — Pulumi accepts Output[str] directly.
 subnet = aws.ec2.Subnet(
     "main-subnet",
-    vpc_id=vpc.id.apply(lambda id: id),  # No-op apply
+    vpc_id=vpc.id.apply(lambda value: value),  # No-op apply
     ...
 )
 
