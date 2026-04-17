@@ -1,5 +1,5 @@
 {{/* Lists all child pages that have openapi_docs=true, plus the schema page. */}}
-{{ $section := .Page.Parent }}
+{{ $section := .Page.CurrentSection }}
 {{ $tagPages := slice }}
 {{ $schemaPage := false }}
 {{ range $section.Pages }}
