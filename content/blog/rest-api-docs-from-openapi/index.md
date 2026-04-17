@@ -51,6 +51,14 @@ The reference at `/docs/reference/cloud-rest-api/` now includes:
 1. One-click navigation between related types
     * When a response references another object, the type name is a link. Click through to drill into its full definition if desired instead of scrolling a lengthy API reference page.
 
+## What this unlocks for agents
+
+Keeping the reference in sync with the spec isn't just a human convenience. It changes what's reliable for AI agents that read the docs and call the API on your behalf. An agent reading a handwritten reference might see a parameter that was renamed six months ago, or miss a field the API now returns, and the call fails silently or in ways that are hard to debug. When the reference is generated from the spec, the agent is working from what the API actually accepts today.
+
+Say you're onboarding a new team and need to stand up their access in Pulumi Cloud. Point an agent at the REST API reference and ask it to create an `sre-oncall` team, add four members, and grant admin on three stacks. The agent walks the teams, memberships, and stack-permissions endpoints, builds the right sequence of calls, and executes.
+
+The same pattern holds for bulk audits and cleanup. Ask an agent to find every stack in your org with no recent updates and tag them `stale`, and it can paginate correctly because the response schema matches reality. While workflows like these were technically possible before, they're much more reliable now.
+
 ## Same URL, existing links keep working
 
 The generated docs live at the same URL as the previous reference: `/docs/reference/cloud-rest-api/`. Bookmarks, blog links, and inbound search traffic still land on the right page. Redirects are in place for any API reference docs page that has been tweaked, renamed, or moved.
