@@ -346,3 +346,9 @@ var example = new Instance("example", InstanceArgs.builder()
 
 {{% /choosable %}}
 {{< /chooser >}}
+
+## Resource identity and inputs
+
+When you pass one resource's output to another resource's input, you are almost always passing the resource's **physical ID** — the provider-assigned identifier that Pulumi exposes as `resource.id`. This is distinct from the resource's URN (which is Pulumi-internal) and the logical name (which is what you write in your code).
+
+Understanding which form of resource identity to use in a given context — physical ID vs. URN vs. resource reference — prevents the most common type-mismatch errors when wiring resources together. See [Resource names and identity](/docs/iac/concepts/resources/names/) for a full explanation of all four identity forms and a quick-reference table showing when to use each one.

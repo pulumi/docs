@@ -63,6 +63,14 @@ repo2 = aws.ecr.Repository("repo2-with-args",
     ))
 ```
 
+### Resource identity
+
+Every Pulumi resource exposes four forms of identity — its logical name, physical name, physical ID (`resource.id`), and URN (`resource.urn`) — and each form is appropriate for a different context. Passing the wrong form is the most common source of type errors when wiring Python resources together.
+
+For example, the `parent` and `depends_on` fields in `ResourceOptions` expect the **resource object itself**, not a string ID or URN. Conversely, most resource input properties that reference other resources (such as `vpc_id` on a subnet) expect the upstream resource's **`id` output** — an `Output[str]` — not the URN or the variable.
+
+See [Resource identity in Python](/docs/iac/languages-sdks/python/resource-identity/) for a complete guide to each identity form, common type-mismatch pitfalls, and debugging advice.
+
 ### Blocking and Asynchronous Code
 
 A Python Pulumi program is single threaded and the Pulumi runtime creates an
