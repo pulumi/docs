@@ -256,7 +256,7 @@ The direct form returns the result synchronously. These functions are typically 
 
 {{% choosable language go %}}
 
-The direct form returns `(T, error)` synchronously. These functions are typically named `LookupX()`.
+The direct form returns `(T, error)` synchronously. These functions are typically named `LookupX()` or `GetX()`.
 
 {{% /choosable %}}
 
@@ -300,7 +300,7 @@ The output form returns an `Output[T]`. These functions are typically named `get
 
 {{% choosable language go %}}
 
-The output form returns a `LookupXResultOutput`. These functions are typically named `LookupXOutput()`.
+The output form returns a `LookupXResultOutput` or `GetXResultOutput`. These functions are typically named `LookupXOutput()` or `GetXOutput()`.
 
 {{% /choosable %}}
 

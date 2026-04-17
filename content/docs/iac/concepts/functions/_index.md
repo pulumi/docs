@@ -28,15 +28,9 @@ For example, you might use a provider function to get the latest virtual machine
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language "typescript,csharp,java" %}}
+{{% choosable language "typescript,python,csharp,java" %}}
 
 **[Get functions](/docs/iac/concepts/functions/get-functions/)** are static methods available on all Pulumi resource classes that allow you to reference an existing resource that is not managed by Pulumi. Unlike the `pulumi import` command which brings resources under Pulumi management, get functions simply allow you to read the properties of existing resources.
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-**[Get functions](/docs/iac/concepts/functions/get-functions/)** are class methods available on all Pulumi resource classes that allow you to reference an existing resource that is not managed by Pulumi. Unlike the `pulumi import` command which brings resources under Pulumi management, get functions simply allow you to read the properties of existing resources.
 
 {{% /choosable %}}
 

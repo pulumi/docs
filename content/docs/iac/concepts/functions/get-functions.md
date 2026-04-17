@@ -20,15 +20,9 @@ aliases:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language "typescript,csharp,java" %}}
+{{% choosable language "typescript,python,csharp,java" %}}
 
 You can use the static `get` method, which is available on all resource classes, to look up an existing resource that is not managed by Pulumi.
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-You can use the `get` class method, which is available on all resource classes, to look up an existing resource that is not managed by Pulumi.
 
 {{% /choosable %}}
 
