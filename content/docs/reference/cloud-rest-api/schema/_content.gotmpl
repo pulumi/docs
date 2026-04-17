@@ -16,6 +16,15 @@
     {{ $name := . }}
     {{ $slug := $name | urlize }}
 
+    {{/* Add an alias from the original CamelCase name so external links
+         using the un-lowered form (e.g. /schema/AppStack/) don't 404. */}}
+    {{ $aliases := slice }}
+    {{ $camelSlug := $name | urlize }}
+    {{ $lowerSlug := $name | lower | urlize }}
+    {{ if ne $camelSlug $lowerSlug }}
+        {{ $aliases = $aliases | append (printf "/docs/reference/cloud-rest-api/schema/%s/" $camelSlug) }}
+    {{ end }}
+
     {{ $params := dict
         "h1" $name
         "title_tag" (printf "Pulumi Cloud REST API schema: %s" $name)
@@ -24,6 +33,7 @@
         "openapi_schema" true
         "schema_name" $name
         "notoc" true
+        "aliases" $aliases
     }}
 
     {{ $.AddPage (dict
