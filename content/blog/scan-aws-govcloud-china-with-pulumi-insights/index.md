@@ -36,10 +36,6 @@ You can also exclude specific regions from discovery — useful when regions are
 
 ![Choosing an AWS partition when creating an Insights account](aws-partition-picker.png)
 
-## Discovery stays inside the partition
-
-Credentials are exchanged against the partition's STS endpoint, and every scanner API call targets that partition's regional endpoints. Discovery traffic doesn't cross the boundary.
-
 ## Set it up
 
 In the Pulumi Cloud console:
