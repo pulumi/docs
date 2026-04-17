@@ -126,12 +126,12 @@ While most teams start by running the Pulumi CLI manually, you'll eventually wan
 **CI/CD platform options:**
 
 - **[Pulumi Deployments](https://www.pulumi.com/docs/deployments/deployments/)** (recommended): Purpose-built for IaC deployments and integrated into Pulumi Cloud
-- **[Pulumi Kubernetes Operator](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/)**: Trigger deployments from within Kubernetes clusters
+- **[Pulumi Kubernetes Operator](https://www.pulumi.com/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)**: Trigger deployments from within Kubernetes clusters
 - **Existing CI/CD solutions**: GitHub Actions, GitLab CI, Octopus Deploy, and [many others](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/)
 
-**GitHub users**: Install the [Pulumi GitHub App](/docs/version-control/github-app/) for instant GitOps workflow support, including deployment previews in pull requests.
+**GitHub users**: Install the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) for instant GitOps workflow support, including deployment previews in pull requests.
 
-**GitLab users**: Use the [Pulumi GitLab Integration](https://www.pulumi.com/docs/version-control/gitlab/) to set up Pipelines and Webhooks for GitLab CI/CD.
+**GitLab users**: Use the [Pulumi GitLab Integration](https://www.pulumi.com/docs/integrations/version-control/gitlab/) to set up Pipelines and Webhooks for GitLab CI/CD.
 
 **Setting up CI/CD:**
 

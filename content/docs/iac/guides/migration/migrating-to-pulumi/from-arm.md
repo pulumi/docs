@@ -532,4 +532,4 @@ After running `pulumi up` again, your storage account will become under the cont
 
 Ready to leave ARM behind? Start building Azure infrastructure the modern way with Pulumi.
 
-[Start Free with Pulumi](https://app.pulumi.com/signup) or [Explore Azure + Pulumi](https://www.pulumi.com/docs/iac/clouds/azure/)
+[Start Free with Pulumi](https://app.pulumi.com/signup) or [Explore Azure + Pulumi](https://www.pulumi.com/docs/integrations/clouds/azure/)

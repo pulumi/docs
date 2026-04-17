@@ -35,7 +35,6 @@ You'll need gRPC bindings for your language (generated from `provider.proto`), a
 
 - [Protocol reference](/docs/iac/guides/building-extending/providers/implementers/protocol-reference/) - Complete gRPC method documentation
 - [Python](/docs/iac/guides/building-extending/providers/implementers/python/) - Implement a provider in Python
-- [Go](/docs/iac/guides/building-extending/providers/implementers/go/) - Implement a provider in Go without the SDK
 - [TypeScript](/docs/iac/guides/building-extending/providers/implementers/typescript/) - Implement a provider in TypeScript
 
 ## Related resources

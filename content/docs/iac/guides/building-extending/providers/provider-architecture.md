@@ -23,8 +23,8 @@ Pulumi providers are built on a layered architecture. Understanding these layers
 
 ```
 ┌─────────────────────────────────────────┐
-│      Higher-level SDKs (Layer 3)        │  Convenience + opinions
-│         e.g., pulumi-go-provider        │  Schema inference, middleware
+│      Higher-level SDK (Layer 3)         │  Convenience + opinions
+│       pulumi-go-provider (Go only)      │  Schema inference, middleware
 ├─────────────────────────────────────────┤
 │   Generated language bindings (Layer 2) │  Direct implementation
 │      Go, Python, TypeScript, etc.       │  Full control, any language
@@ -52,9 +52,9 @@ At this layer, you implement the provider interface directly. You write your [sc
 
 Choose this layer when you need a provider in a language without a higher-level SDK, when you want full control over your schema and data structure mappings, when you're building something unusual that doesn't fit SDK patterns, or when you prefer explicit protocol handling over framework abstractions.
 
-For implementation guides, see [Direct implementation in Python](/docs/iac/guides/building-extending/providers/implementers/python/), [Direct implementation in Go](/docs/iac/guides/building-extending/providers/implementers/go/), or [Direct implementation in TypeScript](/docs/iac/guides/building-extending/providers/implementers/typescript/).
+For implementation guides, see [Direct implementation in Python](/docs/iac/guides/building-extending/providers/implementers/python/) or [Direct implementation in TypeScript](/docs/iac/guides/building-extending/providers/implementers/typescript/).
 
-### Layer 3: Higher-level SDKs
+### Layer 3: Higher-level SDK (Go only)
 
 SDKs build on the language bindings to provide a more ergonomic development experience. Currently, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) is available for Go.
 
@@ -94,4 +94,4 @@ The schema can be hand-written JSON when using Layer 2, or inferred from code wh
 
 ## Next steps
 
-To get started quickly with the Go SDK, see [Build a provider](/docs/iac/guides/building-extending/providers/build-a-provider/). For direct implementation, start with the [Protocol reference](/docs/iac/guides/building-extending/providers/implementers/protocol-reference/). For Python providers specifically, see [Direct implementation in Python](/docs/iac/guides/building-extending/providers/implementers/python/). For schema details, see [Schema reference](/docs/iac/guides/building-extending/packages/schema/).
+To get started quickly with the Go SDK, see [Build a provider](/docs/iac/guides/building-extending/providers/build-a-provider/). For direct implementation, see [Direct implementation in Python](/docs/iac/guides/building-extending/providers/implementers/python/) or [Direct implementation in TypeScript](/docs/iac/guides/building-extending/providers/implementers/typescript/). For schema details, see [Schema reference](/docs/iac/guides/building-extending/packages/schema/).
