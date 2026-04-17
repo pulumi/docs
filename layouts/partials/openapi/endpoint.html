@@ -46,11 +46,12 @@
                         {{ end }}
                         {{ if $schemaDetails }}
                             <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-api/schema/{{ $schemaName | urlize }}/">{{ $schemaName }}</a></div>
-                            {{ if $schemaDetails.properties }}
+                            {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schemaDetails "openapi" $.openapi) }}
+                            {{ if $resolved.properties }}
                                 <ul class="api-params">
                                     {{ partial "openapi/property-rows.html" (dict
-                                        "properties" $schemaDetails.properties
-                                        "required" $schemaDetails.required
+                                        "properties" $resolved.properties
+                                        "required" $resolved.required
                                         "openapi" $.openapi
                                         "depth" 0
                                         "maxDepth" 1
@@ -58,11 +59,13 @@
                                 </ul>
                             {{ end }}
                         {{ end }}
-                    {{ else if $schema.properties }}
+                    {{ else }}
+                        {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schema "openapi" $.openapi) }}
+                        {{ if $resolved.properties }}
                         <ul class="api-params">
                             {{ partial "openapi/property-rows.html" (dict
-                                "properties" $schema.properties
-                                "required" ($schema.required | default slice)
+                                "properties" $resolved.properties
+                                "required" ($resolved.required | default slice)
                                 "openapi" $.openapi
                                 "depth" 0
                                 "maxDepth" 1
