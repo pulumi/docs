@@ -7,6 +7,9 @@
 
 {{/* Read pre-downloaded spec from data/openapi-spec.json (fetched by scripts/fetch-openapi-spec.sh) */}}
 {{ $spec := index site.Data "openapi-spec" }}
+{{ if not $spec }}
+    {{ warnf "openapi: data/openapi-spec.json not found — run 'make ensure' to download the spec. Skipping tag page generation." }}
+{{ else }}
 
 {{/* Collect unique top-level tags from all paths, excluding preview-visibility routes. */}}
 {{ $httpMethods := slice "get" "post" "put" "patch" "delete" "head" "options" }}
@@ -193,5 +196,6 @@
         "params" $params
         "menus" $menus
     ) }}
-{{ end }}
+{{ end }}{{/* range $tags */}}
 
+{{ end }}{{/* if not $spec / else */}}
