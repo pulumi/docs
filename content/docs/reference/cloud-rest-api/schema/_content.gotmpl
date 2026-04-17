@@ -4,6 +4,10 @@
 */}}
 
 {{ $spec := index site.Data "openapi-spec" }}
+{{ if not $spec }}
+    {{ warnf "openapi: data/openapi-spec.json not found — run 'make ensure' to download the spec. Skipping schema page generation." }}
+{{ else }}
+
 {{ $schemas := $spec.components.schemas }}
 
 {{ $names := slice }}
@@ -41,5 +45,6 @@
         "kind" "page"
         "params" $params
     ) }}
-{{ end }}
+{{ end }}{{/* range $names */}}
 
+{{ end }}{{/* if not $spec / else */}}
