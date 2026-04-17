@@ -344,4 +344,4 @@ For updating an existing resource:
 
 ## Next steps
 
-For language-specific implementation guides, see [Direct implementation in Python](/docs/iac/guides/building-extending/providers/implementers/python/) or [Direct implementation in Go](/docs/iac/guides/building-extending/providers/implementers/go/). For schema details, see the [Schema reference](/docs/iac/guides/building-extending/packages/schema/). You can also [view the complete proto file](https://github.com/pulumi/pulumi/blob/master/proto/pulumi/provider.proto) on GitHub.
+For language-specific implementation guides, see [Direct implementation in Python](/docs/iac/guides/building-extending/providers/implementers/python/) or [Direct implementation in TypeScript](/docs/iac/guides/building-extending/providers/implementers/typescript/). For schema details, see the [Schema reference](/docs/iac/guides/building-extending/packages/schema/). You can also [view the complete proto file](https://github.com/pulumi/pulumi/blob/master/proto/pulumi/provider.proto) on GitHub.
