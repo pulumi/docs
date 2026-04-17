@@ -13,7 +13,6 @@ aliases:
   - /docs/ai/copilot/api/
   - /docs/pulumi-cloud/copilot/api/
   - /docs/pulumi-cloud/reference/copilot/
-  - /docs/reference/cloud-rest-api/ai/
 ---
 
 The Agent Tasks API allows you to create and manage AI agent tasks in Pulumi Cloud. These endpoints enable you to create tasks, monitor their status, respond to agent requests, and retrieve task events.
