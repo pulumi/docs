@@ -22,27 +22,6 @@ aliases:
   - /docs/reference/cloud-rest-openapi/
   - /docs/pulumi-cloud/cloud-rest-openapi/
   - /docs/pulumi-cloud/reference/cloud-rest-openapi/
-  - /docs/reference/cloud-rest-api/api-basics/
-  - /docs/reference/cloud-rest-api/audit-logs/
-  - /docs/reference/cloud-rest-api/data-export/
-  - /docs/reference/cloud-rest-api/deployment-runners/
-  - /docs/reference/cloud-rest-api/insight-accounts/
-  - /docs/reference/cloud-rest-api/neo/
-  - /docs/reference/cloud-rest-api/oauth-token-exchange/
-  - /docs/reference/cloud-rest-api/oidc-issuers/
-  - /docs/reference/cloud-rest-api/personal-access-tokens/
-  - /docs/reference/cloud-rest-api/policy-groups/
-  - /docs/reference/cloud-rest-api/policy-packs/
-  - /docs/reference/cloud-rest-api/policy-results/
-  - /docs/reference/cloud-rest-api/resource-search/
-  - /docs/reference/cloud-rest-api/resources-under-management/
-  - /docs/reference/cloud-rest-api/schedules/
-  - /docs/reference/cloud-rest-api/services/
-  - /docs/reference/cloud-rest-api/stack-config/
-  - /docs/reference/cloud-rest-api/stack-policy/
-  - /docs/reference/cloud-rest-api/stack-tags/
-  - /docs/reference/cloud-rest-api/stack-updates/
-  - /docs/reference/cloud-rest-api/webhooks/
 ---
 
 {{% cloud-rest-api-intro %}}
