@@ -6,6 +6,8 @@ set -euo pipefail
 
 SPEC_URL="https://api.pulumi.com/api/openapi/pulumi-spec.json"
 OUTPUT="data/openapi-spec.json"
+TMPFILE="$(mktemp)"
+trap 'rm -f "$TMPFILE"' EXIT
 
 mkdir -p "$(dirname "$OUTPUT")"
 
@@ -13,6 +15,7 @@ echo "Fetching OpenAPI spec from ${SPEC_URL}..."
 curl -sfL --retry 3 --retry-all-errors --connect-timeout 10 --max-time 60 "$SPEC_URL" \
   | sed 's/"x-pulumi-route-property"/"pulumiRouteProperty"/g' \
   | sed 's/"x-order"/"pulumiOrder"/g' \
-  > "$OUTPUT"
+  > "$TMPFILE"
 
+mv "$TMPFILE" "$OUTPUT"
 echo "Wrote $(wc -c < "$OUTPUT" | tr -d ' ') bytes to ${OUTPUT}"
