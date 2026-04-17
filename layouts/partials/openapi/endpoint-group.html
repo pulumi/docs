@@ -20,12 +20,21 @@
     {{ $showGroupHeadings := gt (len $sortedGroups) 1 }}
     {{ range $group := $sortedGroups }}
         {{ $endpoints := index $endpointGroups $group }}
-        {{ if gt (len $endpoints) 0 }}
+        {{/* Sort endpoints by path then method for deterministic rendering. */}}
+        {{ $methodOrder := dict "get" "1" "post" "2" "put" "3" "patch" "4" "delete" "5" "head" "6" "options" "7" }}
+        {{ $sortable := slice }}
+        {{ range $endpoints }}
+            {{ $sortKey := printf "%s-%s" .path (index $methodOrder .method | default "9") }}
+            {{ $sortable = $sortable | append (dict "key" $sortKey "endpoint" .) }}
+        {{ end }}
+        {{ $sortable = sort $sortable "key" }}
+        {{ if gt (len $sortable) 0 }}
             {{ if $showGroupHeadings }}
                 <h2 id="{{ anchorize $group }}">{{ $group }}</h2>
             {{ end }}
-            {{ range $endpoints }}
-                {{ template "openapi/endpoint.html" (dict "method" .method "path" .path "details" .details "openapi" $openapi) }}
+            {{ range $sortable }}
+                {{ $ep := .endpoint }}
+                {{ template "openapi/endpoint.html" (dict "method" $ep.method "path" $ep.path "details" $ep.details "openapi" $openapi) }}
             {{ end }}
         {{ end }}
     {{ end }}
