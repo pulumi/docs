@@ -1,1 +1,0 @@
-The AI API provides endpoints for Pulumi Copilot conversations and AI template generation. Use these endpoints to create and manage Copilot conversations, send messages, submit feedback, fetch generated programs, and check AI usage.

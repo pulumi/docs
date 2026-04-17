@@ -29,15 +29,6 @@
                 {{ range $pathMethod, $pathDetails := $pathMethods }}
                     {{/* Skip non-method keys (parameters, summary, servers, etc.) */}}
                     {{ if not (in $httpMethods $pathMethod) }}{{ continue }}{{ end }}
-                    {{/* Skip preview-visibility endpoints */}}
-                    {{ $isPreview := false }}
-                    {{ with $pathDetails.pulumiRouteProperty }}
-                        {{ if eq (.Visibility | default "") "Preview" }}
-                            {{ $isPreview = true }}
-                        {{ end }}
-                    {{ end }}
-
-                    {{ if eq $isPreview false }}
                     {{ $endpoint := dict "path" $path "method" $pathMethod "details" $pathDetails }}
 
                     {{ if $filterTag }}
@@ -57,7 +48,6 @@
                             {{ end }}
                         {{ end }}
                     {{ end }}
-                    {{ end }}{{/* eq $isPreview false */}}
                 {{ end }}
             {{ end }}
 

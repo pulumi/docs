@@ -22,6 +22,13 @@
                 {{ end }}
             </div>
         {{ end }}
+        {{ with .details.pulumiRouteProperty }}
+            {{ if eq (.Visibility | default "") "Preview" }}
+                <div class="preview-notice">
+                    <strong>Preview.</strong> This endpoint is in preview and may change without notice.
+                </div>
+            {{ end }}
+        {{ end }}
         <div class="endpoint-signature">
             <span class="endpoint-method endpoint-method-{{ lower .method }}">{{ upper .method }}</span>
             <code class="endpoint-path">{{ .path }}</code>

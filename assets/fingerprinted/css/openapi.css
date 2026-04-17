@@ -456,6 +456,16 @@
     font-size: 0.9rem;
 }
 
+.preview-notice {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #b8daff;
+    border-radius: 4px;
+    background-color: #e7f1ff;
+    color: #004085;
+    font-size: 0.9rem;
+}
+
 /* Nested property rows (recursive $ref expansion) */
 
 .nested-prop {

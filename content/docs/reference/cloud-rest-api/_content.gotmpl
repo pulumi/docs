@@ -11,30 +11,21 @@
     {{ warnf "openapi: data/openapi-spec.json not found — run 'make ensure' to download the spec. Skipping tag page generation." }}
 {{ else }}
 
-{{/* Collect unique top-level tags from all paths, excluding preview-visibility routes. */}}
+{{/* Collect unique top-level tags from all paths. */}}
 {{ $httpMethods := slice "get" "post" "put" "patch" "delete" "head" "options" }}
 {{ $tagSet := dict }}
 {{ range $path, $methods := $spec.paths }}
     {{ range $method, $details := $methods }}
         {{/* Skip non-method keys (parameters, summary, servers, etc.) */}}
         {{ if not (in $httpMethods $method) }}{{ continue }}{{ end }}
-        {{/* Skip preview-visibility endpoints */}}
-        {{ $isPreview := false }}
-{{ with $details.pulumiRouteProperty }}
-            {{ if eq (.Visibility | default "") "Preview" }}
-                {{ $isPreview = true }}
-            {{ end }}
-        {{ end }}
-        {{ if not $isPreview }}
-            {{ with $details.tags }}
-                {{ range . }}
-                    {{/* Top-level tag is everything before the first colon. */}}
-                    {{ $top := . }}
-                    {{ if strings.Contains . ":" }}
-                        {{ $top = index (split . ":") 0 | strings.TrimRight " " }}
-                    {{ end }}
-                    {{ $tagSet = merge $tagSet (dict $top true) }}
+        {{ with $details.tags }}
+            {{ range . }}
+                {{/* Top-level tag is everything before the first colon. */}}
+                {{ $top := . }}
+                {{ if strings.Contains . ":" }}
+                    {{ $top = index (split . ":") 0 | strings.TrimRight " " }}
                 {{ end }}
+                {{ $tagSet = merge $tagSet (dict $top true) }}
             {{ end }}
         {{ end }}
     {{ end }}
@@ -127,6 +118,14 @@
         "/docs/reference/deployments-rest-api/"
     )
     "Environments"             (slice "/docs/pulumi-cloud/reference/environments/")
+    "Neo"                      (slice
+        "/docs/reference/cloud-rest-api/neo/"
+        "/docs/pulumi-cloud/reference/neo/"
+        "/docs/reference/cloud-rest-api/copilot/"
+        "/docs/ai/copilot/api/"
+        "/docs/pulumi-cloud/copilot/api/"
+        "/docs/pulumi-cloud/reference/copilot/"
+    )
     "InsightsAccounts"         (slice
         "/docs/reference/cloud-rest-api/insight-accounts/"
         "/docs/pulumi-cloud/reference/insight-accounts/"
