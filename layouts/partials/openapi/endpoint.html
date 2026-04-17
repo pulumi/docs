@@ -1,6 +1,6 @@
 {{ define "openapi/endpoint.html" }}
 <div class="endpoint-component">
-    <div class="endpoint-header" data-endpoint-id="{{ anchorize (printf "%s-%s" .method .path) }}">
+    <div class="endpoint-header" data-endpoint-id="{{ anchorize (printf "%s-%s" .method .path) }}" tabindex="0" role="button" aria-expanded="true">
         {{/* TODO(pulumi/pulumi-service#41460): Remove this humanization once the Java IDL
              generates human-friendly summary strings instead of PascalCase identifiers. */}}
         {{ $displayName := .details.summary | default .details.operationId | default (printf "%s %s" (upper .method) .path) }}
