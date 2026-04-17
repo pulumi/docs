@@ -114,21 +114,17 @@
 
         <!-- Add script for the endpoint accordion -->
         <script>
-        // Use event delegation to handle clicks on endpoint headers
+        // Use event delegation scoped to the OpenAPI container.
         document.addEventListener('DOMContentLoaded', function() {
-            document.addEventListener('click', function(event) {
-                const header = event.target.closest('.endpoint-header');
-                if (header) {
-                    const endpointId = header.getAttribute('data-endpoint-id');
-                    const component = document.getElementById('content-' + endpointId);
-                    const parent = component.parentElement;
-                    
-                    if (parent.classList.contains('collapsed')) {
-                        parent.classList.remove('collapsed');
-                    } else {
-                        parent.classList.add('collapsed');
-                    }
-                }
+            var container = document.querySelector('[data-openapi-content]');
+            if (!container) return;
+            container.addEventListener('click', function(event) {
+                var header = event.target.closest('.endpoint-header');
+                if (!header) return;
+                var endpointId = header.getAttribute('data-endpoint-id');
+                var component = document.getElementById('content-' + endpointId);
+                if (!component || !component.parentElement) return;
+                component.parentElement.classList.toggle('collapsed');
             });
         });
         </script>
