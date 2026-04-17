@@ -12,9 +12,9 @@
 
 {{ $sortedNames := slice }}
 {{ range $propName, $prop := $properties }}
-    {{ $sortedNames = $sortedNames | append (dict "name" $propName "order" (int ($prop.pulumiOrder | default 9999))) }}
+    {{ $sortedNames = $sortedNames | append (dict "name" $propName "sortKey" (printf "%04d-%s" (int ($prop.pulumiOrder | default 9999)) $propName)) }}
 {{ end }}
-{{ range sort $sortedNames "order" }}
+{{ range sort $sortedNames "sortKey" }}
   {{ $propName := .name }}
   {{ $prop := index $properties $propName }}
   {{ $effectiveProp := $prop }}
