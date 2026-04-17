@@ -6,6 +6,7 @@
 /resources
 
 .DS_Store
+__pycache__/
 node_modules
 # Prettier cache
 node_modules/.cache/prettier/
@@ -23,6 +24,7 @@ node_modules/.cache/prettier/
 # yarn's yarn.lock file. We ignore package-lock.json to prevent
 # it from being added mistakenly.
 /package-lock.json
+/theme/package-lock.json
 
 # Python virtual env dirs.
 venv/
@@ -108,3 +110,6 @@ scripts/alias-verification/historical-aliases-correct.txt
 scripts/alias-verification/historical-aliases-missing.txt
 scripts/alias-verification/historical-aliases-report.txt
 scripts/alias-verification/historical-fixes.json
+
+# Ignore compiled Go binaries in static programs.
+static/programs/*-go/*-go
