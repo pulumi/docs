@@ -132,7 +132,7 @@
                     {{ $codeInt := int $responseCode }}
                     {{ $chipClass := "api-status-4xx" }}
                     {{ if ge $codeInt 500 }}{{ $chipClass = "api-status-5xx" }}{{ end }}
-                    <span class="api-status-chip {{ $chipClass }}"{{ with $responseDetails.description }} title="{{ . }}"{{ end }}>{{ $responseCode }}{{ with $responseDetails.description }} <span class="api-status-chip-desc">{{ . }}</span>{{ end }}</span>
+                    <span class="api-status-chip {{ $chipClass }}"{{ with $responseDetails.description }} title="{{ . | htmlEscape }}"{{ end }}>{{ $responseCode }}{{ with $responseDetails.description }} <span class="api-status-chip-desc">{{ . }}</span>{{ end }}</span>
                 {{ end }}
             </div>
         {{ end }}
