@@ -82,6 +82,7 @@
         {{ $inlineCodes := slice }}
         {{ $stockErrorCodes := slice }}
         {{ range $responseCode, $responseDetails := .details.responses }}
+            {{/* Skip non-numeric keys (e.g. "default", "2XX") — int coercion returns 0, misclassifying them as 2xx. */}}
             {{ if not (findRE "^\\d{3}$" $responseCode) }}{{ continue }}{{ end }}
             {{ $hasSchema := false }}
             {{ if isset $responseDetails "content" }}
