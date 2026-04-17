@@ -14,7 +14,7 @@ menu:
 This guide shows how to implement a Pulumi provider in TypeScript using the gRPC bindings directly. This approach gives you full control over provider behavior and works with Node.js.
 
 {{% notes type="warning" %}}
-This is an advanced guide for power users. You'll be working directly with the provider protocol, which requires understanding gRPC, Protocol Buffers, and Pulumi's provider semantics. If you're open to writing Go, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) offers a more ergonomic experience with less boilerplate.
+This is an advanced guide for power users. You'll be working directly with the provider protocol, which requires understanding gRPC, Protocol Buffers, and Pulumi's provider semantics. If you're open to writing Go, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) offers a more ergonomic experience with less boilerplate.
 {{% /notes %}}
 
 ## Prerequisites
@@ -548,7 +548,7 @@ function fileInputsToMap(inputs: FileInputs): Record<string, any> {
 }
 ```
 
-The [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) handles both dispatching and property bag serialization automatically based on Go struct definitions and tags.
+The [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) handles both dispatching and property bag serialization automatically based on Go struct definitions and tags.
 
 ## Considerations
 
