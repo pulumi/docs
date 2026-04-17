@@ -17,7 +17,7 @@ If you are looking to package and share components, a [source-based plugin packa
 
 Every executable plugin follows a strict naming convention so the Pulumi CLI can locate and launch it.
 
-**Binary name:** `pulumi-resource-<package-name>` (on Windows, append `.exe`). The `resource` kind is Pulumi's internal term for component/provider plugins — always use `resource` for this kind of package. Historical kinds like `converter`, `language`, and `tool` exist for other plugin classes and are not relevant here.
+**Binary name:** `pulumi-resource-<package-name>` (on Windows, append `.exe`). The `resource` kind is Pulumi's internal term for component/provider plugins — always use `resource` for this kind of package. Other plugin kinds (`analyzer`, `language`, `converter`, `tool`) exist for different plugin classes and are not relevant here.
 
 **Archive name:** `pulumi-resource-<package-name>-v<version>-<os>-<arch>.tar.gz`
 
@@ -69,11 +69,12 @@ Node.js and Python plugins are typically not cross-compiled — tools like `pkg`
 ${pluginDownloadURL}/pulumi-${kind}-${name}-v${version}-${os}-${arch}.tar.gz
 ```
 
-The CLI interpolates three variables into `pluginDownloadURL` itself if they appear there:
+The CLI interpolates four variables into `pluginDownloadURL` itself if they appear there:
 
+- `${NAME}` — the package name.
 - `${VERSION}` — the plugin version (without the leading `v`).
-- `${OS}` — the consumer's OS (`darwin`, `linux`, `windows`).
-- `${ARCH}` — the consumer's architecture (`amd64`, `arm64`).
+- `${OS}` — the consumer's OS (typically `darwin`, `linux`, or `windows`).
+- `${ARCH}` — the consumer's architecture (typically `amd64` or `arm64`).
 
 Typically you won't need the interpolation variables for GitHub or GitLab hosting (those have dedicated URL forms below); they are mostly useful for custom HTTP hosts whose layouts don't match the default archive-naming convention.
 

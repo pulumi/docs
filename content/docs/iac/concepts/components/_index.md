@@ -119,7 +119,7 @@ Components distributed as Pulumi packages can be consumed in any language using 
 pulumi package add github.com/my-org/my-component@v1.0.0
 ```
 
-This pattern is common for components your organization publishes for internal consumption via a Git repository or the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/). It is also how components from a [source-based plugin package](#authoring-and-distributing-components) are consumed across languages — the SDK is generated in your program's language regardless of the language the component was authored in.
+This pattern is common for components your organization publishes for internal consumption via a Git repository or the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/). It is also how components from a [source-based plugin package](#authoring-components) are consumed across languages — the SDK is generated in your program's language regardless of the language the component was authored in.
 
 Under the hood, Pulumi fetches the package source (e.g. from GitHub), generates a [local package](/docs/iac/guides/building-extending/packages/local-packages/) SDK from the component's schema, and makes the generated SDK available for import in your program.
 
