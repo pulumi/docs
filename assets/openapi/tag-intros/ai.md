@@ -1,5 +1,1 @@
-The Agent Tasks API allows you to create and manage AI agent tasks in
-Pulumi Cloud. These endpoints enable you to create tasks, monitor their
-status, respond to agent requests, and retrieve task events.
-
-See [Pulumi Neo](/docs/pulumi-cloud/neo/) for conceptual documentation.
+The AI API provides endpoints for Pulumi Copilot conversations and AI template generation. Use these endpoints to create and manage Copilot conversations, send messages, submit feedback, fetch generated programs, and check AI usage.
