@@ -1,6 +1,6 @@
 ---
 title: "Pulumi Cloud REST API Docs, Now Generated from OpenAPI"
-date: 2026-04-16
+date: 2026-04-20T07:00:00-04:00
 draft: false
 meta_desc: "The Pulumi Cloud REST API reference at /docs/reference/cloud-rest-api/ is now generated directly from the live OpenAPI spec, so it stays in sync with the API."
 meta_image: meta.png
