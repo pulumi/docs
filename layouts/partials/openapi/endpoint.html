@@ -1,7 +1,16 @@
 {{ define "openapi/endpoint.html" }}
 <div class="endpoint-component">
     <div class="endpoint-header" data-endpoint-id="{{ anchorize (printf "%s-%s" .method .path) }}">
-        <h3 id="{{ anchorize (printf "%s-%s" .method .path) }}">{{ with .details.summary }}{{ . }}{{ else }}{{ .details.operationId }}{{ end }}</h3>
+        {{/* TODO(pulumi/pulumi-service#41460): Remove this humanization once the Java IDL
+             generates human-friendly summary strings instead of PascalCase identifiers. */}}
+        {{ $displayName := .details.summary | default .details.operationId | default (printf "%s %s" (upper .method) .path) }}
+        {{ $displayName = replaceRE "([a-z])([A-Z])" "$1 $2" $displayName }}
+        {{ $displayName = replaceRE "([A-Z]+)([A-Z][a-z])" "$1 $2" $displayName }}
+        {{ $displayName = replace $displayName "Git Hub" "GitHub" }}
+        {{ $displayName = replace $displayName "Git Lab" "GitLab" }}
+        {{ $displayName = replace $displayName "Dev Ops" "DevOps" }}
+        {{ $displayName = replace $displayName "Oidc" "OIDC" }}
+        <h3 id="{{ anchorize (printf "%s-%s" .method .path) }}">{{ $displayName }}</h3>
         <span class="toggle-icon" id="toggle-{{ anchorize (printf "%s-%s" .method .path) }}">▼</span>
     </div>
     <div class="endpoint-content" id="content-{{ anchorize (printf "%s-%s" .method .path) }}">
