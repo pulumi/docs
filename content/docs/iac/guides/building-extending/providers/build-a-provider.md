@@ -16,7 +16,7 @@ aliases:
 ---
 
 {{% notes type="info" %}}
-This guide uses the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) (Layer 3 in the [provider architecture](/docs/iac/guides/building-extending/providers/provider-architecture/)). If you prefer to implement providers directly using gRPC bindings for full control, or need to use a language other than Go, see [Direct provider implementation](/docs/iac/guides/building-extending/providers/implementers/).
+This guide uses the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) (Layer 3 in the [provider architecture](/docs/iac/guides/building-extending/providers/provider-architecture/)). If you prefer to implement providers directly using gRPC bindings for full control, or need to use a language other than Go, see [Direct provider implementation](/docs/iac/guides/building-extending/providers/implementers/).
 {{% /notes %}}
 
 ## When to use a provider
@@ -59,13 +59,13 @@ A provider's [package schema](/docs/iac/using-pulumi/extending-pulumi/schema/) d
 
 {{% notes type="info" %}}
 
-Historically it was necessary to hand-author and maintain the `schema.json` file that accompanied your provider implementation, however, now most of this is generated automatically by the [Pulumi Provider SDK](/docs/iac/using-pulumi/extending-pulumi/pulumi-provider-sdk/) and the file is no longer necessary.
+Historically it was necessary to hand-author and maintain the `schema.json` file that accompanied your provider implementation, however, now most of this is generated automatically by the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) and the file is no longer necessary.
 
 {{% /notes %}}
 
 ## Language support and the Pulumi Go Provider SDK
 
-Pulumi providers can be written in any language that supports gRPC, and used in any Pulumi program regardless of that program's language. The provider [architecture](/docs/iac/guides/building-extending/providers/provider-architecture/) has multiple layers. Layer 3 is the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/)—the most streamlined approach for Go. Layer 2 lets you implement the gRPC interface directly in [Python](/docs/iac/guides/building-extending/providers/implementers/python/), Go, TypeScript, or any language with gRPC support.
+Pulumi providers can be written in any language that supports gRPC, and used in any Pulumi program regardless of that program's language. The provider [architecture](/docs/iac/guides/building-extending/providers/provider-architecture/) has multiple layers. Layer 3 is the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/)—the most streamlined approach for Go. Layer 2 lets you implement the gRPC interface directly in [Python](/docs/iac/guides/building-extending/providers/implementers/python/), Go, TypeScript, or any language with gRPC support.
 
 We recommend using the Pulumi Go Provider SDK for Go providers, as it handles protocol complexity and generates schemas automatically. For other languages, or when you need full control over your schema and data structure mappings, use the [direct implementation](/docs/iac/guides/building-extending/providers/implementers/) approach.
 

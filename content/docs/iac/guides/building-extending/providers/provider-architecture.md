@@ -56,7 +56,7 @@ For implementation guides, see [Direct implementation in Python](/docs/iac/guide
 
 ### Layer 3: Higher-level SDKs
 
-SDKs build on the language bindings to provide a more ergonomic development experience. Currently, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) is available for Go.
+SDKs build on the language bindings to provide a more ergonomic development experience. Currently, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) is available for Go.
 
 The Go SDK provides schema inference from Go structs and tags, default implementations for most methods, middleware support for cross-cutting concerns, a testing framework for provider validation, and automatic multi-language SDK generation.
 
