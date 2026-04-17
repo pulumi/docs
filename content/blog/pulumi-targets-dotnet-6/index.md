@@ -86,7 +86,7 @@ return await Deployment.RunAsync(async() =>
 });
 ```
 
-The cherry on top is that you can use [target-typed `new` expressions](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-9.0/target-typed-new) when instantiating resource or function invoke argument types. Basically instead of writing `new Bucket("my-bucket", new BucketArgs { ... })`, you can write `new Bucket("my-bucket", new () { ... })`.
+The cherry on top is that you can use [target-typed `new` expressions](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/new-operator#target-typed-new) when instantiating resource or function invoke argument types. Basically instead of writing `new Bucket("my-bucket", new BucketArgs { ... })`, you can write `new Bucket("my-bucket", new () { ... })`.
 
 ### Backward-compatibility
 

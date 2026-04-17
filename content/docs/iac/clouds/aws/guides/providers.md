@@ -120,7 +120,7 @@ significantly easier to stand up a production-ready EKS cluster.
 
 ## Pulumi CDK adapter
 
-The [Pulumi CDK adapter](cdk/) allows you to use AWS CDK constructs — including CDK's L2 and L3 constructs —
+The [Pulumi CDK adapter](/docs/iac/clouds/aws/guides/cdk/) allows you to use AWS CDK constructs — including CDK's L2 and L3 constructs —
 directly within a Pulumi program. The most common scenarios for reaching for it are:
 
 - Your organization has existing CDK constructs you want to reuse during a migration to Pulumi.
@@ -130,7 +130,7 @@ directly within a Pulumi program. The most common scenarios for reaching for it 
 For new infrastructure, use the native providers and component libraries. Most organizations that adopt the CDK
 adapter do so as a transitional step rather than a long-term strategy.
 
-See the [Pulumi CDK guide](cdk/) for more detail.
+See the [Pulumi CDK guide](/docs/iac/clouds/aws/guides/cdk/) for more detail.
 
 ## Choosing the right package
 
@@ -195,5 +195,5 @@ records the combined state in your [Pulumi Cloud](https://app.pulumi.com) backen
 - [AWSx documentation](/registry/packages/awsx/)
 - [AWS API Gateway documentation](/registry/packages/aws-apigateway/)
 - [Amazon EKS documentation](/registry/packages/eks/)
-- [Pulumi CDK adapter guide](cdk/)
+- [Pulumi CDK adapter guide](/docs/iac/clouds/aws/guides/cdk/)
 - [Get started with AWS](/docs/iac/get-started/aws/)
