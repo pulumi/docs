@@ -2,7 +2,7 @@
 {{- $label := "Note" -}}
 {{- if eq $type "warning" }}{{ $label = "Warning" }}{{ end -}}
 {{- if eq $type "tip" }}{{ $label = "Tip" }}{{ end -}}
-{{- $inner := .Inner | strings.TrimSpace -}}
+{{- $inner := trim (printf "%s" .Inner) " \t\n\r" -}}
 {{- $inner = replaceRE `</?p>` "" $inner -}}
 {{- $inner = replaceRE `<a href="([^"]*)"[^>]*>([^<]*)</a>` "[$2]($1)" $inner -}}
 {{- $inner = replaceRE `<code>([^<]*)</code>` "`$1`" $inner -}}

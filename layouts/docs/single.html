@@ -38,6 +38,14 @@
                 <section class="docs-content">
                     {{ .Content }}
                 </section>
+
+                {{ if .Params.openapi_docs }}
+                    {{ partial "openapi/open-api-gen.html" . }}
+                {{ end }}
+
+                {{ if .Params.openapi_schema }}
+                    {{ partial "openapi/schema-component.html" . }}
+                {{ end }}
             </div>
 
             <div class="docs-table-of-contents docs-toc-desktop">
