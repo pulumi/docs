@@ -63,54 +63,7 @@
 
             {{ template "openapi/endpoint-group.html" (dict "endpointGroups" $endpointGroups "openapi" $openapi) }}
         </div>
-        <!-- Add styles for the endpoint accordion -->
-        <style>
-        .endpoint-component {
-            margin-bottom: 1rem;
-            border: 1px solid #eaeaea;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .endpoint-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 1rem;
-            background-color: #f8f9fa;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .endpoint-header:hover {
-            background-color: #e9ecef;
-        }
-
-        .endpoint-header h3 {
-            margin: 0;
-            padding: 0;
-            border: none;
-            font-size: 1.25rem;
-        }
-
-        .endpoint-content {
-            padding: 1rem;
-            border-top: 1px solid #eaeaea;
-        }
-
-        .toggle-icon {
-            font-size: 0.8rem;
-            transition: transform 0.3s;
-        }
-
-        .collapsed .endpoint-content {
-            display: none;
-        }
-
-        .collapsed .toggle-icon {
-            transform: rotate(-90deg);
-        }
-        </style>
+        <!-- Endpoint accordion styles are in assets/fingerprinted/css/openapi.css -->
 
         <!-- Add script for the endpoint accordion -->
         <script>
