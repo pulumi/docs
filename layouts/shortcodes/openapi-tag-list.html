@@ -5,7 +5,7 @@
 {{ range $section.Pages }}
     {{ if .Params.openapi_docs }}
         {{ $tagPages = $tagPages | append . }}
-    {{ else if eq .Params.h1 "Schema" }}
+    {{ else if .Params.openapi_schema }}
         {{ $schemaPage = . }}
     {{ end }}
 {{ end }}
