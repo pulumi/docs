@@ -530,7 +530,7 @@ var bucket = new Aws.S3.Bucket("my-bucket");
 // bucket.Id is an Output<string> — the AWS-assigned bucket name.
 var obj = new Aws.S3.BucketObject("hello.txt", new()
 {
-    BucketName = bucket.Id,  // Pass Output<string> directly.
+    Bucket = bucket.Id,  // Pass Output<string> directly.
     Content = "Hello, Pulumi!",
     Key = "hello.txt",
 });
