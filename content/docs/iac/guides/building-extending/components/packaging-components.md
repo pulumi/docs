@@ -20,8 +20,8 @@ Once you've authored a Pulumi component, you will probably want to package and d
 The three options differ in whether the component ships as a [Pulumi package](/docs/iac/concepts/packages/) and, if so, which kind of [plugin](/docs/iac/concepts/plugins/) carries it:
 
 1. **Native language package** — a plain language-ecosystem package (npm, PyPI, Go module, etc.) containing a component class. Not a Pulumi package; no Pulumi plugin involved. A good fit for smaller organizations where all Pulumi code is written in the same language.
-1. **[Source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/)** — a Pulumi package distributed as source. Pulumi generates per-language SDKs on-the-fly when a consumer adds the package, so the components can be consumed from any Pulumi language. A good fit for platform teams providing reusable abstractions and self-service.
-1. **Executable-based plugin package** — a Pulumi package whose plugin is a pre-built executable (typically a Pulumi [provider](/docs/iac/concepts/providers/)). No consumer runtime dependencies, and the package can mix in custom resources and functions alongside components. A good fit for large organizations distributing to many teams and languages, or components destined for public release in the Pulumi Registry.
+1. **Source-based plugin package** — a Pulumi package distributed as source. Pulumi generates per-language SDKs on-the-fly when a consumer adds the package, so the components can be consumed from any Pulumi language. A good fit for platform teams providing reusable abstractions and self-service. For more information, see [Authoring a source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/).
+1. **Executable-based plugin package** — a Pulumi package whose plugin is a pre-built executable (typically a Pulumi [provider](/docs/iac/concepts/providers/)). No consumer runtime dependencies, and the package can mix in custom resources and functions alongside components. A good fit for large organizations distributing to many teams and languages, or components destined for public release in the Pulumi Registry. For more information, see [Authoring an executable plugin package](/docs/iac/guides/building-extending/packages/executable-plugin/).
 
 {{% notes type="info" %}}
 Most platform teams should choose a source-based plugin package by default: it enables multi-language consumption with minimal authoring overhead and integrates with Pulumi Cloud IDP.
@@ -73,7 +73,7 @@ Pulumi Cloud customers can publish versions of the package to the Pulumi IDP Pri
 
 ## Executable-based plugin packages
 
-An executable-based plugin package is a [Pulumi package](/docs/iac/concepts/packages/) whose plugin is a pre-built executable — typically a Pulumi [provider](/docs/iac/concepts/providers/). The executable has no consumer-side runtime dependencies, and the package can expose [components, custom resources, and functions](/docs/iac/concepts/resources/#resources) together. Because the authoring and CI/CD overhead is higher (and most such packages are written in Go), this approach fits very large organizations distributing to many teams and languages, environments where the source-based runtime dependencies aren't acceptable, or components intended for public release in the Pulumi Registry.
+An executable-based plugin package is a [Pulumi package](/docs/iac/concepts/packages/) whose plugin is a pre-built executable — typically a Pulumi [provider](/docs/iac/concepts/providers/). The executable has no consumer-side runtime dependencies, and the package can expose [components, custom resources, and functions](/docs/iac/concepts/resources/#resources) together. Because the authoring and CI/CD overhead is higher (and most such packages are written in Go), this approach fits very large organizations distributing to many teams and languages, environments where the source-based runtime dependencies aren't acceptable, or components intended for public release in the Pulumi Registry. For more information, see [Authoring an executable plugin package](/docs/iac/guides/building-extending/packages/executable-plugin/).
 
 {{% notes type="info" %}}
 To publish a component for public consumption in the [Pulumi Registry](/registry), author it as an executable-based plugin package in Go and publish per-language SDKs to the public feeds (npmjs.org, PyPI, etc.). See [Publishing Pulumi packages](/docs/iac/guides/building-extending/packages/publishing-packages/).
@@ -81,18 +81,18 @@ To publish a component for public consumption in the [Pulumi Registry](/registry
 
 ### Distribution and consumption
 
-Executable-based plugin packages are typically distributed as pre-built per-language SDKs published to multiple package managers (one per consumer language), with the plugin executable published to an accessible location. Pulumi Cloud customers can also publish to the Pulumi IDP Private Registry using [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/).
+Executable-based plugin packages are usually distributed as pre-built per-language SDKs published to multiple package managers (one per consumer language), with the plugin executable published to an accessible location. Pre-publishing SDKs isn't strictly required — consumers can run [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) to generate an SDK locally from the package schema — but most executable packages pre-publish because, once you're already shipping a binary per release, publishing per-language SDKs is a natural extension. Pulumi Cloud customers can also publish to the Pulumi IDP Private Registry using [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/).
 
 Consumers install the published SDK like any other Pulumi provider package. Pulumi automatically downloads and caches the plugin executable the first time the consuming program runs.
 
-For the authoring workflow, see [Build a provider](/docs/iac/guides/building-extending/providers/build-a-provider/).
+For guidance on how to group components into packages and repositories so versioning stays meaningful, see [Repository strategy for Pulumi packages](/docs/iac/guides/building-extending/packages/repository-strategy/) — the same strategy applies to source-based and executable-based plugin packages.
 
 ### Advantages and limitations
 
 - **No consumer runtime dependencies**: The plugin ships as a native executable, so consumers don't need Node.js, Python, a JVM, or a Go toolchain.
 - **Full package capabilities**: Can expose custom resources and functions alongside components. (A source-based plugin package in Go can also do this.)
 - **Go strongly recommended**: Providers are usually written in Go because [`pulumi-go-provider`](https://github.com/pulumi/pulumi-go-provider) infers the [schema](/docs/iac/guides/building-extending/packages/schema/) automatically; other languages require hand-authored schemas.
-- **CI/CD overhead**: Pre-publishing SDKs and the plugin executable requires a more involved release pipeline.
+- **CI/CD overhead**: Cross-compiling the plugin executable and (usually) pre-publishing SDKs requires a more involved release pipeline.
 - **Argument type limitations**: Same serialization limits as source-based plugin packages — see [Component arguments and type requirements](/docs/iac/guides/building-extending/components/build-a-component/#component-arguments-and-type-requirements).
 
 {{% notes type="info" %}}
@@ -109,5 +109,5 @@ Consuming an executable-based plugin package whose plugin is written in a non-Go
 | **Cross-language consumption** | No — limited to the authoring language | Yes — consume in any Pulumi language | Yes — consume in any Pulumi language |
 | **Pulumi Cloud IDP Private Registry support** | No | Yes | Yes |
 | **Packaging complexity** | Minimal — publish a native package | Low — `PulumiPlugin.yaml` plus an entry file | High — schema authoring, SDK generation, and executable publishing |
-| **Distribution** | Native package managers (npm, PyPI, etc.) | Git reference (via `pulumi package add`) or pre-built SDKs on native package managers | Pre-built SDKs on native package managers plus a published plugin executable |
+| **Distribution** | Native package managers (npm, PyPI, etc.) | Git reference (via `pulumi package add`) or pre-built SDKs on native package managers | Published plugin executable plus per-language SDKs (usually pre-published to npm, PyPI, etc.; can also be generated locally) |
 | **Consumer runtime dependencies** | n/a | Authoring language's runtime | None — plugin is a native executable |

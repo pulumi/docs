@@ -5,7 +5,7 @@ menu:
   iac:
     name: Repository Strategy
     parent: iac-guides-packages
-    weight: 61
+    weight: 40
 ---
 
 Effectively developing and managing [Pulumi packages](/docs/iac/concepts/packages/) is key to building your organization's platform with Pulumi. A package is the unit of versioning and distribution; the [components](/docs/iac/concepts/components/) inside it inherit the package's version. This guide describes Pulumi's recommended strategies for structuring the Git repositories you use to publish packages. Following these practices improves the reliability, maintainability, and delivery speed of the packages your organization builds and consumes.

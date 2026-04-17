@@ -4,15 +4,15 @@ meta_desc: How to author a Pulumi plugin package distributed as source code in T
 menu:
   iac:
     parent: iac-guides-packages
-    weight: 60
+    weight: 10
 ---
 
 A **source-based plugin package** is a Pulumi plugin package distributed as source code rather than a pre-built executable. When a consumer runs `pulumi package add` against your repository or a local path, Pulumi introspects the package and generates an SDK in the consumer's language.
 
-Source-based plugin packages are one of three ways to distribute a component. For the comparison against native language packages and executable-based plugin packages, see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/).
+Source-based plugin packages are the recommended way to package and share [components](/docs/iac/concepts/components/) — they enable multi-language consumption with minimal authoring overhead. For a detailed comparison against the other ways to distribute components, see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/).
 
 {{< notes type="info" >}}
-Source-based packages most commonly contain [components](/docs/iac/concepts/components/) — the rest of this guide focuses on that case, since it's the typical use and works across all supported authoring languages. When authoring in Go via [`pulumi-go-provider`](https://github.com/pulumi/pulumi-go-provider), a source-based package can also expose [custom resources](/docs/iac/concepts/resources/) and [functions](/docs/iac/concepts/functions/) (invokes); see [Package contents by authoring language](#package-contents-by-authoring-language) below.
+Source-based packages most commonly contain components, and the rest of this guide focuses on that case. When authoring in Go via [`pulumi-go-provider`](https://github.com/pulumi/pulumi-go-provider), a source-based package can also expose [custom resources](/docs/iac/concepts/resources/) and [functions](/docs/iac/concepts/functions/) (invokes); see [Package contents by authoring language](#package-contents-by-authoring-language). For custom resources or functions in other languages, or for publishing to the public [Pulumi Registry](/registry/), author an [executable-based plugin package](./executable-plugin/) instead.
 {{< /notes >}}
 
 The key wins of the source-based model are:
