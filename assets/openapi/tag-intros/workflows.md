@@ -1,4 +1,1 @@
-Schedules let you automate recurring operations on your Pulumi stacks. The
-Workflows API provides endpoints for creating and managing drift detection,
-time-to-live (TTL), and custom scheduled operations, and for inspecting
-schedule execution history.
+The Workflows API provides endpoints for managing agent pools, which are groups of deployment runners that execute Pulumi operations in your infrastructure. Use these endpoints to create, configure, and manage agent pools for your organization.
