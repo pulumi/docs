@@ -17,7 +17,7 @@ This guide describes how to start using Pulumi Deployments with a new Pulumi IaC
 
 ## Prerequisites
 
-Before you start, configure a [version control integration](/docs/version-control/) for your Pulumi organization. Deployments works with [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/).
+Before you start, configure a [version control integration](/docs/integrations/version-control/) for your Pulumi organization. Deployments works with [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [GitLab](/docs/integrations/version-control/gitlab/).
 
 ## New Project Wizard
 
@@ -37,7 +37,7 @@ If you select "Use a template" but your organization doesn't have custom templat
 On the next screen, select "Pulumi Deployments" as your deployment method.
 
 {{% notes "info" %}}
-You may need to configure a [version control integration](/docs/version-control/) if you haven't already.
+You may need to configure a [version control integration](/docs/integrations/version-control/) if you haven't already.
 {{% /notes %}}
 
 You'll now be prompted to enter some information about the project you're about to create.
