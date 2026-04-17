@@ -13,6 +13,7 @@ aliases:
 - /docs/iac/using-pulumi/extending-pulumi/build-a-provider/
 - /docs/iac/extending-pulumi/build-a-provider/
 - /docs/iac/build-with-pulumi/build-a-provider/
+- /docs/iac/guides/building-extending/providers/implementers/go/
 ---
 
 {{% notes type="info" %}}
