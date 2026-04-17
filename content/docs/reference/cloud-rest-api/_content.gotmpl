@@ -9,9 +9,12 @@
 {{ $spec := index site.Data "openapi-spec" }}
 
 {{/* Collect unique top-level tags from all paths, excluding preview-visibility routes. */}}
+{{ $httpMethods := slice "get" "post" "put" "patch" "delete" "head" "options" }}
 {{ $tagSet := dict }}
 {{ range $path, $methods := $spec.paths }}
     {{ range $method, $details := $methods }}
+        {{/* Skip non-method keys (parameters, summary, servers, etc.) */}}
+        {{ if not (in $httpMethods $method) }}{{ continue }}{{ end }}
         {{/* Skip preview-visibility endpoints */}}
         {{ $isPreview := false }}
 {{ with $details.pulumiRouteProperty }}
