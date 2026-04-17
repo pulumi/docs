@@ -1,1 +1,1 @@
-Resource Search provides powerful querying capabilities for resources managed by Pulumi. The Resource Search API allows you to find resources across your organization using various filters and criteria.
+Resource Search lets you find and filter resources managed by Pulumi across your organization. The Resource Search API allows you to query resources using structured filters and retrieve detailed resource metadata.

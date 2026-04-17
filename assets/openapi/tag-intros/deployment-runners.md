@@ -1,1 +1,1 @@
-Deployment Runners execute Pulumi deployments in private, controlled environments. The Deployment Runners API allows you to manage runner pools, which are groups of deployment runners that can handle Pulumi operations.
+Deployment Runners execute Pulumi deployments in private, controlled environments. The Deployment Runners API allows you to manage agent pools, which are groups of deployment runners that handle Pulumi operations for your organization.
