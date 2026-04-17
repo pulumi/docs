@@ -1,8 +1,8 @@
 ---
-title_tag: "Resource Names"
-meta_desc: A resource in Pulumi has a logical name (in Pulumi) and a physical name (in the cloud provider). Learn more about resource names and how to use them here.
+title_tag: "Resource Names and Identity"
+meta_desc: A resource in Pulumi has a logical name, physical name, physical ID, and URN. Learn about these four forms of resource identity and when to use each one.
 title: Names
-h1: Resource names
+h1: Resource names and identity
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -17,16 +17,19 @@ aliases:
 - /docs/concepts/resources/names/
 ---
 
-Each resource in Pulumi has a [logical name](#logicalname) and a [physical name](#autonaming).  The logical name is how the resource is known inside Pulumi, and establishes a notion of identity within Pulumi even when the physical resource might need to change (for example, during a replacement).  The physical name is the name used for the resource in the cloud provider that a Pulumi program is deploying to.
+Each resource in Pulumi carries four distinct forms of identity that serve different purposes. Understanding when to use each one is essential to reading and writing Pulumi programs correctly:
 
-Pulumi [auto-names](#autonaming) most resources by default, using the logical name and a random suffix to construct a unique physical name for a resource.  Users can provide explicit names to override this default.  Users can also [customize or disable auto-naming](#autonaming-configuration) globally, per provider, or per resource type.
+- **Logical name** — the name you give the resource in your program. Pulumi uses it for state tracking and URN generation.
+- **Physical name** — the name Pulumi assigns in the cloud provider, usually derived from the logical name plus a random suffix.
+- **Physical ID** — the identifier the cloud provider returns after creating the resource (e.g., an AWS ARN or a GCP self-link). Exposed as `resource.id`.
+- **URN** — a Pulumi-internal globally unique identifier derived from the stack, project, resource type, and logical name. Exposed as `resource.urn`.
 
-Each resource also has a [Uniform Resource Name (URN)](#urns) which is a unique name derived from both the logical name of the resource and the type of the resource and, in the case of components, its parents.
+The sections below explain each form in detail. For a quick reference on which identity form to use in a given context, see the [identity summary table](#identity-summary).
+
+Pulumi [auto-names](#autonaming) most resources by default, using the logical name and a random suffix to construct a unique physical name for a resource. You can provide explicit names to override this default, and you can [customize or disable auto-naming](#autonaming-configuration) globally, per provider, or per resource type.
 
 {{% notes type="warning" %}}
-
-Be careful when you change a resource’s name because changing the name of a resource will create a new resource and delete the old/original resource. If you’d like to rename a resource without destroying the old one, refer to the [aliases](/docs/concepts/options/aliases/) resource option.
-
+Be careful when you change a resource's name because changing the name of a resource will create a new resource and delete the old/original resource. If you'd like to rename a resource without destroying the old one, refer to the [aliases](/docs/concepts/options/aliases/) resource option.
 {{% /notes %}}
 
 ## Logical Names {#logicalname}
@@ -449,3 +452,137 @@ Any change to the URN of a resource causes the old and new resources to be treat
 Both of these operations will lead to a different URN, and thus require the `create` and `delete` operations instead of an `update` or `replace` operation that you would use for an existing resource.
 
 Resources constructed as children of a component resource must include the component resource's name as part of their names (e.g., as a prefix). This ensures uniqueness across multiple instances of the component resource and ensures that if the component is renamed, the child resources are renamed as well.
+
+## Physical IDs {#physicalid}
+
+In addition to its logical name, physical name, and URN, every resource that Pulumi creates in a cloud provider is assigned a **physical ID** by that provider once creation is complete. This ID is exposed as the `id` output property on every resource.
+
+Unlike the logical name (which you choose) or the URN (which Pulumi derives), the physical ID is assigned by the provider and is specific to that provider's conventions:
+
+- AWS resources use ARNs (`arn:aws:s3:::my-bucket`) or short identifiers (`i-0abc1234def5678`), depending on the resource type.
+- Azure resources use long ARM IDs (`/subscriptions/<sub>/resourceGroups/<rg>/providers/...`).
+- GCP resources use self-link URLs (`https://www.googleapis.com/compute/v1/projects/...`).
+- Generic resources often use simple strings or numeric IDs.
+
+Because `id` is an output, it is wrapped in Pulumi's `Output<T>` type and is not known until the resource has been created or updated. You access it just like any other output — by passing it directly to another resource's input or by using `apply` when you need to transform the value in code.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as aws from "@pulumi/aws";
+
+const bucket = new aws.s3.Bucket("my-bucket");
+
+// bucket.id is an Output<string> — the AWS-assigned bucket name.
+const replica = new aws.s3.BucketReplication("replica", {
+    bucket: bucket.id,   // Pass Output<string> directly — no .apply() needed.
+    // ...
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+bucket = aws.s3.Bucket("my-bucket")
+
+# bucket.id is an Output[str] — the AWS-assigned bucket name.
+replica = aws.s3.BucketReplication(
+    "replica",
+    bucket=bucket.id,   # Pass Output[str] directly — no apply() needed.
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
+if err != nil {
+    return err
+}
+
+// bucket.ID() returns pulumi.IDOutput — the AWS-assigned bucket name.
+_, err = s3.NewBucketReplication(ctx, "replica", &s3.BucketReplicationArgs{
+    Bucket: bucket.ID(), // Pass IDOutput directly.
+})
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+var bucket = new Aws.S3.Bucket("my-bucket");
+
+// bucket.Id is an Output<string> — the AWS-assigned bucket name.
+var replica = new Aws.S3.BucketReplication("replica", new()
+{
+    Bucket = bucket.Id,  // Pass Output<string> directly.
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+var bucket = new Bucket("my-bucket");
+
+// bucket.id() returns Output<String> — the AWS-assigned bucket name.
+var replica = new BucketReplication("replica", BucketReplicationArgs.builder()
+    .bucket(bucket.id())
+    .build());
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  my-bucket:
+    type: aws:s3:Bucket
+  replica:
+    type: aws:s3:BucketReplication
+    properties:
+      bucket: ${my-bucket.id}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+The physical ID is particularly important when you want to adopt an existing cloud resource into a Pulumi stack. The [`import` resource option](/docs/iac/concepts/resources/options/import/) and the `get` static method both accept a physical ID to look up the resource's current state in the provider.
+
+```python
+# Import an existing S3 bucket by its provider-assigned ID.
+existing = aws.s3.Bucket.get("existing-bucket", id="my-bucket-name-abc123")
+```
+
+See [Importing resources](/docs/iac/adopting-pulumi/import/) for a full discussion of adoption workflows.
+
+## Resource identity summary {#identity-summary}
+
+Pulumi uses four distinct forms of resource identity, each suited to a different purpose. Understanding which form to use in a given context prevents the most common type-mismatch errors.
+
+| Identity form | Where it comes from | Typical value | When to use it |
+|---|---|---|---|
+| **Logical name** | Your code — the first constructor argument | `"my-bucket"` | Passed to the resource constructor. Drives the URN and often the physical name prefix. |
+| **Physical name** | Provider, influenced by your logical name and auto-naming | `"my-bucket-d7c3a1f"` | Used in provider API calls. Read back via provider-specific output properties (e.g., `bucket`, `name`). |
+| **Physical ID** | Provider — returned after the resource is created | `"arn:aws:s3:::my-bucket-d7c3a1f"` or `"my-bucket-d7c3a1f"` | Pass to `import`, `get`, and provider APIs that accept a resource reference by ID. Access via `resource.id`. |
+| **URN** | Pulumi — derived from project, stack, type, and logical name | `"urn:pulumi:dev::app::aws:s3/bucket:Bucket::my-bucket"` | Pulumi CLI commands (`pulumi state`, `pulumi import`). Rarely used in program code. Access via `resource.urn`. |
+| **Resource reference** | Your program — the variable holding the resource object | `bucket` (the Python/TS/Go variable) | Pass to [`ResourceOptions`](/docs/iac/concepts/resources/options/) fields (`parent`, `dependsOn`, `provider`, `deletedWith`). Never pass a URN or ID here. |
+
+The most frequent source of confusion is the distinction between the physical ID (`resource.id`) and the URN (`resource.urn`). The physical ID is what cloud provider APIs and the Pulumi import system expect. The URN is Pulumi-internal and is almost never needed in application code.
+
+{{% notes type="info" %}}
+The `dependsOn` option accepts a list of **resource references** (the variable itself), not URNs or IDs. Pass `dependsOn=[bucket]` in Python, not `dependsOn=[bucket.urn]`.
+{{% /notes %}}
