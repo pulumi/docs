@@ -10,7 +10,13 @@
 {{ $depth := .depth | default 0 }}
 {{ $maxDepth := .maxDepth | default 2 }}
 
+{{ $sortedNames := slice }}
 {{ range $propName, $prop := $properties }}
+    {{ $sortedNames = $sortedNames | append (dict "name" $propName "order" (int ($prop.pulumiOrder | default 9999))) }}
+{{ end }}
+{{ range sort $sortedNames "order" }}
+  {{ $propName := .name }}
+  {{ $prop := index $properties $propName }}
   {{ $effectiveProp := $prop }}
   {{ $refSchemaName := "" }}
   {{ $hasInlineProps := false }}
