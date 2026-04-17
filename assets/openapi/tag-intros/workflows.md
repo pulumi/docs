@@ -1,1 +1,0 @@
-The Workflows API provides endpoints for managing agent pools, which are groups of deployment runners that execute Pulumi operations in your infrastructure. Use these endpoints to create, configure, and manage agent pools for your organization.

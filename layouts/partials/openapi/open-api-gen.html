@@ -31,21 +31,21 @@
                     {{ if not (in $httpMethods $pathMethod) }}{{ continue }}{{ end }}
                     {{ $endpoint := dict "path" $path "method" $pathMethod "details" $pathDetails }}
 
+                    {{/* When a route carries multiple tags, only the last tag
+                         is used — matching the content adapter convention. */}}
                     {{ if $filterTag }}
-                        {{ if $pathDetails.tags }}
-                            {{ range $tag := $pathDetails.tags }}
-                                {{ if eq $tag $filterTag }}
-                                    {{ $currentSlice := index $endpointGroups $tag | default (slice) }}
-                                    {{ $endpointGroups = merge $endpointGroups (dict $tag ($currentSlice | append $endpoint)) }}
-                                {{ end }}
+                        {{ with $pathDetails.tags }}
+                            {{ $lastTag := index . (sub (len .) 1) }}
+                            {{ if eq $lastTag $filterTag }}
+                                {{ $currentSlice := index $endpointGroups $filterTag | default (slice) }}
+                                {{ $endpointGroups = merge $endpointGroups (dict $filterTag ($currentSlice | append $endpoint)) }}
                             {{ end }}
                         {{ end }}
                     {{ else }}
-                        {{ if $pathDetails.tags }}
-                            {{ range $tag := $pathDetails.tags }}
-                                {{ $currentSlice := index $endpointGroups $tag | default (slice) }}
-                                {{ $endpointGroups = merge $endpointGroups (dict $tag ($currentSlice | append $endpoint)) }}
-                            {{ end }}
+                        {{ with $pathDetails.tags }}
+                            {{ $lastTag := index . (sub (len .) 1) }}
+                            {{ $currentSlice := index $endpointGroups $lastTag | default (slice) }}
+                            {{ $endpointGroups = merge $endpointGroups (dict $lastTag ($currentSlice | append $endpoint)) }}
                         {{ end }}
                     {{ end }}
                 {{ end }}

@@ -11,7 +11,12 @@
     {{ warnf "openapi: data/openapi-spec.json not found — run 'make ensure' to download the spec. Skipping tag page generation." }}
 {{ else }}
 
-{{/* Collect unique top-level tags from all paths. */}}
+{{/*
+    Collect unique top-level tags from all paths.
+    When a route carries multiple tags, only the LAST tag is used —
+    the spec convention puts the most specific tag last. This prevents
+    a route from appearing on multiple tag pages.
+*/}}
 {{ $httpMethods := slice "get" "post" "put" "patch" "delete" "head" "options" }}
 {{ $tagSet := dict }}
 {{ range $path, $methods := $spec.paths }}
@@ -19,14 +24,12 @@
         {{/* Skip non-method keys (parameters, summary, servers, etc.) */}}
         {{ if not (in $httpMethods $method) }}{{ continue }}{{ end }}
         {{ with $details.tags }}
-            {{ range . }}
-                {{/* Top-level tag is everything before the first colon. */}}
-                {{ $top := . }}
-                {{ if strings.Contains . ":" }}
-                    {{ $top = index (split . ":") 0 | strings.TrimRight " " }}
-                {{ end }}
-                {{ $tagSet = merge $tagSet (dict $top true) }}
+            {{ $last := index . (sub (len .) 1) }}
+            {{ $top := $last }}
+            {{ if strings.Contains $last ":" }}
+                {{ $top = index (split $last ":") 0 | strings.TrimRight " " }}
             {{ end }}
+            {{ $tagSet = merge $tagSet (dict $top true) }}
         {{ end }}
     {{ end }}
 {{ end }}
