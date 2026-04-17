@@ -26,7 +26,27 @@ For example, you might use a provider function to get the latest virtual machine
 
 ## Get functions
 
-**[Get functions](/docs/iac/concepts/functions/get-functions/)** are static functions available on all Pulumi resource types that allow you to reference an existing resource that is not managed by Pulumi. Unlike the `pulumi import` command which brings resources under Pulumi management, get functions simply allow you to read the properties of existing resources.
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language "typescript,python,csharp,java" %}}
+
+**[Get functions](/docs/iac/concepts/functions/get-functions/)** are static methods available on all Pulumi resource classes that allow you to reference an existing resource that is not managed by Pulumi. Unlike the `pulumi import` command which brings resources under Pulumi management, get functions simply allow you to read the properties of existing resources.
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+**[Get functions](/docs/iac/concepts/functions/get-functions/)** are package-level functions available for all Pulumi resource types that allow you to reference an existing resource that is not managed by Pulumi. Unlike the `pulumi import` command which brings resources under Pulumi management, get functions simply allow you to read the properties of existing resources.
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+**[Get functions](/docs/iac/concepts/functions/get-functions/)** are available on all Pulumi resource types (via the `get:` stanza) and allow you to reference an existing resource that is not managed by Pulumi. Unlike the `pulumi import` command which brings resources under Pulumi management, get functions simply allow you to read the properties of existing resources.
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Get functions are useful when you know an unmanaged resource's identity and need to reference properties of the unmanaged resource in resources that _are_ managed by Pulumi.
 
