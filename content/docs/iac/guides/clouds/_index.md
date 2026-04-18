@@ -1,7 +1,7 @@
 ---
 title: Clouds
 title_tag: "Cloud Guides | Pulumi IaC"
-meta_desc: Infrastructure as Code guides for AWS, Azure, Google Cloud, and Kubernetes with Pulumi.
+meta_desc: Infrastructure as Code guides for AWS and Azure with Pulumi.
 h1: Cloud Guides
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
@@ -25,7 +25,3 @@ See [AWS guides](/docs/iac/guides/clouds/aws/) for working with AWS providers an
 ## Azure
 
 See [Choosing a Pulumi Azure provider](/docs/iac/guides/clouds/azure/) for a comparison of `azure-native`, Azure Classic, `azuread`, `azuredevops`, and the community `azapi` package.
-
-## Kubernetes
-
-See [Kubernetes guides](/docs/iac/guides/clouds/kubernetes/) for production-ready Kubernetes with Pulumi, including playbooks, control-plane, worker nodes, cluster services, and the Pulumi Kubernetes Operator.

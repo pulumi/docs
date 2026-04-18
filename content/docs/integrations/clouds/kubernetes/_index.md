@@ -1,6 +1,6 @@
 ---
 title_tag: "Kubernetes | Pulumi Integrations"
-meta_desc: Kubernetes integration with Pulumi — providers, packages, the Pulumi Kubernetes Operator, architecture templates, guides, and ESC integrations.
+meta_desc: Kubernetes integration with Pulumi — providers, packages, the Pulumi Kubernetes Operator, architecture templates, and ESC integrations.
 title: Kubernetes
 linktitle: Kubernetes
 h1: Kubernetes
@@ -16,7 +16,7 @@ aliases:
 - /docs/clouds/kubernetes/
 ---
 
-Manage Kubernetes clusters, deploy application workloads, and drive in-cluster automation with Pulumi. This page links to every Pulumi capability for Kubernetes: Infrastructure as Code, the Pulumi Kubernetes Operator, ESC integrations, and guides.
+Manage Kubernetes clusters, deploy application workloads, and drive in-cluster automation with Pulumi. This page links to every Pulumi capability for Kubernetes: Infrastructure as Code, the Pulumi Kubernetes Operator, and ESC integrations.
 
 To start from scratch, follow the [Kubernetes get-started guide](/docs/iac/get-started/kubernetes/).
 
@@ -25,6 +25,8 @@ To start from scratch, follow the [Kubernetes get-started guide](/docs/iac/get-s
 [Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, Python, Go, C#, Java, or YAML — with deterministic deployments, a state backend, and a rich ecosystem of packages.
 
 - [Kubernetes provider](/registry/packages/kubernetes/) — provision any resource available in the Kubernetes API.
+- [Helm charts](/registry/packages/kubernetes/api-docs/helm/v4/chart/) — deploy Helm charts via the Kubernetes provider, with full lifecycle management and value inputs as typed Pulumi resources.
+- [Kubernetes YAML manifests](/registry/packages/kubernetes/api-docs/yaml/v2/configfile/) — apply existing YAML manifests (single file or [a whole directory](/registry/packages/kubernetes/api-docs/yaml/v2/configgroup/)) through the Kubernetes provider without rewriting them.
 - [Kubernetes Cert Manager](/registry/packages/kubernetes-cert-manager/) — higher-level component for installing cert-manager.
 - [Kubernetes CoreDNS](/registry/packages/kubernetes-coredns/) — higher-level component for installing CoreDNS.
 - [Docker](/registry/packages/docker/) — build and push Docker images to any registry.
@@ -56,28 +58,11 @@ Start new Kubernetes projects from a pre-built template:
 - [Helm chart on Kubernetes](/templates/kubernetes-application/helm-chart/)
 - [Web application on Kubernetes](/templates/kubernetes-application/web-application/)
 
-## Guides
-
-Hands-on Infrastructure as Code guides for building on Kubernetes with Pulumi.
-
-- [Kubernetes playbooks](/docs/iac/guides/clouds/kubernetes/playbooks/)
-- [Control plane](/docs/iac/guides/clouds/kubernetes/control-plane/)
-- [Worker node creation](/docs/iac/guides/clouds/kubernetes/worker-nodes/)
-- [Accessing clusters](/docs/iac/guides/clouds/kubernetes/try-out-the-cluster/)
-- [Kubernetes cluster defaults](/docs/iac/guides/clouds/kubernetes/configure-defaults/)
-- [Kubernetes access control](/docs/iac/guides/clouds/kubernetes/configure-access-control/)
-- [Kubernetes cluster services](/docs/iac/guides/clouds/kubernetes/cluster-services/)
-- [Kubernetes app services](/docs/iac/guides/clouds/kubernetes/app-services/)
-- [Updating Kubernetes worker nodes](/docs/iac/guides/clouds/kubernetes/update-worker-nodes/)
-- [Kubernetes identity and access management (IAM)](/docs/iac/guides/clouds/kubernetes/identity/)
-- [Kubernetes apps](/docs/iac/guides/clouds/kubernetes/apps/)
-- [Kubernetes infrastructure services](/docs/iac/guides/clouds/kubernetes/managed-infra/)
-- [Introductory video ↗](https://www.youtube.com/watch?v=2P8JLgAc5QI)
-
 ## Secrets & configuration (ESC)
 
 [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) is a centralized service for managing secrets, configuration, and short-lived credentials. It integrates with Kubernetes to deliver ESC-managed values into cluster workloads.
 
+- [Kubernetes cluster access](/docs/esc/integrations/kubernetes/kubernetes/) — centrally manage kubeconfig files and cluster credentials for `kubectl`, `helm`, and Pulumi programs.
 - [Kubernetes External Secrets Operator integration](/docs/esc/integrations/kubernetes/external-secrets-operator/) — sync Pulumi ESC values into Kubernetes secrets via External Secrets Operator.
 - [Kubernetes Secret Store CSI driver integration](/docs/esc/integrations/kubernetes/secret-store-csi-driver/) — mount ESC values into pods via the Secret Store CSI driver.
 
