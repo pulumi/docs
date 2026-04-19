@@ -23,19 +23,19 @@ JumpCloud SAML SSO requires the **SSO Package** or higher, or the SSO add-on fea
 
 ## Creating the JumpCloud application
 
-1. Log in to the [JumpCloud Admin Portal](https://console.jumpcloud.com/).
-1. Go to **User Authentication** > **SSO Applications**.
-1. Click **+ Add New Application**.
-1. Search for **Pulumi** to use the pre-built connector, or select **Custom Application** if a pre-built connector is not available, then click **Next**.
-1. On the **Select Options** page, choose the applicable options and click **Next**.
+1. Sign in to the [JumpCloud Admin Portal](https://console.jumpcloud.com/).
+1. Navigate to **User Authentication** > **SSO Applications**.
+1. Select **+ Add New Application**.
+1. Search for **Pulumi** to use the pre-built connector, or select **Custom Application** if a pre-built connector is not available, then select **Next**.
+1. On the **Select Options** page, choose the applicable options and select **Next**.
 1. On the **Enter General Info** page, enter a display name (for example, _Pulumi Cloud_), an optional description, and a user portal image. See [Pulumi Logos](/brand/#logos) for official artwork.
-1. Optionally expand **Advanced Settings** to set a custom value for the IdP URL endpoint. JumpCloud will use this to construct your SSO IdP URL in the format `https://sso.jumpcloud.com/saml2/<custom_value>`.
+1. Optionally expand **Advanced Settings** to set a custom value for the IdP URL endpoint. JumpCloud uses this to construct your SSO IdP URL in the format `https://sso.jumpcloud.com/saml2/<custom_value>`.
 
     {{% notes type="warning" %}}
     The SSO IdP URL cannot be changed after the application is created. Choose the custom value carefully.
     {{% /notes %}}
 
-1. Click **Save Application**, then **Configure Application**.
+1. Select **Save Application**, then **Configure Application**.
 
 ## Configuring the JumpCloud application
 
@@ -56,23 +56,23 @@ After saving the application, JumpCloud opens the application configuration pane
 Do not change the **SAMLSubject NameID Format** after users have already signed in via SAML SSO. Changing it will break existing user sessions.
 {{% /notes %}}
 
-When you are done, click **Save**.
+When you are done, select **Save**.
 
 ## Assigning users to the application
 
-Users must be assigned to the JumpCloud application before they can sign in with SSO.
+Assign users to the JumpCloud application before they can sign in with SSO.
 
 1. From the application configuration panel, select the **User Groups** tab.
 1. Check the box next to each user group you want to grant access.
-1. Click **Save**.
+1. Select **Save**.
 
 ## Exporting the JumpCloud metadata file
 
 Pulumi requires the IdP metadata XML from JumpCloud to complete SSO configuration.
 
-1. From the **SSO** tab of the application, click **Export Metadata** to download the metadata XML file.
+1. From the **SSO** tab of the application, select **Export Metadata** to download the metadata XML file.
 
-    Alternatively, navigate to **User Authentication** > **SSO Applications**, check the box next to your Pulumi application in the **Configured Applications** list, and click **Export Metadata** in the top-right corner.
+    Alternatively, navigate to **User Authentication** > **SSO Applications**, check the box next to your Pulumi application in the **Configured Applications** list, and select **Export Metadata** in the top-right corner.
 
 1. Save the downloaded `JumpCloud-<applicationname>-metadata.xml` file; you will need it in the next step.
 
@@ -80,16 +80,16 @@ Pulumi requires the IdP metadata XML from JumpCloud to complete SSO configuratio
 
 1. Sign in to [Pulumi Cloud](https://app.pulumi.com) and navigate to your organization.
 1. Select the **Settings** tab, then **Access Management**.
-1. Under **Membership Requirements**, click **Change requirements**.
-1. Select **SAML SSO** and click **Next**.
+1. Under **Membership Requirements**, select **Change requirements**.
+1. Select **SAML SSO** and select **Next**.
 1. Paste the contents of the JumpCloud metadata XML file into the **Identity Provider Metadata** field.
-1. Click **Apply changes**.
+1. Select **Apply changes**.
 
 ## Signing in with JumpCloud
 
 Once SAML SSO is configured, members of your Pulumi organization can sign in using either of the following methods:
 
-- **IdP-initiated:** Click the Pulumi tile in the JumpCloud User Console. JumpCloud authenticates the user and redirects them to Pulumi Cloud automatically.
+- **IdP-initiated:** Select the Pulumi tile in the JumpCloud User Console. JumpCloud authenticates the user and redirects them to Pulumi Cloud automatically.
 - **SP-initiated:** Navigate to `https://app.pulumi.com/signin/sso/`, enter your Pulumi organization name, and you will be redirected to JumpCloud to authenticate.
 
 ## Optional: automated user provisioning with SCIM
@@ -106,7 +106,7 @@ When configuring SCIM in JumpCloud, use the following values:
 
 | SCIM Setting | Value |
 | ------------ | ----- |
-| Base URL | `https://api.pulumi.com/scim/v2/<orgName>` |
+| Base URL | `https://api.pulumi.com/scim/v2/acmecorp` |
 | Token Key | The token generated from the Pulumi SAML SSO settings page |
 
 For full SCIM configuration steps on the JumpCloud side, refer to JumpCloud's [Integrate with Pulumi](https://jumpcloud.com/support/integrate-with-pulumi) support article. For Pulumi's SCIM provisioning documentation, see [SCIM](/docs/administration/access-identity/scim/).
