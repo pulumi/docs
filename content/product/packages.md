@@ -467,7 +467,7 @@ benefits:
 
         - title: Build faster and smarter
           icon: guage
-          icon_color: purple
+          icon_color: violet
           description: |
             Don’t reinvent the wheel. Use or create infrastructure abstractions that encapsulate cloud architectures and best practices with Pulumi components in your favorite languages.
 

@@ -8,7 +8,6 @@
 
 @import "theme";
 
-@import "colors";
 @import "mixins";
 
 @layer base {
@@ -123,51 +122,28 @@
             @apply whitespace-normal;
         }
 
-        .btn-primary {
-            @include gradient-button;
-        }
-
+        .btn-primary,
         .btn-primary-template-variant {
-            @apply relative text-white text-lg bg-violet-800 border-violet-800 border-2 rounded-lg cursor-pointer z-auto;
-            @apply hover:bg-violet-600 hover:border-violet-600;
+            @apply relative text-white text-lg bg-violet-primary rounded-lg cursor-pointer z-auto;
+            @apply hover:bg-violet-primary hover:border-violet-800;
         }
 
+        .btn-secondary,
         .btn-secondary-template-variant {
-            @apply relative rounded-lg text-lg cursor-pointer z-auto;
-            background-color: white;
-            border: 0.5px solid #b4b4b4;
-            color: #2B2B2C;
-            padding: calc(0.75rem + 1.5px) calc(2rem + 1.5px) !important;
-            &:hover {
-                background-color: #faf9fd;
-            }
+            @apply bg-white relative text-black rounded-lg text-lg cursor-pointer z-auto border border-gray-300;
+            @apply hover:bg-white hover:border-gray-600;
         }
 
-        .btn-secondary {
-            @apply bg-white text-violet-600 border-2 border-violet-600;
-            @include transition;
-
-            &.disabled {
-                opacity: 0.3;
-            }
-
-            &:hover {
-                @apply bg-violet-600 text-white;
-            }
-
-            &:focus {
-                @apply bg-violet-700 text-white;
-            }
-        }
+       
 
         // Make the borders transparent when the button is over a background of the same color.
-        .bg-violet-600 .btn-secondary {
+        .bg-violet-primary .btn-secondary {
             @apply border-transparent;
         }
 
-        // white secondary button for violet-600 background
+        // white secondary button for violet-primary background
         .btn-secondary-home-action {
-            @apply bg-violet-600 text-white border-2 border-white whitespace-normal;
+            @apply bg-violet-primary text-white border-2 border-white whitespace-normal;
             @include transition;
 
             &.disabled {
@@ -246,7 +222,7 @@
 
     .section-partner {
         .btn-primary:hover {
-            background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
+            background: var(--color-violet-primary);
         }
     }
 

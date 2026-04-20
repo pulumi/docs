@@ -1,4 +1,3 @@
-@import "../../../../src/scss/colors";
 
 .symbol-container {
     height: 100%;
@@ -25,11 +24,11 @@
     }
 
     &.module {
-        border-color: map-get($green, 700);
+        border-color: var(--color-green-700);
 
         &:before {
             content: "M";
-            color: map-get($green, 700);
+            color: var(--color-green-700);
             font-size: 9px;
             font-weight: 700;
         }
@@ -47,11 +46,11 @@
     }
 
     &.resource {
-        border-color: map-get($blue, 700);
+        border-color: var(--color-blue-700);
 
         &:before {
             content: "R";
-            color: map-get($blue, 700);
+            color: var(--color-blue-700);
             font-size: 9px;
             font-weight: 700;
         }
@@ -68,7 +67,7 @@ $base-ch-width-l: 12ch;
         display: flex;
         align-items: center;
         text-decoration: none;
-        color: map-get($gray, 900);
+        color: var(--color-gray-900);
         max-width: 24ch;
 
         &:hover {

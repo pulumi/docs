@@ -3,11 +3,11 @@
 // Colors derived from https://github.com/miguelsolorio/min-theme (MIT)
 
 .code-theme-min-dark {
-    /* Background */ .bg { color: #b392f0; background-color: #20054e; }
-    /* PreWrapper */ .chroma { color: #b392f0; background-color: #20054e; }
+    /* Background */ .bg { color: #b392f0; background-color: var(--color-violet-950) }
+    /* PreWrapper */ .chroma { color: #b392f0; background-color: var(--color-violet-950); }
 
     pre {
-        background: #20054e;
+        background: var(--color-violet-950);
     }
 
     /* Other */ .chroma .x { color: #b392f0; }

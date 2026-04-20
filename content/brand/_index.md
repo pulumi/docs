@@ -56,7 +56,7 @@ colors:
       cmyk: "3, 37, 0, 43"
       pms: "513 C"
     - name: Violet
-      hex: "#805ac3"
+      hex: "var(--color-violet-primary)"
       rgb: "128, 90, 195"
       cmyk: "26, 41, 0, 24"
       pms: "2088 C"

@@ -8,7 +8,7 @@
     }
 
     &-item-header {
-        @apply text-purple-500 font-bold text-lg mb-5;
+        @apply text-violet-500 font-bold text-lg mb-5;
     }
 
     &-item-description {
@@ -106,7 +106,7 @@
         }
 
         li[data-faq-label="pricing"] {
-            border-bottom-color: var(--color-blue-600);
+            border-bottom-color: var(--color-violet-primary);
 
             a {
                 @apply text-black;
@@ -126,7 +126,7 @@
                 }
 
                 li[data-faq-label="#{$filter-type}"] {
-                    border-bottom-color: var(--color-blue-600);
+                    border-bottom-color: var(--color-violet-primary);
 
                     a {
                         @apply text-black;
@@ -194,7 +194,7 @@
     .gradient {
         border-radius: 12px 12px 0px 0px;
         height: 8px;
-        background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+        background: var(--color-violet-primary);
     }
 
     @include screen-lg {
@@ -213,7 +213,7 @@
 .ready-cta {
     p,
     span {
-        color: map-get($gray, 800) !important;
+        color: var(--color-gray-800) !important;
     }
     span.tooltip-content span {
         color: white !important;
@@ -222,6 +222,6 @@
 
 .ready-cta {
     &.gradient {
-        background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+        background: var(--color-violet-primary);
     }
 }

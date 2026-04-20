@@ -230,7 +230,7 @@ superpowers:
       cta: Learn more
       cta_url: "/docs/insights/"
       icon_type: cloud-with-nodes
-      icon_color: purple
+      icon_color: violet
       description: |
         Gain security, compliance, and cost insights into the entirety of an organization’s Kubernetes applications and cloud assets and automatically remediate issues through AI-powered workflows.
 
@@ -312,7 +312,7 @@ detail_sections:
 
           - title: Run Compliance Checks
             icon: testing
-            icon_color: purple
+            icon_color: violet
             description: Pulumi Copilot leverages knowledge about compliance frameworks to analyze your infrastructure and check for policy compliance. 
 
           - title: Debug Cloud Failures

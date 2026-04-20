@@ -63,10 +63,10 @@
         }
 
         &[data-filter-value="component"] {
-            @apply border-purple-300;
+            @apply border-violet-300;
 
             [data-selected-types*="component"] & {
-                @apply bg-purple-300;
+                @apply bg-violet-300;
             }
         }
     }

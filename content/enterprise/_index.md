@@ -129,7 +129,7 @@ capabilities:
 
         - title: Role Based Access Control (RBAC)
           icon: lock
-          icon_color: purple
+          icon_color: violet
           description: |
             Control access to sensitive data and operations through fine-grained roles across the entire organization and for specific projects.
 

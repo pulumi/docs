@@ -9,7 +9,7 @@
             width: 100%;
             left: 0;
             height: 2px;
-            background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+            background: var(--color-violet-primary);
         }
     }
 
@@ -23,8 +23,8 @@
 
     @apply border border-black border-solid rounded;
     &:hover {
-        background-color: $black;
-        color: $white;
+        background-color: #000;
+        color: #fff;
     }
     li {
         @apply my-0;
@@ -33,7 +33,7 @@
 
             &:hover {
                 font-weight: bold;
-                color: $black;
+                color: #000;
             }
         }
     }
@@ -47,8 +47,8 @@
 
         &:hover {
             .dropdown-title {
-                background-color: $black;
-                color: $white;
+                background-color: #000;
+                color: #fff;
             }
         }
 

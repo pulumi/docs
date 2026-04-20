@@ -7,7 +7,7 @@
     .gradient-highlight {
         @apply relative opacity-10 h-3 -top-4;
         width: calc(100% - 2rem);
-        background: linear-gradient(90deg, map-get($brand, "yellow") 0%, map-get($brand, "salmon") 18.23%, map-get($brand, "fuchsia-darker") 38.02%, map-get($brand, "purple") 53.65%, map-get($brand, "violet") 74.48%, map-get($brand, "blue-lighter") 100%);
+        background: var(--color-violet-primary);
     }
 
     // Adjust search box spacing in tutorials

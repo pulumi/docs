@@ -31,7 +31,7 @@ types:
         - title: System Integrators
           icon:
             name: shield
-            color: purple
+            color: violet
           description: Trusted and experienced advisors that provide customized solutions to clients implementing modern Infrastructure as Code
 
 case_studies:

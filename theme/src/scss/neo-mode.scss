@@ -21,7 +21,7 @@ body #neo-mode-toggle {
     background: white;
     border-width: 2px 0px 2px 2px;
     border-style: solid;
-    border-color: var(--violet-secondary, #805AC3);
+    border-color: var(--violet-secondary, var(--color-violet-primary));
     border-radius: 8px 0px 0px 8px;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
@@ -271,7 +271,7 @@ body {
         overflow: hidden; // Prevent scrolling when Neo is active
 
         #neo-mode-toggle {
-            background: var(--violet-secondary, #805AC3);
+            background: var(--violet-secondary, var(--color-violet-primary));
 
             .neo-hover-icon {
                 opacity: 0;

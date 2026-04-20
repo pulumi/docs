@@ -220,9 +220,9 @@
 
     {{ range $index, $item := .Params.detail_sections }}
         {{ $iconColor := "text-orange-300" }}
-        {{ $ctaButtonColor := "btn-purple" }}
+        {{ $ctaButtonColor := "btn-violet" }}
         {{ if (modBool $index 2) }}
-            {{ $iconColor = "text-purple-100" }}
+            {{ $iconColor = "text-violet-100" }}
             {{ $ctaButtonColor = "btn-orange" }}
         {{ end }}
 

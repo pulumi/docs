@@ -222,7 +222,7 @@ detail_sections:
 
         - title: Familiar Concepts
           icon: collab
-          icon_color: purple
+          icon_color: violet
           description: Azure Resource Manager API is structured around Resource Providers &mdash; high-level groups like `storage`, `compute`, or `web`. We map Resource Providers to top-level modules or namespaces in Pulumi SDKs.
 
         - title: API Versions

@@ -45,10 +45,8 @@
 }
 
 .careers-cta {
-    border-bottom: 4px solid;
-    border-top: 4px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+    border-bottom: 4px solid var(--color-violet-primary);
+    border-top: 4px solid var(--color-violet-primary);
 }
 
 #awards {
@@ -56,7 +54,7 @@
         height: 230px;
         width: 230px;
         border-radius: 14px;
-        background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+        background: var(--color-violet-primary);
     
         a {
             height: 226px;
@@ -93,9 +91,7 @@
     .about-card-photo {
         width: 150px;
         height: 150px;
-        border-right: 4px solid;
-        border-image-slice: 1;
-        border-image-source: linear-gradient(#F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+        border-right: 4px solid var(--color-violet-primary);
     }
 
     .social-overlay {
@@ -115,11 +111,8 @@
 
 .photo-container {
     img {
-        border: double 6px transparent;
+        border: double 6px var(--color-violet-primary);
         border-radius: 6px;
-        background-image: linear-gradient(white, white), linear-gradient(#F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
-        background-origin: border-box;
-        background-clip: padding-box, border-box;
     }
 }
 
@@ -130,19 +123,17 @@
 
 
 .about-us-gradient-hero {
-    border-top: 6px solid;
-    border-bottom: 6px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+    border-top: 6px solid var(--color-violet-primary);
+    border-bottom: 6px solid var(--color-violet-primary);
     height: 20rem;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(180deg, #FCC247 0%, #F06DE9 100%);
+    background: var(--color-violet-primary);
     z-index: 10;
   
     &:before {
-        background: linear-gradient(180deg, #f1d1a0 0%, #AE6BFE 100%);
-        content: '';    
+        background: var(--color-violet-800);
+        content: '';
         display: block;
         height: 100%;
         position: absolute;
@@ -174,11 +165,8 @@
     @include screen-xl {
         height: 465px;
     }
-    border: double 2px transparent;
+    border: double 2px var(--color-violet-primary);
     border-radius: 12px;
-    background-image: linear-gradient(white, white), linear-gradient(#F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
 }
 
 

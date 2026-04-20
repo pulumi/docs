@@ -48,9 +48,9 @@
                         {{ .Description | markdownify }}
                     </div>
                     {{ if (isset .Params "redirect_to") }}
-                    <a href="{{ .Params.redirect_to }}" class="text-violet-800 hover:text-violet-600 font-medium mt-auto inline-flex items-center gap-1 cursor-pointer">Read the story &rarr;</a>
+                    <a href="{{ .Params.redirect_to }}" class="text-violet-primary hover:text-violet-primary font-medium mt-auto inline-flex items-center gap-1 cursor-pointer">Read the story &rarr;</a>
                     {{ else }}
-                    <a href="{{ .RelPermalink }}" class="text-violet-800 hover:text-violet-600 font-medium mt-auto inline-flex items-center gap-1 cursor-pointer">Read the story &rarr;</a>
+                    <a href="{{ .RelPermalink }}" class="text-violet-primary hover:text-violet-primary font-medium mt-auto inline-flex items-center gap-1 cursor-pointer">Read the story &rarr;</a>
                     {{ end }}
                 </div>
             </div>

@@ -141,7 +141,7 @@ personas:
         items:
             - title: Write in your favorite language
               icon: code
-              icon_color: purple
+              icon_color: violet
               description: |
                 Define [infrastructure as code](/what-is/what-is-infrastructure-as-code/) using
                 familiar languages and IDEs: JavaScript, TypeScript, Python, Go, .NET, Java, and YAML.
@@ -163,7 +163,7 @@ personas:
         items:
             - title: Universal Infrastructure as Code
               icon: code-window
-              icon_color: purple
+              icon_color: violet
               description: |
                 Use cloud engineering best practices to plan and version deployments and perform
                 them with perfect auditability.
@@ -185,7 +185,7 @@ personas:
         items:
             - title: Policy as Code
               icon: shield
-              icon_color: purple
+              icon_color: violet
               description: |
                 Pulumi Policies lets you author policies in programming languages to enforce best practices and correct configuration drift.
             - title: Built-in Secrets
@@ -203,7 +203,7 @@ personas:
         items:
             - title: Embrace modern architectures
               icon: nodes-and-rays
-              icon_color: purple
+              icon_color: violet
               description: |
                 Easily adopt container and serverless architectures across applications and infrastructure, and Dev and DevOps.
             - title: Go Multi-Cloud

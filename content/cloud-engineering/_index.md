@@ -94,7 +94,7 @@ benefits:
     items:
         - title: Unlock the potential of the modern cloud
           icon: lock
-          icon_color: purple
+          icon_color: violet
           description: |
             Modern cloud architectures, such as Kubernetes, have high innovation potential but are complicated to adopt. Cloud engineering empowers teams to tame this complexity
             with software engineering practices and tools.
