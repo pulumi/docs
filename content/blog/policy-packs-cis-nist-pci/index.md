@@ -66,7 +66,7 @@ Need a compliance pack for a standard that isn't listed here? Please let us know
 
 **New to Pulumi? Start your governance journey today.**
 
-* [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) and start compliance task with Neo  
+* [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) and start a compliance task with Neo  
 * [Read the Get Started guide](/docs/insights/policy/get-started/) to apply and manage policies across your cloud infrastructure
 * [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features
 
