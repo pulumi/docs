@@ -42,11 +42,7 @@
         }
     }
 
-    .dot-overlay {
-        @apply w-full h-full absolute top-0 left-0 pointer-events-none;
-        background: linear-gradient(175deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0.5004551991695115) 50%, rgba(255, 255, 255, 1) 95%);
-        z-index: -1;
-    }
+    // NOTE: .dot-overlay intentionally removed
 
     .home-hero-btn-primary {
         @include gradient-button;

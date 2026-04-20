@@ -1,5 +1,7 @@
 // v4 CSS-first theme: defines custom properties for colors, fonts, screens, etc.
 // Values are sourced from the official Pulumi brand palette.
+//
+// NOTE: The legacy salmon, fuchsia, and purple color scales have been intentionally removed
 @theme {
   --color-white: #fff;
   --color-black: #000;

@@ -263,6 +263,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "search";
     @import "section-nav";
     @import "marketing/self-hosted";
+    // NOTE: marketing/shape-backgrounds intentionally removed
     @import "marketing/signup";
     @import "marketing/workshop-signup";
     @import "marketing/slot-machine";
@@ -408,7 +409,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
         }
     }
 
-    // New Styles
+    // NOTE: .rainbow-text intentionally removed 
 
     .blue-star-background {
         @apply w-full h-full overflow-hidden absolute top-0 left-0 bg-blue-200 shadow-lg;
