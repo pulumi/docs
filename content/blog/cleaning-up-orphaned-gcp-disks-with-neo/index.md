@@ -1,7 +1,7 @@
 ---
 title: "Cleaning Up Orphaned GCP Persistent Disks with Neo"
 date: 2026-04-20
-draft: true
+draft: false
 meta_desc: "Orphaned GCP disk cleanup with Neo: Read-Only Mode discovers, Plan Mode scopes, CrossGuard blocks any delete without a snapshot label."
 meta_image: meta.png
 feature_image: feature.png
