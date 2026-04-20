@@ -105,7 +105,7 @@ Metadata for your package is generated from the [`schema.json`](/docs/iac/using-
   - `category/CATEGORY`: replace `CATEGORY` with one of `cloud`, `database`, `infrastructure`, `monitoring`, `network`, `utility`, `versioncontrol`
   - `kind/KIND`: replace `KIND` with one of `native`, `component`
     - Note: don't set a kind if you're bridging a Terraform provider
-- `pluginDownloadURL`: a web-accessible URL that contains the compiled plugin binary associated with your package. See [Authoring an Executable Plugin Package](./executable-plugin/#plugindownloadurl) for the URL format, hosting options (GitHub Releases, GitLab Releases, custom HTTP), and interpolation variables.
+- `pluginDownloadURL`: a web-accessible URL that contains the compiled plugin binary associated with your package. See [Authoring an Executable Plugin Package](../executable-plugin/#plugindownloadurl) for the URL format, hosting options (GitHub Releases, GitLab Releases, custom HTTP), and interpolation variables.
 
 ### API docs
 
@@ -125,7 +125,7 @@ Once you've authored and tested your package locally, you can publish it to make
 - The plugin binary to a host of your choice (GitHub Releases, GitLab Releases, or a custom HTTP endpoint).
 - The [package documentation](#publish-the-documentation) — overview, installation & configuration, API docs, and how-to guides to [Pulumi Registry](/registry/).
 
-For how to cross-compile the plugin binary, the archive naming convention the CLI expects, and the supported `pluginDownloadURL` forms, see [Authoring an Executable Plugin Package](./executable-plugin/). That guide also covers the canonical release pipeline used by Pulumi's own providers, including the [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher) GitHub Action for publishing SDKs.
+For how to cross-compile the plugin binary, the archive naming convention the CLI expects, and the supported `pluginDownloadURL` forms, see [Authoring an Executable Plugin Package](../executable-plugin/). That guide also covers the canonical release pipeline used by Pulumi's own providers, including the [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher) GitHub Action for publishing SDKs.
 
 ## Publish the documentation
 
