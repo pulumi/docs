@@ -16,8 +16,6 @@ aliases:
 - /docs/iac/packages-and-automation/pulumi-packages/
 - /docs/iac/using-pulumi/pulumi-packages/
 - /docs/iac/concepts/packages/packages/
-- /docs/iac/guides/building-extending/packages/
-- /docs/iac/guides/building-extending/packages/packages/
 ---
 
 Pulumi Packages are the core technology that enables Pulumi [resources](/docs/iac/concepts/resources/), [components](/docs/iac/concepts/components/), and [functions](/docs/iac/concepts/functions/) to be defined once and used in all Pulumi languages.
