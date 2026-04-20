@@ -396,6 +396,49 @@ In the example above, the query has been restricted to the "dev" stack.
 
 Clicking the "X" within the search bar will remove all previously selected filters.
 
+## Property columns
+
+{{% notes "info" %}}
+Property columns are only available to organizations using Team, Enterprise and Business Critical editions.
+
+If you would like to use them, [contact us](/contact?form=sales) to upgrade.
+{{% /notes %}}
+
+Property columns let you promote any resource input or output property into a first-class column in the results grid. Once added, a property column behaves like any built-in column: you can sort, filter, and group by its values across all resources returned by your query.
+
+Property columns use the same [property path](/docs/reference/property-paths/) syntax as [property queries](#property-queries). For example, `tags.Environment` exposes the value of the `Environment` tag on each resource, and `instanceType` exposes the instance type of compute resources. Nested and bracketed paths (such as `tags["name containing spaces"]`) are supported.
+
+### Creating a property column
+
+To add a property column from the results grid:
+
+1. Click the gear icon above the grid to open the settings menu.
+1. Select **Create property column**.
+1. Enter a property path (for example, `tags.Environment` or `instanceType`) in the dialog that appears.
+1. Confirm to add the column.
+
+The new column is appended to the right of the existing columns. Resources that do not have a value for the given property show an empty cell for that column.
+
+### Adding a column from the detail view
+
+When you expand a resource row to view its details, each listed input and output property displays an **Add as column** action next to its value. Clicking this action creates a property column for that property path without having to type it manually — useful when you have already located a property of interest on one resource and want to see its value across every resource in the grid.
+
+### Sorting, filtering, and grouping
+
+Property columns support the same interactions as built-in columns:
+
+- **Sort**: Click the property column header to sort results ascending or descending by property value.
+- **Filter**: Open the column filter to narrow results to one or more specific property values.
+- **Group by**: Drag the property column header into the Row Groups Header to group resources by property value. Expanding a group drills into the matching resources, just as it does for built-in columns.
+
+### Hiding and showing property columns
+
+Property columns can be hidden from the grid without being removed by toggling them off in the column chooser, the same as any built-in column. Re-adding a hidden property column via **Create property column** or **Add as column** makes it visible again.
+
+### Sharing views with property columns
+
+Property column configuration is persisted in the page URL. Sharing the URL with another member of your organization opens the grid with the same set of property columns, along with any active filters, sort order, and grouping. This makes property columns suitable for building and sharing repeatable views such as "all compute resources by instance type" or "all resources by environment tag".
+
 ## Download a CSV
 
 {{% notes "info" %}}
