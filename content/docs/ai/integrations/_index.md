@@ -97,11 +97,19 @@ Linear API keys are personal tokens. All actions Neo takes through this integrat
 
 ### PagerDuty
 
+{{% notes type="info" %}}
+PagerDuty User API Tokens are tied to a single user account. All actions Neo takes through this integration are attributed to the user who created the token, regardless of who creates the Neo task. For shared use, consider creating a dedicated PagerDuty user (e.g. `pulumi-bot`) whose token Neo can use.
+{{% /notes %}}
+
 1. In PagerDuty, open your user profile and select **User Settings**
 1. Select **Create API User Token**, give it a name (e.g., "Neo Integration"), and copy the token
 1. In Neo, enter the **User API Token**
 
 ### Supabase
+
+{{% notes type="info" %}}
+Supabase Access Tokens are tied to a single user account — Supabase does not offer service-account credentials for the MCP server. All actions Neo takes through this integration are attributed to the user who created the token, regardless of who creates the Neo task. For shared use, consider creating a dedicated Supabase user (e.g. `pulumi-bot`) whose token Neo can use.
+{{% /notes %}}
 
 1. On **supabase.com**, open **Account Preferences**, then **Access Tokens**
 1. Select **Generate New Token**, give it a name, and copy the token
