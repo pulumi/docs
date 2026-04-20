@@ -33,21 +33,19 @@ Customer-Managed Workflow Runners are available on the Business Critical edition
 
 Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) installed, which is required for running the workflow runner. If you plan to use workflow runners for **deployments**, you must also install the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and update the [source control settings](/docs/deployments/deployments/get-started) of the stack you want to deploy.
 
-1. Navigate to **Workflow Runners** under Deployments
-2. Create a new pool. Copy and save the token
-3. Install the workflow runners as per the instructions on the page
-4. Verify the workflow runner status by refreshing the page
-5. Configure the workflow runner pool for the workflows you want to run:
+1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow Runner Pools** tab
+1. Create a new pool. Copy and save the token
+1. Install the workflow runners as per the instructions on the page
+1. Verify the workflow runner status by refreshing the page
+1. Configure the workflow runner pool for the workflows you want to run:
    - **Deployments**: Go to **Stack Settings** > **Deploy** tab and select the pool under the **Deployment Runner** pool drop-down
    - **Insights discovery scans**: Go to **Management** > **Accounts** and select the pool for the account you want to scan
    - **Policy evaluation**: Go to **Management** > **Policies** > **Policy Groups** and select the pool for an audit policy group
-6. **(Optional)** Add more workflow runners to the pool to increase concurrency by using the same token
-7. Verify your setup:
+1. **(Optional)** Add more workflow runners to the pool to increase concurrency by using the same token
+1. Verify your setup:
    - **Deployments**: Run a `pulumi refresh` through the **Actions** drop-down in your stack page
    - **Insights discovery scans**: Trigger a scan from the **Management** > **Accounts** page and confirm it completes successfully
    - **Policy evaluation**: Run a policy evaluation against a stack and confirm the results appear as expected
-
-![Pool Details view](customer-managed-agents-assets/workflow-runners.png)
 
 Workflow runners poll Pulumi Cloud for pending workflows at a configurable interval (default: every 1 minute) and will disappear from the Pool details page 1-2 hours after being offline. On the deployments page, you can see all the deployments including pending deployments, and which workflow runners were used in a deployment.
 
@@ -56,6 +54,25 @@ Workflow runners support multiple workflow types beyond deployments, including P
 {{% notes "info" %}}
 If you are running the workflow runner inside a firewall ensure to allow outbound requests to api.pulumi.com. Ensure workflow runners have the cloud provider credentials to be able to deploy in your environments.
 {{% /notes %}}
+
+### Setting an organization default pool
+
+You can designate one pool as the **organization default**. When a default pool is set, any deployment, Insights discovery scan, or policy group evaluation that does not have an explicit workflow runner pool configured will use the default pool instead of the Pulumi Hosted Pool.
+
+The resolution order for each workflow is:
+
+1. The pool configured on the stack, account, or policy group
+1. The organization default pool (if set)
+1. The Pulumi Hosted Pool
+
+To set a default:
+
+1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow Runner Pools** tab
+1. Open the row actions menu on the pool you want to designate and choose **Set as default**
+
+The **Pulumi Hosted Pool** row at the top of the list represents the built-in Pulumi-managed pool. Selecting **Set as default** on that row clears any customer-managed default, restoring the built-in pool as the fallback. If a custom default pool is deleted, the organization automatically reverts to the Pulumi Hosted Pool.
+
+An explicit pool assigned to a stack, account, or policy group always takes precedence over the organization default.
 
 ### Leveraging OpenID authentication
 
