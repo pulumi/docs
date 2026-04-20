@@ -24,7 +24,7 @@ JumpCloud SAML SSO requires the **SSO Package** or higher, or the SSO add-on fea
 ## Creating the JumpCloud application
 
 1. Sign in to the [JumpCloud Admin Portal](https://console.jumpcloud.com/).
-1. Navigate to **User Authentication** > **SSO Applications**.
+1. Navigate to **Access** > **SSO Applications**.
 1. Select **+ Add New Application**.
 1. Search for **Pulumi** to use the pre-built connector, or select **Custom Application** if a pre-built connector is not available, then select **Next**.
 1. On the **Select Options** page, choose the applicable options and select **Next**.
@@ -72,7 +72,7 @@ Pulumi requires the IdP metadata XML from JumpCloud to complete SSO configuratio
 
 1. From the **SSO** tab of the application, select **Export Metadata** to download the metadata XML file.
 
-    Alternatively, navigate to **User Authentication** > **SSO Applications**, check the box next to your Pulumi application in the **Configured Applications** list, and select **Export Metadata** in the top-right corner.
+    Alternatively, navigate to **Access** > **SSO Applications**, check the box next to your Pulumi application in the **Configured Applications** list, and select **Export Metadata** in the top-right corner.
 
 1. Save the downloaded `JumpCloud-<applicationname>-metadata.xml` file; you will need it in the next step.
 
