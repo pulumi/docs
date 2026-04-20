@@ -1,6 +1,6 @@
 ---
 title: "Bitbucket Cloud Meets Pulumi Cloud"
-date: 2026-04-13
+date: 2026-04-20
 draft: false
 meta_desc: "Connect Bitbucket Cloud to Pulumi Cloud for automated deployments on push, pull request previews, review stacks, and AI-powered change summaries."
 meta_image: meta.png
