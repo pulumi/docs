@@ -119,7 +119,7 @@ Components distributed as Pulumi packages can be consumed in any language using 
 pulumi package add github.com/my-org/my-component@v1.0.0
 ```
 
-This pattern is common for components your organization publishes for internal consumption via a Git repository or the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/). It is also how components from a [source-based plugin package](#authoring-and-distributing-components) are consumed across languages — the SDK is generated in your program's language regardless of the language the component was authored in.
+This pattern is common for components your organization publishes for internal consumption via a Git repository or the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/). It is also how components from a [source-based plugin package](#authoring-components) are consumed across languages — the SDK is generated in your program's language regardless of the language the component was authored in.
 
 Under the hood, Pulumi fetches the package source (e.g. from GitHub), generates a [local package](/docs/iac/guides/building-extending/packages/local-packages/) SDK from the component's schema, and makes the generated SDK available for import in your program.
 
@@ -362,21 +362,11 @@ This tree makes it clear that a single `awsx:ec2:Vpc` component encapsulates mul
 
 Resource options passed to a component resource do not always behave the same as they do for custom resources. For example, the `provider` option has no effect on a component—use `providers` instead to pass explicit provider configuration to a component's child resources. For a complete list of which options apply to component resources, see [Resource options and component resources](/docs/iac/concepts/resources/options/#resource-options-and-component-resources).
 
-## Authoring and distributing components
+## Authoring components
 
-You author a component by extending the `ComponentResource` class. For a complete walkthrough — defining the class, structuring arguments, creating child resources, registering outputs, and configuring provider inheritance — see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/).
+You author a component by extending the `ComponentResource` class. The guides below walk through building, packaging, and testing components:
 
-Once you've authored a component, there are three ways to distribute it. Two of them allow the component to be consumed from **any** Pulumi language — including YAML — regardless of the language it was authored in:
-
-- **Native language package** — publish the component class through a language-ecosystem package manager (npm, PyPI, Go modules, etc.). No Pulumi plugin is involved, and consumers must use the same language you authored in.
-- **Source-based plugin package** — distribute as source; Pulumi generates an SDK in the consumer's language at `pulumi package add` time. Consumable from any Pulumi language.
-- **Executable-based plugin package** — ship the plugin as a pre-built executable alongside per-language SDKs. Consumable from any Pulumi language and the only option with no consumer-side runtime dependencies.
-
-For the full comparison and authoring workflow, see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/).
-
-## Additional resources
-
-- [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/) — Step-by-step guide to authoring a component from scratch, including setup, implementation, and publishing.
-- [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) — How to package and distribute components for use by others.
-- [Testing Components](/docs/iac/guides/building-extending/components/testing-components/) — How to write tests for your component resources.
-- [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/) — How to publish and discover components within your organization.
+- [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/) — define the class, structure arguments, create child resources, register outputs, and configure provider inheritance.
+- [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) — compare the three distribution options and package a component for sharing.
+- [Testing Components](/docs/iac/guides/building-extending/components/testing-components/) — write tests for component resources.
+- [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/) — publish and discover components within your organization.

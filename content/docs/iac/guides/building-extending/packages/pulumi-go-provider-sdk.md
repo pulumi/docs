@@ -8,7 +8,7 @@ menu:
     iac:
         name: Pulumi Go Provider SDK
         parent: iac-guides-packages
-        weight: 68
+        weight: 60
 aliases:
 - /docs/iac/using-pulumi/extending-pulumi/pulumi-provider-sdk/
 - /docs/iac/extending-pulumi/pulumi-provider-sdk/

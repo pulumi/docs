@@ -38,7 +38,7 @@ Package and distribute your components and providers for use across teams and pr
 
 **[Local Packages](/docs/iac/guides/building-extending/packages/local-packages/)** - Develop and test packages locally before publishing them to registries.
 
-**[Publishing Packages](/docs/iac/guides/building-extending/packages/publishing-packages/)** - Publish packages to your organization's private registry or the public Pulumi Registry.
+**[Publishing to the Pulumi Registry](/docs/iac/guides/building-extending/packages/publishing-packages/)** - Publish packages to the public Pulumi Registry. For publishing to the Pulumi IDP Private Registry, see [Publishing Components from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/).
 
 **[Schema](/docs/iac/guides/building-extending/packages/schema/)** - Define package schemas that drive SDK generation and documentation for all supported languages.
 

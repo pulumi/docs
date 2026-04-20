@@ -14,10 +14,6 @@ iac:
     parent: iac-guides-building-extending
     identifier: iac-guides-components
     weight: 1
-  - name: Packages
-    parent: iac-guides-building-extending
-    identifier: iac-guides-packages
-    weight: 2
   - name: Providers
     parent: iac-guides-building-extending
     identifier: iac-guides-providers

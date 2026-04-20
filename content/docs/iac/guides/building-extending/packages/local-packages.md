@@ -4,7 +4,7 @@ meta_desc: This page provides an overview of working with locally generated Pulu
 menu:
   iac:
     parent: iac-guides-packages
-    weight: 65
+    weight: 50
 aliases:
   - /docs/using-pulumi/pulumi-packages/local-packages/
   - /docs/iac/build-with-pulumi/local-packages/
