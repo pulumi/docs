@@ -4,6 +4,6 @@ type: page
 layout: brand
 
 meta_desc: |
-    Official brand logos and colors for use with Pulumi.
+    Official Pulumi brand resources. Updated brand guidelines coming soon.
 
 ---
