@@ -11,9 +11,13 @@ Markdown fragments rendered at the top of each generated tag page under
   `CloudSetup` -> `Cloud Setup` -> `cloud-setup`), so the file for the
   `CloudSetup` tag must be `cloud-setup.md`.
 - YAML frontmatter holds a `meta_desc` field — a 1-2 sentence description
-  of the API area, used as the tag page's `<meta name="description">` and
-  as the list-item description on the cloud-rest-api landing page. Keep
-  `meta_desc` to plain text (no Markdown links) — it renders unescaped.
+  (≤160 chars, so Google search snippets aren't truncated) used as the
+  tag page's `<meta name="description">` and as the list-item description
+  on the cloud-rest-api landing page. Use plain text — `meta_desc` is
+  not processed as Markdown, so links or emphasis appear literally.
+- Avoid a literal `: ` in unquoted `meta_desc` values; YAML parses it as
+  a nested mapping and the build fails. Reword (e.g., use a comma) or
+  quote the value.
 - Body is Markdown. Headings (`##`, `###`) and lists are fine; they render
   inside the page above the auto-generated endpoint sections.
 - Keep the body editorial: purpose of the API area, when to use it, links
