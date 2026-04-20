@@ -412,7 +412,7 @@ Property columns use the same [property path](/docs/reference/property-paths/) s
 
 To add a property column from the results grid:
 
-1. Click the gear icon above the grid to open the settings menu.
+1. Click the settings icon above the grid to open the settings menu.
 1. Select **Create property column**.
 1. Enter a property path (for example, `tags.Environment` or `instanceType`) in the dialog that appears.
 1. Confirm to add the column.
@@ -421,7 +421,12 @@ The new column is appended to the right of the existing columns. Resources that 
 
 ### Adding a column from the detail view
 
-When you expand a resource row to view its details, each listed input and output property displays an **Add as column** action next to its value. Clicking this action creates a property column for that property path without having to type it manually — useful when you have already located a property of interest on one resource and want to see its value across every resource in the grid.
+Click the name cell in a row to drill into the Detailed view for that resource. Each listed input and output property in the Detailed view has a **Create property column** action in its row. Selecting this action adds a column for the property without having to type the path manually — useful when you have already located a property of interest on one resource and want to see its value across every resource in the grid.
+
+The behavior of **Create property column** depends on the type of the property value:
+
+- If the property is a single value (for example, a string or number), the column is created immediately for that property path.
+- If the property is an object with children (for example, a `tags` map), a dialog opens so you can enter the path to the specific child or grandchild property you want as the column — for instance, `tags.Environment` rather than the entire `tags` object.
 
 ### Sorting, filtering, and grouping
 
@@ -431,9 +436,11 @@ Property columns support the same interactions as built-in columns:
 - **Filter**: Open the column filter to narrow results to one or more specific property values.
 - **Group by**: Drag the property column header into the Row Groups Header to group resources by property value. Expanding a group drills into the matching resources, just as it does for built-in columns.
 
-### Hiding and showing property columns
+### Hiding and deleting property columns
 
-Property columns can be hidden from the grid without being removed by toggling them off in the column chooser, the same as any built-in column. Re-adding a hidden property column via **Create property column** or **Add as column** makes it visible again.
+To hide a property column without removing it, open the settings menu on the main Resources grid and select **Choose columns**, then toggle the column off. The column stays in the set of available columns and can be re-enabled from the same menu. This works for both property columns and built-in columns.
+
+To delete a property column entirely, drag the column header out of the grid and drop it outside. This hides the column and removes it from the set of available columns, so it will no longer appear in **Choose columns**. Only property columns can be deleted — built-in columns cannot be removed from the available set.
 
 ### Sharing views with property columns
 
