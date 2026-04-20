@@ -18,12 +18,15 @@
             {{ if (fileExists $introPath) }}
                 {{/* Strip YAML frontmatter (between leading --- delimiters)
                      before rendering the body — frontmatter holds meta_desc
-                     consumed by the content adapter, not page content. */}}
+                     consumed by the content adapter, not page content.
+                     Rejoin parts after the second delimiter so a Markdown
+                     horizontal rule (--- on its own line) inside the body
+                     doesn't get truncated. */}}
                 {{ $contents := readFile $introPath }}
                 {{ $parts := split $contents "---\n" }}
                 {{ $body := $contents }}
                 {{ if ge (len $parts) 3 }}
-                    {{ $body = index $parts 2 }}
+                    {{ $body = delimit (after 2 $parts) "---\n" }}
                 {{ end }}
                 <div class="openapi-tag-intro">{{ $body | markdownify }}</div>
             {{ end }}
