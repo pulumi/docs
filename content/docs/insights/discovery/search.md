@@ -399,12 +399,12 @@ Clicking the "X" within the search bar will remove all previously selected filte
 ## Property columns
 
 {{% notes "info" %}}
-Property columns are only available to organizations using Team, Enterprise and Business Critical editions.
+Property columns are only available to organizations using Team, Enterprise, and Business Critical editions.
 
 If you would like to use them, [contact us](/contact?form=sales) to upgrade.
 {{% /notes %}}
 
-Property columns let you promote any resource input or output property into a first-class column in the results grid. Once added, a property column behaves like any built-in column: you can sort, filter, and group by its values across all resources returned by your query.
+Property columns let you promote any resource input or output property into a column in the results grid. Once added, a property column behaves like any built-in column: you can sort, filter, and group by its values across all resources returned by your query.
 
 Property columns use the same [property path](/docs/reference/property-paths/) syntax as [property queries](#property-queries). For example, `tags.Environment` exposes the value of the `Environment` tag on each resource, and `instanceType` exposes the instance type of compute resources. Nested and bracketed paths (such as `tags["name containing spaces"]`) are supported.
 
@@ -444,7 +444,7 @@ To delete a property column entirely, drag the column header out of the grid and
 
 ### Sharing views with property columns
 
-Property column configuration is persisted in the page URL. Sharing the URL with another member of your organization opens the grid with the same set of property columns, along with any active filters, sort order, and grouping. This makes property columns suitable for building and sharing repeatable views such as "all compute resources by instance type" or "all resources by environment tag".
+The set of property columns is persisted in the page URL. Share the URL with another member of your organization and they will open the grid with the same property columns, filters, sort order, and grouping applied. This makes property columns suitable for building and sharing repeatable views such as "all compute resources by instance type" or "all resources by environment tag".
 
 ## Download a CSV
 
