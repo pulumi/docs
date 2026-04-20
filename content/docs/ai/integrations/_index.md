@@ -19,9 +19,9 @@ Integrations are configured at the organization level by an administrator. Once 
 ## What you can do with integrations
 
 - **Pick up work from your issue tracker.** Connect Linear or Jira and ask Neo to implement an issue. Neo reads the issue description, acceptance criteria, and comments, then writes the infrastructure changes to match.
-- **Follow your runbooks.** Connect Confluence or Notion and point Neo at an operational runbook. Neo follows the documented steps, adapting them to your current environment.
+- **Follow your runbooks.** Connect Confluence and point Neo at an operational runbook. Neo follows the documented steps, adapting them to your current environment.
 - **Investigate with real observability data.** Connect Honeycomb or Datadog and ask Neo to diagnose a performance problem. Neo queries actual traces and metrics from your environment to narrow down the cause.
-- **Debug with production error context.** Connect Sentry and ask Neo to fix a failing deployment. Neo pulls the error details, stack traces, and affected releases to inform its approach.
+- **Respond to incidents.** Connect PagerDuty and let Neo look up active incidents, on-call schedules, and escalation policies while it investigates.
 - **Manage application infrastructure together.** Connect Supabase and let Neo coordinate database changes alongside your Pulumi infrastructure code.
 
 ## Enabling an integration
@@ -32,13 +32,13 @@ Each integration connects Neo to the service's [Model Context Protocol (MCP)](ht
 
 ### Credential storage
 
-Integration credentials are stored securely in [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration). When a task needs to connect to an integration, Neo resolves the credentials at task time from ESC, constructs the appropriate authentication headers, and connects to the service. Credentials are never embedded in task state.
+Integration credentials are encrypted at rest in the Pulumi Service using a per-organization encryption key. When a task needs to connect to an integration, the service decrypts the credentials at task time, constructs the appropriate authentication headers, and connects to the service on Neo's behalf. Credentials are never exposed to the language model and are never embedded in task state.
 
 ## Disabling an integration
 
 To remove an integration from your organization, navigate to **Neo Settings**, select **Integrations**, find the integration, and select **Remove**.
 
-Disabling an integration deletes its credentials from ESC and immediately prevents any new tasks from using it. Tasks that are already running will lose access to the integration on their next tool call.
+Disabling an integration deletes its stored credentials and immediately prevents any new tasks from using it. Tasks that are already running will lose access to the integration on their next tool call.
 
 ## How integrations work at task time
 
@@ -73,7 +73,7 @@ The integration connection is transparent. Neo decides when to use an integratio
     - **Read**: Required for all Honeycomb MCP operations. Make sure to grant read for both MCP and Environments.
     - **Write**: Required for the `create_board` tool.
 1. Copy the **Key ID** and **Key Secret**. You will not be able to see them again.
-1. In Neo, enter the API key in the format `<key_id>:<secret_key>`
+1. In Neo, enter the **Key ID** and **Key Secret** in the corresponding fields
 
 ### Linear
 
@@ -85,16 +85,14 @@ Linear API keys are personal tokens. All actions Neo takes through this integrat
 1. Select **New API Key**, give it a name, and configure the permissions and team access for your use case
 1. In Neo, enter the **API Key**
 
-### Notion
+### PagerDuty
 
-Notion uses OAuth to connect your organization's account. Select **Connect** and follow the authorization flow.
-
-### Sentry
-
-Sentry uses OAuth to connect your organization's account. Select **Connect** and follow the authorization flow.
+1. In PagerDuty, open your user profile and select **User Settings**
+1. Select **Create API User Token**, give it a name (e.g., "Neo Integration"), and copy the token
+1. In Neo, enter the **User API Token**
 
 ### Supabase
 
-Requires:
-
-- **Access Token**: On **supabase.com**, open **Account Preferences**, then **Access Tokens**
+1. On **supabase.com**, open **Account Preferences**, then **Access Tokens**
+1. Select **Generate New Token**, give it a name, and copy the token
+1. In Neo, enter the **Access Token**
