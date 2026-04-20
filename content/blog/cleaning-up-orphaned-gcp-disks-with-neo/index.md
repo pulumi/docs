@@ -6,7 +6,7 @@ meta_desc: "Orphaned GCP disk cleanup with Neo: Read-Only Mode discovers, Plan M
 meta_image: meta.png
 feature_image: feature.png
 authors:
-    - mark-huber
+    - neo-team
 tags:
     - neo
     - gcp
