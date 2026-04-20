@@ -21,7 +21,7 @@ Today we use Neo to clear orphaned disk backlogs on a Pulumi-managed GCP project
 
 ## Overview
 
-Neo is Pulumi's infrastructure agent. It runs inside Pulumi Cloud and performs operations on stacks we already manage: `preview`, `up`, `refresh`, `destroy`, and `import`. Neo runs with the permissions of the user who creates the task, and every mutating operation waits for an approval in Pulumi Cloud. CrossGuard evaluates resource changes at preview time and can block a destroy before it reaches the cloud.
+[Neo](/neo/) is Pulumi's infrastructure agent. It runs inside [Pulumi Cloud](/docs/pulumi-cloud/) and performs operations on stacks we already manage: `preview`, `up`, `refresh`, `destroy`, and `import`. Neo runs with the permissions of the user who creates the task, and every mutating operation waits for an approval in Pulumi Cloud. [CrossGuard](/crossguard/) evaluates resource changes at preview time and can block a destroy before it reaches the cloud.
 
 Two recent Neo features matter for this workflow:
 
@@ -32,7 +32,7 @@ Two recent Neo features matter for this workflow:
 
 ## Discovery in Read-Only Mode
 
-We start in Read-Only Mode. Neo can enumerate and preview but cannot delete, so a bad prompt cannot cause a bad outcome.
+We start in [Read-Only Mode](/blog/neo-read-only-mode/). Neo can enumerate and preview but cannot delete, so a bad prompt cannot cause a bad outcome.
 
 > In the `platform-prod` stack, list every `gcp.compute.Disk` that is not attached to an instance and was created more than 90 days ago. Include size, zone, creation time, and labels. Do not propose any changes.
 
@@ -40,11 +40,11 @@ Neo returns a table of candidate disks drawn from stack state and the live GCP p
 
 ## Planning the cleanup
 
-We switch to Plan Mode to scope the destroy. Neo produces a plan that groups candidates by zone, excludes anything with a `keep:true` label, and calls out disks whose most recent snapshot is older than 30 days. We refine the plan through normal conversation, approve it, and Neo carries the context forward into execution.
+We switch to [Plan Mode](/blog/neo-plan-mode/) to scope the destroy. Neo produces a plan that groups candidates by zone, excludes anything with a `keep=true` label, and calls out disks whose most recent snapshot is older than 30 days. We refine the plan through normal conversation, approve it, and Neo carries the context forward into execution.
 
 The destroy preview arrives as a standard Pulumi diff:
 
-```
+```text
   gcp:compute:Disk (orphan-pvc-7f2a):
     - gcp:compute/disk:Disk
         name:         "gke-staging-pvc-7f2a"
