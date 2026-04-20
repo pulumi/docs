@@ -85,7 +85,7 @@ STATE_KEY = "posted.json"
 
 # --- Configuration ---
 # Flip to True when ready to post to official Pulumi accounts.
-PROD_MODE = False
+PROD_MODE = True
 
 if PROD_MODE:
     USER = "pulumi"
