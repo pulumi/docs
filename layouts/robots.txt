@@ -3,6 +3,10 @@ User-agent: *
 Disallow: *
 {{ end }}
 
+# Explicitly opt in to AI training, search indexing, and AI grounding/RAG use.
+# Non-standard directive proposed by Cloudflare; honored by crawlers that support it.
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
 # Disallow certain pages that are perceived as soft-404s.
 Disallow: /docs/search/$
 
