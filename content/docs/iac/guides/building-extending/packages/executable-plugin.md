@@ -10,6 +10,10 @@ menu:
 An **executable-based plugin package** ships as a pre-compiled binary per operating system and architecture. The Pulumi CLI downloads the binary on demand from a URL embedded in the package schema and runs it as a subprocess — so consumers never need the authoring language's runtime installed. This is the model used by almost every package in the public [Pulumi Registry](/registry/) (AWS, GCP, EKS, etc.).
 
 {{% notes type="info" %}}
+The runtime-free guarantee assumes a fully self-contained binary. A framework-dependent .NET plugin (built without `--self-contained`) still requires consumers to have a compatible .NET runtime installed.
+{{% /notes %}}
+
+{{% notes type="info" %}}
 If you are looking to package and share components, a [source-based plugin package](./source-based-plugin/) is usually a better fit — see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) for the component-author overview. This guide covers the executable model, which applies when you are shipping custom resources, provider functions, or publishing to the public [Pulumi Registry](/registry/). See the [Pulumi Packages Guides](/docs/iac/guides/building-extending/packages/) index for the comparison against source-based packages.
 {{% /notes %}}
 
@@ -31,7 +35,8 @@ Concrete example for an EKS-style package at version 3.0.0:
 
 ```text
 pulumi-resource-eks-v3.0.0-linux-amd64.tar.gz
-└── pulumi-resource-eks
+└── pulumi-resource-eks   # single binary serves every component in the package
+                          # (e.g. Cluster, ManagedNodeGroup, NodeGroup, VpcCni, ...)
 ```
 
 You'll produce one archive per OS/arch target.
@@ -131,10 +136,6 @@ Pulumi-hosted providers additionally upload archives to `s3://get.pulumi.com/rel
 ## Publishing SDKs
 
 The binary plugin is what removes the consumer runtime dependency — not the SDK. Consumers can still run [`pulumi package gen-sdk`](/docs/iac/cli/commands/pulumi_package_gen-sdk/) against your schema to generate a local SDK, the same as with a [source-based plugin package](./source-based-plugin/). Once you've committed to publishing a binary per release, though, publishing per-language SDKs to npm, PyPI, NuGet, Maven Central, and as a tagged Go module is a natural extension — and most packages in the public Pulumi Registry do both.
-
-{{% notes type="info" %}}
-A visible exception is [Any Terraform Provider](/registry/packages/terraform-provider), which publishes a binary but lets consumers generate SDKs locally on demand instead of pre-publishing them.
-{{% /notes %}}
 
 A typical release pipeline for each tagged release looks like this:
 
