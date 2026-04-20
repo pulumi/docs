@@ -75,7 +75,7 @@ One of the first “aha!” moments in Kubernetes is realizing you can define ho
 Pro Tip:
 
 - Start with some baseline, maybe 100–200m CPU, 128–512Mi memory, then tweak as you gather more data.
-- Utilise monitoring tools such as Prometheus or Datadog to analyse actual usage and make adjustments as needed.
+- Utilize monitoring tools such as Prometheus or Datadog to analyze actual usage and make adjustments as needed.
 {{% /notes %}}
 
 ## 2. Namespace Like Your Life Depends on It
@@ -181,7 +181,7 @@ One of the biggest advantages of Kubernetes is that it becomes easier to automat
 
 ## 10. Keep Your Kubernetes Cluster and Components Updated
 
-Running an outdated Kubernetes version is like using a phone running iOS 6 in 2025. Not advisable.
+Running an outdated Kubernetes version is like using a phone running iOS 6 in 2026. Not advisable.
 
 - **Kubernetes Release Cycle**: Minor versions come out roughly [every three months](https://kubernetes.io/releases/release/), with patches more frequently.
 - **Upgrade Strategies**:
@@ -204,7 +204,7 @@ A consistent labeling strategy helps you filter resources quickly and maintain a
 
 If your dev, staging, and prod environments share a single cluster, you’re playing with fire. While it can be done, best practice is to isolate production workloads from the playground.
 
-- **Separate Clusters**: Have at least one cluster for dev/staging and one for production. There are create tools like [vCluster](https://www.vcluster.com/) to create virtual clusters within a single cluster.
+- **Separate Clusters**: Have at least one cluster for dev/staging and one for production. There are great tools like [vCluster](https://www.vcluster.com/) to create virtual clusters within a single cluster.
 - **Namespace Segregation**: If you must run them in the same cluster, use strict namespace-based isolation and RBAC rules.
 
 Keeping environments separate reduces risk and makes it easier to test new features in a sandbox.
