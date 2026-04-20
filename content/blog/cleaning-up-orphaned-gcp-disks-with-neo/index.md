@@ -3,6 +3,8 @@ title: "Cleaning Up Orphaned GCP Persistent Disks with Neo"
 date: 2026-04-20
 draft: true
 meta_desc: "Orphaned GCP disk cleanup with Neo: Read-Only Mode discovers, Plan Mode scopes, CrossGuard blocks any delete without a snapshot label."
+meta_image: meta.png
+feature_image: feature.png
 authors:
     - mark-huber
 tags:
@@ -14,23 +16,21 @@ schema_type: auto
 
 social:
     twitter: |
-        Orphaned GCP persistent disks accumulate after GKE churn, teardowns, and experiments. They bill per GB per month, and nobody owns the cleanup.
+        GCP persistent disks outlive the instances and clusters that created them. They bill quietly until someone decides they're safe to delete. Nobody does, because deleting prod disks is risky.
 
-        One CrossGuard policy turns a destructive Neo task into a safe two-phase workflow. Here's the setup.
+        We gave Neo the job. Here's how we made it safe to run.
     linkedin: |
         Unattached GCP persistent disks accumulate quietly. GKE cluster churn leaves PVC-backed disks behind. Teardowns remove instances without removing volumes. One-off experiments in a secondary zone outlive the engineers who ran them.
 
         Every one of these disks bills per GB per month, and nobody owns the cleanup.
 
-        We wrote up how to clear the backlog with Neo, gated by a CrossGuard policy that refuses to delete any disk without a fresh snapshot label. The workflow uses Read-Only Mode for discovery so a bad prompt cannot cause a bad outcome, Plan Mode to agree on scope, and a two-phase snapshot-then-delete execution with an approval gate at each phase.
+        We cleared a production backlog with Neo. The part that surprised us was how short the safety layer turned out to be, and how much of the process was just a conversation.
 
-        The policy is short. The rest is a conversation.
-
-        Here's the full workflow and the policy code.
+        Here's the workflow and the policy code.
     bluesky: |
-        Orphaned GCP persistent disks accumulate quietly and bill every month. Neo cleans them up on prompt, and one CrossGuard policy turns the task into a two-phase snapshot-then-delete with an approval gate at each step.
+        Orphaned GCP persistent disks accumulate silently after GKE churn and teardowns. Every one bills per GB per month, and nobody owns the cleanup.
 
-        Here's the policy.
+        We used Neo to clear the backlog on a production project. Here's how we kept it safe.
 ---
 
 Unattached GCP persistent disks accumulate quietly. GKE cluster churn leaves PVC-backed disks behind. Teardowns remove instances without removing volumes. One-off experiments in a secondary zone outlive the engineers who ran them. Every one of these disks bills per GB per month, and nobody owns the cleanup.
