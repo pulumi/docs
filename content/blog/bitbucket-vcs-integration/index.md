@@ -39,7 +39,7 @@ The [new project wizard](/docs/idp/concepts/new-project-wizard/) discovers your 
 
 ## Getting started
 
-1. An org admin configures the integration under **Settings** > **Version control**.
+1. An org admin configures the integration under **Management** > **Version control**.
 1. Authorize with Bitbucket using personal OAuth or a workspace token.
 1. Deploy infrastructure with first-class workflows.
 
