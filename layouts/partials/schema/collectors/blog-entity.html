@@ -122,7 +122,7 @@
 {{ $schema = merge $schema (dict
   "speakable" (dict
     "@type" "SpeakableSpecification"
-    "cssSelector" (slice "article h1" "article section > p:first-of-type")
+    "cssSelector" (slice "article h1" "article > section:first-of-type > p:first-of-type")
   )
 ) }}
 
