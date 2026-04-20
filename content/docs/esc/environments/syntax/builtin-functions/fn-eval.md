@@ -22,7 +22,7 @@ fn::eval: template-reference
 
 | Property             | Type | Description                                                                                              |
 |----------------------|------|----------------------------------------------------------------------------------------------------------|
-| `template-reference` | any  | A reference to a value defined with `fn::template`. Typically an interpolation like `${environments.org/defn.my-template}`. |
+| `template-reference` | any  | A reference to a value defined with `fn::template`. Typically an interpolation like `${environments.org.defn.my-template}`. |
 
 ### Returns
 
