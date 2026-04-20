@@ -387,7 +387,7 @@ import { componentProviderHost } from "@pulumi/pulumi/provider/experimental";
 import { StaticSite } from "./static-site";
 import { Database } from "./database";
 
-componentProviderHost({ components: [StaticSite, Database] });
+componentProviderHost({ components: [StaticSite, Database], name: "my-package" });
 ```
 
 {{% /choosable %}}
