@@ -46,6 +46,16 @@ When Neo starts a task, it connects to each enabled integration's MCP server usi
 
 The integration connection is transparent. Neo decides when to use an integration based on the context of your conversation, just as it decides when to use any other tool.
 
+## Per-task control
+
+By default, every task inherits all integrations the organization has enabled. If you want to narrow Neo's focus for a specific task — for example, running a deployment review without giving Neo access to your issue tracker — you can toggle individual integrations off from the task composer before starting the conversation. The toggles only affect the current task; the org-level configuration is unchanged.
+
+## If an integration fails
+
+Integrations are resolved independently at the start of each message. If credentials for one integration can't be retrieved, or its MCP server is unreachable, Neo logs a warning, skips that integration, and continues the task with the remaining ones. A single broken integration won't stop a task from running.
+
+If Neo tries to use an integration that isn't available — for example, because the credentials were removed or expired — it will surface the failure in the conversation and continue with its other tools.
+
 ## Configuration
 
 ### Atlassian (Jira & Confluence)
