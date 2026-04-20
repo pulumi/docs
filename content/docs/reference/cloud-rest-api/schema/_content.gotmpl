@@ -36,13 +36,13 @@
         "openapi_schema" true
         "schema_name" $name
         "notoc" true
-        "aliases" $aliases
     }}
 
     {{ $.AddPage (dict
         "path" $slug
         "title" $name
         "kind" "page"
+        "aliases" $aliases
         "params" $params
     ) }}
 {{ end }}{{/* range $names */}}
