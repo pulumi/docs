@@ -8,7 +8,7 @@
 <nav class="top-nav-bar transition-all">
     <div class="top-nav-container lg:container lg:px-4 flex-wrap justify-end">
         {{ partial "banner" . }}
-        <div class="w-full p-4">
+        <div class="hidden lg:block w-full p-4">
             <ul class="hidden w-full lg:flex justify-end items-center order-first lg:order-last">
                 <li class="github-widget mr-8">
                     <a data-track="header-github-pulumi" class="github-button" href="https://github.com/pulumi/pulumi"
@@ -357,7 +357,7 @@
                     <label class="mobile-menu-closed" for="mobile-menu">
                         {{ partial "icon" (dict "icon" "hamburger-closed") }}
                     </label>
-                    <label class="mobile-menu-open hidden" for="mobile-menu">
+                    <label class="mobile-menu-open" for="mobile-menu">
                         {{ partial "icon" (dict "icon" "hamburger-open") }}
                     </label>
                 </span>

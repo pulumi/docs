@@ -350,13 +350,17 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
         @apply hidden;
     }
 
+    .mobile-menu-icon .mobile-menu-open {
+        display: none;
+    }
+
     .mobile-menu-toggle:checked + .mobile-menu-icon {
         .mobile-menu-closed {
-            @apply hidden;
+            display: none;
         }
 
         .mobile-menu-open {
-            @apply block;
+            display: block;
         }
     }
 
@@ -526,6 +530,29 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
 
         label {
             @apply cursor-pointer;
+        }
+    }
+}
+
+html:has(.mobile-menu-toggle:checked) {
+    overflow: hidden;
+
+    .header-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        &.is-pinned {
+            top: -1px;
+        }
+    }
+
+    @include screen-lg {
+        overflow: auto;
+
+        .header-container {
+            position: sticky;
         }
     }
 }

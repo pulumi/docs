@@ -165,6 +165,10 @@ export function generateOnThisPage() {
 (function () {
     const observer = new IntersectionObserver(
         ([e]) => {
+            const mobileMenuToggle = document.getElementById("mobile-menu") as HTMLInputElement | null;
+            if (mobileMenuToggle?.checked) {
+                return;
+            }
             e.target.classList.toggle("is-pinned", e.intersectionRatio < 1);
             const pinnedSearchContainerEl = document.querySelector(".header-pinned") as HTMLElement;
             const dotOverlay = document.querySelector(".hide-on-pinned") as HTMLElement;
