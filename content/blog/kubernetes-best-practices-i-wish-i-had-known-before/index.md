@@ -75,7 +75,7 @@ One of the first “aha!” moments in Kubernetes is realizing you can define ho
 Pro Tip:
 
 - Start with some baseline, maybe 100–200m CPU, 128–512Mi memory, then tweak as you gather more data.
-- Utilise monitoring tools such as Prometheus or Datadog to analyse actual usage and make adjustments as needed.
+- Utilize monitoring tools such as Prometheus or Datadog to analyze actual usage and make adjustments as needed.
 {{% /notes %}}
 
 ## 2. Namespace Like Your Life Depends on It
