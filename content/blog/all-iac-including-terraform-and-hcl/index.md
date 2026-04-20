@@ -114,7 +114,7 @@ To learn more about our product capabilities, visit these pages:
 
 If you’d like to join the private beta waitlist for the new Terraform/OpenTofu and HCL capabilities, or take advantage of the financial flexibility options, please [get in touch](https://www.pulumi.com/contact/?form=sales).
 
-We will work with you closely on a three step process to adopt Pulumi: First, the modernization workshop; then a rapid proof of value; and finally an adoption plan that avoids you double paying Pulumi and HashiCorp.
+We will work with you closely on a three-step process to adopt Pulumi: First, the modernization workshop; then a rapid proof of value; and finally an adoption plan that avoids you double paying Pulumi and HashiCorp.
 
 If you’d like to try Pulumi on your own immediately, you can [sign up for Pulumi Cloud here](https://app.pulumi.com/signup), or [go through our open source IaC getting started tutorial here](https://pulumi.com/start).
 
