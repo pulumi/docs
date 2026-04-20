@@ -25,11 +25,7 @@
                         </div>
 
                         <div class="text-sm text-gray-700 mb-4">
-                            {{ if .Params.updated }}
-                                <span>Updated on <time>{{ (time .Params.updated).Format "Monday, January 2, 2006" }}</time></span>
-                            {{ else }}
-                                <span>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time></span>
-                            {{ end }}
+                            <span>Posted on <time>{{ .Date.Format "Jan 2, 2006" }}</time>{{ if .Params.updated }} · Updated on <time>{{ (time .Params.updated).Format "January 2, 2006" }}</time>{{ end }}</span>
                         </div>
 
                         {{ partial "blog/full-poster.html" . }}
