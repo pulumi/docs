@@ -38,12 +38,12 @@ Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [
 1. Install the workflow runners as per the instructions on the page
 1. Verify the workflow runner status by refreshing the page
 1. Configure the workflow runner pool for the workflows you want to run:
-   - **Deployments**: Go to **Stack Settings** > **Deploy** tab and select the pool under the **Deployment Runner** pool drop-down
+   - **Deployments**: Go to **Stack Settings** > **Deploy** tab and select the pool under the **Deployment Runner** pool dropdown
    - **Insights discovery scans**: Go to **Management** > **Accounts** and select the pool for the account you want to scan
    - **Policy evaluation**: Go to **Management** > **Policies** > **Policy Groups** and select the pool for an audit policy group
 1. **(Optional)** Add more workflow runners to the pool to increase concurrency by using the same token
 1. Verify your setup:
-   - **Deployments**: Run a `pulumi refresh` through the **Actions** drop-down in your stack page
+   - **Deployments**: Run a `pulumi refresh` through the **Actions** dropdown in your stack page
    - **Insights discovery scans**: Trigger a scan from the **Management** > **Accounts** page and confirm it completes successfully
    - **Policy evaluation**: Run a policy evaluation against a stack and confirm the results appear as expected
 
