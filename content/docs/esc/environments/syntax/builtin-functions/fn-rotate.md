@@ -10,7 +10,7 @@ menu:
   esc:
     parent: esc-syntax-builtin-functions
     identifier: esc-syntax-fn-rotate
-    weight: 7
+    weight: 8
 ---
 
 The `fn::rotate` built-in function invokes a [rotator](/docs/esc/environments/syntax/rotators) to rotate secrets.
