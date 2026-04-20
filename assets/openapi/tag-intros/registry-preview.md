@@ -1,5 +1,5 @@
 ---
-meta_desc: Preview endpoints for the next-generation Pulumi Registry, covering listing, retrieving, publishing, and deleting package, template, and policy pack versions under the new source/publisher/name identifier scheme.
+meta_desc: Preview endpoints for the next-generation Pulumi Registry, covering package, template, and policy pack versions under the new identifier scheme.
 ---
 
 Preview endpoints for the next-generation Pulumi Registry. These cover listing, retrieving, publishing, and deleting package, template, and policy pack versions under the new `source/publisher/name` identifier scheme.

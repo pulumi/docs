@@ -1,5 +1,5 @@
 ---
-meta_desc: The Deployments API configures and manages Pulumi Deployments, which run Pulumi updates and other operations through Pulumi Cloud. Endpoints cover deployment settings, triggering deployments, and viewing status, logs, and history.
+meta_desc: Configure and manage Pulumi Deployments to run updates and other operations through Pulumi Cloud, including settings, triggers, status, logs, and history.
 ---
 
 The Deployments API allows you to configure and manage Pulumi Deployments,

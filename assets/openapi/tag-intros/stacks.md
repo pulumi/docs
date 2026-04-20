@@ -1,5 +1,5 @@
 ---
-meta_desc: The Stacks API creates and manages Pulumi stacks, which are isolated, independently configurable instances of a Pulumi program. Endpoints cover stack lifecycle, configuration, tags, and update history.
+meta_desc: Create and manage Pulumi stacks, the isolated and independently configurable instances of a Pulumi program. Covers lifecycle, config, tags, and update history.
 ---
 
 The Stacks API lets you create and manage Pulumi stacks — isolated,
