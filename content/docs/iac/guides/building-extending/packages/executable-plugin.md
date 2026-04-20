@@ -126,7 +126,7 @@ If the boilerplates don't fit, the common pattern they implement has four parts 
 1. **SDK publishing.** The composite action [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher) handles npm, PyPI, NuGet, and Maven Central in a single step. Select languages with the `sdk:` input (e.g., `sdk: "nodejs,python"`).
 1. **Go module tag.** Push a Go module tag so consumers can `go get` the SDK — the boilerplates carry the canonical layout.
 
-Pulumi-hosted providers additionally upload archives to `s3://get.pulumi.com/releases/plugins/` (the CLI's default fallback when `pluginDownloadURL` is omitted). Third-party providers do not need this step — point `pluginDownloadURL` at your own GitHub, GitLab, or S3 location instead.
+Pulumi-hosted providers additionally upload archives to `s3://get.pulumi.com/releases/plugins/` (the CLI's default fallback when `pluginDownloadURL` is omitted). Third-party providers do not need and cannot implement this step — point `pluginDownloadURL` at your own GitHub, GitLab, or S3 location instead.
 
 ## Publishing SDKs
 
