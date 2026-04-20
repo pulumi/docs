@@ -73,7 +73,8 @@ If Neo tries to use an integration that isn't available — for example, because
 1. In **Organization Settings**, open **Service Accounts** and create a service account with read-only access
 1. On the service account's details page, create an **App Key** and make sure to include the MCP read scope
 1. In **Organization Settings**, open **API Keys** and create an **API Key**
-1. In Neo, enter the **API Key** and **App Key**
+1. Identify your Datadog site — it's the domain you use to access Datadog (for example, `datadoghq.com` is `us1`, `datadoghq.eu` is `eu1`). Supported codes: `us1`, `us3`, `us5`, `eu1`, `ap1`, `ap2`.
+1. In Neo, enter the **Datadog site** code, **API Key**, and **App Key**
 
 ### Honeycomb
 
