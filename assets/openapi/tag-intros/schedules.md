@@ -1,1 +1,5 @@
+---
+meta_desc: Schedules automate recurring operations on your Pulumi stacks. The Schedules API creates and manages drift detection, time-to-live (TTL), and custom scheduled operations.
+---
+
 Schedules allow you to automate recurring operations on your Pulumi stacks. The Schedules API provides endpoints for creating and managing drift detection, time-to-live (TTL), and custom scheduled operations.

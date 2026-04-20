@@ -172,10 +172,29 @@
         {{ $weight = 99 }}
     {{ end }}
 
+    {{/*
+        Pull meta_desc from the tag-intro sidecar's YAML frontmatter
+        (assets/openapi/tag-intros/<slug>.md). Also feeds the list-item
+        description on the cloud-rest-api landing page via the
+        openapi-tag-list shortcode. Fall back to a generic string if the
+        intro is missing or has no meta_desc field.
+    */}}
+    {{ $metaDesc := printf "API reference for %s endpoints in the Pulumi Cloud REST API." $display }}
+    {{ if in $introSlugs $slug }}
+        {{ $intro := os.ReadFile (printf "%s/%s.md" $introDir $slug) }}
+        {{ $parts := split $intro "---\n" }}
+        {{ if ge (len $parts) 3 }}
+            {{ $fm := transform.Unmarshal (dict "ext" "yaml") (index $parts 1) }}
+            {{ with $fm.meta_desc }}
+                {{ $metaDesc = . }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
     {{ $params := dict
         "h1" $display
         "title_tag" (printf "Pulumi Cloud REST API: %s" $display)
-        "meta_desc" (printf "API reference for %s endpoints in the Pulumi Cloud REST API." $display)
+        "meta_desc" $metaDesc
         "meta_image" "/images/docs/meta-images/docs-meta.png"
         "openapi_docs" true
         "filter_tag" $tag

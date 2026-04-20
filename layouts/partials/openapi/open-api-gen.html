@@ -16,7 +16,16 @@
             {{ $introSlug := $display | urlize }}
             {{ $introPath := printf "assets/openapi/tag-intros/%s.md" $introSlug }}
             {{ if (fileExists $introPath) }}
-                <div class="openapi-tag-intro">{{ readFile $introPath | markdownify }}</div>
+                {{/* Strip YAML frontmatter (between leading --- delimiters)
+                     before rendering the body — frontmatter holds meta_desc
+                     consumed by the content adapter, not page content. */}}
+                {{ $contents := readFile $introPath }}
+                {{ $parts := split $contents "---\n" }}
+                {{ $body := $contents }}
+                {{ if ge (len $parts) 3 }}
+                    {{ $body = index $parts 2 }}
+                {{ end }}
+                <div class="openapi-tag-intro">{{ $body | markdownify }}</div>
             {{ end }}
         {{ end }}
 
