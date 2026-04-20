@@ -57,18 +57,18 @@ If you are running the workflow runner inside a firewall ensure to allow outboun
 
 ### Setting an organization default pool
 
-You can designate one pool as the **organization default**. When a default pool is set, any deployment, Insights discovery scan, or policy group evaluation that does not have an explicit workflow runner pool configured will use the default pool instead of the Pulumi Hosted Pool.
+You can designate one pool as the **organization default**. When a default pool is set, any deployment, Insights discovery scan, or policy evaluation that does not have an explicit workflow runner pool configured will use the default pool instead of the Pulumi Hosted Pool.
 
 The resolution order for each workflow is:
 
-1. The pool configured on the stack, account, or policy group
-1. The organization default pool (if set)
-1. The Pulumi Hosted Pool
+1. The pool configured on the stack, account, or policy group.
+1. The organization default pool (if set).
+1. The Pulumi Hosted Pool.
 
 To set a default:
 
-1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow Runner Pools** tab
-1. Open the row actions menu on the pool you want to designate and choose **Set as default**
+1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow Runner Pools** tab.
+1. Open the row actions menu on the pool you want to designate and choose **Set as default**.
 
 The **Pulumi Hosted Pool** row at the top of the list represents the built-in Pulumi-managed pool. Selecting **Set as default** on that row clears any customer-managed default, restoring the built-in pool as the fallback. If a custom default pool is deleted, the organization automatically reverts to the Pulumi Hosted Pool.
 

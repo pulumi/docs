@@ -45,7 +45,9 @@ For full setup and configuration details, see the [customer-managed workflow run
 1. Select the workflow runner pool for an audit policy group
 1. Run a policy evaluation against a stack and confirm the results appear as expected
 
-If you want every account scan and policy group evaluation to use a customer-managed pool by default, you can set an [organization default workflow runner pool](/docs/deployments/deployments/customer-managed-agents/#setting-an-organization-default-pool). When set, scans and policy groups without an explicit pool use the organization default instead of the Pulumi Hosted Pool.
+### Using an organization default pool
+
+If you want every account scan and policy evaluation to use a customer-managed pool by default, you can set an [organization default workflow runner pool](/docs/deployments/deployments/customer-managed-agents/#setting-an-organization-default-pool). When set, scans and policy groups without an explicit pool use the organization default instead of the Pulumi Hosted Pool.
 
 ### Restricting workflow types
 
