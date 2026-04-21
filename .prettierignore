@@ -52,4 +52,7 @@ origin-bucket-metadata.json
 # Ignore js scripts added to the static folder
 static/js
 
+# Conductor workspace state
+.context
+
 **/.claude/settings.local.json
