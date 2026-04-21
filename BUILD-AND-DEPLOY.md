@@ -498,13 +498,13 @@ Starts the Hugo development server with live reload.
 **What it does:**
 
 1. Sets `ASSET_BUNDLE_ID` for development
-2. Runs Hugo with:
+1. Runs Hugo with:
    - `--renderToMemory`: No disk writes
-   - `--disableFastRender`: Rebuild related content
    - `--buildDrafts`: Show draft content
-   - `--buildFuture`: Show future-dated content (can be disabled with BUILD_FUTURE=false)
-3. Connects to tf2pulumi conversion service
-4. Uses Hugo's default binding (localhost:1313)
+   - `--buildFuture`: Show future-dated content (can be disabled with `BUILD_FUTURE=false`)
+   - Fast render is **on by default**; set `DISABLE_FAST_RENDER=true` to pass `--disableFastRender` (re-renders the full site on every change — slower, but accurate for list pages, menus, and the search index)
+1. Connects to tf2pulumi conversion service
+1. Uses Hugo's default binding (localhost:1313)
 
 **Usage:**
 
