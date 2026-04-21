@@ -19,7 +19,7 @@ aliases:
     - /blog/iac-recommended-practices-code-organization-and-stacks/
 ---
 
-This is the first in a series of blog posts that explores how a fictional company---Zephyr Archaeotech Emporium---uses Pulumi to manage their online retail store. This post explores a couple common questions that users ask when working with Pulumi; specifically, where should I store my Pulumi code? And how do I support multiple environments with Pulumi? This post will provide some guidance and [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) best practices around these topics, using Zephyr and their online store as the use case.<!--more-->
+This is the first in a series of blog posts that explores how a fictional company---Zephyr Archaeotech Emporium---uses Pulumi to manage their online retail store. This post explores a couple of common questions that users ask when working with Pulumi; specifically, where should I store my Pulumi code? And how do I support multiple environments with Pulumi? This post will provide some guidance and [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) best practices around these topics, using Zephyr and their online store as the use case.<!--more-->
 
 The ultimate goal of this series is to discuss recommended practices for using Pulumi to manage a fairly complex containerized application. However, it's important to note that these practices will emerge over the course of the series---not all immediately, and not all in the beginning. This is a deliberate decision to allow you to see how Zephyr's use of Pulumi evolves as the company grows and their online retail store application changes to accommodate their growth.
 
@@ -53,7 +53,7 @@ Astute readers may note that Zephyr's application looks very similar to [this ap
 
 ## Managing Infrastructure and Application Deployments
 
-As part of the switch to their new architecture, Zephyr decided they wanted to use Pulumi to manage both the infrastructure and the application deployment. Why Pulumi? Zephyr’s team recognized that moving to microservices on Kubernetes was going to make it more difficult to create reproducible, consistent implementations of their application. Zephyr's team also knew that adopting infrastructure as code would help them with fast and repeatable deployments with little additional complexity. An added bonus was being able to use programming languages they already knew.
+As part of the switch to their new architecture, Zephyr decided they wanted to use Pulumi to manage both the infrastructure and the application deployment. Why Pulumi? Zephyr’s team recognized that moving to microservices on Kubernetes was going to make it more difficult to create reproducible, consistent implementations of their application. Zephyr's team also knew that adopting infrastructure as code would help them with fast and repeatable deployments with little additional complexity. Another bonus was being able to use programming languages they already knew.
 
 As they prepared to embark on using Pulumi, a couple of questions came up for the Zephyr team:
 
@@ -82,7 +82,7 @@ It's worth stressing that the answers to these questions may change over time as
 The discussion above is working from the assumption that Pulumi users will store their Pulumi code in a version control system, like Git. Strictly speaking, using a version control system isn't required for Pulumi to function (there is one exception we'll touch on later in this series when we discuss [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/)), but we **very strongly** recommend that all users use Pulumi in conjunction with version control.
 {{% /notes %}}
 
-In the case of Zephyr, their team felt like a monorepo approach (storing Pulumi code and application code together) was most appropriate for their specific requirements. Zephyr is a relatively small organization with a single team of developers that are responsible for managing both the cloud infrastructure as well as the development and deployment of the online store application. Zephyr's team also decicded to use a single Pulumi project---for now. (Be sure to follow this blog series to see how that evolves, and why!)
+In the case of Zephyr, their team felt like a monorepo approach (storing Pulumi code and application code together) was most appropriate for their specific requirements. Zephyr is a relatively small organization with a single team of developers who are responsible for managing both the cloud infrastructure as well as the development and deployment of the online store application. Zephyr's team also decided to use a single Pulumi project---for now. (Be sure to follow this blog series to see how that evolves, and why!)
 
 ### Addressing the Need for Multiple Environments
 

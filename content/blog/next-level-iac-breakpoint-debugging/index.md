@@ -211,7 +211,7 @@ Let's break this down a bit:
 
 * `type: node` tells VS Code that we are using the Node runtime
 * `port: 9292` tells VS Code to attach the debugger to port 9292
-* `request: attach` tells VS Code that we want to attach to to the debugger at launch
+* `request: attach` tells VS Code that we want to attach to the debugger at launch
 * `preLaunchTask: pulumi-debug` tells VS Code to run the task we configured in `tasks.json` before we connect the debugger. This will run our `pulumi-debug.sh` script and then attach to the Node.js runtime
 * `continueOnAttach: true` tells VS Code to start running our code as soon as we attach to the waiting Node.js runtime (until we reach our first breakpoint that is, where it will pause and return control to the debugger client, aka VS Code)
 * `restart: {...}` configures VS Code to wait 5 seconds and then retry connecting, up to 5 times. This is here in case it takes a while for the Node.js runtime to start running. It's unlikely, but possible!

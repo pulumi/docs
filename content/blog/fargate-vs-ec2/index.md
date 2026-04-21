@@ -135,7 +135,7 @@ Maybe this will make more sense with an example.
 
 ## Workload Example: Static Analysis
 
-<img src="noisy.webp" alt="sketch of sleeping while noisy neighbour" style="width: 50%; float: left; margin-right: 10px;">
+<img src="noisy.webp" alt="sketch of sleeping while noisy neighbor" style="width: 50%; float: left; margin-right: 10px;">
 
 Have you ever had to run CPU-intensive batch jobs alongside lighter web services?
 

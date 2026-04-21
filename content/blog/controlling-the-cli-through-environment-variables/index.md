@@ -75,7 +75,7 @@ export PULUMI_OPTION_YES=true
 export PULUMI_OPTION_SKIP_PREVIEW=true
 ```
 
-Now, running `direnv allow .` in this directory means that, whenever we access this directory, these options will be automatically applied to all commands that we run until we leave the directory\!
+Now, running `direnv allow .` in this directory means that, whenever we access this directory, these options will be automatically applied to all commands that we run until we leave the directory!
 
 ## Wrapping up
 
