@@ -6,9 +6,9 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M523.42 480.505C522.093 485.603 516.705 491.013 510.36 494.676C501.468 499.809 490.167 502.536 478.651 502.875C477.74 502.902 477.586 502.313 478.496 502.18C488.84 500.593 499.214 497.26 507.566 492.439C513.201 489.186 518.218 484.934 521.506 480.255C521.969 479.543 523.636 479.667 523.42 480.505Z" fill="#FF9900"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M523.126 477.893C521.644 477.786 518.433 480.139 516.982 481.208C516.55 481.529 516.04 481.324 516.164 480.879C517.028 478.027 522.385 475.612 523.62 475.683C524.871 475.763 528.931 478.927 528.499 481.815C528.437 482.26 527.85 482.385 527.572 482.011C526.661 480.772 524.593 477.991 523.126 477.893Z" fill="#FF9900"/>
 </g>
-<path d="M388 133V258.351" stroke="#edebff" stroke-miterlimit="10" stroke-dasharray="15 4"/>
-<path d="M605.118 133V258.351" stroke="#edebff" stroke-miterlimit="10" stroke-dasharray="15 4"/>
-<path d="M496.555 195.672V321.03" stroke="#edebff" stroke-miterlimit="10" stroke-dasharray="15 4"/>
+<path d="M388 133V258.351" stroke="#E0DBFF" stroke-miterlimit="10" stroke-dasharray="15 4"/>
+<path d="M605.118 133V258.351" stroke="#E0DBFF" stroke-miterlimit="10" stroke-dasharray="15 4"/>
+<path d="M496.555 195.672V321.03" stroke="#E0DBFF" stroke-miterlimit="10" stroke-dasharray="15 4"/>
 <path d="M600.205 507.51L498.901 449.022C495.841 447.253 496.225 444.171 499.757 442.126L598.638 385.038C602.17 383 607.522 382.775 610.582 384.545L711.885 443.032C714.946 444.802 714.561 447.884 711.03 449.929L612.149 507.016C608.617 509.054 603.265 509.279 600.205 507.51Z" stroke="#e0dbff" stroke-miterlimit="10"/>
 <path d="M496.835 320.676V446.027" stroke="#e0dbff" stroke-miterlimit="10"/>
 <path d="M713.953 320.676V446.027" stroke="#e0dbff" stroke-miterlimit="10"/>
