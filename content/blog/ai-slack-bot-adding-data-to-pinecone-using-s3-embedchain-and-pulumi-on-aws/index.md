@@ -144,7 +144,7 @@ Currently, when the application receives a request, the API Gateway Lambda integ
 
 If we break this into two processes, Data Processing, and API Handling, we give our API handler more dedicated time within that 29 seconds.  Simultaneously, we overcome another limitation, large amounts of data being loaded will take more than 29 seconds, by breaking out data processing into its own process, we can now have **up to [15 minutes](https://docs.aws.amazon.com/lambda/latest/dg/configuration-timeout.html) to load data using Lambda**.
 
-We're going use the same docker image for both Lambdas by adding an entrypoint script that can take an argument to select the handler, essentially deploying the same application twice as different Lambda Functions.
+We're going to use the same docker image for both Lambdas by adding an entrypoint script that can take an argument to select the handler, essentially deploying the same application twice as different Lambda Functions.
 
 Our `entrypoint.sh`
 

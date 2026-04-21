@@ -270,4 +270,4 @@ We're also exploring options for importing state from CDK applications that are 
 
 The 1.0 release of AWS CDK support for Pulumi marks a significant expansion of opportunities to interoperate between the AWS CDK and Pulumi ecosystems. Existing AWS CDK users can now more easily adopt the full power, speed and flexibility of the Pulumi Cloud Platform and its diverse ecosystem.  And existing Pulumi users can benefit from the many expert curated constructs and libraries in the CDK community. We're excited to see what you'll build with these two great cloud technologies together.
 
-The AWS CDK on Pulumi project is open source at [https://github.com/pulumi/pulumi-cdk](https://github.com/pulumi/pulumi-cdk) and on NPM at [https://www.npmjs.com/package/@pulumi/cdk](https://www.npmjs.com/package/@pulumi/cdk). Get started today\!
+The AWS CDK on Pulumi project is open source at [https://github.com/pulumi/pulumi-cdk](https://github.com/pulumi/pulumi-cdk) and on NPM at [https://www.npmjs.com/package/@pulumi/cdk](https://www.npmjs.com/package/@pulumi/cdk). Get started today!

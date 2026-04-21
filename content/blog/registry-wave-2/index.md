@@ -37,7 +37,7 @@ This update is designed with developers in mind and features enriched documentat
 - **Temporal** – Manage Temporal Cloud as code.
 - **Vantage** – Gain cost visibility and optimize cloud spending.
 - **Honeycomb** – Seamlessly integrate observability best practices.
-- **Timescale** – Time series and real time analytics on PostgreSQL.
+- **Timescale** – Time series and real-time analytics on PostgreSQL.
 
 > "Timescale Cloud brings high-performance PostgreSQL to time-series, real-time analytics, and AI workloads, now with a seamless Pulumi integration. Developers can deploy and manage their infrastructure using their preferred language, making it easier than ever to scale PostgreSQL without resource-management headaches." - Mike Freedman, CTO - Timescale
 
