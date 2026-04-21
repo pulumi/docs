@@ -18,8 +18,7 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/
 ---
 
-This page details how to use the [Pulumi Kubernetes
-Operator](https://github.com/pulumi/pulumi-kubernetes-operator) (PKO) to automate the deployment of Pulumi [stacks][stack]. The Pulumi program for a stack can come from a [Program resource][], from a Git repository, or from a [Flux source][flux-source], and may be authored in any supported Pulumi language (TypeScript, Python, Go, .NET, Java, YAML).
+This page details how to use the [Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator) (PKO) to automate the deployment of Pulumi [stacks][stack]. The Pulumi program for a stack can come from a [Program resource][], from a Git repository, or from a [Flux source][flux-source], and may be authored in any supported Pulumi language (TypeScript, Python, Go, .NET, Java, YAML).
 
 [Program resource]: https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/programs.md
 [flux-source]: https://fluxcd.io/flux/components/source/
@@ -33,16 +32,15 @@ The Pulumi Kubernetes Operator provides [custom resources][k8s-ext-pattern] to:
 - Write [Pulumi YAML][] programs as Kubernetes objects
 - Run Pulumi deployment operations
 
-Deploying Pulumi stacks using Kubernetes provides the capability to build
-out CI/CD and other automation systems, and to manage your infrastructure alongside your Kubernetes workloads or in dedicated control-plane clusters.
+Deploying Pulumi stacks using Kubernetes provides the capability to build out CI/CD and other automation systems, and to manage your infrastructure alongside your Kubernetes workloads or in dedicated control-plane clusters.
+
+Follow the sections below to install the operator, configure cluster access, and create your first stack.
 
 [k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
 [stack]: /docs/concepts/stack/
 [Pulumi YAML]: /docs/iac/languages-sdks/yaml/
 
 ## Install the Pulumi Kubernetes Operator
-
-To work with the operator, we'll need to follow these steps.
 
 ### Using Helm
 
