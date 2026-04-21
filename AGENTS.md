@@ -108,7 +108,7 @@ When moving documentation files, aliases automatically handle redirects. Update 
 
 ## Navigation and llms.txt
 
-The left nav is defined in `layouts/partials/docs/menu.html`. Whenever you add, remove, or reorder top-level nav sections, also update `layouts/index.txtfull.txt` to match.
+The left nav is data-driven from `data/docs_menu_sections.yml`, which is consumed by both `layouts/partials/docs/menu.html` (the rendered nav) and `layouts/index.llms.txt` (the curated `/llms.txt` index). When you add, remove, or reorder top-level nav sections, the changes flow through automatically — but if a new section warrants a hand-crafted description in `/llms.txt` (rather than the page's `meta_desc`), add a corresponding entry to `data/llms_descriptions.yml`. The same data also generates `/docs/llm-sitemap.json` via `layouts/partials/llm-sitemap-walk.json`.
 
 ---
 

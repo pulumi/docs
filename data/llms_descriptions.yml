@@ -1,0 +1,18 @@
+# Curated per-page descriptions for /llms.txt
+#
+# Structure: top-level key is a menu name from data/docs_menu_sections.yml.
+# Nested keys are the URL slug (path.Base of .RelPermalink) of pages that
+# appear in that menu's top-level entries. Values override the page's
+# meta_desc when emitting that page's bullet in /llms.txt.
+#
+# Use this when a page's meta_desc is too marketing-y, repeats the title,
+# or doesn't help an AI agent understand what the page covers. When no
+# entry exists here, the template falls back to meta_desc, then title.
+#
+# Example:
+#   iac:
+#     concepts: "Core Pulumi mental model: stacks, state, configuration, resources, inputs/outputs, providers, and projects."
+#
+# Today the meta_desc fallback produces serviceable text for all 11
+# top-level section overview pages, so this file ships intentionally empty
+# as a hook for future curation.

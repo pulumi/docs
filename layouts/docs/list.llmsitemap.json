@@ -1,7 +1,7 @@
 {{- $pages := slice -}}
 {{- range site.Data.docs_menu_sections -}}
   {{- with index site.Menus .menu -}}
-    {{- $section := partial "cli-sitemap-walk.json" (dict "menuEntries" .) -}}
+    {{- $section := partial "llm-sitemap-walk.json" (dict "menuEntries" .) -}}
     {{- $pages = $pages | append $section -}}
   {{- end -}}
 {{- end -}}

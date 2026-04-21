@@ -5,7 +5,7 @@
     {{- if and (not .Params.llms_exclude) (ne .Title "") -}}
       {{- $children := slice -}}
       {{- with $menuItem.Children -}}
-        {{- $children = partial "cli-sitemap-walk.json" (dict "menuEntries" .) -}}
+        {{- $children = partial "llm-sitemap-walk.json" (dict "menuEntries" .) -}}
       {{- end -}}
       {{- $entry := dict "title" .Title "path" .RelPermalink "children" $children -}}
       {{- if $children -}}
@@ -21,7 +21,7 @@
   {{- if not .Page -}}
     {{- $children := slice -}}
     {{- with $menuItem.Children -}}
-      {{- $children = partial "cli-sitemap-walk.json" (dict "menuEntries" .) -}}
+      {{- $children = partial "llm-sitemap-walk.json" (dict "menuEntries" .) -}}
     {{- end -}}
     {{- if $children -}}
       {{- $path := "" -}}

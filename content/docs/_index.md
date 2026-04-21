@@ -14,8 +14,7 @@ description: <p>Pulumi is an <a href="https://github.com/pulumi/pulumi" target="
 outputs:
 - HTML
 - markdown
-- clisitemap
-- cliconfig
+- llmsitemap
 cascade:
   meta_image: /images/docs/meta-images/docs-meta.png
   outputs:

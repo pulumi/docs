@@ -1,1 +1,0 @@
-{{- dict "algolia" (dict "appId" (getenv "ALGOLIA_APP_ID") "searchKey" (getenv "ALGOLIA_APP_SEARCH_KEY") "indexName" "production") | jsonify (dict "indent" "  ") -}}
