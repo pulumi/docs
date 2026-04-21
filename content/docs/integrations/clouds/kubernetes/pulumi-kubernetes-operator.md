@@ -36,39 +36,13 @@ The Pulumi Kubernetes Operator provides [custom resources][k8s-ext-pattern] to:
 Deploying Pulumi stacks using Kubernetes provides the capability to build
 out CI/CD and other automation systems, and to manage your infrastructure alongside your Kubernetes workloads or in dedicated control-plane clusters.
 
-To work with the operator, we'll need to follow these steps.
-
-- [Overview](#overview)
-- [Install the Pulumi Kubernetes Operator](#install-the-pulumi-kubernetes-operator)
-  - [Using Helm](#using-helm)
-  - [Dev Install](#dev-install)
-- [Create a Service Account](#create-a-service-account)
-- [Configure Pulumi Cloud Access](#configure-pulumi-cloud-access)
-- [Use Pulumi ESC for centralized configuration](#use-pulumi-esc-for-centralized-configuration)
-- [Create a Stack Resource](#create-a-stack-resource)
-  - [Using a Git repository](#using-a-git-repository)
-  - [Using a Flux source](#using-a-flux-source)
-  - [Using a Program object](#using-a-program-object)
-- [Explore other Features](#explore-other-features)
-  - [Stack Configuration Values](#stack-configuration-values)
-  - [Structured configuration](#structured-configuration)
-  - [Environment Variables](#environment-variables)
-  - [Drift Detection](#drift-detection)
-  - [State Refresh](#state-refresh)
-  - [Stack Cleanup](#stack-cleanup)
-  - [Stack Prerequisites](#stack-prerequisites)
-  - [External Triggers](#external-triggers)
-  - [Preview mode](#preview-mode)
-- [Use With Argo CD](#use-with-argo-cd)
-- [More Information](#more-information)
-  - [Examples](#examples)
-  - [Getting Help](#getting-help)
-
 [k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
 [stack]: /docs/concepts/stack/
 [Pulumi YAML]: /docs/iac/languages-sdks/yaml/
 
 ## Install the Pulumi Kubernetes Operator
+
+To work with the operator, we'll need to follow these steps.
 
 ### Using Helm
 
