@@ -105,7 +105,7 @@ Metadata for your package is generated from the [`schema.json`](/docs/iac/using-
   - `category/CATEGORY`: replace `CATEGORY` with one of `cloud`, `database`, `infrastructure`, `monitoring`, `network`, `utility`, `versioncontrol`
   - `kind/KIND`: replace `KIND` with one of `native`, `component`
     - Note: don't set a kind if you're bridging a Terraform provider
-- `pluginDownloadURL`: a web-accessible URL that contains the compiled plugin binary associated with your package. See [Authoring an Executable Plugin Package](../executable-plugin/#plugindownloadurl) for the URL format, hosting options (GitHub Releases, GitLab Releases, custom HTTP), and interpolation variables.
+- `pluginDownloadURL`: a web-accessible URL that contains the compiled plugin binary associated with your package. See [Authoring an Executable Plugin Package](/docs/iac/guides/building-extending/packages/executable-plugin/#plugindownloadurl) for the URL format, hosting options (GitHub Releases, GitLab Releases, custom HTTP), and interpolation variables.
 
 ### API docs
 
