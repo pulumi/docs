@@ -93,16 +93,18 @@ When moving documentation files, aliases automatically handle redirects. Update 
 - **DO update links in**:
   - `/content/docs/` - Active documentation
   - `/content/product/` - Product pages
-
 - **DO NOT update links in**:
   - `/content/blog/` - Blog posts are historical documents
   - `/content/tutorials/` - Tutorials are historical content
-
 - **Implementation**: When using `find` or `sed` to update links, always exclude blog and tutorial directories:
 
   ```bash
   find content/docs content/product -name "*.md" -exec sed -i 's|/old/path|/new/path|g' {} +
   ```
+
+- **Link Style**: In order to ensure that links are not broken by files being moved...
+  - Links within `/docs` should have the full path to the file's primary alias, e.g. `/docs/iac/concepts/stacks/`.
+  - Links should NEVER use relative links with "up directory aliases", e.g. `../stacks`
 
 ---
 
