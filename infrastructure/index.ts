@@ -982,7 +982,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/logos/brand/*",
-            cachePolicyId: thirtyMinuteCachePolicy.id,
+            cachePolicyId: oneHourCacheKeyPolicy.id,
             responseHeadersPolicyId: BrandLogoCachePolicy.id,
         },
         {
