@@ -45,26 +45,26 @@ The extension automatically generates a debug configuration to run `pulumi up` o
 3. Choose __Show all automatic debug configurations__.
 4. Select "Pulumi..." then "pulumi preview" or "pulumi up".  Debugging will start automatically.
 
-    ![Automatic Debug Configuration](/docs/support/troubleshooting/debugging/images/automatic-1.png)
+    ![Automatic Debug Configuration](/docs/support/debugging/images/automatic-1.png)
 
-    ![Automatic Debug Configuration](/docs/support/troubleshooting/debugging/images/automatic-2.png)
+    ![Automatic Debug Configuration](/docs/support/debugging/images/automatic-2.png)
 
 5. Select or create a stack if prompted to do so.
 
-    ![Stack Selection](/docs/support/troubleshooting/debugging/images/stack-selection-1.png)
+    ![Stack Selection](/docs/support/debugging/images/stack-selection-1.png)
 
 ### Debug your Program
 
 Set breakpoints in your program code and enjoy the full functionality of the VS Code debugger.
 See [VS Code Debugging](https://code.visualstudio.com/docs/editor/debugging) for more information.
 
-![Debugging](/docs/support/troubleshooting/debugging/images/debugging.png)
+![Debugging](/docs/support/debugging/images/debugging.png)
 
 ### Pulumi CLI Output
 
 Access the CLI output via the Debug Console view.
 
-![Debug Console](/docs/support/troubleshooting/debugging/images/debug-console.png)
+![Debug Console](/docs/support/debugging/images/debug-console.png)
 
 ## Debugging with other IDEs
 
