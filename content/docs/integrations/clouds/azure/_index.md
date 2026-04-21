@@ -72,7 +72,7 @@ For Azure, Insights connects subscriptions to inventory existing resources, sear
 
 ## Policy packs
 
-[Pulumi Policies](/docs/insights/policy/) lets you enforce rules on infrastructure at preview and update time, rejecting stacks that violate security, cost, or compliance standards. [Pre-built policy packs](/docs/reference/pre-built-policy-packs/) are maintained by Pulumi and cover common regulatory and best-practice frameworks.
+[Pulumi Policies](/docs/insights/policy/) lets you enforce rules on infrastructure at preview and update time, rejecting stacks that violate security, cost, or compliance standards. [Pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) are maintained by Pulumi and cover common regulatory and best-practice frameworks.
 
 For Azure:
 
