@@ -93,7 +93,6 @@
 }
 
 .template-hero {
-
     .hero-tag-line {
         @include section-hint-accent();
     }
@@ -503,7 +502,6 @@
         @include screen-md {
             @apply text-heading-l;
         }
-
     }
 
     .product-hero-title-primary {
