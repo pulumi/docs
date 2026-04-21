@@ -17,7 +17,7 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
       curl https://www.pulumi.com/registry/llm-sitemap.json
       curl https://www.pulumi.com/registry/packages/aws/llm-sitemap.json
 
-- **Markdown content (per page)** — every `/docs/` URL and every `/registry/` URL is available as clean markdown using either of two equivalent mechanisms. Exception: `/registry/packages/<name>/api-docs/*` is NOT served as markdown — for resource-level reference, use the **Provider schemas** or **Pre-rendered package docs** endpoints below instead.
+- **Markdown content (per page)** — every `/docs/` URL and every `/registry/` URL is available as clean markdown using either of two equivalent mechanisms. For the `.md` URL form, drop the trailing slash from the canonical URL and append `.md` (e.g., `/docs/iac/concepts/resources/` → `/docs/iac/concepts/resources.md`). Exception: `/registry/packages/<name>/api-docs/*` is NOT served as markdown — for resource-level reference, use the **Provider schemas** or **Pre-rendered package docs** endpoints below instead.
 
       # 1. Accept-header content negotiation (works on every supported page)
       curl -H "Accept: text/markdown" https://www.pulumi.com/docs/iac/concepts/resources/
