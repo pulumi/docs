@@ -32,10 +32,7 @@ This llms.txt covers www.pulumi.com, which includes:
 - [Community](https://www.pulumi.com/community/): Slack, Discord, GitHub, and other community resources
 - [Security](https://www.pulumi.com/security/): Security posture, compliance, and trust information
 - [Docs](https://www.pulumi.com/docs/): Technical documentation (detailed sections below)
-{{- $descriptions := site.Data.llms_descriptions | default dict }}
 {{- range site.Data.docs_menu_sections }}
-{{- $sectionKey := .menu }}
-{{- $sectionDescriptions := index $descriptions $sectionKey }}
 {{- $entries := slice }}
 {{- with index site.Menus .menu }}
 {{- range . }}
@@ -50,13 +47,7 @@ This llms.txt covers www.pulumi.com, which includes:
 
 ## {{ .label }}
 {{- range $entries }}
-{{- $key := path.Base .RelPermalink }}
-{{- $curated := "" }}
-{{- with $sectionDescriptions }}
-{{- $curated = index . $key }}
-{{- end }}
-{{- $desc := $curated | default (.Params.meta_desc | default .Title) | plainify }}
-- [{{ .Title }}]({{ .Permalink }}): {{ $desc }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
 {{- end }}
 {{- end }}
 {{- end }}
