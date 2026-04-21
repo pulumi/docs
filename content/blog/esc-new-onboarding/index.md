@@ -30,7 +30,7 @@ Among its many uses, [Pulumi ESC can act as an OpenID Connect (OIDC) provider](/
 
 Other Pulumi offerings, such as [Pulumi Insights](/product/pulumi-insights/), use this mechanism to securely scan resources across your organization.
 
-## A simpler way to setup OIDC for your cloud providers
+## A simpler way to set up OIDC for your cloud providers
 
 Setting up an OIDC provider manually can involve multiple steps and be error-prone. To simplify this, Pulumi ESC now offers automated setup for AWS, Azure, and Google Cloud directly from the onboarding flow.
 
@@ -48,7 +48,7 @@ Now, you can just use SSO, giving Pulumi Cloud permissions to create the necessa
 
 ![AWS will prompt you for permissions to pulumi to create the necessary resources](./esc-onboarding-5.png)
 
-After we have finished setting up the trust relationship with AWS, we'll setup a new ESC environment for you under the specified project.
+After we have finished setting up the trust relationship with AWS, we'll set up a new ESC environment for you under the specified project.
 
 ![A new environment will be created under the project and name you specify](./esc-onboarding-6.png)
 

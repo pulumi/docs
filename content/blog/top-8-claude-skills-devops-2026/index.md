@@ -128,7 +128,7 @@ npx skills add https://github.com/wshobson/agents --skill cost-optimization
 
 ## Debugging like a senior engineer
 
-The [obra/superpowers](https://github.com/obra/superpowers) repository contains a skill that changed how I debug with Claude. The `systematic-debugging` skill implements a four phase framework: root cause investigation, pattern analysis, hypothesis testing, and implementation.
+The [obra/superpowers](https://github.com/obra/superpowers) repository contains a skill that changed how I debug with Claude. The `systematic-debugging` skill implements a four-phase framework: root cause investigation, pattern analysis, hypothesis testing, and implementation.
 
 Without this skill, Claude tends to suggest solutions immediately. Something is broken, here are five things that might fix it. This feels helpful but often wastes time because none of the suggestions address the actual problem.
 
