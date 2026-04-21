@@ -62,6 +62,8 @@ This llms.txt covers www.pulumi.com, which includes:
 {{- end }}
 
 ## Optional
+
+### Recent blog posts
 {{- $blogPages := where $.Site.Pages "Section" "blog" }}
 {{- $recentBlogs := first 10 ($blogPages.ByDate.Reverse) }}
 {{- range $recentBlogs }}
