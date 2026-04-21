@@ -25,4 +25,4 @@ if [ "${BUILD_FUTURE:-true}" = "false" ]; then
     BUILD_FUTURE_FLAG=""
 fi
 
-HUGO_BASEURL=http://localhost:1313 hugo server --renderToMemory --disableFastRender --buildDrafts ${BUILD_FUTURE_FLAG}
+HUGO_BASEURL=http://localhost:1313 hugo server --renderToMemory --buildDrafts ${BUILD_FUTURE_FLAG}

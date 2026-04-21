@@ -12,13 +12,15 @@
     <script src="/js/{{ index $jsManifest "algolia" }}" defer></script>
 {{ end }}
 
-{{/* Inline template for CSS links: uses fingerprinted bundle in dev, post-processed bundle in prod */}}
+{{/* Inline template for CSS links: stable URL in dev (required for LiveReload), fingerprinted+post-processed in prod */}}
 {{ define "css-link" }}
-    {{- $css := resources.Get .source | fingerprint -}}
-    {{- $_ := $css.Permalink -}}
     {{- if hugo.IsServer -}}
+        {{- $css := resources.Get .source -}}
+        {{- $_ := $css.Permalink -}}
         <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     {{- else -}}
+        {{- $css := resources.Get .source | fingerprint -}}
+        {{- $_ := $css.Permalink -}}
         <link rel="stylesheet" href="/css/{{ .name }}.{{ getenv "CSS_BUNDLE_ID" }}.css">
     {{- end -}}
 {{ end }}

@@ -27,6 +27,14 @@ module.exports = function (env, { mode }) {
         devServer: {
             writeToDisk: true,
         },
+        // Disable webpack's module cache in development. When enabled (the default),
+        // changes to SCSS partials imported from main.scss/_marketing.scss don't
+        // invalidate the extracted CSS module — webpack rebuilds the JS stub but
+        // serves stale CSS from cache until the watcher is restarted. See the
+        // output of `make serve-all` showing "cached modules ... 766 KiB (css/mini-extract)"
+        // after a partial change. Disabling the cache in dev mode forces sass-loader
+        // to re-run on every rebuild. Production builds are unaffected.
+        cache: mode === "production",
         module: {
             rules: [
                 {
@@ -75,6 +83,10 @@ module.exports = function (env, { mode }) {
                 filename: "../../assets/css/[name].css",
             }),
             new WebpackShellPluginNext({
+                // dev: true clears the script list after the first run, so
+                // stencil is not rebuilt on every watch recompilation — only on startup.
+                // Has no effect on production builds (single compilation).
+                dev: mode !== "production",
                 onBuildStart: {
                     blocking: true,
                     parallel: false,
@@ -91,13 +103,19 @@ module.exports = function (env, { mode }) {
                         }
                         const outDir = path.resolve(compiler.outputPath, "../../data");
                         fs.mkdirSync(outDir, { recursive: true });
-                        fs.writeFileSync(path.join(outDir, "js_manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
+                        const manifestPath = path.join(outDir, "js_manifest.json");
+                        const newContent = JSON.stringify(manifest, null, 2) + "\n";
+                        // Only write if changed — avoids a spurious Hugo reload on CSS-only rebuilds.
+                        const existing = fs.existsSync(manifestPath) ? fs.readFileSync(manifestPath, "utf8") : "";
+                        if (newContent !== existing) {
+                            fs.writeFileSync(manifestPath, newContent);
+                        }
                     });
                 },
             },
         ],
         optimization: {
-            minimize: true,
+            minimize: mode === "production",
             minimizer: [
                 new TerserPlugin({
                     terserOptions: {
