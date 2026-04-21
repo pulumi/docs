@@ -404,7 +404,7 @@ Property columns are only available to organizations using Team, Enterprise, and
 If you would like to use them, [contact us](/contact?form=sales) to upgrade.
 {{% /notes %}}
 
-Property columns let you promote any resource input or output property into a column in the results grid. Once added, a property column behaves like any built-in column: you can sort, filter, and group by its values across all resources returned by your query.
+Property columns let you promote any resource property into a column in the results grid. Once added, a property column behaves like any built-in column: you can sort, filter, and group by its values across all resources returned by your query.
 
 Property columns use the same [property path](/docs/reference/property-paths/) syntax as [property queries](#property-queries). For example, `tags.Environment` exposes the value of the `Environment` tag on each resource, and `instanceType` exposes the instance type of compute resources. Nested and bracketed paths (such as `tags["name containing spaces"]`) are supported.
 
@@ -421,7 +421,7 @@ The new column is appended to the right of the existing columns. Resources that 
 
 ### Adding a column from the detail view
 
-Click the name cell in a row to drill into the Detailed view for that resource. Each listed input and output property in the Detailed view has a **Create property column** action in its row. Selecting this action adds a column for the property without having to type the path manually. This is useful when you have already located a property of interest on one resource and want to see its value across every resource in the grid.
+Click the name cell in a row to drill into the Detailed view for that resource. The Action column menu for each property has a **Create property column** action. Selecting this action adds a column for the property without having to type the path manually. This is useful when you have already located a property of interest on one resource and want to see its value across every resource in the grid.
 
 The behavior of **Create property column** depends on the type of the property value:
 
