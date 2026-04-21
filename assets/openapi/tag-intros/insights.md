@@ -1,3 +1,7 @@
+---
+meta_desc: Get visibility into cloud resources and policies across your organization. Covers account management, resource search and inventory, and policy results.
+---
+
 Pulumi Insights provides visibility into cloud resources, compliance
 monitoring, and policy enforcement across your organization. The Insights
 API covers account and integration management, resource search and

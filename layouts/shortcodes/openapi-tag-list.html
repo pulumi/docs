@@ -10,7 +10,7 @@
     {{ end }}
 {{ end }}
 <ul>
-{{ range $tagPages }}<li><a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a> — {{ .Params.meta_desc }}</li>
+{{ range $tagPages }}<li><a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a>: {{ .Params.meta_desc }}</li>
 {{ end }}
-{{ with $schemaPage }}<li><a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a> — {{ .Params.meta_desc }}</li>{{ end }}
+{{ with $schemaPage }}<li><a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a>: {{ .Params.meta_desc }}</li>{{ end }}
 </ul>
