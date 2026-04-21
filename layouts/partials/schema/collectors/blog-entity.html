@@ -118,4 +118,12 @@
   "mainEntityOfPage" (dict "@id" (printf "%s#webpage" .Permalink))
 ) }}
 
+{{/* Add speakable selectors for voice assistants and AEO */}}
+{{ $schema = merge $schema (dict
+  "speakable" (dict
+    "@type" "SpeakableSpecification"
+    "cssSelector" (slice "article h1" "article > section:first-of-type > p:first-of-type")
+  )
+) }}
+
 {{ return $schema }}
