@@ -83,8 +83,10 @@ module.exports = function (env, { mode }) {
                 filename: "../../assets/css/[name].css",
             }),
             new WebpackShellPluginNext({
-                // dev: true clears the script list after the first run, so
-                // stencil is not rebuilt on every watch recompilation — only on startup.
+                // dev: true clears the script list after the first run, so stencil is not
+                // rebuilt on every webpack recompilation — only on startup. Stencil component
+                // edits are picked up by stencil's own --watch process, which runs alongside
+                // webpack via theme/package.json's `start` script (used by `make serve-all`).
                 // Has no effect on production builds (single compilation).
                 dev: mode !== "production",
                 onBuildStart: {
