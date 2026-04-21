@@ -102,9 +102,9 @@ When moving documentation files, aliases automatically handle redirects. Update 
   find content/docs content/product -name "*.md" -exec sed -i 's|/old/path|/new/path|g' {} +
   ```
 
-- **Link Style**: In order to ensure that links are not broken by files being moved...
-  - Links within `/docs` should have the full path to the file's primary alias, e.g. `/docs/iac/concepts/stacks/`.
-  - Links should NEVER use relative links with "up directory aliases", e.g. `../stacks`
+- **Link Style**: To ensure links don't break when files are moved:
+  - Links within `/docs/` must use the full canonical path, e.g. `/docs/iac/concepts/stacks/`.
+  - Never use parent-directory references (`../stacks/`) in links — they break when files move.
 
 ---
 
