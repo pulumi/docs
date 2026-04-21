@@ -10,4 +10,3 @@ Disallow: /docs/search/$
 Disallow: /registry/packages/azure-native-v2
 
 Sitemap: https://www.pulumi.com/sitemap-index.xml
-Host: www.pulumi.com
