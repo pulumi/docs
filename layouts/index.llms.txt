@@ -6,13 +6,36 @@ Pulumi is an open source infrastructure as code platform that lets you use famil
 
 ## For agents
 
-If you are an AI agent or programmatic consumer, start with these endpoints:
+If you are an AI agent or programmatic consumer, start with these endpoints. Each has a copy-pasteable example.
 
-- **Full docs index (JSON):** https://www.pulumi.com/docs/llm-sitemap.json — hierarchical machine-readable sitemap of every documentation page with titles and nesting. Use this when you need to enumerate or search the full docs surface.
-- **Full registry index (JSON):** https://www.pulumi.com/registry/llm-sitemap.json — index of every provider package; per-package sitemaps at `/registry/packages/<name>/llm-sitemap.json`.
-- **Markdown content (per page):** Any `/docs/` URL returns clean markdown when requested with `Accept: text/markdown`. Example: `curl -H "Accept: text/markdown" https://www.pulumi.com/docs/iac/concepts/resources/`.
-- **Provider schemas (canonical, structured):** https://www.pulumi.com/registry/packages/<name>/schema.json — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. This is the same artifact `pulumi package get-schema <name>` returns. Use this to verify resource argument names and types before generating Pulumi code instead of guessing.
-- **Pre-rendered package docs (bundled):** https://www.pulumi.com/registry/packages/<name>/api-docs/llm-docs.json — human-formatted multi-language documentation (TypeScript/Python/Go/C#/Java/YAML) with usage examples, constructor signatures, and property tables. Useful when you need formatted prose rather than raw schema.
+- **Full docs index (JSON)** — hierarchical machine-readable sitemap of every documentation page with titles and nesting. Use this to enumerate or search the full docs surface.
+
+      curl https://www.pulumi.com/docs/llm-sitemap.json
+
+- **Full registry index (JSON)** — index of every provider package, plus per-package sitemaps at `/registry/packages/<name>/llm-sitemap.json`.
+
+      curl https://www.pulumi.com/registry/llm-sitemap.json
+      curl https://www.pulumi.com/registry/packages/aws/llm-sitemap.json
+
+- **Markdown content (per page)** — every `/docs/` URL and every `/registry/` URL is available as clean markdown using either of two equivalent mechanisms. Exception: `/registry/packages/<name>/api-docs/*` is NOT served as markdown — for resource-level reference, use the **Provider schemas** or **Pre-rendered package docs** endpoints below instead.
+
+      # 1. Accept-header content negotiation (works on every supported page)
+      curl -H "Accept: text/markdown" https://www.pulumi.com/docs/iac/concepts/resources/
+      curl -H "Accept: text/markdown" https://www.pulumi.com/registry/packages/aws/
+
+      # 2. .md URL suffix (header-free; same content, same cache entry)
+      curl https://www.pulumi.com/docs/iac/concepts/resources.md
+      curl https://www.pulumi.com/registry/packages/aws.md
+      curl https://www.pulumi.com/registry.md
+
+- **Provider schemas (canonical, structured)** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. This is the same artifact `pulumi package get-schema <name>` returns. Use this to verify resource argument names and types before generating Pulumi code instead of guessing.
+
+      curl https://www.pulumi.com/registry/packages/aws/schema.json
+      pulumi package get-schema aws
+
+- **Pre-rendered package docs (bundled)** — human-formatted multi-language documentation (TypeScript/Python/Go/C#/Java/YAML) with usage examples, constructor signatures, and property tables. Useful when you need formatted prose rather than raw schema.
+
+      curl https://www.pulumi.com/registry/packages/aws/api-docs/llm-docs.json
 
 ## Site overview
 
@@ -32,6 +55,8 @@ This llms.txt covers www.pulumi.com, which includes:
 - [Community](https://www.pulumi.com/community/): Slack, Discord, GitHub, and other community resources
 - [Security](https://www.pulumi.com/security/): Security posture, compliance, and trust information
 - [Docs](https://www.pulumi.com/docs/): Technical documentation (detailed sections below)
+
+## Docs sections
 {{- range site.Data.docs_menu_sections }}
 {{- $entries := slice }}
 {{- with index site.Menus .menu }}
@@ -45,7 +70,7 @@ This llms.txt covers www.pulumi.com, which includes:
 {{- end }}
 {{- if $entries }}
 
-## {{ .label }}
+### {{ .label }}
 {{- range $entries }}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
 {{- end }}
@@ -55,6 +80,7 @@ This llms.txt covers www.pulumi.com, which includes:
 ## Optional
 
 ### Recent blog posts
+
 {{- $blogPages := where $.Site.Pages "Section" "blog" }}
 {{- $recentBlogs := first 10 ($blogPages.ByDate.Reverse) }}
 {{- range $recentBlogs }}
