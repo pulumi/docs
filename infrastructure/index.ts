@@ -693,7 +693,10 @@ if (config.registryStack) {
         {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
-            pathPattern: "/registry/*",
+            // "/registry*" (no slash) matches /registry, /registry.md, and
+            // /registry/... so the .md URL-suffix convention reaches the
+            // registry origin alongside the trailing-slash form.
+            pathPattern: "/registry*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
