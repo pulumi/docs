@@ -60,7 +60,7 @@ values:
 
 ## Composing fn::final with fn::secret
 
-`fn::final` accepts any value, including other built-in function expressions. Wrapping `fn::secret` in `fn::final` is a useful pattern for platform teams that need to distribute a shared secret to downstream environments while ensuring those environments cannot override it.
+`fn::final` accepts any value, including other built-in function expressions. Wrapping `fn::secret` in `fn::final` lets platform teams distribute a shared secret to downstream environments while ensuring those environments cannot override it.
 
 ### Parent environment (myproj/platform)
 
@@ -71,7 +71,7 @@ values:
       fn::secret: my_plaintext_secret
 ```
 
-When this environment is saved, ESC encrypts the plaintext argument to `fn::secret` and replaces it with a ciphertext literal, so the stored form becomes:
+When the environment is saved, ESC encrypts the plaintext argument and replaces it with a ciphertext literal. The stored form becomes:
 
 ```yaml
 values:
