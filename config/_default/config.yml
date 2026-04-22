@@ -30,6 +30,22 @@ enableGitInfo: true
 # 10 seconds to avoid timeouts when generating the site.
 timeout: 300000
 
+# Exclude static/programs from Hugo's file watcher. It's ~15 MiB / 2000+ files
+# of code samples maintained by codegen, not during normal authoring — watching
+# them just slows `hugo server` down. The files are still served; only the
+# watch is disabled.
+#
+# Declaring a mount that overlaps `static` disables Hugo's default
+# `static → static` mount, so we re-declare it. Other defaults (archetypes,
+# assets, content, data, i18n, layouts, etc.) are still auto-added.
+module:
+  mounts:
+    - source: static
+      target: static
+    - source: static/programs
+      target: static/programs
+      disableWatch: true
+
 outputFormats:
   rss:
     baseName: rss
