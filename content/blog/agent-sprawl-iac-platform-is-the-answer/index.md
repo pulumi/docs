@@ -16,9 +16,9 @@ tags:
     - infrastructure-as-code
 social:
     twitter: |
-        96% of enterprises run AI agents in production. 12% have any central way to manage them. Developers are wiring agents into prod faster than the platform team can keep up.
+        Somewhere in your company, a developer just wired an AI agent into production. The platform team doesn't know it exists.
 
-        The governance layer you need already exists. Here's where to find it.
+        Platform teams have three responses to this. Two of them make it worse. Here's the one that works.
     linkedin: |
         Somewhere in your company right now, a developer is wiring an AI agent into production. Maybe a release agent that cuts tags when tests pass. Maybe a cost agent that kills idle infra at 2 a.m.
 
