@@ -845,6 +845,16 @@ Hugo generates:
 
 **Output formats** are defined in `config/_default/config.yml` under `outputFormats` and `outputs`.
 
+#### Context7 Discoverability Files
+
+[Context7](https://context7.com/) indexes our content for AI coding assistants. Each indexed surface has its own `context7.json` pointing at the corresponding Context7 project. Three copies live in this repo — each served at a different URL because Context7 looks for the file at a specific path per indexed site:
+
+- `context7.json` (repo root) — served on GitHub at `github.com/pulumi/docs/blob/master/context7.json`. Indexes this repository itself.
+- `static/context7.json` — published at `https://www.pulumi.com/context7.json`. Points Context7 at the `llms.txt` project that covers the marketing site and `/llms.txt` index.
+- `static/docs/context7.json` — published at `https://www.pulumi.com/docs/context7.json`. Points Context7 at the docs-site project (`context7.com/websites/pulumi`).
+
+All three share the same public key and are safe to commit. If the key or project URLs need to rotate, update all three together. Current maintainer for all Context7 onboarding: `csoper@pulumi.com`.
+
 #### Minification
 
 With `--minify` flag, Hugo minifies:
