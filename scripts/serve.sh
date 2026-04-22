@@ -25,4 +25,14 @@ if [ "${BUILD_FUTURE:-true}" = "false" ]; then
     BUILD_FUTURE_FLAG=""
 fi
 
-HUGO_BASEURL=http://localhost:1313 hugo server --renderToMemory --disableFastRender --buildDrafts ${BUILD_FUTURE_FLAG}
+# Hugo's fast render mode only re-renders the page currently open in the browser
+# on each change. This is much faster on a large site, but means list pages, the
+# search index, menus, and other pages not in your viewport may show stale data
+# until you navigate to them. Set DISABLE_FAST_RENDER=true to force full
+# re-renders (slower but always accurate) when debugging those surfaces.
+FAST_RENDER_FLAG=""
+if [ "${DISABLE_FAST_RENDER:-false}" = "true" ]; then
+    FAST_RENDER_FLAG="--disableFastRender"
+fi
+
+HUGO_BASEURL=http://localhost:1313 hugo server --renderToMemory --buildDrafts ${BUILD_FUTURE_FLAG} ${FAST_RENDER_FLAG}

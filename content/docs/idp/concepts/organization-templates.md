@@ -103,6 +103,25 @@ Templates can include a `README.md` file in the same directory as the `Pulumi.ya
 
 Templates can include any other files needed for the project (source code, configuration files, etc.). These files are copied when a project is created from the template.
 
+### New Project Wizard cloud filter
+
+The [New Project Wizard](/docs/idp/concepts/new-project-wizard/) card view includes a "Filter by cloud" dropdown that groups templates by their target cloud. To make a template appear under one of these filters, set `template.metadata.cloud` in the template's `Pulumi.yaml`:
+
+```yaml
+name: my-aws-template
+runtime: nodejs
+template:
+  description: My AWS project template
+  metadata:
+    cloud: aws
+```
+
+A few constraints to keep in mind:
+
+- **Recognized values**: The wizard recognizes only `aws`, `azure`, `gcp`, and `kubernetes`. Any other value is ignored, and the template will not appear under a cloud filter.
+- **Single value**: `cloud` is a string, not a list. A multi-cloud template can be filtered under at most one cloud, so pick its primary cloud or leave the field unset.
+- **Unset templates**: Templates without `template.metadata.cloud` do not appear under any cloud filter. They still appear when the filter is set to "All".
+
 ## Publishing Registry-backed Templates
 
 Registry-backed templates are published to your organization's Private Registry using the Pulumi CLI.

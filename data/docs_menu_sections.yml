@@ -12,8 +12,6 @@
   label: Internal Developer Platform
 - menu: ai
   label: Infrastructure AI
-- menu: migration
-  label: Migration
 - menu: administration
   label: Administration
 - menu: integrations

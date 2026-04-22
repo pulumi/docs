@@ -15,10 +15,10 @@ menu:
 aliases:
 - /docs/integrations/clouds/aws/guides/eks/
 - /docs/iac/clouds/aws/guides/eks/
- - /docs/reference/crosswalk/aws/eks/
- - /eks/
- - /docs/guides/crosswalk/aws/eks/
- - /docs/clouds/aws/guides/eks/
+- /docs/reference/crosswalk/aws/eks/
+- /eks/
+- /docs/guides/crosswalk/aws/eks/
+- /docs/clouds/aws/guides/eks/
 ---
 
 [Amazon Elastic Kubernetes Service (Amazon EKS)](https://aws.amazon.com/eks) makes it easy to deploy,

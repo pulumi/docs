@@ -14,7 +14,7 @@ The runtime-free guarantee assumes a fully self-contained binary. A framework-de
 {{% /notes %}}
 
 {{% notes type="info" %}}
-If you are looking to package and share components, a [source-based plugin package](./source-based-plugin/) is usually a better fit — see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) for the component-author overview. This guide covers the executable model, which applies when you are shipping custom resources, provider functions, or publishing to the public [Pulumi Registry](/registry/). See the [Pulumi Packages Guides](/docs/iac/guides/building-extending/packages/) index for the comparison against source-based packages.
+If you are looking to package and share components, a [source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/) is usually a better fit — see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) for the component-author overview. This guide covers the executable model, which applies when you are shipping custom resources, provider functions, or publishing to the public [Pulumi Registry](/registry/). See the [Pulumi Packages Guides](/docs/iac/guides/building-extending/packages/) index for the comparison against source-based packages.
 {{% /notes %}}
 
 ## Binary naming and archive layout
@@ -68,7 +68,7 @@ Node.js and Python plugins are typically not cross-compiled — tools like `pkg`
 
 ## `pluginDownloadURL`
 
-`pluginDownloadURL` is a field in the package [schema](./schema/) that tells the Pulumi CLI where to fetch the plugin binary. The CLI constructs the full archive URL by interpolating variables and appending the expected archive name:
+`pluginDownloadURL` is a field in the package [schema](/docs/iac/guides/building-extending/packages/schema/) that tells the Pulumi CLI where to fetch the plugin binary. The CLI constructs the full archive URL by interpolating variables and appending the expected archive name:
 
 ```text
 ${pluginDownloadURL}/pulumi-${kind}-${name}-v${version}-${os}-${arch}.tar.gz
@@ -120,7 +120,7 @@ Fork the template that matches your authoring model:
 | [`pulumi/pulumi-provider-boilerplate`](https://github.com/pulumi/pulumi-provider-boilerplate) | Authoring a native Pulumi provider with custom resources, typically in Go |
 | [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate) | Bridging a Terraform provider |
 
-For a Go component package, author a [source-based plugin](./source-based-plugin/) with [`pulumi-go-provider`](./pulumi-go-provider-sdk/) instead, or start from `pulumi/pulumi-provider-boilerplate` if you need full executable-plugin behavior alongside components.
+For a Go component package, author a [source-based plugin](/docs/iac/guides/building-extending/packages/source-based-plugin/) with [`pulumi-go-provider`](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) instead, or start from `pulumi/pulumi-provider-boilerplate` if you need full executable-plugin behavior alongside components.
 
 ### The general release pipeline
 
@@ -135,7 +135,7 @@ Pulumi-hosted providers additionally upload archives to `s3://get.pulumi.com/rel
 
 ## Publishing SDKs
 
-The binary plugin is what removes the consumer runtime dependency — not the SDK. Consumers can still run [`pulumi package gen-sdk`](/docs/iac/cli/commands/pulumi_package_gen-sdk/) against your schema to generate a local SDK, the same as with a [source-based plugin package](./source-based-plugin/). Once you've committed to publishing a binary per release, though, publishing per-language SDKs to npm, PyPI, NuGet, Maven Central, and as a tagged Go module is a natural extension — and most packages in the public Pulumi Registry do both.
+The binary plugin is what removes the consumer runtime dependency — not the SDK. Consumers can still run [`pulumi package gen-sdk`](/docs/iac/cli/commands/pulumi_package_gen-sdk/) against your schema to generate a local SDK, the same as with a [source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/). Once you've committed to publishing a binary per release, though, publishing per-language SDKs to npm, PyPI, NuGet, Maven Central, and as a tagged Go module is a natural extension — and most packages in the public Pulumi Registry do both.
 
 A typical release pipeline for each tagged release looks like this:
 
@@ -183,7 +183,7 @@ sequenceDiagram
 ## Additional resources
 
 - [Pulumi Packages Guides](/docs/iac/guides/building-extending/packages/)
-- [Authoring a Source-Based Plugin Package](./source-based-plugin/)
-- [Publishing a Package to the Pulumi Registry](./publishing-packages/)
-- [Schema Reference](./schema/)
-- [Pulumi Go Provider SDK](./pulumi-go-provider-sdk/)
+- [Authoring a Source-Based Plugin Package](/docs/iac/guides/building-extending/packages/source-based-plugin/)
+- [Publishing a Package to the Pulumi Registry](/docs/iac/guides/building-extending/packages/publishing-packages/)
+- [Schema Reference](/docs/iac/guides/building-extending/packages/schema/)
+- [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/)

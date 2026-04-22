@@ -1,0 +1,90 @@
+# Pulumi
+
+> Infrastructure as code in real programming languages. Define, deploy, and manage cloud infrastructure on AWS, Azure, Google Cloud, Kubernetes, and 150+ providers using TypeScript, Python, Go, C#, Java, or YAML.
+
+Pulumi is an open source infrastructure as code platform that lets you use familiar programming languages and tools to build, deploy, and manage cloud infrastructure. Pulumi Cloud provides state management, secrets, deployments, and governance for teams.
+
+## For agents
+
+If you are an AI agent or programmatic consumer, start with these endpoints. Each has a copy-pasteable example.
+
+- **Full docs index (JSON)** — hierarchical machine-readable sitemap of every documentation page with titles and nesting. Use this to enumerate or search the full docs surface.
+
+      curl https://www.pulumi.com/docs/llm-sitemap.json
+
+- **Full registry index (JSON)** — index of every provider package, plus per-package sitemaps at `/registry/packages/<name>/llm-sitemap.json`.
+
+      curl https://www.pulumi.com/registry/llm-sitemap.json
+      curl https://www.pulumi.com/registry/packages/aws/llm-sitemap.json
+
+- **Markdown content (per page)** — every `/docs/` URL and every `/registry/` URL is available as clean markdown using either of two equivalent mechanisms. For the `.md` URL form, drop the trailing slash from the canonical URL and append `.md` (e.g., `/docs/iac/concepts/resources/` → `/docs/iac/concepts/resources.md`). Exception: `/registry/packages/<name>/api-docs/*` is NOT served as markdown — for resource-level reference, use the **Provider schemas** or **Pre-rendered package docs** endpoints below instead.
+
+      # 1. Accept-header content negotiation (works on every supported page)
+      curl -H "Accept: text/markdown" https://www.pulumi.com/docs/iac/concepts/resources/
+      curl -H "Accept: text/markdown" https://www.pulumi.com/registry/packages/aws/
+
+      # 2. .md URL suffix (header-free; same content, same cache entry)
+      curl https://www.pulumi.com/docs/iac/concepts/resources.md
+      curl https://www.pulumi.com/registry/packages/aws.md
+      curl https://www.pulumi.com/registry.md
+
+- **Provider schemas (canonical, structured)** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. This is the same artifact `pulumi package get-schema <name>` returns. Use this to verify resource argument names and types before generating Pulumi code instead of guessing.
+
+      curl https://www.pulumi.com/registry/packages/aws/schema.json
+      pulumi package get-schema aws
+
+- **Pre-rendered package docs (bundled)** — human-formatted multi-language documentation (TypeScript/Python/Go/C#/Java/YAML) with usage examples, constructor signatures, and property tables. Useful when you need formatted prose rather than raw schema.
+
+      curl https://www.pulumi.com/registry/packages/aws/api-docs/llm-docs.json
+
+## Site overview
+
+This llms.txt covers www.pulumi.com, which includes:
+
+- [Product](https://www.pulumi.com/product/): Pulumi Cloud platform overview and capabilities
+- [Pricing](https://www.pulumi.com/pricing/): Plans and pricing for Pulumi Cloud (Individual, Team, Enterprise, Business Critical)
+- [Pulumi Registry](https://www.pulumi.com/registry/): Documentation for 150+ cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
+- [Pulumi Neo](https://www.pulumi.com/neo/): Pulumi's AI agent for building and managing cloud infrastructure
+- [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts
+- [Tutorials](https://www.pulumi.com/tutorials/): Hands-on tutorials for building cloud infrastructure with Pulumi
+- [What is...](https://www.pulumi.com/what-is/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless)
+- [Case Studies](https://www.pulumi.com/case-studies/): Customer stories and use cases
+- [Templates](https://www.pulumi.com/templates/): Ready-to-use project templates across clouds and languages
+- [Automation API](https://www.pulumi.com/automation/): Program-driven Pulumi for embedding infrastructure as code into applications and platforms
+- [Whitepapers](https://www.pulumi.com/whitepapers/): Long-form educational and technical content
+- [Community](https://www.pulumi.com/community/): Slack, Discord, GitHub, and other community resources
+- [Security](https://www.pulumi.com/security/): Security posture, compliance, and trust information
+- [Docs](https://www.pulumi.com/docs/): Technical documentation (detailed sections below)
+
+## Docs sections
+{{- range site.Data.docs_menu_sections }}
+{{- $entries := slice }}
+{{- with index site.Menus .menu }}
+{{- range . }}
+{{- with .Page }}
+{{- if and (not .Params.llms_exclude) (ne .Title "") }}
+{{- $entries = $entries | append . }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- if $entries }}
+
+### {{ .label }}
+{{- range $entries }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+## Optional
+
+### Recent blog posts
+
+{{- $blogPages := where $.Site.Pages "Section" "blog" }}
+{{- $recentBlogs := first 10 ($blogPages.ByDate.Reverse) }}
+{{- range $recentBlogs }}
+{{- if and (not .Params.llms_exclude) (ne .Title "") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.meta_desc | default .Title | plainify }}
+{{- end }}
+{{- end }}
