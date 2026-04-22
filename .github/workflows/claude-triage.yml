@@ -1,0 +1,76 @@
+name: Claude Triage
+
+# Triage runs on PR open and on the draft → ready transition only.
+# It does NOT run on every push (synchronize) — that fires the
+# `review:claude-stale` label step in claude-code-review.yml instead.
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+
+jobs:
+  triage:
+    # Skip automated PRs from pulumi-bot and dependabot — they have their
+    # own labeling pipelines (label-dependabot.yml) and don't carry secrets.
+    if: github.event.pull_request.user.login != 'pulumi-bot' && github.event.pull_request.user.login != 'dependabot[bot]'
+
+    concurrency:
+      group: claude-triage-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Check repository write access
+        id: check-access
+        run: |
+          OWNER="pulumi"
+          REPO="docs"
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+
+          if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "✓ Copilot bot $AUTHOR is whitelisted for triage"
+            exit 0
+          fi
+
+          PERMISSION=$(curl -s \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$OWNER/$REPO/collaborators/$AUTHOR/permission" \
+            | jq -r '.permission // "none"')
+
+          if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "✓ User $AUTHOR has $PERMISSION access to $OWNER/$REPO"
+          else
+            echo "has_write_access=false" >> $GITHUB_OUTPUT
+            echo "✗ User $AUTHOR has $PERMISSION access to $OWNER/$REPO (insufficient permissions)"
+          fi
+
+      - name: Run Claude triage
+        if: steps.check-access.outputs.has_write_access == 'true'
+        uses: anthropics/claude-code-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Triage applies labels only. The full review fires on
+          # ready_for_review via claude-code-review.yml.
+          prompt: |
+            You are running in a CI environment.
+
+            Triage pull request #${{ github.event.pull_request.number }} by following the
+            instructions in `.claude/commands/triage.md`.
+
+            Do NOT post comments. Do NOT run any review skill. Apply labels via `gh pr edit`
+            and print a one-line summary to stdout. That is the entire job.
+          claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr edit:*),Bash(gh label list:*)"'

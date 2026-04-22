@@ -1,0 +1,100 @@
+---
+user-invocable: false
+description: Triage prompt for incoming PRs. Classifies the PR and applies labels. Does NOT post comments.
+---
+
+# PR Triage
+
+You are triaging a `pulumi/docs` pull request. Your only outputs are **labels** — you do not post review comments, do not run fact-check, and do not read working-tree state. The full review runs later, on the `ready_for_review` transition.
+
+This is a fast, cheap pass (Sonnet). Misclassifications cost a downstream review cycle, so be deliberate; unclear cases default to broader scrutiny, not narrower.
+
+---
+
+## Inputs
+
+The workflow passes:
+
+- `PR_NUMBER`
+- The PR's existing labels (so you can preserve or replace as appropriate)
+
+You fetch everything else:
+
+```bash
+gh pr view "$PR_NUMBER" --json title,body,author,labels,files,additions,deletions,commits,isDraft
+gh pr diff "$PR_NUMBER"
+```
+
+---
+
+## Decisions to make
+
+### 1. Domain (one or more `review:*` labels)
+
+Apply one or more domain labels based on which paths the PR touches:
+
+| Label | Apply when files touch |
+|---|---|
+| `review:docs` | `content/docs/`, `content/learn/`, `content/tutorials/`, `content/what-is/` |
+| `review:blog` | `content/blog/`, `content/customers/` |
+| `review:infra` | `.github/workflows/`, `scripts/`, `infrastructure/`, `Makefile`, `package.json`, `webpack.config.js`, `webpack.*.js` |
+| `review:programs` | `static/programs/` |
+
+If the PR touches more than one domain, apply each domain label **and** add `review:mixed` so downstream tooling can fan out.
+
+### 2. Triviality (`review:trivial`)
+
+Apply `review:trivial` only when **all** of these hold:
+
+- ≤5 changed lines total
+- Only prose changes — no code blocks, no fenced examples, no shortcode changes
+- Single file (or multiple files that are all whitespace/typo fixes of the same shape)
+- No frontmatter changes
+- No links added or modified
+- No file moves, renames, or deletes
+
+`review:trivial` short-circuits the full review, so be conservative — when in doubt, do not apply it. If you are 80%+ confident, apply it.
+
+### 3. Fact-check signal (`fact-check:needed`)
+
+Apply `fact-check:needed` when the PR touches:
+
+- Any blog or customer file (`content/blog/**`, `content/customers/**`) — heightened-scrutiny domains
+- Any program (`static/programs/**`) — code correctness matters
+- Any docs page that introduces new factual claims (versions, commands, API surfaces, feature existence). Heuristic: the diff adds prose under a `## ` or `### ` heading that wasn't there before, or adds a code block, or adds a "since v3.X" / "available in" / "now supports" claim.
+
+If the PR is `review:trivial`, do **not** apply `fact-check:needed`.
+
+### 4. Agent-authored signal (`agent-authored`)
+
+Apply `agent-authored` if **any** of these are present:
+
+- The PR body or any commit message in the PR contains a `Co-Authored-By:` line for `Claude`, `Claude Code`, `Cursor`, `Copilot`, `GitHub Copilot`, or `noreply@anthropic.com`.
+- The PR body or any commit message contains `Generated with Claude Code` or `🤖 Generated with`.
+- The PR is opened by a known automation account (e.g., `pulumi-bot`, `dependabot[bot]`).
+
+`agent-authored` is a *signal* for human adjudication — it does NOT change which review runs. Do not use it to escalate scrutiny on its own; that's the heightened-scrutiny domains' job.
+
+### 5. State labels — DO NOT touch
+
+The following labels are managed by other steps in the pipeline. Do not apply or remove them:
+
+- `review:claude-ran` — applied by the review workflow after a successful run
+- `review:claude-stale` — applied on `synchronize` events
+- `needs-author-response` — applied by the review workflow when 🚨 Outstanding contains unverifiable claims
+
+---
+
+## Procedure
+
+1. Pull PR context (one `gh pr view`, one `gh pr diff`).
+2. Decide domain, triviality, fact-check, and agent-authored signals per the rules above.
+3. Compute the **target label set** (existing review/fact-check/agent labels minus the ones you're removing, plus the ones you're adding).
+4. Apply via `gh pr edit`:
+   ```bash
+   gh pr edit "$PR_NUMBER" --add-label "<comma-separated-additions>" --remove-label "<comma-separated-removals>"
+   ```
+   Only call `--add-label` / `--remove-label` for labels that actually need to change. No-op runs should make no API call.
+5. Print a one-line summary to stdout for the workflow log: `triage: pr=<N> domain=<list> trivial=<bool> fact-check=<bool> agent-authored=<bool>`.
+
+**Do not** post a comment. **Do not** run `gh pr comment`, `gh pr review`, or any review skill. **Do not** read working-tree files. Triage is labels-and-summary only.
