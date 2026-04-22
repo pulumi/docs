@@ -163,7 +163,7 @@ Schemas are only valid for project property keys. For setting the value of a pro
 | `displayName` | optional | A user-friendly name for the template. This should follow `Title Case` format and be succinct. This field is only supported by Pulumi CLI >= 3.95. |
 | `description` | optional | Description of the template. |
 | `config` | required | Config to request when using this template with `pulumi new`. |
-| `metadata` | optional | A map of user-defined tags to attach to the template. This field is only supported by Pulumi CLI >= 3.95. |
+| `metadata` | optional | A map of user-defined tags to attach to the template. The Pulumi Cloud [New Project Wizard](/docs/idp/concepts/new-project-wizard/) recognizes a `cloud` key for filtering templates by target cloud — see [Organization templates](/docs/idp/concepts/organization-templates/#new-project-wizard-cloud-filter) for accepted values. This field is only supported by Pulumi CLI >= 3.95. |
 
 #### `config`
 
