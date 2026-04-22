@@ -1,19 +1,45 @@
 name: Claude Code Review
 
+# Full review fires on the draft → ready transition. Synchronize events
+# only mark the existing review stale (no rerun). Initial PR open is
+# triaged separately by claude-triage.yml.
 on:
   pull_request:
-    types: [opened, reopened, ready_for_review]
-    # Optional: Only run on specific file changes
-    # paths:
-    #   - "src/**/*.ts"
-    #   - "src/**/*.tsx"
-    #   - "src/**/*.js"
-    #   - "src/**/*.jsx"
+    types: [ready_for_review, synchronize]
 
 jobs:
+  # synchronize → just mark the existing pinned review stale.
+  mark-stale:
+    if: |
+      github.event.action == 'synchronize' &&
+      github.event.pull_request.user.login != 'pulumi-bot' &&
+      github.event.pull_request.user.login != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Mark previous Claude review as stale
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          # Only mark stale if a prior review actually ran.
+          LABELS=$(gh pr view "$PR" --repo "${{ github.repository }}" --json labels --jq '[.labels[].name] | join(",")')
+          if [[ ",$LABELS," == *",review:claude-ran,"* ]]; then
+            gh pr edit "$PR" --repo "${{ github.repository }}" --add-label "review:claude-stale"
+          fi
+
   claude-review:
-    # Skip automated PRs from pulumi-bot and dependabot (secrets not available)
-    if: github.event.pull_request.user.login != 'pulumi-bot' && github.event.pull_request.user.login != 'dependabot[bot]'
+    if: |
+      github.event.action == 'ready_for_review' &&
+      github.event.pull_request.user.login != 'pulumi-bot' &&
+      github.event.pull_request.user.login != 'dependabot[bot]' &&
+      !contains(github.event.pull_request.labels.*.name, 'review:trivial')
+
+    concurrency:
+      group: claude-review-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
 
     runs-on: ubuntu-latest
     permissions:
@@ -31,26 +57,22 @@ jobs:
       - name: Check repository write access
         id: check-access
         run: |
-          # Check if PR author has write access to the repository
           OWNER="pulumi"
           REPO="docs"
           AUTHOR="${{ github.event.pull_request.user.login }}"
 
-          # Allow GitHub Copilot bot PRs (whitelist trusted automation)
           if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "✓ Copilot bot $AUTHOR is whitelisted for Claude reviews"
             exit 0
           fi
 
-          # Get user's permission level (admin, write, read, or none)
           PERMISSION=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github+json" \
             "https://api.github.com/repos/$OWNER/$REPO/collaborators/$AUTHOR/permission" \
             | jq -r '.permission // "none"')
 
-          # Allow admin or write access
           if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "✓ User $AUTHOR has $PERMISSION access to $OWNER/$REPO"
@@ -67,14 +89,30 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Invoke the docs-review slash command, which contains all review criteria and CI-specific guidance.
-          # See .claude/commands/docs-review.md for the complete review workflow.
+          # Initial review uses Opus; re-entrant updates (via @claude mentions)
+          # use Sonnet — see .github/workflows/claude.yml.
+          # The CI prompt lives at .claude/commands/docs-review-ci.md and is
+          # diff-only by hard rule. Output goes through pinned-comment.sh so
+          # the review survives across re-runs as a single logical comment.
           prompt: |
             You are running in a CI environment.
 
-            Review pull request #${{ github.event.pull_request.number }} by following the instructions in `.claude/commands/docs-review.md` under the "Continuous Integration (CI) Context" section.
-          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          # or https://docs.anthropic.com/en/docs/claude-code/sdk#command-line for available options
-          # Allow essential file reading tools (Read, Glob, Grep) and gh commands for PR interaction
-          claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr comment:*),Bash(gh issue view:*)"'
+            Review pull request #${{ github.event.pull_request.number }} by following the
+            instructions in `.claude/commands/docs-review-ci.md`.
 
+            The PR's labels (set by claude-triage.yml) drive domain selection and
+            fact-check gating:
+
+            ${{ toJson(github.event.pull_request.labels.*.name) }}
+
+            After producing the review, post it via:
+
+              bash .claude/commands/_common/scripts/pinned-comment.sh upsert \
+                --pr ${{ github.event.pull_request.number }} \
+                --body-file <path-to-rendered-review>
+
+            Then apply the `review:claude-ran` label and remove `review:claude-stale` if present:
+
+              gh pr edit ${{ github.event.pull_request.number }} \
+                --add-label review:claude-ran --remove-label review:claude-stale
+          claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr edit:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh pr list:*),Bash(bash .claude/commands/_common/scripts/pinned-comment.sh:*)"'
