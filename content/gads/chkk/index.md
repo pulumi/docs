@@ -3,7 +3,6 @@ title: "Chkk Alternative | Pulumi"
 meta_desc: Go beyond reliability checks. Full IaC with policy as code, secrets, compliance, and 170+ cloud providers. Open source. Free tier.
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-chkk
 
 heading: "Chkk Alternative"
 subheading: |

@@ -4,7 +4,6 @@ meta_desc: "You chose open source for the license. Now choose real languages ove
 layout: gads-template
 block_external_search_index: true
 hide_platform_details: true
-utm_source: gads-opentofu
 aliases:
     - /gads/gads-template
 

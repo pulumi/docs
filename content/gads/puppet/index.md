@@ -3,7 +3,6 @@ title: "Puppet Alternative | Pulumi"
 meta_desc: Cloud IaC instead of server configuration management. Python, TypeScript, Go, or C# with state management, testing, and 170+ providers.
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-puppet
 
 heading: "Puppet Alternative"
 subheading: |

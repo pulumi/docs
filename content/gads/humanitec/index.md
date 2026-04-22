@@ -3,7 +3,6 @@ title: "Humanitec Alternative | Pulumi"
 meta_desc: "Developer self-service without a proprietary abstraction layer. Open source IaC engine, reusable components, real programming languages."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-humanitec
 hide_platform_details: true
 
 heading: "Humanitec Alternative"

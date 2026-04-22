@@ -3,7 +3,6 @@ title: "Google Cloud Deployment Manager Alternative | Pulumi"
 meta_desc: Move beyond GCP Deployment Manager. Write Google Cloud infrastructure in Python, TypeScript, Go, or C#. Full GCP API coverage, 170+ providers.
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-google-cloud-deployment-manager
 
 heading: "Google Cloud Deployment Manager Alternative"
 subheading: |

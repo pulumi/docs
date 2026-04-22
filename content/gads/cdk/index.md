@@ -4,7 +4,6 @@ meta_desc: "Like AWS CDK but without CloudFormation. Direct cloud deployment, mu
 layout: gads-template
 block_external_search_index: true
 hide_platform_details: true
-utm_source: gads-cdk
 aliases:
     - /gads/gads-template
 

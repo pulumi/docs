@@ -3,7 +3,6 @@ title: "Infrastructure as Code | Pulumi"
 meta_desc: "Infrastructure as Code in Python, TypeScript, Go, or C#. Ship infrastructure 3-5x faster with real programming languages, full IDE support, and testing. Free tier."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-infrastructure-engineers
 
 heading: "Infrastructure as Code"
 subheading: |

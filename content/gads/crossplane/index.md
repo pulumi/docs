@@ -4,7 +4,6 @@ meta_desc: "Cloud + Kubernetes in one workflow. Real languages instead of YAML C
 layout: gads-template
 block_external_search_index: true
 hide_platform_details: true
-utm_source: gads-crossplane
 aliases:
     - /gads/gads-template
 

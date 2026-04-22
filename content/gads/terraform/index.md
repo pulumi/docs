@@ -3,7 +3,6 @@ title: "Terraform Alternative | Pulumi"
 meta_desc: "Use Python, TypeScript, Go, or C# instead of HCL. Free migration tools, no resource caps on the free tier, 170+ cloud providers."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-terraform
 hide_platform_details: true
 aliases:
     - /gads/gads-template

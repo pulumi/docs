@@ -3,7 +3,6 @@ title: "Migrate from Terraform | Pulumi"
 meta_desc: "Migrate from Terraform to Python, TypeScript, Go, or C#. Free tf2pulumi converter. Pulumi Cloud manages existing Terraform state. Migrate at your pace."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-terraform-migration
 
 heading: "Migrate from Terraform"
 subheading: |
