@@ -10,7 +10,7 @@ menu:
   esc:
     parent: esc-syntax-builtin-functions
     identifier: esc-syntax-fn-secret
-    weight: 8
+    weight: 9
 ---
 
 The `fn::secret` built-in function decrypts a ciphertext literal into a secret string value.
