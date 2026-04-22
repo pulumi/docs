@@ -33,7 +33,7 @@ timeout: 300000
 outputFormats:
   rss:
     baseName: rss
-  txtfull:
+  llms:
     mediaType: "text/plain"
     baseName: "llms"
     isPlainText: true
@@ -43,14 +43,9 @@ outputFormats:
     baseName: "index"
     isPlainText: true
     notAlternative: true
-  clisitemap:
+  llmsitemap:
     mediaType: "application/json"
-    baseName: "cli-sitemap"
-    isPlainText: true
-    notAlternative: true
-  cliconfig:
-    mediaType: "application/json"
-    baseName: "cli-config"
+    baseName: "llm-sitemap"
     isPlainText: true
     notAlternative: true
 
@@ -63,7 +58,7 @@ outputs:
   home:
     - HTML
     - JSON
-    - txtfull
+    - llms
   section:
     - HTML
   page:
