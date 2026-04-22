@@ -1,7 +1,7 @@
 ---
 title: "Agent Sprawl Is Here. Your IaC Platform Is the Answer."
 allow_long_title: true
-date: 2026-04-21
+date: 2026-04-22
 draft: false
 meta_desc: "Developers are shipping AI agents to production. Your Pulumi platform already supplies the seven things those agents need to be governed."
 meta_image: meta.png
