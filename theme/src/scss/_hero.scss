@@ -31,9 +31,9 @@
     .home-page-hero-text {
         h1 {
             @apply mx-0;
-            line-height: 3.5rem !important;
+            line-height: 1.1em !important;
             font-size: 3rem !important;
-            font-weight: 700 !important;
+            font-weight: 600 !important;
         }
 
         p {
@@ -77,7 +77,7 @@
 
             @include screen-lg {
                 @apply text-left mx-0;
-                line-height: 5.5rem !important;
+                line-height: 1.1em !important;
                 font-size: 5rem !important;
             }
         }
@@ -92,10 +92,10 @@
 
         h1 {
             @apply text-center max-w-4xl;
-            font-weight: 700;
+            font-weight: 600;
             @include screen-lg {
                 font-size: 3.75rem;
-                line-height: 1.3;
+                line-height: 1.1em;
             }
         }
 
@@ -103,7 +103,7 @@
             @apply text-center max-w-4xl;
             @include screen-lg {
                 font-size: 3rem;
-                line-height: 1.3;
+                line-height: 1.1em;
             }
         }
 
@@ -111,7 +111,7 @@
             @apply text-center max-w-4xl;
             @include screen-lg {
                 font-size: 2.5rem;
-                line-height: 1.3;
+                line-height: 1.1em;
             }
         }
     }

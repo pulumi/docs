@@ -13,8 +13,8 @@ section.docs-home {
     }
 
     h3 {
-        font-family: 'Gilroy';
-        font-weight: 500;
+        font-family: 'Inter';
+        font-weight: 600;
         font-size: 21px;
         color: var(--color-gray-950);
     }
@@ -23,25 +23,9 @@ section.docs-home {
         @apply flex flex-col gap-4 p-6 rounded bg-no-repeat bg-right-bottom;
         min-height: 200px;
 
-        background-image: url("/images/docs/docs-home-header-background-mobile.svg");
 
         p {
             @apply max-w-2xl;
-        }
-
-        @include screen-md {
-            @apply bg-auto;
-            background-image: url("/images/docs/docs-home-header-background-tablet.svg");
-        }
-
-        @include screen-lg {
-            background-image: url("/images/docs/docs-home-header-background-desktop.svg");
-        }
-
-        @include screen-xl {
-            .docs-content-width-expanded & {
-                background-image: url("/images/docs/docs-home-header-background-desktop-wide.svg");
-            }
         }
 
         @include screen-xxl {
@@ -59,7 +43,7 @@ section.docs-home {
             a {
                 padding: 5px 16px;
                 border-radius: 4px;
-                border: 1px var(--color-blue-600) solid;
+                border: 1px var(--color-violet-primary) solid;
                 background: #fff;
                 font-family: 'Inter';
                 font-weight: 400;
@@ -67,19 +51,19 @@ section.docs-home {
                 color: #fff;
 
                 &.docs-primary-link-btn {
-                    background: var(--color-blue-600);
+                    background: var(--color-violet-primary);
                     color: #fff;
 
                     &:hover {
-                        background: var(--color-blue-700);
+                        background: var(--color-violet-800);
                     }
                 }
 
                 &.docs-secondary-link-btn {
-                    color: var(--color-blue-600);
+                    color: var(--color-violet-primary);
 
                     &:hover {
-                        background: var(--color-blue-100);
+                        background: var(--color-violet-100);
                     }
                 }
             }
@@ -87,8 +71,8 @@ section.docs-home {
     }
 
     h2 {
-        font-family: 'Gilroy';
-        font-weight: 500;
+        font-family: 'Inter';
+        font-weight: 600;
         font-size: 24px;
         color: var(--color-gray-950);
     }

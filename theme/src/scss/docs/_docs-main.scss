@@ -1,9 +1,9 @@
 .docs-list-main .docs-main-content,
 body.section-registry {
     h1 {
-        font-family: Gilroy;
-        line-height: 1.5;
-        font-weight: 400;
+        font-family: Inter;
+        line-height: 1.1em;
+        font-weight: 600;
         font-size: 30px;
         color: var(--color-gray-950);
         margin: 16px 0;
@@ -13,19 +13,10 @@ body.section-registry {
         display: inline-block;
     }
 
-    div.h1-gradient {
-        width: calc(100% - 32px);
-        height: 12px;
-        background: var(--color-violet-primary);
-        opacity: 0.1;
-        position: relative;
-        top: -34px;
-    }
-
     section.docs-content {
         h1, h2, h3, h4, h5, h6 {
-            font-family: Gilroy;
-            line-height: 1.5;
+            font-family: Inter;
+            line-height: 1.1em;
             scroll-margin-top: 60px;
         }
 
@@ -46,14 +37,14 @@ body.section-registry {
         }
 
         h1 {
-            font-weight: 400;
+            font-weight: 600;
             font-size: 30px;
             color: var(--color-gray-950);
             margin: 16px 0;
         }
 
         h2 {
-            font-weight: 400;
+            font-weight: 600;
             font-size: 24px;
             color: var(--color-gray-950);
         }
@@ -71,7 +62,7 @@ body.section-registry {
         }
 
         h5 {
-            font-weight: 400;
+            font-weight: 600;
             font-size: 18px;
             color: var(--color-gray-950);
         }
@@ -103,7 +94,7 @@ body.section-registry {
 
         p a:not(.btn-secondary),
         ul li a[href]  {
-            color: var(--color-blue-600);
+            color: var(--color-violet-primary);
             background: linear-gradient(90deg,rgba(142, 143, 151, 0),rgba(142, 143, 151, 0)),linear-gradient(90deg,var(--color-gray-500),var(--color-gray-500));
             background-position: 100% 100%,0 100%;
             background-repeat: no-repeat;
@@ -113,7 +104,7 @@ body.section-registry {
             transition-timing-function: ease-in;
 
             &:hover {
-                color: var(--color-blue-700);
+                color: var(--color-violet-800);
                 text-decoration: none;
                 background-size: 0 0.1em,100% 0.1em;
             }
@@ -122,7 +113,7 @@ body.section-registry {
         div.highlight pre,
         code,
         .font-mono {
-            font-family: 'Iosevka';
+            font-family: "Monaspace Neon Var";
             font-weight: 400;
         }
     }

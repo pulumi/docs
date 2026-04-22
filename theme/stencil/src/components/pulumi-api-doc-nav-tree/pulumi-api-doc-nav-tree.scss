@@ -46,11 +46,11 @@
     }
 
     &.resource {
-        border-color: var(--color-blue-700);
+        border-color: var(--color-violet-800);
 
         &:before {
             content: "R";
-            color: var(--color-blue-700);
+            color: var(--color-violet-800);
             font-size: 9px;
             font-weight: 700;
         }

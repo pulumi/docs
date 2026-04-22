@@ -21,7 +21,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
 @utility btn {
     transition: all 120ms linear;
     @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded inline-block;
-    @apply bg-blue-600 border border-blue-600 text-white text-center;
+    @apply bg-violet-primary border border-violet-primary text-white text-center;
 }
 
 @utility btn-lg {
@@ -90,6 +90,9 @@ $sitenav-offset: calc($sitenav-height + 16px);
     h5,
     h6 {
         @apply font-display text-black mb-2;
+        font-weight: 600;
+        letter-spacing: -0.05em;
+        line-height: 1.1em;
 
         &:not(:first-child) {
             // Don't apply top margin when one's being specified.
@@ -149,10 +152,10 @@ $sitenav-offset: calc($sitenav-height + 16px);
         blockquote,
         table {
             a {
-                @apply text-blue-600 break-words;
+                @apply text-violet-primary break-words;
 
                 &:hover {
-                    @apply text-blue-700;
+                    @apply text-violet-800;
 
                     .section-docs &,
                     .section-blog &,
@@ -186,7 +189,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
         }
 
         blockquote {
-            @apply border-l-4 rounded border-blue-100 px-4 py-1 text-sm my-4;
+            @apply border-l-4 rounded border-violet-100 px-4 py-1 text-sm my-4;
 
             p {
                 @apply my-1 leading-relaxed;
@@ -309,23 +312,23 @@ $sitenav-offset: calc($sitenav-height + 16px);
     }
 
     .link {
-        @apply text-blue-700;
+        @apply text-violet-800;
     }
 
     .section-blog, .section-tags, .section-authors {
         .tags {
             .tag {
-                @apply lowercase border border-blue-200 rounded py-1 px-2 mr-1;
+                @apply lowercase border border-violet-200 rounded py-1 px-2 mr-1;
 
                 &.tag-blog {
-                    @apply bg-gray-100 text-blue-600;
+                    @apply bg-gray-100 text-violet-primary;
 
                     &:hover {
-                        @apply border-blue-300 text-blue-700 no-underline;
+                        @apply border-violet-300 text-violet-800 no-underline;
                     }
 
                     &.active {
-                        @apply border-blue-600 bg-blue-600 text-white;
+                        @apply border-violet-primary bg-violet-primary text-white;
 
                         &:hover {
                             @apply text-white;

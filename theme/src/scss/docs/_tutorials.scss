@@ -38,7 +38,7 @@
             @apply px-1 inline-block;
 
             &:hover {
-                @apply bg-blue-100 no-underline;
+                @apply bg-violet-50 no-underline;
             }
         }
     }
@@ -67,7 +67,7 @@
     // we target the directly just in case. (Otherwise they wouldn't appear as links.)
     main .summary {
         a {
-            @apply text-blue-500;
+            @apply text-violet-500;
         }
     }
 }

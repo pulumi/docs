@@ -14,26 +14,26 @@ nav.main-nav {
         border-left: transparent 3px solid;
 
         &.active {
-            background-color: var(--color-blue-100);
+            background-color: var(--color-violet-100);
             border-radius: 4px;
             width: fit-content;
 
             &:hover {
                 text-decoration: none;
-                background-color: var(--color-blue-200);
-                color: var(--color-blue-900);
+                background-color: var(--color-violet-200);
+                color: var(--color-violet-900);
             }
         }
     }
 
     a {
         @apply py-0.5 px-1.5 rounded-sm;
-        color: var(--color-blue-800);
+        color: var(--color-violet-800);
 
         &:hover {
             text-decoration: var(--color-gray-500) solid underline;
             text-underline-offset: 6px;
-            color: var(--color-blue-800);
+            color: var(--color-violet-800);
         }
     }
 
@@ -53,14 +53,14 @@ nav.main-nav {
         border-radius: 0 2px 2px 0;
 
         &.active {
-            background-color: var(--color-blue-100);
+            background-color: var(--color-violet-100);
             border-radius: 4px;
             width: fit-content;
             text-decoration: none;
 
             &:hover {
-                background-color: var(--color-blue-200);
-                color: var(--color-blue-900);
+                background-color: var(--color-violet-200);
+                color: var(--color-violet-900);
             }
         }
     }

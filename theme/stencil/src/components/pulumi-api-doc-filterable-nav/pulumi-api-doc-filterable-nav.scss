@@ -57,7 +57,7 @@
         }
 
         .navigation-filter-input {
-            font-family: "Gilroy";
+            font-family: "Inter";
             font-size: 16px;
             height: 20px;
             width: 90%;
@@ -68,7 +68,7 @@
             box-sizing: content-box;
 
             &:focus {
-                outline-color: var(--color-blue-600);
+                outline-color: var(--color-violet-primary);
             }
         }
     }

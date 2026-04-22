@@ -7,23 +7,20 @@
     @include transition;
 
     @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded inline-block;
-    @apply bg-blue-600 border border-blue-600 text-white text-center;
+    @apply bg-violet-primary border border-violet-primary text-white text-center;
 
     &:hover {
-        @apply bg-blue-500 border-blue-500 text-white;
+        @apply bg-violet-800 border-violet-800 text-white;
     }
 
     &:active {
-        @apply bg-blue-500;
+        @apply bg-violet-900 border-violet-900 text-white;
     }
 }
 
 .btn-secondary {
-    @apply bg-white border border-blue-500 text-blue-600;
-
-    &:hover {
-        @apply bg-blue-500 text-white;
-    }
+    @apply bg-white relative text-black rounded-lg text-lg cursor-pointer z-auto border border-gray-300;
+    @apply hover:bg-white hover:text-black hover:border-gray-600;
 }
 
 .btn-sm {
@@ -43,12 +40,12 @@
 }
 
 .btn-translucent {
-    background-color: color-mix(in srgb, var(--color-blue-600) 30%, transparent);
-    border-color: color-mix(in srgb, var(--color-blue-600) 50%, transparent);
+    background-color: color-mix(in srgb, var(--color-violet-primary) 30%, transparent);
+    border-color: color-mix(in srgb, var(--color-violet-primary) 50%, transparent);
 
     &:hover {
-        background-color: color-mix(in srgb, var(--color-blue-600) 70%, transparent);
-        border-color: var(--color-blue-600);
+        background-color: color-mix(in srgb, var(--color-violet-primary) 70%, transparent);
+        border-color: var(--color-violet-primary);
     }
 }
 
@@ -82,7 +79,7 @@
     display: flex;
     align-items: center;
     background-color: #fff;
-    color: rgba(77, 91, 217, 1);
+    color: var(--color-violet-primary);
     padding-left: 0 !important;
 }
 
@@ -92,7 +89,7 @@
 }
 
 .btn-download:hover {
-    color: #3e49ae;
+    color: var(--color-violet-800);
 }
 
 .card .card-cta-contained-btn {

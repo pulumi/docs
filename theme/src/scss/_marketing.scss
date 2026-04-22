@@ -11,6 +11,13 @@
 @import "mixins";
 
 @layer base {
+    // Restore global heading defaults after Tailwind preflight resets font-size/weight to inherit.
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        letter-spacing: -0.05em;
+        line-height: 1.1em;
+    }
+
     // Tailwind v2 preflight set default border-color to gray-200. v4 defaults to
     // currentColor, which makes `.border` dividers render too dark. Restore the old default.
     *,
@@ -72,11 +79,7 @@
         h4,
         h5,
         h6 {
-            // Tailwind v2 makes some changes to line-heights, one of which is that headings
-            // now get line-heights of 1. This is generally a good thing, but it makes the
-            // headings in our marketing pages lose some intentional vertical spacing. So we
-            // override it here to avoid having to sprinkle `leading-*` utilities everywhere.
-            line-height: 1.375 !important; /* leading-snug */
+            line-height: 1.1em !important;
         }
 
         p {
@@ -125,13 +128,13 @@
         .btn-primary,
         .btn-primary-template-variant {
             @apply relative text-white text-lg bg-violet-primary rounded-lg cursor-pointer z-auto;
-            @apply hover:bg-violet-primary hover:border-violet-800;
+            @apply hover:bg-violet-800
         }
 
         .btn-secondary,
         .btn-secondary-template-variant {
             @apply bg-white relative text-black rounded-lg text-lg cursor-pointer z-auto border border-gray-300;
-            @apply hover:bg-white hover:border-gray-600;
+            @apply hover:bg-white hover:text-black hover:border-gray-600;
         }
 
        
