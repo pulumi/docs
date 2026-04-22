@@ -368,7 +368,7 @@
                     {{ range $button := $item.buttons }}
                     {{ if or (eq $button.action "Start Free") (eq $button.action "Book a Demo") }}
                         {{ if eq $button.action "Start Free" }}
-                        <a href="{{ $button.link }}?utm_source=gads-neo" class="z-10 btn-{{ $button.type }}">Try Neo for FREE</a>
+                        <a href="{{ $button.link }}" class="z-10 btn-{{ $button.type }}">Try Neo for FREE</a>
                         {{ end }}
                         <!-- Book a Demo is removed per requirements -->
                     {{ else }}
