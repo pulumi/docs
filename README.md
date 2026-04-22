@@ -34,6 +34,8 @@ This repository hosts all of the hand-crafted documentation, guides, tutorials, 
 
 We welcome all contributions to this repository. Be sure to read our [contributing guide](CONTRIBUTING.md) and [code of conduct](CODE-OF-CONDUCT.md) first, then [submit a pull request](https://github.com/pulumi/docs/pulls) here on GitHub. If you see something that needs fixing but don't have time to contribute, you can also [file an issue](https://github.com/pulumi/docs/issues).
 
+> Tip: open your PR as a **draft** while you iterate. Automated review fires when you mark it ready for review, so a draft-first flow keeps the CI noise down and the review fresh. See [CONTRIBUTING.md](CONTRIBUTING.md#draft-first-pull-requests) for the full lifecycle.
+
 See also:
 
 * [Build and deployment guide](./BUILD-AND-DEPLOY.md)

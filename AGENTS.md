@@ -120,3 +120,45 @@ The left nav is data-driven from `data/docs_menu_sections.yml`, which is consume
 Before starting any documentation task, check `.claude/commands/` for a relevant skill — there are well-structured skills covering common tasks like creating docs, reviewing PRs (see `.claude/commands/docs-review.md`), moving files, and more. To see a full inventory, run `.claude/commands/docs-tools/scripts/scrape-metadata.py`.
 
 **Non-Claude agents**: If the user runs a slash command or issues a short command that could be a skill name (e.g., `fix-issue`, `new-doc`), look for a matching file in `.claude/commands/` to guide your actions.
+
+---
+
+## PR Lifecycle for AI-Assisted Contributions
+
+The repository runs a tiered review pipeline on every PR. AI-assisted contributors should know how it works so they can collaborate with it instead of fighting it.
+
+### Open as draft
+
+When opening a PR you intend to iterate on, **open it as a draft**. Drafts are triaged (labels applied) but do not trigger the full Claude review. Iterate freely; pushes to the branch will not produce review noise.
+
+### Mark ready for review when finished
+
+Transitioning to **Ready for review** triggers:
+
+1. A re-triage to refresh labels (domain, fact-check signal, agent-authored signal, trivial check).
+2. The full Claude review (currently `claude-opus-4-7`), composed per touched domain. Findings post to a single pinned comment at the top of the PR — overflow is appended as additional pinned comments tagged `<!-- CLAUDE_REVIEW N/M -->`.
+
+Mark the PR ready when you're done iterating, not when you start. Each ready-transition produces one full review run; thrashing through draft → ready → draft burns review budget and produces stale pinned comments.
+
+### Author a clean commit history
+
+If the PR was AI-drafted, leave the AI authoring trailers in commit messages (`Co-Authored-By: Claude ...`, `Generated with Claude Code`, etc.). Triage uses these to apply the `agent-authored` label, which is a signal for human adjudication — it does not change which review runs. Removing the trailers does not exempt the PR from review and is bad form.
+
+### After review — three paths to refresh
+
+A pinned review goes **stale** when you push new commits after it ran. Stale reviews don't auto-rerun. Three ways to refresh:
+
+1. **`@claude` mention**: Leave a comment on the PR mentioning `@claude` (with or without a specific request). The re-entrant pipeline picks up new commits, runs `claude-sonnet-4-6`, and updates the existing pinned comment(s) in place. Three patterns the re-entrant pipeline understands:
+    - **Fix-response** ("I addressed your feedback"): re-verifies the previous outstanding findings against the new diff and moves the resolved ones into ✅ Resolved.
+    - **Dispute** ("I disagree with the X finding because Y"): re-examines the disputed finding with your evidence; either concedes cleanly or explains why it's keeping the finding.
+    - **Re-verify** ("@claude refresh" / no specific request): re-checks outstanding findings only.
+2. **Transition through draft and back to ready**: this re-triggers the full initial review. Use this when the PR has changed substantially since the last review.
+3. **Wait for the human reviewer**: Cam's local `pr-review` skill reads the pinned comment as source of truth and refreshes it during adjudication if needed.
+
+### Don't fight the pinned comment
+
+The `<!-- CLAUDE_REVIEW N/M -->` comments are managed by the pipeline. Don't delete them — the re-entrant skill expects to find and edit them in place. If you accidentally delete the 1/M summary, the next run posts fresh at the bottom of the timeline; recoverable but ugly.
+
+### Trivial PRs short-circuit
+
+If triage labels the PR `review:trivial` (≤5 lines, prose-only, single file, no frontmatter or link changes), the Claude review skips entirely. Linters still run. This is intentional — typos and one-liners don't need a model in the loop.

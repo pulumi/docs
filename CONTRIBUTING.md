@@ -1,5 +1,17 @@
 # Contributing Pulumi Documentation
 
+## Draft-first pull requests
+
+Open new PRs as **drafts** while you iterate. Automated review (style, accuracy, fact-check) fires only when you mark a PR **ready for review**, so a draft-first flow:
+
+- Keeps your branch out of the noisy "every push triggers a review" loop.
+- Lets you push iteratively without spamming the PR with new comments each time.
+- Means the eventual review reflects your finished thinking, not a half-finished commit.
+
+When you're ready, use the **Ready for review** button on the PR page. Triage runs again to refresh labels, then the full review fires once and pins its findings to a single comment at the top of the PR. New commits afterward will mark the review **stale** but won't auto-rerun — mention `@claude` in a comment to refresh, or transition through draft and back to ready.
+
+If your change is genuinely trivial (a typo, a one-line fix), opening directly as ready is fine — the pipeline will short-circuit on the `review:trivial` label.
+
 ## Documentation structure
 
 The mapping from documentation page to section and table-of-contents (TOC) is stored largely in each page's front matter, leveraging [Hugo Menus](https://gohugo.io/content-management/menus/). Menus for the CLI commands and API reference are specified in `./config.toml`.
