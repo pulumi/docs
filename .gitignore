@@ -59,6 +59,8 @@ static/js/chunk-*.js
 static/js/algolia.*.js
 static/js/homepage.*.js
 static/js/marketing.*.js
+static/js/consent-manager.*.js
+static/js/marketing-homepage.*.js
 data/js_manifest.json
 data/openapi-spec.json
 
