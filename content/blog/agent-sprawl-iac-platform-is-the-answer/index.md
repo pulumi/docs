@@ -15,9 +15,24 @@ tags:
     - devops
     - infrastructure-as-code
 social:
-    twitter: "OutSystems just surveyed 1,900 IT leaders: 96% of enterprises run AI agents in production, 12% have any central way to manage them. Your Pulumi platform already supplies the seven things those agents need."
-    linkedin: "Developers are shipping AI agents into production faster than platform teams can govern them. 96% of enterprises run them today. Only 12% have any central way to manage the sprawl.\n\nHere is the thing: you do not need a new product to govern agents. You need the platform you have been running for humans. Every meaningful agent action is a change to infrastructure, config, or secrets, and that is exactly what Pulumi state, ESC, Deployments, and Policies were built for.\n\nSeven things agents need from a platform, each mapped to a primitive you already own."
-    bluesky: "Developers are shipping AI agents into production. 96% of enterprises run them, 12% can govern them. Your Pulumi platform already supplies the seven things those agents need."
+    twitter: |
+        96% of enterprises run AI agents in production. 12% have any central way to manage them. Developers are wiring agents into prod faster than the platform team can keep up.
+
+        The governance layer you need already exists. Here's where to find it.
+    linkedin: |
+        Somewhere in your company right now, a developer is wiring an AI agent into production. Maybe a release agent that cuts tags when tests pass. Maybe a cost agent that kills idle infra at 2 a.m.
+
+        It's running. It's in production. And there's a decent chance the platform team doesn't know it exists.
+
+        OutSystems surveyed 1,900 IT leaders this month: 96% of enterprises run agents in production today. Only 12% have any central way to manage the sprawl. The EU AI Act's high-risk obligations kick in on 2 August, Colorado's follows in June.
+
+        The instinct is to build a new governance layer for agents. That's usually the wrong move. The governance layer you need is already sitting in your stack.
+
+        Here's what it took us to see it, and what it takes to point it at the agents.
+    bluesky: |
+        96% of enterprises run AI agents in production. 12% have any central way to manage them. Developers are shipping agents faster than platform teams can govern them.
+
+        The governance layer you need is already in your stack. Here's where.
 ---
 
 Somewhere in your company right now, a developer is building an AI agent. Maybe it's a release agent that cuts tags when tests pass. Maybe it's a cost agent that shuts down idle EC2 overnight. It's running, it's in production, and there's a decent chance the platform team doesn't know it exists.
