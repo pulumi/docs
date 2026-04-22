@@ -14,13 +14,17 @@ tags:
     - platform-engineering
     - devops
     - infrastructure-as-code
+social:
+    twitter: "OutSystems just surveyed 1,900 IT leaders: 96% of enterprises run AI agents in production, 12% have any central way to manage them. Your Pulumi platform already supplies the seven things those agents need."
+    linkedin: "Developers are shipping AI agents into production faster than platform teams can govern them. 96% of enterprises run them today. Only 12% have any central way to manage the sprawl.\n\nHere is the thing: you do not need a new product to govern agents. You need the platform you have been running for humans. Every meaningful agent action is a change to infrastructure, config, or secrets, and that is exactly what Pulumi state, ESC, Deployments, and Policies were built for.\n\nSeven things agents need from a platform, each mapped to a primitive you already own."
+    bluesky: "Developers are shipping AI agents into production. 96% of enterprises run them, 12% can govern them. Your Pulumi platform already supplies the seven things those agents need."
 ---
 
 Somewhere in your company right now, a developer is building an AI agent. Maybe it's a release agent that cuts tags when tests pass. Maybe it's a cost agent that shuts down idle EC2 overnight. It's running, it's in production, and there's a decent chance the platform team doesn't know it exists.
 
-This isn't a thought experiment. OutSystems just surveyed 1,900 IT leaders and the numbers are rough: 96% of enterprises run AI agents in production today, 94% say the sprawl is becoming a real security problem, and only 12% have any central way to manage it. Twelve percent. You can [read the survey here](https://newclawtimes.com/articles/outsystems-2026-ai-agents-96-percent-enterprise-adoption-94-percent-sprawl-governance/).
+This isn't a thought experiment. OutSystems just surveyed 1,900 IT leaders and the numbers are rough: 96% of enterprises run AI agents in production today, 94% say the sprawl is becoming a real security problem, and only 12% have any central way to manage it. Twelve percent. You can [read the full report here](https://www.outsystems.com/news/enterprise-ai-agent-report-2026/).
 
-So the question isn't whether your developers are building agents. They are. The question is whether those agents run on your platform or around it.
+The real question is where those agents run. Inside the platform you've already built, or somewhere off to the side where nobody on the platform team can see them.
 <!--more-->
 
 ## The new platform tension
@@ -59,7 +63,7 @@ An agent needs seven concrete things from the platform it runs on. Each one maps
 
 Agents are only as good as the context they can reason over. Drop a generic LLM into your cloud account and you'll get plausible-sounding nonsense, because the model has never seen your environment. What you actually need is a grounded source of truth: what resources exist, how they relate, which stack owns what, which version is running where.
 
-Pulumi state is already that. Your program graph, your stack outputs, your resource metadata, all of it adds up to a structured record of what you've actually deployed. [Pulumi Neo reasons directly over that graph](/blog/grounded-ai-why-neo-knows-your-infrastructure/), which is why it can tell you why a deployment drifted instead of guessing. I wrote the long version of that argument there. Short version: you already have the context lake. Point agents at it.
+[Pulumi state](/docs/iac/concepts/state-and-backends/) is already that. Your program graph, your stack outputs, your resource metadata, all of it adds up to a structured record of what you've actually deployed. [Pulumi Neo reasons directly over that graph](/blog/grounded-ai-why-neo-knows-your-infrastructure/), which is why it can tell you why a deployment drifted instead of guessing. I wrote the long version of that argument there. Short version: you already have the context lake. Point agents at it.
 
 ### 2. Pre-cleared integrations
 
@@ -71,17 +75,17 @@ The Pulumi surface here is the [200+ providers](https://www.pulumi.com/registry/
 
 There's a real difference between "an agent can see your infrastructure" and "an agent can change your infrastructure." The second one is where you actually need structure. [Pulumi Deployments](/docs/deployments/) gives you that structure: defined workflows, controlled triggers, running inside your Pulumi Cloud boundary instead of whatever environment the developer happened to spin up. [The Automation API](/docs/iac/automation-api/) lets you build higher-order orchestration on the same primitives your developers already use.
 
-The framing I keep coming back to is simple. An agent shouldn't call `pulumi up` directly. It should submit an action to a governed pipeline that runs `pulumi up` on its behalf, inside an environment you control, with a log trail and the guardrails already in place. Same effect, very different threat model.
+The framing I keep coming back to goes like this. An agent shouldn't call `pulumi up` directly. It should submit an action to a governed pipeline that runs `pulumi up` on its behalf, inside an environment you control, with a log trail and the guardrails already in place. Same effect, very different threat model.
 
 ### 4. Deterministic policy
 
-Governance by prompt isn't governance. "Please don't delete production" isn't a control. An agent that decides it understands your intent better than you did isn't a bug you can patch, that's how the technology is designed to work.
+Real governance lives outside the prompt. "Please don't delete production" is a wish written into a system prompt, not an enforced control. And when an agent overrides your intent to do what it thought you meant, it's behaving exactly the way the technology was designed to behave.
 
 [Pulumi Policies](/docs/insights/policy/) is the answer the IaC community landed on years ago: policy as code, written in a real programming language, evaluated deterministically at preview and update time. Disallow production RDS deletions. Require encryption at rest. Block S3 buckets with public ACLs. An agent running through Pulumi hits those gates whether it "wants" to or not, because the gates live in the pipeline and not in the prompt. This is the pillar most teams underweight, and it's the first one most auditors ask about.
 
 ### 5. An audit trail
 
-When something goes wrong at 3 a.m., and with enough agents running, something will, you need answers fast. What changed, who changed it, and why. Not just "which agent," but which version of which agent, triggered by what event, authorized by which policy, touching which resources.
+When something goes wrong at 3 a.m. (and with enough agents running, something will), you need answers fast. What changed, who changed it, and why. Not just "which agent," but which version of which agent, triggered by what event, authorized by which policy, touching which resources.
 
 Pulumi Cloud's activity log, the stack update history, and [ESC audit logs](/docs/esc/administration/audit-logs/) already capture all of that. Every update is versioned. Every secret access is logged. Every policy evaluation is recorded. When an agent submits a change through your Pulumi pipeline, it inherits that audit surface for free. The alternative is reconstructing an incident from a mix of Slack messages, container logs, and developer memory, which is roughly the state most teams without a platform are in today.
 
@@ -119,6 +123,6 @@ The agents your developers are shipping this week are going to outlive the exper
 
 If you want the longer view on where this is going, [*AI Predictions for 2026: A DevOps Engineer's Guide*](/blog/ai-predictions-2026-devops-guide/) is the companion piece. If you want the developer-facing version of the grounding argument, [*Grounded AI*](/blog/grounded-ai-why-neo-knows-your-infrastructure/) is what to read next.
 
-Either way, here's where I land. The substrate for agent governance isn't a new product you need to buy. It's the IaC platform you're already running. Point it at the right problem.
+Either way, here's where I land. The substrate for agent governance is already running in your stack. You've been pointing it at human changes for years. Now point it at the agents too.
 
-{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+{{< blog/cta-button "See how Pulumi Neo governs agent actions" "/product/neo/" >}}
