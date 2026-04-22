@@ -220,7 +220,10 @@ runtime: nodejs
 
 ```yaml
 name: Example Pulumi project file with all possible attributes
-runtime: yaml
+runtime:
+  name: yaml
+  options:
+    compiler: cue export
 description: An example project with all attributes
 main: example-project/
 stackConfigDir: config/
