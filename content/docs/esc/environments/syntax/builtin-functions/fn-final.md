@@ -57,3 +57,45 @@ values:
   "not_final": "new_value"
 }
 ```
+
+## Composing fn::final with fn::secret
+
+`fn::final` accepts any value, including other built-in function expressions. Wrapping `fn::secret` in `fn::final` is a useful pattern for platform teams that need to distribute a shared secret to downstream environments while ensuring those environments cannot override it.
+
+### Parent environment (myproj/platform)
+
+```yaml
+values:
+  frozenSecret:
+    fn::final:
+      fn::secret: my_plaintext_secret
+```
+
+When this environment is saved, ESC encrypts the plaintext argument to `fn::secret` and replaces it with a ciphertext literal, so the stored form becomes:
+
+```yaml
+values:
+  frozenSecret:
+    fn::final:
+      fn::secret:
+        ciphertext: ZXN...
+```
+
+### Child environment (myproj/app)
+
+```yaml
+imports:
+  - myproj/platform
+values:
+  frozenSecret: different_value  # Warning, cannot override final value
+```
+
+### Evaluated result
+
+```json
+{
+  "frozenSecret": "[secret]"
+}
+```
+
+The evaluated value carries both the secret marker (so consumers redact it from output) and the final marker (so child environments cannot override it).
