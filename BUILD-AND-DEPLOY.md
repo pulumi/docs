@@ -819,7 +819,7 @@ Templates are in `/layouts/` with various shortcodes for:
 
 Many shortcodes have paired `.html` and `.markdown.md` versions — the HTML version renders for web browsers, and the markdown version produces clean markdown for content negotiation output.
 
-**Navigation menu:** The docs left-nav menu sections are data-driven via `data/docs_menu_sections.yml`. The menu partial (`layouts/partials/docs/menu.html`) iterates over this data file rather than using hardcoded section names. The CLI sitemap JSON (`layouts/partials/cli-sitemap-walk.json`) also uses this data to generate a hierarchical navigation index.
+**Navigation menu:** The docs left-nav menu sections are data-driven via `data/docs_menu_sections.yml`. The menu partial (`layouts/partials/docs/menu.html`) iterates over this data file rather than using hardcoded section names. The LLM sitemap JSON (`layouts/partials/llm-sitemap-walk.json`) also uses this data to generate a hierarchical navigation index.
 
 #### Content Generation
 
@@ -831,8 +831,8 @@ Hugo generates:
 - robots.txt
 - Meta-refresh redirect pages (from aliases)
 - Markdown output (`.md`) for `/docs/` pages (for content negotiation)
-- CLI sitemap JSON (`clisitemap`) — hierarchical JSON index of docs navigation
-- CLI config JSON (`cliconfig`) — configuration endpoint (Algolia search keys)
+- LLM sitemap JSON (`llmsitemap`) — hierarchical JSON index of docs navigation, served at `/docs/llm-sitemap.json`
+- LLM index (`llms`) — curated text overview at `/llms.txt` for AI agents
 
 **Markdown output format:** Hugo generates clean markdown versions of documentation pages alongside HTML. These are served via CloudFront content negotiation when clients send `Accept: text/markdown`. The conversion is handled by an 8-phase pipeline in `layouts/partials/docs/markdown-pipeline.md` that converts rendered HTML back to markdown (Chroma → fenced code blocks, HTML tags → markdown syntax, choosable options → chooser comment blocks, etc.).
 
@@ -840,8 +840,8 @@ Hugo generates:
 
 - `layouts/docs/single.md` — Markdown output for single pages
 - `layouts/docs/list.md` — Markdown output for list pages
-- `layouts/docs/list.clisitemap.json` — Hierarchical JSON sitemap
-- `layouts/docs/list.cliconfig.json` — CLI configuration (search index info)
+- `layouts/docs/list.llmsitemap.json` — Hierarchical JSON sitemap
+- `layouts/index.llms.txt` — Curated text overview at `/llms.txt`
 
 **Output formats** are defined in `config/_default/config.yml` under `outputFormats` and `outputs`.
 
