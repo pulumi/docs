@@ -59,35 +59,146 @@ jobs:
             echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
           fi
 
-      # continue-on-error keeps the workflow green when Claude hits a transient
-      # gh rate limit or an API error while applying labels. The next
-      # ready_for_review transition re-triggers triage, so a missed run is
-      # self-healing. The initial review (claude-code-review.yml) has a
-      # missing-label fallback so it still runs even when labels are stale.
-      - name: Run Claude triage
+      # Triage is a narrow classification task: read the PR, decide which
+      # domains it touches, and emit a JSON classification. The shell then
+      # deterministically computes ADD/REMOVE against current labels and
+      # runs gh pr edit.
+      #
+      # Direct curl to the Anthropic API (instead of claude-code-action)
+      # because:
+      # - the action's agentic loop burned 60-90s per run on bun/SDK init,
+      #   of which only ~19s was the model call;
+      # - leaving the delta computation to Sonnet was unreliable (it
+      #   skipped the remove step when ADD was empty, stranding stale
+      #   labels on the PR).
+      # Total wall time with this approach is ~15-25s.
+      #
+      # continue-on-error keeps the workflow green on transient API or
+      # gh failures. A missed triage is self-healing at the next
+      # ready-transition, and claude-code-review.yml has a missing-label
+      # fallback so initial review still runs correctly.
+      - name: Run triage classification
         if: steps.check-access.outputs.has_write_access == 'true'
         continue-on-error: true
-        uses: anthropics/claude-code-action@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Triage applies labels only. The full review fires on
-          # ready_for_review via claude-code-review.yml.
-          prompt: |
-            You are running in a CI environment.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
 
-            Triage pull request #${{ github.event.pull_request.number }} by following the
-            instructions in `.claude/commands/triage.md` exactly.
+          # 1. Gather PR state.
+          PR_DATA=$(gh pr view "$PR" --repo "$REPO" \
+            --json title,body,author,files,labels,additions,deletions,commits,isDraft)
+          DIFF=$(gh pr diff "$PR" --repo "$REPO" | head -c 100000 || true)
 
-            The procedure in triage.md has a DELTA step: compare the target label set
-            against existing labels and compute ADD and REMOVE. **Run `gh pr edit`
-            whenever either is non-empty, including runs where only REMOVE has
-            content** (a stale label left by a previous triage is still stale even
-            when no new labels need adding). Do NOT skip the command just because
-            ADD is empty.
+          # 2. Load classification rules (triage.md is the source of truth).
+          RULES=$(cat .claude/commands/triage.md)
 
-            Do NOT post comments. Do NOT run any review skill. Apply labels via
-            `gh pr edit` and print the `triage:` summary line to stdout (with the
-            `added=` and `removed=` fields populated). That is the entire job.
-          claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr edit:*),Bash(gh label list:*)"'
+          # 3. Build the API request. The model outputs ONLY the JSON
+          #    classification; the shell handles ADD/REMOVE arithmetic.
+          REQUEST=$(jq -n \
+            --arg rules "$RULES" \
+            --arg pr_data "$PR_DATA" \
+            --arg diff "$DIFF" \
+            '{
+              model: "claude-sonnet-4-6",
+              max_tokens: 1024,
+              messages: [{
+                role: "user",
+                content: ("You are triaging a pull request in CI. Read the classification rules below and output exactly one JSON object on a single line -- no prose, no code fences, no explanation. The shell will compute ADD and REMOVE label deltas from your output, so you do NOT need to think about current labels.\n\nThe JSON shape is exactly:\n{\"target_domains\":[\"review:docs\"|\"review:blog\"|\"review:infra\"|\"review:programs\",...],\"trivial\":true|false,\"fact_check_needed\":true|false,\"agent_authored\":true|false,\"reasoning\":\"one short sentence\"}\n\ntarget_domains is the set of domain labels that apply per the path-precedence table. It may be empty (e.g., for a PR that only touches layouts/). Do NOT include review:mixed -- the shell adds it when target_domains has more than one element.\n\nClassification rules:\n\n" + $rules + "\n\n---\n\nPR state:\n\n" + $pr_data + "\n\n---\n\nDiff (truncated to 100000 bytes):\n\n" + $diff)
+              }]
+            }')
+
+          # 4. Call the Anthropic API. On HTTP error, log and bail
+          #    continue-on-error lets the job still report success.
+          RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "content-type: application/json" \
+            -d "$REQUEST" || echo '{"error":"curl_failed"}')
+
+          TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
+          if [[ -z "$TEXT" ]]; then
+            echo "triage: pr=$PR error=no_response"
+            echo "$RESPONSE" | head -c 2000 >&2
+            exit 0
+          fi
+
+          # 5. Parse classification. Strip code fences if present.
+          CLASS=$(echo "$TEXT" \
+            | sed -E 's/^[[:space:]]*```(json)?[[:space:]]*//' \
+            | sed -E 's/[[:space:]]*```[[:space:]]*$//' \
+            | tr -d '\r')
+          if ! echo "$CLASS" | jq -e . >/dev/null 2>&1; then
+            echo "triage: pr=$PR error=unparseable_json"
+            echo "$TEXT" | head -c 2000 >&2
+            exit 0
+          fi
+
+          DOMAINS_JSON=$(echo "$CLASS" | jq -r '.target_domains // [] | .[]')
+          TRIVIAL=$(echo "$CLASS" | jq -r '.trivial // false')
+          FACT_CHECK=$(echo "$CLASS" | jq -r '.fact_check_needed // false')
+          AGENT_AUTHORED=$(echo "$CLASS" | jq -r '.agent_authored // false')
+          REASONING=$(echo "$CLASS" | jq -r '.reasoning // "(none)"')
+
+          # 6. Build TARGET label set per triage.md §Procedure.
+          declare -A TARGET
+          DOMAIN_COUNT=0
+          for d in $DOMAINS_JSON; do
+            TARGET[$d]=1
+            DOMAIN_COUNT=$((DOMAIN_COUNT + 1))
+          done
+          (( DOMAIN_COUNT > 1 )) && TARGET["review:mixed"]=1
+          if [[ "$TRIVIAL" == "true" ]]; then
+            TARGET["review:trivial"]=1
+          elif [[ "$FACT_CHECK" == "true" ]]; then
+            TARGET["fact-check:needed"]=1
+          fi
+          [[ "$AGENT_AUTHORED" == "true" ]] && TARGET["agent-authored"]=1
+
+          # 7. Current triage-managed labels (exclude state labels).
+          declare -A EXISTING
+          while IFS= read -r lbl; do
+            case "$lbl" in
+              review:claude-ran|review:claude-stale|review:claude-working|needs-author-response)
+                continue ;;
+              review:*|fact-check:*|agent-authored)
+                EXISTING["$lbl"]=1 ;;
+            esac
+          done < <(echo "$PR_DATA" | jq -r '.labels[].name')
+
+          # 8. Compute ADD / REMOVE.
+          ADD_LIST=()
+          for t in "${!TARGET[@]}"; do
+            [[ -z "${EXISTING[$t]:-}" ]] && ADD_LIST+=("$t")
+          done
+          REMOVE_LIST=()
+          for e in "${!EXISTING[@]}"; do
+            [[ -z "${TARGET[$e]:-}" ]] && REMOVE_LIST+=("$e")
+          done
+
+          # 9. Apply the delta via gh pr edit. Single call, --add and
+          #    --remove as applicable. Skip the call only on a true no-op.
+          ARGS=()
+          if (( ${#ADD_LIST[@]} > 0 )); then
+            ARGS+=(--add-label "$(IFS=,; echo "${ADD_LIST[*]}")")
+          fi
+          if (( ${#REMOVE_LIST[@]} > 0 )); then
+            ARGS+=(--remove-label "$(IFS=,; echo "${REMOVE_LIST[*]}")")
+          fi
+          if (( ${#ARGS[@]} > 0 )); then
+            gh pr edit "$PR" --repo "$REPO" "${ARGS[@]}" || true
+          fi
+
+          # 10. Summary line for the workflow log.
+          DOMAINS_CSV=""
+          for d in "${!TARGET[@]}"; do
+            [[ "$d" == "review:mixed" || "$d" == "review:trivial" || "$d" == "agent-authored" || "$d" == "fact-check:needed" ]] && continue
+            DOMAINS_CSV="${DOMAINS_CSV:+$DOMAINS_CSV,}$d"
+          done
+          ADDED_CSV="${ADD_LIST[*]:-}"; ADDED_CSV="${ADDED_CSV// /,}"
+          REMOVED_CSV="${REMOVE_LIST[*]:-}"; REMOVED_CSV="${REMOVED_CSV// /,}"
+          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL fact-check=$FACT_CHECK agent-authored=$AGENT_AUTHORED added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
+          echo "reasoning: $REASONING"
