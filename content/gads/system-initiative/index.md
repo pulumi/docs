@@ -3,7 +3,6 @@ title: "System Initiative Alternative | Pulumi"
 meta_desc: Production-ready IaC today. Python, TypeScript, Go, or C# with 170+ cloud providers. Trusted by BMW and Snowflake. Free tier.
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-system-initiative
 heading: "System Initiative Alternative"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to

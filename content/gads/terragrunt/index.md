@@ -3,7 +3,6 @@ title: "Terragrunt Alternative | Pulumi"
 meta_desc: "Native modularity without wrapper tools. Built-in stacks, components, and multi-environment support. Python, TypeScript, Go, or C#."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-terragrunt
 hide_platform_details: true
 
 heading: "Terragrunt Alternative"

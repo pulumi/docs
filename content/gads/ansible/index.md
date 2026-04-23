@@ -3,7 +3,6 @@ title: "Ansible Alternative | Pulumi"
 meta_desc: Cloud infrastructure provisioning in real programming languages, not YAML playbooks. State management, drift detection, 170+ providers. Free tier.
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-ansible
 aliases:
     - /gads/gads-template
 

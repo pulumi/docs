@@ -3,7 +3,6 @@ title: "Kubernetes Infrastructure as Code | Pulumi"
 meta_desc: "Manage Kubernetes clusters and workloads with Python, TypeScript, Go, or C#. Deploy to EKS, AKS, GKE, or any cluster. Full Helm and YAML support."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-kubernetes
 
 heading: "Kubernetes Infrastructure as Code"
 subheading: |

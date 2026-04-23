@@ -14,9 +14,20 @@ tags:
 schema_type: auto
 
 social:
-    twitter: "Policy packs can now access Pulumi ESC environments for secrets and configuration. No more hardcoded credentials in your policy config."
-    linkedin: "Policy packs can now access Pulumi ESC environments for secrets and configuration. No more hardcoded credentials in your policy config."
-    bluesky: "Policy packs can now access Pulumi ESC environments for secrets and configuration. No more hardcoded credentials in your policy config."
+    twitter: |
+        Policy pack configuration used to live in policy group settings — plain text, per-group, hand-rotated.
+
+        Now policy packs can pull from ESC environments: the same secrets and thresholds your stacks already use. Here's the pattern.
+    linkedin: |
+        Every policy pack that needed external configuration — API tokens, compliance endpoints, spending thresholds — stored it inline in the policy group settings. Rotating a credential meant updating every group that referenced it.
+
+        Policy packs can now draw from ESC environments the same way stacks already do. Rotation, versioning, and environment separation come with it.
+
+        We wrote up how the configuration maps across and what it changes about managing policy credentials in practice.
+    bluesky: |
+        Policy pack configuration used to sit in policy group settings — plain text, per-group.
+
+        Policy packs now read from ESC environments, so thresholds, endpoints, and secrets compose, version, and rotate the same way the rest of your configuration does. Here's the setup.
 ---
 
 Policy authors who need external credentials or environment-specific configuration have had to hardcode values or manage them outside of Pulumi. Policy packs can now reference [Pulumi ESC](/product/secrets-management/) environments, bringing centralized secrets and configuration management to your policies.

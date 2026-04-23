@@ -4,7 +4,6 @@ meta_desc: "Stop wrestling with CloudFormation JSON. Write AWS infrastructure in
 layout: gads-template
 block_external_search_index: true
 hide_platform_details: true
-utm_source: gads-cloudformation
 aliases:
     - /gads/gads-template
 

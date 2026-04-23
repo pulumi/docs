@@ -3,7 +3,6 @@ title: "Secure Infrastructure Automation | Pulumi"
 meta_desc: Shift-left cloud security with policy as code. Prevent infrastructure risks at build time, not after deployment. 170+ providers. Free tier.
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-wiz
 heading: "Secure Infrastructure Automation"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
