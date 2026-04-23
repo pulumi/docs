@@ -104,7 +104,12 @@ split_body() {
     tmpdir=$(mktemp -d)
 
     # We split at line boundaries only. Algorithm:
-    # - Walk the input lines, accumulating into the current page.
+    # - Strip any inbound <!-- CLAUDE_REVIEW N/M --> marker lines first. This
+    #   script is the sole writer of markers; re-entrant callers sometimes
+    #   echo the previous pinned body (marker included) into the upsert
+    #   input, and without this filter render_with_markers would prepend a
+    #   second marker on top of the stale one.
+    # - Walk the remaining lines, accumulating into the current page.
     # - When adding the next line would exceed max_bytes, finalize the page
     #   and start a new one with that line.
     # - Prefer splitting at `### ` heading boundaries when within the last
@@ -120,6 +125,7 @@ split_body() {
             cur = 0
         }
         BEGIN { page = 0; buf = ""; cur = 0; soft = int(max * 0.75) }
+        /^<!-- CLAUDE_REVIEW [0-9]+\/[0-9]+ -->[[:space:]]*$/ { next }
         {
             line = $0 "\n"
             llen = length(line)
