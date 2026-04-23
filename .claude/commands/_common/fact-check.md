@@ -430,6 +430,16 @@ When a claim is flagged `intuition_check: true` AND the verifier reaches a decis
 - Each contradicted claim ships with a concrete suggested fix → caller can immediately apply the fix without re-reading the file.
 - Counts in headers give a fast "is this 2 issues or 14?" gut check.
 
+### Credential redaction
+
+The evidence line of any finding is rendered into the public pinned comment. **Never quote raw credential strings in evidence** -- file:line and a short description only. If the claim's context contains what looks like an API key, token, password, private URL, or connection string, replace the token with `[REDACTED]` in the evidence line and flag the underlying leak as a separate 🚨 finding (per [`review-infra.md`](review-infra.md) §Secret handling). Public-PR diffs are already exposed; the pinned comment must not amplify the leak by quoting the raw value.
+
+Patterns that trigger redaction on sight:
+
+- Strings matching common token formats (`ghp_*`, `sk-*`, `AKIA*`, `pul-*`, `xoxb-*`, JWT-like `eyJ*`).
+- Hostnames ending in `.internal`, `.priv`, or any hostname paired with an obvious secret (`https://user:pass@...`).
+- Strings with ≥32 contiguous alphanumeric characters that don't match a known non-secret format (UUIDs are OK; opaque blobs are not).
+
 ---
 
 ## Author-question buffer
