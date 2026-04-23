@@ -1,18 +1,16 @@
 {{ define "hero" }}
     <div class="h-96 w-full relative mb-12">
-        <div class="photo-background w-full h-full overflow-hidden content-center pointer-events-none mx-auto lg:rounded-lg">
+        <div class="container w-full h-full overflow-hidden content-center pointer-events-none mx-auto lg:rounded-lg">
             <img src="/images/about-us/team.png" alt="Pulumi team photo"/>
         </div>
     </div>
 {{ end }}
 
 {{ define "main" }}
-    <section id="we-are-pulumi" class="">
-        <div class="dot-overlay"></div>
-        <div class="title h-30 md:h-40 ml-6 xl:ml-40 mt-1.5">
-            <h2 class="text-4xl md:text-5xl bg-white px-6 mb-0 pb-6">We are Pulumi</h2>
-            <div class="flex h-14 w-full lg:w-10/12 ">
-                <div class="w-6 bg-white"></div>
+    <section id="we-are-pulumi" class="container mx-auto mb-12">
+        <div class="title">
+            <h2 class="text-5xl">We are Pulumi</h2>
+            <div class="flex h-14 w-full ">
                 <div class="about-navigation-container event-list-filter flex flex-grow">
                     <ul id="about-nav" class="bg-white border-b border-b-2 border-gray-300 px-0 flex-grow">
                         {{ range $item := .Params.sections }}
@@ -35,7 +33,7 @@
         <a href="{{ relref . "leadership" }}" class="btn-primary">Meet our leaders</a>
     </section>
 
-    <section id="what-we-believe" class="text-center text-lg py-8 relative">
+    <section id="what-we-believe" class="text-center text-lg py-8 lg:py-16 border-b border-gray-300">
         <div class="container mx-auto">
             <h2 class="mb-8 text-center">Our values</h2>
             <div class="large-container mx-auto hidden lg:block overflow-hidden">
