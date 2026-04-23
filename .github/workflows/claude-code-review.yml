@@ -84,6 +84,25 @@ jobs:
             echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
           fi
 
+      # Post a transient <!-- CLAUDE_PROGRESS --> comment so the author sees
+      # "something is happening" while Opus works. The post step below edits
+      # it to a done/errored state when the review completes. Separate marker
+      # from the pinned review so pinned-comment.sh never touches it.
+      - name: Post progress signal
+        if: steps.check-access.outputs.has_write_access == 'true'
+        id: progress
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ github.event.pull_request.number }}"
+          REPO="${{ github.repository }}"
+          BODY='<!-- CLAUDE_PROGRESS -->
+          🐿️ Reviewing — this usually takes a minute or two.'
+          COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
+            -f body="$BODY" --jq '.id' || echo "")
+          echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
+          gh pr edit "$PR" --repo "$REPO" --add-label review:claude-working || true
+
       - name: Run Claude Code Review
         if: steps.check-access.outputs.has_write_access == 'true'
         id: claude-review
@@ -119,3 +138,25 @@ jobs:
               gh pr edit ${{ github.event.pull_request.number }} \
                 --add-label review:claude-ran --remove-label review:claude-stale
           claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr edit:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh pr list:*),Bash(bash .claude/commands/_common/scripts/pinned-comment.sh:*)"'
+
+      # Runs on success or failure so the transient CLAUDE_PROGRESS comment
+      # always reaches a terminal state. Claude's prompt adds review:claude-ran
+      # on success; we just need to remove review:claude-working.
+      - name: Finalize progress signal
+        if: always() && steps.progress.outputs.comment_id != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ github.event.pull_request.number }}"
+          REPO="${{ github.repository }}"
+          COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
+          if [ "${{ steps.claude-review.outcome }}" = "success" ]; then
+            BODY='<!-- CLAUDE_PROGRESS -->
+          🐿️ Review updated.'
+          else
+            BODY='<!-- CLAUDE_PROGRESS -->
+          🐿️ Review errored. Flip to draft and back to ready, or mention @claude, to retry.'
+          fi
+          gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
+            -f body="$BODY" >/dev/null || true
+          gh pr edit "$PR" --repo "$REPO" --remove-label review:claude-working || true
