@@ -56,8 +56,14 @@ jobs:
             echo "✗ User $AUTHOR has $PERMISSION access to $OWNER/$REPO (insufficient permissions)"
           fi
 
+      # continue-on-error keeps the workflow green when Claude hits a transient
+      # gh rate limit or an API error while applying labels. The next
+      # ready_for_review transition re-triggers triage, so a missed run is
+      # self-healing. The initial review (claude-code-review.yml) has a
+      # missing-label fallback so it still runs even when labels are stale.
       - name: Run Claude triage
         if: steps.check-access.outputs.has_write_access == 'true'
+        continue-on-error: true
         uses: anthropics/claude-code-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

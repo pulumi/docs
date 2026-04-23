@@ -13,7 +13,12 @@ Applied to changes touching:
 - `Makefile`
 - `package.json`, `webpack.config.js`, `webpack.*.js`
 
-Infra files aren't prose. The review's job here is **flagging risks for human review**, not catching style nits. Claude does not approve or block infra changes; staging does. Surfacing risks is the whole contract.
+Infra files aren't prose. The review's job here is **flagging risks for human review**, not catching style nits. Infra risks render in ⚠️ Low-confidence by default (see [`docs-review-core.md`](docs-review-core.md) §Bucket rules). The two exceptions that promote to 🚨:
+
+- **Secrets in the diff** (tokens, API keys, hardcoded credentials). Always 🚨.
+- **Clearly broken state** (unresolved merge markers, syntactically invalid YAML that would kill CI on merge). Always 🚨.
+
+Everything else -- Lambda@Edge bundling concerns, CloudFront cache changes, runtime dep bumps, workflow trigger edits -- is ⚠️. Staging catches actual breakage; this skill is defense-in-depth for the human reviewer.
 
 ---
 
@@ -25,7 +30,7 @@ Infra files aren't prose. The review's job here is **flagging risks for human re
 
 ## Criteria
 
-Apply [`review-shared.md`](review-shared.md) first (mostly for link checking in comments and docs). Then flag the following risk axes. When any of these fires, the finding renders in 🚨 Outstanding with a pointer to the relevant `BUILD-AND-DEPLOY.md` section -- the reviewer decides whether to proceed, not Claude.
+Apply [`review-shared.md`](review-shared.md) first (mostly for link checking in comments and docs). Then flag the following risk axes. Findings render in ⚠️ Low-confidence with a pointer to the relevant `BUILD-AND-DEPLOY.md` section -- the human reviewer decides whether to proceed. Only secrets-in-diff and clearly-broken-state promote to 🚨 (see the §Scope split above).
 
 ### Lambda@Edge bundling
 

@@ -53,11 +53,18 @@ Status: N 🚨 / N ⚠️ / N 💡 / N ✅
 
 ### Bucket rules
 
-- **🚨 Outstanding** is the only bucket that gates approval.
-- **⚠️ Low-confidence** is for findings where the reviewer is <80% sure. Don't pad this with hedging on findings you're confident in.
+- **🚨 Outstanding** is the bucket that says "the author must address this before a human approves the PR." It is semantic, not a GitHub merge gate -- the review posts a plain comment, not a `CHANGES_REQUESTED` review, so GitHub's own approval machinery is unaffected. Human reviewers use 🚨 as their checklist.
+- **⚠️ Low-confidence** is for findings where the reviewer is <80% sure *or* where the finding is "worth human attention but not blocking" (e.g., infra risk flags per [`review-infra.md`](review-infra.md)). Don't pad with hedging on findings you're confident in.
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
 - **✅ Resolved** lists findings from the previous review that no longer appear. Used by [`update-review.md`](update-review.md) to give the author signal that their fixes landed.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
+
+**🚨 vs ⚠️ for infra findings.** Infra and build-config findings default to ⚠️ -- they are risks for human review, not assertions that the PR is wrong. The two exceptions that promote to 🚨:
+
+- Secrets, credentials, or tokens present in the diff (always 🚨; see [`review-infra.md`](review-infra.md) §Secret handling).
+- Clearly broken state that would fail CI on merge (unresolved merge-conflict markers, syntactically invalid YAML in a workflow file).
+
+For all other infra risks -- Lambda@Edge bundling concerns, CloudFront behavior changes, runtime dep bumps, workflow trigger changes -- ⚠️ is the default bucket.
 
 ### Per-file collapsing
 

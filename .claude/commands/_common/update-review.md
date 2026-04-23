@@ -37,7 +37,28 @@ gh pr diff "$PR_NUMBER" --range "$LAST_SHA..HEAD"
 gh pr view "$PR_NUMBER" --json title,body,isDraft,labels,files,headRefOid,headRefName
 ```
 
-`last-reviewed-sha` reads the most recent SHA from the 📜 Review history section in the 1/M comment. If unparseable, the skill falls back to a full `gh pr diff` (effectively starting over).
+`last-reviewed-sha` reads the most recent SHA from the 📜 Review history section in the 1/M comment.
+
+**Fallback rules when `last-reviewed-sha` is unusable:**
+
+- **Empty output** (history line missing, comment corrupted): fall back to a full `gh pr diff "$PR_NUMBER"` (no range). Treat the whole PR as new content; this is equivalent to starting over.
+- **SHA unreachable** (author force-pushed and rewrote history): `gh pr diff --range "$LAST_SHA..HEAD"` will fail with "unknown revision" or similar. Detect the non-zero exit and fall back to full `gh pr diff "$PR_NUMBER"`. Append a 📜 Review history line noting the force-push detection: `<timestamp> — history rewritten since last review; re-reviewed against HEAD (<SHA>)`.
+- **Range empty** (`LAST_SHA` points at `HEAD`): no new commits since last review. Treat as Case 3 re-verify with no new content; do not re-extract claims.
+
+Detection pattern:
+
+```bash
+LAST_SHA=$(bash .claude/commands/_common/scripts/pinned-comment.sh last-reviewed-sha --pr "$PR_NUMBER")
+if [[ -z "$LAST_SHA" ]] || ! git rev-parse --verify "$LAST_SHA^{commit}" >/dev/null 2>&1; then
+    DIFF=$(gh pr diff "$PR_NUMBER")
+    FALLBACK_REASON="no valid last-reviewed-sha"
+else
+    DIFF=$(gh pr diff "$PR_NUMBER" --range "$LAST_SHA..HEAD")
+    FALLBACK_REASON=""
+fi
+```
+
+The CI runner's checkout is shallow, so `git rev-parse --verify` may also fail on reachable but un-fetched SHAs. Treat any verification failure as "unreachable" and fall back to full diff; the cost is one extra full-file pass, not correctness.
 
 ---
 

@@ -48,6 +48,10 @@ gh pr diff "$PR_NUMBER"
 
 Treat the diff as the source of truth for what changed. If `--json files` lists a file but the diff doesn't show it (rare — usually a mode-only change), note it but don't invent findings.
 
+**Empty-diff short-circuit.** If `gh pr diff` returns no content (mode-only changes, renames with no content change, or any PR with zero text diff), exit the review with a one-line stdout log (`review: pr=<N> empty-diff skip`) and do **not** call `pinned-comment.sh upsert`. The script rejects empty bodies with "split produced no pages" by design; the short-circuit keeps the workflow green and avoids posting an empty comment. The workflow's post-run label step (`review:claude-ran`) should still apply so stale-marking works on subsequent pushes.
+
+**Missing-label fallback.** The workflow passes the PR's current labels in the prompt. If triage failed for any reason (rate limit, transient `gh` error) and `review:docs` / `review:blog` / `review:infra` / `review:programs` are all missing, fall back to routing each file by path using the table in the next section — don't abort. Fact-check is gated on `fact-check:needed`; its absence degrades to "no fact-check" rather than aborting the review.
+
 ### 2. Compose the review
 
 For each changed file, route to the appropriate domain file based on path:
@@ -57,7 +61,7 @@ For each changed file, route to the appropriate domain file based on path:
 | `content/docs/`, `content/learn/`, `content/tutorials/`, `content/what-is/` | `_common/review-shared.md` + `_common/review-docs.md` |
 | `content/blog/`, `content/customers/` | `_common/review-shared.md` + `_common/review-blog.md` |
 | `static/programs/` | `_common/review-shared.md` + `_common/review-programs.md` |
-| `.github/workflows/`, `scripts/`, `infrastructure/`, `Makefile`, `package.json`, `webpack.config.js` | `_common/review-shared.md` + `_common/review-infra.md` |
+| `.github/workflows/`, `scripts/`, `infrastructure/`, `Makefile`, `package.json`, `webpack.config.js`, `webpack.*.js` | `_common/review-shared.md` + `_common/review-infra.md` |
 
 A PR may touch files in more than one domain. Run each file under its appropriate domain; merge the findings into a single output object before posting.
 
