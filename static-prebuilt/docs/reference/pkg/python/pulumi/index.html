@@ -767,7 +767,11 @@ operations for provisioning.</p>
 <li><p><strong>props</strong> (<em>Optional</em><em>[</em><em>dict</em><em>]</em>) – An optional list of input properties to use as inputs for the resource.</p></li>
 <li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>ResourceOptions</em></a><em>]</em>) – Optional set of <a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">pulumi.ResourceOptions</span></code></a> to use for this
 resource.</p></li>
-<li><p><strong>remote</strong> (<em>bool</em>) – True if this is a remote component resource.</p></li>
+<li><p><strong>remote</strong> (<em>bool</em>) – This parameter is intended for use by code-generated component SDKs;
+end users authoring their own <a class="reference internal" href="#pulumi.ComponentResource" title="pulumi.ComponentResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">ComponentResource</span></code></a> subclasses should leave this at
+its default (<code class="docutils literal notranslate"><span class="pre">False</span></code>). When <code class="docutils literal notranslate"><span class="pre">True</span></code>, the component’s children are constructed by the
+engine rather than in this process, and the constructor skips local child registration
+accordingly.</p></li>
 <li><p><strong>package_ref</strong> (<em>Optional</em><em>[</em><em>Awaitable</em><em>[</em><em>Optional</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The package reference for this resource.</p></li>
 </ul>
 </dd>
@@ -1956,7 +1960,11 @@ the type’s and resource’s type/name metadata rather than using the <cite>tra
 and <cite>translate_output_property</cite> methods.</p></li>
 <li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>ResourceOptions</em></a><em>]</em>) – Optional set of <a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">pulumi.ResourceOptions</span></code></a> to use for this
 resource.</p></li>
-<li><p><strong>remote</strong> (<em>bool</em>) – True if this is a remote component resource.</p></li>
+<li><p><strong>remote</strong> (<em>bool</em>) – This parameter is intended for use by code-generated component SDKs;
+end users authoring their own <a class="reference internal" href="#pulumi.ComponentResource" title="pulumi.ComponentResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">ComponentResource</span></code></a> subclasses should leave this at
+its default (<code class="docutils literal notranslate"><span class="pre">False</span></code>). When <code class="docutils literal notranslate"><span class="pre">True</span></code>, the component’s children are constructed by the
+engine rather than in this process, and the constructor skips local child registration
+accordingly.</p></li>
 <li><p><strong>dependency</strong> (<em>bool</em>) – True if this is a synthetic resource used internally for dependency tracking.</p></li>
 <li><p><strong>package_ref</strong> (<em>Optional</em><em>[</em><em>Awaitable</em><em>[</em><em>Optional</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The package reference for this resource.</p></li>
 </ul>
