@@ -39,19 +39,19 @@ benefits:
       items:
         - title: Unified delivery pipeline
           icon: rocketship
-          icon_color: salmon
+          icon_color: violet
           description: |
             Pulumi allows the same programming languages used for application code to be used for infrastructure. This allows teams to leverage the same testing frameworks and same delivery process for both.
 
         - title: Shareable infrastructure components
           icon: gear
-          icon_color: salmon
+          icon_color: violet
           description: |
             Pulumi provides a shared way for teams to collaborate with each other on infrastructure through modular and reusable components that can easily be built and shared across the entire organization.
 
         - title: Higher order automation
           icon: eye
-          icon_color: salmon
+          icon_color: violet
           description: |
             You can increase automation across the entire lifecycle of your cloud infrastructure. You can program logic that orchestrates complex workflows during infrastructure provisioning instead of needing to use Bash scripts or glue code. In addition to its CLI, Pulumi provides the Automation API, a programmatic interface for IaC, so you can build applications that dynamically manage infrastructure.
 

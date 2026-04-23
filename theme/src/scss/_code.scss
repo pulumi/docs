@@ -119,7 +119,6 @@ div.highlight.line-numbers {
 }
 
 .code-tabbed {
-    @apply shadow-lg;
 
     .code-tabbed-tabs {
         background: var(--color-violet-950);
@@ -129,12 +128,12 @@ div.highlight.line-numbers {
             @apply p-2 my-0 flex items-center text-sm cursor-pointer;
 
             .code-tabbed-tab-label {
-                font-size: 16px;
-                @apply mx-2 text-gray-500;
+                font-size: 14px;
+                @apply font-mono mx-2 font-normal text-gray-500;
             }
 
             .code-tabbed-tab-indicator {
-                @apply ml-1 mr-2 bg-orange-300 rounded-full h-2 w-2 invisible hidden;
+                @apply ml-1 mr-2 bg-violet-primary rounded-full h-2 w-2 invisible hidden;
 
                 @include screen-md {
                     @apply block;
@@ -206,7 +205,7 @@ div.highlight.line-numbers {
 
     .code-tabbed-status {
         background: var(--color-violet-950);
-        @apply h-3 rounded-b;
+        @apply h-3 rounded-b-lg;
     }
 }
 

@@ -9,17 +9,6 @@
     </section>
 
     <div class="w-full relative overflow-visible">
-        <div class="shape-background solutions-page">
-            <div class="shape-container">
-                <div class="dot-background-container">
-                    <div class="dot-background-overlay"></div>
-                    <div class="dot-background no-animate"></div>
-                </div>
-                <div class="circle-left"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
-
         <section id="use-cases" class="container mx-auto p-6">
             <div class="card p-4 md:p-8 lg:p-32 bg-white">
                 <h2>{{ .Params.use_cases.title }}</h2>
@@ -162,7 +151,7 @@
                 <span>
                     {{ .Params.personas.title }}
                 </span>
-                <span class="rainbow-text inline-block">
+                <span class="inline-block">
                     <pulumi-choosable type="persona" value="developer">
                         <span>for Developers</span>
                     </pulumi-choosable>

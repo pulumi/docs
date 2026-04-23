@@ -5,7 +5,7 @@
                 <div class="w-full p-6 home-page-hero-text">
                     <h1 class="flex flex-col items-center">
                         <span class="inline-block mb-3 text-center" data-text="{{ index (.Params.hero.title) 0 }}">{{ index (.Params.hero.title) 0 }}</span>
-                        <span class="rainbow-text inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
+                        <span class="inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
                     </h1>
 
                     <p class="mt-6 text-center leading-7">{{ .Params.hero.description | markdownify }}</p>

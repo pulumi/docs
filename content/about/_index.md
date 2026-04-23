@@ -36,7 +36,7 @@ values:
     - title: Play to win, as a team
       content: Being a global and inclusive team enables us to build the best products for our customers, and everybody has a seat at the table no matter their background, experiences, or title. We are always raising the bar and maintaining a high level of team performance in our drive to win as a team. We celebrate those wins together, learn from our failures together, and are on this journey as a team together.
       icon: users
-      color: fuchsia
+      color: green
     - title: Bias for action
       content: We make fast decisions, learn from them, and own the outcomes. Good today is better than perfect tomorrow. When in doubt, we empower action, experimentation, learning, and iteration. We strive to build internal consensus so that we are all bought in, but in cases where we disagree, we disagree, commit, and get going!
       icon: running

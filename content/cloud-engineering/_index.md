@@ -108,7 +108,7 @@ benefits:
 
         - title: Decrease infrastructure risks
           icon: alert
-          icon_color: salmon
+          icon_color: violet
           description: |
             Cloud engineering “shifts risk left” through frequent testing. Every change is reviewed and tested before deployment. Policy-as-Code enforces compliance across every
             deployment, and access controls prevent unauthorized changes.

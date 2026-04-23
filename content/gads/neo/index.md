@@ -39,7 +39,7 @@ why_neo:
     - title: Provision a Kubernetes Cluster
       description: "Go from prompt to a running EKS cluster with plan/preview and a full audit trail."
       icon: rocketship
-      color: salmon
+      color: violet
       button_text: Try This in Neo
       button_url: "https://app.pulumi.com/pulumi/neo?prompt=Provision%20an%20EKS%20cluster%20with%20preview%20and%20an%20audit%20trail&prefer_signup=true"
     - title: Enforce Guardrails by Default

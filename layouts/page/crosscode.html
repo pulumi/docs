@@ -5,13 +5,7 @@
 {{ define "main" }}
     {{ $pageContext := . }}
 
-
     <section id="crosscode-overview" class="relative">
-        <div class="shape-background crosscode-overview">
-            <div class="relative w-full h-full">
-                <div class="circle-right"></div>
-            </div>
-        </div>
         <div class="max-w-6xl mx-auto flex flex-col items-center px-6 text-lg text-gray-800">
             <div class="max-w-3xl my-12">
                 <p>{{ .Params.description | markdownify }}</p>
@@ -23,12 +17,6 @@
     </section>
 
     <section id="crosscode-capabilities" class="relative">
-        <div class="shape-background">
-            <div class="relative w-full h-full">
-                <div class="circle-left"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
         <div class="max-w-7xl mx-auto flex flex-col items-center my-28 px-6">
             {{ with .Params.capabilities }}
                 <h2 class="text-center">{{ .title }}</h2>

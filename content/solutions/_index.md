@@ -153,7 +153,7 @@ personas:
                 AWS, Azure, Google Cloud, or Kubernetes.
             - title: Real abstractions for the cloud
               icon: abstract-shapes
-              icon_color: salmon
+              icon_color: violet
               description: |
                 Build true cloud abstractions, reduce copy-and-paste, and share and reuse them
                 in your favorite package manager.
@@ -175,7 +175,7 @@ personas:
                 YAML and DSL sprawl.
             - title: Deploy Continuously
               icon: cycle
-              icon_color: salmon
+              icon_color: violet
               description: |
                 Integrate with existing SCM and ALM systems to continuously deliver to many clouds
                 with a single consistent workflow.
@@ -195,7 +195,7 @@ personas:
                 Use Pulumi’s built-in secrets management to ensure that sensitive infrastructure as code configuration is always encrypted.
             - title: Enforce Standards
               icon: gavel
-              icon_color: salmon
+              icon_color: violet
               description: |
                 Codify and reuse standard organizational patterns with standard packaging techniques, versioning, and easy patching.
     leader:
@@ -213,7 +213,7 @@ personas:
                 Build multi-cloud applications with a single workflow across all clouds &mdash; AWS, Azure, Google Cloud, Kubernetes, hybrid or on-premises.
             - title: Enterprise-Grade
               icon: buildings
-              icon_color: salmon
+              icon_color: violet
               description: |
                 Use robust security, compliance, and auditing tools with an extensible policy engine for enforcing your organization’s practices.
 

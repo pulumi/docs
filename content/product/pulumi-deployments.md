@@ -48,7 +48,7 @@ options:
           title: Git Push to Deploy
           description: Deploy infrastructure with each push to a branch using your [version control integration](/docs/integrations/version-control/), using pull requests to review changes in ephemeral [Review Stacks](/docs/deployments/deployments/review-stacks/) before deploying them.
         - icon: upload-to-cloud
-          icon_color: salmon
+          icon_color: violet
           title: Click to Deploy
           description: Deploy infrastructure with a click of a button from the Pulumi Cloud console. Run update, preview, refresh, and destroy commands.
         - icon: code-window

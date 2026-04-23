@@ -24,14 +24,14 @@
         <div class="container mx-auto">
             {{ range $section := .Params.products }}
                 <div class="card mb-12 p-6 lg:p-20 bg-white">
-                    <h2 class="text-center rainbow-text">{{ $section.header }}</h2>
+                    <h2 class="text-center">{{ $section.header }}</h2>
                     <div class="flex flex-row flex-wrap justify-center space-x-4 my-4 border-b-2 border-gray-200">
                         {{ range $index, $subsection := $section.content }}
                             {{ $tabclass := "" }}
                             {{ $textClass := "" }}
                             {{ if eq $index 0 }}
                                 {{ $tabclass = " border-violet-primary "}}
-                                {{ $textClass = "rainbow-text" }}
+                                {{ $textClass = "text-violet-primary" }}
                             {{ end }}
                             <div id="{{ $subsection.tabid }}" class="text-2xl cursor-pointer p-2 px-6 rounded-t-lg border-b-4 {{ $tabclass }}">
                                 <div id="{{ $subsection.tabid }}-text" class="{{ $textClass }}">{{ $subsection.header }}</div>

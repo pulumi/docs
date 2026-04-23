@@ -455,7 +455,7 @@ benefits:
     items:
         - title: Use your favorite languages
           icon: code
-          icon_color: salmon
+          icon_color: violet
           description: |
             Start building infrastructure just by installing a Go module or a NuGet, npm, or Python package. Create your own packages in every language by authoring in just one language.
 

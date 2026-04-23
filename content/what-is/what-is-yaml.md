@@ -44,7 +44,7 @@ The following is an example of YAML:
 # An easy-to-read set of data on the Pulumi mascot, in YAML
 name: Pulumipus
 breed: platypus
-color: purple
+color: violet
 mascot: True
 age: 5
 hobbies:
@@ -67,7 +67,7 @@ The beginning of a YAML file is usually three dashes (`---`) on the first line. 
 ```yaml
 name: Pulumipus
 breed: platypus
-color: purple
+color: violet
 ```
 
 The first three key-value pairs are strings indicating that this creature is a purple platypus named Pulumipus, but YAML also supports integers, floats, and booleans to give their age and current status as a mascot:

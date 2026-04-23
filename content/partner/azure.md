@@ -188,7 +188,7 @@ detail_sections:
 
         - title: Secrets Management
           icon: security
-          icon_color: salmon
+          icon_color: violet
           description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
 
         - title: Multi Cloud
@@ -227,7 +227,7 @@ detail_sections:
 
         - title: API Versions
           icon: nodes
-          icon_color: salmon
+          icon_color: violet
           description: Each resource provider defines one or more API versions, for example, `2015-05-01`, `2020-09-01`, or `2020-08-01-preview`. Every version of every ARM API is available in Pulumi SDKs, and each version has its own module or namespace.
 
         - title: All Languages

@@ -31,7 +31,7 @@ benefits:
           title: Discover Cost Savings
           description: Pulumi Insights identifies anomalies and trends in resource usage in order to pinpoint potential cost savings.
         - icon: security
-          icon_color: salmon
+          icon_color: violet
           title: Enforce Compliance
           description: Pulumi Insights provides comprehensive visibility into security and compliance policy violations, along with the ability to remediate issues directly through code.
 

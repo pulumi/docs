@@ -219,7 +219,7 @@ superpowers:
       cta: Learn more
       cta_url: "/docs/iac/get-started/kubernetes/"
       icon_type: cloud
-      icon_color: salmon
+      icon_color: violet
       description: |
         Support for all clouds including Amazon Elastic Kubernetes Service (EKS), Azure
         Kubernetes Service (AKS), Google Kubernetes Engine (GKE), DigitalOcean Kubernetes
@@ -291,7 +291,7 @@ detail_sections:
 
           - title: Secrets Management
             icon: security
-            icon_color: salmon
+            icon_color: violet
             description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
 
           - title: Pulumi Kubernetes Operator
@@ -317,7 +317,7 @@ detail_sections:
 
           - title: Debug Cloud Failures
             icon: cloud-with-nodes
-            icon_color: salmon
+            icon_color: violet
             description: Pulumi Copilot can access update and deployment logs of your stacks as well as access history, logs, and runtime metrics, so you can easily debug deployment and infrastructure failures. 
 
           - title: Stay Secure
