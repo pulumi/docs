@@ -67,6 +67,15 @@ Extract pre-existing issues from a touched file when any of:
 - The PR substantively edits it (>30 changed lines OR a top-level structural change), OR
 - The file is a new page (every line is, by definition, "in the diff" -- but rendering them all as 🚨 Outstanding would drown the author).
 
+**What counts as a "top-level structural change":** a change that reshapes the file's outline, not one that edits content within a fixed outline. Concretely, any of:
+
+- Adding, removing, or renaming an H2 heading.
+- Reordering H2 sections (changing their relative positions in the file).
+- Moving an existing H2's content to a new file, or pulling new content into the file under a new H2.
+- Changing the H1 (`title:`) in frontmatter.
+
+Not a top-level structural change: edits inside an existing H2, adding/removing H3s under an unchanged H2, code-block updates, wording tweaks.
+
 Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, product-name capitalization, deprecated terminology, within-file terminology inconsistencies. These render in the 💡 bucket per [`docs-review-core.md`](docs-review-core.md). Cap at 15 per file. Skip style nits (heading case, list numbering) -- the linter owns those.
 
 ## Fact-check

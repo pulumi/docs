@@ -34,16 +34,18 @@ Findings render in 🚨 / ⚠️ **before** style findings. The reader sees "is 
 
 ### Priority 2 — AI-slop detection
 
-Flag the following patterns, with examples from the post. Each bullet names the *pattern* and the threshold at which it becomes a finding:
+Flag the following patterns, with examples from the post. Each bullet names the *pattern* and the threshold at which it becomes a finding.
 
-- **Em-dash density.** More than 1-2 em-dashes per section. AI models overuse em-dashes as a rhythm device. Style guide allows them; heavy clustering is a tell.
-- **Contrastive frames.** "It's not X, it's Y" / "Not only X but also Y" / "This isn't about X; it's about Y." One in a post is fine. Three or more across a post is a pattern finding.
-- **Uniform sentence rhythm.** Three or more consecutive sentences of similar length (within ±3 words) in a paragraph. Humans vary rhythm; AI drifts toward a mean.
-- **Repetitive paragraph openers.** Three or more consecutive paragraphs opening with the same structure ("When you X...", "If you want to X...", "Consider X...").
-- **Hedging.** "Typically," "generally," "tends to," "can often," "largely," "in many cases." Appearing more than once per section is a finding. See also `STYLE-GUIDE.md`'s write-with-confidence rule in the legacy `review-criteria.md` §Blogs.
+**Unit of measurement -- "section":** in this file, *section* means the block of prose from one H2 (`## ...`) heading to the next, or from the `<!--more-->` break to the first H2 if one leads the post. Flags and thresholds below all evaluate over that unit unless noted otherwise.
+
+- **Em-dash density.** Three or more em-dashes in a single section. AI models overuse em-dashes as a rhythm device. Style guide allows them; heavy clustering is a tell.
+- **Contrastive frames.** "It's not X, it's Y" / "Not only X but also Y" / "This isn't about X; it's about Y." One in a post is fine. Three or more across the post (not per-section) is a pattern finding.
+- **Uniform sentence rhythm.** Three or more consecutive sentences of similar length (within ±3 words) in a single paragraph. Humans vary rhythm; AI drifts toward a mean.
+- **Repetitive paragraph openers.** Three or more consecutive paragraphs (in the same section or across a section boundary) opening with the same structure: "When you X...", "If you want to X...", "Consider X...".
+- **Hedging.** "Typically," "generally," "tends to," "can often," "largely," "in many cases." Two or more in a single section is a finding. See also `STYLE-GUIDE.md`'s write-with-confidence rule in the legacy `review-criteria.md` §Blogs.
 - **TL;DR / summary paragraphs that restate the post.** The reader just finished reading; they don't need a recap.
-- **Empty transitions.** "Let's dive in," "In this post we'll explore," "In conclusion," "Without further ado." Cut them.
-- **Buzzword tax.** "Landscape," "ecosystem," "leverage" (as a verb), "robust," "seamless," "world-class," "battle-tested." Flag with a suggested rewrite when the sentence survives the deletion; otherwise flag as a rewrite candidate.
+- **Empty transitions.** "Let's dive in," "In this post we'll explore," "In conclusion," "Without further ado." Cut them -- flag on first occurrence.
+- **Buzzword tax.** "Landscape," "ecosystem," "leverage" (as a verb), "robust," "seamless," "world-class," "battle-tested." Flag on first occurrence, with a suggested rewrite when the sentence survives the deletion; otherwise flag as a rewrite candidate. If the same buzzword appears three or more times across the post, coalesce the flags into a single finding rather than repeating.
 
 Every AI-slop finding names the *phrase* and the *pattern*. Don't just say "this is AI-written" -- say "em-dash density: 6 em-dashes across 3 paragraphs; consider breaking some into separate sentences."
 

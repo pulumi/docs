@@ -205,23 +205,38 @@ When a temporal trigger word is **not warranted** -- e.g., "recently" describing
 
 ### Intuition-check axis
 
-Separate from verified/unverifiable: sometimes the *shape* of a claim is suspect even when evidence is absent or ambiguous. Flag these under 🤔 (distinct from ⚠️ unverifiable).
+Intuition-check is **orthogonal to verification**. It scores the *shape* of a claim, not the evidence behind it. A claim can be both 🤔 (shape-suspect) and ✅ (verified), or 🤔 and 🚨 (contradicted); the intuition-check is a separate dimension.
 
-Shape-based flags:
+#### When to set the `intuition_check` flag
 
-- **Unrounded specific numbers.** "41x faster." "2,347 customers." "Reduced latency by 37.4%." Humans round; AI hallucinates precision. Unless the source is an authoritative benchmark, flag.
-- **AI-pattern phrasing.** "Blazing-fast." "Seamlessly integrates." "World-class." "Battle-tested." "Revolutionary." Claims that *read like* marketing boilerplate usually don't hold up under source checking.
-- **Specific but unsearchable.** "Used by 73% of Fortune 500 companies." "Deployed in over 40 countries." Specific, quotable, and -- often -- traceable to no source that anyone can find.
+Set the flag during claim extraction (before verification) if any of the following holds. Each sub-rule has an explicit threshold to keep the flag consistent across runs:
 
-A 🤔 finding is NOT "this is probably wrong." It is "the shape of this claim suggests fabrication; author should cite a source regardless of what the verifier finds." If the author provides a source, the finding resolves. If not, it stays visible.
+- **Unrounded specific numbers in a prose claim.** A number reads as "unrounded" when it is not a common human-communicated figure. Concrete thresholds:
+  - **Round** (do not flag): multiples of 5% or 10%, typical marketing figures like 2x / 10x / 50x / 100x, order-of-magnitude ranges ("hundreds of," "thousands of").
+  - **Unrounded** (flag): any digit pattern outside the round set. Examples: `41x`, `37.4%`, `2,347`, `93.2 ms`, `17.8 GB/s`. "A 200% improvement" is round (multiple of 100%); "a 193% improvement" is unrounded (flag).
+  - Exception: if the claim names a source in the same sentence ("per the ACME 2024 benchmark"), do not flag on shape -- the source will be verified in the normal flow.
+- **AI-pattern phrasing.** The following adjective set (and close variants) is AI-boilerplate: *blazing-fast, seamlessly integrates, world-class, battle-tested, revolutionary, cutting-edge, next-generation, enterprise-grade*. Presence of any term in a technical claim is enough to flag.
+- **Specific but unsearchable.** A claim that looks like a quotable stat with a named source (e.g., "Used by 73% of Fortune 500 companies" / "Deployed in over 40 countries") but lacks a citation in the PR. "Specific" here means: a percentage, a country count, a customer count, a time-window claim.
 
-Distinction from other tiers:
+Set `intuition_check: true` on the claim record. Verification proceeds normally.
 
-- 🚨 Contradicted: evidence says the claim is wrong.
-- 🚨 Unverifiable: no source found, but claim shape is plausible.
-- 🤔 Intuition-check: claim shape is suspect independent of evidence.
-- ⚠️ Low-confidence verified: evidence is partial / indirect.
-- ✅ Verified: evidence matches claim.
+#### Rendering rule (where 🤔 claims actually land)
+
+After verification, render each claim in the bucket dictated by its verification result, **with the intuition-check flag surfaced in the evidence line**:
+
+| Verification result | `intuition_check=true` renders in | Evidence-line note |
+|---|---|---|
+| `contradicted` (any confidence) | 🚨 Contradicted | No 🤔 note needed; the contradiction already demands a fix |
+| `unverifiable` | 🚨 Unverifiable | "Shape also suggests fabrication; cite a source" |
+| `verified` with `confidence: low` | ⚠️ Low-confidence | "Shape was suspect; verifier found a low-confidence match" |
+| `verified` with `confidence: medium` or `high` | ✅ Verified | No 🤔 note; evidence resolves the shape concern |
+| **verification timed out / inconclusive** | 🤔 Intuition-check | "Verifier couldn't resolve; author should cite a source" |
+
+The 🤔 bucket is therefore **small and specific**: claims whose shape was suspect AND whose verification returned neither a confirmation nor a contradiction. The model should not render 🤔 when the verifier produced a decisive answer either way.
+
+#### Why the axis exists (in one sentence)
+
+The shape flag surfaces "the author may have made this up even if the verifier can't prove it" -- a signal separate from evidence, catchable only by pattern-matching the prose. Coupling it to the render bucket (rather than a standalone tier) keeps the output structured around what the author must *do* (fix / cite / leave as is), not around what the verifier *felt*.
 
 Store the full claim list for the verification phase. No interim user output.
 
@@ -402,11 +417,11 @@ Build a structured triage object that the caller will render. The format:
 | Tier | Contents |
 |---|---|
 | 🚨 Needs your eyes | All `contradicted` claims (any confidence) + all `unverifiable` claims |
-| 🤔 Intuition-check | Claims flagged by the intuition-check axis, regardless of verification result |
+| 🤔 Intuition-check | Claims whose `intuition_check` flag was set AND whose verification came back inconclusive (timed out, could not reach a verdict). Cross-reference the shape concern in the evidence line. |
 | ⚠️ Low-confidence verified | `verified` claims with `confidence: low` (and `medium` when scrutiny is heightened) |
 | ✅ Verified | Everything else, collapsed under `<details>` |
 
-A single claim can appear in both 🤔 (shape) and 🚨 / ✅ (evidence). When it does, render in 🚨 (the more actionable bucket) and cross-reference the shape concern in the evidence line.
+When a claim is flagged `intuition_check: true` AND the verifier reaches a decisive verdict, it renders in the verdict's bucket (🚨 / ⚠️ / ✅), not 🤔 -- see the rendering rule table in §Intuition-check axis. 🤔 is for inconclusive verification only.
 
 ### Why tiered
 
