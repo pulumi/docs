@@ -3,7 +3,6 @@ title: "Spacelift Alternative | Pulumi"
 meta_desc: "IaC engine plus management platform in one. No bolt-on orchestration layer needed. Python, TypeScript, Go, or C#. 170+ providers."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-spacelift
 hide_platform_details: true
 aliases:
     - /gads/gads-template

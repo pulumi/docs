@@ -3,7 +3,6 @@ title: "Infrastructure Automation for GitHub | Pulumi"
 meta_desc: Infrastructure automation that integrates with GitHub. IaC in Python, TypeScript, Go, or C# with GitOps workflows and 170+ cloud providers.
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-github
 heading: "Infrastructure Automation for GitHub"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to

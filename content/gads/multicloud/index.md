@@ -3,7 +3,6 @@ title: "Multicloud | Pulumi"
 meta_desc: "One codebase, any cloud. Manage AWS, Azure, GCP, and Kubernetes infrastructure with Python, TypeScript, Go, or C#. 170+ providers."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-multicloud
 
 heading: "Multicloud infrastructure"
 subheading: |

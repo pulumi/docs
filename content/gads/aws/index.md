@@ -3,7 +3,6 @@ title: "AWS Infrastructure as Code | Pulumi"
 meta_desc: "Manage AWS with Python, TypeScript, Go, or C#. Full API coverage, same-day updates, built-in best practices with Crosswalk. Free tier, no resource caps."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-aws
 
 heading: "AWS Infrastructure as Code"
 subheading: |

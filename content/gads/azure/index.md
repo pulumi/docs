@@ -3,7 +3,6 @@ title: "Azure Infrastructure"
 meta_desc: Azure infrastructure as code in C#, Python, TypeScript, or Go. Native Azure provider, full API coverage. Multi-cloud ready. Free tier.
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-azure
 aliases:
     - /azure-resource-manager
     - /azure-infrastructure

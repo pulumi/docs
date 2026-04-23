@@ -3,7 +3,6 @@ title: "Chef Alternative | Pulumi"
 meta_desc: Cloud IaC instead of cookbook-based configuration. Python, TypeScript, Go, or C# with state management, testing, and 170+ providers.
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-chef
 
 heading: "Chef Alternative"
 subheading: |
