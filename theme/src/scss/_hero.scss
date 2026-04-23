@@ -85,7 +85,7 @@
 }
 
 .page-hero {
-    @apply relative w-full py-10 mb-6;
+    @apply relative w-full py-10 mb-10 border-b border-gray-300;
 
     .page-hero-title {
         @apply text-black w-full flex flex-col items-center justify-center pointer-events-none;
