@@ -94,14 +94,23 @@ The following labels are managed by other steps in the pipeline. Do not apply or
 
 ## Procedure
 
-1. Pull PR context (one `gh pr view`, one `gh pr diff`).
-2. Decide domain, triviality, fact-check, and agent-authored signals per the rules above.
-3. Compute the **target label set** (existing review/fact-check/agent labels minus the ones you're removing, plus the ones you're adding).
-4. Apply via `gh pr edit`:
+1. Pull PR context: `gh pr view "$PR_NUMBER" --json title,body,author,labels,files,additions,deletions,commits,isDraft` and `gh pr diff "$PR_NUMBER"`.
+2. For each file in the PR, classify it into exactly one domain using the path-precedence table. Build the set **TARGET_DOMAINS** = {all distinct domain labels that apply}.
+3. Build the **TARGET** label set:
+   - Start with TARGET_DOMAINS.
+   - Add `review:mixed` if |TARGET_DOMAINS| > 1.
+   - Add `review:trivial` if the triviality rule fires. When `review:trivial` is added, do **not** also include `fact-check:needed`.
+   - Add `fact-check:needed` per the rule above (unless `review:trivial`).
+   - Add `agent-authored` if any agent-authored signal fires.
+4. Compute the **delta** against the PR's current labels:
+   - Let **EXISTING_TRIAGE** = current labels that start with `review:` or `fact-check:` or equal `agent-authored`, **excluding state-labels**: `review:claude-ran`, `review:claude-stale`, `review:claude-working`, `needs-author-response`. (State labels are managed by other steps in the pipeline.)
+   - Let **ADD** = TARGET − EXISTING_TRIAGE.
+   - Let **REMOVE** = EXISTING_TRIAGE − TARGET. Every label in REMOVE should be explicitly dropped -- if a previously-applied label no longer matches the current rules, it is stale and must go.
+5. Apply the delta via `gh pr edit`. Call the command if and only if ADD or REMOVE is non-empty:
    ```bash
-   gh pr edit "$PR_NUMBER" --add-label "<comma-separated-additions>" --remove-label "<comma-separated-removals>"
+   gh pr edit "$PR_NUMBER" --add-label "<comma-separated ADD>" --remove-label "<comma-separated REMOVE>"
    ```
-   Only call `--add-label` / `--remove-label` for labels that actually need to change. No-op runs should make no API call.
-5. Print a one-line summary to stdout for the workflow log: `triage: pr=<N> domain=<list> trivial=<bool> fact-check=<bool> agent-authored=<bool>`.
+   Use only `--add-label` when ADD is non-empty and REMOVE is empty. Use only `--remove-label` when REMOVE is non-empty and ADD is empty. Use both flags when both are non-empty. A true no-op (ADD and REMOVE both empty) skips the command entirely.
+6. Print a one-line summary to stdout for the workflow log: `triage: pr=<N> domain=<comma-separated TARGET_DOMAINS> trivial=<bool> fact-check=<bool> agent-authored=<bool> added=<comma-separated ADD> removed=<comma-separated REMOVE>`.
 
 **Do not** post a comment. **Do not** run `gh pr comment`, `gh pr review`, or any review skill. **Do not** read working-tree files. Triage is labels-and-summary only.
