@@ -60,11 +60,16 @@ list_pinned_comments() {
     # jq does the parsing: extract the leading line of each body, capture
     # the N/M marker, and emit only matching comments. Avoids relying on
     # gawk-specific match() captures.
+    # Note: no regex flags on `capture`. Not every jq build ships with
+    # extended-mode (`x`) support, and the GitHub Actions runner's jq
+    # errors with "unsupported regular expression flag: x" -- caught
+    # during fork-based re-entrant testing. The pattern has no
+    # extended-mode features to preserve, so the flag is unneeded.
     gh api --paginate "repos/$repo/issues/$pr/comments" --jq '
         .[]
         | . as $c
         | (.body | split("\n") | .[0]) as $line1
-        | ($line1 | capture("^<!-- CLAUDE_REVIEW (?<n>[0-9]+)/(?<m>[0-9]+) -->"; "x")? // empty)
+        | ($line1 | capture("^<!-- CLAUDE_REVIEW (?<n>[0-9]+)/(?<m>[0-9]+) -->")? // empty)
         | [$c.id, .n, .m, $c.created_at] | @tsv
     ' | sort -t$'\t' -k2,2n
 }
