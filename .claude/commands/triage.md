@@ -31,16 +31,23 @@ gh pr diff "$PR_NUMBER"
 
 ### 1. Domain (one or more `review:*` labels)
 
-Apply one or more domain labels based on which paths the PR touches:
+Evaluate each changed file in path-precedence order and classify it into **exactly one** domain. A file matches the first rule that applies; do not double-count a file under two domains. Once every file is classified, apply the union of the resulting domain labels to the PR.
 
-| Label | Apply when files touch |
-|---|---|
-| `review:docs` | `content/docs/`, `content/learn/`, `content/tutorials/`, `content/what-is/` |
-| `review:blog` | `content/blog/`, `content/customers/` |
-| `review:infra` | `.github/workflows/`, `scripts/`, `infrastructure/`, `Makefile`, `package.json`, `webpack.config.js`, `webpack.*.js` |
-| `review:programs` | `static/programs/` |
+| Order | Label | Applies when the file path matches |
+|---|---|---|
+| 1 | `review:programs` | `static/programs/**` (includes every nested file: `Pulumi.yaml`, `package.json`, `requirements.txt`, source files, anything else inside a program directory) |
+| 2 | `review:blog` | `content/blog/**`, `content/customers/**` |
+| 3 | `review:docs` | `content/docs/**`, `content/learn/**`, `content/tutorials/**`, `content/what-is/**` |
+| 4 | `review:infra` | `.github/workflows/**`, `scripts/**` except `scripts/programs/**`, `infrastructure/**`, `Makefile` (repo root), `package.json` (repo root only), `webpack.config.js`, `webpack.*.js` |
+| — | (no domain label) | Everything else (`layouts/`, `assets/`, `data/`, etc.). `review:shared` checks still run on these. |
 
-If the PR touches more than one domain, apply each domain label **and** add `review:mixed` so downstream tooling can fan out.
+Notes on the precedence:
+
+- A per-program `package.json` under `static/programs/<name>/package.json` is programs territory, not infra. Likewise for `Pulumi.yaml`, `requirements.txt`, `package-lock.json`, and every other dep manifest inside a program directory.
+- `scripts/programs/**` (e.g., `scripts/programs/ignore.txt`, `scripts/programs/test.sh`) is programs tooling. Classify as `review:programs`, not `review:infra`.
+- Only the **repo root** `package.json` and `Makefile` count as infra. Any `Makefile` inside a program directory is programs.
+
+If the resulting label set contains more than one domain (e.g., a PR that touches `content/docs/` and `static/programs/`), apply each domain label **and** add `review:mixed` so downstream tooling can fan out.
 
 ### 2. Triviality (`review:trivial`)
 

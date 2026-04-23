@@ -54,16 +54,18 @@ Treat the diff as the source of truth for what changed. If `--json files` lists 
 
 ### 2. Compose the review
 
-For each changed file, route to the appropriate domain file based on path:
+For each changed file, route to **exactly one** domain using path-precedence order. A file is classified under the first rule that matches; do not double-count.
 
-| Path prefix | Compose |
-|---|---|
-| `content/docs/`, `content/learn/`, `content/tutorials/`, `content/what-is/` | `_common/review-shared.md` + `_common/review-docs.md` |
-| `content/blog/`, `content/customers/` | `_common/review-shared.md` + `_common/review-blog.md` |
-| `static/programs/` | `_common/review-shared.md` + `_common/review-programs.md` |
-| `.github/workflows/`, `scripts/`, `infrastructure/`, `Makefile`, `package.json`, `webpack.config.js`, `webpack.*.js` | `_common/review-shared.md` + `_common/review-infra.md` |
+| Order | Compose | Applies when the file path matches |
+|---|---|---|
+| 1 | `_common/review-shared.md` + `_common/review-programs.md` | `static/programs/**` (includes every nested file in a program directory) |
+| 2 | `_common/review-shared.md` + `_common/review-blog.md` | `content/blog/**`, `content/customers/**` |
+| 3 | `_common/review-shared.md` + `_common/review-docs.md` | `content/docs/**`, `content/learn/**`, `content/tutorials/**`, `content/what-is/**` |
+| 4 | `_common/review-shared.md` + `_common/review-infra.md` | `.github/workflows/**`, `scripts/**` except `scripts/programs/**`, `infrastructure/**`, `Makefile` (repo root), `package.json` (repo root only), `webpack.config.js`, `webpack.*.js` |
 
 A PR may touch files in more than one domain. Run each file under its appropriate domain; merge the findings into a single output object before posting.
+
+Ordering note: a per-program `package.json` under `static/programs/<name>/package.json` is programs, not infra. `scripts/programs/**` is programs tooling, not site infra.
 
 ### 3. Fact-check (gated)
 

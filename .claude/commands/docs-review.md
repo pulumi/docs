@@ -52,10 +52,13 @@ Review every changed file in the branch.
 
 Once scope is determined, apply the criteria in [`_common/docs-review-core.md`](_common/docs-review-core.md), composing the appropriate domain files based on which paths are touched:
 
-- `content/docs/**` → `_common/review-shared.md` + `_common/review-docs.md`
+Path-precedence order — a file is classified under the first rule that matches:
+
+- `static/programs/**` → `_common/review-shared.md` + `_common/review-programs.md` (includes every nested file in a program directory)
 - `content/blog/**`, `content/customers/**` → `_common/review-shared.md` + `_common/review-blog.md`
-- `static/programs/**` → `_common/review-shared.md` + `_common/review-programs.md`
-- `.github/workflows/**`, `scripts/**`, `infrastructure/**`, `Makefile`, `package.json`, `webpack.config.js` → `_common/review-shared.md` + `_common/review-infra.md`
+- `content/docs/**`, `content/learn/**`, `content/tutorials/**`, `content/what-is/**` → `_common/review-shared.md` + `_common/review-docs.md`
+- `.github/workflows/**`, `scripts/**` except `scripts/programs/**`, `infrastructure/**`, `Makefile` (repo root), `package.json` (repo root only), `webpack.config.js`, `webpack.*.js` → `_common/review-shared.md` + `_common/review-infra.md`
+- Anything else → `_common/review-shared.md` only
 - A mixed PR runs each file under its appropriate domain and merges the findings.
 
 For PR-number invocations, use:

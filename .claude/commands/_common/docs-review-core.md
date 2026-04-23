@@ -116,17 +116,19 @@ These rules apply to every review, regardless of entry point or domain. Bake the
 
 ### Domain selection (per file)
 
-Both entry points route each changed file to a domain based on its path. The same rules are listed in `docs-review.md` and `docs-review-ci.md` for visibility — this is the canonical source.
+Each changed file is routed to **exactly one** domain. Apply rules in the order below; a file is classified under the first rule that matches, and subsequent rules do not re-apply to that file. The same rules live in `triage.md`, `docs-review.md`, and `docs-review-ci.md` for visibility — this is the canonical source.
 
-| Path prefix | Domain |
-|---|---|
-| `content/docs/`, `content/learn/`, `content/tutorials/`, `content/what-is/` | `review-docs.md` |
-| `content/blog/`, `content/customers/` | `review-blog.md` |
-| `static/programs/` | `review-programs.md` |
-| `.github/workflows/`, `scripts/`, `infrastructure/`, `Makefile`, `package.json`, `webpack.config.js`, `webpack.*.js` | `review-infra.md` |
-| Anything else (e.g., `layouts/`, `assets/`, `data/`) | `review-shared.md` only |
+| Order | Domain | Applies when the file path matches |
+|---|---|---|
+| 1 | `review-programs.md` | `static/programs/**` (includes every nested file in a program directory: `Pulumi.yaml`, `package.json`, `requirements.txt`, source files) |
+| 2 | `review-blog.md` | `content/blog/**`, `content/customers/**` |
+| 3 | `review-docs.md` | `content/docs/**`, `content/learn/**`, `content/tutorials/**`, `content/what-is/**` |
+| 4 | `review-infra.md` | `.github/workflows/**`, `scripts/**` except `scripts/programs/**`, `infrastructure/**`, `Makefile` (repo root), `package.json` (repo root only), `webpack.config.js`, `webpack.*.js` |
+| 5 | `review-shared.md` only | Anything else (`layouts/`, `assets/`, `data/`, etc.) |
 
 `review-shared.md` is applied to every file, regardless of domain. Mixed PRs run each file under its appropriate domain and merge findings into one output object.
+
+The ordering matters: a per-program `package.json` under `static/programs/<name>/package.json` is programs, not infra. `scripts/programs/**` (e.g., `scripts/programs/ignore.txt`) is programs tooling, not site infra. Only the repo-root `package.json` and `Makefile` count as infra.
 
 ### Fact-check
 
