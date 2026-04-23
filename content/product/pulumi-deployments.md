@@ -56,7 +56,7 @@ options:
           title: REST API
           description: Deploy infrastructure by calling the Pulumi Service REST API. You can also use the API to run [Remote Automation API](/docs/platform/deployments/reference/#rest-api) code.
         - icon: eye
-          icon_color: fuchsia
+          icon_color: violet
           title: Review Stacks
           description: Automate the creation and deletion of dedicated cloud environments for every pull request, enabling cost-effective reviews.
         - icon: lightning

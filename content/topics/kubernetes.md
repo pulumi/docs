@@ -247,7 +247,7 @@ superpowers:
       cta: Learn more
       cta_url: "/docs/iac/concepts/"
       icon_type: architecture
-      icon_color: fuchsia
+      icon_color: violet
       description: |
         YAML and templated DSLs force you to write the same boilerplate code over and over.
         Pulumi’s Kubernetes library allows you to codify those patterns and best practices so
@@ -296,7 +296,7 @@ detail_sections:
 
           - title: Pulumi Kubernetes Operator
             icon: pen
-            icon_color: fuchsia
+            icon_color: violet
             description: Deploy both Kubernetes resources and cloud infrastructure from within the Kubernetes resource model using a GitOps workflow. Use Pulumi's Flux and ArgoCD integrations along with many other CI/CD integrations.
 
     - title: AI-powered Kubernetes Management

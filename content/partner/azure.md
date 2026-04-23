@@ -198,7 +198,7 @@ detail_sections:
 
         - title: Convenience Functions
           icon: pen
-          icon_color: fuchsia
+          icon_color: violet
           description: The provider also contains functions to retrieve keys, secrets, and connection strings from all resources that expose them.
 
         - title: Automate Delivery

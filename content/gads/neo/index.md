@@ -57,7 +57,7 @@ why_neo:
     - title: Cut Cloud Waste
       description: "Find idle or oversized resources across AWS, Azure, and Google Cloud, then right-size or remove safely."
       icon: cycle
-      color: fuchsia
+      color: violet
       button_text: Try This in Neo
       button_url: "https://app.pulumi.com/pulumi/neo?prompt=Find%20idle%20and%20oversized%20resources%20and%20propose%20rightsizing&prefer_signup=true"
     - title: Works Where You Work
