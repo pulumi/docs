@@ -84,7 +84,7 @@
                         <p>{{ $item.description | markdownify }}</p>
                     {{ end }}
                 </div>
-                <div class="card bg-white shadow-xl p-6 block">
+                <div class="card bg-white  p-6 block">
                     <div>
                         {{ partial "language-chooser-svgs.html" (dict) }}
                     </div>
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="flex items-center justify-center mt-8">
-                    <img src="{{ .Params.secrets.image }}" alt="{{ .Params.secrets.alt }}" class="card shadow-xl" />
+                    <img src="{{ .Params.secrets.image }}" alt="{{ .Params.secrets.alt }}" class="card " />
                 </div>
             </div>
         </div>
@@ -145,7 +145,7 @@
                 </div>
 
                 <div class="flex items-center justify-center mt-8 px-8">
-                    <div class="card bg-white shadow-xl p-6">
+                    <div class="card bg-white  p-6">
                         <img src="{{ .Params.embed.image }}" alt="{{ .Params.embed.alt }}" />
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                 </div>
 
                 <div class="flex items-center justify-center mt-8">
-                    <img src="{{ .Params.security.image }}" class="card shadow-xl" />
+                    <img src="{{ .Params.security.image }}" class="card " />
                 </div>
             </div>
         </div>
@@ -184,7 +184,7 @@
         </div>
 
         <div class="container mx-auto z-10 relative">
-            <div class="card bg-white shadow-xl p-6 w-full lg:w-2/3 mx-auto">
+            <div class="card bg-white  p-6 w-full lg:w-2/3 mx-auto">
                 <div class="z-10 px-8">
                     <h3>{{ .Params.ai.title }}</h3>
                     <p class="text-lg">{{ .Params.ai.description | markdownify }}</p>

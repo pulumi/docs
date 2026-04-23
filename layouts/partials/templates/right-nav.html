@@ -22,7 +22,7 @@
     <span class="whitespace-nowrap flex-1">
         {{ partial "templates/source-link" (dict "prefix" .Params.template.prefix "languages" (delimit .Params.template.languages ",")) }}
     </span>
-    <span><i class="text-violet-800 fas fa-external-link-alt text-xs ml-1.5 pb-1"></i></span>
+    <span><i class="text-violet-primary fas fa-external-link-alt text-xs ml-1.5 pb-1"></i></span>
 </div>
 
 {{ $thisCloud := $.Page.Params.cloud.slug }}
@@ -38,7 +38,7 @@
             {{ if ne $thisCloud $siblingCloud.slug }}
                 <li class="">
                     <span class="inline-flex items-center">
-                        <a class="text-violet-800" href="{{ .RelPermalink }}">
+                        <a class="text-violet-primary" href="{{ .RelPermalink }}">
                             {{ $siblingCloud.name }}
                         </a>
                     </span>

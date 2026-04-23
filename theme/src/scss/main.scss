@@ -312,7 +312,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     }
 
     .link {
-        @apply text-violet-800;
+        @apply text-violet-primary;
     }
 
     .section-blog, .section-tags, .section-authors {

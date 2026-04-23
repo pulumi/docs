@@ -31,7 +31,7 @@
                             {{ $provider := index (and ((where site.Data.tutorials.collections "type" "provider")) ((where site.Data.tutorials.collections "id" $id))) 0 }}
 
                             <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
-                                <div class="p-6 border border-gray-300 w-full gradient-card shadow-xl rounded-md h-full">
+                                <div class="p-6 border border-gray-300 w-full gradient-card  rounded-md h-full">
                                     <div class="flex items-center justify-between mb-4">
                                         <h3 class="flex-grow whitespace-nowrap font-display font-normal no-anchor mb-0">{{ $provider.name }} tutorials</h3>
                                         <img class="h-6 flex-shrink hidden sm:block" src="{{ $provider.logo }}" />

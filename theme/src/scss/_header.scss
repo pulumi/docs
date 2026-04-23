@@ -226,7 +226,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                                     border-top: 2px solid var(--color-violet-primary);
                                 }
                                 .header-nav-drop-down-heading-text {
-                                    @apply font-medium;
+                                    @apply font-semibold;
                                     @apply mx-auto;
                                     @apply w-min;
                                     @apply px-2;
@@ -260,7 +260,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                                 flex: 50%;
 
                                 .list-title {
-                                    @apply px-0 text-base text-left w-full font-medium;
+                                    @apply px-0 text-base text-left w-full font-semibold;
                                 }
 
                                 .list-sub-title {
@@ -414,7 +414,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                 @apply mt-2 text-base hidden;
                 flex-basis: 100%;
                 a {
-                    @apply text-xl font-medium text-gray-700 mt-4;
+                    @apply text-xl font-semibold text-gray-700 mt-4;
                     color: theme("colors.gray.800");
                     i {
                         min-width: 2rem;

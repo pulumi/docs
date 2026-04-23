@@ -11,7 +11,7 @@
 
         li {
             > a {
-                @apply inline-flex w-max text-base font-medium text-center text-gray-700 no-underline;
+                @apply inline-flex w-max text-base font-semibold text-center text-gray-700 no-underline;
             }
 
             &:hover {
@@ -42,11 +42,6 @@
     img {
         height: 115px;
     }
-}
-
-.careers-cta {
-    border-bottom: 4px solid var(--color-violet-primary);
-    border-top: 4px solid var(--color-violet-primary);
 }
 
 #awards {

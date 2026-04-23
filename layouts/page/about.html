@@ -1,6 +1,6 @@
 {{ define "hero" }}
-    <div class="about-us-gradient-hero h-96 w-full relative">
-        <div class="photo-background w-full h-full overflow-hidden content-center pointer-events-none mx-auto">
+    <div class="h-96 w-full relative mb-12">
+        <div class="photo-background w-full h-full overflow-hidden content-center pointer-events-none mx-auto lg:rounded-lg">
             <img src="/images/about-us/team.png" alt="Pulumi team photo"/>
         </div>
     </div>
@@ -8,12 +8,9 @@
 
 {{ define "main" }}
     <section id="we-are-pulumi" class="">
-        <div class="dot-background-container">
-            <div class="dot-background no-animate"></div>
-        </div>
         <div class="dot-overlay"></div>
         <div class="title h-30 md:h-40 ml-6 xl:ml-40 mt-1.5">
-            <h2 class="text-4xl md:text-6xl bg-white px-6 mb-0 pb-6">We are Pulumi</h2>
+            <h2 class="text-4xl md:text-5xl bg-white px-6 mb-0 pb-6">We are Pulumi</h2>
             <div class="flex h-14 w-full lg:w-10/12 ">
                 <div class="w-6 bg-white"></div>
                 <div class="about-navigation-container event-list-filter flex flex-grow">
@@ -32,32 +29,23 @@
     </section>
 
     <section id="who-we-are" class="container mx-auto py-8 px-4 text-center text-lg">
-        <h3 class="font-medium text-6xl">Our purpose</h3>
-        <h4 class="font-medium text-4-xl">To democratize the cloud for every engineer.</h4>
+        <h3 class="font-semibold text-5xl">Our purpose</h3>
+        <h4 class="font-semibold text-4xl">To democratize the cloud for every engineer.</h4>
         <p class="text-gray-700 text-xl mb-10">We help engineers ship infrastructure faster with Infrastructure as Code in general-purpose languages.</p>
         <a href="{{ relref . "leadership" }}" class="btn-primary">Meet our leaders</a>
     </section>
 
     <section id="what-we-believe" class="text-center text-lg py-8 relative">
-        <div class="shape-background about-what-we-believe overflow-hidden">
-            <div class="shape-container">
-                <div class="circle-top-left"></div>
-                <div class="circle-middle-left"></div>
-                <div class="circle-bottom-left"></div>
-                <div class="circle-top-right"></div>
-                <div class="circle-bottom-right"></div>
-            </div>
-        </div>
         <div class="container mx-auto">
-            <h2 class="mb-8 text-center">Our Values</h2>
+            <h2 class="mb-8 text-center">Our values</h2>
             <div class="large-container mx-auto hidden lg:block overflow-hidden">
                 <pulumi-swiper slides="3" centered-slides="true" initial-slide="3" loop="true" autoplay="false" nav-controls="true">
                     {{ range $value := .Params.values }}
                         <pulumi-swipeable>
                             <div class="w-full px-4 text-center ">
                                 <div class="value-card flex flex-col card p-8 bg-white text-center">
-                                    <i class="fas fa-{{ $value.icon }} text-{{ $value.color }}-600 text-6xl"></i>
-                                    <h4 class="font-display font-medium text-3xl">{{ $value.title }}</h4>
+                                    <i class="fas fa-{{ $value.icon }} text-violet-primary text-5xl"></i>
+                                    <h4 class="font-display font-semibold text-3xl">{{ $value.title }}</h4>
                                     <p class="text-base text-gray-700">{{ $value.content }}</p>
                                 </div>
                             </div>
@@ -68,48 +56,43 @@
             <div class="large-container values-flex mx-auto w-full flex lg:hidden flex flex-wrap gap-x-8 gap-y-6 justify-center">
                 {{ range $value := .Params.values }}
                     <div class="value-card flex flex-col card p-8 bg-white text-center">
-                        <i class="fas fa-{{ $value.icon }} text-{{ $value.color }}-600 text-6xl"></i>
-                        <h4 class="font-display font-medium">{{ $value.title }}</h4>
+                        <i class="fas fa-{{ $value.icon }} text-{{ $value.color }}-600 text-5xl"></i>
+                        <h4 class="font-display font-semibold">{{ $value.title }}</h4>
                         <p class="text-base text-gray-700">{{ $value.content }}</p>
                     </div>
                 {{ end }}
             </div>
         </div>
-        <div class="careers-cta py-6 w-full mt-28 bg-white">
-            <h4>Like what we stand for? <a href="{{ relref . "/careers" }}" class="font-bold text-violet-primary">Join us.</a></h4>
+        <div class="py-6 container mx-auto mt-14">
+            <div class="rounded-lg bg-violet-50 p-8 mx-auto max-w-4xl w-full">
+            <h4>Like what we stand for? <a href="{{ relref . "/careers" }}" class="text-violet-primary">Join us.</a></h4>
             <p>We are looking for new teammates who want to build the future of cloud infrastructure together.</p>
+            </div>
         </div>
     </section>
 
-    <div class="w-full h-16 mt-4">
-        <div class="dot-background no-animate"></div>
-    </div>
-
     <section id="community" class="container mx-auto py-8 px-4 mb-36 text-center text-lg flex flex-col items-center max-w-screen-lg">
-        <h3 class="font-medium text-6xl">Pulumi is about community</h3>
+        <h3 class="font-semibold text-5xl">Pulumi is about community</h3>
         <p>
             Pulumi's Infrastructure as Code SDK is an open source project and our community inspires everything we do. We're constantly improving the developer experience of
             building on the cloud because of our community's feedback and contributions. Also, we're backed by venture capitalists who believe in our open source values and the
             business. Here are some ways that we recognize our community:
         </p>
         <div class="flex mt-6 flex-wrap lg:flex-nowrap justify-start">
-            <div class="community-spotlight mx-auto flex flex-col justify-cetner items-center w-72 md:w-1/3 my-6 px-3">
-                <img src="/images/mascot/victory-medal-pulumipus.svg" alt="Pulumipus wearing a medal with two hands raised" />
-                <div class="header mt-6 mb-1.5 text-medium text-2xl">The Puluminaries</div>
-                <p class="text-left flex-grow">A group for stellar Pulumi community members who have made "above and beyond" contributions to the community.</p>
-                <a href="{{ relref . "/community/puluminaries" }}" class="btn-primary">Meet our Puluminaries</a>
+            <div class="community-spotlight mx-auto flex flex-col justify-center items-center w-72 md:w-1/3 my-6 px-3">
+                <div class="header mb-1.5 font-semibold text-2xl">The Puluminaries</div>
+                <p class="flex-grow">A group for stellar Pulumi community members who have made "above and beyond" contributions to the community.</p>
+                <a href="{{ relref . "/community/puluminaries" }}" class="btn-secondary">Meet our Puluminaries</a>
             </div>
-            <div class="community-spotlight mx-auto flex flex-col justify-cetner items-center w-72 md:w-1/3 my-6 px-3">
-                <img src="/images/mascot/rocketpus.svg" alt="Pulumipus wearing a medal with two hands raised" />
-                <div class="header mt-6 mb-1.5 text-medium text-2xl">The Pulumiverse</div>
-                <p class="text-left flex-grow">A place for the Pulumi community to interact and collaborate on Pulumi-based learning resources.</p>
-                <a href="https://github.com/pulumiverse" target="_blank" rel="noopener noreferrer" class="btn-primary">Explore Pulumiverse</a>
+            <div class="community-spotlight mx-auto flex flex-col justify-center items-center w-72 md:w-1/3 my-6 px-3">
+                <div class="header mb-1.5 font-semibold text-2xl">The Pulumiverse</div>
+                <p class="flex-grow">A place for the Pulumi community to interact and collaborate on Pulumi-based learning resources.</p>
+                <a href="https://github.com/pulumiverse" target="_blank" rel="noopener noreferrer" class="btn-secondary">Explore Pulumiverse</a>
             </div>
-            <div class="community-spotlight mx-auto flex flex-col justify-cetner items-center w-72 md:w-1/3 my-6 px-3">
-                <img src="/images/mascot/hoodie-pulumipus.svg" alt="Pulumipus wearing a Pulumi hoodie" />
-                <div class="header  /leadershipt-6 mb-1.5 text-medium text-2xl">Pulumi users</div>
-                <p class="text-left flex-grow">Engineers love Pulumi! Don’t believe us? Check out what our users have to say.</p>
-                <a href="{{ relref . "/testimonials" }}" class="btn-primary ">Read user quotes</a>
+            <div class="community-spotlight mx-auto flex flex-col justify-center items-center w-72 md:w-1/3 my-6 px-3">
+                <div class="header mb-1.5 font-semibold text-2xl">Pulumi users</div>
+                <p class="flex-grow">Engineers love Pulumi! Don't believe us? Check out what our users have to say.</p>
+                <a href="{{ relref . "/testimonials" }}" class="btn-secondary ">Read user quotes</a>
             </div>
         </div>
     </section>
@@ -119,9 +102,9 @@
     </div>
 
     <section id="history" class="container mx-auto py-8 px-4 text-center text-lg">
-        <h3 class="font-medium text-6xl mb-8">Our journey</h3>
+        <h3 class="font-semibold text-5xl mb-8">Our journey</h3>
         <div class="mx-auto max-w-4xl">
-            <p class="font-medium text-3xl text-gray-900 font-display">Pulumi was created to make the cloud vastly simpler (and more fun) to use for developers and engineers.</p>
+            <p class="text-3xl text-gray-900 font-display">Pulumi was created to make the cloud vastly simpler (and more fun) to use for developers and engineers.</p>
         </div>
         <div class="visualization justify-center hidden md:flex">
             <img src="/images/about-us/journey.svg" alt="A timeline of Pulumi's history" />
@@ -193,7 +176,7 @@
             </div>
         </div>
         <div class="container mx-auto mb-10 text-center">
-            <h2 class="font-medium text-6xl mt-10 mb-8">Our awards &amp; recognition</h2>
+            <h2 class="font-semibold text-5xl mt-10 mb-8">Our awards &amp; recognition</h2>
             <ul class="list-none block p-0 inline-flex flex-wrap justify-center">
                 {{ range first 4 (where site.Data.awards.awards "featured" true) }}
                     <li class="mx-4 award flex items-center justify-center">
@@ -216,7 +199,7 @@
     <section id="newsroom" class="py-16 px-4">
         <div class="container mx-auto md:flex items-top max-w-5xl">
             <div class="md:w/1-2 md:px-8">
-                <h3 class="text-center md:text-left font-medium text-6xl">Press Releases</h3>
+                <h3 class="text-center md:text-left font-semibold text-5xl">Press releases</h3>
                 <ul class="list-none mt-8 p-0">
                     {{ range first 2 site.Data.newsroom.releases }}
                         <li class="pb-4">
@@ -229,7 +212,7 @@
                 <a class="text-violet-primary font-bold" href="{{ relref . "newsroom" }}">View all press releases</a>
             </div>
             <div class="md:w/1-2 md:px-8">
-                <h3 class="text-center md:text-left font-medium text-6xl">Recent News</h3>
+                <h3 class="text-center md:text-left font-semibold text-5xl">Recent news</h3>
                 <ul class="list-none mt-8 p-0">
                     {{ range first 2 site.Data.newsroom.coverage }}
                         <li class="pb-4">
@@ -250,7 +233,7 @@
     </div>
 
     <section id="join-us" class="container mx-auto py-8 px-4 text-center text-lg mb-24">
-        <h3 class="font-medium text-6xl">Join our team</h3>
+        <h3 class="font-semibold text-5xl">Join our team</h3>
         <h4>We are fully remote and hiring!</h4>
         <p class="mb-9">Our team is a diverse and talented group of individuals from all walks of life.</p>
         <a href="{{ relref . "/careers" }}" class="btn-primary">Browse open positions</a>

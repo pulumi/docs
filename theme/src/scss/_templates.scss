@@ -749,7 +749,7 @@
     }
 
     .event-card-date-month {
-        @apply text-center font-body font-medium;
+        @apply text-center font-body font-semibold;
         font-size: 0.65rem;
         letter-spacing: 0.5px;
         color: #757576;
@@ -838,7 +838,7 @@
     }
 
     .timing-info-label {
-        @apply font-body font-medium text-body-s pb-2 mb-2 border-b uppercase tracking-wide;
+        @apply font-body font-semibold text-body-s pb-2 mb-2 border-b uppercase tracking-wide;
         font-feature-settings: 'salt' on;
         color: #757576;
         border-color: #E8E8E8;
