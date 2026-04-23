@@ -1,16 +1,30 @@
 name: Claude Code Review
 
-# Full review fires on the draft → ready transition. Synchronize events
-# only mark the existing review stale (no rerun). Initial PR open is
-# triaged separately by claude-triage.yml.
+# Full review is chained to complete AFTER Claude Triage, so the review
+# sees the freshly-applied domain and fact-check labels. Listening to
+# the same ready_for_review event as triage produced a race: review
+# read labels at workflow-start time, before triage wrote them, so
+# review:trivial short-circuits and fact-check:needed gating were
+# broken on initial runs.
+#
+# Triage runs on [opened, reopened, ready_for_review]. When it completes,
+# the workflow_run event fires here. A runtime pr-context step then
+# decides whether this particular PR is eligible (skip drafts, trivial
+# PRs, and bot authors).
+#
+# Synchronize events keep the mark-stale behavior on pull_request.
 on:
   pull_request:
-    types: [ready_for_review, synchronize]
+    types: [synchronize]
+  workflow_run:
+    workflows: ["Claude Triage"]
+    types: [completed]
 
 jobs:
   # synchronize → just mark the existing pinned review stale.
   mark-stale:
     if: |
+      github.event_name == 'pull_request' &&
       github.event.action == 'synchronize' &&
       github.event.pull_request.user.login != 'pulumi-bot' &&
       github.event.pull_request.user.login != 'dependabot[bot]'
@@ -31,14 +45,18 @@ jobs:
           fi
 
   claude-review:
+    # Fire only for workflow_run events from Claude Triage that were
+    # themselves triggered by a pull_request. The pull_requests array
+    # is populated by GitHub when the originating workflow ran in a PR
+    # context on the same repo.
     if: |
-      github.event.action == 'ready_for_review' &&
-      github.event.pull_request.user.login != 'pulumi-bot' &&
-      github.event.pull_request.user.login != 'dependabot[bot]' &&
-      !contains(github.event.pull_request.labels.*.name, 'review:trivial')
+      github.event_name == 'workflow_run' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.pull_requests != null &&
+      github.event.workflow_run.pull_requests[0] != null
 
     concurrency:
-      group: claude-review-${{ github.event.pull_request.number }}
+      group: claude-review-${{ github.event.workflow_run.pull_requests[0].number }}
       cancel-in-progress: true
 
     runs-on: ubuntu-latest
@@ -54,7 +72,51 @@ jobs:
         with:
           fetch-depth: 1
 
+      # Resolve all PR state freshly via gh pr view so we see labels
+      # that triage just wrote. Decides eligibility and skip reasons
+      # in one place.
+      - name: Resolve PR context
+        id: pr-context
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ github.event.workflow_run.pull_requests[0].number }}"
+          REPO="${{ github.repository }}"
+
+          DATA=$(gh pr view "$PR" --repo "$REPO" --json isDraft,labels,user,headRefOid)
+          IS_DRAFT=$(echo "$DATA" | jq -r '.isDraft')
+          AUTHOR=$(echo "$DATA" | jq -r '.user.login')
+          LABELS_JSON=$(echo "$DATA" | jq -c '[.labels[].name]')
+          LABELS_CSV=$(echo "$DATA" | jq -r '[.labels[].name] | join(",")')
+          HEAD_SHA=$(echo "$DATA" | jq -r '.headRefOid')
+
+          SKIP=""
+          if [[ "$IS_DRAFT" == "true" ]]; then
+            SKIP="draft"
+          elif [[ ",$LABELS_CSV," == *",review:trivial,"* ]]; then
+            SKIP="trivial"
+          elif [[ "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ]]; then
+            SKIP="bot-author"
+          fi
+
+          {
+            echo "pr_number=$PR"
+            echo "is_draft=$IS_DRAFT"
+            echo "author=$AUTHOR"
+            echo "labels_csv=$LABELS_CSV"
+            echo "labels_json=$LABELS_JSON"
+            echo "head_sha=$HEAD_SHA"
+            echo "skip_reason=$SKIP"
+          } >> "$GITHUB_OUTPUT"
+
+          if [[ -n "$SKIP" ]]; then
+            echo "review: pr=$PR skip=$SKIP (labels=$LABELS_CSV, draft=$IS_DRAFT, author=$AUTHOR)"
+          else
+            echo "review: pr=$PR proceed (labels=$LABELS_CSV)"
+          fi
+
       - name: Check repository write access
+        if: steps.pr-context.outputs.skip_reason == ''
         id: check-access
         run: |
           # Use the actual repository the workflow is running in, not a hardcoded
@@ -62,7 +124,7 @@ jobs:
           # hardcoded owner/repo would always return "none" in fork-based testing
           # and in repo transfers.
           REPO_FULL="${{ github.repository }}"
-          AUTHOR="${{ github.event.pull_request.user.login }}"
+          AUTHOR="${{ steps.pr-context.outputs.author }}"
 
           if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
@@ -94,7 +156,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          PR="${{ github.event.pull_request.number }}"
+          PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
           BODY='<!-- CLAUDE_PROGRESS -->
           🐿️ Reviewing — this usually takes a minute or two.'
@@ -119,23 +181,23 @@ jobs:
           prompt: |
             You are running in a CI environment.
 
-            Review pull request #${{ github.event.pull_request.number }} by following the
+            Review pull request #${{ steps.pr-context.outputs.pr_number }} by following the
             instructions in `.claude/commands/docs-review-ci.md`.
 
             The PR's labels (set by claude-triage.yml) drive domain selection and
             fact-check gating:
 
-            ${{ toJson(github.event.pull_request.labels.*.name) }}
+            ${{ steps.pr-context.outputs.labels_json }}
 
             After producing the review, post it via:
 
               bash .claude/commands/_common/scripts/pinned-comment.sh upsert \
-                --pr ${{ github.event.pull_request.number }} \
+                --pr ${{ steps.pr-context.outputs.pr_number }} \
                 --body-file <path-to-rendered-review>
 
             Then apply the `review:claude-ran` label and remove `review:claude-stale` if present:
 
-              gh pr edit ${{ github.event.pull_request.number }} \
+              gh pr edit ${{ steps.pr-context.outputs.pr_number }} \
                 --add-label review:claude-ran --remove-label review:claude-stale
           claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr edit:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh pr list:*),Bash(bash .claude/commands/_common/scripts/pinned-comment.sh:*)"'
 
@@ -147,7 +209,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          PR="${{ github.event.pull_request.number }}"
+          PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
           if [ "${{ steps.claude-review.outcome }}" = "success" ]; then
