@@ -289,5 +289,78 @@ fbbead72 Fix hardcoded pulumi/docs in workflow write-access checks
 a38e9259 Fix Resolve PR context: user → author, drop unused headRefOid
 7c3afbc6 Path-precedence ordering on domain selection
 83cdc6f7 Make triage delta computation explicit
-(this commit) Append Session 3 notes
+f3927ffb Append Session 3 notes
+82d13549 Workflow prompt: emphasize the removal step in triage delta
+094cbd7b Replace claude-code-action with direct Anthropic API + shell delta
+8e688d0c pinned-comment.sh: strip inbound CLAUDE_REVIEW markers before split
+(this commit) Session 3 continuation
 ```
+
+## Session 3 continuation — triage determinism and marker-strip fix
+
+Work after the initial Session 3 writeup:
+
+### Triage was still unreliable on label removal
+
+Even after rewriting triage.md's procedure with explicit TARGET / ADD / REMOVE steps (commit `83cdc6f7`) and adding prompt-level emphasis in the workflow (commit `82d13549`), Sonnet inside `claude-code-action@v1` kept skipping `gh pr edit --remove-label` when ADD was empty. Two successive runs on PR #28 saw stale `review:infra` + `review:mixed` labels and left them in place.
+
+Root cause: the agentic loop lets the model decide whether to make the tool call. Sonnet's decision was "nothing new to add → skip the edit," even when the procedure explicitly said otherwise. Prompt tuning couldn't reliably fix this; the decision was the wrong place to put the logic.
+
+**Fix (commit `094cbd7b`):** replace `claude-code-action@v1` with a direct `curl` to `api.anthropic.com/v1/messages` and move the label arithmetic entirely into shell:
+
+- Sonnet only produces a classification (`target_domains`, `trivial`, `fact_check_needed`, `agent_authored`, `reasoning`) as one JSON object.
+- The shell reads current labels, builds TARGET per triage.md's rules (review:mixed when multiple domains, trivial supersedes fact-check:needed), and computes `ADD = TARGET - EXISTING`, `REMOVE = EXISTING - TARGET` (excluding state labels).
+- A single `gh pr edit` call applies the delta; removal is now deterministic.
+
+Verified on PR #28: stale `review:infra` and `review:mixed` were correctly removed on the next cycle. Log output:
+> `triage: pr=28 domains=review:programs trivial=false fact-check=true agent-authored=false added=none removed=review:mixed,review:infra`
+
+Runtime dropped from 60-90s to ~39s. Not the 15-25s I'd hoped for (GitHub Actions runner boot + checkout is a larger chunk than I'd estimated) but the determinism win is more important than the speed.
+
+### Duplicate marker in re-entrant pinned comment
+
+After the force-push re-entrant test on PR #24, the pinned comment ended up with TWO `<!-- CLAUDE_REVIEW 1/1 -->` lines at the top. Sonnet copied the previous body verbatim (marker included) into its upsert input, and `render_with_markers` then prepended another marker on top.
+
+**Fix (commit `8e688d0c`):** add an awk guard in `split_body` that drops any inbound marker line before splitting:
+
+```
+/^<!-- CLAUDE_REVIEW [0-9]+\/[0-9]+ -->[[:space:]]*$/ { next }
+```
+
+The script is now the sole writer of markers regardless of caller discipline. Verified end-to-end: input body with two markers → `upsert` produced a pinned comment with exactly one.
+
+### Test-PR coverage
+
+Seven fork test PRs exercised the pipeline end-to-end before close:
+
+| PR | Shape | What it exercised |
+|---|---|---|
+| #24 docs-edit | Docs page + Lambda snippet with deliberate bugs | review-docs.md criteria; Case 3 re-verify; duplicate-marker bug surfacing + fix |
+| #25 blog-aislop | New blog post with AI-slop patterns + fab stats | review-blog.md heightened scrutiny; fact-check-first; 🤔 intuition-check |
+| #26 trivial-typo | One-line prose trim | `review:trivial` short-circuit (pre-race-fix; short-circuit now works via chained workflow) |
+| #27 infra-edit | `scripts/clean.sh` tightening | review-infra.md ⚠️-default bucket; triage → workflow_run chaining verified |
+| #28 programs-edit | New `static/programs/<name>/` TS program | review-programs.md heightened scrutiny; path-precedence rule (package.json under programs, not infra); triage delta removal |
+| #29 multi-domain | Docs + programs in one PR | review:mixed; multi-domain composition; fact-check:needed under heightened |
+| #30 rename-only | Pure file rename, no content | docs-review-ci.md empty-diff path; review-shared.md aliases rule |
+
+All closed with `--delete-branch` after testing.
+
+### Still open / deferred
+
+From the original "recommendations" punch list, still unresolved:
+
+- **Item 5-7 (@claude interactions).** Tested Case 3 re-verify on PR #24 multiple times. Did NOT explicitly exercise Case 1 fix-response (push fix + @claude) or Case 2 dispute (comment disagreement + @claude), or the draft-PR note (@claude on a draft with pinned review). All three are real re-entrant code paths that warrant coverage before merge.
+- **Force-push last-reviewed-sha fallback verification.** PR #24's branch was rebased (history rewritten), and an @claude mention fired after. The re-entrant run completed "success" but didn't update the pinned comment, which means Sonnet took the Case 3 no-commits path — not the force-push fallback. The fallback language in update-review.md is coded but unverified end-to-end.
+- **Triage time.** ~39s is better but still not great. Further speedup would require eliminating runner boot (composite action?) or the checkout step (which we need for the skill file contents). v2 work.
+- **Re-entrant should clear `review:claude-stale`** on successful update-review.md completion. Not wired.
+- **PR commit history cleanup.** Now at 25+ commits, several fix-on-fix. Squash or reorder before merge.
+- **Fork-only `claude.yml`** tweak has a banner comment but is easy to cherry-pick by mistake during a squash. Pre-merge grep-check recommended.
+
+### Fork state at session end
+
+- **Fork master (`camsoper/pulumi.docs`):** origin/CamSoper/pr-review-overhaul HEAD + one FORK-ONLY commit on top that swaps `claude.yml`'s ESC + `PULUMI_BOT_TOKEN` for the default `GITHUB_TOKEN`. Do not cherry-pick that commit upstream.
+- **Test PRs:** all closed, branches deleted.
+- **Labels:** 11 pipeline labels created in the fork via `gh label create --force`; persist.
+- **Secrets:** `ANTHROPIC_API_KEY` set on the fork by Cam. No ESC configuration.
+
+Re-enabling the fork for fresh testing: open a new PR against `camsoper/pulumi.docs` master. Triage fires on `opened`; chained review fires on `ready_for_review` via `workflow_run`.
