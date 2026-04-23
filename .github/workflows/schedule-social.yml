@@ -53,6 +53,12 @@ jobs:
 
       - uses: astral-sh/setup-uv@v7
 
+      - name: Configure git auth for private social_core git-dep
+        env:
+          PULUMI_BOT_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          git config --global url."https://x-access-token:${PULUMI_BOT_TOKEN}@github.com/".insteadOf "https://github.com/"
+
       - name: Validate upload-post.com API key
         env:
           UPLOAD_POST_API_KEY: ${{ steps.esc-secrets.outputs.UPLOAD_POST_API_KEY }}
