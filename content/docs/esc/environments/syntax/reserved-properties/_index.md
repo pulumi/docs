@@ -23,3 +23,7 @@ The [`esc` CLI](/docs/install/esc/) and other ESC consumers (e.g. the [`pulumi` 
 ## Pulumi IaC
 
 - [`pulumiConfig`](/docs/esc/environments/syntax/reserved-properties/pulumi-config)
+
+## Pulumi Policies
+
+- [`policyConfig`](/docs/esc/environments/syntax/reserved-properties/policy-config)
