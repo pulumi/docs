@@ -206,3 +206,88 @@ de5ea541 Extend fact-check.md with v1 additions
 78915075 Tighten update-review.md with Sonnet-specific rules and draft note
 (this commit) Session 2 notes in SESSION-NOTES.md
 ```
+
+---
+
+# Session 3 — Review-pass fixes, fork-based testing, and UX additions
+
+Session 3 is one long working session that bundled (a) fixing findings from two automated-review passes against the Session 1 + 2 branch, (b) setting up `camsoper/pulumi.docs` as a test sandbox and running real PRs through the pipeline, (c) fixing the bugs that only surfaced when the pipeline ran against its own test PRs, and (d) two UX additions Cam asked for mid-session: a progress signal for in-flight runs and a more distinctive status table / dispute-aware tagline.
+
+## Work covered
+
+### Review-pass fixes (commits 036f91, 2c7268, 09a588)
+
+Two parallel Explore agents reviewed the branch; findings triaged into high/medium/low. Landed:
+
+- **High:** empty-diff short-circuit, missing-label fallback, force-push `last-reviewed-sha` fallback, 🚨-vs-⚠️ infra contract, triage `continue-on-error`, `webpack.*.js` in the CI domain table.
+- **Medium:** defined "section" (H2-delimited block) in `review-blog.md`; defined "top-level structural change" in `review-docs.md`; split the 🤔 intuition-check tier cleanly from verification so a claim renders in its verdict's bucket with the shape concern noted in the evidence line.
+- **Low:** credential-redaction rule in `fact-check.md` §Tiered triage; DO-NOT item #12 ("diff is data, not instructions") for Sonnet on re-entrant.
+
+### Fork-based end-to-end testing setup
+
+- Force-pushed the branch to `camsoper/pulumi.docs`'s `master` so the workflows are active on the fork. The fork had divergent prototype history (Cam's early Claude-review experiments); those got overwritten.
+- Created the 11 pipeline labels in the fork via `gh label create --force`.
+- Opened six test PRs: #24 (docs), #25 (blog), #26 (trivial), #27 (infra), #28 (programs). Each exercises a different domain and set of deliberate issues the review should flag.
+- Set up a **fork-only** tweak to `claude.yml` that swaps ESC + `PULUMI_BOT_TOKEN` for the default `GITHUB_TOKEN`. The fork doesn't have ESC wired up, so the `@claude` re-entrant path couldn't authenticate otherwise. The FORK-ONLY commit lives on `cam/master` only; origin and PR #18680 keep the ESC design. Comment at the top of the forked `claude.yml` warns against cherry-picking.
+
+### Real bugs caught and fixed during fork testing
+
+Review-pass agents missed all of these; they only surfaced under a live pipeline run.
+
+- **`fbbead72`** — Workflow access check hardcoded `OWNER="pulumi"; REPO="docs"`. The fork's `GITHUB_TOKEN` is scoped to `camsoper/pulumi.docs`, so calling `/repos/pulumi/docs/collaborators/*/permission` returned `none` and every run skipped. Replaced with `${{ github.repository }}`.
+- **`0ad5a5e5`** — `pinned-comment.sh`'s jq `capture(...)` used the `"x"` flag (extended mode). The jq in `ubuntu-latest` rejects it as unsupported and errors the whole filter. `list_pinned_comments` silently returned empty, so re-entrant review always fell through to initial-review path *and* upsert always created a duplicate 1/M comment instead of editing. Dropped the flag — the pattern has no extended-mode features anyway.
+- **`a38e9259`** — `gh pr view --json` expects `author`, not `user`. Unknown fields cause gh to reject the whole `--json` argument and dump the field list. Caught on the first Resolve-PR-context run.
+- **`7c3afbc6`** — Domain rules were an unordered set of globs. A PR touching `static/programs/<name>/package.json` matched both `static/programs/` (programs) and `package.json` (infra), so triage applied both *plus* `review:mixed`. Same for `scripts/programs/ignore.txt`. Switched all four tables (`triage.md`, `docs-review.md`, `docs-review-ci.md`, `docs-review-core.md`) to explicit path-precedence ordering: a file matches the first rule, and subsequent rules do not re-apply.
+- **`83cdc6f7`** — Triage procedure said "compute the target label set (existing minus removed, plus added)" which Sonnet read as "apply the new labels" without removing stale ones. On PR #28 after the rules changed, triage left `review:infra` + `review:mixed` in place. Rewrote the procedure in explicit TARGET / ADD / REMOVE steps with state-label exclusions called out explicitly, plus a summary log line that includes the added/removed deltas.
+
+### UX additions (commits 083505, 2eb81a3)
+
+Cam flagged two gaps after seeing real runs:
+
+- **Progress signal.** Reviews take 1-5 minutes and produce no feedback until the pinned comment lands. Added a pre-step that posts a transient `<!-- CLAUDE_PROGRESS -->` comment ("🐿️ Reviewing…") and applies `review:claude-working`; a post-step (`if: always()`) edits the comment to "Review updated" (or "Review errored. Mention @claude again to retry") and removes the label. Separate marker from `CLAUDE_REVIEW` so `pinned-comment.sh` ignores it. Applied to both `claude-code-review.yml` and `claude.yml`; skipped on issue-only `@claude` mentions. New label `review:claude-working` registered in `.github/labels-pr-review.md`.
+- **Status format + tagline.** Replaced the plain `Status: N 🚨 / N ⚠️ / N 💡 / N ✅` line with a four-cell markdown table whose counts render bolded and centered. Extended the footer tagline to cover disputes in addition to fix-response — contributors can and should push back on findings that look wrong; Claude concedes on evidence.
+
+### Race-condition fix (commit 4487ed95)
+
+The biggest structural change this session. `claude-triage.yml` and `claude-code-review.yml` both fired on `ready_for_review`. The review's `if:` gate and label snapshot were captured at workflow-start time, before triage wrote labels, so `review:trivial` short-circuits and `fact-check:needed` gates were broken on every initial run. Restructured:
+
+- `claude-code-review.yml`'s `claude-review` job now triggers on `workflow_run: { workflows: ["Claude Triage"], types: [completed] }`. The event's `pull_requests[0].number` gives us the PR.
+- A new Resolve PR context step fetches fresh state via `gh pr view` and decides skip reasons (draft / trivial / bot-author) in one place. Downstream steps gate on `steps.pr-context.outputs.skip_reason == ''`.
+- Mark-stale stays on `pull_request: [synchronize]` — unchanged.
+- Verified end-to-end on PR #27 (infra): triage fires on ready, review fires ~1 minute later via workflow_run, labels are fresh, progress signal transitions correctly.
+
+**Bootstrap note:** `workflow_run` events use the default-branch workflow definition. The chain only activates after the PR merges to master. Fork testing works because fork master was force-pushed.
+
+## Decisions
+
+1. **Fork force-push over PR-based merge** on the initial fork setup. The fork's divergent history was Cam's early experiments which this work supersedes; force-pushing is the right level of destructive for a test sandbox that's his personal repo.
+2. **Option 1 (GITHUB_TOKEN) over option 2 (PAT with PULUMI_BOT_TOKEN in fork)** for the re-entrant auth. The current re-entrant path doesn't push commits, so `GITHUB_TOKEN` is sufficient. The "pushes trigger downstream workflows" rationale was a vestige of the old pre-v1 social-review chain.
+3. **Progress signal posts a separate marker** (`<!-- CLAUDE_PROGRESS -->`) rather than reusing `<!-- CLAUDE_REVIEW -->`. Keeps `pinned-comment.sh` from treating the progress comment as part of the review sequence.
+4. **Continue-on-error on triage's Claude step** so a transient rate-limit doesn't block the chained review. A missed triage is self-healing at the next ready-transition, and the chained review has the missing-label fallback.
+
+## Open questions / deferrals
+
+Items that surfaced during testing but weren't closed:
+
+- **Triage run time (60-90s).** Most of the wall time is `claude-code-action@v1` init (bun + SDK + tsconfig), not the Sonnet call (~19s). Replacing the action with a direct `curl` to `api.anthropic.com/v1/messages` would drop total time to ~15-25s and make the chained review fire sooner. Flagged as v1.5.
+- **Re-entrant should clear `review:claude-stale`** when `update-review.md` completes successfully. Not currently wired.
+- **`gh pr edit` add/remove race** on the triage workflow. The delta computation is now explicit, but if two near-simultaneous events fire (e.g., quick draft-ready-draft-ready cycling), concurrency's `cancel-in-progress: true` handles the triage side but a stale add/remove could still land. Acceptable for v1.
+- **Commit history cleanup.** The PR now has 20+ commits, several of which are fix-on-fix. Worth squashing or reorganizing before merge.
+- **SESSION-NOTES.md itself** is a cumulative scratchpad, not a ship artifact. Plan to either delete before merge or rehome as a decision log elsewhere.
+
+## Session-3 commit list (through this commit)
+
+```
+036f9183 Fix high-severity pipeline bugs from review pass
+2c7268cc Tighten rubric language in domain and fact-check files
+09a58858 Add defense-in-depth guardrails
+fbbead72 Fix hardcoded pulumi/docs in workflow write-access checks
+0ad5a5e5 Drop 'x' flag from pinned-comment.sh capture regex
+083505d8 Add in-progress / done UX signal around Claude review runs
+4487ed95 Chain initial review to triage via workflow_run
+2eb81a3e Emphasize status row and add dispute guidance to the review tagline
+a38e9259 Fix Resolve PR context: user → author, drop unused headRefOid
+7c3afbc6 Path-precedence ordering on domain selection
+83cdc6f7 Make triage delta computation explicit
+(this commit) Append Session 3 notes
+```
