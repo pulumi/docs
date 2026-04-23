@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class RefreshOptions
- </title>
+      <title>Class RefreshOptions </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class RefreshOptions
- ">
+      <meta name="title" content="Class RefreshOptions ">
     
+    <meta name="description" content="Options controlling the behavior of an  operation.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.Automation.RefreshOptions">
 
 
-  <h1 id="Pulumi_Automation_RefreshOptions" data-uid="Pulumi.Automation.RefreshOptions" class="text-break">Class RefreshOptions
-</h1>
+  <h1 id="Pulumi_Automation_RefreshOptions" data-uid="Pulumi.Automation.RefreshOptions" class="text-break">Class RefreshOptions</h1>
   <div class="markdown level0 summary"><p>Options controlling the behavior of an <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_RefreshAsync_Pulumi_Automation_RefreshOptions_System_Threading_CancellationToken_">RefreshAsync(RefreshOptions?, CancellationToken)</a> operation.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -89,6 +87,9 @@
     </div>
     <div>
       <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_Target">UpdateOptions.Target</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_Exclude">UpdateOptions.Exclude</a>
     </div>
     <div>
       <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_PolicyPacks">UpdateOptions.PolicyPacks</a>
@@ -127,6 +128,12 @@
       <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_Json">UpdateOptions.Json</a>
     </div>
     <div>
+      <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_ConfigFile">UpdateOptions.ConfigFile</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.automation.updateoptions.html#Pulumi_Automation_UpdateOptions_Profiling">UpdateOptions.Profiling</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
@@ -145,7 +152,7 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="../pulumi/pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.automation.html">Automation</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.automation.html">Automation</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Automation.dll</h6>
   <h5 id="Pulumi_Automation_RefreshOptions_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -154,15 +161,16 @@
   <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/refreshoptions.cs/#L10">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/RefreshOptions.cs/#L33">View Source</a>
   </span>
-  <a id="Pulumi_Automation_RefreshOptions_ExpectNoChanges_" data-uid="Pulumi.Automation.RefreshOptions.ExpectNoChanges*"></a>
-  <h4 id="Pulumi_Automation_RefreshOptions_ExpectNoChanges" data-uid="Pulumi.Automation.RefreshOptions.ExpectNoChanges">ExpectNoChanges</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Pulumi_Automation_RefreshOptions_ClearPendingCreates_" data-uid="Pulumi.Automation.RefreshOptions.ClearPendingCreates*"></a>
+  <h4 id="Pulumi_Automation_RefreshOptions_ClearPendingCreates" data-uid="Pulumi.Automation.RefreshOptions.ClearPendingCreates">ClearPendingCreates</h4>
+  <div class="markdown level1 summary"><p>Removes any pending create operations from the stack</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? ExpectNoChanges { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public bool? ClearPendingCreates { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,7 +188,115 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/refreshoptions.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/RefreshOptions.cs/#L18">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_RefreshOptions_ExpectNoChanges_" data-uid="Pulumi.Automation.RefreshOptions.ExpectNoChanges*"></a>
+  <h4 id="Pulumi_Automation_RefreshOptions_ExpectNoChanges" data-uid="Pulumi.Automation.RefreshOptions.ExpectNoChanges">ExpectNoChanges</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? ExpectNoChanges { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/RefreshOptions.cs/#L38">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_RefreshOptions_ImportPendingCreates_" data-uid="Pulumi.Automation.RefreshOptions.ImportPendingCreates*"></a>
+  <h4 id="Pulumi_Automation_RefreshOptions_ImportPendingCreates" data-uid="Pulumi.Automation.RefreshOptions.ImportPendingCreates">ImportPendingCreates</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="pulumi.automation.pendingcreatevalue.html">PendingCreateValue</a> values to import into the stack</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;PendingCreateValue&gt;? ImportPendingCreates { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.automation.pendingcreatevalue.html">PendingCreateValue</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/RefreshOptions.cs/#L16">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_RefreshOptions_PreviewOnly_" data-uid="Pulumi.Automation.RefreshOptions.PreviewOnly*"></a>
+  <h4 id="Pulumi_Automation_RefreshOptions_PreviewOnly" data-uid="Pulumi.Automation.RefreshOptions.PreviewOnly">PreviewOnly</h4>
+  <div class="markdown level1 summary"><p>Only show a preview of the refresh, but don't perform the refresh
+itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? PreviewOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/RefreshOptions.cs/#L43">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_RefreshOptions_RunProgram_" data-uid="Pulumi.Automation.RefreshOptions.RunProgram*"></a>
+  <h4 id="Pulumi_Automation_RefreshOptions_RunProgram" data-uid="Pulumi.Automation.RefreshOptions.RunProgram">RunProgram</h4>
+  <div class="markdown level1 summary"><p>Runs the program in the workspace to perform the refresh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? RunProgram { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/RefreshOptions.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Automation_RefreshOptions_ShowSecrets_" data-uid="Pulumi.Automation.RefreshOptions.ShowSecrets*"></a>
   <h4 id="Pulumi_Automation_RefreshOptions_ShowSecrets" data-uid="Pulumi.Automation.RefreshOptions.ShowSecrets">ShowSecrets</h4>
@@ -189,7 +305,34 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? ShowSecrets { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public bool? ShowSecrets { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/RefreshOptions.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_RefreshOptions_SkipPendingCreates_" data-uid="Pulumi.Automation.RefreshOptions.SkipPendingCreates*"></a>
+  <h4 id="Pulumi_Automation_RefreshOptions_SkipPendingCreates" data-uid="Pulumi.Automation.RefreshOptions.SkipPendingCreates">SkipPendingCreates</h4>
+  <div class="markdown level1 summary"><p>Ignores any pending create operations</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? SkipPendingCreates { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,7 +357,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi.automation/refreshoptions.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/RefreshOptions.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

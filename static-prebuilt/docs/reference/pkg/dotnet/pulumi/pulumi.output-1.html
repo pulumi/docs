@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class Output&lt;T&gt;
- </title>
+      <title>Class Output&lt;T&gt; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class Output&lt;T&gt;
- ">
+      <meta name="title" content="Class Output&lt;T&gt; ">
     
+    <meta name="description" content="s are a key part of how Pulumi tracks dependencies between s. Because the values of outputs are not available until resources are created, these are represented using the special s type, which internally represents two things: an eventually available value of the output and the dependency on the source(s) of the output value. In fact, s is quite similar to . Additionally, they carry along dependency information.  The output properties of all resource objects in Pulumi have type .">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.Output`1">
 
 
-  <h1 id="Pulumi_Output_1" data-uid="Pulumi.Output`1" class="text-break">Class Output&lt;T&gt;
-</h1>
+  <h1 id="Pulumi_Output_1" data-uid="Pulumi.Output`1" class="text-break">Class Output&lt;T&gt;</h1>
   <div class="markdown level0 summary"><p><a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s are a key part of how Pulumi tracks dependencies between <a class="xref" href="pulumi.resource.html">Resource</a>s. Because the values of outputs are not available until resources are
 created, these are represented using the special <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s type, which
 internally represents two things: an eventually available value of the output and
@@ -77,7 +75,7 @@ the dependency on the source(s) of the output value.
 In fact, <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s is quite similar to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a>.
 Additionally, they carry along dependency information.</p>
 <p></p>
-The output properties of all resource objects in Pulumi have type <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>.
+<p>The output properties of all resource objects in Pulumi have type <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -127,16 +125,16 @@ The output properties of all resource objects in Pulumi have type <a class="xref
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L503">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L532">View Source</a>
   </span>
   <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
-  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0___0__" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,``0})">Apply&lt;U&gt;(Func&lt;T, U&gt;)</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="pulumi.output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;?&gt;)</a> for more details.</p>
+  <h4 id="Pulumi_Output_1_Apply_System_Func__0_System_Threading_Tasks_Task__" data-uid="Pulumi.Output`1.Apply(System.Func{`0,System.Threading.Tasks.Task})">Apply(Func&lt;T, Task&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="pulumi.output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;TResult&gt;(Func&lt;T, Output&lt;TResult&gt;?&gt;)</a> for more details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;U&gt; Apply&lt;U&gt;(Func&lt;T, U&gt; func)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;ValueTuple&gt; Apply(Func&lt;T, Task&gt; func)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,7 +147,7 @@ The output properties of all resource objects in Pulumi have type <a class="xref
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, U&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</td>
         <td><span class="parametername">func</span></td>
         <td></td>
       </tr>
@@ -165,37 +163,22 @@ The output properties of all resource objects in Pulumi have type <a class="xref
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;U&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">U</span></td>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple">ValueTuple</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L515">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L564">View Source</a>
   </span>
   <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
-  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Input___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Input{``0}})">Apply&lt;U&gt;(Func&lt;T, Input&lt;U&gt;?&gt;)</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="pulumi.output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;?&gt;)</a> for more details.</p>
+  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Input___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Input{``0}})">Apply&lt;TResult&gt;(Func&lt;T, Input&lt;TResult&gt;?&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="pulumi.output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;TResult&gt;(Func&lt;T, Output&lt;TResult&gt;?&gt;)</a> for more details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;U&gt; Apply&lt;U&gt;(Func&lt;T, Input&lt;U&gt;?&gt; func)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;TResult&gt; Apply&lt;TResult&gt;(Func&lt;T, Input&lt;TResult&gt;?&gt; func)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,7 +191,7 @@ The output properties of all resource objects in Pulumi have type <a class="xref
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="pulumi.input-1.html">Input</a>&lt;U&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="pulumi.input-1.html">Input</a>&lt;TResult&gt;&gt;</td>
         <td><span class="parametername">func</span></td>
         <td></td>
       </tr>
@@ -224,7 +207,7 @@ The output properties of all resource objects in Pulumi have type <a class="xref
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;U&gt;</td>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;TResult&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -239,41 +222,41 @@ The output properties of all resource objects in Pulumi have type <a class="xref
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">U</span></td>
+        <td><span class="parametername">TResult</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L547">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L597">View Source</a>
   </span>
   <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
-  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Output{``0}})">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;?&gt;)</h4>
-  <div class="markdown level1 summary"><p>Transforms the data of this <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a> with the provided <code data-dev-comment-type="paramref" class="paramref">func</code>. The result remains an <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a> so that dependent resources
+  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Output{``0}})">Apply&lt;TResult&gt;(Func&lt;T, Output&lt;TResult&gt;?&gt;)</h4>
+  <div class="markdown level1 summary"><p>Transforms the data of this <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a> with the provided <code class="paramref">func</code>. The result remains an <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a> so that dependent resources
 can be properly tracked.</p>
 <p></p>
-<code data-dev-comment-type="paramref" class="paramref">func</code> is not allowed to make resources.
+<code class="paramref">func</code> is not allowed to make resources.
 <p></p>
-<code data-dev-comment-type="paramref" class="paramref">func</code> can return other <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s.  This can be handy if
-you have an <code>Output&lt;SomeType></code> and you want to get a transitive dependency of
+<code class="paramref">func</code> can return other <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s.  This can be handy if
+you have an <code>Output&lt;SomeType&gt;</code> and you want to get a transitive dependency of
 it.  i.e.:
-<pre><code>Output&lt;SomeType> d1 = ...;
-Output&lt;OtherType> d2 = d1.Apply(v => v.OtherOutput); // getting an output off of &apos;v&apos;.</code></pre>
+<pre><code class="lang-csharp">Output&lt;SomeType&gt; d1 = ...;
+Output&lt;OtherType&gt; d2 = d1.Apply(v =&gt; v.OtherOutput); // getting an output off of 'v'.</code></pre>
 <p>In this example, taking a dependency on d2 means a resource will depend on all the resources
-of d1.  It will <strong>not</strong> depend on the resources of v.x.y.OtherDep.</p>
+of d1.  It will <b>not</b> depend on the resources of v.x.y.OtherDep.</p>
 <p></p>
-Importantly, the Resources that d2 feels like it will depend on are the same resources
+<p>Importantly, the Resources that d2 feels like it will depend on are the same resources
 as d1. If you need have multiple <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s and a single <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a> is needed that combines both set of resources, then <a class="xref" href="pulumi.output.html#Pulumi_Output_All__1_Pulumi_Input___0____">All&lt;T&gt;(params Input&lt;T&gt;[])</a> or <a class="xref" href="pulumi.output.html#Pulumi_Output_Tuple__3_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__">Tuple&lt;T1, T2, T3&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;)</a>
-should be used instead.
+should be used instead.</p>
 <p></p>
-This function will only be called execution of a <code>pulumi up</code> request.  It will not
+<p>This function will only be called execution of a <code>pulumi up</code> request.  It will not
 run during <code>pulumi preview</code> (as the values of resources are of course not known
-then).
+then).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;U&gt; Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;?&gt; func)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;TResult&gt; Apply&lt;TResult&gt;(Func&lt;T, Output&lt;TResult&gt;?&gt; func)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,7 +269,7 @@ then).
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="pulumi.output-1.html">Output</a>&lt;U&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="pulumi.output-1.html">Output</a>&lt;TResult&gt;&gt;</td>
         <td><span class="parametername">func</span></td>
         <td></td>
       </tr>
@@ -302,7 +285,7 @@ then).
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;U&gt;</td>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;TResult&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -317,22 +300,22 @@ then).
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">U</span></td>
+        <td><span class="parametername">TResult</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L509">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L558">View Source</a>
   </span>
   <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
-  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_System_Threading_Tasks_Task___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,System.Threading.Tasks.Task{``0}})">Apply&lt;U&gt;(Func&lt;T, Task&lt;U&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="pulumi.output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;?&gt;)</a> for more details.</p>
+  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_System_Threading_Tasks_Task___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,System.Threading.Tasks.Task{``0}})">Apply&lt;TResult&gt;(Func&lt;T, Task&lt;TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="pulumi.output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;TResult&gt;(Func&lt;T, Output&lt;TResult&gt;?&gt;)</a> for more details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;U&gt; Apply&lt;U&gt;(Func&lt;T, Task&lt;U&gt;&gt; func)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;TResult&gt; Apply&lt;TResult&gt;(Func&lt;T, Task&lt;TResult&gt;&gt; func)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -345,7 +328,7 @@ then).
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;U&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TResult&gt;&gt;</td>
         <td><span class="parametername">func</span></td>
         <td></td>
       </tr>
@@ -361,7 +344,7 @@ then).
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;U&gt;</td>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;TResult&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -376,13 +359,72 @@ then).
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">U</span></td>
+        <td><span class="parametername">TResult</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L446">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L550">View Source</a>
+  </span>
+  <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
+  <h4 id="Pulumi_Output_1_Apply__1_System_Func__0___0__" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,``0})">Apply&lt;TResult&gt;(Func&lt;T, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="pulumi.output-1.html#Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___">Apply&lt;TResult&gt;(Func&lt;T, Output&lt;TResult&gt;?&gt;)</a> for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Output&lt;TResult&gt; Apply&lt;TResult&gt;(Func&lt;T, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;TResult&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L474">View Source</a>
   </span>
   <a id="Pulumi_Output_1_Create_" data-uid="Pulumi.Output`1.Create*"></a>
   <h4 id="Pulumi_Output_1_Create_System_Threading_Tasks_Task__0__" data-uid="Pulumi.Output`1.Create(System.Threading.Tasks.Task{`0})">Create(Task&lt;T&gt;)</h4>
@@ -390,7 +432,7 @@ then).
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;T&gt; Create(Task&lt;T&gt; value)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;T&gt; Create(Task&lt;T&gt; value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -425,15 +467,16 @@ then).
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L644">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L699">View Source</a>
   </span>
   <a id="Pulumi_Output_1_ToString_" data-uid="Pulumi.Output`1.ToString*"></a>
   <h4 id="Pulumi_Output_1_ToString" data-uid="Pulumi.Output`1.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+    <pre><code class="lang- hljs">public override string ToString()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -446,12 +489,71 @@ then).
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><p>A string that represents the current object.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a></div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L625">View Source</a>
+  </span>
+  <a id="Pulumi_Output_1_UntypedApply_" data-uid="Pulumi.Output`1.UntypedApply*"></a>
+  <h4 id="Pulumi_Output_1_UntypedApply__1_System_Func_System_Object_Pulumi_Output___0___" data-uid="Pulumi.Output`1.UntypedApply``1(System.Func{System.Object,Pulumi.Output{``0}})">UntypedApply&lt;TResult&gt;(Func&lt;object?, Output&lt;TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Output&lt;TResult&gt; UntypedApply&lt;TResult&gt;(Func&lt;object?, Output&lt;TResult&gt;&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="pulumi.output-1.html">Output</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;TResult&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 </article>
           </div>
@@ -460,7 +562,7 @@ then).
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L416" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L426" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

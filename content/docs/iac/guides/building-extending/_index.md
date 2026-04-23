@@ -28,7 +28,19 @@ Build reusable infrastructure components to encapsulate and share infrastructure
 
 **[Testing Components](/docs/iac/guides/building-extending/components/testing-components/)** - Write automated tests for your components to ensure they work correctly and maintain quality as they evolve.
 
-**[Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/)** - Choose the right packaging approach for your components: single-language, cross-language, or provider-based distribution.
+**[Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/)** - Choose the right packaging approach for your components: native language package, source-based plugin package, or executable-based plugin package.
+
+## Packages
+
+Package and distribute your components and providers for use across teams and projects.
+
+**[Pulumi Packages](/docs/iac/concepts/packages/)** - Overview of Pulumi packages and how they enable sharing infrastructure code across all Pulumi languages.
+
+**[Local Packages](/docs/iac/guides/building-extending/packages/local-packages/)** - Develop and test packages locally before publishing them to registries.
+
+**[Publishing to the Pulumi Registry](/docs/iac/guides/building-extending/packages/publishing-packages/)** - Publish packages to the public Pulumi Registry. For publishing to the Pulumi IDP Private Registry, see [Publishing Components from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/).
+
+**[Schema](/docs/iac/guides/building-extending/packages/schema/)** - Define package schemas that drive SDK generation and documentation for all supported languages.
 
 ## Providers
 
@@ -39,18 +51,6 @@ Create custom providers to integrate new cloud platforms and services with Pulum
 **[Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/)** - Reference documentation for the SDK used to build native Pulumi providers with full access to the resource model.
 
 **[Debugging Providers](/docs/iac/guides/building-extending/providers/debugging-providers/)** - Techniques and tools for troubleshooting provider development and diagnosing issues.
-
-## Packages
-
-Package and distribute your components and providers for use across teams and projects.
-
-**[Pulumi Packages](/docs/iac/concepts/packages/)** - Overview of Pulumi packages and how they enable sharing infrastructure code across all Pulumi languages.
-
-**[Local Packages](/docs/iac/guides/building-extending/packages/local-packages/)** - Develop and test packages locally before publishing them to registries.
-
-**[Publishing Packages](/docs/iac/guides/building-extending/packages/publishing-packages/)** - Distribute your packages to npm, NuGet, PyPI, and other registries for team and community use.
-
-**[Schema](/docs/iac/guides/building-extending/packages/schema/)** - Define package schemas that drive SDK generation and documentation for all supported languages.
 
 ## Templates
 

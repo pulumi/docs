@@ -26,16 +26,28 @@ DOTNET_OUT="../static-prebuilt/docs/reference/pkg/dotnet"
 echo "Post-processing DocFX output: lowercasing filenames and rewriting hrefs..."
 
 # 1. Rename directories to lowercase (bottom-up to avoid path conflicts).
+#    If the lowercase target already exists (e.g. DocFX wrote both case
+#    variants, or stale committed content overlaps with a fresh build),
+#    merge the source into the existing target instead of failing.
 find "$DOTNET_OUT" -depth -type d -name '*[A-Z]*' | while read -r dir; do
     parent="$(dirname "$dir")"
     base="$(basename "$dir")"
     lower="$(echo "$base" | tr '[:upper:]' '[:lower:]')"
-    if [ "$base" != "$lower" ]; then
-        mv "$dir" "$parent/$lower"
+    if [ "$base" = "$lower" ]; then
+        continue
+    fi
+    target="$parent/$lower"
+    if [ -e "$target" ]; then
+        cp -a "$dir"/. "$target"/
+        rm -rf "$dir"
+    else
+        mv "$dir" "$target"
     fi
 done
 
-# 2. Rename files to lowercase.
+# 2. Rename files to lowercase. Overwrite is expected here: DocFX writes
+#    PascalCase filenames that may already exist in lowercase from a
+#    previous commit or build.
 find "$DOTNET_OUT" -type f -name '*[A-Z]*' | while read -r file; do
     parent="$(dirname "$file")"
     base="$(basename "$file")"

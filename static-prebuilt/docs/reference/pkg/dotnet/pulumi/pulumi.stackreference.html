@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class StackReference
- </title>
+      <title>Class StackReference </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class StackReference
- ">
+      <meta name="title" content="Class StackReference ">
     
+    <meta name="description" content="Manages a reference to a Pulumi stack and provides access to the referenced stack&#39;s outputs.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.StackReference">
 
 
-  <h1 id="Pulumi_StackReference" data-uid="Pulumi.StackReference" class="text-break">Class StackReference
-</h1>
+  <h1 id="Pulumi_StackReference" data-uid="Pulumi.StackReference" class="text-break">Class StackReference</h1>
   <div class="markdown level0 summary"><p>Manages a reference to a Pulumi stack and provides access to the referenced stack's outputs.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -125,18 +123,18 @@
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/stackreference.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/StackReference.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_StackReference__ctor_" data-uid="Pulumi.StackReference.#ctor*"></a>
   <h4 id="Pulumi_StackReference__ctor_System_String_Pulumi_StackReferenceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.StackReference.#ctor(System.String,Pulumi.StackReferenceArgs,Pulumi.CustomResourceOptions)">StackReference(string, StackReferenceArgs?, CustomResourceOptions?)</h4>
   <div class="markdown level1 summary"><p>Create a <a class="xref" href="pulumi.stackreference.html">StackReference</a> resource with the given unique name, arguments, and options.</p>
 <p></p>
-If args is not specified, the name of the referenced stack will be the name of the StackReference resource.
+<p>If args is not specified, the name of the referenced stack will be the name of the StackReference resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StackReference(string name, StackReferenceArgs? args = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang- hljs">public StackReference(string name, StackReferenceArgs? args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -171,7 +169,7 @@ If args is not specified, the name of the referenced stack will be the name of t
   <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/stackreference.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/StackReference.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_StackReference_Name_" data-uid="Pulumi.StackReference.Name*"></a>
   <h4 id="Pulumi_StackReference_Name" data-uid="Pulumi.StackReference.Name">Name</h4>
@@ -180,7 +178,7 @@ If args is not specified, the name of the referenced stack will be the name of t
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Output(&quot;name&quot;)]
+    <pre><code class="lang- hljs">[Output(&quot;name&quot;)]
 public Output&lt;string&gt; Name { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -199,7 +197,7 @@ public Output&lt;string&gt; Name { get; }</code></pre>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/stackreference.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/StackReference.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_StackReference_Outputs_" data-uid="Pulumi.StackReference.Outputs*"></a>
   <h4 id="Pulumi_StackReference_Outputs" data-uid="Pulumi.StackReference.Outputs">Outputs</h4>
@@ -208,7 +206,7 @@ public Output&lt;string&gt; Name { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Output(&quot;outputs&quot;)]
+    <pre><code class="lang- hljs">[Output(&quot;outputs&quot;)]
 public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Outputs { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -227,7 +225,7 @@ public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Outputs { get; }<
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/stackreference.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/StackReference.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_StackReference_SecretOutputNames_" data-uid="Pulumi.StackReference.SecretOutputNames*"></a>
   <h4 id="Pulumi_StackReference_SecretOutputNames" data-uid="Pulumi.StackReference.SecretOutputNames">SecretOutputNames</h4>
@@ -236,7 +234,7 @@ public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Outputs { get; }<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Output(&quot;secretOutputNames&quot;)]
+    <pre><code class="lang- hljs">[Output(&quot;secretOutputNames&quot;)]
 public Output&lt;ImmutableArray&lt;string&gt;&gt; SecretOutputNames { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -257,7 +255,7 @@ public Output&lt;ImmutableArray&lt;string&gt;&gt; SecretOutputNames { get; }</co
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/stackreference.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/StackReference.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_StackReference_GetOutput_" data-uid="Pulumi.StackReference.GetOutput*"></a>
   <h4 id="Pulumi_StackReference_GetOutput_Pulumi_Input_System_String__" data-uid="Pulumi.StackReference.GetOutput(Pulumi.Input{System.String})">GetOutput(Input&lt;string&gt;)</h4>
@@ -266,7 +264,7 @@ public Output&lt;ImmutableArray&lt;string&gt;&gt; SecretOutputNames { get; }</co
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;object?&gt; GetOutput(Input&lt;string&gt; name)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;object?&gt; GetOutput(Input&lt;string&gt; name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,21 +301,21 @@ public Output&lt;ImmutableArray&lt;string&gt;&gt; SecretOutputNames { get; }</co
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/stackreference.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/StackReference.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_StackReference_GetOutputDetailsAsync_" data-uid="Pulumi.StackReference.GetOutputDetailsAsync*"></a>
   <h4 id="Pulumi_StackReference_GetOutputDetailsAsync_System_String_" data-uid="Pulumi.StackReference.GetOutputDetailsAsync(System.String)">GetOutputDetailsAsync(string)</h4>
   <div class="markdown level1 summary"><p>Fetches the value of the named stack output
 and builds a <see ref="StackReferenceOutputDetails"></see> object from it.</p>
 <p></p>
-The returned object has its Value or SecretValue field set
+<p>The returned object has its Value or SecretValue field set
 depending on whether the output is a secret.
-Neither field is set if the output is not found.
+Neither field is set if the output is not found.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;StackReferenceOutputDetails&gt; GetOutputDetailsAsync(string name)</code></pre>
+    <pre><code class="lang- hljs">public Task&lt;StackReferenceOutputDetails&gt; GetOutputDetailsAsync(string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -354,19 +352,19 @@ Neither field is set if the output is not found.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/stackreference.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/StackReference.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_StackReference_GetValueAsync_" data-uid="Pulumi.StackReference.GetValueAsync*"></a>
   <h4 id="Pulumi_StackReference_GetValueAsync_Pulumi_Input_System_String__" data-uid="Pulumi.StackReference.GetValueAsync(Pulumi.Input{System.String})">GetValueAsync(Input&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Fetches the value of the named stack output. May return null if the value is
 not known for some reason.</p>
 <p></p>
-This operation is not supported (and will throw) for secret outputs.
+<p>This operation is not supported (and will throw) for secret outputs.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;object?&gt; GetValueAsync(Input&lt;string&gt; name)</code></pre>
+    <pre><code class="lang- hljs">public Task&lt;object?&gt; GetValueAsync(Input&lt;string&gt; name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -403,7 +401,7 @@ This operation is not supported (and will throw) for secret outputs.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/stackreference.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/StackReference.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_StackReference_RequireOutput_" data-uid="Pulumi.StackReference.RequireOutput*"></a>
   <h4 id="Pulumi_StackReference_RequireOutput_Pulumi_Input_System_String__" data-uid="Pulumi.StackReference.RequireOutput(Pulumi.Input{System.String})">RequireOutput(Input&lt;string&gt;)</h4>
@@ -412,7 +410,7 @@ This operation is not supported (and will throw) for secret outputs.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;object&gt; RequireOutput(Input&lt;string&gt; name)</code></pre>
+    <pre><code class="lang- hljs">public Output&lt;object&gt; RequireOutput(Input&lt;string&gt; name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -449,19 +447,19 @@ This operation is not supported (and will throw) for secret outputs.
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/stackreference.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/StackReference.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_StackReference_RequireValueAsync_" data-uid="Pulumi.StackReference.RequireValueAsync*"></a>
   <h4 id="Pulumi_StackReference_RequireValueAsync_Pulumi_Input_System_String__" data-uid="Pulumi.StackReference.RequireValueAsync(Pulumi.Input{System.String})">RequireValueAsync(Input&lt;string&gt;)</h4>
   <div class="markdown level1 summary"><p>Fetches the value promptly of the named stack output. Throws an error if the stack output is
 not found.</p>
 <p></p>
-This operation is not supported (and will throw) for secret outputs.
+<p>This operation is not supported (and will throw) for secret outputs.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;object&gt; RequireValueAsync(Input&lt;string&gt; name)</code></pre>
+    <pre><code class="lang- hljs">public Task&lt;object&gt; RequireValueAsync(Input&lt;string&gt; name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -505,7 +503,7 @@ This operation is not supported (and will throw) for secret outputs.
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/resources/stackreference.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/StackReference.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

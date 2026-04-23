@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class Input&lt;T&gt;
- </title>
+      <title>Class Input&lt;T&gt; </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class Input&lt;T&gt;
- ">
+      <meta name="title" content="Class Input&lt;T&gt; ">
     
+    <meta name="description" content="is a property input for a .  It may be a promptly available T, or the output from a existing .">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.Input`1">
 
 
-  <h1 id="Pulumi_Input_1" data-uid="Pulumi.Input`1" class="text-break">Class Input&lt;T&gt;
-</h1>
+  <h1 id="Pulumi_Input_1" data-uid="Pulumi.Input`1" class="text-break">Class Input&lt;T&gt;</h1>
   <div class="markdown level0 summary"><p><a class="xref" href="pulumi.input-1.html">Input&lt;T&gt;</a> is a property input for a <a class="xref" href="pulumi.resource.html">Resource</a>.  It may be a promptly
 available T, or the output from a existing <a class="xref" href="pulumi.resource.html">Resource</a>.</p>
 </div>
@@ -80,7 +78,7 @@ available T, or the output from a existing <a class="xref" href="pulumi.resource
     <div class="level1"><span class="xref">Input&lt;T&gt;</span></div>
       <div class="level2"><a class="xref" href="pulumi.inputjson.html">InputJson</a></div>
       <div class="level2"><a class="xref" href="pulumi.inputlist-1.html">InputList&lt;T&gt;</a></div>
-      <div class="level2"><a class="xref" href="pulumi.inputmap-1.html">InputMap&lt;V&gt;</a></div>
+      <div class="level2"><a class="xref" href="pulumi.inputmap-1.html">InputMap&lt;TValue&gt;</a></div>
       <div class="level2"><a class="xref" href="pulumi.inputunion-2.html">InputUnion&lt;T0, T1&gt;</a></div>
   </div>
   <div class="inheritedMembers">
@@ -131,50 +129,7 @@ available T, or the output from a existing <a class="xref" href="pulumi.resource
   <h3 id="operators">Operators
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/input.cs/#L36">View Source</a>
-  </span>
-  <a id="Pulumi_Input_1_op_Implicit_" data-uid="Pulumi.Input`1.op_Implicit*"></a>
-  <h4 id="Pulumi_Input_1_op_Implicit__0__Pulumi_Input__0_" data-uid="Pulumi.Input`1.op_Implicit(`0)~Pulumi.Input{`0}">implicit operator Input&lt;T&gt;(T)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Input&lt;T&gt;(T value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="pulumi.input-1.html">Input</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/input.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Input.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Input_1_op_Implicit_" data-uid="Pulumi.Input`1.op_Implicit*"></a>
   <h4 id="Pulumi_Input_1_op_Implicit_Pulumi_Input__0___Pulumi_Output__0_" data-uid="Pulumi.Input`1.op_Implicit(Pulumi.Input{`0})~Pulumi.Output{`0}">implicit operator Output&lt;T&gt;(Input&lt;T&gt;)</h4>
@@ -182,7 +137,7 @@ available T, or the output from a existing <a class="xref" href="pulumi.resource
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Output&lt;T&gt;(Input&lt;T&gt; input)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator Output&lt;T&gt;(Input&lt;T&gt; input)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,7 +172,7 @@ available T, or the output from a existing <a class="xref" href="pulumi.resource
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/input.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Input.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Input_1_op_Implicit_" data-uid="Pulumi.Input`1.op_Implicit*"></a>
   <h4 id="Pulumi_Input_1_op_Implicit_Pulumi_Output__0___Pulumi_Input__0_" data-uid="Pulumi.Input`1.op_Implicit(Pulumi.Output{`0})~Pulumi.Input{`0}">implicit operator Input&lt;T&gt;(Output&lt;T&gt;)</h4>
@@ -225,7 +180,7 @@ available T, or the output from a existing <a class="xref" href="pulumi.resource
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Input&lt;T&gt;(Output&lt;T&gt; value)</code></pre>
+    <pre><code class="lang- hljs">public static implicit operator Input&lt;T&gt;(Output&lt;T&gt; value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,18 +214,61 @@ available T, or the output from a existing <a class="xref" href="pulumi.resource
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Input.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_Input_1_op_Implicit_" data-uid="Pulumi.Input`1.op_Implicit*"></a>
+  <h4 id="Pulumi_Input_1_op_Implicit__0__Pulumi_Input__0_" data-uid="Pulumi.Input`1.op_Implicit(`0)~Pulumi.Input{`0}">implicit operator Input&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static implicit operator Input&lt;T&gt;(T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.input-1.html">Input</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="pulumi.inputextensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, U&gt;)</a>
+      <a class="xref" href="pulumi.inputextensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Input___1___">InputExtensions.Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, Input&lt;TResult&gt;?&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="pulumi.inputextensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Input___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, Input&lt;U&gt;?&gt;)</a>
+      <a class="xref" href="pulumi.inputextensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Output___1___">InputExtensions.Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, Output&lt;TResult&gt;?&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="pulumi.inputextensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Output___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, Output&lt;U&gt;?&gt;)</a>
+      <a class="xref" href="pulumi.inputextensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_System_Threading_Tasks_Task___1___">InputExtensions.Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, Task&lt;TResult&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="pulumi.inputextensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_System_Threading_Tasks_Task___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;?, Func&lt;T, Task&lt;U&gt;&gt;)</a>
+      <a class="xref" href="pulumi.inputextensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__">InputExtensions.Apply&lt;T, TResult&gt;(Input&lt;T&gt;?, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
       <a class="xref" href="pulumi.inputextensions.html#Pulumi_InputExtensions_ToOutput__1_Pulumi_Input___0__">InputExtensions.ToOutput&lt;T&gt;(Input&lt;T&gt;?)</a>
@@ -283,7 +281,7 @@ available T, or the output from a existing <a class="xref" href="pulumi.resource
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/input.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Input.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -24,16 +24,16 @@ sections:
   cards:
   - label: AWS & Pulumi
     icon: aws-40
-    link: /docs/iac/clouds/aws/
+    link: /docs/integrations/clouds/aws/
   - label: Azure & Pulumi
     icon: azure-40
-    link: /docs/iac/clouds/azure/
+    link: /docs/integrations/clouds/azure/
   - label: Google Cloud & Pulumi
     icon: google-cloud-40
-    link: /docs/iac/clouds/gcp/
+    link: /docs/integrations/clouds/gcp/
   - label: Kubernetes & Pulumi
     icon: kubernetes-40
-    link: /docs/iac/clouds/kubernetes/
+    link: /docs/integrations/clouds/kubernetes/
 - type: cards-logo-label-link
   heading: Languages
   description: Build infrastructure intuitively on any cloud using familiar languages.

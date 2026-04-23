@@ -116,7 +116,7 @@ You can convert CloudFormation templates into Pulumi programs using the `pulumi 
 
 ### Cloud Native Support {#cloud-native}
 
-Pulumi supports the full cloud native ecosystem: you can use Pulumi to manage any cloud or SaaS provider, including Kubernetes, with a single, unified programming model. Additionally, Pulumi's native Kubernetes provider offers 100% API coverage in all Pulumi-supported languages, as well as support for Helm charts, strongly typed CustomResourceDefinitions (CRDs), and Kubernetes YAML and Kustomize templates. Pulumi also offers a [Kubernetes operator](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) that enables continuous delivery through GitOps. CloudFormation has no support for these capabilities.
+Pulumi supports the full cloud native ecosystem: you can use Pulumi to manage any cloud or SaaS provider, including Kubernetes, with a single, unified programming model. Additionally, Pulumi's native Kubernetes provider offers 100% API coverage in all Pulumi-supported languages, as well as support for Helm charts, strongly typed CustomResourceDefinitions (CRDs), and Kubernetes YAML and Kustomize templates. Pulumi also offers a [Kubernetes operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) that enables continuous delivery through GitOps. CloudFormation has no support for these capabilities.
 
 To learn more about Pulumi's support for the cloud native ecosystem, see our whitepaper, [Delivering Cloud Native Infrastructure as Code](/blog/delivering-cloud-native-infrastructure-as-code-a-pulumi-white-paper/Pulumi-Delivering-CNI-as-Code.pdf).
 

@@ -14,6 +14,7 @@ aliases:
 - /docs/intro/concepts/resources/components/
 - /docs/concepts/resources/components/
 - /docs/iac/concepts/resources/components/
+- /docs/iac/concepts/components/cross-language-components/
 ---
 
 <script>
@@ -35,7 +36,7 @@ aliases:
 
 A component is a logical grouping of Pulumi resources that is exposed as a single Pulumi resource. Components encapsulate related resources and their configuration, letting consumers create complex infrastructure through a simple, well-defined interface—without needing to know the implementation details.
 
-Components are part of [packages](/docs/iac/concepts/packages/), which are the distributable unit. A single package can contain multiple components alongside other resources and utilities.
+A component can live anywhere code lives: defined inline in a Pulumi program, shared through a language-ecosystem library, or distributed as part of a [Pulumi package](/docs/iac/concepts/packages/) whose [plugin](/docs/iac/concepts/plugins/) lets it be consumed from any Pulumi language. Pulumi packages are the most common distribution format for components intended for broad reuse, and a single package can contain multiple components alongside custom resources and functions — but a component is not required to be part of a package.
 
 For example, the [AWSx](/registry/packages/awsx/) package contains many components, including:
 
@@ -51,7 +52,7 @@ Your organization might publish a package that contains components like:
 Platform teams can use components to codify infrastructure best practices, security policies, and compliance requirements as reusable building blocks. When published to the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/), packages containing components become discoverable across the organization and can be consumed by any team without needing to understand the underlying implementation.
 
 {{< notes type="info" >}}
-Components are analogous to [Terraform modules](https://developer.hashicorp.com/terraform/language/modules) and [AWS CDK Constructs](https://docs.aws.amazon.com/cdk/v2/guide/constructs.html). Pulumi also lets you consume Terraform modules and CDK constructs directly in your Pulumi programs. See [Use a Terraform Module](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) and [Pulumi CDK Adapter](/docs/iac/clouds/aws/guides/cdk/).
+Components are analogous to [Terraform modules](https://developer.hashicorp.com/terraform/language/modules) and [AWS CDK Constructs](https://docs.aws.amazon.com/cdk/v2/guide/constructs.html). Pulumi also lets you consume Terraform modules and CDK constructs directly in your Pulumi programs. See [Use a Terraform Module](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) and [Pulumi CDK Adapter](/docs/iac/guides/clouds/aws/cdk/).
 {{< /notes >}}
 
 ## Consuming components
@@ -118,11 +119,21 @@ Components distributed as Pulumi packages can be consumed in any language using 
 pulumi package add github.com/my-org/my-component@v1.0.0
 ```
 
-This pattern is common for components your organization publishes for internal consumption via a Git repository or the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/).
+This pattern is common for components your organization publishes for internal consumption via a Git repository or the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/). It is also how components from a [source-based plugin package](#authoring-components) are consumed across languages — the SDK is generated in your program's language regardless of the language the component was authored in.
+
+Under the hood, Pulumi fetches the package source (e.g. from GitHub), generates a [local package](/docs/iac/guides/building-extending/packages/local-packages/) SDK from the component's schema, and makes the generated SDK available for import in your program.
 
 {{< notes type="info" >}}
-**Runtime requirements:** because Pulumi generates the SDK from a live plugin, the plugin must be executable on your machine. If the component is authored in TypeScript or JavaScript, Node.js must be installed. If it is authored in Python, Python must be installed. Components authored in Go or .NET are compiled to a self-contained binary and have no additional runtime requirement.
+**Runtime requirements:** because Pulumi generates the SDK from a live plugin, the plugin must be executable on your machine. The requirements are the same as for any Pulumi program written in the plugin's authoring language — see the [language SDK docs](/docs/iac/languages-sdks/) for the toolchain each language expects.
 {{< /notes >}}
+
+You can also point `pulumi package add` at a local directory instead of a Git URL — useful for monorepos, rapid iteration, or components that don't need to be published:
+
+```bash
+pulumi package add /path/to/local/secure-s3-component
+```
+
+Pulumi identifies the folder as a component package, generates a local SDK, and makes it available in your program — even if your program is written in a different language from the component.
 
 ### Pulumi packages with pre-published SDKs
 
@@ -351,22 +362,11 @@ This tree makes it clear that a single `awsx:ec2:Vpc` component encapsulates mul
 
 Resource options passed to a component resource do not always behave the same as they do for custom resources. For example, the `provider` option has no effect on a component—use `providers` instead to pass explicit provider configuration to a component's child resources. For a complete list of which options apply to component resources, see [Resource options and component resources](/docs/iac/concepts/resources/options/#resource-options-and-component-resources).
 
-## Authoring a component
+## Authoring components
 
-For a complete guide to writing a component—including how to define the component class, structure arguments, create child resources, register outputs, and configure provider inheritance—see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/).
+You author a component by extending the `ComponentResource` class. The guides below walk through building, packaging, and testing components:
 
-## Pulumi packages
-
-By default, components are authored and consumed in the same programming language by extending the `ComponentResource` class. To make a component consumable in every Pulumi-supported language, distribute it as a Pulumi package. Pulumi packages include a plugin (source-based or compiled) that lets Pulumi introspect the component and automatically generate SDKs for any target language.
-
-For detailed information on setting up and using Pulumi packages for components—including how to configure `PulumiPlugin.yaml`, define entry points, publish, and consume components—see [Cross-language Components](/docs/iac/concepts/components/cross-language-components/).
-
-For a comparison of all component packaging approaches (native language packages, Pulumi packages, and provider-based), see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/).
-
-## Additional resources
-
-- [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/) — Step-by-step guide to authoring a component from scratch, including setup, implementation, and publishing.
-- [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) — How to package and distribute components for use by others.
-- [Testing Components](/docs/iac/guides/building-extending/components/testing-components/) — How to write tests for your component resources.
-- [Cross-language Components](/docs/iac/concepts/components/cross-language-components/) — How to package a component as a Pulumi package so it is consumable in any Pulumi language.
-- [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/) — How to publish and discover components within your organization.
+- [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/) — define the class, structure arguments, create child resources, register outputs, and configure provider inheritance.
+- [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) — compare the three distribution options and package a component for sharing.
+- [Testing Components](/docs/iac/guides/building-extending/components/testing-components/) — write tests for component resources.
+- [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/) — publish and discover components within your organization.

@@ -34,16 +34,20 @@ For full setup and configuration details, see the [customer-managed workflow run
 ### Setting up Insights scans
 
 1. [Set up a customer-managed workflow runner pool](/docs/deployments/deployments/customer-managed-agents/#using-customer-managed-workflow-runners)
-2. Navigate to **Management** > **Accounts** in Pulumi Cloud
-3. Select the workflow runner pool for the account you want to scan
-4. Trigger a scan and confirm it completes successfully
+1. Navigate to **Management** > **Accounts** in Pulumi Cloud
+1. Select the workflow runner pool for the account you want to scan
+1. Trigger a scan and confirm it completes successfully
 
 ### Setting up policy evaluations
 
 1. [Set up a customer-managed workflow runner pool](/docs/deployments/deployments/customer-managed-agents/#using-customer-managed-workflow-runners)
-2. Navigate to **Management** > **Policies** > **Policy Groups** in Pulumi Cloud
-3. Select the workflow runner pool for an audit policy group
-4. Run a policy evaluation against a stack and confirm the results appear as expected
+1. Navigate to **Management** > **Policies** > **Policy Groups** in Pulumi Cloud
+1. Select the workflow runner pool for an audit policy group
+1. Run a policy evaluation against a stack and confirm the results appear as expected
+
+### Using an organization default pool
+
+If you want every account scan and policy evaluation to use a customer-managed pool by default, you can set an [organization default workflow runner pool](/docs/deployments/deployments/customer-managed-agents/#setting-an-organization-default-pool). When set, scans and policy groups without an explicit pool use the organization default instead of the Pulumi Hosted Pool.
 
 ### Restricting workflow types
 

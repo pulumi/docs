@@ -4,6 +4,6 @@ meta_desc: Pulumi AWSx is a collection of libraries that use well-architected be
 aliases:
   - /crosswalk
 layout: aws
-redirect_to: /docs/iac/clouds/aws/guides/
+redirect_to: /docs/iac/guides/clouds/aws/
 redirect_temporarily: true
 ---

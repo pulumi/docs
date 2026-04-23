@@ -1,0 +1,27 @@
+{{/*
+    Template Logo Carousel Partial
+
+    Renders a scrolling logo carousel using the stacked-carousel component.
+
+    Parameters:
+    - title: Text displayed above the carousel (optional)
+    - title_link: URL the title links to (optional, defaults to /case-studies)
+    - logos: Array of logo objects with name and optional link fields
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $title := .title }}
+{{ $titleLink := .title_link | default "/case-studies" }}
+{{ $logos := .logos }}
+{{ $anchor := .anchor }}
+
+<section class="template-logo-carousel template-section-header text-left overflow-hidden"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    {{ if $title }}
+    <div class="section-header-tag-wrap mb-4">
+        <a href="{{ $titleLink }}" class="section-header-tag-line hover:underline no-underline">{{ $title }}</a>
+    </div>
+    {{ end }}
+    <div class="mb-6">
+        {{ partial "stacked-carousel.html" (dict "logos" $logos "single_row" true) }}
+    </div>
+</section>

@@ -24,7 +24,7 @@ benefits:
       icon: exchange
       icon_color: blue
       description: |
-        Use engineering practices with infrastructure” to: “Replace inefficient, manual infrastructure processes with automation.
+        Replace inefficient, manual infrastructure processes with automation.
         Test and deliver infrastructure through CI/CD workflows or automate deployments with code at runtime.
     - title: Foster collaboration and innovate faster
       icon: lightning

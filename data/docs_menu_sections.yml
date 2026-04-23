@@ -4,8 +4,6 @@
   label: Infrastructure as Code
 - menu: deployments
   label: Deployments & Workflows
-- menu: version-control
-  label: Version Control
 - menu: esc
   label: Secrets & Configuration (ESC)
 - menu: insights
@@ -14,10 +12,10 @@
   label: Internal Developer Platform
 - menu: ai
   label: Infrastructure AI
-- menu: migration
-  label: Migration
 - menu: administration
   label: Administration
+- menu: integrations
+  label: Integrations
 - menu: reference
   label: Reference
 - menu: support

@@ -1,15 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Namespace Pulumi.Automation
- </title>
+      <title>Namespace Pulumi.Automation </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Namespace Pulumi.Automation
- ">
+      <meta name="title" content="Namespace Pulumi.Automation ">
+    
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -67,24 +66,38 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Pulumi.Automation">
 
-  <h1 id="Pulumi_Automation" data-uid="Pulumi.Automation" class="text-break">Namespace Pulumi.Automation
-</h1>
+  <h1 id="Pulumi_Automation" data-uid="Pulumi.Automation" class="text-break">Namespace Pulumi.Automation</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
+    <h3 id="classes">
+Classes
 </h3>
       <h4><a class="xref" href="pulumi.automation.configvalue.html">ConfigValue</a></h4>
       <section></section>
       <h4><a class="xref" href="pulumi.automation.destroyoptions.html">DestroyOptions</a></h4>
       <section><p>Options controlling the behavior of an <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_DestroyAsync_Pulumi_Automation_DestroyOptions_System_Threading_CancellationToken_">DestroyAsync(DestroyOptions?, CancellationToken)</a> operation.</p>
 </section>
+      <h4><a class="xref" href="pulumi.automation.dockerimagecredentials.html">DockerImageCredentials</a></h4>
+      <section><p>Credentials for the remote execution Docker image.</p>
+</section>
       <h4><a class="xref" href="pulumi.automation.environmentvariablevalue.html">EnvironmentVariableValue</a></h4>
       <section></section>
+      <h4><a class="xref" href="pulumi.automation.executorimage.html">ExecutorImage</a></h4>
+      <section><p>Information about the remote execution image.</p>
+</section>
       <h4><a class="xref" href="pulumi.automation.historyoptions.html">HistoryOptions</a></h4>
       <section><p>Options controlling the behavior of a <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_GetHistoryAsync_Pulumi_Automation_HistoryOptions_System_Threading_CancellationToken_">GetHistoryAsync(HistoryOptions?, CancellationToken)</a> operation.</p>
 </section>
+      <h4><a class="xref" href="pulumi.automation.importoptions.html">ImportOptions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pulumi.automation.importresource.html">ImportResource</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pulumi.automation.importresult.html">ImportResult</a></h4>
+      <section></section>
       <h4><a class="xref" href="pulumi.automation.inlineprogramargs.html">InlineProgramArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pulumi.automation.installoptions.html">InstallOptions</a></h4>
       <section></section>
       <h4><a class="xref" href="pulumi.automation.localprogramargs.html">LocalProgramArgs</a></h4>
       <section><p>Description of a stack backed by pre-existing local Pulumi CLI program.</p>
@@ -92,18 +105,18 @@
       <h4><a class="xref" href="pulumi.automation.localworkspace.html">LocalWorkspace</a></h4>
       <section><p>LocalWorkspace is a default implementation of the Workspace interface.</p>
 <p></p>
-A Workspace is the execution context containing a single Pulumi project, a program,
+<p>A Workspace is the execution context containing a single Pulumi project, a program,
 and multiple stacks.Workspaces are used to manage the execution environment,
 providing various utilities such as plugin installation, environment configuration
-($PULUMI_HOME), and creation, deletion, and listing of Stacks.
+($PULUMI_HOME), and creation, deletion, and listing of Stacks.</p>
 <p></p>
-LocalWorkspace relies on Pulumi.yaml and Pulumi.{stack}.yaml as the intermediate format
+<p>LocalWorkspace relies on Pulumi.yaml and Pulumi.{stack}.yaml as the intermediate format
 for Project and Stack settings.Modifying ProjectSettings will
 alter the Workspace Pulumi.yaml file, and setting config on a Stack will modify the Pulumi.{stack}.yaml file.
-This is identical to the behavior of Pulumi CLI driven workspaces.
+This is identical to the behavior of Pulumi CLI driven workspaces.</p>
 <p></p>
-If not provided a working directory - causing LocalWorkspace to create a temp directory,
-than the temp directory will be cleaned up on <a class="xref" href="pulumi.automation.localworkspace.html#Pulumi_Automation_LocalWorkspace_Dispose">Dispose()</a>.
+<p>If not provided a working directory - causing LocalWorkspace to create a temp directory,
+than the temp directory will be cleaned up on <a class="xref" href="pulumi.automation.localworkspace.html#Pulumi_Automation_LocalWorkspace_Dispose_System_Boolean_">Dispose(bool)</a>.</p>
 </section>
       <h4><a class="xref" href="pulumi.automation.localworkspaceoptions.html">LocalWorkspaceOptions</a></h4>
       <section><p>Extensibility options to configure a LocalWorkspace; e.g: settings to seed
@@ -111,6 +124,9 @@ and environment variables to pass through to every command.</p>
 </section>
       <h4><a class="xref" href="pulumi.automation.outputvalue.html">OutputValue</a></h4>
       <section></section>
+      <h4><a class="xref" href="pulumi.automation.pendingcreatevalue.html">PendingCreateValue</a></h4>
+      <section><p>Config values for Importing Pending Create operations</p>
+</section>
       <h4><a class="xref" href="pulumi.automation.plugininfo.html">PluginInfo</a></h4>
       <section></section>
       <h4><a class="xref" href="pulumi.automation.plugininstalloptions.html">PluginInstallOptions</a></h4>
@@ -141,6 +157,8 @@ and environment variables to pass through to every command.</p>
       <h4><a class="xref" href="pulumi.automation.pulumifn.html">PulumiFn</a></h4>
       <section><p>A Pulumi program as an inline function (in process).</p>
 </section>
+      <h4><a class="xref" href="pulumi.automation.pulumisdkversionattribute.html">PulumiSdkVersionAttribute</a></h4>
+      <section></section>
       <h4><a class="xref" href="pulumi.automation.refreshoptions.html">RefreshOptions</a></h4>
       <section><p>Options controlling the behavior of an <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_RefreshAsync_Pulumi_Automation_RefreshOptions_System_Threading_CancellationToken_">RefreshAsync(RefreshOptions?, CancellationToken)</a> operation.</p>
 </section>
@@ -162,12 +180,12 @@ There are three different authentication paths:</p>
       <h4><a class="xref" href="pulumi.automation.remoterefreshoptions.html">RemoteRefreshOptions</a></h4>
       <section><p>Options controlling the behavior of an <a class="xref" href="pulumi.automation.remoteworkspacestack.html#Pulumi_Automation_RemoteWorkspaceStack_RefreshAsync_Pulumi_Automation_RemoteRefreshOptions_System_Threading_CancellationToken_">RefreshAsync(RemoteRefreshOptions?, CancellationToken)</a> operation.</p>
 </section>
+      <h4><a class="xref" href="pulumi.automation.remoteupoptions.html">RemoteUpOptions</a></h4>
+      <section><p>Options controlling the behavior of an <a class="xref" href="pulumi.automation.remoteworkspacestack.html#Pulumi_Automation_RemoteWorkspaceStack_UpAsync_Pulumi_Automation_RemoteUpOptions_System_Threading_CancellationToken_">UpAsync(RemoteUpOptions?, CancellationToken)</a> operation.</p>
+</section>
       <h4><a class="xref" href="pulumi.automation.remoteupdateoptions.html">RemoteUpdateOptions</a></h4>
       <section><p>Common options controlling the behavior of update actions taken
 against an instance of <a class="xref" href="pulumi.automation.remoteworkspacestack.html">RemoteWorkspaceStack</a>.</p>
-</section>
-      <h4><a class="xref" href="pulumi.automation.remoteupoptions.html">RemoteUpOptions</a></h4>
-      <section><p>Options controlling the behavior of an <a class="xref" href="pulumi.automation.remoteworkspacestack.html#Pulumi_Automation_RemoteWorkspaceStack_UpAsync_Pulumi_Automation_RemoteUpOptions_System_Threading_CancellationToken_">UpAsync(RemoteUpOptions?, CancellationToken)</a> operation.</p>
 </section>
       <h4><a class="xref" href="pulumi.automation.remoteworkspace.html">RemoteWorkspace</a></h4>
       <section></section>
@@ -176,20 +194,28 @@ against an instance of <a class="xref" href="pulumi.automation.remoteworkspacest
 </section>
       <h4><a class="xref" href="pulumi.automation.remoteworkspacestack.html">RemoteWorkspaceStack</a></h4>
       <section></section>
+      <h4><a class="xref" href="pulumi.automation.secretsprovideroptions.html">SecretsProviderOptions</a></h4>
+      <section><p>Options to pass into <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_ChangeSecretsProviderAsync_System_String_Pulumi_Automation_SecretsProviderOptions_System_Threading_CancellationToken_">ChangeSecretsProviderAsync(string, SecretsProviderOptions?, CancellationToken)</a>.</p>
+</section>
       <h4><a class="xref" href="pulumi.automation.stackdeployment.html">StackDeployment</a></h4>
       <section><p>Represents the state of a stack deployment as used by
 ExportStackAsync and ImportStackAsync.</p>
 <p></p>
-There is no strongly typed model for the contents yet, but you
-can access the raw representation via the Json property.
+<p>There is no strongly typed model for the contents yet, but you
+can access the raw representation via the Json property.</p>
 <p></p>
-NOTE: instances may contain sensitive data (secrets).
+<p>NOTE: instances may contain sensitive data (secrets).</p>
 </section>
       <h4><a class="xref" href="pulumi.automation.stacksettings.html">StackSettings</a></h4>
       <section></section>
       <h4><a class="xref" href="pulumi.automation.stacksettingsconfigvalue.html">StackSettingsConfigValue</a></h4>
       <section></section>
       <h4><a class="xref" href="pulumi.automation.stacksummary.html">StackSummary</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pulumi.automation.upoptions.html">UpOptions</a></h4>
+      <section><p>Options controlling the behavior of an <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_UpAsync_Pulumi_Automation_UpOptions_System_Threading_CancellationToken_">UpAsync(UpOptions?, CancellationToken)</a> operation.</p>
+</section>
+      <h4><a class="xref" href="pulumi.automation.upresult.html">UpResult</a></h4>
       <section></section>
       <h4><a class="xref" href="pulumi.automation.updateoptions.html">UpdateOptions</a></h4>
       <section><p>Common options controlling the behavior of update actions taken
@@ -199,34 +225,30 @@ against an instance of <a class="xref" href="pulumi.automation.workspacestack.ht
       <section></section>
       <h4><a class="xref" href="pulumi.automation.updatesummary.html">UpdateSummary</a></h4>
       <section></section>
-      <h4><a class="xref" href="pulumi.automation.upoptions.html">UpOptions</a></h4>
-      <section><p>Options controlling the behavior of an <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_UpAsync_Pulumi_Automation_UpOptions_System_Threading_CancellationToken_">UpAsync(UpOptions?, CancellationToken)</a> operation.</p>
-</section>
-      <h4><a class="xref" href="pulumi.automation.upresult.html">UpResult</a></h4>
-      <section></section>
       <h4><a class="xref" href="pulumi.automation.whoamiresult.html">WhoAmIResult</a></h4>
       <section></section>
       <h4><a class="xref" href="pulumi.automation.workspace.html">Workspace</a></h4>
       <section><p>Workspace is the execution context containing a single Pulumi project, a program, and multiple stacks.</p>
 <p></p>
-Workspaces are used to manage the execution environment, providing various utilities such as plugin
-installation, environment configuration ($PULUMI_HOME), and creation, deletion, and listing of Stacks.
+<p>Workspaces are used to manage the execution environment, providing various utilities such as plugin
+installation, environment configuration ($PULUMI_HOME), and creation, deletion, and listing of Stacks.</p>
 </section>
       <h4><a class="xref" href="pulumi.automation.workspacestack.html">WorkspaceStack</a></h4>
       <section><p><a class="xref" href="pulumi.automation.workspacestack.html">WorkspaceStack</a> is an isolated, independently configurable instance of a
 Pulumi program. <a class="xref" href="pulumi.automation.workspacestack.html">WorkspaceStack</a> exposes methods for the full pulumi lifecycle
 (up/preview/refresh/destroy), as well as managing configuration.</p>
 <p></p>
-Multiple stacks are commonly used to denote different phases of development
+<p>Multiple stacks are commonly used to denote different phases of development
 (such as development, staging, and production) or feature branches (such as
-feature-x-dev, jane-feature-x-dev).
+feature-x-dev, jane-feature-x-dev).</p>
 <p></p>
-Will dispose the <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_Workspace">Workspace</a> on <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_Dispose">Dispose()</a>.
+<p>Will dispose the <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_Workspace">Workspace</a> on <a class="xref" href="pulumi.automation.workspacestack.html#Pulumi_Automation_WorkspaceStack_Dispose">Dispose()</a>.</p>
 </section>
       <h4><a class="xref" href="pulumi.automation.workspacestackstate.html">WorkspaceStackState</a></h4>
       <section><p>Module class for manipulating stack state for a given <a class="xref" href="pulumi.automation.workspacestack.html">WorkspaceStack</a>.</p>
 </section>
-    <h3 id="enums">Enums
+    <h3 id="enums">
+Enums
 </h3>
       <h4><a class="xref" href="pulumi.automation.operationtype.html">OperationType</a></h4>
       <section></section>

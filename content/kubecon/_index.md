@@ -7,13 +7,14 @@ layout: event-page
 aliases: kubecon-europe
 
 hero:
+  layout: split
   title: Tame Kubernetes complexity with code
   description: |
     Learn how teams are moving beyond YAML with programming languages like TypeScript, Python, and Go to build platforms that scale. Also, free plushies.
   date_and_location: March 23-26, Amsterdam RAI
   booth: Booth 784
-  cta_text: Book a technical demo
-  cta_link: https://info.pulumi.com/book-demo-kubecon-2026
+  cta_primary_text: Book a technical demo
+  cta_primary_link: https://info.pulumi.com/book-demo-kubecon-2026
   cta_secondary_text: Get $500 in AWS credits
   cta_secondary_link: "#aws-credits"
   image: /images/kubecon/kubecon-hero-2026.png
@@ -135,7 +136,7 @@ location:
   anchor: location
 
 footer_cta:
-  title: The infrastructure-as-code platform for any cloud.
+  title: The infrastructure as code platform for any cloud.
   cta_primary_text: Try Pulumi
   cta_primary_link: /signup
   cta_secondary_text: Contact sales

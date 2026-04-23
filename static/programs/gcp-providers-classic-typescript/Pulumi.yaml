@@ -1,0 +1,10 @@
+name: gcp-providers-classic-typescript
+description: An example that uses the GCP Classic provider to create a Cloud Storage bucket and a Cloud Run service.
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-typescript

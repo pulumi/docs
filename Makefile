@@ -17,6 +17,7 @@ clean:
 .PHONY: ensure
 ensure: clean
 	./scripts/ensure.sh
+	./scripts/fetch-openapi-spec.sh
 	$(MAKE) build-assets
 
 .PHONY: update-repos

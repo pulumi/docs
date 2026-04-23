@@ -1,12 +1,12 @@
 ---
-title_tag: "Direct provider implementation"
+title_tag: "Direct Provider Implementation"
 meta_desc: "Implement Pulumi providers directly using gRPC bindings, without higher-level SDKs."
-title: Direct provider implementation
-h1: Direct provider implementation
+title: Direct Provider Implementation
+h1: Direct Provider Implementation
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Direct implementation
+        name: Direct Implementation
         identifier: iac-guides-provider-implementers
         parent: iac-guides-providers
         weight: 50
@@ -35,11 +35,10 @@ You'll need gRPC bindings for your language (generated from `provider.proto`), a
 
 - [Protocol reference](/docs/iac/guides/building-extending/providers/implementers/protocol-reference/) - Complete gRPC method documentation
 - [Python](/docs/iac/guides/building-extending/providers/implementers/python/) - Implement a provider in Python
-- [Go](/docs/iac/guides/building-extending/providers/implementers/go/) - Implement a provider in Go without the SDK
 - [TypeScript](/docs/iac/guides/building-extending/providers/implementers/typescript/) - Implement a provider in TypeScript
 
 ## Related resources
 
 - [Provider architecture](/docs/iac/guides/building-extending/providers/provider-architecture/) - Understanding the layers
 - [Schema reference](/docs/iac/guides/building-extending/packages/schema/) - Complete schema documentation
-- [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) - Higher-level Go SDK
+- [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) - Higher-level Go SDK

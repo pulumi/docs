@@ -45,7 +45,7 @@ But there's currently several use cases where this breaks down, due to the hard-
 
 For example, if you are using multiple explicit providers targeting different Azure accounts, you were not able to set these separate configurations via environment variable.
 
-Instead, users would have to to set these values in the provider config, which may not be desirable for all use cases.
+Instead, users would have to set these values in the provider config, which may not be desirable for all use cases.
 Not only does the provider config write secrets to state (albeit of course encrypted), but it can also result in a noisy diff on an otherwise no-op upgrade when token rotation is used.
 
 ## Remapping environment variables

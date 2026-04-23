@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class Output
- </title>
+      <title>Class Output </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class Output
- ">
+      <meta name="title" content="Class Output ">
     
+    <meta name="description" content="Useful static utility methods for both creating and working with s.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.Output">
 
 
-  <h1 id="Pulumi_Output" data-uid="Pulumi.Output" class="text-break">Class Output
-</h1>
+  <h1 id="Pulumi_Output" data-uid="Pulumi.Output" class="text-break">Class Output</h1>
   <div class="markdown level0 summary"><p>Useful static utility methods for both creating and working with <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -111,11 +109,11 @@
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L251">View Source</a>
   </span>
   <a id="Pulumi_Output_All_" data-uid="Pulumi.Output.All*"></a>
   <h4 id="Pulumi_Output_All__1_Pulumi_Input___0____" data-uid="Pulumi.Output.All``1(Pulumi.Input{``0}[])">All&lt;T&gt;(params Input&lt;T&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Combines all the <a class="xref" href="pulumi.input-1.html">Input&lt;T&gt;</a> values in <code data-dev-comment-type="paramref" class="paramref">inputs</code>
+  <div class="markdown level1 summary"><p>Combines all the <a class="xref" href="pulumi.input-1.html">Input&lt;T&gt;</a> values in <code class="paramref">inputs</code>
 into a single <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a> with an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray&lt;T&gt;</a>
 containing all their underlying values.  If any of the <a class="xref" href="pulumi.input-1.html">Input&lt;T&gt;</a>s are not
 known, the final result will be not known.  Similarly, if any of the <a class="xref" href="pulumi.input-1.html">Input&lt;T&gt;</a>s are secrets, then the final result will be a secret.</p>
@@ -123,7 +121,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(params Input&lt;T&gt;[] inputs)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(params Input&lt;T&gt;[] inputs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -173,11 +171,11 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L213">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L267">View Source</a>
   </span>
   <a id="Pulumi_Output_All_" data-uid="Pulumi.Output.All*"></a>
   <h4 id="Pulumi_Output_All__1_Pulumi_Output___0____" data-uid="Pulumi.Output.All``1(Pulumi.Output{``0}[])">All&lt;T&gt;(params Output&lt;T&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Combines all the <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a> values in <code data-dev-comment-type="paramref" class="paramref">outputs</code>
+  <div class="markdown level1 summary"><p>Combines all the <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a> values in <code class="paramref">outputs</code>
 into a single <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a> with an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray&lt;T&gt;</a>
 containing all their underlying values.  If any of the <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s are not
 known, the final result will be not known.  Similarly, if any of the <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s are secrets, then the final result will be a secret.</p>
@@ -185,7 +183,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(params Output&lt;T&gt;[] outputs)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(params Output&lt;T&gt;[] outputs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,7 +233,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L203">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L257">View Source</a>
   </span>
   <a id="Pulumi_Output_All_" data-uid="Pulumi.Output.All*"></a>
   <h4 id="Pulumi_Output_All__1_System_Collections_Generic_IEnumerable_Pulumi_Input___0___" data-uid="Pulumi.Output.All``1(System.Collections.Generic.IEnumerable{Pulumi.Input{``0}})">All&lt;T&gt;(IEnumerable&lt;Input&lt;T&gt;&gt;)</h4>
@@ -244,7 +242,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(IEnumerable&lt;Input&lt;T&gt;&gt; inputs)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(IEnumerable&lt;Input&lt;T&gt;&gt; inputs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -294,7 +292,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L273">View Source</a>
   </span>
   <a id="Pulumi_Output_All_" data-uid="Pulumi.Output.All*"></a>
   <h4 id="Pulumi_Output_All__1_System_Collections_Generic_IEnumerable_Pulumi_Output___0___" data-uid="Pulumi.Output.All``1(System.Collections.Generic.IEnumerable{Pulumi.Output{``0}})">All&lt;T&gt;(IEnumerable&lt;Output&lt;T&gt;&gt;)</h4>
@@ -303,7 +301,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(IEnumerable&lt;Output&lt;T&gt;&gt; outputs)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(IEnumerable&lt;Output&lt;T&gt;&gt; outputs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -353,181 +351,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L159">View Source</a>
-  </span>
-  <a id="Pulumi_Output_Create_" data-uid="Pulumi.Output.Create*"></a>
-  <h4 id="Pulumi_Output_Create__1___0_" data-uid="Pulumi.Output.Create``1(``0)">Create&lt;T&gt;(T)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;T&gt; Create&lt;T&gt;(T value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L162">View Source</a>
-  </span>
-  <a id="Pulumi_Output_Create_" data-uid="Pulumi.Output.Create*"></a>
-  <h4 id="Pulumi_Output_Create__1_System_Threading_Tasks_Task___0__" data-uid="Pulumi.Output.Create``1(System.Threading.Tasks.Task{``0})">Create&lt;T&gt;(Task&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;T&gt; Create&lt;T&gt;(Task&lt;T&gt; value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L165">View Source</a>
-  </span>
-  <a id="Pulumi_Output_CreateSecret_" data-uid="Pulumi.Output.CreateSecret*"></a>
-  <h4 id="Pulumi_Output_CreateSecret__1___0_" data-uid="Pulumi.Output.CreateSecret``1(``0)">CreateSecret&lt;T&gt;(T)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;T&gt; CreateSecret&lt;T&gt;(T value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L225">View Source</a>
   </span>
   <a id="Pulumi_Output_CreateSecret_" data-uid="Pulumi.Output.CreateSecret*"></a>
   <h4 id="Pulumi_Output_CreateSecret__1_Pulumi_Output___0__" data-uid="Pulumi.Output.CreateSecret``1(Pulumi.Output{``0})">CreateSecret&lt;T&gt;(Output&lt;T&gt;)</h4>
@@ -535,7 +359,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;T&gt; CreateSecret&lt;T&gt;(Output&lt;T&gt; value)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;T&gt; CreateSecret&lt;T&gt;(Output&lt;T&gt; value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -585,7 +409,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_Output_CreateSecret_" data-uid="Pulumi.Output.CreateSecret*"></a>
   <h4 id="Pulumi_Output_CreateSecret__1_System_Threading_Tasks_Task___0__" data-uid="Pulumi.Output.CreateSecret``1(System.Threading.Tasks.Task{``0})">CreateSecret&lt;T&gt;(Task&lt;T&gt;)</h4>
@@ -593,7 +417,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;T&gt; CreateSecret&lt;T&gt;(Task&lt;T&gt; value)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;T&gt; CreateSecret&lt;T&gt;(Task&lt;T&gt; value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -643,7 +467,181 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L233">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L219">View Source</a>
+  </span>
+  <a id="Pulumi_Output_CreateSecret_" data-uid="Pulumi.Output.CreateSecret*"></a>
+  <h4 id="Pulumi_Output_CreateSecret__1___0_" data-uid="Pulumi.Output.CreateSecret``1(``0)">CreateSecret&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static Output&lt;T&gt; CreateSecret&lt;T&gt;(T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L216">View Source</a>
+  </span>
+  <a id="Pulumi_Output_Create_" data-uid="Pulumi.Output.Create*"></a>
+  <h4 id="Pulumi_Output_Create__1_System_Threading_Tasks_Task___0__" data-uid="Pulumi.Output.Create``1(System.Threading.Tasks.Task{``0})">Create&lt;T&gt;(Task&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static Output&lt;T&gt; Create&lt;T&gt;(Task&lt;T&gt; value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L213">View Source</a>
+  </span>
+  <a id="Pulumi_Output_Create_" data-uid="Pulumi.Output.Create*"></a>
+  <h4 id="Pulumi_Output_Create__1___0_" data-uid="Pulumi.Output.Create``1(``0)">Create&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static Output&lt;T&gt; Create&lt;T&gt;(T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L287">View Source</a>
   </span>
   <a id="Pulumi_Output_Format_" data-uid="Pulumi.Output.Format*"></a>
   <h4 id="Pulumi_Output_Format_System_FormattableString_" data-uid="Pulumi.Output.Format(System.FormattableString)">Format(FormattableString)</h4>
@@ -652,14 +650,14 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
 all the underlying values in the holes, combines them appropriately with the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formattablestring.format">Format</a> string, and produces an <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>
 containing the final result.</p>
 <p></p>
-If any of the <a class="xref" href="pulumi.input-1.html">Input&lt;T&gt;</a>s or <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s are not known, the
+<p>If any of the <a class="xref" href="pulumi.input-1.html">Input&lt;T&gt;</a>s or <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s are not known, the
 final result will be not known.  Similarly, if any of the <a class="xref" href="pulumi.input-1.html">Input&lt;T&gt;</a>s or
-<a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s are secrets, then the final result will be a secret.
+<a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a>s are secrets, then the final result will be a secret.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;string&gt; Format(FormattableString formattableString)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;string&gt; Format(FormattableString formattableString)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -694,7 +692,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L238">View Source</a>
   </span>
   <a id="Pulumi_Output_IsSecretAsync_" data-uid="Pulumi.Output.IsSecretAsync*"></a>
   <h4 id="Pulumi_Output_IsSecretAsync__1_Pulumi_Output___0__" data-uid="Pulumi.Output.IsSecretAsync``1(Pulumi.Output{``0})">IsSecretAsync&lt;T&gt;(Output&lt;T&gt;)</h4>
@@ -703,7 +701,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; IsSecretAsync&lt;T&gt;(Output&lt;T&gt; output)</code></pre>
+    <pre><code class="lang- hljs">public static Task&lt;bool&gt; IsSecretAsync&lt;T&gt;(Output&lt;T&gt; output)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -753,7 +751,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L328">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L358">View Source</a>
   </span>
   <a id="Pulumi_Output_JsonDeserialize_" data-uid="Pulumi.Output.JsonDeserialize*"></a>
   <h4 id="Pulumi_Output_JsonDeserialize__1_Pulumi_Output_System_String__System_Text_Json_JsonSerializerOptions_" data-uid="Pulumi.Output.JsonDeserialize``1(Pulumi.Output{System.String},System.Text.Json.JsonSerializerOptions)">JsonDeserialize&lt;T&gt;(Output&lt;string&gt;, JsonSerializerOptions?)</h4>
@@ -763,7 +761,7 @@ to deserialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;T&gt; JsonDeserialize&lt;T&gt;(Output&lt;string&gt; json, JsonSerializerOptions? options = null)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;T&gt; JsonDeserialize&lt;T&gt;(Output&lt;string&gt; json, JsonSerializerOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -818,7 +816,7 @@ to deserialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L255">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L309">View Source</a>
   </span>
   <a id="Pulumi_Output_JsonSerialize_" data-uid="Pulumi.Output.JsonSerialize*"></a>
   <h4 id="Pulumi_Output_JsonSerialize__1_Pulumi_Output___0__System_Text_Json_JsonSerializerOptions_" data-uid="Pulumi.Output.JsonSerialize``1(Pulumi.Output{``0},System.Text.Json.JsonSerializerOptions)">JsonSerialize&lt;T&gt;(Output&lt;T&gt;, JsonSerializerOptions?)</h4>
@@ -828,7 +826,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;string&gt; JsonSerialize&lt;T&gt;(Output&lt;T&gt; value, JsonSerializerOptions? options = null)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;string&gt; JsonSerialize&lt;T&gt;(Output&lt;T&gt; value, JsonSerializerOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -883,7 +881,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__2_Pulumi_Input___0__Pulumi_Input___1__" data-uid="Pulumi.Output.Tuple``2(Pulumi.Input{``0},Pulumi.Input{``1})">Tuple&lt;T1, T2&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;)</h4>
@@ -892,7 +890,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2)&gt; Tuple&lt;T1, T2&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2)&gt; Tuple&lt;T1, T2&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -951,7 +949,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__2_Pulumi_Output___0__Pulumi_Output___1__" data-uid="Pulumi.Output.Tuple``2(Pulumi.Output{``0},Pulumi.Output{``1})">Tuple&lt;T1, T2&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;)</h4>
@@ -960,7 +958,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2)&gt; Tuple&lt;T1, T2&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2)&gt; Tuple&lt;T1, T2&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1019,7 +1017,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__3_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__" data-uid="Pulumi.Output.Tuple``3(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2})">Tuple&lt;T1, T2, T3&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;)</h4>
@@ -1028,7 +1026,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3)&gt; Tuple&lt;T1, T2, T3&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3)&gt; Tuple&lt;T1, T2, T3&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1096,7 +1094,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__3_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__" data-uid="Pulumi.Output.Tuple``3(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2})">Tuple&lt;T1, T2, T3&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;)</h4>
@@ -1105,7 +1103,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3)&gt; Tuple&lt;T1, T2, T3&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3)&gt; Tuple&lt;T1, T2, T3&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1173,7 +1171,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__4_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__" data-uid="Pulumi.Output.Tuple``4(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3})">Tuple&lt;T1, T2, T3, T4&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;, Input&lt;T4&gt;)</h4>
@@ -1182,7 +1180,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3, T4)&gt; Tuple&lt;T1, T2, T3, T4&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3, Input&lt;T4&gt; item4)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3, T4)&gt; Tuple&lt;T1, T2, T3, T4&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3, Input&lt;T4&gt; item4)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1259,7 +1257,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__4_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__" data-uid="Pulumi.Output.Tuple``4(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3})">Tuple&lt;T1, T2, T3, T4&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;, Output&lt;T4&gt;)</h4>
@@ -1268,7 +1266,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3, T4)&gt; Tuple&lt;T1, T2, T3, T4&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3, Output&lt;T4&gt; item4)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3, T4)&gt; Tuple&lt;T1, T2, T3, T4&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3, Output&lt;T4&gt; item4)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1345,7 +1343,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__5_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__" data-uid="Pulumi.Output.Tuple``5(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4})">Tuple&lt;T1, T2, T3, T4, T5&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;, Input&lt;T4&gt;, Input&lt;T5&gt;)</h4>
@@ -1354,7 +1352,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3, T4, T5)&gt; Tuple&lt;T1, T2, T3, T4, T5&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3, Input&lt;T4&gt; item4, Input&lt;T5&gt; item5)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3, T4, T5)&gt; Tuple&lt;T1, T2, T3, T4, T5&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3, Input&lt;T4&gt; item4, Input&lt;T5&gt; item5)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1440,7 +1438,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__5_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__" data-uid="Pulumi.Output.Tuple``5(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4})">Tuple&lt;T1, T2, T3, T4, T5&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;, Output&lt;T4&gt;, Output&lt;T5&gt;)</h4>
@@ -1449,7 +1447,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3, T4, T5)&gt; Tuple&lt;T1, T2, T3, T4, T5&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3, Output&lt;T4&gt; item4, Output&lt;T5&gt; item5)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3, T4, T5)&gt; Tuple&lt;T1, T2, T3, T4, T5&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3, Output&lt;T4&gt; item4, Output&lt;T5&gt; item5)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1535,7 +1533,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__6_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__Pulumi_Input___5__" data-uid="Pulumi.Output.Tuple``6(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5})">Tuple&lt;T1, T2, T3, T4, T5, T6&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;, Input&lt;T4&gt;, Input&lt;T5&gt;, Input&lt;T6&gt;)</h4>
@@ -1544,7 +1542,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3, Input&lt;T4&gt; item4, Input&lt;T5&gt; item5, Input&lt;T6&gt; item6)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3, Input&lt;T4&gt; item4, Input&lt;T5&gt; item5, Input&lt;T6&gt; item6)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1639,7 +1637,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__6_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__Pulumi_Output___5__" data-uid="Pulumi.Output.Tuple``6(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5})">Tuple&lt;T1, T2, T3, T4, T5, T6&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;, Output&lt;T4&gt;, Output&lt;T5&gt;, Output&lt;T6&gt;)</h4>
@@ -1648,7 +1646,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3, Output&lt;T4&gt; item4, Output&lt;T5&gt; item5, Output&lt;T6&gt; item6)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3, Output&lt;T4&gt; item4, Output&lt;T5&gt; item5, Output&lt;T6&gt; item6)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1743,7 +1741,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__7_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__Pulumi_Input___5__Pulumi_Input___6__" data-uid="Pulumi.Output.Tuple``7(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5},Pulumi.Input{``6})">Tuple&lt;T1, T2, T3, T4, T5, T6, T7&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;, Input&lt;T4&gt;, Input&lt;T5&gt;, Input&lt;T6&gt;, Input&lt;T7&gt;)</h4>
@@ -1752,7 +1750,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6, T7)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6, T7&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3, Input&lt;T4&gt; item4, Input&lt;T5&gt; item5, Input&lt;T6&gt; item6, Input&lt;T7&gt; item7)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6, T7)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6, T7&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3, Input&lt;T4&gt; item4, Input&lt;T5&gt; item5, Input&lt;T6&gt; item6, Input&lt;T7&gt; item7)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1856,7 +1854,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__7_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__Pulumi_Output___5__Pulumi_Output___6__" data-uid="Pulumi.Output.Tuple``7(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5},Pulumi.Output{``6})">Tuple&lt;T1, T2, T3, T4, T5, T6, T7&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;, Output&lt;T4&gt;, Output&lt;T5&gt;, Output&lt;T6&gt;, Output&lt;T7&gt;)</h4>
@@ -1865,7 +1863,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6, T7)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6, T7&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3, Output&lt;T4&gt; item4, Output&lt;T5&gt; item5, Output&lt;T6&gt; item6, Output&lt;T7&gt; item7)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6, T7)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6, T7&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3, Output&lt;T4&gt; item4, Output&lt;T5&gt; item5, Output&lt;T6&gt; item6, Output&lt;T7&gt; item7)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1969,7 +1967,7 @@ to serialize the given <a class="xref" href="pulumi.output-1.html">Output&lt;T&g
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__8_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__Pulumi_Input___5__Pulumi_Input___6__Pulumi_Input___7__" data-uid="Pulumi.Output.Tuple``8(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5},Pulumi.Input{``6},Pulumi.Input{``7})">Tuple&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;, Input&lt;T4&gt;, Input&lt;T5&gt;, Input&lt;T6&gt;, Input&lt;T7&gt;, Input&lt;T8&gt;)</h4>
@@ -1982,7 +1980,7 @@ secret.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6, T7, T8)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3, Input&lt;T4&gt; item4, Input&lt;T5&gt; item5, Input&lt;T6&gt; item6, Input&lt;T7&gt; item7, Input&lt;T8&gt; item8)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6, T7, T8)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(Input&lt;T1&gt; item1, Input&lt;T2&gt; item2, Input&lt;T3&gt; item3, Input&lt;T4&gt; item4, Input&lt;T5&gt; item5, Input&lt;T6&gt; item6, Input&lt;T7&gt; item7, Input&lt;T8&gt; item8)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2095,7 +2093,7 @@ secret.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__8_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__Pulumi_Output___5__Pulumi_Output___6__Pulumi_Output___7__" data-uid="Pulumi.Output.Tuple``8(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5},Pulumi.Output{``6},Pulumi.Output{``7})">Tuple&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;, Output&lt;T4&gt;, Output&lt;T5&gt;, Output&lt;T6&gt;, Output&lt;T7&gt;, Output&lt;T8&gt;)</h4>
@@ -2104,7 +2102,7 @@ secret.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6, T7, T8)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3, Output&lt;T4&gt; item4, Output&lt;T5&gt; item5, Output&lt;T6&gt; item6, Output&lt;T7&gt; item7, Output&lt;T8&gt; item8)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;(T1, T2, T3, T4, T5, T6, T7, T8)&gt; Tuple&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(Output&lt;T1&gt; item1, Output&lt;T2&gt; item2, Output&lt;T3&gt; item3, Output&lt;T4&gt; item4, Output&lt;T5&gt; item5, Output&lt;T6&gt; item6, Output&lt;T7&gt; item7, Output&lt;T8&gt; item8)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2217,7 +2215,7 @@ secret.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_Output_Unsecret_" data-uid="Pulumi.Output.Unsecret*"></a>
   <h4 id="Pulumi_Output_Unsecret__1_Pulumi_Output___0__" data-uid="Pulumi.Output.Unsecret``1(Pulumi.Output{``0})">Unsecret&lt;T&gt;(Output&lt;T&gt;)</h4>
@@ -2227,7 +2225,7 @@ a non-secret. The original output is not modified in any way.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;T&gt; Unsecret&lt;T&gt;(Output&lt;T&gt; output)</code></pre>
+    <pre><code class="lang- hljs">public static Output&lt;T&gt; Unsecret&lt;T&gt;(Output&lt;T&gt; output)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2284,7 +2282,7 @@ a non-secret. The original output is not modified in any way.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/core/output_tuple.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Core/Output_Tuple.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -516,7 +516,7 @@ const allViewerExceptHostHeaderId = "b689b0a8-53d0-40ab-baf2-68738e2966ac";
 // forwardedValues configurations only support gzip; enabling Brotli requires
 // a CachePolicy with enableAcceptEncodingBrotli set. See:
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/ServingCompressedFiles.html
-function cacheKeyPolicy(name: string, ttl: number): aws.cloudfront.CachePolicy {
+function cacheKeyPolicy(name: string, ttl: number, cacheKeyHeaders: string[] = []): aws.cloudfront.CachePolicy {
     const cachingEnabled = ttl > 0;
     return new aws.cloudfront.CachePolicy(name, {
         defaultTtl: ttl,
@@ -526,7 +526,9 @@ function cacheKeyPolicy(name: string, ttl: number): aws.cloudfront.CachePolicy {
             enableAcceptEncodingBrotli: cachingEnabled,
             enableAcceptEncodingGzip: cachingEnabled,
             cookiesConfig: { cookieBehavior: "none" },
-            headersConfig: { headerBehavior: "none" },
+            headersConfig: cacheKeyHeaders.length > 0
+                ? { headerBehavior: "whitelist", headers: { items: cacheKeyHeaders } }
+                : { headerBehavior: "none" },
             queryStringsConfig: { queryStringBehavior: "none" },
         },
     });
@@ -535,8 +537,16 @@ function cacheKeyPolicy(name: string, ttl: number): aws.cloudfront.CachePolicy {
 // Keys for each TTL bucket used by the distribution's cache behaviors. The
 // "thirty-minute-cache" and "one-year-cache" names are preserved so Pulumi
 // updates them in place (adding the Brotli/Gzip flags) rather than replacing.
+//
+// thirtyMinuteCachePolicy varies on the Accept header so /registry/* and
+// /guides/* (which proxy to separate CDNs whose viewer-request functions do
+// markdown content negotiation) cache HTML and markdown variants separately
+// at the apex layer. Without this, whichever variant populates the apex cache
+// first is served to every requester until TTL. Fragmentation is bounded to
+// two entries per URI because the downstream functions normalize Accept to
+// "text/markdown" or absent before the inner cache lookup.
 const tenMinuteCacheKeyPolicy = cacheKeyPolicy("ten-minute-cache", tenMinutes);
-const thirtyMinuteCachePolicy = cacheKeyPolicy("thirty-minute-cache", thirtyMinutes);
+const thirtyMinuteCachePolicy = cacheKeyPolicy("thirty-minute-cache", thirtyMinutes, ["Accept"]);
 const oneHourCacheKeyPolicy = cacheKeyPolicy("one-hour-cache", oneHour);
 const oneWeekCacheKeyPolicy = cacheKeyPolicy("one-week-cache", oneWeek);
 const oneYearCachePolicy = cacheKeyPolicy("one-year-cache", oneYear);
@@ -674,14 +684,19 @@ if (config.registryStack) {
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
-            }
+            },
+            // Origin Shield for registry should be configured in pulumi/registry,
+            // not here, since the registry has its own CloudFront distribution.
         }
     );
     registryBehaviors.push(
         {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
-            pathPattern: "/registry/*",
+            // "/registry*" (no slash) matches /registry, /registry.md, and
+            // /registry/... so the .md URL-suffix convention reaches the
+            // registry origin alongside the trailing-slash form.
+            pathPattern: "/registry*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
@@ -715,7 +730,9 @@ if (config.guidesStack) {
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
-            }
+            },
+            // Origin Shield for guides should be configured in pulumi/guides,
+            // not here, since guides has its own CloudFront distribution.
         }
     );
     guidesBehaviors.push(
@@ -763,6 +780,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
+            },
+            originShield: {
+                enabled: true,
+                originShieldRegion: "us-west-2",
             },
         },
         {
@@ -964,7 +985,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/logos/brand/*",
-            cachePolicyId: thirtyMinuteCachePolicy.id,
+            cachePolicyId: oneHourCacheKeyPolicy.id,
             responseHeadersPolicyId: BrandLogoCachePolicy.id,
         },
         {
@@ -1017,6 +1038,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     // "All" is the most broad distribution, and also the most expensive.
     // "100" is the least broad, and also the least expensive.
     priceClass: "PriceClass_All",
+
+    httpVersion: "http2and3",
 
     // Customize error pages.
     // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/custom-error-pages.html

@@ -141,7 +141,7 @@ Bun makes it easy to go full ESM and it's the [recommended module format](https:
 }
 ```
 
-With [ECMAScript module (ESM)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) syntax, one thing that gets easier is working with async code. In a CommonJS Pulumi program, if you need to await a data source or other async call before declaring resources, the program must be wrapped in an [async entrypoint function](https://github.com/docs/iac/languages-sdks/javascript/#enabling-async-support). With ESM and Bun, [top-level await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) just works, so you can skip the wrapper function entirely and `await` directly at the module level:
+With [ECMAScript module (ESM)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) syntax, one thing that gets easier is working with async code. In a CommonJS Pulumi program, if you need to await a data source or other async call before declaring resources, the program must be wrapped in an [async entrypoint function](/docs/iac/languages-sdks/javascript/#enabling-async-support). With ESM and Bun, [top-level await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) just works, so you can skip the wrapper function entirely and `await` directly at the module level:
 
 ```typescript
 import * as aws from "@pulumi/aws";

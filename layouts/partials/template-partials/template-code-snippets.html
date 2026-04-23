@@ -1,0 +1,85 @@
+{{/*
+Template Code Snippets Partial
+
+Renders syntax-highlighted code with a window-bar title area (optional title
+left, language dropdown right). Uses Hugo's built-in Chroma highlighting and
+the min-dark color theme scoped under .code-theme-min-dark.
+
+Can be called standalone:
+  {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" .code_snippets "title" .code_title) }}
+
+Or embedded in another partial by passing the relevant dict.
+
+Parameters (passed as a dict):
+  code_snippets: required — array of snippet objects:
+    - language: Chroma language identifier (e.g. "typescript", "python", "go")
+    - label:    Display label for the dropdown (e.g. "TypeScript")
+    - title:    Optional per-snippet filename shown in the title bar (e.g. "index.ts")
+    - code:     The code string to highlight
+  title: optional — fallback title shown in the title bar when the active
+         snippet has no per-snippet title. If neither is set, the title area
+         is left empty (dropdown only).
+*/}}
+
+{{ $snippets := .code_snippets }}
+{{ $defaultTitle := .title }}
+
+{{ if $snippets }}
+{{ $firstSnippet := index $snippets 0 }}
+{{ $containerId := printf "code-snippets-%s" (md5 (printf "%v" $snippets)) }}
+<div class="code-snippets-container code-theme-min-dark" id="{{ $containerId }}">
+    <div class="code-snippets-titlebar" role="toolbar" aria-label="Code snippet controls">
+        <span class="code-snippets-title" data-default-title="{{ $defaultTitle | default "" }}">
+            {{- if $firstSnippet.title -}}
+                {{ $firstSnippet.title }}
+            {{- else if $defaultTitle -}}
+                {{ $defaultTitle }}
+            {{- end -}}
+        </span>
+        <div class="code-snippets-dropdown" role="combobox" aria-haspopup="listbox" aria-expanded="false">
+            <button
+                class="code-snippets-dropdown-trigger"
+                type="button"
+                aria-label="Select language"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+            >
+                <span class="code-snippets-dropdown-label">{{ $firstSnippet.label | default ($firstSnippet.language | title) }}</span>
+                <span class="code-snippets-dropdown-chevron" aria-hidden="true">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </button>
+            <ul class="code-snippets-dropdown-menu" role="listbox" aria-label="Language options">
+                {{ range $i, $snippet := $snippets }}
+                <li
+                    class="code-snippets-dropdown-item{{ if eq $i 0 }} active{{ end }}"
+                    role="option"
+                    aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
+                    data-language="{{ $snippet.language }}"
+                    data-label="{{ $snippet.label | default ($snippet.language | title) }}"
+                    data-snippet-title="{{ $snippet.title | default "" }}"
+                    tabindex="-1"
+                >
+                    {{- $snippet.label | default ($snippet.language | title) -}}
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+    <div class="code-snippets-panels">
+        {{ range $i, $snippet := $snippets }}
+        <div
+            class="code-snippets-panel{{ if eq $i 0 }} active{{ end }}"
+            data-language="{{ $snippet.language }}"
+            role="region"
+            aria-label="{{ $snippet.label | default ($snippet.language | title) }} code example"
+            {{ if ne $i 0 }}aria-hidden="true"{{ end }}
+        >
+            {{ highlight $snippet.code $snippet.language "" }}
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

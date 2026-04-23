@@ -12,7 +12,7 @@ aliases:
   - /product/pulumi-idp
 
 sections:
-  - type: product_hero
+  - type: hero
     title_primary: Self-service infrastructure
     title_secondary: at any scale.
     description: Build golden paths with reusable components and templates. Enable self-service provisioning through code, YAML, or developer portals — with governance built in.
@@ -20,7 +20,7 @@ sections:
     image_alt: Pulumi internal developer platform services dashboard
     anchor: hero
 
-  - type: product_two_column
+  - type: feature_split
     heading: Everything you need to build your internal developer platform.
     description: |
       Golden paths and guardrails, without the slowdown.

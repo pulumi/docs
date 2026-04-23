@@ -34,14 +34,20 @@
 
                 {{ if .Params.docs_home }}
                     {{ partial "docs/special-pages/docs-home.html" . }}
-                {{ else if .Params.cloud_overview }}
-                    {{ partial "docs/special-pages/cloud-overview.html" . }}
                 {{ end }}
 
 
                 <section class="docs-content">
                     {{ .Content }}
                 </section>
+
+                {{ if .Params.openapi_docs }}
+                    {{ partial "openapi/open-api-gen.html" . }}
+                {{ end }}
+
+                {{ if .Params.openapi_schema }}
+                    {{ partial "openapi/schema-component.html" . }}
+                {{ end }}
             </div>
             {{ if not .Params.norightnav }}
             <div class="docs-table-of-contents docs-toc-desktop">

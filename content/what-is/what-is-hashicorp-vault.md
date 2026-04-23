@@ -4,7 +4,7 @@ meta_desc: |
      HashiCorp Vault is a tool for securing, storing, and tightly controlling access to tokens, passwords, certificates, and encryption keys.
 
 type: what-is
-page_title: "What is Hashicorp Vault?"
+page_title: "What is HashiCorp Vault?"
 ---
 ### What is HashiCorp Vault?
 
@@ -26,7 +26,7 @@ In this article, we'll cover the key features of [HashiCorp Vault](https://www.h
 
 HashiCorp Vault configurations can be managed via the Vault CLI. Before you begin configuring Vault, ensure that you have [Vault installed](https://www.vaultproject.io/downloads). After installation, initialize and start the Vault server.
 
-Use the `vault kv put` command to create a new secret within a specified mouth path.
+Use the `vault kv put` command to create a new secret within a specified mount path.
 
 ```bash
 # Create a new secret

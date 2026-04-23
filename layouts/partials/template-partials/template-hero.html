@@ -1,44 +1,123 @@
 {{/*
     Template Hero Partial
 
-    Parameters:
-    - title: Hero title
+    Hero section supporting two layouts (split and centered) and optionally a
+    code composite visual (live code-snippets block with SVG decorative overlay)
+    or a static image in the right/below slot.
+
+    Parameters — hero:
+    - title: Hero title (used when title_primary/title_secondary not set)
+    - title_primary: First part of heading, purple/larger
+    - title_secondary: Second part of heading, black/smaller
+    - title_reversed: Optional bool. When true, renders secondary above primary.
     - description: Hero description
-    - cta_text: CTA button text
-    - cta_link: CTA button link
-    - cta_secondary_text: Secondary CTA button text (optional)
-    - cta_secondary_link: Secondary CTA button link (optional)
-    - image: Hero image path
-    - image_alt: Alt text for hero image (optional)
-    - tag_line: Tag line text (optional, displays in violet)
-    - booth_number: Booth number (optional, displays in black)
+    - cta_primary_text: Primary CTA button text (defaults to site.Params.cta.primary.label)
+    - cta_primary_link: Primary CTA button link (defaults to site.Params.cta.primary.href)
+    - cta_secondary_text: Secondary CTA button text (defaults to site.Params.cta.secondary.label)
+    - cta_secondary_link: Secondary CTA button link (defaults to site.Params.cta.secondary.href)
+    - image: Optional hero image path (used when code_snippets is not set)
+    - image_alt: Alt text for image (optional)
+    - image_max_width: Optional max width for the image (e.g. "800px", "60rem"). Defaults to full width.
+    - image_min_width: Optional min width for the image (e.g. "400px", "30rem").
+    - title_reversed: Optional boolean. When true, renders title_secondary (black) above title_primary (purple).
+    - layout: Optional string. "split" renders text left / visual right; default is centered.
+    - badge_highlight_text: Optional badge text highlighted in purple (split layout only).
+    - badge_text: Optional pill badge text displayed above the heading (split layout only).
+    - badge_link: Optional URL for the badge pill.
+    - tag_line: Optional tag line text displayed in violet above the heading (split layout only).
+    - date_and_location: Optional event date and location string (split layout only).
+    - booth: Optional booth number (split layout only, displayed after date_and_location).
     - anchor: Optional anchor for section id
+
+    Parameters — code composite (renders instead of image when code_snippets is set):
+    - code_snippets: Array of {language, label, title, code}
+    - code_title: Optional fallback title shown in the titlebar
+    - code_overlay_image: Path to SVG overlay (rendered on top, pointer-events: none)
+    - code_overlay_alt: Alt text for overlay image (defaults to empty — decorative)
+    - code_aspect_ratio: Aspect ratio of the composite canvas, e.g. "666/513"
+    - code_visual_max_width: Optional max-width for the composite visual, e.g. "860px"
+    - code_offsets: Map of CSS offset values {top, right, bottom, left} applied to the code block.
+                    Setting both top and bottom constrains the block height (required for height: 100%
+                    on the inner code-snippets-container to resolve correctly).
 */}}
 
 {{ $title := .title }}
+{{ $titlePrimary := .title_primary }}
+{{ $titleSecondary := .title_secondary }}
+{{ $titleReversed := .title_reversed | default false }}
 {{ $description := .description }}
-{{ $ctaText := .cta_text }}
-{{ $ctaLink := .cta_link }}
-{{ $ctaSecondaryText := .cta_secondary_text }}
-{{ $ctaSecondaryLink := .cta_secondary_link }}
+{{ $ctaPrimaryText := .cta_primary_text | default site.Params.cta.primary.label }}
+{{ $ctaPrimaryLink := .cta_primary_link | default site.Params.cta.primary.href }}
+{{ $ctaSecondaryText := .cta_secondary_text | default site.Params.cta.secondary.label }}
+{{ $ctaSecondaryLink := .cta_secondary_link | default site.Params.cta.secondary.href }}
 {{ $image := .image }}
-{{ $imageAlt := .image_alt | default $title }}
+{{ $imageAlt := .image_alt | default $title | default (printf "%s %s" $titlePrimary $titleSecondary) }}
+{{ $imageMaxWidth := .image_max_width }}
+{{ $imageMinWidth := .image_min_width }}
+{{ $imageStyle := "" }}{{ if $imageMaxWidth }}{{ $imageStyle = printf "%smax-width: %s;" $imageStyle $imageMaxWidth }}{{ end }}{{ if $imageMinWidth }}{{ $imageStyle = printf "%smin-width: %s;" $imageStyle $imageMinWidth }}{{ end }}
+{{ $anchor := .anchor }}
+{{ $layout := .layout | default "centered" }}
+{{ $badgeHighlightText := .badge_highlight_text }}
+{{ $badgeText := .badge_text }}
+{{ $badgeLink := .badge_link }}
 {{ $tagLine := .tag_line }}
 {{ $dateAndLocation := .date_and_location }}
 {{ $booth := .booth }}
-{{ $anchor := .anchor }}
 
+{{ $codeSnippets := .code_snippets }}
+{{ $codeTitle := .code_title }}
+{{ $overlayImage := .code_overlay_image }}
+{{ $overlayAlt := .code_overlay_alt | default "" }}
+{{ $codeAspectRatio := .code_aspect_ratio | default "" }}
+{{ $codeVisualMaxWidth := .code_visual_max_width | default "" }}
+{{ $codeOffsets := .code_offsets | default dict }}
+
+{{/* Container style: aspect-ratio locks the canvas to the SVG dimensions */}}
+{{ $visualStyle := "" }}
+{{ if $codeAspectRatio }}{{ $visualStyle = printf "aspect-ratio: %s;" $codeAspectRatio }}{{ end }}
+{{ if $codeVisualMaxWidth }}{{ $visualStyle = printf "%s max-width: %s;" $visualStyle $codeVisualMaxWidth }}{{ end }}
+
+{{/* Block offsets: t/r/b/l applied as inline style from code_offsets frontmatter map */}}
+{{ $blockOffsetParts := slice }}
+{{ with (index $codeOffsets "top") }}{{ $blockOffsetParts = $blockOffsetParts | append (printf "top: %s" .) }}{{ end }}
+{{ with (index $codeOffsets "right") }}{{ $blockOffsetParts = $blockOffsetParts | append (printf "right: %s" .) }}{{ end }}
+{{ with (index $codeOffsets "bottom") }}{{ $blockOffsetParts = $blockOffsetParts | append (printf "bottom: %s" .) }}{{ end }}
+{{ with (index $codeOffsets "left") }}{{ $blockOffsetParts = $blockOffsetParts | append (printf "left: %s" .) }}{{ end }}
+{{ $blockOffsetStyle := delimit $blockOffsetParts "; " }}
+
+{{ if eq $layout "split" }}
 <section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="flex flex-col xl:flex-row items-start justify-between gap-8">
-        <div class="xl:w-1/2">
+    <div class="flex flex-col xl:flex-row items-center justify-between gap-12">
+        <div class="xl:w-1/2 flex flex-col items-start">
+            {{ if or $badgeText $badgeHighlightText }}
+            <a href="{{ $badgeLink }}" class="font-mono flex-wrap text-sm tracking-wider uppercase inline-flex items-center gap-1 border border-violet-200 rounded-full py-3 px-5 mb-4 no-underline hover:border-violet-400 transition-colors">
+                <span class="text-violet-800 whitespace-nowrap">{{ $badgeHighlightText }}</span>
+                <span class="text-gray-900 whitespace-nowrap">{{ $badgeText }} <span class="text-gray-800">&rsaquo;</span></span>
+            </a>
+            {{ end }}
             {{ if $tagLine }}
             <div class="text-left mb-2">
-                {{ if $tagLine }}
                 <span class="hero-tag-line">{{ $tagLine }}</span>
-                {{ end }}
             </div>
             {{ end }}
-            <h1 class="title mt-6 mb-8">{{ $title }}</h1>
+            {{ if or $titlePrimary $title }}
+            <h1 class="product-hero-heading text-left mb-6">
+                {{ if and $titlePrimary $titleSecondary }}
+                {{ if $titleReversed }}
+                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
+                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
+                {{ else }}
+                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
+                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
+                {{ end }}
+                {{ else if $titlePrimary }}
+                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
+                {{ else }}
+                <span class="product-hero-title">{{ $title }}</span>
+                {{ end }}
+            </h1>
+            {{ end }}
+            {{ if or $dateAndLocation $booth }}
             <p class="hero-event-details mb-8">
                 {{ if $dateAndLocation }}
                 <span><i class="far fa-calendar mr-3"></i></span>
@@ -49,31 +128,110 @@
                 <span class="hero-booth-number">{{ $booth }}</span>
                 {{ end }}
             </p>
-            {{ if $image }}
-            <div class="block xl:hidden">
-                <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full max-w-[680px] mx-auto">
-            </div>
             {{ end }}
-            <p class="description mb-12">{{ $description }}</p>
-            {{ if $ctaText }}
-            <div class="flex flex-col lg:flex-row items-start gap-4">
-                <a href="{{ $ctaLink }}" class="btn-primary-template-variant inline-flex items-center gap-2 w-full xl:w-auto justify-center xl:justify-start">
-                    <span>{{ $ctaText }}</span>
+            {{ if $description }}
+            <p class="product-hero-description mb-10 text-left">{{ $description | markdownify }}</p>
+            {{ end }}
+            {{ if or $ctaPrimaryText $ctaSecondaryText }}
+            <div class="flex flex-col sm:flex-row items-start gap-4 w-full">
+                {{ if $ctaPrimaryText }}
+                <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center whitespace-nowrap" data-role="cta-get-started">
+                    <span>{{ $ctaPrimaryText }}</span>
                     <span>→</span>
                 </a>
+                {{ end }}
                 {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2 w-full xl:w-auto justify-center xl:justify-start">
+                <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center whitespace-nowrap">
                     <span>{{ $ctaSecondaryText }}</span>
-                    <span>→</span>
                 </a>
                 {{ end }}
             </div>
             {{ end }}
         </div>
-        {{ if $image }}
-        <div class="hidden xl:block xl:w-1/2">
-            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto max-w-[680px] mx-auto">
+        {{ if $codeSnippets }}
+        <div class="xl:w-1/2 w-full flex justify-end">
+            <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
+                <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
+                    {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
+                </div>
+                {{ if $overlayImage }}
+                <img
+                    src="{{ $overlayImage }}"
+                    alt="{{ $overlayAlt }}"
+                    class="hero-code-overlay"
+                    aria-hidden="true"
+                >
+                {{ end }}
+            </div>
+        </div>
+        {{ else if $image }}
+        <div class="xl:w-1/2 w-full">
+            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto"{{ with $imageStyle }} style="{{ . | safeCSS }}"{{ end }}>
         </div>
         {{ end }}
     </div>
 </section>
+{{ else }}
+<section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="flex flex-col items-center gap-12">
+        <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
+            {{ if or $titlePrimary $title }}
+            <h1 class="product-hero-heading mb-6">
+                {{ if and $titlePrimary $titleSecondary }}
+                {{ if $titleReversed }}
+                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
+                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
+                {{ else }}
+                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
+                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
+                {{ end }}
+                {{ else if $titlePrimary }}
+                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
+                {{ else }}
+                <span class="product-hero-title">{{ $title }}</span>
+                {{ end }}
+            </h1>
+            {{ end }}
+            {{ if $description }}
+            <p class="product-hero-description mb-10">{{ $description | markdownify }}</p>
+            {{ end }}
+            {{ if or $ctaPrimaryText $ctaSecondaryText }}
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-4 w-full">
+                {{ if $ctaPrimaryText }}
+                <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant inline-flex items-center gap-2 w-full lg:w-auto justify-center" data-role="cta-get-started">
+                    <span>{{ $ctaPrimaryText }}</span>
+                    <span>→</span>
+                </a>
+                {{ end }}
+                {{ if $ctaSecondaryText }}
+                <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2 w-full lg:w-auto justify-center">
+                    <span>{{ $ctaSecondaryText }}</span>
+                </a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        {{ if $codeSnippets }}
+        <div class="product-hero-visual flex justify-center w-full">
+            <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
+                <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
+                    {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
+                </div>
+                {{ if $overlayImage }}
+                <img
+                    src="{{ $overlayImage }}"
+                    alt="{{ $overlayAlt }}"
+                    class="hero-code-overlay"
+                    aria-hidden="true"
+                >
+                {{ end }}
+            </div>
+        </div>
+        {{ else if $image }}
+        <div class="product-hero-visual flex justify-center">
+            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto rounded-lg"{{ with $imageStyle }} style="{{ . | safeCSS }}"{{ end }}>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

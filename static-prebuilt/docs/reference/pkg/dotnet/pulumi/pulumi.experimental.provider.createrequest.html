@@ -1,15 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class CreateRequest
- </title>
+      <title>Class CreateRequest </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class CreateRequest
- ">
+      <meta name="title" content="Class CreateRequest ">
+    
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -68,8 +67,7 @@
             <article class="content wrap" id="_content" data-uid="Pulumi.Experimental.Provider.CreateRequest">
 
 
-  <h1 id="Pulumi_Experimental_Provider_CreateRequest" data-uid="Pulumi.Experimental.Provider.CreateRequest" class="text-break">Class CreateRequest
-</h1>
+  <h1 id="Pulumi_Experimental_Provider_CreateRequest" data-uid="Pulumi.Experimental.Provider.CreateRequest" class="text-break">Class CreateRequest</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -98,7 +96,7 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<span class="xref">Experimental</span>.<a class="xref" href="pulumi.experimental.provider.html">Provider</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.experimental.html">Experimental</a>.<a class="xref" href="pulumi.experimental.provider.html">Provider</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_Experimental_Provider_CreateRequest_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -107,15 +105,15 @@
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Provider/Provider.cs/#L280">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_CreateRequest__ctor_" data-uid="Pulumi.Experimental.Provider.CreateRequest.#ctor*"></a>
-  <h4 id="Pulumi_Experimental_Provider_CreateRequest__ctor_System_String_System_Collections_Immutable_ImmutableDictionary_System_String_Pulumi_Experimental_Provider_PropertyValue__System_TimeSpan_System_Boolean_" data-uid="Pulumi.Experimental.Provider.CreateRequest.#ctor(System.String,System.Collections.Immutable.ImmutableDictionary{System.String,Pulumi.Experimental.Provider.PropertyValue},System.TimeSpan,System.Boolean)">CreateRequest(string, ImmutableDictionary&lt;string, PropertyValue&gt;, TimeSpan, bool)</h4>
+  <h4 id="Pulumi_Experimental_Provider_CreateRequest__ctor_Pulumi_Urn_System_Collections_Immutable_ImmutableDictionary_System_String_Pulumi_Experimental_PropertyValue__System_TimeSpan_System_Boolean_" data-uid="Pulumi.Experimental.Provider.CreateRequest.#ctor(Pulumi.Urn,System.Collections.Immutable.ImmutableDictionary{System.String,Pulumi.Experimental.PropertyValue},System.TimeSpan,System.Boolean)">CreateRequest(Urn, ImmutableDictionary&lt;string, PropertyValue&gt;, TimeSpan, bool)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CreateRequest(string urn, ImmutableDictionary&lt;string, PropertyValue&gt; properties, TimeSpan timeout, bool preview)</code></pre>
+    <pre><code class="lang- hljs">public CreateRequest(Urn urn, ImmutableDictionary&lt;string, PropertyValue&gt; inputs, TimeSpan timeout, bool preview)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,13 +126,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><a class="xref" href="pulumi.urn.html">Urn</a></td>
         <td><span class="parametername">urn</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.provider.propertyvalue.html">PropertyValue</a>&gt;</td>
-        <td><span class="parametername">properties</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.propertyvalue.html">PropertyValue</a>&gt;</td>
+        <td><span class="parametername">inputs</span></td>
         <td></td>
       </tr>
       <tr>
@@ -149,19 +147,72 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Provider/Provider.cs/#L276">View Source</a>
   </span>
+  <a id="Pulumi_Experimental_Provider_CreateRequest_Inputs_" data-uid="Pulumi.Experimental.Provider.CreateRequest.Inputs*"></a>
+  <h4 id="Pulumi_Experimental_Provider_CreateRequest_Inputs" data-uid="Pulumi.Experimental.Provider.CreateRequest.Inputs">Inputs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public ImmutableDictionary&lt;string, PropertyValue&gt; Inputs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.propertyvalue.html">PropertyValue</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Provider/Provider.cs/#L275">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_CreateRequest_Name_" data-uid="Pulumi.Experimental.Provider.CreateRequest.Name*"></a>
+  <h4 id="Pulumi_Experimental_Provider_CreateRequest_Name" data-uid="Pulumi.Experimental.Provider.CreateRequest.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Provider/Provider.cs/#L278">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_CreateRequest_Preview_" data-uid="Pulumi.Experimental.Provider.CreateRequest.Preview*"></a>
   <h4 id="Pulumi_Experimental_Provider_CreateRequest_Preview" data-uid="Pulumi.Experimental.Provider.CreateRequest.Preview">Preview</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool Preview</code></pre>
+    <pre><code class="lang- hljs">public bool Preview { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -177,41 +228,17 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Provider/Provider.cs/#L277">View Source</a>
   </span>
-  <h4 id="Pulumi_Experimental_Provider_CreateRequest_Properties" data-uid="Pulumi.Experimental.Provider.CreateRequest.Properties">Properties</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, PropertyValue&gt; Properties</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="pulumi.experimental.provider.propertyvalue.html">PropertyValue</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L181">View Source</a>
-  </span>
+  <a id="Pulumi_Experimental_Provider_CreateRequest_Timeout_" data-uid="Pulumi.Experimental.Provider.CreateRequest.Timeout*"></a>
   <h4 id="Pulumi_Experimental_Provider_CreateRequest_Timeout" data-uid="Pulumi.Experimental.Provider.CreateRequest.Timeout">Timeout</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly TimeSpan Timeout</code></pre>
+    <pre><code class="lang- hljs">public TimeSpan Timeout { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -227,60 +254,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L177">View Source</a>
-  </span>
-  <h4 id="Pulumi_Experimental_Provider_CreateRequest_Urn" data-uid="Pulumi.Experimental.Provider.CreateRequest.Urn">Urn</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Urn</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-</h3>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L179">View Source</a>
-  </span>
-  <a id="Pulumi_Experimental_Provider_CreateRequest_Name_" data-uid="Pulumi.Experimental.Provider.CreateRequest.Name*"></a>
-  <h4 id="Pulumi_Experimental_Provider_CreateRequest_Name" data-uid="Pulumi.Experimental.Provider.CreateRequest.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Provider/Provider.cs/#L274">View Source</a>
   </span>
   <a id="Pulumi_Experimental_Provider_CreateRequest_Type_" data-uid="Pulumi.Experimental.Provider.CreateRequest.Type*"></a>
   <h4 id="Pulumi_Experimental_Provider_CreateRequest_Type" data-uid="Pulumi.Experimental.Provider.CreateRequest.Type">Type</h4>
@@ -288,7 +262,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Type { get; }</code></pre>
+    <pre><code class="lang- hljs">public string Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,6 +275,32 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Provider/Provider.cs/#L273">View Source</a>
+  </span>
+  <a id="Pulumi_Experimental_Provider_CreateRequest_Urn_" data-uid="Pulumi.Experimental.Provider.CreateRequest.Urn*"></a>
+  <h4 id="Pulumi_Experimental_Provider_CreateRequest_Urn" data-uid="Pulumi.Experimental.Provider.CreateRequest.Urn">Urn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Urn Urn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.urn.html">Urn</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -313,7 +313,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/pulumi/provider/provider.cs/#L175" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Provider/Provider.cs/#L271" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

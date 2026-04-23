@@ -9,7 +9,7 @@ page_title: Run 'aws iam list-users' using Dynamic Credentials
 
 The [`aws iam list-users` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-users.html) is part of the AWS Command Line Interface (CLI) and is utilized for listing all Identity and Access Management (IAM) users in an AWS account. Amazon IAM enables users to specify who or what can access services and resources in AWS.
 
-Using the `aws iam list-users` command is key in managing identity and access, providing an easy way list all IAM users that exist within an AWS account. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials for security. Typically, there are two kinds of credentials used: temporary credentials, offering heightened security but requiring manual updates, and long-term credentials, which are more convenient but pose greater security risks.
+Using the `aws iam list-users` command is key in managing identity and access, providing an easy way to list all IAM users that exist within an AWS account. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials for security. Typically, there are two kinds of credentials used: temporary credentials, offering heightened security but requiring manual updates, and long-term credentials, which are more convenient but pose greater security risks.
 
 With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/), handling these credentials becomes simpler and more secure. Pulumi ESC facilitates [managing dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), ensuring all your AWS CLI commands, including `aws iam list-users`, are executed seamlessly. This approach eliminates concerns over invalid credentials and reduces the risks associated with manual credential management.
 
@@ -58,7 +58,7 @@ This service can dynamically generate credentials on your behalf each time you n
 
 ### Step 3: Create a new Pulumi ESC environment
 
-Once OIDC has been configured between Pulumi and AWS, the next steps is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
+Once OIDC has been configured between Pulumi and AWS, the next step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
 
 {{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
 

@@ -76,7 +76,7 @@ def handler(event, context):
     return {"statusCode": 200, "body": json.dumps("Successfully processed S3 event(s) from SQS messages.")}
 ```
 
-We also have a scheduled event that we setup for ingestion in the last post, which we're going to disable in favor of real-time events.
+We also have a scheduled event that we set up for ingestion in the last post, which we're going to disable in favor of real-time events.
 
 That's pretty much it on the infrastructure side, here's the updated diagram.
 

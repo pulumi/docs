@@ -62,7 +62,7 @@ We've also taken our first step towards integrating Pulumi AI into the CLI.  Wit
 pulumi ai web "deploy metabase on AWS with a managed postgres database"
 ```
 
-This opens a browser to [this conversation](/ai/conversations/7a4fc573-c34f-4aa7-be3a-448605f98d12?autoSubmit=true&language=TypeScript&prompt=deploy+metabase+on+AWS+in+a+container+with+a+managed+postgres+database), which walks through all the steps required to accomplish this task.
+This opens a browser to a guided Pulumi AI conversation that walks through all the steps required to accomplish this task.
 
 ![pulumi ai](https://www.pulumi.com/uploads/content/blog/pulumi-insights-ai-cli/pulumiaiweb.gif)
 

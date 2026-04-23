@@ -20,9 +20,9 @@ Virtual Machines are virtualizations/emulations of a computer system that execut
 
 ### Building and deploying virtual machines on AWS, Azure, and Google Cloud
 
-[Infrastructure as code](/what-is/what-is-infrastructure-as-code) is an efficient and repeatable way of building a serverless application with programming languages and deploying the website to your preferred cloud.
+[Infrastructure as code](/what-is/what-is-infrastructure-as-code) is an efficient and repeatable way of building virtual machine infrastructure with programming languages and deploying the website to your preferred cloud.
 
-Pulumi’s open source, infrastructure as code SDK that lets you provision virtual machines with TypeScript/JavaScript, Python, Go, Java, .NET, and YAML. The main benefits include:
+Pulumi’s open source, infrastructure as code SDK lets you provision virtual machines with TypeScript/JavaScript, Python, Go, Java, .NET, and YAML. The main benefits include:
 
 * **Programming Languages:** Define infrastructure as code in your favorite language instead of domain-specific languages or clicking through cloud consoles.
 

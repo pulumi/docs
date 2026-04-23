@@ -1,8 +1,8 @@
 ---
-title_tag: "Implement a provider in Python"
+title_tag: "Implement a Provider in Python"
 meta_desc: "Build a Pulumi provider in Python using the gRPC bindings directly."
-title: Implement a provider in Python
-h1: Implement a provider in Python
+title: Implement a Provider in Python
+h1: Implement a Provider in Python
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -14,7 +14,7 @@ menu:
 This guide shows how to implement a Pulumi provider in Python using the gRPC bindings directly. This approach gives you full control over provider behavior and works with any Python version that supports gRPC.
 
 {{% notes type="warning" %}}
-This is an advanced guide for power users. You'll be working directly with the provider protocol, which requires understanding gRPC, Protocol Buffers, and Pulumi's provider semantics. If you're open to writing Go, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) offers a more ergonomic experience with less boilerplate. [Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) can be useful for quick prototyping, but aren't suitable for production providers.
+This is an advanced guide for power users. You'll be working directly with the provider protocol, which requires understanding gRPC, Protocol Buffers, and Pulumi's provider semantics. If you're open to writing Go, the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) offers a more ergonomic experience with less boilerplate. [Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) can be useful for quick prototyping, but aren't suitable for production providers.
 {{% /notes %}}
 
 ## Prerequisites
@@ -512,7 +512,7 @@ class FileInputs:
         return {"path": self.path, "content": self.content, "force": self.force}
 ```
 
-The [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/) handles both dispatching and property bag serialization automatically based on Go struct definitions and tags.
+The [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) handles both dispatching and property bag serialization automatically based on Go struct definitions and tags.
 
 ## Handling secrets and unknowns
 

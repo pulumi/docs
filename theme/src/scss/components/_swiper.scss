@@ -87,8 +87,10 @@
 }
 
 pulumi-swiper {
+    display: block;
+
     .swiper {
-        @apply w-full h-full;
+        @apply w-full;
     }
 
     .swiper-slide {

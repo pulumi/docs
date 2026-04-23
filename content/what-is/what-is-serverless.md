@@ -81,7 +81,7 @@ Adopting a serverless architecture can offer a number of benefits:
     })
     ```
 
-1. **Embrace statelessness**: Serverless functions should be stateless. This encourages scalability and fault tolerance since every serverless function call should be able to function on its own, regardless of previous or subsequent calls. The recommended practise for managing data that has to be persistent beyond the span of one function execution is to store it externally in reliable data storage systems like object stores or databases:
+1. **Embrace statelessness**: Serverless functions should be stateless. This encourages scalability and fault tolerance since every serverless function call should be able to function on its own, regardless of previous or subsequent calls. The recommended practice for managing data that has to be persistent beyond the span of one function execution is to store it externally in reliable data storage systems like object stores or databases:
 
     ![serverless-resources](/what-is/serverless-resources.png)
 

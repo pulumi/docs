@@ -262,7 +262,7 @@ block_external_search_index: true
 Engage with our community to elevate your developer experience:
 
 * **Join our online [Pulumi Community on Slack](https://slack.pulumi.com/?utm_campaign=pulumi-docs-repo&utm_source=github.com&utm_medium=welcome-slack)** - Interact with thousands of Pulumi developers for collaborative problem-solving and knowledge-sharing!
-* **Join a [Local Pulumi User Groups (PUGs)](https://www.meetup.com/pro/pugs/)**-  Attend tech-packed meetups and hands-on virtual or in-person workshops.
+* **Join a [Local Pulumi User Groups (PUGs)](https://www.meetup.com/pro/pugs/)** - Attend tech-packed meetups and hands-on virtual or in-person workshops.
 * **Follow [@PulumiCorp](https://twitter.com/PulumiCorp) on X (Twitter)** - Get real-time updates, technical insights, and sneak peeks into the latest features.
 * **Subscribe to our YouTube Channel, [PulumiTV](https://www.youtube.com/@PulumiTV)** - Learn about AI / ML essentials, launches, workshops, demos and more.
 * **Follow our [LinkedIn](https://www.linkedin.com/company/pulumi/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-community)** - Uncover company news, achievements, and behind-the-scenes glimpses.

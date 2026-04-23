@@ -61,7 +61,7 @@ Our example monorepo has the following structure:
 - [components/website-deploy](https://github.com/pulumi/examples/blob/master/nx-monorepo/components/website-deploy/index.ts): A component resource resource that manages files in a S3 bucket
 - [infra](https://github.com/pulumi/examples/blob/master/nx-monorepo/infra/index.ts): A Pulumi program that uses the `s3folder` and `website-deploy` component resources to deploy the generated `website`.
 
-By using [npm workspaces](https://docs.npmjs.com/cli/v10/using-npm/workspaces) we can have multiple npm packages managed from a singular top-level package. Npm will take care of installing the dependencies for all our packages and enables packages within the monorepo to reference each other. In the [package.json](https://github.com/pulumi/examples/blob/master/nx-monorepo/package.json) at the root of the monorepo we setup the workspaces matching our folder structure. [Yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/) work similarly and are fully supported by Pulumi.
+By using [npm workspaces](https://docs.npmjs.com/cli/v10/using-npm/workspaces) we can have multiple npm packages managed from a singular top-level package. Npm will take care of installing the dependencies for all our packages and enables packages within the monorepo to reference each other. In the [package.json](https://github.com/pulumi/examples/blob/master/nx-monorepo/package.json) at the root of the monorepo we set up the workspaces matching our folder structure. [Yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/) work similarly and are fully supported by Pulumi.
 
 ```json
 // package.json
@@ -198,7 +198,7 @@ Updating (dev)
 NX   Successfully ran target deploy for project infra and 4 tasks it depends on (27s)
 ```
 
-The output tells us that Nx found the 4 dependant tasks for the `deploy` task of the `infra` package and ran them successfully.
+The output tells us that Nx found the 4 dependent tasks for the `deploy` task of the `infra` package and ran them successfully.
 
 If we now run `npx nx deploy infra` again, we can see Nx's caching mechanism in action. Nx notices that there are no code changes to the `infra` package, and that none of its dependencies have changed either, so it just replays the output from the previous run.
 

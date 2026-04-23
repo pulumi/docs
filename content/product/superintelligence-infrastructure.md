@@ -84,7 +84,7 @@ casestudy:
   subheading: Also Trusted By Leading AI and Data Platforms
   items:
     - body: |
-        **Snowflake** manages 100K+ daily deployments across AWS, Azure, and GCP with Pulumi —  massive-scale infrastructure supporting AI/ML workloads for thousands of enterprise customers.
+        **Snowflake** manages 100K+ daily deployments across AWS, Azure, and GCP with Pulumi — massive-scale infrastructure supporting AI/ML workloads for thousands of enterprise customers.
       logo: /logos/pkg/snowflake.svg
       cta: Read the Story
       link: /case-studies/snowflake/

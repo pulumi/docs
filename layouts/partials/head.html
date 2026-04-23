@@ -28,6 +28,8 @@
     <link rel="preload" href="/fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/gilroy-bold.woff2" as="font" type="font/woff2" crossorigin />
 
+    <link rel="llms-txt" href="/llms.txt" />
+
     <!-- Our CSS and JS bundles. -->
     {{ partial "assets" . }}
 
@@ -76,7 +78,7 @@
     {{ $twitterCardType := "summary" }}
 
     {{ if .Params.meta_image }}
-        {{ if in "blog templates" .Section }}
+        {{ if or (eq .Section "blog") (eq .Section "templates") }}
             {{ $ogImage = (.Resources.GetMatch .Params.meta_image).RelPermalink }}
         {{ else }}
             {{ $ogImage = .Params.meta_image }}

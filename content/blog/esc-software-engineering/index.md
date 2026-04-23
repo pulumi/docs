@@ -67,7 +67,7 @@ Revisions can also be tagged to provide semantically meaningful names to specifi
 
 Most importantly though, you can also then refer to a specific version of an environment anywhere you reference one.
 
-When you run a command with `esc run` you you can specify `providers@v2` to pick the `v2` tag instead of the default `latest`:
+When you run a command with `esc run` you can specify `providers@v2` to pick the `v2` tag instead of the default `latest`:
 
 ```bash
 $ esc run acmecorp/providers@v2 -- aws sts get-caller-identity

@@ -18,7 +18,29 @@ aliases:
 - /docs/concepts/resources/get/
 ---
 
-You can use the static `get` function, which is available on all resource types, to look up an existing resource that is not managed by Pulumi. The `get` function is different from the [`import` CLI command](/docs/iac/cli/commands/pulumi_import): `pulumi import` is used to bring an existing resource under management by Pulumi. `get` is used to allow the attributes of an existing resource to be used within a Pulumi program. A resource read with the `get` function will never be updated or deleted by Pulumi during an update.
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language "typescript,python,csharp,java" %}}
+
+You can use the static `get` method, which is available on all resource classes, to look up an existing resource that is not managed by Pulumi.
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+You can use the `Get` function (e.g., `ec2.GetSecurityGroup`), which is available as a package-level function for all resource types, to look up an existing resource that is not managed by Pulumi.
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+You can use the `get` stanza, which is available on all resource types, to look up an existing resource that is not managed by Pulumi.
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+The `get` function is different from the [`import` CLI command](/docs/iac/cli/commands/pulumi_import): `pulumi import` is used to bring an existing resource under management by Pulumi. `get` is used to allow the attributes of an existing resource to be used within a Pulumi program. A resource read with the `get` function will never be updated or deleted by Pulumi during an update.
 
 Two values are passed to the `get` function:
 

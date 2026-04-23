@@ -59,7 +59,7 @@ Snowflake chose Pulumi for many reasons but a primary one was that developers co
 
 Raman Hariharan, Director of Cloud Platform Engineering says, “For us, Pulumi is infrastructure as code in the true sense. We don’t need to rely on an intermediary to give us the capabilities we need. We can write any code and seamlessly integrate with it.”
 
-Pulumi’s first-class support for Kubernetes was an additional benefit. According to Raman, “Kubernetes lets us treat all the public clouds like a single utility -- it’s AC power for cloud computing. If Kubernetes is AC power, Pulumi is like the universal travel adapter that lets us plug into all these resources and abstract away the complexities of each individual platform. With Pulumi, Kuberenetes just works.”
+Pulumi’s first-class support for Kubernetes was an additional benefit. According to Raman, “Kubernetes lets us treat all the public clouds like a single utility -- it’s AC power for cloud computing. If Kubernetes is AC power, Pulumi is like the universal travel adapter that lets us plug into all these resources and abstract away the complexities of each individual platform. With Pulumi, Kubernetes just works.”
 
 Snowflake also liked Pulumi’s approach to managing secrets and its support for the Vault  key-management service. Another feature was the Pulumi concept of a stack, which made managing multiple configurations much simpler than before. Because a stack supports inheritance of the most common elements, developers only have to change a few variables to get a deployment up and running. Finally, the developers found the Pulumi providers for the different cloud services to be extremely easy to use.
 

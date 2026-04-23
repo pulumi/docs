@@ -1,0 +1,50 @@
+{{/*
+    Content adapter: auto-generates one page per OpenAPI schema component.
+    _index.md is preserved (it renders the component index).
+*/}}
+
+{{ $spec := index site.Data "openapi-spec" }}
+{{ if not $spec }}
+    {{ warnf "openapi: data/openapi-spec.json not found — run 'make ensure' to download the spec. Skipping schema page generation." }}
+{{ else }}
+
+{{ $schemas := $spec.components.schemas }}
+
+{{ $names := slice }}
+{{ range $name, $_ := $schemas }}
+    {{ $names = $names | append $name }}
+{{ end }}
+{{ $names = sort $names }}
+
+{{ range $names }}
+    {{ $name := . }}
+    {{ $slug := $name | urlize }}
+
+    {{/* Add an alias from the original CamelCase name so external links
+         using the un-lowered form (e.g. /schema/AppStack/) don't 404.
+         Use the raw $name (not urlize, which lowercases) for the alias. */}}
+    {{ $aliases := slice }}
+    {{ if ne $name ($name | lower) }}
+        {{ $aliases = $aliases | append (printf "/docs/reference/cloud-rest-api/schema/%s/" $name) }}
+    {{ end }}
+
+    {{ $params := dict
+        "h1" $name
+        "title_tag" (printf "Pulumi Cloud REST API schema: %s" $name)
+        "meta_desc" (printf "Schema reference for the %s component in the Pulumi Cloud REST API." $name)
+        "meta_image" "/images/docs/meta-images/docs-meta.png"
+        "openapi_schema" true
+        "schema_name" $name
+        "notoc" true
+    }}
+
+    {{ $.AddPage (dict
+        "path" $slug
+        "title" $name
+        "kind" "page"
+        "aliases" $aliases
+        "params" $params
+    ) }}
+{{ end }}{{/* range $names */}}
+
+{{ end }}{{/* if not $spec / else */}}

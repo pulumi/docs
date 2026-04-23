@@ -93,22 +93,24 @@ When moving documentation files, aliases automatically handle redirects. Update 
 - **DO update links in**:
   - `/content/docs/` - Active documentation
   - `/content/product/` - Product pages
-
 - **DO NOT update links in**:
   - `/content/blog/` - Blog posts are historical documents
   - `/content/tutorials/` - Tutorials are historical content
-
 - **Implementation**: When using `find` or `sed` to update links, always exclude blog and tutorial directories:
 
   ```bash
   find content/docs content/product -name "*.md" -exec sed -i 's|/old/path|/new/path|g' {} +
   ```
 
+- **Link Style**: To ensure links don't break when files are moved:
+  - Links within `/docs/` must use the full canonical path, e.g. `/docs/iac/concepts/stacks/`.
+  - Never use parent-directory references (`../stacks/`) in links — they break when files move.
+
 ---
 
 ## Navigation and llms.txt
 
-The left nav is defined in `layouts/partials/docs/menu.html`. Whenever you add, remove, or reorder top-level nav sections, also update `layouts/index.txtfull.txt` to match.
+The left nav is data-driven from `data/docs_menu_sections.yml`, which is consumed by `layouts/partials/docs/menu.html` (the rendered nav), `layouts/index.llms.txt` (the curated `/llms.txt` index), and `layouts/partials/llm-sitemap-walk.json` (the `/docs/llm-sitemap.json` machine-readable sitemap). When you add, remove, or reorder top-level nav sections, all three flow through automatically. Per-section descriptions in `/llms.txt` come from each landing page's `meta_desc` front-matter — edit the page if you need to change how it reads in the index.
 
 ---
 

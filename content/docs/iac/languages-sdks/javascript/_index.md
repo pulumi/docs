@@ -289,7 +289,7 @@ runtime:
     nodeargs: "--loader ts-node/esm --no-warnings"
 ```
 
-Note that if you provide any of the `--loader`, `--import` or `--require` arguments in `nodeargs`, Pulumi will not automatically configure an ESM loader, and you have to specify one yourself, for example `--loader ts-node/esm` as above, or `--import tsx` when using [tsx](https://tsx.is).
+Note that if you provide any of the `--loader`, `--import` or `--require` arguments in `nodeargs`, Pulumi will not automatically configure an ESM loader, and you have to specify one yourself, for example `--loader ts-node/esm` as above, or `--import tsx` when using [tsx](https://github.com/privatenumber/tsx).
 
 {{< /notes >}}
 

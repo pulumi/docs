@@ -1,0 +1,96 @@
+{{/* Read pre-downloaded spec from data/openapi-spec.json (fetched by scripts/fetch-openapi-spec.sh) */}}
+{{ $openapi := index site.Data "openapi-spec" }}
+{{ with $openapi }}
+        {{ $css := resources.Get "fingerprinted/css/openapi.css" | fingerprint }}
+        <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+        {{/* Optional editorial intro from assets/openapi/tag-intros/{slug}.md.
+             Slug must match the page slug — tag with CamelCase split then urlize. */}}
+        {{ $filterTag := $.Params.filter_tag }}
+        {{ if $filterTag }}
+            {{ $camelRE := `([a-z])([A-Z])` }}
+            {{ $display := $filterTag }}
+            {{ if not (strings.Contains $filterTag " ") }}
+                {{ $display = replaceRE $camelRE "${1} ${2}" $filterTag }}
+            {{ end }}
+            {{ $introSlug := $display | urlize }}
+            {{ $introPath := printf "assets/openapi/tag-intros/%s.md" $introSlug }}
+            {{ if (fileExists $introPath) }}
+                {{/* Strip YAML frontmatter (between leading --- delimiters)
+                     before rendering the body — frontmatter holds meta_desc
+                     consumed by the content adapter, not page content.
+                     Rejoin parts after the second delimiter so a Markdown
+                     horizontal rule (--- on its own line) inside the body
+                     doesn't get truncated. */}}
+                {{ $contents := readFile $introPath }}
+                {{ $parts := split $contents "---\n" }}
+                {{ $body := $contents }}
+                {{ if ge (len $parts) 3 }}
+                    {{ $body = delimit (after 2 $parts) "---\n" }}
+                {{ end }}
+                <div class="openapi-tag-intro">{{ $body | markdownify }}</div>
+            {{ end }}
+        {{ end }}
+
+        <div style="display: flex; flex-direction: column; align-items: stretch;" data-openapi-content="true">
+            {{ $endpointGroups := dict }}
+
+            <!-- Group endpoints by their appropriate category -->
+            {{ $httpMethods := slice "get" "post" "put" "patch" "delete" "head" "options" }}
+            {{ range $path, $pathMethods := $openapi.paths }}
+                {{ range $pathMethod, $pathDetails := $pathMethods }}
+                    {{/* Skip non-method keys (parameters, summary, servers, etc.) */}}
+                    {{ if not (in $httpMethods $pathMethod) }}{{ continue }}{{ end }}
+                    {{ $endpoint := dict "path" $path "method" $pathMethod "details" $pathDetails }}
+
+                    {{/* When a route carries multiple tags, only the last tag
+                         is used — matching the content adapter convention. */}}
+                    {{ if $filterTag }}
+                        {{ with $pathDetails.tags }}
+                            {{ $lastTag := index . (sub (len .) 1) }}
+                            {{ if eq $lastTag $filterTag }}
+                                {{ $currentSlice := index $endpointGroups $filterTag | default (slice) }}
+                                {{ $endpointGroups = merge $endpointGroups (dict $filterTag ($currentSlice | append $endpoint)) }}
+                            {{ end }}
+                        {{ end }}
+                    {{ else }}
+                        {{ with $pathDetails.tags }}
+                            {{ $lastTag := index . (sub (len .) 1) }}
+                            {{ $currentSlice := index $endpointGroups $lastTag | default (slice) }}
+                            {{ $endpointGroups = merge $endpointGroups (dict $lastTag ($currentSlice | append $endpoint)) }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+
+            {{ template "openapi/endpoint-group.html" (dict "endpointGroups" $endpointGroups "openapi" $openapi) }}
+        </div>
+        <!-- Endpoint accordion styles are in assets/fingerprinted/css/openapi.css -->
+
+        <!-- Add script for the endpoint accordion -->
+        <script>
+        // Use event delegation scoped to the OpenAPI container.
+        document.addEventListener('DOMContentLoaded', function() {
+            var container = document.querySelector('[data-openapi-content]');
+            if (!container) return;
+            function toggleEndpoint(header) {
+                var endpointId = header.getAttribute('data-endpoint-id');
+                var component = document.getElementById('content-' + endpointId);
+                if (!component || !component.parentElement) return;
+                var isCollapsed = component.parentElement.classList.toggle('collapsed');
+                header.setAttribute('aria-expanded', !isCollapsed);
+            }
+            container.addEventListener('click', function(event) {
+                var header = event.target.closest('.endpoint-header');
+                if (header) toggleEndpoint(header);
+            });
+            container.addEventListener('keydown', function(event) {
+                if (event.key !== 'Enter' && event.key !== ' ') return;
+                var header = event.target.closest('.endpoint-header');
+                if (!header) return;
+                event.preventDefault();
+                toggleEndpoint(header);
+            });
+        });
+        </script>
+{{ end }}

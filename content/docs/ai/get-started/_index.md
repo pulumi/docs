@@ -26,7 +26,7 @@ Neo is enabled by default. To disable Neo for your organization, navigate to **S
 
 ## VCS integration
 
-Connecting a [version control integration](/docs/version-control/) significantly enhances Neo's capabilities, though it is not required. Pulumi supports [GitHub](/docs/version-control/github-app/), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/). A VCS integration:
+Connecting a [version control integration](/docs/integrations/version-control/) significantly enhances Neo's capabilities, though it is not required. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [GitLab](/docs/integrations/version-control/gitlab/). A VCS integration:
 
 - Allows Neo to read repository content for better context
 - Enables pull request creation
@@ -34,7 +34,7 @@ Connecting a [version control integration](/docs/version-control/) significantly
 
 Neo can still provide code change suggestions without a VCS integration, but you'll need to apply the changes and open PRs manually.
 
-To set up a VCS integration, see the [version control docs](/docs/version-control/).
+To set up a VCS integration, see the [version control docs](/docs/integrations/version-control/).
 
 ## Neo's permission model
 

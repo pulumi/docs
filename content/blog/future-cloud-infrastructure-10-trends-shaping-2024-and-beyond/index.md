@@ -23,7 +23,7 @@ meta_desc: Explore 2026’s top cloud trends, including AI infrastructure, Kuber
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: "2026-cloud-trends -ai-idp-security.png"
+meta_image: "2026-cloud-trends-ai-idp-security.png"
 
 aliases:
     - /future-cloud-infrastructure-10-trends-shaping-2026-and-beyond/

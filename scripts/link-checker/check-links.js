@@ -424,6 +424,12 @@ function getDefaultExcludedKeywords() {
         "https://cloud.google.com/deployment-manager/docs",
         "https://daninacan.com/",
         "https://www.tigera.io/blog/top-5-kubernetes-trends-for-2019/",
+        // Bot-protected or dead external links referenced in historical blog posts (issue #18586)
+        "https://hub.docker.com/",                                                  // blog/docker-containers: 500s to automated clients
+        "https://docs.microsoft.com/",                                              // MS redirects to learn.microsoft.com and bot-protects
+        "https://www.zdnet.com/",                                                   // aggressive bot protection
+        "https://gist.github.com/pulumipus/56d1ee83f295971e2a26a8091880c482",        // deleted gist in blog/automation-api-as-platform
+        "https://gist.github.com/pulumipus/61edcdd8ab3f50a42b4bd34a7e1f789b",        // deleted gist in blog/automation-api-workflow
     ];
 }
 

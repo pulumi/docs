@@ -500,9 +500,9 @@ Starts the Hugo development server with live reload.
 1. Sets `ASSET_BUNDLE_ID` for development
 2. Runs Hugo with:
    - `--renderToMemory`: No disk writes
-   - `--disableFastRender`: Rebuild related content
    - `--buildDrafts`: Show draft content
-   - `--buildFuture`: Show future-dated content (can be disabled with BUILD_FUTURE=false)
+   - `--buildFuture`: Show future-dated content (can be disabled with `BUILD_FUTURE=false`)
+   - Fast render is **on by default**; set `DISABLE_FAST_RENDER=true` to pass `--disableFastRender` (re-renders the full site on every change — slower, but accurate for list pages, menus, and the search index)
 3. Connects to tf2pulumi conversion service
 4. Uses Hugo's default binding (localhost:1313)
 
@@ -819,7 +819,7 @@ Templates are in `/layouts/` with various shortcodes for:
 
 Many shortcodes have paired `.html` and `.markdown.md` versions — the HTML version renders for web browsers, and the markdown version produces clean markdown for content negotiation output.
 
-**Navigation menu:** The docs left-nav menu sections are data-driven via `data/docs_menu_sections.yml`. The menu partial (`layouts/partials/docs/menu.html`) iterates over this data file rather than using hardcoded section names. The CLI sitemap JSON (`layouts/partials/cli-sitemap-walk.json`) also uses this data to generate a hierarchical navigation index.
+**Navigation menu:** The docs left-nav menu sections are data-driven via `data/docs_menu_sections.yml`. The menu partial (`layouts/partials/docs/menu.html`) iterates over this data file rather than using hardcoded section names. The LLM sitemap JSON (`layouts/partials/llm-sitemap-walk.json`) also uses this data to generate a hierarchical navigation index.
 
 #### Content Generation
 
@@ -831,8 +831,8 @@ Hugo generates:
 - robots.txt
 - Meta-refresh redirect pages (from aliases)
 - Markdown output (`.md`) for `/docs/` pages (for content negotiation)
-- CLI sitemap JSON (`clisitemap`) — hierarchical JSON index of docs navigation
-- CLI config JSON (`cliconfig`) — configuration endpoint (Algolia search keys)
+- LLM sitemap JSON (`llmsitemap`) — hierarchical JSON index of docs navigation, served at `/docs/llm-sitemap.json`
+- LLM index (`llms`) — curated text overview at `/llms.txt` for AI agents
 
 **Markdown output format:** Hugo generates clean markdown versions of documentation pages alongside HTML. These are served via CloudFront content negotiation when clients send `Accept: text/markdown`. The conversion is handled by an 8-phase pipeline in `layouts/partials/docs/markdown-pipeline.md` that converts rendered HTML back to markdown (Chroma → fenced code blocks, HTML tags → markdown syntax, choosable options → chooser comment blocks, etc.).
 
@@ -840,10 +840,20 @@ Hugo generates:
 
 - `layouts/docs/single.md` — Markdown output for single pages
 - `layouts/docs/list.md` — Markdown output for list pages
-- `layouts/docs/list.clisitemap.json` — Hierarchical JSON sitemap
-- `layouts/docs/list.cliconfig.json` — CLI configuration (search index info)
+- `layouts/docs/list.llmsitemap.json` — Hierarchical JSON sitemap
+- `layouts/index.llms.txt` — Curated text overview at `/llms.txt`
 
 **Output formats** are defined in `config/_default/config.yml` under `outputFormats` and `outputs`.
+
+#### Context7 Discoverability Files
+
+[Context7](https://context7.com/) indexes our content for AI coding assistants. Each indexed surface has its own `context7.json` pointing at the corresponding Context7 project. Three copies live in this repo — each served at a different URL because Context7 looks for the file at a specific path per indexed site:
+
+- `context7.json` (repo root) — served on GitHub at `github.com/pulumi/docs/blob/master/context7.json`. Indexes this repository itself.
+- `static/context7.json` — published at `https://www.pulumi.com/context7.json`. Points Context7 at the `llms.txt` project that covers the marketing site and `/llms.txt` index.
+- `static/docs/context7.json` — published at `https://www.pulumi.com/docs/context7.json`. Points Context7 at the docs-site project (`context7.com/websites/pulumi`).
+
+All three share the same public key and are safe to commit. If the key or project URLs need to rotate, update all three together. Current maintainer for all Context7 onboarding: `csoper@pulumi.com`.
 
 #### Minification
 
@@ -1172,10 +1182,11 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 - Pull requests to master
 - Manual: `workflow_dispatch`
 
-**Platform:** Custom Pulumi runner (pulumi-service-ubuntu-24.04-4core)
+**Platform:** GitHub-hosted runner (ubuntu-latest), with [jlumbroso/free-disk-space](https://github.com/jlumbroso/free-disk-space) to reclaim disk space before tests run
 
 **Setup:**
 
+- Disk space reclaimed via `jlumbroso/free-disk-space` (`tool-cache: false`, `dotnet: false` to preserve caches used by later setup steps)
 - Multi-language runtimes:
   - Go 1.26
   - Node.js 20
@@ -1610,6 +1621,8 @@ Delivery: CloudWatch Logs infrastructure v2
 | /metadata.json | S3 Main | 0 (no cache) | Build metadata |
 
 **Compression:** Enabled (gzip, brotli)
+
+**Origin Shield:** Enabled on the docs (S3 main) origin in `us-west-2` to improve cache hit ratio and reduce origin load. Registry and guides origins have their own CloudFront distributions and should configure Origin Shield in their respective repos.
 
 **Price Class:** All (global distribution)
 

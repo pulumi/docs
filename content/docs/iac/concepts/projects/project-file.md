@@ -103,19 +103,21 @@ This option can be set to `mypy` or `pyright`. (For additional type checkers, fi
 
 `packages` is a map of package names to either `package add` arguments or structured package declarations. It specifies the packages that the program is utilizing. The command `pulumi install` will install these packages and generate the corresponding SDKs for them.
 
-#### Values
+#### String shorthand
 
-| Property | Type | Required | Expression | Description |
-| - | - | - | - | - |
-| `argument` | string | No | No | A string in the same format as it would be when passed to [`package add`](/docs/iac/cli/commands/pulumi_package_add/) |
+Each package value can be a plain string in the same format as the argument to [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/), for example `"aws@6.0.0"`. The string is split on `@` into a source and optional version.
 
-#### Package declarations
+#### Structured declarations
+
+Alternatively, a package value can be an object with the following properties:
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
 | `source` | string | Yes | No | The source of the package. Can be a path to a local plugin, a URL to a Git repository, or a pulumi plugin name. |
 | `version` | string | No | No | The version of the package. |
-| `parameters` | List<string> | No | No | A list of parameters for the `source` package |
+| `parameters` | List<string> | No | No | A list of parameters for the `source` package. |
+| `checksums` | Map<string, string> | No | No | A map of `os-arch` keys (e.g., `linux-x64`) to checksums used to validate downloaded plugins. |
+| `pluginDownloadURL` | string | No | No | The server to download the plugin from, if a custom download location is needed. |
 
 ### `config` options
 
@@ -161,7 +163,7 @@ Schemas are only valid for project property keys. For setting the value of a pro
 | `displayName` | optional | A user-friendly name for the template. This should follow `Title Case` format and be succinct. This field is only supported by Pulumi CLI >= 3.95. |
 | `description` | optional | Description of the template. |
 | `config` | required | Config to request when using this template with `pulumi new`. |
-| `metadata` | optional | A map of user-defined tags to attach to the template. This field is only supported by Pulumi CLI >= 3.95. |
+| `metadata` | optional | A map of user-defined tags to attach to the template. The Pulumi Cloud [New Project Wizard](/docs/idp/concepts/new-project-wizard/) recognizes a `cloud` key for filtering templates by target cloud — see [Organization templates](/docs/idp/concepts/organization-templates/#new-project-wizard-cloud-filter) for accepted values. This field is only supported by Pulumi CLI >= 3.95. |
 
 #### `config`
 

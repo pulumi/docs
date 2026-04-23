@@ -14,8 +14,7 @@ description: <p>Pulumi is an <a href="https://github.com/pulumi/pulumi" target="
 outputs:
 - HTML
 - markdown
-- clisitemap
-- cliconfig
+- llmsitemap
 cascade:
   meta_image: /images/docs/meta-images/docs-meta.png
   outputs:
@@ -48,7 +47,7 @@ sections:
   - emoji: 🔗
     heading: Version Control
     description: Connect Pulumi with GitHub, GitLab, and Azure DevOps using Pulumi-maintained version control integrations.
-    link: /docs/version-control/
+    link: /docs/integrations/version-control/
   - emoji: 🎯
     heading: Internal Developer Platform
     description: Self-service infrastructure with templates, guardrails, and developer portals.
