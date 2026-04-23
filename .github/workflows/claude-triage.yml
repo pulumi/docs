@@ -32,8 +32,11 @@ jobs:
       - name: Check repository write access
         id: check-access
         run: |
-          OWNER="pulumi"
-          REPO="docs"
+          # Use the actual repository the workflow is running in, not a hardcoded
+          # upstream name. The GITHUB_TOKEN is only scoped to this repo, so a
+          # hardcoded owner/repo would always return "none" in fork-based testing
+          # and in repo transfers.
+          REPO_FULL="${{ github.repository }}"
           AUTHOR="${{ github.event.pull_request.user.login }}"
 
           if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
@@ -45,15 +48,15 @@ jobs:
           PERMISSION=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$OWNER/$REPO/collaborators/$AUTHOR/permission" \
+            "https://api.github.com/repos/$REPO_FULL/collaborators/$AUTHOR/permission" \
             | jq -r '.permission // "none"')
 
           if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
-            echo "✓ User $AUTHOR has $PERMISSION access to $OWNER/$REPO"
+            echo "✓ User $AUTHOR has $PERMISSION access to $REPO_FULL"
           else
             echo "has_write_access=false" >> $GITHUB_OUTPUT
-            echo "✗ User $AUTHOR has $PERMISSION access to $OWNER/$REPO (insufficient permissions)"
+            echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
           fi
 
       # continue-on-error keeps the workflow green when Claude hits a transient
