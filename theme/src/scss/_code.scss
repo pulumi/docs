@@ -1,5 +1,4 @@
 @import "chroma";
-@import "chroma-min-dark";
 
 table tr td:not(:first-child) code {
     word-break: break-word;
@@ -30,11 +29,10 @@ pre,
 }
 
 pre {
-    background: #1F2557;
+    background: var(--color-violet-950);
     @apply text-gray-400 py-4 px-5 pr-8 overflow-x-auto leading-normal;
 
     .code-mode-dark & {
-        background: #1f2557;
         @apply border-none shadow-md;
     }
 
@@ -124,7 +122,7 @@ div.highlight.line-numbers {
     @apply shadow-lg;
 
     .code-tabbed-tabs {
-        background: #1f2557;
+        background: var(--color-violet-950);
         @apply shadow-md p-0 flex items-center overflow-hidden;
 
         .code-tabbed-tab {
@@ -154,7 +152,7 @@ div.highlight.line-numbers {
             }
 
             &.active {
-                background: #1f2557;
+                background: var(--color-violet-950);
 
                 .code-tabbed-tab-label {
                     @apply text-white;
@@ -173,7 +171,7 @@ div.highlight.line-numbers {
 
     .code-tabbed-content {
         height: 440px;
-        background: #1f2557;
+        background: var(--color-violet-950);
         @apply overflow-auto relative p-4 text-sm;
 
         .code-tabbed-content-item {
@@ -207,7 +205,7 @@ div.highlight.line-numbers {
     }
 
     .code-tabbed-status {
-        background: #1f2557;
+        background: var(--color-violet-950);
         @apply h-3 rounded-b;
     }
 }

@@ -2,8 +2,8 @@
 Template Code Snippets Partial
 
 Renders syntax-highlighted code with a window-bar title area (optional title
-left, language dropdown right). Uses Hugo's built-in Chroma highlighting and
-the min-dark color theme scoped under .code-theme-min-dark.
+left, language dropdown right). Uses Hugo's built-in Chroma highlighting with
+the site-wide min-dark color theme.
 
 Can be called standalone:
   {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" .code_snippets "title" .code_title) }}
@@ -27,7 +27,7 @@ Parameters (passed as a dict):
 {{ if $snippets }}
 {{ $firstSnippet := index $snippets 0 }}
 {{ $containerId := printf "code-snippets-%s" (md5 (printf "%v" $snippets)) }}
-<div class="code-snippets-container code-theme-min-dark" id="{{ $containerId }}">
+<div class="code-snippets-container" id="{{ $containerId }}">
     <div class="code-snippets-titlebar" role="toolbar" aria-label="Code snippet controls">
         <span class="code-snippets-title" data-default-title="{{ $defaultTitle | default "" }}">
             {{- if $firstSnippet.title -}}

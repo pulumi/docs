@@ -227,7 +227,7 @@ body.section-registry {
                 span.count-badge {
                     font-size: 11px;
                     padding: 0px 4px;
-                    border: 1px solid #364098;
+                    border: 1px solid var(--color-violet-primary);
                     border-radius: 6px;
                 }
             }
@@ -588,7 +588,7 @@ body.section-registry {
                 font-family: 'Inter';
                 font-weight: 500;
                 font-size: 12px;
-                color: #4D5BD9;
+                color: var(--color-violet-primary);
                 align-items: center;
 
                 span {
@@ -702,7 +702,7 @@ body.section-registry {
                 font-family: 'Inter';
                 font-weight: 400;
                 font-size: 14px;
-                color: #364098;
+                color: var(--color-violet-primary);
             }
 
             li.h3 {

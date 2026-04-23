@@ -44,7 +44,7 @@ pulumi-banner {
     }
 
     .cta {
-        @apply cursor-pointer mx-2 w-full rounded-full font-bold bg-blue-500 px-4 py-2 text-sm uppercase mt-4 mb-2 flex items-center justify-center;
+        @apply cursor-pointer mx-2 w-full rounded-full font-bold bg-violet-primary px-4 py-2 text-sm uppercase mt-4 mb-2 flex items-center justify-center;
         @include transition;
         @include fa-glyph("\f054");
 
@@ -61,7 +61,7 @@ pulumi-banner {
         }
 
         &:hover {
-            @apply bg-blue-400;
+            @apply bg-violet-800;
         }
     }
 }
