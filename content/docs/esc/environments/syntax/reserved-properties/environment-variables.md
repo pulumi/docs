@@ -15,6 +15,8 @@ menu:
 
 The `environmentVariables` reserved property contains values that should be exported as environment variables. For example, [`esc run`](/docs/esc/cli/commands/esc_run) exports each key-value pair in the `environmentVariables` property as an environment variable that is accessible to the command to run.
 
+This property is also used by [Pulumi policy packs](/docs/insights/policy/policy-packs/). When an ESC environment is attached to a policy pack in a policy group, `environmentVariables` are injected into the policy runtime as environment variables.
+
 ## Properties
 
 | Property | Type   | Description                                                       |
