@@ -14,9 +14,22 @@ tags:
 schema_type: auto
 
 social:
-    twitter: "Policy packs can now access Pulumi ESC environments for secrets and configuration. No more hardcoded credentials in your policy config."
-    linkedin: "Policy packs can now access Pulumi ESC environments for secrets and configuration. No more hardcoded credentials in your policy config."
-    bluesky: "Policy packs can now access Pulumi ESC environments for secrets and configuration. No more hardcoded credentials in your policy config."
+    twitter: |
+        Policy pack configuration used to live in policy group settings — plain text, per-group, hand-rotated.
+
+        Now policy packs pull configuration from ESC environments: the same secrets, thresholds, and endpoints your stacks already use. Here's the pattern.
+    linkedin: |
+        Until now, configuring a policy pack meant editing policy group settings directly. Every value — compliance endpoints, cost thresholds, API tokens, allowed regions — lived inline, in plain text, and had to be duplicated across groups.
+
+        Policy packs now read configuration from Pulumi ESC environments. The same composition, versioning, and secret handling your stacks rely on is available to the policies that govern them.
+
+        That unlocks a few things: sharing configuration across policy groups, varying values per environment without forking the pack, rotating secrets in one place, and versioning policy configuration alongside everything else.
+
+        We wrote up how it works and what it changes about how you author and roll out policies.
+    bluesky: |
+        Policy pack configuration used to sit in policy group settings — plain text, per-group.
+
+        Policy packs now read from ESC environments, so thresholds, endpoints, and secrets compose, version, and rotate the same way the rest of your configuration does. Here's the setup.
 ---
 
 Policy authors who need external credentials or environment-specific configuration have had to hardcode values or manage them outside of Pulumi. Policy packs can now reference [Pulumi ESC](/product/secrets-management/) environments, bringing centralized secrets and configuration management to your policies.
