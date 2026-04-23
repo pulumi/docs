@@ -30,7 +30,9 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 ```markdown
 ## Claude Review — Last updated <ISO 8601 timestamp>
 
-Status: N 🚨 / N ⚠️ / N 💡 / N ✅
+| 🚨 Outstanding | ⚠️ Low-confidence | 💡 Pre-existing | ✅ Resolved |
+| :---: | :---: | :---: | :---: |
+| **N** | **N** | **N** | **N** |
 
 ### 🚨 Outstanding in this PR
 [PR-introduced findings the author needs to address]
@@ -49,7 +51,13 @@ Status: N 🚨 / N ⚠️ / N 💡 / N ✅
 
 ### 📜 Review history
 - <ISO 8601 timestamp> — <one-line summary> (<commit SHA prefix>)
+
+---
+
+<sub>Pushed a fix? Mention `@claude` to refresh. Think a finding is wrong? Mention `@claude` with your reasoning — disputes are welcome, and Claude will concede on evidence. See `AGENTS.md` §PR Lifecycle for the re-entrant workflow.</sub>
 ```
+
+The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review -- the dispute path is equally important as the refresh path, and contributors need to know both exist.
 
 ### Bucket rules
 
