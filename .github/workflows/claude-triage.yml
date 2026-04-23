@@ -78,8 +78,16 @@ jobs:
             You are running in a CI environment.
 
             Triage pull request #${{ github.event.pull_request.number }} by following the
-            instructions in `.claude/commands/triage.md`.
+            instructions in `.claude/commands/triage.md` exactly.
 
-            Do NOT post comments. Do NOT run any review skill. Apply labels via `gh pr edit`
-            and print a one-line summary to stdout. That is the entire job.
+            The procedure in triage.md has a DELTA step: compare the target label set
+            against existing labels and compute ADD and REMOVE. **Run `gh pr edit`
+            whenever either is non-empty, including runs where only REMOVE has
+            content** (a stale label left by a previous triage is still stale even
+            when no new labels need adding). Do NOT skip the command just because
+            ADD is empty.
+
+            Do NOT post comments. Do NOT run any review skill. Apply labels via
+            `gh pr edit` and print the `triage:` summary line to stdout (with the
+            `added=` and `removed=` fields populated). That is the entire job.
           claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr edit:*),Bash(gh label list:*)"'
