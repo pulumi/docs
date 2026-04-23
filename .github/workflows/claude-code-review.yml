@@ -83,12 +83,11 @@ jobs:
           PR="${{ github.event.workflow_run.pull_requests[0].number }}"
           REPO="${{ github.repository }}"
 
-          DATA=$(gh pr view "$PR" --repo "$REPO" --json isDraft,labels,user,headRefOid)
+          DATA=$(gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author)
           IS_DRAFT=$(echo "$DATA" | jq -r '.isDraft')
-          AUTHOR=$(echo "$DATA" | jq -r '.user.login')
+          AUTHOR=$(echo "$DATA" | jq -r '.author.login')
           LABELS_JSON=$(echo "$DATA" | jq -c '[.labels[].name]')
           LABELS_CSV=$(echo "$DATA" | jq -r '[.labels[].name] | join(",")')
-          HEAD_SHA=$(echo "$DATA" | jq -r '.headRefOid')
 
           SKIP=""
           if [[ "$IS_DRAFT" == "true" ]]; then
@@ -105,7 +104,6 @@ jobs:
             echo "author=$AUTHOR"
             echo "labels_csv=$LABELS_CSV"
             echo "labels_json=$LABELS_JSON"
-            echo "head_sha=$HEAD_SHA"
             echo "skip_reason=$SKIP"
           } >> "$GITHUB_OUTPUT"
 
