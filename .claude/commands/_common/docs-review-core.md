@@ -114,7 +114,7 @@ Both entry points route each changed file to a domain based on its path. The sam
 
 ### Fact-check
 
-Domain files invoke [`pr-review/references/fact-check.md`](../pr-review/references/fact-check.md) when warranted. The CI entry point gates on the `fact-check:needed` label (set by triage); the interactive entry point invokes fact-check whenever the user explicitly asks or when the domain decides.
+Domain files invoke [`fact-check.md`](fact-check.md) when warranted. The CI entry point gates on the `fact-check:needed` label (set by triage); the interactive entry point invokes fact-check whenever the user explicitly asks or when the domain decides.
 
 CI fact-check is **public-sources-only** — no Notion or Slack MCP. See `docs-review-ci.md` for the rationale.
 

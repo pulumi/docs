@@ -63,7 +63,7 @@ A PR may touch files in more than one domain. Run each file under its appropriat
 
 ### 3. Fact-check (gated)
 
-If the PR has the `fact-check:needed` label, invoke [`pr-review/references/fact-check.md`](pr-review/references/fact-check.md) with:
+If the PR has the `fact-check:needed` label, invoke [`_common/fact-check.md`](_common/fact-check.md) with:
 
 - The list of changed content files
 - Scrutiny level set by the domain file (docs → `standard`, blog/programs → `heightened`)

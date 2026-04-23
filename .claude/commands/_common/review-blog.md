@@ -30,7 +30,7 @@ Pre-existing scope per the blog-domain plan: everything from `review-docs.md`, p
 
 ## Fact-check
 
-Invoke [`pr-review/references/fact-check.md`](../pr-review/references/fact-check.md) with:
+Invoke [`fact-check.md`](fact-check.md) with:
 
 - Files: the changed `content/blog/**` / `content/customers/**` files
 - Scrutiny: `heightened` (always)

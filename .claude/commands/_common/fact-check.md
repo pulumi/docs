@@ -7,7 +7,7 @@ description: Factual claim verification — extract claims from changed content,
 
 This procedure catches *wrong information* in documentation: incorrect command output, hallucinated CLI flags, features described as existing when they don't, version claims, miscited APIs. It is the rigor enforcement that style checks alone cannot provide.
 
-It is invoked by `/pr-review` as part of the PR review workflow but is also designed to be run standalone — anywhere a set of changed content files needs to be verified for factual accuracy.
+It is a shared primitive: the CI review pipeline invokes it via its domain files (when the PR carries the `fact-check:needed` label), and the interactive `/pr-review` skill invokes it as Step 5. It is also designed to be run standalone — anywhere a set of changed content files needs to be verified for factual accuracy.
 
 The procedure has six phases. They are listed in order, but the section names are descriptive rather than numbered so this reference can be reused outside of any specific calling workflow.
 

@@ -32,7 +32,7 @@ Pre-existing scope per the docs-domain plan: broken links/anchors, orphan cross-
 
 ## Fact-check
 
-Invoke [`pr-review/references/fact-check.md`](../pr-review/references/fact-check.md) with:
+Invoke [`fact-check.md`](fact-check.md) with:
 
 - Files: the changed `content/docs/**`, `content/learn/**`, `content/tutorials/**`, `content/what-is/**` files
 - Scrutiny: `standard`

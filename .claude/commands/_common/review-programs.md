@@ -42,7 +42,7 @@ The CI entry point (`docs-review-ci.md`) does **not** run program tests directly
 
 ## Fact-check
 
-Invoke [`pr-review/references/fact-check.md`](../pr-review/references/fact-check.md) with:
+Invoke [`fact-check.md`](fact-check.md) with:
 
 - Files: the changed `static/programs/**` files (and the README/docs that reference them, if changed in the same PR)
 - Scrutiny: `heightened` (code correctness matters)

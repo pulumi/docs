@@ -143,7 +143,7 @@ Continue to Step 5.
 
 ### Step 5: Factual claim verification (silent)
 
-This is the rigor enforcement step. See `pr-review:references:fact-check` for the complete procedure.
+This is the rigor enforcement step. See `_common:fact-check` for the complete procedure.
 
 Summary:
 
@@ -230,7 +230,7 @@ Render in this order, top to bottom:
    Trivial-fix auto-apply disabled (AI-suspect — manual review required)
    ```
 
-8. **Overall assessment** — single line: Clean / Minor issues / Issues found / Critical issues. Computed from PR-introduced findings and fact-check results per the assessment rules in `pr-review:references:fact-check`. Pre-existing issues alone do not gate approval.
+8. **Overall assessment** — single line: Clean / Minor issues / Issues found / Critical issues. Computed from PR-introduced findings and fact-check results per the assessment rules in `_common:fact-check`. Pre-existing issues alone do not gate approval.
 
 9. **Recommendations** — short, specific, action-oriented.
 
