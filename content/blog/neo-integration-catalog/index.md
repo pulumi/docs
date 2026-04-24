@@ -9,7 +9,6 @@ feature_image: feature.png
 authors:
     - neo-team
 tags:
-    - neo
     - ai
     - ai-agents
     - features
@@ -38,7 +37,7 @@ Today we're launching the **Integration Catalog** for [Pulumi Neo](/blog/pulumi-
 
 <!--more-->
 
-## What's in the catalog
+## Six integrations in the launch catalog
 
 Neo ships with six integrations at launch, each exposed to the agent through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/):
 
@@ -49,7 +48,7 @@ Neo ships with six integrations at launch, each exposed to the agent through the
 - **PagerDuty** — incidents, on-call schedules, escalations
 - **Supabase** — database management and edge functions
 
-Each integration is a vendor-hosted MCP server. Neo calls the integration through a structured tool protocol and only sees the tools the vendor chose to expose.
+Each integration is a vendor-hosted MCP server. Neo calls the integration through a structured tool protocol and only sees the tools the vendor chooses to expose.
 
 ## Neo in action: one task, many systems
 
@@ -63,15 +62,15 @@ Neo lines up the Pulumi update history for the `payments` stack against the late
 
 Neo opens the Linear issue with the summary, the Pulumi update URL, and a pointer to the Datadog dashboard, all without you leaving the chat or copy-pasting context between tabs.
 
-## How it works
+## How the Integration Catalog works
 
 **Admins configure credentials once.** In your org's Neo settings, open the Integration Catalog, pick an integration, and paste in an API token or service-account key.
 
 **Your team gets the capability immediately.** No per-user setup, no extra OAuth flow for each developer, no asking platform to share a token in 1Password.
 
-**Neo uses integrations transparently.** When a task runs, the service decrypts the configured credentials and hands them to the agent runtime as MCP server auth. If an integration is misconfigured or credentials have been rotated out, Neo skips it gracefully and continues with whatever's available, with no hard failures or broken sessions.
+**Neo uses integrations transparently.** When a task runs, the service decrypts the configured credentials and hands them to the agent runtime as MCP server auth. If an integration is misconfigured or its credentials have been rotated, Neo skips that integration and continues with the rest. The session doesn't fail.
 
-## What's next
+## What's coming next: CLI, OAuth, and access controls
 
 This is the first cut. Here's what we're working on:
 
@@ -85,4 +84,4 @@ The Integration Catalog is available now for Neo-enabled organizations. Open you
 
 As always, we'd love to hear what's missing. File a feature request in [pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose) with the integration you want next. We're prioritizing based on what teams actually use.
 
-Happy building. 👷
+Happy building.
