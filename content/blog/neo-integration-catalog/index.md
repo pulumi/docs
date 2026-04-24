@@ -1,8 +1,8 @@
 ---
 title: "Neo's Integration Catalog: Give Your Agent Access to the Tools It Needs"
 allow_long_title: true
-date: 2026-04-23
-draft: true
+date: 2026-04-24
+draft: false
 meta_desc: "Connect Neo to Atlassian, Datadog, Honeycomb, Linear, PagerDuty, and Supabase so your infrastructure agent has the context it needs to help."
 meta_image: meta.png
 feature_image: feature.png
