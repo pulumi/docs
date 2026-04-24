@@ -162,7 +162,7 @@ Schemas are only valid for project property keys. For setting the value of a pro
 | - | - | - |
 | `displayName` | optional | A user-friendly name for the template. This should follow `Title Case` format and be succinct. This field is only supported by Pulumi CLI >= 3.95. |
 | `description` | optional | Description of the template. |
-| `quickstart` | optional | Optional text to display after the template is instantiated — for example, after `pulumi new` generates a new project. Use this field to surface follow-up instructions specific to the template, such as required environment variables, dependency installation steps, or links to getting-started guides. |
+| `quickstart` | optional | Text to display after the template is instantiated — for example, after `pulumi new` generates a new project. Use this field to surface follow-up instructions specific to the template, such as required environment variables, dependency installation steps, or links to getting-started guides. |
 | `config` | required | Config to request when using this template with `pulumi new`. |
 | `metadata` | optional | A map of user-defined tags to attach to the template. The Pulumi Cloud [New Project Wizard](/docs/idp/concepts/new-project-wizard/) recognizes a `cloud` key for filtering templates by target cloud — see [Organization templates](/docs/idp/concepts/organization-templates/#new-project-wizard-cloud-filter) for accepted values. This field is only supported by Pulumi CLI >= 3.95. |
 
@@ -232,7 +232,7 @@ options:
 template:
   displayName: Example Template
   description: An example template
-  quickstart: Run npm install to install dependencies, then run pulumi up to deploy.
+  quickstart: Run npm install to install dependencies, then pulumi up to deploy.
   config:
     aws:region:
       description: The AWS region to deploy into
