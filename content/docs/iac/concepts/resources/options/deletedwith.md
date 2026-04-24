@@ -99,3 +99,7 @@ resources:
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+## Inheritance from parent
+
+`deletedWith` is inherited from a resource's [`parent`](/docs/iac/concepts/options/parent). Setting `deletedWith` on a parent causes every descendant in the resource tree to skip its provider delete as well, which makes it the idiomatic way to apply `deletedWith` for [component resources](/docs/iac/concepts/components/).
