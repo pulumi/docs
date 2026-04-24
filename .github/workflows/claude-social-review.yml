@@ -104,6 +104,12 @@ jobs:
 
       - uses: astral-sh/setup-uv@v7
 
+      - name: Configure git auth for private social_core git-dep
+        env:
+          PULUMI_BOT_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          git config --global url."https://x-access-token:${PULUMI_BOT_TOKEN}@github.com/".insteadOf "https://github.com/"
+
       - name: Check which posts need social review
         id: check
         env:
