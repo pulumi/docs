@@ -4,11 +4,13 @@
 
 {{ if and (strings.Contains .RelPermalink "/comparisons/") (strings.Contains .RawContent "| Feature |") }}
 
-  {{/* Extract from "| Feature |" onward */}}
+  {{/* Extract from "| Feature |" onward, then truncate to just the first table block
+       so later tables on the page (e.g., Crossplane's "When to Choose") don't pollute the ItemList */}}
   {{ $afterHeader := replaceRE `(?s)^.*?\| Feature \|` "| Feature |" .RawContent }}
+  {{ $firstTable := index (split $afterHeader "\n\n") 0 }}
 
   {{/* Extract all table lines */}}
-  {{ $allTableLines := findRE `(?m)^\|.+\|` $afterHeader }}
+  {{ $allTableLines := findRE `(?m)^\|.+\|` $firstTable }}
 
   {{ if ge (len $allTableLines) 3 }}
 
@@ -31,12 +33,15 @@
           {{ if ge (len $cells) 4 }}
             {{ $feature := index $cells 1 | strings.TrimSpace }}
             {{ $feature = replaceRE `\[([^\]]+)\]\([^)]+\)` "$1" $feature }}
+            {{ $feature = replaceRE `\*+([^*]+)\*+` "$1" $feature }}
             {{ $val1 := index $cells 2 | strings.TrimSpace }}
             {{ $val2 := index $cells 3 | strings.TrimSpace }}
             {{ $val1 = replaceRE `<[^>]+>` " " $val1 }}
             {{ $val2 = replaceRE `<[^>]+>` " " $val2 }}
             {{ $val1 = replaceRE `\[([^\]]+)\]\([^)]+\)` "$1" $val1 }}
             {{ $val2 = replaceRE `\[([^\]]+)\]\([^)]+\)` "$1" $val2 }}
+            {{ $val1 = replaceRE `\*+([^*]+)\*+` "$1" $val1 }}
+            {{ $val2 = replaceRE `\*+([^*]+)\*+` "$1" $val2 }}
             {{ $existing := $.Scratch.Get "compRows" }}
             {{ $.Scratch.Set "compRows" ($existing | append (dict "feature" $feature "product" $val1 "competitor" $val2)) }}
           {{ end }}
