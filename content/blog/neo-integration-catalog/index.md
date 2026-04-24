@@ -17,11 +17,19 @@ tags:
 
 social:
     twitter: |
-        Neo now has an Integration Catalog.
+        A latency spike shows up in Datadog. You pull up Honeycomb, copy findings into Linear, then check what Pulumi changed. Four tools before you have an answer.
 
-        Connect your agent to Atlassian, Datadog, Honeycomb, Linear, PagerDuty, and Supabase. Admin configures once, whole team benefits. Neo can correlate a Pulumi update with Datadog metrics and file a Linear ticket, all in one task.
+        Neo can now do all of that from one task. Here's what the Integration Catalog looks like.
     linkedin: |
-        Infrastructure work doesn't happen in one tool. A Pulumi deploy lives next to the Datadog metrics that show its impact, which turn into a Linear ticket. Neo now has an Integration Catalog so your agent can reach across those systems in a single task. Six integrations at launch: Atlassian, Datadog, Honeycomb, Linear, PagerDuty, and Supabase, all via MCP. Admin sets it up once, everyone on the team benefits.
+        A latency spike shows up in Datadog. You open four tabs: Honeycomb for traces, Linear to file a ticket, PagerDuty to check on-call, Pulumi to see what changed. That's most of the job before you've even diagnosed anything.
+
+        We built the Integration Catalog so Neo can reach those systems from a single task. Six integrations at launch, admin-configured once.
+
+        Here's what the workflow looks like and what's coming in the next batch.
+    bluesky: |
+        When a latency spike shows up in Datadog, Neo can now check Honeycomb for traces and file a Linear ticket with the findings. No tab-hopping, no copy-pasting context between tools.
+
+        Here's how the Integration Catalog works and what six tools are connected.
 ---
 
 Infrastructure work doesn't happen in one tool. Something pages. The signal sits in a metrics dashboard. The follow-up lives in a ticket, and the runbook is in a doc somewhere. Jumping between them is most of the job: copying context, pasting graphs into chat, re-typing the same summary for the ticket.
