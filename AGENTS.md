@@ -129,7 +129,7 @@ The repository runs a tiered review pipeline on every PR. AI-assisted contributo
 
 ### Open as draft
 
-When opening a PR you intend to iterate on, **open it as a draft**. Drafts are triaged (labels applied) but do not trigger the full Claude review. Iterate freely; pushes to the branch will not produce review noise.
+When opening a PR you intend to iterate on, **open it as a draft**. Drafts skip both triage and the full Claude review — labels are applied when you mark the PR ready, not before. Iterate freely; pushes to the branch will not produce review noise.
 
 ### Mark ready for review when finished
 
