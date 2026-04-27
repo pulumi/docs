@@ -45,12 +45,12 @@ export class HeaderCta {
 
         if (this.isLoggedIn) {
             return(
-                <a class={this.buttonClass} href="https://app.pulumi.com/signin?utm_source=header-button" title="Dashboard">Dashboard</a>
+                <a class={this.buttonClass} href="https://app.pulumi.com/signin" title="Dashboard">Dashboard</a>
             );
         }
 
         return (
-            <a class={this.buttonClass} data-track="header-signup" data-role="cta-get-started" href={`${this.href}${this.href.includes("?") && "&" || "?"}utm_source=header-button`} title={this.label}>{this.label}</a>
+            <a class={this.buttonClass} data-track="header-signup" data-role="cta-get-started" href={this.href} title={this.label}>{this.label}</a>
         );
     }
 
