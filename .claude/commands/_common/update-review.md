@@ -112,7 +112,10 @@ The author or another reviewer pushed back on a previous finding *without* a fix
 
 1. Re-examine the disputed finding against the **current** diff and any cited evidence in the mention.
 2. If the author is right -- concede cleanly. Move the finding from 🚨 Outstanding to ✅ Resolved since last review with a brief "concede: <reason>" annotation.
-3. If the author is wrong -- keep the finding and add a short reply paragraph to the 📜 Review history explaining why, with the evidence (file:line, command output, gh URL).
+3. If the author is wrong -- keep the finding **and** annotate it inline so a human reviewer scanning 🚨 Outstanding sees at a glance that it was contested:
+   - Append a `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` line directly under the finding text (a short one-line summary of why is OK; the full reasoning belongs in 📜 Review history).
+   - Add a reply paragraph to 📜 Review history with the full evidence (file:line, command output, gh URL) explaining why the dispute didn't change the verdict.
+   - The Outstanding count does not change.
 4. **Do not** reword the same finding hoping it lands better. The original wording is in the comment; either change your mind or explain why you didn't.
 
 **Sonnet failure-mode example to avoid:**
@@ -120,10 +123,11 @@ The author or another reviewer pushed back on a previous finding *without* a fix
 > Author mentioned Claude saying: "you flagged X but it's fine because Y."
 >
 > ❌ *Do not:* reword the finding ("Consider that X may cause issues in scenario Z"), leave it in 🚨 Outstanding, and hope the rewording lands better than the original.
+> ❌ *Do not:* leave the finding text untouched and only add a Review history line. The reviewer scrolling Outstanding has no way to know it was contested.
 > ✅ *Do* one of two things:
 >
-> - **Concede cleanly:** "concede: author is right about Y; moving to ✅ Resolved."
-> - **Hold the finding:** "holding: Y does not address X because <one-sentence reason>; evidence at <file:line>."
+> - **Concede cleanly:** move to ✅ Resolved with `concede: author is right about Y`.
+> - **Hold the finding:** keep in 🚨 Outstanding, append `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.** <one-line reason>` under the finding, and put the full reasoning in 📜 Review history.
 >
 > Reword is the forbidden path. A finding is either in the bucket or out; a "softer rephrasing" is neither and is the worst output under a cheaper model.
 
