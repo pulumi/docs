@@ -108,26 +108,37 @@ The author or another reviewer pushed back on a previous finding *without* a fix
 - A mention like "I disagree with X" / "this is intentional" / "the linter passes, why are you flagging this?"
 - No new commits, or commits unrelated to the disputed finding.
 
-**Action:**
+**First, classify what kind of dispute this is** — author authority cuts differently depending on the claim:
 
-1. Re-examine the disputed finding against the **current** diff and any cited evidence in the mention.
-2. If the author is right -- concede cleanly. Move the finding from 🚨 Outstanding to ✅ Resolved since last review with a brief "concede: <reason>" annotation.
-3. If the author is wrong -- keep the finding **and** annotate it inline so a human reviewer scanning 🚨 Outstanding sees at a glance that it was contested:
+- **Domain-knowledge assertion** ("I built this and it works because X", "the team decided on this pattern intentionally", "this codebase uses convention Y for reason Z"). The author is asserting context the model can't independently verify. **Default to concede** unless you can cite specific contrary evidence (file/line, command output, gh URL). When the author has write access on the repo and is asserting design intent or codebase context, "I'm the engineer / maintainer" is sufficient evidence on its own — they have access to context the model does not.
+- **Verifiable claim** ("this is faster than X", "Y was added in v3.0", "the docs already say this elsewhere"). The dispute is about something measurable or checkable. Author authority does **not** establish the truth here — require actual evidence (link, benchmark, history, file:line) to concede.
+- **Reframing of the model's reading** ("you misread the sentence", "the qualifier in the prose bounds the claim"). The model's interpretation is what's at issue, not the underlying fact. Re-evaluate the finding against the cited reading; concede or hold based on whether the new reading is plausible to a docs reader.
+
+**Then act:**
+
+1. Re-examine the disputed finding against the **current** diff and any cited evidence in the mention, using the classification above.
+2. If conceding -- move the finding from 🚨 Outstanding to ✅ Resolved since last review with a brief "concede: <reason>" annotation.
+3. If holding -- keep the finding **and** annotate it inline so a human reviewer scanning 🚨 Outstanding sees at a glance that it was contested:
    - Append a `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` line directly under the finding text (a short one-line summary of why is OK; the full reasoning belongs in 📜 Review history).
-   - Add a reply paragraph to 📜 Review history with the full evidence (file:line, command output, gh URL) explaining why the dispute didn't change the verdict.
+   - Add a reply paragraph to 📜 Review history with the full evidence (file:line, command output, gh URL) explaining why the dispute didn't change the verdict. **You must cite contrary evidence to hold on a domain-knowledge dispute** — if the only basis for holding is your own reasoning vs. the author's assertion of authority, concede instead.
    - The Outstanding count does not change.
 4. **Do not** reword the same finding hoping it lands better. The original wording is in the comment; either change your mind or explain why you didn't.
 
-**Sonnet failure-mode example to avoid:**
+**Sonnet failure-mode examples to avoid:**
 
-> Author mentioned Claude saying: "you flagged X but it's fine because Y."
+> Author (write access) mentions Claude saying: "I built this — the project intentionally uses pattern X because of Y."
+>
+> ❌ *Do not:* hold the finding because your training-data view of "best practice" disagrees with the author's stated intent. The author has codebase context you do not.
+> ✅ *Do:* concede with `concede: author confirms intentional pattern; deferring to repo authority`.
+
+> Author mentions Claude saying: "you flagged X but it's fine because Y."
 >
 > ❌ *Do not:* reword the finding ("Consider that X may cause issues in scenario Z"), leave it in 🚨 Outstanding, and hope the rewording lands better than the original.
 > ❌ *Do not:* leave the finding text untouched and only add a Review history line. The reviewer scrolling Outstanding has no way to know it was contested.
 > ✅ *Do* one of two things:
 >
 > - **Concede cleanly:** move to ✅ Resolved with `concede: author is right about Y`.
-> - **Hold the finding:** keep in 🚨 Outstanding, append `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.** <one-line reason>` under the finding, and put the full reasoning in 📜 Review history.
+> - **Hold the finding** (only with citable contrary evidence): keep in 🚨 Outstanding, append `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.** <one-line reason>` under the finding, and put the full reasoning in 📜 Review history.
 >
 > Reword is the forbidden path. A finding is either in the bucket or out; a "softer rephrasing" is neither and is the worst output under a cheaper model.
 
