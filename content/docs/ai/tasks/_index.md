@@ -71,6 +71,10 @@ At any time, you can ask Neo to run a [pulumi preview](/docs/iac/cli/commands/pu
 
 If a task results in code modifications, Neo will offer to open a [pull request](/docs/ai/pull-requests/) once you are satisfied with the implementation. PRs can also be modified after they have been opened.
 
+## Integrations
+
+If your organization has [integrations](/docs/ai/integrations/) enabled, Neo can read from external services like issue trackers, observability platforms, and runbooks during tasks.
+
 ## Context, sharing, and history
 
 ### Setting entity context
