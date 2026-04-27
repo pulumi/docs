@@ -43,7 +43,7 @@ from social_core import (
 
 # --- Account / API target ----------------------------------------------------
 # Flip to True when ready to post to official Pulumi accounts.
-PROD_MODE = False
+PROD_MODE = True
 
 if PROD_MODE:
     USER = "pulumi"
