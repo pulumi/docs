@@ -12,14 +12,14 @@ menu:
         identifier: ai-integrations
 ---
 
-Neo integrations bring context from your existing tools into infrastructure tasks. Neo can read directly from the services your team already uses, such as issue trackers, observability platforms, wikis, and databases, and apply that context to infrastructure tasks.
+Neo integrations bring context from your existing tools into infrastructure work. Neo can read directly from the services your team already uses — issue trackers, observability platforms, incident response tools, wikis, and databases — and apply that context to infrastructure tasks.
 
 Integrations are configured at the organization level by an administrator. Once enabled, they are available to all tasks in the organization.
 
 ## What you can do with integrations
 
 - **Pick up work from your issue tracker.** Connect Linear or Jira and ask Neo to implement an issue. Neo reads the issue description, acceptance criteria, and comments, then writes the infrastructure changes to match.
-- **Follow your runbooks.** Connect Confluence and point Neo at an operational runbook. Neo follows the documented steps, adapting them to your current environment.
+- **Follow your runbooks.** Connect Atlassian and point Neo at a Confluence runbook. Neo follows the documented steps, adapting them to your current environment.
 - **Investigate with real observability data.** Connect Honeycomb or Datadog and ask Neo to diagnose a performance problem. Neo queries actual traces and metrics from your environment to narrow down the cause.
 - **Respond to incidents.** Connect PagerDuty and let Neo look up active incidents, on-call schedules, and escalation policies while it investigates.
 - **Manage application infrastructure together.** Connect Supabase and let Neo coordinate database changes alongside your Pulumi infrastructure code.
@@ -93,7 +93,11 @@ Linear API keys are personal tokens. All actions Neo takes through this integrat
 {{% /notes %}}
 
 1. In Linear, open **Settings**, then **Security & Access**
-1. Select **New API Key**, give it a name, and configure the permissions and team access for your use case
+1. Select **New API Key**, give it a name, and choose the permissions Neo needs:
+    - **Read**: required for all integrations Neo performs through Linear
+    - **Create issues** and **Create comments**: required if you want Neo to file or comment on issues
+    - **Write** or **Admin**: required if you want Neo to update or delete existing issues
+1. Optionally limit the key to specific teams using the team-access controls
 1. In Neo, enter the **API Key**
 
 ### PagerDuty
@@ -103,7 +107,9 @@ PagerDuty User API Tokens are tied to a single user account. All actions Neo tak
 {{% /notes %}}
 
 1. In PagerDuty, open your user profile and select **User Settings**
-1. Select **Create API User Token**, give it a name (e.g., "Neo Integration"), and copy the token
+1. Select **Create API User Token** and give it a name (e.g., "Neo Integration"). The token inherits the user's existing PagerDuty permissions, so its access matches whatever the user can already see in the PagerDuty UI.
+1. Check **Read-only API Key** if you don't want Neo to be able to create or modify incidents, schedules, or escalation policies
+1. Copy the token
 1. In Neo, enter the **User API Token**
 
 ### Supabase

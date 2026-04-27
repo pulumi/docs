@@ -146,7 +146,7 @@ You can place `AGENTS.md` files in subdirectories for more specific instructions
 
 ## Integrations
 
-Neo can connect to third-party services like issue trackers, observability platforms, and wikis, giving tasks the ability to query external tools alongside your infrastructure. Integrations are configured in the **Integrations** tab of Neo Settings, where administrators can enable services and provide credentials.
+Neo can connect to third-party services like issue trackers, observability platforms, incident response tools, wikis, and databases, giving tasks the ability to query external tools alongside your infrastructure. Integrations are configured in the **Integrations** tab of Neo Settings, where administrators can enable services and provide credentials.
 
 See [Integrations](/docs/ai/integrations/) for the full list of available integrations, setup instructions, and credential storage details.
 
