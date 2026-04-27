@@ -79,22 +79,28 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Determine if this mention is on a PR (vs an issue) and look up
-          # whether a pinned Claude review already exists. If yes, the prompt
-          # invokes the re-entrant update skill; if no, it falls back to a
-          # full initial review.
+          # Determine the thread number (PR or issue), whether it's a PR,
+          # and whether a pinned Claude review already exists. The prompt
+          # passes these to the model so it can decide whether to invoke
+          # update-review, run an initial review, or handle an ad-hoc task.
+          # PR_NUMBER is named for legacy reasons; on non-PR events it
+          # holds the issue number so downstream gh commands work.
           PR_NUMBER=""
           IS_PR="false"
           case "${{ github.event_name }}" in
             issue_comment)
+              PR_NUMBER="${{ github.event.issue.number }}"
               if [ "${{ github.event.issue.pull_request != null }}" = "true" ]; then
-                PR_NUMBER="${{ github.event.issue.number }}"
                 IS_PR="true"
               fi
               ;;
             pull_request_review_comment|pull_request_review)
               PR_NUMBER="${{ github.event.pull_request.number }}"
               IS_PR="true"
+              ;;
+            issues)
+              PR_NUMBER="${{ github.event.issue.number }}"
+              IS_PR="false"
               ;;
           esac
 
@@ -113,9 +119,42 @@ jobs:
             echo "has_pinned=$HAS_PINNED"
           } >> "$GITHUB_OUTPUT"
 
+      # Save the triggering comment / review / issue body to a file in
+      # the workspace so the model can read it without scraping the
+      # event payload at runtime. Env vars carry the body safely (no
+      # direct interpolation into shell — bodies can contain arbitrary
+      # text, including shell metacharacters).
+      - name: Save mention body
+        id: mention
+        if: steps.check-access.outputs.has_write_access == 'true'
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          REVIEW_BODY: ${{ github.event.review.body }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          case "$EVENT_NAME" in
+            issue_comment|pull_request_review_comment)
+              BODY="$COMMENT_BODY"
+              ;;
+            pull_request_review)
+              BODY="$REVIEW_BODY"
+              ;;
+            issues)
+              BODY="$ISSUE_BODY"
+              ;;
+            *)
+              BODY=""
+              ;;
+          esac
+          printf '%s' "$BODY" > .claude-mention-body.txt
+
       # Post a transient <!-- CLAUDE_PROGRESS --> comment on PR mentions so
       # the author sees "something is happening" while Sonnet works. The post
-      # step below edits it to a done/errored state when Claude completes.
+      # step below edits it to a done/errored state (or deletes it on cancel)
+      # when Claude completes. Generic "Working on it" message because the
+      # model decides what to actually do — it may be a review update, a
+      # code change, or a conversational reply.
       # Skipped on issue mentions (no progress context makes sense there).
       - name: Post progress signal
         if: |
@@ -127,11 +166,7 @@ jobs:
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
-          if [ "${{ steps.pr-context.outputs.has_pinned }}" = "true" ]; then
-            MSG='🤖 Refreshing the review — this can take several minutes.'
-          else
-            MSG='🤖 Reviewing — this can take several minutes.'
-          fi
+          MSG='🤖 Working on it — this can take several minutes.'
           BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
           COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
             -f body="$BODY" --jq '.id' || echo "")
@@ -151,26 +186,42 @@ jobs:
           additional_permissions: |
             actions: read
 
-          # Re-entrant updates run on Sonnet (initial review uses Opus in
-          # claude-code-review.yml). On a PR with an existing pinned review,
-          # invoke _common/update-review.md; otherwise fall back to a full
-          # initial review via docs-review-ci.md. On non-PR events, behave
-          # like the default @claude handler.
+          # Model-driven routing: the prompt provides PR/issue context plus
+          # the triggering mention body (in .claude-mention-body.txt) and
+          # lets Sonnet decide what to do. Three paths:
+          # - review-related ask → invoke update-review.md or docs-review-ci.md
+          # - ad-hoc task / question → act directly (Edit, push, gh comment)
+          # - ambiguous → reply conversationally asking for clarification
+          # Initial reviews use Opus via claude-code-review.yml; this
+          # workflow always uses Sonnet for re-entrant work.
           prompt: |
-            ${{ steps.pr-context.outputs.is_pr == 'true' && steps.pr-context.outputs.has_pinned == 'true' && format('You are running in a CI environment.
+            You are responding to an `@claude` mention in `${{ github.repository }}`.
 
-            A pinned Claude review already exists on PR #{0}. Update it in place by following the instructions in `.claude/commands/_common/update-review.md`. The mention that triggered you is in the event payload — read it via `gh api` if you need the body. Use `bash .claude/commands/_common/scripts/pinned-comment.sh upsert` to post the updated review.', steps.pr-context.outputs.pr_number)
-            || (steps.pr-context.outputs.is_pr == 'true' && format('You are running in a CI environment.
+            Context:
+            - ${{ steps.pr-context.outputs.is_pr == 'true' && format('Pull request #{0}', steps.pr-context.outputs.pr_number) || format('Issue #{0}', steps.pr-context.outputs.pr_number) }}
+            - Pinned Claude review: ${{ steps.pr-context.outputs.has_pinned == 'true' && 'EXISTS on this PR' || 'does not exist (or N/A on issues)' }}
 
-            No pinned Claude review exists on PR #{0}. Run an initial review by following the instructions in `.claude/commands/docs-review-ci.md`, then post via `bash .claude/commands/_common/scripts/pinned-comment.sh upsert`.', steps.pr-context.outputs.pr_number))
-            || ''
-            }}
+            **Read the triggering mention text from `.claude-mention-body.txt` first.** It contains the body of the comment, review, or issue that invoked you. Decide what to do based on what it asks for:
+
+            1. **Review-related ask on a PR** — refresh, "I addressed your feedback on X", dispute a finding ("I disagree with X because Y"), or any explicit "@claude refresh / re-review" intent:
+               - If a pinned review **EXISTS**, follow `.claude/commands/_common/update-review.md` and post the updated review via `bash .claude/commands/_common/scripts/pinned-comment.sh upsert --pr ${{ steps.pr-context.outputs.pr_number }} --body-file <path>`.
+               - If a pinned review **does not exist**, follow `.claude/commands/docs-review-ci.md` to produce an initial review and post via the same `pinned-comment.sh upsert` command.
+
+            2. **Ad-hoc task or question** — fix code, explain something, answer a question, make a small change, etc.: act on the mention directly. Use Edit/Write to make file changes; `gh pr checkout ${{ steps.pr-context.outputs.pr_number }}` if you need to push commits to the PR branch; reply with `gh pr comment ${{ steps.pr-context.outputs.pr_number }} --body "..."` (or `gh issue comment` for issues).
+
+            3. **Ambiguous mention** — reply conversationally via `gh pr comment` (or `gh issue comment`) asking for clarification. Don't guess at intent.
+
+            Do NOT invoke `update-review.md` for ad-hoc tasks — it is designed only for review-related interactions and will produce wrong output on other intents.
 
           claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Glob,Grep,Edit,Write,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(git:*),Bash(bash .claude/commands/_common/scripts/pinned-comment.sh:*)"'
 
       # Runs on success or failure so the transient CLAUDE_PROGRESS comment
-      # always reaches a terminal state and the review:claude-working label
-      # is cleared.
+      # always reaches a terminal state and the working/stale labels are
+      # cleared. Mirrors the outcome handling in claude-code-review.yml:
+      # success → edit to "Done"; cancelled/skipped → delete the orphan
+      # comment (newer run owns the surface); failure → edit to "Errored".
+      # Generic "Done" wording because the model may have done a review
+      # update, code change, or just replied — it knows which.
       - name: Finalize progress signal
         if: always() && steps.progress.outputs.comment_id != ''
         env:
@@ -179,15 +230,25 @@ jobs:
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
-          if [ "${{ steps.claude.outcome }}" = "success" ]; then
-            MSG='🤖 Review updated.'
+          OUTCOME="${{ steps.claude.outcome }}"
+          if [ "$OUTCOME" = "success" ]; then
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Done.')
+            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
+              -f body="$BODY" >/dev/null || true
+          elif [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
           else
-            MSG='🤖 Review errored. Mention @claude again to retry.'
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Errored. Mention @claude again to retry.')
+            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
+              -f body="$BODY" >/dev/null || true
           fi
-          BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
-          gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
-            -f body="$BODY" >/dev/null || true
-          gh pr edit "$PR" --repo "$REPO" --remove-label review:claude-working || true
+          # Clear both lifecycle labels: working (set above) and stale
+          # (set by claude-code-review.yml's mark-stale job on push). On
+          # successful re-entrant work, the pinned review is no longer
+          # stale, so the label should go.
+          gh pr edit "$PR" --repo "$REPO" \
+            --remove-label review:claude-working \
+            --remove-label review:claude-stale || true
 
 env:
   ESC_ACTION_OIDC_AUTH: true
