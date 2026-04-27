@@ -2,7 +2,7 @@
 title: Settings
 title_tag: Neo Settings
 h1: Neo Settings
-meta_desc: Configure Neo for your organization with Custom Instructions, Repository Instructions (AGENTS.md), Slash Commands, access controls, and task modes.
+meta_desc: Configure Neo with Custom Instructions, Repository Instructions, Slash Commands, Integrations, access controls, and task modes.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
@@ -143,6 +143,12 @@ You can place `AGENTS.md` files in subdirectories for more specific instructions
 - Focus on conventions that can't be enforced by automated tools
 - Keep instructions actionable and specific
 - Review and update as your project's practices evolve
+
+## Integrations
+
+Neo can connect to third-party services like issue trackers, observability platforms, incident response tools, wikis, and databases, giving tasks the ability to query external tools alongside your infrastructure. Integrations are configured in the **Integrations** tab of Neo Settings, where administrators can enable services and provide credentials.
+
+See [Integrations](/docs/ai/integrations/) for the full list of available integrations, setup instructions, and credential storage details.
 
 ## Slash commands
 
