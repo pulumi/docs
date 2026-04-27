@@ -3,6 +3,19 @@
     {{ partial "head.html" . }}
     <body class="section-{{ .Section }}">
         <pulumi-root></pulumi-root>
+        <script>
+            // Forward landing-page querystring (utm_*, gclid, etc.) to
+            // app.pulumi.com links so paid-traffic attribution survives
+            // the click into signup.
+            document.addEventListener("DOMContentLoaded", function() {
+                var qs = window.location.search;
+                if (qs.length <= 1) return;
+                var params = qs.substring(1);
+                document.querySelectorAll('a[href*="app.pulumi.com"]').forEach(function(a) {
+                    a.href += (a.href.indexOf("?") === -1 ? "?" : "&") + params;
+                });
+            });
+        </script>
         {{ partial "gads-header.html" . }}
         {{ block "hero" . }}
         {{ end }}
