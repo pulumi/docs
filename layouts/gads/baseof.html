@@ -3,6 +3,7 @@
     {{ partial "head.html" . }}
     <body class="section-{{ .Section }}">
         <pulumi-root></pulumi-root>
+        {{ partial "gads-tracking-params.html" . }}
         {{ partial "gads-header.html" . }}
         {{ block "hero" . }}
         {{ end }}

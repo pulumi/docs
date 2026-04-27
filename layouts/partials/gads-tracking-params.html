@@ -1,0 +1,77 @@
+<!--
+    Persists Google Ads tracking params (utm_*, gclid, gbraid, wbraid, fbclid,
+    msclkid) across the click from a /gads/ landing page to the signup flow on
+    app.pulumi.com. Without this, the params are dropped at the boundary and
+    the conversion can't be attributed back to the ad/keyword that drove it.
+-->
+<script>
+(function() {
+    var TRACKED_PREFIXES = ["utm_"];
+    var TRACKED_KEYS = ["gclid", "gbraid", "wbraid", "fbclid", "msclkid"];
+    var STORAGE_KEY = "pulumiGadsTrackingParams";
+
+    function isTrackedKey(key) {
+        if (TRACKED_KEYS.indexOf(key) !== -1) return true;
+        for (var i = 0; i < TRACKED_PREFIXES.length; i++) {
+            if (key.indexOf(TRACKED_PREFIXES[i]) === 0) return true;
+        }
+        return false;
+    }
+
+    function readParamsFromLocation() {
+        var out = {};
+        try {
+            var params = new URLSearchParams(window.location.search || "");
+            params.forEach(function(value, key) {
+                if (isTrackedKey(key)) out[key] = value;
+            });
+        } catch (e) {}
+        return out;
+    }
+
+    function loadStored() {
+        try {
+            var raw = window.sessionStorage.getItem(STORAGE_KEY);
+            return raw ? JSON.parse(raw) : {};
+        } catch (e) { return {}; }
+    }
+
+    function saveStored(data) {
+        try { window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e) {}
+    }
+
+    var stored = loadStored();
+    var fresh = readParamsFromLocation();
+    var merged = {};
+    for (var k in stored) merged[k] = stored[k];
+    for (var k in fresh) merged[k] = fresh[k];
+    if (Object.keys(fresh).length) saveStored(merged);
+
+    function appendParams(url) {
+        if (!url || !Object.keys(merged).length) return url;
+        try {
+            var u = new URL(url, window.location.href);
+            if (u.hostname.indexOf("pulumi.com") === -1) return url;
+            for (var key in merged) {
+                if (!u.searchParams.has(key)) u.searchParams.set(key, merged[key]);
+            }
+            return u.toString();
+        } catch (e) { return url; }
+    }
+
+    window.gadsAppendTrackingParams = appendParams;
+
+    function rewriteLinks() {
+        var anchors = document.querySelectorAll('a[href*="app.pulumi.com"]');
+        for (var i = 0; i < anchors.length; i++) {
+            anchors[i].href = appendParams(anchors[i].href);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", rewriteLinks);
+    } else {
+        rewriteLinks();
+    }
+})();
+</script>
