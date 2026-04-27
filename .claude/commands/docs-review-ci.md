@@ -59,7 +59,7 @@ For each changed file, route to **exactly one** domain using path-precedence ord
 | Order | Compose | Applies when the file path matches |
 |---|---|---|
 | 1 | `_common/review-shared.md` + `_common/review-programs.md` | `static/programs/**` (includes every nested file in a program directory) |
-| 2 | `_common/review-shared.md` + `_common/review-blog.md` | `content/blog/**`, `content/customers/**` |
+| 2 | `_common/review-shared.md` + `_common/review-blog.md` | `content/blog/**`, `content/case-studies/**` |
 | 3 | `_common/review-shared.md` + `_common/review-docs.md` | `content/docs/**`, `content/learn/**`, `content/tutorials/**`, `content/what-is/**` |
 | 4 | `_common/review-shared.md` + `_common/review-infra.md` | `.github/workflows/**`, `scripts/**` except `scripts/programs/**`, `infrastructure/**`, `Makefile` (repo root), `package.json` (repo root only), `webpack.config.js`, `webpack.*.js` |
 

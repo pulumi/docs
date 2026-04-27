@@ -46,12 +46,18 @@ jobs:
 
   claude-review:
     # Fire only for workflow_run events from Claude Triage that were
-    # themselves triggered by a pull_request. The pull_requests array
-    # is populated by GitHub when the originating workflow ran in a PR
-    # context on the same repo.
+    # themselves triggered by a pull_request AND completed successfully.
+    # The conclusion gate matters: triage is now skipped on draft opens
+    # (see claude-triage.yml's !draft guard). Without this gate, the
+    # skipped triage workflow_run still fires this job, which then races
+    # the ready_for_review-triggered run and gets cancelled by the
+    # concurrency group — orphaning a CLAUDE_PROGRESS comment.
+    # The pull_requests array is populated by GitHub when the originating
+    # workflow ran in a PR context on the same repo.
     if: |
       github.event_name == 'workflow_run' &&
       github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' &&
       github.event.workflow_run.pull_requests != null &&
       github.event.workflow_run.pull_requests[0] != null
 
@@ -65,6 +71,7 @@ jobs:
       pull-requests: write
       issues: read
       id-token: write
+      checks: write
 
     steps:
       - name: Checkout repository
@@ -113,6 +120,26 @@ jobs:
             echo "review: pr=$PR proceed (labels=$LABELS_CSV)"
           fi
 
+      # Publish a Checks API check-run pinned to the PR's head SHA so
+      # the review status appears in the PR's Status checks list.
+      # workflow_run-triggered jobs don't surface in PR Checks by default;
+      # this is the standard escape hatch. Runs unconditionally so even
+      # skipped reviews (trivial, draft, bot-author) get a check entry.
+      - name: Publish check-run (in_progress)
+        id: check-run
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          HEAD_SHA="${{ github.event.workflow_run.head_sha }}"
+          DETAILS_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          CHECK_ID=$(gh api -X POST "repos/${{ github.repository }}/check-runs" \
+            -f name="Claude Code Review" \
+            -f head_sha="$HEAD_SHA" \
+            -f status="in_progress" \
+            -f details_url="$DETAILS_URL" \
+            --jq '.id' || echo "")
+          echo "check_id=$CHECK_ID" >> "$GITHUB_OUTPUT"
+
       - name: Check repository write access
         if: steps.pr-context.outputs.skip_reason == ''
         id: check-access
@@ -157,7 +184,7 @@ jobs:
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
           BODY='<!-- CLAUDE_PROGRESS -->
-          🐿️ Reviewing — this usually takes a minute or two.'
+          🤖 Reviewing — this can take several minutes.'
           COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
             -f body="$BODY" --jq '.id' || echo "")
           echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
@@ -202,6 +229,14 @@ jobs:
       # Runs on success or failure so the transient CLAUDE_PROGRESS comment
       # always reaches a terminal state. Claude's prompt adds review:claude-ran
       # on success; we just need to remove review:claude-working.
+      #
+      # Outcome handling:
+      # - success: edit the comment to "Review updated."
+      # - cancelled / skipped: delete the orphan comment. A cancellation
+      #   means a newer run preempted this one (concurrency cancel-in-
+      #   progress); the new run owns the user-visible state and this
+      #   one's progress comment is just noise.
+      # - any other (failure, etc.): edit to "Review errored."
       - name: Finalize progress signal
         if: always() && steps.progress.outputs.comment_id != ''
         env:
@@ -210,13 +245,52 @@ jobs:
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
-          if [ "${{ steps.claude-review.outcome }}" = "success" ]; then
+          OUTCOME="${{ steps.claude-review.outcome }}"
+          if [ "$OUTCOME" = "success" ]; then
             BODY='<!-- CLAUDE_PROGRESS -->
-          🐿️ Review updated.'
+          🤖 Review updated.'
+            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
+              -f body="$BODY" >/dev/null || true
+          elif [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
           else
             BODY='<!-- CLAUDE_PROGRESS -->
-          🐿️ Review errored. Flip to draft and back to ready, or mention @claude, to retry.'
+          🤖 Review errored. Flip to draft and back to ready, or mention @claude, to retry.'
+            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
+              -f body="$BODY" >/dev/null || true
           fi
-          gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
-            -f body="$BODY" >/dev/null || true
           gh pr edit "$PR" --repo "$REPO" --remove-label review:claude-working || true
+
+      # Finalize the check-run created at job start. Runs on success or
+      # failure so contributors always see a terminal state in the PR's
+      # Checks list. Skip detection (trivial/draft/bot) takes precedence
+      # over claude-review.outcome since the review step is skipped in
+      # those cases and outcome would be "skipped" without that nuance.
+      - name: Finalize check-run
+        if: always() && steps.check-run.outputs.check_id != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          CHECK_ID="${{ steps.check-run.outputs.check_id }}"
+          REPO="${{ github.repository }}"
+          OUTCOME="${{ steps.claude-review.outcome }}"
+          SKIP_REASON="${{ steps.pr-context.outputs.skip_reason }}"
+          if [ "$OUTCOME" = "success" ]; then
+            CONCLUSION="success"
+            SUMMARY="Pinned review updated. See the PR's pinned comment for findings."
+          elif [ -n "$SKIP_REASON" ]; then
+            CONCLUSION="skipped"
+            SUMMARY="Review skipped: $SKIP_REASON"
+          elif [ "$OUTCOME" = "cancelled" ]; then
+            CONCLUSION="neutral"
+            SUMMARY="Cancelled — superseded by a newer run."
+          else
+            CONCLUSION="failure"
+            SUMMARY="Review failed. See workflow logs."
+          fi
+          jq -n \
+            --arg conclusion "$CONCLUSION" \
+            --arg title "Claude Code Review" \
+            --arg summary "$SUMMARY" \
+            '{status: "completed", conclusion: $conclusion, output: {title: $title, summary: $summary}}' \
+            | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true

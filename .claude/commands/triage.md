@@ -36,7 +36,7 @@ Evaluate each changed file in path-precedence order and classify it into **exact
 | Order | Label | Applies when the file path matches |
 |---|---|---|
 | 1 | `review:programs` | `static/programs/**` (includes every nested file: `Pulumi.yaml`, `package.json`, `requirements.txt`, source files, anything else inside a program directory) |
-| 2 | `review:blog` | `content/blog/**`, `content/customers/**` |
+| 2 | `review:blog` | `content/blog/**`, `content/case-studies/**` |
 | 3 | `review:docs` | `content/docs/**`, `content/learn/**`, `content/tutorials/**`, `content/what-is/**` |
 | 4 | `review:infra` | `.github/workflows/**`, `scripts/**` except `scripts/programs/**`, `infrastructure/**`, `Makefile` (repo root), `package.json` (repo root only), `webpack.config.js`, `webpack.*.js` |
 | — | (no domain label) | Everything else (`layouts/`, `assets/`, `data/`, etc.). `review:shared` checks still run on these. |
@@ -78,7 +78,7 @@ The label still applies regardless of what's in `prose_concerns`. Concerns are a
 
 Apply `fact-check:needed` when the PR touches:
 
-- Any blog or customer file (`content/blog/**`, `content/customers/**`) — heightened-scrutiny domains
+- Any blog or customer-story file (`content/blog/**`, `content/case-studies/**`) — heightened-scrutiny domains
 - Any program (`static/programs/**`) — code correctness matters
 - Any docs page that introduces new factual claims (versions, commands, API surfaces, feature existence). Heuristic: the diff adds prose under a `## ` or `### ` heading that wasn't there before, or adds a code block, or adds a "since v3.X" / "available in" / "now supports" claim.
 

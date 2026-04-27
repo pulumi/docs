@@ -128,9 +128,9 @@ jobs:
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
           if [ "${{ steps.pr-context.outputs.has_pinned }}" = "true" ]; then
-            MSG='🐿️ Refreshing the review — this usually takes a minute or two.'
+            MSG='🤖 Refreshing the review — this can take several minutes.'
           else
-            MSG='🐿️ Reviewing — this usually takes a minute or two.'
+            MSG='🤖 Reviewing — this can take several minutes.'
           fi
           BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
           COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
@@ -180,9 +180,9 @@ jobs:
           REPO="${{ github.repository }}"
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
           if [ "${{ steps.claude.outcome }}" = "success" ]; then
-            MSG='🐿️ Review updated.'
+            MSG='🤖 Review updated.'
           else
-            MSG='🐿️ Review errored. Mention @claude again to retry.'
+            MSG='🤖 Review errored. Mention @claude again to retry.'
           fi
           BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
           gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
