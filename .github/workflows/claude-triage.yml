@@ -169,6 +169,11 @@ jobs:
             TARGET["fact-check:needed"]=1
           fi
           [[ "$AGENT_AUTHORED" == "true" ]] && TARGET["agent-authored"]=1
+          # Trivial + prose concerns: flag for human attention so the
+          # advisory comment isn't lost in the timeline.
+          if [[ "$TRIVIAL" == "true" && -n "$PROSE_CONCERNS" ]]; then
+            TARGET["review:prose-flagged"]=1
+          fi
 
           # 7. Current triage-managed labels (exclude state labels).
           declare -A EXISTING

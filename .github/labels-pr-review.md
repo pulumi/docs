@@ -22,6 +22,7 @@ This document lists the labels that the PR review pipeline (`claude-triage.yml`,
 | `fact-check:needed` | `e99695` | PR introduces factual claims (versions, APIs, commands, features) — fact-check runs alongside review. |
 | `agent-authored` | `5319e7` | PR is AI-authored or AI-assisted. Used as a signal during human adjudication; does not change which review runs. |
 | `needs-author-response` | `f7c6c7` | Review surfaced unverifiable claims; author needs to provide sources or fix. |
+| `review:prose-flagged` | `fef2c0` | Trivial PR where triage's prose-check pass found possible spelling/grammar issues. See the `<!-- TRIAGE_PROSE -->` comment. |
 
 ## State labels (set by review workflow)
 
@@ -45,6 +46,7 @@ gh label create "review:mixed"           --color bfd4f2 --description "PR touche
 gh label create "fact-check:needed"      --color e99695 --description "PR introduces factual claims; fact-check runs"
 gh label create "agent-authored"         --color 5319e7 --description "AI-authored or AI-assisted; signal for human adjudication"
 gh label create "needs-author-response"  --color f7c6c7 --description "Review surfaced unverifiable claims; author owes a response"
+gh label create "review:prose-flagged"   --color fef2c0 --description "Trivial PR where triage's prose-check found possible spelling/grammar issues"
 gh label create "review:claude-working"  --color c5def5 --description "Claude is running a review right now; auto-removed when the run finishes"
 gh label create "review:claude-ran"      --color 1d76db --description "Claude review has completed for this PR's current state"
 gh label create "review:claude-stale"    --color ededed --description "New commits since last Claude review; refresh on next ready-transition or @claude mention"
