@@ -364,3 +364,91 @@ From the original "recommendations" punch list, still unresolved:
 - **Secrets:** `ANTHROPIC_API_KEY` set on the fork by Cam. No ESC configuration.
 
 Re-enabling the fork for fresh testing: open a new PR against `camsoper/pulumi.docs` master. Triage fires on `opened`; chained review fires on `ready_for_review` via `workflow_run`.
+
+---
+
+## Session 4 — clearing the deferred backlog
+
+This session converted the "Still open / deferred" list at the end of Session 3 into shipped commits and verified behavior. By the end, only Phase D (branch commit history cleanup) remains.
+
+### What shipped
+
+Five commits on `CamSoper/pr-review-overhaul`, each cherry-picked to `cam/master` so the fork tests exercised the same code:
+
+1. **Triage skips drafts** (`6f71a3c9`) — added `!github.event.pull_request.draft` guard on the triage job and dropped `reopened` from the trigger types. Drafts are the author's workbench; we don't apply labels until they ask for feedback. AGENTS.md updated to match. Note: `opened` is still needed for PRs that skip the draft phase entirely; `ready_for_review` only fires on draft → ready transitions, not on direct non-draft opens.
+2. **Triage prose-check** (`5e1c359e`) — extends the triage JSON contract with `prose_concerns: []`. When a PR is classified `trivial`, Sonnet also examines the diff for spelling/grammar errors. If any are found, the workflow posts a one-shot `<!-- TRIAGE_PROSE -->` advisory comment. The trivial label still applies and the full review still skips — concerns are a sanity check, not a block. Idempotent: prior TRIAGE_PROSE comments are deleted on re-triage. This was the answer to Cam's "the trivial label encourages rubber-stamping" concern.
+3. **Phase A bundle** (`5497d622`) — four narrow fixes:
+   - **#7 widened**: gate the `claude-review` job on `github.event.workflow_run.conclusion == 'success'` so a *skipped* triage's `workflow_run` no longer fires the review job (which was racing the ready-event run and getting cancelled by concurrency, orphaning a CLAUDE_PROGRESS comment finalized as "Review errored"). Also distinguished cancelled/skipped from failure in the finalize step (delete the comment vs. mark errored).
+   - **#8**: replaced `content/customers/**` with `content/case-studies/**` in `triage.md` and `docs-review-ci.md`. The original path never matched the actual repo layout.
+   - **#10**: 🐿️ → 🤖 across both workflows (the squirrel was inherited from `shipit/SKILL.md`'s mascot — fine in shipit, confusing in PR comments) and "minute or two" → "several minutes" (Opus initial reviews regularly take 3–5 min).
+   - **#11**: publish a Checks API check-run pinned to the PR's head SHA. `workflow_run`-triggered jobs don't surface in the PR's Status checks list by default; the Checks API is the standard escape hatch. Always created (even on skip paths) so contributors see "Claude Code Review · success/skipped/failure" alongside lint/build.
+4. **Phase B** (`fa79e61d`) — restructured `claude.yml` for model-driven `@claude` routing:
+   - **#5**: finalize step removes both `review:claude-working` and `review:claude-stale`. Successful re-entrant work clears the staleness flag.
+   - **#9**: replaced the hardcoded `format(...) || format(...) || ''` prompt chain with a single template that gives the model PR/issue context plus the triggering mention body (saved to `.claude-mention-body.txt` via env-var passthrough — no shell-injection risk) and lets it decide between update-review, initial review, ad-hoc work, or a clarification reply. The progress message went generic ("🤖 Working on it") because the model may not be reviewing.
+   - Mirrored the cancellation handling from `claude-code-review.yml` for defense-in-depth.
+5. **Dispute UX** — two `update-review.md` tweaks:
+   - **#12** (`f21e3d29`): disputed-and-held findings get an inline `🛡️ Disputed by <author> on YYYY-MM-DD, model held.` annotation under the finding text, not just a Review history line. Previously, a reviewer scrolling 🚨 Outstanding had no way to know the finding was contested.
+   - **#13** (`30b3909d`): classify the dispute before deciding. **Domain-knowledge assertions** ("I built this", "intentional pattern") from write-access authors → default to concede; the author has codebase context the model doesn't. **Verifiable claims** ("this is faster", "Y was added in v3.0") → still require evidence; authority doesn't make a benchmark true. **Reframings** of the model's reading → evaluate normally.
+
+### What got verified end-to-end
+
+| Test | Where | Outcome |
+|---|---|---|
+| Phase A integration | PR #41 (test4-phase-a) | All four #7/#8/#10/#11 outcomes confirmed; check-run visible in PR Checks UI; trivial-skip path leaves no orphan progress comment |
+| Phase B `@claude refresh` | PR #41 | Pinned review's "Last updated" timestamp moved 21:08 → 21:19; new "🤖 Done." message |
+| Phase C Case 1 (fix-response) | PR #41 | Verified by Cam's manual `@claude make the suggested fixes` — review history says "re-reviewed after fix push (2 new commits, 53a891d); both findings resolved" |
+| Phase C Case 2 (dispute, hold) | PR #42 | Model engaged both prongs and rebutted: "you cannot simultaneously invoke 'local-first' as the bound and 'remote vs. local' as the differentiator" |
+| Phase C Case 3 (force-push fallback) | PR #41 | After amending HEAD and force-pushing (53a891d → 8ed641e), `@claude refresh` succeeded; review history line: "history rewritten since last review; re-reviewed against HEAD (8ed641e63c)". Bonus: `review:claude-stale` cleared by Phase B #5. |
+| Phase C Case 4 (draft-PR note) | PR #41 | Pinned review now starts with `*Reviewing a draft; findings may change as you iterate.*` after flip-to-draft + `@claude refresh` |
+| Ad-hoc `@claude` explain (Phase B #9) | PR #41 | Model posted regular `gh pr comment` reply ("Great question! Here's what happens..."), didn't touch pinned review |
+| Ad-hoc `@claude` fix (Phase B #9) | PR #41 | Model pushed commit `327611ac` with the requested sentence + bonus internal link; posted confirmation comment |
+| #12 dispute annotation | PR #42 (second dispute round) | Pinned review now contains `🛡️ **Disputed by CamSoper on 2026-04-27 (second time), model held.** ...` directly under the finding |
+| #13 author authority | PR #42 (second dispute, with maintainer claim) | Model correctly *classified* — recognized maintainer authority, distinguished design-intent (would defer) from verifiable technical claims, held only on the verifiable parts (the Terraform CLI / OpenTofu local-execution counterexample wasn't addressed across either dispute round). The author-authority weighting works as designed without becoming auto-concede. |
+| Prose-check FP guardrail | PR #43 | TRIAGE_PROSE flagged `embeded` (typo), did NOT flag `pulumi` (CLI in backticks) |
+| Prose-check idempotency | PR #43 | Flipped draft→ready→draft→ready; result: still exactly 1 TRIAGE_PROSE comment (cleanup-then-repost works) |
+
+### Things worth flagging for future-Cam
+
+- **The `workflow_run` conclusion gate (#7) was the real fix for the orphan progress comment.** I initially framed #7 as "trivial-skip leaves an orphan" but the actual scenario observed on PR #40 was a *cancelled* job from the skipped-triage `workflow_run` racing the ready-event run. Two-line YAML change (`conclusion == 'success'` in the job's `if:`) eliminates the whole race. The cancellation distinction in finalize is now defense-in-depth, not load-bearing.
+- **Author-authority weighting threads `pr-review/references/trust-and-scrutiny.md` into `update-review.md` only for the dispute path.** The broader trust model is more general (used to gate fact-check thresholds, contributor-type routing, etc. in the local pr-review skill). If we want consistent author-deference across Claude tooling, threading it elsewhere is a follow-up — not in scope for this PR.
+- **The model-driven `@claude` routing (#9) actually worked under the OLD prompt for ad-hoc tasks** because the model is agentic and `update-review.md` doesn't strictly forbid Edit/git push. Cam's `@claude make the suggested fixes from the review` on PR #41 (predates Phase B) pushed `53a891d`. Phase B makes the routing *explicit* and adds a guard against accidentally invoking `update-review.md` on non-review intents — a defensive correctness fix rather than a new capability.
+- **The dispute test on PR #42 was unexpectedly sharp.** The model produced a logically clean rebuttal ("you cannot simultaneously invoke 'local-first' as the bound and 'remote vs. local' as the differentiator") and held across two dispute rounds, even when the second one led with maintainer authority. Worth reading the PR #42 pinned comment as an example of how the system actually behaves under adversarial pressure from the author.
+- **PR #41 was the workhorse.** Cases 1, 3, 4, both ad-hoc routing tests, and the Phase A integration all ran on it. PR #42 was dispute-only. PR #43 was prose-check only. All three closed at end of session.
+
+### Decisions made this session
+
+- **Skip drafts in triage**, but keep `opened` in the trigger list with an `if: !draft` guard. Cam's instinct was to drop `opened` entirely; that would have missed PRs opened directly as non-draft (which fire `opened` with `draft: false` but no `ready_for_review`).
+- **Squirrel stays in shipit**, robot in the workflows. The 🐿️ is shipit's mascot and was inherited; in PR comments it reads as random because contributors don't know the shipit context.
+- **Trivial label still skips the full review**, but triage now does a focused prose check. Drop-the-short-circuit was the alternative; rejected because typo PRs don't warrant Opus budget. The prose check + advisory comment is the middle ground.
+- **`@claude` on a PR routes through the model**, not through workflow-side classification. Option B (pre-classify intent in shell) was discussed and rejected — pushing the decision to the model is simpler and matches how `@claude` already works on issues.
+- **Author authority weights disputes but doesn't auto-concede** — two-axis classification (domain-knowledge vs verifiable) keeps review pushback meaningful while honoring maintainer context. Auto-concede on assertion would have given any author a "delete this finding" button.
+
+### Updated deferred items (after Session 4)
+
+Almost everything from the Session 3 list is closed. Remaining:
+
+- **Phase D — branch commit history cleanup**: ~32 commits on the branch, mostly fix-on-fix. Recommend squash-merge at upstream PR-flip time; alternative is interactive rebase to ~6 logical commits. Not actionable until you flip `pulumi/docs#18680` ready.
+- **Threading the broader trust-and-scrutiny model into other Claude paths** (beyond just `update-review.md`'s dispute classification). Future enhancement; not scoped here.
+
+Lighter items not exercised but coded:
+
+- **Cancellation handling in `claude.yml` finalize**: defense-in-depth, mirrors `claude-code-review.yml`. Not specifically tested — the conclusion gate (#7) eliminates the main scenario that would trigger it.
+
+### Session-4 commit list (through this commit)
+
+- `6f71a3c9` Triage: skip drafts until marked ready for review
+- `5e1c359e` Triage: add prose-check on trivial PRs (advisory comment, label still applies)
+- `5497d622` Phase A: progress lifecycle, check-run, customers→case-studies, emoji
+- `fa79e61d` Phase B: model-driven @claude routing, claude-stale removal, cancellation handling
+- `f21e3d29` update-review: annotate disputed-and-held findings inline (#12)
+- `30b3909d` update-review: weight author authority in dispute resolution (#13)
+- (this commit) Append Session 4 notes
+
+Each is also on `cam/master` as a cherry-pick, atop the FORK-ONLY claude.yml token swap. The fork-only swap remains do-not-cherry-pick-upstream.
+
+### Fork state at end of Session 4
+
+- **All test PRs closed** (#31–43), branches deleted.
+- **Fork master:** Session 4 commits cherry-picked + the FORK-ONLY token swap commit on top.
+- **Branch commit count:** ~32 (was 25+ at end of Session 3). Squash-merge or rebase before upstream merge.
+- No pending workflows, no orphan labels.
