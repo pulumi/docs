@@ -18,7 +18,7 @@ social:
         This LinkedIn post is throwaway content for CI verification. Nothing
         here will be posted to any real account.
     bluesky: >
-        Testing the social review gate. Throwaway copy for CI verification of
+        Testing the social review gate. Throwaway copy for CI verification — edited to trigger RUN of
         the new gating workflow.
 ---
 
