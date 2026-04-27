@@ -22,13 +22,13 @@ social:
     linkedin: |
         A latency spike shows up in Datadog. You open four tabs: Honeycomb for traces, Linear to file a ticket, PagerDuty to check on-call, Pulumi to see what changed. That's most of the job before you've even diagnosed anything.
 
-        We built the Integration Catalog so Neo can reach those systems from a single task. Six integrations at launch, admin-configured once.
+        We kept asking whether an agent could handle that whole sequence as a single task. The tricky part wasn't the API connections — it was figuring out the access model for a whole engineering team.
 
-        Here's what the workflow looks like and what's coming in the next batch.
+        Here's what we built and what the first batch of integrations looks like.
     bluesky: |
-        When a latency spike shows up in Datadog, Neo can now check Honeycomb for traces and file a Linear ticket with the findings. No tab-hopping, no copy-pasting context between tools.
+        A latency spike shows up in Datadog. Traces in Honeycomb, tickets in Linear, on-call in PagerDuty — four tabs before you can even diagnose anything.
 
-        Here's how the Integration Catalog works and what six tools are connected.
+        We spent a long time on whether one task could cover all of those. The hard part wasn't the APIs. Here's what we figured out.
 ---
 
 Neo already helps your team manage Pulumi infrastructure, but no infrastructure team works inside Pulumi alone. Pages come from PagerDuty, telemetry from Datadog or Honeycomb, follow-ups from Linear or Jira. Most of the job is shuttling context between those tools.
