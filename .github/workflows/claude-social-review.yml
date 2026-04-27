@@ -103,8 +103,8 @@ jobs:
           # branches that do have runs. Query the workflow's runs unfiltered and
           # filter by head_branch in jq client-side, which always works.
           PRIOR=$(gh api \
-            "repos/$REPO/actions/workflows/claude-social-review.yml/runs?event=pull_request&per_page=30" \
-            --jq "[.workflow_runs[] | select(.head_branch == \"$HEAD_REF\" and .conclusion == \"success\" and .id != $RUN_ID)] | .[0]")
+            "repos/$REPO/actions/workflows/claude-social-review.yml/runs?per_page=30" \
+            --jq "[.workflow_runs[] | select(.head_branch == \"$HEAD_REF\" and .event == \"pull_request\" and .conclusion == \"success\" and .id != $RUN_ID)] | .[0]")
           PRIOR_SHA=$(echo "$PRIOR" | jq -r '.head_sha // ""')
           PRIOR_RUN_ID=$(echo "$PRIOR" | jq -r '.id // ""')
 
