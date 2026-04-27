@@ -74,7 +74,7 @@ Neo opens the Linear issue with the summary, the Pulumi update URL, and a pointe
 
 This is the first cut. Here's what we're working on:
 
-- **CLI integrations** — give Neo access to the command-line tools your team already uses.
+- **CLI integrations** — give Neo access to command-line tools like `kubectl`, `aws`, `gcloud`, and `az`.
 - **OAuth integrations** — for providers whose hosted MCP servers only speak OAuth (Notion, Sentry, Vercel), and for orgs that want per-user credentials.
 - **Per-integration access controls** — team-scoped policies so admins can say "only the platform team can let Neo touch PagerDuty."
 
