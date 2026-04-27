@@ -2,7 +2,7 @@
 title: Settings
 title_tag: Neo Settings
 h1: Neo Settings
-meta_desc: Configure Neo with Custom Instructions, Repository Instructions, Slash Commands, integrations, access controls, and task modes.
+meta_desc: Configure Neo with Custom Instructions, Repository Instructions, Slash Commands, Integrations, access controls, and task modes.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:

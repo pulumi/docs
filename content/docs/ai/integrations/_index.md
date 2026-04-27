@@ -12,7 +12,7 @@ menu:
         identifier: ai-integrations
 ---
 
-Neo integrations bring context from your existing tools into infrastructure work. Neo can read directly from the services your team already uses — issue trackers, observability platforms, incident response tools, wikis, and databases — and apply that context to infrastructure tasks.
+Neo integrations bring context from your existing tools into infrastructure work. Neo reads directly from issue trackers, observability platforms, incident response tools, wikis, and databases, then applies that context to infrastructure tasks.
 
 Integrations are configured at the organization level by an administrator. Once enabled, they are available to all tasks in the organization.
 
@@ -30,7 +30,7 @@ To enable an integration, navigate to **Neo Settings**, select **Integrations**,
 
 Each integration connects Neo to the service's [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server, which means Neo can use the full set of tools that service exposes through MCP.
 
-### Credential storage
+## Credential storage
 
 Integration credentials are encrypted at rest in the Pulumi Service using a per-organization encryption key. When a task needs to connect to an integration, the service decrypts the credentials at task time, constructs the appropriate authentication headers, and connects to the service on Neo's behalf. Credentials are never exposed to the language model and are never embedded in task state.
 
@@ -38,7 +38,7 @@ Integration credentials are encrypted at rest in the Pulumi Service using a per-
 
 To remove an integration from your organization, navigate to **Neo Settings**, select **Integrations**, find the integration, and select **Remove**.
 
-Disabling an integration deletes its stored credentials and immediately prevents any new tasks from using it. Tasks that are already running will lose access to the integration on their next tool call.
+Disabling an integration deletes its stored credentials and immediately prevents any new tasks from using it. Tasks that are already running will lose access to the integration the next time Neo tries to use it.
 
 ## How integrations work at task time
 
@@ -48,13 +48,13 @@ The integration connection is transparent. Neo decides when to use an integratio
 
 ## Per-task control
 
-By default, every task inherits all integrations the organization has enabled. If you want to narrow Neo's focus for a specific task — for example, running a deployment review without giving Neo access to your issue tracker — you can toggle individual integrations off from the task composer before starting the conversation. The toggles only affect the current task; the org-level configuration is unchanged.
+By default, every task inherits all integrations the organization has enabled. If you want to narrow Neo's focus for a specific task (for example, running a deployment review without giving Neo access to your issue tracker), you can toggle individual integrations off from the task composer before starting the conversation. The toggles only affect the current task; the org-level configuration is unchanged.
 
 ## If an integration fails
 
 Integrations are resolved independently at the start of each message. If credentials for one integration can't be retrieved, or its MCP server is unreachable, Neo logs a warning, skips that integration, and continues the task with the remaining ones. A single broken integration won't stop a task from running.
 
-If Neo tries to use an integration that isn't available — for example, because the credentials were removed or expired — it will surface the failure in the conversation and continue with its other tools.
+If Neo tries to use an integration that isn't available (for example, because the credentials were removed or expired), it will surface the failure in the conversation and continue with its other tools.
 
 ## Configuration
 
