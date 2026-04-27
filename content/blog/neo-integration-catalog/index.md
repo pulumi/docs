@@ -31,7 +31,7 @@ social:
         We spent a long time on whether one task could cover all of those. The hard part wasn't the APIs. Here's what we figured out.
 ---
 
-Infrastructure work doesn't happen in one tool. Something pages. The signal sits in a metrics dashboard. The follow-up lives in a ticket, and the runbook is in a doc somewhere. Jumping between them is most of the job: copying context, pasting graphs into chat, re-typing the same summary for the ticket.
+Neo already helps your team manage Pulumi infrastructure, but no infrastructure team works inside Pulumi alone. Pages come from PagerDuty, telemetry from Datadog or Honeycomb, follow-ups from Linear or Jira. Most of the job is shuttling context between those tools.
 
 Today we're launching the **Integration Catalog** for [Pulumi Neo](/blog/pulumi-neo/): one place to connect Neo to the tools your team already uses, so your agent has the context it needs to help.
 
@@ -48,7 +48,7 @@ Neo ships with six integrations at launch, each exposed to the agent through the
 - **PagerDuty** — incidents, on-call schedules, escalations
 - **Supabase** — database management and edge functions
 
-Each integration is a vendor-hosted MCP server. Neo calls the integration through a structured tool protocol and only sees the tools the vendor chooses to expose.
+Each integration is a remote MCP server. Neo calls the integration through a structured tool protocol and only sees the tools the vendor chooses to expose.
 
 ## Neo in action: one task, many systems
 
@@ -68,7 +68,7 @@ Neo opens the Linear issue with the summary, the Pulumi update URL, and a pointe
 
 **Your team gets the capability immediately.** No per-user setup, no extra OAuth flow for each developer, no asking platform to share a token in 1Password.
 
-**Neo uses integrations transparently.** When a task runs, the service decrypts the configured credentials and hands them to the agent runtime as MCP server auth. If an integration is misconfigured or its credentials have been rotated, Neo skips that integration and continues with the rest. The session doesn't fail.
+**Credentials stay encrypted at rest.** When a task runs, the service decrypts the configured credentials just long enough to hand them to the agent runtime as MCP server auth.
 
 ## What's coming next: CLI, OAuth, and access controls
 
@@ -80,7 +80,7 @@ This is the first cut. Here's what we're working on:
 
 ## Try it out
 
-The Integration Catalog is available now for Neo-enabled organizations. Open your org's Neo settings, head to the Integrations tab, and connect the first tool you reach for when something breaks.
+The Integration Catalog is available now for Neo-enabled organizations. Open your org's Neo settings, head to the [Integrations tab](/docs/ai/integrations/), and connect the first tool you reach for when something breaks.
 
 As always, we'd love to hear what's missing. File a feature request in [pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose) with the integration you want next. We're prioritizing based on what teams actually use.
 
