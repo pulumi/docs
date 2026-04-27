@@ -100,6 +100,52 @@ mycompany/staging                          4 hours ago              97
 dev                                       n/a                      n/a
 ```
 
+## Rename a stack
+
+To rename an existing stack, run `pulumi stack rename <new-name>`. The new name may be a simple stack name or a fully qualified name in the form `<org>/<project>/<stack>`:
+
+```bash
+$ pulumi stack rename production
+$ pulumi stack rename myorg/myproject/production
+```
+
+Renaming a stack changes the value returned by `pulumi.getStack()` inside your program. If that value is used to name any resources, the next `pulumi up` will attempt to replace those resources. Review the proposed changes carefully before proceeding, and consider whether a rename is the right operation or whether you should create a new stack instead.
+
+### Cross-project renames
+
+When the new stack name includes a different project name (for example, renaming from `myorg/old-project/prod` to `myorg/new-project/prod`), two additional manual steps are required after running `pulumi stack rename`.
+
+**Update the project name in `Pulumi.yaml`.** The `name` field in `Pulumi.yaml` must match the project component of the fully qualified stack name. Edit the file to reflect the new project name before running `pulumi up`:
+
+```yaml
+name: new-project  # was: old-project
+runtime: nodejs
+```
+
+**Update project-namespaced configuration keys.** Pulumi [configuration keys](/docs/concepts/config/) are scoped by project name. Keys set without an explicit namespace are stored with the project name as the prefix, so a key named `database` in a project called `old-project` is recorded as `old-project:database` inside `Pulumi.<stack>.yaml`. After a cross-project rename, those keys still carry the old project prefix and will not be visible to the program running under the new project name.
+
+{{% notes type="warning" %}}
+If you do not update project-namespaced configuration keys after a cross-project rename, the program will silently see those configuration values as unset and may fail at runtime or use unexpected defaults.
+{{% /notes %}}
+
+To update the keys, open `Pulumi.<stack>.yaml` in a text editor and rename each key that begins with the old project name:
+
+```yaml
+# Before
+config:
+  old-project:database: mydb
+  old-project:region: us-west-2
+  aws:region: us-west-2
+
+# After
+config:
+  new-project:database: mydb
+  new-project:region: us-west-2
+  aws:region: us-west-2
+```
+
+Keys that include an explicit namespace other than the project name (such as `aws:region`) are unaffected and do not need to change. Alternatively, you can recreate each value using `pulumi config set` (or `pulumi config set --secret` for sensitive values) after updating `Pulumi.yaml`.
+
 ## Generate an update plan
 
 {{% notes type="warning" %}}
