@@ -111,6 +111,9 @@ logos:
   - filename: bun.svg
     name: Bun
     tags: [bun, javascript, runtime]
+  - filename: datadog.svg
+    name: Datadog
+    tags: [datadog, observability, monitoring, metrics, logs]
   - filename: docker.svg
     name: Docker
     tags: [docker, containers]
@@ -129,9 +132,15 @@ logos:
   - filename: kubernetes.svg
     name: Kubernetes
     tags: [kubernetes, k8s, containers]
+  - filename: linear.svg
+    name: Linear
+    tags: [linear, issue-tracking, project-management]
   - filename: microsoft.svg
     name: Microsoft
     tags: [microsoft, windows]
+  - filename: neo.svg
+    name: Pulumi Neo
+    tags: [neo, pulumi-neo, ai, agent]
   - filename: python.svg
     name: Python
     tags: [python, language]
