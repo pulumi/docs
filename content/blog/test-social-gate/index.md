@@ -10,8 +10,8 @@ tags:
     - test
 social:
     twitter: >
-        Testing the social review gate. This copy is throwaway and will not be
-        published anywhere. Reviewing this is purely a CI exercise.
+        We just shipped a smarter social review gate — one that skips re-running
+        when nothing actually changed. Fewer wasted CI turns, less noise.
     linkedin: >
         Testing the social review gate.
 
