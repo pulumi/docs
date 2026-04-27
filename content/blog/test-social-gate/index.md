@@ -29,3 +29,5 @@ This blog post exists only to exercise the social media review gate workflow on 
 The gate's job is to skip re-running the social review when a PR push doesn't actually change the social copy in the frontmatter, killing the non-deterministic flapping and the wasted Claude turns. This file is the test fixture.
 
 Additional paragraph appended after the initial review. This edits only the post body — the `social:` frontmatter block is untouched. The gate should classify this push as SKIP and avoid re-running the LLM review.
+
+Yet another body-only paragraph. With the fixed gate, this push should now find the prior successful run as a baseline, see that the `social:` block is unchanged, and skip the review.
