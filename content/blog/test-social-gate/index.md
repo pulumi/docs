@@ -31,3 +31,5 @@ The gate's job is to skip re-running the social review when a PR push doesn't ac
 Additional paragraph appended after the initial review. This edits only the post body — the `social:` frontmatter block is untouched. The gate should classify this push as SKIP and avoid re-running the LLM review.
 
 Yet another body-only paragraph. With the fixed gate, this push should now find the prior successful run as a baseline, see that the `social:` block is unchanged, and skip the review.
+
+Third body-only edit — exercising the gate after the API-filter fix.
