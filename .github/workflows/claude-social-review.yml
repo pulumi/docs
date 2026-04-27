@@ -98,17 +98,15 @@ jobs:
           # The PASS/FAIL verdict lives in the PR comment, not the run conclusion.
           # Either way, if the social copy hasn't changed, the prior verdict still
           # applies — re-running risks flapping (PASS<->FAIL on identical copy).
-          PRIOR=$(gh run list \
-            --repo "$REPO" \
-            --workflow=claude-social-review.yml \
-            --branch "$HEAD_REF" \
-            --status success \
-            --event pull_request \
-            --limit 10 \
-            --json headSha,databaseId \
-            --jq "[.[] | select(.databaseId != $RUN_ID)] | .[0]")
-          PRIOR_SHA=$(echo "$PRIOR" | jq -r '.headSha // ""')
-          PRIOR_RUN_ID=$(echo "$PRIOR" | jq -r '.databaseId // ""')
+          # `gh run list --branch` (and the API's ?branch= query) is unreliable
+          # for slash-containing branch names — silently returns empty for some
+          # branches that do have runs. Query the workflow's runs unfiltered and
+          # filter by head_branch in jq client-side, which always works.
+          PRIOR=$(gh api \
+            "repos/$REPO/actions/workflows/claude-social-review.yml/runs?event=pull_request&per_page=30" \
+            --jq "[.workflow_runs[] | select(.head_branch == \"$HEAD_REF\" and .conclusion == \"success\" and .id != $RUN_ID)] | .[0]")
+          PRIOR_SHA=$(echo "$PRIOR" | jq -r '.head_sha // ""')
+          PRIOR_RUN_ID=$(echo "$PRIOR" | jq -r '.id // ""')
 
           if [ -z "$PRIOR_SHA" ]; then
             echo "No prior successful run on this branch — running review."
