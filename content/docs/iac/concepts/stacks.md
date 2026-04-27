@@ -109,20 +109,20 @@ $ pulumi stack rename production
 $ pulumi stack rename myorg/myproject/production
 ```
 
-Renaming a stack changes the value returned by `pulumi.getStack()` inside your program. If that value is used to name any resources, the next `pulumi up` will attempt to replace those resources. Review the proposed changes carefully before proceeding, and consider whether a rename is the right operation or whether you should create a new stack instead.
+Renaming a stack changes the value of the stack name returned to your program (for example, `pulumi.getStack()` in TypeScript/JavaScript or `pulumi.get_stack()` in Python). If that value is used to name any resources, the next `pulumi up` will attempt to replace those resources. Review the proposed changes carefully before proceeding, and consider whether a rename is the right operation or whether you should create a new stack instead.
 
 ### Cross-project renames
 
 When the new stack name includes a different project name (for example, renaming from `myorg/old-project/prod` to `myorg/new-project/prod`), two additional manual steps are required after running `pulumi stack rename`.
 
-**Update the project name in `Pulumi.yaml`.** The `name` field in `Pulumi.yaml` must match the project component of the fully qualified stack name. Edit the file to reflect the new project name before running `pulumi up`:
+1. **Update the project name in `Pulumi.yaml`.** The `name` field in `Pulumi.yaml` must match the project component of the fully qualified stack name. Edit the file to reflect the new project name before running `pulumi up`:
 
-```yaml
-name: new-project  # was: old-project
-runtime: nodejs
-```
+    ```yaml
+    name: new-project  # was: old-project
+    runtime: nodejs
+    ```
 
-**Update project-namespaced configuration keys.** Pulumi [configuration keys](/docs/concepts/config/) are scoped by project name. Keys set without an explicit namespace are stored with the project name as the prefix, so a key named `database` in a project called `old-project` is recorded as `old-project:database` inside `Pulumi.<stack>.yaml`. After a cross-project rename, those keys still carry the old project prefix and will not be visible to the program running under the new project name.
+1. **Update project-namespaced configuration keys.** Pulumi [configuration keys](/docs/concepts/config/) are scoped by project name. Keys set without an explicit namespace are stored with the project name as the prefix, so a key named `database` in a project called `old-project` is recorded as `old-project:database` inside `Pulumi.<stack>.yaml`. After a cross-project rename, those keys still carry the old project prefix and will not be visible to the program running under the new project name.
 
 {{% notes type="warning" %}}
 If you do not update project-namespaced configuration keys after a cross-project rename, the program will silently see those configuration values as unset and may fail at runtime or use unexpected defaults.
