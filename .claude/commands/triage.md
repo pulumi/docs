@@ -1,11 +1,11 @@
 ---
 user-invocable: false
-description: Triage prompt for incoming PRs. Classifies the PR and applies labels. Does NOT post comments.
+description: Triage prompt for incoming PRs. Classifies the PR, applies labels, and posts a one-shot prose-check comment when a trivial PR has spelling/grammar issues.
 ---
 
 # PR Triage
 
-You are triaging a `pulumi/docs` pull request. Your only outputs are **labels** — you do not post review comments, do not run fact-check, and do not read working-tree state. The full review runs later, on the `ready_for_review` transition.
+You are triaging a `pulumi/docs` pull request. Your outputs are **labels** and, only when a PR is classified `review:trivial` and contains prose issues, a single advisory comment listing those issues. You do not run fact-check and do not read working-tree state. The full review runs later, on the `ready_for_review` transition.
 
 This is a fast, cheap pass (Sonnet). Misclassifications cost a downstream review cycle, so be deliberate; unclear cases default to broader scrutiny, not narrower.
 
@@ -62,6 +62,18 @@ Apply `review:trivial` only when **all** of these hold:
 
 `review:trivial` short-circuits the full review, so be conservative — when in doubt, do not apply it. If you are 80%+ confident, apply it.
 
+#### Prose check (only when trivial)
+
+When you classify a PR as `trivial: true`, also examine the prose changes for clear spelling and grammar errors. Populate `prose_concerns` with any findings; otherwise `[]`. When `trivial: false`, set `prose_concerns: []` — the full review handles non-trivial PRs.
+
+**Flag**: misspelled common English words, subject-verb disagreement, missing articles in unambiguous cases, punctuation that changes meaning (for example, missing comma in a restrictive clause), wrong-word substitutions ("their" vs "there", "its" vs "it's").
+
+**Do NOT flag**: technical terms (Pulumi, ESC, IAM), proper nouns, CLI commands or flags (`--no-fail-on-create`), code identifiers, intentional style choices, regional spelling variants (US vs UK English), Oxford-comma preference.
+
+Format each finding as: `path/to/file.md:LINE — issue (suggested fix)`. One concern per array element. Be specific so the author can act without re-reading the diff.
+
+The label still applies regardless of what's in `prose_concerns`. Concerns are advisory; they do not block merge or trigger a full review.
+
 ### 3. Fact-check signal (`fact-check:needed`)
 
 Apply `fact-check:needed` when the PR touches:
@@ -111,6 +123,7 @@ The following labels are managed by other steps in the pipeline. Do not apply or
    gh pr edit "$PR_NUMBER" --add-label "<comma-separated ADD>" --remove-label "<comma-separated REMOVE>"
    ```
    Use only `--add-label` when ADD is non-empty and REMOVE is empty. Use only `--remove-label` when REMOVE is non-empty and ADD is empty. Use both flags when both are non-empty. A true no-op (ADD and REMOVE both empty) skips the command entirely.
-6. Print a one-line summary to stdout for the workflow log: `triage: pr=<N> domain=<comma-separated TARGET_DOMAINS> trivial=<bool> fact-check=<bool> agent-authored=<bool> added=<comma-separated ADD> removed=<comma-separated REMOVE>`.
+6. Print a one-line summary to stdout for the workflow log: `triage: pr=<N> domain=<comma-separated TARGET_DOMAINS> trivial=<bool> fact-check=<bool> agent-authored=<bool> prose-concerns=<count> added=<comma-separated ADD> removed=<comma-separated REMOVE>`.
+7. If `prose_concerns` is non-empty AND the PR is trivial, the workflow posts a one-shot advisory comment (marker `<!-- TRIAGE_PROSE -->`) listing the concerns. The trivial label still applies — concerns are advisory, not blocking. The workflow handles posting; you only emit the JSON.
 
-**Do not** post a comment. **Do not** run `gh pr comment`, `gh pr review`, or any review skill. **Do not** read working-tree files. Triage is labels-and-summary only.
+**Do not** run `gh pr comment` or `gh pr review` directly. **Do not** read working-tree files. Triage's only side effects are label edits and (conditionally) the workflow-managed prose-check comment.

@@ -162,3 +162,5 @@ The `<!-- CLAUDE_REVIEW N/M -->` comments are managed by the pipeline. Don't del
 ### Trivial PRs short-circuit
 
 If triage labels the PR `review:trivial` (≤5 lines, prose-only, single file, no frontmatter or link changes), the Claude review skips entirely. Linters still run. This is intentional — typos and one-liners don't need a model in the loop.
+
+Triage also runs a quick spelling/grammar pass on the diff for trivial PRs. If it spots anything, it posts a single advisory comment listing the concerns; the trivial label still applies and the full review still skips. This is a guard against rubber-stamping — a typo "fix" that introduces a typo gets flagged before merge.

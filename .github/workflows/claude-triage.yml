@@ -116,7 +116,7 @@ jobs:
               max_tokens: 1024,
               messages: [{
                 role: "user",
-                content: ("You are triaging a pull request in CI. Read the classification rules below and output exactly one JSON object on a single line -- no prose, no code fences, no explanation. The shell will compute ADD and REMOVE label deltas from your output, so you do NOT need to think about current labels.\n\nThe JSON shape is exactly:\n{\"target_domains\":[\"review:docs\"|\"review:blog\"|\"review:infra\"|\"review:programs\",...],\"trivial\":true|false,\"fact_check_needed\":true|false,\"agent_authored\":true|false,\"reasoning\":\"one short sentence\"}\n\ntarget_domains is the set of domain labels that apply per the path-precedence table. It may be empty (e.g., for a PR that only touches layouts/). Do NOT include review:mixed -- the shell adds it when target_domains has more than one element.\n\nClassification rules:\n\n" + $rules + "\n\n---\n\nPR state:\n\n" + $pr_data + "\n\n---\n\nDiff (truncated to 100000 bytes):\n\n" + $diff)
+                content: ("You are triaging a pull request in CI. Read the classification rules below and output exactly one JSON object on a single line -- no prose, no code fences, no explanation. The shell will compute ADD and REMOVE label deltas from your output, so you do NOT need to think about current labels.\n\nThe JSON shape is exactly:\n{\"target_domains\":[\"review:docs\"|\"review:blog\"|\"review:infra\"|\"review:programs\",...],\"trivial\":true|false,\"fact_check_needed\":true|false,\"agent_authored\":true|false,\"prose_concerns\":[\"path/to/file.md:LINE -- issue (suggested fix)\",...],\"reasoning\":\"one short sentence\"}\n\ntarget_domains is the set of domain labels that apply per the path-precedence table. It may be empty (e.g., for a PR that only touches layouts/). Do NOT include review:mixed -- the shell adds it when target_domains has more than one element.\n\nprose_concerns is an array of clear spelling/grammar issues found in the diff. Populate ONLY when trivial is true; set to [] when trivial is false. See the Prose check subsection in the rules for what to flag and what to skip. Each entry is a single string formatted as path:line -- issue (suggested fix).\n\nClassification rules:\n\n" + $rules + "\n\n---\n\nPR state:\n\n" + $pr_data + "\n\n---\n\nDiff (truncated to 100000 bytes):\n\n" + $diff)
               }]
             }')
 
@@ -151,6 +151,9 @@ jobs:
           FACT_CHECK=$(echo "$CLASS" | jq -r '.fact_check_needed // false')
           AGENT_AUTHORED=$(echo "$CLASS" | jq -r '.agent_authored // false')
           REASONING=$(echo "$CLASS" | jq -r '.reasoning // "(none)"')
+          # prose_concerns is a string array; one finding per array element.
+          # Newline-joined for shell consumption. Empty when not trivial.
+          PROSE_CONCERNS=$(echo "$CLASS" | jq -r '.prose_concerns // [] | .[]')
 
           # 6. Build TARGET label set per triage.md §Procedure.
           declare -A TARGET
@@ -201,6 +204,31 @@ jobs:
             gh pr edit "$PR" --repo "$REPO" "${ARGS[@]}" || true
           fi
 
+          # 9a. Prose-check advisory comment.
+          # Always delete any prior TRIAGE_PROSE comment first so re-triage
+          # cleans up cleanly (e.g., a re-classification that demotes the PR
+          # from trivial to non-trivial must drop the stale prose comment).
+          # Then post fresh only when trivial AND concerns are non-empty.
+          gh api "repos/$REPO/issues/$PR/comments" \
+              --jq '.[] | select(.body | startswith("<!-- TRIAGE_PROSE -->")) | .id' \
+              | while read -r cid; do
+                  [[ -n "$cid" ]] && gh api -X DELETE "repos/$REPO/issues/comments/$cid" >/dev/null 2>&1 || true
+                done
+
+          if [[ "$TRIVIAL" == "true" && -n "$PROSE_CONCERNS" ]]; then
+              BULLETS=$(echo "$PROSE_CONCERNS" | sed 's/^/- /')
+              BODY=$(cat <<EOF
+          <!-- TRIAGE_PROSE -->
+          🔍 **Triage prose check** — possible issues in the diff. Full review is skipped (\`review:trivial\`); please double-check before merging.
+
+          $BULLETS
+
+          _Best-effort spelling/grammar flags from the triage pass. Reject false positives at your discretion._
+          EOF
+          )
+              gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
+          fi
+
           # 10. Summary line for the workflow log.
           DOMAINS_CSV=""
           for d in "${!TARGET[@]}"; do
@@ -209,5 +237,6 @@ jobs:
           done
           ADDED_CSV="${ADD_LIST[*]:-}"; ADDED_CSV="${ADDED_CSV// /,}"
           REMOVED_CSV="${REMOVE_LIST[*]:-}"; REMOVED_CSV="${REMOVED_CSV// /,}"
-          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL fact-check=$FACT_CHECK agent-authored=$AGENT_AUTHORED added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
+          PROSE_COUNT=$(echo "$PROSE_CONCERNS" | grep -c . || true)
+          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL fact-check=$FACT_CHECK agent-authored=$AGENT_AUTHORED prose-concerns=$PROSE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
           echo "reasoning: $REASONING"
