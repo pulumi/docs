@@ -3,7 +3,6 @@ title: "SaltStack Alternative | Pulumi"
 meta_desc: Move from SaltStack to cloud-native IaC. Declarative infrastructure in Python, TypeScript, Go, or C# with state management and drift detection.
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-saltstack
 
 heading: "SaltStack Alternative"
 subheading: |

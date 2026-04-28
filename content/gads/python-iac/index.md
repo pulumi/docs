@@ -3,7 +3,6 @@ title: "Infrastructure as Code in Python | Pulumi"
 meta_desc: "Infrastructure as Code in Python. Define AWS, Azure, GCP resources with type checking, testing, and full IDE support. 170+ providers. Free tier."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-python-iac
 
 heading: "Infrastructure as Code in Python"
 subheading: |

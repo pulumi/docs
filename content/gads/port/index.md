@@ -3,7 +3,6 @@ title: "Port Alternative | Pulumi"
 meta_desc: "Self-service infrastructure with provisioning, policies, and secrets built in. Not just a catalog. IaC engine plus developer portal."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-port
 hide_platform_details: true
 
 heading: "Port Alternative"

@@ -3,7 +3,6 @@ title: "Backstage Alternative | Pulumi"
 meta_desc: Developer portal with built-in IaC provisioning. Templates, catalogs, policies, and secrets in one platform. No assembly required.
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-backstage
 
 heading: "Backstage Alternative"
 subheading: |

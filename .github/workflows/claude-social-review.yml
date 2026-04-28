@@ -38,7 +38,8 @@ jobs:
       (github.event_name == 'pull_request' &&
        github.event.pull_request.head.repo.full_name == github.repository &&
        github.event.pull_request.user.login != 'pulumi-bot' &&
-       github.event.pull_request.user.login != 'dependabot[bot]')
+       github.event.pull_request.user.login != 'dependabot[bot]' &&
+       !(github.event.action == 'synchronize' && github.actor == 'claude[bot]'))
 
     runs-on: ubuntu-latest
     environment: production
@@ -46,6 +47,7 @@ jobs:
       contents: read
       pull-requests: write
       id-token: write
+      actions: read
 
     steps:
       - name: Resolve PR info
@@ -77,11 +79,74 @@ jobs:
           ref: ${{ steps.pr-info.outputs.head_ref }}
           fetch-depth: 0
 
+      - uses: astral-sh/setup-uv@v7
+
+      - name: Skip if social copy unchanged since prior review
+        id: gate
+        if: github.event_name == 'pull_request' && github.event.action == 'synchronize'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HEAD_REF: ${{ steps.pr-info.outputs.head_ref }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_NUMBER: ${{ steps.pr-info.outputs.number }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+          SERVER_URL: ${{ github.server_url }}
+        run: |
+          set -e
+          # "Successful" prior run = "the workflow ran without crashing on this branch."
+          # The PASS/FAIL verdict lives in the PR comment, not the run conclusion.
+          # Either way, if the social copy hasn't changed, the prior verdict still
+          # applies — re-running risks flapping (PASS<->FAIL on identical copy).
+          # `gh run list --branch` (and the API's ?branch= query) is unreliable
+          # for slash-containing branch names — silently returns empty for some
+          # branches that do have runs. Query the workflow's runs unfiltered and
+          # filter by head_branch in jq client-side, which always works.
+          PRIOR=$(gh api \
+            "repos/$REPO/actions/workflows/claude-social-review.yml/runs?per_page=30" \
+            --jq "[.workflow_runs[] | select(.head_branch == \"$HEAD_REF\" and .event == \"pull_request\" and .conclusion == \"success\" and .id != $RUN_ID)] | .[0]")
+          PRIOR_SHA=$(echo "$PRIOR" | jq -r '.head_sha // ""')
+          PRIOR_RUN_ID=$(echo "$PRIOR" | jq -r '.id // ""')
+
+          if [ -z "$PRIOR_SHA" ]; then
+            echo "No prior successful run on this branch — running review."
+            echo "should_skip=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Force-push / rebase resilience: if the prior SHA is unreachable in
+          # the local clone, try to fetch it; if still missing, fall through to
+          # running the review (degrades to current behaviour, never worse).
+          if ! git cat-file -e "$PRIOR_SHA" 2>/dev/null; then
+            git fetch origin "$PRIOR_SHA" --depth=1 2>/dev/null || true
+          fi
+          if ! git cat-file -e "$PRIOR_SHA" 2>/dev/null; then
+            echo "Prior baseline $PRIOR_SHA unreachable (force-push/rebase?) — running review."
+            echo "should_skip=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          uv run scripts/social/social-review-gate.py \
+            --repo . --prior "$PRIOR_SHA" --head "$HEAD_SHA" \
+            | tee /tmp/gate.json
+          SHOULD_SKIP=$(jq -r .should_skip /tmp/gate.json)
+          REASON=$(jq -r .reason /tmp/gate.json)
+
+          if [ "$SHOULD_SKIP" = "true" ]; then
+            echo "should_skip=true" >> "$GITHUB_OUTPUT"
+            gh pr comment "$PR_NUMBER" --repo "$REPO" --body \
+              "🟰 **Skipping social media review** — $REASON. The verdict from the [prior run](${SERVER_URL}/${REPO}/actions/runs/${PRIOR_RUN_ID}) still applies. Comment \`/social-review\` to force a fresh review."
+          else
+            echo "should_skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Fetch secrets from ESC
+        if: steps.gate.outputs.should_skip != 'true'
         id: esc-secrets
         uses: pulumi/esc-action@v1
 
       - name: Configure AWS Credentials
+        if: steps.gate.outputs.should_skip != 'true'
         id: aws-creds
         continue-on-error: true
         uses: aws-actions/configure-aws-credentials@v6
@@ -90,9 +155,11 @@ jobs:
           role-session-name: social-review
           aws-region: us-west-2
 
-      - uses: pulumi/actions@v6
+      - if: steps.gate.outputs.should_skip != 'true'
+        uses: pulumi/actions@v6
 
       - name: Get social state bucket name
+        if: steps.gate.outputs.should_skip != 'true'
         id: bucket
         continue-on-error: true
         env:
@@ -102,9 +169,15 @@ jobs:
           BUCKET=$(pulumi -C infrastructure stack output socialStateBucketName --stack ${{ vars.PULUMI_STACK_NAME }})
           echo "name=$BUCKET" >> "$GITHUB_OUTPUT"
 
-      - uses: astral-sh/setup-uv@v7
+      - name: Configure git auth for private social_core git-dep
+        if: steps.gate.outputs.should_skip != 'true'
+        env:
+          PULUMI_BOT_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          git config --global url."https://x-access-token:${PULUMI_BOT_TOKEN}@github.com/".insteadOf "https://github.com/"
 
       - name: Check which posts need social review
+        if: steps.gate.outputs.should_skip != 'true'
         id: check
         env:
           SOCIAL_STATE_BUCKET: ${{ steps.bucket.outputs.name }}
@@ -126,7 +199,7 @@ jobs:
           fi
 
       - name: Run Claude Social Media Review
-        if: steps.check.outputs.needs_review == 'true'
+        if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -148,7 +221,7 @@ jobs:
           claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Glob,Grep,Agent,Bash(python3:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr comment:*)"'
 
       - name: Fail if copy exceeds character limits
-        if: steps.check.outputs.has_errors == 'true'
+        if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.has_errors == 'true'
         run: |
           echo "::error::Social copy exceeds platform character limits. See review comment for details."
           exit 1

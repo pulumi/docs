@@ -51,6 +51,10 @@ sections:
     heading: Previews
     link: /docs/ai/running-previews/
     description: Generate infrastructure previews with approval gates.
+  - emoji: 🔌
+    heading: Integrations
+    link: /docs/ai/integrations/
+    description: Connect Neo to third-party services like Datadog, Honeycomb, and Linear.
 
 - type: flat
   heading: Have questions?

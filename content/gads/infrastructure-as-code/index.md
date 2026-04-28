@@ -3,7 +3,6 @@ title: "Infrastructure as Code | Pulumi"
 meta_desc: "Modern infrastructure as code in Python, TypeScript, Go, or C#. 170+ cloud providers, policy as code, secrets management. Open source. Free tier."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-infrastructure-as-code
 
 heading: "Infrastructure as Code"
 subheading: |

@@ -3,7 +3,6 @@ title: "Env0 Alternative | Pulumi"
 meta_desc: "Why add a management layer when the platform includes it? IaC, deployments, policies, secrets, cost visibility. One platform."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-env0
 hide_platform_details: true
 aliases:
     - /gads/gads-template

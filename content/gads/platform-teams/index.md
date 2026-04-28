@@ -3,7 +3,6 @@ title: "Platform Engineering | Pulumi"
 meta_desc: "Build internal developer platforms that let engineers provision infrastructure safely. Policies, guardrails, templates, and full auditability built in."
 layout: gads-template
 block_external_search_index: true
-utm_source: gads-platform-teams
 
 heading: "Platform engineering"
 subheading: |

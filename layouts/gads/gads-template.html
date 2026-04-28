@@ -3,13 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-    {{/* Build CTA href with optional utm_source */}}
-    {{ $utm_source := .Params.utm_source | default "" }}
     {{ $cta_href := site.Params.cta.primary.href }}
-    {{ if $utm_source }}
-        {{ $separator := cond (strings.Contains $cta_href "?") "&" "?" }}
-        {{ $cta_href = printf "%s%sutm_source=%s" $cta_href $separator $utm_source }}
-    {{ end }}
 
     <section id="overview" class="my-8 relative">
         <div class="container mx-auto text-center">
@@ -26,7 +20,7 @@
             {{ if in .RelPermalink "/gads/neo" }}
             <a href="https://app.pulumi.com/signup" class="btn-primary">Try Neo for FREE</a>
             {{ else }}
-            {{ partial "cta-get-started" (dict "class" "btn-primary" "utm_source" $utm_source) }}
+            {{ partial "cta-get-started" (dict "class" "btn-primary") }}
             {{ end }}
         </div>
     </section>
