@@ -24,7 +24,7 @@ aliases:
     }
 </style>
 
-Choosing the right [secrets management](/what-is/what-is-secrets-management/) tool is important, and we want you to have as much information as possible to make the choice that best suits your needs. This page provides a detailed comparison of Pulumi ESC and HashiCorp Vault, covering architecture, developer experience, and security. It also explains how ESC and Vault can work together for teams that have existing Vault deployments.
+Pulumi ESC is a fully managed [secrets management](/what-is/what-is-secrets-management/) service that provides composable environments, dynamic OIDC credentials, and multi-source secret aggregation across 9+ providers, while HashiCorp Vault is a self-hosted secrets management platform focused on secret storage, dynamic secret generation, and encryption as a service. This page provides a detailed comparison of both tools covering architecture, developer experience, and security, and explains how they can work together for teams that have existing Vault deployments.
 
 ## At a Glance
 
@@ -40,7 +40,7 @@ Choosing the right [secrets management](/what-is/what-is-secrets-management/) to
 - Fully managed SaaS with zero infrastructure to operate
 - Composable environments combining secrets, configuration, and dynamic credentials
 - Apache License 2.0
-- Open ecosystem that aggregates secrets from Vault, 1Password, AWS Secrets Manager, and more
+- Open ecosystem that aggregates secrets from 9+ providers including Vault, 1Password, and AWS Secrets Manager
 
 **Key Differences**
 
@@ -55,7 +55,7 @@ Choosing the right [secrets management](/what-is/what-is-secrets-management/) to
 
 Pulumi ESC (Environments, Secrets, and Configuration) is a fully managed service for organizing and distributing secrets and configuration across your applications and infrastructure. Unlike traditional key-value secrets stores, ESC introduces the concept of composable environments: hierarchical collections of secrets and configuration that can import from each other, be versioned and tagged, and be consumed through a CLI, SDKs, or a web-based editor with autocomplete and inline documentation.
 
-ESC also functions as an OIDC provider, generating short-lived dynamic credentials for AWS, Azure, and Google Cloud without storing any long-lived cloud credentials. Its open ecosystem lets teams pull secrets from multiple sources, including HashiCorp Vault, 1Password, AWS Secrets Manager, Azure Key Vault, and GCP Secret Manager, and manage them all from a single control plane. For more information, see the [Pulumi ESC documentation](/docs/esc/).
+ESC also functions as an OIDC provider, generating short-lived dynamic credentials for AWS, Azure, and Google Cloud without storing any long-lived cloud credentials. Its open ecosystem supports 9 dynamic secret providers and 8 dynamic login credential providers, letting teams pull secrets from HashiCorp Vault, 1Password, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, and more, all from a single control plane. Users have reduced configuration and secrets duplication by over 90% by adopting ESC's composable environment model. For more information, see the [Pulumi ESC documentation](/docs/esc/).
 
 ## What is HashiCorp Vault?
 
@@ -71,7 +71,7 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
 | ------- | ---------- | --------------- |
 | [Licensing](#licensing) | Apache License 2.0 | Business Source License 1.1 |
 | [Architecture & operations](#operations) | Fully managed SaaS | Self-hosted or HCP Vault |
-| [Open ecosystem](#open-ecosystem) | Aggregates secrets from multiple sources | Single-source store |
+| [Open ecosystem](#open-ecosystem) | Aggregates from 9+ secret providers | Single-source store |
 | [Environment composition](#composition) | Hierarchical, composable environments | No native concept |
 | [Secrets & configuration](#secrets-and-config) | Stores both secrets and plaintext config | Secrets only |
 | [Versioning & tagging](#versioning) | Full environment versioning with tags | Per-secret versioning only |
@@ -132,7 +132,7 @@ The following sections go into further detail on the differences between Pulumi 
 
 ### Licensing {#licensing}
 
-Pulumi ESC is open source under the [Apache License 2.0](https://github.com/pulumi/esc/blob/main/LICENSE), a permissive and business-friendly license with no usage restrictions. HashiCorp Vault switched from the Mozilla Public License 2.0 to the [Business Source License 1.1](https://github.com/hashicorp/vault/blob/main/LICENSE) in August 2023, which restricts production use that competes with HashiCorp's commercial offerings. For teams that value open source freedom, ESC provides the assurance that its core engine can be used, modified, and distributed without commercial licensing concerns.
+Pulumi ESC is open source under the [Apache License 2.0](https://github.com/pulumi/esc/blob/main/LICENSE), a permissive and business-friendly license with no usage restrictions. HashiCorp switched Vault from the Mozilla Public License 2.0 to the [Business Source License 1.1](https://github.com/hashicorp/vault/blob/main/LICENSE) in August 2023, which restricts production use that competes with HashiCorp's commercial offerings. For teams that value open source freedom, ESC provides the assurance that its core engine can be used, modified, and distributed without commercial licensing concerns.
 
 ### Architecture and operational simplicity {#operations}
 
@@ -140,11 +140,11 @@ Pulumi ESC is a fully managed SaaS service provided by Pulumi Cloud. There are n
 
 HashiCorp Vault, by contrast, requires significant operational investment when self-hosted. Teams must configure a storage backend (Raft, Consul, or a cloud-managed option), set up TLS certificates, configure auto-unseal (or manage manual unsealing), plan for high availability, and schedule regular version upgrades. While HCP Vault reduces some of this overhead, it is a separate paid product and still requires networking configuration to connect to your infrastructure.
 
-For platform and DevOps teams that want to focus on using secrets rather than operating secrets infrastructure, ESC eliminates the operational complexity entirely.
+For platform and DevOps teams that want to focus on using secrets rather than operating secrets infrastructure, ESC eliminates the operational complexity entirely. Teams like [Spear AI](/case-studies/spear-ai/) and [Modivcare](/case-studies/modivcare/) adopted ESC to centralize secrets management without the overhead of self-hosted infrastructure.
 
 ### Open ecosystem and secret aggregation {#open-ecosystem}
 
-Pulumi ESC supports an open ecosystem model where a single environment can pull secrets from multiple external sources, including HashiCorp Vault, 1Password, AWS Secrets Manager, Azure Key Vault, and GCP Secret Manager. This means teams are not locked into a single vendor for secret storage. ESC acts as a universal access layer that aggregates and composes secrets from wherever they live.
+Pulumi ESC supports an open ecosystem model where a single environment can pull secrets from 9 dynamic secret providers, including HashiCorp Vault, 1Password, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, Doppler, and Infisical. It also supports 8 dynamic login credential providers for services like AWS, Azure, GCP, GitHub, and Snowflake. This means teams are not locked into a single vendor for secret storage. ESC acts as a universal access layer that aggregates and composes secrets from wherever they live.
 
 Vault is a single-source store: it manages only secrets that are stored within Vault itself. While Vault has a robust secrets engine, teams that use multiple secret stores must build their own aggregation logic. ESC solves this natively through its provider model.
 
@@ -152,7 +152,7 @@ Vault is a single-source store: it manages only secrets that are stored within V
 
 ESC's central differentiator is composable environments. An environment is a collection of secrets and configuration that can import from other environments, creating a hierarchy with automatic inheritance. For example, a `base` environment can hold shared configuration, while `staging` and `production` environments import from `base` and override only the values that differ. Changes to `base` propagate automatically to all downstream environments.
 
-Vault has no equivalent to environment composition. Secrets are organized by paths within a mount point, and users must manually replicate shared configuration across paths or build custom tooling to manage inheritance. ESC's composition model reduces duplication and makes it easy to understand how environments relate to each other.
+Vault has no equivalent to environment composition. Secrets are organized by paths within a mount point, and users must manually replicate shared configuration across paths or build custom tooling to manage inheritance. ESC's composition model reduces duplication and makes it easy to understand how environments relate to each other. [Compostable AI](/case-studies/compostable-ai/) uses ESC's hierarchical configuration to manage 19 client tenants with just 2 engineers, provisioning and deploying new tenants in 90 minutes.
 
 ### Secrets and configuration together {#secrets-and-config}
 
@@ -231,6 +231,17 @@ Vault uses a security barrier that encrypts all data leaving Vault using AES-256
 Pulumi Cloud can function as an OIDC identity provider, issuing tokens that can be consumed by external systems. This capability is available from the Pulumi SDK, CLI, web UI, and the Pulumi Service Provider, making it straightforward to integrate OIDC-based authentication into automated workflows.
 
 Vault can also be configured as an OIDC provider, but the setup is currently available only through the CLI. ESC's broader surface area for OIDC provider configuration makes it easier to integrate into diverse deployment pipelines.
+
+## What teams are saying about Pulumi ESC
+
+> "Pulumi ESC has been fundamentally game-changing."
+> — Zachary Cook, Senior Manager of DevOps, [Modivcare](/case-studies/modivcare/)
+
+> "Pulumi ESC has been a lifesaver for us."
+> — JK Jensen, Team Lead, [Mysten Labs](/blog/pulumi-esc-ga/)
+
+> "Integration with Pulumi SDKs is a huge productivity boost."
+> — Liam White, Platform Lead, [Tetrate](/blog/pulumi-esc-ga/)
 
 ## Try Pulumi ESC for free
 
