@@ -44,8 +44,13 @@ When you migrate state, each Terraform workspace maps to a Pulumi stack. The wor
 
 If you use Terraform [workspace prefixes](https://developer.hashicorp.com/terraform/language/backend/remote#workspace-prefix) instead of a single named workspace, Pulumi Cloud supports the `workspaces.prefix` configuration as well. Each workspace matching the prefix maps to a separate stack under the same project.
 
-{{% notes "warning" %}}
-If no stacks exist yet under your `workspaces.prefix` in Pulumi Cloud, migration may fail with a workspace error. To work around this, first configure `workspaces.name` pointing to a specific workspace/stack, run `terraform init` to create that stack, then update your configuration to use `workspaces.prefix` and run `terraform init` again.
+{{% notes type="warning" %}}
+If no stacks exist yet under your `workspaces.prefix` in Pulumi Cloud, migration may fail with a workspace error. To work around this:
+
+1. Configure `workspaces.name` pointing to a specific stack.
+1. Run `terraform init` to create that stack.
+1. Update your configuration to use `workspaces.prefix`.
+1. Run `terraform init` again.
 {{% /notes %}}
 
 ## Migrate from a standard backend (S3, Azure Blob, GCS, local)
