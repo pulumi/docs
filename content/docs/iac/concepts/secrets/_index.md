@@ -199,7 +199,7 @@ It is possible to mark resource outputs as containing secrets. In this case, Pul
 Some configuration data is sensitive, such as database passwords or service tokens. For such cases, passing the `--secret` flag to the `config set` command encrypts the data and stores the resulting ciphertext instead of plain text.
 
 {{% notes "info" %}}
-By default, the Pulumi CLI uses a per-stack encryption key managed by Pulumi Cloud, and a per-value salt, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption](#configuring-secrets-encryption).
+By default, the Pulumi CLI uses a per-stack encryption key managed by Pulumi Cloud, and a per-value nonce, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption](#configuring-secrets-encryption).
 {{% /notes %}}
 
 For example, this command sets a configuration variable named `dbPassword` to the plain-text value `S3cr37`:
