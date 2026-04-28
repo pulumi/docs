@@ -38,7 +38,7 @@
     "markdown-it": "^14.1.1",
     "markdownlint": "^0.40.0",
     "parse-diff": "^0.11.1",
-    "postcss": "^8.5.8",
+    "postcss": "^8.5.10",
     "postcss-cli": "^11.0.0",
     "sitemapper": "^4.1.4",
     "turndown": "^7.2.0",
