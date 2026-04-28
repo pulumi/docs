@@ -504,3 +504,68 @@ Coming out of the Session 5 comparison run. None implemented yet; saving for a d
 6. **Frontmatter-only short-circuit in triage.** Aliases additions, `draft: false` flips, social copy edits.
 7. **Audit prompt-cache friendliness.** 5-min TTL would catch close-in-time reviews if shared system prompt is structured right.
 8. **Sonnet-everywhere hypothesis test (broader than #2).** Re-run today's 6-PR comparison set with `--model claude-sonnet-4-6` on the base review and compare against the Opus baseline already captured in `scratch/2026-04-28-pipeline-comparison/new-reviews/`. Hypothesis from analyzing the headline catches: 3–4 of 6 (broken link, link-style violation, wrong-tab navigation, possibly the webpack `cache: false` analysis) look Sonnet-grade pattern matching; 2 are Opus-grade and both are fact-check (misattributed OutSystems statistic, EU/Colorado AI Act framing). If confirmed, the resulting architecture is **Sonnet for the base review, Opus only for fact-check** — gated on the existing `fact-check:needed` label. Meaningfully different from #2 (Sonnet for infra only) and from today's "Opus by default." Cheapest experiment in this backlog: just toggle the model in `claude_args` and re-trigger the same 6 fork PRs (still open at `CamSoper/pulumi.docs#44–49` as of session end). Result either confirms the architecture flip or shows enough regression to justify current cost.
+
+---
+
+## Session 6 — 2026-04-28 (cost optimization: Path A measurement and ship)
+
+Tackled backlog item #8 (Sonnet-everywhere) end to end and discovered a much bigger and safer win along the way. Net result: a measured **51% cost reduction** on the existing Opus pipeline, shipped to this branch.
+
+### Outcomes
+
+- **Item #8 (Sonnet-everywhere): NOT ready, deferred.** Cost story is real (~64% cheaper per effective post when properly configured) but reliability and substance regressions on real bugs (PR 46 SCIM-tab bug, PR 49 datadog.svg) are unacceptable. Won't reconsider until silent-failure-on-large-PR is fixed.
+- **Item #1.5 (NEW — broadened allowed-tools + pre-compute injection): SHIPPED.** Single workflow file change, measured 51% cost reduction on Opus, 85% denial reduction, 6/6 posted clean, substance net positive across the test set.
+- **PR 49 duplicate problem: FIXED** by an explicit "do NOT post via `gh api`-based comment endpoints" instruction in the prompt.
+
+### Numbers
+
+| | Opus baseline | Opus with Path A |
+|---|---:|---:|
+| Total cost (6 PRs) | $28.07 | **$13.70** |
+| Total denials | 117 | **18** |
+| Cost per posted review | $4.68 | **$2.28** |
+| Posted cleanly | 6/6 | 6/6 |
+| Cumulative wall time | 68 min | 35 min |
+
+PR 48 (infra) is the most extreme drop: $3.60 → $0.89, 19 turns, 0 denials, 3 minutes. Infra reviews benefit massively because the file set is small and the model lands in one or two tool-use cycles instead of bouncing through denials.
+
+### Methodology lessons (for future cost-opt passes)
+
+1. **Analytical estimates were almost half the actual.** My pre-measurement estimate was ~27% saving; measured was 51%. Pre-compute injection's effect goes beyond denial reduction — it changes the model's exploration strategy. Don't trust analytical estimates when you can measure cheaply ($14 for ground truth on a 6-PR fixture).
+2. **Debug-instrumented runs are cheap and high-value.** The $1.42 probe that dumped `/home/runner/work/_temp/claude-execution-output.json` to the runner log identified the 80% denial cause (missing `Write` tool) in one run. Ground truth on tool calls + denials is far better than guessing — the runner log normally hides this.
+3. **Cascade-cancellations inflate denial counts.** When a parallel tool call fails, sibling parallel calls get cancelled with their own `is_error=true`. The system-reported `permission_denials_count` (e.g., 18) and the actual denial-result count (e.g., 21) diverge. Either is fine as a directional signal, but don't over-index on tiny differences.
+4. **Stacking changes can mask which one helped.** Round 3 stacked the whitelist + pre-compute injection. The split is unknown without a third measurement run. The substance-regression pattern on PR 45 appears in both Sonnet R2 (whitelist only) and Opus R3 (whitelist + pre-compute), so it's likely a whitelist-driven effect — but I can't prove it without isolating. Worth keeping in mind for the next stacked experiment.
+5. **The prompt clarification fixed PR 49's duplicate problem.** Two bytes of prompt ("do NOT post via `gh api`...") closed the workflow-contract bug that all of Sonnet R1, Sonnet R2, and the implied Opus failure mode shared. Often the cheapest fix is in the prompt, not the tool list.
+
+### Side effects worth tracking
+
+- **PR 45 substance regression.** With broadened tools, the model "stops earlier" on lower-tier prose findings (lost 2 LCs on PR 45 — same regression Sonnet R2 had). The fact-check tier engages more rigorously (verified `urls.go` source for the registry-preview scheme), but the model skims prose-level nits. Hypothesis: pre-computed metadata + broader tools = faster convergence, less exploration. Worth a prompt nudge experiment: "don't skip prose-level findings even when fact-check evidence is strong."
+- **PR 49 finding shape changed.** R3 lost the "broken `/docs/ai/integrations/`" link finding from baseline and quoted specific phrases as if from a real page. Either (a) the live pulumi.com site has the page now and WebFetch reached it, or (b) hallucination. Worth a manual sanity-check next time the page is touched.
+- **Infra reviews are the biggest beneficiary.** PR 48 dropped to $0.89 — order of magnitude cheaper. If we rolled out Sonnet for infra-only (backlog item #2), the saving stacks. But Path A alone already gets most of the benefit on infra without the model swap.
+
+### Backlog update
+
+Done:
+- **#8 (Sonnet-everywhere)** — investigated, not ready to ship. See `scratch/2026-04-28-pipeline-comparison/SONNET-EVERYWHERE-ANALYSIS.md` for the full multi-round analysis.
+- **NEW #1.5 (broadened allowed-tools + pre-compute injection)** — shipped this session.
+
+Still pending (re-prioritized after Path A landed):
+1. **Frontmatter-only short-circuit in triage** (was #6; now top priority). Independent of Path A; ship and validate via real traffic.
+2. **Cache-friendliness audit** (was #7).
+3. **Fact-check cap with deferred resumption** (was #3 + #4 paired).
+4. **Investigate PR 45's prose-regression pattern** — open question after Path A measurement.
+5. **Triage diff cap trim** (was #1; small saving, near-zero risk).
+6. **Sonnet for `review:infra` initial reviews** (was #2; partially superseded — Path A already gets most of the saving on infra without the model swap).
+7. **Standing fixture set for regression tests** (was #5). The 6 fork PRs (CamSoper/pulumi.docs#44–49) now have **three** validated runs (Opus baseline, Sonnet narrow, Sonnet broadened, Opus Path A) — they ARE the standing fixture set if we want to formalize.
+
+### Artifacts
+
+- **Multi-round analysis**: `scratch/2026-04-28-pipeline-comparison/SONNET-EVERYWHERE-ANALYSIS.md` (~370 lines covering Sonnet R1, debug probe, Sonnet R2 broadened, Opus R3 measurement)
+- **Round 1 Sonnet bodies**: `scratch/2026-04-28-pipeline-comparison/sonnet-reviews/`
+- **Round 2 Sonnet bodies**: `scratch/2026-04-28-pipeline-comparison/sonnet-reviews-v2/`
+- **Round 3 Opus Path A bodies**: `scratch/2026-04-28-pipeline-comparison/opus-r3-reviews/`
+- **Total experiment cost**: $37.82 across all rounds
+
+### Total experiment ROI
+
+If the measured 51% saving holds in real-world traffic, Path A pays back the entire $37.82 experiment cost after ~8 production reviews on the new configuration. The workflow change is in this commit; nothing else needed to start collecting that ROI.

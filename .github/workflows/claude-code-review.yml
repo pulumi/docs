@@ -90,11 +90,25 @@ jobs:
           PR="${{ github.event.workflow_run.pull_requests[0].number }}"
           REPO="${{ github.repository }}"
 
-          DATA=$(gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author)
+          DATA=$(gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,files,title)
           IS_DRAFT=$(echo "$DATA" | jq -r '.isDraft')
           AUTHOR=$(echo "$DATA" | jq -r '.author.login')
           LABELS_JSON=$(echo "$DATA" | jq -c '[.labels[].name]')
           LABELS_CSV=$(echo "$DATA" | jq -r '[.labels[].name] | join(",")')
+          # Pre-compute PR metadata so the review model doesn't burn turns
+          # re-deriving it via gh pr view / git remote / etc. The 2026-04-28
+          # cost-optimization measurement showed ~85% denial reduction and
+          # ~51% cost reduction stacked with the broadened allowed-tools
+          # list (see scratch/2026-04-28-pipeline-comparison/SONNET-EVERYWHERE-ANALYSIS.md).
+          HEAD_SHA=$(echo "$DATA" | jq -r '.headRefOid')
+          HEAD_SHA_SHORT="${HEAD_SHA:0:7}"
+          HEAD_BRANCH=$(echo "$DATA" | jq -r '.headRefName')
+          BASE_BRANCH=$(echo "$DATA" | jq -r '.baseRefName')
+          ADDITIONS=$(echo "$DATA" | jq -r '.additions')
+          DELETIONS=$(echo "$DATA" | jq -r '.deletions')
+          TITLE=$(echo "$DATA" | jq -r '.title')
+          FILE_COUNT=$(echo "$DATA" | jq -r '.files | length')
+          FILES_LIST=$(echo "$DATA" | jq -r '.files[] | "  - \(.path) (+\(.additions)/-\(.deletions))"')
 
           SKIP=""
           if [[ "$IS_DRAFT" == "true" ]]; then
@@ -112,12 +126,24 @@ jobs:
             echo "labels_csv=$LABELS_CSV"
             echo "labels_json=$LABELS_JSON"
             echo "skip_reason=$SKIP"
+            echo "repo_full=$REPO"
+            echo "head_sha=$HEAD_SHA"
+            echo "head_sha_short=$HEAD_SHA_SHORT"
+            echo "head_branch=$HEAD_BRANCH"
+            echo "base_branch=$BASE_BRANCH"
+            echo "additions=$ADDITIONS"
+            echo "deletions=$DELETIONS"
+            echo "file_count=$FILE_COUNT"
+            echo "title=$TITLE"
+            echo "files_list<<EOF_FILES"
+            echo "$FILES_LIST"
+            echo "EOF_FILES"
           } >> "$GITHUB_OUTPUT"
 
           if [[ -n "$SKIP" ]]; then
             echo "review: pr=$PR skip=$SKIP (labels=$LABELS_CSV, draft=$IS_DRAFT, author=$AUTHOR)"
           else
-            echo "review: pr=$PR proceed (labels=$LABELS_CSV)"
+            echo "review: pr=$PR proceed (labels=$LABELS_CSV, files=$FILE_COUNT, +$ADDITIONS/-$DELETIONS, head=$HEAD_SHA_SHORT)"
           fi
 
       # Publish a Checks API check-run pinned to the PR's head SHA so
@@ -209,12 +235,33 @@ jobs:
             Review pull request #${{ steps.pr-context.outputs.pr_number }} by following the
             instructions in `.claude/commands/docs-review-ci.md`.
 
-            The PR's labels (set by claude-triage.yml) drive domain selection and
-            fact-check gating:
+            ## Pre-computed PR metadata
 
-            ${{ steps.pr-context.outputs.labels_json }}
+            The workflow has already gathered the following so you do NOT need to
+            call `gh pr view`, `git remote get-url`, or similar lookups for these
+            values. Use them directly in any `gh api` or output-formatting calls.
 
-            After producing the review, post it via:
+            - **Repository:** `${{ steps.pr-context.outputs.repo_full }}`
+            - **PR number:** `${{ steps.pr-context.outputs.pr_number }}`
+            - **Title:** `${{ steps.pr-context.outputs.title }}`
+            - **Author:** `${{ steps.pr-context.outputs.author }}`
+            - **Head SHA:** `${{ steps.pr-context.outputs.head_sha }}` (short: `${{ steps.pr-context.outputs.head_sha_short }}`)
+            - **Head branch:** `${{ steps.pr-context.outputs.head_branch }}`
+            - **Base branch:** `${{ steps.pr-context.outputs.base_branch }}`
+            - **Diff size:** +${{ steps.pr-context.outputs.additions }} / -${{ steps.pr-context.outputs.deletions }} across ${{ steps.pr-context.outputs.file_count }} files
+            - **Labels** (set by claude-triage.yml — drive domain selection and fact-check gating): ${{ steps.pr-context.outputs.labels_json }}
+
+            ### Changed files
+
+            ${{ steps.pr-context.outputs.files_list }}
+
+            ## Posting the review (REQUIRED)
+
+            After producing the review, post it via the pinned-comment script.
+            This is the ONLY sanctioned path — do NOT post comments via
+            `gh api repos/.../issues/.../comments` (POST or PATCH) directly,
+            since that bypasses overflow handling and creates duplicate
+            `<!-- CLAUDE_REVIEW N/M -->` comments.
 
               bash .claude/commands/_common/scripts/pinned-comment.sh upsert \
                 --pr ${{ steps.pr-context.outputs.pr_number }} \
@@ -224,7 +271,7 @@ jobs:
 
               gh pr edit ${{ steps.pr-context.outputs.pr_number }} \
                 --add-label review:claude-ran --remove-label review:claude-stale
-          claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr edit:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh pr list:*),Bash(bash .claude/commands/_common/scripts/pinned-comment.sh:*)"'
+          claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr edit:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh pr list:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(gh issue view:*),Bash(bash .claude/commands/_common/scripts/pinned-comment.sh:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
 
       # Runs on success or failure so the transient CLAUDE_PROGRESS comment
       # always reaches a terminal state. Claude's prompt adds review:claude-ran
