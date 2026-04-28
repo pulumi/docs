@@ -26,7 +26,7 @@ aliases:
 
 Pulumi ESC is a fully managed [secrets management](/what-is/what-is-secrets-management/) service that provides composable environments, dynamic OIDC credentials, and multi-source secret aggregation across 9+ providers, while HashiCorp Vault is a self-hosted secrets management platform focused on secret storage, dynamic secret generation, and encryption as a service. This page provides a detailed comparison of both tools covering architecture, developer experience, and security, and explains how they can work together for teams that have existing Vault deployments.
 
-## At a Glance
+## At a glance
 
 **HashiCorp Vault**
 
@@ -63,7 +63,7 @@ HashiCorp Vault is a secrets management platform that provides a centralized sto
 
 Vault can be self-hosted or consumed through HashiCorp Cloud Platform (HCP) Vault. Self-hosted Vault requires teams to manage high-availability clustering, storage backends (such as Raft or Consul), TLS certificate rotation, unsealing procedures, and version upgrades. HCP Vault reduces some of this operational overhead as a managed offering. For more information, see our [What is HashiCorp Vault?](/what-is/what-is-hashicorp-vault/) overview.
 
-## Feature by Feature Comparison
+## Feature by feature comparison
 
 Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
 
@@ -168,7 +168,7 @@ Vault provides per-secret versioning through the KV v2 secrets engine, which tra
 
 ### Dynamic cloud credentials via OIDC {#dynamic-credentials}
 
-Pulumi ESC uses OIDC token exchange to generate short-lived credentials for AWS, Azure, and Google Cloud. When an environment is opened, ESC presents a signed JWT to the cloud provider's OIDC endpoint, which issues temporary credentials. No long-lived cloud credentials are stored anywhere. This approach aligns with zero-trust principles and significantly reduces the blast radius of a credential leak. For setup instructions, see [Configuring OIDC for Vault](/docs/esc/guides/configuring-oidc/vault/).
+Pulumi ESC uses OIDC token exchange to generate short-lived credentials for AWS, Azure, and Google Cloud. When an environment is opened, ESC presents a signed JWT to the cloud provider's OIDC endpoint, which issues temporary credentials. No long-lived cloud credentials are stored anywhere. This approach aligns with zero-trust principles and significantly reduces the blast radius of a credential leak. For setup instructions, see the [OIDC configuration guides](/docs/esc/guides/configuring-oidc/).
 
 Vault's dynamic secrets engine can generate credentials for databases and some cloud providers, but it typically requires storing root or admin credentials within Vault itself to generate those short-lived credentials. Vault's OIDC-based cloud credential generation is more limited in scope, primarily supporting AWS through the AWS secrets engine with IAM user or STS-based flows that still depend on stored access keys.
 
