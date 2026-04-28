@@ -54,7 +54,7 @@ my-org/dev
 dev
 ```
 
-In some contexts, stack names will be presented in their fully-qualified format (`orgName/projectName/stackName`) even if provided using shorthand (`stackName` or `orgName/stackName`) as input.
+In some contexts, stack names will be presented in their fully qualified format (`orgName/projectName/stackName`) even if provided using shorthand (`stackName` or `orgName/stackName`) as input.
 
 {{% notes type="info" %}}
 While stacks with applied configuration settings will often be accompanied by `Pulumi.<stack-name>.yaml` files, these files are not created by `pulumi stack init`. They are created and managed with [`pulumi config`](/docs/iac/cli/commands/pulumi_config/). For information on how to populate your stack configuration files, see [Configuration](/docs/concepts/config/).
@@ -88,7 +88,7 @@ staging                                   n/a                      n/a
 broomellc/test                            2 weeks ago              121
 ```
 
-To select a stack that is part of an organization, use the fully-qualified stack name, either `orgName/stackName` or `orgName/projectName/stackName`:
+To select a stack that is part of an organization, use the fully qualified stack name, either `orgName/stackName` or `orgName/projectName/stackName`:
 
 ```bash
 $ pulumi stack select mycompany/prod
