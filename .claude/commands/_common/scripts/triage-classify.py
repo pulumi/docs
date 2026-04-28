@@ -88,6 +88,45 @@ def iter_hunks(file_diff: str) -> Iterable[tuple[str, list[str]]]:
         yield header, body
 
 
+def detect_starting_state(body_lines: list[str], old_start: int) -> str:
+    """For an .md file hunk, decide whether the hunk starts in frontmatter
+    or body. Uses `---` context lines as ground truth when present;
+    falls back to content-shape heuristics."""
+    dashdash_positions = [
+        i for i, line in enumerate(body_lines)
+        if line.startswith(" ") and line[1:].strip() == "---"
+    ]
+    # Two or more `---` context lines: hunk started before the opening
+    # delimiter (only happens when old_start == 1).
+    if len(dashdash_positions) >= 2:
+        return "pre-frontmatter"
+    # Single `---` context line: opening if old_start == 1, otherwise
+    # closing (the more common case for aliases / meta_desc edits).
+    if len(dashdash_positions) == 1:
+        return "pre-frontmatter" if old_start == 1 else "frontmatter"
+    # No `---` context. Look at the surrounding content to guess.
+    for line in body_lines:
+        if not line:
+            continue
+        if line[0] not in " +-":
+            continue
+        stripped = line[1:].strip()
+        if not stripped:
+            continue
+        # Markdown-shaped content → body.
+        if stripped.startswith(("#", "```", "{{<", "{{%")):
+            return "body"
+        # YAML-shaped content (key:value at root, no leading whitespace) →
+        # frontmatter.
+        if re.match(r"^[a-z_][a-zA-Z0-9_-]*:", stripped):
+            return "frontmatter"
+        # Long prose-looking line → body.
+        if len(stripped) > 60 and " " in stripped:
+            return "body"
+    # Fall back: small line numbers default to frontmatter.
+    return "frontmatter" if old_start <= 30 else "body"
+
+
 def classify_file(path: str, file_diff: str) -> dict:
     """Walk a single file's diff and return its classification flags."""
     head300 = file_diff[:300]
@@ -113,19 +152,21 @@ def classify_file(path: str, file_diff: str) -> dict:
         "has_new_version_claim": False,
     }
 
+    # Per-file link-set comparison: detect link change by comparing the
+    # union of (text, url) tuples on `+` lines vs `-` lines. A typo fix in
+    # a paragraph that contains unchanged links produces matching sets =>
+    # no link change.
+    plus_links: set[tuple[str, str]] = set()
+    minus_links: set[tuple[str, str]] = set()
+
     for header, body_lines in iter_hunks(file_diff):
         m = HUNK_HEADER_RE.match(header)
         if not m:
             continue
         old_start = int(m.group(1))
 
-        # Frontmatter state machine — only meaningful for .md files.
-        # If a hunk starts at line 1 of a .md file, we begin "before
-        # frontmatter" and the first `---` moves us into it. Otherwise we
-        # assume "body" (Hugo frontmatter is rarely deeper than ~30 lines,
-        # and hunks deep in a file are body changes regardless).
-        if is_md and old_start <= 1:
-            state = "pre-frontmatter"
+        if is_md:
+            state = detect_starting_state(body_lines, old_start)
         else:
             state = "body"
 
@@ -164,13 +205,17 @@ def classify_file(path: str, file_diff: str) -> dict:
                 flags["has_code_block_change"] = True
             if "{{<" in stripped or "{{%" in stripped:
                 flags["has_shortcode_change"] = True
-            if LINK_RE.search(stripped):
-                flags["has_link_change"] = True
+            line_links = set(re.findall(r"\[([^\]]*)\]\(([^)]+)\)", stripped))
+            if marker == "+":
+                plus_links |= line_links
+            else:
+                minus_links |= line_links
             if marker == "+" and HEADING_RE.match(stripped):
                 flags["has_new_heading"] = True
             if marker == "+" and VERSION_CLAIM_RE.search(stripped):
                 flags["has_new_version_claim"] = True
 
+    flags["has_link_change"] = plus_links != minus_links
     return flags
 
 
