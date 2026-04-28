@@ -453,3 +453,54 @@ Each is also on `cam/master` as a cherry-pick, atop the FORK-ONLY claude.yml tok
 - **Fork master:** Session 4 commits cherry-picked + the FORK-ONLY token swap commit on top.
 - **Branch commit count:** ~32 (was 25+ at end of Session 3). Squash-merge or rebase before upstream merge.
 - No pending workflows, no orphan labels.
+
+---
+
+## Session 5 — Pipeline comparison test (2026-04-28)
+
+Ran a side-by-side comparison of the legacy single-comment review against the new pipeline across 6 medium-large pulumi/docs PRs from the past month (18599, 18620, 18605, 18647, 18642, 18685). Recreated the PRs as drafts on `CamSoper/pulumi.docs` (#44–49), marked them ready, captured the new pipeline output, compared.
+
+Full report: `scratch/2026-04-28-pipeline-comparison/REPORT.md`.
+
+### Headline outcomes
+
+- **New pipeline caught real bugs the legacy missed:** misattributed OutSystems statistic in dirien's Agent Sprawl post (94% means "complexity and technical debt," not "security problem"), wrong settings tab for SCIM token retrieval in joeduffy's JumpCloud guide (would have shipped a non-working guide), broken `/docs/ai/integrations/` link in foot's Neo Catalog launch, multi-file AGENTS.md link-style violation in jkodroff's restructure (with a regression where the PR converted an existing canonical link to a relative one).
+- **Cost:** lost some style-polish coverage (em-dash density, awkward titles, banned-word `simple`, closing-emoji nits) and the publishing-readiness checklist that legacy blog reviews carried.
+- **Three fold-back items identified:** restore publishing-readiness checklist in `review-blog.md`; add a "📝 Style nits" tier under the table; investigate the lingering `<!-- CLAUDE_PROGRESS -->` comment after success.
+
+### Methodology lessons (remember for the next comparison run)
+
+1. **Pre-fix vs post-fix asymmetry is the biggest confounder.** The legacy review was on the *initial* PR state; recreations from the merge commit are the *post-fix* state. So findings the author addressed look like the new pipeline "missed them" — but it correctly didn't re-flag fixed code. Next time, recreate from the PR head at the time the legacy review was posted (use `gh pr view --json commits` to find the SHA at review timestamp), not the merge commit.
+2. **`cam/master` already containing the test PRs forced revert+reapply gymnastics.** Cleanest base for this kind of test is a static branch pinned to a commit *before* any of the candidates landed (`compare/base@<old-sha>`), so per-PR base branches and modify/delete conflicts go away.
+3. **`git apply` with binary patches is fragile; `git cherry-pick` isn't.** Three of six PRs touched PNGs that `gh pr diff | git apply` couldn't handle. Cherry-pick of the merge commit uses git tree ops and handles binaries natively. Default to cherry-pick for recreations.
+4. **`-X theirs` flips meaning between revert and cherry-pick.** On a revert with a modify/delete conflict, `-X theirs` *keeps* the file the revert wanted to delete — opposite of intent. For revert: detect modify/delete with `git status --porcelain | grep -E "^DU|^UD"` and `git rm` to honor the delete. Burned ~20 min on this.
+5. **`workflow_run`-triggered jobs report `headBranch=master`, not the PR branch.** First monitor filtered by branch and returned nothing. For waiting on chained workflows, filter by `--created >=<timestamp>` and count states. Lost ~5 min before catching it.
+6. **n=6 from already-merged PRs is biased** — by definition these passed review enough to ship. PRs where the legacy review actually blocked something (heated dispute threads, repeated re-review cycles) would stress-test the new pipeline harder. Worth pulling 2–3 of those next time to exercise the dispute / re-entrant paths under load.
+
+### Surprises worth noting
+
+- **`agent-authored` triage label fired on 5 of 6 cherry-picked recreations.** Only djgrove's PR escaped. Triage is keying off commit metadata that propagates through `git cherry-pick` (likely `Co-Authored-By` trailers). Authentic-ish — the recreations *are* agent-prepared — but noisy as a comparison signal. Worth understanding if the trigger should be tightened.
+- **Lingering `<!-- CLAUDE_PROGRESS -->` comment.** All 6 PRs ended with the progress placeholder still present (body edited to "🤖 Review updated.") alongside the actual `<!-- CLAUDE_REVIEW 1/1 -->` comment. The progress comment isn't being deleted on success — only edited. Either delete on success or rename the marker. Two artifacts where one would do.
+- **Mixed-domain detection conservative.** PR 18620 touches `assets/openapi/tag-intros/**` (docs) plus `layouts/partials/openapi/open-api-gen.html` and a shortcode (infra). Triage labeled `review:docs` only — no `review:mixed`. The new review correctly addressed the template change in passing but didn't compose under both domain prompts. Decide if the `mixed` rule should fire whenever any infra-side files are touched.
+- **PR 18599 fidelity drift.** Recreated +280/-37 vs original +310/-145 across the same 12 files because PR #18623 modified three of 18599's files in the intervening week. `git cherry-pick -X theirs` absorbed the drift; substance preserved. Worth flagging for any recreation: check intervening commits to those files before assuming clean cherry-pick.
+
+### Artifacts
+
+- Report: `scratch/2026-04-28-pipeline-comparison/REPORT.md` (265 lines)
+- Old reviews + author response diffs: `scratch/2026-04-28-pipeline-comparison/old-reviews/`
+- New reviews: `scratch/2026-04-28-pipeline-comparison/new-reviews/`
+- Recreation log + patches: `scratch/2026-04-28-pipeline-comparison/{recreation-log.txt,patches/}`
+- Recreated PRs: `CamSoper/pulumi.docs#44–49` (still open as of end of session)
+
+### Cost optimization backlog (deferred)
+
+Coming out of the Session 5 comparison run. None implemented yet; saving for a dedicated pass.
+
+1. **Trim triage's diff cap from 100KB to ~20KB.** Classification doesn't need full diffs.
+2. **Sonnet for `review:infra` initial reviews.** Pattern is a small "Pick model" step before `claude-code-review.yml:227`'s `claude-code-action@v1` invocation that sets `--model claude-sonnet-4-6` when the labels are infra-only (no docs/blog/programs/mixed). Single-job conditional, no new job needed. Pre-flight: re-run PR 18642 on Sonnet and compare against the Opus baseline; back off if it misses the `cache: false` breadth analysis or the mode-detection narrowing.
+3. **Cap fact-check tool calls — but triage first, don't cap blindly.** See the "mitigations" notes from this session — budget by PR size, prioritize load-bearing citations (statistics > URLs > general claims), surface what didn't get verified so the author can request a follow-up.
+4. **Pair #3 with deferred-fact-check resumption in `update-review.md` (re-entrant).** Today's re-entrant only handles fix-response / dispute / re-verify — it doesn't auto-pick up items the initial Opus pass deferred for budget. Add a step at the top of the re-entrant prompt: parse the previous pinned comment for a "deferred fact-check" section; if present, spend the re-entrant's own budget on those first, then proceed to standard re-verify. Cost-shape works because re-entrant is Sonnet (cheaper per call), and the failure mode is observable — deferred items eventually surface under ✅ Resolved or 🚨 Outstanding on the next push. **Don't ship #3 without #4** — they're paired; an unverified-items section nobody auto-resumes is just busywork for authors.
+5. **Standing fixture set for pipeline regression tests.** 2–3 well-chosen PRs to re-run when prompts change, instead of 6 ad-hoc each time. Today's set is a candidate baseline.
+6. **Frontmatter-only short-circuit in triage.** Aliases additions, `draft: false` flips, social copy edits.
+7. **Audit prompt-cache friendliness.** 5-min TTL would catch close-in-time reviews if shared system prompt is structured right.
+8. **Sonnet-everywhere hypothesis test (broader than #2).** Re-run today's 6-PR comparison set with `--model claude-sonnet-4-6` on the base review and compare against the Opus baseline already captured in `scratch/2026-04-28-pipeline-comparison/new-reviews/`. Hypothesis from analyzing the headline catches: 3–4 of 6 (broken link, link-style violation, wrong-tab navigation, possibly the webpack `cache: false` analysis) look Sonnet-grade pattern matching; 2 are Opus-grade and both are fact-check (misattributed OutSystems statistic, EU/Colorado AI Act framing). If confirmed, the resulting architecture is **Sonnet for the base review, Opus only for fact-check** — gated on the existing `fact-check:needed` label. Meaningfully different from #2 (Sonnet for infra only) and from today's "Opus by default." Cheapest experiment in this backlog: just toggle the model in `claude_args` and re-trigger the same 6 fork PRs (still open at `CamSoper/pulumi.docs#44–49` as of session end). Result either confirms the architecture flip or shows enough regression to justify current cost.
