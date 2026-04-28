@@ -17,25 +17,21 @@
 }
 
 @mixin section-header-small {
-    font-feature-settings: 'salt' on;
     @apply font-semibold text-black font-body text-heading-s;
     line-height: 55px;
     letter-spacing: -2px;
 }
 
 @mixin section-header-extra-small {
-    font-feature-settings: 'salt' on;
     @apply font-semibold leading-extra-tight text-black font-body text-heading-2xs;
 }
 
 @mixin section-header-extra-extra-small {
-    font-feature-settings: 'salt' on;
     @apply font-semibold leading-extra-tight text-black font-body text-heading-2xsSmall;
 }
 
 @mixin product-hero-heading {
     @apply text-black text-center not-italic font-semibold text-heading-l;
-    font-feature-settings: 'salt' on;
     font-family: Inter, sans-serif;
     letter-spacing: -3.2px;
     line-height: 1.1 !important;
@@ -43,13 +39,11 @@
 
 @mixin section-description {
     @apply font-normal leading-normal font-body text-body-l;
-    font-feature-settings: 'salt' on;
     color: #2f3032;
 }
 
 @mixin section-subheader-bold {
     @apply font-semibold leading-normal text-black font-body text-body-xl;
-    font-feature-settings: 'salt' on;
 }
 
 @mixin section-hint {
@@ -73,13 +67,11 @@
 
 @mixin section-body-medium {
     @apply font-normal leading-normal font-body text-body-m;
-    font-feature-settings: 'salt' on;
     color: #2f3032;
 }
 
 @mixin section-body-small {
     @apply font-normal leading-normal font-body text-body-s;
-    font-feature-settings: 'salt' on;
     color: #2f3032;
 }
 
@@ -99,7 +91,6 @@
 
     .hero-event-details {
         @apply flex flex-wrap items-center font-semibold leading-normal font-body text-body-m;
-        font-feature-settings: 'salt' on;
         color: #5b5b5b;
     }
 
@@ -267,7 +258,6 @@
     .promo-banner-cta {
         @include section-hint();
         @apply text-violet-500;
-        font-feature-settings: 'salt' on;
     }
 }
 
@@ -281,7 +271,6 @@
     }
 
     .three-column-item-title {
-        font-feature-settings: 'salt' on;
         font-family: Inter, sans-serif;
         letter-spacing: -1.4px;
         line-height: 38.5px;
@@ -401,7 +390,6 @@
 
     .sidebar-nav-link {
         @apply block py-0.5 text-sm text-gray-600 transition-colors;
-        font-feature-settings: 'salt' on;
 
         &:hover {
             @apply text-violet-primary;
@@ -478,7 +466,6 @@
 
     .case-study-hero-attrib {
         @apply font-body mt-4 mb-0 text-gray-600;
-        font-feature-settings: 'salt' on;
     }
 
     .case-study-hero-stat-panel {
@@ -624,7 +611,6 @@
 
     .section-header-split-description {
         color: #2f3032;
-        font-feature-settings: 'salt' on;
         font-family: Inter, sans-serif;
         @apply text-left font-body text-body-s font-normal leading-normal;
 
@@ -712,7 +698,6 @@
 
     .event-card-type {
         @apply font-semibold font-body text-body-s uppercase;
-        font-feature-settings: 'salt' on;
         color: var(--color-violet-primary);
         letter-spacing: 0.5px;
         font-size: 0.7rem;
@@ -720,7 +705,6 @@
 
     .event-card-location {
         @apply font-body text-body-s;
-        font-feature-settings: 'salt' on;
         color: #757576;
         font-size: 0.8rem;
     }
@@ -770,7 +754,6 @@
 
     .event-card-cta {
         @apply font-semibold font-body whitespace-nowrap flex-shrink-0;
-        font-feature-settings: 'salt' on;
         color: var(--color-violet-primary);
         font-size: 0.875rem;
 
@@ -787,7 +770,6 @@
 // Single event page styles
 .event-breadcrumb {
     @apply font-body;
-    font-feature-settings: 'salt' on;
     font-size: 0.85rem;
 
     a {
@@ -813,7 +795,6 @@
 
     .event-single-type {
         @apply font-semibold font-body uppercase;
-        font-feature-settings: 'salt' on;
         color: var(--color-violet-primary);
         font-size: 0.8rem;
         letter-spacing: 0.5px;
@@ -825,7 +806,6 @@
 
     .event-single-date {
         @apply font-body;
-        font-feature-settings: 'salt' on;
         color: #757576;
         font-size: 0.8rem;
     }
@@ -839,7 +819,6 @@
 
     .timing-info-label {
         @apply font-body font-semibold text-body-s pb-2 mb-2 border-b uppercase tracking-wide;
-        font-feature-settings: 'salt' on;
         color: #757576;
         border-color: #E8E8E8;
         font-size: 0.75rem;
@@ -847,7 +826,6 @@
 
     .timing-info-value {
         @apply font-body font-semibold text-body-s text-gray-900;
-        font-feature-settings: 'salt' on;
     }
 }
 
@@ -879,7 +857,6 @@
 .event-summary-learn {
     .event-summary-learn-title {
         @apply font-body font-semibold text-body-m text-gray-900 mb-4;
-        font-feature-settings: 'salt' on;
     }
 
     .event-summary-learn-list {
@@ -913,7 +890,6 @@
 
     .event-speakers-label {
         @apply font-body font-semibold text-body-m text-gray-900;
-        font-feature-settings: 'salt' on;
     }
 
     .event-speaker-photo {
@@ -924,7 +900,6 @@
 
     .event-speaker-name {
         @apply font-body font-semibold text-body-s text-gray-900;
-        font-feature-settings: 'salt' on;
     }
 
     .event-speaker-role {
