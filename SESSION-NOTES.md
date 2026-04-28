@@ -573,3 +573,67 @@ Dropped (post-Session-6 re-evaluation):
 ### Total experiment ROI
 
 If the measured 51% saving holds in real-world traffic, Path A pays back the entire $37.82 experiment cost after ~8 production reviews on the new configuration. The workflow change is in this commit; nothing else needed to start collecting that ROI.
+
+---
+
+## Session 7 — Triage classifier refactor + frontmatter-only short-circuit (2026-04-28)
+
+Started by trimming the Session 6 backlog (dropped fact-check cap, diff trim, Sonnet-for-infra, fixture set — see commit `f477191abe`). Then tackled the surviving top-priority item: frontmatter-only short-circuit. Discovered a much bigger refactor opportunity along the way and shipped both together.
+
+### What shipped
+
+**Architecture B — fully deterministic triage except prose check.** The model used to do path-precedence domain classification, line/file counts for triviality, and commit-trailer scanning for agent-authored. None of it needed semantic judgment. Pulled all classification into a Python helper; the model is now invoked only when shell pre-classifies as trivial OR frontmatter-only — and only for the prose check.
+
+- **`triage-classify.py`** (new, 350 lines) — deterministic classifier. Takes PR JSON + diff, emits classification JSON. No API calls. Tested on 6 real PRs (the Session-5 fixture) plus 6 synthetic edge cases.
+- **`claude-triage.yml`** (rewrite) — calls helper, conditionally calls model only when `prose_check_needed`. Emits per-run summary line including the new `prose-checked` field.
+- **`triage.md`** (130 → 60 lines) — collapsed to just the prose-check prompt. Classification rules now live in code; the markdown points at the helper as source of truth.
+- **`claude-code-review.yml`** — skip condition extended to `review:frontmatter-only`.
+- **`AGENTS.md`** — "Trivial PRs short-circuit" section rewritten to cover both labels.
+
+**New label:** `review:frontmatter-only` (color `c2e0c6`, sibling of `review:trivial`). Created on `CamSoper/pulumi.docs` for fork testing. **Deploy step**: needs creation on `pulumi/docs` upstream when this lands.
+
+Commits on `CamSoper/pr-review-overhaul`:
+
+- `0ef196d12b` — classifier helper
+- `a182f02a2d` — workflow rewrite + AGENTS.md + skip extension
+- `4a34329a6c` — classifier fixes (frontmatter detection + link-set diff)
+- `f477191abe` — backlog trim (came earlier in the session)
+
+### Cost shape change
+
+Most PRs now make zero model calls during triage. The Session-6 measurement framework would let us quantify this in real traffic — under the new architecture only trivial / frontmatter-only PRs cost a Sonnet round-trip (~$0.001 each), and everything else costs nothing at the triage stage. Meaningful only because triage runs on every ready PR.
+
+Stacks with Path A: Path A cut the *initial-review* cost; this cuts the *triage* cost. Different parts of the pipeline; they multiply.
+
+### Bugs caught by fork-PR testing
+
+Both bugs in the classifier, both surfaced by the test set rather than by the synthetic suite. Worth remembering:
+
+1. **Hunks deep inside multi-line frontmatter were misclassified as body.** The initial heuristic seeded "pre-frontmatter" only when `old_start <= 1`. Any hunk inside frontmatter at line >1 (e.g., aliases edits on a docs page with 20-line frontmatter) defaulted to "body" and missed the boundary entirely. Fixed with a routine that uses `---` context-line positions as ground truth, with content-shape fallback when no `---` appears in the hunk.
+2. **`has_link_change` over-fired on typo fixes.** A `recieve` → `receive` change in a paragraph containing markdown links flagged as a link change because the regex matched `[text](url)` on the changed line, even though the link itself was identical on `-` and `+` sides. Replaced per-line regex with set-comparison: collect `(text, url)` tuples from all `+` lines and all `-` lines, compare. Equal sets → no link change.
+
+### Methodology lessons
+
+1. **Stale `refs/pull/N/merge` doesn't auto-refresh when base updates.** I pushed a classifier fix to `cam/master`, then re-triggered triage on existing PRs — but `actions/checkout` resolved the stale merge ref and ran the OLD classifier. Took two debug rounds to spot. Fix: rebase the test branch onto the new base (forces merge ref regeneration) OR force-push to the head branch. Worth a CLAUDE.md / AGENTS.md note next time it bites.
+2. **Test-design bug: my "normal" PR was actually trivial-by-spec.** I designed test 4 (the no-model-call path) with 4 lines of body change, no link diff, no code blocks — which is exactly what `review:trivial` means. Classifier correctly fired trivial; my expectation was wrong. Lesson: when designing test fixtures for predicates, size the input *for the predicate*, not "feels normal-ish."
+3. **Set-comparison beats per-line pattern matching for "did X change" detection.** The link-change bug came from matching `[link](url)` on any changed line. The fix — diff the link sets between `-` and `+` lines — is cleaner, more accurate, and matches what the spec actually means by "no links added or modified."
+
+### Side effects worth tracking
+
+- The `<!-- TRIAGE_PROSE -->` advisory now applies to either trivial or frontmatter-only PRs. The comment template threads the right short-circuit label name dynamically (`review:trivial` vs `review:frontmatter-only`). Verified on test PRs 50 and 52.
+- Frontmatter-only prose check: the model correctly inspected `meta_desc` for typos and skipped data fields. Test PR 52 with two intentional typos (`togther`, `manageing`) flagged both correctly.
+- The `prose-checked=true|false` field in the triage log line gives instant visibility into whether the model was invoked. Useful for cost tracking in real traffic.
+
+### Backlog after Session 7
+
+Remaining:
+
+1. **Cache-friendliness audit.** Restructure shared system prompts to hit the 5-min Anthropic prompt cache when reviews cluster.
+2. **Investigate PR 45's prose-regression pattern.** Open question from Session 6 — needs a prompt-nudge experiment.
+
+Plus standing **deploy step**: create `review:frontmatter-only` label on `pulumi/docs` upstream when the branch lands.
+
+### Artifacts
+
+- Test PRs 50–53 on `CamSoper/pulumi.docs` covered all four scenarios (trivial / frontmatter-only clean / frontmatter-only with typos / normal). All closed and branches deleted at session end.
+- `cam/master` carries the new triage commits cherry-picked, on top of the FORK-ONLY token swap. Fork is in clean state.
