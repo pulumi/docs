@@ -326,7 +326,7 @@ const prMigrationSettings = new pulumiservice.DeploymentSettings("prMigrationSet
 
 ### Gating review stacks by GitHub label
 
-By default, every pull request against a configured branch creates a review stack. To restrict this to a subset of pull requests, set `reviewStackLabels` on the GitHub Deployment Settings to a list of labels. Review stacks are then created only for pull requests carrying at least one matching label. Matching is case-sensitive, and labels added after a pull request is opened also trigger creation.
+By default, every pull request against a configured branch creates a review stack. Set `reviewStackLabels` in your GitHub deployment settings to limit review stack creation to pull requests that carry at least one of the specified labels. Matching is case-sensitive. Labels added after a pull request is opened will also trigger creation.
 
 The following example shows how to configure this pattern using the [Pulumi Cloud Service provider](/registry/packages/pulumiservice):
 
