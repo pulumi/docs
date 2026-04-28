@@ -159,8 +159,13 @@ A pinned review goes **stale** when you push new commits after it ran. Stale rev
 
 The `<!-- CLAUDE_REVIEW N/M -->` comments are managed by the pipeline. Don't delete them — the re-entrant skill expects to find and edit them in place. If you accidentally delete the 1/M summary, the next run posts fresh at the bottom of the timeline; recoverable but ugly.
 
-### Trivial PRs short-circuit
+### Trivial and frontmatter-only PRs short-circuit
 
-If triage labels the PR `review:trivial` (≤5 lines, prose-only, single file, no frontmatter or link changes), the Claude review skips entirely. Linters still run. This is intentional — typos and one-liners don't need a model in the loop.
+Two label-driven short-circuits skip the full Claude review (linters still run):
 
-Triage also runs a quick spelling/grammar pass on the diff for trivial PRs. If it spots anything, it posts a single advisory comment listing the concerns AND applies a `review:prose-flagged` label so reviewers don't miss it. The trivial label still applies and the full review still skips. This is a guard against rubber-stamping — a typo "fix" that introduces a typo gets flagged before merge.
+- **`review:trivial`** — ≤5 lines, prose-only body changes, single Hugo content `.md` file, no frontmatter changes, no link changes, no code blocks. Typo fixes and one-liners.
+- **`review:frontmatter-only`** — any number of Hugo content `.md` files where every change is inside the frontmatter block. Aliases sweeps, `draft: false` flips, `meta_desc` rewrites, social copy edits.
+
+For both categories, triage runs a focused spelling/grammar pass on the relevant diff slice. If it finds anything, it posts a single advisory comment listing the concerns AND applies `review:prose-flagged` so reviewers don't miss it. The short-circuit label still applies and the full review still skips. This is a guard against rubber-stamping — a typo "fix" that introduces a typo, or a `meta_desc` rewrite with a wrong-word substitution, gets flagged before merge.
+
+Classification is deterministic and lives in `.claude/commands/_common/scripts/triage-classify.py` — domain (path-precedence), triviality, frontmatter-only detection, fact-check signal, and agent-authored signal are all path/grep rules. The model is invoked only for the prose check, only when the shell pre-classifies as trivial or frontmatter-only.

@@ -69,18 +69,19 @@ jobs:
           fi
 
       # Triage is a narrow classification task: read the PR, decide which
-      # domains it touches, and emit a JSON classification. The shell then
-      # deterministically computes ADD/REMOVE against current labels and
-      # runs gh pr edit.
+      # domains it touches, and emit a label delta. Almost all of that is
+      # deterministic path matching and grep-on-diff, so it runs in shell
+      # via triage-classify.py — no API call needed.
       #
-      # Direct curl to the Anthropic API (instead of claude-code-action)
-      # because:
-      # - the action's agentic loop burned 60-90s per run on bun/SDK init,
-      #   of which only ~19s was the model call;
-      # - leaving the delta computation to Sonnet was unreliable (it
-      #   skipped the remove step when ADD was empty, stranding stale
-      #   labels on the PR).
-      # Total wall time with this approach is ~15-25s.
+      # The model is invoked ONLY when the shell classifies the PR as
+      # trivial or frontmatter-only — the two cases that short-circuit the
+      # full review and therefore need a sanity-check prose pass to guard
+      # against rubber-stamping. Most PRs skip the model entirely.
+      #
+      # When invoked, the model gets a focused prose-check prompt and a
+      # diff slice (capped at 50KB — trivial/frontmatter-only PRs are
+      # small by definition). Direct curl to the Anthropic API keeps
+      # cold-start latency near zero.
       #
       # continue-on-error keeps the workflow green on transient API or
       # gh failures. A missed triage is self-healing at the next
@@ -100,82 +101,88 @@ jobs:
           # 1. Gather PR state.
           PR_DATA=$(gh pr view "$PR" --repo "$REPO" \
             --json title,body,author,files,labels,additions,deletions,commits,isDraft)
+          # 100KB diff cap. The
+          # classifier doesn't need every byte to detect frontmatter /
+          # link / code-block / version-claim signals.
           DIFF=$(gh pr diff "$PR" --repo "$REPO" | head -c 100000 || true)
 
-          # 2. Load classification rules (triage.md is the source of truth).
-          RULES=$(cat .claude/commands/triage.md)
-
-          # 3. Build the API request. The model outputs ONLY the JSON
-          #    classification; the shell handles ADD/REMOVE arithmetic.
-          REQUEST=$(jq -n \
-            --arg rules "$RULES" \
-            --arg pr_data "$PR_DATA" \
-            --arg diff "$DIFF" \
-            '{
-              model: "claude-sonnet-4-6",
-              max_tokens: 1024,
-              messages: [{
-                role: "user",
-                content: ("You are triaging a pull request in CI. Read the classification rules below and output exactly one JSON object on a single line -- no prose, no code fences, no explanation. The shell will compute ADD and REMOVE label deltas from your output, so you do NOT need to think about current labels.\n\nThe JSON shape is exactly:\n{\"target_domains\":[\"review:docs\"|\"review:blog\"|\"review:infra\"|\"review:programs\",...],\"trivial\":true|false,\"fact_check_needed\":true|false,\"agent_authored\":true|false,\"prose_concerns\":[\"path/to/file.md:LINE -- issue (suggested fix)\",...],\"reasoning\":\"one short sentence\"}\n\ntarget_domains is the set of domain labels that apply per the path-precedence table. It may be empty (e.g., for a PR that only touches layouts/). Do NOT include review:mixed -- the shell adds it when target_domains has more than one element.\n\nprose_concerns is an array of clear spelling/grammar issues found in the diff. Populate ONLY when trivial is true; set to [] when trivial is false. See the Prose check subsection in the rules for what to flag and what to skip. Each entry is a single string formatted as path:line -- issue (suggested fix).\n\nClassification rules:\n\n" + $rules + "\n\n---\n\nPR state:\n\n" + $pr_data + "\n\n---\n\nDiff (truncated to 100000 bytes):\n\n" + $diff)
-              }]
-            }')
-
-          # 4. Call the Anthropic API. On HTTP error, log and bail
-          #    continue-on-error lets the job still report success.
-          RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \
-            -H "x-api-key: $ANTHROPIC_API_KEY" \
-            -H "anthropic-version: 2023-06-01" \
-            -H "content-type: application/json" \
-            -d "$REQUEST" || echo '{"error":"curl_failed"}')
-
-          TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
-          if [[ -z "$TEXT" ]]; then
-            echo "triage: pr=$PR error=no_response"
-            echo "$RESPONSE" | head -c 2000 >&2
-            exit 0
-          fi
-
-          # 5. Parse classification. Strip code fences if present.
-          CLASS=$(echo "$TEXT" \
-            | sed -E 's/^[[:space:]]*```(json)?[[:space:]]*//' \
-            | sed -E 's/[[:space:]]*```[[:space:]]*$//' \
-            | tr -d '\r')
-          if ! echo "$CLASS" | jq -e . >/dev/null 2>&1; then
-            echo "triage: pr=$PR error=unparseable_json"
-            echo "$TEXT" | head -c 2000 >&2
+          # 2. Deterministic classification. No API call.
+          PR_DATA_FILE=$(mktemp)
+          trap 'rm -f "$PR_DATA_FILE"' EXIT
+          printf '%s' "$PR_DATA" > "$PR_DATA_FILE"
+          CLASS=$(printf '%s' "$DIFF" \
+            | python3 .claude/commands/_common/scripts/triage-classify.py "$PR_DATA_FILE" 2>&1) \
+            || CLASS=""
+          if [[ -z "$CLASS" ]] || ! echo "$CLASS" | jq -e . >/dev/null 2>&1; then
+            echo "triage: pr=$PR error=classifier_failed"
+            echo "$CLASS" | head -c 2000 >&2
             exit 0
           fi
 
           DOMAINS_JSON=$(echo "$CLASS" | jq -r '.target_domains // [] | .[]')
+          MIXED=$(echo "$CLASS" | jq -r '.mixed // false')
           TRIVIAL=$(echo "$CLASS" | jq -r '.trivial // false')
+          FRONTMATTER_ONLY=$(echo "$CLASS" | jq -r '.frontmatter_only // false')
           FACT_CHECK=$(echo "$CLASS" | jq -r '.fact_check_needed // false')
           AGENT_AUTHORED=$(echo "$CLASS" | jq -r '.agent_authored // false')
-          REASONING=$(echo "$CLASS" | jq -r '.reasoning // "(none)"')
-          # prose_concerns is a string array; one finding per array element.
-          # Newline-joined for shell consumption. Empty when not trivial.
-          PROSE_CONCERNS=$(echo "$CLASS" | jq -r '.prose_concerns // [] | .[]')
+          PROSE_CHECK_NEEDED=$(echo "$CLASS" | jq -r '.prose_check_needed // false')
 
-          # 6. Build TARGET label set per triage.md §Procedure.
+          # 3. Conditional prose check (model call only for trivial /
+          #    frontmatter-only PRs).
+          PROSE_CONCERNS=""
+          if [[ "$PROSE_CHECK_NEEDED" == "true" ]]; then
+            # 50KB diff cap — trivial/frontmatter-only PRs are tiny.
+            PROSE_DIFF=$(printf '%s' "$DIFF" | head -c 50000)
+            PROSE_RULES=$(cat .claude/commands/triage.md)
+            REQUEST=$(jq -n \
+              --arg rules "$PROSE_RULES" \
+              --arg diff "$PROSE_DIFF" \
+              '{
+                model: "claude-sonnet-4-6",
+                max_tokens: 512,
+                messages: [{
+                  role: "user",
+                  content: ("You are doing a focused prose check on a small pull request that the triage shell already classified as trivial or frontmatter-only. The full review will be skipped, so this is a sanity-check pass for spelling and grammar issues that an author or reviewer might miss.\n\nOutput exactly one JSON object on a single line, no prose, no code fences:\n{\"prose_concerns\":[\"path/to/file.md:LINE -- issue (suggested fix)\",...]}\n\nIf you find no issues, output {\"prose_concerns\":[]}.\n\nFor frontmatter-only PRs, only inspect prose-bearing fields: title, meta_desc, description, social_image_text, excerpt. Skip aliases, tags, categories, draft flags, dates, and other data fields.\n\nReview rules (read the Prose check subsection):\n\n" + $rules + "\n\n---\n\nDiff (truncated to 50000 bytes):\n\n" + $diff)
+                }]
+              }')
+            RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \
+              -H "x-api-key: $ANTHROPIC_API_KEY" \
+              -H "anthropic-version: 2023-06-01" \
+              -H "content-type: application/json" \
+              -d "$REQUEST" || echo '{"error":"curl_failed"}')
+            TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
+            if [[ -n "$TEXT" ]]; then
+              PROSE_JSON=$(echo "$TEXT" \
+                | sed -E 's/^[[:space:]]*```(json)?[[:space:]]*//' \
+                | sed -E 's/[[:space:]]*```[[:space:]]*$//' \
+                | tr -d '\r')
+              if echo "$PROSE_JSON" | jq -e . >/dev/null 2>&1; then
+                PROSE_CONCERNS=$(echo "$PROSE_JSON" | jq -r '.prose_concerns // [] | .[]')
+              fi
+            fi
+          fi
+
+          # 4. Build TARGET label set.
           declare -A TARGET
-          DOMAIN_COUNT=0
           for d in $DOMAINS_JSON; do
             TARGET[$d]=1
-            DOMAIN_COUNT=$((DOMAIN_COUNT + 1))
           done
-          (( DOMAIN_COUNT > 1 )) && TARGET["review:mixed"]=1
+          [[ "$MIXED" == "true" ]] && TARGET["review:mixed"]=1
           if [[ "$TRIVIAL" == "true" ]]; then
             TARGET["review:trivial"]=1
+          elif [[ "$FRONTMATTER_ONLY" == "true" ]]; then
+            TARGET["review:frontmatter-only"]=1
           elif [[ "$FACT_CHECK" == "true" ]]; then
             TARGET["fact-check:needed"]=1
           fi
           [[ "$AGENT_AUTHORED" == "true" ]] && TARGET["agent-authored"]=1
-          # Trivial + prose concerns: flag for human attention so the
-          # advisory comment isn't lost in the timeline.
-          if [[ "$TRIVIAL" == "true" && -n "$PROSE_CONCERNS" ]]; then
+          # Prose concerns flag — applies to either trivial or
+          # frontmatter-only when the prose check turned up issues.
+          if [[ "$PROSE_CHECK_NEEDED" == "true" && -n "$PROSE_CONCERNS" ]]; then
             TARGET["review:prose-flagged"]=1
           fi
 
-          # 7. Current triage-managed labels (exclude state labels).
+          # 5. Current triage-managed labels (exclude state labels).
           declare -A EXISTING
           while IFS= read -r lbl; do
             case "$lbl" in
@@ -186,7 +193,7 @@ jobs:
             esac
           done < <(echo "$PR_DATA" | jq -r '.labels[].name')
 
-          # 8. Compute ADD / REMOVE.
+          # 6. Compute ADD / REMOVE.
           ADD_LIST=()
           for t in "${!TARGET[@]}"; do
             [[ -z "${EXISTING[$t]:-}" ]] && ADD_LIST+=("$t")
@@ -196,8 +203,7 @@ jobs:
             [[ -z "${TARGET[$e]:-}" ]] && REMOVE_LIST+=("$e")
           done
 
-          # 9. Apply the delta via gh pr edit. Single call, --add and
-          #    --remove as applicable. Skip the call only on a true no-op.
+          # 7. Apply the delta. Single gh pr edit call when non-empty.
           ARGS=()
           if (( ${#ADD_LIST[@]} > 0 )); then
             ARGS+=(--add-label "$(IFS=,; echo "${ADD_LIST[*]}")")
@@ -209,22 +215,27 @@ jobs:
             gh pr edit "$PR" --repo "$REPO" "${ARGS[@]}" || true
           fi
 
-          # 9a. Prose-check advisory comment.
+          # 8. Prose-check advisory comment.
           # Always delete any prior TRIAGE_PROSE comment first so re-triage
-          # cleans up cleanly (e.g., a re-classification that demotes the PR
-          # from trivial to non-trivial must drop the stale prose comment).
-          # Then post fresh only when trivial AND concerns are non-empty.
+          # cleans up (e.g., a re-classification that demotes the PR from
+          # trivial to non-trivial must drop the stale prose comment).
+          # Then post fresh when prose_check_needed AND concerns are non-empty.
           gh api "repos/$REPO/issues/$PR/comments" \
               --jq '.[] | select(.body | startswith("<!-- TRIAGE_PROSE -->")) | .id' \
               | while read -r cid; do
                   [[ -n "$cid" ]] && gh api -X DELETE "repos/$REPO/issues/comments/$cid" >/dev/null 2>&1 || true
                 done
 
-          if [[ "$TRIVIAL" == "true" && -n "$PROSE_CONCERNS" ]]; then
+          if [[ "$PROSE_CHECK_NEEDED" == "true" && -n "$PROSE_CONCERNS" ]]; then
+              if [[ "$TRIVIAL" == "true" ]]; then
+                SHORTCIRCUIT_LABEL="review:trivial"
+              else
+                SHORTCIRCUIT_LABEL="review:frontmatter-only"
+              fi
               BULLETS=$(echo "$PROSE_CONCERNS" | sed 's/^/- /')
               BODY=$(cat <<EOF
           <!-- TRIAGE_PROSE -->
-          🔍 **Triage prose check** — possible issues in the diff. Full review is skipped (\`review:trivial\`); please double-check before merging.
+          🔍 **Triage prose check** — possible issues in the diff. Full review is skipped (\`$SHORTCIRCUIT_LABEL\`); please double-check before merging.
 
           $BULLETS
 
@@ -234,14 +245,9 @@ jobs:
               gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
           fi
 
-          # 10. Summary line for the workflow log.
-          DOMAINS_CSV=""
-          for d in "${!TARGET[@]}"; do
-            [[ "$d" == "review:mixed" || "$d" == "review:trivial" || "$d" == "agent-authored" || "$d" == "fact-check:needed" ]] && continue
-            DOMAINS_CSV="${DOMAINS_CSV:+$DOMAINS_CSV,}$d"
-          done
+          # 9. Summary line for the workflow log.
+          DOMAINS_CSV=$(echo "$DOMAINS_JSON" | paste -sd, -)
           ADDED_CSV="${ADD_LIST[*]:-}"; ADDED_CSV="${ADDED_CSV// /,}"
           REMOVED_CSV="${REMOVE_LIST[*]:-}"; REMOVED_CSV="${REMOVED_CSV// /,}"
           PROSE_COUNT=$(echo "$PROSE_CONCERNS" | grep -c . || true)
-          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL fact-check=$FACT_CHECK agent-authored=$AGENT_AUTHORED prose-concerns=$PROSE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
-          echo "reasoning: $REASONING"
+          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY fact-check=$FACT_CHECK agent-authored=$AGENT_AUTHORED prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"

@@ -115,6 +115,8 @@ jobs:
             SKIP="draft"
           elif [[ ",$LABELS_CSV," == *",review:trivial,"* ]]; then
             SKIP="trivial"
+          elif [[ ",$LABELS_CSV," == *",review:frontmatter-only,"* ]]; then
+            SKIP="frontmatter-only"
           elif [[ "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ]]; then
             SKIP="bot-author"
           fi
