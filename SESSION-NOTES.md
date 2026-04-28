@@ -550,13 +550,17 @@ Done:
 - **NEW #1.5 (broadened allowed-tools + pre-compute injection)** — shipped this session.
 
 Still pending (re-prioritized after Path A landed):
+
 1. **Frontmatter-only short-circuit in triage** (was #6; now top priority). Independent of Path A; ship and validate via real traffic.
 2. **Cache-friendliness audit** (was #7).
-3. **Fact-check cap with deferred resumption** (was #3 + #4 paired).
-4. **Investigate PR 45's prose-regression pattern** — open question after Path A measurement.
-5. **Triage diff cap trim** (was #1; small saving, near-zero risk).
-6. **Sonnet for `review:infra` initial reviews** (was #2; partially superseded — Path A already gets most of the saving on infra without the model swap).
-7. **Standing fixture set for regression tests** (was #5). The 6 fork PRs (CamSoper/pulumi.docs#44–49) now have **three** validated runs (Opus baseline, Sonnet narrow, Sonnet broadened, Opus Path A) — they ARE the standing fixture set if we want to formalize.
+3. **Investigate PR 45's prose-regression pattern** — open question after Path A measurement.
+
+Dropped (post-Session-6 re-evaluation):
+
+- **Fact-check cap with deferred resumption** (was #3+#4). Fact-check is already gated by `fact-check:needed`, Path A already addressed the cost concern that motivated capping, and the deferred-resumption mechanism creates a silent-gap failure mode (pinned comment looks complete but isn't). Optimizing fact-check is optimizing the wrong axis.
+- **Triage diff cap trim 100KB→20KB** (was #1). Triage already runs Sonnet on diffs that are almost always under cap; trim only matters on rare 100KB+ PRs and even then it's a small-Sonnet-tokens-getting-smaller saving. Backlog clutter.
+- **Sonnet for `review:infra` initial reviews** (was #2). Path A already captured the infra saving (PR 48 went $3.60 → $0.89 on Opus Path A) — marginal saving from the model swap is small. Infra failures have higher blast radius than prose failures, and Session 6 already deferred Sonnet-everywhere on reliability grounds. Saving pennies on the highest-risk review domain is a bad trade.
+- **Standing fixture set for regression tests** (was #5). Already exists as a pointer: the 6 fork PRs at `CamSoper/pulumi.docs#44–49` plus the validated runs in `scratch/2026-04-28-pipeline-comparison/`. That's a doc-comment, not a backlog item. Use them when prompts change.
 
 ### Artifacts
 
