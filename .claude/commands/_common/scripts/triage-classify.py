@@ -1,0 +1,308 @@
+#!/usr/bin/env python3
+"""Deterministic PR triage classification.
+
+Reads the PR JSON (from `gh pr view --json title,body,author,files,labels,additions,deletions,commits,isDraft`)
+on argv[1] and the unified diff (from `gh pr diff`) on stdin. Emits a single
+JSON object on stdout with the classification fields the workflow consumes.
+
+This script does not call any APIs and has no side effects. The model is only
+invoked downstream when `prose_check_needed` is true (trivial or
+frontmatter-only PRs); everything else is path matching and grep-on-diff.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import sys
+from collections.abc import Iterable
+
+# ---- Path-precedence domain classification --------------------------------
+
+WEBPACK_RE = re.compile(r"^webpack\.[^/]+\.js$")
+
+
+def classify_path(path: str) -> str | None:
+    # Programs first — both static/programs/** AND scripts/programs/** are
+    # programs territory (the latter would otherwise fall to infra).
+    if path.startswith("static/programs/") or path.startswith("scripts/programs/"):
+        return "review:programs"
+    if path.startswith("content/blog/") or path.startswith("content/case-studies/"):
+        return "review:blog"
+    for prefix in ("content/docs/", "content/learn/", "content/tutorials/", "content/what-is/"):
+        if path.startswith(prefix):
+            return "review:docs"
+    if path.startswith(".github/workflows/"):
+        return "review:infra"
+    if path.startswith("scripts/") or path.startswith("infrastructure/"):
+        return "review:infra"
+    if path in ("Makefile", "package.json", "webpack.config.js"):
+        return "review:infra"
+    if WEBPACK_RE.match(path):
+        return "review:infra"
+    return None
+
+
+# ---- Per-file diff inspection ---------------------------------------------
+
+HUNK_HEADER_RE = re.compile(r"^@@ -(\d+)(?:,\d+)? \+(\d+)(?:,\d+)? @@")
+LINK_RE = re.compile(r"\[[^\]]*\]\([^)]+\)")
+HEADING_RE = re.compile(r"^#{1,6}\s")
+VERSION_CLAIM_RE = re.compile(
+    r"\b(since v?\d+(\.\d+)?|available in v?\d+|now supports|added in v?\d+|new in v?\d+)",
+    re.IGNORECASE,
+)
+
+
+def split_files(diff_text: str) -> list[tuple[str, str]]:
+    """Split the unified diff into [(path, file_diff_text), ...]."""
+    if not diff_text.strip():
+        return []
+    chunks = re.split(r"^diff --git ", diff_text, flags=re.MULTILINE)
+    out: list[tuple[str, str]] = []
+    for chunk in chunks[1:]:  # chunks[0] is empty preamble
+        first_line, _, _ = chunk.partition("\n")
+        m = re.match(r"a/(\S+) b/(\S+)", first_line)
+        if not m:
+            continue
+        path = m.group(2)  # 'b' path is the new path (handles renames)
+        out.append((path, "diff --git " + chunk))
+    return out
+
+
+def iter_hunks(file_diff: str) -> Iterable[tuple[str, list[str]]]:
+    """Yield (header_line, body_lines) per hunk."""
+    header: str | None = None
+    body: list[str] = []
+    in_hunk = False
+    for line in file_diff.split("\n"):
+        if line.startswith("@@"):
+            if header is not None:
+                yield header, body
+            header = line
+            body = []
+            in_hunk = True
+        elif in_hunk:
+            body.append(line)
+    if header is not None:
+        yield header, body
+
+
+def classify_file(path: str, file_diff: str) -> dict:
+    """Walk a single file's diff and return its classification flags."""
+    head300 = file_diff[:300]
+    is_rename = "rename from" in head300 or "rename to" in head300
+    is_delete = "+++ /dev/null" in head300
+    is_new = "--- /dev/null" in head300
+    is_binary = "GIT binary patch" in file_diff or "\nBinary files " in file_diff
+    is_md = path.endswith(".md")
+
+    flags = {
+        "path": path,
+        "is_md": is_md,
+        "is_rename": is_rename,
+        "is_delete": is_delete,
+        "is_new": is_new,
+        "is_binary": is_binary,
+        "has_frontmatter_change": False,
+        "has_body_change": False,
+        "has_code_block_change": False,
+        "has_shortcode_change": False,
+        "has_link_change": False,
+        "has_new_heading": False,
+        "has_new_version_claim": False,
+    }
+
+    for header, body_lines in iter_hunks(file_diff):
+        m = HUNK_HEADER_RE.match(header)
+        if not m:
+            continue
+        old_start = int(m.group(1))
+
+        # Frontmatter state machine — only meaningful for .md files.
+        # If a hunk starts at line 1 of a .md file, we begin "before
+        # frontmatter" and the first `---` moves us into it. Otherwise we
+        # assume "body" (Hugo frontmatter is rarely deeper than ~30 lines,
+        # and hunks deep in a file are body changes regardless).
+        if is_md and old_start <= 1:
+            state = "pre-frontmatter"
+        else:
+            state = "body"
+
+        for line in body_lines:
+            if not line:
+                continue
+            marker = line[0]
+            content = line[1:]
+            stripped = content.strip()
+
+            # Frontmatter boundary toggling — both context and changed
+            # lines can be `---`. If a `---` line is added or removed,
+            # that's itself a frontmatter change.
+            if is_md and stripped == "---" and marker in " +-":
+                if state == "pre-frontmatter":
+                    state = "frontmatter"
+                elif state == "frontmatter":
+                    state = "body"
+                if marker in "+-":
+                    flags["has_frontmatter_change"] = True
+                continue
+
+            if marker == " ":
+                continue  # plain context line, no signal
+
+            if marker not in "+-":
+                continue
+
+            if is_md and state in ("pre-frontmatter", "frontmatter"):
+                flags["has_frontmatter_change"] = True
+                continue
+
+            # Body-side change
+            flags["has_body_change"] = True
+            if stripped.startswith("```"):
+                flags["has_code_block_change"] = True
+            if "{{<" in stripped or "{{%" in stripped:
+                flags["has_shortcode_change"] = True
+            if LINK_RE.search(stripped):
+                flags["has_link_change"] = True
+            if marker == "+" and HEADING_RE.match(stripped):
+                flags["has_new_heading"] = True
+            if marker == "+" and VERSION_CLAIM_RE.search(stripped):
+                flags["has_new_version_claim"] = True
+
+    return flags
+
+
+# ---- PR-level aggregation --------------------------------------------------
+
+AGENT_LOGINS = {"pulumi-bot", "dependabot[bot]", "github-copilot[bot]", "copilot[bot]"}
+AGENT_TRAILER_RES = [
+    re.compile(r"Co-Authored-By:.*(Claude|Cursor|Copilot|noreply@anthropic\.com)", re.IGNORECASE),
+    re.compile(r"Generated with .*(Claude|Cursor|Copilot)", re.IGNORECASE),
+    re.compile(r"🤖 Generated with", re.IGNORECASE),
+]
+
+
+def detect_agent_authored(pr_data: dict) -> bool:
+    author_login = (pr_data.get("author") or {}).get("login", "")
+    if author_login in AGENT_LOGINS:
+        return True
+    for commit in pr_data.get("commits") or []:
+        msg = (commit.get("messageHeadline") or "") + "\n" + (commit.get("messageBody") or "")
+        if any(r.search(msg) for r in AGENT_TRAILER_RES):
+            return True
+    return False
+
+
+def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
+    additions = int(pr_data.get("additions") or 0)
+    deletions = int(pr_data.get("deletions") or 0)
+    files = pr_data.get("files") or []
+    file_count = len(files)
+    total_lines = additions + deletions
+
+    domains: set[str] = set()
+    for f in files:
+        d = classify_path(f.get("path", ""))
+        if d:
+            domains.add(d)
+
+    has_any_frontmatter = any(f["has_frontmatter_change"] for f in file_flags)
+    has_any_body = any(f["has_body_change"] for f in file_flags)
+    has_any_link = any(f["has_link_change"] for f in file_flags)
+    has_any_code = any(f["has_code_block_change"] or f["has_shortcode_change"] for f in file_flags)
+    has_any_rename_or_delete = any(f["is_rename"] or f["is_delete"] for f in file_flags)
+    has_any_new_file = any(f["is_new"] for f in file_flags)
+    has_any_binary = any(f["is_binary"] for f in file_flags)
+
+    # Trivial and frontmatter-only short-circuits only apply to Hugo content
+    # markdown — never to programs, scripts, layouts, or other code paths.
+    # A 5-line .ts change shouldn't escape review just because it has no
+    # fenced code blocks.
+    all_files_content_md = file_count > 0 and all(
+        f.get("path", "").startswith("content/") and f.get("path", "").endswith(".md")
+        for f in files
+    )
+
+    trivial = (
+        total_lines <= 5
+        and file_count == 1
+        and all_files_content_md
+        and not has_any_frontmatter
+        and not has_any_link
+        and not has_any_code
+        and not has_any_rename_or_delete
+        and not has_any_new_file
+        and not has_any_binary
+    )
+
+    # Frontmatter-only: any number of content/*.md files, but every file's
+    # changes are entirely within the frontmatter block. Mutually exclusive
+    # with trivial.
+    frontmatter_only = (
+        not trivial
+        and all_files_content_md
+        and has_any_frontmatter
+        and not has_any_body
+        and not has_any_rename_or_delete
+        and not has_any_new_file
+        and not has_any_binary
+    )
+
+    if trivial:
+        fact_check_needed = False
+    else:
+        fact_check_needed = False
+        for f, ff in zip(files, file_flags):
+            path = f.get("path", "")
+            if path.startswith("content/blog/") or path.startswith("content/case-studies/"):
+                fact_check_needed = True
+                break
+            if path.startswith("static/programs/"):
+                fact_check_needed = True
+                break
+            if path.startswith("content/docs/") and (
+                ff["has_new_heading"] or ff["has_code_block_change"] or ff["has_new_version_claim"]
+            ):
+                fact_check_needed = True
+                break
+
+    return {
+        "target_domains": sorted(domains),
+        "mixed": len(domains) > 1,
+        "trivial": trivial,
+        "frontmatter_only": frontmatter_only,
+        "fact_check_needed": fact_check_needed,
+        "agent_authored": detect_agent_authored(pr_data),
+        "prose_check_needed": trivial or frontmatter_only,
+        "summary": {
+            "lines": total_lines,
+            "files": file_count,
+            "frontmatter_changed": has_any_frontmatter,
+            "body_changed": has_any_body,
+            "rename_or_delete": has_any_rename_or_delete,
+        },
+    }
+
+
+# ---- Entry point -----------------------------------------------------------
+
+
+def main() -> int:
+    if len(sys.argv) != 2:
+        print("usage: triage-classify.py <pr-data.json>  (diff on stdin)", file=sys.stderr)
+        return 2
+    with open(sys.argv[1], encoding="utf-8") as fh:
+        pr_data = json.load(fh)
+    diff_text = sys.stdin.read()
+    files = split_files(diff_text)
+    file_flags = [classify_file(p, d) for p, d in files]
+    result = classify_pr(pr_data, file_flags)
+    json.dump(result, sys.stdout, separators=(",", ":"))
+    sys.stdout.write("\n")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
