@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Cloud: REST API Reference"
-meta_desc: An overview of the Pulumi Cloud REST API for querying organization, stack, state, and other information.
+meta_desc: Overview of the Pulumi Cloud REST API. Query organization, stack, and state data; call any endpoint from the pulumi cloud api CLI.
 title: "REST API Docs"
 h1: Pulumi Cloud REST API
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -25,6 +25,13 @@ aliases:
 ---
 
 {{% cloud-rest-api-intro %}}
+
+## Calling the API
+
+You can call any endpoint two ways:
+
+* **From the CLI** — use [`pulumi cloud api`](/docs/iac/cli/cloud-api/), which inherits your existing CLI credentials, fills `{orgName}`/`{projectName}`/`{stackName}` from the selected stack, and returns a stable JSON error envelope and exit codes that scripts and agents can rely on. Run `pulumi cloud api list` to browse endpoints and `pulumi cloud api describe <path-or-operation-id>` to inspect a specific operation.
+* **Directly over HTTPS** — pair an [access token](/docs/administration/access-identity/access-tokens/) with the standard `Accept` and `Content-Type` headers and call the endpoint with `curl` or any HTTP client.
 
 ## API documentation by category
 
