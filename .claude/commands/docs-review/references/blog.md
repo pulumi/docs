@@ -46,8 +46,12 @@ Flag the following patterns, with examples from the post. Each bullet names the 
 - **TL;DR / summary paragraphs that restate the post.** The reader just finished reading; they don't need a recap.
 - **Empty transitions.** "Let's dive in," "In this post we'll explore," "In conclusion," "Without further ado." Cut them -- flag on first occurrence.
 - **Buzzword tax.** "Landscape," "ecosystem," "leverage" (as a verb), "robust," "seamless," "world-class," "battle-tested." Flag on first occurrence, with a suggested rewrite when the sentence survives the deletion; otherwise flag as a rewrite candidate. If the same buzzword appears three or more times across the post, coalesce the flags into a single finding rather than repeating.
+- **Self-criticism of prior Pulumi decisions.** "We used to handle this badly," "the old way was wrong," "before we got this right." Acceptable in case-studies discussing a *customer's* prior tooling; not acceptable when describing prior Pulumi product behavior. Quote the construction; reframe as forward-looking: "v3.0 introduced X" not "before v3.0, we got it wrong."
+- **Weak conclusions.** A closing paragraph that doesn't name a specific next step. "Check out Pulumi to learn more" without a specific link or command. Quote the conclusion; propose a concrete CTA: "Try it: `pulumi up` against the example at <link>" or "See the X reference at /docs/foo/."
+- **Dense paragraphs.** Paragraphs longer than 6 sentences or filling more than 8 visual lines. Often a sign the content should be a list, a sub-section, or split. Quote the opening; propose either a split or a list conversion.
+- **Listicle bloat.** Posts structured as `## item N:` patterns or numbered top-N lists. Cap at 12 items; cap total post length at ≈3,000 words for listicles. If a list goes longer, suggest which items to cut or merge.
 
-Every AI-slop finding names the *phrase* and the *pattern*. Don't just say "this is AI-written" -- say "em-dash density: 6 em-dashes across 3 paragraphs; consider breaking some into separate sentences."
+Every AI-slop / editorial finding names the *phrase* and the *pattern*. Don't just say "this is AI-written" -- say "em-dash density: 6 em-dashes across 3 paragraphs; consider breaking some into separate sentences."
 
 ### Priority 3 — Code correctness
 
@@ -60,8 +64,19 @@ Apply `docs-review:references:code-examples`. Code in blog posts gets heavily co
 - **Release terminology.** "Public preview," not "public beta" (per `STYLE-GUIDE.md`). "Generally available," not "generally released."
 - **Canonical links to docs.** Every feature announcement should link to the relevant `/docs/` page. Missing doc links are a pre-existing-issue finding (the blog post is fine on its own; it's the site SEO that suffers).
 - **"New" vs "now supports."** A feature that landed more than ~30 days ago should use "now supports" or "recently added," not "new." If the frontmatter `date` is old relative to the claim's subject, flag.
+- **Title quality.** Title should describe the post's subject specifically. Flag clickbait constructions ("You won't believe...", "10 things every X needs"), question-headlines without a clear payoff, and titles that sell a different post than the body delivers.
 
-### Priority 5 — Links
+### Priority 5 — Documentation coverage (feature-announcement posts only)
+
+When a blog post announces a new feature, provider, or significant capability:
+
+- **Check that `/content/docs/` covers it.** Search for the feature name across `content/docs/`, `content/learn/`, `content/tutorials/`. If the only mention of the feature is the blog post itself, that's a finding.
+- **Note specific gaps.** Don't just say "docs are missing" — name the page that should exist (e.g., "no `content/docs/esc/integrations/<feature>/` page found").
+- **Suggest a doc type.** Reference / tutorial / concept guide / how-to — pick the one that matches the feature's nature.
+
+Render under 💡 Pre-existing (this is a project-completeness flag, not a blog quality issue) so the blog can ship without blocking on docs work.
+
+### Priority 6 — Links
 
 - **All links resolve.** Inherited from [`shared-criteria.md`](shared-criteria.md).
 - **Link text is descriptive.** Inherited.
@@ -72,7 +87,7 @@ Apply `docs-review:references:code-examples`. Code in blog posts gets heavily co
 
 Blog files are usually new in their entirety, so the diff/pre-existing distinction blurs. Render every finding under 🚨 Outstanding when the post is new. For incremental edits to existing posts, separate diff-introduced from pre-existing per the standard rules in [`output-format.md`](output-format.md). Cap at 15 per file.
 
-Scope of pre-existing findings for blog: everything from `docs.md`, plus unsourced numerical claims, temporally-rotted feature claims ("a new feature in v3.X" where v3.X is years old), broken `{{< github-card >}}` references, missing author avatars, `meta_image` that is still the placeholder.
+Scope of pre-existing findings for blog: everything from `docs.md`, plus unsourced numerical claims, temporally-rotted feature claims ("a new feature in v3.X" where v3.X is years old), broken `{{< github-card >}}` references, missing author avatars, `meta_image` that is still the placeholder, `meta_image` that uses outdated Pulumi logos (the brand refresh moved on; old logos hurt social sharing).
 
 ## Fact-check
 
@@ -90,5 +105,21 @@ CI fact-check is public-sources-only -- see `ci.md`. Notion and Slack are explic
 - **Meta image design critique.** Flag when `meta_image` is the placeholder or uses outdated logos. Do not critique colors, composition, or layout.
 - **"Consider rewording for engagement."** If there's a factual issue with the wording, say so. Don't draft a more engaging version for its own sake.
 - **Structural rewrites.** "You should reorganize this section" is editorial, not a review finding. Flag factual, link, or code errors -- don't propose TOC rearrangements.
-- **Publishing-readiness checklist.** Full pre-publish checklists (social, meta_image, avatar, `<!--more-->` break) are a separate tool's job. Here, flag missing `social:` / `meta_image` / author profile as single-line findings; don't render the full checklist in every review.
 - **Heading case already consistent within the file.** Style linters catch inconsistency. The only heading case that's a finding is one that names a product incorrectly (e.g., "Pulumi esc" instead of "Pulumi ESC").
+
+## Publishing-readiness checklist
+
+End every blog review with this checklist as a 💡 Pre-existing block. Each item is a single-line finding when violated; the full checklist exists as a roll-up so the author can scan readiness at a glance:
+
+- [ ] `social:` block present with copy for `twitter`, `linkedin`, `bluesky` (without it, the post won't be promoted on social)
+- [ ] `meta_image` set, not empty (0 bytes), and not the default placeholder (used by LinkedIn + social cards)
+- [ ] `meta_image` uses current Pulumi logos, not retired brand variants
+- [ ] `<!--more-->` break present, positioned after the first 1–3 paragraphs (not buried mid-post)
+- [ ] Author profile exists in `data/team/team/` with an avatar
+- [ ] All links resolve (inherited from `shared-criteria.md`)
+- [ ] Code examples correct with language specifiers (per `code-examples.md`)
+- [ ] No animated GIFs used as `meta_image` (first-frame fallback breaks the social preview)
+- [ ] Images have alt text; screenshots have 1px gray borders (per `image-review.md`)
+- [ ] Title ≤60 characters or `allow_long_title: true` set in frontmatter
+
+Several of these are caught at pre-commit by `lint-markdown.js` (title length, meta description length, `meta_image` placeholder). Items the linter catches don't need to be flagged again here — render the checklist with linter-caught items already checked.
