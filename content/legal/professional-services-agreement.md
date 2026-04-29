@@ -13,7 +13,7 @@ BY ACCEPTING THIS AGREEMENT, EITHER BY EXECUTING A STATEMENT OF WORK (“SOW”)
 
 You may not receive Professional Services if You are Our direct competitor, except with Our prior written consent. In addition, You may not receive Professional Services for purposes of evaluating or monitoring their quality or performance, or for any other benchmarking or competitive purposes.
 
-This Agreement was last updated on June 27, 2018. It is effective between You and Us as of the date of Your accepting this Agreement.
+This Agreement was last updated on September 9, 2025. It is effective between You and Us as of the date of Your accepting this Agreement.
 
 <h2 class="h4">1.&nbsp;&nbsp;&nbsp;&nbsp;GENERAL TERMS</h2>
 <p>1.1&nbsp;&nbsp;&nbsp;&nbsp; Your use of the Pulumi Services is governed by this Agreement (the "Agreement"). "Pulumi" means Pulumi Corporation, located at 601 Union St., Suite 1415, Seattle, WA 98101 and its subsidiaries or affiliates involved in providing the Pulumi Services. The “Pulumi Services” means the services Pulumi makes available through this website, the Pulumi platform, and any other software or services offered by Pulumi in connection to any of those.</p>
