@@ -7,6 +7,11 @@ description: Re-entrant docs review. Updates the existing pinned review in place
 
 Shared primitive for "previous review + new commits/mention = updated review." The output replaces the contents of the existing pinned-comment sequence; a fresh post happens only via the Fallback path.
 
+Invoked from:
+
+- `.github/workflows/claude.yml` when an `@claude` mention lands on a PR with an existing pinned review.
+- `pr-review/SKILL.md` Step 3 (when `review:claude-stale` is set; refreshes locally) and Step 8 (dispute path; refreshes locally with a maintainer-authored `MENTION_BODY`).
+
 ---
 
 ## Inputs
