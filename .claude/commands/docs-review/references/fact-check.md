@@ -299,7 +299,7 @@ mcp__claude_ai_Slack__slack_search_public_and_private
 
 Default search window: last 6 months. Absence of these tools must not fail the workflow -- annotate the evidence as "internal sources unavailable."
 
-**CI fact-check never uses Notion or Slack** -- the CI tool set excludes them. See `ci.md` §Hard rules.
+**CI fact-check never uses Notion or Slack** -- the CI tool set excludes them. See `docs-review/ci.md` §Hard rules.
 
 ### Confidence calibration
 

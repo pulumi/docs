@@ -157,7 +157,7 @@ This is the **first big user-facing output**. Render in this order, top to botto
 
 3. **Per-page review links** — direct links + change-aware specific review items from `test-deployment-guidance.sh` output.
 
-4. **Pinned review findings** — render the parsed 🚨 Outstanding, ⚠️ Low-confidence, 💡 Pre-existing, and ✅ Resolved findings from Step 2 verbatim (they're already in the format from `output-format.md`). If a refresh ran in Step 3, note "*Pinned comment refreshed at HH:MM*" above the findings block. If absent and the user picked local review in Step 3, render those findings here in the same format.
+4. **Pinned review findings** — render the parsed 🚨 Outstanding, ⚠️ Low-confidence, 💡 Pre-existing, and ✅ Resolved findings from Step 2 verbatim (they're already in the format from `docs-review:references:output-format`). If a refresh ran in Step 3, note "*Pinned comment refreshed at HH:MM*" above the findings block. If absent and the user picked local review in Step 3, render those findings here in the same format.
 
 5. **PR description inaccuracies** (only if Step 5 found any) — itemized so the user can see exactly what would change before Step 8 confirmation:
 
@@ -202,12 +202,12 @@ See `pr-review:references:action-preview-templates`.
 The preview shows:
 
 - Chosen action
-- Auto-merge toggle with computed default (per the toggle defaults in `action-preview-templates.md`)
+- Auto-merge toggle with computed default (per the toggle defaults in `pr-review:references:action-preview-templates`)
 - For Make-changes-and-approve: file-by-file changes (PR description corrections + trivial fixes + suggested fixes from CI's pinned findings)
 - The exact comment text that will be posted (using `pr-review:references:message-templates`)
 - The full list of `gh` commands that will run
 
-The posted comment must obey the voice/length rules in `message-templates.md`: never disclose scrutiny level, AI-suspect status, the pinned-comment refresh, or fact-check narration. Step 6's local package is for the maintainer's eyes; the public maintainer comment is its own thing.
+The posted comment must obey the voice/length rules in `pr-review:references:message-templates`: never disclose scrutiny level, AI-suspect status, the pinned-comment refresh, or fact-check narration. Step 6's local package is for the maintainer's eyes; the public maintainer comment is its own thing.
 
 The confirmation menu adapts to the pending action:
 
@@ -234,7 +234,7 @@ Adjudicate per Case 2 dispute rules.
 
 The body is fed to `docs-review:references:update` locally with `MENTION_BODY` populated. Update.md Case 2 takes over: classifies the dispute (domain-knowledge / verifiable / reframing), concedes or holds with citation, and re-renders the pinned comment via `pinned-comment.sh upsert`. Re-fetch the pinned comment afterwards so the Step 6 view reflects the resolution before the action proceeds.
 
-Maintainer write-access is sufficient evidence for domain-knowledge disputes (per update.md Case 2).
+Maintainer write-access is sufficient evidence for domain-knowledge disputes (per `docs-review:references:update` Case 2).
 
 ### Step 9: Execute confirmed action
 

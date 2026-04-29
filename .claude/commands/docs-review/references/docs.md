@@ -25,7 +25,7 @@ The following reference files apply alongside the docs-specific checks below. Co
 
 ### API and resource accuracy
 
-Snippet-level checks live in `code-examples.md`. Docs-specific anchor: when the diff references a resource property, cross-reference the provider's registry schema source (`gh api repos/pulumi/pulumi-<provider>/contents/...`), not memory.
+Snippet-level checks live in `docs-review:references:code-examples`. Docs-specific anchor: when the diff references a resource property, cross-reference the provider's registry schema source (`gh api repos/pulumi/pulumi-<provider>/contents/...`), not memory.
 
 ### Cross-references between docs pages
 
@@ -81,19 +81,19 @@ Extract pre-existing issues from a touched file when any of:
 
 Not a top-level structural change: edits inside an existing H2, adding/removing H3s under an unchanged H2, code-block updates, wording tweaks.
 
-Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, product-name capitalization, deprecated terminology, within-file terminology inconsistencies. These render in the 💡 bucket per [`output-format.md`](output-format.md). Cap at 15 per file. Skip style nits (heading case, list numbering) -- the linter owns those.
+Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, product-name capitalization, deprecated terminology, within-file terminology inconsistencies. These render in the 💡 bucket per `docs-review:references:output-format`. Cap at 15 per file. Skip style nits (heading case, list numbering) -- the linter owns those.
 
 ## Fact-check
 
-Invoke [`fact-check.md`](fact-check.md) with:
+Invoke `docs-review:references:fact-check` with:
 
 - **Files:** the changed `content/docs/**`, `content/learn/**`, `content/tutorials/**`, `content/what-is/**` files
 - **Scrutiny:** `standard`
 - **Bump to `heightened`** when the file is a new page (not previously in `content/`) or a whole-file rewrite (>70% of lines changed)
 
-CI fact-check is public-sources-only -- see `ci.md`.
+CI fact-check is public-sources-only -- see `docs-review/ci.md`.
 
 ## Do not flag
 
-- **Vague editorial feedback without quote-and-rewrite.** "Could be clearer" / "consider reorganizing this paragraph" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `prose-patterns.md`; split a mixed-concept H2; rewrite a label-style heading as answer-first; convert prose-quickstart to numbered steps) ARE in scope -- but every finding must quote the offending text and propose the fix.
+- **Vague editorial feedback without quote-and-rewrite.** "Could be clearer" / "consider reorganizing this paragraph" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first; convert prose-quickstart to numbered steps) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Superseded terminology in historical context.** When a doc describes old behavior intentionally (e.g., "before v3.0, this was called X"), don't flag the old name as deprecated terminology.

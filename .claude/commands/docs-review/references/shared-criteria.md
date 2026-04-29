@@ -62,7 +62,7 @@ The following are owned by the lint job (`scripts/lint/lint-markdown.js` and pee
 
 A diff can't reliably show a missing trailing newline. The linter will either pass or fail on this file; that's the answer.
 
-Image alt text (`MD045`) and fenced-code-block language specifiers (`MD040`) are currently disabled in the linter. Alt text is covered by `image-review.md`; code-block language by `code-examples.md`.
+Image alt text (`MD045`) and fenced-code-block language specifiers (`MD040`) are currently disabled in the linter. Alt text is covered by `docs-review:references:image-review`; code-block language by `docs-review:references:code-examples`.
 
 ### Indented prose
 

@@ -10,7 +10,7 @@ Shared primitive for "previous review + new commits/mention = updated review." T
 Invoked from:
 
 - `.github/workflows/claude.yml` when an `@claude` mention lands on a PR with an existing pinned review.
-- `pr-review/SKILL.md` Step 3 (when `review:claude-stale` is set; refreshes locally) and Step 8 (dispute path; refreshes locally with a maintainer-authored `MENTION_BODY`).
+- `pr-review` Step 3 (when `review:claude-stale` is set; refreshes locally) and Step 8 (dispute path; refreshes locally with a maintainer-authored `MENTION_BODY`).
 
 ---
 
@@ -199,7 +199,7 @@ bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
 
 ## Fallback — pinned comment is missing
 
-If `pinned-comment.sh fetch` returns nothing -- author deleted the comment, history was rewritten, or this is a freshly transitioned PR that somehow skipped the initial review -- fall back to a full initial review using [`ci.md`](../ci.md) and post fresh. The new comment lands at the bottom of the timeline; not ideal, but recoverable.
+If `pinned-comment.sh fetch` returns nothing -- author deleted the comment, history was rewritten, or this is a freshly transitioned PR that somehow skipped the initial review -- fall back to a full initial review using `docs-review/ci.md` and post fresh. The new comment lands at the bottom of the timeline; not ideal, but recoverable.
 
 ---
 

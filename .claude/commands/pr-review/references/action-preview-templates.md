@@ -94,7 +94,7 @@ Contradicted-claim fixes (will be applied):
   content/blog/foo.md:88        — "available since v3.230.0 (not v3.220.0)"
 
 Comment body that will be posted:
-  [Template from message-templates.md]
+  [Template from `pr-review:references:message-templates`]
 
 I will:
 1. Save current branch
@@ -127,7 +127,7 @@ Each candidate is itemized in the preview with a numeric index so the user can v
 
 **Suppressed entirely when `AI_SUSPECT=true`** (see `pr-review:references:trust-and-scrutiny`) — the AI may have introduced subtly wrong "fixes" that look like typos but aren't.
 
-See SKILL.md Step 9 for complete workflow details.
+See `pr-review` Step 9 for complete workflow details.
 
 ## Approve-as-is Preview (with finding suppression)
 

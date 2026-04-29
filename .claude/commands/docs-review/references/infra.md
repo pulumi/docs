@@ -13,7 +13,7 @@ Applied to changes touching:
 - `Makefile`
 - `package.json`, `webpack.config.js`, `webpack.*.js`
 
-Infra files aren't prose; the job is flagging risks for human review, not catching style nits. Findings render in ⚠️ Low-confidence by default; see `output-format.md` §Bucket rules for the two 🚨 exceptions (secrets, clearly-broken state).
+Infra files aren't prose; the job is flagging risks for human review, not catching style nits. Findings render in ⚠️ Low-confidence by default; see `docs-review:references:output-format` §Bucket rules for the two 🚨 exceptions (secrets, clearly-broken state).
 
 ---
 
@@ -25,7 +25,7 @@ Infra files aren't prose; the job is flagging risks for human review, not catchi
 
 ## Criteria
 
-`shared-criteria.md` applies alongside the risk axes below (mostly relevant here for link checking in comments and docs). Pair findings with a pointer to the relevant `BUILD-AND-DEPLOY.md` section.
+`docs-review:references:shared-criteria` applies alongside the risk axes below (mostly relevant here for link checking in comments and docs). Pair findings with a pointer to the relevant `BUILD-AND-DEPLOY.md` section.
 
 ### Lambda@Edge bundling
 

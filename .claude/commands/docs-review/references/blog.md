@@ -29,7 +29,7 @@ The priorities below are ordered for **output rendering** — fact-check finding
 
 ### Priority 1 — Fact-check first
 
-Invoke [`fact-check.md`](fact-check.md) (`scrutiny=heightened`) **before** any style pass. Claim extraction covers:
+Invoke `docs-review:references:fact-check` (`scrutiny=heightened`) **before** any style pass. Claim extraction covers:
 
 - **Every number.** Performance multipliers ("41x faster"), throughput numbers, user counts, customer counts, version numbers, percentages, pricing, benchmark figures.
 - **Every tech claim about Pulumi products.** "Pulumi ESC supports X." "Pulumi Cloud now does Y." "New in v3.X." If the diff asserts a capability, verify it against the current registry schema, release notes, or source.
@@ -99,32 +99,32 @@ These are the feasible, concrete rules from `seo-analyze:references:aeo-checklis
 
 ### Priority 7 — Links
 
-- **All links resolve.** Inherited from [`shared-criteria.md`](shared-criteria.md).
+- **All links resolve.** Inherited from `docs-review:references:shared-criteria`.
 - **Link text is descriptive.** Inherited.
 - **First mention is hyperlinked.** Every tool, technology, or product's *first* mention in the post should be a link (to docs, to the project homepage, to a GitHub repo). Flag only first-mention misses; subsequent mentions don't need the link.
 - **`{{< github-card >}}` references.** Format `owner/repo`; verify the repo exists (`gh api repos/<owner>/<repo>`). A broken card card renders as an ugly empty block.
 
 ## Pre-existing issues (always on)
 
-Blog files are usually new in their entirety, so the diff/pre-existing distinction blurs. Render every finding under 🚨 Outstanding when the post is new. For incremental edits to existing posts, separate diff-introduced from pre-existing per the standard rules in [`output-format.md`](output-format.md). Cap at 15 per file.
+Blog files are usually new in their entirety, so the diff/pre-existing distinction blurs. Render every finding under 🚨 Outstanding when the post is new. For incremental edits to existing posts, separate diff-introduced from pre-existing per the standard rules in `docs-review:references:output-format`. Cap at 15 per file.
 
-Scope of pre-existing findings for blog: everything from `docs.md`, plus unsourced numerical claims, temporally-rotted feature claims ("a new feature in v3.X" where v3.X is years old), broken `{{< github-card >}}` references, missing author avatars, `meta_image` that is still the placeholder, `meta_image` that uses outdated Pulumi logos (the brand refresh moved on; old logos hurt social sharing).
+Scope of pre-existing findings for blog: everything from `docs-review:references:docs`, plus unsourced numerical claims, temporally-rotted feature claims ("a new feature in v3.X" where v3.X is years old), broken `{{< github-card >}}` references, missing author avatars, `meta_image` that is still the placeholder, `meta_image` that uses outdated Pulumi logos (the brand refresh moved on; old logos hurt social sharing).
 
 ## Fact-check
 
-Invoke [`fact-check.md`](fact-check.md) with:
+Invoke `docs-review:references:fact-check` with:
 
 - **Files:** the changed `content/blog/**` / `content/case-studies/**` files
 - **Scrutiny:** `heightened` (always)
 
-CI fact-check is public-sources-only -- see `ci.md`.
+CI fact-check is public-sources-only -- see `docs-review/ci.md`.
 
 ## Do not flag
 
 - **Colloquialisms as inclusive-language violations.** "Overkill," "kill the process," "kick off," "blow away" are fine in technical context.
 - **Drafting social copy, CTAs, or button text.** Flag when the `social:` block is missing or malformed; do not draft replacement copy. Marketing owns voice here, not the reviewer.
 - **Meta image design critique.** Flag when `meta_image` is the placeholder or uses outdated logos. Do not critique colors, composition, or layout.
-- **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `prose-patterns.md`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
+- **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Heading case already consistent within the file.** Style linters catch inconsistency. The only heading case that's a finding is one that names a product incorrectly (e.g., "Pulumi esc" instead of "Pulumi ESC").
 
 ## Publishing-readiness checklist
@@ -136,10 +136,10 @@ End every blog review with this checklist as a 💡 Pre-existing block. Each ite
 - [ ] `meta_image` uses current Pulumi logos, not retired brand variants
 - [ ] `<!--more-->` break present, positioned after the first 1–3 paragraphs (not buried mid-post)
 - [ ] Author profile exists in `data/team/team/` with an avatar
-- [ ] All links resolve (inherited from `shared-criteria.md`)
-- [ ] Code examples correct with language specifiers (per `code-examples.md`)
+- [ ] All links resolve (inherited from `docs-review:references:shared-criteria`)
+- [ ] Code examples correct with language specifiers (per `docs-review:references:code-examples`)
 - [ ] No animated GIFs used as `meta_image` (first-frame fallback breaks the social preview)
-- [ ] Images have alt text; screenshots have 1px gray borders (per `image-review.md`)
+- [ ] Images have alt text; screenshots have 1px gray borders (per `docs-review:references:image-review`)
 - [ ] Title ≤60 characters or `allow_long_title: true` set in frontmatter
 
 Several of these are caught at pre-commit by `lint-markdown.js` (title length, meta description length, `meta_image` placeholder). Items the linter catches don't need to be flagged again here — render the checklist with linter-caught items already checked.
