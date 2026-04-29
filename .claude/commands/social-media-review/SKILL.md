@@ -22,10 +22,10 @@ These posts are published from Pulumi's corporate accounts, not from individual 
 ## Flow
 
 1. **Get the posts** — find the social copy to review (see Local/CI context below). Read the blog body too — you'll need it for any platforms that are missing or unsalvageable.
-2. **Review** — evaluate each platform's existing copy against the critique rubric in `references/critique-rubric.md`. Default verdict is PASS; only FAIL on hard-rule breaks (banned phrases, "I" voice, URL in body, hashtags, markdown, paragraph structure, char limits). Stylistic concerns are NOT failure conditions here.
+2. **Review** — evaluate each platform's existing copy against the critique rubric in `references/critique-rubric.md`. Default verdict is PASS; only FAIL on hard-rule breaks (banned phrases, "I" voice, URL in body, hashtags, markdown, paragraph structure, char limits). Stylistic concerns are NOT failure conditions here. **An empty string (`""`) or omitted platform key counts as missing — skip the critic for that platform and route it to step 3's draft branch.**
 3. **Repair or draft** — for each platform that didn't PASS:
    - **Existing copy that hard-fails** — produce minimum-change copy. Preserve the original voice, specifics, and structure; change only what's needed to satisfy the rule that broke. A hashtag at the end? Drop the hashtag. "I" voice? Swap to "we". URL in body? Remove it. Char overflow? Trim the tail. Substantial rewrites only when the original is unsalvageable (multiple compounding rule breaks, wrong specifics, or content unrelated to the article).
-   - **Missing platform OR existing copy is empty / LLM-fill junk** — draft fresh from the blog post using `references/writing-guide.md` (see "Drafting from a blank `social:` block" and "Spotting and replacing LLM-fill copy"). Honor platform structure: X = 2 paragraphs, LinkedIn = multiple short paragraphs, Bluesky = 2 paragraphs.
+   - **Missing platform OR empty string OR existing copy is empty / LLM-fill junk** — draft fresh from the blog post. **Read the blog body before drafting.** Every specific in the draft (number, named tool, named person, attribution, percentage, comparison) must trace to a line in the blog body — do NOT pull numbers from the URL slug, title, or `meta_desc`. If the article is by a single named author writing personal experience, name them in third person; otherwise corporate "we". Use `references/writing-guide.md` for shape (see "Drafting from a blank `social:` block" and "Spotting and replacing LLM-fill copy"). Honor platform structure: X = 2 paragraphs, LinkedIn = multiple short paragraphs, Bluesky = 2 paragraphs.
 
    What minimum-change repair looks like:
    - **Hashtag drop:** `Define your rules once and catch errors before they hit stacks. #DevOps` → delete ` #DevOps`. ~8 chars changed; everything else identical.
@@ -33,6 +33,13 @@ These posts are published from Pulumi's corporate accounts, not from individual 
    - **Trim to fit:** if the post is 322/255 chars, drop the appended sentence (or the most recent addition) rather than recasting. The cut should be a clean tail trim, not a rewrite.
 
    If the repair changes more than the rule break demands — recasting paragraphs, swapping verbs, "improving" the voice — back up. The critic only complained about one thing.
+
+   **Verify drafted specifics against the blog body before step 4.** For each draft, list each factual claim and confirm it appears in the body. Common error shapes to catch yourself on:
+   - Number invented from URL slug or title (e.g., the slug says `top-8-…` but the body lists 14)
+   - Attribution flipped (assigning a third-party finding to Pulumi, or an external company's claim to "we")
+   - Generalization beyond what the body says ("a team" when the body names one person; "200" when the body says "around 150")
+   - Mechanism revealed when the body withholds it
+   If a claim doesn't trace, drop it or replace it with one that does.
 4. **Verify character counts** — run `python3 -c "print(len('''<copy>'''))"` for ALL repaired or drafted copy before submitting to critique. Limits: X = 255, LinkedIn = 2950, Bluesky = 300. Revise any that exceed the limit. Do not skip this step — sending over-limit copy to the critique loop wastes a round.
 5. **Critique loop** — launch a sub-agent (Agent tool) to validate the repaired/drafted copy. The sub-agent should read `references/critique-rubric.md` and evaluate the copy only (not the blog post). If FAIL, revise and re-critique. You may iterate up to 2 times (3 total critiques). If the copy still fails after the third critique, present the best version with a note about which issues remain.
 6. **Suggestions pass** — for any platform whose **original** copy passed the critic without needing a repair, launch a separate sub-agent (Agent tool) against `references/suggestions-rubric.md` to surface advisory style notes (missing pointer, curiosity gap closed, weak opener, summarizes article, etc.). This NEVER affects the verdict — PASS stays PASS. Skip this pass for any platform that was repaired or drafted from scratch — the new copy is the actionable feedback already; layering advisory notes on top is noise.

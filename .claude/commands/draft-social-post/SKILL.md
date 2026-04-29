@@ -14,17 +14,19 @@ Read a blog post, write or revise social copy into its frontmatter `social:` blo
    - If the user passed a path, use it.
    - Otherwise: run `git status --porcelain` and pick the single modified `content/blog/*/index.md`. If zero or more than one match, ask the user which file.
 
-2. **Read the blog post and any existing `social:` block.** The blog body is needed when you have to draft from scratch. Existing copy is what you'll evaluate for repair vs. preserve.
+2. **Read the blog post in full and any existing `social:` block.** The blog body is the source of truth for every specific you'll use — read it before drafting, not after. Title, URL slug, `meta_desc`, and tags are not authoritative; the body is.
 
 3. **Per-platform: classify and act.** For each of X, LinkedIn, Bluesky:
 
-   - **Empty / missing** — draft fresh from the blog body using `.claude/commands/social-media-review/references/writing-guide.md`. Honour platform structure: X = 2 paragraphs, LinkedIn = multiple short paragraphs, Bluesky = 2 paragraphs. Voice: if a single named author wrote a personal-experience post, use their name; otherwise corporate "we".
+   - **Empty (`""`), missing key, or LLM-fill junk** — draft fresh from the blog body using `.claude/commands/social-media-review/references/writing-guide.md` (see "Drafting from a blank `social:` block" — it includes the verify-specifics-against-body checklist). Honour platform structure: X = 2 paragraphs, LinkedIn = multiple short paragraphs, Bluesky = 2 paragraphs. Voice: if a single named author wrote a personal-experience post, name them in third person; otherwise corporate "we".
 
    - **Existing copy that breaks a hard rule** (banned phrases, "I" voice, URL in body, hashtags, markdown, paragraph structure, char limits — see `.claude/commands/social-media-review/references/critique-rubric.md`) — minimum-change repair. Drop the hashtag, swap the "I" to "we", trim the over-limit tail. Don't recast paragraphs or "improve" the voice. The original specifics and structure stay.
 
-   - **Existing copy that's clearly LLM-fill junk** (recognizable patterns: staccato fragments as drama, em-dash chains, generic openers like "In today's cloud landscape…", buzzword stacks) — treat as empty and draft fresh. Don't try to patch around LLM patterns; throw them out and start from the article. See `.claude/commands/social-media-review/references/writing-guide.md` "Spotting and replacing LLM-fill copy".
-
    - **Existing copy that passes hard rules and reads naturally** — leave it. Do not rewrite for taste.
+
+   For LLM-fill recognition (staccato fragments as drama, em-dash chains, generic openers like "In today's cloud landscape…", buzzword stacks), see `.claude/commands/social-media-review/references/writing-guide.md` "Spotting and replacing LLM-fill copy". Don't try to patch around LLM patterns; throw them out and draft fresh from the article.
+
+   **For any platform you draft fresh, verify each specific against the blog body** before moving on. Walk back through the draft and confirm every number, named tool, named person, attribution, and percentage appears in the body. Common error shapes: numbers pulled from the URL slug instead of the body, generalizations beyond what the body says, attribution flips (third-party finding credited to "we"), voice mismatch (corporate "we" on a personal-experience post). If a claim doesn't trace, drop it or replace it with one that does.
 
 4. **Verify character counts before critique.** Pipe each draft into `python3 -c "import sys; print(len(sys.stdin.read().rstrip('\n')))"` (avoids quoting/escaping problems with apostrophes or triple quotes in copy). Body limits: X = 255, LinkedIn = 2950, Bluesky = 300. Revise any over-limit copy here.
 

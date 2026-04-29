@@ -10,7 +10,7 @@ You are writing social media copy for Pulumi's corporate accounts. The copy will
 A useful frame: a social post is the back-cover blurb, not the last chapter. The blurb makes you want the book; it doesn't tell you who the killer is.
 
 **Bad — gives away the killer:**
-> We tested three AI coding frameworks on the same Pulumi project. Superpowers caught a NAT-gateway scope drift the other two missed and ran 41x faster on the chardet rewrite. GSD struggled on long sessions. GSTACK was overkill for pure infra.
+> We tested three AI coding frameworks on the same Pulumi project. Superpowers' TDD discipline drove the chardet 41x rewrite. GSD's phase-based orchestrators kept context fresh through long sessions. GSTACK's 23-role isolation was overkill for pure infra but unbeatable on product builds.
 >
 > We wrote up the comparison.
 
@@ -336,13 +336,23 @@ Bluesky is between X and LinkedIn. Practitioner voice, slightly more detail than
 
 ## Drafting from a blank `social:` block
 
-When the post has no existing copy, you have the most leverage and the most ways to go wrong. Read the blog post first. Find:
+When the post has no existing copy, you have the most leverage and the most ways to go wrong. **Read the blog body in full before drafting** — the body is the only source of truth for specifics. Title, URL slug, `meta_desc`, and tags are not authoritative — they're shorthand and they sometimes drift from the body's actual claims.
+
+Then find:
 
 1. The most concrete specific in the article — a number, a named tool, a person, a moment ("week three", "Friday night page", "41x speedup", "200 modules"). This is your setup.
 2. The article's main verdict, mechanism, or surprising mapping. This is what you withhold.
 3. The natural reader question the article answers. The pointer is what tells the reader the answer is in the article.
 
 Then build setup → gap → pointer in that order, on each platform. Don't draft three platforms in parallel — draft one (usually X, since it's the tightest), then adapt. Whichever platform you write first will sound the freshest; the other two should differ in subject (vary "we" vs. stat-first vs. named-author) and in pointer phrasing.
+
+**After drafting, verify every specific.** Walk back through each draft and confirm each claim — the number, the named tool, the attribution, the percentage — appears in the blog body. If a claim doesn't trace, replace it with one that does or drop it. Common error shapes:
+
+- **Number from the slug, not the body.** A URL `top-8-claude-skills-…` doesn't mean the body says eight; the body might list fourteen.
+- **Generalization.** Body says "around 150"; you wrote "200". Body says "one engineer"; you wrote "a team."
+- **Attribution flip.** Body says "Snyk researchers found 76 malicious payloads"; you wrote "One published 76 malicious payloads" (implies a specific registry intentionally published them).
+- **Voice mismatch.** Body is one author's personal experience; you used corporate "we." If a single named person is the actor in the story, name them in third person.
+- **Mechanism leak.** The body's whole point is comparing X vs. Y; you wrote which one wins.
 
 Common ways drafting from scratch goes wrong:
 
