@@ -865,3 +865,60 @@ Session 9 commit list (from `master..HEAD`):
 - `scripts/lint/lint-markdown.js` — added `checkSocialBlock`, `checkPlaceholderMetaImage`, `checkMoreBreak`, `isArchivalPost`, `isBlogPost`, `META_IMAGE_PLACEHOLDER_HASH` constant. ~100 lines net add.
 - `pr-review/scripts/contributor-detection.sh` — added `LABELS=` output line.
 - Net Session 9 change across all files: roughly **-300 lines** despite adding the SEO/AEO sections and the lint validators. The pr-review/docs-review packages are smaller and more focused than they were at Session 8 close.
+
+## Session 10 — 2026-04-29 (label cleanup: drop unread labels, rename domain prefix)
+
+### Trigger
+
+Cam selected lines 54–56 of `docs-review/ci.md` (§3 "Fact-check (gated)") and asked whether it was actually how fact-check ran. It wasn't. Investigation surfaced that **§3 was wired to nothing** — fact-check is invoked from inside each domain file during §2's composition pass, and the `fact-check:needed` label gate it claimed to enforce never fired at the layer where the actual call happens.
+
+### What the audit found
+
+Traced every label the classifier emits against every consumer in workflow YAML and skill files:
+
+- **Workflow-state labels** (`review:trivial`, `review:frontmatter-only`, `review:claude-ran`, `review:claude-stale`, `review:claude-working`, `review:prose-flagged`) are all read by `claude-code-review.yml` conditionals or the `pr-review` SKILL state machine. **Load-bearing.**
+- **Domain labels** (`review:docs`, `review:blog`, `review:infra`, `review:programs`, `review:mixed`) are *never* read by any conditional. `ci.md` §Inputs claimed they "drive domain selection," but §2's actual instruction is "route by path via `docs-review:references:domain-routing`" — which the model does anyway, since per-file routing is necessary for mixed PRs. The labels duplicated work the router does at review time.
+- **`fact-check:needed`** had the same story. The classifier computed it; the workflow passed it to the model; nothing read it. Each domain file decides per-file whether to invoke fact-check based on the same path/content rules the classifier was using — so the label was a precomputed cache of work the router already does inline.
+- **`agent-authored`** was inert. AGENTS.md called it "a signal for human adjudication," but `pr-review` SKILL doesn't grep for it. Cam's call: drop entirely — "they're ALL agent authored to some degree."
+
+### Decision
+
+Cam picked option (2) from the audit: drop the unread labels, rename the domain labels with an honest prefix, and stop pretending labels drive logic they don't.
+
+- **Drop** `fact-check:needed` and `agent-authored`. Triage no longer emits either.
+- **Rename** `review:{docs,blog,infra,programs,mixed}` → `domain:{docs,blog,infra,programs,mixed}`. The new prefix is honest about what the labels actually do (domain classification surfaced for human filterability), and aligns with the existing internal vocabulary (`domain-routing`, "the domain file"). The `review:` prefix is now reserved for workflow-state labels exclusively.
+
+### Files changed (–64 net lines)
+
+- `triage-classify.py` (–50): dropped `fact_check_needed` / `agent_authored` outputs, the `detect_agent_authored` function, the AGENT_LOGINS / AGENT_TRAILER_RES tables, the dead intermediate flags (`has_new_heading`, `has_new_version_claim`), and the regex constants that fed only those flags. Domain labels emit as `domain:*`. 354 lines → 304 lines.
+- `claude-triage.yml`: dropped FACT_CHECK / AGENT_AUTHORED reads, the corresponding TARGET assignments, the matching cleanup pattern in the existing-label sweep, and the references in the summary log line. Mixed-domain target now `domain:mixed`. The cleanup case now lists the specific labels triage manages (`domain:*`, `review:trivial`, `review:frontmatter-only`, `review:prose-flagged`) instead of the broad `review:*|fact-check:*|agent-authored` glob.
+- `claude-code-review.yml`: corrected the leading workflow-comment about `fact-check:needed` gating, and the prompt's "Labels (set by claude-triage.yml — drive domain selection and fact-check gating)" → "informational; routing happens by path inside `ci.md`".
+- `docs-review:ci`: deleted §3 (the fact-check gate that was wired to nothing). §Inputs reworded — `PR_LABELS` is informational; routing is path-based per `docs-review:references:domain-routing`. Dropped the §Missing-label fallback paragraph entirely (it conflated domain labels with routing). Section numbers shifted (4→3, 5→4, 6→5); fixed the §5→§4 cross-ref in the hard-rules block.
+- `docs-review:references:fact-check`: stale CI-label-gate references on lines 41 and 58 replaced with "the domain file is the gate." No more recap of which domain calls fact-check at what scrutiny — that's covered in each domain file directly.
+- `AGENTS.md`: dropped the `agent-authored` paragraph entirely. The "leave AI authoring trailers in commit messages" guidance survives, reframed as "stripping them is bad form" rather than "triage uses them to apply a label." Updated line 137's triage-refresh list to current label set, and line 170's classifier description to drop the dead signals.
+- `labels-pr-review.md`: full rewrite. Domain labels under `domain:*` table; workflow-state labels under their own table; gh label create commands updated. Deliberately did *not* include a migration block — we're a fork, no installed-base to migrate.
+
+### Verification
+
+Classifier dry-run via `triage-classify.py` against fixture PRs `CamSoper/pulumi.docs#44`, `#46`, `#48`, `#49` — exercised `domain:docs`, `domain:infra`, `domain:blog` paths. All emit clean output: domain labels under the new prefix, no `fact_check_needed` or `agent_authored` fields, all summary fields intact.
+
+Final `grep -rn -E "review:(blog|docs|programs|infra|mixed)|fact-check:needed|agent-authored|fact_check_needed|agent_authored"` across `.github/`, `.claude/`, `AGENTS.md` returns zero hits.
+
+### Cam-flagged behaviors during the session
+
+- **Bare-filename references** in skill files. I wrote `blog.md` / `docs.md` / `programs.md` / `infra.md` in `fact-check.md`'s gating paragraph and in `ci.md` §2's composition prose. Cam: use `skill:folder:reference` notation. Fixed both call sites; the skill notation is now uniform across the package.
+- **Meta-narration in agent instructions**. First pass at `ci.md` §Inputs explained that `domain:*` labels are "a human-visible signal, not the routing input" — agents executing the file don't need the rationale, just the directive. Trimmed to "Route by path-precedence per `docs-review:references:domain-routing`. `PR_LABELS` is informational only." Same trim applied to `fact-check.md`'s gating paragraph (dropped the per-domain recap; each domain file owns its own gate).
+- **Existing-label migration handling**. First pass at `labels-pr-review.md` included a §Migrating from `review:*` block with `gh label delete` commands for the old names. Cam: "I don't give a shit about existing labels. That's why we're working on a fork." Pulled the section.
+
+### Backlog after Session 10
+
+Carryover from Session 9; no new items added.
+
+1. **Real-PR test of the new pr-review flow** — the rewritten Step 1 → Step 2 → Step 3 → Step 6 → action path is still untested against the fixture PRs. CURRENT / STALE / ABSENT branches each need a dry-run.
+2. **Deploy script** — `gh` script to create the required labels on upstream when the branch lands. Seed is the `gh label create` block in `labels-pr-review.md`. Don't ship yet — testing/refinement still pending.
+3. **Gap-analysis residuals** (still undecided): R31 positive cross-link suggestions, R72 author-profile existence check, caps (5/file prose-patterns and 15/file pre-existing), do-not-flag rewrite needs a fixture-set re-run.
+
+### Session 10 commit list (planned — uncommitted at session end)
+
+Single commit covering all 7 files. Suggested message:
+> `Drop unread labels, rename domain prefix, fix ci.md §3 fiction`
