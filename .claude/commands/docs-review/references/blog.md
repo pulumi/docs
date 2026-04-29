@@ -18,7 +18,7 @@ Applied to blog posts (`content/blog/`) and customer stories (`content/case-stud
 
 ## Criteria
 
-Apply [`shared-criteria.md`](shared-criteria.md) first. Then work through the five priorities below *in order* -- fact-check findings render before style findings in the output.
+Apply `docs-review:references:shared-criteria` first, plus the cross-cutting reference files: `docs-review:references:code-examples`, `docs-review:references:prose-patterns`, `docs-review:references:image-review`. Then work through the priorities below *in order* — fact-check findings render before style findings in the output.
 
 ### Priority 1 — Fact-check first
 
@@ -51,9 +51,7 @@ Every AI-slop finding names the *phrase* and the *pattern*. Don't just say "this
 
 ### Priority 3 — Code correctness
 
-Same standard as [`docs.md`](docs.md) §Code examples. Code in blog posts gets heavily copied because people Google into blogs as often as into docs. Wrong code is wrong regardless of which `content/` directory it lives in.
-
-For Pulumi example code specifically: imports resolve, property names match the provider schema, language-specific casing is correct.
+Apply `docs-review:references:code-examples`. Code in blog posts gets heavily copied because people Google into blogs as often as into docs. Wrong code is wrong regardless of which `content/` directory it lives in.
 
 ### Priority 4 — Product accuracy
 

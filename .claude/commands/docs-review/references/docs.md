@@ -16,7 +16,7 @@ Applied to documentation pages: technical reference, conceptual docs, tutorials,
 
 ## Criteria
 
-Apply [`shared-criteria.md`](shared-criteria.md) first, then these docs-specific checks.
+Apply `docs-review:references:shared-criteria` first, plus the cross-cutting reference files: `docs-review:references:code-examples`, `docs-review:references:prose-patterns`, `docs-review:references:image-review`. Then these docs-specific checks.
 
 ### API and resource accuracy
 
@@ -33,11 +33,7 @@ Apply [`shared-criteria.md`](shared-criteria.md) first, then these docs-specific
 
 ### Code examples
 
-- **Syntax.** No unclosed brackets, broken indentation, or obvious typos. A code block that doesn't parse in its language is a 🚨 finding.
-- **Imports.** Imported symbols exist in the referenced package; package names are correct (`@pulumi/aws`, not `@pulumi/pulumi-aws`); no unused imports cluttering a teaching example.
-- **Idiomatic per language.** `async`/`await` for TypeScript promise-returning APIs. Context managers in Python where appropriate. `err != nil` handling in Go. Don't flag cosmetic style; flag actual anti-patterns that would lead readers to wrong habits.
-- **Referenced `static/programs/` snippets.** When a doc page uses `{{< example-program >}}`, the referenced program must exist in `static/programs/` and compile under each language variant the page advertises. Cross-reference to `CODE-EXAMPLES.md` for the testing contract.
-- **Proposed fixes compile.** If you suggest a code replacement, it must itself pass these checks. Don't suggest untested code.
+Apply `docs-review:references:code-examples` for snippet-level criteria (syntax, imports, language idioms, API currency, casing). Code in docs is also subject to the rendering concerns in §Callouts and shortcodes (chooser pairing, language specifiers).
 
 ### CLI commands
 

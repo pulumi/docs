@@ -16,7 +16,7 @@ Applied to changes touching `static/programs/`. These are real, testable Pulumi 
 
 ## Criteria
 
-Apply [`shared-criteria.md`](shared-criteria.md) first. Then the following program-specific checks.
+Apply `docs-review:references:shared-criteria` first, plus `docs-review:references:code-examples` for snippet-level concerns (imports, language idioms, API currency, casing). Then the following program-specific checks.
 
 ### Project structure
 
@@ -29,40 +29,6 @@ Apply [`shared-criteria.md`](shared-criteria.md) first. Then the following progr
   - Java: `pom.xml`
 - **All source files present.** The file for the default entry point (`index.ts`, `__main__.py`, `main.go`, `Program.cs`, `src/main/java/myproject/App.java`, `Pulumi.yaml` for YAML) must exist.
 - **Language-suffix directory convention.** Programs live under `<name>-<language>` directories (see `CODE-EXAMPLES.md` §Directory naming conventions). If a PR adds a new language variant, the directory naming and the Hugo shortcode reference both must line up.
-
-### Imports
-
-- **Resolve.** Every imported package / module exists in the dependency manifest.
-- **Package names are correct.** TypeScript imports from `@pulumi/aws`, not `@pulumi/pulumi-aws`. Python imports `pulumi_aws`, not `pulumi-aws`. Go imports the module path declared in `go.mod`.
-- **Symbols exist in the package.** `new aws.s3.BucketV2(...)` requires `BucketV2` in `@pulumi/aws`. A typo or a v2-only symbol used in a v1-pinned project is a 🚨 finding.
-- **No unused imports.** A teaching example with an unused import is confusing and a lint failure waiting to happen.
-
-### Idiomatic per language
-
-Per the AGENTS.md rules:
-
-- **TypeScript hand-written constructor style.** Resource name and opening `{` on the same line; `}, {` inline when an opts argument follows. Do NOT accept or propose Prettier's multi-arg style (each argument on its own indented line).
-  ```typescript
-  const r = new SomeResource("name", {
-      prop: value,
-  }, {
-      provider: p,
-  });
-  ```
-- **Python:** context managers for resources that support them; `pulumi_aws.s3.BucketV2(...)` call style; type hints where they aid reading.
-- **Go:** `pulumi.Run(func(ctx *pulumi.Context) error { ... })` top-level; `ctx.Error()` / `return` on errors; `pulumi.String(...)` / `pulumi.StringArray(...)` wrappers for resource arguments.
-- **C#:** `Pulumi.Deployment.RunAsync<MyStack>()` pattern; `Output<T>` / `Input<T>` correctly typed.
-- **Java:** `Pulumi.run(ctx -> { ... })` top-level; `Output.of(...)` wrappers where needed.
-- **YAML:** follows the current Pulumi YAML schema; no deprecated keys.
-
-Don't flag cosmetic style (line length, trailing commas when the language allows them, brace placement when it matches the AGENTS.md convention). Flag actual anti-patterns that would teach the reader wrong habits.
-
-### Provider API currency
-
-- **Resource types exist.** `aws.s3.BucketV2` vs `aws.s3.Bucket` -- current provider major versions have deprecated the bare `Bucket` in favor of `BucketV2`. A program using the deprecated form is a pre-existing finding at minimum.
-- **Required properties set.** Every resource's constructor must supply the properties the provider's schema marks as required.
-- **Enum values valid.** `InstanceType`, `StorageClass`, and similar enum-typed properties must use values the provider schema accepts.
-- **Verify against the schema.** For any resource API claim, cross-reference against the provider's current schema source (`gh api repos/pulumi/pulumi-<provider>/contents/provider/cmd/...`). Don't reason from memory.
 
 ### Multi-language consistency
 
