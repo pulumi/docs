@@ -346,13 +346,7 @@ Then find:
 
 Then build setup → gap → pointer in that order, on each platform. Don't draft three platforms in parallel — draft one (usually X, since it's the tightest), then adapt. Whichever platform you write first will sound the freshest; the other two should differ in subject (vary "we" vs. stat-first vs. named-author) and in pointer phrasing.
 
-**After drafting, verify every specific.** Walk back through each draft and confirm each claim — the number, the named tool, the attribution, the percentage — appears in the blog body. If a claim doesn't trace, replace it with one that does or drop it. Common error shapes:
-
-- **Number from the slug, not the body.** A URL `top-8-claude-skills-…` doesn't mean the body says eight; the body might list fourteen.
-- **Generalization.** Body says "around 150"; you wrote "200". Body says "one engineer"; you wrote "a team."
-- **Attribution flip.** Body says "Snyk researchers found 76 malicious payloads"; you wrote "One published 76 malicious payloads" (implies a specific registry intentionally published them).
-- **Voice mismatch.** Body is one author's personal experience; you used corporate "we." If a single named person is the actor in the story, name them in third person.
-- **Mechanism leak.** The body's whole point is comparing X vs. Y; you wrote which one wins.
+**After drafting, verify every specific against the body.** If you wrote a number, name, or attribution, it has to appear in the blog body — not the title, slug, or `meta_desc`. If a claim doesn't trace, drop it or replace it. Example: a URL `top-8-claude-skills-…` doesn't mean the body says eight; the body might list fourteen.
 
 Common ways drafting from scratch goes wrong:
 

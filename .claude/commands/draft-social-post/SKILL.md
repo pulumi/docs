@@ -26,7 +26,7 @@ Read a blog post, write or revise social copy into its frontmatter `social:` blo
 
    For LLM-fill recognition (staccato fragments as drama, em-dash chains, generic openers like "In today's cloud landscape…", buzzword stacks), see `.claude/commands/social-media-review/references/writing-guide.md` "Spotting and replacing LLM-fill copy". Don't try to patch around LLM patterns; throw them out and draft fresh from the article.
 
-   **For any platform you draft fresh, verify each specific against the blog body** before moving on. Walk back through the draft and confirm every number, named tool, named person, attribution, and percentage appears in the body. Common error shapes: numbers pulled from the URL slug instead of the body, generalizations beyond what the body says, attribution flips (third-party finding credited to "we"), voice mismatch (corporate "we" on a personal-experience post). If a claim doesn't trace, drop it or replace it with one that does.
+   **For any platform you draft fresh, verify each specific against the blog body** before moving on. Every number, name, and attribution must appear in the body — not the title, slug, or `meta_desc`. If a claim doesn't trace, drop it or replace it.
 
 4. **Verify character counts before critique.** Pipe each draft into `python3 -c "import sys; print(len(sys.stdin.read().rstrip('\n')))"` (avoids quoting/escaping problems with apostrophes or triple quotes in copy). Body limits: X = 255, LinkedIn = 2950, Bluesky = 300. Revise any over-limit copy here.
 

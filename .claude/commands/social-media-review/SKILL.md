@@ -34,12 +34,7 @@ These posts are published from Pulumi's corporate accounts, not from individual 
 
    If the repair changes more than the rule break demands — recasting paragraphs, swapping verbs, "improving" the voice — back up. The critic only complained about one thing.
 
-   **Verify drafted specifics against the blog body before step 4.** For each draft, list each factual claim and confirm it appears in the body. Common error shapes to catch yourself on:
-   - Number invented from URL slug or title (e.g., the slug says `top-8-…` but the body lists 14)
-   - Attribution flipped (assigning a third-party finding to Pulumi, or an external company's claim to "we")
-   - Generalization beyond what the body says ("a team" when the body names one person; "200" when the body says "around 150")
-   - Mechanism revealed when the body withholds it
-   If a claim doesn't trace, drop it or replace it with one that does.
+   **Verify drafted specifics against the blog body before step 4.** Every number, name, and attribution must appear in the body — not the title, slug, or `meta_desc`. If a claim doesn't trace, drop it or replace it.
 4. **Verify character counts** — run `python3 -c "print(len('''<copy>'''))"` for ALL repaired or drafted copy before submitting to critique. Limits: X = 255, LinkedIn = 2950, Bluesky = 300. Revise any that exceed the limit. Do not skip this step — sending over-limit copy to the critique loop wastes a round.
 5. **Critique loop** — launch a sub-agent (Agent tool) to validate the repaired/drafted copy. The sub-agent should read `references/critique-rubric.md` and evaluate the copy only (not the blog post). If FAIL, revise and re-critique. You may iterate up to 2 times (3 total critiques). If the copy still fails after the third critique, present the best version with a note about which issues remain.
 6. **Suggestions pass** — for any platform whose **original** copy passed the critic without needing a repair, launch a separate sub-agent (Agent tool) against `references/suggestions-rubric.md` to surface advisory style notes (missing pointer, curiosity gap closed, weak opener, summarizes article, etc.). This NEVER affects the verdict — PASS stays PASS. Skip this pass for any platform that was repaired or drafted from scratch — the new copy is the actionable feedback already; layering advisory notes on top is noise.
