@@ -70,7 +70,6 @@ Do not return FAIL for any of the following. The suggestions pass picks them up;
 - Missing or generic pointer ("here's what changed", "learn more inside")
 - LLM-characteristic phrasing (staccato fragments, em dash chains, noun-phrase-list openings) — unless extreme and pervasive
 - Uses emoji
-- Doesn't include a `link_url` in the frontmatter
 
 These are real quality concerns, but the critic's job in this rubric is to gate publishing, not to enforce style. Style is the suggestions pass's job.
 

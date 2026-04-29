@@ -96,10 +96,10 @@ These are stylistic notes — they don't block the post.
 
 The original copy being reviewed:
 
-X (386 chars, over the 255 limit):
-> AI coding agents fail in recognizable ways. Context fills up and early instructions fade, tests get skipped, and scope expands past what you asked for. Three separate community teams built frameworks to address these problems, each taking a completely different approach.
+X (309 chars, over the 255 limit):
+> AI coding agents fail in recognizable ways: context fades, tests get skipped, scope expands past what you asked for. Three community teams built frameworks for this, each taking a different approach.
 >
-> We tested all three on real infrastructure workflows. Which one helps depends on which problem keeps hitting you.
+> We tested all three on real infrastructure work. Which one helps depends on which problem keeps hitting you.
 
 LinkedIn (passes hard rules, but summarizes):
 > There is a pattern that teams building with AI coding agents tend to hit on longer projects. The first session is impressive. By the third, the agent has lost track of earlier requirements and started adding infrastructure nobody asked for.
@@ -118,7 +118,7 @@ Bluesky: not provided.
 #### X — FAIL
 
 Reasons:
-- Over character limit: 386 chars vs. 255 limit
+- Over character limit: 309 chars vs. 255 limit
 
 #### LinkedIn — PASS
 
@@ -130,7 +130,7 @@ No copy provided. Suggested copy drafted below.
 
 ### Suggested copy
 
-**X** (228/255 chars) — trimmed to fit; voice and structure preserved:
+**X** (249/255 chars) — clean tail trim; final sentence dropped, everything else identical:
 > AI coding agents fail in recognizable ways: context fades, tests get skipped, scope expands past what you asked for. Three community teams built frameworks for this, each taking a different approach.
 >
 > We tested all three on real infrastructure work.
