@@ -57,7 +57,7 @@ The skill is callable as a pure function of `(files, scrutiny)` → `(triage_obj
 
 ### Note on AI-suspect
 
-AI-suspect detection (see [`pr-review:references:trust-and-scrutiny`](../pr-review/references/trust-and-scrutiny.md)) is a pr-review-skill concept. When that skill decides a PR is AI-suspect, it passes `scrutiny=heightened` to this file. The CI pipeline does not use the AI-suspect flag; CI callers pass `scrutiny` directly from the domain file's default (e.g., `review-blog.md` always passes `heightened`).
+AI-suspect detection (see `pr-review:references:trust-and-scrutiny`) is a pr-review-skill concept. When that skill decides a PR is AI-suspect, it passes `scrutiny=heightened` to this file. The CI pipeline does not use the AI-suspect flag; CI callers pass `scrutiny` directly from the domain file's default (e.g., `docs-review:references:blog` always passes `heightened`).
 
 ---
 
@@ -313,7 +313,7 @@ mcp__claude_ai_Slack__slack_search_public_and_private
 
 Default search window: last 6 months. Absence of these tools must not fail the workflow -- annotate the evidence as "internal sources unavailable."
 
-**CI fact-check never uses Notion or Slack.** The CI runner's tool set excludes these by design: fact-check output lands in a public PR comment, and internal sources create prompt-injection and leakage risks. See `docs-review-ci.md` §Hard rules.
+**CI fact-check never uses Notion or Slack.** The CI runner's tool set excludes these by design: fact-check output lands in a public PR comment, and internal sources create prompt-injection and leakage risks. See `ci.md` §Hard rules.
 
 ### Confidence calibration
 
@@ -432,7 +432,7 @@ When a claim is flagged `intuition_check: true` AND the verifier reaches a decis
 
 ### Credential redaction
 
-The evidence line of any finding is rendered into the public pinned comment. **Never quote raw credential strings in evidence** -- file:line and a short description only. If the claim's context contains what looks like an API key, token, password, private URL, or connection string, replace the token with `[REDACTED]` in the evidence line and flag the underlying leak as a separate 🚨 finding (per [`review-infra.md`](review-infra.md) §Secret handling). Public-PR diffs are already exposed; the pinned comment must not amplify the leak by quoting the raw value.
+The evidence line of any finding is rendered into the public pinned comment. **Never quote raw credential strings in evidence** -- file:line and a short description only. If the claim's context contains what looks like an API key, token, password, private URL, or connection string, replace the token with `[REDACTED]` in the evidence line and flag the underlying leak as a separate 🚨 finding (per `docs-review:references:infra` §Secret handling). Public-PR diffs are already exposed; the pinned comment must not amplify the leak by quoting the raw value.
 
 Patterns that trigger redaction on sight:
 
@@ -485,7 +485,7 @@ When called from a PR review, preserve the PR-introduced vs. pre-existing distin
 
 ## Heightened-scrutiny overrides
 
-When the caller passes `scrutiny=heightened` (e.g., AI-suspect is set in `/pr-review`, or `review-blog.md` / `review-programs.md` sets it by default):
+When the caller passes `scrutiny=heightened` (e.g., AI-suspect is set in `/pr-review`, or `docs-review:references:blog` / `docs-review:references:programs` sets it by default):
 
 - Claim extraction runs over the **full file**, not just diff context
 - Gating always returns RUN
@@ -497,7 +497,7 @@ When the caller passes `scrutiny=heightened` (e.g., AI-suspect is set in `/pr-re
 
 ### Pre-existing issue extraction
 
-When `scrutiny=heightened`, the verifier reads the **full file** for claim extraction. Any substantive issue the verifier notices in unchanged prose renders in the 💡 Pre-existing bucket (owned by the caller's output format; see [`docs-review-core.md`](docs-review-core.md)):
+When `scrutiny=heightened`, the verifier reads the **full file** for claim extraction. Any substantive issue the verifier notices in unchanged prose renders in the 💡 Pre-existing bucket (owned by the caller's output format; see `docs-review:references:output-format`):
 
 - **Do extract:** broken links, wrong facts, code typos (missing imports, wrong method names), deprecated terminology, temporally-rotted claims.
 - **Do NOT extract style nits** unless the domain file says to: heading case, list numbering, em-dash frequency, paragraph rhythm, trailing whitespace. Those are either linter territory or out of scope for fact-check.

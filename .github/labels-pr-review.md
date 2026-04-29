@@ -9,7 +9,7 @@ This document lists the labels that the PR review pipeline (`claude-triage.yml`,
 | Label | Color | Description |
 |---|---|---|
 | `review:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/learn/`, `content/tutorials/`, `content/what-is/`). |
-| `review:blog` | `a2eeef` | PR touches blog posts or customer stories (`content/blog/`, `content/customers/`). |
+| `review:blog` | `a2eeef` | PR touches blog posts or customer stories (`content/blog/`, `content/case-studies/`). |
 | `review:infra` | `d4c5f9` | PR touches workflows, scripts, infrastructure code, Makefile, or build/bundling config. |
 | `review:programs` | `fbca04` | PR touches example programs under `static/programs/`. |
 | `review:trivial` | `c2e0c6` | Tiny prose-only change. Skips Claude review entirely; lint still runs. |

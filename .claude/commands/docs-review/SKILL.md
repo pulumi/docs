@@ -1,5 +1,7 @@
 ---
-description: Review docs and blog post quality before committing (checks style, accuracy, and Pulumi best practices on open files, branches, or PRs).
+name: docs-review
+description: Review docs and blog post quality before committing (style, accuracy, Pulumi best practices). Use when you've made content changes locally and want a quality pass on open files, the current branch, or a specific PR — outputs to the conversation, never posts to GitHub.
+user-invocable: true
 ---
 
 # Docs Review (interactive)
@@ -7,8 +9,6 @@ description: Review docs and blog post quality before committing (checks style, 
 **Use this when:** You're writing or editing documentation/blogs in your IDE or terminal and want feedback before opening a PR — or when you want to spot-check a specific PR locally.
 
 This is the **interactive entry point**. It runs in IDE/terminal context with full tool access and outputs the review directly into the conversation. It never posts to GitHub.
-
-The CI counterpart is [`docs-review-ci.md`](docs-review-ci.md). Shared review semantics live in [`_common/docs-review-core.md`](_common/docs-review-core.md). **Do not** add CI-mode conditionals here — keep this file scope-detection-and-review only.
 
 ---
 
@@ -50,16 +50,9 @@ Review every changed file in the branch.
 
 ### Perform the review
 
-Once scope is determined, apply the criteria in [`_common/docs-review-core.md`](_common/docs-review-core.md), composing the appropriate domain files based on which paths are touched:
+Once scope is determined, apply the criteria in `docs-review:references:output-format`, composing the appropriate domain files based on which paths are touched. See `docs-review:references:domain-routing` for the canonical path → domain table.
 
-Path-precedence order — a file is classified under the first rule that matches:
-
-- `static/programs/**` → `_common/review-shared.md` + `_common/review-programs.md` (includes every nested file in a program directory)
-- `content/blog/**`, `content/customers/**` → `_common/review-shared.md` + `_common/review-blog.md`
-- `content/docs/**`, `content/learn/**`, `content/tutorials/**`, `content/what-is/**` → `_common/review-shared.md` + `_common/review-docs.md`
-- `.github/workflows/**`, `scripts/**` except `scripts/programs/**`, `infrastructure/**`, `Makefile` (repo root), `package.json` (repo root only), `webpack.config.js`, `webpack.*.js` → `_common/review-shared.md` + `_common/review-infra.md`
-- Anything else → `_common/review-shared.md` only
-- A mixed PR runs each file under its appropriate domain and merges the findings.
+`docs-review:references:shared-criteria` applies to every file regardless of domain. A mixed PR runs each file under its appropriate domain and merges the findings.
 
 For PR-number invocations, use:
 

@@ -111,7 +111,7 @@ jobs:
           trap 'rm -f "$PR_DATA_FILE"' EXIT
           printf '%s' "$PR_DATA" > "$PR_DATA_FILE"
           CLASS=$(printf '%s' "$DIFF" \
-            | python3 .claude/commands/_common/scripts/triage-classify.py "$PR_DATA_FILE" 2>&1) \
+            | python3 .claude/commands/docs-review/scripts/triage-classify.py "$PR_DATA_FILE" 2>&1) \
             || CLASS=""
           if [[ -z "$CLASS" ]] || ! echo "$CLASS" | jq -e . >/dev/null 2>&1; then
             echo "triage: pr=$PR error=classifier_failed"
@@ -133,7 +133,7 @@ jobs:
           if [[ "$PROSE_CHECK_NEEDED" == "true" ]]; then
             # 50KB diff cap — trivial/frontmatter-only PRs are tiny.
             PROSE_DIFF=$(printf '%s' "$DIFF" | head -c 50000)
-            PROSE_RULES=$(cat .claude/commands/triage.md)
+            PROSE_RULES=$(cat .claude/commands/docs-review/triage-prose.md)
             REQUEST=$(jq -n \
               --arg rules "$PROSE_RULES" \
               --arg diff "$PROSE_DIFF" \

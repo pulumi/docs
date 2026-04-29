@@ -70,7 +70,7 @@ This file does not invoke fact-check on its own. Domain files are the fact-check
 
 ## Do not flag
 
-These are DO-NOT items from [`docs-review-core.md`](docs-review-core.md) restated for cross-cutting cases:
+These are DO-NOT items from [`output-format.md`](output-format.md) restated for cross-cutting cases:
 
 - **"This link might 404 eventually."** Speculative link-rot is not a finding. Either the link is broken now or it isn't.
 - **"You could also link to X."** Unsolicited "also consider linking to" suggestions belong in a separate improvement pass, not in this review.

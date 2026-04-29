@@ -64,6 +64,6 @@ Be specific so the author can act without re-reading the diff. One concern per a
 
 ## Notes for maintainers
 
-The classification logic — domain (path-precedence), triviality, frontmatter-only detection, fact-check signal, agent-authored signal — is deterministic and lives in `.claude/commands/_common/scripts/triage-classify.py`. That script is the source of truth; this prompt is loaded only when the classifier flags `prose_check_needed: true`.
+The classification logic — domain (path-precedence), triviality, frontmatter-only detection, fact-check signal, agent-authored signal — is deterministic and lives in `.claude/commands/docs-review/scripts/triage-classify.py`. That script is the source of truth; this prompt is loaded only when the classifier flags `prose_check_needed: true`.
 
-Most PRs never reach this prompt because most PRs are not trivial or frontmatter-only. The full review handles them and runs its own prose-quality checks per `_common/review-*.md`.
+Most PRs never reach this prompt because most PRs are not trivial or frontmatter-only. The full review handles them and runs its own prose-quality checks per `docs-review:references:{docs,blog,programs,infra}`.

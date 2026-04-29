@@ -16,7 +16,7 @@ Applied to documentation pages: technical reference, conceptual docs, tutorials,
 
 ## Criteria
 
-Apply [`review-shared.md`](review-shared.md) first, then these docs-specific checks.
+Apply [`shared-criteria.md`](shared-criteria.md) first, then these docs-specific checks.
 
 ### API and resource accuracy
 
@@ -76,7 +76,7 @@ Extract pre-existing issues from a touched file when any of:
 
 Not a top-level structural change: edits inside an existing H2, adding/removing H3s under an unchanged H2, code-block updates, wording tweaks.
 
-Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, product-name capitalization, deprecated terminology, within-file terminology inconsistencies. These render in the 💡 bucket per [`docs-review-core.md`](docs-review-core.md). Cap at 15 per file. Skip style nits (heading case, list numbering) -- the linter owns those.
+Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, product-name capitalization, deprecated terminology, within-file terminology inconsistencies. These render in the 💡 bucket per [`output-format.md`](output-format.md). Cap at 15 per file. Skip style nits (heading case, list numbering) -- the linter owns those.
 
 ## Fact-check
 
@@ -86,7 +86,7 @@ Invoke [`fact-check.md`](fact-check.md) with:
 - **Scrutiny:** `standard`
 - **Bump to `heightened`** when the file is a new page (not previously in `content/`) or a whole-file rewrite (>70% of lines changed)
 
-CI fact-check is public-sources-only -- see `docs-review-ci.md`.
+CI fact-check is public-sources-only -- see `ci.md`.
 
 ## Do not flag
 

@@ -16,7 +16,7 @@ Applied to changes touching `static/programs/`. These are real, testable Pulumi 
 
 ## Criteria
 
-Apply [`review-shared.md`](review-shared.md) first. Then the following program-specific checks.
+Apply [`shared-criteria.md`](shared-criteria.md) first. Then the following program-specific checks.
 
 ### Project structure
 
@@ -74,19 +74,19 @@ When a PR adds a new language variant of an existing program:
 
 ## Pre-existing issues (always on)
 
-Compilability cascades. If one file in a program is broken, the program doesn't build -- so pre-existing extraction is always on for touched programs. Render findings in 💡 per [`docs-review-core.md`](docs-review-core.md); cap at 15 per file.
+Compilability cascades. If one file in a program is broken, the program doesn't build -- so pre-existing extraction is always on for touched programs. Render findings in 💡 per [`output-format.md`](output-format.md); cap at 15 per file.
 
 Scope of pre-existing findings for programs: broken/unused imports, out-of-date provider API surface, missing project-structure files, mismatched resource properties across language variants.
 
 ## Compilability check
 
-If the touched program is **not** in `scripts/programs/ignore.txt`, the interactive entry point ([`docs-review.md`](../docs-review.md)) may run:
+If the touched program is **not** in `scripts/programs/ignore.txt`, the interactive entry point ([`SKILL.md`](../SKILL.md)) may run:
 
 ```bash
 ONLY_TEST="program-name" ./scripts/programs/test.sh
 ```
 
-The CI entry point ([`docs-review-ci.md`](../docs-review-ci.md)) does **not** run program tests directly -- those run as part of the main `make test` job. Cite that job's result in the review if available; do not re-run.
+The CI entry point ([`ci.md`](../ci.md)) does **not** run program tests directly -- those run as part of the main `make test` job. Cite that job's result in the review if available; do not re-run.
 
 ## Fact-check
 
@@ -95,7 +95,7 @@ Invoke [`fact-check.md`](fact-check.md) with:
 - **Files:** the changed `static/programs/**` files (and any README/docs that reference them, if changed in the same PR)
 - **Scrutiny:** `heightened` (code correctness matters)
 
-CI fact-check is public-sources-only -- see `docs-review-ci.md`.
+CI fact-check is public-sources-only -- see `ci.md`.
 
 ## Do not flag
 

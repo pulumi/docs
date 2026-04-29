@@ -105,7 +105,7 @@ When `RISK_TIER=major` or `CONTENT_SCRUTINY=heightened`, full-file reads are man
 
 #### 4b: Style guide compliance
 
-Review the full file content against STYLE-GUIDE.md. See `_common:review-criteria` for full criteria. Apply role-specific guidelines per content type.
+Review the full file content against STYLE-GUIDE.md. Apply `docs-review:references:shared-criteria` plus the appropriate domain criteria for each file's path: `docs-review:references:docs`, `docs-review:references:blog`, `docs-review:references:programs`, or `docs-review:references:infra`. Routing follows `docs-review:references:domain-routing`.
 
 For each issue found, classify as one of:
 
@@ -114,7 +114,7 @@ For each issue found, classify as one of:
 
 #### 4c: Code snippet verification
 
-For every code example in changed files — both inline fenced code blocks and referenced `/static/programs/` files — verify correctness using the code examples criteria in `_common:review-criteria`. Read the full source of any referenced program files.
+For every code example in changed files — both inline fenced code blocks and referenced `/static/programs/` files — verify correctness using the code-examples criteria in `docs-review:references:docs` (for inline blocks) and `docs-review:references:programs` (for referenced program files). Read the full source of any referenced program files.
 
 #### 4d: Program tests
 
@@ -143,7 +143,7 @@ Continue to Step 5.
 
 ### Step 5: Factual claim verification (silent)
 
-This is the rigor enforcement step. See `_common:fact-check` for the complete procedure.
+This is the rigor enforcement step. See `docs-review:references:fact-check` for the complete procedure.
 
 Summary:
 
@@ -230,7 +230,7 @@ Render in this order, top to bottom:
    Trivial-fix auto-apply disabled (AI-suspect — manual review required)
    ```
 
-8. **Overall assessment** — single line: Clean / Minor issues / Issues found / Critical issues. Computed from PR-introduced findings and fact-check results per the assessment rules in `_common:fact-check`. Pre-existing issues alone do not gate approval.
+8. **Overall assessment** — single line: Clean / Minor issues / Issues found / Critical issues. Computed from PR-introduced findings and fact-check results per the assessment rules in `docs-review:references:fact-check`. Pre-existing issues alone do not gate approval.
 
 9. **Recommendations** — short, specific, action-oriented.
 

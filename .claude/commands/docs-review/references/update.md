@@ -26,11 +26,11 @@ The skill loads everything else for itself:
 
 ```bash
 # Previous review (the pinned comment sequence)
-bash .claude/commands/_common/scripts/pinned-comment.sh fetch --pr "$PR_NUMBER"
+bash .claude/commands/docs-review/scripts/pinned-comment.sh fetch --pr "$PR_NUMBER"
 # Returns the full body of every CLAUDE_REVIEW N/M comment, in order, separated by markers.
 
 # Diff since the last review
-LAST_SHA=$(bash .claude/commands/_common/scripts/pinned-comment.sh last-reviewed-sha --pr "$PR_NUMBER")
+LAST_SHA=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh last-reviewed-sha --pr "$PR_NUMBER")
 gh pr diff "$PR_NUMBER" --range "$LAST_SHA..HEAD"
 
 # Current PR state (including draft status)
@@ -48,7 +48,7 @@ gh pr view "$PR_NUMBER" --json title,body,isDraft,labels,files,headRefOid,headRe
 Detection pattern:
 
 ```bash
-LAST_SHA=$(bash .claude/commands/_common/scripts/pinned-comment.sh last-reviewed-sha --pr "$PR_NUMBER")
+LAST_SHA=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh last-reviewed-sha --pr "$PR_NUMBER")
 if [[ -z "$LAST_SHA" ]] || ! git rev-parse --verify "$LAST_SHA^{commit}" >/dev/null 2>&1; then
     DIFF=$(gh pr diff "$PR_NUMBER")
     FALLBACK_REASON="no valid last-reviewed-sha"
@@ -179,7 +179,7 @@ Alternative ✅ path: if the re-verify surfaces something the previous review mi
 
 ## Output
 
-Hand the updated review object to `_common/docs-review-core.md`'s output format. The 1/M comment's content reshapes accordingly:
+Hand the updated review object to `docs-review:references:output-format`. The 1/M comment's content reshapes accordingly:
 
 - 🚨 Outstanding shrinks (or grows on regressions)
 - ✅ Resolved fills in
@@ -190,7 +190,7 @@ Hand the updated review object to `_common/docs-review-core.md`'s output format.
 Then post via `pinned-comment.sh upsert`:
 
 ```bash
-bash .claude/commands/_common/scripts/pinned-comment.sh upsert \
+bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
   --pr "$PR_NUMBER" \
   --body-file "$REVIEW_OUTPUT_FILE"
 ```
@@ -201,7 +201,7 @@ bash .claude/commands/_common/scripts/pinned-comment.sh upsert \
 
 ## Fallback — pinned comment is missing
 
-If `pinned-comment.sh fetch` returns nothing -- author deleted the comment, history was rewritten, or this is a freshly transitioned PR that somehow skipped the initial review -- fall back to a full initial review using [`docs-review-ci.md`](../docs-review-ci.md) and post fresh. The new comment lands at the bottom of the timeline; not ideal, but recoverable.
+If `pinned-comment.sh fetch` returns nothing -- author deleted the comment, history was rewritten, or this is a freshly transitioned PR that somehow skipped the initial review -- fall back to a full initial review using [`ci.md`](../ci.md) and post fresh. The new comment lands at the bottom of the timeline; not ideal, but recoverable.
 
 ---
 

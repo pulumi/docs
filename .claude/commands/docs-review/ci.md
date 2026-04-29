@@ -7,8 +7,6 @@ description: Docs-review entry point for CI. Diff-only, posts to a pinned PR com
 
 This is the **CI entry point** for the docs review pipeline. It is invoked by `.github/workflows/claude-code-review.yml` when a PR transitions to `ready_for_review`.
 
-The interactive counterpart is [`docs-review.md`](docs-review.md). Shared review semantics live in [`_common/docs-review-core.md`](_common/docs-review-core.md).
-
 ---
 
 ## Hard rules for CI
@@ -54,22 +52,11 @@ Treat the diff as the source of truth for what changed. If `--json files` lists 
 
 ### 2. Compose the review
 
-For each changed file, route to **exactly one** domain using path-precedence order. A file is classified under the first rule that matches; do not double-count.
-
-| Order | Compose | Applies when the file path matches |
-|---|---|---|
-| 1 | `_common/review-shared.md` + `_common/review-programs.md` | `static/programs/**` (includes every nested file in a program directory) |
-| 2 | `_common/review-shared.md` + `_common/review-blog.md` | `content/blog/**`, `content/case-studies/**` |
-| 3 | `_common/review-shared.md` + `_common/review-docs.md` | `content/docs/**`, `content/learn/**`, `content/tutorials/**`, `content/what-is/**` |
-| 4 | `_common/review-shared.md` + `_common/review-infra.md` | `.github/workflows/**`, `scripts/**` except `scripts/programs/**`, `infrastructure/**`, `Makefile` (repo root), `package.json` (repo root only), `webpack.config.js`, `webpack.*.js` |
-
-A PR may touch files in more than one domain. Run each file under its appropriate domain; merge the findings into a single output object before posting.
-
-Ordering note: a per-program `package.json` under `static/programs/<name>/package.json` is programs, not infra. `scripts/programs/**` is programs tooling, not site infra.
+Route each changed file to exactly one domain using `docs-review:references:domain-routing` (the canonical path-precedence table). `docs-review:references:shared-criteria` applies to every file. A PR may touch files in more than one domain — run each file under its appropriate domain and merge the findings into a single output object before posting.
 
 ### 3. Fact-check (gated)
 
-If the PR has the `fact-check:needed` label, invoke [`_common/fact-check.md`](_common/fact-check.md) with:
+If the PR has the `fact-check:needed` label, invoke `docs-review:references:fact-check` with:
 
 - The list of changed content files
 - Scrutiny level set by the domain file (docs → `standard`, blog/programs → `heightened`)
@@ -77,7 +64,7 @@ If the PR has the `fact-check:needed` label, invoke [`_common/fact-check.md`](_c
 
 ### 4. Build the output
 
-Render the findings using the shared format in [`_common/docs-review-core.md`](_common/docs-review-core.md):
+Render the findings using the shared format in `docs-review:references:output-format`:
 
 - 🚨 Outstanding in this PR
 - ⚠️ Low-confidence
@@ -85,14 +72,14 @@ Render the findings using the shared format in [`_common/docs-review-core.md`](_
 - ✅ Resolved since last review (only meaningful on re-runs; empty on initial)
 - 📜 Review history
 
-Apply the **DO-NOT list** in `docs-review-core.md` before emitting. Suppress findings the linter already catches (trailing newlines, fence languages, alt text, heading case, etc.).
+Apply the **DO-NOT list** in `output-format.md` before emitting. Suppress findings the linter already catches (trailing newlines, fence languages, alt text, heading case, etc.).
 
 ### 5. Post via the pinned-comment script
 
 Write the rendered output to a temp file and call:
 
 ```bash
-bash .claude/commands/_common/scripts/pinned-comment.sh upsert \
+bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
   --pr "$PR_NUMBER" \
   --body-file "$REVIEW_OUTPUT_FILE"
 ```
@@ -109,6 +96,6 @@ After a successful post, the workflow applies the `review:claude-ran` label and 
 
 ## Re-entrant runs
 
-This entry point is **initial review only**. Re-entrant updates (after `@claude` mentions or new commits) go through [`_common/update-review.md`](_common/update-review.md), invoked from `.github/workflows/claude.yml`.
+This entry point is **initial review only**. Re-entrant updates (after `@claude` mentions or new commits) go through `docs-review:references:update`, invoked from `.github/workflows/claude.yml`.
 
-If the workflow detects an existing pinned comment when it would otherwise post a fresh review, it should hand off to `update-review.md` instead. For v1, this hand-off is the workflow's responsibility.
+If the workflow detects an existing pinned comment when it would otherwise post a fresh review, it should hand off to `update.md` instead. For v1, this hand-off is the workflow's responsibility.
