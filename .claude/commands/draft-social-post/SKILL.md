@@ -35,7 +35,7 @@ Read a blog post, write or revise social copy into its frontmatter `social:` blo
    - Any FAIL → repair based on the cited reasons (minimum-change semantics from step 3), repeat from step 4.
    - Cap at 3 critique rounds. If still failing, keep the most recent draft and note the open issues in the report.
 
-6. **Advisory pass — only on platforms you drafted from scratch.** For each platform that you drafted (was empty or LLM-fill), spawn a sub-agent against `.claude/commands/social-media-review/references/suggestions-rubric.md`. If it flags an issue, apply a minimum-change improvement and re-verify char counts. Skip this pass for platforms whose original copy you preserved (the author already chose that copy) and for platforms you minimum-change-repaired (the repair is the actionable feedback).
+6. **Advisory pass — only on `kept` platforms.** For each platform whose existing copy passed hard rules and you left untouched, spawn a sub-agent against `.claude/commands/social-media-review/references/suggestions-rubric.md` to surface stylistic notes (weak opener, summarizes article, missing pointer, etc.). Do NOT modify the kept copy — surface the notes in step 8's report so the user can decide whether to apply them. PASS stays PASS. Skip this pass on platforms you repaired or drafted — the new copy is the actionable feedback already; layering advisory notes on top is noise.
 
 7. **Write the final copy into the frontmatter.** Use the Edit tool to replace (or insert) the `social:` block. Use 4-space indent and `|` block-literal style for multi-line copy — see `content/blog/neo-integration-catalog/index.md` for a well-formatted example. Only touch platforms whose copy actually changed.
 
@@ -45,6 +45,7 @@ Read a blog post, write or revise social copy into its frontmatter `social:` blo
    - `drafted` — wrote fresh
    - Final character counts for each platform
    - Iteration count ("converged in N rounds" or "stopped at 3, X open issue")
+   - For each `kept` platform with advisory notes, list them under "Suggestions for kept platforms (advisory — not applied)" so the user can decide whether to address them in a follow-up. Omit the section if all kept platforms returned "no suggestions".
 
 ## Edge cases
 
