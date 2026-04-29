@@ -97,5 +97,3 @@ After a successful post, the workflow applies the `review:claude-ran` label and 
 ## Re-entrant runs
 
 This entry point is **initial review only**. Re-entrant updates (after `@claude` mentions or new commits) go through `docs-review:references:update`, invoked from `.github/workflows/claude.yml`.
-
-If the workflow detects an existing pinned comment when it would otherwise post a fresh review, it should hand off to `update.md` instead. For v1, this hand-off is the workflow's responsibility.
