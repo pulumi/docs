@@ -1,11 +1,27 @@
 ---
 user-invocable: false
-description: Guide for writing social media copy that creates curiosity and drives clicks
+description: Guide for writing social media copy that tees up the article without delivering it
 ---
 
 # Social Copy Writing Guide
 
-You are writing social media copy for Pulumi's corporate accounts. The copy will be attached to a blog post link. Your goal is to make people click through to the article, not to summarize it for them.
+You are writing social media copy for Pulumi's corporate accounts. The copy will be attached to a blog post link. **Tee up the article. Don't deliver it.** The post sets up what the article reveals — the reveal stays in the article.
+
+A useful frame: a social post is the back-cover blurb, not the last chapter. The blurb makes you want the book; it doesn't tell you who the killer is.
+
+**Bad — gives away the killer:**
+> We tested three AI coding frameworks on the same Pulumi project. Superpowers caught a NAT-gateway scope drift the other two missed and ran 41x faster on the chardet rewrite. GSD struggled on long sessions. GSTACK was overkill for pure infra.
+>
+> We wrote up the comparison.
+
+The reader has the verdict for all three. The article has nothing left to do.
+
+**Good — keeps the mystery:**
+> We tested three AI coding frameworks on the same Pulumi project. One caught a scope drift the other two missed. One produced a 41x speedup. One we probably won't reach for again.
+>
+> Here's how they compared.
+
+Same outcomes are revealed. The mapping — which framework did which — is what the reader has to read the article to find out. That's the whodunit.
 
 ## The structure: setup, gap, pointer
 
@@ -15,7 +31,7 @@ Every post must have three parts:
 2. **Gap** — something withheld that the reader now wants to know (which one? how? why?)
 3. **Pointer** — a line that acknowledges the answer exists without spelling it out
 
-All three are required. The pointer is what connects the social post to the article — without it, the post is a standalone observation that doesn't drive clicks.
+All three are required. The pointer is what connects the social post to the article — without it, the post is a standalone observation and the article ends up doing nothing.
 
 ### Setup: concrete vs abstract
 
@@ -42,9 +58,9 @@ Good — no gap, just a concrete setup and pointer:
 >
 > It is now fully supported. Here is what to know before switching.
 
-No mystery, no withholding. The setup earns attention with a specific number, and the pointer gives the reader a reason to click.
+No mystery, no withholding. The setup gets the reader's attention with a specific number, and the pointer signals there's more to read.
 
-When the article does have a comparison, a surprise, or a non-obvious result, withholding the right detail is what makes the post click-worthy.
+When the article does have a comparison, a surprise, or a non-obvious result, withholding the right detail is what gives the article something to do.
 
 Things worth withholding when the article supports it:
 - Which tool/approach produced which result
@@ -185,7 +201,7 @@ All four have setup, gap, and pointer. None use "we." When writing for all three
 
 ## Making it specific
 
-The difference between generic and specific copy is the difference between scrolling past and clicking.
+The difference between generic and specific copy is the difference between scrolling past and stopping to read.
 
 Bad:
 > We ran into some issues with how our coding agents handled longer projects. The problems were predictable but the solutions took different approaches.
@@ -240,7 +256,7 @@ Bad:
 >
 > Here's what it looks like.
 
-Explains what, how, and who. "Available now" is release-note language. Nothing to click for.
+Explains what, how, and who. "Available now" is release-note language. The article has nothing left to do.
 
 Good:
 > Most teams trying to adopt infrastructure as code hit the same wall: hundreds of existing cloud resources created by hand or with scripts nobody remembers. Getting them into IaC meant writing boilerplate one resource at a time.
@@ -324,7 +340,7 @@ When the post has no existing copy, you have the most leverage and the most ways
 
 1. The most concrete specific in the article — a number, a named tool, a person, a moment ("week three", "Friday night page", "41x speedup", "200 modules"). This is your setup.
 2. The article's main verdict, mechanism, or surprising mapping. This is what you withhold.
-3. The natural reader question the article answers. The pointer is what tells the reader the answer is one click away.
+3. The natural reader question the article answers. The pointer is what tells the reader the answer is in the article.
 
 Then build setup → gap → pointer in that order, on each platform. Don't draft three platforms in parallel — draft one (usually X, since it's the tightest), then adapt. Whichever platform you write first will sound the freshest; the other two should differ in subject (vary "we" vs. stat-first vs. named-author) and in pointer phrasing.
 

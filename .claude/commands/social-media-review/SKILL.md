@@ -8,13 +8,13 @@ argument: optional file path to a blog post (e.g., content/blog/my-post/index.md
 
 ## Goal
 
-Make people click through to the blog post. Every social post should leave the reader with an unresolved question they care about — something they can only answer by reading the article. If a reader can skip the article after reading the post, the post failed.
+Tee up the article. Don't deliver it. The post's job is to set up what the article reveals — the reader has to read the article to get the reveal. If a reader can skip the article after reading the post, the post failed.
 
 ## Principles
 
 - **Curiosity over completeness.** Withhold the key insight, approach, or verdict. Reveal enough to create tension, not enough to satisfy it.
 - **Concrete over abstract.** Specific numbers, scenarios, and outcomes beat generic claims. "We migrated 200 stacks in three months" beats "we improved our migration process."
-- **Reader's perspective.** Judge copy as a reader would — does this make me want to click? Not as an editor checking boxes.
+- **Reader's perspective.** Judge copy as a reader would — would I want to keep reading after this? Not as an editor checking boxes.
 - **Natural voice.** Posts should sound like a person wrote them, not like they were generated. No staccato fragments, no em dash chains, no constructed parallelism.
 
 These posts are published from Pulumi's corporate accounts, not from individual authors.
@@ -146,7 +146,7 @@ These are stylistic notes — they don't block the post.
 
 **LinkedIn**
 - "There is a pattern that teams building with AI coding agents tend to hit" is a generic opener — lead with the speedup or the bug the framework caught
-- Final paragraph reveals the article's conclusion ("which helps comes down to which problem keeps showing up") — withhold the mapping so the reader has a reason to click
+- Final paragraph reveals the article's conclusion ("which helps comes down to which problem keeps showing up") — withhold the mapping so the reader still has something to find out
 
 ---
 
