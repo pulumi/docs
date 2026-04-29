@@ -35,13 +35,13 @@ When in doubt, treat the token as protected.
 - **Subject-verb disagreement** when both subject and verb are common English words: "Pulumi support" → "Pulumi supports"; "the team are" → "the team is" (US English).
 - **Missing article** when a singular countable English noun obviously needs one: "Use Pulumi to deploy stack" → "to deploy a stack". Skip if the noun is protected.
 - **Doubled words**: "the the", "to to", "and and".
+- **UK spellings.** This repo uses American English. Convert by pattern: `-our` → `-or` ("colour" → "color", "behaviour" → "behavior", "favourite" → "favorite", "labour" → "labor", "honour" → "honor"); `-ise`/`-yse` verbs → `-ize`/`-yze` ("organise" → "organize", "realise" → "realize", "analyse" → "analyze", "optimise" → "optimize", "customise" → "customize"); `-tre` → `-ter` ("centre" → "center", "theatre" → "theater"); doubled-l past tense → single-l ("travelled" → "traveled", "cancelled" → "canceled", "labelling" → "labeling", "modelled" → "modeled"); specific cases: "defence" → "defense", "licence" (as noun) → "license", "practise" (as verb) → "practice".
+- **Missing Oxford comma** in a list of three or more items. "stacks, providers and components" → "stacks, providers, and components"; "deploy, preview or destroy" → "deploy, preview, or destroy". Always required, including before "and" or "or" in the final item.
 
 ## Do not flag
 
 - Anything matching a protected token.
 - **Sentence fragments used for emphasis** in titles, headings, or marketing copy. "Faster, simpler." in a `meta_desc` is intentional, not a missing verb.
-- **Regional spellings.** "behaviour", "colour", "organisation", "dialogue", "favourite", "centre" — UK is valid; never flag.
-- **Oxford-comma presence or absence.** Both are valid.
 - **Em-dash, en-dash, hyphen, or punctuation density.** Style choice, not error.
 - **"Punctuation that changes meaning"** unless you can quote the exact missing or extra mark AND explain how the meaning literally inverts. If you have to reach, skip.
 - **Style, rewording, tone, or clarity suggestions.** This pass is spelling and grammar only — not editorial.
@@ -72,11 +72,12 @@ DO flag:
 - `content/docs/bar.md:3 — "the the" doubled`
 - `content/blog/baz.md:8 — "your welcome" should be "you're welcome"`
 - `content/docs/qux.md:22 — "Pulumi support TypeScript" should be "Pulumi supports TypeScript"`
+- `content/blog/baz.md:5 — "behaviour" should be "behavior" (American English)`
+- `content/docs/foo.md:11 — missing Oxford comma in "stacks, providers and components" → "stacks, providers, and components"`
 
 DO NOT flag:
 
 - "Pulumi IaC" — Pulumi product name
-- "behaviour" — UK spelling, valid
 - "Faster. Simpler. Done." — intentional fragments in marketing copy
 - "kubectl get pods" — command identifier
 - "stack-references-doc.md" — kebab-case identifier
