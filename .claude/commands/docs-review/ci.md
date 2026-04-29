@@ -91,9 +91,3 @@ The script handles the `<!-- CLAUDE_REVIEW N/M -->` marker convention, splits at
 ### 6. Post-run
 
 After a successful post, the workflow applies the `review:claude-ran` label and removes `review:claude-stale` if present. Nothing for the prompt to do here.
-
----
-
-## Re-entrant runs
-
-This entry point is **initial review only**. Re-entrant updates (after `@claude` mentions or new commits) go through `docs-review:references:update`, invoked from `.github/workflows/claude.yml`.
