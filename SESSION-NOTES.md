@@ -708,3 +708,58 @@ Discussed but not implemented in this session, on the backlog:
 - `/workspaces/src/scratch/2026-04-29-review-criteria-audit.md` — full audit report with rule-by-rule classification and decision queue. Survives this session for reference; not committed to docs repo.
 - Two new commits on `CamSoper/pr-review-overhaul`: `05411771e5` (extraction), `a096563c8b` (restoration). Both pushed.
 - 3 new shared references: `code-examples.md`, `prose-patterns.md`, `image-review.md`. Reference count is now 12 in `docs-review/references/`.
+
+---
+
+## Session 9 — 2026-04-29 (Tier A audit + lint-markdown.js extensions)
+
+### Tier A markdownlint audit (DROPPED)
+
+Audited the four "Tier A" candidates (MD034, MD037, MD039, MD059) against `content/**` to see how much cleanup an enable would require. Headline finding: **MD034 is a trap.**
+
+Counts (content/ scope, matches `lint-staged`):
+
+- **MD034** (bare URLs): 82 violations across 56 files. Linter says all auto-fixable. **In reality, 67 of 82 (82%) are false positives** — URLs inside Hugo shortcode parameters like `{{< video src="https://www.pulumi.com/uploads/foo.mp4" >}}`. Auto-fix wraps them as `src="<https://...>"`, which Hugo renders literally. **Demonstrated end-to-end** by running `markdownlint-cli2 --fix` on `content/blog/esc-env-run-aws/index.md` and inspecting the diff.
+- **MD037** (spaces in emphasis): 8 violations. ~25% real prose, rest are code-block-detection failures (`import * as ...` lines outside fences) and policy-pack table cells with literal `*`.
+- **MD039** (spaces in link text): 2 violations. Both real, trivial.
+- **MD059** (descriptive link text): 84 violations. **71 in `content/blog/`** (historical per AGENTS.md), 13 in `content/docs/` — all `[here]` patterns.
+
+**Decision: Option A — drop Tier A entirely.** Cam's call. The MD034 false-positive rate disqualifies it, and the rest aren't worth the partial-pipeline complexity.
+
+**Load-bearing config note:** the MD034 disable in `.markdownlint-base.json` is *not* dead config — it's defensive, because Hugo and CommonMark disagree on what counts as inline content. Same applies to MD037 to a lesser degree. **Don't flip them back on without a Hugo-aware preprocessor that strips shortcodes before linting.** The review skill already catches the rule that matters here (`shared-criteria.md` flags `[here]`/`[click here]` as descriptive-link-text violations); we have coverage at PR review time even without the linter rule.
+
+Tier B (MD040, MD045) was contingent on Tier A landing clean. Now also dead.
+
+### lint-markdown.js — frontmatter validator extensions
+
+Added two new frontmatter checks to `scripts/lint/lint-markdown.js`:
+
+1. **`checkSocialBlock`** — flags blog posts where the `social:` block is missing entirely OR all three keys (`twitter`/`linkedin`/`bluesky`) are empty. Either state means the post won't be promoted on social, defeating the new-blog-post scaffolding's intent.
+2. **`checkPlaceholderMetaImage`** — hashes the file at `obj.meta_image` (resolved relative to the post directory, or against `static/` for absolute paths) and compares to the SHA-256 of `.claude/commands/_common/images/blog-post-meta-placeholder.png`. If equal, the author hasn't replaced the default. Replaces the previous "TODO: maintain a list of retired logos" plan — Cam's call: the only canonical "wrong" image is the placeholder; everything else is judgment.
+
+Both checks scope to `content/blog/**` (via `isBlogPost(filePath, obj)` — also excludes taxonomy/list pages like `_index.md`/`series.md`/`tag.md` that lack a `date` field) and skip when `draft: true`. They also skip via **`isArchivalPost`** — any post whose `date` is in the past is exempted.
+
+**Rationale for "any past date" semantics (Option 2):** publishing-readiness checks are a pre-publish gate, not an archival-quality gate. Once a post's date is past, the social-promotion train has left the station, and failing the lint on already-merged posts breaks `make lint` against master. The rule still catches the most common authoring path (`/new-blog-post` template's `date: 2099-01-01` sentinel) and any future-scheduled launch post, which is where the value is. Initial implementation used a 30-day window; surfaced 3 real findings on recent posts (Bitbucket, Bun, GovCloud — all within 30 days of 2026-04-29) which would have failed `make lint`. Cam's call: tighten to "any past date" rather than backfill social copy or chase the calibration. The lost catch (post merged with empty social, then someone edits it within 30 days) is narrow and is already covered by the docs-review skill's publishing-readiness checklist (R87).
+
+**Tested behaviors (synthetic fixture under `/tmp/lint-test/` + real archival post):**
+
+| Scenario | Expected | Actual |
+|---|---|---|
+| Archival post (2024) with empty social: | pass | ✅ pass |
+| Fresh post (date=2099) with placeholder image + empty social: | 2 errors | ✅ 2 errors |
+| Fresh post with real image + at least one social key filled | pass | ✅ pass |
+| Fresh post with `draft: true` | pass | ✅ pass |
+| Docs file (no social block) | pass | ✅ pass |
+
+`checkMoreBreak` (R71) was on the backlog but Cam didn't ask for it this session. Skipped.
+
+### Backlog after Session 9
+
+1. **`checkMoreBreak`** — flag missing `<!--more-->` or buried positioning (after paragraph 3+). Still on R71 in the audit; deferred.
+2. **Cache-friendliness audit** — Session 7 carryover.
+3. **PR 45 prose-regression investigation** — Session 6 carryover.
+4. **Deploy step:** create `review:frontmatter-only` label upstream when branch lands.
+
+### Artifacts
+
+- `scripts/lint/lint-markdown.js` — added `checkSocialBlock`, `checkPlaceholderMetaImage`, `isArchivalPost`, `isBlogPost`, `META_IMAGE_PLACEHOLDER_HASH` constant. ~70 lines net add.

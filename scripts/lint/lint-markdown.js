@@ -1,8 +1,23 @@
+const crypto = require("crypto");
 const fs = require("fs");
 const yaml = require("js-yaml");
 const { lint: markdownlint, readConfig } = require("markdownlint/sync");
 const path = require("path");
 const markdownIt = require("markdown-it");
+
+// Hash of the default meta-image placeholder shipped by `/new-blog-post`.
+// A blog post whose `meta_image` file matches this hash hasn't been customized.
+const META_IMAGE_PLACEHOLDER_PATH = path.resolve(
+    __dirname,
+    "../../.claude/commands/_common/images/blog-post-meta-placeholder.png"
+);
+const META_IMAGE_PLACEHOLDER_HASH = (() => {
+    try {
+        return crypto.createHash("sha256").update(fs.readFileSync(META_IMAGE_PLACEHOLDER_PATH)).digest("hex");
+    } catch (e) {
+        return null;
+    }
+})();
 
 // BEHAVIOR SWITCH: Set to false to use old behavior, true for new behavior
 const USE_NEW_FRONTMATTER_VALIDATION = true;
@@ -88,6 +103,85 @@ function checkMetaImage(image) {
     return null;
 }
 
+function isBlogPost(filePath, obj) {
+    if (!filePath.includes("/content/blog/")) {
+        return false;
+    }
+    // Taxonomy / list pages (`_index.md`, `series.md`, `tag.md`) don't have `date`.
+    return typeof obj.date !== "undefined";
+}
+
+// Publishing-readiness checks (social block, placeholder image) only apply pre-publish.
+// Once a post's `date` is in the past, the social-promotion train has left the station
+// and the lint shouldn't fail on archival-state deficiencies. Pre-commit still catches
+// the common case where a post comes from `/new-blog-post` with the `2099-01-01` sentinel
+// or has a future-scheduled launch date.
+function isArchivalPost(obj) {
+    if (obj.draft === true) {
+        return false;
+    }
+    if (!obj.date) {
+        return false;
+    }
+    const postDate = new Date(obj.date);
+    if (Number.isNaN(postDate.getTime())) {
+        return false;
+    }
+    return postDate.getTime() < Date.now();
+}
+
+/**
+ * Validates that a blog post has a populated `social:` frontmatter block.
+ * The block is created by `/new-blog-post` with empty `twitter`/`linkedin`/`bluesky`
+ * keys; the post won't be promoted on social if all three remain empty. Skipped for
+ * drafts, archival posts, and non-blog content.
+ */
+function checkSocialBlock(obj, filePath) {
+    if (!isBlogPost(filePath, obj) || obj.draft === true || isArchivalPost(obj)) {
+        return null;
+    }
+    const social = obj.social;
+    if (!social || typeof social !== "object") {
+        return "Blog post is missing the social: frontmatter block (twitter/linkedin/bluesky).";
+    }
+    const hasAny = ["twitter", "linkedin", "bluesky"].some(key => {
+        const v = social[key];
+        return typeof v === "string" && v.trim().length > 0;
+    });
+    if (!hasAny) {
+        return "Blog post social: block has no copy for twitter, linkedin, or bluesky -- post won't be promoted.";
+    }
+    return null;
+}
+
+/**
+ * Flags a blog post whose meta_image file is the unmodified placeholder copied in by
+ * `/new-blog-post`. The placeholder is a generic Pulumi card; shipping it leaves social
+ * previews looking unbranded for the post. Skipped for drafts and non-blog content.
+ */
+function checkPlaceholderMetaImage(obj, filePath) {
+    if (!isBlogPost(filePath, obj) || obj.draft === true || isArchivalPost(obj)) {
+        return null;
+    }
+    if (!obj.meta_image || typeof obj.meta_image !== "string" || !META_IMAGE_PLACEHOLDER_HASH) {
+        return null;
+    }
+    let imagePath;
+    if (obj.meta_image.startsWith("/")) {
+        imagePath = path.resolve(__dirname, "../../static", "." + obj.meta_image);
+    } else {
+        imagePath = path.resolve(path.dirname(filePath), obj.meta_image);
+    }
+    if (!fs.existsSync(imagePath)) {
+        return null;
+    }
+    const hash = crypto.createHash("sha256").update(fs.readFileSync(imagePath)).digest("hex");
+    if (hash === META_IMAGE_PLACEHOLDER_HASH) {
+        return `Meta image '${obj.meta_image}' is the unmodified /new-blog-post placeholder. Replace it before publishing.`;
+    }
+    return null;
+}
+
 /**
  * Builds an array of markdown files to lint and checks each file's front matter
  * for formatting errors.
@@ -166,6 +260,8 @@ function searchForMarkdown(paths) {
                     title: checkPageTitle(obj.title, allowLongTitle),
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
+                    placeholderMetaImage: checkPlaceholderMetaImage(obj, fullPath),
+                    socialBlock: checkSocialBlock(obj, fullPath),
                 };
                 result.files.push(fullPath);
             }
@@ -280,6 +376,18 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.metaImage,
+                });
+            }
+            if (frontMatterErrors.placeholderMetaImage) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.placeholderMetaImage,
+                });
+            }
+            if (frontMatterErrors.socialBlock) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.socialBlock,
                 });
             }
         }
