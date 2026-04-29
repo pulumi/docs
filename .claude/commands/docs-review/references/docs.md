@@ -59,7 +59,7 @@ Reference `STYLE-GUIDE.md` and `data/glossary.toml` for the authoritative lists;
 
 ### Priority 5 — SEO and discoverability
 
-These are the feasible, concrete rules from `seo-analyze:references:aeo-checklist` applied at review time. Quote-and-rewrite mandate. The full AEO scoring pass still belongs to `/seo-analyze` for deeper analysis; these are the items that catch on a normal review. Apply most strictly to **what-is pages** (`content/what-is/`) and **concept docs**; less strictly to reference and tutorial content where the patterns naturally differ.
+These are the feasible, concrete rules from `seo-analyze:references:aeo-checklist` applied at review time. Quote-and-rewrite mandate. Apply most strictly to **what-is pages** (`content/what-is/`) and **concept docs**; less strictly to reference and tutorial content where the patterns naturally differ.
 
 - **Title matches page subject.** Quote the `title:` frontmatter and the page's first paragraph; flag when the page's actual subject is materially different from what the title claims.
 - **Quotable definition for what-is and concept pages.** The opening 1–2 sentences should answer "what is X" as a standalone definition that could be quoted by an AI tool without surrounding context. Quote the opening; flag fluff intros ("In this guide, we'll explore...") and propose a direct definition.
