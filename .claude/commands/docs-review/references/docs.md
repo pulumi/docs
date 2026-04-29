@@ -32,6 +32,7 @@ Snippet-level checks live in `docs-review:references:code-examples`. Docs-specif
 - **Link target exists.** Every internal link added or modified in the diff must resolve to an existing page in the PR's snapshot (`gh api repos/<owner>/<repo>/contents/<path>`). Missing targets are 🚨.
 - **Anchor resolves.** `/docs/foo/#bar` requires `#bar` to exist on `/docs/foo/`. Verify by fetching the target file and grep for `## Bar` / `### Bar` (or whatever heading level the slug matches).
 - **Orphan cross-refs after moves.** If the PR moves a page, every inbound link elsewhere in `content/docs/` or `content/product/` must be updated (aliases handle outsider/historic links, but the repo's own internal links should use the new canonical path).
+- **Missing cross-link to a canonical concept page.** When the diff text mentions a Pulumi concept that has a canonical doc page (stacks, providers, components, ESC environments, projects, programs, policy packs), and no occurrence of the term in the file is hyperlinked, flag it once per concept. Quote the most prominent unlinked occurrence; propose the link target (e.g., `[stacks](/docs/iac/concepts/stacks/)`). Do not flag the page whose subject *is* the concept (a stacks page doesn't need to link "stacks" in its own intro). Do not flag terms outside Pulumi's vocabulary.
 
 ### CLI commands
 

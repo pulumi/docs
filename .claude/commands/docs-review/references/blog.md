@@ -102,6 +102,7 @@ These are the feasible, concrete rules from `seo-analyze:references:aeo-checklis
 - **All links resolve.** Inherited from `docs-review:references:shared-criteria`.
 - **Link text is descriptive.** Inherited.
 - **First mention is hyperlinked.** Every tool, technology, or product's *first* mention in the post should be a link (to docs, to the project homepage, to a GitHub repo). Flag only first-mention misses; subsequent mentions don't need the link.
+- **Missing cross-link to canonical Pulumi docs.** When the post mentions a Pulumi concept with a canonical doc page (stacks, providers, components, ESC environments, projects, programs, policy packs) and no occurrence of the term is hyperlinked, flag it once per concept. Quote the most prominent unlinked occurrence; propose the link target (e.g., `[stacks](/docs/iac/concepts/stacks/)`). Complements the rule above — that one covers external tools and projects; this one covers internal Pulumi concept docs.
 - **`{{< github-card >}}` references.** Format `owner/repo`; verify the repo exists (`gh api repos/<owner>/<repo>`). A broken card card renders as an ugly empty block.
 
 ## Pre-existing issues (always on)
