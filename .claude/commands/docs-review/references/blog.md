@@ -64,7 +64,10 @@ Apply `docs-review:references:code-examples`. Code in blog posts gets heavily co
 - **Release terminology.** "Public preview," not "public beta" (per `STYLE-GUIDE.md`). "Generally available," not "generally released."
 - **Canonical links to docs.** Every feature announcement should link to the relevant `/docs/` page. Missing doc links are a pre-existing-issue finding (the blog post is fine on its own; it's the site SEO that suffers).
 - **"New" vs "now supports."** A feature that landed more than ~30 days ago should use "now supports" or "recently added," not "new." If the frontmatter `date` is old relative to the claim's subject, flag.
-- **Title quality.** Title should describe the post's subject specifically. Flag clickbait constructions ("You won't believe...", "10 things every X needs"), question-headlines without a clear payoff, and titles that sell a different post than the body delivers.
+- **Title quality.** Title should describe the post's subject specifically and contain the topical hook a search/AI user would type. Flag:
+  - **Clickbait constructions** ("You won't believe...", "10 things every X needs"), question-headlines without a clear payoff.
+  - **Title/body mismatch.** Quote the title and the post's first paragraph; flag when the body's actual subject is materially different from what the title sells (e.g., title is "Improving Pulumi Performance," body is specifically about Bun-runtime startup time).
+  - **Generic titles missing the topical hook.** "Improving Performance" or "A New Approach to X" without naming the product, feature, or specific outcome. Quote the title; propose a more specific rewrite that includes the primary subject.
 
 ### Priority 5 — Documentation coverage (feature-announcement posts only)
 
@@ -76,7 +79,18 @@ When a blog post announces a new feature, provider, or significant capability:
 
 Render under 💡 Pre-existing (this is a project-completeness flag, not a blog quality issue) so the blog can ship without blocking on docs work.
 
-### Priority 6 — Links
+### Priority 6 — SEO and discoverability
+
+These are the feasible, concrete rules from `seo-analyze:references:aeo-checklist` applied at review time. Quote-and-rewrite mandate: every finding names a specific construction and proposes a fix. The full AEO scoring pass still belongs to `/seo-analyze` for deeper analysis; these are the items that catch on a normal review.
+
+- **Quotable opening paragraph.** The first 1–2 sentences should answer "what is this post about" as a standalone definition, with no fluff intro. Quote the opening; flag empty transitions ("In this post, we'll explore...", "Let's dive in", "In recent years...") and propose a direct first-sentence rewrite that names the subject.
+- **Answer-first H2 headings.** For concept-heavy posts, prefer question-style or how-style headings ("How does Pulumi ESC handle secrets?") over label-style ("ESC overview"). Label headings rank lower for AI answer extraction. Quote the heading; propose an answer-first rewrite. Don't flag label headings on action posts ("Get started," "Install Pulumi") — those are correct.
+- **Specific data over vague superlatives.** "Pulumi is much faster" / "many users adopted X" / "significantly improved" without numbers. Quote the claim; propose a specific number, percentage, or comparison. Where the post genuinely lacks data, flag for fact-check rather than rewrite.
+- **Down-funnel specificity.** A feature post that introduces the feature but never shows a concrete integration, command, or code example is too generic to rank or be cited. Quote the most generic section; propose adding a specific use case (named integration, CI flow, edge case).
+- **Numbered, executable steps for "how-to" content.** "Get started" / "Set up X" sections that read as prose instead of numbered steps with copy-pasteable commands. Quote the section; propose a numbered list with explicit commands.
+- **Dated context where it matters.** Posts that describe behavior tied to a specific Pulumi version or external state should name it ("As of v3.150…", "On 2026-04-29…"), not assume the reader knows. Flag undated state claims.
+
+### Priority 7 — Links
 
 - **All links resolve.** Inherited from [`shared-criteria.md`](shared-criteria.md).
 - **Link text is descriptive.** Inherited.
@@ -103,8 +117,7 @@ CI fact-check is public-sources-only -- see `ci.md`. Notion and Slack are explic
 - **Colloquialisms as inclusive-language violations.** "Overkill," "kill the process," "kick off," "blow away" are fine in technical context. (The audit's most frequent false-positive class; sample PR #18493.) Note: this intentionally relaxes `STYLE-GUIDE.md` §Inclusive Language -- the style guide rule stands for authors; the review skill stops nagging about it.
 - **Drafting social copy, CTAs, or button text.** Flag when the `social:` block is missing or malformed; do not draft replacement copy. Marketing owns voice here, not the reviewer.
 - **Meta image design critique.** Flag when `meta_image` is the placeholder or uses outdated logos. Do not critique colors, composition, or layout.
-- **"Consider rewording for engagement."** If there's a factual issue with the wording, say so. Don't draft a more engaging version for its own sake.
-- **Structural rewrites.** "You should reorganize this section" is editorial, not a review finding. Flag factual, link, or code errors -- don't propose TOC rearrangements.
+- **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `prose-patterns.md`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Heading case already consistent within the file.** Style linters catch inconsistency. The only heading case that's a finding is one that names a product incorrectly (e.g., "Pulumi esc" instead of "Pulumi ESC").
 
 ## Publishing-readiness checklist

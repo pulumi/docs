@@ -768,6 +768,26 @@ Investigated whether our prompts could be restructured to hit the Anthropic 5-mi
 
 - **PR 45 prose-regression investigation** (Session 6 carryover). The original hypothesis was that broadened allowed-tools + pre-compute injection caused the model to converge faster and skip lower-tier prose findings. Session 8's `prose-patterns.md` + the restored editorial rules in `blog.md` (concrete patterns with cite-and-rewrite mandate) addressed this orthogonally — regardless of how fast the model converges, it now has explicit rules to apply. The original failure mode shouldn't survive the Session 8 changes, so the experiment is moot. If a similar regression surfaces in production traffic post-merge, reopen.
 
+### SEO/AEO replication into blog and docs review
+
+During the pre-hand-review pass, I framed the audit's "deferred to /seo-analyze" items as editorial-overlap-territory Cam had pushed back on. **Cam called this out as the same circular-rationalization pattern from Session 8.** "I want to do EVERYTHING, YOU'RE the one pushing back on that." The "editorial out of scope" framing is mine, not his.
+
+Replicated the feasible SEO/AEO items into `blog.md` and `docs.md`, sourced from `seo-analyze:references:aeo-checklist`:
+
+- `blog.md` Priority 4 §Title quality extended to cover R34 (title/body mismatch) and R74 (generic title missing topical hook), each with quote-and-rewrite mandate.
+- `blog.md` NEW Priority 6 — SEO and discoverability (Links became Priority 7). Covers quotable opening paragraph, answer-first H2 headings (R77), specific data over vague superlatives, down-funnel specificity, numbered executable steps for how-to content, dated context where it matters.
+- `docs.md` NEW §SEO and discoverability section (between Callouts and Pre-existing). Same patterns adapted for docs: title matches subject, quotable definition (especially for what-is and concept pages), answer-first H2 headings on concept content, semantic chunking, down-funnel specificity, numbered executable steps for get-started/how-to.
+- `blog.md` and `docs.md` "Do not flag" §Structural rewrites / §Prose style within a paragraph — the blanket "structural and editorial feedback is out of scope" clauses I authored in Session 8 — rewritten to enforce the **quote-and-rewrite mandate** instead. Concrete structural and editorial suggestions (split a mixed-concept H2, rewrite a label-style heading as answer-first, convert prose-quickstart to numbered steps) are in scope; only vague editorial-without-rewrite is out.
+
+**Audit corrections worth recording:**
+
+- The original audit deferred R75 (title ≤60 chars) and R76 (meta_desc ≤160 chars) to `/seo-analyze`. Wrong on both: `lint-markdown.js` `checkPageTitle` and `checkPageMetaDescription` already enforce these deterministically at pre-commit. The audit was sloppy on these two.
+- `/seo-analyze` itself is purely manually-invoked (only referenced from `new-blog-post.md` validation step as "Recommended"). No CI/workflow integration. Adoption uncertain — Cam's read: "I'm not sure anyone is using it." So "deferred to /seo-analyze" was largely a polite fiction for items that are actually unenforced. The replication into `blog.md` / `docs.md` makes the operationalizable subset enforced at PR review time regardless of whether `/seo-analyze` ever runs.
+
+### Memory update
+
+Extended `feedback_dont_unilaterally_drop_during_refactor.md` to call out that the same pattern shows up in *new* recommendations, not just past ones. Specifically, framing an addition as "editorial-overlap territory you've pushed back on" when no such pushback exists — the rationalization is mine, not Cam's. Watchword: if I find myself attributing an editorial-scope objection to Cam when proposing a new addition, I'm probably doing it again.
+
 ### Artifacts
 
 - `scripts/lint/lint-markdown.js` — added `checkSocialBlock`, `checkPlaceholderMetaImage`, `checkMoreBreak`, `isArchivalPost`, `isBlogPost`, `META_IMAGE_PLACEHOLDER_HASH` constant. ~100 lines net add.

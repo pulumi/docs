@@ -55,6 +55,17 @@ Reference `STYLE-GUIDE.md` and `data/glossary.toml` for the authoritative lists;
 - **`{{< chooser >}}`** / **`{{< choosable >}}`** pairs must match: every language listed in the `chooser` needs a corresponding `choosable` block, and vice versa.
 - **Percent vs angle-bracket syntax.** `{{% ... %}}` for shortcodes that process Markdown (notes, choosable, details). `{{< ... >}}` for shortcodes that emit pre-rendered content (cleanup, example). See `STYLE-GUIDE.md` §Shortcode syntax.
 
+### SEO and discoverability
+
+These are the feasible, concrete rules from `seo-analyze:references:aeo-checklist` applied at review time. Quote-and-rewrite mandate. The full AEO scoring pass still belongs to `/seo-analyze` for deeper analysis; these are the items that catch on a normal review. Apply most strictly to **what-is pages** (`content/what-is/`) and **concept docs**; less strictly to reference and tutorial content where the patterns naturally differ.
+
+- **Title matches page subject.** Quote the `title:` frontmatter and the page's first paragraph; flag when the page's actual subject is materially different from what the title claims.
+- **Quotable definition for what-is and concept pages.** The opening 1–2 sentences should answer "what is X" as a standalone definition that could be quoted by an AI tool without surrounding context. Quote the opening; flag fluff intros ("In this guide, we'll explore...") and propose a direct definition.
+- **Answer-first H2 headings on concept content.** Question-style or how-style headings ("How does Pulumi ESC handle secrets?") rank better for AI answer extraction than label-style ("ESC overview"). Quote the heading; propose an answer-first rewrite. Don't flag label headings on reference docs (API listings, CLI flags) — labels are correct there.
+- **Semantic chunking.** Each H2 section should cover one focused concept. Flag when a single section mixes definition, history, benefits, and a tutorial; quote the section's first heading and propose a split with new H2s.
+- **Down-funnel specificity.** Concept docs that introduce a feature without showing a concrete integration or use case are too generic to be cited. Flag the most generic section; propose adding a specific scenario, integration, or edge case.
+- **Numbered, executable steps for "get started" / "how to" sections.** Quickstart prose that doesn't break into numbered steps with copy-pasteable commands. Quote the section; propose a numbered list with explicit `pulumi …` commands.
+
 ## Pre-existing issues (opt-in)
 
 Extract pre-existing issues from a touched file when any of:
@@ -86,7 +97,7 @@ CI fact-check is public-sources-only -- see `ci.md`.
 
 ## Do not flag
 
-- **Prose style within a paragraph.** "Could be clearer" / "consider reorganizing this paragraph" is editorial feedback, not a review finding. Flag factual errors, broken links, and code bugs, not sentence rhythm.
+- **Vague editorial feedback without quote-and-rewrite.** "Could be clearer" / "consider reorganizing this paragraph" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `prose-patterns.md`; split a mixed-concept H2; rewrite a label-style heading as answer-first; convert prose-quickstart to numbered steps) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Property-name casing that matches the language's convention.** `bucketName` in TypeScript is correct; `bucket_name` in Python is correct. Flag only when the casing is wrong *for that language*, not when you prefer a different convention.
 - **Code examples that omit optional arguments.** "You could also pass `tags: {...}`" is unsolicited enrichment. Docs deliberately keep starter examples minimal. Flag if a required argument is missing; don't flag for completeness.
 - **CLI examples without output.** Not every code block needs a paired ` ```output ` block. Flag when the prose *claims* specific output and the block is missing; don't flag as a general "you should show what this prints."
