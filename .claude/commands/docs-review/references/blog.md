@@ -29,13 +29,7 @@ The priorities below are ordered for **output rendering** — fact-check finding
 
 ### Priority 1 — Fact-check first
 
-Invoke `docs-review:references:fact-check` (`scrutiny=heightened`) **before** any style pass. Claim extraction covers:
-
-- **Every number.** Performance multipliers ("41x faster"), throughput numbers, user counts, customer counts, version numbers, percentages, pricing, benchmark figures.
-- **Every tech claim about Pulumi products.** "Pulumi ESC supports X." "Pulumi Cloud now does Y." "New in v3.X." If the diff asserts a capability, verify it against the current registry schema, release notes, or source.
-- **Every tech claim about competitors and third-party tools.** "Terraform requires X." "CloudFormation doesn't support Y." Wrong claims about competitors are embarrassing and quotable.
-- **Every benchmark or comparison.** "X is faster than Y." "Z reduces latency by N%." Needs a source.
-- **Every adoption or market-position statistic.** "Used by N% of Fortune 500." "The most popular IaC tool for K8s." Needs a source.
+Invoke `docs-review:references:fact-check` (`scrutiny=heightened`) **before** any style pass. The reference owns claim extraction; in blog copy, pay particular attention to **performance multipliers**, **competitor claims**, and **adoption / market-position statistics** — common in this domain and high-blast-radius when wrong.
 
 Findings render in 🚨 / ⚠️ **before** style findings.
 
