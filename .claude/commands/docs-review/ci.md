@@ -48,7 +48,7 @@ Treat the diff as the source of truth for what changed. If `--json files` lists 
 
 ### 2. Compose the review
 
-Route each changed file using `docs-review:references:domain-routing`. Run each file under its domain and merge findings into a single output object. The domain file decides whether to invoke `docs-review:references:fact-check`.
+Route each changed file using `docs-review:references:domain-routing`. Run each file under its domain and merge findings into a single output object.
 
 ### 3. Build the output
 
@@ -65,7 +65,3 @@ bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
 ```
 
 The script handles the `<!-- CLAUDE_REVIEW N/M -->` marker convention, splits at the 65k boundary, edits existing comments in place, appends overflow, and prunes the tail. The 1/M summary is never deleted.
-
-### 5. Post-run
-
-After a successful post, the workflow applies the `review:claude-ran` label and removes `review:claude-stale` if present.

@@ -273,15 +273,13 @@ jobs:
                 --pr ${{ steps.pr-context.outputs.pr_number }} \
                 --body-file <path-to-rendered-review>
 
-            Then apply the `review:claude-ran` label and remove `review:claude-stale` if present:
-
-              gh pr edit ${{ steps.pr-context.outputs.pr_number }} \
-                --add-label review:claude-ran --remove-label review:claude-stale
+            Post-run labels (`review:claude-ran` add, `review:claude-stale` remove)
+            are applied by a separate workflow step. Do not apply them yourself.
           claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr edit:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
 
       # Runs on success or failure so the transient CLAUDE_PROGRESS comment
-      # always reaches a terminal state. Claude's prompt adds review:claude-ran
-      # on success; we just need to remove review:claude-working.
+      # always reaches a terminal state, and review:claude-working is always
+      # removed regardless of outcome.
       #
       # Outcome handling:
       # - success: edit the comment to "Review updated."
@@ -313,6 +311,23 @@ jobs:
               -f body="$BODY" >/dev/null || true
           fi
           gh pr edit "$PR" --repo "$REPO" --remove-label review:claude-working || true
+
+      # Apply the review:claude-ran label and clear review:claude-stale on
+      # successful completion. Gated on claude-review.outcome == 'success' so
+      # skipped (trivial / draft / bot) and failed runs do NOT mark the PR as
+      # reviewed. The empty-diff short-circuit inside ci.md still exits cleanly
+      # (success), which is the intended path — stale-marking on subsequent
+      # pushes depends on review:claude-ran being applied.
+      - name: Apply post-run review labels
+        if: steps.claude-review.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          gh pr edit "$PR" --repo "$REPO" \
+            --add-label review:claude-ran \
+            --remove-label review:claude-stale || true
 
       # Finalize the check-run created at job start. Runs on success or
       # failure so contributors always see a terminal state in the PR's
