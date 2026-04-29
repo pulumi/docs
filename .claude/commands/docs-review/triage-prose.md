@@ -13,7 +13,7 @@ This is a fast, narrow pass. Output exactly one JSON object on a single line, no
 {"prose_concerns":["path/to/file.md:LINE — issue (suggested fix)", ...]}
 ```
 
-If you find no issues, output `{"prose_concerns":[]}`.
+If you find no issues, output `{"prose_concerns":[]}`. Be specific so the author can act without re-reading the diff. One concern per element. Cap at the 5 most important findings.
 
 ## Protected tokens — never flag
 
@@ -83,14 +83,3 @@ DO NOT flag:
 - "stack-references-doc.md" — kebab-case identifier
 - "ESC" — protected acronym
 
-## Output format
-
-Each finding is one element in `prose_concerns`:
-
-```text
-path/to/file.md:LINE — issue (suggested fix)
-```
-
-Be specific so the author can act without re-reading the diff. One concern per element. Cap at the 5 most important findings.
-
-Output exactly one JSON object on a single line. No prose, no code fences, no commentary.

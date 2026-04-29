@@ -159,9 +159,9 @@ After verification, render each claim in the bucket dictated by its verification
 
 | Verification result | `intuition_check=true` renders in | Evidence-line note |
 |---|---|---|
-| `contradicted` (any confidence) | 🚨 Contradicted | No 🤔 note needed; the contradiction already demands a fix |
-| `unverifiable` | 🚨 Unverifiable | "Shape also suggests fabrication; cite a source" |
-| `verified` with `confidence: low` | ⚠️ Low-confidence | "Shape was suspect; verifier found a low-confidence match" |
+| `contradicted` (any confidence) | 🚨 Needs your eyes | No 🤔 note needed; the contradiction already demands a fix |
+| `unverifiable` | 🚨 Needs your eyes | "Shape also suggests fabrication; cite a source" |
+| `verified` with `confidence: low` | ⚠️ Low-confidence verified | "Shape was suspect; verifier found a low-confidence match" |
 | `verified` with `confidence: medium` or `high` | ✅ Verified | No 🤔 note; evidence resolves the shape concern |
 | **verification timed out / inconclusive** | 🤔 Intuition-check | "Verifier couldn't resolve; author should cite a source" |
 
@@ -324,10 +324,8 @@ When called from a PR review, preserve the PR-introduced vs. pre-existing distin
 
 When the caller passes `scrutiny=heightened`:
 
-- Claim extraction runs over the **full file**, not just diff context.
 - Gating always returns RUN.
-- Web/`gh` verification runs by default on every claim.
-- Medium-confidence verified claims get promoted from collapsed `✅ Verified` to visible `⚠️ Low-confidence verified`.
+- The `heightened` branch of §Scope (full-file claim extraction), §Verification source order (web/`gh` verification by default on every claim), and §Tier rules (medium-confidence verified surfaces to ⚠️ Low-confidence verified instead of collapsed ✅ Verified) applies.
 - Pre-existing issue extraction runs per the rules below.
 
 ### Pre-existing issue extraction
@@ -336,7 +334,7 @@ When `scrutiny=heightened`, the verifier reads the **full file** for claim extra
 
 - **Do extract:** broken links, wrong facts, code typos (missing imports, wrong method names), deprecated terminology, temporally-rotted claims.
 - **Do NOT extract style nits** unless the domain file says to: heading case, list numbering, em-dash frequency, paragraph rhythm, trailing whitespace. Those are either linter territory or out of scope for fact-check.
-- **Cap:** 15 findings per file. If the file has more substantive issues than that, the top 15 render; surplus is noted as "+N additional pre-existing findings" in the bucket.
+- **Cap:** per `docs-review:references:output-format`. If the file has more substantive issues than the cap, the top N render; surplus is noted as "+N additional pre-existing findings" in the bucket.
 - **Bucket:** substantive pre-existing findings render in 💡 alongside domain-file style nits (when the domain says to extract them). The domain file controls what counts as which; fact-check just surfaces what it finds.
 
 For non-fact-check pre-existing extraction (style, structure), see the per-domain file's "Pre-existing issues" section.

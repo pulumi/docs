@@ -75,7 +75,7 @@ Determine the pinned-review state from labels and fetch output:
 | State | Detection | What Step 3 does |
 |---|---|---|
 | `CURRENT` | `review:claude-ran` set, `review:claude-stale` absent, fetch returns body | Nothing — proceed to Step 4 |
-| `STALE` | `review:claude-stale` set | Refresh in place by invoking `docs-review:references:update` locally (Sonnet pass + `pinned-comment.sh upsert`) |
+| `STALE` | `review:claude-stale` set | Refresh in place by invoking `docs-review:references:update` locally (re-runs claim verification against new commits, then writes via `pinned-comment.sh upsert`) |
 | `WORKING` | `review:claude-working` set | CI is producing the review right now; abort with a message asking the user to retry in a few minutes |
 | `ABSENT` | Fetch returns no `<!-- CLAUDE_REVIEW -->` markers | Fall back: run a local review (see Step 3 §Absent path) |
 
@@ -91,7 +91,7 @@ Continue to Step 4.
 
 #### STALE
 
-Refresh the pinned comment in place by invoking `docs-review:references:update` locally with `PR_NUMBER` set. The update procedure runs the Sonnet refresh (re-reading the diff since the last reviewed SHA, classifying as Case 1/2/3, and writing the refreshed body via `pinned-comment.sh upsert`). When it completes, re-fetch the pinned comment and re-parse findings for Step 6.
+Refresh the pinned comment in place by invoking `docs-review:references:update` locally with `PR_NUMBER` set. The update procedure re-reads the diff since the last reviewed SHA, classifies as Case 1/2/3, and writes the refreshed body via `pinned-comment.sh upsert`. When it completes, re-fetch the pinned comment and re-parse findings for Step 6.
 
 #### WORKING
 
@@ -167,7 +167,7 @@ This is the **first big user-facing output**. Render in this order, top to botto
 
    Each item gets a numeric index for veto in Step 8.
 
-6. **Trivial-fix candidates** (only if any) — applied via Make-changes-and-approve. Categories: trailing whitespace, missing EOF newlines, sentence-case headings (proper nouns preserved), missing aliases on moved files, missing language specifier on fenced code blocks. Suppressed entirely when AI-suspect, replaced with:
+6. **Trivial-fix candidates** (only if any) — applied via Make-changes-and-approve per the categories in `pr-review:references:action-preview-templates`. Suppressed entirely when AI-suspect, replaced with:
 
    ```text
    Trivial-fix auto-apply disabled (AI-suspect — manual review required)

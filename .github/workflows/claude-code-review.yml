@@ -258,14 +258,7 @@ jobs:
 
             ## Posting
 
-            Post via the relative-path form of the upsert script:
-
-              bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
-                --pr ${{ steps.pr-context.outputs.pr_number }} \
-                --body-file <path-to-rendered-review>
-
-            The Bash allow-list pattern matches on the relative form; absolute
-            paths under `/home/runner/...` are rejected. ci.md §4 covers the rest.
+            Post via the relative-path form of the upsert script -- `bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert --pr <PR> --body-file <file>`. The Bash allow-list rejects absolute `/home/runner/...` paths. ci.md §4 covers the rest of the posting contract.
 
             Post-run labels (`review:claude-ran` add, `review:claude-stale` remove)
             are applied by a separate workflow step. Do not apply them yourself.

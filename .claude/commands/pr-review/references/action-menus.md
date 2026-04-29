@@ -9,7 +9,7 @@ Select the appropriate section based on contributor type and review findings. Au
 
 ## Dependabot PRs
 
-Parse labels from PR data: `deps-risk-*`, `deps-security-patch`, `deps-lambda-edge-risk`, `deps-bulk-update`, `deps-merge-after-test`, `deps-quarterly-review`
+Parse Dependabot risk and special-handling labels per `pr-review:references:dependabot-labels`.
 
 ### Display Header
 
@@ -90,7 +90,7 @@ Choose the appropriate menu based on review findings:
 
 ### Scenario A: Issues with Suggested Fixes — Make Changes Recommended
 
-Use this when Step 5 surfaced contradictions and **every** contradiction has a high-confidence `suggested_fix`. Applying the fixes yourself is faster than round-tripping with the author.
+Use this when Step 2's parsed pinned-review findings include 🚨 Outstanding contradictions and **every** contradiction has a high-confidence `suggested_fix`. Applying the fixes yourself is faster than round-tripping with the author.
 
 **Options**:
 1. **Make changes and approve** (Recommended) — apply trivial fixes + suggested fixes, then approve

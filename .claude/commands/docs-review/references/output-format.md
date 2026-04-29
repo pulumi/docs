@@ -85,7 +85,7 @@ These rules apply to every review, regardless of entry point or domain. Bake the
 4. **No nanny feedback on colloquialisms.** Words like "overkill," "kill," "blow away," "destroy" are fine in technical context. Do not flag.
 5. **No `@claude` trailer on every comment.** The mention prompt at the bottom of the 1/M comment is enough; do not add it to every section.
 6. **No "informational only" findings.** If a finding is not actionable, it does not belong in the output.
-7. **No findings the linter catches.** Specifically: trailing newlines, fenced-code-block language specifiers, image alt text, heading case, ordered-list `1.` numbering, trailing whitespace. The lint job runs in parallel; double-flagging is noise.
+7. **No findings the linter catches.** Specifically: trailing newlines, heading case, ordered-list `1.` numbering, trailing whitespace. The lint job runs in parallel; double-flagging is noise. (Image alt text and fenced-code-block language specifiers are owned by `docs-review:references:image-review` and `docs-review:references:code-examples` -- they are not linter-caught.)
 8. **No pre-existing findings from files the PR doesn't touch.** Pre-existing extraction is scoped to the PR's changed files only.
 9. **No pre-existing findings that would require the author to rewrite rather than fix.** "This whole section is poorly structured" belongs in a separate issue, not in this review.
 10. **No restating outstanding findings on re-review.** If a finding is still in 🚨 Outstanding from the previous run, the author can see it; do not repeat it in the run history.

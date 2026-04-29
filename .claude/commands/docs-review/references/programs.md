@@ -44,7 +44,7 @@ When a PR adds a new language variant of an existing program:
 
 ## Pre-existing issues
 
-Render in 💡 per `docs-review:references:output-format`; cap at 15 per file. Scope: broken/unused imports, out-of-date provider API surface, missing project-structure files, mismatched resource properties across language variants.
+Render in 💡 per `docs-review:references:output-format` (cap per output-format). Scope: broken/unused imports, out-of-date provider API surface, missing project-structure files, mismatched resource properties across language variants.
 
 ## Compilability check
 

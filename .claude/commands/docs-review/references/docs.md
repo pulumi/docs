@@ -91,7 +91,7 @@ Extract pre-existing issues from a touched file when any of:
 
 Not a top-level structural change: edits inside an existing H2, adding/removing H3s under an unchanged H2, code-block updates, wording tweaks.
 
-Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, product-name capitalization, deprecated terminology, within-file terminology inconsistencies. These render in the 💡 bucket per `docs-review:references:output-format`. Cap at 15 per file. Skip style nits (heading case, list numbering) -- the linter owns those.
+Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, product-name capitalization, deprecated terminology, within-file terminology inconsistencies. These render in the 💡 bucket per `docs-review:references:output-format` (cap per output-format). Skip style nits (heading case, list numbering) -- the linter owns those.
 
 ## Do not flag
 

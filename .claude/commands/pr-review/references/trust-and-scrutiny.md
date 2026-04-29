@@ -112,11 +112,8 @@ When `CONTENT_SCRUTINY=heightened` (i.e., `AI_SUSPECT=true`), the skill behaves 
 
 | Where | Behavior |
 |---|---|
-| fact-check gating | `should-fact-check.sh` always returns RUN, even for non-content paths and bot/dependabot PRs |
-| fact-check claim extraction | Runs over the **full file**, not just diff context. AI hallucinates surrounding prose. |
-| fact-check verification | Web/`gh`/schema verification runs by default on every claim, not just claims that would normally graduate to it |
-| fact-check triage tiers | The bar for "Low-confidence verified" drops one level. Medium-confidence verified claims become *visible* instead of collapsed under `<details>`. |
+| fact-check behavior | See `docs-review:references:fact-check` §Heightened-scrutiny overrides (always-RUN gating, full-file extraction, verification-by-default, medium-confidence claims visible). |
 | Step 6 confidence gauge | Prepends `🤖 AI-suspect (<reasons>)` and caps the gauge at MEDIUM. HIGH is impossible when AI-suspect is set. |
 | Step 6 trivial-fix preview | Suppressed entirely; see `pr-review:references:action-preview-templates` §AI-suspect override. |
 | Step 8 merge toggle | Defaults **OFF** regardless of contributor type. |
-| Make-changes-and-approve trivial fixes | Agent skips all trivial-fix application during the make-changes workflow. The AI may have introduced subtly wrong "fixes" that look like typos but aren't (e.g., renaming a real method to a hallucinated one). |
+| Make-changes-and-approve trivial fixes | Suppressed entirely; see `pr-review:references:action-preview-templates` §AI-suspect override for rationale. |
