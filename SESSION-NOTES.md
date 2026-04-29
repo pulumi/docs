@@ -763,7 +763,7 @@ Investigated whether our prompts could be restructured to hit the Anthropic 5-mi
 ### Backlog after Session 9
 
 1. **PR 45 prose-regression investigation** — Session 6 carryover.
-2. **Deploy step:** create `review:frontmatter-only` label upstream when branch lands.
+2. **Deploy script** — write a `gh` script that creates all required labels (domain, signal, state, plus newer ones like `review:frontmatter-only`) in one shot, ready to run on `pulumi/docs` upstream when the branch lands. The existing manual one-liner block in `.github/labels-pr-review.md` is the seed; turn it into a runnable `.sh` once the label set is final. More testing and refinement still to come, so don't ship the script yet.
 
 ### Artifacts
 
