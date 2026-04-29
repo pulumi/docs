@@ -18,7 +18,7 @@ Read a blog post, write or revise social copy into its frontmatter `social:` blo
 
 3. **Per-platform: classify and act.** For each of X, LinkedIn, Bluesky:
 
-   - **Empty (`""`), missing key, or LLM-fill junk** — draft fresh from the blog body using `.claude/commands/social-media-review/references/writing-guide.md` (see "Drafting from a blank `social:` block" — it includes the verify-specifics-against-body checklist). Honour platform structure: X = 2 paragraphs, LinkedIn = multiple short paragraphs, Bluesky = 2 paragraphs. Voice: if a single named author wrote a personal-experience post, name them in third person; otherwise corporate "we".
+   - **Empty (`""`), missing key, or LLM-fill junk** — draft fresh from the blog body using `.claude/commands/social-media-review/references/writing-guide.md` (see "Drafting from a blank `social:` block" — it includes the verify-specifics-against-body checklist). Honor platform structure: X = 2 paragraphs, LinkedIn = multiple short paragraphs, Bluesky = 2 paragraphs. Voice: if a single named author wrote a personal-experience post, name them in third person; otherwise corporate "we".
 
    - **Existing copy that breaks a hard rule** (banned phrases, "I" voice, URL in body, hashtags, markdown, paragraph structure, char limits — see `.claude/commands/social-media-review/references/critique-rubric.md`) — minimum-change repair. Drop the hashtag, swap the "I" to "we", trim the over-limit tail. Don't recast paragraphs or "improve" the voice. The original specifics and structure stay.
 
@@ -39,13 +39,13 @@ Read a blog post, write or revise social copy into its frontmatter `social:` blo
 
 7. **Write the final copy into the frontmatter.** Use the Edit tool to replace (or insert) the `social:` block. Use 4-space indent and `|` block-literal style for multi-line copy — see `content/blog/neo-integration-catalog/index.md` for a well-formatted example. Only touch platforms whose copy actually changed.
 
-8. **Report.** Show the path written to and per-platform status:
-   - `kept` — original passed and was preserved
-   - `repaired (N chars changed)` — minimum-change fix
-   - `drafted` — wrote fresh
+8. **Report.** Show the path written to and per-platform status using paired verdict + action tokens (verdict from the critic, action you took):
+   - `PASS, kept` — critic passed the original; preserved as-is
+   - `FAIL, repaired (N chars changed)` — critic failed the original; minimum-change fix
+   - `missing, drafted` — no original (or unsalvageable LLM-fill); wrote fresh
    - Final character counts for each platform
    - Iteration count ("converged in N rounds" or "stopped at 3, X open issue")
-   - For each `kept` platform with advisory notes, list them under "Suggestions for kept platforms (advisory — not applied)" so the user can decide whether to address them in a follow-up. Omit the section if all kept platforms returned "no suggestions".
+   - For each `PASS, kept` platform with advisory notes, list them under "Suggestions for kept platforms (advisory — not applied)" so the user can decide whether to address them in a follow-up. Omit the section if all kept platforms returned "no suggestions".
 
 ## Edge cases
 

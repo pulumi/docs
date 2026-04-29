@@ -58,7 +58,7 @@ For FAILs, include reasons as bullet points (the hard rule broken). No long anal
 
 After the per-platform reviews, if any platforms were repaired OR drafted, present the new copy under `### Suggested copy` with character counts.
 
-If any platform's original copy PASSed without needing a repair, present advisory notes from the suggestions pass under `### Suggestions (advisory)`, grouped by platform. Only include platforms that ran the suggestions pass (i.e., not the repaired ones, not the missing ones). If all run platforms returned "no suggestions", omit this section entirely — do not write `### Suggestions (advisory)` followed by silence. Suggestions never change the PASS/FAIL verdict.
+If any platform's original copy passed without needing a repair, present advisory notes from the suggestions pass under `### Suggestions (advisory)`, grouped by platform. Only include platforms that ran the suggestions pass (i.e., not the repaired ones, not the missing ones). If all run platforms returned "no suggestions", omit this section entirely — do not write `### Suggestions (advisory)` followed by silence. Suggestions never change the PASS/FAIL verdict.
 
 ## Example output: all PASS, no advisory
 
