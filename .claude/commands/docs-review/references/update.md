@@ -51,7 +51,7 @@ else
 fi
 ```
 
-The CI runner's checkout is shallow, so `git rev-parse --verify` may also fail on reachable but un-fetched SHAs. Treat any verification failure as "unreachable" and fall back to full diff; the cost is one extra full-file pass, not correctness.
+Treat any verification failure (including reachable-but-unfetched SHAs in CI's shallow checkout) as "unreachable" and fall back to full diff.
 
 ---
 
@@ -203,7 +203,3 @@ If `pinned-comment.sh fetch` returns nothing -- author deleted the comment, hist
 ### Author deletes the 1/M pinned comment
 
 If the author deletes the 1/M comment via the GitHub UI, the next re-entrant run's `pinned-comment.sh fetch` returns empty and the skill falls through to the Fallback path above — a fresh post at the bottom of the timeline.
-
-### Stale labels on long-running drafts
-
-Triage runs on `opened` / `reopened` / `ready_for_review`, not on `synchronize`. A draft PR that sits through many commits and shifts domain will have stale labels until the next ready-transition, at which point re-triage fixes them. The review skill is not run during this interval, so the stale labels don't produce wrong review output.

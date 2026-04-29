@@ -103,7 +103,7 @@ I will:
 4. Apply each non-vetoed trivial fix via Edit
 5. Apply contradicted-claim suggested fixes via Edit
 6. Show diff
-7. Commit: "Apply review fixes\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
+7. Commit: "Apply review fixes\n\nCo-Authored-By: <agent name> <agent email>"
 8. Push changes
 9. Approve with comment above
 10. [If toggle ON] gh pr merge {{arg}} --auto --squash

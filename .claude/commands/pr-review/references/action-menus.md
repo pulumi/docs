@@ -26,21 +26,21 @@ Use AskUserQuestion with header:
 
 #### For HIGH Risk or Security Patches
 
-1. **Approve** (Recommended after testing) — merge toggle defaults ON when CI green and tests passed
+1. **Approve** (Recommended after testing)
 2. **Request changes** - Technical feedback needed
 3. **Close PR** - Reject the dep update
 4. **Do nothing yet** - Need to test/investigate
 
 #### For LOW/MEDIUM Risk with quarterly-review Label
 
-1. **Approve** (Recommended) — merge toggle starts OFF for quarterly batch (deferred)
+1. **Approve** (Recommended)
 2. **Close with quarterly note** - Defer to next quarterly batch
 3. **Request changes** - Technical feedback needed
 4. **Do nothing yet** - Need to test/investigate
 
 #### For Other Dependabot PRs (No Clear Risk Label)
 
-1. **Approve** (Recommended) — merge toggle defaults ON for clean low-risk dep updates
+1. **Approve** (Recommended)
 2. **Request changes** - Technical feedback needed
 3. **Close PR** - Reject
 4. **Do nothing yet** - Need investigation
@@ -66,7 +66,7 @@ For non-Dependabot bots (pulumi-bot, renovate, etc.)
 
 ### Options (Max 4)
 
-1. **Approve** (Recommended) — merge toggle defaults ON for bots
+1. **Approve** (Recommended)
 2. **Request changes** - Issues need addressing
 3. **Close PR** - Reject
 4. **Do nothing yet** - Need investigation
@@ -111,7 +111,7 @@ Use this when contradictions are unverifiable, lack suggested fixes, or are styl
 ### Scenario C: Clean Review — Approve Recommended
 
 **Options**:
-1. **Approve** (Recommended) — merge toggle defaults OFF (Pulumi convention: authors merge their own PRs)
+1. **Approve** (Recommended)
 2. **Make changes and approve** - Minor edits (typos, formatting) + approve
 3. **Request changes** - Hold for author input
 4. **Do nothing yet** - Need more time/discussion

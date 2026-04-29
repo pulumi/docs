@@ -27,7 +27,7 @@ The priorities below are ordered for **output rendering** — fact-check finding
 
 ### Priority 1 — Fact-check first
 
-Invoke `docs-review:references:fact-check` (`scrutiny=standard` by default; see `## Fact-check` below for the heightened-bump conditions). The reference owns claim extraction; in docs, pay particular attention to:
+Invoke `docs-review:references:fact-check` (`scrutiny=standard` by default). Bump scrutiny to `heightened` when the file is a new page (not previously in `content/`) or a whole-file rewrite (>70% of lines changed). CI fact-check is public-sources-only — see `docs-review/ci.md`. The reference owns claim extraction; in docs, pay particular attention to:
 
 - **CLI flag existence.** `pulumi <subcommand> --<flag>` claims must match the current CLI source. Memorized flag lists are not authoritative.
 - **Resource API surface.** Resource property claims (e.g., `aws.s3.Bucket` accepts `versioning`) must match the provider's registry schema source (`gh api repos/pulumi/pulumi-<provider>/contents/...`).
@@ -92,16 +92,6 @@ Extract pre-existing issues from a touched file when any of:
 Not a top-level structural change: edits inside an existing H2, adding/removing H3s under an unchanged H2, code-block updates, wording tweaks.
 
 Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, product-name capitalization, deprecated terminology, within-file terminology inconsistencies. These render in the 💡 bucket per `docs-review:references:output-format`. Cap at 15 per file. Skip style nits (heading case, list numbering) -- the linter owns those.
-
-## Fact-check
-
-Invoke `docs-review:references:fact-check` with:
-
-- **Files:** the changed `content/docs/**`, `content/learn/**`, `content/tutorials/**`, `content/what-is/**` files
-- **Scrutiny:** `standard`
-- **Bump to `heightened`** when the file is a new page (not previously in `content/`) or a whole-file rewrite (>70% of lines changed)
-
-CI fact-check is public-sources-only -- see `docs-review/ci.md`.
 
 ## Do not flag
 

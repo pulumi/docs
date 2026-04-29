@@ -204,14 +204,14 @@ jobs:
             **Read the triggering mention text from `.claude-mention-body.txt` first.** It contains the body of the comment, review, or issue that invoked you. Decide what to do based on what it asks for:
 
             1. **Review-related ask on a PR** — refresh, "I addressed your feedback on X", dispute a finding ("I disagree with X because Y"), or any explicit "@claude refresh / re-review" intent:
-               - If a pinned review **EXISTS**, follow `.claude/commands/docs-review/references/update.md` and post the updated review via `bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert --pr ${{ steps.pr-context.outputs.pr_number }} --body-file <path>`.
+               - If a pinned review **EXISTS**, follow `docs-review:references:update` and post the updated review via `bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert --pr ${{ steps.pr-context.outputs.pr_number }} --body-file <path>`.
                - If a pinned review **does not exist**, follow `.claude/commands/docs-review/ci.md` to produce an initial review and post via the same `pinned-comment.sh upsert` command.
 
             2. **Ad-hoc task or question** — fix code, explain something, answer a question, make a small change, etc.: act on the mention directly. Use Edit/Write to make file changes; `gh pr checkout ${{ steps.pr-context.outputs.pr_number }}` if you need to push commits to the PR branch; reply with `gh pr comment ${{ steps.pr-context.outputs.pr_number }} --body "..."` (or `gh issue comment` for issues).
 
             3. **Ambiguous mention** — reply conversationally via `gh pr comment` (or `gh issue comment`) asking for clarification. Don't guess at intent.
 
-            Do NOT invoke `update-review.md` for ad-hoc tasks — it is designed only for review-related interactions and will produce wrong output on other intents.
+            Do NOT invoke `docs-review:references:update` for ad-hoc tasks — it is designed only for review-related interactions and will produce wrong output on other intents.
 
           claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
 

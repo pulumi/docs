@@ -93,8 +93,6 @@ Continue to Step 4.
 
 Refresh the pinned comment in place by invoking `docs-review:references:update` locally with `PR_NUMBER` set. The update procedure runs the Sonnet refresh (re-reading the diff since the last reviewed SHA, classifying as Case 1/2/3, and writing the refreshed body via `pinned-comment.sh upsert`). When it completes, re-fetch the pinned comment and re-parse findings for Step 6.
 
-This is a real GitHub-state write. The contributor-facing pinned comment will reflect the refresh regardless of whether the user proceeds to approve.
-
 #### WORKING
 
 A CI review is in flight. Abort:
@@ -238,37 +236,7 @@ Maintainer write-access is sufficient evidence for domain-knowledge disputes (pe
 
 ### Step 9: Execute confirmed action
 
-Execute using the confirmed/edited content from Step 8, including the merge toggle state.
-
-| Action | Commands (toggle ON) | Commands (toggle OFF) |
-|---|---|---|
-| **Approve** | `gh pr review {{arg}} --approve --body "{{COMMENT}}"` then `gh pr merge {{arg}} --auto --squash` | `gh pr review {{arg}} --approve --body "{{COMMENT}}"` |
-| **Make changes and approve** | Make-changes workflow (below) followed by merge | Make-changes workflow, no merge |
-| **Request changes** | `gh pr review {{arg}} --request-changes --body "{{COMMENT}}"` | (toggle hidden) |
-| **Close PR** | `gh pr comment {{arg}} --body "{{COMMENT}}"` then `gh pr close {{arg}}` | (toggle hidden) |
-| **Do nothing yet** | Exit with message | (same) |
-
-#### Make-changes-and-approve workflow
-
-1. Save current branch
-2. `gh pr checkout {{arg}}`
-3. Apply surviving PR description corrections via `gh pr edit {{arg}} --body "$CORRECTED_BODY"`
-4. Apply non-vetoed trivial fixes via Edit (agent-applied with language judgment to preserve proper nouns; suppressed entirely when `AI_SUSPECT=true`)
-5. Apply CI-flagged 🚨 contradicted-claim suggested fixes via Edit
-6. Show diff to user
-7. Commit with author trailer:
-
-   ```text
-   <commit message>
-
-
-   Co-Authored-By: <agent name> <agent email>
-   ```
-
-8. Push
-9. Approve with comment
-10. If toggle ON: `gh pr merge {{arg}} --auto --squash`
-11. **Always** return to original branch (even on error)
+Execute per the commands and workflow in `pr-review:references:action-preview-templates`, using the merge-toggle state confirmed in Step 8. For Make-changes-and-approve failures: always return to original branch before reporting error.
 
 ### Step 10: Report execution results
 

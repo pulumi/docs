@@ -256,22 +256,16 @@ jobs:
 
             ${{ steps.pr-context.outputs.files_list }}
 
-            ## Posting the review (REQUIRED)
+            ## Posting
 
-            After producing the review, post it via the pinned-comment script.
-            This is the ONLY sanctioned path — do NOT post comments via
-            `gh api repos/.../issues/.../comments` (POST or PATCH) directly,
-            since that bypasses overflow handling and creates duplicate
-            `<!-- CLAUDE_REVIEW N/M -->` comments.
-
-            Invoke the upsert script using its **relative** path
-            (`bash .claude/commands/docs-review/scripts/pinned-comment.sh ...`) — the
-            allow-list pattern is shape-matched on the relative form, and absolute
-            paths under `/home/runner/...` will be rejected:
+            Post via the relative-path form of the upsert script:
 
               bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
                 --pr ${{ steps.pr-context.outputs.pr_number }} \
                 --body-file <path-to-rendered-review>
+
+            The Bash allow-list pattern matches on the relative form; absolute
+            paths under `/home/runner/...` are rejected. ci.md §4 covers the rest.
 
             Post-run labels (`review:claude-ran` add, `review:claude-stale` remove)
             are applied by a separate workflow step. Do not apply them yourself.

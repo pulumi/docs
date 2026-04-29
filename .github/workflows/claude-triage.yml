@@ -140,7 +140,7 @@ jobs:
                 max_tokens: 512,
                 messages: [{
                   role: "user",
-                  content: ("Apply the rules below to the diff that follows. Output exactly one JSON object on a single line, no prose, no code fences. Schema:\n{\"prose_concerns\":[\"path/to/file.md:LINE -- issue (suggested fix)\", ...]}\n\nIf you find no issues, output {\"prose_concerns\":[]}.\n\n=== RULES ===\n\n" + $rules + "\n\n=== DIFF (truncated to 50000 bytes) ===\n\n" + $diff)
+                  content: ("Apply the rules below to the diff that follows.\n\n=== RULES ===\n\n" + $rules + "\n\n=== DIFF (truncated to 50000 bytes) ===\n\n" + $diff)
                 }]
               }')
             RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \

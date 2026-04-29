@@ -101,18 +101,9 @@ These are the feasible, concrete rules from `seo-analyze:references:aeo-checklis
 
 ## Pre-existing issues (always on)
 
-Blog files are usually new in their entirety, so the diff/pre-existing distinction blurs. Render every finding under 🚨 Outstanding when the post is new. For incremental edits to existing posts, separate diff-introduced from pre-existing per the standard rules in `docs-review:references:output-format`. Cap at 15 per file.
+Blog files are usually new in their entirety, so the diff/pre-existing distinction blurs. Render every finding under 🚨 Outstanding when the post is new. For incremental edits to existing posts, separate diff-introduced from pre-existing per the standard rules in `docs-review:references:output-format`. Per-file cap follows `docs-review:references:output-format`.
 
 Scope of pre-existing findings for blog: everything from `docs-review:references:docs`, plus unsourced numerical claims, temporally-rotted feature claims ("a new feature in v3.X" where v3.X is years old), broken `{{< github-card >}}` references, missing author avatars, `meta_image` that is still the placeholder, `meta_image` that uses outdated Pulumi logos (the brand refresh moved on; old logos hurt social sharing).
-
-## Fact-check
-
-Invoke `docs-review:references:fact-check` with:
-
-- **Files:** the changed `content/blog/**` / `content/case-studies/**` files
-- **Scrutiny:** `heightened` (always)
-
-CI fact-check is public-sources-only -- see `docs-review/ci.md`.
 
 ## Do not flag
 

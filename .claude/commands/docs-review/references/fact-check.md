@@ -231,7 +231,7 @@ ONLY_TEST="program-name" ./scripts/programs/test.sh
 
 Used for *non-Pulumi* upstream sources where `gh` doesn't apply: AWS/Azure/GCP provider docs, upstream tool docs (Kubernetes, Terraform), third-party announcements. **Skip in favor of `gh` whenever the claim is about Pulumi itself.**
 
-#### 5. Notion + Slack (best-effort; pr-review / interactive use only)
+#### 5. Notion + Slack (best-effort)
 
 Only if MCP tools are present in the runtime tool set. Use these to catch internal context that hasn't made it into a repo yet -- "we decided not to ship this," "this was renamed," "the CEO sketched this in a doc but it's not built."
 
@@ -277,6 +277,8 @@ Subagent prompts must be self-contained — copy the rules into the prompt rathe
 Build a structured triage object that the caller will render. fact-check returns the object; the caller composes it into the pinned review per `docs-review:references:output-format`.
 
 ### Tier rules
+
+The 🚨 / ⚠️ / ✅ tier emojis are intentionally aligned with the canonical bucket emojis owned by `docs-review:references:output-format` so callers can pass tier contents through verbatim. 🤔 is fact-check's own bucket for inconclusive verifications and has no canonical counterpart.
 
 | Tier | Contents |
 |---|---|

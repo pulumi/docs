@@ -29,8 +29,6 @@ The workflow passes these as environment variables (or substitutes them into the
 
 Route by path-precedence per `docs-review:references:domain-routing`. `PR_LABELS` is informational only.
 
-If `review:trivial` is present, exit early without producing a review.
-
 ---
 
 ## Procedure
@@ -44,7 +42,7 @@ gh pr diff "$PR_NUMBER"
 
 Treat the diff as the source of truth for what changed. If `--json files` lists a file but the diff doesn't show it (rare — usually a mode-only change), note it but don't invent findings.
 
-**Empty-diff short-circuit.** If `gh pr diff` returns no content (mode-only changes, renames with no content change, or any PR with zero text diff), exit the review with a one-line stdout log (`review: pr=<N> empty-diff skip`) and do **not** call `pinned-comment.sh upsert`. The script rejects empty bodies with "split produced no pages" by design; the short-circuit keeps the workflow green and avoids posting an empty comment. The workflow's post-run label step (`review:claude-ran`) should still apply so stale-marking works on subsequent pushes.
+**Empty-diff short-circuit.** If `gh pr diff` returns no content (mode-only changes, renames with no content change, or any PR with zero text diff), exit the review with a one-line stdout log (`review: pr=<N> empty-diff skip`) and do **not** call `pinned-comment.sh upsert`. The script rejects empty bodies with "split produced no pages" by design; the short-circuit keeps the workflow green and avoids posting an empty comment.
 
 ### 2. Compose the review
 
