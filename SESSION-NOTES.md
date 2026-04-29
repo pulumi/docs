@@ -802,6 +802,66 @@ Residual items still flagged but not yet decided (Cam may pick these up after ha
 - **Caps:** prose-patterns at 5/file, pre-existing at 15/file. Old way had no caps. Conscious tradeoff for review readability.
 - **Do-not-flag rewrite untested.** Reworded blanket "structural is editorial" to "concrete-with-quote-and-rewrite is in." Right principle on paper; behavior under the new wording untested against the fixture set.
 
+### Reference loadout — sequential→concurrent rewording
+
+The pattern "Apply X first, plus Y. Then Z" appeared in `docs.md`, `blog.md`, `programs.md`, `infra.md`. Cam called it out: that wording reads as a sequence directive that could push the model into multi-pass behavior or upfront-loading every reference. First pass I overcorrected with "**not** a separate pre-pass" disclaimers; Cam pointed out the negation enlarges the option space (the model considers what a pre-pass would even look like). Second pass settled on the positive form: "These reference files apply alongside the X-specific checks below. Consult each as content in the diff triggers a relevant rule."
+
+### Pruning meta-commentary
+
+Two passes through the docs-review and pr-review skill packages.
+
+**Docs-review sweep** (commit `b397dce152`, -132 lines across 13 files): cut implementation history ("for v1," "Sonnet failure-mode example to avoid," "Documented here so they aren't 'fixed' into new bugs"), design-rationale tails ("the dispute path is equally important as the refresh path," "Pulumi convention: authors merge their own PRs because…", the "Why heightened scrutiny doesn't depend on contributor type" section), and DRY violations (bucket rules duplicated in `infra.md` and `output-format.md`, Notion/Slack rationale in 4 places, compilability cascade stated twice in `programs.md`, language-casing rule duplicated within `code-examples.md`). Major DRY consolidation: bucket rules + DO-NOT list live in `output-format.md` only; domain routing lives in `domain-routing.md` only; Notion/Slack rule lives in `ci.md` only.
+
+**Pr-review sweep** (commit `076de8a0ae`, -173 lines across 7 files): cut the §Critical Workflow Rules recap (12 restated rules), §Implementation Notes blocks at the end of every reference file, the §Why heightened scrutiny doesn't depend on contributor type rationale, the political-landmine rationale on the AI-suspect allowlist, the auto-merge toggle defaults block duplicated across action-menus and action-preview-templates, the testing-checklist duplication between dependabot-labels and action-menus, the §Tone Guidelines block in message-templates that restated voice rules + the template matrix.
+
+### Pr-review SKILL rewrite (CI's pinned review as source of truth)
+
+Cam's clarification mid-session: the original PR review pipeline was designed to offload as much as possible to CI because PR volume is increasing. The current pr-review SKILL did its own full Step 4 (style+code review) and Step 5 (fact-check), duplicating the CI's pinned-comment work. Wrong default.
+
+Rewrote `pr-review/SKILL.md` (commit `be71b898d9`, 377 → 295 lines):
+
+- Step 2 fetches the pinned comment via `pinned-comment.sh fetch` and classifies state from labels: CURRENT / STALE / WORKING / ABSENT.
+- Step 3 resolves the state. STALE invokes `docs-review:references:update` *locally* (Sonnet refresh + `pinned-comment.sh upsert`) — pr-review writes to GitHub state during what was previously a pure local read. This is intentional: the contributor-facing pinned comment must reflect current diff before a maintainer adjudicates. WORKING aborts. ABSENT prompts the user to fall back to a local review or proceed without findings.
+- Step 4 (infra deployment prompt) and Step 5 (PR description accuracy) survive — these are unique to pr-review and not produced by CI.
+- Step 6 renders CI's pinned findings verbatim as the source of truth.
+- Step 8 adds an opt-in "Dispute finding(s)" path: maintainer composes a mention body, pr-review feeds it to update.md Case 2 (which already classifies and concedes/holds), pinned comment is refreshed, then the action proceeds.
+
+Backing changes:
+
+- `contributor-detection.sh` now emits a `LABELS=` line so Step 2's state machine has clean input.
+- `update.md`'s preamble names pr-review as a caller (Step 3 stale refresh + Step 8 dispute), since the line I trimmed in the earlier sweep was aspirational documentation that's now backed by real implementation.
+
+### Skill:reference notation standardization (commit `27e158869a`)
+
+The skill files had a mix of bare \`xxx.md\` references, `[xxx.md](xxx.md)` markdown-link forms, and the canonical `docs-review:references:foo` form. Standardized everything to the skill notation across 11 files. Sibling files within a skill that aren't separate skills themselves (`docs-review/ci.md`) use explicit relative paths since there's no skill-notation form for them; top-level skills are referenced by skill name (`pr-review`, not `pr-review/SKILL.md`).
+
+### Where the branch stands at session end
+
+Session 9 commit list (from `master..HEAD`):
+
+1. `df2b017166` — checkSocialBlock + checkPlaceholderMetaImage
+2. `0edac66946` — checkMoreBreak
+3. `6ceb043149` — Cache-friendliness audit closed as no-op
+4. `6f701473c3` — Restate deploy step as labels script
+5. `c3567237ba` — Drop PR 45 prose-regression as moot
+6. `737d3cdab7` — SEO/AEO replication into blog and docs
+7. `59fb80171c` — Record R52/R54 calculated drops
+8. `9991112cee` — Reword reference loadout sequential→concurrent
+9. `81dae2cdc0` — Drop "for v1" commentary in docs-review/ci.md
+10. `2b21a62883` — Remove Re-entrant runs section from ci.md
+11. `b397dce152` — Sweep docs-review for meta + DRY (-132 lines)
+12. `076de8a0ae` — Sweep pr-review for meta + DRY (-173 lines)
+13. `be71b898d9` — Rewrite pr-review SKILL: read CI's pinned review as source of truth
+14. `27e158869a` — Standardize skill:reference notation across the package
+
+### Backlog after Session 9
+
+1. **Real-PR test of the new pr-review flow** — the rewritten Step 1 → Step 2 → Step 3 → Step 6 → action path is untested against any of the fixture PRs at `CamSoper/pulumi.docs#44–49`. Worth a dry-run on a PR that's CURRENT, STALE, and ABSENT to confirm each branch behaves.
+2. **Deploy script** — `gh` script to create all required labels on `pulumi/docs` upstream when the branch lands. Seed is `.github/labels-pr-review.md`'s manual one-liner block. More testing/refinement still pending, so don't ship yet.
+3. **Cam-flagged residual items from the gap analysis** (still not decided): R31 positive cross-link suggestions, R72 author-profile existence check, caps (5/file prose-patterns and 15/file pre-existing), Do-not-flag rewrite needs fixture-set re-run.
+
 ### Artifacts
 
 - `scripts/lint/lint-markdown.js` — added `checkSocialBlock`, `checkPlaceholderMetaImage`, `checkMoreBreak`, `isArchivalPost`, `isBlogPost`, `META_IMAGE_PLACEHOLDER_HASH` constant. ~100 lines net add.
+- `pr-review/scripts/contributor-detection.sh` — added `LABELS=` output line.
+- Net Session 9 change across all files: roughly **-300 lines** despite adding the SEO/AEO sections and the lint validators. The pr-review/docs-review packages are smaller and more focused than they were at Session 8 close.
