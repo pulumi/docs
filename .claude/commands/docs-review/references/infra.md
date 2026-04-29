@@ -13,24 +13,19 @@ Applied to changes touching:
 - `Makefile`
 - `package.json`, `webpack.config.js`, `webpack.*.js`
 
-Infra files aren't prose. The review's job here is **flagging risks for human review**, not catching style nits. Infra risks render in ⚠️ Low-confidence by default (see [`output-format.md`](output-format.md) §Bucket rules). The two exceptions that promote to 🚨:
-
-- **Secrets in the diff** (tokens, API keys, hardcoded credentials). Always 🚨.
-- **Clearly broken state** (unresolved merge markers, syntactically invalid YAML that would kill CI on merge). Always 🚨.
-
-Everything else -- Lambda@Edge bundling concerns, CloudFront cache changes, runtime dep bumps, workflow trigger edits -- is ⚠️. Staging catches actual breakage; this skill is defense-in-depth for the human reviewer.
+Infra files aren't prose; the job is flagging risks for human review, not catching style nits. Findings render in ⚠️ Low-confidence by default; see `output-format.md` §Bucket rules for the two 🚨 exceptions (secrets, clearly-broken state).
 
 ---
 
 ## Scope
 
 - Diff-only. Whole-file reads happen only when the diff context isn't enough to judge a risky change.
-- Pre-existing issues are **off** -- infra files don't carry the "improve while you're here" expectation that prose does.
-- Fact-check is **not** invoked. Infra files don't carry the kind of factual claims fact-check is built for.
+- Pre-existing issues are **off**.
+- Fact-check is **not** invoked.
 
 ## Criteria
 
-[`shared-criteria.md`](shared-criteria.md) applies alongside the risk axes below (mostly relevant here for link checking in comments and docs). Findings render in ⚠️ Low-confidence with a pointer to the relevant `BUILD-AND-DEPLOY.md` section -- the human reviewer decides whether to proceed. Only secrets-in-diff and clearly-broken-state promote to 🚨 (see the §Scope split above).
+`shared-criteria.md` applies alongside the risk axes below (mostly relevant here for link checking in comments and docs). Pair findings with a pointer to the relevant `BUILD-AND-DEPLOY.md` section.
 
 ### Lambda@Edge bundling
 
@@ -82,15 +77,10 @@ If the PR changes any of the above without updating `BUILD-AND-DEPLOY.md`, flag 
 
 Reference (don't duplicate): `BUILD-AND-DEPLOY.md` §Infrastructure Change Review for the canonical risk catalog; §Dependency risk tiers for the runtime/build/dev split.
 
-## Fact-check
-
-Not invoked. Infra files don't carry the kind of factual claims that fact-check is built for.
-
 ## Do not flag
 
 - **Style nits in working YAML.** Indentation, blank-line spacing, ordering of top-level keys -- workflows follow GitHub Actions conventions, not a Pulumi style guide.
 - **Refactors to working scripts.** "You could consolidate these three steps" is editorial. Flag when a script is broken; don't rewrite it for aesthetics.
-- **"Missing tests" on infra-only PRs.** Infra changes are tested in staging, not in unit tests. "You should add a test for this" is not a finding for a workflow or script change.
+- **"Missing tests" on infra-only PRs.** Infra changes are tested in staging, not in unit tests.
 - **Dependency-version aesthetic choices.** Whether a pin reads `^1.2.3` or `~1.2.3` is a Dependabot/package-manager concern, not a review finding.
 - **Hardcoded values that are meant to be constants.** `timeout-minutes: 15` is a choice, not an error. Only flag when the value is clearly wrong (e.g., `timeout-minutes: 5` on a job known to take longer).
-- **Running staging tests / build commands to "verify."** Never run `make build`, `make lint`, `make serve`, or any workflow step from the review. CI runs those in their own jobs; the reviewer reads the results.

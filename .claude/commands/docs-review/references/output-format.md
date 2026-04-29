@@ -39,7 +39,7 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 <sub>Pushed a fix? Think a finding is wrong? Mention `@claude` to refresh or argue your case.</sub>
 ```
 
-The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review -- the dispute path is equally important as the refresh path, and contributors need to know both exist.
+The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review.
 
 ### Bucket rules
 
@@ -94,23 +94,9 @@ These rules apply to every review, regardless of entry point or domain. Bake the
 
 ---
 
-## Composition
+## Scrutiny defaults
 
-### Domain selection (per file)
-
-Each changed file is routed to **exactly one** domain. See `domain-routing.md` for the canonical path-precedence table.
-
-`shared-criteria.md` applies to every file regardless of domain. Mixed PRs run each file under its appropriate domain and merge findings into one output object.
-
-### Fact-check
-
-Domain files invoke [`fact-check.md`](fact-check.md) when warranted. The CI entry point gates on the `fact-check:needed` label (set by triage); the interactive entry point invokes fact-check whenever the user explicitly asks or when the domain decides.
-
-CI fact-check is **public-sources-only** — no Notion or Slack MCP. See `ci.md` for the rationale.
-
-### Scrutiny level (set by domain, not entry point)
-
-| Domain | Default scrutiny |
+| Domain | Default fact-check scrutiny |
 |---|---|
 | docs | `standard` |
 | blog | `heightened` |

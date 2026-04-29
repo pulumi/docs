@@ -7,12 +7,13 @@ description: Review criteria for testable example programs under static/programs
 
 Applied to changes touching `static/programs/`. These are real, testable Pulumi programs -- the bar is compilability and correctness, not just style. See `CODE-EXAMPLES.md` for the testing harness and directory conventions.
 
+Compilability cascades: a missing import in one file breaks the whole project. So **whole-program read is mandatory** whenever a program file is changed, and pre-existing extraction is **always on** for touched programs.
+
 ---
 
 ## Scope
 
-- **Whole-program read** is mandatory whenever a program file is changed. Compilability cascades -- a missing import in one file breaks the whole project.
-- Pre-existing extraction is **always on** for touched programs.
+- Whole-program read; pre-existing extraction always on (see above).
 
 ## Criteria
 
@@ -41,21 +42,17 @@ When a PR adds a new language variant of an existing program:
 - The new variant implements the **same resources** with the **same properties**. Drift here produces multi-language chooser widgets that show materially different programs.
 - The Hugo shortcode reference in the docs page picks up all language variants via the `path=` parameter; no separate per-language shortcode calls.
 
-## Pre-existing issues (always on)
+## Pre-existing issues
 
-Compilability cascades. If one file in a program is broken, the program doesn't build -- so pre-existing extraction is always on for touched programs. Render findings in 💡 per [`output-format.md`](output-format.md); cap at 15 per file.
-
-Scope of pre-existing findings for programs: broken/unused imports, out-of-date provider API surface, missing project-structure files, mismatched resource properties across language variants.
+Render in 💡 per `output-format.md`; cap at 15 per file. Scope: broken/unused imports, out-of-date provider API surface, missing project-structure files, mismatched resource properties across language variants.
 
 ## Compilability check
 
-If the touched program is **not** in `scripts/programs/ignore.txt`, the interactive entry point ([`SKILL.md`](../SKILL.md)) may run:
+CI does not run program tests directly -- they run in the main `make test` job; cite that job's result if available. The interactive entry point may run a single program when the program is not in `scripts/programs/ignore.txt`:
 
 ```bash
 ONLY_TEST="program-name" ./scripts/programs/test.sh
 ```
-
-The CI entry point ([`ci.md`](../ci.md)) does **not** run program tests directly -- those run as part of the main `make test` job. Cite that job's result in the review if available; do not re-run.
 
 ## Fact-check
 

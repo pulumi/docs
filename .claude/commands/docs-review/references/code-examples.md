@@ -12,7 +12,7 @@ Applied to any code that appears in user-facing content: inline fenced blocks in
 ## Syntax
 
 - **No unclosed brackets, broken indentation, or obvious typos.** A code block that doesn't parse in its language is a 🚨 finding.
-- **Language specifier on every fenced block.** Without it, syntax highlighting is missing and the snippet looks broken in the rendered page. (`MD040` covers this in the linter; if the linter has it disabled, flag here.)
+- **Language specifier on every fenced block.** Without it, syntax highlighting is missing and the snippet looks broken in the rendered page.
 
 ## Imports
 
@@ -28,7 +28,7 @@ Pulumi resource properties follow language conventions:
 - **Python:** snake_case (`bucket_name`, `versioning_configuration`)
 - **C# / Go:** PascalCase (`BucketName`, `VersioningConfiguration`)
 
-When the same property appears in multiple language tabs (or a `chooser` block), every tab must use the correct casing for that language. Don't flag a property as wrong-cased when it's correct *for that language*; only flag when the casing is wrong for the tab it's in.
+When the same property appears in multiple language tabs (or a `chooser` block), every tab must use the correct casing for that language. Only flag when the casing is wrong for the tab it's in.
 
 ## Idiomatic per language
 

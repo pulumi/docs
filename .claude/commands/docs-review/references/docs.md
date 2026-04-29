@@ -5,7 +5,7 @@ description: Review criteria for technical documentation under content/docs, con
 
 # Review — Docs
 
-Applied to documentation pages: technical reference, conceptual docs, tutorials, learn modules, and what-is pages. Default scrutiny is `standard` because docs usually get edited incrementally -- surrounding prose has been reviewed previously and carries context from prior review.
+Applied to documentation pages: technical reference, conceptual docs, tutorials, learn modules, and what-is pages. Default scrutiny is `standard` (diff-only).
 
 ---
 
@@ -25,20 +25,13 @@ The following reference files apply alongside the docs-specific checks below. Co
 
 ### API and resource accuracy
 
-- **Property names match the provider's current schema.** When the diff references a resource property (e.g., `bucket.versioning`, `cluster.nodePools`), cross-reference against the provider's registry schema. The authoritative source is the registry tree for that provider (`gh api repos/pulumi/pulumi-<provider>/contents/...`), not a memory of past API shapes.
-- **Language-specific casing.** Pulumi resource properties are camelCase in TypeScript/JavaScript, snake_case in Python, PascalCase in C# and Go. If the same property appears in multiple language tabs (or a `chooser` block), every tab must use the correct casing for that language.
-- **Required vs optional arguments.** Examples that omit a required argument should be flagged -- the example won't run. Examples that include every optional argument verbatim should not be flagged; that's a style preference, not an error.
-- **Enum values.** Enum-typed properties (e.g., `aws.ec2.InstanceType`) must use values the provider accepts. A typo here means the example fails at preview time.
+Snippet-level checks live in `code-examples.md`. Docs-specific anchor: when the diff references a resource property, cross-reference the provider's registry schema source (`gh api repos/pulumi/pulumi-<provider>/contents/...`), not memory.
 
 ### Cross-references between docs pages
 
 - **Link target exists.** Every internal link added or modified in the diff must resolve to an existing page in the PR's snapshot (`gh api repos/<owner>/<repo>/contents/<path>`). Missing targets are 🚨.
 - **Anchor resolves.** `/docs/foo/#bar` requires `#bar` to exist on `/docs/foo/`. Verify by fetching the target file and grep for `## Bar` / `### Bar` (or whatever heading level the slug matches).
 - **Orphan cross-refs after moves.** If the PR moves a page, every inbound link elsewhere in `content/docs/` or `content/product/` must be updated (aliases handle outsider/historic links, but the repo's own internal links should use the new canonical path).
-
-### Code examples
-
-Apply `docs-review:references:code-examples` for snippet-level criteria (syntax, imports, language idioms, API currency, casing). Code in docs is also subject to the rendering concerns in §Callouts and shortcodes (chooser pairing, language specifiers).
 
 ### CLI commands
 
@@ -103,7 +96,4 @@ CI fact-check is public-sources-only -- see `ci.md`.
 ## Do not flag
 
 - **Vague editorial feedback without quote-and-rewrite.** "Could be clearer" / "consider reorganizing this paragraph" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `prose-patterns.md`; split a mixed-concept H2; rewrite a label-style heading as answer-first; convert prose-quickstart to numbered steps) ARE in scope -- but every finding must quote the offending text and propose the fix.
-- **Property-name casing that matches the language's convention.** `bucketName` in TypeScript is correct; `bucket_name` in Python is correct. Flag only when the casing is wrong *for that language*, not when you prefer a different convention.
-- **Code examples that omit optional arguments.** "You could also pass `tags: {...}`" is unsolicited enrichment. Docs deliberately keep starter examples minimal. Flag if a required argument is missing; don't flag for completeness.
-- **CLI examples without output.** Not every code block needs a paired ` ```output ` block. Flag when the prose *claims* specific output and the block is missing; don't flag as a general "you should show what this prints."
 - **Superseded terminology in historical context.** When a doc describes old behavior intentionally (e.g., "before v3.0, this was called X"), don't flag the old name as deprecated terminology.

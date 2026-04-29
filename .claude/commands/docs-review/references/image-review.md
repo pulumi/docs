@@ -15,8 +15,6 @@ Applied to images and diagrams in user-facing content (docs, blogs, customer sto
 - **Alt text describes the image, not its filename or position.** Flag generic placeholders: "Screenshot", "Image", "Diagram", "image of <whatever>".
 - **Decorative images use empty alt text** (`alt=""`) to signal "screen readers can skip this." Don't flag empty alt text on a decorative image.
 
-(Note: `MD045` would handle missing-alt deterministically, but the markdownlint config currently has it disabled. Until that's enabled, this rule lives here.)
-
 ## File format and integrity
 
 - **File format matches extension.** A WebP saved as `.png` renders broken in some preview environments. If the extension and apparent format disagree, flag and propose a rename or re-export. Verify via `file <path>` if uncertain.
@@ -36,7 +34,7 @@ Applied to images and diagrams in user-facing content (docs, blogs, customer sto
 
 ## Diagrams
 
-- **Mermaid preferred over ASCII art.** Per AGENTS.md. Hugo renders Mermaid natively via `layouts/_default/_markup/render-codeblock-mermaid.html`. ASCII diagrams in `<pre>` blocks should be flagged as "consider Mermaid" findings.
+- **Mermaid preferred over ASCII art.** Per AGENTS.md. Hugo renders Mermaid natively. Flag ASCII diagrams in `<pre>` blocks as "consider Mermaid" findings.
 - **Diagram source over rasterized export.** When a diagram has source (Mermaid, draw.io, Excalidraw), prefer the source-rendered form over a PNG export. Source can be edited; PNGs require re-export to update.
 
 ## Do not flag

@@ -5,9 +5,7 @@ description: Review criteria applied to every PR review, regardless of domain.
 
 # Review — Shared
 
-Applied to every changed file in every review, in addition to the file's domain criteria. Owns the cross-cutting concerns that don't belong to any one domain.
-
-Everything here is domain-neutral. If a check only matters for docs, blogs, infra, or programs, it goes in the corresponding domain file, not here.
+Applied to every changed file in every review, in addition to the file's domain criteria. Cross-cutting concerns only — domain-specific checks live in the corresponding domain file.
 
 ---
 
@@ -62,21 +60,15 @@ The following are owned by the lint job (`scripts/lint/lint-markdown.js` and pee
 - heading case (linter catches inconsistency; this file catches accuracy of content, not stylistic consistency)
 - title length / meta description length / `meta_image` placeholder (`lint-markdown.js`'s `checkPageTitle`, `checkPageMetaDescription`, `checkMetaImage`)
 
-A diff can't reliably show a missing trailing newline, so even if a file "looks" like it's missing one, don't claim it in a finding. The linter will either pass or fail on this file; that's the answer.
+A diff can't reliably show a missing trailing newline. The linter will either pass or fail on this file; that's the answer.
 
-**Note:** image alt text (`MD045`) and fenced-code-block language specifiers (`MD040`) are *not* currently enforced by the linter — both rules are disabled in `.markdownlint-base.json`. Until they're enabled, those checks belong to the review skill: alt text is covered by `image-review.md`, code-block language by `code-examples.md`. Don't claim "the linter catches this" for either.
+Image alt text (`MD045`) and fenced-code-block language specifiers (`MD040`) are currently disabled in the linter. Alt text is covered by `image-review.md`; code-block language by `code-examples.md`.
 
 ### Indented prose
 
 - **Indented prose isn't accidentally rendered as a code block.** Markdown treats 4-space-indented lines as code. Flag indented paragraph text that's not meant to be code (common in nested lists where a continuation line was over-indented and turned silently into a code block in rendered output).
 
-## Fact-check
-
-This file does not invoke fact-check on its own. Domain files are the fact-check entry points.
-
 ## Do not flag
-
-These are DO-NOT items from [`output-format.md`](output-format.md) restated for cross-cutting cases:
 
 - **"This link might 404 eventually."** Speculative link-rot is not a finding. Either the link is broken now or it isn't.
 - **"You could also link to X."** Unsolicited "also consider linking to" suggestions belong in a separate improvement pass, not in this review.

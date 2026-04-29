@@ -11,14 +11,12 @@ This is the **CI entry point** for the docs review pipeline. It is invoked by `.
 
 ## Hard rules for CI
 
-These are non-negotiable. Past false-positive findings have come from violating them.
-
-1. **Never read working-tree state.** No `git status`, `git diff` against the local checkout, no `ls`, no Read against arbitrary repo files to "verify the file actually has X." The CI runner's working tree is a shallow checkout that may not reflect what's in the PR; reasoning from it produces wrong findings. Use `gh pr view` and `gh pr diff` for **everything** about the PR.
-2. **Never post via `gh pr comment` directly.** All review output goes through the pinned-comment script (see "Posting output" below) so the review survives across re-runs as a single logical comment sequence.
-3. **Diffs do not show trailing-newline status.** Do not flag missing trailing newlines from CI. The lint job catches this; if you can't see it in the diff, don't claim it's missing.
+1. **Never read working-tree state.** No `git status`, `git diff` against the local checkout, no `ls`, no Read against arbitrary repo files. The CI runner's working tree is a shallow checkout that may not reflect what's in the PR. Use `gh pr view` and `gh pr diff` for **everything** about the PR.
+2. **Post only via the pinned-comment script** (see §5 below). All review output goes through it so the review survives across re-runs as a single logical comment sequence.
+3. **Diffs do not show trailing-newline status.** Do not flag missing trailing newlines from CI; the lint job catches this.
 4. **Don't run `make` targets.** No `make build`, `make lint`, `make serve`. Lint and build run in their own jobs.
 5. **No file paths from the working tree in findings.** Every `file:line` reference must come from the PR's diff or `gh pr view --json files` output.
-6. **No internal-source MCP servers.** This workflow has no Notion, Slack, or other internal-source access by design — review output is public, and internal sources create leakage and prompt-injection risk. Fact-check is public-sources-only here (`gh`, `WebFetch`, `WebSearch`, local repo read for cross-references).
+6. **No internal-source MCP servers.** Fact-check uses public sources only: `gh`, `WebFetch`, `WebSearch`, and local repo read. Notion and Slack are excluded by design — review output is public.
 
 ---
 
@@ -52,27 +50,15 @@ Treat the diff as the source of truth for what changed. If `--json files` lists 
 
 ### 2. Compose the review
 
-Route each changed file to exactly one domain using `docs-review:references:domain-routing` (the canonical path-precedence table). `docs-review:references:shared-criteria` applies to every file. A PR may touch files in more than one domain — run each file under its appropriate domain and merge the findings into a single output object before posting.
+Route each changed file using `docs-review:references:domain-routing`. Run each file under its domain and merge findings into a single output object.
 
 ### 3. Fact-check (gated)
 
-If the PR has the `fact-check:needed` label, invoke `docs-review:references:fact-check` with:
-
-- The list of changed content files
-- Scrutiny level set by the domain file (docs → `standard`, blog/programs → `heightened`)
-- Public-sources-only constraints from this file (no Notion, no Slack)
+If the PR has the `fact-check:needed` label, invoke `docs-review:references:fact-check`. The domain file sets the scrutiny level.
 
 ### 4. Build the output
 
-Render the findings using the shared format in `docs-review:references:output-format`:
-
-- 🚨 Outstanding in this PR
-- ⚠️ Low-confidence
-- 💡 Pre-existing issues in touched files (optional, capped per file)
-- ✅ Resolved since last review (only meaningful on re-runs; empty on initial)
-- 📜 Review history
-
-Apply the **DO-NOT list** in `output-format.md` before emitting. Suppress findings the linter already catches (trailing newlines, fence languages, alt text, heading case, etc.).
+Render using `docs-review:references:output-format` and apply its DO-NOT list before emitting.
 
 ### 5. Post via the pinned-comment script
 
@@ -84,10 +70,8 @@ bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
   --body-file "$REVIEW_OUTPUT_FILE"
 ```
 
-The script handles the `<!-- CLAUDE_REVIEW N/M -->` marker convention, splits at the 65k boundary, edits existing comments in place, appends overflow, and prunes the tail.
-
-**Never** delete and recreate the 1/M summary comment. The script handles this; do not work around it.
+The script handles the `<!-- CLAUDE_REVIEW N/M -->` marker convention, splits at the 65k boundary, edits existing comments in place, appends overflow, and prunes the tail. The 1/M summary is never deleted.
 
 ### 6. Post-run
 
-After a successful post, the workflow applies the `review:claude-ran` label and removes `review:claude-stale` if present. Nothing for the prompt to do here.
+After a successful post, the workflow applies the `review:claude-ran` label and removes `review:claude-stale` if present.

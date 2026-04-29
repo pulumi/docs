@@ -5,11 +5,7 @@ description: Factual claim verification — extract claims from changed content,
 
 # Factual Claim Verification
 
-This procedure catches *wrong information* in documentation: incorrect command output, hallucinated CLI flags, features described as existing when they don't, version claims, miscited APIs. It is the rigor enforcement that style checks alone cannot provide.
-
-It is a shared primitive: the CI review pipeline invokes it via its domain files (when the PR carries the `fact-check:needed` label), and the interactive `/pr-review` skill invokes it as Step 5. It is also designed to be run standalone -- anywhere a set of changed content files needs to be verified for factual accuracy.
-
-The procedure has six phases. They are listed in order, but the section names are descriptive rather than numbered so this reference can be reused outside of any specific calling workflow.
+This procedure catches *wrong information* in documentation: incorrect command output, hallucinated CLI flags, features described as existing when they don't, version claims, miscited APIs.
 
 ---
 
@@ -55,33 +51,23 @@ SCRUTINY="heightened"  # domain files decide this; hardcoded here for illustrati
 
 The skill is callable as a pure function of `(files, scrutiny)` → `(triage_object, author_questions, evidence_trail)`. Callers wire the output into their own review composition; fact-check does not render directly into a comment.
 
-### Note on AI-suspect
-
-AI-suspect detection (see `pr-review:references:trust-and-scrutiny`) is a pr-review-skill concept. When that skill decides a PR is AI-suspect, it passes `scrutiny=heightened` to this file. The CI pipeline does not use the AI-suspect flag; CI callers pass `scrutiny` directly from the domain file's default (e.g., `docs-review:references:blog` always passes `heightened`).
-
 ---
 
 ## Gating
 
-Decide whether to run at all. This phase is relevant for pr-review-skill callers (which use the gate script below) and for standalone use; the CI pipeline gates via the `fact-check:needed` label applied by triage and does **not** invoke the gate script.
-
-For pr-review and standalone callers:
+Caller decides whether to invoke fact-check at all. CI gates upstream via the `fact-check:needed` label applied by triage. The interactive `pr-review` skill gates via:
 
 ```bash
 bash .claude/commands/pr-review/scripts/should-fact-check.sh \
   <PR_NUMBER> "<CONTRIBUTOR_TYPE>" "<AI_SUSPECT>" "<RISK_TIER>"
 ```
 
-Parse `FACT_CHECK=run|skip` from output. If `skip`, store `FACT_CHECK_REASON` for the calling workflow's report and exit. If `run`, continue to claim extraction.
+Parse `FACT_CHECK=run|skip` from output. Gate logic:
 
-The gate logic:
-
-- `AI_SUSPECT=true` → always RUN (AI hallucinations show up everywhere, including non-content paths)
-- `RISK_TIER=typo` → SKIP (nothing factual to check on a 5-line typo fix)
+- `AI_SUSPECT=true` → always RUN
+- `RISK_TIER=typo` → SKIP
 - bot/dependabot → SKIP unless content paths are touched
 - any `content/{docs,blog,tutorials,learn,what-is}/` path in the diff → RUN
-
-For CI callers: the gate lives upstream, in triage (`claude-triage.yml`). The domain file invokes fact-check only when the `fact-check:needed` label is present on the PR.
 
 ---
 
@@ -313,7 +299,7 @@ mcp__claude_ai_Slack__slack_search_public_and_private
 
 Default search window: last 6 months. Absence of these tools must not fail the workflow -- annotate the evidence as "internal sources unavailable."
 
-**CI fact-check never uses Notion or Slack.** The CI runner's tool set excludes these by design: fact-check output lands in a public PR comment, and internal sources create prompt-injection and leakage risks. See `ci.md` §Hard rules.
+**CI fact-check never uses Notion or Slack** -- the CI tool set excludes them. See `ci.md` §Hard rules.
 
 ### Confidence calibration
 
@@ -423,13 +409,6 @@ Build a structured triage object that the caller will render. The format:
 
 When a claim is flagged `intuition_check: true` AND the verifier reaches a decisive verdict, it renders in the verdict's bucket (🚨 / ⚠️ / ✅), not 🤔 -- see the rendering rule table in §Intuition-check axis. 🤔 is for inconclusive verification only.
 
-### Why tiered
-
-- **Top of view = only actionable items.** These are the only findings that gate approval.
-- Verified claims are listed but visually subordinated so the audit trail exists without cognitive load.
-- Each contradicted claim ships with a concrete suggested fix → caller can immediately apply the fix without re-reading the file.
-- Counts in headers give a fast "is this 2 issues or 14?" gut check.
-
 ### Credential redaction
 
 The evidence line of any finding is rendered into the public pinned comment. **Never quote raw credential strings in evidence** -- file:line and a short description only. If the claim's context contains what looks like an API key, token, password, private URL, or connection string, replace the token with `[REDACTED]` in the evidence line and flag the underlying leak as a separate 🚨 finding (per `docs-review:references:infra` §Secret handling). Public-PR diffs are already exposed; the pinned comment must not amplify the leak by quoting the raw value.
@@ -444,19 +423,14 @@ Patterns that trigger redaction on sight:
 
 ## Author-question buffer
 
-For every `unverifiable` claim, add an entry to an author-question buffer:
+For every `unverifiable` claim and every 🤔 intuition-check finding, add a line-anchored entry:
 
 ```
 - content/blog/esc-rotation.md:88 — Source for "ESC supports automatic rotation for Vault secrets"?
-```
-
-For every 🤔 intuition-check finding, add:
-
-```
 - content/blog/perf.md:14 — Cite a source for "chardet is 41x faster at encoding detection"?
 ```
 
-The buffer is consumed by the calling workflow. In `/pr-review`, when the user picks **Request changes**, the buffer auto-populates the comment body with line-anchored questions per claim. Standalone callers can use it however they like -- print it, save it, ignore it.
+The buffer is consumed by the calling workflow.
 
 ---
 

@@ -37,7 +37,7 @@ Invoke [`fact-check.md`](fact-check.md) (`scrutiny=heightened`) **before** any s
 - **Every benchmark or comparison.** "X is faster than Y." "Z reduces latency by N%." Needs a source.
 - **Every adoption or market-position statistic.** "Used by N% of Fortune 500." "The most popular IaC tool for K8s." Needs a source.
 
-Findings render in 🚨 / ⚠️ **before** style findings. The reader sees "is this post factually sound?" before "does this post read like a human wrote it?".
+Findings render in 🚨 / ⚠️ **before** style findings.
 
 ### Priority 2 — AI-slop detection
 
@@ -62,7 +62,7 @@ Every AI-slop / editorial finding names the *phrase* and the *pattern*. Don't ju
 
 ### Priority 3 — Code correctness
 
-Apply `docs-review:references:code-examples`. Code in blog posts gets heavily copied because people Google into blogs as often as into docs. Wrong code is wrong regardless of which `content/` directory it lives in.
+Apply `docs-review:references:code-examples`.
 
 ### Priority 4 — Product accuracy
 
@@ -117,11 +117,11 @@ Invoke [`fact-check.md`](fact-check.md) with:
 - **Files:** the changed `content/blog/**` / `content/case-studies/**` files
 - **Scrutiny:** `heightened` (always)
 
-CI fact-check is public-sources-only -- see `ci.md`. Notion and Slack are explicitly excluded for blog content in CI because blog claims are the most likely to surface internal context that shouldn't be in a public PR comment.
+CI fact-check is public-sources-only -- see `ci.md`.
 
 ## Do not flag
 
-- **Colloquialisms as inclusive-language violations.** "Overkill," "kill the process," "kick off," "blow away" are fine in technical context. (The audit's most frequent false-positive class; sample PR #18493.) Note: this intentionally relaxes `STYLE-GUIDE.md` §Inclusive Language -- the style guide rule stands for authors; the review skill stops nagging about it.
+- **Colloquialisms as inclusive-language violations.** "Overkill," "kill the process," "kick off," "blow away" are fine in technical context.
 - **Drafting social copy, CTAs, or button text.** Flag when the `social:` block is missing or malformed; do not draft replacement copy. Marketing owns voice here, not the reviewer.
 - **Meta image design critique.** Flag when `meta_image` is the placeholder or uses outdated logos. Do not critique colors, composition, or layout.
 - **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `prose-patterns.md`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
