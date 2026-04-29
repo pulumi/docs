@@ -762,8 +762,11 @@ Investigated whether our prompts could be restructured to hit the Anthropic 5-mi
 
 ### Backlog after Session 9
 
-1. **PR 45 prose-regression investigation** — Session 6 carryover.
-2. **Deploy script** — write a `gh` script that creates all required labels (domain, signal, state, plus newer ones like `review:frontmatter-only`) in one shot, ready to run on `pulumi/docs` upstream when the branch lands. The existing manual one-liner block in `.github/labels-pr-review.md` is the seed; turn it into a runnable `.sh` once the label set is final. More testing and refinement still to come, so don't ship the script yet.
+1. **Deploy script** — write a `gh` script that creates all required labels (domain, signal, state, plus newer ones like `review:frontmatter-only`) in one shot, ready to run on `pulumi/docs` upstream when the branch lands. The existing manual one-liner block in `.github/labels-pr-review.md` is the seed; turn it into a runnable `.sh` once the label set is final. More testing and refinement still to come, so don't ship the script yet.
+
+### Dropped this session
+
+- **PR 45 prose-regression investigation** (Session 6 carryover). The original hypothesis was that broadened allowed-tools + pre-compute injection caused the model to converge faster and skip lower-tier prose findings. Session 8's `prose-patterns.md` + the restored editorial rules in `blog.md` (concrete patterns with cite-and-rewrite mandate) addressed this orthogonally — regardless of how fast the model converges, it now has explicit rules to apply. The original failure mode shouldn't survive the Session 8 changes, so the experiment is moot. If a similar regression surfaces in production traffic post-merge, reopen.
 
 ### Artifacts
 
