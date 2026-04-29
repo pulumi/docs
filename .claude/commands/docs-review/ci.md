@@ -29,7 +29,7 @@ The workflow passes these as environment variables (or substitutes them into the
 
 Route by path-precedence per `docs-review:references:domain-routing`. `PR_LABELS` is informational only.
 
-If `review:trivial` is present, exit early without producing a review (the workflow's job `if:` already handles the short-circuit; this is a defense-in-depth check).
+If `review:trivial` is present, exit early without producing a review.
 
 ---
 

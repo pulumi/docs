@@ -43,6 +43,7 @@ Per AGENTS.md and STYLE-GUIDE.md:
       provider: p,
   });
   ```
+  
 - **Python:** Context managers for resources that support them. `pulumi_aws.s3.BucketV2(...)` call style. Type hints where they aid reading.
 - **Go:** `pulumi.Run(func(ctx *pulumi.Context) error { ... })` top-level. `ctx.Error()` / `return` on errors. `pulumi.String(...)` / `pulumi.StringArray(...)` wrappers for resource arguments.
 - **C#:** `Pulumi.Deployment.RunAsync<MyStack>()` pattern. `Output<T>` / `Input<T>` correctly typed.
