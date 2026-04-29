@@ -753,11 +753,17 @@ Both checks scope to `content/blog/**` (via `isBlogPost(filePath, obj)` — also
 
 **`checkMoreBreak`** (R71) — flags blog posts that are missing the `<!--more-->` break or that bury it past paragraph 3. Counts paragraph blocks (non-blank-line content separated by blank lines) before the marker. Same scoping as the other two checks (skip drafts, skip past-dated, exclude taxonomy pages). Threshold: > 3 blocks before the marker is the failure condition; 1–3 is the target range. `make lint` against master surfaces zero findings — the archival-exemption rule shields existing posts.
 
+### Cache-friendliness audit (closed — no-op)
+
+Investigated whether our prompts could be restructured to hit the Anthropic 5-min prompt cache better. **Decisively closed as no-op** on two independent grounds:
+
+1. **The action already caches optimally.** `anthropics/claude-code-action@v1` delegates to the Agent SDK / Claude Code CLI binary, which sets `cache_control: ephemeral` automatically. The breakpoint sits between the system prompt (skills + memory) and the first user message (PR-specific content). Direct citation: `claude-agent-sdk-typescript` CHANGELOG v0.2.119 — "static auto-memory instructions kept in the cacheable system-prompt block; only per-user memory directory path and per-machine environment values are relocated to the first user message." No caller-facing cache configuration is exposed in `base-action/action.yml`. There's nothing to restructure at the workflow-prompt layer; the caching happens one layer below us.
+2. **Clustering doesn't happen in production.** Over the last 100 review runs (`gh run list --workflow=claude-code-review.yml`), **zero production clusters within the 5-min TTL** — every same-branch within-5-min cluster I found in the sample was one of my own `CamSoper/pr-review-overhaul` test pushes. Real-author PRs are reviewed 30+ minutes apart from each other and from re-runs. Even if the action's caching were tunable, there's no temporal density to amortize against.
+
 ### Backlog after Session 9
 
-1. **Cache-friendliness audit** — Session 7 carryover.
-2. **PR 45 prose-regression investigation** — Session 6 carryover.
-3. **Deploy step:** create `review:frontmatter-only` label upstream when branch lands.
+1. **PR 45 prose-regression investigation** — Session 6 carryover.
+2. **Deploy step:** create `review:frontmatter-only` label upstream when branch lands.
 
 ### Artifacts
 
