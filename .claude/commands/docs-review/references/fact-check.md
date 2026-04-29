@@ -38,7 +38,7 @@ FILES=$(gh pr view "$PR" --json files -q '.files[].path')
 SCRUTINY="heightened"  # domain files decide this; hardcoded here for illustration
 
 # 2. Gate (see Gating section — optional for non-pr-review callers)
-#    CI callers skip this and rely on the `fact-check:needed` label applied by triage.
+#    In CI, the domain file is the gate.
 
 # 3. Extract claims (see Claim extraction section)
 
@@ -55,7 +55,7 @@ The skill is callable as a pure function of `(files, scrutiny)` → `(triage_obj
 
 ## Gating
 
-Caller decides whether to invoke fact-check at all. CI gates upstream via the `fact-check:needed` label applied by triage. The interactive `pr-review` skill gates via:
+Caller decides whether to invoke fact-check at all. In CI, the domain file is the gate. The interactive `pr-review` skill gates via:
 
 ```bash
 bash .claude/commands/pr-review/scripts/should-fact-check.sh \

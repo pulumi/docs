@@ -135,14 +135,14 @@ When opening a PR you intend to iterate on, **open it as a draft**. Drafts skip 
 
 Transitioning to **Ready for review** triggers:
 
-1. A re-triage to refresh labels (domain, fact-check signal, agent-authored signal, trivial check).
+1. A re-triage to refresh labels (domain, trivial / frontmatter-only short-circuits, prose-flagged signal if applicable).
 2. The full Claude review (currently `claude-opus-4-7`), composed per touched domain. Findings post to a single pinned comment at the top of the PR — overflow is appended as additional pinned comments tagged `<!-- CLAUDE_REVIEW N/M -->`.
 
 Mark the PR ready when you're done iterating, not when you start. Each ready-transition produces one full review run; thrashing through draft → ready → draft burns review budget and produces stale pinned comments.
 
 ### Author a clean commit history
 
-If the PR was AI-drafted, leave the AI authoring trailers in commit messages (`Co-Authored-By: Claude ...`, `Generated with Claude Code`, etc.). Triage uses these to apply the `agent-authored` label, which is a signal for human adjudication — it does not change which review runs. Removing the trailers does not exempt the PR from review and is bad form.
+If the PR was AI-drafted, leave the AI authoring trailers in commit messages (`Co-Authored-By: Claude ...`, `Generated with Claude Code`, etc.). Stripping them to disguise authorship is bad form and does not change which review runs.
 
 ### After review — three paths to refresh
 
@@ -168,4 +168,4 @@ Two label-driven short-circuits skip the full Claude review (linters still run):
 
 For both categories, triage runs a focused spelling/grammar pass on the relevant diff slice. If it finds anything, it posts a single advisory comment listing the concerns AND applies `review:prose-flagged` so reviewers don't miss it. The short-circuit label still applies and the full review still skips. This is a guard against rubber-stamping — a typo "fix" that introduces a typo, or a `meta_desc` rewrite with a wrong-word substitution, gets flagged before merge.
 
-Classification is deterministic and lives in `.claude/commands/docs-review/scripts/triage-classify.py` — domain (path-precedence), triviality, frontmatter-only detection, fact-check signal, and agent-authored signal are all path/grep rules. The model is invoked only for the prose check, only when the shell pre-classifies as trivial or frontmatter-only.
+Classification is deterministic and lives in `.claude/commands/docs-review/scripts/triage-classify.py` — domain (path-precedence), triviality, and frontmatter-only detection are all path/grep rules. The model is invoked only for the prose check, only when the shell pre-classifies as trivial or frontmatter-only.

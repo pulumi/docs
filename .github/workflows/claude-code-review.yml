@@ -1,11 +1,10 @@
 name: Claude Code Review
 
 # Full review is chained to complete AFTER Claude Triage, so the review
-# sees the freshly-applied domain and fact-check labels. Listening to
-# the same ready_for_review event as triage produced a race: review
-# read labels at workflow-start time, before triage wrote them, so
-# review:trivial short-circuits and fact-check:needed gating were
-# broken on initial runs.
+# sees the freshly-applied state labels. Listening to the same
+# ready_for_review event as triage produced a race: review read labels
+# at workflow-start time, before triage wrote them, so review:trivial
+# and review:frontmatter-only short-circuits were broken on initial runs.
 #
 # Triage runs on [opened, reopened, ready_for_review]. When it completes,
 # the workflow_run event fires here. A runtime pr-context step then
@@ -251,7 +250,7 @@ jobs:
             - **Head branch:** `${{ steps.pr-context.outputs.head_branch }}`
             - **Base branch:** `${{ steps.pr-context.outputs.base_branch }}`
             - **Diff size:** +${{ steps.pr-context.outputs.additions }} / -${{ steps.pr-context.outputs.deletions }} across ${{ steps.pr-context.outputs.file_count }} files
-            - **Labels** (set by claude-triage.yml — drive domain selection and fact-check gating): ${{ steps.pr-context.outputs.labels_json }}
+            - **Labels** (set by claude-triage.yml — informational; routing happens by path inside `ci.md`): ${{ steps.pr-context.outputs.labels_json }}
 
             ### Changed files
 

@@ -26,20 +26,20 @@ def classify_path(path: str) -> str | None:
     # Programs first — both static/programs/** AND scripts/programs/** are
     # programs territory (the latter would otherwise fall to infra).
     if path.startswith("static/programs/") or path.startswith("scripts/programs/"):
-        return "review:programs"
+        return "domain:programs"
     if path.startswith("content/blog/") or path.startswith("content/case-studies/"):
-        return "review:blog"
+        return "domain:blog"
     for prefix in ("content/docs/", "content/learn/", "content/tutorials/", "content/what-is/"):
         if path.startswith(prefix):
-            return "review:docs"
+            return "domain:docs"
     if path.startswith(".github/workflows/"):
-        return "review:infra"
+        return "domain:infra"
     if path.startswith("scripts/") or path.startswith("infrastructure/"):
-        return "review:infra"
+        return "domain:infra"
     if path in ("Makefile", "package.json", "webpack.config.js"):
-        return "review:infra"
+        return "domain:infra"
     if WEBPACK_RE.match(path):
-        return "review:infra"
+        return "domain:infra"
     return None
 
 
@@ -47,11 +47,6 @@ def classify_path(path: str) -> str | None:
 
 HUNK_HEADER_RE = re.compile(r"^@@ -(\d+)(?:,\d+)? \+(\d+)(?:,\d+)? @@")
 LINK_RE = re.compile(r"\[[^\]]*\]\([^)]+\)")
-HEADING_RE = re.compile(r"^#{1,6}\s")
-VERSION_CLAIM_RE = re.compile(
-    r"\b(since v?\d+(\.\d+)?|available in v?\d+|now supports|added in v?\d+|new in v?\d+)",
-    re.IGNORECASE,
-)
 
 
 def split_files(diff_text: str) -> list[tuple[str, str]]:
@@ -148,8 +143,6 @@ def classify_file(path: str, file_diff: str) -> dict:
         "has_code_block_change": False,
         "has_shortcode_change": False,
         "has_link_change": False,
-        "has_new_heading": False,
-        "has_new_version_claim": False,
     }
 
     # Per-file link-set comparison: detect link change by comparing the
@@ -210,34 +203,12 @@ def classify_file(path: str, file_diff: str) -> dict:
                 plus_links |= line_links
             else:
                 minus_links |= line_links
-            if marker == "+" and HEADING_RE.match(stripped):
-                flags["has_new_heading"] = True
-            if marker == "+" and VERSION_CLAIM_RE.search(stripped):
-                flags["has_new_version_claim"] = True
 
     flags["has_link_change"] = plus_links != minus_links
     return flags
 
 
 # ---- PR-level aggregation --------------------------------------------------
-
-AGENT_LOGINS = {"pulumi-bot", "dependabot[bot]", "github-copilot[bot]", "copilot[bot]"}
-AGENT_TRAILER_RES = [
-    re.compile(r"Co-Authored-By:.*(Claude|Cursor|Copilot|noreply@anthropic\.com)", re.IGNORECASE),
-    re.compile(r"Generated with .*(Claude|Cursor|Copilot)", re.IGNORECASE),
-    re.compile(r"🤖 Generated with", re.IGNORECASE),
-]
-
-
-def detect_agent_authored(pr_data: dict) -> bool:
-    author_login = (pr_data.get("author") or {}).get("login", "")
-    if author_login in AGENT_LOGINS:
-        return True
-    for commit in pr_data.get("commits") or []:
-        msg = (commit.get("messageHeadline") or "") + "\n" + (commit.get("messageBody") or "")
-        if any(r.search(msg) for r in AGENT_TRAILER_RES):
-            return True
-    return False
 
 
 def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
@@ -295,31 +266,11 @@ def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
         and not has_any_binary
     )
 
-    if trivial:
-        fact_check_needed = False
-    else:
-        fact_check_needed = False
-        for f, ff in zip(files, file_flags):
-            path = f.get("path", "")
-            if path.startswith("content/blog/") or path.startswith("content/case-studies/"):
-                fact_check_needed = True
-                break
-            if path.startswith("static/programs/"):
-                fact_check_needed = True
-                break
-            if path.startswith("content/docs/") and (
-                ff["has_new_heading"] or ff["has_code_block_change"] or ff["has_new_version_claim"]
-            ):
-                fact_check_needed = True
-                break
-
     return {
         "target_domains": sorted(domains),
         "mixed": len(domains) > 1,
         "trivial": trivial,
         "frontmatter_only": frontmatter_only,
-        "fact_check_needed": fact_check_needed,
-        "agent_authored": detect_agent_authored(pr_data),
         "prose_check_needed": trivial or frontmatter_only,
         "summary": {
             "lines": total_lines,

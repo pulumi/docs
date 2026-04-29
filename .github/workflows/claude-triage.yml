@@ -123,8 +123,6 @@ jobs:
           MIXED=$(echo "$CLASS" | jq -r '.mixed // false')
           TRIVIAL=$(echo "$CLASS" | jq -r '.trivial // false')
           FRONTMATTER_ONLY=$(echo "$CLASS" | jq -r '.frontmatter_only // false')
-          FACT_CHECK=$(echo "$CLASS" | jq -r '.fact_check_needed // false')
-          AGENT_AUTHORED=$(echo "$CLASS" | jq -r '.agent_authored // false')
           PROSE_CHECK_NEEDED=$(echo "$CLASS" | jq -r '.prose_check_needed // false')
 
           # 3. Conditional prose check (model call only for trivial /
@@ -167,15 +165,12 @@ jobs:
           for d in $DOMAINS_JSON; do
             TARGET[$d]=1
           done
-          [[ "$MIXED" == "true" ]] && TARGET["review:mixed"]=1
+          [[ "$MIXED" == "true" ]] && TARGET["domain:mixed"]=1
           if [[ "$TRIVIAL" == "true" ]]; then
             TARGET["review:trivial"]=1
           elif [[ "$FRONTMATTER_ONLY" == "true" ]]; then
             TARGET["review:frontmatter-only"]=1
-          elif [[ "$FACT_CHECK" == "true" ]]; then
-            TARGET["fact-check:needed"]=1
           fi
-          [[ "$AGENT_AUTHORED" == "true" ]] && TARGET["agent-authored"]=1
           # Prose concerns flag — applies to either trivial or
           # frontmatter-only when the prose check turned up issues.
           if [[ "$PROSE_CHECK_NEEDED" == "true" && -n "$PROSE_CONCERNS" ]]; then
@@ -188,7 +183,7 @@ jobs:
             case "$lbl" in
               review:claude-ran|review:claude-stale|review:claude-working|needs-author-response)
                 continue ;;
-              review:*|fact-check:*|agent-authored)
+              domain:*|review:trivial|review:frontmatter-only|review:prose-flagged)
                 EXISTING["$lbl"]=1 ;;
             esac
           done < <(echo "$PR_DATA" | jq -r '.labels[].name')
@@ -250,4 +245,4 @@ jobs:
           ADDED_CSV="${ADD_LIST[*]:-}"; ADDED_CSV="${ADDED_CSV// /,}"
           REMOVED_CSV="${REMOVE_LIST[*]:-}"; REMOVED_CSV="${REMOVED_CSV// /,}"
           PROSE_COUNT=$(echo "$PROSE_CONCERNS" | grep -c . || true)
-          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY fact-check=$FACT_CHECK agent-authored=$AGENT_AUTHORED prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
+          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
