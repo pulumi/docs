@@ -1,11 +1,27 @@
 ---
 user-invocable: false
-description: Guide for writing social media copy that creates curiosity and drives clicks
+description: Guide for writing social media copy that tees up the article without delivering it
 ---
 
 # Social Copy Writing Guide
 
-You are writing social media copy for Pulumi's corporate accounts. The copy will be attached to a blog post link. Your goal is to make people click through to the article, not to summarize it for them.
+You are writing social media copy for Pulumi's corporate accounts. The copy will be attached to a blog post link. **Tee up the article. Don't deliver it.** The post sets up what the article reveals — the reveal stays in the article.
+
+A useful frame: a social post is the back-cover blurb, not the last chapter. The blurb makes you want the book; it doesn't tell you who the killer is.
+
+**Bad — gives away the killer:**
+> We tested three AI coding frameworks on the same Pulumi project. Superpowers' TDD discipline drove the chardet 41x rewrite. GSD's phase-based orchestrators kept context fresh through long sessions. GSTACK's 23-role isolation was overkill for pure infra but unbeatable on product builds.
+>
+> We wrote up the comparison.
+
+The reader has the verdict for all three. The article has nothing left to do.
+
+**Good — keeps the mystery:**
+> We tested three AI coding frameworks on the same Pulumi project. One caught a scope drift the other two missed. One produced a 41x speedup. One we probably won't reach for again.
+>
+> Here's how they compared.
+
+Same outcomes are revealed. The mapping — which framework did which — is what the reader has to read the article to find out. That's the whodunit.
 
 ## The structure: setup, gap, pointer
 
@@ -15,7 +31,7 @@ Every post must have three parts:
 2. **Gap** — something withheld that the reader now wants to know (which one? how? why?)
 3. **Pointer** — a line that acknowledges the answer exists without spelling it out
 
-All three are required. The pointer is what connects the social post to the article — without it, the post is a standalone observation that doesn't drive clicks.
+All three are required. The pointer is what connects the social post to the article — without it, the post is a standalone observation and the article ends up doing nothing.
 
 ### Setup: concrete vs abstract
 
@@ -42,9 +58,9 @@ Good — no gap, just a concrete setup and pointer:
 >
 > It is now fully supported. Here is what to know before switching.
 
-No mystery, no withholding. The setup earns attention with a specific number, and the pointer gives the reader a reason to click.
+No mystery, no withholding. The setup gets the reader's attention with a specific number, and the pointer signals there's more to read.
 
-When the article does have a comparison, a surprise, or a non-obvious result, withholding the right detail is what makes the post click-worthy.
+When the article does have a comparison, a surprise, or a non-obvious result, withholding the right detail is what gives the article something to do.
 
 Things worth withholding when the article supports it:
 - Which tool/approach produced which result
@@ -185,7 +201,7 @@ All four have setup, gap, and pointer. None use "we." When writing for all three
 
 ## Making it specific
 
-The difference between generic and specific copy is the difference between scrolling past and clicking.
+The difference between generic and specific copy is the difference between scrolling past and stopping to read.
 
 Bad:
 > We ran into some issues with how our coding agents handled longer projects. The problems were predictable but the solutions took different approaches.
@@ -229,16 +245,18 @@ Good:
 
 Names the competition, identifies a structural difference.
 
-## Avoiding announcement tone
+## Avoiding fluffy announcements
 
-Product posts are the hardest. The temptation is to announce what the feature does.
+Some posts ARE announcements — product launches, feature releases, customer wins, conference presence. Those are valid post types and should announce directly. The thing to avoid is the *fluffy* announcement: vague claims, release-note phrasing, no specific person/place/number/outcome.
+
+Most docs posts are **link-promo announcements** (the post links to a writeup of the news). Lead with the problem and withhold the mechanism — the writeup is where the reader gets the answer.
 
 Bad:
 > We built a new way to import existing cloud resources into Pulumi. Discover unmanaged resources, group them into stacks, and generate code in your language of choice. Available now for all Team and Enterprise customers.
 >
 > Here's what it looks like.
 
-Explains what, how, and who. "Available now" is release-note language.
+Explains what, how, and who. "Available now" is release-note language. The article has nothing left to do.
 
 Good:
 > Most teams trying to adopt infrastructure as code hit the same wall: hundreds of existing cloud resources created by hand or with scripts nobody remembers. Getting them into IaC meant writing boilerplate one resource at a time.
@@ -246,6 +264,20 @@ Good:
 > We built a way to skip that. Here is what it looks like.
 
 Same feature. Leads with the problem, withholds the mechanism.
+
+Occasionally a docs post is a **standalone announcement** layered with a writeup — "we'll be at KubeCon, here's our recap of last year" or "Pulumi just hit 100k stars, here's the retrospective." The body delivers the news directly; the link is for the deeper story. Concrete specifics carry these — booth number, person's name, number, date, place.
+
+Bad:
+> Excited to be at KubeCon next week. Come say hi. Here's our writeup from last year.
+
+Generic. Could be any company at any conference. No specifics.
+
+Good:
+> We'll be at KubeCon Atlanta Nov 12 at booth 314. Engin Diri is on stage Wednesday talking about what teams are running in production with AI on Kubernetes — and what isn't working.
+>
+> Last year's recap is below if you want the prequel.
+
+Same shape (we'll be at X), but specific: date, booth, named speaker, concrete topic. The reader has a reason to care, and the link is positioned as context, not bait.
 
 ## Avoiding LLM-speak
 
@@ -301,3 +333,42 @@ LinkedIn gets more room for story. Four short paragraphs, each adding one beat. 
 > We wrote up the full timeline.
 
 Bluesky is between X and LinkedIn. Practitioner voice, slightly more detail than X.
+
+## Drafting from a blank `social:` block
+
+When the post has no existing copy, you have the most leverage and the most ways to go wrong. **Read the blog body in full before drafting** — the body is the only source of truth for specifics. Title, URL slug, `meta_desc`, and tags are not authoritative — they're shorthand and they sometimes drift from the body's actual claims.
+
+Then find:
+
+1. The most concrete specific in the article — a number, a named tool, a person, a moment ("week three", "Friday night page", "41x speedup", "200 modules"). This is your setup.
+2. The article's main verdict, mechanism, or surprising mapping. This is what you withhold.
+3. The natural reader question the article answers. The pointer is what tells the reader the answer is in the article.
+
+Then build setup → gap → pointer in that order, on each platform. Don't draft three platforms in parallel — draft one (usually X, since it's the tightest), then adapt. Whichever platform you write first will sound the freshest; the other two should differ in subject (vary "we" vs. stat-first vs. named-author) and in pointer phrasing.
+
+**After drafting, verify every specific against the body.** If you wrote a number, name, or attribution, it has to appear in the blog body — not the title, slug, or `meta_desc`. If a claim doesn't trace, drop it or replace it. Example: a URL `top-8-claude-skills-…` doesn't mean the body says eight; the body might list fourteen.
+
+Common ways drafting from scratch goes wrong:
+
+- **Defaulting to "We're excited to share…" or "Today we're announcing…"** — release-note phrasing. Find the problem the article solves and lead with that instead.
+- **Recapping the article's structure** — "We cover three frameworks. We tested each one. Here's what we found." That's a table of contents, not a hook.
+- **Generic openers because the article's subject is technical** — "Infrastructure as code is changing how teams ship software." Cut. Lead with a concrete moment from the post.
+- **Three near-identical posts across platforms** — same opener, same pointer, just trimmed. Vary the subject (one with "we", one stat-first, one named-author) so each platform earns its space.
+
+If after one read of the article you can't find a concrete specific to lead with, the article likely is generic — flag that to the author rather than drafting around it.
+
+## Spotting and replacing LLM-fill copy
+
+When the existing copy reads like it was generated by an LLM that didn't read the article, treat it as if the block were empty. Recognizable patterns:
+
+- **Three staccato noun phrases as drama:** "Infrastructure secrets. Expired credentials. Friday night pages."
+- **Em-dash chains as connective tissue:** "The problem isn't capability — it's consistency — and three teams built answers — each different."
+- **Constructed parallelism that signals nothing:** "Built for builders. Designed for developers. Optimized for ops."
+- **Generic openers that name the trend:** "In today's cloud landscape…", "As organizations adopt AI…", "Teams everywhere are realizing…"
+- **Buzzword stacking:** "AI-powered, cloud-native, enterprise-ready infrastructure automation."
+- **Overuse of "transform", "unlock", "empower", "leverage", "seamless", "robust"**
+- **Closing CTA in marketing voice:** "Read on to discover how we're revolutionizing infrastructure as code."
+
+The fix is the same for all of them: drop the LLM copy entirely and draft fresh from the article using the setup → gap → pointer shape. Preserving fragments of the LLM copy and patching around them tends to leave a hybrid that's worse than either.
+
+Don't try to "improve" LLM-fill in place — recognize the pattern, throw it out, start from the article.
